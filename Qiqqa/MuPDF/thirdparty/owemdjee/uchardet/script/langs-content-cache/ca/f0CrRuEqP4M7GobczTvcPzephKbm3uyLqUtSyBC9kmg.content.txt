@@ -1,0 +1,24 @@
+revision: 31222781
+title: "Bateria t\xE8rmica"
+url: https://ca.wikipedia.org/wiki/Bateria_t%C3%A8rmica
+
+
+---
+
+Una bateria tèrmica és un dispositiu d'emmagatzematge d'energia tèrmica que pot ensitjar calor durant molt de temps. S'hi provoca una reacció química amb calor residual i en invertir aquesta reacció, se l'allibera calor quan ha de menester. En simplificar, es tracta d'emmagatzemar la calor quan n'hi ha massa, i alliberar-la quan en cal. És una de les tecnologies emergents que podria contribuir a la transició energètica. Com font de calor es podria fer servir el sol, l'excedent d'instal·lacions termosolars o fotovoltaiques, així com la calor residual a baixa temperatura, que avui es perd en torres de refrigeració en l'aigua fluvial o costanera. L'ensitjatge tèrmic té un millor rendiment que les bateries electroquímiques.No obstant això, les solucions disponibles actualment (2022) sovint encara són a l'estadi de prototip. Encara manca capacitat d'emmagatzematge i romanen per resoldre les febleses en la cinètica de recàrrega, la durabilitat i el cost. Les coses canvien i per poc cada dia surten solucions. El 2021, només a la Unió Europea, hi havia uns tres-cents projectes de recerca sobre bateries de tota mena.El 2021, l'empresa nord-catalana Full Home Energy (FHE) va llançar una de les primeres solucions en producció industrial d'un giny d'ús domèstic, desenvolupat en col·laboració amb la Universitat de Perpinyà Via Domícia.
+
+
+== Reaccions químiques utilitzables ==
+Hi ha molts fenòmens químics coneguts que teòricament es podrien fer servir, però les aplicacions industrials o domèstiques es troben encara en la fase experimental. És diferent d'un dipòsit d'aigua calenta, al qual no hi ha cap reacció química i que només sol cobrir uns pocs dies. Com a reaccions explotables, hi ha, entre d'altres, hídrids de metall, zeolites i gel de sílice.El gel de sílice, molt porós, és una de les matèries prometedores. Té una gran superfície interna (un gram té una superfície interna d'uns 600 m²). Pot atreure (adsorbir) i acumular-hi molt vapor d'aigua, i en aquest procés s'allibera calor. Per contra, l'energia tèrmica s'ha de fer servir per assecar els gels. El gel sec, ric en energia, conservat en un recipient ben tancat, es pot conservar gairebé sense límits. Un metre cúbic de gel de sílice pot ensitjar entre 200 i 300 kWh. Per eixugar-lo, cal una temperatura d'entre 80 i 120 °C, una temperatura fàcil per atènyer amb calor residual o plaques termosolars. Tant com no s'hi afegeix aigua, l'energia es conserva, sense pèrdues. No fa menester cap aïllament tèrmic, com que sí que ho fa per a dipòsits d'aigua calenta.
+
+
+== Prototips ==
+Una primera instal·lació pionera que fa servir sorra es va estrenar el 2022 a Finlàndia. La Universitat tècnica d'Eindhoven va desenvolupar un prototip amb carbonat de potassi. Ambdues tenen l'avantatge de funcionar amb primeres matèries abundants i de bon preu, però calen sitges voluminoses. Per escalfar cinquanta cases durant una a dues setmanes, calen uns vint metres cúbics amb la bateria eindhovenenca. Si s'ha de transportar tals volums, es perd en eficiència. Tot i això, el concepte és prometedor en aplicacions estàtiques i la idea es seductora: ensitjar calor estival per fer-la servir l'hivern.
+A la Universitat Tecnològica de Curtin a Austràlia han desenvolupat una bateria tèrmica a base d'hidrur metàl·lic o carbonat metàl·lic, hidrogen o diòxid de carboni que funciona en ritme dia/nit.
+
+
+== Referències ==
+
+
+== Enllaços externs ==
+«Roadmap» (en anglès). Battery 2030.   Uppsala Universitet, 2022. [Consulta: 16 juliol 2022].

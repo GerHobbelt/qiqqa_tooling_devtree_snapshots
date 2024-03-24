@@ -1,0 +1,92 @@
+revision: 25641659
+title: "Cs\xEDramentes\xEDt\xE9s"
+url: https://hu.wikipedia.org/wiki/Cs%C3%ADramentes%C3%ADt%C3%A9s
+
+
+---
+
+A csíramentesítés vagy sterilizálás azoknak a folyamatoknak az összessége, melyek során a különféle anyagokat és eszközöket sterillé, azaz csíramentessé teszik, hogy felhasználhatók legyenek az egészségügyi intézményekben és a kisebb praxisokban. A leggyakoribb sterilizálási eljárások a gőz-, hőlég-, gáz- és a plazmasterilizálás. A sterilizálandó termékek közé tartozhatnak többek között a nem sterilen forgalomba kerülő, vagy többször is használható fém eszközök és műszerek, műtéti textíliák, kötszerek és varróanyagok, valamint gumiból, műanyagból, üvegből készült eszközök, edények, vagy gépek betegekkel érintkező alkatrészei. Ezeket megfelelő előkészítés után sterilizátorokban csírátlanítják, majd felhasználásig szakszerűen tárolják.
+
+
+== A sterilizálás folyamata ==
+
+
+=== Tisztítás, fertőtlenítés ===
+Az anyagokat, eszközöket elő kell készíteni a sterilizálásra. A kezelések, beavatkozások során már használt darabokat a felhasználás helyéről zárt rendszerben összegyűjtik, válogatják, a több alkatrészből álló eszközöket szétszedik. Ezt követően a szennyeződéseket (például vér, testváladék) kémiai és mechanikai módszerekkel, kézi vagy gépi úton eltávolítják. A tisztítás után a fertőtlenítés következik, melynek során a cél, hogy a sterilizálóba kerülő anyagok, eszközök sterilizálás előtti csíraszáma a lehető legalacsonyabb legyen, ezzel fokozva a folyamat hatékonyságát, a fertőzések elkerülését. A még új, de gyárilag nem steril termékekkel ugyanúgy kell eljárni, mintha használták volna azokat, vagyis esetenként tisztítást, és minden esetben előzetes fertőtlenítést kell alkalmazni.
+
+
+=== Csomagolás ===
+
+A letisztított és fertőtlenített termékeket ezt követően egyesével, vagy a felhasználási célnak megfelelően csoportosítva becsomagolják. Ehhez speciális csomagolóanyagok vagy dobozok állnak rendelkezésre. A különféle eljárásokhoz más-más tulajdonságú csomagolóanyagokat alkalmaznak, melyek a sterilizálás után bizonyos ideig megőrzik a termék sterilitását. Ezek kiszerelésüket tekintve lehetnek tekercsek, tasakok, íves csomagolóanyagok, vagy hagyományos textíliák. A sterilizálásra előkészített csomagokat indikátorral látják el, melyekkel ellenőrizhető a sterilizálás eredményessége.
+
+
+=== Sterilizálás ===
+A sterilizátorok megfelelő működését a szakhatósági előírásokban foglalt gyakorisággal ellenőrizni kell. A műszaki felülvizsgálat mellett biológiai indikátorokat is alkalmaznak e célra. Napi gyakorisággal kémiai indikátorokkal, tesztprogramok lefuttatásával, valamint a gépekbe épített adatrögzítők segítségével győződnek meg a sterilizálási ciklus előírt paramétereinek teljesüléséről.
+
+
+==== Gőzsterilizálás (autoklávozás) ====
+Az eljárás lényege, hogy az autokláv munkaterét, így a benne elhelyezett csomagokat is vákuumozással légtelenítik, majd túlnyomásos, telített vízgőzt juttatnak a levegő helyére. A vízgőz kondenzálódik a csomagokon, illetve az azokban lévő eszközökön, miközben hő szabadul fel, melynek hatására elpusztulnak a mikroorganizmusok. A hatóidő letelte után a gépben a túlnyomást megszüntetik, a rakományt szárítják, hűtik. Ez egy sterilizálási ciklus.
+A gőzsterilizálás paraméterei gépektől függően:
+
+121 °C-on 15—20 perc, 108 kPa nyomáson (~1,1 bar)
+134 °C-on 3—10 perc, 206 kPa (~2,1 bar) nyomáson lehetnek.Autoklávozható eszközök: fémtárgyak, műtéti műszerek, műtéti textíliák, kötszerek, gumi és autoklávozható műanyag termékek, üveg- és porcelánáruk.
+Felhasználható csomagolóanyagok: Mivel a gőznek át kell hatolnia a csomagoláson, és az eszközök teljes felületével érintkeznie kell, ezért csak megfelelő áteresztőképességű csomagolóanyag használható. Ilyen a speciális papír, papír-műanyag kombináció, műtőlepedő, nemszőtt textília, valamint ú.n. kötszerdoboz.
+
+
+==== Hőlégsterilizálás ====
+
+A hőlégsterilizálás során a zárt munkatérben elektromos úton forrósítják fel a száraz levegőt, melyet azután ventilátorral keringtetnek. A forró levegő a beállított hőmérsékletre melegíti fel a készülékbe helyezett eszközöket. Az adott hatóidő alatt és hőmérsékleten elpusztulnak a mikroorganizmusok. A ciklus végén a rakományt lehűtik.
+A hőlégsterilizálás paraméterei:
+
+160 °C-on 45 perc,
+180 °C-on 25 perc,
+200 °C-on 10 perc.Magas hőmérsékleten sterilizálható eszközök: fémtárgyak, üveg- és porcelántermékek.
+Felhasználható csomagolóanyagok: Ennél az eljárásnál a csomagolóanyaggal szemben támasztott követelmény, hogy légmentesen zárható, hőálló és jó hővezető legyen. Ilyen a hőálló poliamid fóliatömlő, zárt fémdoboz, hőálló üvegedény, speciális alumínium fólia.
+
+
+==== Etilén-oxidos gázsterilizálás ====
+Az etilén-oxiddal történő sterilizálás során a légtelenített munkatérben megfelelő hőmérséklet és páratartalom mellett a rakományt előkondicionálják, majd meghatározott koncentrációjú etilénoxidot juttatnak a térbe, amely a hatóidő alatt elpusztítja a mikroorganizmusokat. A ciklus végén a munkatérből eltávolítják az etilénoxidot, majd a csomagokat a felhasználás előtt megfelelő ideig szellőztetik.
+Az etilén-oxidos sterilizálás paraméterei:
+
+gázkoncentráció: 650–1200 mg/l
+relatív páratartalom: 70–90%
+hőmérséklet: 37–55 °C
+hatóidő: 2–6 óra, az előző paraméterektől függően.Etilén-oxiddal sterilizálható eszközök:szintetikus varróanyagok, többször használható gumi- és műanyageszközök, készülékek alkatrészei.
+Felhasználható csomagolóanyag: speciális papír–műanyag kombinációjú tasak vagy tekercs, melyet erre a célra kifejlesztett hegesztőgéppel zárnak le.
+
+
+==== Formaldehides gázsterilizálás ====
+
+Formaldehides gázsterilizálás során a légtelenített munkatérbe túlnyomásos vízgőzhöz kevert formalinoldatot juttatnak be. A mintegy 60–80 °C fokos munkatérben az oldatból felszabadul a formaldehid gáz, amely elpusztítja vagy inaktiválja a mikroorganizmusokat. Az etilén-oxidhoz képest kevésbé hatékony, érzékenyebb a sterilizálás paramétereinek változására, főleg a hőmérséklet változására, és maga az anyag is erősen irritatív.
+A formaldehides sterilizálás paraméterei:
+
+gázkoncentráció: 0,2–1,5 g/l
+hőmérséklet: 60–80 °C, géptípustól függően
+relatív páratartalom: 100%
+hatóidő: 30 perc–2 óra.Formaldehiddel sterilizálható eszközök: gumi- és többször is használható műanyageszközök, műszerek és készülékek alkatrészei.
+Felhasználható csomagolóanyag: az etilén-oxidos sterilizáláshoz is felhasználható, papír–műanyag kombinációjú tasak vagy tekercs, amit hegesztőgéppel zárnak le.
+
+
+==== Plazmasterilizálás ====
+Az eljárás során a hidrogén-peroxid plazma-állapotát használják csíramentesítésre. A légtelenített, alacsony hőmérsékletű munkatérbe hidrogén-peroxidot juttatnak, melynek párája kontaktusba lép a sterilizálandó, becsomagolt eszközökkel. Ezt követően rádiófrekvenciás energiát használva elektromos erőteret hoznak létre a munkatérben, melynek hatására a hidrogén-peroxid plazma állapotba kerül (ez az ú.n. negyedik halmazállapot). A plazmában lévő kémiai anyagok (aktív szabad gyökök) pusztítják el a mikroorganizmusokat. Ezen folyamat közben az energiaszint csökken, és a plazma-állapotú hidrogén-peroxidból vízpára és oxigén, valamint egyéb melléktermék keletkezik. A munkatérben a légnyomást kiegyenlítik és az eszközök azonnal használhatóak.
+A plazmasterilizálás paraméterei:
+
+hőmérséklet: általában 46 °C
+ciklusidő: géptől függően 45-75 perc
+plazmafázisban 400 W rádiófrekvencia és 13,56 MHz.Plazmával sterilizálható eszközök: a költségeit tekintve ez a legdrágább eljárás, viszont ez a legkíméletesebb az eszközökkel, az alacsony hőmérséklet miatt. Így ezekben a sterilizátorokban elsősorban érzékeny eszközöket, mikrosebészeti műszereket, berendezések könnyen sérülő darabjait csírátlanítják.
+Felhasználható csomagolóanyag: speciális polipropilén alapanyagú tasakok, tömlők, íves csomagolóanyagok, valamint műszerdobozok.
+
+
+=== Tárolás, eltarthatóság ===
+Az eszközök az alkalmazott csomagolásban különböző ideig tartják meg sterilitásukat. Ez 14 naptól 12 hónapig terjedhet, mely védőcsomagolással meghosszabbítható. Az eszközök minden esetben a felhasználás helyén és idején kerülnek kibontásra. A felhasználásig egyenletes szobahőmérsékleten, elkülönítve, száraz és pormentes helyiségben kell tárolni.
+
+
+== Jegyzetek ==
+
+
+== Források ==
+Dr. Pecho Zoltán, Dr. Milassin Márta. Tájékoztató a sterilizálásról (magyar nyelven). Országos Epidemiológiai Központ (2010). ISBN 978-963-06-7698-4 
+
+
+== További információk ==
+Az Országos Epidemiológiai Intézet honlapja. (Hozzáférés: 2011. január 25.)

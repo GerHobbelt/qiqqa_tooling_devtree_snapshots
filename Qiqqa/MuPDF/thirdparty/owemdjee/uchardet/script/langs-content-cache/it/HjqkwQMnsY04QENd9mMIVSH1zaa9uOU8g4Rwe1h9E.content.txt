@@ -1,0 +1,361 @@
+revision: 133959971
+title: Structured Query Language
+url: https://it.wikipedia.org/wiki/Structured_Query_Language
+
+
+---
+
+In informatica, SQL (Structured Query Language) (/skjuːˈɛl/ "S-Q-L") è un linguaggio standardizzato per database basati sul modello relazionale (RDBMS), progettato per le seguenti operazioni:
+
+creare e modificare schemi di database (DDL = Data Definition Language);
+inserire, modificare e gestire dati memorizzati (DML = Data Manipulation Language);
+interrogare i dati memorizzati (DQL = Data Query Language);
+creare e gestire strumenti di controllo e accesso ai dati (DCL = Data Control Language).A dispetto del nome, non si tratta perciò di un semplice linguaggio di interrogazione: alcuni suoi sottoinsiemi, infatti, permettono di creare, gestire e amministrare database. 
+
+
+== Storia ==
+Il SQL nasce nel 1974 ad opera di Donald Chamberlin, nei laboratori dell'IBM. Nasce come strumento per lavorare con database che seguano il modello relazionale. A quel tempo però si chiamava SEQUEL (per questo la corretta pronuncia IPA di SQL è [ˈɛsˈkjuˈɛl] e quella informale [ˈsiːkwəl]). Nel 1975 viene sviluppato un prototipo chiamato SEQUEL-XRM; con esso si eseguirono sperimentazioni che portarono, nel 1977, a una nuova versione del linguaggio, che inizialmente avrebbe dovuto chiamarsi SEQUEL/2 ma che poi divenne, per motivi legali (il nome SEQUEL era già stato usato, e soprattutto registrato, in un altro ambito per una compagnia aerea), SQL. Su di esso si sviluppò il prototipo System R, che venne utilizzato da IBM per usi interni e per alcuni suoi clienti. Ma, dato il suo successo, anche altre società iniziarono subito a sviluppare prodotti basati su SQL. Nel 1981 IBM iniziò a vendere alcuni prodotti relazionali e nel 1983 rilasciò DB2, il suo DBMS relazionale diffuso negli ultimi anni del XX secolo. SQL divenne subito lo standard industriale per i software che utilizzano il modello relazionale.
+L'ANSI lo adottò come standard fin dal 1986, senza apportare modifiche sostanziali alla versione inizialmente sviluppata da IBM. Nel 1987 la ISO fece lo stesso. Questa prima versione standard è denominata SQL/86. Negli anni successivi si realizzarono altre versioni, che furono SQL/89, SQL/92 e SQL/2003. Tale processo di standardizzazione mirava alla creazione di un linguaggio che funzionasse su tutti i DBMS (Data Base Management Systems) relazionali, ma questo obiettivo non fu raggiunto. Infatti, i vari produttori implementarono il linguaggio con numerose variazioni e, in pratica, adottarono gli standard ad un livello non superiore al minimo, definito dall'Ansi come Entry Level.
+
+
+== Caratteristiche ==
+SQL è un linguaggio per interrogare e gestire basi di dati mediante l'utilizzo di costrutti di programmazione denominati query. Con SQL si leggono, modificano, cancellano dati e si esercitano funzioni gestionali ed amministrative sul sistema dei database. La maggior parte delle implementazioni dispongono di interfaccia alla riga di comando per l'esecuzione diretta di comandi, in alternativa alla sola interfaccia grafica GUI.
+Originariamente progettato come linguaggio di tipo dichiarativo, si è successivamente evoluto con l'introduzione di costrutti procedurali, istruzioni per il controllo di flusso, tipi di dati definiti dall'utente e varie altre estensioni del linguaggio. A partire dalla definizione dello standard SQL:1999 molte di queste estensioni sono state formalmente adottate come parte integrante di SQL nella sezione SQL/PSM dello standard.
+Alcune delle critiche più frequenti rivolte ad SQL riguardano la mancanza di portabilità del codice fra vendor diversi, il modo inappropriato con cui vengono trattati i dati mancanti (Null), e la semantica a volte inutilmente complicata.
+
+
+=== Struttura ===
+Essendo un linguaggio dichiarativo, SQL non richiede la stesura di sequenze di operazioni (come ad es. i Linguaggi imperativi), piuttosto di specificare le proprietà logiche delle informazioni ricercate. Esso si divide in:
+
+Data Definition Language (DDL) - permette di creare e cancellare database o di modificarne la struttura
+Data Manipulation Language (DML) - permette di inserire, cancellare, modificare i dati
+Data Control Language (DCL) - permette di gestire gli utenti e i permessi
+Query language (QL) - permette di interrogare il database, cioè di leggere i dati.
+Device Media Control Language (DMCL) - permette di controllare i supporti (memorie di massa) dove vengono memorizzati i dati.
+
+
+== Operatori ==
+Gli operatori, messi a disposizione dal SQL standard si dividono in sette categorie:
+
+Operatori di assegnazione
+Operatori di confronto
+Operatori stringa
+Operatori aritmetici
+Operatori condizionali
+Operatori logici
+Operatori tra bit
+
+
+=== Operatori di assegnazione ===
+Gli operatori di assegnazione assegnano un valore a una variabile o a un campo.
+
+= Esprime un'assegnazione e non restituisce alcun valore.
+:= Esprime un'assegnazione di un valore ad una variabile non ancora istanziata e non restituisce alcun valore.
+
+
+=== Operatori di confronto ===
+Gli operatori di confronto servono a determinare uguaglianze e disuguaglianze tra valori e ad effettuare ricerche all'interno dei dati. Di seguito uno schema tabellare:
+
+= Esprime uguaglianza tra due valori numerici o stringhe di caratteri (dove non è usato come operatore di assegnazione)
+IS Si usa per verificare se un valore è NULL, oppure se corrisponde a un valore booleano (TRUE, FALSE, UNKNOWN).
+LIKE Esprime somiglianza tra due valori letterali: con l'operatore LIKE è possibile usare, per i confronti, i caratteri speciali % (sostituisce un arbitrario numero di lettere) e _ (sostituisce una lettera arbitraria)
+< Stabilisce se un valore è minore di un altro
+> Stabilisce se un valore è maggiore di un altro
+<= Stabilisce se un valore è minore o uguale di un altro
+>= Stabilisce se un valore è maggiore o uguale di un altro
+<> Stabilisce se due valori sono diversi tra loro
+!= equivale a <>
+BETWEEN ... AND Recupera un valore compreso tra due valori
+IN Stabilisce se un valore è contenuto in una lista di valori possibili
+EXISTS Stabilisce se una determinata subquery restituisce un valore
+ANY o SOME Stabilisce se una determinata subquery restituisce almeno uno dei valori specificati
+ALL Stabilisce se una determinata subquery restituisce tutti i valori desideratiAd alcuni di questi operatori corrisponde un operatore contrario che fa uso del termine NOT:
+
+IS NOT
+NOT LIKE
+NOT BETWEEN
+NOT IN
+NOT EXISTS
+
+
+==== Operatori stringa ====
+Gli operatori stringa accettano come operandi due stringhe e restituiscono un valore booleano o stringa.
+
+
+===== Operatore LIKE =====
+L'operatore LIKE (viene usato anche MATCHES), di solito, è alla base dei criteri di ricerca per parole chiave e delle query effettuate da un motore di ricerca.
+Il carattere underscore (_), detto wildchar, esegue la ricerca su un singolo carattere arbitrario; il simbolo % è detto operatore jolly ed esegue la ricerca su una stringa arbitraria, ovvero su un intervallo di valori numerici.
+Per ricercare il carattere underscore all'interno di un'espressione utilizzare la sintassi [_] (leggi anche più avanti).
+La sintassi di Microsoft Access è leggermente diversa da questo standard internazionale, e più completa. Invece del simbolo underscore, si utilizza ? per ricercare un singolo carattere (sia numero che lettera); invece del simbolo %, l'operatore jolly è dato da *. Access permette di ricercare un singolo valore numerico tramite il tasto hash (o cancelletto) (#), e di ricercare un carattere (lettera e numero) all'interno o all'esterno di un insieme di valori, con la sintassi [] e [!]. L'intervallo può essere puntuale o collettivo: ad esempio, [A-F] indica le lettere comprese fra A ed F, mentre [A, F] indica solo la ricerca di queste due lettere. Ad esempio, un'istruzione come 'LIKE P[!A-F]C' ricerca le parole che iniziano per "P", finiscono per "C" e per seconda lettera non hanno i caratteri compresi fra le lettere A e F. Questa completezza nell'implementazione di LIKE è dovuta al fatto che Access non prevede operatori più complessi come SIMILAR TO e REGEXP.
+Nonostante questa completezza, il driver OLE DB per Windows ha un bug noto: l'operatore jolly * è utilizzabile solo all'interno dell'applicazione, mentre via OLE DB/ODBC deve essere utilizzato il classico simbolo %.
+
+
+===== Operatori SIMILAR TO e REGEXP =====
+L'operatore SIMILAR TO è parte dello standard SQL e consente di verificare se una stringa corrisponde a una data espressione regolare. La sintassi utilizzata è differente dagli standard de facto che sono stati stabiliti da Perl e da POSIX e per questo motivo l'adozione di tale operatore da parte dei produttori è piuttosto limitata.
+L'operatore REGEXP è più diffuso e anch'esso consente di verificare se una stringa corrisponde a una data espressione regolare. La sintassi utilizzata varia a seconda dell'implementazione SQL, tuttavia in genere è piuttosto aderente agli standard de facto stabiliti dal Perl o da POSIX.
+L'SQL prevede anche gli operatori complementari NOT SIMILAR TO e NOT REGEXP.
+
+
+===== BINARY =====
+Questo operatore serve a rendere case-sensitive l'applicazione delle espressioni regolari, cioè a far sì che le lettere maiuscole siano considerate differenti dalle minuscole.
+
+
+===== COLLATE =====
+Questo operatore serve a specificare quale collazione (insieme di regole per l'ordinamento di un set di caratteri) deve essere utilizzata nell'espressione corrente.
+
+
+=== Operatori aritmetici ===
+Gli operatori aritmetici accettano operatori di un tipo numerico (interi o decimali) e restituiscono il risultato dell'operazione aritmetica corrispondente. Di seguito uno schema tabellare:
+Operatore Descrizione
+
++ Effettua un'addizione, o lascia immutato il segno di un numero
+- Effettua una sottrazione, o inverte il segno di un numero
+* Effettua una moltiplicazione
+/ Effettua una divisione
+MOD Restituisce il resto di una divisione
+DIV Restituisce la parte intera di una divisione
+
+
+=== Operatori condizionali ===
+L'unico operatore condizionale di SQL è WHERE (dove) e serve a definire criteri di ricerca mirati.
+
+
+=== Operatori logici ===
+Gli operatori logici di SQL appartengono agli operatori logici booleani e sono AND (e), OR (o, oppure), NOT (non), XOR (detto anche "OR esclusivo").
+
+L'operatore logico AND, che lega due condizioni, restituisce il valore TRUE se e solo se entrambi gli operandi sono veri.
+L'operatore logico OR, che lega due condizioni, restituisce TRUE se e solo se almeno uno degli operandi è vero.
+L'operatore NOT accetta un solo operando e restituisce il valore inverso: falso se questo è vero, vero se questo è falso.
+L'operatore XOR, che accetta due condizioni, restituisce TRUE se e solo se uno solo degli operandi è vero.
+
+
+=== Operatori tra bit ===
+Lo standard SQL non prevede questa famiglia di operatori, tuttavia essa è presente in molte implementazioni. Questi operatori effettuano le operazioni AND, OR, NOT e XOR a livello di bit.
+
+
+=== Regole generali per gli operatori ===
+Un'espressione è costituita da un valore o da un'operazione che restituisce un valore. Questa definizione è ricorsiva: le espressioni possono essere annidate. Poiché gli operatori restituiscono sempre un valore, è perfettamente lecito combinarli tra loro per formare condizioni via via più complesse.
+L'uso delle parentesi tonde ( ) all'interno delle espressioni di ricerca consente di modificare o esplicitare la precedenza degli operatori, ossia l'ordine in cui essi vengono elaborati. Ove un'espressione composta sia scritta senza parentesi, vengono applicate le precedenze tra gli operatori previste dal linguaggio.
+
+
+== DDL: Definizione dei dati ==
+
+DDL (Data Definition Language – linguaggio di definizione dei dati) serve a creare, modificare o eliminare gli oggetti in un database. Sono i comandi DDL a definire la struttura del database e quindi dei dati ivi contenuti, ma non fornisce gli strumenti per modificare i dati stessi per il quale si usa il DML (Data Manipulation Language). L'utente deve avere i permessi necessari per agire sulla struttura del database e questi permessi vengono assegnati tramite il DCL (Data Control Language).
+
+
+=== Domini Elementari ===
+
+SQL mette a disposizione sei famiglie di domini elementari a partire dai quali si possono definire i domini da associare agli attributi dello schema.
+
+
+== DML: Manipolazione dei dati ==
+DML (Data Manipulation Language – linguaggio di manipolazione dei dati) fornisce i comandi per inserire, modificare ed eliminare i dati all'interno delle tabelle di un database. La struttura di questi dati deve già essere stata definita tramite il DDL. Inoltre, il permesso di accedere a tali dati deve essere precedentemente assegnato all'utente tramite il DCL.
+
+
+=== Insert ===
+Il comando ha la funzione di inserire i dati nelle tabelle.
+Le colonne (o campi) di destinazione dei valori possono essere o meno dichiarate nel comando. Se non vengono dichiarate, è necessario passare al comando un valore per ogni colonna della tabella, rispettando rigorosamente l'ordine delle colonne stesse. Se, invece, le colonne di destinazione vengono dichiarate, è possibile indicare le sole colonne per le quali vengono passati dei valori, purché vengano inseriti comunque i valori per tutte le colonne not null (che non possono essere nulle) della tabella.
+Di per sé il comando insert opera inserendo in tabella una sola riga per volta. È possibile, però, inserire più di una riga "in modo automatico" passando all'insert una serie di righe (o tuple) risultanti da un comando di select, purché tali righe siano compatibili con le colonne della tabella su cui si inseriscono i dati.
+
+
+==== Sintassi del comando insert ====
+Insert semplice:
+oppure
+
+Insert mediante select:
+
+
+=== Update ===
+Il comando update ha la triplice funzione di modificare i dati delle tabelle.
+Il nome di ogni campo che deve essere modificato va dichiarato dopo la parola chiave SET e deve essere seguito dal simbolo = (uguale) e dal nuovo valore che deve assumere.
+È possibile modificare più campi della stessa riga in un unico comando update, separandoli l'uno dall'altro con il simbolo , (virgola).
+Il comando generico aggiorna tutte le righe della tabella. È possibile restringerne il numero applicando la parola chiave aggiuntiva WHERE, che permette di effettuare una selezione qualitativa delle righe imponendo delle condizioni sui dati presenti nelle righe prima dell'aggiornamento.
+
+
+==== Sintassi del comando update ====
+Update generico:
+Update con condizione:
+
+
+=== Delete ===
+Il comando delete ha la funzione di cancellare i dati dalle tabelle.
+Come il comando update anche delete può operare in modo generico cancellando tutte le righe della tabella oppure può identificare le righe da cancellare mediante la parola chiave aggiuntiva WHERE e la condizione (o le condizioni) ad essa associata.
+
+
+==== Sintassi del comando delete ====
+Delete generico:
+Delete con condizione:
+
+
+=== Truncate Table ===
+Come già detto, una Delete priva di clausola Where cancella tutte le righe dalla tabella specificata. Tuttavia, esiste un altro modo per svuotare completamente una tabella: il comando Truncate Table. Alcuni DBMS implementano questo comando (che non è presente nello standard SQL) in modo più veloce rispetto a una Delete, ad esempio cancellando il file dei dati senza leggerlo e ricreandolo vuoto. Generalmente però questo impedisce che vengano restituite alcune informazioni accessorie, come il numero di righe cancellate.
+
+
+==== Sintassi del comando truncate table ====
+
+
+=== La transazione ===
+Una transazione è un blocco di istruzioni che sono strettamente correlate tra loro. Nel caso in cui per qualsiasi motivo (un errore interno al DBMS, un errore nelle istruzioni SQL, un errore di sistema) una delle istruzioni non arrivi a compimento, l'intera transazione verrà annullata. Si dice quindi che una transazione è un'operazione atomica, ossia non è divisibile: se non viene eseguita interamente, non verrà eseguita affatto. Questo è uno degli strumenti più utilizzati per garantire l'integrità dei dati.
+Fino a quando una transazione non ha esito positivo, le modifiche che apporta sono visibili solo per la sessione che ha avviato la transazione. A seconda nel livello di isolamento gli altri utenti potranno accedere a una versione più vecchia dei dati, oppure essere messi in attesa fino al termine della transazione.
+Non tutti i DBMS supportano le transazioni, mentre altri le supportano solo in determinate condizioni (ad esempio in MySQL sono supportate solo per alcuni tipi di tabelle). Inoltre il DBMS può limitare le transazioni ad un sottoinsieme dell'SQL (ad esempio, in MySQL, se si lancia un comando DDL la transazione corrente termina).
+Alcuni DBMS inoltre consentono le transazioni annidate. Le modifiche effettuate da una transazione contenuta in un'altra non sono effettive finché la transazione più esterna non termina con successo.
+Un'alternativa semanticamente molto simile è costituita dai savepoint. Essi consentono di salvare una versione dei dati nel mezzo di una transazione. Sarà poi possibile annullare l'intera transazione oppure ripristinare uno dei savepoint precedentemente impostati. Questo salvataggio può essere effettuato in un blocco di codice condizionale, il che rende questa funzionalità molto più dinamica rispetto alle transazioni annidate.
+
+
+==== Begin Transaction ====
+Per iniziare esplicitamente una transazione si utilizza il comando BEGIN TRANSACTION. La mancanza di questo comando fa sì che ogni istruzione funga da transazione a sé stante.
+
+
+===== Sintassi del comando begin transaction =====
+
+
+==== Commit ====
+Per confermare la transazione si utilizza il comando COMMIT. Con esso tutte le modifiche effettuate sui dati in precedenza vengono memorizzate.
+
+
+===== Sintassi del comando commit =====
+
+
+==== Rollback ====
+Per annullare la transazione si utilizza il comando ROLLBACK. Con esso tutte le modifiche effettuate sui dati in precedenza (a partire dall'inizio della transazione) vengono cancellate.
+
+
+===== Sintassi del comando rollback =====
+
+
+== DQL: Interrogazione dei dati ==
+DQL (data query language – linguaggio di interrogazione dei dati) comprende i comandi per leggere ed elaborare i dati presenti in un database. Questi dati devono essere stati inseriti attraverso il DML in strutture create con il DDL, mentre il DCL stabilisce se l'utente può accedervi.
+
+
+=== Select ===
+Col comando select abbiamo la possibilità di estrarre i dati, in modo mirato, dal database.
+
+
+==== Sintassi del comando select ====
+
+dove:
+
+lista_elementi_selezione è l'elenco dei campi da estrarre (separati tra loro con una virgola);
+lista_riferimenti_tabella è l'elenco delle tabelle da cui estrarre i dati;
+espressione_condizionale rappresenta l'elenco delle condizioni, ovvero dei requisiti che un campo deve rispettare per poter essere prelevato dall'interrogazione (le condizioni sono specificate mediante gli operatori di confronto, connettori logici e comparatori come between, in, like, is null);
+lista_colonne è la colonna o le colonne che devono essere prese come riferimento per l'ordinamento dei dati in uscita.Di default il comando SELECT agisce con il metodo ALL, ma specificando DISTINCT (o UNIQUE a seconda delle implementazioni) è possibile eliminare dai risultati le righe duplicate.
+La clausola GROUP BY serve per raggruppare per tupla i risultati mentre la relativa condizione HAVING serve per filtrarne i risultati.
+
+In questo caso vengono filtrati i fornitori che hanno un totale fatturato maggiore di 10.000.
+La clausola ORDER BY serve per ordinare i risultati in base a uno o più campi.
+LIMIT (o TOP, a seconda delle implementazioni) limita il numero delle righe fornite: LIMIT 10 prende le prime 10 righe della mia tabella. È anche possibile scartare un certo numero di righe all'inizio dei risultati aggiungendo un parametro a LIMIT o la clausola OFFSET.
+L'SQL standard non prevede alcun ordinamento se non si specifica la clausola ORDER BY, pertanto senza di essa anche LIMIT ha un effetto imprevedibile.
+Un esempio è il seguente:
+
+Questa query estrae l'elenco di tutti gli utenti maggiorenni ordinando l'output in base al cognome.
+Nelle clausole GROUP BY e ORDER BY i nomi dei campi si possono sostituire con il numero corrispondente all'ordine della funzione SELECT: nell'ultimo caso ORDER BY cognome si può scrivere ORDER BY 1.
+La definizione di select è comunque molto più ampia, prevede molte altre opzioni ma in linea di massima con queste opzioni si compongono la maggior parte delle interrogazioni.
+
+l'asterisco permette di includere nella selezione tutte le colonne della tabella utenti
+Con le select è possibile anche eseguire dei calcoli:
+
+questo produce dati estratti ma anche dati calcolati.
+La clausola AS serve per dare un nome alla nuova colonna che verrà mostrata nel risultato della select eseguita.
+Molti DBMS supportano la clausola non standard LIMIT, che deve essere posta per ultima e può avere tre forme:
+
+numero_risultati è il numero delle righe da estrarre. pos_primo_risultato è l'indice della prima riga da estrarre. Insieme, possono essere utilizzati per suddividere i risultati in blocchi e leggerli un po' alla volta (per esempio per comodità del DBA, o per la paginazione dei risultati mostrati da una applicazione web).
+
+
+=== Join ===
+
+Una forma di select composto tra più tabelle con uno o più campi comuni si ottiene attraverso la clausola Join.
+
+
+=== Subquery ===
+
+Le subquery possono essere inserite ovunque il linguaggio SQL ammetta un'espressione che restituisce un singolo valore e nella clausola FROM. In questo secondo caso, le subquery sono chiamate anche tabelle derivate (derived table).
+Le subquery propriamente dette possono restituire un singolo valore, oppure un insieme di risultati, a seconda dei casi. Un esempio piuttosto semplice è quello in cui si vogliono estrarre da una tabella i valori numerici superiori alla media. Una sola Select non può leggere la media e al contempo i valori che la superano. A questo scopo si avrà una select che legge la media:
+
+Questa query verrà inserita nella clausola WHERE della query più esterna; la subquery viene eseguita per prima:
+
+Come si vede, da un punto di vista sintattico è necessario porre le subquery tra parentesi.
+
+
+==== Tabelle derivate ====
+Le tabelle derivate sono un caso particolare di subquery: una Select interna estrae i dati che verranno poi interrogati dalla select esterna.
+L'esempio seguente viene utilizzato a scopo didattico, ma non rappresenta un approccio ottimale. Si supponga comunque di voler estrarre i record per i quali il campo mail non è vuoto, scegliendoli tra gli utenti la cui registrazione è stata confermata. Ecco come ottenere questo risultato con una tabella derivata:
+
+In realtà le tabelle derivate sono utili laddove non vi sono altri approcci possibili, il che accade quando la query esterna contiene una JOIN.
+
+
+== DCL: Controllo sui dati ==
+DCL serve a fornire o revocare agli utenti i permessi necessari per poter utilizzare i comandi DML e DDL, oltre agli stessi comandi DCL (che gli servono per poter a sua volta modificare i permessi su alcuni oggetti).
+
+
+=== Grant ===
+Il comando Grant fornisce o concede uno o più permessi a un determinato utente (es: il permesso di inserimento in una tabella, di modificarla o eliminarla) e di amministratore di valore.
+
+
+=== Revoke ===
+Il comando Revoke revoca uno o più permessi a un determinato utente (es: il permesso di cancellazione da una tabella).
+
+
+== Stored Programs ==
+Con il termine Stored Programs, o Business Logic, si intendono quelle routine programmate in SQL, con le estensioni procedurali che permettono il controllo del flusso, i cicli, i cursori e la gestione degli errori. Nelle implementazioni più complete di SQL, gli Stored Program possono essere di diversi tipi:
+
+Stored procedure
+Stored function
+TriggerInoltre alcuni DBMS, come MySQL, permettono di creare procedure SQL che vengono eseguite a una data ora una sola volta, oppure ripetutamente a un certo intervallo temporale, come i Cron Job dei sistemi Unix.
+
+
+== Critiche a SQL ==
+SQL è un linguaggio di interrogazione pensato per interagire con i database relazionali. I teorici fanno però notare come le caratteristiche originali dell'SQL, ispirate al calcolo delle tuple, in realtà lo violino. Le sue estensioni più recenti supportano pienamente il Modello relazionale, ma hanno peggiorato le suddette violazioni.
+Inoltre, vi sono molte critiche sull'utilizzo pratico dell'SQL:
+
+non fornisce un modo standard per suddividere un lungo comando in comandi più brevi a cui ci si possa riferire tramite un nome (sebbene molte implementazioni in realtà forniscano questa funzionalità);
+le diverse implementazioni sono generalmente incompatibili tra loro;
+si fa troppo affidamento sui valori NULL, un metavalore che secondo alcuni accademici dovrebbe indicare l'assenza di un valore, secondo altri dovrebbe indicare un valore sconosciuto, mentre nella pratica finisce per essere usato in entrambi i modi, o in uno solo, ma in modo incoerente.
+
+
+== Note ==
+
+
+== Bibliografia ==
+(EN)  "SQL-99 Complete, Really", Peter Gulutzan e Trudy Pelzer, R&D Books, 1999, ISBN 978-0-87930-568-0
+
+
+== Voci correlate ==
+Algebra relazionale
+Calcolo relazionale
+Data Definition Language
+Data Manipulation Language
+Query language
+Data Control Language
+SQL injection
+SQLJ
+4GL
+PL/SQL
+Transact-SQL
+NoSQL
+
+
+== Altri progetti ==
+
+ Wikibooks contiene testi o manuali su SQL
+ Wikizionario contiene il lemma di dizionario «SQL»
+ Wikimedia Commons contiene immagini o altri file su SQL
+
+
+== Collegamenti esterni ==
+
+ Sito ufficiale, su iso.org. 
+ SQL, su Treccani.it – Enciclopedie on line, Istituto dell'Enciclopedia Italiana. 
+(EN) Structured Query Language, su Enciclopedia Britannica, Encyclopædia Britannica, Inc. 
+SQL. Guida gratuita in italiano realizzata dal Dipartimento del Tesoro (in pdf).
+ Tutorial de SQL, su 1keydata.com.
+ Istruzioni SQL di base, su kb.askmonty.org.
+(EN) SQL::2003 BNF, su savage.net.au.
+(EN) SQL99 BNF, su savage.net.au.
+(EN) SQL93 Specification (TXT), su contrib.andrew.cmu.edu.
+(EN) SQL93 BNF (TXT), su contrib.andrew.cmu.edu.
+(EN) SQL92 Specification, su savage.net.au.
+(EN) SQL92 BNF, su savage.net.au.
+(EN) PostgreSQL, su postgresql.org.
+(EN) Oracle SQL tutorials, su freeitsolutions.com.
+(EN) wiscorp.com.
+ Manuale e tutorial SQL da Webmasterpoint.org, su webmasterpoint.org.

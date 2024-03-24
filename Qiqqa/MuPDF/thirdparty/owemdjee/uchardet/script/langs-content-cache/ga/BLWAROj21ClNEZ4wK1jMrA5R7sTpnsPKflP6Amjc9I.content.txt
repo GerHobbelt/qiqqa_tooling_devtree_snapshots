@@ -1,0 +1,37 @@
+revision: 1129152
+title: "Gr\xE9as\xE1n Domhanda"
+url: https://ga.wikipedia.org/wiki/Gr%C3%A9as%C3%A1n_Domhanda
+
+
+---
+
+Is córas poiblí hipirtéacs ar an Idirlíon é an Gréasán Domhanda (as Béarla World Wide Web nó WWW), cruthaithe ag Tim Berners-Lee agus Robert Cailliau i CERN i 1990 le haghaidh torthaí eolaíochta a scaipeadh. Is é an Gréasán Domhanda an chuid is iomráití den Idirlíon ach tá seirbhísí eile ar an Idirlíon nach cuid den Ghréasán Domhanda iad (cosúil le ríomhphost agus teachtaireachtaí meandracha).
+
+Is éard atá i gceist leis an Gréasán Domhanda ná na ríomhairí go léir atá ceangailte leis an Idirlíon, agus a choinníonn doiciméid atá inrochtana ar an dá thaobh tríd an bprótacal caighdeánach (an prótacal aistrithe hipirtéacs, HTTP).  An gréasán a thugtar air mar ghiorrú (nó an líon, nó w3), agus i seoltaí Idirlín úsáidtear an t-acrainm www.
+
+
+== URLanna agus Hipirnaisc ==
+
+Más mian leat an Gréasán Domhanda a thaisteal, tá gá le ríomhaire nó fón srl. le ceangal Idirlín agus brabhsálaí air. Coinnítear leathanaigh gréasáin ar fhreastalaithe gréasáin agus déantar rochtain orthu tríd an bprótacal HTTP. Tagann íomhá an ghréasáin ó úsáid hipirnaisc chun na leathanaigh lín a cheangail le chéile.
+Lonannaítear gach láithreán lín le seoladh uathúil nó URL (aimsitheoir aonfhoirmeach acmhainne) agus leathanaigh dhifriúla sonraí, dealaithe óna chéile le lipéid scartha le tulslaiseanna (I). Aon rud is féidir a bheith ina chomhad ríomhaire, is féidir é a chur ar fáil mar dhoiciméad gréasáin: téacs, grafaic, fuaim, fís is eile. Gné eile den líon is ea an t-inneall cuardaigh, modh chun doiciméid a chuardach is a aimsiú ar bhonn ábhair seachas seolaidh.  Níl aon teorainn theoiriciúil ná dhlíthiúil le méid an ghréasáin.Is é atá i láithreán lín ná ríomhaire a bhfuil doiciméid ann ar féidir iad a aistriú is a chur ar fáil ag ransaitheoirí i bhformáid chaighdeánach éigin (HTML nó XML, de ghnáth).
+Bíonn seoladh ag gach píosa eolais ar an nGréasán Domhanda. Tugtar an URL ar an seoladh seo (cé go bhfuil URI i ndáiríre níos cruinne don sainmhíniú seo - is fothacar iad na URLanna de na URIanna). Seasann URL le haghaidh Uniform Resource Locator nó Aimsitheoir Aonfhoirmeach Acmhainne i nGaeilge. Is féidir an URL a chló isteach sa mbrabhsálaí nó is féidir cliceáil ar hipearnasc ar leathanach gréasáin chun taisteal chuig URL nua. Seo roinnt samplaí de URLanna:
+
+http://www.wikipedia.org
+http://ga.wikipedia.org
+https://internetbanking.aib.ie/hb1/roi/presign.jsp Curtha i gcartlann 2007-06-29 ar an Wayback Machine
+http://upload.wikimedia.org/wikipedia/meta/2/2a/Nohat-logo-nowords-bgwhite-200px.jpgNí gá an http:// a chló isteach sa bhrabhsálaí mar go bhfuil sé inghlactha go bhfuil sé ann. Tabhair faoi deara thuas nach dtosaíonn gach URL le www. Is seoladh slán é an tríú shampla. Is féidir é sin a aithint mar go dtosaíonn sé le https. I gcás an cheathrú shampla, is URL é seo de phictiúr atá mar chuid de leathanach gréasáin. 
+
+
+== Stair ==
+Agus é ag obair ag CERN san Eilvéis, d'fhorbair  an ríomh-eolaí Sasanach Tim Berners-Lee agus an Beilgeach Robert Cailliau prótacail chun eolas a mhalartú idir ríomhairí.  I 1989 thairg siad scéim uiledhomhanda hipirtéacs, le húsáid ag fisicithe ar fud an Domhain ar dtús, agus cuireadh i bhfeidhm  mar "an idirlíon" (do ghnáthdhaoine) níso déanaí. Ceapadh taobh istigh de CERN sa Ghinéiv chun gurbh fhéidir le fisicithe in institiúidí éagsúla eolas ar fhisic ardfhuinnimh a roinnt le chéile go héasca.  
+Ba ar 12 Márta 1989 a chuir Tim Berners-Lee a mholadh chun tosaigh go gcruthódh sé córas gréasánach eolais don institiúid núicléach. Glacadh leis agus an bhliain dár gcionn scríobh sé an chéad bhrabhsálaí idirlín, ar ar thug sé ‘WorldWideWeb.Rinne Berners-Lee cinnte de gur cheadaigh CERN na teangacha seo a úsáid gan chead gan phaitinn, saor in aisce. Cuireadh ar fáil don phobal domhanda ar an Idirlíon é i 1991. Leath sé amach go tapa chuig gach ábhar, disciplín is tír ar Domhan, ionas go bhfuil sé uilechuimsitheach anois.  
+Tá eagraíocht curtha le chéile ag comhlachtaí a bhaineann leis an ngréasán, Feadhnacht an Ghréasáin Dhomhanda, ó 1994 chun comhphrótacail a fhorbairt dó. Lonnaithe in Institiúid Teicneolaíochta Massachusetts atá sí. D'éirigh Lee ina Stiúrthóir ar Feadhnacht an Ghréasáin Dhomhanda sa.bhliain 1994, go dtí 2008.
+I rith na 1990idí d'fhás an WWW timpeall 40% in aghaidh na bliana, agus bhí sé ag méadú 60% gach bliain sna 2000idí.
+
+
+== Féach freisin ==
+Idirlíon
+Feadhnacht an Ghréasáin Dhomhanda
+
+
+== Tagairtí ==

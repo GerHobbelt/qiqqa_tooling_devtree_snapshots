@@ -1,0 +1,420 @@
+revision: 69414052
+title: "Bi\u1EBFn \xE1p"
+url: https://vi.wikipedia.org/wiki/Bi%E1%BA%BFn_%C3%A1p
+
+
+---
+
+Máy biến áp hay máy biến thế, tên ngắn gọn là biến áp, là thiết bị điện thực hiện truyền đưa năng lượng hoặc tín hiệu điện xoay chiều giữa các mạch điện thông qua cảm ứng điện từ.
+Máy biến áp gồm có một cuộn dây sơ cấp và một hay nhiều cuộn dây thứ cấp liên kết qua trường điện từ. Khi đưa dòng điện với điện áp xác định vào cuộn sơ cấp, sẽ tạo ra trường điện từ. Theo định luật cảm ứng Faraday trường điện từ tạo ra dòng điện cảm ứng ở các cuộn thứ cấp. Để đảm bảo sự truyền đưa năng lượng thì bố trí mạch dẫn từ qua lõi cuộn dây. Vật liệu dẫn từ phụ thuộc tần số làm việc.
+
+Ở tần số thấp như biến áp điện lực, âm tần thì dùng lá vật liệu từ mềm có độ từ thẩm cao như thép silic, permalloy,... và mạch từ khép kín như các lõi ghép bằng lá chữ E, chữ U, chữ I.
+Ở tần số cao, vùng siêu âm và sóng radio thì dùng lõi ferrit khép kín mạch từ.Ở tần số siêu cao là vùng vi sóng và sóng truyền hình, vẫn có các biến áp dùng lõi không khí và thường không khép mạch từ. Tuy nhiên quan hệ điện từ của chúng khác với hai loại nói trên, và không coi là biến áp thật sự.
+Các cuộn sơ cấp và thứ cấp có thể cách ly hay nối với nhau về điện, hoặc dùng chung vòng dây như trong biến áp tự ngẫu. Thông thường tỷ số điện áp trên cuộn thứ cấp với điện áp trên cuộn sơ cấp tỷ lệ với số vòng quấn, và gọi là tỷ số biến áp. Khi tỷ số này >1 thì gọi là hạ áp, ngược lại <1 thì gọi là tăng áp.
+Các biến áp điện lực có kích thước và công suất lớn, thích hợp với tên gọi máy biến áp. Máy biến áp đóng vai trò rất quan trọng trong truyền tải điện năng.Biến áp cũng là một linh kiện điện tử quan trọng trong kỹ thuật điện tử và truyền thông.
+
+
+== Lịch sử phát triển ==
+Năm 1831: Michael Faraday phát hiện ra hiện tượng dòng điện tạo ra từ trường và ngược lại, sự biến thiên từ trường cũng tạo ra dòng điện.
+Năm 1884: Máy biến áp đầu tiên được sáng chế ra bởi Károly Zipernowsky, Miksa Déri và Ottó Titusz Bláthy.
+Năm 1886: Máy biến áp cho điện xoay chiều lần đầu tiên được đưa vào sử dụng tại Massachusetts, Mĩ.
+Năm 1889: Mikhail Dolivo-Dobrovolsky chế tạo ra máy biến áp 3 pha đầu tiên.
+Năm 1891: Máy biến áp Tesla được chế tạo bởi Nikola Tesla, có khả năng tạo ra dòng điện xoay chiều với tần số và hiệu điện thế cao.
+
+
+== Nguyên tắc hoạt động ==
+Máy biến thế hoạt động tuân theo 2 hiện tượng vật lý:
+
+Dòng điện chạy qua dây dẫn tạo ra từ trường (từ trường)
+Sự biến thiên từ thông trong cuộn dây tạo ra 1 hiệu điện thế cảm ứng (cảm ứng điện)Dòng điện được tạo ra trong cuộn dây sơ cấp khi nối với hiệu điện thế sơ cấp, và 1 từ trường biến thiên trong lõi sắt. Từ trường biến thiên này tạo ra trong mạch điện thứ cấp 1 hiệu điện thế thứ cấp. Như vậy hiệu điện thế sơ cấp có thể thay đổi được hiệu điện thế thứ cấp thông qua từ trường. Sự biến đổi này có thể được điều chỉnh qua số vòng quấn trên lõi sắt.
+Khi 
+  
+    
+      
+        
+          N
+          
+            P
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          U
+          
+            P
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          I
+          
+            P
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          Φ
+          
+            P
+          
+        
+      
+    
+     
+   và 
+  
+    
+      
+        
+          N
+          
+            S
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          U
+          
+            S
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          I
+          
+            S
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          Φ
+          
+            S
+          
+        
+      
+    
+     
+   là số vòng quấn, hiệu điện thế, dòng điện và từ thông trong mạch điện sơ cấp và thứ cấp (primary và secondary) thì theo Định luật Faraday ta có: 
+
+  
+    
+      
+        
+          
+            U
+            
+              P
+            
+          
+        
+        =
+        
+          
+            N
+            
+              P
+            
+          
+        
+        
+          
+            
+              d
+              
+                Φ
+                
+                  P
+                
+              
+            
+            
+              d
+              t
+            
+          
+        
+      
+    
+     
+   và 
+  
+    
+      
+        
+          
+            U
+            
+              S
+            
+          
+        
+        =
+        
+          
+            N
+            
+              S
+            
+          
+        
+        
+          
+            
+              d
+              
+                Φ
+                
+                  S
+                
+              
+            
+            
+              d
+              t
+            
+          
+        
+      
+    
+     
+  Nếu 
+  
+    
+      
+        
+          Φ
+          
+            S
+          
+        
+      
+    
+     
+   = 
+  
+    
+      
+        
+          Φ
+          
+            P
+          
+        
+      
+    
+     
+   thì 
+  
+    
+      
+        
+          
+            
+              U
+              
+                P
+              
+            
+            
+              U
+              
+                S
+              
+            
+          
+        
+        =
+        
+          
+            
+              N
+              
+                P
+              
+            
+            
+              N
+              
+                S
+              
+            
+          
+        
+      
+    
+     
+  ,
+ngoài ra 
+  
+    
+      
+        
+          
+            
+              I
+              
+                P
+              
+            
+            
+              I
+              
+                S
+              
+            
+          
+        
+        =
+        
+          
+            
+              N
+              
+                S
+              
+            
+            
+              N
+              
+                P
+              
+            
+          
+        
+      
+    
+     
+  
+Như vậy 
+  
+    
+      
+        
+          
+            
+              U
+              
+                P
+              
+            
+            
+              U
+              
+                S
+              
+            
+          
+        
+        =
+        
+          
+            
+              N
+              
+                P
+              
+            
+            
+              N
+              
+                S
+              
+            
+          
+        
+        =
+        
+          
+            
+              I
+              
+                S
+              
+            
+            
+              I
+              
+                P
+              
+            
+          
+        
+      
+    
+     
+   (máy biến thế lý tưởng).
+Ví dụ, 1 máy biến thế có công suất 400 W, tỉ lệ biến thế 80:5
+
+Phía sơ cấp 80 V, 5 A, 160 vòng
+Phía thứ cấp 5 V, 80 A, 10 vòng
+
+
+== Phân loại máy biến áp ==
+Máy biến áp (MBA) có thể phân làm nhiều loại khác nhau dựa vào:
+
+Cấu tạo: MBA một pha và MBA ba pha
+Chức năng: MBA hạ thế và MBA tăng thế
+Cách thức cách điện: MBA lõi dầu, lõi không khí...
+Nhiệm vụ: MBA Điện lực, MBA dân dụng, MBA hàn, MBA xung...
+Công suất hay hiệu điện thế...
+Ký hiệu trong mạch điện 
+
+
+== Lĩnh vực sử dụng ==
+Máy biến áp có thể chuyển đổi hiệu điện thế (điện áp) đúng với giá trị mong muốn, ví dụ từ đường dây trung thế 10 kV sang mức hạ thế 220 V hay 400 V dùng trong sinh hoạt dân cư. Tại các nhà máy phát điện, máy biến áp thường chuyển hiệu điện thế mức trung thế từ máy phát điện (10 kV đến 50 kV) sang mức cao thế (110 kV đến 500 kV hay cao hơn) trước khi truyền tải lên đường dây điện cao thế. Trong truyền tải điện năng với khoảng cách xa, hiệu điện thế càng cao thì hao hụt càng ít.
+Ngoài ra còn có các máy biến thế có công suất nhỏ hơn, máy biến áp (ổn áp) dùng để ổn định điện áp trong nhà, hay các cục biến thế, cục sạc,... dùng cho các thiết bị điện với hiệu điện thế nhỏ (230 V sang 24 V, 12 V, 3 V,...).
+
+
+== Tham khảo ==
+
+
+== Xem thêm ==
+
+
+== Liên kết ngoài ==
+Máy biến áp - Hướng dẫn Java Tương tác Lưu trữ 2011-11-29 tại Wayback Machine Phòng thí nghiệm Cao từ trường Quốc gia
+Bên trong Máy biến áp của Đại học Denver
+Hiểu Máy biến áp: Đặc điểm và Hạn chế của Tạp chí Conformity Lưu trữ 2008-01-26 tại Wayback Machine
+3 Thông tin và cấu trúc pha của Máy biến áp — Điểm cấp nguồn 3 pha Lưu trữ 2008-02-20 tại Wayback Machine
+Trạm điện và Truyền tải trên DMOZ
+J.Edwards và T.K Saha, Dòng đi qua máy biến áp thông qua vector Poynting PDF (264 KB)
+Giới thiệu các máy biến áp thông dụngPDF (94.6 KB)
+ứng dụng Java cho máy biến áp
+Mạch 3 pha của máy biến áp

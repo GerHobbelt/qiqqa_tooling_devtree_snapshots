@@ -1,0 +1,54 @@
+revision: 6374308
+title: Ip Man
+url: https://hr.wikipedia.org/wiki/Ra%C4%8Dunalne_mre%C5%BEe
+
+
+---
+
+Računalna mreža je skupina dva ili više međusobno povezanih računala koji dijele neke resurse (podatke, sklopovlje, programe...). Računala se smatraju povezanima ako mogu razmjenjivati informacije. Računalna mreža u širem smislu sadrži i ostale čvorove kao što su prospojnik ili usmjernik. Čvorovi računalne mreže u međusobnoj komunikaciji koriste komunikacijske protokole.
+Mreža znači komunikacijska infrastruktura koju čine topologija poveznica, arhitektura, komponente, organizacijska načela, komunikacijski postupci i komunikacijski formati (protokoli)
+
+
+== Klasifikacija računalnih mreža ==
+Računalne se mreže svrstavaju prema zemljopisnom području koje pokrivaju:
+
+PAN (Personal Area Network) – mreže s uskim područjem spajanja (Bluetooth, IRDA)LAN (Local Area Network) – lokalna mreža koja je na primjer u jednoj zgradi ili prostorijiMAN (Metropolitan Area Network) – mreža koja se prostire preko područja jednog gradaWAN (Wide Area Network) – široko područna mreža – kao npr. InternetRačunalne se mreže također mogu svrstati prema sustavima koje spajaju ili prema tome što sačinjava mrežni sustav:
+
+SAN (Storage Area Network) – mreža za spajanje računala na spremišta podataka
+VLAN (Virtual LAN)
+WLAN (Wireless LAN) – bežična lokalna mreža (Wi-Fi)
+
+
+== Model računalne mreže ==
+OSI - (Open Systems Interconnect) – International Organization for Standardization network model (ISO)
+
+
+== Hardver u računalnim mrežama ==
+Osim samih računala povezanih u računalne mreže (te su dakle i sama računala dio mreža i spadaju u ovaj popis) velik je broj različitih vrsta hardvera koji služi kao fizička infrastruktura računalnih mreža:
+
+Računalo
+Usmjerivač
+Premosnik
+Bežična pristupna točka
+Optički kabel (svjetlovod)
+Bakreni kabel (UTP, STP...)
+Radio valovi
+
+
+== Protokoli i arhitekture ==
+Dva najčešće spominjana slojevita modela računalnih mreža su OSI Reference (preporučen) model te tzv. TCP/IP ili IP grupa protokola. Dok je OSI model 7-slojni, TCP/IP je 4-slojni model, te je jednoznačno preklapanje nemoguće. Stoga se različiti protokoli i arhitekture računalnih mreža često referenciraju na jedan od ta dva modela, odnosno nalaze svoje mjesto na nekom od slojeva navedenih modela.
+Ovo je prikaz OSI modela s upisanim nekim od postojećih mrežnih protokola i arhitektura:
+
+Usporedimo li OSI model s 4-slojnim TCP/IP stogom, primjetno je da je aplikacijski sloj TCP/IP modela razdvojen na gornja tri sloja OSI modela iako ne utječu na funkcionalnost prijenosa podataka. Ideja je bila da navedeni modeli pomažu proizvođačima u izradi kompatibilnih mreža, stoga je također primjetno da se sam IP protokol može promatrati kao jedan sloj u kompletnom TCP/IP modelu:
+
+
+== Vidi još ==
+Klijentsko-poslužnička arhitektura
+
+
+== Izvori ==
+
+
+== Vanjske poveznice ==
+Računalne mreže
+Računalne mreže - razvoj i značajke

@@ -1,0 +1,69 @@
+revision: 5563040
+title: Cvetna formula
+url: https://sl.wikipedia.org/wiki/Cvetna_formula
+
+
+---
+
+Cvetna formula je opisna metoda, s pomočjo katere se prikazuje zgradbo (morfologijo) rastlinskega cveta. Pri tem postopku, ki omogoča prikazovanje števila posamičnih cvetnih delov, njihove razporeditve in simetrije cveta, se uporablja številke, črke in različne dogovorjene simbole. Lahko se uporabi za ponazoritev specifične rastlinske vrste ali pa se z eno cvetno formulo prikaže celoten širši takson (denimo družino ali red). Cvetna formula, ki so jo razvili v 19. stoletju, je bila ena od dveh takrat obstoječih metod za opisovanje cvetne morfologije, pri čemer je bila druga cvetni diagram. Slednji se še danes pogosto uporablja skupaj s cvetno formulo. Četudi obstaja več različnih navodil za zapisovanje cvetnih formul, je osnovno vodilo pri vseh enako.
+
+
+== Zgodovina ==
+Cvetne formule so prvič uporabili v začetku 19. stoletja. Med prve avtorje, ki so jih omenjali, spadata Cassel (leta 1820) in Martius (leta 1828). Tudi Grisebach je leta 1854 različico cvetnih formul uporabljal v svojih delih, ko je opisoval rastlinske družine. Sachs se jih je leta 1973 poslužil skupaj s cvetnimi diagrami. Eichler je bolj kot cvetne formule uporabljal cvetne diagrame, saj je prve zapisal le pri družinah rastlin z razmeroma enostavnimi cvetovi. V Sattlerjevi Organogenesis of Flowers iz leta 1973 je opisana ontogenija 50 različnih rastlinskih vrst, pri tem avtor uporablja tako cvetne diagrame kot cvetne formule.
+
+
+== Uporaba ==
+
+
+=== Simetrija ===
+Glavni članek: Simetrija (biologija)Simbol za simetričnost posamičnega cveta se navadno zapiše najprej, četudi ponekod tovrstne simbole uporabljajo tudi na drugih mestih (znotraj formule), da poudarijo tip simetričnost posamičnega cvetnega dela.
+zvezdico (*) uporabimo, ko je cvet zvezdaste oblike (tudi aktinomorfen oziroma radialen)
+prekrižano črto (tudi križec ali križ), ki je lahko postavljena horizontalno ali vertikalno (┼), se uporablja pri disimetričnih dorziventralnih cvetovih
+enosmerne (tudi zigomorfne) dorziventralne cvetove prikažemo s pomočjo puščice, ki je obrnjena navzdol (↓)
+kadar je nek cvet asimetričen, se zapiše lomljena puščica (↯)
+nekateri avtorji omenjajo tudi spiralasto postavitev, ki jo označimo z ↺V spodnji preglednici je podan pregled mogočih simbolov, ki se uporabljajo pri označevanju simetrije.
+
+
+=== Spol ===
+Simbol za spol se običajno navaja takoj za simbolom za simetrijo, četudi nekateri delajo drugače. Ločimo dva glavna tipa cvetov: dvospolne in enospolne. Dvospolne cvetove se navadno označuje s simbolom , nekateri avtorji pa uporabljajo ☿. Enospolne cvetove delimo na ženske (oznaka♀) in moške (oznaka ♂).
+
+
+=== Deli cveta ===
+Bistven del cvetne formule so deli, ki sestavljajo cvet. Podamo jih s pomočjo kombinacije številk in črk, pri čemer slednje označujejo posamični del. Vrstni red pisanja je v skladu z razporeditvijo sestavnih delov cveta od zunanjosti proti notranjosti (najbolj notranje se zapiše najkasneje).Za označevanje posamičnih delov cveta se običajno uporabljajo naslednji simboli (ni nujno, da so v cvetni formuli zapisani vsi):
+
+P: perigon (cvetno odevalo, ki je sestavljeno iz enakih cvetnih listov)
+K: čaša ali kaliks (gradijo jo čašni listi ali sepali)
+C: venec ali korola (zgrajen iz venčnih listov ali petalov)
+A: andrecej (skupek prašnikov, ki predstavljajo moški del cveta)
+G: ginecej (skupek plodnih listov, ki gradijo plodnico pestiča in predstavljajo ženski del cveta)
+B: krovni listi (tudi brakteja)
+Bt: predlisti (tudi brakteola)
+V ali O: plodnicaOznake B, Bt in V (ali O) se le redko uporabljajo.
+V cvetni formuli torej navedemo črko za posamični cvetni del in nato števko, ki poda informacijo o njihovem številu. Ponekod se števka doda desno spodaj od črke. V primeru, da so cvetni listi med seboj zrasli, se število zapiše v oklepaju. Oglati oklepaj se uporabi, kadar so strukture enega cvetnega dela prirasle k drugemu. Kadar je število cvetnih listov veliko (denimo večje od 10), se namesto števke doda znak za neskončnost (∞). Če cvetnega dela ni, se pripadajoče črke ne piše ali se zraven nje pripiše števka 0. V nekaterih cvetov se posamični deli nahajajo v več krogih (na primer cvet vsebuje dva kroga prašnikov), kar prikažemo z znakom + in ustreznih številom struktur v vsakem krogu. Primeri:
+
+K3+3 – čaša vsebuje šest (nezraslih) čašnih listov, ki se postavljeni v dva kroga
+A∞ – veliko prašnikov
+A(5) – pet prašnikov, ki so med seboj zrasli
+[C(5) A5] – venec, ki ga sestavlja pet zraslih venčnih listov, ki so prirasli tudi k petim prašnikomPri označevanju plodnice (zgoraj navedena črka G) se lahko njeno lego v cvetu prikaže tudi natančneje. Kadar je plodnica podrasla, se nad črko G doda vodoravna črta (G), obrasla (tudi polpodrasla) plodnica se označi z -G-, vodoravna črta pod črko G (G) pa ponazarja nadraslo plodnico. Spodnja preglednica prikazuje različne načine opisovanja lege plodnice; poleg že opisanega so predstavljeni še trije alternativni.
+
+Kot je razvidno iz zgornje preglednice, Simpson lego plodnice prikaže opisno, s pomočjo besede.
+Nekateri lego plodnice prikažejo tako, da ustrezne črte pripišejo številu plodnih listov, ki gradijo plodnico. Tako podraslo plodnico iz enega plodnega lista označijo kot G1, nadraslo G1 in obraslo G-1-.
+
+
+== Primeri ==
+Zvonček (Galanthus): *P3+3A3+3G(3). Zvonček ima dvospolne cvetove zvezdaste (aktinomorfne) oblike, ki jih gradi perigon iz dveh krogov 3 enakih cvetnih listov, prašniki so v dveh krogih (vsak vsebuje 3 prašnike), plodnica je podrasla in sestavljena iz treh zraslih plodnih listov.
+Lilijevke (Liliaceae): *P3+3A3+3G(3). Lilijevke imajo dvospolne cvetove zvezdaste (aktinomorfne) oblike, ki jih gradi perigon iz dveh krogov 3 enakih cvetnih listov, prašniki so v dveh krogih (vsak vsebuje 3 prašnike), plodnica je nadrasla in sestavljena iz treh zraslih plodnih listov.
+Zlatičevke (Ranunculaceae): *K5C5A∞G∞. Zlatičevke imajo dvospolne cvetove zvezdaste (aktinomorfne) oblike, ki jih gradi cvetno odevalo iz 5 čašnih listov in 5 venčnih listov, prašnikov je veliko, nadraslo plodnico sestavlja mnogo plodnih listov.
+Jegličevke (Primulaceae): *K(5)C(5)A0+5G(5). Jegličevke imajo dvospolne cvetove zvezdaste (aktinomorfne) oblike, ki jih gradi cvetno odevalo iz 5 zraslih čašnih listov in 5 zraslih venčnih listov, prašniki so v dveh krogih (v enem ni nič prašnikov, drugega sestavlja 5 prašnikov), nadrasla plodnica je iz 5 zraslih plodnih listov.
+
+
+== Glej tudi ==
+cvetni diagram
+cvet
+socvetje
+venčni list
+pestič
+prašnik
+
+
+== Sklici ==

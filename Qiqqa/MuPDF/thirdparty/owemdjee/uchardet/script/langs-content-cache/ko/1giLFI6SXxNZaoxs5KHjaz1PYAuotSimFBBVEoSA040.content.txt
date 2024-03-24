@@ -1,0 +1,36 @@
+revision: 33835512
+title: "\uC2DC\uB3D9 \uC139\uD130"
+url: https://ko.wikipedia.org/wiki/%EB%B6%80%ED%8A%B8_%EC%84%B9%ED%84%B0
+
+
+---
+
+부트 섹터(boot sector)는 디스크의 다른 부분에 저장되는 부팅 프로그램(보통 운영 체제 자체를 뜻하지만, 반드시 그러한 것은 아님)을 담을 수 있는 하드 디스크, 플로피 디스크, 또는 비슷한 기억 장치의 섹터를 말한다. 시동 섹터(문화어: 초기적재프로그람기억령역) 또는 부트블록(bootblock)이라고 부르기도 한다.
+부트 섹터는 IBM PC 호환기종에 사용되는 반면, 부트블록은 썬 시스템과 같이 어떠한 다른 종류의 컴퓨터를 일컬을 때 사용된다.
+
+
+== 종류 ==
+부트 섹터에는 다음과 같은 두 가지 종류가 있다.
+
+볼륨 부트 레코드: 파티션되지 않은 기억 장치의 첫 섹터 또는 파티션된 기억 장치의 개별 파티션의 첫 섹터를 말한다. 파티션 또는 해당 장치에 설치된 운영 체제나 독립형 프로그램을 불러오는 코드를 포함할 수도 있다. 부트 섹터를 사용하려면, 2바이트 16진수 0xAA55 (부트 섹터 서명)가 섹터 맨 끝에 존재해야 한다. 그렇지 않은 경우에는 바이오스나 MBR 코드는 오류 메시지를 보고하고 운영 체제의 부트스트랩 과정을 중단한다.
+마스터 부트 레코드: 파티션된 기억 장치의 첫 섹터이다. 대부분의 바이오스 코드는 MBR 섹터가 메모리로 로드되거나 코드를 실행하기 앞서 MBR 섹터가 바이트 0xAA 뒤를 따르는 바이트 0x55로 이루어져 있는 유효한 서명을 가질 것을 요구한다. MBR 섹터는 활성화된 파티션을 지정하고 볼륨 부트 레코드를 불러오는 코드를 포함할 수도 있다.
+
+
+== 부트 섹터와 컴퓨터 바이러스 ==
+부트 섹터는 컴퓨터 바이러스가 시스템을 제어할 수 있게 만들어진 구조이다. 부트 섹터 감염 바이러스는 플로피 디스크, 하드 디스크에 관계 없이 부트 섹터 안에 있는 부트스트래핑 코드를 바이러스 성질을 가진 코드로 바꾼다.
+
+
+== 같이 보기 ==
+마스터 부트 레코드
+볼륨 부트 레코드
+
+
+== 외부 링크 ==
+Mary Landesman. “Boot sector viruses”. 2011년 7월 7일에 원본 문서에서 보존된 문서. 2010년 7월 22일에 확인함. 
+Microsoft. “How to Protect Boot Sector from Viruses in Windows”. 《KnowledgeBase》. 
+Denny Lin. “Inexpensive boot sector virus detection and prevention techniques”. 2005년 12월 12일에 원본 문서에서 보존된 문서. 2010년 7월 22일에 확인함. 
+Kaspersky Lab. “Boot sector viruses”. 《Virus Encyclopedia / Malware Descriptions / Classic Viruses》. 2007년 8월 22일에 원본 문서에서 보존된 문서. 2010년 7월 22일에 확인함. 
+Arman Catacutan. “Glossary of Virus Terms”. 《Boot Viruses》. 2006년 12월 11일에 원본 문서에서 보존된 문서. 2006년 11월 7일에 확인함. 
+Greg O'Keefe. “Sample to build a boot program on x86 real mode”. 
+Susam Pal. “Writing boot sector code using GNU tools”. 2010년 8월 11일에 원본 문서에서 보존된 문서. 2010년 7월 22일에 확인함. 
+Pierre Ancelot. “Bootsector assembly code with detailed explanation”. 2013년 1월 29일에 원본 문서에서 보존된 문서. 2010년 1월 20일에 확인함.

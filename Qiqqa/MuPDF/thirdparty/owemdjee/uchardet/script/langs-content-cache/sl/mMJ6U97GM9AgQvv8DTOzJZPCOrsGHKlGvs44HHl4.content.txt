@@ -1,0 +1,91 @@
+revision: 6036722
+title: Alphabet
+url: https://sl.wikipedia.org/wiki/Mednarodna_foneti%C4%8Dna_abeceda
+
+
+---
+
+Mednarodna fonetična abeceda (MFA, angleško International Phonetic Alphabet, IPA, francosko Alphabet phonétique international, API) je mednarodno standardiziran sistem zapisa glasov v črkovni obliki, ki temelji predvsem na latinici. Njen glavni namen je zapis glasov, ki je splošno veljaven za vse jezike in se danes uporablja v vseh modernih slovarjih in jezikovnih priročnikih. Zasnovalo jo je Mednarodno glasoslovno združenje (International Phonetic Association) konec 19. stoletja in je nespremenjena od leta 2005, obsega 107 osnovnih in približno 55 pomožnih znakov.MFA je zasnovan tako, da predstavlja tiste lastnosti govora, ki so del leksikalnih (in v omejenem obsegu prozodičnih) zvokov v ustnem jeziku: glasove, foneme, intonacijo ter ločevanje besed in zlogov. Za predstavitev dodatnih lastnosti govora, kot so škripanje z zobmi, šumenje in zvoki z razcepom ustnice in neba, se lahko uporablja razširjen nabor znamenj.
+Mednarodna fonetična abeceda sedaj predstavlja standard za zapis izgovorjave v vseh jezikih, najdemo jo v veliki večini slovarjev z zapisano izgovorjavo ter vsakem zapisu izgovorjave v Wikipediji (razen na specifičnih straneh o drugih fonetičnih abecedah).
+Abeceda spada v posebno vejo abeced, imenovano fonetične abecede, v kateri vsak glas strogo predstavlja le ena črka, ki se ne uporablja za katerikoli drugi glas (vendar so lahko dodane diakritike za natančnejši opis glasa).
+Mednarodno glasoslovno združenje občasno doda, odstrani ali spremeni črke ali diakritične znake. Od zadnje spremembe leta 2005[4] je v IPA 107 segmentnih črk, nedoločljivo veliko število suprasegmentnih črk, 44 diakritičnih znakov (brez upoštevanja kompozitov) in štirje zunajleksikalni prozodični znaki. Večina teh znakov je prikazana v trenutni tabeli IPA .
+
+
+== Zgodovina ==
+Leta 1886 je skupina francoskih in britanskih učiteljev jezikov pod vodstvom francoskega jezikoslovca Paula Passyja ustanovila Mednarodno glasoslovno združenje (v francoščini l'Association phonétique internationale). Njihova prvotna abeceda je temeljila na pravopisni prenovi angleščine, znani kot Romic alphabet, vendar so se lahko zaradi njene uporabnosti tudi za druge jezike, vrednosti simbolov spreminjale od jezika do jezika. Na primer, glas [ʃ] (š) je bil v angleščini prvotno predstavljen s črko ⟨c⟩, v francoščini pa z dvočrkjem ⟨ch⟩. Leta 1888 je bila abeceda prenovljena, da bi bila enotna za vse jezike, kar je bila osnova za vse prihodnje spremembe. Zamisel o oblikovanju MFA je prvi predlagal Otto Jespersen v pismu Passyju. Razvili so jo Alexander John Ellis, Henry Sweet, Daniel Jones in Passy.
+Od svoje ustanovitve je bila MFA večkrat spremenjena. Po spremembah in razširitvah od devetdesetih let 19. stoletja do štiridesetih let 20. stoletja je ostala večinoma nespremenjena do Kielske konvencije leta 1989. Manjša sprememba je bila opravljena leta 1993, ko so bile dodane štiri črke za sredinske samoglasnike in odstranjene črke za nezveneče implozive (vzdišne glasove). Abeceda je bila nazadnje spremenjena maja 2005, ko je bila dodana črka za zobno-ustnični tap/flap. Poleg dodajanja in odstranjevanja simbolov so bile spremembe večinoma povezane s preimenovanjem simbolov in kategorij ter spreminjanjem pisav.Razširitve mednarodne fonetične abecede za govorno patologijo (razširjena MFA) so bile oblikovane leta 1990, Mednarodno združenje za klinično glasoslovje in jezikoslovje pa jih je uradno sprejelo leta 1994.
+
+
+== Znamenja ==
+Mednarodno glasoslovno združenje deli črke MFA v tri razrede: pljučne soglasnike, nepljučne soglasnike in samoglasnike.
+
+
+=== Glavna razporeditev samoglasnikov ===
+MFA opredeljuje samoglasnik kot glas, ki se pojavlja kot nosilec zloga. V nadaljevanju je prikazana preglednica samoglasnikov, ki so prikazani glede na položaj jezika.
+Navpična os diagrama ponazarja višino samoglasnika. Samoglasniki, ki se izgovarjajo s spuščenim jezikom (nizki samoglasniki) so spodaj; samoglasniki, ki se izgovarjajo z dvignjenim jezikom (visoki samoglasniki) pa so zgoraj. Na primer [ɑ] je spodaj, ker je jezik pri tem izgovoru spuščen, [i] pa je na vrhu, ker se izgovarja z jezikom, dvignjenim do néba.
+Na podoben način vodoravna os karte ponazarja položaj spredaj-zadaj. Samoglasniki, pri katerih je jezik pomaknjen proti sprednjemu delu ust (kot je [ɛ], široki e) so v preglednici levo, medtem ko so samoglasniki, pri katerih je jezik pomaknjen nazaj (kot je [ɔ], široki o), v preglednici desno.
+Na mestih, kjer so samoglasniki v paru, desna stran predstavlja zaokroženi samoglasnik (pri katerem so ustnice zaokrožene), leva pa njegovo nezaokroženo ustreznico.
+
+Nobena samoglasniška črka ni izpuščena iz preglednice, čeprav so bili v preteklosti nekateri srednji samoglasniki navedeni med "drugimi simboli".
+
+
+==== Dvoglasniki ====
+Dvoglasniki so običajno določeni z nesklonljivim diakritičnim znakom, kot v ⟨uɪ̯⟩ ali ⟨u̯ɪ⟩, ali z nadpisom za povezanost samoglasnika, kot v ⟨uᶦ⟩ ali ⟨ᵘɪ⟩. Včasih se uporablja vezaj: ⟨u͡ɪ⟩, zlasti če je težko ugotoviti, ali je za dvoglasnik značilna povezanost ali je spremenljiv.
+Opombe
+
+⟨a⟩ uradno predstavlja sprednji samoglasnik, vendar je razlika med sprednjimi in sredinskimi odprtimi samoglasniki majhna ali pa je sploh ni  in ⟨a⟩ se pogosto uporablja za odprt srednji samoglasnik. Če je potrebno razlikovanje, se lahko za označevanje odprtega srednjega samoglasnika doda umaknjeni ali osrednji diakritični znak, kot v ⟨a̠⟩ ali ⟨ä⟩.
+
+
+=== Glavna razporeditev pljučnih soglasnikov ===
+Pljučni soglasnik je soglasnik, ki nastane z zaporo glasilk (prostora med glasilkama) ali ustne votline (ust) in hkratnim ali kasnejšim izpuščanjem zraka iz pljuč. Pljučni soglasniki predstavljajo večino soglasnikov v MFA in tudi v človeškem jeziku. Vsi soglasniki v slovenščini spadajo v ta razred. Sem jih spada večina in so pogosti.
+Tabela pljučnih soglasnikov, ki vključuje večino soglasnikov, je urejena v vrsticah, ki označujejo način izgovarjave, torej kako se soglasnik tvori; in stolpcih, ki označujejo mesto izgovarjave, torej kje v glasovnem prostoru se soglasnik tvori. Glavna preglednica vključuje le soglasnike z enim samim mestom izgovorjave.
+Znamenja pljučnih soglasnikov so razporejena posamično ali v parih nezvenečih (tenuis - neaspirirani nezveneči zapornik) in zvenečih glasov, ti pa so nato razvrščeni v stolpce od sprednjih (ustničnih) glasov na levi do zadnjih (glotalnih/glasilčnih) glasov na desni. V uradnih dokumentih MFA sta zaradi varčevanja s prostorom izpuščena dva stolpca, pri čemer so črke navedene med "drugimi simboli", čeprav teoretično spadajo v glavno tabelo, preostali soglasniki pa so razvrščeni v vrste od popolnoma zaprtih (ustnični in nosni zaporniki),  kratko zaprtih (tresljavci: vibranti in tap/flap), do delno zaprtih (priporniki) in najmanj zaprtih (drsniki), pri čemer je ena vrsta zaradi varčevanja s prostorom izpuščena. V spodnji tabeli je nekoliko drugačna razporeditev: Vsi pljučni soglasniki so vključeni v tabelo pljučnih soglasnikov, vibranti in obstranski glasovi pa so ločeni, tako da vrstice odražajo stopnjevanje zapornik → pripornik → drsnik, pa tudi dejstvo, da je več črk v dvojni vlogi tako pripornika kot drsnika; zlitniki lahko nastanejo z zlitjem zapornikov in pripornikov iz sosednjih celic.
+V praznih prostorih se nahajajo tehnično izvedljivi samoglasniki, vendar se ne pojavljajo v nobenem jeziku, v osenčenih pa naj bi bili soglasniki nemogoči za izgovoriti.
+Na levi strani posamezne kategorije so nezveneči soglasniki, na desni pa zveneče različice.
+Opombe:
+
+V vrsticah, kjer se nekatere črke pojavljajo v parih (nezvočniki), predstavlja črka na desni strani zveneči soglasnik (razen zvenečega [ɦ]). V drugih vrsticah (zvočnik) ena črka predstavlja zveneči soglasnik.
+Čeprav MFA določa eno črko za koronalna mesta izgovorjave (za vse soglasnike razen pripornikov), jih ni treba vedno natančno uporabljati. Pri obravnavi določenega jezika se lahko črke brez diaktričnih znakov obravnavajo kot zobne, dlesnične ali zadlesnične, kot je pač najprikladnejše za ta jezik.
+Osenčena območja označujejo izgovorjave, ki so ocenjene kot nemogoče.
+Črke [β, ð, ʁ, ʕ, ʢ] so izvorno zveneči priporniki, vendar se lahko uporabljajo za drsnike.
+V mnogih jezikih, kot je angleščina, [h] in [ɦ] pravzaprav nista glotalna/glasilčna, priporna ali drsniška glasova, ampak sta goli obliki.
+Priporniki [ʃ ʒ], [ɕ ʑ] in [ʂ ʐ] se razlikujejo predvsem po obliki krčenja jezika in ene po njegovem položaju
+[ʜ, ʢ] so v uradni preglednici MFA v razdelku "drugi simboli" opredeljeni kot epiglotalni priporniki, vendar jih lahko obravnavamo kot vibrante na istem mestu izgovorjave kot [ʜ, ʢ], saj se vibranti ariepiglotalnih gub običajno pojavljajo hkrati.
+Zaa nekatere naštete glasove ni znano, da bi obstajali kot glasovi v katerem koli jeziku.
+
+
+=== Glavna razporeditev nepljučnih soglasnikov ===
+Nepljučni soglasniki so glasovi, pri katerih pretok zraka ni odvisen od pljuč, oz. ne potrebujejo zraka iz pljuč za izgovorjavo. Mednje spadajo kliki (ki jih najdemo v jezikih Khosian in nekaterih sosednjih jezikih Bantu v Afriki), vdišni glasovi /implozivi (ki jih najdemo v jezikih, kot so sindhi, hausa, svahili in vietnamščina) in izdišni glasovi /ejektivi (ki jih najdemo v številnih ameriških in kavkaških jezikih).
+
+
+== Fonetični znaki v slovenščini ==
+Glej tudi Glasoslovje slovenskega knjižnega jezika.
+
+
+== Oklepaji in ločila za transkripcijo ==
+Obstajata dve glavni vrsti oklepajev, ki se uporabljata za razlikovanje prečrkovanj v MFA:
+
+Drugi načini označevanja so manj pogosti:
+
+Vse tri zgoraj navedene možnosti so navedene v priročniku MFA. Naslednje niso, vendar jih je mogoče zaslediti v prečrkovanju MFA ali v pripadajočem gradivu (zlasti oglati oklepaji):
+
+
+== Opombe ==
+
+
+== Sklici ==
+
+
+== Glej tudi ==
+31635
+Glasoslovje slovenskega knjižnega jezika
+
+
+== Zunanje povezave ==
+Uradna stran Mednarodne fonetične zveze (angleško)
+Podatki o IPA s strani Omniglot (angleško)
+
+
+=== Brezplačne pisave IPA ===
+Charis SIL, najpopolnejši paket vrste pisave IPA
+Odprtokodni fonti IPA za dokumente LaTeX

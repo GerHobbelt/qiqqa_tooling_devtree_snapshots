@@ -1,0 +1,11 @@
+revision: 1149950821
+title: Flow (web browser)
+url: https://en.wikipedia.org/wiki/Flow_(web_browser)
+
+
+---
+
+Flow is a web browser with a proprietary browser engine that claims to "dramatically improve rendering performance". Its JavaScript engine is the SpiderMonkey component of Firefox.Flow is developed by the Ekioh company, which has made simpler browsers for set-top boxes and other embedded systems.Flow is a recent entrant to the browser market. The first beta was in December 2020. Ekioh is focusing on its use in embedded systems, including a beta version for the Raspberry Pi.
+
+
+== References ==

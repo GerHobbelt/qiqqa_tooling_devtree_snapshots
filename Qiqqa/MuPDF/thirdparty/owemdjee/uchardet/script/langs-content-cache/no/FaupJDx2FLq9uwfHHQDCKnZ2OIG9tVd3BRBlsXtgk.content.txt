@@ -1,0 +1,17 @@
+revision: 23112436
+title: Bibcode
+url: https://no.wikipedia.org/wiki/Bibcode
+
+
+---
+
+Bibcode er en identifikator brukt av en rekke astronomiske datasystemer for å spesifiere litteraturreferanser. Bibcode ble utviklet for å bli brukt i SIMBAD og NASA/IPAC Extragalactic Database (NED), men er nå mer utstrakt i bruk – for eksempel i NASAs Astrophysics Data System. Koden har en fiksert lengde på 19 tegn og har formen
+YYYYJJJJJVVVVMPPPPA,
+hvor YYYY er årstallet for referansen og JJJJJ er en kode som indekerer hvor referansen ble publisert. I tilfellet med en artikkelreferanse er VVVV bindnummeret, M indikerer seksjonen i artikkelen hvor referansen ble bublisert (for eksempel B for en bokstavseksjon), PPPP angir startsiden og A er den første bokstaven i etternavnet til den første forfatteren. Perioder (.) brukes for å fylle ubrukte felt og for å få feltene til å bli den fikserte lengden hvis de er for korte; dette gjøres til høyre for publikasjonskoden og til venstre for bind- og sidenumrene. Noen eksempler på kode er som følger:
+
+
+== Se også ==
+Digital object identifier
+
+
+== Referanser ==

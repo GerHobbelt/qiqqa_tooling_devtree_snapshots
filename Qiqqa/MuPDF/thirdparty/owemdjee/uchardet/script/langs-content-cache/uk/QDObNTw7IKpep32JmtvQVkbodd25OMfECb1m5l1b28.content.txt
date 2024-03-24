@@ -1,0 +1,26 @@
+revision: 35352281
+title: Bread
+url: https://uk.wikipedia.org/wiki/BREAD
+
+
+---
+
+BREAD — (B.R.E.A.D., акронім Browse Read Edit Add Delete) — це шаблон дії контролера, який використовується для зіставлення дій проти операцій, які можуть бути виконані на основі запис/запис бази даних. BREAD схожий з CRUD, але перший розбиває дію читання на дві, що має принципову різницю.
+Даний шаблон є більш безпечний в плані захисту даних у порівнянні з CRUD.
+
+
+== Джерела ==
+B.R.E.A.D
+
+
+== Див. також ==
+CRUD
+DAVE (Delete, Add, View, Edit)
+CRAP (Create, Replicate, Append, Process)
+
+
+== Посилання ==
+BREAD, not CRUD [Архівовано 8 травня 2019 у Wayback Machine.], 2008
+
+
+== Примітки ==

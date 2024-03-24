@@ -1,0 +1,103 @@
+revision: 51665018
+title: Phonetics
+url: https://sv.wikipedia.org/wiki/Internationella_fonetiska_alfabetet
+
+
+---
+
+Det internationella fonetiska alfabetet, förkortat IPA (av engelskans International Phonetic Alphabet), är ett fonetiskt alfabet. Det används inom lingvistiken för att så entydigt som möjligt representera samtliga språkljud (foner eller fonem) som återfinns i de talade språken. Det utvecklades ursprungligen av International Phonetic Association. Det har flera gånger reviderats, senast 1993, och uppdaterades 1996.
+Tillägg till alfabetet sker inte särskilt ofta, men under 2005 inkluderades en ny symbol, ⱱ (ett v med en högerkrok), vilken är avsedd att representera en labiodental flapp, ett språkljud som förekommer i flera språk som talas i Afrika.
+
+
+== Beskrivning och användning ==
+IPA:s teckenuppsättning utgår från det latinska alfabetet med lån från det grekiska, men innehåller även en mängd tecken som inte är direkt tagna från något tidigare existerande alfabet. Principen för IPA:s uppbyggnad är att det ska täcka åtminstone tillräckligt många foner för att varje talat språk ska kunna noteras entydigt. Alla enskilda foner motsvaras av endast ett tecken (diakriter och andra modifierande tecken räknas ej), och inget tecken ska i princip motsvara flera foner, varför till exempel affrikator delas upp i flera tecken.
+I praktiken används ofta inte alfabetet alltid fullt ut, utan bara de fonematiska dragen och de viktigaste allofonerna noteras. Detta är nödvändigt dels för att undvika godtycke vid transkription, dels för att öka läsbarheten och fokusera på det väsentliga i transkriptionen. Den mindre detaljerade – fonematiska – transkriptionen har tecknen omgärdade av snedstreck (exempel: /ka:ka/ för uttalet av ordet 'kaka'). Här anges bara fonem, det vill säga de betydelseskiljande ljuden.
+Den mer detaljerade transkriptionen är den fonetiska, och här sätts IPA-tecknen inom hakparentes
+Normalt innesluts fonetisk skrift i hakparenteser, till exempel [hɛj] för uttalet av ordet ”hej” (exempel: [kʰɑ:ka] för uttalet av ordet 'kaka'). Här markeras de enskilda språkljuden (fonerna), oavsett om de markerar en betydelse eller inte. I exemplet i parentesen anger man att /k/ i inledningen av en betonad stavelse uttalades med aspiration och att /a/ i den första stavelsen uttalas med en bakre vokal).
+
+
+=== Konsonanter ===
+Konsonanttecknen i IPA stämmer bra överens med motsvarande svenska skrivtecken och deras gängse uttal. Följande är exempel på tecken som används i svensk fonetisk notation (en komplett lista för rikssvenska återfinns senare i artikeln):
+
+J-ljudet skrivs vanligtvis [j], men kan vid strikt fonetisk transkription nyanseras med ett frikativt [ʝ].
+Sje-ljudet varierar mycket över landet. För att notera uttalet används ibland en neutral frikativa, [ʃ] För att skilja de olika uttalen åt används främst [ɧ] för sje-ljudet i rikssvenska ”ske” och [ʂ] för det främre sje-ljudet i rikssvenska ”fors".
+Tje-ljudet skrivs med [ɕ].
+R-ljudet skrivs oftast endast med [r]. Mer noggrant skrivs bakre tungrots-r som [ʀ] och främre tungspets-r som [r].
+
+
+=== Vokaler ===
+Vokalernas tecken och uttal speglar främst det latinska, vilket ligger ganska nära det svenska. Praktiskt taget alla svenska vokaler uttalas dock fonetiskt olika beroende på om de är långa eller korta; till exempel skrivs kort a som [a], medan långt a skrivs som [ɑ:]. Vokalerna ä och ö uttalas fonetiskt annorlunda före r och de retroflexa fonemen, och de skrivs då med andra tecken.
+Diftonger skrivs vanligen helt enkelt som de två ingående fonemen i rad, till exempel [raʊk] för ordet ”rauk”.
+
+
+=== Övriga tecken ===
+Ett kolon ([ː], även [:]) markerar att ett fonem ska uttalas långt. Detta gäller främst i sammanhang där längden är betydelseskiljande, fonemisk, till exempel för svenska vokaler. Även konsonanters längd kan noteras sålunda, men detta är normalt förbehållet språk där längden är fonemisk, som finskan.
+Ordaccent markeras med tecken direkt före de betonade eller stavelserna: [ˈ] för primär betoning och [ˌ] för sekundär betoning. I ord med bara en betonad stavelse, som svenska ord med accent I, används bara [ˈ]: 'mager', [ˈmɑːger]. I ord med två betonade stavelser, som svenska ord med accent II, används båda tecknen: 'mage', [ˈmɑːgˌe].
+Utöver ovannämnda tecken tillkommer ett antal diakritiska tecken för att finare notera munnens slutenhet, tungans position och tonhöjdens varians – vilket har fonematisk status i bland annat kinesiska – samt tecken för bland annat aspiration och tystnad.
+
+
+=== Tabeller ===
+
+
+==== Konsonanter (pulmoniska) ====
+
+Där symboler uppvisas parvis avser den högra en tonande konsonant.
+Skuggade områden avser uttal som anses omöjliga.
+
+
+==== Konsonanter (icke-pulmoniska) ====
+
+
+==== Vokaler ====
+Där symboler står i par är den högra en rundad vokal.
+
+
+==== Andra symboler ====
+Affrikator och dubbla artikulationer kan representeras som två symboler ihopbundna med en tie bar om nödvändigt, och representeras med en ligatur med somliga vanliga affrikator:
+
+På grund av en bugg i typsnittet Arial Unicode MS kan dessa (inkorrekt skrivna) tecken se bättre ut: ɡb͡ dz͡  dʒ͡  kp͡  ts͡  tʃ͡ .
+
+
+==== Suprasegmentaler ====
+
+
+==== Toner och ordaccenter ====
+
+
+===== Anmärkning =====
+För flertalet IPA-symboler för icke-raka toner saknas stöd i Unicode. För att representera dessa kan istället siffror användas, till exempel /e53/ för fallande /e/. Ytterligare en möjlighet är att använda Box Drawings i Unicode, (/e┒/ för ett högt rakt /e/).
+
+
+==== Diakritiska tecken ====
+Diakritiska tecken kan sättas ovanför en symbol med en sänkare, (ŋ̊)
+
+
+===== IPA för talfel =====
+
+
+=== Tabeller över fonetiska tecken i rikssvenska ===
+Följande tabeller redovisar de IPA-tecken som normalt används vid transkription av rikssvenska. Dessa utgör emellertid bara en del av alla tillgängliga tecken, och täcker varken svenska dialekter eller utländska språk fullständigt.
+
+
+==== Vokaler ====
+
+
+==== Konsonanter ====
+
+
+== Spridning ==
+IPA har en bakgrund som går tillbaka till 1886 och skapandet av International Phonetic Association. En större revidering gjordes 1989, en mindre 2006. Det har på senare år fått en stor spridning, bland annat för ordböcker, språkundervisningen och transkription i språkforskningen i många länder. Det finns – exempelvis i USA – konkurrerande standarder, som ofta är mer kopplade till stavningsmönster inom ett visst språk.
+IPA finns också med lokala varianter, inklusive ofta i Sverige. I SAOL och Nationalencyklopedins ordbok skrivs bland annat [å] (IPA: [o] eller [ɔ]) och [o] (IPA: [ω]) kopplats till vanligare svensk stavning och inte till det internationellt synkroniserade IPA. I båda verken markeras inte heller betoning enligt IPA-standarden, där fottecken (') står före betonad stavelse. Istället använder man i enlighet med en äldre svensk tradition främst ´ (akut accent), som sätts efter betonad vokal.
+
+
+== Kommentarer ==
+
+
+== Referenser ==
+
+
+== Externa länkar ==
+
+IPA:s kompletta tabeller över fonetiska tecken
+IPA-skrivmaskin
+Multimedia IPA chart och PhonPad IPA editor

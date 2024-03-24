@@ -1,0 +1,62 @@
+revision: 1146569973
+title: Calligra Flow
+url: https://en.wikipedia.org/wiki/Calligra_Flow
+
+
+---
+
+Kivio is free flowcharting and diagramming software that is a part of KOffice, integrated graphic art and office suite by KDE.
+
+
+== Features ==
+Scriptable stencils using Python.
+Support for Dia stencils.
+Plugin framework for adding more functionality.
+
+
+== Kivio product range ==
+Kivio mp: It is an enhanced version of Kivio, distributed under restricted source license, which includes sources but cannot be distributed. Supported operating systems include Linux (Intel x86 CPU platforms), Mac OS X 10.3 and Windows 9x–XP.
+Kivio Stencil Builder: A separate product that creates custom stencils.
+
+
+== History ==
+
+Kivio was originally developed by theKompany who brought the source code of a Linux-only version into KOffice under GPL. 
+The GPL versions followed the version scheme of KOffice. The last stable version was 1.6.3, released on June 8, 2007. Since then Kivio continued to be developed without maintainer and no stable releases seeing the light of day.
+
+
+=== Kivio mp ===
+The last release of Kivio mp was version 3.0, made in December 2004. That release was based on Qt 3.
+
+
+== Calligra Flow ==
+Calligra Flow is free diagramming software that is a part of Calligra Suite, successor of Kivio. It has a user interface that is similar to Microsoft Visio. Created objects can be embedded into other Calligra Suite products.
+
+
+=== History ===
+
+After announcing the split of the KOffice developer community in 2010-06-11, the Kivio code was imported into the newly formed Calligra project and picked up by a new maintainer who renamed the application to Calligra Flow. When KDE community had announced the start of Calligra Suite in 2010-12-06, a flowchart programme named 'Flow' was part of the announcement.
+Flow was shipped with the first Calligra Suite Snapshot Release.A stable release was made along with the rest of Calligra Suite 2.4.
+Since Calligra 3.0, Flow was removed from Calligra Suite, then was retired and replaced by Karbon in Calligra 3.2.0.
+
+
+== See also ==
+Flowchart
+
+
+== References ==
+
+
+== External links ==
+
+
+=== Kivio ===
+KOffice page
+theKompany.com page: Kivio mp, Kivio Stencil Builder
+KDE UserBase Wiki
+KOffice wiki
+
+
+=== Calligra Flow ===
+Calligra Flow Homepage
+KDE Community Wiki

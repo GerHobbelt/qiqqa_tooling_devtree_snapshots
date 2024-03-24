@@ -1,0 +1,122 @@
+revision: 123515812
+title: Chimica computazionale
+url: https://it.wikipedia.org/wiki/Chimica_computazionale
+
+
+---
+
+La chimica computazionale è quella branca della chimica teorica che si occupa dello sviluppo di modelli matematici, basati sia sulla meccanica classica sia sulla meccanica quantistica, in grado di simulare sistemi chimici, con lo scopo di calcolarne le grandezze fisiche caratteristiche e prevederne le proprietà chimiche.
+La potenza predittiva delle simulazioni è legata in modo stretto alle caratteristiche delle macchine che si hanno a disposizione per il calcolo. Il numero di operazioni floating-point per secondo (FLOPS) e la capacità di memoria sono i parametri più importanti che determinano la possibilità di eseguire simulazioni in tempi ragionevoli.
+Nonostante già nei primi anni del XX secolo il supporto teorico per la formulazione dei modelli fosse pronto, il grande sviluppo della chimica computazionale si è avuto a partire dagli ultimi decenni del XX secolo, proprio perché si è iniziato a disporre di sistemi hardware sufficientemente potenti.
+
+
+== Applicazioni ==
+Le utilità delle simulazioni sono molteplici:
+
+I calcoli sono preziosi nell'interpretazione dei dati sperimentali. Si può mettere in luce ciò che è avvenuto in un esperimento confrontando le misure con i calcoli.
+Sono utili per mettere a punto la strumentazione più adeguata allo studio sperimentale di un certo sistema.
+Permettono di ottenere informazioni su sistemi difficili da studiare sperimentalmente per motivi tecnici o economici.
+Permettono di prevedere su base teorica la possibile esistenza di specie chimiche non note in natura o ancora mai sintetizzate.
+Permettono inoltre di confrontare e verificare i modelli teorici in senso più ampio.Le grandezze che si vogliono calcolare sono numerose. Se ne riportano solo alcune a titolo di esempio:
+
+Superficie di energia potenziale
+Grandezze termodinamiche
+Grandezze cinetiche
+Spettro NMR
+Spettro EPR
+Spettro IR
+Spettro rotazionale
+Affinità elettronica
+Energia di ionizzazione
+Spettri XAS, sia EXAFS sia XANES
+
+
+== Metodi ==
+I metodi impiegati in chimica computazionale possono essere divisi in due sottogruppi in funzione delle modalità descrittive degli atomi e delle molecole:
+
+
+=== Metodi classici ===
+Le caratteristiche molecolari vengono descritte per mezzo di una modellazione della molecola basata sulla elettrostatica e sulla meccanica classica:
+
+Meccanica molecolare
+Dinamica molecolare
+Metodo Monte Carlo
+
+
+=== Metodi quantomeccanici ===
+Le caratteristiche molecolari vengono descritte in termini quantomeccanici.
+I metodi quantomeccanici possono a loro volta essere suddivisi in due sottocategorie: i metodi ab initio (che permettono di studiare un oggetto risolvendo direttamente l'equazione di Schrödinger per l'oggetto in esame) e i metodi semiempirici (che utilizzano, nella risoluzione della equazione di Schrödinger, parametri ottenuti per via sperimentale al fine di evitare un appesantimento eccessivo del calcolo).
+
+
+==== Metodi ab initio ====
+Metodo di Hartree-Fock (HF)
+Metodi post-HF
+Interazione di configurazione (CI)
+Metodo MCSCF
+Teoria perturbativa di Møller-Plesset (MPn)
+Metodo Coupled Cluster (CC)
+Teoria del funzionale della densità (DFT)
+Monte Carlo quantistico
+
+
+==== Metodi semi-empirici ====
+Metodo di Hückel
+Metodo Tight Binding (TB)
+Metodo CNDO
+Metodo INDO
+Metodo NDDO
+
+
+== Bibliografia ==
+Christopher J. Cramer, Essential of Computational Chemistry: Theories and Models, Wiley, 2004, ISBN 0470091827
+T. Clark A Handbook of Computational Chemistry, Wiley, New York (1985).
+R. Dronskowski Computational Chemistry of Solid State Materials, Wiley-VCH (2005).
+A.K. Hartmann, Practical Guide to Computer Simulations, World Scientific (2009)
+F. Jensen Introduction to Computational Chemistry, John Wiley & Sons (1999).
+K.I. Ramachandran, G Deepa and Krishnan Namboori. P.K. Computational Chemistry and Molecular Modeling Principles and applications Springer-Verlag GmbH, 2008, ISBN 978-3-540-77302-3.
+D. Rogers Computational Chemistry Using the PC, 3rd Edition, John Wiley & Sons (2003).
+P. v. R. Schleyer (Editor-in-Chief). Encyclopedia of Computational Chemistry. Wiley, 1998. ISBN 0-471-96588-X.
+D. Sherrill. Notes on Quantum Mechanics and Computational Chemistry [1].
+J. Simons An introduction to Theoretical Chemistry, Cambridge (2003) ISBN 978-0-521-53047-7.
+A. Szabo, N.S. Ostlund, Modern Quantum Chemistry, McGraw-Hill (1982).
+D. Young Computational Chemistry: A Practical Guide for Applying Techniques to Real World Problems, John Wiley & Sons (2001).
+D. Young's Introduction to Computational Chemistry.
+Errol G. Lewars, Computational Chemistry: Introduction to the Theory and Applications of Molecular and Quantum Mechanics, Springer (Heidelberg)
+
+
+== Riviste specializzate in chimica computazionale ==
+ Reviews in Computational Chemistry, su onlinelibrary.wiley.com.
+ Journal of Computational Chemistry, su onlinelibrary.wiley.com.
+ Journal of Chemical Information and Modeling, su pubs.acs.org.
+ Journal of Computer-aided Molecular Design, su springer.com.
+ Journal of Chemical Information and Computer Sciences, su informatik.uni-trier.de.
+ Journal of Chemical Theory and Computation, su pubs.acs.org.
+ Computational and Theoretical Polymer Science, su sciencedirect.com.
+ Theoretical and Computational Chemistry, su journals.elsevier.com.
+ Journal of Theoretical and Computational Chemistry, su worldscientific.com.
+ Journal of Cheminformatics, su jcheminf.com.
+ Journal of Computer Chemistry Japan, su jstage.jst.go.jp.
+ Annual Reports in Computational Chemistry, su sciencedirect.com.
+ Computers & Chemical Engineering, su journals.elsevier.com.
+ Journal of Chemical Software, su jstage.jst.go.jp.
+ Molecular Informatics, su onlinelibrary.wiley.com.
+ Journal of Computer Aided Chemistry, su jstage.jst.go.jp.
+ Theoretical Chemistry Accounts, su springer.com.
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su chimica computazionale
+
+
+== Collegamenti esterni ==
+(EN) IUPAC Gold Book, "Computational chemistry", su goldbook.iupac.org.
+NIST Computational Chemistry Comparison and Benchmark DataBase - Contiene un database di migliaia di risultati numerici e sperimentali per centinaia di sistemi
+American Chemical Society Division of Computers in Chemistry - American Chemical Society Computers in Chemistry Division, resources for grants, awards, contacts and meetings.
+CSTB report Mathematical Research in Materials Science: Opportunities and Perspectives - CSTB Report
+3.320 Atomistic Computer Modeling of Materials (SMA 5107)  Corso del MIT
+Chem 4021/8021 Computational Chemistry Corso della University of Minnesota
+ Technology Roadmap for Computational Chemistry (PDF), su chemicalvision2020.org. URL consultato il 26 dicembre 2007 (archiviato dall'url originale il 14 aprile 2008).
+ Applications of molecular and materials modelling. (PDF), su wtec.org. URL consultato il 19 giugno 2015 (archiviato dall'url originale il 3 marzo 2016).
+ Impact of Advances in Computing and Communications Technologies on Chemical Science and Technology CSTB Report, su books.nap.edu.
+ MD and Computational Chemistry applications on GPUs, su nvidia.com.

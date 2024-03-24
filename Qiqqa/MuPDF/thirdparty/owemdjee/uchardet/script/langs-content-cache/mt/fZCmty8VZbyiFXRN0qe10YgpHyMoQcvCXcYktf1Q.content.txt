@@ -1,0 +1,274 @@
+revision: 247992
+title: Euler
+url: https://mt.wikipedia.org/wiki/Teorija_tan-numri
+
+
+---
+
+Tradizzjonalment, it-teorija tan-numri hi fergħa tal-matematika li tistudja l-proprjetajiet tan-numri sħaħ jew interi, kemm l-interi naturali u kemm l-interi relattivi, u fiha nsibu ħafna problemi miftuħin li jinftehmu faċilment, anki minn dawk li mhumiex matematiċi. B’mod iżjed ġenerali, din-teorija tħares lejn klassi wiesgħa ta' problemi li joħorġu naturalment mill-istudju tan-numri sħaħ. It-teorija tan-numri għandha post speċjali fil-matematika, minħabba r-rabtiet li għandha ma oqsma oħra u l-interess li jqajmu il-propożizzjonijiet tagħha. Kif qal Jürgen Neukirch :
+
+It-teorija tan-numri kultant tissejjaħ ukoll "Aritmetika". Dan hu isem antik ħafna li m'għadux popolari daqs li kien. Madankollu għadu jintuża fl-ismijiet ta' xi oqsma tal-matematika (ġeometrija alġebrija aritmetika, l-aritmetika tal-kurbi u superfiċi ellittiċi). Dan is-sens tat-terminu aritmetika m’għandniex inħalltuh mal-fergħa tal-loġika li tistudja l-aritmetika fis-sens tas-sistemi formali.
+It-teorija tan-numri tinqasam f'bosta oqsma ta' studju skont il-metodi li jintużaw u l-problemi trattati.
+
+
+== Il-friegħi tat-teorija tan-numri ==
+
+
+=== It-teorija elementari tan-numri ===
+F'dal-qasam, nistudjaw l-interi mingħajr l-użu ta' metodi minn oqsma oħra tal-matematika.  Fih insibu il-kwistjonji tad-diviżibbiltà, l-algoritmu ta' Ewklide għall-kalkulazzjoni tal-ikbar diviżur komuni, il-fattorizzazzjoni tal-interi f'numri primi, it-tfittix għal numri perfetti u l-aritmetika modulari. Bħala teoremi tipiċi hawn għandna it-teorema żgħir ta' Fermat u t-teorema ta' Euler, it-teorema Ċiniż tal-bqija u l-liġi tar-reċiproċità kwadratika. Nistudjaw ukoll il-proprjetajiet tal-funzjonijiet multiplikattivi bħall-funzjoni ta' Möbius
+u l-funzjoni φ ta' Euler kif ukoll is-suċċessjonijiet ta' interi bħall-fattorjali u n-numri ta' Fibonacci.
+Ħafna problemi fit-teorija elementari tan-numri jidhru ħfief imma jeħtieġu ħsieb profond u approċċi ġodda, bħal dawn li ġejjin : 
+
+Il-konġettura ta’ Goldbach li tgħid li kull numru żewġ jista' jinkiteb bħala s-somma ta' żewġ primi;
+Il-konġettura tan-numri primi tewmin li tgħid li hemm infinità ta' numri primi tewmin;
+Il-konġettura ta' Siracusa (jew ta' Collatz jew ta' Ulam) tgħid li jekk nieħdu numru sħiħ n ikbar minn 0, u jekk n hu żewġ, nieħdu n-nofs tiegħu (n/2), inkella nieħdu t-"tripplu u wieħed" u jkollna 3n+1. Il-konġettura hi li għan-numri kollha il-proċess jikkonverġi għal 1;
+It-teorema ta' Matiyasevich wera li t-teorija tal- ekwazzjonijiet diofantej hi indeċidibbli.
+
+
+=== It-teorija analitika tan-numri ===
+It-teorija analitika tan-numri  tuża l-mekkaniżmi tal-kalkulu infiniteżmali u tal- analisi komplessa biex tħares lejn problemi fuq in-numri interi. Fost l-eżempji hemm it-teorema tan-numri primi u l-ipoteżi ta' Riemann li hi marbuta magħha. Anki problemi tat-teoria elementari tan-numri bħall-problema ta’ Waring (rappreżentazzjoni ta' numru mogħti bħala somma ta' kwadrati, kubi, etc.), il-konġettura tan-numri primi tewmin u l-konġettura ta' Goldbach nistgħu nattakkawhom b'metodi analitiċi. Il-prova tat-traxxendenza tal-kostanti matematiċi, bħal π jew e ukoll nistgħu inqisuhom parti mit-teorija tan-numri analitika. Waqt li proprjetajiet tan-numri traxxendenti ma jidhrux li għandhom x'jaqsmu man-numri interi, fil-fatti nistudjaw nkunu qegħdin infittxu l-possibbiltà li ċerti numri jiġu rappreżentati bħala radiċi ta' polinomju b'koeffiċjenti interi; in-numri traxxendenti għandhom rabta qawwija mal-approssimazzjoni Diofanteja, li tistudja l-preċiżjoni li biha nistgħu napprossimaw numru reali mogħti b'numru razzjonali.
+
+
+=== It-teorija alġebrija tan-numri ===
+Hawn il-kunċett ta' numru jiġi ġeneralizzat għal dak ta' numru alġebri li hu r-radiċi ta' polinomju b’koefficjenti interi. Dawn id-dominji fihom l-elementi analogi għall-interi, imsejħin interi alġebrin. F'dan l-ambjent jista' jkun li proprjetajiet tas-soltu tan-numri sħaħ (bħall-uniċità tal-fattorizzazzjoni) ma jibqgħux iżjed validi. Il-qawwa tal-metodi użati -- teorija ta' Galois, koomologija tal-kampi, teorija tal-kampi tal-klassijiet, rappreżentazzjonijiet tal-gruppi u l-funzjoni L – hi hekk li biha nerġgħu insibu ordni fuq din il-klassi ġdida ta' numri.
+Ħafna problemi tat-teorija tan-numri nistgħu nattakkawhom iżjed faċilment billi nistudjawhom modulo p għall-primi kollha p. Dan il-metodu hu jissejjaħ lokalizzazzjoni u jwassal għall-bini tan-numri p-adiċi u dan il-qasam ta' studji li ħareġ mit-teorija tan-numri alġebrija jissejjaħ analisi lokali.
+
+
+=== It-teorija ġeometrika tan-numri ===
+It-teorija ġeometrika tan-numri tgħaqqad fiha xi kunċetti bażiċi ġeometriċi ma' problemi tat-teorija tan-numri. Tibda bit-teorema ta' Minkowski fuq il-punti retikolari fis-settijiet konvessi u l-istudju tal-ippakkjar tal-isferi. Spiss tintuża wkoll il-ġeometrija alġebrija, speċjalment it-teorija tal-kurvi ellittiċi. It-teorema famuż, l-aħħar teorema ta' Fermat
+, ġiet ippruvata bl-użu ta' dawn il-metodi.
+
+
+=== It-teorija kombinatorja tan-numri ===
+It-teorija kombinatorja tan-numri tittratta problemi tat-teorija tan-numri fejn jidħlu ideat kombinatorji fil-formulazzjoni jew soluzzjoni tagħhom. Paul Erdős kien il-fundatur ewlieni ta' din il-fergħa tat-teorija tan-numri. Fost is-suġġetti tipiċi hemm is-sistemi għattejja, problemi tas-somma żero, diversi settijiet ta' somom ristretti u progressjonijiet aritmetiċi fis-sett tal-interi. Il-metodi alġebrin u analitiċi għandhom qawwa kbira f'dan il-qasam.
+
+
+=== It-teorija komputazzjonali tan-numri ===
+Dan il-qasam jistudja l-iżjed l-algoritmi li qegħdin apposta għat-teorija tan-numri. L-algoritmi deterministiċi u probabilistiċi għall-verifika tal-primalità u l-fattorizzazzjoni tan-numri sħaħ għandhom applikazzjonijiet importanti fil-krittografija.
+
+
+== Storja tat-teorija tan-numri ==
+
+
+=== Iċ-ċiviltà Vedika ===
+Il-matematiċi Indjani kienu ilhom interessati li jsibu soluzzjonijiet integrali għall-ekwazzjonijiet diofantej mill-perjodu Vediku. L-użu ġeometriku l-iżjed antik tal-ekwazzjonijiet diofantej insibuh fis-Sulba Sutra, li nkitbu bejn is-sekli VIII u VI Q.K. Bawdhajana (madwar 800 Q.K.) sab żewġ settijiet ta' soluzzjonijiet integrali pożittivi ta' sistema ta' ekwazzjonijiet diofantej, u uża wkoll is-sistemi ta' ekwazzjonijiet diofantej b’erba’ varjabbli mhux magħrufin. Apastamba (madwar 600 Q.K) uża wkoll is-sistemi ta' ekwazzjonijiet diofantej b’ħames varjabbli mhux magħrufin.
+
+
+=== L-epoka Ġajina ===
+Fl-indja, il-matematiċi tal-epoka Ġajina żviluppaw teorija sistematika tan-numri mis-seklu IV sas-seklu II Q.K. It-test tas-Surja Praġinapti (madwar 400 Q.K.) ikklassifika n-numri kollha fi tliet settijiet, numerevoli, innumerevoli u infiniti. Kull wieħed minn dawn it-tliet settijiet imbagħad jinqasam fi tliet ordnijiet :
+
+Numerevoli: l-iżjed baxxi, tan-nofs u l-ogħla.
+Innumerevoli: Kważi numerevoli, tassew innumerevoli u innumerevolament innumerevoli.
+Infiniti : Kważi finiti, tassew infiniti, infinitament infiniti.Il-matematiċi tal-epoka Ġajina kienu l-ewwel li warrbu l-idea li l-infinitajiet kollha huma l-istess u ndaqs. Għarfu ħames tipi differenti ta infinità: infinità f'direzzjoni waħda jew tnejn (dimensjoni waħda), infintà f’superfiċju (żewġ dimensjonijiet) u infinità kullimkien (tliet dimensjonijiet) u infinità ta' dejjem (f'numru infinit ta' dimensjonijiet). 
+L-ogħla numru innumerevoli N tax-xogħol Ġajin jikkoresspondi mal-kunċett modern ta' alef-żero, 
+  
+    
+      
+        
+          ℵ
+          
+            0
+          
+        
+      
+    
+     
+  , (in-numru kardinali tas-sett infinit tal-interi 1, 2, ...), l-iċken numru trasfinit kardinali. Il-matematiċi ta' din l-epoka iddefinew ukoll sistema sħiħa ta' numri kardinali trasfiniti, li fosthom l- 
+  
+    
+      
+        
+          ℵ
+          
+            0
+          
+        
+      
+    
+     
+    tagħna hu l-iżgħar. 
+Fl-istudju tat-teorija tas-settijiet, iddistingwew żewġ tipi bażiċi ta' numri trasfiniti. Għal raġunijiet fiżiċi u ontoloġiċi għamlu distinzjoni bejn asmkjata u ananata, bejn l-infinit b'rabta riġida u b'rabta laxka.
+
+
+=== Iċ-ċiviltà Griega ===
+It-teorija tan-numri kienet suġġett favorit fost il-matematiċi Griegi ta' Lixandra fl-Eġittu mill-bidu tas-seklu III Q.K., li kienu jagħfu bil-kunċett tal-ekwazzjoni Diofanteja f’bosta każijiet partikulari. L-ewwel matematiku Grieg li studja dan l-ekwazzjonijiet kien Diofantu.  
+Diofantu fittex ukoll metodu biex jinstabu soluzzjonijiet integrali għall-ekwazzjonijiet indeterminati linjari, ekwazzjonijiet li m’għandhoma imformazzjoni biżżejjed biex jagħtu sett uniku ta' soluzzjonijiet diskreti. L-ekwazzjoni 
+  
+    
+      
+         
+        x
+        +
+        y
+        =
+        5
+        
+      
+    
+     
+   hi waħda minnhom. Diofantu sab ħafna ekwazzjonijiet indeterminati li jistgħu jiġu ridotti  f'forma waħda li għaliha hi magħrufa ċerta kategorija ta' soluzzjonijiet allavolja m'hemmx soluzzjoni speċifika.
+
+
+=== L-epoka klassika f'l-Indja ===
+Il-matematiċi Indjani tal-perjodu medjovali studjaw l-ekwazzjonijiet diofantej b'ħafna ħerqa. Huma kienu l-ewwel li għamlu tfittxija sistematika għal metodi għad-determinazzjoni ta' soluzzjonijet integrali tal-ekwazzjonijiet diofantej. Arijabhata (fl-499) ta l-ewwel deskrizzjoni espliċita ta' soluzzjoni integrali ġenerali tal-ekwazzjoni diofanteja 
+  
+    
+      
+         
+        a
+        y
+        +
+        b
+        x
+        =
+        c
+        
+      
+    
+     
+  , li dehret fil-ktieb tiegħu Arijabhatija. Dan l-algoritmu, kuttaka, meqjus bħala waħda mill-kontribuzzjonijiet importanti ta’ Arijabhata fil-matematika pura, jinstabu bih is-soluzzjonijiet tal-ekwazzjonijiet diofantej f’termini ta' frazzjonijiet kontinwati. Arijabhata applika l-metodu biex jagħti s-soluzzjonijiet integrali tal-ekwazzjonijiet diofantej linjari, problema li għandu applikazzjonijiet importanti fl-astronomija. Bl-istess metodu sab ukoll is-soluzzjoni ġenerali tal-ekwazzjoni linjari indeterminata.
+Brahmagupta fl-628 ħadem fuq ekwazzjonijiet diofantej iżjed diffiċli.  Uża l-metodu ċakravala biex jirriżolvi l-ekwazzjonijiet diofantej kwadratiċi, fosthom xi forom tal-ekwazzjoni ta' Pell-Fermat, bħal 
+  
+    
+      
+         
+        61
+        
+          x
+          
+            2
+          
+        
+        +
+        1
+        =
+        
+          y
+          
+            2
+          
+        
+        
+      
+    
+     
+  . Ix-xogħol tiegħu Brahma Sphuta Siddhanta inqaleb għall-Għarbi fl-773 u għal-Latin iżjed tard fl-1126. L-ekwazzjoni 
+  
+    
+      
+         
+        61
+        
+          x
+          
+            2
+          
+        
+        +
+        1
+        =
+        
+          y
+          
+            2
+          
+        
+        
+      
+    
+     
+   fl-1657, il-matematiku  Franċiż Pierre de Fermat ipproponiha bħala problema. Is-soluzzjoni ġenerali ta'  din il-forma partikulari tal-ekwazzjoni ta' Pell-Fermat sabha 70 sena wara Leonhard Euler, waqt li s-soluzzjoni ġenerali tal-ekwazzjoni ta' Pell-Fermat sabha 100 sena wara Joseph Louis Lagrange fl-1767. Fil-waqt,  ħafna sekli qabel, is-soluzzjoni ġenerali tal-ekwazzjoni ta' Pell-Fermat kien diġà sabha u kitiebha Bhaskara II fl-1150, bl-użu ta' verżjoni modifikata tal-metodu ċakravala ta' Brahmagupta, li użah ukoll biex isib is-soluzzjoni ġenerali ta' ekwazzjonijiet kwadratiċi indeterminati oħra u ta' ekwazzjonijiet diofantej kwadratiċi oħra. Il-metodu ċakravala ta' Bhaskara biex tinstab is-soluzzjoni ġenerali tal-ekwazzjoni ta' Pell-Fermat kien eħfef mill-metodu li uża Lagrange 600 sena wara.
+Bhaskara sab ukoll xi soluzzjonijiet għall-ekwazzjonijiet indeterminati oħra kwadratiċi, kubiċi, kwartiċi u polinomjali ta' ordni ogħla. Narayana Pandit kompla jipperfezzjoni l-metodu ċakravala u sab iżjed soluzzjonijiet ġenerali għall-kwadratiċi indeterminati l-oħra u wkoll għall-ekwazzjonijiet polinomjali ta' ordni ogħla.
+
+
+=== Iċ-ċiviltà Iżlamika ===
+Mis-seklu IX, il-matematiċi misilmin bdew jinterresaw ruħhom bil-ħeġġa fit-teorija tan-numri. L-ewwel minn dawn il-matematiċi kien il-matematiku Għarbi Thabit ibn Qurra, li skopra teorema biex jinstabu pari ta' numri ħbieb.
+Fis-seklu X, Al-Bagdadi skopra verżjoni xi ftit differenti tat-teorema ta’ Thabit ibn Qurra. Al-Hajtham jidher li kien l-ewwel wieħed li pprova jikklassifika in-numri żewġ perfetti . Al-Hajtham kien ukoll l-ewwel li ipprova t-teorema ta' Wilson, jiġifieri, jekk 
+  
+    
+      
+         
+        p
+      
+    
+     
+   hu sħiħ imbagħad 
+  
+    
+      
+        p
+        
+      
+    
+     
+   jidħol ġo 
+  
+    
+      
+        1
+        +
+        (
+        p
+        −
+        1
+        )
+        !
+        
+      
+    
+     
+  . Mhux ċar jekk kienx jaf jipprova dan ir-riżultat. Dan it-teorema tissejjaħ it-teorema ta' Wilson minħabba l-kumment li għamel Edward Waring fl-1770 li John Wilson kien intebaħ b’dan ir-riżultat. John Wilson avża 'l Waring li ma kienx jaf kif jippruvah u Waring ma sabx prova. L-ewwel prova magħrufa sabha Leibniz, li ma kienx jahseb li hi uttli biżżejjed biex jippubblikaha u  Euler ippubblika l-ewwel prova.
+In-numri ħbieb kellhom sehem kbir fil-matematika Iżlamika. Fis-seklu XIII il-matematiku Persjan Al-Fariżi ta prova ġdida tat-teorema ta' Thabit ibn Qurra, fejn daħħal ideat ġodda li għandhom x'jaqsmu mad-dekompożi u l-metodi kombinatorji. Sab ukoll il-par tan-numri ħbieb 17 296, 18 416 li kienu attribwiti lil Euler, imma nagħfu li Al-Fariżi, kien jaf bihom qabel u forsi anki Thabit ibn Qurra stess.
+Fis-seklu XVII, Muħammet Baqir Jażdi sab il-par tan-numri ħbieb 9 363 584 u 9 437 056, ħafna qabel il-kontribuzzjoni ta' Euler.
+
+
+=== It-teorija tan-numri fl-Ewropa ===
+It-teorija tan-numri fl-Ewropa bdiet fis-sekli XVI u XVII bix-xogħol ta' François Viète, Claude-Gaspard Bachet de Méziriac u fuq kollox ta'  Fermat. Euler u Lagrange ikkontribuxxew għat-teorija lejn l-aħħar tas-seklu VIII u s-suġġett beda jieħu xeħta xjentifika bix-xogħol kbir ta' Legendre (1798) u Gauss (1801). Nistgħu ngħidu l-teorija moderna tan-numri bdiet bil-ħidma ta' Gauss u l-ktieb tiegħu Disquisitiones arithmeticae (1801). Gauss qal 
+
+Čebyšëv (1850) ta limiti utli għan-numri primi bejn żewġ numri mogħtija. Riemann (1859) għamel konġettura li limitu tad-densità tan-numri primi ma taqbisx ċertu funzjoni (it-teorema tan-numri primi), daħħal l-analisi komplessa fit-teorija tal-funzjoni ζ ta'  Riemann
+, u  miż-żeri tagħha ddeduċa l-formula tan-numri primi.
+L-aritmetika modulari bdiha sewwa Gauss bid-Disquisitiones arithmeticae. Hu daħħal dan is-simbolu:
+
+  
+    
+      
+        a
+        ≡
+        b
+        
+          
+          (
+          mod
+          
+          c
+          )
+        
+        
+      
+    
+     
+  u esplora l-parti kbira ta' dan il-qasam. Iġġeneralizza t-teorija għall-interi relattivi u skopra l-ewwel sett ta' numri sħaħ alġebrin, l-interi ta' Gauss. Čebyšëv fl-1847 ppubblika xogħol bir-Russu fuq is-suġġett, u fi Franza, Joseph-Alfred Serret għamlu popolari.
+Barra li ġabar fil-qosor ix-xogħol ta' qabel, Legendre stabilixxa l-ewwel applikazzjonijiet tal-liġi tar-reċiproċità kwadratika. Din il-liġi li kien proponiha Euler wara li skopriha bl-induzzjoni, ippruvaha għall-ewwel darba Legendre fix-xogħol tiegħu It-teorija tan-numri (1798) għal xi każijiet partikulari. Indipendement minn Euler u Legendre, il-liġi skopriha Gauss lejn l-1795, u dan kien l-ewwel li ta prova ġenerali. Dawn ikkontribuxxew ukoll għas-suġġett : Cauchy , Dirichlet bix-xogħol tiegħu Vorlesungen über Zahlentheorie li sar klassiku , Jacobi, li daħħal is-simbolu ta' Jacobi , Liouville, Ferdinand Eisenstein, Ernst Kummer, u Léopold Kronecker. It-teorija twessgħet minn Gauss, Jacobi u Kummer biex tħaddan ir-reċiproċità bikwadratika u kubika (ippruvata għall-ewwel darba minn Jacobi).
+Lil Gauss nafulu wkoll r-rapprentazzoni tan-numri bil-forom kwadratiċi binarji. Cauchy, Louis Poinsot (1845), Lebesgue (1859, 1868), u l-iżjed Hermite kollha taw kontribut għal dan is-suġġett. Fit-teorija tal-forom ternarji, Eisenstein kien minn ta' quddiem, u minħabba fih u f' H. J. S. Smith, kien hemm progress notevoli fit-teorija tal-forom in ġenerali.
+Smith ta klassifikazzjoni kompluta tal-forom kwadratiċi ternarji, u estenda r-riċerki ta' Gauss fuq il-forom kwadratiċi reali lejn il-forom komplessi. Eisenstein daħal iżjed fil-fond fli għandu x’jaqsam mar-rappreżentazzjoni tan-numri bis-somma ta' 4, 5, 6, 7, 8 kwadrati u t-teorija kompliha Smith.
+Fl-istorja tat-teorija tan-numri, l-aħħar teorema ta’ Fermat  għandha post speċjali minħabba l-isforzi kbar, mifruxin fuq iżjed minn tliet mitt sena, mill-matematiċi tad-dinja kollha biex jippruvawha jew imeruha.
+Pierre de Fermat ta prova hu stess fil-każ partikulari n = 4. Euler, fl-1753 kważi ippruvaha għal n = 3, u daħħal fil-prova tiegħu in-numri imaġinarji. Fl-1825, Dirichlet u Legendre ippruvaw il-każ n = 5 u Gabriel Lamé l-każ n = 7 fl-1839. Dawn il-każijiet diversi kienu ppruvati bl-għajnuna tal-istruttura taċ-ċrieki Ewklidej tal-istess natura bħall-interi ta' Gauss, jiġifieri ċ-ċrieki tal-interi ta' Eisenstein u l-interi ta' Dirichlet
+. Kummer fl-1847 pprova t-teorema fil-każ li l-esponent n hu numru prim regolari u beda t-teorija tal-ideali. Fl-aħħar tas-seklu XIX u l-bidu tas-seklu XX, il-matematiċi ttraskuraw it-teorema ta' Fermat biex jikkonċentraw fuq is-sisien tal-matematika. Fl-1955, il-Ġappuniżi Taniyama u Shimura suġġerew li hemm rabta profonda bejn il-funzjonijiet ellittiċi u l-forom modulari, żewġ oqsma tal-matematika a priori mbegħdin ħafna minn xulxin. Jekk il-konġettura ta' Shimura-Taniyama-Weil, hi vera ifisser li t-teorema ta' Fermat hi vera wkoll. Fl-1994 Andrew Wiles, bl-għajnuna ta' Richard Taylor, ipprova din il-konġettura, u ta tweġiba pożittiva għal din il-problema famuża.
+
+
+== Noti u referenzi ==
+
+
+== Bibljografija ==
+Oystein Ore (1948): Number Theory and Its History,  Dover Publications, Inc., ISBN 0-486-65620-9
+Richard Dedekind (1963), Essays on the Theory of Numbers,  Dover Publications, Inc., ISBN 0-486-21010-3
+Richard K. Guy (1981): Unsolved Problems in Number Theory, Springer, ISBN 0-387-90593-6
+Harold Davenport, Aritmetica superiore. Zanichelli, Bologna, 1994. ISBN 88-08-09154-6
+Melvyn B. Nathanson (2000): Elementary methods in number theory, Springer, ISBN 0-387-98912-9
+Kenneth Ireland & Michael Rosen (1990): A Classical Introduction to Modern Number Theory, 2nd ed., Springer, ISBN 0-387-97329-0
+
+
+== Ħoloq esterni ==
+
+Daħla għat-teorija tan-numri
+Storja tal-matematika moderna ta' David Eugene Smith, 1906

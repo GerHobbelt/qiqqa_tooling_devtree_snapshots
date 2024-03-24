@@ -1,0 +1,12 @@
+revision: 29272285
+title: Amazon Silk
+url: https://tr.wikipedia.org/wiki/Amazon_Silk
+
+
+---
+
+Amazon Silk; Kindle Fire, Fire Phone, Echo ve Fire TV cihazlarında kullanılmak üzere Amazon tarafından geliştirilmiş bir web tarayıcısıdır.
+Amazon Silk 2011 Kasım ayında Kindle Fire ve Fire Phone cihazlarına, 2017 Kasım ayında Fire TV'ye, 2018 Eylül ayında da Amazon Echo Show cihazları için geliştirilmeye başlanmıştır.Açık kaynak kodlu Chromium tabanlı olarak geliştirilen tarayıcı Blink motorunu kullanmaktadır. Çalışma prensibi olarak Amazon sunucularına önceden yüklenmiş internet sayfalarını görüntülemeye yarayan bir mimariye sahiptir. Bu mimari yapıyı  Google'ın SPDY teknolojisiyle birlikte kullanmaktadır.
+
+
+== Kaynakça ==

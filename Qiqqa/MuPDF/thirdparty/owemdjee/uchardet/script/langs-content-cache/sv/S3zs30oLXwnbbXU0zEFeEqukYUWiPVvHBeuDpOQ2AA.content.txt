@@ -1,0 +1,93 @@
+revision: 52979368
+title: Ip Man
+url: https://sv.wikipedia.org/wiki/IP-adress
+
+
+---
+
+En IP-adress (engelska Internet Protocol address) är ett nummer som används som adress på internet. IP-adressen identifierar normalt en viss dator (eller annan apparat), samtidigt som adressens första del visar till vilket nätverk datorn är kopplad. Domännamn används inte direkt av internetprotokollet, utan namnen måste omvandlas till IP-adresser, som sedan används i den egentliga kommunikationen. Även benämningen IP-nummer förekommer ibland, men bör undvikas.IP-adressen för avsändare och mottagare ingår i varje datapaket och är den enda information nätverksenheter har vad gäller paketets destination. Domännamn anges inte i de enskilda paketen. Varje apparat som skall kunna anges som adressat på internet måste ha en egen IP-adress. Detta gäller till exempel vanliga person- och serverdatorer, routrar, infrastruktur-servrar (för till exempel NTP, DNS, DHCP), nätverksskrivare och självständiga IP-telefoner. Med särskilda arrangemang kan datorer dela adress, men de ses då utifrån som en dator.
+Apparater som inte skall synas eller annars kunna adresseras direkt behöver däremot ingen adress. Exempel på sådan apparatur är switchar, bryggor och brandväggar. De kan ändå ha egna adresser med tanke på fjärradministration eller andra funktioner integrerade i samma apparat.
+Ursprungligen var adresserna avsedda att vara unika på hela internet, men en del adressblock har sedermera avdelats för användning inom enskilda intranät. Vissa adresser eller adressblock är också avsedda för speciella ändamål, där de inte hänför sig till en enskild apparat, till exempel nätverksadressen och broadcast-adressen för ett enskilt mindre nät (subnät), multicast-adresserna för dem intresserade av en viss tjänst (en TV-kanal eller liknande) och anycast-adresserna med vilken man når en godtycklig server som tillhandahåller en viss tjänst.
+
+
+== Domännamn och IP-adresser ==
+Användare på internet använder sällan IP-adresserna direkt. Istället används domännamn genom domännamnssystemet (DNS), där datorerna namnges i en hierarki enligt organisation och organisationstyp eller land.
+DNS är det som gör så att webbadressen google.com kan översättas till IP-adressen 192.86.9.1. Det finns flera olika DNS-servrar, där dels varje internetleverantör oftast har sin egen, dels publika varav några av de mest kända är Cloudflares DNS 1.1.1.1  eller 8.8.8.8 som är Googles publika DNS server.
+Då en dator ska kontaktas tar man först reda på namnservern för organisationen som ansvarar för namnet, för att och av denna få IP-adressen för datorn ifråga. Därefter används denna IP-adress. I vissa protokoll kan namnet ha betydelse också senare, men det används inte för att styra datapaketen.
+Sambandet mellan domännamn och IP-adress behöver inte vara entydigt och IP-adressen fungerar oberoende av DNS. Omvänt kan den som registrerat ett domännamn använda detta och administrera en namnserver utan att inneha något IP-adressblock. Om namn och IP-adress inte stämmer överens (då man kontrollerar andra vägen) kan detta dock tas som tecken på att allt inte står rätt till; organisationen som ansvarar för namnet och den som ansvarar för adressen bör i allmänhet samarbeta.
+
+
+== IP-adressernas natur ==
+IP-adresser delas ut blockvis, så att man genom att analysera adressens första del kan sluta sig till vilket nät den hör. Därmed behöver de centrala routrarna på internet inte känna alla specifika IP-adresser, utan endast vilken router som ansvarar för specifika block. I allmänhet kan en IP-adress nås olika vägar och avancerade arrangemang finns för att stamnätets routrar – och routrar som har flera rutter ut till stamnätet – ska kunna fatta ändamålsenliga beslut om vilken väg ett visst paket skall skickas.
+Varje dator kopplad till internet, eller till ett annat internet, tilldelas en IP-adress, ibland flera, av nätverksadministratören eller internetleverantören, i något nätblock som organisationen tilldelats (eller i något block för lokala adresser). 
+Adressen kan antingen konfigureras för hand på den enskilda datorn eller tilldelas dynamiskt genom DHCP eller liknande arrangemang i samband med att datorn startas upp. IP-adressen ändras ibland, antingen på grund av omorganisation av nätverket eller – vid dynamisk tilldelning – då datorn en tid inte varit uppkopplad och adressen därför tilldelats en annan maskin. Ofta bokförs uppgiften om vilken dator eller anslutning som vid en viss tidpunkt använt en viss IP-adress (lagstiftning i EU ger internetleverantörer skyldigheten att bokföra användningen).
+Det går inte att säkert binda en viss IP-adress till en viss person, då det inte behöver vara abonnemangsägaren som använder abonnemanget. Dessutom är det vanligt att man medvetet delar ut sin bandbredd med till exempel FON och Tor, eller omedvetet genom att man glömt att säkra sina trådlösa nätverk.
+
+
+== IP version 4 ==
+IP version 4 (IPv4) är den version av IP som använts sedan internets genombrott. I IPv4 består två nummer, nät-ID och dator-ID, med totalt 32 bitar, vilket är ekvivalent med 4 bytes och gör att antalet adresser är begränsade till drygt fyra miljarder (4 294 967 296 eller 232).
+Vanligen anges IP-adressen genom att skriva ut de 4 byten i decimal form med punkter emellan, så att varje siffergrupp motsvarar en byte.
+IP-adresser tillhörde en av fyra klasser, där de inledande bitarna anger vilken klass adressen tillhör. Behöver en specifik port anges i adressen blir formatet x.x.x.x/portnummer
+
+Då IPv4 utvecklades var det främst fleranvändarsystem, serverdatorer och nätverksapparatur som behövde adresser, och tanken var att varje organisation skulle kunna få ett eget nät-ID med tillräcklig klass för att kunna ansluta alla sina datorer; adresserna verkade tillräckligt många med väldigt stor marginal. När sedan Internet slog igenom och persondatorer blivit vanliga övergavs klass-systemet till största delen. När sedan mobiltelefoner och snart också hushållselektronik kopplas till internet råder akut adressbrist. Sedan slutet av 1990-talet har man varnat för problemet och IP version 6 utvecklades i första hand för att öka mängden tillgängliga adresser, men har inte ännu slagit igenom trots att de flesta enheter idag stödjer protokollet.
+Exempel på IPv4-adresser:
+
+213.100.33.42
+83.255.162.151
+127.0.0.1/80 (den interna nätverksadressen på en enhet, även kallad loopback, genom HTTP-porten)
+
+
+=== Reserverade IP-adresser ===
+Vissa IP-adressblock används för speciella ändamål. Så är till exempel blocket 127.0.0.1/8 i IP version 4 reserverat för bruk inom en enskilda dator ("localhost"), 0.0.0.0/8 för det lokala nätsegmentet, 169.254.0.0/16 för automatiskt konfigurerad lokal kommunikation ("link local"), 192.0.2.0/24 för exempel (jämför example.com) och 224.0.0.0/4 för Multicast. Ett senare tillägg är adressrymden
+
+100.64.0.0/10 (100.64.0.0 – 100.127.255.255)
+
+för Carrier-grade NAT (CGN) genom RFC 6598, där de publika adresserna till samma internetoperatör delas bland många kunder.
+
+
+==== Lokala IP-adresser ====
+Vissa IP-adresser används för lokala nätverk (LAN) i hem och på kontor. Dessa adresser är reserverade av internet Assigned Numbers Authority (IANA) och går inte att använda direkt på internet. För att datorer med sådana lokala adresser skall kunna ta kontakt med internet krävs en router med Network Address Translation (NAT), det vill säga en router som byter ut adresserna i enskilda datapaket till sådana gångbara på internet, respektive till adresser på intranätet.
+De lokala adresserna är (definierat i RFC 1918 uppdelat på liknande sätt som det som tidigare kallades A-, B- respektive C-klass av nät):
+
+10.0.0.0/8 (10.0.0.0 – 10.255.255.255)
+172.16.0.0/12 (172.16.0.0 – 172.31.255.255)
+192.168.0.0/16 (192.168.0.0 – 192.168.255.255)
+
+
+== IP version 6 ==
+
+Den nya standarden av IP heter IP version 6 (IPv6). I IPv6 har IP-adressen utökats till 128 bitar, och består av ett nätverksprefix följt av den lokala adressen. Också flera nya funktioner har införts, exempelvis IPSec (som sedermera även blivit porterat till IPv4). Notationen för adresserna är också klart annorlunda, med 32 hexadecimala tecken  grupperade om fyra separerade med kolon med totalt 8 grupper, ofta åtföljt av ett snedstreck och därefter antalet bitar i nätverksprefixet.
+
+2001:0db8:85a3:08d3:1319:8a2e:0370:7334/64 är ett exempel på en giltig IPv6 adress.
+
+
+== Subnät ==
+Ett subnät (LAN) tilldelas ett antal IP-adresser i följd och bildar på det sättet ett nät. Var gränsen mellan olika LAN (adressområden) går definieras av en subnätmask. Numera anger masken bara antalet bitar i nätverksadressen och i den lokala delen av adressen, tidigare var mer komplicerade konstellationer tillåtna.
+I nätverksadresser är endast vissa bitar betydelsebärande, då de enskilda adresserna avser datorer eller apparater på detta nät. Nätets adress anges så att de övriga bitarna räknas som noll och man efter adressen lägger ett snedstreck och antingen antalet betydelsebärande bitar i början av adressen eller en "netmask" där de betydelsebärande bitarna ersatts med ettor och de betydelselösa med nollor. Så är till exempel 192.168.0.0/24 och 192.168.3.0/24 olika nätverk med 254 adresser vardera (plus nätverks- och "broadcast"-adresserna), medan 192.168.0.0./255.255.255.0 är ett alternativt sätt att beteckna det förstnämnda nätet. Adressen där de för nätadressen betydelselösa bitarna är ett är "broadcast-adressen" för nätet ifråga, och avser alla på nätet (sådana adresser spärras ofta av brandväggar för att hindra att nätet överlastas av svar på illasinnade förfrågningar till adressen).
+
+
+== Tilldelning av IP-adresser ==
+För att adresserna i IPv4 ska räcka krävs det att vissa tilldelas dynamiskt. Adresserna kan på det sättet användas av flera datorer, dock inte samtidigt. Så kallade fasta IP-adresser tilldelas i första hand datorer eller lokala nätverk som av speciella orsaker behöver en sådan, till exempel serverdatorer. Ofta har företag och andra organisationer fasta adresser på sina datorer, då det kan underlätta administrationen. Hemanvändare har ofta dynamiska IP-adresser, då datorerna ofta är avstängda och dynamiska adresser därmed kan användas effektivare: ett antal adresser som motsvarar maximalt antal samtidigt uppkopplade räcker, oberoende av antal kunder. En rekommendation om hur adresserna skall fördelas mellan internetleverantörer finns i RFC 2050.
+En dator kan ha en fast adress, som för hand skrivits in i lämpliga konfigurationsfiler, eller också frågar den vid uppstart efter sin adress och får denna information av en BOOTP- eller DHCP-server. Också datorer med fast adress kan använda dessa protokoll, så att informationen kan administreras centralt. Om datorn inte är fast kopplad till nätverket kan den få adressen då den ansluter sig till ett nytt nätverk, till exempel via en modempool (PPP), ett 3G-modem eller ett vanligt trådlöst nätverk (WLAN). Servern kan vara inställd att alltid ge samma fasta adress åt vissa datorer medan andra datorer delar på ett begränsat antal dynamiska adresser. Vanligen strävar dock servern efter att inte byta adresser i onödan.
+Tidigare var IP-adresserna indelade i klasser: Nätverk av klass A hade 224 adresser, nätverk av klass B 216 adresser och nätverk av klass C 28 adresser. Denna indelning avskaffades på 1990-talet för att adresserna skulle kunna allokeras effektivare.
+
+
+== Se även ==
+Internetprotokoll
+RIPE
+
+
+== Referenser ==
+
+
+=== Noter ===
+
+
+=== Källor ===
+RFC 1918 "Address Allocation for Private Internets"
+RFC 1466 "Guidelines for Management of IP Address Space"
+RFC 2050 "INTERNET REGISTRY IP ALLOCATION GUIDELINES"
+
+
+== Externa länkar ==
+Se din publika IP-adress (engelska)

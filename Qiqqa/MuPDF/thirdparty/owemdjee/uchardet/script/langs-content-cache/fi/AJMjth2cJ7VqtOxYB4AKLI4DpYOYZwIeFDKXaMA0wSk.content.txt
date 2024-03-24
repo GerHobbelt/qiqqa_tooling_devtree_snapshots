@@ -1,0 +1,41 @@
+revision: 18221141
+title: WebDAV
+url: https://fi.wikipedia.org/wiki/WebDAV
+
+
+---
+
+WebDAV (engl. Web-based Distributed Authoring and Versioning) on HTTP-protokollan laajennus, jolla voi WWW-sivujen lataamisen lisäksi myös muuttaa niitä.
+Yksinkertaisen muuttamisen lisäksi WebDAV sisältää sivujen yhtäaikaisen muuttamisen hallintaan liittyviä operaatioita. Lisäksi WebDAV mahdollistaa sivuista ylläpidettävän metadatan ylläpitämisen. Nimestään huolimatta WebDAV ei mahdollista kunnollista dokumenttien versionhallintaa vaan vasta DeltaV-laajennukset kykenevät tähän.
+
+
+== Uudet metodit ==
+WebDAV lisää seuraavat uudet metodit HTTP-protokollaan (entisten GET- ja POST-metodien tapaan):
+
+PROPFIND – pyydetään sivun ominaisuuksia (properties), jotka ovat XML-muodossa esitettävää metadataa tai selvitetään sivujen hakemistorakenne
+PROPPATCH – muutetaan sivujen ominaisuuksia; useita muutoksia voidaan tehdä yhtenä atomisena operaationa.
+MKCOL – luodaan sivukokoelmia (vastaa hakemistoja)
+COPY – kopioidaan sivuja paikasta toiseen
+MOVE – siirretään sivuja paikasta toiseen
+LOCK – lukitaan sivuja yhtäaikaisen käytön tilapäiseksi estämiseksi
+UNLOCK – poistetaan lukko"Sivu" voi olla mikä tahansa URI:lla osoitettavissa oleva tietoryhmä.
+
+
+== Standardit ==
+RFC 2291 – vaatimukset
+RFC 2518 – HTTP-laajennukset
+RFC 3253 – versionhallinnan laajennukset
+RFC 3648 – järjestetyt sivukokoelmat
+RFC 3744 – pääsynhallinta
+RFC 4918 – HTTP-laajennusten uusi spesifikaatio
+
+
+== WebDAV-laajennuksia tukevia ohjelmia ==
+Apache (lisäosa mod_dav)
+Zope
+Microsoft ExchangeAsiakasohjelmia on niin paljon, ettei niitä kannata luetella tässä. Esimerkkeinä voisi mainita Emacs, Microsoft Office 2000 ja Mozilla-sivumuokkain ja -kalenteri.
+
+
+== Aiheesta muualla ==
+WebDAV-sivusto (englanniksi)
+IETF webdav-standardointiryhmä (englanniksi)

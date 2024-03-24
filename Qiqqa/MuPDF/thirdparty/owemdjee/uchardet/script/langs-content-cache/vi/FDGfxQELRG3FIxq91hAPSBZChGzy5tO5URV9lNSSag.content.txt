@@ -1,0 +1,278 @@
+revision: 70399797
+title: "C (ng\xF4n ng\u1EEF l\u1EADp tr\xECnh)"
+url: https://vi.wikipedia.org/wiki/C_(ng%C3%B4n_ng%E1%BB%AF_l%E1%BA%ADp_tr%C3%ACnh)
+
+
+---
+
+C là một ngôn ngữ mệnh lệnh được phát triển từ đầu thập niên 1970 bởi Dennis Ritchie để dùng trong hệ điều hành UNIX. Từ đó, ngôn ngữ này đã lan rộng ra nhiều hệ điều hành khác và trở thành một những ngôn ngữ phổ dụng nhất. C là ngôn ngữ rất có hiệu quả và được ưa chuộng nhất để viết các phần mềm hệ thống, mặc dù nó cũng được dùng cho việc viết các ứng dụng. Ngoài ra, C cũng thường được dùng làm phương tiện giảng dạy trong khoa học máy tính mặc dù ngôn ngữ này không được thiết kế dành cho người nhập môn.
+
+
+== Các đặc trưng ==
+
+
+=== Tổng quan ===
+C là một ngôn ngữ lập trình tương đối nhỏ gọn vận hành gần với phần cứng và nó giống với ngôn ngữ Assembler hơn hầu hết các ngôn ngữ bậc cao. Hơn thế, C đôi khi được đánh giá như là "có khả năng di động", cho thấy sự khác nhau quan trọng giữa nó với ngôn ngữ bậc thấp như là Assembler, đó là việc mã C có thể được dịch và thi hành trong hầu hết các máy tính, hơn hẳn các ngôn ngữ hiện tại trong khi đó thì Assembler chỉ có thể chạy trong một số máy tính đặc biệt. Vì lý do này C được xem là ngôn ngữ bậc trung.
+C đã được tạo ra với một mục tiêu là làm cho nó thuận tiện để viết các chương trình lớn với số lỗi ít hơn trong mẫu hình lập trình thủ tục mà lại không đặt gánh nặng lên vai người viết ra trình dịch C, là những người bề bộn với các đặc tả phức tạp của ngôn ngữ. Cuối cùng C có thêm những chức năng sau:
+
+Một ngôn ngữ cốt lõi đơn giản, với các chức năng quan trọng chẳng hạn như là những hàm hay việc xử lý tập tin sẽ được cung cấp bởi các bộ thư viện các thủ tục.
+Tập trung trên mẫu hình lập trình thủ tục, với các phương tiện lập trình theo kiểu cấu trúc.
+Một hệ thống kiểu đơn giản nhằm loại bỏ nhiều phép toán không có ý nghĩa thực dụng.
+Dùng ngôn ngữ tiền xử lý, tức là các câu lệnh tiền xử lý C, cho các nhiệm vụ như là định nghĩa các macro và hàm chứa nhiều tập tin mã nguồn (bằng cách dùng câu lệnh tiền xử lý dạng #include chẳng hạn).
+Mức thấp của ngôn ngữ cho phép dùng tới bộ nhớ máy tính qua việc sử dụng kiểu dữ liệu pointer.
+Số lượng từ khóa rất nhỏ gọn.
+Các tham số được đưa vào các hàm bằng giá trị, không bằng địa chỉ.
+Hàm các con trỏ cho phép hình thành một nền tảng ban đầu cho tính đóng và tính đa hình.
+Hỗ trợ các bản ghi hay các kiểu dữ liệu kết hợp do người dùng từ khóa định nghĩa struct cho phép các dữ liệu liên hệ nhau có thể được tập hợp lại và được điều chỉnh như là toàn bộ.Một số chức năng khác mà C không có (hay còn thiếu) nhưng có thể tìm thấy ở các ngôn ngữ khác bao gồm:
+
+An toàn kiểu,
+Tự động Thu dọn rác,
+Các lớp hay các đối tượng cùng với các ứng xử của chúng (xem thêm OOP),
+Các hàm lồng nhau,
+Lập trình tiêu bản hay Lập trình phổ dụng,
+Quá tải và Quá tải toán tử,
+Các hỗ trợ cho đa luồng, đa nhiệm và mạng.Mặc dù C còn thiếu nhiều chức năng hữu ích nhưng lý do quan trọng để C được chấp nhận vì nó cho phép các trình dịch mới được tạo ra một cách nhanh chóng trên các nền tảng mới và vì nó cho phép người lập trình dễ kiểm soát được những gì mà chương trình (do họ viết) thực thi. Đây là điểm thường làm cho mã C chạy hiệu quả hơn các ngôn ngữ khác. Thường thì chỉ có ngôn ngữ ASM chỉnh bằng tay chạy nhanh hơn (ngôn ngữ C), bởi vì ASM kiểm soát được toàn bộ máy. Mặc dù vậy, với sự phát triển các trình dịch C, và với sự phức tạp của các CPU hiện đại có tốc độ cao, C đã dần thu nhỏ khác biệt về tốc độ này.
+Một lý do nữa cho việc C được sử dụng rộng rãi và hiệu quả là do các trình dịch, các thư viện và các phần mềm thông dịch của các ngôn ngữ bậc cao khác lại thường được tạo nên từ C.
+
+
+=== Ví dụ "hello, world" ===
+Ví dụ đơn giản sau đây được thấy trong lần in đầu tiên của cuốn "The C Programming Language", và đã trở thành bài tiêu chuẩn trong chương nhập môn của hầu hết các loại sách giáo khoa về lập trình. Chương trình hiển thị câu "hello, world!" trên đầu ra chuẩn, mà thường là một màn hình. Mặc dù vậy, nó có thể xuất ra một tập tin hay xuất ra trên một thiết bị phần cứng kể cả trên một vùng chứa, tùy thuộc vào việc đầu ra chuẩn được chỉ thị vào đâu khi chương trình này được thực thi.
+
+Chương trình trên sẽ dịch đúng trong hầu hết các trình dịch hỗ trợ chuẩn ANSI C hay chuẩn C99.
+Sau đây là các phân tích theo từng dòng mã của ví dụ trên
+
+.
+
+Dấu '{' cho biết sự bắt đầu của định nghĩa của hàm main.
+
+Dòng trên gọi đến một hàm chuẩn khác tên là printf. Hàm này đã được khai báo trước đó trong tập tin stdio.h. Dòng này sẽ cho phép tìm và thực thi mã (đã được hỗ trợ sẵn) với ý nghĩa là hiển thị lên đầu ra chuẩn dòng chữ  hello, world<ký tự xuống dòng EOL-chuyển dấu nhắc sang dòng mới>.Mã ký tự \n là một dãy thoát được chuyển dịch thành dấu ký tự EOL (viết tắt từ chữ End-Of-Line) có nghĩa là chuyển vị trí dấu nhắc xuống đầu một dòng kế. Giá trị trả về của hàm printf (theo khai báo nguyên mẫu chuẩn của hàm này trong C) có kiểu int, nhưng vì giá trị trả về này không được (người lập trình) dùng tới nên giá trị đó bị bỏ qua (một cách lặng lẽ).
+
+Dòng này sẽ kết thúc việc thực thi mã của hàm main và buộc nó trả về giá trị 0 (là một số nguyên như khai báo ban đầu  int main ).
+
+Dấu '}' cho biết việc kết thúc mã cho hàm main.
+
+
+=== Các kiểu ===
+C có một hệ thống kiểu tương tự như của Pascal, mặc dù chúng khác nhau trong một số khía cạnh. Có nhiều kiểu cho các số nguyên với nhiều cỡ cho có đấu và không có dấu, có kiểu số floating point, kiểu các ký tự char, các kiểu thứ tự enum, kiểu bản ghi record và kiểu đơn vị union.
+C tạo ra sự mở rộng mạnh mẽ việc sử dụng của kiểu các con trỏ pointer, một dạng đơn giản các tham chiếu mà chúng chứa địa chỉ các vùng nhớ. Các con trỏ có thể được tham chiếu ngược (dereference) để lấy về giá trị của dữ liệu được chứa trong địa chỉ đó (địa chỉ mà con trỏ chỉ vào). Địa chỉ này có thể được điều chỉnh bằng các phép gán thông thường và các phép toán số học trên con trỏ. Trong thời gian thực thi, một con trỏ đại diện cho một địa chỉ của bộ nhớ. Trong thời gian chuyển dịch, nó là một kiểu phức tạp đại diện cho cả địa chỉ và kiểu của dữ liệu. Điều này cho phép các biểu thức bao gồm các con trỏ được kiểm tra về kiểu. Các con trỏ thì được dùng cho nhiều mục tiêu trong C. Các dòng ký tự string thường được đại diện bởi một con trỏ chỉ tới một dãy của các ký tự. Sự cấp phát bộ nhớ động, được miêu tả sau đây, thì được tiến hành thông qua các con trỏ.
+Một con trỏ rỗng có nghĩa là nó không chỉ đến một chỗ nào hết. Điều này có ích trong những trường hợp như là con trỏ next trong một nút cuối của một danh sách liên kết linked list. Việc tham chiếu ngược một con trỏ trống gây ra các biểu hiện không dự đoán trước được. Các con trỏ kiểu void thì lại có thể chỉ đến một đối tượng mà không cần biết kiểu của đối tượng đó. Điều này đặc biệt hữu dụng trong lập trình tiêu bản bởi vì cỡ và kiểu của các đối tượng mà chúng chỉ tới thì không thể biết được và do đó không thể thực hiện tham chiếu ngược, nhưng chúng lại có thể được hoán chuyển thành các con trỏ của các kiểu khác.
+Các kiểu mảng array trong C thì có cỡ cố định, độ lớn tĩnh của nó phải được biết trước trong thời gian chuyển dịch. Điều này gây nhiều trở ngại trong thực tế bởi vì người ta có thể chỉ định các vùng nhớ ở thời gian thực thi dựa trên các thư viện chuẩn và hành xử chúng như là các mảng. Không như các ngôn ngữ khác, C biểu thị các mảng giống như trường hợp các con trỏ: chúng đóng vai trò một địa chỉ của bộ nhớ và một kiểu dữ liệu. Do đó, các giá trị chỉ số có thể vượt quá cỡ của một mảng.
+C cũng cung cấp các kiểu mảng đa chiều. Các giá trị chỉ số của các mảng đa chiều thì được gán theo thứ tự hàng chính. Một cách có ý nghĩa thì các mảng này hoạt động như là mảng của các mảng nhưng thực chất chúng được phân bố như là mảng một chiều với việc tính và tạo các vị trí tương đối.
+C thường được dùng trong việc lập trình các hệ thống bậc thấp, ở đó có thể cần thiết để xem số nguyên như là một địa chỉ của bộ nhớ, là một giá trị double precision, hay là một kiểu con trỏ. Trong các trường hợp này, C cung cấp việc hoán chuyển, mà phép toán này sẽ bắt buộc chuyển đổi giá trị từ một kiểu sang một kiểu khác. Dùng phép hoán chuyển sẽ làm mất đi phần nào tính an toàn mà thường được cung cấp bởi hệ thống kiểu.
+
+
+=== Lưu trữ dữ liệu ===
+Một trong những chức năng quan trọng nhất của một ngôn ngữ lập trình là việc cung cấp cơ sở cho việc quản lý bộ nhớ và các đối tượng được chứa trong bộ nhớ. C cung ứng 3 phương cách để cấp phát bộ nhớ cho các đối tượng:
+
+Ba phương án này thích hợp cho các tình huống khác nhau và có những hậu quả khác nhau. Ví dụ, kiểu cấp phát tĩnh sẽ không cần thời gian (để tính toán) cho sự cấp phát, kiểu cấp phát tự động sẽ cần một khoảng thời gian nào đó cho dự tính, và kiểu cấp phát động có thể đòi hỏi một lượng lớn thời gian dùng dễ tính toán cho việc cấp phát và hoàn trả (các vùng nhớ đã được yêu cầu trước đó). Mặt khác, khoảng trống của chồng thường giới hạn cho vùng nhớ tĩnh hay cho khoảng trống của heap, và chỉ kiểu cấp phát vùng nhớ động là cho phép sự cấp phát cho các đối tượng mà kích thước của nó chỉ có thể biết được trong lúc thi hành. Hầu hết các chương trình C đều dùng nhiều cả ba phương cách này.
+Khi có thể thì sự cấp phát tự động hay sự cấp phát tĩnh thường được dề nghị dùng vì kho nhớ được quản lý bởi trình dịch, giải phóng cho người lập trình những lồi lầm phiền hà khi phải xin cấp phát và hoàn trả các vùng nhớ bằng tay. Rất tiếc nhiều cấu trúc dữ liệu có thể trương nở trong thời gian thực thi và vì kiểu cấp phát tĩnh và kiểu tự động phải có một độ lớn cố định ở thời gian dịch nên trong nhiều tình huống mà buộc phải dùng kiểu cấp phát động. Các dãy thay đổi về độ lớn là một ví dụ điển hình của trường hợp này. (Xem ví dụ từ bài malloc về các dãy được cấp phát vùng nhớ động.)
+
+
+== Cú pháp ==
+
+Không như Fortran, C là ngôn ngữ dạng tự do, cho phép người lập trình tùy tiện sử dụng ký tự whitespace để xếp đặt (cách trình bày) mã nguồn. Các dòng chú giải hoặc có thể đặt nằm giữa /* và */ hoặc viết từng dòng bắt đầu bởi // theo sau đó là các chú giải.
+Mỗi tập tin chứa mã có thể chứa các khai báo và các định nghĩa hàm. Các định nghĩa hàm, chính chúng, cũng chứa các khai báo và các mệnh đề. Các khai báo thì hoặc là định nghĩa những kiểu mới với các từ khoá như struct, union, và enum, hoặc là gán các kiểu và đăng ký vùng chứa (trong bộ nhớ) cho các biến mới (Ví dụ: char *myname = "ABC"). Các từ khoá như là char và int cũng như là ký hiệu con trỏ chỉ tới * là các kiểu sẵn có. Các khối mã thì được đóng ở giữa các dấu { và } để chỉ ra phần (mã) mà các khai báo và các cấu trúc điều khiển (bên trong dấu ngoặc) có hiệu lực.
+Như là một ngôn ngữ mệnh lệnh, C phụ thuộc vào các mệnh đề (câu lệnh) để làm hầu hết các việc. Hầu hết các mệnh đề lại là các mệnh đề biểu thức mà một cách đơn giản chúng tạo nên việc đánh giá các biểu thức đó—và trong quá trình này, các biến nhận được các giá trị mới hoặc các giá trị này được trả ra. Các mệnh đề dòng điều khiển cũng có hiệu lực cho việc thực thi có điều kiện hay có lặp lại, mà chúng được cấu tạo với các từ khóa như là if, else, switch, do, while và for. Các nhảy dòng cũng có thể thực hiện qua câu lệnh goto. Nhiều phép toán khác nhau được cung cấp sẵn để thực thi trên các phép tính cơ sản về số học, lô gíc, so sánh, kiểu bit, chỉ số của mảng, và phép gán giá trị. Các biểu thức cũng gọi các hàm, bao gồm một số lượng lớn các hàm thư viện, để tiến hành các thao tác chung.
+
+
+== Các vấn đề của C ==
+Một câu nói phổ biến được người ta lập lại nhiều lần của một nhà thiết kế trình dịch Bjarne Stroustrup, người sáng lập ra C++, là "C makes it easy to shoot yourself in the foot." (tạm dịch: "C làm cho việc bạn tự hại bạn trở nên dễ dàng") [1]. Nói cách khác, C cho phép nhiều phép toán không mong muốn trong một cách tổng quát, và do đó, nhiều lỗi đơn giản đã được tạo ra bởi một người lập trình mà chúng lại không thể phát hiện qua trình dịch hay ngay cả không phát hiện ra trong lúc thi hành. Điều này là nguyên nhân của một số chương trình có các ứng xử không lường trước được và có các lỗ hổng về an toàn. Một dị bản ngôn ngữ C là Cyclone điều chỉnh được một phần trong số các vấn đề như vậy.
+Một lý do của các vấn đề nêu trên là để tránh cho cái giá quá cao phải trả cho việc kiểm soát (lỗi) ở thời gian dịch và thời gian thi hành. Một lý do khác là sự đòi hỏi để giữ C được càng hiệu quả và càng uyển chuyển càng tốt. Một ngôn ngữ càng mạnh thì càng khó khăn cho ngôn ngữ lập trình đó để làm rõ ràng mọi thứ trong các chương trình (được viết trong ngôn ngữ này). Một số việc kiểm tra đã được dựa trên các công cụ bên ngoài, những công cụ như vậy được bàn đến trong phần Các công cụ kiểm tra tĩnh bên ngoài cho trình dịch.
+
+
+=== Sự cấp phát vùng nhớ ===
+Một vấn đề với C (và đây thường là vấn đề lớn cho những người mới làm quen với C) là việc cấp phát (vùng nhớ) một cách tự động hay một cách động cho các đốì tượng mà không khởi động chúng. Các đối tượng này, ban đầu, chứa các giá trị bất kì trong khoảng nhớ mà chúng được cấp phát. Các giá trị này có thể là các giá trị ngẫu nhiên còn lại trong bộ nhớ mà chưa được làm sạch, chúng hoàn toàn không dự đoán được. Nếu một chương trình có khai biến mà lại không gán giá trị ban đầu, thường là 0 (cho kiểu số) hay null (cho kiểu con trỏ) hay "" (cho kiểu dãy ký tự,...) thì có thể gây ra các phản ứng không lường trước được của chương trình đó. Hầu hết các trình dịch C hiện đại có thể phát hiện và cảnh cáo về việc "quên gán giá trị khởi động" trong nhiều trường hợp, nhưng cũng không hoàn toàn hiệu quả.
+Một vấn đề thường thấy khác là bộ nhớ heap không thể được tái dụng cho tới khi nó được hoàn trả lại về cho bộ nhớ bởi người lập trình bằng câu lệnh free(). Hậu quả là nếu người lập trình quên hoàn trả các vùng đã cấp phát về cho bộ nhớ và lại tiếp tục dùng các lệnh cấp phát, thì càng lúc càng nhiều các phần của bộ nhớ bị chiếm chỗ. Lỗi này là một loại lỗi kiểu memory leak tức là "rỉ bộ nhớ". Ngược lại, cũng có trường hợp trả tự do phần đã cấp phát về cho bộ nhớ quá sớm và lại tiếp tục sử dụng vùng nhớ đã trả về thì cũng có thể dễ gây ra việc nhận sai các giá trị hay tạo ra các tình huống không lường trước được. Lý do là vì máy tính khi nhận lại các vùng đã được trả sẽ có thể dùng vùng nhớ đó cho các việc khác. Một số ngôn ngữ xử lý chuyện này với việc tự động dọn rác.
+
+
+=== Các con trỏ ===
+Các con trỏ là một nguồn gốc chính của nhiều nguy hiểm bởi vì chúng không được kiểm tra, một con trỏ có thể được tạo ra để chỉ tới bất kì đối tượng nào bất kể kiểu nào, kể cả các mã (nhị phân), và khi được dùng đến (hay được viết ra), có thể gây ra các hiệu ứng không lường trước được. Mặc dù hầu hết các con trỏ thường chỉ tới các chỗ an toàn, chúng vẫn có thể di chuyển tới những chỗ không an toàn như khi dùng các phép toán số học trên các con trỏ (thường là cộng trừ trên các địa chỉ mà chúng chỉ tới), vùng nhớ chỗ chúng chỉ tới có thể đã được trả về và đã được tái dụng (con trỏ đu đưa), chúng có thể đã không được khởi động (con trỏ hoang), hay chúng được trực tiếp gán một giá trị nào đó qua việc dùng toán tử đổi kiểu (cast) hoặc được gán qua một con trỏ đã bị hủy hoại. Một vấn đề khác với các con trỏ là việc C cho phép tự do chuyển đổi giữa hai kiểu con trỏ bất kì. Các ngôn ngữ khác điều chỉnh các vấn đề này bằng cách dùng các kiểu tham chiếu bị giới hạn hơn.
+
+
+=== Các mảng ===
+Mặc dù C có hỗ trợ riêng cho các mảng tĩnh, nhưng nó không kiểm tra xem các chỉ số mảng có hợp lệ hay không (kiểm tra biên). Thí dụ, người ta có thể viết phần tử thứ sáu của một mảng được định nghĩa với 5 phần tử, và điều này có thể mang lại các hậu quả không mong muốn. Lỗi này thuộc loại lỗi tràn bộ nhớ đệm. Đây là nguồn gốc của nhiều lỗ hổng an ninh trong các chương trình viết bằng C. Mặt khác, do sự giới hạn về kỹ thuật kiểm tra biên ở thời điểm C ra đời (khi gần như chưa có kỹ thuật kiểm tra biên), nên việc kiểm tra biên trở nên ảnh hưởng nặng đến tốc độ thực thi, đặc biệt là trong các tính toán số.
+Các mảng đa chiều rất cần thiết khi cài đặt các thuật toán số (chủ yếu áp dụng cho đại số tuyến tính) để chứa các ma trận. Nhưng cấu trúc mảng theo C không những không đáp ứng mà còn không tương hợp cho thao tác chuyên biệt này. Vấn đề này đã được bàn thảo trong sách Numerical Recipes in C, chương 1.2, trang 20 ff (đọc trực tuyến). Người ta có thể tìm thấy ở đây một giải pháp tốt được dùng xuyên suốt trong cả cuốn sách này.
+
+
+=== Các hàm tham lượng động ===
+Một vấn đề thường thấy khác là về các hàm tham lượng động (variadic function), tức là, các hàm mà có thể thay đổi được số lượng của các tham số. Không giống như các nguyên mẫu khác của hàm trong C, kiểm tra số lượng tham số ở thời điểm dịch là không bắt buộc bởi tiêu chuẩn, và một cách tổng quát là không thể kiểm tra được nếu không có thêm thông tin. Nếu dữ liệu có kiểu không đúng được chuyển vào, thì hậu quả sẻ không lường được, và thường tạo sự hư hại hoàn toàn. Các hàm tham lượng động cũng xử lý các hằng số con trỏ rỗng trong một cách không biết trước được.
+
+Thí dụ: Họ các hàm printf cung cấp bởi thư viện chuẩn, được dùng để định dạng các dòng chữ xuất ra, thì có tiếng vì các lỗi trong giao diện tham lượng động của nó; nó dựa trên một sự định dạng của dãy ký tự để biểu trưng số và kiểu của các tham số theo sau.Mặc dù kiểm tra kiểu của các hàm tham lượng động từ thư viện chuẩn là một vấn đề về chất lượng của sự thiết lập, nhiều trình dịch hiện đại đặc biệt tiến hành kiểm tra kiểu của việc gọi printf, và sản sinh ra các cảnh cáo nếu danh mục tham số mà không tương ứng với dãy ký tự định dạng. Dẫu sao thì không phải tất cả các lần gọi printf đều có thể được kiểm tra một cách tĩnh bởi vì có thể dãy ký tự định dạng chỉ được lập thành ở thời gian thực thi, khi mà các hàm tham lượng động thường vẫn không kiểm tra được.
+
+
+== Cú pháp ==
+C có nhiều điểm yếu trong cú pháp. Đáng chú ý là:
+
+Nguyên mẫu của hàm nào không chỉ ra tham số nào thì được hiểu ngầm là cho phép một tập bất kì các tham số. Một vấn đề về cú pháp đã được đề ra cho khả năng tương thích ngược của K&R C, về việc thiếu các nguyên mẫu.
+Một số sự chọn lựa đáng ngờ vực về thứ tự ưu tiên của các toán tử, chẳng hạn như == "nối kết" một cách chặt chẽ hơn & và | trong các biểu thức như là x & 1 == 0.
+Việc dùng toán tử "=" một cách dễ nhầm lẫn. Nếu dùng trong đẳng thức toán học để chỉ các phép gán, dẫn tới các phép gán không chủ định trong việc so sánh và dẫn tới một ấn tượng sai lầm rằng phép gán có tính bắc cầu. Ví dụ: việc dùng câu lệnh if (x=0) {...} sẽ dễ gây ra các lỗi bất ngờ.
+Thiếu các toán tử infix cho các đối tượng phức tạp, đặc biệt là cho các phép toán trên dãy các ký tự làm cho chương trình phụ thuộc nặng nề lên các phép toán rất khó đọc.
+Dựa vào quá nhiều trên hệ thống ký hiệu làm cơ sở cho cú pháp ngay cả ở nơi không tường minh như là "&&" và "||" thay vì dùng "and" và "or".
+Cú pháp khai báo không được dễ hiểu, đặc biệt cho hàm của các con trỏ. Trong tình huống hoàn toàn tương tự của C++, nhà nghiên cứu Damian Conway nói về cú pháp của khai báo như sau:
+Khó để mà đặc tả một kiểu trong C++ bởi vì thực tế là một số phần tử của việc khai báo (như là con trỏ) thì là các toán tử tiền tố trong khi một số khác (như là mảng) lại là toán tử hậu tố (nghĩa là phải đặt * đứng trước tên con trỏ và dặt [] sau tên mảng—người dịch). Nhừng toán tử khai báo này lại có các thứ tự ưu tiên khác nhau, cần phải được đặt trong các dấu ngoặc cẩn thận để đạt được sự khai báo mong muốn.
+Ben Werther & Damian Conway.A Modest Proposal: C++ Resyntaxed. Section 3.1.1. 1996.
+
+
+=== Các vấn đề về bảo trì ===
+Có một số vấn đề khác của C mà không trực tiếp do các lỗi hay sai sót, nhưng lại làm ngăn trở khả năng của người lập trình để xây đựng một hệ thống cỡ lớn, có thể bảo trì và ổn định. Các điển hình bao gồm:
+
+Hệ thống rời rạc vì các câu lệnh định nghĩa nhập (#include) dựa trên các dòng chữ nội tại rải rác không đồng nhất (trong các tập tin) nhằm giữ các nguyên mẫu và các định nghĩa được đồng bộ. Điều này làm tăng đáng kể số lần cho việc tạo dựng (phần mềm).
+Mô hình chuyển dịch rối rắm. Nó buộc phải có việc theo dõi các sự phụ thuộc (về mã) bằng tay và nó ngăn cấm sự tối ưu hóa trình dịch giữa các mô dun (ngoại trừ sự tối ưu hoá thời gian liên kết).
+Hệ thống kiểu yếu dẫn tới việc các chương trình có lỗi hiển nhiên nhưng vẫn được dịch mà không bị bắt lỗi.
+
+
+=== Các công cụ kiểm tra tĩnh cho trình dịch ===
+Nhiều công cụ đã được tạo ra để giúp người lập trình C tránh dược các lỗi. Việc kiểm tra và kiểm toán mã nguồn tự động thì rất hiệu quả trong mọi ngôn ngữ. Chẳng hạn cho C là Lint. Một thực tế là sử dụng Lint để phát hiện các mã có nghi vấn khi một chương trình được viết lần đầu. Một khi chương trình đã qua được Lint, thì nó được chuyển dịch bởi một trình dịch C. Cũng có một thư viện cho việc tiến hành kiểm tra các biên của mảng và một dạng giới hạn của việc tự động dọn rác, nhưng đó không phải là một phần tiêu chuẩn của C.
+Điều nên nhận thức là các công cụ này không phải là vạn năng. Bởi vì sự linh hoạt của C, nhiều kiểu lỗi như là việc dùng sai các hàm tham lượng động, việc dùng chỉ số ngoài biên của mảng và quản lý bộ nhớ không đúng thì không thể phát hiện được. Mặc dù vậy, nhiều trường hợp (lỗi) thông thường đều có thể được nhận ra.
+
+
+== Lịch sử ==
+
+
+=== Những phát triển ban đầu ===
+Phát triển khởi đầu của C xảy ra ở AT&T Bell Labs giữa 1969 và 1973; theo Ritchie thì thời gian sáng tạo nhất là vào năm 1972. Nó được đặt tên là C vì nhiều đặc tính của nó rút ra từ một ngôn ngữ trước đó là B.
+Thêm vào đó, các điểm khác với ngôn ngữ nguyên thủy "B": Ken Thompson kể tới ngôn ngữ lập trình BCPL, nhưng ông ta cũng đã tạo ra ngôn ngữ là Bon để vinh danh vợ mình.
+Có nhiều truyền thuyết về nguồn gốc của C và hệ điều hành liên quan tới nó là Unix bao gồm:
+
+Sự phát triển của C là kết quả của các lập trình viên đã muốn chơi Space TravelLưu trữ 2014-08-06 tại Wayback Machine. Họ đã chơi nó trên mainframe của hãng làm việc, nhưng bị thiếu khả năng (chạy) và phải hỗ trợ khoảng 100 người dùng, Thompson và Ritchie tìm thấy rằng họ đã không có đủ sự kiểm soát tàu vũ trụ (của trò chơi) để tránh được các va chạm khỏi sự chuyển dịch của các thiên thạch. Do đó, họ quyết định để xuất trò chơi này sang một máy PDP-7 để không trong văn phòng. Nhưng nó lại không có hệ điều hành; do đó, họ viết một hệ điều hành. Tiếp tục, họ quyết định để xuất hệ điều hành này sang PDP-11 của văn phòng nhưng việc này thật khó vì tất cả mã đều là ngôn ngữ Assembly. Họ quyết định dùng một ngôn ngữ dễ xuất cấp cao để hệ điều hành có thể xuất được dễ dàng từ máy tính này sang máy khác. Họ đã tìm đến ngôn ngữ B, nhưng nó lại thiếu các chức năng để khai thác một số khả năng của PDP-11. Vậy nên họ đã sáng tạo ra một ngôn ngữ mới là C.
+Unix nguyên đã được phát triển để tạo ra một hệ thống tự động lập hồ sơ cho các bằng phát minh. Phiên bản đầu tiên của Unix đã phát triển từ ngôn ngữ Assembly. Sau đó, ngôn ngữ C đã được phát triển để từ đó thay thế hệ điều hành mới.Cho đến 1973, C đã trở nên đủ mạnh để dùng viết nhân cho Unix, thay vì trước nó chúng được viết bằng Assembly trong các máy PDP-11/20. Đây là lần đầu tiên mà nhân của một hệ điều hành được lắp thành bằng một ngôn ngữ khác hơn Assembly.
+
+
+=== K&R C ===
+Năm 1978, Ritchie và Brian Kernighan xuất bản lần đầu cuốn The C Programming Language. Sách này được những người lập trình biết tới như là "K&R", được dùng trong nhiều năm như là một đặc tả không chính thức của C. Phiên bản C mà cuốn sách đó đề cập thường được gọi là "K&R C". (Lần xuất bản thứ hai của cuốn này cũng bao gồm chuẩn ANSI C).
+K&R giới thiệu các chức năng sau đây:
+
+Kiểu dữ liệu struct
+Kiểu dữ liệu long int
+Kiểu dữ liệu unsigned int
+Toán tử =+ đã được đổi thành +=, và tương tự cho các toán tử khác để tránh gây hiểu nhầm cho bộ phân tích từ vựng của trình dịch C. (Ví dụ: sự giống nhau dễ lầm lẫn của hai câu lệnh i =+ 10 và i = +10).K&R C thường được xem là phần cơ bản nhất của ngôn ngữ mà nó cần phải có cho một trình dịch C. Trong nhiều năm, ngay cả sau khi ANSI C được giới thiệu, nó đã được xem như là "mẫu số chung nhỏ nhất" mà người lập trình C phải bám lấy nếu muốn có được khả năng dịch chuyển (tái dụng trên nhiều máy) bởi vì không phải mọi trình dịch đều hỗ trợ toàn bộ ANSI C, và một cách hợp lý là mã viết trong K&R C cũng là mã hợp lệ trong ANSI C.
+Trong các phiên bản trước đây của C, chỉ có những hàm nào trả về một số khác số nguyên mới cần được khai báo trước khi dùng. Một hàm dùng mà không có bất kì sự khai báo nào trước đó được giả thiết là sẽ trả về một số nguyên.
+Ví dụ việc gọi với yêu cầu của sự khai báo trước:
+
+Ví dụ việc gọi mà không cần phải khai báo trước:
+
+Bởi vì nguyên mẫu của K&R đã không bao gồm bất kì thông tin nào về các tham số của hàm, chức năng kiểm tra kiểu của các đối số đã không được tiến hành, mặc dù một số trình dịch sẽ cho ra thông báo cảnh cáo nếu một hàm đã được gọi với số lượng tham số không đúng.
+Trong nhiều năm tiếp theo của sự tái bản K&R C, nhiều chức năng "không chính thức" đã được thêm vào cho ngôn ngữ, được hỗ trợ bởi các trình dịch của AT&T và một số nơi khác. Trong đó bao gồm:
+
+Các hàm có kiểu void và dữ liệu có kiểu void *.
+Các hàm trả về các kiểu struct hay union.
+Tên của các miền trong một không gian tên cho mỗi kiểu struct.
+Phép gán cho kiểu dữ liệu struct.
+Hằng const được xem là đối tượng chỉ cho phép đọc.
+Một thư viện chuẩn được sự hợp tác để xây dựng bởi nhiều nhà sản xuất.
+Các kiểu enumeration.
+Kiểu chính xác đơn float.
+
+
+=== ANSI C và ISO C ===
+Vào khoảng cuối thập niên 1970, C bắt đầu thay thế vai trò của BASIC như là một ngôn ngữ lập trình cho microcomputer. Suốt thập niên 1980 nó đã được chấp thuận dùng trong IBM PC, và sự phổ biến của nó bắt đầu tăng một cách lớn lao.
+Trong cùng thời kỳ, Bjarne Stroustrup và đồng nghiệp ở Bell Labs đã bắt tay cho thêm vào C các cấu trúc ngôn ngữ lập trình hướng đối tượng.
+Ngôn ngữ họ tạo ra gọi là C++ nay trở thành ngôn ngữ lập trình ứng dụng phổ biến nhất trên hệ điều hành Microsoft Windows; C vẫn còn rất phổ biến trong thế giới UNIX. Một ngôn ngữ khác cũng được phát triển trong khoảng thời gian này là Objective-C, cũng là một mở rộng lập trình hướng đối tượng cho C. Dù không phổ biến như C++, nó được dùng để phát triển các ứng dụng Cocoa của Mac OS X.
+Trong 1983, Viện Tiêu chuẩn Quốc gia Hoa Kỳ (ANSI) thành lập hội đồng X3J11 để hoàn tất một tiêu chuẩn dặc tả của C. Sau một quá trình khó khăn và lâu dài, tiêu chuẩn đã hoàn tất vào 1989 và được công nhận là "Programming Language C" ANSI X3.159-1989. Phiên bản ngôn ngữ này thường được nhắc đến như là ANSI C.
+Trong 1990, Tiêu chuẩn ANSI C (với một vài chi tiết nhỏ được điều chỉnh) đã được tiêu chuẩn hóa bởi Tổ chức Quốc tế về Tiêu chuẩn hóa (ISO) như là ISO/IEC 9899:1990.
+Một điểm mạnh của quá trình tiêu chuẩn hoá ANSI C là làm cho K&R C trở thành một tập con của nó; nó tiếp nhận nhiều chức năng không chính thức của K&R C như là một hệ quả. Xa hơn, hội đồng tiêu chuẩn cũng làm cho ANSI C bao gồm thêm nhiều chức năng mới, như là các nguyên mẫu của hàm (mượn từ C++), và khả năng tiền xử lý mạnh hơn.
+Ngày nay, ANSI C được hỗ trợ bởi hầu hết các trình dịch. Hầu hết các mã C ngày nay được viết dựa ttrên ANSI C. Mọi chương trình chỉ viết trong chuẩn C thì sẽ đảm bảo việc thực thi chính xác trên mọi nền nào cho phép dùng C. Mặc dù vậy, nhiều chương trình đã viết ra chỉ dịch được trong một số nền hoặc với một số trình dịch nào đó bởi vì các lý do sau:
+
+Dùng các thư viện không chuẩn, như là cho GUI.
+Một số trình dịch không hoàn toàn theo đúng chuẩn ANSI C hay các chuẩn tiếp sau trong các chế độ làm việc mặc nhiên của chúng.
+Phụ thuộc vào kích thước của một số kiểu dữ liệu cũng như là endian của nền. (Chẳng hạn, trong một số nền kích thước của kiểu int có thể nhiều hơn hay ít hơn—4, 8 hay 16 byte—trong nền khác.)Macro __STDC__ có thể được dùng để chẻ mã nguồn thành các phần theo ANSI C và K&R
+
+Một số chuyên gia khuyên rằng dùng #if __STDC__ như trên, thay cho #ifdef __STDC__ bởi vì một số trình dịch cài giá trị __STDC__ về 0 để chỉ việc không theo chuẩn ANSI (trong khi một số trình dịch khác lại cài về giá trị khác 0).
+
+
+=== C99 ===
+Sau quá trình chuẩn hóa ANSI, đặc tả của ngôn ngữ C tương đối được giữ nguyên trong một thời gian, trong khi C++ tiếp tục thâm nhập. (Đúng ra, đã có tu chính số 1 tạo ra phiên bản mới của C trong 1995, nhưng phiên bản này hiếm khi được đồng thuận.) Cho đến cuối thập niên 1990 một tiêu chuẩn mới đã được phát hành là ISO 9899:1999. Tiêu chuẩn này thường được mệnh danh là "C99". Nó đã tiếp thu ANSI C trong tháng 3 năm 2000.
+Những chức năng mới trong C99 bao gồm:
+
+Các hàm inline.
+Các biến có thể được khai báo ở bất kì chỗ nào (như là trong C++).
+Nhiều kiểu dữ liệu mới được đưa vào bao gồm kiểu long long int (để giảm khó khăn trong việc chuyển hệ từ 32-bit sang 64-bit), kiểu boolean và kiểu complex để dùng cho các số phức.
+Các mảng có chiều dài thay đổi được.
+Hỗ trợ cho dòng lệnh chú giải bắt đầu với // như trong C++ và nhiều ngôn ngữ khác.
+Nhiều hàm thư viện mới như là snprintf().
+Nhiều tập tin tiêu dề như là stdint.h.Điều thú vị trong việc hỗ trợ cho chuẩn C99 là một kết quả pha trộn. Trong khi GCC và nhiều trình dịch khác hiện hỗ trợ hầu hết các chức năng của C99, thì trình dịch của Microsoft và Borland lại không tuân theo và hai công ty này dường như không thích thú để thêm vào các hỗ trợ này.
+
+
+== Quan hệ với C++ ==
+
+Bjarne Stroustrup, cha đẻ của C++ đã lập đi lập lại rằng: Các tính chất không tương thích giữa C và C++ nên được hạ thấp càng nhiều càng tốt để mở rộng tối đa khả năng hoạt động thông suốt của hai ngôn ngữ này. Một số người tranh biện rằng vì C và C++ là hai ngôn ngữ khác nhau, sự tương thích giữ chúng thì hữu ích nhưng không phải có tính sống còn, theo lập trường này, nỗ lực để giảm sự không tương thích không được phá hủy cố gắng để nâng cao mỗi ngôn ngữ đứng riêng.
+Ngày nay, những khác nhau căn bản, không kể các mở rộng thêm vào của C++ như là các lớp, các tiêu bản, các không gian tên, và quá tải, giữa hai ngôn ngữ là:
+
+inline — các hàm inline có giá trị toàn cục trong C++ và chỉ có giá trị trong phạm vi tập tin trong C.
+Từ khóa bool trong C99 thì có riêng tập tin tiêu dề của nó là <stdbool.h>. Các chuẩn C trước đây đã không định nghĩa kiểu boolean và nhiều phương pháp không tương thích đã được dùng để mô phỏng kiểu boolean.
+Các hằng ký tự (được đặt trong dấu ') có độ lớn của một int trong C và có độ lớn của một char trong C++. Mặc dù vậy, ngay cả trong C các hàng này sẽ không bao giờ vượt quá giá trị của một char, cho nên việc chuyển đổi kiểu (char)'a' thì hoàn toàn an toàn.
+Nhừng từ khóa mới thêm vào trong C++ sẽ không thể dược dùng làm các tên trong C như trước đây nữa. (Ví dụ: try, catch, template, new, delete,...).
+Trong C++, trình dịch tự động tạo một "thẻ" cho mỗi struct, union hay enum, do vậy, struct S {}; trong C++ tương đương với typedef struct S {} S; trong C.C99 tiếp thu một số tính năng mà xuất hiện đầu tiên trong C++. Trong số đó là:
+
+Bắt cuộc khai báo nguyên mẫu của hàm.
+Thêm từ khóa inline.
+Hủy bỏ "hiểu ngầm" của sự trả về sẽ có kiểu int.
+
+
+== Ngôn ngữ trung gian ==
+C được dùng như là một ngôn ngữ trung gian vì nó có thể xuất thành dạng tập tin object hay ngôn ngữ máy. Việc này giúp C trở nên dễ vận chuyển hay dễ tối ưu hóa. Các trình dịch C thường có sẵn cho nhiều loại CPU và các hệ điều hành và hầu hết những trình dịch đó cho ra được tập tin *.obj cũng như ngôn ngữ máy có tối ưu hóa. Do đó, các đầu ra của mã nguồn C đột nhiên trở nên rất là dễ vận chuyển, và có khả năng dùng trong dạng *.obj hay mã máy được tối ưu hóa. Dầu sao thì C được thiết kế như là một ngôn ngữ lập trình, nó không phải là lý tưởng cho việc dùng như là một ngôn ngữ trung gian. Điều này dẫn tới việc phát triển các ngôn ngữ trung gian lấy C làm cơ sở, như là một C--.
+
+
+== Các trình dịch quan trọng ==
+Những trình dịch về C ngày nay thương được cung cấp kèm chung với C++ và ngay cả trình dịch cho ngôn ngữ Assembly. Những sản phẩm trình dịch được bán phổ biến trên thị trường cũng thường cung cấp thêm nhiều công cụ trợ giúp cho người lập trình như là IDE, debugger,...
+Sau đây là danh sách một số trình dịch phổ biến:
+
+GCC trình dịch hoàn toàn miễn phí của theo giấy phép GNU toàn bộ gói sẽ bao gồm trình dịch của nhiều ngôn ngữ điển hình là C/C++ và Fortran. Đây là trình dịch chính dùng cho các hệ diều hành Linux. Nó hỗ trợ hầu hết các tiêu chuẩn C/C++. Tuy nhiên vì là miễn phí nên nó không cung cấp các phương tiện đồ họa hỗ trợ cho việc sửa lỗi và viết mã mặc dù nó cũng có các công cụ để giúp phát hiện lỗi rất mạnh như gdb.
+Turbo C++, Borland C/C++, trình dịch này ngày nay đã đổi tên thành Borland Builder và bị giảm sút thị phần rất nhiều nhưng đây là trình dịch có hỗ trợ chuẩn C98.
+Microsoft C/C++, đây là trình dịch chỉ được dùng chủ yếu để phát triển các phần mềm trên các hệ Windows. Trình dịch này rất mạnh về các hỗ trợ đồ họa cũng như các công cụ để phát triển và sản xuất phần mềm. Rất tiếc, trình dịch này không hoàn toàn tương thích với các chuẩn. Để có mã nguồn theo chuẩn thì người lập trình phải cài đặt lại một số thông số mặc định. Một điểm yếu của trình dịch này là nó không hỗ trợ cho các hệ điều hành nào không do Microsoft sản xuất.
+Ngoài ra, còn rất nhiều trình dịch khác ở mức độ ít phổ biến hơn như là trình dịch C/C++ của Intel, Bell Labs,...
+
+
+== Xem thêm ==
+
+
+=== Tiếng Việt ===
+Cú pháp ngôn ngữ C
+Kiểu và khai báo biến trong C
+Các công cụ: Cygwin, GCC, make, Linker
+
+
+=== Tiếng Anh ===
+C preprocessor
+C standard library
+C library
+C string
+C syntax
+List of articles with C programs
+Objective-C
+Operators in C and C++
+Programming tool: Dev-C/C++, DJGPP,, LCC, SPlint, Small-C, C--,
+
+
+== Chú thích ==
+
+
+== Tham khảo ==
+Brian Kernighan, Dennis Ritchie: The C Programming Language. Also known as K&R — The original book on C.
+1st, Prentice Hall 1978; ISBN 0-13-110163-3. Pre-ANSI C.
+2nd, Prentice Hall 1988; ISBN 0-13-110362-8. ANSI C.
+ISO/IEC 9899. The official C:1999 standard, along with defect reports and a rationale.
+Samuel P. Harbison, Guy L. Steele: C: A Reference Manual. This book is excellent as a definitive reference manual, and for those working on C compilers. The book contains a BNF grammar for C.
+4th, Prentice Hall 1994; ISBN 0-13-326224-3.
+5th, Prentice Hall 2002; ISBN 0-13-089592-X.
+Derek M. Jones: The New C Standard: A Cultural and Economic Commentary, Addison-Wesley, ISBN 0-201-70917-1, online material
+Robert Sedgewick: Algorithms in C, Addison-Wesley, ISBN 0-201-31452-5 (Part 1–4) and ISBN 0-201-31663-3 (Part 5)
+William H. Press, Saul A. Teukolsky, William T. Vetterling, Brian P. Flannery: Numerical Recipes in C (The Art of Scientific Computing), ISBN 0-521-43108-5
+
+
+== Liên kết ngoài ==
+
+
+=== C ===
+comp.lang.c Frequently Asked Questions
+The Development of the C LanguageLưu trữ 2013-05-23 tại Wayback Machine by Dennis M. Ritchie
+Programming in C (Tài liệu thu thập từ Lysator)
+International Obfuscated C Code Contest
+Programming C ở Wikibooks
+The New C Standard: An economic and cultural commentary — sách không xuất bản về "Phân tích chi tiết của tiêu chuẩn quốc tế cho ngôn ngữ C"
+
+
+=== C99 ===
+Open source development using C99 — Is your C code up to standard? by Peter Seebach
+Are you Ready For C99?
+Article "Incompatibilities Between ISO C and ISO C++" by David R. Tribble

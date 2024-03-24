@@ -1,0 +1,89 @@
+revision: 5799205
+title: Dioda
+url: https://sl.wikipedia.org/wiki/Dioda
+
+
+---
+
+Dioda je elektronski element z dvema priključkoma (anoda in katoda). Sprva so bile diode elektronke. Danes so jih skoraj povsem izpodrinile polprevodniške diode, ki so bile tudi prvi polprevodniški elementi.
+Osnova današnjih polprevodniških diod je stik dveh različno dopiranih plasti silicija ali germanija ( t. i. PN spoj). Ena od plasti vsebuje presežek pozitivnih ionov (p-tip polprevodnika), druga plast pa presežek elektronov (n-tip polprevodnika). Debelina PN spoja se glede na velikost in smer pritisnjene električne napetosti lahko razširi ali zoža, kar ima za posledico poznano delovanje diode.
+Značilnost diode je nesimetrična in nelinearna tokovno-napetostna karakteristika. V eni smeri dioda prepušča električni tok, v drugi (zaporni) smeri pa ne. Zaradi tega je primerna za usmerjanje izmeničnih signalov.
+Če je pritisnjena napetost v zaporni smeri višja od vrednosti zaporne napetosti, lahko pride do preboja diode in prevajanja toka v nasprotno smer.
+
+
+== Zgodovina ==
+Zgodovina diode sega v leto 1873, ko je Frederick Guthrie ugotovil, da je hladen in pozitivno naelektren kos kovine možno razelektriti z razbeljenim in ozemljenim prevodnikom, ne da bi se prevodnika pri tem stikala. Poizkus je poizkušal izvesti tudi v nasprotni smeri, tako da je negativno naelektril hladen prevodnik, vročega pa pozitivno; do razelektritve ni prišlo, zato je sklepal, da lahko tok pri danih razmerah teče le v eno smer. Do podobnega odkritja je leta 1880 prišel tudi Thomas Edison, ko je raziskoval, zakaj ogljikova nitka v žarnicah vedno pregori na pozitivni strani. V raziskovalne namene je izdelal posebno žarnico, v kateri je bila žarilna nitka in kovinska ploščica. Med preizkusom žarnice je ugotovil, da med žarilno nitko in ploščico teče tok. To odkritje je postalo znano kot Edisonov pojav. Edison ga je patentiral, vendar odkritje ni imelo nobene vrednosti, saj ga v praksi v tistem obdobju ni bilo moč nikjer uporabiti.
+Dvajset let po odkritju je John Ambrose Fleming prišel do ideje, da bi lahko Edisonov pojav uporabil za izdelavo radijskega sprejemnika. Tako je ta na podlagi Edisonovih patentov leta 1904 patentiral prvo vakumsko diodo. Načelo delovanja diode pa je leta 1874 odkril tudi nemški fizik Karl Ferdinand Braun, vendar se je to odkritje od drugih popolnoma razlikovalo. Braun je namreč odkril, da nekateri kristali prepuščajo tok le v eno smer, to ugotovitev pa je kasneje uporabil tudi pri razvoju radia. Leta 1898 je izumil prvo kristalno diodo, s katero je nato Guglielmo Marconi izdelal prvi radio. Oba sta leta 1909 za ta izum prejela Nobelovo nagrado za fiziko. Kmalu zatem so znanstveniki začeli razvijati tudi druge vrste kristalnih diod. Nekaj časa je bila zelo razširjen kristal svinčevega sulfita in silicij, v petdesetih letih prejšnjega stoletja pa so se na tržišču pojavile tudi prve germanijeve diode.
+Izraz dioda se je pojavil šele leta 1919, ko je William Henry Eccles skoval izraz dioda iz grškega korena dia (iz starogrško δί: di), kar pomeni skozi in ode (iz starogrško ὅδος: odos), kar pomeni pot. To bi lahko prevedli kot pot skozi. Pred tem so se diode enostavno imenovale usmerniki (rectifiers), ker so usmerjale električni tok skozi element.
+
+
+== Vakuumska dioda ==
+
+Ta deluje na principu termične emisije elektronov. Ti krožijo na zunanjih oblah atomov prevodnega materiala in potrebujejo zelo malo energije, da zapustijo atom. Pri sobni temperaturi je v kovini veliko število prostih elektronov, ki se neovirano gibajo po notranjosti kovine, ne morejo pa je zapustiti ker imajo premalo energije. Z višanjem temperature pridobivajo elektroni vse večjo kinetično energijo. Ko je ta dovolj visoka, začnejo elektroni zapuščati kovino. Čim višja je temperatura, tem več je elektronov, ki zapustijo površino kovine. Temu pojavu pravimo termična emisija elektronov, delu ki ga pri tem opravijo, pa izstopno delo. Elektroni tvorijo na površini kovine elektronski oblak.
+Ta pojav je zelo pomemben za delovanje vakumskih elementov. Omogoča, da elektroni iz kovine izstopajo v prazen prostor, kjer delujejo električne sile. Elektronke imajo pod katodo žarilno nitko, ki služi za segrevanje katode (indirektno segrevanje). Kot katodo lahko uporabimo tudi samo žarilno nitko (direktno ogrevanje), vendar izmenična napetost, ki segreva nitko, povzroča neželjeno nihanje toka v elektronki.
+Vakuumska dioda je sestavljena iz anode, katode in žarilne nitke, ki so vse skupaj zaprte v stekleno bučko. Iz bučke je izsesan zrak, tako da je v njej zelo malo atomov in molekul, ki bi preprečevale gibanje elektronov od katode do anode. Pri segrevanju katode pride do termične emisije elektronov. Med anodo in elektrodo priključimo električno napetost, tako da je anoda pozitivna. S tem nastane električno polje, ki na elektrone, ki so zapustili katodo, deluje tako, da elektroni tečejo skozi vakuum proti pozitivni anodi. Če napetostni vir med anodo in katodo obrnemo, tok preneha teči. Vakuumska dioda prevaja tok le v eno smer, zato je bil to prvi usmerniški element.
+Poleg vakuumske diode poznamo tudi: vakuumsko triodo, vakuumsko tetrodo, vakuumsko pentodo, tlivko, titratron in ignitron.
+
+
+== Polprevodniška dioda ==
+
+Je najstarejši polprevodniški element. Narejena je kot spoj p in n-tipa polprevodnika. Ima dva priključka, ki ju imenujemo anoda in katoda. Prve diode so izdelovali, kot t.i točkaste diode, pri katerih so kovinsko žico privarili na površino n-tipa polprevodnika. Pri zvaru so atomi iz žice zaradi visoke temperature prodrli nekoliko v polprevodnik in ustvarili p-tip. Diodo si lahko predstavljamo kot ventil, ki prepušča tok samo v eno smer, zato lahko nanjo priključimo napetost v prevodni ali zaporni smeri.
+
+
+=== Zaporna smer diode ===
+V okolici pn spoja je področje brez prostih nosilcev elektrin, ki se imenuje zaporna plast. V tej plasti vlada električno polje, ki preprečuje, da bi elektroni prehajali iz n-tipa v p-tip polprevodnika in da bi vrzeli (pozitivno nabiti delci) prehajali iz p-tipa v n-tip polprevodnika. Če na diodo priklopimo električni vir tako, da je katoda na pozitivnem, anoda pa na negativnem potencialu, bo napetost še povečala električno polje v pn spoju in tako še bolj preprečila potovanje elektronov proti pozitivnemu polu in vrzeli proti negativnemu polu vira. Tok skozi diodo ne bo tekel.
+Vendar v realnosti temu ni čisto tako. Pri zaporni priključitvi skozi diodo vseeno teče majhen tok, ki ga povzročijo generacije nosilcev naboja v zaporni plasti ter manjšinski nosilci naboja, ki difundirajo skozi zaporno plast. Oba tokova sta zelo majhna (razred nekaj nano in mikro amperov) in se s spremembo zaporno priključene napetosti le malo spreminjata. Oba toka običajno obravnavamo skupaj, pravimo pa jima tok nasičenja diode. Ta tok je nezaželen saj se spreminja s temperaturo (narašča eksponentno z višanjem temperature) in lahko vpliva na zanesljivost delovanje elektronskih vezij.
+
+
+=== Prevodna smer diode ===
+Diodo priključimo v prevodni smeri, če anodo priključimo na pozitivni pol vira, katodo pa na negativni pol. Tako priključena napetost se odšteva od difuzijske napetosti, ki vlada na pn spoju. Ker se zmanjša napetost preko zaporne plati, se zmanjša tudi električno polje, ki onemogoča prehod elektronov in vrzeli preko pn spoja. Čim večja je napetost vira tem manjše je električno polje ki ovira prehode elektronov in vrzeli iz enega v drug polprevodnik. Ko zunanja napetost povsem nevtralizira notranjo difuzijsko napetost, zaporne plasti ni več in tok skozi diodo naglo narašča.
+
+
+=== Napetost kolena ===
+Zaradi električnega polja v pn spoju sta p in n plast na različnih potencialih. Razliki potencialov preko zaporne plasti pravimo potencialni prag. Od njega je odvisna višina napetosti, ki jo moramo priključiti na pn spoj, da bo dioda prevajala. Napetosti, kjer začne tok v prevodni smeri strmo naraščati, pravimo napetost kolena. Ta je odvisna predvsem od materiala polprevodnika ter od števila primesi. Za germanij (Ge) napetost znaša približno 0,3 V, za silicij (Si) 0,7 V, za galijev arzenid (GaAs) pa 1,2 V. Ko prekoračimo napetost kolena, začne tok skozi diodo strmo naraščati. Dioda postane vse bolj prevodna, kar pomeni, da lahko prevelik tok uniči spoje znotraj diode, s čimer bo dioda nehala prevajati.
+
+
+== Značilnosti diod ==
+
+
+=== Električni preboj diode ===
+Dioda v zaporni smeri ne prevaja toka, izjema je le tok, ki teče skozi zaporno plast, vendar je ta zanemarljivo majhen. Ko pa na diodo priključimo visoko zaporno napetost, pride do preboja diode in tok strmo naraste. Če tega toka ne omejimo, diodo uničimo. Dopustna vrednost toka v zaporni smeri je mnogo manjša od dopustne vrednosti toka v prevodni smeri. Prebojna napetost se od diode do diode razlikuje, najdemo pa jo v tehničnih podatkih za posamezno vrsto diode. Te napetosti so po navadi zelo nizke saj je zaporna plast, v kateri vlada električno polje, zelo tanka.
+Poznamo dve vrsti preboja: zenerjev preboj in plazovito ionizacijo. Pri zenerjevem preboju se z večanjem napetosti veča tudi električno polje v pn spoju. Z njim postaja tudi sila na elektrine vse večja. Pri določeni zaporni napetosti, ko je sila na atome v zaporni plasti že dovolj visoka, se pričnejo elektroni trgati iz valenčnih obel atomov in stečejo proti n-tipu. Atomi, ki se s tem ionizirajo, močno povečajo koncentracijo elektrin v zaporni plasti in s tem tok v zaporni smeri diode. Pojav je še toliko bolj izrazit, če ima polprevodnik veliko primesi in zato zelo ozko zaporno plast. Pri drugem načinu preboja imajo elektrine zaradi velike zaporne napetosti velike kinetične energije. Ko se elektron zaleti v atom, temu izbije iz valenčne oble nov elektron in ga tako ionizira. Tako nastane v prehodnem področju par elektron-vrzel. Ko postane električno polje v prehodnem področju dovolj močno, lahko en sam elektron sproži plaz novih elektronov, ki nato ob trku izbijejo nove in nove elektrone. Temu pojavi se pravi plazovita ionizacija, povzroči pa naglo povečnje toka v zaporni smeri.
+
+
+=== Diferencialna upornost diode ===
+Dioda spada med nelinearne elemente, zato zna biti računanje njene uporovne karakteristike zelo zapleteno. Računanje lahko poenostavimo, če so signali, ki tečejo skozi diodo, dovolj majhni. V tem primeru lahko upornost diode lineariziramo in tako diodo predstavimo kot upor. Poznamo statično in dinamično upornost. Statična upornost je razmerje med priključno enosmerno napetostjo in enosmernim tokom, ki teče skozi diodo, zapiše pa se kot R=U/I. Dinamična upornost pa je razmerje med priključeno izmenično napetostjo in izmeničnim tokom, ki teče skozi diodo. Ta upornost se zapiše kot: r=u/i. Enačba velja za majhne spremembe napetosti in toka, ko lahko kratek odsek krivulje nadomestimo z odsekom premice (krivuljo lineariziramo).
+Pri navadnem ohmskem uporu sta obe upornosti enaki, če pa je ta element nelinearen, pa se upornosti lahko zelo razlikujeta. Izmenična napetost povzroči na strmi krivulji nelineranega elementa večjo spremembo toka, ki vpliva na upornost elementa.
+
+
+=== Kapacitivnost diode ===
+Vsak elektronski element ima kapacitivnost, pri diodi ta postane izrazita pri visokih frekvenca in hitrih preklopih. Kapacitivnost diode v prevodni smeri se razlikuje od kapacitivnosti v zaporni smeri. Poznamo dve vrsti kapacitivnosti: difuzijsko kapacitivnost in spojno kapacitivnost. Pri difuzijski kapacitivnosti ima dioda v prevodni smeri zaradi kopičenja elektrin kapacitivnost, ki ji pravimo difuzijska kapacitivnost. Ta je odvisna od diferencialne upornosti ter od življenjske dobe manjšinskih nosilcev elektrin, ki jo podaja povprečni čas trajanja manjšinskih elektrin, od njihovega nastanka pa do rekombinacije. Manjšinske elektrine so tisti elektroni ali vrzeli, ki so v danem tipu polprevodnika v manjšini. Difuzijska kapacitivnost znaša nekaj nano faradov. Spojna kapacitivnost se pojavi v prehodnem področju med p in n spojem. V zaporni smeri deluje zaporna plast diode kot dielektrik pri kondenzatorju. Ker sprememba zaporne napetosti vpliva na debelino zaporne plasti, se z napetostjo spremeni tudi spojna kapacitivnost. Čim večja je zaporna napetost na diode, tem širša je zaporna plast in manjša je spojna kapacitivnost. Spojna kapacitivnost znaša nekaj piko faradov.
+
+
+== Vrste diod in njihova uporaba ==
+usmerniška dioda: dioda v prevodni smeri prevaja v zaporni pa ne prevaja, uporablja se v usmerniških vezjih
+zenerjeva dioda (prebojna dioda): uporabljamo jih v zaporni smeri pri napetostih, ki presegajo prebojno napetost diode, kar je ravno v nasprotju z usmerniško diodo, po preboju začne dioda prevajati tok, uporablja se za stabilizacijo napetosti
+varicap dioda (kapacitivna dioda): dioda deluje kot kondenzator, z večanjem zaporne napetosti ji povečujemo kapacitivnost, uporabljamo jo tam kjer želimo z napetostjo spreminjati kapacitivnost vezja
+PIN dioda: dioda ima med p in n področjem še področje brez primesi, zaradi česar se tam elektrine zadržujejo še nekaj časa po preklopu iz prevodne v zaporno smer, v tem času pa teče skozi diodo tok, uporabljamo jih pri visokih frekvencah kot tokovno krmiljene upore saj jim upornost s tokom upada, uporabljamo jih tudi kot stikalne diode za signale visokih frekvenc
+tunelska dioda: ima visoko dopirana polprevodniška področja, če jo priključimo v zaporni smeri bo skoznjo že pri nizkih napetostih tekel velik tok, če pa jo priklopimo v prevodni smeri bo tok skozi diodo naraščal do neke vrednosti nato bo zaradi povečane upornosti padel nato pa ponovno narastel, uporabljajo se kot hitra stikala v področju GHz
+schottkyjeva dioda: tvorita jo spoj med kovino in polprevodnikom tipa n, ker sta materiala na različni energetskih nivoji se med njima ustvari potencialni prag, ker med obema materialaom potujejo večinski naboji (elektroni) nima zakasnitve zaradi presežkov manjšinskih nabojev zato diode uporabljamo povsod tam, kjer je potrebna visoka hitrost delovanja
+LED dioda (svetleča dioda): dioda spreminja električno energijo v svetlobo, ko diodo priklopimo v prevodni smeri pride do rekombinacije elektronov v pn spoju, pritem se odda energija v obliki fotona, koliko energije se bo oddalo je odvisno od materiala iz katerega je sestavljena dioda, svetleče diode se uporabljajo kot indikatorje pri elektronskih napravah, v zadnjem času pa kot izvori močne svetlobe
+fotodioda: ob osvetlitvi pn spoja dobijo mnogi elektroni dovolj energije, da preskočijo iz valenčnega v prevodni pas zaradi česar se ustvarijo proste elektrine (elektroni, vrzeli) ki zaradi električnega polja stečejo vsaki na svojo stran in s tem ustvarijo tok, na podoben način delujejo tudi sončne celice, diode se uporabljajo kot svetlobni senzorji sončne celice pa za pretvarjanje svetlobe v električno energijo
+laserska dioda: laserska dioda deluje podobno kot LED dioda le, da ima stranice polirane s čimer se doseže odboj svetlobe in s tem stimulirana emisija, ki je osnova za delovanje laserja
+
+
+== Glej tudi ==
+tranzistor
+upor
+kondenzator
+dušilka
+LED (svetleča dioda)
+
+
+== Viri ==
+Lorencon, Robert (1996). Elektronski elementi in vezja. Ljubljana: Studio Maya. COBISS 62311168. ISBN 961-221-010-1.
+
+
+== Zunanje povezave ==
+Interactive Explanation of Semiconductor Diode, Univerza v Cambridgeu (angleško)
+Schottky Diode Flash Tutorial Animation Arhivirano 2009-04-29 na Wayback Machine. (angleško)

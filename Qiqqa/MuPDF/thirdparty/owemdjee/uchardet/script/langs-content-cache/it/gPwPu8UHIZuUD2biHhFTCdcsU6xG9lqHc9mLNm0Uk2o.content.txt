@@ -1,0 +1,42 @@
+revision: 130859242
+title: Google Calendar
+url: https://it.wikipedia.org/wiki/Google_Calendar
+
+
+---
+
+Google Calendar è un sistema di calendari concepito da Google.
+Google offre infatti la possibilità di creare più calendari, di condividerli e importarli da altri servizi online (Yahoo! Calendar, MSN Calendar, ecc.) o sul computer (iCal, Outlook, ecc.). Google Calendar è parte integrante dell'account Google e si integra con gli altri servizi.
+
+
+== Utilizzo ==
+Si tratta di un'agenda sulla quale inserire degli eventi. Può essere utilizzato come agenda personale (calendario privato), come agenda di un'organizzazione (calendario pubblico) o come agenda di una risorsa (ad esempio un'aula o un campo da tennis).
+Il creatore del calendario può decidere chi è autorizzato a vederlo, chi è autorizzato a inserire eventi e chi è autorizzato ad amministrarlo.
+Una volta creato un evento è possibile inviare l'invito a partecipare ad altre persone. L'invito consiste in un'email, ma se i destinatari sono a loro volta iscritti a Google Calendar la richiesta apparirà anche all'interno del loro calendario personale. Se l'invito viene accettato, l'evento si inserisce nell'agenda dell'invitato.
+
+
+== Funzionalità ==
+
+
+=== Accesso al contenuto ===
+Gli eventi sono memorizzati online, di conseguenza, il calendario può essere visualizzato da qualsiasi postazione dotata di accesso a Internet. Per gli utenti che potrebbero aver riscontrato un guasto all'unità disco, ciò significa che nessun dato è stato perduto. L'applicazione consente di importare file di calendario di Microsoft Outlook (.vcs) e file di iCalendar (.ics, de facto il formato di file per calendario aperto). È possibile aggiungere e condividere più calendari, consentendo la scelta tra diversi livelli di autorizzazione per gli utenti. Questa caratteristica consente la collaborazione e la condivisione di pianificazioni tra più gruppi. I calendari generali disponibili per l'importazione nell'account di un utente includono i calendari che contengono le festività nazionali di diversi paesi. Gli utenti possono inoltre aggiungere URL di iCalendar "live" con frequenti aggiornamenti.
+
+
+=== Condivisione dei calendari ===
+Google Calendar consente di creare e mostrare più calendari nella stessa visualizzazione. È possibile condividere ciascun calendario, in sola lettura o con controllo di modifica totale, con utenti specifici o chiunque (calendari pubblici).
+Nel febbraio 2009 Google ha disabilitato l'opzione di ricerca di calendari pubblici dal campo di ricerca rimuovendo il pulsante "Ricerca eventi pubblici". Google ha inoltre disabilitato la galleria di calendari pubblici, citando problemi di manutenzione e usabilità. La società consiglia di aggiungere calendari tramite la funzionalità "Calendari interessanti", tramite URL di calendari conosciuti o tramite richieste via email ad amici. Attualmente non è possibile condividere tra utenti l'elenco delle attività quotidiane.
+
+
+=== Sincronizzazione dei dispositivi ===
+Attualmente, Google Calendar può usufruire di Google Sync per la sincronizzazione con molti dispositivi portatili (ad esempio, BlackBerry, Palm, iPhone, Pocket PC) o con applicazioni per PC (ad esempio, Microsoft Outlook) tramite software di terze parti e in maniera nativa con iCal di Apple (sono necessari dei workaround per iCal 3.x, piena funzionalità con iCal 4.x). Google Calendar è supportato in maniera nativa su smartphone e tablet basati su Android, cellulari basati su webOS come Palm Pre e dispositivi iOS come iPhone. È possibile inviare promemoria degli eventi tramite email ed SMS sui cellulari in più di ottanta paesi e regioni.
+
+
+== Notifiche ==
+Questa applicazione sta diventando sempre più diffusa grazie all'ottimo servizio gratuito di notifica via SMS degli eventi del calendario. Nella pagina di configurazione di Google Calendar infatti è possibile impostare il proprio numero di cellulare e ricevere senza spese un promemoria dell'evento sul cellulare (o via email), impostando quanto tempo prima dell'evento si desidera ricevere il messaggio (da 1 ora a 4 settimane). Per l'Italia il servizio è valido per i maggiori operatori di telefonia mobile.
+
+
+== Note ==
+
+
+== Collegamenti esterni ==
+ Sito ufficiale del servizio, su google.com.

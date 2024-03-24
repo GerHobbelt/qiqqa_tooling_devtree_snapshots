@@ -1,0 +1,307 @@
+revision: 7520600
+title: "Index \u013Eudsk\xE9ho rozvoja"
+url: https://sk.wikipedia.org/wiki/Index_%C4%BEudsk%C3%A9ho_rozvoja
+
+
+---
+
+Index ľudského rozvoja (angl. Human Development Index, skr. HDI) je porovnávací údaj chudoby, gramotnosti, vzdelania, priemernej dĺžky života, pôrodnosti a ďalších faktorov štátov sveta vypracúvaný Organizáciou Spojených národov (OSN). Štandardne sa používa na meranie potenciálnej sociálnej prosperity. Index vymyslel v roku 1990 pakistanský ekonóm Mahbúb al-Hak (angl. Mahbub ul Haq) a od roku 1993 ho OSN používa vo svojej ročnej správe.
+HDI zahŕňa údaje štátu v troch základných pohľadoch na ďalší potenciálny rozvoj ľudských zdrojov.
+
+Dlhý a zdravý život meraný priemernou dĺžkou pri narodení.
+Vedomosti merané gramotnosťou dospelého obyvateľstva (dve tretiny váhy hodnoty údaju) a počtom prihlásených na školy prvého, druhého a tretieho stupňa (tretina váhy hodnoty údaju).
+Slušný životný štandard meraný hrubým domácim produktom na hlavu v parite kúpnej sily v medzinárodných dolároch.Alternatívny spôsob merania chudoby štátu je index ľudskej chudoby (HPI).
+
+
+== Spôsob výpočtu HDI ==
+Vo všeobecnosti sa na transformáciu premennej, povedzme 
+  
+    
+      
+        x
+      
+    
+     
+  , na bezjednotkový index v rozmedzí hodnôt 0 až 1 (čo umožňuje rôzne indexy sčítať spolu) používa nasledovný vzorec:
+
+  
+    
+      
+        x
+      
+    
+     
+  -index = 
+  
+    
+      
+        
+          
+            
+              x
+              −
+              m
+              i
+              n
+              (
+              x
+              )
+            
+            
+              m
+              a
+              x
+              (
+              x
+              )
+              −
+              m
+              i
+              n
+              (
+              x
+              )
+            
+          
+        
+      
+    
+     
+  kde 
+  
+    
+      
+        m
+        i
+        n
+        (
+        x
+        )
+      
+    
+     
+   a 
+  
+    
+      
+        m
+        a
+        x
+        (
+        x
+        )
+      
+    
+     
+   sú najnižšie a najvyššie hodnoty, aké môže premenná 
+  
+    
+      
+        x
+      
+    
+     
+   nadobudnúť.
+Index ľudského rozvoja je priemerom nasledujúcich troch indexov:
+
+Index priemernej dĺžky života (Life Expectancy Index) = 
+  
+    
+      
+        
+          
+            
+              L
+              E
+              −
+              25
+            
+            
+              85
+              −
+              25
+            
+          
+        
+      
+    
+     
+  
+Index vzdelania (Education Index) = 
+  
+    
+      
+        
+          
+            2
+            3
+          
+        
+        ×
+        A
+        L
+        I
+        +
+        
+          
+            1
+            3
+          
+        
+        ×
+        G
+        E
+        I
+      
+    
+     
+  
+Index gramotnosti dospelej populácie (Adult Literacy Index, ALI) = 
+  
+    
+      
+        
+          
+            
+              A
+              L
+              R
+              −
+              0
+            
+            
+              100
+              −
+              0
+            
+          
+        
+      
+    
+     
+  
+Index zápisu do škôl (Gross Enrollment Index, GEI) = 
+  
+    
+      
+        
+          
+            
+              C
+              G
+              E
+              R
+              −
+              0
+            
+            
+              100
+              −
+              0
+            
+          
+        
+      
+    
+     
+  
+Index HDP (GDP Index) = 
+  
+    
+      
+        
+          
+            
+              log
+              ⁡
+              (
+              G
+              D
+              P
+              p
+              c
+              )
+              −
+              log
+              ⁡
+              (
+              100
+              )
+            
+            
+              log
+              ⁡
+              (
+              40000
+              )
+              −
+              log
+              ⁡
+              (
+              100
+              )
+            
+          
+        
+      
+    
+     
+  LE: Priemerná dĺžka života (Life expectancy)
+ALR: Gramotnosť (Adult literacy rate)
+CGER: Kombinový pomer zápisu do škôl (Combined gross enrolment ratio)
+GDPpc: HDP na hlavu v medzinárodných dolároch (GDP per capita at PPP in USD)
+
+
+== Správa z roku 2005 ==
+Zo správy z roku 2005 vo všeobecnosti vidieť, že index ľudského rozvoja sa zvyšuje s dvoma výnimkami: bývalé štáty Sovietskeho zväzu a štáty subsaharskej oblasti, ktoré vykazujú dlhodobý pokles. Zhoršenie vzdelávania, ekonomík a miery úmrtnosti prispelo ku klesaniu pre prvú skupinu štátov, pričom HIV/AIDS a s tým spojená úmrtnosť je hlavný dôvod poklesu v druhom prípade.
+Väčšina údajov, z ktorých správa čerpá, je z roku 2003, prípadne sú staršie. Nie pre všetky členské štáty OSN sú nevyhnutne k dispozícii informácie, preto chýbajú (nerátajúc miništátiky) Afganistan, Irak, Libéria, Kórejská ľudovodemokratická republika, Srbsko a Čierna Hora a Somálsko. Tieto štáty podľa odhadov patria do kategórie so stredným alebo nízkym indexom ľudského rozvoja.
+HDI pod 0,5 je označovaný ako nízky rozvoj. Z 32 štátov v tejto kategórii je 30 v Afrike a všetkých 10 najslabších je z čierneho kontinentu. Jednoznačne najvyšší index v tejto oblasti má Južná Afrika, ktorá je s HDI 0,658 na 120. mieste.
+Index 0,8 a viac sa považuje za vysoký rozvoj. Patria sem štáty západnej Európy, Austrálie, Kanada, Spojené štáty a Japonsko. Ostatné štáty s nižším indexom ľudského rozvoja, ktoré však deklarujú vysoký rozvoj, sú Kórejská republika (28. miesto v zozname správy), Kostarika (47.), Kuba (52.) a Panama (56.).
+Poznámka: Číslo v zátvorke za štátom znamená rozdiel v umiestnení v porovnaní s predchádzajúcou správou.
+
+
+=== 30 štátov s najvyšším HDI (HDI v rozmedzí od 0,963 do 0,878) ===
+
+
+=== 10 štátov s najnižším HDI (HDI v rozmedzí od 0,281 do 0,379) ===
+ Mozambik (↑ 3)
+ Burundi (↑ 4)
+ Etiópia (=)
+ Stredoafrická republika (↓ 2)
+ Guinea-Bissau (=)
+ Čad (↓ 6)
+ Mali (=)
+ Burkina (=)
+ Sierra Leone (↑ 1)
+ Niger (?)
+
+
+=== Vrchné/spodné 3 štáty podľa regiónu ===
+
+
+== Štáty s najvyšším HDI v predchádzajúcich rokoch ==
+Krajiny, ktoré mali najvyššie HDI v jednotlivých rokoch.
+
+
+== Štáty, ktoré správa neobsahuje ==
+Nasledovné štáty a závislé územia nie sú v správe OSN z roku 2005 zaradené, nakoľko neboli k dispozícii všetky nevyhnutné údaje.
+
+* Správa neobsahuje údaje o Taiwane, ktorý OSN neuznala za samostatný štát. Výpočty tamojšej vlády uvádzajú HDI 0,910 za rok 2003. V takomto prípade by Taiwan obsadil 25. miesto - za Gréckom a pred Singapurom.
+
+
+== Referencie ==
+
+
+== Pozri aj ==
+Zoznam štátov podľa HDI
+Organizácia Spojených národov
+Zoznam štátov podľa HDP na hlavu v parite kúpnej sily
+
+
+== Externé odkazy ==
+Anglicky:
+
+World Rank - Human developement index
+Human Development Report Office
+2005 UN Human Development Index Report (PDF)
+List of countries by HDI at NationMaster.com

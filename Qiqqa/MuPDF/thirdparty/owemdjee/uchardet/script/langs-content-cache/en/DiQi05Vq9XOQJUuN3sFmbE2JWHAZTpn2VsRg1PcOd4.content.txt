@@ -1,0 +1,84 @@
+revision: 1161462377
+title: Starburst galaxy
+url: https://en.wikipedia.org/wiki/Starburst_galaxy
+
+
+---
+
+A starburst galaxy is one undergoing an exceptionally high rate of star formation, as compared to the long-term average rate of star formation in the galaxy or the star formation rate observed in most other galaxies. For example, the star formation rate of the Milky Way galaxy is approximately 3 M☉/yr, while starburst galaxies can experience star formation rates of 100 M☉/yr or more. In a starburst galaxy, the rate of star formation is so large that the galaxy will consume all of its gas reservoir, from which the stars are forming, on a timescale much shorter than the age of the galaxy. As such, the starburst nature of a galaxy is a phase, and one that typically occupies a brief period of a galaxy's evolution. The majority of starburst galaxies are in the midst of a merger or close encounter with another galaxy. Starburst galaxies include M82, NGC 4038/NGC 4039 (the Antennae Galaxies), and IC 10.
+
+
+== Definition ==
+
+Starburst galaxies are defined by these three interrelated factors:
+
+The rate at which the galaxy is currently converting gas into stars (the star-formation rate, or SFR).
+The available quantity of gas from which stars can be formed.
+A comparison of the timescale on which star formation will consume the available gas with the age or rotation period of the galaxy.Commonly used definitions include:
+
+Continued star-formation where the current SFR would exhaust the available gas reservoir in much less than the age of the Universe (the Hubble Time).
+Continued star-formation where the current SFR would exhaust the available gas reservoir in much less than the dynamical timescale of the galaxy (perhaps one rotation period in a disk type galaxy).
+The current SFR, normalized by the past-averaged SFR, is much greater than unity. This ratio is referred to as the "birthrate parameter".
+
+
+=== Triggering mechanisms ===
+Mergers and tidal interactions between gas-rich galaxies play a large role in driving starbursts. Galaxies in the midst of a starburst frequently show tidal tails, an indication of a close encounter with another galaxy, or are in the midst of a merger. Turbulence, along with variations of time and space, cause the dense gas within a galaxy to compress and rapidly increase star formation. The efficiency at which the galaxy forms also increases its SFR . These changes in the rate of star formation also led to variations with depletion time, and power a starburst with its own galactic mechanisms rather than merging with another galaxy.  Interactions between galaxies that do not merge can trigger unstable rotation modes, such as the bar instability, which causes gas to be funneled towards the nucleus and ignites bursts of star formation near the galactic nucleus. It has been shown that there is a strong correlation between the lopsidedness of a galaxy and the youth of its stellar population, with more lopsided galaxies having younger central stellar populations. As lopsidedness can be caused by tidal interactions and mergers between galaxies, this result gives further evidence that mergers and tidal interactions can induce central star formation in a galaxy and drive a starburst.
+
+
+=== Types ===
+
+Classifying types of starburst galaxies is difficult since starburst galaxies do not represent a specific type in and of themselves. Starbursts can occur in disk galaxies, and irregular galaxies often exhibit knots of starburst spread throughout the irregular galaxy. Nevertheless, astronomers typically classify starburst galaxies based on their most distinct observational characteristics. Some of the categorizations include:
+
+Blue compact galaxies (BCGs).  These galaxies are often low mass, low metallicity, dust-free objects. Because they are dust-free and contain a large number of hot, young stars, they are often blue in optical and ultraviolet colours. It was initially thought that BCGs were genuinely young galaxies in the process of forming their first generation of stars, thus explaining their low metal content. However, old stellar populations have been found in most BCGs, and it is thought that efficient mixing may explain the apparent lack of dust and metals. Most BCGs show signs of recent mergers and/or close interactions. Well-studied BCGs include IZw18 (the most metal poor galaxy known), ESO338-IG04 and Haro11.
+Blue compact dwarf galaxies (BCD galaxies) are small compact galaxies.
+Green Pea galaxies (GPs) are small compact galaxies resembling primordial starbursts. They were found by citizen scientists taking part in the Galaxy Zoo project.
+Luminous infrared galaxies (LIRGs).
+Ultra-luminous Infrared Galaxies (ULIRGs). These galaxies are generally extremely dusty objects. The ultraviolet radiation produced by the obscured star-formation is absorbed by the dust and reradiated in the infrared spectrum at wavelengths of around 100 micrometres. This explains the extreme red colours associated with ULIRGs. It is not known for sure that the UV radiation is produced purely by star-formation, and some astronomers believe ULIRGs to be powered (at least in part) by active galactic nuclei (AGN). X-ray observations of many ULIRGs that penetrate the dust suggest that many starburst galaxies are double-cored systems, lending support to the hypothesis that ULIRGs are powered by star-formation triggered by major mergers. Well-studied ULIRGs include Arp 220.
+Hyperluminous Infrared galaxies (HLIRGs), sometimes called submillimeter galaxies.
+Wolf–Rayet galaxies (WR galaxies), galaxies where a large portion of the bright stars are Wolf–Rayet stars. The Wolf–Rayet phase is a relatively short-lived phase in the life of massive stars, typically 10% of the total life-time of these stars and as such any galaxy is likely to contain few of these. However, because the stars are both very luminous and have very distinctive spectral features, it is possible to identify these stars in the spectra of entire galaxies and doing so allows good constraints to be placed on the properties of the starbursts in these galaxies.
+
+
+=== Ingredients ===
+
+Firstly, a starburst galaxy must have a large supply of gas available to form stars. The burst itself may be triggered by a close encounter with another galaxy (such as M81/M82), a collision with another galaxy (such as the Antennae), or by another process which forces material into the centre of the galaxy (such as a stellar bar).
+The inside of the starburst is quite an extreme environment. The large amounts of gas mean that very massive stars are formed. Young, hot stars ionize the gas (mainly hydrogen) around them, creating H II regions. Groups of very hot stars are known as OB associations. These stars burn very bright and very fast, and are quite likely to explode at the end of their lives as supernovae.
+After the supernova explosion, the ejected material expands and becomes a supernova remnant. These remnants interact with the surrounding environment within the starburst (the interstellar medium) and can be the site of naturally occurring masers.
+Studying nearby starburst galaxies can help us determine the history of galaxy formation and evolution. Large numbers of the very distant galaxies seen, for example, in the Hubble Deep Field are known to be starbursts, but they are too far away to be studied in any detail. Observing nearby examples and exploring their characteristics can give us an idea of what was happening in the early universe as the light we see from these distant galaxies left them when the universe was much younger (see redshift). However, starburst galaxies seem to be quite rare in our local universe, and are more common further away – indicating that there were more of them billions of years ago. All galaxies were closer together then, and therefore more likely to be influenced by each other's gravity. More frequent encounters produced more starbursts as galactic forms evolved with the expanding universe.
+
+
+== Examples ==
+
+M82 is the archetypal starburst galaxy. Its high level of star formation is due to a close encounter with the nearby spiral M81. Maps of the regions made with radio telescopes show large streams of neutral hydrogen connecting the two galaxies, also as a result of the encounter. Radio images of the central regions of M82 also show a large number of young supernova remnants, left behind when the more massive stars created in the starburst came to the end of their lives. The Antennae is another starburst system, detailed by a Hubble picture, released in 1997.
+
+
+== List of starburst galaxies ==
+
+
+== Gallery ==
+
+		
+		
+		
+		
+		
+		
+		
+
+
+== See also ==
+Active galaxy – Compact region at a galaxy's center with abnormally high luminosity
+Baby Boom Galaxy – The brightest starburst galaxy in the very distant universe
+Blue compact dwarf galaxy – Small galaxy composed of up to several billion stars
+Messier 82 – Starburst galaxy the constellation Ursa Major
+Pea galaxy – Possible type of luminous blue compact galaxy
+Starburst – Region of faster than normal star formation
+
+
+== Notes ==
+
+
+== References ==
+
+"Chandra :: Field Guide to X-ray Sources :: Starburst Galaxies". chandra.harvard.edu. Retrieved 2007-12-29.
+Kennicutt, R. C.; Evans, N. J. (2012). "Star Formation in the Milky Way and Nearby Galaxies". Annual Review of Astronomy and Astrophysics. 50: 531–608. arXiv:1204.3552. Bibcode:2012ARA&A..50..531K. doi:10.1146/annurev-astro-081811-125610. S2CID 118667387.
+Weedman, D. W.; Feldman, F. R.; Balzano, V. A.; Ramsey, L. W.; Sramek, R. A.; Wuu, C. -C. (1981). "NGC 7714 – the prototype star-burst galactic nucleus". The Astrophysical Journal. 248: 105. Bibcode:1981ApJ...248..105W. doi:10.1086/159133.

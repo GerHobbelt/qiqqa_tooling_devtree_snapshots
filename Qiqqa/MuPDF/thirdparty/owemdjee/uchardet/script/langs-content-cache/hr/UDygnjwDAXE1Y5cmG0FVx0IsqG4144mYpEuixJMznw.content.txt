@@ -1,0 +1,44 @@
+revision: 6227650
+title: Magnetizacija
+url: https://hr.wikipedia.org/wiki/Magnetizacija
+
+
+---
+
+Magnetizacija (oznaka M) je vektorska fizikalna veličina kojom se opisuje razlika između jakosti magnetskoga polja u vakuumu i u nekom sredstvu. Magnetizacija je jednaka umnošku magnetske susceptibilnosti tvari χm i jakosti magnetskoga polja H:
+
+  
+    
+      
+        
+          M
+        
+        =
+        
+          χ
+          
+            m
+          
+        
+        ⋅
+        
+          H
+        
+      
+    
+     
+  Magnetizacija u feromagnetičnim materijalima ovisi i o magnetskoj histerezi. Mjerna jedinica je amper po metru (A/m).
+
+
+== Feromagnetizam ==
+
+Feromagnetizam je pojava snažnog magnetiziranja pojedinih tvari, takozvanih feromagnetika: željeza, nikla, kobalta, gadolinija, terbija, disprozija i holmija, njihovih slitina i slitina koje ne čine feromagnetični elementi (na primjer Heuslerove slitine: Cu2MnAl, Ni2MnAl, Co2MnSi, Co2MnGe, Co2FeAl). Magnetska permeabilnost feromagnetika više je tisuća puta veća nego permeabilnost paramagnetičnih i dijamagnetičnih tvari. Magnetiziranje feromagnetičnih tvari nije razmjerno s jakošću magnetskoga polja i kod određene jakosti magnetskoga polja dolazi do zasićenosti. Kada prestane djelovati magnetsko polje, feromagnetici i dalje pokazuju magnetiziranost. 
+Remanentni (zaostali) magnetizam može se ukloniti djelovanjem magnetskoga polja suprotnog smjera i iznosa koji odgovara sili koercitivnosti feromagnetika (to jest sili koja sprječava elementarne magnete da dođu u nesređen položaj). Ako se magnetsko polje mijenja i nakon što je postiglo potrebnu jakost, ponovno dolazi do magnetske zasićenosti, a kada magnetsko polje dobije vrijednost nula, pojavljuje se remanentni magnetizam. Cikličko magnetiziranje feromagnetika naziva se magnetska histereza. Trajni magneti izrađuju se od posebnih vrsta čelika s vrlo visokim remanentnim magnetizmom. 
+Feromagnetizam ovisi o temperaturi; feromagnetik na nekoj, za njega karakterističnoj temperaturi (takozvanoj Curiejevoj temperaturi), postaje paramagnetičan. Feromagnetizam se objašnjava Weissovom teorijom područja spontane magnetizacije takozvanih Weissovih domena. Domene se sastoje od velikog broja međusobno paralelno poredanih elementarnih magneta. Magnetiziranje feromagnetičnih tvari je prebacivanje elementarnih magneta u smjer vanjskog magnetskog polja. Potpuno objašnjenje feromagnetizma dao je Werner Karl Heisenberg u kvantnoj mehanici, Paulijev princip isključenja objašnjava zašto je u pojedinim kristaličnim tvarima uglavnom zastupljeno stanje paralelne orijentacije elektrona (feromagnetici), u drugima antiparalelno stanje (antiferomagnetici), dok je u nekim tvarima međudjelovanje slabo i nema međusobne ovisnosti orijentacije atomskih magnetskih dipola u odsutnosti vanjskoga polja (paramagnetici i dijamagnetici).
+
+
+=== Magnetska histereza ===
+Magnetska histereza pojava je kašnjenja magnetske indukcije u odnosu na promjenu jakosti magnetskoga polja. Ovisi o feromagnetskim materijalima u kojima se magnetsko polje inducira; manja je za meko željezo (na primjer slitine FeNi), a veća za tvrdo željezo (na primjer ugljične čelike). Gubitke magnetske histereze čini dio energije vanjskoga magnetskog polja koji se u feromagnetskim materijalima nepovratno pretvara u druge oblike energije, većinom u toplinu.
+
+
+== Izvori ==

@@ -1,0 +1,175 @@
+revision: 29352520
+title: Iridium Satellite LLC
+url: https://tr.wikipedia.org/wiki/GLONASS
+
+
+---
+
+GLONASS (Rusça: ГЛОНАСС, Rusça telaffuz: [ɡlɐˈnas]; Rusça: Глобальная навигационная спутниковая система), Globalnaya navigatsionnaya sputnikovaya sistema veya Global Navigation Satellite System, tanımlamalarının kısaltmasıdır. Türkçe: Küresel Uydu Konumlandırma Sistemi veya Türkçe: Küresel Uydu Seyir Sistemi);
+Rusya tarafından geliştirilmiş ikinci kuşak bir küresel uydu konumlandırma sistemidir. Dünyanın GPS'den sonra ikinci işler hale gelmiş uydu konumlandırma sistemidir.
+En uygun durumda çalışabilir olarak gelişimi 1976 yılında Sovyetler Birliği'nde başlayan GLONASS, uydu takımları o zamana kadar çok sayıda taşıyıcı roketle eklemeler yoluyla 1995 yılında tamamlanabilmiştir. Sovyetler Birliği'nin çöküşünü takiben ekonomik daralma yüzünden 2001'e kadar sadece 7 uydu işler halde bulunmaktaydı. O yıl Başkan Vladimir Putin GLONASS'ın yenilenip tekrar etkinleştirilmesi için bir programı başlattırmıştır. GLONASS, Rusya Federal Uzay Kurumu'nun 2010 yılında bütçesinin neredeyse üçte birini tüketen en pahalı yapımı olmuştur.
+2010 yılına kadar GLONASS Rusya topraklarının tamamına ulaşmış ve 2011 yılı Ekim ayında, toplam 24 uydudan oluşan tüm yörünge takımları ile tam küresel kapsama alanına etkinleştirilmiştir. GLONASS uydularının, 2011'de başlayan ve 10 yıllık yaşam süresi olan GLONASS-K sürümü ile, tasarımları bir takım yükseltmeler içermektedir. Sistem, ABD'nin GPS sistemi ve Avrupa Birliği tarafından hayata geçirilen Galileo konumlandırma sistemi'nin bir dengidir. Ayrıca benzer şekilde Çin tarafından geliştirilen Compass adlı bir konumlandırma sistemi bulunmaktadır.
+
+
+== Gelişimi ==
+Öncesinde 1979'da 4 uydu ile işleyen ilk uydu destekli konum belirleme sistemi kurulmuştu. COSMOS adı verilen ilk GLONASS uydusu, 12 Ekim 1982'de uzaya fırlatılmıştı. Sistem, GPS'e benzer nitelikte birimlerden oluşmaktadır. 8 adet yer istasyonu, sistemi kontrol etmek amacıyla Rusya sınırları içerisinde konuşlandırılmıştır.
+Tsiklon adı verilen ilk Rus konumlandırma sistemi; 15 Mayıs 1967 (Cosmos 158) ve 27 Temmuz 1978 (Cosmos 1027) tarihleri arasında yörüngeye yerleştirilmiştir. Küresel çapta olmasa da bölgesel olarak ve yönlendirilebilir özellikte uydulardan oluşan Tsiklon (anlamı: Siklon) Sovyetler'in ilk uydu konumlandırma sistemiydi.
+
+
+== Sistem ==
+
+
+=== Amacı ===
+Sistem, gerçek zamanlı uydu verileri kullanılarak dünya üzerinde bulunulan yerin konumunu koordinat sistemi aracılığıyla hızlı bir şekilde bulmak amacıyla tasarlanmıştır. Başlangıçta Sovyet ordusunda balistik füzelerin seyir konumu ve hedeflenmesi için oluşturulan ikinci nesil uydu konumlandırma sistemini, yüksek doğrulukla bir konumu hesaplamak için kendi Tsikada sistemleri üzerinde geliştirmişlerdir. GLONASS, Tsikada'nın 2 saatlik devrelerde sinyal işleme ve hesaplama katsayısında daha kesin sonuçların alınması için  geliştirilmiştir.
+
+
+=== Tam yetenek geri yükleme ===
+Haziran 2008'de, sistem zamanı tam olarak etkin 16 uydudan oluşuyordu. Bu noktada, Roscosmos 2010 yılında yörüngede 24 uyduyla tam bir uydu takımını, daha önce planlanandan daha önce bir yıl içinde amaçladı.Eylül 2008'de, Başkan Vladimir Putin, federal bütçeden GLONASS için ek 67 milyar ruble (2,6 milyar dolar) ayrılması için bir kararname imzaladı.
+
+
+=== Uydu takımları ===
+
+GLONASS uyduları Rus Radyo Yön Bulma ve Zaman Enstitüsü, Uzay Aygıt Mühendisliği Enstitüsü ile ISS Reshetnev, (eski adıyla NPO-PM), liderliği altında geliştirilmişti. GLONASS uyduları için seri üretim Omsk merkezli Polyot şirketi tarafından tamamlanmıştı.Gelişmesinin üçüncü döneminde başından sonuna, uydu tasarımları çok sayıda iyileştirmeler yoluyla üretilmişti. Sırayla öncül GLONASS 1982'den, GLONASS-M 2003'ten ve GLONASS-K 2011'den beri işler konumdaydı. Her uydunun adı test uyduları için ya baş harflerinden oluşan kısma adlandırma yoluyla ya da Rusya Federasyonu Savunma Bakanlığı Birimleri tarafından işletmedeki uydular için bir numara atama yoluyla Uragan adına ekleşik olarak verilmekteydi. Tüm Uragan uyduları bir GRAU atamasına (11F654 gibi) sahipti ve her biri aynı zamanda sıra dışı bir "Kosmos-NNNN"  kod numarası atamasına sahipti.
+
+
+==== Öncüller ====
+GLONASS uydularının ilk nesli, 3 yörüngede dengelenmiş uydulardı. Yeniden yörünge edinimine sahip olması için bir tür itici güç sistemi ile donatılmışlardı. Bu tekrar yönlendirilebilir uyduların ortalama işletim süreleri 16 ay kadardı. İlk fırlatılan takımda bazıları araç kazalarında kaybedildi. Yaşam süreleri üç yıldı. Blok II uyduları için Proton-K Blok-DM-2 veya Proton-K Briz-M güçlendirici iticiler (Booster) kullanan roketlerle Baykonur Uzay Üssü'nden tek seferde üç fırlatma yapıldı. Etalon jeodezi yansıtıcı uydusu bir GLONASS uydusu için vekil tayin edildi.
+GLONASS-M olarak bilinen uydular, 1990'da geliştirilmeye başlandı ve ilk takımı 2001 yılında fırlatıldı. Bu uydular yedi yıl yükseltilmiş yaşam sürelerine sahipti ve ağırlıkları 1480 kg'dan biraz fazlaydı. Yaklaşık olarak 2.4 metre çapa ve 3.7 metre yüksekliğe sahiplerdi. GLONASS-M takımında uydu L-bandı sinyalleri için 12 birincil antene sahipti. Laser yansıtıcıları aynı zamanda yerölçüm araştırması ve hassas yörünge belirlenmesinde kullanılacak şekilde tasarlanmıştı. Hassas saat hesaplaması için uydularda yerleşik Sezyum ölçütlerinde atom saatleri kullanılmıştır.
+
+
+==== Yeni nesil ====
+
+GLONASS-K olarak bilinen en yeni seri uydular 750 kg'a indirgenmiş ağırlıkları ve ikinci neslin 7 yıllık ömrü ile karşılaştırıldığında 10 yıl kadar bir yaşam süresine sahip olacak şekilde tasarlanmıştır. L3 ve L5 bantları içeren yeni CDMA olarak adlandırılan daha fazla konumlama için sistemin doğruluğunu geliştirmede modernize edilmiş GPS'e benzer modülasyonlu sinyalleri iletir. Ek olarak yön bulma için L-bandı sinyali sunmaktadır. Önceki uydu takımları gibi sağlamlaştırılmış 3 eksene sahiptir.
+
+
+=== Yörüngeleri ===
+
+Yörüngeler yaklaşık olarak 11 saat 15 dakikalık bir yörüngesel devir sağlayan, yeryüzünden 19,100 km yükseklikteki ve 64.8° civarında bir eğim ile birlikte yaklaşık dairesel bir yörünge düzlemindedir. Düzlemler kendilerini 15° yer değiştirme serbestisine sahiptir. Genel olarak yerleştirmede, en az beş uydu verilen herhangi bir zamanda verilen herhangi bir noktadan görünür.
+
+
+=== Teknik özellikleri ===
+Bir GLONASS alıcısı uydu sinyallerini izliyorken konum düzeltmesi anlık olarak sinyalle gönderilir. 1 mikrosaniyede zaman transferi, 15 cm/s ile birlikte hız vektörü ölçümü, 70 metre ile düşey konumlama, 57-70 metre ile yatay konumlama doğruluğu sağlama, zamanlama servisi ve standart konumlama sisteminin en üst verimliliğinde elde edilir.
+
+
+==== FDMA sinyalleri ====
+Sistem iki tür sinyalle işler:
+
+Açık sinyal (standart duyarlılık sinyali - standart precision (SP)) ve
+Karartılmış/gizli sinyal (yüksek duyarlılık sinyali - obfuscated high precision (HP)).GLONASS sinyalleri DSSS şifrelemesi kullanılarak BPSK modülasyonu ile GPS sinyallerinde olduğu gibi aktarılır. Tüm uydular kendi standart duyarlılık sinyali olarak aynı kodu iletir, ancak her biri L1 bandı olarak bilinen 1602.5625 MHz ile 1615.5 MHz aralığındaki bir 15 kanallı frekans bölmeli çoklu erişimi (FDMA - Frequency Division Multiple Access) kullanarak farklı bir frekans üzerinde iletir. Kesin merkezi frekansını hesaplamak için denklem 1602 MHz + n × 0.5625 MHz dir; Buradaki n, bir uydunun frekans kanal numarasının (n=0,1,2,3,...24) olduğu yerdir. Sinyaller 25-27 dBW (316 ile 500 watt) arasındaki bir EIRP de (EIRP - Equivalent isotropically radiated power) sağ-el dairesel kutuplaşma kullanılırken 38° koni içerisinde iletilir. 24 uydulu takımyıldızın, antipodal uydu çiftlerini desteklemek için aynı frekans kanallarını kullanarak sadece 15 kanal ile uyumlu olduğunu unutmayın, çünkü bu uydular hiçbir zaman aynı anda Dünya merkezli bir kullanıcının görüş hattında değildir.
+Sinyal aktarımı, L2 bandı olarak bilinen 1246 MHz merkezi frekans ile birlikte 1240 MHz ve 1260 MHz arasında iletilir. 1246 MHz + n × 0.4375 MHz denklemine göre gerçekleşmektedir. Gizli sinyalle ilgili diğer ayrıntılar açıklanmamıştır.
+En yüksek verimlilikte, 5-10 metre yatay konumlandırma hassasiyeti sunan açık sinyalin (şifresiz sinyal), ilk nesilden eş anlı olarak hız vektörü 10 cm/s olan 200 ns zamanlama içinde hesaplaması dört uydunun ölçümlerine dayanır. Bu konu üzerinde yeni uydulardan olan GLONASS-M uyduları geliştirilmektedir.
+GLONASS-M ile başlayan L1 bandı sinyaline benzer bir açık sinyal ile sivil ek bir vekil sinyal L2 bandında yayınlanır. Bu en yeni uydulardan özgün bir tasarım olan L1 bandında yayın yapan kısmen çalışır durumda GLONASS-M 795 numaralı uydu haricinde tüm uydu takımından elde edilebilir.GLONASS, Kuzey Kutbu'nun hassas konumunu 1900'den 1905 yılına kadar belirtmede kullanılan jeodezi amaçlı PZ-90 adlı (1990 Yerküre parametreleri – Parametry Zemli 1990) bir koordinat veri yöntemini kullanır. Bu Kuzey Kutup Noktası konumu için 1984 yılında kurulan WGS-84 GPS koordinat yönteminin karşılığıdır. WGS-84'den farklı olan (herhangi bir yönde en az 40 cm (16 inç)) PZ-90 datumu 17 Eylül 2007 itibarıyla PZ-90.02 sürümüne güncellenmiştir.Açık sinyal (SP), 511 kbit/s rastgele değişen kod ek modül-2 (XOR) ile oluşturulur, 50 bit/s seyir mesajı ve yardımcı bir 100 Hz faz kod dizisi (Menderes kodu, (Manchester code)), tek bir zaman/frekans osilatörü kullanılarak oluşturulur. 9 kademeli vardiyada 1 ms. bir süre işletimli sözde rastgele kod kaydı oluşturulur.
+Seyire ilişkin ileti saniye başına 50 bit hızla modüle edilmektedir. Açık sinyal 7500 bit süper-çerçeve uzunluğundadır ve 30 saniyede 5 çerçeve oluşmakta, sürekli mesaj iletimi ise 150 saniye (2.5 dakika) sürmektedir. Veri için toplam kontrol bitleri 85 bit (1.7 saniye), zaman işareti 15 bit boyutunda oluşarak, her kare 100 bit, her biri için 15 dize (her dize için 2 saniye), ile toplamda 1500 bit uzunluğundadır. 1-4 dizeleri, uydu için de dolaysız veri iletimi sağlar ve her kare tekrarlanır; efemeris verisini, saat bilgisi, frekans uzaklıkları bilgisini ve uydu durumunu içerir. I-IV çerçevede her 5 uydu için 5-15 dizeleri ve kalan 4 uyduyu tanımlamak için; çerçeve V, uydu takımında her uydu için anlık olmayan veriler (yani almanak), sağlamak için kullanılır.
+Yer kontrol bölümü gelen efemeris verilerini kullanarak her 30 dakikada bir güncellenmektedir; uydular yeryüzünden konum ve hızını hesaplamada gerekli, güneş ve ayın hareketi ile ilgili ivmelenme parametrelerini içeren, yer merkezli yer sabit (ECEF) kartezyen koordinatlarını kullanmaktadır. Almanak, günlük güncellenmektedir ve güncellenmiş Kepler parametrelerini kullanır.
+Henüz kullanılmayan W kodu ile şifrelenerek modüle edilen ABD'nin P (Y) kodu aksine, GLONASS'ta daha kesin bir sonuç için şifreli sinyal (HP sinyali), 'gizli güvenlik yöntemleri yoluyla' Rus askeri yetkili kullanıcıları tarafından kullanılabilirdir. L2P ​​kodu veri bitlerinin modülasyonu (ve bu nedenle izleme stratejisi) son modüle edilmemiş bu sinyalin kullanım modülasyonu rastgele aralıklarda ancak 250 bit/s içinde açığa çıkma riski taşır. L1P kodu faz kodu olmadan 50 bit/s de modüle edilir.
+HP sinyali etkili SP sinyali gibi dördün faz olarak yayınlanır. Etkili bir SP sinyali gibidir ancak SP sinyaline göre on kat-daha yüksek bant genişliği ile aynı taşıyıcı dalgayı paylaşmaktadır. Tersine mühendislik girişimleri 72 süper-çerçeve oluşumu olduğunu gösterse de yüksek hassasiyetli sinyal ileti biçimi yayınlanmamış olmaya devam etmektedir. Her birinde 5 dize içeren 100 bit ve tüm seyir iletisi için 36 000 bit veya 720 saniye (12 dakika) toplam uzunluğu aktarmak için 10 saniye süre alır. Ek veriler görünüşte kritik Ay-Güneş ivmelenme parametreleri ve saat düzeltimi açısından tahsis edilmiştir.
+
+
+===== Doğruluk =====
+Zirve verimi, standart duyarlıklı sinyal 5-10 metre mesafede yatay konumlandırma doğruluğu sunar, 15 metre (49 ft) içinde dikey konumlandırma, saniyede (3.9 in/s) 10 santimetre içinde ölçülen bir hız vektörü ve 200 ns içinde zamanlama, hepsi eş zamanlı dört adet birinci nesil uydulardan gelen ölçümlere dayanmaktadır; böylece GLONASS-M gibi yeni uydular bu konuda geliştirilmektedir.
+
+
+==== CDMA sinyalleri ====
+Yeni CDMA sinyalleri 2008 yılından bu yana, GLONASS'ta kullanılmak üzere araştırılmaktadır.GLONASS geliştiricilerinin ön açıklamalarına göre, üç açık ve iki karartılmış CDMA sinyali olacaktır. L3 CDMA Açık sinyalin, 1202,25 MHz ortalanmış frekanslı veri ve pilot kanalları hem BPSK (10) modülasyonunu kullanır; hem de arasında değişen şifreyi saniye başına 10.23 milyon CDMA temel iletim birimi ile faz içinde ve dördün veri pilotlu QPSK kullanılarak taşıyıcı frekans üzerine modüle edilmiş olarak iletir. Veriler 5-bit Barker kodu ve 10-bit Neuman-Hoffman kodu ile yedek hata kodludur.
+Açık L1 CDMA ve karartılmış L1 CDMA sinyalleri 1600,995 MHz'te ortalanmış ve açık L2 CDMA ve karartılmış L2 CDMA sinyalleri 1248,06 MHz de üst üste gelen GLONASS FDMA sinyalleri ile ortalanmıştır. Açık L1 CDMA sinyalleri ve L2 karartılmış CDMA kullanım verileri ve BOC (1,1) BPSK (1) modülasyon ile kılavuz için modülasyon, vekil ve veri sinyallerinin iletimi için zaman bölmeli çoklama; geniş bantlı L1SC ve L2SC şifrelenmiş sinyallerin kullanımı BOC (5, 2.5) modülasyonu kılavuz ve verinin her ikisi için açık sinyaller dördün aşamasında iletilir. Bu yerlerde en yüksek sinyal gücü dar bant açık sinyallerinden uzaktadır.Temel GPS ve GLONASS sinyalleri için ikili faz kaydırmalı anahtarlama (BPSK) kullanılır; ancak BPSK ve dördün faz kaydırmalı anahtarlama (QPSK) dördün genlik modülasyonu (QAM), QAM-2 ve QAM-4 değişimleri olarak kabul edilebilir. İkili ofset taşıyıcı (BOC) modülasyon, geliştirilmiş Galileo, GPS ve Compass sistemleri tarafından kullanılan bir modüle yöntemidir.
+Açık L3 CDMA sinyalinin seyir mesajı 100 bit/sn 'de iletilir. Konumlamaya ilişkin çerçeve uzunluğu 15 saniyedir (1500 bit) ve her 3 saniye (300 bit) alımda 5 dize simge içerir. Bir çerçevede mevcut uydu ve almanağın bir parçası üç uydu için anlık gök günlüğü bilgisi içerir. Süper-çerçeve, 8 konumlama karesinden oluşmaktadır ve tüm 24 uydudan almanak için 12000 bit veri iletmek bu nedenle 120 saniye (2 dakika) sürer. Gelecekte, süper-çerçeve, 30 uyduda 10 kare veya 15000 bit (150 saniye veya 2,5 dakika) veriyi kapsayacak şekilde genişletilecektir. Sistem zamanını işaretleyici her dize UTC artık saniye düzeltimi ile iletilir; kısaltılması ya da uzatılması (sıfır-dolgu) ile bir saniyeye (100 bit) göre, günün son dizgesi uydu alıcısı tarafından yok edilmeden elde edilir.
+2011 yılında GLONASS-K1 test uydusunun fırlatılmasıyla L3OC sinyali tanıtıldı. 2014-2017 yıllarında devreye alınması öngörülen son GLONASS-M uyduları da L3OC sinyallerini içerecektir.
+2015 yılında başlatılacak sistem GLONASS-K2 uyduları, L1SC, L1OC, ​​L2SC ve L2OC sinyalleri yanı sıra L3OC sinyallerini içeren geçerli L1 ve L2 bantları, yenilenmiş CDMA sinyallerini tam takım halinde destekleyecektir. 2017'den başlayarak GLONASS-K2 ile mevcut uyduların (GLONASS-M) kademeli olarak değiştirilmesi gerekecektir.
+2025'e gelindiğinde GLONASS-KM uyduları devreye alınacaktır. Ek açık sinyalleri de destekleyecek şekilde bu uydular için çalışmalar yapılmaktadır. Sinyaller, GPS sinyalleri L5 ve L1C ve Galileo ve Compass sinyallerine karşılık gelen aynı frekanslara ve biçimlere dayalı E1, E5a ve E5b sinyalleri gibi, şunları içerecektir:
+
+Geliştirilmiş GPS sinyali L1C ve Galileo/Compass sinyalleri E1'e benzer 1575,42 MHz frekansta ortalanan BOC (1,1) modülasyonu kullanacak Açık L1OCM sinyali.
+GPS sisteminin, L5 (Safety of Life) sinyaline benzer 1176,45 MHz ortalanmış ve Galileo/Compass sinyali E5a 'ya benzer BPSK (10) modülasyonlu L5OCM açık sinyali.
+Açık L3OCM sinyali Galileo/Compass E5b sinyaline benzer, 1207,14 MHz ortalanmış BPSK (10) modülasyonu, kullanacaktır.Böyle bir düzenleme ile çoklu standarta uygun GNSS alıcılarının daha kolay ve daha düşük maliyetli donanımı sağlanacaktır.
+Uydu takımları 2025 yılında CDMA sinyallerinin kullanıma sunulması ile 30 etkin uyduya genişletilmiş olacaktır, ama bu FDMA sinyallerinin sonuçta önerilmeyişine neden olabilir. Yer kontrol istasyonları ağına dayalı ve bir Diferansiyel Düzeltme ve İzleme (SDCM) konum güçlendirme sistemi (GNSS augmentation system) yardımıyla görev yapacak yeni haberleşme uyduları Luch 5A ve Luch 5B gibi uydular için, şimdiki üç düzleme ek üç düzlem ilavesi ile toplamda düzlem sayısı altıya çıkacaktır. Ek uydular Molniya yörünge, Tundra yörünge, Yer eşzamanlı yörünge ya da Japon QZSS sistemindekine benzer, bölgesel olarak güçlendirilmiş konum verisi sunmak için, Eğik yörünge kullanabilir.
+
+
+=== Yer birimleri ===
+
+GLONASS sisteminin yer kontrol bölümü Brasília, Brezilya'daki bir istasyon dışında, neredeyse tamamı eski Sovyetler Birliği toprakları içinde yer almaktadır. Yer Kontrol Merkezi ve Saat Standartları birimi Moskova'da yer almaktadır ve telemetri ve izleme istasyonları Sankt-Peterburg, Ternopil, Yeniseysk ve Komsomolsk-na-Amure'da bulunmaktadır.GLONASS yer bölümü aşağıdakilerden oluşur:
+bir Sistem Kontrol Merkezi;
+beş Telemetri, İzleme ve Komuta Merkezi;
+bir Merkezi Saat Düzeltim İstasyonu;
+üç Yükleme İstasyonu;
+iki Lazer Menzilleme İstasyonu ve
+on İzleme ve Ölçüm İstasyonu.
+
+
+=== Alıcılar ===
+
+GLONASS sinyallerinden yararlanabilen KUKS alıcıları üreten kuruluşlar:
+
+Septentrio, Topcon, C-Nav, JAVAD, Magellan Navigation, Novatel, Leica Geosystems, Hemisphere GNSS, Trimble Inc.NPO Progress, GPS ve GLONASS frekanslarının birleşik olarak alımı için "GALS-A1" adlı bir alıcı geliştirmiştir.
+Skywave Mobile Communications hem GLONASS hem de GPS sinyali kullanan bir Inmarsat-tabanlı uydu haberleşme terminali üretmektedir.2011 itibarıyla, Garmin eTrex çizgisinde benzer son çıkan alıcılardan bazıları da GLONASS sinyallerini (GPS ile birlikte) kullanabilir. Garmin de GPS, WAAS ve GLONASS gücünü birleştiren bağımsız bir Bluetooth GLO alıcısını üretmektedir.2011 yılından itibaren çeşitli akıllı telefon üreticilerinin son kullanıcı aygıtlarına GLONASS yeteneği eklenmiştir.
+Bunlar:
+
+Xiaomi Tech Company (Xiaomi Phone 2)
+Sony Ericsson
+ZTE
+Huawei
+Samsung (Galaxy Note, Galaxy Note II, Galaxy S3, Galaxy S4)
+Apple (4s'ten beri), iPad Mini (sadece LTE modeli) ve iPad (üçüncü kuşak, sadece 4G modeli)
+HTC
+LG
+Motorola
+Nokia.Günümüzde birçok orta ve üst sınıf akıllı telefon GLONASS sinyalleri alımını destekleyecek şekilde üretilmektedir.
+
+
+== Durumu ==
+
+
+=== Elverişliliği ===
+1 Aralık 2014 tarihi itibarıyla, GLONASS uydu takımı durumu 24 Aralık 2014 tarihinde Wayback Machine sitesinde arşivlendi.:
+
+Sistem, Rusya Federasyonu topraklarının tamamını kapsayan sürekli seyrüsefer hizmetleri için 18 uydu gerektirir, 24 uydu dünya çapında hizmet sunmaktır. GLONASS sistemi dünya çapında toprakların % 100'ünü kapsar.
+2 Nisan 2014 tarihinde sistem yaklaşık 12 saat boyunca navigasyon sinyalinin kullanım dışı kalmasıyla teknik bir arıza yaşadı.14-15 Nisan 2014'te dokuz GLONASS uydusu yazılım sorunları nedeniyle başka teknik bir arıza yaşadı.
+
+
+=== Doğruluğu ===
+Rus Enlem ve boylam için Diferansiyel Düzeltme ve 2010 itibarıyla İzleme verilerine göre, (p = 0.95 için) GLONASS navigasyon tanımları kesinlikleri Rus sistemine göre idi (NSV), 7-8 (istasyonuna bağlı) navigasyon uzay araçlarının ortalama sayısı 4,46-7,38 m eşittir. Buna karşılık, GPS navigasyon tanımları aynı zamanda kesinlikleri NSV ortalama sayısı ile 2,00-8,76 m (istasyonuna bağlı) 6-11'e eşit idi. Tek başına kullanıldığında Sivil GLONASS bu nedenle biraz daha az hassastır GPS'e göre. Yüksek enlemlerde (kuzey veya güney), GLONASS 'doğruluk nedeniyle uyduların yörünge konumuna göre GPS'e göre daha iyidir.
+Bazı modern alıcılar, kentsel kanyonlarda büyük ölçüde geliştirilmiş kapsama alanı sağlayan ve 50 uydu ile düzeltmeler için çok hızlı bir süre vererek, birlikte hem GLONASS hem de GPS uydularını kullanabilmektedirler. Kapalı, kentsel kanyon veya dağlık alanlarda, doğruluk büyük ölçüde yalnız GPS kullanılmasına göre geliştirilebilir. Aynı anda konumlandırma sistemleri kullanmak için, GLONASS/GPS navigasyon tanımları kesinlikleri NSV ortalama sayısı ile 2,37-4,65 m 14-19'a eşittir (istasyona bağlıdır).
+2009 yılının Mayıs ayında, Anatoly Perminov Rusya Federal Uzay Kurumu yönetmen eylemleri GLONASS uydu takımını genişletmek ve 2011 yılına 2.8 m doğrulukla GLONASS konumlandırma tanımını artırmak için yer kesimini iyileştirmenin üstlenildiğini belirtti. Özellikle, son uydu tasarımı GLONASS-K'da tanıtılan sistemin doğruluğu için çift yeteneği vardır. Aynı zamanda sistemin yer kesimi iyileştirmelerine geçmesi sağlanmıştır. 2012 başlarında on altı konumlandırma yer istasyonu Bellingshausen ve Novolazarevskaya üslerinde Rusya'da ve Antarktika'da yapım aşamasındadır. Güney yarımkürede yeni istasyonlar Brezilya ve Endonezya etrafında inşa edilmiştir. Birlikte, bu gelişmelerle 2020 yılına kadar 0.6 m veya daha iyi GLONASS doğruluğu getirmesi bekleniyor.
+
+
+== Ayrıca bakınız ==
+GPS
+GLONASS uyduları listesi
+
+
+== Notlar ==
+
+
+== Kaynakça ==
+
+
+== Bibliyografya ==
+GLONASS Interface Control Document Sürüm 5.1, 2008 (Yedek veri)
+GLONASS Interface Control Document Sürüm 4.0, 199820 Temmuz 2011 tarihinde Wayback Machine sitesinde arşivlendi.
+"ФЕДЕРАЛЬНАЯ ЦЕЛЕВАЯ ПРОГРАММА "ГЛОБАЛЬНАЯ НАВИГАЦИОННАЯ СИСТЕМА"" [FEDERAL ÖZEL AMAÇLI PROGRAM "KÜRESEL KONUMLANDIRMA SİSTEMİ"]. Russian Federal Government (Rusça). 20 Ağustos 2001. 25 Ekim 2007 tarihinde kaynağından arşivlendi. Erişim tarihi: 10 Nisan 2007. 
+"GLONASS constellation status for 18.01.08 under the analysis of the almanac and accepted in IANC (UTC)". Russian Space Agency (RSA). 24 Ekim 2007 tarihinde kaynağından arşivlendi. Erişim tarihi: 18 Ocak 2008. 
+"GLONASS Summary". Space and Tech. 19 Temmuz 2013 tarihinde kaynağından arşivlendi. Erişim tarihi: 12 Nisan 2007. 
+"GLONASS Transmitter Specifications". 13 Haziran 2007 tarihinde kaynağından arşivlendi. Erişim tarihi: 13 Nisan 2007. 
+Goebel, Greg. "Navigation Satellites & GPS". ss. Kısım 2.2. 28 Nisan 2015 tarihinde kaynağından arşivlendi. Erişim tarihi: 10 Nisan 2007. 
+"Интегральная доступность навигации наземного потребителя по системе ГЛОНАСС" [Yer tabanlı kullanıcının GLONASS'a dizge boyunca bütünleşik erişebilirliği]. Russian Space Agency (RSA) (Rusça). 24 Ekim 2007 tarihinde kaynağından arşivlendi. Erişim tarihi: 18 Ocak 2008. 
+"India joins Russian GPS system". The Times of India. 29 Ocak 2007. 12 Ocak 2009 tarihinde kaynağından arşivlendi. Erişim tarihi: 12 Nisan 2007. 
+"India to Launch 2 Russian GLONASS Satellites". MosNews.com. 27 Haziran 2005. 21 Kasım 2005 tarihinde kaynağından arşivlendi. Erişim tarihi: 12 Nisan 2007. 
+"Joint announcement (in English and Russian)". GPS/GLONASS Interoperability and Compatibility Working Group. 14 Aralık 2006. 19 Eylül 2007 tarihinde kaynağından arşivlendi. Erişim tarihi: 13 Nisan 2007. 
+Kramer, Andrew E. (7 Nisan 2007). "Russia Challenges the U.S. Monopoly on Satellite Navigation". New York Times. 15 Mayıs 2011 tarihinde kaynağından arşivlendi. Erişim tarihi: 12 Nisan 2007. 
+Miller, Keith M. (Ekim 2000). "A Review of GLONASS". Hydrographic Society Journal. 12 Ekim 2007 tarihinde kaynağından arşivlendi. Erişim tarihi: 13 Nisan 2007. 
+"Radical Change in the Air for GLONASS". GPS World. 22 Ocak 2007. 10 Şubat 2007 tarihinde kaynağından arşivlendi. Erişim tarihi: 10 Nisan 2007. 
+"Russia Allocates $380 Million for Global Navigation System in 2007". MosNews.com. 26 Mart 2007. 21 Nisan 2022 tarihinde kaynağından arşivlendi. Erişim tarihi: 12 Nisan 2007. 
+"Russia Holds First Place in Spacecraft Launches". MosNews.com. 26 Mart 2007. 21 Nisan 2022 tarihinde kaynağından arşivlendi. Erişim tarihi: 12 Nisan 2007. 
+"Russia Launches New Navigation Satellites into Orbit". Space.com / Associated Press. 25 Aralık 2007. 28 Ağustos 2008 tarihinde kaynağından arşivlendi. Erişim tarihi: 28 Aralık 2007. 
+"Russian Space Agency Plans Cooperation With India". MosNews.com. 12 Ocak 2004. 7 Şubat 2005 tarihinde kaynağından arşivlendi. Erişim tarihi: 12 Nisan 2007. 
+"Space Policy Project's "World Space Guide: GLONASS"". Federation of American Scientists. 26 Kasım 2015 tarihinde kaynağından arşivlendi. Erişim tarihi: 10 Nisan 2007. 
+"Услуги системы ГЛОНАСС будут предоставляться потребителям бесплатно" [GLONASS sistem servisleri, tüketicilere ücretsiz olarak sağlanacaktır] (Rusça). RIA Novosti. 18 Mayıs 2007. 21 Mayıs 2007 tarihinde kaynağından arşivlendi. Erişim tarihi: 18 Mayıs 2007. 
+"Три КА "Глонасс-М" взяты на управление" [Üç KA "GLONASS-M"'den çıkarıldı]. Russian Space Agency (RSA) (Rusça). 26 Aralık 2006. 27 Eylül 2007 tarihinde kaynağından arşivlendi. Erişim tarihi: 29 Aralık 2006. 
+"Uragan (GLONASS, 11F654)". Gunter's Space Page. 16 Ocak 2007. 10 Eylül 2015 tarihinde kaynağından arşivlendi. Erişim tarihi: 10 Nisan 2007. 
+"Uragan navsat (11F654)". Russian Space Web. 10 Eylül 2015 tarihinde kaynağından arşivlendi. Erişim tarihi: 12 Nisan 2007. 
+"GLONASS News". 5 Nisan 2014 tarihinde kaynağından arşivlendi. Erişim tarihi: 31 Temmuz 2007. 
+
+
+== Dış bağlantılar ==
+Bilgi ve Çözümleme Merkezi (IAC) sitesinde GLONASS resmi internet sayfası
+NASA Uluslararası Lazer Menzilleme Hizmeti (ILRS - International Laser Ranging Service) üzerinde GLONASS ile ilgili içerik.
+Hamradio.si sitesinde GPS/GLONASS alıcısı16 Temmuz 2011 tarihinde Wayback Machine sitesinde arşivlendi. hakkında bilgi.
+Positim.com internet sitesi GLONASS15 Temmuz 2011 tarihinde Wayback Machine sitesinde arşivlendi. hakkında bilgi.

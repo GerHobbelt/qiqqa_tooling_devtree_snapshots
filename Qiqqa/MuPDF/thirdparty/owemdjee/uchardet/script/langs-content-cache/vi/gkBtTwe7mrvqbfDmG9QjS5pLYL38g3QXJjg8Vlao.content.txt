@@ -1,0 +1,2554 @@
+revision: 69775404
+title: "Thuy\u1EBFt t\u01B0\u01A1ng \u0111\u1ED1i r\u1ED9ng"
+url: https://vi.wikipedia.org/wiki/Thuy%E1%BA%BFt_t%C6%B0%C6%A1ng_%C4%91%E1%BB%91i_r%E1%BB%99ng
+
+
+---
+
+Thuyết tương đối rộng hay thuyết tương đối tổng quát (tiếng Anh: general relativity) là lý thuyết hình học của lực hấp dẫn do nhà vật lý Albert Einstein công bố vào năm 1915 và hiện tại được coi là lý thuyết miêu tả hấp dẫn thành công của vật lý hiện đại. Thuyết tương đối tổng quát thống nhất thuyết tương đối hẹp và định luật vạn vật hấp dẫn của Newton, đồng thời nó miêu tả lực hấp dẫn (trường hấp dẫn) như là một tính chất hình học của không gian và thời gian, hoặc không thời gian. Đặc biệt, độ cong của không thời gian có liên hệ chặt chẽ trực tiếp với năng lượng và động lượng của vật chất và bức xạ. Liên hệ này được xác định bằng phương trình trường Einstein, một hệ phương trình đạo hàm riêng phi tuyến. 
+Nhiều tiên đoán và hệ quả của thuyết tương đối rộng khác biệt hẳn so với kết quả của vật lý cổ điển, đặc biệt khi đề cập đến sự trôi đi của thời gian, hình học của không gian, chuyển động của vật thể khi rơi tự do và sự lan truyền của ánh sáng. Những sự khác biệt như vậy bao gồm sự giãn thời gian do hấp dẫn, thấu kính hấp dẫn, dịch chuyển đỏ do hấp dẫn của ánh sáng, và sự trễ thời gian do hấp dẫn. Mọi quan sát và thí nghiệm đều xác nhận các hiệu ứng này cho tới nay. Mặc dù có một số lý thuyết khác về lực hấp dẫn cũng được nêu ra, nhưng lý thuyết tương đối tổng quát là một lý thuyết đơn giản nhất phù hợp các dữ liệu thực nghiệm. Tuy thế, vẫn còn tồn tại những câu hỏi mở, căn bản nhất như các nhà vật lý chưa biết làm thế nào kết hợp thuyết tương đối rộng với các định luật của vật lý lượng tử nhằm tạo ra một lý thuyết đầy đủ và nhất quán là thuyết hấp dẫn lượng tử.
+Lý thuyết của Einstein có nhiều ứng dụng quan trọng trong vật lý thiên văn. Nó chỉ ra trực tiếp sự tồn tại của lỗ đen – những vùng của không thời gian trong đó không gian và thời gian bị uốn cong đến mức ngay cả ánh sáng cũng không thể thoát ra được – một trạng thái cuối cùng của các ngôi sao khối lượng lớn. Có rất nhiều nguồn bức xạ mạnh phát ra từ một vài loại thiên thể cố định dựa trên sự tồn tại của lỗ đen; ví dụ, các microquasar và nhân các thiên hà hoạt động thể hiện sự có mặt của tương ứng lỗ đen khối lượng sao và lỗ đen có khối lượng khổng lồ. Sự lệch của tia sáng do trường hấp dẫn làm xuất hiện hiệu ứng thấu kính hấp dẫn, trong đó nhiều hình ảnh của cùng một thiên hà hiện lên qua ảnh chụp. Thuyết tương đối tổng quát miêu tả các tính chất của sóng hấp dẫn mà đã được xác nhận một cách trực tiếp bởi nhóm Advanced LIGO. Hơn nữa, thuyết tương đối rộng còn là cơ sở cho các mô hình vũ trụ học hiện tại về sự đang giãn nở không ngừng của vũ trụ.
+
+
+== Lịch sử ==
+
+Ngay sau khi phát triển thuyết tương đối đặc biệt năm 1905, Einstein bắt đầu suy nghĩ về sự mâu thuẫn giữa lực hấp dẫn Newton với lý thuyết này. Năm 1907, ông nhận ra sự liên hệ (hay tương đương cục bộ) giữa lực hấp dẫn và hệ quy chiếu gia tốc (ông coi đây là ý tưởng hạnh phúc nhất của đời mình) và nêu ra một thí nghiệm suy tưởng đơn giản trong đó có một người quan sát trong thang máy rơi tự do. Ông đã phải mất tám năm theo đuổi nhằm tìm kiếm lý thuyết hấp dẫn tương đối tính. Sau nhiều nhầm lẫn và đi lệch hướng, cuối cùng ông đã tìm ra được phương trình hấp dẫn và miêu tả nó trong cuộc họp của Viện hàn lâm Khoa học Phổ vào tháng 11 năm 1915 mà ngày nay gọi là phương trình trường Einstein. Hệ phương trình này cho biết hình học của không thời gian bị ảnh hưởng bởi sự có mặt của vật chất như thế nào, và lực hấp dẫn do sự cong của hình học không thời gian. Phương trình trường Einstein là mảnh ghép trung tâm của thuyết tương đối tổng quát.Phương trình trường Einstein là hệ phương trình vi phân riêng phần phi tuyến và rất khó để giải. Einstein đã sử dụng phương pháp xấp xỉ nhằm suy luận những hệ quả đầu tiên của lý thuyết. Nhưng ngay đầu năm 1916, nhà thiên văn vật lý Karl Schwarzschild tìm ra nghiệm chính xác không tầm thường đầu tiên của phương trình trường Einstein mà ngày nay gọi là mêtric Schwarzschild. Nghiệm này là cơ sở lý thuyết cho mô hình vật lý về trạng thái cuối cùng của suy sụp hấp dẫn, dẫn đến sự hình thành của một số thiên thể trong đó có lỗ đen dạng đối xứng cầu. Trong cùng năm, nghiệm Schwarzschild đã được tổng quát thành nghiệm chính xác cho vật thể có điện tích, hay chính là mêtric Reissner–Nordström, nghiệm này mô tả lỗ đen tích điện không quay. Năm 1917, Einstein áp dụng lý thuyết của ông cho toàn bộ vũ trụ, khai sinh ra ngành vũ trụ học tương đối tính. Theo tư tưởng đương thời, ông đã giả định vũ trụ tĩnh tại vĩnh hằng, và phải cộng thêm một tham số mới vào trong phương trình trường ban đầu của mình—hằng số vũ trụ học—nhằm thu được kết quả như "quan sát" từ bấy lâu nay. Tuy thế, năm 1929, những nghiên cứu của nhà thiên văn Edwin Hubble và những người khác lại chỉ ra vũ trụ đang giãn nở. Và kết quả quan sát này lại phù hợp với nghiệm mô tả vũ trụ đang giãn nở do nhà vật lý người Nga Alexander Friedman tìm ra từ năm 1922 mà không đòi hỏi có hằng số vũ trụ học. Mục sư và nhà vũ trụ học người Bỉ Georges Lemaître đã sử dụng nghiệm này nhằm miêu tả kịch bản sơ khai của mô hình Vụ nổ lớn, mô hình nói rằng vũ trụ ban đầu đã tiến hóa từ trạng thái cực kỳ nóng và đậm đặc. Sau này, Einstein coi hằng số vũ trụ học là sai lầm lớn nhất của đời ông.Trong suốt thời kì từ thập niên 1920 đến thập niên 1950, các nhà vật lý vẫn coi thuyết tương đối tổng quát một lý thuyết kỳ lạ trong các lý thuyết vật lý. Nó đẹp hơn lý thuyết của Newton, phù hợp với thuyết tương đối hẹp và giải thích được một vài hiệu ứng mà lý thuyết Newton chưa thành công. Chính Einstein đã chỉ ra vào năm 1915 rằng lý thuyết của ông đã giải thích được chuyển động dị thường của điểm cận nhật của Sao Thủy mà không cần tới bất kì một tham số nào. Vào năm 1919 một đoàn thám hiểm dẫn đầu bởi Arthur Eddington đã xác nhận tiên đoán của thuyết tương đối tổng quát về sự lệch ánh sáng khi nó đi gần Mặt trời bằng cách theo dõi nhật thực vào tháng 5, khiến Einstein ngay lập tức trở nên nổi tiếng. Và lý thuyết trở thành hướng đi chính của vật lý lý thuyết và thiên văn vật lý trong giai đoạn phát triển từ 1960 đến 1975, hay thời kỳ vàng của thuyết tương đối rộng. Các nhà vật lý bắt đầu nắm bắt được khái niệm lỗ đen, và đồng nhất những đối tượng thiên văn vật lý này với quasar trong thiên văn quan sát. Có thêm nhiều kiểm nghiệm chính xác trong hệ Mặt Trời đã chứng tỏ sức mạnh tiên đoán của lý thuyết, và trong vũ trụ học tương đối tính cũng vậy với rất nhiều quan sát đo lường nhằm kiểm chứng hệ quả của lý thuyết.
+
+
+== Từ cơ học cổ điển đến thuyết tương đối rộng ==
+Chúng ta có thể hiểu thuyết tương đối rộng thông qua những điểm tương tự và khác biệt của nó so với lý thuyết Newton. Bước đầu tiên là chỉ ra cơ học cổ điển và định luật vạn vật hấp dẫn cho phép miêu tả theo ngôn ngữ hình học. Bằng cách kết hợp miêu tả này với định luật của thuyết tương đối hẹp sẽ cho chúng ta khám phá thuyết tương đối rộng một cách tự nhiên.
+
+
+=== Mô tả bằng hình học của lực hấp dẫn Newton ===
+Cơ sở của vật lý cổ điển là khái niệm chuyển động của một vật thể, kết hợp giữa chuyển động tự do (hay quán tính) và chuyển động khi có ngoại lực tác dụng. Các chuyển động này được miêu tả bằng phương trình trong không gian 3 chiều Euclid và sử dụng khái niệm thời gian tuyệt đối. Những ngoại lực tác dụng lên vật thể làm quỹ đạo vật lệch khỏi quỹ đạo của chuyển động quán tính tuân theo định luật thứ hai của Newton về chuyển động, phát biểu là tổng lực tác dụng lên vật bằng khối lượng (quán tính) nhân với gia tốc của nó. Tiếp theo, chuyển động quán tính được liên hệ với hình học của không gian và thời gian: trong hệ quy chiếu quán tính của cơ học cổ điển, các vật chuyển động tự do với vận tốc không đổi sẽ có quỹ đạo là đường thẳng. Theo ngôn ngữ của vật lý hiện đại, quỹ đạo của chúng là đường trắc địa, những tuyến thế giới thẳng (world lines, hay đường thế giới) trong không thời gian cong và đường trắc địa chính là đường thẳng trong hình học phẳng.Ngược lại, chúng ta mong muốn rằng nhờ áp dụng chuyển động quán tính - một khi biết được chuyển động thực của vật thể do ảnh hưởng của ngoại lực nào (như lực điện từ hoặc ma sát) - để xác định ra hình học của không gian, cũng như tọa độ thời gian. Tuy nhiên, có một sự khó khăn khi xuất hiện hấp dẫn. Theo định luật vạn vật hấp dẫn Newton, và những thí nghiệm độc lập của Eötvös và các thí nghiệm sau đó (xem thí nghiệm Eötvös), vật rơi tự do (còn gọi là nguyên lý tương đương yếu, hay sự bằng nhau giữa khối lượng quán tính và khối lượng hấp dẫn thụ động): quỹ đạo của vật thử khi rơi tự do chỉ phụ thuộc vào vị trí và vận tốc ban đầu của nó, chứ không phụ thuộc vào nó cấu tạo bằng vật chất gì (như lực điện từ còn phụ thuộc vào điện tích hạt thử). Có một minh họa đơn giản điều này thể hiện trong thí nghiệm tưởng tượng của Einstein, ở hình bên cạnh: đối với một quan sát viên trong thang máy kín, anh ta không thể biết được, bằng theo dõi quỹ đạo của các vật như quả bóng rơi, rằng anh ta đang ở trong căn phòng đứng yên trên mặt đất và trong một trường hấp dẫn, hay đang ở trong tàu vũ trụ chuyển động tự do trong không gian với gia tốc bằng gia tốc hấp dẫn.Nếu chỉ dựa vào sự rơi tự do của vật, chúng ta không thể phân biệt được chỉ bằng quan sát giữa chuyển động quán tính và chuyển động chịu ảnh hưởng của lực hấp dẫn. Sự không phân biệt được này gợi ra một định nghĩa mới cho chuyển động quán tính: chuyển động của vật rơi tự do trong trường hấp dẫn. Định nghĩa mới về chuyển động quán tính này cũng cho phép xác định ra hình học của không gian và thời gian theo ngôn ngữ toán học, quỹ đạo của vật chính là chuyển động trên đường trắc địa. Trong phương trình đường trắc địa chứa hệ số liên thông phụ thuộc vào gradien của thế năng hấp dẫn. Không gian của cơ học Newton theo cách xây dựng này vẫn thuần túy là hình học Euclid phẳng. Hình học này tác động đến chuyển động của vật chất nhưng không bị ảnh hưởng bởi vật chất và tồn tại một cách tuyệt đối. Tuy nhiên toàn bộ không thời gian vật lý lại là một cấu trúc phức tạp. Như được chỉ ra bằng các thí nghiệm tưởng tượng đơn giản về quỹ đạo rơi tự do của các hạt thử khác nhau, khi dịch chuyển các vectơ không thời gian - ký hiệu cho vận tốc của hạt (các vectơ kiểu thời gian, có 4 thành phần tọa độ) - sẽ cho kết quả là các vectơ khác nhau dọc theo quỹ đạo của hạt; hay nói về mặt toán học, liên thông Newton không khả tích được (các vectơ vận tốc khi dịch chuyển trên quỹ đạo sẽ không còn song song với vectơ ban đầu nữa). Từ điều này, chúng ta có thể kết luận rằng không thời gian là cong. Mô hình hình học phẳng của hấp dẫn Newton chỉ sử dụng các khái niệm hiệp biến, có nghĩa là nó công nhận một hệ quy chiếu quán tính toàn cục và mô tả hiện tượng hấp dẫn đúng trong mọi hệ tọa độ. Theo cách miêu tả hình học này, các hiệu ứng thủy triều — gia tốc tương đối giữa các vật thể gần nhau khi rơi tự do — được liên hệ với đạo hàm của liên thông, chỉ ra hình học thay đổi như thế nào bởi sự có mặt khối lượng.
+
+
+=== Chuyển sang tương đối tính ===
+Nếu mô hình lực hấp dẫn Newton có thể biểu diễn bằng hình học thì cơ sở vật lý của nó, cơ học cổ điển, chỉ là trường hợp giới hạn của cơ học tương đối tính (đặc biệt) đối với chuyển động có vận tốc nhỏ. Theo ngôn ngữ của đối xứng: khi bỏ qua ảnh hưởng của trường hấp dẫn, các phương trình vật lý tuân theo bất biến Lorentz giống như của thuyết tương đối hẹp hơn là tuân theo bất biến Galileo như trong cơ học cổ điển. (Nhóm đối xứng của thuyết tương đối hẹp là nhóm Poincaré bao gồm cả phép tịnh tiến và phép quay.) Sự khác nhau giữa cơ học cổ điển và thuyết tương đối hẹp trở lên rõ rệt khi các vật có vận tốc gần với tốc độ ánh sáng, và khi xét đến những quá trình năng lượng cao.Với đối xứng Lorentz, chúng ta có thêm những cấu trúc mới. Chúng được xác định bằng tập hợp nón ánh sáng (xem hình bên trái). Các nón ánh sáng cho phép định nghĩa cấu trúc nhân quả: đối với mỗi sự kiện A, về nguyên lý có một tập các sự kiện, hoặc ảnh hưởng đến A hoặc bị ảnh hưởng bởi A thông qua tín hiệu hoặc tương tác mà không vượt quá tốc độ ánh sáng (như sự kiện B trong hình), và một tập các sự kiện không thể liên quan được đến A (như sự kiện C trong hình). Tập này gọi là tập những quan sát viên độc lập. Khi gắn với tuyến thế giới (world-lines) của hạt rơi tự do, chúng ta sử dụng nón ánh sáng nhằm khôi phục lại mêtric nửa-Riemannian của không thời gian, ít nhất đối với số hạng vô hướng dương. Theo thuật ngữ toán học, quá trình này xác định lên cấu trúc bảo giác.Thuyết tương đối hẹp không miêu tả lực hấp dẫn, do vậy các nhà vật lý áp dụng nó cho những mô hình không tính đến lực hấp dẫn. Bởi vì mô hình hấp dẫn Newton nói rằng lực hấp dẫn giữa hai vật thể tác dụng một cách tức thì, không kể chúng ở cách xa bao nhiêu (hay tồn tại những hệ quy chiếu quán tính toàn cục), do vậy lý thuyết Newton vi phạm bất biến Lorentz. Khi tính đến trường hấp dẫn, bằng áp dụng sự rơi tự do, cách lý giải tương tự như phần trước được áp dụng: không có một hệ quy chiếu quán tính toàn cục tồn tại trong lý thuyết tương đối tổng quát. Thay vì vậy chúng ta chỉ có thể sử dụng những hệ quy chiếu quán tính cục bộ "xấp xỉ" di chuyển dọc theo quỹ đao hạt rơi tự do. Chuyển thành ngôn ngữ của không thời gian: những tuyến thế giới thẳng kiểu thời gian mà xác định hệ quy chiếu quán tính không có trường hấp dẫn sẽ bị lệch thành những đường cong tương đối với nhau trong trường hấp dẫn (Giống như khi thả hai quả bóng rơi tự do, tưởng như chúng rơi song song với nhau nhưng thực tế quỹ đạo của chúng gặp nhau tại tâm Trái Đất, hay quỹ đạo hai quả bóng bị lệch tương đối với nhau khi có mặt trường hấp dẫn.) và điều này gợi ra rằng trường hấp dẫn làm thay đổi hình học của không thời gian từ phẳng sang cong.Nhưng có một câu hỏi xuất hiện trước tiên là liệu hệ quy chiếu cục bộ mới gắn liền với vật rơi tự do có giống với hệ quy chiếu mà trong đó các định luật của thuyết tương đối hẹp thỏa mãn — lý thuyết dựa trên cơ sở sự không đổi của tốc độ ánh sáng trong chân không, và cũng mô tả lý thuyết điện từ học cổ điển. Bằng sử dụng những hệ quy chiếu tương đối tính của thuyết tương đối hẹp (như hệ quy chiếu gắn liền với mặt đất-phòng thí nghiệm, hay hệ quy chiếu rơi tự do), chúng ta có thể dẫn ra những kết quả khác nhau cho hiệu ứng dịch chuyển đỏ do hấp dẫn, hiệu ứng dịch chuyển tần số của ánh sáng khi nó truyền qua trường hấp dẫn (xem bên dưới). Những đo đạc thử nghiệm chỉ ra rằng ánh sáng lan truyền trong các hệ quy chiếu rơi tự do có quỹ đạo và tần số giống với khi ánh sáng lan truyền trong những hệ quy chiếu quán tính của thuyết tương đối hẹp. Và ánh sáng lan truyền trong trường hấp dẫn có quỹ đạo và sự dịch chuyển tần số giống như khi nó lan truyền trong hệ quy chiếu đang gia tốc với gia tốc bằng gia tốc hấp dẫn. Tổng quát hóa phát biểu này tương ứng với phát biểu "các định luật của thuyết tương đối hẹp thỏa mãn một cách xấp xỉ tốt trong những hệ quy chiếu rơi tự do (và không quay)", còn gọi là nguyên lý tương đương Einstein, một nguyên lý nền tảng của thuyết tương đối tổng quát.Các thí nghiệm cũng chỉ ra rằng thời gian đo bởi những đồng hồ trong trường hấp dẫn — thời gian riêng, thuật ngữ của vật lý học — không tuân theo các định luật của thuyết tương đối hẹp (hàm ý thời gian bị cong). Trong ngôn ngữ của hình học không thời gian, nó không được đo bằng mêtric Minkowski. Như trong trường hợp lực hấp dẫn Newton, điều này gợi ra lý thuyết tương đối rộng cần một hình học tổng quát để miêu tả. Ở quy mô nhỏ, mọi hệ quy chiếu rơi tự do đều tương đương với nhau và miêu tả xấp xỉ bằng mêtric Minkowski. Hệ quả là, chúng ta sẽ cần phải tổng quát hình học Minkowski thành hình học các không gian cong. Tenxơ mêtric xác định lên cấu trúc hình học — đặc biệt nó cho phép đo độ dài và góc — khác với mêtric Minkowski của thuyết tương đối hẹp, nó là mêtric tổng quát của mêtric đa tạp giả-Riemann. Hơn nữa, mỗi mêtric Riemann được kết hợp một cách tự nhiên với một loại liên thông đặc biệt, liên thông Levi-Civita, và thực tế liên thông này thỏa mãn nguyên lý tương đương và làm cho không thời gian của thuyết tương đối tổng quát trên phương diện cục bộ giống với không thời gian Minkowski (có nghĩa là khi chọn hệ tọa độ quán tính cục bộ phù hợp, tenxơ mêtric của thuyết tương đối rộng trở thành tenxơ mêtric Minkowski, cũng như đạo hàm riêng bậc nhất và các hệ số liên thông triệt tiêu - tương đương với không có trường hấp dẫn ở hệ toạ độ cục bộ này). Tenxơ mêtric thể hiện tính động lực của hình học không thời gian, nó cho thấy vật chất ảnh hưởng lên hình học như thế nào cũng như sự xuất hiện của nó trong phương trình chuyển động của hạt thử.
+Trong không thời gian Minkowski phẳng, với hệ tọa độ 
+  
+    
+      
+        
+          x
+          
+            μ
+          
+        
+        →
+        (
+        
+          x
+          
+            0
+          
+        
+        ,
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        ,
+        
+          x
+          
+            3
+          
+        
+        )
+        =
+        (
+        c
+        t
+        ,
+        x
+        ,
+        y
+        ,
+        z
+        )
+        
+      
+    
+     
+   một trong những bất biến Lorentz là "khoảng không thời gian" giữa hai sự kiện
+  
+    
+      
+        Δ
+        
+          s
+          
+            2
+          
+        
+        =
+        −
+        
+          c
+          
+            2
+          
+        
+        Δ
+        
+          t
+          
+            2
+          
+        
+        +
+        Δ
+        
+          x
+          
+            2
+          
+        
+        +
+        Δ
+        
+          y
+          
+            2
+          
+        
+        +
+        Δ
+        
+          z
+          
+            2
+          
+        
+        =
+        d
+        
+          s
+          
+            2
+          
+        
+        =
+        −
+        
+          c
+          
+            2
+          
+        
+        d
+        
+          t
+          
+            2
+          
+        
+        +
+        d
+        
+          x
+          
+            2
+          
+        
+        +
+        d
+        
+          y
+          
+            2
+          
+        
+        +
+        d
+        
+          z
+          
+            2
+          
+        
+        =
+        
+          η
+          
+            μ
+            ν
+          
+        
+        d
+        
+          x
+          
+            μ
+          
+        
+        d
+        
+          x
+          
+            ν
+          
+        
+      
+    
+     
+  Nếu 
+  
+    
+      
+        d
+        
+          s
+          
+            2
+          
+        
+        <
+        0
+      
+    
+     
+   thì hai sự kiện nằm trên tuyến thế giới (world line) kiểu thời gian (time-like), và mọi sự kiện thực có liên hệ nhân quả với nhau-một sự kiện nằm trong nón ánh sáng của sự kiện kia-sẽ nằm trên đường kiểu thời gian.
+Nếu 
+  
+    
+      
+        d
+        
+          s
+          
+            2
+          
+        
+        >
+        0
+      
+    
+     
+   thì hai sự kiện nằm trên tuyến thế giới kiểu không gian (space-like), đây là khoảng không thời gian giữa hai sự kiện mà một sự kiện nằm ngoài nón ánh sáng của sự kiện kia.
+Nếu 
+  
+    
+      
+        d
+        
+          s
+          
+            2
+          
+        
+        =
+        0
+      
+    
+     
+   thì hai sự kiện nằm trên tuyến thế giới không (null-world line), hay chúng nằm trên đường đi của ánh sáng.Bất biến Lorentz là đại lượng không đổi khi chúng ta chuyển từ hệ tọa độ này sang hệ tọa độ khác.Tenxơ mêtric Minkowski là
+  
+    
+      
+        
+          η
+          
+            μ
+            ν
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  −
+                  1
+                
+                
+                  0
+                
+                
+                  0
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  +
+                  1
+                
+                
+                  0
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  +
+                  1
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  0
+                
+                
+                  +
+                  1
+                
+              
+            
+            ]
+          
+        
+        .
+         
+      
+    
+     
+  
+với dấu mêtric 
+  
+    
+      
+        (
+        −
+        ,
+        +
+        ,
+        +
+        ,
+        +
+        )
+      
+    
+     
+  . Trong thuyết tương đối rộng, các tenxơ mêtric 
+  
+    
+      
+        
+          g
+          
+            μ
+            ν
+          
+        
+      
+    
+     
+   thay thế cho tenxơ 
+  
+    
+      
+        
+          η
+          
+            μ
+            ν
+          
+        
+      
+    
+     
+   và vẫn đảm bảo đại lượng 
+  
+    
+      
+        d
+        
+          s
+          
+            2
+          
+        
+        =
+        
+          g
+          
+            μ
+            ν
+          
+        
+        d
+        
+          x
+          
+            μ
+          
+        
+        d
+        
+          x
+          
+            ν
+          
+        
+      
+    
+     
+   là bất biến Lorentz cục bộ. Đồng thời tenxơ mêtric cho phép nâng và hạ chỉ số của các tenxơ khác. Các phương trình vật lý viết dưới dạng phương trình tenxơ có một thuận lợi là dạng phương trình của nó không thay đổi khi chúng ta chuyển sang hệ tọa độ khác bất kỳ (thể hiện cho tính hiệp biến tổng quát và nguyên lý tương đương Einstein).
+
+
+=== Phương trình trường Einstein ===
+
+Tuy đã nhận ra được hình học Riemann là công cụ toán học cần thiết nhằm mô tả các hiệu ứng hấp dẫn, chúng ta còn cần phải xác định thêm những nguồn của trường hấp dẫn. Trong mô hình hấp dẫn Newton, nguồn hấp dẫn là khối lượng. Trong thuyết tương đối hẹp, khối lượng là một thành phần trong đại lượng tổng quát hơn là tenxơ năng lượng–động lượng, bao gồm mật độ năng lượng và mật độ động lượng cũng như ứng suất (bao gồm áp suất và lực cắt). Tenxơ năng lượng–động lượng không chứa năng lượng của trường hấp dẫn. Nếu nguồn hấp dẫn trong thuyết tương đối rộng chỉ là khối lượng-năng lượng, thì chúng ta cần phải lựa chọn ưu tiên một hệ quy chiếu quán tính và do đó đòi hỏi tồn tại một hệ quy chiếu quán tính toàn cục, điều này là không được phép trong thuyết tương đối tổng quát. Nhờ nguyên lý tương đương Einstein, ngoài khối lượng, năng lượng thì ứng suất cũng trở thành một nguồn cho trường hấp dẫn. Và tenxơ ứng suất–năng lượng ngay lập tức tổng quát cho không thời gian cong và trở thành tenxơ miêu tả mật độ nguồn cho trường hấp dẫn. Để cho phép thu về trường hợp giới hạn của lực hấp dẫn Newton cổ điển, một cách tự nhiên chúng ta giả thiết rằng phương trình trường hấp dẫn liên hệ tenxơ ứng suất–năng lượng hạng hai với một tenxơ độ cong hạng hai gọi là tenxơ Ricci, tenxơ này có ý nghĩa vật lý miêu tả một trường hợp đặc biệt của hiệu ứng thủy triều: nó cho biết sự thay đổi thể tích của một đám nhỏ hạt thử ban đầu đứng yên tương đối với nhau, và sau đó rơi tự do trong trường hấp dẫn. Trong thuyết tương đối hẹp, định luật bảo toàn năng lượng–động lượng tương ứng với phương trình toán học là phân kỳ của tenxơ ứng suất–năng lượng phải bằng 0 (hay tự do). Công thức này cũng được tổng quát hóa sang cho không thời gian cong bằng cách thay thế đạo hàm riêng thông thường theo các trục tọa độ của đa tạp cong bằng đạo hàm hiệp biến của các tọa độ, đạo hàm này được nghiên cứu trong hình học vi phân. Các định luật bảo toàn phải luôn thỏa mãn ở phạm vi cục bộ — hay là phân kỳ hiệp biến của tenxơ mật độ ứng suất–năng lượng bằng 0, và do vậy phân kỳ hiệp biến của vế bên kia phương trình trường - vế cho biết độ cong cục bộ của không thời gian - cũng phải bằng 0. Ban đầu, Einstein nghĩ rằng vế hình học này chỉ có tenxơ Ricci (phân kỳ hiệp biến của tenxơ này khác 0), nhưng sau đó ông phát hiện ra phương trình trường cần phải tuân theo định lý phân kỳ hiệp biến tự do - và ông đã tìm ra dạng phương trình đơn giản nhất tuân theo định lý này, mà ngày nay gọi là Phương trình trường Einstein:
+
+  
+    
+      
+        
+          R
+          
+            μ
+            ν
+          
+        
+        −
+        
+          
+            
+              1
+            
+            2
+          
+        
+        R
+        
+        
+          g
+          
+            μ
+            ν
+          
+        
+        =
+        
+          
+            
+              8
+              π
+              G
+            
+            
+              c
+              
+                4
+              
+            
+          
+        
+        
+          T
+          
+            μ
+            ν
+          
+        
+        .
+        
+      
+    
+     
+  Vế trái của phương trình là tenxơ Einstein, phân kỳ hiệp biến của tenxơ này bằng 0. Tenxơ này là tổ hợp của tenxơ Ricci 
+  
+    
+      
+        
+          R
+          
+            μ
+            ν
+          
+        
+      
+    
+     
+   và tenxơ mêtric 
+  
+    
+      
+        
+          g
+          
+            μ
+            ν
+          
+        
+        =
+        
+          g
+          
+            ν
+            μ
+          
+        
+      
+    
+     
+  . Đặc biệt
+
+  
+    
+      
+        R
+        =
+        
+          g
+          
+            α
+            β
+          
+        
+        
+          R
+          
+            α
+            β
+          
+        
+        
+      
+    
+     
+  là độ cong vô hướng Ricci, với 
+  
+    
+      
+        
+          g
+          
+            α
+            β
+          
+        
+      
+    
+     
+   có thể coi là các phần tử của ma trận nghịch đảo của ma trận có phần tử 
+  
+    
+      
+        
+          g
+          
+            α
+            β
+          
+        
+      
+    
+     
+  . Tenxơ Ricci liên hệ với tenxơ độ cong Riemann 
+  
+    
+      
+        
+          
+            
+              R
+              
+                α
+              
+            
+          
+          
+            μ
+            β
+            ν
+          
+        
+      
+    
+     
+   thông qua phép thu gọn chỉ số
+
+  
+    
+      
+        
+        
+          R
+          
+            μ
+            ν
+          
+        
+        =
+        
+          
+            
+              R
+              
+                α
+              
+            
+          
+          
+            μ
+            α
+            ν
+          
+        
+        .
+        
+      
+    
+     
+  Mặt khác, hệ số liên thông (hay ký hiệu Christoffel, nó không phải là tenxơ) có thể được tính từ tenxơ mêtric,
+
+  
+    
+      
+        
+          Γ
+          
+            α
+          
+        
+        
+          
+
+          
+          
+            μ
+            ν
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          g
+          
+            α
+            β
+          
+        
+        (
+        
+          ∂
+          
+            ν
+          
+        
+        
+          g
+          
+            β
+            μ
+          
+        
+        +
+        
+          ∂
+          
+            μ
+          
+        
+        
+          g
+          
+            β
+            ν
+          
+        
+        −
+        
+          ∂
+          
+            β
+          
+        
+        
+          g
+          
+            μ
+            ν
+          
+        
+        )
+      
+    
+     
+  và tenxơ độ cong Riemann (miêu tả độ cong nội tại cục bộ của không thời gian) bằng
+
+  
+    
+      
+        
+          R
+          
+            α
+          
+        
+        
+          
+
+          
+          
+            μ
+            β
+            ν
+          
+        
+        =
+        
+          ∂
+          
+            β
+          
+        
+        
+          Γ
+          
+            α
+          
+        
+        
+          
+
+          
+          
+            μ
+            ν
+          
+        
+        −
+        
+          ∂
+          
+            ν
+          
+        
+        
+          Γ
+          
+            α
+          
+        
+        
+          
+
+          
+          
+            μ
+            β
+          
+        
+        +
+        
+          Γ
+          
+            α
+          
+        
+        
+          
+
+          
+          
+            β
+            λ
+          
+        
+        
+          Γ
+          
+            λ
+          
+        
+        
+          
+
+          
+          
+            μ
+            ν
+          
+        
+        −
+        
+          Γ
+          
+            α
+          
+        
+        
+          
+
+          
+          
+            ν
+            λ
+          
+        
+        
+          Γ
+          
+            λ
+          
+        
+        
+          
+
+          
+          
+            μ
+            β
+          
+        
+      
+    
+     
+  ở đây 
+  
+    
+      
+        
+          
+            ∂
+            
+              ν
+            
+          
+          =
+          
+            
+              ∂
+              
+                ∂
+                
+                  x
+                  
+                    ν
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+   là đạo hàm riêng. Trong thuyết tương đối rộng, tenxơ độ xoắn bằng 0, do đó hệ số Christoffel có tính đối xứng 
+  
+    
+      
+        
+          
+            Γ
+            
+              α
+            
+          
+          
+            
+
+            
+            
+              μ
+              ν
+            
+          
+          =
+          
+            Γ
+            
+              α
+            
+          
+          
+            
+
+            
+            
+              ν
+              μ
+            
+          
+        
+      
+    
+     
+   cũng như tenxơ Ricci 
+  
+    
+      
+        
+          R
+          
+            μ
+            ν
+          
+        
+        =
+        
+          R
+          
+            ν
+            μ
+          
+        
+      
+    
+     
+  .
+Trên vế phải của phương trình trường, 
+  
+    
+      
+        
+          T
+          
+            μ
+            ν
+          
+        
+      
+    
+     
+   là tenxơ mật độ ứng suất–năng lượng. Định luật bảo toàn năng lượng-động lượng cục bộ tương đương với phân kỳ hiệp biến (đạo hàm hiệp biến) của nó
+
+  
+    
+      
+        
+          ∇
+          
+            β
+          
+        
+        
+          T
+          
+            α
+            β
+          
+        
+        
+        =
+        
+          T
+          
+            α
+            β
+          
+        
+        
+          
+
+          
+          
+            ;
+            β
+          
+        
+        
+        =
+        0
+      
+    
+     
+  với
+
+  
+    
+      
+        
+          T
+          
+            μ
+            ν
+          
+        
+        =
+        
+          g
+          
+            μ
+            α
+          
+        
+        
+          g
+          
+            ν
+            β
+          
+        
+        
+          T
+          
+            α
+            β
+          
+        
+        ,
+      
+    
+     
+   và 
+  
+    
+      
+        
+          g
+          
+            α
+            β
+          
+        
+        
+          
+
+          
+          
+            ;
+            β
+          
+        
+        =
+        
+          g
+          
+            μ
+            ν
+          
+        
+        
+          
+
+          
+          
+            ;
+            ν
+          
+        
+        =
+        0
+      
+    
+     
+  Tenxơ Einstein
+
+  
+    
+      
+        
+          G
+          
+            μ
+            ν
+          
+        
+        =
+        
+          R
+          
+            μ
+            ν
+          
+        
+        −
+        
+          
+            1
+            2
+          
+        
+        R
+        
+          g
+          
+            μ
+            ν
+          
+        
+      
+    
+     
+  và
+
+  
+    
+      
+        
+          ∇
+          
+            ν
+          
+        
+        
+          G
+          
+            μ
+            ν
+          
+        
+        
+        =
+        
+          G
+          
+            μ
+            ν
+          
+        
+        
+          
+
+          
+          
+            ;
+            ν
+          
+        
+        
+        =
+        0
+      
+    
+     
+  Một khi giải phương trình Einstein và tìm được nghiệm là tenxơ mêtric (cho phép xác định được cấu trúc hình học của đa tạp không thời gian), chúng ta sẽ miêu tả được chuyển động của hạt (hay kể cả ánh sáng-photon) trong trường hấp dẫn thông qua phương trình đường trắc địa,
+
+  
+    
+      
+        
+          
+            
+              
+                d
+                
+                  2
+                
+              
+              
+                x
+                
+                  α
+                
+              
+            
+            
+              d
+              
+                λ
+                
+                  2
+                
+              
+            
+          
+        
+        +
+        
+          Γ
+          
+            μ
+            ν
+          
+          
+            α
+          
+        
+        
+          
+            
+              d
+              
+                x
+                
+                  μ
+                
+              
+            
+            
+              d
+              λ
+            
+          
+        
+        
+          
+            
+              d
+              
+                x
+                
+                  ν
+                
+              
+            
+            
+              d
+              λ
+            
+          
+        
+        =
+        0
+        
+      
+    
+     
+  với 
+  
+    
+      
+        λ
+      
+    
+     
+   là tham số của đường trắc địa. Tất cả các phương trình trên được viết trong hệ tọa độ 
+  
+    
+      
+        
+          
+            x
+            
+              α
+            
+          
+        
+      
+    
+     
+   bất kỳ. Tất cả các tenxơ và hệ số Christoffel có thành phần viết theo ký hiệu chỉ số trừu tượng, và tuân theo quy tắc tính tổng Einstein. Để cho kết quả tiên đoán phù hợp với kết quả lý thuyết Newton về quỹ đạo các hành tinh và khi trường hấp dẫn yếu, Einstein tìm ra hằng số tỷ lệ trong phương trình κ = 8πG/c4, với G là hằng số hấp dẫn và c là tốc độ ánh sáng. Khi không có vật chất hay bức xạ, tenxơ mật độ ứng suất–năng lượng bằng 0, và chúng ta thu được phương trình chân không Einstein,
+
+  
+    
+      
+        
+          R
+          
+            μ
+            ν
+          
+        
+        =
+        0.
+        
+      
+    
+     
+  do vô hướng độ cong R là hàm của tenxơ Ricci nên nó cũng bằng 0 trong phương trình chân không.
+Ngoài cách dẫn ra phương trình Einstein tuân theo định luật bảo toàn năng lượng-động lượng ở trên, chính Einstein và nhà toán học David Hilbert còn nêu ra phương pháp biến phân cho tác dụng Einstein-Hilbert và cũng thu được phương trình trường. Phương pháp biến phân có đặc điểm là nó thuận lợi cho việc tổng quát hay mở rộng thuyết tương đối tổng quát.
+Các nhà vật lý cũng đã đề xuất ra những lý thuyết khác so với thuyết tương đối tổng quát và thu được những phương trình trường khác nhau. Những lý thuyết này cũng dựa trên ba điều kiện mà thuyết tương đối tổng quát thỏa mãn:
+
+Các phương trình tuân theo nguyên lý hiệp biến tổng quát (và nguyên lý tương đương Einstein).
+Phương trình trường tuân theo định luật bảo toàn năng lượng-động lượng cục bộ đối với mọi tenxơ mêtric.
+Khi trường hấp dẫn yếu và vận tốc các vật thể là nhỏ so với tốc độ ánh sáng, lý thuyết sẽ thu về mô hình hấp dẫn Newton và cơ học cổ điển.Ngoài ba điều kiện trên thì các lý thuyết này còn có thêm một số giả thiết khác, và do đó những lý thuyết đề xuất này phức tạp hơn về mặt toán học so với thuyết của Einstein. Ví dụ một số lý thuyết như thuyết Brans–Dicke, teleparallelism, và thuyết Einstein–Cartan (thuyết này coi tenxơ độ xoắn khác 0).
+
+
+== Định nghĩa và các ứng dụng cơ bản ==
+
+Một số nét khái quát ở phần trước chứa mọi thông tin cần thiết để miêu tả thuyết tương đối rộng, các tính chất quan trọng của nó, những hệ quả chủ yếu và việc ứng dụng lý thuyết đề xây dựng các mô hình vật lý.
+
+
+=== Định nghĩa và các tính chất cơ bản ===
+Thuyết tương đối tổng quát là lý thuyết mêtric về tương tác hấp dẫn. Phương trình nền tảng của lý thuyết là phương trình trường Einstein, trong đó liên hệ giữa hình học của đa tạp tựa Riemann bốn chiều của không thời gian với năng lượng và động lượng chứa trong không thời gian đó. Những quá trình hiện tượng trong cơ học cổ điển được gán cho nguyên nhân lực hấp dẫn tác dụng (như vật rơi tụ do, chuyển động trên quỹ đạo của các hành tinh, và quỹ đạo của các vệ tinh nhân tạo), tương ứng với chuyển động quán tính trong hình học cong của không thời gian trong thuyết tương đối rộng; không có lực hấp dẫn làm lệch quỹ đạo chuyển động của vật khỏi đường thẳng. Thay vào đó, lực hấp dẫn là do sự thay đổi tính chất của không thời gian, dẫn đến làm thay đổi quỹ đạo của vật trở thành đường "ngắn nhất" có thể mà vật sẽ tự nhiên chuyển động theo (hay đường trắc địa trong hình học vi phân). Còn nguồn gốc độ cong của không thời gian là do năng lượng và động lượng của vật chất. Như nhà vật lý John Archibald Wheeler phát biểu, không thời gian nói cho vật chất cách chuyển động; vật chất nói cho không thời gian cong như thế nào.Khi mà thuyết tương đối thay thế năng hấp dẫn vô hướng của vật lý cổ điển thành tenxơ đối xứng hạng hai, thì đồng thời tenxơ này sẽ thu về trường hợp giới hạn cổ điển trong những điều kiện xác định. Đối với trường hấp dẫn yếu và chuyển động có vận tốc tương đối chậm so với tốc độ ánh sáng, lý thuyết cho kết quả tiên đoán trùng với tiên đoán của định luật vạn vật hấp dẫn Newton.Được xây dựng trên công cụ tenxơ, thuyết tương đối tổng quát thể hiện tính hiệp biến tổng quát: mỗi định luật của nó và hơn nữa các định luật thiết lập trên khuôn khổ tương đối tính tổng quát—sẽ có dạng phương trình như nhau trong mọi hệ tọa độ. Căn bản hơn, lý thuyết không chứa bất kỳ một cấu trúc hình học cơ sở bất biến nào, hay thuyết tương đối rộng có đặc tính độc lập với phông cơ sở không thời gian (ứng với mỗi sự phân bố vật chất và năng lượng thì lại có một dạng hình học không thời gian khác nhau). Nó cũng thỏa mãn điều kiện chặt chẽ của nguyên lý tương đối tổng quát, tức là mọi định luật vật lý phải như nhau đối với mọi quan sát viên. Trên cục bộ, như đòi hỏi của nguyên lý tương đương, không thời gian cong trở thành không thời gian Minkowski, và các định luật vật lý tuân theo bất biến Lorentz cục bộ.
+
+
+=== Cơ sở cho mô hình vật lý ===
+Khái niệm cốt lõi trong mô hình vật lý tương đối tính tổng quát đó là tìm nghiệm của phương trình trường Einstein. Khi có phương trình Einstein và những phương trình hay điều kiện giới hạn cụ thể khác về tính chất của vật chất (như phương trình trạng thái, hoặc giả định về tính đối xứng của không thời gian, hoặc phương trình điều kiện biên, điều kiện ban đầu) thì nghiệm của phương trình sẽ là một đa tạp tựa Riemann (thông thường đa tạp này được xác định bởi tenxơ mêtric theo những hệ tọa độ đặc biệt), và trường vật chất cụ thể xác định trên đa tạp đó. Vật chất cũng phải thỏa mãn bất kỳ một điều kiện phụ nào của các phương trình khác mô tả tính chất của nó. Hay ngắn gọn, mỗi nghiệm là một mô hình vật lý thỏa mãn các định luật tương đối tính tổng quát cũng như các định luật vật lý khác chi phối sự có mặt của vật chất.Phương trình trường Einstein là hệ phương trình vi phân riêng phần phi tuyến cho những kết quả đáng tin cậy, do vậy rất khó để tìm được nghiệm chính xác. Tuy vậy, các nhà vật lý đã giải được một số nghiệm chính xác, mặc dầu chỉ có vài ba nghiệm có ý nghĩa vật lý trực tiếp. Những nghiệm chính xác nổi tiếng nhất, và cũng có nhiều ứng dụng trong vật lý thực nghiệm đó là: mêtric Schwarzschild, mêtric Reissner–Nordström và mêtric Kerr, chúng là các nghiệm của phương trình chân không Einstein và mỗi nghiệm tương ứng với một kiểu lỗ đen; và mêtric Friedmann–Lemaître–Robertson–Walker và "vũ trụ de Sitter", mỗi loại miêu tả một vũ trụ có tính động lực. Những nghiệm chính xác hấp dẫn về mặt lý thuyết bao gồm "vũ trụ Gödel" (mở ra khả năng kỳ lạ cho phép du hành ngược thời gian trong không thời gian cong), "nghiệm sóng-pp" cho sóng hấp dẫn, "không gian Taub-NUT" (mô hình vũ trụ đồng nhất, nhưng phi đẳng hướng), và "không gian phản de Sitter" (mà gần đây trở lên quan trọng trong "phỏng đoán Maldacena" của lý thuyết dây).Do rất khó để tìm được nghiệm chính xác, các nhà vật lý đã tìm cách giải phương trình trường Einstein bằng phương pháp "tích phân số" trên máy tính, hoặc xét những nhiễu loạn nhỏ trong nghiệm chính xác. Trong lĩnh vực mô phỏng lý thuyết bằng máy tính, người ta sử dụng các siêu máy tính để mô phỏng hình học của không thời gian và giải phương trình Einstein cho những tình huống quan trọng như sự va chạm và sáp nhập hai lỗ đen hay cấu trúc của vũ trụ trên khoảng cách lớn. Đặc biệt, phương pháp này có thể áp dụng cho một hệ bất kỳ nếu khả năng tính toán của siêu máy tính cho phép, và có thể tiếp cận được những câu hỏi căn bản như điểm kỳ dị hấp dẫn. Chúng ta có thể tìm những nghiệm xấp xỉ bằng lý thuyết nhiễu loạn như "tuyến tính hóa hấp dẫn" và phương pháp tổng quát hóa của nó "khai triển hậu Newton", cả hai phương pháp này đều do Einstein phát triển. Phương pháp sau cung cấp cách tiếp cận có hệ thống nhằm giải ra hình học không thời gian với sự phân bố vật chất chuyển động chậm so với tốc độ ánh sáng. Phương pháp khai triển chứa các chuỗi số hạng; với số hạng thứ nhất đại diện cho đóng góp của hấp dẫn Newton, trong khi những số hạng tiếp sau thể hiện những hiệu chỉnh nhỏ hơn của lý thuyết Newton từ thuyết tương đối tổng quát. Phương pháp mở rộng của phương pháp này gọi là "hình thức tham số hóa hậu Newton", cho phép so sánh một cách định lượng giữa những tiên đoán của thuyết tương đối rộng với những lý thuyết thay thế phi lượng tử khác.
+Nghiệm Schwarzchild: miêu tả không thời gian tĩnh có tính đối xứng cầu, bên ngoài bán kính Schwarzchild. Nó là nghiệm của phương trình chân không với 
+  
+    
+      
+        
+          T
+          
+            μ
+            ν
+          
+        
+        
+
+        
+        =
+        0
+      
+    
+     
+  Trong hệ tọa độ cầu 
+  
+    
+      
+        
+          x
+          
+            μ
+          
+        
+        →
+        (
+        c
+        t
+        ,
+        r
+        ,
+        θ
+        ,
+        ϕ
+        )
+        
+      
+    
+     
+   sử dụng dấu mêtric (-, +, +, +), mêtric Schwarzchild là 
+  
+    
+      
+        d
+        
+          s
+          
+            2
+          
+        
+        =
+        
+          c
+          
+            2
+          
+        
+        
+          
+            d
+            τ
+          
+          
+            2
+          
+        
+        =
+        −
+        
+          (
+          
+            1
+            −
+            
+              
+                
+                  r
+                  
+                    s
+                  
+                
+                r
+              
+            
+          
+          )
+        
+        
+          c
+          
+            2
+          
+        
+        d
+        
+          t
+          
+            2
+          
+        
+        +
+        
+          
+            (
+            
+              1
+              −
+              
+                
+                  
+                    r
+                    
+                      s
+                    
+                  
+                  r
+                
+              
+            
+            )
+          
+          
+            −
+            1
+          
+        
+        d
+        
+          r
+          
+            2
+          
+        
+        +
+        
+          r
+          
+            2
+          
+        
+        
+          (
+          
+            d
+            
+              θ
+              
+                2
+              
+            
+            +
+            
+              sin
+              
+                2
+              
+            
+            ⁡
+            θ
+            
+            d
+            
+              φ
+              
+                2
+              
+            
+          
+          )
+        
+        ,
+      
+    
+     
+  
+vớiτ là thời gian riêng (đo bởi đồng hồ gắn cùng với hạt thử di chuyển trên tuyến thế giới kiểu thời gian)
+t là tọa độ thời gian (đo bởi một đồng hồ đứng yên nằm rất xa so với nguồn hấp dẫn),
+r là tọa độ xuyên tâm (đo bằng chu vi đường tròn chia cho 2π, các đường tròn nằm trên mặt cầu có tâm tại nguồn hấp dẫn),
+θ là độ dư vĩ (tính từ cực bắc, đơn vị radian),
+φ là kinh độ (radian), và
+rs là bán kính Schwarzschild của nguồn hấp dẫn, nó là hệ số tỷ lệ liên hệ với khối lượng M của "nguồn hấp dẫn không có điện tích và không quay" và rs = 2GM/c2.hay dạng ma trận của mêtric
+
+  
+    
+      
+        
+          g
+          
+            μ
+            ν
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  −
+                  
+                    (
+                    
+                      1
+                      −
+                      
+                        
+                          
+                            2
+                            G
+                            M
+                          
+                          
+                            
+                              c
+                              
+                                2
+                              
+                            
+                            r
+                          
+                        
+                      
+                    
+                    )
+                  
+                
+                
+                  0
+                
+                
+                  0
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  
+                    
+                      (
+                      
+                        1
+                        −
+                        
+                          
+                            
+                              2
+                              G
+                              M
+                            
+                            
+                              
+                                c
+                                
+                                  2
+                                
+                              
+                              r
+                            
+                          
+                        
+                      
+                      )
+                    
+                    
+                      −
+                      1
+                    
+                  
+                
+                
+                  0
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  
+                    r
+                    
+                      2
+                    
+                  
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  0
+                
+                
+                  
+                    r
+                    
+                      2
+                    
+                  
+                  
+                    sin
+                    
+                      2
+                    
+                  
+                  ⁡
+                  θ
+                
+              
+            
+            ]
+          
+        
+        .
+         
+      
+    
+     
+  Ta thấy khi hạt thử nằm rất xa nguồn hấp dẫn 
+  
+    
+      
+        r
+        →
+        ∞
+      
+    
+     
+   hoặc khi không có nguồn hấp dẫn 
+  
+    
+      
+        M
+        =
+        0
+      
+    
+     
+   thì mêtric Schwarzschild 
+  
+    
+      
+        
+          g
+          
+            μ
+            ν
+          
+        
+      
+    
+     
+   trở thành mêtric Minkowski 
+  
+    
+      
+        
+          η
+          
+            μ
+            ν
+          
+        
+      
+    
+     
+   sau khi chuyển từ tọa độ cầu sang tọa độ (ct, x, y, z).
+Tỷ số rs/r là rất nhỏ, đối với Mặt Trời có bán kính Schwarzschild xấp xỉ 3 km, trong khi nó có bán kính gần 700.000 km. Tỷ số này sẽ tương đối lớn đối với lỗ đen và sao neutron. Ta thấy tại r = rs thì mêtric trở lên kỳ dị (còn gọi là chân trời sự kiện), thực ra đây là kỳ dị do chúng ta sử dụng hệ tọa độ cầu chứ không hẳn là kỳ dị thực. Khi lựa chọn hệ tọa độ phù hợp, kỳ dị này biến mất và chỉ có r = 0 mới là điểm kỳ dị vật lý.
+
+
+== Hệ quả của lý thuyết Einstein ==
+Thuyết tương đối rộng có một số hệ quả vật lý. Một số xuất hiện trực tiếp từ những tiên đề của lý thuyết, trong khi một số khác chỉ trở lên rõ ràng sau hơn 100 năm nghiên cứu kể từ khi Einstein công bố lý thuyết này.
+
+
+=== Sự giãn thời gian do hấp dẫn và dịch chuyển tần số ===
+
+Ban đầu, bằng giả sử nguyên lý tương đương là thỏa mãn, Einstein đã chứng tỏ trường hấp dẫn ảnh hưởng tới sự trôi đi của thời gian. Khi ánh sáng truyền vào trường hấp dẫn mạnh thì tần số của nó tăng lên (hay bước sóng giảm đi-dịch chuyển xanh), trong khi ánh sáng truyền theo hướng ngược lại-thoát ra khỏi trường hấp dẫn thì tần số của nó giảm (hay bước sóng tăng-dịch chuyển đỏ); kết hợp lại, hai hiệu ứng này gọi chung là dịch chuyển tần số do hấp dẫn. Tần số ánh sáng trong một hệ quy chiếu cục bộ cũng chính là thời gian đo được trong hệ quy chiếu đó. Do vậy, tổng quát hơn, một quá trình sẽ diễn ra chậm chạp khi gần thiên thể khối lượng lớn so với cùng quá trình đó diễn ra ở một nơi xa hơn; hiệu ứng này gọi là sự giãn thời gian do hấp dẫn-hay nói về mặt hình học, thời gian bị cong do sự có mặt của vật chất.Hiệu ứng dịch chuyển đỏ đã được đo trong phòng thí nghiệm và ở những quan sát thiên văn. Sự giãn thời gian trong trường hấp dẫn của Trái Đất cũng được đo nhiều lần bằng các đồng hồ nguyên tử, và nhờ hiệu chỉnh sai lệch thời gian do hiệu ứng này cho phép Hệ thống định vị toàn cầu (GPS) hoạt động chính xác tới vài mét. Những kiểm nghiệm trong trường hấp dẫn mạnh thực hiện trên quan sát các pulsar đôi. Tất cả các kết quả thí nghiệm và quan sát đều phù hợp với thuyết tương đối tổng quát với sai số nhỏ. Tuy vậy, ở mức độ chính xác hiện nay, những quan sát này không thể loại trừ một số lý thuyết thay thế thuyết tương đối rộng cũng dựa trên nguyên lý tương đương, và một số lý thuyết thì bị bác bỏ.
+
+
+=== Ánh sáng bị lệch và sự trễ thời gian do hấp dẫn ===
+
+Thuyết tương đối tổng quát tiên đoán quỹ đạo của ánh sáng bị bẻ cong trong trường hấp dẫn; ánh sáng lan truyền gần vật thể khối lượng lớn bị kéo về phía vật đó. Hiệu ứng này đã được xác nhận từ các quan sát ánh sáng phát ra từ những ngôi sao, thiên hà hay quasar ở xa bị lệch đi khi đi gần Mặt Trời.Hiệu ứng này và những tiên đoán liên quan là do thực tế ánh sáng truyền theo đường trắc địa kiểu ánh sáng hay đường trắc địa không—một đường tổng quát hóa những đường thẳng mà ánh sáng truyền đi trong vật lý cổ điển. Những đường trắc địa này cũng là sự tổng quát hóa tính bất biến của tốc độ ánh sáng trong thuyết tương đối hẹp. Khi chúng ta khảo sát các mô hình không thời gian một cách phù hợp (hoặc là phía bên ngoài bán kính Schwarzschild, hoặc khi có nhiều vật thể tham gia thì sử dụng phương pháp khai triển hậu Newton), thì một vài hiệu ứng của hấp dẫn lên sự lan truyền của ánh sáng xuất hiện. Mặc dầu hiện tượng lệch ánh sáng có thể suy ra được khi chúng ta xét ánh sáng truyền trong một hệ quy chiếu đang rơi tự do, nhưng kết quả tính thu được cho góc lệch chỉ bằng một nửa giá trị so với kết quả của thuyết tương đối rộng.Một hiệu ứng có liên hệ gần gũi với ánh sáng bỉ bẻ cong là hiệu ứng trễ thời gian do hấp dẫn (hay trễ Shapiro), hiện tượng tín hiệu ánh sáng truyền từ điểm A tới điểm B sẽ mất thời gian lâu hơn nếu có một trường hấp dẫn giữa hai điểm đó so với khi không có trường hấp dẫn. Đã có nhiều thí nghiệm thành công kiểm tra hiệu ứng này với độ chính xác cao. Trong phương pháp tham số hóa hậu Newton (PPN), các phép đo bao gồm cả độ lệch ánh sáng và độ trễ thời gian do hấp dẫn xác định một tham số γ, chứa sự ảnh hưởng của trường hấp dẫn lên hình học của không gian.
+
+
+=== Sóng hấp dẫn ===
+
+Có một vài điểm tương tự giữa trường hấp dẫn yếu và điện từ học đó là, sự tương tự giữa sóng điện từ và sóng hấp dẫn: những biến đổi nhỏ của mêtric của không thời gian lan truyền với tốc độ ánh sáng. Hình dung đơn giản nhất về sóng hấp dẫn có thể thấy là tác dụng của nó lên vành hạt thử đặt trong vùng sóng truyền qua. Sóng hình sin lan truyền qua vành hạt theo hướng vuông góc với mặt phẳng vành làm bóp méo vành theo kiểu dao động điều hòa (minh họa hình bên phải). Do phương trình trường Einstein là phi tuyến, sóng hấp dẫn có cường độ bất kỳ không tuân theo nguyên lý chồng chập, khiến cho việc miêu tả nó rất khó khăn. Tuy vậy, đối với trường yếu chúng ta có thể áp dụng phương pháp xấp xỉ tuyến tính. Những sóng hấp dẫn được tuyến tính hóa là đủ chính xác để miêu tả các loại sóng lan truyền đến Trái Đất từ những sự kiện vũ trụ từ rất xa nếu các máy dò phát hiện ra chúng. Khi đến Trái Đất, do nguồn sản sinh ra sóng hấp dẫn ở rất xa cho nên biên độ sóng thu được ở các máy dò được tính toán vào khoảng cỡ 
+  
+    
+      
+        
+          10
+          
+            −
+            21
+          
+        
+      
+    
+     
+   hay nhỏ hơn. Các phương pháp phân tích dữ liệu thu được từ máy dò sử dụng đặc điểm của sóng hấp dẫn tuyến tính hóa đó là chúng có thể phân tích thành tổng các chuỗi tuần hoàn, hay chuỗi Fourier.Một số nghiệm chính xác miêu tả sóng hấp dẫn mà không cần đến phương pháp xấp xỉ, như đoàn sóng truyền qua chân không còn gọi là "vũ trụ Gowdy", một loại vũ trụ đang giãn nở chứa đầy sóng hấp dẫn. Nhưng đối với sóng hấp dẫn sinh ra từ những sự kiện thiên văn vật lý, như hai lỗ đen quay trên quỹ đạo quanh nhau và cuối cùng sáp nhập lại, hoặc các vụ nổ siêu tân tinh, những sự kiện này chỉ có thể thực hiện mô phỏng trên siêu máy tính bằng các mô hình phù hợp.Ngày 11 tháng 2 năm 2016, nhóm Hợp tác Khoa học LIGO và Virgo thông báo đã đo được trực tiếp sóng hấp dẫn phát ra từ cặp lỗ đen khối lượng sao sáp nhập vào nhau mở ra một lĩnh vực mới đó là thiên văn sóng hấp dẫn.
+
+
+=== Hiệu ứng quỹ đạo và tính tương đối của phương hướng ===
+
+Thuyết tương đối tổng quát tiên đoán một số kết quả khác lạ về chuyển động quỹ đạo của vật thể so với cơ học cổ điển. Nó tiên đoán sự tiến động của điểm cận nhật của quỹ đạo hành tinh, cũng như sự giảm chu kỳ quỹ đạo do hệ phát ra sóng hấp dẫn và các hiệu ứng liên quan đến tính tương đối của phương hướng.
+
+
+==== Sự tiến động của điểm cận nhật ====
+Trong thuyết tương đối rộng, cận điểm quỹ đạo (điểm của quỹ đạo gần nhất với khối tâm của hệ) sẽ tiến động—hay quỹ đạo không phải là elip, mà gần giống với elip khi nó quay quanh khối tâm, mà sẽ là đường cong giống cánh hoa hồng (xem hình bên). Einstein lần đầu tiên tìm ra được kết quả này khi ông sử dụng phương pháp xấp xỉ mêtric về giới hạn Newton và coi hành tinh có khối lượng không đáng kể so với Mặt Trời. Đối với ông, kết quả tính toán lượng dịch chuyển điểm cận nhật của Sao Thủy bằng với giá trị mà nhà thiên văn Urbain Le Verrier phát hiện ra vào năm 1859, chính là điều củng cố cho ông tin rằng cuối cùng ông đã tìm ra dạng đúng của phương trình trường hấp dẫn.Hiệu ứng này có thể suy trực tiếp từ nghiệm chính xác là mêtric Schwarzschild (miêu tả không thời gian xung quanh vật thể khối lượng hình cầu) hoặc sử dụng phương pháp khai triển hậu Newton. Về bản chất hiệu ứng dịch chuyển điểm cận nhật là do ảnh hưởng của hấp dẫn lên hình học của không gian và sự đóng góp của năng lượng tự có (self-energy) của nguồn hấp dẫn (thể hiện bởi tính phi tuyến của phương trình trường Einstein). Sự tiến động cận điểm đã được quan sát cho một số hành tinh với độ chính xác cao (Sao Thủy, Sao Kim và Trái Đất), cũng như ở hệ đôi pulsar, mà ở đây hiệu ứng thể hiện rõ cỡ vài bậc độ lớn.
+
+
+==== Giảm chu kỳ quỹ đạo ====
+Theo thuyết tương đối tổng quát, hệ sao đôi sẽ phát ra sóng hấp dẫn và vì vậy hệ mất năng lượng. Vì sự mất mát này, khoảng cách quỹ đạo giữa hai vật thể sẽ giảm dần, và tương ứng là chu kỳ quỹ đạo. Trong hệ Mặt Trời hoặc ở những hệ sao đôi, hiệu ứng này rất nhỏ và khó quan sát được. Nhưng đối với hệ pulsar đôi gồm hai sao neutron quay quanh nhau, trong đó có một hoặc cả hai là pulsar: những đài thiên văn vô tuyến trên Trái Đất sẽ nhận được những xung vô tuyến rất đều đặn từ các pulsar này, chúng được coi là những đồng hồ chính xác nhất trong tự nhiên, và cho phép việc đo các tham số quỹ đạo của hệ trở lên rất chính xác. Do sao neutron là những vật thể nén đặc và quay quanh nhau ở khoảng cách nhỏ cho nên lượng năng lượng của sóng hấp dẫn chúng phát ra là đáng kể.Hai nhà thiên văn vô tuyến Hulse và Taylor là những người đầu tiên ghi nhận sự suy giảm chu kỳ quỹ đạo do phát ra sóng hấp dẫn từ hệ pulsar PSR1913+16 mà họ đã phát hiện ra năm 1974. Đây là khám phá gián tiếp ra sóng hấp dẫn đầu tiên và họ nhận giải Nobel Vật lý vì khám phá này. Từ đó tới nay, các nhà thiên văn đã phát hiện ra một vài hệ pulsar đôi khác, đặc biệt hệ PSR J0737-3039 chứa cả hai pulsar.
+
+
+==== Hiệu ứng trắc địa và kéo hệ quy chiếu ====
+
+Có một số hiệu ứng tương đối tính tổng quát liên quan trực tiếp đến tính tương đối của phương hướng. Một hiệu ứng đó là độ lệch trắc địa: trục quay của một con quay trong không thời gian cong sẽ bị lệch đi trong quá trình con quay di chuyển trên quỹ đạo khi so sánh hướng của nó với một vật cố định ở rất xa, như ngôi sao chẳng hạn—cho dù con quay cố giữ hướng trục quay của nó cố định một hướng. Hiệu ứng này thể hiện bằng toán học chính là quá trình "chuyển dịch song song" của một vectơ trên đường trắc địa trong đa tạp cong. Đối với hệ Mặt Trăng–Trái Đất, khi coi Mặt Trăng là một "vectơ", hiệu ứng này đã được đo bằng cách chiếu tia laser lên một tấm phản quang đặt trên Mặt Trăng do các nhà du hành vũ trụ để lại khi đổ bộ lên Mặt Trăng (phương pháp định tầm Mặt Trăng). Gần đây, hiệu ứng trắc địa đã được đo với độ chính xác hơn 0,3% từ bốn con quay hồi chuyển siêu dẫn đặt trên vệ tinh Gravity Probe B quay trên quỹ đạo cực quanh Trái Đất.Trường hấp dẫn gần một thiên thể quay quanh trục của nó có tính động lực cao, hiệu ứng này gọi là hấp dẫn từ hay hiệu ứng kéo hệ quy chiếu. Một quan sát viên ở vị trí xa sẽ nhận thấy vật thử ở gần thiên thể quay bị "kéo theo" chiều quay của thiên thể đó. Hiện ứng này thể hiện rất rõ ở vùng không thời gian quanh lỗ đen quay, vùng này được miêu tả bằng mêtric Kerr. Khi ta một vật đặt vào "vùng sản công" của lỗ đen, việc nó bị kéo theo chiều quay của lỗ đen là không thể tránh khỏi. Sử dụng hướng của các con quay hồi chuyển trên đường trắc địa ta cũng thực hiện được kiểm nghiệm hiệu ứng này. Có một số thử nghiệm gây tranh cãi khi các nhà vật lý sử dụng vệ tinh LAGEOS để kiểm nghiệm xác nhận hiệu ứng này. Tàu thăm dò Mars Global Surveyor thám hiểm Sao Hỏa cũng đã được sử dụng để kiểm tra hiệu ứng này. Kết quả thí nghiệm từ tàu Gravity Probe B cũng xác nhận hiệu ứng này với độ chính xác khoảng 15%.
+
+
+== Các ứng dụng thiên văn vật lý ==
+
+
+=== Thấu kính hấp dẫn ===
+
+Sự lệch ánh sáng do hấp dẫn dẫn đến một hiện tượng thiên văn vật lý mới. Nếu có một thiên thể khối lượng lớn nằm giữa kính thiên văn và vật thể ở xa thì chúng ta sẽ thu được nhiều hình ảnh bị méo mó của vật này. Hiệu ứng này được gọi là thấu kính hấp dẫn. Phụ thuộc vào khoảng cách, nguồn phát, và sự phân bố khối lượng của thiên thể thấu kính, chúng ta có thể thu được nhiều hơn hai ảnh, hay thậm chí là một vành tròn gọi là vành Einstein, hoặc dạng cung.
+Các nhà thiên văn lần đầu tiên phát hiện ra thấu kính hấp dẫn vào năm 1979; Kể từ đó tới nay, hàng trăm thấu kính hấp dẫn đã được phát hiện và nghiên cứu. Ngay cả khi nhiều hình ảnh của cùng vật thể hiện ra quá gần nhau trong bức ảnh chụp, các nhà khoa học vẫn đo được hiệu ứng này, ví dụ, do đối tượng mục tiêu quá sáng; hiệu ứng "vi thấu kính hấp dẫn" đã được quan sát thấy.Thấu kính hấp dẫn trở thành một công cụ quan trọng trong thiên văn quan sát. Các nhà vũ trụ học sử dụng nó để phát hiện và ước tính sự phân bố của vật chất tối, họ sử dụng "thấu kính tự nhiên" để quan sát các thiên hà ở xa và có được phương pháp độc lập nhằm ước tính hằng số Hubble. Nhờ phân tích, đánh giá thống kê từ dữ liệu các thấu kính đã cung cấp những manh mối quan trọng trong sự tiến hóa cấu trúc của các thiên hà.
+
+
+=== Thiên văn sóng hấp dẫn ===
+
+Bằng quan sát các hệ pulsar đôi đã cung cấp những kết quả gián tiếp khẳng định sự tồn tại của sóng hấp dẫn (xem phần Giảm chu kỳ quỹ đạo ở trên). Sóng hấp dẫn phát ra từ những nguồn xa xôi trong vũ trụ đã được quan sát trực tiếp (như các sự kiện GW150914 và GW151226), và là mục tiêu chính của các dự án nghiên cứu liên quan đến thuyết tương đối hiện nay. Vài trạm quan sát thăm dò sóng hấp dẫn đang hoạt động trên mặt đất, nổi bật là các máy dò sóng hấp dẫn sử dụng giao thoa kế laser như GEO 600, LIGO, TAMA 300 và VIRGO. Nhiều kính thiên văn vô tuyến quan sát sự biến đổi nhỏ trong chu kỳ quay của các pulsar mili giây nhằm phát hiện sóng hấp dẫn ở dải tần số 10−9 đến 10−6 Hertz phát ra từ sự kiện sáp nhập hai lỗ đen. Đài quan sát châu Âu trên không gian, eLISA/NGO, hiện tại đang được phát triển, với phi vụ thử nghiệm tiên phong (LISA Pathfinder) được phóng lên vào năm 2015, và đã thu được kết quả thí nghiệm vượt mong đợi của các nhà khoa học.Quan sát sóng hấp dẫn cũng hứa hẹn bổ sung cho dữ liệu quan sát từ sóng điện từ. Chúng cho phép các nhà vật lý thu được thông tin về các lỗ đen và những thiên thể nén đặc khác như sao neutron và sao lùn trắng, về sự kiện phát nổ siêu tân tinh, và giai đoạn hình thành còn sơ khai của vũ trụ, bao gồm dấu hiệu của loại "dây vũ trụ" được các nhà lý thuyết dự đoán.
+
+
+=== Lỗ đen và các thiên thể nén đặc ===
+
+Bất cứ khi nào tỉ số giữa khối lượng của vật và bán kính của nó trở lên đủ lớn vượt qua một giới hạn, các nhà lý thuyết tiên đoán sẽ hình thành một lỗ đen, vùng của không thời gian mà không một thứ gì, kể cả ánh sáng có thể thoát ra được. Trong những mô hình được chấp nhận hiện nay về quá trình tiến hóa sao, các sao neutron với khối lượng xấp xỉ 1,4 lần khối lượng Mặt Trời, và các lỗ đen có khối lượng từ vài lần đến vài chục lần khối lượng Mặt Trời được cho là trạng thái cuối cùng trong quá trình tiến hóa của các ngôi sao có khối lượng lớn. Tại tâm của các thiên hà thường có lỗ đen siêu khối lượng với khối lượng từ vài triệu tới một chục tỷ lần khối lượng Mặt Trời, và sự có mặt của nó được cho là có vai trò quan trọng trong quá trình hình thành thiên hà cũng như các cấu trúc ở cấp độ lớn hơn.
+Về mặt thiên văn vật lý, tính chất quan trọng nhất của các thiên thể nén đặc là chúng cung cấp một cơ chế hiệu quả rất cao cho sự biến đổi năng lượng hấp dẫn thành bức xạ điện từ. Quá trình bồi tụ, vật chất khí hay bụi bị thu hút về các lỗ đen, là nguyên nhân phát sáng rất mạnh của một số thiên thể, điển hình là nhân các thiên hà hoạt động trên quy mô thiên hà hoặc các vi quasar ở những thiên thể cấp độ sao. Đặc biệt, sự bồi tụ cũng dẫn đến hình thành chùm tia tương đối tính, chùm hạt và bức xạ năng lượng cao với các hạt bị bắn ra với vận tốc gần bằng tốc độ ánh sáng. Thuyết tương đối tổng quát đóng một vai trò quan trọng cho mô hình hóa tất cả những hiện tượng này, và nhiều quan sát đã cung cấp những bằng chứng thực nghiệm cho sự tồn tại của lỗ đen với tính chất phù hợp với tiên đoán của lý thuyết.Lỗ đen cũng là mục tiêu mong muốn tìm kiếm trong nghiên cứu sóng hấp dẫn (xem phần sóng hấp dẫn ở trên). Quá trình sáp nhập các hệ lỗ đen đôi sẽ phát ra sóng hấp dẫn với tín hiệu rất mạnh khi đến được máy dò trên Trái Đất, và sóng hấp dẫn phát ra ở giai đoạn trước khi hai lỗ đen trộn thành một có thể coi là "ngọn nến chuẩn" nhằm đo khoảng cách đến hệ lỗ đen và cung cấp phương pháp độc lập cho nghiên cứu sự giãn nở của vũ trụ ở khoảng cách lớn. Sóng hấp dẫn phát ra từ sự kiện lỗ đen khối lượng sao bị hút vào lỗ đen siêu khối lượng mang lại cho các nhà vật lý thông tin về hình học của lỗ đen lớn hơn.
+
+
+=== Vũ trụ học ===
+
+Mô hình chuẩn về vũ trụ học hiện nay dựa trên phương trình trường Einstein có chứa hằng số vũ trụ học Λ, do nó có ảnh hưởng quan trọng đến động lực trên quy mô lớn của vũ trụ,
+
+  
+    
+      
+        
+          R
+          
+            μ
+            ν
+          
+        
+        −
+        
+          
+            
+              1
+            
+            2
+          
+        
+        R
+        
+        
+          g
+          
+            μ
+            ν
+          
+        
+        +
+        Λ
+         
+        
+          g
+          
+            μ
+            ν
+          
+        
+        =
+        κ
+        
+        
+          T
+          
+            μ
+            ν
+          
+        
+      
+    
+     
+  với 
+  
+    
+      
+        
+          g
+          
+            μ
+            ν
+          
+        
+      
+    
+     
+   là tenxơ mêtric. Dựa trên Nguyên lý vũ trụ học, vũ trụ là đồng nhất và đẳng hướng trên quy mô lớn, các nhà vật lý tìm ra được mêtric Friedmann–Lemaître–Robertson–Walker (mêtric FLRW) là nghiệm chính xác của phương trình Einstein mô tả vũ trụ đang nở ra hay co lại, cho phép mô tả sự tiến hóa của vũ trụ từ xấp xỉ 13,8 tỷ năm về trước, khởi nguyên từ Vụ nổ lớn. Mêtric FLRW là:
+
+  
+    
+      
+        d
+        
+          s
+          
+            2
+          
+        
+        =
+        −
+        
+          c
+          
+            2
+          
+        
+        d
+        
+          t
+          
+            2
+          
+        
+        +
+        a
+        (
+        t
+        
+          )
+          
+            2
+          
+        
+        
+          (
+          
+            
+              
+                
+                  d
+                  
+                    r
+                    
+                      2
+                    
+                  
+                
+                
+                  1
+                  −
+                  k
+                  
+                    r
+                    
+                      2
+                    
+                  
+                
+              
+            
+            +
+            
+              r
+              
+                2
+              
+            
+            d
+            
+              θ
+              
+                2
+              
+            
+            +
+            
+              r
+              
+                2
+              
+            
+            
+              sin
+              
+                2
+              
+            
+            ⁡
+            θ
+            
+            d
+            
+              ϕ
+              
+                2
+              
+            
+          
+          )
+        
+      
+    
+     
+  với a(t) là hệ số tỷ lệ chỉ phụ thuộc thời gian, hằng số k phụ thuộc vào độ cong của không thời gian và được chuẩn hóa thành -1, 0, 1 tương ứng với mô hình vũ trụ mở, phẳng hay đóng. Các biến 
+  
+    
+      
+        r
+        ,
+        θ
+        ,
+        ϕ
+      
+    
+     
+   là các tọa độ đồng chuyển động, mà mỗi thiên hà có giá trị cố định riêng. Khoảng cách vũ trụ học vật lý (khoảng cách thực) đối với hai thiên hà cách nhau một khoảng r và ở thời gian t cho trước (trong mô hình vũ trụ phẳng k = 0) là a(t)r, mà tăng dần theo thời gian đối với vũ trụ đang giãn nở. Để xác định được hệ số a(t), chúng ta phải giải phương trình Einstein với mêtric FLRW (thực chất mêtric là dạng tổng quát đối với vũ trụ có tính đồng nhất và đẳng hướng, nó không nhất thiết suy ra từ phương trình Einstein, phương trình này cần thiết để tính ra hệ số a(t)) gắn với dạng phân bố của vật chất. Theo Nguyên lý vũ trụ học hàm ý tenxơ mật độ năng lượng-động lượng của vật chất và bức xạ trong vũ trụ có dạng giống với tenxơ mật độ năng lượng-động lượng của chất lỏng tương đối tính lý tưởng có mật độ 
+  
+    
+      
+        ρ
+        (
+        t
+        )
+      
+    
+     
+   và áp suất 
+  
+    
+      
+        p
+        (
+        t
+        )
+      
+    
+     
+   (cả hai có thể biến đổi theo thời gian) và tenxơ mật độ năng lượng-động lượng có dạng 
+
+  
+    
+      
+        
+          T
+          
+            μ
+            ν
+          
+        
+        
+        =
+        
+          (
+          
+            ρ
+            +
+            
+              
+                p
+                
+                  c
+                  
+                    2
+                  
+                
+              
+            
+          
+          )
+        
+        
+          u
+          
+            μ
+          
+        
+        
+          u
+          
+            ν
+          
+        
+        +
+        p
+        
+          g
+          
+            μ
+            ν
+          
+        
+      
+    
+     
+  với 
+  
+    
+      
+        
+          u
+          
+            μ
+          
+        
+      
+    
+     
+   là bốn vận tốc của vật chất, và 
+  
+    
+      
+        
+          g
+          
+            μ
+            ν
+          
+        
+      
+    
+     
+   là thành phần của ma trận nghịch đảo của ma trận có thành phần 
+  
+    
+      
+        
+          g
+          
+            μ
+            ν
+          
+        
+      
+    
+     
+  . Tiếp theo, sử dụng mêtric chúng ta tính ra được hệ số Christoffel và tenxơ Ricci, vô hướng Ricci. Cùng với tenxơ mật độ năng lượng-động lượng thay vào phương trình trường Einstein chúng ta thu được hai phương trình Friedmann độc lập sau khi sắp xếp lại các số hạng
+
+  
+    
+      
+        
+          H
+          
+            2
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  
+                    a
+                    ˙
+                  
+                
+                a
+              
+            
+            )
+          
+          
+            2
+          
+        
+        =
+        
+          
+            
+              8
+              π
+              G
+            
+            3
+          
+        
+        ρ
+        −
+        
+          
+            
+              k
+              
+                c
+                
+                  2
+                
+              
+            
+            
+              a
+              
+                2
+              
+            
+          
+        
+        +
+        
+          
+            
+              Λ
+              
+                c
+                
+                  2
+                
+              
+            
+            3
+          
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          
+            
+              
+                a
+                ¨
+              
+            
+            a
+          
+        
+        =
+        −
+        
+          
+            
+              4
+              π
+              G
+            
+            3
+          
+        
+        
+          (
+          
+            ρ
+            +
+            
+              
+                
+                  3
+                  p
+                
+                
+                  c
+                  
+                    2
+                  
+                
+              
+            
+          
+          )
+        
+        +
+        
+          
+            
+              Λ
+              
+                c
+                
+                  2
+                
+              
+            
+            3
+          
+        
+      
+    
+     
+  với a chấm có nghĩa là đạo hàm theo thời gian của a và H là tốc độ giãn nở của Vũ trụ gọi là tham số Hubble hay hằng số Hubble (giá trị hiện tại của nó là 
+  
+    
+      
+        
+          H
+          
+            0
+          
+        
+      
+    
+     
+  , và 
+  
+    
+      
+        
+          
+            
+              a
+              ˙
+            
+          
+        
+        =
+        
+          H
+          
+            0
+          
+        
+        a
+      
+    
+     
+   hay có dạng tương tự 
+  
+    
+      
+        v
+        =
+        
+          H
+          
+            0
+          
+        
+        d
+      
+    
+     
+   như thường viết ở định luật Hubble). Từ hai phương trình ta thấy H phụ thuộc vào cả mật độ năng lượng, độ cong của không thời gian cũng như hằng số 
+  
+    
+      
+        Λ
+      
+    
+     
+  . Nếu hằng số vũ trụ học lấn át mật độ năng lượng, bức xạ của vật chất (cả vật chất tối và vật chất thường) trong vũ trụ thì ở phương trình Friedmann thứ hai có vế trái lớn hơn 0 và 
+  
+    
+      
+        
+          
+            
+              a
+              ¨
+            
+          
+        
+        
+          /
+        
+        
+          a
+        
+        >
+        0
+      
+    
+     
+   dẫn đến sự giãn nở của vũ trụ tăng tốc. Ngoài hai phương trình trên chúng ta còn có thêm phương trình của định luật bảo toàn 
+  
+    
+      
+        
+          ∇
+          
+            ν
+          
+        
+        
+          T
+          
+            μ
+            ν
+          
+        
+        
+        =
+        0
+      
+    
+     
+  
+Phương trình Friedmann có thể giải chính xác khi giả sử thêm phương trình trạng thái của chất lỏng lý tưởng
+
+  
+    
+      
+        p
+        =
+        w
+        ρ
+        
+          c
+          
+            2
+          
+        
+        ,
+        
+      
+    
+     
+  với 
+  
+    
+      
+        
+        p
+      
+    
+     
+   là áp suất, 
+  
+    
+      
+        
+        ρ
+      
+    
+     
+   là mật độ của chất lỏng trong hệ tọa độ đồng chuyển động và 
+  
+    
+      
+        
+        w
+      
+    
+     
+   là hằng số.
+Trong trường hợp vũ trụ phẳng (k = 0) và khi Λ=0, nghiệm cho hệ số tỷ lệ là
+
+  
+    
+      
+        a
+        (
+        t
+        )
+        =
+        
+          a
+          
+            0
+          
+        
+        
+        
+          t
+          
+            
+              2
+              
+                3
+                (
+                w
+                +
+                1
+                )
+              
+            
+          
+        
+      
+    
+     
+  với 
+  
+    
+      
+        
+        
+          a
+          
+            0
+          
+        
+      
+    
+     
+   là hằng số tích phân tuân theo lựa chọn điều kiện đầu. Họ nghiệm cho tham số 
+  
+    
+      
+        
+        w
+      
+    
+     
+   là rất quan trọng trong mô hình vũ trụ học.
+
+Khi các tham số (như mật độ trung bình của vật chất, áp suất bức xạ...) được đo từ các dự án khảo sát vũ trụ, và phối hợp với các dữ liệu khác nhằm kiểm tra các hệ quả mà mô hình chuẩn vũ trụ học tiên đoán. Các hệ quả tiên đoán, hầu hết phù hợp với dữ liệu quan sát, bao gồm lượng nguyên tố hóa học hình thành trong giai đoạn tổng hợp hạt nhân nguyên thủy của vũ trụ sơ khai từ Vụ nổ lớn, cấu trúc lớn của vũ trụ, cũng như sự tồn tại và tính chất của "tiếng vọng nhiệt" từ thời điểm khởi nguyên của vũ trụ, bức xạ phông vi sóng vũ trụ.Các dự án khảo sát tốc độ giãn nở của vũ trụ cho phép các nhà vật lý ước tính được tổng lượng vật chất trong vũ trụ, mặc dù bản chất của một số loại vẫn còn là bí ẩn. Khoảng 90% lượng vật chất là vật chất tối, mà có tương tác hấp dẫn, nhưng lại không tham gia vào tương tác điện từ, và do vậy không thể quan sát trực tiếp được. Chưa có một lý thuyết nào miêu tả dạng vật chất mới này, mà phù hợp với khuôn khổ của Mô hình chuẩn trong vật lý hạt hoặc phải đề xuất lý thuyết sửa đổi mô hình hấp dẫn. Dữ liệu thu được từ các dự án khảo sát dịch chuyển đỏ từ các vụ nổ siêu tân tinh từ xa và đo lường từ bức xạ nền vi sóng cũng chỉ ra quá trình tiến hóa của vũ trụ bị ảnh hưởng lớn bởi hằng số vũ trụ học gây ra sự giãn nở tăng tốc của vũ trụ (miêu tả khái quát ở trên), hay tương đương, bởi một dạng năng lượng kỳ lạ kết hợp trong phương trình trạng thái, gọi là năng lượng tối, mà bản chất của nó vẫn chưa biết được.Có một giai đoạn xảy ra rất nhanh từ vụ nổ lớn đó là pha lạm phát, một giai đoạn giãn nở gia tốc cực nhanh của vũ trụ trong khoảng thời gian cực ngắn 
+  
+    
+      
+        
+          10
+          
+            −
+            33
+          
+        
+      
+    
+     
+   giây. Nó được nêu ra từ năm 1980 với mục đích giải thích một số kết quả quan sát không là hệ quả của mô hình vũ trụ học cổ điển, như sự đồng nhất gần như hoàn hảo của bức xạ nền vũ trụ. Những khảo sát gần đây về bức xạ nền vi sóng vũ trụ cho kết quả về chứng cứ đầu tiên của kịch bản này. Tuy thế, có nhiều kịch bản lạm phát khác nhau mà hiện tại chưa thể nói kịch bản nào là phù hợp nhất nếu rút ra từ dữ liệu thực nghiệm. Một câu hỏi lớn hơn nữa trong vật lý của vũ trụ sơ khai, trước cả giai đoạn lạm phát và gần với mô hình vũ trụ học tiên đoán tồn tại kỳ dị của Vụ nổ lớn. Câu trả lời cho trạng thái của giai đoạn sơ khai này đòi hỏi các nhà vật lý phát triển một lý thuyết hoàn thiện về hấp dẫn lượng tử, mà vẫn chưa có được (xem phần Hấp dẫn lượng tử bên dưới).
+
+
+== Các khái niệm mở rộng ==
+
+
+=== Cấu trúc nhân quả và hình học toàn cục ===
+
+Trong thuyết tương đối rộng, không vật nào có vận tốc bằng hoặc vượt tốc độ ánh sáng. Không có sự ảnh hưởng nào từ sự kiện A có thể đến vị trí X trước khi ánh sáng gửi từ A đến X (xem thêm phần Chuyển sang tương đối tính ở trên). Hệ quả của nó là bằng cách sử dụng mọi tuyến thế giới của ánh sáng (light worldline-hay đường trắc địa không) chúng ta sẽ thu được thông tin về cấu trúc nhân quả của không thời gian. Cấu trúc này được thể hiện bằng biểu đồ Penrose–Carter trong đó những vùng không gian lớn vô hạn và khoảng thời gian lớn vô hạn được co lại một cách compact hóa để vừa với một biểu đồ nhỏ, trong khi vẫn cho phép ánh sáng chuyển động trên đường nghiêng 45° hoặc 135° như trong các biểu đồ Minkowski.Nhận thức được vai trò quan trọng của cấu trúc nhân quả, nhà toán học Roger Penrose và những người khác đã phát triển ra hình học toàn cục. Trong hình học này, đối tượng nghiên cứu không phải là một nghiệm đặc biệt (hoặc họ nghiệm) của phương trình Einstein, mà là những liên hệ thỏa mãn cho mọi đường trắc địa, ví dụ như phương trình Raychaudhuri, cũng như những giả thiết không cụ thể về bản chất của vật chất (như được miêu tả thành các điều kiện năng lượng) và sử dụng để suy ra các kết quả tổng quát.
+
+
+=== Chân trời ===
+
+Sử dụng hình học toàn cục, người ta chứng minh được một số không thời gian chứa những mặt biên gọi là chân trời (hay chân trời sự kiện), mặt phân chia một vùng tách khỏi phần còn lại của không thời gian. Ví dụ hay gặp nhất đó là các lỗ đen: nếu khối lượng bị nén vào một vùng không gian đủ nhỏ (như được nêu trong phỏng đoán vòng-hoop conjecture), với bán kính Schwarzschild tương ứng trong nghiệm Schwarzschild), và ánh sáng không thể thoát từ bên trong ra ngoài. Do không có vật nào vượt qua được ánh sáng, mọi vật chất rơi vào trong đều bị giam giữ lại. Tuy mọi vật không thể thoát ra ngoài nhưng việc vượt qua chân trời sự kiện đi vào bên trong lỗ đen là có thể, và chân trời của lỗ đen chỉ là kỳ dị toán học chứ không phải là kỳ dị vật lý thực (cũng xem phần Cơ sở cho mô hình vật lý ở trên).
+Những nghiên cứu ban đầu về các nghiệm chính xác của phương trình trường Einstein, nổi bật là nghiệm Schwarzschild đối xứng cầu (thường dùng để miêu tả lỗ đen dừng (đứng yên) và không quay) và nghiệm Kerr đối xứng trục (dùng để miêu tả lỗ đen dừng, quay quanh trục của nó, lỗ đen này có thêm những đặc trưng mới như mặt cầu sản công-ergosphere). Bằng sử dụng hình học toàn cục, các nhà vật lý sau đó đã phát hiện thêm những tính chất tổng quát của lỗ đen. Đó là miêu tả bằng vật lý các lỗ đen chỉ đơn giản cần mười một tham số xác định bao gồm năng lượng (1 tham số), động lượng (3), mômen động lượng (3), vị trí của nó tại thời gian cụ thể (3) và điện tích (1) lỗ đen. Đây chính là phát biểu của định lý về đặc trưng duy nhất của lỗ đen: "các lỗ đen không có tóc", nghĩa là nó không có những đặc điểm khác phân biệt giống như các kiểu tóc ở người. Nó không phụ thuộc vào sự phức tạp về cấu trúc cũng như thành phần, trạng thái của thiên thể trước khi suy sụp hấp dẫn hình thành lên lỗ đen, lỗ đen sinh ra (sau khi quá trình suy sụp phát ra sóng hấp dẫn) có những đặc điểm rất đơn giản.Đáng chú ý hơn nữa, có một bộ các định luật gọi là cơ học lỗ đen, tương tự như các định luật nhiệt động lực học. Ví dụ, định luật hai của cơ học lỗ đen, diện tích của chân trời sự kiện của lỗ đen tổng quát sẽ không bao giờ giảm theo thời gian, tương tự như entropy của hệ nhiệt động lực học. Định luật này giới hạn năng lượng mà chúng ta có thể thu được theo nghĩa cổ điển từ một lỗ đen quay (ví dụ theo tiến trình Penrose). Có chứng cứ mạnh cho rằng các định luật của cơ học lỗ đen thực tế chỉ là tập con của các định luật nhiệt động lực học, và diện tích chân trời sự kiện tỷ lệ với entropy của nó. Kết quả này dẫn đến sự sửa đổi các định luật cơ học lỗ đen ban đầu: như định luật thứ hai sẽ trở thành một phần của định luật thứ hai trong nhiệt động lực học, diện tích chân trời lỗ đen không thể giảm—trong khoảng thời gian những quá trình khác đảm bảo rằng, trên toàn thể entropy luôn tăng. Khi xét trên phương diện là một vật trong cân bằng nhiệt động với nhiệt độ khác không, lỗ đen sẽ phát ra bức xạ nhiệt. Những tính toán bán cổ điển cho thấy kết quả đúng như vậy, với bề mặt hấp dẫn đóng vai trò là nhiệt độ trong định luật Planck. Bức xạ này gọi là bức xạ Hawking (xem phần lý thuyết lượng tử bên dưới).Ngoài chân trời sự kiện ở các lỗ đen còn có những loại chân trời khác. Trong mô hình vũ trụ đang giãn nở, một quan sát viên sẽ thấy rằng một số vùng không thời gian trong quá khứ không bao giờ quan sát được ("chân trời hạt"), và một số vùng trong tương lai không bao giờ bị ảnh hưởng (chân trời vũ trụ học). Ngay cả trong không thời gian Minkowski phẳng, được miêu tả bằng một quan sát viên đang chuyển động gia tốc đều (không gian Rindler), sẽ có chân trời xuất hiện kết hợp với dạng bức xạ bán cổ điển gọi là "hiệu ứng Unruh".
+
+
+=== Kỳ dị ===
+
+Một đặc trưng tổng quát khác—và khá nhiễu loạn—của thuyết tương đối tổng quát đó là sự xuất hiện của những kỳ dị không thời gian. Chúng ta có thể miêu tả cấu trúc không thời gian bằng sử dụng các đường trắc địa kiểu thời gian cũng như các đường truyền tia sáng— mọi con đường khả dĩ mà ánh sáng hay vật chất có thể di chuyển được. Nhưng một số nghiệm của phương trình trường Einstein có những "mỏm sắc"—những vùng gọi là kỳ dị không thời gian, nơi đường trắc địa của ánh sáng và hạt kết thúc đột ngột, và hình học của không thời gian không còn được xác định. Trong trường hợp thú vị hơn, có những "kỳ dị độ cong", nơi các đại lượng đặc trưng bởi độ cong không thời gian, như độ cong vô hướng Ricci hoặc bình phương độ cong Riemann, nhận giá trị vô hạn. Những ví dụ thường gặp về không thời gian với kỳ dị tương lai—nơi tuyến thế giới kết thúc (worldline)—là nghiệm Schwarzschild, miêu tả điểm kỳ dị bên trong lỗ đen dừng không quay (xem Cơ sở cho mô hình vật lý ở trên), hoặc nghiệm Kerr miêu tả vòng kỳ dị bên trong một lỗ đen dừng quay quanh trục của nó. Nghiệm Friedmann–Lemaître–Robertson–Walker và những không thời gian khác miêu tả vũ trụ có điểm kỳ dị quá khứ nơi các tuyến thế giới bắt đầu, hay ở kỳ dị của Vụ Nổ Lớn, cũng như chúng có những điểm kỳ dị tương lai (như Vụ co lớn).Những nghiệm miêu tả ở trên có một số đặc điểm đối xứng—và do vậy đã được đơn giản hóa—và biết đâu sự xuất hiện của những kỳ dị này chỉ là sự lý tưởng hóa nhân tạo (do giả sử tính đối xứng và chọn hệ tọa độ-xem mục Chân trời ở trên). Tuy nhiên theo định lý điểm kỳ dị, chứng minh bằng phương pháp của hình học toàn cục, nói rằng: các điểm kỳ dị là những đặc điểm chung nội tại của thuyết tương đối tổng quát, và sự suy sụp hấp dẫn của ngôi sao thực với khối lượng đủ lớn trở thành lỗ đen không tránh khỏi xuất hiện điểm kỳ dị này cũng như tồn tại điểm kỳ dị ở sự khởi đầu của những mô hình vũ trụ đang giãn nở. Tuy vậy, định lý này nói rất ít về đặc điểm của các kỳ dị, và hiện nay đang có những nỗ lực nghiên cứu nhằm phân loại cấu trúc những thực thể này (như phỏng đoán BKL). "Phỏng đoán sự kiểm duyệt vũ trụ" phát biểu rằng mọi kỳ dị tương lai thực (cấu hình vật chất không có đối xứng hoàn hảo, cũng như các đặc tính thực khác) bị ẩn giấu an toàn bên dưới chân trời sự kiện, và do vậy quan sát viên ở xa sẽ không nhìn thấy được. Tuy chưa có chứng minh chặt chẽ bằng toán học, các mô phỏng máy tính đều ủng hộ kết quả của phỏng đoán này.
+
+
+=== Phương trình tiến hóa ===
+Mỗi nghiệm của phương trình Einstein chứa toàn bộ lịch sử của một không thời gian mà nó miêu tả — nó không chỉ chụp lại vật thể hoạt động như thế nào mà còn là toàn bộ không thời gian có thể chứa vật chất. Nghiệm miêu tả trạng thái của vật chất và hình học khắp nơi và tại mỗi thời điểm trong không thời gian. Do tuân theo nguyên lý hiệp biến tổng quát (tính bất biến của phương trình các định luật vật lý dưới mọi phép biến đổi hệ tọa độ), lý thuyết của Einstein không đủ để xác định phương trình tiến hóa theo thời gian của tenxơ mêtric. Nó phải kết hợp với các điều kiện tọa độ, tương tự như phép trộn chuẩn (gauge fixing) trong những lý thuyết trường khác.Để hiểu phương trình trường Einstein như là hệ phương trình vi phân riêng phần, sẽ thuận lợi khi chúng ta thiết lập chúng theo cách miêu tả sự tiến hóa của cấu trúc hình học theo thời gian. Điều này được thực hiện trong hình thức "3+1", với không thời gian tách ra thành 3 chiều không gian và 1 chiều thời gian. Ví dụ như hình thức luận ADM. Cách phân tách này cho thấy các phương trình tiến hóa của không thời gian trong thuyết tương đối rộng hoạt động trơn tru: phương trình luôn luôn tồn tại nghiệm xác định duy nhất, và phù hợp với điều kiện ban đầu định trước. Những hình thức luận phân tách phương trình Einstein là cơ sở cho ngành mô phỏng không thời gian trong thuyết tương đối trên siêu máy tính.
+
+
+=== Các đại lượng toàn cục và giả cục bộ ===
+
+Khái niệm phương trình tiến hóa có liên hệ mật thiết với những khía cạnh khác của vật lý tương đối tính tổng quát. Trong lý thuyết Einstein, chúng ta không thể có được một định nghĩa chung cho một thuộc tính có vẻ đơn giản của một hệ như tổng khối lượng (hay năng lượng). Lý do chính đó là trường hấp dẫn—như những trường vật lý khác— phải được gán cho một lượng năng lượng xác định, nhưng các nhà vật lý đã chứng minh rằng về cơ bản chúng ta không thể cục bộ hóa (hay định xứ) năng lượng hấp dẫn (tức là không xác định cụ thể được năng lượng hấp dẫn ở phạm vi cục bộ).Mặc dù vậy, chúng ta vẫn có thể xác định tổng khối lượng của hệ (khối lượng toàn cục), hoặc sử dụng kỹ thuật "quan sát viên ở xa vô tận" (khối lượng ADM) hoặc các đối xứng phù hợp (khối lượng Komar). Nếu chúng ta trừ vào tổng khối lượng của hệ bởi năng lượng do sóng hấp dẫn mang ra xa vô tận, kết quả thu được gọi là khối lượng Bondi đối với quan sát viên ở xa vô tận. Cũng giống như trong vật lý cổ điển, các nhà vật lý đã chứng minh được những khối lượng này phải dương. Và cũng có tương ứng định nghĩa khối lượng (năng lượng) toàn cục với việc định nghĩa động lượng và mômen động lượng trên toàn cục. Cũng đã có những cố gắng cho việc định nghĩa những đại lượng giả cục bộ, như khối lượng của một hệ cô lập bằng cách chỉ sử dụng những đại lượng được xác định bên trong phạm vi của không thời gian chứa hệ đó. Mục đích của việc này là nhằm thu được những đại lượng giả cục bộ có ích trong việc miêu tả hệ cô lập, như việc phát biểu chính xác bằng toán học phỏng đoán vòng (hoop conjecture).
+
+
+== Mối quan hệ với thuyết lượng tử ==
+Thuyết tương đối tổng quát là một trong hai trụ cột của vật lý hiện đại, trụ cột kia chính là thuyết lượng tử, cơ sở cho hiểu biết của chúng ta về vật chất từ các hạt cơ bản đến vật lý trạng thái rắn. Tuy nhiên, câu hỏi mở về mối liên hệ giữa hai lý thuyết vẫn là bài toán khó của vật lý hiện đại.
+
+
+=== Lý thuyết trường lượng tử trong không thời gian cong ===
+
+Lý thuyết trường lượng tử thông thường, cơ sở của vật lý hạt cơ bản, được xác định trong không thời gian Minkowski phẳng; lý thuyết này miêu tả hành trạng của các hạt vi mô trong trường hấp dẫn rất yếu và coi như bỏ qua giống như thường gặp trên Trái Đất. Để miêu tả những lúc hấp dẫn trở lên đủ mạnh để ảnh hưởng tới vật chất lượng tử, nhưng chưa đủ mạnh để cần thiết phải lượng tử hóa hấp dẫn, các nhà vật lý phải thiết lập lý thuyết trường lượng tử trong không thời gian cong. Những lý thuyết này dựa trên thuyết tương rộng miêu tả bối cảnh không thời gian cong, trên đó xác định một trường lượng tử nhằm miêu tả hành trạng của vật chất lượng tử trong không thời gian đó. Sử dụng lý thuyết này, Hawking và các nhà vật lý chứng minh được lỗ đen phát ra dạng phổ bức xạ vật đen các hạt lượng tử gọi là bức xạ Hawking, dẫn đến hệ quả của sự bốc hơi lỗ đen trong thời gian dài. Như đã miêu tả ngắn ở trên, bức xạ này đóng vai trò quan trọng trong nhiệt động lực học lỗ đen.
+
+
+=== Hấp dẫn lượng tử ===
+
+Sự đòi hỏi cho tính nhất quán giữa cách miêu tả lượng tử về vật chất và miêu tả hình học cấu trúc không thời gian, cũng như sự xuất hiện của kỳ dị không thời gian (nơi độ cong hình học ở thang vi mô), ám chỉ cần thiết có một lý thuyết đầy đủ về hấp dẫn lượng tử: để miêu tả đặc điểm gần kỳ dị bên trong lỗ đen, và ở thời điểm sơ khai của vũ trụ, lý thuyết đòi hỏi hấp dẫn và cấu trúc không thời gian đi kèm được miêu tả bằng ngôn ngữ của vật lý lượng tử. Cho dù đã có những nỗ lực lớn, chưa một lý thuyết hoàn chỉnh và nhất quán nào về hấp dẫn lượng tử hiện nay được công nhận rộng rãi, ngay cả khi hứa hẹn một số ứng cử viên đầy sáng giá.
+Khi các nhà vật lý cố gắng tổng quát hóa những lý thuyết trường lượng tử thông thường, và sử dụng vật lý hạt cơ bản để miêu tả các tương tác cơ bản cũng như gộp cả tương tác hấp dẫn vào đã dẫn đến những vấn đề nghiêm trọng. Ở mức năng lượng thấp, cách tiếp cận này đã thành công, với kết quả là lý thuyết trường hữu hiệu (lượng tử) về hấp dẫn được mọi người chấp nhận. Tuy nhiên đối với mức năng lượng cao, kết quả của mô hình mất đi tính tiên đoán của nó ("không tái chuẩn hóa được").
+Một lý thuyết nhằm vượt qua những trở ngại này là lý thuyết dây, lý thuyết lượng tử không coi các hạt điểm là những viên gạch cơ bản, mà thay vào đó là những dây dao động rất nhỏ và có một chiều. Lý thuyết này hứa hẹn một cách miêu tả thống nhất cho mọi hạt và các tương tác, bao gồm cả hấp dẫn; nhưng cái giá phải trả là những đặc điểm kì lạ trong lý thuyết dây như không gian có thêm 6 chiều phụ thêm ngoài 3 chiều đã có. Trong giai đoạn mà các nhà lý thuyết dây gọi là "cuộc cách mạng siêu dây lần hai", người ta đã nêu ra phỏng đoán sự kết hợp lý thuyết dây và sự thống nhất với thuyết tương đối tổng quát và siêu đối xứng thành một lý thuyết gọi là siêu hấp dẫn tạo nên một phần của mô hình giả thuyết với 10 chiều không gian và 1 chiều thời gian gọi là thuyết M, một lý thuyết xác định duy nhất và nhất quán về hấp dẫn lượng tử. Tất cả các lý thuyết này đều chưa được thực nghiệm kiểm chứng.Một cách tiếp cận khác đó là thủ tục lượng tử hóa chính tắc trong cơ học lượng tử. Sử dụng hình thức luận về giá trị ban đầu của thuyết tương đối rộng (xem Phương trình tiến hóa ở trên), các nhà vật lý thu được phương trình Wheeler–deWitt (phương trình tương tụ như phương trình Schrödinger) nhưng đáng tiếc là nó đã không đúng. Tuy thế, với biến Ashtekar được đưa ra, dẫn đến một mô hình hứa hẹn khác đó là hấp dẫn lượng tử vòng. Trong thuyết này, không gian được miêu tả bằng cấu trúc lưới như mạng lưới spin, và nó tiến hóa trong thời gian theo những bước rời rạc.Phụ thuộc vào đặc điểm nào của thuyết tương đối tổng quát và thuyết lượng tử được giữ nguyên, và mức độ thay đổi các đặc điểm khác, đã có rất nhiều lý thuyết được đưa ra nhằm cạnh tranh với thuyết hấp dẫn lượng tử, như động lực học tam phân, tập nhân quả, mô hình twistor hoặc mô hình dựa trên tích phân đường về vũ trụ lượng tử.Mọi lý thuyết miêu tả trong phần này vẫn có những vấn đề trong lý luận, khái niệm và phỏng đoán mà chưa vượt qua được. Và chúng đối mặt với chung một vấn đề đó là, chưa có một cách nào nhằm đưa các kết quả lý thuyết ra kiểm chứng bằng thực nghiệm được (và do vậy cho phép các nhà vật lý quyết định được lý thuyết nào có triển vọng trở lên đúng và loại bỏ những lý thuyết nào), mặc dù có hy vọng trong tương lai điều này sẽ thay đổi khi các dữ liệu thực nghiệm trong vật lý hạt cơ bản năng lượng cao cũng như từ các quan sát thiên văn học cho phép với độ chính xác cao hơn và tinh tế hơn.
+
+
+== Trạng thái phát triển ==
+Thuyết tương đối rộng đã nổi lên như là một mô hình thành công lớn về lực hút hấp dẫn và vũ trụ học, mà nó đã vượt qua được rất nhiều quan sát và thí nghiệm kiểm chứng một cách mạch lạc. Tuy nhiên, có những dấu hiệu cho thấy lý thuyết chưa hoàn chỉnh. Vấn đề về hấp dẫn lượng tử và câu hỏi về tính thực tại của các kỳ dị không thời gian vẫn đang là những câu hỏi mở mang tính thời sự. Dữ liệu quan sát mang lại chứng cứ cho năng lượng tối và vật chất tối cho thấy các nhà vật lý cần phải tìm kiếm một nền vật lý mới. Ngay cả với bản thân lý thuyết, thuyết tương đối tổng quát là mỏ vàng giàu tiềm năng cho những khám phá mới. Nhiều nhà vật lý tương đối tính nghiên cứu thuyết tương đối bằng công cụ toán học nhằm tìm hiểu bản chất của các kỳ dị và những tính chất cơ bản của phương trình trường Einstein, cũng như gia tăng sử dụng siêu máy tính để mô phỏng (như miêu tả quá trình các lỗ đen va chạm và sáp nhập) trong lĩnh vực số hóa thuyết tương đối (numerical relativity). Sau sự kiện quan sát được trực tiếp sóng hấp dẫn bởi Advanced LIGO, lĩnh vực thiên văn sóng hấp dẫn đã mở ra một nhánh ứng dụng mới cho thuyết tương đối tổng quát. Một thế kỷ sau khi được công bố, thuyết tương đối rộng vẫn đang là lĩnh vực nghiên cứu sôi nổi và đầy hứa hẹn trong nhiều thập kỷ tới.
+
+
+== Xem thêm ==
+Giới thiệu thuyết tương đối rộng
+Lý thuyết tương đối hẹp
+
+
+== Chú thích ==
+
+
+== Nguồn tham khảo ==
+
+
+== Đọc thêm ==
+
+
+=== Sách phổ thông ===
+Geroch, Robert (1981). General Relativity from A to B. Chicago: Nhà xuất bản Đại học Chicago. ISBN 0-226-28864-1.
+Wald, Robert M. (1992). Space, Time, and Gravity: the Theory of the Big Bang and Black Holes. Chicago: Nhà xuất bản Đại học Chicago. ISBN 0-226-87029-4.
+Thorne, Kip S. (1995). Black Holes and Time Warps: Einstein's Outrageous Legacy. Thành phố New York: W. W. Norton. ISBN 0-393-31276-3.
+
+
+=== Sách giáo khoa ===
+
+
+==== Sách căn bản ====
+Hughston, L.; Tod, K. P. (1991). Introduction to General Relativity. Cambridge: Nhà xuất bản Đại học Cambridge. ISBN 0-521-33943-X.
+d'Inverno, Ray (1992). Introducing Einstein's Relativity. Oxford: Nhà xuất bản Đại học Oxford. ISBN 0-19-859686-3.
+Schutz, Bernard F. (1985). A First Course in General Relativity. Cambridge: Nhà xuất bản Đại học Cambridge. ISBN 0-521-27703-5.
+Stephani, Hans (1990). General Relativity: An Introduction to the Theory of the Gravitational Field. Cambridge: Nhà xuất bản Đại học Cambridge. ISBN 0-521-37941-5.
+Ohanian, Hans C.; Ruffini, Remo (1994). Gravitation and Spacetime. Thành phố New York: W. W. Norton. ISBN 0-393-96501-5.
+Taylor, Edwin F.; Wheeler, John Archibald (2000). Exploring Black Holes: Introduction to General Relativity. Addison Wesley. ISBN 0-201-38423-X.
+
+
+==== Sách nâng cao ====
+Carroll, Sean M. (2004). Spacetime and Geometry: An Introduction to General Relativity. San Francisco: Addison-Wesley. ISBN 0-8053-8732-3.
+Landau, L. D.; Lifschitz, E. F. (1980). The Classical Theory of Fields. Luân Đôn: Butterworth-Heinemann. ISBN 0-7506-2768-9.
+Misner, Charles; Thorne, Kip S.; Wheeler, John Archibald (1973). Gravitation. San Francisco: W. H. Freeman. ISBN 0-7167-0344-0.
+Weinberg, Steven (1972). Gravitation and Cosmology: Principles and Applications of the General Theory of Relativity. New York: John Wiley & Sons. ISBN 0-471-92567-5.
+Wald, Robert M. (1984). General Relativity. Chicago: Nhà xuất bản Đại học Chicago. ISBN 0-226-87033-2.
+
+
+==== Sách chuyên đề ====
+Lightman, Alan P.; Press, William H.; Teukolsky, Saul A. (1975). Problem Book in Relativity and Gravitation. Princeton, New Jersey: Nhà xuất bản Đại học Princeton. ISBN 0-691-08162-X.
+Poisson, Eric (2004). A Relativist's Toolkit: The Mathematics of Black Hole Mechanics. Cambridge: Nhà xuất bản Đại học Cambridge. ISBN 0-521-83091-5.
+Stewart, John (1993). Advanced General Relativity. Cambridge: Nhà xuất bản Đại học Cambridge. ISBN 0-521-44946-4.
+De Felice, F.; Clarke, C. J. (1992). Relativity on Curved Manifolds. Cambridge: Nhà xuất bản Đại học Cambridge. ISBN 0-521-42908-0.
+Hawking, Stephen W.; Ellis, George F.R. (1973). The Large Scale Structure of Space-Time. Nhà xuất bản Đại học Cambridge. ISBN 978-0-521-09906-6.
+
+
+== Liên kết ngoài ==
+
+Hawking, Steven (2001). Vũ trụ trong một vỏ hạt: Lược sử về thuyết tương đối. Bantam. ISBN 0-553-71449-X. Bản dịch tiếng Việt của Dạ Trạch.
+Einstein Online Lưu trữ 2014-06-01 tại Wayback Machine – Articles on a variety of aspects of relativistic physics for a general audience; hosted by the Max Planck Institute for Gravitational Physics
+NCSA Spacetime Wrinkles Lưu trữ 2015-03-27 tại Wayback Machine – produced by the numerical relativity group at the NCSA, with an elementary introduction to general relativityBài giảng trực tuyến, sách điện tửEinstein's General Theory of Relativity by Leonard Susskind's Modern Physics lectures. Recorded ngày 22 tháng 9 năm 2008 at Stanford University
+Series of lectures on General Relativity given in 2006 at the Institut Henri Poincaré (introductory courses and advanced ones).
+General Relativity Tutorials Lưu trữ 2007-07-07 tại Wayback Machine by John Baez
+Brown, Kevin. “Reflections on relativity”. Mathpages.com. Truy cập 25 tháng 3 năm 2013.
+Carroll, Sean M. “Lecture Notes on General Relativity”. Truy cập 25 tháng 3 năm 2013.
+Moor, Rafi. “Understanding General Relativity”. Truy cập 25 tháng 3 năm 2013.
+Waner, Stefan. “Introduction to Differential Geometry and General Relativity” (PDF). Truy cập ngày 13 tháng 9 năm 2015.

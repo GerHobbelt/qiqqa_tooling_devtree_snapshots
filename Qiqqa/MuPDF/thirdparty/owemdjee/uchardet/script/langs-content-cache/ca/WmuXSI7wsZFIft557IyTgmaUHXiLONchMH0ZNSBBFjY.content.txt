@@ -1,0 +1,320 @@
+revision: 32092678
+title: "Distribuci\xF3 de Dirichlet"
+url: https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_Dirichlet
+
+
+---
+
+En probabilitat i estadística, la distribució de Dirichlet (després de Peter Gustav Lejeune Dirichlet), sovint denotada 
+  
+    
+      
+        Dir
+        ⁡
+        (
+        
+          α
+        
+        )
+      
+    
+     
+  , és una família de distribucions de probabilitat multivariables contínues parametritzades per un vector 
+  
+    
+      
+        
+          α
+        
+      
+    
+     
+   de reals positius. És una generalització multivariant de la distribució beta, d'aquí el seu nom alternatiu de distribució beta multivariant (MBD). Les distribucions de Dirichlet s'utilitzen habitualment com a distribucions prèvies en l'estadística bayesiana i, de fet, la distribució de Dirichlet és l'a priori conjugada de la distribució categòrica i la distribució multinomial.
+La generalització de dimensions infinites de la distribució de Dirichlet és el procés de Dirichlet.
+La distribució de Dirichlet de l'ordre K ≥ 2 amb paràmetres α 1, . . ., α K > 0 té una funció de densitat de probabilitat respecte a la mesura de Lebesgue a l'espai euclidià R K-1 donada per 
+  
+    
+      
+        f
+        
+          (
+          
+            
+              x
+              
+                1
+              
+            
+            ,
+            …
+            ,
+            
+              x
+              
+                K
+              
+            
+            ;
+            
+              α
+              
+                1
+              
+            
+            ,
+            …
+            ,
+            
+              α
+              
+                K
+              
+            
+          
+          )
+        
+        =
+        
+          
+            1
+            
+              
+                B
+              
+              (
+              
+                α
+              
+              )
+            
+          
+        
+        
+          ∏
+          
+            i
+            =
+            1
+          
+          
+            K
+          
+        
+        
+          x
+          
+            i
+          
+          
+            
+              α
+              
+                i
+              
+            
+            −
+            1
+          
+        
+      
+    
+     
+  
+on 
+  
+    
+      
+        {
+        
+          x
+          
+            k
+          
+        
+        
+          }
+          
+            k
+            =
+            1
+          
+          
+            k
+            =
+            K
+          
+        
+      
+    
+     
+   pertanyen a la norma 
+  
+    
+      
+        K
+        −
+        1
+      
+    
+     
+   simplex, o en altres paraules: 
+  
+    
+      
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            K
+          
+        
+        
+          x
+          
+            i
+          
+        
+        =
+        1
+        
+          
+             and 
+          
+        
+        
+          x
+          
+            i
+          
+        
+        ∈
+        
+          [
+          
+            0
+            ,
+            1
+          
+          ]
+        
+        
+          
+             for all 
+          
+        
+        i
+        ∈
+        {
+        1
+        ,
+        …
+        ,
+        K
+        }
+      
+    
+     
+   La constant normalitzadora és la funció beta multivariant, que es pot expressar en termes de la funció gamma: 
+
+  
+    
+      
+        
+          B
+        
+        (
+        
+          α
+        
+        )
+        =
+        
+          
+            
+              
+                ∏
+                
+                  i
+                  =
+                  1
+                
+                
+                  K
+                
+              
+              Γ
+              (
+              
+                α
+                
+                  i
+                
+              
+              )
+            
+            
+              Γ
+              
+                (
+                
+                  
+                    ∑
+                    
+                      i
+                      =
+                      1
+                    
+                    
+                      K
+                    
+                  
+                  
+                    α
+                    
+                      i
+                    
+                  
+                
+                )
+              
+            
+          
+        
+        ,
+        
+        
+          α
+        
+        =
+        (
+        
+          α
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          α
+          
+            K
+          
+        
+        )
+        .
+      
+    
+     
+  
+
+Exemple : Tall de corda
+Un exemple d'ús de la distribució de Dirichlet és si es vol tallar cordes (cada una de longitud inicial 1,0) en peces K amb longituds diferents, on cada peça tenia una longitud mitjana designada, però permetent una certa variació en les mides relatives de les peces. Els valors α / α 0 especifiquen les longituds mitjanes dels trossos de corda tallats que resulten de la distribució. La variància al voltant d'aquesta mitjana varia inversament amb α0.
+
+
+== Referències ==

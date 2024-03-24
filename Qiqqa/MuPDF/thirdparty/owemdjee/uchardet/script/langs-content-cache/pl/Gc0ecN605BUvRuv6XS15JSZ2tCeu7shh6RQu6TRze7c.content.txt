@@ -1,0 +1,2121 @@
+revision: 70681617
+title: "Przestrze\u0144 Banacha"
+url: https://pl.wikipedia.org/wiki/Przestrze%C5%84_Banacha
+
+
+---
+
+Przestrzeń Banacha – przestrzeń unormowana 
+  
+    
+      
+        X
+      
+    
+     
+   (z normą 
+  
+    
+      
+        ‖
+        ⋅
+        ‖
+      
+    
+     
+   ), w której metryka wyznaczona przez normę, tj. metryka 
+  
+    
+      
+        d
+      
+    
+     
+   dana wzorem
+
+  
+    
+      
+        d
+        (
+        x
+        ,
+        y
+        )
+        =
+        ‖
+        x
+        −
+        y
+        ‖
+        
+        (
+        x
+        ,
+        y
+        ∈
+        X
+        )
+        ,
+      
+    
+     
+  jest zupełna. Zupełność metryki oznacza, że każdy ciąg Cauchy’ego elementów przestrzeni 
+  
+    
+      
+        X
+      
+    
+     
+   jest zbieżny (do pewnego elementu przestrzeni 
+  
+    
+      
+        X
+      
+    
+     
+  ).
+Idea przestrzeni unormowanej zupełnej przewijała się wielokrotnie w pracach takich matematyków jak Erik Ivar Fredholm, David Hilbert, Frigyes Riesz i innych. Badając równania różniczkowe i całkowe, stykali się oni z konkretnymi przestrzeniami funkcyjnymi jak np. przestrzeń funkcji ciągłych czy funkcji całkowalnych w 
+  
+    
+      
+        p
+      
+    
+     
+  -tej potędze dla 
+  
+    
+      
+        p
+        ⩾
+        1.
+      
+    
+     
+   Norbert Wiener i Stefan Banach zdefiniowali to pojęcie niezależnie od siebie. Określenia przestrzenie Banacha (fr. les espaces de S. Banach) jako pierwszy użył Maurice Fréchet, honorując w ten sposób polskiego matematyka za wkład w badanie tego rodzaju przestrzeni. Sam Banach nazywał je w swoich pracach przestrzeniami typu B. Pojęcie przestrzeni Banacha stało się fundamentalne dla rozwoju ówczesnej analizy funkcjonalnej.
+Przestrzenie Banacha zaliczają się do klasy przestrzeni liniowo-topologicznych. W szczególności, każda przestrzeń Banacha jest przestrzenią Frécheta. Z ogólnego faktu teorii przestrzeni metrycznych wynika, że podprzestrzeń liniowa przestrzeni Banacha sama jest przestrzenią Banacha wtedy i tylko wtedy, gdy jest ona domknięta.
+
+
+== Przykłady ==
+W dalszym ciągu symbol 
+  
+    
+      
+        
+          K
+        
+      
+    
+     
+   oznaczać będzie ciało liczb rzeczywistych bądź zespolonych.
+
+
+=== Ciała liczbowe i przestrzenie skończenie wymiarowe ===
+Ciało 
+  
+    
+      
+        
+          K
+        
+        ,
+      
+    
+     
+   traktowane jako przestrzeń liniowa nad samym sobą, jest jednowymiarową przestrzenią Banacha z normą wartości bezwzględnej (modułu). Jest to jeden z podstawowych faktów klasycznej analizy matematycznej. W przestrzeni unormowanej skończenie wymiarowej wszystkie normy są równoważne oraz każda norma jest zupełna. Dokładniej, w każdej przestrzeni skończenie wymiarowej istnieje dokładnie jedna liniowa topologia, która jest normowalna. W przestrzeniach współrzędnych 
+  
+    
+      
+        
+          
+            K
+          
+          
+            n
+          
+        
+      
+    
+     
+   najczęściej używa się normy euklidesowej, będącej uogólnieniem wartości bezwzględnej. Dla elementów postaci
+
+  
+    
+      
+        x
+        =
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          x
+          
+            n
+          
+        
+        )
+        ∈
+        
+          
+            K
+          
+          
+            n
+          
+        
+      
+    
+     
+  norma ta dana jest wzorem
+
+  
+    
+      
+        ‖
+        x
+        ‖
+        =
+        
+          
+            
+              ∑
+              
+                i
+                =
+                1
+              
+              
+                n
+              
+            
+            
+              |
+            
+            
+              x
+              
+                i
+              
+            
+            
+              
+                |
+              
+              
+                2
+              
+            
+          
+        
+        .
+      
+    
+     
+  Gdy rozważana przestrzeń współrzędnych jest rzeczywista, to w powyższym wzorze można opuścić symbole wartości bezwzględnej. Inną (równoważną jej) normą jest np. tzw. norma maksimum, dana wzorem
+
+  
+    
+      
+        ‖
+        x
+        
+          ‖
+          
+            max
+          
+        
+        =
+        
+          max
+          
+            1
+            ⩽
+            i
+            ⩽
+            n
+          
+        
+        
+          |
+        
+        
+          x
+          
+            i
+          
+        
+        
+          |
+        
+        .
+      
+    
+     
+  Wśród przestrzeni Banacha przestrzenie skończenie wymiarowe wyróżniają następujące własności (niezachodzące w przestrzeniach nieskończenie wymiarowych):
+
+Każdy funkcjonał liniowy, a nawet ogólniej każde przekształcenie liniowe w przestrzeń unormowaną, przestrzeni skończenie wymiarowej jest ciągłe.
+Domknięta kula jednostkowa oraz ogólniej dowolny domknięty i ograniczony podzbiór przestrzeni skończenie wymiarowej jest zbiorem zwartym.
+
+
+=== Przestrzenie funkcji ciągłych i przestrzenie funkcji ograniczonych ===
+Przestrzeń 
+  
+    
+      
+        C
+        (
+        Ω
+        )
+        ,
+      
+    
+     
+   wszystkich skalarnych funkcji ciągłych określonych na zwartej (niekoniecznie metryzowalnej) przestrzeni Hausdorffa 
+  
+    
+      
+        Ω
+      
+    
+     
+   z działaniami określonymi punktowo, jest przestrzenią Banacha z normą daną wzorem
+
+  
+    
+      
+        ‖
+        f
+        ‖
+        =
+        sup
+        {
+        
+          |
+        
+        f
+        (
+        x
+        )
+        
+          |
+        
+        :
+        
+        x
+        ∈
+        Ω
+        }
+        .
+      
+    
+     
+  Ważnymi przykładami takich przestrzeni są 
+  
+    
+      
+        C
+        [
+        0
+        ,
+        1
+        ]
+      
+    
+     
+   (przestrzeń funkcji ciągłych na odcinku jednostkowym) czy 
+  
+    
+      
+        C
+        [
+        0
+        ,
+        
+          ω
+          
+            1
+          
+        
+        ]
+      
+    
+     
+   (przestrzeń funkcji ciągłych na liczbie porządkowej 
+  
+    
+      
+        [
+        0
+        ,
+        
+          ω
+          
+            1
+          
+        
+        ]
+        =
+        
+          ω
+          
+            1
+          
+        
+        +
+        1
+      
+    
+     
+   z topologią porządkową).
+Powyższą konstrukcję można uogólnić. Niech 
+  
+    
+      
+        (
+        Y
+        ,
+        ‖
+        ⋅
+        ‖
+        )
+      
+    
+     
+   będzie przestrzenią Banacha. Wówczas przestrzeń 
+  
+    
+      
+        C
+        (
+        Ω
+        ,
+        Y
+        )
+      
+    
+     
+   wszystkich funkcji ciągłych 
+  
+    
+      
+        f
+        :
+        Ω
+        →
+        Y
+      
+    
+     
+   z normą
+
+  
+    
+      
+        ‖
+        f
+        ‖
+        =
+        sup
+        {
+        ‖
+        f
+        (
+        x
+        )
+        ‖
+        :
+        
+        x
+        ∈
+        Ω
+        }
+      
+    
+     
+  jest przestrzenią Banacha.
+
+
+=== Przestrzenie ===
+  
+    
+      
+        
+          ℓ
+          
+            ∞
+          
+        
+        ,
+      
+    
+     
+   
+  
+    
+      
+        c
+      
+    
+     
+   i 
+  
+    
+      
+        
+          c
+          
+            0
+          
+        
+      
+    
+     
+  
+Przestrzeń zwartą 
+  
+    
+      
+        Ω
+      
+    
+     
+   powyżej można zastąpić dowolnym zbiorem 
+  
+    
+      
+        A
+        ,
+      
+    
+     
+   wymagając dodatkowo, by rozważane funkcje były ograniczone (nie zakłada się ciągłości), gdyż zbiór 
+  
+    
+      
+        A
+      
+    
+     
+   nie ma wybranej żadnej topologii. Tak zdefiniowaną przestrzeń ograniczonych funkcji 
+  
+    
+      
+        f
+        :
+        A
+        →
+        Y
+      
+    
+     
+   oznacza się symbolem 
+  
+    
+      
+        
+          ℓ
+          
+            ∞
+          
+        
+        (
+        A
+        ,
+        Y
+        )
+        .
+      
+    
+     
+   Jest to również przestrzeń Banacha. Gdy 
+  
+    
+      
+        Y
+      
+    
+     
+   jest ciałem skalarów, to oznacza się tę przestrzeń krótko przez 
+  
+    
+      
+        
+          ℓ
+          
+            ∞
+          
+        
+        (
+        A
+        )
+      
+    
+     
+   bądź nawet 
+  
+    
+      
+        
+          ℓ
+          
+            ∞
+          
+        
+        ,
+      
+    
+     
+   gdy 
+  
+    
+      
+        A
+      
+    
+     
+   jest zbiorem liczb naturalnych.
+Przestrzeń 
+  
+    
+      
+        
+          ℓ
+          
+            ∞
+          
+        
+      
+    
+     
+   jest izometrycznie izomorficzna z przestrzenią 
+  
+    
+      
+        C
+        (
+        β
+        
+          N
+        
+        )
+      
+    
+     
+   funkcji ciągłych na 
+  
+    
+      
+        β
+        
+          N
+        
+        ,
+      
+    
+     
+   tj. na uzwarceniu Čecha-Stone’a zbioru liczb naturalnych z topologią dyskretną.
+Każdy ciąg zbieżny jest ograniczony zatem podprzestrzenie 
+  
+    
+      
+        c
+      
+    
+     
+   i 
+  
+    
+      
+        
+          c
+          
+            0
+          
+        
+      
+    
+     
+   ciągów liczbowych, odpowiednio, zbieżnych i zbieżnych do zera są podprzestrzeniami przestrzeni 
+  
+    
+      
+        
+          ℓ
+          
+            ∞
+          
+        
+        .
+      
+    
+     
+   Podprzestrzenie te są domknięte, a więc są również przestrzeniami Banacha. Nie każda podprzestrzeń przestrzeni 
+  
+    
+      
+        
+          ℓ
+          
+            ∞
+          
+        
+      
+    
+     
+   jest jednak domknięta:
+
+
+==== Przestrzeń ====
+  
+    
+      
+        
+          c
+          
+            00
+          
+        
+      
+    
+     
+  
+Niech
+
+  
+    
+      
+        
+          e
+          
+            k
+          
+        
+        =
+        (
+        0
+        ,
+        0
+        ,
+        …
+        ,
+        0
+        ,
+        1
+        ,
+        0
+        ,
+        0
+        ,
+        …
+        )
+        ,
+      
+    
+     
+  tzn. 
+  
+    
+      
+        
+          e
+          
+            k
+          
+        
+      
+    
+     
+   jest takim ciągiem, który na 
+  
+    
+      
+        k
+      
+    
+     
+  -tym miejscu ma jedynkę, a wszystkie inne jego wyrazy są zerowe, to symbolem 
+  
+    
+      
+        
+          c
+          
+            00
+          
+        
+      
+    
+     
+   oznacza się zbiór wszystkich skończonych kombinacji liniowych ciągów 
+  
+    
+      
+        
+          e
+          
+            k
+          
+        
+        .
+      
+    
+     
+   Innymi słowy elementami przestrzeni 
+  
+    
+      
+        
+          c
+          
+            00
+          
+        
+      
+    
+     
+   są wszystkie ciągi liczbowe, których tylko skończona liczba wyrazów jest różna od zera. Przestrzeń 
+  
+    
+      
+        
+          c
+          
+            00
+          
+        
+      
+    
+     
+   jest podprzestrzenią liniową przestrzeni 
+  
+    
+      
+        c
+        ,
+      
+    
+     
+   ponieważ suma dwóch ciągów o skończenie wielu wyrazach niezerowych ma nadal skończenie wiele wyrazów niezerowych. Ciąg
+
+  
+    
+      
+        
+          
+            
+              (
+              
+                
+                  ∑
+                  
+                    k
+                    =
+                    1
+                  
+                  
+                    n
+                  
+                
+                
+                  
+                    
+                      e
+                      
+                        k
+                      
+                    
+                    k
+                  
+                
+              
+              )
+            
+            
+              n
+              ∈
+              
+                N
+              
+            
+          
+        
+      
+    
+     
+  jest ciągiem Cauchy’ego punktów (ciągów) z przestrzeni 
+  
+    
+      
+        
+          c
+          
+            00
+          
+        
+        ,
+      
+    
+     
+   który jest zbieżny w przestrzeni 
+  
+    
+      
+        
+          c
+          
+            0
+          
+        
+      
+    
+     
+   do ciągu
+
+  
+    
+      
+        (
+        1
+        ,
+        
+          
+            
+              1
+              2
+            
+          
+        
+        ,
+        
+          
+            
+              1
+              3
+            
+          
+        
+        ,
+        
+          
+            
+              1
+              4
+            
+          
+        
+        ,
+        …
+        )
+        ∉
+        
+          c
+          
+            00
+          
+        
+        ,
+      
+    
+     
+  a zatem przestrzeń 
+  
+    
+      
+        
+          c
+          
+            00
+          
+        
+      
+    
+     
+   nie jest przestrzenią Banacha.
+
+
+=== Przestrzenie ===
+  
+    
+      
+        
+          L
+          
+            p
+          
+        
+        ,
+      
+    
+     
+   przestrzenie Lorentza
+Dla ustalonego 
+  
+    
+      
+        p
+        ⩾
+        1
+      
+    
+     
+   oraz dowolnej przestrzeni z miarą (
+  
+    
+      
+        Ω
+        ,
+      
+    
+     
+   
+  
+    
+      
+        μ
+      
+    
+     
+  ) przestrzeń 
+  
+    
+      
+        
+          L
+          
+            p
+          
+        
+        (
+        μ
+        )
+      
+    
+     
+   funkcji całkowalnych w 
+  
+    
+      
+        p
+      
+    
+     
+  -tej potędze na 
+  
+    
+      
+        Ω
+      
+    
+     
+   jest przestrzenią Banacha. Szczególną klasą przestrzeni tego typu są przestrzenie 
+  
+    
+      
+        
+          ℓ
+          
+            p
+          
+        
+        (
+        Γ
+        )
+      
+    
+     
+   ciągów sumowalnych w 
+  
+    
+      
+        p
+      
+    
+     
+  -tej potędze na zbiorze 
+  
+    
+      
+        Γ
+        .
+      
+    
+     
+   Ogólniej, przestrzenie Lorentza 
+  
+    
+      
+        
+          L
+          
+            p
+            ,
+            q
+          
+        
+      
+    
+     
+   i przestrzenie Orlicza są przestrzeniami Banacha.
+
+
+== Operatory liniowe ograniczone ==
+Przestrzeń liniowa 
+  
+    
+      
+        B
+        (
+        X
+        ,
+        Y
+        )
+      
+    
+     
+   wszystkich odwzorowań (inaczej operatorów) liniowych i ciągłych przestrzeni Banacha 
+  
+    
+      
+        X
+      
+    
+     
+   w przestrzeń Banacha 
+  
+    
+      
+        Y
+      
+    
+     
+   z normą
+
+  
+    
+      
+        ‖
+        T
+        ‖
+        =
+        inf
+        {
+        A
+        >
+        0
+        :
+        ‖
+        T
+        (
+        x
+        )
+        ‖
+        ⩽
+        A
+        ‖
+        x
+        ‖
+        ,
+        
+        x
+        ∈
+        X
+        }
+      
+    
+     
+  jest przestrzenią Banacha. Gdy 
+  
+    
+      
+        X
+        ≠
+        {
+        0
+        }
+        ,
+      
+    
+     
+   to norma operatorowa wyraża się wzorem
+
+  
+    
+      
+        
+          
+            
+              
+                ‖
+                T
+                ‖
+              
+              
+                
+                =
+                
+                  sup
+                  
+                    ‖
+                    x
+                    ‖
+                    ⩽
+                    1
+                  
+                
+                ‖
+                T
+                (
+                x
+                )
+                ‖
+              
+            
+            
+              
+              
+                
+                =
+                
+                  sup
+                  
+                    ‖
+                    x
+                    ‖
+                    =
+                    1
+                  
+                
+                ‖
+                T
+                (
+                x
+                )
+                ‖
+              
+            
+          
+        
+        
+        (
+        T
+        ∈
+        
+          
+            B
+          
+        
+        (
+        X
+        ,
+        Y
+        )
+        )
+        .
+      
+    
+     
+  Przestrzeń 
+  
+    
+      
+        B
+        (
+        X
+        )
+        =
+        B
+        (
+        X
+        ,
+        X
+        )
+      
+    
+     
+   z mnożeniem przekształceń zdefiniowanym jako zwykłe złożenie funkcji jest algebrą Banacha z jedynką. W algebrze tej można wyróżnić następujące ideały:
+
+ideał operatorów skończonego rzędu (tzn. takich, których obraz jest skończenie wymiarową podprzestrzenią 
+  
+    
+      
+        X
+      
+    
+     
+  ) oraz jego domknięcie, ideał operatorów aproksymowalnych,
+ideał operatorów zwartych,
+ideał operatorów słabo zwartych,
+ideał operatorów ściśle singularnych,
+ideał operatorów, których obraz jest ośrodkową podprzestrzenią 
+  
+    
+      
+        X
+        ,
+      
+    
+     
+  
+ideał operatorów Hilberta-Schmidta (w teorii przestrzeni Hilberta).oraz wiele innych. Wszystkie wymienione wyżej ideały, poza ideałem operatorów skończonego rzędu oraz ideałem operatorów Hilberta-Schmidta, są domknięte. Do klas operatorów ograniczonych w przestrzeniach Banacha, które nie tworzą ideału zaliczają się
+
+operatory Fredholma,
+operatory nuklearne.
+
+
+== Przestrzeń sprzężona. Przestrzenie refleksywne ==
+Jeżeli 
+  
+    
+      
+        X
+      
+    
+     
+   jest przestrzenią unormowaną nad ciałem 
+  
+    
+      
+        
+          K
+        
+      
+    
+     
+   liczb rzeczywistych bądź zespolonych, to z twierdzenia Banacha-Steinhausa wynika, że przestrzeń 
+  
+    
+      
+        B
+        (
+        X
+        ,
+        
+          K
+        
+        )
+        ,
+      
+    
+     
+   wszystkich funkcjonałów liniowych i ciągłych na 
+  
+    
+      
+        X
+      
+    
+     
+   jest przestrzenią Banacha. Przestrzeń tę oznacza się symbolem 
+  
+    
+      
+        
+          X
+          
+            ∗
+          
+        
+      
+    
+     
+   (czasem również 
+  
+    
+      
+        
+          X
+          ′
+        
+      
+    
+     
+  ) i nazywa przestrzenią sprzężoną do 
+  
+    
+      
+        X
+        .
+      
+    
+     
+   Pojęcie przestrzeni sprzężonej pozwala na zdefiniowanie tzw. słabej topologii w 
+  
+    
+      
+        X
+        ,
+      
+    
+     
+   oznaczanej symbolem 
+  
+    
+      
+        σ
+        (
+        X
+        ,
+        
+          X
+          
+            ∗
+          
+        
+        )
+        ,
+      
+    
+     
+   tj. najsłabszej topologii względem której elementy przestrzeni 
+  
+    
+      
+        
+          X
+          
+            ∗
+          
+        
+      
+    
+     
+   są ciągłe.
+Przestrzeń 
+  
+    
+      
+        X
+      
+    
+     
+   można w naturalny sposób utożsamić z podprzestrzenią przestrzeni 
+  
+    
+      
+        (
+        
+          X
+          
+            ∗
+          
+        
+        
+          )
+          
+            ∗
+          
+        
+        =
+        
+          X
+          
+            ∗
+            ∗
+          
+        
+      
+    
+     
+   (przestrzeni sprzężonej do sprzężonej), przyporządkowując każdemu elementowi 
+  
+    
+      
+        x
+      
+    
+     
+   przestrzeni 
+  
+    
+      
+        X
+      
+    
+     
+   funkcjonał 
+  
+    
+      
+        κ
+        (
+        x
+        )
+      
+    
+     
+   dany wzorem
+
+  
+    
+      
+        ⟨
+        κ
+        (
+        x
+        )
+        ,
+        
+          x
+          
+            ∗
+          
+        
+        ⟩
+        =
+        ⟨
+        
+          x
+          
+            ∗
+          
+        
+        ,
+        x
+        ⟩
+        
+        (
+        
+          x
+          
+            ∗
+          
+        
+        ∈
+        
+          X
+          
+            ∗
+          
+        
+        )
+        .
+      
+    
+     
+  Dla każdego 
+  
+    
+      
+        x
+      
+    
+     
+   tak określony funkcjonał 
+  
+    
+      
+        κ
+        (
+        x
+        )
+      
+    
+     
+   jest elementem przestrzeni 
+  
+    
+      
+        
+          X
+          
+            ∗
+            ∗
+          
+        
+      
+    
+     
+   oraz odwzorowanie 
+  
+    
+      
+        κ
+      
+    
+     
+   jest izometrią. Gdy odwzorowanie 
+  
+    
+      
+        κ
+      
+    
+     
+   jest „na”, tj. 
+  
+    
+      
+        κ
+        (
+        X
+        )
+        =
+        
+          X
+          
+            ∗
+            ∗
+          
+        
+        ,
+      
+    
+     
+   to przestrzeń 
+  
+    
+      
+        X
+      
+    
+     
+   nazywa się przestrzenią refleksywną. Ponieważ 
+  
+    
+      
+        
+          X
+          
+            ∗
+            ∗
+          
+        
+      
+    
+     
+   jest automatycznie przestrzenią Banacha, więc każda przestrzeń refleksywna – również, jako przestrzeń liniowo izometryczna z przestrzenią Banacha.
+
+
+== Szeregi i bazy w przestrzeniach Banacha ==
+Przestrzenie Banacha można scharakteryzować poprzez zbieżność szeregów elementów przestrzeni. Mianowicie, przestrzeń unormowana jest przestrzenią Banacha wtedy i tylko wtedy, gdy każdy szereg elementów tej przestrzeni normowo zbieżny jest zbieżny w tej przestrzeni. W przestrzeniach Banacha mogą istnieć szeregi zbieżne, które nie są normowo zbieżne – nazywa się, tak jak w przypadku szeregów liczbowych – szeregami warunkowo zbieżnymi. Zbiór liczb rzeczywistych (z normą „wartość bezwzględna”) jest przestrzenią Banacha, więc przykładem szeregu warunkowo zbieżnego jest szereg anharmoniczny, tzn.
+
+  
+    
+      
+        
+          ∑
+          
+            n
+            =
+            1
+          
+          
+            ∞
+          
+        
+        
+          
+            
+              (
+              −
+              1
+              
+                )
+                
+                  n
+                  +
+                  1
+                
+              
+            
+            n
+          
+        
+        =
+        ln
+        ⁡
+        2
+        ,
+      
+    
+     
+  podczas gdy szereg
+
+  
+    
+      
+        
+          ∑
+          
+            n
+            =
+            1
+          
+          
+            ∞
+          
+        
+        
+          |
+          
+            
+              
+                (
+                −
+                1
+                
+                  )
+                  
+                    n
+                    +
+                    1
+                  
+                
+              
+              n
+            
+          
+          |
+        
+        =
+        
+          ∑
+          
+            n
+            =
+            1
+          
+          
+            ∞
+          
+        
+        
+          
+            1
+            n
+          
+        
+      
+    
+     
+  jest rozbieżny.
+
+
+=== Baza przestrzeni Banacha ===
+Niech 
+  
+    
+      
+        X
+      
+    
+     
+   będzie nieskończenie wymiarową przestrzenią Banacha. Ciąg 
+  
+    
+      
+        (
+        
+          e
+          
+            n
+          
+        
+        )
+      
+    
+     
+   elementów tej przestrzeni nazywamy bazą wtedy i tylko wtedy, gdy dla każdego elementu 
+  
+    
+      
+        x
+        ∈
+        X
+      
+    
+     
+   istnieje taki ciąg skalarów 
+  
+    
+      
+        (
+        
+          a
+          
+            n
+          
+        
+        )
+        ,
+      
+    
+     
+   że
+
+  
+    
+      
+        x
+        =
+        
+          ∑
+          
+            n
+            =
+            1
+          
+          
+            ∞
+          
+        
+        
+          a
+          
+            n
+          
+        
+        
+          e
+          
+            n
+          
+        
+        .
+      
+    
+     
+  Jeśli istnieje baza przestrzeni 
+  
+    
+      
+        X
+        ,
+      
+    
+     
+   to jest ona złożona z takich niezerowych wektorów liniowo niezależnych, że domknięcie podprzestrzeni przez nie generowanej jest całą przestrzenią, tzn.
+
+  
+    
+      
+        
+          
+            lin
+            ¯
+          
+        
+        {
+        
+          e
+          
+            n
+          
+        
+        :
+        
+        n
+        ∈
+        
+          N
+        
+        }
+        =
+        X
+        .
+      
+    
+     
+  Wynika stąd, że jeśli przestrzeń ma bazę, to jest ona ośrodkowa, ponieważ każdy współczynnik kombinacji liniowej wektorów należącej do podprzestrzeni generowanej przez bazę jest granicą ciągu liczb wymiernych (gdy przestrzeń jest rzeczywista) lub jest granicą ciągu liczb zespolonych o wymiernej części rzeczywistej i urojonej (gdy przestrzeń jest zespolona).
+
+
+=== Baza Schaudera ===
+Niech 
+  
+    
+      
+        (
+        
+          e
+          
+            n
+          
+        
+        )
+      
+    
+     
+   będzie ciągiem elementów przestrzeni 
+  
+    
+      
+        X
+        .
+      
+    
+     
+   Jeśli istnieje taki ciąg 
+  
+    
+      
+        (
+        
+          e
+          
+            n
+          
+          
+            ∗
+          
+        
+        )
+      
+    
+     
+   elementów przestrzeni sprzężonej 
+  
+    
+      
+        
+          X
+          
+            ∗
+          
+        
+        ,
+      
+    
+     
+   że
+
+  
+    
+      
+        ⟨
+        
+          e
+          
+            k
+          
+          
+            ∗
+          
+        
+        ,
+        
+          e
+          
+            j
+          
+        
+        ⟩
+        =
+        0
+      
+    
+     
+   dla 
+  
+    
+      
+        k
+        ≠
+        j
+      
+    
+     
+   oraz 
+  
+    
+      
+        ⟨
+        
+          e
+          
+            k
+          
+          
+            ∗
+          
+        
+        ,
+        
+          e
+          
+            k
+          
+        
+        ⟩
+        =
+        1
+      
+    
+     
+   dla 
+  
+    
+      
+        k
+        ∈
+        
+          N
+        
+      
+    
+     
+  
+każdy element 
+  
+    
+      
+        x
+        ∈
+        X
+      
+    
+     
+   można przedstawić jednoznacznie w postaci
+  
+    
+      
+        x
+        =
+        
+          ∑
+          
+            n
+            =
+            1
+          
+          
+            ∞
+          
+        
+        ⟨
+        
+          e
+          
+            n
+          
+          
+            ∗
+          
+        
+        ,
+        x
+        ⟩
+        
+          e
+          
+            n
+          
+        
+        ,
+      
+    
+     
+  to ciąg 
+  
+    
+      
+        (
+        
+          e
+          
+            n
+          
+        
+        )
+      
+    
+     
+   nazywany jest bazą Schaudera przestrzeni 
+  
+    
+      
+        X
+      
+    
+     
+   natomiast ciąg 
+  
+    
+      
+        (
+        
+          e
+          
+            n
+          
+          
+            ∗
+          
+        
+        )
+      
+    
+     
+   nazywany jest ciągiem funkcjonałów biortogonalnych stowarzyszonych z 
+  
+    
+      
+        (
+        
+          e
+          
+            n
+          
+        
+        )
+        .
+      
+    
+     
+  
+Pojęcia bazy i bazy Schaudera mogą być stosowane wymiennie, ponieważ obie definicje są równoważne w klasie przestrzeni Banacha – ciąg 
+  
+    
+      
+        (
+        
+          e
+          
+            n
+          
+        
+        )
+      
+    
+     
+   jest bazą przestrzeni 
+  
+    
+      
+        X
+      
+    
+     
+   wtedy i tylko wtedy, gdy jest jej bazą Schaudera. Definicje te nie są na ogół równoważne w szerszych klasach przestrzeni liniowo-topologicznych.
+
+
+=== Wymiar Hamela ===
+Baza Schaudera przestrzeni Banacha (o ile istnieje) nie jest bazą w sensie algebry liniowej (tzn. nie jest bazą przestrzeni liniowej). Dla odróżnienia, bazy (algebraiczne) przestrzeni liniowych nazywa się w analizie funkcjonalnej bazami Hamela, a ich moc – wymiarem Hamela.
+Używając twierdzenia Baire’a, można udowodnić, że jeśli przestrzeń Banacha jest nieskończenie wymiarowa, to ma ona nieprzeliczalny wymiar Hamela. Nieskończenie wymiarowe przestrzenie Banacha mają wymiar Hamela co najmniej continuum.
+
+
+== Zobacz też ==
+wolna przestrzeń Banacha nad przestrzenią metryczną
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+Stefan Banach: Théorie des opérations linéaires. T. 1. Warszawa: 1932, seria: Monografie Matematyczne.brak strony w książce
+John Horton Conway: A Course in Functional Analysis. Springer, 1985.brak strony w książce
+Julian Musielak: Wstęp do analizy funkcjonalnej. Warszawa: Państwowe Wydawnictwo Naukowe, 1976. ISBN 83-01-09055-3. (pol.).brak strony w książce
+Walter Rudin: Analiza Funkcjonalna. Warszawa: Wydawnictwo Naukowe PWN, 2002. ISBN 83-01-13375-9. (pol.).brak strony w książce
+
+
+== Linki zewnętrzne ==
+ Banach space (ang.), Encyclopedia of Mathematics, encyclopediaofmath.org, [dostęp 2023-06-18].

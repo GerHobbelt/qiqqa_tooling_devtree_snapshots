@@ -1,0 +1,27 @@
+revision: 47220465
+title: Kommutator
+url: https://sv.wikipedia.org/wiki/Kommutator
+
+
+---
+
+Den här artikeln handlar om elektrisk brytare i rotarande maskiner, för det matematiska konceptet se kommutativitet
+En kommutator är en elektrisk brytare i roterande anordningar i vissa typer av elektriska motorer, eller generatorer som periodiskt vänder spänningsriktningen mellan rotor och den yttre kretsen. I en motor, ger det kraft till den bästa positionen på rotorn, och i en generator, plockar den ut kraft på ett liknande sätt. Som brytare, håller den ovanligt länge, om man tar i beaktande antalet brytningar och slutningar som inträffar i vanlig drift.
+En kommutator är en vanlig funktion i roterande likspänningsmaskiner. Genom att byta spänningsriktning i den rörliga spolen hos motorns armatur kan en stadigt roterande kraft (vridmoment) åstadkommas. På liknande sätt, i en generator, genom att ändra spolens anslutning till den yttre kretsen åstadkommer man en enkelriktad spänning till den yttre kretsen. Den första typen av kommutator likspänningsmaskinen byggdes av Hippolyte Pixii år 1832, baserades på ett förslag från André-Marie Ampère.
+
+Separat excitering av en elektrisk generator. DC generator med kommutering visad, men principen gäller även AC alternatorer.
+
+Arbetssättet för en borstad elektrisk motor med en två-polig rotor och en permanentmagnet stator. ("N" och "S" avser polaritet på insidan av magneternas yta; de utvändliga ytorna har motsatta polariteter.)
+
+
+== Se även ==
+Släpring
+Roterande transformator
+File:Kommutator animiert.gif
+Glesumsystem
+
+
+== Externa länkar ==
+"Commutator and Brushes on DC Motor". HyperPhysics, Physics and Astronomy, Georgia State University.
+"PM Brushless Servo Motor Feedback Commutation Series – Part 1 Commutation Alignment – Why It Is Important."  Mitchell Electronics.
+"PM Brushless Servo Motor Feedback Commutation Series – Part 2 Commutation Alignment – How It Is Accomplished."  Mitchell Electronics.

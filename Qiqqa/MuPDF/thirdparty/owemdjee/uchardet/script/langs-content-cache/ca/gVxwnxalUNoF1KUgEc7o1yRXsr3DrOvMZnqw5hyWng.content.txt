@@ -1,0 +1,58 @@
+revision: 32061444
+title: Obertura Bird
+url: https://ca.wikipedia.org/wiki/Obertura_Bird
+
+
+---
+
+L'obertura Bird (també citada de vegades com a atac holandès), és una obertura d'escacs caracteritzada pel moviment:
+
+1.f4La Bird és una obertura de flanc estàndard, però mai popular. Les idees estratègiques de les blanques impliquen el control de la casella-e5 sense ocupar-la, però el seu primer moviment no desenvolupa res, i afebleix una mica el seu flanc de rei. Les negres poden oposar-se al pla blanc de controlar e5 immediatament tot jugant el gambit From (1...e5!?).
+L'Enciclopèdia d'Obertures d'Escacs assigna dos codis a l'obertura Bird: A02 (1.f4) i A03 (1.f4 d5).
+
+ 
+   
+
+
+== Història ==
+L'obertura ja fou mencionada per Luis Ramírez de Lucena al seu llibre Repetición de Amores et Arte de Axedrez con CL Juegos de Partido, publicat circa 1497. A mitjan segle xix, l'obertura fou jugada de vegades per La Bourdonnais i Elijah Williams, entre d'altres. El mestre britànic Henry Edward Bird la va jugar per primer cop el 1855 i ho va continuar fent durant els següents 40 anys. El 1885, el Hereford Times va anomenar l'obertura amb el seu nom. A la primera meitat del segle xx, Aron Nimzowitsch i Savielly Tartakower jugaren de vegades 1.f4. En dècades més recents, els Grans Mestres que han fet servir l'obertura Bird amb certa regularitat inclouen Bent Larsen, Andrew Soltis, Lars Karlsson, Mikhaïl Gurévitx, i Henrik Danielsen.
+
+
+== 1...d5 ==
+La resposta més comuna de les negres és 1...d5, quan la partida pren la forma d'una defensa holandesa (1.d4 f5) amb els colors canviats. Les blanques poden llavors o bé fianquetar el seu alfil de rei amb Cf3, g3, Ag2, i 0-0 amb una holandesa Leningrad amb els colors canviats; o adoptar una formació Stonewall amb peons a d4, e3, i f4 i intentar un atac al flanc de rei; o bé fianquetar el seu alfil de dama per incrementar la seva influència a la casella e5. Una altra estratègia, per analogia amb la variant Ilyin–Zhenevsky de la defensa holandesa, implica que les blanques jugaran e3, Ae2, 0-0, d3 i intentaran fer la ruptura e3–e4 de diverses maneres, p-ex. Ce5, Af3, De2 i finalment e3–e4, o simplement Cc3 seguit d'e4. El llibre de Timothy Taylor sobre l'obertura Bird indica que la línia principal és: 1.f4 d5 2.Cf3 g6 3.e3 Ag7 4.Ae2 Cf6 5.0-0 0-0 6.d3 c5.
+
+
+== Gambit From ==
+La resposta més aguda de les negres és 1...e5!?, el gambit From, anomenat així en honor del jugador danès Martin Severin From (1828–1895). Les blanques tenen l'opció de transposar al gambit de rei amb 2.e4. Aquesta és una opció important que pot fer que les negres considerin de jugar una línia diferent, si volen evitar el gambit de rei. Cal destacar que un dels possibles desavantatges del gambit From és que és molt fàcil d'evitar per les blanques.
+Si les blanques accepten el gambit amb 2.fxe5, les negres han de triar entre la línia principal amb 2...d6 i la bastant obscura 2...Cc6. Després de 2...Cc6, el Mestre Internacional Timothy Taylor, al seu llibre de 2005 sobre la Bird, recomana 3.Cc3! Cxe5 4.e4 intentant 5.d4, més que 3.Cf3?! g5! quan les negres estan bé. Després de la normal 2...d6 3.exd6 Axd6, les blanques haurien de fer 4.Cf3, evitant 4.Cc3?? Dh4+ 5.g3 Dxg3+ 5.hxg3 Axg3 mat. Llavors les negres tenen novament dues alternatives: 4...g5 per fer fora el cavall blanc, i 4...Cf6, amenaçant 5...Cg4 i 6...Cxh2! El futur Campió del món Emanuel Lasker va introduir 4...g5 a la partida Bird–Lasker, Newcastle upon Tyne, 1892, i per això és anomenada "variant Lasker". Taylor considera 4...g5 com a dubtosa; una resposta tranquil·la que ell considera favorable a les blanques és 5.d4 g4 6.Ce5! (6.Cg5? porta a un dubtós sacrifici de peça) Axe5 7.dxe5 Dxd1+ 8.Rxd1 Cc6 9.Cc3! Ae6 (9...Cxe5?! 10.Af4 f6 11.Cd5 Rd8 12.Cxf6!) 10.Af4 0-0-0+ 11.Re1 Cge7 12.e3 Cg6 13.Ag5 Tdf8 14.Af6 Thg8 15.Ae2 Cgxe5 16.Tf1 "amb el típic avantatge per les blanques que és característic d'aquesta variant", segons Taylor. També considera la més aguda 5.g3 g4 6.Ch4 favorable per les blanques, donant com a línia principal 6...Ce7 7.d4 Cg6 8.Cxg6 hxg6 9.Dd3 Cc6 (9...Th5 10.Ag2; 9...Ca6 10.c3) 10.c3 (10.Cc3? Cxd4! 11.Dxd4?? Ag3+ guanya la dama blanca) Af5 (10...De7 11.Ag2! Ad7 12.Cd2 0-0-0 13.Ce4! va afavorir les blanques a Taylor–Becerra Rivero, Minneapolis 2005) 11.e4 De7 12.Ag2 0-0-0 13.Ae3. Segons Taylor, les blanques tenen un gran avantatge en totes les línies, tot i que el joc és molt agut, per ex. 13...Tde8 14.Cd2; 13...Txh2 14.Txh2 Axg3+ 15.Rd1 Axh2 16.exf5! Te8 17.fxg6! Dxe3 18.Dxe3 Txe3 19.gxf7; o 13...Ad7 (amenaçant 14...Txh2!) 14.Af2!
+
+
+== Altres respostes de les negres ==
+La flexible 1...Cf6 també és possible. Llavors si les blanques fan 2.b3?! (2.Cf3 és més segura), 2...d6! 3.Ab2?! (o 3.Cf3 e5! 4.fxe5 dxe5 5.Cxe5?? Dd4!) e5!, una mena de gambit From diferit introduït per l'MI Michael Brooks, és perillós per les blanques, per. ex. 4.fxe5 dxe5 5.Axe5 Cg4! llavors 6.Ab2 Ad6 "deixa les blanques amb un greu problema a través de la diagonal e1–h4", i les negres guanyen la qualitat després de 7.Cf3 Axh2! 8.Txh2 Cxh2. Després de l'alternativa 6.Ag3, 6...Df6! (fins i tot millor que 6...Ad6) 7.c3 (no 7.Cc3? Ce3! 8.dxe3 Ab4) Ad6 és fort per les negres.
+Una altra resposta popular és 1...g6, una mena de defensa moderna, que pot transposar a una defensa holandesa amb els colors invertits (si les negres juguessin ...d5 i ...c5), o a una defensa siciliana (si les blanques juguen e4 i les negres fan ...c5). D'aquesta manera les negres eviten que les blanques juguin per la diagonal a1–h8.
+També és raonable 1...c5, esperant una transposició al gambit Tal, una variant favorable de la defensa siciliana, després de 2.e4 d5! 3.exd5 (3.Cc3, l'anomenada "variant toilet", és també possible) Cf6, però les blanques no hi estan obligades, i poden construir un sistema més tranquil·lament amb 2.Cf3, seguit de g3, Ag2, d3 i possiblement un posterior e4.
+L'excèntrica 1...b6!? també és coneguda, i més fonamentada que el mateix moviment després de 1.e4 o 1.d4, ja que 1.f4 no contribueix al desenvolupament de les blanques, i afebleix la diagonal a8–h1, ja que el moviment f3 ja no està disponible per assegurar el centre blanc. Taylor recomana 2.e4 Ab7 3.d3 e6 4.Cf3 Ce7 5.c3 d5 6.Dc2 Cd7 7.Ae3, amb avantatge d'espai per les blanques.
+També és possible 1...b5!?, una forma de defensa polonesa. Després de la natural 2.e4 Ab7, les blanques no tenen bones maneres de protegir e4 mentre mantenen l'atac a b5, ja que 3.Cc3? b4 4.Cd5 e6 guanya un peó.
+Si les negres trien la resposta simètrica 1...f5, Taylor considera que la millor línia per les blanques és el joc tranquil amb 2.b3 b6 3.Ab2 Ab7 4.e3, quan 4...Cf6 5.Axf6! exf6 6.Cf3 deixà les blanques amb una millor estructura de peons a Larsen–Colon Romero, San Juan 1969. En lloc d'això, 4...e6 5.Dh5+ força la debilitadora 5...g6, amb un lleu avantatge per les blanques, segons Taylor. També és possible l'agressiva 2.e4!?, quan Taylor analitza 2...fxe4 3.d3 exd3 4.Axd3 Cf6 5.Cf3 (5.g4 és correctament contestada amb 5...d5, quan després de 6.g5, 6...Ag4 i 6...Ce4 afavoreixen ambdues les negres) 5...d5 6.0-0, quan ell considera que les blanques tenen una mica, però no prou, compensació pel peó sacrificat. Una altra continuació possible és 2...fxe4 3.Cc3 Cf6 4.g4, el 'gambit suís. Aquest gambit rep el seu nom per Alexander Wagner (1868–1942), un escaquista polonès i analista d'obertures qui el va introduir a la partida per correspondència suïssa Wagner–Kostin, 1910–11. El terme "gambit suís" es fa servir sovint per referir-se més genèricament a 1.f4 f5 2.e4. L'historiador dels escacs Edward Winter ha criticat aquest ús, matisant que 1.f4 f5 2.e4 fou analitzat per F.A. Lange el juny de 1859 Deutsche Schachzeitung, i fou jugat per molts escaquistes, inclòs Adolf Anderssen, al segle xix.
+Una resposta agressiva però rara és 1...g5?!, el gambit Hobbs, amb un joc que continuaria possiblement 2.fxg5 h6, és una mena d'imatge mirall del gambit Volga. Les blanques poden simplement retornar el peó amb 3.g6, deixant les negres amb un flanc de rei molt afeblit després de 3...fxg6. Una variant és el gambit Hobbs–Zilbermints, 1...h6 intentant 2...g5; contra això, les blanques haurien de continuar amb 2.e4 g5 3.d4, quan les negres han perdut temps i afeblit el seu flanc de rei.
+Una altra tria excèntrica és 1...Ch6!?. La idea és contestar a 2. b3 amb 2...e5, un altre gambit From diferit, i 2.e4 amb 2...d5, quan 3.exd5 Dxd5 resultaria en una defensa escandinava en què el peó blanc és mal situat a f4. De tota manera, 2.Cf3 evita ambdues línies.
+
+
+== Popularitat ==
+Sobre els vint possibles primers moviments d'obertura, 1.f4 és al sisè lloc en popularitat a la base de dades de ChessGames.com, rere 1.e4, 1.d4, 1.Cf3, 1.c4, i 1.g3. És vint vegades menys popular que l'obertura equivalent del flanc de dama, l'anglesa (1.c4). El moviment 1.f4 afebleix notablement la posició del rei blanc. Les estadístiques de ChessGames.com indiquen que aquesta obertura no és una manera efectiva de conservar l'avantatge del primer moviment de les blanques: el 6 de febrer de 2009, sobre 1.685 partides amb 1.f4, les blanques n'havien guanyat el 32,8%, entaulat el 25,3%, i perdut el 41,9%, per una puntuació total del 45,45%. Les blanques puntuen molt millor amb les més populars 1.e4 (54,25%), 1.d4 (55,95%), 1.Cf3 (55,8%), 1.c4 (56,3%), i 1.g3 (55,8%).
+
+
+== Notes i referències ==
+
+
+== Bibliografia ==
+Adorján, András. Black is O.K. in Rare Openings.  CAISSA Ltd, 1998. 
+de Firmian, Nick. Modern Chess Openings (15th edition).  Random House Puzzles & Games, 2008. ISBN 978-0-8129-3682-7. 
+Hooper, David i Kenneth Whyld. The Oxford Companion to Chess.  Oxford University Press, 1992. ISBN 0-19-866164-9. 
+Palliser, Richard. Beating Unusual Chess Openings.  Gloucester Publishers, 2006. ISBN 978-1-85744-429-2. 
+Taylor, Timothy. Bird's Opening: Detailed Coverage of an Underrated and Dynamic Choice for White.  Gloucester Publishers, 2005. ISBN 1-85744-402-7. 
+
+
+== Enllaços externs ==
+Informe d'obertures. Bird, gambit Williams: 1.f4 d5 2.e4 (47 partides)
+Partides del GM Henrik Danielsen, moltes amb aquesta obertura, i també el canal de YouTube del mateix jugador, amb lliçons sobre l'obertura i partides reals

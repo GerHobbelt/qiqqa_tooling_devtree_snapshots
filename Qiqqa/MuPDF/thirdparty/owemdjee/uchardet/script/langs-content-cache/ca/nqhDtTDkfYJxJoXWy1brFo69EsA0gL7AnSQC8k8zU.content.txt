@@ -1,0 +1,71 @@
+revision: 31944497
+title: "Distribuci\xF3 de Gumbel de tipus I"
+url: https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_Gumbel_de_tipus_I
+
+
+---
+
+En teoria de la probabilitat i estadística, la distribució de Gumbel de tipus I és aquella distribució de probabilitat que té, com a funció de densitat de probabilitat:
+
+  
+    
+      
+        f
+        (
+        x
+        
+          |
+        
+        a
+        ,
+        b
+        )
+        =
+        a
+        b
+        
+          e
+          
+            −
+            (
+            b
+            
+              e
+              
+                −
+                a
+                x
+              
+            
+            +
+            a
+            x
+            )
+          
+        
+      
+    
+     
+  per: 
+
+  
+    
+      
+        −
+        ∞
+        <
+        x
+        <
+        ∞
+        .
+      
+    
+     
+  La distribució s'usa principalment en l'anàlisi de valors extrems en anàlisi de la supervivència (també conegut com a anàlisi de duració). La distribució rep el nom del matemàtic alemany Emil Julius Gumbel (1891 – 1966).
+
+
+== Vegeu també ==
+Distribució de Gumbel de tipus II
+
+
+== Referències ==

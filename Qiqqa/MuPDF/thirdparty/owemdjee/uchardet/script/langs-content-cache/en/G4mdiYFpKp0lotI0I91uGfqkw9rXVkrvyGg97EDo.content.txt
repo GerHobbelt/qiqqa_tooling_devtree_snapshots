@@ -1,0 +1,32 @@
+revision: 1152056687
+title: Microsoft Flow
+url: https://en.wikipedia.org/wiki/Microsoft_Power_Automate
+
+
+---
+
+Microsoft Power Automate, formerly known as Microsoft Flow until November 2019, is a SaaS platform by Microsoft for automation of recurring tasks. It is part of the Microsoft Power Platform line of products together with products such as Power Apps and Power BI.
+
+
+== History ==
+In 2016 October, Microsoft Flow was officially released.Formerly, workflows in SharePoint environments could be created using either SharePoint Designer Workflow or various third-party products. For long, SharePoint Designer workflows was still running on the 2010 engine, since the 2013 workflow engine was less powerful. Later, Microsoft Flow was set to replace the SharePoint Designer Workflow as Microsoft's standard tool for workflow automation.
+In 2019 on November 4, Microsoft announced the renaming from Microsoft Flow to Microsoft Power Automate. At the same time, a number of new functions were announced, including robotic process automation capabilities.
+
+
+== See also ==
+UiPath
+IFTTT
+Zapier
+Microsoft Power Fx
+
+
+== References ==
+
+
+== Further reading ==
+Guilmette, Aaron (2020). Workflow Automation with Microsoft Power Automate: Achieve digital transformation through business automation with minimal coding. Packt Publishing. ISBN 978-1839213793.
+Rhodes, Jeffrey (2022). Creating Business Applications with Microsoft 365: Techniques in Power Apps, Power BI, SharePoint, and Power Automate. Apress. ISBN 978-1484288221.
+
+
+== External links ==
+Official website

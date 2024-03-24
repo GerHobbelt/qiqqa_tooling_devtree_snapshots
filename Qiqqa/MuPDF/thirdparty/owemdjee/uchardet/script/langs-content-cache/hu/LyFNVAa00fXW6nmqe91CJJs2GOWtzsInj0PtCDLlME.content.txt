@@ -1,0 +1,78 @@
+revision: 25844566
+title: plazma
+url: https://hu.wikipedia.org/wiki/Plazma
+
+
+---
+
+A fizikában és a kémiában a plazma (az ógörög πλάσμα (plázma) jelentése: „formázható anyag”) a negyedik halmazállapot a szilárd, a folyékony és a légnemű mellett. Jelentős részét töltött részecskék: ionok vagy elektronok alkotják. A plazma ionizált állapotú, ami azt jelenti, hogy az anyagot alkotó atomokról egy vagy több elektron leszakad, és így a plazma ionok és szabad elektronok keveréke lesz. Mivel az elektronok már nincsenek az atomokhoz kötve, hanem szabadon mozoghatnak a plazmában, a plazma elektromosan vezetővé válik és az elektromágneses mezőkkel kölcsönhatásba lép. A plazmát ezek a – részben – szabadon mozgó ionozált részecskék különböztetik meg a többi halmazállapottól.
+A halmazállapot e negyedik formáját először Sir William Crookes írta le 1879-ben, az elnevezés pedig Irving Langmuir nevéhez fűződik 1928-ban (a vérplazmára emlékeztette).
+A látható világegyetem anyagának 99%-a ebben a halmazállapotban van. A plazmaállapot csak igen magas hőmérsékleten, tízezer kelvin körül kezd kialakulni, mert csak itt áll rendelkezésre az elektronok leszakításához szükséges energia.
+A plazma kinetikus hőmérséklete és sűrűsége széles tartományban változhat (104 – 109 K; 105 – 1033 részecske/m³). Elektromos és mágneses térrel a plazma tulajdonságai térben és időben szabályozhatók. Mivel a plazma minden esetben jóval forróbb a szilárd anyagok által kezelhető kb. 3000 foknál, ezért kezelése mágneses és ritkábban elektromos térrel történik. A plazma, magas hőmérséklete miatt, intenzív elektromágneses sugárzó is, magyarul rendkívül sok fényt bocsát ki. Ennek spektruma azonban némileg eltér a feketetest-sugárzástól. Ezzel a sugárzással gyorsan energiát veszít, ezáltal a plazmaállapot rövidesen megszűnik. A sugárzási veszteséget jelentősen csökkenteni lehet, ha azt a plazmát tartalmazó tartály belső falát alkotó tükrös felületek visszasugározzák.
+A plazmát alkotó elektronok és ionok nincsenek egymáshoz kötve, és különböző töltésük és tömegük miatt elektromos és mágneses tér hatására máshogy viselkednek, ami további elektromos és mágneses tér forrása. Emiatt a plazma viselkedése igen bonyolult, fizikai tulajdonságait a magnetohidrodinamika írja le. Napjainkban széles körű plazmakutatás folyik az univerzum mélyebb megismerésére, új gyártási eljárások és műszaki termékek (fényforrások, plazmakijelzők) kialakítására és az emberiség számára oly fontos kontrollált magfúziós energiatermelés megvalósítására.
+
+
+== Definíciója ==
+
+
+=== A negyedik halmazállapot ===
+A plazmát a negyedik halmazállapotnak nevezik a szilárd, a folyékony és a gáz után. Ez egy olyan halmazállapot, amelyben az ionizált anyag olyan mértékben válik elektromosan vezetővé, hogy a nagy hatótávolságú elektromos és mágneses mezők dominálnak a viselkedésében.
+A plazma jellemzően elektromosan kvázineutrális közeg, amely nem kötött pozitív és negatív részecskékből áll (azaz a plazma teljes töltése nagyjából nulla). Bár ezek a részecskék nem kötöttek, nem "szabadok" abban az értelemben, hogy nem hat rájuk erőhatás. A mozgó töltött részecskék elektromos áramingadásokat generálnak, és egy töltött plazmarészecske bármilyen mozgása hatással van a többi töltés által létrehozott mezőkre, és azok is befolyásolják ezeket. Mindez pedig sokféle variációs fokozattal szabályozza a kollektív viselkedést[21][22].
+A plazma különbözik az anyag többi állapotától. Az alacsony sűrűségű plazmát pusztán „ionizált gázként” leírni téves és félrevezető, még akkor is, ha hasonlít a gázfázishoz abban, hogy egyik sem vesz fel határozott alakot vagy térfogatot. Az alábbi táblázat néhány fő különbséget foglal össze: 
+
+
+=== Ideális plazma ===
+
+
+=== Nem-semleges plazma ===
+Az elektromos erő erőssége és hatótávolsága, valamint a plazmák jó vezetőképessége általában biztosítja, hogy a pozitív és negatív töltések sűrűsége bármely nagyobb területen egyenlő legyen ("kvázineutralitás"). Az olyan plazmát, amelyben a töltéssűrűség jelentős többletet mutat, vagy szélsőséges esetben egyetlen anyagfajtából áll, nem semleges plazmának nevezzük. Az ilyen plazmában az elektromos mezők domináns szerepet játszanak. Ilyen például a töltött részecskesugár, az elektronfelhő Penning-csapdában és a pozitronplazma.
+
+
+== Természetes plazmák ==
+ Lásd még: intergalaktikus tér, napszél
+Plazma a leggyakoribb anyag a világegyetemben, messzire elnyúló szakaszokban van jelen a világűrben. A csillagok anyaga plazma, és a csillagközi térben is sok plazma található, de mivel a csillagközi tér nagyon tág, a plazmák pedig próbálják kitölteni a rendelkezésre álló helyet - akárcsak a gázok -, így sűrűségük nagyon kicsi lehet, ezért az ilyen fajta plazmát "híg plazmának" is szokták nevezni. Mivel a csillagok is plazmaállapotban vannak, lövellhetnek ki magukból plazmaadagokat. Ezt nevezik napszélnek.
+A mi Naprendszerünkben a Nap folyamatosan napszélt lövell magából. A napszél elsodródik a világűrben és természetesen hozzánk is elér. Mivel Földünk körül mágneses mező van, a plazmát pedig a mágneses tér befolyásolja, a napszélt az északi és a déli pólus magához vonzza. Ezeken a részeken alakul ki a napszél ionizáló hatására a sarki fény.
+ Bővebben: sarki fény
+Plazmajelenség a Földön természetes módon keletkezhet gyors égéskor is, amit lángnak vagy tűznek mondunk, de villámláskor is plazma keletkezik.
+
+
+== A plazma gyakorlati alkalmazása ==
+ÉlelmiszerfertőtlenítésSzobahőmérsékleten és atmoszferikus nyomáson is elő lehet állítani egyszerű plazmát, a hideg plazmát, ha két elektróda közé hélium és oxigén keverékét juttatjuk.
+Mivel a plazmában az elektronok nincsenek az atomokhoz kötve, szabadon és nagy sebességgel mozoghatnak, ahol atomokkal vagy molekulákkal ütközve hatékonyan pusztítják az emberi szervezetre veszélyes mikroorganizmusokat is. Alkalmazható az élelmiszeriparban használt víz, csomagolóanyagok és felületek (pl. szállítószalag) fertőtlenítésére is.
+
+VilágításNapjainkban vonják be az EU-ban a fémszálas izzólámpákat és helyettük kompakt fénycsöveket lehet vásárolni. Ezekben gáz található. Működési elvük a gázkisülés jelenségen alapul. A gázkisülésekben a gáz ionizálódik, tehát plazma keletkezik. A fénycsövek előnye az energiatakarékosság, hátránya, hogy az általa kibocsátott fény vibrál, ami az emberi szemnek nem jó.
+ Bővebben: Kompakt fénycső 
+
+energiatermelés
+Ennek eszköze az intenzív kutatási fázisban lévő fúziós erőmű. A magfúziós kutatások csak néhány évtizede kerültek előtérbe.
+Egy ilyen fúziós reaktortípus a Tokamak, aminél egy toroid-csőbe zárt deutérium-trícium gázkeverékben magas hőmérsékletű plazmát hoznak létre, nagy elektromos áramot indukálva, mely fűti a plazmát és ugyanakkor össze is nyomja azt a Pinch-effektus hatására.
+
+hegesztés
+vágás
+felületek védőréteggel való bevonása
+fémek előállítása
+
+
+== Irodalom ==
+Budó Á.-Pócza J. (1981): Kísérleti fizika I. II. Tankönyvkiadó, Budapest
+
+
+== Kapcsolódó szócikkek ==
+Plazmafizika
+Gömbvillám
+Koronakisülés
+Szent Elmo tüze
+
+
+== Fordítás ==
+Ez a szócikk részben vagy egészben  a   Plasma_(physics) című angol Wikipédia-szócikk fordításán alapul.  Az eredeti cikk szerkesztőit annak laptörténete sorolja fel. Ez a jelzés csupán a megfogalmazás eredetét és a szerzői jogokat jelzi, nem szolgál a cikkben szereplő információk forrásmegjelöléseként.
+
+
+== Jegyzetek ==
+
+
+== További információk ==
+
+A Magyar Virtuális Enciklopédia szócikke
+www.élelmiszeriparitakarítás.hu
+www.plasmacoalition.org

@@ -1,0 +1,324 @@
+revision: 28632937
+title: Elektrokimyasal gradyan
+url: https://tr.wikipedia.org/wiki/Kemiosmoz
+
+
+---
+
+Kemiosmoz; iyonların, elektrokimyasal gradyanı azaltmak için seçici geçirgen bir zardan geçme hareketidir. Hücresel solunumdaki ATP sentezinin gerçekleşmesini sağlayan enerjinin büyük bir kısmı hidrojenlerin yaptığı bu hareketten karşılanır.
+
+Hidrojen iyonları (protonlar) proton konsantrasyonun yüksek olduğu yerden düşük olduğu yere doğru difüzyon hareketi yaparlar. Peter Mitchell, protonların zarın tarafları arasında oluşturduğu elektrokimyasal konsantrasyon gradyanından ATP üretiminde yararlanılıyor olabileceğini ileri sürdü. Mitchell, bu teoriyi osmozdan (suyun difüzyonu) yola çıkarak ortaya attığı için bu olay kemiosmoz olarak bilinir.
+ATP-sentaz kemiosmoz aracılığıyla ATP sentezleyen enzimdir. ATP-sentaz protonların zardan geçmelerine imkân vererek; protonların sahip oldukları kinetik enerjiyi, ATP fosforilasyonu yapmak için kullanır. Bu mekanizmayla ATP üretimi kloroplast ve mitokondrinin yanı sıra bazı bakteri türlerinde de görülür.
+
+
+== Kemiozmotik Teori ==
+Peter D. Mitchell 1961 yılında kemiozmotik hipotezi ortaya atmıştır.
+Teorinin temelinde; hücresel solunumla elde edilen ATP'nin büyük bir kısmının; glikoz gibi enerji bakımından zengin moleküllerin yıkılmasıyla elde edilen NADH ve FADH2'nin enerjisiyle mitokondrinin iç zarlarında oluşturulan elektrokimyasal gradyan sayesinde üretildiği fikri yatar.
+
+Glikoz gibi moleküller, asetil-KoA gibi enerji bakımından yarı zengin moleküllere dönüştürülmek üzere metabolize edilir. Asetil Co-A'nın mitokondriyel matriksteki oksidasyonu ile NAD ve FAD gibi taşıyıcı moleküllerin indirgenmesi (elektron alması) birlikte gerçekleşir.
+Taşıyıcı moleküller aldıkları bu elektronları mitokondrinin iç zarındaki ETS elemanlarına ulaştırırlar. ETS elemanları elektronlardan sağladıkları enerji ile protonları zarlar arası boşluğa pompalar ve zarlar arası hidrojen derişimi farkı (elektrokimyasal gradyan) artar. Zarlar arası boşlukta biriken protonlar kristanın iç tarafına doğru geçerken ATP-sentazı kullanırlar. Protonların matrikse doğru geri akarken ATP-sentazı kullanması, ATP-sentaza ADP'ye inorganik fosfat ekleyerek ATP üretmesi yani fosforilasyon yapması için gereken enerjiyi sağlar. Son olarak, bu olayda kullanılan protonlar (hidrojen iyonları) ve elektronlar oksijen tarafından tutulur ve su oluşur.
+Kemiosmoz; kloroplastlar, bakteriler ve arkelerde gerçekleşen ATP üretiminde de önemli bir role sahiptir.
+
+
+== Proton-hareket gücü ==
+
+İyonların zarlar arası hareketi iki faktörün bileşimine bağlıdır:
+
+Gradyana bağlı difüzyon kuvveti - iyon içeren tüm parçacıklar yüksek konstrasyonlu bölgeden düşük konsantrasyonlu bölgeye doğru difüzyona uğrama eğilimindedir.
+Elektriksel potansiyel gradyanına bağlı elektrostatik kuvvet - H+ gibi katyonlar elektriksel potansiyellerini azaltmak üzere difüzyona uğrama eğilimindedirler, anyonlar ise tam tersini tercih ederler.Bu iki gradyan, elektrokimyasal gradyan olarak -bir arada- ifade edilebilir.
+Biyolojik zarların çift katlı lipit katmanları iyonlar için -her nasılsa- bir bariyer gibi davranır. Böylece, enerji zarın iki tarafındaki iki gradyanın bileşimi olarak depolanır. Sadece bazı özel zar proteinleri (iyon kanalları gibi) iyonların zarın öbür tarafına geçmesine imkân tanır. Kemiozmotik teoride ATP-sentaz (bir transmembran protein) çok önemli bir role sahiptir. Bu protein; protonların, kendisi (ATP-sentaz) üzerinden yaptıkları doğal akışın enerjisini ATP'nin bağ enerjisine dönüştürür.
+Bundan dolayı araştırmacılar -daha önce belirtildiği üzere elektrokimyasal gradyandan elde edilen- proton-hareket gücü (PMF) terimini oluşturdular. Bu terim, zarın tarafları arasındaki proton ve gerilim gradyanının (proton konsantrasyonu ve elektriksel potansiyel farkı) kombinasyonu olarak saklanan potansiyel enerjinin ölçüsü olarak tanımlanabilir. Elektriksel gradyan, zarın iki tarafındaki yük farklılığının bir sonucudur (H+ iyonu yani proton yanında Cl- gibi bir kontriyon olmadan hareket ettiğinde oluşur).
+Çoğu zaman; proton-hareket gücü, bir proton pompası gibi davranan elektron taşıma sisteminin elektron taşıyıcı moleküllerdeki elektronların enerjisini (redoks tepkimelerinin Gibbs serbest enerjisi) kullanarak protonları (hidrojen iyonlarını) zarın öbür tarafına pompalaması ve zarın iki tarafı arasında fark oluşturması sonucu oluşturulur. Mitokondride, elektron taşıma sistemi tarafından serbest bırakılan enerji, protonları mitokondriyel matriksten mitokondrinin zarlar arası boşluğuna taşımak için kullanılır. Protonların mitokondrinin dışına doğru hareketi, içeriye doğru -pozitif yüklü- protonların konstrasyonunun azalmasını, bunun sonucunda zarın iç tarafında zayıf bir negatif yük oluşmasını sağlar. Elektriksel potansiyel gradyanı -170 mV civarlarındadır. Bu gradyanlar - yük farklılığının ve proton konsantrasyonu farklılığının ikisi de zarın iki tarafı arasında genellikle proton-hareket gücü olarak ifade edilen kombine bir elektrokimyasal gradyan oluşturur. Mitokondride, PMF'in neredeyse tamamı elektriksel bileşenden elde edilir ama kloroplastlarda PMF çoğunlukla pH gradyanından elde edilir çünkü H+ protonları Cl- ve diğer anyonların hareketi ile nötralize edilmiştir. Her iki durumda da, ATP-sentazın ATP sentezi yapabilmesi için PMF'in 50kJ/mol civarında olması gerekir.
+
+
+=== Denklemler ===
+Proton-hareket gücü Gibbs serbest enerjisinden elde edilir:
+
+  
+    
+      
+        Δ
+        G
+        (
+        k
+        J
+        ⋅
+        m
+        o
+        
+          l
+          
+            −
+            1
+          
+        
+        )
+        =
+        −
+        m
+        F
+        Δ
+        ψ
+        +
+        2.3
+        R
+        T
+        
+          log
+          
+            10
+          
+        
+        ⁡
+        
+          (
+          
+            
+              
+                [
+                
+                  X
+                  
+                    m
+                    +
+                  
+                
+                
+                  ]
+                  
+                    B
+                  
+                
+              
+              
+                [
+                
+                  X
+                  
+                    m
+                    +
+                  
+                
+                
+                  ]
+                  
+                    A
+                  
+                
+              
+            
+          
+          )
+        
+      
+    
+     
+  
+ΔG 1 mol Xm+ katyonunun A fazından B'ye transferi sırasında meydana gelen Gibbs serbest enerjisi değişimi, Δψ P ve N (A ve B) fazları arasındaki elektriksek potansiyel farklılığı (mV), [Xm+]A ve [Xm+]B zarın karşılıkları taraflarının katyon konsantrasyonları, F Faraday sabiti, R gaz sabitidir. Gibbs serbest enerjisi değişimi burada sık sık elektrokimyasal iyon gradyanı Δμm+ olarak da ifade edilebilir.
+
+  
+    
+      
+        Δ
+        
+          μ
+          
+            X
+            m
+            +
+          
+        
+        (
+        k
+        J
+        ⋅
+        m
+        o
+        
+          l
+          
+            −
+            1
+          
+        
+        )
+        =
+        Δ
+        G
+        (
+        k
+        J
+        ⋅
+        m
+        o
+        
+          l
+          
+            −
+            1
+          
+        
+        )
+      
+    
+     
+  
+Bu durumda elektrokimyasal proton gradyanı denklemi şu şekilde sadeleştirilebilir:
+
+  
+    
+      
+        Δ
+        
+          μ
+          
+            H
+            +
+          
+        
+        =
+        −
+        F
+        Δ
+        ψ
+        +
+        2.3
+        R
+        T
+        Δ
+        p
+        H
+      
+    
+     
+  
+burada
+
+  
+    
+      
+        Δ
+        p
+        H
+        =
+        p
+        
+          H
+          
+            A
+          
+        
+        −
+        p
+        
+          H
+          
+            B
+          
+        
+      
+    
+     
+  
+(P fazında pH - N fazında pH)
+Mitchell proton-hareket gücünü (PMF) şöyle tanımladı:
+
+  
+    
+      
+        Δ
+        p
+        (
+        m
+        V
+        )
+        =
+        −
+        
+          
+            
+              Δ
+              
+                μ
+                
+                  H
+                  +
+                
+              
+            
+            F
+          
+        
+      
+    
+     
+  
+ΔμH+ = 1 kJ·mol Δp = 10.4 mV'a karşılık gelir. 25 °C (298K°)'ye göre denklem düzenlenince şu formu alır:
+
+  
+    
+      
+        Δ
+        p
+        =
+        Δ
+        ψ
+        −
+        59
+        Δ
+        p
+        H
+      
+    
+     
+  
+
+Buradaki en önemli şey, enerjinin Gibbs serbest enerjisi olarak ifade edilmesidir, elektrokimyasal proton gradyanı ya da proton-hareket gücü (PMF) zarın karşılıklı tarafları arasındaki iki gradyanın kombinasyonudur:
+
+ΔpH olarak ifade edilen konsantrasyon gradyanı
+Elektriksel gradyan ΔψBir sistem ΔG dengesine (Δμm+, Δp) = 0 ulaştığında; bu zarın iki tarafında da konsantrasyonun aynı olduğu anlamına gelmez. Çünkü konsantrasyon farklılığına ek olarak iyonların elektriksel gradyanı da zarın karşı tarafına iyonların doğal akışını etkiler.
+Örnek değerler:
+
+ΔGp ATP sentezinin Gibbs serbest enerjisi:
+ADP + Pi → ATP
+fosforilasyon potansiyeli olarak da bilinir. Yukarıdaki tablodaki H+ / ATP oranı değerleri Δp ve ΔGp'nin mukayesesiyle hesaplanabilir, örnek olarak:
+H+ / ATP = 66 kJ·mol−1 / (200 mV / 10.4 kJ·mol−1/mV) = 66 / 19.2 = 3.4 (mitokondri)
+E.coli için H+ / ATP oranını saptamak zordur (≠ olarak işaretlendi).
+Gördüğümüz gibi,  1 ATP'nin kimyasal enerjisine dönüştürülecek enerji 3 H+'nın enerjisinin üstündedir.
+
+
+== Mitokondride ==
+
+Glikozun, oksijen varlığında tam yıkımı hücresel solunum olarak adlandırılır. Bu işlemin son aşamaları mitokondride gerçekleşir. İndirgenmiş NADH ve FADH2 molekülleri krebs döngüsü ve glikolizde üretilir. Bu moleküller elektronları -açığa çıkan enerjiyi mitokondriyel iç zarın tarafları arasında proton gradyanı oluşturmak için kullanan- bir elektron taşıma zincirine taşırlar. Sonradan ATP-sentaz saklı olan bu enerjiyi ATP yapmak için kullanır. Bu işlem; son elektron alıcısı oksijen olduğu ve oksijenin indirgenmesiyle su oluşturulurken açığa çıkan enerjiden ADP fosforilasyonu ile ATP sentezlendiği için, oksidatif fosforilasyon olarak adlandırılır.
+
+
+== Bitkilerde ==
+Fotosentezin ışığa bağımlı tepkimelerinde kemiosmoz ile enerji üretilir. Işık enerjisi (fotonlar) Fotosistem 2'nin anten kompleksi tarafından tutulur ve bir çift elektron daha yüksek enerji seviyesine uyarılır. Bu elektronlar H+ iyonlarının zarın öbür tarafındaki inter-tilakoit boşluğa doğru yayılmasını sağlamak için elektron taşıma zincirinde iletilir. Bu H+ iyonları; ADP fosforilasyonu ile ATP üreten, ATP-sentaz olarak bilinen bir enzim aracılığı ile konsantrasyon gradyanının azaldığı yere doğru taşınırlar. İlk ışık tepkimesinden elektronlar Fotosistem 1'e ulaşırlar, ve sonra daha yüksek bir enerji seviyesine çıkarlar, ardından bir elektron alıcı tarafından tutulur ve NADP+'yı NADPH+H'a indirgerler. Suyun parçalanması (fotoliz olarak bilinir) ile elde edilen elektronlar Fotosistem 2'nin uyarılan elektronlarının yerini alır. 4 elektron kazanmak için 2 su molekülü parçalanmalıdır.
+
+
+== Prokaryotlarda ==
+
+Bakteri ve arkeler de ATP üretmek için kemiosmozu kullanabilir. Siyanobakteri, yeşil sülfür bakterisi ve mor bakteri fotofosforilasyon adıyla bilinen bir işlem ile enerji üretir. Bu bakteriler fotosentetik elektron taşıma zinciri aracılığıyla bir proton gradyanı oluşturmak için ışık enerjisini kullanırlar. Fotosentetik olmayan bakteriler de -E. coli gibi- ATP-sentaz içerir.
+Aslında mitokondri ve kloroplastın, ilkel ökaryotik hücrelerin kemiosmoz ile enerji transferi yapabilen bakteriyi yutmasıyla oluştuğuna inanılır. Bu endosimbiyoz kuramı olarak adlandırılır.
+Kemiosmotik fosforilasyon ADP ve inorganik fosfattan  ATP üretmenin üçüncü yoludur. Oksidatif fosforilasyonun bir parçasıdır.
+
+
+== Ayrıca bakınız ==
+Elektrokimyasal gradyan
+Hücresel solunum
+Bacteriorhodopsin
+Sitrik asit çevrimi
+Glikoliz
+Oksidatif fosforilasyon
+
+
+== Kaynakça ==
+
+
+== Konuyla ilgili yayınlar ==
+NCBI kitaplığından biyokimya ders kitabı – Jeremy M. Berg, John L. Tymoczko, Lubert Stryer ((Ed.)). "18.4. A Proton Gradient Powers the Synthesis of ATP". Biochemistry (5th edition) (İngilizce). W. H. Freeman. 24 Eylül 2009 tarihinde kaynağından arşivlendi. Erişim tarihi: 24 Ocak 2013. KB1 bakım: Birden fazla ad: editör listesi (link) 
+technical reference relating one set of experiments aiming to test some tenets of the chemiosmotic theory - Seiji Ogawa and Tso Ming Lee (1984). "The Relation between the Internal Phosphorylation Potential and the Proton Motive Force in Mitochondria during ATP Synthesis and Hydrolysis". Journal of Biological Chemistry. 259 (16). ss. 10004-10011. PMID 6469951. 
+
+
+== Dış bağlantılar ==
+Kemiosmoz (Wisconsin Üniversitesi)29 Ağustos 2006 tarihinde Wayback Machine sitesinde arşivlendi. (İngilizce)

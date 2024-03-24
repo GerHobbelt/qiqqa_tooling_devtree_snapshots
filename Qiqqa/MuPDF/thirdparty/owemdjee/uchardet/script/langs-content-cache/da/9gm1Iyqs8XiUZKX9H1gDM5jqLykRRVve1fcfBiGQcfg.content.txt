@@ -1,0 +1,15 @@
+revision: 11200090
+title: Link 11
+url: https://da.wikipedia.org/wiki/Link_11
+
+
+---
+
+Link 11 er et militært halv dupleks datalinksystem benyttet i NATOs medlemslande. Systemet bliver i Danmark brugt primært af Søværnet.
+Link 11 blev udviklet i starten af 1960'erne af US Navy og er i stand til at udveksle spor mellem forskellige enheder. Systemet er i stand til at udveksle sporene i næsten real time. Link 11 er standardiseret i Standardization Agreement (STANAG) 5511.
+Link 11 benytter UHF eller HF-radioforbindelser til at udveksle de digitale informationer, via en Net Control Station (NCS) der styrer hvem der udsender deres informationer hvornår, således at de deltagende enheder ikke udsender samtidig og derved jammer hinanden. På grund af den lave dataoverførselshastighed og sårbarhed overfor ECM er systemet teknisk set forældet. Det skal erstattes af Link 16 og Link 22. Ikke desto mindre er systemet brugt af mange flåder som benytter systemet som den primære kilde til at udveksle information i næsten real time.
+I Danmark er HDMS Thetis (F357), Absalon-klassen og Flyvefisken-klassen i MCM-, og Kamprollen udrustet med Link 11. Fregatterne af Iver Huitfeldt-klassen vil også blive udrustet med systemet.
+
+
+== Eksterne links ==
+fas.org: Tactical datalinks (engelsk) Arkiveret 8. august 2015 hos  Wayback Machine

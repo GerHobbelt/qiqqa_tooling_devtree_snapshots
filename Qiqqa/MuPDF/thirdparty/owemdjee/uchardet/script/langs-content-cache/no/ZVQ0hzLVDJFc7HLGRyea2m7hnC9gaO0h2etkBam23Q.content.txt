@@ -1,0 +1,39 @@
+revision: 23109570
+title: Dynamic Host Configuration Protocol
+url: https://no.wikipedia.org/wiki/DHCP
+
+
+---
+
+DHCP (Dynamic Host Configuration Protocol) er en kommunikasjonsprotokoll som brukes i UDP/IP datanettverk. Ved hjelp av en DHCP-server er det mulig å automatisk tildele IP-adresser og andre nettverksparametre til tilkoblede klienter. Dette gjør at klienter i ett nettverk kan kommunisere med hverandre meget effektivt. Hvis nettverket er koblet til internett, vil man også kunne kommunisere ut på internett. DHCP gjør det enklere å bytte mellom nettverk, da man ikke lengre er avhengig å manuelt sette opp IP-adresser. Alt fra små hjemmenettverk til store bedriftsnettverk bruker DHCP. Dersom et nettverk ikke har noen DHCP-server, vil en klient generere en privat IP-adresse. En slik IP-adresse vil være mellom 169.254.1.0 og 169.254.254.255 . Dette gjør at den ikke vil klare å kommunisere på internett.
+
+
+== Historikk ==
+DHCP ble definert som standard protokoll i oktober 1993 av Internet Engineering Task Force. DHCP fikk en oppdatering i 1997 som fortsatt er i bruk.Etter som DHCP ble oppfunnet før nettverkssikkerhet ble viktig, har ikke den grunnleggende DHCP protokollen noen sikkerhetsmekanismer.
+
+
+== Funksjon ==
+DHCP er bygget opp i fire trinn, som er utgangspunktet for tildeling av IP informasjon. De fire trinnene er DHCP Discovery, DHCP Offers, DHCP Request og DHCP Acknowledgement.
+
+
+==== DHCP Discovery ====
+Når en datamaskin er koblet til et DHCP-aktivert nettverk, vil den sende ut en broadcast. Denne forespørselen, kjent som DHCP Discover, vil bli sendt ut i håp om å finne DHCP-server. Dette er en standardisert UDP-pakke (User Datagram Protocol-pakke), og er lett gjenkjennelig da den er nesten "tom" for informasjon.
+
+
+==== DHCP Offers ====
+Klienten vil deretter motta et lease-tilbud fra serveren. Denne leieavtalen bestemmer hvor lenge klienten kan forvente å bruke IP informasjonen den vil få inn. En DHCP-melding referert til som DHCP Offer sendes tilbake fra serveren til klienten. Denne meldingen inneholder leieavtalens varighet, IP-adresse, nettverksmaske, klientens MAC-adresse og IP-adressen til DHCP-serveren som utstedte meldingen.
+
+
+==== DHCP Requests ====
+Ved en vellykket transaksjon av informasjon, må klienten fortelle DHCP serveren om informasjonen som ble sendt er mottatt og akseptert. En broadcast er også igangsatt fra DHCP-serveren, dette vil fortelle andre mulige DHCP-servere at det ikke skal utstede IP-informasjon til klienten, fordi klienten allerede har innhentet nødvendig informasjon. Dette vil bidra til å frigjøre IP-adresser til andre datamaskiner, etter som bare en leiekontrakt kan hentes per nettverksgrensesnitt (NIC-enhet).
+
+
+==== DHCP Acknowledgement (ACK) ====
+DHCP-anerkjennelse er den siste fasen i informasjonsutveksling mellom serveren og klienten. I denne fasen vil serveren, etter å ha hentet DHCPREQUEST-melding fra klienten, sende den tilbake en DHCP Acknowledge-melding. Denne pakken med informasjon omfatter leieavtalens varighet, samt noe konfigurasjonsinformasjon klienten kan ha spesifisert/etterspurt (f.eks. IP-adressen til ruteren, eller DNS-adresse(r)). På dette punktet er prosessen fullført, og klientmaskinen vil konfigurere IP-informasjonen.
+
+
+== Referanser ==
+
+
+== Kilder ==
+Kurose, James F.; Ross, Keith W. (2016). «4.3.3: IPv4 Addressing». Computer Networking, A Top-Down Approach. (Seventh edition). Malaysia: Pearson. s. 370 – 373. ISBN 978-1-292-15359-9.

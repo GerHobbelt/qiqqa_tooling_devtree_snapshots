@@ -1,0 +1,29 @@
+revision: 6939671
+title: "Strukturbericht (not\xE1cia)"
+url: https://sk.wikipedia.org/wiki/Strukturbericht_(not%C3%A1cia)
+
+
+---
+
+Strukturbericht je (sčasti) systematická metóda notácie určená na špecifikáciu kryštálových štruktúr. Názov je odvodený od rovnomenného časopisu, v ktorom sa táto notácia používa. 
+Za základným symbolom nasleduje niekoľko ďalších buď písmen alebo čísel, pričom môžu, ale nemusia byť v indexe. Nie je to tak systematický druh označovania ako Pearsonov symbol, ale na rozdiel od Pearsonovho symbolu opisuje konkrétnu štruktúru (nie však minerál). Rovnakú štruktúru môže mať viac minerálov (tie sa potom odlišujú druhom atómov, nie však kryštalickou štruktúrou). 
+Výnimkou systému (z historických dôvodov) je štruktúra A15, ktorá nie je štruktúrou kryštálu jedného prvku (ako to inak vyžaduje systém, pozri základné symboly). Ide o Cr3Si.
+
+
+== Základné symboly ==
+A : Chemické prvky
+B : Zlúčeniny typu AB (napr. NaCl, CsCl)
+C : Zlúčeniny typu AB2
+D : Zlúčeniny typu A m B nD0 : Zlúčeniny typu AB3
+E–K : komplexnejšie zlúčeniny
+L : Zliatiny
+O : Organické zlúčeniny
+S : silikátyPod pojmom zliatiny sa v tomto prípade rozumejú také, ktoré majú usporiadanú štruktúru - teda majú vlastnú mriežku (mólové obsahy prvkov musia teda byť v stechiometrickom pomere). Napr. AuCu vytvára usporiadanú štruktúru L10, ktorú si je možné predstaviť tak, že rohy plošne centrovanej priestorovej mriežky sú zaplnené prvkom Au, tak isto stredy dvoch náprotivných stien, ostatné 4 steny majú atóm Cu. Samozrejme pojem molekula stráca v mriežke zmysel, teda napr. NaCl, kde každý atóm Na má 6 susedných rovnako vzdialených atómov Cl. Nemá teda zmysel hovoriť: …s ktorým tvorí molekulu. Tým sa teda stráca aj rozdiel medzi usporiadanou zliatinou a zlúčeninou.
+
+
+== Príklady notácie ==
+
+
+== Externé odkazy ==
+Strukturbericht systém(anglicky)
+Pearsonov system označovania kryštalografických štruktúr

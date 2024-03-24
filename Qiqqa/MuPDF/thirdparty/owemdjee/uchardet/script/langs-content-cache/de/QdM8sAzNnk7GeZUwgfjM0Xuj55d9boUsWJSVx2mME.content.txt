@@ -1,0 +1,26 @@
+revision: 234664389
+title: Bird Internet routing daemon
+url: https://de.wikipedia.org/wiki/Bird_Internet_Routing_Daemon
+
+
+---
+
+Der Bird Internet Routing Daemon (kurz BIRD) ist eine Open-Source-Implementierung eines sowohl IPv4- als auch IPv6-fähigen TCP/IP-Routing-Daemons, die ursprünglich an der Fakultät für Mathematik und Physik an der Karls-Universität in Prag entwickelt wurde und heute von den CZ.NIC Labs weiterentwickelt und finanziert wird.Derzeit unterstützt BIRD mehrere interne Routing-Tabellen, das EGP BGP, die IGPs OSPF und RIP sowie statische Routen. Des Weiteren kann BIRD auch mittels der Implementierung RAdvd die bei der IPv6-Autokonfiguration verwendeten Router Advertisements versenden.
+
+Inzwischen hat BIRD als Route-Server an den meisten europäischen IXPs, darunter LONAP, der DE-CIX, AMS-IX, LINX sowie der ECIX laut dem 2011 erschienenen Report des Euro-IX mit einem Anteil von 41 % Alternativen wie Quagga ersetzt, was unter anderem mit der geringeren Nutzung von Ressourcen zusammenhängt.Im Unterschied zum ähnlichen Quagga, das über ein Telnet-Interface konfiguriert wird, wird BIRD über eine Konfigurationsdatei eingerichtet. Änderungen werden dem Daemon über ein HUP Signal mitgeteilt.
+2010 wurde dem CZ.NIC der LINX Conspicuous Contribution Award verliehen.
+
+
+== Siehe auch ==
+Quagga (Weiterentwicklung von GNU Zebra)
+XORP
+OpenBGPD
+Routing
+
+
+== Weblinks ==
+BIRD-Website (englisch)
+BIRD-Projektmanagement (englisch)
+
+
+== Einzelnachweise ==

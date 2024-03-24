@@ -1,0 +1,12 @@
+revision: 11484309
+title: "Merkle\u2013Damg\xE5rd konstruktion"
+url: https://da.wikipedia.org/wiki/Merkle%E2%80%93Damg%C3%A5rd_konstruktion
+
+
+---
+
+Indenfor kryptografi er Merkle-Damgård konstruktionen en metode, der bruges til at danne kollisionsresistente (en) kryptografiske-hashfunktioner ud fra kollisionsresistente envejs-kompressionsfunktioner (en). Konstruktionen er blevet benyttet til at designe populære hashfunktioner såsom MD5, SHA-1 og SHA-2.
+Konstruktionen blev beskrevet i Ralph Merkles ph.d.-afhandling fra 1979. Ralph Merkle (en) og Ivan Damgård beviste uafhængigt af hinanden at konstruktionen er sund.
+
+
+== Referencer ==

@@ -1,0 +1,53 @@
+revision: 6658263
+title: IMAGE
+url: https://sk.wikipedia.org/wiki/IMAGE
+
+
+---
+
+Imager for Magnetopause-to-Aurora Global Exploration, skrátene IMAGE, bola americká vedecká družica zameraná na štúdium interakcií zemskej magnetosféry so slnečným vetrom. Štart sa konal 25. marca 2000 na kalifornskej základni Vandenberg. Družica bola umiestnená na eliptickú polárnu dráhu s apogeom 46 000 km. Vedecká činnosť bola ukončená v decembri 2005, keď družica prestala reagovať na príkazy z riadiaceho strediska.
+21. januára 2018 zverejnil kanadský amatérsky astronóm a rádioamatér Scott Tilley, pátrajúci po utajených družicových misiách, informáciu o zachytení signálu z neznámeho satelitu, ktorý následne stotožnil s družicou IMAGE (v tom čase už 12 rokov považovanou za nefunkčnú). Informáciu 26. januára potvrdila aj NASA s tým, že sa pokúsi dekódovať a analyzovať vysielané údaje s cieľom zistiť stav zariadení na družici.
+
+
+== Popis ==
+
+Družicu postavila firma Lockheed Martin Missiles and Space. Prevádzkovateľom vedeckých prístrojov je Southwest Research Institute zo San Antonia, operatívnym prevádzkovateľom družice je NASA, Goddardovo centrum pre vesmírne lety.
+IMAGE je rotáciou (0,5 obr/min) stabilizovaná družica typu LM100 tvare nízkeho osembokého hranola s priemerom 2,25 m a dĺžkou 1,52 m, s bokmi a dnom pokrytým slnečnými článkami dodávajúcimi priemerne 250 W elektrickej energie a dobíjajúcimi NiCd akumulátorové batérie. Je vybavená štyrmi drôtovými anténami z beryliového bronzu (priemer 0,321 mm) v rovine kolmej na os rotácie usporiadanými do tvaru kríža s rozpätím 500 m (najrozmernejšie umelé kozmické teleso) a dvoma priehradovými anténami v osi rotácie s dĺžkou 10 m (každá).
+Hlavnou úlohou družice bolo štúdium globálnej štruktúry magnetosféry, najmä hlavných mechanizmov introdukcia plazmy počas magnetických búrok, vplyvu slnečného vetra na magnetosféru a spôsobu prenosu energie v magnetosférickej plazme. Výsledky meraní, použiteľné pre predpoveď geomagnetických búrok, boli, po spracovaní palubným procesorom CIDP (Central Instrument Data Processor), vysielané voľne prístupným telemetrickým vysielačom pracujúcim v pásme S (2,27 GHz, rýchlosť prenosu 2,28 Mbit/s zo záznamu alebo 44 kbit/s v reálnom čase). Vysielal cez špirálové antény so stredným ziskom, dve všesmerové tyčové antény slúžili pre príjem povelov. Hlavnými pozemnými komunikačnými stanicami boli stanice DSN (Deep Space Network) Goldstone a Madrid.
+
+
+=== Prístrojové vybavenie ===
+
+Zobrazovač štruktúry plazmy RPI (Radio Plasma Imager) pracujúci na princípe radarového zariadenia s nízkym výkonom (na rezonančných frekvenciách 3 kHz až 3 MHz)
+Zobrazovacie zariadenia FUI (Far Ultraviolet Imager) pracujúce v oblasti vzdialeného ultrafialového žiarenia (120 až 180 nm), ktoré tvoria tri prístroje:
+Fotometre pre pozorovanie geokoróny GEO (Geocorona photometers) v oblasti žiarenia Lyman-α (Lα) (121,6 nm)
+Spektrografická kamera SI (Spectrographic Imager) na snímkovanie v pásmach 121,8 a 135,6 nm (zorné pole 15×15°, 128×128 pixelov, priestorové rozlíšenie 0,15°)
+Širokopásmová kamera pre vysoké priestorové rozlíšenie WIC (Wideband Imaging Camera) pracujúca v oblasti vlnových dĺžok 140 až 160 nm (zorné pole 17×17°, 256×256 pixelov, priestorové rozlíšenie 0,1°)
+Kamery na mapovanie rozloženia neutrálnych atómov NAI (Neutral Atom Imagers), a to:
+Kamera pre zobrazovanie nízkoenergetických atómov (od 10 eV) LENA (Low-Energy Neutral Atom Imager)
+Kamera pre zobrazovanie stredneergetických atómov (1 až 30 keV) MENA (Medium-Energy Neutral Atom Imager)
+Kamera pre zobrazovanie vysokoenergetických atómov (10 až 500 keV) HENA (High-Energy Neutral Atom Imager)
+Kamera pracujúca v oblasti extrémneho ultrafialového žiarenia EUV (Extreme Ultraviolet Imager) pre mapovanie rozloženia ionizovaného hélia v magnetosfére (vlnová dĺžka 30,4 nm).
+
+
+== Referencie ==
+
+
+== Iné projekty ==
+
+ Commons ponúka multimediálne súbory na tému IMAGE
+
+
+== Externé odkazy ==
+
+http://pluto.space.swri.edu/IMAGE/ (po anglicky)
+NSSDC Master Catalog - 2000-017A (po anglicky)
+http://science.nasa.gov/science-news/science-at-nasa/2000/ast24mar_1m/ (po anglicky)
+http://www.spaceflightnow.com/delta/d277/index.html (po anglicky)
+http://space.skyrocket.de/doc_sdat/explorer_image.htm (po anglicky)
+
+
+== Zdroje ==
+Tento článok je čiastočný alebo úplný preklad článku IMAGE na českej Wikipédii.
+Tento text alebo jeho časť bola prevzatá z článku - 2000-017A - IMAGE (verzia  2009-08-16 16:12:13 UT) uverejneného na stránkach SPACE 40, ktorého autorom je Antonín Vítek
+. (licencia GFDL a CC-BY-SA 3.0, povolenie autora)

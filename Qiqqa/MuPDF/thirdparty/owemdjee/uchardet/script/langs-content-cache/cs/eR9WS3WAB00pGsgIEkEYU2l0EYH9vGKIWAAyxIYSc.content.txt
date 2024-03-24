@@ -1,0 +1,147 @@
+revision: 20282023
+title: "ANSI escape k\xF3d"
+url: https://cs.wikipedia.org/wiki/ANSI_escape_k%C3%B3d
+
+
+---
+
+ANSI escape kódy (anglicky ANSI escape codes) (nebo escape posloupnosti) je metoda pro řízení formátování, barev a dalších vlastností výstupu na obrazovkové textové terminály pomocí signalizace v přenosovém kanálu (anglicky in-band). Pro zakódování formátovacích informací se do textu vkládají určité posloupnosti bytů, které terminál neinterpretuje jako kódy znaků, ale jako příkazy.
+ANSI kódy byly vytvořeny v 70. letech 20. století a do začátku 80. let 20. století se rozšířily v oblasti minipočítačů a sálových počítačů. K jejich dalšímu rozšíření přispěly vznikající BBS, které je využívaly ke zlepšení ovládání displeje oproti dřívějším systémům, které obvykle postrádaly schopnost pohybovat kurzorem.
+Přestože hardwarové textové terminály téměř vymizely, ANSI escape kódy se používají i v 21. století, protože většina terminálových emulátorů při výstupu textu interpretuje alespoň část ANSI escape posloupností.
+MS Windows znovu podporují ANSI od verze 10 (Build 1511), pro předchozí verze lze použít celou škálu utilit interpretujících ANSI kódy (jako např. Ansicon). Tyto lze metodou BIN2HEX (např. program BHX) přibalit do scriptu a ten následně redistribuovat. V roce 2019 MS vydal Windows Terminal (ten má v budoucnu nahradit Windows consoli) a který obsahuje vylepšenou podporu ANSI sekvencí, jako třeba 16bit barvy. To je umožněno díky grafickému módu, který WT používá, namísto textového který používá původní Windows console.
+
+
+== Historie ==
+Většina výrobců obrazovkových terminálů vyvinula proprietární escape posloupnosti pro ovládání terminálů pomocí operací, které umožňovaly např. umístit kurzor na libovolné místo na obrazovce. Např. terminál VT52 přesune kurzor na pozici x,y, pokud se na něj odešle znak ESC následovaný znakem y a dvěma znaky s kódy x+32 nebo y+32 (přičtením 32 se zabrání, aby escape sekvence obsahovala řídicí znaky).
+Protože různé terminály používaly různé posloupnosti, byly vytvořeny komplikované knihovny jako například termcap, které vytvářejí jednotné API pro ovládání libovolného terminálu. Většina těchto knihoven vyžadovala, aby se čísla (např. číslo řádku a sloupce) odesílala jako binární hodnoty znaků; pro některé programovací jazyky a pro systémy, které nepoužívaly interně ASCII, bylo často obtížné nebo nemožné převést číslo na správný znak.
+ANSI standard usiloval o vyřešení těchto problémů vytvořením sady příkazů, které by používaly všechny terminály, a u nichž by všechny číselné informace byly přenášeny v textovém tvaru. Prvním takovým standardem byl ECMA-48, přijatý v roce 1976, který navazoval na řadu standardů pro kódování znaků, z nichž první byl ECMA-6 z roku 1961, 7bitový standard, který inspiroval kódování ASCII. Název „ANSI escape posloupnosti“ pochází z roku 1981, kdy ANSI převzalo ECMA-48 jako vlastní standard ANSI X3.64 (který platil do roku 1997).První oblíbený videoterminál, který podporoval tyto posloupnosti, byl VT100 firmy Digital představený v roce 1978. Tento model se velmi dobře prodával, což vedlo ke vzniku množství jeho klonů, z nichž k prvním a nejoblíbenějším patřil mnohem levnější Zenith Z-19 z roku 1979. Oblíbenost těchto terminálů vedla k tomu, že stále více a více softwaru (zvláště systémy BBS) předpokládalo, že escape posloupnosti fungují, což vedlo k tomu, že je podporovaly téměř všechny nové terminály a emulátory.
+Standard ECMA-48 byl několikrát aktualizován a aktuálně je v pátém vydání z roku 1991. ECMA-48 převzala ISO a IEC jako standard ISO/IEC 6429.
+
+
+== Podpora ==
+Velkého rozšíření ANSI díky systémům BBS a online službám vedlo k téměř univerzální platformní podpoře do poloviny 80. let 20. století. Ve většině případů měla podpora formu terminálového emulátoru (jako například xterm na Unixu nebo OS X Terminal nebo ZTerm na MacOSu a mnoho komunikačních programů pro IBM PC), ale na mnoha operačních systémech se zlepšovala i podpora ve standardním textovém výstupu.
+Unix a AmigaOS obsahovaly podporu ANSI sekvencí v systému, takže ji používalo mnoho programů běžících na těchto platformách. Na unixových operačních systémech jsou k dispozici knihovny, jako například termcap a curses, které používání ANSI kódů umožňují. Tyto knihovny by měly podporovat i neANSI terminály, ale tato podpora se v současnosti testuje jenom zřídka, takže je pravděpodobné, že nebude bezchybná. Mnoho her a shellových skriptů (jako například barevné systémové nápovědy) přímo vypisují ANSI posloupnosti a proto je nelze používat na terminálech, které je neumějí interpretovat.
+AmigaOS interpretuje ANSI escape posloupnosti nejen v textovém výstupu na obrazovku, ale ovladače tiskáren je (včetně rozšíření proprietárních pro AmigaOS) převádí na kódy pro konkrétní připojenou tiskárnu.Přes svou oblíbenost nebyly ANSI kódy univerzálně podporované. Podpora nebyla součástí původního „klasického“ Mac OS, Atari ST používalo řídicí posloupnosti převzaté z VT52 s některými rozšířeními pro podporu barev.
+
+
+=== Windows a DOS ===
+MS-DOS 1.x žádnou podporu ANSI ani jiných escape posloupností neobsahoval. Podkladový BIOS interpretoval pouze několik řídicích znaků (BEL, CR, LF, BS), což téměř znemožňovalo vytváření celoobrazovkových aplikací. Pro jakékoli obrazovkové efekty bylo nutné požít BIOS, což bylo velmi pomalé, nebo přímo hardware IBM PC.
+DOS 2.0 umožňuje instalovat ovladače zařízení a obsahuje ovladač pro ANSI escape posloupnosti – de facto standardem je ANSI.SYS, ale existují další (výrazně rychlejší, protože obcházejí BIOS) jako ANSI.COM, NANSI.SYS a ANSIPLUS.EXE. Protože standardní ovladač byl velmi pomalý a nebyl nainstalován implicitně, používalo ANSI sekvence jen velmi málo programů; většina programů přímo přistupovala k hardwaru videokarty, aby dosáhla požadovaných efektů při textovém výstupu. ANSI.SYS a podobné ovladače byly dostupné ve Windows 9x až Windows Me i v prostředí pro 16bitové starší programy prováděné pod NTVDM v systémech vycházejících z Windows NT.
+Windows ANSI escape sekvence od verze 10 opět podporují, dokonce s 24bitovými barvami. Toho je dosaženo tím, že terminálový program [connhost.exe] byl převeden z textového módu do grafického, což umožňuje full-screen provoz konzole.
+Některé programy ANSI escape posloupnosti ve výstupních textech interně interpretují a převádějí je na volání služeb, které manipulují s barvami a pozicí kurzoru v okně pro výstup příkazů, což usnadňuje portování softwaru používajícího ANSI na Windows.
+
+
+== Struktura ANSI Escape posloupností ==
+Escape posloupnosti začínají znakem ESC  (ASCII desítkově 27/šestnáctkově 0x1B/osmičkově 033). Ve dvouznakových posloupnostech je druhý znak z intervalu ASCII kódů 64–95 (@ až _).
+Většina posloupností je však tvořena více než dvěma znaky a začínají znaky ESC a [ (levou hranatou závorkou). Tato posloupnost se nazývá CSI (anglicky Control Sequence Introducer nebo Control Sequence Initiator). Poslední znak těchto posloupností je ASCII znak z intervalu 64–126 (@ až ~).
+Existuje i jednoznakové CSI (155/0x9B /0233 viz řídicí sada C1), ale dvouznaková posloupnost ESC[ se používá častěji.
+Zařízeními, které podporují pouze ASCII (7bitové byty), rozpoznávají pouze dvouznakové CSI, stejně jako zařízení, které sice podporují 8bitové byty, ale interval řídicích znaků 0x80–0x9F používají pro jiné účely. Na terminálech, které používají kódování UTF-8, oba tvary zabírají 2 byty (CSI v UTF-8 je 0xC2, 0x9B), ale posloupnost ESC[ je jasnější.
+Přestože některá kódování používají více bytů na znak, následující diskuze je omezená na ASCII znaky a tedy předpokládají jeden byte pro každý znak.
+
+
+== Jiné než CSI kódy ==
+Poznámka: jiné kódy z řídicí sady C0 než ESC – obvykle BEL, BS, CR, LF, FF, TAB, VT, SO a SI – mohou produkovat podobné nebo stejné efekty jako některé řídicí posloupnosti.
+
+ESC N = SS2
+ESC O = SS3
+Vybere jeden znak z alternativní znakové sady.
+ESC ^ = PM
+ESC _ = APC
+Za těmito znaky následuje textový řetězec zakončený symbolem ST (ESC \). Program xterm je ignoruje.
+ESC P = DCS
+Řetězce pro řízení zařízení,
+ESC ] = OSC
+Příkaz operačního systému – podobají se CSI, ale nejsou omezené celočíselnými argumenty. Protože jsou často používané, v mnoha případech je BEL přijatelnou alternativou k ST. Např. v xtermu lze zapnout titulek okna pomocí "OSC0;Toto je titulek oknaBEL"Poznámka: stisknutí speciálních kláves na klávesnici nebo vypsání různých CSI, DCS nebo OSC posloupností v xtermu často produkuje CSI, DCS nebo OSC posloupnost.
+
+
+== CSI kódy ==
+Obecná struktura většiny ANSI escape posloupností je CSI [znak(y) pro soukromý režim] n1 ; n2... [středové znaky] koncový znak. Koncový znak je písmeno určující příkaz, který může být modifikován znaky pro soukromý režim a středovými znaky. Čísla jsou nepovinné parametry; pokud jsou vynechány, implicitní hodnota závisí na příkazu; obvykle je 1 nebo 0. Jsou-li parametry vynechané, lze vynechat i následující středník.
+Koncový znak je technicky libovolný znak z intervalu 64–126 (šestnáctkově 0x40–0x7E, ASCII @ až ~) a může být modifikován středovými znaky z intervalu 32 až 47 (hex 0x20–0x2F, ASCII mezera až /).
+Dvojtečka (58, hex 0x3A) je jediným znakem, který není částí žádné obecné escape sekvence. Byl ponechán pro budoucí standardizaci, takže všechny escape sekvence, které obsahují dvojtečku, musí být ignorovány.
+Přestože je povoleno více znaků pro soukromý režim i středových znaků, není známo, že by byly používány.
+Pokud posloupnost začíná nějakým znakem pro soukromý režim, tělo posloupnosti teoreticky může obsahovat libovolnou posloupnost znaků z intervalu 48–63 (hex 0x30–0x3F, ASCII 0 až ?) místo dobře utvořených seznamů čísel oddělených středníky, ale všechny známé terminály se chovají slušně a používají znaky z tohoto intervalu jiné než číslice pouze jako příznaky.
+Posloupnosti, jejichž poslední byte je z intervalu 112–126 (hex 0x70–0x7E, ASCII p–~) jsou také soukromé.
+Mezi soukromé escape kódy patří DECTCEM (DEC text cursor enable mode) popsaný dále, který se objevil u videoterminálů řady VT-300.
+Pokud CSI posloupnost obsahuje libovolný znak mimo interval 32 až 126 (hex 0x20–0x7E, ASCII mezera–~) není chování terminálu definované. Tyto nepovolené znaky jsou buď řídicí znaky z řídicí sady C0 (z intervalu 0–31, hex 0x00–0x1F), znak 127 (hex 0x7F, ASCII DEL), anebo rozšířené ASCII znaky (intervalu 128–255, hex 0x80–0xFF).
+Existuje několik možností, jak zpracovávat nepovolené znaky v CSI posloupnostech:
+
+Předpokládat, že CSI posloupnost končí, ignorovat ji a považovat další znaky za data;
+Ignorovat celou posloupnost včetně všech následujících znaků až po znak, který by normálně CSI posloupnost ukončoval (znak z intervalu 64–126, hex 0x40–0x7E, ASCII@–~);
+Zpracovat všechny řídicí kódy jako kdyby byly mimo CSI posloupnost, a pak pokračovat v analýze zbytku posloupnosti.
+
+
+== Barvy ==
+Barvu textu (obecně SGR parametry) lze nastavit posloupností CSI n1 [;n2 [; ...]] m, kde n1, n2, … jsou parametry SGR uvedené výše. Pomocí kódů 30+i se mění barva textu, pomocí 40+i barva pozadí, přičemž i je číslo požadované barvy v následující tabulce.
+
+Na unixových systémech lze následující příklady vypsat příkazem printf, kde \x1b[ implementuje CSI: Kód \x1b[30m změní barvu písma na černou; kód \x1b[31m na červenou; pro přepnutí na šedou pomocí parametru „bold“ lze použít \x1b[30;1m; pro jasně červenou \x1b[31;1m. Pro opětovné nastavení barev na implicitní hodnoty lze použít \x1b[39;49m (což není podporováno na všech terminálech) nebo \x1b[0m (zrušení všech atributů).
+Existují dva další standardy pro barvy: Standardní barvy pro CSS/HTML a X Window, který standardizují jak jména barev tak hodnoty RGB složek, ale standard pro escape posloupnosti určuje pouze jména barev, ne RGB hodnoty. V následující tabulce jsou shrnuty implicitní RGB hodnoty barev v některých rozšířených terminálových programech, spolu s hodnotami barev pro Kaskádové styly (CSS) a X Window System.
+
+Sloupec „Standardní VGA barvy“ obsahuje barvy, které jsou nastaveny při startu osobního počítače a jsou obvykle k dispozici v klasickém textovém režim 80×25. V grafických režimech EGA/VGA jsou barvy odlišné.
+V červnu 2004 byly změněny odstíny modré barvy v xtermu, RGB (0,0,205) → (0,0,238) pro normální modrou a (0,0,255) → (92,92,255) pro jasnější. Ještě v roce 2010 však byla na mnoha počítačích nainstalována stará verze xtermu.
+Xterm, GNOME Terminal a Konsole v KDE podporuje 24bitové nastavení barev písma (popředí) a pozadí podle ISO-8613-3. Ze zdrojových textů lze zjistit následující sekvence:
+ESC[ … 38;2;<r>;<g>;<b> … m – vybere RGB barvu písma (popředí)
+ESC[ … 48;2;<r>;<g>;<b> … m – vybere RGB barvu pozadíV režimu s 256 barvami (ESC[38;5;<fgcode>m a ESC[48;5;<bgcode>m) se používají následující barevné kódy:
+
+0x00-0x07: standardní barvy (jako pro ESC[ 30–37 m)
+0x08-0x0F: vysoká intenzita barvy (jako pro ESC[ 90–97 m)
+0x10-0xE7: 6 × 6 × 6 = 216 barev: 16 + 36 × r + 6 × g + b (0 ≤ r, g, b ≤ 5)
+0xE8-0xFF: škála šedé od černé po bílou ve 24 krocíchTaké xterm umožňuje změnit implicitní barvu písma a pozadí pomocí
+   ESC]10;<popředí>BEL
+   ESC]11;<pozadí>BEL
+
+kde <popředí> a <pozadí> jsou jména barev v X11 a BEL je ASCII znak BEL (s kódem 7). Použití pravé hranaté závorky místo levé ukazuje, že se jedná o řídicí příkazy operačního systému.
+
+
+== Příklady ==
+CSI 2 J – Vymaže obrazovku a na některých zařízeních umístí kurzor na pozici y,x = 1,1 (do levého horního rohu).
+CSI 32 m – Přepne na zelený text. V MS-DOSu je normální zelená mdlá a tmavá, takže je vhodnější pomocí posloupnosti CSI 1 m přepnout na vyšší jas nebo použít kombinaci CSI 32 ; 1 m, což dává jasně zelenou. MS-DOS ANSI.SYS používá stav Bold pro zobrazení jasnějších znaků; lze také zapnout stav blikání (pomocí INT 10, AX 1003h, BL 00h), který v některých případech zobrazí pozadí v jasněji. MS-DOS ANSI.SYS SGR kódy 90–97 a 100–107 přímo nepodporoval.
+CSI 0 ; 6 8 ; "DIR" ; 13 p – Přeprogramuje klávesu F10, aby posílala do bufferu klávesnice řetězec „DIR“ a kód klávesy Enter, což v příkazovém řádku DOSu vypíše obsah aktuálního adresáře (pouze MS-DOS ANSI.SYS). Tato posloupnost byla někdy používána pro ANSI bomby. Jedná se o proprietární kód (indikovaný písmenem p), který umožňuje pomocí nestandardních rozšíření zadat řetězcové parametry. Podle standardu by posloupnost měla končit písmenem D.
+CSI s – Uloží pozici kurzoru. Posloupnost CSI u pozici kurzoru obnoví. Aktuální pozice kurzoru může být např. 7(y), 10(x). Posloupnost CSI s tato dvě čísla uloží. Pak je možné přesunout kurzor na jinou pozici, například 20(y) a 3(x), pomocí posloupnosti CSI 20 ; 3 H nebo CSI 20 ; 3 f. Pak lze posloupností CSI u vrátit kurzor na pozici 7(y), 10(x). Na některých terminálech je třeba použít DEC posloupnosti ESC 7 a ESC 8, které jsou více podporované.
+
+
+=== Příklad použití v shellových skriptech ===
+Unixové terminály často používají ANSI escape kódy pro zvýrazňování syntaxe. Například následující příkaz zobrazí na kompatibilních terminálech jména souborů a adresářů různými barvami podle typu souboru.
+ls --color
+Uživatelé mohou používat escape kódy ve svých skriptech jejich začleněním do standardního výstup nebo standardního chybového výstupu. Například následující příkaz pro sed zvýrazní výstup příkazu make zobrazením řádků obsahujících slova začínající (malá a velká písmena se nerozlišují) „WARN“ použitím inverzního videa a slova začínající „ERR“ světle žlutým písmem na tmavě červeném pozadí. Reprezentace kódů jsou zvýrazněny.
+make 2>&1 | sed -e 's/.*\bWARN.*/\x1b[7m&\x1b[0m/i' -e 's/.*\bERR.*/\x1b[93;41m&\x1b[0m/i'
+
+Následující funkce shellu rozbliká terminál (střídavým posíláním kódů pro inverzní a normální videorežim) dokud uživatel nestiskne klávesu.
+flasher () { while true; do printf \\e[?5h; sleep 0.1; printf \\e[?5l; read -s -n1 -t1 && break; done; }
+
+To lze použít pro upozornění programátora, že příkaz, jehož provedení trvá dlouho, již skončil, jako například make; flasher .
+
+
+== Používané chybné a nejednoznačné posloupnosti ==
+Linuxová konzole používá pro změnu palety posloupnost OSC P n rr gg bb. Pokud je tato posloupnost pevně zakódována do aplikace, může způsobit zamrznutí jiných terminálů. Připojení ST na konec bude Linuxem ignorováno a vytváří správnou, ignorovatelnou posloupnost pro jiné terminály.
+Určité funkční klávesy na Linuxových konzolích generují posloupnosti tvaru CSI [ znak. CSI posloupnosti musí být zakončeny znakem [.
+Staré verze terminálového emulátoru Terminator generují SS3 1; modifikátory znak, při stisknutí kláves F1–F4 s modifikátory. Chybné chování bylo zkopírováno z programu GNOME Terminal.
+Program xterm na dotaz na pozici kurzoru vrací CSI řádek ; sloupec R a CSI 1 ; modifikátory R, jestliže byla stisknuta klávesa F3 s modifikátory, což způsobuje kolizi, pokud řádek má hodnotu 1. Tomu se lze vyhnout použitím soukromého modifikátoru ?, který bude zopakován v odezvě.
+Mnoho terminálů předřazuje kód ESC před kódy znaků zadaných na klávesnici se stisknutou klávesou Alt. To vede k nejednoznačnosti u velkých písmen a symbolů @[\]^_, které by dávaly kódy z řídicí sady C1.
+Konsole generuje SS3 modifikátory znak při stisknutí kláves F1–F4 s modifikátory.
+
+
+== Odkazy ==
+
+
+=== Poznámky ===
+
+
+=== Reference ===
+V tomto článku byl použit překlad textu z článku ANSI escape code na anglické Wikipedii.
+
+
+=== Související články ===
+ANSI art
+Řídicí znak
+ISO/IEC JTC 1/SC 2
+
+
+=== Externí odkazy ===
+Standard ECMA-48, Control Functions For Coded Character Sets. (5th edition, June 1991), European Computer Manufacturers Association, Geneva 1991 (publikováno jako ISO/IEC 6429)
+vt100.net DEC Documents
+ANSI.SYS -- ansi terminal emulation escape sequences na Internet Archive. (archivováno 6. 2. 2006)
+Xterm / Escape Sequences
+AIXterm / Escape Sequences[nedostupný zdroj]
+A collection of escape sequences for terminals that are vaguely compliant with ECMA-48 and friends.
+ANSI Escape Sequences Archivováno 25. 5. 2011 na Wayback Machine.
+ITU-T Rec. T.416 (03/93) Information technology - Open Document Architecture (ODA) and interchange format: Character content architectures

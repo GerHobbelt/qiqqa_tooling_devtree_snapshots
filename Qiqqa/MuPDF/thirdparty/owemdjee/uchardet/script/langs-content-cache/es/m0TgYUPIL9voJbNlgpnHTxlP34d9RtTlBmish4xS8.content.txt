@@ -1,0 +1,208 @@
+revision: 129859108
+title: diode
+url: https://es.wikipedia.org/wiki/Diode-transistor_logic
+
+
+---
+
+La Diode-transitar logic (DTL), o lógica diodo-transistor, es una categoría de circuitos digitales inmediatamente anterior a la TTL (lógica transistor-transistor). Recibe ese nombre porque la función de la puerta lógica (p.e., AND) la realiza una red de diodos mientras que la función de amplificación es realizada por un transistor (esto contrasta con la lógica RTL y la TTL).
+Es un diodo que trabaja con tensiones de 
+  
+    
+      
+        
+          V
+          
+            b
+            a
+            s
+            e
+          
+        
+        =
+        −
+        2
+        V
+      
+    
+     
+   y 
+  
+    
+      
+        
+          V
+          
+            C
+            C
+          
+        
+        =
+        4
+        V
+      
+    
+     
+  . Al tener una tensión de base de -2V se necesitaba una fuente adicional y por ello aparece en 1964 la DTL modificada.
+Características típicas:
+
+  
+    
+      
+        
+          V
+          
+            O
+            H
+          
+        
+        =
+        4.8
+        V
+      
+    
+     
+  ,
+
+  
+    
+      
+        
+          V
+          
+            O
+            L
+          
+        
+        =
+        0.2
+        V
+      
+    
+     
+  ,
+
+  
+    
+      
+        
+          V
+          
+            I
+            H
+          
+        
+        =
+        1.5
+        V
+      
+    
+     
+  ,
+
+  
+    
+      
+        
+          V
+          
+            I
+            L
+          
+        
+        =
+        1.2
+        V
+      
+    
+     
+  ,
+
+  
+    
+      
+        
+          P
+          
+            D
+          
+        
+        =
+        10
+        m
+        W
+        
+          (Puerta)
+        
+      
+    
+     
+  ,
+
+  
+    
+      
+        
+          t
+          
+            P
+          
+        
+        =
+        30
+        n
+        s
+      
+    
+     
+  ,
+
+  
+    
+      
+        F
+        a
+        n
+        −
+        O
+        u
+        t
+        =
+        8.00
+      
+    
+     
+  ,
+
+  
+    
+      
+        A
+        l
+        i
+        m
+        e
+        n
+        t
+        a
+        c
+        i
+        o
+        n
+        =
+        5
+        V
+      
+    
+     
+  .
+
+
+== Véase también ==
+Diodo
+Transistor
+Lógica diodo-resistor
+TTL
+RTL
+ECL
+CMOS

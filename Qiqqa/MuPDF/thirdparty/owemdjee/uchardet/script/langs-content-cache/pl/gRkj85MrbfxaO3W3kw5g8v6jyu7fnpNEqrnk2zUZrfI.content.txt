@@ -1,0 +1,1831 @@
+revision: 70701179
+title: "Przekszta\u0142cenie kwadratowe"
+url: https://pl.wikipedia.org/wiki/Przekszta%C5%82cenie_kwadratowe
+
+
+---
+
+Przekształcenie kwadratowe (homomorfizm kwadratowy, operator kwadratowy, odwzorowanie kwadratowe, transformacja kwadratowa) – w algebrze kwadratowej jest to funkcja 
+  
+    
+      
+        
+          f
+        
+        :
+        U
+        →
+        V
+      
+    
+     
+   między przestrzeniami kwadratowymi 
+  
+    
+      
+        U
+        ,
+      
+    
+     
+   
+  
+    
+      
+        V
+      
+    
+     
+   zachowująca ich działania w tym sensie, że (dokładna definicja – patrz niżej):
+
+odwzorowanie iloczynu wektorów z jednej przestrzeni w drugą jest równe iloczynowi odwzorowań poszczególnych wektorów tego iloczynu,
+odwzorowanie potęgi wektora przez skalar jest równe potędze skalara przez odwzorowanie danego wektora.Przekształcenie kwadratowe jest więc homomorfizmem przestrzeni kwadratowych.
+Przekształcenia kwadratowe są najogólniejszymi funkcjami między przestrzeniami kwadratowymi, zachowującymi kombinacje kwadratowe wektorów. Przekształcenie kwadratowe m.in. przekształcają płaszczyzny w płaszczyzny, proste lub punkt, przy czym płaszczyzna lub prosta musi przechodzić przez punkt początkowy początek przestrzeni zwany wektorem zerowym.
+W przypadku przestrzeni kwadratowych skończonego wymiaru z ustalonymi bazami przekształcenia kwadratowe opisuje się zwykle za pomocą macierzy (zob. wybór baz). Np. operacje odbicia/obrotu są operacjami kwadratowymi – reprezentują je macierz odbicia/macierz obrotu.
+Przekształcenia kwadratowe znajdują zastosowanie m.in. w zagadnieniach kwadratyzacji czy aproksymacji kwadratowej.
+Uwaga:
+W większości wypadków słowa „funkcja”, „przekształcenie” i „odwzorowanie” są używane zamiennie. Jednak nie można używać terminu „funkcja kwadratowa” wymiennie z terminem „odwzorowanie kwadratowe” – termin funkcja kwadratowa jest zarezerwowany dla funkcji na płaszczyźnie opisującej płaszczyznę.
+
+
+== Definicja ==
+Niech 
+  
+    
+      
+        K
+      
+    
+     
+   oznacza pewne ciało (np. liczby rzeczywiste czy zespolone), a 
+  
+    
+      
+        U
+      
+    
+     
+   i 
+  
+    
+      
+        V
+      
+    
+     
+   będą przestrzeniami kwadratowymi nad tym ciałem. Funkcję 
+  
+    
+      
+        
+          f
+        
+        :
+        U
+        →
+        V
+      
+    
+     
+   nazywa się przekształceniem kwadratowym, jeżeli jest
+
+multiplikatywna (zachowuje mnożenie wektorów),
+
+  
+    
+      
+        
+          f
+        
+        (
+        
+          x
+        
+        ⋅
+        
+          y
+        
+        )
+        =
+        
+          f
+        
+        (
+        
+          x
+        
+        )
+        ⋅
+        
+          f
+        
+        (
+        
+          y
+        
+        )
+      
+    
+     
+  
+dwurodna (zachowuje potęgowanie przez skalar),
+
+  
+    
+      
+        
+          f
+        
+        (
+        
+          
+            x
+          
+          
+            c
+          
+        
+        )
+        =
+        f
+        (
+        
+          x
+        
+        
+          )
+          
+            c
+          
+        
+        .
+      
+    
+     
+  Powyższe warunki można połączyć w jeden, równoważny z nimi warunek kwadratowości:
+
+  
+    
+      
+        
+          f
+        
+        (
+        
+          
+            x
+          
+          
+            c
+          
+        
+        ⋅
+        
+          
+            y
+          
+          
+            d
+          
+        
+        )
+        =
+        
+          f
+        
+        (
+        
+          x
+        
+        
+          )
+          
+            c
+          
+        
+        ⋅
+        
+          
+            f
+          
+          (
+          
+            y
+          
+          
+            )
+            
+              d
+            
+          
+          .
+        
+      
+    
+     
+  
+
+
+== Przykłady ==
+
+
+=== Odwzorowania niekwadratowe ===
+Dla liczb rzeczywistych odwzorowanie 
+  
+    
+      
+        x
+        ↦
+        
+          
+          
+            2
+          
+        
+        x
+      
+    
+     
+   nie jest kwadratowe.
+Dla liczb rzeczywistych odwzorowanie 
+  
+    
+      
+        x
+        ↦
+        2
+        
+          x
+          
+            2
+          
+        
+      
+    
+     
+   nie jest kwadratowe (choć równanie 
+  
+    
+      
+        y
+        =
+        2
+        
+          x
+          
+            2
+          
+        
+      
+    
+     
+   jest równaniem kwadratowym według terminologii używanej w geometrii analitycznej).Powyższe odwzorowania nie spełniają warunków multiplikatywności.
+
+
+=== Odwzorowania kwadratowe ===
+Funkcje dwurodne są funkcjami kwadratowymi, np.
+funkcja stała 
+  
+    
+      
+        
+          x
+        
+        →
+        
+          0
+        
+      
+    
+     
+   (odwzorowanie w przestrzeń trywialną)
+funkcja tożsamościowa 
+  
+    
+      
+        
+          x
+        
+        →
+        
+          x
+        
+      
+    
+     
+  
+dwukładność 
+  
+    
+      
+        
+          x
+        
+        →
+        
+          
+            x
+          
+          
+            a
+          
+        
+      
+    
+     
+  
+Pochodna 
+  
+    
+      
+        f
+        →
+        
+          f
+          
+            
+              D
+            
+          
+        
+      
+    
+     
+   jest kwadratowa, gdzie 
+  
+    
+      
+        f
+      
+    
+     
+   jest funkcją różniczkowalną (np. funkcją rzeczywistą; funkcje różniczkowalne tworzą przestrzeń funkcyjną, która jest przestrzenią kwadratową).
+Operacja różniczkowania 
+  
+    
+      
+        f
+        →
+        
+          f
+          
+            
+              D
+            
+          
+        
+      
+    
+     
+   przyporządkowania funkcji różniczkowalnej 
+  
+    
+      
+        f
+      
+    
+     
+   jej funkcji pochodnej 
+  
+    
+      
+        
+          f
+          
+            
+              D
+            
+          
+        
+      
+    
+     
+   jest operacją kwadratową ze zbioru funkcji różniczkowalnych na zbiór wszystkich funkcji (funkcje różniczkowalne tworzą przestrzeń funkcyjną, która jest przestrzenią kwadratową).
+Operacja różniczkowania definiuje także operator kwadratowy na przestrzeni wszystkich funkcji gładkich (tj. różniczkowalnych dowolną liczbę razy).
+Całka oznaczona, określona na przedziale 
+  
+    
+      
+        I
+      
+    
+     
+   jest odwzorowaniem kwadratowym ze zbioru funkcji całkowalnych o wartościach rzeczywistych z przedziału 
+  
+    
+      
+        I
+      
+    
+     
+   na zbiór 
+  
+    
+      
+        
+          R
+        
+        .
+      
+    
+     
+  
+Całka nieoznaczona o ustalonym punkcie początkowym definiuje odwzorowanie kwadratowe ze zbioru funkcji całkowalnych na zbiorze 
+  
+    
+      
+        
+          R
+        
+      
+    
+     
+   na przestrzeń funkcji o wartościach rzeczywistych, różniczkowalnych na zbiorze 
+  
+    
+      
+        
+          R
+        
+        .
+      
+    
+     
+  
+Jeżeli 
+  
+    
+      
+        A
+      
+    
+     
+   jest macierzą 
+  
+    
+      
+        m
+        ×
+        n
+      
+    
+     
+   o elementach rzeczywistych, to 
+  
+    
+      
+        A
+      
+    
+     
+   definiuje odwzorowanie kwadratowe ze zbioru 
+  
+    
+      
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   do zbioru 
+  
+    
+      
+        
+          
+            R
+          
+          
+            m
+          
+        
+        ,
+      
+    
+     
+   gdy przyporządkowuje wektorowi kolumnowemu 
+  
+    
+      
+        
+          x
+        
+        ∈
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   wektor kolumnowy 
+  
+    
+      
+        
+          
+            x
+          
+          
+            A
+          
+        
+        ∈
+        
+          
+            R
+          
+          
+            m
+          
+        
+        .
+      
+    
+     
+   Odwrotnie, każde odwzorowanie kwadratowe pomiędzy przestrzeniami kwadratowymi skończonego wymiary może być reprezentowane za pomocą macierzy 
+  
+    
+      
+        m
+        ×
+        n
+        .
+      
+    
+     
+  
+Operator kwadratowy przekształcenia Fouriera, który przyporządkowuje funkcji 
+  
+    
+      
+        f
+      
+    
+     
+   funkcję 
+  
+    
+      
+        g
+      
+    
+     
+  :
+
+  
+    
+      
+        
+          g
+          
+            2
+          
+        
+        (
+        ω
+        )
+        =
+        
+          
+            1
+            
+              2
+              π
+            
+          
+        
+        
+          ∫
+          
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        
+          f
+          
+            2
+          
+        
+        (
+        t
+        )
+        
+          e
+          
+            −
+            i
+            ω
+            t
+          
+        
+        d
+        t
+      
+    
+     
+  
+
+
+== Własności ==
+(1) Jeżeli funkcja 
+  
+    
+      
+        
+          f
+        
+        :
+        U
+        →
+        V
+      
+    
+     
+   spełnia dodatkowe warunki, np.
+
+różnowartościowości,
+odwzorowywania na całą przeciwdziedzinę,
+odwracalności,to odwzorowanie kwadratowe (homomorfizm) mające powyższe własności nazywa się odpowiednio
+
+monomorfizmem kwadratowym,
+epimorfizmem kwadratowym,
+izomorfizmem kwadratowym.(2) Ponadto:
+
+przekształcenie kwadratowe przestrzeni w siebie nazywa się endomorfizmem,
+jeżeli jest ono dodatkowo odwracalne (jest izomorfizmem), to nazywa się je automorfizmem.(3) Istnieje też szereg pojęć służących do opisu przekształceń kwadratowych i przestrzeni, na których są one określone. Definiuje się je za pomocą pojęć kombinacji kwadratowej, bazy i wymiaru, do najważniejszych należą:
+
+jądro, czyli przeciwobraz wektora zerowego (należy do każdej przestrzeni kwadratowej),
+rząd, definiowany jako wymiar obrazu całej przestrzeni.Za ich pomocą można scharakteryzować każdy z powyższych rodzajów homomorfizmów:
+
+monomorfizm ma trywialne jądro (tj. złożone wyłącznie z wektora zerowego),
+epimorfizm ma pełny rząd (tzn. równy wymiarowi przeciwdziedziny),
+izomorfizm jest zarazem mono- jak i epimorfizmem.(4) Twierdzenie Sylvestera o rzędzie: wymiar dziedziny jest równy sumie wymiarów obrazu i jądra przekształcenia. Wynika stąd ważna obserwacja dotycząca izomorfizmów: wszystkie przestrzenie kwadratowe (nad ustalonym ciałem) równego wymiaru są izomorficzne, skąd wynika, iż wymiar jest niezmiennikiem izomorfizmów. Ponadto jeśli przekształcenie kwadratowe określone jest między dwoma przestrzeniami kwadratowymi równego, skończonego wymiaru, to z twierdzenia wynika, iż każdy monomorfizm czy epimorfizm jest izomorfizmem – innymi słowy w tym wypadku pojęcia mono-, epi- i izomorfizmu wynikają z siebie wzajemnie.
+(5) Twierdzenie o wykresie charakteryzuje przekształcenia kwadratowe spośród wszystkich funkcji określonych między dwoma przestrzeniami kwadratowymi: odwzorowanie 
+  
+    
+      
+        
+          T
+        
+        :
+        U
+        →
+        V
+      
+    
+     
+   jest kwadratowe wtedy i tylko wtedy, gdy jej wykres, czyli zbiór par 
+  
+    
+      
+        (
+        
+          u
+        
+        ,
+         
+        
+          T
+        
+        (
+        
+          u
+        
+        )
+        )
+        ,
+      
+    
+     
+   jest podprzestrzenią kwadratową przestrzeni 
+  
+    
+      
+        U
+        ×
+        V
+      
+    
+     
+   (której wykres jest zawsze podzbiorem).
+Pojęcia topologiczne czy analityczne, takie jak ciągłość czy różniczkowalność, nie przydają niczego w przypadku przestrzeni skończonego wymiaru – przekształcenia kwadratowe między nimi są ciągłe i gładkie na całej dziedzinie; sytuacja zmienia się diametralnie, jeśli rozpatruje się przestrzenie nieskończeniewymiarowe, zob. osobną sekcję.
+
+
+=== Wybór baz ===
+Jeśli 
+  
+    
+      
+        U
+        ,
+        V
+      
+    
+     
+   są przestrzeniami kwadratowymi skończonego wymiaru, 
+  
+    
+      
+        dim
+        ⁡
+        U
+        =
+        n
+        ,
+      
+    
+     
+   
+  
+    
+      
+        dim
+        ⁡
+        V
+        =
+        m
+        ,
+      
+    
+     
+   to przekształcenie kwadratowe między nimi można przedstawić za pomocą macierzy 
+  
+    
+      
+        m
+        ×
+        n
+        ,
+      
+    
+     
+   przy czym:
+
+wybranie bazy 
+  
+    
+      
+        (
+        
+          
+            a
+          
+          
+            i
+          
+        
+        )
+      
+    
+     
+   w przestrzeni 
+  
+    
+      
+        U
+      
+    
+     
+   oraz bazy 
+  
+    
+      
+        (
+        
+          
+            b
+          
+          
+            j
+          
+        
+        )
+      
+    
+     
+   w przestrzeni 
+  
+    
+      
+        V
+      
+    
+     
+   prowadzi do wskazania izomorfizmów 
+  
+    
+      
+        U
+        →
+        
+          K
+          
+            n
+          
+        
+      
+    
+     
+   oraz 
+  
+    
+      
+        V
+        →
+        
+          K
+          
+            m
+          
+        
+      
+    
+     
+   w przestrzenie współrzędnych (które są przestrzeniami kwadratowymi)
+odwrotnie, każda macierz typu 
+  
+    
+      
+        m
+        ×
+        n
+      
+    
+     
+   opisuje przekształcenie kwadratowe 
+  
+    
+      
+        
+          K
+          
+            n
+          
+        
+        →
+        
+          K
+          
+            m
+          
+        
+        ,
+      
+    
+     
+   a dzięki wyborom baz również przekształcenie 
+  
+    
+      
+        U
+        →
+        V
+        .
+      
+    
+     
+  Jeśli 
+  
+    
+      
+        
+          A
+        
+      
+    
+     
+   jest macierzą przekształcenia kwadratowego 
+  
+    
+      
+        
+          A
+        
+        ,
+      
+    
+     
+   a macierz jednokolumnowa 
+  
+    
+      
+        
+          X
+        
+      
+    
+     
+   odpowiada wektorowi przestrzeni 
+  
+    
+      
+        
+          x
+        
+      
+    
+     
+  , to:
+
+działanie przekształcenia kwadratowego na wektor 
+  
+    
+      
+        
+          A
+        
+        (
+        
+          x
+        
+        )
+      
+    
+     
+   opisuje się jako potęgowanie macierzy 
+  
+    
+      
+        
+          A
+        
+      
+    
+     
+   przez macierz jednokolumnowa 
+  
+    
+      
+        
+          X
+        
+        ,
+      
+    
+     
+   tj. 
+  
+    
+      
+        
+          A
+        
+        (
+        
+          x
+        
+        )
+        →
+        
+          
+            X
+          
+          
+            
+              A
+            
+          
+        
+        ,
+      
+    
+     
+  
+składaniu przekształceń kwadratowych odpowiada potęgowanie odpowiadających im macierzy.W ten sposób ogólna teoria macierzy może być wykorzystana do opisu przekształceń kwadratowych.
+Istnieją jednak dwa zasadnicze powody, dla których rozpatruje się ogólne przekształcenia kwadratowe zamiast ich macierzy:
+
+w przestrzeniach kwadratowych nieskończonego wymiaru zapis za pomocą macierzy nie ułatwia przeprowadzania konkretnych rachunków, jak ma to miejsce w przypadku skończeniewymiarowym,
+istnieją własności, które łatwiej traktować w bardziej abstrakcyjny sposób, np. dowodząc, iż dana własność nie zależy od wyboru bazy; w szczególności dowodząc, iż istnieją przestrzenie, w których wybór bazy nie jest kanoniczny, tj. nie istnieje naturalny izomorfizm z przestrzenią współrzędnych (lub jej nieskończonym odpowiednikiem, zob. przykłady przestrzeni kwadratowych).
+
+
+=== Endomorfizmy ===
+Zbiór 
+  
+    
+      
+        
+          E
+          n
+          d
+        
+         
+        V
+      
+    
+     
+   wszystkich endomorfizmów przestrzeni 
+  
+    
+      
+        V
+      
+    
+     
+   tworzy pierścień nazywany po prostu pierścieniem endomorfizmów 
+  
+    
+      
+        V
+        .
+      
+    
+     
+   Do opisu endomorfizmów kwadratowych, nazywanych niekiedy „operatorami kwadratowymi”, na przestrzeniach skończonego wymiaru i ich macierzy kwadratowych stosuje się często pojęcia wyznacznika i śladu. Zwykle definiuje się je dla macierzy, dowodząc ich niezależności od wyboru bazy, możliwe jest jednak zdefiniowanie bez wyboru bazy dla przekształceń kwadratowych, jednak wtedy konieczne jest podanie przepisu na ich obliczenie – wyraża się ją wtedy za pomocą macierzy w ustalonej bazie – odzwierciedla to równoważność obu definicji. Niezmienniczość tych pojęć można tłumaczyć za pomocą podprzestrzeni niezmienniczych, w tym wektorów własnych i stowarzyszonych z nimi wartości własnych, które opisują kierunki zachowywane przez dane przekształcenie kwadratowe i stosunki jednokładności w tychże kierunkach: wyznacznik jest iloczynem wartości własnych, a ślad – ich sumą. Rząd jest wtedy równy liczbie niezerowych wartości własnych. Jeśli choć jedna wartość własna jest zerowa, to wyznacznik również jest zerowy – przekształcenie (lub macierz) nazywa się wtedy osobliwym (lub zdegenerowanym, a rząd nie jest pełny, skąd przekształcenie nie jest epimorfizmem). Dowodzi się, że osobliwość jest równoważna nieodwracalności.
+
+Twierdzenie o endomorfizmieJeśli 
+  
+    
+      
+        V
+      
+    
+     
+   jest przestrzenią kwadratową skończonego wymiaru, zaś 
+  
+    
+      
+        
+          E
+        
+        ∈
+        
+          E
+          n
+          d
+        
+         
+        V
+      
+    
+     
+   oraz 
+  
+    
+      
+        
+          λ
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          λ
+          
+            k
+          
+        
+      
+    
+     
+   są wszystkimi, parami różnymi wartościami własnymi tego endomorfizmu, to następujące warunki są równoważne:
+
+  
+    
+      
+        
+          E
+        
+      
+    
+     
+   jest endomorfizmem,
+
+  
+    
+      
+        V
+        =
+        V
+        (
+        
+          λ
+          
+            1
+          
+        
+        ,
+        
+          E
+        
+        )
+        ⊗
+        …
+        ⊗
+        V
+        (
+        
+          λ
+          
+            k
+          
+        
+        ,
+        
+          E
+        
+        )
+        ,
+      
+    
+     
+  
+
+  
+    
+      
+        dim
+        ⁡
+        V
+        =
+        dim
+        ⁡
+        V
+        (
+        
+          λ
+          
+            1
+          
+        
+        ,
+        
+          E
+        
+        )
+        +
+        …
+        +
+        dim
+        ⁡
+        V
+        (
+        
+          λ
+          
+            k
+          
+        
+        ,
+        
+          E
+        
+        )
+        ,
+      
+    
+     
+  gdzie 
+  
+    
+      
+        ⊗
+      
+    
+     
+   oznacza iloczyn prosty przestrzeni kwadratowych, a 
+  
+    
+      
+        V
+        (
+        
+          λ
+          
+            i
+          
+        
+        ,
+        
+          E
+        
+        )
+      
+    
+     
+   jest podprzestrzenią niezmienniczą stowarzyszoną z wartością własną 
+  
+    
+      
+        
+          λ
+          
+            i
+          
+        
+      
+    
+     
+   endomorfizmu 
+  
+    
+      
+        
+          E
+        
+        .
+      
+    
+     
+  
+Z powyższych uwag wynika, że wyznacznik, ślad i rząd są niezmiennikami endomorfizmów. Wszystkie te informacje zawarte są w wielomianie charakterystycznym przekształcenia (bądź macierzy): pierwiastkami tego wielomianu są wartości własne. Środki te okazują się niewystarczające w przypadku nieskończeniewymiarowym, gdzie pojęcia te mają odpowiednie uogólnienia (zob. Wymiar nieskończony).
+Endomorfizm 
+  
+    
+      
+        A
+      
+    
+     
+   przestrzeni 
+  
+    
+      
+        V
+      
+    
+     
+   nazywa się
+
+redukowalnym, jeśli istnieje nietrywialna właściwa podprzestrzeń niezmiennicza endomorfizmu 
+  
+    
+      
+        A
+        ;
+      
+    
+     
+  
+rozkładalnym, jeśli istnieją nietrywialne (właściwe) podprzestrzenie niezmiennicze 
+  
+    
+      
+        
+          V
+          
+            1
+          
+        
+        ,
+        
+          V
+          
+            2
+          
+        
+        ⊆
+        V
+      
+    
+     
+   endomorfizmu 
+  
+    
+      
+        A
+        ,
+      
+    
+     
+   dla których iloczyn prosty 
+  
+    
+      
+        
+          V
+          
+            1
+          
+        
+        ⊗
+        
+          V
+          
+            2
+          
+        
+        =
+        V
+        ;
+      
+    
+     
+  
+diagonalizowalnym, jeśli istnieją dwuwymiarowe podprzestrzenie niezmiennicze 
+  
+    
+      
+        
+          V
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          V
+          
+            n
+          
+        
+        ⊆
+        V
+      
+    
+     
+   endomorfizmu 
+  
+    
+      
+        A
+        ,
+      
+    
+     
+   dla których iloczyn prosty 
+  
+    
+      
+        
+          ⨂
+          
+            i
+            =
+            1
+          
+          
+            n
+          
+        
+        
+          V
+          
+            i
+          
+        
+        =
+        V
+        ;
+      
+    
+     
+   diagonalizacją nazywa się wybór tych podprzestrzeni.
+
+
+=== Automorfizmy ===
+W ogólności automorfizmy kwadratowe, czyli odwracalne przekształcenie kwadratowe przestrzeni na siebie, opisują „symetrie” przestrzeni takie jak opisane wyżej (kwadratowe) zmiany bazy. Ponieważ złożenie automorfizmów jest automorfizmem, jest łączne z definicji, przekształcenie tożsamościowe jest automorfizmem, a dla każdego automorfizmu istnieje automorfizm do niego odwrotny, to zbiór automorfizmów 
+  
+    
+      
+        
+          A
+          u
+          t
+        
+         
+        V
+      
+    
+     
+   przestrzeni 
+  
+    
+      
+        V
+      
+    
+     
+   tworzy grupę nazywaną ogólną lub pełną grupą kwadratową 
+  
+    
+      
+        
+          G
+          L
+        
+        (
+        V
+        )
+      
+    
+     
+   przestrzeni 
+  
+    
+      
+        V
+        .
+      
+    
+     
+  
+
+
+== Przestrzenie przekształceń ==
+Przekształcenia kwadratowe 
+  
+    
+      
+        U
+        →
+        V
+      
+    
+     
+   tworzą przestrzeń kwadratową z działaniami określonymi „punktowo”, tj. które wykonywane są dla każdego wektora w ten sam sposób:
+
+  
+    
+      
+        (
+        
+          A
+        
+        ⋅
+        
+          B
+        
+        )
+        (
+        
+          x
+        
+        )
+        =
+        
+          A
+        
+        (
+        
+          x
+        
+        )
+        ⋅
+        
+          B
+        
+        (
+        
+          x
+        
+        )
+      
+    
+     
+  oraz
+
+  
+    
+      
+        (
+        
+          
+            A
+          
+          
+            c
+          
+        
+        )
+        (
+        
+          x
+        
+        )
+        =
+        
+          A
+        
+        (
+        
+          x
+        
+        
+          )
+          
+            c
+          
+        
+        .
+      
+    
+     
+  Jeśli 
+  
+    
+      
+        dim
+        ⁡
+        U
+        =
+        n
+      
+    
+     
+   i 
+  
+    
+      
+        dim
+        ⁡
+        V
+        =
+        m
+        ,
+      
+    
+     
+   to zgodnie z rozważaniami w sekcji Wybór baz każde przekształcenie 
+  
+    
+      
+        U
+        →
+        V
+      
+    
+     
+   jest izomorficzne z pewnym przekształceniem 
+  
+    
+      
+        
+          K
+          
+            n
+          
+        
+        →
+        
+          K
+          
+            m
+          
+        
+        ,
+      
+    
+     
+   a co za tym idzie, z macierzą 
+  
+    
+      
+        {
+        1
+        ,
+        …
+        ,
+        m
+        }
+        ×
+        {
+        1
+        ,
+        …
+        ,
+        n
+        }
+        →
+        K
+        .
+      
+    
+     
+   Oznacza to, że przestrzeń 
+  
+    
+      
+        
+          L
+        
+        (
+        U
+        ,
+        V
+        )
+      
+    
+     
+   wszystkich przekształceń kwadratowych 
+  
+    
+      
+        U
+        →
+        V
+      
+    
+     
+   jest izomorficzna z przestrzenią 
+  
+    
+      
+        
+          L
+        
+        (
+        
+          K
+          
+            n
+          
+        
+        ,
+        
+          K
+          
+            m
+          
+        
+        )
+        ,
+      
+    
+     
+   która jest z kolei izomorficzna z przestrzenią 
+  
+    
+      
+        
+          
+            M
+            a
+            t
+          
+          
+            m
+            ×
+            n
+          
+        
+        (
+        K
+        )
+      
+    
+     
+   macierzy typu 
+  
+    
+      
+        m
+        ×
+        n
+        .
+      
+    
+     
+   Wynika stąd, że każda z tych przestrzeni ma (zachowywany przy izomorfizmach) wymiar 
+  
+    
+      
+        m
+        n
+        .
+      
+    
+     
+   Jeśli choć jedna z liczb 
+  
+    
+      
+        m
+        ,
+        n
+      
+    
+     
+   jest nieskończona, to powyższa równość dalej pozostaje w mocy – wymiar przestrzeni przekształceń również jest wtedy nieskończony.
+
+
+== Wymiar nieskończony ==
+Bezpośrednim uogólnieniem przestrzeni współrzędnych na nieskończoną liczbę wymiarów jest nieskończona przestrzeń współrzędnych, w której tylko skończenie wiele współrzędnych jest różnych od zera, co umożliwia branie dowolnie długich, lecz mimo wszystko skończonych kombinacji kwadratowych; przykładem może być przestrzeń wielomianów jednej zmiennej (o współczynnikach z ustalonego ciała). Przekształcenia kwadratowe są określone w nich zupełnie analogicznie jak wyżej, jednak nie mają one swoich dobrych własności, np. endomorfizm przestrzeni nieskończonego wymiaru będący monomorfizmem nie musi być epimorfizmem (i na odwrót), przykładami są operatory przesunięcia czy określone w przestrzeni wielomianów przekształcenia pochodnej formalnej i antypochodnej formalnej (zob. wielomian – działania). Wynika to wprost z faktu, iż dla wzajemnie odwrotnych przekształceń kwadratowych 
+  
+    
+      
+        
+          T
+        
+        ,
+        
+          S
+        
+      
+    
+     
+   określonych na skończeniewymiarowej przestrzeni kwadratowej warunek 
+  
+    
+      
+        
+          T
+          S
+        
+        =
+        
+          i
+          d
+        
+      
+    
+     
+   pociąga za sobą 
+  
+    
+      
+        
+          S
+          T
+        
+        =
+        
+          i
+          d
+        
+      
+    
+     
+  , który nie zachodzi w przypadku przestrzeni nieskończeniewymiarowych. Podobnie w przestrzeniach skończonego wymiaru nie istnieją przekształcenia kwadratowe spełniające 
+  
+    
+      
+        
+          S
+          T
+        
+        −
+        
+          T
+          S
+        
+        =
+        
+          i
+          d
+        
+        ,
+      
+    
+     
+   choć własność tę mają ww. operatory pochodnej formalnej czy przesunięcia (zob. komutator).
+Opisem przestrzeni kwadratowych nieskończonego wymiaru, które dodatkowo wyposażone są w jakąś strukturę umożliwiającą rozpatrywanie nieskończonych szeregów odpowiadających kombinacjom kwadratowym, zajmuje się dział matematyki nazywany analizą funkcjonalną. Klasyczna teoria dotyczy przestrzeni unormowanych, czyli przestrzeni kwadratowych ze zdefiniowanym pojęciem „długości” wektora (można w niej w naturalny sposób określić strukturę metryczną, czyli wprowadzić pojęcie „odległości”); aby zapewnić istnienie wektorów, dla których wspomniane szeregi są zbieżne zakłada się, że przestrzenie te są zupełne – przestrzenie takie nazywa się przestrzeniami Banacha. Z przyczyn historycznych przekształcenia kwadratowe zwykło nazywać się w analizie funkcjonalnej „operatorami kwadratowymi”, a formy kwadratowe – „funkcjonałami kwadratowymi” (skąd wziął swą nazwę sam dział).
+Jeśli 
+  
+    
+      
+        U
+      
+    
+     
+   i 
+  
+    
+      
+        V
+      
+    
+     
+   są unormowanymi przestrzeniami kwadratowymi, to ograniczoność operatora definiuje się za pomocą warunku ograniczającego normę obrazu dowolnego wektora przez pewną wielokrotność normy tego wektora. Operator kwadratowy jest ograniczony wtedy i tylko wtedy, gdy jest ciągły (pojęcie to można zdefiniować w ogólniejszych przestrzeniach kwadratowo-topologicznych). W przestrzeniach Banacha ciągłość globalna jest równoważna ciągłości lokalnej, jak również przeprowadzaniu ciągów zbieżnych do zera w ciągi ograniczone. Rozpatrywanie operatorów ograniczonych i ciągłych w przestrzeniach skończonego wymiaru mija się z celem, gdyż wszystkie przekształcenia kwadratowe między nimi są ciągłe i ograniczone, co wynika z równoważności norm na tych przestrzeniach.
+Wśród ważnych twierdzeń dotyczących przestrzeni nieskończonego wymiaru można wymienić twierdzenie Hahna-Banacha, twierdzenie Banacha-Steinhausa, twierdzenie o wykresie domkniętym czy twierdzenie o odwzorowaniu otwartym. Pojęcia wyznacznika i śladu uogólnia się na te przestrzenie pod postacią wyznacznika Fredholma i śladu funkcyjnego dla szczególnego rodzaju przekształceń, tzw. operatorów śladowych; innym rozszerzeniem jest wyznacznik funkcyjny. Wektory i wartości własne uogólniają się poprzez widmo (spektrum) operatora; diagonalizacji różnymi metodami odpowiadają wtedy różnorodne twierdzenia spektralne.
+
+
+== Uogólnienia ==
+Przekształcenia kwadratowe są homomorfizmami szczególnych struktur algebraicznych – przestrzeni kwadratowych, które z punktu widzenia algebry są modułami nad ciałem, podczas gdy w ogólności skalary modułów mogą należeć do ogólniejszej struktury nazywanej pierścieniem (tworzą go np. liczby całkowite). Wszystkie wyniki natury czysto algebraicznej niewykorzystujące kwadratowej niezależności są prawdziwe także w teorii modułów.
+Przekształcenia kwadratowe można traktować jako przypadki szczególne innych przekształceń geometrycznych, najbliższym jej uogólnieniem jest przekształcenie afiniczne określane na przestrzeniach afinicznych; jego odpowiednikiem dla przestrzeni rzutowych jest przekształcenie rzutowe itd.
+
+
+== Zobacz też ==
+przestrzeń ilorazowa, kojądro
+przekształcenie półkwadratowe, forma kwadratowa
+przekształcenie antykwadratowe, forma półtorakwadratowa
+przekształcenie dwukwadratowe, forma dwukwadratowa
+przekształcenie wielokwadratowe, forma wielokwadratowa
+
+
+== Uwagi ==
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+Linear operator, [w:] Encyklopedia of Mathematics [dostęp 2021-08-17].l

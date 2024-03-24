@@ -1,0 +1,111 @@
+revision: 205467144
+title: Game Boy
+url: https://fr.wikipedia.org/wiki/Game_Boy
+
+
+---
+
+La (ou le) Game Boy (ゲームボーイ, Gēmu Bōi) est une console portable de jeu vidéo 8-bits de quatrième génération développée et fabriquée par Nintendo. Mise en vente au Japon le 21 avril 1989, puis en Amérique du Nord en octobre 1989, et enfin en Europe le 28 septembre 1990, elle est la première console portable de la gamme des Game Boy. Elle fut conçue par Gunpei Yokoi et Nintendo Research & Development 1 — la même équipe ayant conçu la série des Game and Watch ainsi que de nombreux jeux à succès sur Nintendo Entertainment System.
+Malgré la sortie de consoles portables techniquement plus avancées, la Game Boy connaît un franc succès. Les modèles Game Boy et Game Boy Color totalisent 118,6 millions d'exemplaires vendus à travers le monde. Dès sa sortie aux États-Unis, plus d'un million d'exemplaires sont vendus en quelques semaines. La production de la console portable s'est achevée en 2003.
+
+
+== Historique ==
+
+Gunpei Yokoi, employé de Nintendo, accompagné des membres de la division Nintendo Research & Development 1, dont Satoru Okada, conçoit une console de jeux vidéo portable dont la puissance est quasiment comparable à celle de la NES (Famicom au Japon), mais dont l'écran est monochrome afin de permettre un prix de vente bas et une consommation de piles réduite. Ce choix fut souvent décrié mais personne ne revint sur cette décision car elle provenait d'une expérience de Gunpei Yokoi :
+
+« En réalité, Yokoi tire le bilan d'une expérience qu'il a lui-même faite quelques mois auparavant. [...] dans sa biographie, il explique avoir un jour reçu du président un téléviseur portatif. Tout excité, l'ingénieur fait alors l'acquisition immédiate d'un jeu de piles pour regarder [...] la retransmission en direct d'un match de base-ball. Sauf que l'écran s'éteint avant même la fin de la rencontre ! [...] Le rétroéclairage imposé sur tous les écrans couleur de l'époque est tellement énergivore qu'il a vidé six piles LR6 en moins de deux heures. »
+
+— Florent Gorges, L'histoire de Nintendo, volume 4 : L'incroyable histoire de la Game Boy
+La Game Boy sort en France le 28 septembre 1990 dans un paquetage comprenant la console, un câble de liaison pour jouer à deux, des écouteurs stéréos, quatre piles R6, pour pouvoir jouer immédiatement, et le jeu Tetris, le tout pour 590 francs (environ 90 euros en conversion simple, ou 140 euros actualisés en 2019). Les jeux vendus séparément sont, au moment du lancement, généralement au prix de 195 francs (environ 30 euros, ou 47 euros actualisés en 2019). Il se vend 1,4 million de Game Boy la première année en France, un record à l'époque. L'incroyable succès de cette console tient en toute une série de jeux commercialisés tout au long du cycle de vie de la console. Et en premier lieu, le célèbre Tetris, créé par le soviétique Alekseï Pajitnov (malgré le grand succès du jeu auprès des utilisateurs, la presse spécialisée a critiqué ce choix en qualifiant le jeu de "dépassé"). Vendu avec la console, ce jeu connaît de nouveau un immense succès (après avoir été commercialisé sur micro-ordinateurs, bornes d'arcade et PC). Il se vend à plus de 30 millions d'exemplaires. À partir de 1996 sort la série de jeux vidéo Pokémon, franchise créée par Satoshi Tajiri, dont le succès phénoménal, avec 31,37 millions de jeux vendus, relance les ventes de la portable de Nintendo, qui atteint alors la quatrième place parmi les consoles les plus vendues de l'histoire, avec 119 millions d'exemplaires vendus, derrière la PlayStation 2 de Sony, la Nintendo DS et la Nintendo Switch.
+Malgré une qualité graphique minimaliste, la Game Boy a su s'imposer grâce à de nombreux atouts : petite taille (notamment par rapport à la Game Gear ou à la Lynx), prix bas, grande autonomie et catalogue de jeux aussi riche que varié. Le succès de la machine conduira Nintendo à utiliser la marque Game Boy pour plusieurs de ses successeurs, dont la Game Boy Color, en 1998, et la Game Boy Advance, en 2001. Fondées sur les mêmes principes de simplicité et de faible consommation, ces deux consoles sont compatibles avec les jeux de la Game Boy originale.
+Des consoles de récupération sont notamment recyclées pour fabriquer des électrocardiographes à destination de Madagascar dans la lutte contre le paludisme : la cartouche de jeu avec cette nouvelle fonctionnalité engendre un coût de fabrication de seulement 30 euros. Elle est également utilisée par certaines personnes pour faire de la musique électronique ou encore comme interface pour certaines machines à coudre.
+
+
+== Description ==
+La Game Boy possède quatre boutons — « A », « B », « SELECT » et « START », ainsi qu'une croix directionnelle, tout comme la Nintendo Entertainment System. Un bouton « on/off » (marche-arrêt), accompagné par une troisième position « Light » sur les Game Boy Light, ainsi qu'une fente pour insérer les cartouches, sont situés sur le haut de la console portable. Nintendo recommande aux utilisateurs de laisser insérée leur cartouche afin d'éviter que la saleté ne pénètre dans la console.
+Bien qu'elle soit dotée d'un écran monochrome de 23 040 pixels, la Game Boy est légèrement plus puissante qu'une Nintendo Entertainment System (NES). La Game Boy a un processeur graphique très puissant pour l'époque. Le processeur graphique de la NES est moins récent que celui de la Game Boy (la NES est commercialisée dès 1983) qui est un Zilog Z80 (produit à partir de juillet 1976) qui gère la 8-Bit (commercialisée en 1983). La puissance de calcul sonore est la même que la NES. Les bruitages sont similaires à la NES mais peu de jeux utilisent la totalité de la puissance de calcul sonore de la console contrairement à la NES. La Game Boy est considérée[Par qui ?] comme mauvaise au niveau sonore (ce qui n'a pas altéré son succès mondial)[réf. nécessaire], à l'exception de quelques jeux comme Super Mario Land, The Legend of Zelda: Link's Awakening.
+La Game Boy connaît plusieurs variations de prix, dont une hausse liée à son succès. En mars 1992, le prix du pack contenant la console et le jeu Tetris passe officiellement de 590 F à 690 F. Il se vend ensuite 499 F à partir de décembre 1992, et la console sans jeu passe sous la barre des 300 F à l'automne 1993[réf. nécessaire].
+
+
+== Caractéristiques ==
+
+Processeur principal : custom 8-bit Sharp z80 cadencé à 4,194 304 MHz
+Mémoire principale (RAM) : 8 Ko
+Écran : LCD 2,6 pouces 4,7 × 4,3 cm
+Capacités graphiques : 160×144 en 4 nuances de gris, jusqu'à 40 sprites simultanément (8×8 ou 8×16)
+Mémoire vidéo : 8 Ko
+Capacités sonores : stéréo gauche ou droite. 2 canaux signal carré (PULSE) (12,5 % 25 % 50 % 75 %), 1 canal WAV 4bit programmable, 1 canal bruit blanc (NOISE).
+Mémoire de masse : cartouches de jeux de 32 Ko à 8 Mo
+Connecteurs : port série pour mise en réseau des consoles (jusqu'à quatre avec le connecteur officiel mais il est possible d'en relier plus avec un adaptateur custom)
+Dimensions en mm : 148 × 90 × 32
+poids : 220 g
+Contrôle du contraste et du volume
+Haut parleur intégré et prise casque stéréo
+Indicateur de niveau de batterie
+Alimentation : 4 piles AA, 70 − 80 mA/h
+Autonomie : théoriquement d'au moins 10 h. Jusqu'à 30 h
+pas de rétroéclairage
+
+
+== Accessoires ==
+Game Boy Camera : appareil photo numérique pour gameboy se connectant au port cartouche :  résolution de 128 × 112 pixels, en 4 niveaux de gris, Jusqu'à 30 photos enregistrées dans la SRAM de 128 ko
+Game Boy Printer : cet accessoire permet d'imprimer les photos prises grâce à la Caméra Game Boy. Printer est utilisé dans certains jeux comme Pokémon.
+Câble link : permet de relier deux Game Boy pour jouer en multijoueur ou s'échanger des données
+Four Player Adapter : permet de relier jusqu'à quatre Game Boy. Un câble link par joueur supplémentaire est requis.
+Light Max : étant donné le manque de lisibilité de l'écran, Nintendo a sorti cette loupe couplée à deux petites ampoules qui se clipse au-dessus de l'écran.
+Radio Game Boy : se branche sur le port cartouche de la console. Il utilise les piles de la Game Boy pour permettre l'écoute de la radio grâce à des oreillettes fournies.
+GB Memory Cartridge : est une cartouche classique vendue seulement au Japon mais de couleur blanche au lieu de grise. Elle permet de charger des jeux sur des bornes spéciales, appelées Nintendo Power. Une même cartouche pouvait donc contenir plusieurs ROMS chargées légalement, qui pouvaient ensuite être effacées pour les remplacer par d'autres. Le même système existait pour la Super Famicom : la SF Memory Cassette.
+Super Game Boy : adaptateur permettant de jouer aux jeux Game Boy sur la télévision via la Super Nintendo, avec, entre autres, la possibilité d'y mettre un certain choix de couleurs. Les jeux Game Boy s'inséraient dans le Super Game Boy qui s'insérait dans la Super Nintendo. Aussi il existe de nombreux accessoires étranges (pour la plupart sortis seulement au Japon) tels qu'un sonar, un organiseur, un tuner TV et même une machine à coudre commandée via la console (la IZEK de Singer). Un autre accessoire, le Game Boy Player, permet de jouer à des jeux Game Boy sur GameCube.
+Barcode Boy : c'est un périphérique de la Game Boy uniquement commercialisé au Japon qui permet de scanner des cartes permettant de jouer à des minis-jeux.
+
+
+== Évolutions ==
+
+
+=== Game Boy Pocket ===
+En 1995, alors que Nintendo et Gunpei Yokoi essuient l'échec du Virtual Boy, une version relookée de la Game Boy est en préparation. Car la firme, qui vient de connaître l'un de ses plus gros échecs, voit également chuter ses ventes de Game Boy alors qu'elle n'en avait pas préparé la succession, ayant tout misé sur son Virtual Boy. En attendant de trouver une idée, Nintendo lance donc la Game Boy Pocket le 21 juillet 1996 au Japon (et quelques mois plus tard en Occident). Cette console diffère très peu de la Game Boy, sauf sa taille réduite de 30 %. L'écran a été très légèrement agrandi et a perdu son aspect verdâtre. L'autonomie est passée à 10 heures pour 2 piles LR03 (contre 4 LR6 pour la Game Boy originale). Les premiers modèles de Game Boy Pocket étaient dépourvus de voyant indiquant le niveau de batterie de la console.
+À l’origine, il était prévu d’y ajouter une dragonne, décision prise à l’unanimité par la R&D1 afin de s’adapter à la mode et de rendre la console encore plus facile à utiliser. Toutefois, cet ajout fut annulé car selon Takehiro Izushi « les enfants risquaient plutôt de faire tournicoter en l’air leur Game Boy avec la dragonne ! ».
+
+
+=== Game Boy Light ===
+
+Commercialisé le 14 avril 1998 au Japon et seulement là-bas, il apporte à la Game Boy Pocket ce qui lui manquait le plus : une bonne lisibilité, grâce à un rétro-éclairage de bonne facture avec lequel il devient possible de jouer dans le noir. Le traditionnel interrupteur « on-off » (marche-arrêt) est doté d'une troisième position, la fameuse position « Light », qui permet d'activer ou couper le rétro-éclairage sans redémarrer la console ; l'autonomie des 2 piles LR06 variant de 12 heures lumière allumée, jusqu'à 20 h lumière éteinte. Pour le reste cette console diffère très peu du Game Boy Pocket, sauf une taille légèrement plus élevée. Il y eut des éditions spéciales, beaucoup plus rares que les versions Silver et Gold : Pokémon Center Tokyo, Astro Boy, Toys R'Us… La Game Boy Light a été rapidement éclipsée par la Game Boy Color, qui fut annoncée seulement six semaines avant la sortie de la Game Boy Light. Non pas que ce fût un échec mais Nintendo lui-même voulait contrecarrer les plans d'une concurrence de plus en plus agressive.
+
+
+== Successeurs ==
+
+
+=== Game Boy Color ===
+
+Commercialisée le 23 novembre 1998 en Europe, la Game Boy Color (couramment référencée par GBC) propose un écran couleur pour une forme légèrement plus grande que la Game Boy Pocket, et double la cadence du processeur et sa quantité de mémoire pour atteindre les 8 MHz et 32 ko. Toutes les cartouches de jeux Game Boy sont lues. Les couleurs à utiliser sont sélectionnables, ce qui a permis de raviver la commercialisation de la gamme existante des jeux Game Boy, et ainsi de proposer sensiblement plus de titres que ses concurrents directs. Technologiquement, cette console a été comparée à la NES des années 1980.
+
+
+=== Game Boy Advance ===
+
+En juin 2001, Nintendo sort une mise à jour de sa console portable. La Game Boy Advance, possède un processeur ARM 32 bits cadencé à 16,8 MHz, couplé avec un processeur Z80 permettant de supporter les cartouches de jeux des premières Game Boy. C'est techniquement une console équivalente à la Super Nintendo. Ce qui permet des améliorations aux jeux anciens comme Super Mario Bros. 2 et aux nouveaux titres comme Mario Kart: Super Circuit, F-Zero: Maximum Velocity et Kuru Kuru Kururin.
+La version SP de la Game Boy Advance, lancée en mars 2003, propose un encombrement réduit avec la possibilité de la replier en deux, un éclairage intégré et une batterie rechargeable, tout le reste demeurant identique. C'est la dernière Game Boy à permettre la rétro compatibilité avec les cartouches de jeux Game Boy et Game Boy Color.
+La Game Boy Micro est une dernière version de la Game Boy Advance. Annoncée à l'E3 2005, elle est sortie en septembre 2005 en Amérique du Nord et au Japon, et le 4 novembre 2005 en Europe. Cette console portable est incompatible avec les jeux Game Boy et Game Boy Color. La Game Boy Micro a un poids de 80 grammes et une taille de 10 cm de long sur 5 cm de large et moins de 2 cm d'épaisseur. Sa façade est amovible et personnalisable. Sa principale qualité réside dans son petit écran fin et avec une assez bonne luminosité. La console joue aussi sur l'aspect rétrogaming avec sa façade Famicom très appréciée au Japon.
+
+
+== Notes et références ==
+
+
+== Voir aussi ==
+
+
+=== Articles connexes ===
+Liste de jeux Game Boy
+Microvision
+
+
+=== Bibliographie ===
+La Bible Game Boy, Éditions Pix'n Love, octobre 2013, 320 p..
+Florent Gorges, L'Histoire de Nintendo Vol.4 – 1989/1999 : L'incroyable Histoire de la Game Boy, Pix'N Love, février 2019, 228 p., A5 (ISBN 978-2-919603-66-4 et 2-919603-66-3, OCLC 1100251639, présentation en ligne).
+
+
+=== Liens externes ===
+
+Site officiel
+(en) Game Boy sur Nintendo.com
+(en) Game Boy sur Nintendopedia
+ Portail du jeu vidéo   Portail Nintendo

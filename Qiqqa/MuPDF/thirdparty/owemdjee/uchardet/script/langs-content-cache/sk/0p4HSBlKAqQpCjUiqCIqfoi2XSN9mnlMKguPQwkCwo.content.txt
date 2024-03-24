@@ -1,0 +1,30 @@
+revision: 7190042
+title: "Termin\xE1tor (elektronika)"
+url: https://sk.wikipedia.org/wiki/Termin%C3%A1tor_(elektronika)
+
+
+---
+
+Terminátor v elektronike je súčiastka, ktorou sa ošetrí koniec elektrického vodiča použitého na prenos signálu. Najmä pri vysokých frekvenciách signálu vznikajú vďaka odrazom od koncov vodiča nežiaduce interferencie a tým rušenie, znižujúce kvalitu signálu na vedení. V najjednoduchšom prípade pasívnej terminácie je koniec vedenia ukončený rezistorom s odporom zhodným s charakteristickou impedanciou vedenia, ktorý vzniku odrazov zabráni.Terminátor paralelnej zbernice, napr. SCSI, ukončuje každý signálový vodič zbernice samostatne.
+
+
+== Spôsoby zapojenia ==
+
+		
+		
+		
+		
+
+
+== Impulzná odozva ukončeného a neukončeného vedenia ==
+
+		
+		
+
+
+== Referencie ==
+
+
+== Iné projekty ==
+
+ Commons ponúka multimediálne súbory na tému Terminátor (elektronika)

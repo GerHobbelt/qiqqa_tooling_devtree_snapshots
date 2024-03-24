@@ -1,0 +1,48 @@
+revision: 6273256
+title: Bacteria
+url: https://hr.wikipedia.org/wiki/Baterija
+
+
+---
+
+Baterija ili električna baterija (fra. batterie), u elektrotehnici, je spoj (obično serijski) dvaju ili više istosmjernih i istovrsnih izvora električne energije u kojima se kemijska, toplinska, sunčeva ili nuklearna energija pretvara u električnu energiju (galvanska i akumulatorska baterija, termoelektrična baterija, sunčana ili fotoelektrična baterija, nuklearna, atomska ili izotopna baterija). U običnom se govoru, doduše neispravno, baterijom naziva i samo jedan galvanski članak, pa i ručna električna svjetiljka napajana galvanskim člancima. Osim toga, baterijom se naziva i spoj većeg broja energetskih kondenzatora za kompenzaciju faktora snage (kondenzatorska baterija).
+
+
+== Galvanski članak ==
+ 
+Galvanski članak ili galvanski element je primarni električni članak ili neobnovljivi izvor električne struje u kojem se, za razliku od sekundarnog članka (akumulatora), kemijska energija nepovratno pretvara u električnu. Prvi galvanski članak konstruirao je 1800. Alessandro Volta na temelju opažanja Luigija Galvanija o električnim pojavama pri dodiru metala i tkiva (žabljih krakova). Galvanski članak sastoji se od dviju elektroda od različitih metalnih vodiča, koje su u dodiru s elektrolitom, te od depolarizatora kojim se sprječava ili odgađa polarizacija (nepoželjna kemijska promjena na elektrodama). Pojedine su se vrste galvanskih članaka nazivale prema izumiteljima, a najznačajniji su u 19. stoljeću bili Voltin, Daniellov, te osobito Leclanchéov članak, od kojega su se razvili suvremeni članci, obično proizvedeni kao slogovi nazvani električnim baterijama.
+
+
+=== Leclanchéov članak ===
+
+Čovjek je smislio razne uređaje, koji su u stanju na jednom (negativnom) priključku nagomilati slobodne elektrone, koji zato nedostaju na drugom kraju uređaja ili pozitivnom priključku. Takav učinak može se postići primjerice fizikalno-kemijskim reakcijama u takozvanom Leclansheovom članku, kojega bolje poznajemo pod izrazom baterijski članak ili baterija. Leclanchéov članak je vrsta galvanskog članka koji je dobio ime po francuskom električaru Georgesu Leclanchéu. Sadrži tuljak (ili elektrodu) od cinka u koji se smješta kemijski aktivna tvar, takozvani elektrolit i u njemu uronjen ugljeni štapić. Takav članak će zahvaljujući fizikalno-kemijskim procesima u elektrolitu stvoriti razliku elekričnog potencijala od 1,5 V na svojim izvodima. Pri tome će se elektroni gomilati na cinčanom tuljcu, to jest na cinčani plašt priključit će se negativni izvod, a na ugljeni štapić pozitivni izvod ili pol baterije.  
+
+
+==== Način rada ====
+Negativni pol (anoda) je cinčana čašica. Pozitivni pol (katoda) je ugljeni štapić u smjesi manganovog dioksida (MnO2) i ugljene prašine (čađa). Elektrolit je vodena otopina amonijevog klorida (NH4Cl(aq) ) i cinkovog klorida (ZnCl2) koja je dodavanjem škroba pretvorena u pastu. Zatvaranjem strujnog kruga između negativnog i pozitivnog pola (iskorištavanja "baterije"), počinju kemijske reakcije:
+
+anodna reakcija na negativnom polu (čašici):Zn → Zn2+ + 2e-katodna reakcija na pozitivnom polu (štapiću):2MnO2 + 2e- + 2NH4+ → Mn2O3 + 2NH3 + H2OZbrajanjem tih dviju reakcija dobivamo:
+
+Zn + 2MnO2 + 2NH4+ → Zn2+ + Mn2O3 + 2NH3 + H2ODakle, na negativnom se polu oslobađaju dva elektrona koja putuju kroz potrošač (gdje obavljaju određeni rad) te dolaze do pozitivnog pola, gdje sudjeluju u kemijskoj reakciji. Kad se sav cink na čašici "potroši" (odnosno kad većina cinka otpusti po dva elektrona), kemijska reakcija više nije moguća pa kažemo da je "baterija prazna". Leclanchéov članak nije ponovo punjiv, odnosno nakon "potrošnje" cinka postaje neupotrebljiv. Pokušaj punjenja baterija koje nisu za to predviđene, redovito će rezultirati eksplodiranjem, ili u najmanju ruku "napuhavanjem" baterije s curenjem agresivog elektrolita koji nagriza uređaje u koje je baterija uložena.
+Novi Leclansheov članak (cink - ugljen) daje napon od 1,5 V.  Neke vrste baterija (litijeve, nikal-kadmijum i druge) mogu međutim imati i manji radni napon, to jest 1,2 V po članku. Za veće napone, kombinira se (povezuje se u seriju) više članaka. 
+Baterije imaju mali kapacitet, pa se koriste za uređaje s malom potrošnjom struje. Za veću potrošnju koristimo akumulatore ili ispravljače, koji priključeni na gradsku električnu mrežu, postaju istosmjernim izvorom. Ispravljači se često ugrađuju u uređaj koga napajaju.
+
+
+== Vrste baterija ==
+Primarne baterije pretvaraju kemijsku energiju u električnu i nakon trošenja se više ne mogu koristiti. Naziv dobivaju prema materijalima od kojih su načinjene, a najpoznatije su:
+
+"obična" baterija (ugljen - cink, Leclanchéov članak),
+alkalna baterija,
+živina baterija,
+srebrna (srebro-oksidna) baterija,
+litijeva baterija.Postoje međutim i punjive baterije, koje se mogu višekratno puniti nakon pražnjenja. To su takozvane aku-baterije (Rechargeable batteries) (akumulatorske baterije). 
+Oblici baterija označavaju se standardnim, a kod rjeđe korištenih tipova tvorničkim oznakama. U primjeni su američke, europske i druge vrste oznaka. Češće korišteni tipovi baterija dati su tabeli. 
+
+Kapacitet baterije iskazuje se u mAh (miliampersatima), a zavisi od vrste i veličine baterije. Punjive baterije trebale bi se puniti strujom punjenja (mA) približno u visini 1/10 kapaciteta u mAh. Kao kompromisna vrijednost jakosti struje univerzalnih punjača za okrugle baterije može se uzeti 100 - 150 mA, a za prizmatične i dugmaste desetak mA. Približni kapacitet po gramu težine baterije zavisi o vrsti baterije:
+
+
+== Trajanje ==
+Životni vijek baterije u radu skraćuje visoka temperatura radne okoline i same baterije, odnosno bateriji gode uvjeti koji gode i čovjeku. I nepotrebni porast temperature pri punjenju skraćuje životni vijek baterije. Ali, padom temperature pada kapacitet baterije, zbog čega se zbiva da akumulatori zataje pri zahlađenjima. Kod punjenja baterije vrlo je bitna struja (napon i jakost) punjenja i poželjno je da mora biti između 10 % i 20 % kapaciteta baterije (za kapacitet od 100 Ah ide jakost između 10 A i 20A). Struju pražnjenja je bitna jer kapacitet izravno ovisi o struji kojom se prazni bateriju. Pri stalnoj temperaturi okoline, kapacitet baterije pada s povećanjem struje pražnjenja. Potrebno je pratiti proces plinjenja: isprve se bateriju puni konstantnom strujom, a posebnim algoritmom napon se postupno podiže.
+
+
+== Izvori ==

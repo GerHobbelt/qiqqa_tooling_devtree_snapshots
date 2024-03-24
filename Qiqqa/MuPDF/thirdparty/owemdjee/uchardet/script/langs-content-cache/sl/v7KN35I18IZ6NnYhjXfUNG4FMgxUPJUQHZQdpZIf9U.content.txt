@@ -1,0 +1,28 @@
+revision: 5237833
+title: Notranji pomnilnik
+url: https://sl.wikipedia.org/wiki/Notranji_pomnilnik
+
+
+---
+
+Notranji pomnilnik je ena glavnih sestavin računalnika. Služi za shranjevanje podatkov (programa in obdelovanih podatkov). Narejen je iz polprevodnika oziroma je v čipu. Soroden notranjemu pomnilniku je zunanji pomnilnik (disketa, trdi disk, CD,...).
+
+
+== Zgradba notranjega pomnilnika ==
+Zgradbo notranjega pomnilnika si lahko zamišljamo kot omaro s policami. Namesto polic so pomnilniške lokacije, ki prejmejo 8, 16, 32,... bitov velik podatek. Lokacije imajo naslove, po katerih jih lahko razločimo. Naslovi so števila.
+
+
+== Naslavljanje ==
+Programi v fizični pomnilnik nikoli ne dostopajo neposredno, ampak tvorijo naslove na tri načine. Način naslavljanja je odvisen od pomnilniške enote.
+
+Ravninski pomnilniški model. Pri tem imajo programi dostop do vseh naslovov in pomnilnik vidijo kot prostor z neprekinjeno verigo bajtov. Takšen prostor se tudi imenuje prostor linearnega naslavljanja.
+Model za realno naslavljanje. Ta način je predvsem za kompitabilnost z Intel 8086 procesorji.
+Segmentiran pomnilniški model. Tukaj program vidi pomnilnik kot skupino več segmentov. Vsak segment pripada določeni vrsti podatkov. Tako ima program ločene segmente za izvršilno kodo, za podatke in za sklade. Da program dostopa do teh segmentov, mora tvoriti logični naslov, ki je sestavljen iz izbirnika segmenta in pomika.
+In ravno nazadnje omenjen način se trenutno uporablja pri vseh novejših operacijskih  sistemih.
+Operacijski sistem programu nikoli ne dovoli dostopati do vseh naslovnih prostorov v pomnilniku, saj so nekateri kritični za delovanje sistema oz. naslove zasedajo že drugi programi ali naprave. Zato program v izvajanju vidi le delni pomnilnik oz. mu je določen naslovni prostor. Kljub temu, da ima program omejen dostop v pomnilniku, bo pri izvajanju prepričan, da vidi in obvladuje ves pomnilnik.
+Logični naslov je pri 32-bitni arhitekturi velik 32 bitov oz. 4 bajte, kjer je v prvemu delu zapisan začetek segmenta in v drugem pomik v segmentu.
+
+
+== Vrste notranjega pomnilnika in kapaciteta ==
+Obstajata dve vrsti notranjega pomnilnika: ROM in RAM. Vsak od njiju ima mnoge podvrste.
+Enota za kapaciteto pomnilnika je bit in iz njega izpeljan bajt (byte). Največkrat se pri notranjem pomnilniku uporablja enota MB (mega bajt).

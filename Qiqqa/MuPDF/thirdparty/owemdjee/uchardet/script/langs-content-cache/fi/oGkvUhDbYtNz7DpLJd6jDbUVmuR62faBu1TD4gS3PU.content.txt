@@ -1,0 +1,80 @@
+revision: 21653523
+title: YouTube Music
+url: https://fi.wikipedia.org/wiki/Youtube
+
+
+---
+
+Youtube on Googlen omistama Internetissä toimiva videopalvelu. Käyttäjät voivat lisätä sivustolle omia videoitaan, sekä katsoa ja kommentoida muiden käyttäjien videoita. Sivuston perusti 14. helmikuuta 2005 kolme PayPalin työntekijää: Chad Hurley, Steve Chen ja Jawed Karim.
+Youtuben pääkonttori sijaitsee San Brunossa, Kaliforniassa ja Susan Wojcicki toimi Youtuben toimitusjohtajana helmikuusta 2014 vuoteen 2023.
+Youtube on Internetin suosituin suoratoistovideopalvelu (vuonna 2009). Youtubeen ladataan joka minuutti 100 tuntia videosisältöä, eli yhdessä vuorokaudessa sisältöä ladataan yli 16 vuoden edestä (vuonna 2012). Päivittäin palvelussa katsotaan yli neljä miljardia videota ja kuukaudessa Youtubessa käy yli miljardi erillistä käyttäjää (2014). Suomessa Youtube on vuonna 2009 toiseksi suosituin verkkosivusto. Youtubesta on käytetty lyhennettä YT.
+
+
+== Tekniikka ==
+
+Youtubeen voi ladata mm. WMV-, AVI-, MOV- ja MPEG-muotoisia tiedostoja Youtuben automaattisesti muokattavaksi.
+Ainakin vielä 2014 Youtube esitti videon perusasetuksilla tarkkuudella 320 vaakapistettä × 240 pystypistettä. Ääniraita muunnettiin muotoon MP3, ja sen näytteenottotaajuus on 22 050 Hz yksikanavaisena eli monofonisena. 
+Videoiden toistoon käytettiin Adobe Flash Playerin ominaisuuksia.
+HTML5-soitin otettiin testikäyttöön vuonna 2010.
+Youtuben Engineering and Developers Blogissa ilmoitettiin HTML5-soittimen siirtyneen sivuston oletusvaihtoehdoksi videoita katseltaessa 27. tammikuuta 2015.
+Toukokuussa 2011 sivuston tukema HTML5-videosoitin mahdollisti 3D-videoiden toiston käyttämällä Nvidian 3D Visionia. Heinäkuussa 2010 Youtube alkoi tukea myös 4K (4 096 × 2 304) videoita. Marraskuusta 2014 lähtien on ollut mahdollista tallentaa videoita myös 48, 50 ja 60 kuvan kuvataajuudella.Vuonna 2021 Youtube transkoodaa ladatut videot automaattisesti useaan formaattiin ja eri resoluutioille erilaisia laitteita varten. Youtubeen on mahdollista tallentaa 8K ultrateräväpiirtovideoita 7680×4320 tarkkuudella. Näistä tehdään automaattisesti 144p, 240p, 360p, 480p, 720p, 1080p, 1440p, 2160p ja 4320p -versiot. Nykyisin moderneille laitteille tarjotaan VP9-koodekkia käyttäviä videoita ja muille yhteensopivampaa H.264-koodekkia.Youtubeen ladattaville videoilla Google suosittelee käytettäväksi H.264-koodekkia progressiivisesti tallennettuna, korkeintaan 60 kuvataajuudella, standardilla 16:9-kuvasuhteella, AAC-LC-äänikoodekkia 96 tai 48 kHz näytteenottotaajuudella stereona tai 5.1-kanavajärjestelmällä, tallennettuna MP4-säiliömuotoon.Google on kehittänyt Argos-mikropiirin videokuvan transkoodaamisessa tusinaksi versioksi, joita se käyttää sulavaan toistoon ja verkkokaistan säästämiseksi. Käyttäjien lataamat videot muutetaan eri näyttöresoluutioille.
+Tulevamilloin? koodekki on AV1.Vuonna 2021 tuki sisältää muun muassa useimmat vuodesta 2013 eteenpäin julkaistut älytelevisiot.
+
+
+== Historia ==
+Google ilmoitti 9. lokakuuta 2006 ostavansa Youtuben noin 1,3 miljardilla eurolla.Youtube on pyrkinyt lisäämään tarjontaansa enemmän voittoa tuottavia mainoksia ja uusia ominaisuuksia. Vuonna 2008 palvelussa mahdollistui pitkien elokuvien esittäminen. Youtube on parantanut myös kuvan laatua tarjoten mahdollisuuden 4k-tasoiseen tallentamiseen.
+
+
+== Youtube vaikuttamisen välineenä ==
+Avoimuudesta johtuen Youtubea käytetään monenlaisten epäkohtien osoittamiseen ja yhteiskunnalliseen vaikuttamiseen. Siellä on käsitelty myös ongelmia, kuten kouluampumisia. Suomesta Pekka Eric Auvinen ja Matti Juhani Saari olivat luoneet itselleen tilin Youtubeen. Jokelan ja Kauhajoen koulusurmien jälkeen Suomen viranomaiset saivat poistetuiksi aineistoa, joita kuitenkin tiedotusvälineet olivat julkaisseet ja joista liikkui kopioita muualla verkossa.
+Yhdysvalloissa presidentinvaalissa on uskottu, että Youtube on muuttanut perusteellisesti kampanjointia. Yksi ytimekäs Youtube-video voi saada helposti miljoonia katsojia.
+
+
+=== Estot ja kiellot ===
+
+Jotkin maat tai laitokset ovat sensuroineet tai rajoittaneet tiettyjä videoita ja jotkin ovat estäneet kokonaan pääsyn Youtubeen. Tiettyjen videoiden estäminen tapahtuu videon rikkoessa maan lakia, joka voi vaihdella etiikkaan tai moraaliin perustuvasta laista tekijänoikeusrikkomukseen sekä kansalliseen turvallisuuteen liittyen.Thaimaa esti sivustolle pääsyn vuonna 2007 viideksi kuukaudeksi, koska palvelussa oli 44 sekunnin mittainen video, jonka katsottiin loukkaavan maan kuningasta. Myös Pakistanissa sivustolle pääsy oli estettynä syyskuusta 2012 tammikuuhun 2016 islamia loukkaavan videomateriaalin takia. Turkki ja Tunisia ovat rajoittaneet palveluun pääsyä sekä Egypti on vaatinut tiettyjen demokratiamyönteisten tietojen rajoittamista.Yhdysvaltain asevoimien edustajat sulkivat 14. toukokuuta 2007 sotilailta pääsyn Youtubeen, Music Televisioniin ja MySpaceen. Edustajien mukaan nämä viihdeportaalit kuormittivat liikaa puolustusministeriön verkkoa. Youtuben pääjohtajan, Chad Hurleyn mukaan kyseessä saattaa olla jokin muu syy. Kielto nimittäin tuli voimaan vain muutama päivä sen jälkeen, kun Yhdysvaltain asevoimat avasi Youtubeen oman kanavansa Irakin sodan propagandalle.
+
+
+=== Verkkohyökkäykset ===
+Youtubea vastaan hyökättiin 21. toukokuuta 2009 lataamalla sinne lukuisia pornoa sisältäviä videoita. 4chanin järjestämä ”Porn Day” järjestettiin Youtuben poistettua sivustolta musiikkivideoita.Toinen hyökkäys tapahtui 4. heinäkuuta 2010 hyödyntämällä cross-site scripting -haavoittuvaisuutta. Hyökkäyksen kohteena olivat lähinnä kanadalaisen teinitähti Justin Bieberin videot. Youtuben mukaan aukko korjattiin kahdessa tunnissa.
+
+
+=== Mainosboikotti 2017 ===
+Maaliskuussa 2017 Times julkaisi jutun, jonka mukaan brittihallituksen, yliopistojen, hyväntekeväisyysjärjestöjen ja useiden yksityisten yritysten mainoksia esitettiin uusnatsiryhmien ja terroristiryhmiä tukevien videoiden yhteydessä. Youtuben mainostuksen analysointi ja siitä tehdyt kohujutut levisivät myös Yhdysvaltoihin, jossa mainoksia väitettiin esitettävän kyseenalaisen ja rasistisen sisällön yhteydessä.Kohun seurauksena yli 250 yritystä lopetti yhteistyönsä Googlen kanssa. Youtuben arvioitiin boikotoinnin seurauksena menettävän jopa 750 miljoonan dollarin mainostulot vuodessa.
+
+
+=== Kiistanalaisen sisällön piilotus ===
+Elokuussa 2017 Youtube alkoi käyttäjien ilmoituksesta piilottaa videoita, joissa on ”kiistanalaista sisältöä”, mutta jotka eivät suoranaisesti riko käyttösääntöjä. Youtuben säännöissä erikseen kielletään kokonaan vihaa lietsovat videot. Piilotetuissa videoissa voi olla sisältövaroitus, niiden yhteydessä ei näytetä mainoksia tai niitä ei voi kommentoida tai tykätä, eikä niille näytetä videoehdotuksia.Mozilla-säätiön rahoittamassa, 37 380 Youtuben käyttäjää kattaneessa tutkimuksessa (2020–2021) Youtube-sivuston havaittiin suosittelevan käyttäjilleen katsottavaksi videoita, jotka sisältävät esimerkiksi misinformaatiota, väkivaltaa ja vihapuhetta.  Youtuben käyttäjien saatavilla on säätimiä, joiden Youtube väittää vaikuttavan käyttäjän eteen tulevaan sisältöön, mutta Mozilla-säätiön myöhemmän, 22 722 käyttäjän tutkimuksen mukaan näiden säätimien vaikutus on todellisuudessa häviävän pieni.
+
+
+== Youtube ja tekijänoikeusjärjestelyt ==
+Youtube kieltää tekijänoikeudellisesti suojattujen videoiden tuomisen palveluun ilman tekijänoikeuksien haltijan lupaa. Tekijänoikeudellisesti suojatun materiaalin valvonnassa ja poistossa on kuitenkin ollut vaikeuksia. Vuonna 2008 jotkut televisioyhtiöt ilmoittivat luovuttaneensa lähes kokonaan tekijänoikeudellisesti suojatun materiaalin poistamisen tehtävän vaikeuden vuoksi. Youtube voi poistaa käyttäjien tunnuksia, jos nämä ovat tuoneet tekijänoikeuksia rikkovia videoita palveluun.
+Toukokuussa 2007 uutisoitiin, että Youtube suhtautuu tekijänoikeuksiin vakavasti ja harkitsee ottavansa käyttöön sisällönsuodatuksen, jolla järjestelmä tunnistaisi tekijänoikeuksin suojatun materiaalin ja estäisi sen lataamisen.Youtubella on sopimukset materiaalin jakelusta ainakin levy-yhtiöiden Universal, SonyBMG, Warner Music ja EMI kanssa. Youtube käyttää tekniikkaa, joka tunnistaa videossa soivan kappaleen ja tämän perusteella maksaa tekijänoikeuskorvaukset oikealle taholle.
+
+
+=== Content ID ===
+Vuoden 2007 lopulla Youtube julkaisi Content ID -nimisen sisällöntunnistusjärjestelmän, jonka tarkoituksena on helpottaa tekijänoikeuksien haltijoiden taistelua piratismia vastaan. Työkalu tarkastaa sivustolle ladattavien videoiden profiileita tietokannassa olevaan tekijänoikeudelliseen materiaaliin. Se ilmoittaa tekijänoikeusrikkomuksista oikeuksien omistajille, jotta he voivat päättää, mitä kyseisille videolle tehdään. Tekijänoikeuksien haltija voi pyytää, että videon näkyminen estetään, tai videoon voidaan lisätä mainoksia, joiden tuotosta osa menee tekijänoikeuksien haltijalle. Youtuben mukaan yli 95 prosenttia valitsee jälkimmäisen vaihtoehdon. Levy-yhtiöiden mukaan järjestelmä ei kuitenkaan ole tarpeeksi tarkka.Vuonna 2016 Youtube sanoi maksaneensa tekijänoikeuksien haltijoille vuodesta 2007 lähtien Content ID:n avulla yhteensä kaksi miljardia dollaria.Sisällöntunnistusjärjestelmän julkaisun jälkeen on medioihin noussut esille monia virheellisiä automaattisia ilmoituksia tai väärin saatuja tekijänoikeuksia. Yhtenä esimerkkinä Content ID:n automaattisesti huomaama kissavideo, jossa kissan kehräys luokiteltiin tekijänoikeusrikkomukseksi.EFF:n mukaan Content ID on korvannut Yhdysvaltain lain salliman lainaus-, parodia- ja sitaattioikeuden "Fair usen" Youtuben omilla säännöillä.On myös arvioitu että Content ID antaa Googlelle etulyöntiaseman jos EU:n tekijänoikeusdirektiivissa vaaditaan sisällön ennakkosuodatus oikeudenomistajien eduksi. Tällöin Google voi lisensoida valmista järjestelmää pienemmille toimijoille tai niiden on kehittävä oma vastaava kymmenien miljoonien hintaan.
+
+
+=== Viacom ===
+Maaliskuussa 2007 yhdysvaltalainen televisioyhtiö Viacom haastoi Youtuben oikeuteen tekijänoikeusrikkomuksista ja vaati siltä miljardin dollarin korvauksia. Viacomin mukaan Youtubessa on lähes 160 000 heidän omistamaansa videoleikettä.Oikeus määräsi heinäkuussa 2008 Youtuben luovuttamaan palvelun kaikkien käyttäjien IP-osoitteet, käyttäjätunnukset ja poistettujen videoiden tiedot Viacomille, jotta Viacom voisi osoittaa tekijänoikeudellisesti suojatun materiaalin olevan suositumpaa kuin amatöörimateriaalin. Yhteensä tietoja luovutettiin 12 teratavua.Maaliskuussa 2014 yhtiöiden oikeustaistelu päättyi, kun osapuolet tulivat sovintoon. Sen sisällöstä ei kerrottu julkisuuteen.
+
+
+=== Teosto ===
+Marraskuun 2017 lopulla Suomen tekijänoikeusjärjestö Teoston sekä Googlen välinen, kuukauden ajan kestänyt kiista johti musiikkia sisältäneiden Youtube-videoiden estämiseen Suomessa. Eston taakse joutui valtaosin suomalaisia kappaleita ja musiikkivideoita, mutta joukossa oli mukana runsaasti myös ulkomaalaisia vastaavia. Kiista aiheutui suomalaisten musiikintekijöiden valituksienteosta, joka johtui YouTubesta saaduista liian pienistä korvauksista. Esto koski vain ja ainoastaan Suomea. Myöhemmin samana päivänä Teoston senior manager Markus Kaarto ilmoitti, että väliaikainen sopimus oli saatu aikaiseksi ja että musiikki palaa suomalaisten saataville Youtubessa torstain 30.11. ja perjantain 1.12. aikana.
+
+
+== Katso myös ==
+YouTube Premium
+YouTube Kids
+YouTube Shorts
+YouTube Music
+
+
+== Lähteet ==
+
+
+== Aiheesta muualla ==
+ Kuvia tai muita tiedostoja aiheesta Youtube Wikimedia CommonsissaTässä kamppailussa tiivistyy koko Youtuben tulevaisuus – Suosittu tubettaja PewDiePie ja mediajätti käyvät veristä sotaa seuraajista, Yle 26.4.2017
+YouTuben virallinen sivusto
+Wikitubia, YouTubeen keskittyvä wiki (englanniksi)

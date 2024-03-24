@@ -1,0 +1,2883 @@
+revision: 69524116
+title: Paradoks Banacha-Tarskiego
+url: https://pl.wikipedia.org/wiki/Paradoks_Banacha-Tarskiego
+
+
+---
+
+Paradoks Banacha-Tarskiego (paradoks Hausdorffa-Banacha-Tarskiego, paradoksalny rozkład kuli) – paradoksalne twierdzenie teorii miary sformułowane i udowodnione przez Stefana Banacha i Alfreda Tarskiego w 1924 roku.
+Twierdzenie głosi, że trójwymiarową kulę można „rozciąć” na skończoną liczbę części (wystarczy ich pięć), a następnie używając wyłącznie przesunięć i obrotów można złożyć z tych części dwie kule o takich samych promieniach jak promień kuli wyjściowej.
+Paradoksalne jest to, że z jednej strony w wyniku operacji rozcinania, przesunięcia, obracania i składania następuje podwojenie objętości kuli, z drugiej użyte operacje przesunięcia i obrotu są izometriami i zachowują objętość brył.
+Źródło paradoksu tkwi w tym, że części, na które dzielona jest kula, są zbiorami niemierzalnymi (w sensie Lebesgue’a), tj. nie mają objętości i nie stosuje się do nich addytywność miary, zgodnie z którą suma miar rozłącznych zbiorów mierzalnych jest miarą sumy mnogościowej tych zbiorów.
+Twierdzenie Banacha-Tarskiego i pokrewne wyniki uświadamiają ograniczenia możliwych rozszerzeń miary Lebesgue’a, które miałyby pozostać niezmiennicze względem pewnych przekształceń przestrzeni euklidesowych.
+Paradoks Banacha-Tarskiego ma swoją popularną wersję: ziarnko grochu może być podzielone na skończenie wiele części, z których (przez izometrie) można złożyć kulę wielkości Słońca.
+W jednej z książek dotyczących paradoksu Banacha-Tarskiego zamieszczone jest motto wskazujące jeden ze sposobów rozwiązania problemu delijskiego:
+
+Delijczycy: W jaki sposób możemy uwolnić się od zarazy?
+Wyrocznia delficka: Powiększcie dwukrotnie objętość ołtarza Apolla zachowując jego kształt sześcianu!
+Banach i Tarski: Czy możemy użyć aksjomatu wyboru?
+
+
+== Rys historyczny ==
+1905: Giuseppe Vitali podaje przykład zbioru niemierzalnego na okręgu jednostkowym, który to zbiór jest podstawą rozkładu σ-paradoksalnego okręgu. (Zobacz sekcja poniżej.)
+1914: polscy matematycy Stefan Mazurkiewicz i Wacław Sierpiński publikują przykład paradoksalnego podzbioru płaszczyzny 
+  
+    
+      
+        
+          
+            R
+          
+          
+            2
+          
+        
+      
+    
+     
+  .
+1915: Felix Hausdorff publikuje twierdzenie, że po usunięciu przeliczalnie wielu punktów ze sfery jednostkowej można otrzymać zbiór, który jest paradoksalny ze względu na grupę obrotów 
+  
+    
+      
+        S
+        
+          O
+          
+            3
+          
+        
+      
+    
+     
+  .
+1924: praca Banacha i Tarskiego przedstawiająca dowód ich twierdzenia ukazuje się w druku.
+1991: wrocławski matematyk Janusz Pawlikowski wykazuje, że zakładając aksjomaty Zermela-Fraenkla i twierdzenie Hahna-Banacha można udowodnić paradoks Banacha-Tarskiego.
+1994: Randall Dougherty i Matthew Foreman dowodzą, że jest możliwy paradoksalny rozkład kuli na kawałki, które mają własność Baire’a, a więc porządnych z topologicznego punktu widzenia.
+
+
+== Wstępne przykłady ==
+W zasadzie już Galileusz zauważył, że zbiór liczb naturalnych 
+  
+    
+      
+        
+          N
+        
+        =
+        {
+        0
+        ,
+        1
+        ,
+        2
+        ,
+        3
+        ,
+        4
+        ,
+        5
+        ,
+        …
+        }
+      
+    
+     
+   może być podzielony na dwie części z których każda może być odwzorowana w sposób wzajemnie jednoznaczny na cały zbiór 
+  
+    
+      
+        
+          N
+        
+        .
+      
+    
+     
+   Rozważmy na przykład zbiór liczb parzystych 
+  
+    
+      
+        P
+        =
+        {
+        0
+        ,
+        2
+        ,
+        4
+        ,
+        6
+        ,
+        …
+        }
+      
+    
+     
+   i jego dopełnienie, czyli zbiór liczb nieparzystych 
+  
+    
+      
+        N
+        =
+        {
+        1
+        ,
+        3
+        ,
+        5
+        ,
+        …
+        }
+        .
+      
+    
+     
+   Funkcja 
+  
+    
+      
+        
+          f
+          
+            P
+          
+        
+        :
+        P
+        →
+        
+          N
+        
+        :
+        k
+        ↦
+        k
+        
+          /
+        
+        2
+      
+    
+     
+   jest bijekcją z 
+  
+    
+      
+        P
+      
+    
+     
+   na 
+  
+    
+      
+        
+          N
+        
+      
+    
+     
+   oraz funkcja 
+  
+    
+      
+        
+          f
+          
+            N
+          
+        
+        :
+        N
+        →
+        
+          N
+        
+        :
+        k
+        ↦
+        (
+        k
+        −
+        1
+        )
+        
+          /
+        
+        2
+      
+    
+     
+   jest bijekcją z 
+  
+    
+      
+        N
+      
+    
+     
+   na 
+  
+    
+      
+        
+          N
+        
+        .
+      
+    
+     
+  Każde dwa nietrywialne odcinki na prostej rzeczywistej są równoliczne (w ZF) i funkcja ustalająca równoliczność jest bardzo porządna (np. w przypadku dwóch przedziałów otwartych może to być funkcja liniowa). Zatem każdy nietrywialny odcinek może być podzielony na dwie rozłączne części (odcinki) i każda z tych części może być odwzorowana w sposób wzajemnie jednoznaczny na odcinek wyjściowy. Podobna obserwacja ma miejsce w odniesieniu do prostokątów, prostopadłościanów i wielu innych figur geometrycznych.Rozważmy zbiór Vitalego na okręgu jednostkowym. Najwygodniej jest ten zbiór opisać, jeśli zinterpretujemy punkty płaszczyzny jako liczby zespolone. Nasz okrąg to zbiór 
+  
+    
+      
+        O
+        =
+        {
+        
+          e
+          
+            2
+            π
+            r
+            i
+          
+        
+        :
+        r
+        ∈
+        
+          R
+        
+        }
+        =
+        {
+        
+          e
+          
+            2
+            π
+            r
+            i
+          
+        
+        :
+        r
+        ∈
+        [
+        0
+        ,
+        1
+        )
+        }
+        .
+      
+    
+     
+   Określmy na tym zbiorze relację równoważności 
+  
+    
+      
+        ≅
+      
+    
+     
+   przez warunek
+  
+    
+      
+        
+          e
+          
+            2
+            π
+            r
+            i
+          
+        
+        ≅
+        
+          e
+          
+            2
+            π
+            s
+            i
+          
+        
+      
+    
+     
+   wtedy i tylko wtedy gdy 
+  
+    
+      
+        r
+        −
+        s
+      
+    
+     
+   jest liczbą wymierną.
+Zakładając aksjomat wyboru, możemy znaleźć zbiór 
+  
+    
+      
+        M
+        ⊆
+        O
+        ,
+      
+    
+     
+   który jest selektorem klas abstrakcji relacji 
+  
+    
+      
+        ≅
+        .
+      
+    
+     
+   Zatem zbiór 
+  
+    
+      
+        M
+      
+    
+     
+   spełnia następujące dwa warunki:
+(a) 
+  
+    
+      
+        (
+        ∀
+        s
+        ,
+        t
+        ∈
+        M
+        )
+        (
+        s
+        ≠
+        t
+         
+        ⇒
+         
+        s
+        ≇
+        t
+        )
+      
+    
+     
+   oraz
+(b) 
+  
+    
+      
+        (
+        ∀
+        s
+        ∈
+        O
+        )
+        (
+        ∃
+        t
+        ∈
+        M
+        )
+        (
+        s
+        ≅
+        t
+        )
+        .
+      
+    
+     
+  
+Przedstawmy zbiór liczb wymiernych w przedziale 
+  
+    
+      
+        [
+        0
+        ,
+        1
+        )
+      
+    
+     
+   jako sumę 
+  
+    
+      
+        
+          Q
+        
+        ∩
+        [
+        0
+        ,
+        1
+        )
+        =
+        A
+        ∪
+        B
+      
+    
+     
+   dwóch zbiorów nieskończonych. Wówczas każdy ze zbiorów 
+  
+    
+      
+        A
+        ,
+      
+    
+     
+   
+  
+    
+      
+        B
+      
+    
+     
+   jest równoliczny ze zbiorem 
+  
+    
+      
+        
+          Q
+        
+        ∩
+        [
+        0
+        ,
+        1
+        )
+        ,
+      
+    
+     
+   a więc możemy wybrać funkcje wzajemnie jednoznaczne 
+  
+    
+      
+        
+          f
+          
+            A
+          
+        
+        :
+        A
+        →
+        
+          Q
+        
+        ∩
+        [
+        0
+        ,
+        1
+        )
+      
+    
+     
+   i 
+  
+    
+      
+        
+          f
+          
+            B
+          
+        
+        :
+        B
+        →
+        
+          Q
+        
+        ∩
+        [
+        0
+        ,
+        1
+        )
+        .
+      
+    
+     
+   Rozważmy zbiory
+
+  
+    
+      
+        
+          M
+          
+            A
+          
+        
+        =
+        {
+        
+          e
+          
+            2
+            π
+            q
+            i
+          
+        
+        ⋅
+        t
+        :
+        t
+        ∈
+        M
+         
+        ∧
+         
+        q
+        ∈
+        A
+        }
+      
+    
+     
+   i 
+  
+    
+      
+        
+          M
+          
+            B
+          
+        
+        =
+        {
+        
+          e
+          
+            2
+            π
+            q
+            i
+          
+        
+        ⋅
+        t
+        :
+        t
+        ∈
+        M
+         
+        ∧
+         
+        q
+        ∈
+        B
+        }
+        .
+      
+    
+     
+  
+Wówczas 
+  
+    
+      
+        O
+        =
+        
+          M
+          
+            A
+          
+        
+        ∪
+        
+          M
+          
+            B
+          
+        
+        ,
+      
+    
+     
+   
+  
+    
+      
+        
+          M
+          
+            A
+          
+        
+        ∩
+        
+          M
+          
+            B
+          
+        
+        =
+        ∅
+      
+    
+     
+   oraz funkcje
+
+  
+    
+      
+        
+          φ
+          
+            A
+          
+        
+        :
+        
+          M
+          
+            A
+          
+        
+        →
+        O
+        :
+        
+          e
+          
+            2
+            π
+            q
+            i
+          
+        
+        ⋅
+        t
+        ↦
+        
+          e
+          
+            2
+            π
+            
+              f
+              
+                A
+              
+            
+            (
+            q
+            )
+            i
+          
+        
+        ⋅
+        t
+      
+    
+     
+   i
+
+  
+    
+      
+        
+          φ
+          
+            B
+          
+        
+        :
+        
+          M
+          
+            B
+          
+        
+        →
+        O
+        :
+        
+          e
+          
+            2
+            π
+            q
+            i
+          
+        
+        ⋅
+        t
+        ↦
+        
+          e
+          
+            2
+            π
+            
+              f
+              
+                B
+              
+            
+            (
+            q
+            )
+            i
+          
+        
+        ⋅
+        t
+      
+    
+     
+  
+są bijekcjami.W powyższych przykładach użyte funkcje wzajemnie jednoznaczne, nawet jeśli są bardzo porządne, jednak nie zachowują odległości punktów (czyli nie są izometriami). Zatem przykłady te nie wzbudzają żadnego zdziwienia: odpowiednie zbiory są powiększone/rozdmuchane przez odpowiadające im funkcje. Można jednak zapytać, czy istnieją podobne rozkłady z dodatkową własnością, taką że funkcje ustalające równoliczność kawałków z wyjściowym zbiorem są izometriami (ze względu na metryki naturalne).
+
+Zbiór Vitalego, dyskutowany wcześniej, pozwala zbudować przykład podziału na przeliczalnie wiele części, tak że z dowolnych nieskończenie wielu kawałków można złożyć okrąg wyjściowy, używając tylko obrotów. Niech zbiór 
+  
+    
+      
+        M
+      
+    
+     
+   będzie wybrany jak powyżej. Dla 
+  
+    
+      
+        q
+        ∈
+        
+          Q
+        
+        ∩
+        [
+        0
+        ,
+        1
+        )
+      
+    
+     
+   połóżmy 
+  
+    
+      
+        
+          M
+          
+            q
+          
+        
+        =
+        {
+        
+          e
+          
+            2
+            π
+            q
+            i
+          
+        
+        ⋅
+        t
+        :
+        t
+        ∈
+        M
+        }
+        .
+      
+    
+     
+   Wówczas 
+  
+    
+      
+        {
+        
+          M
+          
+            q
+          
+        
+        :
+        q
+        ∈
+        
+          Q
+        
+        ∩
+        [
+        0
+        ,
+        1
+        )
+        }
+      
+    
+     
+   jest przeliczalną rodziną parami rozłącznych podzbiorów okręgu 
+  
+    
+      
+        O
+        .
+      
+    
+     
+   Przypuśćmy, że 
+  
+    
+      
+        A
+        ⊆
+        
+          Q
+        
+        ∩
+        [
+        0
+        ,
+        1
+        )
+      
+    
+     
+   jest zbiorem nieskończonym. Ustalmy bijekcję 
+  
+    
+      
+        
+          f
+          
+            A
+          
+        
+        :
+        A
+        →
+        
+          Q
+        
+        ∩
+        [
+        0
+        ,
+        1
+        )
+      
+    
+     
+   i zauważmy że
+  
+    
+      
+        O
+        =
+        
+          ⋃
+          
+            q
+            ∈
+            A
+          
+        
+        
+          F
+          
+            q
+          
+        
+        [
+        
+          M
+          
+            q
+          
+        
+        ]
+        ,
+      
+    
+     
+   gdzie 
+  
+    
+      
+        
+          F
+          
+            q
+          
+        
+        :
+        O
+        →
+        O
+        :
+        
+          e
+          
+            2
+            π
+            r
+            i
+          
+        
+        ↦
+        
+          e
+          
+            2
+            π
+            (
+            r
+            +
+            
+              f
+              
+                A
+              
+            
+            (
+            q
+            )
+            −
+            q
+            )
+            i
+          
+        
+      
+    
+     
+   jest obrotem o kąt 
+  
+    
+      
+        (
+        
+          f
+          
+            A
+          
+        
+        (
+        q
+        )
+        −
+        q
+        )
+        ⋅
+        2
+        π
+        .
+      
+    
+     
+  Mazurkiewicz i Sierpiński podali w 1914 następujący przykład paradoksalnego (ze względu na izometrie) podzbioru płaszczyzny. Jak wcześniej, utożsamiamy płaszczyznę ze zbiorem liczb zespolonych. Niech
+  
+    
+      
+        Z
+        =
+        {
+        
+          a
+          
+            0
+          
+        
+        +
+        
+          a
+          
+            1
+          
+        
+        
+          e
+          
+            i
+          
+        
+        +
+        
+          a
+          
+            2
+          
+        
+        
+          e
+          
+            2
+            i
+          
+        
+        +
+        …
+        +
+        
+          a
+          
+            k
+          
+        
+        
+          e
+          
+            k
+            i
+          
+        
+        :
+        k
+        ∈
+        
+          N
+        
+         
+        ∧
+         
+        
+          a
+          
+            0
+          
+        
+        ,
+        …
+        ,
+        
+          a
+          
+            k
+          
+        
+        ∈
+        
+          N
+        
+        }
+        ,
+      
+    
+     
+  
+
+  
+    
+      
+        
+          Z
+          
+            0
+          
+        
+        =
+        {
+        
+          a
+          
+            1
+          
+        
+        
+          e
+          
+            i
+          
+        
+        +
+        
+          a
+          
+            2
+          
+        
+        
+          e
+          
+            2
+            i
+          
+        
+        +
+        …
+        +
+        
+          a
+          
+            k
+          
+        
+        
+          e
+          
+            k
+            i
+          
+        
+        :
+        k
+        ∈
+        
+          N
+        
+        ∖
+        {
+        0
+        }
+        ∧
+         
+        
+          a
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          a
+          
+            k
+          
+        
+        ∈
+        
+          N
+        
+        }
+        ,
+      
+    
+     
+  
+
+  
+    
+      
+        
+          Z
+          
+            +
+          
+        
+        =
+        {
+        
+          a
+          
+            0
+          
+        
+        +
+        
+          a
+          
+            1
+          
+        
+        
+          e
+          
+            i
+          
+        
+        +
+        
+          a
+          
+            2
+          
+        
+        
+          e
+          
+            2
+            i
+          
+        
+        +
+        …
+        +
+        
+          a
+          
+            k
+          
+        
+        
+          e
+          
+            k
+            i
+          
+        
+        :
+        k
+        ∈
+        
+          N
+        
+         
+        ∧
+         
+        
+          a
+          
+            0
+          
+        
+        ,
+        …
+        ,
+        
+          a
+          
+            k
+          
+        
+        ∈
+        
+          N
+        
+         
+        ∧
+         
+        
+          a
+          
+            0
+          
+        
+        >
+        0
+        }
+        .
+      
+    
+     
+  
+Można łatwo sprawdzić, że 
+  
+    
+      
+        Z
+        =
+        
+          Z
+          
+            0
+          
+        
+        ∪
+        
+          Z
+          
+            +
+          
+        
+        ,
+      
+    
+     
+   
+  
+    
+      
+        
+          Z
+          
+            0
+          
+        
+        ∩
+        
+          Z
+          
+            +
+          
+        
+        =
+        ∅
+      
+    
+     
+   (przypomnijmy, że 
+  
+    
+      
+        
+          e
+          
+            i
+          
+        
+      
+    
+     
+   jest liczbą przestępną) oraz
+
+  
+    
+      
+        
+          F
+          
+            0
+          
+        
+        [
+        
+          Z
+          
+            0
+          
+        
+        ]
+        =
+        Z
+      
+    
+     
+   gdzie 
+  
+    
+      
+        
+          F
+          
+            0
+          
+        
+        :
+        z
+        ↦
+        
+          e
+          
+            −
+            i
+          
+        
+        ⋅
+        z
+      
+    
+     
+   jest obrotem, a
+
+  
+    
+      
+        
+          F
+          
+            +
+          
+        
+        [
+        
+          Z
+          
+            +
+          
+        
+        ]
+        =
+        Z
+      
+    
+     
+   gdzie 
+  
+    
+      
+        
+          F
+          
+            +
+          
+        
+        :
+        z
+        ↦
+        z
+        −
+        1
+      
+    
+     
+   jest przesunięciem.
+
+
+== Rozkłady paradoksalne ==
+
+
+=== Definicje ===
+Przypuśćmy, że grupa 
+  
+    
+      
+        G
+      
+    
+     
+   działa na zbiorze 
+  
+    
+      
+        X
+        .
+      
+    
+     
+  
+
+Powiemy, że zbiór 
+  
+    
+      
+        A
+        ⊆
+        X
+      
+    
+     
+   jest paradoksalny ze względu na działanie grupy G, jeśli można znaleźć parami rozłączne zbiory 
+  
+    
+      
+        
+          B
+          
+            0
+          
+        
+        ,
+        …
+        ,
+        
+          B
+          
+            n
+          
+        
+        ,
+        
+          C
+          
+            0
+          
+        
+        ,
+        …
+        ,
+        
+          C
+          
+            m
+          
+        
+        ⊆
+        A
+      
+    
+     
+   (gdzie 
+  
+    
+      
+        n
+        ,
+        m
+        ∈
+        
+          N
+        
+      
+    
+     
+  ) oraz elementy 
+  
+    
+      
+        
+          g
+          
+            0
+          
+        
+        ,
+        …
+        ,
+        
+          g
+          
+            n
+          
+        
+        ,
+        
+          h
+          
+            0
+          
+        
+        ,
+        …
+        ,
+        
+          h
+          
+            m
+          
+        
+      
+    
+     
+   grupy 
+  
+    
+      
+        G
+        ,
+      
+    
+     
+   takie że
+  
+    
+      
+        A
+        =
+        
+          ⋃
+          
+            i
+            =
+            0
+          
+          
+            n
+          
+        
+        
+          g
+          
+            i
+          
+        
+        [
+        
+          B
+          
+            i
+          
+        
+        ]
+      
+    
+     
+   oraz 
+  
+    
+      
+        A
+        =
+        
+          ⋃
+          
+            j
+            =
+            0
+          
+          
+            m
+          
+        
+        
+          h
+          
+            j
+          
+        
+        [
+        
+          C
+          
+            j
+          
+        
+        ]
+        .
+      
+    
+     
+  Intuicyjnie, 
+  
+    
+      
+        A
+      
+    
+     
+   jest paradoksalny ze względu na działanie grupy 
+  
+    
+      
+        G
+        ,
+      
+    
+     
+   jeśli można podzielić zbiór 
+  
+    
+      
+        A
+      
+    
+     
+   na skończenie wiele kawałków, z których można złożyć dwie kopie zbioru 
+  
+    
+      
+        A
+        ,
+      
+    
+     
+   używając bijekcji wyznaczonych przez elementy grupy 
+  
+    
+      
+        G
+        .
+      
+    
+     
+  
+
+Zbiór 
+  
+    
+      
+        A
+        ⊆
+        X
+      
+    
+     
+   jest σ-paradoksalny ze względu na działanie grupy G, jeśli można znaleźć parami rozłączne zbiory 
+  
+    
+      
+        
+          B
+          
+            0
+          
+        
+        ,
+        
+          B
+          
+            1
+          
+        
+        …
+        ,
+        
+          C
+          
+            0
+          
+        
+        ,
+        
+          C
+          
+            1
+          
+        
+        …
+        ⊆
+        A
+      
+    
+     
+   oraz elementy 
+  
+    
+      
+        
+          g
+          
+            0
+          
+        
+        ,
+        
+          g
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          h
+          
+            0
+          
+        
+        ,
+        
+          h
+          
+            1
+          
+        
+        …
+      
+    
+     
+   grupy 
+  
+    
+      
+        G
+        ,
+      
+    
+     
+   takie że
+  
+    
+      
+        A
+        =
+        
+          ⋃
+          
+            i
+            =
+            0
+          
+          
+            ∞
+          
+        
+        
+          g
+          
+            i
+          
+        
+        [
+        
+          B
+          
+            i
+          
+        
+        ]
+      
+    
+     
+   oraz 
+  
+    
+      
+        A
+        =
+        
+          ⋃
+          
+            j
+            =
+            0
+          
+          
+            ∞
+          
+        
+        
+          h
+          
+            j
+          
+        
+        [
+        
+          C
+          
+            j
+          
+        
+        ]
+        .
+      
+    
+     
+  Niech 
+  
+    
+      
+        A
+        ,
+        B
+        ⊆
+        X
+        .
+      
+    
+     
+   Powiemy, że zbiory 
+  
+    
+      
+        A
+      
+    
+     
+   i 
+  
+    
+      
+        B
+      
+    
+     
+   są kawałkami 
+  
+    
+      
+        G
+      
+    
+     
+  -równoważne, jeśli można wybrać 
+  
+    
+      
+        
+          A
+          
+            0
+          
+        
+        ,
+        
+          A
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          A
+          
+            n
+          
+        
+        ⊆
+        A
+        ,
+      
+    
+     
+   
+  
+    
+      
+        
+          B
+          
+            0
+          
+        
+        ,
+        
+          B
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          B
+          
+            n
+          
+        
+        ⊆
+        B
+        ,
+      
+    
+     
+   
+  
+    
+      
+        n
+        ∈
+        
+          N
+        
+        ,
+      
+    
+     
+   oraz 
+  
+    
+      
+        
+          g
+          
+            0
+          
+        
+        ,
+        
+          g
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          g
+          
+            n
+          
+        
+        ∈
+        G
+        ,
+      
+    
+     
+   tak że(a) 
+  
+    
+      
+        
+          A
+          
+            i
+          
+        
+        ∩
+        
+          A
+          
+            j
+          
+        
+        =
+        ∅
+        =
+        
+          B
+          
+            i
+          
+        
+        ∩
+        
+          B
+          
+            j
+          
+        
+      
+    
+     
+   dla 
+  
+    
+      
+        i
+        <
+        j
+        ⩽
+        n
+        ,
+      
+    
+     
+  
+(b) 
+  
+    
+      
+        A
+        =
+        
+          ⋃
+          
+            i
+            =
+            0
+          
+          
+            n
+          
+        
+        
+          A
+          
+            i
+          
+        
+        ,
+      
+    
+     
+   
+  
+    
+      
+        B
+        =
+        
+          ⋃
+          
+            i
+            =
+            0
+          
+          
+            n
+          
+        
+        
+          B
+          
+            i
+          
+        
+      
+    
+     
+  
+(c) 
+  
+    
+      
+        
+          g
+          
+            i
+          
+        
+        (
+        
+          A
+          
+            i
+          
+        
+        )
+        =
+        
+          B
+          
+            i
+          
+        
+      
+    
+     
+   dla każdego 
+  
+    
+      
+        i
+        ⩽
+        n
+        .
+      
+    
+     
+  
+
+
+=== Przykłady ===
+Zakładając aksjomat wyboru, okrąg jednostkowy jest σ-paradoksalny ze względu na grupę obrotów 
+  
+    
+      
+        S
+        
+          O
+          
+            2
+          
+        
+      
+    
+     
+   okręgu. (Zobacz dyskusję zbioru Vitalego wcześniej.)
+Zbiór 
+  
+    
+      
+        Z
+      
+    
+     
+   podany przez Mazurkiewicza i Sierpińskiego (dyskutowany wcześniej) jest paradoksalny ze względu na grupę izometrii płaszczyzny.
+
+Rozważmy grupę wolną 
+  
+    
+      
+        
+          F
+          
+            2
+          
+        
+      
+    
+     
+   o dwóch generatorach 
+  
+    
+      
+        a
+      
+    
+     
+   i 
+  
+    
+      
+        b
+      
+    
+     
+   działającą na sobie przez mnożenie z lewej strony. (Tak więc elementowi 
+  
+    
+      
+        g
+        ∈
+        
+          F
+          
+            2
+          
+        
+      
+    
+     
+   odpowiada bijekcja 
+  
+    
+      
+        
+          F
+          
+            2
+          
+        
+        ∋
+        h
+        ↦
+        g
+        h
+        ∈
+        
+          F
+          
+            2
+          
+        
+        .
+      
+    
+     
+  ) Dla 
+  
+    
+      
+        x
+        ∈
+        {
+        a
+        ,
+        
+          a
+          
+            −
+            1
+          
+        
+        ,
+        b
+        ,
+        
+          b
+          
+            −
+            1
+          
+        
+        }
+      
+    
+     
+   niech 
+  
+    
+      
+        S
+        (
+        x
+        )
+      
+    
+     
+   będzie zbiorem wszystkich elementów grupy 
+  
+    
+      
+        
+          F
+          
+            2
+          
+        
+      
+    
+     
+   (słów w formie nieskracalnej) które zaczynają się od 
+  
+    
+      
+        x
+        .
+      
+    
+     
+   Zauważmy, że
+  
+    
+      
+        
+          F
+          
+            2
+          
+        
+        =
+        {
+        e
+        }
+        ∪
+        S
+        (
+        a
+        )
+        ∪
+        S
+        (
+        
+          a
+          
+            −
+            1
+          
+        
+        )
+        ∪
+        S
+        (
+        b
+        )
+        ∪
+        S
+        (
+        
+          b
+          
+            −
+            1
+          
+        
+        )
+      
+    
+     
+   i zbiory występujące w tej sumie są rozłączne, oraz
+
+  
+    
+      
+        
+          F
+          
+            2
+          
+        
+        =
+        a
+        S
+        (
+        
+          a
+          
+            −
+            1
+          
+        
+        )
+        ∪
+        S
+        (
+        a
+        )
+      
+    
+     
+   i 
+  
+    
+      
+        
+          F
+          
+            2
+          
+        
+        =
+        b
+        S
+        (
+        
+          b
+          
+            −
+            1
+          
+        
+        )
+        ∪
+        S
+        (
+        b
+        )
+        .
+      
+    
+     
+  
+Zatem 
+  
+    
+      
+        
+          F
+          
+            2
+          
+        
+      
+    
+     
+   jest zbiorem paradoksalnym ze względu na działanie grupy 
+  
+    
+      
+        
+          F
+          
+            2
+          
+        
+        .
+      
+    
+     
+  
+
+
+=== Twierdzenia ===
+W poniższych stwierdzeniach zakładamy aksjomat wyboru (tzn. są to twierdzenia ZFC).
+
+Przypuśćmy, że(a) grupa 
+  
+    
+      
+        G
+      
+    
+     
+   działa na zbiorze 
+  
+    
+      
+        X
+      
+    
+     
+   w taki sposób że żadne z odwzorowań 
+  
+    
+      
+        X
+        ∋
+        x
+        ↦
+        g
+        (
+        x
+        )
+        ∈
+        X
+      
+    
+     
+   nie ma punktów stałych (dla 
+  
+    
+      
+        g
+        ∈
+        G
+      
+    
+     
+  ),
+(b) 
+  
+    
+      
+        G
+      
+    
+     
+   jest zbiorem paradoksalnym ze względu na działanie grupy 
+  
+    
+      
+        G
+      
+    
+     
+   (przez mnożenie z lewej strony).
+Wówczas zbiór 
+  
+    
+      
+        X
+      
+    
+     
+   jest paradoksalny ze względu na działanie grupy 
+  
+    
+      
+        G
+        .
+      
+    
+     
+  Z powyższego twierdzenia wynika, że jeśli grupa wolna 
+  
+    
+      
+        
+          F
+          
+            2
+          
+        
+      
+    
+     
+   działa na zbiorze 
+  
+    
+      
+        X
+      
+    
+     
+   w taki sposób, że żadne z odwzorowań 
+  
+    
+      
+        X
+        ∋
+        x
+        ↦
+        g
+        (
+        x
+        )
+        ∈
+        X
+      
+    
+     
+   nie ma punktów stałych (dla 
+  
+    
+      
+        g
+        ∈
+        
+          F
+          
+            2
+          
+        
+      
+    
+     
+  ), to zbiór 
+  
+    
+      
+        X
+      
+    
+     
+   jest paradoksalny ze względu na działanie grupy 
+  
+    
+      
+        
+          F
+          
+            2
+          
+        
+        .
+      
+    
+     
+  
+Istnieje przeliczalny podzbiór 
+  
+    
+      
+        D
+      
+    
+     
+   sfery jednostkowej 
+  
+    
+      
+        
+          S
+          
+            2
+          
+        
+      
+    
+     
+   taki, że zbiór 
+  
+    
+      
+        
+          S
+          
+            2
+          
+        
+        ∖
+        D
+      
+    
+     
+   jest paradoksalny ze względu na działanie grupy obrotów 
+  
+    
+      
+        S
+        
+          O
+          
+            3
+          
+        
+        .
+      
+    
+     
+  
+Jeśli 
+  
+    
+      
+        D
+        ⊆
+        
+          S
+          
+            2
+          
+        
+      
+    
+     
+   jest przeliczalny, to zbiory 
+  
+    
+      
+        
+          S
+          
+            2
+          
+        
+      
+    
+     
+   i 
+  
+    
+      
+        
+          S
+          
+            2
+          
+        
+        ∖
+        D
+      
+    
+     
+   kawałkami 
+  
+    
+      
+        S
+        
+          O
+          
+            3
+          
+        
+      
+    
+     
+  -równoważne.Bezpośrednio z dwóch powyższych twierdzeń możemy wywnioskować twierdzenie Banacha-Tarskiego:
+
+Sfera jednostkowa 
+  
+    
+      
+        
+          S
+          
+            2
+          
+        
+      
+    
+     
+   jest paradoksalna ze względu na działanie grupy obrotów 
+  
+    
+      
+        S
+        
+          O
+          
+            3
+          
+        
+        .
+      
+    
+     
+  Kolejne wyniki są wnioskami z powyższego twierdzenia. Niech 
+  
+    
+      
+        
+          I
+          
+            3
+          
+        
+      
+    
+     
+   będzie grupą izometrii przestrzeni 
+  
+    
+      
+        
+          
+            R
+          
+          
+            3
+          
+        
+        .
+      
+    
+     
+  
+
+Każda kula w 
+  
+    
+      
+        
+          
+            R
+          
+          
+            3
+          
+        
+      
+    
+     
+   jest paradoksalna ze względu na działanie grupy 
+  
+    
+      
+        
+          I
+          
+            3
+          
+        
+        .
+      
+    
+     
+   Również sama przestrzeń 
+  
+    
+      
+        
+          
+            R
+          
+          
+            3
+          
+        
+      
+    
+     
+   jest paradoksalna ze względu na działanie tej grupy.
+Jeśli 
+  
+    
+      
+        A
+        ,
+        B
+        ⊆
+        
+          
+            R
+          
+          
+            3
+          
+        
+      
+    
+     
+   są zbiorami ograniczonymi o niepustych wnętrzach, to zbiory 
+  
+    
+      
+        A
+        ,
+      
+    
+     
+   
+  
+    
+      
+        B
+      
+    
+     
+   są kawałkami 
+  
+    
+      
+        
+          I
+          
+            3
+          
+        
+      
+    
+     
+  -równoważne.
+
+
+== Zobacz też ==
+kwadratura koła Tarskiego
+miara
+zbiór Bernsteina
+zbiór Vitalego
+
+
+== Przypisy ==
+
+
+== Linki zewnętrzne ==
+JoannaJ. Jaszuńska JoannaJ., O kul rozmnażaniu, [w:] pismo „Delta” [online], deltami.edu.pl, kwiecień 2017, ISSN 0137-3005 [dostęp 2022-07-19]  (pol.).
+Eric W.E.W. Weisstein Eric W.E.W., Banach-Tarski Paradox, [w:] MathWorld [online], Wolfram Research [dostęp 2020-12-12]  (ang.).
+Artykuł o paradoksie na PlanetMath. planetmath.org. [zarchiwizowane z tego adresu (2006-05-11)]. (ang.).
+Michael Stevens, The Banach–Tarski Paradox, kanał Vsauce na YouTube, 1 sierpnia 2015 [dostęp 2021-03-15]. (ang.)

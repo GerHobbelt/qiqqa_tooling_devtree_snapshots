@@ -1,0 +1,1127 @@
+revision: 246462
+title: Ekwazzjoni differenzjali
+url: https://mt.wikipedia.org/wiki/Ekwazzjoni_differenzjali
+
+
+---
+
+Fl-analisi matematika, ekwazzjoni differenzjali hi relazzjoni bejn funzjoni 
+  
+    
+      
+        
+          
+            u
+            (
+            x
+            )
+          
+        
+      
+    
+     
+   mhux magħrufa u xi derivati tagħha.
+Fil-każ li 
+  
+    
+      
+        
+          
+            u
+          
+        
+      
+    
+     
+   tkun funzjoni 
+
+  
+    
+      
+        u
+        :
+        I
+        →
+        
+          R
+        
+      
+    
+     
+  definita f' intervall 
+  
+    
+      
+        I
+        
+      
+    
+     
+   ta' 
+  
+    
+      
+        
+          R
+        
+      
+    
+     
+   ngħidu li hi ekwazzjoni differenzjali ordinarja (imqassra ODE, akronimu ta' ordinary differential equation).
+Din ir-relazzjoni hi eżempju ta' ODE 
+
+  
+    
+      
+        
+          u
+          ″
+        
+        (
+        x
+        )
+        =
+        u
+        (
+        x
+        )
+        +
+        
+          u
+          ′
+        
+        (
+        x
+        )
+        
+      
+    
+     
+  .Il-forma l-iżjed ġenerali ta' ekwazzjoni differenzjali ordinarja (invarjabbli) ta' ordni 
+  
+    
+      
+         
+        n
+      
+    
+     
+   hija:
+
+  
+    
+      
+        f
+        (
+        x
+        ,
+        u
+        (
+        x
+        )
+        ,
+        
+          u
+          ′
+        
+        (
+        x
+        )
+        ,
+        .
+        .
+        .
+        ,
+        
+          u
+          
+            (
+            n
+            )
+          
+        
+        (
+        x
+        )
+        )
+        =
+        0
+        
+      
+    
+     
+  .Insejħu ordni jew grad tal-ekwazzjoni, il-grad tal-ogħla derivata preżenti; pereżempju:
+
+  
+    
+      
+        
+          u
+          ″
+        
+        (
+        x
+        )
+        =
+        f
+        (
+        x
+        ,
+        u
+        (
+        x
+        )
+        ,
+        
+          u
+          ′
+        
+        (
+        x
+        )
+        )
+        
+      
+    
+     
+  hi ekwazzjoni differenzjali ordinarja (il-funzjoni mhux magħrufa 
+  
+    
+      
+        
+          
+            u
+          
+        
+      
+    
+     
+   hi funzjoni ta' 
+  
+    
+      
+        
+          
+            x
+          
+        
+      
+    
+     
+   biss) tat-tieni ordni.
+Funzjoni 
+  
+    
+      
+         
+        u
+      
+    
+     
+   (derivabbli għal ċertu numru ta' drabi) li tissodisfa r-relazzjoni definita mill-ekwazzjoni ngħidulha soluzzjoni tal-ekwazzjoni differenzjali.
+Ġeneralment, hu diffiċli jekk mhux impossibbli li nsibu espressjoni analitika ta' funzjoni li tissodisfa ekwazzjoni differenzjali, jiġifieri nsibu soluzzjoni espliċita,. Ma dan kollu, kważi dejjem possibbli nistudjaw l-imġiba tagħha kwalitativa jew ninqdew b' computer biex insibu approssimazzjoni permezz ta' metodi numeriċi.
+Matul is-sekli, mindu Leibniz u Newton ifformalizzaw il-kalkulu infiniteżmali, instabu xi każi fejn hu possibbli nsibu l-espressjoni analitika tas-soluzzjoni. Xi drabi nistgħu insibu soluzzjoni espliċita, jiġifieri 
+  
+    
+      
+         
+        y
+        =
+        f
+        (
+        x
+        )
+        
+      
+    
+     
+  , u xi drabi oħra impliċita, jew fil-forma
+
+  
+    
+      
+        f
+        (
+        y
+        )
+        =
+        g
+        (
+        x
+        )
+        ,
+        
+        
+      
+    
+     
+  li tista' tinbidel f'forma espliċita biss jekk 
+  
+    
+      
+         
+        f
+      
+    
+     
+   hi invertibbli, u f'dal-każ ikollna 
+
+  
+    
+      
+        y
+        =
+        
+          f
+          
+            −
+            1
+          
+        
+        
+          (
+          
+            g
+            (
+            x
+            )
+          
+          )
+        
+        .
+      
+    
+     
+  
+
+
+== Motivazzjoni ==
+L-ekwazzjonijiet differenziali huma l-iżjed strumenti importanti li tagħtina l-analisi matematika għall-istudju ta' mudelli matematiċi fl-iżjed setturi tax-xjenza mferrxin, mill-fiżika għall-bijoloġija għall-ekonomija.
+Eżempju elementari ħafna ta' kif l-ekwazzjonijiet differenziali jistgħu joħorġu naturalment mill-istudju ta' sistemi huwa dan li ġej: Nissoponu li għandna popolazzjoni ta' batteri komposta fil-bidu 
+  
+    
+      
+        
+          (
+          
+            t
+            =
+            0
+          
+          )
+        
+        
+      
+    
+     
+   minn 
+  
+    
+      
+        
+          P
+          
+            0
+          
+        
+        
+      
+    
+     
+   individwi u nsejħu 
+  
+    
+      
+        P
+        (
+        t
+        )
+        
+      
+    
+     
+   il-popolazzjoni fil-ħin 
+  
+    
+      
+        
+          
+            t
+          
+        
+      
+    
+     
+  . Wieħed jistenna li, fil-medja, f'kull waqt 
+  
+    
+      
+        
+          
+            t
+          
+        
+      
+    
+     
+  , wara ħin relativament żgħir 
+  
+    
+      
+        
+          
+            d
+            t
+          
+        
+      
+    
+     
+   titwieled kwantità ta' individwi ġodda proporzjonali għall-popolazzjoni u għall-ħin li għadda 
+  
+    
+      
+        
+          
+            d
+            t
+          
+        
+      
+    
+     
+  , jiġifieri daqs 
+  
+    
+      
+        n
+        P
+        (
+        t
+        )
+        
+        d
+        t
+      
+    
+     
+   fejn 
+  
+    
+      
+        n
+      
+    
+     
+   hu numru (li nissoponu kostanti) li jiddeskrivi r-rata tat-twelid; analogament wieħed jistenna li jmutu 
+  
+    
+      
+        m
+        P
+        (
+        t
+        )
+        
+        d
+        t
+      
+    
+     
+   individwi fl-istess intervall ta' ħin, fejn 
+  
+    
+      
+        m
+        
+      
+    
+     
+   hu r-rata (kostanti) tal-mewt. Il-popolazzjoni fil-ħin 
+  
+    
+      
+        
+          
+            t
+            +
+            d
+            t
+          
+        
+      
+    
+     
+  , għalhekk, tingħata mill-popolazzjoni fil-ħin 
+  
+    
+      
+        
+          
+            t
+          
+        
+      
+    
+     
+   li nżidu magħha l-popolazzjoni li għadha kif twieldet u nnaqsu dik li mietet, jiġifieri 
+
+  
+    
+      
+        P
+        (
+        t
+        +
+        d
+        t
+        )
+        =
+        P
+        (
+        t
+        )
+        +
+        n
+        P
+        (
+        t
+        )
+        d
+        t
+        −
+        m
+        P
+        (
+        t
+        )
+        d
+        t
+        =
+        P
+        (
+        t
+        )
+        +
+        (
+        n
+        −
+        m
+        )
+        P
+        (
+        t
+        )
+        d
+        t
+        .
+        
+      
+    
+     
+  Għalhekk għandna
+
+  
+    
+      
+        
+          
+            
+              P
+              (
+              t
+              +
+              d
+              t
+              )
+              −
+              P
+              (
+              t
+              )
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        (
+        n
+        −
+        m
+        )
+        P
+        (
+        t
+        )
+        .
+      
+    
+     
+  Nistgħu nagħrfu f'din l-espressjoni ir-rapport inkrementali tal-funzjoni 
+  
+    
+      
+        
+          
+            P
+            (
+            t
+            )
+          
+        
+      
+    
+     
+  ; jekk 
+  
+    
+      
+        
+          
+            d
+            t
+          
+        
+      
+    
+     
+   hu żgħir ħafna li nistġhu nissostitwuh bid-derivata 
+  
+    
+      
+        
+          
+            
+              P
+              ′
+            
+            (
+            t
+            )
+          
+        
+      
+    
+     
+   u niktbu:
+
+  
+    
+      
+        
+          P
+          ′
+        
+        (
+        t
+        )
+        =
+        (
+        n
+        −
+        m
+        )
+        P
+        (
+        t
+        )
+        .
+        
+      
+    
+     
+  Din hi ekwazzjoni differenzjali ordinarja tal-ewwel ordni. Ir-riżolużzjoni ta' din l-ekwazzjoni tfisser is-sejba ta' kif l-imġiba tal-popolazzjoni tinbidel mal-ħin, jiġifieri l-funzjoni 
+  
+    
+      
+        P
+        (
+        t
+        )
+        
+      
+    
+     
+   li tissodisfa. 
+F'dal-każ faċli li nsibu s-soluzzjoni, li hi l-funzjoni:
+
+  
+    
+      
+        P
+        (
+        t
+        )
+        =
+        
+          P
+          
+            0
+          
+        
+        
+        
+          e
+          
+            (
+            n
+            −
+            m
+            )
+            t
+          
+        
+        ,
+        
+      
+    
+     
+  funzjoni esponenzjali li tiżdied mal-ħin (b'mod "esplużiv") jekk 
+  
+    
+      
+        
+          
+            n
+            >
+            m
+            <
+          
+        
+      
+    
+     
+  , jiġifieri jekk in-natalità hi ogħla mill-mortalità, u tonqos biex tispiċċa fix-xejn malajr jekk 
+  
+    
+      
+        
+          
+            m
+            >
+            n
+          
+        
+      
+    
+     
+  . 
+Il-mudell li eżaminajna, però, hu semplifikat ħafna; in ġenerali, ir-rata tal-kobor mhijiex sempliċement proporzjonali għall-popolazzjoni preżenti b'kostanti tal-proporzionalità fissa: nistennew, pereżempju, li r-riżorsi disposti jkunu limitati u mhux biżżejjed biex jissodisfaw popolazzjoni arbitrarjament kbira. Nistgħu nikkonsidraw, minflok, sitwazzjonijiet iżjed komplikati bħal dawk fejn hemm iżjed popolazzjonijiet li interaġixxu bejniethom, bħal pereżempju predi u predaturi fil-mudell ta' Volterra - Lotka. 
+Hekk hu importanti li jkollna metodi matematiċi biex nirriżolvu ekwazzjonijiet u sistemi ta' ekwazzjonijiet differenzjali b'mod analitiku u niksbu soluzzjoni eżatta. Imma billi dan mhux dejjem possibbli, jinħtieġu wkoll metodi biex nirriżolvuhom numerikament, jiġifieri napprossimaw is-soluzzjoni bl-idejn jew permezz ta' kalkulatur fl-inħawi ta' punt wieħed jew iżjed. Mill-banda l-oħra, jidher utli wkoll l-istudju kwalitativ tal-istruttura ġometrika tas-soluzzjonijiet meta nvarjaw id-dati inizjali jew il-parametri esterni, fejn sikwit jiġri li s-soluzzjoni tal-ekwazzjoni differenzjali għandha klassi sħieħa ta' funzjonijiet, li jiddipendu mill-parametri msejħin ġeneralment kundizjonijiet inizjali jew tax-xifer.
+
+
+== Problema ta' Cauchy ==
+Il-problema ta' Cauchy assoċjat ma' ekwazzjoni differenzjali waħda jew iżjed jikkonsisti fir-riżoluzzjoni tas-sistema ffurmat mis-soluzzjoni tal-ekwazzjonijiet u tal-kundizzjoni inizjali. Bil-formuli:
+
+  
+    
+      
+        
+          
+            {
+            
+              
+                
+                  f
+                  (
+                  x
+                  ,
+                  y
+                  ,
+                  
+                    y
+                    ′
+                  
+                  ,
+                  
+                    y
+                    ″
+                  
+                  ,
+                  …
+                  ,
+                  
+                    y
+                    
+                      n
+                    
+                  
+                  )
+                  =
+                  0
+                   
+                   
+                  
+                    
+                      
+                        i
+                        n
+                      
+                       
+                       
+                      (
+                      a
+                      ,
+                      b
+                      )
+                    
+                  
+                
+              
+              
+                
+                  y
+                  (
+                  a
+                  )
+                  =
+                  
+                    y
+                    
+                      0
+                    
+                  
+                
+              
+              
+                
+                  …
+                
+              
+              
+                
+                  
+                    y
+                    
+                      n
+                      −
+                      1
+                    
+                  
+                  (
+                  a
+                  )
+                  =
+                  
+                    y
+                    
+                      n
+                      −
+                      1
+                    
+                  
+                
+              
+            
+            
+          
+        
+      
+    
+     
+  
+
+
+== L-ekwazzjoni polinomjali assoċjata ==
+L-ekwazzjoni polinomjali assoċjata ma' ekwazzjoni differenzjali linjari hi l-ekwazzjoni li tinkiseb meta nbiddlu l-funzjoni 
+  
+    
+      
+         
+        y
+        (
+        x
+        )
+      
+    
+     
+  , mhux magħrufa, fil-varjabbli awżilljarja 
+  
+    
+      
+         
+        λ
+      
+    
+     
+   b'potenza rispettivament daqs l-ordni tad-derivazzjoni ta' 
+  
+    
+      
+         
+        y
+      
+    
+     
+   waqt li nżommu l-istess koeffiċjenti.
+Pereżempju, jekk ningħtaw l-ekwazzjoni differenzjali 
+  
+    
+      
+         
+        
+          y
+          ″
+        
+        −
+        5
+        
+          y
+          ′
+        
+        +
+        6
+        y
+        =
+        0
+        
+      
+    
+     
+  , nistgħu noħolqu ekwazzjoni fil-varjabbli awżilljarja 
+  
+    
+      
+         
+        λ
+      
+    
+     
+   skont ir-regola indikata fuq u niksbu 
+  
+    
+      
+         
+        
+          λ
+          
+            2
+          
+        
+        −
+        5
+        λ
+        +
+        6
+        =
+        0
+        
+      
+    
+     
+  .
+
+
+== Ekwazzjonijiet differenziali bid-derivati parzjali ==
+Ekwazzjoni differenzjali bid-derivati parzjali (imqassra PDE, mill-inizjali tal-kliem Ingliżi partial differential equation) hi ekwazzjoni li tinvolvi d-derivati parzjali ta' funzjoni mhux magħrufa.
+Fil-każ li 
+  
+    
+      
+         
+        u
+      
+    
+     
+   tkun funzjoni ta' 
+  
+    
+      
+         
+        k
+      
+    
+     
+   varjabbli reali indipendenti 
+  
+    
+      
+         
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          x
+          
+            k
+          
+        
+        )
+      
+    
+     
+  , jiġifieri 
+  
+    
+      
+         
+        u
+        =
+        u
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          x
+          
+            k
+          
+        
+        )
+        
+      
+    
+     
+  , ekwazzjoni differenzjali bid-derivati parzjali ta' ordni 
+  
+    
+      
+         
+        n
+      
+    
+     
+  , jkollha l-forma ġenerali:
+
+  
+    
+      
+        f
+        
+          (
+          
+            
+              x
+              
+                1
+              
+            
+            ,
+            …
+            ,
+            
+              x
+              
+                k
+              
+            
+            ,
+            u
+            ,
+            …
+            ,
+            
+              
+                
+                  ∂
+                  u
+                
+                
+                  ∂
+                  
+                    x
+                    
+                      1
+                    
+                    
+                      n
+                    
+                  
+                
+              
+            
+            ,
+            …
+            ,
+            
+              
+                
+                  ∂
+                  u
+                
+                
+                  ∂
+                  
+                    x
+                    
+                      k
+                    
+                    
+                      n
+                    
+                  
+                
+              
+            
+          
+          )
+        
+        =
+        0
+        ,
+      
+    
+     
+  jekk 
+  
+    
+      
+         
+        f
+      
+    
+     
+   tiddipendi espliċitament minn mill-inqas waħda mid-derivati parzjali ta' ordni 
+  
+    
+      
+         
+        n
+      
+    
+     
+   ta' 
+  
+    
+      
+         
+        u
+      
+    
+     
+   .
+L-idea hi li niddeskrivu l-funzjoni indirettament permezz ta' relazzjoni bejnha u d-derivati parzjali tagħha, minflok niktbu l-funzjoni espliċitamenti. Ir-relazzjoni trid tkun lokali: trid tgħaqqad il-funzjoni mad-derivati tagħha fl-istess punt. Soluzzjoni tal-ekwazzjoni hi funzjoni li tissodisfa r-relazzjoni.
+
+
+== Bibljografija ==
+G. Boole A treatise on differential equations (McMillan, Cambridge, 1859)
+W. W. Johnson A treatise on ordinary and partial differential equations. (J. Wiley & Sons, New York, 1889)
+E. Goursat A course of mathematical analysis, part II of volume II (Ginn & co. 1917)
+E. L. Ince Ordinary Differential Equations (Longman Greens, London, 1927)
+A. R. Forsyth A Treatise On Differential Equations (MacMillan, London, 1929)
+E. G. C. Poole Introduction To The Theory Of Linear Differential Equations (Clarendon Press, Oxford, 1936)
+E. Picard Traité d'Analyse (vol. 3) (Gauthier-Villars, 1896)
+C. Jordan Cours d'Analyse de l'Ecole Polytechnique (vol. 3) (Gauthier-Villars, 1913)
+
+
+== Ħoloq esterni ==
+
+EqWorld
+MathWorld

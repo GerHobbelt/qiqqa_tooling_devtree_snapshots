@@ -1,0 +1,423 @@
+revision: 31173174
+title: Human
+url: https://ca.wikipedia.org/wiki/Humitat
+
+
+---
+
+La humitat o humiditat és la quantitat de vapor d'aigua present a l'aire. En el sistema internacional d'unitats (SI) es pot expressar en grams d'aigua per metre cúbic d'aire (humitat absoluta), o en percentatge de la humitat total que pot contenir l'aire a la temperatura en què ens trobem (humitat relativa o grau d'humitat).
+
+
+== Humitat ambiental ==
+Es denomina humitat ambiental la quantitat de vapor d'aigua present en l'aire. Es pot expressar de forma absoluta mitjançant la humitat absoluta, o de forma relativa mitjançant la humitat relativa o grau d'humitat. La humitat relativa és la relació percentual entre la quantitat de vapor d'aigua real continguda per l'aire i la que hauria de contenir per saturar-se a idèntica temperatura, per exemple, una humitat relativa del 70% vol dir que la totalitat de vapor d'aigua (el 100%) que podria contenir l'aire a aquesta temperatura, solament té el 70%.
+
+
+== Humitat relativa ==
+
+La humitat relativa és la relació de la pressió parcial de vapor d'aigua en una mescla d'aire-aigua a la pressió de vapor saturat d'aigua a una temperatura prescrita. La humitat relativa de l'aire depèn no només de la temperatura sinó també de la pressió del sistema d'interès.
+
+
+=== Definició ===
+La humitat relativa 
+  
+    
+      
+        
+          (
+          ϕ
+          )
+        
+      
+    
+     
+   d'una barreja d'aire-aigua, és definida per la relació de la pressió parcial del vapor d'aigua H₂O) 
+  
+    
+      
+        
+          (
+          
+            
+              e
+              
+                w
+              
+            
+          
+          )
+        
+      
+    
+     
+   en una mescla de pressió de saturació d'aigua 
+  
+    
+      
+        
+          (
+          
+            
+              
+                
+                  e
+                  
+                    ∗
+                  
+                
+              
+              
+                w
+              
+            
+          
+          )
+        
+      
+    
+     
+   a una temperatura de barreja d'aire. La humitat relativa s'expressa normalment com un percentatge i es calcula utilitzant la següent equació:
+
+  
+    
+      
+        ϕ
+        =
+        
+          
+            
+              
+                e
+                
+                  w
+                
+              
+            
+            
+              
+                
+                  
+                    e
+                    
+                      ∗
+                    
+                  
+                
+                
+                  w
+                
+              
+            
+          
+        
+        ×
+        100
+        %
+      
+    
+     
+  
+
+
+=== Significat ===
+
+
+==== Control climàtic ====
+Controla la temperatura i la humitat relativa per al confort humà, la salut i la seguretat, i per als requisits tècnics de màquines i processos, en edificis, vehicles i altres espais tancats.
+
+
+==== Confort ====
+Els éssers humans són sensibles a l'aire humit pel fet que el cos humà utilitza la refrigeració per evaporació com a mecanisme principal per regular la temperatura. Sota condicions d'humitat la velocitat a la qual s'evapora la transpiració és menor que en condicions seques.
+
+
+==== Edificis ====
+Temperatura és elevada i la humitat relativa és baixa, l'evaporació d'aigua és ràpida i mobles de fusta poden encongir. Quan la temperatura és elevada i la humitat relativa és alta, l'evaporació de l'aigua és lenta. Quan la humitat relativa s'aproxima al 100 per cent, pot produir condensació a les superfícies, el que porta a problemes amb la floridura, corrosió, deteriorament i altres alteracions relacionades amb la humitat. Certs processos de producció i tècniques i tractaments en fàbriques, laboratoris, hospitals i altres instal·lacions requereixen nivells específics d'humitat relativa per tant, es manté l'ús d'humidificadors, deshumidificadors i sistemes de control associats.
+
+
+==== Vehicles ====
+Els principis bàsics dels edificis, també s'apliquen als vehicles. A més, pot haver consideracions de seguretat. Per exemple, l'alta humitat a l'interior d'un vehicle pot conduir a problemes de condensació, tal com nebulització de parabrisa i el curtcircuit dels components elèctrics.
+
+
+==== Aviació ====
+L'aire humit fred pot provocar la formació de gel, el que és un perill per les aeronaus, ja que afecta el perfil de la fulla i el pes augmenta. Motors carburats tenen més perill de formació de gel dins del carburador.
+
+
+=== Mesurament ===
+La humitat d'una barreja d'aire-vapor d'aigua es determina mitjançant l'ús de diagrames psicromètrics tant la temperatura de bulb sec (T) i la temperatura de bulb humit (Tw) de la barreja són coneguts. Aquestes quantitats s'obtenen fàcilment mitjançant l'ús d'un psicròmetre.
+Existeixen diverses correlacions empíriques que poden ser utilitzades per estimar la pressió de vapor de saturació de l'aigua com una funció de la temperatura. L'equació d'Antoine és de les menys complexes d'aquestes fórmules, ja que només tenen tres paràmetres (A, B, i C). Altres correlacions, com els presentats per la Goff-Gratch i Tenten Magnus, són més complicades, però presenten millors rendiments. La correlació presentada per Buck es troba amb freqüència en la literatura i proporciona un equilibri raonable entre la complexitat i precisió:
+
+  
+    
+      
+        
+          
+            
+              
+                e
+                
+                  ∗
+                
+              
+            
+            
+              w
+            
+          
+        
+        =
+        (
+        1.0007
+        +
+        3.46
+        ×
+        
+          10
+          
+            −
+            6
+          
+        
+        P
+        )
+        ×
+        (
+        6.1121
+        )
+        
+          e
+          
+            
+              (
+              
+                
+                  
+                    17.502
+                    T
+                  
+                  
+                    240.97
+                    +
+                    T
+                  
+                
+              
+              )
+            
+          
+        
+      
+    
+     
+  On 
+  
+    
+      
+        T
+      
+    
+     
+   és la temperatura de bulb sec, expressat en graus Celsius (°C), 
+  
+    
+      
+        P
+      
+    
+     
+   és la pressió absoluta, expressada en hectopascals (hPa), i 
+  
+    
+      
+        
+          
+            
+              
+                e
+                
+                  ∗
+                
+              
+            
+            
+              w
+            
+          
+        
+      
+    
+     
+   és la pressió de vapor saturat expressat en hectopascals (hPa).
+Buck va estimar que l'error relatiu màxim és de menys de 0,20% entre -20 °C i +50 °C quan aquesta forma particular de la fórmula generalitzada s'utilitza per estimar la pressió de vapor saturat d'aigua.
+
+
+=== Concepte erroni ===
+Sovint el concepte de retenció d'aire en el vapor d'aigua es presenten per descriure el concepte d'humitat relativa. Això, però, és un concepte erroni. L'aire és una barreja de gasos (nitrogen, oxigen, argó, vapor d'aigua i altres gasos) i com a tal, els constituents de la mescla simplement actuen com uns transportadors de vapor d'aigua, però no són un suport d'aquesta.
+Humitat relativa es defineix en termes de només les propietats físiques de l'aigua i per tant no està relacionada amb concepte de retenció d'aire en el vapor d'aigua. De fet, un volum d'aire inferior pot contenir vapor d'aigua i per tant la humitat d'aquest volum es pot determinar fàcilment.
+
+
+=== Factor de millora ===
+El factor de millora 
+  
+    
+      
+        
+          (
+          
+            f
+            
+              w
+            
+          
+          )
+        
+      
+    
+     
+   es defineix com la relació entre la pressió de vapor de saturació de l'aigua en l'aire humit 
+  
+    
+      
+        
+          (
+          
+            e
+            
+              w
+            
+            ′
+          
+          )
+        
+      
+    
+     
+   i la pressió de vapor de saturació de l'aigua pura.
+
+  
+    
+      
+        
+          f
+          
+            W
+          
+        
+        =
+        
+          
+            
+              e
+              
+                w
+              
+              ′
+            
+            
+              e
+              
+                w
+              
+              
+                ∗
+              
+            
+          
+        
+      
+    
+     
+  
+
+
+=== Dependència de la pressió ===
+La humitat relativa d'un sistema d'aire-aigua és dependent no només de la temperatura sinó també de la pressió absoluta del sistema estudiat. Aquesta dependència es demostra considerant el sistema d'aire-aigua que es mostra a continuació. El sistema és tancat (és a dir, no importa que entra o surt del sistema).
+Si el sistema a l'Estat A s'escalfa isobàricament (escalfament sense canvi en la pressió del sistema), llavors la humitat relativa del sistema disminueix pel fet que la pressió de vapor saturat d'aigua augmenta amb la temperatura creixent. Això es mostra a l'Estat B.
+Si el sistema a l'Estat A es comprimeix isotèrmicament (compressió sense canvi en la temperatura del sistema) llavors la humitat relativa del sistema augmenta a causa del fet que la pressió parcial de l'aigua en el sistema augmenta amb l'augment de la pressió del sistema. Això es mostra a l'Estat C.
+Per tant un canvi en la humitat relativa pot explicar-se per un canvi en la temperatura del sistema, un canvi en la pressió absoluta del sistema, o un canvi en les dues d'aquestes propietats del sistema.
+
+
+=== Conceptes relacionats ===
+El terme de la humitat relativa es reserva per als sistemes de vapor d'aigua en l'aire. El terme de la saturació relativa s'utilitza per descriure propietats anàlogues per a sistemes que tenen una fase condensable diferent de l'aigua en una fase no condensable que no sigui aire.
+
+
+=== Altres factors importants ===
+
+Un gas en aquest context es coneix com saturat quan la pressió de vapor d'aigua en l'aire està en equilibri amb la pressió de vapor del vapor d'aigua a la temperatura de la barreja de gas i vapor d'aigua; aigua líquida (i el gel, a la temperatura apropiada) deixarà de perdre massa per l'evaporació quan s'exposi a l'aire saturat. També pot correspondre a la possibilitat de la formació de rosada o de boira, en un espai que no té les diferències de temperatura entre les seves porcions.
+
+
+== Humitat absoluta ==
+S'expressa per la massa de l'aigua (quilograms) en un volum (metre cúbic) d'aire.
+El càlcul és: 
+  
+    
+      
+        
+          m
+          
+            w
+          
+        
+      
+    
+     
+  , per metre cúbic d'aire, 
+  
+    
+      
+        
+          v
+          
+            a
+          
+        
+      
+    
+     
+   .
+
+  
+    
+      
+        A
+        H
+        =
+        
+          
+            
+              m
+              
+                w
+              
+            
+            
+              v
+              
+                a
+              
+            
+          
+        
+      
+    
+     
+  El valor de la humitat absoluta canvia d'acord amb la pressió.
+
+
+== Mesura i regulació de la humitat ==
+Hi ha diversos aparells per mesurar la humitat. Un d'ells és el psicròmetre basat en la diferència entre un termòmetre sec i un d'humit. Els altres són higròmetres directes. També es mesura a través de satèl·lits geoestacionaris.
+Els deshumidificadors assequen l'aire capturant-ne la humitat.
+
+
+== La humitat en la piròlisi ==
+És el segon factor més influent en la piròlisi i el que està més relacionat, tot i que indirectament, amb la temperatura de piròlisi.
+És important saber el percentatge d'humitat del residu a estudiar, ja que és un factor determinant quan es pretén adoptar com a tractament intermedi la incineració, ja que la quantitat de combustible necessari per al procés variarà segons el contingut d'humitat del residu.
+Això és així perquè normalment la piròlisi de partícules humides, té lloc a temperatura més baixa de la fixada, ja que part del calor subministrat, s'empra en evaporar la humitat de la mostra. També influeix sobre la composició del gas de sortida, fins i tot desplaçant algunes reaccions. En general s'accepten humitats d'entre 10 i 20% per llits mòbils i fins al 40% per llits fluids.
+
+
+== Referències ==
+
+
+== Enllaços externs ==
+Glossary definition of absolute humidity Arxivat 2002-12-07 a Wayback Machine. - National Science Digital Library
+Glossary definition of psychrometric tables Arxivat 2005-01-22 a Wayback Machine. - National Snow and Ice Data Center
+Glossary definition of specific humidity Arxivat 2005-08-11 a Wayback Machine. - National Snow and Ice Data Center
+Viccionari

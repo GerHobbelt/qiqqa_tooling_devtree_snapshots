@@ -1,0 +1,60 @@
+revision: 15347225
+title: "Serie de \u0219asiu"
+url: https://ro.wikipedia.org/wiki/Serie_de_%C8%99asiu
+
+
+---
+
+Numărul de identificare al vehiculului Seria de Sașiu Serie/a de sașiu (VIN) – este numărul de identificare al vehiculului atribuit și plasat de producător. Înainte de anul 1981, nu exista un standard acceptat care să definească acest număr iar producătorii foloseau diverse formate pentru el. Numărul modern al seriei de sașiu (VIN) este format din 17 caractere – cifre și litere, excluzând literele I, O și Q.
+Seria de sașiu (VIN) poate fi găsită pe certificatul de înmatriculare al vehicului în caseta marcata cu litera E și pe caroseria mașinii sub parbriz, pe partea șoferului. Numărul de identificare al vehiculului din certificatul de înmatriculare trebuie să fie același cu numărul de pe părțile individuale ale mașinii. Conform Regulamentului Uniunii Europene, seria de sașiu (VIN) este plasat pe partea dreapta a vehiculului.
+
+
+==== Istoricul SERIEI DE SAȘIU ====
+Seria de sașiu (VIN) a fost introdus pentru prima oara în SUA. În primii ani de funcționare, până în 1981, nu a existat un format unificat pentru înregistrarea seriei de sașiu (VIN) iar diferiți producători de vehicule au folosit diferite forme de înregistrare a informațiilor. Aceasta stare de fapt nu a funcționat în fară numărului în creștere de vehicule și , prin urmare, s-a decis reglementarea și ajustarea atribuirii seriei de sașiu (VIN) la standardele globale ISO. După introducerea standardului ISO, producătorii care au fabricat vehicule pentru piață din SUA s-au adaptat rapid la acest standard. Agenția de standardizare ISO a introdus recomandări pentru utilizarea standardului seriei de sașiu (VIN) și a structurii acesteia iar în Europa, seria de sașiu însăși a funcționat dar seturile de informații pe care le conține, au fost introduse treptat.
+De exemplu, Volkswagen a început să codifice mai multe informații în 1995-1997 iar cifra de verificare în 2009-2015 pentru modelele selectate din grup. Este folosit și numărul de verificare din seria de sașiu dar nu la toate modele de marca – de exemplu se găsește în Europa la Audi A1.
+
+
+==== Format de înregistrare al Seriei de Sașiu (VIN) ====
+Exista doua moduri de a înregistră numărul de identificare a vehiculului. Uniunea Europeana folosește standardul ISO-3779 care a intrat în vigoare în 1981 și se ocupa de conținutul și structura seriei de sașiu (VIN), în timp ce America de Nord folosește un format mai strict (inclusiv o cifra de verificare) dar compatibil cu cel european. Standardele ISO anterioare pentru Seria de Sașiu (VIN) sunt ISO 4030 pentru locația și fixarea Seriei de Sașiu (VIN) și ISO 3780 pentru strandardizarea globala a primei secțiuni a Seriei de Sașiu (VIN) sau WMI.
+
+
+==== Identificarea producătorului la nivel mondial ====
+WMI World Manufacturer Identifier ​​- acestea sunt primele trei caractere ale seriei de șasiu utilizate pentru a codifica regiunea și numele producătorului vehiculului.
+
+
+==== Secțiunea - WMI ====
+Primul simbol WMI identifică regiunea din care se află producătorul. În practică, fiecare simbol este atribuit țării producătorului. Cele mai populare țări de producție sunt următoarele:
+
+
+==== Numele producătorul vehiculului -  WMI ====
+Următoarele 2 caractere identifică producătorul. Cel mai adesea, acesta este codul pe care SAE l-a alocat oficial țărilor și producătorilor. Cu toate acestea, matricea poate conține și simboluri non-standard.
+
+
+==== Secțiunea de specificații ====
+VDS (Vehicle Descriptor Section) sunt caracterele din pozițiile de la 4 la 9. Ele identifică tipul de vehicul. Acestea sunt utilizate în conformitate cu reglementările locale pentru a identifica un tip de vehicul și pot conține informații despre designul și tipul caroseriei. Fiecare producător are propriul sistem de utilizare a acestui domeniu.
+
+
+==== Secțiunea de identificare a vehiculului ====
+VIS (Vehicle Identifier Section) sunt caracterele din pozițiile de la 10 la 17. Sunt folosite pentru a atribui un număr unic unui anumit vehicul. VIS este utilizat de producător în cazul unei reclamații. Conține informații despre opțiunile instalate, motor, tip de unitate; cu toate acestea, este adesea pur și simplu un număr secvențial atribuit automat vehiculelor întrerupte succesive. Ultimele patru caractere sunt întotdeauna numere.
+
+
+==== Secțiunea Cod An Model (anul de producție) ====
+Este un cod care, în funcție de practica producătorului, indică anul de producție al vehiculului sau anul introducerii pe piață a tipului sau modelului de vehicul. Anul 1980 este codificat ca „A” iar anii următori cu literele ulterioare corespunzătoare până în anul 2000, care corespunde literei „Y”. Anii 2001-2009 sunt codificați cu numere de la 1 la 9.
+Conform standardului ISO, literele I, O și Q nu pot fi prezente în codul de an, în plus, literele U și Z și cifra 0 nu sunt utilizate de obicei. Acest lucru se datorează faptului că aceste litere și numere sunt ușor de utilizat, confundate unele cu altele.
+Exemplu tabel:
+
+
+==== Cifra de control ====
+1. Găsiți valoarea numerică care corespunde următoarei serii de șasiu din stânga. Literele I, O și Q nu sunt permise, prezența lor este o eroare. Cifrele își iau valoarea numerică. Tabelul de mai jos arată conversia corespunzătoare de la literă la număr.
+
+2. Fiecărei poziții a caracterului seriei de șasiu (cu excepția cifrei de verificare 9) i se atribuie greutatea dată în tabel.
+
+
+==== Decodorul seriei de șasiu ====
+Este o aplicație web, al cărei algoritm vă permite să decodați informațiile conținute în seria de șasiu a vehiculului. În funcție de calitatea algoritmului creat, precum și de sursele de date, decodoarele pot returna o cantitate diferită de informații despre vehiculul verificat. Modul în care sunt prezentate poate fi, de asemenea, diferit. Cel mai adesea, însă, acestea sunt disponibile sub forma unui raport de istoric al vehiculului plătit, disponibil online sau sub forma unui fișier pdf.
+În prezent, există mai multe decodoare de serii de șasiu disponibile în România care pot fi utilizate pentru a efectua cu ușurință verificări seriei de șasiu, atât comercial, cât și gratuit. În plus, Registrul Auto Român și-a lansat serviciul „Istoric Vehicul”. Datele obținute sunt spre exemplu: activitățile derulate la RAR și numărul de kilometri înregistrați în bordul mașinii (kilometri regăsiți în baza de date a RAR sau a stațiilor ITP autorizate).
+
+
+== Note ==
+https://www.rarom.ro/
+https://www.rarom.ro/?p=7455[[Categorie:]]

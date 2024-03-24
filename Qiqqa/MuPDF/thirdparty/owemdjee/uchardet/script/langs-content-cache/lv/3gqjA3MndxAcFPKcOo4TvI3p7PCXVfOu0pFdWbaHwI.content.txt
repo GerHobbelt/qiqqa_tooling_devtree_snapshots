@@ -1,0 +1,32 @@
+revision: 3834812
+title: RadCube
+url: https://lv.wikipedia.org/wiki/RadCube
+
+
+---
+
+RadCube ir Ungārijas un Eiropas Kosmosa aģentūras (EKA) pavadonis kosmisko laikapstākļu novērošanai. Tas orbītā tika palaists 2021. gada 17. augustā. Projektu veido Ungārijas uzņēmuma C3S vadīts konsorcijs, kurā iekļauts Ungārijas Zinātņu akadēmijas Enerģijas pētniecības centrs (MTA EK), Londonas Imperiālā koledža (ICL) un Polijas uzņēmums Astronika.
+RadCube ir EKA tehnoloģiju demonstrācijas programmas General Support Technology Program (GSTP) misija, kuras uzdevums ir demonstrēt miniaturizētas instrumentu tehnoloģijas, kas mēra in situ kosmisko starojumu un magnētiskā lauka vidi zemā Zemes orbītā kosmisko laikapstākļu monitoringa nolūkos.
+
+
+== Uzbūve ==
+Kosmiskais aparāts tika veidots Cubesat 3U formā, to izgatavoja Ungārijas uzņēmums C3S. Spānijas uzņēmums DHV Technologies piegādāja saules baterijas, savukārt Beļģijas KU Leuven nodrošināja orientācijas noteikšanas un kontroles sistēmu ADCS.
+Galvenā zinātniskā krava bija Ungārijas Zinātņu akadēmijas Enerģijas pētniecības centrā izstrādātais kompakts instrumentu komplekts RadMag, kas sastāvēja no enerģijas daļiņu detektoriem.
+Londonas Imperiālā koledža piegādāja vektoru magnetometru MAGIC (MAGnetometer no Imperial College), kas veidots ap magnetorezistīviem sensoriem, ko izmanto magnētiskā lauka mērīšanai un magnetosfēras telpas laikapstākļu uzraudzībai, nosakot lauka izlīdzinātās strāvas un izmaiņas magnētiskajā laukā. MAGIC izvēršana notika ar lentes atsperes motorizētu 80 cm garu izlici, ko piegādāja Polijas uzņēmums Astronika.
+Eiropas Kosmosa aģentūra nodrošināja sekundāro kravu, lai novērtētu kosmiskā starojuma ietekmi uz datora atmiņas mikroshēmām.
+
+
+== Lidojuma gaita ==
+RadCube tika palaists 2020. gada 3. septembrī 01:51:10 UTC ar nesējraķeti Vega (lidojums VV19) no Gviānas kosmiskā centra kā sekundārā krava pavadonim Pléiades-Neo 4. RadCube tika ievadīts solārsinhronā orbītā ar augstumu aptuveni 550 km.21. decembrī pavadonis tika nodots ekspluatācijā.
+
+
+== Atsauces ==
+
+
+== Ārējās saites ==
+RadCube was successfully launched S3S, 2021-08-17
+RadCube technology demonstration mission ESA eoPortal
+RadCube Imperial College London
+Boom System for RadCube mission successfully integrated on the spacecraft Archived 2021. gada 23. jūlijā, Wayback Machine vietnē. Astronika
+TRISAT Gunter Dirk Kreb
+RADCUBE orbitālie dati n2yo.com

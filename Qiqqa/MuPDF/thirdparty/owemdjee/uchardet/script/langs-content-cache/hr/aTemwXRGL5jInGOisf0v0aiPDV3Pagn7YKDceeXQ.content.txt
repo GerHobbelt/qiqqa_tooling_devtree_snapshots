@@ -1,0 +1,218 @@
+revision: 6669989
+title: Topologija
+url: https://hr.wikipedia.org/wiki/Topologija
+
+
+---
+
+Topologija je grana matematike. Proučava svojstva geometrijskih objekata koja ostaju nepromijenjena (invarijantna) kad se oblici izobličuju rastezanjem, izvrtanjem ili gnječenjem. Također proučava odnos područja i granice. Topologiju ne zanima je li oblik velik ili malen, okrugao ili četvrtast jer se ta svojstva mogu promijeniti. U topologiji je važnije kvalitativno nego kvantitativno. 
+Osnovni objekt u topologiji je topološki prostor. 
+Grane topologije su opća topologija, algebarska topologija, geometrijska topologija, diferencijalna topologija, a odnedavno i tzv. gruba topologija. 
+Opća topologija bavi se uglavnom tipologijom topoloških prostora. Algebarska topologija bavi se izučavanjem topoloških invarijanti toploških prostora i funktorima u algebarske kategorije, te razlikovanjem konkretnih topoloških prostora i pitanjima egzistencije preslikavanja i topoloških i geometrijskih konstrukcija uz pomoć topoloških invarijanti i funktora u algebarske kategorije. Diferencijalna topologija bavi se topologijom glatkih mnogostrukosti, preprekama za postojanje glatkih struktura na topološkim mnogostrukostima, te profinjenjima funktora iz algebarske topologije u kontekstu diferencijalnih mnogostrukosti. 
+
+
+== Povijesni razvoj i glavni predstavnici ==
+Prvi važni teorem u topologiji Eulerov je teorem, koji kaže da je za svaki konveksni poliedar broj vrhova minus broj bridova plus broj stranica točno dva, neovisno o poliedru. Danas kažemo da je Eulerova karakteristika sfere i njoj homeomorfnih poliedara 2. Osnivač moderne topologije, na kraju 19. i početkom 20. stoljeća, je Henri Poincaré čiji doprinos području je ogroman, a koji je topologiju nazivao analysis situs.
+Opću topologiju i moderan skupovni pojam topološkog prostora uveo je Felix Hausdorff. Drugi važni predstavnici topologije od kraja 19. stoljeća do danas su: P. S. Uryson, A. N. Tihonov, Eduardo Čech, P. S. Aleksandrov, Heinz Hopf, Solomon Lefschetz, Max Dehn, Norman Steenrod, James W. Alexander, J. H. C. Whitehead, H. Whitney, Karol Borsuk, John Milnor, Stephen Smale, Donald Kan, Simon Donaldson, Daniel Quillen, Dennis Sullivan, Vladimir Rohlin, Mo Hirsch, Mihajl Gromov, Sergej Novikov, C. T. C. Wall i u najnovije vrijeme Michael Hopkins, Jacob Lurie, Grigorij Perelman i dr.
+
+
+== Temeljni pojmovi ==
+
+
+=== Definicija ===
+Neka je X skup i 𝒯 množina podskupova od X za koju vrijedi:
+
+Ø, X ∈ 𝒯
+Ako su U i V iz 𝒯, onda je i presjek U∩V ∈ 𝒯
+Unija svake familije elemenata iz 𝒯 je element iz 𝒯Tada uređeni par (X,𝒯) nazivamo topološki prostor, a 𝒯 nazivamo topologija na skupu X. Elemente iz 𝒯 nazivamo otvorenim skupovima. Komplement (obzirom na skup X) otvorenog skupa nazivamo zatvorenim skupom.Jednostavnije rečeno, topologija na X je svaka množina skupova na X zatvorena na konačne presjeke i proizvoljne unije.
+Primjeri:
+diskretna topologija: 𝒯 = 𝒫(X) — porodica svih podskupova skupa X
+indiskretna ili trivijalna topologija: 𝒯 = {∅, X}
+topologija konačnih komplemenata ili kofinitna topologija : 𝒯f sastoji se od praznog skupa ∅ i komplemenata konačnih skupova.
+topologija lijevih zraka na R(skup realnih brojeva): 𝒯 = {⟨-∞,x⟩: x ∈ R} U {Ø, R}. Analogno se definira topologija desnih zraka.
+topologija određena točkom: Neka je X skup i x0 iz X. Topologija 𝒯 = {V⊆X: x0 iz V} U {Ø} naziva se topologija određena točkom x0 iz X.
+inicijalna topologija: Neka je X skup i (Y, 𝒯) topološki prostor i ƒ:X→Y funkcija. Tada je množina U = {ƒ-1(V) : V ∈ 𝒯} topologija na X koju nazivamo inicijalna topologija funkcije ƒ.
+slaba topologija: Neka je (Xi, 𝒯i) familija u parovima disjunktnih topoloških prostora i Y = Ui∈I Xi. Tada je množina 𝒯w ={V ⊆ Y : (∀i∈I) V ∩ Xi ⊆ 𝒯i } topologija na Y koju nazivamo slaba topologija na Y.Kad vrijedi𝒯′ ⊇ 𝒯 
+onda je 
+topologija 𝒯′ finija ili veća od 𝒯 odnosno 
+topologija 𝒯 je grublja ili manja od 𝒯′
+
+
+=== Baza i podbaza topologije ===
+Neka je X skup i 𝒯 topologija na X. Neka je B podmnožina od 𝒯.Kažemo da je B baza topologije 𝒯 ako se svaki otvoreni skup U iz 𝒯 može prikazati kao unija neke familije elemenata iz B.
+Za podmnožinu P od 𝒯 kažemo da je podbaza topologije 𝒯 ako je množina B svih konačnih presjeka iz P baza topologije 𝒯.
+Vrijede sljedeća dva teorema o bazi topologije:
+
+Teorem 1: Neka je 𝒯 topologija na X i B ⊆ 𝒯 podmnožina od 𝒯. B je baza topologije 𝒯 ako i samo ako za svaki U ∈ 𝒯 i svaki x ∈ U, postoji B ∈ B, takav da je x ∈ B ⊆ U.
+Teorem 2:Neka je X proizvoljan skup i B množina podskupova od X sa svojstvima: (B1) B je pokrivač za X (B2) Ako su B', B'' ∈ B i x ∈ B' ∩ B'', onda postoji B ∈ B, takav da je x ∈ B ⊆ B' ∩ B''. Tada postoji jedinstvena topologija 𝒯 na X kojoj je B baza. Elementi topologije 𝒯 su svi oni podskupovi od X koji su unije familija elemenata od B.Teorem 2 će nam omogućiti da konstruiramo neke nove topologije. Promotrimo sljedeće primjere:
+
+Neka je B = { [a, b> : a, b ∈ R ∧ a < b }. Množina B zadovoljava uvjete Teorema 2 pa postoji jedinstvena topologija kojoj je B baza. Tu topologiju zovemo topologija donjeg limesa, a uređeni par (R,B), nazivamo Sorgenfreyevim pravcem.
+Neka je X potpuno uređen skup koji nema ni minimum ni maksimum i B = {<a, b> : a, b ∈ X ∧ a < b }. Tada B zadovoljava uvjete Teorema 2 pa postoji jedinstvena topologija kojoj je B baza. Tu topologiju nazivamo uređajnom topologijom na X. Uređajnu topologiju na skupu realnih brojeva R nazivamo standardna topologija na R.
+
+
+=== Nutrina (interior) skupa, zatvorenje skupa, granica skupa ===
+Nutrina, ili interiror skupa A u topološkom prostoru X, u oznaci Int A, je unija svih otvorenih skupova skupova u X sadržanih u A.
+Zatvorenje skupa A u topološkom prostoru X, u oznaci Cl A, je presjek svih zatvorenih skupova koji sadrže A.
+Nutrina skupa je otvoren skup, a zatvorenje skupa je zatvoren skup.
+Vrijedi: Cl A=X\Int(X\A) i Int A=X\Cl(X\A).
+Granica skupa A u topološkom prostoru X, u oznaci Fr A je skup Fr A=Cl A∩Cl (X\A). Vrijedi Fr A=Cl A\Int A
+Primjeri (1):
+
+Int A ⊆ A
+IntA=A ako i samo ako je A otvoren skup
+Cl A = A ako i samo ako je A zatvoren skup
+A⊆B povlači Int A⊆Int B
+A⊆B povlači Cl A⊆Cl BPrimjeri(2):
+
+U standardnoj topologiji na R vrijedi Int<a,b>=Int[a,b>=Int<a,b]=Int[a,b]=<a,b> te Cl<a,b>=Cl[a,b>=Cl<a,b]=Cl[a,b]=[a,b]
+U topologiji lijevih zraka vrijedi Int<a,b>=Ø jer se nijedna lijeva zraka ne može upisati u interval <a,b>. Slično vrijedi i za skupove <a,b], [a,b> i [a,b].
+U standardnoj topologiji na R vrijedi Cl Q=Cl I = R, Fr Q=R, Fr N=NIz navedenih primjera uočavamo da nutrina, zatvorenje i granica skupa značajno ovise o topologiji na danom skupu.
+
+
+=== Okolina skupa, gomilište skupa, derivat skupa ===
+Okolina točke x0 ∈ X je svaki skup za koji je x0 ∈ Int O. Okolina točke ne mora biti otvoreni skup. Vrijedi sljedeći teorem:
+
+Skup U ⊆ X je otvoren skup u topološkom prostoru X ako i samo ako je X okolina svake svoje točke.Skup svih okolina točke x0 ∈ X označavamo sa O(x).
+Za točku x0 ∈ X kažemo da je gomilište skupa A ⊆ X ako svaka okolina O točke x0 siječe skup A\{x}. 
+Za točku x0 ∈ X kažemo da je izolirana točka skupa A ⊆ X ako x0 nije gomilište skupa A.
+Skup svih gomlišta skupa A ⊆ X nazivamo derivat skupa A i označavamo s A'. Vrijedi Cl A= A ∪ A'.
+Primjeri:
+
+Neka je Ts standardna topologija na R. Tada je Q' = I' = R. Za skup A=<0,1] ∪ {2} vrijedi da je A' = [0,1], a točka x=2 je izolirana točka skupa A.
+Neka je Tlz topologija lijevih zraka. Tada je N' = <1,+∞>. Za skup A iz prethodnog primjera vrijedi da točka x=2 nije izolirana točka skupa A.
+
+
+=== Potprostorna topologija ===
+Neka je (X, 𝒯) topološki prostor i Y ⊆ X. Tada je množina skupova 𝒯Y := {Y ∩ U: U ∈ 𝒯 } topologija na Y koju nazivamo naslijeđena ili relativna topologija na Y, a (Y, 𝒯Y) naziva se topološki potprostor od (X, 𝒯).
+
+
+== Aksiomi separacije ==
+Nakon što smo upoznali osnovne pojmovi koji se javljaju u teoriji topoloških prostora, možemo razmotriti i neke druge fenomene. Prvi od njih su aksiomi separacije koji razvrstavaju topološke prostore u klase ovisno o sposobnosti tih topoloških prostora da separiraju(razdvajaju) točke i skupove. 
+
+
+=== T0 - prostori ===
+Za topološki prostor (X, 𝒯) kažemo da je T0-prostor ako za svake dvije različite točke x,y ∈ X barem jedna od njih ima okolinu koja ne sadrži drugu točku.
+Ovaj uvjet je "najslabiji mogući", u smislu da možda sve okoline jedne točke sadrže drugu, ali ako postoji neka okolina prve točke koja ne sadrži drugu, onda vrijedi definicijski uvjet.
+Promotrimo sljedeće primjere:
+
+Čim je card X ≥ 2, diskretna topologija na svakom skupu X je T0-prostor.
+Indiskretna topologija na bilo kojem skupu X nije T0-prostor
+Neka je X={a,b} i 𝒯={∅, X, {a} }. Tada (X, 𝒯) nazivamo prostor Sierpinskog. Taj prostor je T0-prostor
+
+
+=== T1 - prostori ===
+Za topološki prostor (X, 𝒯) kažemo da je T1-prostor ako za svaki par različitih točaka x,y ∈ X svaka ima okolinu koja ne sadrži onu drugu točku.
+Uočimo da definicija ne zahtijeva da su te okoline nužno disjunktni skupovi. Također vrijedi da su svi T1-prostori ujedno i T0-prostori. Prostor Sierpinskog nije T1-prostor pa zaključujemo da je klasa T1-prostora pravi podskup klase T0-prostora.
+Vrijedi sljedeći karakterizacijski teorem za T1-prostore: Neka je X topološki prostor. Ekvivalentno je:
+
+X je T1-prostor
+Za svaki x ∈ X je {x} zatvoren podskup od X.Vrijedi sljedeći karakterizacijski teorem za gomilište skupa u T1-prostorima:
+
+Neka je X T1-prostor, A ⊆ X i x0 ∈ X. Točka x0 je gomilište skupa A akko svaka okolina od x0 sadrži beskonačno mnogo točaka skupa A.
+
+
+=== T2 - prostori ===
+Za topološki prostor kažemo da je T2-prostor (ili Hausdorffov prostor) ako svake dvije različite točke x,y ∈ X imaju disjunktne okoline.
+Primjeri:
+
+Svaki metrički prostor (X,d) je T2-prostor.
+(X,K), gdje je K kofinitna topologija na X jest T1-prostor, ali nije T2-prostor.Zaključujemo da je klasa T2-prostora pravi podskup klase T1-prostora. 
+Vrijedi sljedeći teorem: Neka je X topološki prostor. Ekvivalentno je: 
+
+X je Hausdorffov prostor
+Za svake dvije različite točke x,y ∈ X postoji okolina U od x takva da y 
+  
+    
+      
+        ∉
+      
+    
+     
+   Cl U.
+Dijagonala Δ ={(x,x) | x∈ X} je zatvoren skup u produktu X×X obzirom na produktnu topologiju.Za topološki prostor X kažemo da je slabo Hausdorffov ako je za svako neprekidno preslikavanje
+s ma kojeg kompaktnog Hausdorffovog prostora K u X slika tog preslikavanja zatvorena u X. 
+Svaki Hausdorffov prostor je slabo Hausdorffov, a svaki slabo Hausdorffov prostor je T1.
+
+
+=== Aksiom T3 ===
+Topološki prostor zadovoljava aksiom T3 ako za svaki zatvoreni skup D i svaku točku x van D postoje
+okoline U skupa D i V točke x koje se međusobno ne sijeku.
+Regularni prostor ili T3 prostor je topološki prostor koji zadovoljava aksiom T3. Ovisno o 
+autoru, jedan ili drugi ili oba izraza podrazumijevaju da je uz to zadovoljen i aksiom T0,
+a tada je automatski zadovoljen i aksiom T2.
+
+
+=== Tihonovljevi prostori ili T3 1/2 prostori ===
+Topološki prostor X je Tihonovljev ili T3 1/2 prostor ako za svaki zatvoreni 
+podskup A i točku x van A postoji neprekidna funkcija definirana na cijelom prostoru X i s vrijednostima
+u skupu realnih brojeva koja je identički 0 na podskupu A i prima vrijednost 1 na točki x. Svaki
+Tihonovljev prostor je Hausdorffov.
+
+
+=== Aksiom T4 ===
+Topološki prostor zadovoljava aksiom T ako za svaka zatvorena skupa A i B koja se ne sijeku postoje
+njihove okoline koje se također međusobno ne sijeku.
+Normalni prostor ili T4 je prostor koji zadovoljava aksiom T4. Ovisno o 
+autoru, jedan ili drugi ili oba izraza podrazumijevaju da je uz to zadovoljen i aksiom T1,a
+a tada su automatski zadovoljeni aksiomi T2, T3 i T3 1/2.
+
+
+== Povezanost i putevima povezanost ==
+Nakon što smo proučili aksiome separacije, promotrit ćemo još jedan fundamentalni topološki fenomen - povezanost, i njemu blizak pojam - putevima povezanost. Intuitivno, topološki prostor je povezan ako nije unija više disjunktnih skupova, a putevima povezan ako možemo "šetnjom" u konačno koraka doći iz jedne točke u drugu. Vidjet ćemo koje je svojstvo jače i na kraju iskazati vrlo važan teorem o karakterizaciji putevima povezanosti. Promotrit ćemo i lokalnu (putevima) povezanost. Slijede formalne definicije.
+
+
+=== Povezanost ===
+Definicija 1: Za topološki prostor kažemo da je povezan ako je svaka neprekidna funkcija funkcija f : X→{0,1} u dvotočkovni diskretni prostor nužno konstantna, tj. reći ćemo da je topološki prostor X nepovezan ako postoji neprekidna surjekcija g : X→{0,1}
+Primjeri:
+
+Neka je X diskretni prostor s barem dvije točke. Tada je X nepovezan.
+Euklidski prostor R je povezan.Vrijedi sljedeći teorem:
+Teorem 1:Neka je X topološki prostor. Tada je ekvivalentno:
+
+X je povezan
+Ako je U⊆ X otvoren i zatvoren, onda je U ili prazan skup ili je U=X.
+Ne postoje neprazni, disjunktni, otvoreni skupovi U1 i U2 takvi da je X = U1 U U2.
+Ne postoje neprazni, disjunktni, zatvoreni skupovi F1 i F2 takvi da je X = F1 U F2.Vidimo da Teorem 1 govori upravo o intuitivnoj predodžbi povezanosti koju smo naveli u uvodu poglavlja.
+Teorem 2:Neka su X i Y homeomorfni topološki prostori. Ako je jedan od njih povezan, onda je i drugi povezan, tj. povezanost je topološko svojstvo.
+Teorem 3: Neka su a,b ∈ R, a<b. Tada su skupovi <a,b>, <a,b], [a,b> i [a,b] povezani.
+Sljedeći teorem govori o povezanosti unije povezanih podskupova topološkog prostora:
+Teorem 4: Neka je (Xi, i ∈ I) familija nepraznih podskupova Xi  koji imaju neprazni presjek takvih da je X = Ui∈I Xi. Ako je svaki Xi povezan, onda je i X povezan.
+Od koristi će nam biti i sljedeće dvije karakterizacije povezanosti:
+Teorem 5: Topološki prostor X je povezan ako i samo ako za svaki par točaka x,y ∈ X postoji povezan podskup A ⊆ X koji sadrži x i y. 
+Teorem 6: Neka su X i Y neprazni topološki prostori. Kartezijev produkt X×Y je povezan ako i samo ako su X i Y povezani.
+
+
+=== Povezanost putevima ===
+Iz naziva potpoglavlja jasno je da će povezanost i povezanost putevima biti slični pojmovi koji će imati neka "slična svojstva". Najprije treba definirati što je to put u topološkom prostoru.
+Definicija 2: Neka je X topološki prostor. Put u prostoru X je svaka neprekidna funkcija w : [0,1] → X. Točka w(0) naziva se početak puta, a točka w(1) naziva se završetak puta.
+Definicija 3: Za topološki prostor X kažemo da je putevima povezan ako za svake dvije točke x, y ∈ X postoji put u X koji povezuje x s y.
+Povezanost putevima je jače svojstvo od povezanosti. Naime, svaki putevima povezan prostor je povezan, a obratno postoje primjeri prostora koji su povezani, a nisu putevima povezani.
+Teorem 7: Neka je X putevima povezan topološki prostor. Tada je X povezan.
+Primjer:Neka je A={(x, sin(1/x)) : x ∈ <0,1]. Tada je A povezan skup u <0,1]×[-1,1]. Skup Cl A = A U ({0}×[-1,1]) je povezan skup, ali nije putovima povezan.
+Neka su x i y dvije točke u topološkom prostoru X. Kažemo da je x povezan putem s y ako postoji put čiji početak je x, a završetak je y. „Biti povezan putem s” je relacija ekvivalencije. Razredi ekvivalencije s obzirom na tu relaciju zovu se komponente povezanosti putevima (prostora X).
+
+
+=== Lokalna povezanost ===
+Definicija 4: Za topološki prostor kažemo da je lokalno povezan u točki x0 ∈ X ako za svaku okolinu U točke x0 postoji povezana okolina V takva da je x0 ∈ V⊆U. Kažemo da je prostor lokalno povezan ako je lokalno povezan u svakoj točki.
+Vrijedi sljedeća karakterizacija lokalne povezanosti:
+Teorem 8: Neka je X topološki prostor. Tada je ekvivalentno:
+
+X je lokalno povezan
+X ima bazu topologije koja se sastoji od povezanih skupova.
+Sljedeći teoremi analogni su Teoremima 2, 4 i 5 iz poglavlja Povezanost:
+Teorem 9: Neka su X i Y homeomorfni topološki prostori. Ako je jedan od njih putevima povezan, onda je i drugi putevima povezan.
+Teorem 10: Neka je (Xi, i ∈ I) familija nepraznih podskupova Xi  koji imaju neprazni presjek takvih da je X = Ui∈I Xi. Ako je svaki Xi putevima povezan, onda je i X putevima povezan.
+Teorem 11:Neka je X topološki prostor. X je putevima povezan ako i samo ako za svaki par točaka x, y iz X postoji putevima povezan skup A koji ih sadrži.
+
+
+=== Lokalna povezanost putevima ===
+Definicija 5: Za topološki prostor kažemo da je lokalno putevima povezan u točki x0 ∈ X ako za svaku okolinu U točke x0 postoji putevima povezana okolina V takva da je x0 ∈ V⊆U. Kažemo da je prostor lokalno putevima povezan ako je lokalno putevima povezan u svakoj točki.
+Za kraj poglavlja, navedimo osnovni teorem koji povezuje povezanost, lokalnu povezanost putevima i povezanost putevima:
+Teorem 12: Neka je X povezan i lokalno putevima povezan. Tada je X putevima povezan.
+
+
+== Izvori ==
+
+
+== Vanjske poveznice ==
+nlab: topologija, algebarska topologija

@@ -1,0 +1,49 @@
+revision: 69496609
+title: Graviton
+url: https://vi.wikipedia.org/wiki/Graviton
+
+
+---
+
+Trong vật lý, Graviton (tiếng Việt đọc là: G-ra vi tông) là một hạt cơ bản giả thuyết có vai trò là hạt trao đổi của lực hấp dẫn trong khuôn khổ lý thuyết trường lượng tử. Nếu nó tồn tại, Graviton dự kiến sẽ không có khối lượng hoặc rất nhỏ(vì lực hấp dẫn xuất hiện với phạm vi không giới hạn) và phải có spin là 2. Spin bằng 2 do nguồn gốc của tương tác hấp dẫn là tenxơ ứng suất-năng lượng, một tenxơ đối xứng hạng hai (so với photon của tương tác điện từ có spin 1, nguồn gốc của chúng là bốn dòng, một tenxơ hạng nhất). Ngoài ra, người ta chứng minh rằng một trường spin 2 phi khối lượng gây ra tương tác giống hệt với hành xử của trường hấp dẫn, bởi vì trường spin 2 phi khối lượng phải cặp với (tương tác với) tenxơ ứng suất-năng lượng của trường hấp dẫn cổ điển Kết quả này cho thấy rằng, nếu một hạt không có khối lượng, spin-2 được phát hiện, nó phải là Graviton. Do vậy để xác minh bằng thực nghiệm cho Graviton tồn tại chỉ đơn giản là phát hiện ra một hạt không có khối lượng, spin 2.
+
+
+== Lý thuyết ==
+Các nhà vật lý giả thuyết có hạt Graviton tồn tại vì những thành công lớn của lý thuyết trường lượng tử (đặc biệt là mô hình chuẩn) mô hình hóa hành vi của tất cả các tương tác khác của tự nhiên là qua trung gian của các hạt cơ bản: Tương tác điện từ bởi các photon, tương tác mạnh bởi các gluon, và tương tác yếu Boson W và Boson Z. Giả thuyết này là sự tương tác hấp dẫn tương tự như vậy qua trung gian của một hạt cơ bản, nhưng chưa được khám phá - các hạt Graviton. Trong giới hạn cổ điển, lý thuyết sẽ thu về thuyết tương đối rộng và định luật hấp dẫn của Newton trong giới hạn lực hấp dẫn yếu.
+
+
+=== Graviton và tái chuẩn hóa ===
+Khi mô tả tương tác hấp dẫn, các lý thuyết cổ điển (tức là, các sơ đồ cây) và hiệu chỉnh bán cổ điển (sơ đồ một vòng) hoạt động bình thường, nhưng sơ đồ Feynman với hai (hoặc hơn) vòng dẫn đến kết quả phân kỳ cực tím; đó là, giá trị vô hạn mà không thể được loại bỏ do thuyết tương đối tổng quát không phải là lý thuyết tái chuẩn hóa, không giống như điện động lực học lượng tử. Đó là cách các nhà vật lý áp dụng để tính xác suất cho sự kiện một hạt sẽ phát ra hoặc hấp thụ một Graviton nhưng họ thu được kết quả vô lý và lý thuyết không còn hiệu lực. Những vấn đề này, cùng với một số câu hỏi về khái niệm, khiến nhiều nhà vật lý tin rằng một lý thuyết hoàn chỉnh hơn của hấp dẫn lượng tử phải mô tả tương tác hấp dẫn gần quy mô Planck.
+
+
+=== So sánh với các tương tác khác ===
+Không giống như các hạt trao đổi của các tương tác khác, trường hấp dẫn đóng vai trò đặc biệt trong thuyết tương đối rộng và việc xác định không-thời gian mà trong đó các sự kiện diễn ra. Bởi vì vi phôi bất biến (hiệp biến tổng quát) của lý thuyết này không cho phép bất cứ phông nền không-thời gian cụ thể nào được ưu tiên hơn cả (ví dụ hệ quy chiếu quán tính), do vậy thuyết tương đối tổng quát độc lập với phông nền. Ngược lại, Mô hình chuẩn phụ thuộc vào phông nền, mọi diễn biến của các hạt và trường xảy ra trong không thời gian Minkowski như là phông nền không-thời gian cố định. Do đó lý thuyết hấp dẫn lượng tử cần giải quyết được những khác biệt này. Cho dù lý thuyết này hiện nay vẫn là một câu hỏi mở. Câu trả lời cho câu hỏi này sẽ xác định sự hiểu biết của chúng ta về hấp dẫn có vai trò cụ thể gì trong số phận của vũ trụ.
+
+
+=== Graviton trong các lý thuyết khác nhau ===
+Lý thuyết dây dự đoán sự tồn tại của graviton và miêu tả tương tác của nó khá rõ ràng. Hạt Graviton trong lý thuyết dây nhiễu loạn là một dây đóng (vòng) trong một trạng thái dao động năng lượng thấp. Sự tán xạ của graviton trong lý thuyết dây cũng có thể được tính toán từ các hàm tương quan trong lý thuyết trường bảo giác, như của thuyết Tương ứng AdS/CFT, hoặc từ lý thuyết dây ma trận.Một đặc điểm thú vị của graviton trong lý thuyết dây, như dây đóng mà không có điểm đầu cuối, nó sẽ không bị ràng buộc với màng (brane) và có thể di chuyển tự do giữa các màng. Nếu chúng ta sống trên một màng (như giả thuyết của lý thuyết màng) mà nó "rò rỉ" graviton từ màng vào không gian nhiều chiều hơn thì có thể giải thích lý do tại sao lực hấp dẫn lại quá yếu, và graviton từ các màng khác lân cận của chúng ta có thể cung cấp một khả năng giải thích cho vật chất tối. Xem màng vũ trụ học.
+
+
+== Quan sát thử nghiệm ==
+Việc phát hiện graviton đơn lẻ là không thể với bất kỳ máy dò vật lý nào cho dù hạt được tiên đoán một cách hợp lý trong lý thuyết. Lý do là mặt cắt tiết diện của hạt rất thấp khi graviton tương tác với vật chất. Ví dụ, khi sử dụng Sao Mộc làm máy dò và giả sử hiệu quả là 100%, được đặt trong quỹ đạo gần xung quanh một sao neutron sẽ dự kiến chỉ quan sát được một Graviton trong 10 năm, thậm chí trong các điều kiện thuận lợi nhất. Cũng không thể phân biệt Graviton với các sự kiện từ ảnh hưởng của neutrino.Tuy nhiên, các thí nghiệm dùng để phát hiện sóng hấp dẫn, có thể được xem là các trạng thái kết hợp của nhiều graviton, đang được triển khai như LIGO và VIRGO. Mặc dù những thí nghiệm này không thể phát hiện graviton đơn lẻ, nhưng chúng có thể cung cấp thông tin về tính chất nhất định của Graviton. Ví dụ, nếu sóng hấp dẫn được quan sát lan truyền chậm hơn so với c (tốc độ ánh sáng trong chân không), điều này ngụ ý rằng Graviton có khối lượng.
+
+
+== Những khó khăn, vấn đề nổi bật ==
+Hầu hết các lý thuyết có chứa graviton gặp phải những vấn đề nghiêm trọng. Nỗ lực để mở rộng Mô hình chuẩn hoặc các lý thuyết trường lượng tử bằng cách đưa thêm các graviton vào sẽ trở lên nghiêm trọng về mặt lý thuyết ở mức năng lượng cao (quá trình liên quan đến năng lượng gần hoặc trên quy mô Planck) vì vô hạn phát sinh do các hiệu ứng lượng tử (về mặt kỹ thuật, hấp dẫn là không tái chuẩn hóa được). Do thuyết tương đối rộng cổ điển và cơ học lượng tử dường như không tương thích ở mức năng lượng như vậy, cho nên hai lý thuyết này không đứng vững được ở mức năng lượng cao như thế. Một giải pháp có thể là thay thế các hạt bằng các dây. Lý thuyết dây là lý thuyết lượng tử của lực hấp dẫn theo ý nghĩa là nó giảm đến thuyết tương đối rộng cổ điển cộng với lý thuyết trường ở năng lượng thấp, nhưng hoàn toàn được lượng tử hóa, có chứa một Graviton, và được cho là nhất quán về mặt toán học.
+
+
+== Xem thêm ==
+Sóng hấp dẫn
+Planck Khối lượng
+Lực hấp dẫn
+Lực tĩnh và sự trao đổi hạt ảo
+Đa vũ trụ
+Gravitino
+
+
+== Các tài liệu tham khảo ==
+
+
+== Liên kết ngoài ==
+
+Graviton trên chương trình In Our Time của BBC. (Nghe tại đây)

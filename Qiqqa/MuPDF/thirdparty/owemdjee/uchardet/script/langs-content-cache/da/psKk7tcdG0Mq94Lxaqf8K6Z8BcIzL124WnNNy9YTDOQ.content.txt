@@ -1,0 +1,50 @@
+revision: 11481207
+title: Factorio
+url: https://da.wikipedia.org/wiki/Factorio
+
+
+---
+
+Factorio er et konstruktions- og ledelsessimuleringsspil udviklet af det tjekkiske videospilfirma Wube Software. Spillet blev annonceret via en Indiegogo crowdfundingkampagne i 2013 og udgivet til Windows, macOS og Linux den 14. august 2020 efter en fire år lang tidlig adgangsfase med positive anmeldelser. Spillet blev udgivet på Nintendo Switch den 28. oktober 2022.I spillet er man en ingeniør, der styrter ned på en fremmed planet og er nødt til at udvinde ressourcer og skabe industri for at bygge en raket. Men da det er et sandkassespil kan spillere fortsætte spillet efter slutningen af historien. Spillet har både single-player og multiplayer tilstande.
+
+
+== Gameplay ==
+Factorio er et konstruktions- og ledelsessimuleringsspil fokuseret på ressourceindsamling med realtidsstrategi og overlevelseselementer og påvirkninger fra BuildCraft og IndustrialCraft mods til videospillet Minecraft. Spilleren overlever ved at lokalisere og udvinde ressourcer til at lave forskellige værktøjer og maskiner, som igen skaber mere avancerede materialer, der giver mulighed for teknologiske fremskridt mod mere sofistikerede teknologier og maskiner. Spillet skrider frem, efterhånden som spilleren fortsætter med at bygge og udvide deres automatiserede fabrikssystem, som automatiserer minedrift, transport, forarbejdning og produktion af ressourcer og produkter. Spillere forsker i avancerede teknologier, der giver dem mulighed for at bygge nye bygninger, genstande og opgraderinger. Man starter med grundlæggende automatisering, men kan løbende udbygge frabrikken til at inkorporere mere avancerede systemer såsom olieraffinering og robotlogistik. Spillet har et blueprint-system, som gør det muligt for spillere at lave genanvendelige byggetegninger til fabriksfløje. Tegningerne giver mulighed for kopiering af fabrikssystemer eller hele fabrikker.
+Spillet er formelt gennemført ved at affyre en rumraket, selvom det er muligt at vælge at ignorere dette mål og i stedet fortsætte med at effektivisere sin fabrik, i stedet for at udbygge den med nyere teknologier, da Factorio er et åbent verdensspil. At bygge en raket kræver en stor mængde ressourcer, hvilket motiverer spilleren til at etablere en tilstrækkelig effektiv fabrik for at opnå dette mål.
+
+
+=== Fjender ===
+Spilleren har til opgave at forsvare sig selv og deres fabrik mod planetens oprindelige fauna, kendt som 'Biters', 'Spitters' og 'Worms', som bliver mere og mere fjendtlige i takt med, at forureningen skabt af spillerens fabrik stiger. Dette nødvendiggør en overvejelse af balancen mellem spillerens produktion og fjendens aggressivitet. Spilleren kan bruge automatiserede forsvarsbygninger, kampvogne og andre våben til at eliminere fjender.  Efterhånden som spillet skrider frem, udvikler fjenderne sig og bliver sværere at besejre.
+Spillere kan også vælge at sætte planetens fauna til "fredelig" i starten af spillet. Når den indstilling er slået til, vil der fortsat være fauna, men den vil kun angribe spilleren og fabrikken som gengældelse fra direkte skade på dem selv eller en nabo.
+
+
+=== Multiplayer ===
+Multiplayer-tilstanden giver spillere mulighed for at spille sammen i samarbejde eller dyste imod hinanden, både lokalt og via internettet.   Factorio understøtter både dedikerede servere såvel som servere hostet direkte i spilklienten. Tidligere brugte spillet peer-to-peer-forbindelse, men dette blev fjernet, da mere robuste muligheder blev udviklet.  Gemte spilfiler kan problemfrit indlæses i enten single- eller multiplayer spil. Som standard deler alle spillere på en server teknologifremskridt, medmindre et system med flere hold er blevet indført af serverværten, i så fald har hvert hold deres egne teknologiske fremskridt. Egenbeskydning er til stede, men kan slåes fra.
+Mens den hårde grænse for antallet af spillere er 65.535 på grund af begrænsninger i SOCKET-protokollen. Dette antal er aldrig blevet nået; de mest populære servere var i stand til at håndtere flere hundrede spillere på én gang. Spillere kan dele byggeplaner med andre spillere på deres server via et offentligt tegningsbibliotek. 
+
+
+=== Modding ===
+Factorio er designet til at kunne modificeres via såkaldte mods for at lade brugerbasen skabe yderligere indhold, såsom modifikationer af gameplay eller visuelle elementer. Factorio -webstedet, indeholder også en modportal, hvor mod-udviklere kan hoste deres mods. For at støtte modding-fællesskabet er der også en mod-manager i spillet, som giver spillerne mulighed for hurtigt at downloade mods. Spillet tilbyder en API skrevet i programmeringssproget Lua.
+
+
+== Udvikling ==
+Spillet er blevet udviklet af et team af udviklere fra Prag, Tjekkiet, siden midten af 2012. Udviklingsteamet bestod oprindeligt af en enkelt person, men holdet er vokset siden. Wube Software blev skabt i september 2014 af Michal Kovařík og Tomáš Kozelek i Prag. For at finansiere spillet startede udviklingsteamet en Indiegogo- kampagne, som startede den 31. januar 2013 og sluttede den 3. marts 2013. Kampagnen indsamlede 21.626 euro ud af målet på 17.000 euro.   Efter crowdfunding- succesen solgte Wube tidlig adgangsudgaver af spillet for at indsamle yderligere midler. Udvikleren mener udgivelsen af spillets trailer i april 2014, var en væsentlig drivkraft for dette salg. I marts 2021 består holdet af 18 medlemmer.Michal Kovařík, spillets hoveddesigner, henviser til IndustrialCraft og BuildCraft Minecraft mods som sine inspirationskilder under spillets udvikling.Spillet blev udgivet på Steam som tidlig adgang den 25. februar 2016, men havde været tilgængeligt til download fra factorio.com siden tidligt i udviklingen. Den blev officielt frigivet uden tidlig adgang den 14. august 2020.  Det var oprindeligt planlagt til at blive udgivet den 25. september 2020, men blev rykket en måned frem for ikke at konkurrere med udgivelsen af Cyberpunk 2077, som på det tidspunkt var planlagt til at blive udgivet den 17. september 2020.  I februar 2021 annoncerede udviklerne, at 1.1 ville være den sidste store opdatering af grundspillet, og at en ny udvidelsespakke var under udvikling. Den 4. februar 2022 afslørede udviklerne en planlagt pris på $30 for udvidelsespakken, og angav planer om at få udvidelsen til at føles ligeså stor som grundspillet. Spillets Nintendo Switch version blev frigivet den 28. oktober 2022. 
+
+
+=== G2A-sagen ===
+Forhandler af videospilnøgler G2A blev anklaget for at sælge stjålne nøgler på deres websted, hvilket påvirker udviklere af spil, specifikt i indie-scenen. Den 5. juli 2019 tilbød G2A at betale udviklerne beløb svarende til ti gange værdien af de stjålne spilnøgler, hvis problemet kunne bevises via revision.   Wube var den eneste udvikler, der holdte G2A oppe på dette, og udtalte følgende: "G2A - værre end piratkopiering " og sendte dem en liste over 321 annullerede Steam-nøgler på grund af charge back.  Ti måneder senere bekræftede G2A, at 198 af disse nøgler blev solgt på platformen og betalte Wube Software $39.600 som en del af løftet. På grund af undersøgelsens følsomme karakter blev revisionen foretaget internt.      
+
+
+== Modtagelse ==
+Factorio fik en positiv modtagelse af kritikere, mens det stadig var i sin tidlige-adgangsfase.  Ved 2018 Steam Awards blev Factorio kåret af Steam-brugere som en andenplads i kategorien "Most Fun with a Machine". I begyndelsen af 2020 havde spillet solgt to millioner kopier, i begyndelsen af 2021 fortalte udviklerne at de var på over to og en halv million solgte eksemplarer, og ved dets seks års jubilæum i februar 2022 havde spillet lige passeret 3,1 millioner solgte eksemplarer. Efter udgivelsen i 2020 modtog Factorio positive anmeldelser. Rick Lane fra PC Gamer roste Factorio og kaldte det "et fremstillingsmesterværk". Nicolas Perez fra Paste roste Factorios brug af tidlig adgang og udtalte, "... Factorio har sat et eksempel på, hvad tidlig adgangs-systemet virkelig er i stand til." Det blev kåret til IndieGameReviewer.com's Indie Game of the Year, efter også at have kåret det til det mest ventede i 2013. I 2021 rangerede Rock Paper Shotgun Factorio som det 7. bedste managementspil til computeren.
+
+
+== Eftermæle ==
+Neobuthus factorio er en skorpionart fra familien Buthidae fundet i Somaliland. Det blev opkaldt efter spillet af en af de forskere, der først beskrev arten, som er far til spillets designer og medinstruktør.Satisfactory, et fabriksbygge spil fra 2019 af Coffee Stain Studios, er blevet sammenlignet med Factorio og beskrevet som en førstepersons 3D-fortolkning af spillet.
+
+
+== Referencer ==
+
+
+== Eksterne links ==
+Officielle hjemmeside

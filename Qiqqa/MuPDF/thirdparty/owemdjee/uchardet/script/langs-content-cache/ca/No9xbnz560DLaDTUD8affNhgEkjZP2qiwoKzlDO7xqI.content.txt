@@ -1,0 +1,313 @@
+revision: 32070820
+title: "Distribuci\xF3 de Burr"
+url: https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_Burr
+
+
+---
+
+En teoria de la probabilitat, estadística i econometria, la distribució de Burr de tipus XII, o simplement la distribució de Burr és una distribució de probabilitat contínua d'una variable aleatòria no negativa. També es coneix com la distribució de Singh-Maddala i és una de les diferents distribucions que de vegades s'anomenen «distribució log-logística generalitzada».
+Si X segueix una distribució de Burr, s'escriurà 
+  
+    
+      
+        X
+        ∼
+        S
+        M
+        (
+        c
+        ,
+        k
+        )
+      
+    
+     
+  .
+La distribució de Burr té la funció de densitat de probabilitat:
+
+  
+    
+      
+        f
+        (
+        x
+        ;
+        c
+        ,
+        k
+        )
+        =
+        
+          
+            {
+            
+              
+                
+                  c
+                  k
+                  
+                    
+                      
+                        x
+                        
+                          c
+                          −
+                          1
+                        
+                      
+                      
+                        (
+                        1
+                        +
+                        
+                          x
+                          
+                            c
+                          
+                        
+                        
+                          )
+                          
+                            k
+                            +
+                            1
+                          
+                        
+                      
+                    
+                  
+                
+                
+                  
+                     si 
+                  
+                  x
+                  >
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  
+                     sinó.
+                  
+                
+              
+            
+            
+          
+        
+      
+    
+     
+  
+
+  
+    
+      
+        f
+        (
+        x
+        ;
+        c
+        ,
+        k
+        ,
+        λ
+        )
+        =
+        
+          
+            
+              c
+              k
+            
+            λ
+          
+        
+        
+          
+            (
+            
+              
+                x
+                λ
+              
+            
+            )
+          
+          
+            c
+            −
+            1
+          
+        
+        
+          
+            [
+            
+              1
+              +
+              
+                
+                  (
+                  
+                    
+                      x
+                      λ
+                    
+                  
+                  )
+                
+                
+                  c
+                
+              
+            
+            ]
+          
+          
+            −
+            k
+            −
+            1
+          
+        
+      
+    
+     
+  i la funció de distribució acumulada (FD):
+
+  
+    
+      
+        F
+        (
+        x
+        ;
+        c
+        ,
+        k
+        )
+        =
+        
+          
+            {
+            
+              
+                
+                  1
+                  −
+                  
+                    
+                      (
+                      
+                        1
+                        +
+                        
+                          x
+                          
+                            c
+                          
+                        
+                      
+                      )
+                    
+                    
+                      −
+                      k
+                    
+                  
+                
+                
+                  
+                     si 
+                  
+                  x
+                  >
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  
+                     sinó.
+                  
+                
+              
+            
+            
+          
+        
+      
+    
+     
+  
+
+  
+    
+      
+        F
+        (
+        x
+        ;
+        c
+        ,
+        k
+        ,
+        λ
+        )
+        =
+        1
+        −
+        
+          
+            [
+            
+              1
+              +
+              
+                
+                  (
+                  
+                    
+                      x
+                      λ
+                    
+                  
+                  )
+                
+                
+                  c
+                
+              
+            
+            ]
+          
+          
+            −
+            k
+          
+        
+      
+    
+     
+  Si c=1, llavors la distribució de Burr es converteix en la distribució de Pareto de tipus II.
+Quan k=1, la distribució de Burr és un cas especial de la distribució de Champernowne.La distribució de Burr tipus XII és un membre d'un sistema de distribucions contínues introduïdes per Irving W. Burr (1942), que comprenen 12 distribucions.
+
+
+== Referències ==
+
+
+== Bibliografia ==
+Rodriguez, R. N. «A guide to Burr Type XII distributions». Biometrika, 64, 1, 1977, pàg. 129–134. DOI: 10.1093/biomet/64.1.129.
+
+
+== Vegeu també ==
+Distribució de Dagum, també coneguda com la distribució de Burr inversa.

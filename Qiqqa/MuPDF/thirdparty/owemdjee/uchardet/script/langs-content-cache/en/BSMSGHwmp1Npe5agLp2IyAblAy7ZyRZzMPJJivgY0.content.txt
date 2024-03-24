@@ -1,0 +1,32 @@
+revision: 1161094570
+title: English Engineering Units
+url: https://en.wikipedia.org/wiki/English_Engineering_Units
+
+
+---
+
+Some fields of engineering in the United States use a system of measurement of physical quantities known as the English Engineering Units. Despite its name, the system is based on United States customary units of measure.
+
+
+== Definition ==
+The English Engineering Units is a system of consistent units used in the United States. The set is defined by the following units, and definitive conversions to the International System of Units.
+Units for other physical quantities are derived from this set as needed.
+In English Engineering Units, the pound-mass and the pound-force are distinct base units, and Newton's Second Law of Motion takes the form F = ma/gc, where gc = 32.174 lb·ft/(lbf·s2).
+
+
+== History and etymology ==
+The term English units strictly refers to the system used in England until 1826, when it was replaced by (more rigorously defined) Imperial units. The United States continued to use the older definitions until the Mendenhall Order of 1893, which established the United States customary units. Nevertheless, the term "English units" persisted in common speech and was adapted as "English engineering units" but these are based on US customary units rather than the pre-1826 English system.
+
+
+=== British Engineering Units ===
+A similar system, termed British Engineering Units by Halliday and Resnick (1974), is a system that uses the slug as the unit of mass, and in which Newton's law retains the form F = ma.  Modern British engineering practice has used SI base units since at least the late 1970s.
+
+
+== See also ==
+Imperial and US customary measurement systems
+
+
+== Notes ==
+
+
+== References ==

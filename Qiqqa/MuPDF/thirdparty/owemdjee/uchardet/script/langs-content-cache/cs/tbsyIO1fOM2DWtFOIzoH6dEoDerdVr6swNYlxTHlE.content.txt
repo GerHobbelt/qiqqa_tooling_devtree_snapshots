@@ -1,0 +1,37 @@
+revision: 22774126
+title: Bob Widlar
+url: https://cs.wikipedia.org/wiki/Bob_Widlar
+
+
+---
+
+Robert John (Bob) Widlar (30. listopadu 1937 Cleveland – 27. února 1991 Puerto Vallarta) byl americký vynálezce v oboru elektroniky a průkopník v oblasti vývoje analogových integrovaných obvodů.
+
+
+== Život ==
+Widlar se narodil v Clevelandu v americkém státě Ohio. Jeho matka byla českého původu a rodina jeho otce pocházela z Německa. Už od dětství měl zájem o elektroniku, k čemuž ho přivedl jeho otec.
+Po absolvování střední školy v Clevelandu se zapsal na University of Colorado at Boulder. V letech 1958 až 1961 pracoval jako technický instruktor letectva USA. Roku 1960 napsal knihu Introduction to Semiconductor Devices (Úvod do polovodičových součástek).
+Po odchodu od letectva se zabýval vývojem analogového a digitálního zařízení pro NASA a současně pokračoval ve studiu na univerzitě. Studium úspěšně dokončil v roce 1963 a začal pracovat pro Fairchild Semiconductor. Zde se podílel na vývoji integrovaných operačních zesilovačů, které měly po uvedení trh velký komerční úspěch. Poptávka desetinásobně převyšovala výrobní kapacitu a produkce byla vyprodána na dva roky dopředu.
+Výroba operačních zesilovačů v té době přinášela velký zisk, z něhož chtěl mít Widlar podíl. Požadoval od svého zaměstnavatele 1 mil. dolarů. Hrozil odchodem, ale požadovanou sumu neobdržel. Manažér Robert Noyce si Widlara natolik cenil, že mu určitou dobu posílal svůj plat. Přesto Widlar a jeho spolupracovník Dave Talbert roku 1966 odešli do společnosti National Semiconductor. Tady se Widlar soustředil na integrované regulátory napětí a na vývoj dokonalejších integrovaných operačních zesilovačů.
+Ke konci roku 1970 Widlar a Talbert bez zjevného důvodu společnost National Semiconductor opustili. Widlar inkasoval za své akciové opce cca 1 mil. dolarů a odstěhoval se do města Puerto Vallarta v Mexiku. V listopadu 1974 se Widlar vrátil do společnosti National Semiconductor, ale pouze jako konzultant. V roce 1981 se stal spoluzakladatelem společnosti Linear Technology. Dne 27. února 1991 Widlar v Puerto Vallarta náhle zemřel na srdeční infarkt, který utrpěl při joggingu.
+
+
+== Úspěchy ==
+Widlar byl autorem několika desítek vynálezů z oblasti elektroniky. Vyvinul základní „stavební kameny“ analogových integrovaných obvodů. Jde např. o Widlarův proudový zdroj, Widlarovo řešení teplotně stabilní napěťové reference na principu tzv. zakázaného pásu (bandgap) a Widlarův koncový zesilovač pro integrované obvody.
+V letech 1964 až 1970 Widlar spolu s Davidem Talbertem vyvinuli první masově vyráběné integrované operační zesilovače (μA702, μA709), integrovaný regulátor napětí (LM100), operační zesilovač s frekvenční kompenzací jediným externím prvkem (LM101), operační zesilovač s unipolárním tranzistorem (LM101A), operační zesilovač se „super-beta“ tranzistory (LM108) a první operační zesilovač s velmi nízkým napájecím napětím (LM10).
+Každý z těchto obvodů měl přinejmenším jednu vlastnost, která ho stavěla o krok před konkurenci a Widlar se tak stal mistrem svého oboru. Díky Widlarovi jeho zaměstnavatelé Fairchild Semiconductor a National Semiconductor získali na určitý čas dominantní postavení v oboru analogových integrovaných obvodů. Ekvivalent operačního zesilovače μA709 vyráběl pod označením MAA501 (popř. MAA502, MAA503 či MAA504) i podnik TESLA v bývalém Československu.
+
+
+== Přehled obvodů ==
+Widlar se velkou měrou podílel zejména na vývoji následujících integrovaných obvodů:
+
+µA702, µA709, µA710, µA711, µA712, µA726 – Fairchild Semiconductor,
+LM100, LM101, LM101A, LM102, LM113, LM216, LM10, LM11, LM12, LT10 – National Semiconductor,
+LT1017, LT1018, LT1016, LT1010, LT1011 – Linear Technology.
+
+
+== Reference ==
+
+
+== Externí odkazy ==
+ Obrázky, zvuky či videa k tématu Bob Widlar na Wikimedia Commons V tomto článku byl použit překlad textu z článku Bob Widlar na anglické Wikipedii.

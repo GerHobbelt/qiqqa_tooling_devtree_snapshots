@@ -1,0 +1,24 @@
+revision: 37225009
+title: Amazon Elastic Compute Cloud
+url: https://uk.wikipedia.org/wiki/Amazon_Elastic_Compute_Cloud
+
+
+---
+
+Amazon Elastic Compute Cloud (Amazon EC2) — вебсервіс, котрий надає обчислювальні потужності в хмарі. Сервіс входить в інфраструктуру Amazon Web Services.
+Простий вебінтерфейс сервісу дозволяє отримати доступ до обчислювальних потужностей і налаштувати ресурси з мінімальними затратами. Він надає користувачам повний контроль над обчислювальними ресурсами, а також доступне середовище для роботи. Служба скорочує час, необхідний для отримання і завантаження нового сервера.[джерело?]
+
+
+== Див. також ==
+Amazon SimpleDB
+Amazon Simple Storage Service (Amazon S3)
+Amazon CloudFront
+Amazon Simple Queue Service (Amazon SQS)
+Amazon Relational Database Service (Amazon RDS)
+
+
+== Примітки ==
+
+
+== Посилання ==
+Amazon EC2 [Архівовано 25 грудня 2018 у Wayback Machine.]

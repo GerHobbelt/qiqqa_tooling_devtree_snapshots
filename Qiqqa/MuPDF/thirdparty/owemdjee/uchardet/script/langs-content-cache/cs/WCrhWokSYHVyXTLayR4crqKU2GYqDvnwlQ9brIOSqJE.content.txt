@@ -1,0 +1,62 @@
+revision: 22901226
+title: Ada Lovelace
+url: https://cs.wikipedia.org/wiki/Ada_Lovelace
+
+
+---
+
+Augusta Ada King, hraběnka z Lovelace (10. prosince 1815 Londýn – 27. listopadu 1852 tamtéž), narozená jako Augusta Ada Byron a nyní známá jako Ada Lovelace, byla anglická matematička a první programátorka, která je známá především detailním popisem fungování Babbageova mechanického počítače (analytického stroje), jehož vývoj podporovala i finančně. Mezi jejími poznámkami k analytickému stroji byl i algoritmus Bernoulliho čísel, který je považován za první algoritmus zpracovatelný počítačem.Narodila se 10. prosince 1815 jako jediné legitimní dítě básníka lorda Byrona a jeho manželky Anny Isabelly Byronové. Všechny ostatní Byronovy děti se narodily mimo manželství. Byron opustil svou ženu měsíc po dceřině narození a za další čtyři měsíce opustil nadobro i Anglii. Později když Adě bylo osm let, podlehl nemoci během Řecké osvobozenecké války. Skončila tak v opatrovnictví matky, spisovatelky, která nicméně podporovala její zálibu v matematice a logice (také jako součást pokusu předejít rozvinutí „šílenství“, které viděla v jejím otci – ovšem na otce nezanevřela a nechala se vedle něj i pohřbít). Jako jedna z mála žen ve viktoriánské Anglii proto studovala matematiku.Na prahu dospělosti se díky svému talentu seznámila s britským matematikem Charlesem Babbagem a konkrétně jeho prací na vývoji „analytického stroje“, čímž začal jejich dlouhodobý pracovní i přátelský vztah. V letech 1842–1843 přeložila článek italského vojenského analytika Luigiho Menabrea o tomto stroji a doplnila ho rozsáhlými poznámkami (nadepsanými jednoduše Notes – „poznámky“), které mimo jiné obsahují první známý počítačový program – algoritmus, určený k provedení strojem. Kromě příspěvku k počátečním dějinám počítačů se ve svých poznámkách věnovala také vizím ohledně pokročilých schopností počítačů: skládání hudby a kreslení obrazů a využití techniky ke spolupráci jednotlivců i společnosti.
+Ada popisovala svou metodu jako „poetickou vědu“ a sebe jako „analytičku (a metafyzičku)“. Na její počest byl pojmenován programovací jazyk Ada, který vznikl v roce 1979.
+V roce 2017 zvolil zkratku ADA americký matematik, programátor a generální ředitel IOHK Charles Hoskinson jako obchodní zkratku své kryptoměny Cardano. Fragmenty této mince jsou pak nazývány Lovelace.
+
+
+== Život ==
+
+
+=== Dětství ===
+Ada Lovelace se narodila jako Augusta Ada Byron 10. prosince 1815. Byla dcerou slavného anglického básníka George Gordona Byrona a Annabelle Milbank. Augusta byla pojmenována po Byronově nevlastní sestře Augustě Leigh a Byron používal její druhé jméno, Ada.
+Méně než za rok po jejím narození se otec rozhodl pro rozvod. Sám byl znepokojen skutečností, že nepřivedl na svět syna. Přestože podle tehdejších britských zákonů měl na výchovu dcery právo především on, neprojevil o výchovu žádný zájem. Nicméně požádal svou sestru, aby ho informovala o tom, jak se jí daří. Sama svého otce již nikdy poté nespatřila. Zemřel v roce 1824, když jí bylo osm let a její matka tak zůstala jedinou rodičovskou figurou v jejím životě. Až do svých dvaceti let měla zakázáno podívat se na jakýkoliv portrét svého otce.
+Matka se v roce 1856 stala baronkou z Wenworthu. S dcerou neměla blízký vztah, často ji ponechávala v péči babičky, Judith, Lady Milbankeové, která si vnučku zamilovala. Kvůli společenským postojům té doby, které při odloučení rodičů vždy stranily otci dítěte, se však musela na veřejnosti prezentovat jako milující matka. To zahrnovalo psaní dopisů Lady Milbankeové, ve kterých se starostlivě vyptávala na zdraví své dcery a na jejich konci matce připomínala, ať je neztratí, pro případ, že by musela dokazovat svou řádnou starost o dceru. V jednom z dopisů ji popsala jako „to“. V období dospívání byla sledována několika blízkými přítelkyněmi matky, aby se ujistily, že nevykazuje známky morální nekázně. Těmto pozorovatelkám říkala fúrie a později si stěžovala, že přeháněly a vymýšlely si.
+Od raného dětství byla často nemocná. Ve věku osmi let trpěla migrénami, které ji oslepovaly. V červnu 1829 byla paralyzována po protrpění spalniček. Následně byla nucena k odpočinku na lůžku v délce téměř jednoho roku, což pravděpodobně oddálilo její uzdravení. V roce 1831 už byla schopna pohybu o berlích.
+Navzdory častým nemocem rozvíjela své matematické a technické dovednosti. Ve dvanácti letech se rozhodla, že by chtěla létat. Postupovala rozumně a metodicky, s představivostí a vášní. Prvním krokem, v únoru 1828, bylo vyrobení křídel. Zvažovala různé velikosti a materiály pro výrobu křídel, například papír, hedvábí napuštěné olejem, dráty a peří. Studovala anatomii ptáků, aby dokázala odhadnout správné proporce křídel a těla. Rozhodovala se, jaké vybavení bude potřebovat, jako například kompas k nalezení té nejpřímočařejší trasy přes hory, řeky a údolí. Posledním krokem by byla integrace páry jako pohonu k létání.V roce 1833 měla románek se svým poručníkem a poté, co byli přistiženi, s ním chtěla utéci. Jeho příbuzní ji ale poznali a kontaktovali její matku. Anabelle se s pomocí svých přátel podařilo aféru ututlat a zabránit tak skandálu.Nikdy se nesetkala s nevlastní sestrou, Allegrou Byronovou, dcerou Lorda Byrona a Claire Clairmontové, která zemřela ve věku pěti let v roce 1822. V jisté míře se ale stýkala s Elizabeth Medorou Leighovou, dcerou Byronovy nevlastní sestry Augusty Leighové. Když byla Ada představena u dvora, Augusta se jí stranila.
+
+
+=== Dospělost ===
+V dospělosti poznala Mary Somervilleovou z Královské astronomické společnosti, kterou považovala za svůj vzor, především proto, že byla také matematička. Somervilleová ji také uvedla do společnosti Charlese Babbage, se kterým se seznámila v roce 1833. Od té doby si oba intenzivně dopisovali. Lovelaceová se znala také s dalšími významnými osobnostmi té doby, jako byli například Andrew Crosse, Sir David Brewster, Charles Wheatstone, Charles Dickens a Michael Faraday.
+
+Kolem roku 1834 byla často vídána u dvora a začala se účastnit společenských událostí. Často chodila tančit a svým šarmem dokázala okouzlit. Většina lidí ji popisovala jako líbeznou dívku, ale přítel Lorda Byrona, John Hobhouse, byl opačného názoru. Jednou ji popsal jako „…mohutnou ženu s hroší kůží, jež ovšem sdílí některé rysy svého otce, obzvláště ústa.“ Takto se o ní zmínil po jejich prvním setkání 24. února 1834, kdy dala najevo, že se jí Hobhouse nezamlouvá. Pravděpodobně zde sehrál svou roli vliv její matky, díky níž neměla dobré vztahy s žádným z přátel svého otce. Nevraživost vůči Hobhousovi ovšem netrvala dlouho a později se stali přáteli.
+Matematiku studovala na Londýnské univerzitě. Svá studia přerušila pouze kvůli svatbě a také kvůli rodině. Vdala se za barona Williama Kinga 8. července 1835 a sama se tak stala baronkou. Jejich sídlem byly rozsáhlé pozemky Ockham Parku v Surrey. Vlastnili také další pozemky u jezera Loch Torridon a dům v Londýně. Líbánky strávili v panství Worthy Manor blízko městečka Porlock Weir v Somersetu. Později bylo vyspraveno a stalo se jejich letním sídlem.
+Byla matkou tří dětí: Byrona (1837), Anne Isabelly (1837) a Ralpha Gordona (1839). Po narození Anny protrpěla náročnou a bolestivou nemoc, ze které se léčila měsíce. Krátce po narození jejího třetího potomka se však opět vrátily časté nemoci a bolesti. Předepsány ji byly silné léky; spolu s alkoholem, kterému však nedlouho poté propadla a její zdravotní stav se začal silně zhoršovat.
+V roce 1838 se z jejího manžela stal hrabě z Lovelace a odtud pochází jméno, pod kterým je dnes známá. Mezi lety 1843 a 1844 pověřila její matka Williama Benjamina Carpentera, aby vyučoval její děti a aby figuroval jako morální instruktor v životě. Carpenter se do ní rychle zamiloval a dal jí najevo, že by měla jednat na základě svých potlačených emocí. Byl ženatý a tvrdil, že tento fakt mu zabraňuje jednat neslušným způsobem. Jakmile se dovtípila, že se s ní snaží navázat vztah, přerušila s ním kontakt.
+V roce 1841 se společně s Medorou Leighovou (dcerou Byronovy nevlastní sestry Augusty Leighové) od své matky dozvěděla, že Medořiným otcem byl taktéž Byron. Později napsala matce v dopise, že ji tato skutečnost nepřekvapila a že se jí jen potvrdilo to, co už dlouho považovala za pravdu. Nevinila z incestního vztahu svého otce, nýbrž Augustu Leighovou. To ovšem její matce nezabránilo, aby se snažila v očích své dcery poškodit Byronovu pověst. Ve skutečnosti její snahy jen matematičku navedly blíže otcově památce.
+Ve čtyřicátých letech se stala předmětem několika skandálů. Měla velmi uvolněné vztahy s muži, za které nebyla vdaná, a to vedlo k pomluvám o různých aférách. Dále poté, co se dokázala vzdát závislosti na alkoholu, propadla sázení. V roce 1851 se s řadou svých přátel rozhodla sestavit algoritmus, který by předvídal výsledky sázek. Původní práce Charlese Babbage, stejně jako její však již ztratila kredit, který měla v dřívějších letech. Oba dva byli značně zadlužení a doufali, že odkrytím revolučního mechanismu pro vypočítání úspěchu v sázkách budou moci dluhy splatit. Celá akce však přilákala pozornost zločineckých kruhů a Ada musela veškerou svoji práci připsat svému manželovi, aby se vyhnula výhrůžkám. Měla také nejasný, pravděpodobně intimní vztah se synem Andrewa Crosse, Johnem. O této záležitosti však není mnoho známo, protože Crosse po Adině smrti spálil veškerou jejich korespondenci. Na jeho vážnost lze usuzovat z toho, že mu Ada odkázala majetky, které získala po otci.
+
+
+=== Smrt ===
+Zemřela ve věku 36 let (stejně jako její otec) 27. listopadu 1852 poté, co jí její lékař pustil žilou kvůli komplikacím s rakovinou dělohy. Její nemoc trvala měsíce, během kterých Anabella rozhodovala o tom, kdo její dceru směl navštívit a bránila v tom všem jejím přátelům. Ovlivněna svou matkou, změnila náboženství (dříve byla materialistka) a byla přinucena ke změně své poslední vůle tak, aby matka byla její vykonavatelkou. Se svým manželem nebyla v kontaktu od 30. srpna, kdy se mu svěřila s něčím, kvůli čemu od ní odešel. Obsah jejich rozhovoru není znám, ale pravděpodobně se jednalo o přiznání nevěry. Zanechala po sobě dva syny a jednu dceru, lady Anne Bluntovou, která je známá jako spoluzakladatelka chovu arabských plnokrevných koní v Evropě. Na svou žádost byla pohřbena vedle svého otce v kostele svaté Marie Magdalény v Nottinghamu.
+
+
+== Dílo ==
+Ada Lovelaceová byla nadaná matematička. Po seznámení s Charlesem Babbagem se však začala zajímat i o mechanické počítače. Jak již bylo zmíněno výše, detailně popsala funkci Babbageova Analytického stroje a také se podílela na jeho vývoji.
+Navrhla způsob, jak tento počítač naprogramovat, a to pomocí děrných štítků. Zavedla pojmy jako podmíněný a nepodmíněný skok, cyklus a podprogram. Dále se objevují i zmínky o algoritmizaci jakožto základu programování. Lze tedy říci, že vymyslela programování tak, jak je známé dnes.
+Tyto základní myšlenky zveřejnila v upraveném překladu článku italského matematika Luigiho Menabrea. Tento článek přeložila z francouzštiny do angličtiny a doplnila vlastními poznámkami a závěry.
+
+
+== Předpovědi do budoucna ==
+Ve svém díle se zabývala využitím počítačů. Předpověděla, že se počítače jednou budou používat pro řešení složitých matematických úloh, komponování hudby a kreslení obrazů.
+Dále formulovala myšlenku, že počítač není schopen tvořivého myšlení (Babbage s touto myšlenkou však nesouhlasil), neboť je omezen tím, co jsou lidé do něj schopni naprogramovat. V posledních letech svého života se soustředila na pochopení procesu tvořivého myšlení a jeho převedení do strojové podoby.
+
+
+== Odkazy ==
+
+
+=== Reference ===
+
+
+=== Externí odkazy ===
+ Galerie Ada Lovelace na Wikimedia Commons
+ Obrázky, zvuky či videa k tématu Ada Lovelace na Wikimedia Commons 
+Web Futurologie Archivováno 3. 7. 2007 na Wayback Machine.
+Ada Lovelace — Zkus IT[nedostupný zdroj]
+Ada picture gallery Archivováno 4. 4. 2006 na Wayback Machine.
+Augusta Ada King, countess of Lovelace

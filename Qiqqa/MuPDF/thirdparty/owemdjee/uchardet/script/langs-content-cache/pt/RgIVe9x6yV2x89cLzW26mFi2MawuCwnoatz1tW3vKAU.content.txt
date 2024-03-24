@@ -1,0 +1,8 @@
+revision: 59028955
+title: "Motor de infer\xEAncia"
+url: https://pt.wikipedia.org/wiki/Motor_de_infer%C3%AAncia
+
+
+---
+
+Um motor de inferência é uma ferramenta informatizada "caixa preta", também utilizada em Sistema Especialista (Inteligência Artificial), que após ser estimulada com solicitações predeterminadas, oferece as soluções possíveis. Este é o núcleo da inteligência artificial de um sistema especialista, onde a capacidade do motor de inferência é baseada numa combinação de procedimentos de raciocínios de forma regressiva (partindo de uma conclusão, feita pelo usuário ou pelo sistema, é feita uma pesquisa por meio do conhecimento acumulado para se provar a afirmação inicial) e progressiva (respostas fornecidas pelo usuário desencadeando um processo de busca até que se encontre a solução ótima).

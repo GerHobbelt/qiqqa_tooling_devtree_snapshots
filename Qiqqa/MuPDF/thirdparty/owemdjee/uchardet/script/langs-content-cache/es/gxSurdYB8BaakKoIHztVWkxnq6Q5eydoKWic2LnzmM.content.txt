@@ -1,0 +1,30 @@
+revision: 148551970
+title: Modelo generador
+url: https://es.wikipedia.org/wiki/Modelo_generador
+
+
+---
+
+En probabilidades y estadística, un modelo generador es un modelo  para generar valores aleatorios de un dato observable, típicamente dados algunos parámetros ocultos. Este especifica una distribución conjunta sobre una secuencias de etiqueta. Los Modelos Generadores son usados en el campo del aprendizaje automático (machine learning) para modelar cualquier dato directamente, o como un paso intermedio para formar una función de densidad de probabilidad condicional. Una distribución condicional puede ser generada por un Modelo Generador mediante la Regla de Bayes.
+Shannon (1948) da un ejemplo en el que una tabla de frecuencias de pares de palabra en idioma inglés es usada para generar un oración comenzando con "representing and speedily is an good"; la cual no es apropiada en inglés pero cada vez más se va aproximando cuando la tabla es transformada de pares de palabras a tríos.
+Los modelos generadores contrastan con los modelos discriminadores; un modelo generador es un gran modelo probabilista de todas las variables, mientras que un Modelo Discriminativo proporciona un modelo solo para la(s) variable(s) etiquetada(s) como condicionales sobre las variables observadas. Por ello un modelo generador puede ser utilizado, por ejemplo, para simular (i.e. generar) valores de cualquier variable en el modelo, mientras que un Modelo Discriminativo permite el muestreo único de las variables condicionales. En la práctica las dos clases son vistas como complementarias o como diferentes observaciones del mismo procedimiento.[1]​
+Ejemplos de modelos generadores:
+
+Modelo de mezcla gaussiana y otros tipos de modelo de mezcla
+Modelo oculto de Márkov
+Gramática libre de contexto probabilística
+Clasificador bayesiano ingenuo
+Averaged one-dependence estimators
+Latent Dirichlet Allocation
+Restricted Boltzman machine
+
+
+== Véase también ==
+Modelo en grafo
+
+
+== Referencias ==
+
+
+== Bibliografía ==
+Shannon, C.E. (1948) "A Mathematical Theory of Communication Archivado el 15 de julio de 1998 en Wayback Machine.", Bell System Technical Journal, vol. 27, pp. 379–423, 623–656, July, October, 1948

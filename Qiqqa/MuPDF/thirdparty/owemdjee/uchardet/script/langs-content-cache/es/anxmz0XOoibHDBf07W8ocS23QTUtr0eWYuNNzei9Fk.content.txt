@@ -1,0 +1,91 @@
+revision: 136541075
+title: Technology
+url: https://es.wikipedia.org/wiki/MOS_Technology
+
+
+---
+
+MOS Technology, Inc., también conocida como Commodore Semiconductor Group, (al ser adquirida por CBM), fue un fabricante de calculadoras y microprocesadores, siendo famosa por su microprocesador MOS Technology 6502.
+Pese a la similitud, no tiene nada que ver con Mostek.
+
+
+== Historia ==
+MOS comenzó siendo una segunda fuente de las calculadoras y chips internos diseñados por Texas Instruments. También fabricó por corto tiempo el custom chip utilizado por Atari para sus consolas PONG. Mientras que el mercado de la calculadora creció MOS se convirtió eventualmente en el mayor proveedor de Commodore Business Machines, por lo que prácticamente su negocio se basaba en suministrarle componentes para su línea de calculadoras.[1]​
+Las cosas cambiaron dramáticamente en 1975. Varios de los diseñadores del Motorola 6800 dejaron la compañía poco después de su lanzamiento, al parecer con disgusto. Como entonces no existían compañías de sólo diseño (las hoy conocidas como Fabless), tuvieron que unirse a una compañía fabricante de chips para poder producir sus diseños. MOS era una firma pequeña con buenas credenciales en el área adecuada, la Costa Este de Estados Unidos.
+El equipo de cuatro diseñadores estaba dirigido por Chuck Peddle e incluía a Bill Mensch. En MOS se fijaron como objetivo el diseño de una nueva CPU que superara al 6800 mientras que seguía siendo similar en propósito. El diseño resultante fue el MOS Technology 6501, bastante similar al 6800, pero que usando varias simplificaciones en el diseño, hasta cuatro veces más rápido.
+
+
+=== Corrección de Máscaras ===
+Además, MOS tenía una arma secreta, la capacidad de corregir sus máscaras.[2]​ Las máscaras son los dibujos grandes del chip que se reducen fotográficamente para hacer el modelo desde el que se hacen los chips – un proceso similar a la fotocopia. Todas las máscaras terminan con defectos, unos como resultado de problemas de diseño del chip, otros como efectos secundarios del proceso de foto-reducción. Cuando un chip se hace con una máscara, es cuestión de suerte cuantos de esos defectos terminarán fijados en el chip. Si hay demasiados de ellos, ese chip en concreto no funcionará.
+Si un diseño de chip con cinco defectos de diseño da lugar a una máscara con diez defectos en total, no tiene sentido crear una nueva máscara porque tendrá los mismos cinco defectos de diseño y además otro grupo de cinco defectos consecuencia del proceso de copia (estos últimos diferentes en cada copia). Por ello las compañías simplemente construyen chips con esas máscaras, y descartan los chips defectuosos. A finales de los 70 esto podía suponer tirar el 70% o más de los chips fabricados. El precio de un chip es definido en gran parte por la producción, la medida de cuantos funcionan, por lo que a mayor cantidad de éstos se puede bajar el precio y aumentar el beneficio bruto exponencialmente.
+Los ingenieros de MOS habían aprendido el truco de arreglar sus máscaras después de crearlas. Esto permitió que corrigieran los defectos principales en una serie de arreglos pequeños, produciendo eventualmente una máscara con una tasa muy baja de defectos. Las líneas de montaje de la compañía invirtieron los números que otras alcanzaban; incluso en las primeras tiradas de una CPU nueva alcanzaban un índice de éxito del 70% o más. Esto significaba que no sólo sus diseños eran más rápidos, sino que también costaban mucho menos.
+Para ello, se comparaban dos máscaras. Ya que es difícil que el mismo defecto aparezca en ambas máscaras a la vez, cuando aparecía una diferencia se detectaba cuál de las dos tenía el fallo y se corregía el hueco con un poco de tinta o tapándolo con otro material.
+
+
+=== Familia 6502 ===
+Cuando se anunció el 6501, Motorola interpuso una demanda inmediatamente. Aunque el 6501 no era compatible con el 6800, podía conectarse sin problemas en cualquier placa madre para el 6800 debido a que utilizaba el mismo patillaje. Esto fue bastante para que Motorola pudiera interponer la demanda. Las ventas del 6501 básicamente se detuvieron, y la demanda podía eternizarse durante años hasta que MOS se viera forzada a pagar una multa de $200.000.
+Mientras las ventas del MOS Technology 6502 a 1 MHz habían comenzado en septiembre de 1975 con un precio de $25. Era esencialmente idéntico al 6501, excepto en el patillaje. Debido a su velocidad superaba ampliamente al más complejo y caro 6800, y respecto al Intel 8080 costaba menos y era más fácil de programar. Aunque no tenía la ventaja de poder usar el hardware existente para el Motorola como el 6501, era tan barato que rápidamente superó al 6800 en popularidad, haciendo eso un punto discutible.
+
+Los 6502 eran tan baratos, que mucha gente creyó que era un engaño cuando MOS lo mostró por primera vez en una feria comercial en 1975. Desconocían la técnicas de máscaras de MOS y cuando calcularon el precio por chip a los precios de coste normales, los números no les cuadraban. Pero cualquier duda en su compra se evaporó cuando Motorola y Intel bajaron los precios de sus propios diseños de $179 a $69 en la misma feria para competir. Sus acciones legitimaron al 6502. Al finalizar la feria el barril de madera lleno a rebosar de muestras estaba vacío.
+El 6502 se convirtió rápidamente en uno de los chips más populares de sus tiempos. Muchas compañías licenciaron la línea 650x de MOS, entre ellas Rockwell, GTE, Synertek, y Western Design Center (WDC).
+Numerosas versiones de la CPU básica, conocidas como los 6503 a 6507, estaban disponibles en encapsulado DIL de 28 pines para un coste menor. En cada uno de ellos se eliminaban señales o pines de direcciones. El más popular de todos fue el 6507, utilizado en la videoconsola Atari 2600 (y su legión de clónicas) y en las unidades de disquete Atari para su Familia Atari de 8 bits. El 6504 se utilizó en varias impresoras. MOS lanzó también una serie de CPUs similares utilizando relojes externos, que se identificaban por un 1 como tercer dígito, designados 6512 a 6515. Eran muy útiles en sistemas donde el soporte de reloj ya era proporcionado por otro chip en la placa base. El añadido final fue el 6510 utilizado en el Commodore 64, con puertos adicionales de Entrada / Salida.
+
+
+=== Commodore Semiconductor Group ===
+Pese al éxito de los 6502, la compañía tenía problemas. Aproximadamente a la vez que lanzaban la CPU el mercado de calculadoras se derrumbó, y todos los demás productos de MOS dejaron de enviarse. Pronto estaban en serios problemas financieros. El rescate vino de la mano de Commodore, que compró la compañía entera. El acuerdo llegó pronto y mientras que la firma se convirtió en la división de fabricación de Commodore, continuaron usando el nombre MOS para que los manuales no tuvieran que reimprimirse. Poco después MOS pasaba a ser Commodore Semiconductor Group (CSG). Pese a las nueva siglas (CSG), todos los chips siguieron utilizando el viejo logo de MOS hasta 1989.
+MOS había diseñado previamente un sencillo kit de ordenador llamado KIM-1, principalmente como un medio para mostrar lo que podía hacer el 6502. En Commodore, Peddle convenció al nuevo propietario, Jack Tramiel, de que las calculadoras eran un callejón sin salida, y que el mercado de los ordenadores personales pronto sería enorme. Un KIM re-empaquetado con una pantalla y teclados nuevos se convirtió en el Commodore PET.
+Sin embargo, el grupo original de diseño parecía estar incluso menos interesado en trabajar para Jack Tramiel que para Motorola, y el equipo comenzó rápidamente a desintegrarse. Un resultado de ello fue que el recién terminado chip 6522 (VIA) permaneció indocumentado durante años.
+Bill Mensch dejó MOS al poco de la compra por Commodore, y se trasladó de Mesa, Arizona a Norristown, Pensilvania. Tras un corto empleo como consultor en una compañía local llamada ICE, se unió al Western Design Center (WDC) en 1978. Como licenciatario de la línea 6502, sus primeros productos fueron versiones CMOS (mucho más eficientes en consumo) con bugs corregidos del 6502 (el 65C02, tanto como chip individual como embebido en un microcontrolador llamado 65C150). Pero entonces ampliaron mucho la línea con la introducción de la CPU W65C816, un chip de 16 bits mejora directa del 65C02 que también podía funcionar en modo 8 bits por compatibilidad. El diseño de la CPU de 32 bits 65832, similar en concepto, se terminó pero no fue puesta en producción. Como WDC había cambiado mucho el diseño original de MOS a CMOS, los 6502 siguen siendo hoy una CPU popular en sistemas embebidos como equipo médico y controladores de tablero en automóviles.
+
+
+=== GMT Microelectronics ===
+Tras la bancarrota de Commodore en 1994, el equipo gerente de Commodore Semiconductor Group crea GMT Microelectronics (Great Mixed-signal Technologies) con Dennis Peasenell como CEO para intentar comprar la compañía. En diciembre de 1994, llegan con la Environmental Protection Agency (EPA) a un Prospective Purchase Agreement (un acuerdo de compra que limitaba la responsabilidad de la compañía a cambio de participar en los costes de limpieza), por un importe de unos 4,3 millones de dólares, más 1 millón de dólares adicionales para cubrir varios gastos incluyendo embargos de la EPA. Establecen su sede en Valley Forge, Pennsylvania.
+En 1995 reabre la Fab original de MOS Technologies (construida en la década de 1970) en Norristown, Pensilvania que empleaba técnicas de un micrómetro, y que Commodore cerró en 1992. Van abriendo oficinas de venta en Tampa (Florida), Dallas (Texas, Laguna Hills (California, San José (California), Europa y Asia y aceptan también pedidos por su dominio web ( www.gmtme.com hoy en día no operativo). Se especializan en la fabricación de chips analógicos, de señal mixta (de ahí su nombre) y de manejo de alimentación eléctrica, además de ofrecer a terceros servicios de fundición.
+El 18 de marzo de 1999 anuncia a la prensa[3]​ su acuerdo con TelCom Semiconductor para proporcionar servicios de fundición basados en los procesos Bipolar y SiCr Thin Film Resistor de TelCom Semiconductor y actuar como fuente alternativa licenciada de productos basados en la tecnología Bipolar. La Fab producía 10000 wafers (obleas de silicio de tamaño 5) por mes, y fabricaba chips CMOS, BiCMOS, NMOS, BIPOLAR y SOI.
+La planta había estado en la Lista de Prioridades Nacionales de la EPA de productores de desechos peligrosos desde 1989. Antes de 1999 tuvo 21 millones de dólares en réditos y 183 empleados, durante 3 años. Sin embargo, en 2001 la EPA cerró la planta. GMT cesó en sus operaciones y fue liquidada.
+
+
+== Productos ==
+MOS KIM-1 – kit de ordenador en una sola tarjeta / tarjeta de evaluación de CPU, basada en 6502
+MOS Technology 4510 – CPU (CSG 65CE02) con dos CIAs en el chip; 3.45 MHz
+MOS Technology 6501 – CPU pin-compatible con el Motorola 6800
+MOS Technology 6502 – CPU idéntica al 6501 excepto en la compatibilidad de pines con el 6800
+MOS Technology 6507 – CPU con 13 pines de direcciones
+MOS Technology 6508 – CPU con 256 B RAM y 8 pines de I/O
+MOS Technology 6509 – CPU con 20 pines de direcciones
+MOS Technology 6510 – CPU con pines de reloj y de I/O
+MOS Technology 6520 – PIA Peripheral Interface Adapter
+MOS Technology 6522 – VIA Versatile Interface Adapter
+MOS Technology TPI   – TPI Tri-Port Interface, también llamada 6523/6525
+MOS Technology CIA   – CIA Complex Interface Adapter, también llamada 6526/8520/8521
+MOS Technology SPI – SPIA Single Port Interface Adapter
+MOS Technology RRIOT – RRIOT ROM-RAM-I/O Timer
+MOS Technology 6532 – RIOT RAM-I/O Timer
+MOS Technology 6545 – CRTC Controlador de tubo de rayos catódicos (CRT Controller)
+MOS Technology 6551 – ACIA Asynchronous Communications Interface Adapter
+MOS Technology VIC   – VIC Video Interface Chip, también conocido como 6560 (NTSC) y 6561 (PAL)
+MOS Technology VIC-II – también conocido como 6567/8562/8564 (NTSC) y 6569/8565/8566 (PAL)
+MOS Technology SID   – SID Sound Interface Device, también conocido como 6581/6582/8580
+MOS Technology TED  – TED Text Editing Device, también conocido como 7360/8360 (HMOS-I/II)
+MOS Technology 8500 – CPU Version HMOS-II del 6510
+MOS Technology 8501 – CPU 6502 HMOS-II con puerto I/O de 7 bits
+MOS Technology 8502 – CPU compatible con el 6510 pero capaz de correr a 2 MHz
+MOS Technology 8551 – ACIA Asynchronous Communications Interface Adapter, variante HMOS-II del 6551
+MOS Technology VDC – VDC Video Display Controller
+MOS Technology 8568 – VDC con HSYNC compuesto, VSYNC, e interrupción RDY
+MOS Technology 8722 – MMU Memory Management Unit
+MOS Technology 8726 – REC RAM Expansion Controller
+MOS Technology AGNUS – Address Generator Unites
+MOS Technology 8362 – DENISE Display Encoder
+MOS Technology 8373 – ECS DENISE Display Encoder
+MOS Technology 8364 – PAULA Port Audio UART and Logic
+MOS Technology 5719 – GARY Gate Array
+
+
+== Notas ==
+
+
+== Enlaces externos ==
+On the Edge: The Spectacular Rise and Fall of Commodore (2005) Variant Press, ISBN 0-9738649-0-7. – Un libro que documenta los orígenes de MOS Technology y Commodore.
+Información sobre los chips MOS y su uso en los ordenadores CBM – de Ronald van Dijk
+Página de la EPA sobre el acuerdo con MOS/CSG/GMT - enlace validado el 4 de febrero de 2006

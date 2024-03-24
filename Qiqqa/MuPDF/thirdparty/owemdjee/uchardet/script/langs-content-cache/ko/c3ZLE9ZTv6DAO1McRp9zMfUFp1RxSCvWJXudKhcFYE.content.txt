@@ -1,0 +1,36 @@
+revision: 34963234
+title: Diskpart
+url: https://ko.wikipedia.org/wiki/Diskpart
+
+
+---
+
+diskpart(디스크파트)는 윈도우 2000 이상의 마이크로소프트 운영 체제에 포함된 명령 줄 디스크 파티셔닝 유틸리티이며, 이전의 fdisk를 대체한다. 이 명령어는 ReactOS에서도 사용이 가능하다.
+
+
+== 개요 ==
+diskpart는 내부 하드 디스크 드라이브의 파티션을 지정하기 위해 사용되는 유틸리티이지만 플래시 드라이브와 같은 이동식 매체도 포맷할 수 있다.이론적으로 시스템 설치 중에 예를 들어 플래시 드라이브나 메모리 카드 등 이동식 드라이브에서 윈도우 NT 4.0 / 2000 / XP에서 만들기가 가능하다. 그러나 복구 콘솔은 디스크 등의 포맷이 완전히 막혀있다.
+이 명령어는 자동화 스크립트 사용을 지원한다. 예를 들어 다음의 텍스트 파일은 새로운 파티면 생성을 위해 diskpart에 적용할 수 있다:
+
+create partition logical size=2048
+assign letter=F
+
+위 명령은 디스크의 여유 공간 시작점에 2GB의 논리 파티션을 만들고 여기에 드라이브 문자 F:를 할당한다.설치된 디스크와 연결 볼륨/파티션을 보는 명령어는 다음과 같다:
+
+list disk
+list volume
+list partition
+
+
+== 같이 보기 ==
+논리 디스크 관리자
+GNU Parted
+윈도우 이미징 포맷
+
+
+== 각주 ==
+
+
+== 외부 링크 ==
+“DiskPart commands”. 《Windows Server/Windows Commands/Commands by Server Role》. Microsoft. 2020년 1월 22일에 확인함. 
+“DiskPart.exe and managing Virtual Hard Disks (VHDs) in Windows 7”. 《GES on Windows 7》. Microsoft. 2009년 10월 8일.

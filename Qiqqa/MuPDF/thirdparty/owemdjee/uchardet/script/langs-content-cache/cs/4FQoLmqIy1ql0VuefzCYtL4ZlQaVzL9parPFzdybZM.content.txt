@@ -1,0 +1,42 @@
+revision: 20441568
+title: Linguistics
+url: https://cs.wikipedia.org/wiki/Association_for_Computational_Linguistics
+
+
+---
+
+Association for Computational Linguistics (ACL, česky Asociace počítačové lingvistiky) je mezinárodní vědecké a profesní sdružení lidí pracujících na problémech kolem přirozeného jazyka a počítačů. ACL pořádá každoroční letní konference v místech, kde se nacházejí významná výzkumná pracoviště počítačové lingvistiky. Asociace byla založena v roce 1962 pod názvem Association for Machine Translation and Computational Linguistics (AMTCL, Asociace pro strojový překlad a počítačovou lingvistiku). V roce 1968 byla přejmenována na ACL.
+ACL má evropskou (EACL) a severoamerickou (NAACL) sekci. Obě pořádají své vlastní konference v letech, kdy se hlavní setkání ACL nekoná na jejich kontinentu.
+ACL vydává odborný časopis Computational Linguistics, který je významným fórem pro prezentování výsledků výzkumu v oblasti počítačové lingvistiky a počítačového zpracování přirozeného jazyka. Od roku 1988 pro ACL jeho vydávání zajišťuje vydavatelství MIT Press.
+ACL má také svou knižní edici, Studies in Natural Language Processing, kterou pro ni vydává Cambridge University Press.
+
+
+== Zvláštní zájmové skupiny ==
+V ACL existuje řada tzv. zvláštních zájmových skupin (anglicky Special Interest Groups, SIG), které se zaměřují na konkrétní oblasti počítačového zpracování přirozeného jazyka. V současnosti jsou aktivní např. tyto skupiny:
+
+Lingvistická anotace: SIGANN
+SIGBIOMED
+Lingvistická data a korpusové přístupy: SIGDAT
+Zpracování dialogu: SIGDIAL
+SIGFSM
+Generování přirozeného jazyka: SIGGEN Archivováno 12. 5. 2008 na Wayback Machine.
+Zpracování čínštiny: SIGHAN Archivováno 24. 9. 2020 na Wayback Machine.
+Jazykové technologie pro společenské a humanitní vědy: SIGHUM
+Lexicon: SIGLEX (SIGLEX je zastřešovací organizace pro SemEval (sémantické evaluace) a SENSEVAL vyhodnocování rozlišení významu slov.)
+Matematika jazyka: SIGMOL
+Strojový překlad: SIGMT
+Strojové učení přirozeného jazyka: SIGNLL
+Parsing (syntaktická analýza): SIGPARSE
+Počítačová morfologie a fonologie: SIGMORPHON
+Počítačová sémantika: SIGSEM
+Zpracování řeči a jazyka pro asistivní technologie: SIGSLPAT
+Počítačové přístupy k semitským jazykům: SEMITIC
+Web jako korpus SIGWAC
+
+
+== Externí odkazy ==
+Domovská stránka ACL
+Antologie ACL
+ACL Wiki
+Domovská stránka EACL
+Domovská stránka NAACL

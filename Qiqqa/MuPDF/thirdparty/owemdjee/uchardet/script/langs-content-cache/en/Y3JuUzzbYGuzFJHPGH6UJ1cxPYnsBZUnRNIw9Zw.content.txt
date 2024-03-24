@@ -1,0 +1,88 @@
+revision: 1091170265
+title: FLOW (programming language)
+url: https://en.wikipedia.org/wiki/FLOW_(programming_language)
+
+
+---
+
+FLOW is an educational programming language designed by Jef Raskin in 1970 and implemented on several minicomputers in the early 1970s. The goal of the language is to make it easy to explore algorithms through a highly interactive environment. The overall language is very similar in syntax and structure to the BASIC programming language, but has a number of changes in order to make typing code easier. Most notable among these was the concept of "typing amplification", in which short strings, often a single character, were expanded by the language into the complete "unamplified" source code. Modern integrated development environments and code-oriented text editors often include a similar feature, now normally referred to as autocomplete. The beginning programmer would first create a flow chart to solve the problem. Since the all of problems involved words (rather than mathematical problems) the solution was intuitive. The flow chart would be translated into the flow programming language using a top-down, mechanical method.
+
+
+== History ==
+In 1970, the English Department of the University of Kansas hosted a meeting on the use of computers in the humanities. The conference was followed by a training session that ran from June 13 to August 18, where Jef Raskin was one of several teachers involved in training other teachers basic computer skills. During this period, Raskin developed the FLOW language concept.A key design element of FLOW was the attempt to avoid syntax errors by automating the entry of the language as much as possible. For instance, if one wanted to enter the statement PRINT "10", the user simply had to type P10 and the interactive editor would expand it out as they typed. If the user entered an illegal command, it would flash on the terminal and then be automatically erased so the user was "none the worse for hitting a wrong key". They referred to this concept as "typing amplification", and noted that it had the added advantage of removing an impediment for slow typers or those with physical problems using a terminal.Lewis and Norman later referred to this concept as "gag", in that it gagged the user's input until they typed something useful. They illustrated this by recounting one of Raskin's favorite demonstrations of FLOW, where he would close his eyes and hit random keys on the terminal, building a syntactically correct, albeit meaningless, program.Another aspect of the FLOW system's approach to user interaction was its debugger. This included the command WALK, an analog to BASIC's RUN that delayed after executing each statement in a fashion similar to modern single-step systems.On his return to University of California, San Diego (UCSD), Raskin was able to arrange funding from UCSD and matching funds from the National Science Foundation to purchase equipment to develop the FLOW system, a total of $76,000 (equivalent to $572,703 in 2022). The initial system consisted of three Data General Nova minicomputers with 12k words of memory, several VST 1200 terminals, a Tektronix 4002 graphics terminal, and an HP 7200 plotter. In September 1973 the CPUs were updated to 32k words of memory.The first version of FLOW was programmed by Jonathan "Jon" Collins in FORTRAN for use at the summer institute. To facilitate a quick implementation (1 week), Jonathan restricted input to the first character of the command with the computer supplying the balance of the command letters. Hence, typing amplification was invented.  Flow was later ported by two UCSD graduate students to Nova assembler language. Later ports included MICRO
+800 assembler, BASIC and Algol.
+
+
+== Description ==
+
+
+=== Overall organization ===
+Like BASIC, FLOW uses line numbers both as an editing aid as well as statement labels. Unlike most BASICs, FLOW automatically numbers programs starting at line 10 and incrementing by 10 as new lines are entered. The line numbers are formatted as three digits, so line 10 is displayed as 010. Users can also enter line numbers manually, and renumber the entire program with the NUMBER command.In contrast to BASIC, the RUN command can be instructed to stop once a given line was reached, for instance, RUN FROM FIRST LINE TO 200. To enter this command, the user simply types RF200, with the rest being "amplified" into the command line.
+
+
+=== Syntax and capabilities ===
+The most obvious difference between FLOW and BASIC was that FLOW has only one variable, IT, and lacks mathematical operators. The language has only seven statements, all of which apply basic logic or string manipulation. There is no equivalent of the for loop either, looping is handled entirely through IF tests and JUMP TO statements.The language does not have direct user interaction like BASIC's INPUT, data is instead defined in FLOW's analog of BASIC's DATA statement, TEXT. TEXT IS defines a quote-delimited string, like TEXT IS "HELLO,WORLD", which is then read character-at-a-time using the GET IT. IT is a meta-variable that contains the last read character, and can then be used in other statements, like PRINT IT. IT becomes a blank -not an empty string but a single space- when the TEXT is completely read.Programs can contain multiple TEXT statements, but unlike BASIC's DATA where all of the lines are considered to be one continuous block of data, only one TEXT statement is active at a time as they are encountered by the interpreter. In other words, if there are two TEXT statements in a program, they are not treated as one longer statement as is the case with DATA, IT will return a blank when it runs off the end of the active TEXT statement and will not return more data until the next TEXT statement is encountered in the code.
+
+
+=== Statements ===
+From:
+
+
+==== Program statements ====
+COMMENT - equivalent to BASIC's REM
+PRINT - as in BASIC, takes literal strings between double quotes, the IT variable, or ON A NEW LINE to print a carriage return.
+TEXT IS - similar to DATA in BASIC, but used for strings only
+GET IT - reads the next character from the current TEXT statement
+JUMP TO - equivalent to GOTO, always expands target lines to three digits
+IF IT IS ... JUMP TO - equivalent to IF...THEN but can perform only equality tests against IT
+STOP - used to end a program, but not required
+
+
+==== Interactive commands ====
+RUN - as in BASIC but can define both the start and end lines and use meta-lines FIRST LINE and END
+WALK - executes the program slowly
+DISPLAY - equivalent to LIST. To list the entire program, one uses DISPLAY FROM FIRST LINE TO END
+ERASE - remove lines from a program, ERASE FROM 038 TO 140
+NUMBER - renumber the lines in the program
+
+
+== Example ==
+010 COMMENT FIND IF A WORD HAS EITHER AN "F" OR A "G" IN IT
+020 COMMENT BY LYRA FORET 19 OCTOBER 1971
+030 COMMENT
+040 COMMENT SOME TEST CASES ARE FOX, GOPHER, RAT, DOG, CAT
+050 COMMENT THE RESPECTIVE ANSWERS SHOULD BE YES, YES, NO, YES, NO.
+060 COMMENT
+070 TEXT IS "DOG"
+080 COMMENT OBTAIN A LETTER OF THE TEXT
+090 GET IT
+100 COMMENT CHECK FOR A BLANK WHICH INDICATES END OF WORD
+110 IF IT IS " " JUMP TO 500
+120 COMMENT CHECK FOR F'S OR G'S
+130 IF IT IS "F" JUMP TO 200
+140 IF IT IS "G" JUMP TO 200
+150 COMMENT IT WAS SOME OTHER LETTER, SO GO ON TO THE NEXT CHAR. IN THE TEXT
+160 JUMP TO 080
+200 PRINT "THE WORD HAD AN 'F' OR A 'G' IN IT."
+210 COMMENT WE ARE DONE
+220 STOP
+500 PRINT "THE WORD DID NOT HAVE AN "F' OR A 'G' IN IT."
+
+
+== References ==
+
+
+=== Citations ===
+
+
+=== Bibliography ===
+Raskin, Jef (July 1974). "FLOW: A Teaching Language for Computer Programming in the Humanities". Computers and the Humanities. 8 (4): 231–237. doi:10.1007/BF02402344. S2CID 62648997.
+Lewis, Clayton; Norman, Donald (2014). "Designing for Error".  In Baecker, Ronald (ed.). Readings in Human-Computer Interaction: Toward the Year 2000. Elsevier. pp. 686–697. ISBN 9780080515748.
+
+
+== Further reading ==
+Genter, Donald; Norman, Donald (May 1977). The FLOW Tutor: Schemas for Tutoring (PDF). La Jolla, Calif.: Center for Human Information Processing, University of California, San Diego. OCLC 961830303. Report No. 7702. Archived (PDF) from the original on November 6, 2019.
+
+
+== External links ==
+Flow, a modern implementation of FLOW in LISP

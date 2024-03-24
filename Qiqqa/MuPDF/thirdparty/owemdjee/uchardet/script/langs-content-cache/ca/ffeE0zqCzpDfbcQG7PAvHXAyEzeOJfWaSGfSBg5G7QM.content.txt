@@ -1,0 +1,1699 @@
+revision: 32108053
+title: "Reacci\xF3 d'oxidaci\xF3 reducci\xF3"
+url: https://ca.wikipedia.org/wiki/Reacci%C3%B3_d%27oxidaci%C3%B3_reducci%C3%B3
+
+
+---
+
+Una reacció d'oxidació reducció, reacció d'oxidoreducció, o simplement reacció redox, és aquella reacció química en la qual hi ha una transferència electrònica entre els reactius, donant lloc a un canvi en els seus estats d'oxidació pel que fa als productes.  Pot tractar-se d'un simple procés redox, tal com són l'oxidació del carboni a diòxid de carboni, i la reducció del carboni per l'hidrogen a metà (CH₄), o bé un procés complex com és l'oxidació del sucre en el cos humà, a través d'una sèrie de processos de transferència d'electrons.
+Les reaccions redox orgàniques són reaccions redox en les quals intervenen compostos orgànics com a reactius.
+Perquè es produeixi una reacció redox, en el sistema ha d'haver-hi un element que cedeixi electrons i un altre que els accepti:
+
+L'agent reductor és aquell element químic que subministra electrons de la seva estructura química al medi augmentant el seu estat d'oxidació, és a dir, essent oxidat.
+L'agent oxidant és l'element químic que tendeix a captar aquests electrons, quedant amb un estat d'oxidació inferior al que tenia, és a dir, essent reduït.Quan un element químic reductor cedeix electrons al medi es converteix en un element oxidat, i la relació que guarda amb el seu precursor queda establerta mitjançant el que es diu un parell redox. Anàlogament, es diu que quan un element químic capta electrons del medi es converteix en un element reduït, i igualment forma un parell redox amb el seu precursor oxidat.
+
+
+== Principi d'electroneutralitat ==
+Dins d'una reacció global redox, es dona una sèrie de reaccions particulars a les quals s'anomena semireaccions o reaccions parcials.
+
+2 Na+ + 2 Cl− → 2 Na + Cl₂o més comunament:
+
+2 NaCl → 2 Na + Cl₂La tendència a reduir o oxidar a altres elements químics es quantifica pel potencial de reducció, també anomenat potencial redox.
+Una titulació redox és una en la qual un indicador químic indica el canvi en el percentatge de la reacció redox mitjançant el viratge de color entre l'oxidant i el reductor.
+
+
+=== Oxidació ===
+L'oxidació és una reacció química molt poderosa on un compost cedeix electrons, i per tant augmenta el seu estat d'oxidació.
+S'ha de tenir en compte que en realitat una oxidació o una reducció és un procés pel qual canvia l'estat d'oxidació d'un compost. Aquest canvi no significa necessàriament un intercanvi d'electrons. Suposar això -que és un error comú- implica que tots els compostos formats mitjançant un procés redox són iònics, ja que és en aquests compostos on sí que es dona un enllaç iònic, producte de la transferència d'electrons.
+si
+Per exemple, en la reacció de formació del clorur d'hidrogen a partir dels gasos dihidrògen i diclorur, es dona un procés redox i no obstant això es forma un compost covalent.
+Aquestes dues reaccions sempre es donen juntes, és a dir, quan una substància s'oxida, sempre és per l'acció d'una altra que es redueix. Una cedeix electrons i l'altra els accepta. Per aquesta raó, es prefereix el terme general de reaccions redox.
+La mateixa vida és un fenomen redox. L'oxigen és el millor oxidant que existeix a causa que la molècula és poc reactiva (pel seu doble enllaç) i no obstant això és molt electronegatiu, gairebé com el fluor.
+La substància més oxidant que existeix és el catió KrF+ perquè fàcilment forma Kr i F+.
+Entre unes altres, existeixen el permanganat de potassi (KMnO₄), el dicromat de potassi (K₂Cr₂O₇), l'aigua oxigenada (H₂O₂), l'àcid nítric (HNO₃), els hipohalits i els halats (per exemple l'hipoclorit de sodi (NaClO) molt oxidant en medi alcalí i el bromat de potassi (KBrO₃)). L'ozó (O₃) és un oxidant molt enèrgic:
+
+Br− + O₃ → BrO₃−El nom d'"oxidació" prové del fet que en la majoria d'aquestes reaccions, la transferència d'electrons es dona mitjançant l'adquisició d'àtoms d'oxigen (cessió d'electrons) o viceversa. No obstant això, l'oxidació i la reducció pot donar-se sense que hi hagi intercanvi d'oxigen pel medi, per exemple, l'oxidació de iodur de sodi a iode mitjançant la reducció de clor a clorur de sodi:
+
+2 NaI + Cl₂ → I₂ + 2 NaClAquesta pot desglossar-se en les seves dues semireaccions corresponents:
+
+2I− → I₂ + 2 i−
+*Cl₂ + 2 i− → 2 ClExempleEl ferro pot presentar dues formes oxidades:
+
+Òxid de ferro (II): FeO.
+Òxid de ferro (III): Fe₂O₃
+
+
+=== Reducció ===
+En química, reducció és el procés electroquímic pel qual un àtom o ió guanya electrons. Implica la disminució del seu estat d'oxidació. Aquest procés és contrari al d'oxidació.
+Quan un ió o un àtom es redueix presenta aquestes característiques:
+
+Guanya electrons.
+Actua com agent oxidant.
+És reduït per un agent reductor.
+Disminueix el seu estat o nombre d'oxidació.ExempleL'ió ferro (III) pot ser reduït a ferro (II):
+
+Fe3+ + i− → Fe2+En química orgànica, la disminució d'enllaços d'àtoms d'oxigen a àtoms de carboni o l'augment d'enllaços d'hidrogen a àtoms de carboni s'interpreta com una reducció. Per exemple:
+
+CH≡CH + H₂ → CH₂=CH₂ (l'etí es redueix per donar etè).
+CH₃–CHO + H₂ → CH₃–CH₂OH (l'etanal es redueix a etanol).
+
+
+== Nombre d'oxidació ==
+La quantificació d'un element químic pot efectuar-se mitjançant el seu nombre d'oxidació. Durant el procés, el nombre d'oxidació de l'element augmenta. En canvi, durant la reducció, el nombre d'oxidació de l'espècie que es redueix disminueix. El nombre d'oxidació és un nombre enter que representa el nombre d'electrons que un àtom posa en joc quan forma un enllaç determinat.
+El nombre d'oxidació:
+
+Augmenta si l'àtom perd electrons (l'element químic que s'oxida), o els comparteix amb un àtom que tingui tendència a captar-los.
+Disminueix quan l'àtom guanya electrons (l'element químic que es redueix), o els comparteix amb un àtom que tingui tendència a cedir-los.
+
+
+=== Regles per assignar el nombre d'oxidació ===
+El nombre d'oxidació de tots els elements sense combinar és zero. Independentment de la forma en què es representin.
+El nombre d'oxidació de les espècies iòniques monoatòmiques coincideix amb la càrrega de l'ió.
+El nombre d'oxidació de l'hidrogen combinat és +1, excepte en els hidrurs metàl·lics, on el seu nombre d'oxidació és –1 (ej: AlH₃, LiH)
+El nombre d'oxidació de l'oxigen combinat és –2, excepte en els peròxids, on el seu nombre d'oxidació és –1 (ex.:Na₂O₂, H₂O₂).
+El nombre d'oxidació en els elements metàl·lics, quan estan combinats és sempre positiu i numèricament igual a la càrrega de l'ió.
+El nombre d'oxidació dels halogens en els hidràcids i les seves respectives sals és –1, en canvi el nombre d'oxidació del sofre en el seu hidràcid i respectives sals és –2.
+El nombre d'oxidació d'una molècula és zero o, cosa que és el mateix, la suma dels nombres d'oxidació dels àtoms d'una molècula neutra és zero.
+
+
+== Ajust d'equacions ==
+Tot procés redox requereix l'ajust estequiomètric dels components de les semireaccions per a l'oxidació i reducció.
+Per a reaccions en el medi aquós, generalment s'afegeixen:
+
+al medi àcid ions hidrogen (H+), molècules d'aigua (H₂O), i electrons
+al medi bàsic hidroxils (OH−), molècules d'aigua (H₂O), i electrons per compensar els canvis en els nombres d'oxidació.
+
+
+=== Medi àcid ===
+Al medi àcid s'agreguen hidrogens (cations) (H+) i aigua (H₂O) a les semirreaccions per balancejar l'equació final.
+Del costat de l'equació que faci mancada oxigen s'agregaran molècules d'aigua, i del costat de l'equació que facin mancada hidrògens s'agregaran oxonis.
+Per exemple, quan el manganès (II) reacciona amb el bismutat de sodi.
+Equació sense equilibrar:
+
+  
+    
+      
+        M
+        
+          n
+          
+            (
+            a
+            q
+            )
+          
+          
+            +
+            2
+          
+        
+        +
+        N
+        a
+        B
+        i
+        
+          O
+          
+            3
+            (
+            s
+            )
+          
+        
+        →
+        B
+        
+          i
+          
+            (
+            a
+            q
+            )
+          
+          
+            +
+            3
+          
+        
+        +
+        M
+        n
+        
+          O
+          
+            4
+            (
+            a
+            q
+            )
+          
+          
+            −
+          
+        
+      
+    
+     
+  
+Oxidació :
+  
+    
+      
+        M
+        
+          n
+          
+            (
+            a
+            q
+            )
+          
+          
+            +
+            2
+          
+        
+        →
+        M
+        n
+        
+          O
+          
+            4
+            (
+            a
+            q
+            )
+          
+          
+            −
+          
+        
+        +
+        5
+        
+          i
+          
+            −
+          
+        
+      
+    
+     
+  
+Reducció :
+  
+    
+      
+        2
+        
+          i
+          
+            −
+          
+        
+        +
+        B
+        i
+        
+          O
+          
+            3
+            (
+            s
+            )
+          
+          
+            −
+          
+        
+        →
+        B
+        
+          i
+          
+            (
+            a
+            q
+            )
+          
+          
+            3
+            +
+          
+        
+      
+    
+     
+  Ara hem d'afegir els oxonis i les molècules d'aigua on faci mancada hidrògens i on faci mancada oxígens, respectivament.
+
+Oxidació: 
+  
+    
+      
+        
+          4
+          
+            H
+            
+              2
+            
+          
+          O
+          
+            +
+            M
+            
+              n
+              
+                (
+                a
+                q
+                )
+              
+              
+                +
+                2
+              
+            
+            →
+            M
+            n
+            
+              O
+              
+                4
+                (
+                a
+                q
+                )
+              
+              
+                −
+              
+            
+            +
+            
+              8
+              
+                H
+                
+                  (
+                  a
+                  q
+                  )
+                
+                
+                  +
+                
+              
+              
+                +
+                5
+                
+                  i
+                  
+                    −
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+  
+Reducció: 
+  
+    
+      
+        2
+        
+          i
+          
+            −
+          
+        
+        +
+        
+          6
+          
+            H
+            
+              +
+            
+          
+          
+            +
+            B
+            i
+            
+              O
+              
+                3
+                (
+                s
+                )
+              
+              
+                −
+              
+            
+            →
+            B
+            
+              i
+              
+                (
+                a
+                q
+                )
+              
+              
+                3
+                +
+              
+            
+            +
+            
+              3
+              
+                H
+                
+                  2
+                
+              
+              O
+              
+            
+          
+        
+      
+    
+     
+  Les reaccions s'equilibraran en el moment d'igualar la quantitat d'electrons que intervenen en ambdues semireaccions. Això s'aconseguirà multiplicant la reacció d'una semirreacció pel nombre d'electrons de l'altra semireacció (i, si cal, viceversa), de manera que la quantitat d'electrons sigui constant.
+
+Oxidació: 
+  
+    
+      
+        (
+        4
+        
+          H
+          
+            2
+          
+        
+        O
+        +
+        M
+        
+          n
+          
+            (
+            a
+            q
+            )
+          
+          
+            +
+            2
+          
+        
+        →
+        M
+        n
+        
+          O
+          
+            4
+            (
+            a
+            q
+            )
+          
+          
+            −
+          
+        
+        +
+        8
+        
+          H
+          
+            (
+            a
+            q
+            )
+          
+          
+            +
+          
+        
+        +
+        
+          5
+          
+            e
+            
+              −
+            
+          
+          
+            )
+            
+              ×
+              2
+              
+            
+          
+        
+      
+    
+     
+  
+Reducció: 
+  
+    
+      
+        (
+        
+          2
+          
+            e
+            
+              −
+            
+          
+          
+            +
+            6
+            
+              H
+              
+                +
+              
+            
+            +
+            B
+            i
+            
+              O
+              
+                3
+                (
+                s
+                )
+              
+              
+                −
+              
+            
+            →
+            B
+            
+              i
+              
+                (
+                a
+                q
+                )
+              
+              
+                3
+                +
+              
+            
+            +
+            3
+            
+              H
+              
+                2
+              
+            
+            O
+            )
+            
+              ×
+              5
+              
+            
+          
+        
+      
+    
+     
+  Al final tindrem:
+
+Oxidació: 
+  
+    
+      
+        8
+        
+          H
+          
+            2
+          
+        
+        O
+        +
+        2
+        M
+        
+          n
+          
+            (
+            a
+            q
+            )
+          
+          
+            +
+            2
+          
+        
+        →
+        2
+        M
+        n
+        
+          O
+          
+            4
+            (
+            a
+            q
+            )
+          
+          
+            −
+          
+        
+        +
+        16
+        
+          H
+          
+            (
+            a
+            q
+            )
+          
+          
+            +
+          
+        
+        +
+        10
+        
+          i
+          
+            −
+          
+        
+      
+    
+     
+  
+Reducció: 
+  
+    
+      
+        10
+        
+          i
+          
+            −
+          
+        
+        +
+        30
+        
+          H
+          
+            +
+          
+        
+        +
+        5
+        B
+        i
+        
+          O
+          
+            3
+            (
+            s
+            )
+          
+          
+            −
+          
+        
+        →
+        5
+        B
+        
+          i
+          
+            (
+            a
+            q
+            )
+          
+          
+            3
+            +
+          
+        
+        +
+        15
+        
+          H
+          
+            2
+          
+        
+        O
+      
+    
+     
+  Com es pot veure, els electrons estan balancejats, així que procedim a sumar les dues semireaccions, per obtenir finalment l'equació balancejada.
+
+  
+    
+      
+        
+          
+            
+              
+                
+                
+                  
+                    
+                      
+                        8
+                        
+                          H
+                          
+                            2
+                          
+                        
+                        O
+                        +
+                        2
+                        M
+                        
+                          n
+                          
+                            (
+                            a
+                            q
+                            )
+                          
+                          
+                            +
+                            2
+                          
+                        
+                        →
+                        2
+                        M
+                        n
+                        
+                          O
+                          
+                            4
+                            (
+                            a
+                            q
+                            )
+                          
+                          
+                            −
+                          
+                        
+                        +
+                        16
+                        
+                          H
+                          
+                            (
+                            a
+                            q
+                            )
+                          
+                          
+                            +
+                          
+                        
+                        +
+                        10
+                        
+                          e
+                          
+                            −
+                          
+                        
+                      
+                    
+                    
+                      
+                        10
+                        
+                          e
+                          
+                            −
+                          
+                        
+                        +
+                        30
+                        
+                          H
+                          
+                            +
+                          
+                        
+                        +
+                        5
+                        B
+                        i
+                        
+                          O
+                          
+                            3
+                            (
+                            s
+                            )
+                          
+                          
+                            −
+                          
+                        
+                        →
+                        5
+                        B
+                        
+                          i
+                          
+                            (
+                            a
+                            q
+                            )
+                          
+                          
+                            3
+                            +
+                          
+                        
+                        +
+                        15
+                        
+                          H
+                          
+                            2
+                          
+                        
+                        O
+                      
+                    
+                  
+                
+                ⇓
+              
+              +
+            
+            _
+          
+        
+      
+    
+     
+  
+
+  
+    
+      
+        14
+        
+          H
+          
+            (
+            a
+            q
+            )
+          
+          
+            +
+          
+        
+        +
+        2
+        M
+        
+          n
+          
+            (
+            a
+            q
+            )
+          
+          
+            +
+            2
+          
+        
+        +
+        5
+        N
+        a
+        B
+        i
+        
+          O
+          
+            3
+            (
+            s
+            )
+          
+        
+        →
+        7
+        
+          H
+          
+            2
+          
+        
+        O
+        +
+        2
+        M
+        n
+        
+          O
+          
+            4
+            (
+            a
+            q
+            )
+          
+          
+            −
+          
+        
+        +
+        5
+        B
+        
+          i
+          
+            (
+            a
+            q
+            )
+          
+          
+            3
+            +
+          
+        
+        +
+        5
+        N
+        
+          a
+          
+            (
+            a
+            q
+            )
+          
+          
+            +
+          
+        
+      
+    
+     
+  
+
+
+=== Medi bàsic ===
+Al medi bàsic s'agreguen ions hidròxils (anions) (OH−) i aigua (H₂O) a les semireaccions per equilibrar l'equació final.
+Per exemple, tenim la reacció entre el permanganat de potassi i el sulfit de sodi.
+Equació sense equilibrar:
+
+  
+    
+      
+        K
+        M
+        n
+        
+          O
+          
+            4
+          
+        
+        +
+        N
+        
+          a
+          
+            2
+          
+        
+        S
+        
+          O
+          
+            3
+          
+        
+        +
+        
+          H
+          
+            2
+          
+        
+        O
+        →
+        M
+        n
+        
+          O
+          
+            2
+          
+        
+        +
+        N
+        
+          a
+          
+            2
+          
+        
+        S
+        
+          O
+          
+            4
+          
+        
+        +
+        K
+        O
+        H
+        
+        
+      
+    
+     
+  Separem les semirreaccions en:
+
+Oxidació: 
+  
+    
+      
+        S
+        
+          O
+          
+            3
+          
+          
+            −
+            2
+          
+        
+        →
+        S
+        
+          O
+          
+            4
+          
+          
+            −
+            2
+          
+        
+        +
+        2
+        
+          e
+          
+            −
+          
+        
+      
+    
+     
+  
+Reducció: 
+  
+    
+      
+        3
+        
+          e
+          
+            −
+          
+        
+        +
+        M
+        n
+        
+          O
+          
+            4
+          
+          
+            −
+          
+        
+        →
+        M
+        n
+        
+          O
+          
+            2
+          
+        
+      
+    
+     
+  Agreguem la quantitat adequada d'hidròxids i aigua (les molècules d'aigua se situen on hi ha major quantitat d'oxígens).
+
+Oxidació: 
+  
+    
+      
+        
+          2
+          O
+          
+            H
+            
+              −
+            
+          
+          
+            +
+            S
+            
+              O
+              
+                3
+              
+              
+                −
+                2
+              
+            
+            →
+            S
+            
+              O
+              
+                4
+              
+              
+                −
+                2
+              
+            
+            +
+            
+              
+                H
+                
+                  2
+                
+              
+              O
+              
+                +
+                2
+                e
+                −
+              
+            
+          
+        
+      
+    
+     
+  
+Reducció: 
+  
+    
+      
+        3
+        
+          e
+          
+            −
+          
+        
+        +
+        
+          2
+          
+            H
+            
+              2
+            
+          
+          O
+          
+            +
+            M
+            n
+            
+              O
+              
+                4
+              
+              
+                −
+              
+            
+            →
+            M
+            n
+            
+              O
+              
+                2
+              
+            
+            +
+            
+              4
+              O
+              
+                H
+                
+                  −
+                
+              
+              
+            
+          
+        
+      
+    
+     
+  Equilibrem la quantitat d'electrons igual que en l'exemple anterior.
+
+Oxidació: 
+  
+    
+      
+        (
+        2
+        O
+        
+          H
+          
+            −
+          
+        
+        +
+        S
+        
+          O
+          
+            3
+          
+          
+            −
+            2
+          
+        
+        →
+        S
+        
+          O
+          
+            4
+          
+          
+            −
+            2
+          
+        
+        +
+        
+          H
+          
+            2
+          
+        
+        O
+        +
+        
+          2
+          
+            e
+            
+              −
+            
+          
+          
+            )
+            
+            
+              ×
+              3
+              
+            
+          
+        
+      
+    
+     
+  
+Reducció: 
+  
+    
+      
+        (
+        
+          3
+          
+            e
+            
+              −
+            
+          
+          
+            +
+            2
+            
+              H
+              
+                2
+              
+            
+            O
+            +
+            M
+            n
+            
+              O
+              
+                4
+              
+              
+                −
+              
+            
+            →
+            M
+            n
+            
+              O
+              
+                2
+              
+            
+            +
+            4
+            O
+            
+              H
+              
+                −
+              
+            
+            )
+            
+            
+              ×
+              2
+              
+            
+          
+        
+      
+    
+     
+  Obtenim:
+
+Oxidació: 
+  
+    
+      
+        6
+        O
+        
+          H
+          
+            −
+          
+        
+        +
+        3
+        S
+        
+          O
+          
+            3
+          
+          
+            −
+            2
+          
+        
+        →
+        3
+        S
+        
+          O
+          
+            4
+          
+          
+            −
+            2
+          
+        
+        +
+        3
+        
+          H
+          
+            2
+          
+        
+        O
+        +
+        6
+        
+          e
+          
+            −
+          
+        
+      
+    
+     
+  
+Reducció: 
+  
+    
+      
+        6
+        
+          e
+          
+            −
+          
+        
+        +
+        4
+        
+          H
+          
+            2
+          
+        
+        O
+        +
+        2
+        M
+        n
+        
+          O
+          
+            4
+          
+          
+            −
+          
+        
+        →
+        2
+        M
+        n
+        
+          O
+          
+            2
+          
+        
+        +
+        8
+        O
+        
+          H
+          
+            −
+          
+        
+      
+    
+     
+  Com es pot veure, els electrons estan equilibrats, així que procedim a sumar les dues semireaccions, per obtenir finalment l'equació equilibrada.
+
+  
+    
+      
+        
+          
+            
+              
+                
+                
+                  
+                    
+                      
+                        6
+                        O
+                        
+                          H
+                          
+                            −
+                          
+                        
+                        +
+                        3
+                        S
+                        
+                          O
+                          
+                            3
+                          
+                          
+                            −
+                            2
+                          
+                        
+                        →
+                        3
+                        S
+                        
+                          O
+                          
+                            4
+                          
+                          
+                            −
+                            2
+                          
+                        
+                        +
+                        3
+                        
+                          H
+                          
+                            2
+                          
+                        
+                        O
+                        +
+                        6
+                        
+                          e
+                          
+                            −
+                          
+                        
+                      
+                    
+                    
+                      
+                        6
+                        
+                          e
+                          
+                            −
+                          
+                        
+                        +
+                        4
+                        
+                          H
+                          
+                            2
+                          
+                        
+                        O
+                        +
+                        2
+                        M
+                        n
+                        
+                          O
+                          
+                            4
+                          
+                          
+                            −
+                          
+                        
+                        →
+                        2
+                        M
+                        n
+                        
+                          O
+                          
+                            2
+                          
+                        
+                        +
+                        8
+                        O
+                        
+                          H
+                          
+                            −
+                          
+                        
+                      
+                    
+                  
+                
+                ⇓
+              
+              +
+            
+            _
+          
+        
+      
+    
+     
+  
+
+  
+    
+      
+        2
+        K
+        M
+        n
+        
+          O
+          
+            4
+          
+        
+        +
+        3
+        N
+        
+          a
+          
+            2
+          
+        
+        S
+        
+          O
+          
+            3
+          
+        
+        +
+        
+          H
+          
+            2
+          
+        
+        O
+        →
+        2
+        M
+        n
+        
+          O
+          
+            2
+          
+        
+        +
+        3
+        N
+        
+          a
+          
+            2
+          
+        
+        S
+        
+          O
+          
+            4
+          
+        
+        +
+        2
+        K
+        O
+        H
+        
+        
+      
+    
+     
+  
+
+
+== Aplicacions ==
+A la indústria, els processos redox també són molt importants, tant pel seu ús productiu (per exemple la reducció de minerals per a l'obtenció de l'alumini o del ferro) com per la seva prevenció (per exemple en la corrosió).
+La reacció inversa de la reacció redox (que produeix energia) és la electròlisi, en la qual s'aporta energia per dissociar elements de les seues molècules.
+
+
+== Oxidacions i reduccions biològiques ==
+En el metabolisme de tots els éssers vius, els processos redox tenen una importància cabdal, ja que estan involucrats en la cadena de reaccions químiques de la fotosíntesi i de la respiració aeròbica. En ambdues reaccions existeix una cadena transportadora d'electrons formada per una sèrie de complexos enzimàtics, entre els quals destaquen els citocroms; aquests complexos enzimàtics accepten (es redueixen) i cedeixen (s'oxiden) parells d'electrons d'una manera seqüencial, de tal manera que el primer cedeix electrons al segon, aquest al tercer, etc., fins a un acceptor final que es redueix definitivament; durant el seu viatge, els electrons van alliberant energia que s'aprofita per sintetitzar enllaços d'alta energia en forma de ATP.
+Un altre tipus de reacció redox fonamental en els processos metabòlics són les deshidrogenacions, en les quals un enzim (deshidrogenasa) arrenca un parell d'àtoms d'hidrogen a un substrat; atès que l'àtom d'hidrogen consta d'un protó i un electró, aquest substrat s'oxida (ja que perd electrons). Aquests electrons són captats per molècules especialitzades, principalment les coenzimes NAD+, NADP+ i FAD que en guanyar electrons es redueixen, i els condueixen a les cadenes transportadores d'electrons abans esmentades.
+El metabolisme implica centenars de reaccions redox. Així, el catabolisme ho constitueixen reaccions en què els substrats s'oxiden i els coenzims es redueixen. Per contra, les reaccions del anabolisme són reaccions en què els substrats es redueixen i els coenzims s'oxiden. En el seu conjunt, catabolisme i anabolisme constitueixen el metabolisme.
+En els metalls una conseqüència molt important de l'oxidació és la corrosió, fenomen d'impacte econòmic molt negatiu, atès que els materials adquireixen o modifiquen les seves propietats segons als agents que estiguin exposats, i com actuïn sobre ells. Combinant les reaccions d'oxidació-reducció (redox) en una cel·la galvànica s'aconsegueixen les piles electroquímiques. Aquestes reaccions poden aprofitar-se per evitar fenòmens de corrosió no desitjats mitjançant la tècnica del ànode de sacrifici i per a l'obtenció de corrent elèctric continu.
+
+
+== Referències ==
+
+
+== Vegeu també ==
+Coulombimetria
+Pila Daniell
+Diagrama d'Ellingham
+Metal·lotèrmia

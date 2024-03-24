@@ -1,0 +1,44 @@
+revision: 69487034
+title: Akumulator elektryczny
+url: https://pl.wikipedia.org/wiki/Akumulator_elektryczny
+
+
+---
+
+Akumulator elektryczny, ogniwo wtórne – rodzaj ogniwa galwanicznego, które może być wielokrotnie użytkowane i ładowane prądem elektrycznym (w przeciwieństwie do ogniw pierwotnych, których nie można ładować). Wszystkie rodzaje akumulatorów elektrycznych gromadzą i później uwalniają energię elektryczną dzięki odwracalnym reakcjom chemicznym zachodzącym w elektrolicie oraz na styku elektrolitu i elektrod.
+W akumulatorach występują dwa cykle pracy:
+
+ładowanie, w czasie którego akumulator jest odbiornikiem energii elektrycznej – wewnątrz akumulatora energia elektryczna jest przetwarzana na energię chemiczną
+pobór energii z akumulatora (praca) – urządzenie staje się źródłem prądu elektrycznego na skutek przemiany energii chemicznej na energię elektryczną; rezultatem poboru energii jest stopniowe rozładowywanie akumulatora.Jednym z podstawowych parametrów akumulatora jest pojemność. Jest to zdolność ogniwa do przechowywania ładunku elektrycznego zwykle wyrażana w amperogodzinach [Ah] i jednostkach krotnych (w układzie SI jednostką ładunku jest kulomb, 1 Ah = 3600 C). Typowy akumulator samochodowy ma pojemność ok. 50 Ah, co oznacza, że jest zdolny dostarczać prąd o natężeniu 1 A przez 50 godzin, typowe akumulatorki miniaturowe rozmiaru R6 (AA) charakteryzują się ładunkiem rzędu 500–3000 mAh, zatem prąd 100 mA mogą dostarczać przez 5–30 godzin.
+W trakcie ładowania przez akumulator prąd płynie w przeciwnym kierunku niż w trakcie jego pracy. Odwracalne reakcje chemiczne powodujące ładowanie i pracę są w istocie takie same, tyle że zachodzą w przeciwnym kierunku. W praktycznie każdym akumulatorze oprócz pożądanych, odwracalnych reakcji chemicznych zachodzą też jednak nieodwracalne reakcje uboczne, które powodują, że z czasem akumulator traci swoje właściwości.
+
+W zależności od składu elektrolitu i budowy elektrod wyróżnia się następujące rodzaje akumulatorów:
+
+akumulator kwasowo-ołowiowy (akumulator Plantego) – elektrolitem jest roztwór kwasu siarkowego, elektroda (–) wykonana jest z ołowiu (z dodatkami) w formie siatki, zaś elektroda (+) jest wykonana z tlenku ołowiu(IV) PbO2 immobilizowanego na ramce ołowianej – tego rodzaju akumulatory są masowo wykorzystywane w samochodach. Zaletą akumulatora ołowiowego jest zdolność rozładowania dużym prądem przez krótki czas, prostota układu ładowania, niska cena w stosunku do pojemności. Wadą jest znaczna masa przypadająca na jednostkę pojemności.
+akumulator litowo-jonowy (Li-ion) – jedna z elektrod jest wykonana z porowatego węgla a druga z tlenków metali, zaś rolę elektrolitu pełnią złożone chemicznie sole litowe rozpuszczone w mieszaninie rozpuszczalników organicznych
+akumulator litowo-polimerowy (Li-Po) – odmiana akumulatorów Li-ion, w których ciekły elektrolit jest zastąpiony stałym elektrolitem polimerowym, wykonanym na przykład z gąbek na bazie poliakrylonitrylu.
+akumulator niklowo-kadmowy (Ni-Cd), zwany też wtórną baterią alkaliczną – elektrody są wykonane z wodorotlenku niklu i wodorotlenku kadmu, zaś elektrolitem są półpłynne lub stałe substancje o składzie chemicznym różniącym się w zależności od producenta, ale zawsze posiadającym silnie zasadowy (inaczej alkaliczny) odczyn
+akumulator niklowo-metalowo-wodorkowy (NiMH) – ulepszona odmiana akumulatorów NiCd, w których jedna z elektrod jest wykonana z niklu, zaś druga elektroda ze spieku metali ziem rzadkich w atmosferze wodoru. Rolę klucza elektrolitycznego spełnia gąbczasta struktura nasączona substancjami alkalicznymi oraz złożonym chemicznie katalizatorem. System elektrochemiczny jest zdolny do absorpcji wydzielających się podczas ładowania gazów, szczególnie wodoru. Akumulator jest całkowicie szczelny i charakteryzuje się długą trwałością.
+akumulator niklowo-cynkowy (Ni-Zn) – ulepszona wersja akumulatorów Ni-Cd, w której katoda wykonana jest z niklu, zaś anoda z cynkuSprawność akumulatora, czyli stosunek energii oddanej podczas pracy do energii włożonej do akumulatora w procesie ładowania, jest zawsze mniejsza od jedności. W większości akumulatorów sprawność jest rzędu 60%. Sprawność akumulatorów NiMH osiąga 85%, natomiast akumulatorów Li-ion – 94%.
+
+
+== Akumulator w transporcie ==
+Jednym z pomysłów na rozwiązanie nadchodzącego problemu braku paliw ropopochodnych (wytwarzanych z ropy naftowej) może być produkowanie samochodów elektrycznych. Auta takie byłyby ładowane raz na jakiś czas z sieci elektroenergetycznej, a energia chemiczna zmagazynowana wewnątrz akumulatora napędzałaby silnik elektryczny w pojeździe. Do ewentualnego rozwiązania w przyszłości pozostanie problem znalezienia odnawialnego źródła energii elektrycznej.
+
+
+== Stan prawny w Polsce ==
+12 czerwca 2009 weszła w życie ustawa o bateriach i akumulatorach z 24 kwietnia 2009 roku, która nakłada obowiązek zbierania zużytych baterii i akumulatorów w celu przekazania ich do recyklingu.
+
+
+== Uwagi ==
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+AndrzejA. Czerwiński AndrzejA., Współczesne chemiczne źródła prądu, Wydawnictwa Szkolne i Pedagogiczne [dostęp 2010-11-07] [zarchiwizowane z adresu 2013-01-13] .
+
+
+== Linki zewnętrzne ==
+Informacja o zakodowanych w oznaczeniach wymiarach akumulatorów. torch.pl. [zarchiwizowane z tego adresu (2016-11-16)].

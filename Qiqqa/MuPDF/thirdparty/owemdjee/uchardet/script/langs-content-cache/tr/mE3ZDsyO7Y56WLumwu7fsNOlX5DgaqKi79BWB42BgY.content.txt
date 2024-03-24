@@ -1,0 +1,161 @@
+revision: 29379962
+title: Netscape
+url: https://tr.wikipedia.org/wiki/Netscape
+
+
+---
+
+Netscape Communications Corporation (eski adıyla Mosaic Communications Corporation) Mountain View, Kaliforniya ve daha sonra Dulles, Virginia merkezli Amerikan bağımsız bir bilgisayar hizmetleri şirketidir. Netscape web tarayıcısı bir zamanlar baskındı 1990'ların ortalarında pazar payı yüzde 90'ın üstündeyken 2006'da yüzde 1'in altına indi. Rakipleri Microsoft Internet Explorer ve diğer tarayıcılara yenik düştü. Aynı zamanda Netscape, en yaygın programlama dili JavaScript'i oluşturan şirkettir.
+Netscape firması, 28 Aralık 2007 tarihinde sitesinde yaptığı duyuruyla, Netscape ağ tarayıcısının zamanın önde firmalarına göre geride kaldığını ve yıllar önce yakaladıkları liderliği diğer firmalara kaptırdıklarını bildirerek 2008'in Mart ayından itibaren herhangi bir güncellemede bulunmayacaklarını açıkladı. Bildiriyle birlikte ayrıca, kullanıcıların Mozilla Firefox kullanmalarını öneren firma, böylece yaklaşık 15 yıllık tarihini sonlandırmış oldu.
+Netscape'in hisseleri 1995'ten 1999'a kadar işlem gördü ve şirket 1999'da Amerikan şirketi AOL tarafından 10 Milyar Dolara Satın alındı 1998'de şirket AOL'a satılmadan önce Mozilla'yı kurdu
+Gecko render motoruna dayalı olarak tarayıcının bütün kodlarını yeniden yazdı
+Netscape'in tarayıcı geliştirmesi Aralık 2007'ye kadar devam etti ve AOL şirketin 2008 yılında desteklemeyeceğini duyurdu . 2011 yılında AOL Netscape'i indirimli internet sağlayıcısı olarak kullanmaya devam etti.
+AOL, Netscape Communications Corporation'ın adını New Aurora Corporation olarak değiştirdi ve Netscape markasını kendilerine devretti. AOL, Netscape'i önce Microsoft'a daha sonra Facebook'a sattı. Eski Netscape şirketi Halen New Aurora Corporation olarak bilinen Facebook'tur. Netscape Markası Verizon Media'ya aittir. Verizon Communications bir yan kuruluşudur.
+
+
+== Netscape Communications Corporation Tarihi ==
+
+
+=== İlk Yılları ===
+Netscape, WorldWideWeb'den yararlanmak için girişimde bulunan ilk şirket oldu
+Nisan 1994'te Marc Andreessen'i kurucu ortak, Kleiner Perkins'i de yatırımcı olarak işe alan Jim Clark'ın Buluşu olan Mosaic Communications Corporation adıyla kuruldu. Clark ve Andreessen arasındaki ilk toplantı Netscape gibi bir hizmet değildi, Nintendo benzeri bir ürün hakkında idi. Clark, SGI ve NCSA Mosaic'ten diğer çalışanları işe aldı. Jim Barksdale 1995'te CEO olarak işe başladı Jim Clark ve Marc Andreessen Nintendo'ya bir online oyun ağı için 20 sayfalık bir sunum yaptı ama kabul edilmedi.
+Şirketin ilk ürünü 13 Ekim 1994'te piyasaya sürülen Mosaic Netscape 0.9 adlı bir web tarayıcısıydı.
+Piyasaya sürüldükten 4 ay sonra Pazar payının dörtte üçünü almıştı. Mosaic, rekabete göre üstünlüğünden dolayı kısa sürede internet kullanıcılarının ana tarayıcısı haline geldi. Bu tarayıcının adı daha sonra Netscape Navigator olarak değiştirildi ve şirket Netscape adını aldı.
+9 Ağustos 1995 tarihinde, Netscape son derece başarılı bir halka arzyaptı. Hisse senedi hisse başına 14 ABD doları olarak teklif edilecekti, ancak son dakika kararı hisse başına 28 $ ilk teklif iki katına çıktı. Hisse senedinin değeri, ilk işlem gününde 75 dolara yükselmiş ve ilk gün kazancı neredeyse rekor kırmış oldu. Hisse senedi 58,25 dolardan kapandı ve Netscape'in piyasa değeri 2,9 milyar dolar oldu. Bir şirketin kârlı olmadan önce halka açık olması biraz alışılmadık olsa da, Netscape'in gelirleri aslında 1995'te her çeyrekte ikiye katlanmıştı. Bu halka arzın başarısı daha sonra yeni bir endüstrinin doğuşunu gösteren yüksek görünürlüklü bir halka arzı tanımlamak için "Netscape moment" teriminin kullanılmasına ilham kaynağı oldu. Bu dönemde Netscape, Andreessen'i şirketin "rock yıldızı" olarak paketlemek için Rosanne Siino(o zamanlar halkla ilişkiler başkanı) tarafından hazırlanmış bir tanıtım stratejisi izledi. Bu dönemde yaşananlar Andreessen'i yalınayak Time dergisinin kapağına koydu.  Halka arz ayrıca, nokta-com baloncuğu yaratan internet şirketlerine yapılan yaygın yatırımın başlamasına da yardımcı oldu.
+Netscape, "web herkes içindir" diyerek, hedeflerinden birinin işletim sistemleri arasında tutarlı bir web tarama deneyimi sunarak işletim sistemleri arasında "oyun alanını eşitlemek" olduğunu belirtti. Netscape web tarayıcı arayüzü herhangi bir bilgisayarda aynıydı. Netscape daha sonra, hangi bilgisayar veya işletim sistemini kullanırlarsa kullansınlar, kullanıcıların dosyalarına bir ağ üzerinden herhangi bir yerden erişmelerini ve düzenleyebilmelerini sağlayacak web tabanlı bir sistemin prototiplerini denedi. Bu Microsoft'un dikkatinden kaçmadı, hangi alt satırında doğrudan bir tehdit olarak işletim sistemlerinin emtia gördü, yani Windows'tan başka bir işletim sistemine bir hareket benzer bir tarama deneyimi böylece değiştirmek için engelleri azaltarak verim olacaktır. Haziran 1995'te bazı Microsoft yöneticilerinin, pazarın bölünmesini önermek için Netscape kampüslerini ziyaret ettiği iddia ediliyor (Microsoft tarafından reddedilen bir iddia ve doğruysa, antitröst yasalarını ihlal etmiş olacaktı), bu da Microsoft'un diğer tüm işletim sistemlerini Netscape'e bırakırken Windows için web tarayıcısı yazılımı üretmesine olanak sağlayacaktı Netscape teklifi reddetti.
+
+
+=== Açık Kaynak Kullanımı ===
+Ocak 1998 aynı zamanda Netscape'in açık kaynak Mozilla projesini başlattığı aydı. Netscape, netscape Communicator 5.0'ın kaynak kodunu popüler bir açık kaynak projesi haline gelmesi umuduyla kamuoyuna açıkladı. Bu kodu, GNU Genel Kamu Lisansı'na benzeyen ancak Netscape'in kamuya açık kodu içeren özel eserleri yayınlamaya devam etmesine olanak sağlayan Netscape Kamu Lisansı'na yerleştirdi. Ancak, Communicator 5.0 kodunu bu şekilde yayımladıktan sonra, Netscape e-posta ve kurumsal işlevselliği geliştirmeye odaklanan Communicator 5.0 üzerinde çalışmaya başladı. Sonunda Communicator 5.0 tarayıcısını geliştirmenin çok zor olduğu ortaya çıktı ve bu kod tabanında açık kaynak geliştirme durduruldu. Bunun yerine, açık kaynak geliştirme sıfırdan inşa edilmiş yeni nesil bir tarayıcıya kaydırıldı. Yeni inşa Gecko düzen motoru kullanarak, Bu tarayıcı Communicator 5.0 çok daha modüler mimarisi vardı ve bu nedenle, programcılar çok sayıda geliştirmek daha kolay oldu. Ayrıca, Windows, Macintosh ve Unix'te çalıştırılan bir kullanıcı arabiriminin tek bir şekilde geliştirilmesine izin veren XUL adlı bir XML kullanıcı arabirimi dili de içeriyordu.
+Amerika Birleşik Devletleri Adalet Bakanlığı Mayıs 1998'de Microsoft'a karşı bir antitröst davası açtı. Netscape davada davacı değildi, ancak yöneticileri mahkemeye çağrıldı ve 'Kötü Tutum' iç tartışma forumunun tüm içeriği de dahil olmak üzere davaya çok fazla maddi katkıda bulundu. Ekim 1998'de Netscape, Web dizini sitesi NewHoo'yu 1 milyon ABD doları karşılığında satın aldı, adını Açık Dizin Projesi olarak değiştirdi ve veritabanını açık içerik lisansıyla yayımladı.
+
+
+=== America Online (AOL) Tarafından Satın Alınma ===
+24 Kasım 1998'de America Online (AOL), Netscape Communications'ı 4,2 milyar ABD doları değerindeki vergiden muaf bir hisse senedi takası ile satın alacağını duyurdu. Bu süre zarfında Andreessen'in Netscape'e bakışı değişti; ona göre, artık sadece bir tarayıcı, intranet, extranet, ya da bir yazılım şirketi, daha ziyade ürün ve hizmetlerin bir birleşimi oldu. Anlaşma 17 Mart 1999'da sona erine kadar 10 milyar ABD doları değerindeydi. Bu birleşme, iki şirket kültürünin birbirine kenredemeyeceğine inanan pek çok kişi tarafından alay konusu oldu; en önemli eleştirmenlerinden biri uzun zamandır Netscape geliştirici Jamie Zawinski oldu. Satın alma, AOL'nin Microsoft'a karşı bir pazarlık kozu kazanmasının bir yolu olarak görüldü ve internet explorer web tarayıcısına daha az bağımlı hale geldi. Diğerleri, AOL'nin Netcenter veya Netscape'in web özellikleriyle ilgilendiğine inanıyordu. Sonunda, Netscape'in sunucu ürünleri ve Profesyonel Hizmetler grubu, AOL ve Sun Microsystems arasında ortak bir pazarlama ve geliştirme ittifakı olan iPlanet'in bir parçası haline geldi. 14 Kasım 2000'de AOL, Mozilla 0.6 kaynak koduna dayanarak Netscape 6'yı piyasaya sürdü. (Sürüm 5 atlandı.) Ne yazık ki, Mozilla 0.6 henüz istikrarlı olmaktan uzaktı ve bu yüzden Netscape 6 etkisi daha uzak Netscape marka insanları götürmek oldu. Ağustos 2001'e kadar Netscape 6.1 ortaya çıkmadı, Mozilla 0.9.2'ye göre önemli ölçüde daha sağlamdı. Bir yıl sonra Netscape 7.0, Mozilla 1.0 çekirdek dayalı geldi.
+
+
+=== Dağılma ===
+Netscape'in AOL tarafından satın alınması sırasında, Netscape yazılım ürünlerinin ortak geliştirilmesi ve pazarlanması Sun-Netscape Alliance aracılığıyla gerçekleşebilmektedir. Yazılım, yeni markalı iPlanet, "mesajlaşma ve takvim, işbirliği, web, uygulama, dizin ve sertifika sunucuları" yanı sıra "ticaret değişimi, satın alma, satış ve fatura dahil olmak üzere e-ticaret için üretime hazır uygulamalar" dahil. Mart 2002'de, ittifak sona erdiğinde, "iPlanet Sun'ın bir bölümü haline geldi... Sun tüm ürünler ve mühendislik için fikri mülkiyet haklarını korudu"
+15 Temmuz 2003'te Time Warner (eski adıyla AOL Time Warner) Netscape'i dağıttı. Programcıların çoğu işten çıkarıldı ve Netscape logosu binadan kaldırıldı. Ancak Netscape 7.2 web tarayıcısı (Netscape personeli yerine şirket içinde geliştirildi ve bazı işler Sun'un Pekin geliştirme merkezine (dış kaynaklıydı) AOL tarafından 18 Ağustos 2004'te piyasaya sürüldü.
+12 Ekim 2004'te popüler geliştirici web sitesi Netscape DevEdge AOL tarafından kapatıldı. DevEdge Internet ile ilgili teknolojiler için önemli bir kaynak oldu, Netscape tarayıcı, HTML ve JavaScript gibi ilişkili teknolojiler üzerinde belgeler ve Danny Goodman gibi sanayi ve teknoloji liderleri tarafından yazılmış popüler makaleler üzerinde kesin belgeleri korumak. DevEdge'in bazı içerikleri Mozilla web sitesinde yeniden yayınlanmıştır.
+Ocak 2010'da Oracle tarafından Sun'ın satın alınmasından sonra Oracle, Netscape'ten kaynaklanan iPlanet markalı uygulamaları satmaya devam etti. Uygulamalar arasında Oracle iPlanet Web Server ve Oracle iPlanet Web Proxy Server bulunmaktadır.
+
+
+== Netscape Classic sürümleri ==
+
+
+=== Netscape Navigator (1.0–4.08 sürümler) ===
+
+1.0 sürümünden 3.04 sürümüne kadar Netscape'in adı Netscape Navigator idi.
+İlk beta sürümü 1994 yılında üretildi ve adı Mosaic'e Mosaic Netscape'ti. NCSA Mosaic'in yapımcıları bu ismi davaya verdikten sonra tarayıcının ismi Netscape Navigator'a çevrildi. Hatta şirketin adı da Mosaic Communications Corporation'dan Netscape Communications Company'a çevrildi.
+Netscape'in ilk beta sürümünün özellikleri internette sörf yapmayı kolaylaştırıyordu ve bu yüzden daha beta sürümünde pazar liderliğini eline geçirdi. 1.0 sürümündeki özellikleri de kullanıcılar tarafından beğenildi ve liderliğini devam ettirdi. 2.0 sürümde ise e-posta okuma özelliği eklendi. Netscape Mail olarak adlandırılan bu bölümle Netscape bir internet takımı oldu. Tam bu sırada Microsoft Internet Explorer'ı çıkarttı ve tarayıcı savaşları başlamış oldu.
+Netscape'nin 3.0 sürümü (ilk betasının kod adı "Atlas"tır) Microsoft Internet Explorer'la rekabetin ilk döneminde yapıldı. Netscape bu sürümde IE(Internet Explorer) ile kolaylıkla rekabet edebildi. WYSIWYG HTML düzenleyicisi eklenen bu sürüme "Altın" sürüm deniliyordu. Netscape yeni eklentiler, tablolar için artalan renk desteği, arşiv özellikleri ve appletler(Türkçesi küçük web uygulamaları) gibi yenilikler içeriyordu ve tartışılmaz en büyük oranda kullanılan tarayıcı oldu.
+
+
+=== Netscape Communicator (4.0–4.8 sürümler) ===
+Netscape 4, internet takımının adının Netscape Communicator'a dönüştürülmeye başladığı sürümdür.
+1996 - 1997 'de yapılan 5. önizleme sürümlerinde, Netscape Corp. haziran 1997'de Netscape Communicator'un son sürümünü bitirdi. Bu yeni sürüm az veya çok Netscape Navigator 3 koduyla üretilmişti. Yeni özellikler eklenmişti(CSS1 element desteği, az düzeyde dinamik yazı tipi desteği ve nesne elementi desteği gibi) ve bazı özellikler güncellendi. Yeni takım başarılı olmasına rağmen Internet Explorer 4.0 ile gideren artan rekabet(daha iyi HTML motoru) ve tarayıcıda bazı sorunlar vardı. The Communicator Netscape Navigator'dan yapılmıştı, Netscape Mail ve Newsgroups, Netscape Address Book ve Netscape Composer (bir HTML düzenleyici). Ocak 1998'de Netscape Communicator'un 4.5 sürümü yapıldı. bu yeni sürümün özellikleri arasında çeşitli işlevsel geliştirmeler, özellikle Mail/News birleşeninde, ama tarayıcının ana yapısı güncellenmedi. Sadece bir ay sonra, Netscape Communications Corporation AOL tarafından satın alındı. Netscape Navigator'un bağımsız sürümü sessizdi ve Windows için 4.08'den sonraki sürümü yoktu. Bununla birlikte, Unix/Linux gibi diğer işletim sistemleri için bağımsız sürümleri 4.8 sürümüne kadar vardı.
+Ocak 1998'de Netscape Communications Corporation Netscape'nin kaynak kodlarını ücretsiz olarak dağıtmaya başladı ve Netscape Açık Kaynak Topluluğu(Mozilla) tarafından geliştirilmeye başladı. 5.0 sürümü pek yenilik getirmiyordu. Bu yüzden pek tutulmadı ve Microsoft IE 4.0'ın planlarını yağmaya başladı. IE 4.0 HTML 4, CSS, DOM ve ECMAScript için desteğini arttırıyordu. Microsoft IE'nin 5.0 sürümünü çıkartınca, pazarında ciddi bir kayıp yaşayan Netscape'in liderliğini eline aldı.
+
+
+=== Tarayıcının Son Sürümü ===
+Netscape markası yaygın olarak kullanılmaya devam etti. Şirket bir kez daha geliştirme ve web tarayıcıları serisi için destek adamış kendi programlama personeli vardı. Ayrıca, Netscape ayrıca Haziran 2006'da yeni bir görünüm verildi, Diggbenzer popüler bir sosyal haber sitesi oldu Pervane web portalı,korudu. AOL, Netscape markası altında iss hizmeti nde indirim pazarladı.
+Netscape tarayıcısının yeni bir sürümü, Netscape Navigator 9, Firefox 2 dayalı, Ekim 2007'de piyasaya sürüldü. Yeşil ve gri bir arayüze sahiptir. Kasım 2007'de, IE tarayıcı pazarının% 77.4 vardı, Firefox %16,0 ve Netscape %0,6, Net Applications göre, bir Internet ölçümleri firma. 28 Aralık 2007'de AOL, 1 Şubat 2008'de Netscape web tarayıcısı desteğini düşüreceğini ve artık yeni sürümler geliştirmeyeceğini duyurdu. Tarih daha sonra büyük bir güvenlik güncelleştirmesine izin vermek ve kullanıcıların diğer tarayıcılara geçişlerinde yardımcı olacak bir araç eklemek için 1 Mart 'a uzatıldı. Bu ek özellikler, 20 Şubat 2008'de yayımlanan Netscape Navigator 9'un (sürüm 9.0.0.6) son sürümünde yer aldı.
+
+
+== Mozilla tabanlı sürümler ==
+
+
+=== Netscape 6 (6.0–6.2.3 sürümler) ===
+Açık kaynaklı olarak kullanıma sunulan Netscape, Mozilla Örgütü tarafından geliştirilmeye başladığı için Mozilla ağ tarayıcısının şu anda kullanmakta olduğu HTML yorumlama motoru olan "Gecko" ile geliştirilmiştir.
+
+
+== Ürün Listesi ==
+
+
+=== İlk Ürünler ===
+Netscape'in ilk ürün serisi aşağıdakilerden oluşuyordu:
+Windows için Netscape Navigator web tarayıcısı,
+Macintosh, OS / 2, Unix ve Linux
+Netsite İletişim web sunucusu, web tabanlı yapılandırma arayüzü ile
+Netsite Ticaret web sunucusu, sadece SSL (https) ile İletişim sunucusu eklendi
+Netscape Proxy Sunucusu
+
+
+=== Daha Sonraki Ürünler ===
+Netscape'in sonraki ürünleri şunlardır:
+Netscape Personal Edition (Bir ISS ile kaydolmak için PPP yazılımı ve hesap oluşturma sihirbazı ile birlikte tarayıcı)
+Netscape Communicator (posta, haber, takvim, VoIPve web sayfaları oluşturma araçları ile birlikte Navigator dahil bir paketi ve AOL Instant Messenger ve RealAudio ile birlikte oldu)
+Netscape FastTrack ve Enterprise web sunucuları
+Netscape Collabra Server, Collabra Software, Inc. şirketinin satın aldığı bir NNTP haber sunucusu
+Netscape Directory Server, LDAP sunucusu
+Netscape Messaging Server, IMAP ve POP posta sunucusu
+SSL sertifikaları vermek için Netscape Certificate Server
+
+
+== Sürüm Tarihi ==
+Netscape Navigator 1.0 – 15 Aralık 1994
+Netscape Navigator 1.1
+Netscape Navigator 1.22
+Netscape Navigator 2.0 – 18 Eylül 1995
+Netscape Navigator 2.01
+Netscape Navigator 2.02
+Netscape Navigator 3.0 – 19 Ağustos 1996
+Netscape Navigator 3.01
+Netscape Navigator 3.02
+Netscape Navigator 3.03
+Netscape Navigator 3.04 – 4 Ekim 1997
+Netscape Communicator/Navigator 4.0 – Haziran 1997
+Netscape Communicator/Navigator 4.01
+Netscape Communicator/Navigator 4.02
+Netscape Communicator/Navigator 4.03
+Netscape Communicator/Navigator 4.04
+Netscape Communicator/Navigator 4.05
+Netscape Communicator/Navigator 4.06 – 17 Ağustos 1998
+Netscape Communicator/Navigator 4.07
+Netscape Communicator/Navigator 4.08 – 9 Kasım 1998 (16-bit Windows ve 68k Mac'ler için son sürüm)
+Netscape Communicator 4.5 – [19 Ekim 1998
+Netscape Communicator 4.61 – 14 Haziran, 1999
+Netscape Communicator 4.7 – 30 Eylül 1999
+Netscape Communicator 4.71
+Netscape Communicator 4.72
+Netscape Communicator 4.73
+Netscape Communicator 4.74
+Netscape Communicator 4.75
+Netscape Communicator 4.76
+Netscape Communicator 4.77
+Netscape Communicator 4.78
+Netscape Communicator 4.79 – 2001
+Netscape Communicator 4.8 – 22 Ağustos 2002
+Netscape 6.0 – 14 Kasım 2000 (Mozilla 0.7 tabanlı)
+Netscape 6.01 – 9 Şubat 2001(Mozilla 0.7 tabanlı)
+Netscape 6.1 – 8 Ağustos 2001 (Mozilla 0.9.2.1 tabanlı)
+Netscape 6.2 – 30 Ocak 2001 (Mozilla 0.9.4.1 tabanlı)
+Netscape 6.2.1 (Mozilla 0.9.4.1 tabanlı)
+Netscape 6.2.2 (Mozilla 0.9.4.1 tabanlı)
+Netscape 6.2.3 – 15 Mayıs 2002 (Mozilla 0.9.4.1 tabanlı)
+Netscape 7.0 – 29 Ağustos 2002 (Mozilla 1.0.1 tabanlı)
+Netscape 7.01 – 10 Aralık 2002 (Mozilla 1.0.2 tabanlı)
+Netscape 7.02 – 18 Şubat 2003 (Mozilla 1.0.2 tabanlı)
+Netscape 7.1 – 30 Haziran 2003 (Mozilla 1.4 tabanlı)
+Netscape 7.2 – 17 Ağustos 2004 (Mozilla 1.7 tabanlı)
+Netscape Browser 8.0 – 19 Mayıs 2005 (Mozilla Firefox 1.0.3 tabanlı)
+Netscape Browser 8.0.1 – 19 Mayıs 2005 (Mozilla Firefox 1.0.4 tabanlı)
+Netscape Browser 8.0.2 – 17 Haziran 2005 (Mozilla Firefox 1.0.4 tabanlı)
+Netscape Browser 8.0.3.1 – 25 Temmuz 2005 (Mozilla Firefox 1.0.6 tabanlı)
+Netscape Browser 8.0.3.3 – 8 Ağustos 2005 (Mozilla Firefox 1.0.6 tabanlı)
+Netscape Browser 8.0.4 – 19 Ekim 2005 (Mozilla Firefox 1.0.7 tabanlı)
+Netscape Browser 8.1 – 25 Ocak 2006 (Gecko 1.7.5 tabanlı)
+
+
+== Ayrıca bakınız ==
+Mozilla
+Tarayıcı savaşları
+Ağ tarayıcısı
+
+
+== Dış bağlantılar ==
+Netscape.com1 Ekim 2019 tarihinde Wayback Machine sitesinde arşivlendi.
+Netscape Ağ Tarayıcısı30 Haziran 2007 tarihinde Wayback Machine sitesinde arşivlendi.
+Netscape Sürüm Rehberi 27 Ocak 2006 tarihinde Wayback Machine sitesinde arşivlendi.
+Netscape Tarayıcı Arşivi25 Aralık 2010 tarihinde Wayback Machine sitesinde arşivlendi.

@@ -1,0 +1,21 @@
+revision: 7296895
+title: "Oloven\xFD akumul\xE1tor"
+url: https://sk.wikipedia.org/wiki/Oloven%C3%BD_akumul%C3%A1tor
+
+
+---
+
+Olovený akumulátor  je sekundárny elektrochemický článok (nabíjateľná batéria) s olovenými elektródami, ktorého elektrolytom je kyselina sírová. Hlavnou výhodou olovených akumulátorov je schopnosť dodávať vysoké nárazové prúdy, čo sa výhodne používa napr. pri štartovaní automobilov so spaľovacím motorom. Ďalšou prednosťou je jednoduchá, spoľahlivá konštrukcia a nízka cena. Olovený akumulátor objavil francúzsky fyzik Gaston Planté v roku 1859.
+
+
+== Sekundárny elektrochemický článok ==
+Olovený akumulátor je sekundárny elektrochemický článok, lebo po ponorení olovených elektród do elektrolytu s kyselinou sírovou sa elektródy pasivujú  –  pokryjú sa vrstvičkou síranu olovnatého (PbSO4). V tomto stave nedokáže akumulátor dodávať elektrickú energiu, teda nie je primárnym elektrochemickým článkom. V okamihu keď privedieme na elektródy napätie, prebehnú na nich chemické reakcie, ktoré vytvoria rozdielny povrch anódy a katódy, čím sekundárne vznikne sekundárny elektrochemický článok a akumulátor môže dodávať elektrickú energiu.
+
+
+== Chemické reakcie pri nabíjaní a vybíjaní ==
+Vybíjaním sa aktívna hmota zápornej aj kladnej elektródy premieňa na síran olovnatý (PbSO4) a elektrolyt je ochudobňovaný o kyselinu sírovú a obohacovaný o vodu. Pri vybíjaní teda klesá koncentrácia elektrolytu a naopak pri nabíjaní jeho koncentrácia rastie.
+Celková reakcia pri vybíjaní:
+Pb + 2H2 SO4 + PbO2 → 2PbSO4 + 2H2ONa zápornej elektróde:Pb + SO42- → PbSO4 + 2e-Na kladnej elektróde:PbO2 + 4H+ + SO42- + 2e-  → PbSO4 + 2H2OPri nabíjaní prebiehajú uvedené reakcie opačným smerom. Vybíjanie akumulátora prebieha tiež samovoľne bez pripojenia k elektrickému obvodu.
+
+
+== Referencie ==

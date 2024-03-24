@@ -1,0 +1,67 @@
+revision: 6389122
+title: Automatic Data Processing
+url: https://et.wikipedia.org/wiki/Automaatne_numbrim%C3%A4rgi_tuvastus
+
+
+---
+
+Automaatne numbrimärgi tuvastus (automatic number plate recognition ehk ANPR) on tehnoloogia, mis suudab jäädvustada pilte sõidukitest ning lugeda automaatselt sõidukite numbrimärke, et võrrelda neid andmebaasi kirjetega. ANPR kasutab numbrimärgi kujutise tuvastamiseks, normaliseerimiseks ja parandamiseks pilditöötlustehnikaid, pildistamiseks värvilist, mustvalget või infrapunakaamerat ning lugemiseks optilist märgituvastust (OCR) (ingl optical character recognition), et eraldada numbrimärgist tähtnumbrid. Väljavõetud teavet saab kasutada koos andmebaasiga või ilma paljudes rakendustes, näiteks elektroonilistes maksesüsteemides ning liiklusjärelvalves kiirteede ja magistraalide seiresüsteemides.Automaatne numbrimärgi tuvastus on viimastel aastatel tegelenud linnade nutikaks muutmisega ning on tõhus vahend sõidukite liikumise kohta teabe hankimiseks. Sellel tehnoloogial on oluline roll näiteks automaatse teemaksu kogumisel, liikluse jälgimisel, parklate juurdepääsu kontrollil ja liikluseeskirjade täitmisel.
+
+
+== Teised nimed ==
+Automaatset numbrimärgi tuvastust tuntakse ka muude terminite all:
+
+Automaatne (või automatiseeritud) numbrimärgi tuvastus ALPR (ingl Automatic (or automated) license-plate recognition)Automaatne (või automatiseeritud) numbrilugeja ALPR (ingl Automatic (or automated) license-plate reader)Automaatne sõiduki tuvastamine AVI (ingl Automatic vehicle identification)
+Automärgi tuvastus CPR (ingl Car-plate recognition)
+Numbrimärgi tuvastus LPR (ingl License-plate recognition)
+Mobiilne numbrilugeja MLPR (ingl Mobile license-plate reader)
+Sõiduki numbrimärgi tuvastus VLPR (ingl Vehicle license-plate recognition)
+Sõiduki indentifitseerimine VRI (ingl Vehicle recognition identification) 
+
+
+== Areng ==
+ANPR leiutati 1976. aastal Ühendkuningriigis tollal tuntud Politsei Teadusarengu Haru (ingl Police Scientific Development Branch), praeguse nimega Siseministeeriumi Teadusarengu Haru (ingl Home Office Scientific Development Branch) poolt. Esimene pilootsüsteem töötati välja 1979. aastal Ühendkuningriigi kiirteede liikluse jälgimiseks. Esimene vahistamine, mis toimus tänu ANPR-i tuvastussüsteemile, toimus alles 1981. aastal.  
+ANPR-i arengu märkimisväärsed verstapostid:
+1993 – ANPR võeti esimest korda kasutusele Londoni linna ümber asuva Terasrõnga (ingl Ring of Steel) kaameravõrgu osana. Projekti viis ellu Londoni suurlinna politsei, et lõpetada terrorirünnakute jada finantspiirkonnas. 1997 – Politsei Riikliku Arvutiteenistuse (ingl Police National Computer service) laiendusena moodustati Politsei Riiklik ANPR-i Andmekeskus (NADC) (ingl The Police National ANPR Data Centre), mis võimaldas analüüsida üle politseijõudude piiride, koondades kõik politsei ANPR-i andmed kogu Ühendkuningriigist. 2003 – ANPR-i esimene ulatuslikum kasutamine tsiviileesmärkidel. Kasutusele võeti Londoni ummikumaksu skeem, mille eesmärk oli liiklust Londoni kesklinnas vähendada. Transport for Londoni andmetel jaotatakse 700 ANPR-kaamerat igale ummikumaksu tsooni teele, et jälgida sõidukite igapäevast liikumist (nii sisse- kui ka väljasõitu).  2005 – asutati ANPR International Limited, mille esimene arendus tuleneb eyeTRAFFIC back office platvormi loomisest, mis on loodud käsitlema ANPR-i andmeid paljudest erinevatest võrguallikatest ja töötlema andmeid mitmesuguste modulaarsete rakenduste kaudu. 2006 – ANPR International võttis parkimishalduse jaoks kasutusele oma esimese staatilise kaamerasüsteemi – bayGAURDIAN, mis võimaldas parklate haldajatel jälgida parklasse sisenevaid ja väljuvaid sõidukeid, arvutades sõiduki kohapeal viibimise aja ja tuvastades sõidukid, millel ei olnud luba või mis jäid liiga kauaks. 2007 - bayGUARDIAN moodulit laiendati integreerimisega Charge Parking seadmetesse. Süsteem integreerub täielikult paljude Pay & Display arvestitega, et võimaldada kontorisüsteemidel automaatselt tuvastada sõiduki, mis pole parkimise eest tasunud või maksnud liiga vähe. 2009 – ANPR International´i esimene mobiilne ANPR-toode streetSWEEPER, mis on mõeldud näiteks liiklusuuringuteks, mobiilseks jälgimiseks ja maksuvaba sõidukite jõustamiseks Juhi ja Sõidukite Litsentsimisagentuuri (DVLA) (ingl Driver and Vehicle Licensing Agency) jaoks. 2011 – süsteem roadGUARDIAN, et võidelda keelatud teedel “lõikavate” sõidukitega, et vältida ummikuid. Politsei väljastab igale rikkujale fikseeritud karistusteatise. 2012 – esimene Sõidukikahjustuste Registreerimissüsteem (VDRS) (ingl Vehicle Damage Recording System), et registreerida lennujaama parklasse saabuvate sõidukite seisukorda 360- kraadise pildiga ning sellega hoida ära pettuslikke kindlustusnõudeid sõidukikahjude kohta. 2013 – ANPR International võitis tehnoloogiaauhinna Gloucestershire'i maakonnanõukogu mobiilse liiklusuuringu töö eest. Uuringus kasutati tänavapuhastajaga varustatud sõidukite parki, et koguda andmeid liiklusprofiilide ja parkimisharjumuste kohta linnades, et aidata nõukogul paremini mõista liiklusvooge ja sõidukite kasutamist. 2014 – süsteem speedSENTINEL kiiruseületamise probleemide lahendamiseks ühistranspordi sõlmpunktides. Süsteem oli mõeldud haagisele paigaldatud kiiruskaamerate süsteemiks, mida saab pukseerida transpordile, vahetada ja juhuslikult kasutusele võtta, et tagada bussi- ja bussioperaatorite järgimine tiheda liiklusega jaamades jalakäijate ohutuse tagamiseks kehtestatud rangetest kiiruspiirangutest. 2016 – Sõidukikahjustuste Registreerimissüsteemi (VDRS) laiendati, et hõlmata kahe sõiduraja jäädvustamist, mis võimaldab integreerida mitu rada ja kuni 14 kaamerat ANPR-i andmete ja sõidukite eelbroneerimise tarkvaraga, et kiirendada kliendikogemust ja suurendada mugavust. Esimene kaherajaline süsteem käivitati Doncaster Sheffieldi lennujaamas. 2017 – süsteem gateGUARDIAN kui tagantjärele paigaldatav tõkkekaitselahendus, et lahendada sõidukite tõkkepuuga parklasse sisenemise või sealt väljumise ohutusprobleem. Esimene süsteem käivitati Ühendkuningriigi lennujaamas, et lahendada kõrgetasemeliste vahejuhtumite arv sõidukitega, mis üritavad vältida parkimise eest tasumist tasulises tsoonis. 2018 – D-ANPR sarja asendab ASPEKi digikaamerate sari, millel on rohkem funktsioone. 
+
+
+== Tehnoloogia ==
+
+Tüüpiline ANPR-süsteem sisaldab tavaliselt kaameraseadet, töötlusmootorit, tuvastusmootorit ja numbrimärkide raamatukogu. Süsteemi saab kujundada erinevate pakettide, komponentide ja funktsioonidega, kuid põhifunktsiooniks jääb ikkagi sõidukite tuvastamine ja nende liikumisteabe salvestamine. 
+
+
+=== Komponendid ===
+ALPR-süsteem, mis eraldab pildilt autonumbri, koosneb enamasti neljast etapist: 
+
+Autopildi hankimine kaamera abil.
+Numbrimärgi eraldamine pildist
+Numbrimärgi segmenteerimine ja märkide eraldamine
+Ekstraheeritud märkide tuvastamine Esimeses etapis kogutakse andmeid sõidukitest tehtud piltide ja videote näol, mida tehakse digitaalsete või mobiilsete sisseehitatud kaamerate abil. Arvestada tuleb kaamera parameetritega nagu kaamera tüüp, eraldusvõime, säriaeg, orientatsioon ja valgus.  Kuna videod ja pildid tehakse reaalajas reguleerimata valgustusega, võib esineda müra ja madal kontrastsus. Seetõttu eemaldatakse eeltöötluse etapis sõiduki pildilt müra ning toimub kontrasti reguleerimine, et numbrit oleks lihtne ära tunda. Teise etapi sisendiks on auto kujutis ja väljundiks pildi osa, mis sisaldab potentsiaalset numbrimärki. Numbrimärk eristatakse mingi kindla omaduse järgi ning seetõttu töötleb süsteem ainult neid piksleid, millel on need omadused. Funktsioonid on tuletatud numbrimärgi vormingust ja selle moodustavatest tähemärkidest.  Numbrimärgi eraldamise meetodid saab kategoriseerida näiteks nende kasutatud funktsioonide alusel:
+
+Numbrimärgi eraldamine piiride/servade abil
+Numbrimärgi eraldamine globaalse pilditeabe abil
+Numbrimärgi eraldamine tekstuurifunktsioonide abil
+Numbrimärgi eraldamine värvifunktsioonide abil
+Numbrimärgi eraldamine märgifunktsioonide abil
+Numbrimärgi eraldamine, ühendades kaks või enam funktsiooni Kolmandas etapis toimub numbrimärgi segmentimine ja märkide eraldamine, projitseerides nende värviteabe, märgistades need või sobitades nende asukohad mallidega. Segmenteerimise algoritmid peaksid eeltöötlusetapil lahendama eelmistes etappides numbrimärgi eraldamisel esinenud võimalikud probleemid, näiteks kalle ja/või ebaühtlane heledus.  Numbrimärkide segmenteerimise meetodid saab liigitada näiteks nende kasutatud funktsioonide alusel:
+
+Numbrimärgi segmentimine pikslite ühenduvuse abil
+Numbrimärgi segmentimine projektsiooni profiilide abil
+Numbrimärgi segmentimine, kasutades eelteadmisi märkide kohta
+Numbrimärgi segmentimine märgikontuuride abil
+Numbrimärgi segmentimine kombineeritud funktsioonide abil Neljandas ehk viimases etapis toimub ekstraheeritud märkide tuvastamine mallide sobitamise või klassifikaatorite, näiteks närvivõrkude ja klassifikaatorite abil.  Selle etapi sisendiks on numbrimärgilt märkide eraldamine ning väljundiks on numbrimärgil olevad tuvastatud tähtnumbrilised märgid. Märgituvastusmeetodid saab liigitada näiteks nende kasutatud funktsioonide alusel:
+
+Märkide tuvastamine töötlemata andmete abil
+Tähemärgi tuvastamine eraldatud funktsioonide abil 
+
+
+= Kasutusalad =
+Maailmas on praeguseks üle 75 riigi, mille suuremates linnades on ANPR seadmed kasutusele võetud.  Automaatset märgituvastuse tehnoloogiat kasutatakse näiteks politseijõudude poolt korrakaitse eesmärkidel, sõiduki registreerimistunnistuse kontrollimiseks või liiklusrikkumistega seotud sõidukite tuvastamiseks. Samuti nutikaks parkimishalduseks ning ummikumaksu määramiseks. 
+
+
+= Andmekaeve =
+
+Teedevõrkudel kasutatavate liikluskaamerate poolt igapäevaselt jäädvustatud numbirmärgituvastuse (ANPR) andmete hulk on väga suur. Andmekaevetehnikaid kasutatakse tavaliselt asjakohase teabe hankimiseks ning andmete töötlemise ja salvestamise mahu vähendamiseks. Näiteks saab andmekaeve abil eraldada ANPR-i andmetest asjakohased liiklusmustrid, et tuvastada mitme sõidukiga konvoi tegevuste ebatavalisi mustreid ja ebaregulaarset käitumist. 
+
+
+== Viited ==

@@ -1,0 +1,157 @@
+revision: 22936250
+title: diode
+url: https://cs.wikipedia.org/wiki/LED
+
+
+---
+
+LED (zkratka z anglického Light-Emitting Diode, česky elektroluminiscenční dioda, též světelná dioda, svítivá dioda, slangově ledka, ojediněle svítivka) je v elektrotechnice označení pro diodu, která emituje světlo, případně infračervené nebo ultrafialové záření, čímž se liší od standardní diody. Díky snížení ceny a vyšší účinnosti převodu elektrické energie na světlo jsou LED po roce 2020 využívány jako náhrada žárovek a zářivek v domácnostech, autech i v průmyslu.
+
+
+== Princip funkce ==
+Prochází-li PN přechodem světelné diody elektrický proud v propustném směru, přecházejí volné elektrony z části typu N (s přebytkem volných elektronů) do části typu P (s nedostatkem volných elektronů, s tzv. dírami). Když excitovaný volný elektron z části N zapadne do orbity atomu v polovodiči typu P, dostane se na nižší energetickou hladinu. Přebytečná energie je v podobě vlnění vyzářena mimo materiál (různými druhy záření, např. viditelné světlo, infračervené nebo ultrafialové záření). Při vhodné volbě příměsí v polovodičovém materiálu je v LED na odhaleném PN přechodu přebytečná energie vyzářena ve viditelném spektru jako nekoherentní světlo s úzkým spektrem (úzký vlnový rozsah).
+Pásmo spektra záření diody je závislé na chemických příměsích použitého polovodiče. LED jsou vyráběny s pásmy vyzařování od ultrafialových, přes různé barvy viditelného spektra, až po infračervené pásmo. Poměrně dlouho trval vývoj modré LED, která umožnila vznik moderních velkoplošných barevných obrazovek, a v té souvislosti i bílé vysocesvítivé LED, které se používají hlavně jako zdroje světla v různých svítilnách a světlometech a dále k podsvícení displejů z tekutých krystalů.
+Z principu funkce LED vyplývá, že nelze přímo emitovat bílé světlo – starší bíle zářící diody většinou obsahují trojici čipů[zdroj?] vybíraných tak, aby bylo aditivním míšením v rozptylném materiálu vrchlíku obalu diody dosaženo vjemu bílého světla.
+Protože není možné přímo emitovat bílé světlo, novější bílé LED využívají luminoforu. Některé průhledné LED emitují modré světlo, část tohoto světla je přímo na polovodiči luminoforem transformována na žluté světlo a díky mísení těchto barev vzniká bílá. Jiné typy bílých LED emitují ultrafialové záření, to je přímo na čipu luminoforem transformováno na bílé světlo.
+Se zkracující se vlnovou délkou emitovaného světla roste velikost napětí v propustném směru (obvykle označované UF). U křemíkové diody je toto napětí asi 0,6 V, u zelené LED z GaP 1,7 V a u modré z SiC již 2,5 V.
+Základní monokrystaly diod bývají překryty kulovými vrchlíky z epoxidové pryskyřice nebo akrylového polyesteru. Materiály, z nichž se LED vyrábějí, totiž mají poměrně vysoký index lomu a velká část vyzařovaného světla by se odrážela totálním odrazem zpět na rovinném rozhraní se vzduchem.
+Oproti jiným elektrickým zdrojům světla (žárovka, výbojka, doutnavka) mají LED tu výhodu, že pracují s poměrně malými hodnotami proudu a napětí. Z toho vyplývá jejich užití v displejích (ve tvaru cifer a písmen). Kombinací LED základních barev (červená, zelená, modrá) je možno vyrobit barevné obrazovky (OLED).
+Konstrukčně představují LED součástku, v níž je kontaktovaný čip (nebo kombinace čipů) zastříknut materiálem s požadovanými optickými vlastnostmi (LED se vyrábějí v bodovém či rozptylném provedení, s různým vyzařovacím úhlem). Kontakty mohou být v provedení pro povrchovou montáž (SMD) nebo ve tvaru ohebných či poddajných přívodů. Sestavy více čipů LED v jednom pouzdře mohou mít samostatně vyvedeny kontakty na každý čip, společnou anodu či katodu, či antiparalelně, anebo mohou mít na čipu řídící elektroniku (např. LED měnící barvy či blikající).
+
+
+== Historie a vývoj ==
+Nick Holonyak Jr. (narozen 1928) vyvinul první praktickou LED s viditelným spektrem v roce 1962 na Univerzitě Illinois v Urbana Champaign.
+
+
+== Elektrické vlastnosti LED ==
+Závislost proudu na napětí (voltampérová charakteristika) má podobný průběh jako běžná polovodičová dioda. Liší se pouze hodnotami hraničních napětí v propustném a závěrném směru.
+Zvyšujeme-li od nuly napětí na diodě v propustném směru (tj. kladný pól zdroje je připojen na anodu a záporný pól zdroje na katodu diody), zpočátku LED neprochází téměř žádný proud - chová se, jako by byla nevodivá. Od určité výše přiloženého napětí dojde k zlomu - dioda se začne otevírat a na další drobné zvyšování napětí reaguje prudkým nárůstem procházejícího proudu. Proud vzhledem k napětí roste přibližně exponenciálně. Tehdy se dioda začíná také rozsvěcet. Zvyšujeme-li dále napětí, dioda zvyšuje svůj jas, až dosáhne svého maxima. Závislost svítivosti LED na proudu je v této oblasti přibližně lineární, tj. např. při dvojnásobném zvýšení proudu dojde ke zhruba dvojnásobnému zvýšení intenzity světla vydávaného diodou.
+Při dalším zvyšování proudu nad povolenou mez může dojít k tepelnému přetížení polovodičového přechodu a poruše diody.
+Připojíme-li LED na zdroj napětí v závěrném směru (tj. kladný pól zdroje je připojen na katodu a záporný pól na anodu), při jeho zvyšování od nuly diodou neprochází žádný proud. Chová se nevodivě. Při určité výši napětí v závěrném směru dojde k průrazu - diodou začne náhle procházet velký proud. Tento průraz bývá ve většině případů destruktivní - polovodičový přechod je zkratován a dioda je trvale poškozena. Průrazné napětí v závěrném směru je u elektroluminiscenční diody oproti usměrňovacím diodám velmi nízké - v řádu jednotek voltů. Při připojení napětí v závěrném směru LED nikdy nesvítí.
+Vzhledem ke tvaru voltampérové charakteristiky se tyto diody musejí napájet ze zdroje proudu. Pokud nevyžadujeme vysokou účinnost zapojení (například u různých indikátorů), můžeme se přiblížit proudovému zdroji tím, že připojíme LED v sérii s rezistorem omezujícím protékající proud ke zdroji stálého napětí (změny napětí vyvolají menší změny proudu). Tento způsob je běžně používán.
+Zapojujeme-li více kusů LED dohromady, nelze je spojit přímo paralelně. Kvůli výrobním odchylkám se totiž mohou voltampérové charakteristiky jednotlivých kusů mírně lišit. Vzhledem ke strmosti pracovní části charakteristiky mohou mít paralelně spojené diody různou svítivost, v horším případě může dojít ke zničení těch kusů, jimiž prochází větší proud. Proto se doporučuje jejich sériové zapojení. To zaručí shodný proud protékající všemi diodami. Musíme-li přesto spojit více LED paralelně (např. není-li k dispozici dostatečně vysoké napájecí napětí), musíme ke každé LED připojit předřadný rezistor. Takto lze také spojit paralelně více skupin LED sériově spojených. Každá skupina sériově spojených LED musí však mít vlastní předřadný rezistor.
+Většina LED má také nízké průrazné napětí, takže mohou být zničeny přiložením závěrného napětí i o výši jen několika voltů. Protože se nelze vždy spolehnout na obecná pravidla určení polarity vývodů, je vhodné se o jejich polaritě přesvědčit nahlédnutím do katalogového listu. Případně lze polaritu zjistit připojením diody ke zdroji nízkého napětí v sérii s ochranným rezistorem.
+
+
+== Zapojení vývodů ==
+
+Na rozdíl od žárovek, u kterých nezáleží na polaritě napájecího napětí a jsou schopny tedy pracovat na střídavé napětí, LED zapojené nesprávným způsobem nepracují. Když je napětí na P-N přechodu diody zapojené správně, říkáme že je zapojena v propustném směru a v tomto stavu skrz ni prochází proud. Když je zapojené opačně než má být, říkáme že je zapojená v závěrném směru a neprochází skrz ni téměř žádný proud a ani nevyzařuje žádné světlo. Proud v propustném směru u nízkopříkonových LED se pohybuje od 1-2 mA, u standardních LED 10~25 mA až po proudy nad 1 A u speciálních LED používaných v osvětlovací technice. Některé LED jsou schopny pracovat se střídavým napětím. V takovém případě jsou ale rozsvíceny jen polovinu periody, ve které jsou polarizovány propustně. Periodicky se tak rozsvěcují a zhasínají s frekvencí střídavého zdroje. Řešením pro odstranění tohoto jevu může být antiparalelní zapojení dvou diod.
+I když nejspolehlivěji lze zjistit polaritu vývodů LED nahlédnutím do katalogového listu výrobce, existují obecně platné způsoby pro označení polarity (pozor, podle velikosti vývodu P nebo N uvnitř pouzdra často nelze polaritu stanovit):
+
+Z velikosti elektrod uvnitř LED nelze určit, zda se jedná o katodu či anodu.
+Méně spolehlivé metody pro určení polarity jsou:
+
+
+== Regulace jasu LED ==
+Obecně platí: čím vyšší proud, tím jasněji dioda svítí. Nejjednodušeji (a nejčastěji) lze proud diodou nastavit pomocí předřadného odporu (je zapojen v sérii s diodou LED). K regulaci jasu LED je možné použít i jednoduchý regulátor s tranzistorem.
+Důmyslnější způsob regulace využívá pulzně šířkovou modulaci. Tehdy LED protéká pulzní proud. Pulzy musejí mít vyšší frekvenci, než je lidské oko schopné zachytit, což vyvolá zdání konstantního svitu. Změnou střídy těchto pulzů pak měníme jas. Pulzně šířková modulace (PWM) se používá při napájení výkonových LED, kde tepelná ztráta na předřadném rezistoru by značně snižovala účinnost napáječe.
+Je-li k dispozici dostatečně velké napětí, lze propojit několik LED do série pouze s jedním omezujícím rezistorem. Paralelní zapojení je obvykle problém (rozebráno výše).
+
+
+== Další typy LED ==
+Vícebarevné LED obsahují minimálně dvě paralelně nebo opačně polarizované a zapojené diody, kdy každá je jiné barvy (typicky červená a zelená). Tím je umožněno zobrazit dvě různé základní barvy nebo rozsah škály barev namíchaný změnou poměru svitu jednotlivých LED, po kterou jsou rozsvíceny. Jiné zase obsahují sadu diod rozdílných barev uspořádaných do skupin zapojených se společnou anodou nebo katodou. Zde můžeme dosáhnout širší škály různých barev bez toho, že bychom museli měnit polaritu napájení (např. často používaná RGB LED – červená, zelená a modrá).
+LED obvykle stále svítí, když skrze ně prochází proud, jsou ale dostupné i blikající LED. Ty mají stejný technologický základ, navíc obsahují klopný obvod, který způsobí, že LED bliká (typicky s periodou jedna sekunda). Nejběžněji jsou k dostání v červené, žluté nebo zelené barvě. Většina jich svítí pouze jednou barvou, ale jsou k dostání i vícebarevné.
+Existují speciální typy LED se zabudovanými rezistory. Můžeme tak ušetřit místo na desce plošných spojů. To může být zvlášť užitečné při konstrukci prototypů, nebo při změnách zamýšleného zapojení (když potřebujeme udělat změny už na hotové desce). Často se využívají pro indikaci v automobilové technice, kde mají vestavěný předřadný odpor pro 12 V.
+Např. v dálkovém ovládání od televize můžeme vidět infračervené LED. Také se používají v IrDA, pro komunikaci elektronických zařízení na malé vzdálenosti. Pouhým okem toto záření není vidět, ale protože CCD snímače v digitálních kamerách jsou na toto záření citlivé, jsou infračervené LED nedílnou součástí některých bezpečnostních kamerových systémů.
+Pro speciální účely se vyrábí ultrafialové LED. Tyto LED jsou instalovány v zařízeních pro kontrolu ochranných prvků bankovek, nebo jiných dokumentů.
+
+
+== Charakteristické hodnoty napětí v propustném směru ==
+Pro obyčejné LED v 3mm nebo 5mm pouzdrech, jsou charakteristické následující hodnoty napětí v propustném směru. To závisí na technologii výroby, typu použitých polovodičů, teplotě a protékajícím proudu (hodnoty zde uvedené přibližně pro hodnotu 20 mA)
+
+U většiny LED je maximální závěrné napětí (UR) kolem 5 V.
+
+
+== Výhody použití LED ==
+Mají asi 10× větší účinnost (svítivost/výkon) než žárovky, asi 2× větší než zářivky (nejmodernější přes 100 lm/W), to je užitečné v zařízeních napájených bateriemi, nebo v úsporných zařízeních.
+Mohou vyzářit světlo v požadované barvě bez použití složitých barevných filtrů.
+Jejich pouzdro může být navrženo k soustředění světla na určité místo. Světelné tepelné (žárovky) a fluorescenční (zářivky) většinou potřebují k soustředění světla vnější optickou soustavu.
+V zařízeních, kde potřebujeme funkci „stmívání“, nemění svou barvu při snížení napájecího proudu, na rozdíl od žárovek, které při snížení napájení vydávají žlutější světlo.
+Jsou odolné vůči nárazům a vibracím.
+Jsou odolné vůči chladu.
+Jsou ideální na použití v zařízeních, kde dochází k častému vypínání a zapínání zařízení, na rozdíl od žárovek, především halogenových, které mohou při častém zapínání a vypínaní snadno shořet, velice náchylné jsou na toto zářivky, u nichž se obvykle přepálí jedno ze žhavicích vláken.
+Mají extrémně dlouhou životnost. Jeden z výrobců vypočítal odhadovanou dobu životnosti jejich LED mezi 100 000 a 1 000 000 hodin (neplatí pro výkonné LED, tam mohou být značně menší hodnoty). U zářivek je obvyklý údaj 8 000 – 12 000 hodin a u typických žárovek 1 000 – 2 000 hodin.
+Nejčastější příčinou jejich selhání je postupný úbytek jasu, na rozdíl od žárovek, u kterých se nejčastěji přeruší vlákno.
+Velice rychle se rozsvítí. Typický červený LED indikátor se rozsvítí v řádu mikrosekund. LED používané v telekomunikačních zařízeních mohou mít tyto doby i mnohonásobně kratší.
+Jsou velice malé a snadno mohou být osazeny do desky plošných spojů.
+Neobsahují rtuť (na rozdíl od zářivek).
+U LED žárovek je výhodou možnost častého vypínání a zapínání bez obav z prasknutí tepelného vlákna jako u klasických žárovek.
+Různorodost LED žárovek je jejich velkou výhodou, díky které je lze instalovat a využívat skutečně velmi široce. [1]
+
+
+== Nevýhody LED ==
+Mají vyšší pořizovací náklady (počítáno v ceně za lumen), než tradiční světelné zdroje. Další náklady také vychází z toho, že jedna dioda poměrně slabě září (pozn.: Dnešní LED dosahují již velmi vysokého světelného toku), a proto jich potřebujeme větší množství.
+Jejich životnost hodně závisí na teplotě. Používání LED na hranici proudových specifikací může vést k přehřátí pouzdra LED a k následnému selhání zařízení. V případech vyšších teplot se musí zajistit dostatečné chlazení. To je obzvláště důležité v automobilech a zařízeních pro vojenské nebo lékařské účely, které musí fungovat v širokém rozsahu teplot a jsou u nich kladeny vysoké požadavky na spolehlivost.
+Musí být napájeny proudem správné polarity a hodnoty.
+Obvykle vyzařují světlo jen v úzkém paprsku v jednom směru.
+Nemohou být použity v aplikacích, kde potřebujeme ostře směrový paprsek světla. LED nejsou schopny směrovosti pod několik stupňů. Pokud potřebujeme směrovější zařízení, je lepší použít laser (nebo LED lasery).
+Při stejné teplotě chromatičnosti mohou LED oproti klasické žárovce vyzařovat i modrou spektrální složku, která není pro člověka večer a v noci přirozená. To narušuje spánek a může to vést ke zdravotním potížím.
+Roste znepokojení z toho, že modré a bílé LED jsou teď schopny poškodit zrak a přílišná intenzita, která je použitá u LED, může oko především v noci poškodit. Dnešní diody jsou schopny překračovat bezpečnostní limity specifikované v ANSI/IESNA RP-27.1-05: Recommended Practice for Photobiological Safety for Lamp and Lamp Systems.
+
+
+== Aplikace, ve kterých jsou LED využity ==
+Architektonická osvětlení
+Indikátory stavu na všech typech zařízení
+Dopravní světla a značení
+Světelný zdroj pro systémy automatické kontroly, kde je vyžadováno jasné, soustředěné a homogenní světlo
+Označení nouzových východů
+Světla na motocyklech a kolech
+Hračky a pomůcky pro rekreační sporty
+Světla na železničních přejezdech
+Ve svítilnách
+Jako indikátory
+Některé typy LED jsou schopny reagovat na světlo – fotostřelnice, fototerče, světelná čidla,fotodiody,...Úzké a lehké informační tabule odjezdů a příjezdů na letištích a železničních stanicích
+Červené nebo žluté LED jsou používány pro osvětlení přístrojů – například v hodinkách, ponorkách, ve vojenských přístrojích apod.
+Červené, žluté, zelené a modré LED mohou být použity pro modely železnic
+Dálková ovládání často využívají infračervených LED
+V optických vláknech, nebo v bezdrátových optických systémech
+V maticových uspořádáních jako zobrazovače informací
+Díky jejich dlouhé životnosti a krátké době odezvy na zapnutí, LED jsou používány v automobilech, autobusech a nákladních autech v brzdných světlech. U nejmodernějších vozidel se začínají používat LED v celém zadním panelu světel. Dostáváme tak spolehlivější a praktičtější osvětlení, protože jsou LED schopny užšího světelného paprsku, než klasicky používané žárovky s parabolickými reflektory. Nejdůležitější změnou je rychlost rozsvícení světla (asi tak o 0,5 sekundy rychleji než žárovka). To dává řidičům širší prostor pro reakci na události na silnici. Při běžných rychlostech používaných na dálnici znamená při zabrzdění půl sekundy navíc reakční prostor o délce jednoho auta pro následující auto.
+Jako podsvícení pro LCD televize a displeje. Dostupnost LED v požadovaných barvách umožňuje zdroj světla s téměř úplným viditelným spektrem.
+LED žárovka
+V Lumalive, světlo vyzařující textilii.
+Jako referenční zdroj napětí průměrné kvality. Úbytek napětí v propustném směru (například 1,7 V pro běžnou červenou LED) může být použit jako reference namísto Zenerovy diody v nízkonapěťových regulátorech. Přestože úbytek napětí závisí mnohem víc na proudu než u dobré Zenerovy diody.
+Použití v počítači, pro monitorování aktivity pevného disku a identifikaci zapnutí. Někteří výrobců počítačů používá LED k přitáhnutí pozornosti uživatele (osvětlení komponent). Spousta jich také používá LED k identifikaci stavu počítače (například stav standby).
+V lucernách
+Ve velkoplošných obrazovkách s kombinací červené, zelené a modré LED lze vytvořit až 160 000 000 barev.
+LED emitující infračervené světlo našly široké uplatnění v dálkových ovladačích spotřební elektroniky (TV, videa, domácí kina, satelity). Určitou nevýhodu může být jen v některých případech malý dosah ovladače nebo i umístění přijímače na místo osvětlené sluncem, kdy je přijímač již zahlcen infračerveným zářením ze slunce natolik, že váš dálkový ovladač prostě ignoruje. V mobilních telefonech se používaly v dnes již zastaralé technologii přenosu dat známé pod zkratkou IrDa. Tuto technologii vytlačil mnohem rychlejší přenos dat známý pod názvem Bluetooth.
+LED pásek
+
+
+== Světelné zdroje pro systémy strojového snímání ==
+Systémy strojového snímání často vyžadují jasné a homogenní osvětlení, aby dokázaly lépe vykonávat požadovanou činnost. LED jsou často k tomuto účelu využívány, a na tomto poli zůstává jeden z jejich hlavních způsobů využití, dokud jejich cena neklesne natolik, aby byly využity v širším měřítku i v jiných oblastech. LED představují téměř dokonalý zdroj světla pro systémy strojového snímání z několika hlavních důvodů:
+
+Velikost ozařovaného prostoru je obvykle poměrně malá a systém Vision nebo „chytré kamery“ schopné snímat i nedokonale osvětlené předměty jsou docela drahé. Proto je zde cena LED menší problém, když ji srovnáme s cenou telekomunikačních zařízení.
+Elementy LED tíhnou k tomu být co nejmenší a mohou být osazeny ve velké hustotě na ploché nebo dokonce tvarované povrchy. To umožňuje osvětlit kontrolovanou část zdroji homogenního světla z přesně vymezených úhlů.
+Mají nebo jsou snadno doplnitelné malými, levnými čočkami a rozptylovacím stínítkem, to pomáhá k dosažení vysokých hustot světla a kontroly nad světlem (jeho rozptylem).
+Můžou být snadno použity k vytvoření záblesku (v řádu mikrosekund a méně), jejich síla je už dostatečně velká k dosažení dobře osvětlených obrázků i při velmi krátkém trvání světelného pulzu. Toho je využíváno v případě, kdy potřebujeme získat ostrý obraz rychle se pohybujících částí.
+Jsou k dispozici v několika barvách a vlnových délkách, což umožňuje použít nejlepší barvu pro dané využití, kde různé barvy mohou přesněji osvětlit předmět zájmu.
+Díky tomu, že mají přesně známé spektrum, tak se dají dobře nastavit barevné filtry, které se použijí k vyfiltrování získaných informací nebo ke snížení rušení okolním světlem.
+Obvykle pracují při srovnatelně nižších teplotách než klasické zdroje.
+Mohou být uspořádány v požadovaných uskupeních (poosvětlení pro vykreslení kontur, plochy, kopule pro světlo rozptýlené mnoha směry apod.)
+Je možné díky nim zmenšit osvětlovací zařízení, to umožňuje osadit malé LED osvětlovače do „chytrých kamer“ nebo zobrazovacích senzorů.
+
+
+== Odkazy ==
+
+
+=== Reference ===
+V tomto článku byl použit překlad textu z článku Light-emitting diode na anglické Wikipedii.
+
+
+=== Literatura ===
+Jaroslav Doleček: Moderní učebnice elektroniky – 3. díl, Optoelektronika; nakladatelství BEN - technická literatura, 2005; ISBN 80-7300-184-5
+Václav Malina: Poznáváme elektroniku – 1. díl; nakladatelství Kopp, České Budějovice 2003; ISBN 80-7232-039-4
+Vladimír Suchánek: Dioda, tranzistor a tyristor názorně – programový kurz; nakladatelství SNTL, Praha 1983; (zde je možné se dočíst hlavně o klasických diodách než o LED)
+HABEL, Jiří, a kol. Světlo a osvětlování. Praha : FCC Public, 2013. 624 s. ISBN 978-80-86534-21-3. Kapitola Elektroluminiscenční světelné zdroje, s. 201–214.
+
+
+=== Související články ===
+OLED
+LED pásek
+
+
+=== Externí odkazy ===
+ Obrázky, zvuky či videa k tématu LED na Wikimedia Commons 
+ Slovníkové heslo LED ve Wikislovníku
+ Kniha Praktická elektronika/Diody ve Wikiknihách

@@ -1,0 +1,149 @@
+revision: 6016622
+title: Albedo
+url: https://sl.wikipedia.org/wiki/Albedo
+
+
+---
+
+Albedo ali koeficient odbojnosti (tudi odbojnost) je mera za svetlobno odbojnost površine telesa. Albedo pove, kolikšen del vpadne svetlobe se odbije od površine telesa. Ime izhaja iz latinske besede »albus«, ki pomeni belina.
+Albedo se izraža kot razmerje med odbito svetlobo s površine in vpadno svetlobo, s katero se na to površino sveti. Je brezrazsežna količina, zato se ga lahko izrazi v odstotkih. Albedo zavzame vrednosti med 0 in 1 oziroma med 0 % in 100 %. Albedo 0 pomeni, da telo ne odbija svetlobe, torej vso svetlobo absorbira (je idealno črno telo), albedo 1 pa ima telo, ki svetlobo popolnoma odbija (je idealno belo telo). 
+Albedo je odvisen od frekvence vpadne svetlobe. Odvisen je tudi od smeri vpadne svetlobe.
+Albedo je pomembna količina predvsem v klimatologiji in astronomiji (opazovanje nebesnih teles). Povprečen albedo Zemlje znaša med 0,30 in 0,39 zaradi ozračja, a se krajevno močno spreminja zaradi različnih geoloških in okoljskih značilnosti površja.. 
+Pojem albedo je v optiko vpeljal Johann Heinrich Lambert leta 1760 v svojem delu Photometria.
+
+
+== Albedo na Zemlji ==
+Vrednosti albeda pogostih materialov na Zemlji zavzemajo vrednosti med 0,9 za sveže zapadel sneg in 0,04 za oglje, eno najtemnejših snovi. Gledano z velike oddaljenosti imajo oceani in gozdovi majhen albedo, medtem ko je albedo puščave večji. Večina kopnega ima albedo med 0,1 in 0,4 Povprečen albedo Zemlje je 0,3.Površinski albedo Zemlje redno ocenjujejo s pomočjo senzorjev na satelitih, namenjenih opazovanju Zemlje. Takšna instrumenta sta MODIS na satelitih Terra in Aqua ameriške vesoljske agencije NASA.
+Povprečna temperatura Zemlje je trenutno zaradi albeda in učinka tople grede približno 15 °C. Če bi bila Zemlja popolnoma zamrznjena in bi odbijala več svetlobe, bi povprečna temperatura planeta padla pod -40 °C. Če bi bil zamrznjen samo kopni del planeta, bi bila povprečna temperatura približno 0 °C. V primeru, ko bi bil ves planet pokrit samo z vodo, bi bila povprečna temperatura blizu 27 °C.
+
+
+== Albedo v astronomiji ==
+Z albedi planetov, naravnih satelitov in asteroidov se lahko sklepa na njihove značilnosti. Preučevanje albedov, njihovih odvisnosti od valovne dolžine in faznega kota ter spreminjanja albeda s časom predstavlja velik del raziskav v astronomskem področju fotometrije. O majhnih in oddaljenih telesih, ki se jih s teleskopi ne da preučevati neposredno, se lahko veliko izve ravno z vrednostjo albeda. Na primer, z meritvijo albeda zunanjih teles Osončja se lahko sklepa na njihovo površinsko sestavo, še posebej na delež površja telesa, ki je prekrit z ledom.
+Saturnova luna Enkelad ima enega največjih albedov med vsemi telesi v Osončju. Z njenega površja se odbije 99 % svetlobe. Zelo velik albedo ima tudi pritlikavi planet Erida, s katerega se odbije 96 % svetlobe. Večina majhnih zunanjih teles Osončja in asteroidov v asteroidnem pasu ima vrednosti albeda približno 0,05. Jedro kometa ima tipično albedo 0,04. Povprečen albedo edinega Zemljinega naravnega satelita Lune je približno 0,12.
+Povezavo med albedom, absolutnim izsevom telesa in velikostjo telesa podaja spodnja enačba:
+
+  
+    
+      
+        a
+        =
+        
+          
+            (
+            
+              
+                
+                  1329
+                  
+                  
+                    10
+                    
+                      −
+                      H
+                      
+                        /
+                      
+                      5
+                    
+                  
+                
+                D
+              
+            
+            )
+          
+          
+            2
+          
+        
+        
+        
+        ,
+      
+    
+     
+  kjer je:
+
+  
+    
+      
+        a
+        
+        
+      
+    
+     
+   – albedo,
+
+  
+    
+      
+        D
+        
+        
+      
+    
+     
+   – premer telesa v kilometrih in
+
+  
+    
+      
+        H
+        
+        
+      
+    
+     
+   absolutni izsev.
+
+
+== Zgledi vplivov albeda na Zemlji ==
+
+
+=== Osvetljenost s sončno svetlobo ===
+Največji albedo imajo tropski predeli Zemlje, kjer je osvetljenost s sončno svetlobo preko leta največja. Dodaten maksimum doseže albedo na severni polobli na geografski širini med 3° in 12°. Najmanjši albedo je v subtropskih predelih severne in južne zemeljske poloble. Na temperaturo površja poleg albeda vpliva tudi krajevna insolacija. Arktični in antarktični predeli imajo visok albedo, a so hladni zaradi majhne insolacije. Po drugi strani so regije z visokim albedom, kot je na primer Sahara, vroče zaradi velike osvetljenosti s sončno svetlobo.
+
+
+=== Vreme in podnebje ===
+Albedo vpliva na podnebje in vreme. Spreminjajoče vremenske razmere so posledica neenakomernega segrevanja zemeljskega površja zaradi različnih albedov na različnih predelih Zemlje. Na albedo vplivajo tako oceani kot tudi kopno. Kopno in oceani povzročijo štiri tipe zračnih mas, ki so odvisno od geografske širine in insolacije:
+
+toplo in suho podnebje nad tropskimi in subtropskimi kopnimi predeli;
+toplo in vlažno podnebje na tropskimi in subtropskimi oceani;
+hladno in suho podnebje nad polarnimi in subpolarnimi kopnimi predeli;
+hladno in vlažno podnebje nad polarnimi in subpolarnimi oceani.Različne temperature teh zračnih mas povzročijo različne zračne tlake. Visok zračni tlak potuje proti nižjemu, zato se vreme spreminja od severa proti jugu na severni polobli in od juga proti severu na južni polobli. Zaradi vrtenja Zemlje Coriolisova sila dodatno spremeni pretok zračnih mas od višjega k nižjemu tlaku. Zaradi tega so nastali podnebni pasovi.
+
+
+=== Sneg ===
+Albedo snega se spreminja med 0,9 za sveže zapadel sneg, 0,4 za sneg, ki se že tali, in 0,2 za umazan sneg. Če se na območju, pokritim s snegom, zviša temperatura, se začne taliti sneg in albedo se zniža.
+
+
+=== Vplivi  na manjših skalah ===
+Albedo deluje tudi na manjših skalah. Temne obleke absorbirajo več sončne svetlobe, svetle pa jo bolje odbijajo. Zato je poleti v temnih oblekah bolj vroče.
+
+
+=== Albedo vode in ledu ===
+Voda odbija svetlobo precej drugače kot drugi zemeljski materiali. Odbojnost vodne površine se lahko izračuna s Fresnelovimi enačbami.
+Led ima velik albedo. Večina svetlobe se z ledu odbije. Voda odbije manj svetlobe v primerjavi z ledom. Albedo vode je odvisen tudi od kota, pod katerim vpada valovanje. Ko so koti veliki, se odbojnost vode poveča, pri majhnih pa voda odbija manj svetlobe.
+Tipična vrednost albeda oceana je 0,06, medtem ko je albedo ledu med 0,5 in 0,7. Torej ocean odbije le 6 % vpadnega valovanja, ostalo pa absorbira. Led odbije 50 % – 70 % vpadne energije.
+
+
+=== Oblaki ===
+Albedo oblakov vpliva na temperaturo ozračja. Različni tipi oblakov imajo drugačne odbojnosti. Albedo oblakov se spreminja med približno 0 in 0,8. Oblaki z visokim albedom ohlajajo Zemljo z odbijanjem sončne svetlobe, oblaki z nizkim albedom pa zadržujejo toploto na Zemlji.Na albedo in podnebje nekaterih območjih na Zemlji vplivajo tudi umetni oblaki, kot so na primer bele sledi na nebu, ki jih povzročijo letala.
+
+
+=== Aerosoli ===
+Aerosoli so zelo fini delci ali kapljice v ozračju, ki vplivajo na Zemljin albedo. Učinki aerosolov so:
+
+neposredni (direktni). Aerosoli sipajo in absorbirajo svetlobo. Sipanje povzroči znižanje temperature ozračja, absorpcija pa temperaturo ozračja zviša.
+posredni (indirektni). Aerosoli spreminjajo značilnosti oblakov. Na območjih z večjo koncentracijo aerosolov je albedo večji, zato se več svetlobe sipa in se ozračje posledično ohlaja.
+
+
+=== Vpliv ljudi ===
+Človeško spreminjanje okolja (krčenje gozdov, kmetijska dejavnost, urbanizacija) prav tako vpliva na vrednost albeda na različnih področjih Zemlje.
+
+
+== Sklici ==
+
+
+== Viri ==

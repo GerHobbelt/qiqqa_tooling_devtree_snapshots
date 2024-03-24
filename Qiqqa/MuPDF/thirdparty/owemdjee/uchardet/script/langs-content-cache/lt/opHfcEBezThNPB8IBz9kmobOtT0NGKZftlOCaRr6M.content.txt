@@ -1,0 +1,58 @@
+revision: 6883402
+title: "Nepakei\u010Diamas \u017Eetonas"
+url: https://lt.wikipedia.org/wiki/Nepakei%C4%8Diamas_%C5%BEetonas
+
+
+---
+
+Nepakeičiamas žetonas (angl. non-fungible token, NFT) – unikalus ir nepakeičiamas duomenų vienetas, laikomas blokų grandinėje. Nepakeičiamas žetonas gali būti taikomas lengvai suklastojamiems daiktams, tokiems kaip fotografijos, vaizdo įrašai, garso įrašai bei kitoms skaitmeninėms rinkmenoms ženklinti siekiant patvirtinti jų autentiškumą. Tam naudojama blokų grandinių technologija, jog nepakeičiamas žetonas būtų galiojantis. Originalios laikmenos savininkas negali uždrausti kopijuoti jam priklausančio failo. Esminis skirtumas tarp šio žetono bei grandinių bloko kriptotechnologijų yra jų nepakeičiamumas.
+Nepakeičiami žetonai neretai kritikuojami dėl jiems švaistomos elektros energijos, panaudojimo meno kūrinių aferose ir anglies teršalų emisijų, susijusių su blokų grandinės operacijomis.2020 m. NFT rinkos vertė siekė daugiau nei 250 mln. JAV dolerių. 2021 m. pirmąjį ketvirtį nepakeičiamų žetonų pardavimai viršijo 2 mlrd. JAV dolerių, o trečiąjį ketvirtį perkopė 10 mlrd. JAV dolerių vertės ribą.
+
+
+== Veikimo principas ==
+NFT yra duomenų vienetas, saugomas skaitmeninėje knygoje, vadinamoje blokų grandine. NFT gali būti susietas su tam tikru skaitmeniniu ar fiziniu turtu (pvz., skaitmenine rinkmena ar fiziniu objektu) ir licencija naudoti turtą tam tikram tikslui. NFT ir su juo susijusia licencija naudoti, kopijuoti ar rodyti pagrindinį turtą galima prekiauti skaitmeninėse rinkose.NFT veikia kaip kriptografiniai žetonai, tačiau, skirtingai nuo kriptovaliutų, tokių kaip „Bitcoin“, šių žetonų vertė nėra tarpusavyje keičiama. Nors visi bitkoinai yra lygiaverčiai, kiekvienas NFT gali būti skirtingas pagrindinis turtas ir todėl turi skirtingą vertę. NFT sukuriami, kai blokinėse grandinėse įrašomas simbolių rinkinys, identifikuojantis konkretų skaitmeninį failą. Šis kriptografinių operacijų procesas užtikrina kiekvieno skaitmeninio failo autentiškumą: kiekvienai atskirai rinkmenai suteikiamas skaitmeninis parašas, naudojamas NFT nuosavybei sekti. Nepaisant to, duomenų nuorodos, nukreipiančios į tokias detales kaip internetinės svetainės, kur nepakeičiamas žetonas yra patalpintas adresas, gali nunykti.
+
+
+== Autorių teisės ==
+NFT nuosavybė savaime nesuteikia autorių teisių į bet kokį skaitmeninį turtą, kurį šis prieigos raktas simbolizuoja. Įsigijęs nepakeičiamą žetoną pirkėjas nebūtinai gaus autorių teisių privilegijas pasikeitus NFT nuosavybės teisei, todėl pradiniam savininkui arba autoriui leidžiama sukurti daugiau to paties kūrinio NFT. Šia prasme NFT yra tik tos laidos nepakeičiamo žetono nuosavybės įrodymas, kuris yra atskirtas nuo autorių teisių – iš esmės NFT pirkėjai pagrindinio meno kūrinio autorių teisių ir neįgyja.
+
+
+== Naudojimas ==
+NFT nuosavybė dažnai siejama su licencija naudoti pagrindinį skaitmeninį turtą, bet paprastai nesuteikia pirkėjui autorių teisių. Kai kurios sutartys suteikia licenciją tik asmeniniam, nekomerciniam naudojimui, o kitos licencijos taip pat leidžia naudoti ir komerciniais tikslais. NFT panaudojimas yra labai platus – tai gali būti skaitmeninis turtas, menas, kompiuteriniai žaidimai, muzika, filmai ir bilietai ir kt.
+
+
+=== Skaitmeninis menas ===
+
+Skaitmeninis menas yra vienas ankstyviausių NFT naudojimo atvejų, nes blokų grandinė gali užtikrinti unikalų ir nekeičiamą parašą bei nuosavybės teisę. Menininko Maiko Winkelmanno (angl. Mike Winkelmann, profesionaliai žinomo kaip Beeple) skaitmeninio meno kūrinys pavadinimu „Everydays: the First 5000 Days“ 2021 m. buvo parduotas už 69,3 mln. JAV dolerių. Pirkimas buvo pripažintas trečiuoju didžiausiu gyvo menininko sudarytu aukciono sandoriu NFT rinkoje, atitinkamai po Džefo Kunso ir Deivido Hoknio parduotų darbų.
+Kitas Beeple kūrinys pavadinimu „Crossroad“ – 10 sekundžių vaizdo įrašas, kuriame rodomi pėstieji, einantys pro Donaldo Trampo figūrą, 2021 m. kovą skaitmeniniame aukcione „Nifty Gateway“ parduotas už 6,6 mln. JAV dolerių.Kai kurios NFT kolekcijos yra generatyvinio meno pavyzdžiai, kurio principu galima sukurti daugybę skirtingų vaizdų sujungiant atskirus paveikslėlio komponentus įvairiais deriniais.2021 m. kovo mėn. įmonė „Injective Protocol“ nupirko 95 000 JAV dolerių vertės originalų graffiti – menininko Banksy kūrinį pavadinimu „Morons (White)“ – ir nufilmavo, kaip jį degina žiebtuvėliu. Vėliau pats vaizdo įrašas buvo parduotas kaip nepakeičiamas žetonas. Meno kūrinį sudeginęs asmuo, save vadinantis „Burnt Banksy“, teigė, jog tai buvo būdas perkelti fizinį meno kūrinį į skaitmeninę nepakeičiamų žetonų erdvę.
+
+
+=== Kompiuteriniai žaidimai ===
+NFT gali būti pritaikomi kompiuteriniame žaidime esančiam turtui, pvz., skaitmeniniams žemės sklypams, įrankiams ar ginklams, kuriuos valdo žaidėjas, o ne žaidimo kūrėjas, atvaizduoti. Nepakeičiamas žetonas leidžia prekiauti turtu trečiųjų šalių prekyvietėse be žaidimo kūrėjo leidimo.2021 m. spalį žaidimų kūrėjas „Valve“ uždraudė programas, naudojančias blokų grandinės technologijas arba nepakeičiamus žetonus bei suteikiančias galimybę keistis žaidimo turtu iš „Steam“ platformos.
+
+
+==== Virtualūs pasauliai ====
+Kai kurios privačios skaitmeninės bendruomenės buvo suformuotos remiantis nepakeičiamų žetonų nuosavybe.Virtualūs pasauliai, tokie kaip „Decentraland“, „Sandbox“ ir „Somnium Space“, leidžia vartotojams kurti galerijas, kuriose būtų demonstruojamas nepakeičiamais žetonais ženklintas menas ir žaidimo elementai. Nepakeičiami žetonai buvo naudojami ir iš varžytinių parduodant virtualią žemę. 2021 m. birželį16 arų virtualios žemės sklypas „Decentraland“ platformoje buvo parduotas už 913 228,20 JAV dolerių.
+
+
+=== Muzika ===
+Blokų grandinės technologija suteikė galimybę muzikantams ženklinti ir skelbti savo kūrinius kaip nepakeičiamus žetonus. 2021 m. plečiantis NFT rinkai menininkai ir muzikantai naudojo nepakeičiamus žetonus kaip įrankį, galintį padėti susigrąžinti dėl 2020 m. COVID-19 pandemijos prarastas pajamas. Pranešama, kad 2021 m. vasarį NFT muzikos pramonėje uždirbo apie 25 mln. JAV dolerių.2021 m. vasario 28 d. elektroninės šokių muzikos atlikėjas 3LAU pardavė 33 NFT kolekciją už 11,7 mln. JAV dolerių minėdamas albumo „Ultraviolet“ trejų metų sukaktį. 2021 m. kovo 3 d. roko grupė „Kings of Leon“ pirmoji paskelbė apie naujo albumo „When You See Yourself“ išleidimą NFT pavidalu, kurio pardavimai siekė 2 mln. JAV dol. Kiti atlikėjai, kurie naudojo NFT, yra amerikiečių reperis Lil Pump, menininkas Shepardas Fairey, bendradarbiaujantis su įrašų prodiuseriu Maiku Deanu, ir reperis Eminem.
+
+
+=== Filmai ===
+2018 m. gegužę kino kompanija „20th Century Fox“, bendradarbiaudama su „Atom Tickets“, išleido riboto leidimo skaitmeninius plakatus „Deadpool 2“ filmo reklamai. Juos buvo galima įsigyti iš „OpenSea“ ir GFT platformų. 2021 m. kovą Adomo Benzino 2015 m. dokumentinis filmas „Claude Lanzmann: Spectres of the Shoah“ tapo pirmuoju kino ir dokumentiniu filmu, parduotu aukcione nepakeičiamo žetono pavidalu.Taip pat yra pranešama, kad bus išleista išskirtinė nepakeičiamų žetonų meno kūrinių kolekcija, skirta filmui „Godzilla vs. Kong“. Režisierius Kevinas Smitas 2021 m. balandį paskelbė, kad jo būsimas siaubo filmas „Killroy Was Here“ bus išleistas kaip NFT. 2021 m. filmas „Zero Contact“, kurį režisavo Rickas Dugdeilas ir kuriame pagrindinį vaidmenį atliko Entonis Hopkinsas, taip pat buvo išleistas kaip nepakeičiamas žetonas.2021 m. lapkritį filmų režisierius Quentinas Tarantino išleido septynis NFT, paremtus nekirptomis „Pulp Fiction“ scenomis. „Miramax“ vėliau pateikė ieškinį teigdami, jog buvo pažeistos jų filmų autorinės teisės.
+
+
+== Kritika ==
+
+
+=== Aplinkosaugos problemos ===
+NFT pirkimas ir pardavimas yra apsuptas ginčų dėl didelio energijos vartojimo jų išlaikymui blokinėse grandinėse ir dėl to išmetamų šiltnamio efektą sukeliančių dujų. Blokų grandinės sandoriams reguliuoti ir tikrinti tokiuose tinkluose kaip „Ethereum“ sunaudojama daug elektros energijos. Apskaičiuojant tam tikros NFT operacijos anglies pėdsaką (angl. carbon footprint) reikalingas didelis informacijos kiekis, pavyzdžiui, kaip tas sandoris sudaromas blokų grandinėje, kaip tai lemia ekonominį blokų grandinės kasėjų elgesį ir jų kasybos (angl. mining) įrangos arba palaikančių serverių energijos poreikį, taip pat atsinaujinančios energijos kiekį, naudojamą operacijai išlaikyti. Skaičiuojant nepakeičiamų žetonų poveikį aplinkai kyla ir konceptualių klausimų, pavyzdžiui, ar į NFT pirkimo anglies pėdsaką turėtų būti įtraukta pagrindinio tinklo energijos poreikio dalis, ar tik nežymus konkretaus pavienio pirkimo poveikis.
+Kadangi skaitmeninis menas yra viena pagrindinių nepakeičiamų žetonų užšifravimo formų, daugelis internetinių meno svetainių, prekiaujančių NFT, pirmenybę siekia teikti toms technologijoms ir saugos protokolams, kurių anglies pėdsakai yra mažesni. Nors nepriklausomų žetonų rinka atvėrė galimybę menininkams toliau diversifikuoti savo pajamas, jų poveikis aplinkai pastūmėjo daugelį nepriklausomų kūrėjų atsisakyti savo darbus parduoti NFT forma taip siekiant apriboti anglies dvideginio emisijas.
+
+
+=== Plagiatas ir sukčiavimas ===
+Buvo pavyzdžių, kai menininkų darbai buvo kopijuojami be autoriaus leidimo ir parduodami nepakeičiamų žetonų pavidalu. 2020 m. mirus menininkei Qing Han internetiniai sukčiai prisiėmė jos tapatybę ir didelę dalį kūrinių įkėlė pirkimui nepakeičiamų žetonų aukcionavimo platformose. Panašiai pardavėjui, apsimetusiam Banksy, 2021 m. pavyko parduoti šio menininko pagamintą NFT už 336 000 JAV dolerių. Pardavėjas šią sumą grąžino tik tada, kai teismo byla atkreipė žiniasklaidos dėmesį.2021 m. rugsėjį BBC pranešė apie prekybos viešai neatskleista informacija atvejį, kai NFT prekyvietės „OpenSea“ darbuotojas nusipirko konkrečius NFT prieš juos perparduodant, nes gavo informaciją „iš vidaus“, kad jie bus reklamuojami bendrovės pagrindiniame puslapyje. NFT prekyba yra nereguliuojama rinka, todėl kol kas neturi teisinių priemonių tokiam piktnaudžiavimui sukontroliuoti.
+
+
+== Išnašos ==

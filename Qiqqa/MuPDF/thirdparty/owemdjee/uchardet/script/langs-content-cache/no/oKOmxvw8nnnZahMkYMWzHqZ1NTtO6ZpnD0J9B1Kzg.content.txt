@@ -1,0 +1,42 @@
+revision: 23091522
+title: Boltzmanns konstant
+url: https://no.wikipedia.org/wiki/Boltzmanns_konstant
+
+
+---
+
+Boltzmanns konstant (k eller kB) er den fysiske konstanten som knytter temperatur til energi. Konstanten har fått navn etter den østerrikske fysikeren Ludwig Boltzmann, som bidro til teorien om statistisk mekanikk hvor denne konstanten spiller en fundamental rolle. Etter omdefineringen av SI-enhetene i 2019 ble Boltzmanns konstant fastlått til verdien:
+
+k = 1,380 649 × 10−23 J/KDette tallet er presist og har ingen usikkerhet knyttet til seg. Konstanten regnes i dag som en av de sju fundamentale enhetene som alle andre enheter er utledet fra i SI-systemet, spesifikt brukes Boltzmanns konstant til å definere det absolutte temperaturmålet Kelvin. Den er forbundet med den universelle gasskonstanten R ved relasjonen k = R/NA hvor NA er Avogadros konstant.
+Denne konstanten ble tilsynelatende aldri benyttet av Boltzmann selv. Derimot var det Max Planck som innførte den i forbindelse med sin forklaring av egenskapene til sort stråling basert på Boltzmanns metode for å beregne entropi. Den ble derfor i begynnelsen kalt for Plancks konstant. Men snart ble denne betegnelsen også benyttet for Plancks egen og absolutt nye kvantemekaniske konstant h slik at det var nødvendig å innføre navnet Boltzmanns konstant for R/NA.
+
+
+== Rolle i relasjonen mellom temperatur og energi ==
+Gitt et termodynamisk system ved absolutt temperatur T, følger det fra klassisk, statistisk fysikk at energien til hver mikroskopisk frihetsgrad er lik kT/2. Ved romtemperatur på 27 °C) som tilsvarer T = 300 K, er kT/2 = 2,07 × 10−21 J. Dette gjelder for en klassisk, ideell gass.  Monatomiske gasser har tre frihetsgrader pr. atom, som tilsvarer de tre retningene i rommet, hvilket betyr at en varmeenergi på 1,5kT pr. atom. Det gir en varmekapasitet som stemmer godt med eksperimentelle data.
+Ved bruk av kinetisk teori kan varmeenergien brukes til å regne ut gjennomsnittet av atomenes hastighet i en ideell gass. Den er omvendt proporsjonal med kvadratroten til atomenes masse og varierer fra 1370 m/s for helium ned til 240 m/s for xenon ved romtemperatur. Denne situasjonen er mer komplisert for molekylære gasser. Diatomiske gasser, for eksempel, har ca. fem frihetsgrader pr. molekyl som skyldes at de kan bevege seg på mer kompliserte måter som tilsvarer rotasjon og vibrasjon i tillegg til translasjon.
+
+
+== Rolle i definisjonen av entropi ==
+I statistisk mekanikk er entropien S av et system definert å være proporsjonal med den naturlige logaritmen til Ω, antallet forskjellige mikroskopiske tilstander tilgjengelig til systemet gitt de makroskopiske begrensningene, slik som en konstant totalenergi E,
+
+  
+    
+      
+        S
+        =
+        k
+        
+        ln
+        ⁡
+        Ω
+      
+    
+     
+  Proporsjonalitetskonstanten k er Boltzmanns konstant. Denne likningen, som relaterer de mikroskopiske detaljene i systemet (via Ω) til dens makroskopiske tilstand (via entropien S), er den sentrale idéen i statistisk mekanikk.
+
+
+== Referanser ==
+
+
+== Eksterne lenker ==
+Boltzmanns konstant (CODATA-verdi) hos NIST.

@@ -1,0 +1,40 @@
+revision: 7280238
+title: Mars 1
+url: https://sk.wikipedia.org/wiki/Mars_1
+
+
+---
+
+Mars 1 bola kozmická sonda Sovietskeho zväzu určená na výskum Marsu. Misia nebola úspešná. Na ceste k Marsu sa spojenie so sondou prerušilo a ako neaktívne teleso preletela okolo planéty v omnoho väčšej vzdialenosti, než bolo naplánované.
+Sondu postavilo a prevádzkuje Osoboje konstruktorskoje bjuro No. 1 (OKB-1) <Особое конструкторское бюро №1 (ОКБ-1)>, súčasť výskumného ústavu NII-88.
+
+
+== Konštrukcia ==
+Trojosovo stabilizovaná sonda typu 2MV-4 [=Mars-Venera] bola určená na výskumu medziplanetárneho priestoru a Marsu na preletovej dráhe. Základ sondy tvorí univerzálny hermetizovaný orbitálny modul, ku ktorému je v prednej časti pripojený špeciálny planetárny modul. Obe časti majú tvar valca s priemerom 1,1 m a dĺžkou 3,3 m so zaoblenými dnami. Vo vnútri sondy je udržiavaný stály pretlak 113,3 kPa a teplota v rozsahu 20 až 30 °C. Orbitálny modul s dĺžkou 2,7 m obsahuje služobné vybavenie pozostávajúce z riadiaceho a orientačného systému, systému tepelnej regulácie a zásobovania elektrickou energiou a časť vedeckých prístrojov, ktoré mali byť v činnosti v priebehu letu k planéte. Hermetizovaný planetárny modul s dĺžkou 0,6 m nesie vedecké vybavenie sondy slúžiace na výskum cieľovej planéty z bezprostrednej blízkosti. K základnému orbitálnemu modulu sú na protiľahlých stranách pripojené dva panely slnečných batérií s plochou 2,6 m2, ktoré dobíjajú NiCd akumulátorovú batériu s kapacitou 42 Ah. Tepelná regulácia sa zaisťuje cirkulujúcim plynom prechádzajúcim cez dva pologuľové radiátory umiestnené na koncoch solárnych panelov. Rozpätie slnečných panelov vrátane radiátorov je 4 m. K orbitálnemu úseku je tiež pripevnená parabolická vysokozisková anténa s priemerom 1,7 m a ku koncom slnečných panelov sú pripojené špirálové antény so stredným ziskom a tyčové všesmerové antény. Na orbitálny modul je v zadnej časti inštalovaný nehermetizovaný motorový úsek pozostávajúci z korekčného motoru, nádrží a rozvodu paliva a trysiek plynových orientačných motorov.
+Hlavný rádiový vysielač umiestnený na orbitálnom module pracuje cez parabolickú anténu na decimetrových vlnových dĺžkach a záložný cez všesmerovú anténu na metrových vlnách. V planetárnom module je ďalší vysielač (vlnová dĺžka 8 cm) na prenos televíznych snímok.
+Sonda nesie nasledujúce vedecké vybavenie:
+
+jednoosý magnetometer pre meranie medziplanetárneho magnetického poľa;
+fototelevízne zariadenie určené na snímkovanie povrchu Marsu počas najväčšieho priblíženia;
+spektroreflektometer registrujúci prítomnosť organických molekúl na Marse;
+ionizačný a scintilačný detektor kozmického žiarenia;
+lapače elektrónov a protónov slnečného vetra;
+prijímač v obore 150 až 1 500 m pre zachytávanie rádiového šumu;
+spektrograf pre štúdium prípadných ozónových absorpčných pásov;
+detektor mikrometeoritov.
+
+
+== Priebeh letu ==
+Vzlet z kozmodrómu Bajkonur s nosnou raketou Molnija prebehol 1. novembra 1962 o 16:14:16 UT. Po štarte z parkovacej dráhy sa sonda oddelila od 4. stupňa rakety a vyklopili sa slnečné batérie. Podľa telemetrických signálov inžinieri odhalili slabé tesnenie v plynovom ventile dusíka reaktívneho orientačného systému. Preto sondu ešte pred vyčerpaním dusíka uviedli do rotácie s osou orientovanou na Slnko tak, aby boli slnečné batérie osvetlené. Tým sa síce zabezpečilo zásobovanie sondy elektrickou energiou, ale sonda nemohla zamerať smerovanú anténu na Zem a korekčný motor bol tiež nepoužiteľný.
+Od dňa vzletu až do 21. marca 1963 sa so sondou udržiavalo spojenie v dvojdňových intervaloch, neskôr v päťdňových. Celkovo bolo naviazaných 61 rádiových spojení. Plánovaná korekcia dráhy sa kvôli poruchám na sonde neuskutočnila. V priebehu letu vo výške 6 000 až 40 000 km prístroje každé dve minúty registrovali nárazy mikrometeoritov pochádzajúcich z meteorického roja Severné Tauridy. Podobná hustota častíc bola neskôr zistená vo vzdialenosti 20 až 40 Gm. Meranie kozmického žiarenia ukázalo dvojnásobnú intenzitu oproti meraniam zo sond Luna z roku 1959. Sonda v prvej fáze letu merala tiež radiačné pásy Zeme.
+21. marca bola so sondou vzdialenou od Zeme 106,76 Gm nadviazaná posledná rádiová komunikácia. Ďalšie spojenia sa už nepodarilo uskutočniť v dôsledku poruchy orientačného systému. Sonda minula Mars 19. 6. 1963 vo vzdialenosti asi 193 000 km, pričom plánovaná preletová vzdialenosť od Marsu bola 11 000 km.  Neaktívne teleso sondy Mars 1 zostáva na obežnej dráhe okolo Slnka s periódou obehu 519 dní.
+
+
+== Pozri aj ==
+Prieskum Marsu kozmickými sondami
+Program Mars
+
+
+== Referencie ==
+Tento text alebo jeho časť bola prevzatá z článku http://www.lib.cas.cz/space.40/1962/INDEX1.HTM (verzia  2009-05-30) uverejneného na stránkach SPACE 40
+, ktorého autormi sú Antonín Havlíček, Antonín Vítek. (licencia GFDL a CC-BY-SA 3.0, povolenie autora)

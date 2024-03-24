@@ -1,0 +1,59 @@
+revision: 48567090
+title: diode
+url: https://sv.wikipedia.org/wiki/Diod
+
+
+---
+
+Dioden är en icke-linjär elektrisk komponent som idealt leder elektrisk ström i endast en riktning. Namnet kommer av att den har två elektroder, katod och anod. Ström kan bara gå från anod (pluspol) till katod (minuspol) - men inte tvärtom. Den första dioden var kristalldetektorn som användes i ljudradions barndom på 1920-talet. Dioder kan vara ett elektronrör, men numera är det vanligaste att dioden består av halvledare. En vanlig tillämpning av dioder är likriktning av växelström. Detta görs med en så kallad likriktarbrygga. Bryggan kan antingen vara en helvågslikriktare (Graetz-brygga) eller en halvvågslikriktare. 
+En vanlig halvledardiod består av halvledare, vanligen kisel, som i ena änden är p-dopad och i andra n-dopad. Skiktet mellan det p- och det n-dopade området kallas för en pn-övergång. Snabbare halvledardioder fungerar ofta genom en så kallad metall-halvledarövergång, en schottkydiod, som även har lägre framspänningsfall än en pn-diod i samma material.
+Dioder gjorda av dopat kisel börjar leda i framriktningen när spänningen över elektroderna överstiger ungefär 0,65 volt. Detta kallas framspänningsfall. En äldre typ, germanium-dioden har ett lägre framspänningsfall vilket kan vara användbart i vissa tillämpningar. Ett annat material som används är galliumarsenid som används i lysdioder och för dioder som ska fungera vid mycket höga frekvenser.
+Om dioden backspänns, det vill säga att katoden läggs på en högre potential än anoden, så leds en mycket liten ström, läckström, genom dioden. Typiskt värde på denna kan vara ett fåtal μA för vanliga kiseldioder. Om backspänningen görs tillräckligt hög sker ett så kallat genombrott, och dioden börjar leda ström bra även i backriktningen, men skadas om strömmen inte är kraftigt begränsad. Dock finns en speciell typ av dioder, så kallade zenerdioder, som tillverkas för att klara av just denna situation och leda ström bakåt under kontrollerade förhållanden. Typiskt för zenerdioden är att den när den väl börjar leda bakåt, vilket sker vid den så kallade zenerspänningen, har låg resistans.
+
+
+== Historia ==
+Rördiodens principer upptäcktes 1873 av Frederick Guthrie, medan kristalldioden upptäcktes 1874 av den tyske vetenskapsmannen Karl Ferdinand Braun.
+När dessa två komponenter uppfanns så kallades de likriktare. 1919 myntade William Henry Eccles ordet diode från grekiskans di som betyder "två" och ode (från ὅδος) som betyder "väg".
+Rördioden återupptäcktes av Thomas Edison 13 februari 1880 vilket han fick patent (US patent 307031) för 1883 men han vidareutvecklade inte idén. Braun patenterade kristalldioden 1899. Brauns upptäckt utvecklades vidare av Jagadish Chandra Bose till en komponent som kunde användas som detektor i radiosammanhang.
+
+
+=== Radiomottagare ===
+Den första radiomottagare som använde en kristalldiod byggdes av Greenleaf Whittier Pickard. Den första mottagaren med en rördiod patenterades i Storbritannien av John Ambrose Fleming (vetenskaplig rådgivare åt Marconi Company och tidigare anställd hos Edison.) 16 november 1904 (US patent 803684 i november 1905). Pickard fick patent på en detektor med kielkristalldetektor 20 november 1906 (US patent836531).
+
+
+== Rördioder ==
+Se Elektronrör#Elektronrörsdioden
+
+
+== Olika typer ==
+Avalanchediod
+Tunneldiod
+Gunndiod
+Lysdiod
+Zenerdiod
+Schottkydiod
+Kapacitansdiod
+Fotodiod
+Germaniumdiod
+
+
+== Besläktade komponenter ==
+Likriktare
+Transistor
+Tyristor
+Diac
+TRIAC
+
+
+== Se även ==
+Triod
+Tetrod
+Pentod
+Kohär
+
+
+== Källor ==
+
+
+== Externa länkar ==
+ Wikimedia Commons har media som rör Diod.

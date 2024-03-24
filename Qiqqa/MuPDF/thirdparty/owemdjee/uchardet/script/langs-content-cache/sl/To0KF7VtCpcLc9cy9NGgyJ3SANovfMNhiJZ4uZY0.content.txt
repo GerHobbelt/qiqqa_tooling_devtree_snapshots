@@ -1,0 +1,112 @@
+revision: 5963371
+title: Virus
+url: https://sl.wikipedia.org/wiki/Virusi
+
+
+---
+
+Vírus je v biologiji zelo majhen patogen, ki se lahko razmnožuje le v živih celicah, saj sam nima celičnih mehanizmov, potrebnih za lastno razmnoževanje. Poznanih je nekaj več kot 5.000 vrst virusov, ki lahko okužijo vse vrste organizmov, od arhej in bakterij do gliv, rastlin in živali. Mnogo virusov povzroča nalezljive bolezni, saj s svojim delovanjem negativno vplivajo na gostiteljske celice, ki se pred njimi branijo z različnimi imunskimi mehanizmi. Nekateri virusi pa gostitelju ne povzročajo vidne škode, zato se v njem razmnožujejo neopazno.
+Izraz »virus« je praviloma rezerviran za tvorbe, ki okužijo evkarionte (mednje spadajo vsi večcelični organizmi in številni enocelični organizmi z izoblikovanim celičnim jedrom), medtem ko se za tiste, ki okužijo prokarionte (bakterije in sorodni organizmi brez izoblikovanega celičnega jedra) uporablja izraz bakteriofag. Virusi so sestavljeni iz nukleinske kisline (DNK ali RNK), okrog katere je zaščitni ovoj iz beljakovin ali mešanice beljakovin in lipidov.
+Z virusi se znanstveno ukvarja virologija, panoga mikrobiologije.
+
+
+== Etimologija ==
+Beseda virus izhaja iz latinske besede srednjega spola vīrus, ki se nanaša na sluz, slino, strup ali druge škodljive snovi. Ima enako indoevropsko osnovo kot sanskrt viṣa, staroavestijsko vīša in starogrško ἰός: ios, kar vse pomeni strup.
+V angleščini se je prvič pojavila leta 1392 v prevodu Johna Trevise predenciklopedičnega dela Bartolomeja Angleškega O značilnostih stvari (De proprietatibus rerum) iz leta 1240. Virulenten, iz latinske virulentus, strupen, izvira iz leta 1400. Pomen »povzročitelja nalezljive bolezni« je prvič zapisan leta 1728 pred odkritjem virusov ruskega fiziologa rastlin in mikrobiologa Ivanovskega leta 1892. Pridevnik virusen izhaja iz leta 1948. Danes se izraz virus uporablja za opis bioloških virusov, opisanih v članku, in kot metafora za druge parazitsko-reproduktivne stvari, kot so memi ali računalniški virusi (od leta 1972). Izraz virion iz leta 1959 se uporablja tudi za posamezni nalezljivi del virusa, ki se sprosti iz celice in je sposoben okužiti druge istovrstne celice.
+
+
+== Zgradba ==
+
+Popoln virusni delec (virion) je zgrajen iz nukleinske kisline (DNK ali RNK, nikoli pa obeh hkrati), ki jo obdaja zaščitna beljakovinska ovojnica, imenovana kapsida. Kapsido tvorijo ponavljajoče se beljakovinske podenote (kapsomere), ki jih kodira virusni genom. Istovrstna zgradba kapside nudi marsikatere ugodnosti. Celica lažje zgradi virus iz enakih enot, ker je ta proces podoben izgradnji dolge polipeptidne molekule. Virusna DNK, ki mora vsa iti v majhno kapsido, pa posledično nosi zapis za izgradnjo kapside le v eni obliki. Dolžina bi se namreč zelo podaljšala, če bi morala virusna DNK kodirati zapise za več deset, sto različnih beljakovin, iz katerih bi nato nastala kapsida. Oblika kapside je temelj taksonomskega sistema za razvrščanje, po katerem delimo viruse na helikalne, ikozaedralne, viruse z ovojnico in kompleksne. Ovojnica virusov z ovojnico izvira iz gostiteljske celice in jo tvori lipidni dvosloj z vključenimi beljakovinami, včasih se priključijo tudi ogljikovi hidrati. Večina znanih virusov je velikih med 20 do 300 nm, kar je manj kot je ločljivost svetlobnega mikroskopa - neposredno jih lahko preučujemo samo z občutljivejšimi elektronskimi mikroskopi.
+Znotraj skupine virusov obstaja ogromna raznolikost genomskih struktur, mnogo večja kot v vseh preostalih skupinah živih bitij skupaj. Krovna razdelitev je glede na tip nukleinske kisline na DNK in RNK viruse; slednji predstavljajo veliko večino virusov. Virusni genom je lahko nadalje krožen ali linearen, eno-, dvoverižen ali mešan (ne glede na tip nukleinske kisline), segmentiran, pozitivno ali negativno smeren itd. Močno se razlikujejo tudi po velikosti; njihova atomska masa sega od 106 do 108 Daltonov.
+
+
+== Delovanje virusov ==
+rastlinske viroze lahko povzročajo odsotnost klorofila, kodranje in zvijanje listov ter razvoj šišk.
+živalske viroze: ošpice, vodene koze, herpes (mehurčki na ustnici, ki se pojavijo ob padcu odpornosti), pasovec, steklina (prenašajo večinoma divje živali, nevarna tudi za človeka), hepatitis (napada jetra), meningitis (vnetje možganskih ovojnic, prenašalci so klopi), gripa, AIDS, bradavice, nekatera rakasta obolenja.
+
+
+== Izvor virusov ==
+Obstaja več hipotez o izvoru virusov, ki jih najdemo praktično povsod, kjer živijo živi organizmi, zato so verjetno stari toliko kot prve celice.Regresivna hipoteza
+Virusi bi lahko bili majhne celice, ki so kot paraziti napadale druge celice. Skozi čas so izgubile gene, ki niso bili potrebni za parazitski odnos. Bakteriji rikecija in klamidija sta živi celici, ki se tako kot virusi razmnožujeta znotraj gostiteljske celice. Obe podpirata regresivno hipotezo, saj sta zaradi svoje parazitske odvisnosti izgubili gene, ki bi jima omogočili samostojni obstoj zunaj gostiteljskih celic. Hipoteza o celičnem izvoru
+Lahko se ji reče tudi hipoteza pobega. Zagovorniki te hipoteze trdijo, da so se virusi razvili iz delčkov DNK ali RNK, ki so »pobegnili« iz genov večjih organizmov. Virusna DNK bi se lahko izoblikovala iz plazmidov ali transpozonov. Plazmid je dvovijačna DNK molekula, ki je ločena od kromosomske DNK, se neodvisno od nje podvaja in se lahko seli iz celice v celico. 
+Transpozon pa je del DNK zapisa, ki lahko spreminja svoj položaj znotraj genoma. Imenujemo jih tudi »skakajoči geni«. Zaradi svoje mobilnosti ustrezajo izvoru današnjih virusov.Koevolucijska hipoteza
+Virusi naj bi se razvili iz kompleksnih molekul beljakovin in nukleinskih kislin v tistem časovnem obdobju, ko so se pojavile na Zemlji prve celice. Zaradi preprostejše zgradbe so lahko obstajali tudi že pred nastankom prvih celic. Hipoteza nam ne predstavi viruse kot parazite, ki izvirajo iz samih celic, ampak poudarja njihov partnerski odnos v koevoluciji. To hipotezo najbolje podpirajo raziskave na viroidih, ki so virusom podobni majhni patogeni in napadajo rastline. 
+
+
+== Razdelitev virusov ==
+Viruse razporejamo v skupine glede na patogenost, biološke, kemične in fizikalne lastnosti ter glede na to kaj napadajo.Razdelitev glede na patogenost
+
+Virusi, ki prizadenejo celo telonpr. ošpice, rumena mrzlica, noriceVirusi, ki prizadenejo posamezne organebolezni osrednjega živčevja (steklina, meningitis, herpes)
+bolezni dihal (influenca)
+bolezni kože in sluznic (bradavice)
+bolezni oči in očesne veznice
+bolezni slinavk (mumps)
+bolezni jeter (virus vročice Doline rift, hepatitis)
+bolezni bezgavk
+bolezni prebavilRazdelitev glede na biološke, kemične in fizikalne lastnosti
+
+Parvovirusi: drobni virusi pri živalih, ki spremljajo adenoviruse kot satelitni virusi (okvarjeni virusi brez celega genoma, ki za dokončanje cikla potrebujejo drug pomočniški virus)
+Papovavirusi: povzročajo tumorje
+Adenovirusi: povzorčajo vnetja dihal pri človeku in preživijo v bezgalkah več let
+Herpesvirusi: povzročajo latentne (prikrite) okužbe
+Poksivirusi: so patogeni za kožo
+Pikornavirusi: imajo 63 enterovirusov (med drugimi poliovirus)
+Reovirusi: so bili v preteklosti echovirusi tipa 10 pri človeku in živalih.
+Togavirusi: v svojem življenjskem ciklu prehajajo z gostitelja na gostitelja s pikom ali ugrizom členonožca (pajki, žuželke, pršice)
+Miksovirusi: virusi influence A, B, C.
+Paramiksovirusi: virusi parainfluence, virus mumpsa, virus ošpic, virus pasje ohromelosti, goveje in kurje kuge.
+Rabdovirusi: virusi podobni 'izstrelkom', med njih uvrščamo virus stekline
+Koronavirusi: povzročajo bolezni dihal pri človekuRazdelitev glede na tarčo
+
+bakterijski virusi (bakteriofagi)
+rastlinski virusi  (fitofagi)
+živalski virusi (zoofagi)
+
+
+== Zgodovina odkrivanja virusov ==
+
+V 19. stoletju so že dokazali, da določene bolezni pri človeku in živalih povzročajo specifične bakterije. Poznali so jih zaradi njihove velikosti – vidne so bile pod svetlobnim mikroskopom in zadržala so jih cedila iz nepološčenega porcelana. Po drugi strani pa niso poznali izvora pogostih bolezni, kot sta na primer slinavka in parkljevka, ker povzročitelja niso mogli umetno vzgojiti, niso jih videli pod svetlobnim mikroskopom in tudi posebna bakteriološka cedila jih niso zadržala. Šele proti koncu 19. stoletja, ko so odkrili virus tobačnega mozaika (leta 1886 je bolezen opisal Adolf Mayer, virus, ki jo povzroča, pa je odkril leta 1892 Dimitrij Ivanovski), so deloma razrešili naravo virusov. Vendar pa niso neposredno reševali vprašanj z njihovo zgradbo, temveč so jih spoznavali le glede na njihove patološke sposobnosti, tj. patogenosti. Šele ko so osamili in kristalizirali (Stanley, 1935) virus tobačnega mozaika, so uvideli izredno kompleksnost nekaterih virusov, začeli so se celo spraševati, ali so virusi živa bitja ali mrtve snovi, ker je bila večina virusov manjša kakor molekule določenih beljakovin.
+Spoznali so, da imajo virusi deoksiribonukleinsko kislino (DNK ali ribonukleinsko kislino RNK, eno ali več beljakovin in ogljikove hidrate ter lipide. Leta 1953 sta James Dewey Watson in  Francis Crick predlagala zamisel o dvojnem helikalnem ustroju DNK, s tem pa je bilo mogoče razrešiti vprašanje o razmnoževanju virusov. Leta 1960 so spoznali zaporedje 158 aminokislin beljakovinske podenote v virusu tobačnega mozaika in kasneje določili še mesto genov tega virusa. S pomočjo virusnih nukleinskih kislin so vključili aminokisline ter nukleotide – torej so zelo pomembne pri celičnem metabolizmu in celični diferenciaciji. Ugotovili so, da so virusne nukleinske kisline podobne nukleinskim kislinam v kromosomih po tem, da imajo podatek, ki je potreben za replikacijo njih samih in za sintezo vsaj ene ali več beljakovin, razlikujejo pa se po kompleksnosti in zmožnosti oziroma nagnjenju, da se prenašajo iz celice v celico. Virusne nukleinske kisline se obnavljajo počasi in se odzivajo na dražljaje tako, da se jim spreminja struktura (po tem so podobne živim bitjem). Vendar virusna nukleinska kislina nima ustreznega sistema za presnovo, ki je značilna za celice.Odkrivanje virusov pa ni temeljilo zgolj na preučevanju virusa tobačnega mozaika, temveč tudi na drugih virusih. Spodaj so našteti nekateri strokovnjaki, ki so prispevali k boljšemu poznavanju virusov:
+
+Edward Jenner (1798) – eden izmed prvih, ki začne uspešno zdraviti virusno okužbo govejih koz, čeprav virusov samih takrat še niso poznali. Njegovo metodo aktivne imunizacije kot profilaktičen ukrep proti virusni okužbi uporabljajo še danes.
+Louis Pasteur (1884) – opis metodičnih raziskovanj proti steklini
+Charles Chamberland (1884) – izum vrste filtra s porami manjšimi od bakterij
+Adolf Mayer (1886) – opis bolezni tobačnega mozaika
+Dimitrij Josipovič Ivanovski (1894) – opis virusa tobačnega mozaika
+Martinus Willem Beijerinck (1898) – pojasni naravo virusa tobačnega mozaika in njegovo razmnoževanje
+Friedrich Loeffler in Paul Frosch (1898) – omogočita kvantitativno preučevanje virusov glede na največjo razredčino materiala, ki še povzroča značilna znamenja bolezni
+Walter Reed (1902) – ugotovi, da pomemben delež mrčesa prenaša bolezen (npr. komarji rumeno mrzlico)
+Frederick William Twort (1915) – opis virusov, ki napadajo bakterije, bakteriofage
+Frank Macfarlane Burnet in Margot Mckie (1929) – objavita podmeno o mehanizmu lizogenije
+Francis Oliver Holmes (1929) – infektivnost virusov se meri po številu lokalnih razjed
+Max Theiler (1930) – cepivo proti rumeni mrzlici
+W. F. Elford (1932) – meritev velikosti virusov s filtracijo
+Teikiči Fukuši (1933) – eksperimentalni dokaz za razmnoževanje virusov rastlin v žuželkah
+Wendell Meredith Stanley (1935) – kristalizacija virusa tobačnega mozaika
+M. Schlesinger (1936) – opis temeljnih sestavin virusov
+Max Delbrück (1946) – opis pojava genetske rekombinacije
+John F. Enders in sodelavci (1949) – vzgojitev poliovirusa tipa 2, kar privede do odkritja cepiva proti otroški paralizi
+Kenneth M. Smith in Ralph W. G. Wyckoff (1949) – ugotovitev, da imajo nekateri virusi RNK, drugi pa DNK
+Renato Dulbecco (1952) – izum praktične metode za pridobivanje plakov
+Norton D. Zinder in Joshua Lederberg (1952) – opis novega mehanizma prenosa genetičnih lastnosti z bakterije na bakterijo, ki se prenaša več rodov
+D. Hershey in Martha Chase (1952) – dokaz, da se med infekcijo nukleinska kislina in beljakovinske sestavine sproščajo, preden vstopi v celico, beljakovinski plašč pa ostane na celični površini (dokaz, da DNK prenaša vsa genetična naznanila, ki urejajo razmnoževnje virusa)
+Heinz Fraenkel-Conrad in Robley C. Williams (1955) – sestava infektivnega (kužljivega) virusa tobačnega mozaika
+Gierer in Gerhard Schramm (1956) – dokaz, da je RNK, izolirana iz virusa tobačnega mozaika, infektivna
+Alick Isaacks in Jean Lindenmann (1957) – odkritje, da se med interakcijo virus-celica dela beljakovina, ki ovira razmnoževanje virusov (obet za iznajdbo zdravila proti virusnim infekcijam)
+Sydney Brenner in R. W. Horne (1959) – vpeljava metode barvanja, ki poveča kontrastnost virusnih delcev v elektronskem mikroskopu (odkritje somerno urejene zgradbe in povrhnjih molekul na trikotnih površinah)
+
+
+== Glej tudi ==
+računalniški virus
+
+
+== Sklici ==
+
+
+== Viri ==
+
+
+== Zunanje povezave ==
+
+Televizijski dokumentarec Virusi naši vsakdanji spremljevalci

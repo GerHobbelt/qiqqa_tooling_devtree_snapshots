@@ -1,0 +1,27 @@
+revision: 31558851
+title: "\uC77C\uC815 (\uC708\uB3C4\uC6B0)"
+url: https://ko.wikipedia.org/wiki/%EC%9D%BC%EC%A0%95_(%EC%9C%88%EB%8F%84%EC%9A%B0)
+
+
+---
+
+일정(Calendar)은 윈도우 비스타와 윈도우 서버 2008 이후에 내장된 일정 프로그램이다. 윈도우 비스타 영문판에서는 달력이라는 뜻의 윈도우 캘린더(Windows Calender)라는 이름을 사용하고 있다. iCal 파일 형식을 기본 지원하며, HTTP와 웹DAV를 사용하여 웹 기반 일정을 출판하는 기능을 제공한다. 윈도우 일정은 공유 중인 네트워크 드라이브에 저장할 수도 있다.
+윈도우 일정은 하루 단위, 주 단위(5일, 7일), 월 단위를 포함하여 여러 종류로 표시할 수 있으며, 작업(task)을 지원하고 사용자마다 100개가 넘는 일정을 제공한다.
+윈도우 일정은 CF4 개발키트가 포함된 API를 사용하여 확장할 수 있다.
+윈도우 서버 2008에서 윈도 일정은 기본적으로 사용하지 못하지만 "Desktop Experience(데스크톱 경험)" 서비스 구성 요소가 설치되어 있다면 사용할 수 있다. 윈도우 일정은 윈도우 7 이상에는 기본 포함되어 있지 않지만, 윈도우 비스타의 Program Files의 Windows Calender를 윈도우 7과 윈도우 8에 가져와서 사용할 수 있다.
+
+
+== 비판 ==
+한때 윈도우 일정은 iCal과의 어느 정도 비슷하다는 점 때문에 비판을 받아왔다. 또다른 문제는 윈도우 모바일 장치 센터가 윈도우 일정 대신 아웃룩의 일정과 동기화된다는 점이다.
+
+
+== 참조 ==
+
+
+== 같이 보기 ==
+마이크로소프트 아웃룩
+
+
+== 외부 링크 ==
+LonghonBlogs.com: Sidebar Geek : Windows Calendar in Windows Vista Build 5231
+Windows Supersite: 'Vista December 2005 CTP (Build 5270) Review Part 2: Bundled Applications'

@@ -1,0 +1,65 @@
+revision: 6981237
+title: Garsas
+url: https://lt.wikipedia.org/wiki/Garsas
+
+
+---
+
+Garsas – slenkantis slėgio svyravimas terpėje, kuris yra girdimas žmogaus ar gyvūno ausimis. Paprastai svyravimas – mažas ir periodinis, tada garsas yra banga, apibrėžiama lygtimi:
+
+  
+    
+      
+        λ
+        =
+        
+          
+            c
+            f
+          
+        
+      
+    
+     
+  .Čia 
+  
+    
+      
+        λ
+      
+    
+     
+   – bangos ilgis, f – dažnis ir c – garso greitis.
+Garsas sklinda ore ir kitose dujose, skysčiuose, kietuose kūnuose specifiniu greičiu. Beorėje terpėje garso nėra. Žmogaus ausimi girdimų garsų dažnis yra intervale 16 Hz – 20 000 Hz. Senstant silpnėja klausa, ypač aukšti tonai tampa negirdimi. Garsas vadinamas tonu, jei jis tik vieno dažnio banga.
+Fizikos šaka tirianti garsą – akustika. Taikomoji akustika priskiriama inžinerijai, pvz., statybinė akustika.
+
+
+== Garso bangos ==
+Garso bangos perneša energiją, kurią galima panaudoti. Kalbą ir muziką galima perduoti daugybe būdų, todėl garsas – efektyvi ryšio priemonė. Ultragarsas – efektyvi ryšio priemonė. Ultragarsas (aukšto dažnio garsas, kurio žmogus negirdi) padeda šikšnosparniams, delfinams ir banginiams orientuotis erdvėje, nes jie evoliucijos eigoje įgijo aktyvios ultragarsinės echolokacijos sistemas. Tačiau net garsiausio garso energija nedidelė. Labai garsiai grojančio simfoninio orkestro sukelto garso energija yra lygiavertė menkos galios kaitinamosios lempos šviesos ir šiluminei energijai.
+
+
+== Kaip atsiranda garsas? ==
+Garsas yra tam tikra kinetinės energijos (judesio energijos) forma, kurią sukuria bet kuris virpantis objektas. Visų garsų priežastis yra mechaniniai aplinkos virpesiai, nors paprastai jie nematomi. Susidūrus automobiliams jų paviršiai pradeda virpėti, ir išgirstame smūgio garsą; muzika iš radijo imtuvo sklinda dėl to, kad virpa jo garsiakalbio membrana; kalbame ir dainuojame virpant balso stygoms gerklose.
+Virpantis kūnas verčia virpėti arčiausiai esančias oro molekules. Virpesiai sklinda ore, sudarydami garso bangą, tačiau oras banga neslenka. Ten kur molekulės susispiečia, susidaro didesnio slėgio sritis (sutankėjimas), o ten, kur jų lieka mažiau – žemesnio slėgio sritis (praretėjimas). Pakaitomis einančios sutankėjimų ir praretėjimų sritys sklinda ore kaip garso banga. Pasiekus ausį, ji virpina ausies būgnelį, ir žmogus girdi garsą.
+Kuo stipresni daikto virpesiai, tuo didesnis sutankėjimų ir praretėjimų slėgio skirtumas, ir garsas yra stiprus. Virpesių dažnis lemia garso aukštį, arba toną. Jei virpesiai dažnėja, sutankėjimų ir praretėjimų sritys suartėja – garsas darosi aukštesnis. Lėtesni virpesiai atitinka žemesnį garsą.
+Garso bangos ore ties jūros lygiu sklinda iš šaltinio visom kryptim 331 m/s greičiu. Dideliame aukštyje garso greitis yra mažesnis, nes oras yra retesnis, o vandenyje ar metale garso greitis didesnis, nes šios medžiagos yra daug tampresnės negu oras, ir virpesiai jose sklinda sparčiau. Garso greitis vandenyje yra apie 1500 m/s, pliene – apie 5000 m/s. Garsas vakuume nesklinda, nes jame nėra dujų molekulių, gebančių virpėti ir perduoti garsą.
+
+
+== Garso stiprumas, aukštis ir dažnis ==
+Garso stiprumo lygis matuojamas decibelais (dB). Prietaisas matuoja garso stiprumą, susijusį su garso bangos slėgio skirtumu – garsiniu slėgiu. Garso stiprumo skalė yra logaritminė: garso sustiprėjimas 10dB atitinka dešimt kartų didesnį stiprumą. Du kartus padidėjus garso stiprumui, garsinio slėgio lygis padidėja 6dB. Garsumas apibūdina klausos organų slėgio pojūtį. Ausis ne visų dažnių garsus girdi vienodai, pavyzdžiui, žemas garsas girdimas ne toks stiprus, kaip tokio pat stiprumo aukštas garsas.
+Sutankėjimų skaičius per sekundę lemia garso dažnį, kuris matuojamas hercais (hz): 1 hz lygus vienam virpesiui per sekundę. Dažnių skalė nėra logaritminė: 440 hz tonas (pirmosios oktavos la) skamba du kartus aukščiau (sakoma oktava aukščiau) negu 220 hz tonas. Kitaip sakant, kuo didesnis virpesių dažnis, tuo aukštesnis garsas.
+
+
+== Garso panaudojimas ==
+
+
+=== Garsinė signalizacija ===
+Garsas daug kur naudojamas kaip perspėjamasis signalas. Pvz., priešlėktuvinės gynybos ar laivų sirenos), automobilių signalizacija, mikrobangų krosnelės garsinis signalas, telefono ar durų skambutis ir pan.
+
+
+=== Echolokacija ===
+Echolokaciją naudoja ne tik kai kurie gyvūnai. Ultragarsinę echolokaciją naudoja karo laivai povandeninių laivų paieškai, žvejybiniai laivai – žuvų telkinių paieškai. Panašiu principu veikia ir ultragarsinė echoskopija, kuri naudojama medicinoje (organų riboms nustatyti, auglių paieškai ir pan.) ir technologijose (defektų paieškoms). Medicinoje ultragarsas panaudojamas ir inkstų bei šlapimtakių akmenims trupinti (akmenligė).
+
+
+== Triukšmas ir akustika ==
+Triukšmui, aprėpiančiam platų dažnių diapazoną nebūdingas kuris nors vienas tonas. Labai garsus triukšmas yra pavojingas, nes ilgas stipresnio nei 100 dB triukšmo (reaktyvinio lėktuvo variklio, daugelio mechanizmų keliamo triukšmo) poveikis greitai ir visam laikui pažeidžia klausą. Ypač pavojingas yra žemo dažnio triukšmas, kuris, palyginti su aukšto dažnio triukšmu, neatrodo toks stiprus; tyrimai parodė, kad nuo labai stipraus žemo dažnio garso ir infragarso (kuris yra mažesnio negu 16 Hz dažnio garsas) pradeda svaigti galva, pykina, atsiranda visokių fiziologinių pokyčių; karo pramonės specialistai netgi atliko eksperimentų, tikėdamiesi infragarsą panaudoti kaip ginklą.

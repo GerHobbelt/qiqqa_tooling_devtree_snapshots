@@ -1,0 +1,114 @@
+revision: 6351816
+title: Skyworks Solutions
+url: https://et.wikipedia.org/wiki/4G
+
+
+---
+
+Neljanda põlvkonna mobiilsidevõrgu standard on järg standarditele 2G ja 3G. 4G-seadmete suurim võimalik allalaadimise kiirus on suure liikuvusega seadmetes (näiteks mobiiltelefonides) 100 Mbit/s ja väikese liikuvusega seadmetes (näiteks eraldiseisev traadita modem) 1 Gbit/s.
+4G-süsteemilt oodatakse mitmekülgset ja turvalist IP-põhist lahendust, kus oleks kasutajatele tagatud mitmesugused teenused, nagu näiteks ultra-lairiba Internet, VoIP, mänguteenused ja multimeediavoog.
+Palju segadust on tekitanud tõsiasi, et tehnoloogiad, mis on hetkel turul ja mida tootjad reklaamivad kui "4G", on 4G-tehnoloogia eelkäijaid nagu mobiilne WiMAX ja Long Term Evolution (LTE). Need versioonid aga ei täida ITU-R nõudeid, kus andmesidekiirus peab 4G-süsteemide puhul olema ligikaudu kuni 1 Gbit/s. Seega oleks neid sisuliselt õigem nimetada 3,9. põlvkonna standarditeks (aga rahvusvaheliste standardite nimesid ei tõlgita). Nendest nõuetest hoolimata on jätkatud 4G eelversioonide WiMAX-i ja LTE turustamist 4G kaubamärgi all.
+Kõigis 4G ettepanekuis on CDMA spektri hajutamise raadiotehnoloogia, mis kasutab 3G-süsteeme ja IS-95, hüljatud ja asendatud sagedusala ühtlustatud skeemiga nagu OFDMA. See on kombineeritud MIMO-ga, näiteks mitmekordsete antennide, dünaamiliste kanalite jaotamise ja kanali sõltuvuse planeerimisel.Kõik juhtmevaba telekommunikatsiooni ettevõtted on üldiselt 4G, kui arenenud juhtmevaba tehnoloogia, mis muuhulgas põhineb niinimetatud laia kanali OFDM tehnoloogial ja mille arhitektuur põhineb IP-l, omaks võtnud. Ühendriikides vastab nendele parameetritele Sprint-s 4G-tehnoloogia. T-Mobile tehnoloogia aga nendele parameetritele ei vasta.
+
+
+== ITU nõuded ==
+ITU (Rahvusvaheline Telekommunikatsiooni Liit) eesmärk on soodustada ülemaailmse telekommunikatsiooni levikut. ITU tugineb arengumaadele, kus tahetakse kindel olla, et nende tehnoloogia on standardne ja loodetavasti laia levialaga. Kuigi ITU on kasutusele võtnud soovitusi tulevase ülemaailmse telekommunikatsiooniside tehnoloogiate loomiseks, ei tee nad tegelikult standardimist ega arendustööd ise vaid toetutvad oma töös teistele standardiasutustele nagu IEEE, WiMAX Forum ja 3GPP. Hiljuti kiitis ITU töörühm heaks kaks arenenud tööstustehnoloogiat kaasamaks ITU International Mobile Telecommunications Advanced (IMT-Advanced programmi), mis on keskendunud ülemaailmsete sidesüsteemide arendamisele, mis oleksid kättesaadavad juba paari aasta pärast. Töörühma eesmärgiks ei olnud kommenteerida tänapäevaseid 4G-sid, mis on Ameerika Ühendriikides välja antud, kui täpsem olla siis töörühm otsustas mitte siduda IMT-Advanced programmi 4G tingimustega, tunnistades juba käimasolevat ühist kasutust tööstuses. Sellest hoolimata ignoreeris ITU turundus- ja reklaamiosakond seda kokkulepet ja kasutas 4G terminit enda pressiteadetes. Kuigi ITU on loonud soovitusi IMT-Advancedile, ei ole need soovitused ITU liikmesriikides siduvad.
+
+
+== 4G eelkäijad ja kandidaadid ==
+
+
+=== 3GPP Long Term Evolution (LTE) ===
+
+Eel-4G-tehnoloogia 3GPP Long Term Evolution (LTE) on sageli reklaamitud kui "4G", aga esimene LTE väljalase ei täida täielikult IMT-Advanced kriteeriume. LTE standardil on teoreetiline allalaadimiskiirus kuni 100 Mbit/s ja üleslaadimiskiirus kuni 50 Mbit/s, kui kasutati 20 MHz kanalit – ja rohkem, kui kasutati MIMO (ingl multiple-input multiple-output – mitu sisendit ja mitu väljundit).
+Maailma esimene avalikuks kasutamiseks mõeldud LTE-võrk avati kahes Skandinaavia pealinnas: Stockholmis (Ericssoni süsteem) ja Oslos (Huawei süsteem) 14. detsembril 2009, ja reklaamiti seda kui 4G-võrku. Lõppkasutajaseadmed olid Samsungilt. LTE kuutasu Stockholmis on ligi 550 krooni kuus ja andmemaht on piiratud 30 GB-ga. Paljud suurimad mobiilifirmad Suurbritannias ja mujal maailmas on lubanud oma võrgud muuta LTE tasandile 2011. aasta algul.
+Füüsiline raadiosidevõrk nimetati varajases staadiumis HSOPA-ks (High Speed OFDM Packet Access), hiljem E-UTRA-ks (Evolved UMTS Terrestrial Radio Access).
+
+
+=== LTE Advanced ===
+LTE Advanced (ingl Long-term-evolution Advanced) on standardi IMT-Advanced kandidaat, ametlikult esitatud 3GPP organisatsiooni poolt ITU-T-le 2009. aasta sügisel, ja eeldatavasti tuleb välja 2012. 3GPP LTE Advanced sihtmärk on jõuda ja ületada ITU kriteeriumid. LTE-Advanced on sisuliselt LTE täiendus. See ei ole uus tehnoloogia, vaid praeguse LTE võrgu edasiarendus. See uuendus on kasumlik müüjatele: kõigepealt pakutakse LTE-d ja siis uuendust LTE-Advanced, mis on sarnane WCDMA uuendamisega HSPA-ks. Lisaspekter ja multipleksimine võimaldavad saavutada LTE ja LTE-Advancedi kiirema andmeside. Koordineeritud mitmikpunktedastus suurendab süsteemi suutlikkust saada hakkama suurte andmesidekiirustega. Loodetakse, et LTE kümnes väljalase saavutab LTE-Advancedi kiirused. 8. väljalase toetab praegu allalaadimiskiirust kuni 300 Mbit/s, mida on võrreldes standardiga IMT-Advanced siiski veel vähe.
+
+
+=== Mobiilne WiMAX (IEEE 802.16e) ===
+Mobiilne WiMAX (IEEE 802.16e) või mobiilne lairibaühendus (MWBA) standard on samuti reklaamitud kui 4G ja mis annab 20 MHz kanalil allalaadimiskiiruseks 128 Mbit/s ja üleslaadimiskiiruseks 56 Mbit/s.
+Maailma esimene kaubanduslik mobiilne WiMAX-i teenus avati Lõuna-Koreas Soulis 30. juunil 2006.
+Sprint Nextel on mobiilset WiMAX-it kasutanud alates 29. septembrist 2008 ja nimetab seda 4G-võrguks.
+
+
+== 4G eesmärgid ==
+Paindlik kanali ribalaius, vahemikus 5–20 MHz, lisavõimalusena kuni 40 MHz.
+Nominaalne andmesidekiirus 100 Mbit/s, kui klient füüsiliselt liigub suure kiirusega jaama suhtes ja 1 Gbit/s, kui klient ja jaam on fikseeritud positsioonidel, nagu ITU-R on määratlenud.
+Andmesidekiirus vähemalt 100 Mbit/s kahe punkti vahel, olenemata nende punktide asukohast maailmas.
+Sujuv lülitumine ühest võrgust teise heterogeenses võrgus.
+Sujuv ühenduvus ja globaalne uitühendus võrkude vahel.
+Kvaliteetne teenus järgmise põlvkonna multimeedia jaoks (näiteks HDTV, mobiil-TV, sujuv voogvideo, videovestlus).
+Koostalitlus olemasolevate juhtmevabade võrkudega.
+Universaalne juurdepääs ja porditavus üle kõigi seadmete.
+IP-põhised väiksed tugijaamad (ingl Femtocell).
+
+
+== 4G eelised ==
+4G-süsteemi strateegiline nägemus kujunes esmakordselt USA Kaitseministeeriumi Teadusagentuuril (ingl Defense Advanced Research Projects Agency (DARPA)). DARPA valis hajusarhitektuuri ja läbiva Interneti protokolli ja uskus algselt P2P-võrku, kus iga mobiilne seade võib võrgus olla nii vastuvõtja kui ka saatja teiste seadmete jaoks, mis kõrvaldaks rumm-kodar (ingl spoke-and-hub) arhitektuuri nõrkuse, mis eksisteerib 2G-ja 3G-mobiilivõrkudes. Alates 2.5G GPRS-süsteemist on mobiilivõrgu süsteemid varustatud topelt infrastruktuuriga: pakettkommuteeritud sõlmpunktid andmeside jaoks ja kanalkommuteeritud sõlmpunktid häälkõne jaoks. 4G-süsteemis on kanalkommutatsiooniga infrastruktuur kaotatud ja on ainult pakettkommutatsioonil põhinev võrk. See tähendab seda, et traditsioonilised häälkõned edastatakse läbi Interneti (IP-telefon).
+Mobiilvõrgud nagu 4G, võimaldavad takistamatult liikumist. Seega failiedastus ei katke, kui terminal liigub ühest tugijaama levialast teise. Terminal jätab samaks ka IP-aadressi, kui toimub üleminek. See tähendab, et liikuv server on kättesaadav nii kaua, kuni see on mõne serveri levialas. 4G-süsteemis on see liikuvus tagatud tänu mobiil-IP-protokollile, mis on osa IPv6-st. Vanemates mobiilivõrgupõlvkondades põhines see füüsilisel ja andmelülikihi protokollil. Lisaks takistamatule liikumisele tagab 4G paindliku koostalitluse erinevate eksisteerivate traadita side võrkudega, näiteks satelliitvõrkude, traadita mobiilside, WLAN- ja PAN-võrkudega.
+Säilitades takistusteta liikumist, pakub 4G traadita side teenustele väga suurt andmesidekiirust, ootuspäraselt 100 Mbit/s. Suurem ribalaius ja kiirem andmesidekiirus võimaldab 4G kasutajal vaadata kõrglahutusega videoid ja pidada videokonverentse. 4G traadita side süsteem peaks suutma anda igakülgset IP-lahendust, kus multimeedia rakendusi ja teenuseid on võimalik saata kasutajale ükskõik millal ja kus kiire andmeside, esmaklassilise kvaliteedi ja suure turvalisusega.
+
+
+== Komponendid ==
+
+
+=== Pöördustehnoloogiad ===
+Nagu arenesid traadita standardid, arenes ka sidetehnika efektiivsus, jõudlus ja mastaapsus. Esimese põlvkonna traadita standardid kasutasid lihtsat TDMA ja FDMA-d. Traadita kanalites tõestas aga TDMA suutmatust juhtida suure andmesidekiirusega kanaleid, sest see nõuab suuri kontrollpause, et leevendada multiraja mõju. Samamoodi tarbib FDMA rohkem ribalaiust valvamisele, et vältida kandja-häire suhet. Seepärast üks osa teise põlvkonna süsteeme kasutasid kombinatsiooni FDMA ja TDMA ning teine osa võttis kasutusele ühispöördustehnoloogia nimega CDMA. CDMA kasutamine tõstis süsteemi suutlikkust, ent teoreetiline viga pani sellele "pehmed" piirid (CDMA võrgu häälestus ei suuda loomupäraselt tagasi lükata uusi kliente, kui ta läheneb limiidini ning kui võrk koormatakse üle, siis selle tulemusena keelab võrk teenuse kõigile selle kasutajatele; kuigi seda välditakse praktilisi lahendusi kasutusele võttes teenusekvaliteedi (QoS) poolt. Andmesidekiirus on ka suurenenud, sest see süsteem (eeldusel, et võrk ei saavuta oma suutlikkust) on piisavalt tõhus, et toime tulla multipath-kanalil. See andis kolmanda põlvkonna süsteemidele, näiteks IS-2000, UMTS, HSXPA, 1xEV-DO, TD-CDMA ja TD-SCDMA, võimaluse kasutada CDMA-d kui pöördustehnoloogiat. Siiski, probleemküsimus CDMA puhul on kehv spektraalne paindlikkus ja arvutuslikult intensiivne aeg-domeen ühtlustamine lairibakanalitel.
+Uued pöördustehnoloogiad nagu OFDMA, SC-FDMA, Interleaved FDMA ja MC-CDMA saavad järgmise põlvkonna süsteemide jaoks üha tähtsamaks. Need põhinevad efektiivsetel FFT algoritmidel ja sagedusdomeeni tasakaalustamisel, mille tulemuseks on väiksem paljunduste arv sekundis. Samuti teevad need võimalikuks kontrollida lairiba laiust ja spektri paindlikkust. Kuid siiski nõuavad need täiustatud dünaamilise kanali paigutust ja kohanemisvõimelist liiklusplaani.
+WIMAX kasutab OFDMA-d nii allalingi kui ka üleslingi jaoks, järgmise põlvkonna UMTS kasutab allalingi jaoks aga OFDMA-d. Seevastu IFDMA-d on kaalutud üleslingi jaoks kasutada sellest ajast peale, kui OFDMA pakub PAPR-iga seotud probleemküsimustele rohkem lahendusi. IFDMA tagab väiksema energia kõikumise ja see väldib võimendiga seotud probleeme. Samuti MC-CDMA on ettepanek IEEE 802.20 standardile. Need pöördustehnoloogiad on sama efektiivsed nagu vanemad tehnoloogiad, näiteks CDMA. Erinevalt sellest on võimalik saavutada skaleeritavus ja suurem andmesidekiirus.
+Eespool nimetatud tehnoloogia teine tähtis eelis on see, et see vajab vastuvõtjas vähem tasakaalustamist. See on lisatud eelis eriti MIMO keskkondades sellest ajast peale, kui ruumiline multipleksimine ülekanne MIMO süsteemides nõuab loomupäraselt suurt tasakaalustamist vastuvõtjas. Lisaks nendele täiendustele multipleksimise süsteemides on kasutatud ka täiustatud modulatsioonitehnikaid. Arvestades, et varasemad standardid kasutasid palju faasimodulatsiooni, on 3GPP Long Term Evolutioni standardid määratud kasutama efektiivsemad süsteeme, näiteks 64QAM-i.
+
+
+=== IPv6 tugi ===
+Erinevalt 3G-st, mis põhineb kahel paralleelsel infrastruktuuril – pakettkommuteeritud ja kanalkommutatsiooniga võrgusõlmedel –, hakkab 4G baseeruma ainult pakettkommutatsioonil. See nõuab madala latentsusajaga andmesidet.
+Selleks ajaks, kui 4G on välja töötatud, peaks protsess IPv4-aadressidega olema lõppetapis. Seetõttu on 4G kontekstis IPv6 toetus oluline, et toetada suurel hulgal traadita side seadmeid. Suurendades IP-aadresside arvu, kaotab IPv6 vajaduse võrguaadresside ümbernimetamiseks (ingl Network Address Translation (NAT)), võimaldab selline meetod jagada piiratud arvu aadresse suuremas seadmerühmas, kuigi NAT on endiselt nõutav, et suhelda seadmetega, mis on IPv4-võrkudes.
+Juuni 2009 seisuga on Verizon postitanud spetsifikatsiooni, mis eeldab igal 4G-seadmel IPv6-tehnoloogiat.
+
+
+=== Arenenud antennisüsteemid ===
+Raadioside suutlikkus sõltub antennisüsteemist, mida nimetatakse targaks või intelligentseks antenniks (ingl smart or intelligent antenna). Mitmekordsete antennide tehnoloogia on tekkimas, et saavutada 4G eesmärgid: kiire andmeside, suur töökindlus ja kaugside. Et rahuldada kasvavat andmesidekiiruse vajadust, pakuti 1990. aastate algul välja palju edastussüsteeme. Üks tehnoloogia, ruumiline multipleksimine, saavutas tähtsuse selle ribalaiuse hoidmise ja energia efektiivsuse poolest. Ruumiline multipleksimine eeldab mitme antenni olemasolu nii saatjal kui vastuvõtjal. See võimaldab edastada sõltumatud vood samaaegselt läbi kõigi antennide. See tehnoloogia, nimetatud kui MIMO, suurendab baasi andmesidekiirust nii mitu korda, kui palju on kasutusel antenne saatjal ja vastuvõtja. Kui saatjal ja vastuvõtjal on kasutusel erinev arv antenne, siis kiiruse mõõdupuuks jääb väiksema arvuga antennide arv. Peale selle, usaldusväärsus suurel kiirusel andmete edastamises kõikuval kanalil (ingl Fading channel) on parandatav, kasutades rohkem antenne saatjas või vastuvõtjas. Seda nimetatakse edastamise või vastuvõtmise mitmekesisuseks. Mõlemad, nii edastamise/vastuvõtmise mitmekesisus ja ruumiline multipleksimine on jaotatud aegruumi kodeerimise tehnoloogiateks, mis ei nõua tingimata saatjal kanali tundmist. Teine kategooria on suletud-kontuur mitmekordsete antennide tehnoloogiad, mis nõuavad saatjalt kanali tundmist.
+
+
+=== Software-defined radio ===
+SDR on üks vorm avatud traadita arhitektuurist (ingl open wireless architecture (OWA)). Sellest ajast peale, kui 4G on traadita side standardite kogumik, võib lõplik vorm 4G-seadmest moodustada mitmetest standarditest. Seda saab tõhusalt realiseerida kasutades SDR-tehnoloogiat, mis on jaotatud mingile alale vastavalt raadioside konvergentsile.
+
+
+== Ajalugu ==
+2002. aastal pandi paika 4G, ITU nägemuses kui IMT-Advanced, strateegiline idee.
+2005. aastal valiti OFDMA edastustehnoloogia HSOPA allalingi kandidaadiks, hiljem nimetati ümber 3GPP Long Term Evolution (LTE) raadioliides E-UTRA.
+Novembris 2005 demonstreeris KT mobiilset WiMAX-teenust Lõuna-Koreas Busanis.
+Aprillis 2006 avas KT maailma esimese mobiilse WiMAX-i teenuse kommertskasutuseks Lõuna-Koreas Soulis.
+2006. aasta keskel teatas Sprint Nextel, et investeerib lähiaastatel WiMAX-tehnoloogiasse umbes 5 miljardit dollarit. Sellest ajast peale on Sprint seisnud silmitsi paljude tagasilöökidega, mis on majandusnäitajad üsna mitme kvartali jooksul kahjumisse viinud.
+Veebruaris 2007 katsetas Jaapani firma NTT DoCoMo 4G sideteenuse prototüüpi 4x4 MIMO, nimetatud VSF-OFCDM, 100 Mbit/s liikumise pealt ja 1 Gbit/s paigal olles. NTT DoCoMo viis lõpule ka katse, kus nad saavutasid maksimaalseks paketi ülekandekiiruseks umbes 5 Gbit/s allalingil, kui 12x12 MIMO kasutas 100 MHz sagedusega lairiba, liikudes 10 km/h. Firma plaanib avada esimese kommertsvõrgu 2010. aastal.
+Septembris 2007 demonstreeris NTT DoCoMo e-UTRA andmesidekiirust 200 Mbit/s samal ajal kui energiatarve oli testi ajal väiksem kui 100 mW.
+Jaanuaris 2008 algas USA Föderaalse Sidekomisjoni spektri oksjon endise analoog-TV 700 MHz sagedustele. Selle tulemusena läks suurim osa spektrist Verizon Wirelessile ja järgmine osa AT&T-le. Mõlemad ettevõtted on teatanud oma kavatsusest LTE-d toetada.
+Jaanuaris 2008 tegi EL-i volinik Viviane Reding ettepaneku jaotada ümber vahemik 500–800 MHz traadita andmeside jaoks, sh WiMAX.
+15. veebruaril 2008 lasi Skyworks Solutions välja front-end mooduli e-UTRAN-i jaoks.
+Aprillis 2008 demonstreerisid LG ja Nortel e-UTRA andmesidekiirusi 50 Mbit/s, liikudes samaaegselt 110 km/h.
+Aastal 2008 kehtestas ITU-R üksikasjalikult jõudluse nõudmised IMT-Advancedile, andes välja ringkirja, milles nõutakse raadioside tehnoloogia kandidaati IMT-Advancedile.
+Aprill 2008, pärast ringkirja saamist, korraldas 3GPP IMT-Advanced seminari, kus otsustati, et silmas pidades ITU-R-i eesmärke LTE Advanced jõuab IMT-Advancedi nõudmisteni või isegi ületab neid.
+3. märtsil 2009 kuulutas Leedu LRTC välja esimese töövalmis 4G mobiilse WiMAX-i võrgu Baltimaades.
+Detsembris 2009 hakkas Sprint 4G teenust reklaamima valitud linnades USA-s, kuigi keskmine allalaadmimiskiirus oli ainult 3–6 Mbit/s ja maksimaalne 10 Mbit/s.
+14. detsembril 2009 – esimene kaubanduslik LTE kasutuselevõtt Skandinaavia pealinnades Stockholmis (võrguoperaator TeliaSonera) ja Oslos (võrguoperaator NetCom). TeliaSonera reklaamis võrku 4G nime all. Modemite tootjaks oli Samsung (dongle GT-B3710) ja võrgu infrastruktuur oli loodud Huawei (Oslos) ja Ericssoni (Stockholm) poolt.
+25. veebruaril 2010 avas Eesti võrguoperaator EMT LTE 4G testvõrgu.
+4. juunil 2010 lasi Sprint Nextel välja esimese WiMAX-nutitelefoni USA-s, HTC Evo 4G.
+Juulis 2010 võttis Usbekistani MTS Taškendis kasutusele LTE.
+25. augustil 2010 avas Läti LMT LTE 4G võrgu.
+
+
+== 4G Eestis ==
+Esimese Eesti LTE 4G testvõrgu avas EMT 25. veebruaril 2010 Tallinnas Solarise keskuses, mis töötab 2600 MHz sagedusalas. Võrguseadmed olid Ericssoni toodang, kes on neljanda põlvkonna mobiilsidevõrkude seadmete võtmetarnijaks ka kogu TeliaSonera Groupile, kuhu kuulub ka EMT. Ericssonil on lisaks TeliaSonerale 4G-lepinguid ka teiste suurte operaatoritega, näiteks Verizon ja MetroPCS USAs ja NTT DoCoMo Jaapanis. Lähiajal algab 4G-seadmete tootmine Ericssoni Tallinna-tehases. Lõppkasutaja seadmetest kasutati EMT 4G testis Samsungi modemit. Seda, millal tavakasutajad 4G võrku kasutama saavad hakata, ei osanud EMT juhatuse esimees Valdo Kalm veel öelda.Juuni algul 2010 alustas Tallinnas LTE katsetega ka Tele2. Esialgu paigaldati 3 väikese võimsusega katsetugijaama, mis asuvad Vabaduse väljak 10a, Viru väljak 4 ja Regati pst 1.8. juunil demonstreeris ka Elisa LTE võrku Tallinnas Euroopa Liidu Maja katuseterrassil. Koostöös tarnija Nokia Siemens Networksiga viidi läbi edukad testid ning kaeti suurem osa Tallinna kesklinnast LTE 4G levialaga. Kommertsteenuse osutamine Elisa 4G-võrgus muutub võimalikuks pärast LTE litsentside välja jagamist 2010. aasta jooksul. Ajakirjanike osalemisel aset leidnud test näitas allalaadimise kiiruseks 90,03 Mbit/s ja üleslaadimisel 17,33 Mbit/s. Elisa serverist Helsingist jõudis 5 MB MP3-fail kohale ühe sekundiga, 35 MB videoklipp nelja sekundiga ning 800 MB film ühe minutiga.Neljanda põlvkonna mobiilside (4G) sagedusluba taotles Eestis kokku üheksa Eesti, Soome ja Rootsi telekomiettevõtet. Taotlejad olid kohalikud telekomiettevõtted EMT, Elion Ettevõtted, Tele2 Eesti ja Elisa Eesti, neile lisaks Rootsi ettevõte Tele2 Sverige ning Soome ettevõtted Elisa Oyj, Dial Media Oy, Saunalahti Group Oyj ja Ecosite Oy. Esimeses järgus sagedusload said nendest ainult EMT, Elion, Dial Media OÜ ja Saunalahti Group OÜ. Kokku andis Tehnilise Järelevalve Amet välja 6 neljanda põlvkonna sagedusluba (EMT sai nendest 3).
+
+
+== Vaata ka ==
+Esimese põlvkonna mobiilside
+Teise põlvkonna mobiilside
+Kolmanda põlvkonna mobiilside
+Viienda põlvkonna mobiilside
+
+
+== Viited ==

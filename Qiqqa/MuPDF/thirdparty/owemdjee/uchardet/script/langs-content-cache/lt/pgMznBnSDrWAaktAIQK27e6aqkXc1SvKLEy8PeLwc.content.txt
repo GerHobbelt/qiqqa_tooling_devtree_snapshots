@@ -1,0 +1,26 @@
+revision: 6698058
+title: Language
+url: https://lt.wikipedia.org/wiki/Unified_Modeling_Language
+
+
+---
+
+UML (Unified Modeling Language, Vieninga modeliavimo kalba) – modeliavimo ir specifikacijų kūrimo kalba, skirta specifikuoti, atvaizduoti ir konstruoti objektiškai orientuotų programų dokumentus.
+UML atsirado sujungus iki tol tris pirmavusius objektiškai orientuotus modelių žymėjimo būdus:
+
+OMT (autorius James Rumbaugh)
+OOSE (autorius Ivar Jacobson)
+Booch (autorius Grady Booch)Iš pradžių UML kūrė Rational kompanija, kuri jos tolesnę plėtrą ir standartizaciją perdavė OMG konsorciumui. 1997 metais pasirodė 1.1 UML versija, 2005–2.0 versija. Šiuo metu UML yra labiausiai paplitęs programinės įrangos specifikavimo standartas, palaikomas įvairių gamintojų Borland, IBM, Telelogic, No Magic. Lietuvoje yra kuriama visame pasaulyje žinoma MagicDraw UML CASE priemonė.
+Atviro kodo UML redaktoriai:
+
+Dia Diagram (daugiaplatformis)
+Gaphor (daugiaplatformis)
+Umbrello (Linux)
+
+
+== Naudojami diagramų tipai ==
+
+
+== Nuorodos ==
+CASE
+UML informacijos puslapis

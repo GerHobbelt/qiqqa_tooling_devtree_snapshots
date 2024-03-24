@@ -1,0 +1,17 @@
+revision: 5969164
+title: Chemistry
+url: https://sl.wikipedia.org/wiki/CompTox_Chemicals_Dashboard
+
+
+---
+
+CompTox Chemicals Dashboard (sprva Chemistry Dashboard) je prosto dostopna spletna baza podatkov, ki jo je ustvarila in vzdržuje Ameriška agencija za varstvo okolja (EPA). Baza podatkov omogoča dostop do več vrst podatkov, vključno s fizikalno-kemijskimi lastnostmi, obnašanje v okolju in transportom, izpostavljenostjo, uporabo, strupenostjo in vivo in metodo biološkega testa in vitro. EPA in drugi znanstveniki uporabljajo podatke in modele s pomočjo nadzorne plošče, kot pomoč pri prepoznavi kemikalij, ki zahtevajo nadaljnje testiranje in zmanjšajo uporabo živali pri kemičnih testiranjih. Nadzorna plošča se uporablja tudi za zagotavljanje javnega dostopa do informacij iz EPA Action Plans.Prvotno je bilo njeno ime Chemistry Dashboard, prva različica je bila izdana leta 2016. Najnovejša izdaja baze podatkov (različica 3.0.5) vsebuje podatke za več kot 875.000 kemikalij in vključuje najnovejše podatke, ustvarjene iz visoko zmogljivega presejalnega programa EPA Toxicity Forecaster (ToxCast).
+
+
+== Glej tudi ==
+
+ChEMBL
+PubChem
+
+
+== Sklici ==

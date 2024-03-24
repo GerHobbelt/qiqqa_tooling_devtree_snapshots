@@ -1,0 +1,727 @@
+revision: 1140657230
+title: Born rule
+url: https://en.wikipedia.org/wiki/Born_rule
+
+
+---
+
+The Born rule (also called Born's rule) is a postulate of quantum mechanics which gives the probability that a measurement of a quantum system will yield a given result. In its simplest form, it states that the probability density of finding a system in a given state, when measured, is proportional to the square of the amplitude of the system's wavefunction at that state. It was formulated by German physicist Max Born in 1926.
+
+
+== Details ==
+The Born rule states that if an observable corresponding to a self-adjoint operator 
+  
+    
+      
+        A
+      
+    
+     
+   with discrete spectrum is measured in a system with normalized wave function 
+  
+    
+      
+        
+          |
+        
+        ψ
+        ⟩
+      
+    
+     
+   (see Bra–ket notation), then:
+
+the measured result will be one of the eigenvalues 
+  
+    
+      
+        λ
+      
+    
+     
+   of 
+  
+    
+      
+        A
+      
+    
+     
+  , and
+the probability of measuring a given eigenvalue 
+  
+    
+      
+        
+          λ
+          
+            i
+          
+        
+      
+    
+     
+   will equal 
+  
+    
+      
+        ⟨
+        ψ
+        
+          |
+        
+        
+          P
+          
+            i
+          
+        
+        
+          |
+        
+        ψ
+        ⟩
+      
+    
+     
+  , where 
+  
+    
+      
+        
+          P
+          
+            i
+          
+        
+      
+    
+     
+   is the projection onto the eigenspace of 
+  
+    
+      
+        A
+      
+    
+     
+   corresponding to 
+  
+    
+      
+        
+          λ
+          
+            i
+          
+        
+      
+    
+     
+  .(In the case where the eigenspace of 
+  
+    
+      
+        A
+      
+    
+     
+   corresponding to 
+  
+    
+      
+        
+          λ
+          
+            i
+          
+        
+      
+    
+     
+   is one-dimensional and spanned by the normalized eigenvector 
+  
+    
+      
+        
+          |
+        
+        
+          λ
+          
+            i
+          
+        
+        ⟩
+      
+    
+     
+  , 
+  
+    
+      
+        
+          P
+          
+            i
+          
+        
+      
+    
+     
+   is equal to 
+  
+    
+      
+        
+          |
+        
+        
+          λ
+          
+            i
+          
+        
+        ⟩
+        ⟨
+        
+          λ
+          
+            i
+          
+        
+        
+          |
+        
+      
+    
+     
+  , so the probability 
+  
+    
+      
+        ⟨
+        ψ
+        
+          |
+        
+        
+          P
+          
+            i
+          
+        
+        
+          |
+        
+        ψ
+        ⟩
+      
+    
+     
+   is equal to 
+  
+    
+      
+        ⟨
+        ψ
+        
+          |
+        
+        
+          λ
+          
+            i
+          
+        
+        ⟩
+        ⟨
+        
+          λ
+          
+            i
+          
+        
+        
+          |
+        
+        ψ
+        ⟩
+      
+    
+     
+  . Since the complex number 
+  
+    
+      
+        ⟨
+        
+          λ
+          
+            i
+          
+        
+        
+          |
+        
+        ψ
+        ⟩
+      
+    
+     
+   is known as the probability amplitude that the state vector 
+  
+    
+      
+        
+          |
+        
+        ψ
+        ⟩
+      
+    
+     
+   assigns to the eigenvector 
+  
+    
+      
+        
+          |
+        
+        
+          λ
+          
+            i
+          
+        
+        ⟩
+      
+    
+     
+  , it is common to describe the Born rule as saying that probability is equal to the amplitude-squared (really the amplitude times its own complex conjugate). Equivalently, the probability can be written as 
+  
+    
+      
+        
+          
+            |
+          
+        
+        ⟨
+        
+          λ
+          
+            i
+          
+        
+        
+          |
+        
+        ψ
+        ⟩
+        
+          
+            
+              |
+            
+          
+          
+            2
+          
+        
+      
+    
+     
+  .)In the case where the spectrum of 
+  
+    
+      
+        A
+      
+    
+     
+   is not wholly discrete, the spectral theorem proves the existence of a certain projection-valued measure 
+  
+    
+      
+        Q
+      
+    
+     
+  , the spectral measure of 
+  
+    
+      
+        A
+      
+    
+     
+  . In this case:
+
+the probability that the result of the measurement lies in a measurable set 
+  
+    
+      
+        M
+      
+    
+     
+   is given by 
+  
+    
+      
+        ⟨
+        ψ
+        
+          |
+        
+        Q
+        (
+        M
+        )
+        
+          |
+        
+        ψ
+        ⟩
+      
+    
+     
+  .A wave function 
+  
+    
+      
+        ψ
+      
+    
+     
+   for a single structureless particle in space position 
+  
+    
+      
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+      
+    
+     
+   implies that the probability density function 
+  
+    
+      
+        p
+      
+    
+     
+   for a measurement of the particles's position at time 
+  
+    
+      
+        
+          t
+          
+            0
+          
+        
+      
+    
+     
+   is:
+
+  
+    
+      
+        p
+        (
+        x
+        ,
+        y
+        ,
+        z
+        ,
+        
+          t
+          
+            0
+          
+        
+        )
+        =
+        
+          |
+        
+        ψ
+        (
+        x
+        ,
+        y
+        ,
+        z
+        ,
+        
+          t
+          
+            0
+          
+        
+        )
+        
+          
+            |
+          
+          
+            2
+          
+        
+        .
+      
+    
+     
+  In some applications, this treatment of the Born rule is generalized using positive-operator-valued measures. A POVM is a measure whose values are positive semi-definite operators on a Hilbert space. POVMs are a generalisation of von Neumann measurements and, correspondingly, quantum measurements described by POVMs are a generalisation of quantum measurement described by self-adjoint observables. In rough analogy, a POVM is to a PVM what a mixed state is to a pure state. Mixed states are needed to specify the state of a subsystem of a larger system (see purification of quantum state); analogously, POVMs are necessary to describe the effect on a subsystem of a projective measurement performed on a larger system. POVMs are the most general kind of measurement in quantum mechanics and can also be used in quantum field theory. They are extensively used in the field of quantum information.
+In the simplest case, of a POVM with a finite number of elements acting on a finite-dimensional Hilbert space, a POVM is a set of positive semi-definite matrices 
+  
+    
+      
+        {
+        
+          F
+          
+            i
+          
+        
+        }
+      
+    
+     
+   on a Hilbert space 
+  
+    
+      
+        
+          
+            H
+          
+        
+      
+    
+     
+   that sum to the identity matrix,: 90 :
+
+  
+    
+      
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            n
+          
+        
+        
+          F
+          
+            i
+          
+        
+        =
+        I
+        .
+      
+    
+     
+  The POVM element 
+  
+    
+      
+        
+          F
+          
+            i
+          
+        
+      
+    
+     
+   is associated with the measurement outcome 
+  
+    
+      
+        i
+      
+    
+     
+  , such that the probability of obtaining it when making a measurement on the quantum state 
+  
+    
+      
+        ρ
+      
+    
+     
+   is given by:
+
+  
+    
+      
+        p
+        (
+        i
+        )
+        =
+        tr
+        ⁡
+        (
+        ρ
+        
+          F
+          
+            i
+          
+        
+        )
+        ,
+      
+    
+     
+  where 
+  
+    
+      
+        tr
+      
+    
+     
+   is the trace operator. This is the POVM version of the Born rule. When the quantum state being measured is a pure state 
+  
+    
+      
+        
+          |
+        
+        ψ
+        ⟩
+      
+    
+     
+   this formula reduces to:
+
+  
+    
+      
+        p
+        (
+        i
+        )
+        =
+        tr
+        ⁡
+        
+          
+            (
+          
+        
+        
+          |
+        
+        ψ
+        ⟩
+        ⟨
+        ψ
+        
+          |
+        
+        
+          F
+          
+            i
+          
+        
+        
+          
+            )
+          
+        
+        =
+        ⟨
+        ψ
+        
+          |
+        
+        
+          F
+          
+            i
+          
+        
+        
+          |
+        
+        ψ
+        ⟩
+        .
+      
+    
+     
+  The Born rule, together with the unitarity of the time evolution operator 
+  
+    
+      
+        
+          e
+          
+            −
+            i
+            
+              
+                
+                  H
+                  ^
+                
+              
+            
+            t
+          
+        
+      
+    
+     
+   (or, equivalently, the Hamiltonian 
+  
+    
+      
+        
+          
+            
+              H
+              ^
+            
+          
+        
+      
+    
+     
+   being Hermitian), implies the unitarity of the theory, which is considered required for consistency. For example, unitarity ensures that the probabilities of all possible outcomes sum to 1 (though it is not the only option to get this particular requirement).
+
+
+== History ==
+The Born rule was formulated by Born in a 1926 paper. In this paper, Born solves the Schrödinger equation for a scattering problem and, inspired by Albert Einstein and Einstein’s probabilistic rule for the photoelectric effect, concludes, in a footnote, that the Born rule gives the only possible interpretation of the solution.  In 1954, together with Walther Bothe, Born was awarded the Nobel Prize in Physics for this and other work. John von Neumann discussed the application of spectral theory to Born's rule in his 1932 book.
+
+
+=== Derivation from more basic principles ===
+Gleason's theorem shows that the Born rule can be derived from the usual mathematical representation of measurements in quantum physics together with the assumption of non-contextuality. Andrew M. Gleason first proved the theorem in 1957, prompted by a question posed by George W. Mackey. This theorem was historically significant for the role it played in showing that wide classes of hidden-variable theories are inconsistent with quantum physics.Several other researchers have also tried to derive the Born rule from more basic principles.  A number of derivations have been proposed in the context of the many-worlds interpretation. These include the decision-theory approach pioneered by David Deutsch and later developed by Hilary Greaves and David Wallace; and an "envariance" approach by Wojciech H. Zurek; These proofs have, however, been criticized as circular. More recently, an approach based on self-locating uncertainty has been suggested by Charles Sebens and Sean M. Carroll.It has also been claimed that pilot-wave theory can be used to statistically derive the Born rule, though this remains controversial. Kastner claims that the transactional interpretation is unique in giving a physical explanation for the Born rule.In 2019, Lluis Masanes and Thomas Galley of the Perimeter Institute for Theoretical Physics, and Markus Müller of the Institute for Quantum Optics and Quantum Information presented a derivation of the Born rule. While their result does not use the same initial assumptions as Gleason's theorem, it does presume a Hilbert-space structure and a type of context independence.Within the QBist interpretation of quantum theory, the Born rule is seen as a modification of the standard law of total probability, which takes into account the Hilbert space dimension of the physical system involved. Rather than trying to derive the Born rule, as many interpretations of quantum mechanics do, QBists take a formulation of the Born rule as primitive and aim to derive as much of quantum theory as possible from it.
+
+
+== References ==
+
+
+== External links ==
+
+Quantum Mechanics Not in Jeopardy: Physicists Confirm a Decades-Old Key Principle Experimentally ScienceDaily (July 23, 2010)

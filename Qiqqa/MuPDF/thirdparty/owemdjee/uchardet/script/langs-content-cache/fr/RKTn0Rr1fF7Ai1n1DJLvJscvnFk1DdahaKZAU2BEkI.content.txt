@@ -1,0 +1,30 @@
+revision: 189843427
+title: Mesure localement finie
+url: https://fr.wikipedia.org/wiki/Mesure_localement_finie
+
+
+---
+
+Une mesure (positive) définie sur la tribu borélienne d'un espace topologique 
+  
+    
+      
+        X
+      
+    
+     
+   est dite localement finie si tout point de 
+  
+    
+      
+        X
+      
+    
+     
+   a un voisinage de mesure finie.
+Sur la tribu borélienne d'un espace localement compact séparé, une mesure est localement finie si et seulement si c'est une mesure de Borel.
+
+
+== Références ==
+
+ Portail de l'analyse

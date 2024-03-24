@@ -1,0 +1,24 @@
+revision: 62438216
+title: ChemSpider
+url: https://pt.wikipedia.org/wiki/ChemSpider
+
+
+---
+
+ChemSpider é uma base de dados de substâncias químicas. Foi lançado em março de 2007, sendo propriedade da Royal Society of Chemistry.
+
+
+== Banco de dados ==
+O banco de dados possui mais de 20 milhões de moléculas a partir das seguintes fontes:
+
+A-L: EPA DSSTox, FDA, Human Metabolome Database, Journal of Heterocyclic Chemistry, KEGG, KUMGM, LeadScope, LipidMAPS
+M-N: Marinlit, MDPI, MICAD, MLSMR, MMDB, MOLI, MTDP, Nanogen, Nature Chemical Biology, NCGC, NIAID, NIH/NLM, NINDS Approved Drug Screening Program, NIST, NIST Chemistry WebBook, NMMLSC, NMRShiftDB
+P-S: PANACHE, PCMD, PDSP, Peptides, Prous Science Drugs of the Future, QSAR, R&D Chemicals, San Diego Center for Chemical Genomics, SGCOxCompounds, SGCStoCompounds, SMID, Specs, Structural Genomics Consortium, SureChem, Synthon-Lab
+T-Z: Thomson Pharma, Total TOSLab Building-Blocks, UM-BBD, UPCMLD, UsefulChem, Web of Science, xPharm, ZINC
+
+
+== Referências ==
+
+
+== Ligações externas ==
+Sítio oficial

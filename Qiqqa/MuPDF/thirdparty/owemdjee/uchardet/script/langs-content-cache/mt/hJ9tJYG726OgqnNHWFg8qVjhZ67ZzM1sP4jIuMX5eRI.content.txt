@@ -1,0 +1,31 @@
+revision: 281012
+title: Yandong Mao
+url: https://mt.wikipedia.org/wiki/Robert_Tappan_Morris
+
+
+---
+
+Robert Tappan Morris (twieled fit-8 ta' Novembru 1965) huwa informatiku u imprenditur Amerikan. Hu hu l-iktar famuż għal Morris Worm, ikkunsidrat bħala l-ewwel worm tal-kompjuter li qatt sar. Kawża ta' dan ġie pproċessat u sar l-ewwel persuna li ġie kkundannat taħt l-Att tal-Frodi u Abbuż fuq il-Kompjuter.
+
+
+== Bijografija ==
+
+
+=== L-ewwel snin ===
+Morris twieled fl-1965 minn Robert Morris u Anne Farlow Morris. Missieru kien informatiku f'Bell Labs, fejn għen jiddisinja s-sistemi operattivi ta' Multics u Unix. Morris attenda l-Università ta' Harvard, u aktar tard daħal bħala student gradwat fl-Università ta' Cornell. Fl-ewwel sena tiegħu hu kiteb worm tal-kompjuter li wasslet biex ħarbat diversi kompjuters fis-snin tal-bidu tal-internet. Din wasslitu quddiem il-qorti sena wara.
+
+
+=== Morris Worm ===
+Il-worm ta' Morris ġie żviluppat fl-1988 waqt li kien jattendi l-Università ta' Cornell. Hu stqarr li kien iddisinjat biex jara d-daqs tal-internet. Il-worm tnieda minn MIT, minflok Cornell. Dan il-worm sfrutta numru ta' dgħufijiet sabiex jidħol fis-sistemi mixtieqa, fosthom:
+
+żball fis-sendmail, il-programm użat biex jamministra l-posta elettronika;
+żball fil-finger, li jippermetti li jiġi esegwit kodiċi remot;
+programm li jippermetti li wieħed jara informazzjoni dwar utent tas-sistema permezz ta' RSH.Il-worm kien ipprogrammat sabiex jiċċekkja kull kompjuter li jsib jekk l-infezzjoni seħħitx diġà. Madanakollu, Morris ħaseb li xi amministraturi jistgħu jegħlbu lil dan il-worm billi jagħtu struzzjonijiet lill-kompjuter sabiex jirraporta falz pożittiv. Biex jikkumpensa għal din il-possibilità, Morris għamel li l-worm jikkopja lilu nnifsu xorta waħda irrelevanti mir-rispons tal-interrogazzjoni dwar l-istat tal-infezzjoni.
+Dan il-livell ta' persistenza wassal għal tagħbijiet li mhux biss ġabu l-attenzjoni tal-amministraturi tas-sistemi, imma fixklu l-kompjuters immirati. Matul il-ġuri, ġie stmat li l-ispiża ta' "telfien ta' produttività" kawża tal-worm u l-isforzi sabiex jitneħħa mis-sistemi kien ta' bejn $200 u $53,000.
+
+
+== Referenzi ==
+
+
+== Ħoloq esterni ==
+(EN)  Sit uffiċjali fuq MIT

@@ -1,0 +1,54 @@
+revision: 22251706
+title: "Negat\xEDv ellen\xE1ll\xE1s"
+url: https://hu.wikipedia.org/wiki/Negat%C3%ADv_ellen%C3%A1ll%C3%A1s
+
+
+---
+
+Negatív ellenállás vagy negatív differenciális ellenállás alatt olyan áramtartományt értünk, amiben a nagyobb áramhoz kisebb feszültség tartozik.
+Ohm törvényéből adódóan az elektromos ellenállás a feszültség és az áram hányadosa 
+  
+    
+      
+        R
+        =
+        U
+        
+          /
+        
+        I
+      
+    
+     
+  , ugyanakkor a differenciális ellenállás a 
+  
+    
+      
+        R
+        (
+        I
+        )
+        =
+        d
+        U
+        
+          /
+        
+        d
+        I
+      
+    
+     
+   képlet alapján értelmezhető, ezért negatív értékű is lehet.
+Az energiamegmaradás elve kizárja abszolút negatív ellenállás létezését, ezért az ilyen eszközök csak külső energia felvételével működnek.
+
+
+== Negatív ellenállású jelenségek, alkatrészek ==
+plazma (plazma csatorna), ívkisülés, fénycső, alagútdióda, IMPATT dióda, UJT, Gunn-dióda, DIAC.
+
+
+== Források ==
+
+
+== További információk ==
+Vita: Impedanciaillesztés

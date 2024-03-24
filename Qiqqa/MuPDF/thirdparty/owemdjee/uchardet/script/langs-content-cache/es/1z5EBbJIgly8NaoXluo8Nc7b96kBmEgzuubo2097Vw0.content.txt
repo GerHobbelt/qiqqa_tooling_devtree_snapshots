@@ -1,0 +1,1100 @@
+revision: 137809368
+title: Modelo autorregresivo con heterocedasticidad condicional
+url: https://es.wikipedia.org/wiki/Modelo_autorregresivo_con_heterocedasticidad_condicional
+
+
+---
+
+La heterocedasticidad condicional auto-regresiva (en inglés: Autoregressive conditional heteroscedasticity; ARCH) es la condición de que hay uno o más puntos de datos en una serie para los cuales la varianza del término de error actual o innovación es una función de los tamaños reales de los términos de error de los períodos de tiempo anteriores: se relaciona con los cuadrados de las innovaciones anteriores. En la econometría, los modelos ARCH se utilizan para caracterizar y modelar series temporales.[1]​ Una variedad de otras siglas se aplican a las estructuras particulares que tienen una base similar.
+Los modelos de ARCH se emplean comúnmente en el modelado de series de tiempo financieras que presentan agrupaciones de volatilidad variables en el tiempo, es decir, períodos de oscilaciones entremezclados con períodos de relativa calma. A veces se considera que los modelos de tipo ARCH pertenecen a la familia de modelos de volatilidad estocástica , aunque esto es estrictamente incorrecto ya que en el tiempo t la volatilidad es completamente predeterminada (determinista) dados los valores anteriores.[2]​
+
+
+== Especificación del modelo ARCH(q) ==
+Para modelar una serie de tiempo usando un proceso ARCH, sea 
+  
+    
+      
+         
+        
+          ϵ
+          
+            t
+          
+        
+         
+      
+    
+     
+   los términos de error (residuos de retorno, con respecto a un proceso medio), es decir, los términos de serie. Estas 
+  
+    
+      
+         
+        
+          ϵ
+          
+            t
+          
+        
+         
+      
+    
+     
+   se dividen en una pieza estocástica z 
+  
+    
+      
+        
+          z
+          
+            t
+          
+        
+      
+    
+     
+   y una desviación estándar dependiente del tiempo  
+  
+    
+      
+        
+          σ
+          
+            t
+          
+        
+      
+    
+     
+   caracterizando el tamaño típico de los términos para los que
+
+  
+    
+      
+         
+        
+          ϵ
+          
+            t
+          
+        
+        =
+        
+          σ
+          
+            t
+          
+        
+        
+          z
+          
+            t
+          
+        
+         
+      
+    
+     
+  La variable aleatoria 
+  
+    
+      
+        
+          z
+          
+            t
+          
+        
+      
+    
+     
+   es un fuerte proceso de ruido blanco.  Las series  
+  
+    
+      
+        
+          σ
+          
+            t
+          
+          
+            2
+          
+        
+      
+    
+     
+   son modeladas por:
+
+  
+    
+      
+        
+          σ
+          
+            t
+          
+          
+            2
+          
+        
+        =
+        
+          α
+          
+            0
+          
+        
+        +
+        
+          α
+          
+            1
+          
+        
+        
+          ϵ
+          
+            t
+            −
+            1
+          
+          
+            2
+          
+        
+        +
+        ⋯
+        +
+        
+          α
+          
+            q
+          
+        
+        
+          ϵ
+          
+            t
+            −
+            q
+          
+          
+            2
+          
+        
+        =
+        
+          α
+          
+            0
+          
+        
+        +
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            q
+          
+        
+        
+          α
+          
+            i
+          
+        
+        
+          ϵ
+          
+            t
+            −
+            i
+          
+          
+            2
+          
+        
+      
+    
+     
+  donde 
+  
+    
+      
+         
+        
+          α
+          
+            0
+          
+        
+        >
+        0
+         
+      
+    
+     
+   y 
+  
+    
+      
+        
+          α
+          
+            i
+          
+        
+        ≥
+        0
+        ,
+         
+        i
+        >
+        0
+      
+    
+     
+  .
+Un modelo ARCH (q) se puede estimar usando mínimos cuadrados ordinarios. Una metodología para probar la longitud de retraso de los errores de ARCH utilizando la prueba del multiplicador de Lagrange fue propuesta por Engle (1982). Este procedimiento es el siguiente:
+
+Estimar el mejor modelo autoregresivo AR(q) 
+  
+    
+      
+        
+          y
+          
+            t
+          
+        
+        =
+        
+          a
+          
+            0
+          
+        
+        +
+        
+          a
+          
+            1
+          
+        
+        
+          y
+          
+            t
+            −
+            1
+          
+        
+        +
+        ⋯
+        +
+        
+          a
+          
+            q
+          
+        
+        
+          y
+          
+            t
+            −
+            q
+          
+        
+        +
+        
+          ϵ
+          
+            t
+          
+        
+        =
+        
+          a
+          
+            0
+          
+        
+        +
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            q
+          
+        
+        
+          a
+          
+            i
+          
+        
+        
+          y
+          
+            t
+            −
+            i
+          
+        
+        +
+        
+          ϵ
+          
+            t
+          
+        
+      
+    
+     
+  .
+Obtenga los cuadrados del error 
+  
+    
+      
+        
+          
+            
+              
+                ϵ
+                ^
+              
+            
+          
+          
+            2
+          
+        
+      
+    
+     
+   y los regresa en valores constantes y rezagados q:
+
+  
+    
+      
+        
+          
+            
+              
+                ϵ
+                ^
+              
+            
+          
+          
+            t
+          
+          
+            2
+          
+        
+        =
+        
+          
+            
+              
+                α
+                ^
+              
+            
+          
+          
+            0
+          
+        
+        +
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            q
+          
+        
+        
+          
+            
+              
+                α
+                ^
+              
+            
+          
+          
+            i
+          
+        
+        
+          
+            
+              
+                ϵ
+                ^
+              
+            
+          
+          
+            t
+            −
+            i
+          
+          
+            2
+          
+        
+      
+    
+     
+  
+donde q es la longitud de los rezagos ARCH.
+La hipótesis nula es que, en ausencia de componentes ARCH, tenemos 
+  
+    
+      
+        
+          α
+          
+            i
+          
+        
+        =
+        0
+      
+    
+     
+   para todos 
+  
+    
+      
+        i
+        =
+        1
+        ,
+        ⋯
+        ,
+        q
+      
+    
+     
+  . La hipótesis alternativa es que, en presencia de componentes de ARCH, al menos uno de los estimados 
+  
+    
+      
+        
+          α
+          
+            i
+          
+        
+      
+    
+     
+   los coeficientes deben ser significativos. En una muestra de 
+  
+    
+      
+        
+          T
+          ′
+        
+      
+    
+     
+   residuales bajo la hipótesis nula de ausencia de errores ARCH, la estadística de prueba T'R² sigue 
+  
+    
+      
+        
+          χ
+          
+            2
+          
+        
+      
+    
+     
+   distribución con q grados de libertad, donde  
+  
+    
+      
+        
+          T
+          ′
+        
+      
+    
+     
+   es el número de ecuaciones en el modelo que se ajusta a los residuos frente a los retrasos (es decir,  
+  
+    
+      
+        
+          T
+          ′
+        
+        =
+        T
+        −
+        q
+      
+    
+     
+  ) Si T'R² es mayor que el valor de la tabla Chi-cuadrado, rechazamos la hipótesis nula y concluimos que hay un efecto ARCH en el modelo ARMA. Si T'R² es más pequeño que el valor de la tabla Chi-cuadrado, no rechazamos la hipótesis nula.
+
+
+== GARCH ==
+Si se supone un modelo de modelo de media móvil autorregresivo (ARMA) para la varianza del error, el modelo es un modelo de heterocedasticidad condicional autoregresiva generalizada (GARCH).[3]​
+En ese caso, el modelo GARCH (p, q) ( (donde p es el orden de los términos GARCH 
+  
+    
+      
+         
+        
+          σ
+          
+            2
+          
+        
+      
+    
+     
+   y q es el orden de los términos ARCH 
+  
+    
+      
+         
+        
+          ϵ
+          
+            2
+          
+        
+      
+    
+     
+   )siguiendo la notación del artículo original, está dado por:
+
+  
+    
+      
+        
+          y
+          
+            t
+          
+        
+        =
+        
+          x
+          
+            t
+          
+          ′
+        
+        b
+        +
+        
+          ϵ
+          
+            t
+          
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          ϵ
+          
+            t
+          
+        
+        
+          |
+        
+        
+          ψ
+          
+            t
+          
+        
+        ∼
+        
+          
+            N
+          
+        
+        (
+        0
+        ,
+        
+          σ
+          
+            t
+          
+          
+            2
+          
+        
+        )
+      
+    
+     
+  
+
+  
+    
+      
+        
+          σ
+          
+            t
+          
+          
+            2
+          
+        
+        =
+        ω
+        +
+        
+          α
+          
+            1
+          
+        
+        
+          ϵ
+          
+            t
+            −
+            1
+          
+          
+            2
+          
+        
+        +
+        ⋯
+        +
+        
+          α
+          
+            q
+          
+        
+        
+          ϵ
+          
+            t
+            −
+            q
+          
+          
+            2
+          
+        
+        +
+        
+          β
+          
+            1
+          
+        
+        
+          σ
+          
+            t
+            −
+            1
+          
+          
+            2
+          
+        
+        +
+        ⋯
+        +
+        
+          β
+          
+            p
+          
+        
+        
+          σ
+          
+            t
+            −
+            p
+          
+          
+            2
+          
+        
+        =
+        ω
+        +
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            q
+          
+        
+        
+          α
+          
+            i
+          
+        
+        
+          ϵ
+          
+            t
+            −
+            i
+          
+          
+            2
+          
+        
+        +
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            p
+          
+        
+        
+          β
+          
+            i
+          
+        
+        
+          σ
+          
+            t
+            −
+            i
+          
+          
+            2
+          
+        
+      
+    
+     
+  
+En general, cuando se prueba la heterocedasticidad en modelos econométricos, la mejor prueba es la Prueba de White. Sin embargo, cuando se trata de datos de series de tiempo, esto significa probar los errores ARCH y GARCH.
+El promedio móvil ponderado exponencialmente (EWMA) es un modelo alternativo en una clase separada de modelos de suavizado exponencial. Como una alternativa al modelado GARCH, tiene algunas propiedades atractivas, tales como un mayor peso sobre las observaciones más recientes, pero también inconvenientes tales como un factor de desintegración arbitrario que introduce la subjetividad en la estimación.
+
+
+=== GARCH (p, q) especificación del modelo ===
+La longitud de retardo p de un proceso GARCH ( p , q ) se establece en tres pasos:
+Estimar el modelo AR ( q ) que mejor se ajusta:
+
+  
+    
+      
+        
+          y
+          
+            t
+          
+        
+        =
+        
+          a
+          
+            0
+          
+        
+        +
+        
+          a
+          
+            1
+          
+        
+        
+          y
+          
+            t
+            −
+            1
+          
+        
+        +
+        ⋯
+        +
+        
+          a
+          
+            q
+          
+        
+        
+          y
+          
+            t
+            −
+            q
+          
+        
+        +
+        
+          ϵ
+          
+            t
+          
+        
+        =
+        
+          a
+          
+            0
+          
+        
+        +
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            q
+          
+        
+        
+          a
+          
+            i
+          
+        
+        
+          y
+          
+            t
+            −
+            i
+          
+        
+        +
+        
+          ϵ
+          
+            t
+          
+        
+      
+    
+     
+  .
+Calcule y trace las autocorrelaciones de 
+  
+    
+      
+        
+          ϵ
+          
+            2
+          
+        
+      
+    
+     
+   por
+
+  
+    
+      
+        ρ
+        =
+        
+          
+            
+              
+                ∑
+                
+                  t
+                  =
+                  i
+                  +
+                  1
+                
+                
+                  T
+                
+              
+              (
+              
+                
+                  
+                    
+                      ϵ
+                      ^
+                    
+                  
+                
+                
+                  t
+                
+                
+                  2
+                
+              
+              −
+              
+                
+                  
+                    
+                      σ
+                      ^
+                    
+                  
+                
+                
+                  t
+                
+                
+                  2
+                
+              
+              )
+              (
+              
+                
+                  
+                    
+                      ϵ
+                      ^
+                    
+                  
+                
+                
+                  t
+                  −
+                  1
+                
+                
+                  2
+                
+              
+              −
+              
+                
+                  
+                    
+                      σ
+                      ^
+                    
+                  
+                
+                
+                  t
+                  −
+                  1
+                
+                
+                  2
+                
+              
+              )
+            
+            
+              
+                ∑
+                
+                  t
+                  =
+                  1
+                
+                
+                  T
+                
+              
+              (
+              
+                
+                  
+                    
+                      ϵ
+                      ^
+                    
+                  
+                
+                
+                  t
+                
+                
+                  2
+                
+              
+              −
+              
+                
+                  
+                    
+                      σ
+                      ^
+                    
+                  
+                
+                
+                  t
+                
+                
+                  2
+                
+              
+              
+                )
+                
+                  2
+                
+              
+            
+          
+        
+      
+    
+     
+  
+
+
+== Referencias ==

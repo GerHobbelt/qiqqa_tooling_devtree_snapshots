@@ -1,0 +1,77 @@
+revision: 6745045
+title: "Zvukov\xE1 karta"
+url: https://sk.wikipedia.org/wiki/Zvukov%C3%A1_karta
+
+
+---
+
+Zvuková karta alebo všeobecne zvukový adaptér je časť počítača, ktorá zabezpečuje zvukový vstup a výstup.
+Je kombináciou analógovo-digitálneho prevodníka, digitálno-analógového prevodníka, analógových obvodov (zosilňovačov, filtrov, mixérov) a riadiacej elektroniky, ktorá riadi analógovú časť a zabezpečuje pravidelný prenos údajov z a do hlavnej pamäte počítača. 
+Pripojenie k PC býva:
+
+rozširujúcou zbernicou PC (dnes PCI, kedysi ISA)
+zvláštnym tzv. riserovým rozhraním
+vonkajšou rýchlou zbernicou (USB, FireWire)
+
+
+== Zvuk v PC a zvuková karta ==
+
+Zvuková karta (tiež známa pod označením audiokarta) je počítačová rozširujúca karta, ktorá zabezpečuje vstup a výstup audiosignálov z a do počítača pod kontrolou riadiaceho programu. Typickým použitím zvukovej karty je zabezpečenie zvukového sprievodu pre multimediálne aplikácie v počítači ako napr. komponovanie hudby, editovanie videa alebo audia, prezentácie, výuka a zábava – hlavne počítačové hry. Väčšina dnešných počítačov má už zabudovanú zvukovú výbavu, no niektoré ešte vyžadujú prídavnú rozširujúcu kartu pre zabezpečenie zvukového vstupu / výstupu.
+
+
+== Hlavná charakteristika ==
+Typická zvuková karta obsahuje zvukový procesor – alebo tiež zvukový čip, s integrovaným DAC (digital to analog converter) digitálno analógovým prevodníkom, ktorého úlohou je konvertovať nahrané alebo generované digitálne dáta do analógového formátu. Výstupný signál je vyvedený pre pripojenie zosilňovača, slúchadiel, alebo externého zariadenia používajúceho štandardné pripojenie cez JACK konektor (známy tiež ako TRS), alebo CINCH konektor (známy tiež ako RCA, alebo AV). Ak počet, alebo veľkosť konektorov neumožňuje ich umiestnenie na zadnej lište karty, sú tieto umiestňované do externého boxu prepojeného so zvukovou kartou, na prídavnej zadnej lište alebo sa používa rozširujúca „redukcia“.
+Viacero pokročilejších kariet – mimo tejto základnej funkcie – poskytuje aj iné, nadštandardnejšie funkcie. Vtedy obsahuje viacero zvukových procesorov, resp. čipov pre zabezpečenie lepšej prenosovej rýchlosti, zabezpečenie simultánneho spracovania viacerých audio kanálov, syntézu resp. analýzu zvukov, generovanie hudby a zvukových efektov v reálnom čase s minimálnym zaťažením CPU (hlavného procesora).
+Digitálna reprodukcia zvukov sa zvyčajne realizuje pomocou viackanálových DAC – digitálno – analógových prevodníkov, ktoré su schopné spracovať viacero vzoriek súčasne pri rôznych úrovniach výšky tónu a hlasitosti, alebo v reálnom čase použiť zvukové efekty napr. skreslenie alebo filtrovanie. Viackanálové zvukové prehrávanie môže byť tiež použité pre hudobnú syntézu s použitím digitalizovaných vzoriek reálnych zvukov resp. hudobných nástrojov. Tieto sú umiestnené v tzv. banke (digitized instrument bank), čo je vlastne malá ROM, resp flash pamäť obsahujúca vzorky reálnych, alebo vytvorených zvukov podobne ako je tomu u MIDI nástrojov – napr. syntetizátorov. Zvukové karty dokážu v reálnom čase používať audio kodeky – čiže softvérovú a hardvérovú kompresiu a dekompresiu v reálnom čase. Väčšina kariet je vybavená tzv. Line In konektorom, ktorý umožňuje priviesť externý analógový audiosignál do karty (napr. z magnetofónu, gramofónu, videa...). Zvuková karta digitalizuje tento signál pomocou ADC – analógovo – digitálneho prevodníka, a s pomocou prislúchajúceho softvéru umožní uložiť zdigitalizovaný zvuk do počítača, či už priamo (wav súbor), alebo pomocou softvérového kodeku s kompresiou (mp3, wma..). Podobným externým konektorom je tzv. MIC konektor – mikrofónový vstup, ktorý umožňuje pripojenie mikrofónu, alebo podobného zdroja zvuku nízkej úrovne. Mikrofón umožňuje použitie zdigitalizovaného zvuku v reálnom čase, alebo je možné zvuk z neho nahrať v digitálnej forme pre jeho neskoršie spracovanie. Typickou aplikáciou je použitie hlasom ovládaného softvéru, telefonovania cez internet a pod.
+Digitalizácia sa vykonáva pomocou vzorkovania. V každom časovom intervale sa zistí a zaznamená aktuálny stav signálu – vzorka. Čím je tento interval kratší, tým je je vyššia vzorkovacia frekvencia, tým viac vzoriek v danom čase bude zaznamenaných a tým vyššiu presnosť resp. kvalitu dosiahneme. Používané vzorkovacie frekvencie: 11 025 Hz (telefónna kvalita), 22 050 Hz (rádio kvalita) 44 100 Hz (CD kvalita). Počet bitov na jednu vzorku je 8 – 128 bitov.
+Niektoré zvukové karty v minulosti mali tiež MIDI, resp. kombinovaný MIDI a gameport konektor. Konektor MIDI slúžil na pripojenie hudobného nástroja – syntetizátora alebo iného zdroja digitálneho MIDI signálu. Pokiaľ nahrávame z MIDI tak nemusíme vykonávať vzorkovanie. Dáta sú už v digitálne podobe a obsahujú informáciu o tom, ktorý nástroj hrá, výška tónu, dĺžka tónu, dynamika úderu a pod. Konektor bol obvykle kombinovaný s tzv. gameportom. Tento slúžil k pripojeniu analógového hracieho zariadenia – joysticku, alebo gamepadu. Tieto zariadenia obsahujú snímače polohy a tlačidla. Poloha páky joysticku alebo gamepadu sa prenáša do počítača a umožňuje plynulé ovládanie hier v závislosti od polohy páky.
+MIDI a gameport sa už nepoužíva, hracie a midi zariadenia komunikujú teraz s PC pomocou USB portu.
+
+
+== Farebné označenie konektorov zvukovej karty ==
+
+Farebné označenie vstupov a výstupov zvukových kariet u väčšiny kariet zodpovedá štandardu firmy Microsoft prijatého v roku 1999.
+
+Niekedy je u lacných matičných dosiek pre ušetrenie miesta použitá prepínateľná sada (ružová, zelená, modrá), kedy sa dá v počítači – v obslužnom programe pre zvukovú kartu prepnúť režim zo stereo (zelená = line out, ružová = mic, modrá = line in) na 5.1 (zelená = front, modrá = rear, ružová = main). Nevýhodou je, že už nemôžeme využívať mikrofón.
+
+
+== Zvukové kanály a polyfónia ==
+Ďalšou dôležitou charakteristikou zvukových kariet je polyfónia umožňujúca prehrávať viacero hlasov resp. zvukov súčasne a nezávisle od viacerých nezávislých kanálov. Preto sú niektoré karty vybavené viacerými audio výstupmi, ktoré korešpondujú s konfiguráciou reproduktorov (napr. 2.0 stereo, 2.1 stereo so subwooferom, 5.1 dva predné a dva zadné reproduktory, stredný (rečový) reproduktor a subwoofer). Výrazy „hlasy“ a kanály“ indikujú úroveň polyfónie, nie len konfiguráciu výstupných reproduktorov.
+Na príklad viacero starších zvukových čipov mali tri hlasy, ale len jeden audio kanál (tzv. mono) pre výstup, a všetky hlasy boli mixované dovedna do jedného zvukového kanála. Vyskytovali sa aj karty majúce 9 hlasovú polyfóniu pri jednom zvukovom kanáli.
+Viacero zvukových kariet malo FM viachlasovú syntézu (9 resp. 16 hlasov) ktoré sa používali pre MIDI hudbu. Tieto rozšírené vlastnosti sa však často nevyužívali, a prehrávali sa len v mono resp. stereo kanáli. Moderné nízko nákladové audio karty (obvykle zabudované na matičných doskách) podľa štandardu AC’97 používajú síce viacero zvukových kanálov (typicky 5.1), ale nemajú hardvérovú polyfóniu pre ďalšie zvukové efekty resp. MIDI reprodukciu. Tieto úlohy na seba prevzal softvér ovládajúci zvukovú kartu. Zvukové karty majúce na sebe hardvérovú polyfóniu, spolu s viacerými výstupnými kanálmi (označované ako hardvérové audio akcelerátory) aj keď nie sú hlavným predajným artiklom vďaka svojim doplňujúcim vlastnostiam (akcelerácia zvuku bez záťaže CPU, 3D zvuk, pozičné audio, DSP efekty v reálnom čase...) naberajú na dôležitosti.
+Pretože digitálne zvukové prehrávanie sa stáva dostupnejšie, a poskytuje lepší výkon ako syntéza, moderné zvukové karty už pre hardvérovú polyfóniu nepoužívajú DAC – digitálno analógový prevodník s viacero kanálami a hlasmi, ale radšej preferujú mixovanie hlasov a efektov v hardvéri (s použitím digitálnej filtrácie a konverzií z a na frekvenciu pre vytvorenie želaného efektu) vo vnútri priradeného DSP (digital signal processor). Finálny výstup je realizovaný externým DAC s viacerými kanálmi – 5.1, 7.1 s delením na viacero hlasov (32, 64 resp. 128)
+
+
+== Zvuk nie na rozširujúci kartách ==
+
+
+=== Zvukový hardvér integrovaný na matičnej doske ===
+Od roku 1990 veľa výrobcov matičných dosiek začalo integrovať zvukové karty priamo do ich dizajnu. Zo začiatku to boli kombinované AD/DA prevodníky, viaceré z nich využívali AC97 štandard. Objavili sa aj pokusy s externou kartou pre špecializovaný slot – AMR, CNR, ACR a pod. Tieto nenašli veľké uplatnenie.
+Od roku 2005 s rastúcim výkonom počítačov vznikla možnosť využiť hardvér počítača, kedy zvukovú syntézu vykonáva hlavný procesor – CPU, a zvukový čip obsahuje len DA prevodník ktorý spracuje už „namixovaný“ zvuk. V súčasnosti s neustále sa zvyšujúcimi nárokmi na zvuk – hlavne pri hrách, sa čoraz častejšie stretávame s „plnohodnotnými“ zvukovými čipmi na matičnej doske, ktoré odbremeňujú hlavný procesor PC a zároveň ušetria jeden slot PCI.
+
+
+=== USB zvukové karty ===
+USB zvukové karty sú externé boxy ktoré sa pripájajú do počítača cez USB port. USB špecifikácia umožňuje aj pripojenie audio zariadení, a v špecifikácii 2.0 poskytuje USB dostatočnú prenosovú kapacitu pre podporu aj najnáročnejších zvukových zariadení. Obvykle sa tento typ zvukových kariet používa v lacnejšej variante pre notebooky nedisponujúce hardvérovou akceleráciou zvuku, alebo v drahšej variante pre profesionálnych hudobníkov, keby bolo zvukové zariadenie príliš obmedzované rozmermi internej karty do PC. Používa sa tiež, keď potrebujeme viacero zvukových kariet – počítač obsluhuje viacero zvukových výstupov.
+
+
+=== PCMCIA zvukové karty ===
+
+Tento typ kariet bol donedávna obľúbený u majiteľov notebookov, ktoré nemali zabudovanú zvukovú kartu. Dnes, keď je zvuková karta samozrejmou súčasťou notebooku sa tento typ kariet využíva len v prípade, že výkon internej karty nie je dostatočný, alebo – s výhodou, keď potrebujeme viacero audio kariet – napríklad využitie pre diskotéky – kedy notebook reprodukuje hudbu a zároveň na druhej karte môžeme prehrávať iný zvuk – na monitorovanie, resp. prípravu ďalšej skladby. Aj tu sa však už uplatňujú USB zariadenia, ktoré postupne vytláčajú PCMCIA.
+
+
+== Driver ==
+Zvuková karta nefunguje ako samostatný objekt, prepojenie jej hardvéru s operačným systémom počítača sprostredkuje tzv. driver – ovládač zariadenia. Tieto drivery sú písané priamo pre ten ktorý typ zvukovej karty, zvukový čip. Driver pri kartách s nižšou cenou – low-end kartách, ktoré nemajú dostatočnú hardvérovú podporu musí niektoré časti zvukovej karty emulovať, čiže zvuková karta alebo jej časť je len softvérovo virtuálne vytvorená v pamäti počítača, čo znamená že spotrebuje oveľa viac výkonu CPU, ako karty s tzv. hardvérovou akceleráciou. Takýto program môže spotrebovať až 10 % výkonu počítača na vytváranie zvuku. Moderné zvukové akcelerátory s DSP spotrebuvávajú len minimum strojového výkonu obvykle pri vyššej kvalite výsledného zvuku.
+
+
+== História zvukových kariet pre PC ==
+
+Zvukové karty pre počítače typu IBM PC sa po prvýkrát objavili okolo roku 1987, a nahradili interný PC reproduktor (beeper, resp. PC speaker) ktorý bol dovtedy jediným zariadením produkujúcim v počítači zvuk. Tento bol určený predovšetkým na signalizáciu stavu počítača pípaním. Viaceré firmy vyvinuli softvér umožňujúci prehrávanie zvukov, resp. hudby cez tento interný reproduktor. Náročnosť prehrávania zvuku cez interný reproduktor vyžadovala prerušenie ostatných činností PC pri prehrávaní zvuku. Navyše hlasitosť bola nízka. Hardvérová podpora prehrávania zvukov umožnila rozvoj multimediálnych aplikácií a hier.
+Prvé návrhy zvukových kariet neuvažovali o využívaní zvukovej karty pre hry. Boli navrhnuté pre komponovanie hudby, alebo syntézu hlasu. Až v roku 1988 prvé firmy začali smerovať využitie zvukových kariet smerom ku hrám (Sierra). To znamenalo dramatický prielom v používaní zvukových kariet. Zo začiatku sa používala MIDI syntéza – štandard „MPU401 resp general midi“, ale neskôr – v polovici 90-tych rokov bolo umožnené prehrávanie samplov – reálnych zdigitalizovaných zvukov. S tým prišla firma Creative a tak vznikol štandard „Sound Blaster“.
+Prvé zvukové karty boli postavené na ISA zbernici. Tieto karty mali tzv. half duplex, čo v praxi znamená že neumožňovali nahrávanie a prehrávanie zvuku súčasne. Neskôr sa objavili aj full-duplex karty, ktoré síce umožňovali súčasné prehrávanie aj nahrávanie, ale súčasne vyžadovali dve IRQ a dva kanály DMA. Až príchod PCI zbernice umožnil full-duplex bez obmedzení.
+Dnes sa zvukové karty low-end a mid-end integrujú poväčšine priamo na matičnú dosku počítača, a len vo výnimočných prípadoch sa používajú externé – rozširujúce karty.
+
+
+== Externé odkazy ==
+Fi.Muni.cz - Zvuková karta (česky)
+A History of PC Sound Hardware (po anglicky)
+Soundcards Museum (po anglicky)

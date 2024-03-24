@@ -1,0 +1,40 @@
+revision: 10988324
+title: 3wPlayer
+url: https://bg.wikipedia.org/wiki/3wPlayer
+
+
+---
+
+3wPlayer е зловредна програма за гледане на AVI-файлове, която инсталира със себе си троянския кон Trojan.Win32.Obfuscated.en. Троянецът застрашава потребителите на операционната система Microsoft Windows.
+За да инфектира компютрите, вирусът прилага форма на социално инженерство – привлекателни видео файлове (излезли филми и пр.) се пускат в системите за обмен на файлове. Но тези видео файлове са обработени така, че при гледане с друг плейър показват съобщение, в което потребителите се приканват да изтеглят 3wPlayer, за да могат да видят съдържанието на файла.
+3wPlayer е полиморфен (самопроменящ се) компютърен вирус, който ограничава действието на анти-вирусните и другите защитни програми, променя системните файлове, изпраща лична информация на нележани получатели, значително намалява производителността на системата и т.н.Свързани с него троянци са Divo Codec и DomPlayer.
+
+
+== Файлове, засегнати от Divo Codec ==
+Divo Codec засяга следните файлове:
+
+%ProgramFiles%\3wPlayer\settings.ini
+%ProgramFiles%\3wPlayer\settings.stp
+%ProgramFiles%\3wPlayer\SkinCrafterDll.dll
+%ProgramFiles%\3wPlayer\skins\Stylish.skf
+%ProgramFiles%\3wPlayer\test.gif
+%ProgramFiles%\3wPlayer\unins000.dat
+%ProgramFiles%\3wPlayer\unins000.exe
+C:\Documents and Settings\All Users\Start Menu\Programs\3wPlayer\3wPlayer.lnk
+C:\Documents and Settings\*USENAME*\Local Settings\Temp\Temporary Internet Files\Content.IE5\%ProgramFiles%\3wPlayer\3wPlayer.exe
+C:\Documents and Settings\*USENAME*\Local Settings\Temp\Temporary Internet Files\Content.IE5\%ProgramFiles%\3wPlayer\minime.exe
+C:\Documents and Settings\*USERNAME*\Application Data\Play About\BatBurnDefault.exe
+C:\Documents and Settings\*USERNAME*\Application Data\Play About\poke dale mail.exe
+C:\Documents and Settings\*USERNAME*\Application Data\Play About\wpmhjiea.exe
+C:\Documents and Settings\*USENAME*\Local Settings\Temp\Temporary Internet Files\Content.IE5\
+C:\Documents and Settings\*USERNAME*\Application Data\"something stupid"\mp3 roam.exeВ случай, че Divo Codec е бил инсталиран, потребителите могат да изтрият заразените файлове през Windows Safe mode, command mode. Необходима е и проверка в стартовата директория (startup folder) дали няма други файлове на Divo.
+
+
+== Външни препратки ==
+BitTorrent зловредни вируси, насочващи към Media Players
+Symantec security briefing
+Почистване на avi-файлове от препратки към плеери
+Както по-горе, но с повече обяснения Архив на оригинала от 2007-12-15 в Wayback Machine.
+
+
+== Източници ==

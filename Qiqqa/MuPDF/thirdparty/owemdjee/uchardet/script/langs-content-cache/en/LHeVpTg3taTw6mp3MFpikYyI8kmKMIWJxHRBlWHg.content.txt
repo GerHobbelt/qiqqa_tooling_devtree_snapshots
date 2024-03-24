@@ -1,0 +1,115 @@
+revision: 1157596558
+title: Lipopolysaccharide
+url: https://en.wikipedia.org/wiki/Lipopolysaccharide
+
+
+---
+
+Lipopolysaccharides (LPS) are large molecules consisting of a lipid and a polysaccharide that are bacterial toxins. They are composed of an O-antigen, an outer core, and an inner core all joined by covalent bonds, and are found in the outer membrane of Gram-negative bacteria. Today, the term endotoxin is often used synonymously with LPS, although there are a few endotoxins (in the original sense of toxins that are inside the bacterial cell that are released when the cell disintegrates) that are not related to LPS, such as the so-called delta endotoxin proteins produced by Bacillus thuringiensis.Lipopolysaccharides can have substantial impacts on human health, primarily through interactions with the immune system. LPS is a potent activator of the immune system and pyrogen (agent that causes fever). In severe cases, LPS can play a role in causing septic shock. In lower levels and over a longer time period, there is evidence LPS may play an important and harmful role in autoimmunity, obesity, depression, and cellular senescence.
+
+
+== Discovery ==
+The toxic activity of LPS was first discovered and termed endotoxin by Richard Friedrich Johannes Pfeiffer. He distinguished between exotoxins, toxins that are released by bacteria into the surrounding environment, and endotoxins, which are toxins "within" the bacterial cell and released only after destruction of the bacterial outer membrane. Subsequent work showed that release of LPS from gram negative microbes does not necessarily require the destruction of the bacterial cell wall, but rather, LPS is secreted as part of the normal physiological activity of membrane vesicle trafficking in the form of bacterial outer membrane vesicles (OMVs), which may also contain other virulence factors and proteins.
+
+
+== Functions in bacteria ==
+LPS is a major component of the outer membrane of Gram-negative bacteria, contributing greatly to the structural integrity of the bacteria and protecting the membrane from certain kinds of chemical attack. LPS is the most abundant antigen on the cell surface of most Gram-negative bacteria, contributing up to 80% of the outer membrane of E. coli and Salmonella.  LPS increases the negative charge of the cell membrane and helps stabilize the overall membrane structure. It is of crucial importance to many Gram-negative bacteria, which die if the genes coding for it are mutated or removed. However, it appears that LPS is nonessential in at least some Gram-negative bacteria, such as Neisseria meningitidis, Moraxella catarrhalis, and Acinetobacter baumannii. It has also been implicated in non-pathogenic aspects of bacterial ecology, including surface adhesion, bacteriophage sensitivity, and interactions with predators such as amoebae. LPS is also required for the functioning of omptins, a class of bacterial protease.
+
+
+== Composition ==
+
+Lipopolysaccharides are composed of three parts: The O antigen (or O polysaccharide), the Core oligosaccharide, and Lipid A.
+
+
+=== O-antigen ===
+The repetitive glycan polymer contained within an LPS is referred to as the O antigen, O polysaccharide, or O side-chain of the bacteria. The O antigen is attached to the core oligosaccharide, and comprises the outermost domain of the LPS molecule. The composition of the O chain varies from strain to strain; there are over 160 different O antigen structures produced by different E. coli strains. The presence or absence of O chains determines whether the LPS is considered "rough" or "smooth". Full-length O-chains would render the LPS smooth, whereas the absence or reduction of O-chains would make the LPS rough. Bacteria with rough LPS usually have more penetrable cell membranes to hydrophobic antibiotics, since a rough LPS is more hydrophobic. O antigen is exposed on the very outer surface of the bacterial cell, and, as a consequence, is a target for recognition by host antibodies.
+
+
+=== Core ===
+
+The core domain always contains an oligosaccharide component that attaches directly to lipid A and commonly contains sugars such as heptose and 3-Deoxy-D-manno-oct-2-ulosonic acid (also known as KDO, keto-deoxyoctulosonate).  The LPS cores of many bacteria also contain non-carbohydrate components, such as phosphate, amino acids, and ethanolamine substituents.
+
+
+=== Lipid A ===
+
+Lipid A is, in normal circumstances, a phosphorylated glucosamine disaccharide decorated with multiple fatty acids. These hydrophobic fatty acid chains anchor the LPS into the bacterial membrane, and the rest of the LPS projects from the cell surface. The lipid A domain is responsible for much of the toxicity of Gram-negative bacteria. When bacterial cells are lysed by the immune system, fragments of membrane containing lipid A are released into the circulation, causing fever, diarrhea, and possible fatal endotoxic shock (also called septic shock). The Lipid A moiety is a very conserved component of the LPS. However Lipid A structure varies among bacterial species. Lipid A structure largely defines the degree and nature of the overall host immune activation.
+
+
+== Lipooligosaccharides ==
+The "rough form" of LPS has a lower molecular weight due to the absence of the O polysaccharide. In its place is   a short oligosaccharide: this form is known as Lipooligosaccharide (LOS), and is a glycolipid found in the outer membrane of some types of Gram-negative bacteria, such as Neisseria spp. and Haemophilus spp.  LOS plays a central role in maintaining the integrity and functionality of the outer membrane of the Gram negative cell envelope. LOS play an important role in the pathogenesis of certain bacterial infections because they are capable of acting as immunostimulators and immunomodulators. Furthermore, LOS molecules are responsible for the ability of some bacterial strains to display molecular mimicry and antigenic diversity, aiding in the evasion of host immune defenses and thus contributing to the virulence of these bacterial strains. In the case of Neisseria meningitidis, the lipid A portion of the molecule has a symmetrical structure and the inner core is composed of 3-deoxy-D-manno-2-octulosonic acid (KDO) and heptose (Hep) moieties. The outer core oligosaccharide chain varies depending on the bacterial strain.
+
+
+== LPS detoxification ==
+A highly conserved host enzyme called acyloxyacyl hydrolase (AOAH) may detoxify LPS when it enters, or is produced in, animal tissues. It may also convert LPS in the intestine into an LPS inhibitor. Neutrophils, macrophages and dendritic cells produce this lipase, which inactivates LPS by removing the two secondary acyl chains from lipid A to produce tetraacyl LPS.  If mice are given LPS parenterally, those that lack AOAH develop high titers of non-specific antibodies, develop prolonged hepatomegaly, and experience prolonged endotoxin tolerance. LPS inactivation may be required for animals to restore homeostasis after parenteral LPS exposure.  Although mice have many other mechanisms for inhibiting LPS signaling, none is able to prevent these changes in animals that lack AOAH.
+Dephosphorylation of LPS by intestinal alkaline phosphatase can reduce the severity of Salmonella tryphimurium and Clostridioides difficile infection restoring normal gut microbiota. Alkaline phosphatase prevents intestinal inflammation (and
+"leaky gut") from bacteria by dephosphorylating the Lipid A portion of LPS.
+
+
+== Biosynthesis and transport ==
+
+
+== Biological effects on hosts infected with Gram-negative bacteria ==
+
+
+=== Immune response ===
+LPS acts as the prototypical endotoxin because it binds the CD14/TLR4/MD2 receptor complex in many cell types, but especially in monocytes, dendritic cells, macrophages and B cells, which promotes the secretion of pro-inflammatory cytokines, nitric oxide, and eicosanoids. Bruce Beutler was awarded a portion of the 2011 Nobel Prize in Physiology or Medicine for his work demonstrating that TLR4 is the LPS receptor.As part of the cellular stress response, superoxide is one of the major reactive oxygen species induced by LPS in various cell types that express TLR (toll-like receptor). LPS is also an exogenous pyrogen (fever-inducing substance).LPS function has been under experimental research for several years due to its role in activating many transcription factors. LPS also produces many types of mediators involved in septic shock. Humans are much more sensitive to LPS than other animals (e.g., mice). A dose of 1 µg/kg induces shock in humans, but mice will tolerate a dose up to a thousand times higher. This may relate to differences in the level of circulating natural antibodies between the two species.
+Said et al. showed that LPS causes an IL-10-dependent inhibition of CD4 T-cell expansion and function by up-regulating PD-1 levels on monocytes which leads to IL-10 production by monocytes after binding of PD-1 by PD-L1.Endotoxins are in large part responsible for the dramatic clinical manifestations of infections with pathogenic Gram-negative bacteria, such as Neisseria meningitidis, the pathogens that causes meningococcal disease, including meningococcemia, Waterhouse–Friderichsen syndrome, and meningitis. 
+Portions of the LPS from several bacterial strains have been shown to be chemically similar to human host cell surface molecules; the ability of some bacteria to present molecules on their surface which are chemically identical or similar to the surface molecules of some types of host cells is termed molecular mimicry.  For example, in Neisseria meningitidis L2,3,5,7,9, the terminal tetrasaccharide portion of the oligosaccharide (lacto-N-neotetraose) is the same tetrasaccharide as that found in paragloboside, a precursor for ABH glycolipid antigens found on human erythrocytes. In another example, the terminal trisaccharide portion (lactotriaose) of the oligosaccharide from pathogenic Neisseria spp. LOS is also found in lactoneoseries glycosphingolipids from human cells.  Most meningococci from groups B and C, as well as gonococci, have been shown to have this trisaccharide as part of their LOS structure.  The presence of these human cell surface 'mimics' may, in addition to acting as a 'camouflage' from the immune system, play a role in the abolishment of immune tolerance when infecting hosts with certain human leukocyte antigen (HLA) genotypes, such as HLA-B35.LPS can be sensed directly by hematopoietic stem cells (HSCs) through the bonding with TLR4, causing them to proliferate in reaction to a systemic infection.  This response activate the TLR4-TRIF-ROS-p38 signaling within the HSCs and through a sustained TLR4 activation can cause a proliferative stress, leading to impair their competitive repopulating ability.  Infection in mice using S. typhimurium showed similar results, validating the experimental model also in vivo.
+
+
+=== Effect of variability on immune response ===
+
+O-antigens (the outer carbohydrates) are the most variable portion of the LPS molecule, imparting the antigenic specificity. In contrast, lipid A is the most conserved part. However, lipid A composition also may vary (e.g., in number and nature of acyl chains even within or between genera). Some of these variations may impart antagonistic properties to these LPS. For example, Rhodobacter sphaeroides diphosphoryl lipid A (RsDPLA) is a potent antagonist of LPS in human cells, but is an agonist in hamster and equine cells.It has been speculated that conical Lipid A (e.g., from E. coli) are more agonistic, less conical lipid A like those of Porphyromonas gingivalis may activate a different signal (TLR2 instead of TLR4), and completely cylindrical lipid A like that of Rhodobacter sphaeroides is antagonistic to TLRs. In general, LPS gene clusters are highly variable between different strains, subspecies, species of bacterial pathogens of plants and animals.Normal human blood serum contains anti-LOS antibodies that are bactericidal and patients that have infections caused by serotypically distinct strains possess anti-LOS antibodies that differ in their specificity compared with normal serum. These differences in humoral immune response to different LOS types can be attributed to the structure of the LOS molecule, primarily within the structure of the oligosaccharide portion of the LOS molecule.
+In Neisseria gonorrhoeae it has been demonstrated that the antigenicity of LOS molecules can change during an infection due to the ability of these bacteria to synthesize more than one type of LOS, a characteristic known as phase variation. Additionally, Neisseria gonorrhoeae, as well as Neisseria meningitidis and Haemophilus influenzae, are capable of further modifying their LOS in vitro, for example through sialylation (modification with sialic acid residues), and as a result are able to increase their resistance to complement-mediated killing  or even down-regulate complement activation or evade the effects of bactericidal antibodies. Sialylation may also contribute to hindered neutrophil attachment and phagocytosis by immune system cells as well as a reduced oxidative burst. Haemophilus somnus, a pathogen of cattle, has also been shown to display LOS phase variation, a characteristic which may help in the evasion of bovine host immune defenses.
+Taken together, these observations suggest that variations in bacterial surface molecules such as LOS can help the pathogen evade both the humoral (antibody and complement-mediated) and the cell-mediated (killing by neutrophils, for example) host immune defenses.
+
+
+=== Non-canonical pathways of LPS recognition ===
+Recently, it was shown that in addition to TLR4 mediated pathways, certain members of the family of the transient receptor potential ion channels recognize LPS. LPS-mediated activation of TRPA1 was shown in mice and Drosophila melanogaster flies. At higher concentrations, LPS activates other members of the sensory TRP channel family as well, such as TRPV1, TRPM3 and to some extent TRPM8. 
+LPS is recognized by TRPV4 on epithelial cells. TRPV4 activation by LPS was necessary and sufficient to induce nitric oxide production with a bactericidal effect.
+
+
+== Health effects ==
+In general the health effects of LPS are due to its abilities as a potent activator and modulator of the immune system, especially its inducement of inflammation.
+
+
+=== Endotoxemia ===
+The presence of endotoxins in the blood is called endotoxemia. High level of endotoxemia can lead to septic shock, while lower concentration of endotoxins in the bloodstream is called metabolic endotoxemia. Endotoxemia is associated with obesity, diet, cardiovascular diseases, and diabetes, while also host genetics might have an effect.Moreover, endotoxemia of intestinal origin, especially, at the host-pathogen interface, is considered to be an important factor in the development of alcoholic hepatitis,  which is likely to develop on the basis of the small bowel bacterial overgrowth syndrome and an increased intestinal permeability.Lipid A may cause uncontrolled activation of mammalian immune systems with production of inflammatory mediators that may lead to septic shock. This inflammatory reaction is mediated by Toll-like receptor 4 which is responsible for immune system cell activation. Damage to the endothelial layer of blood vessels caused by these inflammatory mediators can lead to capillary leak syndrome, dilation of blood vessels and a decrease in cardiac function and can lead to septic shock. Pronounced complement activation can also be observed later in the course as the bacteria multiply in the blood. High bacterial proliferation triggering destructive endothelial damage can also lead to disseminated intravascular coagulation (DIC) with loss of function of certain internal organs such as the kidneys, adrenal glands and lungs due to compromised blood supply. The skin can show the effects of vascular damage often coupled with depletion of coagulation factors in the form of petechiae, purpura and ecchymoses. The limbs can also be affected, sometimes with devastating consequences such as the development of gangrene, requiring subsequent amputation. Loss of function of the adrenal glands can cause adrenal insufficiency and additional hemorrhage into the adrenals causes Waterhouse-Friderichsen syndrome, both of which can be life-threatening.
+It has also been reported that gonococcal LOS can cause damage to human fallopian tubes.
+
+
+=== Auto-immune disease ===
+The molecular mimicry of some LOS molecules is thought to cause autoimmune-based host responses, such as flareups of multiple sclerosis.  Other examples of bacterial mimicry of host structures via LOS are found with the bacteria Helicobacter pylori and Campylobacter jejuni, organisms which cause gastrointestinal disease in humans, and Haemophilus ducreyi which causes chancroid. Certain C. jejuni LPS serotypes (attributed to certain tetra- and pentasaccharide moieties of the core oligosaccharide) have also been implicated with Guillain–Barré syndrome and a variant of Guillain–Barré called Miller-Fisher syndrome.
+
+
+=== Link to obesity ===
+Epidemiological studies have shown that increased endotoxin load, which can be a result of increased populations of endotoxin-producing bacteria in the intestinal tract, is associated with certain obesity-related patient groups. Other studies have shown that purified endotoxin from Escherichia coli can induce obesity and insulin-resistance when injected into germ-free mouse models. A more recent study has uncovered a potentially contributing role for Enterobacter cloacae B29 toward obesity and insulin resistance in a human patient. The presumed mechanism for the association of endotoxin with obesity is that endotoxin induces an inflammation-mediated pathway accounting for the observed obesity and insulin resistance. Bacterial genera associated with endotoxin-related obesity effects include Escherichia and Enterobacter.
+
+
+=== Depression ===
+There is experimental and observational evidence that LPS might play a role in depression. Administration of LPS in mice can lead to depressive symptoms, and there seem to be elevated levels of LPS in some people with depression. Inflammation may sometimes play a role in the development of depression, and LPS is pro-inflammatory.
+
+
+=== Cellular senescence ===
+Inflammation induced by LPS can induce cellular senescence, as has been shown for the lung epithelial cells and microglial cells (the latter leading to neurodegeneration).
+
+
+== Role as contaminant in biotechnology and research ==
+Lipopolysaccharides are frequent contaminants in plasmid DNA prepared from bacteria or proteins expressed from bacteria, and must be removed from the DNA or protein to avoid contaminating experiments and to avoid toxicity of products manufactured using industrial fermentation.Ovalbumin is frequently contaminated with endotoxins. Ovalbumin is one of the extensively studied proteins in animal models and also an established model allergen for airway hyper-responsiveness (AHR). Commercially available ovalbumin that is contaminated with LPS can falsify research results, as it does not accurately reflect the effect of the protein antigen on animal physiology.In pharmaceutical production, it is necessary to remove all traces of endotoxin from drug product containers, as even small amounts of endotoxin will cause illness in humans.  A depyrogenation oven is used for this purpose.  Temperatures in excess of 300 °C are required to fully break down LPS.The standard assay for detecting presence of endotoxin is the Limulus Amebocyte Lysate (LAL) assay, utilizing blood from the Horseshoe crab (Limulus polyphemus). Very low levels of LPS can cause coagulation of the limulus lysate due to a powerful amplification through an enzymatic cascade. However, due to the dwindling population of horseshoe crabs, and the fact that there are factors that interfere with the LAL assay, efforts have been made to develop alternative assays, with the most promising ones being ELISA tests using a recombinant version of a protein in the LAL assay, Factor C.
+
+
+== See also ==
+Bioaerosol
+Depyrogenation
+Host-pathogen interface
+Mucopolysaccharide
+Nesfatin-1
+Schwartzman reaction
+AOAH
+
+
+== References ==
+
+
+== External links ==
+Lipopolysaccharides at the U.S. National Library of Medicine Medical Subject Headings (MeSH)

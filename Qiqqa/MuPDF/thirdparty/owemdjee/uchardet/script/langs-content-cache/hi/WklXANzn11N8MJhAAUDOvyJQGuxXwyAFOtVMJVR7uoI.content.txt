@@ -1,0 +1,63 @@
+revision: 5079778
+title: Constructible polygon
+url: https://hi.wikipedia.org/wiki/%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A5%87%E0%A4%AF
+
+
+---
+
+ज्यामिति में किसी ज्यामितीय निर्माण (construction) से सम्बन्धित समस्या को निर्मेय कहते हैं। निर्मेय का अर्थ है - 'जिसका निर्माण करना है, वह'। ये निर्माण केवल पटरी और परकार (ruler-and-compass) की सहायता से बनाने होते हैं, चाँदा इत्यादि के प्रयोग से नहीं।
+
+
+== कुछ साधारण निर्माण ==
+उदाहरण के लिये कुछ निर्मेय नीचे दिये गये हैं:
+
+पटरी और परकार की सहायता से किसी सरल रेखा को समद्विभाजित करना, अर्थात इस रेखा-खण्ड का मध्य बिन्दु ज्ञात करनापटरी और परकार की सहायता से किसी कोण को दो बराबर भागों में बाँटनायदि किसी त्रिभुज की दो भुजाएँ और उनके बीच का कोण दिया हो तो उसकी रचना करनातीन बिन्दुओं से होकर जाने वाले वृत्त की रचना करनाकिसी वृत्त के अन्दर समबाहु त्रिभुज, वर्ग, समपंचभुज, समषटभुज आदि का निर्माणकिसी वृत्त के क्षेत्रफल के बराबर क्षेत्रफल वाले वर्ग की रचना करना
+
+
+== असम्भव निर्माण ==
+कुछ ज्यामितीय निर्माण केवल पटरी और परकार द्वारा नहीं बनाए जा सकते।
+
+
+=== वृत्त के समान क्षेत्र वाले वर्ग का निर्माण (स्क्वायरिंग द सर्कल) ===
+
+
+=== घन को दोगुना करना ===
+एक ऐसी रेखा खींचना जिसकी लम्बाई का घन, किसी दी गई रेखा की लम्बाई के घन के दो-गुना हो।
+
+
+=== कोण का त्रिभाजन ===
+किसी दिए गए कोण के एक-तिहाई (१/३) के बराबर कोण का निर्माण
+
+
+== केवल पटरी या केवल परकार द्वारा निर्माण ==
+
+
+== परिवर्धित निर्माण ==
+पटरी और परकार के अलावा कुछ ऐसे औजार हैं जिनकी सहायता से ऐसे निर्माण भी सम्भव हैं जो केवल पटरी और परकार से सम्भव नहीं हैं। इनमें चिह्नित पटरी (मार्केबल रूलर) तथा ओरिगामी (Origami) प्रमुख हैं।
+
+
+== बाइनरी अंकों की गणना ==
+सन १९९८ में साइमन प्लोफी (Simon Plouffe) ने एक विधि बताई जिसके द्वारा पटरी और परकार द्वारा कुछ संख्याओं के बाइनरी अंक प्राप्त किए जा सकते हैं। इस विधि में एक कोण को बार-बार दोगुना किया जाता है। किन्तु २० बाइनरी अंकों के बाद यह विधि अव्यवहार्य (impractical) हो जाती है।
+
+
+== इन्हें भी देखें ==
+प्रमेय
+
+
+== बाहरी कड़ियाँ ==
+Van Schooten's Ruler Constructions at Convergence
+Online ruler-and-compass construction tool
+Squaring the circle
+Impossibility of squaring the circle
+Doubling the cube
+Angle trisection
+An Investigation of Historical Geometric Constructions at Convergence
+Trisection of an Angle
+Regular polygon constructions
+Simon Plouffe's use of ruler and compass as a computer
+Why Gauss could not have proved necessity of constructible regular polygons
+Construction with the Compass Only at cut-the-knot
+Archimedes' neusis construction by Antonio Gutierrez from Geometry Step by Step from the Land of the Incas.
+Renaissance artists' constructions of regular polygons at Convergence
+Angle Trisection by Hippocrates
+Various constructions using compass and straightedge With interactive animated step-by-step instructions

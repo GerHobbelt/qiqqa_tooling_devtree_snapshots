@@ -1,0 +1,12 @@
+revision: 122604721
+title: Processore Sycamore
+url: https://it.wikipedia.org/wiki/Processore_Sycamore
+
+
+---
+
+Sycamore è un processore quantistico creato dalla divisione di intelligenza artificiale di Google, che comprende 53 qubit.
+Nel 2019, Sycamore secondo quanto dichiarato da Google (in un articolo prima pubblicato, poi criticato, quindi rimosso e poi pubblicato su Nature), avrebbe completato un'attività in 200 secondi che richiederebbe 10.000 anni per un supercomputer all'avanguardia (per esempio, il Summit). Pertanto, Google ha affermato di aver raggiunto la supremazia quantistica, cioè il distacco tecnologico di un computer quantico rispetto ad un supercomputer. Per stimare il tempo che sarebbe stato impiegato da un supercomputer classico, Google avrebbe eseguito parti della simulazione del circuito quantistico sul Summit, il computer classico più potente al mondo. Successivamente, IBM fece una controargomentazione, sostenendo che l'attività avrebbe richiesto solo 2,5 giorni su un sistema classico come Summit. Se le affermazioni di Google venissero verificate, rappresenterebbe un salto esponenziale nella potenza di calcolo mai visto prima.Nell'agosto 2020 gli ingegneri quantistici che lavorano per Google hanno riportato la più grande simulazione chimica su un computer quantistico: un'approssimazione di Hartree-Fock con Sycamore abbinata a un computer classico che ha analizzato i risultati per fornire nuovi parametri per il sistema a 12 qubit.Nel dicembre 2020, il processore cinese Jiuzhang basato su fotoni, sviluppato da USTC, ha raggiunto una potenza di elaborazione di 76 qubit ed era dichiarato come 10 miliardi di volte più veloce di Sycamore, il che lo renderebbe il secondo computer a raggiungere la supremazia quantistica.
+
+
+== Note ==

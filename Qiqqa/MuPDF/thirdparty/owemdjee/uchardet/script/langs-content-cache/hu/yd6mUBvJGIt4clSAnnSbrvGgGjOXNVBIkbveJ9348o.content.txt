@@ -1,0 +1,289 @@
+revision: 25203636
+title: "Vet\xFClettan"
+url: https://hu.wikipedia.org/wiki/Vet%C3%BClettan
+
+
+---
+
+A vetülettan a Föld felszínén levő pontok síkon való ábrázolásának, azaz a térképvetületek létrehozásának, alkalmazásának tudománya. Foglalkozik a vetületek megalkotásával, csoportosításával, torzulásaik kiszámításával, illetve a vetületek egymás közötti átszámításával. A vetülettan alapvető fontosságú geodéziai és térképészeti munkák során.
+A vetülettan fő feladata olyan térképek szerkesztése, amelyek a tájékozódási feladatoknak a közelítő megoldására alkalmasak. A több évezredes tudományos kutatás eredményei tették lehetővé a korszerű számítógépes térkép adatbázisok (lásd térinformatika) létrehozását, és a GPS (Global Positioning System) alkalmazását. Napjainkban a rajzolt térképeknek a szemléltetés és a döntés-előkészítés vizuális támogatása vált a fő feladatává.
+
+
+== Alapfogalmak ==
+Mivel a Föld felszíne nem síkba fejthető felület, az alakzatokat (távolságok, szögek, területek) nem lehet torzítás nélkül síkban ábrázolni. A felületek geometriájának fontos tétele, hogy két felületet csak akkor lehet hosszúságtartóan egymásba leképezni, ha a Gauss-féle görbületük minden pontjukban azonos. A síknál ez K=0, míg a térképészeti alapfelületeken K>0.
+
+Vetületi egyenletek: a térképek készítésénél alkalmazott földrajzi koordináták (alapfelület) és a síkbeli geodéziai koordináták (képfelület) kapcsolatát adják meg: (x, y)=V(φ, λ) alakban. A térkép megalkotásához a koordinátákat a léptékkel és a földsugárral szorozni kell. (A Föld alakja ún. geoid, melyet a gömb vagy az ellipszoid csak közelítőleg helyettesít.) A vetületi egyenletekben a térkép síkjában a térképészetben használt jobbsodrású Descartes-féle koordináta-rendszer szerepel: az x koordináta az egyenlítőre merőlegesen, az északi pólus felé mutat, az y koordináta erre merőleges, keleti irányítású.
+Lépték avagy méretarány: a térképen mért hosszúság és a valóságos hossz aránya. Legtöbbször M = 1:75 000 alakban jelölik. A vetületi torzulás miatt csak első közelítésben helyes. Ezért a térképészetben a lépték a vetület képzésénél használt kicsinyített gömb és a Föld (-gömb) sugarainak arányát jelenti. A hossztartó térképeknél meg kell adni, hogy melyek azok a vonalak, melyek mentén a lépték helyes.
+Póluspontos és pólusvonalas vetületek: a térképvetületek egy része a pólust a térkép egyetlen pontjára (póluspont) képezi le. Ilyenkor a délkörök ebben a pontban futnak össze. Egyes vetületek torzulásai éppen a pólusok környékén a legnagyobbak. Megfelelő affin transzformációval a délkörök összetartását s ezzel a vetület pólus környéki torzításait csökkenteni lehet. E vetületeken a pólusokat egyenes vagy görbe (pólusvonal) ábrázolja.
+
+
+== A vetületek csoportosítása ==
+A leképezéseket többféleképpen csoportosítjuk. Az illusztrációkon az egész Föld vagy egy félteke vetülete szerepel.
+
+
+=== A képfelület típusa szerint ===
+
+síkvetület - a felületi pontokat közvetlenül a térkép síkjára képezzük: (φ,λ)→(x,y)
+hengervetület - a gömböt hengerpalástra képezzük, melyet egy alkotója mentén felvágva síkba terítünk: (φ,λ)→(h,λ)→(x,y)
+kúpvetület - a gömböt kúppalástra képezzük, melyet egy alkotója mentén felvágva síkba terítünk: (φ,λ)→(ρ,λ)→(x,y)
+
+
+=== A gömb és a képfelület kölcsönös helyzete szerint ===
+
+		
+		
+poláris vetület – a képfelület forgástengelye a Föld forgástengelyével esik egybe
+ekvatoriális vetület – a képfelület forgástengelye az Egyenlítő síkjában fekszik
+meridionális vetület – a két forgástengely hegyesszöget zár be
+
+
+=== A koordináta-transzformáció elve szerint ===
+perspektív vetület: a gömböt párhuzamosan vagy centrálisan vetítjük a képfelületreortografikus vetület: a vetítő sugarak egymással párhuzamosak és a képsíkra merőlegesek
+sztereografikus vetület: a vetítés centruma a gömb felületének a képsíkkal átellenes pontja  (körtartó, szögtartó)
+gnomonikus vetület: a gömb középpontjából vetítünk síkra, hengerre, kúpranem-perspektív vetület: a (φ,λ)→(x,y) leképezést analitikus (matematikai) formulákkal adjuk meg
+
+
+=== Torzulási viszonyok szerint ===
+Ha a Föld felszínét gömbbel vagy forgási ellipszoiddal közelítjük, akkor belátható, hogy nincs olyan vetület, ami hossztartó lenne, vagyis bármely két pont közötti távolságot hűen őrizné meg. (Ez Gauss Theorema egregium nevű tételéből következik.)
+
+hossztartó, pontosabban: a távolságok arányát megtartó
+területtartó, pontosabban: a területek arányát megtartó
+szögtartó vagy iránytartó
+körtartó, ami nem jelenti feltétlenül a távolságok és/vagy irányok megtartását is
+konformis, azaz „kicsiben hasonló” (arány és szögtartó)
+általános torzulású, ha a fenti kritériumok egyike sem teljesül
+
+
+=== A fokhálózat szerkezete szerint ===
+valós vetület 
+
+a délkörök képei egyenesek és párhuzamosak vagy egy pontban találkoznak
+a szélességi körök képei párhuzamos egyenesek vagy koncentrikus körök
+a délkörök és a szélességi körök képei egymást merőlegesen metszikképzetes vetület: ha e három kritérium bármelyike hiányzik
+
+
+== Nevezetes vetületek ==
+(A vetületre a típusával vagy a készítő-tökéletesítő nevével hivatkozunk)
+
+		
+		
+		
+
+
+=== Négyzetes hengervetület ===
+A legegyszerűbb transzformáció, amelynek kivitelezésekor a földrajzi koordinátákat a síkban felvett Descartes-féle koordinátákra mérjük:
+
+x=M×φ
+y=M×λA képletekben szereplő M a térkép méretaránya.
+
+
+=== Gnomonikus poláris síkvetület ===
+A Föld középpontjából a Földet egy tetszőleges pontban érintő (vagy ilyennel párhuzamos metsző ill. lebegő) síkra vetítjük. Erősen torz a térkép középpontjától távolabbi részeken. A vetületi egyenleteket egyszerűen a síkban felvett polárkoordináták segítségével kaphatjuk:
+
+r = R×ctg(φ)
+ω = λahol (r,ω) a vetületi pont polárkoordinátái. Ezeket a megfelelő formulákkal átszámíthatjuk a derékszögű (x,y) koordinátákba az M lépték figyelembe vételével.
+
+
+=== Sztereografikus poláris síkvetület ===
+Körtartó, szögtartó síkvetület, amelyet a Földet érintő (vagy azzal párhuzamos) síkra vetítéssel kapunk a gömbnek az átellenes felületi pontjából. Különösen a sarkvidéki navigációnál előnyös (a Mercator térkép helyett). A vetületi egyenletek a polárkoordinátákra:
+
+r = R × tg(φ/2 - 45°)
+ω = λ
+
+
+=== Apianus vetületei ===
+Képzetes hengervetületek, melyeknek a hálózatát geometria szerkesztésekkel kapjuk. Az I. vetület a Földet két kör alakú mezőben ábrázolja. A középső délkörök egyenlő osztása definiálja a párhuzamos egyenesekkel ábrázolt paralelköröket. Az Egyenlítő egyenlő osztásával kapjuk a kör alakú meridiánok hálózatát.  A II. vetület horizontálisan megkétszerezi a KNy-i hosszúságok vetületét, s ezzel a meridiánok és a teljes glóbusz elliptikussá transzformálódnak. Ezzel egyben ábrázolja a két féltekét.
+Az I. vetület egyenleteinek analitikus formája:
+
+x = R × φ
+y = R × λ × √(1 - (φ/90)^2)
+		
+		
+		
+
+
+=== Apollóniosz vetülete ===
+A Földet párhuzamos sugárnyalábbal vetíti merőlegesen a térkép síkjára (ortogonális síkvetület). Torzulásai miatt kevéssé használják ezt az ókori (Kr.e. III.sz-i) vetületet, amelynek vetületi egyenletei:.
+
+x = cos(φ)× cos(λ)
+y = cos(φ)× sin(λ)
+
+
+=== Ptolemaiosz vetülete ===
+A délkörökön hossztartó kúpvetület.A formulák egyszerűsége miatt gyakran alkalmazzák különböző helyzetű, de félgömbnél lényegesen kisebb területek ábrázolására. A vetületi egyenletben szereplő konstansok ( 100, ill 0.8) tradicionálisak, tetszőlegesen változtathatók. Ekkor a pólus képe a „legyező” középpontjától távolabbra kerül (pólusvonal) illetve a nyílásszöge változik.
+
+x = (100-φ)×cos(0.8λ)
+y = (100-φ)×sin(0.8λ)
+
+
+=== Stabius-féle vetület ===
+Területtartó képzetes,  póluspontos kúpvetület. Szélességi körönként más-más nyílásszögű kúpra való vetítéssel kapjuk: polikónikus vetület. A vetületi egyenletekben szereplő n konstans:  n = 180×cos(φ)/π(90-φ).
+
+x = (90-φ)×cos(nλ)
+y = (90-φ)×sin(nλ)
+
+
+=== Polikónikus vetület ===
+A képfelület több, közös tengelyű kúp, amelyek a gömböt egymással párhuzamos körökben érintik.
+Az érintő körök, mint középvonalak által meghatározott sávokat a megfelelő kúp felületére képezzük le, majd e képfelületeket a síkba kiterítjük.
+Ezzel a módszerrel az egyes zónák torzulásai megfelelő vetítés mellett minimálisak lehetnek. A módszer továbbfejlesztése az, amikor határesetként végtelen sűrűségben jelöljük ki a kúpokat és az érintkezési köröket. Az itt bemutatott változaton ezt a módszert alkalmazták, s így a hossztartó szélességi körök és a délkörök vetülete kör.
+
+		
+		
+		
+
+
+=== Braun-féle vetület ===
+Sztereografikus hengervetület, ahol a Földet az Egyenlítőben érintő henger felületére az Egyenlítő átellenes pontjából húzott sugarakkal vetítjük. A vetületi egyenletek:
+
+x = tg(φ/2)
+y = λ
+
+
+=== Mercator-vetület ===
+Szögtartó valós hengervetület. A felfedezések korának elterjedt térképe, amelynek a hálózatát felfedezője, Gerhard Kremer (latinosan Mercator)  a négyzetes hengervetület transzformálásával, elemi geometriai eszközökkel szerkesztette meg. A konstrukció célja olyan négyszöghálós hajózási térkép készítése volt, amelynek a segítségével az egyszerű képzettségű hajósok is biztonságosan navigálhatnak. Konkrétabban olyan vetületet szerkesztett, amelyen a kurzust egyetlen szögmérő és vonalzó segítségével, minden számolás vagy táblázatok nélkül meg lehet határozni. Később született meg az egyszerű vetületi egyenletrendszer:
+
+x = lntg(φ/2+45°)
+y = λ
+
+
+=== Mercator–Sanson-vetület ===
+Területtartó póluspontos hengervetület szinuszos meridiánokkal. A szélességi körökön és a középmeridiánon hossztartó. Vetületi egyenletei:
+
+x = φ
+y = λ×cos(φ)
+
+
+=== Lambert–Gauss-vetület ===
+Szögtartó, póluspontos valós kúpvetület. A vetületi egyenletekben szereplő konstans az alkalmazott kúp nyílásszögének függvénye. A 90 konstans helyett k>90 alkalmazásával pólusvonalas variáns készíthető.
+
+x = (90-φ)×cos(nλ)
+y = (90-φ)×sin(nλ)
+		
+		
+		
+
+
+=== Postel-féle vetület ===
+Olyan síkvetület, amelynél a gömböt érintő síkban az érintési pontból induló egyenesre rámérjük az azonos irányú gömbi távolságokat. Az ábrán az északi félteke poláris vetületének egyenletei:
+
+x = (90-φ)cos(λ)
+y = (90-φ)sin(λ)
+
+
+=== Aitoff-féle vetület ===
+Postel ekvatoriális vetületének átszámozásával, a térkép kelet-nyugati irányú 2-szeres nyújtásával jön létre.
+
+
+=== Eckert-féle vetületek ===
+Eckert nevéhez hatféle vetület fűződik, melyek közül négyet mutatunk be. A tradíció római számokkal különbözteti meg az egyes vetületeket. Látható az a törekvés, ami a transzformációs formulák és a térképhálózat egyszerűsítését célozza meg.
+
+
+==== I. Általános torzulású pólusvonalas képzetes hengervetület, egyenes délkörökkel ====
+x = φ
+ y = λ×(1-|φ|/180)
+
+
+==== II. Területtartó pólusvonalas képzetes hengervetület egyenes délkörökkel ====
+x = sgn(φ)×(1-√(1-3sin|φ|))
+y = λ×(1-|x|/180)
+
+
+==== III. Általános torzulású pólusvonalas képzetes hengervetület elliptikus délkörökkel ====
+x = φ
+y = λ×√(1-3(φ/180)2)
+
+
+==== V. Általános torzulású pólusvonalas képzetes hengervetület szinuszos délkörökkel ====
+x = φ
+y = 0.5λ×(1+cos(φ))(A IV. és VI. vetület egyenletei zárt alakban nem írhatók fel.)
+
+
+=== Collignon-féle vetület ===
+A térképszerkesztés egyszerűsítési törekvéseinek egy másik példája, ami egyenesvonalú hálózatot eredményez. A póluspontos vetület leképezése még Apianus vetületi egyenleteinél is egyszerűbb formulákkal adható meg:
+
+x = φ
+y = λ×(1-|φ|/90)
+		
+		
+		
+
+
+=== Kavrajszkij-féle vetület ===
+Területtartó képzetes hengervetület, amelynél a délköröket a szinuszgörbe ívei ábrázolják. A vetületi egyenletek: λφ√
+
+x = arcsin(0.5√(3)×sin(φ))
+y = 0.5λ√(4-3×sin2(φ))
+
+
+=== Lambert-féle vetületek ===
+A kartográfia három területtartó vetületet ismer, amelyek Lambert nevéhez fűződnek.
+
+
+==== Hengervetület ====
+x = 90×sin(φ/2)
+y = φ
+
+
+==== Síkvetület ====
+x = sin(45-φ/2)×cos(λ)
+y = sin(45-φ/2)×sin(λ)
+
+
+==== Kúpvetület ====
+x = cos(45-φ/2)×cos(nλ)/√n
+y = cos(45-φ/2)×sin(nλ)/√n
+
+
+=== Mollweide vetülete ===
+Az alaptérkép póluspontos, területtartó képzetes hengervetület, amelyen a délkörök ellipszisek, a szélességi körök pedig egyenesek. A világtérkép kontúrja olyan ellipszis, aminek a nagytengelye az Egyenlítő, kistengelye a vetület középmeridiánja. Ebből származtatható a pólusvonalas vetület. Az alaptérkép vetületi egyenletei:
+
+x = φ
+y = φ×√(1-(φ/90)2)A pólusvonalas transzformáció egyenletei pedig:
+
+φ* = arcsin(0.5√3×sinφ)
+λ* = 2×φ/3
+
+
+=== Hammer-féle vetületek ===
+Más, többé-kevésbé kedvező tulajdonságú vetületetekből átszámozással, azaz a vetületi koordináták transzformációjával még kedvezőbb térképek nyerhetők. Erre példák a Hammer-vetületek, amelyek a Lambert-féle területtartó hengervetület különböző átszámításai. Egy ilyen:
+
+x = c×sinφ
+y = 2c×cosφ×sin(λ/2)
+c = 90:√(1+cosφ×cos(λ/2))
+
+
+=== Keverék vetületek ===
+
+Főként a Világtérképek torzításait csökkentendő több kartográfus készített más, kevéssé megfelelő vetületek kombinálásával újabb atlaszokat. 
+
+Érdi Krausz György a (−60°..+60°) szélességi tartományban a Mercator-Sanson vetületet, a sarkoknál Mollweide területtartó vetületét használta.
+Oswald Winkel két térkép vetületi egyenleteinek számtani közepét használta, mégpedig az Aitoff és a négyzetes hengervetület formuláiból közepelve.
+Goode térképein a kontinenseket külön középmeridiánt használva ábrázolja.
+Baranyi János vetületei általános torzulásúak, körkontúrokkal határolt sávok összetételéből állnak.Az illusztrációban a felső a Mercator–Sanson-vetületből, az alsó a Mollweide-vetületből készült.
+
+
+=== A Gauss–Krüger- és az UTM vetületek ===
+A katonai, kataszteri, geodéziai stb. térképek készítésénél olyan vetületeket használnak világszerte, amelyek a Föld ellipszoid-modelljét több, az Egyenlítővel párhuzamos tengelyű elliptikus hengerre vetítik. A vetületetek torzulása a térkép középmeridiánjának a környezetében kedvező (konformis), ezért a Földet két közeli meridián közötti zónákra osztva vetítik egy-egy henger felületére. A zónák szélessége a térkép méretarányától függően változik (3°, ill. 6°). A vetületi rendszer a Mercator-féle leképezés módosítása gömb helyett ellipszoidra alkalmazva. Ennek következtében a leképezés formulái zárt alakban nem írhatók fel.
+A Gauss–Krüger vetületi rendszerben a Kraszovszkij-féle ellipszoidot (1940) használták:
+
+egyenlítői sugár = 6 378 245 m
+lapultság = 1:298,3Az UTM (Universal Transverse Mercator) rendszer országonként különböző ellipszoidot alkalmaz.
+A magyar honvédség a 2000-es évekig a Gauss–Krüger, 2004 óta az UTM vetületeket használta/ja.
+
+
+== Források ==
+Belényesi Márta – Kristóf Dániel – Magyari Julianna: Térinformatika elméleti jegyzet (egyetemi jegyzet); Szent István Egyetem, Gödöllő, 2008
+Wolfram demonstration projekt
+Wolfram Mathworld
+Stegena Lajos: Vetülettan (Tankönyvkiadó, Budapest, 1988)
+Gelcich–Sauter–Dinse: Kartenkunde (Göschen'sche Verlagshandlung, Leipzig, 1909)
+
+
+== További információk ==
+A vetület nélküli rendszerektől az UTM-ig
+Térképrendszer-váltás a Magyar Honvédségnél
+UTM-zónák
+Referencia
+NCGIA-térképvetületek Archiválva 2008. február 22-i dátummal a Wayback Machine-ben
+Térképvetületek fokhálózati képei (Vetületi egyenletek, vetületi torzulások, fokhálózati és domborzati képek). Szerkeszti: Rakk Gyula, okleveles térképész

@@ -1,0 +1,22 @@
+revision: 3814860
+title: "Mikrovi\u013C\u0146i"
+url: https://lv.wikipedia.org/wiki/Mikrovi%C4%BC%C5%86i
+
+
+---
+
+Mikroviļņi ir elektromagnētiskais starojums ar viļņa garumu no 30 cm līdz 1 mm (frekvenci 1GHz — 300GHz) Mikroviļņi būtībā ir īsi radioviļņi, un agrāk tos nemaz nenodalīja no radioviļņiem. Starojums ar augstāku frekvenci ir infrasarkanie stari. Starojumu ar frekvencēm virs 300GHz stipri absorbē Zemes atmosfēra, un izgatavot šādu frekvenču uztvērējus ir bijis visai problemātiski.
+Mikroviļņu raidītāji un uztvērēji ir līdzīgi radioviļņu raidītājiem un uztvērējiem, tomēr konstrukciju ietekmē tas, ka viļņa garums ir samērojams ar komponentu izmēriem. Mikroviļņu raidītāju lampas satur rezonanses kontūru un spēj darboties tikai šaurā frekvenču joslā, atšķirībā no radioraidītāju lampām.
+Mikroviļņus lieto datu komunikācijām (3G mobilo telefonu tīkli (UMTS Latvijā darbojas 2100MHz frekvencē), bezvadu datortīkli (802.11b un g - 2400-2480MHz, 802.11a - 5GHz, bluetooth - 2400MHz). Satelītkomunikācijām (satelīttelevīzijai) vienmēr ir lietoti mikroviļņi, jo tur vienmēr ir tieša redzamība, frekvencēs ~1-170GHz. Mikroviļņus (2400MHz) lieto arī mikroviļņu krāsnīm. Mikroviļņus sākumā lietoja radariem (un lieto joprojām), jo ar mazāku viļņa garumu var sasniegt labāku izšķirtspēju. Liela daļa mikroviļņu tehnoloģiju pirmo reizi tika izveidotas tieši radaru vajadzībām (un vēlāk piemērotas citiem mērķiem).
+
+
+== Ietekme uz veselību ==
+Mikroviļņu starojums nav jonizējošs un attiecīgi nespēj pārraut ķīmiskās saites vai bojāt DNS molekulas, tomēr tas ietekmē dzīvu būtņu veselību. Starojuma termiskais efekts tiek izmantots vēža ārstēšanā, vienlaikus tā netermiskā ietekme  uz imūnsistēmu ir vāji pētīta un esošie pētījumi nav veikti pēc vienotas metodikas, kas apgrūtina rezultātu sistematizāciju. Nedēļu ilgam apstarojuma eksperimentam ar sadzīvē bieži sastopamo intensitāti 0,01 W/cm2 pakļautajām žurkām tika konstatētas patoloģiskas izmaiņas aizkrūtes dziedzerī un liesā, organismiem aktivizējās imūnās atbildes mehānisms. Dienām ilga apstarošana ar kopējo vidējo jaudas blīvumu 0,0248 mW/cm2 pelēm pazemināja mācīšanās spēju un telpisko atmiņu, taču šīs ietekmes mehānisms nav noskaidrots.Otrā pasaules kara laikā tika novērots, ka personas, kas atradās radaru sistēmu starojuma ceļā, reaģēja uz to, dzirdot klikšķus un citas skaņas. NASA 1970. gados veiktie pētījumi parādīja, ka to izraisīja termiskā izplešanās iekšējās auss daļās.
+Pārmērīga mikroviļņu starojuma termiskā iedarbība var izraisīt kataraktu, jo mikroviļņu karsēšana denaturē olbaltumvielas acs kristāliskajā lēcā. Pakļaušana lielai mikroviļņu starojuma devai (piemēram, no bojātas krāsniņas, kas tiek darbināta ar atvērtām durvīm) var izraisīt karstuma bojājumus arī citos audos, līdz pat apdegumiem, kas var nebūt uzreiz pamanāmi, jo mikroviļņiem ir tendence ātrāk uzsildīt dziļākus audus ar lielāku mitruma saturu. Zemāku frekvenču mikroviļņi iekļūst organismā dziļāk; par praktisko robežu 2,45 GHz starojumam muskuļos uzskata 17 milimetru dziļumu.
+
+
+== Atsauces ==
+
+
+== Ārējās saites ==
+ Vikikrātuvē par šo tēmu ir pieejami multivides faili. Skatīt: Mikroviļņi.

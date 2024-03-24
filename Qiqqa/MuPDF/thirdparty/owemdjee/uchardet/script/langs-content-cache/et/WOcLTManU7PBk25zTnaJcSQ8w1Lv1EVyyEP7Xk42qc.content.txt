@@ -1,0 +1,34 @@
+revision: 6066018
+title: Fraasistruktuurigrammatika
+url: https://et.wikipedia.org/wiki/Fraasistruktuurigrammatika
+
+
+---
+
+Fraasistruktuurigrammatika on grammatikateooria, mis kirjeldab lause struktuuri tema moodustajate kaudu. See teooria tugineb fraasistruktuurireeglite kogumile, mille pakkus esimesena välja Noam Chomsky (1957). 
+Fraasistruktuurigrammatika kujutab endast hierarhilist moodustajastruktuuri, kus sõnavormid või fraasid moodustavad kokkukuuluvaid üksusi, mis omakorda moodustavad suuremaid kokkukuuluvaid üksusi. 
+Erinevalt sõltuvusgrammatikast fraasistruktuurigrammatikas üldjuhul sõltuvussuhteid ei käsitleta.
+
+
+== Fraasistruktuurigrammatika liigid ==
+Enim kasutatakse järgmisi fraasistruktuurigrammatikaid:
+
+põhja-juhitav fraasistruktuurigrammatika (Head-Driven Phrase Structure Grammar)
+puid ühendav grammatika (Tree-Adjoining Grammar)
+kategooriate grammatika (Categorial Grammar)
+leksikofunktsionaalne grammatika (Lexical Functional Grammar)
+
+
+== Fraasistruktuurireeglid ==
+Fraasistruktuurireeglid järgivad põhimõtet A → B C, kus moodustaja A jaguneb moodustajateks B ja C.
+Selle põhjal on võimalik moodustada näiteks järgmisi reegleid:
+S → NP VP, kus S on lause, mis jaguneb noomenifraasiks (NP) ja verbifraasiks (VP);
+NP → D N, kus noomenifraas (NP) jaguneb determinandiks (D) ja noomeniks (N);
+VP → V (NP), kus verbifraas (VP) jaguneb verbiks (V) ja noomenifraasiks (NP).
+
+
+== Fraasistruktuurigrammatika ja sõltuvusgrammatika ==
+Fraasistruktuurigrammatika avaldab lause struktuuri moodustajate abil, sõltuvusgrammatika aga sõltuvussuhete abil.
+
+
+== Viited ==

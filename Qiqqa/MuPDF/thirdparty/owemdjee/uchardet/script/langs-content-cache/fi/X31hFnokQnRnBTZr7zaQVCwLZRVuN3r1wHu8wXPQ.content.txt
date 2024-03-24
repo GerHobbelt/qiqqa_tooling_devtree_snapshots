@@ -1,0 +1,68 @@
+revision: 21507632
+title: Counter-Strike
+url: https://fi.wikipedia.org/wiki/Counter-Strike
+
+
+---
+
+Counter-Strike (lyhennettynä CS, CS 1.6 tai pelkkä 1.6) on Valve Corporationin eteenpäin kehittämä ja vuonna 2000 julkaisema internetissä pelattava joukkuepohjainen taktinen ensimmäisen persoonan ammuntapeli. Alun perin pelin kehitti Minh ”Gooseman” Le sekä Jess ”Cliffe” Cliffe ilmaiseksi modiksi Valven Half-Life-videopelille. Modin suosion myötä sen oikeudet myytiin Valvelle ja siitä luotiin itsenäinen julkaisu. Peli käyttää GoldSrc-pelimoottoria mikä on raskaasti muokattu versio Quake-moottorista. Pelistä julkaistiin uudempi versio Counter-Strike: Condition Zero (2004) joka sisältää myös yksinpelillä varustetun Deleted Scenes -osan. Samana vuonna julkaistiin Source-pelimoottoria käyttävä Counter-Strike: Source, ja vuonna 2012 julkaistiin uusimmalla Source-versiolla varustettu Counter-Strike: Global Offensive.
+
+
+== Pelaaminen ==
+
+Counter-Strike on ensimmäisestä persoonasta kuvattu ammuntapeli. Peliä pelataan tietyn mittaisissa erissä, missä ajassa toisen osapuolen on onnistuttava päämäärässään. Pelissä saa rahaa eliminoimalla vihollisia sekä lohdutukseksi häviöstä tai palkkioksi voitosta seuraavan erän alkaessa. Rahaa voi menettää ampumalla panttivankia tai oman joukkueen jäseniä. Rahaa käytetään parempien aseiden ja tarvikkeiden ostamiseen jokaisen erän alussa. Ostamista on mahdollista harjoittaa vain tiimien aloituspisteissä. Ostettavana on erilaisia aseita pistooleista konekivääreihin. Mukaan voi myös ottaa taktisia apuvälineitä kuten kranaatteja ja suojavarustusta.
+Pommitehtävässä terroristit pyrkivät virittämään C-4-pommin jollekin kahdesta ennalta määrätystä kohteesta. Vastaavasti erikoisjoukot pyrkivät estämään tämän. Mikäli erikoisjoukot onnistuvat purkamaan pommin, he voittavat. Mikäli terroristit eivät ehdi virittää pommia ennen aikarajan umpeutumista, erikoisjoukot voittavat.
+Toinen pelimuoto on panttivankien pelastus. Terroristien tavoite on pitää panttivangit itsellään ja estää niiden pelastus. Erikoisjoukot taas yrittävät pelastaa panttivangit kuljettamalla heidät erikoisjoukkojen aloitusalueelle. Mikäli terroristien onnistuu estää panttivankien pelastus ennen aikarajaa, he voittavat.
+Salamurhamuodossa terroristit yrittävät eliminoida VIP-henkilön joka on tärkeä todistaja. Erikoisjoukkojen tulee saattaa VIP-henkilö pelastusalueelle aikarajan puitteissa. Mikäli terroristit onnistuvat eliminoimaan VIP-henkilön, tai aikaraja ylittyy, he voittavat.
+Joukkue voi voittaa erän onnistumalla tehtävässä tai eliminoimalla kaikki vastustavan joukkueen jäsenet. Jos pelaajan puoli voittaa, saa rahaa seuraavan erän alussa enemmän. Jos molempien joukkueiden pelaajia on jäljellä erän lopussa eikä tehtäviä ole suoritettu, erän voittaa kartan oletusvoittaja.
+Kuollessaan pelaajan hahmo menettää aseensa sekä muut varusteensa ja pääsee takaisin toimintaan vasta seuraavan erän alussa, jolloin varusteet täytyy ostaa uudelleen.
+
+
+== Yhteisö ==
+Counter-Strikeen on tehty monta erilaista modia, joilla kullakin on omat tarkoitusperänsä. Monet modit tarjoavat uudenlaisia pelikokemuksia. Yhteisö on luonut monia erilaisia pelimuotoja joista tunnetuimpia ovat deathmatch ja Gun Game. Niistä tuli myöhemmin virallisia pelimuotoja Global Offensiveen.
+Pelaajat voivat myös tehdä omia karttojaan Valve Hammer Editor -ohjelmalla, joita voi lisätä oman palvelimen karttavalikoimaan. Oletusarvoisesti pelaajat voivat ladata kartan automaattisesti suoraan palvelimelta liittyessään peliin. Karttojen tekoon on myös monia muita aputyökaluja ja ohjelmia, joista tunnetuimpia ovat muun muassa Wally Texture Editor, Half-life Model Viewer, Zoner Complile Tools ja erilaiset 'BSP to VMF' -muuntimet.
+
+
+== Kehitys ==
+Counter-Strike julkaistiin vuonna 1999 ilmaiseksi modiksi Half-Lifelle. Kyseinen peli oli suosittu modipiireissä helpon muokattavuudensa ansiosta. 9. kesäkuuta 1999 CS julkaistiin avoimeen beetatestiin. Pelaajayhteisö auttoi modin kehittäjiä  ja fanit pystyivät muuan muassa julkaisemaan omia karttojaan modin verkkosivuilla toisille pelaajille ladattaviksi. 12. huhtikuuta 2000 Valve ilmoitti että he ja Counter-Striken tekijät ovat liittyneet yhteen luodakseen Counter-Strikestä itsenäisen julkaisun. Peli julkaistiin yhdessä Team Fortress Classicin, Half-Life: Opposing Forcen moninpelin, Half-Life: Absolute Redemptionin ja Firearmsin kanssa.
+
+
+== Kilpapelaaminen ==
+Counter-Strike on yksi suosituimmista kilpapeleistä. Turnauksia on järjestetty noin vuodesta 2001 lähtien. Suosituimpia turnauksia ovat CPL, ESWC ja WCG. Palkintorahaa jaetaan vuosittain satojentuhansien eurojen arvosta. Pelin vanhat klaanit ja liigat ovat sittemmin siirtyneet uusiin Counter-Strike-peleihin.
+
+
+=== Turnauksia ===
+Seuraavassa luettelossa on 10 turnausta joilla on ollut isoimmat palkintorahat vuodesta 2001 lähtien.  Luettelo on jaoteltu palkintorahojen määrän mukaan. 
+
+CPL Summer 2003, rahamääränä 200 000 dollaria, Schroet Kommando voitti.
+ESWC 2006, rahamääränä 160 000 dollaria, Made in Brazil voitti.
+CPL World Championship 2001, 150 000 dollaria, Ninjas in Pyjamas voitti.
+WSVG ISC 2006, rahamääränä 139 500 dollaria, compLexity voitti.
+EM III - Global Finals, rahamääränä 125 000 dollaria, fnatic voitti.
+EM II - Finals, rahamääränä 122 500 dollaria, Mousesports voitti.
+EM I - Finals, rahamääränä 122 423 92 dollaria, Pentagram voitti.
+ESWC 2005, rahamääränä 120 000 dollaria, compLexity Gaming voitti.
+WEG Masters, rahamääränä 110 000 dollaria, wNn Gaming voitti.
+WCG 2006, rahamääränä 105 000 dollaria, Pentagram voitti.
+
+
+== Vastaanotto ==
+Counter-Strike julkaistiin vuonna 2000. Se sai pisteiden yhteisarvoa keräävävältä GameRankings-sivustolta 89 pistettä sadasta, perustuen 22 arvosteluun. Metacritic-sivusto antoi pelille pistemäärän 88 sadasta, perustuen 11 arvosteluun.
+
+
+=== Myyntikiellot ===
+Peliä on myös kritisoitu väkivaltaisuudestaan ja Counter-Striken ja EverQuestin myymisestä tuli Brasiliassa vuonna 2008 kiellettyä. Brasilialaisen tuomari Carlos Alberto Simões de Tomazin mukaan ”peli yllytti lain rikkomiseen ja turvallisuuden vaarantamiseen”. Myyntikielto on sittemmin kumottu ja peliä myydään taas. 
+
+
+== Lähteet ==
+Counter-Strike
+
+
+=== Viitteet ===
+
+
+== Aiheesta muualla ==
+
+Virallinen verkkosivu (englanniksi)
+Valve Corporationin verrkosivu (englanniksi)
+Counter-Strike Wiki (englanniksi)

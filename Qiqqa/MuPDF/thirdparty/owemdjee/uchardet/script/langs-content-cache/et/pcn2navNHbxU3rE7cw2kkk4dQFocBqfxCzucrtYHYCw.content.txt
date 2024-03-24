@@ -1,0 +1,24 @@
+revision: 6077196
+title: Elektroodipotentsiaal
+url: https://et.wikipedia.org/wiki/Elektroodipotentsiaal
+
+
+---
+
+Elektroodipotentsiaal (tähis E või φ ja mõõtühik volt) on IUPAC määratluse kohaselt elektromotoorjõud, mis tekib elektrokeemilise elemendi – galvaanielemendi – mõõdetaval elektroodil standardvesinikelektroodi suhtes. Standardse vesinikelektroodi enda elektroodipinge loetakse seejuures nulliks.Niisiis pole võimalik mõõta eraldi mingi elektroodi elektromotoorjõudu, vaid tuleb kasutada võrdlust mingi kindla kokkuleppelise elektroodi potentsiaaliga. Niisuguseks elektroodiks ongi standardne vesinikelektrood. Selleks et teada saada, kui suur on mingi metalli elektroodipotentsiaal, koostatakse galvaanielement, mille üks elektrood on uuritavast metallist ja teiseks elektroodiks on vesinikelektrood, ning mõõdetakse voltmeetriga elektroodidevaheline pinge (suure sisetakistusega voltmeetri kasutamisel väljendab see pinge elektroodidevahelist elektromotoorjõudu). 
+
+
+== Standardpotentsiaal ==
+Standardvesinikelektroodi ja uuritava metalli (täpsemalt selle redokspaari) vahel mõõdetud elektromotoorjõudu (pinget) nimetatakse selle metalli standardpotentsiaaliks (tähis E0, ka φ0). Teiste sõnadega, standardpotentsiaal on standardtingimustel mõõdetud elektroodipotentsiaal.
+Kui järjestada metallid nende standardpotentsiaalide kasvavas järjestuses, saadakse metallide elektrokeemiline pingerida.
+
+
+== Vaata ka ==
+Vesinikelektrood
+
+
+== Viited ==
+
+
+== Kirjandus ==
+L. Tamm, T. Tamm, A. Tuulmets, 2009. Keemia mõisted gümnaasiumile (eesti-vene-eesti sõnastik). Tartu Ülikooli Kirjastus

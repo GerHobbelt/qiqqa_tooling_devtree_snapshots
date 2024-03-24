@@ -1,0 +1,76 @@
+revision: 7185302
+title: "alias (pr\xEDkaz)"
+url: https://sk.wikipedia.org/wiki/Alias_(pr%C3%ADkaz)
+
+
+---
+
+alias je príkaz vo viacerých shelloch operačných systémov vychádzajúcich z Unixu (ale napr. aj v PowerShell v operačnom systéme Windows), ktorý umožňuje zameniť jeden výraz za iný, a tak si prispôsobiť zadávanie textových príkazov svojim potrebám.
+
+
+== Princíp ==
+Vytvorením aliasu, resp. prezývky, je možné spustiť nejaký proces novým zadaním, pričom pôvodné znenie je nezmenené a funkčné.
+
+
+=== Jednorazové zadanie ===
+Stačí napísať do terminálu zadanie aliasu, ktoré bude fungovať do najbližšieho ukončenie shellu alebo manuálneho zrušenie.
+
+ alias MENO_ALIASU=PRIKAZ
+
+
+=== Odstránenie aliasov ===
+Alias je možné odstrániť zadaním jednoduchého príkazu. Ak alias prepisoval iný príkaz, ten je odteraz znovu v platnosti.
+
+ unset MENO_ALIASU
+
+
+=== Prepísanie príkazov ===
+Skrátená forma (alias) môže nahradiť aj iný príkaz. Častá je zámena pôvodného príkazu s prídavnými hodnotami za alias.
+
+Napísaním ls sa spustí pôvodný príkaz ls -la.
+
+
+=== Trvalé uloženie ===
+Shelly majú svoje konfiguračné súbory, kde je možné umiestniť aliasy.
+
+
+==== Bash ====
+Používateľský konfiguračný súbor pre bash je súbor ~/.bashrc. V ňom (v jeho prednastavenom stave) zvyknú byť niektoré aliasy zakomentované. Pre povolenie zakomentovaného príkazu stačí odstrániť mriežku na začiatku riadku.
+Príklad zakomentovaných aliasov:
+
+Vzhľadom na to, že je možné napísať množstvo aliasov do jediného dokumentu, vznikla potreba vytvorenia súboru, kde by boli vlastné, neštandardné aliasy, uložené. Pre túto potrebu vznikol v shelli bash súbor .bash_aliases. Súbor .bashrc odkazuje na toto umiestnenie, no táto možnosť je predvolené zakomentovaná. Pre povolenie je potrebné odstrániť mriežky z nasledovných riadkov:
+
+Zadávanie aliasov je riešené cez nasledovnú syntax:
+
+alias vaša_skratka='plný_príkaz'
+
+
+=== Príklad práce s aliasom ===
+
+
+== Príklady ==
+Zadaním slova „siet“ do terminálu sa vykoná príkaz gedit /etc/network/interfaces, takže textový editor Gedit otvorí súbor, v ktorom sú nastavenie siete (napríklad IP adresa):
+
+Nastaví bežnú slovenskú klávesnicu, známu ako QWERTZ:
+
+Nastaví slovenskú QWERTY klávesnicu:
+
+Zjednoduší inštaláciu programov cez metódu Apt-get na jediný znak:
+
+Odinštalovanie programu vrátane závislostí:
+
+
+== Kritika ==
+Používanie aliasu na zjednodušenie príkazov môže viesť ku chaosu, ak si viac ľudí nastaví rôzne skratky na rovnaké príkazy. Hlavne začiatočníci môžu byť zmätení, ak dostanú príkaz zjednodušený cez alias, ktorý na ich počítači nie je nastavený. Ešte horší prípad môže nastať, ak si menej skúsený používateľ nahradí aliasom niektorý dôležitý príkaz, a to hlavne ak nevie zrušiť daný alias.
+
+
+== Distribúcie ==
+Začiatky oficiálneho používania aliasov siahajú do distribúcie Red Hat v 90. rokoch 20. storočia.
+
+
+=== Externé odkazy ===
+alias(1) – Linux User's Manual – User Commands
+
+
+== Pozri aj ==
+Zoznam unixových príkazov

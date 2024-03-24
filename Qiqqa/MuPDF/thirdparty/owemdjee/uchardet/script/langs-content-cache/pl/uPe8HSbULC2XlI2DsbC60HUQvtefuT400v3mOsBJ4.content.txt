@@ -1,0 +1,123 @@
+revision: 70059168
+title: Robot
+url: https://pl.wikipedia.org/wiki/Robot
+
+
+---
+
+Robot – maszyna, w szczególności system komputerowy, w którym program steruje peryferiami w celu wykonania określonego zadania. Według oryginalnego znaczenia terminu, robot jest kontrolowany przez sztuczną inteligencję (lub wręcz z nią tożsamy), przy czym obecnie to pojęcie używane jest także dla urządzeń kontrolowanych przez algorytmy lub człowieka. W najszerszym znaczeniu robotem nazywa się dowolny program komputerowy automatyzujący pewne zadania. Roboty często zastępują człowieka przy monotonnych, złożonych z powtarzających się kroków czynnościach, które mogą wykonywać znacznie szybciej od ludzi. Domeną robotów mechatronicznych są też te zadania, które są niebezpieczne dla człowieka, na przykład związane z manipulacją szkodliwymi dla zdrowia substancjami lub przebywaniem w nieprzyjaznym środowisku.
+Pojęcie robot używane też jest do nazywania autonomicznie działających urządzeń odbierających informacje z otoczenia przy pomocy sensorów i wpływających na nie przy pomocy efektorów. Dziedziną sztucznej inteligencji zajmującą się projektowaniem i konstruowaniem robotów jest robotyka.
+Robot jest też ogólnym pojęciem stosowanym do określenia istniejących w rzeczywistości bądź wyimaginowanych automatów i maszyn przypominających wyglądem człowieka lub zwierzę.
+
+
+== Historia ==
+Słowo robot pochodzi od słowiańskiego słowa robota, oznaczającego ciężką pracę, wysiłek. Upowszechniło się ono po wydaniu sztuki R.U.R. (Rossumovi Univerzální Roboti) której autorem jest czeski pisarz Karel Čapek. Mimo iż pierwotnie odnosiło się ono do żywych istot – sztucznie produkowanej, uproszczonej wersji człowieka przeznaczonej do ciężkiej pracy, obecnie słowo to oznacza przede wszystkim urządzenia mechaniczne. Termin robot został jednak ukuty przez pisarza Josefa, brata Karela.
+Termin robotyka wprowadził Isaac Asimov w swoim opowiadaniu Zabawa w berka (Runaround, 1942). Jest on też autorem trzech praw robotyki:
+
+Robot nie może skrzywdzić człowieka, ani przez zaniechanie działania dopuścić, aby człowiek doznał krzywdy.
+Robot musi być posłuszny rozkazom człowieka, chyba że stoją one w sprzeczności z Pierwszym Prawem.
+Robot musi chronić sam siebie, jeśli tylko nie stoi to w sprzeczności z Pierwszym lub Drugim Prawem.Następnie w opowiadaniu Roboty i Imperium (Robots and Empire) Asimov dodał prawo zerowe, które stało się nadrzędne wobec trzech pozostałych:
+
+0. Robot nie może skrzywdzić ludzkości, lub poprzez zaniechanie działania doprowadzić do uszczerbku dla ludzkości.Sama idea tworzenia sztucznych istot istnieje w ludzkiej kulturze od bardzo dawna, obecna jest na przykład w mitologii greckiej – w micie o Argonautach Jazon sieje smocze zęby, z których wyrastają wojownicy, natomiast mit o Pigmalionie mówi o Galatei, wyrzeźbionym przez niego posągu kobiety, która została ożywiona przez Afrodytę. Dziełem Hefajstosa, greckiego boga ognia i kowali, byli mechaniczni służący – od samodzielnie poruszającego się trójnogiego stołu, do zbudowanych ze złota inteligentnych istot o kobiecych kształtach. Spiżowy wielkolud Talos był wykonany przez Hefajstosa bądź Dedala.
+Pierwsze automaty pojawiły się już w czasach starożytnych. Przyjaciel Platona, Archytas z Tarentu, 400 lat p.n.e. konstruował mechaniczne zabawki. Przekazy historyczne mówią o drewnianym gołębiu, który mógł latać.
+O sztucznym człowieku mówi też średniowieczny hebrajski mit o Golemie – glinianym posągu ożywianym przez włożenie mu do ust karteczki z tetragramem. W średniowieczu konstruowano androidy, czyli ruchome figury o wyglądzie człowieka, wykonujące określone czynności, np. otwieranie i zamykanie drzwi, witanie gości. Najstarszym zachowanym projektem humanoidalnego robota jest datowany na rok 1495, wykonany przez Leonarda da Vinci zbiór rysunków mechanicznego rycerza, który mógł siadać, poruszać rękami oraz głową i szczęką. Nie wiadomo czy Leonardo podjął się próby jego zbudowania.
+Pierwszy działający robot powstał w 1738 roku. Był nim grający na flecie android, którego konstruktorem był Jacques de Vaucanson. Zbudował on też mechaniczną kaczkę, potrafiącą jeść i wydalać. Za najbardziej skomplikowany automat z tamtego okresu uważa się konstrukcję Jaqueta Droza w postaci dziewczynki grającej na klawikordzie. Lalka, poruszając ramionami, wybierała palcami właściwe klawisze i grała melodię przez pięć minut. Graną melodię określały dwa wymienne, kolczaste walce, podobne do stosowanych w popularnych w późniejszym okresie orchestrionach. Droz skonstruował także dwa inne niezwykle skomplikowane automaty: pisarza i będącego jego rozwinięciem rysownika. Programowanie pisarza polegało na układaniu na zębatym kole do czterdziestu kształtek, z których każda uruchamiała program rysowania właściwego znaku. Wszystkie trzy konstrukcje można podziwiać w działaniu w muzeum w Neuchâtel.
+Obiecujące prototypy humanoidalnych robotów, będących w stanie zachować równowagę nawet w nierównym terenie, prezentuje amerykańskie przedsiębiorstwo Boston Dynamics, zakupione w 2013 roku przez Google.
+
+
+=== Ważniejsze daty w historii robotyki (1921-2006) ===
+1921 – Słowo „robot” stało się znane dzięki sztuce „R.U.R” Karela Čapka.
+1938 – Isaac Asimov umieszcza termin „robotyka” w noweli science-fiction i formułuje Trzy Prawa Robotyki.
+?   – Nikola Tesla konstruuje maszynę kroczącą, maszynę latającą i maszynę pływającą
+1947 – Opracowanie pierwszego teleoperatora z serwonapędem elektrycznym.
+1948 – Opracowanie teleoperatora ze sprzężeniem zwrotnym siły.
+1949 – Rozpoczęcie badań nad obrabiarkami sterowanymi numerycznie.
+1954 – Pierwszy patent dotyczący robotyki w Wielkiej Brytanii Nr. 781465 złożony 19 marca.
+1954 – zaprojektowanie pierwszego programowalnego robota przez Georga Devola
+1956 – Zakupienie praw do robota Devola i założenie firmy Unimation przez Josepha Engelbergera.
+1958 – Pierwszy prototyp robota Unimate zainstalowany w fabryce General Motors.
+1960 – Zespół sztucznej inteligencji w Stanfordzkim Instytucie Badawczym w Kalifornii i Uniwersytet w Edynburgu w Szkocji rozpoczynają pracę nad zastosowaniem wizji w robotach.
+1961 – Pierwszy seryjny robot Unimate zainstalowany w fabryce General Motors w Trenton w stanie New Jersey.
+1961 – Opracowanie pierwszego robota ze sprzężeniem zwrotnym siły.
+1961 – Pierwszy patent dotyczący robotów w USA Nr 2.998.237 złożony przez G.C Devola.
+1963 – Opracowanie pierwszego systemu wizyjnego dla robota.
+1963 – Wypuszczenie na rynek robota przemysłowego Versatran.
+1964 – Pierwszy robot malarski Trallfa pracujący w fabryce w Norwegii.
+1966 – Automatyczny lądownik księżycowy „Surveyor” ląduje na Księżycu.
+1968 – Unimation otrzymuje z zakładów General Motors zamówienie na serie robotów.
+1969 – W General Motors rozpoczęto montaż nadwozi Chevrolet Vega przy pomocy robotów Unimate.
+1970 – General Motors staje się pierwszą firmą wykorzystującą systemy wizyjne w zastosowaniach przemysłowych. System Consight zostaje zainstalowany w zakładzie w St. Catharines, Ontario, Kanada.
+1971 – opracowanie robota „Stanford Arm” na Uniwersytecie Stanford.
+1972 – Na uniwersytecie Nottingham w Anglii stworzono „SIRCH”, układ zdolny do rozpoznawania dowolnie zorientowanych dwuwymiarowych części.
+1972 – Kawasaki instaluje zrobotyzowaną linię produkcyjną w zakładach Nissan z robotami firmy Unimation.
+1972 – ASEA, część przedsiębiorstwa Vasteras ze Szwecji prezentuje roboty elektryczne IRb 6 i IRb 60 przeznaczone do automatycznych operacji szlifierskich.
+1973 – Opracowanie pierwszego języka programowania robotów (WAVE) na Uniwersytecie Stanford.
+1974 – Wprowadzenie przez firmę Cincinnati Milacron robota ze sterowaniem komputerowym.
+1974 – Hitachi prezentuje robota Hi-T-Hand używającego czujników dotykowych i siłowych pozwalających na wkładanie sworzni do otworów.
+1974 – Założenie Stowarzyszenia Robotyki Przemysłowej (Robotics Industries Association)
+1976 – Trallfa robot malarski zostaje zaadaptowany do spawania kątowego.
+1977 – założenie Brytyjskiego Stowarzyszenia Robotyki (British Robotics Association)
+1978 – Wprowadzenie przez Unimation robota PUMA (Programmable Universal Assmebly), opracowanego na podstawie projektu powstałego w trakcie badań w fabryce General Motors.
+1979 – Wprowadzenie robotów SCARA (Selective Compliance Robot Arm) w Japonii.
+1982 – Robot Pedesco zostaje użyty do usunięcia skażonego materiału po wycieku paliwa radioaktywnego z elektrowni nuklearnej.
+1984 – Zostaje opracowany PROWLER, pierwszy z serii robotów militarnych.
+1986 – Rozpoczęcie prac nad robotem humanoidalnym przez firmę Honda.
+1997 – Robot mobilny Sojourner ląduje na Marsie 4 lipca.
+1998 – Skonstruowanie pierwszego bionicznego ramienia.
+2004 – Prezentacja nowej generacji robota ASIMO, pozwalającego samodzielnie poruszać się w pomieszczeniach, włączać światło, otwierać drzwi.
+2006 – Prezentacja interfejsu do robota ASIMO, pozwalającego na sterowanie robotem za pomocą myśli.
+
+
+== Zastosowanie ==
+Mimo iż wciąż rzadko spotykane w domach, roboty stały się częścią naszego codziennego życia. Ich różnorodne kształty są przejawem wybitnej specjalizacji robotów. Ze względu na dziedzinę zastosowania możemy wyróżnić:
+
+Roboty przemysłowe. Najczęściej mają one postać mechanicznego ramienia o pewnej liczbie stopni swobody. Taki robot o wielkości człowieka jest w stanie manipulować z ogromną szybkością i precyzją przedmiotami o wadze do kilkuset kilogramów. Zwykle są one programowane do wykonywania wciąż tych samych, powtarzających się czynności, które mogą wykonywać bezbłędnie przez całą dobę. W fabrykach pracuje 90% produkowanych robotów, połowa z tego używana jest przy produkcji samochodów. Najczęściej spotykane roboty pracujące w przemyśle produkowane są przez takie firmy jak: ABB, Kawasaki, KUKA, Mitsubishi, FANUC Robotics.
+Roboty w rolnictwie. Stosowane na coraz większą skalę w dużych gospodarstwach rolnych, np. w udoju mleka, usuwaniu chwastów, zbiorze owoców
+Roboty w służbie prawa. Najczęstszym zastosowaniem w tej dziedzinie jest rozbrajanie bomb. Roboty produkowane do tego celu mają postać bardzo stabilnej ruchomej platformy, na której zamocowana jest kamera i silne źródło światła. Robot taki, kontrolowany zdalnie przez operatora, jest w stanie rozbroić bombę lub przy pomocy manipulatora przenieść ją w miejsce gdzie detonacja nie wyrządzi nikomu szkody. Jednym z takich robotów produkowanych seryjnie jest Mini-Andros. Innym ciekawym robotem jest Papero – niewielki gadający robot, który pomaga zagranicznym turystom jako tłumacz na lotnisku Narita pod Tokio. Z kolei Artemis to robot patrolujący japońskie centrum handlowe i wszczynający alarm (lub przekazuje informacje drogą bezprzewodową na posterunek), gdy zauważy coś podejrzanego. Bear to robot – sanitariusz do celów militarnych.
+Roboty w medycynie. Współczesna medycyna na wielu obszarach korzysta z wsparcia robotów. Systemy wspomagające lekarza pozwalają na przeprowadzanie zabiegów mniej inwazyjnych i osiąganie znacznej precyzji. Przykładem jest system DaVinci, wykorzystywany między innymi w chirurgii ogólnej i kardiochirurgii oraz Robin Heart tworzony przez Fundację Rozwoju Kardiochirurgii.
+Roboty – zwiadowcy. Zastosowaniem robotów często jest eksploracja środowisk z jakichś powodów niedostępnych dla człowieka. Przykładem są roboty przeznaczone do pracy pod wodą – mające postać zdalnie sterowanych bądź w większym stopniu autonomicznych miniłodzi podwodnych wyposażonych w kamery i manipulatory. Istnieją też roboty przeznaczone do operowania w środowiskach o bardzo silnej radiacji, takie jak zbudowany na wzór pająka Robug III. Wdzięcznym zadaniem dla inteligentnych maszyn jest też eksploracja kosmosu, w czym utwierdziły nas sukcesy takich konstrukcji jak Sojourner, Spirit oraz Opportunity przeznaczonych do badania Marsa.
+Roboty w transporcie. Automatycznie sterowana linia metra, samochody bezzałogowe; oraz roboty w transporcie wewnątrzzakładowym  np. roboty mobilne MOBOT.
+Roboty w rozrywce. Najbardziej znanymi robotami rozrywkowymi są: interaktywny pluszowy Furby'ie, humanoidalny Robosapien oraz przypominający szczeniaka, wyposażony w zmysły wzroku, słuchu, dotyku i równowagi Aibo. Organizowane są liczne konkursy, w których rywalizują ze sobą roboty, gdzie zadania rozpościerają się od eksploracji labiryntu, przez walkę z innymi robotami (BattleBots), aż do gry w piłkę nożną (RoboCup). W Polsce organizowany jest konkurs robotów tańczących – RoboDance, a także znekBOT – konkurs na roboty autonomiczne z misją kosmiczną w tle. W sztuce roboty są używane w tworzeniu instalacji, również np. przy wspólnych występach z ludźmi.
+Roboty w nauce. Gros naukowców skupia się na idei budowy robotów jak najbardziej zbliżonych do człowieka. Najbardziej wdzięczne przykłady to człekokształtny, posiadający 26 stopni swobody, zbudowany przez Hondę ASIMO, zbudowane w MIT Kismet i Cog oraz Sony QRIO. Niektórzy z badaczy porzucili ideę budowania coraz bardziej skomplikowanych robotów i zajmują się możliwościami jakie dają zastępy małych, nieskomplikowanych konstrukcji. Przedstawicielem tego trendu jest Rodney Brooks, słynący ze swoich owadopodobnych maszyn.
+Roboty w gospodarstwie domowym. Roboty takie jak Roomba (automatyczny odkurzacz) czy Scooba (automatyczny mop) z firmy Irobot, holenderski RoboJet (robot odkurzacz), Trilobite (odkurzacz) firmy Electrolux, Sensor Cruiser (odkurzacz) Siemens, czy RoboCleaner (odkurzacz) Kärchera samodzielnie odkurzają czy zmywają podłogi; istnieją także modele czyszczące baseny albo rynny, roboty-kosiarki do trawników (np. firm Robomow czy Husqvarna) lub myjące okna (Windoro). Definicje robota spełniają też takie popularne urządzenia jak zmywarki czy pralki automatyczne, ale nie popularny „robot kuchenny”, będący raczej nieprogramowalnym mechanicznym manipulatorem.
+
+
+== Roboty w mediach ==
+
+
+=== Literatura ===
+
+Roboty opisane są w literaturze jako stworzenia, które zarówno pomagają ludziom, jak i próbują przejąć kontrolę nad światem. Pisarze przedstawiając roboty używają takich określeń jak android, cyborg czy fembot. Pierwsze nawiązanie do mechanicznych sług zawiera Odyseja, gdzie Hefajstos bóg ognia tworzy nowy pancerz dla Achillesa przy użyciu robotów. W książce Marcina Mortki Zagubieni Inwazja i Zagubieni Zwiad jedną z głównych postaci jest robot Zico zwany też Cerberem.
+W cyklu Isaaca Asimova „Roboty”, stworzone przez ludzi, humanoidalne i inteligentne maszyny odgrywają kluczową rolę w wykreowanym przez autora świecie. Roboty są istotami bezgranicznie dobrymi i troszczącymi się o rasę ludzką. Są one zobowiązane do przestrzegania sformułowanych przez Asimova trzech praw robotyki.
+
+
+=== Filmy ===
+Ze względu na swój wygląd roboty często pojawiają się w filmach. Począwszy od Metropolis (1927), przez parę C-3PO i R2-D2 z Gwiezdnych wojen (1977), aż do T-800, T-1000, T-X z serii Terminator (1984-2009). O sztucznej inteligencji robotów opowiada natomiast Ja, robot (2004) czy Człowiek przyszłości, w którym robot staje się zdolny myśleć jak człowiek, a w wieku 200 lat zostaje w końcu prawnie uznany za człowieka. Roboty pojawiają się także w filmach animowanych takich jak WALL·E czy serial Transformers.
+
+
+=== Gry komputerowe ===
+Roboty w grach przedstawiane są często jako bohaterowie niezależni, główne postacie czy pojedyncze jednostki. W Machinarium gracz steruje robotem o imieniu Josef, który ratuje miasto przed gangiem Black Cap Brotherhood. W Knights of the Old Republic HK-47 jest droidem, zabójcą stworzonym przez Revana podczas Wojen Mandaloriańskich. Główną antagonistką gry Portal jest GLaDOS której głosu użyczyła Ellen McLain. W Titanfall występują roboty służące do walki znane jako Widma.
+
+
+== Roboty w kosmosie ==
+W 2011 na pokładzie promu Discovery podczas misji STS-133 został wyniesiony na orbitę pierwszy humanoidalny astronauta-robot: Robonaut 2. Jego zadaniem jest praca i bycie stałym załogantem na Międzynarodowej Stacji Kosmicznej (ISS).
+
+
+== Zobacz też ==
+Robot medyczny
+Robot chirurgiczny da Vinci
+Robot chirurgiczny ZEUS
+Android
+Cyborg
+Robotyka
+Bot (program)
+Automaticon
+Osobliwość technologiczna
+
+
+== Przypisy ==
+
+
+== Linki zewnętrzne ==
+Strona amatorskich konstruktorów robotów
+www.thetech.org/robotics. thetech.org. [zarchiwizowane z tego adresu (2004-04-04)]. (ang.)

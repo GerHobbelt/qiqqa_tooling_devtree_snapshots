@@ -1,0 +1,61 @@
+revision: 64446888
+title: Integrated Truss Structure
+url: https://pl.wikipedia.org/wiki/Integrated_Truss_Structure
+
+
+---
+
+Integrated Truss Structure – struktura kratownicowa tworząca kręgosłup Międzynarodowej Stacji Kosmicznej, będąca bazą dla radiatorów, paneli baterii słonecznych, aparatury komunikacyjnej, mocowań dla ładunków zaopatrzeniowych oraz innego wyposażenia stacji. 
+
+
+== Części składowe struktury ==
+
+
+=== Integrated Truss Structure (ITS) Z1 ===
+
+Pełna nazwa tego elementu to Zenith-1 Truss Structure. Ten ważący 9521 kg element, na orbitę dostarczony został w ramach lotu montażowego 3A wraz z PMA-3 (Pressurized Mating Adapter). Z1 stanowi platformę (strukturę nośną) dla wczesnego systemu paneli słonecznych, tymczasowo zainstalowanych na tym elemencie w locie 4A. Wraz z Z1 dostarczony został system komunikacyjny pasma Ku (wizualnie uwidacznia się on dzięki antenie komunikacyjnej zakończonej talerzem), natomiast CMG (Control Moment Gyros - 4 żyroskopy) umożliwiają (po uruchomieniu po locie 5A) elektrycznie zasilaną kontrolę stabilizacji stacji w przestrzeni kosmicznej. Dzięki nim można również skutecznie oszczędzać paliwo potrzebne na dokonywanie korekt położenia orbitalnego stacji. CMGs obracają się z cyklem 6600 obrotów na minutę.
+Od misji STS-97 do STS-120 ITS Z1 był miejscem zamontowania paneli słonecznych ITS P6, obecnie jest do niego przymocowana antena SGANT(dostarczona wraz z MIM-1 Rasswiet podczas misji STS-132).
+
+
+=== Central Truss Segment (ITS) S0 ===
+
+Pełna nazwa tego elementu to Starboard-0 Truss Structure (prawa burta). ITS S0 zbudowany przez zakłady Boeing w Huntington Beach (Kalifornia), jest centralnym segmentem stanowiącym podstawę potężnej konstrukcji dla systemu paneli słonecznych, radiatorów i anten komunikacyjnych (razem 11 elementów żebrowych). Również w jego obszarze znajdą się akumulatory magazynujące energię pozyskaną z paneli słonecznych. Ponadto w jego skład wchodzą 4 anteny Systemu Globalnej Lokalizacji (GPS), dwa żyrostabilizatory, detektor cząstek naładowanych oraz szereg reflektorów szerokopasmowych.
+Moduł ten ma żebrową konstrukcję o długości 13,4 metra i szerokości 4,6 metra, ważąc jednocześnie prawie 14 ton. Składa się z blisko pół miliona elementów. ITS S0 zamontowany został na amerykańskim laboratorium Destiny w ramach lotu 8A w kwietniu 2002. W miarę rozbudowywania stacji, do ITS S0 dołączone zostały dalsze, podobne segmenty (przedłużające dotychczasową konstrukcję - ITS S1, ITS P1). M.in. na module ITS S0 porusza się MSS (Mobile Servicing System) wraz z potężnym manipulatorem SSRMS (Canadarm2).
+
+
+=== Truss Segment (ITS) S1 ===
+
+ITS S1 jest pierwszym, żebrowym, bocznym segmentem domocowanym z jednej strony do centralnego segmentu ITS S0. Na tym segmencie (podobnie jak na ITS P1), zamontowane zostały trzy potężne radiatory, mające za zadanie chłodzić system energetyczny stacji. System rotacyjny pozwala na obracanie radiatorami w zakresie 105°. Segment wyposażony jest w skomplikowane, amoniakalne układy chłodzenia, współpracujące z radiatorami. Na ITS S1 zainstalowany został także kolejny system komunikacji stacji, mający polepszyć jakość i przepustowość transmisji fonicznych oraz kilka platform do eksperymentów przeprowadzanych w próżni. S1 wyposażony jest także w dwie kamery, które w przyszłości ułatwią obserwację tego sektora stacji. Kratownica posiada własny komputer pokładowy, który odpowiedzialny jest za sterowanie chłodzeniem, w tym monitorowanie zbiorników z amoniakiem, linii chłodzących oraz zestawów pomp. Segment ten ma długość 13,7 m, szerokość 4,6 m i wysokość 1,8 m. Waży ponad 14 ton. M.in. na module ITS S1 poruszać się MSS wraz z manipulatorem Canadarm2 oraz CETA Cart A – pierwsza z dwóch ruchomych miniplatform dla astronautów.
+ITS S1 włączony został w strukturę stacji podczas misji 9A w październiku 2002, wchodząc jako drugi z 11 elementów struktury kratownicowej ISS.
+
+
+=== Truss Segment (ITS) P1 ===
+
+Pełna nazwa tego elementu to Port-1 Truss Structure (lewa burta). ITS P1 jest drugim, wartym 390 mln dolarów, żebrowym, bocznym segmentem przyczepionym z jednej strony do centralnego segmentu ITS S0. Na tym segmencie (podobnie jak na ITS S1) zamontowane zostały trzy potężne radiatory, mające za zadanie chłodzić system energetyczny stacji. System rotacyjny pozwala na obracanie radiatorami w zakresie 105°. Segment wyposażony jest w skomplikowane, amoniakalne układy chłodzenia, współpracujące z radiatorami. Na ITS P1 zainstalowany został także system komunikacji stacji i platformy do eksperymentów przeprowadzanych w próżni. P1 wyposażony jest w 2 kamery, które w przyszłości ułatwią obserwację tego sektora stacji. Kratownica posiada własny komputer pokładowy, który odpowiedzialny jest za sterowanie chłodzeniem, w tym monitorowanie zbiorników z amoniakiem, linii chłodzących oraz zestawów pomp. Segment ten ma długość 13,7 m, szerokość 4,6 m i wysokość 1,8 m. M.in. na module ITS P1 porusza się MSS wraz z manipulatorem SSRMS.
+ITS P1 włączony został w strukturę stacji podczas misji 11A w listopadzie 2002, stając się trzecim dołączonym elementem z jedenastoczęściowej struktury kratownicowej.
+
+
+=== ITS P6, S6, P3/P4, S3/S4 Photovoltaic Module ===
+
+Technologia ogniw fotoelektrycznych jest powszechnie stosowana na Międzynarodowej Stacji Kosmicznej ze względu na to, iż światło słoneczne jest jedynym łatwo dostępnym źródłem energii na orbicie. Spośród wielu baterii słonecznych ISS największe są dwa, zbudowane w Stanach Zjednoczonych, bliźniacze panele (każdy ma długość 34 m i szerokość 12 m) zamontowane na kratownicy ITS P6. ITS P3/P4 oraz S3/S4 są miejscem montażu palet ELC1, ELC2, ELC3, ELC4, ESP3 oraz spektrometru AMS-02.
+Projekt budowy rosyjskiego modułu zasilającego – Science Power Platform – został wstrzymany.
+
+
+=== Integrated Truss Structure (ITS) P5 ===
+ITS P5 to pierwszy z tzw. modułów łącznikowych, służący do uzyskania przedłużenia kratownicowej struktury stacji, na której opiera się system potężnych paneli słonecznych. ITS P5 zainstalowany został do ITS P3/P4 w ramach lotu montażowego 12A.1. Ten minimoduł połączył wspomniany ITS P3/P4 oraz ITS P6.
+
+
+=== Integrated Truss Structure (ITS) S5 ===
+ITS S5 to drugi z tzw. modułów łącznikowych, służący do uzyskania przedłużenia kratownicowej struktury stacji, na której opiera się system potężnych paneli słonecznych. ITS S5 zainstalowany został do ITS S3/S4 w ramach lotu montażowego 13A.1. Ten minimoduł połączył wspomniany ITS S3/S4 oraz ITS S6.
+
+
+== Etapy montażu struktur kratownicowych i paneli słonecznych ==
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+Maciej Weiss, Michał Moroz: Moduły stacji. [w:] ISS: przyszłość na orbicie [on-line]. [dostęp 2014-06-29]. [zarchiwizowane z tego adresu (2009-04-18)]. (pol.).
+Maciej Weiss, Michał Moroz: Moduły stacji. [w:] ISS: przyszłość na orbicie [on-line]. [dostęp 2014-06-29]. [zarchiwizowane z tego adresu (2009-04-19)]. (pol.).
+Maciej Weiss, Michał Moroz: Moduły stacji. [w:] ISS: przyszłość na orbicie [on-line]. [dostęp 2014-06-29]. [zarchiwizowane z tego adresu (2009-04-19)]. (pol.).

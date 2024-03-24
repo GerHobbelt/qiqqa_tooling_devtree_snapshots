@@ -1,0 +1,249 @@
+revision: 29595820
+title: Mikrobiyal genetik
+url: https://tr.wikipedia.org/wiki/Pop%C3%BClasyon_geneti%C4%9Fi
+
+
+---
+
+Popülasyon genetiği, popülasyonlardaki fertlerin benzerlik ve farklılıklarının kaynaklarını, bunun yanında popülasyonlardaki alel frekansının dağılımlarını ve değişimlerini araştıran bir genetik altdalıdır.
+Bu konuda, dört temel evrimsel mekanizma ve etkileri üzerinden yola çıkarak araştırma yapar. Bu mekanizmalar, doğal seçilim, genetik sürüklenme, mutasyon ve gen akışıdır. Bunun yanında, rekombinasyon, popülasyon alt bölümleri ve popülasyon yapısı faktörlerini de dikkate aldığı gibi adaptasyon ve türleşme gibi fenomenleri açıklamak için de çalışır.
+Popülasyon genetiği, Modern evrimsel sentezin ortaya çıkmasında önemli katkıda bulunmuştur. Popülasyon genetiğinin temellerini atan ilk kişiler Sewall Wright, J.B.S. Haldane ve Ronald Fisher olup aynı zamanda kantitatif genetik ile ilişkili olan diğer disiplinlerin de temellerini oluşturmuşlardır.
+Genetik, hasta kişinin kendisi kadar ailesi ve yakın akrabaları ile de ilgilenmesi yönünden tıptaki diğer disiplinlerden biraz farklılık göstermektedir. Medikal genetik, bir olguda doğru tanıya ulaşmakla kalmaz, aynı zamanda diğer aile üyelerinin genotipleini de belirlemeye ve hem hasta kişinin anne-babasındaki hem kardeşlerindeki hem de daha uzak akrabalarındaki tekrarlama risklerini değerlendirir. Ayrıca bu riskler sadece aile üyeleri ile direkt ilişkili olan kişilerin genotiplerinden değil, evlenerek bu aileye giren genel popülasyondaki kişilerin genotipleri ile de etkilendiğinden, genetik danışma işini yapan kişi, farklı popülasyonlardaki spesifik genotipleri de dikkate almak zorundadır. Bu nedenle hem doğru bir klinik tanıya ulaşmak hem de tekrarlama risklerini belirlemek için değişik etkenler birlikte incelenmelidir. Örneğin, incelenen olgu ve ailesinin kökeni, o popülasyondaki ilgili genin görülme olasılığı, aile öyküsünde akraba evliliğinin olup olmaması genetik danışma sırasında incelenmesi gereken özelliklerinden bazılardır.
+Popülasyon genetiği, toplumlarda genlerin dağılımını ve bu gen frekanslarının nasıl korunduğu ya da değiştiğini inceleyen bir bilim dalıdır. Popülasyon genetiğinde, toplumun gen havuzu incelenmekte olup bu incelemelerde toplumlardaki hastalıkların dağılımı ve sıklığını belirleyen çeşitli genetik ve çevresel faktörler arasındaki ilişkiyi değerlendiren epidemiyoloji kurallarından yararlanılır. O nedenle son zamanlarda 'genetik epidemiyoloji' diye ayrı bir bilim dalı da ortaya çıkmıştır.
+
+
+== Temel ilkeler ==
+Popülasyon genetiği, popülasyondaki gen ve alellerin görülme sıklıkları ile etkileşimlerinin araştırılmasıdır. Popülasyon, çiftteki her eşin birlikte üreyebildiği canlılardan oluşan bir gruptur.Örneğin, diğerlerinden yalıtılmış ve izole olarak bir ormanda yaşayan aynı türden güvelerin tümü, bir popülasyondur. Bu popülasyondaki bir genin, canlıların fenotipleri arasındaki varyasyonları teşkil eden birkaç alternatif formları olabilir. Örneğin, güvelerde renk oluşumundan sorumlu olan ve iki farklı alele sahip bir gen: siyah ve beyaz. Gen havuzu, tek bir popülasyondaki bir genin tüm alel dizileridir. Bir alelin alel frekansı ise, bu alellerden oluşan gen havuzundaki genlerin bir bölümüdür (örneğin, güvelerde sadece siyah renkten sorumlu olan alellerin tüm renk genleri içindeki oranı). Eğer popülasyon içinde alel frekanslarında değişiklikler olursa evrimleşme baş gösterir. Örneğin, güve popülasyonunda siyah renkten sorumlu olan alelin daha yaygın hale gelmesi.
+
+
+=== Hardy-Weinberg Kuralı ===
+
+Bir popülasyonun evrimleşmesine yol açan mekanizmaları anlamak için, bir popülasyonun hangi şartlarda evrilmeye ihtiyaç duymadığını dikkate almak yaralı olabilir. Hardy-Weinberg kuralı, eğer sperm veya yumurta oluşumu sırasında alellerin rastlantısal kademeli değişimleri ve döllenme sırasında bu üreme hücrelerindeki rastlantısal alel kombinasyonları, popülasyona etki eden tek güçler olması durumunda, alel frekanslarının, yani bir gen içindeki varyasyonların da yeteri kadar büyük bir popülasyonda sabit kalacağını ve değişmeyeceğini ifade eder. Hardy-Weinberg dengesi (İng: Hardy-Weinberg Equilibrium) içinde bulunan böyle bir popülasyona ideal popülasyon veya evrimleşmeyen popülasyon denir. Doğadaki canlı popülasyonları ön görülen bu şartlardan en azından birini veya diğerini yerine getiremediklerinden Hardy-Weinberg dengesinin doğada oluşabilmesi mümkün değildir. Evrimleşmenin olmadığı böyle bir genetik denge durumu, genetik değişimleri ölçmek için bir temel sağladığı için ideal bir durumdur.
+Eğer aşağıdaki koşulların tümü gerçekleşirse bir popülasyonun alel frekansı nesiller boyunca değişme göstermeden sabit kalır:
+
+Rastlantısal eşleşme
+Genlerin yapısını değiştirecek yararlı veya zararlı hiçbir mutasyon görülmemelidir
+Popülasyon dışına veya içine göçler olmamalı ve başka komşu bir popülasyon ile karışım veya melezleşme olmamalıdır
+Popülasyon yeterince büyük veya sonsuz sayıda bireylerden oluşmalıdır
+Hiçbir özellik için veya hiçbir özelliğe karşı herhangi bir seçilim baskısı olmamalıdırİki alelli tek bir lokusun en basit şekliyle var olduğu bir durumda, A baskın aleli, a ise çekinik (resesif) aleli ifade eder,  onların sahip olduğu frekanslar da p ve q ile gösterilir: frekans (A) = p; frekans (a) = q; p + q = 1. Eğer popülasyon dengeli bir popülasyon ise, bu durumda frekans (AA) = p2 popülasyondaki AA homozigotları için, frekans (aa) = q2 ise aa homozigotları için ve frekans (Aa) = 2pq de heterozigotlar için olacaktır.
+
+
+== Kapsam ve teorik değerlendirmeler ==
+Popülasyon genetiği matematiği, aslında Modern evrimsel sentezin bir parçası olarak geliştirilmişti. Beatty'e göre (1986), modern sentezin temelini tanımlar.
+Richard Lewontin'e göre (1974), popülasyon genetiğinin teorik görevi, şu iki alana dahil olan bir süreçtir: "genotipik alan" ve "fenotipik alan". Eksiksiz bir popülasyon genetiği teorisinin oluşturabilmesinin altında yatan zorluk, popülasyonun genotipi (G1)'den seçilimlerin meydana geldiği fenotip (P1) alana kadar uygun bir haritaya dair bir dizi yasaların oluşturulmasının yanında, dönüşümün tamamlanması için, Mendel genetiğinin gelecek nesil genotipleri önceden tahmin edebileceği başka bir takım kanunların da oluşturulması gerektiğidir. Hatta şu an için bile, moleküler genetiğin Mendel'in görüşleri dışında kalan diğer yönleri de bir kenara bırakıldığında, bu, açıkça çok büyük ve zor bir görevdir. Şematik olarak bu dönüşümün görselleştirilmiş hali:
+
+  
+    
+      
+        
+          G
+          
+            1
+          
+        
+        
+        
+          
+            
+              
+                →
+              
+              
+                
+                  T
+                  
+                    1
+                  
+                
+              
+            
+          
+        
+        
+        
+          P
+          
+            1
+          
+        
+        
+        
+          
+            
+              
+                →
+              
+              
+                
+                  T
+                  
+                    2
+                  
+                
+              
+            
+          
+        
+        
+        
+          P
+          
+            2
+          
+        
+        
+        
+          
+            
+              
+                →
+              
+              
+                
+                  T
+                  
+                    3
+                  
+                
+              
+            
+          
+        
+        
+        
+          G
+          
+            2
+          
+        
+        
+        
+          
+            
+              
+                →
+              
+              
+                
+                  T
+                  
+                    4
+                  
+                
+              
+            
+          
+        
+        
+        
+          G
+          
+            1
+          
+          ′
+        
+        
+        →
+        ⋯
+      
+    
+     
+  (Richard Lewontin'den uyarlanmıştır 1974, S. 12). XD
+T1, genetik ve epigenetik yasaları, işlevsel biyolojinin görünüşünü ve bir genotipi fenotipe dönüştüren gelişimi gösterir. Biz, buna "genotip-fenotip haritası" diyeceğiz. T2, doğal seçilimden dolayı oluşan dönüşüm, T3, seçilen fenotipler temelinde ortaya çıkacak genotipleri önceden tahmin edebilen epigenetik ilişkiler ve nihayet T4, Mendel genetiği kurallarıdır.
+Uygulamada, evrimsel teorinin birbirine paralel olarak mevcut olan iki gövdesi bulunur, genotip alanda etkinlik gösteren geleneksel popülasyon genetiği ve fenotip alanda faaliyet gösteren, bitki ve hayvan ıslahında kullanılan biyometri teorisi. Bunların tamamlanmamış ve eksik kalan parçası ise, genotip ve fenotip alanları arasındaki eşleştirme haritasıdır. Bu, Lewontin'in tanımladığı üzere, bu sayede bir alan denklemindeki değişkenlerin parametreler ve konstantlar olarak sayılıp geçerli olduğu, tam bir değerlendirmede evrimsel bir süreç tarafından kendiliklerinden dönüştükleri ve diğer etki alanlarındaki konum değişkenlerin gerçek fonksiyonlarında olacağı bir "el çabukluğuna" yol açar. İfade edilen "el çabukluğu", bu karşılaştırma haritasını bildiğimizden yola çıkar. Eğer bunu kavramış olmamızdan yol çıkarsak, birçok ilgi çeken durumları analiz etmek yetecektir. Örneğin, fenotipin hemen hemen genotiple birebir olduğu bir durumda (Orak hücre anemisi) veya zaman ölçeğinin yeterince kısa olduğu bir durumda, değişmezler (konstantlar) değişmez olarak geçerli olabilecektir. Ancak, bunların hatalı oldukları birçok durumlar mevcuttur.
+
+
+== Dört mekanizma ==
+
+
+=== Doğal seçilim ===
+Ana madde: Doğal seçilimDoğal seçilim, bir organizmanın hayatta kalmasını ve başarılı şekilde üremesini daha olasılıklı hale getiren kalıtsal özellikleri, nesiller boyunca popülasyonda daha yaygın hale getiren süreçtir.
+Bir canlı popülasyonu içindeki genetik değişkenlik, bazı bireylerin mevcut yaşam ortamlarında diğerlerinden daha başarılı bir şekilde hayatta kalacağı anlamına gelir. Üreme başarısını etkileyen faktörler, Charles Darwin'in cinsel seçilime dair geliştirdiği fikirlerin konusu olarak da önemlidir.
+Doğal seçilim, fenotiplere veya bir canlının gözlemlenebilir özelliklerine etki eder, ancak üreme avantajı sağlayan herhangi bir fenotipin genetik (kalıtsal) tabanı, bir popülasyona daha yaygın hale gelecektir (bakınız: Alel frekansı). Zamanla, bu süreç, canlıyı belli ekolojik nişler için özelleştiren adaptasyonlara ve sonunda yeni türlerin ortaya çıkmasına neden olur.
+Doğal seçilim, modern biyolojinin temel taşlarından biridir. Bu terim, Darwin tarafından, 1859'da, hayvan yetiştiricileri ve çiftçiler tarafından hayvanların ve bitkilerin istenilir özelliklerinin üreme için sistematik olarak tercih edildiği süreci tanımlayan yapay seçilimin kıyaslanarak doğal seçilimin nasıl işlediğini anlatan ve tarif eden "Türlerin Kökeni"  adlı çığır açan kitabında sunulmuştur. Doğal seçilim kavramı, aslında geçerli bir kalıtım teorisinin yokluğunda gelişti, zira Darwin'in yazdığı dönemde, Modern genetik hakkında hiçbir şey bilinmiyordu. Geleneksel Darwinci evrimin birleştirilmesi, klasik ve moleküler genetikte daha sonra yapılan keşiflerin Modern evrimsel sentez adı altında bir araya getirilmesiyle olmuştur.
+
+
+=== Genetik sürüklenme ===
+Ana madde: Genetik sürüklenmeGenetik sürüklenme, popülasyon içinde rastgele örnek alımına ve şansa bağlı olarak bir gen varyantının (alel) ortaya çıktığı göreli frekansın değişimidir. Bunun anlamı, popülasyondaki yavru neslin alelleri, ebeveyndeki alellerin rastgele bir örneğidir. Şans ise, belli bir bireyin hayatta kalıp kalmayacağını ve üreyip üremeyeceğinin belirlenmesinde rol oynar. Bir popülasyonun alel frekansı, ortak bir form paylaşan gen alellerin toplam sayısı ile karşılaştırıldığında, bu genlerin kopyalarının bir yüzdesi veya kesir sayısıdır.Genetik sürüklenme, zaman içinde alel frekansında değişikliklere yol açan evrimsel bir süreçtir. Genetik sürüklenme, bir gen varyasyonun tamamen kaybolmasına ve böylece genetik değişkenliğin azalmasına neden olabilir. Üreme başarılarına bağlı olarak, gen varyantlarını daha sık veya daha az yaygın hale getiren doğal seçilimin aksine, genetik sürüklenme nedeniyle oluşan değişiklikler, çevresel veya adaptif baskılar tarafından uyarılmazlar ve üreme başarısı için yararlı, nötral veya zararlı olabilirler.
+Genetik sürüklenmenin etkisi, küçük popülasyonlarda büyük, büyük popülasyonlarda ise küçüktür. Genetik sürüklenmenin, doğal seçilim ile karşılaştırıldığında göreli önemi, bilim insanları arasında ateşli tartışmalarla sürmektedir. Ronald Fisher, genetik sürüklenmenin evrimde ancak çok küçük bir rol oynadığı görüşündeydi ve bu görüş, birkaç on yıl boyunca hakim bir görüş olarak kalmıştı. Ancak, 1968 yılında Motoo Kimura, genetik materyaldaki değişikliklerin çoğunun genetik sürüklenme tarafından oluşturulduğunu öne sürdüğü Moleküler evrimin nötral teorisi ile bu konudaki tartışmaları tekrar başlatmıştır.
+
+
+=== Mutasyon ===
+Ana madde: MutasyonMutasyonlar, hücre genomundaki DNA dizilimlerinde meydana gelen değişiklikler olup radyasyon, virüsler, transpozonlar ve mutajen kimyasalların yanında, mayoz bölünme ve DNA replikasyonu sırasında oluşan hatalar sonucu meydana gelirler. DNA hataları, özellikle DNA replikasyonu sürecinde, ikinci iplikçik polimerizasyonunda anlatılmıştır. Bu hatalar, hipermutasyon gibi hücresel süreçler tarafından oluşturabileceği gibi organizmanın kendisi tarafından da başlatılabilir.
+Mutasyonlar, özellikle bir genin protein kodlama dizisinde meydana geldiklerinde, bir organizmanın fenotipi üzerinde güçlü bir etkiye sahip olabilirler. Hata oranları, DNA polimerazların "redaksiyon" yeteneği nedeniyle genellikle çok düşüktürler (her 10 milyon ile 100 milyon baz çiftinde bir hata). Redaksiyon olmadan, hata oranları, bundan bin kat daha yüksektir. DNA'daki kimyasal hasar, doğal nedenlerle de oluşabilir ve hücreler, bu uyumsuzlukları ve DNA parçalanmalarını onarmak için DNA onarım mekanizmaları kullanırlar. Bununla birlikte, onarım, bazen DNA'nın başlangıçtaki özgün dizisine tekrar kavuşmasında başarısız olabilir.
+DNA ile rekombine edilmiş genleri birbirlerine dönüştürmek için kromozomal parça değişimi kullanan organizmalarda, mayoz bölünme sırasında oluşan hizalama hataları da mutasyonlara yol açabilirler. Krosover hatalarının oluşması, benzer dizilerin, ortak kromozomların yanlış bir dizilenmeyi benimsemesine yol açtıklarında özellikle muhtemeldir. Bu da, genomların bazı bölgelerinin bu şekilde mutasyona uğramalarını daha yatkın hale getirir. Bu hatalar, duplikasyon, tüm bölgelerin delesyonu (silinmesi) veya inversiyonu (1800 tersine dönerek bağlanması) ya da translokasyon denilen, bir 
+kromozomun kaybolan parçasının ya da kopan bir parçasının başka bir kromozoma yapışması gibi DNA dizilimlerinde büyük yapısal değişiklikler yaratır.
+Mutasyonlar, DNA dizilimlerinde farklı biçimde değişimlere yol açarlar; bu mutasyonların ya herhangi bir etkileri yoktur ya da gen ürününü değiştirirler veya genin işlevini görmesini engellerler. Drosophila melanogaster sineği üzerinde yapılan çalışmalar, gen tarafından oluşturulan bir proteinin mutasyonunda, bu mutasyonun yaklaşık %70'inin zararlı etkilere sahip olduğunu, geri kalanının ise ya nötr ya da zayıf faydalı etki gösterdiğini ortaya koymaktadır. Mutasyonların hücreler üzerinde sahip olabileceği zararlı etkiler nedeniyle, organizmalar, bu mutasyonları gidermek için DNA onarımı gibi mekanizmalar geliştirmişlerdir. Bu nedenle, bir tür için en uygun mutasyon oranı, zararlı mutasyonlarda olduğu gibi yüksek mutasyon oranının yol açtığı maliyetler ile DNA onarım enzimleri gibi mutasyon oranını azaltan koruma sisteminin sahip olduğu metabolik maliyetler arasında bir gelir gider dengesi veya uzlaşma oluşturma çabasıdır. Genetik materyal olarak RNA kullanan virüsler, sürekli ve hızlı bir şekilde çoğalıp geliştikleri için onlara avantaj sağlayan hızlı mutasyon oranlarına sahiptir ve bu şekilde insan bağışıklı sistemi gibi savunma mekanizmalarını atlatabilir ve reaksiyonlardan kaçabilirler.Genellikle genetik rekombinasyon yoluyla mutasyonlar, kopyalanmış büyük DNA parçaları içerebilirler. Bu duplikasyonlar, her milyon yılda, onlarca ve yüzlerce genin hayvan genomlarında kopyalanarak yeni tür genlerin evrilmesinde önemli bir hammadde kaynağıdır. Çoğu genler, daha büyük bir gen ailesine ait olup ortak atalara sahiptirler. Yeni ortaya çıkan genler, çeşitli yöntemler ile oluşurlar; genellikle atasal bir genin duplikasyonu veya mutasyonu sonucu ya da farklı genlerin yeniden birleştirilmiş (rekombinasyon) parçalarının, yeni fonksiyonlara sahip yeni kombinasyonlar oluşturmasıyla.Burada, protein kümeleri, yeni kazanılmış özelliklere sahip yeni oluşan proteinleri kodlayan genleri üretmek için birbirleriyle birleştirilebilen ve her birinin özel ve bağımsız işlevleri olan modüller gibi hareket ederler. Örneğin, insan gözü ışığı algılayan yapılar oluşturmak için 4 adet değişik gen kullanır: Bu genlerden 3'ü renkli görmek için ve 1 tanesi de gece görüşü için. Bu dört genin hepsi de tek bir atasal genden türemiştir. Bir genin (hatta tüm bir genomun) kopyalanmasının diğer bir avantajı ise yedeklemeyi artırmasıdır. Bu da, bir gen çiftinin, diğer kopyalar başlangıçtaki özgün işlevlerini yerine getirirken diğerlerinin yeni bir fonksiyon kazanmasını sağlar. Diğer tip mutasyonlar, bazen daha önce kodlanmamış DNA'dan yeni genler oluşturur.
+
+
+=== Gen akışı ve transfer ===
+Gen akışı, genellikle aynı türün popülasyonları arasında gerçekleşen gen alış verişidir. Bir tür içindeki gen akışına örnekler, göçler ve bu göç sonrası gerçekleşen üremeler ile  bitkilerde polen alış verişidir. Türler arasındaki gen transferi için örnekler ise, hibrid organizmaların oluşumu ve yatay gen transferidir.
+
+
+==== Gen akışı ====
+Ana madde: Gen akışıBir popülasyon içine ve dışına olan göçler, alel frekansları değiştirebilecekleri gibi bir popülasyon içine genetik varyasyonlar da getirirler. Bunun yanında, göçler, popülasyonun gen havuzuna yeni genetik materyal de getirirler. Farklılaşan iki popülasyon arasındaki üreme engellerinin mevcut olması, yeni türlerin oluşması için gerekli olduğundan, gen akışı, popülasyonlar arasındaki genetik farklılıkları yayarak bu süreci yavaşlatabilir. Gen akışı, dağ sıraları, okyanuslar, çöller veya bitki genlerinin akışını engellemiş olan Çin Seddi gibi, insanlar tarafından yapay olarak oluşturulmuş yapılar tarafından engellenebilir.İki türün, ayrıldıkları en son ortak atadan beri birbirlerinden ne kadar uzaklaşıp farklılaşmış olmalarına bağlı olarak, at ile eşeğin çiftleşmesi sonucu katırın oluşması gibi, bu türler birbirleriyle hala yavru döller oluşturabilirler. Bu tür melezler, iki farklı kromozom dizilerinin mayoz bölünme sırasında çift oluşturamadıklarından genellikle kısırdır. Bu durumda, birbirleriyle yakın akraba olan türler, düzenli olarak birbirleriyle de çiftleşiyor olsa da ortaya çıkan melezler, daima karşı seçilime uğrayacak ve türler farklı kalacaktır. Ancak, kimi zaman bu çiftleşmelerden yaşama yeteneğine sahip melezler de oluşur ve oluşan bu yeni türler, ya ebeveyn türler arasındaki ara özellikler gösterirler ya da tamamen yeni bir fenotipe sahip olurlar. Yeni hayvan türlerinin oluşmasında melezleşmenin önemi, özellikle iyi bilinen bir örnek olarak gri ağaç kurbağasında (Hyla versicolor) olduğu gibi, birçok hayvan türlerinde görülmüş olmasına rağmen  bu mekanizmaların tam olarak nasıl işlediği belirsiz olup henüz açıklığa kavuşmamıştır.Ancak hibridleşme, bitkilerde poliploidi hayvanlarda olduğundan daha kolay tolere edilebildiği için ancak bitkilerin türleşmesinde daha önemli bir araçtır. Poliploidi, her birinin mayoz bölünme sırasında özdeş bir eşle çiftleştiği iki farklı kromozom dizisi ile üremeyi sağladığı için melezler için önemlidir. Poliploidler, küçük popülasyonların akrabalı yetiştirme depresyonunu engellemelerine izin veren genetik çeşitliliğe sahiptirler.
+
+
+==== Yatay gen transferi ====
+Ana madde: Yatay gen transferiYatay gen transferi, bir canlının onun yavrusu olmayan başka bir canlıya genetik materyal transfer etmesidir. Bu bakteriler arasında en yaygın olanıdır. Tıpta, bu durum, rezistans genler kazanan bir bakterinin, bu genleri hızla diğer türlere aktardığı antibiyotik direncin yayılmasında olayında görülür. Bir maya türü olan Saccharomyces cerevisiae ile fasulye böceği Callosobruchus chinensis arasında olduğu gibi bakterilerden ökaryotlara, iki değişik alem arasında da yatay gen transferleri olmuştur. Daha büyük ölçekte gerçekleşen yatay gen transferlerine örnek, genlerindeki dizileri, bakteriler, mantarlar ve bitkiler gibi üç ayrı alemden almış olan ökaryotik Bdelloida türü rotiferalardır (tekerlekli hayvan). Aynı zamanda virüsler de gen transferi ile farklı biyolojik alemler içindeki canlılar arasında DNA taşıyabilirler. Büyük ölçekli gen transferleri, ökaryotik hücreler ile bakterilerin ataları arasında gerçekleşen kloroplast ve mitokondri devralımı sırasında da gerçekleşmiştir.
+
+
+==== Popülasyon içerisinde gen akışı ve gen transferi önündeki engeller ====
+Biyolojik türler, üreme kabiliyetlerine göre tanımlanabilirler. Üreme bariyeri ve çeşitli biyolojik faktörler (genetik bariyer) yeni türlerin oluşmasını engeller. Yani iki farklı tür canlının nefes alan ve üreyebilen sağlıklı yavrular oluşturması mümkün olmaz. Bu bariyerler (üreme ve genetik bariyerleri) farklı türler arasında gen akışını engeller, hibrit canlıların oluşmasını sınırlandırır. Bu bariyerler tek başına tüm gen akışını engelleyemeyebilir. Hepsi birlikte türün genlerini koruyarak, popülasyon içerisinde izole olmasını sağlarlar.
+Türü izole edip koruyan bariyerler iki grupta incelenir : 
+
+Prezigotik bariyerler (zigot oluşumu öncesi döllenmeyi engelleyen faktörler, doğal bariyerler)Habitat izolasyonu : 2 farklı tür değişik bölgelerde yaşarlar, bir araya gelmezler  (örn. Thamnophis cinsi küçük yılanlar)
+Zaman uyuşmazlığı : türlerin üreme için aktif oldukları zamanlar farklıdır  (örn. Kuzey Amerika ve doğuda yaşayan kokarca türleri)
+Davranışsal izolasyon : dişi kendi türü dışındaki erkeklere ilgi duymaz, devamlı kendi türünü seçer (örn. mavi ayaklı sümsük kuşu)
+Anatomik izolasyon : farklı türlerin vücutlarındaki üreme bölgeleri şekil olarak uyumsuzdur.  (örn. Bradybaena cinsi sümüklü böcek)
+Postzigotik bariyerler (zigot oluşumu sonrası engeller, günümüz genetik çalışmalarında karşılaşılan sonuçlar)Gametik izolasyon : sperm yumurtayı döllemez  (örn. denizkestaneleri)
+Hibrit yaşayamaz : hibrit canlı zigotu oluşur fakat embriyo yaşamaz ya da sağlıklı gelişim gözlenmez  (örn. bazı semender türleri)
+Kısırlık : hibrit yaşasa dahi genelde kısır olur (örn. dişi eşek ile erkek at çiftleşmesinden oluşan katır kısırdır)
+Nesil bozulması : ilk hibrit sağlıklıdır üreyebilir fakat sonraki nesillerde genetik bozukluklar görülür (örn. bazı pirinç türleri)Hibrit (melez tür) oluşumuna örnek kara ayısı ile kutup ayısı melezi "grolar bear" verilir. Uzak türler arasında mesela balık ile amfibiler arasında gen akışı ve gen transferlerine rastlanmamasının nedeni doğada yukarıda anlatılan bariyerler ile kontrol altında tutulmasıdır.
+
+
+== Rekombinasyon ==
+Ana madde: RekombinasyonPopülasyon genetiğinin temel modelleri, bir seferde sadece tek bir gen lokusunu dikkate alır. Epistazi baskılaması yüzünden, bir lokustaki alelin fenotipe olan etkisi, diğer birçok lokuslar üzerinde ne tür alellerin mevcut olduğuna bağlı olabilir. Eğer tüm genler bağlantı dengeliği içinde bulunuyorsa, bu durumda bir lokus üzerinde yer alan belli bir alelin etkisi, diğer lokuslar üzerindeki gen havuzunun ortalaması üzerinden belirlenebilir. Gerçekte, bir alel, çoğu kez diğer lokuslardaki genlerle, özellikle aynı kromozom üzerinde ve yakınlarda yer alan genlerle, bağlantı dengeliği içinde bulunur. Rekombinasyon, yakın bir yerdeki lokusta, seçilim altında bulunan bir alele genetik bağlantı ile bağlı olduğundan, başka bir lokustaki alelin yüksek frekansa ulaştığı genetik otostopu önlemede, bu bağlantı dengesini ancak çok yavaş sona erdirir. Bu ise, bir seferde sadece tek bir gen lokusunu dikkate alan popülasyon genetiği modelleri için bir sorun teşkil eder. Ancak, seçici süpürme yoluyla, doğal seçilimin eylemlerini tespit edebilmenin bir yöntemi olarak bu durumdan yararlanılabilir. Öncelikle eşeysiz üreyen popülasyonların aşırı bir durumunda, çeşitli popülasyon genetik denklemleri türetilebilir ve çözülebilir ve bu denklemler de, eşeyli üreyen popülasyonlara nazaran epey farklı işlerler.
+
+
+== Genetik yapı ==
+Göç yolundaki fiziksel engeller yüzünden ve bireylerin hareket etmede ve yayılmalarında sınırlanmış eğilimler mevcut olduğundan, bunun yanında genel olarak canlı bireyler doğdukları yerlerde kalma veya buralara geri dönme eğilimi gösterdiklerinden (filopatri), farklı yaşam ortamlarındaki doğal popülasyonlar, teorik rastlantısal modellere uygun olarak ancak nadir bir şekilde birbirleriyle eşleşebilirler (panmiksi) (Buston et al., 2007). Genellikle, bireylerin birbirlerine genel popülasyondan rastgele seçilmiş olan diğerlerinden daha yakın akraba olduğu coğrafi aralıklar bulunur. Bu da, popülasyonların genetik yapısı ölçüsünde tanımlanmıştır (Repaci et al., 2007). Genetik yapılandırma, tarihsel iklim değişiklikleri nedeniyle oluşan göçler, tür aralığının genişlemesi ve yaşam alanlarının mevcut elverişliliği gibi nedenler tarafından şekillendirilir.
+
+
+== Mikrobiyal popülasyon genetiği ==
+Mikrobiyal popülasyon genetiği, diğer birçok teorik ve uygulamalı alanlarda bilimsel araştırmalarla ilgili çalışmaların hızla ilerlediği bir alandır. Mikroorganizmaların popülasyon genetiği, antibiyotik direncin ve ölümcül bulaşıcı patojenlerin kökenini ve evrimini izlemek için temeller ortaya koymaktadır. Mikroorganizmaların popülasyon genetiği, aynı zamanda yararlı mikropların korunması ve daha iyi kullanımı için strateji oluşturmada da önemli bir etkendir (Xu, 2010).
+
+
+== Tarihçe ==
+Ayrıca bakınız: Modern evrimsel sentez
+
+
+=== Popülasyon genetiği ===
+Popülasyon genetiği, Mendel genetiği ile biyometrik modellerin bir araya getirilip denkleştirilmesi ile geliştirilmiştir. Bu konuda kilit bir adım, İngiliz biyolog ve istatistikçi Ronald Fisher'in çalışmasıydı. 1918'de bir dizi kâğıtla başlayan ve 1930'da 
+Doğal Seçilim'in Genetik Teorisi isimli kitabıyla sona eren çalışmasında, Fisher, biyoistatistikçiler tarafından ölçülen devamlı varyasyonun, birçok ayrık genlerin ortak eylemleri sonucu oluştuğunu ve doğal seçilimin, popülasyondaki gen frekanslarını değiştirebileceğini ve bunun evrimle sonuçlandığını göstermiş ve Darwin'in ortaya attığı doğal seçim prensibinin ilk defa matematiksel biçimde ifade edilmesini başarmıştır (Bu dönemde gerçek bir genin ne olduğuna dair bilgi eksikliği olsa da, bu anlamda Fisher'in, gen frekansına dair tam bir bilgi yerine fenotipik özelliklerin frekansını anlamış olduğu söylenebilir). 1924'te başlayan bir dizi çalışmada ise başka bir İngiliz genetikçi, J.B.S. Haldane, istatistiksel analizleri, kelebeklerdeki endüstri melanizminin evrimi gibi doğal seçilimin gerçek dünyadaki örnekleri üzerinde uygulamış ve doğal seçilimin Fisher'in tahmin ettiğinden çok daha hızlı bir oranda çalıştığını göstermiştir.Hayvan yetiştiriciliği ve ıslahı alanında deney sahibi olan Amerikalı Sewall Wright ise, birbirleriyle etkileşim içinde bulunan genler kombinasyonları ile genetik sürüklenme sergileyen küçük ve nispeten yalıtılmış popülasyonlar üzerindeki yakın akraba eşleşmesinin etkileri üzerine odaklanmıştır. 1932 yılında, Wright adaptif yüzeye (İng: Fitness landscape ya da adaptive landscape) dair yeni bir konsept oluşturmuş ve genetik sürüklenme ile yakın akraba eşleşmesinin, birçok adaptif zirvelerin varlığı karşısında doğal seçilime müsaade vererek küçük ve yalıtılmış bir alt popülasyonu, adaptif bir zirveden uzaklaştırabileceğini öne sürmüştür. Fisher ile Wright arasında, Amerikalılar ve İngilizler arasında yüzyıla kadar devam eden, seçilim ve sürüklenmenin göreli rollerine dair bazı temel anlaşmazlıklar ve tartışma vardı. Fransız Gustave Malécot da, disiplinin gelişiminde erken dönemde önemli rol oynamıştır. 
+Bu anlamda, Fisher, Haldane ve Wright'ın çalışmaları popülasyon genetiğinin disiplinini oluşturmuştur. Bu çalışmalar, doğal seçilim ile evrimin nasıl işlediğine dair sentezlenmiş bir teorinin geliştirilmesinde çok önemli bir ilk adım olan Mendel genetiğini, birbirleriyle entegre ederek bütünleştirmiştir.John Maynard Smith, Haldane'nin öğrencisi iken, W. D. Hamilton ise Fisher'in yazılarından yoğun bir şekilde etkilenmiştir. Amerikalı Georg R. Price, hem Hamilton, hem de Maynard Smith ile çalışmıştır. Richard Lewontin ve Japon Motoo Kimura ise, Wright tarafından yoğun bir şekilde etkilenmişlerdir.
+
+
+=== Modern evrimsel sentez ===
+20. yüzyılın ilk on yıllarında, birçok saha biyoloğu, Lamarkçı ve ortojenik evrim mekanizmaların, doğal yaşamda gözlemledikleri karmaşıklığın en iyi açıklaması olduğuna dair inancı sürdürmeye devam etmişlerdir. Ancak, genetik alanlarda gelişmeler devam edince bu görüşler daha az savunulur olmaya başladılar. Doktora sonrası T. H. Morgan laboratuvarında bir işgören olan Theodosius Dobzhansky, Sergei Chetverikov gibi Rus genetikçilerin genetik çeşitlilik üzerine yaptıkları çalışmalardan etkilenmiştir. Dobzhansky, 1937'deki kitabı "Genetik ve Türlerin Kökeni" isimli kitabıyla, popülasyon genetikçileri tarafından geliştirilen mikro evrimin temelleri ile saha biyologları tarafından geliştirilen makro evrimin örüntüleri arasındaki açığı birleştirebilen bir köprü kurulmasında yardımcı olmuştur.
+Dobzhansky, yabani popülasyonların genetik çeşitliliğini araştırmış ve popülasyon genetikçilerin varsayımlarının aksine, bu popülasyonların, alt popülasyonlar arasındaki belirgin farklılıklarla büyük miktarda genetik çeşitliliğe sahip olduğunu göstermiştir. Bu kitap, aynı zamanda popülasyon genetikçilerinin son derece matematiksel çalışmalarını alarak daha ulaşılabilir bir görünüşe sokmuştur. İngiltere'de ekolojik genetik dalının bir öncüsü olan E. B. Ford, insandaki kan grubu gibi genetik polimorfizm aracılığıyla, genetik çeşitliliği korumadaki yetenek de dahil olmak üzere, ekolojik faktörler nedeniyle oluşan seçilimin gücünü göstermek için, 1930 ve 1940'lardaki çalışmalarına devam etti. Ford'un çalışmaları, modern sentezin, genetik sürüklenmeden doğal seçilime doğru seyri sırasında vurgu kaymasına katkıda bulunmuştur.
+
+
+== Ayrıca bakınız ==
+
+
+== Kaynakça ==
+
+
+== Dış bağlantılar ==
+Türkçe
+
+Popülasyon genetiği Pdf dosya Egitek.meb.gov Aol Kitaplar
+Popülasyon genetiği Ankara.edu.tr Doç. Dr. Hilal Özdağİngilizce
+
+The ALlele FREquency Database20 Ocak 2011 tarihinde Wayback Machine sitesinde arşivlendi. at Yale Üniversitesi
+EHSTRAFD.org - Earth Human STR Allele Frequencies Database
+History of population genetics23 Eylül 2010 tarihinde Wayback Machine sitesinde arşivlendi.
+How Selection Changes the Genetic Composition of Population8 Kasım 2010 tarihinde Wayback Machine sitesinde arşivlendi., video of lecture by Stephen C. Stearns (Yale Üniversitesi)
+National Geographic Society: Atlas of the Human Journey (Haplogroup-based human migration maps)
+Monash Virtual Laboratory - Simulations of habitat fragmentation and population genetics online at Monash University's Virtual Laboratory.

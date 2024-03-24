@@ -1,0 +1,36 @@
+revision: 7602288
+title: "Akumul\xE1tor elektrickej energie"
+url: https://sk.wikipedia.org/wiki/Akumul%C3%A1tor_elektrickej_energie
+
+
+---
+
+Akumulátor elektrickej energie alebo batéria pre uchovanie elektrickej energie je zariadenie, s účelom uloženia elektrickej energie z alternatívnych obnoviteľných zdrojov (solárne panely, vodná turbína, veterná turbína) v čase ich činnosti a následná spotreba elektrickej energie z akumulátora v čase ich nečinnosti (neprítomnosť vonkajších vplyvov).
+Takýto akumulátor býva doplnený inteligentnou riadiacou jednotkou, ktorá riadi tok elektrickej energie medzi alternatívnym zdrojom, batériou a verejnou sieťou pri dodávke pre jednotlivé elektrické spotrebiče.
+
+
+== Princíp ==
+v prípade, že je v akumulačnom zariadení dostatok naakumulovanej energie a príkon v domácej sieti nepresahuje možnosti zariadenia, je celá sieť napájaná z akumulátora
+v prípade, že je v akumulačnom zariadení dostatok naakumulovanej energie a príkon v domácej sieti presahuje možnosti zariadenia, sieť je napájaná prioritne z akumulátora a zvyšok príkonu je pokrytý elektrinou z verejnej siete
+v prípade, že dôjde k úplnému vybitiu akumulátora, zariadenie automaticky prejde na spotrebu elektriny z verejnej siete bez akéhokoľvek vplyvu na spotrebiče vo vnútornej sieti
+v prípade výpadku dodávky elektriny z verejnej siete (odstávka), až do momentu spotrebovania naakumulovanej elektriny je celá spotreba vo vnútornej sieti pokrytá dodávkou z akumulačného zariadenia. Po obnovení dodávky z verejnej siete zariadenie prejde na štandardný režim.
+
+
+== Bezpečnosť ==
+Bezpečnosť akumulátora elektrickej energie je najčastejšie vykonávaná prostredníctvom redudantných prvkov, tj. v prípade poruchy jedného z bezpečnostných prvkov je jeho funkčnosť zabezpečená iným. Voľba bezpečnostných prvkov je individuálna a závisí na zariadení a výrobcovi.
+Vnútorná bezpečnosť systému (zabezpečenie samotného akumulátora) je závislá od spínačov medzi jednotlivými akumulátorovými blokmi, čo znamená, že znefunkčnenie jedného bloku (v prípade jeho poruchy) neznefunkční celý systém. Ten funguje ďalej, ale so zníženou kapacitou.
+
+
+== Zmeny v topológii elektrickej siete ==
+V minulosti bolo výhodnejšie vyrábať a rozvádzať elektrinu v rámci centralizovaného systému. To znamená, že elektrina bola vyrobená v elektrárni (jadrová elektráreň, vodná elektráreň a pod.) a následne prostredníctvom nadzemnej alebo podzemnej elektrickej siete doručená do transformátora pod vysokým napätím, kde bola stransformovaná na nízke napätia 380V na 3 fázy a distribuovaná do jednotlivých odberných miest.
+Dnes vďaka rozmachu zariadení na získavanie energie z obnoviteľných zdrojov a akumulátorov elektrickej energie, ktoré sú čoraz lacnejšie, menšie a ľahšie, je výhodné budovať decentralizovanú sieť, to znamená, že okrem odberu elektrickej energie z centralizovanej verejnej siete, môže domácnosť či prevádzka mať ešte vlastnú,  malú elektráreň, ktorá je však závislá od vonkajších vplyvov (slnko, vietor alebo voda). Ak sú vonkajšie vplyvy priaznivé a výkon alternatívnej elektrárne dostačujúci, prioritne je elektrická energia spotrebovaná odtiaľto.
+V prípade, že je spotreba odberného miesta vyššia ako možnosti alternatívnej elektrárne, rozdiel príkonu sa dopĺňa z verejnej siete.
+
+
+== Pozri aj ==
+Akumulátor energie
+
+
+== Externé odkazy ==
+
+Zdroje špičkovej energie a energetické úložiská – ATP Journal

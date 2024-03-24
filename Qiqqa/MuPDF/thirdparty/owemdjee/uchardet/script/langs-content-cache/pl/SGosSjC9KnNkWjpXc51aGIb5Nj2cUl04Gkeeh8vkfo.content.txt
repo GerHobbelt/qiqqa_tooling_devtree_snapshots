@@ -1,0 +1,81 @@
+revision: 69622984
+title: "Kod Morse\u2019a"
+url: https://pl.wikipedia.org/wiki/Kod_Morse%E2%80%99a
+
+
+---
+
+Kod Morse’a – stworzony w 1838 przez Samuela Morse’a i Alfreda Vaila sposób reprezentacji alfabetu, cyfr i znaków specjalnych za pomocą dźwięków, błysków światła, impulsów elektrycznych lub znaków popularnie zwanych kreską i kropką.
+Wszystkie znaki reprezentowane są przez kilkuelementowe serie sygnałów – krótkich (kropek) i długich (kresek).
+Kreska powinna trwać co najmniej tyle czasu, co trzy kropki.
+Odstępy:
+Odstęp pomiędzy elementami znaku powinien trwać jedną kropkę.
+Odstęp pomiędzy poszczególnymi znakami – trzy kropki.
+Odstęp pomiędzy grupami znaków (słowami) – siedem kropek.
+Początkowo Morse stworzył swój kod z zamiarem wykorzystania go z telegrafem elektrycznym we wczesnych latach 40. XIX wieku, a od 1890 kod Morse’a był już szeroko wykorzystywany w telekomunikacji radiowej. W pierwszej połowie XIX wieku większość szybkiej, międzynarodowej korespondencji przeprowadzano z wykorzystaniem kodu Morse’a przy użyciu linii telegraficznych, podwodnych kabli i obwodów radiowych.
+Obecnie najczęściej używany jest przez radioamatorów, mimo iż nie jest już wymagany podczas egzaminu na licencję krótkofalarską w wielu krajach. Międzynarodowy kod Morse’a jest obecnie nazywany „międzynarodowym kodem radiowym”, przede wszystkim z tego powodu, że kod będący w dzisiejszym użyciu został znacznie zmodyfikowany w stosunku do tego, który wymyślił Samuel Morse. Zmiany te miały na celu zwiększyć jego przydatność w nowoczesnej komunikacji. W zakresie profesjonalnym piloci i kontrolerzy lotu zwykle są zaznajomieni z kodem Morse’a – urządzenia radionawigacyjne, takie jak VOR i NDB, w sposób ciągły wysyłają swoje identyfikatory za pomocą kodu Morse’a.
+Kod Morse’a jest zaprojektowany w ten sposób, aby człowiek był w stanie go zrozumieć bez specjalnego urządzenia dekodującego. W sytuacji awaryjnej kod ten może być łatwo nadany za pomocą zaimprowizowanych środków, dzięki czemu jest wszechstronnym i uniwersalnym sposobem telekomunikacji.
+
+
+== Krótkofalarstwo ==
+Międzynarodowy kod Morse’a jest obecnie najbardziej popularny wśród radioamatorów, dla których nadal stanowi jeden ze sposobów porozumienia się (CW). Pionierzy krótkofalarstwa używali wyłącznie kodu Morse’a, gdyż transceivery umożliwiające transmisję głosu nie były w użyciu aż do 1920 r. Do roku 2003 ITU wymagała by egzamin ze znajomości kodu Morse’a wchodził w skład egzaminu na licencję krótkofalarską. Jednakże podczas Światowej Konferencji Radiokomunikacyjnej (WRC-03) znajomość kodu Morse’a została ustanowiona jako opcjonalna. W wyniku tego wiele krajów (w tym Polska) nie wymaga więcej znajomości kodu Morse’a podczas egzaminu na licencję krótkofalarską.
+Pomimo iż tradycyjny klucz telegraficzny (klucz sztorcowy) jest nadal używany przez wielu krótkofalowców, obecnie dominuje w pełni automatyczny klucz dwudźwigniowy.
+
+
+== Szybkość ==
+Szybkość kodu Morse’a mierzy się w grupach (modelowe słowo PARIS, 5 liter na grupę) na minutę lub słowach na minutę (snm., ang. word per minute, WPM). Doświadczeni operatorzy są w stanie zrozumieć kod Morse’a nadawany z prędkością przekraczającą 40 snm. W konkursie odbywającym się w lipcu 1939 roku w Asheville, Ted R. McElroy ustanowił rekord prędkości w odbiorze kodu Morse’a wynoszący 75,2 snm. Na dostępnej w sieci stronie, William Pierpont N0HFF wspomina operatorów, którzy przekraczali 100 snm., natomiast rekord prędkości nadawania przy użyciu klucza sztorcowego ustanowił Harry Turner (W9XZE, zm. 1992), który w 1942 podczas pokazu w jednej z baz armii amerykańskiej osiągnął 35 snm.
+
+
+== Nauka ==
+Wiele osób pragnących nauczyć się rozumienia szybkiego kodu Morse’a wykorzystuje w tym celu metodę Farnswortha, nazwanej tak po Donaldzie R. Farnsworth, znanym także pod jego znakiem W6TTB. Metoda Farnswortha polega na nauce z nieco zredukowaną szybkością, zachowuje się wprawdzie oryginalny czas wybrzmiewania znaku, ale wydłuża się odstęp pomiędzy znakami. Osoba ucząca się za pomocą tej metody od razu słyszy prawidłową – szybką – melodię znaku, zaś nieproporcjonalnie i przesadnie wydłużony odstęp pomiędzy znakami pozwala umysłowi zaznajomić się z melodią właściwą każdemu znakowi i przyswoić ją tak, by później była automatycznie przez niego rozpoznawana.
+Metoda Kocha – nazwana po niemieckim psychologu Ludwiku Kochu, który eksperymentował z nauką kodu Morse’a od razu z pełną, docelową prędkością. Nauka polegała na słuchaniu początkowo zaledwie dwóch znaków, gdy uczeń wychwytywał różnicę pomiędzy nimi i był w stanie zanotować je w 90% poprawnie, dodawano kolejny znak. I tak aż do osiągnięcia pełnego zestawu znaków.
+
+
+== Litery ==
+
+
+== Cyfry ==
+
+
+== Znaki interpunkcyjne i symbole ==
+
+
+== Komendy specjalne ==
+Oprócz tego w korespondencji wojskowej i cywilnej stosuje się tabelę skrótów, tak zwany kod Q. Obejmuje ona kilkadziesiąt trzyliterowych sekwencji zaczynających się przeważnie (początkowo wyłącznie) na literę Q. Skrótami tymi obsługuje się całą konwencjonalną korespondencję przeprowadzaną pomiędzy radiostacjami, z wyjątkiem samej wymiany telegramów.
+
+
+== Pomoc mnemotechniczna ==
+Kodowanie znaku polega na posługiwaniu się sylabami zapamiętanych słów (zwrotów). Sylaba, w której znajduje się litera „o” (i „ó”), odpowiada kresce; pozostałe sylaby odpowiadają kropkom.
+
+
+== Pomoc do odkodowywania ==
+Odczytanie znaku polega na poruszaniu się w dół diagramu w zależności od tego, czy odbierana jest kropka, czy kreska.
+
+
+== Sygnalizacja przy pomocy rąk ==
+kropka: uniesienie ramion prosto do góry
+kreska: uniesienie ramion poziomo na boki
+rozdzielenie znaków: ramiona skrzyżowane na piersi
+rozdzielenie grup lub słów: ramiona rozłożone ukosem w dół
+pomyłka lub prośba o powtórzenie: okręgi ramionami rozłożonymi ukosem w góręInformacje na temat problemów z szybkością transmisji kodem Morse’a można znaleźć w haśle o transatlantyckim kablu telegraficznym.
+
+
+== Zobacz też ==
+slang krótkofalarski
+alfabet
+język
+klucz telegraficzny
+kod
+kod Baudot
+symbol
+znak (semiotyka)
+
+
+== Przypisy ==
+
+
+== Linki zewnętrzne ==
+Strona z koderem i dekoderem Morse’a
+Strona ze skryptem do szyfrowania i rozszyfrowywania kodu Morse’a
+Alfabet Morse’a – Znaki patrolowe – Semafor. shk.republika.pl. [zarchiwizowane z tego adresu (2015-03-04)].
+Recommendation ITU-R M.1677-1 – International Morse code

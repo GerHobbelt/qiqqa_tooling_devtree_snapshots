@@ -1,0 +1,74 @@
+revision: 69751115
+title: "B\u1ED9 gene"
+url: https://vi.wikipedia.org/wiki/B%E1%BB%99_gen
+
+
+---
+
+Trong lĩnh vực sinh học phân tử và di truyền học, thuật ngữ bộ gen dùng để chỉ tất cả các vật chất di truyền chứa trong một cá thể sinh vật. Những vật chất di truyền này gồm DNA ở nhiễm sắc thể, DNA ngoài nhiễm sắc thể (như DNA vòng ở ti thể, ở lục lạp nếu có), cả các RNA (nếu là RNA virut), có thể mang thông tin di truyền ở vùng mã hóa hoặc không mã hóa.  Thuật ngữ này dịch từ nguyên gốc tiếng Anh là genome, cũng đã được dịch là hệ gen. Môn khoa học chuyên nghiên cứu về bộ gen được gọi là hệ gen học (genomics). Nhiều kiến thức thuộc lĩnh vực này được đề cập ở tạp chí Genome Research.
+
+
+== Từ nguyên ==
+Thuật ngữ genome được giáo sư người Đức là Hans Winkler, đề xuất vào năm 1920, mà từ điển Oxford gợi ý rằng cái tên này là sự pha trộn giữa các từ gen và nhiễm sắc thể.Tuy nhiên, bộ gen của một sinh vật bao gồm tất cả các vật chất mang thông tin di truyền, dù ở nhiễm sắc thể hay ở ngoài nhiễm sắc thể. Nhưng ở các sinh vật có nhiễm sắc thể (sinh vật có cấu tạo tế bào), có tác giả gọi axit nucleic ở nhiễm sắc thể như là bộ gen chính, còn ở ngoài là bộ gen phụ. Chẳng hạn ở người, mỗi cá thể có bộ nhiễm sắc thể lưỡng bội là 2n = 46, thì tập hợp tất cả các DNA ở mọi nhiễm sắc thể tạo nên bộ gen chính, còn gọi là bộ gen lưỡng bội; còn lại các gen trong ti thể, ở ngoài nhân được coi là phụ, mặc dù có tầm quan trọng nhất định và đột biến có thể gây bệnh, như một bệnh gây động kinh di truyền theo dòng mẹ.
+
+
+== Bộ gen virut ==
+Bộ gen virut có thể có DNA hoặc RNA tùy loại.
+
+Các bệnh như đậu mùa, herpes và thủy đậu là do các virut DNA gây ra: bộ gen của chúng là phân tử DNA.
+Các bệnh như AIDS và Covid-19 là do virut RNA gây ra: bộ gen của chúng là RNA. Khi chúng xâm nhiễm vào vật chủ (người, dơi), phân tử RNA sẽ được enzym phiên mã ngược tạo nên DNA bổ sung của chúng, rồi từ đó nhân đôi thành DNA hai mạch chèn vào nhiễm sắc thể của vật chủ.
+
+
+== Bộ gen nhân sơ ==
+Nhân sơ (Prokaryotes) có cấu tạo đơn bào, nhưng bộ gen của chúng được phân biệt thành hai phần: hầu hết các gen phân bố ở một phân tử DNA vòng lớn gọi là nhiễm sắc thể nhân sơ (viết tắt: DNA-NST), còn lại phân bố ở các plasmit có số lượng rất không ổn định.
+
+
+== Đặc điểm một số bộ gen ==
+Dưới đây là bảng giới thiệu một số bộ gen đại diện.
+
+
+== Xem thêm ==
+
+
+== Tham khảo ==
+Benfey P, Protopapas AD (2004). Essentials of Genomics. Prentice Hall.
+Brown TA (2002). Genomes 2. Oxford: Bios Scientific Publishers. ISBN 978-1-85996-029-5.
+Gibson G, Muse SV (2004). A Primer of Genome Science . Sunderland, Mass: Sinauer Assoc. ISBN 978-0-87893-234-4.
+Gregory TR (2005). The Evolution of the Genome. Elsevier. ISBN 978-0-12-301463-4.
+Reece RJ (2004). Analysis of Genes and Genomes. Chichester: John Wiley & Sons. ISBN 978-0-470-84379-6.
+Saccone C, Pesole G (2003). Handbook of Comparative Genomics. Chichester: John Wiley & Sons. ISBN 978-0-471-39128-9.
+Werner E (tháng 12 năm 2003). “In silico multicellular systems biology and minimal genomes”. Drug Discovery Today. 8 (24): 1121–27. doi:10.1016/S1359-6446(03)02918-0. PMID 14678738.
+
+
+== Hình ảnh ==
+
+			
+			
+		
+		
+			
+			
+		
+
+
+== Nguồn trích dẫn ==
+
+
+== Liên kết ngoài ==
+UCSC Genome Browser – view the genome and annotations for more than 80 organisms.
+genomecenter.howard.edu
+Build a DNA Molecule
+Some comparative genome sizes
+DNA Interactive: The History of DNA Science
+DNA From The Beginning
+All About The Human Genome Project—from Genome.gov
+Animal genome size database
+Plant genome size database
+GOLD:Genomes OnLine Database
+The Genome News Network
+NCBI Entrez Genome Project database
+NCBI Genome Primer
+GeneCards—an integrated database of human genes
+BBC News – Final genome 'chapter' published
+IMG (The Integrated Microbial Genomes system)—for genome analysis by the DOE-JGI
+GeKnome Technologies Next-Gen Sequencing Data Analysis—next-generation sequencing data analysis for Illumina and 454 Service from GeKnome Technologies.

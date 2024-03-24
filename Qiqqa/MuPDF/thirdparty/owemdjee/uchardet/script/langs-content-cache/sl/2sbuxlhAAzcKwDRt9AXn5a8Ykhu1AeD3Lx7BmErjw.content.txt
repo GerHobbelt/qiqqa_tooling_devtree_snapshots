@@ -1,0 +1,11 @@
+revision: 5119963
+title: "U\u2013X"
+url: https://sl.wikipedia.org/wiki/X_Window_System
+
+
+---
+
+X Window System (angleško okenski sistem X, običajno X ali X11 in včasih neformalno X-Windows (okna X)) je računalniški programski okenski sistem in mrežni protokol z grafičnim uporabniškim vmesnikom (GUI). Razvili so ga na inštitutu MIT kot del projekta Athena, razvoj se je začel leta 1983. Od 1987 je v uporabi 11. različica protokola (Od tu ime X11). X omogoča uporabo oken na računalniških zaslonih z rastrsko grafiko ter upravlja nadzorne funkcije tipkovnice in kazalne naprave. V standardni distribuciji je sistem, čeprav preprost, zadovoljiva rešitev za zaslonski in uporabniški vmesnik. Z njegovim standardnim orodjem in skladom protokolov je moč graditi grafične uporabniške vmesnike na večini operacijskih sistemov podobnih Unixu in sistemu OpenVMS. X Windows System so prenesli na mnoge druge sodobne operacijske sisteme za splošno rabo. Namizna okolja, kot so GNOME, KDE in Xfce, vsa uporabljajo X Window System.
+Sistem zagotavlja osnovno ogrodje ali primitive za gradnjo takšnih okolij GUI: risanje in premikanje oken na zaslonu, upravljanje z miško in/ali tipkovnico. Ne predpisuje uporabniškega vmesnika - to urejajo posamezni odjemalski programi. Zato se vizualni izgled okolij na osnovi sistema X precej razlikuje: različni programi imajo lahko bistveno različne vmesnike. X je zgrajen kot dodatni aplikacijski sloj na vrhu jedra operacijskega sistema.
+Z razliko od predhodnih zaslonskih protokolov so X posebej izdelali za rabo prek omrežnih povezav in ne posebej na eni zaslonski napravi. X ima omrežno transparentnost, kar pomeni da se lahko naprava, kjer se izvaja aplikacijski program (odjemalska aplikacija) razlikuje od uporabniške krajevne naprave (zaslonskega strežnika). 
+Ker je okenski sistem X že relativno star in ima kljub mnogim dobrim lastnostim tudi določene omejitve so se v zadnjih nekaj letih začeli razvijati novi, sodobnejši okenski sistemi, na primer Wayland in Mir.

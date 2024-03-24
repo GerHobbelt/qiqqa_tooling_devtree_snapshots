@@ -1,0 +1,80 @@
+revision: 23736008
+title: "Geoszinkron p\xE1lya"
+url: https://hu.wikipedia.org/wiki/Geoszinkron_p%C3%A1lya
+
+
+---
+
+A geoszinkron pálya a Föld forgásával megegyező irányban haladó, kis inklinációjú pálya, melynek keringési periódusa megegyezik a Föld forgási idejével, azaz 1 sziderikus nappal (ami 23 óra, 56 perc, 4 másodperc).
+Egy geoszinkron pálya azt jelenti, hogy a műhold 1 sziderikus nap elteltével a Föld adott földrajzi pontja fölött ugyanott látszik az égbolton. Ettől a ponttól a műhold a közbeeső időben szabályos kitérésekkel északi és déli irányban eltér, és többnyire egy 8-as alakot ír le, melynek jellemzői a pálya inklinációjától és excentricitásától függenek.
+Geoszinkron pályára többnyire kelet felé indítják a műholdat, mivel így nagyobb sebességre tesz szert.
+A geoszinkron pálya speciális esete a geostacionárius pálya, ennek inklinációja nulla és amely pálya nem tér ki az Egyenlítőtől északra és délre, hanem pontosan az Egyenlítő fölött helyezkedik el.
+
+
+== Funkciója ==
+A kommunikációs műholdakat gyakran ilyen pályára állítják, mivel így a földi antennáknak nem kell mozgathatónak lenniük, és nem kell követniük a műhold mozgását az égbolton, hogy adatkapcsolatban tudjanak maradni vele. Ez egyszerűbb földi berendezést jelent és egyúttal alacsonyabb működtetési költségeket is.
+
+
+== A geoszinkron pálya jellemzői ==
+A Föld körüli, kör alakú geoszinkron pályák sugara 42 164 km a Föld középpontjától számítva, a magasságuk a földfelszíntől 35 790 km. Minden Föld körüli, akár kör alakú, akár elliptikus geoszinkron pályának a fél nagytengelye egyforma hosszú.Az azonos keringési periódusú pályáknak ugyanaz a fél nagytengelye:
+
+  
+    
+      
+        a
+        =
+        
+          
+            
+              μ
+              
+                
+                  (
+                  
+                    
+                      P
+                      
+                        2
+                        π
+                      
+                    
+                  
+                  )
+                
+                
+                  2
+                
+              
+            
+            
+              3
+            
+          
+        
+      
+    
+     
+  ahol a a fél-nagytengely, P a keringési periódus, és μ a geocentrikus gravitációs konstans, aminek értéke 398 600,4418 km³/s².
+A geostacionárius pálya speciális esetében a műhold „döféspontja” a Földön egyetlen pont az Egyenlítőn. Általános esetben a geoszinkron pálya, nem-nulla inklinációval vagy excentricitással, nagyjából nyolcas alakú alakzatot ír le a Föld felszínén, aminek ugyanarra a pontjára tér vissza egy sziderikus nap elteltével..
+
+
+== Története ==
+
+Arthur C. Clarke író már 1945-ben javasolta, hogy kommunikációs célra geostacionárius pályára állított műholdakat kellene alkalmazni, mivel azok a Föld minden pontjáról láthatók. Emiatt angol nyelvterületen a geostacionárius pálya „Clark-pálya” néven is ismert.
+Az első kommunikációs célú műhold, amit geoszinkron pályára állítottak, a Syncom-2 volt, amit 1963-ban bocsátottak fel. Ez még az Egyenlítővel hajlásszöget bezáró pálya volt, így a földi antennákat mozgatni kellett a követéséhez. Az első geostacionárius pályán lévő műhold a Syncom-3 lett.
+A geostacionárius pályán lévő műholdakat elsősorban televízióadások és telefonhívások továbbítására használják, de ezt a szerepet fokozatosan átveszi a tenger alatti optikai kábelek használata.
+
+
+== Kapcsolódó szócikkek ==
+Geostacionárius pálya
+Magas Föld körüli pálya
+Alacsony Föld körüli pálya
+Közepes magasságú Föld körüli pálya
+Molnyija-pálya
+
+
+== Jegyzetek ==
+
+
+== Források ==
+NASA: Basics of Space Flight, Chapter 5. Planetary Orbits

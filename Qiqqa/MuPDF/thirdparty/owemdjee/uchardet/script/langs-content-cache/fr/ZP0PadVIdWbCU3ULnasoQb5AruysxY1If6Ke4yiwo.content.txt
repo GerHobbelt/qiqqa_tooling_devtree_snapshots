@@ -1,0 +1,213 @@
+revision: 205389876
+title: Vim (homonymie)
+url: https://fr.wikipedia.org/wiki/Vim
+
+
+---
+
+Vim est un éditeur de texte, c’est-à-dire un logiciel permettant la manipulation de fichiers texte. Il est directement inspiré de vi (un éditeur  très répandu sur les systèmes d’exploitation de type Unix), dont il est le clone le plus populaire. Son nom signifie d’ailleurs Vi IMproved, que l’on peut traduire par « VI aMélioré ».
+Vim est un éditeur de texte extrêmement personnalisable, que ce soit par l'ajout d'extensions, ou par la modification de son fichier de configuration, écrits dans son propre langage d'extension, le Vim script.
+Bien qu'il ait de nombreuses fonctionnalités, il conserve un temps de démarrage court (même agrémenté d'extensions) et reste ainsi adapté pour des modifications simples et ponctuelles (de fichiers de configuration par exemple).
+Vim se différencie de la plupart des autres éditeurs par son fonctionnement modal, hérité de vi. En effet, il possède trois modes de base : le mode normal ou mode commande (dans lequel vous êtes lorsque Vim démarre), le mode insertion, et le mode ligne de commande.
+Vim est un logiciel libre. Son code source a été publié pour la première fois en 1991 par Bram Moolenaar, son principal développeur. Depuis, ce dernier a continué de l’améliorer, avec l’aide de nombreux contributeurs.
+
+
+== Présentation ==
+
+Dans un terminal informatique, Vim fonctionne en mode texte plein écran, comme l’éditeur de texte vi.
+Il propose énormément de fonctions qui sont, pour la grande majorité, accessibles au clavier. Ceci s’explique par des raisons historiques : les premières versions de vi datent du milieu des années 1970, époque à laquelle les téléscripteurs, les terminaux alors les plus répandus, étaient incapables de supporter le mode Wysiwyg faute d'écran cathodique (l'impression sur papier d'une dizaine de lignes de code pouvait prendre près d'une minute). L'ergonomie de Vi, à base de raccourcis clavier, permettait de réduire la quantité de texte à imprimer pour effectuer et vérifier les modifications apportées au fichier.
+Vim peut, si l'utilisateur le souhaite , être compatible à 100 % avec vi. De très nombreuses améliorations et fonctionnalités ont été ajoutées à Vim, et ne sont pas présentes dans Vi, comme la gestion de la souris, le repliement, la coloration syntaxique...
+De plus, depuis la version 4.0, Vim dispose d’une interface utilisateur graphique moderne, GVim.
+Il existe deux autres versions de Vim : l'une, simplifiée pour les utilisateurs débutants, eVim (le "e" pour easy) ; et l'autre, Vim-Tiny, plus compacte. Cette dernière est une version minimale de vim compilée sans interface graphique, avec seulement un petit sous-ensemble de fonctions : elle prend à peine plus d'espace-mémoire que nvi. Certaines fonctionnalités, telles que la coloration syntaxique, ne sont pas incluses dans Vim-Tiny.
+Vim est utilisable sur de nombreux systèmes d’exploitation et est disponible sur pratiquement toutes les distributions GNU/Linux. En général, l’exécutable vi sur Linux correspond à un lien ou à un alias appelant Vim. Quand Vim est déjà lancé, il est possible de connaître sa version en utilisant la commande :version du mode Normal.
+
+
+== Histoire ==
+
+
+=== Bref historique sur ed/vi ===
+Au début des années 1970, l’éditeur standard d’Unix était ed de Ken Thompson. ed ne permettait qu’une édition ligne par ligne, et n’affichait pas l’intégralité du texte comme cela est aujourd’hui habituel. Il fallait pour cela demander explicitement l’affichage du fichier (par la commande :li), sans possibilité de modifier le texte autrement qu'en donnant d'abord le numéro de la ligne à modifier. Pour pouvoir travailler malgré les limites imposées par l’édition ligne par ligne, il était nécessaire d’utiliser un mode dédié à l’insertion et un mode dédié au passage de commandes.
+Les commandes de ed sont principalement composées d’une lettre, précédée d’une indication donnant les lignes sur lesquelles agir. En 1976, quand Bill Joy développa vi, le progrès
+fut considérable, puisqu’il considérait l’écran dans son ensemble et qu’il reportait les modifications apportées au texte édité dans la représentation qu’il en donnait. vi a hérité de ed le concept des modes et les instructions obscures. On retrouve aujourd’hui encore ces particularités dans les éditeurs compatibles avec vi, en particulier Vim.
+
+
+=== Développement de Vim ===
+
+À la fin des années 1980, quand Bram Moolenaar s’est acheté un ordinateur de marque Commodore Amiga, il souhaitait avoir la possibilité d’utiliser l’éditeur qu’il connaissait et auquel il était habitué sur UNIX ; mais vi n’était pas porté sur Amiga : il a donc développé en 1988 la version 1.0 de Vim, sur la base de « Stevie » (STvi), un clone de vi écrit pour Atari. À cette époque, Vim signifiait Vi IMitation, car son objectif principal consistait d’abord à reproduire les fonctionnalités de vi. En 1991, Vim 1.14 fut distribué pour la première fois sur la disquette Fred Fish disk #591, une collection de logiciels libres pour Amiga. En 1992, la version 1.22 de Vim est portée sur UNIX et MS-DOS. C’est à ce moment que l’acronyme Vim a changé de signification pour devenir « VI iMproved (aMélioré en français) ».
+Au cours des années suivantes, Vim a connu de nombreuses améliorations. Une étape importante fut l’introduction des fenêtres multiples dans la version 3.0 (en 1994). Avant cela, il était déjà possible d’éditer plusieurs fichiers dans Vim, mais un seul fichier était visible à la fois, il n’était pas possible d’afficher plusieurs fichiers simultanément. Avec la version 4.0 (datant de 1996) fut ajoutée pour la première fois une interface utilisateur graphique, en grande partie écrite par Robert Webb. 
+La version 6.0 a vu le jour en 2001 : repli du texte, greffons, support de l’internationalisation, partage vertical des fenêtres. Depuis la sortie de la version 5.4 en juillet 1999, des patchs sont publiés pour corriger les erreurs et éliminer les bugs.
+La dernière étape notable de Vim est survenue en 2006 avec la version 7.0. Son développement a débuté en 2004  et elle intègre en particulier la vérification et la correction orthographique, le support des onglets et un complètement personnalisable selon les langages. Le principe fondamental du développeur principal de Vim reste toujours le même : Vim doit rester un éditeur de texte et être le plus possible au service de l’utilisateur.
+Vim suit un rythme de développement très actif et des nouvelles versions sont publiées quotidiennement,.
+
+
+=== Résumé des versions ===
+Note : Dans son aide interne, Vim comporte le détail des modifications entre chaque version. Par exemple, la commande du mode Normal :help version-5.4 permet de connaître les différences entre les versions 5.3 et 5.4. De cette manière, il est possible de remonter jusqu’aux différences entre les versions 3.0 et 4.0.
+
+
+== Caractéristiques fonctionnelles ==
+
+
+=== Vue générale ===
+Multi-tampons : édition de plusieurs fichiers simultanément
+Multifenêtrage : gestion des fenêtres, partages horizontaux ou verticaux
+Mise en forme du texte et mode Visuel, permettant les opérations sur des blocs
+Annulation et restauration illimitées
+Nombreux fichiers de support pour l’édition de fichiers de type prédéfini (notamment plus de 200 fichiers de configuration pour la coloration syntaxique)
+Coloration syntaxique adaptée au langage en cours d’édition
+Indentation automatique adaptée au langage
+Langage de script intégré pour ajouter ou étendre des fonctionnalités
+Complément des commandes, des mots ou des noms de variables
+Auto-commandes (elles permettent par exemple d’automatiser la décompression des fichiers zippés avant de les éditer)
+Reconnaissance et conversion des formats de fichier (Unix, MS-DOS ou Mac)
+Historique des commandes, des recherches… facilement consultable
+Enregistrement et exécution de macro-commandes
+Intégration possible (et optionnelle) de langages interprétés dans le langage de script de Vim : Perl, Python, Ruby, Tcl, et à partir de la version 7 MzScheme
+Support de l’édition de droite à gauche (hébreu, arabe, persan, etc.)
+Repli de certaines parties du texte pour faire émerger une structure, y compris dans le mode « différences » pour comparer des versions successives d’un même fichier
+Gestion des marqueurs pour se déplacer facilement dans le code source d’un programme
+Interface graphique optionnelle disponible pour différentes bibliothèques graphiques (Windows, Mac, GTK+, Motif…)
+Hautement configurable, préférences systèmes et personnelles sont prises en compte
+Pour les puristes : il existe un mode quasiment compatible à 100 % avec vi, jusqu'aux erreurs et bugs manifestes de ce dernier
+Plusieurs « registres », permettant d’avoir un presse-papiers avec des contenus différents ; le contenu des registres est facilement consultable et copiable dans le fichier éditéL’efficacité de Vim est notamment due à plusieurs améliorations marquantes par rapport à vi.
+
+
+=== Plates-formes ===
+Vim fonctionne sur de nombreux systèmes d’exploitation. Cet aspect multi-plateforme est important pour les utilisateurs travaillant sur plusieurs environnements différents, comme les administrateurs systèmes. Avec Vim, ils trouvent un éditeur quasi identique pour tous ces systèmes :
+AmigaOS, Atari MiNT, BeOS, MS-DOS, Mac OS, NeXTSTEP, OS/2, OSF, RiscOS, SGI, UNIX, VMS, Win16 + Win32 (Windows 95/98/2k/NT/XP/Vista/2k3), et tous les systèmes BSD et GNU/Linux.
+
+
+=== Aide interne ===
+
+Vim possède une documentation établie selon le précepte : « Une fonctionnalité non documentée est une fonctionnalité inutile ». La documentation en mode texte occupe pratiquement 4 mégaoctets. L’utilisateur a la possibilité d’utiliser différentes fonctions de recherche.
+Grâce à la coloration syntaxique et à une manière spécifique de rédiger les fichiers d’aide, les notions principales sont mises en valeur. Les sujets documentés (désignés par des mots-clés) ont une
+couleur particulière et apparaissent entourés par des barres verticales. Le déplacement dans l’aide s’effectue grâce à des liens hypertextes. Cette navigation se pratique à l’aide de commandes claviers, mais est également possible par l’intermédiaire de la souris, dans l’interface graphique.
+Il existe d’autres commandes encore pour faciliter les recherches de l’utilisateur, en particulier la commande :helpgrep (Image 3). Avec cette commande, l’utilisateur peut chercher un mot-clé au travers de la totalité de l’aide, afficher les résultats dans une fenêtre et atteindre l’emplacement
+correspondant dans les fichiers de l’aide. Il est possible de faire des recherches sur les résultats de la recherche afin d’y trouver d’autres mots-clés.
+L’aide interne est complétée par une version HTML disponible en ligne sur Internet, une Foire Aux Questions, une littérature nombreuse et variée en français ou en anglais, et bien d’autres sources d’informations encore. Le site (en) VimDoc donne accès à de nombreuses informations sur la documentation existante.
+L'installation de Vim sur un ordinateur se fait conjointement à Vimtutor, un programme tutoriel visant à aider les utilisateurs débutants à prendre en main les commandes basiques de Vim en environ une demi-heure,.
+
+
+=== Comparaison de fichiers ===
+
+Vim donne la possibilité d’afficher facilement deux (ou trois) versions d’un fichier côte à côte et de mettre dans une couleur différente leurs différences. Les lignes ajoutées ou supprimées ont leur propre couleur, tandis que les lignes communes sont repliées afin de les masquer.
+Le défilement vertical des fenêtres des fichiers comparés est synchronisé, afin de conserver les lignes identiques constamment face à face. Des commandes permettent de placer le curseur sur les différences suivantes ou précédentes ([c et ]c) puis de reporter ces différences depuis ou vers l’autre fichier (do et dp). La coloration syntaxique est automatiquement remise à jour pour en tenir compte.
+
+
+=== Fonctionnalités pour les programmeurs ===
+Vim est un éditeur de texte écrit pour les programmeurs. Pour leur faciliter la tâche, il existe un mode de fonctionnement appelé Quickfix, simplifiant le cycle « édition-compilation-correction ». Comme dans un environnement de développement intégré, le code source édité est directement compilé depuis Vim, qui appelle le compilateur approprié. Si des erreurs surviennent pendant la compilation, elles sont affichées dans une nouvelle fenêtre. Dans la fenêtre contenant le code source, il est alors possible de sauter directement à la ligne concernée par le message d’erreur pour la corriger. Ainsi un nouveau cycle de compilation peut recommencer et les éventuelles nouvelles erreurs être corrigées. Vim offre aussi la coloration syntaxique et la possibilité de replier certaines parties de leur code (voir :help quickfix).
+
+
+=== Langage de script Vim ===
+
+Vim dispose d’un langage de script programmable et extensible. Ainsi les traitements trop complexes pour être effectués à l’aide d’une macro peuvent être automatisés. Les scripts Vim peuvent être appelés explicitement au démarrage de Vim avec l’option -s de la ligne de commande, ou bien automatiquement s’ils se trouvent dans le répertoire approprié. Quand Vim est déjà démarré, la commande :source permet de les charger. Un exemple de script Vim est le fichier de démarrage, .vimrc sur Unix et _vimrc sur MS-Windows, qui contient l’ensemble des réglages à effectuer. Ce fichier est automatiquement chargé au lancement de Vim.
+Dans le langage de script Vim, toutes les commandes du mode ligne-de-commande sont disponibles en tant qu’instructions, ainsi que les commandes du mode Normal grâce à la commande :normal. Il existe deux types de données : les Nombres (entiers) et les Chaînes de caractères (plus, à partir de la version 7, listes, dictionnaires et pointeurs de fonction ; à partir de la version 7.2, nombres en virgule flottante). Les booléens sont évalués comme des Nombres, avec la convention suivante : nul = FAUX et non nul = VRAI. Les principaux opérateurs de comparaisons, les opérateurs logiques et
+les opérations arithmétiques de base sont intégrés. Les structures de contrôle if - then - elseif - else et les boucles while sont disponibles. L’utilisateur peut définir ses propres fonctions et dispose de plus de cent fonctions prédéfinies—essentiellement des appels systèmes. Les scripts peuvent être testés en mode de débogage.
+Avant d’écrire un script, il vaut mieux vérifier la page des  scripts Vim, pour s’assurer qu’un script fonctionnellement équivalent n’existe pas déjà. Bien que de nombreux scripts soient destinés à faciliter la programmation, les utilisateurs non-programmeurs auront tout à gagner à y jeter un œil. En effet, tout utilisateur ayant résolu un problème général a pu mettre ses scripts à disposition. Par exemple, le script Vim « calendar » permet d’organiser ses échéances de manière très simple. Une fois copié dans le répertoire adapté, il suffit de l’appeler avec la commande :Calendar dans Vim.
+
+
+== Modes ==
+Vim est un éditeur modal. Cela signifie que l’on effectue différentes tâches dans différents modes, ce qui pose bien souvent des problèmes aux débutants. Pour voir dans quel mode on se trouve, il est possible d’activer l’option 'showmode'. Seuls les six modes de base sont indiqués et brièvement décrits dans cet article. Les cinq modes supplémentaires sont des variantes des modes de base. Ils ne seront pas exposés ici, afin de faciliter la compréhension.
+Pour plus d’informations, consultez l’aide intégrée de Vim :help vim-modes.
+
+
+=== Mode Normal ===
+Vim démarre en mode Normal, aussi appelé mode Commande. Dans ce mode, il est par exemple possible de copier des lignes ou de les déplacer grâce à des raccourcis, de mettre du texte en forme, ou de se déplacer dans le fichier. Il s’agit du mode central, en ce sens qu’il permet d’accéder à tous les autres modes.
+
+
+=== Mode Insertion ===
+Le mode Insertion est le plus naturel, car il se comporte comme la plupart des autres éditeurs. On peut passer du mode Normal au mode Insertion avec la commande i (comme « Insertion »). Il existe de nombreuses autres commandes pour passer dans ce mode. En mode Insertion, l’édition du texte se fait de manière habituelle. eVim démarre directement dans ce mode. Mais dans ce cas, toutes les commandes du mode Normal ne sont pas disponibles ou facilement accessibles, ce qui est contraire au critère d’efficacité prôné pour Vim. La touche Echap permet de retourner dans le mode Normal.
+
+
+=== Mode Ligne-de-commande ===
+On atteint ce mode en tapant d’abord le caractère deux-points « : ». Ensuite, un certain nombre de commandes peuvent être saisies. Parmi les plus courantes on trouve :
+
+« w » pour sauvegarder les modifications apportées au fichier courant
+« q » pour quitter
+« x » pour sauvegarder les modifications apportées au fichier courant puis quitterAprès un appui final sur la touche Entrée, la commande est exécutée et Vim retourne dans le mode Normal (exceptions faites des commandes « q » et « x »).
+
+
+=== Mode Visuel ===
+Ce mode constitue une amélioration par rapport à vi et ressemble au mode Normal. À l’aide d’un raccourci, une zone de texte, par exemple une suite de caractères (raccourci v), un ensemble de lignes (raccourci MAJ-V) ou bloc rectangulaire (raccourci CTRL-V), peut être délimitée à l’aide des touches fléchées. La zone ainsi sélectionnée est signalée par une coloration particulière. Ensuite, des commandes du mode Normal peuvent être appliquées à cette zone. Dans ce mode, le travail est facilité par le fait que l’on voit avec précision la zone sur laquelle on agit.
+
+
+=== Mode Sélection ===
+Ce mode débute par le mode Visuel, dans lequel on choisit une zone de texte. Ensuite, on accède au mode Sélection avec le raccourci CTRL-G. Dans ce mode, dès qu’un caractère imprimable est saisi, la zone sélectionnée est supprimée et Vim passe en mode Insertion, c’est-à-dire que le texte sélectionné est remplacé par le texte tapé. La touche Echap permet de sortir de ce mode. Ce mode constitue une amélioration par rapport à vi.
+
+
+=== Mode Ex ===
+Ce mode ressemble au mode Ligne-de-commande, à la différence que Vim ne
+retourne pas dans le mode Normal après l’exécution de chaque commande. Le raccourci Q permet de passer dans ce mode tandis que :vi permet d’en sortir.
+
+
+== Détracteurs et défenseurs ==
+Vim est réputé pour être l’un des éditeurs de texte les plus puissants, traditionnellement en concurrence avec Emacs ; la lutte entre Vimistes et Emacistes est une source intarissable de troll.
+
+
+=== Critiques ===
+Les habitués d'éditeurs simples comme Gedit ou même, en mode texte, nano, ne seront pas tout de suite pleinement efficaces avec des éditeurs tels que vi ou Vim, dont le principe de fonctionnement diffère de beaucoup d'autres éditeurs par ses deux modes, « commande » et « insertion ». L’utilisateur débutant peut éprouver des difficultés dans l'utilisation des différents modes.
+Pour le néophyte, le fonctionnement d'Emacs peut sembler plus naturel : chaque pression d'une touche du clavier affiche le caractère correspondant à l'écran. Emacs, pour sa part, ne nécessite pas de va-et-vient entre les modes « commande » et « insertion ». Vim tout comme Emacs, en raison de leur puissance, sont riches de commandes et chacun doit de ce fait être étudié quelque temps pour pouvoir être utilisé.
+De nombreuses commandes de Vim (comme de Vi) possèdent des raccourcis obscurs que très peu d'utilisateurs connaissent intégralement, ce qui peut entraîner des frustrations. En contrepartie, Vim et Vi accélèrent considérablement les tâches répétitives comme on en rencontre dans une migration ou un portage de code source.
+
+
+=== Défenseurs ===
+Les défenseurs de Vim répondent que la contrepartie du temps important de formation est une productivité plus importante comparée aux autres éditeurs. Les raccourcis des commandes sont bien souvent des initiales des phrases indiquant la tâche à effectuer. Par exemple la commande dw efface un mot ("delete word" traduction littérale en anglais). Ces raccourcis permettent d’effectuer de nombreux traitements sans quitter le clavier et avec peu de saisie, comme copier ou coller du texte, le mettre en forme, effectuer un tri, ce qui n’est pas toujours immédiat avec d’autres éditeurs de texte. Bien qu’entièrement contrôlable avec le clavier, Vim permet aussi de travailler avec des menus et la souris en mode graphique.
+Les défenseurs de Vim comparent souvent celui-ci à Emacs car, pour l'édition de texte, le paramétrage des raccourcis par défaut y est plus rapide et ergonomique[réf. nécessaire]. Les défenseurs de Vim disent par exemple souvent qu'Emacs est un acronyme de « Esc Meta Alt Ctrl Shift », raillant ainsi les nombreuses combinaisons de touches nécessaires pour activer les diverses fonctions d'Emacs.
+Enfin, Vim est léger et rapide. Disponible sur de nombreuses plates-formes, il convient parfaitement au traitement des fichiers de configuration.
+
+
+=== Faits établis et consensus ===
+Pour pouvoir travailler efficacement avec Vim, il est d’abord nécessaire de comprendre le principe des modes. Avec une connaissance de base de quelques commandes du mode Normal, Vim est utilisable. Toutefois, pour travailler efficacement, et devenir potentiellement plus productif qu’avec tout autre éditeur, il est nécessaire de connaître un grand nombre de raccourcis et d’atteindre une certaine maîtrise dans leur utilisation.
+L’une des autres qualités de Vim est qu’il est hautement paramétrable (raccourcis, touches, menus, définition de nouvelles fonctions, etc.). Cette caractéristique a permis notamment d’introduire le mode Vim Easy (depuis la série 6.x), permettant à Vim de se comporter comme un éditeur de texte classique (« amodal »), ce qui le met à la portée des non-initiés.
+
+
+== Fait notable ==
+Gmail reprend certaines touches de fonction de Vim, pour pouvoir naviguer et traiter les messages de la boîte aux lettres sans l’aide de la souris (si l’option « Raccourcis clavier » est activée). Cette reprise des touches de raccourci, témoigne d'un certain niveau de popularité de Vim et de son utilisation dans les milieux informatiques.D'autres sites tels que Facebook ou encore Github utilisent les raccourcis Vim pour la navigation.
+
+
+== Récompenses et distinctions ==
+En 1999, Vim a reçu le Linuxworld Editors’ Choice Award puis, en 2000, le Slashdot Beanie Award en tant que Best Open Source Text Editor
+De 2001 à 2005, Vim a gagné le prix Readers’ Choice Awards du Linux Journal dans la catégorie Favorite Text Editor.
+
+
+== Licence ==
+Vim est un logiciel libre dont la licence est compatible avec la GPL, ce qui signifie que vous pouvez le distribuer librement. Vim est aussi un caritaticiel — c’est-à-dire que si vous l’utilisez, vous êtes encouragé à faire un don en faveur d’ICCF Holland, pour les orphelins en Ouganda. Cette association, basée aux Pays-Bas, a été fondée par Bram Moolenaar et il en est le trésorier.
+
+
+== Développement et communauté ==
+Vim est principalement développé par Bram Moolenaar, aidé par de nombreux contributeurs. La page correspondante de l’aide intégrée (:help credits) fait figurer plus de 50 contributeurs. À ceux-ci s’ajoutent de nombreux anonymes, qui offrent leur aide, non seulement pour les futures fonctionnalités de Vim, mais aussi pour le portage sur d’autres systèmes d’exploitation, les tests fonctionnels, la recherche de bugs, la précision de la documentation ou la traduction. De plus, une attention particulière est donnée aux utilisateurs, sous la forme de sondage sur les (en)  fonctionnalités les plus demandées,
+l’intégration de Vim dans d’autres projets, etc. 
+Tous les utilisateurs peuvent publier leurs scripts Vim ou donner leurs astuces et conseils d’utilisation sur le site Internet de Vim. Une liste de diffusion très active permet à chacun, débutant ou utilisateur expérimenté, d’obtenir rapidement des réponses à ses questions.
+De plus, des manuels en ligne, forums, wikis, ainsi que des tutoriels ont été mis en place par la communauté pour aider les utilisateurs. Il existe même une option de jeu d'apprentissage ludique, Vim Adventures.
+
+
+== Notes et références ==
+
+
+== Voir aussi ==
+
+
+=== Articles connexes ===
+Éditeurs de texte :
+ed, principal éditeur ligne à ligne
+vi, à l’origine de Vim
+Emacs, concurrent traditionnel de Vim dans le cadre de la guerre d’éditeurs
+The Hessling Editor, inspiré des mainframes, qui fait le choix de n'exécuter de commande que lorsqu'on frappe la touche Retour
+Neovim, est un clone de Vim, qui vise à en améliorer l'extensibilité et la maintenabilité
+
+
+=== Bibliographie ===
+(en) Steve Oualline, Vi IMproved, Vim, Indianapolis, Ind, New Riders, 2001, 572 p. (ISBN 978-0-7357-1001-6, OCLC 48038134).
+(en) Elbert Hannah, Linda Lamb et Arnold Robbins, Learning the Vi and Vim Editors, O'Reilly, 2008, 7e éd., 470 p.
+(en) Drew Neil, Practical Vim : Edit Text at the Speed of Thought, The Pragmatic Programmers, 2015, 320 p. (ISBN 978-1-68050-127-8)
+(en) Kim Schulz, Hacking Vim : a cookbook to get the most out of the latest Vim editor, Birmingham England, Packt Pub, 2007, 213 p. (ISBN 978-1-84719-094-9, lire en ligne). 
+(de) Reinhard Wobst, Vim ge-packt : vi improved, Bonn, Mitp, 2004, 363 p. (ISBN 978-3-8266-1425-5, OCLC 76692512).
+Vincent Jousse, Vim pour les humains, 2017 (lire en ligne)
+
+
+=== Liens externes ===
+
+(en) Site officiel de Vim
+Wiki francophone de la communauté de ViM
+Introduction à VIM
+Utilisation de VIM
+ Portail de l’informatique   Portail des logiciels libres

@@ -1,0 +1,7576 @@
+revision: 21655508
+title: Derivasjon
+url: https://no.wikipedia.org/wiki/Derivasjon
+
+
+---
+
+Derivasjon er en operasjon i matematikk der en bestemmer den deriverte av en funksjon.  For en funksjon av én reell variabel 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+     
+   er den deriverte definert ved
+
+  
+    
+      
+        f
+        
+        
+          
+          ′
+        
+        (
+        x
+        )
+        =
+        
+          lim
+          
+            h
+            →
+            0
+          
+        
+        
+          
+            
+              f
+              (
+              x
+              +
+              h
+              )
+              −
+              f
+              (
+              x
+              )
+            
+            h
+          
+        
+      
+    
+     
+  ,dersom grenseverdien eksisterer.  Den deriverte er et mål for endringen i funksjonsverdier 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+     
+   når den frie variabelen 
+  
+    
+      
+        x
+      
+    
+     
+   endres.  Geometrisk er den deriverte et uttrykk for stigningstallet til tangenten til funksjonen.
+For funksjoner av flere variable kan en definere ulike typer deriverte, som retningsderivert, partiellderivert og totalderivert.
+Studiet av derivasjon og differensialer kalles differensialregning.  Analysens fundamentalteorem sier at derivasjon og integrasjon er inverse operasjoner, og en bruker derfor ofte betegnelsen differensial- og integralregning.  Dette fagfeltet er svært viktig både for matematisk analyse og for anvendt matematikk.
+
+
+== Derivasjon av en reell funksjon av én variabel ==
+En reell funksjon av én variabel er en funksjon 
+  
+    
+      
+        f
+        :
+        
+          R
+        
+        →
+        
+          R
+        
+      
+    
+     
+  .  Et enkelt eksempel er funksjonen som beskriver en rett linje.  For en rett linje er stigningstallet lik den deriverte til
+funksjonen som beskriver linjen.  
+
+
+=== Stigningstallet for en rett linje ===
+
+En rett linje kan beskrives med funksjonen
+
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        a
+        x
+        +
+        b
+      
+    
+     
+  .Hvis koeffisienten 
+  
+    
+      
+        b
+      
+    
+     
+   er lik null, så er funksjonen lineær.  
+Koeffisienten 
+  
+    
+      
+        a
+      
+    
+     
+   er stigningstallet som styrer vinkelen 
+  
+    
+      
+        θ
+      
+    
+     
+   som linjen danner med 
+  
+    
+      
+        x
+      
+    
+     
+  -aksen:
+
+  
+    
+      
+        tan
+        ⁡
+        θ
+        =
+        a
+      
+    
+     
+  .Gitt to punkt 
+  
+    
+      
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          y
+          
+            1
+          
+        
+        )
+      
+    
+     
+   og 
+  
+    
+      
+        (
+        
+          x
+          
+            2
+          
+        
+        ,
+        
+          y
+          
+            2
+          
+        
+        )
+      
+    
+     
+  , så finner en stigningstallet ved
+
+  
+    
+      
+        a
+        =
+        
+          
+            
+              Δ
+              y
+            
+            
+              Δ
+              x
+            
+          
+        
+        =
+        
+          
+            
+              
+                y
+                
+                  2
+                
+              
+              −
+              
+                y
+                
+                  1
+                
+              
+            
+            
+              
+                x
+                
+                  2
+                
+              
+              −
+              
+                x
+                
+                  1
+                
+              
+            
+          
+        
+      
+    
+     
+  Symbolet 
+  
+    
+      
+        Δ
+      
+    
+     
+   brukes for å beskrive en endring i en størrelse, og 
+  
+    
+      
+        Δ
+        x
+      
+    
+     
+   og 
+  
+    
+      
+        Δ
+        y
+      
+    
+     
+   er samsvarende endringer:
+
+  
+    
+      
+        Δ
+        y
+        =
+        f
+        (
+        x
+        +
+        Δ
+        x
+        )
+        −
+        f
+        (
+        x
+        )
+      
+    
+     
+  Funksjonen som beskriver en rett linje, har derivert 
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        x
+        )
+        =
+        a
+      
+    
+     
+  .  
+
+
+=== Formell definisjon av den deriverte ===
+En funksjon 
+  
+    
+      
+        f
+        :
+        U
+        →
+        
+          R
+        
+      
+    
+     
+   som avbilder et åpent intervall 
+  
+    
+      
+        U
+      
+    
+     
+   av reell tall, er deriverbar i 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+        ∈
+        U
+      
+    
+     
+   hvis den følgende grenseverdien eksisterer:
+
+  
+    
+      
+        
+          lim
+          
+            x
+            →
+            
+              x
+              
+                0
+              
+            
+          
+        
+        
+          
+            
+              f
+              (
+              x
+              )
+              −
+              f
+              (
+              
+                x
+                
+                  0
+                
+              
+              )
+            
+            
+              x
+              −
+              
+                x
+                
+                  0
+                
+              
+            
+          
+        
+        =
+        
+          lim
+          
+            h
+            →
+            0
+          
+        
+        
+          
+            
+              f
+              (
+              
+                x
+                
+                  0
+                
+              
+              +
+              h
+              )
+              −
+              f
+              (
+              
+                x
+                
+                  0
+                
+              
+              )
+            
+            h
+          
+        
+      
+    
+     
+     (med 
+  
+    
+      
+        h
+        =
+        Δ
+        x
+        =
+        x
+        −
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+  )Grenseverdien kalles den deriverte til 
+  
+    
+      
+        f
+      
+    
+     
+   med hensyn på 
+  
+    
+      
+        x
+      
+    
+     
+   i 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+  .  Dersom grenseverdien ikke eksisterer, så er funksjonen ikke deriverbar i punktet.  
+Hvis funksjonen er deriverbar i et hvert punkt i intervallet, sies funksjonen å være deriverbar i intervallet.  Den deriverte definerer da en ny funksjon i intervallet, ofte skrevet som 
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        x
+        )
+      
+    
+     
+  
+eller 
+  
+    
+      
+        
+          
+            
+              d
+              f
+            
+            
+              d
+              x
+            
+          
+        
+      
+    
+     
+  :
+
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        x
+        )
+        =
+        
+          
+            
+              d
+              f
+            
+            
+              d
+              x
+            
+          
+        
+        =
+        
+          lim
+          
+            h
+            →
+            0
+          
+        
+        
+          
+            
+              f
+              (
+              x
+              +
+              h
+              )
+              −
+              f
+              (
+              x
+              )
+            
+            h
+          
+        
+        
+        x
+        ∈
+        U
+      
+    
+     
+  .Ordet «differensierbar» brukes synonymnt med «deriverbar».
+Det eksisterer mange ulike skriveformer for funksjonen som er resultat av derivasjonen, drøftet i det følgende avsnittet Notasjon.
+En funksjon kan være deriverbar i hele 
+  
+    
+      
+        
+          R
+        
+      
+    
+     
+  , men kan også ha punkter der den ikke er deriverbar. Det eksisterer funksjoner som ikke er deriverbare i noe punkt, for eksempel funksjonen som beskriver
+Koch-kurven, navngitt etter Helge von Koch.
+
+
+=== Eksempler ===
+Den deriverte til funksjonen 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          x
+          
+            2
+          
+        
+        −
+        3
+        x
+        +
+        2
+      
+    
+     
+   i punktet 
+  
+    
+      
+        x
+        =
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+   kan finnes ved å forenkle differensekvotienten
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    
+                      f
+                      (
+                      
+                        x
+                        
+                          0
+                        
+                      
+                      +
+                      h
+                      )
+                      −
+                      f
+                      (
+                      
+                        x
+                        
+                          0
+                        
+                      
+                      )
+                    
+                    h
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        
+                          (
+                        
+                      
+                      (
+                      
+                        x
+                        
+                          0
+                        
+                      
+                      +
+                      h
+                      
+                        )
+                        
+                          2
+                        
+                      
+                      −
+                      3
+                      (
+                      
+                        x
+                        
+                          0
+                        
+                      
+                      +
+                      h
+                      )
+                      +
+                      2
+                      
+                        
+                          )
+                        
+                      
+                      −
+                      (
+                      
+                        x
+                        
+                          0
+                        
+                        
+                          2
+                        
+                      
+                      −
+                      3
+                      
+                        x
+                        
+                          0
+                        
+                      
+                      +
+                      2
+                      )
+                    
+                    h
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        x
+                        
+                          0
+                        
+                        
+                          2
+                        
+                      
+                      +
+                      2
+                      
+                        x
+                        
+                          0
+                        
+                      
+                      h
+                      +
+                      
+                        h
+                        
+                          2
+                        
+                      
+                      −
+                      3
+                      
+                        x
+                        
+                          0
+                        
+                      
+                      −
+                      3
+                      h
+                      +
+                      2
+                      −
+                      
+                        x
+                        
+                          0
+                        
+                        
+                          2
+                        
+                      
+                      +
+                      3
+                      
+                        x
+                        
+                          0
+                        
+                      
+                      −
+                      2
+                    
+                    h
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    
+                      2
+                      
+                        x
+                        
+                          0
+                        
+                      
+                      h
+                      +
+                      
+                        h
+                        
+                          2
+                        
+                      
+                      −
+                      3
+                      h
+                    
+                    h
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                2
+                
+                  x
+                  
+                    0
+                  
+                
+                +
+                h
+                −
+                3.
+              
+            
+          
+        
+      
+    
+     
+  Den deriverte finnes ved å ta grenseverdien når 
+  
+    
+      
+        h
+        →
+        0
+      
+    
+     
+  :
+
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        
+          lim
+          
+            h
+            →
+            0
+          
+        
+        (
+        2
+        
+          x
+          
+            0
+          
+        
+        +
+        h
+        −
+        3
+        )
+        =
+        2
+        
+          x
+          
+            0
+          
+        
+        −
+        3
+      
+    
+     
+  .Vanligvis finnes den deriverte av en funksjon ved hjelp av regneregler for derivasjon og ikke ved bruk av definisjonen, slik som er gjort her.  Regnereglene må imidlertid bevises ved hjelp av definisjonen for den deriverte.  
+
+Et eksempel på en funksjon som ikke er deriverbar overalt, er gitt ved absoluttverdi-funksjonen:
+
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          |
+        
+        x
+        
+          |
+        
+        =
+        
+          {
+          
+            
+              
+                
+                  x
+                  ,
+                
+                
+                  
+                    hvis 
+                  
+                  x
+                  ≥
+                  0
+                
+              
+              
+                
+                  −
+                  x
+                  ,
+                
+                
+                  
+                    hvis 
+                  
+                  x
+                  <
+                  0.
+                
+              
+            
+          
+          
+        
+      
+    
+     
+  For 
+  
+    
+      
+        x
+        ∈
+        (
+        −
+        ∞
+        ,
+        0
+        )
+      
+    
+     
+   er den deriverte lik -1, mens i intervallet 
+  
+    
+      
+        (
+        0
+        ,
+        ∞
+        )
+      
+    
+     
+   er den deriverte lik 1.  For 
+  
+    
+      
+        x
+        =
+        0
+      
+    
+     
+   eksisterer de to ensidige grenseverdiene, men da disse ikke er like,
+så er funksjonen ikke deriverbar for dette argumentet:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  lim
+                  
+                    x
+                    ↗
+                    0
+                  
+                
+                
+                  
+                    
+                      f
+                      (
+                      x
+                      )
+                      −
+                      f
+                      (
+                      0
+                      )
+                    
+                    
+                      x
+                      −
+                      0
+                    
+                  
+                
+                 
+              
+              
+                
+                =
+                 
+                
+                  lim
+                  
+                    x
+                    ↗
+                    0
+                  
+                
+                
+                  
+                    
+                      −
+                      x
+                      −
+                      0
+                    
+                    
+                      x
+                      −
+                      0
+                    
+                  
+                
+                 
+              
+              
+              
+                
+                =
+                 
+                −
+                1
+              
+            
+            
+              
+                
+                  lim
+                  
+                    x
+                    ↘
+                    0
+                  
+                
+                
+                  
+                    
+                      f
+                      (
+                      x
+                      )
+                      −
+                      f
+                      (
+                      0
+                      )
+                    
+                    
+                      x
+                      −
+                      0
+                    
+                  
+                
+                 
+              
+              
+                
+                =
+                 
+                
+                  lim
+                  
+                    x
+                    ↘
+                    0
+                  
+                
+                
+                  
+                    
+                      x
+                      −
+                      0
+                    
+                    
+                      x
+                      −
+                      0
+                    
+                  
+                
+                 
+              
+              
+              
+                
+                =
+                 
+                1
+              
+            
+          
+        
+      
+    
+     
+  .Et slik punkt hvor den deriverte eksisterer på begge sider, men hvor de ensidige grenseverdiene er ulike, kalles et knekkpunkt for grafen til funksjonen.  
+
+
+=== Høyere-ordens deriverte ===
+Hvis den deriverte til funksjonen 
+  
+    
+      
+        f
+      
+    
+     
+   er deriverbar, kan man definere den andrederiverte eller dobbeltderiverte til 
+  
+    
+      
+        f
+      
+    
+     
+   som den deriverte til den førstederiverte.
+Denne nye funksjonen kan skrives som 
+  
+    
+      
+        
+          f
+          ″
+        
+        (
+        x
+        )
+      
+    
+     
+  .  Tilsvarende kan man definere den tredje deriverte 
+  
+    
+      
+        
+          f
+          ‴
+        
+        (
+        x
+        )
+      
+    
+     
+  , og så videre.
+Den n-te deriverte kalles også den deriverte av orden n.  
+Ved å bruke samme eksempel som tidligere, finner en
+
+  
+    
+      
+        
+          
+            
+              
+                f
+                (
+                x
+                )
+              
+              
+                
+                =
+                
+                  x
+                  
+                    2
+                  
+                
+                −
+                3
+                x
+                +
+                2
+              
+            
+            
+              
+                
+                  f
+                  ′
+                
+                (
+                x
+                )
+              
+              
+                
+                =
+                2
+                x
+                −
+                3
+              
+            
+            
+              
+                
+                  f
+                  ″
+                
+                (
+                x
+                )
+              
+              
+                
+                =
+                2
+              
+            
+            
+              
+                
+                  f
+                  ‴
+                
+                (
+                x
+                )
+              
+              
+                
+                =
+                0
+              
+            
+          
+        
+      
+    
+     
+  
+
+
+=== Geometrisk tolkning ===
+
+Verdien av den deriverte i et punkt generaliserer stigningskoeffisienten for en rett linje.  For en vilkårlig deriverbar funksjon vil verdien av den deriverte være lik stigningskoeffisienten til tangenten til funksjonsgrafen 
+i punktet.  
+For å definere tangenten starter en med en sekant gjennom to punkt på funksjonsgrafen, 
+  
+    
+      
+        (
+        
+          x
+          
+            0
+          
+        
+        ,
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        )
+      
+    
+     
+   og 
+  
+    
+      
+        (
+        
+          x
+          
+            0
+          
+        
+        +
+        h
+        ,
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        +
+        h
+        )
+        )
+      
+    
+     
+  .  Ved å la 
+  
+    
+      
+        h
+      
+    
+     
+   gå mot null, som i grenseverdien som definerer den deriverte, vil sekanten nærme seg tangenten som grense.  
+Ligningen for tangenten i punktet 
+  
+    
+      
+        (
+        
+          x
+          
+            0
+          
+        
+        ,
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        )
+      
+    
+     
+   er
+
+  
+    
+      
+        y
+        −
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        
+          f
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        (
+        x
+        −
+        
+          x
+          
+            0
+          
+        
+        )
+      
+    
+     
+  Den andrederiverte er et mål for krumningen til grafen i et punkt.  En rett linje har ingen krumning, og funksjonen har en andrederivert lik null.  
+Generelt har grafen til en vilkårlig funksjon en krumning 
+  
+    
+      
+        κ
+      
+    
+     
+   gitt ved det følgende uttrykket:
+
+  
+    
+      
+        κ
+        =
+        
+          
+            
+              f
+              ″
+            
+            
+              (
+              1
+              +
+              
+                f
+                
+                  ′
+                  
+                    2
+                  
+                
+              
+              
+                )
+                
+                  3
+                  
+                    /
+                  
+                  2
+                
+              
+            
+          
+        
+      
+    
+     
+  
+
+
+=== Aritmetisk tolkning ===
+Den deriverte til en funksjon 
+  
+    
+      
+        f
+      
+    
+     
+   i punktet 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+   beskriver den lokale oppførselen til funksjonen i en omegnen om 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+  . Fra definisjonen av den deriverte følger det at 
+
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        +
+        h
+        )
+        =
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        +
+        
+          f
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        h
+        +
+        r
+        (
+        x
+        ,
+        h
+        )
+      
+    
+     
+  Leddet 
+  
+    
+      
+        r
+        (
+        
+          x
+          
+            0
+          
+        
+        ,
+        h
+        )
+      
+    
+     
+   er en funksjon av både 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+   og 
+  
+    
+      
+        h
+      
+    
+     
+  , og leddet må gå mot null når 
+  
+    
+      
+        h
+      
+    
+     
+   går mot null.  For en liten verdi av 
+  
+    
+      
+        h
+      
+    
+     
+   kan en derfor bruke tilnærmingen
+
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        +
+        h
+        )
+        ≈
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        +
+        
+          f
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        h
+      
+    
+     
+  Den deriverte er et mål på den lineære andelen av endringen i 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+     
+  , når 
+  
+    
+      
+        x
+      
+    
+     
+   endres med et vilkårlig lite tall. En slik vilkårlig liten endring kalles en infinitesimal endring.
+Når tilnærmingen brukes for en endelig verdi av 
+  
+    
+      
+        h
+      
+    
+     
+  , omtales tilnærmingen som en linearisering av funksjonen. 
+
+
+=== Antideriverte ===
+Antiderivasjon er prosessen for å finne en antideriverte funksjon, også kalt en primitiv funksjon.  En funksjon 
+  
+    
+      
+        F
+        (
+        x
+        )
+      
+    
+     
+   er en primitiv funksjon til 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+     
+   dersom funksjonen 
+  
+    
+      
+        f
+      
+    
+     
+   er 
+dens deriverte, det vil si dersom 
+  
+    
+      
+        
+          F
+          ′
+        
+        (
+        x
+        )
+        =
+        f
+        (
+        x
+        )
+      
+    
+     
+  . 
+
+
+== Notasjon for deriverte ==
+Det eksisterer flere forskjellige skriveformer for deriverte, brukt både gjennom historisk tid og i dag. 
+
+
+=== Leibniz' notasion ===
+Symbolene 
+  
+    
+      
+        d
+        x
+      
+    
+     
+  , 
+  
+    
+      
+        d
+        y
+      
+    
+     
+   og 
+  
+    
+      
+        
+          
+            
+              d
+              y
+            
+            
+              d
+              x
+            
+          
+        
+      
+    
+     
+   ble introdusert av Gottfried Leibniz i 1675. 
+Denne skrivemåten er fremdeles vanlig brukt når en ønsker å understreke funksjonssammenhengen 
+  
+    
+      
+        y
+        =
+        f
+        (
+        x
+        )
+      
+    
+     
+  .  Den første-ordens deriverte skrives som en infinitesimal brøk
+
+  
+    
+      
+        
+          
+            
+              d
+              y
+            
+            
+              d
+              x
+            
+          
+        
+        ,
+        
+        
+          
+            
+              d
+              f
+            
+            
+              d
+              x
+            
+          
+        
+        ,
+        
+           eller 
+        
+        
+          
+            d
+            
+              d
+              x
+            
+          
+        
+        f
+      
+    
+     
+  .Høyere-ordens deriverte av orden n uttrykkes på formen
+
+  
+    
+      
+        
+          
+            
+              
+                d
+                
+                  n
+                
+              
+              y
+            
+            
+              d
+              
+                x
+                
+                  n
+                
+              
+            
+          
+        
+        ,
+        
+        
+          
+            
+              
+                d
+                
+                  n
+                
+              
+              f
+            
+            
+              d
+              
+                x
+                
+                  n
+                
+              
+            
+          
+        
+        
+           eller 
+        
+        
+          
+            
+              d
+              
+                n
+              
+            
+            
+              d
+              
+                x
+                
+                  n
+                
+              
+            
+          
+        
+        f
+      
+    
+     
+  Den deriverte for et gitt argument 
+  
+    
+      
+        x
+        =
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+   kan med denne notasjonen skrives som
+
+  
+    
+      
+        
+          
+            
+            
+              
+                
+                  d
+                  y
+                
+                
+                  d
+                  x
+                
+              
+            
+            |
+          
+          
+            x
+            =
+            
+              x
+              
+                0
+              
+            
+          
+        
+        =
+        
+          
+            
+              d
+              y
+            
+            
+              d
+              x
+            
+          
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        .
+      
+    
+     
+  
+
+
+=== Lagranges notasjon ===
+En svært vanlig form for symbol for den deriverte stammer fra Joseph Louis Lagrange og bruker et primtegn sammen med symbolet for funksjonen.  Notasjonen ble første gang brukt i verket Theorie des fonctions analytiques i 1797.
+Den deriverte av funksjonen 
+  
+    
+      
+        f
+      
+    
+     
+   symboliseres med
+  
+    
+      
+        
+          f
+          ′
+        
+      
+    
+     
+  .  
+Høyere-ordens deriverte kan skrives ved å gjenta primtegnet, slik at den andre-deriverte er 
+  
+    
+      
+        
+          f
+          ″
+        
+      
+    
+     
+  .  For deriverte av orden høyere enn tre, kan en sette ordenstallet med opphøyd skrift, enten med romertall eller 
+med vanlige tallsymbol:
+
+  
+    
+      
+        
+          f
+          
+            
+              i
+              v
+            
+          
+        
+      
+    
+     
+     eller   
+  
+    
+      
+        
+          f
+          
+            (
+            4
+            )
+          
+        
+        .
+      
+    
+     
+  Lagranges notasjon er mer praktisk enn Leibniz' når en vil understreke at den deriverte er en selvstendig funksjon.
+
+
+=== Newtons notasjon ===
+Newtons notasjon for å symbolisere tidsderiverte går tilbake til 1665.  Bruk av denne notasjonen finnes vanlig både i fysikk og matematikk. For en funksjon der argumentet representerer tid, kan en prikk over funksjonen symbolisere derivasjon.  Hvis 
+  
+    
+      
+        y
+        =
+        f
+        (
+        t
+        )
+      
+    
+     
+  , så
+representerer de følgende funksjonene den førstederiverte og den andrederiverte:
+
+  
+    
+      
+        
+          
+            
+              y
+              ˙
+            
+          
+        
+        
+        
+        
+          
+            
+              y
+              ¨
+            
+          
+        
+      
+    
+     
+  .Prikk-notasjonen er også brukt i differensialgeometri for den deriverte med hensyn på buelengden.
+
+
+=== Eulers notasjon ===
+Leonhard Euler forsvarte i 1755 notasjonen 
+  
+    
+      
+        d
+        f
+      
+    
+     
+   for den deriverte funksjonen, men dette skapte en del forvirring jevnført med Leibniz' skrivemåte.  
+I 1800 foreslo Louis François Antoine Arbogast i steden å bruke en stor bokstav 
+  
+    
+      
+        D
+      
+    
+     
+   for en differensialoperator som operert på funksjonen 
+  
+    
+      
+        f
+      
+    
+     
+   gir den første-deriverte 
+  
+    
+      
+        D
+        f
+      
+    
+     
+  .  
+Den n-te deriverte skrives 
+  
+    
+      
+        
+          D
+          
+            n
+          
+        
+        f
+      
+    
+     
+  .
+For å presisere hva som er den uavhengige variabelen, så kan denne skrives med nedfelt skrift:  Hvis funksjonen er 
+  
+    
+      
+        y
+        =
+        f
+        (
+        x
+        )
+      
+    
+     
+  , så skrives da den deriverte som
+
+  
+    
+      
+        
+          D
+          
+            x
+          
+        
+        y
+      
+    
+     
+     eller   
+  
+    
+      
+        
+          D
+          
+            x
+          
+        
+        f
+        (
+        x
+        )
+      
+    
+     
+  .
+
+
+== Utregning av den deriverte ==
+Den deriverte til en gitt funksjon regnes vanligvis ut ved å kombinere 
+
+kjennskap til deriverte for et sett av elementære funksjoner; med
+et sett av derivasjonsregler for å behandle sammensatte funksjoner.
+
+
+=== Derivasjon av elementære funksjoner ===
+Konstante funksjoner
+
+  
+    
+      
+        
+          
+            d
+            
+              d
+              x
+            
+          
+        
+        a
+        =
+        0
+      
+    
+     
+  Potensfunksjonen
+
+  
+    
+      
+        
+          
+            d
+            
+              d
+              x
+            
+          
+        
+        
+          x
+          
+            a
+          
+        
+        =
+        a
+        
+          x
+          
+            a
+            −
+            1
+          
+        
+        .
+      
+    
+     
+  Eksponential- og logaritmefunksjoner
+
+  
+    
+      
+        
+          
+            d
+            
+              d
+              x
+            
+          
+        
+        
+          e
+          
+            x
+          
+        
+        =
+        
+          e
+          
+            x
+          
+        
+        .
+      
+    
+     
+  
+  
+    
+      
+        
+          
+            d
+            
+              d
+              x
+            
+          
+        
+        
+          a
+          
+            x
+          
+        
+        =
+        
+          a
+          
+            x
+          
+        
+        ln
+        ⁡
+        (
+        a
+        )
+        ,
+        
+        a
+        >
+        0
+      
+    
+     
+  
+  
+    
+      
+        
+          
+            d
+            
+              d
+              x
+            
+          
+        
+        ln
+        ⁡
+        (
+        x
+        )
+        =
+        
+          
+            1
+            x
+          
+        
+        ,
+        
+        x
+        >
+        0.
+      
+    
+     
+  
+  
+    
+      
+        
+          
+            d
+            
+              d
+              x
+            
+          
+        
+        
+          log
+          
+            a
+          
+        
+        ⁡
+        (
+        x
+        )
+        =
+        
+          
+            1
+            
+              x
+              ln
+              ⁡
+              (
+              a
+              )
+            
+          
+        
+        ,
+        
+        x
+        ,
+        a
+        >
+        0
+      
+    
+     
+  Trigonometriske funksjoner
+
+  
+    
+      
+        
+          
+            d
+            
+              d
+              x
+            
+          
+        
+        sin
+        ⁡
+        (
+        x
+        )
+        =
+        cos
+        ⁡
+        (
+        x
+        )
+        .
+      
+    
+     
+  
+  
+    
+      
+        
+          
+            d
+            
+              d
+              x
+            
+          
+        
+        cos
+        ⁡
+        (
+        x
+        )
+        =
+        −
+        sin
+        ⁡
+        (
+        x
+        )
+        .
+      
+    
+     
+  
+  
+    
+      
+        
+          
+            d
+            
+              d
+              x
+            
+          
+        
+        tan
+        ⁡
+        (
+        x
+        )
+        =
+        
+          sec
+          
+            2
+          
+        
+        ⁡
+        (
+        x
+        )
+        =
+        
+          
+            1
+            
+              
+                cos
+                
+                  2
+                
+              
+              ⁡
+              (
+              x
+              )
+            
+          
+        
+        =
+        1
+        +
+        
+          tan
+          
+            2
+          
+        
+        ⁡
+        (
+        x
+        )
+        .
+      
+    
+     
+  Inverse trigonometriske funksjoner
+
+  
+    
+      
+        
+          
+            d
+            
+              d
+              x
+            
+          
+        
+        arcsin
+        ⁡
+        (
+        x
+        )
+        =
+        
+          
+            1
+            
+              1
+              −
+              
+                x
+                
+                  2
+                
+              
+            
+          
+        
+        ,
+        
+        −
+        1
+        <
+        x
+        <
+        1.
+      
+    
+     
+  
+  
+    
+      
+        
+          
+            d
+            
+              d
+              x
+            
+          
+        
+        arccos
+        ⁡
+        (
+        x
+        )
+        =
+        −
+        
+          
+            1
+            
+              1
+              −
+              
+                x
+                
+                  2
+                
+              
+            
+          
+        
+        ,
+        
+        −
+        1
+        <
+        x
+        <
+        1.
+      
+    
+     
+  
+  
+    
+      
+        
+          
+            d
+            
+              d
+              x
+            
+          
+        
+        arctan
+        ⁡
+        (
+        x
+        )
+        =
+        
+          
+            1
+            
+              1
+              +
+              
+                x
+                
+                  2
+                
+              
+            
+          
+        
+      
+    
+     
+  
+
+
+=== Derivasjonsregler ===
+La 
+  
+    
+      
+        f
+      
+    
+     
+  , 
+  
+    
+      
+        g
+      
+    
+     
+   og 
+  
+    
+      
+        h
+      
+    
+     
+   
+være reelle, deriverbare funksjoner. La videre 
+  
+    
+      
+        n
+      
+    
+     
+   og
+
+  
+    
+      
+        a
+      
+    
+     
+   være reelle tall. Da gjelder:
+
+Faktorregelen
+  
+    
+      
+        (
+        a
+        ⋅
+        f
+        
+          )
+          ′
+        
+        =
+        a
+        ⋅
+        
+          f
+          ′
+        
+      
+    
+     
+  Summeregelen
+  
+    
+      
+        
+          
+            (
+            
+              g
+              ±
+              h
+            
+            )
+          
+          ′
+        
+        =
+        
+          g
+          ′
+        
+        ±
+        
+          h
+          ′
+        
+      
+    
+     
+  Produktregelen
+  
+    
+      
+        (
+        g
+        ⋅
+        h
+        
+          )
+          ′
+        
+        =
+        
+          g
+          ′
+        
+        ⋅
+        h
+        +
+        g
+        ⋅
+        
+          h
+          ′
+        
+      
+    
+     
+  Kvotientregelen eller brøkregelen
+  
+    
+      
+        
+          
+            (
+            
+              
+                g
+                h
+              
+            
+            )
+          
+          ′
+        
+        =
+        
+          
+            
+              
+                g
+                ′
+              
+              ⋅
+              h
+              −
+              g
+              ⋅
+              
+                h
+                ′
+              
+            
+            
+              h
+              
+                2
+              
+            
+          
+        
+      
+    
+     
+  Kjerneregelen
+  
+    
+      
+        (
+        g
+        ∘
+        h
+        
+          )
+          ′
+        
+        (
+        x
+        )
+        =
+        (
+        g
+        (
+        h
+        (
+        x
+        )
+        )
+        
+          )
+          ′
+        
+        =
+        
+          g
+          ′
+        
+        (
+        h
+        (
+        x
+        )
+        )
+        ⋅
+        
+          h
+          ′
+        
+        (
+        x
+        )
+      
+    
+     
+  Kombinert kjerne og produktregel
+  
+    
+      
+        
+          
+            
+              
+                f
+              
+              
+                
+                =
+                c
+                ⋅
+                
+                  k
+                  
+                    u
+                  
+                
+                ⋅
+                
+                  l
+                  
+                    v
+                  
+                
+                ⋅
+                
+                  m
+                  
+                    w
+                  
+                
+                ⋅
+                .
+                .
+                .
+              
+            
+            
+              
+                
+                  f
+                  ′
+                
+              
+              
+                
+                =
+                f
+                ⋅
+                (
+                
+                  
+                    u
+                    k
+                  
+                
+                ⋅
+                
+                  k
+                  ′
+                
+                +
+                
+                  
+                    v
+                    l
+                  
+                
+                ⋅
+                
+                  l
+                  ′
+                
+                +
+                
+                  
+                    w
+                    m
+                  
+                
+                ⋅
+                
+                  m
+                  ′
+                
+                +
+                .
+                .
+                .
+                )
+              
+            
+          
+        
+      
+    
+     
+  Inverse funksjonerHvis 
+  
+    
+      
+        f
+      
+    
+     
+   er en bijektiv funksjon som er deriverbar i 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+   med 
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        ≠
+        0
+      
+    
+     
+  , og den inverse funksjonen 
+  
+    
+      
+        
+          f
+          
+            −
+            1
+          
+        
+      
+    
+     
+   er deriverbar ved 
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+      
+    
+     
+  , så gjelder:
+
+  
+    
+      
+        (
+        
+          f
+          
+            −
+            1
+          
+        
+        
+          )
+          ′
+        
+        (
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        )
+        =
+        
+          
+            1
+            
+              
+                f
+                ′
+              
+              (
+              
+                x
+                
+                  0
+                
+              
+              )
+            
+          
+        
+        .
+      
+    
+     
+  Leibniz’ regel
+  
+    
+      
+        (
+        f
+        g
+        
+          )
+          
+            (
+            n
+            )
+          
+        
+        =
+        
+          ∑
+          
+            k
+            =
+            0
+          
+          
+            n
+          
+        
+        
+          
+            
+              (
+            
+            
+              n
+              k
+            
+            
+              )
+            
+          
+        
+        
+          f
+          
+            (
+            k
+            )
+          
+        
+        
+          g
+          
+            (
+            n
+            −
+            k
+            )
+          
+        
+      
+    
+     
+  .Her er 
+  
+    
+      
+        
+          
+            
+              (
+            
+            
+              n
+              k
+            
+            
+              )
+            
+          
+        
+      
+    
+     
+   binomialkoeffisienter.
+
+
+=== Implisitt derivasjon ===
+Hvis en funksjon 
+  
+    
+      
+        y
+        =
+        y
+        (
+        x
+        )
+      
+    
+     
+   er definert implisitt ved en ligning 
+
+  
+    
+      
+        F
+        
+          (
+          
+            x
+            ,
+            y
+            (
+            x
+            )
+          
+          )
+        
+        =
+        0
+      
+    
+     
+  ,så følger det av den generaliserte kjerneregelen for funksjoner av flere variabler at
+
+  
+    
+      
+        
+          F
+          
+            x
+          
+        
+        +
+        
+          F
+          
+            y
+          
+        
+        
+          y
+          ′
+        
+        =
+        0.
+      
+    
+     
+  I denne ligningen er
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  F
+                  
+                    x
+                  
+                
+                =
+                
+                  
+                    
+                      ∂
+                      F
+                    
+                    
+                      ∂
+                      x
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  F
+                  
+                    y
+                  
+                
+                =
+                
+                  
+                    
+                      ∂
+                      F
+                    
+                    
+                      ∂
+                      y
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+  partiell deriverte av funksjonen 
+  
+    
+      
+        F
+      
+    
+     
+  .  Forutsatt at den partiell deriverte 
+  
+    
+      
+        
+          F
+          
+            y
+          
+        
+      
+    
+     
+   er ulik null, så
+kan den deriverte av funksjonen 
+  
+    
+      
+        y
+        =
+        y
+        (
+        x
+        )
+      
+    
+     
+   uttrykkes som en brøk:
+
+  
+    
+      
+        
+          y
+          ′
+        
+        =
+        −
+        
+          
+            
+              F
+              
+                x
+              
+            
+            
+              F
+              
+                y
+              
+            
+          
+        
+      
+    
+     
+  
+
+
+=== Eksempel ===
+Gitt funksjonen
+
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          x
+          
+            4
+          
+        
+        +
+        sin
+        ⁡
+        
+          (
+          
+            x
+            
+              2
+            
+          
+          )
+        
+        −
+        ln
+        ⁡
+        (
+        x
+        )
+        
+          e
+          
+            x
+          
+        
+        +
+        7
+      
+    
+     
+  Den deriverte er da gitt som følger:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  f
+                  ′
+                
+                (
+                x
+                )
+              
+              
+                
+                =
+                4
+                
+                  x
+                  
+                    (
+                    4
+                    −
+                    1
+                    )
+                  
+                
+                +
+                
+                  
+                    
+                      d
+                      
+                        (
+                        
+                          x
+                          
+                            2
+                          
+                        
+                        )
+                      
+                    
+                    
+                      d
+                      x
+                    
+                  
+                
+                cos
+                ⁡
+                
+                  (
+                  
+                    x
+                    
+                      2
+                    
+                  
+                  )
+                
+                −
+                
+                  
+                    
+                      d
+                      
+                        (
+                        
+                          ln
+                          ⁡
+                          
+                            x
+                          
+                        
+                        )
+                      
+                    
+                    
+                      d
+                      x
+                    
+                  
+                
+                
+                  e
+                  
+                    x
+                  
+                
+                −
+                ln
+                ⁡
+                (
+                x
+                )
+                
+                  
+                    
+                      d
+                      
+                        (
+                        
+                          e
+                          
+                            x
+                          
+                        
+                        )
+                      
+                    
+                    
+                      d
+                      x
+                    
+                  
+                
+                +
+                0
+              
+            
+            
+              
+              
+                
+                =
+                4
+                
+                  x
+                  
+                    3
+                  
+                
+                +
+                2
+                x
+                cos
+                ⁡
+                
+                  (
+                  
+                    x
+                    
+                      2
+                    
+                  
+                  )
+                
+                −
+                
+                  
+                    1
+                    x
+                  
+                
+                
+                  e
+                  
+                    x
+                  
+                
+                −
+                ln
+                ⁡
+                (
+                x
+                )
+                
+                  e
+                  
+                    x
+                  
+                
+                .
+              
+            
+          
+        
+      
+    
+     
+  Det første leddet er derivert ved å bruke regelen for en potensfunksjon.  Det andre leddet er håndtert ved hjelp av kjerneregelen samt regler for derivasjon av trigonometriske funksjoner og potensfunksjoner.
+Derivasjon av det tredje leddet er gjennomført ved å bruke produktregelen.  
+
+
+== Egenskaper til deriverbare funksjoner ==
+
+
+=== Derivasjon og kontinuitet ===
+En funksjon som er deriverbar for 
+  
+    
+      
+        x
+        =
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+  , er også kontinuerlig i 
+  
+    
+      
+        x
+        =
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+  .  En funksjon kan altså ikke være deriverbar i en diskontinuitet.  
+Omvendt kan en funksjon være kontinuerlig i et punkt, uten å være deriverbar i punktet.  Et eksempel på dette er punktet 
+  
+    
+      
+        x
+        =
+        0
+      
+    
+     
+   for absoluttverdi-funksjonen.  
+Dersom funksjonen har en derivert som også er kontinuerlig, sies funksjonen å være kontinuerlig deriverbar.  Hvis den n-te ordens deriverte eksisterer og er kontinuerlig, så er funksjonen
+n ganger kontinuerlig deriverbar.  Klassen av slike funksjoner er viktig nok til å ha fått sitt eget symbol:
+
+  
+    
+      
+        
+          C
+          
+            n
+          
+        
+        (
+        D
+        )
+      
+    
+     
+  betegner klassen av funksjoner som er n ganger kontinuerlig deriverbar på definisjonsmengden 
+  
+    
+      
+        D
+      
+    
+     
+  .  Klassen av kontinuerlige funksjoner er 
+  
+    
+      
+        
+          C
+          
+            0
+          
+        
+      
+    
+     
+  .  
+En funksjon som er uendelig mange ganger kontinuerlig deriverbar kalles en glatt funksjon, og klassen av slike funksjoner betegnes som 
+  
+    
+      
+        
+          C
+          
+            ∞
+          
+        
+      
+    
+     
+  .
+Generelt gjelder at
+
+  
+    
+      
+        
+          C
+          
+            n
+          
+        
+        ⊂
+        
+          C
+          
+            n
+            −
+            1
+          
+        
+        ⊂
+        …
+         
+        
+          C
+          
+            1
+          
+        
+        ⊂
+        
+          C
+          
+            0
+          
+        
+      
+    
+     
+  .
+
+
+=== Middelverdisetningen ===
+
+For en funksjon som er deriverbar i et intervall, vil stigningen til sekanten mellom to vilkårlige punkt på grafen til funksjonen være et uttrykk for den midlere endringen til 
+funksjonen mellom de to punktene.  Middelverdisetningen uttrykker at grafen til funksjonen mellom de to punktene må ha en tangent med samme stigning som sekanten.  
+Setningen kalles også sekantsetningen: 
+La 
+  
+    
+      
+        f
+        :
+        [
+        a
+        ,
+        b
+        ]
+        →
+        
+          R
+        
+      
+    
+     
+   være en funksjon som er kontinuerlig på et lukket intervall 
+  
+    
+      
+        [
+        a
+        ,
+        b
+        ]
+      
+    
+     
+   (med 
+  
+    
+      
+        a
+        <
+        b
+      
+    
+     
+  ). Anta videre at 
+  
+    
+      
+        f
+      
+    
+     
+   er deriverbar i det åpne intervallet 
+  
+    
+      
+        (
+        a
+        ,
+        b
+        )
+      
+    
+     
+  .  Da finnes minst ett punkt 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+        ∈
+        (
+        a
+        ,
+        b
+        )
+      
+    
+     
+  , slik at 
+
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        
+          
+            
+              f
+              (
+              b
+              )
+              −
+              f
+              (
+              a
+              )
+            
+            
+              b
+              −
+              a
+            
+          
+        
+      
+    
+     
+  .Dersom 
+  
+    
+      
+        f
+        (
+        a
+        )
+        =
+        f
+        (
+        b
+        )
+      
+    
+     
+  , medfører dette at funksjonen må ha en derivert mellom 
+  
+    
+      
+        a
+      
+    
+     
+   og 
+  
+    
+      
+        b
+      
+    
+     
+   som er lik null, det vil si at tangenten er horisontal.
+Dette spesialtilfellet av middelverdisetningen kalles Rolles sats.  
+
+
+=== Monotonisitet ===
+En funksjon er monoton i et intervall dersom den er voksende eller minkende i hele intervallet.  Tilsvarende sier en også at funksjonen er strengt monoton i et intervall dersom den er
+strengt voksende eller strengt minkende i hele intervallet.  Disse egenskapene følger direkte fra middelverdisetningen.  
+En deriverbar funksjon er voksende i et intervall dersom den deriverte av funksjonen er ikke-negativ i hele intervallet.  Tilsvarende er funksjonen minkende i et intervall dersom den deriverte
+er ikke-positiv i intervallet.  
+En deriverbar funksjon er strengt voksende i et intervall dersom den deriverte av funksjonen er positiv i hele intervallet.  Tilsvarende er funksjonen strengt minkende i et intervall dersom den deriverte
+er negativ i intervallet.  
+
+
+=== Ekstremalverdier og vendepunkt ===
+
+Dersom en funksjon er deriverbar i et punkt 
+  
+    
+      
+        x
+        =
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+  , så er 
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        0
+      
+    
+     
+   et nødvendig vilkår for at funksjonen skal ha et ekstremalpunkt for dette
+argumentet.  Et punkt der den deriverte er lik null kalles et stasjonært punkt.
+Sammen med punkt der funksjonen ikke er deriverbar og eventuelle endepunkt for et definisjonsintervall, kalles dette også kritiske punkt.  
+Et ekstremalpunkt må alltid være et kritisk punkt.
+Et terassepunkt er et stasjonært punkt der den deriverte ikke skifter fortegn.For et punkt 
+  
+    
+      
+        x
+        =
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+   der en funksjon er deriverbar vil hver av de to følgende testene gi tilstrekkelige vilkår for at punktet er et maksimumspunkt:
+
+  
+    
+      
+        x
+        =
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+   er et lokalt strengt maksimumspunkt dersom 
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        0
+      
+    
+     
+   og den deriverte skifter fortegn fra positiv til negativ når 
+  
+    
+      
+        x
+      
+    
+     
+   vokser gjennom 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+  .
+  
+    
+      
+        x
+        =
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+   er et lokalt strengt maksimumspunkt dersom 
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        0
+      
+    
+     
+   og 
+  
+    
+      
+        
+          f
+          ″
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        <
+        0
+      
+    
+     
+  .Tilsvarende har en for et minimumspunkt:
+
+  
+    
+      
+        x
+        =
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+   er et lokalt strengt minimumspunkt dersom 
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        0
+      
+    
+     
+   og den deriverte skifter fortegn fra negativ til positiv når 
+  
+    
+      
+        x
+      
+    
+     
+   vokser gjennom 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+  .
+  
+    
+      
+        x
+        =
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+   er et lokalt strengt minimumspunkt dersom 
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        0
+      
+    
+     
+   og 
+  
+    
+      
+        
+          f
+          ″
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        >
+        0
+      
+    
+     
+  .Kartlegging av ekstremalpunkt inngår som en viktig del av funksjonsdrøfting.  
+
+
+=== Krumning og vendepunkt ===
+En funksjon er konveks i et intervall dersom en rett linje mellom to vilkårlige punkt i intervallet ligger over grafen til funksjonen i intervallet.  
+Dette kan også uttrykkes som at grafen til funksjonen vender den hule siden oppover eller krummer opp.  Funksjonen er strengt konveks dersom grafen ligger helt under den rette linjen.  
+Tilsvarende kan en definere at funksjonen er konkav, dersom den vender den hule siden nedover eller krummer ned.  
+En deriverbar funksjon er konveks eller krummer opp i et intervall dersom den deriverte er voksende i intervallet.  
+En funksjon som er to ganger deriverbar, er strengt konveks i et intervall dersom den dobbelt-deriverte 
+  
+    
+      
+        
+          f
+          ″
+        
+        (
+        x
+        )
+      
+    
+     
+   er positiv i intervallet.  Den dobbelt-deriverte
+kan også være lik null i isolerte punkt i intervallet.
+Funksjonen 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          x
+          
+            4
+          
+        
+      
+    
+     
+   har dobbelt-derivert 
+  
+    
+      
+        
+          f
+          ″
+        
+        (
+        x
+        )
+        =
+        12
+        
+          x
+          
+            2
+          
+        
+      
+    
+     
+  .  Funksjonen er altså strengt konveks i hele 
+  
+    
+      
+        
+          R
+        
+      
+    
+     
+  .
+I differensialgeometri er krumningen 
+  
+    
+      
+        κ
+      
+    
+     
+   til en funksjon gitt ved det følgende uttrykket:
+
+  
+    
+      
+        κ
+        =
+        
+          
+            
+              f
+              ″
+            
+            
+              (
+              1
+              +
+              
+                f
+                
+                  ′
+                  
+                    2
+                  
+                
+              
+              
+                )
+                
+                  3
+                  
+                    /
+                  
+                  2
+                
+              
+            
+          
+        
+      
+    
+     
+  Et vendepunkt er et stasjonært punkt 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+   der funksjonen skifter krumning, fra opp til ned eller omvendt.  Dette vil være tilfelle dersom den dobbelt-deriverte skifter
+fortegn i punktet.  
+Funksjonen 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          x
+          
+            3
+          
+        
+      
+    
+     
+   har dobbelt-derivert 
+  
+    
+      
+        
+          f
+          ″
+        
+        (
+        x
+        )
+        =
+        6
+        x
+      
+    
+     
+  .  Funksjonen har altså et vendepunkt i 
+  
+    
+      
+        x
+        =
+        0
+      
+    
+     
+  .
+
+
+=== Taylorrekker ===
+Taylors teorem sier at en funksjon som er (
+  
+    
+      
+        n
+        +
+        1
+      
+    
+     
+  ) ganger kontinuerlig deriverbar på et intervall 
+  
+    
+      
+        I
+      
+    
+     
+  , kan tilnærmes med et polynom i intervallet, og teoremet gir også et uttrykk for feilen 
+i denne tilnærmingen.  Dersom 
+  
+    
+      
+        x
+        =
+        a
+      
+    
+     
+   er et vilkårlig punkt i intervallet, så er
+
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          T
+          
+            n
+          
+        
+        (
+        x
+        ;
+        a
+        )
+        +
+        
+          R
+          
+            n
+            +
+            1
+          
+        
+        (
+        x
+        ;
+        a
+        )
+        
+        ∀
+        x
+        ∈
+        I
+      
+    
+     
+  Her er 
+  
+    
+      
+        
+          T
+          
+            n
+          
+        
+      
+    
+     
+   taylorpolynomet av grad 
+  
+    
+      
+        n
+      
+    
+     
+  :
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  T
+                  
+                    n
+                  
+                
+                (
+                x
+                ;
+                a
+                )
+              
+              
+                
+                =
+                
+                  ∑
+                  
+                    k
+                    =
+                    0
+                  
+                  
+                    n
+                  
+                
+                
+                  (
+                  
+                    
+                      
+                        
+                          
+                            f
+                            
+                              (
+                              k
+                              )
+                            
+                          
+                          (
+                          a
+                          )
+                        
+                        
+                          k
+                          !
+                        
+                      
+                    
+                    (
+                    x
+                    −
+                    a
+                    
+                      )
+                      
+                        k
+                      
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+              
+                
+                =
+                f
+                (
+                a
+                )
+                +
+                
+                  
+                    
+                      
+                        f
+                        ′
+                      
+                      (
+                      a
+                      )
+                    
+                    
+                      1
+                      !
+                    
+                  
+                
+                (
+                x
+                −
+                a
+                )
+                +
+                
+                  
+                    
+                      
+                        f
+                        ″
+                      
+                      (
+                      a
+                      )
+                    
+                    
+                      2
+                      !
+                    
+                  
+                
+                (
+                x
+                −
+                a
+                
+                  )
+                  
+                    2
+                  
+                
+                +
+                ⋯
+                +
+                
+                  
+                    
+                      
+                        f
+                        
+                          (
+                          n
+                          )
+                        
+                      
+                      (
+                      a
+                      )
+                    
+                    
+                      n
+                      !
+                    
+                  
+                
+                (
+                x
+                −
+                a
+                
+                  )
+                  
+                    n
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+  .Restleddet 
+  
+    
+      
+        
+          R
+          
+            n
+            +
+            1
+          
+        
+      
+    
+     
+   kan uttrykkes på flere forskjellige måter, og Joseph Louis Lagranges form er gitt som
+
+  
+    
+      
+        
+          R
+          
+            n
+            +
+            1
+          
+        
+        (
+        x
+        ;
+        a
+        )
+        =
+        
+          
+            1
+            
+              (
+              n
+              +
+              1
+              )
+              !
+            
+          
+        
+        
+          f
+          
+            (
+            n
+            +
+            1
+            )
+          
+        
+        (
+        b
+        )
+        (
+        x
+        −
+        a
+        
+          )
+          
+            n
+            +
+            1
+          
+        
+        
+      
+    
+     
+  .Argumentet 
+  
+    
+      
+        b
+      
+    
+     
+   er en verdi mellom 
+  
+    
+      
+        x
+      
+    
+     
+   og 
+  
+    
+      
+        a
+      
+    
+     
+  .  Når 
+  
+    
+      
+        n
+        =
+        1
+      
+    
+     
+   svarer Taylors formel til middelverdisetningen.  
+I mange praktske anvendelser brukes tilnærmingen 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          T
+          
+            n
+          
+        
+        (
+        x
+        ;
+        a
+        )
+      
+    
+     
+  , og restleddet er da et uttrykk for feilen i tilnærmingen.  Feilen vil typisk vokse når 
+  
+    
+      
+        x
+      
+    
+     
+   fjerner seg fra verdien 
+  
+    
+      
+        a
+      
+    
+     
+  .
+For en glatt funksjon kan en i noen tilfeller vise at funksjonen kan uttrykkes som en uendelig konvergent taylorrekke:
+
+  
+    
+      
+        
+          
+            
+              
+                f
+                (
+                x
+                )
+              
+              
+                
+                =
+                f
+                (
+                a
+                )
+                +
+                
+                  f
+                  ′
+                
+                (
+                a
+                )
+                (
+                x
+                −
+                a
+                )
+                +
+                
+                  
+                    
+                      
+                        f
+                        ″
+                      
+                      (
+                      a
+                      )
+                    
+                    2
+                  
+                
+                (
+                x
+                −
+                a
+                
+                  )
+                  
+                    2
+                  
+                
+                +
+                ⋯
+                +
+                
+                  
+                    
+                      
+                        f
+                        
+                          (
+                          n
+                          )
+                        
+                      
+                      (
+                      a
+                      )
+                    
+                    
+                      n
+                      !
+                    
+                  
+                
+                (
+                x
+                −
+                a
+                
+                  )
+                  
+                    n
+                  
+                
+                +
+                ⋯
+              
+            
+            
+              
+              
+                
+                =
+                
+                  ∑
+                  
+                    n
+                    =
+                    0
+                  
+                  
+                    ∞
+                  
+                
+                
+                  
+                    
+                      
+                        f
+                        
+                          (
+                          n
+                          )
+                        
+                      
+                      (
+                      a
+                      )
+                    
+                    
+                      n
+                      !
+                    
+                  
+                
+                (
+                x
+                −
+                a
+                
+                  )
+                  
+                    n
+                  
+                
+                .
+              
+            
+          
+        
+      
+    
+     
+  Denne sammenhengen gjelder imidlertid ikke for alle glatte funksjoner.  En glatt funksjon som samsvarer lokalt med sin egen taylorrekke, kalles en analytisk funksjon.
+
+
+=== Analysens fundamentalteorem ===
+Analysens fundamentalteorem uttrykker en sammenheng mellom derivasjon og integrasjon.Hvis 
+  
+    
+      
+        f
+        :
+        [
+        a
+        ,
+        b
+        ]
+        →
+        
+          R
+        
+      
+    
+     
+   er en integrerbar funksjon, så er funksjonen
+
+  
+    
+      
+        F
+        (
+        x
+        )
+        =
+        
+          ∫
+          
+            a
+          
+          
+            x
+          
+        
+        f
+        (
+        t
+        )
+        
+        
+          d
+        
+        t
+        
+        x
+        ∈
+        [
+        a
+        ,
+        b
+        ]
+      
+    
+     
+  kontinuerlig i intervallet 
+  
+    
+      
+        [
+        a
+        ,
+        b
+        ]
+      
+    
+     
+  .  Hvis 
+  
+    
+      
+        f
+      
+    
+     
+   er deriverbar i 
+  
+    
+      
+        x
+        =
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+  , så er også 
+  
+    
+      
+        F
+      
+    
+     
+   deriverbar i dette punktet, og 
+  
+    
+      
+        F
+        
+          
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+      
+    
+     
+  .
+Teoremet gir en bruksanvisning for kunne integrere en funksjon 
+  
+    
+      
+        f
+      
+    
+     
+  , omtalt som integranden.  Dersom den antideriverte til integranden kan bestemmes som 
+  
+    
+      
+        F
+      
+    
+     
+  , så er
+
+  
+    
+      
+        
+          ∫
+          
+            a
+          
+          
+            b
+          
+        
+        f
+        (
+        x
+        )
+        
+        
+          d
+        
+        x
+        =
+        F
+        (
+        b
+        )
+        −
+        F
+        (
+        a
+        )
+      
+    
+     
+  .
+
+
+== Derivasjon av en kompleks funksjon av én variabel ==
+
+
+=== Formell definisjon ===
+Definisjonen av en kompleks funksjon 
+  
+    
+      
+        f
+        :
+        
+          C
+        
+        →
+        
+          C
+        
+      
+    
+     
+   er i notasjon lik definisjonen for en reell funksjon:
+
+  
+    
+      
+        f
+        
+        
+          
+          ′
+        
+        (
+        x
+        )
+        =
+        
+          lim
+          
+            h
+            →
+            0
+          
+        
+        
+          
+            
+              f
+              (
+              x
+              +
+              h
+              )
+              −
+              f
+              (
+              x
+              )
+            
+            h
+          
+        
+      
+    
+     
+  .Forskjellen ligger i definisjonen av grenseverdien, som nå er definert i det komplekse planet.  Den komplekse størrelsen 
+  
+    
+      
+        h
+      
+    
+     
+   skal nå kunne nærme seg null langs en vilkårlig rute i det kompekse planet.  
+Dette gjør at definisjonen av deriverbarhet for komplekse funksjoner er et strengere krav enn deriverbarhet for reelle funksjoner.  Realdelen og imaginærdelen av en kompleks funksjon kan hver for seg være
+deriverbare, uten at den komplekse funksjonen er deriverbar.  
+En kompleks funksjon kan være deriverbar i et punkt, uten å være deriverbar i andre nærliggende punkt.  En kompleks funksjon sies å være en analytisk funksjon i et punkt dersom funksjonen er deriverbar i en 
+omegn om punktet.  Begrepet holomorf funksjon er synonymt med analytisk funksjon.  En funksjon som er analytisk i hele det komplekse planet, kalles en hel funksjon.
+
+
+=== Cauchy-Riemann-ligningene ===
+En kompleks funksjon kan generelt skrives på formen
+
+  
+    
+      
+        f
+        (
+        z
+        )
+        =
+        u
+        (
+        x
+        ,
+        y
+        )
+        +
+        i
+        v
+        (
+        x
+        ,
+        y
+        )
+        
+        
+        z
+        =
+        x
+        +
+        i
+        y
+      
+    
+     
+  der 
+  
+    
+      
+        i
+      
+    
+     
+   er den imaginære enheten, med egenskapen 
+  
+    
+      
+        
+          i
+          
+            2
+          
+        
+        =
+        −
+        1
+      
+    
+     
+  .  De to funksjonene 
+  
+    
+      
+        u
+      
+    
+     
+   og 
+  
+    
+      
+        v
+      
+    
+     
+   er reelle funksjoner.  Hvis funksjonen 
+  
+    
+      
+        f
+        (
+        z
+        )
+      
+    
+     
+   er 
+deriverbar, så er også de to Cauchy-Riemann-ligningene oppfylte.  Dette er to differensialligninger på formen
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                  
+                    x
+                  
+                
+              
+              
+                
+                =
+                
+                  v
+                  
+                    y
+                  
+                
+              
+            
+            
+              
+                
+                  u
+                  
+                    y
+                  
+                
+              
+              
+                
+                =
+                −
+                
+                  v
+                  
+                    x
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+  Ligningene er oppkalt etter Augustin Louis Cauchy og Bernhard Riemann.  Den deriverte er gitt ved
+
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        z
+        )
+        =
+        
+          u
+          
+            x
+          
+        
+        +
+        i
+        
+          v
+          
+            x
+          
+        
+        =
+        
+          v
+          
+            y
+          
+        
+        −
+        i
+        
+          v
+          
+            x
+          
+        
+      
+    
+     
+  Omvendt gjelder at dersom de to funksjonene 
+  
+    
+      
+        u
+      
+    
+     
+   og 
+  
+    
+      
+        v
+      
+    
+     
+   har kontinuerlige deriverte med hensyn på begge variablene, og de deriverte oppfyller Cauchy-Riemann-ligningene, så er funksjonen 
+  
+    
+      
+        f
+      
+    
+     
+   deriverbar.  
+
+
+=== Eksempler ===
+Den komplekse eksponentialfunksjonen kan defineres ved
+
+  
+    
+      
+        f
+        (
+        z
+        )
+        =
+        
+          e
+          
+            z
+          
+        
+        =
+        
+          e
+          
+            x
+          
+        
+        (
+        cos
+        ⁡
+        y
+        +
+        i
+        sin
+        ⁡
+        y
+        )
+        
+        
+        z
+        =
+        x
+        +
+        i
+        y
+      
+    
+     
+  De to funksjonene 
+
+  
+    
+      
+        
+          
+            
+              
+                u
+                (
+                x
+                ,
+                y
+                )
+                =
+                
+                  e
+                  
+                    x
+                  
+                
+                cos
+                ⁡
+                y
+              
+            
+            
+              
+                v
+                (
+                x
+                ,
+                y
+                )
+                =
+                
+                  e
+                  
+                    x
+                  
+                
+                sin
+                ⁡
+                x
+              
+            
+          
+        
+      
+    
+     
+  har begge kontinuerlige deriverte og oppfyller Cauchy-Riemann-ligningene.  Da følger det at
+
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        z
+        )
+        =
+        
+          u
+          
+            x
+          
+        
+        +
+        i
+        
+          v
+          
+            x
+          
+        
+        =
+        
+          e
+          
+            x
+          
+        
+        (
+        cos
+        ⁡
+        y
+        +
+        i
+        sin
+        ⁡
+        y
+        )
+        =
+        
+          e
+          
+            z
+          
+        
+      
+    
+     
+  Også den komplekse eksponentialfunksjonen er lik sin egen derivert.  Eksponentialfunksjonen er en hel funksjon.  Siden de trigonometriske funksjonene 
+  
+    
+      
+        sin
+        ⁡
+        z
+      
+    
+     
+   og 
+  
+    
+      
+        cos
+        ⁡
+        z
+      
+    
+     
+   kan defineres
+som lineærkombinasjonar av den komplekse eksponentialfunksjonen, er også disse to funksjonene hele.  Alle polynomfunksjoner er hele funksjoner.  
+Den komplekse funksjonen 
+  
+    
+      
+        f
+        (
+        z
+        )
+        =
+        
+          |
+        
+        z
+        
+          
+            |
+          
+          
+            2
+          
+        
+      
+    
+     
+   er deriverbar kun for argumentet 
+  
+    
+      
+        z
+        =
+        0
+      
+    
+     
+  . 
+
+
+== Generalisering til andre typer funksjoner ==
+Flere typer deriverte kan defineres for funksjoner, også for funksjonstyper der argumentet ikke er et reelt eller et komplekst tall.  
+
+
+=== Retningsderivasjon for skalarfelt ===
+Et skalarfelt er en reell funksjon av flere variable, på formen
+
+  
+    
+      
+        y
+        =
+        f
+        (
+        
+          
+            x
+          
+        
+        )
+        :
+        D
+        →
+        
+          R
+        
+        
+        D
+        ⊂
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+  Argumentet 
+  
+    
+      
+        
+          
+            x
+          
+        
+        =
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        ,
+        
+          x
+          
+            3
+          
+        
+        ,
+        .
+        .
+        .
+        ,
+        
+          x
+          
+            n
+          
+        
+        )
+      
+    
+     
+   er her en n-dimensjonal vektor.
+For et skalarfelt kan en definere den retningsderiverte i retningen 
+  
+    
+      
+        
+          
+            v
+          
+        
+        ∈
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   ved
+
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        
+          
+            x
+          
+        
+        ;
+        
+          
+            v
+          
+        
+        )
+        =
+        
+          lim
+          
+            h
+            →
+            0
+          
+        
+        
+          
+            
+              f
+              (
+              
+                
+                  x
+                
+              
+              +
+              h
+              
+                
+                  v
+                
+              
+              )
+              −
+              f
+              (
+              
+                
+                  x
+                
+              
+              )
+            
+            h
+          
+        
+      
+    
+     
+  forutsatt at grenseverdien eksisterer.  Det er ikke krav at vektoren 
+  
+    
+      
+        
+          
+            v
+          
+        
+      
+    
+     
+   skal ha lengde lik én.  Eksistens av en retningsderivert er ikke tilstrekkelig for at
+funksjonen skal være kontinuerlig.  
+Den retningsderiverte oppfyller et middelverditeorem, tilsvarende en funksjon av én variabel:  Dersom den retningsderiverte 
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        
+          
+            x
+          
+          +
+          t
+          
+            
+              v
+            
+          
+        
+        ;
+        
+          
+            v
+          
+        
+        )
+      
+    
+     
+   eksisterer for alle
+verdier av 
+  
+    
+      
+        t
+      
+    
+     
+   i intervallet 
+  
+    
+      
+        [
+        0
+        ,
+        1
+        ]
+      
+    
+     
+  , så er
+
+  
+    
+      
+        f
+        (
+        
+          
+            x
+          
+        
+        +
+        
+          
+            v
+          
+        
+        )
+        −
+        f
+        (
+        
+          
+            x
+          
+        
+        )
+        =
+        
+          f
+          ′
+        
+        (
+        
+          
+            x
+          
+          +
+          θ
+          
+            
+              v
+            
+          
+        
+        ;
+        
+          
+            v
+          
+        
+        )
+        
+        θ
+        ∈
+        (
+        0
+        ,
+        1
+        )
+      
+    
+     
+  
+
+
+=== Partiell derivasjon ===
+
+For et skalarfelt er den partiellderiverte det samme som den retningsderivert langs en av akseretningene, 
+gitt at retningsvektoren har lengde én.  Vanligvis uttrykkes definisjonen av den partiellderiverte med hensyn på variabelen 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+      
+    
+     
+   på
+formen
+
+  
+    
+      
+        
+          
+            
+              ∂
+              f
+            
+            
+              ∂
+              
+                x
+                
+                  i
+                
+              
+            
+          
+        
+        =
+        
+          lim
+          
+            h
+            →
+            0
+          
+        
+        
+          
+            
+              f
+              (
+              
+                x
+                
+                  1
+                
+              
+              ,
+              …
+              ,
+              
+                x
+                
+                  i
+                
+              
+              +
+              h
+              ,
+              …
+              ,
+              
+                x
+                
+                  n
+                
+              
+              )
+              −
+              f
+              (
+              
+                x
+                
+                  1
+                
+              
+              ,
+              …
+              ,
+              
+                x
+                
+                  i
+                
+              
+              ,
+              …
+              ,
+              
+                x
+                
+                  n
+                
+              
+              )
+            
+            h
+          
+        
+      
+    
+     
+  ,forutstatt at grenseverdien eksisterer.  Et skalarfelt med definisjonsmengde i 
+  
+    
+      
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   kan ha 
+  
+    
+      
+        n
+      
+    
+     
+   partiellderiverte.  
+For en funksjon 
+  
+    
+      
+        f
+        =
+        f
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+      
+    
+     
+   kan en bruke flere typer notasjon for partiellderiverte:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    
+                      ∂
+                      f
+                    
+                    
+                      ∂
+                      x
+                    
+                  
+                
+                =
+                
+                  f
+                  
+                    x
+                  
+                
+                =
+                
+                  D
+                  
+                    x
+                  
+                
+                f
+              
+            
+            
+              
+                
+                  
+                    
+                      ∂
+                      f
+                    
+                    
+                      ∂
+                      y
+                    
+                  
+                
+                =
+                
+                  f
+                  
+                    y
+                  
+                
+                =
+                
+                  D
+                  
+                    y
+                  
+                
+                f
+              
+            
+            
+              
+                
+                  
+                    
+                      ∂
+                      f
+                    
+                    
+                      ∂
+                      z
+                    
+                  
+                
+                =
+                
+                  f
+                  
+                    z
+                  
+                
+                =
+                
+                  D
+                  
+                    z
+                  
+                
+                f
+              
+            
+          
+        
+      
+    
+     
+  De partiellderiverte uttrykker endringene i funksjonen i hver av retningene parallelt med aksene.  Dersom 
+  
+    
+      
+        f
+        =
+        f
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+      
+    
+     
+   representerer
+variasjonen i temperatur i et rom, så er 
+  
+    
+      
+        
+          f
+          
+            x
+          
+        
+      
+    
+     
+   et mål for temperaturendringen i 
+  
+    
+      
+        x
+      
+    
+     
+  -retningen.  
+Gradienten til en funksjon er en vektor sammensatt av alle partiellderiverte.  For 
+  
+    
+      
+        f
+        =
+        f
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+      
+    
+     
+   uttrykkes gradienten som
+
+  
+    
+      
+        ∇
+        f
+        =
+        (
+        
+          f
+          
+            x
+          
+        
+        ,
+        
+          f
+          
+            y
+          
+        
+        ,
+        
+          f
+          
+            z
+          
+        
+        )
+      
+    
+     
+  Denne vektoren vil peke i retningen der funksjonen endrer seg mest.  Dersom gradienten er definert, så er den retningsderiverte i retningen 
+  
+    
+      
+        
+          
+            v
+          
+        
+      
+    
+     
+   gitt ved
+
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        
+          
+            x
+          
+        
+        ;
+        
+          
+            v
+          
+        
+        )
+        =
+        
+          
+            v
+          
+        
+        ⋅
+        ∇
+        f
+      
+    
+     
+  Også for partiellderiverte kan en definere høyere-ordens deriverte, i alle kombinasjoner, for eksempel
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    
+                      
+                        ∂
+                        
+                          2
+                        
+                      
+                      f
+                    
+                    
+                      ∂
+                      
+                        x
+                        
+                          2
+                        
+                      
+                    
+                  
+                
+                =
+                
+                  f
+                  
+                    x
+                    x
+                  
+                
+              
+            
+            
+              
+                
+                  
+                    
+                      
+                        ∂
+                        
+                          2
+                        
+                      
+                      f
+                    
+                    
+                      ∂
+                      x
+                      ∂
+                      y
+                    
+                  
+                
+                =
+                
+                  f
+                  
+                    x
+                    y
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+  Hessematrisen er en matrise av alle de andre-ordens partiell deriverte til et skalarfelt.  Ekstremalverdier for et skalarfelt kan studeres ved hjelp av
+gradienten og hessematrisen.  
+Et tilstrekkelig vilkår for at de to partiell deriverte 
+  
+    
+      
+        
+          f
+          
+            x
+            y
+          
+        
+      
+    
+     
+   og 
+  
+    
+      
+        
+          f
+          
+            y
+            x
+          
+        
+      
+    
+     
+   skal være like i et punkt, er at begge eksisterer og er kontinuerlige i punktet.
+
+
+=== Derivasjon for vektorfelt ===
+Et vektorfelt er en funksjon der både argument og funksjonsverdi er vektorer:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    y
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    f
+                  
+                
+                (
+                
+                  
+                    x
+                  
+                
+                )
+                :
+                D
+                →
+                
+                  
+                    R
+                  
+                  
+                    m
+                  
+                
+                
+                D
+                ⊂
+                
+                  
+                    R
+                  
+                  
+                    n
+                  
+                
+              
+            
+            
+              
+                
+                  
+                    x
+                  
+                
+              
+              
+                
+                =
+                (
+                
+                  x
+                  
+                    1
+                  
+                
+                ,
+                
+                  x
+                  
+                    2
+                  
+                
+                ,
+                
+                  x
+                  
+                    3
+                  
+                
+                ,
+                .
+                .
+                .
+                .
+                .
+                ,
+                
+                  x
+                  
+                    n
+                  
+                
+                )
+              
+            
+            
+              
+                
+                  
+                    y
+                  
+                
+              
+              
+                
+                =
+                (
+                
+                  y
+                  
+                    1
+                  
+                
+                ,
+                
+                  y
+                  
+                    2
+                  
+                
+                ,
+                
+                  y
+                  
+                    3
+                  
+                
+                ,
+                .
+                .
+                .
+                ,
+                
+                  y
+                  
+                    m
+                  
+                
+                )
+              
+            
+          
+        
+      
+    
+     
+  For hver av komponentene i funksjonsverdien kan en definere partiellderiverte:
+
+  
+    
+      
+        
+          
+            
+              ∂
+              
+                f
+                
+                  i
+                
+              
+            
+            
+              ∂
+              
+                x
+                
+                  j
+                
+              
+            
+          
+        
+      
+    
+     
+  Jacobimatrisen til et vektorfelt er en 
+  
+    
+      
+        (
+        m
+        ×
+        n
+        )
+      
+    
+     
+  -matrise der elementene er første-ordens partiellderiverte:
+
+  
+    
+      
+        
+          
+            J
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  
+                    
+                      
+                        
+                          ∂
+                          
+                            f
+                            
+                              1
+                            
+                          
+                        
+                        
+                          ∂
+                          
+                            x
+                            
+                              1
+                            
+                          
+                        
+                      
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    
+                      
+                        
+                          ∂
+                          
+                            f
+                            
+                              1
+                            
+                          
+                        
+                        
+                          ∂
+                          
+                            x
+                            
+                              n
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+              
+                
+                  ⋮
+                
+                
+                  ⋱
+                
+                
+                  ⋮
+                
+              
+              
+                
+                  
+                    
+                      
+                        
+                          ∂
+                          
+                            f
+                            
+                              m
+                            
+                          
+                        
+                        
+                          ∂
+                          
+                            x
+                            
+                              1
+                            
+                          
+                        
+                      
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    
+                      
+                        
+                          ∂
+                          
+                            f
+                            
+                              m
+                            
+                          
+                        
+                        
+                          ∂
+                          
+                            x
+                            
+                              n
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+      
+    
+     
+  For vektorfelt kan en også definere total derivasjon.
+
+
+=== Total derivasjon ===
+Den totalderiverte til et generelt vektorfelt er en transformasjon som lokalt er den beste lineære tilnærmingen til funksjonen.  
+En funksjon 
+  
+    
+      
+        f
+        :
+        U
+        →
+        V
+      
+    
+     
+  , hvor 
+  
+    
+      
+        U
+      
+    
+     
+   er en åpen mengde i 
+  
+    
+      
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   kalles totalt deriverbar eller totalderiverbar i punktet 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+        ∈
+        U
+      
+    
+     
+  ,
+hvis det finnes en lineær avbildning 
+  
+    
+      
+        L
+        :
+        
+        
+          
+            R
+          
+          
+            n
+          
+        
+        →
+        
+          
+            R
+          
+          
+            m
+          
+        
+      
+    
+     
+   slik at
+
+  
+    
+      
+        
+          lim
+          
+            h
+            →
+            0
+          
+        
+        
+          
+            
+              ‖
+              f
+              (
+              
+                x
+                
+                  0
+                
+              
+              +
+              h
+              )
+              −
+              f
+              (
+              
+                x
+                
+                  0
+                
+              
+              )
+              −
+              L
+              h
+              ‖
+            
+            
+              ‖
+              h
+              ‖
+            
+          
+        
+        =
+        0
+      
+    
+     
+  .Hvis en slik lineær avbildning 
+  
+    
+      
+        L
+      
+    
+     
+   eksisterer, er den entydig bestemt og avhenger ikke av hvilken norm som benyttes.
+For 
+  
+    
+      
+        n
+        =
+        m
+        =
+        1
+      
+    
+     
+   svarer den totalderiverte til den ordinære deriverte av en reell funksjon.  For et skalarfelt er 
+  
+    
+      
+        m
+        =
+        1
+      
+    
+     
+  , og den totalderiverte er lik gradienten til funksjonen.
+For et vektorfelt er jacobimatrisen en representasjon av den lineære transformasjonen. 
+En funksjon som er totalderiverbar i et punkt, vil være kontinuerlig i punktet.   
+Hvis den totalderiverte eksisterer i et punkt, så eksisterer også alle de partiellderiverte i punktet.
+Omvendt vil ikke eksistensen til samtlige partiell deriverte i et punkt 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+   garantere at den totalt deriverte eksisterer i punktet. 
+Er de partiellderiverte definert og kontinuerlige i en omegn om 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+  , så er funksjonen totalderiverbar i 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+  .
+
+
+== Anvendelser ==
+
+
+=== Beskrivelse av endringer ===
+Derivasjon blir brukt i mange matematiske modeller der en må beskrive endringer av en eller annen type.  Typisk vil en endring av en størrelse
+
+  
+    
+      
+        f
+      
+    
+     
+   over tid kunne uttrykkes som den deriverte 
+  
+    
+      
+        
+          f
+          ′
+        
+      
+    
+     
+   eller en partiell derivert 
+  
+    
+      
+        
+          f
+          
+            t
+          
+        
+      
+    
+     
+  .  En endring i størrelsen i rommet
+kan tilsvarende beskrives som en partiell derivert med hensyn på en romlig koordinat eller en gradient. 
+Den førstederiverte til en strekning 
+  
+    
+      
+        s
+        =
+        s
+        (
+        t
+        )
+      
+    
+     
+   etter tiden 
+  
+    
+      
+        t
+      
+    
+     
+   representerer en skalar hastighet, mens den andrederiverte
+er et uttrykk for akselerasjonen.   I det tredimensjonale rommet er den deriverte a posisjonsvektoren 
+  
+    
+      
+        
+          r
+        
+        =
+        
+          r
+        
+        (
+        t
+        )
+      
+    
+     
+   lik
+den vektorielle hastigheten. 
+Vinkelhastigheten er definert som den tidsderiverte av en rotasjonsvinkel, og vinkelakselerasjonen er den andrederiverte.
+
+
+=== Differensialligninger ===
+
+En differensialligning er en ligning som kombinerer deriverte av en funksjon med funksjonen selv samt koeffisienter der den uavhengige variabelen inngår.  
+Et eksempel er differensialligningen
+
+  
+    
+      
+        
+          y
+          ″
+        
+        −
+        y
+        =
+        0
+      
+    
+     
+  Den ukjente i en differensialligning er en funksjon.  Ligningen over har løsningen 
+
+  
+    
+      
+        y
+        =
+        A
+        
+          e
+          
+            x
+          
+        
+        +
+        B
+        
+          e
+          
+            −
+            1
+          
+        
+      
+    
+     
+  ,der 
+  
+    
+      
+        A
+      
+    
+     
+   og 
+  
+    
+      
+        B
+      
+    
+     
+   er vilkårlige konstanter.  
+Dersom den ukjente er en funksjon av én variabel, sies ligningen å være en ordinær differensialligning.  En partiell differensialligning inneholder partiellderiverte,
+og den ukjente er en funksjon av flere variable.   
+Newtons bevegelseslov kan gi opphav til mange differensialligninger. Loven kombinerer kraft 
+  
+    
+      
+        
+          F
+        
+      
+    
+     
+  , masse 
+  
+    
+      
+        m
+      
+    
+     
+   og akselerasjon 
+  
+    
+      
+        
+          a
+        
+      
+    
+     
+  :
+
+  
+    
+      
+        
+          F
+        
+        (
+        t
+        )
+        =
+        m
+        
+          a
+        
+        (
+        t
+        )
+        =
+        m
+        
+          
+            
+              
+                r
+              
+              ¨
+            
+          
+        
+        =
+        m
+        
+          
+            
+              
+                
+                  d
+                
+                
+                  2
+                
+              
+              
+                r
+              
+            
+            
+              
+                d
+              
+              
+                t
+                
+                  2
+                
+              
+            
+          
+        
+      
+    
+     
+  Dersom kraften for eksempel kan uttrykkes som en funksjon av posisjonen 
+  
+    
+      
+        
+          
+            r
+          
+        
+      
+    
+     
+  , så leder dette til en differensialligning for posisjonen.  
+
+
+=== Et eksempel fra økonomi ===
+
+I mikroøkonomi kan en analysere forskjellige former for produksjonsfunksjoner, for å skape forståelse for
+makroøkonomiske sammenhenger. Det er først og fremst den typiske oppførselen til en produksjonsfunksjon som er av interesse:
+Hvordan reagerer de avhengige variablene 
+  
+    
+      
+        y
+      
+    
+     
+   (for eksempel den mengden av en vare som produseres) når 
+  
+    
+      
+        x
+      
+    
+     
+   (for eksempel arbeid eller kapital)
+økes med en (infinitesimal) enhet.
+En grunntype av produksjonsfunksjoner er den nyklassiske produksjonsfunksjonen. Denne
+funksjonen har egenskapen at produksjonen stiger når argumentet øker, samtidig som at økningen avtar når argumentet vokser.
+For eksempel kan man ha den følgende produksjonsfunksjonen for en virksomhet:
+
+  
+    
+      
+        y
+        =
+        f
+        (
+        x
+        )
+        =
+        
+          
+            4
+            x
+            −
+            400
+          
+        
+        
+        
+          f
+          o
+          r
+        
+        
+        x
+        ≥
+        100
+      
+    
+     
+  Den deriverte følger av kjerneregelen:
+
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        x
+        )
+        =
+        
+          
+            2
+            
+              4
+              x
+              −
+              400
+            
+          
+        
+      
+    
+     
+  .Da rotuttrykket alltid er positivt, vil produksjonen øke med økende innverdi. Den andrederiverte er gitt ved
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  d
+                
+                
+                  2
+                
+              
+              y
+            
+            
+              
+                d
+              
+              
+                x
+                
+                  2
+                
+              
+            
+          
+        
+        =
+        −
+        
+          
+            4
+            
+              (
+              4
+              x
+              −
+              400
+              
+                )
+                
+                  3
+                
+              
+            
+          
+        
+      
+    
+     
+  .Denne er alltid negativ, så økningen er synkende.
+
+
+== Historie ==
+
+Problemstillingen som differensialregningen betrakter, var kjent som tangentproblemet helt siden antikken.
+Den nærliggende løsningen var å approksimere tangenten ved hjelp av sekanter over et positivt, men 
+vilkårlig lite intervall. Den tekniske vanskeligheten bestod av å regne med slike infinitesimalt små
+intervallengder. Pierre de Fermat løste rundt 1640 tangentproblemer for polynomer. Her beskrev han
+den deriverte, men uten å betrakte grenseverdier, og uten å forklare hva den matematiske rettferdiggjøringen
+for fremgangsmåten hans var. På samme tid valgte Descartes en algebraisk fremgangsmåte, hvor han
+anbrakte en sirkel nær kurven. Her vil sirkelen skjære kurven i to punkter, med mindre sirkelen og kurven tangerer hverandre.
+Da var det mulig å bestemme stigningen til tangenten for visse kurver.
+På slutten av 1600-tallet lyktes det Isaac Newton og Gottfried Wilhelm Leibniz uavhengig av hverandre
+å utvikle fungerende fremgangsmåter uten selvmotsigelser. Newton og Leibniz angrep problemet fra forskjellige
+vinkler. Mens Newton nærmet seg problemet via momentanhastighetsproblemet, prøvde Leibniz å løse det geometrisk
+ved hjelp av tangentproblemet. Arbeidene deres tillot en abstraksjon fra den rent geometriske beskrivelsen,
+og regnes derfor som begynnelsen av matematisk analyse. De ble først og fremst kjent gjennom boka til adelsmannen
+Guillaume François Antoine, marquis de L'Hôpital, som fikk privatundervisning av Johann Bernoulli og 
+publiserte dennes forskning innen analyse. De derivasjonsreglene som er best kjent i dag, er først og fremst
+basert på verkene til Leonhard Euler, som satte sitt preg på funksjonsbegrepet. Newton og Leibniz arbeidet
+med vilkårlig små tall, men som er større enn null. Dette ble kritisert av samtidige som ulogisk, eksempelvis av
+biskop Berkeley i det polemiske skriftet The analyst: or a discourse addressed to an infidel mathematician.
+differensialregningen ble likevel, tross den herskende usikkerheten, konsekvent videreutviklet, i første rekke
+på grunn av de tallrike anvendelsene i fysikk og andre områder av matematikken. Symptomatisk for den tiden
+var prisutskrivningen til Det prøyssiske vitenskapsakademiet i 1784:
+
+… Den høyere geometri benytter ofte uendelig store og uendelig små størrelser; imidlertid har de gamle lærde omhyggelig unngått det uendelige, og enkelte berømte analytikere i vår tid bekjenner at begrepene er selvmotsigende. Akademiet forlanger altså at man forklarer hvordan så mange sanne satser kan oppstå av en selvmotsigende antagelse, og at man angir et sikkert og klart grunnbegrep som kan erstatte det uendelige, uten å gjøre utregningene for vanskelige eller lange …
+Først på begynnelsen av 1800-tallet lyktes det Augustin Louis Cauchy å gi differensialregningen den
+logiske stringensen vi er vant til i dag, i det han gikk bort fra de infinitesimale størrelsene og definerte
+den deriverte som grenseverdien til stigningen av sekantene. Den definisjonen av grenseverdier som brukes i
+dag ble formulert av Karl Weierstraß på slutten av 1800-tallet.
+
+
+== Se også ==
+Retningsderivert
+Lie-derivert
+Kovariant derivasjon
+
+
+== Referanser ==
+
+
+== Litteratur ==
+T.M. Apostol (1969). Calculus. II. New York: John Wiley & Sons. ISBN 0-471-00008-6. 
+
+E.J.Borowski, J.M.Borwein (1989). Dictionary of mathematics. Glasgow: Collins. ISBN 0-00-434347-6. 
+T. Lindstrøm (2006). Kalkulus (norsk). Universitetsforlaget. ISBN 978-82-15-00977-3. Besøkt 30. august 2016. 
+S.B. Lindström (2013). Matematisk ordbok för högskolan: engelsk-svensk, svensk-engelsk: (svensk). Stefan B. Lindström. ISBN 978-91-981287-0-3. Besøkt 30. august 2016. 
+G. Thomas, R. Finney (1995). Calculus and Analytic Geometry (5th edition utg.). Reading, USA: Addison-Wesley. ISBN 0-201-53174-7. CS1-vedlikehold: Ekstra tekst (link)
+R.V Churchill, J.W. Brown, R.F. Verhey (1974). Complex variables and applications (english). Tokyo: McGraw-Hill Kogakusha. ISBN 0-07-010855-2. CS1-vedlikehold: Flere navn: forfatterliste (link)
+Florian Cajori (2007). A history of mathematical notations. I og II. Princeton, USA: Cosimo. ISBN 978-1-60206-684-7. 
+
+
+== Eksterne lenker ==
+Function calculator
+Kalkulator som kan derivere funksjoner av én variabel

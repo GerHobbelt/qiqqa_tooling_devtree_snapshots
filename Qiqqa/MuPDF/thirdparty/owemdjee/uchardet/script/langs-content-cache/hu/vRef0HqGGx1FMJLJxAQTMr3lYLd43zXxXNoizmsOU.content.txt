@@ -1,0 +1,96 @@
+revision: 26048460
+title: "Robot (automatiz\xE1l\xE1s)"
+url: https://hu.wikipedia.org/wiki/Robot_(automatiz%C3%A1l%C3%A1s)
+
+
+---
+
+A robot egy elektromechanikai szerkezet, amely előzetes programozás alapján képes különböző feladatok végrehajtására. Lehet közvetlen emberi irányítás alatt (mint a Space Shuttle robotkarja), de önállóan is végezheti a munkáját egy számítógép felügyeletére bízva.
+A robotokkal rendszerint olyan munkákat végeztetnek, amelyek túl veszélyesek vagy túl nehezek az ember számára (például nukleáris hulladék megsemmisítése) vagy egyszerűen túl monoton, de nagy pontossággal végrehajtandó feladat, ezért egy robot sokkal nagyobb biztonsággal képes elvégezni, mint az emberek (például a járműgyártás területén). Robotokat hadi célokra is felhasználnak. A katonai célokra készült robotok feladata általában felderítés.
+
+
+== A szó eredete ==
+A robot szó szláv  eredetű:  a robota szóból ered, aminek jelentése szolgamunka a csehben, szlovákban, ukránul (робота) és lengyelben, valamint a munkát jelenti az oroszban (работа). Karel Čapek használta először a  robot szót, az 1921-ben megjelent R.U.R. című drámájában. (Bár Karel a testvérét, Josef Čapekot nevezte meg, mint a szó igazi kitalálóját.)
+
+
+== Robotok a kultúrában ==
+Az ember alakú önműködő szerkezetekről már az ókorban is fantáziáltak. Legismertebb irodalmi példája ennek az Iliász 18. énekében olvasható:
+
+Az ember alkotta, emberformájú teremtmény azonban nemcsak az ember segítőjeként jelent meg a kultúrában: Mary Shelley Frankenstein című műve mintegy megismétli a Bibliából ismert teremtéstörténetet: a teremtett lény a teremtője ellen fordul. A párhuzamot erősíti, hogy a szörnyet, melyet Frankenstein doktor alkotott, Adamnak hívják. Amit ma a populáris kultúrában robotnak neveznek (emberformájú, de elsősorban szervetlen anyagból készült gép), az jórészt Isaac Asimov munkássága nyomán alakult ki. Már Asimov műveiben is megvan a fenti kettősség: az ember segítése, illetve az ember veszélyeztetése.
+A robotok gyakori szereplői a sci-fi filmeknek, könyveknek, sorozatoknak.  Feltűnhetnek gonosz szerepben, az emberiség elpusztítására törekedve, de találunk jó robotokat is. Asimov műveiben jelent meg először a robotika három törvénye.  A robotokkal kapcsolatban általában két fő kérdés foglalkoztatja a szerzőket: milyen erkölcsi problémákat vet föl, ha a jövő robotjai tudattal és személyiséggel fognak rendelkezni, illetve elképzelhető-e, hogy egyszer a robotok fejlettebbé válnak az embereknél és átveszik az uralmat a világ fölött?
+
+
+== Robotok az irodalomban ==
+Karinthy Frigyes Utazás Faremidóba c. regényében (1916) egy olyan világot ábrázol, melyet szervetlen, mechanikus, gondolkodni képes lények népesítenek be.  Bár a szerző sohasem használja a kifejezést, a műben ábrázolt géplények a robotoknak feleltethetők meg.
+A robot szó elterjedését Karel Čapek 1921-es  R.U.R. (Rossum's Universal Robots) című színdarabjának köszönhetjük.
+
+Isaac Asimov sci-fi univerzuma: Én, a robot, A két évszázados ember, és számos más novella és regény – Robbie, Andrew, R. Daneel Olivaw, R. Giskard Reventlov
+
+
+=== A robotika 3 alaptörvénye ===
+A robotnak nem szabad kárt okoznia emberi lényben vagy tétlenül tűrnie, hogy emberi lény bármilyen kárt szenvedjen.
+A robot engedelmeskedni tartozik az emberi lények utasításainak, kivéve, ha ezek az utasítások az első törvény előírásaiba ütköznének.
+A robot tartozik saját védelméről gondoskodni, amennyiben ez nem ütközik az első és a második törvény előírásaiba.
+
+
+==== A 0. törvény ====
+(a 0. törvény az eredeti három törvény logikája alapján, később lett kitalálva)
+0. A robotnak nem szabad kárt okoznia az emberiségben, vagy tétlenül tűrnie, hogy az emberiség bármilyen kárt szenvedjen.
+
+
+== Robotok a filmekben ==
+Terminator – A robotok célja az emberiség elpusztítása
+Mátrix-trilógia – A robotok energiaforrásként használják az embereket
+Robotzsaru – A Robotzsaru rendőrként védi a rendet Detroitban
+Star Trek – Data (Star Trek)
+Csillagközi romboló – cylonok
+Futurama – Bender, az alkoholista robot
+Rövidzárlat – Johnny 5, egy meghibásodott védelmi robot
+WALL·E – Az egyetlen megmaradt takarítórobot a Földön
+Csillagok háborúja – R2-D2, C3PO, és további típusok mind birodalmi, mind szövetségi oldalon
+Robotok
+Galaxis útikalauz stopposoknak – Marvin, a depressziós robot
+2001: Űrodüsszeia – HAL-9000, a szuperszámítógép
+A. I. – Mesterséges értelem – David, az érző robotfiú
+Transformers 1-5 + Űrdongó – Álcák, Autobotok
+Szárnyas fejvadász – Roy Batty és társai
+9 – 9 „lelkes” robot, melyekbe alkotójuk emberi archetípusokat ültetett
+Én, a robot (film) – A mozifilm változatban (eltérően a novellás kötettől) a robotok elterjedtek és be akarják börtönözni az embereket, hogy megvédjék őket önmaguktól (a 0. törvény értelmében)
+Vasököl – Boxoló robotok
+Gyilkos robotok
+Chappie
+
+
+== „Játék”robotok ==
+
+A fejlesztések érzékeltetésére, bemutatására számos olyan robot született, melyeknek ipari, gazdasági hasznuk nincs, ám működésük látványos, a nagyközönség figyelmét is le tudják kötni. Ezek jellemzően valamilyen állatra, vagy emberre hasonlító, mesterséges intelligenciával rendelkező termékek, melyek értékesítésével is megpróbálkoztak a különböző vállalatok.
+Ilyen termékek:
+
+Aibo a Sony robotkutyája
+I-Cybie a Silverlit robotja
+ASIMO a Honda emberszabású robotja
+
+
+== További információk ==
+
+Ipari robot.lap.hu – linkgyűjtemény
+Háztartási robot.lap.hu – linkgyűjtemény
+
+
+== Szakirodalom ==
+Clark, Andy: Natural-born cyborgs, Oxford University Press, Oxford, 2003
+Brooks, Rodney A.: Flesh and Machines. How Robots Will Change Us, Pantheon Books, New York, 2002
+Biocca, Frank: A kiborg dilemmája – Progresszív megtestesülés a virtuális környezetekben, ford.: Sajó Tamás, Replika, 2000/39.
+Sólyom Petra: Képesek vagyunk a robotok nevelésére?, 3. évezred, 2007/5.
+Kömlődi Ferenc: Gépasszonyok, férfigépek, Filmvilág, 1998/12.
+Kulcsár Béla: Robottechnika;Typotex, Bp., 2012
+Raymond Kurzweil: A szingularitás küszöbén. Amikor az emberiség meghaladja a biológiát; Ad Astra, Bp., 2013
+Martin Ford: Robotok kora. Milyen lesz a világ munkahelyek nélkül?; ford. Garamvölgyi Andrea; HVG Könyvek, Bp., 2017
+Shelly Fan: Lecserél-e minket a mesterséges intelligencia?; ford. Nattán Balázs; Scolar, Bp., 2020 (Nagytotál)
+Héder Mihály: Mesterséges intelligencia. Filozófiai kérdések, gyakorlati válaszok; Gondolat, Bp., 2020
+Byron Reese: A negyedik kor. Okos robotok, tudatos számítógépek és az emberiség jövője; ford. Dedinszky Zsófia; Typotex, Bp., 2020
+Gondolatok a transzhumanizmusról. A mesterséges intelligencia etikája és hatásai; szerk. Christopher Hrynkow, ford. Berki Éva, Máté Katalin; Pallas Athéné, Bp., 2022
+
+
+== Kapcsolódó szócikkek ==
+Android (robot)

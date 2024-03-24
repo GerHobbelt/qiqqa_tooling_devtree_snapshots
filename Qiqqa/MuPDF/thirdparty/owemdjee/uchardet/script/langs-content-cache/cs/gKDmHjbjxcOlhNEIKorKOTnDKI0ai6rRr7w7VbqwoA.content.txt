@@ -1,0 +1,61 @@
+revision: 20581265
+title: "La\u010Dn\xE9ho t\xE9ma"
+url: https://cs.wikipedia.org/wiki/La%C4%8Dn%C3%A9ho_t%C3%A9ma
+
+
+---
+
+Lačného téma či Lačného cyklus, někdy též zkráceně Lačný, je téma některých skladeb kompozičního šachu, pojmenované po československém šachistovi slovenské národnosti Ľudovítu Lačném, který ho poprvé zveřejnil roku 1949. V tomto tématu jsou různé varianty řešení cyklicky propojeny.
+S cyklickými tématy zřejmě jako první přišel ve 30. letech 20. století italský problemista Luigi Ceriani. Úlohy, které publikoval v časopisech Die Schwalbe a The Problemist, však tehdy nevzbudily příliš zájmu a některé z nich navíc nebyly korektní. V roce 1949 pak zaslal Ľudovít Lačný úlohu s vlastní verzí cyklického tématu do polské soutěže Przepiorkův memoriál. Úloha získala 1. cenu a tzv. Lačného tématu se dostalo velkého ohlasu. Později si téma získalo mnoho příznivců a řada Lačného následovníků ho dále rozvíjela.
+
+
+== Princip Lačného tématu ==
+Obecně lze řešení každé cyklické úlohy zapsat do přehledné tabulky:
+Podstatou Lačného cyklu je, že pokud by se černý v počáteční pozici bránil obranou a, bílý by reagoval tahem A, na černého obranu b by odpověděl tahem B a na c tahem C. V další fázi hry však bílý své odpovědi musí posunout, takže na tah a volí odpověď B, na tah b odpovídá C a na tah c reaguje tahem A. Tabulka pro Lačného cyklus tedy vypadá následovně:
+
+Původní Lačného úloha je zobrazena na diagramu vpravo. V první fázi, které se říká zdánlivá hra, se černému nabízí tři možné obrany:
+1. ... Jh2 [a] 2. Dd4# [A]
+1. ... c1D [b] 2. Jg2# [B]
+1. ... c3 [c] 2. De4# [C]Na tahu je však bílý a k řešení vede tah 1. Jd2! (s hrozbou 2. Jf1#), po němž se matující tahy cyklicky posunou:
+
+1. ... Jh2 [a] 2. Jg2# [B]
+1. ... c1D [b] 2. De4# [C]
+1. ... c3 [c] 2. Dd4# [A]V tabulce vypadá řešení následovně:
+
+Jak bylo řečeno výše, první úloha tohoto typu byla sestavena roku 1949. Slovenský šachista Peter Gvozdják ve své knize Cyclone 2 uvádí, že od té doby bylo do roku 2009 sestaveno celkem 839 úloh s klasickým Lačného tématem.
+
+
+== Rozšířené Lačného téma ==
+
+Základní Lačného téma lze dále rozšířit dvěma způsoby: přidáním další možnosti černého obrany, nebo rozšířením o další fázi, a tím i uzavřením cyklu.
+
+
+=== Čtyřnásobný Lačný ===
+Roku 1969 uspořádaly slovenské noviny Pravda ke 20. výročí sestavení první úlohy s Lačného tématem turnaj zaměřený na dvojtažky s tímtéž tématem, a to ve dvou sekcích – skladby ortodoxního šachu a exošachové skladby. Soutěž v prvně jmenované sekci vyhrál sám Ľudovít Lačný, když představil první úlohu s čtyřnásobným Lačného cyklem, která podle některých komentářů znatelně předběhla svou dobu. V první fázi zdánlivé hry lze na obrany černého a, b, c a d odpovědět maty A, B, C a D, v další fázi hry pak je na stejné obrany nutné odpovědět maty B, C, D a A. Úloha je zobrazena na druhém diagramu vpravo a řešení je v následující tabulce:
+Od té doby byly sestaveny i další úlohy s 5- a vícenásobným Lačného tématem.
+
+
+=== Uzavřený cyklus ===
+
+Lačného cyklus také může být uzavřen zahrnutím třetí fáze, kdy na obrany černého a, b, c lze nejprve odpovědět A, B, C, později B, C, A a nakonec C, A, B. Jako první sestavili úlohy s uzavřeným Lačného cyklem problemisté Štefan Sobík a Juraj Brabec, oba roku 1969. Jednalo se však o úlohy exošachové a Štefan Sobík s ní dokonce zvítězil v exošachové sekci výše zmíněného výročního turnaje.Příkladem ortodoxního problému s kompletním Lačného cyklem může být dvojtažka Petera Gvozdjáka z roku 1985. Úloha má tři varianty s mírně pozměněnými pozicemi, tzv. dvojčata. Pozice 1 je znázorněna na třetím diagramu vpravo. V pozici 2 jsou přemístěni pěšec (Pc3–c7) a věž (Vd3–d7). V pozici 3 jsou přemístěni střelci (Sa2–c2 a Sb8–e8). Cyklicky propojené řešení všech tří dvojčat je v následující tabulce:
+
+Uzavřeného cyklu lze dosáhnout také bez podobných variantních pozic, kdy jedna z fází úlohy pouze zavádí řešitele na špatnou stopu. Některé varianty tohoto řešení úlohy sice také vedou k cíli a dokonce jsou cyklicky propojené s ostatními fázemi, ale černému zbývá jedna možnost, jak se útoku úspěšně bránit, takže je nutné hledat řešení jiné. Příkladem může být úloha Fjodora Daviděnka a Vladimira Ričkova, která získala 1. cenu na Olympijském turnaji roku 1980. Úloha se zadáním matu 3. tahem je zobrazená na čtvrtém diagramu vpravo. Lačného cyklus, který je součástí jejího řešení, je v následující tabulce, útok bílého ve druhé fázi je odmítnut tahem 1. ... Sb4!:
+
+
+== Příbuzná témata ==
+Velmi příbuzným tématem je tzv. hrozbový Dombro-Lačného cyklus, též zvaný Šedějův cyklus, kdy bílý hrozí matem A, přičemž obrana a vede k matu B a obrana b vede k matu C, v další fázi pak bílý hrozí matem B, přičemž obrana a vede k matu C a obrana b k matu A. Dříve se podobné problémy rovněž nazývaly pouze Lačný, později je však šachoví problemisté začali odlišovat.Kromě toho existují i další témata s cyklicky provázanými řešeními v různých fázích hry, jako například Kissův nebo Djuraševićův cyklus.
+
+
+== Odkazy ==
+
+
+=== Externí odkazy ===
+Ľudovít Lačný (anglicky)
+Lačného úlohy na stránkách Juraje Lörince (anglicky)
+
+
+=== Reference ===
+
+
+=== Literatura ===
+GVOZDJAK, Peter. Cyclone: a Study of the Cyclic Chess Problem. Hull, Québec: Éditions de L'Apprenti Sorcier, 2001. ISBN 0968882854. (anglicky)

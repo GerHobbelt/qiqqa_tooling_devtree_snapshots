@@ -1,0 +1,48 @@
+revision: 15372934
+title: Date nucleare
+url: https://ro.wikipedia.org/wiki/Date_nucleare
+
+
+---
+
+Datele nucleare reprezintă probabilitățile măsurate (sau evaluate) ale diverselor interacții fizice în care sunt implicate nucleele atomilor. Aceste date sunt folosite pentru a înțelege natura interacțiilor, constituiind informațiile fundamentale care stau la baza a numeroase modele și simulări, precum calcularea reactoarelor cu fisiune și fuziune, calcule pentru ecranare și protecție împotriva radiațiilor, criticitatea securității, armament nuclear, cercetare în fizică nucleară, radioterapie medicală, terapii și diagnosticare cu radioizotopi, proiectarea și operarea acceleratoarelor de particule, lucrări geologice și de mediu, calcule pentru înlăturarea deșeurilor radioactive și calcule pentru călătoriile spațiale.
+Acestea grupează toate datele experimentale relevante pentru fizică nucleară și aplicații nucleare. Cuprind un mare număr de mărimi fizice, precum secțiunile eficace de împrăștiere și de reacție (care sunt, în general, funcții de energie și unghi), parametri pentru structură nucleară și radioactivitate, etc. Pot implica neutroni, protoni, deuteroni, particule alfa și aproape toți izotopii nucleari care pot fi utilizați într-un laborator.
+Există două motive principale pentru care sunt necesare date nucleare de mare calitate: elaborarea modelelor teoretice din fizica nucleară și aplicațiile care implică radiație sau energie nucleară. De multe ori există o întrepătrundere între aceste două aspecte, aplicațiile motivând cercetarea din anumite domenii teoretice, iar teoria se poate folosi pentru predicții cantitative sau fenomenologice care pot conduce la concepte tehnologice noi sau mai bune.
+Protocolul științific agreat de comunitatea internațională a evaluatorilor de date nucleare include publicarea datelor sub forma fișelor de date nucleare, în publicații specializate, pentru evaluare colegială.
+
+
+== Evaluări de date nucleare ==
+Pentru asigurarea unui nivel de calitate necesar pentru protecția publică, rezultatele datelor nucleare experimentale sunt uneori evaluate de către o Organizație pentru Date Nucleare cu scopul de a forma o bibliotecă de date nucleare standard. Aceste organizații analizează numeroase măsurători și se pun de acord în privința măsurătorilor de cea mai înaltă calitate înainte de publicarea bibliotecilor. Pentru regimuri de date nemăsurate sau foarte complexe, parametrii modelelor nucleare sunt ajustați până când datele rezultate se potrivesc bine cu cele provenite din experimente critice. Rezultatul unei evaluări este aproape universal înregistrat sub forma unei serii de fișiere de date în formatul Fișier de Date Nucleare Evaluate (abr. en. ENDF - Evaluated Nuclear Data File). Pentru menținerea unor dimensiuni rezonabile ale acestor fișiere, ele conțin o combinație de tabele cu date reale și parametri de rezonanță ce se pot reconstitui în date punctuale cu ajutorul instrumentelor specializate (precum NJOY).
+
+
+=== Organizații pentru Date Nucleare ===
+Rețeaua Internațională de Centre de Date din Reacții Nucleare (abr. en. NRDC) constituie o cooperare mondială de centre de date nucleare, sub auspiciile Agenției Internaționale pentru Energie Atomică. Rețeaua a fost creeată pentru coordonarea colectării, gestionării și distribuirii datelor din reacții nucleare din întreaga lume.
+Grupul de lucru pentru evaluarea secțiunilor eficace (abr. en. CSEWG) este Organizația Națională pentru Date Nucleare a Statelor Unite ale Americii și Canadei. Este un efort de cooperare între laboratoarele naționale ale Departamentului pentru Energie al SUA, industrie și universități, care produce fișierul ENDF/B.
+Organizația Fișier Comun Evaluat pentru Fisiune și Fuziune (abr. en. JEFF) constă din membrii Agenției pentru Energie Nucleară (abr. en. NEA) a Organizației pentru Cooperare și Dezvoltare Economică (abr. en. OECD). Aceștia produc fișierul JEFF care, de asemenea, este în formatul universal ENDF.
+Comitetul Japonez pentru Date Nuceare (JNDC) gestionează Biblioteca Japoneză de Date Nucleare Evaluate (abr. en. JENDL). Acest efort este coordonat prin intermediul Centrului de Date Nucleare de la Agenția Japoniei pentru Energie Atomică (abr. en. JAEA).
+
+
+== Ediții ale fișierelor ENDF/B ==
+Edițiile istorice ale fișierelor ENDF/B se regăsesc mai jos. 
+
+
+== Note ==
+
+
+== Legături externe ==
+Rețeaua Internațională a Centrelor de Date din Reacții Nucleare (NRDC) (en.)
+Introducere în formatele ENDF (en.)
+Secțiunea pentru Date Nucleare a IAEA: Servicii de Date Nucleare (en.)
+Centrul Național de Date Nucleare: Laboratorul Național Brookhaven (SUA) (en.)
+Centrul de Date Nucleare al JAEA (Japonia) (en.)
+Fișierul Comun Evaluat pentru Fisiune și Fuziune (JEFF) (en.)
+Grupul de lucru pentru evaluarea secțiunilor eficace (CSEWG) (en.)
+Formate de date pentru ENDF-6 Arhivat în 30 aprilie 2017, la Wayback Machine. (en.)
+Serviciul de Informații Nucleare T-2 (en.)
+SENUC - trasează grafice ale secțiunilor eficace pentru date nucleare Arhivat în 12 iunie 2018, la Wayback Machine. (derivat din ShimPlotWell Arhivat în 2 octombrie 2018, la Wayback Machine.)
+Sistemul Informatic de Date Nucleare JANIS NEA (en.)
+
+
+== Vezi și ==
+Reacție nucleară
+Forță nucleară

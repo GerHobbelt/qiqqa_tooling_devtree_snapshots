@@ -1,0 +1,115 @@
+revision: 31566066
+title: Caveolina
+url: https://ca.wikipedia.org/wiki/Caveolina
+
+
+---
+
+Les caveolines són proteïnes integrals de membrana presents en estructures cel·lulars denominades caveoles. Són proteïnes petites, amb un pes molecular de 20-23 kDa, amb una seqüència altament conservada en l'evolució. Aquestes estructures, les caveoles, són invaginacions de la membrana plasmàtica de 50 a 100 nanòmetres de diàmetre, descrites per primera vegada el 1953 per George Palade. Les caveolines s'expressen en la majoria dels tipus cel·lulars dels vertebrats, però especialment en cèl·lules endotelials (superfície d'epitelis), adipòcits (cèl·lules grasses) i miòcits (cèl·lules musculars).
+Les caveoles també estan presents, tot i que en menor quantitat, en cèl·lules del sistema immunitari i del sistema nerviós. El nombre de caveoles és molt reduït o estan completament absents en moltes línies cel·lulars transformades oncogènica o viricament i en moltes cèl·lules canceroses humanes.
+La caveola està normalment estabilitzades a la membrana plasmàtica mitjançant el citoesquelet d'actina. A partir d'estudis basats en la tècnica de doble hibridació en llevats es va detectar que la filamina era un lligand de la caveolina-1. Als adipòcits les caveoles representen el 30% de la superfície de la membrana plasmàtica.
+A més, en la línia 3T3L1, un model àmpliament utilitzat per estudiar l'adipogènesi, el nombre de caveoles i els nivells de caveolina-1 augmenten 10 i 20 vegades, respectivament, durant el procés de diferenciació de l'adipòcit.
+
+
+== Organització genètica i evolució històrica ==
+La caveolina-1 va ser el primer membre de la família de les caveolines que va ser identificat, i és important en el transport vesicular derivat de la regió trans-Golgi network. Va ser aïllada com una de les diverses proteïnes que pot ser fosforilada en els seus residus de tirosina, en estudis realitzats amb fibroblasts d'embrió de pollastre transformats amb l'oncogen v-Src. Com que actua en processos de transport vesicular, s'ha relacionat la caveolina-1 amb l'oncogènesi.
+La caveolina-2 (Cav-2) i la caveolina-3 (Cav-3) van ser identificades l'any 1996 utilitzant diferents mètodes experimentals. La caveolina-2 es va descobrir per microeqüenciació duna proteïna de 20 kDa que co-puifica amb derivats de l'adipòcit les caveoles de la membrana plasmàtica. La caveolina-3 va ser identificada en un intent de trobar homòlegs de caveolina-1 per mitjà de detecció de DNA.
+Les seqüències de caveolina es van obtenir a partir de vertebrats, incloent-hi humans, vaques, ratolins, Xenopus i Fugu rubripes. Una família de gens de caveolina també s'ha trobat al Caenorhabditis elegans. Els tres membres de la codificació dels gens de mamífers tenen una seqüència similar.
+Un fet interessant és que la Cav-1 i Cav-2 estan molt properes al cromosoma humà, mentre que la Cav-3 es localitza a un cromosoma diferent. Tot i que l'evolució històrica dels gens de la caveolina no ha estat clarament definit, hi ha pistes a les seves seqüències i organització genètica que suggereixen possibles mecanismes pel seu origen.
+Per exemple, la C. elegans posseeix dos exons, la regió que és homòloga a les caveolines dels mamífers està codificada per un sol exó, fet que suggereix que la caveolina dels mamífers deriva d'aquest particular exó.
+Dos observacions que deriven de la seqüència genètica de l'humà suggereixen que alguns membres de la família poden haver sorgit d'esdeveniments de duplicació gènica: en primer lloc, les fronteres dels exons-introns en l'últim exó de la caveolina-1, 2 i 3 es troben en posicions anàlogues. En segon lloc, que l'exó 2 de la caveolina-2 està dividit en dues parts (2a i 2b) per mitjà d'un intró, mentre que les dues porcions homòlogues de les seqüències de la caveolina-1 i caveolina-3 es fusionen per formar l'exó final.
+El segon punt pot suggerir que la caveolina-2 ha servit com a precursor genètic per la caveolina-1 i la caveolina-3.
+
+
+== Estructura de les caveolines ==
+Degut al domini transmembranal, la caveolina és capaç de penetrar a la membrana. La proteïna està també unida a la membrana per associacions amb el domini d'adhesió a la membrana per l'extrem N- terminal i el domini C-terminal. El domini terminal interacciona amb oligòmers adjacents per formar una cadena.Les caveolines es troben formant grups o oligòmers a la membrana cel·lular. La unió entre una caveolina i una altra es fa a través del domini d'oligomerització, la unió a membrana és a través d'un domini transmembrana i aquesta unió es reforça amb la conjugació amb l'àcid palmític ancorat a la membrana. Els extrems amino- i carboxi-terminals queden cap a fora del citoplasma cel·lular.
+La caveolina-1 i la caveolina-2 presenten palmitoilacions (modificacions lipídiques als extrems de la proteïna) que són útils per a la unió amb el colesterol i el transport de caveolina dins la membrana.
+Dins del domini d'oligomerització hi ha un domini funcional que s'anomena domini scaffolding de la caveolina, i que està implicat en la interacció d'altres proteïnes amb la caveolina. Aquest domini regula negativament l'acció de les proteïnes de senyalització.
+La caveolina-1 pot ser fosforilada al residu tirosina 14 per les cinases i pel receptor d'insulina. Per altra banda, la caveolina-1 té dominis rics en residus carregats que donen lloc a la possibilitat d'interacció amb la membrana citoplasmàtica.
+L'estat de la caveolina-1 depèn de la seva localització, ja que a la membrana plasmàtica es troba en forma d'oligòmers estables, quan també pot estar en forma de monòmers. També es troben heterooligòmers de caveolina-2 i caveolina-1 a la membrana. I la caveolina-3 forma homoligòmers.
+La caveolina-2 no pot formar caveoles per si mateixa, sinó que necessita la caveolina-1 per a formar els complexos heterooligomèrics per tal de migrar cap a la membrana plasmàtica.
+
+
+== Isoformes de les caveolines ==
+
+
+=== Caveolina-1 ===
+Està present a molts tipus cel·lulars, es requereix per la formació de caveoles, interacciona amb el colesterol de les membranes cel·lulars i se l'ha associat a diverses funcions cel·lulars, tals com l'endocitosi, el metabolisme del colesterol, la internalització de lipoproteïnes, supressió de tumors, senyalització cel·lulars, etc. És el membre més estudiat d'aquesta família. presenta dues isoformes (α i β) resultat de la presència dels inicis de transcripció al gen.
+La isoforma β manca dels primers 30 aminoàcids.
+S'ha estimat que aproximadament 144 molècules de caveolina-1 estan presents en una caveola individual, mitjançant la quantificació de la intensitat de fluorescència d'una construcció de caveolina-1-GFP (green fluorescense protein) sobre expressada en fibroblasts. La quantitat relativa de colesterol que s'ha descrit en caveoles immunoaïllades és d'unes 20.000 molècules.
+
+
+=== Caveolina-2 ===
+Està present també a les caveoles, però requereix la presència de caveolina-1 per expressar-se en membrana, ja que sinó és retinguda a l'aparell de Golgi i posteriorment degradada. Es desconeixen les seves funcions, pero podria ser important en el desenvolupament pulmonar. La caveolina-2 té tres isoformes (α, β i γ).
+Les isoformes α i β procedeixen d'un mateix MRNA que posseeix dos inicis de traducció, tot i que existeixen proves que existeixen com en el cas de caveolina-1, dos mRNA per caveolina-2. La isoforma γ és més curta i no se'n coneix la seva formació. L'expressió, estabilitat i localització a les caveoles de caveolina-2 depèn de la presència de caveolina-1.
+
+
+=== Caveolina-3 ===
+La caveolina-3 s'expressa específicament al teixit muscular esquelètic i cardíac, on és essencial per la formació de caveoles i la correcta disposició del citoesquelet. Els gens de caveolina-1 i 2 estan localitzades al cromosoma 7 humà, en una zona que sovint es troba deleccionada en tumors malignes. El gen de caveolina-3 es troba al cromosoma 3 humà.
+Tant la caveolina-1 com la 2 tenen una distribució àmplia i semblant als teixits. En canvi, la caveolina-3 té una distribució més restringida, sent molt abundant a cèl·lules del múscul esquelètic i cardíac, tot i que també s'ha descrit la seva expressió en astròcits (són les principals i més nombroses cèl·lules glials en organismes més evolucionats) i condròcits (cèl·lula típica del teixit cartilaginós).
+En els teixits on s'expressa, la caveolina-3 és responsable de la formació de caveoles a la membrana plasmàtica.
+
+
+== Funcions ==
+El desenvolupament de la biologia molecular i en especial el de l'enginyeria a través de la generació de ratolins Knockout (és a dir, que els hi manca un o més gens específics) pels diferents tipus de caveolina, ha permès associar a aquestes proteïnes amb un bon nombre de funcions cel·lulars, desenvolupament de teixits i patologies. Entre elles estan: formació de caveoles, endocitosi, transcitosi, senyalització cel·lular, mort cel·lular, càncer i transformació cel·lular, angiogènesi, resistència insulínica, cardiopaties, anormalitat en el desenvolupament pulmonar, distròfia muscular, entre d'altres patologies.
+En humans, les mutacions congènites dels gens que codifiquen les caveolines són extremadament rares. Fins ara, únicament s'ha descrit el cas d'una dona brasilera que manca de la proteïna caveolina-1, i que va desenvolupar lipodistròfia congènita de Berardinelli-Seip, una síndrome rara que es caracteritza per l'absència de teixit adipós, resistència a la insulina, dislipidèmia e hipertròfia muscular.
+
+
+=== Transducció de senyals ===
+La transducció de senyals es refereix a qualsevol procés pel qual una cèl·lula transforma un tipus de senyal o estímul a una altra cèl·lula. La caveola també serveix com a plataforma de compartimentació de senyals, ja que concentra les molècules de senyalització; això és el que es coneix com a hipòtesi de senyalització de caveoles.
+Les caveoles, entre les seves diverses funcions, estan especialitzades a iniciar respostes cel·lulars davant diferents estímuls. Per mitjà d'estudis realitzats amb tècniques d'immunoprecipitació o tècniques de doble hibridació s'han demostrat interaccions entre la caveolina i altres molècules com les cinases o les proteïnes G.
+La interacció de caveolina-1 amb molècules de transducció de senyals pot causar una inhibició de la ruta de senyalització o una activació segons la proteïna i el tipus cel·lular.
+Molts tipus de molècules de senyalització, incloent-hi les subunitats de la proteïna G, els receptors de les cinases, la sintasa d'òxid nítric endotelial (eNOS), les GTPases són les que concentra la caveola. Per altra banda, la caveolina-1 pot inhibir l'activació i la capacitat de senyalització de moltes proteïnes, com la c-Src, H-Ras, proteïna cinasa activadora del mitogen i l'eNOS. No hi ha proves que la caveolina-2 sigui moduladora de senyalització, potser perquè la seva seqüència CSD (caveolin-scaffolding domain = "domini de bastida de la caveolina") és diferent de la caveolina-1.
+En canvi, el CSD de la caveolina-3 és similar al de la caveolina-1, i a més, s'ha demostrat que les caveoles generades per caveolina-3 compartimentalitzen i modulen una sèrie de proteïnes de senyalització com el β-adrenèrgic, isoformes de la proteïna-cinasa C i múltiples components del complex distrofina i glicoproteïna.
+
+
+=== Transcitosi ===
+Les caveoles endotelials poden estar involucrades en la transcitosi; ja que tenen els components moleculars utilitzats per les vesícules de transport durant la formació de vesícules, docking (acoblament) i fusió, i la proteïna motora dinamina, la qual és important per la fissió de vesícules, també es localitza a la caveola.
+
+
+=== Endocitosi ===
+Quant a l'endocitosi, sembla que certs lligands i molècules extracel·lulars, tals com la còlera o la toxina del tètanus, són transportades a través de la membrana plasmàtica a través de caveoles, en comptes d'utilitzar mecanismes dependents de clatrina (proteïna que forma la coberta de les vesícules). Avui en dia hi ha patògens amb mecanismes evolutius per tal de poder entrar a les cèl·lules eucariotes a través de caveoles, com certes soques d'Escherichia coli.
+
+
+=== Caveolina-1 i el colesterol ===
+L'estructura de la caveola és sensible als nivells de colesterol, ja que la proteïna interacciona directament amb el colesterol de la cèl·lula. Com que la transcripcció de la caveolina-1 està regulada pel nivell de colesterol lliure en el reticle endoplasmàtic, quan el colesterol cel·lular disminueix provoca una disminució de la transcripció de caveolina-1, i viceversa. El colesterol és imprescindible per la síntesi i sortida de la caveolina des de l'aparell de Golgi cap a la membrana.
+Les caveoles també s'han relacionat amb els processos de transport revers de colesterol, durant el qual l'excés de colesterol lliure intracel·lular és alliberat al plasma sanguini captant alhora partícules de lipoproteïnes d'elevada densitat (HDL). També sembla que les caveoles estan implicades en la captació d'esters de colesterol del plasma.
+El balanç de colesterol intracel·lular pot ser afectat per part de les caveolines, com és el cas de la caveolina-1 mutant que causa la retenció intracel·lular de colesterol lliure, així com la conseqüència disminució en la seva síntesi i del flux de sortida de la cèl·lula. El colesterol lliure es requereix per la formació de la caveola, i regula el promotor de la caveolina-1.
+
+
+=== Regeneració hepàtica ===
+S'ha estudiat el paper de la caveolina-1 en el procés de la regeneració hepàtica comparant la capacitat regenerativa de ratolins normals i ratolins modificats que no expressen el gen de la caveolina-1.
+Durant els primers estadis de la regeneració les cèl·lules del fetge acumulen cossos lipídics, la importància dels quals és que aporten l'energia necessària per a la regeneració, i per això els adipòcits acumulen aquests lípids durant les primeres hores del procés. Aleshores, els ratolins que no expressen caveolina-1 són incapaços de formar cossos lipídics necessaris per aportar energia.Gràcies a aquests experiments se sap la funció vital de la caveolina i dels cossos lipídics, perquè que la proteïna està relacionada amb el magatzematge de lípids i el cicle cel·lular.
+
+
+== Paper de la caveolina a les malalties ==
+
+
+=== Caveolina-1 i el càncer ===
+Diverses proves impliquen a la caveolina-1 en la supressió de tumors, i també que la proteïna té una funció anti-proliferativa. A més, els gens de la caveolina-1 i la caveolina-2 estan a prop dels marcadors microsatèl·lits D7S522 al cromosoma humà 7q31.1, una regió que comunament és deleccionada i que està implicada en la patogènesi de càncers epitelials en humans, com el càncer colorectal, de pròstata, d'ovari i carcinomes de cèl·lules renals.
+Estudis recents sostenen fermament que les funcions de la caveolina-1, ja sigui com a regulador negatiu de la proliferació cel·lular o com a supressor de tumors es troben tant en cèl·lules cultivades com en animals. Estudis de la relativa relació entre la caveolina-1 i els oncògens cel·lulars i la supressió de tumors han tingut gran importància per comprendre l'alt grau de complexitat del funcionament cel·lular.Dos propietats importants de les cèl·lules neoplàsiques són la immortalitat i la transformació. Per tant, és important determinar la contribució relativa dels diferents gens que promouen la immortalitat i/o la transformació cel·lular. Mentre que la caveolina-1 no apareix directament en el paper de la immortalitat, se sap que té una participació activa amb altres gens immortalitzant.
+Per exemple, la pèrdua del locus INK4a, i la codificació tant del p16INK4a i p19ARF són reguladors del cicle cel·lular, i amb aquest procés ja és suficient per permetre que les cèl·lules es tornin immortals.
+S'ha demostrat que la pèrdua concomitant de caveolina-1 i INK4a en cèl·lules donant lloc a una sorprenent avantatge ploriferativa, per tant, la pèrdua de l'expressió de caveolina-1 coopera o té un efecte sinèrgic amb les mutacions genètiques per tal de suprimir la funció d'INK4a.Proves preliminars suggereixen que la caveolina-1 pot tenir un paper en la regulació de l'activitat del PTEN (a phosphatase possessing tumor suppressor functions = fosfata que té funcions supressores de tumors), ja que una gran quantitat es localitza a la caveola, i més concretament, forma complexes amb la caveolina-1. S'ha suggerit que aquesta relació té implicacions per les neoplàsies fol·liculars tiroïdals.Una multitud d'oncògens cel·lulars han demostrat reduir l'expressió de caveolina-1 a la cèl·lula. Entre aquests oncògens es troba el virus del papiloma humà, entre d'altres. Les oncoproteïnes el que fan és regular a la baixa l'expressió de caveolina-1 a través dels mecanismes de transcripció.
+L'activitat supressora de tumors de caveolina-1 es deu en part a la inhibició en l'expressió de survivina que succeeix a través d'un mecanisme transcripcional que involucra la vida beta-catenina-Tcf/Lef.
+Aquestes observacions són importants en alguns càncers on la via beta-catenina està afectada, com el càncer de còlon. A més, els resultats poden ajudar a entendre com uns canvis molècules durant la metàstasi (com la pèrdua en l'expressió d'E-Cadherina) poden modular la capacitat de caveolina-1 per controlar la funcionalitat de molècules clau com la survivina.
+Aquest descobriment pot ajudar a entendre per què la caveolina-1 actua com a proteïna supressora de tumors primerencs, mentre que al tumor tardà està associada a un fenotip tumoral més agressiu i de tipus metastàsic [5] {{}}.
+La Survivina és un inhibidor de l'apoptosi que té una sobreexpressió selectiva en els teixits cancerosos humans, però no en els teixits normals, sinó que està relacionat amb l'agressivitat de la malaltia i amb resultats desfavorables.La caveolina-1 impedeix l'acció de fàrmacs contra el sarcoma d'Ewing.
+El sarcoma d'Ewing és un tumor ossi maligne (cancerós) que afecta a nens. El tumor pot originar-se en qualsevol part del cos, generalment en ossos llargs de les extremitats, la pelvis o el tòrax, igual que en el crani o en els ossos plans del tronc. Sovint es dissemina, i en un nombre significatiu de casos la quimioteràpia no és efectiva.L'estudi realitzat demostra que la caveolina-1 augmenta la resistència de les cèl·lules tumorals del sarcoma d'Ewing als fàrmacs quimioteràpics indicats en aquesta malaltia mitjançant l'activació d'una reacció en un enzim denominat PKC-alfa.
+Si es redueixen els nivells de caveolina-1 o de PKC-alfa presents a la cèl·lula, augmenta considerablement l'eficàcia del tractament davant les cèl·lules tumorals.
+
+
+=== Malalties cardiovasculars ===
+Es creu que les caveolines tenen un paper important durant el desenvolupament de l'arteriosclerosi. A més, la caveolina-3 està associada amb la síndrome del QT llarg (és una anormalitat estructural en els canals de Sodi i Potassi del cor, que predisposa a les persones afectades a taquicàrdies).
+
+
+=== Distròfia muscular ===
+La distrofina és un component essencial del múscul esquelètic. El seu domini N-terminal s'uneix a la F-actina i el seu domini C-terminal s'uneix al complex de glicoproteïnes associades a la distrofina (DAG: Dystrophin-Associated Glycoproteins) a la membrana cel·lular.
+S'ha demostrat que la caveolina-3 co-purifica amb la distrofina, i que una fracció de la caveolina-3 està associada amb la proteïna distrofina. S'ha aïllat el gen humà de la cav-3 i s'ha determinat l'organització genòmica en humans mentre que s'ha fet un screening per buscar mutacions de la cav-3 en pacients amb distròfia muscular.El nombre i la mida de la caveola és anormal en la distròfia muscular de Duchenne (DMD), i estudis realitzats sobre el múscul llis, on la distrofina té un patró més restringit al sarcolema, s'ha demostrat l'específica colocalització amb la caveola i la caveolina.
+Val a dir que una fracció significativa de la caveolina total present al múscul esquelètic no co-purifica amb la distrofina, suggerint que la caveolina no s'associa exclusivament amb la DGC del múscul. La DGC (Complex distrofina-glicoproteïna) actua com a enllaç entre l'actina citoplasmàtica, la membrana i la matriu extracel·lular del múscul estriat.
+
+
+== Notes i referències ==
+
+Molecular Biology of the Cell, Bruce Alberts, Alexander Johnson, Julian Lewis, Martin Raff
+http://www.diagnosticomedico.es/ Arxivat 2018-01-20 a Wayback Machine.
+http://www.nature.com/onc/journal/v23/n47/abs/1208062a.html

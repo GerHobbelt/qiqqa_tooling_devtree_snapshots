@@ -1,0 +1,60 @@
+revision: 20716856
+title: "Virus my\u0161\xED leukemie"
+url: https://cs.wikipedia.org/wiki/Virus_my%C5%A1%C3%AD_leukemie
+
+
+---
+
+Virus myší leukemie (murine leukemia virus, MLV nebo MuLV) je virus způsobující rakovinotvorná onemocnění - leukemii u myší. Jedná se o retrovirus, který může infikovat i další zvířecí hostitele. Viry myší leukemie zahrnují exogenní i endogenní viry. Replikační viry mají pozitivní jednořetězcovou RNA (+ssRNA), která se replikuje prostřednictvím DNA vzniklé reverzní transkripcí.
+
+
+== Charakteristika ==
+Viry myší leukémie jsou retroviry skupiny / typu VI patřící do rodu gammaretrovirů z čeledi Retroviridae. Virové částice replikujících se MLV mají morfologii typu C určenou elektronovou mikroskopií. Mezi MLV patří exogenní i endogenní viry.
+
+
+=== Exogenní viry ===
+Exogenní formy se přenášejí jako nové infekce z jednoho hostitele na druhého. Moloney, Rauscher, Abelson a Friend MLV, pojmenované po svých objevitelích, se používají při výzkumu rakoviny.
+
+
+=== Endogenní viry ===
+Endogenní MLV jsou integrovány do zárodečné linie hostitele a jsou předávány z jedné generace na druhou. Vědci Stoye a Coffin je rozdělili do čtyř kategorií podle specificity hostitele, která je určena genomovou sekvencí jejich oblasti obalu. Ekotropní MLV (od společnosti Gr.eco, „Home“) jsou schopné infikovat myší buňky v kultuře. Neekotropní MLV mohou být xenotropní (od xenos, „cizí“, infikující jiné než myší druhy), polytropní nebo modifikované polytropní (infikující řadu hostitelů, včetně myší). Mezi posledně jmenovanými MLV jsou také amfotropní viry (Gr. Amphos), které mohou infikovat jak myší buňky, tak buňky jiných živočišných druhů.
+
+
+== Struktura ==
+Jako retroviry typu C (replikující) produkují viry myší leukémie virion obsahující sférický nukleokapsid (virový genom v komplexu s virovými proteiny) obklopený lipidovou dvojvrstvou odvozenou z membrány hostitelské buňky (vznikající jako lyzozom). Lipidová dvojvrstva obsahuje integrované hostitelské a virové proteiny oseté molekulami sacharidů. Virová částice má průměr přibližně 90 nanometrů (nm). Virové glykoproteiny jsou exprimovány na membráně jako trimér prekurzoru Env, který je štěpen na SU a TM hostitelským furinem nebo furinovými proproteinovými konvertázami. Toto štěpení je nezbytné pro začlenění Env do virových částic.
+
+
+== Genom virů ==
+Genomy exogenních a endogenních virů myší leukémie byly již plně sekvenovány. Virový genom je pozitivní jednořetězcová RNA molekula, skládající se z přibližně 8000 nukleotidů. Od 5' do 3' konce (obvykle zobrazeno jako "zleva" do "doprava") obsahuje genom gag, pol a env oblasti kódující strukturní proteiny, enzymy včetně RNA-dependentní DNA polymerázy (reverzní transkriptáza) a plášťové proteiny. Kromě těchto tří polyproteinů: Gag, Pol a Env, společných pro všechny retroviry, produkuje MLV také proteiny p50 / p60 získané z alternativního sestřihu genomové RNA.
+
+
+== Replikace ==
+Infekce začíná, když se povrchový glykoprotein (SU) naváže na vnější část dozrálého infekčního virionu, nacházejícího se na povrchu receptoru nové hostitelské buňky. V důsledku toho dochází ke změnám v env. Tyto změny vedou k uvolňování povrchového glykoproteinu (SU) a konformační regulaci transmembránového proteinu (TMP). Ve výsledku dochází k fúzi virové membrány a plazmatické membrány. Fúze membrán vede k akumulaci obsahu virionů v cytoplazmě buňky. Po vstupu do cytoplazmy je virová RNA zkopírována do jedné molekuly dsDNA pomocí RT. Tato DNA je zatím neznámým způsobem přenesena do jádra, kde protein integrázy (IN) katalyzuje její inzerci do chromozomální DNA. Virová DNA se nazývá „provirus“ poté, co je integrována do DNA hostitele. Je replikován a transkribován běžnými nástroji hostitelských buněk. Proteiny jsou transportovány do plazmatické membrány, kde jsou kombinovány do částic potomstva virů. Nezralé částice jsou uvolňovány z buňky pomocí buněčných strojů „ESCRT“ a poté zrají, když oddělují virové polyproteiny viru od buňky. Částice nemůže zahájit novou infekci, dokud nedojde ke zrání.
+
+
+== Výzkum virů ==
+Stejně jako u jiných retrovirů replikují MLV své genomy s relativně nízkou věrností. Divergentní virové sekvence lze tedy nalézt v jediném hostitelském organismu. Předpokládá se, že reverzní transkriptázy MLV mají o něco vyšší četnost než HIV-1 RT.Virus Friend (FV) je kmen viru myší leukémie, který byl použit jak pro imunoterapii, tak pro vakcíny. Pokusy ukázaly, že je možné chránit před infekcí virem Friend několika typy vakcín, včetně oslabených virů, virových proteinů, peptidů a rekombinantních vektorů vakcíny exprimující gen viru Friend. Ve studii očkovaných myší bylo možné identifikovat imunologické epitopy potřebné pro ochranu proti viru, a tak určit typy imunologických odpovědí, které jsou nezbytné nebo nutné pro ochranu proti viru. Výzkum objevil ochranné epitopy, které byly lokalizovány na F-MLV gag a env proteiny.
+
+
+=== Medicínské aplikace MLV ===
+Genová terapie: Částice odvozené od MLV mohou dodávat terapeutické geny do cílových buněk.
+Studie rakoviny: MLV se používají ke studiu vývoje rakoviny.
+Použití jako model retroviru ve studiích virové clearance
+Reverzní transkriptáza z MMLV se používá v biotechnologiích.
+
+
+== Odkazy ==
+
+
+=== Reference ===
+
+
+=== Literatura ===
+KOLÁŘOVÁ, Libuše, Obecná a klinická mikrobiologie, 1. vyd. Praha, Galén, 2020, 441 s. EAN 9788074924774.
+KLABAN, Vladimír, Svět mikrobů - Ilustrovaný lexikon mikrobiologie životního prostředí, 1. vyd. Hradec Králové, Gaudeamus, 2001, 304 s.
+ROOSSINCK, Marilyn, ZIMMER, Carl, Virus - An Illustrated Guide to 101 Incredible Microbes, 3. vyd. Princeton, Princeton University, 2016, 272 s. ISBN 9780691166964. (anglicky)
+MADIGAN, Michael T., Brock Microbiologie, 1. vyd. Hamburg, Pearson Studium, 2020, 1388 s. ISBN 3868943676. (německy)
+
+
+=== Externí odkazy ===
+ Obrázky, zvuky či videa k tématu virus myší leukemie na Wikimedia Commons

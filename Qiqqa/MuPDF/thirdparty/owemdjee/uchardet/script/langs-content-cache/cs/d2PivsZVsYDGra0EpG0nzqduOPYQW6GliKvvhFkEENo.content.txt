@@ -1,0 +1,45 @@
+revision: 16351088
+title: Language
+url: https://cs.wikipedia.org/wiki/Extensible_Stylesheet_Language
+
+
+---
+
+XSL respektive eXtensible Stylesheet Language (česky rozšiřitelný stylový jazyk) je rodina jazyků umožňujících popsat jak se mají XML soubory formátovat a převádět. Zahrnuje tři jazyky:
+
+XSL Transformace (XSLT): XML jazyk k převádění XML dokumentů,
+XSL Formátovací Objekty (XSL-FO): XML jazyk pro specifikaci vizuálního formátování XML dokumentů,
+XML Path jazyk (XPath, česky „jazyk pro cesty v XML“): jazyk k adresování částí XML dokumentu, který ale sám není XML jazykem. Je používán například v XSLT.Specifikace těchto tří jazyků jsou dostupné ve formě W3C doporučení.
+
+
+== Historie ==
+Vše začalo snahou přinést schopnosti jazyka DSSSL (Document Style Semantics and Specification Language, česky jazyk sémantiky a specifikace stylu dokumentu), zejména v oblasti tisku a špičkové sazby textů, do XML.
+Pracovní skupina W3C začala na XSL pracovat v prosinci 1997. Vedli ji Sharon Adler a Steve Zilles, editorem (a neoficiálním hlavním designérem) byl James Clark, vlastní W3C zastupoval Chris Lilley. První veřejný návrh (Working Draft) skupina vydala 18. srpna 1998. XSLT a XPath se staly W3C doporučeními 16. listopadu 1999, XSL-FO se stalo doporučením 15. října 2001.
+Původním záměrem bylo vytvořit "silnější odrůdu CSS" pro definici vzhledu XML souborů. Během vývoje se však ukázalo, že se cíl rozdělil do dvou tematicky výrazně odlišných částí: na návrh komponent tvořících formátovanou podobu dat a jejich vzhledových vlastností (XSL-FO) a na mechanismy, jimiž se původní dokument transformuje na tyto objekty (XSLT). Zejména transformační část následně prokázala značnou míru samostatnosti, protože XSLT lze použít na provádění obecných změn XML dat, například pro jejich převod do podoby HTML stránek, pro konverze různých XML formátů či pro vybírání informací z datového souboru.
+
+
+== Rodina XSL ==
+
+
+=== Transformace XSL ===
+
+V současnosti je k dispozici řada implementací XSLT. Transformaci XML do HTML pomocí XSLT podporují nejvýznamnější webové prohlížeče, včetně Internet Exploreru (který používá MSXML), Firefoxu, Mozilly a Netscape (všechny používají TransforMiix) a Opery (vlastní implementace). Dalšími významnými implementacemi jsou samostatné XSLT procesory, jako například v Javě Saxon (pro SAX) a Xalan (pro DOM).
+
+
+=== XSL Formátovací objekty ===
+
+Formátovací objekty jsou podporovány daleko vzácněji. Existující implementace jsou většinou (pokud ne všechny) pouze částečné. Známým procesorem XSL-FO je FOP, vyvíjený projektem Apache. Zvládá velkou část jazyka XSL-FO, který dokáže převést do PDF a dalších výstupních formátů. Jinou implementací je PassiveTeX, který ke konverzi XSL-FO do PDF využívá LaTeX.
+
+
+=== Dotazovací jazyk XPath ===
+
+Pomocí XML Path Language (XPath) se v XSLT popisuje, kterou část XML dokumentu zpracovat. Proto bývá považován za součást rodiny XSL. Protože samostatný jazyk XPath nemá přímý funkční význam pro manipulaci s daty, nebývá implementován samostatně, ale jako součást implementace XSLT.
+
+
+== Externí odkazy ==
+definice jazyka XSL – anglicky
+co je XSL-FO? – anglicky
+XML zaměřené na témata: CSS, XSL, XSL-FO – anglicky
+W3C škola – XSL tutoriál – anglicky
+XSL-FO a XSLT zavádění a tutorial (v němčině)
+Informace a reference v XSLT (v němčině)

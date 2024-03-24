@@ -1,0 +1,15 @@
+revision: 46503153
+title: Return-oriented programming
+url: https://pt.wikipedia.org/wiki/Return-oriented_programming
+
+
+---
+
+Return-oriented programming, cuja sigla é R.O.P, em Língua portuguesa programação orientada ao retorno é uma técnica que se incorpora ao retorno de uma função, alterando a saída da instrução RET (return). O ROP pode ser aplicado sem que haja nenhuma injeção de código, na verdade, ele subscreve um trecho de código já existente.
+A programação orientada ao retorno age gerando um algoritmo que ao ser injetado numa máquina vulnerável constitui um código binário, ou gadget, que se acopla a partes já existentes de qualquer tipo de programa, como por exemplo .XLS, .DOC, .PPT ou mesmo funcionalidades do próprio sistema operacional. O worm se posiciona junto a uma instrução RET duma função e é colocado dentro da área de execução.
+Tarefas bem definidas são realizadas quando um binário malicioso é inserido na pilha e utiliza os ponteiros para sequenciar as instruções RET. O atacante pode realizar qualquer comportamento que desejar, uma vez que posiciona o worm na pilha de execução. O nome dado a esta prática é subversão; É quando o atacante consegue mudar o fluxo dum programa fazendo uso das credenciais do usuário.
+Alterar o retorno de uma função significa desvirtuar sua saída, isto é, sua resposta pode não ter nada a ver com os dados de entrada que foram inseridos; É como se ao realizar uma subtração o retorno fosse uma adição.
+
+
+== Ligações externas ==
+«Computer Scientists Take Over Electronic Voting Machine With New Programming Technique» (em inglês). Science Daily. 11 de Agosto de 2009

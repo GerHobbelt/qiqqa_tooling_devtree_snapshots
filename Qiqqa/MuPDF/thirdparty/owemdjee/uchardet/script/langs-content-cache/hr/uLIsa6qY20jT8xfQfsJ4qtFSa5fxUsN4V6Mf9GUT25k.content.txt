@@ -1,0 +1,24 @@
+revision: 6191297
+title: Visinomjer
+url: https://hr.wikipedia.org/wiki/Visinomjer
+
+
+---
+
+Visinomjer ili altimetar je mjerni instrument ili sprava za određivanje visine. Kod zrakoplova visinomjer može određivati bilo trenutačnu visinu nad tlom s pomoću radara (radioaltimetar), bilo nadmorsku visinu mjerenjem tlaka zraka (barometarski altimetar), a s korekcijom prema tlaku zraka na uzletištu ili sletištu, koju javlja meteorološka služba, i relativnu visinu nad tlom. Za precizno mjerenje nadmorske visine i za mjerenje visine stabala služi hipsometar.
+
+
+== Visinomjer u zrakoplovstvu ==
+Visinomjer je instrument koji mjeri visinu leta zrakoplova. S obzirom na neravnine Zemljinog tla, razlikuju se apsolutna i relativna visina. Pod apsolutnom visinom leta podrazumijeva se okomita udaljenost zrakoplova od površine mora (nadmorska visina), dok relativnu visinu predstavlja visina zrakoplova iznad terena preko kojeg leti.
+Visinomjerima koji mjere apsolutnu visinu princip rada zasniva se na mjerenju statičkog tlaka okolnog zraka koji se mijenja u ovisnosti o visini. U biti, to su aneroidni barometri, čija je skala razdijeljena tako da svaki odjeljak odgovara određenoj visini. 
+Shema rada jednostavnog visinomjera prikazana je slici. Osnovni pogonski element ovakvih visinomjera je aneroidna kapsula (1) iz koje je izvučen zrak. Pri promjeni zračnog tlaka kapsula se izobličuje i preko prijenosnog mehanizma (poluge (2), osovine(3), prijenosnih zupčanika (4) i (5)) okreće kazaljku. Bimetalne poluge (6) i (7) koje se nalaze u sklopu prijenosnog mehanizma služe kao elementi za temperaturnu kompenzaciju. Hermetička kutija instrumenta spojena je sa statičkim vodom Pitot-Prandtlove cijevi kako bi na kapsulu djelovao stvarni statički tlak zraka, koji vlada na određenoj visini. Dugme (8) služi za podešavanje skale visinomjera. 
+Iza kazaljke se nalazi skala razdijeljena na određen broj odjeljaka. Kod jednostavnih visinomjera razmak između dvija susjedna odjeljka označava visinsku razliku od najmanje 20 metara. Pomoću ovakvih visinomjera ne može se sasvim precizno očitati visina. Veća preciznost nije ni potrebna, ako se let odvija u uvjetima dobre vanjske vidljivosti. 
+Barometarski način mjerenja visine ne daje veliku točnost jer statički zrak na određenoj visini nije uvijek isti nego se mijenja u ovisnosti o općim meteorološkim stanjem. Visinomjeri su tvornički umjereni (baždareni) na uvjete standardne atmosfere koja točno definira zakonitosti po kojima se mijenjaju tlak, gustoća i temperatura zraka u ovisnosti o visini, kao i vrijednosti ovih veličina na razini mora. Atmosferski tlak je promjenjiv i vrlo rijetko odgovara standardnim uvjetima. S obzirom na to da preračunavanje vrijednosti na standardne uvjete zahtijeva utrošak vremena kojeg pilot nema, visinomjeri se kontroliraju tako da im se pomoću odgovarajućeg dugmeta (8) može podešavati skala. Neposredno pred polijetanje pilot okretanjem tog dugmeta okreće skalu dok joj se nulta podjela ne poklopi s kazaljkom. Na taj način visinomjer je podešen tako da pokazuje relativnu visinu zrakoplova u odnosu na polazni aerodrom.
+Princip rada relativnih visinomjera zasniva se na mjerenju vremena koje protekne od trenutka emitiranja do trenutka prijema zvučnih, radio ili radarskih signala. Zvučni ili elektromagnetski valovi emitiraju se okomito naniže, putuju, odbijaju se i vraćaju u prijemni sklop instrumenta. Poseban uređaj mjeri vrijeme od trenutka odašiljanja do trenutka prijema signala. S obzirom na to da se zvučni i elektromagnetski valovi kreću nepromjenjivom brzinom, vrijeme njihovog putovanja zavisi od prijeđenog puta. Polovina prijeđenog puta predstavlja relativnu visinu zrakoplova.
+
+
+== Izvori ==
+
+
+== Vidi još ==
+Jedrilica (zrakoplov)

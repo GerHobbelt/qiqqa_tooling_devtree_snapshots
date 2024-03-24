@@ -1,0 +1,31 @@
+revision: 60992000
+title: "bateria j\u0105drowa"
+url: https://pl.wikipedia.org/wiki/Bateria_j%C4%85drowa
+
+
+---
+
+Bateria jądrowa – przyrząd zmieniający energię powstającą podczas rozpadu promieniotwórczego w energię elektryczną.
+
+
+== Budowa i zasada działania ==
+W baterii umieszczony jest izotop promieniotwórczy stanowiący jedną elektrodę oraz odizolowana próżnią lub dielektrykiem druga elektroda. Izotop podczas rozpadu emituje promieniowanie β, które jest wychwytywane przez przeciwległą elektrodę. Dzięki temu elektroda z radioizotopem uzyskuje ładunek elektryczny dodatni, a druga ładunek ujemny. Gromadzący się ładunek wywołuje różnicę potencjałów pomiędzy elektrodami (czyli napięcie elektryczne), która może wywołać przepływ prądu elektrycznego. Baterie jądrowe używają izotopów emitujących promieniowanie β niskiej energii. Niskie energie są konieczne aby zapobiec powstawaniu promieniowania hamowania (Bremsstrahlung), które wymaga stosowania ciężkich ekranów ochronnych. Poza tym okres rozpadu powinien być na tyle długi, aby bateria nie straciła w krótkim czasie swojej mocy. Stosowane są izotopy: tryt, 63Ni, 147Pm, 99Tc i 241Pu, np.:
+
+9943Tc → 9944Ru + e− + νeBaterie jądrowe mogą wytworzyć dużo więcej energii z jednostki masy baterii niż baterie chemiczne i są w stanie pracować przez dziesiątki lat. Niedogodnością jest niewielka sprawność (około 0,1–5%) i mała wydajność rzędu nano- lub mikrowatów na cm², podczas gdy baterie konwencjonalne osiągają wydajność kilku W/cm². Dlatego do uzyskania odpowiedniej mocy konieczne jest użycie elektrod o dużej powierzchni.
+Baterii jądrowej nie należy mylić z radioizotopowym generatorem termoelektrycznym (RTG), który wytwarza energię elektryczną także z rozpadu promieniotwórczego, ale jego zasada działania jest zupełnie inna.
+
+
+== Baterie betawoltaiczne ==
+Bateria betawoltaiczna jest odmianą baterii jądrowej. Zamiast elektrody zastosowana jest płytka półprzewodnikowa ze złączem p-n. Pierwiastek promieniotwórczy podczas rozpadu, emituje promieniowanie β, co powoduje wytworzenie się w półprzewodniku par dziura-elektron. Gromadzenie się tych par, wywołuje powstanie siły elektromotorycznej. Zasada działania jest podobna do działania baterii słonecznej, w której fotony światła widzialnego (a nie promieniowanie jonizujące) powodują powstanie par dziura-elektron. W maju 2005 roku grupa naukowców z University of Rochester i University of Toronto opracowała niewielką baterię betawoltaiczną opartą na trycie, której wydajność jest kilkakrotnie większa od poprzednich rozwiązań. Bateria może służyć jako źródło zasilania np. do rozruszników serca.
+
+
+== Parowa siłownia jądrowa w mikro skali ==
+Nazwa "bateria jądrowa" używana jest także dla projektów elektrowni jądrowych o mocy prądu kilkunastu megawatów do zasilania miejscowości zlokalizowanych poza siecią dróg i sieciami dystrybucji energii elektrycznej lub gazu. Przykładem jest miejscowość Galena na Alasce (USA), zamieszkana przez 675 osób (w roku 2000), gdzie rozważano uruchomienie lokalnej elektrowni atomowej bazującej na reaktorze 4S.
+
+
+== Zobacz też ==
+Hydrogen-moderated self-regulating nuclear power module
+
+
+== Bibliografia ==
+Ryszard Szepke: 1000 słów o atomie i technice jądrowej. Wydawnictwo Ministerstwa Obrony Narodowej, 1982. ISBN 83-11-06723-6. (pol.).brak strony w książce

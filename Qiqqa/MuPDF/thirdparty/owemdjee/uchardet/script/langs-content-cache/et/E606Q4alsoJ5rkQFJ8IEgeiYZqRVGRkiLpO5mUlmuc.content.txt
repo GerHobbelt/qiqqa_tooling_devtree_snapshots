@@ -1,0 +1,100 @@
+revision: 6135438
+title: Nukleotiid
+url: https://et.wikipedia.org/wiki/Nukleotiidid
+
+
+---
+
+Nukleotiidid on orgaanilised molekulid, mis moodustavad suuri biopolümeere- nukleiinhappeid, näiteks DNA ja RNA.
+Nukleotiidid on DNA ja RNA molekuli alaüksused, mis koosnevad lämmastikalusest (N-alus), suhkrust (pentoos, riboos või desoksüriboos) ja fosfaatrühmast.Peale ATP, mis on rakus üheks energia salvestajaks, on veel teisigi nukleosiidtrifosfaate (GTP, CTP, UTP), mis mängivad olulist rolli metabolismis. Nukleotiidid osalevad ka rakus informatsiooni vahetusel (cGMP ja cAMP) ja on seotud ensümaatiliste reaktsioonidega (näiteks koensüüm A, FAD, FMN, NAD ja NADP+).
+
+
+== Struktuur ==
+Nukleotiid koosneb lämmastikalusest, viiesüsinikulisest suhkrust (DNA korral 2-desoksüriboos ja RNA korral riboos) ning vähemalt ühest fosfaatrühmast. Ilma fosfaatrühmata kannab ühend nime nukleosiid. Nukleotiidi võib nimetada ka nukleosiidmonofosfaadiks. Fosforhappejääk saab liituda estersidemega asendis 2', 3' või 5' ribonukleotiidides ja asendis 3' või 5' desoksüribonukleotiidides. Ribonukleotiidides on võimalik ka samaaegselt fosforüülumine asendites 2' ja 3', nii tekivad tsüklilised nukleotiidid. Seega on tsüklilistes nukleotiidides fosforhappejääk seotud ühe nukleosiidi pentoosiga kahe estersidemega. Nukleotiidid sisaldavad kas puriin- või pürimidiinaluseid. Ribonukleotiidides on suhkruks riboos ja desoksüribonukletiidides desoksüriboos.
+
+Nukleiinhapped on polümeersed makromolekulid, mille monomeerideks on nukleotiidid. DNAs on puriinalusteks adeniin ja guaniin ning pürimidiinalusteks tümiin ja tsütosiin. RNAs on tümiin asendatud uratsiiliga. Adeniin on alati paaris tümiiniga, tekib kaks vesiniksidet, guaniin on paaris tsütosiiniga, nende vahel esineb kolm vesiniksidet.
+
+
+== Omadused ==
+Fosforüüljäägi dissotsieeruvate hüdroksüülrühmade tõttu on nukleotiididel üsna tugev happeline omadus. Samal ajal võib nukleotiide nimetada ka fosforhappe ja nukleosiidi estriteks.
+
+
+== DNA ja RNA ==
+
+
+=== DNA ===
+DNA ehk desoksüribonukleiinhape on polümeer, mille monomeerideks on nukleotiidid. Nukleotiid koosneb fosforhappejääkidest, desoksüriboosist ja ühest lämmastikalusest, milleks on adeniin (A), tümiin (T), guaniin (G), tsütosiin (C). DNA ülesandeks on säilitada pärilikku informatsiooni.
+
+
+=== RNA ===
+RNA ehk ribonukleiinhape on polümeer, mille moodustavad riboos, fosforhappejäägid ja üks lämmastikalustest, milleks on adeniin, guaniin, tsütosiin ja uratsiil (U).
+
+
+== Tuntumad nukleotiidid ==
+
+
+=== ATP ===
+
+ATP koosneb adeniinist, riboosist ja kolmsest fosfaatrühmast.
+ATP ehk adenosiin-5'-trifosfaat osaleb rakkude metabolismis ja on energia ülekandjaks ja salvestajaks. ATP-d toodetakse peamiselt mitokondrites. ATP-d saadakse adenosiin-5'-monofosfaati fosforüleerides.
+ATP võtab osa nii glükolüüsist, tsitraaditsüklist kui ka paljudest teistest rakus toimuvatest protsessidest.
+
+
+=== GTP ===
+GTP ehk guanosiin-5'-trifosfaat, koosneb guaniinist, riboosist ja kolmsest fosfaatrühmast.
+
+
+=== cAMP ===
+cAMP ehk tsükliline adenosiin-5'-monofosfaat on sekundaarne virgatsaine, mis osaleb rakusiseses närvisignaali ülekandes. cAMP moodustub riboosi hüdroksüülrühmade reageerimisel fosfaatrühmaga.
+
+
+=== FAD ja FMN ===
+FAD ehk flaviinadeniindinukleotiid ja FMN ehk flaviinmononukleotiid on mõlemad koensüümid. FMN on koensüümiks vesinikku transportivates ensüümides, samuti kuulub mitme aminohappe oksüdaasi koosseisu. FAD täidab koensüümina vesiniku transportfunktsiooni raku redoksahelas. FAD-i-seoselised dehüdrogenaasid on mitokondriaalse elektronide transpordiahela komponendid, vesiniku doonoriks on NADH + H+.
+
+
+=== NAD+ ja NADH ===
+Mõlemad on nikotiinamiidadeniindinukleotiidid, mis koosnevad kahest nukleotiididist- adeniini ja nikotiinhappeamiidi sisaldavast komponendist. NADP+ ja NADPH on fosfaadid, mis on dehüdrogenaaside koensüümid. NAD+ ja selle fosfaadi funktsiooniks on vesiniku aktsepteerimine ja seejärel transport redoksahelas, millest peamine on hingamisahel, kus toimub redokssüsteem NAD+/NADH + H+.
+
+
+== Süntees ==
+Nukleotiide on võimalik sünteesida in vitro ja in vivo.
+In vivo – nukleotiide saab sünteesida de novo ("algusest") või taaskasutada, kui päästa vigaseid nukleotiide. Komponendid, mida kasutatakse de novo nukleotiidi sünteesis, on tuletatud karbohüdraadi ja aminohappe metabolismi biosünteetilistest lähteainetest ning ammooniumist ja süsinikdioksiidist. Peamiselt toimub kõigi nelja nukleotiidi de novo süntees maksas. Pürimidiinide ja puriinide de novo sünteesid kasutavad erinevaid radasid. Pürimidiini sünteesitakse aspartaadist ja karbamoüülfosfaadist tsütoplasmas. Puriine sünteesitakse suhkrust. Puriin- ja pürimidiinaluste süntees toimub tsütoplasmas mitmesuguste ensüümide kaasabil. Nukleotiidid jaotatakse nii, et kasulikke osasid saab uuesti kasutada, sünteesimaks uusi nukleotiide.
+In vitro – nukleotiidide saadakse laboris, kui kasutatakse kaitserühmi, näiteks dimetoksütritüülrühm (DMT), mis aitab ära hoida 5'hüdroksüülrühma mittespetsiifilisi reaktsioone enne järgmise nukleotiidi lisamist. Iga nukleotiid on 5' otsast kaitstud 5'DMT rühmaga. 3'fosfaadile on lisatud diisopropüülamiinrühm, mis omakorda kaitstud metüülrühmaga. See struktuur kannab nimetust fosforamidiit. Fosforamidiiti kasutatakse looduses mitte esinevate analoogide või oligonukleotiide sünteesiks.
+
+
+=== Pürimidiinribonukleotiidi süntees ===
+
+Pürimidiinide CTP ja UTP süntees toimub tsütoplasmas ja algab karbamoüülfosfaadi moodustumisega glutamiinist ja CO2-st. Järgmisena toimub aspartaadi ja karbamoüülifosfaadi kondensatsioonireaktsioon ja moodustub oroothape. Hilisemas tsüklilises reaktsioonis tekib N-karbamoüülaspartaadist dihüdroorotaathape ensüümi dihüdroorotaasi vahendusel. Viimane muudetakse orotaadiks dihüdroorotaasi oksüdaasi abil.
+(S)-dihüdroorotaat + O2 = orotaat + H2O2Orotaat on kovalentselt seotud fosforüleertud riboosiga. Kovalentne side riboosi ja pürimidiini vahel asub riboosil positsioonis C1 ja pürimidiinil positsioonis N1. Orotaat fosforibosüültransferaas katalüüsib reaktsiooni, saades orotidiinmonofosfaadi.
+Orotaat + 5-fosfo-α-D-riboos 1-difosfaat = orotidiin-5'-fosfaat + pürofosfaat
+Orotidiin-5'-fosfaat dekarboksüleeritakse orotidiin-5'-fosfaat dekarboksülaasi abil uridiinmonofosfaadiks(UMP). UMP fosforüleeritakse kahe kinaasi abil uridiintrifosfaadiks(UTP), läbi kahe järjestikuse reaktsiooni ATP-ga. Esiteks moodustub difosfaatne vorm UDP, mis fosforüleeritakse UTP-ks. Mõlemaks reaktsiooniks saadakse energiat ATP hüdrolüüsist.
+ATP + UMP = ADP + UDP
+UDP + ATP = UTP + ADP
+Järgnevalt moodustub CTP, selleks amiinitakse UTP. Glutamiin on NH3 doonor ja reaktsioon saab energiat ATP hüdrolüüsist.
+UTP + glutamiin + ATP + H2O = CTP + ADP + Pi
+Tsüstiinmonofosfaat (CMP) on saadud tsüstiintrifosfaadist (CTP), eemaldades kaks fosfaatühma.
+
+
+=== Puriini ribonukleotiidi süntees ===
+
+Aatomid, mida kasutatakse puriinnukleotiidi moodustamiseks, tulevad erinevatest allikatest: 
+
+Joonisel 2 on kujutatud inosiin-5´monofosfaadi sünteesi fosforibosüül-1-pürofosfaadist.
+Puriinnukleotiidi süntees inosiin-5'-fosfaadini:
+1. Puriinnukleotiidi süntees algab sellega, et puriinalus ja riboos liidetakse.
+2. Amiinrühma lisamisel läheb anomeerne süsinik 5-fosfo-α-D-riboos-1-difosfaadis (PRPP) olevast α positsioonist üle β positsiooni 5-fosforibosüülamiinis. Kõikides nukleotiidides on riboos/desoksüriboos β konfiguratsioonis.
+3. Glutamiin on amiinrühma doonor, reaktsiooni katalüüsib aminotransferaas.
+4. 10-formüül-tetrahüdrofolaadist lisatakse üksik süsinik, reaktsiooni katalüüsib transformülaas. 
+5. Ringikujulise struktuuri saamiseks lisatakse glütsiini ja fumaraadi molekulid.
+6. Reaktsioonirada on reguleeritud allosteerselt AMP, ADP, GMP ja GDP abil, mis kõik pidurdavad PRPP amidotransferaasi, esimest ensüümi rajas.
+Rada IMP-st kuni GMP ja AMP-ni: 
+IMP on vahepunkt guanosiinmonofosfaadi ja adenosiinmonofosfaadi sünteesis.
+GMP-st ja AMP-st GTP ja ATP saamine:
+GMP ja AMP muundatakse difosfaatideks reaktsioonides, mida katalüüsivad guanülaatkinaas ja adenülaatkinaas. Nukleosiiddifosfaadist nukleotiidtrifosfaadiks katalüüsib ensüüm nimega nukleosiiddifosfaatkinaas. Tegemist on pöörduva reaktsiooniga, mis pakub võimalust teha nii ATP-d kui ka GTP-d. See ensüüm on väga aktiivne, aga ka laia spetsiifilisusega oma fosforüülrühma doonori ja retseptori poolest.
+
+
+== Vaata ka ==
+Lämmastikalused
+
+
+== Viited ==

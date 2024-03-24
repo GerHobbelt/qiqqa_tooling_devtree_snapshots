@@ -1,0 +1,30 @@
+revision: 6771507
+title: Pearsonov symbol
+url: https://sk.wikipedia.org/wiki/Pearsonov_symbol
+
+
+---
+
+Pearsonov symbol je trojica symbolov, ktorá slúži ako druh označovania typov kryštalografických štruktúr (a v podstate aj kategorizácie - pretože rovnaký Pearsonov symbol môže mať viac minerálov). 
+Pearsonov symbol nešpecifikuje konkrétnu štruktúru, ale celý rad štruktúr, ktoré majú rovnakú symetriu a rovnaký počet atómov na elementárnu bunku. Napríklad Pearsonov symbol cP8 zahŕňa štruktúru typu B20 ako aj typu B21. 
+(B20 a B21 sú symboly značenia v spôsobe označovanie štruktúr nazývanom „Strukturbericht“, pričom nemecký pojem Strukturbericht sa bez prekladu používa aj v angličtine). Kryštalografickú štruktúru B20 má napr. FeSi a štruktúru B21 ma kryštál CO. 
+
+
+== Význam symbolov ==
+Pearsonov symbol sa skladá z troch znakov.
+Prvým je malé písmeno charakterizuje kryštalografickú sústavu:
+
+Za týmto malým písmenom nasleduje veľké písmeno charakterizujúce centráciu mriežky:
+
+Posledným znakom je číslo charakterizujúce počet atómov v jednej elementárnej priestorovej bunke.
+Napríklad mriežka typu CsCl sa značí ako cP2, mriežka typu NaCl sa označuje cF8. Kubická plošne centrovaná mriežka typu austenit sa v tomto systéme označuje cF4.
+
+
+== Hexagonálna mriežka ==
+
+V Hexagonálnej mriežke sa za základnú jednotku berie kosoštvorcový hranol (na obrázku modro vyznačený), preto jednoduchá hexagonálna mriežka má Pearsonov symbol hP1 a nie hS3, podobne hexagonálna tesne usporiadaná HCP (Hexagonal close packed) má Pearsonov symbol hP2. 
+Pozn. Existuje nejednoznačnosť aj v samotnom označení základnej (Bravaisovej) hexagonálnej mriežky, niekedy sa označuje za bazálne centrovanú (ako sa javí) niekedy za primitívnu (častejšie), v každom prípade v hexagonálnej sústave existuje iba jedna základná (Bravaisová) mriežka a nie dve 
+
+
+== Externé odkazy ==
+Pearsonov system označovania kryštalografických štruktúr

@@ -1,0 +1,30 @@
+revision: 21279308
+title: Pentode
+url: https://no.wikipedia.org/wiki/Pentode
+
+
+---
+
+Pentode er et radiorør med fem elektroder, derav navnet. Hvordan et radiorør virker i prinsippet kan finnes under trioden. En pentode er en forbedret tetrode, et radiorør med fire elektroder.
+
+
+== Tetroden ==
+(Pentoden – se lengre ned)
+En uønsket egenskap ved trioden er at strømmen er ganske avhengig av anodespenningen. En høyere anodespenning (alle spenninger betraktes relativt til katoden) trekker naturligvis sterkere på elektronene i elektronskyen rundt katoden. Dette faktum begrenser spenningsforsterkningen som en triodebasert forsterker kan oppvise. For å unngå denne uheldige virkningen plasseres det nok et gitter i røret, mellom styregitteret og anoden, ganske nært anoden. Gitteret er ganske åpent. Gitteret gis en høy spenning, noenlunde lik anodens. Hovedsaken er at spenningen ikke har noe signal, men er konstant. Sett fra styregitteret er virkningen av gitteret og spenningen dets et elektrisk felt fra anoderegionen som er konstant, altså uavhengig av anodespenningen. Elektronene akselereres kraftig på veien mot anoden og blir ikke videre forstyrret i sin bane av dette andre gitteret. Gitteret har fått navnet skjermgitter siden det skjermer styregitteret mot variasjoner av anodespenningen. En annen fordel med at skjermgitteret begrenser anodespenningens innflytelse er at millerkapasiteten reduseres vesentlig. Slik kan tetroden lettere anvendes for høyere frekvenser enn trioden kan. Se kaskode.
+
+På denne måten blir det bare styregitteret som bestemmer strømmen i røret; tetroden er en god konstant-strømkilde for en konstant gitterspenning. Den indre motstanden er langt større enn trioden sin og et forsterkertrinn med en tetrode kan derfor ha langt større spenningsforsterkning enn et triodetrinn.
+Det nye gitteret fører imidlertid til et nytt problem; en ny, uønsket effekt. Elektronene akselereres kraftig på vei mot anoden og har så stor hastighet at de slår løs andre elektroner fra anodens metalloverflate når de treffer den. Noen elektroner kommer tilbake til anoden igjen, mens noen vandrer over til skjermgitteret, som jo også er positivt. Utsendingen av elektroner fra anoden kalles sekundæremisjon og denne stjeler anodestrøm og varmer opp skjermgitteret. Denne effekten er størst i en liten region av karakteristikkene der rørstrømmen er lav, og fører til en dal (eng: kink) i Ua/Ia-karakteristikken. Det fører til en merkbar ulinjær forvrengning i dette området. Denne effekten reduserer dermed det praktiske arbeidsområdet til tetroden. En løsning på dette problemet tilbyr pentoden.
+Tetroden er relativt lite brukt.
+Elektronets hastighet kan enkelt beregnes. Energien som det tilføres er lik anodespenningen minus romladningens (elektronskyens) spenning ganger elektronets ladning på 1,62*10^-19 C. E = (Ua-Url)*Qe. Fra mekanikken har vi at energien for en masse i bevegelse er E = (m*v^2)/2. Elektronmassen er 9,11*10^-31 kg. Settes romladningsspenningen til null og anodespenningen til 300 V, blir hastigheten ved kollisjon med anoden på 10.329 km/s, som er hele 1/29 av lyshastigheten. 1,94 ns vil elektronet ha brukt på turen hvis avstanden mellom romladningen og anoden er 10 mm.
+
+
+== Pentoden ==
+
+Pentoden får enda et gitter, plassert enda nærmere anoden. Det gis samme spenning som katoden, koples til denne, og trenger derfor ingen egen tilkopling. Dette gitteret er svært åpent. På samme viset som før raser elektronene så hurtig forbi at de praktisk ikke påvirkes særlig i retningen.  Feltet på strekningen mellom skjermgitteret og det nye gitteret virker noe bremsende på grunn av feltets retning. Hovedoppgaven for bremsegitteret eller fanggitteret, som det kalles, er å jage sekundærelektronene fra anoden tilbake dit. Slik unngås anodestrømstapet, skjermgitterstrømmen og også den ulinjære delen av karakteristikken.
+Med økende antall gitre må elektronene forholde seg til et større antall begivenheter på vei mellom katode og anode. Dette fører til at elektronene forstyrres mere på veien, noe som kommer til uttrykk som høyere støy enn trioden har. Trioder brukes derfor gjerne i ømfintlige inngangstrinn der støyen er viktig, mens pentoden brukes der høyere spenningsforsterkning er ønsket. Kaskoden er en kopling med to trioder som kan ha tilsvarende høy forsterkning som en pentode, men uten den sterkere støyen.
+
+
+== Kilder ==
+"Lærebok i Radioteknikk" av Jenssen, Kulvik og Ramm, 4. reviderte utgave, utgitt av F. Bruns bokhandels forlag i 1958.
+"Radio designer's handbook" av Fritz Langford-Smith, 1954. Finnes her: https://archive.org/details/bitsavers_rcaRadiotr1954_94958503
+"Philips Pocketbook 1968, en oversikt over alle rør- og halvlederprodukter fra Philips i 1968, med de viktigste data.

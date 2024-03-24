@@ -1,0 +1,68 @@
+revision: 4104988
+title: Ip Man
+url: https://be.wikipedia.org/wiki/Ifconfig
+
+
+---
+
+ifconfig (скар. interface configuration) — каманда UNIX і UNIX‐падобных аперацыйных сістэм.
+
+
+== Сінтаксіс ==
+ifconfig [interface]
+ifconfig interface [aftype] options | address ...
+
+
+== Апісанне ==
+Каманда ifconfig выкарыстоўваецца для канфігуравання сеткавых інтэрфейсаў ядра. Яна ўжываецца на этапе загрузкі аперацыйнай сістэмы пры патрэбе настройкі інтэрфейсаў. Пасля гэтага яна звычайна ўжываецца толькі пры адладцы ці рэканфігураванні сістэмы.
+Калі на ўваходзе няма аргументаў, ifconfig выдае звесткі аб стане актыўных інтэрфейсаў. Калі ўказавы адзін аргумент-інтэрфейс, выдаецца інфармацыя толькі аб стане гэтага інтэрфейса; калі ўказаны адзін аргумент -a, выдаецца інфармацыя аб стане ўсіх інтэрфейсаў, нават выключаных. Інакш каманда канфігуруе ўказаны інтэрфейс.
+У сучасных дыстрыбутывах Linux утыліта ifconfig лічыцца састарэлай і заменена утылітай iproute2, асноўныя функцыі наладак сеткавага інтэрфейса атрымала утыліта ip з набору iproute2.
+
+
+== Сямейства пратаколаў ==
+Калі першым пасля імя інтэрфейса ідзе імя патрыманага сямейства адрасоў, гэтае сямейства адрасоў выкарыстоўваецца для дэкадавання і выдачы ўсіх адрасоў пратакола. У цяперашні час падтрымліваецца сямейства адрасоў inet (TCP/IP, ужыванае па змоўчванню), inet6 (IPv6), ax25 (AMPR Packet Radio), ddp (Appletalk Phase 2), ipx (Novell IPX) і netrom (AMPR Packet Radio).
+
+
+== Опцыі ==
+
+
+== Прыклады ==
+# ifconfig eth0 inet 192.168.10.15 netmask 255.255.255.0
+# ifconfig eth0 up
+# ifconfig
+eth0      Link encap:Ethernet  HWaddr 00:18:F3:BE:18:1E
+          inet addr:192.168.10.15  Bcast:192.168.10.255  Mask:255.255.255.0
+          inet6 addr: fe80::218:f3ff:febe:181e/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:39456 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:45730 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:25457904 (24.2 Mb)  TX bytes:6540945 (6.2 Mb)
+          Interrupt:20
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:182 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:182 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:12812 (12.5 Kb)  TX bytes:12812 (12.5 Kb)
+
+#
+
+
+== Гл. таксама ==
+route
+netstat
+arp
+rarp
+Netfilter/iptables, ipchains
+NetworkManager
+
+
+== Спасылкі ==
+ifconfig(8) — старонка даведкі man па адміністрацыі і прывілеяваным камандам FreeBSD  (англ.) (англ.)
+ifconfig(8) — старонка даведкі man па адміністрацыі і прывілеяваным камандам GNU/Linux  (англ.) (англ.)
+ifconfig(8) (нявызн.). Руководство программиста Linux (21 чэрвеня 2003). — Перевод на русский. Архівавана з першакрыніцы 18 лютага 2012. Праверана 6 верасня 2015.
+Linux / Unix ifconfig command (англ.).  Computer Hope.

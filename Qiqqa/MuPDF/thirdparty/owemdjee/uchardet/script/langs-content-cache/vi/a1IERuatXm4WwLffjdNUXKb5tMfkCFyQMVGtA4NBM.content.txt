@@ -1,0 +1,59 @@
+revision: 69279270
+title: "S\u1EF1 trao \u0111\u1ED5i kh\xED"
+url: https://vi.wikipedia.org/wiki/Trao_%C4%91%E1%BB%95i_nhi%E1%BB%87t
+
+
+---
+
+Trao đổi nhiệt là sự truyền dẫn nhiệt năng khi có sự chênh lệch nhiệt độ. Lượng nhiệt năng trong quá trình trao đổi được gọi là nhiệt lượng và là một quá trình biến thiên. Quá trình trao đổi nhiệt diễn ra theo hướng chuyển nhiệt năng từ nơi có nhiệt độ cao đến nơi có nhiệt độ thấp.
+Cần phân biệt trao đổi nhiệt với cân bằng nhiệt, là quá trình trao đổi nhiệt giữa hai hoặc nhiều vật chất tới khi đạt được một nhiệt độ chung.
+Đại lượng vật lý mô tả sự trao đổi nhiệt là dòng nhiệt 
+  
+    
+      
+        
+          
+            
+              Q
+              ˙
+            
+          
+        
+      
+    
+     
+   (hoặc 
+  
+    
+      
+        
+          Φ
+          
+            
+              t
+              h
+            
+          
+        
+      
+    
+     
+  ). Sự trao đổi nhiệt tại một bề mặt (ví dụ ranh giới rắn/lỏng, rắn/khí) được biểu diễn thông qua hệ số truyền nhiệt (α hoặc h)
+
+
+== Các hình thức trao đổi nhiệt ==
+Trao đổi nhiệt được tồn tại dưới ba hình thức: dẫn nhiệt, đối lưu, bức xạ nhiệt.
+
+Dẫn nhiệt (hay tán xạ nhiệt) là sự truyền động năng giữa các nguyên tử hay phân tử lân cận mà không kèm theo sự trao đổi phần tử vật chất. Hình thức trao đổi nhiệt luôn diễn ra từ vùng có mức năng lượng cao hơn (với nhiệt độ cao hơn) đến vùng có mức năng lượng thấp hơn (với nhiệt độ thấp hơn). Sự truyền nhiệt trong kim loại thông qua sự chuyển động của các electron cũng là sự dẫn nhiệt.
+Đối lưu nhiệt là quá trình trao đổi nhiệt được thực hiện nhờ sự chuyển động của chất lỏng hay chất khí giữa các vùng có nhiệt độ khác nhau hoặc sự truyền nhiệt từ một hệ rắn sang một hệ lỏng (hoặc khí) và ngược lại. Người ta phân biệt giữa đối lưu tự nhiên ( vật chất chuyển động nhờ nội năng trong chất lỏng, khí) và đối lưu cưỡng bức (dòng chuyển động do ngoại lực tác dụng, ví dụ như quạt, bơm v.v...)
+Bức xạ nhiệt là sự trao đổi nhiệt thông qua sóng điện từ. Bức xạ nhiệt có thể truyền qua mọi loại vật chất cũng như qua chân không. Tất cả các vật thể có nhiệt độ lớn hơn độ không tuyệt đối (0 Kelvin) đều bức xạ nhiệt. Trong bức xạ nhiệt, dòng nhiệt không chỉ truyền từ nơi nóng sang nơi lạnh mà còn theo chiều ngược lại. Tuy nhiên, vì dòng nhiệt từ nóng sang lạnh luôn luôn lớn hơn dòng từ lạnh sang nóng nên dòng nhiệt tổng hợp luôn theo chiều từ nóng sang lạnh. Hiểu theo một cách khác, sự chênh lệch nhiệt độ luôn nhỏ đi. Trong bức xạ nhiệt, dòng nhiệt được tính thông qua định luật Stefan-Boltzmann.Trong thực tế, một hệ có thể bao gồm nhiều hình thức trao đổi nhiệt khác nhau. Ví dụ trong vật rắn hình thức chủ yếu là dẫn nhiệt, tuy nhiên cũng có thêm bức xạ nhiệt, trong chất lỏng hay khí xảy ra thêm đối lưu nhiệt. Dòng nhiệt còn phụ thuộc vào hình dạng của vật thể. Sự bức xạ nhiệt có thể xảy ra giữa các mặt tiếp xúc, nhưng chủ yếu trong chân không. Chất khí cũng có thể cho bức xạ nhiệt truyền qua.
+Kể cả ở trạng thái cân bằng nhiệt (nhiệt độ bằng nhau) hệ vẫn có sự trao đổi nhiệt, nhưng do nhiệt lượng thu vào bằng nhiệt lượng tỏa ra nên dẫn đến cân bằng.
+
+
+== Ứng dụng của sự trao đổi nhiệt ==
+Lý thuyết về sự trao đổi nhiệt có ứng dụng rất lớn trong hoạt động của rất nhiều thiết bị và hệ thống.
+Một vài ví dụ: Tản nhiệt cho động cơ điện, sưởi ấm trong mùa đông, thiết bị truyền dẫn nhiệt, dàn ngưng tụ và bay hơi v.v...
+
+
+== Tham khảo ==
+Thiết bị trao đổi nhiệt dạng tấm

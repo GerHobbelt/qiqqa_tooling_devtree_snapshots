@@ -1,0 +1,58 @@
+revision: 7579884
+title: Mariner 2
+url: https://sk.wikipedia.org/wiki/Mariner_2
+
+
+---
+
+Mariner 2 je americká sonda programu Mariner, ktorá ako prvá skúmala planétu Venuša.
+Prvou sondou, ktorá preletela okolo Venuše bola ruská Venera 1. Už prvý týždeň po štarte s ňou bol však stratený kontakt. Podľa výpočtov sa predpokladá, že sa dostala do vzdialenosti asi 100 000 km od Venuše. Prvým americkým pokusom bol Mariner 1, ktorého štart bol neúspešný a z bezpečnostných dôvodov bola nosná raketa zničená. Preto sa za prvú sondu, ktorá sa dostala až k Venuši a skúmala ju, pokladá až Mariner 2.
+
+
+== Konštrukcia sondy ==
+Sondu postavila NASA Jet Propulsion Laboratory (JPL), Pasadena, CA (USA) pre NASA Headquarters, Office of Space Science and Applications (OSSA), Washington (USA). Je to trojosovo stabilizovaná planetárna sonda určená na prieskum Venuše. Jej základ tvorí teleso v tvare šesťbokého hranola s priemerom 1,04 m a výškou 0,36 m, ktoré obsahuje 6 paliet z horčíka. Na nich sú okrem iného umiestnené elektronické zariadenia pre vedecké experimenty, telekomunikačné a navigačné prístroje, riadenie napájania, akumulátory vrátane dobíjacieho zariadenia, riadiaci systém raketových motorov a nádrže s tlakovým plynom. Zhora je k základni pripevnený priehradový stožiar v tvare štíhleho ihlanu, na ktorom sú pripevnené vedecké prístroje. Výška sondy vrátane stožiaru je 3,66 m. Na protiľahlých stranách základného šesťstenu sú umiestnené dva panely slnečných batérií. K základnému telesu je taktiež pripojená veľká smerová anténa presahujúca pod vlastnú sondu. 
+Rozpätie slnečných batérii činí 5,05 m. Jeden panel slnečných batérii má rozmer 1,83x0,76 m, druhý 1,52x0,76 m, pričom je predĺžený o 31 cm nadstavcom z dacronu, tak aby bol vyrovnaný tlak slnečného žiarenia na obe polovice sondy. Získaná elektrická energia napája zariadenia sondy buď priamo alebo dobíja AgZn akumulátorové batérie s kapacitou 1000 Wh. Batérie boli používané v dobe pred roztvorením slnečných panelov, v období, kedy neboli slnečné panely osvetlené, a v období špičkového odberu prúdu. Telekomunikačné zariadenie tvorí vysielač s výkonom 3W vysielajúci nepretržite telemetrické údaje, veľká smerová parabolická anténa, valcová všesmerová anténa na vrchu prístrojového stožiaru a dve antény na koncoch slnečných panelov. Korekcie dráhy boli vykonávané raketovým motorom s ťahom 225 N. Orientáciu udržiavali s presnosťou ±1° trysky na stlačený dusík. Na navigačné účely sa využívalo Slnko a Zem. Tepelnú reguláciu zaisťovala pasívna tepelná ochrana a pohyblivé žalúzie.
+Sonda nesie nasledujúce vedecké prístroje:
+
+magnetometer uchytený na vrchu stožiaru pod všesmerovou anténou
+detektor častíc a detektor kozmického žiarenia namontovaný polovičke výšky stožiaru
+detektor kozmického prachu a spektrometer slnečnej plazmy upevnený na hranách základného telesa
+mikrovlný rádiometer a infračervený rádiometer, ktoré sú spojené s parabolickou anténou rádiometra priemeru 0,48 m v dolnej časti stožiaru.Všetky prístroje zostávajú v činnosti po celú dobu letu s výnimkou rádiometrov, ktoré sa zapínajú iba počas preletu okolo cieľovej planéty
+
+
+== Priebeh letu ==
+1962-08-27 
+
+06:53:14 UT: Štart.
+07:09:34 UT: (T +980 s) Reštart stupňa Agena.
+07:19:17 UT: (T +26 min 3 s) Oddelenie sondy od nosnej rakety. Navedenie na únikovú dráhu.
+Okolo 07:37 UT: (T +44 min) Roztvorenie panelov slnečných batérií.1962-08-29 
+
+Zapojenie vedeckých prístrojov pre preletovú fázu.1962-09-04 
+
+22:49:00 UT: Začatie korekcie dráhy.1962-09-05 
+
+02:45:25 UT: Ukončenie korekcie dráhy.1962-09-08 
+
+17:50 UT: Sonda stratila orientáciu. Po troch minútach sa pomocou gyroskopov opäť orientovala. Príčinou poruchy mohla byť kolízia s malým kozmickým telesom.1962-10-31 
+
+Výkon jedného panelu slnečných batérii sa prudko zhoršil. Následne boli vypojené vedecké prístroje. Po týždni sa činnosť slnečných batérií obnovila a vedecké prístroje boli opäť zapojené.1962-11-15 
+
+Chybný slnečný panel definitívne zlyhal, ale vzhľadom na to, že sonda sa už značne priblížila k Slnku, výkon ostávajúceho panelu bol dostačujúci.1962-12-14 
+
+Bol zapojený rádiometer.
+19:59:28 UT: Sonda preletela okolo Venuše v minimálnej vzdialenosti 34 773 km a ako vôbec prvé umelé kozmické teleso vyslala vedecké merania z jej blízkosti.
+Po prelete prešla sonda opäť do preletového pracovného módu. Z predaných dát bola zistená pomalá retrográdna rotácia Venuše, vysoká teplota a tlak atmosféry s hlavnou zložkou CO2, oblačná pokrývka siahajúca až do výšky 60 km a nemerateľné magnetické pole. Bolo zmerané, že hustota kozmického prachu v okolí Venuše je nižšia ako v okolí Zeme. Z trajektórie preletu bola odhadnutá hmotnosť Venuše. Sledovanie sondy sa využilo na spresneniu hodnoty astronomickej jednotky.1962-12-27 
+
+Sonda dosiahla perihélium vo vzdialenosti 105 464 560 km.1963-01-03 
+
+07:00 UT: Posledné rádiové spojenie so sondou, ktorá zostáva na heliocentrickej dráhe.
+
+
+== Iné projekty ==
+
+ Commons ponúka multimediálne súbory na tému Mariner 2
+
+
+== Externé odkazy ==
+Sonda v encyklopédii Space 40 (po česky)

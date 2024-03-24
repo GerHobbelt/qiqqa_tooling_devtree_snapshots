@@ -1,0 +1,150 @@
+revision: 26166160
+title: "Morzek\xF3d"
+url: https://hu.wikipedia.org/wiki/Morzek%C3%B3d
+
+
+---
+
+A morzekód (ismert még: Morse-abc és Morse-kód néven is) olyan kommunikációs kódolás, amely szöveges információ átvitelét teszi lehetővé bármilyen vezetékes (távíró) vagy vezeték nélküli (például rádiós) kommunikációs csatornán, ahol a kommunikációs eszköz egy adott időpontban vagy kikapcsolt, vagy bekapcsolt állapotban van. Morzekód esetén nemcsak a bekapcsolás ténye, hanem a bekapcsolt állapot hossza is információt közvetít, így a megfelelő sorrendű ki- és bekapcsol(gat)ással több állapot is közölhető: 
+
+rövid jel (ti – 1 egység hosszú);
+hosszú jel (tá – 3 egység hosszú);
+rövid szünetjel (jelköz – 1 egység hosszú);
+hosszú szünetjel (betűköz – 3 egység hosszú);
+nagyon hosszú szünetjel (szóköz és mondatköz – 7 egység hosszú).A be- és kikapcsolt állapotok közötti váltások sem tetszés szerinti időpillanatokban jöhetnek létre, hanem meghatározott szabályrendszer szerint történik: a rövid és hosszú jeleknek, valamint a szavak közötti szüneteknek aránya 1:3:7.
+Megállapodás szerint a morzekód olyan jelek és szünetek szabályszerű sorozatából áll, amelyeket adás kezdete vezet be és adás vége vagy vétel jelcsoport zár le. A morzekód csak nagybetűket, számokat és írásjeleket használ: nem tesz különbséget a kis- és a nagybetűk között.
+
+
+== Története ==
+
+Az elektromos jeltovábbításra képes távírót Samuel Finley Breese Morse (1791-1872) találta fel és szabadalmaztatta 1837-ben.
+
+A legelső kommunikációs kísérleteik során minden betűt számokkal kódoltak és ezt a számokkal kódolt üzenetet kellett egy mellékelt kódtábla segítségével visszafejteni. Bonyolultsága miatt azonban senkit sem érdekelt, így hamarosan betűket kezdtek el használni az üzenetek továbbítására. Az eredeti, betűket is használó morzekód még mindig túlságosan bonyolult volt, és a következő elemeket használta:
+
+rövid jel vagy pont (·)
+hosszú jel vagy vonás (–)
+jelköz (szünet két jel között)
+rövid szünet (betűköz)
+közepes szünet (szavak között)
+hosszú szünet (mondatok között)
+hosszú szünet (_) egyes betűk belsejében (C, O, R, Y, Z és az & jel)
+nagyon hosszú jel (––, L)
+igen hosszú jel (–––, a nulla számjegy)
+
+
+=== Amerikai kódrendszer ===
+Végül Morse asszisztense, Alfred Lewis Vail (1807-1859) alkotta meg azt a kódrendszert, amit ma amerikai morzekód néven (ismert még vasúti kód néven is) ismerünk. Az amerikai és a jelenleg használt nemzetközi morzekód közötti különbségek az alábbi táblázatban találhatóak:
+Más források ezzel szemben azt állítják, hogy Morse a pontokból és vonásokból álló, betűket és írásjeleket jelentő jelcsoportjait nem véletlenszerűen határozta meg. Egyik rokona nyomdász volt, aki a kész betűket rekeszekből álló tárolókban tartotta. Morse megfigyelte, hogy bizonyos betűkre és jelekre többször volt szükség, másokat pedig ritkábban használtak fel. Az angol ábécé leggyakrabban használt betűjének, az „E”-nek egy pont lett a jele, míg a második leggyakoribb betűnek, a „T”-nek egy vonás. Az „O” betű három vonás(sic!), míg a következő rövid betű, az „A” egy pontból és egy vonásból áll össze. Az „N” betű ennek épp fordítottja lett, egy vonás és egy pont, és így tovább, az angol szavakban előforduló gyakoriságnak megfelelően egyre hosszabb kódot kaptak a ritkább betűk.
+Morse és asszisztensének kitartó kísérletezését végül siker koronázta: 1844-ben Washington és Baltimore között megtörtént az első szöveges üzenet küldése.
+
+Szabadalmaztatás után Morse sokáig pereskedett azért, hogy a – valójában az asszisztense által kitalált – kód kizárólagos tulajdonosa lehessen. Ugyancsak tagadta azt is, hogy bármi elméleti segítséget kapott volna a megvalósításhoz.
+
+
+=== Európai (kontinentális) kód megjelenése ===
+Az eredeti (amerikai) morzekód az idők folyamán több változáson ment keresztül. Változatlan formában csak az Amerikai Egyesült Államok és Kanada vasúttársaságai használták 2015-ig, a polgári életben már csak történeti érdekessége van. Ugyanis az a kódrendszer, amelyet eredetileg üzenetek továbbítására használtak, kiválóan megfelelt a vasúttársaság vezetékein való továbbításra, ám a rádió megjelenésével kiütköztek korlátai. A különböző adásmódok, mint például az amplitúdómoduláció megjelenésével lehetőség nyílt a hangzó távírójelek rádión való továbbítására is. Ebben az esetben a jeleket rövidebb-hosszabb hangjelek (morzejelek) továbbítják.
+Friedrich Clemens Gerke módosította az amerikai morzekódot, amelyet 1848-ban Németországban Hamburg és Cuxhaven közt alkalmaztak először. Lényeges változtatás, hogy a kontinentális változatban már egyetlen betű morzekódja sem tartalmaz szüneteket (szemben az amerikaival).
+
+
+=== Nemzetközi morzekód ===
+1865-ben Párizsban szabványosította a nemzetközi távíró szervezet (International Telegraphy congress). Ez lett később az ITU által is ajánlott nemzetközi morzekód.2003. december 3-án egy új szimbólum került a kódkészletbe: @ (kukac jel).
+A Morze által létrehozott kódot távirat továbbítására legtovább Indiában használták (2013-ig), mert az egyre gyérülő forgalom jelentős veszteségeket termelt. A hajózási- és katonai szervezetek még az ezredforduló előtt beszüntették a morzekód használatát lassúsága miatt.
+
+
+== Időzítés ==
+Mint a bevezetőben már volt szó róla, a jelek és szünetek aránya nem tetszőleges, hanem – gyakorlati okokból – kötött szabályrendszer rögzíti. A jel-szünet arány betartása különösen rádiós kommunikáció esetén fontos, mert a vételi oldalon hallás útján fel kell ismerni és leírni (és szükség esetén kijavítani) a vett jeleknek megfelelő betűket. A nemzetközileg elfogadott jel- és szünethosszokat az alábbi táblázat tartalmazza. A bekapcsolt állapotot az 1, kikapcsolt (jelmentes) állapotot a 0 számjegy jelöli.
+
+
+=== Példa ===
+Van jel: "=", nincs jel: ".", ezekből 1 db pontosan 1 ti hosszát jelenti.
+
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789
+ 
+M------   O----------   R------   S----   E       C----------   O----------   D------   E
+===.===...===.===.===...=.===.=...=.=.=...=.......===.=.===.=...===.===.===...===.=.=...=
+   ^               ^    ^       ^             ^
+   |              tá   ti       |             |
+ jelköz                      betűköz       szóköz
+
+A fenti arányok függetlenek az adás sebességétől, vagyis attól, hogy adott idő alatt mennyi információt továbbítanak.
+
+
+== Szó, sebesség ==
+Az adás sebességét a percenként leadott szavak számával jellemzik (WPM = Word Per Minute). Mivel az egyes szavak tényleges hossza a benne szereplő karakterektől függ, az adás sebességének meghatározásakor a „PARIS” szót tekintik hossz-etalonnak (ennek és az utána lévő szóköznek a lekódolása a fentebb ismertetett módszer szerint 50 elemi időegységet igényel).
+Így 10 WPM sebesség percenként 10 szó, azaz 50 betű leadásának felel meg.
+Ha a szöveget nem nyílt nyelven, hanem kódolva adják, általában 5 karakterből (betűből és/vagy számból) álló csoportokat képeznek, ezeket a csoportokat tekintik szónak.
+
+
+== Hangminták ==
+
+I love you morse code.ogg
+
+Wikimorse.ogg
+Wikipedia  
+
+
+== Írásjelek  és nemzeti karakterek ==
+
+A nemzetközi Morse-abc jelein kívül szinte minden ország létrehozta saját nyelvét leginkább leíró morzekódját. Így létezik arab, görög, orosz, cseh, magyar és számos egyéb Morse-abc, amelyek (többek között) a társ-wiki oldalakon is megtekinthetőek.
+
+
+== Forgalmi rövidítések ==
+Mivel a morzekódokkal való forgalmazás meglehetősen lassú, ezért több száz rövidítés terjedt el, különösen a rádiós kommunikációban. Például az YL jelenti a barátnőt (young lady kezdőbetűiből), XYL (ex young lady ~ feleség) stb., stb. Néhány gyakrabban használt rövidítést a 4. táblázatban találhatunk.
+4. táblázat: Néhány forgalmi rövidítés
+
+A szokásos rövidítéseken kívül a rádiózásban használatosak még a Q-kódok (például QTH a földrajzi hely megjelölésére, stb.)
+A közismert Q-kódok mellett a kereskedelmi és katonai rádiózásban Z-kódokat is használnak a kommunikáció rövidítésére.
+
+
+== Mnemonikok ==
+Az egyes betűk kódolása könnyebben megjegyezhető, ha egy mnemonik, jelen esetben a ritmikának megfelelő szó vagy szókapcsolat segítik a memorizálást. A legtöbb országban a nyelvhez illeszkedő szavakat használnak. A magyar nyelvű mnemonikokat a következő táblázat tartalmazza.
+
+
+==== Megjegyzések ====
+
+1. A szó ritmikája nem egyezik a megfelelő kóddal. Ezeknél a mnemonikoknál csak a magánhangzók (azaz nem a szótagok) hosszúsága határozza meg a kódjelek hosszát.
+2. A jóga szó itt hibás helyesírással olvasható, de a betűvel való összekapcsolhatóság érdekében egy mnemoniknál, amely önálló képződmény, ez megengedhető.
+
+
+== Hajózás ==
+
+Hajózásban elterjedten alkalmazzák lámpajelekkel való kommunikációra. Mivel fennáll annak a veszélye, hogy illetéktelen személyek is képesek dekódolni egy katonai hajó fényjelzéseit, az Egyesült Államok haditengerészeténél 1911-ben kifejlesztettek egy meglehetősen bizarr, ám működő kódot, amely a II. világháborúig volt használatban.
+
+
+== Rádiózás ==
+Az amatőr rádiózásban a Morse-jelek továbbítására szolgáló távíró üzemmódot CW-nek (continuous wave) is nevezik (szinonímák). Rádiózásban lehet 
+
+a Morse-jelek ütemében periodikusan szaggatott vivőhullámot kisugározni; Az ilyen adás vételéhez speciális vevő szükséges BFO-oszcillátorral kiegészítve.
+egy helyi hanggenerátorral (általában 900 Hz) modulálni az adót, így a vevőben hang hallható. A rádiós CW-üzem előnye az igen kis sávszélesség, valamint a nagy sebességű továbbítás lehetősége.
+
+
+== Géptávíró ==
+
+Nagyobb mennyiségű információ nagy sebességű továbbítására fejlesztették ki azt a berendezést, amely (elektromos) írógépszerű konzolján a továbbítandó szöveget legépelve automatikusan átalakítja Morse-jelekké és azt azonnal továbbítja is. A későbbi változatokban hétcsatornás számítógép lyukszalagra lyukasztották a küldendő információt és a lelyukasztott lyukszalagon lévő információt beolvasták egy morzekódolóba, amely a lyukszalagon tárolt információt nagy sebességgel továbbította rendeltetési helyére. A vételi oldalon a morzekódokat egy dekódoló egység lyukszalagra lyukasztotta. Mindkét oldal fel volt szerelve hibajavító áramkörökkel is. A nagy sebességgel működő lyukszalag lyukasztó berendezések zajosak voltak. A távgépírók (telex) készülékek kiszorították a polgári alkalmazásból, ám katonai célra sokáig használták.
+Katonai célra léteztek modernizált, mikroprocesszoros változatok is, amelyek memóriájukban tárolták el a továbbítandó szöveg morzekódját és gombnyomásra az előre beállított sebességgel továbbították a hozzá kapcsolt rádiókészüléken át.
+A géptávírót kiszorította a távgépíró (telex), majd az FSK-modulációt használó digitális átvitel.
+
+
+== Jegyzetek ==
+
+
+== Fordítás ==
+Ez a szócikk részben vagy egészben  a   Morse code című angol Wikipédia-szócikk fordításán alapul.  Az eredeti cikk szerkesztőit annak laptörténete sorolja fel. Ez a jelzés csupán a megfogalmazás eredetét és a szerzői jogokat jelzi, nem szolgál a cikkben szereplő információk forrásmegjelöléseként.
+
+
+== Kapcsolódó szócikkek ==
+Távíró
+Q-kód
+RMS Titanic
+
+
+== Külső hivatkozások ==
+
+Kisokos: A morzeábécé
+HamWiki
+The Telegraph Office Archiválva 2009. április 11-i dátummal a Wayback Machine-ben (angol nyelven)
+A távíró és a telefon
+Morse első sikeres távírókísérlete
+A morzé története
+Morse kód online kódolása és dekódolása
+KMA 1011 morzeadó

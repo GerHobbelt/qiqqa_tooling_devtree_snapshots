@@ -1,0 +1,44 @@
+revision: 5786628
+title: "Ranvierov za\u017Eetek"
+url: https://sl.wikipedia.org/wiki/Ranvierov_za%C5%BEetek
+
+
+---
+
+Ranvierov zažetek, tudi Ranvierjev zažetek ali Ranvierjev zažemek, je zoženje mielinske ovojnice na mestu, kjer se stikata sosednji nevrolemski (Schwannovi) celici. Posamezen zažetek, torej področje celične membrane brez mielinske ovojnice, meri okoli 1 mikrometer v dolžino. Mielinska ovojnica nudi celični membrani zelo dobro izolacijo, Ranvierovi zažetki pa nimajo električne izolacije in zato se lahko na njih proži električni dražljaj. Na mieliniziranih vlaknih z Ranvierovimi zažetki se akcijski potencial prevaja skokovito. Mielinsko ovojnico aksonom zagotavljajo tesno prilegajoči se oligodendrociti v osrednjem živčevju in Schwannove celice v obkrajnem živčevju.
+
+
+== Zgodovina ==
+
+Mielinsko ovojnico je leta 1854 je odkril in poimenoval nemški patolog Rudolf Virchow. Kasneje je francoski patolog in anatom Louis-Antoine Ranvier odkril zažetke, ki prekinjajo mielin in ki so jih kasneje poimenovali njemu v čast. Po tem odkritju se je Ranvier posvetil poglobljenemu proučevanju mielinske ovojnice in Schwannovih celic.
+
+
+== Vloga ==
+
+
+=== Akcijski potencial ===
+Akcijski potencial je prehodni preobrat membranskega potenciala in med vzburjenjem potuje vzdolž celične membrane (aksona ali skeletnega mišičnega vlakna). Proženje in prevajanje akcijskih potencialov je temeljni način komunikacije živčevja. Ta kratkotrajen membranski preobrat omogočajo napetostno odvisni ionski kanalčki v plazemski membrani.
+Akcijski potencial potuje iz enega mesta na celici na drugega, vendar je transport ionov možen le na nemieliziranih območjih, torej na aksonu le na Ranvierovih zažetkih. Zato akcijski potencial skače iz enega zažetka na drugega in ne potuje nepretrgano po aksonu, kot se dogaja na nemieliziranih aksonih. To omogočajo napetostno odvisni natrijevi in kalijevi kanalčki, ki so zbrani v zažetkih.
+
+
+=== Skokovito prevajanje ===
+Glede na mieliziranost aksona lahko akcijski potencial vzdolž njega potuje nepretrgano (po nemieliziranem aksonu) ali skokovito (po mieliziranem aksonu). Naboj se pasivno seli iz enega zažetka na drugega in tam povzroči depolarizacijo do pražne vrednosti in na sosednjem zažetku se sproži akcijski potencial. Le-ta se nato pasivno prenese na naslednji sosednji zažetek in tam prav tako sproži nov akcijski potencial ...
+Skokovito prevajanje vzburjenja ima dvoje prednosti: energetsko je varčnejše, saj aktivira manj natrij-kalijevih kanalčkov, prevajanje pa je tudi bistveno hitrejše, kar omogoča hitrejšo interakcijo med nevroni.
+
+
+== Viri ==
+
+Dugandzija-Novakovic S.; Koszowski A.G.; Levinson S.R.; Shrager P. (1995). »Clustering of Na+ channels and node of Ranvier formation in remyelinating axons«. Journal of Neuroscience. 15 (1): 492–503. PMID 7823157.
+Dzhashiashvili Y; Zhang Y; Galinska J; Lam I; Grumet M; Salzer JL (Junij 2007). »Nodes of Ranvier and axon initial segments are ankyrin G-dependent domains that assemble by distinct mechanisms«. Journal of Cell Biology. 177 (5): 857–870. doi:10.1083/jcb.200612012. PMC 2064285. PMID 17548513. {{navedi časopis}}: Sklic ima neznan prazen parameter: |month= (pomoč)
+Eftekharpour E; Karimi-Abdolrezaee S; Wang J; El Beheiry H; Morshead C; Fehlings MG (Junij 2007). »Myelination of congenitally dysmyelinated spinal cord axons by adult neural precursor cells results in formation of nodes of Ranvier and improved axonal conduction«. Journal of Neuroscience. 27 (25): 6605–6606. doi:10.1523/JNEUROSCI.0273-07.2007. PMID 17392458. {{navedi časopis}}: Sklic ima neznan prazen parameter: |month= (pomoč)
+Elfvin L.-G. (1961). »The ultrastructure of the nodes of Ranvier in cat sympathetic nerve fibers«. Journal of Ultrastructure Research. 5 (4): 374–387. PMID 13889815.
+Ellisman M. H. (1979). »Molecular specializations of the axon membrane at nodes of Ranvier are not dependent upon myelination«. Journal of Neurocytology. 8 (6): 719–735. doi:10.1007/BF01206672.
+Martínez-Gómez A; Dent MA (Marec 2007). »Expression of IP3 receptor isoforms at the nodes of Ranvier in rat sciatic nerve«. Neuroreport. 18 (5): 447–450. doi:10.1097/WNR.0b013e32805868a6. PMID 17496801. {{navedi časopis}}: Sklic ima neznan prazen parameter: |month= (pomoč)
+Nie DY; Ma QH; Law JW; Chia CP; Dhingra NK; Shimoda Y; Yang WL; Gong N; Chen QW;  in sod. (2006). »Oligodendrocytes regulate formation of nodes of Ranvier via the recognition molecule OMgp«. Journal of Neuron Glia Biology. 2: 151–164. doi:10.1017/S1740925X06000251.
+Peters A (1966). »The node of Ranvier in the central nervous system«. Quarterly Journal of Experimental Physiology. 51 (3): 229–236. PMID 5182351.
+Raine C. S. (1984). »On the association between perinodal astrocytic processes and the node of Ranvier in the C.N.S«. Journal of Neurocytology. 13 (1): 21–27. doi:10.1007/BF01148316.
+Ranvier L.-A. (1871). »Contributions a l'histologie et a la physiologie des nerf peripheriques«. Comptes Rendus del OAcademie Sciences. Paris. 73: 1168–1171.
+Roberson JD (Junij 1957). »The ultrastructure of nodes of Ranvier in frog nerve fibres«. J. Physiol. (Lond.). 137 (1): 8–9P. PMID 13439596. {{navedi časopis}}: Sklic ima neznan prazen parameter: |month= (pomoč)
+Robertson J.D. (1959a). »Preliminary observations on the ultrastructure of nodes of Ranvier«. Zeitschrift fur Zellforschung und mikroskopische Anatomie. 50 (4): 553–560. doi:10.1007/BF00336572.
+Zagoren, J. C. & Federoff, S. (1984). The Node of Ranvier. Orlando: Academic Press.
+Zalc B; Fields RD (Februar 2000). »Do Action Potentials Regulate Myelination?«. Neuroscientist. 6 (1): 5–13. doi:10.1177/107385840000600109. PMC 2373276. PMID 18461153. {{navedi časopis}}: Sklic ima neznan prazen parameter: |month= (pomoč)

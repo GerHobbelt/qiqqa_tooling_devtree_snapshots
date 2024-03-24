@@ -1,0 +1,23 @@
+revision: 3412645
+title: BeEagleSat
+url: https://lv.wikipedia.org/wiki/BeEagleSat
+
+
+---
+
+BeEagleSat ir Turcijas nanopavadonis, daļa no Eiropas Komisijas finansētās Zemes apakšējās termosfēras izpētes programmas QB50 (kods QB50 TR01). Tas 2017. gada aprīlī ar kravas kuģi Cygnus OA-7 nogādāts Starptautiskajā kosmosa stacijā, no kurienes brīvā lidojumā orbītā palaists  maijā.
+HAVELSAT izgatavoja Stambulas tehniskā universitāte un Turcijas Gaisa spēku akadēmija. Tas veidots pēc CubeSat 2U formas standarta ar masu aptuveni 2 kg.
+Pavadoņa zinātniskā derīgā krava QB50 projektam ir daudzadatu Lengmīra zonde elektronu blīvuma noteikšanai apkārtējā vidē. 
+Sekundārā krava ir rentgenstaru pusvadītāju detektors, kas izstrādāts Sabanci universitātē.
+
+
+== Lidojuma gaita ==
+BeEagleSat tika palaists 2017. gada 17. aprīlī 15:11 UTC kravas kuģa Cygnus OA-7 hermētiskajā nodalījumā ar nesējraķeti Atlas V/401 no Kanaveralas zemesraga Gaisa spēku stacijas starta laukuma SLC-41.
+22. aprīlī Cygnus ieradās stacijā.
+26. maijā 12:15 UTC trīs 2U pavadoņi, to skaitā BeEagleSat, tika palaisti brīvā lidojumā no Nanoracks NRCSD-11 izmešanas ierīces, kuru turēja Kibo moduļa manipulators.
+
+
+== Ārējās saites ==
+QB50 Project, R01/TR02 BeEagleSAT and HavelSat
+A Double CubeSat with an X Ray Detector for In Situ Environmental Measurements of QB50[novecojusi saite] The 5th Nano-Satellite Symposium November 20-22, 2013 Takeda Hall, University of Tokyo, Japan
+BeEagleSat (QB50 TR01) Gunter Dirk Krebs

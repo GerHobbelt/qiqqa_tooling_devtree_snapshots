@@ -1,0 +1,46 @@
+revision: 25381759
+title: Mitokondrium
+url: https://hu.wikipedia.org/wiki/Mitokondrium
+
+
+---
+
+A mitokondrium eukarióta sejtekben található, az energia előállításában és annak elraktározásában szerepet játszó sejtszervecske. Az előállított energiát makromolekulák formájában tárolja.
+
+
+== A mitokondrium felépítése ==
+A mitokondrium bakteriális alakú (henger vagy gömb) és méretű (néhány mikrométer), kettős membránrendszerű sejtszervecske. Az eukarióta sejtekben legalább egy, de akár több ezer példányban fordul elő. Az intenzív anyagcserét folytató sejtekben találhatunk belőle többet, ami összefügg a sejtszervecske feladatával: a sejt energiatermelő központja. Felépítésére jellemző, hogy külső membránja sima, feszes felületű, míg belső hártyarendszere erőteljesen megnövelve felületét, redőzött.
+A redőzöttség mértéke függ a működése intenzitásától: lemezes (krisztás) szerkezetű a kevésbé aktív, a zsákos, illetve csöves az aktívabb. A két hártya között a membránok közötti tér (külső kamra) savas pH-jú citoplazma. A belső membránon belül van a sejtszervecske alapállománya.
+
+
+== Működése ==
+Az alapállomány gélszerű, tartalmazza a saját, prokarióta jellegű, gyűrű alakú DNS-t és riboszómát, benne játszódik le a citromsavciklus (citrát-kör – Szent-Györgyi-Krebs-féle körfolyamat). Az acetil-koenzim-A molekulák acetilcsoportja két lépésben szén-dioxiddá oxidálódik, miközben a NAD+ redukált koenzimmé (NADH + H+) alakul.
+A folyamat elején az acetilcsoportot megkötő molekula az oxálecetsav, a körfolyamat innen indul és ide tér vissza. Két acetilcsoportot két vízmolekula belépésével két oxálecetsav köt meg. Az első reakció eredményeként két molekula citromsav keletkezik. Több lépésben dekarboxileződnek, miközben két molekulára számolva négy szén-dioxid lép ki, a lehasadó hidrogének pedig négy NAD+ molekulát redukálnak NADH + H+-ná. 
+Ezután több lépésben, bonyolult módon regenerálódik a ciklus kiinduló vegyülete, az oxálecetsav. A regenerációs folyamat egy helyen két ATP-molekula szintéziséhez elegendő energia-felszabadulásával, két lépése pedig két NAD+ és két FAD+ molekula redukálódásával jár.
+A mitokondriumban játszódik le a zsírsavak oxidációja (béta-oxidáció) is.
+A belső membrán tartalmazza a légzési lánc (terminális oxidáció) működéséhez szükséges fehérjéket, emiatt hozzá köthető a legjelentősebb mértékű ATP-szintézis.
+
+
+== Kialakulása ==
+Az endoszimbionta elmélet szerint a mitokondrium őse egykor heterotróf, aerob baktérium lehetett, amit az ős eukarióta sejt bekebelezett, de nem emésztett meg. Így szimbiózis alakult ki köztük. Ezt támasztja alá a sejtszervecske alakja és mérete, a kettős membránrendszere, a saját DNS-e és fehérjeszintetizáló rendszere. A koevolúció során olyan szoros lett az együttműködés, hogy ma már nem tudnának egymás nélkül meglenni (a mitokondrium működéséhez szükséges fehérjék egy részét nem a sejtszervecske, hanem a sejt állítja elő). 
+
+
+== A légzési lánc ==
+A folyamat során a redukált koenzimek oxidációval kiindulási állapotukba jutnak vissza. Az átalakulást végoxidációnak, terminális oxidációnak is szokták nevezni, melynek helye a mitokondrium belső membránja. Itt találhatók a folyamatot katalizáló enzimek perifériás és integráns fehérjék formájában. Ezek végzik az elektrontranszportot a végső elektronfelvevő, a légzési oxigén felé. Eközben egy, a membrán belső felszínéről az alapállományba benyúló enzimkomplex az oxidáció során felszabaduló energiával ATP-molekulákat állít elő. Ez az oxidatív foszforiláció folyamata. Az oxidálódó koenzimekről származó protonok és elektronok végül az oxigénre kerülnek, így alakul ki a végső termék, a víz.
+A terminális oxidáció a NADH+H+ molekuláktól indul el. A koenzimek leadják az általuk ideszállított hidrogének 2 elektronját és egy protonját az elektrontranszport rendszer első tagjának, egy enzimnek, ami a második protont az alapállományból veszi fel. Az enzim redukálódik, miközben NAD+ molekulák jönnek létre.
+Az enzim a külső kamrába löki a protonokat, az elektronpár pedig a belső membránban található szállítórendszer vastartalmú fehérjéire kerül. Ezek a redoxreakciókra képes membránfehérjék strukturáltan állnak egymáshoz képest. Az elektronpár a membránfehérjék (ubikinon, citokróm-b, citokróm-c, citokróm-a, a3) standardpotenciál csökkenése irányába adogatódik egyik fehérjéről a másikra. Eközben két-két protont juttatnak át a membránfehérjék az alapállomány felől a külső kamrába. A folyamat többszöri lejátszódása miatt jelentős protonkoncentrációbeli különbség alakul ki a belső membrán két oldala között. A különbség kiegyenlítődését az alapállomány felé néző enzimkomplex végzi (protonpumpa). Az enzimkomplexen átáramló protonpár energiája ATP szintézisére fordítódik. Ez a Mitchell-féle kemiozmotikus hipotézis lényege.
+A membránban áramló elektron- és protonpár végül az alapállomány felőli légzési oxigénre kerül, ami vízképződést eredményez.
+Egy NADH+H+ molekula hidrogén eredetű elektron- és protonpárt ad le. Az elektronpár miközben végighalad az elektronszállító rendszeren, háromszor biztosít protonpár-áthaladást a mitokondrium alapállománya felől a külső kamrába a belső membránon keresztül. A protonpárok így háromszor haladnak át a protonpumpán, ami minden alkalommal ATP-t szintetizál, így 1 NADH+H+ molekula 3 ATP szintézisét biztosítja. Egy glükóz lebontásakor azonban 10 NADH+H+ molekula keletkezik, ezek összesen 30 ATP szintéziséhez járulnak hozzá.
+A FADH+H+ működése csak annyiban tér el, hogy ő az elektronszállító rendszer távolabbi tagjának képes csak elektronpárt és protont átadni. Emiatt azonban kimarad egy protonpár-áramlási lehetőség, így ez a koenzim csak 2 ATP oxidatív foszforilációját eredményezi. Mivel a teljes biológiai oxidáció során egy glükózra számolva 2 FADH+H+ keletkezett, ezek összesen 4 ATP szintézisét biztosítják. 
+Összegezve a biológiai oxidációt, mint a lebontás leghatékonyabb módját: ha 1 glükózt bontunk, 6 víz- és oxigénmolekula felhasználásával, akkor a folyamat végére kapunk 6 szén-dioxidot, 6 (bruttó 12) vízmolekulát és 38 ATP-t.
+
+
+== Források ==
+Elődi Pál: Biokémia, Akadémiai Kiadó, Budapest, 1980, ISBN 963-05-1792-2
+De Robertis E. D. P. – Nowinski W. W. – Saez A. S.: Sejtbiológia, Akadémiai Kiadó, Budapest, 1970
+Törő Imre, Ed.: Az Élet Alapjai, Gondolat Kiadó, Budapest, 1989, ISBN 963-282-181-5
+
+
+== Kapcsolódó szócikkek ==
+Mitokondrium-adományozás
+Mitokondriális Éva

@@ -1,0 +1,434 @@
+revision: 32070955
+title: "Distribuci\xF3 z de Fisher"
+url: https://ca.wikipedia.org/wiki/Distribuci%C3%B3_z_de_Fisher
+
+
+---
+
+La distribució z de Fisher és la distribució estadística de la meitat del logaritme d'una variació de la distribució F:
+
+  
+    
+      
+        z
+        =
+        
+          
+            1
+            2
+          
+        
+        log
+        ⁡
+        F
+      
+    
+     
+  Va ser descrit per primera vegada per Ronald Fisher en un article publicat al Congrés Internacional de Matemàtics de 1924 a Toronto, amb el títol On a distribution yielding the error functions of several well-known statistics (Sobre una llei que modela les funcions d'error de diverses estadístiques ben conegudes). Actualment, en general, es fa servir la distribució F.
+La funció de densitat de probabilitat i distribució acumulativa es pot trobar utilitzant la distribució F al valor de 
+  
+    
+      
+        
+          x
+          ′
+        
+        =
+        
+          e
+          
+            2
+            x
+          
+        
+        
+      
+    
+     
+  . No obstant això, la mitjana i la variància no segueixen la mateixa transformació.
+La funció de densitat de probabilitat és
+
+  
+    
+      
+        f
+        (
+        x
+        ;
+        
+          d
+          
+            1
+          
+        
+        ,
+        
+          d
+          
+            2
+          
+        
+        )
+        =
+        
+          
+            
+              2
+              
+                d
+                
+                  1
+                
+                
+                  
+                    d
+                    
+                      1
+                    
+                  
+                  
+                    /
+                  
+                  2
+                
+              
+              
+                d
+                
+                  2
+                
+                
+                  
+                    d
+                    
+                      2
+                    
+                  
+                  
+                    /
+                  
+                  2
+                
+              
+            
+            
+              B
+              (
+              
+                d
+                
+                  1
+                
+              
+              
+                /
+              
+              2
+              ,
+              
+                d
+                
+                  2
+                
+              
+              
+                /
+              
+              2
+              )
+            
+          
+        
+        
+          
+            
+              e
+              
+                
+                  d
+                  
+                    1
+                  
+                
+                x
+              
+            
+            
+              
+                (
+                
+                  
+                    d
+                    
+                      1
+                    
+                  
+                  
+                    e
+                    
+                      2
+                      x
+                    
+                  
+                  +
+                  
+                    d
+                    
+                      2
+                    
+                  
+                
+                )
+              
+              
+                (
+                
+                  d
+                  
+                    1
+                  
+                
+                +
+                
+                  d
+                  
+                    2
+                  
+                
+                )
+                
+                  /
+                
+                2
+              
+            
+          
+        
+        ,
+      
+    
+     
+  on B és la funció beta.
+Quan els graus de llibertat es fan grans (
+  
+    
+      
+        
+          d
+          
+            1
+          
+        
+        ,
+        
+          d
+          
+            2
+          
+        
+        →
+        ∞
+      
+    
+     
+  ) la distribució s'aproxima a la distribució normal amb la mitjana
+
+  
+    
+      
+        
+          
+            
+              x
+              ¯
+            
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          (
+          
+            
+              
+                1
+                
+                  d
+                  
+                    2
+                  
+                
+              
+            
+            −
+            
+              
+                1
+                
+                  d
+                  
+                    1
+                  
+                
+              
+            
+          
+          )
+        
+      
+    
+     
+  i la variància
+
+  
+    
+      
+        
+          σ
+          
+            x
+          
+          
+            2
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          (
+          
+            
+              
+                1
+                
+                  d
+                  
+                    1
+                  
+                
+              
+            
+            +
+            
+              
+                1
+                
+                  d
+                  
+                    2
+                  
+                
+              
+            
+          
+          )
+        
+        .
+      
+    
+     
+  
+
+
+== Distribucions relacionades ==
+Si 
+  
+    
+      
+        X
+        ∼
+        FisherZ
+        ⁡
+        (
+        n
+        ,
+        m
+        )
+      
+    
+     
+  , llavors 
+  
+    
+      
+        
+          e
+          
+            2
+            X
+          
+        
+        ∼
+        F
+        ⁡
+        (
+        n
+        ,
+        m
+        )
+        
+      
+    
+     
+   (Distribució F)
+Si 
+  
+    
+      
+        X
+        ∼
+        F
+        ⁡
+        (
+        n
+        ,
+        m
+        )
+      
+    
+     
+  , llavors 
+  
+    
+      
+        
+          
+            
+              
+                log
+                ⁡
+                X
+              
+              2
+            
+          
+        
+        ∼
+        FisherZ
+        ⁡
+        (
+        n
+        ,
+        m
+        )
+      
+    
+     
+  
+
+
+== Referències ==
+
+
+== Enllaços externs ==
+MathWorld (anglès)

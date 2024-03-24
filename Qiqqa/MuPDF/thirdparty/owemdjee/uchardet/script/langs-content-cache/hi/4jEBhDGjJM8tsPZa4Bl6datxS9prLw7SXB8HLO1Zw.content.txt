@@ -1,0 +1,52 @@
+revision: 4965987
+title: Congolese franc
+url: https://hi.wikipedia.org/wiki/%E0%A4%86%E0%A4%88%E0%A4%8F%E0%A4%B8%E0%A4%93_%E0%A5%AA%E0%A5%A8%E0%A5%A7%E0%A5%AD
+
+
+---
+
+आईएसओ ४२१७  (अंग्रेज़ी:ISO 4217) एक अंतर्राष्ट्रीय मानक है, जो तीन-अक्षरीय मुद्रा कूट बताता है। इसको अंतर्राष्ट्रीय मानक संगठन द्वारा मानकीकृत किया गया है। 
+
+
+== सक्रिय कूट ==
+The following is a list of active codes of official ISO 4217 currency names.
+
+
+== बिना मुद्रा कूट ==
+A number of territories are not included in ISO 4217, because their currencies are: (a) not per se an independent currency but a variant of another currency, (b) a legal tender only issued as commemorative banknotes and/or coinage, or (c) a currency of an unrecognized or partially recognized state. These currencies are:
+
+Alderney pound (1:1 pegged to the pound sterling)
+Cook Islands dollar (1:1 pegged to the New Zealand dollar)
+Faroese króna (1:1 pegged to the Danish krone)
+Guernsey pound (1:1 pegged to the pound sterling)
+Isle of Man pound (1:1 pegged to the pound sterling)
+Jersey pound (1:1 pegged to the pound sterling)
+Kiribati dollar (1:1 pegged to the Australian dollar)
+Maltese scudo (1:0.24 pegged to the euro)
+Somaliland shilling (state of issue is viewed as de jure part of Somalia, exchange rate not fixed)
+Transnistrian ruble (state of issue is viewed as de jure part of Moldova)
+Tuvaluan dollar (1:1 pegged to the Australian dollar)The following non-ISO codes are, however, sometimes used commercially:
+
+
+== अप्रचलित मुद्रा कूट ==
+A number of currencies were official ISO 4217 currency codes and currency names until their replacement by the euro or other currencies.
+Note that the currency names used below may not match the currency names used in the ISO standard itself, but the codes do match.
+
+
+== सन्दर्भ ==
+
+
+== बाहरी कड़ियाँ ==
+The official list of ISO 4217 alphabetic and numeric codes
+ISO 4217 Maintenance Agency
+An older list of ISO 4217 alphabetic codes that contains some history of ISO 4217 (PDF file)
+Another list of numeric and alphabetic ISO 4217 currency codes
+Extended list of international currencies and their abbreviation form
+A C++ library for handling ISO currencies
+Currency Codes Search
+Position of the ISO code or euro sign in amounts
+
+
+=== मुद्रा अंतरण ===
+https://web.archive.org/web/20090830052210/http://www.financeone.com.br/conversores.php - FinanceOne Currency Converter (Brazilian Portuguese)
+Yahoo Currency Converter, also showing historical values

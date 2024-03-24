@@ -1,0 +1,156 @@
+revision: 7985099
+title: Varmo
+url: https://eo.wikipedia.org/wiki/Varmo
+
+
+---
+
+Vidu ankaŭ artikolon Varmo (Italio) pri komunumo en Italio.
+
+Varmo (mallongigo Q) estas la movado de energio inter du korpoj de malsamaj temperaturoj. La SI-unuo de varmo estas la Ĵulo.
+Kvankam iuj uzas la esprimon "termika energio" kiel sinonimon de varmo, varmo fakte ne estas energio, sed movado de energio. Ĉiuj objektoj (materio) havas iom da interna energio, fizika grando rekte proporcia al temperaturo de objekto, kiu rilatas al hazarda movado de ties atomoj kaj molekuloj. Kiam du objektoj de malsama temperaturo varme kontaktas, ili interdonas internan energion, kiu fluas de objekto de plej alta temperaturo al de malplej alta ĝis varma ekvilibro estas atingita, t.e., ĝis temperaturoj egaliĝas.
+En termodinamiko la kvanto TdS prezentas mezuron de malekzakta diferencialo de varmo δQ, kiu estas la absoluta temperaturo de iu objekto multiplikita per diferenciala kvanto de entropio en sistemo, mezurita ĉe la bordero de objekto. Laŭ la unua leĝo de termodinamiko, adicio inter la malekzakta diferencialo de varmo kaj la malekzakta diferencialo de laboro δW estas la diferencialo de interna energio dU. (Oni povas kompreni la vorton "diferencialo" pli malpli kiel ŝanĝiĝado, do la ŝanĝiĝado de varmo plus la ŝanĝiĝado de laboro egalas la ŝanĝiĝado de interna energio.)
+Varmo povas transdoniĝi inter objektoj per radiado, varmokondukto kaj konvekto. Temperaturo estas uzata kiel bazo por mezuro de interna energio aŭ entalpio, kiu estas nivelo de elementa movado komencanta varm-transdonon. Varm-transdono povas okazi nur inter objektoj aŭ areoj kun malsamaj temperaturoj (laŭ la nula leĝo de termodinamiko), kaj tiu transdono okazas spontanee nur laŭ la direkto al la pli malvarma korpo (kiel asertas la dua leĝo de termodinamiko). La transdono de varmo el unu objekto en alian kun temperaturo egala aŭ pli alta ol tiu de la unua nur eblas per varmopumpilo.
+
+
+== Antaŭparolo ==
+La unua leĝo de termodinamiko asertas, ke la energio de fermita sistemo konserviĝas, tial por ŝanĝi ĝian energion, oni devas transdoni energion en tiun sistemon aŭ el ĝi. Varmo kaj laboro estas la du nuraj mekanismoj per kiuj energion eblas transdoni en kontrolmason aŭ el ĝi. Varmo estas la movado de energio kaŭzita per malsameco de temperaturo. La unuoj plej uzataj por kiomo de transdonita energio per varmo estas la Ĵulo (J), la kalorio (cal) kaj la Brita Termika Unuo (BTU). La SI-unuo de varmo estas la Ĵulo, kaj de varmtransdonado por tempo estas Vato (W = J/s).
+
+Transdonado de varmo estas funkcio de vojo (proceda kvanto), ne funkcio de punkto (stata kvanto). Varmo fluas inter sistemoj, kiuj ne estas en termika ekvilibro unu inter la alia; ĝi fluas spontanee el lokoj kun altaj en lokojn kun malaltaj temperaturoj. Kiam du korpoj de malsamaj temperaturoj ekkontaktas termike, ili interŝanĝas internan energion ĝis iliaj temperaturoj egaliĝas; t.e., ĝis termika ekvilibro estas atingita. La adjektivo varma estas relativa termino por kompari la temperaturon de unu objekto al tiu de ĉirkaŭaĵoj aŭ de aliaj objektoj. La terminon varmo oni uzas por priskribi la fluon de energio. Se forestas laboraj interagoj, la varmo transdonata al objekto estas konservata kiel interna energio.
+
+Specifa varmo estas difinita kiel la kiomo da energio, kiu devas esti transdonita al aŭ de unuo de maso aŭ materikvanto (molo) de iu substanco por ŝanĝi ĝian temperaturon je unu grado. Specifa varmo estas kvalito, t.e., ĝi dependas de la substanco konsiderata kaj ties stato, specifigata per ties kvalitoj. Brulaĵoj, brulante, ellasas multe da energio konservita en kemiaj ligoj de siaj molekuloj. Ŝanĝiĝante el unu fazo en alian, pura substanco ellasas aŭ sorbas varmon ne ŝanĝante sian temperaturon. La kiomo de varm-transdonado dum faz-ŝanĝiĝo nomiĝas latenta varmo kaj dependas unue de substanco kaj ties stato.
+
+
+== Termika Energio ==
+Termika energio estas termino ofte konfuzata kun varmo. Se diri maldetale, kiam varmo estas aldonita al termodinamika sistemo, ĝia termika energio pliiĝas; kaj kiam varmo estas eldonita, ĝia termika energio malpliiĝas. Laŭ tiu vidpunkto, varmaj objektoj estas objektoj kun multe da termika energio, dum malvarmaj objektoj posedas malpli da tia energio. Tial ofte oni konfuzas termikan energion kun varmo. Oni atentu, ke objekto ne povas posedi varmon, nur energion, dum varmo estas transdonado de tiu energio.
+La termino estis kreita de James Prescott Joule, kiu studis la rilaton inter varmo, laboro kaj temperaturo. Li observis ke, kiam li faris meĥanikan laboron en fluaĵojn (ekzemple, akvo) per agitado, iliaj temperaturoj pliiĝis. Li proponis ke meĥanika laboro, kiun li faris al la sistemo, iĝis termika energio. Specife, li malkovris ke proksimume 4200 Ĵuloj estis bezonataj por pliigi la temperaturon de unu kilogramo je unu grado celsia
+La termika energio de unuopa partiklo estas:
+
+  
+    
+      
+        
+          U
+          
+            t
+            e
+            r
+            m
+            i
+            k
+            a
+          
+        
+        =
+        f
+        ⋅
+        
+          
+            1
+            2
+          
+        
+        k
+        T
+         
+        ,
+      
+    
+     
+  
+kie f aludas pri la gradoj de libereco, T aludas pri temperaturo, kaj k pri konstanto de Boltzmann. Ekzemple, unuatoma ero en ideala gaso havas tri gradojn de liberco, tial:
+
+  
+    
+      
+        
+          U
+          
+            t
+            e
+            r
+            m
+            i
+            k
+            a
+            ,
+            u
+            n
+            u
+            a
+            t
+            o
+            m
+            i
+            k
+            a
+          
+        
+        =
+        
+          
+            3
+            2
+          
+        
+        k
+        T
+         
+        .
+      
+    
+     
+  
+Totala termika energio estas sumo de termikaj energioj de ĉiuj partikloj en sistemo. Do, por sistemo havanta N partiklojn,
+
+  
+    
+      
+        
+          U
+          
+            t
+            e
+            r
+            m
+            i
+            k
+            a
+          
+        
+        =
+        N
+        ⋅
+        f
+        ⋅
+        
+          
+            1
+            2
+          
+        
+        k
+        T
+         
+        .
+      
+    
+     
+  
+Rigardu ke Utermika malofte estas totala energio de sistemo; ekzemple, povas esti statika energio kiu ne ŝanĝiĝas kun temperaturo, kiel potenciala energio, energio de kemia ligo aŭ energio de ripozo (E=mc2).
+
+
+== Vidu ankaŭ ==
+Energio
+Ĵula leĝo
+Kamentuba efiko
+Laboro
+Latenta varmo
+Malvarmo
+Temperaturo
+Termodinamiko
+Varmokondukto
+Varmotransdono
+
+
+== Notoj ==

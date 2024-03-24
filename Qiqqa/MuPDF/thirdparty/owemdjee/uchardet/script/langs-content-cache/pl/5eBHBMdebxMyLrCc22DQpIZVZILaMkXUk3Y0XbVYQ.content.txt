@@ -1,0 +1,402 @@
+revision: 64900398
+title: Twierdzenie Banacha-Steinhausa
+url: https://pl.wikipedia.org/wiki/Twierdzenie_Banacha-Steinhausa
+
+
+---
+
+Twierdzenie Banacha-Steinhausa (zasada jednostajnej ograniczoności) – twierdzenie analizy funkcjonalnej mówiące, w swym klasycznym sformułowaniu, że granica punktowa ciągu operatorów liniowych i jednakowo ciągłych między przestrzeniami Banacha jest ciągłym operatorem liniowym. Twierdzenie Banacha-Steinhausa można sformułować ogólniej, aby uwypuklić istotność założeń wersji klasycznej.
+Pierwszy dowód twierdzenia przedstawili w 1927 roku Stefan Banach i Hugo Steinhaus.
+
+
+== Jednakowa ciągłość ==
+Dalej 
+  
+    
+      
+        X
+      
+    
+     
+   i 
+  
+    
+      
+        Y
+      
+    
+     
+   oznaczać będą ustalone przestrzenie liniowo-topologiczne. Rodzinę 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+     
+   przekształceń liniowych przestrzeni 
+  
+    
+      
+        X
+      
+    
+     
+   w przestrzeń 
+  
+    
+      
+        Y
+      
+    
+     
+   nazywa się jednakowo ciągłą, gdy dla każdego otoczenia zera 
+  
+    
+      
+        W
+        ⊆
+        Y
+      
+    
+     
+   istnieje takie otoczenie zera 
+  
+    
+      
+        U
+        ⊆
+        X
+        ,
+      
+    
+     
+   że
+
+  
+    
+      
+        Λ
+        (
+        U
+        )
+        ⊆
+        W
+      
+    
+     
+  dla każdego 
+  
+    
+      
+        Λ
+        ∈
+        
+          
+            L
+          
+        
+        .
+      
+    
+     
+   W przypadku gdy 
+  
+    
+      
+        X
+      
+    
+     
+   i 
+  
+    
+      
+        Y
+      
+    
+     
+   są przestrzeniami unormowanymi, to rodzina 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+     
+   jest jednakowo ciągła wtedy i tylko wtedy, gdy
+
+  
+    
+      
+        (
+        ∃
+        M
+        >
+        0
+        )
+        (
+        ∀
+        Λ
+        ∈
+        
+          
+            L
+          
+        
+        )
+        (
+        ‖
+        Λ
+        ‖
+        ⩽
+        M
+        )
+        .
+      
+    
+     
+  
+
+
+== Twierdzenie Banacha-Steinhausa ==
+Niech 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+     
+   będzie rodziną przekształceń liniowych przestrzeni 
+  
+    
+      
+        X
+      
+    
+     
+   w przestrzeń 
+  
+    
+      
+        Y
+        .
+      
+    
+     
+   Jeżeli zbiór
+
+  
+    
+      
+        F
+        =
+        {
+        x
+        ∈
+        X
+        :
+        
+          
+            zbiór 
+          
+        
+        {
+        Λ
+        x
+        :
+        Λ
+        ∈
+        
+          
+            L
+          
+        
+        }
+        
+          
+             jest ograniczony
+          
+        
+        }
+      
+    
+     
+  jest podzbiorem drugiej kategorii przestrzeni 
+  
+    
+      
+        X
+        ,
+      
+    
+     
+   to 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+     
+   jest rodziną jednakowo ciągłą oraz zbiór 
+  
+    
+      
+        F
+      
+    
+     
+   jest całą przestrzenią.
+
+
+== Wnioski ==
+Twierdzenie Baire’a mówi, że przestrzenie metryczne zupełne są (w sobie) drugiej kategorii. Używając twierdzenia Baire’a, można udowodnić, że jeżeli 
+  
+    
+      
+        X
+      
+    
+     
+   jest F-przestrzenią oraz dla każdego punktu 
+  
+    
+      
+        x
+      
+    
+     
+   przestrzeni 
+  
+    
+      
+        X
+      
+    
+     
+   zbiór 
+  
+    
+      
+        {
+        Λ
+        x
+        :
+        Λ
+        ∈
+        
+          
+            L
+          
+        
+        }
+      
+    
+     
+   jest ograniczony, to 
+  
+    
+      
+        
+          
+            L
+          
+        
+      
+    
+     
+   jest rodziną jednakowo ciągłą.
+Jeżeli 
+  
+    
+      
+        X
+      
+    
+     
+   jest F-przestrzenią oraz 
+  
+    
+      
+        {
+        
+          Λ
+          
+            n
+          
+        
+        :
+        n
+        ∈
+        
+          N
+        
+        }
+      
+    
+     
+   jest ciągiem operatorów liniowych i jednakowo ciągłych określonych na przestrzeni 
+  
+    
+      
+        X
+      
+    
+     
+   i o wartościach w przestrzeni 
+  
+    
+      
+        Y
+        ,
+      
+    
+     
+   który jest punktowo zbieżny do przekształcenia 
+  
+    
+      
+        Λ
+        ,
+      
+    
+     
+   to przekształcenie 
+  
+    
+      
+        Λ
+        :
+        X
+        →
+        Y
+      
+    
+     
+   jest operatorem liniowym i ciągłym.
+Twierdzenia Banacha-Steinhausa używa się do dowodu faktu, że każdy słabo ograniczony podzbiór przestrzeni liniowo-topologicznej lokalnie wypukłej jest ograniczony (tzn. ograniczony w sensie wyjściowej topologii przestrzeni).
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+Walter Rudin: Analiza funkcjonalna. Warszawa: PWN, 2009, s. 55–56.

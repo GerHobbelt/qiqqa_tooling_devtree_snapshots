@@ -1,0 +1,68 @@
+revision: 20821375
+title: Materialvitenskap
+url: https://no.wikipedia.org/wiki/Hardhet_(materialvitenskap)
+
+
+---
+
+Hardhet blir i materialvitenskapen brukt som et uttrykk for å beskrive hvordan et materiale motstår påvirkning fra ytre mekaniske krefter. Dette blir styrt av hvor sterke bindingene i et stoff er. Det finnes flere skalaer for å beskrive ulike materialers hardhet.
+Diamant var lenge regnet som det hardeste stoffet i verden, men senere har nanoteknikere laget stoffer som er enda hardere.
+
+
+== Hardhetstesting og hardhetsskalaer ==
+Det finnes flere metoder for å teste hardheten til et stoff eller materiale. De fleste er beregnet for bruk i laboratorier og industri, og krever avansert utstyr. Derfor anbefales det å bruke Mohs skala hvis man skal måle hardhet på en lettvinn måte.
+
+
+=== Mohs skala ===
+
+Mohs skala er en hardhetsskala som går fra 1 til 10. Den ble utviklet for å måle hardheten eller ripefastheten på mineraler.  Den godt egnet for bruk uti felten for både geologer og steinsamlere, og man kan bruke enkle materialer som er lette å skaffe for å utføre tester. En fingernegl har en hardhet på 2,2, en kobbermynt har 3,2, et knivblad 5,1, en glassplate 5,5, en stålfil eller stålnål har 6,5 og en strekplate eller porselenssikring har 7,0.  Ved å sammenligne med disse tingene, er det lett å gi et anslag på hvor mineralet befinner seg på skalaen.
+
+Talk
+Gips
+Kalkspat
+Flusspat
+Apatitt
+Feltspat
+Kvarts
+Topas
+Korund
+Diamant
+
+
+=== Vickers hardhetstest ===
+
+Vickers hardhetstest er en testmetode utviklet av ingeniører på Vickers Ltd, da de trengte en nøyaktig metode å måle hardheten på ulike stållegeringer. Hardheten oppgis i HV som står for Hardness Vickers eller Hardhet Vickers. Vickers hardhet er et mål på hvor stort avtrykk en kvadratisk diamantpyramide lager dersom det blir presset mot et materiale med en kjent kraft. Verdiene på målingene er lik trykket på diamanten delt på lengden av diagonalene av avtrykket fra diamanten. Denne måleskalaen ble laget for å måle hardheten til ulike metaller men fungerer også bra på mineraler og keramer. Vickers hardhetstest er den mest nøyaktige å bruke på veldig harde materialer
+
+
+=== Knoop hardhetstest ===
+
+Knoop hardhetstest er en mikrohardhetstest, som bruker en avlang diamantpyramide til å lage et avtrykk i et testmateriale. Lasten på diamantpyramiden er vanligvis fra 10 til 1000g. Metoden ble utviklet for å kunne måle hardheten i sprø materialer som glass og keramikk. Hardheten som måles oppgis i HK Hardness Knoop eller KHN Knoop Hardness Number, og den blir kalkulert ved å måle den lengste diagonalen i avtrykket etter den avlange diamantpyramiden. Knoop hardhetstest er bedre egnet til å måle hardheten i sprø materialer enn Vickers hardhetstest
+
+
+=== Rockwell hardhetstester ===
+
+Rockwell hardhetstester er et instrument som måler hardhet ved å presse en kjegle av stål eller diamant ned i et materiale to ganger. Dette gjøres ved at kjeglen presses inn med en mindre last etterfulgt av en større, og så måles dybden på avtrykkene. Etter at målene er tastet inn, får man opp verdien på en skjerm. Denne metoden har sin store fordel ved at man enkelt og raskt får frem verdiene man er ute etter. Verdiene oppgis i HR som står for Hardness Rockwell eller Hardhet Rockwell. Rockwell hardhetstest benytter seg av flere Rockwell-skalaer der man benytter seg av ulike kjegler for de ulike skalaene.
+
+
+=== Brinell hardhetstest ===
+
+Brinell hardhetstest er en metode for å måle hardhet, som ble oppfunnet av svensken Johan August Brinell, overingeniør ved Fagersta Bruks AB. Den var en av de aller første slike tester. Metoden ble presentert ved Verdensutstillingen i Paris 1900, og den egner seg best for å måle hardheten i myke og middels harde materialer. Prinsippet går ut på å måle et materiales evne til å motstå plastisk deformasjon, slik som i Vickers hardhetstest og Rockwell hardhetstest. En typisk test går ut på å presse en kule på 10 millimeter i diameter av herdet stål eller wolframkarbid ned i prøven med en vekt på vanligvis 3000 kg, og måle diagonalene i avtrykket. Disse settes inn i en formel sammen med diameteren og lasten på kulen. Verdiene oppgis i enheten HB (Hardness Brinell) eller BHN (Brinell Hardness Number).
+
+
+=== Shore durometer ===
+
+
+== Se også ==
+Brinell hardhetstest
+Knoop hardhetstest
+Mohs skala
+Rockwell (skala)
+Shore durometer
+Vickers hardhetstest
+
+
+== Referanser ==
+
+
+== Eksterne lenker ==
+Hardness Guide (english)

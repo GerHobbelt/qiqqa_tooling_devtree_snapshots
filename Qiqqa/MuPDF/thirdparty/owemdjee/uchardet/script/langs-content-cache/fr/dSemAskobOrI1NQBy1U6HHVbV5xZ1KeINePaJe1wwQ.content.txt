@@ -1,0 +1,27 @@
+revision: 202684394
+title: Joseph Lucas
+url: https://fr.wikipedia.org/wiki/Lucas_Industries
+
+
+---
+
+Lucas Industries plc est un fabricant de composants pour l'industrie automobile et industrie aérospatiale. Fondée en 1872 par Joseph Lucas, l'entreprise était basée à Birmingham en Angleterre. 
+À l'origine, Joseph Lucas produisait des lampes tempête et des lanternes de fiacre fonctionnant à l'huile ou au pétrole, comme Louis Blériot en France. Avec l'avènement de l'électricité sa société se reconvertit dans la fabrication de phares d'automobiles et de lanternes de vélos. 
+Ses activités ont été reprises en 1996 dans LucasVarity lors de la fusion avec la Varity Corporation mais furent abandonnée en 1999. Depuis, la marque Lucas est reprise par l'intermédiaire de licences.
+La société Lucas a été un grand sous-traitant de l'industrie automobile et motocycliste britannique. Elle a produit des générateurs électriques (dynamos, magnétos, alternateurs, des systèmes d'allumage à vis platinées et électroniques (système Lucas RITA) des phares et autres indicateurs lumineux, de la connectique électrique, des contacteurs, commutateurs et des commodos pour motos, etc.
+Un autre département de la société Lucas a produit des pompes d'injection pour moteurs Diesel
+La société Lucas Industries était cotée à la Bourse de Londres et a été une fois intégré à l'indice FTSE 100.
+
+
+== Les produits Lucas : une qualité inégale ==
+Les années 60 et 70 ont vu le déclin rapide de l'industrie automobile et motocycliste britannique en raison de causes pluri-factorielles (manque d'innovation ou innovation mal maîtrisée, sous capitalisation, conflits sociaux et managériaux, marques nombreuses mal fusionnées au sein de British Leyland ou, côté Moto, au sein du groupe NVT (Norton Villiers Triumph - manque d'investissement dans des machines-outils modernes, refus de passer la boulonnerie au standards métriques..etc). Le sous-traitant Lucas, omniprésent dans l'industrie auto et moto britannique a aussi sa part de responsabilité dans cette débâcle.
+Certains produits innovants ont été mis sur le marché alors même qu'ils n'étaient pas fiables ou insuffisamment testés: ainsi Lucas fut le premier à proposer une diode Zener servant à la fois de redresseur pour l'alternateur et de régulateur de courant (une des premières applications en série de l'électronique de puissance). Installée sur de nombreuses motos anglaises (qui abandonnaient le classique système magnéto d'allumage plus dynamo d'éclairage au profit du plus moderne alternateur) , en particulier les versions post 1967 de la célèbre Triumph Bonneville la diode Zener se révéla très sensibles aux vibrations (une constante sur les motos anglaises de l'époque) à la surchauffe (il fallut l'installer dans un cône d'aluminium aileté placé sous le phare qui n'évacuait les calories qu'à haute vitesse. Privée d'électricité , la moto tombait rapidement en panne.
+Ce composant était d'ailleurs nommément exclu de la garantie du véhicule.
+Les alternateurs Lucas pour motos se contentaient d'un aimant permanent-, peu coûteux et simple, mais sujet à la désaimantation à chaud- en guise de rotor et ne débitaient pas assez de puissance pour alimenter un éventuel démarreur électrique, contrairement aux équivalents japonais bénéficiant d'un électro - aimant dans le rotor. Les contacteurs au guidon, commandant les phares, les clignotants, etc. étaient sensibles à l'humidité, peu ergonomiques et mal repérés. Lucas utilisa longtemps la pratique de relier le pôle + du circuit électrique à la masse du véhicule (cadre, châssis bloc moteur) alors que la pratique européenne et japonaise, devenue la norme mondiale était de raccorder le négatif à la masse, ce qui engendra de nombreux dégâts aux composants électroniques lors de la connexion de câbles crocodiles pour l'aide au démarrage.Les circuits électriques Lucas n'utilisaient que peu ou pas du tout de relais électromécaniques pour commander des applications de plus en plus gourmandes en puissance(éclairage notamment), induisant des surchauffe des faisceaux électriques et des arcs électriques sur les pôles des contacteurs.
+Le passage de l'allumage classique à rupteurs (vis platinées) aux systèmes électroniques (allumage à décharge capacitive CDI) fut mal maîtrisé: après avoir longuement testé un système opto-électronique, Lucas mit sur le marché un système purement électronique mal abouti, le système RITA dont les premières versions s'avérèrent peu fiables (une petite firme artisanale, Boyer Brandsen, se tailla une enviable part de marché en proposant en seconde monte un système beaucoup plus fiable).
+Pour toutes ces raisons, le féroce humour britannique s'est déchaîné sur la firme et son fondateur (facétieusement surnommé le prince des ténèbres ou le génial inventeur du court-circuit), générant un certain nombre de plaisanteries qui circulent dans le milieu des mécaniciens et restaurateurs spécialisés dans les voitures et les motos anglaises.
+
+
+== Notes et références ==
+
+ Portail des entreprises   Portail de l’automobile   Portail du Royaume-Uni

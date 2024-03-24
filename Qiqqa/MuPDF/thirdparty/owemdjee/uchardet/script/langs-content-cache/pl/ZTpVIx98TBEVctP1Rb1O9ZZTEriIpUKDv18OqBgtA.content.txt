@@ -1,0 +1,9 @@
+revision: 66931773
+title: bateria buforowa
+url: https://pl.wikipedia.org/wiki/Bateria_buforowa
+
+
+---
+
+Bateria buforowa - akumulator podłączony równolegle ze źródłem prądu stałego.
+Stosowany w celu filtracji skoków napięcia i podtrzymaniu pamięci w wypadku chwilowego zaniku zasilania.

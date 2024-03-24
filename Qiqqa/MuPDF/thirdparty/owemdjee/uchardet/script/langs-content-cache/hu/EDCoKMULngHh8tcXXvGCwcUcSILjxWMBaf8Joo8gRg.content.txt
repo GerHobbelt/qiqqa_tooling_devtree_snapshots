@@ -1,0 +1,64 @@
+revision: 25984045
+title: Pepper (robot)
+url: https://hu.wikipedia.org/wiki/Pepper_(robot)
+
+
+---
+
+Pepper, az emberi érzelmek felismerésére képes humanoid robot arcfelismerő, arckövető funkcióval is rendelkezik, fejleszthető bármilyen nyelven beszédértésre és -szintézisre. Gyártója a SoftBank Robotics (korábban Aldebaran Robotics).
+Egy 2014. június 5-én tartott konferencián mutatták be, és másnaptól a japán Softbank mobiltelefon-üzleteiben volt látható. Pepper érzelemfelismerő képessége abból ered, hogy elemzi a kifejezéseket és a hangokat.
+
+
+== Története ==
+Úgy tervezték, hogy Pepper 2015 decemberében 198 000 JPY (1931 USD) alapáron lesz elérhető a Softbank Mobile üzleteiben. Pepper 2015 júniusában 198 000 JPY (1 650 USD) áron került értékesítésre. Az első 1 000 darab mindössze 60 másodperc alatt kelt el Peppert először 2016-ban az Egyesült Királyságban dobták piacra, és jelenleg két változata kapható.
+2018 májusára már 12 000 Pepper robotot adtak el Európában.
+
+
+== Alkalmazása ==
+
+
+=== Kereskedelmi ===
+Peppert mára az Egyesült Királyság számos irodájában alkalmazzák recepciósként, megismeri a látogatókat az arcfelismerés-funkciónak köszönhetően, értesítheti a találkozók szervezőit, és elintézheti az italrendelést. Pepper önállóan tud kommunikálni a vendégekkel, ügyfelekkel. Az első működő Pepper recepcióst az Egyesült Királyságon belül Londonban, a Brainlabsben állították szolgálatba.
+Japán bankokban és egészségügyi intézményekben a Seikatsu Kakumei által létrehozott alkalmazások felhasználásával már alkalmazzák a robotot. Nem mellesleg a japán Hamazushi étteremlánc mindenhol munkába állította
+
+
+=== Fogyasztói ===
+Pepper több mint 1000 japán háztartásban megtalálható.
+
+
+=== Tudományos ===
+Pepper a programozás tanításában és az ember-robot interakció kutatásában áll az iskolák, főiskolák és egyetemek rendelkezésére.
+2017-ben egy nemzetközi kutatócsapat elkezdte vizsgálni Pepper alkalmazásának lehetőségeit idősek gondozásában vagy védett szálláson. A világ első kulturális kompetenciával rendelkező robotjának kifejlesztésére irányuló CARESSES projekt több mint kétmillió eurós támogatásban részesült, a támogatók közt szerepel többek közt az Európai Unió és a japán kormány. A projektet háromévesre tervezték. A kutatásban részt vevő intézmények között szerepel a Genovai Egyetem (projektkoordinátor), Örebro Egyetem, Middlesexi Egyetem, Bedfordshire-i Egyetem, SoftBank Robotika, Advinia HealthCare, JAIST (japán koordinátor), Nagoya Egyetem és a Chubu Egyetem. 2018. október 16-án egy Pepper robot megemlítette a CARESSES projektet, miközben a brit parlament alsóháza Oktatási Bizottságának szolgált bizonyítékkal.
+
+
+== Kivitelezés ==
+
+
+=== Rendeltetés ===
+Pepper nem háztartási használatra tervezett funkcionális robot. Pepper célja, hogy „az ember élvezze az életet”. Jobbá teszi az életet, kapcsolatot teremt, szórakoztat és összeköt a külvilággal. A Pepper alkotói azt remélik, hogy független fejlesztők új tartalmat és felhasználási lehetőségeket hoznak létre Pepper számára.
+
+
+=== Pepper magyar vonatkozásban ===
+Pepper robot magyar nyelvű lokalizációjával elsőként a Netlife spin-off cége, a Netlife Robotics kezdett el foglalkozni 2018 augusztusában. A cég fő kitűzése, hogy megreformálja a magyar humán robotikát és ügyfélszolgálatos robotot készítsen több iparágban (bank, közmű, kiskereskedelem, egészségügy stb.).
+
+
+=== Sajátosságok ===
+A robot fejében négy mikrofon, két HD kamera (a szájában és a homlokában) és egy 3D-s mélységérzékelő (a szem mögött) található. A törzsben egy giroszkóp, a fejében és a kezében érzékelők vannak. A mozgó alap két szonárral, hat lézerrel, három szenzoros lökhárítóval és giroszkóppal rendelkezik.Képes futtatni a SoftBank alkalmazás-áruházában elérhető tartalmat, amelyet Nao robotnak terveztek. 
+
+
+== Események ==
+2015 szeptemberében Tokióban egy csalódott látogató Pepperre támadt, és komoly kárt okozott a robotban.
+2018 augusztusában Pepper Magyarországra érkezett. A Netlife Robotics megkezdte a robot programozását.
+2018 szeptemberében a Netlife Robotics sajtótájékoztatót tartott a BME Ipar 4.0 központban, ahol Pepper magyar területen történő ügyfélszolgálati felhasználásának lehetőségeit ismertették.
+
+
+== Jegyzetek ==
+
+
+== Fordítás ==
+Ez a szócikk részben vagy egészben  a   Pepper (robot) című angol Wikipédia-szócikk ezen változatának fordításán alapul.  Az eredeti cikk szerkesztőit annak laptörténete sorolja fel. Ez a jelzés csupán a megfogalmazás eredetét és a szerzői jogokat jelzi, nem szolgál a cikkben szereplő információk forrásmegjelöléseként.
+
+
+== További információk ==
+http://netliferobotics.hu/
+http://pepperrobot.hu/

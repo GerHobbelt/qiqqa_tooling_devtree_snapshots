@@ -1,0 +1,140 @@
+revision: 6359047
+title: diode
+url: https://hr.wikipedia.org/wiki/Dioda
+
+
+---
+
+Dioda je elektronički element s dvjema elektrodama kojemu električna vodljivost izrazito ovisi o polaritetu električnog napona između elektroda, pa zato propušta električnu struju gotovo samo u jednom smjeru. Poluvodičke diode se izvode na temelju PN-spoja ili na temelju spoja metal–poluvodič. Diode se mogu razvrstati po materijalu na kojemu su rađene (silicij, germanij, galijev arsenid, silicijev karbid) i po tipu (ispravljačke, svijetleće, foto diode, Zenerove diode, Schottkyjeve diode, tunel diode i tako dalje).
+Kristalne diode osnivaju se na svojstvima poluvodiča, koji se po svojoj električnoj vodljivosti nalaze između dobrih električnih vodiča i izolatora. Među poluvodiče spadaju germanij i silicij. Prema vrsti primjesa razlikujemo n-germanij, koji ima arsena i p-germanij, koji ima u sebi indija. Ako se ove dvije vrste germanija kristaliziraju jedna do druge, onda će električna struja teći samo onda ako je p-germanij spojen s pozitivnim, a n-germanij s negativnim polom izvora struje. Na taj način izrađuju se kristalne diode, koje su smještene u malu staklenu cjevčicu. One služe da izmjeničnu struju pretvaraju u istosmjernu, a upotrebljavaju se i za detekciju. Detekcija je pretvaranje visokofrekventne izmjenične struje u niskofrekventnu, koja može pokrenuti membranu slušalice, odnosno zvučnika.
+
+
+== Fizikalne osnove rada ==
+Osnova rada većine današnjih dioda se temelji na strukturi koja se naziva PN-spoj. Kod pn dioda (spojnih) u ovisnosti o narinutom naponu, teče struja. Uz narinuti napon priključen tako da je negativan pol izvora na katodi a pozitivan na anodi, dioda je propusno polazirana i vodi stuju. Uz suprotan polaritet narinutog napona dioda neće voditi, točnije kroz diodu će teći mala reverzna struja zasićenja. Drugi tip dioda su Schottkyjeve diode, koje svoj rad temelje na spoju metal-poluvodič.
+
+
+=== Strujno-naponska karakteristika ===
+Ovisnost struje diode o priključenom naponu, odnosno strujno-naponsku karakteristiku (i(u) karakteristiku), opisuje Shocklyeyeva jednadžba:
+
+  
+    
+      
+        I
+        =
+        
+          I
+          
+            s
+          
+        
+        (
+        
+          e
+          
+            
+              U
+              
+                U
+                
+                  T
+                
+              
+            
+          
+        
+        −
+        1
+        )
+      
+    
+     
+  
+Na i(u) karakteristici postoje tri područja: područje zapiranja, područje vođenja i područje proboja. Napon koljena, koji se nekada naziva i napon uključenja diode, je onaj napon u području vođenja u kojem dioda naglo počinje voditi struju. Napon koljena ovisi o materijalu izrade, te iznosi 0,7V za silicij, 0,3V za germanij, 1V za galij-arsenid i 0,2 V za spoj metal-poluvodič.
+
+
+== Tipovi dioda ==
+
+Postoje različiti tipovi dioda, a svrstavanje se radi po funkciji koju dioda obavlja.
+
+
+=== Vakuumska dioda ===
+Vakuumska dioda (John Ambrose Fleming, 1904.), koja se sve manje primjenjuje, je elektronska cijev s dvjema elektrodama u vakuumu, od kojih je jedna užarena (termoelektronska emisija). Kada je negativni pol (katoda) na užarenoj elektrodi, a pozitivni (anoda) na hladnoj elektrodi, diodom teče struja elektrona od katode prema anodi. Međutim, uz izmijenjeni polaritet, kada užarena elektroda postaje pozitivna, dioda ne vodi struju elektrona.
+
+
+==== Objašnjenje ====
+Vakuumska dioda je elektronska cijev koja se sastoji od katode i anode. Katoda je tanka nit od legure volframa i torija ili barija, a spojena je s baterijom za žarenje niti preko miliampermetra i električnog otpornika kojim se može regulirati jakost struje žarenja. Anoda je spojena s pozitivnim polom anodne baterije preko miliampermetra. 
+Kada se negativni pol anodne baterije spoji s pozitivnim polom baterije za žarenje, onda je strujni krug zatvoren. Tek kada se katoda užari, izlazit će iz nje elektroni koje privlači pozitivno nabijena anoda. Tada u cijevi nastane termoelektronska struja od katode prema anodi, dok u tehničkom smislu kažemo da struja teče od anode prema katodi. 
+Ako struju žarenja držimo stalnom, pa anodi povećamo električni napon, vidjet ćemo po miliampermetru da će anodna struja biti sve jača. Spojimo li anodu s negativnim polom anodne baterije, struja neće teći kroz diodu jer elektrone odbija negativno nabijena anoda. Znači, dioda propušta električnu struju samo u jednom smjeru. To svojstvo diode iskorištava se za ispravljanje izmjenične struje u istosmjernu. 
+
+
+=== Poluvodička ili kristalna dioda ===
+Poluvodička ili kristalna dioda sastoji se od dvaju slojeva poluvodičkoga kristala različita tipa (PN-prijelaz) ili od sloga metal–poluvodič (Schottkyjeva dioda). 
+
+
+=== Ispravljačke diode ===
+Ispravljačke ili signalne diode su diode koje se rabe za ispravljanje izmjeničnih veličina u istosmjerne. Njihov rad je već opisan u uvodu: diode vode struju kada su propusno polarizirane, a ne vode kada su nepropusno. Zovu se još i signalne jer se upotrebljavaju u demodulaciji radio signala. Ispravljačke diode su bile osnovni elementi jednih od prvih elektroničkih logičkih vrata (DTL - eng. Diode Transistor Logic). Ispravljačka dioda pokazuje veliku razliku vodljivosti u propusnom i nepropusnom (zapornom) smjeru, pa se rabi u ispravljačima, usmjerivačima i demodulatorima.
+
+
+=== Zenerove diode ===
+
+Zenerove diode su diode koje se uglavnom upotrebljavaju kao referentni izvori napona. Zenerova dioda postaje, pri takozvanom Zenerovu naponu, naglo vodljiva u nepropusnom smjeru, pa služi kao stabilizator napona.
+
+
+=== Svjetleća dioda ili LED ===
+
+Svjetleća dioda ili LED (engl. Light Emitting Diode) svijetli pri prolasku struje i upotrebljava se kao pretvornik električne informacije u svjetlosnu, većinom za signalna svjetla različitih boja ili kao dio svjetlećega optoelektroničkoga pokaznika Svjetleće diode emitiraju svjetlost kada su propusno polarizirane. Boja svjetlosti ovisi o primjesama u poluvodiču, a mogu biti od ultraljubičaste do infracrvene. Upotrebljavaju se za prijenos signala (infracrvene) i signalizaciju. Upotrebljavaju se i prilikom galvanskog odvajanja električnih krugova, najčešće u optokaplerima.
+
+
+=== Schottkyjeve diode ===
+Schottkyeva dioda temelji svoj rad na ispravljačkom spoju metal-poluvodič. Osnovna karakteristika ove diode je da ima na mjestu PN prijelaza pločastu poluvodičku izolaciju koja se zatvara u vremenu od 100 ps i mali napon koljena (0,2 V). Zbog oblika strujno-naponske karakteristike te kratkog vremena oporavka prikladna je za primjenu u brzim, impulsnim sklopovima ili kao zaštitni element.
+
+
+=== Esakijeva ili tunelska dioda ===
+Esakijeva ili tunelska dioda koristi se kao brza sklopka ili oscilator, a Gunnova dioda (po britanskom fizičaru Johnu Battiscombeu Gunnu, 1963.) kao oscilator, pojačalo i modulator na vrlo visokim frekvencijama, u području takozvanih mikrovalova. Kod tunelskih dioda dolazi na uskom zapornom sloju do efekta tuneliranja kod čega slobodni elektroni i šupljine prelaze s jedne na drugu stranu PN-spoja kod malih napona. Tunelske diode rabe se u oscilatorima velikih frekvencija do 10 GHz. Odonos između struje Ip i Iv iznosi Ip/Iv = od 5 do 10.
+
+
+=== Varaktor ===
+
+Varaktor, kapacitivna dioda ili varikap u zapornom se smjeru ponaša kao električni kondenzator s električnim kapacitetom ovisnim o naponu. Kapacitet je posljedica osiromašenog sloja u pn-spoju. Upotrebljava se u modulatorima. Najčešće radi u nepropusnom području. Kapacitet se kreće između 10 i 200 pF, a probojni naponi su oko 40 V. Kapacitivne diode upotrebljavaju se za ugađanje titrajnih krugova i za automatsku regulaciju frekvencije u radiotehnici.
+
+
+=== Fotodioda ===
+
+Fotodioda primjenjuje unutarnji fotoelektrični učinak i vodljivost joj ovisi o osvjetljenju, pa se koristi kao pretvornik svjetlosne informacije u električnu.
+
+
+=== Laserska dioda ===
+Laserska dioda primjenjuje kvantnu pojavu stimuliranog odašiljanja svjetlosti i koristi se kao osnovna sastavnica poluvodičkog lasera.
+
+
+== Primjena ==
+
+
+=== Ispravljanje izmjenične struje ===
+
+Ispravljanje izmjenične struje se temelji na osnovnome principu rada diode: vođenje struje kada je propusno polarizirana. Na taj način se iz izmjenične struje može dobiti istosmjerna struja.
+
+
+=== Modulacija i demodulacija signala ===
+
+Diode se upotrebljavaju u dva tipa AM modulatora (prekidački modulator i balansirani prstenasti modulator) te za FM modulator (modulator s kapacitivnom diodom). Diode se, kod demodulacije, najčešće upotrebljavaju u sklopovima za demodulaciju amplitudno moduliranog signala (AM) u sklopu koji se naziva detektor envelope (eng. Peak Detector).
+
+
+=== Stabilizacija napona ===
+Stabilizacija napona podrazumjeva osiguravanje konstantnog istosmjernog napona s malom valovitošću (ako se radi o dobivanju istosmjernog napona iz ispravljača) i malom (ili nikakvom) ovisnosti izlaznog napona o opterćenju. Kao stabilizator napona često se primjenjuje Zener dioda.
+
+
+=== Zaštita od prenapona ===
+
+
+=== Indikatori ===
+Za ovu svrhu se primjenjuju LE diode, najčešće ugrađene u alfanumeričke pokaznike poznatiji kao LED displeji. LE displeji mogu biti segmentni i matrični. LE diode se mogu rabiti i samostalno, kao indikacija neke veličine ili stanja (npr. uključen uređaj, punjenje baterije itd.).
+
+
+== Poluvodički elementi sa sličnim radom kao dioda ==
+Tiristor
+Dijak
+Trijak
+
+
+== Izvori ==

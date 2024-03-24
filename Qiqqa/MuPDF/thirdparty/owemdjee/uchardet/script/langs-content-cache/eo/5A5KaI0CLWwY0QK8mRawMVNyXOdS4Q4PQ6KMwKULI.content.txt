@@ -1,0 +1,38 @@
+revision: 7946851
+title: "Bazaj reguloj de \u015Dako"
+url: https://eo.wikipedia.org/wiki/Bazaj_reguloj_de_%C5%9Dako
+
+
+---
+
+La pecoj de ŝako estas:
+
+Reĝo (R): La plej grava peco. Ĝi rajtas moviĝi ĉiudirekten, sed nur po unu fakon. Se la reĝo ne povas eskapi ŝakigan situon, la ludo finiĝas malgajnante per "mato"; se ĝi ne povas eviti eniron en ŝakan situacion, la ludo finiĝas egalece per "pato" (sendecida partio).
+Damo (D): La plej potenca peco. Longdistanca peco kiu moviĝas ĉiudirekten (horizontale, vertikale, diagonale). (valoras 9 peonojn – la donita valoro estas proksimuma kaj dependas de la konkreta situacio)
+Turo (T): (valoras 5 peonojn) Longdistanca peco kiu moviĝas horizontale kaj vertikale
+Kuriero (K): Longdistanca peco kiu moviĝas diagonale. (valoras 3 peonojn)
+Ĉevalo (Ĉ): (valoras 3 peonojn) moviĝas en formo 2+1, kio signifas 2 fakojn horizontale aŭ vertikale, poste ortante 1 fakon. Ĝi povas transsalti pecojn.
+Peono moviĝas antaŭen po unu fakon (el la komenca linio, eventuale po du), kaptas antauen irante, ne fronte, sed diagonale.La pecoj escepte de la peono nomiĝas oficiroj.
+Ili kaptas sammaniere kiel ili moviĝas.
+La "longdistancaj" pecoj (t.e. damo, turo kaj kuriero) povas moviĝi laŭ siaj permesitaj direktoj en nombro de fakoj, kiun ili deziras, ĝis ĉeesto de alia peco, aŭ rando de la tabulo. Se la obstaklo estas malsamkolora peco, ili eĉ povas kapti ĝin, okupante ĝian fakon.
+Escepte de la ĉevalo pecoj devas halti antaŭ samkoloraj pecoj kaj ĉe alikoloraj pecoj (prenante ilin).
+Specialaj reguloj:
+
+Se inter reĝo kaj turo, kiuj ankoraŭ ne moviĝis, estas libera spaco, eblas aroki por atingi pli protektatan situacion; ĉe tio la reĝo moviĝas je du kampoj kaj la turo transsaltas ĝin.
+Se peono ekmoviĝas je du fakoj kaj per tio preterpasas malamikan peonon, tiu rajtas kapti ĝin "En passant", internacia ŝaka esprimo, kiu signifas "preterirante".
+Se peono atingas la lastan horizontalon, ĝi transformiĝu al oficiro – escepte de reĝo – (plej ofte damo, foje turo aŭ ĉevalo).
+Se en ludo trifoje okazas la sama situacio, la ludo estas sendecida.
+Se post 50 movoj okazis nek kapto de peco nek movo de peono (do nenio nemalfarebla), la ludo estas sendecida (en certa escepta okazo post 100 movoj).
+
+
+== Vidu ankaŭ ==
+Ŝakpeco
+Ŝakluda tabulo
+
+
+== Eksteraj ligiloj ==
+
+http://www.fide.com/official/handbook.asp?level=EE101
+http://www.iranchess.com Arkivigite je 2019-10-28 per la retarkivo Wayback Machine
+http://www.fvde.ch/arbitrage/Regles_du_jeux_2004.pdf Arkivigite je 2016-03-04 per la retarkivo Wayback Machine
+http://normandlamoureux.com/echecs/quiz/index.html

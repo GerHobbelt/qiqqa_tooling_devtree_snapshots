@@ -1,0 +1,52 @@
+revision: 25585760
+title: "Meissner\u2013Ochsenfeld-effektus"
+url: https://hu.wikipedia.org/wiki/Meissner%E2%80%93Ochsenfeld-effektus
+
+
+---
+
+A Meissner–Ochsenfeld-effektus a szupravezetés jelenségével kapcsolatos.
+Két német fizikus, Walter Meissner (1882–1974) és Robert Ochsenfeld (1901–1993) kísérletekkel bizonyította, hogy a szupravezetők, melyeket addig csak ideális vezetőknek tartottak, ideális diamágneses anyagok is. 1933-ban Meissner és Ochsenfeld felfedezték, hogy a szupravezetők kiszorítják magukból a mágneses teret. A külső mágneses tér bizonyos mértékéig, az ún. kritikus mágneses mezőig a szupravezetők teljesen kiszorítják magukból a mágneses fluxust.
+Ezt a jelenséget Meissner–Ochsenfeld-effektusnak vagy  Meissner-hatásnak nevezik. (A szakirodalom sokszor a rövidebb Meissner-effektus nevet használja.) Ha a szupravezetőt gyenge mágneses térbe (H) helyezik, a tér csak egy minimális λ távolságra hatol be a szupravezetőbe, ez az úgynevezett behatolási mélység, ami után a mágneses térerősség nullára csökken. A legtöbb szupravezető esetén ez a mélység 100 nanométeres nagyságrendű. 
+A Meissner-Ochsenfeld effektus könnyen összekeverhető az ideális vezetők diamágnesességével: Lenz törvénye szerint a változó mágneses tér áramot indukál a vezetőben, és ezen áram által keltett mágneses tér pontosan az áramot létrehozó hatás ellen dolgozik. A Meissner-Ochsenfeld effektus abban különbözik ettől, hogy a szupravezető az összes mágneses teret kizárja – nem csak a változó teret – ha kritikus hőmérséklet alá hűtjük.
+A Meissner-effektust a London-egyenletek egyike írja le. Az egyenlet szerint a szupravezető belseje felé haladva a mágneses tér exponenciálisan csökken:
+
+  
+    
+      
+        
+          ∇
+          
+            2
+          
+        
+        
+          H
+        
+        =
+        
+          λ
+          
+            −
+            2
+          
+        
+        
+          H
+        
+        
+      
+    
+     
+  
+A Meissner-effektus megszűnik, ha a mágneses tér túl nagy:
+•	I. típusú szupravezetőknél a szupravezetés azonnal megszűnik, ha a térerő a Hc  kritikus térerősség feletti. Az anyag geometriájától függően megjelenhet egy köztes állapot, ahol normál és szupravezető részek váltják egymást az anyagban. 
+•	II. típusú szupravezetőknél két kritikus térerő is létezik: egy Hc1  értéket meghaladva a szupravezető kevert állapotba jut, ahol a tér ugyan behatol az anyagba, de az ellenállás nélküli vezetés nem szűnik meg (amíg nem túl nagy az áram). A Hc2  második kritikus értéket meghaladva a szupravezetés teljesen megszűnik. Ezt a kevert állapotot az elektronpárok áramában fellépő örvények okozzák
+
+
+== Külső hivatkozások ==
+
+https://web.archive.org/web/20110716212925/http://www.maniacworld.com/Superconducting-Magnetic-Levitation.html
+http://www.superconductors.org/
+http://www.worldlingo.com/ma/enwiki/de/Walther_Mei%C3%9Fner
+https://web.archive.org/web/20130630111950/http://theory.gsi.de/~vanhees/faq-pdf/supraleitung.pdf

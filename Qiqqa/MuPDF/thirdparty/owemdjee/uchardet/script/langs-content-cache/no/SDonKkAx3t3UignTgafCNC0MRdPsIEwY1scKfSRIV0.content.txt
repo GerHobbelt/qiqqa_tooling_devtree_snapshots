@@ -1,0 +1,132 @@
+revision: 22651793
+title: Skriftsystem
+url: https://no.wikipedia.org/wiki/Skriftsystem
+
+
+---
+
+Et skriftsystem eller en skrift er et symbolsystem, oftest i form av grafiske tegn,  som blir brukt til å representere språklige uttrykk.
+
+
+== Generelle karakteristika ==
+
+Skriftsystemer skiller seg fra andre mulige symbolske kommunikasjonssystemer ved at leseren må forstå noe av språket knyttet til dette systemet for å være i stand til å lese og forstå teksten. Skriftsystemer skiller seg dermed fra andre symbolske systemer, som for eksempel informasjonsskilt, kart og matematikk, som vi kan forstå uten å ha kjennskap til et visst språk.
+Alle menneskesamfunn har språk, og språk er av mange betraktet som det kriteriet som skiller mennesket fra andre dyr. Utviklingen av skriftsystemer har derimot funnet sted bare i visse menneskesamfunn. Når de har blitt etablert, har skriftsystemer endret seg saktere enn språkene de har blitt lagd for å representere.
+Alle skriftsystemer trenger:
+
+et sett av definerte basiselementer eller symboler;
+et sett av regler og konvensjoner som et samfunn forstår og deler, og som tilordner mening til disse basiselementene, til måten de er satt sammen på og relasjonene deres til hverandre;
+et språk (som oftest et talespråk), der ytringer på dette språket blir representrt og kan bli ytret på nytt gjennom en tolking av basiselementene og reglene deres;
+en måte å representere disse symbolene på i et mer eller mindre permanent medium.
+
+
+== Basisterminologi ==
+Skriftsystemer blir studert innenfor ulike fagfelter, og terminologien kan derfor variere en del. For mange engelske termer er det heller ikke allment aksepterte norske oversettelser. På samme måten som termen ord er for upresis til å kunne bli brukt i lingvistikken, er termen bokstav for upresis i studiet av skriftsystemer.
+
+Lingvistisk-baserte fremstillinger gir termen grafem en sentral plass. Denne termen er dannet analogisk med termen fonem, og refererer til det  minste signifikante elementet som har selvstendig mening innenfor et skriftsystem. På samme måten som for fonem, kan individuelle grafemer bli representert på mange ulike måter, der hver variasjon er visuelt distinkt på en eller annen måte, men alle representerer det «samme» grafemet. Disse individuelle variasjonene blir kalt allografer av samme grafem (jf. termen allofon i fonologien). Et kjent eksempel er liten g, som har meget ulik form i ulike typesnitt, f.eks. i Helvetica (runding med krok fra nederste høyre hjørne og ned mot venstre) og Times (to rundinger oppå hverandre, med høyrevendt bue de i mellom i høyre kant, og en utstikker i øverste høyre hjørne). Disse to er allografer av grafemet liten g. I tillegg kommer så ulike former for kursiv, som også kan bli sett på som allografer. Merk at innenfor ulike skriftsystemer kan inndelingen av allografer i grafemer variere. F.eks. har typesnitt som Times, to meget ulike allografer for a etter om de er kursivert eller ikke, nemlig  ɑ og det som ser ut som en opp-ned ɐ. I IPA, derimot, er disse to ulike grafemer.
+Innenfor informatikken er ikke ideen bak termen grafem så relevant, i og med at allografenes status relevant til et grafem alltid må defineres relevant til en viss bruk (f.eks. for et visst språk). Informatikeren relaterer den grafiske representasjonen ikke til mening, men til en numerisk verdi. Her er en glyf en abstrakt symbol det er mulig å kjenne igjen, og et glyfbilde et bilde av en glyf (på papir, eller på skjermen). Et tegn er et medlem av et sett av elementer som brukes for å organisere, kontrollere eller representere data. Visuelt blir tegnet representert av en glyf. Et typesnitt er en samling av glyfbilder med samme visuelle grunnutforming.
+Innenfor studiet av maya-hieroglyfer, blir termen glyf brukt som term ikke for glyfer generelt (i betydningen ovenfor), men reservert bare for maya-glyfer.
+
+
+== Skriftsystemenes historie ==
+
+Det første skriftsystemet ble oppfunnet omtrent samtidig med starten av bronsealderen i sen neolittisk tid, på slutten av det fjerde millenniet før Kristus. Det første skriftsystemet var sumerisk skrift, som ble utviklet til kileskrift. Egyptiske hieroglyfer, og kanskje også urelamittisk skrift, som fortsatt ikke er tolket, stammer fra omtrent samme periode. Andre tidlige skriftsystemer som sannsynligvis er influert av disse innovasjonene er Indusdalskriften og gammeleuropeisk skrift. I begge tilfellene er det omdiskutert om disse var skriftsystemer, eller om de var symbolske, men ikke-språklige systemer.
+Kinesisk skrift, eller han, kan ha blitt dannet uavhengig av skriftsystemene fra Midtøsten, omtrent 1200 f.Kr.. De førkolumbiske skriftsystemene i Amerika (i alle fall olmekiske og mayiske hieroglyfer) har også uavhengig opphav.
+De første rene alfabetene oppsto omtrent 2000 f.Kr. i Egypt, selv om de egyptiske hieroglyfene allerede hadde hatt alfabetiske prinsipper i omtrent et millennium. Tilsvarende ser vi i maya-hieroglyfene en tendens til at et opprinnelig hieroglyfisk system får alfabetegenskaper.
+
+
+== Typer av skriftsystemer ==
+De eldste skriftsystemene var primært  logografiske av natur, basert på piktografiske og ideografiske elementer. De fleste skriftsystemene kan bli delt opp i tre hovedtyper: logografisk, syllabisk og alfabetisk (eller segmentell); men alle tre kan opptre i større eller mindre grad i et hvert skriftsystem, noe som ofte gjør det vanskelig å kategorisere et system på en entydig måte. Termen komplekst system blir nå og da brukt for å beskrive systemer som er vanskelig å putte inn i den ene eller andre båsen.
+
+
+=== Logografiske skriftsystemer ===
+
+Et logogram er et tegn som representerer et komplett grammatisk ord. En tredel av alle de kinesiske tegnene i en ordbok kan klassifiseres som logogram, og 45% av de kinesiske skriftegnene i en vanlig tekst kan det. 10% av Kinesiske tegn er meningsløse tatt ut av sin sammenheng (omtrent som suffikset -er i ordet lærer ikke gir mening isolert). 40% Av de kinesiske skrifttegnene skifter mening iht. hvilke ord de står sammen med (akkurat som dyret rådyr og prisen rådyr)I og med at hvert tegn representerer ett enkelt ord, eller ofte en rot, trengs det mange logogrammer for å skrive alle ordene i et språk. Mengden av logogrammer og det harde arbeidet det er å lære seg å huske betydningen til hvert enkelt logogram er den største svakheten logografiske system har i forhold til alfabetiske systemer. Logografiske systemer har også fordeler. For det første blir systemene meget kompakte, mye informasjon kan bli uttrykt på liten plass, når ett tegn er nok til å formidle ett ord. I teorien kan logografiske systemer også bli brukt over språkgrensene, slik at det samme logografiske symbolet kan bli brukt til å representere flere språk. I praksis gjelder dette som oftest for nært beslektede språk, som de ulike dialektene av kinesisk, i og med at ulik syntaks gjør det vanskelig å lese samme streng av tegn på et annet språk. Både koreansk og japansk bruker kinesiske logogrammer i skriftsystemene sine, og mange av symbolene har omtrent samme betydning i de ulike språkene. Men de er ulike nok til at det er vanskelig for en japansk eller koreansk leser å lese en kinesisk tekst.
+Selv om mange språk ikke bruker fullt logografiske skriftsystemer, er det mange som bruker noen logogrammer. Et godt eksempel er bruken av arabiske tall — alle som bruker disse symbolene vet hva betydning 1 har, selv om det kan bli kalt en, ein, one, yksi, okta eller uno. Et annet logogram brukt i latinske alfabet er ampersand &, som står for og. Før boktrykkerkunsten var kalveskinn dyrt, og logogrammer en del i bruk for å gjøre teksten kortere.
+Logogrammer blir også kalt ideogrammer, et ord som refererer til symboler som representerer abstrakte idéer grafisk. I den lingvistiske litteraturen om skriftsystemer er det mer vanlig å bruke termen logogram, i og med at logogrammene ofte kombinerer semantisk og fonologisk informasjon, symbolene inneholder både informasjon om mening og informasjon om uttale.
+Det viktigste moderne logografiske skriftsystemet er det kinesiske, som blir brukt for å representere kinesisk, japansk og koreansk, og som tidligere også har blitt brukt for å skrive vietnamesisk og andre østasiatiske språk. Egyptiske hieroglyfer og maya-hieroglyfer har også systemer som har logografiske trekk, selv om de også har fonologiske egenskaper. De er dessuten ikke lenger i bruk.
+
+
+=== Stavelsesbaserte systemer ===
+
+Der logografiske systemer bruker ett eneste symbol for et helt ord, er et stavelsessystem et sett av skriftsymboler som representerer stavelser. For språk med enkle stavelsessystemer, der stavelsene er av typen KV (konsonant + vokal), representerer hvert symbol kombinasjonen av en konsonant pluss en vokal. I et rent stavelsessystem er det ingen systematisk grafisk likhet mellom fonologisk like tegn, slik at f.eks. symbolene for «ke», «ka», og «ko» ikke grafisk sett er mer like enn symbolene for «la», «tu» og «re». Jamfør med abugida-systemer, der hvert grafem representerer en stavelse, men der symboler med samme initiale konsonant og/eller final vokal har grafiske fellestrekk.
+Stavelsesbaserte systemer passer best til språk med relativ enkel stavelsesstruktur, åpne stavelser og få eller ingen konsonantgrupper initialt i stavelsen, slik som vi finner i polynesiske språk (som bruker alfabet) og i japansk, som delvis bruker stavelsesbaserte systemer. I germanske språk passer stavelsesbaserte systemer ikke så godt, der er det både lukkede stavelser og kompleks opptakt, som i strakk, trakk, blakk, strank, straks, straff, ....
+Andre språk med stavelsesbaserte systemer er mykensk gresk (Lineær B) og amerikanske indianerspråk som cherokee.  Mange språk i Midtøsten brukte i oldtiden ulike former av kuneiform, som er et delvis stavelsesbasert system.
+
+
+=== Alfabetiske skriftsystemer ===
+Hovedartikkel: Alfabet
+
+
+==== Alfabet ====
+
+Et alfabet er et lite sett av bokstaver — symboler som ideelt sett representerer et fonem i et språk. Ordet alfabet er avledet fra alfa og beta (α, β), de første to bokstavene i det greske alfabetet.
+I et perfekt fonematisk alfabet er det et en-til-en-forhold mellom fonem og bokstav, det er mulig å spå stavelsen av et ord hvis en vet hvordan det uttales, og omvendt. Alle språk har regler for samsvar mellom bokstav og lyd, disse reglene kan være mer eller mindre konsekvent gjennomført.
+Perfekte fonematiske alfabeter er lett å lære og bruke, og språk som har tilnærmet perfekte fonematiske alfabeter, som f.eks. finsk, har mye lavere sperrer mot skriftlighet enn språk som har skriftsystemer der forbindelsen mellom fonem og skrift er indirekte og uregelrett, som f.eks. i fransk og engelsk. I og med at språk endrer seg over tid, mens skriftspråkene er mer konservative, blir alfabetiske skriftspråk dårligere og dårligere representasjoner av språket over tid. Dette misforholdet kan rettes på med hjelp av rettskrivningsreformer, men slike reformer blir ofte møtt med motstand av konservative krefter, som mener at lydrett representasjon av tidligere språktrinn representerer et mer "korrekt" språk enn det lydrett representasjon av moderne språktrinn gjør.
+Når lingvister lager skriftsystemer for språk som tidligere ikke har vært skriftspråk, prøver de som regel å lage fonematiske systemer. Unntak er skriftspråk som skal favne over flere dialekter. Da kan en fremgangsmåte være å velge konservative eller konstruerte former, som kan representere flere ulike dialektformer.
+
+
+==== Abjader ====
+
+Den første typen av alfabet som ble utviklet var abjaden. En abjad er et alfabetisk skriftsystem der det er et symbol per konsonant. Abjader skiller seg fra alfabeter i at de har bokstaver bare for konsonantfonemene. I abjader er vokaler vanligvis ikke markert i det hele tatt, selv om det i visse abjader er mulig å markere dem som diakritiske tegn, fremfor alt av pedagogiske grunner.
+Alle kjente abjader (med et mulig unntak av tifinagh) hører til den semittiske skriftfamilien, og er derivert av det originale nordlige lineære abjad. Grunnen til dette er at semittiske språk og berberspråk har en morfologisk struktur som i de fleste tilfeller gjør markeringen av vokaler overflødig.
+Mange skriftsystemer som har blitt avledet fra abjader har blitt utvidet med vokalsymboler og dermed blitt alfabeter, som f.eks. avledningen av det greske alfabetet fra den fønikiske abjaden.
+Termen abjad kommer av den gamle rekkefølgen av konsonanter i det det arabiske alfabetet, Alif (ا), Bá (ب), Jim (ج), Dál (د), men ordet kan også ha tradisjon fra fønikisk eller ugarittisk.
+Abjad er fortsatt ordet for alfabet i arabisk og indonesisk.
+
+
+==== Abugidaer ====
+Hovedartikkel: AbugidaEn abugida er et alfabetisk skriftsystem der de grunnleggende tegnet representerer konsonanter med en inherent vokal og der hvert symbol blir endret på samme måte for hver vokal annet enn den inherente vokalen som kan komme etter konsonanten.
+
+I en abugida er det dermed ikke noe symbol for «k», men et for «ka» (hvis «a» er den inherente vokalen), og «ke» er skrevet ved å modifisere «ka»-tegnet på samme måte som tegnet for «la» ville blitt modifisert for å få «le». I mange abugidaer er modifiseringen et tillegg av et vokaltegn (som for eksempel i devanagari), men andre metoder er også i bruk, som rotasjon av grunntegnet.
+Abugida kan sammenlignes med stavelsesalfabet, som har et separat symbol for hver stavelse, og der det ikke er systematisk grafisk likhet mellom de ulike symbolene. Den grafiske likheten kommer av at de fleste abugidaene er utledet av abjader, der konsonantsymbolet er basis i systemet, og der nye vokalsymboler er symboler lagt til det grunnleggende konsonantsystemet.
+Det etiopiske skriftsystemet er en abugida, selv om vokalmodifikasjonene ikke er helt systematiske. Det kanadiske stavelsesalfabetet er, trass i navnet, en abugida. Grunnen til at det likevel blir kalt for stavelsesalfabet er at det i andre sammenhenger enn skriftsystemtypologi ikke er vanlig å skille mellom abugidaer og stavelsesalfabet. Her er den systematiske modifiseringen rotasjon, hvilken vokal som kommer etter konsonanten er avhengig av retningen på skrifttegnet. Den største gruppen av abugidaer er de brahmiske skriftsystemene, som omfatter nesten alle skriftsystemene som er i bruk i India og resten av Sør-Asia.
+Navnet abugida er utledet av de fire første symbolene i det etiopiske skriftsystemet. Termen ble lagd av Peter T. Daniels.
+
+
+=== Trekksystem ===
+I et trekksystem korresponderer ulike deler av symbolet til et fonologisk trekk. Dermed har fonetisk relaterte fonem symbol som er relatert, og ulike fonologiske trekk, som artikulasjonssted eller stemthet blir representert på samme måte for ulike fonem. Det mest kjente trekksystemet er koreansk hangul.
+Det fins også skriftsystemer for å skrive tegnspråk. Noen av dem er trekksystemer, og representerer ulike håndbevegelser som separate trekk, mens andre systemer minner mer om logografiske systemer.
+
+
+== Skriveretning ==
+
+Ulike skriftsystemer har ulik skriveretning. De tidligste skriftsystemene kunne bli skrevet i alle retninger, horisontalt (venstre-til-høyre eller høyre-til-venstre) eller vertikalt (oppover eller nedover). Det kunne også bli skrevet i vekslende retning, start horisontalt i en retning og snu og skriver tilbake den andre retningen ved linjeslutt. Egyptiske hieroglyfer er en slik skrift, og retningen skriften skulle leses var den retningen som menneske- eller dyrelogogramma så.
+Det greske alfabetet og de alfabetene som ble avledet av det konsoliderte seg om en venstre-til-høyre-retning, ovenfra og nedover på siden. Andre skriftsystemer, som arabisk og hebraisk skrift, brukte høyre-til-venstre. Mange østasiatiske skriftsystemer, som kinesisk og japansk er skrevet ovenfra og ned, fra høyre til venstre på siden. Det fins også skriftsystemer som skriver nedenfra og opp, slik som de som tidligere ble brukt på Filippinene og andre stillehavsøyer.
+
+
+== Se også ==
+Stenografi
+Kalligrafi
+Kinesisk kalligrafi
+Ortografi
+Translitterering
+ISO 15924 – "codes for the representation of names of scripts"
+Grafem
+Glyf
+Tegn (informatikk)
+SkrifttypeI datamaskiner og telekommunikasjonssystemer er glyfer (grafemer og tilsvarende symboler som trengs for tekstreprosessering representert av tegn, der hvert tegn er et par som består av en glyf og et unikt tall, et sett av slike par innenfor et tallområde fra 0 og oppover (typisk til en potens av 2, f.eks. 27 (128), 28 (256) eller 216 (65536)) danner en tegnsettabell. Tekniske aspekter ved datateknisk håndtering av ulike skriftsystemer er tatt opp under håndteringen av Unicode.
+
+
+== Referanser ==
+
+
+== Litteratur ==
+Daniels, Peter T., og William Bright, eds. 1996. The world's writing systems. ISBN 0-19-507993-0.
+DeFrancis, John. 1990. The Chinese Language: Fact og Fantasy.  Honolulu: University of Hawaii Press. ISBN 0-8248-1068-6
+Hannas, William. C. 1997. Asia's Orthografic Dilemma. University of Hawaii Press. ISBN 0-8248-1892-X (paperback); ISBN 0-8248-1842-3 (hardcover)
+Sampson, Geoffrey. 1985. Writing Systems. Stanford, California: Stanford University Press. ISBN 0-8047-1756-7 (paper), ISBN 0-8047-1254-9 (cloth).
+Smalley, W.A. (ed.) 1964. Orthografy studies: articles on new writing systems, United Bible Society, London.
+
+
+== Eksterne lenker ==
+Omfattende tyske sider om gamle skriftsystemer og -typer fra hele verden, også nedlastbare fonter
+Digital bokkopi av Einar Egelands Skrift (Yrkesopplæring, 1995)
+Digital bokkopi av Stein Davidsens Grafisk håndbok (Yrkesopplæring, 1995)
+Generelt om skriftsystemer
+African Writing Systems
+Alfabetic Writing Systems
+Michael Eversons Alfabets of Europe
+The Unicode Consortium
+A Typografic Outcry
+Gamle håndskrifter

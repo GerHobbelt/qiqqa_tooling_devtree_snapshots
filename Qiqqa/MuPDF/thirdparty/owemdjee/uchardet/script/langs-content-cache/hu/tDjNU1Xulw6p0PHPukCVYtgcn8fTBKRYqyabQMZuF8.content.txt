@@ -1,0 +1,97 @@
+revision: 25798018
+title: "Iszl\xE1m napt\xE1r"
+url: https://hu.wikipedia.org/wiki/Muszlim_napt%C3%A1r
+
+
+---
+
+Az iszlám naptár a Hold járásán alapuló éveket használó holdnaptár, melynek kezdőnapja: 622. július 16. Ez az iszlám időszámítás kezdete, azaz 1. év Muharram hónap 1-je. Az iszlám időszámítás a hidzsráról kapta a nevét, amelynek jelentése: Mohamed próféta kivándorlása, áttelepülése, (helytelenül "futása") Mekkából Medinába. Ez a kivándorlás valójában nem július 16-án, hanem több mint két hónappal később, szeptember 23-án történt. I. Omár kalifa nevéhez fűződik ennek a naptárnak az utólagos bevezetése, aki nem a kivándorlás időpontját (Rabí al-Avvel 12-ét - szeptember 23-át) tette meg a naptár kezdetének, hanem az arabok addig használt naptári évének első napját, azaz Muharram elsejét (július 16.).
+Problémát jelent a holdnaptárat összhangba hozni az évszakok által meghatározott évvel. Az iszlám naptár ezt nem veszi figyelembe, hanem attól „függetlenül” jár. Egy iszlám évben 12 hónap és 354 nap van, így az év kezdete folyamatosan vándorol visszafelé. 1994-ben az iszlám újév június 11-re esett, 2004-ben február 22-re.
+A naptár a Korán előírásain alapul, az abban foglalt előírások betartása szent kötelesség minden muszlim számára. Hivatalos naptárként használják a Perzsa-öböl országaiban, különösen Szaúd-Arábiában. Más iszlám országok a Gergely-naptárt használják a polgári életben, az iszlám naptárak csak a vallási életben használatosak.
+
+
+== Felosztása ==
+Az iszlám év 12 holdhónapból, pontosabban 354,36 napból áll.
+A hónapok felváltva 29 és 30 naposak. Az éveket 30 éves ciklusokba sorolják. E ciklusokban 19 normál év (354 napos) található. 11 év – úgymint a 2., 5., 7., 10., 13., 16., 18., 21., 24., 26. és 29. – 355 napos. Ez esetben a hónapok kiosztása abban különbözik, hogy az utolsó hónap is 30 napból áll. A naptár pontossága 29,530556 (a szinódikus holdhónap 29,530589), ami körülbelül 2500 iszlám évenként tesz ki egy nap eltérést.
+Mivel egy holdév 10-11 nappal rövidebb egy napévnél, a különbség idővel jelentősen megnő: mialatt 100 ilyen holdév telik el, addig csupán 97 napév – erre az átszámításoknál vigyázni kell. Továbbá emiatt a muszlim ünnepek a napévhez viszonyítva vándorolnak, és nincsenek évszakhoz kötve.
+A Magyarországon is használt időszámításnak körülbelül megfelelő iszlám évet úgy kapjuk meg, hogy az évszámból kivonunk 622-t, majd hozzáadjuk a különbség 1/32-ét. Ahhoz, hogy az iszlám naptár utolérje a Gergely-naptár dátumát, sok évnek kell eltelnie. A Gergely-naptár 20874. ötödik hónapjának első napján lesz megközelítőleg egyenlő az iszlám naptár szerinti 20874. ötödik hónapjának első napjával.
+A hónapok az újhold megjelenésekor kezdődnek. Az újhold kezdete függ az időjárástól, a látási viszonyoktól és a megfigyelő helyétől. E tényezők miatt az új hónap kezdetének előre meghatározása nem könnyű feladat.
+Néhány iszlám közösség a Hold látható megjelenése, mások a vallási hatóságok által kiadott tájékoztatás alapján döntenek az új hónap kezdetéről. Mindkettő elfogadott gyakorlat az iszlámban, de emiatt a hónap kezdőnapja nem egységes.
+Ezek alapján nem lehet minden hívő számára megbízható naptárt készíteni előre. Készítenek ilyen naptárakat, de ezeket csupán tervezési céllal. A naptárakban az újhold megjelenésének becsült dátuma található, és a tényleges hónap a fentebb leírtak alapján egy nappal később vagy korábban is kezdődhet a naptárban levő napnál. Az Öböl-államokban, és különösen Szaúd-Arábiában emiatt az Umm al-Qura naptárat használják (ez az újhold feltűnésének precíz megfigyelésén alapul, amit Rijádban végeznek). Ennek következménye, hogy a szent napok eszerint néhány nappal korábban kezdődnek, mint más muszlim országokban. Ennek feloldására néhány prominens muszlim kormányzat 1419 AH (i.sz. 1998–1999) óta az Umm al-Qura egy korszerűsített módszerét alkalmazza a szent napok meghatározására.
+Az iszlám naptár szerinti hét a zsidó hagyományokból ered.
+Az iszlám naptár szerinti hét napjai:
+
+jaum al-ahad („az első nap”) - hagyományosan ez vasárnapnak felel meg
+jaum al-ithnajn („második nap”)
+jaum ath-thulaathaa’ („harmadik nap”)
+jaum al-arbia’aa’ („negyedik nap”)
+jaum al-khamisz („ötödik nap”)
+jaum-al-dzsumu’a („az összegyűlés napja”)
+jaum asz-szabt - szombatJaum-al-dzsumu’a napján (pénteken) délben a muszlimok összegyűlnek a mecsetekben és istentiszteleten vesznek részt.
+
+
+=== Az iszlám naptár éveinek átszámítási képlete ===
+
+  
+    
+      
+        C
+        ≈
+        
+          
+            
+              32
+              H
+            
+            33
+          
+        
+        +
+        622
+      
+    
+     
+  
+
+  
+    
+      
+        H
+        ≈
+        
+          
+            
+              33
+              (
+              C
+              −
+              622
+              )
+            
+            32
+          
+        
+      
+    
+     
+  
+C (Gergely-naptár), H (Iszlám naptár)
+
+
+== Az iszlám naptár hónapjai ==
+Muharram al-Haram (röviden Muharram) - محرّم
+Szafar - صفر
+Rabí al-Avval (Rabí I) - ربيع الأول
+Rabí al-Áhir vagy Rabí asz-Szání (Rabí II) - ربيع الآخر أو ربيع الثاني
+Dzsumáda l-úla (Dzsumáda I) - جمادى الأول
+Dzsumáda l-Áhir vagy Dzsumáda sz-Szání (Dzsumáda II) - جمادى الآخر أو جمادى الثاني
+Radzsab - رجب
+Saabán - شعبان
+Ramadán - رمضان
+Savvál - شوّال
+Dzú l-Kaada - ذو القعدة
+Dzú l-Hiddzsat - ذو الحجة
+
+
+== Források ==
+H. James Birx (szerk.): Encyclopedia of time : science, philosophy, theology, and culture, 2009, SAGE Publications, Inc., ISBN 978-1-4129-4164-8, p. 131-132

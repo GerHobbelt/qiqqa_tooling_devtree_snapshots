@@ -1,0 +1,38 @@
+revision: 32008084
+title: Amazon Alexa
+url: https://ca.wikipedia.org/wiki/Amazon_Alexa
+
+
+---
+
+Alexa és un assistent virtual desenvolupat per Amazon, utilitzat per primera vegada en els altaveus intel·ligents, Amazon Echo i Amazon Echo Dot creats per Amazon Lab126. Té la capacitat d'interactuar a través de la veu, reproduir música, crear llistes de tasques pendents, establir alarmes, reproduir podcasts, reproduir audiollibres i proveir informació en temps real del clima, tràfic i notícies entre d'altres.
+
+
+== Descripció ==
+Alexa pot també controlar diversos dispositius intel·ligents prenent el paper de sistema d'automatització de la llar (domòtica). Els usuaris poden estendre les habilitats d'Alexa instal·lant "skills" (funcionalitats addicionals desenvolupades per tercers) que s'assemblen a "apps".La majoria dels dispositius que incorporen Alexa permeten als usuaris activar el sistema servir un paraula d'activació (com ara Alexa o Echo); altres dispositius (com l'app d'Amazon Alexa per Android i iOS) requereixen que l'usuari premi un botó en pantalla per activar el mode d'escolta d'Alexa. Actualment la interacció i comunicació verbal d'Alexa només està disponible en Anglès, Alemany i Japonès però es preveu un llançament imminent en altres llenguatges com ara l'italià i el castellà.El Setembre de 2017, Amazon comptava amb més de 5.000 empleats treballant en Alexa i altres productes relacionats, constituint un focus molt important de l'estratègia de nous productes de l'empresa.
+
+
+== Història ==
+El novembre del 2014, Amazon anuncià Alexa juntament amb Echo. Alexa fou inspirada per la veu de l'ordinador i el sistema de conversació a bord del Starship Enterprise en sèries de televisió i pel·lícules de ciència-ficció, començant amb Star Trek: the original series i Star Trek: the next generation.El nom d'Alexa fou escollit perquè la X és una consonant complicada i, per tant, podria ser reconeguda amb més precisió. El nom també es diu que recorda a la Biblioteca d'Alexandria, que també és utilitzada per Amazon Alexa Internet per la mateixa raó. El juny del 2015, Amazon anuncià Alexa Fund, un programa que invertiria en companyies que fabriquen habilitats i tecnologies de control de veu. Els 100 milions de dòlars en fons han invertit en companyies incloent Ecobee, Orange Chef, Scout Alarm, Garageio, Toymail, MARA i Mojio. En el 2016, el Premi Alexa fou anunciat per avançar la tecnologia.
+El gener del 2017 va tenir lloc la primera conferència d'Alexa en Nashville, Tennessee, una reunió independent de la comunitat mundial dels creadors i fanàtics d'Alexa. El seguiment fou anunciat, per ser presentat pel productor original d'Amazon Alexa/ Connected Home, Ahmed Bouzid.
+En maig del 2018, Amazon anuncià que Alexa estarà inclosa en totes les 35.000 noves cases de Lennar Corporation construïdes aquest any.
+
+
+== Aplicació ==
+Una aplicació complementaria està disponible en la Apple App Store, Google Play i Amazon Appstore. L'aplicació pot ser utilitzada pels propietaris dels dispositius activats d'Alexa per instal·lar habilitats, controlar música, administrar alarmes i veure llistes de la compra. A més, permet als usuaris revisar el text que apareix en la pantalla de l'aplicació i enviar una crítica a Amazon respecte a si el reconeixement és bo o dolent. També està disponible una interfície web per configurar dispositius compatibles (per exemple, Amazon Echo, Amazon Dot, Amazon Echo Show...).
+
+
+== Alexa Voice Service ==
+Amazon permet als fabricants de dispositius integrar les capacitats de veu d'Alexa en els seus propis productes connectats utilitzant l'Alexa Voice Service (AVS), un servei del núvol que proporciona que APIs interactuï amb Alexa. Els productes fabricats utilitzant AVS tenen accés a la llista en desenvolupament de les capacitats d'Alexa, incloent totes les “Alexa Skills” (les seves habilitats). AVS proporciona un servei de reconeixement de veu basat en el núvol (Cloud-based Automatic Speech Recognition) (ASR) i un llenguatge natural comprensiu (NLU). No hi ha tarifes per les companyies que estan mirant d'integrar Alexa en els seus productes utilitzant AVS.La veu de Amazon Alexa és generada per una llarga xarxa de memòria neuronal i artificial a curt termini.
+
+
+== Referències ==
+
+
+== Vegeu també ==
+Microsoft Cortana
+
+
+== Enllaços externs ==
+Amazon Alexa - Lloc web oficial
+Amazon Echo Video Presentation

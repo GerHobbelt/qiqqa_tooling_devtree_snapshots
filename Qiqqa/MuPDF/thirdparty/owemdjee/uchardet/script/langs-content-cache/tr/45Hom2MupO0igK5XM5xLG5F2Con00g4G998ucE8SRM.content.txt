@@ -1,0 +1,16 @@
+revision: 29740304
+title: Newton (platform)
+url: https://tr.wikipedia.org/wiki/Newton_OS
+
+
+---
+
+Newton OS Apple'ın Apple Newton isimli PDA'sı için geliştirdiği işletim sistemidir. Newton OS, Apple dışında Motorola, Sharp, Harris ve Digital Ocean gibi başka firmalar tarafından da kullanılmıştır, PDA ve Subnotebook'larda kullnılan bu işletim sistemi 1998 yılı itibariyle geliştirilmesi durdurulmuştur.
+Newton OS'un el yazısı tanıma sistemi eleştirmenler tarafından yerden yere vurulmuş bu da cihazların başarısını etkilemiştir.
+Newton OS zamanında Macintosh işletim sisteminde bile bulunmayan bazı küçük detayları barındırmaktaydı.
+Newton OS için C++ ve Newton Script ile yazılım geliştirilebiliyordu.
+Günümüzde Newton OS, Einstein isimli bir emülatör sayesinde macOS, Linux ve Windows üzerinde çalıştırılmaktadır.
+
+
+== Newton OS sürümleri ==
+Aşağıda Newton OS sürümleri ve onları kullanan cihazlar belirtilmiştir.

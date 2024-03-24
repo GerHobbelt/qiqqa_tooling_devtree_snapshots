@@ -1,0 +1,53 @@
+revision: 1121766
+title: transistor
+url: https://ga.wikipedia.org/wiki/Innealt%C3%B3ireacht_r%C3%ADomhaireachta
+
+
+---
+
+Is brainse innealtóireachta é innealtóireacht ríomhaireachta (CoE nó CpE) a chomhtháthaíonn réimsí éagsúla eolaíochta ríomhaireachta agus innealtóireachta leictreonaí atá riachtanach chun crua-earraí agus bogearraí ríomhaireachta a fhorbairt. [1] De ghnáth bíonn oiliúint ag innealtóirí ríomhaireachta in innealtóireacht leictreonach (nó innealtóireacht leictreach), dearadh bogearraí, agus comhtháthú bogearraí crua-earraí seachas innealtóireacht bhogearraí nó innealtóireacht leictreonach amháin. Tá baint ag innealtóirí ríomhaireachta le go leor gnéithe crua-earraí agus bogearraí den ríomhaireacht, ó dhearadh micrea-rialaitheoirí aonair, micreaphróiseálaithe, ríomhairí pearsanta, agus sár-ríomhairí, go dearadh ciorcad. Ní amháin go ndíríonn an réimse innealtóireachta seo ar an gcaoi a n-oibríonn córais ríomhaireachta iad féin ach freisin ar an gcaoi a gcomhtháthaíonn siad leis an bpictiúr níos mó. [2]
+I measc na ngnáthchúraimí a bhaineann le hinnealtóirí ríomhaireachta tá bogearraí scríbhneoireachta agus firmware do mhicrea-rialaitheoirí leabaithe, sceallóga VLSI a dhearadh, braiteoirí analógacha a dhearadh, cláir chiorcad comhartha measctha a dhearadh, agus córais oibriúcháin a dhearadh. Tá innealtóirí ríomhaireachta oiriúnach freisin do thaighde róbataic, a bhraitheann go mór ar chórais dhigiteacha a úsáid chun córais leictreacha cosúil le mótair, cumarsáid agus braiteoirí a rialú agus monatóireacht a dhéanamh orthu.
+In a lán institiúidí ardfhoghlama, tá cead ag mic léinn innealtóireachta ríomhaireachta réimsí staidéir dhomhain a roghnú ina mbliain shóisearach agus shinsearach toisc go bhfuil fairsinge iomlán an eolais a úsáidtear i ndearadh agus i bhfeidhm ríomhairí lasmuigh de scóip na céime fochéime. Féadfaidh institiúidí eile a cheangal ar mhic léinn innealtóireachta bliain nó dhó d’innealtóireacht ghinearálta a dhéanamh sula ndearbhaíonn siad innealtóireacht ríomhaire mar a bpríomhfhócas. [3] [4] [5] [6]
+
+
+= Stair =
+Thosaigh innealtóireacht ríomhaireachta i 1939 nuair a thosaigh John Vincent Atanasoff agus Clifford Berry ag forbairt an chéad ríomhaire digiteach leictreonach ar domhan trí fhisic, matamaitic agus innealtóireacht leictreach. Bhí John Vincent Atanasoff ina mhúinteoir fisice agus matamaitice d’Ollscoil Stáit Iowa agus Clifford Berry iarchéimí faoi innealtóireacht leictreach agus fisic. Le chéile, chruthaigh siad an ríomhaire Atanasoff-Berry, ar a dtugtar an ABC freisin a thóg 5 bliana le críochnú. [7] Cé gur díchóimeáladh agus gur caitheadh ​​an ABC bunaidh sna 1940idí tugadh ómós do na hailtirí déanacha, rinneadh macasamhail den ABC i 1997 áit ar thóg sé ceithre bliana agus $ 350,000 d’fhoireann taighdeoirí agus innealtóirí. [8]
+Tháinig an ríomhaire pearsanta nua-aimseartha chun cinn sna 1970idí, tar éis roinnt dul chun cinn i dteicneolaíocht leathsheoltóra. Ina measc seo tá an chéad trasraitheoir oibre le William Shockley, John Bardeen agus Walter Brattain ag Bell Labs i 1947, [9] an próiseas pasaithe dromchla sileacain (trí ocsaídiú teirmeach) le Mohamed Atalla ag Bell Labs i 1957, [10] [11] [ 12] an sliseanna ciorcad comhtháite monolithic le Robert Noyce ag Fairchild Semiconductor i 1959, [13] an trasraitheoir éifeacht páirce-leathsheoltóra miotail-ocsaíd-leathsheoltóra (MOSFET, nó trasraitheoir MOS) le Mohamed Atalla agus Dawon Kahng ag Bell Labs i 1959, [14 ] [15] [16] agus an micreaphróiseálaí aon-sliseanna (Intel 4004) le Federico Faggin, Marcian Hoff, Masatoshi Shima agus Stanley Mazor ag Intel i 1971. [17]
+
+
+=== Stair an oideachais innealtóireachta ríomhaireachta ===
+Bunaíodh an chéad chlár céime innealtóireachta ríomhaireachta sna Stáit Aontaithe i 1971 ag Case Western Reserve University i Cleveland, Ohio. [18] Amhail 2015, bhí 250 clár innealtóireachta ríomhaireachta creidiúnaithe ag ABET sna Stáit Aontaithe [19] San Eoraip, déanann gníomhaireachtaí éagsúla atá mar chuid de líonra EQANIE creidiúnú scoileanna innealtóireachta ríomhaireachta. Mar gheall ar riachtanais mhéadaitheacha poist d’innealtóirí ar féidir leo crua-earraí, bogearraí, firmware a dhearadh i gcomhthráth, agus gach cineál córais ríomhaireachta a úsáidtear i dtionscal a bhainistiú, tairgeann roinnt institiúidí treasach ar fud an domhain céim bhaitsiléara ar a dtugtar innealtóireacht ríomhaire de ghnáth. Cuimsíonn cláir innealtóireachta ríomhaireachta agus innealtóireachta leictreonaí dearadh ciorcad analógach agus digiteach ina gcuraclam. Mar is amhlaidh le mórchuid na ndisciplíní innealtóireachta, tá gá le heolas fónta ar mhatamaitic agus ar eolaíocht d’innealtóirí ríomhaireachta.
+
+
+= Oideachas =
+Tugtar innealtóireacht ríomhaireachta mar eolaíocht ríomhaireachta agus innealtóireacht i roinnt ollscoileanna. Éilíonn an chuid is mó de na poist innealtóireachta ríomhaireachta leibhéal iontrála céim bhaitsiléara ar a laghad in innealtóireacht ríomhaireachta (nó eolaíocht ríomhaireachta agus innealtóireacht). De ghnáth ní mór sraith matamaitice a fhoghlaim mar chalcalas, ailgéabar agus triantánacht agus roinnt ranganna eolaíochta ríomhaireachta. [Lua ag teastáil] Uaireanta glactar le céim san innealtóireacht leictreonach, mar gheall ar chosúlacht an dá réimse. Toisc go n-oibríonn innealtóirí crua-earraí go hiondúil le córais bhogearraí ríomhaireachta, tá cúlra láidir i ríomhchlárú riachtanach. De réir BLS, "tá mór-innealtóireacht ríomhaireachta cosúil le hinnealtóireacht leictreach ach le roinnt cúrsaí eolaíochta ríomhaireachta curtha leis an gcuraclam". [20] Teastaíonn céim mháistir i roinnt gnólachtaí móra nó post speisialaithe.
+Tá sé tábhachtach freisin d’innealtóirí ríomhaireachta coinneáil suas le dul chun cinn gasta sa teicneolaíocht. Dá bhrí sin, leanann go leor acu ag foghlaim ar feadh a ngairmeacha beatha. D’fhéadfadh sé seo a bheith cabhrach, go háirithe maidir le scileanna nua a fhoghlaim nó na scileanna atá ann cheana a fheabhsú. Mar shampla, de réir mar a mhéadaíonn an costas coibhneasta a bhaineann le fabht a shocrú níos faide anonn sa timthriall forbartha bogearraí, féadtar coigilteas costais níos mó a chur i leith cód cáilíochta a fhorbairt agus a thástáil a luaithe is féidir sa phróiseas, agus go háirithe sula scaoiltear é. [21]
+
+
+= Gairm: Innealtóir ríomhaireachta =
+Tugtar innealtóir ríomhaire ar dhuine a bhfuil gairm aige san innealtóireacht ríomhaireachta. [22]
+
+
+= Tagairtí =
+IEEE Computer Society; ACM (December 12, 2004). Computer Engineering 2004: Curriculum Guidelines for Undergraduate Degree Programs in Computer Engineering (PDF). p. iii. Retrieved December 17, 2012. Computer System engineering has traditionally been viewed as a combination of both electronic engineering (EE) and computer science (CS).
+, "Computer engineers need not only to understand how computer systems themselves work but also how they integrate into the larger picture. Consider the car. A modern car contains many separate computer systems for controlling such things as the engine timing, the brakes, and the airbags. To be able to design and implement such a car, the computer engineer needs a broad theoretical understanding of all these various subsystems & how they interact.
+"Changing Majors @ Clemson". Clemson University. Retrieved September 20, 2011.
+"Declaring a College of Engineering Major". University of Arkansas. Archived from the original on October 12, 2014. Retrieved September 20, 2011.
+"Degree Requirements". Carnegie Mellon University. Retrieved September 20, 2011.
+"Programas de Materias" (in Spanish). Universidad Católica Argentina.
+"John Vincent Atanasoff - the father of the computer". www.columbia.edu. Retrieved December 5, 2017.
+"Iowa State replica of first electronic digital computer going to Computer History Museum - News Service - Iowa State University". www.news.iastate.edu. Retrieved December 5,2017.
+"1947: Invention of the Point-Contact Transistor". The Silicon Engine. Computer History Museum. Retrieved October 9, 2019.
+Lojek, Bo (2007). History of Semiconductor Engineering. Springer Science & Business Media. pp. 120 & 321–323. ISBN 9783540342588.
+Bassett, Ross Knox (2007). To the Digital Age: Research Labs, Start-up Companies, and the Rise of MOS Technology. Johns Hopkins University Press. p. 46. ISBN 9780801886393.
+Sah, Chih-Tang (October 1988). "Evolution of the MOS transistor-from conception to VLSI" (PDF). Proceedings of the IEEE. 76 (10): 1280–1326 (1290). Bibcode:1988IEEEP..76.1280S. doi:10.1109/5.16328. ISSN 0018-9219. Those of us active in silicon material and device research during 1956–1960 considered this successful effort by the Bell Labs group led by Atalla to stabilize the silicon surface the most important and significant technology advance, which blazed the trail that led to silicon integrated circuit technology developments in the second phase and volume production in the third phase.
+Saxena, Arjun N. (2009). Invention of Integrated Circuits: Untold Important Facts. World Scientific. p. 140. ISBN 9789812814456.
+"1960 - Metal Oxide Semiconductor (MOS) Transistor Demonstrated". The Silicon Engine. Computer History Museum.
+"Who Invented the Transistor?". Computer History Museum. December 4, 2013. Retrieved July 20, 2019.
+"Triumph of the MOS Transistor". YouTube. Computer History Museum. August 6, 2010. Retrieved July 21, 2019.
+"1971: Microprocessor Integrates CPU Function onto a Single Chip". Computer History Museum. Retrieved July 22, 2019.
+"History". engineering.case.edu. Case School of Engineering. January 5, 2017.
+"Find an ABET-Accredited Program | ABET". main.abet.org. Retrieved November 29, 2015.
+"Computer Hardware Engineers". Bureau of Labor Statistics. January 8, 2014. Retrieved July 20, 2012.
+"Feabhas_Infographic_FINAL" (PDF). feabhas. Feabhas.
+https://aduk.de/

@@ -1,0 +1,181 @@
+revision: 7558486
+title: Virus
+url: https://sk.wikipedia.org/wiki/V%C3%ADrus
+
+
+---
+
+Vírus je častica, ktorá preniká do živých buniek a ich materiál používa na svoje rozmnožovanie, a ktorá (v základnej podobe) pozostáva z nukleovej kyseliny (DNA alebo RNA), zabalenej do bielkovinovej schránky (tzv. kapsida) niekedy navyše obalenej lipidovo-bielkovinovým obalom (tzv. lipoidový obal). Vírusy sú obligátne vnútrobunkové parazity; to znamená, že sa môžu rozmnožovať iba vo vnútri živej bunky, pretože nemajú vlastný proteosyntetický aparát. 
+Je sporné, či vírusy možno považovať za organizmy v pravom slova zmysle a či ich možno považovať za živé (porovnaj život). Veda o vírusoch sa nazýva virológia.
+
+
+== Terminológia ==
+Z taxonomického hľadiska rozlišujeme:
+
+vírusy (staršie [pokiaľ nezahŕňali rickettsie, bartonely, chlamýdie a mykoplazmy] nazývané aj vlastné vírusy) ako taxón, t.j. presnejšie:
+a) vírusy v užšom zmysle (lat. Vira, Viruses, Virales, Virus [sic!] , Vireae, Viralia, Virophyta, Viriphyta, Virobionta, Virusida, Euviria, Archetista, Archaeophyta): Toto je veľký taxón (obyčajne s postavením doména či domínium) patriaci do nebunkovcov (=nebunkových "organizmov"; lat. Acellulata, Subcellulata, Acytotа, Aphanobionta, Acellularia, Acellularae, Akamara, Protobiota). Zahŕňa organizmy obsahujúce nukleovú kyselinu a (minimálne aj) svoju vlastnú (čiže nie odinakadiaľ prevzatú) kapsidu (=bielkovinový obal), a podľa niektorých definícií zahŕňa aj podobné organizmy, ktoré sa dokázateľne z nich vyvinuli (tieto sú často bez kapsidy, je to napr. časť tzv. satelitov).
+b) vírusy v širšom zmysle: Toto sú vírusy v užšom zmysle plus všetky ostatné nebunkovce alebo aspoň väčšina ostatných nebunkovcov. V minulosti sa do pojmu vírusy v širšom zmysle (slovenské synonymum potom už nie je "vlastné vírusy") často zahŕňali okrem spomínaných ostatných nebunkovcov aj rickettsie v širšom zmysle (t.j. rickettsie v užšom zmysle, bartonely a chlamýdie) a niekedy aj mykoplazmy (starší názov: PPLO organizmy). Dnes rickettsie, bartonely, chlamýdie a mykoplazmy považujeme za podskupiny baktérií. Vírusy v širšom zmysle nie sú predmetom tohto článku.
+vírus ako jedna z taxonomických úrovní v rámci vírusov z predchádzajúcej odrážky, ktorá nasleduje bezprostredne pod úrovňou druh (lat. species) a prípadne sa ďalej delí na kmene (angl. strains) a/alebo izoláty a/alebo varianty; zjednodušene sa dá povedať, že vírusom sa tu myslí vírusový jedinecK vyššie spomínaným nebunkovcom treba poznamenať, že tvoria spolu s bunkovcami (=bunkové organizmy; lat. Cellulata; t.j. baktérie, archeóny a eukaryoty) taxón nazývaný Biota (=Vitae; t.j. súhrn všetkých organizmov na Zemi). 
+Niektorí autori obmedzujú výraz vírus len na vírusy napádajúce eukaryotické bunky, zatiaľ čo vírusy infikujúce baktérie a archeóny označujú ako bakteriofágy alebo len fágy; to znamená, že namiesto vírusov hovoria o "vírusoch a bakteriofágoch" . V minulosti sa bakteriofágy dokonca niekedy považovali za organizmy povahou aj zložením úplne odlišné od vírusov. Dnes vo veľkej väčšine textov bakteriofágy považujeme (terminologicky aj vecne) za podskupinu vírusov. Zatiaľ čo v minulosti boli známe len vírusy napádajúce eukaryoty, baktérie a archeóny, v roku 2008 bol objavený prvý vírus, ktorý napáda iné vírusy; dostal všeobecné označenie virofág.Na označenie jedinej zrelej vírusovej častice sa používa názov virión. Virión je teda vírus v tej podobe, v akej je, keď sa nachádza mimo bunky (tzv. extracelulárna forma vírusu).
+
+
+== Zloženie ==
+Vírusy (virióny) sa typicky skladajú z týchto častí:
+
+nukleokapsida (iný názov: nukleokapsid):
+nukleová kyselina (DNA alebo RNA) - obsahuje genetickú informáciu
+kapsida (iné názvy: kapsid, bielkovinový obal; v niektorých prípadoch aj: hlavička) - bielkovinový obal, v ktorom je uložená vyššie uvedená nukleová kyselina; je zložený z tzv. kapsomér; niektoré vírusy majú vnútri kapsidy aj jeden alebo niekoľko enzýmov, ktoré sa používajú na spustenie reprodukcie vírusu v napadnutej bunke
+lipoidový obal (iné názvy: lipoidový plášť, membránový obal, vírusový obal) - ide o ďalšiu obalovú vrstvu, táto je zložená z lipidov a bielkovín (väčšinou glykoproteínov); vyskytuje sa len na niektorých vírusoch (napr. na koronavírusoch alebo na vírusoch chrípky); vzniká buď tak, že vírus pri opúšťaní napadnutej bunky strhne so sebou aj časť (vírusom predtým upravenej) cytoplazmatickej membrány tejto napadnutej bunky a obalí sa ňou, alebo tak, že sa vírus obalí (vírusom predtým upravenou) membránou nejakej bunkovej organely
+niektoré vírusy (najmä bakteriofágy) majú aj ďalšie funkčné proteínové súčasti, ako sú rôzne stopky, doštičky, tŕne, nožičky a pod.
+
+
+== Tvar ==
+Telo vírusu môže mať viacero tvarov, medzi najznámejšie patria skrutkovitý tvar (helikálny), bičíkatý tvar (komplexný) alebo 20-sten (ikozaedrálny).
+
+
+== Druhy ==
+
+
+=== Podľa hostiteľa ===
+vírus:
+
+virofág - napáda vírusy
+prokaryotický vírus (=bakteriofág [=fág alebo bakteriálny vírus ] v širšom zmysle):
+bakteriofág (=fág, bakteriálny vírus) v užšom zmysle:
+bakteriofág (= fág, bakteriálny vírus) v najužšom zmysle  - napáda baktérie okrem siníc
+vírus archeónov - napáda archeóny
+vírus siníc (=cyanofág) - napáda sinice
+eukaryotický vírus:
+rastlinný vírus (=fytovírus) v širšom zmysle:
+rastlinný vírus (=fytovírus) v užšom zmysle:
+vírus rias - napáda riasy
+rastlinný vírus (=fytovírus) v najužšom zmysle - napáda vyššie rastliny
+vírus húb (=mykovírus) - napáda huby
+živočíšny vírus (=zoovírus) v širšom zmysle:
+vírus prvokov - napáda prvoky
+živočíšny vírus (=zoovírus) v užšom zmysle:
+živočíšny vírus (=zoovírus) v najužšom zmysle - napáda mnohobunkové živočíchy
+vírus bezstavovcov
+vírus stavovcov
+vírus človeka (=ľudský vírus, humánny vírus) - napáda ľudí
+
+
+=== Podľa typu nukleovej kyseliny ===
+vírus:
+
+RNA-vírus - t.j. vírus obsahuje RNA
+DNA-vírus - t.j. vírus obsahuje DNA
+
+
+=== Podľa prítomnosti lipoidového obalu ===
+vírus:
+
+neobalený vírus (=nahý vírus) - nemá lipoidový obal
+obalený vírus - má lipoidový obal
+
+
+=== Podľa spôsobu prenosu ===
+vírus:
+
+enterálny vírus - je prenášaný fekálno-orálnou cestou
+respiračný vírus- je prenášaný kvapôčkovou infekciou
+arbovírus - je prenášaný hmyzom
+
+
+== Životný cyklus vírusu ==
+
+
+=== Lytický cyklus ===
+Ako lytický cyklus sa označuje taký životný cyklus vírusu, pri ktorom nastáva deštrukcia (lýza) hostiteľskej bunky. Je charakteristický najmä pre bakteriofágy. Cyklus modelových bakteriofágov (fág λ, T4 alebo T7) trvá 20-40 minút.
+
+
+==== Pokojová fáza ====
+Vírus prežíva mimo hostiteľskej bunky v podobe kompletného viriónu.
+
+
+==== Infekcia ====
+Adsorpcia. Prichytenie vírusovej častice (viriónu) na povrch bunky. Daná bunka musí byť citlivá na daný vírus - musí mať na povrchu charakteristické štruktúry (ligandy), na základe ktorých ju virión rozpozná ako vhodného hostiteľa.
+Penetrácia. Prienik nukleovej kyseliny do vnútra bunky. V prípade lytického cyklu preniká do bunky celý virión - v prípade rastlinných, živočíšnych viriónov, a to pinocytózou. Obal vírusu sa následne degraduje v cytoplazme.
+Eklipsa. Doslova zatmenie. Je to fáza, v ktorej nie sú vo vnútri bunky viditeľné žiadne infekčné vírusové častice, takže nie je možné svetelným alebo elektrónovým mikroskopom rozoznať, že je bunka infikovaná. Počas eklipsy prebiehajú biosyntetické procesy. Fág využíva nukleosyntetický a proteosyntetický aparát hostiteľskej bunky na syntézu vlastných enzýmov, štruktúrnych proteínov a na replikáciu vírusovej nukleovej kyseliny. Začne sa transkripcia génov z DNA vírusu.
+Maturácia. Dozrievanie, zostavovanie kompletných nových viriónov.
+
+
+==== Uvoľnenie ====
+Celý proces končí lýzou (zánikom) bunky a uvoľnením nových viriónov do prostredia, kde infikujú ďalšie bunky a proces sa opakuje. Bunku a jej štruktúry degraduje vírusový enzým lyzozým.
+
+
+=== Lyzogénny cyklus ===
+Ako lyzogénny cyklus sa označuje taký životný cyklus vírusu, pri ktorom nenastáva obligátna deštrukcia (lýza) hostiteľskej bunky. Má sa za to, že je evolučne mladšou formou vírusového životného cyklu, kedy sa vírusy „naučili“ nezabíjať svojho hostiteľa. Fágy, ktoré sa môžu rozmnožovať buď lytickým alebo lyzogénnym cyklom, sa nazývajú lyzogénne fágy alebo temperované fágy.
+
+
+==== Latentná fáza ====
+Po penetrácii prebieha eklipsa lyzogénneho cyklu trochu odlišným spôsobom - spustí sa transkripcia DNA vírusu, ale ako prvé vznikajú represorové proteíny, ktoré zastavia ďalšiu transkripciu vírusovej DNA. Procesom rekombinácie sa vírusová DNA začlení do genetického materiálu bunky a stáva sa jeho súčasťou. Eklipsa sa zastavuje a cyklus vstupuje do latentnej fázy.
+
+
+==== Provírus ====
+Vírus začlenený do DNA hostiteľskej bunky sa nazýva provírus, alebo perzistentný vírus. Keď sa hostiteľská bunka rozmnožuje, kopíruje spolu s vlastným genetickým materiálom aj provírus a odovzdáva ho dcérskym bunkám. Vírus sa tak de facto rozmnožuje bez toho, aby zabil hostiteľskú bunku.
+
+
+==== Aktivácia ====
+U provírusov môže dôjsť k spontánnej reaktivácii a k derepresii transkripcie štruktúrnych génov. Latentná fáza sa preruší, dokončí sa eklipsa a dochádza k maturácii viriónov. Provírus vstupuje do lytického cyklu a po deštrukcii hostiteľskej bunky sa uvoľňujú infekčné vírusové častice.
+
+
+==== Začlenenie vírusu do genómu bunky ====
+Dvojvláknový DNA vírus: Dochádza k priamemu včleneniu genetickej informácie vírusu do genómu hostiteľskej bunky.
+Jednovláknový DNA vírus: Vírus si dosyntetizuje druhé vlákno DNA a následne začlení svoju genetickú informáciu do genómu bunky.
+Retrovírus: Špecifická skupina RNA vírusov obsahuje gén, ktorý kóduje enzým reverzná transkriptáza (RNA-závislá DNA polymeráza). Reverzná transkriptáza dokáže prepísať RNA vírusu do DNA, ktorá sa začlení do genómu bunky.
+
+
+== Ochrana proti vírusom ==
+
+
+=== Prokaryoty ===
+Baktérie môžu byť rezistentné voči vírusom vďaka mutácii, ktorá blokuje jeden z krokov vírusového cyklu. Veľmi často je to mutácia v nejakom proteíne bunkovej steny, takže vírus „nerozozná“ svojho hostiteľa a nedochádza k absorpcii.
+
+
+=== Eukaryoty ===
+Bunky živočíchov sa pri vírusovej infekcii bránia produkciou interferónov. Interferóny sa uvoľňujú do tkanív a krvného obehu a slúžia ako signál pre zdravé bunky, že inde dochádza k vírusovej infekcii.
+Zdravé ľudské telo reaguje na vírusy produkciou antivírusových proteínov interferónov, ktoré zabraňujú prechodu infekcie na susedné bunky. Niektoré vírusy mutujú neprestajne, takže hosťovské telo nie je schopné vyvinúť si permanentnú odolnosť. Príkladmi takýchto vírusov sú HIV spôsobujúci ochorenie AIDS a Lassa mammarenavirus spôsobujúci horúčku Lassa, ktoré pravdepodobne prešli na ľudí z iných cicavcov. Americkí vedci dokázali, že vírusy sa dokážu do ľudskej DNA pevne zabudovať a sú dokonca dedičné.
+
+
+== Niektoré vírusové ochorenia ==
+
+
+=== Ľudské ochorenia ===
+bradavice (verruca)
+papilómy (papilloma)
+chrípka (influenza)
+žltačka (hepatitis)
+osýpky (morbilli)
+jednoduchý opar (herpes simplex)
+pásový opar (herpes zoster)
+detská obrna (poliomyelitis)
+ružienka (rubeola, rubella)
+príušnice (mumps)
+mononukleóza
+besnota (rabies)
+HIV
+vírusová gastroenteritída
+virálne hemoragické horúčky (Ebola, Marburg)
+žltá horúčka
+COVID-19
+
+
+=== Veterinárne ochorenia ===
+slintačka krívačka
+parvoviróza
+psinka
+
+
+== Referencie ==
+
+
+== Ďalšia literatúra ==
+RAJČÁNI, Július; ČIAMPOR, Fedor. Lekárska virológia.  1. vyd.  Bratislava : Veda, 2006. 574 s.      ISBN 80-224-0911-1.     
+
+
+== Iné projekty ==
+
+ Commons ponúka multimediálne súbory na tému Vírus
+ Wikidruhy ponúkajú informácie na tému Vírus
+ Wikislovník ponúka heslo  Vírus

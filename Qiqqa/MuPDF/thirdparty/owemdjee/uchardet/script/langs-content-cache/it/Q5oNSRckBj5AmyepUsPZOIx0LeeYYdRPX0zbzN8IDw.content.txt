@@ -1,0 +1,110 @@
+revision: 133644442
+title: transistor
+url: https://it.wikipedia.org/wiki/Transistor
+
+
+---
+
+Il transistor (termine inglese, contrazione di trans(fer) "trasferimento [di cariche elettriche]" e (re)sistor "resistore"; pronuncia italianizzata "transìstor") o transistore è un dispositivo a semiconduttore largamente usato nell'elettronica analogica.
+Il dispositivo, consentendo di realizzare circuiti che non richiedevano le elevate tensioni anodiche delle valvole termoioniche, permise la realizzazione di apparecchi radio portatili alimentati a pile. Il termine, sottintendendo "radio a transistor", è stato quindi spesso utilizzato nel linguaggio comune anche per identificare tali apparecchi, che raggiunsero il mercato di massa negli anni cinquanta del XX secolo.
+
+
+== Storia ==
+Il fisico e ingegnere Julius Edgar Lilienfeld progettò il primo transistor in Canada nel 1925, descrivendo un dispositivo simile all'attuale transistor ad effetto di campo. Tuttavia, Lilienfeld non pubblicò ricerche a tal proposito e nel 1934 l'inventore tedesco Oskar Heil brevettò un dispositivo simile.
+Il primo transistor era realizzato con due elettrodi, le cui punte, molto sottili e distanti tra loro alcuni centesimi di millimetro, per la precisione da 127 a 50 micron, erano premute sulla superficie di una piastrina di un cristallo di germanio molto puro, policristallino e di tipo n. La tecnica del contatto puntiforme era già nota ed utilizzata per la costruzione dei diodi rivelatori. Provvisoriamente, dato che il transistor funzionava in modo analogo ad un triodo, venne chiamato triodo a stato solido: il nome definitivo deriva dall'unione dei termini "TRANSconductance" e "resISTOR". Il primo prototipo funzionante fu realizzato nel mese di dicembre del 1947 da due ricercatori dei laboratori Bell Labs: Walter Brattain e John Bardeen del gruppo di ricerca guidato da William Shockley. 
+Era questo il transistor a contatti puntiformi (a punte), mentre si deve a William Shockley l'ideazione, nel gennaio 1948, e la formulazione, nella primavera dell'anno successivo, della teoria del transistor a giunzione, chiamato inizialmente dallo stesso Shockley, nel suo diario di laboratorio, "sandwich transistor". Nel 1956, i tre ricercatori furono insigniti del premio Nobel per la Fisica, con la motivazione «per le ricerche sui semiconduttori e per la scoperta dell'effetto transistor». Già verso la fine degli anni '50, la produzione di transistor si orientò verso l'utilizzo del silicio come elemento semiconduttore, e, negli anni '70, il transistor al germanio divenne obsoleto.
+I tipi di contenitori del dispositivo si sono moltiplicati e, negli anni, sono stati usati materiali come la ceramica, il metallo, la plastica o assemblaggi misti. Negli anni '60, venne usato anche il vetro: il produttore europeo Philips racchiudeva i suoi dispositivi di piccola potenza, ad esempio quelli siglati OC70 e OC71, in un'ampollina cilindrica in vetro verniciata in nero, riempita di grasso al silicone. Nel caso il dispositivo avesse dissipazione maggiore, come l'OC72, il dispositivo era ricoperto semplicemente da un cappuccio in alluminio; avendo reofori identici, il collettore era contraddistinto da un puntino di vernice rossa scura. Nel tempo, molti tipi di contenitori sono andati in disuso a favore di geometrie più efficienti nello smaltimento del calore prodotto. I dispositivi di potenza attuali per bassa frequenza, compresi alcuni tipi di diodi e di IC, vengono assemblati nel contenitore standard definito TO-3, provvisto di due flange forate adatte al fissaggio sul dissipatore tramite una coppia di viti. Realizzato in acciaio, rame, o alluminio, con temperatura ambiente di 25 °C è in grado di trasferire al dissipatore, 300 watt di potenza termica generata dal die.
+Con riguardo al movimento delle cariche elettriche all'interno del dispositivo, i transistor sono indicati come transistor bipolari, in cui sia elettroni sia lacune contribuiscono al passaggio della corrente. Sia il transistor a contatti puntiformi sia quello a giunzione sono transistor di tipo bipolare. Il tipo a contatti puntiformi, d'importanza storica per essere stato il primo realizzato ed a trovare pratica applicazione, seppure limitatamente, diventò presto obsoleto per essere soppiantato da quello a giunzione, più stabile e meno rumoroso. In seguito furono creati altri tipi di transistor, in cui il passaggio di corrente avveniva grazie ad un solo tipo di portatori di carica: questi dispositivi sono i transistor ad effetto di campo. Nel tempo entrambi hanno dato origine a molti tipi diversi di transistor, usati per gli scopi più vari. Lo strumento di misura utilizzato per la verifica e la caratterizzazione dei molteplici parametri dei transistor, nonché dei diodi, è il curve tracer (tracciacurve), termine dato allo strumento in relazione ai segnali elettrici visualizzati sotto forma di grafico somiglianti a molteplici "curve", l'aspetto è simile ad un oscilloscopio: questo tipo di strumento è storicamente prodotto dalla società Tektronix.
+
+
+== Descrizione ==
+Il transistor è composto da un materiale semiconduttore al quale sono applicati tre terminali che lo collegano al circuito esterno. Il funzionamento del transistor è basato sulla giunzione p-n, scoperta casualmente da Russell Ohl il 23 febbraio 1939.
+Le principali funzioni che gli vengono affidate all'interno di un circuito elettronico sono:
+
+l'amplificazione di un segnale in entrata;
+il funzionamento da interruttore (switcher).
+
+
+== Tipi ==
+Esistono principalmente due diversi tipi di transistor: il transistor a giunzione bipolare ed il transistor ad effetto di campo, ed è possibile miniaturizzare i dispositivi di entrambe le categorie all'interno di circuiti integrati, il che li rende componenti fondamentali nell'ambito della microelettronica.
+
+
+=== A giunzione bipolare o BJT ===
+
+Il transistor a giunzione bipolare, anche chiamato con l'acronimo BJT, è un tipo di transistor largamente usato nel campo dell'elettronica analogica principalmente come amplificatore ed interruttore.Si tratta di tre strati di materiale semiconduttore drogato, solitamente il silicio, in cui lo strato centrale ha drogaggio opposto agli altri due, in modo da formare una doppia giunzione p-n, cioè o una giunzione p-n-p o una n-p-n. Ad ogni strato è associato un terminale: quello centrale prende il nome di base, quelli esterni sono detti collettore ed emettitore. Il principio di funzionamento del BJT si fonda sulla possibilità di controllare la conduttività elettrica del dispositivo, e quindi la corrente elettrica che lo attraversa, mediante l'applicazione di una tensione tra i suoi terminali. Tale dispositivo coinvolge sia i portatori di carica maggioritari sia quelli minoritari, e pertanto questo tipo di transistore è detto bipolare.
+Un sistema costituito da un singolo transistor può essere rappresentato come un generico quadripolo avente due terminali di ingresso e due di uscita. I tre terminali del transistor saranno uno il terminale di ingresso, un altro quello di uscita ed il terzo in comune, connesso cioè sia all'ingresso sia all'uscita. A seconda di quale sia il terminale comune il transistor può assumere le seguenti configurazioni: a base comune, a collettore comune o a emettitore comune.
+Insieme al transistor ad effetto di campo, il BJT è il transistor più diffuso in elettronica, è in grado di offrire una maggiore corrente in uscita rispetto al FET, mentre ha lo svantaggio di non avere il terminale di controllo isolato.
+
+
+=== Ad effetto di campo o JFET ===
+
+Il transistor ad effetto di campo, anche chiamato con l'acronimo FET, è un tipo di transistor largamente usato nel campo dell'elettronica digitale e diffusa, in maniera minore, anche nell'elettronica analogica.
+Si tratta di un substrato di materiale semiconduttore, solitamente il silicio, al quale sono applicati quattro terminali: gate (porta), source (sorgente), drain (pozzo) e bulk (substrato); quest'ultimo, se presente, è generalmente connesso al source. Il principio di funzionamento del transistor a effetto di campo si fonda sulla possibilità di controllare la conduttività elettrica del dispositivo, e quindi la corrente elettrica che lo attraversa, mediante la formazione di un campo elettrico al suo interno. Il processo di conduzione coinvolge solo i portatori di carica maggioritari, pertanto questo tipo di transistore è detto unipolare.
+La diversificazione dei metodi e dei materiali usati nella realizzazione del dispositivo ha portato alla distinzione di tre principali famiglie di FET: JFET, MESFET e MOSFET. Il JFET, abbreviazione di Junction FET, è dotato di una giunzione p-n come elettrodo rettificante; il MESFET, abbreviazione di Metal Semiconductor FET, una giunzione Schottky raddrizzante metallo-semiconduttore ed il MOSFET, abbreviazione di Metal Oxide Semiconductor FET, genera il campo elettrico grazie ad una struttura metallica esterna, separata dalla giunzione da uno strato di dielettrico, l'ossido.
+Il transistor a effetto di campo è stato inventato da Julius Edgar Lilienfeld nel 1925, ma i primi dispositivi costruiti, i JFET, risalgono al 1952, quando fu tecnologicamente possibile realizzarli. Il FET più diffuso è il MOSFET, introdotto da Kahng nel 1960.Insieme al transistor a giunzione bipolare, il FET è il transistor più diffuso in elettronica: a differenza del BJT esso presenta il vantaggio di avere il terminale gate di controllo isolato dal resto del circuito, nel quale non passa alcuna corrente; mentre ha lo svantaggio di non essere in grado di offrire molta corrente in uscita. In genere i circuiti con transistor FET hanno infatti un'alta impedenza di uscita, erogando quindi correnti molto deboli.
+
+
+=== A elettrochimici organici ===
+
+I transistor elettrochimici organici (OECTs) sono una delle applicazioni più proficue del PEDOT:PSS nella sua forma di film sottile e la loro accessibilità è dovuta alla facilità di produzione degli stessi e alla bassa tensione che è necessario applicare per il loro funzionamento.
+La struttura dei transistor elettrochimici è composta da due parti fondamentali: canale e gate. Il canale, un film sottile di polimero semiconduttore (in questo caso PEDOT:PSS) depositato su un substrato isolante, presenta ai capi i due contatti di source e drain, esattamente come nei transistor a effetto di campo, con i quali condividono anche le curve caratteristiche. Il gate invece può presentarsi in due forme. La prima è l'elettrodo metallico che, immerso nella soluzione elettrolitica in cui si trova il canale, le fornisce tensione di gate; l'elettrodo e il canale in PEDOT non entrano in contatto tra loro. La seconda forma del gate è il film sottile di PEDOT:PSS che, depositato sullo stesso substrato del canale, è isolato rispetto ad esso in assenza di soluzione elettrolitica.
+
+
+=== Altri tipi ===
+Con l'evolversi della tecnologia sono stati creati diversi altri tipi di transistor, adatti a usi particolari. Tra i più diffusi vi sono il transistore unigiunzione, un generatore di impulsi che non può amplificare né commutare, e gli Insulated Gate Bipolar Transistor, dispositivi ibridi fra i transistor bipolari e i MOSFET, adatti a gestire correnti elevate. Vi sono inoltre transistor sviluppati per applicazioni di ricerca, capaci di ottenere prestazioni quali sopportare elevate correnti o elevate frequenze di funzionamento: nel 2006 un transistor al silicio-germanio ha raggiunto in laboratorio la frequenza di commutazione di 500 GHz.
+
+
+== Utilizzo ==
+I transistor sono impiegati principalmente come amplificatori di segnali elettrici o come interruttori elettronici comandati e hanno quasi ovunque sostituito i tubi termoionici.
+I transistor sono l'elemento base dei chip (o circuiti integrati), al punto che la loro presenza numerica all'interno di questi ultimi è dichiarata ufficialmente come ordine di grandezza: ad esempio, i circuiti integrati semplici ne hanno da qualche decina a qualche centinaia, quelli complessi ne hanno qualche migliaio. Le APU Instinct di AMD conta cira 146 miliardi di transistor.
+
+
+== Note ==
+
+
+== Bibliografia ==
+Jacob Millman e Arvin Grabel, Microelettronica, McGraw-Hill, 1995. ISBN 88-386-0678-1
+ I transistor in pratica, Radiopratica, 1970.
+ G. Bohle e E. Hofmeister, Dal transistor al microprocessore, Gruppo Editoriale Jackson, 1983, ISBN 88-7056-137-2.
+ Eugène Aisberg, Il transistore? è una cosa semplicissima!, 3ª ed., Il Rostro, 1962.
+ J. Ph. Korthals Altes e G. W. Schanz, Circuiti logici con transistori, 3ª ed., CELI, 1972.
+ Ettore Accenti, Dal transistor ai circuiti integrati, Edizioni CD, 1969.
+ G. Kuhn, Guida breve all'uso dei transistori, Il Rostro, 1972.
+
+
+== Voci correlate ==
+2N3055
+CMUT
+Dispositivo a semiconduttore
+Effetto Early
+Elettronica analogica
+Elettronica digitale
+Giunzione p-n
+Transistor bipolare a gate isolato
+JFET
+MOSFET
+Semiconduttore
+Transistor 3D
+Transistor a giunzione bipolare
+Transistor a effetto di campo
+Transistor Schottky
+Package (elettronica)
+Dispositivo multiporta
+Very large scale integration
+
+
+== Altri progetti ==
+
+ Wikizionario contiene il lemma di dizionario «transistor»
+ Wikimedia Commons contiene immagini o altri file sui transistor
+
+
+== Collegamenti esterni ==
+
+ transistore, su Treccani.it – Enciclopedie on line, Istituto dell'Enciclopedia Italiana. 
+ Renato Manfrino, TRANSISTORE, in Enciclopedia Italiana, III Appendice, Istituto dell'Enciclopedia Italiana, 1961,  p. 971. 
+ Francesco Paolo Califano-Fabrizio Galluzzi, TRANSISTORE, in Enciclopedia Italiana, V Appendice, Istituto dell'Enciclopedia Italiana, 1995. 
+ transistore, in Dizionario delle scienze fisiche, Istituto dell'Enciclopedia Italiana, 1996. 
+ Giuseppe La Rocca, transistor, in Enciclopedia della scienza e della tecnica, Istituto dell'Enciclopedia Italiana, 2007-2008. 
+ transìstor / transistóre, su Vocabolario Treccani, Istituto dell'Enciclopedia Italiana. 
+(EN) Transistor, su Enciclopedia Britannica, Encyclopædia Britannica, Inc.

@@ -1,0 +1,188 @@
+revision: 5991133
+title: Communication
+url: https://sl.wikipedia.org/wiki/Near_Field_Communication
+
+
+---
+
+Near Field Communication, krajše NFC, je visokofrekvenčna komunikacijska tehnologija kratkega dosega, ki omogoča izmenjavo podatkov na razdalji do 10 cm. Tehnologija je osnovana na standardu ISO/IEC 14443 in združuje pametno kartico in čitalec v eno napravo. NFC-naprava lahko komunicira tako z obstoječimi karticami in čitalci, narejenimi po standardu ISO/IEC 14443, kot z drugimi NFC-napravami.
+
+
+== Specifikacije ==
+Kot ISO/IEC 14443 tudi NFC komunicira prek magnetnega polja, kjer se anteni nahajata znotraj medsebojnega bližnjega polja in tako predstavljata transformator z zračnim jedrom. Deluje znotraj ISM-radiofrekvenčnega pasu 13,56 MHz s pasovno širino 2 MHz.
+Delovna razdalja s kompaktnimi standardnimi antenami: do 20 cm.
+Podprte hitrosti prenosa podatkov: 106, 212, 424 in 848 kbit/s.
+Načina delovanja:
+Pasivni način: inicialna naprava omogoča nosilno polje, ciljna naprava odgovori z modulacijo obstoječega polja, pri čemer jo to polje tudi napaja.
+Aktivni način: inicialna in ciljna naprava komunicirata z izmenjujočim generiranjem lastnega polja. Naprava izključi lastno RF-polje, medtem ko čaka na podatke. V tem načinu potrebujeta obe napravi izvor napajanja.NFC določa dva tipa kodiranja za prenos podatkov:
+
+Millerjevo (zakasnjeno) kodiranje s 100 % modulacijo se uporablja pri prenosu podatkov s hitrostjo 106 kbit/s, Manshesterjevo (fazno) kodiranje pa se uporablja v ostalih primerih.
+NFC-naprave so zmožne prejemati in oddajati podatke istočasno. Lahko preverjajo radiofrekvenčno polje in zaznajo zastoje, če sprejeti signal ne ustreza oddanemu signalu.
+
+
+== Uporaba ==
+Trenutno kaže, da se bo tehnologija NFC prijela predvsem pri mobilnikih. Trije glavni uporabniški primeri so:
+
+kot kartica: NFC naprava deluje kot obstoječa brezkontaktna kartica,
+kot čitalec: NFC naprava deluje v aktivnem načinu in bere pasivne kartice,
+P2P način: dve NFC napravi komunicirata med seboj in si izmenjujeta informacije.Možnih je veliko aplikacij, na primer:
+
+Vstopnice in javni transport – podaljšek obstoječe infrastrukture (Urbana).
+Mobilno plačevanje – NFC naprava deluje kot debetna/kreditna kartica.
+Pametni plakat – z NFC telefonom preberemo RFID etiketo na kino plakatu in prenesemo informacije o filmu.
+Bluetooth parjenje – v prihodnosti bo parjenje Bluetooth 2.1 naprav s podporo NFC precej enostavnejše kot je sedaj. Dovolj bo približati napravi, kar bo nadomestilo zamudno obstoječe iskanje, čakanje, parjenje in avtorizacijo.V prihodnosti lahko pričakujemo še:
+
+elektronske vstopnice – letalske karte, vstopnice za koncerte ipd.
+elektronski denar,
+potovalne karte,
+osebne dokumente,
+mobilni marketing,
+elektronske ključe – za avtomobil, pisarno, hišo, hotel...,
+enostavno konfiguracijo ostalih brezžičnih povezav, npr. Wi-Fi.
+
+
+== NFC proti Bluetoothu ==
+NFC in Bluetooth sta komunikacijski tehnologiji kratkega dosega, ki sta bili pred kratkim integrirani v uporabo na mobilnih telefonih. Poglavitna prednost NFC pred Bluetoothom je krajši čas vzpostavljanja povezave. Povezava med dvema NFC napravama se vzpostavi v trenutku (v manj kot desetinki sekunde), medtem ko ročna uparitev dveh Bluetooth naprav traja kar nekaj časa. Temu v izogib je mogoče uporabiti NFC kot iniciator brezžičnih povezav (kot je npr. Bluetooth). Maksimalna hitrost prenosa podatkov pri NFC je 424 kbit/s, kar je znatno počasneje, kot pri Bluetooth (2,1 Mbit/s). NFC ima krajši domet (10 cm), kar prinaša neko stopnjo varnosti in omogoča uporabo tehnologije tudi v prenatrpanih prostorih. Nasprotno kot Bluetooth, je NFC kompatibilen z obstoječimi RFID karticami. Prav tako lahko NFC deluje, ko ena izmed obeh vpletenih naprav nima lastnega napajanja (npr. ugasnjen telefon, brezkontaktna kartica, pametni plakat).
+
+
+== Standardizacijska telesa in industrijski projekti ==
+
+
+=== Standardi ===
+NFC je bil odobren 8. decembra 2003 najprej kot ISO/IEC, kmalu nato še kot ECMA standard.
+NFC je odprto-platformna tehnologija, standardizirana kot ECMA-340 in ISO/IEC 18092. 
+Ti standardi specificirajo modulacijske sheme, kodiranje, hitrosti prenosa, format RF vmesnikov NFC naprav, inicializacijske sheme in pogoje, potrebne za nadzor trkov podatkov med aktivno ali pasivno NFC inicialiacijo. Poleg tega definirajo transportni protokol ter metode aktivacije in izmenjave podatkov. Brezžični vmesnik za NFC je standardiziran v:  ISO/IEC 18092 / ECMA-340 : Near Field Communication Interface and Protocol-1 (NFCIP-1), ISO/IEC 21481 / ECMA-352 : Near Field Communication Interface and Protocol-2 (NFCIP-2).
+NFC vključuje vrsto predhodnih standardov, med njimi ISO/IEC 14443, Type A (normalen) in Type B (bančništvo/kratek doseg) ter FeliCa. NFC telefoni so združljivi z obstoječo infrastrukturo čitalcev, še posebej v načinu emuliranja kartice, kjer bi naj NFC naprava obstoječemu čitalcu vsaj poslala edinstveno številko ID.
+V NFC forumu je definiran skupni podatkovni format, imenovan NDEF, ki se lahko uporabi za shranjevanje in transport različnih vrst podatkov, od MIME objektov do ultra kratkih RTD dokumentov, kot so URL-ji.
+NDEF je konceptualno zelo podoben MIME. Je kompakten binarni format zapisov (recordov), kjer vsak zapis vsebuje različen tip objekta. Po dogovoru tip prvega zapisa definira vsebino celotnega sporočila.
+
+
+=== NFC forum ===
+Je neprofitno industrijsko združenje, ki je zaživelo 18. marca 2004. Med ustanovitelji so bili NXP Semiconductors, Sony in Nokia. Namen združenja je pospeševati uporabo NFC v uporabniških elektronskih napravah, mobilnih telefonih in osebnih računalnikih. Promovira implementacijo in standardizacijo NFC tehnologije z zagotavljanjem združljivosti med napravami in storitvami. NFC forum šteje 150 članov (Q1, 2009).
+
+
+=== GSMA ===
+GSM Association je globalno trgovsko združenje, ki vključuje 700 operaterjev mobilne telefonije iz 218 držav sveta.
+Lansirali so dve iniciativi:
+
+Mobilna NFC iniciativa; 14 operaterjev mobilne telefonije, ki skupaj predstavljajo 40% globalnega trga, podpirajo NFC in skupaj delajo na razvoju NFC aplikacij. To so: Bouygues Télécom, China Mobile, AT&T, KPN, Mobilkom Austria, Orange, SFR, SK Telecom, Telefonica Móviles España, Telenor, TeliaSonera, Telecom Italia Mobile (TIM), Vodafone in 3.13. februarja 2007 so izdali poročilo z vidika mobilnih operaterjev o NFC ekosistemu.
+
+Iniciativa Pay buy mobile skuša definirati skupni globalni pristop uporabe NFC tehnologije pri povezovanju mobilnih naprav s plačilnimi in brezkontaktnimi sistemi. Iniciativi se je pridružilo 30 mobilnih operaterjev.
+
+
+=== StoLPaN ===
+Store Logistics and Payment with NFC je vseevropski konzorcij, podprt s programom Information Society Technologies Evropske unije. 
+StoLPaN raziskuje potencial združitve lokalnih brezžičnih vmesnikov, NFC in mobilnih komunikacij.
+
+
+=== Ostala standardizacijska telesa ===
+ETSI / SCP (Smart Card Platform) specificira vmesnike med SIM kartico in NFC čipom.
+GlobalPlatform določa multiaplikacijsko arhitekturo varnega elementa.
+EMVCo spremlja vplive na EMV plačilne aplikacije.
+
+
+== Varnostni pogledi ==
+Čeprav je razdalja pri komuniciranju z NFC omejena na nekaj centimetrov, sam NFC ne zagotavlja varne komunikacije. Leta 2006 sta Ernst Haselsteiner in Klemens Breitfuß razložila različne možne tipe napadov.
+NFC ne nudi zaščite proti prisluškovanju in je prav tako ranljiv za modificiranje prenešenih podatkov. Za vzpostavitev varnih kanalov morajo aplikacije uporabljati kriptografske protokole višjih slojev (npr. SSL).
+
+
+=== Prisluškovanje ===
+RF signal za brezžični prenos podatkov je lahko ujet z antenami. Razdalja, na kateri lahko napadalec prisluškuje RF signalu, je odvisna od številnih parametrov, a je tipično nekaj metrov. Poleg tega na prisluškovanje močno vpliva način komuniciranja. Precej težje je prisluškovati pasivni napravi, ki ne generira svojega RF polja, kot aktivni. Primer odprtokodne naprave, s katero je mogoče prisluškovati pasivnim in aktivnim NFC komunikacijam je Proxmarkov instrument.
+
+
+=== Modificiranje podatkov ===
+Relativno enostavno je doseči preprečitev prenosa podatkov. Ena možnost motenja signala je uporaba RFID motilca. Takega napada se ne da preprečiti, a če NFC naprave preverjajo RF polje med oddajanjem, ga je mogoče zaznati.
+Neavtorizirano modificiranje podatkov, katerega rezultat so veljavna sporočila, je precej bolj komplicirano in zahteva poglobljeno poznavanje. Z namenom modificiranja oddanih podatkov se mora napadalec ukvarjati s posameznimi biti RF signala. Izvedljivost takšnega napada, tj. Če je mogoče spremeniti vrednost bita iz 0 v 1 ali obratno je med drugim predmet moči amplitudne modulacije. Če so podatki prenešeni z modificiranim Milerjevim kodiranjem in modulacijo 100%, je mogoče spremeniti le nekaj določenih bitov. Modulacijsko razmerje 100% omogoča odstranitev pavze RF signala, ne pa tudi ustvarjanje pavze tam, kjer je prej ni bilo. Torej je lahko spremenjen le bit 1, ki ga nasledi naslednji bit 1. Oddajanje podatkov z Manchesterjevim kodiranjem z modulacijo 10% dovoljuje modifikacijski napad na vseh bitih.
+
+
+=== Napad med prenosom ===
+Ker NFC naprave podpirajo ISO/IEC 14443 funkcionalnost, so napadi med prenosom prav tako možni. Gre za neke vrste man-in-the-middle napad, kjer napadalec prestreže komunikacijo med čitalcem in kartico, jo spremeni in odgovori v realnem času ter se pri tem izdaja za lastnika pametne kartice. En od primerov kode libnfc demonstrira napad med prenosom uporabljajoč dve enostavno dobavljivi NFC napravi.
+
+
+== NFC telefoni ==
+Apple iPhone 11
+Apple iPhone 11 Pro
+Apple iPhone 11 Pro Max
+Apple iPhone X
+Apple iPhone Xr
+Apple iPhone Xs
+Apple iPhone Xs Max
+Apple iPhone 8
+Apple iPhone 8 Plus
+Apple iPhone 7
+Apple iPhone 7 Plus
+Google Nexus 5X
+Google Pixel
+Google Pixel 2
+Google Pixel 3
+Google Pixel 4
+Google Pixel XL
+Huawei P9
+Huawei P10
+Huawei P10 Plus
+Huawei P20
+Huawei P20 Pro
+Huawei P20 Lite
+Huawei Honor 10
+Huawei Honor View 20
+Huawei P30
+Huawei P30 Pro
+Huawei P30 LiteNokia 6216
+Nokia 6212
+Nokia 6131
+Nokia 3220 + NFC Shell
+Samsung SGH-X700 NFC
+Samsung D500E
+SAGEM my700X Contactless
+LG 600V contactless
+Motorola L7 (SLVR)
+Benq T80
+LG L70
+LG G2
+OnePlus One
+OnePlus Three
+OnePlus 5
+OnePlus 5T
+OnePlus 6
+OnePlus 6T
+OnePlus 7
+OnePlus 7 Pro
+OnePlus 7 5G
+Huawei Ascend G526
+Samsung Galaxy S10
+Samsung Galaxy S10e
+Samsung Galaxy S10+
+Samsung Galaxy S9
+Samsung Galaxy S9+
+Samsung Galaxy S8
+Samsung Galaxy S8+
+
+
+== Sklici ==
+
+
+== Viri ==
+Ortiz, C. Enrique (Junij 2006). »An Introduction to Near-Field Communication and the Contactless Communication API«. Pridobljeno 24. oktobra 2008.
+Kasper, Timo; Dario, Carluccio; Christof, Paar (Maj 2007). »An embedded system for practical security analysis of contactless smartcards« (PDF). Springer LNCS. Heraklion. 4462: 150–160. Arhivirano iz prvotnega spletišča (PDF) dne 21. julija 2007.
+
+
+== Glej tudi ==
+RFID
+
+
+== Zunanje povezave ==
+NFC Forum
+StolPaN Arhivirano 2007-02-04 na Wayback Machine.
+Near Field Communications World
+NFCNews
+Touch project
+NFC Research Project of the Upper Austrian University of Applied Sciences
+NFC Magazine
+SmartNFC further information about NFC Arhivirano 2009-10-30 na Wayback Machine.
+BBC: Mobile phones hope to be 'smart wallet'
+ISO/IEC 18092:2004
+Near Future of Near Field by Joe Rayment, The Globe and Mail
+Oertel, Wölk, Hilty, Köhler, Kelter, Ullmann, Wittmann: Security Aspects and Prospective Applications of RFID Systems, Bundesamt für Sicherheit in der Informationstechnik, Bonn, 11. January 2005
+Seminar Near Field Communication
+"A day at MIT with Near-Field Communication" - Video scenario on future everyday life usage of NFC
+Contactless Intelligence Online Broadcast Channel Arhivirano 2009-05-31 na Wayback Machine.

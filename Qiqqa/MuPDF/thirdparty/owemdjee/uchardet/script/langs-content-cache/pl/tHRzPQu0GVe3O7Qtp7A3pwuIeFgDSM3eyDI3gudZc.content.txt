@@ -1,0 +1,71 @@
+revision: 70628607
+title: akumulator procesora
+url: https://pl.wikipedia.org/wiki/Rejestr_procesora
+
+
+---
+
+Rejestry procesora (ang. processor registers) – komórki pamięci o niewielkich rozmiarach (najczęściej 4/8/16/32/64/128/256 bitów) umieszczone wewnątrz procesora i służące do przechowywania tymczasowych wyników obliczeń, adresów lokacji w pamięci operacyjnej itd. Większość procesorów przeprowadza działania (obliczenia) wyłącznie korzystając z wewnętrznych rejestrów, użycie do obliczeń danych zawartych w pamięci wymaga użycia rozkazu kopiowania ich do rejestrów. Podobnie wyniki obliczeń są umieszczane w rejestrach, w niektórych procesorach, tylko w jednym rejestrze zwanym akumulatorem, w innych istnieje możliwość umieszczenia wyniku w jednym z wielu rejestrów, przeniesienie wyniku do pamięci wymaga użycia dodatkowego rozkazu procesora.
+Rejestry procesora stanowią najwyższy szczebel w hierarchii pamięci, będąc najszybszym rodzajem pamięci komputera. Realizowane zazwyczaj za pomocą przerzutników dwustanowych, z reguły jako tablica rejestrów (blok rejestrów, z ang. register file).
+Liczba rejestrów i możliwości wykonywania na nich operacji zależy od przyjętej koncepcji budowy procesora określanej jako architektura procesora.
+
+
+== Podział ze względu na zastosowanie ==
+W architekturze procesora CISC, ze względu na zastosowanie, można wyróżnić rodzaje rejestrów:
+
+akumulator – rejestr, w którym jest jeden z argumentów działania i w którym umieszczany jest wynik działań,
+rejestry danych – do przechowywania danych całkowitoliczbowych, np. argumentów i wyników obliczeń,
+rejestry adresowe – do przechowywania adresów i uzyskiwania dostępu do pamięci, wśród nich wyróżnić można rejestry segmentowe,
+rejestry ogólnego zastosowania (ang. general purpose), będące połączeniem dwóch powyższych typów, czyli mogące przechowywać zarówno dane, jak i adresy,
+rejestry zmiennoprzecinkowe – do przechowywania i wykonywania obliczeń na liczbach zmiennoprzecinkowych, z reguły znajdujące się w oddzielnym bloku funkcjonalnym procesora, zwanym koprocesorem (FPU),
+rejestry stałych – przechowujące stałe, jedynie do odczytu,
+rejestry wektorowe – przechowujące dane do jednoczesnego przetwarzania wielu danych przez instrukcje typu SIMD,
+rejestry specjalne, określające stan wykonania, wśród nich wymienić można rejestr wskaźnika instrukcji, wskaźnik stosu, rejestr flag procesora,
+rejestry instrukcji – do przechowywania obecnie przetwarzanej instrukcji
+
+
+=== Rejestry procesorów x86 ===
+32-bitowe rejestry ogólnego przeznaczenia to:
+
+EAX – Accumulator (akumulator – jego pamięć wykorzystuje arytmometr; używa się go do przechowywania wyników wielu operacji)
+EBX – Base Register (rejestr bazowy – służy do adresowania)
+ECX – Counter Register (rejestr licznikowy – służy jako licznik w pętli)
+EDX – Data Register (rejestr danych – umożliwia przekaz/odbiór danych z portów wejścia/wyjścia)
+ESP – Stack Pointer (przechowuje wskaźnik wierzchołka stosu)
+EBP – Base Pointer (rejestr bazowy – służy do adresowania)
+ESI – Source Index (rejestr źródłowy – trzyma źródło łańcucha danych)
+EDI – Destination Index (rejestr przeznaczenia – przetrzymuje informacje o miejscu docelowym łańcucha danych)Możliwy jest też dostęp do ich 16-bitowych mniej znaczących części – AX, BX, CX, DX, SP, BP, SI, DI, a w przypadku czterech pierwszych także do młodszego (Low) i starszego bajta (High) – odpowiednio AL, AH, BL, BH, CL, CH, DL, DH.
+W procesorach 64-bitowych do rejestrów o długości 64 bitów odwołuje się poprzez nazwę z przedrostkiem R zamiast E – np. RAX, RBX.
+Są też dostępne rejestry segmentów, określające położenie segmentów pamięci w przestrzeni adresowej (gdy procesor pracuje w trybie rzeczywistym lub wirtualnym) lub deskryptory segmentów (w trybie chronionym):
+
+CS – Code Segment (segment kodu);
+DS – Data Segment (segment danych);
+ES – Extra Segment (dodatkowy segment danych);
+SS – Stack Segment (segment stosu);
+FS – dodatkowy rejestr segmentu;
+GS – dodatkowy rejestr segmentu.Ponadto istnieją:
+
+EFLAGS – rejestr flag procesora, składający się z pojedynczych bitów określających stan procesora;
+EIP – wskaźnik adresowy na aktualnie wykonywaną instrukcję. Za jego pomocą procesor realizuje m.in. skoki, pętle, przejścia do podprogramów;
+rejestry koprocesora arytmetycznego:
+osiem rejestrów stosu koprocesora, oznaczanych w zależności od kompilatora jako ST0... ST7, 0... 7 lub ST(0)... ST(7);
+rejestr stanu koprocesora;
+rejestr stanu stosu koprocesora;
+rejestr sterujący koprocesora;
+rejestry kontrolne procesora CRn (n – numer rejestru);
+rejestry debugera DRn (n – numer rejestru);
+rejestry MMX (rozszerzenie) – 8 rejestrów 64-bitowych nazywanych mm0 ... mm7 (zamapowane na rejestry FPU);
+rejestry SSE (rozszerzenie):
+8 rejestrów 128-bitowych nazywanych xmm0 ... xmm7; w trybie 64-bitowym dostępne jest 8 kolejnych rejestrów 128-bitowych xmm8 ... xmm15;
+rejestr kontrolno-sterujący mxcsr.
+
+
+== Liczba rejestrów ==
+Poniższa tabela przedstawia liczbę ogólnych i zmiennoprzecinkowych rejestrów w niektórych architekturach procesorów.
+
+
+== Zobacz też ==
+rejestry procesora w architekturze x86-32
+
+
+== Przypisy ==

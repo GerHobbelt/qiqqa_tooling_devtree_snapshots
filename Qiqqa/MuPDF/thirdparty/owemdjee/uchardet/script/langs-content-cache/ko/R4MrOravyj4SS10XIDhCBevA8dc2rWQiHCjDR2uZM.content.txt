@@ -1,0 +1,17 @@
+revision: 34001037
+title: "Clear (\uC720\uB2C9\uC2A4)"
+url: https://ko.wikipedia.org/wiki/Clear_(%EC%9C%A0%EB%8B%89%EC%8A%A4)
+
+
+---
+
+clear(클리어)는 유닉스 운영 체제에서 화면을 지우는 명령어이다.
+유닉스 명령어 clear는 인수를 받지 않으며 비슷한 것으로는 도스의 cls 명령어가 있다.
+
+
+== 같이 보기 ==
+유닉스 명령어 목록
+
+
+== 외부 링크 ==
+(영어) The manual (man) page for clear

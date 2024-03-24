@@ -1,0 +1,71 @@
+revision: 23235600
+title: Dynamikk (mekanikk)
+url: https://no.wikipedia.org/wiki/Klassisk_mekanikk
+
+
+---
+
+Mekanikken er den delen av fysikken som befatter seg med deformasjon eller bevegelse (eller manglende bevegelse) av materie ved påvirkning av krefter. Mekanikk deles tradisjonelt i statikk, kinematikk og dynamikk. Mekanikkens utgangspunkt er at materialet som utsettes for krefter er å betrakte som en partikkel (dvs. et massepunkt), det vil si at all masse er konsentrert i ett punkt og legemet har følgelig ikke noen utstrekning. Dette idealiserte utgangspunktet utvides i forskjellige retninger innenfor mekanikken. 
+
+
+== Inndeling av mekanikken etter materialets beskaffenhet ==
+
+
+== Inndeling av mekanikken etter materialets evne til energilagring ==
+I mekaniske systemer er spenninger å betrakte som krefter som fordeles over en flate eller et volum. Spenninger 
+er å regne som belastning på systemet og deles etter sin kraftvirkning (dvs. sin måte å gi opphav til deformasjonsenergi eller bevegelsesenergi innen materialet) i skjærspenninger og normalspenninger (dvs. trykk- og strekkspenninger). Et stivt legeme har evne til å belastes med både normalspenninger og skjærspenninger, mens en væske bare kan belastes med trykkspenninger. Ut fra kraftvirkningen kan man tilsvarende dele mekanikken inn i de underområdene som tidligere nevnt. 
+For stive legemer er kraftvirkningen av skjærkrefter deformasjoner såsom nedbøying mens normalkrefter gir deformasjoner som stukning eller strekning (tøyning). Kraften virker derfor slik at systemet har fått økt sin deformasjonsenergi. For fluider kan skjærkrefter gi opphav til strømvirvler (turbulens) innen systemet mens normalkrefter fordeler seg homogent i alle retninger og gir det som kalles hydrostatisk trykk. I dette tilfellet er energien fra kraften overført som dels dynamisk virvlingsenergi, dels laminær strømningsenergi og dels deformasjonsenergi.
+
+
+== Mekanikkens historie ==
+Isaac Newton la grunnlaget for denne delen av fysikken med sitt banebrytende verk Philosophiæ naturalis principia mathematica (1687). Men Newton var selv svært bevisst at hans arbeid bygget på tidligere utført arbeid av Kepler, Galilei og Kopernikus.  Newton erstattet den Aristoteliske bevegelseslære.  Etterhvert kom andre mekaniske teorier fra matematikere som d'Alembert,  Joseph Louis Lagrange, Pierre-Simon Laplace, William Rowan Hamilton og flere.  Disse ble betraktet som alternative formuleringer av samme fysiske fenomen, og ikke i strid med Newton.  Det finnes riktignok ikke noe formelt bevis for at de forskjellige formuleringene er ekvivalente.  Newton ble ikke motsagt før inntil begynnelsen av 1900-tallet, da personligheter som Max Planck, Albert Einstein og Niels Bohr fant løsninger på problemer som:
+
+Hvordan fungerer Newtons lover sammen med den da nyoppdagede atomfysikken?
+Hvorfor stemmer ikke Newtons lover med de stadig mer nøyaktige målingene til astronomene?
+Er lys en bølge eller er det en strøm av partikler?
+Hvorfor var det så vanskelig å forene Newtons mekanikk med den nyutviklede elektromagnetismen?
+Hva er gravitasjon og hvordan virker det?Den klassiske mekanikken kunne ikke gi noen gode svar på disse spørsmålene, og man måtte finne nye løsninger.
+Relativitetsteorien ble utviklet, sammen med kvantemekanikk og annet som bygger på dette.
+
+
+=== Newtons lover ===
+Grunnlaget for den klassiske mekanikken ble lagt 5. juli 1687 med Isaac Newtons verk Philosophiae Naturalis Principia Mathematica, ofte bare kalt Principia, som her bygget videre Galileo Galileis arbeider på 1600-tallet.
+I Principia formulerte Newton sine tre grunnleggende lover, som med moderne terminologi og språkbruk lyder:
+
+Et legeme som ikke utsettes for ytre krefter forblir i ro eller i en rettlinjet bevegelse med konstant hastighet.
+Akselerasjonen til et legeme er direkte proporsjonal med resultantkraften som virker på legemet, og omvendt proporsjonal med legemets masse.
+Om to legemer påvirker hverandre, er kraften som virker fra det første legemet på den andre like stor og motsatt rettet til kraften som virker fra det andre legemet mot den første.Selv om den klassiske mekanikken har blitt ytterligere utviklet siden Newtons lover ble formulert utgjør disse grunnprinsippene fortsatt fundamentet for emnet.
+
+
+==== Inertialramme, kraftbegrepet ====
+Selv om Newtons første to lover er rimelig enkle har de ofte vært gjenstand for debatt, og noen fullstendig konsensus om tolkningen av dem kan ikke sies å foreligge.
+Ettersom begrep som ro og hastighet inngår i formuleringen av lovene, er det åpenbart at en form for referanseramme må finnes for at slike begreper skal være meningsfulle. En referanseramme der Newtons lover gjelder benevnes gjerne som en inertialramme (inertialsystem, treghetssystem). Ettersom krefter i klassisk mekanikk forutsettes å være objektive størrelser, det vil si uavhengig av referanseramme, kan en godtagbar referanseramme ikke akselerere. Det er derfor riktig å kreve at en inertialramme skal være fast, men ettersom det ikke finnes noe fast punkt i universet forblir likevel problemet uløst. Den eneste innvendningsfrie definisjonen er at en inertialramme er en referanseramme der Newtons første lov er gyldig. Dessverre er det praktisk talt umulig å gjennomføre eksperimenter på legemer uten kraftpåvirkning ettersom dette skulle forutsette at legemet befinner seg på behørig avstand fra all annen materie. 
+Eksperimenter viser imidlertid at for de fleste praktiske tillempninger gir en jordfast referanseramme god overensstemmelse mellom teori og eksperiment. Riktignok kreves det i situasjoner der jordrotasjonen er av betydning, for eksempel satellittbevegelse, vind og havstrømmer, en referanseramme som ikke følger jorden i dens rotasjon. For studier av planeters bevegelse kreves en referanseramme som er fiksert i forhold til solen og så videre. Konklusjonen er at noen absolutt inertialramme som er universelt anvendbar ikke kan defineres, men at det for hver enkelt tillempning bør være mulig å finne en referanseramme der Newtons lover gjelder med tilstrekkelig god approksimasjon. Selv om Newton i Principia ikke utviklet sine tanker angående referanserammer, har det blitt hevdet at årsaken til at han delte opp sine to første lover var at han så den første som en måte å fastsette en gyldig referanseramme. Dersom dette ikke var tilfelle hadde den første loven bare vært et spesialtilfelle av den andre, en beskrivelse som iblant legges fram i elementære lærebøker.
+Om den første loven anvendes for å definere en gyldig referanseramme, kan den andre loven sies å beskrive hvordan et legeme beveger seg i dette referansesystemet da den påvirkes av krefter. Her er det delte meninger om hvordan begrepet krefter skal tolkes. En oppfatning er at den andre loven skal ses som en definisjon av begrepet kraft i form av masse og akselerasjon. Det fins minst tre sterke innvendinger mot dette synspunktet. For det første defineres bare summen av de de virkende kreftene på legemet, selv om det er slik at legemet påvirkes av et antall ulike krefter med forskjellige kilder. For det andre blir hele definisjonen meningsløs for et legeme i ro. For det tredje fins det ingen muligheter til å gjøre noen som helst forutsigelser om virkeligheten med et slikt synspunkt. 
+En mer framkommelig vei skulle kunne være å la krefter defineres av andre fysiske lover, det vil si lovene for gravitasjon og elektromagnetisme. Dette må være mulig å utføre i teorien, men i praksis er det ikke mulig å utføre kvantitative beregninger på denne måten. I den klassiske mekanikken betraktes derfor krefter som et begrep der kraften som et legeme utøver på en annen defineres fra tilfelle til tilfelle avhengig av opprinnelse. Visse krefter er bestemte av det påvirkede legemets posisjon og bevegelsestilstand, for eksempel gravitasjonskrefter, elastiske kontaktkrefter, luft- og strømningsmotstand, og kan beregnes ved hjelp av eksisterende modeller. Andre krefter oppstår ved kontakter der et legeme er utsatt for friksjon, det vil si en innskrenkning i dets mulighet til å forflytte seg.
+
+
+== Anvendelser ==
+Den klassiske mekanikken blir nå sett på som et spesialtilfelle av de nyere og mer generelle teoriene. Newtons arbeider brukes fortsatt i stor utstrekning, men med to viktige forbehold.
+Klassisk mekanikk kan ikke brukes til å beskrive forhold som:
+
+har noe med atomer eller kjernepartikler å gjøre, eller som er så små at atomenes indre egenskaper får betydning.
+beveger seg i nærheten av lysets hastighet. En tommelfingerregel er at klassisk mekanikk gir gode resultater for hastigheter under 10% av lyshastigheten.  Da er den relativistiske korreksjonen mindre enn 0,5%.På mer avansert nivå har man utviklet metoder for å se på et hvert materiale som en uendelig mengde med uendelig små gjenstander (partikler) som påvirker hverandre etter Newtons lover. Man samler sammen disse partiklene i et sett med integraler, og behandler det som et kontinuerlig medium.  Dette kalles kontinuumsmekanikk.   Metodene bryter selvfølgelig med ideen om et gitt antall atomer, men ble utviklet lenge før atomfysikken og gjelder fortsatt under de samme betingelsene som den klassiske mekanikken.
+Gjennom kontinuumsmekanikken, gjerne kombinert med termodynamikk og forskjellige andre teorier, brukes klassisk mekanikk fortsatt i forskning og beregninger innen:
+
+Krefter og spenninger i faste stoffer, konstruksjoner og materialer.
+Styrkeberegninger innen bygg, anlegg og industri. Biler, hus, båter osv.
+Elastisitet
+Brudd
+Strømninger i væsker og gasser.
+Turbulens (strømvirvler og andre tilsynelatende kaotiske strømninger)
+Meteorologi (værsystemer)
+Oseanografi (strømninger i sjø og hav)
+Geofysikk (vulkanske masser, strømninger i jordens indre)
+Klimaberegninger
+Påvirkning på biler, hus, båter og andre konstruksjoner
+Stoffer som befinner seg mellom fast masse, væske- og gassform, og gjerne grenseverdiene mellom disse.
+
+
+== Eksterne lenker ==
+(no) Klassisk mekanikk i Store norske leksikon

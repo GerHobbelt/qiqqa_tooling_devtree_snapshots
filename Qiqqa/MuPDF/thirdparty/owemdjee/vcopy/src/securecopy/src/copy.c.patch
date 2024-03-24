@@ -1,0 +1,234 @@
+--- /home/ijntema/programming/securecopy/core-utils-based/V9.3.0-beta/coreutils-9.3/src/copy.c.org	2023-04-29 19:28:37.708015264 +0200
++++ /home/ijntema/programming/securecopy/core-utils-based/V9.3.0-beta/coreutils-9.3/src/copy.c	2023-04-29 19:28:37.716015014 +0200
+@@ -57,20 +57,22 @@
+ #include "same.h"
+ #include "savedir.h"
+ #include "stat-size.h"
+ #include "stat-time.h"
+ #include "utimecmp.h"
+ #include "utimens.h"
+ #include "write-any-file.h"
+ #include "areadlink.h"
+ #include "yesno.h"
+ #include "selinux.h"
++/* HIJN */
++#include "crcsum.h"
+ 
+ #ifndef USE_XATTR
+ # define USE_XATTR false
+ #endif
+ 
+ #if USE_XATTR
+ # include <attr/error_context.h>
+ # include <attr/libattr.h>
+ # include <stdarg.h>
+ # include "verror.h"
+@@ -1242,28 +1244,88 @@
+   int dest_errno;
+   int source_desc;
+   mode_t src_mode = src_sb->st_mode;
+   mode_t extra_permissions;
+   struct stat sb;
+   struct stat src_open_sb;
+   union scan_inference scan_inference;
+   bool return_val = true;
+   bool data_copy_required = x->data_copy_required;
+   bool preserve_xattr = USE_XATTR & x->preserve_xattr;
++  /* HIJN */
++  t_crc64 crc_src = 0;
+ 
+   copy_debug.offload = COPY_DEBUG_UNKNOWN;
+   copy_debug.reflink = x->reflink_mode ? COPY_DEBUG_UNKNOWN : COPY_DEBUG_NO;
+   copy_debug.sparse_detection = COPY_DEBUG_UNKNOWN;
+ 
+   source_desc = open (src_name,
+                       (O_RDONLY | O_BINARY
+                        | (x->dereference == DEREF_NEVER ? O_NOFOLLOW : 0)));
++
++/* HIJN */
++// Checksum
++  if (x->crc)
++  {
++    crc_src = CalculateCRC64(src_name);
++    if (x->verbose)
++    {
++      char* szCRC;
++      int   ret;
++      ret = asprintf(&szCRC, "%016llX", crc_src);
++
++      if ( ret != -1)
++      {
++        printf("[%s]", szCRC);
++      }
++    }
++  }
++
++  if (x->crc_with_xattr)
++  {
++    if ( !IsFreshCRC(src_name) ) // UPDATE CRC when stale
++    {
++      // suppress errors writing crc in source xattr, as file can be read only or filesystem might not support xattr
++      bool bError = false;
++
++      // CRC is stale & get new CRC
++      if ( !bPutCRC(src_name, &crc_src, bError) )
++      {
++        // Don't print an error, as source file can be a read only file, which is a legitimate use case
++        printStatus(src_name, "WARNING: FAILED to update CRC; file is read-only?", YELLOW);
++      }
++      else if (x->verbose)
++      {
++        textcolor(BRIGHT,YELLOW,BLACK);
++        printf("Updated CRC");
++        RESET_TEXT();
++      }
++    }
++    else
++    {
++      crc_src = getCRC(src_name);
++    }
++
++    if (x->verbose)
++    {
++      char* szCRC;
++      int   ret;
++      ret = asprintf(&szCRC, "%016llX", crc_src);
++
++      if ( ret != -1)
++      {
++        printf("[%s]", szCRC);
++      }
++    }
++  }
++  /* END HIJN */
++
+   if (source_desc < 0)
+     {
+       error (0, errno, _("cannot open %s for reading"), quoteaf (src_name));
+       return false;
+     }
+ 
+   if (fstat (source_desc, &src_open_sb) != 0)
+     {
+       error (0, errno, _("cannot fstat %s"), quoteaf (src_name));
+       return_val = false;
+@@ -1708,20 +1770,119 @@
+       error (0, errno, _("failed to close %s"), quoteaf (dst_name));
+       return_val = false;
+     }
+ close_src_desc:
+   if (close (source_desc) < 0)
+     {
+       error (0, errno, _("failed to close %s"), quoteaf (src_name));
+       return_val = false;
+     }
+ 
++  /* HIJN */
++  // Checksum
++  // only if copy itself is successfull
++  if (( return_val != false ) && ( ( x->crc ) || (x->crc_with_xattr) ))
++  {
++    t_crc64 crc_des = 0;
++
++    // ONLY for testing
++    //
++    // printf("WAIT\n");
++    // getchar();
++
++    crc_des = CalculateCRC64(dst_name);
++
++    if (crc_des != crc_src)
++    {
++      if (!x->verbose)
++      {
++        printf("%s ", src_name);
++      }
++      textcolor(BRIGHT,RED,BLACK);
++      if (x->verbose)
++      {
++        char* szCRC;
++        int   ret;
++        ret = asprintf(&szCRC, "%016llX", crc_des);
++        if ( ret != -1)
++        {
++          printf("[%s]", szCRC);
++        }
++      }
++
++      // when using crc from stored xattr, it can happen that in very specific cases
++      // that src_file CRC is not flagged as stale, but file did change.
++      // Either by disk faults (bad) or file has been changed w/o updating mtime (not so bad)
++      // Example: Office 2003 is known to update Excel files even when they are not saved
++      // Office 2003 does update an internal atime in the excel file w/o updating file's mtime
++      if (x->crc_with_xattr)
++      {
++        crc_src = CalculateCRC64(src_name);
++
++        // initially, there was a crc mismath based on stored crc in xattr. We have re-calculated the source crc
++        if (crc_des == crc_src)
++        {
++          textcolor(BRIGHT,YELLOW,BLACK);
++          printf("\nWARNING: SRC == DES (based on actual CRC), but, stored CRC of SRC (and DES) file does not match actual CRC of SRC file; SRC file is corrupted?\n");
++
++          // setting to false ensures that when called from crcmv, SRC will not be removed
++          return_val = false;
++        }
++        else
++        {
++          printf(":Checksum FAILED\n");
++          return_val = false;
++        }
++      }
++      else
++      {
++        printf(":Checksum FAILED\n");
++        return_val = false;
++      }
++    }
++    else if (x->verbose)
++    {
++      char* szCRC;
++      int   ret;
++      ret = asprintf(&szCRC, "%016llX", crc_des);
++
++      if ( ret != -1)
++      {
++        textcolor(BRIGHT,GREEN,BLACK);
++        printf("[%s]\n", szCRC);
++      }
++    }
++    RESET_TEXT();
++
++    // check if crc is stored in DES xattr (as SRC might be read only)
++    if ( return_val == true && x->crc_with_xattr )
++    {
++      if ( !IsFreshCRC(dst_name) ) // UPDATE CRC when stale
++      {
++        // suppress errors writing crc in destination xattr, as destination filesystem might not support xattr
++        bool bError = false;
++
++        // CRC is stale, write the already calculated crc
++        if ( !bPutCRC(dst_name, &crc_des, bError) )
++        {
++          if (x->verbose)
++          {
++            // as this is not a fatal error, mark it as yellow
++            printStatus(dst_name, "INFO: Cannot store/update destination CRC in xattr; xattr not supported on filesystem?", GREEN);
++            RESET_TEXT();
++          }
++        }
++      }
++    }
++  }
++  /* END HIJN */
++
+   /* Output debug info for data copying operations.  */
+   if (x->debug)
+     emit_debug (x);
+ 
+   alignfree (buf);
+   return return_val;
+ }
+ 
+ /* Return whether it's OK that two files are the "same" by some measure.
+    The first file is SRC_NAME and has status SRC_SB.

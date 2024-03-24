@@ -1,0 +1,54 @@
+revision: 6413746
+title: Morse Code
+url: https://et.wikipedia.org/wiki/Morse
+
+
+---
+
+Morse ehk morsekood on süsteem, mille abil esitatakse numbreid ja kirjavahemärke punktide, kriipsude ja tühikute abil. Morsekoodi saab edastada näiteks helisignaalidega, elektriimpulssidega või visuaalsete signaalidega, näiteks valguse abil.
+
+
+== Ajalugu ==
+19. sajandi algul konstrueeris ameeriklane Samuel Morse elektromagnetilise telegraafiaparaadi. Telegraaf on seade, mille abil on võimalik edastada sõnumeid üle pika vahemaa. Samuel Morse telegraafiaparaat oli suuteline edastama üle pika vahemaa lühikesi ja pikki toone. Selleks, et oleks võimalik lugeda üle telegraafi saadetud sõnumeid lõid Samuel Morse ja Alfred Vail 1830. aastal süsteemi, mida hiljem hakati nimetama morse koodiks. Kood omistab tähestiku tähtedele ja numbritele spetsiifilised punktide (lühikesed märgid) ja kriipsude (pikad märgid) kombinatsioonid. Kombinatsioonide pikkus on valitud tähtede kasutamise sageduse alusel (inglise keele põhjal); sageli kasutatavad tähed (näiteks "E") said lihtsama koodi, samas kui harva kasutatavad tähed (nt "Q") said pikema ja keerukama koodi.Algselt esitati kood telegraafisüsteemi kaudu märkidena paberile, mille telegraafioperaator seejärel inglise keelde tõlkis. Üsna kiiresti ilmnes aga, et operaatorid suudavad koodi kuulda ja aru saada ainuüksi vastuvõtja klõpsatusi kuulates, mistõttu paber asendati vastuvõtjaga, mis tekitas tugevamaid piiksuvaid helisid.
+18.sajandi keskpaigas, kui morsekood hakkas levima rohkem ka Euroopas, tuli ilmsiks, et algne morsekood ei olnud piisav mitteingliskeelse teksti edastamiseks. Koodist olid puudu diakriitiliste märkidega tähtede koodid. Selle puuduse parandamiseks töötati 1851. aastal Euroopa rahvaste konverentsil välja morsekoodi variant, mida hakati nimetama kontinentaalseks morsekoodeksiks.
+
+
+== Kuidas morsekood töötab ==
+· tähistab punkti ja see on lühike signaal.
+— tähistab kriipsu ja see signaal on kolm korda pikem, kui punkt.
+Igale tähe- ja numbrimärgile on määratud punktide ja kriipsude kombinatsioonid.
+
+
+== Algse morsekoodi ja kontinentaalse morsekoodi erinevus ==
+Need kaks morse koodi süsteemi on üksteisele väga sarnased, kuid kontinentaalne morsekood viidi lihtsamale ja täpsemale kujule. Näiteks algne morsekood kasutas mõne tähe tähistamiseks punktide ja tühikute mustreid, samas kui kontinentaalne morse kasutab kõigi tähtede jaoks punktide ja lühikeste kriipsude kombinatsioone. Lisaks kasutab kontinentaalne morsekood konstantse pikkusega kriipse, kuid algne morsekood kasutas muutuva pikkusega kriipse. Hiljem lisandus veel juurde Rahvusvaheline morsekood, mis on laialdaselt kasutusel ka tänapäeval.
+
+
+== Morse koodi sõnumid ==
+Morsekoodi üks tuntumaid kasutusalasid on SOS signaali edastamine. SOS signaali kujutatakse sellisel kujul "· · · — — — · · ·". SOS on rahvusvaheliselt tunnustatud hädasignaal, mis loodi algselt merenduse jaoks. Formaalses tähistuses kirjutatakse SOS ülekriipsutusega, mis näitab, et "SOS" üksikute tähtede morsekoodi ekvivalendid edastatakse kolme punkti / kolme kriipsu / kolme punkti katkematu jadana, ilma tühikuteta tähtede vahel.
+
+
+== Morsekood kahendkoodi kujul ==
+Esimene võimalus kuidas tõlgendada morsekoodi kahendkujul:
+Morsekoodi kujutatakse kolme olekuna punkt, kriips ja tühik. Neid olekuid saab kujutada kahendkoodi kujul järgnevalt:
+punkt -> 10
+kriips -> 1110
+tühik -> 00Tänu selle teadmisele on võimalik edastada tähestiku tähti ja muid märke kahendkoodi jadana.
+Teine võimalus kuidas tõlgendada morsekoodi kahend kujul:
+Rahvusvahelise morsekoodi iga tähemärgi leidmiseks saame kasutada järgmist kahendpuud. Alustades puu juurest, annab juursõlme vajaliku märgiga ühendavate harude järjestus meile selle märgi morsekoodi. Kodeerimisel tuleb lähtuda sellest, et "dot" tähistab punkti ja "dash" tähistab kriipsu.
+
+Näiteks, kui tahetakse edastada F tähemärk tuleb hakkata liikuma mööda kahendpuud. Kuna näha on, et F asub vasakul pool seega esimene sümbol on punkt  (·), teine sümbol on punkt  (·), kolmas sümbol on kriips (—) ja neljas sümbol on punkt  (·). Täites need sammud saabki kokku F (··—·).
+
+
+== Tähemärgid ja numbrid kujutatud morsekoodi helina ning kujutistena ==
+
+
+== Vaata ka ==
+Samuel Morse
+Alfred Vail
+Telegraf
+Diakriitiliste
+Kahendkood
+Kahendpuu
+
+
+== Viited ==

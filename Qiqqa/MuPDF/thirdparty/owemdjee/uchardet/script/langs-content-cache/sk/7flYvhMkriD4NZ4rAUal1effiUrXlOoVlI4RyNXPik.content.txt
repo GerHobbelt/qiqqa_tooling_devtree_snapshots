@@ -1,0 +1,20 @@
+revision: 6932559
+title: RTorrent
+url: https://sk.wikipedia.org/wiki/RTorrent
+
+
+---
+
+rTorrent je textový ncurses BitTorrent klient napísaný v C++ založený na knižniciach libTorrent pre UNIX (toto nie je knižnica libtorrent vyvíjaná Arvidom Norbergom) so zameraním na vysoký výkon a dobrý kód. Knižnica sa líši od iných implementácii tým, že prenáša dáta priamo medzi súborovými stránkami namapovanými na pamäť pomocou funkcie mmap a sieťovou vrstvou. Na vysokorýchlostných linkách je údajne schopný poskytovať dáta omnoho rýchlejšie ako oficiálny klient.Balíčky rTorrentu sú dostupné pre mnohé distribúcie Linuxu a Unixov a je ho možné skompilovať na takmer každom operačnom systéme kompatibilnom s POSIXovým štandardom, ako je napríklad FreeBSD.
+rTorrent využíva ncurses a vhodne sa kombinuje screen alebo dtach. Podporuje ukladanie relácií a umožňuje používateľom pridávať a odstraňovať torrenty. Takisto podporuje čiastkové šťahovanie torrentov obsahujúcich viacero súborov. Vo verzii 0.7.0 bolo doplnené šifrovanie protokolu BitTorrent. PEX (Výmena peerov) a DHT boli implementované nedávno.
+rTorrent možno tiež ovládať prostredníctvom XML-RPC cez SCGI.
+
+
+== Referencie ==
+
+
+== Externé odkazy ==
+Stránka rTorrentu
+rTorrent pre Darwin/Os X
+nTorrent - Grafické rozhranie pre rTorrent
+rtGui - PHP/Webový interfejs pre rTorrent využívajúce XML-RPC

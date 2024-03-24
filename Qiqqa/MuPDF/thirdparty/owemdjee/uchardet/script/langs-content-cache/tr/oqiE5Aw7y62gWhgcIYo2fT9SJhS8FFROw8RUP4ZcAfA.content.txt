@@ -1,0 +1,12 @@
+revision: 29416189
+title: Cell relay
+url: https://tr.wikipedia.org/wiki/Cell_relay
+
+
+---
+
+Cell relay, bilgisayar ağlarında küçük, sabit uzunluklu paketler hücre röle olarak isimlendirilir. Bu hücreler bilgisayarlar arasında veya her türlü ağ donanımında veri iletimi sağlar. Paketlerin küçük boyutlu olması sayesinde bant genişliği uzun süre işgal edilmez. Böylece video ve ses gibi yoğun trafik gerektiren durumlarda kullanılabilir.
+Cell relay değişken uzunluklu kullanıcı paketlerini kırarak sabit uzunluktaki hücreler oluşturur, adres ve doğrulama bilgisi ekler. Ağ donanımındaki çerçeve uzunluğu sabittir. Bir kullanıcı verisi birçok hücre üzerinde parçalandırılmış olabilir.
+Cell relay (hücre aktarımı) geleneksel paket anahtarlama dan çok daha hızlı çalışmaktadır. Çünkü aktarım sırasında akış kontrolü ve hata denetimi yapmaz. Bu yüzden güvenilir değildir. Hataların düzeltilmesi uç noktalardaki protokollere bırakılmıştır.
+Cell relay iletim oranı genellikle 56 kbit/s ve saniyede birkaç gigabit arasındadır.
+ATM hücre aktarımının (cell relay) popüler bir formudur. DSL bağlantıları için yaygın olarak kullanılır.

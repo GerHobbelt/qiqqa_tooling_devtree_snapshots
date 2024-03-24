@@ -1,0 +1,22 @@
+revision: 5766874
+title: V Live (website)
+url: https://lt.wikipedia.org/wiki/Windows_7
+
+
+---
+
+Windows 7 (ankstesni kodiniai pavadinimai Blackcomb ir Viena) – Microsoft kompanijos sukurta operacinė sistema, pakeitusi savo pirmtakę Windows Vista operacinę sistemą. Windows 7 skirta asmeniniams kompiuteriams, įskaitant namų ir verslo stalinius kompiuterius, nešiojamus kompiuterius, planšetinius kompiuterius ir kt. Ši operacinė sistema buvo sutvarkyta ir modernizuota, siekiant visiško suderinamumo su esamomis įrangos tvarkyklėmis, programomis ir aparatine įranga. Taip pat įdiegta galimybė naudoti lietimui jautrius ekranus, galinčius pakeisti tradicines klaviatūras ir peles.
+Windows 7 operacinėje sistemoje pertvarkyta užduočių juosta, namų tinklo sistema (Home Group). Skirtingai nei ankstesnėse Windows versijose, į Windows 7 neįtrauktos Windows Mail, Windows Movie Maker ir Windows Photo Gallery programos. Jos siūlomos atskirai kaip „Windows Live Essentials“ komplekto komponentai.
+Windows 7 architektūra nedaug tesiskiria nuo Windows Vista. Daugelis sistemos pranešimų perkelta į valdymo skydą, be vartotojo sutikimo programų piktogramos sistemos užduočių juostoje (System Tray) nėra rodomos.
+Viena iš naujovių – „Jump Lists“ sąrašai, į kuriuos įtraukiami dažnai naudojami ir šiuo metu tvarkomi dokumentai, pvz., „Start“ meniu paspaudus Internet Explorer piktogramą, bus parodytas neseniai aplankytų tinklalapių sąrašas.
+„Home Group“ funkcija supaprastino tinklo jungčių ir keitimosi failais konfigūravimą, prisijungimą prie Wi-Fi ar 3G tinklų. Visų prieigos taškų sąrašas rodomas užduočių juostoje.Anot Microsoft, kompiuteris su Windows 7 turėtų veikti greičiau nei su Windows Vista.2020 m. sausio 14 d. kompanija oficialiai sustabdė Windows 7 sistemos atnaujinimus. Šią dieną baigėsi sistemos tobulinimas ir saugos atnaujinimai.
+
+
+== Reikalavimai kompiuteriui ==
+Microsoft paskelbė minimalius reikalavimus Windows 7 veikimui. Reikalavimai 32 bitų versijai yra beveik tokie patys kaip rekomendacijos Vista premium leidimams, bet 64 bitų versijos reikalavimai yra pastebimai didesni.
+Papildomi reikalavimai tam tikroms papildomoms funkcijoms:
+BitLocker reikia Trusted Platform Module (TPM) 1.2 ir USB atmintuko tam, kad būtų galima naudoti BitLocker To Go.
+Windows XP Mode reikia papildomo 1 GB RAM, papildomos 15 GB standžiojo disko vietos ir centrinio procesoriaus, kuris palaikytų virtualizaciją (šiuo atveju OS) geležies lygmenyje ir kuriame būtų įjungtas Intel VT arba AMD-V.
+
+
+== Šaltiniai ==

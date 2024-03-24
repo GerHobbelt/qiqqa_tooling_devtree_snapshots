@@ -1,0 +1,41 @@
+revision: 151807883
+title: Veeam Software
+url: https://es.wikipedia.org/wiki/Veeam_Software
+
+
+---
+
+Veeam Software es una empresa privada del sector de la tecnología de la información que desarrolla software de gestión de backup, recuperación ante desastres y gestión inteligente de datos para infraestructuras virtuales, físicas y multicloud.[2]​[3]​ La sede de la empresa se encuentra en Baar (Suiza) y Ohio (Estados Unidos).[4]​ 
+El nombre de la compañía procede de la pronunciación fonética en inglés de las siglas "VM," que en los ambientes de computación representan a una máquina virtual.[5]​
+
+
+== Historia ==
+Ratmir Timashev y Andrei Baronov fundaron Veeam in 2006. En 2004, Timashev y Baronov vendireron su anterior empresa de software de gestión de TI Aelita Software Corporation, a Quest Software;[6]​[7]​ Dell adquirió Quest Software en 2012.[8]​ En junio de 2016, Dell anunció la venta de su división de software, que incluía a Quest, a Francisco Partners y Elliott Management Corporation.[9]​
+Los primeros productos de Veeam, Veeam Monitor y Veeam Reporter, eran herramientas que proporcionaban monitorización, generación de informes, análisis y documentación de las infraestructuras virtuales. Más adelante, en 2010, la empresa combinó ambos productos para concebir Veeam ONE.[10]​ Veeam obtuvo reconocimiento dentro del sector en 2007 gracias a su producto gratuito de copia de backup de VMs, FastSCP,[11]​ que se convirtió en la base de desarrollo para crear el software de protección de datos de Veeam para la virtualización de hardware.
+En 2014, Veeam organizó bajo el nombre de "VeeamON", su primera conferencia sobre disponibilidad y protección de datos, que tuvo lugar en Las Vegas, Nevada.[12]​
+En el año 2016, Veeam nombró a Peter C. McKay, anteriormente vicepresidente y director general de VMware para el continente americano, como Presidente/COO.[13]​ En 2017, la compañía promocionó a Peter McKay y Andrei Baronov para los cargos de Co-CEO. A finales de 2018, Andrei Baronov fue promocionado para desempeñar el cargo de CEO.[14]​
+La compañía posee numerosas oficinas internacionales, entre las que se incluyen las regionales para EMEA en Paris (Francia), para América en Columbus (Ohio), para Oriente medio en Dubái y la región Asia-Pacífico en Sídney (Australia).
+El 9 de enero de 2020, Insight Partners anunció la intención de adquirir Veeam en un operación de 5000 millones de dólares y trasladar la empresa a los Estados Unidos.[15]​
+El 22 de julio de 2020, se comunicó que Gartner, Inc. incluía a Veeam Software como Líder dentro de su Magic Quadrant 2020 en la categoría de soluciones de backup y recuperación de centros de datos.[16]​
+En 2020, Veeam nombró a Bill Largent, CEO y presidente de la junta directiva.[17]​
+
+
+== Software ==
+En 2008, con 10 empleados, la empresa lanzó al mercado Veeam Backup & Replication, una herramienta que proporcionaba backup incremental y replicación basada en imagen para las VMs de VMware vSphere , con deduplicación de datos y compresión.[18]​ Veeam Backup & Replication comenzó a dar soporte también para Microsoft Hyper-V en 2012.[19]​
+En 2015, la compañía amplió su línea de productos con una utilidad de backup gratuita para endpoints físicos (Veeam Endpoint Backup FREE); soportaba PCs que ejecutaran las versiones de 32 y 64-bits del SO Microsoft Windows y se integraba con Veeam Backup & Replication.[20]​ En este mismo año, lanzó al mercado Veeam FastSCP for Microsoft Azure, una herramienta para copiar archivos entre las VMs locales (on-premises) y de Microsoft Azure.[21]​
+En 2016, se lanzó Veeam Backup for Microsoft Office 365, para hacer backup de servidores Exchange de Office 365,[22]​ y Veeam Availability Orchestrator, un software de orquestación de la recuperación ante desastres multihipervisor con funcionalidades de documentación, pruebas y generación de informes.[23]​
+En el año 2017 Veeam presentó tres nuevos productos: Veeam Agent for Microsoft Windows y Veeam Agent for Linux (para la protección de datos de cargas de trabajo físicas con varios escenarios de backup/restauración que incluían la nube),[24]​ y Veeam Availability Console, una herramientas gratuita para gestionar la protección de datos y recuperación ante desastres con tecnología Veeam en infraestructuras distribuidas, habilitando servicios BaaS y DRaaS prestados a través de proveedores de servicios.[25]​
+En 2020, Veeam anunció 16 lanzamientos principales (más de 25 si se incluyen actualizaciones) con cientos de nuevas funcionalidades. Estos incluyen Veeam Backup & Replication™ v10, Veeam ONE™ v10, Veeam Backup for Nutanix AHV v2, Veeam Service Provider Console v4, Veeam Backup for Microsoft Azure v1, Veeam Availability Orchestrator v3, Veeam Backup for Microsoft Office 365 v5 y Veeam Backup for AWS v3.
+
+
+== Adquisiciones ==
+En el año 2008, la compañía adquirió la empresa nworks para desarrollar aún más la integración de la gestión de entornos VMware con las plataformas de gestión de sistemas empresariales de Microsoft y Hewlett-Packard.[26]​
+El resultado de esta adquisición fue el lanzamiento de dos nuevos productos:[27]​
+
+Veeam nworks Management Pack para VMware, un producto que permite a los usuarios integrar directamente la gestión de VMware en System Center Operations Manager de Microsoft.
+Veeam nworks Smart Plug-In para VMware, un producto que permite a los usuarios integrar directamente la gestión de VMware en el producto de administración HP OpenView.En 2012, ambos productos fueron renombrados como Veeam Management Pack y Veeam Smart Plug-In, omitiendo la palabra "nworks".
+En 2017, Veeam adquirió N2WS, una empresa que proporciona soluciones de backup y recuperación ante desastres a nivel empresarial nativas de la nube para Amazon Web Services (AWS).[28]​ En el año 2019, Veeam vendió nuevamente N2WS a sus fundadores originales tras negociaciones con el Gobierno de los Estados Unidos.[29]​ 
+En 2020, Veeam adquirió Kasten, el líder del mercado de soluciones de backup y recuperación ante desastres para Kubernetes.[30]​
+
+
+== Referencias ==

@@ -1,0 +1,89 @@
+revision: 15610561
+title: Amazon Web Services
+url: https://ro.wikipedia.org/wiki/Amazon_Web_Services
+
+
+---
+
+Amazon Web Services (AWS) este o filială a Amazonului care furnizează platforme de cloud computing la cerere și API-uri pentru persoane fizice, companii și guverne, pe bază de plată contorizată. Aceste servicii web de cloud computing oferă o varietate de infrastructuri tehnice abstracte de bază și blocuri și instrumente de calcul distribuite. Unul dintre aceste servicii este Amazon Elastic Compute Cloud (EC2), care permite utilizatorilor să aibă la dispoziție un cluster virtual de computere, disponibile tot timpul, prin Internet. Versiunea AWS a computerelor virtuale emulează majoritatea atributelor unui computer real, inclusiv unități centrale de procesare hardware (microprocesoare) și unități de procesare grafică (GPU-uri) pentru procesare; memorie locală / RAM; stocare pe HDD / SSD; o alegere a sistemelor de operare; rețele; și aplicații software preîncărcate, cum ar fi servere web, baze de date și managementul relației cu clienții (CRM).
+Tehnologia AWS este implementată la fermele de servere din întreaga lume și este întreținută de filiala Amazon. Taxele se bazează pe o combinație de utilizare (cunoscută sub numele de modelul „Pay-as-you-go”), hardware, sistem de operare, software sau caracteristici de rețea alese de abonat, disponibilitate, redundanță, securitate și opțiuni de servicii necesare. Abonații pot plăti pentru un singur computer AWS virtual, un computer fizic dedicat sau clustere ale oricărui computer. Ca parte a acordului de abonament,  Amazon oferă securitate sistemelor abonaților. AWS operează din multe regiuni geografice globale, inclusiv 6 în America de Nord. Amazon comercializează AWS abonaților ca o modalitate de a obține o capacitate de calcul pe scară largă mai rapidă și mai ieftină decât construirea unei ferme de servere fizice reale.  Toate serviciile sunt facturate în funcție de utilizare, dar fiecare serviciu măsoară utilizarea în moduri diferite. Începând cu 2017, AWS deține un dominant 33%  din tot ce înseamnă cloud (IaaS, PaaS), în timp ce următorii doi concurenți Microsoft Azure și Google Cloud au 18% și, respectiv, 9%, potrivit Synergy Group.  
+
+
+== Servicii ==
+Începând cu 2021, AWS cuprinde peste 200  produse și servicii, inclusiv calculatoare, stocare, rețele, baze de date, analize, servicii de aplicații, implementare, gestionare, învățare automată,  mobil, instrumente pentru dezvoltatori și instrumente pentru Internet of Things. Cele mai populare includ Amazon Elastic Compute Cloud (EC2), Amazon Simple Storage Service (Amazon S3), Amazon Connect și AWS Lambda (o funcție fără server care permite ETL fără server, de exemplu, între instanțele EC2 și S3). Majoritatea serviciilor nu sunt expuse direct utilizatorilor finali, ci oferă în schimb funcționalități prin API-uri pe care dezvoltatorii le pot folosi în aplicațiile lor. Ofertele Amazon Web Services sunt accesate prin HTTP, utilizând stilul arhitectural REST și protocolul SOAP pentru API-urile mai vechi și exclusiv JSON pentru cele mai noi.
+
+
+== Istorie ==
+
+
+=== Înființare (2000-2005) ===
+Geneza AWS a fost când, la începutul anilor 2000, experiența cu construirea Merchant.com, platforma Amazon de comerț electronic, i-a făcut să urmărească arhitectura orientată spre servicii ca un mijloc de a-și scala operațiunile de inginerie        conduse de CTO-ul de atunci, Allan Vermeulen. Aproximativ în același interval de timp, Amazon a căutat să creeze „o platformă IT partajată”, astfel încât organizațiile sale de inginerie care își petreceau 70% din timp pentru „sarcinile dificile nediferențiate”, cum ar fi problemele IT și de infrastructură, s-ar putea concentra pe inovația orientată către clienți.  În plus, în gestionarea tiparelor neobișnuite de trafic în special în timpul sezonului de vacanță, migrarea serviciilor către hardware Linux de marfă și dependența de software-ul open source aveau deja echipa de infrastructură Amazon, condusă de Tom Killalea,  primul CISO al Amazonului,   ocupată în a rula centrele lor de date și serviciile asociate într-un mod „rapid, fiabil, ieftin”. În iulie 2002, Amazon.com Web Services, administrat de Colin Bryar,  lansat primele sale servicii web deschizând platforma Amazon.com tuturor dezvoltatorilor.  Peste o sută de aplicații au fost construite deasupra acesteia până în 2004.  Acest interes neașteptat al dezvoltatorilor a luat Amazon prin surprindere și i-a convins că dezvoltatorii „au foame de mai mult”. Până în vara anului 2003, Andy Jassy preluase portofoliul lui Bryar  la comanda lui Rick Dalzell, după ce Vermeulen, care a fost prima alegere a lui Bezos, a refuzat oferta. Jassy a stabilit ulterior viziunea pentru un "sistem de operare Internet"  alcătuit din primitive fundamentale de infrastructură care au atenuat impedimentele cheie pentru livrarea mai rapidă a aplicațiilor software. Până în toamna anului 2003, baze de date, stocare și calculare au fost identificate ca primul set de piese de infrastructură pe care Amazon ar trebui să le lanseze. 
+Jeff Barr, un angajat timpuriu al AWS, îi recunoaște pe Vermeulen, Jassy, Bezos, el însuși și câțiva alții pentru că au venit cu ideea a ceea ce va evolua în EC2, S3 și RDS,  timp ce Jassy își amintește că a fost un rezultat al unui brainstorming timp de aproximativ o săptămână cu „zece dintre cele mai bune minți tehnologice și zece dintre cele mai bune minți de gestionare a produselor ” pe aproximativ zece aplicații de internet diferite și cele mai primitive elemente de bază necesare pentru a le construi. Werner Vogels anulează dorința Amazonului de a face procesul de „inventare, lansare, reinventare, relansare, reluare, clătire, repetare” cât de repede ar fi putut să-i fi condus la defalcarea structurilor organizaționale cu „echipe de două pizza” și structuri de aplicații cu sisteme distribuite ; și că aceste schimbări au pregătit în cele din urmă calea pentru formarea AWS  și misiunea sa „de a expune toate piesele la nivel atomic ale platformei Amazon.com”.  Potrivit lui Brewster Kahle, cofondator al Alexa Internet, care a fost achiziționat de Amazon în 1999, infrastructura de calcul a start-up-ului său a ajutat Amazon să-și rezolve problemele de date mari și ulterior a informat inovațiile care au stat la baza AWS. Jassy a reunit o echipă fondatoare formată din 57 de angajați dintr-o combinație de medii de inginerie și afaceri pentru a demara aceste inițiative,  majoritatea angajaților venind din afara companiei;  Jeff Lawson, CEO Twilio  Adam Selipsky, CEO Tableau   și Mikhail Seregine,  cofondator la Outschool printre ei.
+La sfârșitul anului 2003, conceptul de calcul, care va fi lansat ulterior sub numele de EC2, a fost reformulat atunci când Chris Pinkham și Benjamin Black au prezentat o lucrare care descrie o viziune pentru infrastructura de calcul Amazon de retail, care a fost complet standardizată, complet automatizată și s-ar baza în mare pe servicii web, cum ar fi stocarea și s-ar baza pe munca internă deja în desfășurare. Aproape de sfârșitul lucrării, au menționat posibilitatea vânzării accesului la servere virtuale ca serviciu, propunând companiei să genereze venituri din noua investiție în infrastructură.    Ulterior, Pinkham și principalul dezvoltator Christopher Brown au dezvoltat serviciul Amazon EC2, cu o echipă în Cape Town, Africa de Sud. În noiembrie 2004, primul serviciu de infrastructură AWS a fost lansat pentru uz public: Simple Queue Service (SQS). 
+
+
+=== S3, EC2 și alte servicii de primă generație (2006-2010) ===
+La 14 martie 2006, s-a lansat stocarea în cloud Amazon S3  urmată de EC2 în august 2006.  Andy Jassy, fondator și vicepreședinte al AWS în 2006, a declarat atunci că Amazon S3 „ajută dezvoltatorii să nu se îngrijoreze de locul în care vor stoca datele, dacă acestea vor fi sigure, dacă vor fi disponibile atunci când vor avea nevoie de ele, costurile asociate întreținerii serverului sau dacă dispun de suficient spațiu de stocare. Amazon S3 permite dezvoltatorilor să se concentreze pe inovarea cu date, mai degrabă decât să descopere cum să le stocheze. "  Pi Corporation, un startup cofondat de Paul Maritz, a fost primul beta-utilizator al EC2 în afara Amazonului, în timp ce Microsoft a fost printre primii clienți ai întreprinderii EC2.  Mai târziu în acel an, SmugMug, unul dintre primii adoptatori AWS, a atribuit economii de aproximativ 400.000 USD în costurile de stocare pentru S3. 
+În septembrie 2007, AWS a anunțat evenimentul anual Start-up Challenge, un concurs cu premii în valoare de 100.000 USD pentru antreprenori și dezvoltatori de software cu sediul în SUA care utilizează servicii AWS precum S3 și EC2 pentru a-și construi afacerile. Prima ediție a văzut participarea de la Justin.tv, pe care Amazon avea să o achiziționeze ulterior în 2014. Ooyala, o companie de mass-media online, fost câștigătorul final.
+Servicii AWS suplimentare din această perioadă includ SimbleDB, Mechanical Turk, Elastic Block Store, Elastic Beanstalk,  Servicii de baze de date relationale DynamoDB, CloudWatch, simplu flux de lucru, CloudFront, si Zone de Disponibilitate.
+
+
+=== Creștere (2010-2015) ===
+
+În noiembrie 2010, s-a raportat că toate site-urile de vânzare cu amănuntul ale Amazon.com au migrat către AWS. Înainte de 2012, AWS era considerat o parte a Amazon.com și astfel veniturile sale nu erau delimitate în situațiile financiare ale Amazon. În acel an, observatorii din industrie au estimat pentru prima dată veniturile AWS la peste 1,5 miliarde de dolari.
+La 27 noiembrie 2012, AWS a găzduit prima sa conferință anuală importantă, re:Invent cu accent pe partenerii și ecosistemul AWS cu peste 150 de sesiuni. Evenimentul de trei zile a avut loc la Las Vegas datorită conectivității sale relativ mai ieftine cu locații din Statele Unite și restul lumii. Andy Jassy și Werner Vogels au prezentat cuvinte cheie, iar Jeff Bezos s-a alăturat lui Vogels pentru o discuție pe foc. AWS a deschis înregistrări timpurii la 1099 USD pe cap pentru clienții lor din peste 190 de țări. Reed Hastings, CEO la Netflix, a anunțat planurile de a migra 100% din infrastructura Netflix către AWS.
+Pentru a susține formarea la nivel de industrie și standardizarea competențelor, AWS a început să ofere un program de certificare pentru inginerii de calculatoare, la 30 aprilie 2013, pentru a evidenția expertiza în cloud computing. Mai târziu în acel an, în octombrie, AWS a lansat Activate, un program pentru start-up-uri din întreaga lume pentru a beneficia de credite AWS, integrări de la terți și acces gratuit la experți AWS pentru a-și ajuta afacerea.
+În 2014, AWS și-a lansat rețeaua de parteneri intitulată APN (AWS Partner Network), care se concentrează pe ajutarea companiilor din AWS să crească și să dezvolte succesul afacerii lor cu o colaborare strânsă și cele mai bune practici.
+În ianuarie 2015, Amazon Web Services a achiziționat Annapurna Labs, o companie din Israel de microelectronică, cu reputație pentru 350-370 milioane USD.
+În aprilie 2015, Amazon.com a raportat că AWS a fost profitabilă, cu vânzări de 1,57 miliarde USD în primul trimestru al anului și 265 milioane USD venituri din exploatare. Fondatorul Jeff Bezos a descris-o ca o afacere cu o creștere rapidă de 5 miliarde de dolari; analiștii l-au descris ca fiind „surprinzător mai profitabil decât prognozat”. În octombrie, Amazon.com a declarat în raportul său de câștiguri din al treilea trimestru că venitul operațional al AWS a fost de 521 milioane dolari, cu marjele operaționale de 25%. Veniturile AWS pentru trimestrul III 2015 au fost de 2,1 miliarde USD, o creștere de 78% față de veniturile trimestrului 3 din 2014, de 1,17 miliarde USD. Veniturile din trimestrul IV 2015 pentru segmentul AWS au crescut cu 69,5% an la an, la 2,4 miliarde USD, cu o marjă operațională de 28,5%, oferind AWS o rată de execuție de 9,6 miliarde USD. În 2015, Gartner a estimat că clienții AWS implementează o infrastructură de 10 ori mai mare pe AWS decât adoptarea combinată a următorilor 14 furnizori. 
+
+
+=== Conducerea pieței (2016 – prezent) ===
+James Hamilton, care conduce centrul de calcul și proiectarea rețelei AWS a scris un articol retrospectiv în 2016 pentru a evidenția istoria de zece ani a serviciului online din 2006 până în 2016. În calitate de fan timpuriu și susținător deschis al tehnologiei, s-a alăturat echipei de ingineri AWS în 2008.
+În primul trimestru al anului 2016, veniturile au fost de 2,57 miliarde de dolari, cu un venit net de 604 milioane de dolari, o creștere de 64% față de primul trimestru din 2015, ceea ce a dus la AWS să fie mai profitabil decât afacerea cu amănuntul din America de Nord din Amazon pentru prima dată.  Jassy a fost apoi promovat la funcția de CEO al diviziei.  În același timp, Amazon a înregistrat o creștere de 42% a valorii acțiunilor ca urmare a creșterii câștigurilor, din care AWS a contribuit cu 56% la profiturile companiilor. 
+AWS a avut venituri anuale de 17,46 miliarde de dolari în 2017.  Până la sfârșitul anului 2020, numărul lor a crescut la 46 miliarde de dolari.  Reflectând succesul AWS, compensația anuală a lui Jassy în 2017 a atins aproape 36 de milioane de dolari. 
+În ianuarie 2018, Amazon a lansat un serviciu de autoscalare pe AWS.  
+În noiembrie 2018, AWS a anunțat nuclee ARM personalizate pentru utilizare pe serverele sale.  Tot în noiembrie 2018, AWS dezvoltă stații terestre pentru a comunica cu sateliții clienților. 
+În 2019, AWS a raportat o creștere anuală de 37% și a reprezentat 12% din veniturile Amazon (în creștere față de 11% în 2018). 
+În aprilie 2021, AWS a raportat o creștere anuală de 32% și a reprezentat 32% din piața cloud de 41,8 miliarde de dolari în primul trimestru al anului 2021. 
+
+
+=== Bază de clienți ===
+La 14 martie 2006, Amazon a declarat într-un comunicat de presă:  „Peste 150.000 de dezvoltatori s-au înscris pentru a utiliza Amazon Web Services încă de la înființare”.
+În noiembrie 2012, AWS a găzduit primul său eveniment pentru clienți în Las Vegas .
+La 13 mai 2013, AWS a primit o Autoritate de Operare a Agenției (ATO) de la Departamentul SUA pentru Sănătate și Servicii Umane în cadrul Programului Federal de Management al Riscurilor și Autorizărilor .
+În octombrie 2013, s-a dezvăluit că AWS a primit un contract de 600 milioane USD cu CIA .
+În august 2014, AWS a primit autorizația provizorie a Departamentului Apărării pentru toate regiunile SUA.
+În cursul reinventării 2015, AWS a dezvăluit că au mai mult de un milion de clienți activi în fiecare lună în 190 de țări, incluzând aproape 2.000 de agenții guvernamentale, 5.000 de instituții de învățământ și peste 17.500 de organizații non-profit.
+La 5 aprilie 2017, AWS și DXC Technology (formate dintr-o fuziune între CSC și HPE Enterprise Services Business) au anunțat o alianță extinsă pentru a spori accesul caracteristicilor AWS pentru clienții de întreprindere în centrele de date existente.Printre clienții notabili se numără NASA,  campania prezidențială Obama din 2012,  și Netflix . 
+În 2019, s-a raportat că mai mult de 80% din companiile DAX listate din Germania folosesc AWS. 
+În august 2019, US Navy a declarat că a mutat 72.000 de utilizatori de la șase comenzi la un sistem cloud AWS ca prim pas către împingerea tuturor datelor și analizelor sale în cloud. 
+În 2021, DISH Network a anunțat că vor dezvolta și lansa rețeaua sa 5G pe AWS. 
+
+
+=== Întreruperi semnificative ale serviciilor ===
+Pe 20 aprilie 2011, AWS a suferit o întrerupere majoră. Părți ale serviciului Elastic Block Store (EBS) au devenit „blocate” și nu au putut îndeplini cererile de citire / scriere. Au fost necesare cel puțin două zile pentru ca serviciul să fie complet restaurat.
+Pe 29 iunie 2012, mai multe site-uri web care se bazează pe Amazon Web Services au fost scoase offline din cauza unei furtuni puternice în Virginia de Nord, unde se află cel mai mare cluster de centre de date AWS.
+Pe 22 octombrie 2012, a avut loc o întrerupere majoră, care a afectat multe site-uri precum Reddit, Foursquare, Pinterest și altele. Cauza a fost o eroare de scurgere a memoriei într-un agent operațional de colectare a datelor.
+Pe 24 decembrie 2012, AWS a suferit o altă întrerupere, cauzând indisponibilitatea site-urilor web precum Netflix pentru clienții din nord-estul Statelor Unite.  AWS a citat serviciul lor Elastic Load Balancing (ELB) ca fiind cauza.
+Pe 28 februarie 2017, AWS a înregistrat o întrerupere masivă a serviciilor S3 în regiunea sa din Virginia de Nord. Majoritatea site-urilor care se bazau pe AWS S3 au fost atârnate sau blocate, iar Amazon a raportat în termen de cinci ore că AWS a fost din nou complet online. Nu s-a raportat că s-au pierdut date din cauza întreruperii. Întreruperea a fost cauzată de o eroare umană făcută în timpul depanării, care a dus la eliminarea mai multor capacități de server decât intenționat, ceea ce a provocat un efect domino al întreruperilor.
+Pe 25 noiembrie 2020, AWS a experimentat câteva ore de întrerupere a serviciului Kinesis din regiunea Virginia de Nord (us-est-1). Au fost afectate și alte servicii bazate pe Kinesis.
+
+
+== Muncă caritabilă ==
+În 2017, AWS a lansat AWS re/Start în Regatul Unit pentru a ajuta tinerii adulți și veteranii militari să se recalifice în competențe legate de tehnologie. În parteneriat cu Prince's Trust și Ministerul Apărării (MD), AWS va contribui la oferirea de oportunități de reinstruire a tinerilor din medii defavorizate și a fostului personal militar. AWS lucrează alături de o serie de companii partenere, printre care Cloudreach, Sage Group, EDF Energy și Tesco Bank . 
+În ianuarie 2021, AWS s-a alăturat unui angajament al industriei de a atinge neutralitatea climatică a centrelor de date până în 2030, Pactul pentru Centrul de Date Neutru Climatic . 
+
+
+== Vezi si ==
+Comparație cloud computing
+Compararea serviciilor de găzduire a fișierelor
+Tim Bray
+James Gosling
+
+
+== Note ==
+ 
+
+
+== Referințe ==

@@ -1,0 +1,53 @@
+revision: 25951632
+title: "\u041A\u043E\u043F\u0442\u0441\u043A\u043E \u043F\u0438\u0441\u043C\u043E"
+url: https://sr.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BF%D1%82%D1%81%D0%BA%D0%B8_%D0%B0%D0%BB%D1%84%D0%B0%D0%B1%D0%B5%D1%82
+
+
+---
+
+Коптски алфабет је писмо које се користи за писање коптског језика. Број глифова се заснива на грчком алфабету кроз слова која су позајмљена из египатског демотског писма, и то је прво алфабетско писмо које се користило за писање египатског језика. Постоји неколико коптских алфабета, с обзиром да је коптски систем писања варирао кроз бројне дијалекте и субдијалекте коптског језика.
+
+
+== Историја ==
+
+Коптски алфабет има дугу историју, почевши од периода Птолемејског краљевства у Египту, до коришћења грчког писма ради транскрибовања текстова на демотском писму с циљем бележења тачног изговора демотског језика. Током прва два века нове ере, написана је група магијских текстова на језику који научници називају стари коптски, а текстови на египатском су писани грчким алфабетом. Међутим, један број слова је изведен из демотског писма, и многа се данас користе у правом коптском писму. Са ширењем хришћанства у Египту, већ до 3. века престаје да се пише египатским хијероглифима, а и демотским мало касније, што је учинило да се ова врста писања више повезује са хришћанском црквом. До 4. века, коптски алфабет је стандардизован, посебно што се сахидског дијалекта тиче. (Постоје бројне разлике у писмима којима се пишу различити дијалекти коптског језика.) Коптски се данас генерално не користи, сем у заједницама Коптске оријентално-православне цркве у Александрији који се њиме користе да би писали религијске текстове. Сви гностички кодекси пронађени у Наг Хамадију (горњи Египат) написани су коптским писмом.
+Стари нубијски алфабет који се користио за писање старог нубијског језика, нило-сахарски језик, углавном је писан уницијалним грчким алфабетом, који позајмљује слова из коптског и мероитског језика демотског порекла.
+
+
+== Облик ==
+Коптско писмо је први систем писања у Египту у којем су забележени самогласници, што чини коптске документе безвредним што се тиче ранијих египатских текстова. Неки египатски слогови су имали соноранте, али нису имали самогласнике; у сахидском дијалекту, они су писани у коптском као линије изнад целог слога. Разне писарске школе су ограничиле употребу дијакритичких знакова: неки су речи делили зарезом , којим су такође и обележавали клитике, које представљају детерминативе у логографском египатском језику; други користе дијакритике изнад ⲓ и ⲩ да би означили да њима почињу нови слогови, неки користе генитивни знак изнад било којег вокала у истој улози.Коптски је углавном базиран на грчком алфабету, што потпомаже тумачење старих египатских текстова, са 24 слова грчког порекла; друга 6 или 7 слова су преузета из демотског египатског писма, у зависности од дијалекта (6 у сахидском, а по једно више у бохаирском и ахмимском). Поред слова алфабета, слово ϯ је представљало слово /ti/. 
+
+
+== Алфабет ==
+
+
+== Види још ==
+Коптски језик
+Коптска оријентално-православна црква
+Копти
+Коптска уметност
+
+
+== Референце ==
+
+
+== Литература ==
+Quaegebeur, Jan. 1982. "De la préhistoire de l'écriture copte." Orientalia lovaniensia analecta 13:125-136.
+Kasser, Rodolphe. 1991. "Alphabet in Coptic, Greek". In The Coptic Encyclopedia, edited by Aziz S. Atiya. New York: Macmillan Publishing Company, Volume 8. 30-32.
+Kasser, Rodolphe. 1991. "Alphabets, Coptic". In The Coptic Encyclopedia, edited by Aziz S. Atiya. New York: Macmillan Publishing Company, Volume 8. 32-41.
+Kasser, Rodolphe. 1991. "Alphabets, Old Coptic". In The Coptic Encyclopedia, edited by Aziz S. Atiya. New York: Macmillan Publishing Company, Volume 8. 41-45.
+Wolfgang Kosack: Koptisches Handlexikon des Bohairischen. Koptisch - Deutsch - Arabisch. Verlag Christoph Brunner, Basel. 2013. ISBN 978-3-9524018-9-7.
+
+
+== Спољашње везе ==
+
+Michael Everson Revised proposal to add the Coptic alphabet to the BMP of the UCS Архивирано на сајту Wayback Machine (18. септембар 2009)
+Copticsounds – a resource for the study of Coptic phonology
+Coptic Unicode input
+Michael Everson Antinoou: A standard font for Coptic supported by the International Association for Coptic Studies.
+Ifao N Copte – A professional Coptic Unicode font for researchers, students and publishers has been developed by the French institute of oriental archeology (IFAO). Unicode, Mac and Windows compatible, this free font is available through downloading from the IFAO website (direct link).
+Coptic Unicode fonts ; Coptic fonts made by Laurent Bourcellier & Jonathan Perez, type designers
+ⲡⲓⲥⲁϧⲟ Архивирано на сајту Wayback Machine (8. март 2021): Coptic font support Архивирано на сајту Wayback Machine (25. јануар 2021) – how to install, use and manipulate Coptic ASCII and Unicode fonts
+Download Free Coptic Fonts
+The Coptic Alphabet (omniglot.com)
+GNU FreeFont Coptic range in serif face

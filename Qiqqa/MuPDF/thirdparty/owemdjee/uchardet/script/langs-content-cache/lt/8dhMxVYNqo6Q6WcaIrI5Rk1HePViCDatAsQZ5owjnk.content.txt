@@ -1,0 +1,103 @@
+revision: 6146724
+title: transistor
+url: https://lt.wikipedia.org/wiki/Sud%C4%97tinis_tranzistorius
+
+
+---
+
+Sudėtinis tranzistorius – vieną tranzistorių imituojantis dviejų (kartais ir daugiau) tranzistorių junginys. Sudėtinio tranzistoriaus bazė yra pirmojo tranzistoriaus bazė, emiteris – antrojo tranzistoriaus emiteris, kolektorius – kartu sujungti abiejų tranzistorių kolektoriai. Tranzistoriai sujungiami kaip parodyta schemoje. Jie gali būti vienodo galingumo arba antrasis tranzistorius gali būti galingesnis (maksimali kolektoriaus srovė yra antrojo tranzistoriaus leidžiama kolektoriaus srovė).Praeityje šis mazgas buvo surenkamas iš atskirtų tranzistorių. Šiuo metu gaminami vadinamieji Darlingtono tranzistoriai – du pagal sudėtinio tranzistoriaus schemą sujungti tranzistoriai viename korpuse. Sidnėjus Darlingtonas užpatentavo galimybę patalpinti du ar tris tranzistorius į vieną korpusą, tačiau patentas neapima didesnio tranzistorių skaičiaus (toks patentas būtų apėmęs visas šiuolaikines integrines mikroschemas).
+
+
+== Ypatybės ==
+Sudėtinis tranzistorius elgiasi kaip labai didelį srovės stiprinimo koeficientą turintis paprastas tranzistorius. Jo stiprinimo koeficientas:
+
+  
+    
+      
+        
+          β
+          
+            
+              D
+              a
+              r
+              l
+              i
+              n
+              g
+              t
+              o
+              n
+            
+          
+        
+        =
+        
+          β
+          
+            1
+          
+        
+        ×
+        
+          β
+          
+            2
+          
+        
+      
+    
+     
+  Viename korpuse gaminamiems sudėtiniams tranzistoriams jis siekia 1000 ir daugiau, todėl juos atidaryti gali net ir labai nedidelė įėjimo srovė. Tačiau tokiam tranzistoriui atidaryti reikalinga didesnė įtampa (apie 1,2 V), kuriuos turi pakakti srovei per dvi bazės – emiterio sandūras tekėti:
+
+  
+    
+      
+        
+          V
+          
+            
+              B
+              E
+            
+          
+        
+        =
+        
+          V
+          
+            
+              B
+              E
+              1
+            
+          
+        
+        +
+        
+          V
+          
+            
+              B
+              E
+              2
+            
+          
+        
+      
+    
+     
+  Sudėtinis tranzistorius taip pat yra palyginus lėtesnis, nes pirmasis tranzistorius negali efektyviai nuslopinti antrojo tranzistoriaus bazės srovės. Pastebėta, jog schema greičiau dirba jei tarp pirmojo tranzistoriaus emiterio ir antrojo tranzistoriaus bazės įterpiama kelių šimtų omų varža. Viename korpuse pagaminti sudėtiniai tranzistoriai dažnai turi ir šį rezistorių.
+
+
+== Sziklai pora ==
+
+Kitas žinomas sudėtinio tranzistoriaus tipas yra Sziklai pora, pasiūlyta George C. Sziklai. Šiame tipe naudojami du tarpusavyje priešingos struktūros tranzistoriai. Sziklai pora turi tokį pat didelį srovės stiprinimo koeficientą, kaip ir Darlingtono pora, tačiau jai atidaryti pakanka maždaug pusės Darlingtono tranzistoriui reikalingos įtampos, apie 0,6 V (tiek pat reikia ir paprastam tranzistoriui).  Ši schema taip pat turi geresnes dažnines savybes ir stabilesnė keičiantis temperatūrai.Pastebėta, jog schema greičiau dirba jei tarp pirmojo tranzistoriaus kolektoriaus ir antrojo tranzistoriaus bazės įterpiama kelių šimtų omų varža. Viename korpuse pagaminta Sziklai pora dažnai turi ir šį rezistorių.
+Garso stiprintuvai neretai reikalauja padidintos galios, priešingos struktūros tranzistorių poros. Praeityje, kuomet buvo sunku pagaminti galingesnius PNP struktūros tranzistorius, Sziklai ir Darlingtono poros būdavo naudojamos kartu. Sziklai pora su tokio pat tipo antruoju tranzistoriumi imituoja priešingos struktūros tranzistorių nei Darlingtono pora. Dabar tai retai pasitaiko, nes abiejų struktūrų tranzistoriai kainuoja panašiai.
+
+
+== Terminai ==
+Anglų kalboje sudėtiniu tranzistoriui (compound transistor) vadinama Sziklai pora. Senesnėje lietuviškoje radijo mėgėjų literatūroje sudėtiniu tranzistoriumi buvo vadinama pirmoji, iš vienodos struktūros tranzistorių sudaryta schema.
+
+
+== Šaltiniai ==

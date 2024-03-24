@@ -1,0 +1,31 @@
+revision: 21123427
+title: Scholar
+url: https://fi.wikipedia.org/wiki/Google_Scholar
+
+
+---
+
+Google Scholar on yhdysvaltalaisen Googlen tuottama maksuton hakupalvelu, jonka avulla voi etsiä tieteellisiä julkaisuja. Palvelu avattiin 18. marraskuuta 2004, ja se on nykyisin käytettävissä neljällätoista eri kielellä, myös suomeksi.Google Scholarin haku kattaa suurimman osan merkittävistä akateemisen kirjallisuuden julkaisijoista (ilmaisia ja maksullisia lähteitä) ja myös muuta perinteisten julkaisuhakupalvelujen ulkopuolelle jäävää aineistoa (mm. esitelmiä, seminaaripuheita). Palvelun seuraamista tietokannoista, aineiston iästä ja hakutietokannan päivitystiheydestä ei ole saatavilla tarkkaa tietoa. Jotkut julkaisijat eivät puolestaan salli Google Scholarin hakea tietokantojaan. 
+Palvelusta näyttäisi puuttuvan muun muassa huomattava osa Elsevierin ja Karger Pressin julkaisuista.Palvelun kehittyneimpiä ominaisuuksia on muun muassa julkaisuihin kohdistuneiden viittausten listaus. Sen sijaan käyttöliittymä ja tietokantarakenne eivät joidenkin arvostelijoiden mukaan ole vielä kehittyneet vastaamaan palvelun erikoistarpeita. Esimerkiksi Googlen yleishakukoneesta peräisin oleva PageRank-järjestelmä nostaa esille suositut ja paljon viittauksia saaneet vanhat tutkimukset, kun looginen järjestys olisi tuoreimmasta tiedosta vanhimpaan.
+
+
+== Historiaa ==
+Google Scholar lähti liikkelle Alex Verstakin ja Anurag Acharyan välisestä keskustelusta. Kumpikin heistä oli tuolloin osallistunut Googlen päähakukoneen ohjelmointiin.Vuonna 2006 Microsoftin julkaistua Windows Live Academic -hakupalvelun, potentiaalisen kilpailijan Google Scholarille, vastineeksi toteutettiin lähdeviitteiden sisällyttämisominaisuus. Siinä käytettiin lähdeviitteiden hallintajärjestelmiä (kuten RefWorks, RefMan, EndNote ja BibTeX). Vastaavanlaiset ominaisuudet löytyvät myös muista hakukoneista, kuten CiteSeer ja Scirius.
+Vuonna 2007 Acharya ilmoitti Google Scholarin käynnistäneen ohjelman digitoida ja ylläpitää journal-julkaisuja yhteistyössä näiden julkaisijoiden kanssa. Tämä on eri toimeksianto kuin Google Book Search, jonka skannaukset vanhemmista journaleista eivät sisällä metatietoa, jota tarvitaan yksittäisten artikkelien tunnistamiseen nimenomaisissa julkaisuissa.
+
+
+== Toiminnallisuudet ==
+Google Scholar etsii digitaalisia ja fyysisiä tieteellisiä artikkeleita, niin internetistä kuin kirjastoistakin.Käyttäen omaa "group of" -toiminnallisuuttaan, Google Scholar näyttää saatavilla olevat linkit journal-artikkeleihin. Vuoden 2005 versiossa tämä ominaisuus tarjosi linkin sekä vain tilaajille tarkoitettuihin versioihin artikkelista, että vapaisiin kokotekstiversioihin artikkeleista. Valtaosan vuotta 2006 se tarjosi linkkejä vain julkaisijoiden versioihin. Joulukuusta 2006 alkaen se on tarjonnut linkkejä sekä julkaistuihin versioihin, että suurimpiin vapaasti käytettäviin varantoihin. Haku ei edelleenkään kata yksittäisten tiedekuntien nettisivuja; pääsy tällaisten yksityisten arkistojen vapaasti käytettäviin versioihin tarjotaan nykyisin Googlessa, josta tällaiset open access -artikkelit ovat löydettävissä.
+"Cited by" -ominaisuudellaan Google Scholar tarjoaa pääsyn tiivistelmiin artikkeleista, jotka ovat viitanneet näkyvillä olevaan artikkeliin. Juuri tämä ominaisuus tarjoaa viittausindeksoinnin, jollainen aiemmin löytyi ainoastaan Scopuksesta ja Web of Knowledgesta. "Aiheeseen liittyviä artikkeleita" -ominaisuus Google Scholarissa esittää listan läheisesti aiheeseen liittyvistä artikkeleista, jotka ovat lajiteltu pääsääntöisesti siltä pohjalta, kuinka samanlaisia artikkelit ovat alkuperäiseen hakutulokseen verrattuna. Jokaisen artikkelin merkityksellisyys otetaan myös huomioon.
+
+
+== Lähteet ==
+
+
+=== Viitteet ===
+
+
+== Aiheesta muualla ==
+Palvelun etusivu
+Noruzi, Alireza: "Google Scholar: The New Generation of Citation Indexes". Libri, 2005, vol. 55.
+Gale.com: Google Scholar -palvelun arvostelu (Arkistoitu – Internet Archive)

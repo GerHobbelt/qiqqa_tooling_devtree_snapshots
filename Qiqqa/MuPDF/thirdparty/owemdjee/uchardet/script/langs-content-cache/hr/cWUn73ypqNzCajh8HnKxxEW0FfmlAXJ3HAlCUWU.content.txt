@@ -1,0 +1,42 @@
+revision: 6667421
+title: Elektrokardiogram
+url: https://hr.wikipedia.org/wiki/Elektrokardiogram
+
+
+---
+
+Elektrokardiogram (EKG) jest zapis električne aktivnosti srca u vremenu. Proizvodi ga elektrokardiograf. Analiza različitih valova i vektora depolarizacije i repolarizacije dovodi do značajnih podataka u dijagnostici bolesti. 
+
+
+== Povijest ==
+Willem Einthoven izumio je EKG 1901.g. i za to je dobio Nobelovu nagradu za fiziologiju ili medicinu 1924.g. 
+
+
+== Fiziološka osnova EKG-a ==
+
+Srcem prolazi srčani impuls koji se širi u tkiva oko srca. Mali dio tih struja dolazi do kože, gdje izaziva razlike potencijala, koje bilježe elektrode postavljene na kožu. EKG snima 12 odvoda koji predstavljaju razliku električnih potencijala između elektroda postavljenih na tijelo. Odvode možemo podijeliti u dvije grupe: periferne (I, II, III, aVR, aVL, aVF) i prekordijalne odvode (V1, V2, V3, V4, V5, V6).
+
+
+== Normalni EKG ==
+
+EKG zdrave osobe sastoji se od P-vala, QRS-kompleksa (kompleks se sastoji od Q-, R- i S-vala) i T-vala.
+
+P val predstavlja depolarizaciju pretklijetki zbog koje se srčani zalisci otvaraju. Desna pretklijetka se obično depolarizira malo prije lijeve jer depolarizacija putuje od sinus-atrijskog (SA) čvora koji se nalazi na posterolateralnom dijelu desne pretklijetke pokraj ušća gornje šuplje vene prema atrijsko-ventrikularnom (AV) čvoru koji se nalazi u srčanom septumu. Sam P-val traje <80 ms. Vrijeme putovanja impulsa od SA čvora do AV čvora naziva se PR interval, i traje od 120 do 200 ms.
+QRS kompleks predstavlja depolarizaciju i kontrakciju mišića klijetki srca. Obično je amplituda QRS kompleksa vrlo izražena zbog velike muskulature klijetki za razliku od atrija. Signal putuje Hissovim snopom koji proizlazi iz AV snopa i grana se po lijevoj i desnoj strani septuma, i nadalje svaki snop tvori Purkinjeova vlakna koja putuju duž zida svake klijetke. QRS kompleks obično traje od 80 do 100 ms.
+ST segment predstavlja vremenski period u kojem su klijetke depolarizirane.
+T val predstavlja repolarizaciju klijetki.
+QT interval mjeri se od početka QRS kompleksa do završetka T vala. Obično traje manje od 440 ms i označava duljinu jedne sistole.
+U val je često odsutan na EKG-u, a predstavlja repolarizaciju septuma. Iznimno istaknut U val na snimci EKG-a može signalizirati manjak kalija, povišenu razinu kalcija ili povećanu aktivnost štitne žlijezde (hipertireozu).
+
+
+== Primjena EKG-a ==
+Neke od primjena EKG-a:
+
+EKG je zlatni standard u dijagnozi srčanih aritmija
+Nalaz EKG-a utječe na terapiju i procjenu rizika kod bolesnika sa sumnjom na akutni infarkt miokarda
+Pomaže u dijagnostici poremećaja elektrolita (npr. hiperkalemija i hipokalemija)
+EKG se koristi u "screeningu" za ishemijsku bolest srca u ergometriji
+EKG može biti povremeno koristan u nesrčanim bolestima kao što su plućna embolija i hipotermija
+
+
+== Izvori ==

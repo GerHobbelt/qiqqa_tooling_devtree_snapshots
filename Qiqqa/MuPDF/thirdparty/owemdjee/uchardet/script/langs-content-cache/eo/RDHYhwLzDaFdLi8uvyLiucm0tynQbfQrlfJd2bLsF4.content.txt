@@ -1,0 +1,100 @@
+revision: 7568903
+title: DNA
+url: https://eo.wikipedia.org/wiki/DNA
+
+
+---
+
+Pri la aliaj signifoj de DNA rigardu en DNA (apartigilo).
+
+Deoksiribonuklea acido (DNA) estas du-helica molekulego, kiu portas la genetikajn informojn de ĉiuj vivuloj kaj de certaj virusoj. Ĝi estas la portanto de la genaro kaj la bazo de heredo.
+DNA-molekulo konsistas el ĉeno farita de paroj da nukleotidoj (la eroj de nukleataj acidoj), kiuj konsistas el nitrogenaj bazoj (adenino, timino, guanino, kaj citozino, respektive mallongigitaj per A, T, G kaj C). Tiuj ĉi bazoj estas kiuj ligas la du helicojn unu al la alia, kaj ilia ordo tra la DNA-molekulo konsistigas la genetikan informon. Ĝi influas la elekton de aminoacidoj en proteinoj.
+DNA estas tre longa molekulo: la longo de la homa DNA estas ĉirkaŭ du metroj, kvankam ĝi estas tiom pakita, ke ĝi estas tute ene de la ĉelkerno (kies diametro estas nur ĉirkaŭ 6 µm).
+Se ignori la pakadon, DNA similas al tordita ŝtupetaro, kies fostoj konsistas el alternaj pecoj de deoksiribozo kaj fosfata resto (aŭ peco de fosfora acido). Tiuj fostoj nomiĝas ankaŭ "spinoj" de la DNA. Inter du fosfataj restoj de kontraŭaj spinoj troviĝas, kvazaŭ rungo, paro da komplementaj nitrogenaj bazoj. Ili estas komplementaj, ĉar la unua bazo plene determinas la duan: Al A respondas T kaj al C respondas G.
+Skeme direblas, ke:
+
+DNA estas ĉeno de deoksinukleotidoj,
+deoksinukleotido estas deoksinukleosido kaj fosfora acido,
+deoksinukleosido estas purina aŭ pirimidina bazo kaj deoksiribozo (kvinkarbona sukero, aŭ pentozo).
+
+
+== Historio ==
+
+
+=== Antaŭ 1953 ===
+La strukturo de la DNA estis fame malkovrita en 1953, tamen, tio ne estis la unua malkovro pri DNA:
+
+DNA estis unuafoje izolita de Friedrich Miescher en 1869. Li nomis tiun nekonatan substancon nukleino, pro tio, ke ĝi lokiĝis en la ĉelkerno (aŭ nukleo).
+En 1889 isoliert Richard Altmann analizis nukleinon kaj izolis el ĝi proteinojn kaj nukleatan acidon.
+En 1889 Albrecht Gossel identigis en nukleino la kvar bazojn A, C, G kaj T; en 1919 Phoebus Levene trovis, ke DNA konsistas el tiuj bazoj kaj krome sukero (ribozo) kaj fosfato. Levene proponis fadenan strukturon de DNA, sed supozis, ke la fadenoj estas mallongaj kaj havas regulan strukturon kun preciza ripetiĝo de la partoj.
+Frederick Griffith eksperimente malkovris en 1928, ke iu genetika inform-materialo transportiĝis de unu bakterio al alia (vidu eksperimento de Griffith). Tio estis pruvo pri hereda materialo ekster vivantaj organismoj, sed ankoraŭ ne havis rilaton al DNA.
+En 1937 William Ashbury esploris nukleinon per X-radioj kaj trovis, ke ĝi havas ege regulan strukturon.
+En la 1940-aj jaroj Oswald Avery, Colin MacLeod, kaj Maclyn McCarty malkovris, ke la DNA kaŭzis bakterian transformiĝon, montrante, ke ĝi povus esti la genetika materialo.
+En 1944 Erwin Schrödinger deklaris, ke pro fizikaj konsideroj la genetika informo devas esti lokita en granda, stabila molekulo kun ne ripetiĝanta strukturo, kaj formis la esprimon "neperioda kristalo".
+En 1950 Erwin Chargaff rimarkas, ke en la sama DNA la kvanto de adenozino egalas al tiu de timino, kaj la kvanto de guanino egalas al tiu de citozino. Tiu ĉi konkludo estas konata kiel la regulo de Chargaff.
+En 1952, danke al la eksperimento de Hershey kaj Chase oni pruvis, ke la DNA estis la genetika materialo.
+En 1952 Rosalind Franklin kaj Raymond Gosling laboris per Ikso-radia difrakto de DNA por esplori ĝian strukturon.
+
+
+=== Ekde 1953 ===
+En 1953 Francis Crick kaj James Watson, danke al la bildoj faritaj de Rosalind Franklin kaj Raymon Gosling, proponis en la scienca gazeto Nature, ke DNA-strukturo estis du-helica, kun nitrogenaj bazoj duope aranĝitaj. Samtempe, Maurice Wilkins publikigis similan ideon, kies bazo estis diversaj envivaj eksperimentoj, kiujn li faris. Pro tio ĉi, Watson, Crick kaj Wilkins ricevis la 1962an Nobel-premion pri medicino. Bedaŭrinde, Rosalind Franklin ne estis premiebla, pro tio, ke ŝi mortis en 1958 (Nobel-premio, laŭ ĝiaj reguloj, ne estas ricevebla postmorte).
+En 1957 Crick proponis la centran dogmon de molekula biologio, kiu stabiligas, ke la sekvenca informo moviĝas el DNA ĝis proteino, sed ne male. Tio ĉi signifas, ke DNA transskribiĝas al RNA (aŭ replikas al alia DNA), kaj RNA tradukiĝas (per proteina sintezo) al proteinoj.
+
+
+== Strukturo ==
+Laŭ la propono de Watson kaj Crick, DNA ekzistas en la formo de du polinukleotidaj ĉenoj volvitaj ĉirkaŭ si en duopa helica strukturo. La unika trajto de ilia proponita strukturo estas la maniero per kiu la ĉenoj estas kuntenataj en la duopa helico. Watson kaj Crick teoriumis ke la DNA-strukturo stabiliĝas per hidrogenaj ligoj inter la bazoj etendiĝantaj internen el suker-fosfataj ĉefĉenoj.
+
+
+=== Bazaj paroj ===
+
+DNA fariĝas de du fadenoj, unu kontraŭ la alia. Scieblas, kiu nukleotido estas kontraŭ nukleotido de la alia fadeno, pro tio, ke ili pariĝas tiel, ke:
+
+adenino ĉiam troveblas kontraŭ timino per du hidrogen-ligoj, kaj
+guanino ĉiam troveblas kontraŭ citozino per tri hidrogen-ligoj.Do, la nukleotida sinsekvo de ambaŭ fadenoj estas komplementa. Tio ĉi okazas, pro la specifan strukturon de ĉiu nukleotido (ĉefe ilia grandeco kaj la hidrogen-ligoj eblaj inter ili); malsamaj bazaj paroj (kiel ekzemple adenino kontraŭ adenino, aŭ citozino kontraŭ adenino) kreus nestabilecon inter la du fadenoj de DNA.
+La pariĝo de la bazoj, proponita de Watson kaj Crick, estas subtenita de DNA-analizoj, kiuj montras ke adenino kaj timino ĉiam troviĝas laŭ proporcio 1:1, kiel ankaŭ citozino kaj guanino.
+
+
+=== Sulkoj ===
+
+DNA konsistas el du fadenoj, kiuj turniĝas unu ĉirkaŭ la alia. Tamen, ambaŭ fadenoj ne plen-simetrie kontraŭas unu la alian. Pro tio ĉi, la periodo de la DNA-helico estas duobla ol kiu estus, se la fadenoj spegule kontraŭus unu la alian. Tiamaniere, distingeblas du sulkoj inter la spinoj, la granda sulko, kies larĝeco estas 22 Å, kaj la malgranda sulko, kies larĝeco estas 12 Å.
+Tio ĉi gravas, pro tio ke la proteinoj (ekzemple tiuj, kiuj transskribas DNA-on al mesaĝa RNA) kutime kontaktos la duobla fadeno pli ofte ĉe la granda sulko.
+
+
+=== Kromaj strukturoj de DNA ===
+
+La kutima kaj plej konata strukturo de DNA nomiĝas B-DNA. Tamen, danke al eksperimentoj pri difrakto de ikso-radioj oni scias, ke DNA troveblas en du pliaj strukturoj.
+La tri ebloj, do, estas:
+
+A-strukturo (aŭ A-DNA), la nura, kiu ne estis rekte observita en vivestaĵoj. Ĝi similas al B-DNA (ĝi havas grandan kaj malgrandan sulkojn, kaj ĝi estas ankaŭ dekstruma), sed ĝia helica strukturo estas pli kompakta (anstataŭ 10,5 bazoparojn en ĉiu turniĝo ĝi havas 11,6 bazoparojn, do la turna angulo de ĉiu estas 31,0° anstataŭ 34,3°). Oni observis ĝin nur en malhidratigitaj specimenoj de DNA (ekzemple, en eksperimentoj pri kristalografio).
+B-strukturo (aŭ B-DNA), la plej ofta kaj plej bone konata.
+Z-strukturo (aŭ Z-DNA), la nura konata strukturo de DNA, kiu estas maldekstruma, kaj samtempe pli longa kaj mallarĝa ol la aliaj du. Ĝia baza strukturo ripetiĝas ĉiujn du bazoparojn (anstataŭ ĉiun bazoparon, kiel en la aliaj du eblaj strukturoj). Granda kaj malgranda sulkoj ne tre distingeblas. Ĝi observeblas en tre specifaj kondiĉoj, kaj ĝia studado ne facilas.
+
+
+== Aplikoj ==
+
+
+=== Genetika inĝenierado ===
+
+La genetika inĝenierado aŭ gen-tekniko estas tekniko por manipuli la genetikan informon de organismo. Ofte ĝi enmetas genon de organismon en la genaron de alia, sed ĝi povas ankaŭ elpreni nedeziratan genon. Ekzemploj estas la produktado de rikoltoplantoj rezistaj al certaj herbicidoj. La unua ekzemplo de hejmbestoj genetike manipulitaj estas la "ardfiŝoj" (angle glofish}}, akvariaj fiŝoj, kiuj lumas kvazaŭ ardantaj.
+Industria apliko estas la kreado de modifitaj bakterioj, kiuj produktas deziratan kemian substancon.
+
+
+=== Identigo de organismoj ===
+La DNA-analizo kapablas precize diri, ĉu du specimenoj de organika materialo devenas de la sama organismo aŭ ne, eĉ ĉu ili devenas de du parencaj organismoj. En kriminologio tio servas ekzemple por identigi kriminton, kiu lasis specimenon de sia korpo en la krimejo. La tekniko servas ankaŭ por identigi la necertan patron de infano. Ĝi eĉ estis utiligata por esplori, ĉu fungoĉeloj trovitaj en la grundo en du apartaj lokoj estas de la sama individua fungo.
+Bromofenolbluo aŭ "Bluo de bromofenolo" estas kolorigilo kaj tinkturo, uzata interalie por kontroli migradon de molekuloj en eksperimentoj kun fragmentoj de DNA. La bluo de bromofenolo agas kiel pH-indikilo kiu ŝanĝiĝas, kiam la hidrogena potencialo estas inter 3,0 kaj 4,6, de verda al blua.
+
+
+=== Historio kaj antropologio ===
+Ĉar DNA-komparo ebligas konstati heredan parencecon inter individuoj aŭ specioj, ĝi ebligas konstrui aŭ detaligi filogenezajn arbojn, kiuj antaŭe baziĝis nur sur observeblaj ecoj. Per tio la DNA-analizo kaŭzis diversajn ŝanĝojn en la biologia taksonomio.
+La metodo ebligas ankaŭ konkludi pri certaj mutacioj, kiuj kreis aŭ diferencigis speciojn.
+
+
+== Vidu ankaŭ ==
+DNA-vicrivelado
+Mem-replikiĝo de DNA;
+Mutacio
+PĈR
+RNA
+
+
+== Referencoj ==

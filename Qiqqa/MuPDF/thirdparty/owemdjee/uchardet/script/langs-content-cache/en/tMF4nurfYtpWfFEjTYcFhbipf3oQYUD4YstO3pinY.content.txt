@@ -1,0 +1,57 @@
+revision: 1152694488
+title: Amniotic stem cells
+url: https://en.wikipedia.org/wiki/Amniotic_stem_cells
+
+
+---
+
+Amniotic stem cells are the mixture of stem cells that can be obtained from the amniotic fluid as well as the amniotic membrane. They can develop into various tissue types including skin, cartilage, cardiac tissue, nerves, muscle, and bone. The cells also have potential medical applications, especially in organ regeneration.The stem cells are usually extracted from the amniotic sac by amniocentesis which occurs without harming the embryos. The use of amniotic fluid stem cells is therefore generally considered to lack the ethical problems associated with the use of cells from embryos.In 2009, the first US amniotic stem cell bank was opened in Medford, MA, by Biocell Center, an international company specializing in the cryopreservation and private banking of amniotic fluid stem cells.
+
+
+== History ==
+The presence of embryonic and foetal cells from all germ layers in the amniotic fluid was gradually determined since the 1980s. Haematopoietic progenitor cells were first reported to be present in the amniotic fluid in 1993, specifically up to the 12th week of pregnancy. It was suggested that these originated from the yolk sac.In 1996, a study indicated that non-haematopoietic progenitor cells were also present in the amniotic fluid. This was later confirmed as mesenchymal stem cells were obtained. In addition, evidence indicated that embryonic stem cells are part of the fluid, although in very small quantities.At around the same time, it was determined that stem cells from the amniotic membrane also have multipotent potential. AS their differentiation into neural and glial cells as well as hepatocyte precursors was observed.
+
+
+== Properties ==
+The majority of stem cells present in the amniotic fluid share many characteristics, which suggests they may have a common origin.In 2007, it was confirmed that the amniotic fluid contains a heterogeneous mixture of multipotent cells after it was demonstrated that they were able to differentiate into cells from all three germ layers but they could not form teratomas following implantation into immunodeficient mice. This characteristic differentiates them from embryonic stem cells but indicates similarities with adult stem cells. However, foetal stem cells attained from the amniotic fluid are more stable and more plastic than their adult counterparts making it easier for them to be reprogrammed to a pluripotent state.A variety of techniques has been developed for the isolation and culturing of amniotic stem cells. One of the more common isolation methods involves the removal of amniotic fluid by amniocentesis. The cells are then extracted from the fluid based on the presence of c-Kit. Several variations of this method exist. There is some debate whether c-Kit is a suitable marker to distinguish amniotic stem cells from other cell types because cells lacking c-Kit also display differentiation potential. Culture conditions may also be adjusted to promote the growth of a particular cell type.
+
+
+=== Mesenchymal Stem Cells ===
+Mesenchymal stem cells (MSCs) are highly abundant in the amniotic fluid and several techniques have been described for their isolation. They usually involve the removal of amniotic fluid by amniocentesis and their distinction from other cells may be based on their morphology or other characteristics.Human leukocyte antigen testing has been utilised to confirm that the MSCs stem from the fetus and not from the mother. Originally it was proposed that the MSCs were discarded from the embryo at the end of their life cycle but since the cells remained viable in the amniotic fluid and were able to proliferate in culture this hypothesis was overturned. However, it remains unclear whether the cells originate from the fetus itself, the placenta or possibly the inner cell mass of the blastocyst.Comparison of amniotic fluid-derived MSCs to bone-marrow-derived ones showed that the former has a higher expansion potential in culture. However, the cultured amniotic fluid-derived MSCs have a similar phenotype to both adult bone-marrow-derived MSCs and MSCs originating from second trimester fetal tissue.
+In animals, the MSCs seem to have a unique immunological profile which was observed after their isolation and in vitro culturing.
+
+
+=== Embryonic-like stem cells ===
+As opposed to mesenchymal stem cells, embryonic-like stem cells are not abundant in the amniotic fluid, making up less than 1% of amniocentesis samples. Embryonic-like stem cells were originally identified using markers common to embryonic stem cells such as nuclear Oct4, CD34, vimentin, alkaline phosphatase, stem cell factor and c-Kit. However, these markers were not necessarily concomitantly expressed. In addition, all of these markers can occur on their own or in some combination in other types of cells.The pluripotency of these embryonic-like stem cells remains to be fully established. Although those cells which expressed the markers were able to differentiate into muscle, adipogenic, osteogenic, nephrogenic, neural and endothelial cells, this did not necessarily occur from a homogenous population of undifferentiated cells.
+Evidence in favour of their embryonic stem cell nature is the cells' ability to produce clones.
+
+
+== Clinical applications ==
+The use of amniotic stem cells instead of embryonic stem cells may be advantageous in some cases for various reasons including that the former do not form teratomas. Their enhanced stability and plasticity compared to adult stem cells may also be an advantage. Stem cells from both the amniotic fluid and membrane are utilised for therapeutic approaches.
+
+
+=== Foetal tissue engineering ===
+Possible applications include the use of amniotic stem cells for foetal tissue engineering to reconstruct birth defects in infants. This would circumvent the complications that are often associated with harvesting stem cells from foetal tissue. A small amount of amniotic fluid provides a large enough quantity of cells for the tissue engineering process and could help correct a number of defects including diaphragmatic hernia and possibly repair premature membrane rupture during pregnancy. If frozen and banked, the cells may also be used for similar purpose later in life.
+
+
+=== Cardiovascular tissue engineering ===
+Several studies have been carried out to investigate the potential of amniotic stem cells to differentiate into cardiac cells. Although c-Kit sorted cells express some genes common in cardiac cells, success in this area is still limited.
+Co-culturing, i.e. mixing cells and plating them together, of human amniotic stem cells with neonatal rat ventricular myocytes (NRVM) caused the cells to form functional gap junctions with each other, an indicator for cardiac-like cells. However, these results may be due to the specific features of the NRVM or fusion of the cells rather than the amniotic stem cell's own potential to differentiate into cardiac cells. In general, these types of techniques are considered to be potentially significant but further investigations are required.Another area of interest is the use of these cells for improvement of cardiac tissue following a myocardial infarction. Several strategies have been tested in rats including the injection of dissociated amniotic stem cells into the infarct region, which yielded conflicting results from several research groups. In contrast, injection of amniotic stem cell aggregates seems to improve the function of the tissue significantly by reducing the size of the infarct area and improving the function of the left ventricle. In addition, vasculature density has been shown to increase. Injection of cells immediately following the infarct is particularly beneficial as the cells protect the cardiac tissue from further damage.Moreover, other findings have brought the proof of concept that secretome of amniotic stem cell could act as an effective paracrine agent against Doxorubicin induced cardiotoxicity, confirming the potential importance of this cellular population in the field of cardiological research.
+
+
+=== Kidney injury repair ===
+Following the discovery that amniotic stem cells are able to differentiate into renal cells, this was further explored in several studies. These showed that in vitro the cells were able to contribute to early kidney structures as well as being able to integrate into early kidney structures ex vivo and continue their development into mature nephrons. Results obtained for the use of amniotic stem cells in the postnatal kidney were far less encouraging as the cell's contribution to the tissue was very small. However, the cells were able to exert a protective effect on tubular cells in mice with acute tubular necrosis.Amniotic stem cells can also be used to treat chronic damage. This was shown in mouse models for Alport syndrome, where the cells prolonged survival of the animals by slowing down the progression of the disease. The same effect was observed in mouse models where human amniotic stem cells were used to treat uretral obstruction.
+
+
+== Ethical Considerations ==
+The use of foetal cells has been highly controversial because the tissue is usually obtained from the foetus following induced abortion. In contrast, foetal stem cells in the amniotic fluid can be obtained through routine prenatal testing without the need for abortion or foetal biopsy.
+
+
+== See also ==
+Stem cells
+Haematopoiesis
+Amniocentesis
+Amniotic fluid
+
+
+== References ==

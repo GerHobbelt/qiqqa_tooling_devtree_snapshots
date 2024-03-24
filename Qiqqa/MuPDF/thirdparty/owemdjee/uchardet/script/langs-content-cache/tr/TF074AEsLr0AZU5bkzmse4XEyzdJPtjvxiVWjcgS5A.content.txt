@@ -1,0 +1,14 @@
+revision: 28874629
+title: Roche limiti
+url: https://tr.wikipedia.org/wiki/Roche_limiti
+
+
+---
+
+Roche limiti ya da  Roche sınırı, bir gök cisminin kendinden daha büyük bir başka gök cismine, yerçekimi gücünün neden olduğu gel-git etkisi altında parçalanmadan yaklaşabileceği en kısa mesafeyi gösterir. Bu kavram, 1847 yılında Fransız matematikçi Edouard Albert Roche (1820-1883) tarafından tanımlanmıştır. Yerçekimi kuvveti uzaklığın karesi ile ters orantılı olduğundan, bir başka kütleye yaklaşan bir cismin o kütleye yakın kısımları, uzakta kalan kısımlarına oranla daha fazla çekim kuvveti etkisi altındadır. Eğer bu kuvvetler arasındaki fark cismin kendi yerçekimi kuvvetini aşacak boyutta ise cisim bütünlüğünü kendi yerçekimi ile sağlayamaz hale gelir ve dağılır. Bu nedenle bir yıldızın Roche limitinden daha yakın yörüngede sabit kalabilen gezegenleri bulunamaz. Aynı şey gezegenler ve uyduları için de geçerlidir. Güneş Sistemindeki bazı gezegenlerin halkaları bu mekanizma ile açıklanır.
+Roche'un bu mesafeyi hesaplamakta kullandığı formül günümüzde gözden geçirilmiş şekliyle şöyledir:
+d=2,4228 Rg (ρg /ρu)1/3d uzaklık, 
+Rg gezegenin yarıçapı, 
+ρg gezegenin yoğunluğu, 
+ρu uydunun yoğunluğu
+Bu formül yerçekiminden başka uyduyu bir arada tutan hiçbir etkinin bulunmadığı ideal akışkan bir cisim için doğrudur. Yüzey gerilimi, iç sürtünmeler, yapıştırıcı kuvvetler uydunun dağılmasını zorlaştırarak bu formülde hesaplanan Roche limitini küçültürler.

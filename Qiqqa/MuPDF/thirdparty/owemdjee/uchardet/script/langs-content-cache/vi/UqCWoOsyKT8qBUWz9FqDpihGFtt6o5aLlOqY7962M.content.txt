@@ -1,0 +1,29 @@
+revision: 69081344
+title: "CD3 (mi\u1EC5n d\u1ECBch h\u1ECDc)"
+url: https://vi.wikipedia.org/wiki/CD3
+
+
+---
+
+Trong miễn dịch học, đồng thụ thể tế bào T CD3 (cụm biệt hóa 3) giúp kích hoạt cả tế bào T độc (tế bào T CD8 + non) và cả tế bào T hỗ trợ (tế bào T CD4 + non). Protein này bao gồm một phức hợp protein từ bốn chuỗi riêng biệt. Ở động vật có vú, phức hợp chứa một chuỗi CD3γ, một chuỗi CD3δ, và hai chuỗi CD3ε. Các chuỗi này liên kết với thụ thể tế bào T (TCR) và chuỗi-ζ (chuỗi zeta) để tạo ra một tín hiệu hoạt hóa các tế bào lympho T. Các phân tử TCR, chuỗi ζ và CD3 cùng nhau tạo thành phức hợp TCR.
+
+
+== Cấu trúc ==
+Các chuỗi CD3γ, CD3δ, và CD3ε là các protein bề mặt tế bào có liên quan nhiều đến siêu họ globulin miễn dịch chỉ chứa một miền globulin miễn dịch ngoại bào.Do có chứa chuỗi bên aspartate, vùng xuyên màng của chuỗi CD3 được tích điện âm, một đặc tính cho phép các chuỗi này liên kết với các chuỗi TCR tích điện dương.Các đoạn nội bào của các phân tử CD3 chứa một motif được bảo tồn duy nhất được gọi là motif thụ thể miễn dịch hoạt hóa dựa trên tyrosine hoặc ITAM (immunoreceptor tyrosine-based activation motif), là điều cần thiết cho khả năng truyền tin của TCR.
+Vùng nội bào của chuỗi ζ có chứa 3 motif ITAM.
+
+
+== Điều hòa ==
+Phosphoryl hóa của ITAM trên bề mặt CD3 làm cho chuỗi CD3 có khả năng liên kết một enzyme gọi là ZAP70 (protein liên kết zeta), một kinase quan trọng trong chuỗi tín hiệu của tế bào T.
+
+
+== Như một mục tiêu của thuốc ==
+Vì CD3 là cần thiết cho hoạt hóa tế bào T, thuốc (thường là kháng thể đơn dòng) nhắm đến nó đang được nghiên cứu như các liệu pháp ức chế miễn dịch (ví dụ, thuốc otelixizumab) đối với bệnh tiểu đường loại 1 và các bệnh tự miễn khác.
+
+
+== Dấu chuẩn immunohistochemistry ==
+CD3 ban đầu được biểu hiện trong tế bào chất của tế bào tiền-thymocyte, tế bào gốc mà từ đó tế bào T sẽ phát sinh ở tuyến ức. Các tế bào tiền-thymocyte biệt hóa thành các thymocyte bình thường, và sau đó thành các tế bào thymocyte tủy, và ở giai đoạn sau này, kháng nguyên CD3 bắt đầu di chuyển ra đến màng tế bào. Kháng nguyên được tìm thấy liên kết với màng của tất cả các tế bào T trưởng thành, và hầu như không có loại tế bào nào khác, mặc dù nó có vẻ xuất hiện với lượng nhỏ trong các tế bào Purkinje.
+Tính đặc hiệu cao này, kết hợp với sự hiện diện của CD3 ở tất cả các giai đoạn phát triển tế bào T, làm cho nó trở thành một dấu chuẩn miễn dịch hữu ích cho các tế bào T trong các mô. Kháng nguyên vẫn tồn tại trong hầu hết tất cả các tế bào T bị lymphoma và ung thư bạch cầu, và do đó cũng có thể được sử dụng để phân biệt chúng với các khối u tế bào B và các tế bào myeloid tương tự.
+
+
+== Chú thích ==

@@ -1,0 +1,92 @@
+revision: 204249818
+title: Game Boy Color
+url: https://fr.wikipedia.org/wiki/Game_Boy_Color
+
+
+---
+
+La (ou le ,) Game Boy Color (ゲームボーイカラー, Gēmu Bōi Karā), abrégé GBC, est la console de jeux vidéo portable succédant à la Game Boy. Créée par Nintendo, elle incorpore un écran couleur à peine plus grand que celui de la Game Boy. En revanche, son processeur est deux fois plus rapide, et sa mémoire deux fois plus grande. Elle est rétrocompatible avec tous les jeux Game Boy de première génération.
+La Game Boy Color est disponible en coques de différentes versions : translucide, violet, bleu, vert, fuchsia, jaune, violet translucide. Des éditions limitées ont également été éditées : noir translucide, vert translucide, bleu nuit, bleu translucide, orange clair, vert et or et une dizaine d'autres variantes spécifiques, ainsi que 7 versions « Pokémon ».
+Elle est sortie fin 1998 au Japon, aux États-Unis, en Europe et en Australie.
+
+
+== Histoire de la console ==
+Depuis que la Game Boy est sortie en 1989 au Japon et aux États-Unis et en 1990 en Europe, Nintendo s'était concentré sur les jeux et n'avait pas sorti de nouvelle génération (les modèles Pocket et Light étant des évolutions de la Game Boy). C'est en 1998 qu'une seconde génération est envisagée, qui coïnciderait à peu près avec le dixième anniversaire du premier modèle (mais en réalité, cette console a surtout été créée pour empêcher Bandai de rafler le monopole du jeu portable avec sa WonderSwan, car entretemps, la R&D1 travaillait déjà sur la Game Boy Advance) . L'attente principale des joueurs était alors de disposer d'un écran couleur, comme cela se faisait sur les machines concurrentes depuis longtemps (Game Gear, Atari Lynx, …).
+C'est donc à l'automne 1998 que la Game Boy Color (GBC) sort au Japon, en Amérique , et en Europe. Le succès est immense car la console progresse graphiquement tout en restant à 100 % rétrocompatible . Sa sortie coïncide avec le phénomène mondial des jeux Pokémon.
+
+
+== Spécifications ==
+Processeur principal : 8-bit Z80 modifié en deux modes, simple : 4,194 304 MHz, (soit 222 cycles par seconde) et double : 8,388 608 MHz, (soit 223 cycles par seconde).
+Mémoire vive : 32 ko (ainsi que 128 ko sur la cartouche)
+Mémoire morte : cartouches de jeux pouvant contenir jusqu'à 64 Mbit (8 Mo)
+Mémoire vidéo : 16 ko
+Possibilités audio : 2 canaux signal carré (12,5 % 25 % 50 % 75 %) (legato/glissando), 1 canal WAV PCM, 1 canal bruit blanc ; 16 vélocités par canal.
+Écran : LCD TFT, 160 × 144 pixels, fabriqué par Sharp
+Palette de couleur : 32 768 couleurs ; modes 10, 32, ou 56 couleurs simultanées à l'écran
+Contrôles : croix directionnelle, et boutons : A, B, Select, et Start.
+Communication : série ou infrarouge
+Série : 512 Kbit/s ; jusqu'à deux consoles en même temps ;
+Infrarouge : moins de 2 mètres à 45 degrés.
+Taille : 75 millimètres de largeur, 27 millimètres d'épaisseur et 133 millimètres de longueur.
+Alimentation : deux piles alcalines (AA) offrant 10 heures d'autonomie. Un adaptateur secteur était aussi disponible.
+Poids : 138 grammes
+
+
+== Puissance graphique de la console ==
+La puissance graphique de cette console n'est pas très élevée, d'autant qu'en 1998 des consoles portables plus anciennes étaient bien plus puissantes, telle la Sega Nomad. Elle est néanmoins plus puissante qu'une Nintendo Entertainment System (NES), qu'une Game Boy originelle monochrome ou même qu'une Game Gear.
+Beaucoup de jeux exploitent la puissance maximale de cette console comme The Fish Files (exploitant la puissance à 96 %), Donkey Kong Country (à 82 %), les The Legend of Zelda: Oracle of Seasons et Oracle of Ages, et Titeuf[réf. nécessaire].
+
+
+== Jeux ==
+Il existe trois types de jeux compatibles avec la Game Boy Color :
+
+Les jeux de la Game Boy originale (cartouches grises), qui s’afficheront de façon colorisées sur une Game Boy Color selon des palettes de 4 à 12 couleurs prédéterminées. Il est possible de choisir cette palette en appuyant sur une direction plus éventuellement A ou B (12 combinaisons possibles).Les jeux Game Boy Color « rétrocompatibles Game Boy » (cartouches noires), qui sont conçues pour utiliser la totalité des 32 000 couleurs de la Gameboy Color, mais en restant utilisables sur des Game Boy classiques.Les jeux Exclusifs Game Boy Color (cartouches transparentes) qui utilisent toutes les capacités de la Game Boy Color et ne sont pas compatibles avec la génération précédente.Quelques jeux dérogent à la règle de différentiation selon la couleur de la cartouche, soit car usant des couleurs de cartouche spécifiques (Pokémon Rouge et Bleu ou Pokémon Or et Argent par exemple), soit parce qu'intégrant des périphériques supplémentaires dans leur cartouche leur donnant une forme unique (Game Boy Camera ou Perfect Dark par exemple)
+Le premier jeu à être sorti en étant conçu pour Game Boy Color est Dragon Quest Monsters: Terry's Wonderland, sortie au Japon le 25 septembre 1998, soit avant même la Game Boy Color elle même. L'avant-dernier est Harry Potter et la chambre des secrets en novembre 2002.
+Le catalogue de jeux Game Boy Color s’éleverait à plus de 660 jeux[réf. nécessaire] Game Boy Color, auxquels s'ajoutent 1056 jeux Game Boy[réf. nécessaire], compatibles. Parmi ceux-ci, nombreux[Combien ?] sont ceux qui ont dépassé le cap du million d'unités vendues dans le monde, ce qui est un record aujourd'hui[réf. nécessaire].
+
+
+== Accessoires ==
+
+
+=== Mobile System GB ===
+Le Mobile System GB est un accessoire sorti exclusivement au Japon le 14 décembre 2000. Il s'agit d'un adaptateur permettant de relier la console à un téléphone portable. Cela offrait aux joueurs la possibilité de jouer en réseau, de télécharger des articles de presse et des nouveaux niveaux ou personnages pour leurs jeux et de consulter et envoyer des courriels avec leur console portable.
+
+
+=== Câble link ===
+
+Déjà présent sur la Game Boy, le câble link fait son retour pour permettre l'apparition de nombreuses fonctionnalités dont notamment les parties multijoueur et l'échange de Pokémon. Cet accessoire est également compatible avec la Game Boy Pocket.
+
+
+=== Divers ===
+Un fabricant de machines à coudre, Jaguar, a créé en 2001 un modèle appelé « Nuetto » interfaçable avec la Game Boy Color (utilisation de la croix directionnelle et des boutons pour utiliser la machine) . Un logiciel était fourni et intégrait 302 patrons .
+
+
+=== AC-DC Adapter ===
+Cet adaptateur secteur permet de jouer à la Game Boy Color à l'infini, sans jamais utiliser de piles. Le câble mesure environ 3 m de long.
+Les blocs d'alimentation sont constitués d'un boîtier noir doté :
+
+d'un câble fin muni d'une petite prise à brancher au Game Boy Pocket ou Game Boy Color ;
+d'un câble plus épais muni d'une prise secteur.Cet accessoire est également compatible avec la Game Boy Pocket et dont les différences sont les suivantes :
+
+L'emballage d'origine ;
+L'autocollant sur le bloc d'alimentation ;
+La fiche branchée au Game Boy. Sur le modèle Game Boy Pocket, elle est courbée, alors que sur la Game Boy Color, elle est droite.
+
+
+== Ventes de la console ==
+Bien que Nintendo n'ait jamais dévoilé les chiffres de ventes de ses différents modèles de Game Boy, grâce aux données de vente publiées par l'entreprise, on sait que 64,42 millions de Game Boy ont trouvé preneur à la fin de l'année fiscale de 1997 (terminée le 31 mars 1998). Ainsi, théoriquement, la Game Boy Color sortie entre 7 et 8 mois plus tard (selon les régions) s'est vendue à 54,27 millions d'unités. Le total est de 118,69 millions d'unités pour les deux consoles associées. Avec la sortie combinée de la Game Boy Color et des jeux Pokémon de première génération en Occident, la Game Boy a été rapidement délaissée, ce qui porterait le total à environ 50 millions de consoles Game Boy Color et environ 69 millions de consoles Game Boy originales.
+
+
+== Notes et références ==
+
+
+== Voir aussi ==
+
+
+=== Article connexe ===
+Liste de jeux Game Boy Color
+
+
+=== Lien externe ===
+Game Boy Color sur le site Nintendo
+ Portail du jeu vidéo   Portail Nintendo

@@ -1,0 +1,318 @@
+revision: 21632652
+title: "Luettelo Amiga-peleist\xE4"
+url: https://fi.wikipedia.org/wiki/Amiga
+
+
+---
+
+Amiga on tietokoneperhe, jota Commodore valmisti vuodesta 1985 vuoteen 1994. Tietokoneen kehitystyön oli aloittanut Amiga Corporation vuonna 1982. Amigasta tuli seuraaja Commodoren menestyksekkäälle Commodore 64 -tietokoneelle. Amiga oli Suomessa ja monissa osissa Eurooppaa IBM PC -yhteensopivien ohella suosituin pelaamisessa ja muussa tietokoneharrastuksessa käytetty tietokone 1990-luvun alkaessa. Ennen kaikkea Amigan käyttäjien parissa sai alkunsa "demoskene". Lisäksi Amigaa käytettiin apuvälineenä ammattilaiskäytössä esimerkiksi grafiikan ja musiikinteossa.
+Amiga erosi ilmestyessään muista aikalaiskoneista erikoispiireillään, jotka tehostivat suorituskykyä grafiikan ja äänen suhteen. Tähän sisältyi laitteiston tuki spriteille sekä bittikartta-datan siirtoa tukeva apuprosessori, blitter. Kuvan resoluutio sekä väripaletti olivat aikansa mittapuulla suuret. Amiga yhdisti ensimmäisenä kotikoneena graafisen käyttöliittymän moniajoon.  Amigan Paula-äänipiiri tukee DMA-pohjaista 28 kilohertsin ja 8 bitin digitoitua stereoääntä. Prosessoreinaan Amigat käyttivät Motorola 68000 -sarjaa.
+
+
+== Historia ==
+
+
+=== Yhtiön perustaminen ===
+Activisionin Larry Kaplanin aloitteesta Jay Miner lähti kehittämään uutta tietokonetta, jonka kehittämisestä oli haaveillut työskennellessään Atarilla.
+Yhtiö perustettiin nimellä Hi-Toro ja sen johtoon palkattiin David Morse. Kaplanin vetäydyttyä ja palattuaan Atarille Miner oli vastuussa tietokoneen kehittämisestä.
+Huomattuaan että nimi Hi-Toro oli jo japanilaisen ruohonleikkurivalmistajan käytössä yhtiö nimettiin uudelleen: nimeksi haluttiin ystävällisemmältä kuulostava ja nimeksi tuli Amiga.
+
+
+=== Kehitys ===
+Tietokonetta kehitti aluksi Amiga-yhtiö ja tietokoneen prototyyppiä päätettiin kutsua nimellä Lorraine.Jay Miner oli lukenut ja käynyt kursseja blitteristä ja päätti toteuttaa sellaisen myös Amigan piirisarjaan. Nykyään kaikissa videokuvaa käsittelevissä piireissä on samanlaisen toiminnon toteutus. Piirisarjaan tuli yksinkertaista ohjelmoitavuutta sisältävä näyttömuistia suoraan käsitteleva copper apusuoritin. HAM (engl. Hold and Modify) oli piirisarjan tukema näyttötila, jossa näytölle saatiin kerralla enemmän värejä kuin näyttömuisti mahdollisti. HAM-tila aloitti yhdellä värillä ja muutti värin yhtä komponenttia kerrallaan väriavaruudessa. Piirisarjassa oli kyky toistaa neljää audiokanavaa yhtäaikaisesti: kaksi vasemmassa stereokanavassa ja kaksi oikeassa, jota ei vuosiin ollut kilpailijoiden laitteissa. Piirisarja koostui lopulta kolmesta erikoispiiristä jotka saivat nimet Agnus, Denise ja Paula.Amigan piirisarja oli tehokas mutta käytti paljon aikaa muistin käsittelyyn, joka ei jättänyt paljon aikaa itse prosessorille: ratkaisuna suunniteltiin toinen väylä, jota prosessori yksistään pystyi käyttämään "nopealle" muistille ja siellä sijaitseville ohjelmille.
+
+Prototyyppiä esiteltiin CES-messuilla tammikuussa 1984. Tietokoneessa ajettiin Boing-nimellä tunnettua demoa, jossa punavalkoinen rantapallo pomppii ruudulla stereoäänen säestyksellä. Boing-pallosta tuli myöhemmin laajalti käytetty Amigan symboli. Messuilla ihmisten oli vaikea uskoa tietokoneen pystyvän sen näyttämään animaatioon ja jatkoivat "oikean" tietokoneen etsimistä.
+Amigan videopiirit pystyivät manipuloimaan kuvaa kahdesta 40:een kertaa nopeammin kuin mikään muu henkilökohtainen tietokone markkinoilla siihen aikaan. Boing-demo esitteli kuvan ja äänen lisäksi Amigan moniajoa ja ohjelmointitempuilla jätti suoritinaikaa myös muiden asioiden tekoon samaan aikaan. Demo käytti viewport-tekniikkaa sekä väripaletin muuttamista vaadittujen animaatiokuvien vähentämiseen. Ääninäytteitä toistettiin eri nopeuksilla, voimakkuuksilla ja kanavilla tuottamaan erilaisia pomppimisääniä. Koska piirisarja teki lähes kaiken työn se jätti suorittimen vapaaksi muille asioille ja muiden ohjelmien suorittamiseen.Rahavaikeuksissa oleva yhtiö päätti ottaa vastaan 500 000 dollarin rahoituksen Atarilta sillä ehdolla, että maksaisivat summan takaisin kesäkuussa tai muutoin Atari saisi omistukseena kaiken teknologian. Commodore päätti rahoittaa Amiga-yhtiötä jotta laina voitiin maksaa takaisin ja päätyi lopulta ostamaan koko yhtiön 24 miljoonan dollarin hinnalla.
+
+
+=== 1985–1990 ===
+Amiga esiteltiin julkisesti vuonna 1985, jolloin Andy Warhol esitteli tietokoneen graafisia ominaisuuksia ProPaint-ohjelmalla tekemällä Debbie Harryn muotokuvan. Warholin tekemiä digitaalisia maalauksia on löydetty myöhemmin ja säilötty museoon.Heinäkuussa 1985 julkaistu Amiga sai ylistäviä arvioita, mutta Commodore oli talousvaikeuksissa. Commodore 64 myi edelleen mutta kotitietokoneiden hintasota oli karsinut voittoja. Lisäksi Commodore oli investoinut miljoonia dollareita 8-bittisiin malleihin kuten Plus/4. Näistä johtuen Amiga ei päätynyt myyntiin ennen elokuuta 1985. Tuotantovaikeudet viivästyttivät ja lokakuuhun mennessä vain 50 kappaletta oli valmistettu. Lisäksi Jack Tramiel oli kiiruhtanut Atari ST:n markkinoille käyttämällä valmiita komponentteja ja Digital Researchilta ostettua graafista käyttöliittymää.Commodorella oli vaikeuksia uuden tietokoneen markkinoinnissa ja tuotti joukon mainoksia, jotka eivät onnistuneet vakuuttamaan ostajia.Amigaa myytiin 1 295 dollarin hinnalla plus 500 dollarin värimonitorilla, joka oli liian kallis satunnaiselle kotikäyttäjälle, joka ei tietäisi mitä tehdä sen suorituskyvyllä. Täysin uusi tietokone yritykseltä, joka oli aiemmin myynyt tietokoneitaan lelukaupoissa, uusi tietokone oli vaikea pala konservatiivisille yrityksille. Julkaisuhetkellä saatavilla olleista 15 ohjelmasta vain kolme oli hyödyllisiä yrityssovelluksia.
+Etuna suljettuun Apple Macintoshiin nähtiin kolmansille osapuolille avattu laitteistoalusta. Amigan etuina nähtiin Motorola 68000 -prosessorin suorituskyky (parempi kuin IBM PC:n), 4 096 väriä ja viisitasoinen animaatio (haastoi 15 kertaa kalliimmat laitteet), sekä nelikanavainen stereoääni.Julkaisuaikana laitteiston ominaisuudet olivat harvinaisia henkilökohtaisissa tietokoneissa: vertailukelpoisten ominaisuuksien saamiseen olisi oltava 4 000 dollarin yritystietokone, 10 000 dollarin grafiikkapääte grafiikka- animaatio-ominaisuuksia varten, sekä syntetisaattori musiikkia varten. Perinteisiin tapoihin verrattuna Amigassa ei ollut varsinaista tekstimoodia, vaan ne olivat korkean resoluution näyttötiloja. Mukana tuli myös ohjelma puhesyntetisaattorille sekä BASIC-tulkki. Amigassa oli graafinen käyttöliittymä ja komentorivipohjainen käyttöliittymä, jossa oli ohjelmointiominaisuuksia (ehtolauseet, toistorakenteet). Amigan moniajo mainittiin vaikuttavana ominaisuutena: kuin olisi suurtietokone ja useita päätteitä yhden henkilön käytössä. Graafisista ominaisuuksista huomiota herättivät blitterin käyttö animaatiossa, playfield-tekniikka (päällekäisille ruuduille) ja lisävarusteena saatavan videokortin avulla kuvan kaappaaminen ja digitointi. Ääniominaisuudet herättivät huomiota: muissa tietokoneissa neljä kanavaa olisi tarkoittanut neljän sävelen sointua, mutta Amigalla sointuun riitti yksi kanava.
+
+Ensimmäinen Amiga-tietokone tuli markkinoille vuonna 1985, siitä alettiin myöhemmin käyttää nimeä Amiga 1000.
+Commodore markkinoi sitä Commodore 64:n seuraajana ja Apple Macintoshin kilpailijana. Amiga kykeni näyttämään ja tuottamaan 8-bittistä stereoääntä, mitkä olivat pitkään koneen merkittäviä valtteja sen kilpailijoita (Macintosh, IBM PC ja Atari ST) vastaan. Amigasta ei tullut välitöntä menestystä Commodoren aiempien tietokoneiden myynnin jatkuessa. Commodore teki jopa uuden 8-bittisen koneen, Commodore 128, joka ei kuitenkaan menestynyt sekään, sekä omia IBM PC -kloonejaan.
+Amigalle julkaistiin kuvankäsittelyyn ja digitointiin laitteita, kuten NewTekin vuonna 1986 julkaisema DigiView. Laite kytkettiin Amigan rinnakkaisporttiin ja sillä voitiin digitoida värillistä videokuvaa. Marraskuussa 1986 Commodore julkaisi Juggler-demon, joka oli 24:stä HAM-muodon värikuvasta koostuva animaatio ääniefekteillä. Animaation oli tehnyt Eric Graham kehittämällään Sculpt 3D:tä edeltävällä säteenseurantaohjelmistolla. Vuonna 1986 julkaistiin säteenseurantaohjelmia kuten Sculpt 3D ja TurboSilver. VideoScape 3D julkaistiin seuraavana vuonna. Caligari julkaistiin vuonna 1988.Vuonna 1987 Commodore julkaisi Amiga 500 -mallin, joka oli suunnattu kilpailemaan halpahintaista Atari ST:tä vastaan. Molemmissa koneissa oli Amiga 1000:sta poiketen näppäimistö ja varsinainen tietokone yhdistetty toisiinsa. Amiga 1000:tta halvempi Amiga 500 tuli menestyneimmäksi Amiga-malliksi, ja se myi selvästi Atari ST:tä enemmän kilpailijan etumatkasta huolimatta.
+Samoin vuonna 1987 ilmestyi vaativampaan käyttöön suunnattu Amiga 2000, jossa oli suurempi kotelo ja useita laajennuskorttipaikkoja. Mallissa oli viisi Zorro-laajennuspaikkaa, suoritinkorttipaikka päivityksille sekä video slot genlock-kortille. Amigan Zorro-väylä tuki ohjelmallista autoconfig-toimintoa ilman tarvetta jumppereille.
+Amiga 2000 sai laajennusmahdollisuuksiensa ja genlock-laajennettavuutensa ansiosta suosiota grafiikka- ja videokäsittelijöiden keskuudessa. NewTekin Video Toaster oli aikanaan tunnettu ja Emmy-palkittu laajennus yhdessä LightWave 3D-ohjelman kanssa. IBM PC ja Apple Macintosh olivat kuitenkin nousseet jo aiemmin toimistokoneiden ykkösvaihtoehdoiksi, eikä näitä pystytty syrjäyttämään asemastaan.
+
+
+=== 1990–1994 ===
+
+Vuonna 1990 Commodore julkaisi ensimmäisen tekniikaltaan selvästi parannellun Amiga-tietokoneen, Amiga 3000, jossa oli paranneltu piirisarja (ECS) sekä selvästi uudistettu versio käyttöjärjestelmästä, 2.0. Commodore oli jo aiemmin saanut kritiikkiä siitä, ettei se ollut parannellut jo viisi vuotta vanhaa Amigaa tarpeeksi. Amiga 3000 ei hiljentänyt kriitikoita, vaan ECS nähtiin turhan vaatimattomana prosessoriteholtaan ja erikoispiireiltään verrattuna etenkin tuolloin päätään PC-puolella nostaneisiin VGA- ja SuperVGA-kortteihin. Laite jäikin kehityksessä välivaiheeksi, joka ei innostanut kuluttajia.
+Vuonna 1990 Commodore julkaisi myös epäonnistuneen CDTV-laitteen, joka oli periaatteessa CD-ROM-asemalla ja kaukosäätimellä varustettu Amiga 500. Tähän aikaan monet laitevalmistajat uskoivat CD:n mahdollisuuksiin, mutta kuluttajat eivät innostuneet laitteesta, joka oli Amigaa ja pelikonsoleita selvästi kalliimpi, ja CDTV:stä tuli paljon resursseja ja aikaa syönyt floppi Commodorelle.
+Näihin aikoihin Amiga oli kuitenkin flopeista huolimatta suosionsa huipulla Amiga 500 -mallin jatkuvan menestyksen takia. Amigasta oli tullut merkittävä tietokoneharrastajien keskuudessa, koska Commodore 64:n ympärille muodostuneen laajan harrastajapiirin jäsenistä monet siirtyivät 1980-luvun lopulla Amigaan. Tämä ilmiö toteutui erityisen voimakkaasti Suomessa, jossa myös Commodore 64:n suosio oli ollut suhteellisen suurta.
+Menestystä Amigalle tuli selvästi enemmän Euroopassa kuin Atlantin toisella puolen. Yhdysvalloissa Commodorea pidettiin halpojen pelikoneiden valmistajana. Tätä vaikutelmaa lisäsi entisestään se, että koneita myytiin Yhdysvalloissa lelukaupoissa ja mainokset eivät puhutelleet kohdeyleisöään.
+Vuoden 1991 alussa ilmestyi Amiga 500+, joka oli hieman paranneltu Amiga 500, ja pian sen jälkeen Amiga 600. Amiga 600:sta piti tulla A500+:n halvempi versio, mutta päätyi olemaan kalliimpi ja korvaamaan A500+:n. Amiga 600 ei ollut mitä kuluttajat odottivat ja etenkin suoritinpäivitykset jäivät kolmansien osapuolien vastuulle. Näihin aikoihin Commodore lopetti epäonnistuneena yrityksensä saada jalansijaa IBM PC -kloonien markkinoilla. Vielä samana vuonna Commodore joutui sulkemaan Australian toimistonsa vähentyneen myynnin takia. Sun Microsystems olisi myynyt Amiga UNIX (AMIX) -tietokoneita omalla brändillään mutta Commodoren silloinen toimitusjohtaja tyrmäsi yrityksen kahdesti.Vuonna 1992 ilmestyivät markkinoille seuraavan sukupolven Amigat, Amiga 1200 ja Amiga 4000. Näissä oli uusi AGA-piirisarja sekä käyttöjärjestelmän kolmas versio. Amiga 1200:n ominaisuuksilla ei kuitenkaan voinut enää pysäyttää IBM PC -kloonien voittokulkua. Alkuperäisen Amigan oli ilmestyessään nähty olleen hintalaatusuhteeltaan edellä muita oman aikansa koneita, mutta vuonna 1992 oli selvästi vaikeampaa tuottaa hinnaltaan kilpailukykyistä teknologiaa massiiviseksi paisunutta PC-teollisuutta vastaan, ja Amiga 1200 vaatikin turbokortin ja erillisen näytönohjaimen ollakseen sen ajan PC-koneiden tasolla.
+Vuonna 1993 ilmestyi teknisesti Amiga 1200:n kaltainen pelikonsoli CD32, jonka ominaisuudet vastasivat suuresti Amiga 1200:sta, johon oli lisätty CD-ROM-asema ja Akiko-piiri. CD32 oli maailman ensimmäinen länsimaissa markkinoitu 32-bittinen pelikonsoli, ja jonkin aikaa se menestyi Isossa-Britanniassa kohtalaisesti, mutta se ei poistanut Commodoren ongelmia. Viimeiseksi Amiga-malliksi jäi vuonna 1994 julkaistu A4000T.
+
+
+=== 1994– ===
+Commodore hakeutui vapaaehtoisesti toukokuussa 1994 Yhdysvaltain konkurssilain 11 luvun mukaiseen menettelyyn, joka antaa firman saneerata ja maksaa velkansa. Commodore oli mennyt saneeraukseen jo aiemmin pari kertaa, mutta firman johtohahmoihin kuulunut Irving Gould oli maksanut velat ilman konkurssilakiin turvautumista. Tällä kertaa oikeus kuitenkin nimitti konkurssilain mukaisesti luottamushenkilöt myymään Commodoren osakkeet pois.Amiga-tietokoneita myytiin neljästä kuuteen miljoonaa kappaletta Commodoren konkurssiin mennessä.Joidenkin Amiga-käyttäjien vankka uskollisuus merkkiään kohtaan piti huolen siitä, että "amiga-skene" jatkoi toimintaansa, vaikkei uusia laitteita enää myyty. IBM PC -yhteensopivista koneista oli kuitenkin tullut 1990-luvun puoliväliin mennessä Euroopassakin kotitietokoneeksi vaihtoehto, jolle ei ollut vakavaa haastajaa.
+Amiga oli suosittu videoeditoinnissa ja MacroSystem Computer GmbH suunnitteli ja tuotti Amigaan perustuvan DraCo-tietokoneen.Amigalle suunniteltiin vielä Commodoresta riippumatta ohjelmistoa ja laajennuskortteja: grafiikkakorttien käyttöön julkaistiin kaksi merkittävää rajapintaa, Picasso96 ja CyberGraphX. Äänikorttien käyttöön julkaistiin AHI 1990-luvun puolivälissä.Oikeudet Amiga-tietokoneisiin myytiin Escomille, joka oli ostanut suurimman osan Commodoren osakkeista, ja myöhemmin Gateway 2000:lle. Escom meni itse konkurssiin Amigaan liittymättömistä syistä hyvin pian. Tätä ennen Escom oli jatkanut Amiga-tekniikan tuottamista jonkin aikaa, muttei kehittänyt uusia tietokonemalleja. Oikeudet Amigaan saanut Gateway ei osannut oikein päättää, mitä tehdä hankinnoillaan. Vuonna 1999 uusi yritys, Amiga Inc., perustettiin USA:ssa, ja se sai Gatewaylta lisenssin Amigaan liittyviin patentteihin ja tavaramerkkeihin.
+Tämän yrityksen aikana tehtiin useita tuotejulkaisuja, jotka eivät liity alkuperäiseen Amigaan oikein mitenkään. Näistä suurin osa jäi flopeiksi tai ei koskaan realisoitunut. Kuitenkin AmigaOS-käyttöjärjestelmä on kehittynyt tänä aikana. Vuonna 2001 Amiga Inc. antoi järjestelmän kehitystyön belgialais-saksalaiselle Hyperion Entertainment -yritykselle. Tässä yhteistyössä oli aluksi mukana myös Englantilainen Eyetech. Uutta laitekantaa saatiin hitaasti ja rajatusti markkinoille nimellä AmigaOne. Yritysten väliset riidat kuitenkin estivät järkevän kehityksen, ja lopputuloksena oli vain useita sekavia omistajavaihdoksia ja oikeuskäsittelyjä; kunnes lokakuussa 2009 Hyperion Entertainment pääsi sopuun Amiga Inc. yrityksen kanssa AmigaOS 4 -käyttöjärjestelmän jatkokehittämisestä itsenäisesti.
+A-EON -yrityksen AmigaOne X5000 on vuonna 2009 perustetun yrityksen AmigaOS 4:ää käyttävä tietokone. A-EON on aiemmin julkaissut AmigaOS 4:ään käyttävän AmigaOne X1000 -tietokoneen.
+
+
+== Käyttöjärjestelmä ==
+Amigan käyttöjärjestelmää kutsutaan nimellä AmigaOS. Käyttöjärjestelmä on mikroytimeen perustuva ja moniajoa tukeva.Sen osat ovat:
+
+Workbench (graafinen käyttöliittymä)
+Exec (käyttöjärjestelmän ydin)
+Kickstart (ROM-muistissa sijaitseva firmware)
+AmigaDOS (komentorivi ja perustoiminnot)
+AmigaShell (komentoriviohjelmatyökalu)Kickstart tekee tarkistuksia laitteistolle, päättelee mitä on saatavilla alustaa laitteiston tilan. Tämän jälkeen tietokone on valmis lataamaan muun ohjelmiston: Workbenchin, pelin tai hyötyohjelmiston. Ohjelmisto voidaan ladata levykkeeltä, kiintolevyltä tai CD-ROMilta (CDTV- ja CD32-mallit).Commodoren tekemät viralliset käyttöjärjestelmäversiot ovat:
+
+
+=== Amiga UNIX ===
+Amiga UNIX (AMIX) on Commodoren System V-pohjainen UNIX Amiga-tietokoneille, joka oli saatavilla esimerkiksi Amiga 3000:lle.Käyttöjärjestelmää pystyi ajamaan muissakin Amiga-tietokoneissa joissa laitteistovaatimukset täyttyivät laajennuksien avulla:
+Motorola 68020 tai Motorola 68030, jossa on matematiikkasuoritin (FPU) ja muistinhallintayksikkö (MMU)
+4 megatavua RAM-muistia
+SCSI-kiintolevy
+
+
+== Laitteisto ==
+Amiga rakentui erikoispiireihin jotka toimittivat äänen, grafiikan ja laitteistorutiinien tehtäviä vapauttaen CPU:n muihin tehtäviin. Tätä voidaan kutsua varhaisena laitteistokiihdytyksenä.
+Piirisarjoista käytetään nimityksiä OCS (Original Chip Set), ECS (Enhanced Chip Set) ja AGA (Advanced Graphics Architecture, toisinaan lyhennetty AA). 
+AAA-piirisarja oli kehityksen alla kun Commodore meni konkurssiin: AAA-piirisarjasta oli prototyyppejä, joilla pystyi tekemään asioita, mutta joissa oli vielä virheitä eivätkä ne olleet riittävän toimivia käyttöjärjestelmän ajamiseen. AAA-piirisarjasta oli tulossa merkittävästi erilainen aiempaan arkkitehtuuriin verrattuna. Hombre-piirisarja oli Ed Heplerin projekti uudeksi piirisarjaksi, jota oli tarkoitus suorittaa myös PCI-laajennuskortilta.Tietokoneessa käytettävää RAM-muistia oli kahta tyyppiä: tinen oli nimeltä Chip RAM johtuen erikoispiirien kyvystä käyttää tätä muistia suoraan DMA:n kanssa; laajennusmuistia kutsuttiin nimellä Fast RAM. Erikoispiireillä oli etuoikeus päästä Chip RAM -muistiin ja prosessorin oli odotettava vuoroaan kun taas erikoispiirit eivät pääseet Fast RAM -muistiin, joka oli prosessorille nopeammin käsiteltävissä ilman odottamista.Prosessorina käytettiin Motorola 68000-sarjaa.
+Amiga CD32:n seuraajaan suunniteltiin PA-RISC -prosessorin käyttöä Hombre-piirisarjan kanssa.Laitteisto käytti Zorro-nimistä väyläarkkitehtuuria, joka mahdollisti useimmissa malleissa lisäkorttien ja prosessorikorttien lisäämisen. Zorro väylä tuki Autoconfig  protokollaa, joka mahdollisti laitteiden osoiteavaruuden konfiguraation automaattisesti ilman jumpperiasetuksia (myöhemmin vastaava tuli IBM/PC-klooneissa tunnetuksi nimellä Plug'n Play). Menetelmä vastaa PCI-väylän käyttämää menetelmää.
+Zorro-väylän ensimmäinen versio oli käytössä vain Amiga 1000-mallissa. Amiga 2000:ssa esiteltiin Zorro II, jonka seuraaja Zorro III oli käytössä Amiga 3000:ssa ja Amiga 4000:ssa. Nimi tulee prototyypistä, jolle ei kehitetty parempaa nimeä ja se jäi käyttöön.Dave Haynie suunnitteli Buster-piirin Amiga 2000:n laajennuksien käsittelyyn.
+
+
+=== Liitännät ===
+Amigassa oli kaksi Atari-liitintä joystickin, hiiren, valokynän tai muun laitteen kytkemiseen. Malleissa oli CD32:ta lukuun ottamatta liitäntä ulkoisen levykeaseman kytkemiseen. Muut liitännät ovat 25-pinninen RS232-liitäntä sarjaportille, 25-pinninen Centronics-tyylinen liitäntä rinnakkaisportille ja 23-pinninen RGB-videoliitäntä.
+Amiga 1000, Amiga 500 ja Amiga 500+ mallit sisälsivät myös ulkoisen liitännän Zorro-laajennusväylälle, joka oli Amiga 1000:ssa oikealla puolella ja 500 sekä 500+ malleissa vasemmalla puolella. Ison kotelon mallit (2000, 3000, 4000) sisälsivät useita sisäisiä Zorro-laajennuspaikkoja.
+Muistilaajennusta varten oli myös erilaisia liitäntöjä mallista riippuen.
+Äänen ulostulolle oli kaksi RCA-liitintä ja tietokone voitiin kytkeä monitoriin tai televisioon.
+
+
+=== Laajennukset ===
+Tietokoneelle valmistettiin useita laajennuksia ja lisäkortteja. Eräs tunnetuista on NewTekin Video Toaster.
+Prosessoripäivitykset myytiin laajennuskorteilla, joissa oli myös muistilaajennuksen mahdollisuus. GVP valmisti useita päivityksiä eri Amiga-malleihin.phase 5 valmisti PowerPC-suorittimella varustettuja laajennuskortteja.Commodore julkaisi Amiga 1000:lle A1060 Sidecar -laajennuskortin, jossa oli IBM PC -yhteensopiva tietokone yhdellä kortilla: kortilla oli 8088 suoritin ja 360 kilotavun 5,25" levyasemaohjain. Tätä seurasivat A2088XT, A2286AT ja A2386SX Bridgeboard kortit Amiga 2000:lle.
+ReadySoft julkaisi Apple Macintosh -emulaatioon tarkoitetun A-Max -laajennuskortin.Suomalainen Petsoff julkaisi Motorola 56002 -perusteisen äänikortin nimeltä Delfina.
+
+
+== OCS-piirisarja ==
+1980-luvun Amigojen piirisarjasta käytetään nykyään nimitystä Original Chip Set eli OCS. Sen seuraajina olivat hieman paranneltu ECS-piirisarja (Enhanced Chip Set) ja suuresti paranneltu AGA-piirisarja (Advanced Graphics Architecture). Alkuperäistä piirisarjaa käytettiin Amiga 1000:ssa, Amiga 2000:ssa ja Amiga 500:ssa.
+
+
+=== Yleiskatsaus piireihin ===
+Piirisarja, joka antoi Amigalle sen tunnusomaiset graafiset ominaisuudet, koostui kolmesta erikoispiiristä, Agnus, Denise, ja Paula. Gary-piiri oli virallisesti osa piirisarjaa, mutta siihen viitataan harvemmin, sillä se oli ei-ohjelmoitava I/O-piiri. Kahta CIA-piiriä (Complex Interface Adapter) ei myöskään lasketa mukaan piirisarjaan, sillä niitä käytettiin jo aikaisemmin Commodore 64:ssä ja 128:ssa, eli aikana ennen Amigaa.
+
+Agnus – toimi piirimallin keskuspiirinä. Se valvoi kaikkea pääsyä Chip-muistiin sekä suorittimelta että muilta piireiltä, käyttäen monimutkaista tärkeysjärjestystä. Se sisälsi myös blitterin ja copperin. Alkuperäinen Agnus pystyi osoittamaan 512 kilotavua Chip-muistia. Myöhempi versio piiristä, Fat Agnus, pystyi osoittamaan megatavun verran Chip-muistia.
+Denise – näyttösuoritin. Ilman ylipyyhkäisyn käyttöä, näytön erottelukykynä oli 320 (lowres) tai 640 (hires) pikseliä leveä ja 200 (NTSC) tai 256 (PAL) pikseliä korkea. Se tuki myös lomitettua kuvaa, joka kaksinkertaisti pystytarkkuuden. Väritarkkuus oli valittavissa 2–32 värin välillä (1–5 bittitasolla), erityinen kuudennen bittitason nk. "Extra-HalfBrite"-moodi ja Hold and Modify (HAM) -moodi, jossa kaikki 4096 värisävyä pystyttiin näyttämään kerrallaan (tosin tietyin rajoituksin: pikselin väri vaikutti viereisten pikseleiden väreihin). Denise tuki myös kahdeksaa spriteä, ¼ pikselin hienovieritysmoodia ja kaksoisgrafiikkapintaa.
+Paula – pääasiassa äänipiiri; 4 itsenäistä laitteistopohjaisesti miksattua 8-bittistä PCM-äänikanavaa 6-bittisellä äänivoimakkuustasolla ja näytteenottotaajuus noin 20 Hz – 29 kHz. Paula myös tulkkasi digitaalisen joystickin, analogisen joystickin ja hiiren signaalit, salli piirisarjan lähettää suoritinkeskeytyksiä ja hoiti levyaseman.
+
+
+=== Agnus ===
+
+Piirisarjan vääntövoiman keskeisenä tekijänä on se, että kaikki operaatiot ovat tahdistettuja kuvasignaalin kanssa. Tämä sisältää pääsyn sisäänrakennettuun keskusmuistiin, joka tunnetaan nimellä "Chip RAM", sillä pelkästään piirisarjalla on suora pääsy siihen. Suoritin ja piirisarjan muut jäsenet joutuvat pyytämään Agnukselta pääsyä. Järjestelmäarkkitehtuurisesti tämä tunnetaan nimellä suora muistinkäyttö (DMA – Direct Memory Access), ja Agnus on tässä tapauksessa muistiohjain (DMA-ohjain).
+Agnus omaa monimutkaisen prioriteettipohjaisen muistinkäsittelymenetelmän. Esimerkiksi bittitason tiedonhaut ovat paljon tärkeämpiä kuin blitterisiirrot. Nimittäin alkuperäinen Amigoiden suorittimena toiminut Motorola 68000 pystyi käsittelemään muistia vain joka toisella kellojaksolla; Agnus pyörittää järjestelmää, jossa aikakriittiset erikoispiirit saavat parittoman kellojakson ja suoritin parillisen – suoritin ei jää muistikäsittelyn ulkopuolelle ja näytä siten hidastuvan. Aikakriittiset erikoispiirien toiminnot, kuten blittersiirrot, voivat kuitenkin käyttää käyttämättömät parilliset ja parittomat kellojaksot, ja jos "BLITHOG" (blitter hog) -lippu on merkitty, Agnus käyttää jopa parillisetkin kellojaksot suorittimelta blitterin hyödyksi.
+Agnuksen ajoitukset mitattiin 280 nanosekunnin "värikelloissa". Tämä oli suoraan verrannollinen kahteen lowres-pikseliin (140 ns) tai neljään hires-pikseliin (70 ns). Kuten Denisen, nämä ajoitukset suunniteltiin kodin televisioita varten ja ne voidaan tahdistaa ulkoiseen kellolähteeseen.
+
+
+==== Blitter ====
+Blitteri – "blit" on lyhenne sanoista "block image transfer" (tai bit blit). Blitteri on muistisiirron ja loogisten operaatioiden rinnakkaisyksikkö. Sillä on kolme toimintatilaa: muistiosioiden (käytännössä useimmiten bittikartan) kopiointi, niiden täyttäminen (esim. polygonin täyttö) ja viivojen piirtäminen.
+Blitteri oli kaksi kertaa nopeampi kuin 68000 prosessori siirtämään muistilohkoja kuin varsinainen CPU ja se pystyi toimimaan asynkronisesti CPU:n rinnalla.
+
+
+==== Copper ====
+Copper on lyhenne sanasta "co-processor" (apusuoritin), se on ohjelmoitava äärellinen automaatti. Sen kytkeytyessä päälle sillä on kolme vaihetta: se joko lukee käskyn, suorittaa sen tai odottaa tiettyä videosignaalin kohtaa. Copper ajaa ohjelmaa nimeltä copperlista rinnakkain keskussuorittimen kanssa. Se on tahdistettu videosignaalin kanssa ja sitä voidaankin käyttää useiden toimitusten tahdistamiseen videosignaalin kanssa. Yleensä copperia käytetään videoulostulon ohjaamiseen, mutta sillä voidaan kirjoittaa tietoa mihin tahansa piirisarjan rekisteriin ja siten käyttää äänirekisterien asettamiseen tai suoritinkeskeytyksiin.
+Copperilla pystyy muun muassa muuttamaan väripalettia jokaisella vaakarivillä, jolloin ruutuun saadaan huomattavasti enemmän värejä samanaikaisesti kuin 32/64 ilman, että tarvitsee käyttää HAM-tilaa. Copperilla pystyy myös vaihtamaan bittikarttaosoittimet jokaisella vaakarivillä (pikselin tarkkuudella), jolla saa tehtyä erilaisia graafisia efektejä (kuten ruudun vierittäminen vaakariveittäin). Copper-efektit olivatkin käytettyjä etenkin Amigan demoskenessä.
+Amigan pelien näytön vieritys, jota pidettiin Atari ST:n versioihin verrattuna pehmeänä ja monipuolisena, tehtiin yleensä Copperin ja Blitterin yhteistyöllä siten, että Copperilla muutettiin bittikarttaosoittimia ja Blitterillä kopioitiin grafiikkaa ruudun vielä näkymättömään osaan.
+
+
+=== Denise ===
+Denise ohjaa kuva-ajoituksia, mutta se voidaan myös tahdistaa ulkoiseen kuvasignaaliin. Denise on ohjelmoitu noutamaan tasomaista kuvatietoa 1–5 bittitasolta ja kääntää ne värihauiksi. Bittitasojen lukumäärä on mielivaltainen, joten jos 32 värisävyä ei tarvita, 2:ta, 4:ää, 8:aa tai 16:ta voidaan käyttää sen sijaan. Bittitasojen (ja erottelutarkkuutta) voidaan vaihtaa lennosta copperin avulla. Tämä sallii Chip-muistin erittäin säästeliään käytön. Olemassa on myös kuudes bittitaso, jota voidaan käyttää erityistiloihin:
+
+Extra-HalfBrite (EHB) – jos pikseli asetetaan kuudennelle bittitasolle, tavallisen 32-värisen pikselin kirkkaus puolittuu. Tällä voidaan siis saada ruutuun 64 väriä samanaikaisesti.
+Hold and Modify (HAM, HAM-tila) – jokainen 6-bittinen pikseli käsitetään kahtena ohjausbittinä ja neljänä databittinä. Neljä mahdollista ohjausbittiä ovat "aseta", "muokkaa punaista", "muokkaa vihreätä" ja "muokkaa sinistä". "Aseta"-bitin avulla 4 databittiä toimivat tavallisena 16-värisenä värihakuna. "Muokkaa"-bittien avulla edellisen pikselin punaista, vihreää tai sinistä komponenttia muokataan datan arvoon ja pikselin kaksi edellistä komponenttia säilytetään. Tämä sallii kaikkien 4 096 värisävyn näyttämisen yhtäaikaisesti.
+Kaksoisgrafiikkapinta (dual playfield) – sen sijaan, että näytettäisiin pelkästään yhtä grafiikkapintaa, kaksi 8 värisävyn pintaa (3 bittipintaa kummassakin) piirretään toisensa päälle. Niitä voidaan vierittää itsenäisesti ja päällekkäisen pinnan taustaväri "loistaa" alla olevalle pinnalle.
+
+
+=== Paula ===
+
+
+==== Ääniominaisuudet yleisesti ====
+Paula tarjoaa käyttäjälle stereoäänen ja ohjelmoijalle 4 DMA-pohjaista 8-bittistä äänikanavaa. Kaksi DMA-kanavaa yhdistetään vasempaan ääniulostuloon ja toiset kaksi oikeaan. Kanavat yhdistetään toisiinsa yhteenlaskemalla niiden arvot.
+Paula-piirin suunnitteli Glenn Keller. Piirin nimi on lyhennetty yhdistelmästä Ports, Audio, UART and Logic viitaten sen toimintoihin. Keller oli toiminut elektroniikan parissa aiemmin mutta ei ollut suunnitellut piiriä aiemmin ja sai vastuulleen oheislaitteista vastaavan osuuden Amigan toimintoja.Laitteiston tukema näytteistystaajuus ylettyy 28 867 hertsiin. Äänilaitteiston toiminnallisuus liittyy läheisesti kuvalaitteiston ajoituksiin sillä tavalla, että uusi näytepari voidaan hakea jokaisen piirretyn vaakaviivan aikana. Tästä syystä on mahdollista kaksinkertaistaa enimmäisnäytteenottotaajuus ECS/AGA-koneissa valitsemalla sopiva näyttötila, jossa vaakaviivojen määrä on kaksinkertainen. DMA-pohjaisen soittamisen lisäksi on mahdollista käyttää ohjelmistopohjaista näytteistystä, jolloin DMA:ta ei käytetä. Tällöin ei rajoituta 28 867 hertsin näytteenottotaajuuteen tai kuva-ajoituksiin, mutta suoritinaikaa kuluu suoraan verrannollisesti näytteenottotaajuuteen nähden.
+Lisäksi laitteisto sallii kahden kanavan kytkemisen yhteen siten, että toinen kanava muokkaa toisen kanavan taajuutta tai voimakkuutta. Tätä mahdollisuutta voidaan käyttää tremolo- tai vibrato-efektien saavuttamiseen, mutta niin harvoin tehtiin.
+Laitteisto sisältää myös analogisen alipäästösuotimen, jonka tarkkoja tietoja ei tunneta. 7 kHz:n kohdalla suodin vaimentaa volyymitasoa ainakin 15 desibelin voimalla. Suodinta voidaan käyttää kaikilla kanavilla yhtä aikaa niin haluttaessa. Laitteistopohjaisilla kanavilla ei ole erillisiä suotimia.
+Paula-piiri lukee suoraan koneen RAM-muistia käyttämällä suoraa pääsyä muistiin  (DMA, direct memory access), jolloin äänentoisto on mahdollista ilman prosessorin väliintuloa ja tehon hävikkiä. Tietokoneen prosessori kertoo Paulalle missä ääninäyte sijaitsee muistissa, miten kauan sitä toistetaan ja millä taajuudella (rate) sitä toistetaan.Amigan "power"-LED-valon kirkkaus näyttää alipäästösuotimen statuksen. Kun suodin on päällä, ledi on kirkas, ja kun se on pois päältä, ledi on himmeä. Vanhimmissa Amiga 500 -koneissa ledi sammui kokonaan suotimen ollessa pois päältä. Amiga 1000 -koneessa power-valo ei liity suotimen statukseen, ja suotimen pystyi sammuttamaan vain juottamalla johto äänipiirin kahden pinnin välille.
+Vaikka 1980-luvun Amigoissa on vain neljä äänikanavaa, voivat jotkut ohjelmat, kuten musiikkiohjelma OctaMed, käyttää kahdeksaa tai jopa useampaa virtuaalista kanavaa. Tätä käytettiin myös jossain peleissä. Lisäksi ohjelmat pystyivät miksaamaan kaksi äänipiirin kanavaa saadakseen aikaan yhden näytetarkkuudeltaan 14-bittisen kanavan säätämällä kanavien äänenvoimakkuutta tietyllä tavalla.
+Piirisarjassa on kaksi analogista alipäästösuodatinta D/A-muuntimen (DAC) jälkeen: vahvempi on mahdollista kytkeä pois päältä ja toinen on kiinteä. "Double-scan" näyttömoodin kanssa näytetaajuutta voi nostaa: OCS-piirisarjalla 28 kHz taajuus on mahdollista kun taas myöhemmillä ECS- ja AGA-piirisarjoilla 57 kHz on mahdollista. Paulan 8-bittinen DAC ja 6-bittinen äänenvoimakkuuden säätö voidaan yhdistää 14-bittiseksi tilaksi.Äänipiiriä voi kontrolloida myös keskeytyksillä ja saada näin 14-bittinen ääni kaikille neljälle kanavalle. Näin voidaan myös miksata kaksi kanavaa molemmille puolille ja saada 15-bittinen ääni. Nämä temput kuitenkin vievät paljon prosessoriaikaa.
+Amigan tuottaman äänen laatu ja äänipiirin helppokäyttöisyys ohjelmallisesti oli yksi Amigan keskeisiä valtteja muita tietokoneita vastaan vuosien ajan. Ulkoisia äänikortteja Amigoissa ei juuri käytetty, mutta tällaisia on saatavilla, ja niiden avulla saadaan mukaan DSP-ominaisuudet, suora moniraitanauhoitus, lisää äänikanavia ja korkeampia näytetarkkuuksia.
+Paula-piiri suunniteltiin 8-bittiseksi plus 6 bittiä pulssikoodimodulaatioon; tuleva AAA-piirisarja suunniteltiin alusta lähtien 16-bittiseksi plus pulssikoodimodulaatio.
+
+
+==== Levyasemaohjain ====
+Levyaseman ohjaus on Paulan vastuulla. Paula tarjoaa ohjelmoijalle sekä DMA- että rekisteripohjaisen I/O:n. DMA-pohjainen I/O on yleisin käytetty siirtotapa sekä lukemiseen että kirjoittamiseen. Paula tukee sekä GCR- että MFM-koodattuja levyjä.
+Tavallisesti levykkeelle kirjoitettiin 80 sylinteriä. Sylinteri tarkoittaa kahta uraa, jotka ovat levyn eri puolilla. Jokainen ura koostuu 11 sektorista ja jokainen sektori on 512 tavua. Tämä tekee yhteensä 880 KiB. Nämä arvot eivät ole kuitenkaan kiinnitettyjä Paulan puolesta, vaan ohjelmoija voi halutessaan nostaa tai laskea niitä. Amiga-käyttöjärjestelmälle oli saatavilla levyajureita, jotka käyttivät levystä jopa 984 KiB (82 sylinteriä, 12 sektoria). Toimivuus ei kuitenkaan ole taattu Commodoren puolesta, mikäli 880 KiB raja ylitetään. Jonkin sylinterin formatointia ylikokoon käytettiin myös kopioinnin estona, koska useimmat kopiointiohjelmat eivät osanneet kirjoittaa ylikokoisia sylintereitä.
+
+
+== ECS-piirisarja ==
+Enhanced Chip Set (ECS) on Amigan OCS-piirisarjan seuraaja.
+ECS on nimi Amiga-tietokoneen alkuperäisen piirisarjan (OCS) laajennetulle versiolle. ECS esiteltiin vuonna 1990 Amiga 3000:n julkistamisen myötä. Vuodesta 1990 eteenpäin valmistetut Amigat käyttivät OCS- ja ECS-piirien sekoitusta tai täyttä ECS-piirisarjaa. Vuonna 1991 ECS tuotiin vihdoin kuluttajaluokan Amigoihin Amiga 500+:n myötä. Viimeinen ECS:ää käyttänyt Amiga oli Amiga 600.
+ECS esitteli parannellut Super Agnus- (2 megatavun tuki Chip-muistille) ja Super Denise-piirit.
+Muita ominaisuuksia olivat:
+
+Tuki Productivity- (640 × 480 lomittamaton) ja SuperHires (1280 × 200 tai 1280 × 256) -näyttötiloille, jotka oli tosin rajattu neljään värisävyyn
+Blitteri kykeni kopioimaan 1024 × 1024 pikseliä suurempia alueita yhdellä käskyllä
+Kyky näyttää spritejä raja-alueilla (näyttöruudun ulkopuolella, missä bittitasot ovat näkyvillä)Gayle piiri lisäsi IDE-väylän tuen Amiga 600 mallissa.ECS:n seuraaja oli AGA-piirisarja (Advanced Graphics Architecture).
+
+
+== AGA-piirisarja ==
+
+AGA (Advanced Graphics Architecture) piirisarja oli suora seuraaja Amigan toisen sukupolven ECS-piirisarjalle. Se esiteltiin Amiga 4000:n julkistamisen yhteydessä vuonna 1992. Toisin kuin vain pikkuparannuksia sisältänyt ECS, AGA oli selvästi alkuperäistä OCS-piirisarjaa kehittyneempi. Piirisarja kykeni näyttämään erityisessä Hold and Modify -moodissa jopa 262 144 väriä (18 bittiä), OCS-piirisarja kykeni vain 4 096 värin näyttämiseen. Normaalimoodissa AGA pystyi esittämään samanaikaisesti 256 väriä, OCS 32. Väripaletti koostui 16 777 216 väristä (24 bittiä), OCS:llä paletti oli 4 096.
+Suurimpana muutoksena värimäärän ja erottelutarkkuuden lisääntymisen lisäksi oli pahasti ruuhkautetun Agnus-piirin jakaminen kahteen erilliseen piiriin, Aliceen ja Lisaan. AGA-piirisarjaa käytettiin Commodoren Amiga 1200-, Amiga 4000- ja Amiga CD32 -laitteissa.
+AGA vastasi värimäärältään PC:n VGA-standardia, mutta eräänä erona oli se, että kun VGA:n 256-värinen kuvainformaatio esitettiin tavutaulukkona, jossa yksi tavu vastasi yhden pikselin 8-bittistä väri-indeksiä (chunky-grafiikka), esitettiin AGA:n 8-bittinen kuvainformaatio kahdeksana erillisenä bittitasona. Tämä johtui ilmeisesti yhteensopivuussyistä, ja periytyi OCS:stä ja muista vanhoista kotikoneratkaisuista: kun värejä oli selvästi vähemmän kuin 256, ei pikselin tallettamiseen kannattanut käyttää kokonaista tavua. Bittitasografiikka oli kuitenkin chunkygrafiikkaan verrattuna tehotonta käsitellä pikselitason operaatioissa, ja sen käyttö heikensi Amigoiden suorituskykyä esimerkiksi tekstuurimappauksessa.
+Akiko piiri oli Amiga CD32:n oma lisäys jossa oli tuki CDROM-asemalle sekä chunky to planar konversiolle. Tämä mahdollisti grafiikan tuottamisen siihen paremmin soveltuvassa chunky formaatissa ilman suurta suorituskykyrasitetta konversiossa Amigan käyttämään planar formaattiin. Piiri oli myös vastuussa ulkoisen AUX-sarjaportin käsittelystä.
+
+
+== Amiga hyötykäytössä ==
+
+Amiga 500 nousi aloittelevien muusikoiden suosioon. Aiemmin tarvittiin monenlaista laitteistoa musiikin tekoon mutta Amigalla ja OctaMEDilla pystyi tekemään musiikkia ilman studion vuokraamista.
+Karsten Obarskin Ultimate Soundtracker julkaistiin vuonna 1987 helpottamaan musiikin tekoa videopeleihin ja aloitti laajan kiinnostuksen tracker-musiikin ohjelmistoihin.Electronic Arts julkaisi suositun Deluxe Paintin Amigalle vuonna 1985. Muihin suosittuihin piirto-ohjelmiin kuuluvat Digital Creationsin Brilliance ja Cloanton Personal Paint.Juggler-animaation vaikutuksesta syntyi alakulttuuri, jossa renderöintitekniikasta kiinnostuneet levittivät kuvia ja animaatioita ja inspiroi säteenseurantaohjelmistojen kehittämiseen.
+Amigalle julkaistiin kolmiulotteisen mallinnuksen ja animoinnin ohjelmia kuten Sculpt 3D. Sculpt 3D ja Videoscape 3D olivat lajityyppinsä ensimmäisiä henkilökohtaisille tietokoneille julkaistuja ohjelmia, jotka tulivat kauppoihin vuonna 1987.Realsoft 3D on suomalainen säteenseurantaohjelmisto, joka julkaistiin aluksi Amigalle nimellä Real 3D.
+Vuonna 1990 julkaistua Video Toasteria on kutsuttu Amigan läpimurtosovellukseksi ja sen sanottiin tuoneen televisiotuotannon massoille.
+
+
+== Amiga pelikoneena ==
+1980-luvun lopussa ja 1990-luvun alussa Amiga oli Euroopassa yksi keskeisiä pelikoneita ja myös Yhdysvalloissa yksi teknisesti vakuuttava vaihtoehto eri pelikoneiden joukossa.
+Monet peleistä tehtiin samaan aikaan Atari ST:lle ja Amigalle siten, että koodi ja grafiikka tehtiin ST:llä ja käännettiin eli "portattiin" Amigalle. Tällöin Amigan grafiikkaominaisuudet jäivät hyödyntämättä. Äänet piti kuitenkin tehdä uudestaan, koska koneiden äänipiirit olivat liian erilaiset suoraan porttaukseen, ja tällöin Amigan ja Atari ST:n peleissä oli usein juuri erona Amigan version äänet, jotka perustuivat digitoitujen ääninäytteiden käyttöön. Syynä ST-porttauksiin oli Atari ST:n alkuvuosina suurempi käyttäjäkunta sekä tietysti yleisemmin pelintekemisen nopeuttaminen. Atari ST:n teknologia (esimerkiksi grafiikkapiirit) olivat myös lähempänä aiempia tietokoneita, mikä teki ne helpommin omaksuttavaksi ohjelmoijille ja houkuttelevaksi portata ST:n koodi Amigaan. 1980-luvun loppuvuosilta alkaen pelit alettiin tehdä usein enemmän suoraan Amigalla. Atari vastasi haasteeseen uudemmalla Atari STE- mallilla, jossa oli aiempaa paremmat teknologiset ominaisuudet, mutta tälle mallille ei alettu tehdä juuri pelejä, koska vanhemmilla Atareilla oli selvästi suurempi käyttäjäkunta.
+Osa Amiga-harrastusta oli kaupallisten pelien "kräkkääminen" ja kopiointi. Tämä muodosti omituisen noidankehän, jossa pelien kopioitavuus lisäsi Amigan ja muiden tietokoneiden suosiota suhteessa pelikonsoleihin, mutta samalla pelien valmistajat eivät saaneet tuotoksiaan myydyksi. Kräkkäily ja introjen tekeminen johtivat varsinaisen demoskenen syntymiseen alun perin nimenomaan Amiga-harrastajien parissa.
+Tunnettuja alun perin Amigalle (joissakin tapauksissa samalla ST:lle) tehtyjä pelejä, jotka on käännetty monille muille laitteille, ovat esimerkiksi Cannon Fodder, Lemmings (1 & 2), Speedball (1 & 2), The Settlers (ensimmäinen osa), Pinball Dreams (jatko-osineen), Sensible Soccer, Formula One Grand Prix, Another World, Flashback, Worms, Lotus Turbo Challenge (I-III), The Chaos Engine, James Pond II: The Robocod, Populous (1 & 2) ja Kick Off (1 & 2). Kuuluisa Turrican tehtiin ensin Commodore 64:lle, mutta tuli tunnetuksi Amiga-pelinä. Kuuluisan SimCityn ensimmäinen versio julkaistiin alun perin Amigalle ja Apple Macintoshille (joskin C64-version kehitys aloitettiin ensimmäisenä). Dungeon Master tehtiin alun perin ST:lle, mutta oli suosittu myös Amigalla, jonka versioon lisättiin kolmiulotteiset äänet. 16-bittisten pelien pioneereihin kuuluneen Cinemawaren elokuvamaisista peleistä suosiota saivat esimerkiksi Wings ja It Came from the Desert.
+Suosittuja Amiga-pelejä olivat niin ikään teknisesti alkuperäisversioinakin vaatimattomat, mutta pelattavuudeltaan ylistetyt kolikkopelit, kuten New Zealand Story, Klax, Rainbow Islands ja Bubble Bobble. 8-bittisten koneiden menestyspeli, Elite, käännettiin Amigalle ja Atari ST:lle vuonna 1988. Sitä enemmän tai muita Amigalle tehtyjä "avaruussimulaattoreita" olivat esimerkiksi Warhead, Starglider 2, Damocles ja itse Eliten jatko-osa Frontier: Elite II. Amigan teknologisia puolia hyödyntäneitä, ilmestymishetkellään teknisesti vaikuttavina pidettyjä pelejä olivat esimerkiksi F/A-18 Interceptor ja Shadow of the Beast. Amigan loppuaikoina ilmestyivät suomalaisten tekemät Elfmania ja Stardust, jotka näyttävät, mihin asti alkuperäisten Amiga-mallien graafista suorituskykyä saatiin lopulta pelikäytössä venytettyä.
+Amigalla suosittuja olivat myös Sierra On-Linen ja Lucasartsin seikkailupelit, joista jälkimmäisiä kehitettiin Sun Microsystemsin alustalla. Varsinkin alkuaikoina niiden käännökset Amigalle (ja Atari ST:lle) olivat teknisesti heikkotasoisia. Muita alun perin IBM PC:lle tehtyjä suosittuja Amiga-käännöksiä olivat Civilization ja Colonization.
+Tunnettuja Amigan parissa työskennelleitä pelintekotiimejä olivat esimerkiksi Bitmap Brothers, Sensible Software ja Magnetic Fields. Amigalla (ja ST:llä) aloittaneita ja myöhemmin IBM PC:llä tai konsoleilla mainetta niittäneitä pelitiimejä tai julkaisijoita ovat esimerkiksi DMA Design (nykyiseltä nimeltään Grand Theft Autosta tunnettu Rockstar Games), Sonyyn sulautetut Psygnosis ja Factor 5 sekä Peter Molyneuxin Amiga-aikana luotsaama Bullfrog. Myös suomalainen Housemarque aloitti Amigalla. Viimeiset  merkittävälevikkiset kaupalliset pelit Amigalle julkaistiin vuosituhannen vaihteessa, tosin tuolloin sen markkinaosuus oli jo pieni. Viimeisistä peleistä monet vaativat laajennusmuistia tai Kickstart-päivityksen erityisesti Amiga 500:lla. Esimerkiksi vuonna 1998 julkaistu MaxRally vaati kaksi megatavua muistia ja vähintään Kickstart-version 1.3. ClickBoom julkaisi Amigalle käännöksiä peleistä kuten Quake ja Myst sekä itse kehitettyjä pelejä. Hyperion Entertainment on julkaissut Amigalle käännöksiä muilla alustoilla menestyneistä peleistä.Indie-pelejä kehitetään edelleen, kuten useille muillekin alustoille.
+
+
+=== Pelit ===
+Amigalle on tuotettu suuret määrät pelejä sekä kaupallisena että harrastajien tekeminä vapaasti levitettävinä peleinä.
+Suomalainen Housemarque on yksi tunnetuista pelitaloista jotka ovat aloittaneet kehittämällä Amigalle pelejä.
+Wiredin mukaan kymmenen vaikutukseltaan merkittävintä Amiga-peliä ovat:
+Defender of the Crown (Cinemaware, 1986)
+Sensible Soccer (Sensible Software, 1992)
+Speedball 2: Brutal Deluxe (Bitmap Brothers, 1990)
+Syndicate (Bullfrog, 1993)
+Lemmings (DMA Design, 1992)
+Pinball Dreams (Digital Illusions, 1992)
+Cannon Fodder (Sensible Software, 1993)
+Shadow of the Beast (Reflections, 1989)
+Another World (Delphine, 1991)
+Worms (Team17, 1995)
+
+
+== Amiga-mallit ==
+
+
+== Amigaa käsitelleitä lehtiä ==
+Amiga-tietokoneita ja sille julkaistuja pelejä, ohjelmistoja ja lisälaitteita käsiteltiin yleisten tietokone- ja pelilehtien lisäksi myös Amiga-kohtaisissa lehdissä.Suomalaisia lehtiä:
+
+Pelit (yleisesti peliohjelmia)
+MikroBitti (yleisesti tietotekniikkaa)
+C=lehtiAmiga-kohtaisia ulkomaisia lehtiä:
+
+Amiga Action
+Amiga Computing
+Amiga Format
+Amiga Power
+CU Amiga
+The One for Amiga Games
+
+
+== Ohjelmistoa ==
+Useat suomalaiset ohjelmistoyritykset ovat aloittaneet ohjelmien kehityksen Amigalle, joiden tuotteita ovat:
+
+OctaMed, musiikki
+Real3D (myöh. Realsoft 3D), grafiikka
+
+
+=== Ohjelmistokokoelmat ===
+Aminet on vuodesta 1992 lähtien ylläpidetty Amiga-ohjelmistojen arkisto.Fred Fish levykkeet olivat tunnettu PD-ohjelmien kokoelma.
+
+
+=== Grafiikkatyökaluja ===
+
+
+==== Piirto-ohjelmistot ====
+Deluxe Paint, Electronic Artsin piirto-ohjelma
+Personal Paint, Cloanton piirto-ohjelma
+Photon Paint, HAM-moodia tukeva piirto-ohjelma
+
+
+==== Kuvankäsittelyohjelmistot ====
+Photogenics
+Image FX
+
+
+==== 3D- ja säteenseurantaohjelmistot ====
+Sculpt 3D
+VideoScape 3D
+TurboSilver
+Caligari trueSpace
+Real3D, RealSoftin ray-tracing ohjelma
+Imagine, Impulsen 3D-mallinnus ja ray-tracing ohjelma
+LightWave 3D, Newtekin 3D-mallinnus ja ray-tracing ohjelma
+Aladdin 4D
+Cinema 4D
+Tornado 3D
+
+
+=== Multimediaohjelmistoja ===
+Scala MM
+
+
+=== Musiikkiohjelmia ===
+OctaMed
+ProTracker
+Samplitude
+Ultimate SoundTracker
+
+
+=== Ohjelmointityökaluja ===
+AsmPro
+Blitz BASIC
+DICE (ohjelmointi), ilmainen C-kielen kääntäjä
+Lattice C
+SAS/C
+Storm C
+Free Pascal 1.0.10a
+
+
+=== Emulaatio-ohjelmistoja ===
+UAE, Amiga-emulaattori
+
+
+== Katso myös ==
+Commodore
+AmigaOS 4
+AROS
+Guru Meditation
+Demoskene
+Jay Miner, Amigan "isä"
+R.J. Mical
+Dave Haynie
+Atari ST, Amigan kilpailija
+Konesota
+
+
+== Lähteet ==
+Hirvonen, Tuomas: Commodore Amiga : vertaansa vailla. (Esittelyssä mikrotietokone Commodore Amiga) Tekniikan maailma, 1986, 42. vsk, nro 14, s. 113–115.   
+Kovanen, Pasi: Amiga tänään.  MikroPC, 1992, nro 12, s. 56–58.   
+Amiga history guide amigahistory.co.uk.   Viitattu 10.7.2014. 
+
+
+=== Viitteet ===
+
+
+== Kirjallisuutta ==
+Keskikiikonen, Mika & Kiuttu, Petri: Amigan pelintekijän opas.    Sanomaprint Erikoislehdet, 1992.  ISBN 951-832-029-2.    
+
+
+== Aiheesta muualla ==
+
+http://www.amiga.com/ [Sivu ei käytännössä sisällä mitään]
+http://www.amiga.org/
+http://www.ntrautanen.fi/computers/commodore/ (Arkistoitu – Internet Archive)
+http://aminet.net
+BYTE Vol 10-08 1985-08 The Amiga (englanniksi)

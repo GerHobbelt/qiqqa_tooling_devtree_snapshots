@@ -1,0 +1,56 @@
+revision: 65478620
+title: "Morse para escritas n\xE3o latinas"
+url: https://pt.wikipedia.org/wiki/Morse_para_escritas_n%C3%A3o_latinas
+
+
+---
+
+Este é um resumo do uso de Código Morse para representar outros alfabetos que não  Latim.
+
+
+== Grego ==
+O alfabeto do código Morse  grego é muito semelhante ao alfabeto latino. Ele usa uma letra extra para a letra grega   Χ  e não usa os códigos para as letras latinas "J", "U" e "V".
+
+O tono  não é transmitido no código Morse; o receptor pode simplesmente inferir quais vogais requerem uma. Os 'ditongos gregos' apresentados nas três linhas inferiores da tabela são especificados nas tabelas de código Morse grego antigo, mas nunca são usados na comunicação real, as duas vogais sendo enviadas separadamente.
+
+
+== Cirílico ==
+Para o alfabeto cirílico as letras são representadas usando-se letras latinas com som semelhante (por exemplo, Б≡B, W (pronúncia alemã), Г≡G, Д≡D, etc.). Letras cirílicas sem essa correspondência latina são atribuídas a letras latinas sem correspondência cirílica (por exemplo, Q). A mesma correspondência foi usada posteriormente para criar conjuntos de caracteres nacionais russos KOI7 - KOI-7 e KOI8-R - KOI-8.
+
+Essa ordem e representação reflete o padrão nacional russo. O padrão búlgaro é o mesmo, exceto pelas duas letras entre parênteses; o idioma búlgaro não usa   Ы , enquanto   Ъ , ausente no padrão russo, é frequente. A letra  Ё não tem um equivalente Morse, com Е usado no lugar.
+
+
+== Hebraico ==
+Na escrita do  hebraico as letras são representadas principalmente usando a representação Morse de uma letra latina de som semelhante (por exemplo, "Bet" ב≡ B); no entanto, a representação para várias letras é de uma letra latina com uma forma semelhante (por exemplo, "Tet" ט ≡U, enquanto "Tav" ת≡ T).
+
+
+== Árabe ==
+
+
+== Persa ==
+See also fa:کد مورس
+
+
+== Devanagari ==
+A tabela de códigos telegráficos a seguir foi adaptada de uma dada por Ashok Kelkar, onde as letras latinas são codificadas de acordo com o padrão internacional do código Morse. Existem algumas variações nesse código, e houve algumas tentativas de introduzir outros códigos telegráficos para aumentar a eficiência e torná-lo adequado para mais idiomas indianos.
+
+
+== Japonês ==
+Ver Wabun code.
+
+
+== Chinês ==
+Ver Chinese telegraph code.
+
+
+== Coreano ==
+Ver SKATS.
+
+
+== Tailandês ==
+Ver รหัสมอร์ส
+
+
+== Notas ==
+
+Dik T. Winter's list of Morse codes

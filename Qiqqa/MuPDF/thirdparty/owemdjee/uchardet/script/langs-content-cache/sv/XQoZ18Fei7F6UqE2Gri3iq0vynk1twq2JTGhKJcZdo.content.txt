@@ -1,0 +1,217 @@
+revision: 51468739
+title: Dual polyeder
+url: https://sv.wikipedia.org/wiki/Dual_polyeder
+
+
+---
+
+Inom geometrin kan polyedrar grupperas i duala par där hörnen på den ena motsvaras av sidorna på den andra och vice versa. Sålunda är en polyeder isomorf med den duala polyedern till sin duala polyeder. Dualen till en isogonal polyeder (med lika vinklar) är en polyeder med lika sidor och en isotoxal polyeder (med lika kanter) har en dual som också är isotoxal. De regelbundna polyedrarna (de Platonska kropparna och Kepler-Poinsot-polyedrarna) bildar duala par (till exempel kub och oktaeder eller dodekaeder och  ikosaeder) med undantag för den regelbundna tetraedern som är själv-dual (det vill säga är sin egen dual).
+Dualitet är närbesläktat med reciprocitet och polaritet.
+
+
+== Typer av dualitet ==
+Det finns många olika slag av dualitet. De typer som är mest relevanta för elementära polyedrar är:
+
+Polär reprocitet
+Topologisk eller abstrakt dualitet
+
+
+=== Polär reprocitet ===
+Dualiteten hos polyedrar definieras vanligen i termer av polär reciprokation kring en koncentrisk sfär, så att varje polyederhörn (pol) associeras med en "polaryta" på dualen på ett sådant sätt att linjen från origo till hörnet är normal mot denna ytas plan. Produkten av avståndet från sfärens centrum till hörnet respektive ytan är lika med kvadraten på sfärens radie, det vill säga att avståndet från centrum till hörnet |OE| är omvänt proportionellt mot avståndet från centrum till ytan |OF|, med proportionalitetsfaktorn r2: |OE|=r2/|OF| I koordinater, för reciprokation genom sfären
+
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+        +
+        
+          y
+          
+            2
+          
+        
+        +
+        
+          z
+          
+            2
+          
+        
+        =
+        
+          r
+          
+            2
+          
+        
+        ,
+      
+    
+     
+  associeras hörnet
+
+  
+    
+      
+        (
+        
+          x
+          
+            0
+          
+        
+        ,
+        
+          y
+          
+            0
+          
+        
+        ,
+        
+          z
+          
+            0
+          
+        
+        )
+      
+    
+     
+  med planet
+
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+        x
+        +
+        
+          y
+          
+            0
+          
+        
+        y
+        +
+        
+          z
+          
+            0
+          
+        
+        z
+        =
+        
+          r
+          
+            2
+          
+        
+      
+    
+     
+  .Dualens hörn är de poler som är reciproka mot originalets ytor, och dualens ytor ligger i de polarer som är reciproka mot originalets hörn. Vidare definierar två intilliggande hörn en kant och dessa kommer att reciproceras till två intilliggande sidor som skär varandra och bildar en kant på dualen. Kanterna i ett sådant dualt par är alltid vinkelräta mot varandra.
+om r0 är sfärens radie och r1 och r2 avstånden från dess centrum till polen respektive dess polar, så:
+
+r1 . r2 = r02För mera symmetriska polyedrar med en påtaglig centroid är det brukligt att göra polyedern och cirkeln koncentriska, som i Dorman Luke-konstruktionen nedan.
+Det är dock möjligt att reciprokera en polyeder kring varje sfär och formen på dualen som bildas beror av vilken sfär man valt, och om vi flyttar runt sfären kommer dualen att deformeras. Valet av centrum är tillräckligt för att definiera dualen till likhet. Om det finns multipla symmetriaxlar, kommer de av nödvändighet att skära varandra i samma punkt och denna väljs vanligen som centroid. Om det inte är möjligt kan en inskriven, omskriven sfär eller kantsfär (en med alla kanter som tangenter) användas i stället.
+Om en polyeder har ett element som passerar genom sfärens centrum kommer dualens motsvarande element att gå mot oändligheten. Eftersom det traditionella Euklidiska rummet aldrig når oändligheten är den projektiva motsvarigheten, kallad det utvidgade Euklidiska rummet, skapas genom att lägga till det oändlighetsplan som krävs. Vissa matematiker föredrar att hålla sig till det Euklidiska rummet och säga att det saknas dual. Under tiden har Wenninger (1983) hittat ett sätt att representera dessa oändliga dualer på ett sätt som passar för att göra modeller av finit storlek.
+Dualitetsbegreppet här är så närbesläktat med dualitet inom projektiv geometri, där linjer och kanter byts mot varandra, att de ofta förväxlas som olika versioner av samma sak. Projektiv polaritet fungerar tillräckligt bra för konvexa polyedrar, men när man försöker tillämpa den här formen av dualitet i form av projektiv polaritet på konkava former som stjärnpolyedrar dycker olika problem upp. Se till exempel Grünbaum & Shepherd (1988) och Gailiunas & Sharp (2005). Wenninger (1983) diskuterar också några problem längs vägen till de oändliga dualerna.
+
+
+==== Kanoniska dualer ====
+Varje konvex polyeder kan modelleras om till en kanonisk form till vilken det finns en kantsfär (eller intersfär) som alla kanter är tangenter till och som är sådan att medelpositionen för alla tangeringspunkter ligger i sfärens centrum. Denna form är entydig till kongruensnivå.
+Om vi gör en reciprokation av en sådan polyeder kring dess kantsfär kommer den duala polyederns kanter att dela samma tangeringspunkter och är därmed av nödvändighet också en kanonisk dual. Tillsammans bildar de båda polyedrarna ett kanoniskt dualt par.
+
+
+=== Topologisk dualitet ===
+Vi kan "forma om"" en dual polyeder så att den inte längre kan erhållas genom reciprokation av originalet i någon sfär, men vi kan fortfarande betrakta den som topologiskt eller abstrakt dual.
+Hörnen och kanterna hos en konvex polyeder kan projiceras på planet eller en sfär så att de bildar en graf (ibland kallad Schlegeldiagram) och motsvarande graf som bildas av den duala polyedern är den duala grafen.
+En abstrakt polyeder är en speciell typ av partiellt ordnad mängd (pomängd) av element sådan att samband mellan elementen i mängden motsvarar samband mellan element i en polyeder. En sådan pomängd kan "verkliggöras" som en geometrisk polyeder med samma topologiska struktur. Pomängden kan åskådliggöras i ett Hassediagram. Varje sådan pomängd har en dual pomängd. Hassediagrammet för den duala polyedern fås enkelt genom att läsa det ursprungliga diagrammet uppochned.
+
+
+== Dorman Luke-konstruktion ==
+Man kan hitta sidan på dualen till en uniform polyeder genom en Dorman Luke-konstruktion från den ursprungliga polyederns vertexfigur. Den här metoden beskrevs först av Henry Martyn Cundy och Arthur Percy Rollett 1961 och generaliserades 1983 av Magnus Joseph Wenninger.
+Som exempel visas här vertexfiguren (röd) för en kuboktaeder som använts för att härleda sidan (blå) på en rombdodekaeder.
+
+Innan konstruktionen inleds får man vertexfiguren ABCD genom att skära av hörnet vid (i det här fallet) de anslutande kanternas mittpunkter.
+Sedan fortsätter Dorman Lukes konstruktion:
+
+Rita vertexfiguren ABCD.
+Rita den omskrivna cirkeln (som går genom alla hörn A, B, C och D).
+Rita tangenterna till cirkeln vid varje hörn A, B, C, D.
+Markera punkterna E, F, G, H där varje tangent möter den intilliggande tangenten.
+Polygonen EFGH är dualens sida.I det här fallet valdes storleken på vertexfiguren så att den dess omskrivna cirkel låg på kantsfären (intersfären) till kuboktaedern, som därigenom också blir kantsfär till den duala rombdodekaedern.
+Dorman Lukes konstruktion kan bara användas när en polyeder har en sådan kantsfär och om vertexfiguren är cyklisk, det vill säga för uniforma polyedrar.
+
+
+== Självduala polyedrar ==
+Topologiskt sett är en självdual polyeder en vars dual har exakt samma konfiguration av hörn, kanter och sidor. Abstrakt uttryckt är deras Hassediagram identiska.
+En geometriskt självdual polyeder är inte bara topologiskt självdual, utan dess polära reciprokat kring en given punkt, vanligen dess centroid, är en kongruent figur. Till exempel är dualen till en regelbunden tetraeder en annan regelbunden tetraeder (inversionspunkt).
+Varje polygon är topologiskt självdual (den har samma antal kanter och hörn och dessa byts genom dualiteten), men är i allmänhet inte geometriskt självdual. Regelbundna polygoner är geometriskt självduala: alla vinklar är kongruenta, liksom alla kanter, så dessa kongruenser byts mot varandra under dualiteten.
+Det vanligaste geometriska arrangemanget är när en konvex polyeder är i sin kanoniska form, det vill säga att alla dess kanter måste vara tangenter till en sfär vars centrum sammanfaller med tangeringspunkternas tyngdpunkt (medelposition). Om polygonen är självdual så är den polära reciprokationen kongruent med den.
+Det finns oändligt många självduala polyedrar. Den enklaste oändliga familjen är pyramiderna med n sidor och av kanonisk form. En annan oändlig familj, de förlängda pyramiderna, består av polyedrar som grovt kan beskrivas som en pyramid på toppen av ett prisma (med samma antal sidor). Lägger man till ett frustum (pyramid med kapad topp) får man ytterligare en oändlig familj, och så vidare.
+Det finns många andra självduala polyedrar. Det finns till exempel sex olika med sju hörn och 16 med åtta hörn.Det finns också konkava polyedrar som är självduala, exempelvis den urholkade dodekaedern.
+
+
+=== Självduala sammansatta polyedrar ===
+Sammansättningen av en polyeder med sin dual är självklart dual.
+Om en polyeder är självdual så blir sammansättningen av polyedern med dualen en kongruent polyeder. Den regelbundna sammansättningen av  två tetraedrar, kallad Stella octangula (den åttauddiga stjärnan), är den enda regelbundna sammansättningen med denna egenskap.
+
+
+== Duala polytoper och tessellationer ==
+Dualitet kan generaliseras till n-dimensionell rymd och duala polytoper (i två dimensioner kallas de duala polygoner).
+Hörnen på den ena polytopen motsvarar de (n−1)-dimensionella elementen, eller fasetterna, hos den andra och j-punkterna som definierar ett (j−1)-dimensionellt element ("hörn") motsvarar j-hyperplan som skär varandra och ger (n−j)-dimensionella element ("kanter"). Dualen till en n-dimensionell tessellation kan definieras på ett motsvarande sätt.
+I allmänhet kommer fasetterna på en polytops dual att vara de topologiska dualerna till polytopens vertexfigurer. Hos regelbundna och uniforma polytoper är dualens fasetter de polära reciprokaten av originalets fasetter. Så är exempelvis vertexfiguren för 600-cellen i fyra dimensioner är en ikosaeder och dualen till 600-cellen är 120-cellen vars fasetter är ikosaederns dual, dodekaedern
+
+
+=== Självduala polytoper och tessellationer ===
+
+Den primära klassen av självduala polytoper är de regelbundna polytoperna med palindromiska Schläfli-symboler. Alla regelbundna polygoner {a} är självduala, polyedrar av formen {a,a}, 4-polytoper av formen {a,b,a}, 5-polytoper av formen {a,b,b,a}, etcetera.
+De självduala polytoperna är:
+
+Alla regelbundna polygoner, {a}
+Den regelbundna tetraedern, {3,3}
+Generellt alla regelbundna n-simplex, {3,3,...,3}
+Den regelbundna 24-cellen i fyra dimensioner, {3,4,3}.De självduala oändliga regelbundna Euklidiska tessellationerna är:
+
+Apeirogon, {∞}
+Kvadratisk tessellation, {4,4}
+Kubisk tessellation, {4,3,4}
+Generellt alla regelbundna n-dimensionella Euklidiska hyperkubiska tesselationer, {4,3,...,3,4}.De självduala oändliga regelbundna hyperboliska tessellationerna är:
+
+Kompakta hyperboliska packningar, {5,5}, {6,6}, ... {p,p}; {3,5,3}, {5,3,5} och {5,3,3,5}
+Parakompakta hyperboliska packningar, {∞,∞}; {3,6,3}, {6,3,6}, {4,4,4} och {3,3,4,3,3}.
+
+
+== Se även ==
+Dual polygon
+Dualgraf
+
+
+== Referenser ==
+H.M. Cundy & A.P. Rollett, Mathematical models, Oxford University Press (1961).
+Wenninger, Magnus (1983). Dual Models. Cambridge University Press. ISBN 0-521-54325-8. http://books.google.se/books?id=mfmzUjhs-_8C&printsec=frontcover&hl=sv#v=onepage&q&f=false 
+B. Grünbaum & G. Shephard, Duality of polyhedra, Shaping space – a polyhedral approach, ed. Senechal and Fleck, Birkhäuser (1988), pp. 205–211.
+P. Gailiunas & J. Sharp, Duality of polyhedra, Internat. journ. of math. ed. in science and technology, Vol. 36, No. 6 (2005), pp. 617–642.
+
+
+== Externa länkar ==
+Weisstein, Eric W., "Dual polyhedron", MathWorld. (engelska)
+Weisstein, Eric W., "Dual tessellation", MathWorld. (engelska)
+Weisstein, Eric W., "Self-dual polyhedron", MathWorld. (engelska)
+Olshevsky, George, Duality på Glossary for Hyperspace.
+Mjukvara för att visa dualer
+The Uniform Polyhedra
+Virtual Reality Polyhedra The Encyclopedia of Polyhedra﻿

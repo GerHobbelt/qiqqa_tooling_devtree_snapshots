@@ -1,0 +1,33 @@
+revision: 13191264
+title: transistor
+url: https://ro.wikipedia.org/wiki/Transmisie_de_date_paralel%C4%83
+
+
+---
+
+Transmisia de date paralelă constă în transmiterea simultană a doi sau mai mulți biți în paralel și simultan pe mai multe canale paralele. Într-o transmisie serială acești biți sunt transmiși unul câte unul. Comparativ cu transmisia serială, transmisia paralelă are performanțe mai ridicate în ceea ce privește viteza de transfer la aceeași frecvență.Principala diferență între canalele de comunicații paralele și seriale este numărul de fire la nivel fizic utilizate pentru transmisia simultană de date de către dispozitiv. Conexiunea paralelă implică mai mult de un astfel de fir.  Interfețele paralele funcționează în majoritatea cazurilor cu 8 sau 16 canale. Canalul paralel pe 8 biți transmite simultan opt biți (sau un octet). Transferul datelor dintre calculator și dispozitiv se desfășoară după un  protocol "handshaking", și semnale de control. Nivelul semnalelor este standard TTL (Transistor–transistor logic).Tehnologia transferului paralel a fost dezvoltată de Centronics în anii '70 și utilizată pe scară largă de IBM în magistralele primelor PC-uri și la periferice, în special portul de imprimantă al calculatorului, unele aplicații LAN, în circuite integrate, și în dispozitive de memorie RAM.
+
+
+== Port paralel ==
+
+Portul paralel pentru conectarea dispozitivelor periferice, a fost dezvoltat tot de firma Centronics în anii '70. Network Printing Alliance (NPA) publică în 1994 standardul IEEE 1284 care definește comunicațiile bidirecționale paralele între computere și alte dispozitive.
+
+
+== Interfețe cu transfer paralel ==
+În sistemele electronice diferite magistrale precum ISA, PCI, ATA, AGP,  Front-side bus, SCSI, VESA Local Bus utilizează comunicații paralele. 
+O implementare între transmisia paralelă și cea serială este posibilă prin intermediul unor module speciale, numite SerDes (Serializer/Deserializer).
+
+
+== Vezi și ==
+D-Sub
+PCI
+Port paralel
+Transmisie de date serială
+Viteză de transfer de date
+
+
+== Referințe și note ==
+
+
+== Legături externe ==
+Parallel Communications Explained

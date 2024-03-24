@@ -1,0 +1,65 @@
+revision: 6396585
+title: transistor
+url: https://et.wikipedia.org/wiki/Transistor
+
+
+---
+
+Transistor (ingl transfer üle kandma + resistor takisti) on kolme väljaviiguga pooljuhtseadis ehk triood elektriahelate lülitamiseks ja elektrisignaalide võimendamiseks. Transistori abil saab ühe elektrisignaali ‒ sisendsignaali ‒ abil juhtida ehk tüürida teist elektrisignaali ‒ väljundsignaali.
+Transistor on elektroonikalülituste tähtsaim osa elektroonikas, info- ja sidetehnikas ning jõuelektroonikas. Peamiselt valmistatakse transistore integraallülituste ehk mikrokiipide sees, kuid ka eraldi seadistena.
+Enamiku transistoride alusmaterjal on pooljuht räni. Kõrgsagedusseadiste jaoks on kasutusel ka galliumarseniid ja teised pooljuhtmaterjalid. Ka jõutransistorides on kasutusel peamiselt räni, kuigi kasutatakse ka teisi kõrgema sulamistemperatuuriga pooljuhtmaterjale.
+
+
+== Ajalugu ==
+
+
+=== Eelkäijad ===
+Varasemal ajal kasutati samal otstarbel, milleks nüüd kasutatakse transistore, trioode ja teisi  elektronlampe ehk raadiolampe, aga signaali diskreetseks sisse- ja väljalülitamiseks kasutati releesid jt. lülitamiseks sobivaid elektri- ja elektroonikaseadiseid.
+Transistoril, nagu ka elektronlambil, on pidev sisend-väljund-karakteristik. Lülitina kasutamisel antakse transistori sisendile diskreetne juhtsignaal, mille üks diskreetne väärtus viib transistori piisavalt avatud (juhtivasse) olekusse, teine aga sulgeb transistori. Tänapäeval kasutatakse ka elektronlampe, aga väga vähe, sest transistoril on elektronlambi ees mitmeid eeliseid.
+
+
+=== Esimesed transistorid ===
+
+Esimene transistori patent anti füüsik Julius Edgar Lilienfeldile 1925. aastal. Patendikirjeldus sarnanes väga selle seadme omaga, mida tänapäeval tuntakse väljatransistori nime all. Ka 1934. aastal patenteeris saksa leiutaja Oskar Heil sarnase seadme.
+1942. aastal eksperimenteeris järgmine sakslane Herbert Mataré radarisüsteemile anduri väljatöötamisel niinimetatud "topeltdioodidega". Tema loodud seadmel oli pooljuhtaluse peal kaks eraldiseisvat, kuid väga lähestikku asetsevat metallkontakti. Leiutisega töötades avastas ta nähtusi, mida ei olnud võimalik seletada kahe iseseisvalt toimiva dioodi tööga. Nende nähtuste uurimisest kasvas välja algeline idee bipolaartransistori loomiseks.
+1947. aastal avastasid Ameerika Ühendriikide teadlased John Bardeen ja Walter Brattain, et kui panna germaaniumikristalli külge kaks kullast kontakti, siis väljundis saadava signaali võimsus on suurem sisendsignaali omast. William Shockley nägi selles avastuses suurt potentsiaali ning töötas paar kuud avastatud nähtuse mõistmiseks. Tema töö laiendas oluliselt teadmisi pooljuhtide olemusest ja nendega seotud nähtustest.
+Esimene ränialuseline transistor töötati välja Texas Instrumentsis Gordon Teali poolt aastal 1954. Esimese MOSFET transistori (metall-oksiid-pooljuht väljatransistori) valmistasid teadlased John Atalla ja Dawon Kahng 1960. aastal.
+
+
+=== Transistori eelised ja puudused elektronlambiga võrreldes ===
+Eelised:
+
+Palju väiksem – isegi kuni tuhandeid kordi.
+Ökonoomsem – eraldab vähem soojust (puudub hõõgkütteahel ja töötavad palju madalamatel pingetel).
+Mehaaniliselt vastupidavam – elektronlambi klaaskest läheb kergesti katki ja sisemised detailid kardavad põrutusi.
+Pikema tööeaga – elektronlambid kaotavad töötades aja jooksul oma töövõime, peamiselt katoodi emissiooni võime vähenemise tõttu.
+Kiirema töövalmidusega – transistor üldjuhul ei vaja soojenemist töörežiimi jõudmiseks.Puudused:
+
+Suurem tundlikkus tugevate elektromagnetväljade suhtes.
+Suurem tundlikkus kiirguste suhtes.
+Kartlikkus ülepingete ja liigvoolude suhtes (toitehäiringud, näiteks välgust, ja elektrostaatika).
+Ei talu kõrget temperatuuri ja suuri kaovõimsusi (aga elektronlampe saab tööle panna suure võimsusega, sest neid saab konstruktiivselt valmistada suuremana ja oma ehituse ja materjalide (metall, klaas, keraamika) tõttu taluvad nad kõrgemat temperatuuri ning nende jahutamise probleem on lihtsamini lahendatav).
+
+
+== Põhiliigid ==
+Transistoride põhirühmad on 
+
+unipolaartransistorid (uni- < ladina k unus üks + polos kreeka k poolus) ehk väljatransistorid ja
+bipolaartransistorid (bi- < ladina k bis kahe-).Väljatransistoride töös osalevad ainult üht liiki laengukandjad ‒ elektronid või augud, bipolaartransistorides aga nii elektronid kui ka augud, seega kaht liiki laengukandjad. Põhimõtteline erinevus on ka transistori väljundvoolu tüürimise (juhtimise) viisis: väljatransistoride korral tüüritakse väljundvoolu sisendpingega, bipolaartransistoridel sisendvooluga. Kuid see erinevus on väga tinglik
+Väljatransistorid jagunevad struktuurilt
+
+pn-tõkkekihiga transistorideks, kus tüüriva elektrivälja mõjul muutub kanali tegevristlõige, ja
+isoleeritud tüürelektroodiga transistorideks, kus elektriväli muudab laengukandjate kontsentratsiooni kanalis, seega kanali takistust.Esimesi nimetatakse lühemalt pn-väljatransistorideks, teisi isoleeritud paisuga transistorideks, rahvusvaheliselt kasutatav lühend MOSFET. Viimased ongi kõige laiemalt kasutusel, sest võimaldavad tüürida väljundvoolu praktiliselt võimsusvabalt (madalatel sagedustel).
+Unipolaar- ja bipolaartransistoride tehniliselt kasulikud omadused on ühendatud isoleeritud paisuga bipolaartransistoris (IGBT), kus bipolaartransistori baasiahela voolu tüürib väljatransistor. Niisugune kombinatsioon võimaldab väikese tüürvõimsusega lülitada väljundahelas kõrget pinget ja tugevat voolu.
+
+
+== Kasutamine ==
+Transistore kasutatakse peaaegu igas elektroonikalülituses ja nad on tavaliselt teostatud integraallülituste koosseisus, kus nad töötavad enamasti elektrooniliste lülititena. Eraldi komponentidena on transistorid kasutusel mitmesugustes elektritoitelülitustes (suure võimsusega vaheldites, alaldites, impulsstoiteallikates), samuti analoogelektroonikas, näiteks helisagedusvõimendite võimsusvõimendites, kuid siingi on võimsustransistorid enamasti ühel kiibil võimsusvõimendi teiste elementidega.
+Arvuliselt kõige enam transistore on mitmesugustes digitaaltehnika komponentides, mille kiibi mõne ruutmillimeetri suurusel pinnal võib olla transistoristruktuure miljonites ja isegi miljardites. Nende väljatransistoride suurust väljendatakse kanali pikkusega, mida tänapäeval mõõdetakse kümnetes nanomeetrites (üks nanomeeter on üks miljondik millimeetrit).
+
+
+== Vaata ka ==
+pn-siire
+Bipolaartransistor
+Väljatransistor
+Galliumnitriidtransistor

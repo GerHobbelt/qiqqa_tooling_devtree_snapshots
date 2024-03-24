@@ -1,0 +1,44 @@
+revision: 129577691
+title: Calendar
+url: https://ru.wikipedia.org/wiki/ICal
+
+
+---
+
+iCal — это личный программный календарь, созданный Apple Inc., который работает в операционной системе Mac OS X. iCal был первым приложением-календарём, которое поддерживало несколько календарей и публикацию/подписку на сервере WebDAV.
+Первоначально iCal был выпущен как бесплатное загружаемое дополнение для Mac OS X 10.2 10 сентября 2002, с выходом Mac OS X 10.3 программа была включена в состав ОС как iCal 1.5. Версия iCal 2 была выпущена как часть Mac OS X 10.4.
+Apple лицензировала имя iCal у Brown Bear Software, которая использовала его для своего приложения iCal Архивная копия от 6 января 2010 на Wayback Machine.
+В настоящее время для среды Mac OS X, Windows и Linux группой разработчиков Mozilla Foundation создан календарь Sunbird в основном копирующий iCal.
+
+
+== Возможности ==
+Ведёт учёт событий и встреч, позволяет изменять вид календаря (как то для дома, работ или детей) для быстрого обнаружения конфликтов и свободного времени.
+Интегрирован с MobileMe: календари могут быть доступны через Интернет. Имеется возможность публиковать календари с помощью протокола WebDAV.
+Можно подписаться на другие календари, так что вы сможете быть в курсе событий ваших друзей и коллег, а также других событий, например, программы телевизионных передач.
+Извещает о ближайших событиях визуально на экране, по электронной почте, по SMS или через пейджер. Также существует виджет для Apple Dashboard, который называется iCal Events.
+iCal интегрируется с Apple Sync Services для синхронизации данных с устройствами .Mac, такими как PDA или мобильными телефонами посредством iSync и другого программного обеспечения.
+
+
+== Интересные факты ==
+Иконка iCal, отображающая дату 17 июля, означает день, когда iCal был представлен в 2002 году на выставке MacWorld Expo в Нью-Йорке. Когда iCal запущен, иконка в панели Dock изменяется, отображая текущую дату.Разработка iCal немного отличается от остального программного обеспечения Apple из-за того, что iCal была разработана независимой маленькой французской командой разработчиков, которая «секретно» работала над этим проектом в Париже.
+
+
+== См. также ==
+iCal Server
+Darwin Calendar Server
+SyncML — открытый стандарт для синхронизации календарей.
+Calgoo
+
+
+== Ссылки ==
+New Software Lets Users Manage Multiple Calendars & Share Calendars Over The Internet — Пресс-релиз Apple 2002 года, предоставляющий iCal
+New Application to Manage & Share Multiple Calendars Now Available for Free Download — Сентябрьский пресс-релиз Apple в 2002 году, анонсирующий доступность iCal.
+Calendar and Scheduling Consortium part of next version of iCal Server (Leopard)
+iCalShare — A large directory of shared calendars on the web, organized by category (linked from Apple.com ).
+iCalFix — iCal extension that automatically adds alarms to newly created events.
+RFC 2445 Internet Calendaring and Scheduling Core Object Specification (iCalendar)
+RFC 2446 iCalendar Transport-Independent Interoperability Protocol (iTIP)
+RFC 2447 iCalendar Message-Based Interoperability Protocol (iMIP)
+
+
+== Примечания ==

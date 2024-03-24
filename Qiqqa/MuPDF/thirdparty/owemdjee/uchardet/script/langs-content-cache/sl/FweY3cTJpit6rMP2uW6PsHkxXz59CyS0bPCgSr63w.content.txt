@@ -1,0 +1,72 @@
+revision: 4504150
+title: Arthur Josef Alwin Wieferich
+url: https://sl.wikipedia.org/wiki/Arthur_Josef_Alwin_Wieferich
+
+
+---
+
+Arthur Josef Alwin Wieferich, nemški matematik, * 27. april 1884, Münster, Nemčija, † 15. september 1954, Meppen, Nemčija.
+Wieferich je najbolj znan po svojem delu iz teorije števil. 
+
+
+== Življenje in delo ==
+Bil je sin poslovneža. Med letoma 1903 in 1909 je študiral na Univerzi v Münstru. Na univerzi je leta 1907 poslušal Dehnova predavanja iz teorije števil, ki so nanj naredila velik vtis, tako da se je odločil raziskovati na tem področju. V času študija je objavil pet matematičnih publikacij. Bil je profesor do upokojitve leta 1949. Leta 1916 se je poročil in ni imel otrok.
+V letu 1909 je pri raziskovanju Fermatovega velikega izreka opisal praštevila p, tako da 
+  
+    
+      
+        
+          p
+          
+            2
+          
+        
+      
+    
+     
+   deli 
+  
+    
+      
+        
+          2
+          
+            p
+            −
+            1
+          
+        
+        −
+        1
+      
+    
+     
+  , primerjiva s tistimi iz Fermatovega malega izreka, po katerem vsako liho praštevilo p deli 
+  
+    
+      
+        
+          2
+          
+            p
+            −
+            1
+          
+        
+        −
+        1
+      
+    
+     
+  . Znani sta le dve takšni števili:(OEIS A001220)
+
+1093, 3511.Domnevajo oboje, da jih obstaja končno ali neskončno mnogo. Nobeno Mersennovo praštevilo ni tudi Wieferichevo praštevilo. Če obstaja le končno mnogo Wieferichevih praštevil, bo vsaj končno mnogo Mersennovih števil deljivih s kvadratom.
+
+
+== Glej tudi ==
+Wieferichev izrek
+Wieferichev par
+
+
+== Zunanje povezave ==
+Arthur Josef Alwin Wieferich, osmrtnica na numbertheory.org (angleško)

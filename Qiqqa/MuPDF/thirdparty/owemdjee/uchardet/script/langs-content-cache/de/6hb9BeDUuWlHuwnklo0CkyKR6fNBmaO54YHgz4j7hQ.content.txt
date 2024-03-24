@@ -1,0 +1,248 @@
+revision: 234952267
+title: Morse Code
+url: https://de.wikipedia.org/wiki/Morsecode
+
+
+---
+
+Der Morsecode (auch Morsealphabet oder Morsezeichen genannt) ist ein gebräuchlicher, nach seinem Erfinder Samuel F. B. Morse benannter Code zur telegrafischen Übermittlung von Buchstaben, Ziffern und weiterer Zeichen. Er bestimmt das Zeitschema, nach dem ein diskretes Signal ein- und ausgeschaltet wird.
+Der 1838 vorgestellte Code kann als Tonsignal, als Funksignal, als elektrischer Puls mit einer Morsetaste über eine Telefonleitung, mechanisch oder optisch (etwa mit blinkendem Licht) übertragen werden – oder auch mit jedem sonstigen Medium, mit dem zwei verschiedene Zustände (wie etwa Ton oder kein Ton) eindeutig und in der zeitlichen Länge variierbar dargestellt werden können. Dieses Übertragungsverfahren nennt man Morsetelegrafie.
+Das manchmal bei Notfällen beschriebene Morsen durch Klopfen an metallischen Verbindungen erfüllt diese Forderung daher nur bedingt, ist aber mit einiger Übung aufgrund des charakteristischen Rhythmus von Morsezeichen verständlich. Es ist abgeleitet von den „Klopfern“ aus der Anfangszeit der Telegrafentechnik, bestehend aus einem Elektromagneten mit Anker in einem akustischen Hohlspiegel. Beim Einschalten erzeugte er ein lautes und beim Abschalten ein etwas leiseres Klopfgeräusch. So konnte man den Klang der Morsezeichen schon vor der Erfindung des Lautsprechers selbst in größeren Betriebsräumen hörbar machen.
+
+
+== Geschichte ==
+
+
+=== Ursprung ===
+Samuel Morse erfand 1837 einen einfachen elektromagnetischen Schreibtelegrafen. Der verwendete Code umfasste damals nur die zehn Ziffern; die übertragenen Zahlen mussten mit Hilfe einer Tabelle in Buchstaben und Wörter übersetzt werden.
+Alfred Lewis Vail, ein Mitarbeiter Morses, entwickelte ab 1838 den ersten Code, der auch Buchstaben umfasste. Er bestand aus Zeichen von drei verschiedenen Längen und unterschiedlich langen Pausen. Dieser Code wurde ab 1844 betrieblich eingesetzt (als Morse Landline Code oder American Morse Code bei amerikanischen Eisenbahnen und den Telegrafenunternehmen bis in die 1960er-Jahre).
+
+
+=== Standardisierung ===
+Die unterschiedlich langen Pausen stellten eine Unzulänglichkeit des Codes dar, so dass Friedrich Clemens Gerke ihn 1848 zur Inbetriebnahme der elektromagnetischen Telegrafenverbindung zwischen Hamburg und Cuxhaven umschrieb. 1851 wurden die deutschen Umlaute (Ä Ö Ü) hinzugefügt. Dieser Code wurde nach einigen weiteren kleinen Änderungen 1865 auf dem Internationalen Telegraphenkongress in Paris standardisiert und später mit der Einführung der drahtlosen Telegrafie als Internationaler Morsecode von der Internationalen Fernmeldeunion (ITU) genormt.
+
+Ein Seenotruf wurde erstmals 1909 über Funk gemorst. Dieses Ereignis führte zur breiten Einführung des Seefunks, nachdem die eher konservativen Reeder die neue Technik zuerst abgelehnt hatten.
+
+
+=== Verdrängt durch Fernschreiber ===
+Morsetelegrafie wurde mit der Einführung von Fernschreibern aus den Telegrafennetzen verdrängt. Im Funkbetrieb behielt sie aufgrund ihrer Einfachheit lange Zeit Bedeutung, bis sie auch hier nach und nach durch andere Verfahren ersetzt wurde. Ein großes Einsatzfeld hatte sie noch im Seefunkverkehr, bis sie dort mit Einführung des weltweiten Seenot- und Sicherheitsfunksystems (GMDSS) zum 1. Februar 1999 ihre Bedeutung verlor. Eingesetzt wird der Morsecode noch im Amateurfunk (oft als Betriebsart „CW“ bezeichnet), wobei in Deutschland Morsekenntnisse bis 2003 vorgeschrieben waren, um am Funkbetrieb auf Kurzwellenfrequenzen unterhalb 30 MHz teilzunehmen.
+
+
+=== Heute ===
+Morsezeichen werden heute noch in der Luft- und Schifffahrt verwendet, um Funknavigationsanlagen (siehe Funkfeuer) zu identifizieren. Diese senden neben dem eigentlichen Navigationssignal auch ein hörbares Morsesignal aus, das aus der Drei-Buchstaben-Kennung des Funkfeuers besteht. So sendet zum Beispiel das Drehfunkfeuer Barmen seine Kennung BAM ( − · · ·   · −   − − ). Auch in der Seeschifffahrt finden Morsezeichen noch Anwendung: Radarantwortbaken antworten ebenfalls mit einem Echo, dem ihre Kennung in Morsecode aufmoduliert ist. Der Leuchtturm Kiel beispielsweise gibt alle 30 Sekunden das akustische Zeichen KI. Ausbreitungsbaken auf Cubesat-Satelliten verwenden typischerweise ebenfalls Morsesignale.
+Im Dezember 2014 verkündete die deutsche Kultusministerkonferenz, dass die Morsetelegrafie in das bundesweite Verzeichnis des immateriellen Kulturerbes im Sinne des Übereinkommens zur Erhaltung des Immateriellen Kulturerbes der UNESCO aufgenommen wird. In seiner Begründung erwähnte die Deutsche UNESCO-Kommission die besondere Bedeutung der Funkamateure, die die Regeln und Gebräuche der Morsetelegrafie aufrechterhalten und so sicherstellten, dass die Formen und Funktionen der Anwendung lebendig bleiben.
+
+
+== Internationaler Morsecode ==
+Der Morsecode verwendet als Basis nur ein einfaches stetiges (unmoduliertes) Signal. Dadurch benötigt er deutlich weniger technischen Aufwand zum Senden und Empfangen als andere Formen der Funkkommunikation. Er funktioniert auch noch bei vielen Störgeräuschen (bei ungünstigem Signal-Rausch-Verhältnis), da man den eindeutigen Takt gut heraushört. Morsecode benötigt nur geringe Bandbreite und kann dadurch auch in überlasteten Funkbändern dazwischengeschoben beziehungsweise herausgefiltert werden. Die einfachen Ein-/Aus-Signale benötigen nur eine geringe Sendeleistung auch für große Distanzen.
+Bei einem Funksignal, das lediglich aus einem direkt mit den Morsezeichen modulierten Träger besteht (A1A), sind Morsezeichen in üblichen Empfängern für Amplitudenmodulation (AM) nur schwierig aufzunehmen, da die Morsezeichen kaum Signalanteile im Hörbereich haben; man muss einen auf eine leicht versetzte Frequenz eingestellten SSB-Empfänger benutzen bzw. einen Schwebungsoszillator (BFO) als Telegrafie-Überlagerer zuschalten, um einen klaren Ton zu hören.
+
+
+=== Zeitschema und Veranschaulichung ===
+Zur Visualisierung des Codes werden Punkt (·) für den kurzen Ton, Strich (−) für langen Ton und Leerraum für Pause in unterschiedlicher Breite (zum Teil auch Komma oder Schrägstrich zur Worttrennung) genutzt. Zur akustischen Veranschaulichung und zu Lern- und Trainingszwecken werden die Sprechsilben di(t) (Punkt) und dah (Strich) verwendet (zur flüssigen Aussprache ist innerhalb von Zeichen di und am Zeichenende dit üblich). Die Wortfolge Morse Code wird also z. B. so geschrieben
+
+M  O   R   S   E           C    O   D   E
+−− −−− ·−· ··· ·           −·−· −−− −·· ·
+
+Und als dahdah dahdahdah didahdit dididit dit, dahdidahdit dahdahdah dahdidit dit gesprochen.
+Die Länge eines Dit bestimmt die Geschwindigkeit, mit der gesendet werden kann. Sie ist die grundlegende Zeiteinheit, auf die alle anderen Zeiten zurückgeführt werden:
+
+Ein Dah hat eine Länge von 3 Dit.
+Die Länge der Pause beträgt:
+1 Dit zwischen zwei gesendeten Symbolen,
+3 Dit zwischen Buchstaben in einem Wort sowie
+7 Dit zwischen Wörtern.Für das folgende Beispiel „MORSE CODE“ ergibt sich dann dieses Zeitsignal
+(hierbei bedeuten = „Signal an“ und _ „Signal aus“):
+
+===_===___===_===_===___=_===_=___=_=_=___=_______===_=_===_=___===_===_===___===_=_=___=
+ ↑ ↑    ↑               ↑                     ↑
+Dah|    |              Di                   Wortabstand
+   |   Buchstabenabstand
+  Symbolabstand
+
+
+=== Standard-Codetabelle ===
+Hier ist eine Tabelle mit dem vollständigen Alphabet und anderen gebräuchlichen Zeichen. Es gibt im Morsealphabet keine Unterscheidung zwischen Groß- und Kleinbuchstaben. Die „Null“ wird im Handschriftlichen zur Unterscheidung durchgestrichen („Ø“ wie das Zeichen für Durchschnitt), um Verwechslungen mit dem Großbuchstaben „O“ zu vermeiden.
+
+
+=== SOS ===
+
+Im April 1904 wurde bei der deutschen Kaiserlichen Marine die Morsegruppe drei kurz, drei lang, drei kurz ▄ ▄ ▄ ▄▄▄ ▄▄▄ ▄▄▄ ▄ ▄ ▄  (auch als didididahdahdahdididit ausgesprochen) als Notzeichen eingeführt; mit Wirkung vom 1. April 1905 wurde sie auch für den öffentlichen Schiffsfunk in Deutschland vorgeschrieben. Diese auffällige Morsegruppe war als Notzeichen zur Unterbrechung des Funkverkehrs bestimmt und sollte wie ein Sirenenton alle anderen Funkstationen zur Funkstille auffordern. Sie war daher nicht als Anruf zu senden, sondern solange zu wiederholen, bis alle anderen Stationen den Sendebetrieb eingestellt haben. Danach sollte der Inhalt des Notrufs folgen.
+
+
+=== @-Zeichen ===
+Das At-Zeichen (@), auch Affenschwanz oder Klammeraffe genannt, wurde dem internationalen Morsealphabet erst im Mai 2004 von der Internationalen Fernmeldeunion (ITU) hinzugefügt, damit können nun auch ohne inoffizielle Umwege E-Mail-Adressen gemorst werden. Es wird als A ohne Pause gefolgt von C gegeben (▄ ▄▄▄ ▄▄▄ ▄ ▄▄▄ ▄ ). Diese zweite Aktualisierung des Morsecodes innerhalb von etwa 40 Jahren geschah anlässlich seines 160-jährigen Bestehens. In der Praxis wird jedoch weiterhin oft die bisherige Alternative, A gefolgt von T, benutzt.Die erste Aktualisierung des Morsecodes war die notwendig gewordene Unterscheidung zwischen „Klammer auf“ und „Klammer zu“ (davor gab es nur „KK“, also ▄▄▄ ▄ ▄▄▄ ▄▄▄ ▄ ▄▄▄ ), die um 1960 herum eingeführt wurde. Dadurch bekam das bei Funkamateuren beliebte inoffizielle „KN“ offiziell eine andere Bedeutung.
+
+
+=== Bedeutung der kurzen und langen Pausen ===
+Es wird gelegentlich die Meinung vertreten, der Morsecode genüge nicht der Fano-Bedingung. Die Codierung für den Buchstaben E („dit“) sei auch der Beginn der Codierung für die Buchstaben A („di-dah“), F („di-di-dah-dit“) usw. Das würde bedeuten, dass der Morsecode unbrauchbar wäre, weil man beispielsweise nicht unterscheiden könnte, ob der Buchstabe A oder die Zeichenfolge ET codiert wurde.
+Der Morsecode verwendet jedoch Pausen unterschiedlicher Länge. Der Code jedes Zeichens wird mit einer langen Pause beendet, während die Signale, die zum Code eines Zeichens gehören, durch kurze Pausen getrennt werden. Damit lässt sich die Codierung des Buchstabens A (kurzes Signal, kurze Pause, langes Signal, lange Pause) eindeutig von der Codierung der Zeichenfolge ET (kurzes Signal, lange Pause, langes Signal, lange Pause) unterscheiden. Weil der Code jedes Zeichens mit einer langen Pause endet, innerhalb des Codes eines Zeichens aber nur kurze Pausen vorkommen, kann kein Code der Anfang eines anderen sein. Die Fano-Bedingung ist also erfüllt.
+
+
+=== Tonbeispiele ===
+, AM-modulierte Kennung: LW, Code: ▄ ▄▄▄ ▄ ▄   ▄ ▄▄▄ ▄▄▄ 
+ (20 Wörter pro Minute, entspricht 100 Buchstaben pro Minute), Text und Code:
+
+AAA
+WIKIPEDIA DIE
+FREIE ENZYKLOPAEDIE
+AR
+
+▄ ▄▄▄ ▄ ▄▄▄ ▄ ▄▄▄ 
+▄ ▄▄▄ ▄▄▄   ▄ ▄   ▄▄▄ ▄ ▄▄▄   ▄ ▄   ▄ ▄▄▄ ▄▄▄ ▄   ▄   ▄▄▄ ▄ ▄   ▄ ▄   ▄ ▄▄▄       ▄▄▄ ▄ ▄   ▄ ▄   ▄ 
+▄ ▄ ▄▄▄ ▄   ▄ ▄▄▄ ▄   ▄   ▄ ▄   ▄       ▄   ▄▄▄ ▄   ▄▄▄ ▄▄▄ ▄ ▄   ▄▄▄ ▄ ▄▄▄ ▄▄▄   ▄▄▄ ▄ ▄▄▄   ▄ ▄▄▄ ▄ ▄   ▄▄▄ ▄▄▄ ▄▄▄   ▄ ▄▄▄ ▄▄▄ ▄   ▄ ▄▄▄   ▄   ▄▄▄ ▄ ▄   ▄ ▄   ▄ 
+▄ ▄▄▄ ▄ ▄▄▄ ▄ 
+
+
+=== Geschwindigkeiten ===
+Text und Code: 
+
+WIKIPEDIA DIE
+FREIE ENZYKLOPÄDIE
+
+▄ ▄▄▄ ▄▄▄   ▄ ▄   ▄▄▄ ▄ ▄▄▄   ▄ ▄   ▄ ▄▄▄ ▄▄▄ ▄   ▄   ▄▄▄ ▄ ▄   ▄ ▄   ▄ ▄▄▄       ▄▄▄ ▄ ▄   ▄ ▄   ▄ 
+▄ ▄ ▄▄▄ ▄   ▄ ▄▄▄ ▄   ▄   ▄ ▄   ▄       ▄   ▄▄▄ ▄   ▄▄▄ ▄▄▄ ▄ ▄   ▄▄▄ ▄ ▄▄▄ ▄▄▄   ▄▄▄ ▄ ▄▄▄   ▄ ▄▄▄ ▄ ▄   ▄▄▄ ▄▄▄ ▄▄▄   ▄ ▄▄▄ ▄▄▄ ▄   ▄ ▄▄▄ ▄ ▄▄▄   ▄▄▄ ▄ ▄   ▄ ▄   ▄ Siehe auch Definition der Geschwindigkeit.
+
+
+=== Die individuelle „Handschrift“ ===
+Jeder Tastfunker hat seine individuellen Anschläge und Geschwindigkeiten, an denen er von anderen wiedererkannt werden kann – analog zur Einzigartigkeit einer Handschrift. Diese Tatsache berücksichtigte z. B. die kaiserlich japanische Kriegsmarine, um die US-amerikanische Fernmeldeaufklärung beim Angriff auf Pearl Harbor zu überlisten. Die Stammfunker der wichtigsten angreifenden Kriegsschiffe wurden versetzt und nahmen von anderen Sendern aus Routinebetrieb auf.
+
+
+== Übertragungstechnik ==
+
+Morsezeichen werden optisch (Lichtmorsen) oder akustisch (Gehörmorsen bzw. Gehörlesen) wiedergegeben.
+Beim Lichtmorsen ist u. a. die Trägheit der Lichtquelle bzw. der Augen ein Problem. Eine Glühlampe glüht nach dem Ausschalten noch nach, so dass die Morsezeichen am Ende „verwischen“. Beim Morsen mit einer Rundumleuchte mit Glühlampe (z. B. Topplicht) muss eine entsprechend langsame Übertragungsgeschwindigkeit gewählt werden. Eine Alternative stellen Leuchtmittel mit geringerer Trägheit wie LED-Leuchtmittel dar.
+Um der Trägheit bei Glühlampen entgegenzuwirken, wurden Morsescheinwerfer mit einer Blende vor der Lichtquelle entwickelt. Die Glühlampe bleibt ständig an, wird aber durch einen Verschlussmechanismus entsprechend abgedunkelt oder geöffnet. Diese Schließklappen werden auch als Blinker bezeichnet. Die Morsesignale werden so allerdings nicht mehr rundherum, sondern nur noch in eine bevorzugte Richtung ausgestrahlt.
+
+
+== Betriebstechnik ==
+
+Die Morseschrift dient zur schriftlichen Fixierung oder Darstellung von Texten, die im Morsealphabet übermittelt werden. Am Ende eines Buchstabens wird ein Schrägstrich, am Ende eines Wortes zwei Schrägstriche, am Ende eines Satzes werden drei Schrägstriche gesetzt. Am Ende eines Absatzes stehen vier Schrägstriche.
+
+
+=== Q-Gruppen ===
+
+Durch die Verwendung der sogenannten Q-Gruppen (Q-Schlüssel) wird die Übertragung beschleunigt. Auch sind dadurch internationale Nachrichtenübertragungen ohne Kenntnis der jeweils anderen Sprache möglich.
+
+
+=== CQ ===
+Bei einem allgemeinen Anruf wird anstatt des Rufzeichens des Gerufenen ein „CQ“ (homonymes Homophon für engl. seek you, dt. „suche dich“) als Abkürzung gegeben.
+Anruf (Beispiel):
+
+< cq cq cq de dl1xyz dl1xyz dl1xyz pse k
+❙•❙• ❙❙•❙   ❙•❙• ❙❙•❙   ❙•❙• ❙❙•❙   ❙•• •   ❙•• •❙•• •❙❙❙❙ ❙••❙ ❙•❙❙ ❙❙••   ❙•• •❙•• •❙❙❙❙ ❙••❙ ❙•❙❙ ❙❙••   ❙•• •❙•• •❙❙❙❙ ❙••❙ ❙•❙❙ ❙❙••   •❙❙• ••• •   ❙•❙
+< Bedeutung: Allgemeiner Anruf von dl1xyz – bitte kommen …
+
+
+== Übertragungsrate ==
+Die Übertragungsrate beim Morsen wird in Buchstaben pro Minute (BpM) oder in Wörtern pro Minute (WpM) gemessen, wobei ein „Wort“ 5 Buchstaben entspricht. Seinen Ursprung hat die Zählung in „Wörtern“ in der Gewohnheit, der besseren Lesbarkeit wegen, die endlosen Buchstabenkolonnen chiffrierter Militärtexte in Gruppen zu 5 Buchstaben zusammenzufassen, den sogenannten Fünfergruppen. Die Frage von BpM oder WpM ist reine Geschmackssache, jedoch existiert eine Art Gewohnheit: Funkamateure in Europa z. B. verwenden in der Regel BpM, die in den USA WpM.
+Da nicht alle Buchstaben gleich lang sind und beim Morsen daher unterschiedlich lange dauern, wäre die Angabe BpM allein sehr unpräzise. Zur Geschwindigkeitsmessung wurde deshalb als Referenz das Wort PARIS ausgewählt. In ihm kommen kurze wie lange Buchstaben gleichermaßen vor. In seinem Zeitbedarf bei der Übermittlung bildet das Wort PARIS ( · − − ·   · −   · − ·   · ·   · · · ) daher einen Mittelwert. Gibt man in einer Minute das Wort PARIS mit seinen 5 Buchstaben 12-mal, so ist die Geschwindigkeit 60 BpM.
+Das Wort PARIS (inklusive der nachfolgenden Wortlücke) hat die Länge von 50 Dits (s. o., Beispiel: das E besteht aus zwei Dits: Punkt + Pause). Je höher die Übertragungsrate, desto kürzer die Dits. 1 WpM entspricht 50 Dits pro Minute, folglich:
+
+Anfänger kommen kaum über 5 WpM hinaus. Das liegt daran, dass Buchstaben und Zeichen nicht als Einheit wahrgenommen werden – vergleichbar einem Lese-Anfänger, der sich die Wortbedeutungen mühsam über den Klang einzelner Buchstaben erschließt.
+Die Prüfungsgeschwindigkeit für Funkamateure betrug 12 WpM. Mit viel Übung überschreitet man die 20-WpM-Marke, sehr gute Funker schaffen über 50 WpM. Der Weltrekord beim Morsen (Mitschrift von Fünfergruppen Buchstaben) liegt bei 88 WpM (440 Buchstaben pro Minute), siehe Schnelltelegrafie.
+Beim Lichtmorsen (also beim Morsen mit Lichtsignalen) z. B. zwischen zwei Schiffen auf See beträgt die Übertragungsgeschwindigkeit rund 8 WpM (40 BpM), bei Signälern „Blinkis“ der Bundesmarine.
+Zum Vergleich: Ein Nachrichtensprecher übermittelt 100 bis 200 Wörter pro Minute, eine ISDN-Datenleitung ca. 50.000 Wörter pro Minute.
+
+
+== Morsezeichen erkennen lernen ==
+
+
+=== Koch-Methode ===
+Eine der effektivsten Trainingstechniken, die entwickelt worden ist, publizierte 1936 Ludwig Koch. Das Grundprinzip basiert auf der Bildung von Reflexen. Man lernt die Morsezeichen direkt mit hoher Geschwindigkeit (mit mindestens 20 WpM, am Anfang mit längerem Abstand zwischen den Zeichen, also effektiv 15 WpM). Dies verhindert die unwillkürliche Bildung von Übersetzungstabellen im Gehirn. Außerdem klingen langsamer gegebene Morsezeichen musikalisch ganz anders als schnell gegebene Morsezeichen. Zu Anfang werden erst einmal zwei Zeichen ausgesucht, die nicht ähnlich klingen, z. B. K und M, die man fünf Minuten mitschreibt. Hat man 90 Prozent der zwei Zeichen richtig mitgeschrieben, hat man diese bereits dauerhaft und in Endgeschwindigkeit gelernt und nimmt dann das dritte Zeichen hinzu.
+
+
+=== Erkennen (Decodieren) von Morsezeichen ===
+
+Früher wurde zum Lernen der Morsezeichen für Anfänger eine alphabetische Auflistung der Buchstaben, Ziffern und Sonderzeichen verwendet (wie die oben dargestellte Standard-Codetabelle). Daraus musste er die Punkt-Strich-Folgen (Signalfolgen) entnehmen, die er „geben“ muss. Als Hilfsmittel gab es Morsemerkwörter, die in der Anfangsphase das Lernen erleichtern sollten.
+Dazu kam noch der umgekehrte Weg, nämlich das Erkennen der Morsezeichen.
+Dieses Erkennen ist ein Decodieren der Morsezeichen, es ist für Funker und Lichtmorser kein Problem, weil bei ihnen das Hören bzw. Sehen und Erkennen der gesendeten Morsezeichen automatisch erfolgt, es ist ihnen in Fleisch und Blut übergegangen. Sie haben das „Hören“ und „Sehen“ geübt und gelernt.
+Der Anfänger bräuchte jedoch zur Decodierung der Signal-Folge eines übertragenen Zeichens eine invers geordnete Morsetabelle. Die oben gezeigte alphabetisch geordnete Tabelle ist dafür nicht geeignet, weil bei jedem Morsezeichen das ganze Alphabet durchsucht werden muss, ob die gesuchte Signal-Folge dabei ist und zu welchem Morsezeichen sie gehört.
+Die im Bild rechts gezeigte Morsetafel ist invers nach Signal-Folgen geordnet. Sie besteht aus zwei binären Bäumen, wobei der eine die Wurzel „Punkt“ und der andere die Wurzel „Strich“ hat. Diese beiden Wurzeln befinden sich links oben in der Morse-Tafel. Der jeweilige Baum verzweigt sich über 6 bis 8 Ebenen, wobei an den Knoten die Bezeichnung des Morsezeichens steht, das von der Wurzel bis zu diesem Knoten reicht.
+Bei der Decodierung ging man von der jeweiligen Wurzel (Punkt oder Strich) links oben aus und folgt den Verzweigungen, bis das Morsezeichen „abgearbeitet“ war. Dort am Knoten steht dann die Bezeichnung (Buchstabe, Ziffer, Sonderzeichen).
+Eine ebenfalls auf Knotenpunkten basierende Darstellung hat die alternative Wernicke Morse Table. Diese unterscheidet sich in der strukturellen Gruppierung von Buchstaben, Zahlen, Umlauten, Ligaturen, diakritischen und Sonderzeichen als auch Signalen.
+
+
+== Sonstiges ==
+
+
+=== Klopfmorsen ===
+In der Frühzeit der Telegraphie, vor Einsatz von Lautsprechern und Sinustongebern oder wenn die Leitungen für Tonübertragungen zu lang waren – Verstärker waren noch unbekannt –, wurden die Zeichen allein durch Drehspulausschläge bei geschlossenen oder geöffneten Kontakten identifiziert beziehungsweise bei genügend Stromfluss durch „Klopfer“, ein Elektromagnet mit Anker an einem Klangblech, hörbar gemacht. Zwei kurz aufeinanderfolgende Knackimpulse standen dabei für einen Punkt, länger auseinanderliegende Knackimpulse für einen Strich. Die letzten bekannten Verwendungen fand die Technik in Überlebens-Ausbildungsprogrammen der US-Navy.
+Diese Methode, mit reinen Klopfzeichen Buchstaben zu übermitteln, Klopfcode genannt, findet im Gefängnismilieu unter den Gefangenen Anwendung. Sie wird in der Gaunersprache Kaspern genannt.
+
+
+=== Morsen im Film ===
+In vielen (Kino-)Filmen werden Morsesignale gerne verwendet, um „geheime“ Kommunikation darzustellen. Zwischen den hörbaren Zeichen und dem Inhalt, den die Darsteller aus den Zeichen ablesen, besteht jedoch meist kein Zusammenhang: Aus wenigen Morse-Buchstaben entstehen teilweise längere Nachrichten, die viele Wörter und Sätze umfassen. Oft werden im Film auch gerne Nachrichten per Morsecode als Klopfzeichen übermittelt (etwa von Zelle zu Zelle im Gefängnis). Man kann zwar nicht „lang“ oder „kurz“ klopfen, in diesem Fall zählt daher die Pause zwischen den einzelnen Klopfzeichen (siehe „Klopfmorsen“). Unterschiedliche Klopfgeräusche wären auch eine Möglichkeit oder eben gleich ein Klopfzeichen-Alphabet (zum Beispiel Polybios-Chiffre).
+
+
+=== Morsen in Hörfunk und Fernsehen ===
+In den 1920er-Jahren nutzten Hörfunksender Morsecode als Pausen- und Erkennungszeichen, beispielsweise Berlin (B ▄▄▄ ▄ ▄ ▄ ), Hamburg und seine Nebensender (HA ▄ ▄ ▄ ▄   ▄ ▄▄▄  u. a.), Frankfurt (F ▄ ▄ ▄▄▄ ▄ ), Münster (MS ▄▄▄ ▄▄▄   ▄ ▄ ▄ ) oder Graz (G ▄▄▄ ▄▄▄ ▄ ). Für Kurz und Lang wurden auch unterschiedliche Tonhöhen gebraucht; ein sehr bekanntes Beispiel hierfür war die Verwendung des Buchstabens V (▄ ▄ ▄ ▄▄▄  als H₁-H₁-H₁-E) für „Victory“ bzw. „Vrijheid“ durch den Europadienst der BBC im Zweiten Weltkrieg. Dies wurde auch als Reverenz an den sehr ähnlich klingenden Rhythmus des Kopfmotivs des ersten Satzes von Beethovens 5. Sinfonie (g-g-g-es) verstanden. Der Vorspann der WDR-Hörfunksendung ZeitZeichen beinhaltete über lange Zeit das gemorste Wort „Zeitzeichen“.Einige Fernsehsendungen verwendeten Morse-Signale, oft als Jingles, eingebettet in eine Musik. Zu Beginn der Nachrichtensendung heute des ZDF erklang von 1984/85 bis 1998 der Morsecode für das Wort „heute“ (▄ ▄ ▄ ▄   ▄   ▄ ▄ ▄▄▄   ▄▄▄   ▄ ). Nach der ARD-Tagesschau wurde der Wetterbericht von 1960 bis 1993 mit der Q-Gruppe „QAM“ (▄▄▄ ▄▄▄ ▄ ▄▄▄   ▄ ▄▄▄   ▄▄▄ ▄▄▄ ) für „Wetterbericht“ beendet. Reaktiviert wurde das Wetter-Signal „QAM“ von Radio 700 im Jahr 2008 und von SWR1 Rheinland-Pfalz 2009. Als Titelmusik der ARD-Sendung Im Brennpunkt erklang Astronomy Domine mit einer Imitation von Morsecode (siehe Abschnitt #Morsen und Musik).
+Eine Parodie brachte Dieter Hallervorden in der Fernsehserie Nonstop Nonsens (Funkerkongress, 1976).
+
+
+=== Morsen und Musik ===
+Ein frühes Musikstück, das Morsecode in gesungener Form verwendet, ist Das Funkerlied von Bernd Wübbecke (Soldatenlied von 1939; L ▄ ▄▄▄ ▄ ▄  Di dah di dit, rhythmisch korrespondierend zu Ich liebe dich).Stücke aus dem Bereich der experimentellen E-Musik mit Morsesignalen sind Wireless fantasy von Vladimir Ussachevski (1960) und Kurzwellen von Karlheinz Stockhausen (1968).Eine Imitation von Morsecode enthält das Stück Astronomy Domine von Pink Floyd (1967). In der Folgezeit haben weitere Pop-Musiker den Morsecode für sich entdeckt, zum Beispiel Kraftwerk mit Radio-Aktivität (1975), The Alan Parsons Project mit Lucifer (1979) oder Rush mit YYZ (1982).Bisweilen werden in den Stücken auf diese Weise Nachrichten versteckt, beispielsweise in dem Lied In the Name of God von Dream Theater, dessen versteckter Morsecode erst etliche Monate nach Veröffentlichung der CD entdeckt wurde. Auf dem Album Amarok des Musikers Mike Oldfield findet sich ein gemorster „Abschiedsgruß“ an den Inhaber seiner bisherigen Plattenfirma: „Fuck off RB“. Mit RB ist Richard Branson, der Besitzer von Virgin Records, gemeint. Slipknot verwendet den Morsecode in Birth of the Cruel. Der Liedtitel wird als „birth/of/the/cruel“ als typisch für Morsezeichen klingende Pfeiftöne gespielt.
+In seinem Stück Communication morst der Jazz-Musiker Slim Gaillard den allgemeinen Anruf „CQ“ im Refrain. Im Thema der Titelmelodie zu Mission Impossible finden sich mit „dah-dah di-dit dah-dah di-dit …“ die Anfangsbuchstaben des Films, beziehungsweise der Serie, MI MI … in der Musik wieder.
+
+
+=== Morsen in der Science-Fiction-Literatur ===
+In vielen Szenarien der Zukunftsliteratur droht ein Weltuntergang, den ein Held aufzuhalten versucht. In einigen Fällen erhält er geheime oder codierte Warnungen, die aus der Zukunft kommen, so zum Beispiel in dem Science-Fiction-Thriller Der Tomorrow Code, in dem zwei neuseeländische Teenager per Morsecode verschlüsselte Warnungen aus der Zukunft erhalten.
+
+
+=== Morsen vs. SMS ===
+In der NBC-Fernsehreihe The Tonight Show with Jay Leno am 13. Mai 2005 gab es einen kleinen Wettbewerb, um festzustellen, ob SMS-Eingabe oder Morsen schneller ist. Hierbei traten zwei Jugendliche gegen zwei Funkamateure an. Die beiden Funkamateure, die sich seit 38 beziehungsweise 43 Jahren damit beschäftigt hatten, waren schneller als die Jugendlichen.
+
+
+=== Morsen und Handy-Klingeltöne ===
+Ein bekannter Morse-Klingelton ist der bei Nokia verwendete SMS-Ton „Spezial“ (in Lautschrift „dididit dahdah dididit“), der – entsprechend seinem Einsatzzweck – die Buchstabenfolge SMS (▄ ▄ ▄   ▄▄▄ ▄▄▄   ▄ ▄ ▄ ) symbolisiert. Das sollte keinesfalls mit dem Morsecode für SOS (▄ ▄ ▄ ▄▄▄ ▄▄▄ ▄▄▄ ▄ ▄ ▄  „didididahdahdahdididit“) verwechselt werden. Ein weiterer Morse-Klingelton (ebenfalls von Nokia) ist „connecting people“ als Weckersignalisierung.
+
+
+=== Spuren auf dem Mars ===
+
+Der Mars-Rover Curiosity – gebaut vom Jet Propulsion Laboratory (JPL) – rollt auf Reifen, deren Profil jeweils die Morsezeichen für J, P und L in den Boden drücken. Die Reifenspuren dienen dem Erkennen der Fortbewegung insbesondere bei optisch ohne diese Reifenabdrücke recht eintönigem Boden. Erkennbar an der Spur werden die Orientierung des Fahrzeugs und das Maß des Durchrutschens von Reifen, mit dem Ziel das Fahren effizienter zu gestalten.
+
+
+=== Morsen und Schifffahrt ===
+In der Seefahrt gibt es Kennungen, die Lichtphasen entsprechend einem Buchstaben des Morsealphabets abgeben. Beispielsweise morst eine Tonne mit der Bezeichnung „Mo (A) 8s“ das Zeichen „A“ (▄ ▄▄▄ ) mit einer Wiederkehr alle 8 Sekunden. Das SPM Būtingė zeigt den Morsecode ▄ ▄ ▄▄▄  „U“ (Mo(U).Y.8s).
+Auch Nebelhorn-Signale von Leuchttürmen oder Häfen werden oft mit einem unterscheidbaren Morsesignal abgegeben. Oft ist es der erste Buchstabe des Ortes oder der Station. Schiffe verwenden die in den Kollisionsverhütungsregeln festgelegten Schallsignale, um bei schlechter Sicht Kollisionen zu vermeiden. Segelschiffe etwa morsen den Buchstaben „D“ ▄▄▄ ▄ ▄  in regelmäßigen Abständen.
+Des Weiteren gibt es Radarantwortbaken, die auf ein empfangenes Radarsignal einen Kennbuchstaben morsen.
+
+
+=== Morsen in der Luftfahrt ===
+In der Luftfahrt werden Morsezeichen bei Funkfeuern genutzt. Das Morsen findet sich zum Beispiel
+beim aussterbenden NDB (ungerichtetes Funkfeuer) und beim aktuell bedeutenderen VOR (Drehfunkfeuer).
+Die NDB- oder VOR-Quelle wird anhand der Frequenz ausgewählt und anhand des Morsecodes verifiziert. In der Regel ist der Code 3 Buchstaben lang.
+Zum Abhören kann der Pilot am Empfänger das empfangene Signal auf seinen Kopfhörer schalten.
+
+
+=== Morsen und Telefon ===
+Das ältere di-dah (· −) für den Wählton stellt das Morsezeichen „a“ für Amt dar.
+
+
+=== Morsen in der Schmuckindustrie ===
+Heute findet der Morsecode auch in der Kunst, wie beispielsweise in der Herstellung und des Designs von Schmuckstücken aller Art gerne Verwendung. So werden beispielsweise verschiedene Perlenlängen genutzt, um die kurzen und langen Morsesignale abzubilden und versteckte Nachrichten auf Schmuckstücken abzubilden.
+
+
+=== Morsecode-Palindrome ===
+
+Beispiele für Morsecode-Palindrome, die in lateinischen Buchstaben keine Palindrome mehr ergeben, sind du (— · ·, · · —) oder an (· —, — ·).
+
+
+== Literatur ==
+William G. Pierpont (N0HFF): Die Kunst der Radiotelegrafie – Ein Handbuch zum Erlernen, Anwenden, Meistern und Genießen des internationalen Morsecodes als Kommunikationsmittel. (PDF; 3,7 MB) 3. überarb. Auflage. 19. Juli 2001, aus dem Amerikanischen von Olaf Rettkowski, DL9AI, 17. Mai 2007, Originaltitel: The Art and Skill of Radio-Telegraphy. – Dieses Buch darf frei verbreitet werden (siehe Vorwort) und ist in mehreren Sprachen erhältlich.
+Rudolf Grötsch: Richtig morsen – Ein Leitfaden für den Morseunterricht. 11. erw. Auflage. Jakob Schneider Verlag, Berlin-Tempelhof 1964.
+Oberkommando der Wehrmacht: Vorschrift H.Dv. 426, L.Dv. 407 – Anleitung für die Ausbildung im Morsen. 1941.
+Wolfgang Buddrus: Das waren Funker: Erinnerungen an einen vergangenen Beruf. 3. Auflage. Books on Demand, 2014, ISBN 978-3-7322-7235-8.
+
+
+== Weblinks ==
+
+Recommendation ITU-R M.1677-1. (PDF; 1,4 MB) Spezifikation des Morsecodes
+AGCW-DL e. V. – Arbeitsgemeinschaft Telegrafie
+Text zu Morse & Morse zu Text Converter
+Codieren und decodieren von Morse-Text in unterschiedlichsten Schreibweisen
+CW Player zum Empfangen, Senden und Lernen
+Morsecode-Übersetzer, Audio und Flash-Signal( EN )
+
+
+== Einzelnachweise ==

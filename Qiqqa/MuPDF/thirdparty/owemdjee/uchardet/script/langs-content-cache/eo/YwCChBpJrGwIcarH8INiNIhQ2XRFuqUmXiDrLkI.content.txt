@@ -1,0 +1,71 @@
+revision: 7097864
+title: Algebra notado
+url: https://eo.wikipedia.org/wiki/Algebra_notado
+
+
+---
+
+Algebra notado (aŭ Algebra ŝaknotado) (mallonge AN) estas metodo por registrado kaj priskribado de la movoj en ŝakludo. Ĝi nun estas norma ŝaknotacio inter ĉiuj ŝakorganizoj kaj la plej multaj libroj, revuoj kaj gazetoj. En anglalingvaj landoj, la paralela metodo de priskriba notado estis ĝenerale uzata en ŝakpublikaĵoj ĝis proksimume 1980. Kelkaj pli maljunaj ludantoj daŭre uzas priskriban notadon sed ĝi jam ne estas agnoskita de FIDE.
+Algebra notado ekzistas en diversaj formoj kaj lingvoj ĝi estas bazita sur sistemo evoluigita de Philipp Stamma. Tiu ĉi artikolo priskribas normigitan algebran notadon (angle: SAN) postulita de FIDE.
+
+
+== Nomigo de koordinatoj ==
+
+Ĉiu ĉelo de la ŝaktabulo estas identigita per unika koordinato paro de litero kaj numero. La vertikalaj kolonoj de ĉeloj (nomitaj kolonoj) de a ĝis h. La horizontalaj vicoj de ĉeloj (nomitaj vicoj) estas numeritaj de 1 ĝis 8. Tiel ĉiu ĉelo havas unikan identigon de litero sekvita de numero. 
+
+
+== Nomigo de ŝakpecojn ==
+Ĉiu ŝakpeco (krom peonoj) estas identigita per litero, kutime la unua litero en la nomo de la peco en kiu ajn lingvo oni uzas por ludregistrado. Anglalingvaj ludantoj uzas la literon K por reĝo, Q por damo, R por turo, B por kuriero kaj N por ĉevalo (ĉar K jam estas uzita).
+Aliaj lingvoj povas utiligi malsamajn literojn, ekzemple, francaj ludantoj uzas F por kuriero. En ŝakliteraturo skribita por internacia spektantaro, la lingv-specifaj literoj estas anstataŭigitaj per universalaj ikonoj por la pecoj.
+Peonoj ne estas identigitaj per literoj sed prefere per ties foresto. Distingi inter peonoj ne estas necesa por registraj movoj, ĉar nur unu peono povas moviĝi al antaŭfiksita ĉelo. (peonokaptoj estas escepto vidu sube).
+
+
+== Notado de movoj ==
+Ĉiu movo de peco estas indikita per la litero de la peco plus la ĉela koordinato al kiu ĝi moviĝas. Ekzemple, Be5 (movu kurieron al e5), Nf3 (movu ĉevalom al f3), c5 (movu peonon al c5). En kelkaj publikaĵoj, la pecoj estas indikitaj per ikonoj prefere ol literoj, ekzemple: ♞c6. Tio estas nomita statueta algebra notado kaj havas la avantaĝon esti lingve sendependa.
+
+
+=== Notado de kaptoj ===
+Kiam peco faras kapton "x" tuj estas metita antaŭ la ĉelkoordinato. Ekzemple, Bxe5 (Kuriero kaptas la pecon sur e5). Kiam peono kaptas oni skribas kolono de la peono “x” plus la koordinato de la kaptita peco: Ekzemple, exd5 (peono en la e-kolono kaptas la pecon sur d5).
+
+
+=== Konfuzigaj movoj ===
+Kiam du (aŭ pli da) samtipaj pecoj povas moviĝi al la sama ĉelo, la peco kiu moviĝas estas unike identigita per aldono de la devena ĉelo post la litero de la peco, nome tiel (en descenda sinsekvo de prefero):
+
+la kolono de starto (se ili malsamas); aŭ
+la linio de starto (se la kolonoj estas la samaj sed la linioj malsamas); aŭ
+kaj la kolono kaj la linio de starto (kiam ambaŭ estas samaj, povas okazi se la ludanto havas tri samajn pecojn)
+
+
+=== Peona damigo ===
+Kiam peonoj atingas la lastan linion (Peona damigo aŭ promocio) oni indiku la movon (atingita ĉelo) plus egalsigno “=” kaj la dezirata ŝakpeco, ekzemple: e8=Q (peono moviĝas al e8 kaj damiĝas).
+
+
+=== Aroko ===
+Aroko estas indikita per la specialaj notadoj 0-0 (por reĝflanka aroko) kaj 0-0-0 (damflanka aroko).
+Dum la FIDE-Manlibro, apendico C.13 uzas la ciferojn nulo (0-0 kaj 0-0-0), PGN postulas la grandlitertojn O (O-O kaj O-O-O).
+
+
+=== Ŝako kaj mato ===
+Movo kiu metas la reĝon de la kontraŭulo en ŝakon kutime havas la simbolon “+”. Mato ĉe la kompletigo de movoj povas esti reprezentita per krado "# " (foje ankaŭ per “++”).
+
+
+=== Fino de ludo ===
+La notado 1-0 ĉe la kompletigo de movoj indikas ke Blanka ludanto venkis, 0-1 indikas ke nigra ludanto venkis kaj ½-½ indikas egalvenkon.
+
+
+== Pecnomoj en kelkaj lingvoj ==
+La jena tabelo havas nomojn por ĉiuj pecoj same kiel la vortoj por ŝakludo, ŝako kaj (ŝak)mato en pluraj lingvoj:
+
+
+== Statueta algebra notado ==
+
+Statueta algebra notado estas vaste uzita versio de algebra notado, kiu anstataŭigas literojn per pecsimbolojn, ekzemple: ♞c6 egalas al Nc6 (esperante: Ĉc6) (peonoj estas ellasitaj). Tio ebligas kompreni movojn sendepende de lingvo.
+La Unikodaj simboloj inkludas ĉiujn simbolojn necesaj por statueta algebra notado. Por montri aŭ presi tiujn simbolojn, oni devas havi unu aŭ plurajn tiparojn kun bona Unikoda subteno instalita sur la komputilo, kiun la retpaĝo aŭ tekstprilaborilo uzas.
+
+
+== Referencoj ==
+
+
+== Vidu ankaŭ ==
+Ŝaknotacio
+PGN

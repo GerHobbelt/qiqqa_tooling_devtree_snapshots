@@ -1,0 +1,63 @@
+revision: 6771496
+title: "Kry\u0161talografia"
+url: https://sk.wikipedia.org/wiki/Kry%C5%A1talografia
+
+
+---
+
+Kryštalografia (z gr. crystallon – zmrznuté kvapky, ľad + graphein – písať) je veda o morfologických a fyzikálnych vlastnostiach kryštálov (presnejšie o vnútornom usporiadaní atómov, iónov a molekúl v tuhých telesách). Pravidelné kryštály pútali pozornosť už v staroveku, kde boli objektami rôznych povier – napr. ametystu bola prisudzovaná schopnosť chrániť pred opitosťou.
+
+
+== História ==
+Pravdepodobne prvý kryštalografický zákon formuloval dánsky zberateľ minerálov Nicolaus Stenonus (Stenon). Stenon formuloval zákon o stálosti uhlov, podľa ktorého ekvivalentné plochy zvierajú rovnaký uhol. zákon sformuloval na základe merania rezov kremeňa kolmých k osi dipyramídy. Ak je kryštál dokonalé vyvinutý tak daným rezom je pravidelný šesťuholník. Ak nie je dokonale vyvinutý ide o nepravidelný šesťuholník ale ekvivalentné hrany zvierajú stále rovnaký uhol.
+
+Škola, seriózne študujúca kryštály sa sformovala vo Francúzsku na prelome 18. a 19. storočia. Jej hlavným protagonistom bol abbé Haüy. Jeho teória o trojrozmerne periodickej vnútornej stavbe kryštálov sa neskôr stala základným postulátom kryštalografie. Formuloval zákon o racionalite parametrov podľa ktorého každú kryštálovú plochu možno odvodiť zo základného tvaru násobením základných parametrov racionálnym číslom.
+Haüyove myšlienky rozvinul August Bravais (chemik, fyzik a banský inžinier), ktorý ich posunul do novej dimenzie: ak bol totiž objav abbého Haüya pravdivý, tak by sa z teoreticky nekonečnej periodickej kryštálovej štruktúry dal vybrať motív, ktorý ju reprezentuje a ktorého opakovaním možno danú štruktúru celú vybudovať. Tento motív nazval základná bunka. Bunku možno definovať podľa metriky a súmernosti, čo Bravais zohľadnil a odvodil 14 typov priestorových mriežok. Je si treba uvedomiť, že ako abbé Haüy tak aj August Bravais pôsobili predtým ako boli publikované prvé predstavy o atómovej stavbe hmoty, preto netreba dávať ich objavy do týchto súvislostí.
+Prvé goniometre, umožňujúce presné meranie geometrických vzťahov medzi jednotlivými kryštálovými plochami sa objavili v 18. storočí. Kryštály ako geometrické objekty inšpirovali Angličana Williama Millera k zavedeniu symboliky vypracovanej Bernhardim a Williamom Whewellom, kde postavenie kryštálových plôch voči súradnicovému systému je označené symbolmi (Millerove symboly pomenované sú, aj keď v podstate nesprávne, po Millerovi).
+Súmernosťou trojrozmerného priestoru sa nezávisle od seba zaoberali viacerí mineralógovia, prípadne matematici. Spolu odvodili 230 kombinácií prvkov súmernosti, ktoré tvoria 230 priestorových grúp. Vzhľadom na veľkú symetriu v kubickej sústave je definovaných 136 grúp a v triklinickej je možno definovať iba dve grupy.
+Do roku 1912 sa výskum zameriaval na štúdium morfológie kryštálov a ich chemického zloženia. V roku 1912 nemecký docent Max von Laue objavil, že röntgenové lúče prechádzajúce cez kryštál modrej skalice interferujú, čoho dôkazom je fotografická platňa umiestnená za prístrojom. Na Laueho práce nadviazali otec a syn Braggovci, ktorí vyriešili prvú kryštálovú štruktúru – štruktúru NaCl.
+
+
+== Mriežka a kryštálová štruktúra ==
+Ak každému uzlu niektorej základnej priestorovej mriežky priradíme určitý  "ornament" (nazývaný báza ale aj motív a pod.) t. j. skupinu atómov (či iónov), dostaneme kryštálovú štruktúrnu mriežku – štruktúru (obr. 2). Keďže existuje nekonečne množstvo ornamentov, ktoré možno uzlom priestorovej mriežky priradiť, existuje nekonečne veľa kryštálových štruktúr.  Tieto pojmy sa bohužiaľ často zamieňajú. Mriežka je matematický pojem a neznamená kryštál. Body ktoré sa kreslia z dôvodu názornosti do uzlov mriežky nie sú atómy.
+
+Príklad definovania štruktúry kryštálu: Ku každému uzlu kubickej plošne centrovanej priestorovej mriežky priradíme bázu C 0,0,0 + C 1/4, 1/4,1/4 (báza vyjadruje relatívnu polohu atómu vzhľadom na uzol mriežky, pričom jednotková vzdialenosť znamená medziuzlovú vzdialenosť v priestorovej mriežke) a dostaneme štruktúru diamantu. Elementárna bunka diamantu teda obsahuje až 8 atómov uhlíka. Niekedy sa používa skôr terminológia, že ide o dvojnásobnú mriežku kubickú plošne centrovanú vzniknutú príslušnou transláciou. Prostou transláciou sa však nedajú popísať viac prvkové štruktúry napr. sfalerit, čo je štruktúra podobná diamantovej ale tetragonálne atómy sú atómy síry a ostatné sú atómy zinku.
+Veľmi často je tiež nesprávne pochopené zadelenie 14 základných typov mriežok na primitívne a centrované. Primitívne priestorové mriežky sú také, ktoré majú uzly iba v rohoch mriežky. Teda priemerný počet uzlov na mriežku je 1. Napr. primitívna kubická priestorová mriežka má 8 uzlov, ale každý je v nekonečnom priestore spoločný pre 8 buniek. Centrované sú také, ktoré majú uzly aj mimo týchto rohových miest. Napr. priestorovo (telesne) centrovaná kubická mriežka má navyše jeden uzol v geometrickom strede kocky. To však neznamená, že by sa takáto priestorová štruktúra nedala opísať aj pomocou inej – primitívnej mriežky. 14 základných mriežok, tak ako sa používajú teraz bolo vybraných konvenciou. Mohli sa pokojne vybrať aj iným spôsobom, ale stále by reprezentovali tých istých 14 možných priestorových štruktúr. Ako príklad možno uviesť voľbu primitívnej bunky k plošne centrovanej kubickej bunke.
+Voľba centrovaných mriežok za základné teda zjednodušila popis priestorových štruktúr, na druhej strane však zdanlivou jednoduchosťou je zavádzajúca. Zjednodušenie spočíva v zavedení tzv. kryštalografických sústav, ktorých je sedem. V rámci jednej sústavy sa potom zavádza centrovanie (ak má zmysel v danej sústave).
+Mriežka CsCl ma v rohoch kocky atómy Cs a v strede Cl (alebo naopak – je to to isté). Táto mriežka, ak si namiesto atómov predstavíme prázdne uzly priestorovej mriežky, je vlastne priestorovo (telesne) centrovaná kubická mriežka. Kryštalografická mriežka CsCl sa VŠAK NEDÁ popísať priradením bázy k telesne centrovanej priestorovej mriežke. Neexistuje totiž kombinácia atómov, ktorú ak priradíme takejto priestorovej mriežke, taká že výsledok je mriežka CsCl. Štruktúra CsCl sa dá definovať iba tak, že každému bodu primitívnej kubickej mriežky priradíme bázu (Cs 0,0,0 + Cl 1/2,1/2,1/2).
+Podobne vyzerajúca mriežka Fe (feritu – nízkoteplotnej modifikácie železa) sa dá popísať dvojako: tak že každému bodu telesne centrovanej kubickej priestorovej mriežky priradíme ornament (Fe 0,0,0), alebo tak že každému bodu primitívnej priestorovej kubickej mriežky priradíme ornament (Fe 0,0,0  + Fe 1/2,1/2,1/2). V literatúre je nejednoznačnosť v tom či musí byť báza vytiahnutá na primitívnu mriežku alebo nie.
+Problém pri jednoduchých kryštalografických mriežkach, aké sa používajú v metalurgii, je v tom, že sa zaužívalo pomenovanie štruktúrnych buniek odpovedajúcemu tvaru priestorovej bunky. Napr. mriežka feritu sa označuje ako FCC (kubická plošne centrovaná). V tomto kontexte je tento pojem naozaj pomenovaním kryštálovej štruktúry a nie iba priestorovej mriežky (ako matematického pojmu).
+Môže to však viesť k nedorozumeniam pri niektorých mriežkach. Napr. hore popísaný problém CsCl. Štruktúrnu mriežku CsCl nie je správne označovať za priestorovo centrovanú štruktúrnu mriežku (aj keď sa nájdu také tvrdenia aj v mineralogických skriptách).
+V kryštalografii existuje nemecký spôsob označovaný aj v angličtine „Strukturbericht“, kde sa jednoprvkové štruktúry označujú písmenom A, dvojprvkové štruktúry typu AB sa označujú písmenom B, látky typu AB2 sa označujú C atď. Za písmenom nasleduje číslo typu. Napr. CsCl je kryštalografická mriežka B2. Obdobne zaplnená mriežka ale atómami jedného druhu (napr. ferit) sa označuje A2. Mriežka typu diamantovej sa označuje A4 atď. Existuje rozsiahly systém štruktúrnych buniek a ich značenia týmto spôsobom.  Strukturbericht system.
+Ďalším systémom značenia štruktúrnych mriežok je Pearsonov systém značenia kryštalografických štruktúr, kde sa napríklad mriežka typu CsCl označuje ako cP2 c – cubic, P – primitive, 2 – počet atómov na bunku. Z tohto systému je explicitne vidieť, že mriežku CsCl nemožno pokladať za priestorovo centrovanú.
+Keďže niektoré štruktúry ako napr. ferit je možno definovať viacerými spôsobmi (rôzne kombinácie mriežky a bázy), otázky typu ktorú zo 14 mriežok má (alebo v ktorej kryštalizuje)
+diamant je nesprávna. Diamant možno popísať tak ako je to uvedené vyššie teda, že každému uzlu priestorovej mriežky kubickej plošne centrovanej priradíme dva atómy, ale mohli by sme to urobiť aj tak, že každému bodu primitívnej kubickej priestorovej mriežky priradíme 8 atómov. Výsledok je jedna a tá istá štruktúrna mriežka diamantu (v tomto prípade našťastie existuje zaužívaný pojem diamantová štruktúra). Samozrejme môžu existovať aj štruktúrne mriežky s 10, 20 alebo aj viac atómami na elementárnu štruktúrnu bunku. Počet uzlov (bodov) každej zo 14 základných priestorových buniek je však konštantný.
+
+
+== Metódy ==
+Pred objavom difrakcie sa kryštalografia zameriavala výlučne na štúdium geometrie kryštálov. Pomocou goniometra sa merali uhly, ktoré zvierali jednotlivé hrany kryštálov, tieto sa potom preniesli do stereografickej siete, označili sa symbolmi (Millerove symboly) a zistila sa jeho symetria. V súčasnosti napomáha pri riešení štruktúry tuhých látok elektromagnetické žiarenie, konkrétne röntgenové lúče (ale využíva sa aj Synchrotrónové žiarenie, neutrónová a elektrónová difrakcia), pomocou ktorých sa zisťuje stavba kryštálov.
+
+
+== Prehľad Nobelových cien, udelených za kryštalografické práce ==
+Za fyziku
+1914 – Max von Laue – objav interakcie röntgenového žiarenia s kryštalickými látkami
+1915 – William Henry Bragg a William Lawrence Bragg – vyriešenie prvej kryštálovej štruktúry
+Za chémiu
+1962 – John Kendrew a Max Ferdinand Perutz – vyriešenie kryštálovej štruktúry hemoglobínu
+1964 – Dorothy Crowfoot Hodgkin – za vyriešenie kryštálovej štruktúry vitamínu B12
+1985 – Herbert Hauptman a Jerome Karle – za rozvoj priamych metód riešenia kryštálových štruktúr
+Za fyziológiu a medicínu
+1962 – Maurice Hugh Frederick Wilkins, Francis Harry Compton Crick a James Dewey Watson – za vyriešenie kryštálovej štruktúry DNA
+
+
+== Pozri aj ==
+Kryštál
+Kryštálová štruktúra
+
+
+== Externé odkazy ==
+Úvod od kryštalografie a mineralogického systému (anglicky)
+voľne dostupný software pre kryštalografiu
+Strukturbericht systém(anglicky)
+Pearsonov system označovania kryštalografických štruktúr
+International Union of Crystallography

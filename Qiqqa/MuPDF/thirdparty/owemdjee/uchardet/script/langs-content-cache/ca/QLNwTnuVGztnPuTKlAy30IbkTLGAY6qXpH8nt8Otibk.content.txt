@@ -1,0 +1,233 @@
+revision: 32071418
+title: diode
+url: https://ca.wikipedia.org/wiki/D%C3%ADode
+
+
+---
+
+En electrònica un díode és un dispositiu electrònic no lineal i polaritzat format per dos elèctrodes actius. El seu funcionament es pot extrapolar al d'una vàlvula hidràulica; així com una d'aquestes vàlvules antiretorn només deixen passar l'aigua en un sol sentit, un díode només deixa circular el corrent elèctric en un únic sentit i el bloqueja en el sentit contrari restringint el moviment dels electrons.
+De vegades se'ls denomina rectificadors, ja que són dispositius capaços de convertir un corrent altern en corrent continu mitjançant un muntatge especial anomenat pont rectificador.
+Els primers díodes foren tant de material semiconductor, díode de punta de contacte (Greenleaf Whittier Pickard, 1906), com basats en vàlvules electròniques, díode Fleming (John Ambrose Fleming, 1904). Avui dia gairebé tots els díodes són de silici o d'altres materials semiconductors.
+
+
+== Història ==
+Encara que els díodes d'estat sòlid es van popularitzar abans que els díodes termoiònics, tots dos tipus es varen desenvolupar en paral·lel.
+El principi bàsic del funcionament dels díodes termoiònics el va descobrir Frederick Guthrie el 1873. Guthrie va descobrir que un electroscopi carregat positivament es podria descarregar apropant-li una peça connectada a una presa de terra de metall blanc calent (però sense necessitat de tocar-lo). El fet que el mateix no era aplicable a un electroscopi carregat negativament, indicava que el flux de corrent només era possible en una direcció.
+El principi va ser redescobert de manera independent per Thomas Edison el 13 de febrer de 1880. En aquella època Edison estava investigant per què, gairebé sempre, els filaments de carboni de les seves bombetes es cremaven per l'extrem connectat al pol positiu. Tenia una bombeta especial feta amb una làmina metàl·lica segellada amb un embolcall de vidre, i va poder confirmar que es podia treure un corrent invisible del filament brillant a través del buit cap a la làmina de metall, però només quan la làmina estava connectada al corrent positiu.
+Edison va idear un circuit on la seva bombeta modificada més o menys reemplaçava la resistència en un voltímetre de corrent continu i amb aquesta base va aconseguir una patent el 1883 ([Patent dels EUA 307031]). en aquella època no hi havia cap ús pràctic aparent per a aquest mecanisme, i la presentació de la sol·licitud de patent va ser probablement només una simple precaució pel cas que algú altre trobés un ús a l'anomenat "Efecte Edison".
+Aproximadament 20 anys més tard, John Ambrose Fleming (assessor científic a la Companyia Marconi i anterior empleat d'Edison) s'adonava que l'efecte Edison es podria utilitzar com a detector de ràdio de precisió. Fleming va patentar el primer díode termoiònic autèntic a la Gran Bretanya el 16 de novembre de 1904 (seguit per la Patent dels EUA 803684 el 7 de novembre de 1905).
+El principi d'operació dels díodes semiconductors el va descobrir el 1874 el científic alemany, Karl Ferdinand Braun. Braun va patentar el rectificador de cristall el 1899. El descobriment de Braun va ser desenvolupat per Jagdish Chandra Bose per obtenir un mecanisme útil per a la detecció de ràdio.
+El primer radioreceptor pràctic que feia servir un díode semiconductor el va construir Greenleaf Whittier Pickard. Pickard va rebre una patent per a un fotodetector de cristall de silici el 20 de novembre de 1906 (Patent dels EUA 836,531).
+Altres experimentadors van provar diversos minerals i altres substàncies, encara que el més popular era de bon tros la galena. Tot i que d'altres substàncies oferien una eficiència una mica millor, la galena tenia l'avantatge de ser barata i fàcil d'obtenir, i s'utilitzava gairebé exclusivament en aparells fets a casa, fins a l'adveniment dels díodes de germani barats obtinguts a partir dels anys 1950.
+En el moment de la seva invenció, aquests aparells es coneixien com a rectificadors. El 1919, William Henry Eccles encunyava el terme díode a partir de l'etimologia grega; dia vol dir "a través", i ode (procedent de ὅδος) vol dir "camí".
+
+
+== Díodes termoiònics ==
+Els díodes termoiònics són vàlvules termoiòniques que consisteixen en uns elèctrodes dins d'un tub de vidre on s'ha fet el buit. Els primers exemples tenien una aparença similars a les bombetes incandescents.
+En els díodes termoiònics el corrent que passa a través del filament calefactor fa que es produeixi calor i s'escalfi de manera indirecta el càtode, un altre elèctrode que acostuma habitualment ha estat tractat amb una barreja de bari i òxid d'estronci o un metall alcalinoterri. Aquestes substàncies s'escullen perquè tenen un valor petit de funció de treball. (Tanmateix també hi ha algunes vàlvules que utilitzen l'escalfament directe, en aquest cas un filament de tungstè fa les funcions de calefactor i càtode alhora).
+L'escalfament provoca l'emissió termoiònica d'electrons al buit. L'ànode està carregat positivament i, per tant, atreu els electrons emesos. Tanmateix els electrons no s'alliberen fàcilment de la superfície de l'ànode quan en invertir la polaritat del voltatge aplicat es queda sense escalfament. D'aquí que qualsevol flux invers sigui negligible.
+En una vàlvula de mercuri, es forma un arc entre un ànode conductor refractari i mercuri líquid que actua com a càtode. Aquestes vàlvules es van fabricar amb potències de fins a centenars de quilowatts, i van ser importants en el desenvolupament de la transmissió de corrent continu d'alta tensió (HVDC, del seu nom anglès High-voltage direct current). Alguns tipus rectificadors termoiònics petits de vegades són omplerts amb vapor de mercuri per tal de reduir la caiguda de tensió i per augmentar la capacitat de corrent per sobre les vàlvules termoiòniques de buit.
+Durant gran part del segle xx els díodes termoiònics van ser utilitzats en aplicacions amb senyals analògics i també com a rectificadors de moltes fonts d'alimentació. Avui dia aquest tipus de díodes només tenen una certa utilització en aplicacions molt especialitzades, com ara rectificadors als amplificadors de les guitarres elèctriques o com a equips especials d'àudio de gamma alta.
+
+
+== Díodes de semiconductor ==
+Avui dia gairebé tots els díodes es fabriquen amb materials semiconductors. Els més comuns es basen en juncions PN, a un díode de tipus PN el corrent circula des de l'element semiconductor P, l'ànode, vers l'element semiconductor N, el càtode, però no ho pot fer en sentit contrari. Hi ha altres tipus de díodes com els Schottky que es fan a partir del contacte entre un metall i un semiconductor, en comptes d'una junció totalment de semiconductor com la PN.
+
+
+=== Díode p-n (normal) ===
+Els díodes p-n són unions de dos materials semiconductors extrínsecs tipus p i n, per la qual cosa també reben la denominació d'unió p-n o junció p-n.
+
+En unir aquests dos cristalls, es manifesten dos processos:
+
+La difusió de buits del cristall p al n (Jh), i
+Un corrent d'electrons del cristall n al p (Je).En establir-se aquests corrents apareixen càrregues fixes a una zona a un costat i a l'altre de la unió, zona que rep diferents denominacions com: zona de càrrega espacial, d'esgotament, de deflexió, de buidatge, etc.
+A mesura que progressa el procés de difusió, la zona de càrrega espacial va incrementant la seua amplària aprofundint en els cristalls a un costat i a l'altre de la unió. Tanmateix, l'acumulació de càrregues induïx una diferència de tensió (V) que actuarà sobre els electrons amb una determinada força de desplaçament que s'oposarà a la difusió de buits i al corrent d'electrons i acabarà detenint-los.
+Aquesta diferència de tensió d'equilibri (V0) és de 0.7 V en el cas del silici i 0.3 V si els cristalls són de germani.
+L'amplària de la zona de càrrega d'espacial una vegada aconseguit l'equilibri, sol ser de l'orde de 0,5 micròmetres però quan un dels cristalls està molt més dopat que l'altre, la zona de càrrega espacial és molt major.
+Al dispositiu així obtingut se l'anomena díode, que en un cas com el descrit, tal que no es troba sotmès a una diferència de potencial externa, es diu que no està polaritzat. A l'extrem p, on s'acumulen càrregues negatives se'l denomina ànode, representant-se per la lletra A, mentre que la zona n, el càtode, es representa per la lletra C (o K).
+
+Quan se sotmet al díode a una diferència de tensió externa, es diu que el díode està polaritzat, podent ser la polarització
+
+inversa: Vp < Vn, o
+directa: Vp > Vn.
+
+
+=== Polarització inversa ===
+En aquest cas, el pol negatiu de la bateria es connecta a la zona p (la de menor tensió) el que fa augmentar la zona de càrrega espacial, i per tant la tensió en la zona esmentada fins que s'aconseguix el valor de la tensió de la bateria.
+En aquesta situació, el díode no hi hauria de conduir el corrent; no obstant, a causa de l'efecte de la temperatura es formaran parells electró-buit (vore semiconductor) a un costat i a l'altre de la unió produint un xicotet corrent (de l'orde d'1 μA) anomenat corrent invers de saturació.
+Per efecte de la polarització inversa, les concentracions de minoritaris -- electrons en la zona p (np), i buits en la zona n (pn) -- disminuïxen a mesura que ens aproximem a la unió des dels valors inicials del díode no polaritzat fins a anul·lar-se.
+
+
+=== Polarització directa ===
+En aquest cas, al contrari que en l'anterior, la bateria disminuïx la barrera de potencial de la zona de càrrega espacial, permetent el pas dels corrents d'electrons i buits a través de la unió; és a dir, el díode polaritzat directament conduïx l'electricitat.
+Les concentracions de conductors minoritaris, s'incrementen des dels valors inicials a mesura que ens acostem a la unió.
+En la representació simbòlica del díode, la fletxa indica el sentit de la polarització directa.
+
+
+=== Corba característica del díode ===
+Tensió llindar, de colze o de partida (Vγ).
+La tensió llindar de polarització directa coincideix en valor amb la tensió de la zona de càrrega espacial del díode no polaritzat. Al polaritzar directament el díode, la barrera de potencial inicial es va reduint, incrementant el corrent lleugerament, al voltant de l'1% del nominal. Tanmateix, quan la tensió externa supera la tensió llindar, la barrera de potencial desapareix, de forma que per a xicotets increments de tensió es produïxen grans variacions de la intensitat.
+Corrent màxim (Imax ).
+És la intensitat de corrent màxima que pot conduir el díode sense fondre's per l'efecte Joule. Atès que és funció de la quantitat de calor que pot dissipar el díode, depén sobretot del disseny d'aquest.
+Corrent invers de saturació (Is).
+És el xicotet corrent que s'estableix al polaritzar inversament el díode per la formació de parells electró-buit. És funció de la temperatura del material, admetent-se que es duplica per cada increment de 10 °C en la temperatura.
+Tensió de ruptura (Vr).
+Teòricament, al polaritzar inversament el díode, el díode conduirà el corrent invers de saturació; en la realitat, a partir d'un determinat valor de la tensió de l'orde de 5 V, el díode comença a conduir també en polarització inversa.
+La ruptura pot deure's a dos efectes:
+
+Efecte allau (díodes poc dopats). En polarització inversa es generen parells electró-buit que provoquen el corrent invers de saturació; si la tensió inversa és elevada els electrons s'acceleren incrementant la seva energia cinètica de forma que al xocar amb electrons de valència poden provocar el seu bot a la banda de conducció. Aquests electrons alliberats, al seu torn, s'acceleren per efecte de la tensió, xocant amb més electrons de valència i alliberant-los al seu torn. El resultat és una allau d'electrons que provoca un corrent gran. Este fenomen es produïx per a valors de la tensió superiors a 6 V.Efecte Zener (díodes molt dopats). Quant més dopat està el material, menor és l'amplària de la zona de càrrega. Donat que el camp elèctric E pot expressar-se com a quocient de la tensió V entre la distància d; quan el díode estiga molt dopat, i per tant d sigui petit, el camp elèctric serà gran, de l'orde de 3·10⁵ V/cm. En aquestes condicions, el mateix camp pot ser capaç d'arrancar electrons de valència incrementant-se el corrent. Aquest efecte es produeix per a tensions de 4 V o menors.Per a tensions inverses entre 4 i 6 V la ruptura del díode es pot produir per aquests dos efectes.
+
+
+=== Models matemàtics ===
+El model matemàtic més empleat és el de Shockley (en honor de William Bradford Shockley) que permet aproximar el comportament del díode en la majoria de les aplicacions. L'equació que lliga la intensitat de corrent elèctric i la diferència de potencial és:
+
+  
+    
+      
+        I
+        =
+        
+          I
+          
+            S
+          
+        
+        
+          (
+          
+            
+              e
+              
+                
+                  
+                    q
+                    
+                      V
+                      
+                        D
+                      
+                    
+                  
+                  
+                    n
+                    k
+                    T
+                  
+                
+              
+            
+            −
+            1
+          
+          )
+        
+      
+    
+     
+  On:
+
+I és la intensitat del corrent que travessa el díode i VD la diferència de tensió entre els seus extrems.
+IS és el corrent de saturació
+q és la càrrega de l'electró
+T és la temperatura absoluta de la unió
+k és la constant de Boltzmann
+n és el coeficient d'emissió, dependent del procés de fabricació del díode i que sol adoptar valors entre 1 (per al germani) i de l'orde de 2 (per al silici).
+El terme VT = kT/q = T/11600 és la tensió deguda a la temperatura, de l'orde de 26 mV a temperatura ambient (300 K o 27 °C).Per evitar l'ús d'exponencials (malgrat ser un dels models més senzills), a vegades s'usen models més simples encara, que modelen les zones de funcionament del díode per trams rectes; són els anomenats models de contínua que es mostren en la figura. El més simple de tots (4) és el díode ideal.
+
+
+== Tipus de díodes ==
+Hi ha molts tipus de díodes que es poden classificar en funció de les seves característiques físiques o per les seves aplicacions.
+
+
+=== Díodes dopats amb or ===
+L'or provoca la supressió dels portadors minoritaris. Això disminueix la capacitat efectiva del díode, permetent operar a freqüències elevades. Els díodes de germani i els Schottky són tan ràpids com aquest, com també ho són els transistors bipolars "capats" per funcionar com díodes. Els dissenyats per a fonts d'alimentació estan pensats per funcionar a un màxim de 400 Hz.
+
+
+=== Díodes Zener ===
+Els díodes Zener són díodes que presenten la propietat que també poden conduir en sentit invers. Aquest efecte, anomenat ruptura Zener, es produeix a un determinat voltatge, la tensió de ruptura, fent que es puga usar el díode com una referència de voltatge de precisió. Alguns dispositius etiquetats com a Zeners d'alt voltatge, són en realitat díodes d'allau (vegeu més avall). Dos díodes Zener (equivalents) en sèrie i un a l'inrevés, constitueixen un Transorb (marca registrada). Els díodes Zener són utilitzats també en els motor pas a pas i en els circuits amb relés per desmagnetitzar les bobines ràpidament i evitar les puntes de corrent que aquestes produeixen. Reben el seu nom del Dr. Clarence Melvin Zener de la Southern Illinois University, que va descobrir la propietat elèctrica a la que es basa aquest dispositiu.
+
+
+=== Díode d'allau ===
+Els díodes d'allau són díodes que condueixen en sentit invers quan la tensió de polarització inversa supera la tensió de ruptura. Són molt pareguts als Zener, i de fet solen confondre's, però el mecanisme de ruptura és distint. Fan ús de l'efecte allau, un efecte de multiplicació del corrent elèctric que es pot produir a l'interior dels semiconductors o dels aïllants sòlids.
+
+
+=== Díode emissor de llum (LED) ===
+Els díodes emissors de llum o díodes LED són díodes que poden emetre llum dins de l'espectre visible. Mentre els electrons creuen la unió, s'emeten fotons. En la majoria dels díodes són reabsorbits, i són emesos a freqüències no visibles (normalment infraroigs). Tanmateix, amb la utilització dels materials i la disposició adequada, la llum es pot fer visible. El color depèn del material semiconductor emprat en la construcció del díode. El corrent que travessa el LED és determinant per a obtenir una bona intensitat lluminosa; el voltatge d'operació va des d'1,5 a 2,2 V aproximadament i la gamma d'intensitats que ha de circular per ell va de 10 a 20 mA en els díodes de color roig i d'entre 20 i 40 mA per als altres LEDs. Tots són monocromàtics.
+
+
+==== Díode d'infraroigs (IRED) ====
+Els díodes d'infraroig o IRED són LEDs especialment dissenyats per a emetre radiació infraroja (no com a efecte secundari).
+
+
+==== Díode làser ====
+Els díodes làser són un tipus de díode que es construeix amb forma de cavitat ressonant, i que sota les condicions adequades emet llum làser. Es construeixen amb arsenur de gal·li (GaAs) o d'aquest compost i alumini seguint una estructura de sandvitx amb tres zones dopades de manera diferent (n - p - p+) que presenten diferents angles de refracció òptics, de manera que les zones n-p i p-p+ es comporten com un mirall que reflecteix la llum que emet el díode i la confina al seu interior. Els fotons que es desplacen per l'interior del díode estimulen els electrons i els forats dels àtoms del semiconductor a combinar-se emetent un altre fotó amb la mateixa longitud d'ona i la mateixa fase del fotó incident, això provoca una emissió de llum coherent.
+
+
+=== Fotodíode ===
+Els fotodíodes presenten unions p-n amples i accessibles a la llum. Els fotons poden empentar electrons cap a la unió, fent que passi el corrent. Si el fotó no té molta energia, el díode no deixarà passar molt de corrent. De vegades s'uneix un fotodíode amb un fototransistor en el mateix encapsulat. Aquest dispositiu s'anomena "optoacoblador", i permet un aïllament entre dues parts d'un circuit (com faria un transformador), però permetent transmetre els senyals de corrent continu (a diferència dels transformadors que sols transmeten senyals alterns).
+
+
+=== Díode Schottky ===
+Els díodes Schottky utilitzen unions metall-semiconductor i tenen una caiguda de tensió en conducció directa molt baixa, de l'ordre de 0,15 a 0,45V, cosa que els fa molt útils en circuits de baix consum i en circuits de radiofreqüència (RF).
+
+
+=== Varactor ===
+Un varactor, també conegut com a díode varicap, és un tipus de díode que s'utilitza com un condensador controlat per voltatge i no per la seva funció de díode que és secundària. Es connecta amb polarització inversa per tal que el corrent no el travessi, de manera que s'acumula càrrega elèctrica a les dues bandes de la zona de la junció PN, de manera que el díode es comporta si tingués un petit condensador connectat el paral·lel. La particularitat que fa interessant aquesta capacitància paràsita del díode és que pot disminuir en augmentar la tensió i a la inversa, la capacitància és inversament proporcional a l'arrel quadrada del voltatge aplicat. S'utilitzen en circuits ressonants LC com les etapes de sintonia dels receptors de ràdio o els oscil·ladors controlats en tensió dels sintetitzadors musicals.
+
+
+=== Díode de recuperació instantània (Snap) ===
+Els díodes de recuperació instantània són díodes que tenen la particularitat de generar polsos extremadament curts. Permeten transicions molt ràpides i són utilitzats en aplicacions electròniques de microones com els generadors de polsos.
+
+
+=== Díode túnel (Esaki) ===
+Actualment s'està desenvolupant una nova generació de dispositius basats en efectes quàntics, on els electrons poden travessar barreres de potencial encara quan clàssicament no podrien fer-ho. Aquests dispositius d'efecte quàntic són més ràpids i consumeixen menys potència que els convencionals.
+
+
+=== Díode Gunn ===
+Usa el mateix efecte que el díode túnel, però aquest a partir d'un camp elèctric produeix un corrent oscil·latori que no depèn del circuit extern.
+
+
+== Aplicacions ==
+
+
+=== Desmodulació de ràdio ===
+El primer ús dels díodes va ser la desmodulació d'emissions de ràdio d'amplitud modulada (AM). La història d'aquesta descoberta es tractarà a fons a l'article de ràdio. En resum, un senyal d'AM consta de pics de voltatge de corrent altern positius i negatius, l'amplitud dels quals o "l'envolup dels quals" és proporcional al senyal d'àudio original. El díode (originalment un díode de cristall semiconductor) rectifica el senyal de radiofreqüència d'AM, deixant un senyal d'àudio que és el senyal d'àudio original. L'àudio s'extreu utilitzant un filtre simple i alimentat amb ell un amplificador d'àudio o transductor, que genera ones sonores.
+
+
+=== Conversió de potència ===
+Els rectificadors es construeixen amb díodes, on s'utilitzen per convertir corrent altern (AC) a corrent continu (DC). Els alternadors d'automòbil són un exemple comú, on els díodes, que rectifiquen el corrent altern generat per l'alternador en corrent continu per alimentar les bateries i els circuits de cotxe, proporcionen millor eficiència i duració que els sistemes de delgues i escombretes de les dinamos que hi havia bans. De manera similar, els díodes també s'utilitzen en multiplicadors de voltatge Cockcroft-Walton per convertir corrent altern a corrent continu de més alt voltatge.
+
+
+=== Protecció de sobrevoltatge ===
+Els díodes zener es fan servir freqüentment per allunyar dels electrònics sensibles els alts voltatges perjudicials. En circumstàncies normals no són conductors. Quan el voltatge augmenta damunt del llindà, els díodes es tornen conductors. Per exemple, els díodes s'utilitzen en controladors de motors (motors pas a pas i en ponts H) i circuits de relé per descarregar ràpidament els bobinats i evitar els pics de voltatge que altrament apareixerien. Molts circuits integrats també incorporen díodes als pins de connexió per impedir que els voltatges externs facin malbé els seus transistors sensibles. Díodes especialitzats s'utilitzen per protegir de sobrevoltatges a potències altes.
+
+
+=== Portes lògiques ===
+Els díodes es poden combinar dignament amb altres components per construir portes lògiques i i o. Aquesta tecnologia s'anomena lògica de díodes.
+
+
+=== Detectors de radiació ionitzant ===
+A més de la llum, els díodes semiconductors són sensibles a més tipus de radiació. En electrònica, els raigs còsmics i altres fonts de radiació ionitzant provoquen polsos de soroll i errors de bit únic i múltipla. Aquest efecte a vegades s'explota per detectors de partícules per detectar radiació. Una única partícula de radiació, amb milers o milions d'electrons volt d'energia, genera molts parells de portadors de càrrega, quan la seva energia es diposita al material dels semiconductors. Si la capa de semiconductor és prou gruixuda per absorbir la pluja de partícules sencera o per aturar una única partícula pesant, es pot fer una mesura bastant acurada de l'energia de la partícula, simplement mesurant el corrent conduït sense la complexitat d'un espectròmetre magnètic. Aquests detectors de radiació de semiconductors necessiten col·lectors de càrrega eficients i uniformes i corrent de fuita baix. Sovint es refrigeren per nitrogen líquid.
+
+
+=== Mesurament de temperatura ===
+Un díode es pot fer servir com a dispositiu de mesura de temperatura, donat que la caiguda de tensió en el díode depèn de la temperatura. De l'equació de díode ideal de Shockley, resulta que el voltatge té un coeficient de temperatura positiu (a corrent constant) però depèn de la concentració de dopatge i la temperatura d'operació (Sze 2007). El coeficient de temperatura pot ser negatiu en els típics termistors o positiu per a díodes sensors de temperatura fins a aproximadament 20 kèlvins.
+
+
+=== Donar direcció al corrent ===
+Els díodes eviten que el corrent flueixi en direccions indesitjades. Per alimentar a un circuit elèctric durant una caiguda de tensió, el circuit pot treure corrent d'una bateria. Una font d'alimentació Ininterrompuda pot fer servir díodes de manera que s'asseguri que el corrent només es tregui de la bateria quan sigui necessari. De manera similar, els vaixells petits acostumen a tenir dos circuits cada un amb les seves pròpies bateries: un es fa servir per a l'engegada dels motors; l'altre per a alimentar els dispositius.
+Els díodes també s'utilitzen en teclats musicals electrònics. Per reduir la quantitat de cablatge necessari, aquests instruments sovint utilitzen circuits de matriu de tecles. El controlador de teclat va provant les files i les columnes per determinar quina nota ha premut el músic. El problema amb circuits de matriu és que quan es premen unes quantes notes simultàniament, el corrent pot fluir al revés a través del circuit i dispara "tecles fantasma" el que provoca que es toquin notes de "fantasma". Per evitar provocar notes no desitjades, la majoria dels circuits de matriu de teclats tenen díodes soldats al contacte de cada tecla del teclat.
+
+
+== Referències ==
+
+
+== Vegeu també ==
+Díode Josephson
+Junció PN
+
+
+== Enllaços externs ==
+(en anglès) Explicació interactiva del díode semiconductor, Universitat de Cambridge
+(en anglès) Animació flash que mostra el funcionament del díode Schottky Arxivat 2009-04-29 a Wayback Machine.
+Viccionari

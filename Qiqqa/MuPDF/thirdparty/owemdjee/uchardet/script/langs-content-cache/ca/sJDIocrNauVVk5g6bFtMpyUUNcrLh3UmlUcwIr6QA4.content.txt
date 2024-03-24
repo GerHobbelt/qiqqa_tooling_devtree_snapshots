@@ -1,0 +1,457 @@
+revision: 32070776
+title: "Distribuci\xF3 Bates"
+url: https://ca.wikipedia.org/wiki/Distribuci%C3%B3_Bates
+
+
+---
+
+En teoria de la probabilitat i estadística, la distribució de Bates, que duu el nom de Grace Bates, és una distribució de probabilitat de la mitjana d'un nombre de variables aleatòries estadísticament independents distribuïdes uniformement en un interval unitat. Aquesta distribució és sovint confosa amb la distribució d'Irwin–Hall, que és la distribució de la suma (no de la mitjana) d'n variables aleatòries independents distribuïdes uniformement en l'interval unitat.
+
+
+== Definició ==
+La distribució de Bates és la distribució de probabilitat contínua de la mitjana, X, de n variables aleatòries distribuïdes uniformement estadísticament independents a l'interval unitat, Ui:
+
+  
+    
+      
+        X
+        =
+        
+          
+            1
+            n
+          
+        
+        
+          ∑
+          
+            k
+            =
+            1
+          
+          
+            n
+          
+        
+        
+          U
+          
+            k
+          
+        
+        .
+      
+    
+     
+  L'equació que defineix la funció de densitat de probabilitat de la variable aleatòria X de la distribució de Bates és:
+
+  
+    
+      
+        
+          f
+          
+            X
+          
+        
+        (
+        x
+        ;
+        n
+        )
+        =
+        
+          
+            n
+            
+              2
+              (
+              n
+              −
+              1
+              )
+              !
+            
+          
+        
+        
+          ∑
+          
+            k
+            =
+            0
+          
+          
+            n
+          
+        
+        (
+        −
+        1
+        
+          )
+          
+            k
+          
+        
+        
+          
+            
+              (
+            
+            
+              n
+              k
+            
+            
+              )
+            
+          
+        
+        (
+        n
+        x
+        −
+        k
+        
+          )
+          
+            n
+            −
+            1
+          
+        
+        sgn
+        ⁡
+        (
+        n
+        x
+        −
+        k
+        )
+      
+    
+     
+  per x en l'interval (0,1), i zero a la resta. Aquí sgn(nx − k) denota la Funció signe:
+
+  
+    
+      
+        sgn
+        ⁡
+        (
+        n
+        x
+        −
+        k
+        )
+        =
+        
+          
+            {
+            
+              
+                
+                  −
+                  1
+                
+                
+                  n
+                  x
+                  <
+                  k
+                
+              
+              
+                
+                  0
+                
+                
+                  n
+                  x
+                  =
+                  k
+                
+              
+              
+                
+                  1
+                
+                
+                  n
+                  x
+                  >
+                  k
+                  .
+                
+              
+            
+            
+          
+        
+      
+    
+     
+  De manera més general, la mitjana de n variables aleatòries uniformament distribuïdes i estadísticament independents en l'interval [a,b]
+
+  
+    
+      
+        
+          X
+          
+            (
+            a
+            ,
+            b
+            )
+          
+        
+        =
+        
+          
+            1
+            n
+          
+        
+        
+          ∑
+          
+            k
+            =
+            1
+          
+          
+            n
+          
+        
+        
+          U
+          
+            k
+          
+        
+        (
+        a
+        ,
+        b
+        )
+        .
+      
+    
+     
+  tindria una funció de densitat de probabilitat (FDP) de:
+
+  
+    
+      
+        g
+        (
+        x
+        ;
+        n
+        ,
+        a
+        ,
+        b
+        )
+        =
+        
+          f
+          
+            X
+          
+        
+        
+          (
+          
+            
+              
+                
+                  x
+                  −
+                  a
+                
+                
+                  b
+                  −
+                  a
+                
+              
+            
+            ;
+            n
+          
+          )
+        
+        
+           for 
+        
+        a
+        ≤
+        x
+        ≤
+        b
+      
+    
+     
+  Llavors, la distribució de la FDPD és:
+
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          
+            {
+            
+              
+                
+                  
+                    ∑
+                    
+                      k
+                      =
+                      0
+                    
+                    
+                      n
+                    
+                  
+                  (
+                  −
+                  1
+                  
+                    )
+                    
+                      k
+                    
+                  
+                  
+                    
+                      
+                        (
+                      
+                      
+                        n
+                        k
+                      
+                      
+                        )
+                      
+                    
+                  
+                  
+                    
+                      (
+                      
+                        
+                          
+                            
+                              x
+                              −
+                              a
+                            
+                            
+                              b
+                              −
+                              a
+                            
+                          
+                        
+                        −
+                        k
+                        
+                          /
+                        
+                        n
+                      
+                      )
+                    
+                    
+                      n
+                      −
+                      1
+                    
+                  
+                  sgn
+                  ⁡
+                  
+                    (
+                    
+                      
+                        
+                          
+                            x
+                            −
+                            a
+                          
+                          
+                            b
+                            −
+                            a
+                          
+                        
+                      
+                      −
+                      k
+                      
+                        /
+                      
+                      n
+                    
+                    )
+                  
+                
+                
+                  
+                    if 
+                  
+                  x
+                  ∈
+                  [
+                  a
+                  ,
+                  b
+                  ]
+                
+              
+              
+                
+                  0
+                
+                
+                  
+                    otherwise
+                  
+                
+              
+            
+            
+          
+        
+      
+    
+     
+  
+
+
+== Extensions de la distribució de Bates ==
+Enlloc de dividir per n també es pot usar √n per crear una distribució similar de variància constant. Restant-li la mitjana es pot obtenir una mitjana igual a 0. D'aquesta manera, el paràmetre n s'implement seria un paràmetre qua ajustaria la forma de la distribució, de tal manera que s'obtindria la distribució uniforme, la triangular i en el límit també la distribució gaussiana o normal. Si es permeten valors no enters de n, es pot crear una distribució altament flexible (així, per exemple, U(0,1) + 0.5U(0,1) dona una distribució trapezoidal).
+
+
+== Vegeu també ==
+Distribució normal
+Teorema del límit central
+Distribució uniforme contínua
+
+
+== Referències ==
+
+
+== Bibliografia ==
+Bates,G.E. (1955) "Joint distributions of time intervals for the occurrence of successive accidents in a generalized Polya urn scheme", Annals of Mathematical Statistics, 26, 705–720

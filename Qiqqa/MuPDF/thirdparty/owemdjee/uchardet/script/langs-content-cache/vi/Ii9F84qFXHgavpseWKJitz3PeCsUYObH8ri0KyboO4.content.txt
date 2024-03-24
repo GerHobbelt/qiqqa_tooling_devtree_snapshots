@@ -1,0 +1,124 @@
+revision: 69662098
+title: transistor
+url: https://vi.wikipedia.org/wiki/Transistor
+
+
+---
+
+Transistor là một loại linh kiện bán dẫn chủ động, thường được sử dụng như một phần tử khuếch đại hoặc một khóa điện tử.                               
+Transistor nằm trong đơn vị cơ bản tạo thành một cấu trúc mạch ở máy tính điện tử và tất cả các thiết bị điện tử hiện đại khác. Vì đáp ứng nhanh và chính xác nên các transistor được sử dụng trong nhiều ứng dụng tương tự và số, như khuếch đại, đóng cắt, điều chỉnh điện áp, điều khiển tín hiệu, và tạo dao động. Transistor cũng được kết hợp thành mạch tích hợp (IC), có thể tích hợp tới một tỷ transistor trên một diện tích nhỏ.                                                              
+Cũng giống như diode, transistor được tạo thành từ hai chất bán dẫn điện. Khi ghép một bán dẫn điện âm nằm giữa hai bán dẫn điện dương ta được một PNP Transistor. Khi ghép một bán dẫn điện dương nằm giữa hai bán dẫn điện âm ta được một NPN Transistor.                                                                  
+Tên gọi Transistor là từ ghép trong tiếng Anh của "Transfer" và "resistor", tức điện trở chuyển đổi, do John R. Pierce đặt năm 1948 sau khi nó ra đời. Nó có hàm ý rằng thực hiện khuếch đại thông qua chuyển đổi điện trở, khác với khuếch đại  đèn điện tử điều khiển dòng qua đèn thịnh hành thời kỳ đó.
+
+
+== Phân loại ==
+NPN
+PNP 
+Phân biệt các loại transistor PNP và NPN ngoài thực tế.
+Transistor Nhật Bản: thường ký hiệu là A..., B..., C..., D... Ví dụ A564, B733, C828, D1555 trong đó các transistor ký hiệu là A và B là transistor thuận PNP còn ký hiệu là C và D là transistor ngược NPN. các transistor A và C thường có công suất nhỏ và tần số làm việc cao còn các transistor B và D thường có công suất lớn và tần số làm việc thấp hơn.
+Transistor sản xuất theo công nghệ của Mỹ thường ký hiệu là 2N... ví dụ 2N3055, 2N3904 vv...
+Transistor do Trung quốc sản xuất: Bắt đầu bằng số 3, tiếp theo là hai chữ cái. Chữ cái thứ nhất cho biết loại bóng: Chữ A và B là bóng thuận, chữ C và D là bóng ngược, chữ thứ hai cho biết đặc điểm: X và P là bóng âm tần, A và G là bóng cao tần. Các chữ số ở sau chỉ thứ tự sản phẩm. Thí dụ: 3CP25, 3AP20 vv..
+
+
+== Ứng Dụng ==
+Sự hữu ích thiết yếu của Transistor xuất phát từ khả năng sử dụng một tín hiệu nhỏ được đặt một cực của nó để điều khiển một tín hiệu lớn hơn ở các cực còn lại. Tính chất này được gọi là Gain. Nó có thể tạo ra tín hiệu đầu ra mạnh hơn, điện áp hoặc dòng điện, tỷ lệ với tín hiệu đầu vào; Có nghĩa là, nó có thể hoạt động như bộ khuếch đại. Ngoài ra, transistor có thể được sử dụng để bật hoặc tắt dòng điện trong một mạch như là một khóa điện tử.
+Có hai loại transistor, có sự khác biệt nhỏ trong cách chúng được sử dụng trong một mạch. Một transistor lưỡng cực (ký hiệu BJT) có các chân Base (cực nền), Collector (cực thu) và Emitter (cực phát). Một dòng điện nhỏ được đặt vào cực Base (với transistor NPN dòng điện đi qua cực B và cực E) có thể điều khiển hoặc chuyển đổi một dòng điện lớn giữa cực Emiter và cực Collector. Đối với transistor hiệu ứng trường (FET), các chân kết nối có tên là Gate (cực cửa hay cực cổng), Source (cực nguồn) và Drain (cực máng hay cực cống). Nếu điện áp được đặt vào chân Gate có thể điểu khiển dòng điện giữa Source và Drain.
+Hình ảnh cạnh bên mô tả một mạch điện sử dụng transistor lưỡng cực NPN. Điện tích sẽ lưu chuyển giữa các cực Emitter và Collector và phụ thuộc vào dòng điện đặt vào ở cực Base. Bởi vì kết nối giữa base và emitter hoạt động giống như cách mắc 2 diode, do đó Vout luôn phụ thuộc vào Vin.
+
+
+=== Transistor làm công tắc ===
+Các transistor thường được sử dụng trong các mạch số như các khóa điện tử có thể ở trạng thái "bật" hoặc "tắt", cho cả các ứng dụng năng lượng cao như chế độ chuyển mạch nguồn điện và cho các ứng dụng năng lượng thấp như các cổng logic số. Các thông số quan trọng cho ứng dụng này bao gồm chuyển mạch hiện tại, điện áp xử lý, và tốc độ chuyển đổi, đặc trưng bởi thời gian của sườn lên và sườn xuống.
+
+
+=== Transistor dùng để khuếch đại ===
+Bộ khuếch đại chung cực phát hay chung emiiter được thiết kế như hình bên. khi có một sự thay đổi tín hiệu điện áp ở 
+  
+    
+      
+        
+          V
+          
+            i
+            n
+          
+        
+      
+    
+     
+  , làm thay đổi cường độ dòng điện đi qua cực B; Với các đặc tính khuếch đại dòng điện của transistor, chỉ cần dao động nhỏ ở 
+  
+    
+      
+        
+          V
+          
+            i
+            n
+          
+        
+      
+    
+     
+   transistor sẽ khuếch đại sự thay đổi đó và xuất tín hiệu ra ở cực C hay 
+  
+    
+      
+        
+          V
+          
+            o
+            u
+            t
+          
+        
+      
+    
+     
+  .
+Mỗi transistor có thể có nhiều cách mắc khác nhau, tùy thuộc vào chức năng như dùng để khuếch đại dòng, khuếch đại điện áp hay cả hai.
+Từ đài Radio, điện thoại di động đến TV, hầu hết các sản phẩm đều có bộ khuếch đại âm thanh, hình ảnh, truyền dẫn vô tuyến, và xử lý tín hiệu. Bộ khuếch đại âm thanh tín hiệu rời rạc đầu tiên chỉ cung cấp vài trăm miliwatts, nhưng công suất âm thanh dần dần gia tăng lên với chất lượng và cấu trúc transistor tốt hơn.
+Ngày nay, transistor bán dẫn có công suất lên đến vài trăm watt và giá cũng rẻ hơn trước.
+
+
+== Phương thức hoạt động ==
+Transistor hoạt động được nhờ đặt một  điện thế một chiều vào vùng biên (junction). Điện thế này gọi là điện thế kích hoạt (bias voltage)
+Mỗi vùng trong transistor hoạt động như một diode. Vì mỗi transistor có hai vùng và có thể kích hoạt với một điện thế thuận hoặc nghịch. Có tất cả bốn cách thức (mode) hoạt động cho cả hai PNP hay NPN Transistor.Phân cực thuận nghịch (The Active mode) dùng cho việc khuếch đại điện thuận
+Phân cực nghịch thuận (Reverse-Active) dùng cho việc khuếch đại điện nghịch
+Vùng (The Cut-Off) and (Saturation) modes dùng như công tắc (switch) và biểu hiện trạng thái 1,0 trong điện số.
+
+
+== So sánh với đèn điện tử chân không ==
+Trước khi transistor ra đời, đèn điện tử chân không là linh kiện chính dùng để khuếch đại tín hiệu
+
+
+=== Ưu điểm ===
+Với những ưu điểm sau transistor đã dần dần thay thế đèn điện tử trong hầu hết các ứng dụng:
+
+Không có bộ phận làm nóng  cathode, giảm điện năng tiêu thụ, loại bỏ độ trễ khi chờ đèn khởi động, không chứa chất độc ở cathode.
+Kích thước và trọng lượng nhỏ giúp giảm kích cỡ sản phẩm.
+Transistor có thể được thu nhỏ cỡ nano mét và được tích hợp trong IC hay các vi mạch.
+Hoạt động ở mức điện áp thấp có thể sử dụng với pin tiểu
+Hiệu suất cao, thường được sử dụng trong các ứng dụng ít năng lượng.
+Độ tin cậy và tuổi thọ cao, transistor có tuổi thọ hơn 50 năm. không giống như  đèn chân không hiệu suất giảm dần theo thời gian.
+Linh kiện bán dẫn được thiết kế linh động, nhỏ gọn
+Ít bị sốc, vỡ khi rơi hoặc va chạm.
+
+
+=== Hạn chế ===
+Transistor vẫn có thể bị "già" và hoạt động kém đi theo thời gian.
+Khi hoạt động ở công suất lớn và tần số cao thì  đèn chân không tốt hơn transistor bán dẫn.
+Do transistor làm từ chất bán dẫn nên rất dễ "chết" do sốc điện, sốc nhiệt
+Transistor nhạy cảm với tia bức xạ và tia vũ trụ (Phải dùng kèm chip bức xạ đặc biệt cho các thiết bị tàu vũ trụ);
+Đèn chân không khi khuếch đại tạo ra rất ít nhiễu và sóng hài, tạo ra âm thanh "sạch" khi nghe nhạc nên được rất nhiều người chơi âm thanh ưa chuộng.
+
+
+== Xem thêm ==
+Linh kiện bán dẫn
+
+
+== Tham khảo ==
+
+
+== Liên kết ngoài ==
+Sách học điện tử trên Wikibooks
+Điện tử số

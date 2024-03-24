@@ -1,0 +1,104 @@
+revision: 7785946
+title: diode
+url: https://eo.wikipedia.org/wiki/Diodo
+
+
+---
+
+Diodo (de greka Di — du, kaj Hodos — vojo) funkcias kiel elektronika versio de unu-direkta valvo. Per restriktado de la direkto de movado de ŝarĝoportantoj, ĝi allasas elektran kurenton flui en unu direkton, sed blokas ĝian fluon en la alian direkton.
+La karakteraĵo de kurent-tensio aŭ I-V de diodo povas esti alproksimita per du regionoj de operacio. Sub certa diferenco de potencialo inter ties du dratoj, diodo povas esti imagata kiel malferma (ne-konduktiva) cirkvito. Dum la potenciala diferenco pligrandiĝas, en iu nivelo la diodo konduktiviĝas kaj ebligas trafluon de kurento. En tiu ĉi punkto ĝi povas esti imagata kiel kontakto kun nula (aŭ tre malalta) rezistanco.
+Oni foje konas diodojn kiel rektifilojn pro ilia uzado por rektifi elektran alternan kurenton en rektan kurenton per forigo de la negativa parto de la kurento. Speciala aranĝo el kvar diodoj, kiu transformas alternan kurenton en la rektan uzante ambaŭ fazojn de la alterna kurento estas konata kiel dioda ponto aŭ unu-faza ponta rektifilo.
+
+
+== Vakuaj tuboj ==
+La unuaj diodoj estis vakutuboj (ankaŭ konataj kiel termojonaj valvoj), kiuj estis aranĝoj de elektrodoj ĉirkaŭataj per vakuo ene de vitra ujo kiuj aspektis simile al lumampoloj. La aranĝo de filamento kaj plato kiel diodo estis inventita en 1904 de John Ambrose Fleming, scienca konsilisto el la firmao Marconi, surbaze de konstato de Edisono. Same kiel lumampolo, vakutubaj diodoj havas filamenton tra kiu pasas kurento, kiu hejtas la filamenton. En ĝia hejtita stato, ĝi povas emisii elektronojn en la vakuon. Tiuj ĉi elektronoj estas elektrostatike tirataj al pozitive ŝargita ĉirkaŭa metala plato nomita anodo aŭ simple plato. Elektronoj ne fluas de la plato reen al la filamento, eĉ se la ŝargo sur la plato estas negativa, ĉar la plato ne estas hejtita.
+
+
+== Duonkonduktaĵaj diodoj ==
+Kvankam vakutubaj diodoj ankoraŭ estas uzataj por kelkaj specialaj aplikoj, plej multaj modernaj diodoj baziĝas sur duonkonduktaĵoj. Duonkonduktaĵa diodo konsistas el n-dopita regiono apud p-dopita regiono, kiu kreas p/n-an junton (Vidu la artikolon pri duonkonduktaĵoj por eksplikado de tiuj ĉi terminoj, aparte sub la subtitolo p/n-a junto).
+La Shockley-a ekvacio pri ideala diodo (nomita omaĝe al William Bradford Shockley) povas alproksimi la I-V-ajn ecojn de p/n-a diodo:
+
+  
+    
+      
+        I
+        =
+        
+          I
+          
+            S
+          
+        
+        
+          (
+          
+            
+              e
+              
+                
+                  
+                    q
+                    
+                      V
+                      
+                        D
+                      
+                    
+                  
+                  
+                    n
+                    k
+                    T
+                  
+                
+              
+            
+            −
+            1
+          
+          )
+        
+      
+    
+     
+  ,
+kie I estas la dioda kurento, IS estas skala faktoro nomita satura kurento, q estas la ŝargo sur elektrono (la elementa ŝargo), k estas la Boltzmann-a konstanto, T estas la absoluta temperaturo de la p/n-a junto. La termo kT/q estas la termika tensio, foje skribita V­T­ kaj estas proksimume 26mV ĉe enĉambra temperaturo. n (foje ellasita) estas la emisia koeficiento, kiu varias de 1 al 2 depende de la fabrikada procezo.
+En kutima silicia diodo, la falo en potencialo trans konduktanta diodo estas proksimume 0,6 aŭ 0,7 voltoj. La valoro malsamas por aliaj specoj de diodoj – Schottky-a diodo povas havi tiel malalte kiel 0,2 V kaj lum-emisia diodo povas havi 1,4 V aŭ pli.
+Estas kelkaj specoj de duonkonduktaĵa junta diodo  (Vd ĉapitron ELEKTRO II).
+
+Normalaj (p/n) diodoj: kiuj funkcias kiel priskribite supre.
+Zenera diodo kies konduktivecon oni povas renversi. Tiu ĉi efiko, nomita Zenera Rompiĝo , okazas ĉe precize difinita tensio, lasante la diodon esti uzata kiel preciza tensia referenco. Kelkaj aparatoj sub la nomo alt-tensiaj Zeneraj diodoj estas fakte lavangaj diodoj. (Vidu sube).
+Lavangaj diodoj: diodoj kiuj povas kondukti en la inversa direkto kiam la inversa tensio superas la rompiĝan tension. Tiuj ĉi estas elektre tre similaj al Zeneraj diodoj, kaj ofte estas erare nomataj Zeneraj diodoj, sed rompiĝo estas pro malsama mekanismo, la Lavanga Efiko: tiu ĉi okazas kiam la renversa elektra kampo trans la p/n-a junto kaŭzas ondon de joniĝado, similan al vera lavango, kiu kondukas al granda kurento. Lavangaj diodoj estas konstruitaj por rompiĝi ĉe bone difinita inversa tensio sen detruiĝo.
+Lum-emisiaj diodoj (LED): dum elektronoj transiras la junton, ili emisias fotonojn. Ĉe plej multaj diodoj tiuj ĉi resorbiĝas, kaj ne havas videblajn frekvencojn (kutime infraruĝajn). Tamen, kun la ĝustaj materialoj kaj geometrio, la lumo videbliĝas laŭ diversaj elektitaj koloroj. LED estas ankaŭ asociita kun fototransistoro en fotokuplilo, kiu permesas transferi signalojn inter du elektre izolitajn cirkvitojn.
+Fotodiodoj: tiuj ĉi havas larĝajn, travideblajn juntojn. Fotonoj povas puŝi elektronojn tra la junto, kaŭzante kurenton flui. Fotodiodoj povas esti uzataj kiel lumelektraj ĉeloj.
+Schottky-aj diodoj: tiuj ĉi havas tre malaltajn tensiajn falojn, kutime de 0,15 V ĝis 0,45 V, kio ebligas utiligi ilin en pil-povaj malgrand-tensiaj cirkvitoj.
+Klakaj diodoj: tiuj ĉi povas havi tre rapidajn tensiajn transirojn.
+Softaj diodoj: tiuj ĉi, kontraŭe al la klapaj diodoj, "softe" elŝaltas por eviti elsendon de elektromagnetaj radiadoj je tro altaj frekvencoj.
+Esaki- aŭ tunelaj diodoj: tiuj ĉi diodoj havas regionon de operacio, kiu montras la negativan rezistancon kaŭzitan de kvantuma tunelado, permesante amplifadon de signaloj kaj tre simplajn dustabilajn cirkvitojn.
+Gunnaj diodoj: tiuj ĉi diodoj estas tre similaj al tunelaj diodoj pro tio, ke ili estas fabrikataj el GaAs aŭ InP, kiuj prezentas la regionon de negativa diferenciala rezistanco. Kun ĝusta biasado, dupolusaj regionoj formiĝas kaj moviĝas tra la diodo, pro kio aperas alte frekvencaj mikroondaj osciloj.
+
+
+== Notado ==
+
+
+== Aliaj diodoj ==
+Estas ankaŭ aliaj specoj de diodoj, kiuj ĉiuj havas la bazan funkcion lasi elektran kurenton flui nur en unu direkto (aŭ ambaŭ direktoj per asocio de alia junto), kaj kiuj estas produktataj per aliaj metodoj. .
+
+Punkt-kontakta diodo: Ĝi funkcias same kiel junta diodo priskribita supre, sed ĝia strukturo estas pli simpla. Bloko de n-tipa duonkonduktaĵo kaj kondukta pinta konduktilo faritaj el grup-3-a metalo, kiu kontaktas la duonkonduktaĵon. Ili jam ne tre multe estas uzataj kaj eĉ antaŭe ne estis popularaj por analogaj aplikaĵoj pro alta bruo kaj nelineareco.
+Tuba diodo: Ĝi estas la plej simpla speco de vakutuba aparato. Elektronoj moviĝas en vakuo de hejtita metala surfaco kovrita per baria oksido (barito). Post kiam ili estas for de la surfaco, ili povas esti altiritaj al pozitive ŝargita malvarma surfaco (anodo). Tamen, elektronoj ne facile forlasas malvarman nekovritan surfacon se la polareco renversiĝas kaj tiel iu ajn trafluo estas tre malgranda. Ili estis arkaikaj por la 21-a jarcento, sed tra la 20-a jarcento estis multe uzataj en analogaj signalaj aparatoj, elektraj maŝinoj, kaj (proksimume de 1950 ĝis 1960) por cifereca elektronika logiko.
+Gas-malŝarga diodo: Aparato, kie estas du elektrodoj en ia speco de gaso. Unu elektrodo estas tre akre pinta. La alia havas glatan sed kurban surfacon. Kiam forta negativa potencialo estas aplikata al la akra elektrodo, la elektra kampo proksima al la akra pinto sufiĉas por kaŭzi elektran malŝargon en la gason kaj kurento fluas. Se la mala potencialo aplikiĝas, la elektre kampa forteco ĉirkaŭ la glata elektrodo ne sufiĉas ekigi malŝargon. (La malŝargo povas nur eki facile ĉe la negativa fino, ĉar elektronoj estas multe pli moviĝemaj ol pozitivaj jonoj.) Tiutipaj diodoj estas foje uzataj por alt-tensia alt-kurenta rektifado ĉe elektre fontaj aplikaĵoj.
+Dinistoro: Kvartavola diodo, havante „pnpn” strukturon. Sub malalta tensio la rezistanco estas tre alta malpermisante fluo de kurento, sed preter iu sojla tensio, lavanga fenomeno okazas, kaj kurento trafluas la dinistoron, kiu sintenas kiel normala diodo.
+Diako (diodo por alterna kurento): Estas du dinistoroj kontraŭdirekte kaj paralele konektitaj en komuna kristalo, ili kondukas do kiam la absoluta valoro de la tensio superas sojlan tension. Tio ĉi rezultigas du-direktan "diodan" elektran ŝaltilon, kie la kurento povas flui en ambaŭ direktoj tiam, kiam ĝi ekagiĝis (ŝaltis). Ne tre altpovaj diakoj estas uzataj.
+SCR aŭ silicia regita rektifilo: Diodo kiu ne konduktas ĝis ĝi "ekagiĝas" per aplikado de tre malgranda tensio, kutime inter 1 kaj 20 V, al sia "pordo" (klapo). Depost ekagiĝo, ĝi nur fermiĝas per ĉeso de la kurenta fluo tra si. SCR-oj estas utilaj por regado de A.K. (alterna kurento), ĉar ili ĉesas kondukti aŭtomate en la momento kiam la kurento falas ĝis nulo, je ĉiu duono de ciklo, kaj tiam povas esti ekagigita refoje. Ili estas fabrikataj kun etendo de grandoj kun pov-traktaj kapacitoj de kelkaj vatoj ĝis dekoj da megavatoj.
+Triako (triodo por alterna kurento): Estas du SCR-oj, kiuj estas kunigitaj kontraŭdirekte laŭ paralela konekto en komuna kristalo, dum iliaj pordoj estas ankaŭ konektitaj. Tio ĉi rezultigas du-direktan "diodan" regitan ŝaltilon, kie la kurento povas flui en ambaŭ direktoj tiam, kiam ĝi ekagiĝis (ŝaltis). Ne tre altpovaj triakoj estas uzataj, sed precipe en elektraj aparatoj.
+Varikapo aŭ variaktoro: Tiuj diodoj estas uzataj kiel tensie regataj kondensiloj.
+Lasera diodo, same kiel lum-eliganta diodo, elsendas lumon per rekombinado de elektroj kaj breĉoj en la bara zono de la diodo. Diference al ordinaraj lumdiodoj la lum-elsendo estas stimulata de la lumo mem, tiel ke elsendiĝas kohera lumo. Por atingi tion, lasera diodo havas tri zonojn dopitajn laŭ la skemo n–p–p+. Tiuj zonoj havas malsaman refrakton, tiel ke la limoj inter la tri zonoj efikas kiel speguloj, kiuj kaptas la elsenditan lumon inter si. Tiel la fotonoj de la lumo stimulas la elektronojn kaj breĉojn en la duonkonduktaĵo al elsendo de pliaj samfazaj, samfrekvencaj fotonoj, ekestas kohera radiado.Por havi laŭeble grandan diferencon de la refraktaj indicoj inter la zonoj oni kutime uzas por laseraj diodoj galiumon kaj aluminion. Kiam la kurento tra la diodo transiras sojlon de inter 20 kaj 30 mA, komenciĝas la radiado. La preciza valoro de la sojlo dependas de la modelo. Laseraj diodoj uzatas ekzemple en legiloj-skribiloj por lumdiskoj.Por altaj tensioj (> 50 V) kaj kurentoj (> 1 A) uzeblas PiN-diodoj, kiuj inter la p-zono kaj la n-zono havas "internan" i-zonon el ne dopita, do normale izola duonkonduktaĵo, kies izoleco altigas la rompan tension de la diodo. En la kondukta direkto la dopitaj zonoj sendas ŝargoportaĵojn en la i-zonon kaj igas ĝin konduktiva. En la inversa direkto la ŝargoportaĵoj foriras de la i-zono, kaj ĝi restas izola.
+
+
+== Vidu ankaŭ ==
+
+Tiristoro
+Transistoro
+
+
+== Referencoj ==

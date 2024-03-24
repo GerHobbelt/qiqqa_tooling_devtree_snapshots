@@ -1,0 +1,46 @@
+revision: 1087139127
+title: Crossing-based interface
+url: https://en.wikipedia.org/wiki/Crossing-based_interface
+
+
+---
+
+Crossing-based interfaces are graphical user interfaces that use crossing gestures instead of, or in complement to, pointing. Where a pointing task involves moving a cursor inside a graphical object and pressing a button, a goal-crossing task involves moving a cursor beyond a boundary of a targeted graphical object to trigger an effect.
+
+
+== Goal-crossing tasks ==
+Goal crossing has been little investigated, despite sometimes being used on today's interfaces (e.g., mouse-over effects, hierarchical menus navigation, auto-retractable taskbars and hot corners). Still, several advantages of crossing over pointing have been identified:
+
+Elongated objects such as hyperlinks are faster to cross than to point.
+Several objects can be crossed at the same time within the same gesture.
+Crossing allows triggering actions when buttons are not available (e.g., while an object is being dragged).
+Crossing-based widgets can be designed to be more compact than pointing-based ones. This may be useful for small display devices.
+Goal crossing is particularly natural on stylus-based devices. On these devices, crossing an object back and forth is easier than double-clicking.
+Crossing can be a good alternative for users who have difficulties with clicking or double-clicking.There are several other ways of triggering actions in user interfaces, either graphic (gestures) and non-graphic (keyboard shortcuts, speech commands).
+
+
+== Laws of crossing ==
+Variants of Fitts' law have been described for goal-crossing tasks (Accot and Zhai 2002). Fitts' law is seen as a Law of pointing, describing variability in the direction of the pointer's movement. The Law of crossing describes the allowed variability in the direction perpendicular to movement, and the steering law describes movement along a tunnel.
+
+
+== See also ==
+Fitts Law — A principle of human movement which predicts the time required to move from a starting position to a final target area.
+Accot-Zhai steering law — An extension of Fitt's law to steering tasks.
+Interaction technique
+Pie menu
+Pull-to-refresh
+
+
+== References ==
+Original work
+Accot, J. and Zhai, S. (2002). More than dotting the i's - foundations for crossing-based interfaces, in Proc. of CHI'2002: ACM Conference on Human Factors in Computing Systems, Minneapolis, Minnesota, April 2002. pp 73–80.
+Selected subsequent work
+Apitz, G. and Guimbretière F. (2004). CrossY: a crossing-based drawing application. In Proceedings of the 17th Annual ACM Symposium on User interface Software and Technology (Santa Fe, NM, USA, October 24–27, 2004). UIST '04. ACM Press, New York, NY, 3-12.
+Dragicevic, P. (2004). Combining crossing-based and paper-based interaction paradigms for dragging and dropping between overlapping windows. In Proceedings of the 17th Annual ACM Symposium on User interface Software and Technology (Santa Fe, NM, USA, October 24–27, 2004). UIST '04. ACM Press, New York, NY, 193-196.
+
+
+== External links ==
+Laws of Action by Shumin Zhai
+CrossY interface by Apitz and Guimbretière
+Dragicevic's Fold'n'Drop technique
+Don't Click It - A clickless proof-of-concept interface

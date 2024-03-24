@@ -1,0 +1,185 @@
+revision: 23275717
+title: CRIStin
+url: https://no.wikipedia.org/wiki/CRIStin
+
+
+---
+
+For informasjon om hvordan lenke til dette systemet fra Wikipedia, se beskrivelsen av Mal:CristinCristin (en forkortelse for Current Research Information SysTem in Norway) er datasystemet for det nasjonale registeret over forskningspublikasjoner og forskningsresultater i Norge. Systemet er et rapporteringssystem over forskningspublikasjoner, forskerkatalog, prosjekter, forskningsenheter og årsrapportering.
+Hensikten med systemet er å gi en sentral oversikt over forskningsresultater og forskningsformidling, noe som ikke har vært komplett registrert i systemer som BIBSYS. Dessuten det ønsket at å gi forskere insentiver til økt vitenskapelig produksjon, og føre til økt publiseringshyppighet i de mest anerkjente internasjonale forskningstidsskriftene. Et mål er å gjøre produktitivetssammenligninger pa tvers av faggrenser, noe bruken av bibliometriske metoder er ment å ivareta. Cristin driftes og utvikles av Unit - Direktoratet for IKT og fellestjenester i høyere utdanning og forskning.
+
+
+== Historikk ==
+Systemet er en videreutvikling av Forskdok og databasen FRIDA (Forskningsresultater, informasjon og dokumentasjon av vitenskapelige aktiviteter). FRIDA ble utviklet fra 2003 til 2010 av Universitetet i Oslo, Universitetet i Bergen, Universitetet i Trondheim og Universitetet i Tromsø. 
+
+
+== Publiseringspoeng ==
+Rapportering i publikasjonsmodulen gir publiseringspoeng, som siden 2005 gir institusjonen bevilgninger fra Kunnskapsdepartementet. Systemet er under utvidelse til å omfatte flere forskningsinstitusjoner (Universitet- og høgskolesektoren, helsesektoren og frittstående forskningsinstitusjoner). Norsk vitenskapsindeks (NVI). I tillegg til å gi en sentral oversikt over forskningsresultater, benyttes publikasjonstelling av innrapporterte forskningsresultater i Cristin til fastsette økonomiske bevilgninger. Foreløpig er det enkelte forskningsinstitutt som belønnes basert på antall publikasjonspoeng som forskere tilknyttet instituttet har produsert i løpet av året. Bevilgningene for publiseringspoeng tas fra en felles pott. Dermed er bevilgningene et nullsumspill, ettersom flere publiseringspoeng til et forskningsinstitutt fører til mindre bevilgninger til andre. Dette belønningssystemet omtales oftest som tellekantsystemet. 
+Det har vært fremmet flere forslag om premiering for publisering i ikke-vitenskapelige kanaler, det vil si forskningsformidling. Noen institusjoner har innført premiering for publiseringspoeng. Høgskulen i Volda og Universitetet i Agder har innført premiering for forskningsformidling (formidlingspoeng).Hvor stor bevilgning hvert publiseringspoeng utløser varierer fra år til år. 1 publiseringspoeng har medført følgende bevilgning fra Kunnskapsdepartementet:
+
+
+=== «Nivå 1» og «nivå 2» ===
+Systemet med publiseringspoeng bygger på en inndeling av vitenskapelige publiseringskanaler (tidsskrifter og forlag) i to nivåer etter hvor høy prestisje disse publiseringskanalene har. Nivåene betegnes som «nivå 1» og «nivå 2». «Nivå 1» er det lavere og vanligste nivået, mens «nivå 2» er det høyere nivået. Bare inntil de 20 % beste publiseringskanalene skal være klassifisert som «nivå 2». Publisering i tidsskrifter eller på forlag som er klassifisert som «nivå 2» gir betydelig flere publiseringspoeng. F.eks. gir en artikkel publisert i et «nivå 2»-tidsskrift tre ganger flere poeng enn en artikkel publisert i et «nivå 1»-tidsskrift og følgelig en tre ganger større bevilgning til instituttet.
+Nivåene refererer til tidsskriftet eller, for bøker, til forlaget. CRISTIN gir en oversikt over hvilke publiseringskanaler som klassifiserers som «nivå 1» og «nivå 2».
+Dersom det er flere forfattere deles poengene. En vitenskapelig artikkel med to forfattere i et nivå 1-tidsskrift vil f.eks. gi 0,5 poeng til hver av forfatternes institutter.
+
+
+== Teknologi ==
+FRIDA ble utviklet av USIT med en Oracle-database og i javabblioteket WebObjects fra Apple. Innmating av data og presentasjon skjer via vevgrensesnitt.
+
+
+== Feilkilder i dataene ==
+En stor del av dataene i Cristin har blitt automatisk importert fra tidligere systemer (FRIDA – FORSKDOK). Mange personer har blitt feilkoblet fordi personer med samme etternavn ble antatt å være samme person. Mange feil har kunnet vedvare i flere år uten retting.
+
+
+== Forskningsinstitusjoner som rapporterer via Cristin ==
+
+Agderforskning
+Akershus universitetssykehus HF
+Ansgar Teologiske Høgskole
+Arkitektur- og designhøgskolen i Oslo
+Barratt Due musikkinstitutt
+Betanien Hospital
+Bjørknes høyskole
+Chr. Michelsen Institute
+Christian Michelsen Research
+CICERO Senter for klimaforskning
+Det teologiske menighetsfakultet
+Diakonhjemmet sykehus
+Dronning Mauds Minne Høgskole for barnehagelærerutdanning
+Finnmarkssykehuset
+Fjellhaug Internasjonale Høgskole
+Folkehelseinstituttet
+Forskningsstiftelsen Fafo
+Forsvaret
+Forsvarets forskningsinstitutt
+Frambu Senter for sjeldne funksjonshemninger
+Fridtjof Nansens institutt
+Handelshøyskolen BI
+Havforskningsinstituttet
+Helgelandssykehuset HF
+Helse Bergen HF - Haukeland universitetssykehus
+Helse Fonna HF
+Helse Førde HF
+Helse Møre og Romsdal HF
+Helse Nord RHF
+Helse Nord-Trøndelag HF
+Helse Stavanger HF - Stavanger universitetssjukehus
+Helse Vest IKT
+Høgskolen i Innlandet
+Høgskolen i Molde - Vitenskapelig høgskole i logistikk
+Høgskolen i Østfold
+Høgskulen for landbruk og bygdeutvikling
+Høgskulen i Volda
+Høgskulen på Vestlandet
+Høyskolen Diakonova
+Høyskolen for Ledelse og Teologi
+Høyskolen Kristiania
+Institutt for energiteknikk
+Institutt for samfunnsforskning
+IRIS - International Research Institute of Stavanger
+Kreftregisteret - Institutt for populasjonsbasert kreftforskning
+Kriminalomsorgens høgskole og utdanningssenter KRUS
+Kunsthøgskolen i Oslo
+LHL-klinikkene
+Lovisenberg diakonale høgskole
+Lovisenberg Diakonale Sykehus
+Martina Hansens Hospital
+Meteorologisk institutt
+Modum Bad
+Møreforsking
+Nansen Senter for Miljø og Fjernmåling
+Nasjonalbiblioteket
+Nasjonalmuseet for kunst, arkitektur og design
+Nasjonalt institutt for ernærings- og sjømatforskning
+Nasjonalt kunnskapssenter om vold og traumatisk stress
+NIFU Nordisk institutt for studier av innovasjon, forskning og utdanning
+NILU - Norsk institutt for luftforskning
+NIOM - Nordisk Institutt for Odontologiske Materialer
+NLA Høgskolen
+NOFIMA
+Nord universitet
+Nordlandsforskning
+Nordlandssykehuset HF
+Norges Dansehøyskole
+Norges Geotekniske Institutt
+Norges Handelshøyskole
+Norges idrettshøgskole
+Norges miljø- og biovitenskapelige universitet
+Norges musikkhøgskole
+Norges teknisk-naturvitenskapelige universitet
+NORSAR
+Norsk institutt for bioøkonomi
+Norsk institutt for kulturminneforskning
+Norsk institutt for naturforskning
+Norsk institutt for vannforskning
+Norsk Regnesentral
+Norsk senter for bygdeforskning
+Norsk utenrikspolitisk institutt
+Northern Research Institute Narvik AS
+Norut Northern Research Institute AS
+NTNU Samfunnsforskning AS
+Oslo universitetssykehus HF
+Oslomet – storbyuniversitetet
+Politihøgskolen
+PRIO - Institutt for fredsforskning
+Private ideelle i Helse Sør-Øst
+Private ideelle i Helse Vest
+RBUP Øst og Sør
+Revmatismesykehuset AS
+Samfunns- og næringslivsforskning AS
+Sámi allaskuvla/Samisk høgskole
+SINTEF Energi AS
+SINTEF Ocean
+SINTEF Petroleum AS
+SINTEF Raufoss Manufacturing AS
+Sjukehusapoteka Vest HF
+St. Olavs Hospital HF
+Statens arbeidsmiljøinstitutt
+Steinerhøyskolen
+Stiftelsen Frischsenteret for samfunnsøkonomisk forskning
+Stiftelsen SINTEF
+Sunnaas sykehus HF
+Sykehusapotek Nord HF
+Sykehusapotekene i Midt-Norge HF
+Sykehusapotekene i Sør-Øst RHF
+Sykehuset i Vestfold HF
+Sykehuset Innlandet HF
+Sykehuset Telemark HF
+Sykehuset Østfold HF
+Sørlandet sykehus HF
+Tannhelsetjenestens kompetansesentre
+Teknova AS
+Telemarksforsking
+Tel-Tek
+Transportøkonomisk institutt
+Trøndelag Forskning og Utvikling
+UiT - Norges arktiske universitet
+Uni Research AS
+UNI Research Polytec AS
+Universitetet i Agder
+Universitetet i Bergen
+Universitetet i Oslo
+Universitetet i Stavanger
+Universitetet i Sørøst-Norge
+Universitetssenteret på Svalbard
+Universitetssykehuset Nord-Norge HF
+Valnesfjord Helsesportssenter
+Vestlandsforsking
+Vestre Viken HF
+Veterinærinstituttet
+VID vitenskapelige høgskole
+Westerdals Oslo School of Arts, Communication and Technology
+Østfoldforskning AS
+Østlandsforskning AS
+
+
+== Referanser ==
+
+
+== Eksterne lenker ==
+(no) Offisielt nettsted 
+(en) Offisielt nettsted 
+Forskningsindeksen rangering og oversikt over hver forskers og organisasjons publikasjonspoeng basert på CRIStin-data
+Artikler om FRIDA i tidsskriftet forskerforum
+cristin.no API for datautthenting fra CRIStin-systemet (for teknologer)

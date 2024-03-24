@@ -1,0 +1,53 @@
+revision: 5944587
+title: "Svetle\u010Da dioda"
+url: https://sl.wikipedia.org/wiki/Svetle%C4%8Da_dioda
+
+
+---
+
+Svetleča dioda (angleška kratica LED (light-emitting diode)) je polprevodniški elektronski element. Njene električne karakteristike so podobne navadni polprevodniški diodi s to razliko, da kadar prevaja tok, sveti. Razlikujejo se po barvi, velikosti, obliki in električnih karakteristikah. Svetloba, ki jo oddajajo ima valovno dolžino v ozkem pasu. Modro barvo so uspeli dobiti šele pred nekaj leti. Bela svetleča dioda je kombinacija rdeče, zelene in modre. Izkoristek svetleče diode je mnogo boljši kot pri žarnici z žarilno nitko. Bele svetleče diode velike sevalne moči napovedujejo bolj množično uporabo le-teh v razsvetljavi. Poleg boljšega izkoristka jih odlikuje tudi daljša življenjska doba, ki znaša okoli 50000 ur, za razliko od navadne žarnice, kjer je 1000 ur.
+
+
+== Zgodovina ==
+Pojav elektroluminiscence je v Markonijevih laboratorijih leta 1907 odkril angleški raziskovalec H. J. Round na kristalu silicijevega karbida (Round 1907). Leta 1927 je o prvi svetleči diodi poročal ruski raziskovalec Oleg Vladimirovič Losev (Losev, 1927). Čeprav je bilo odkritje objavljeno v ruskih, nemških in angleških znanstvenih virih, zanj desetletja ni bilo nobenega interesa. V letu 1955 je Rubin Braunstein iz Ameriške Radijske Korporacije poročal o infrardečem oddajanju galijevega arzenida (GaAs), galijevega antimonida (GaSb), indijevega fosfida (InP) in silicij-germanijevih elementov.
+V letu 1961 sta ameriška raziskovalca Robert Biard in Gary Pittman v Texax Instruments odkrila infrardeče sevanje galijevega arzenida (GaAs) pod vplivom električnega toka in patentirala infrardečo svetlečo diodo. Prvo uporabno svetlečo diodo z vidno rdečo svetlobo je v letu 1962 razvil Nick Holonyak ml., ki je delal pri General Electric Company (Kolonyak 1962). Njegov podiplomski študent M. George Craford je v letu 1972 iznašel prvo rumeno svetlečo diodo in za desetkrat izboljšal svetilnost rdeče in rdeče-oranžne diode (Perry 1995). Leta 1976 je T.P. Pearsall izdelal prvo visoko-svetilno svetlečo diodo, ki se je uporabila za prenos svetlobnih impulzov skozi svetlobna vlakna v komunikacijski tehnologiji. 
+Sprva so bile infrardeče svetleče diode zelo drage in niso našle praktične uporabe. V tem letu pa je družba Monsanto začela z industrijsko proizvodnjo svetlečih diod iz galijevega arzenid fosfida. Te je v svojih ročnih računalih prvi uporabil Hewlett Packard, s tem pa je odprl pot svetlečim diodam tudi v druge elektronske tehnologije. 
+Prvo modro visoko-sevetilno svetlečo diodo je izdelal Shuji Nakamura iz Nichia Corporation. Izdelana je bila na osnovi sevanja Indijevega galijevega nitrida (InGaN). Alberto Barbieri je na Cardiff University Laboratory v Veliki Britaniji raziskal delovanje svetleče diode na osnovi prozornega spoja indijevega kositrovega oksida na podlagi AlGaInP/GaAs. Obstoj modre svetleče diode je pripeljal do razvoja prvih belih svetlečih diod, ki so bile izdelane z Y3Al5O12:Ce s fosforjevo prevleko, ki je z navzdol konvertirano rumeno svetlobo v kombinaciji z modro dala belo svetlobo. Nadaljnji razvoj svetlečih diod je bil vzporeden z razvojem drugih elektronskih in optičnih elementov, tako da danes poznamo svetleče diode, ki dajejo 300 lumnov vidne svetlobe na svetlobni vat sevanja. Topla svetloba je bila dosežena z uporabo nanokristalov. Uporabo safirnih substratov je zamenjala uporaba silicijevih plošč.
+
+
+== Delovanje svetlečih diod ==
+
+Svetleča dioda (z angleško kratico LED - light-emitting diode) je polprevodniški vir svetlobe. Sprva se je uporabljala kot indikatorska lučka v raznih elektronskih napravah, danes pa se vse pogosteje uporablja tudi za razne vrste razsvetljave. Kot praktičen elektronski element je bila predstavljena v letu 1962, sprva kot šibka svetleča dioda, ki je oddajala le rdečo svetlobo, danes pa poznamo vse barvne različice svetlečih diod. Njihov spekter sevanja obsega od ultravijolične svetlobe, vidnega spektra, pa do infrardeče svetlobe. Intenziteta svetlobe je zelo visoka, tako da močno presega svetlobne izkoristke drugih svetil. Ker je njen izkoristek mnogo večji, kot ga imajo klasična svetila na žarilno nitko, jih izpodriva iz uporabe kot svetilo bodočnosti. 
+Svetleče diode so majhne, porabijo malo energije, imajo mnogo daljšo življenjsko dobo kot druga svetila, so bolj trdne in imajo krajši vžigalni čas. V letu 2011 so kot sobna svetila še vedno sorazmerno draga napram drugim svetilom, so občutljive na nihanje napetosti, zato se uveljavljajo postopoma. Danes se uporabljajo v raznih elektronskih napravah, kot avtomobilske svetilke, v semaforjih in v komunikacijskih tehnologijah, se pa v kombinacijah s fotovolaičnim napajanjem ali brez uveljavljajo tudi kot zunanja svetila. Infrardeče svetleče diode se uporabljajo za daljinsko vodenje naprav kot so televizorji in gospodinjski aparati, ultravijolične pa se uporabljajo za produciranje bele svetlobe.
+Svetleče diode sevajo svetlobo na principu sevanja trdnih teles. Bistvo delovanja je v oddajanju energije elektrona, ki iz vzbujnega višjega energetskega stanja atoma preide na nižje. Elektron odda energijo v obliki elektromagnetnega sevanja z določeno frekvenco. Če je frekvenca elektromagnetnega sevanja v vidnem polju, to zaznamo kot svetlobo. Efekt je znan kot elektroluminiscenca, barva svetlobe pa ustreza energiji fotona, ki je določena z energetskim korakom samega polprevodnika. 
+Svetleča dioda je sestavljena iz polprevodnega elementa, ki vsebuje nečistoče, ki na zaporni plasti povzročijo p-n spoj. Tok teče iz p-strani, torej iz anode proti katodi, v nasprotni strani pa ne. Z napetostno razliko gnani elektroni in vrzeli potujejo proti spoju elektrod. Ko elektron zapolni vrzel, se sprosti energija v obliki fotona. Valovna dolžina oddane svetlobe je odvisna od snovi, ki tvorijo p-n spoj. V silicijevih in germanijevih diodah se elektroni in vrzeli spajajo brez oddajanja svetlobe, ker so zasnovani na indirektnih materialih zaporne plasti.
+Svetleče diode so običajno zgrajene na nosilcu n-tipa, na katerega je pritrjena elektroda p-tipa, lahko pa je tudi obratno. Mnogo komercialnih vrst svetlečih diod je izdelanih na safirni podlagi, sploh GaN/InGaN svetleče diode.
+Svetleče diode so v osnovi p-n spoj ali polprevodniška dioda, ki pa ni zgrajena iz silicija, temveč iz drugih materialov, ki sicer porabijo več moči, a sevajo svetlobo. Izsevana svetloba je odvisna od uporabljenih materialov - substratov:
+
+
+== Bele svetleče diode ==
+Belo svetlobo se s pomočjo svetlečih diod lahko tvori na tri načine:
+
+kombinacija rdeče, zelene in modre svetleče diode
+modra svetleča dioda prevlečena z luminiscenčnim fosforjem
+ultravijolična svetleča dioda prevlečena z rdečim, zelenim in modrim luminiscenčnim fosforjem
+
+
+=== Kombinacija treh svetlečih diod ===
+Najpreprostejši, vendar najdražji način generiranja bele svetlobe je ustvarjen s pomočjo svetlečih diod, ki združujejo več barvnih izvorov v istem svetlečediodnem elementu. Ob primernem razmerju jakosti lahko dobimo katerokoli barvo svetlobe in s tem seveda tudi belo svetlobo. Ta možnost generiranja bele svetlobe je praktična zaradi lahkega prilagajanja barvne temperature. Uporablja se predvsem v naprednejših aplikacijah, kjer se zahteva dinamično spreminjanje barve svetlobe.
+
+
+=== Bela svetloba z luminiscenčno prevleko ===
+Uporaba modrega LED elementa, prevlečenega z luminiscenčnim fosforjem, je daleč najpogostejši način generiranja bele svetlobe s pomočjo svetlečih diod. Za izdelavo osnove se običajno uporabi podlaga (In)GaN in fosfor Ce 3+ : YAG, ki del izsevane modre svetlobe pretvori v široko spektralno krivuljo z vrhom v rumenem delu spektra. Mešanico rumene in modre svetlobe človeško oko zazna kot belo svetlobo. Barvna temperatura svetlobe svetlečih diod je po navadi okoli 6000 K, indeks barvne reprodukcija pa znaša okoli 75, kar je premalo za kakršnokoli uporabo v interierjih. Slaba lastnost tega tipa belih LED je tudi, da je zaradi tehnologije izdelave nemogoče zagotoviti isto barvno temperaturo pri različnih svetlečih diodah.
+
+
+=== Bela svetloba s pomočjo RGB luminiscenta ===
+Ultravijolični LED element, ki je prekrit z rdečim, zelenim ter modrim barvnim luminiscentom, predstavlja še en način ustvarjanja bele svetlobe s pomočjo svetlečih diod. Ta način izdelave omogoča stabilnejšo temperaturno in tokovno barvno karakteristiko kot pri modri LED z rumenim luminiscentom. Slabost tega načina generiranja bele svetlobe je predvsem manjša energijska učinkovitost pretvorbe električne v svetlobno energijo.
+Viri:
+Braunstein, Rubin (1955). "Radiative Transitions in Semiconductors". Physical Review 99 (6): 1892. Bibcode 1955PhRv...99.1892B. doi:10.1103/PhysRev.99.1892 
+Colin J. Humphreys' cheap LED production method: http://www.rsc.org/chemistryworld/News/2009/January/30010901.asp
+Perry, T.S. (1995). "M. George Craford [biography]". IEEE Spectrum 32 (2): 52–55. doi:10.1109/6.343989.
+Brief Biography – Holonyak, Craford, Dupuis". Technology Administration.
+Losev, O. V. (1927). Telegrafiya i Telefoniya bez Provodov 44: 485–494.
+H. J. Round (1907). "A Note on Carborundum". Electrical World 19: 309.
+Warm light and high efficiency: http://technology.newscientist.com/channel/tech/dn13266-crystal-coat-warms-up-led-light.html?feedId=online-news_rss20

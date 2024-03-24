@@ -1,0 +1,318 @@
+revision: 29883817
+title: "Distribuci\xF3 discreta de Weibull"
+url: https://ca.wikipedia.org/wiki/Distribuci%C3%B3_discreta_de_Weibull
+
+
+---
+
+En la teoria de probabilitat i estadística, la distribució discreta de Weibull és la variant discreta de la distribució de Weibull. Va ser descrit per primera vegada per Nakagawa i Osaki el 1975.
+
+
+== Paràmetres alternatius ==
+En el document original de Nakagawa i Osaki es va utilitzar la parametrització 
+  
+    
+      
+        q
+        =
+        
+          e
+          
+            −
+            
+              α
+              
+                −
+                β
+              
+            
+          
+        
+      
+    
+     
+   convertint el cmf 
+  
+    
+      
+        1
+        −
+        
+          q
+          
+            (
+            x
+            +
+            1
+            
+              )
+              
+                β
+              
+            
+          
+        
+      
+    
+     
+   en 
+  
+    
+      
+        q
+        ∈
+        (
+        0
+        ,
+        1
+        )
+      
+    
+     
+  . Fent 
+  
+    
+      
+        β
+        =
+        1
+      
+    
+     
+   fa aparent la relació amb la distribució geomètrica.
+
+
+== Transformació localització-escala ==
+La distribució contínua de Weibull té una estreta relació amb la distribució de Gumbel que és fàcil de veure quan es torna a convertir la variable. Es pot fer una transformació similar amb la distribució discreta de Weibull.
+Definim 
+  
+    
+      
+        
+          e
+          
+            Y
+          
+        
+        −
+        1
+        =
+        X
+      
+    
+     
+   on (de forma no convencional) 
+  
+    
+      
+        Y
+        =
+        log
+        ⁡
+        (
+        X
+        +
+        1
+        )
+        ∈
+        {
+        log
+        ⁡
+        (
+        1
+        )
+        ,
+        log
+        ⁡
+        (
+        2
+        )
+        ,
+        …
+        }
+      
+    
+     
+   i definim els paràmetres 
+  
+    
+      
+        μ
+        =
+        log
+        ⁡
+        (
+        α
+        )
+      
+    
+     
+   i 
+  
+    
+      
+        σ
+        =
+        
+          
+            1
+            β
+          
+        
+      
+    
+     
+  . Per substitució de 
+  
+    
+      
+        x
+      
+    
+     
+   al cmf:
+
+  
+    
+      
+        Pr
+        (
+        X
+        ≤
+        x
+        )
+        =
+        Pr
+        (
+        X
+        ≤
+        
+          e
+          
+            y
+          
+        
+        −
+        1
+        )
+        .
+      
+    
+     
+  Veiem que obtenim una parametrització d'escala local:
+
+  
+    
+      
+        =
+        1
+        −
+        exp
+        ⁡
+        
+          [
+          
+            −
+            
+              
+                (
+                
+                  
+                    
+                      x
+                      +
+                      1
+                    
+                    α
+                  
+                
+                )
+              
+              
+                β
+              
+            
+          
+          ]
+        
+        =
+        1
+        −
+        exp
+        ⁡
+        
+          [
+          
+            −
+            
+              
+                (
+                
+                  
+                    
+                      e
+                      
+                        y
+                      
+                    
+                    
+                      e
+                      
+                        μ
+                      
+                    
+                  
+                
+                )
+              
+              
+                
+                  1
+                  σ
+                
+              
+            
+          
+          ]
+        
+        =
+        1
+        −
+        exp
+        ⁡
+        
+          [
+          
+            −
+            exp
+            ⁡
+            
+              [
+              
+                
+                  
+                    y
+                    −
+                    μ
+                  
+                  σ
+                
+              
+              ]
+            
+          
+          ]
+        
+      
+    
+     
+  que en la configuració d'estimacions té molt sentit. Això obre la possibilitat de regressió amb marcs desenvolupats per a la regressió de Weibull i la teoria de valor extrem.
+
+
+== Referències ==
+
+
+== Vegeu també ==
+Distribució de Weibull
+Distribució geomètrica
+Distribució q-Weibull

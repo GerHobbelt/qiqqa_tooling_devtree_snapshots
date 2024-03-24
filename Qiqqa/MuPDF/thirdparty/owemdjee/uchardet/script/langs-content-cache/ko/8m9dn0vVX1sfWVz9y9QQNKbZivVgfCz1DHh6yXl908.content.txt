@@ -1,0 +1,16 @@
+revision: 32095320
+title: "\uB9C8\uC774\uD06C\uB85C\uC18C\uD504\uD2B8 \uC81C\uD2B8 \uB370\uC774\uD130\
+  \uBCA0\uC774\uC2A4 \uC5D4\uC9C4"
+url: https://ko.wikipedia.org/wiki/%EC%95%A1%EC%84%B8%EC%8A%A4_%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4_%EC%97%94%EC%A7%84
+
+
+---
+
+액세스 데이터베이스 엔진(Access Database Engine), 오피스 액세스 커넥티비티 엔진(Office Access Connectivity Engine), ACE, 이전 명칭: 마이크로소프트 제트 데이터베이스 엔진(Microsoft Jet Database Engine)은 여러 마이크로소프트 제품들의 기반이 되는 데이터베이스 엔진이다. 최초 버전의 제트는 1992년 개발되었으며 데이터베이스 조작을 위해 사용할 수 있었던 3개의 모듈로 구성되어 있다.
+JET은 조인트 엔진 테크놀로지(Joint Engine Technology)의 약자이다. 마이크로소프트 액세스와 비주얼 베이직은 기반이 되는 데이터베이스 엔진으로 제트를 사용하거나 사용하였다. 그러나 마이크로소프트 데스크톱 엔진(MSDE), 그리고 이후 SQL 서버 익스프레스가 출현하면서 더 이상 사용되지 않게 되었다. 더 큰 데이터베이스의 요구에 따라 제트 데이터베이스는 마이크로소프트의 대표 SQL 서버 데이터베이스 제품으로 업그레이드가 가능하다.
+
+
+== 외부 링크 ==
+Microsoft Jet Database Engine Programmer's Guide, Microsoft, 1995
+Library of Congress, Microsoft Access MDB File Format Family
+Library of Congress, Microsoft Access ACCDB File Format Family

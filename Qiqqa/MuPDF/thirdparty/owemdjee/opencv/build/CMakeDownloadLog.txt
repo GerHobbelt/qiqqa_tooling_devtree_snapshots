@@ -1,0 +1,71 @@
+#use_cache "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/.cache"
+#do_unpack "ippicv_2020_win_intel64_20191018_general.zip" "879741a7946b814455eee6c6ffde2984" "https://raw.githubusercontent.com/opencv/opencv_3rdparty/a56b6ac6f030c312b2dce17430eef13aed9af274/ippicv/ippicv_2020_win_intel64_20191018_general.zip" "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/build/3rdparty/ippicv"
+#check_md5 "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/.cache/ippicv/879741a7946b814455eee6c6ffde2984-ippicv_2020_win_intel64_20191018_general.zip"
+#mkdir "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/build/3rdparty/ippicv"
+#unpack "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/build/3rdparty/ippicv" "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/.cache/ippicv/879741a7946b814455eee6c6ffde2984-ippicv_2020_win_intel64_20191018_general.zip"
+#do_unpack "v0.1.1f.zip" "b624b995ec9c439cbc2e9e6ee940d3a2" "https://github.com/opencv/ade/archive/v0.1.1f.zip" "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/build/3rdparty/ade"
+#check_md5 "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/.cache/ade/b624b995ec9c439cbc2e9e6ee940d3a2-v0.1.1f.zip"
+#mkdir "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/build/3rdparty/ade"
+#unpack "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/build/3rdparty/ade" "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/.cache/ade/b624b995ec9c439cbc2e9e6ee940d3a2-v0.1.1f.zip"
+#do_copy "opencv_videoio_ffmpeg.dll" "bab661341c30862fa88627130219c0a5" "https://raw.githubusercontent.com/opencv/opencv_3rdparty/213fcd5d4897319a83207406036c4a5957fba010/ffmpeg/opencv_videoio_ffmpeg.dll" "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/build/3rdparty/ffmpeg"
+#missing "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/build/3rdparty/ffmpeg/opencv_videoio_ffmpeg.dll"
+#cmake_download "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/.cache/ffmpeg/bab661341c30862fa88627130219c0a5-opencv_videoio_ffmpeg.dll" "https://raw.githubusercontent.com/opencv/opencv_3rdparty/213fcd5d4897319a83207406036c4a5957fba010/ffmpeg/opencv_videoio_ffmpeg.dll"
+#try 1
+#check_md5 "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/.cache/ffmpeg/bab661341c30862fa88627130219c0a5-opencv_videoio_ffmpeg.dll"
+#copy "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/build/3rdparty/ffmpeg/opencv_videoio_ffmpeg.dll" "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/.cache/ffmpeg/bab661341c30862fa88627130219c0a5-opencv_videoio_ffmpeg.dll"
+#do_copy "opencv_videoio_ffmpeg_64.dll" "ac99f9767a83103c31709628af685924" "https://raw.githubusercontent.com/opencv/opencv_3rdparty/213fcd5d4897319a83207406036c4a5957fba010/ffmpeg/opencv_videoio_ffmpeg_64.dll" "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/build/3rdparty/ffmpeg"
+#missing "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/build/3rdparty/ffmpeg/opencv_videoio_ffmpeg_64.dll"
+#cmake_download "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/.cache/ffmpeg/ac99f9767a83103c31709628af685924-opencv_videoio_ffmpeg_64.dll" "https://raw.githubusercontent.com/opencv/opencv_3rdparty/213fcd5d4897319a83207406036c4a5957fba010/ffmpeg/opencv_videoio_ffmpeg_64.dll"
+#try 1
+#check_md5 "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/.cache/ffmpeg/ac99f9767a83103c31709628af685924-opencv_videoio_ffmpeg_64.dll"
+#copy "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/build/3rdparty/ffmpeg/opencv_videoio_ffmpeg_64.dll" "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/.cache/ffmpeg/ac99f9767a83103c31709628af685924-opencv_videoio_ffmpeg_64.dll"
+#do_copy "ffmpeg_version.cmake" "8862c87496e2e8c375965e1277dee1c7" "https://raw.githubusercontent.com/opencv/opencv_3rdparty/213fcd5d4897319a83207406036c4a5957fba010/ffmpeg/ffmpeg_version.cmake" "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/build/3rdparty/ffmpeg"
+#missing "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/build/3rdparty/ffmpeg/ffmpeg_version.cmake"
+#cmake_download "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/.cache/ffmpeg/8862c87496e2e8c375965e1277dee1c7-ffmpeg_version.cmake" "https://raw.githubusercontent.com/opencv/opencv_3rdparty/213fcd5d4897319a83207406036c4a5957fba010/ffmpeg/ffmpeg_version.cmake"
+#try 1
+# timeout on name lookup is not supported
+#   Trying 185.199.111.133:443...
+# Connected to raw.githubusercontent.com (185.199.111.133) port 443 (#0)
+# schannel: ALPN, offering h2
+# schannel: ALPN, offering http/1.1
+# schannel: ALPN, server accepted to use h2
+# Using HTTP2, server supports multi-use
+# Connection state changed (HTTP/2 confirmed)
+# Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
+# Using Stream ID: 1 (easy handle 0x191cb343510)
+# GET /opencv/opencv_3rdparty/213fcd5d4897319a83207406036c4a5957fba010/ffmpeg/ffmpeg_version.cmake HTTP/2
+# Host: raw.githubusercontent.com
+# user-agent: curl/7.75.0
+# accept: */*
+# 
+# Connection state changed (MAX_CONCURRENT_STREAMS == 100)!
+# HTTP/2 200 
+# cache-control: max-age=300
+# content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+# content-type: text/plain; charset=utf-8
+# etag: "fa5c2d2566a9e9cb5c0f40f5e54addc1e8fbb92669597f6694da5879cf972785"
+# strict-transport-security: max-age=31536000
+# x-content-type-options: nosniff
+# x-frame-options: deny
+# x-xss-protection: 1; mode=block
+# x-github-request-id: 943C:94BF:1B5039:2E40BE:60FD9042
+# accept-ranges: bytes
+# date: Sun, 25 Jul 2021 16:24:34 GMT
+# via: 1.1 varnish
+# x-served-by: cache-ams21024-AMS
+# x-cache: MISS
+# x-cache-hits: 0
+# x-timer: S1627230275.645489,VS0,VE156
+# vary: Authorization,Accept-Encoding
+# access-control-allow-origin: *
+# x-fastly-request-id: bf63b40a21691fe25a362114fc4b1318538028dd
+# expires: Sun, 25 Jul 2021 16:29:34 GMT
+# source-age: 0
+# content-length: 362
+# 
+# [362 bytes data]
+# Connection #0 to host raw.githubusercontent.com left intact
+# 
+
+#check_md5 "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/.cache/ffmpeg/8862c87496e2e8c375965e1277dee1c7-ffmpeg_version.cmake"
+#copy "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/build/3rdparty/ffmpeg/ffmpeg_version.cmake" "W:/Projects/sites/library.visyond.gov/80/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/opencv/.cache/ffmpeg/8862c87496e2e8c375965e1277dee1c7-ffmpeg_version.cmake"

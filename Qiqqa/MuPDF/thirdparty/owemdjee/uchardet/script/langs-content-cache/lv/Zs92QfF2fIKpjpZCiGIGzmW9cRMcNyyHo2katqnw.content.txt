@@ -1,0 +1,24 @@
+revision: 3859150
+title: HYPSO-1
+url: https://lv.wikipedia.org/wiki/STORK-1
+
+
+---
+
+STORK-1 ir Polijas uzņēmuma SatRev Zemes tālizpētes pavadonis. Tas orbītā tika palaists 2022. gada 13. janvārī.
+Pavadoni izgatavoja uzņēmums SatRev. STORK tika veidots CubeSat 3U formā uz UniBus platformas bāzes. Tam ir multispektrāls attēlveidotājs Vision-300 ar izšķirtspēju līdz 5,8 m no 500 km orbītas. Atlikusī pavadoņa 2U ir pieejama klientu kravām.
+
+
+== Lidojuma gaita ==
+STORK-1 tika palaists 2022. gada 13. janvārī 15:25:39 UTC ar nesējraķeti Falcon 9 Block 5 no Kanaveralas zemesraga Gaisa spēku stacijas starta laukuma SLC-40. Līdzbraucēju misijā Transporter-3 kopā ar to orbītā tika nogādāti 104 kosmiskie aparāti, to skaitā analoģisks pavadonis STORK-2, un STORK-1 bija pievienots pavadoņu izmešanas iekārtai ION SCV-004
+31. janvārī STORK-1 tika izmests no ION brīvā lidojumā.
+
+
+== Atsauces ==
+
+
+== Ārējās saites ==
+SatRev
+STORK 1, ..., 14 Gunter Dirk Krebs
+STORK Erik Kulu, Nanosats Database
+STORK-1 Orbītas parametri n2yo.com

@@ -1,0 +1,19 @@
+revision: 29278258
+title: Socket FP2
+url: https://tr.wikipedia.org/wiki/Socket_FP2
+
+
+---
+
+Socket FP2 veya µBGA-827, AMD tarafından Trinity ve Richland kod adlı APU işlemcileriyle birlikte dizüstü bilgisayarlar için Mayıs 2012'de piyasaya çıkarılan bir işlemci soketidir.
+Trinity markalı ürünlerde; Piledriver işlemci mimarisi, Northern Islands (VLIW4 TeraScale) grafik işlemci mimarisi, UVD 3 ve VCE 1 video hızlandırma ve AMD Eyefinity tabanlı (DisplayPort girişi bulunmayan 2 tane monitöre veya DisplayPort girişi bulunan 4 tane monitöre kadar) çoklu monitör desteği bulunur.
+
+
+== Ayrıca bakınız ==
+AMD APU'ları listesi
+AMD mobil mikroişlemcileri listesi
+
+
+== Dış bağlantılar ==
+
+Socket FS1 tasarım özellikleri 3 Eylül 2013 tarihinde Wayback Machine sitesinde arşivlendi.

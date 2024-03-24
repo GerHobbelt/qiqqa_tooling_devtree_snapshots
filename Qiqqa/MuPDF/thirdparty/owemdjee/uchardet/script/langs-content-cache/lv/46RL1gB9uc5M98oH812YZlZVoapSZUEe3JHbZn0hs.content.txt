@@ -1,0 +1,10 @@
+revision: 2730658
+title: .bitnet
+url: https://lv.wikipedia.org/wiki/Christmas_Tree_EXEC
+
+
+---
+
+Christmas Tree EXEC bija pirmā plaši izplatījusies tīkla vīrusa programma, kas 1987. gada decembrī paralizēja vairākus starptautiskos datortīklus.
+Vīrusu uzrakstīja Klaustālas Tehnoloģijas universitātes students REXX skriptu valodā. Programma "uzzīmēja" Ziemassvētku eglīti, un pēc tam savu kopiju aizsūtīja visiem e-pasta kontaktu failā esošajiem adresātiem. Tādā veidā tas izplatījās Eiropas Akadēmijas Zinātnes tīklā (European Academic Research Network – EARN), BITNET un IBM vispasaules VNET tīklā. Visās sistēmās tas radīja milzīgus traucējumus.
+Tā mehānisms bija ļoti līdzīgs ILOVEYOU vīrusam, kas izplatījās 2000. gadā. Atšķirība bija tajā, ka ILOVEYOU ietekmēja personālos datorus nevis lieldatorus, izplatoties pa citu tīklu, un programma tika rakstīta VBScript, nevis REXX.

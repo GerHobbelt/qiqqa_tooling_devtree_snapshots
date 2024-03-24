@@ -1,0 +1,98 @@
+revision: 6112844
+title: Dish Network
+url: https://et.wikipedia.org/wiki/HDMI
+
+
+---
+
+HDMI ehk High-Definition Multimedia Interface (kõrglahutusega multimeediumliides) on 2002. aastal loodud standard digitaalse kõrglahutusega video (nt 2160p) ja heli edastamiseks. HDMI ühendab videoallika, nt digiboksi, DVD-mängija, personaalarvuti videoadapteri, ühilduva arvutikuvari, videoprojektori, teleri või heliseadmega. HDMI on alternatiiv analoogstandarditele nagu komposiitvideo, S-Video, SCART või VGA.
+HDMI toetab vaid ühe kaabliga kõiki pakkimata teleri- või arvutivideovorminguid, sealhulgas standardseid, täiustatud ja kõrglahutusega videoid; kuni kaheksat kanalit, pakitud või pakkimata digitaalset heli ja ka Consumer Electronics Control (CEC) ühendust. 
+CEC võimaldab HDMI-seadmetel üksteist vajaduse korral kontrollida ja samuti ka kasutajal mitut seadet ühe kaugjuhitava puldiga juhtida. Kuna HDMI ühildub elektriliselt Digital Visual Interface (DVI) digitaalvideoliidese kasutatavate signaalidega, pole signaaliteisendus vajalik. Samuti ei halvene DVI-HDMI-adapteri kasutamisel ka video kvaliteet.
+Pakkimata ühendusena ei sõltu HDMI paljudest digitaaltelevisioonistandarditest, mis on kasutusel koduseadmetes, näiteks ATSC (Advanced Television Systems Committee) ja DVB (digitelevisioon), kuna need on pakitud MPEG-videovoogude kapseldused (mida saab HDMI-ga dekodeerida ja saata välja pakkimata videovoogudena). HDMI-standard pole mõeldud kodeeritud subtiitrite telerisse edastamiseks ega seal nende dekodeerimiseks. Kõik kodeeritud subtiitrid tuleb enne ülekannet HDMI kaablist digitaaltelevisiooni dekodeerida ja lisada pildifailina videovoogu(desse). Seetõttu on võimalik kasutada üksnes sellist stiili (isegi digitaalsete tekstide puhul), milliseks see on algselt HDMI kaudu edastamiseks dekodeeritud.
+
+
+== Ajalugu ==
+HDMI asutajad on Hitachi, Matsushita Electric Industrial (Panasonic/National/Quasar), Philips, Silicon Image, Sony, Thomson (RCA) ja Toshiba. HDMI-d toetasid ka suurettevõtted Fox, Universal, Warner Bros ja Disney ning DirecTV, EchoStar (Dish Network) ja CableLabs.
+HDMI asutajad alustasid HDMI 1.0 arendamisega 16. aprillil 2002 eesmärgiga luua AV-ühendus, mis oleks tagasiühilduv DVI-ga. Sel ajal kasutati HDTV-s DVI-HDCP-d (DVI koos HDCP-ga) ja DVI-HDTV-d (DVI-HDCP, mis kasutas CEA-861-B video standardit). HDMI loodi, et täiustada DVI-HDTV-d: muuta liides väiksemaks ja lisada heli tugi.
+Esimese ametliku testimiskeskuse (Authorized Testing Center – ATC) avas Californias 23. juunil 2003. aastal Silicon Image. Jaapanis Osakas avas esimese ATC 1. mail 2004. aastal Panasonic. Esimese ATC Euroopas rajas Philips Prantsusmaale 25. mail 2005. Hiinas avas esimese ATC Silicon Image 21. novembril 2005. Esimese ATC Indias avas Philips 12. juunil 2008. Nimekiri kõigist ATC-dest on üleval HDMI veebilehel.
+In-Stati andmetel müüdi 2004. aastal 5 miljonit, 2005. aastal 17,4 miljonit, 2006. aastal 63 miljonit ja 2007. aastal 143 miljonit HDMI-seadet. HDMI on saamas HDTV standardiks. In-Stati andmetel oli 2007. aastal valmistatud teleritest 90% juba HDMI-ga.
+Ajakiri PC Magazine andis HDMI-le 2008. aastal kodukino seadmete kategoorias Technical Excellence Award auhinna, nimetades HDMI-d uuenduseks, mis muutis maailma. Kümmet ettevõtet autasustati 7. jaanuaril 2009 National Academy of Television Arts and Sciencesi poolt Technology and Engineering Emmy Award auhinnaga.
+
+
+== Spetsifikatsioon ==
+HDMI on standardiseerinud protokollid, signaalid, elektrilised ja mehaanilised nõuded. HDMI 1.0 maksimaalne taktsagedus piksli kohta on 165 MHz, millest piisab resolutsioonide 1080p ja WUXGA (1920x1200) toetamiseks ja mille värskendussagedus on 60 Hz. HDMI 1.3 tõstis taktsageduse 340 MHz-ni, mis lubab veelgi kõrgemaid resolutsioone (nt WQXGA, 2560x1600), kasutades ainult ühte andmesideühendust. HDMI-ühendus võib olla kas ühekordse ühendusega (Type A/C) või kahekordse ühendusega (Type B).
+
+
+=== Heli/video ===
+Alates HDMI 1.0-st kuni HDMI 1.2a-ni kasutatakse CEA-861-B videostandardit, HDMI 1.3-st edasi aga CEA-861-D videostandardit. CEA-861-D standard määrab ära video ajastuse nõuded, avastamise struktuurid ja andmeside struktuuri. HDMI suudab kodeerida videoid xvYCC 4:4:4 (8–18 bitti komponendi kohta), sRGB 4:4:4 (8–16 bitti komponendi kohta), YCbCr 4:4:4 (8–16 bitti komponendi kohta) või YCbCr 4:2:2 (8–12 bitti komponendi kohta).
+HDMI toetab kuni 8 pakkimata heli kanalit 16-bitiste, 20-bitiste ja 24-bitiste diskreedisuuruste korral 32 kHz, 44,1 kHz, 48 kHz, 88,2 kHz, 96 kHz, 176,4 kHz ja 192 kHz juures. HDMI toetab ka iga IEC 61937-ga sobivat pakitud heli voogu nagu Dolby Digital ja DTS ja kuni 8 ühebitist DSD kanalit kuni neli korda suurema sagedusega kui Super Audio CD. HDMI 1.3 toetab ilma kaduteta pakitud heli vooge Dolby TrueHD-d ja DTS-HD Master Audiot.
+
+
+=== HDMI 2.0 ===
+Ultrakõrglahutusega televisiooni signaali ehk 4K signaali silmas pidades on välja töötatud liides HDMI 2.0, mis laseb andmeid läbi kiirusega kuni 18 Gbit/s (HDMI 1.3 kuni 10,2 Gbit/s). See on küllaldane et edastada
+videovorminguid:
+
+2160p, 10/12 bit, 24/25/30 Hz, RGB/4:2:2/4:4:4;
+2160p, 10/12 bit, 50/60 Hz, 4:2:0/4:2:2.Heli võib olla kuni 24 audiokanalil signaali sämplimissagedusega kuni 1536 kHz.
+Liides võimaldab edastada samaaegselt kaks videovoogu ühele ekraanile, samuti kuni neli audiovoogu eri tarbijatele.
+HDMI 2.0 ei vaja eraldi pistikühendusi ega kaableid, sest senised 2. kategooria kaablid on piisava läbilaskevõimega.
+
+
+=== Pistikud ===
+
+HDMI-pistikuid on nelja tüüpi, neist tüübid A ja B on määratletud HDMI spetsifikatsioonis 1.0, tüüp C spetsifikatsioonis 1.3 ning tüüp D spetsifikatsioonis 1.4.
+
+
+==== Tüüp A ====
+19 kontakti, ribalaiusega, mis toetab kõiki SDTV, EDTV ja HDTV laade. Pistiku (isane) välised mõõtmed on 13,9 × 4,45 mm ja pesa (emane) sisemised mõõtmed on 14 × 4,55 mm. Tüüp A on elektriliselt sobiv ühekordse ühendusega DVI-D-ga.
+
+
+==== Tüüp B ====
+Pistikul mõõtmetega 21 × 4,45 mm on 29 kontakti ja kaks korda suurem ribalaius kui tüüp A-l väga kõrge resolutsiooniga ekraanide tarvis nagu WQUXGA (3840x2400). Tüüp B on elektriliselt sobiv kahekordse ühendusega DVI-D-ga.
+
+
+==== Tüüp C ====
+Minipistik, mis on määratletud HDMI 1.3 spetsifikatsioonis. Mõeldud eelkõige kaasaskantavate seadmete jaoks. See on väiksem kui tüüp A pistik (10,42 × 2,42 mm), aga siiski samasuguse 19-kontaktise konfiguratsiooniga. Erinevuseks on, et kõigi erinevate paaride positiivsed signaalid on nende varjestustega ära vahetatud. DDC/CEC Ground on suunatud 17. kontakti asemel 13. kontaktile, CEC on suunatud 13. kontakti asemel 14. kontaktile ja reserveeritud kontakt on 17, mitte 14. Tüüp C minipistiku saab ühendada tüüp A pistikuga, kui kasutada tüüp A -> tüüp C asümmeetrilist kaablit.
+
+
+==== Tüüp D ====
+Mikropistik, mis on määratletud HDMI 1.4 spetsifikatsioonis. Samuti 19 kontaktiga nagu tüüp A ja tüüp C, aga pistiku suurust on vähendatud umbes micro-USB-pistiku oma sarnaseks. Tüüp D pistiku mõõtmed on 2,8 × 6,4 mm (võrdluseks tüüp C on 2,42 × 10,42 ja micro-USB mõõtmed 2,94 × 7,8 mm).
+
+
+=== Kaablid ===
+Kuigi HDMI-kaabli suurimat pikkust pole määratletud, panevad kvaliteedile piiri valmistuskvaliteet ja kasutatud materjalid. HDMI 1.3 eristab kahte kaablikategooriat: Category 1 tunnistuse saanud kaablid, mida testitakse 74,5 MHz juures (testi sisse jäävad ka sellised resolutsioonid nagu 720p60 ja1080i60) ja Category 2 tunnistuse saanud kaablid, mida testitakse 340 MHz juures (testi sisse jäävad ka sellised resolutsioonid nagu 1080p60 ja 2160p30). Category 1 HDMI-kaableid müüakse tähisega "Standard" ja Category2 HDMI-kaableid tähisega "High Speed". Selline tähistussüsteem sai alguse 17. oktoobril 2008. 5-meetrist Category 1 kaablit on lihtne ja odav teha, kasutades 28 AWG (0,081 mm2) konduktoreid. Parema ehituskvaliteedi ja materjalidega võib HDMI-kaabel olla kuni 15 m pikk. Paljud HDMI-kaablid, mis on lühemad kui 5 m ja mis on valmistatud enne HDMI 1.3 spetsifikatsiooni kasutuselevõttu, võivad töötada kui Category 2 kaablid, kuid ainult testitud Category 2 kaablid töötavad kindlasti.
+HDMI 1.4 spetsifikatsioonis on määratletud järgmised kaablid:
+
+Standard HDMI Cable – kuni 1080i ja 720p
+Standard HDMI Cable with Ethernet
+Automotive HDMI Cable
+High Speed HDMI Cable – 1080p, 4K, 3D, Deep Color
+High Speed HDMI Cable with Ethernet
+
+
+=== Kaabli pikendamine ===
+HDMI-kaabli pikendaja on seade (või seadmete paar), mis kasutab kas välist vooluallikat või saab toite HDMI-kaabli kaudu. Pikad kaablid võivad põhjustada ebastabiilset HDCP-d ja vilkumist ekraanil, mida põhjustab DDC-signaali nõrgenemine. HDCP DDC-signaal tuleb multipleksida TMDS-videosignaaliga, et see vastaks HDCP nõuetega HDMI-kaabli pikendajatele. Mitu ettevõtet pakub võimendeid, ekvalaisereid ja repiitereid, mille abil saab ühendada mitmeid erineva standardiga HDMI-kaableid. Aktiivsetel HDMI-kaablitel on sisseehitatud elektroonika signaali võimendamiseks ja lubab kasutada kuni 30-meetriseid kaableid. HDMI-kaabli pikendajad, mis põhinevad kahekordsetel Category 5/Category 6/ kaablitel, võimaldavad koostada kuni 250-meetriseid kaableid ning valguskiust pikendajad lubavad pikkuseks kuni 300 meetrit.
+
+
+=== Sidekanalite protokollid ===
+HDMI-l on kolm füüsiliselt eraldi asuvat sidekanalit: DDC, TMDS ja valikuline CEC.
+
+
+=== DDC ===
+Kuvariandmete kanal (Display Data Channel) on I²C siini spetsifiaktsioonidel põhinev sidekanal. HDMI nõuab laiendatud kuvariandmete kanali E-DDC (Enhanced Display Data Channel) tuge, mida kasutavad HDMI lähte seadmed E-EDID andmete lugemiseks teise poole seadmest, et teada saada, milliseid heli- ja videovorminguid vastav seade toetab. HDMI nõuab E-DDC toe I²C standard kiirust (100 kbit/s) ning lubab ka kiiret 400 kbit/s ühendust.
+
+
+=== TMDS ===
+Minimaalse üleminekuprotsessiga diferentsiaalne signaaliedastus TMDS (Transition Minimized Differential Signaling) HDMI-s kannab video-, heli- ja abiandmeid ühel viisil järgnevast kolmest: Video Data Period, Data Island Period või Control Period. Video Data Periodiga edastatakse video pikslid, Data Island Periodiga edastatakse paljude pakettidena heli ja abiandmed ning Control Period töötab Video ja Data Islandi perioodide vahepeal.
+
+
+=== CEC ===
+Koduelektroonika juhtimine ehk CEC (Consumer Electronics Control) on ühejuhtmeline kahesuunaline jadasiin, mis kasutab kaugjuhtivuse võimaldamiseks standardi AV link protokollistikku. CEC kaabeldus on kohustuslik, kuigi tootes ei pea CEC tuge olema. CEC võimaldab kasutajal ühte puldiga juhtida mitut CEC-d toetavat seadet. CEC toega seadmed saavad üksteisele ilma kasutaja sekkumiseta käske edastada.
+
+
+=== Sobivus DVI-ga ===
+
+DVI-signaal on elektriliselt sobiv HDMI-signaali videopoolega – adapteri või asümmeetrilise kaabli kasutamisel ei ole vaja signaali teisendada, video kvaliteedis kadusid ei ole. HDMI on ühekordse ühendusega DVI-ga (DVI-D-ga ja DVI-I-ga, aga mitte DVI-A-ga), mis on kasutusel tänapäevastes kuvarites ja graafikakaartidel, tagasiühilduv. HDMI-le omane heli ja kaugjuhtimisvõimalus aga DVI-le edasi ei kandu, välja arvatud juhul, kui väljund toetab HDMI kaudu DVI-d nagu näiteks ATI 3000 seeria ja NVIDIA GTX 200 seeria graafikakaardid. MItte kõik seadmed ei toeta HDCP-d (High-bandwidth Digital Content Protection). Ilma selle toeta HDCP-enabled signaal summutab väljundi ja takistab seega seadmel HDCP-protected signaali vastuvõtmist. Kõik HDMI-seadmed peavad toetama sRGB-kodeeringut.
+
+
+== Viited ==

@@ -1,0 +1,72 @@
+revision: 6329666
+title: HDD
+url: https://et.wikipedia.org/wiki/K%C3%B5vaketas
+
+
+---
+
+Kõvaketas (inglise hard disk drive, lühend HDD) on andmetalletusseade, mis kasutab andmete talletamiseks pöörlevaid jäiku mittemagnetilisi, enamasti kas alumiiniumsulamist või klaasist plaate (kettaid), mis on kaetud õhukese magnetilise ferrooksiidlakikihiga. Andmeid loetakse ja kirjutatakse kettale digitaalselt kodeerituna ning need säilivad ka voolu kadumisel.
+Informatsioon talletatakse kõvakettale lugemis-kirjutuspea abil, mille tekitatud magnetvoo tulemusena muudetakse magnetilise materjali polarisatsiooni. Infot saab tagasi lugeda vastupidi – magnetiline materjal tekitab lugemispeas taas magnetvoo, mis muundatakse elektriimpulsiks. Lugemis-kirjutuspea on tänapäevastel kõvaketastel ühtne universaalpea.
+Tüüpiline kõvaketas koosneb teljest, millel on üks kuni mitukümmend ühtlase kiirusega pöörlevat ketast. Iga ketta kohal on lugemis-kirjutuspea, mis liigub ketta laiuse ulatuses, võimaldades lugeda ja kirjutada infot mistahes kõvaketta alal. Kõvaketta korpusel asub ka kõvaketta kontroller ehk elektroonikalülitus, mis muuhulgas juhib lugemis-kirjutuspead vastavalt sellele, kust on vaja infot lugeda või kuhu kirjutada. Andmeid loetakse ja kirjutatakse juhupöördusega, mis tähendab, et andmeid saab soovi korral kõvakettalt kätte mistahes järjestuses. 
+Kõvaketaste ühendamiseks on mitmesuguseid liideseid, neist tuntumad on SATA (Serial ATA), PATA (IDE), SCSI ja SAS. Samuti kasutatakse FC liidest. Väliste kõvaketaste ühendamiseks kasutatakse FireWire, USB ja RJ-45 liideseid.
+
+
+== Kettaruum ja -kiirus ==
+2014. aasta seisuga on suurim müügil olev ketas mahuga 8 TB ning välja on kuulutatud esimesed 10 TB kettad.
+2010. aasta veebruari seisuga oli suurim müügil olev ketas mahuga 2 TB.
+Tüüpiline lauaarvuti kõvaketas mahutab 120 GB kuni 2 TB, kettad pöörlevad kiirustega 5400 kuni 15 000 pööret minutis (p/m) ja edastavad tavaliselt andmeid kiirustega 20–100 megabaiti sekundis (MB/s). Kõvaketaste puhul tasub mainida, et nende lugemis- ja kirjutuskiirus on oluliselt seotud sellega, kuskohas andmed kettal füüsiliselt paiknevad – ketta välisservale lähemal paiknevaid andmeid loetakse aeglasemalt, samuti on järjestikusest andmete lugemisest või kirjutamisest ajakulukam ketta eri piirkondade vahel liikumist nõudvad pöördused. Viimasel põhjusel on võimalik ka kõvaketta kiirust defragmentimisega tõsta.
+Kiiremad serveri kõvakettad pöörlevad kiirustel 10 000 ja 15 000 p/m ja saavutavad andmeedastuskiiruseid kuni 150 MB/s; 2014. aasta seisuga lubab mõni tootja oma kiireimate ketaste puhul juba kiirusi kuni 420 MB/s.[4] Suure pöörlemiskiirusega kettad kasutavad väiksemaid plaate (sest neil on väiksem õhutakistus), et kompenseerida energianõudluse kasvu, ja on seetõttu mahult väiksemad.
+Mobiilsed kõvakettad ehk sülearvuti kõvakettad on mõõtmetelt väiksemad (2,5 tolli tavaketta 3,5 tolli asemel), need kipuvad olema aeglasemad ja ka mahult väiksemad, kuigi viimasel ajal on erinevused vähenenud. Pöörlemiskiirused on 4200, 5200 (erandina), 5400 ja 7200 p/m, kusjuures tänapäeval kasutatakse enim 5400 p/m. 7200 p/m kettad on enamasti kallimad ning 4200 p/m kettad on kas vana tüüpi või uuemad kettad, mis on mahult suurimad. Neist viimased võivad olla ka standardsuurusest kõrgemad, kuna sisaldavad rohkem plaate, ning seega ei sobi oma mõõtude pärast kõigisse sülearvutitesse. On ka nn ultramobiilseid 1,8-tolliseid kettaid, mis sobivad osasse minisülearvutitesse. Nende ketaste pöörlemiskiirus ei ületa 4200 p/m ja nende andmeedastuskiirus ei ületa üldjuhul 20 MB/s.
+
+
+== Täpsemalt kõvaketta andmesalvestusest ==
+Kõvaketas salvestab andmeid tänu magnetismile. Kui magnetismi kui nähtust ei eksisteeriks, siis oleksid tänapäeval tõenäoliselt kasutusel teistsugused (võimalik, et mitte nii efektiivsed) tehnoloogiad andmete talletamiseks. Tänapäeva kõvaketaste puhul kasutatakse ära püsimagnetite ("kõvade" ferromagneetikute) omadust säilitada neile antud pluss- ja miinuspolarisatsiooni. 
+Kõvakettale andmete salvestamiseks tekitatakse lugemis-kirjutuspea abil magnetvoog, millega polariseeritakse mittemagnetilise pöörleva ketta pinda katva õhukese ferromagneetiku kihi erinevad piirkonnad vastavalt pluss- või miinuslaenguga. Kuna "kõvadele" ferromagneetikutele antud laeng on püsiv, on tänu magnetite omadusele mõjutada teisi magnetilisi materjale võimalik hiljem neid andmed kettalt välja lugeda, tuvastades, kummale magnetpoolusele antud punkt kõvakettal vastab. Kõvaketta pinnal olevaid pluss- ja miinusmagnetlaenguid tõlgendatakse praktikas kui nullide ning ühtede jada (kahendsüsteemi ehk binaarkoodina). Igal rakendusel, infohulgal ja -ühikul on arvutimaalimas temale vastav kindel nullide ja ühtede järjekord. 
+Andmete järjestikusel kirjutamisel salvestatakse neid ringikujuliselt, mitte sektorite kaupa, nagu vahel ekslikult arvatakse.
+
+
+== Kõvaketta osad ==
+Lugemis-kirjutuspea (ingl Head), tänapäeval ühine, vanematel seadmetel on kumbki eraldi. Loob kettale positiivselt ja negatiivselt laetud piirkondi. Igal füüsilisel kettal on oma lugemis-kirjutuspea.
+Kontrolleri telg, mille külge on kinnitatud lugemis-kirjutuspea. See kõvaketta osa teeb ära kõige suurema osa tööst. Vanematel arvutitel võib selle aktiivset tegutsemist kuulda kui raginat/kraginat.
+Kettad (ingl Platter): ühes kõvakettas on üks kuni paarkümmend füüsilist andmeketast. Kettale salvestatakse andmed magnetlaengutena (mida tõlgendatakse kahendsüsteemis koodina) ning sealt on võimalik neid vajaduse korral uuesti lugeda. Need on üldjuhul valmistatud alumiiniumist (odav ja kerge), kuid osades kõvaketastes ka klaasist (harva leidub ka keraamilisi või muust materjalist kettaid). Ketta pind peab olema väga sile, et tagada lugemis-kirjutuspea võimalikult ühtlane liikumine. Seetõttu kasutataksegi klaasi/peeglit. Ketta pind on kaetud õhukese, enamasti 10–20 nanomeetri paksuse ferrooksiidlakiga, mis on omakorda kaitse-eesmärgil kaetud õhukese süsinikukihiga.
+Kontroller liigutab lugemis-kirjutuspead. Kontroller liigutab pead terve ketta raadiuses ning juhib pea sinna, kust on vaja andmeid lugeda või kirjutada. Kuigi lugemis-kirjutuspäid võib olla mitu (nende arv on alati võrdne füüsiliste pöörlevate ketaste arvuga), on kontrollerit ainult üks.
+Mootor paneb kettad pöörlema. Sellest eraldub kõige suurem osa kõvaketta eraldatavast soojusest.
+Liidesed (ingl Connectors), mille külge on võimalik panna nii toite- kui ka andmejuhe.
+Korpus on mõeldud kõvaketta kaitsmiseks ja kooshoidmiseks, samuti aitab see säilitada kõvakettasisest rõhku. Mõningates (eriti kallimates) kõvaketastes on korpuse siseruum täidetud õhu asemel heeliumiga.
+
+
+== Kõvaketta ajalugu ==
+Kõvaketta arengus on väga suur ja oluline roll olnud IBMil. Just see ettevõte tootis esimesed digitaalsete andmete kandjad, mis said andmeid salvestada suuremas koguses kui eelkäijad. Nagu tänapäevalgi, oli ka tol ajal tipptehnoloogia sõjaväe kasutuses.
+1950. aastal valmis esimene kõvaketas USA mereväe tellimusel, selle valmistas Engineering Research Associates of Minneapolis ning see seade mahutas ühe kilobiti andmeid. Alles 6 aastat hiljem, 1956. aastal tuli IBM välja kõvakettaga, mis mahutas 5 MB andmeid, kuid oli kordi odavam ja kergemini kättesaadav kui see andmekandja, mis oli valmistatud USA mereväele.
+1973. aastal laskis IBM välja kõvaketta, mida peetakse tänapäeva andmekandjate isaks. Konkreetse kõvaketta puhul kasutati sama tehnoloogiat, mis on laialt levinud tänapäeva kõvaketastes. Mudeli nimi oli 3340 ja hüüdnimeks Winchester. Sellest seadmest väljastati kolm versiooni: kaks 30 MB mudelit ja üks 70 MB mudel.1980. aastal valmistas Seagate kõvaketta kodukasutuseks. Selle hind pole küll teada, kuid kindlasti ei saanud seda endale lubada iga pere. Kõvaketta maht oli 5 MB. Võrdluseks: sel ajal oli tipptehnoloogiaks IBMi kõvaketas, mis mahutas 1 GB andmeid, kuid kaalus 250 kg ja oli külmkapisuurune.1983. aastal lasti välja kõvaketas laiusega 3,5", mis on tänapäeval saanud üheks levinumaks standardiks lauaarvutites ja serverites.
+1991. aastal tutvustati avalikkusele esimest sülearvuti ketast laiusega 2,5", see mahutas 100 MB andmeid.
+1997. aastal avalikustati esimene kõvaketas, mille pöörlemissagedus oli 7200 pööret minutis (rpm). 2003. aastal avalikustati Serial-ATA standard, mis mõne esimese aastaga üheks populaarsemaks IDE kõrval, 2010. aasta paiku sai ainuvalitsejaks.
+Pärast 2003. aastat pole nii suuri ja märkimisväärseid tehnoloogilisi hüppeid toimunud. Tehnoloogia on üldjoontes jäänud samaks, kuid see on muutunud oluliselt efektiivsemaks ning arendusse on piisavalt investeeritud. Detailid muutuvad väiksemaks, komponendid kiiremaks ja täpsemaks. 2005. aastal mahutas kodukasutajale mõeldud kõvaketas 500 GB andmeid, 2009. aastal juba 2000 GB. (See lõik vajab parandamist!)
+
+
+== Tänapäev ==
+60 aasta jooksul on kõvaketaste areng olnud meeletult kiire, täiesti võrreldav infotehnoloogia arenguga. 60 aastat tagasi toodeti mõned üksikud kõvakettad, tänapäeval on toodang kasvanud 500 miljoni kõvakettani aastas (vastavalt iSuppli andmetele).
+On palju näitajaid, mille järgi tänapäeva kõvakettaid liigitada. Näiteks füüsilise suuruse (laiuse), kiiruse (pöördeid minutis) ja andmeedastusliidese järgi.
+Tänapäeva kõvaketta levinud standardid on 3,5", 2,5" ja 1,8". Esimest kasutatakse lauaarvutites ja serverites, selle kõvaketta laius on ligikaudu 10 cm. Üldjuhul on tegu kiirete, kuid energiajanuste ja palju kuumust eraldavate ketastega. 2,5" kõvakettaid kasutatakse sülearvutites. Need ei mahuta küll nii palju andmeid, kuid on see-eest vaiksemad ja tarbivad vähem voolu. 1,8" kõvakettad on vähe levinud ja neid kasutatakse erinevates kaasaskantavates seadmetes, nt mobiiltelefonides, või muudes väikestes seadmetes. 2000. aastate esimeses pooles toodeti ka lauaarvuti 8-tollisesse pessa sobivaid aeglaselt pöörlevaid ja aeglase andmevahetuskiirusega kõvakettaid, millel on suurem mahtuvus.
+Et kõvaketas on tänapäeval nii laialt levinud, siis on igal inimesel sellele omad soovid – entusiastid soovivad kiirust, serveriomanikud vastupidavust, sülearvuti kasutajad vaikset tööd jne. Seetõttu ongi kõvakettad eri pöörlemiskiirustega. Pöörlemiskiiruse all on mõeldud ketaste (inglise k. Platter) täispöördeid minutis (inglise k. Revolutions per minute). Kõvaketaste kiirused on tavaliselt 4200, 5400, 7200, 10 000 ja 15 000 rpm. Mida suurem on ketta pöörlemiskiirus, seda suurem on andmeedastuskiirus, kuid samas eraldavad kiiremad kõvakettad rohkem kuumust, on mürarikkamad ja kulutavad rohkem energiat. Seetõttu kasutatakse näiteks 4200 rpm kõvakettaid sülearvutites ja 15 000 rpm kiirusega seadmeid serverites. 
+2006. aasta paiku hakati müüma kõvakettaid mis kasutavad perpendikulaarset salvestust (ristsalvestus, Perpendicular recording, PMR (technology)).
+Tänu sellele tehnoloogiale hakkasid kõvaketaste mahud kordades kiiremini kasvama, kui need kasvasid eelmistel kümnenditel. 2015 aastal toodeti 10TB (10 terabaidise) mahtuvusega kõvakettaid.
+2012. aastal tõi Western Digital turule 4 TB mahuga kõvaketta. Võrdluseks saab tuua, et 2005. aastal oli suurima erasektoris kasutamiseks mõeldud kõvaketta mahutavus 500 GB.
+
+
+== Tulevik ==
+Tulevikus võib kindlasti oodata standardsete kõvaketaste ehk HDD kiiruse ja mahu kasvu. Kuid kindlasti leiab laiemat kasutust ka uus SSD (inglise solid state drive) tehnoloogia, mida eesti keeles võiks nimetada välkmälul baseeruvaks salvestusseadmeks, lühemalt pooljuhtkettaks, pooljuhtajuriks või tahkisajuriks (hoolimata sellest, et termin on kohati läinud tavakasutusse, on nimetus "pooljuhtketas" tegelikult ekslik, kuna seade füüsiliselt ketast ei sisalda; ingliskeelse sõna drive tõlkena on kasutatud nii sõna "draiv" kui ka "ajur").
+Tegu pole uue tehnoloogiaga, vaid vana täiustamisega. Välkmälu on juba kaua aega arvutites muutmäluna kasutatud, kuid nüüd on seda tehnoloogiat täiendatud. Kiirus on suurenenud, vastupidavus on parem ja maht samuti kasvanud.
+Peamine erinevus HDD ja SSD vahel on see, et viimasel puuduvad igasugused liikuvad osad. Seetõttu on see vastupidavam, sest liikuvad osad kuluvad. Tänu sellele on SSD vastupidavam ka välisärritustele: nii temperatuuri muutustele ja põrutustele kui ka niiskusele. Välkmälul põhinevad kettad tarbivad ka vähem voolu ning kuivõrd neil puudub lugemis-kirjutuspea, on võimalik ka andmeid kiiremini lugeda ja kirjutada.
+SSD miinusteks on kõrgem hind ja väiksem mahutavus. SSD kahjuks räägib ka piiratud kirjutuskordade arv. Tavakasutajale pole see kuigi oluline, sest ta ei pruugi oma eluea jooksul kõiki neid kordi ära kasutadagi, kuid entusiasti või serveri puhul võib juhtuda, et välkmäluketas lakkab töötamast, sest seda on nii palju kasutatud. Aastatel 2015–2016 on SSD-ketaste mahud hüppeliselt tõusnud, räägitakse 16 TB suuruste SSD-ketaste tootmisest, hind on aga väga kallis.
+Suuremat kiirust võib kindlasti pidada üheks SSD paremaks küljeks, sest see võib kohati ületada HDD oma mitmekordselt. SSD puhul on väga oluline see, kas loetakse ja kirjutatakse mitmeid väiksemahulisi andmeid või üht suurt. Esimesel juhul on SSD kiirused võib-olla väiksemadki kui HDD omad. Seda seetõttu, et andmed paiknevad SSD-kettal 4 kB plokkide kaupa, mida on ükshaaval väga aeganõudev muuta.
+
+
+== Vaata ka ==
+Lugemis-kirjutuspea
+Puhasruum
+Pooljuhtketas
+Väline kõvaketas
+
+
+== Viited ==

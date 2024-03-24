@@ -1,0 +1,19 @@
+revision: 32104337
+title: ISO/IEC 8859-10
+url: https://ko.wikipedia.org/wiki/ISO/IEC_8859-10
+
+
+---
+
+ISO/IEC 8859-10:1998(Information technology — 8-bit single-byte coded graphic character sets — Part 10: Latin alphabet No. 6)은 ASCII 기반 표준 문자 인코딩의 ISO/IEC 8859 시리즈의 일부로, 1992년 첫 에디션이 출판되었다. 비공식적으로 Latin-6로 호칭된다. 북게르만어군을 지원하기 위해 설계되었으며 ISO 8859-4보다 더 많이 사용될 것을 염두에 두었다.
+ISO-8859-10은 ISO/IEC 6429의 C0 및 C1 제어 코드로 보충할 때 이 표준을 위한 IANA 선호 문자 집합 이름이다. 마이크로소프트는 윈도우에서 코드 페이지 28600, 즉 Windows-28600을 ISO-8859-10에 할당하였다. IBM은 코드 페이지 919를 ISO-8859-10에 할당하였다. Ecma 인터내셔널에 의해 ECMA-144라는 이름으로 출판되었다.
+
+
+== 각주 ==
+
+
+== 외부 링크 ==
+ISO/IEC 8859-10:1998
+ISO/IEC 8859-10:1998 - 8-bit single-byte coded graphic character sets, Part 10: Latin alphabet No. 6 (draft dated February 12, 1998, published July 15, 1998)
+Standard ECMA-144: 8-Bit Single-Byte Coded Character Sets - Latin Alphabet No. 6 3rd edition (December 2000)
+ISO-IR 157 Archived 2020년 10월 1일 - 웨이백 머신 Latin Alphabet No. 6, Supplementary Set (September 7, 1992)

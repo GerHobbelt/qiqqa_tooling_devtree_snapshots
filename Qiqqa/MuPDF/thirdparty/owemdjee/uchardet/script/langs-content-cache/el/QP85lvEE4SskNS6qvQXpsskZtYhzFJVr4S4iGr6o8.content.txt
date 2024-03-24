@@ -1,0 +1,121 @@
+revision: 9815932
+title: Electronic authentication
+url: https://el.wikipedia.org/wiki/SMTP
+
+
+---
+
+Το πρωτόκολλο Simple Mail Transfer Protocol (SMTP) έχει καθιερωθεί για την μετάδοση μηνυμάτων ηλεκτρονικού ταχυδρομείου στο Διαδίκτυο. Επίσημα περιγράφεται στα έγγραφα RFC821 και RFC1123. Το πρωτόκολλο που χρησιμοποιείται σήμερα αποτελεί επέκταση του αρχικού προτύπου και περιγράφεται στο έγγραφο RFC 2821.
+
+
+== Ιστορία ==
+Ήδη από τα τέλη της δεκαετίας του 1960 είχε αρχίσει η ανταλλαγή μηνυμάτων ηλεκτρονικού ταχυδρομείου μεταξύ χρηστών mainframe υπολογιστών. Καθώς ο αριθμός των χρηστών και των υπολογιστών αυξανόταν, έγινε φανερή η ανάγκη δημιουργίας ενός πρωτοκόλλου για την ανταλλαγή ηλεκτρονικών μηνυμάτων μεταξύ χρηστών που χρησιμοποιούσαν διαφορετικά συστήματα υπολογιστών. Εξέλιξη των αρχικών πρωτοκόλλων που αναπτύχθηκαν την εποχή (δεκαετία του 1970) αυτή αποτελεί το SMTP. Συγκεκριμένα οι ρίζες του SMTP εντοπίζονται στα πρωτόκολλα Mail Box Protocol (1971), FTP Mail (1973) και Mail Protocol. Όταν όμως άρχισε να σχηματίζεται το Διαδίκτυο (1980), ο Jon Postel πρότεινε την δημιουργία ενός νέου πρωτοκόλλου για την ανταλλαγή ηλεκτρονικών μηνυμάτων, το οποίο δεν θα βασιζόταν τόσο πολύ στο FTP όπως έκαναν οι πρόγονοί του. Έτσι λοιπόν το 1982 γεννήθηκε το SMTP.
+Το πρόγραμμα Sendmail ήταν ένα από τα πρώτα προγράμματα που υλοποίησε το SMTP, ενώ σήμερα υπάρχει μία πληθώρα τέτοιων προγραμμάτων όπως για παράδειγμα τα Postfix, qmail, Novell GroupWise, Exim, Novell NetMail και άλλα. Σε μία μέτρηση που έγινε το 2001 βρέθηκαν τουλάχιστον 50 προγράμματα τα οποία υλοποιούσαν το πρωτόκολλο SMTP είτε ως client (δηλαδή αποστολείς ηλεκτρονικών μηνυμάτων) είτε ως server (δηλαδή παραλήπτες ηλεκτρονικών μηνυμάτων).
+Το αρχικό SMTP υποστήριζε κατά βάση μονάχα μηνύματα απλού κειμένου και όχι μετάδοση αρχείων (π.χ. εικόνες, εκτελέσιμα, μουσική κοκ). Στην συνέχεια όμως αναπτύχθηκαν διάφορα standards που επέτρεπαν την εισαγωγή αρχείων στα ηλεκτρονικά μηνύματα. Ένα από αυτά τα standards είναι και το Multipurpose Internet Mail Extensions (MIME), το οποίο κωδικοποιεί τα αρχεία με τέτοιον τρόπο ούτως ώστε να μπορούν να μεταδοθούν σε απλά μηνύματα SMTP.
+
+
+== Λειτουργία ==
+Για την αποστολή ενός ηλεκτρονικού μηνύματος θα πρέπει ο χρήστης να έχει πρόσβαση σε έναν SMTP Server. Όλα τα προγράμματα ηλεκτρονικής αλληλογραφίας (π.χ. Mozilla Thunderbird, Microsoft Outlook κ.α.) θα πρέπει να ρυθμιστούν κατάλληλα από τον χρήστη για να λειτουργήσουν σωστά. Συγκεκριμένα ο χρήστης θα πρέπει να καθορίσει τον SMTP server που θα χρησιμοποιήσει για να στείλει και να παραλάβει ηλεκτρονική αλληλογραφία. Με τον τρόπο αυτό μπορεί για παράδειγμα ένας χρήστης να ανταλλάξει ηλεκτρονικά μηνύματα χωρίς να είναι συνδεδεμένος στο διαδίκτυο, εάν χρησιμοποιεί έναν τοπικό SMTP server.
+Οι SMTP servers θα πρέπει να έχουν ανοιχτή μία τουλάχιστον από τις πόρτες 25 και 587, ούτως ώστε να μπορούν να επικοινωνήσουν με άλλους SMTP servers για την αποστολή ή παραλαβή ηλεκτρονικών μηνυμάτων. Πολλοί SMTP servers χρησιμοποιούν και τις δύο πόρτες για λόγους συμβατότητας.
+Μία τυπική παραλαβή ηλεκτρονικού μηνύματος από έναν SMTP server έχει ως εξής: Αρχικά δημιουργείται μία σύνδεση μεταξύ του SMTP server που έχει τον ρόλο του αποστολέα και του SMTP Server που έχει τον ρόλο του παραλήπτη. Στην συνέχεια οι δύο SMTP servers "συνομιλούν" ούτως ώστε να επιτευχθεί χωρίς προβλήματα η ανταλλαγή του μηνύματος. Στην συνέχεια παρατίθεται ως παράδειγμα μία υποτυπώδης συνομιλία μεταξύ του αποστολέα (Α) και του παραλήπτη (Π) του μηνύματος. Για την δημιουργία σύνδεσης μεταξύ των δύο υπολογιστών μπορεί να χρησιμοποιηθεί το πρόγραμμα telnet, ως εξής: 
+
+telnet www.example.com 25Η παραπάνω εντολή δημιουργεί μία TCP σύνδεση από τον αποστολέα προς τον παραλήπτη (www.example.com) στην πόρτα 25.
+Αφού γίνει η σύνδεση, ακολουθεί η εξής συνομιλία μεταξύ των δύο υπολογιστών:
+
+Π: 220 www.example.com ESMTP Postfix
+Α: HELO mydomain.com
+Π: 250 Hello mydomain.com
+Α: MAIL FROM:<sender@mydomain.com>
+Π: 250 Ok
+Α: RCPT TO:<friend@example.com>
+Π: 250 Ok
+Α: DATA
+Π: 354 End data with <CR><LF>.<CR><LF>
+Α: Subject: test message
+Α: From: sender@mydomain.com
+Α: To: friend@example.com
+Α:
+Α: Hello,
+Α: This is a test.
+Α: Goodbye.
+Α: .
+Π: 250 Ok: queued as 12345
+Α: QUIT
+Π: 221 Bye
+
+Ουσιαστικά η παραπάνω συνομιλία χρησιμοποιείται για να στείλει το ακόλουθο μήνυμα από τον SMTP Server mydomain.com (ηλεκτρονική διεύθυνση sender@mydomain.com) στον SMTP Server example.com (ηλεκτρονική διεύθυνση friend@example.com):
+
+Hello,
+This is a test.
+Goodbye.
+
+Υπάρχουν φυσικά και αρκετές άλλες επιλογές στην συνομιλία, οι οποίες δεν παρουσιάζονται στο παραπάνω παράδειγμα. Ενδεικτικά αξίζει να αναφερθεί η λέξη SIZE που χρησιμοποιείται από τον αποστολέα για να μάθει το μέγιστο μέγεθος μηνύματος που μπορεί να παραλάβει ο παραλήπτης. Επίσης η λέξη EHLO (αναγραμματισμένο HELO) χρησιμοποιείται αντί της HALLO στην παραπάνω συνομιλία για να ξεκινήσει μία σύνοδο Extended SMTP (ESMTP) αντί για μία σύνοδο απλού SMTP. Παρακάτω φαίνεται ένα παράδειγμα όπου χρησιμοποιούνται οι δύο προαναφερθείσες επιλογές.
+
+Π: 220-serverdomain.com ESMTP {postfix version and date}
+Π: 220 NO UCE. {etc., terms of service}
+Α: EHLO mydomain.com
+Π: 250-serverdomain.com Hello mydomain.com [127.0.0.1]
+Π: 250-SIZE 14680064
+Π: 250-PIPELINING
+Π: 250 HELP
+
+Στο παράδειγμα αυτό ο SMTP Server serverdomain.com (Παραλήπτης) χρησιμοποιεί την λέξη SIZE για να ενημερώσει τον SMTP Server mydomain.com (Αποστολέας) ότι δεν πρόκειται να δεχθεί μηνύματα το μέγεθος των οποίων υπερβαίνει κάποια προκαθορισμένη τιμή. Στην συγκεκριμένη τιμή το μέγεθος αυτό είναι 14,680,064 bytes ή 14 ΜΒ. Εάν το μήνυμα που προσπαθεί να μεταδώσει ο αποστολέας είναι μεγαλύτερο από 14ΜΒ, τότε δεν θα γίνει αποδεκτό και η μετάδοση θα αποτύχει.
+
+
+== Ασφάλεια και Ανεπιθύμητα Μηνύματα (Spam) ==
+Ένας από τους βασικούς περιορισμούς του πρωτοκόλλου είναι ότι δεν υπάρχει τρόπος αυθεντικοποίησης των χρηστών. Για να καλυφθεί αυτή η αδυναμία, αναπτύχθηκε μια επέκταση του πρωτοκόλλου που ονομάζεται SMTP-AUTH. Δυστυχώς όμως η επέκταση αυτή είναι αρκετά δύσκολο και πολύπλοκο να χρησιμοποιηθεί ευρέως, πράγμα που σημαίνει ότι δεν μπορεί να αξιοποιηθεί για την αντιμετώπιση του προβλήματος των ανεπιθύμητων μηνυμάτων (Spamming). Γενικότερα δεν είναι πλέον δυνατόν να γίνουν ριζικές αλλαγές στο πρωτόκολλο, διότι αυτό σημαίνει ότι θα πρέπει οι αλλαγές αυτές να υιοθετηθούν από τους εκατομμύρια υπολογιστές που χρησιμοποιούν ήδη το SMTP, πράγμα που θεωρείται μη πρακτικό και κατά βάση αδύνατο. Παρόλα αυτά όμως έχουν αναπτυχθεί μερικά εναλλακτικά πρωτόκολλα που φιλοδοξούν να αντικαταστήσουν το SMTP, όπως για παράδειγμα το Internet Mail 2000.
+Το φαινόμενο των ανεπιθύμητων μηνυμάτων (spamming) οφείλεται σε διάφορους λόγους, μερικοί από τους οποίους είναι και οι εξής:
+
+Πολλοί servers που διαθέτουν υπηρεσία SMTP δεν εφαρμόζουν στο ακέραιο τους διάφορους περιορισμούς που εισάγει το πρωτόκολλο και κατά συνέπεια δημιουργούν σημαντικές δυσκολίες σε όλους τους υπόλοιπους servers που προσπαθούν να εφαρμόσουν το πρωτόκολλο στο ακέραιο. Με τον τρόπο αυτό ουσιαστικά σχεδόν κανένας server δεν εφαρμόζει τους περιορισμούς που αναφέρονται στο πρωτόκολλο, επιτρέποντας την ανταλλαγή μηνυμάτων spam που δεν συμμορφώνονται με αυτό.
+Οι αδυναμίες (vulnerabilities) που εντοπίζονται στα διάφορα λειτουργικά συστήματα επιτρέπουν στους spammers να χρησιμοποιήσουν τον υπολογιστή ενός απλού χρήστη για την μαζική αποστολή ανεπιθύμητων μηνυμάτων.
+Τα προγράμματα που χρησιμοποιούνται για την αποστολή και παραλαβή ηλεκτρονικών μηνυμάτων δεν είναι αρκετά "έξυπνα" ούτως ώστε να εμποδίζουν την μετάδοση ανεπιθύμητης αλληλογραφίας.Για τον περιορισμό του φαινομένου των ανεπιθύμητων μηνυμάτων (spamming) έχουν γίνει διάφορες προτάσεις από την ομάδα Anti-Spam Research Group (ASRG) του οργανισμού Internet Research Task Force (IRTF), η οποία προσπαθεί να βρει διάφορους τρόπους αυθεντικοποίησης των χρηστών που χρησιμοποιούν το SMTP για να ανταλλάξουν ηλεκτρονικά μηνύματα.
+
+
+== Εξωτερικοί σύνδεσμοι ==
+2821bis Draft (2005)
+2821 Security Draft (2005)
+Internet Mail Architecture Draft (2005)
+Email Submission Access and Accountability Draft (2005)
+Essential Internet Protocols - SMTP
+RFC 1123 – Requirements for Internet Hosts—Application and Support (STD 3)
+RFC 1845 - SMTP Service Extension for Checkpoint/Restart
+RFC 1869 - SMTP Service Extensions
+RFC 1870 – SMTP Service Extension for Message Size Declaration (obsoletes: RFC 1653)
+RFC 1894 - An Extensible Message Format for Delivery Status Notifications
+RFC 1985 - SMTP Service Extension for Remote Message Queue Starting – ETRN
+RFC 2034 - SMTP Service Extension for Returning Enhanced Error Codes
+RFC 2047 - Message Header Extensions for Non-ASCII Text
+RFC 2487 - SMTP Service Extension for Secure SMTP over TLS
+RFC 2505 – Anti-Spam Recommendations for SMTP MTAs (BCP 30)
+RFC 2606 - Reserved Top Level DNS Names
+RFC 2554 - SMTP Service Extension for Authentication
+RFC 2852 - Deliver By SMTP Service Extension
+RFC 2920 – SMTP Service Extension for Command Pipelining (STD 60)
+RFC 3030 – SMTP Service Extensions for Transmission of Large and Binary MIME Messages
+RFC 3207 – SMTP Service Extension for Secure SMTP over Transport Layer Security (obsoletes RFC 2487)
+RFC 3461 – SMTP Service Extension for Delivery Status Notifications (obsoletes RFC 1891)
+RFC 3463 – Enhanced Status Codes for SMTP (obsoletes RFC 1893 )
+RFC 3464 – An Extensible Message Format for Delivery Status Notifications (obsoletes RFC 1894)
+RFC 3700 - Internet Official Protocol Standards
+RFC 3798 - Message Disposition Notification
+RFC 3834 – Recommendations for Automatic Responses to Electronic Mail
+RFC 4409   Message Submission for Mail, Port 587 for Message Submission
+RFC 4952 – Overview and Framework for Internationalized E-mail
+RFC 4954 – SMTP Service Extension for Authentication (obsoletes RFC 2554)
+RFC 5068 – E-mail Submission Operations: Access and Accountability Requirements (BCP 134)
+RFC 5321 – The Simple Mail Transfer Protocol (obsoletes RFC 821 aka STD 10, RFC 974, RFC 1869, RFC 2821)
+RFC 5322 – Internet Message Format (obsoletes RFC 822 aka STD 11, and RFC 2822)
+RFC 5336 - SMTP Extension for Internationalized Email Addresses (updates RFC 2821, RFC 2822, and RFC 4952)
+RFC 5504 - Downgrading Mechanism for Email Address Internationalization
+RFC 6152 (SMTP Service Extension for 8bit-MIMEtransport)
+RFC 6409 – Message Submission for Mail (obsoletes RFC 4409, RFC 2476)
+RFC 6522 – The Multipart/Report Content Type for the Reporting of Mail System Administrative Messages (obsoletes RFC 3462, and in turn RFC 1892)
+RFC 6530 – Overview and Framework for Internationalized EmailΠρωτόκολλο SMTP: RFC 821 αντικαταστάθηκε απο το RFC 2821
+Διαμόρφωση του ηλεκτρονικού ταχυδρομείου:  RFC 822 αντικαταστάθηκε απο το RFC 2822
+Προέκτασης SMTP: RFC 1651
+Bulk SMS Egypt
+Bulk SMS UAE
+Bulk SMS Bahrain
+Bulk SMS Oman
+Bulk SMS Qatar
+Bulk SMS Kuwait

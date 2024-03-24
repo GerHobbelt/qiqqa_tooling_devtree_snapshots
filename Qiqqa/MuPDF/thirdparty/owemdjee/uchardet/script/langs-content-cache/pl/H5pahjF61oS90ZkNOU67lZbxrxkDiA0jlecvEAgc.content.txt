@@ -1,0 +1,48 @@
+revision: 68174257
+title: Dane biometryczne
+url: https://pl.wikipedia.org/wiki/Paszport_biometryczny
+
+
+---
+
+Paszport biometryczny – dokument tożsamości odczytywany przy pomocy urządzeń optycznych i elektronicznych, zawiera dane biometryczne. Dokument pozwala zidentyfikować tożsamość na podstawie cech ciała, takich jak linie papilarne czy wzór siatkówki oka. Informacje są przechowywane na chipie EEPROM o pojemności minimum 32 KB według standardu ISO 14443, a także w kartotekach lub bazach danych urzędów – najczęściej w sposób zdecentralizowany, według miejsca zameldowania.
+Obecnie standardy biometryki wykorzystywane do identyfikacji tożsamości pozwalają na korzystanie z systemu rozpoznawania twarzy, odcisków palców oraz tęczówki oka. Tylko te systemy zostały zaakceptowane po dokonaniu oceny różnych innych rodzajów danych biometrycznych, jak np. kodu DNA.
+Standardy paszportu biometrycznego regulowane są w dokumencie wydanym przez Organizację Międzynarodowego Lotnictwa Cywilnego (ICAO) 
+[1].  Zdefiniowano w nim między innymi format plików oraz protokoły komunikacji stosowane w elektronicznych chipach. W układzie scalonym przechowywane są informacje o właścicielu dokumentu, takie jak jego data urodzenia, dane biometryczne jak odciski palców czy wzór tęczówki oka oraz cyfrowe zdjęcie – zwykle w formacie JPG i JPG2000. Chip, zawierający dane biometryczne, wraz z anteną umieszczony jest w tylnej okładce paszportu, a więc najsztywniejszym elemencie książeczki. Ma to na celu maksymalną ochronę układu przed uszkodzeniami mechanicznymi. Umieszczenie danych użytkownika w postaci elektronicznej ma dwa cele:
+
+ułatwienie obsługi pasażerów (funkcjonariusz Straży Granicznej nie musi ręcznie wpisywać danych z paszportu do komputera),
+utrudnienie fałszowania paszportów (dane zapisane w chipie muszą zgadzać się z danymi wydrukowanymi na stronach paszportu).Paszporty niektórych państw, np. Albanii, Holandii, Brazylii, są zgodne z normą ICAO9303.
+
+
+== Bezpieczeństwo danych ==
+W celu uniknięcia lub wykrycia prób fałszowania paszportów biometrycznych, dokumenty te wyposażono w następujące mechanizmy obronne:
+
+nieprzechwytywalne właściwości układu scalonego (ang. Non-traceable chip characteristics). Losowo generowane identyfikatory układu odpowiadają na każde żądanie zawsze innym numerem. Zapobiega to śledzeniu wysyłanych identyfikatorów paszportu, gdyż za każdym razem są one inne. Mechanizm ten stosowany jest opcjonalnie.
+podstawowa kontrola dostępu (ang. Basic Access Control – BAC). Chroni kanał komunikacji między układem a czytnikiem poprzez szyfrowanie przesyłanych informacji. Zanim dane zostaną odczytane z układu scalonego, czytnik przekazuje do niego klucz. Oznacza to ze atakujący nie może łatwo podsłuchiwać przesyłanych danych bez znajomości odpowiedniego klucza. Mechanizmem tym zabezpieczone są mniej wrażliwe dane jak obraz twarzy. Korzystanie z BAC jest opcjonalne.
+Uwierzytelnienie Bierne (ang. Passive Authentication – PA). Jest to zabezpieczenie 16 grup danych (DG1-DG16) zapisanych w układzie scalonym przy użyciu podpisu cyfrowego (generowanego w fazie personalizacji dla wszystkich danych z użyciem funkcji skrótu). Zabezpieczenie to uniemożliwia zmianę danych w układzie scalonym paszportu. Chip zawiera plik formatu SOD, który przechowuje zakodowane wartości wszystkich plików (zdjęcia, odciski palców itp.) oraz podpisu cyfrowego. Próba podmiany zdjęcia zostanie wykryta ponieważ zakodowana wartość w pliku SOD nie będzie poprawna. Użycie tego zabezpieczenia jest obowiązkowe.
+uwierzytelnienie aktywne (ang. Active Authentication – AA). Mechanizm ten zapobiega kopiowaniu paszportowych chipów. Każdy układ scalony zawiera prywatny klucz który nie może być odczytany lub skopiowany. Autentyczność chipu jest sprawdzana przez terminal metodą challenge response. Jeśli chip odeśle prawidłowo podpisaną liczbę losowo wygenerowaną przez terminal to uznaje się, że zna prawidłowy klucz prywatny. Założeniem tego systemu jest oczywiście brak możliwości wydobycia klucza prywatnego z układu. System AA jest opcjonalny.
+system rozszerzonej kontroli dostępu (ang. Extended Access Control – EAC). Mechanizm, który umożliwia sprawdzenie autentyczności chipa (chip authentication) oraz czytnika (terminal authentication). System ten opiera się o infrastrukturę klucza publicznego (technologię podpisu cyfrowego) w której urządzenie usiłujące odczytać odciski palców musi uwierzytelnić się przed paszportem. EAC używa lepszego kodowania niż Basic Access Control (BAC). Jest to mechanizm przeznaczony dla danych wrażliwych jak odciski palców, wzory siatkówki oka i innych które nie mogą być łatwo pozyskane od wnioskodawcy paszportu. Zabezpieczenie to było opcjonalne jednak od 28 czerwca 2009 roku w Unii Europejskiej system ten jest wymagany.
+chip umieszczony w okładce posiada osłonę w postaci metalowej siatki, która stanowi pewnego rodzaju tarczę ochronną. Sam mikroprocesor nie jest zbyt narażony na uszkodzenia, ponieważ jest małym kwadratem o wymiarach kilku milimetrów. Najbardziej newralgiczną częścią układu scalonego jest jego antena, mająca postać cewki z miedzianego drutu. Użycie tego zabezpieczenia jest opcjonalne.
+
+
+== Opozycja ==
+Komunikacja między chipem a czytnikiem oparta jest na technologii RFID, która wykorzystuje fale radiowe do przesyłania danych oraz zasilania elektronicznego układu (etykieta RFID) stanowiącego etykietę obiektu przez czytnik, w celu identyfikacji obiektu. Dokumenty biometryczne z zastosowaniem tej technologii stanowią zwiększone zagrożenie dla prywatności danych dotyczących obywateli. W Stanach Zjednoczonych liczni specjaliści, m.in. w dziedzinie kryptologii, krytycznie odnieśli się do zastosowania nadajników RFID w dokumentach identyfikacyjnych. Komitet Doradczy Departamentu Bezpieczeństwa Krajowego w USA (Data Privacy and Integrity Advisory Committee of the Department of Homeland Security – DHS) wydał specjalne opracowanie, w którym ustosunkowuje się do zastosowania nadajników RFID w dokumentach identyfikacyjnych. Komitet Doradczy DHS bardzo krytycznie ocenił zastosowanie tego typu biometrycznej technologii w powszechnie stosowanych systemach identyfikacyjnych, np. w paszportach. Pomimo wielu sprzeciwów i konstruktywnych racji przedkładanych przez przeciwników zastosowania tego rodzaju biometrycznej technologii oraz pomimo ostatniego dokumentu Komitetu Doradczego DHS, rozpoczęto wydawanie paszportów z wbudowanym chipem RFID. Na znanej w środowisku hakerów konferencji Defcon w Las Vegas w USA Lukas Grunwald (konsultant zabezpieczeń DN-Systems Germany) powiedział, że odkrył metodę na klonowanie informacji przechowywanych w biometrycznych paszportach. Transmisja danych z paszportu do czytnika jest szyfrowana przy pomocy klucza wygenerowanego na podstawie danych właściciela paszportu. Nie jest to zabezpieczenie zbyt silne. Obecna technologia dostępna przestępcom pozwala na uzyskanie klucza, przy pomocy którego dałoby się rozszyfrować te informacje. Trzeba w tym celu zaangażować odpowiednią moc komputerów, co jest czasochłonne oraz wymaga wysokich kwalifikacji.
+Skopiowany chip może być z łatwością umieszczony w podrobionym paszporcie i całość będzie uznana jednoznacznie za prawdziwy paszport. Ekspert od zabezpieczeń twierdzi, że ten cały pomysł z biometrycznymi paszportami to ogromna strata pieniędzy – w żadnym stopniu bezpieczeństwo się nie zwiększa. Z punktu widzenia systemów zabezpieczeń bezpieczeństwo to nawet się zmniejsza i to bardzo – osoby, które obsługują odprawę np. na lotniskach po pozytywnym potwierdzeniu autentyczności paszportu nie mają żadnych podstaw do zatrzymania osoby przekraczającą granicę na fałszywym paszporcie. Wysokiej klasy sprzęt potrzebny do sklonowania paszportu kosztuje ok. 600 zł.
+Jedyną metodą uniemożliwienia skopiowania naszego paszportu wydawanego od 29 czerwca 2009 roku jest po prostu nienoszenie go i przechowywanie w bezpiecznym miejscu najlepiej pod kluczem. W podróży warto byłoby również sprawić sobie coś w rodzaju metalowego futerału, który skutecznie będzie chronił nasz paszport przed sczytaniem go z zewnątrz. Kopiowanie danych zawartych w paszporcie biometrycznym odbywa się bezprzewodowo i w praktyce wystarczy, że ktoś zbliży się na odległość nawet 2 metrów (zazwyczaj potrzeba co najmniej 20 cm) – wszystko odbywa się w ułamku sekundy – każda osoba przechodząca blisko dysponująca odpowiednim urządzeniem znajdującym się np. w kieszeni marynarki może skopiować biometryczny paszport.
+
+
+== Paszporty biometryczne w Polsce ==
+W Polsce paszporty biometryczne weszły w życie 28 sierpnia 2006 roku. Książeczki polskich paszportów biometrycznych produkuje Polska Wytwórnia Papierów Wartościowych S.A. Dane obywateli nanoszone są w Centrum Personalizacji Dokumentów MSWiA. Polskie paszporty biometryczne zawierają wizerunek twarzy i odciski palców zapisane w formie elektronicznej. Paszporty wydane do 29 czerwca 2009 roku zawierają tylko wizerunek twarzy. Od 28 czerwca 2009 zaczęto wydawać biometryczne paszporty serii EA z odciskami palców zapisanymi w chipie RFID.
+Od listopada 2018 wkładka personalizacyjna wykonana jest z poliwęglanu o grubości 0,8 mm i ma w sobie zatopiony chip RFID.
+
+
+== Zobacz też ==
+dokument tożsamości
+kradzież tożsamości
+
+
+== Przypisy ==
+
+
+== Linki zewnętrzne ==
+Paszportowy portal Informacyjny – MSWiA

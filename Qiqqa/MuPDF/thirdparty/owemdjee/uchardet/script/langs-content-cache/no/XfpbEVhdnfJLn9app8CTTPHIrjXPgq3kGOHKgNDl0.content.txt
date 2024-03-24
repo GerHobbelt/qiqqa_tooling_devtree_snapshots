@@ -1,0 +1,56 @@
+revision: 22812212
+title: Egyptisk hieroglyf
+url: https://no.wikipedia.org/wiki/Hieroglyf
+
+
+---
+
+En hieroglyf er et grafem eller tegn i et skriftspråk som hovedsakelig består av piktogrammer eller skjematiske bilder. De mest kjente hieroglyfskrifter består både av logogrammer (tegn som representerer et ord eller et morfem) og av lydtegn som representerer lyder (fonemer) eller kombinasjoner av dem, ofte stavelser. I mange skriftsystemer har hieroglyfer utviklet seg til å alfabetiske tegn (bokstaver) eller til tegn som bare representerer konsonanter (i abjader).
+Et annet piktogramskrift er ofte forvekslet med hieroglyfer, som de mer presist burde bli kalt bare glyfer. Dette gjelder for eksempel mayaskrift i Mellom-Amerika.
+
+
+== Etymologi ==
+Ordet hieroglyf kommer fra gresk ἱερογλύφος (ʰieroglýfos), fra hiero- (ἱερός, ʰierós), «hellig» og glyph (γλύφειν, glýfein) «å skjære ut».
+
+
+== Egyptiske hieroglyfer ==
+Den mest kjente hieroglyfskriften er den egyptiske. Den egyptiske betegnelsen for hieroglyfer er blitt omstavet som MDW NṮR (ofte transkribert som medu netjer, som direkte oversatt betyr «gudens ord»).Egyptiske hieroglyfer består av både fonogrammer og ideogrammer og de blir brukt om hverandre. Systemet består av tre forskjellige typer tegn: et alfabet supplert med tegn som representerer mer enn én bokstav, begrepsskifter og determinativer (tegn som uttrykker begreper). Jean-François Champollion beskrev systemet som: 
+
+C'est un systeme complexe, une écriture tout à la fois figurative, symbolique et phonétique, dans un même texte, une même phrase, je dirais presque dans un même mot.«Det er et komplekst system, en skrift som  på én gang er figurativ, symbolsk og fonetisk, i én og samme tekst, i én og samme setning, jeg ville nesten si i ett og samme ord.»
+(Lettre à M. Dacier, 27. september 1822)
+
+
+=== Historie og utvikling ===
+De eldste proto-hieroglyfene er datert til 3.200 før vår tidsregning. De ble i hovedsak brukt av byråkrater og embetsmenn i det gamle Egypt. De første hieroglyfene var kantete og egnet seg for å bli meislet inn i stein. Etter at papyrus ble oppfunnet, ble hieroglyfene enklere og mer allmenngjort. Dette resulterte i utvikling av de to skrifttypene hieratisk og demotisk. De ble brukt til ulike formål og avløste ikke hverandre.
+Mellomriket i Egypt benyttet noen hundre tegn. Alan Gardiner katalogiserte 763 hieroglyfer i 26 kategorier i 1928. I senere perioder ble systemet utvidet til å omfatte ca. 6000 tegn. 1071 av Gardiners tegn er tatt inn i Unicode.
+Etter at alle ikke-kristne templer ble stengt, døde kunnskapen om hieroglyfer ut. De siste hieroglyfene vi kjenner til ble funnet i et tempel lengst sør i landet og dateres til 394 e.Kr. Men seks tegn fra det demotiske alfabet ble inkorporert i den egyptiske varianten av det greske alfabet som ble brukt av den koptiske kirke for å representere lyder som ikke fantes i gresk.
+Hovedsakelig består hieroglyfene av små bilder som enten leses som en lyd (et fonem) eller som symbol for det som bildet viser - et ideogram. De hieroglyfiske tegnene kan deles inn i tre kategorier:
+
+Billedtegn eller piktogrammer hvor hvert bilde betegnet en ting
+Lydskrift eller fonogrammer som uttrykte en eller flere konsonanter og som ble brukt som bokstaver for å skrive andre ord eller deler av ord.
+Determativer eller tegn som uttrykker begreper. Determativene ble lagt til på slutten av ordene. Dette hjalp til å skille ordene fra hverandre.En tekst kunne inneholde alle disse kategoriene, og det gjorde meningen vanskelig å tyde.
+Lydskriften består kun av konsonanter, ikke vokaler, som gjengir hva man antok for det viktigste av hvert ord, altså et slags skjelett av ordet. Leseren måtte da selv tilføye vokalene. Punktum finnes ikke, men et særskilt tegn som viser hvor et ord slutter.
+
+
+=== Hieroglyfenes fysiske prosess ===
+Hieroglyfene fremstilte vesener og ting som omgav de gamle egypterne i hverdagen – mennesker, dyr, planter, redskaper og andre gjenstander.
+Hieroglyfene ble i begynnelsen hugget inn i stein, noe som gjorde at tegnene ble sterkt stiliserte. Da man senere begynte å skrive på papyrus, oppsto den hieratiske skriften, en slags kursiv med mykere og enklere former. De ble skrevet horisontalt i rader eller vertikalt i kolonner. Tegnene kan leses fra høyre til venstre, ovenfra og ned, eller fra venstre til høyre, som i moderne europeiske skriftspråk. Retningen man leser teksten bestemmes av hvilken vei tegnet snur seg.
+Skriftens estetiske utforming var av stor betydning. Når man hugget inskripsjoner på et monument, ble skriften arrangert slik at teksten utfylte den tilgjengelige plassen. Ofte måtte tekststykker gjentas for å oppnå en symmetrisk effekt. Funksjon og estetikk var en og samme ting. Dekorasjon uten praktisk eller religiøs betydning ga ingen mening.
+
+
+=== Tolkning ===
+
+I århundrer hadde tegnene forvirret historikerne. De sto overalt på veggene i egyptiske templer og monumenter, men var uleselig. Inntil man i 1799 fant Rosettasteinen hadde det vært umulig for egyptologene å tyde de egyptiske hieroglyfene. Da Jean-François Champollion i 1822 klarte å dechiffrere teksten på Rosettasteinen, åpenbarte en rik litterær fortidsverden seg for forskerne.
+
+
+=== Språket forsvinner ===
+Da kunnskapen om hieroglyfene døde ut ved kristendommens innførelse, ble det gamle skriftsystemet avløst av det koptiske alfabet med 24 greske bokstaver supplert med 6 demotiske tegn for lyder som ikke finnes på gresk. 
+Da araberne invaderer Egypt på 1000-tallet ble det koptiske språket avløst av arabisk som talt folkespråk, men det ble bevart som liturgisk språk i Den koptiske kirke.  I århundrer forsøkte de lærde forgjeves å tolke de gamle hieroglyfene, som de misforsto som en form for tegneserie, og ikke som et skriftspråk. Løsningen skulle forbli ukjent for verden inntil en av Napoleons offiserer fant den mest berømte stein i arkeologiens historie, Rosettasteinen.
+Det latinske alfabetet har med en omvei via fønikernes og grekernes skrift utviklet seg fra de egyptiske hieroglyfer, men kun bokstaven «O» som svarer til hieroglyfen for «øye» er med sikkerhet bevart.
+
+
+== Referanser ==
+
+
+== Eksterne lenker ==
+Omfattende sider med tegneksempler på gammelegyptiske hieroglyfer (på tysk)

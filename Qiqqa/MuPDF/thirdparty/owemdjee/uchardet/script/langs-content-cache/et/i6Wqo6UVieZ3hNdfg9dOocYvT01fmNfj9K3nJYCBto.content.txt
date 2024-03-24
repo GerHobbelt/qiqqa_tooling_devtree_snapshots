@@ -1,0 +1,36 @@
+revision: 6432367
+title: MusicBrainz
+url: https://et.wikipedia.org/wiki/MusicBrainz
+
+
+---
+
+MusicBrainz on vaba sisuga veebipõhine muusikaentsüklopeedia. Algselt sarnaselt freedb-ga pelgalt CD-de metaandmete kogumiseks loodud projektist on välja kasvanud vaba juurdepääsuga struktureeritud muusikaandmekogu.MusicBrainz kogub infot artistide, helisalvestiste ja nendevaheliste seoste kohta. Kui minimaalselt on salvestise sissekandeks vajalik info artisti, albumi ja albumi lugude pealkirjade kohta, siis andmeid saab talletada ka fonogrammi väljaande aja ja päritolumaa kohta, CD puhul salvestada CD ID-sid, üksikloo tasandil talletada audio-"sõrmejälgi" jne. Neid sissekandeid ja seoseid haldavad vabatahtlikud toimetajad, kes järgivad ühiselt kirjutatud stiilijuhiseid.
+16. juuli 2013 seisuga sisaldas MusicBrainzi andmebaas infot ühtekokku 769 516 esineja, 72 096 plaadifirma, 1,17 miljoni fonogrammi, 12,5 miljoni helisalvestise ja 403 526 teose kohta, sh Eestist 6509 esinejat, 2843 fonogrammi (neist 2238 valdavalt eesti keeles) ja 344 plaadifirmat, eestikeelseid teoseid oli 1252.
+MusicBrainzi andmebaasi kasutavad näiteks BBC muusika veebileht, Universal Musicu Artist Gateway ja Last.fm.
+Tavatarbijail on võimalus mitmesuguse tarkvara abil korrektselt sildistada digitaalseid helifaile MP3-, FLAC-, AAC- või Ogg Vorbise vormingus.
+
+
+== Audioidentifitseerimine ==
+MusicBrainz kasutab helifailide identifitseerimiseks, s.o identsete salvestiste tuvastamiseks audio-"sõrmejälgi" ehk audio identifitseerimist. 2011. aastal võeti kasutusele avatud lähtekoodiga AcoustID, et aja jooksul loobuda osaliselt suletud lähtekoodiga MusicDNS-i teenusest.
+
+
+== Tarkvara ==
+Amarok
+Banshee
+Clementine
+CDex
+iEatBrainz
+Jaikoz
+Max
+Mp3tag
+MusicBrainz Picard
+MusicBrainz Tagger
+Sound JuicerLisaks on kõigil freedb-d toetavatel klientidel võimalik freedb protokolli vahendusel ligi pääseda MusicBrainzi andmetele, kasutades selleks FreeDB Gateway teenust.
+
+
+== Viited ==
+
+
+== Välislingid ==
+Koduleht

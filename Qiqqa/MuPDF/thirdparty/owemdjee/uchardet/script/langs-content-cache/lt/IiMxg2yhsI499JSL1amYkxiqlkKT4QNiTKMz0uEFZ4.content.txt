@@ -1,0 +1,71 @@
+revision: 6151343
+title: AN-94
+url: https://lt.wikipedia.org/wiki/AN-94
+
+
+---
+
+AN-94 (Nikonovo automatas, kartais – Abakanas, rus. АН-94 «Абакан») – rusiškas 5,45 mm kalibro automatas, sukonstruotas Genadijaus Nikonovo (Ižmašas).
+
+
+== Istorija ==
+1978 m. TSRS Gynybos ministerija paskelbė konkursą automato, viršijančio AK-74, kūrimui. Pagrindinis reikalavimas – padidinti ugnies efektyvumą, ypač šaudant nepatogiose padėtyse (einant, priklaupus, be atramos).
+1981 m. buvo paskelbto konkurso Abakanas rezultatai. Dalyvavo dvylika automatų modelių. Perspektyviausiau pripažintas Genadijaus Nikonovo automatas AS.
+1986 m. Nikonovo automatas buvo patobulintas ir buvo pavadintas ASM (АСМ, автомат со смещённым импульсом, модернизированный, automatas su delstiniu impulsu, modernizuotas).
+1991 m. vyko valstybiniai bandymai Tamanės divizijoje. Jie patvirtino, kad Nikonovo automatas šaudant dvišūviais gerokai taiklesnis už AK-74 net šaudant iš nepatogių padėčių. Buvo rekomenduota automatą priimti į ginkluotę, bet ši procedūra užtruko.
+1997 m. ASM gavo oficialų pavadinimą „5,45 mm Nikonovo automatas, 1994 m. modelis (AN-94)“ (5,45-мм автомат Никонова обр. 1994 г. (АН-94)) ir buvo priimtas ginkluotėn. Automatą vadino ir konkurso pavadinimu – Abakanas.
+Pradžioje buvo manoma šiuo automatu perginkluoti visą armiją, bet Kalašnikovo automatai liko ginkluotėje. Priežastys dvejopos – tiek to meto ekonominiai sunkumai, tiek paties automato sudėtingumas.
+Nuo 1998 m. AN-94 mažomis serijomis gamina Iževsko mašinų gamykla. Dabar AN-94 yra ginkluotėje. Juo ginkluojami armijos ir vidaus kariuomenės profesionalių kareivių daliniai (kurių dalis veikia Čečėnijoje), kadangi automato naudotojai turi būti įgudę. Manoma, kad visa Rusijos armija nebus perginkuota šiais automatais.
+
+
+== Konstrukcija ==
+Automatas AN-94 yra klasikinės schemos, dėtuvė yra prieš pistoletišką rankeną. AN-94 konstrukcija užtikrina uždelstą atatrankos impulsą – atatranka kiek sulaikoma, kad kulka spėtų išlėkti iš vamzdžio. Tokia konstrukcija paimta iš artilerijos.
+Vamzdžio gale yra vamzdžio kompensatorius. Pagrindinis taikiklis dioptrinis, reguliuojamas.
+Korpusas iš plieno ir smūgiams atsparaus plastiko. Buožė plastikinė, užlenkiama.
+
+
+=== Šaudymo režimai ===
+AN-94 šaudo trimis režimais:
+
+pavieniai šūviai – kaip paprastas savitaisis ginklas
+dvišūviai – ribotos 2 šūvių ilgio serijos. Dėl didelės techninės šaudymo spartos automatas nespėja nukrypti nuo taikinio.
+serijos – kaip paprastas automatinis ginklasPirmojo šūvio metu šovimo mechanizmas ima judėti atgal. Tuo metu į šovinio lizdą iš specialios talpos įstumiamas šovinys ir iššaunamas. Kai šovimo mechanizmas pasiekia eigos galą ir šaulys pajunta atatranką, antroji kulka jau būna išlėkusi iš vamzdžio. Todėl šaudant dvišūviais automato vamzdis nenukrypsta nuo taikymo linijos. Perskaičiuotas dvišūvio dažnis yra 1800 šūv./min.
+Šaudant paprastomis serijomis šovimo mechanizmas veikia įprastu būdu, vieno ciklo metu iššaunamas vienas šovinys (techninė šaudymo sparta – 600 šūv./min.). Šitaip šaudant atatranka nėra uždelsiama.
+
+
+=== Priedai ===
+Priedai:
+
+optinis ar naktinis taikiklis.
+povamzdinis granatsvaidis.
+peilinis durtuvas – tvirtinamas ne po vamzdžiu (ten vieta granatsvaidžiui), o dešinėje. Teigiama, kad taip pritvirtinto durtuvo horizontali geležtė geriau sminga į krūtinę tarp šonkaulių.
+
+
+=== Dėtuvės ===
+Automatui tinka trijų rūšių dėtuvės:
+
+30 šovinių talpos AK-74 dėtuvės
+45 šovinių talpos RPK-74 dėtuvės
+60 šovinių talpos naujai sukurtos ketureilės dėtuvės.
+
+
+== Naudojimo ypatumai ==
+Automatas labai taiklus, glaustai šaudo dvišūviais. Geras šaulys iš 100 m abiem kulkom pataiko į vieną tašką. Tai padidino automato kaunamąją ir šarvamušę gebas. Šaudant dvišūviais atatranka netrukdo, įmanoma šaudyti neįrėmus buožės į petį.
+Šaudant serijomis AN-94 taiklumas toks pat kaip ir AK-74.Šaudant po vieną šūvį AN-94 taiklumas nežymiai didesnis už AK-74, kadangi jo taikymo linija ilgesnė.
+Techniniai trūkumai:
+
+Labai sudėtinga konstrukcija – ardomas automatas išsiardo į 13 dalių (jų tarpe dvi spyruoklės, troselis, ritinėlis). Mokydamiesi ardyti AK kareiviai užtrunka iki 10 val., o mokantis ardyti AN-94 reikia savaičių. Nors ir sudėtingas automatas labai patikimas.
+Vamzdžio kompensatorius nepatogus valant ginklą.
+Dioptrinis taikiklis trukdo šaudant prieblandoje, lengvai užsiteršia.Organizaciniai trūkumai:
+
+AN-94 savo savybėmis pranoksta ne tik senesnius Kalašnikovo automatų modelius, bet ir nemažai užsienio analogų. Tačiau ginklo sudėtingumas ir apmokymo trukmė neleidžia jo naudoti šauktinių apginklavimui.
+AN-94 pranašumai pasireiškia ne šturmo atakose, o gynybiniuose veiksmuose, specialiose operacijose, kur svarbu ne tiek ugnies tankis, o pavieniai, taiklūs šūviai.AN-94 turi konkurentų, kurie labiau tinka masiniam perginklavimui. Vienas tokių automatų yra AEK-971, kuris trumpomis serijomis šaudo kiek prasčiau, negu AN-94, bet ilgomis serijomis šaudo taikliau, negu AK-74 ar AN-94, yra paprastesnis naudoti ir gaminti, pigesnis. Panašiomis savybėmis pasižymi ir modernizuoti Kalašnikovo automatai AK-107 ir AK-108.
+
+
+== Nuorodos ==
+AN-94 Abakan Archyvuota kopija 2007-05-05 iš Wayback Machine projekto. (lietuviškai)
+Автомат Никонова АН-94 (Абакан) (Россия) Archyvuota kopija 2006-10-03 iš Wayback Machine projekto., Nikonov AN-94 „Abakan“ assault rifle (Russia) Archyvuota kopija 2010-09-14 iš Wayback Machine projekto.
+Nikonov Assaul Rifle AN-94 Archyvuota kopija 2006-02-17 iš Wayback Machine projekto. (gamintojo tinklalapis)
+AN-94 Abakan
+Пуля в пулю
+Автомат АН-94 Archyvuota kopija 2014-12-25 iš Wayback Machine projekto.

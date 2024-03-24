@@ -1,0 +1,121 @@
+revision: 21643450
+title: computer
+url: https://fi.wikipedia.org/wiki/Tietokone
+
+
+---
+
+Tietokone on laite, joka käsittelee numeeris-loogista tietoa ohjelmointinsa mukaisesti. Arkikielessä tietokoneella tarkoitetaan yleensä yleiskäyttöistä laitetta, joka on tarkoitettu suorittamaan monenlaisia tietojenkäsittelytehtäviä. Myös esimerkiksi pelikonsolit ja matkapuhelimet ovat perusluonteeltaan tietokoneita, vaikka erikoistuneiden käyttötarkoitustensa takia niitä ei sellaisiksi yleensä kutsuta. Myös sulautetuissa järjestelmissä on laitteen sisällä tietokone, vaikka käyttäjä ei aina ole siitä edes tietoinen.
+Tietokoneiden edeltäjinä voidaan pitää yhtäältä reikäkorttien käsittelyyn tarkoitettuja reikäkorttikoneita ja toisaalta esimerkiksi mekaanisia laskimia. Ensimmäiset varsinaiset ohjelmoitavat tietokoneet rakennettiin 1940-luvulla ja niitä käytettiin muun muassa toisen maailmansodan aikaan salakirjoitusten murtamiseen (brittiläinen Colossus), tykistön ammusten ratojen laskentaan (yhdysvaltalainen ENIAC) ja lentokonesuunnittelun lujuuslaskentoihin (saksalainen Z3).
+
+
+== Tietokoneen toiminta ==
+
+Matematiikan professori Charles Babbage kehitti jo 1800-luvulla mekaanisen tietokoneen nimeltä Analyyttinen kone. Yksi tunnetuimmista tietokoneen matemaattisista malleista on Turingin kone, jonka kehitti englantilainen matemaatikko Alan Turing. Tietojenkäsittelyn ekvivalenssiperiaatteen mukaan kaikki tietokoneet pystyvät suoriutumaan samoista tehtävistä, mikäli käytössä on riittävästi tallennustilaa ja aikaa. Jos siis koneella tai formaalilla järjestelmällä (esimerkiksi ohjelmointikielellä) voi toteuttaa Turingin koneen, sillä voi toteuttaa myös minkä tahansa algoritmin tai ohjelman, jonka Turingin kone pystyy ratkaisemaan. 
+Nykyaikaiset yleiskäyttöiset tietokoneet perustuvat John von Neumannin mallin mukaiseen rakenteeseen. Erikoissovelluksissa voi olla käytössä Neumannin mallista poikkeavia tietokoneita. Esimerkiksi signaalinkäsittelyyn tarkoitetut suorittimet ovat usein Harvard-arkkitehtuurin mukaisia.
+Useimmat tietokoneet toteuttavat John von Neumannin mallia, jossa sekä ohjelma että sen käsittelemä tieto ovat samaan muistiin tallennettua dataa. Harvinaisemmassa Harvard-arkkitehtuurissa ohjelma ja sen käsittelemä tieto ovat omissa muisteissaan.Varhaisissa tietokoneissa käytettiin kymmenjärjestelmää ennen binäärijärjestelmän yleistymistä, jota von Neumann ehdotti EDVAC:in ratkaisuna.
+Nykyään suorittimien alkeellisimmat perusosat suorittavat Boolen algebraan kuuluvia perusoperaatioita. Koska Boolen algebra perustuu kahteen totuusarvoon, on luontevaa käyttää niitä kaiken käsiteltävän tiedon ilmaisemiseen: esimerkiksi lukuja on teknisesti yksinkertaisinta käsitellä, jos ne on esitetty binäärijärjestelmän avulla. Yksittäisestä totuusarvosta (binäärijärjestelmän numerosta 1 tai 0) käytetään nimitystä bitti (lyhenne englannin sanoista binary digit, binääriluku).Tietokoneen toimintaa ohjaa suoritin eli prosessori, joka tulkitsee konekielisiä käskyjä ja ohjaa niiden mukaan tietokoneen eri toimintoja. Suoritin suorittaa ohjelmaa lukemalla peräkkäisiä muistipaikkoja alueelta johon ohjelmakoodi on tallennettu, ja tulkitsemalla lukemansa bittijonot konekielisiksi käskyiksi. Käsky suorittaa yleensä jonkin yksinkertaisen alkeisoperaation, kuten luvun lukemisen muistipaikasta, kahden luvun välisen laskutoimituksen tai ohjelman suoritusosoitteen ehdollisen vaihtamisen. Käskyn suorituksen päätteeksi suorittimen sisäisissä muistipaikoissa, ns. rekistereissä sijaitsevat laskennan lopputulokset tallennetaan toisella käskyllä takaisin muistiin.
+Mekaanisten tietokoneiden (kuten Babbagen Analyyttinen tietokone) sijaan elektroniikkaan perustuvat tietokoneet yleistyivät. Digitaalinen tietokone korvasi analogiset tietokoneet.
+1940-luvulla tietokoneet olivat releisiin tai elektroniputkiin perustuvia. Näiden jälkeen tulivat transistoritietokoneet, joita seurasivat useita transistoreja integroivat mikropiireihin perustuvat tietokoneet. Nykyiset tietokoneet perustuvat integroituihin piireihin eli mikropiireihin. 
+Nykyään yhdelle mikropiirille integroitu mikroprosessori voi sisältää monta suoritinta – puhutaan suoritinytimistä tai vain ytimistä. Henkilökohtaisissa tietokoneissa on tyypillisesti 4–8 suoritinydintä yhdellä integroidulla piirillä.
+Suurissa palvelimissa ja supertietokoneissa suoritinytimiä on tuhansia.Suorittimien lisäksi tietokoneessa on yleensä myös muita piirejä tai apusuorittimia, jotka suorittavat erikoistuneempia tietojenkäsittelytehtäviä ja vapauttavat siten varsinaiset suorittimet näistä tehtävistä. Esimerkiksi:
+
+näytönohjain muuttaa näyttömuistiin tallennetun kuvan näyttölaitteelle sopivaksi ajoitetuksi signaaliksi; monet näytönohjaimet osaavat myös itse piirtää grafiikkaa näyttömuistiin. Käytännössä tällaiset laitteet sisältävät oman suorittimensa grafiikkaprosessorin ja monien näytönaohjainten grafiikkaprosessoreita voidaankin käyttää myös muun laskennan tukena silloin, kun niitä ei tarvita grafiikan muodostamiseen.
+Digitaalinen signaaliprosessori on erityisesti matkapuhelimissa ja verkkolaitteissa yleinen erikoispiiri, joka käsittelee jatkuvaa datavirtaa ja tekee sille operaatioita, esim. salauksen tai pakatun äänen purkamisen.Vaikka kaikki tietokoneet pystyvätkin periaatteessa suorittamaan samat tehtävät, jotkin ovat huomattavasti soveltuvampia joihinkin tehtäviin kuin toiset. Suorituskykyä erityyppisissä tehtävissä mitataan vertaillen profiloimalla ja suorituskykymittauksilla. Riittävän suorituskyvyn lisäksi merkittäviä tekijöitä ovat muun muassa koneen vakaus, vikasietoisuus, virrankulutus, fyysinen koko, ohjelmistoyhteensopivuus sekä hankinta- ja käyttökustannukset.
+Arkipuheessa tietokoneita asetetaan usein paremmuusjärjestykseen vertailemalla suoraan esimerkiksi suorittimien kellotaajuuksia. Kellotaajuus voi antaa suurpiirteisen vihjeen esimerkiksi henkilökohtaisen tietokoneen teknisestä iästä ja siten sen yleisestä suorituskyvystä ja luotettavuudesta useimmissa tehtävissä, mutta pelkkiin numeerisiin suureisiin katsominen voi esimerkiksi koneen ominaisuuksia arvioitaessa olla hyvinkin harhaanjohtavaa. Suorittimen arkkitehtuurilla on käytännössä erittäin suuri vaikutus siihen miten paljon työtä prosessori saa yhden kellojakson aikana tehtyä, ja mikä lopullinen suorituskyky tulee olemaan. Suurtietokoneiden painopiste on transaktioprosessoinnissa, jossa laitteisto I/O-nopeus voi olla merkittävämpi tekijä kuin suorittimen nopeus. Virran kulutus voi olla sulautetuissa järjestelmissä ja mobiililaitteissa merkittävämpi tekijä kuin suoritusnopeus.
+
+
+== Tietokoneiden luokittelu ==
+Historiallisesti tietokoneet on luokiteltu kokoluokan mukaan usein eri tavoin:
+
+Suurtietokone (mainframe)
+Minitietokone
+MikrotietokoneSupertietokoneella tarkoitetaan tietokonetta, joka valmistuessaan on tehokkaimpien tietokoneiden joukossa.
+Muita luokitteluja ovat muun muassa käyttötavan (mm. henkilökohtainen tietokone) ja teknisen ratkaisun mukaan.
+Tietokoneet on jaoteltu tekniikan mukaan eri sukupolviin.
+Tietokoneluokat syntyivät ensimmäisen ja toisen sukupolven tietokoneiden myötä ja kehittyivät kolmannen sukupolven suoritintekniikan myötä.
+Mikroprosessoreista on tullut yksittäinen määrittävä teknologia kaikissa tietokoneluokissa.
+
+
+== Tietokoneiden historia ==
+
+Tietokoneen kehitys vuosikymmenittäin
+
+1940-luvulla tietokone kehitetään ja niitä käyttävät vain valtiot, käyttötarkoituksena oli lähinnä sotilaskäyttö. Elektroniputki on yleinen tekniikka.
+1950-luku oli tietokoneen perustekniikan ja teorian kehityskautta, IBM julkistaa ensimmäisen sarjavalmisteisen tietokoneen. Transistori yleistyy.
+1960-luvulla puolijohteet alkoivat pienentää ja nopeuttaa tietokonetta. Havainto Mooren laista julkaistaan. Mikropiiri yleistyy. Ensimmäiset minitietokoneet kuten PDP-8.
+1970-luvulla tietokonetta käytetään lähinnä tekniseen laskentaan. Mikroprosessori yleistyy. "Vuoden 1977 kolmikko" Apple II, Commodore PET ja TRS-80 ja ensimmäiset mikrotietokoneet esitellään. Unix ja Berkeley Software Distribution julkaistaan.
+1980-luvulla mikrotietokoneet yleistyvät voimakkaasti. Isotkin tietokoneet olivat enää huonekalun kokoisia ja kirjoituskone korvautuu henkilökohtaisella tietokoneella.
+1990-luvulla tietokone muuttuu jokaisen pienyrityksen päivittäiseksi apuvälineeksi ja tietoliikenteen kehitys laajentaa käyttötapoja. Tietokone siirtyy myös osaksi autoja ja kodinkoneita.
+2000-luvulla tietokoneita käytetään työssä ja kotona päivittäin, kannettavat tietokoneet riittävät vaativiinkin työtehtäviin. Tietokone on olennainen väline monessa työssä ja tietokoneen rikkoutuminen estää työnteon konttoritöissä.
+2010-luvulla taulutietokoneet eli tabletit yleistyvät. Myös älypuhelimet kehittyvät voimakkaasti muuttuen käytännössä mobiilitietokoneiksi.
+
+
+== Ohjelmoitavuus ==
+Tietokoneen merkittävin etu taskulaskimeen verrattuna on mahdollisuus ohjelmoitavuuteen ja mahdollisuus suorittaa eri ohjelmia. Taskulaskimella on helppo laskea muutama luku yhteen, mutta tuhansien lukujen laskeminen on työlästä. Tietokoneohjelma suoriutuu tehtävästä lyhyellä komentosarjalla. Churchin–Turingin teesin mukaan "kaikki laskettavissa oleva on laskettavissa Turingin koneella." 
+Seuraava esimerkki on kirjoitettu MIPS-suorittimen assembly-kielellä. Kyseinen ohjelma laskee kokonaislukujen 1 – 1000 summan:
+
+
+== Tietokonearkkitehtuuri ==
+Tietokonearkkitehtuureista yleisimmät ovat Von Neumannin arkkitehtuuri ja Harvardin arkkitehtuuri. Näiden lisäksi on muita luokitteluja.
+
+
+== Tietokoneen osat ==
+
+Tietokonejärjestelmään kuuluvat
+
+ohjelmisto ("softa", engl. software)
+laitteisto ("rauta", engl. hardware).
+
+
+=== Ohjelmisto ===
+Ohjelmisto jaetaan edelleen
+
+kiinteisiin laiteohjelmiin (engl. firmware), jotka kytkeytyvät laitteistoon ja säätelevät muun muassa tietokoneen käynnistymisen alkuvaiheita
+käyttöjärjestelmään, joka käsittelee laitteistoa ja useita muita toimintoja sovellusohjelmien puolesta
+käyttöjärjestelmän päällä toimiviin sovellusohjelmiin
+
+
+=== Laitteisto ===
+Tietokoneen laitteiston perusrakenne (niin sanottu Von Neumannin arkkitehtuuri) on säilynyt suunnilleen samana aina 1940-luvulta asti. Laitteistoon kuuluvat
+
+suoritin (prosessori, engl. processor), joka suorittaa ohjelmaa
+muisti (engl. data storage), johon tallentuvat sekä ohjelmat että niiden käyttämät tiedot
+oheislaitteet (engl. peripheral device), joita voidaan käyttää tiedon syöttöön ja tulostukseen
+
+
+== Tietokoneen tulevaisuudesta ==
+Mooren lakina tunnettu kehitys on ollut voimassa useita vuosikymmeniä, mutta kehitys on hidastunut. Painopiste on siirtynyt suurempaan rinnakkaisuuteen ja tämä vaikuttaa myös ohjelmistojen kehitystapaan.Tämä kehitys merkitsee:lähde?
+teknisen älykkyyden radikaalin kasvun jatkumista (ks. Epistemologia: Tekninen ja inhimillinen tieto)
+yhä älykkäämpien, suurempien ja ajantasaisempien tehtävien siirtymistä tietokoneille
+tekniikan ja ihmiskunnan tietokoneistumista.Tietokoneiden tulevaisuus on tietokoneverkoissa. Mullistusta tietokonetekniikassa on esitetty kvanttitietokoneista.
+
+
+== Katso myös ==
+Luettelo käyttöjärjestelmistä
+Oheislaiteliitännät
+Tietotekniikka
+Kannettava tietokone
+Minitietokone
+Tietokoneverkot
+Supertietokone
+Sulautettu järjestelmä
+Tietokonesimuloinnin keinot
+Tietokoneet ja mallintaminen
+Suomen ensimmäiset tietokoneet
+Amiga
+Henkilökohtainen tietokone
+Macintosh
+Puolijohdeteollisuus
+Viihde-elektroniikka
+
+
+== Lähteet ==
+
+
+== Kirjallisuutta ==
+Davis, Martin: Tietokoneen esihistoria Leibnizista Turingiin.    Helsinki: Art House, 2003. ISBN 951-884-364-3.     
+R. Pekka Malinen: Tietojenkäsittelyoppi. Tiedon portaat (8. osa).    Porvoo: Werner Söderström Oy, 1970.      
+
+
+== Aiheesta muualla ==

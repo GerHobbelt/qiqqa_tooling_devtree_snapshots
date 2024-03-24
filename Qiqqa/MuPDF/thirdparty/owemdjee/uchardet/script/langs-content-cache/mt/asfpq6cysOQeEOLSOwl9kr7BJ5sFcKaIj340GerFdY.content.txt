@@ -1,0 +1,122 @@
+revision: 282425
+title: "Indi\u010Bi"
+url: https://mt.wikipedia.org/wiki/Indi%C4%8Bi
+
+
+---
+
+Indiċi huwa lista ta' kliem jew frażijiet ("intestaturi") u indikaturi assoċjati ("lokalizzaturi") fejn materjal utli relatat mal-intestatura jista' jinstab f'dokument jew f'ġabra ta' dokumenti. Xi eżempji huma l-indiċi fl-aħħar ta' ktieb u l-indiċi li jservi bħala katalgu tal-librerija.
+F'indiċi tradizzjonali fl-aħħar paġni ta' ktieb, l-intestaturi jinkludu l-ismijiet tan-nies, il-postijiet, l-avvenimenti u l-kunċetti magħżula minn min iwettaq l-indiċjar għaliex iqishom rilevanti u ta' interess għall-qarrejja tal-ktieb. Min iwettaq l-indiċjar jista' jkun l-awtur, l-editur, jew parti terza professjonali li twettaq dan ix-xogħol. L-indikaturi tipikament ikunu n-numri tal-paġni, in-numri tal-paragrafi jew in-numri tat-taqsimiet.
+F'katalgu tal-librerija, il-kliem ikun l-awturi, it-titli, l-intestaturi tas-suġġetti, eċċ., u l-indikaturi jkunu numri indikattivi. Il-magni tat-tiftix fuq l-internet (bħal Google) u t-tiftix fit-test kollu jgħinu biex ikun hemm aċċess għall-informazzjoni iżda mhumiex selettivi daqs indiċi, peress li jipprovdu ħoloq mhux rilevanti, u jaf iħallu barra xi informazzjoni rilevanti jekk ma tkunx espressa b'mod li jista' jiġi identifikat jew imbassar minn magna.X'aktarx li l-iktar investigazzjoni avvanzata tal-kwistjonijiet relatati mal-indiċi tal-kotba ssir fl-iżvilupp tal-mapep skont is-suġġetti, li bdiet bħala mod kif jiġu rrappreżentati l-istrutturi tal-għarfien inerenti fl-indiċi tradizzjonali fl-aħħar tal-kotba. Il-kunċett integrat fl-indiċi tal-kotba ntuża wkoll għall-indiċi tal-bażijiet tad-data, li bl-istess mod jipprovdi mod sistematiku kif wieħed ifittex l-informazzjoni f'kollezzjoni kbira, għalkemm f'dan il-każ ikun għall-użu informatiku iktar milli għall-bnedmin.
+
+
+== Etimoloġija u plural ==
+Il-kelma oriġinat mil-Latin, fejn index tfisser "wieħed li jindika", "indikazzjoni", jew "it-tieni saba' jew il-werrej".
+Bil-Latin, il-plural tal-kelma huwa indices. Bil-Malti, il-plural "indiċijiet" jintuża kemm għall-plural kif ukoll għal kuntesti matematiċi u informatiċi, u xi kultant għal kuntesti bibljografiċi – pereżempju, f'Women in World History: A Biographical Encyclopedia (1999-2002) li fih 17-il volum.Il-plural jintuża ferm ukoll fl-industrija tal-pubblikazzjoni; fl-Istandard Internazzjonali ISO 999, Informazzjoni u dokumentazzjoni – Linji gwida għall-kontenut, għall-organizzazzjoni u għall-preżentazzjoni tal-indiċijiet.
+
+
+== Proċess tal-indiċjar ==
+
+
+=== Indiċjar konvenzjonali ===
+Min iwettaq l-indiċjar jaqra t-test kollu u jidentifika kunċetti tajbin għall-indiċi (dawk li t-test jipprovdi informazzjoni utli dwarhom u li jaf ikunu rilevanti għall-qarrejja tal-ktieb). Min iwettaq l-indiċjar joħloq intestaturi tal-indiċi biex jirrappreżenta dawk il-kunċetti, u jinkitbu b'tali mod li jkunu jistgħu jinstabu skont l-ordni alfabetika (għaldaqstant, pereżempju, wieħed jikteb "proċess tal-indiċjar" u mhux "kif toħloq indiċi"). Dawn l-intestaturi u l-lokalizzaturi assoċjati magħhom (l-indikaturi għall-pożizzjonament fit-test) jiddaħħlu f'software tal-indiċjar speċjalizzat li jieħu ħsieb l-ifformattjar tal-indiċi u jiffaċilita l-fażi tal-editjar. L-indiċi mbagħad jiġi editjat biex tiġi imposta l-konsistenza fl-indiċi kollu.
+Min iwettaq l-indiċjar irid janalizza t-test biex jippermetti l-preżentazzjoni ta' kunċetti u ta' ideat fl-indiċi li jaf ma jkunux imsemmija fit-test. L-indiċi huwa maħsub biex jgħin lill-qarrej, lir-riċerkatur, jew lill-professjonist tal-informazzjoni, iktar milli lill-awtur, isibu l-informazzjoni, allura min iwettaq l-indiċjar b'mod professjonali irid jaġixxi bħala pont bejn it-test u l-utent aħħari tiegħu.
+F'diversi pajjiżi fosthom l-Istati Uniti, skont it-tradizzjoni l-indiċi ta' ktieb mhux fizzjoni jkun responsabbiltà tal-awtur, iżda l-biċċa l-kbira tal-awturi fil-fatt ma jagħmlux l-indiċjar. Ħafna mill-indiċjar isir minn ħaddiema esterni li jiġu impjegati mill-awturi, mill-pubblikaturi jew minn negozju indipendenti li jieħu ħsieb il-produzzjoni ta' ktieb, jew minn min jieħu ħsieb l-ippakkjar tal-kotba. Xi pubblikaturi u kumpaniji tal-bażijiet tad-data jimpjegaw lil ħaddiema apposta biex iwettqu l-indiċjar.Qabel ma kien jeżisti s-software tal-indiċjar, l-indiċijiet kienu jinħolqu bl-użu ta' karti jew iktar tard ta' karti tal-indiċjar. Wara li kienu jimtlew mijiet ta' karti ta' dan it-tip (sakemm min iwettaq l-indiċjar jaqra l-ktieb minn qoxra sa qoxra), dawn imbagħad kienu jitpoġġew bl-idejn f'ordni alfabetika, u b'hekk kienu jservu bħala manuskritt għall-impaġnar u għall-istampar tal-indiċi.
+
+
+== Software tal-indiċjar ==
+Hemm software disponibbli biex jgħin lil min iwettaq l-indiċjar jibni indiċi ta' ktieb. Jeżistu diversi programmi tas-software tal-indiċjar apposta li jgħinu biex jiġu ssodisfati l-ħtiġijiet speċjali tal-għażla u tal-ikkupjar involuti fit-tħejjija tal-indiċi.
+
+
+=== Indiċjar inkorporat ===
+L-indiċjar inkorporat jinvolvi l-inklużjoni tal-intestaturi tal-indiċi f'nofs it-test innifsu, iżda mdawra b'kodiċijiet sabiex normalment ma jintwerewx. Indiċi li jista' jintuża mbagħad jiġi ġġenerat awtomatikament mit-test inkorporat billi tintuża l-pożizzjoni tal-intestaturi inkorporati biex jiġu ddeterminati l-lokalizzaturi. Għalhekk, meta l-impaġnar jinbidel, l-indiċi jista' jiġi ġġenerat mill-ġdid bil-lokalizzaturi l-ġodda.
+Id-dokumenti LaTeX jappoġġaw l-indiċijiet inkorporati primarjament permezz tal-pakkett MakeIndex. Diversi XML DTDs li jintużaw b'mod mifrux, inkluż DocBook u TEI, għandhom elementi li jippermettu l-ħolqien ta' indiċi direttament fil-fajls XML. Il-biċċa l-kbira tas-software tal-ipproċessar tat-testi, bħal StarWriter/OpenOffice.org Writer, Microsoft Word, u WordPerfect, kif ukoll xi software tal-pubblikazzjoni elettronika (pereżempju, FrameMaker u InDesign), kif ukoll għodda oħra (pereżempju, Flare ta' MadCap Software), għandhom xi faċilità għall-indiċjar inkorporat ukoll. TExtract u IndexExploit jappoġġaw l-indiċjar inkorporat tad-dokumenti tal-Microsoft Word.Indiċi inkorporat jeħtieġ iktar żmien biex jinħoloq minn indiċi statiku konvenzjonali; madankollu, fit-tul indiċi inkorporat jista' jiffranka l-ħin meta l-materjal jiġi aġġornat jew impaġnat mill-ġdid. Dan għaliex, b'indiċi statiku, anke jekk jinbidlu ftit paġni, l-indiċi kollu jkollu jiġi revedut jew jinħoloq mill-ġdid filwaqt li b'indiċi inkorporat, il-paġni li jkunu nbidlu biss ikunu jeħtieġu aġġornament jew indiċjar.
+
+
+== Skop ==
+L-indiċijiet jiġu mfassla wkoll biex jgħinu lill-qarreja jsibu l-informazzjoni malajr u faċilment. Indiċi komplut u tassew utli mhuwiex sempliċement lista tal-kliem u tal-frażijiet li ntużaw f'pubblikazzjoni (li teknikament tissejjaħ konkordanza), iżda mappa organizzata tal-kontenut tagħha, inkluż kontroreferenzi, raggruppament ta' kunċetti simili, u xi analiżi intellettwali utli oħra.
+Silta minn eżempju ta' indiċi bl-Ingliż fl-aħħar ta' ktieb:
+
+sage, 41–42. See also Herbs ← directing the reader to related terms
+Scarlet Sages. See Salvia coccinea ← redirecting the reader to term used in the text
+shade plants ← grouping term (may not appear in the text; may be generated by indexer)
+hosta, 93 ← subentries
+myrtle, 46
+Solomon's
+sunflower, 47 ← regular entryFil-kotba, l-indiċijiet ġeneralment jitpoġġew fl-aħħar (dan huwa komunement magħruf bħala indiċjar fl-aħħar tal-ktieb). Dawn jikkomplementaw il-werrej billi jippermettu l-aċċess għall-informazzjoni skont is-suġġetti speċifiċi, filwaqt li l-listi tal-kontenut jippermettu l-aċċess permezz ta' diviżjonijiet wesgħin tat-test irranġati skont l-ordni kif jidhru fil-ktieb. Ġie rrimarkat li, filwaqt li "mal-ewwel daqqa t'għajn, l-indiċi jidher bħala l-iktar parti xotta tal-ktieb, iżda wara spezzjoni iktar mill-qrib l-indiċi jista' jipprovdi kemm interess kif ukoll divertiment minn żmien għal żmien".
+
+
+== Kwalità tal-indiċi ==
+Xi prinċipji ta' indiċjar tajjeb jinkludu:
+L-iżgurar li is-suġġetti/it-taqsimiet jinkludu varjetà ta' entrati rilevanti fl-indiċi; ikun hemm żewġ jew tliet entrati għal kull suġġett
+Il-fehim tal-udjenza u l-fehim ta' x'tip ta' entrati fl-indiċi x'aktarx tfittex l-udjenza
+L-użu tal-istess stil fl-indiċi kollu (singular vs plural, kapitalizzazzjoni, eċċ.), billi jintużaw il-konvenzjonijiet tal-indiċjar standardNuqqasijiet fl-indiċjar (mhux daqstant ta' kwalità tajba):
+
+Suġġetti sinifikanti mingħajr entrati fl-indiċi
+Indiċjar żejjed mhux għax entrata tkun sinifikanti iżda sempliċement għax tissemma fil-ktieb
+Kontroreferenzi ċirkolari jiġifieri li jwasslu għal xulxin u ma jkunux ta' valur miżjud
+Referenzi għal diskussjonijiet ta' suġġett wieħed imxerrdin fost diversi intestaturi ewlenin
+Indiċjar ta' suġġetti simili b'mod inkonsistenti
+Taħwid ta' ismijiet simili
+Ordni alfabetika mhux korretta
+Inverżjonijiet mhux xierqa
+Subintestaturi mhux xierqa
+Indiċjar elettroniku abbażi tal-intestaturi tat-taqsimiet
+
+
+== Rwoli ta' min iwettaq l-indiċjar ==
+Uħud li jwettqu l-indiċjar bħala professjoni jispeċjalizzaw f'formati speċifiċi, bħal kotba akkademiċi, mikroformoli, indiċjar tat-testi online, l-indiċjar tal-magni tat-tiftix, l-indiċjar tal-bażijiet tad-data (l-applikazzjoni ta' vokabularju kkontrollat prestabbilit bħal MeSH għal artikoli li jridu jiġu inklużi f'bażi tad-data), u l-indiċjar tal-gazzetti, tal-ġurnali u tar-rivisti.Uħud li jwettqu l-indiċjar bħala professjoni u li jkollhom l-esperjenza fil-vokabularji kkontrollati ħafna drabi jaħdmu wkoll bħala tassonomisti u bħala ontoloġisti.
+Uħud jispeċjalizzaw f'oqsma partikolari, bħall-antropoloġija, in-negozju, il-kompjuters, l-ekonomija, l-edukazzjoni, id-dokumenti tal-gvern, l-istorja, il-liġi, il-matematika, il-mediċina, il-psikoloġija u t-teknoloġija. Prattikament wieħed jista' jwettaq l-indiċjar ta' kwalunkwe suġġett.
+
+
+== Referenzi fil-kultura popolari ==
+F'Il-Librerija ta' Babel, storja qasira ta' Jorge Luis Borges, hemm indiċi ta' indiċijiet li jikkataloga l-kotba kollha fil-librerija, li fiha l-kotba kollha possibbli.
+Ir-rumanz ta' Kurt Vonnegut Cat's Cradle jinkludi personaġġ li jwettaq l-indiċjar bħala professjoni u jemmen li "l-indiċjar huwa xi ħaġa li awtur li jkun tassew dilettant iwettaq għall-ktieb tiegħu stess". Il-personaġġ isostni li kapaċi jifhem il-karattru ta' awtur permezz tal-indiċi li jkun ħoloq għat-test tiegħu stess, u jwissi lin-narratur li awtur, "Qatt ma għandek twettaq l-indiċjar tal-ktieb tiegħek stess".
+Il-ktieb ta' Vladimir Nabokov Pale Fire jinkludi parodija ta' indiċi, li tirrifletti l-ġenn tan-narratur.
+Ir-rumanz ta' Mark Danielewski House of Leaves jinkludi indiċi eżawrjenti u twil 41 paġna ta' kliem fir-rumanz, inkluż anke listi kbar ta' kliem bħal bħal, u, u l-artiklu.
+The Index ta' J. G. Ballard huwa storja qasira li tiġi rrakkontata permezz ta' forma ta' indiċi ta' awtobijografija "mhux ippubblikata u forsi mħassra".
+
+
+== Standards ==
+ISO 999: Linji Gwida tal-1996 għall-Kontenut, għall-Organizzazzjoni, u għall-Preżentazzjoni tal-Indiċijiet (dan huwa wkoll l-istandard nazzjonali fir-Renju Unit, fl-Awstralja, u f'New Zealand)
+
+
+== Għaqdiet ==
+L-Għaqda Amerikana għall-Indiċjar (ASI - American Society for Indexing) hija assoċjazzjoni nazzjonali mwaqqfa fl-1968 biex tippromwovi l-eċċellenza fl-indiċjar u żżid is-sensibilizzazzjoni tal-valur ta' indiċijiet imfassla tajjeb. L-ASI taqdi lill-indiċizzaturi, lil-librara, lill-astratturi, lill-edituri, lill-pubblikaturi, lill-produtturi tal-bażijiet tad-data, lill-fittiexa tad-data, lill-iżviluppaturi tal-prodotti, lill-kittieba tekniċi, lill-professjonisti akkademiċi, lir-riċerkaturi u lill-qarrejja, u lil oħrajn li għandhom x'jaqsmu mal-indiċjar. Hija l-unika organizzazzjoni professjonali fl-Istati Uniti ddedikata biss għall-avvanzar tal-indiċjar, tal-astrazzjoni u għal metodi relatati ta' rkupru tal-informazzjoni.
+Għaqdiet simili oħra jinkludu:
+
+l-Assoċjazzjoni tal-Professjonisti tal-Indiċjar u tal-Bibljografi tan-Nofsinhar tal-Afrika (ASAIB)
+l-Għaqda Awstraljana u ta' New Zealand tal-Professjonisti tal-Indiċjar
+il-British Record Society
+l-Għaqda Ċiniża tal-Professjonisti tal-Indiċjar
+in-Network Ġermaniż tal-Professjonisti tal-Indiċjar/Deutsches Netzwerk der Indexer (DNI)
+l-Għaqda tal-Indiċjar tal-Kanada/Société canadienne d'indexation (ISC/SCI)
+in-Network tal-Professjonisti tal-Indiċjar tan-Nederlands (NIN)
+l-Għaqda tal-Professjonisti tal-Indiċjar
+
+
+== Iktar Qari ==
+Booth, Pat (2001) Indexing: The Manual of Good Practice (K. G. Saur), ISBN 3-598-11536-9
+Borko, Harold & Bernier, Charles L. (1978) Indexing Concepts and Methods, ISBN 0-12-118660-1
+Browne, Glenda and Jermey, Jon (2007), The Indexing Companion (Cambridge University Press), ISBN 978-0-521-68988-5
+Diodato, V. (1994). User preferences for features in back of book indexes. Journal of the American Society for Information Science. 45(7), 529–536.
+Diodato, V. & Gandt, G. (1991). Back of book indexes and the characteristics of author and nonauthor indexing: Report of an exploratory study. Journal of the American Society for Information Science. 42(5), 341–350.
+Enser, P. G. B. (1985). Automatic classification of book material represented by back-of-the-book index. Journal of Documentation. 41(3), 135–155.
+Fugmann, R. (2006). Das Buchregister Methodische Grundlagen und praktische Anwendung. Frankfurt am Main: DGI. (DGI Schrift; Informationswissenschaft – 10).
+Grosch, A. N. (1986). Index-aid: Computer assisted back-of-the-book indexing. Electronic Library. 4(5), 278–280.
+Hornyak, B. (2002). Indexing Specialties: Psychology. Medford, NJ : Information Today, Inc.
+Kendrick, P. & Zafran, E. L. (Eds.). (2001). Indexing Specialties: Law. Medford, NJ : Information Today, Inc.
+Mulvany, Nancy (2005) Indexing Books, 2nd ed. (University of Chicago Press) ISBN 0-226-55276-4
+School of Library, archival and information studies, The University of British Columbia. Indexing resources on the WWW. Back-of-the-Book indexing. Hentet fra: https://web.archive.org/web/20140805233922/http://www.slais.ubc.ca/resources/indexing/backof2.htm
+Schütze, H. (1998). The Hypertext Concordance: A Better Back-of-the-Book Index. I: Proceedings of Computerm ´98 (Montreal, Canada, 1998). D. Bourigault, C. Jacquemin, and M.-C. L´Homme, Eds., pp. 101–104.
+Smith, Sherry & Kells, Kari (2005) Inside Indexing: the Decision-Making Process (Northwest Indexing Press), ISBN 0-9771035-0-1
+Stauber, Do Mi (2004) Facing the Text: Content and Structure in Book Indexing (Cedar Row Press) ISBN 0-9748345-0-5
+Towery, M. (Ed.). (1998). Indexing Specialties: History. Medford, NJ: Information Today, Inc.
+Wellisch, Hans (1995) Indexing from A to Z, 2nd ed. (H. W. Wilson) ISBN 0-8242-0807-2
+Wellisch, Hans, H. (1986). "The Oldest Printed Indexes." The Indexer vol 15 no 2 October., pp. 1–10.
+Witty, F. J. (1965). Early indexing techniques. Library Quarterly 35, 141–148.
+Wu, Z. etc. (2013). Can Back-of-the-Book Indexes be Automatically Created? In Proceedings of CIKM 2013. San Francisco, CA, USA.
+Wyman, L. P. (Ed.). (1999). Indexing Specialities: Medicine. Medford, NJ: Information Today, Inc.
+
+
+== Referenzi ==

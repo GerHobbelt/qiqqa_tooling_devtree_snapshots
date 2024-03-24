@@ -1,0 +1,43 @@
+revision: 26036108
+title: Calendar
+url: https://hu.wikipedia.org/wiki/Google_Calendar
+
+
+---
+
+A Google Calendar, a magyar változatban Google Naptár a Google ingyenes, online naptárszolgáltatása, hasonló a Yahoo! és az MSN által kínált naptárakhoz. 2006. április 13-án kezdődött meg a nyilvános bétatesztelése. Bár a Gmail-lel integrált szolgáltatás teljes kihasználásához Gmail postafiókra van szükség, a használatához elegendő egy ingyenes Google számlával rendelkezni.
+
+
+== Képességek ==
+A Google Calendar felhasználói felülete hasonló a tipikus naptár/csoportmunka-szoftverekéhez, mint például az iCal. Az Ajax-alapú felület lehetővé teszi a naptárbejegyzések megtekintését vagy hozzáadását a teljes oldal újratöltése nélkül, és számos nézetet kínál fel, köztük napi, heti, havi vagy négynapos bontásokat, illetve a havi időbeosztásból kijelölt elemeket egyéni nézetben is meg lehet tekinteni. Bármelyik eseményhez hozzá lehet fűzni megjegyzéseket.
+Az események online tárolódnak – így ha a merevlemez tönkremegy, akkor sem vesznek el az adatok. A Google Calendar támogatja az import-exportot az Apple iCal-jából (.ics, a de facto nyílt naptárformátum) és az importálást az Outlookból (.csv, angol nyelvi beállítások mellett egyelőre, és nem túl sok tétel esetén).
+A Google Calendar lehetővé teszi, hogy a felhasználó eseményeket (találkozókat) írjon be a naptárába, és azokat vagy egy részüket megossza barátaival, vagy akár az egész világgal. Felhasználói felülete az 1998-ban elindított Yahoo Calendarhoz hasonlít, azzal a különbséggel, hogy a Yahoo Calendar nem támogatja a bejegyzések megosztását, és nem sokat változtattak rajta indulása óta.
+Több naptárat lehet hozzáadni és megosztani, az egyes felhasználóknak többszintű jogosultságokat lehet kiosztani (csak a foglaltsági adatokat látja / meg tudja tekinteni a teljes naptárbejegyzést / módosítani is tudja azt). Ezzel lehetővé válik csoportmunkára való használata is. Különböző általános naptárok is rendelkezésre állnak, különböző államok és vallások nemzeti ünnepeivel.
+A Google Calendart integrálták a Gmaillel, a Google webes e-mail szolgáltatásával. Ha egy e-mail tartalmaz bizonyos kulcsszavakat (például a „meeting” szót, vagy dátumokat és időpontokat), a levél mellett automatikusan megjelenik egy „add to calendar” gomb.
+A Google Calendar egyik legfontosabb képessége a beépített (angol) nyelvi intelligencia, ami lehetővé teszi az események egyszerű bevitelét. Így az angolul beszélő felhasználó a Quick Add gomb segítségével egyszerűen csak beírja, hogy „leave work today at 5 p.m.” vagy „drinks Thursday with Elinor,” és a rendszer a dátum és helyinformációkat értelmezve tárolja a naptárbejegyzést. Az eseményeket egyszerűen meg lehet hosszabbítani vagy át is lehet ütemezni a megfelelő téglalapok átméretezésével vagy arréb húzásával a naptárnézetben.
+A felhasználók kereshetnek a naptárban kulcsszavakra, eseményekre vagy a résztvevők nevére. Az eseményekről a rendszer sok országban, így Magyarországon is képes SMS-ben értesítőt küldeni. Ezenkívül bármilyen e-mail címre vagy amerikai mobilszámra (SMS-ben) meghívót küldhetnek az eseményről, és a Google Calendar számon tartja a visszaigazolásokat.
+
+
+== Kompatibilitás ==
+Mivel a Google Calendar egy webes alkalmazás, gyakorlatilag bármilyen operációs rendszert támogat, feltéve hogy azon futtatható egy az Ajax technológiához kellően fejlett webböngésző.
+
+
+== Üzleti felhasználás ==
+A naptár alkalmazást a Google Apps csomag keretén belül üzleti felhasználóknak is kínálja a Google. A céges fiókokkal rendelkezők (ami pénzbe kerül) a következő plusz szolgáltatásokat vehetik igénybe:
+
+Erőforrások kezelése: az események létrehozásakor beállítható, hogy szükség van-e egy adott erőforrásra (pl. projektor, tárgyaló stb.). Az alkalmazással ellenőrizhető, hogy az igényelt erőforrás szabad-e az esemény időtartamában.
+Google Calendar Connector Kit: segítségével Microsoft Exchange szerverekről is le tudja olvasni a szolgáltatás a foglaltsági információkat (free/busy), illetve az Exchange szerverek is elérhetik a Calendar hasonló információit.
+Céges fiókok központi szabályozása: a céges domainen belüli fiókoknál központilag be lehet állítani, hogy milyen mértékben hozhatók nyilvánosságra a naptárak. Pl. csak a foglaltsági információkat, vagy egész naptárakat is publikussá tehetnek-e a felhasználók.
+Saját domain támogatása: lehetőség van saját webcímen keresztül elérni a szolgáltatást, a megfelelő DNS beállítások elvégzése után. Pl. calendar.cegneve.hu
+
+
+== További információk ==
+Google Calendar
+Google Calendar Tour
+Elindult a Google Calendar – it.news
+Virtuális naptárral bővül a Gmail – index.hu
+An unofficial screenshot tour of the software
+Unofficial Google Calendar source code Class and Function reference
+
+
+== Források ==

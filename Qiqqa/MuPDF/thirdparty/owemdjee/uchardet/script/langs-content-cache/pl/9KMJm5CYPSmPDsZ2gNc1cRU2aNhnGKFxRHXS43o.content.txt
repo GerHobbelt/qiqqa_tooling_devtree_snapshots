@@ -1,0 +1,2681 @@
+revision: 70661869
+title: Wielomian
+url: https://pl.wikipedia.org/wiki/Wielomian
+
+
+---
+
+Wielomian (inaczej suma algebraiczna) – wyrażenie algebraiczne będące sumą jednomianów; używane w wielu działach matematyki. Przykładowo w analizie matematycznej pomocne jest przedstawienie funkcji danego rodzaju w postaci ciągu wielomianów (bądź szeregu), w algebrze są one centralnym punktem zainteresowań w teorii Galois, a stąd służą w geometrii jako środek dowodowy przy wykazywaniu konstruowalności różnych obiektów; służą też kodowaniu własności rozmaitych obiektów (np. wielomian charakterystyczny przekształcenia liniowego).
+
+
+== Definicja ==
+Dla danej nieujemnej liczby całkowitej n wielomianem stopnia n zmiennej x jest wyrażenie w postaci:
+
+  
+    
+      
+        
+          a
+          
+            n
+          
+        
+        
+          x
+          
+            n
+          
+        
+        +
+        
+          a
+          
+            n
+            −
+            1
+          
+        
+        
+          x
+          
+            n
+            −
+            1
+          
+        
+        +
+        …
+        +
+        
+          a
+          
+            1
+          
+        
+        x
+        +
+        
+          a
+          
+            0
+          
+        
+        =
+        
+          ∑
+          
+            i
+            =
+            0
+          
+          
+            n
+          
+        
+        
+          a
+          
+            i
+          
+        
+        
+          x
+          
+            i
+          
+        
+        ,
+      
+    
+     
+  gdzie 
+  
+    
+      
+        
+          a
+          
+            0
+          
+        
+        ,
+        
+          a
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          a
+          
+            n
+          
+        
+      
+    
+     
+   są współczynnikami wielomianu oraz 
+  
+    
+      
+        
+          a
+          
+            n
+          
+        
+        ≠
+        0.
+      
+    
+     
+  
+
+
+== Zarys ==
+Niezerowy wielomian można zapisać jako wyraz lub sumę wyrazów, przy czym ich liczba musi być skończona. Każdy z takich wyrazów składa się ze stałej, nazywanej współczynnikiem, pomnożonej przez pewną (nawet zerową) liczbę zmiennych oznaczanych zwykle literami. Współczynnik może być liczbą dowolnego rodzaju: całkowitą, wymierną, rzeczywistą, zespoloną. Wielomian nazywa się całkowitym, wymiernym, rzeczywistym lub zespolonym w zależności od zbioru, z którego pochodzą jego współczynniki.
+Wielomian jest asymptotycznie dodatni, jeśli współczynnik przy wyrazie 
+  
+    
+      
+        
+          a
+          
+            n
+          
+        
+      
+    
+     
+   jest dodatni. Jeśli współczynnik przy wyrazie 
+  
+    
+      
+        
+          a
+          
+            n
+          
+        
+      
+    
+     
+   jest ujemny, wielomian jest asymptotycznie ujemny.
+Niezerowy wyraz bez zmiennych ma stopień 0 i nazywany jest wyrazem wolnym. Stopniem wyrazu (niezerowego) nazywa się sumę stopni wszystkich zmiennych tego wyrazu. Wielomian nazywa się jednorodnym, jeśli wszystkie jego wyrazy są tego samego stopnia. Stopniem wielomianu (niezerowego) nazywa się największy stopień wyrazu i oznacza symbolem 
+  
+    
+      
+        deg
+      
+    
+     
+  . Jeżeli istnieje tylko jeden wyraz o najwyższym stopniu, to współczynnik przy nim stojący nazywa się najstarszym lub wiodącym. Wielomian unormowany (bądź moniczny, od ang. monic) to wielomian, którego najstarszy współczynnik jest równy jedności.
+Dla niezerowych wielomianów 
+  
+    
+      
+        f
+        ,
+        g
+      
+    
+     
+   zachodzą zależności:
+
+  
+    
+      
+        deg
+        ⁡
+        (
+        f
+        +
+        g
+        )
+        ⩽
+        max
+        (
+        deg
+        ⁡
+        f
+        ,
+        deg
+        ⁡
+        g
+        )
+        ,
+      
+    
+     
+  
+
+  
+    
+      
+        deg
+        ⁡
+        (
+        f
+        g
+        )
+        =
+        deg
+        ⁡
+        f
+        +
+        deg
+        ⁡
+        g
+      
+    
+     
+  .Zwyczajowo wielomian składający się z jednego wyrazu nazywa się jednomianem, z dwóch – dwumianem, a trzech – trójmianem. Często wielomiany, których stopień wynosi 
+  
+    
+      
+        0
+        ,
+        1
+        ,
+        2
+        ,
+        3
+        ,
+      
+    
+     
+   nazywa się odpowiednio: stałym, liniowym, kwadratowym, sześciennym (związane jest to z własnościami funkcji wielomianowych z nimi skojarzonymi, zob. dalej).
+
+
+=== Przykład ===
+Wyrażenie
+
+  
+    
+      
+        −
+        5
+        
+          x
+          
+            2
+          
+        
+        y
+      
+    
+     
+  jest wyrazem. Jego współczynnikiem jest 
+  
+    
+      
+        −
+        5
+        ,
+      
+    
+     
+   zmiennymi są 
+  
+    
+      
+        x
+      
+    
+     
+   oraz 
+  
+    
+      
+        y
+        ,
+      
+    
+     
+   przy czym stopień zmiennej 
+  
+    
+      
+        x
+      
+    
+     
+   wynosi dwa, zaś zmiennej 
+  
+    
+      
+        y
+      
+    
+     
+   równy jest jeden. Stopniem całego wyrazu jest suma stopni zmiennych, stąd stopień powyższego wyrazu równy jest 3. Może więc być on traktowany jako jednomian, a zatem i wielomian.
+Wielomian jest sumą wyrazów. Następujące wyrażenie jest wielomianem:
+
+  
+    
+      
+        
+          
+            
+              
+                3
+                
+                  x
+                  
+                    2
+                  
+                
+              
+              ⏟
+            
+          
+          
+            
+              
+                
+                  
+                    
+                      w
+                      y
+                      r
+                      a
+                      z
+                    
+                  
+                
+                
+                  
+                    
+                      1
+                    
+                  
+                
+              
+            
+          
+        
+        
+          
+            
+              
+                −
+                
+                5
+                x
+              
+              ⏟
+            
+          
+          
+            
+              
+                
+                  
+                    
+                      w
+                      y
+                      r
+                      a
+                      z
+                    
+                  
+                
+                
+                  
+                    
+                      2
+                    
+                  
+                
+              
+            
+          
+        
+        
+          
+            
+              
+                +
+                
+                4
+              
+              ⏟
+            
+          
+          
+            
+              
+                
+                  
+                    
+                      w
+                      y
+                      r
+                      a
+                      z
+                    
+                  
+                
+                
+                  
+                    
+                      3
+                    
+                  
+                
+              
+            
+          
+        
+        .
+      
+    
+     
+  Zwykle wielomian jednej zmiennej przedstawia się w postaci, w której wyrazy wyższego stopnia stoją przed wyrazami niższego. Powyższy wielomian składa się z trzech wyrazów, jest więc trójmianem: pierwszy z nich jest drugiego stopnia, drugi – pierwszego stopnia, a trzeci ma stopień zerowy. Pierwszy wyraz, który zawiera zmienną 
+  
+    
+      
+        x
+      
+    
+     
+   o wykładniku 
+  
+    
+      
+        2
+        ,
+      
+    
+     
+   ma współczynnik 3. Napis 
+  
+    
+      
+        −
+        5
+        x
+      
+    
+     
+   oznacza 
+  
+    
+      
+        +
+        (
+        −
+        5
+        )
+        x
+        ,
+      
+    
+     
+   a więc współczynnikiem środkowego wyrazu jest 
+  
+    
+      
+        −
+        5
+        ,
+      
+    
+     
+   nie zaś 
+  
+    
+      
+        5.
+      
+    
+     
+   Trzeci wyraz jest wolny. Ponieważ stopień niezerowego wielomianu dany jest jako największy ze wszystkich stopni wyrazów, to powyższy wielomian ma stopień równy dwa.
+
+
+=== Postać ===
+Ogólnie każde wyrażenie, które można przekształcić w wielomian za pomocą podstawowych własności działań (przemienności, łączności i rozdzielności) uważane jest za wielomian. Przykładowo wyrażenie 
+  
+    
+      
+        (
+        x
+        +
+        1
+        
+          )
+          
+            3
+          
+        
+      
+    
+     
+   jest wielomianem, ponieważ można je przekształcić do postaci 
+  
+    
+      
+        
+          x
+          
+            3
+          
+        
+        +
+        3
+        
+          x
+          
+            2
+          
+        
+        +
+        3
+        x
+        +
+        1.
+      
+    
+     
+   Podobnie
+
+  
+    
+      
+        
+          
+            
+              x
+              
+                3
+              
+            
+            12
+          
+        
+      
+    
+     
+  uważane jest za poprawny wyraz wielomianu. Chociaż zawiera dzielenie, to jest ono równoważne 
+  
+    
+      
+        
+          
+            
+              1
+              12
+            
+          
+        
+        
+          x
+          
+            3
+          
+        
+        ,
+      
+    
+     
+   gdzie 
+  
+    
+      
+        
+          
+            
+              1
+              12
+            
+          
+        
+      
+    
+     
+   jest stałą, może więc pełnić rolę współczynnika. W ogólności jednak dzielenie przez wyrażenie zawierające zmienną nie tworzy wielomianu. Na przykład
+
+  
+    
+      
+        
+          
+            1
+            
+              
+                x
+                
+                  2
+                
+              
+              +
+              1
+            
+          
+        
+      
+    
+     
+  nie jest wielomianem, podobnie
+
+  
+    
+      
+        (
+        5
+        +
+        y
+        
+          )
+          
+            x
+          
+        
+        ,
+      
+    
+     
+  gdyż ma wykładnik zawierający zmienną.
+Ponieważ odejmowanie może być traktowane jak dodawanie liczby przeciwnej, a potęgowanie o naturalnym wykładniku jako wielokrotne mnożenie, wielomiany mogą być tworzone ze stałych i zmiennych wyłącznie za pomocą dwóch działań: dodawania i mnożenia.
+Każdy wielomian można przekształcić do postaci beznawiasowej wykonując wszystkie możliwe działania na wyrażeniach algebraicznych, nazywana jest ona czasem postacią kanoniczną. Każdy wielomian jednej zmiennej jest równoważny z wielomianem postaci:
+
+  
+    
+      
+        
+          a
+          
+            n
+          
+        
+        
+          x
+          
+            n
+          
+        
+        +
+        
+          a
+          
+            n
+            −
+            1
+          
+        
+        
+          x
+          
+            n
+            −
+            1
+          
+        
+        +
+        …
+        +
+        
+          a
+          
+            2
+          
+        
+        
+          x
+          
+            2
+          
+        
+        +
+        
+          a
+          
+            1
+          
+        
+        x
+        +
+        
+          a
+          
+            0
+          
+        
+        .
+      
+    
+     
+  
+
+
+=== Funkcje wielomianowe ===
+Wartością wielomianu nazywa się wartość otrzymaną po podstawieniu danej liczby w miejsce zmiennej (lub tylu liczb w miejsce zmiennych ile ich jest w przypadku wielomianów wielu zmiennych) w wielomianie i wykonanie wszystkich dodawań i mnożeń w wielomianie (tzw. ewaluacja).
+Przyporządkowanie każdej liczbie odpowiadającej jej wartości wielomianu jest pewną funkcją. Oznacza to, że dowolny wielomian wyznacza pewną funkcję zwaną funkcją wielomianową. W skończonych ciałach jednej funkcji wielomianowej może odpowiadać więcej niż jeden wielomian. Np. w pierścieniu wielomianów 
+  
+    
+      
+        
+          
+            F
+          
+          
+            3
+          
+        
+        [
+        x
+        ]
+      
+    
+     
+   wielomiany 
+  
+    
+      
+        
+          x
+          
+            3
+          
+        
+        +
+        2
+        x
+        ,
+         
+         
+        
+          x
+          
+            5
+          
+        
+        +
+        2
+        x
+        ,
+         
+         
+        
+          x
+          
+            4
+          
+        
+        +
+        2
+        
+          x
+          
+            2
+          
+        
+      
+    
+     
+   wyznaczają tę samą funkcję wielomianową.
+Analogicznie do definicji wielomianu jako sumy algebraicznej, funkcja 
+  
+    
+      
+        f
+      
+    
+     
+   jednej zmiennej nazywana jest funkcją wielomianową, jeżeli:
+
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          a
+          
+            n
+          
+        
+        
+          x
+          
+            n
+          
+        
+        +
+        
+          a
+          
+            n
+            −
+            1
+          
+        
+        
+          x
+          
+            n
+            −
+            1
+          
+        
+        +
+        …
+        +
+        
+          a
+          
+            1
+          
+        
+        x
+        +
+        
+          a
+          
+            0
+          
+        
+        =
+        
+          ∑
+          
+            i
+            =
+            0
+          
+          
+            n
+          
+        
+        
+          a
+          
+            i
+          
+        
+        
+          x
+          
+            i
+          
+        
+      
+    
+     
+  dla wszystkich argumentów 
+  
+    
+      
+        x
+        ,
+      
+    
+     
+   gdzie 
+  
+    
+      
+        n
+      
+    
+     
+   jest liczbą naturalną, a 
+  
+    
+      
+        
+          a
+          
+            0
+          
+        
+        ,
+        
+          a
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          a
+          
+            n
+          
+        
+      
+    
+     
+   są stałymi współczynnikami. Niekiedy obliczenie wartości wielomianu można przeprowadzić efektywniej za pomocą tzw. schematu Hornera:
+
+  
+    
+      
+        (
+        (
+        …
+        (
+        
+          a
+          
+            n
+          
+        
+        x
+        +
+        
+          a
+          
+            n
+            −
+            1
+          
+        
+        )
+        x
+        +
+        …
+        +
+        
+          a
+          
+            2
+          
+        
+        )
+        x
+        +
+        
+          a
+          
+            1
+          
+        
+        )
+        x
+        +
+        
+          a
+          
+            0
+          
+        
+        .
+      
+    
+     
+  Przykładowo funkcja 
+  
+    
+      
+        f
+      
+    
+     
+   ze zbioru liczb rzeczywistych w siebie zdefiniowana wzorem
+
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          x
+          
+            3
+          
+        
+        −
+        x
+      
+    
+     
+  jest jednoargumentową funkcją wielomianową. Można również zdefiniować wieloargumentowe funkcje wielomianowe za pomocą wielomianów wielu zmiennych, np.
+
+  
+    
+      
+        f
+        (
+        x
+        ,
+        y
+        )
+        =
+        2
+        
+          x
+          
+            3
+          
+        
+        +
+        4
+        
+          x
+          
+            2
+          
+        
+        y
+        +
+        x
+        
+          y
+          
+            5
+          
+        
+        +
+        
+          y
+          
+            2
+          
+        
+        −
+        7.
+      
+    
+     
+  Do najważniejszych, a zarazem najprostszych funkcji wielomianowych zalicza się funkcję stałą, funkcję liniową, funkcję kwadratową (nazywaną popularnie trójmianem kwadratowym). Funkcje wielomianowe są ważną klasą funkcji gładkich. W analizie matematycznej pojęć wielomianu i funkcji wielomianowej używa zamiennie. Jednak w algebrze bywa to niedopuszczalne, gdyż różnym wielomianom mogą odpowiadać te same funkcje wielomianowe, np. w pierścieniu Z2 wielomiany 
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+      
+    
+     
+   i 
+  
+    
+      
+        x
+      
+    
+     
+   definiują te same funkcje, gdyż 
+  
+    
+      
+        
+          0
+          
+            2
+          
+        
+        =
+        0
+      
+    
+     
+   oraz 
+  
+    
+      
+        
+          1
+          
+            2
+          
+        
+        =
+        1.
+      
+    
+     
+  
+
+
+=== Równania wielomianowe ===
+Równanie wielomianowe to równanie, w którym przyrównywane są dwa wielomiany. Wielomiany uważa się za równe, jeżeli mają one równe współczynniki przy odpowiadających sobie wyrazach. Przykładem równania może być
+
+  
+    
+      
+        3
+        
+          x
+          
+            2
+          
+        
+        +
+        4
+        x
+        −
+        5
+        =
+        0.
+      
+    
+     
+  W przypadku równań wielomianowych zmienna uważana jest za niewiadomą, a zadaniem jest znalezienie wszystkich możliwych wartości dla których obie strony równania przyjmują tę samą wartość (w ogólności może istnieć więcej niż jedno rozwiązanie). Równanie wielomianowe może być przeciwstawione tożsamościom wielomianowym, takim jak 
+  
+    
+      
+        (
+        x
+        +
+        y
+        )
+        (
+        x
+        −
+        y
+        )
+        =
+        
+          x
+          
+            2
+          
+        
+        −
+        
+          y
+          
+            2
+          
+        
+        ,
+      
+    
+     
+   gdzie obie strony przedstawiają ten sam wielomian pod różnymi postaciami, dlatego też jakiekolwiek obliczenie wartości obu stron zawsze da równość.
+Równanie, w którym wielomian jednej zmiennej jest przyrównywany do zera, nazywa się równaniem algebraicznym. Przykładem może być powyższe równanie wielomianowe. W strukturach uporządkowanych, takich jak liczby rzeczywiste, czy wymierne, ale nie zespolone, można również rozpatrywać nierówności algebraiczne.
+
+
+== Działania ==
+Suma i iloczyn wielomianów jest wielomianem.
+Pochodna wielomianu jest wielomianem
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                a
+                
+                  n
+                
+              
+              
+                x
+                
+                  n
+                
+              
+              +
+              
+                a
+                
+                  n
+                  −
+                  1
+                
+              
+              
+                x
+                
+                  n
+                  −
+                  1
+                
+              
+              +
+              …
+              +
+              
+                a
+                
+                  0
+                
+              
+            
+            )
+          
+          ′
+        
+        =
+        n
+        
+          a
+          
+            n
+          
+        
+        
+          x
+          
+            n
+            −
+            1
+          
+        
+        +
+        (
+        n
+        −
+        1
+        )
+        
+          a
+          
+            n
+            −
+            1
+          
+        
+        
+          x
+          
+            n
+            −
+            2
+          
+        
+        +
+        …
+        +
+        
+          a
+          
+            1
+          
+        
+        .
+      
+    
+     
+  
+Funkcja pierwotna (całka) wielomianu jest wielomianem
+
+  
+    
+      
+        ∫
+        
+        
+          (
+          
+            
+              a
+              
+                n
+              
+            
+            
+              x
+              
+                n
+              
+            
+            +
+            
+              a
+              
+                n
+                −
+                1
+              
+            
+            
+              x
+              
+                n
+                −
+                1
+              
+            
+            +
+            …
+            +
+            
+              a
+              
+                0
+              
+            
+          
+          )
+        
+        d
+        x
+        =
+        
+          
+            
+              
+                a
+                
+                  n
+                
+              
+              
+                n
+                +
+                1
+              
+            
+          
+        
+        
+          x
+          
+            n
+            +
+            1
+          
+        
+        +
+        
+          
+            
+              
+                a
+                
+                  n
+                  −
+                  1
+                
+              
+              n
+            
+          
+        
+        
+          x
+          
+            n
+          
+        
+        +
+        …
+        +
+        
+          a
+          
+            0
+          
+        
+        x
+        +
+        c
+        .
+      
+    
+     
+  
+
+
+=== Dodawanie i mnożenie ===
+Dodawanie i mnożenie wielomianów zapisanych w postaci uporządkowanej można wykonywać w postaci analogicznej do dodawania i mnożenia liczb w pozycyjnym systemie liczbowym. Przykład dodawania dwóch wielomianów:
+
+Przykład mnożenia dwóch wielomianów:
+
+
+=== Dzielenie ===
+Iloraz dwóch wielomianów nie musi być wielomianem, jednak każdy wielomian 
+  
+    
+      
+        f
+      
+    
+     
+   można przedstawić w postaci
+
+  
+    
+      
+        f
+        =
+        g
+        h
+        +
+        r
+        ,
+      
+    
+     
+  gdzie 
+  
+    
+      
+        g
+        ,
+        h
+        ,
+        r
+      
+    
+     
+   są wielomianami, przy czym stopień wielomianu 
+  
+    
+      
+        r
+      
+    
+     
+   jest mniejszy niż stopień 
+  
+    
+      
+        g
+      
+    
+     
+   i wielomiany 
+  
+    
+      
+        h
+      
+    
+     
+   oraz 
+  
+    
+      
+        r
+      
+    
+     
+   są jednoznacznie wyznaczone.
+Operacja ta jest równoważna dzieleniu wielomianu 
+  
+    
+      
+        f
+      
+    
+     
+   przez 
+  
+    
+      
+        g
+      
+    
+     
+   z resztą. Jeżeli reszta 
+  
+    
+      
+        r
+      
+    
+     
+   jest wielomianem zerowym, to mówi się, że wielomian 
+  
+    
+      
+        f
+      
+    
+     
+   jest podzielny przez 
+  
+    
+      
+        g
+        ,
+      
+    
+     
+   z kolei 
+  
+    
+      
+        g
+      
+    
+     
+   nazywa się dzielnikiem wielomianu 
+  
+    
+      
+        f
+        .
+      
+    
+     
+  
+Algorytm dzielenia wielomianów z resztą jest analogiczny do dzielenia liczb całkowitych z resztą. Algorytmem, który zakończy się z całą pewnością, jest algorytm Euklidesa, bywa on również wykorzystywany do wyznaczania największego wspólnego dzielnika, 
+  
+    
+      
+        nwd
+        ,
+      
+    
+     
+   dwóch wielomianów, czyli wielomianu jak najwyższego stopnia, który dzieli oba z nich; 
+  
+    
+      
+        nwd
+      
+    
+     
+   wyznaczony jest w tym przypadku z dokładnością do stałej.
+Twierdzenie Bézouta mówi, że 
+  
+    
+      
+        a
+      
+    
+     
+   jest pierwiastkiem wielomianu 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+     
+   wtedy i tylko wtedy, gdy 
+  
+    
+      
+        f
+      
+    
+     
+   jest podzielny przez 
+  
+    
+      
+        x
+        −
+        a
+        .
+      
+    
+     
+   Stąd w przypadku dzielenia przez dwumian postaci 
+  
+    
+      
+        x
+        −
+        a
+      
+    
+     
+   często stosuje się również schemat Hornera.
+Iloraz wielomianów nazywany jest wyrażeniem wymiernym, zaś funkcję go realizującą nazywa się funkcją wymierną. Oto przykład
+
+  
+    
+      
+        
+          
+            
+              2
+              
+                x
+                
+                  3
+                
+              
+              +
+              8
+              x
+              −
+              4
+            
+            
+              4
+              
+                x
+                
+                  2
+                
+              
+              −
+              3
+              x
+            
+          
+        
+        .
+      
+    
+     
+  Wyrażenia wymierne (funkcje wymierne) pełnią względem wielomianów (funkcji wielomianowych) rolę podobną do liczb wymiernych względem liczb całkowitych.
+Wielomian 
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+        −
+        9
+      
+    
+     
+   jest podzielny przez 
+  
+    
+      
+        x
+        +
+        3
+        ,
+      
+    
+     
+   jego ilorazem jest 
+  
+    
+      
+        x
+        −
+        3.
+      
+    
+     
+  
+
+
+== Pierwiastki ==
+Pierwiastek wielomianu 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+     
+   to taka liczba 
+  
+    
+      
+        a
+        ,
+      
+    
+     
+   dla której dwumian 
+  
+    
+      
+        x
+        −
+        a
+      
+    
+     
+   dzieli bez reszty wielomian 
+  
+    
+      
+        f
+        .
+      
+    
+     
+   Miejscem zerowym funkcji wielomianowej nazywa się taką wartość zmiennej (lub wartości zmiennych w przypadku wielomianu wielu zmiennych), dla której wartość funkcji wielomianowej wynosi 0, innymi słowy jest to rozwiązanie równania algebraicznego. Zbiór miejsc zerowych funkcji wielomianowej pokrywa się ze zbiorem pierwiastków odpowiadającego jej wielomianu, o czym mówi twierdzenie Bézouta.
+Stopniem równania algebraicznego nazywa się stopień wielomianu niezerowego. Istnieją wzory pozwalające rozwiązać każde równanie stopnia pierwszego, drugiego, trzeciego i czwartego. Udowodniono, że efektywne znalezienie rozwiązań równań wyższych stopni przez wykorzystanie podstawowych działań arytmetycznych wraz z pierwiastkowaniem na ogół nie jest możliwe (twierdzenie Abela-Ruffiniego).
+
+
+=== Krotność ===
+Krotnością pierwiastka 
+  
+    
+      
+        a
+      
+    
+     
+   wielomianu 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+     
+   nazywa się największą liczbę naturalną 
+  
+    
+      
+        k
+      
+    
+     
+   taką, że wielomian 
+  
+    
+      
+        f
+      
+    
+     
+   dzieli się bez reszty przez wielomian 
+  
+    
+      
+        (
+        x
+        −
+        a
+        
+          )
+          
+            k
+          
+        
+        .
+      
+    
+     
+   Jeżeli pierwiastek ma krotność równą co najmniej 2, to zwykle nazywa się go wielokrotnym (dwu-, trzy-, cztero-, pięciokrotnym itd.), jeżeli wynosi ona 1, nazywa się go jednokrotnym.
+Jeżeli 
+  
+    
+      
+        a
+      
+    
+     
+   jest (co najmniej) dwukrotnym pierwiastkiem wielomianu 
+  
+    
+      
+        f
+        ,
+      
+    
+     
+   to 
+  
+    
+      
+        a
+      
+    
+     
+   jest także pierwiastkiem pochodnej 
+  
+    
+      
+        
+          f
+          ′
+        
+      
+    
+     
+   wielomianu 
+  
+    
+      
+        f
+        .
+      
+    
+     
+   Twierdzenie odwrotne nie jest prawdziwe.
+
+
+=== Rozkład na czynniki ===
+Wszystkie wielomiany jednej zmiennej o rzeczywistych lub zespolonych współczynnikach mogą być przedstawione w postaci iloczynu zespolonych wielomianów liniowych:
+
+  
+    
+      
+        
+          a
+          
+            n
+          
+        
+        
+          x
+          
+            n
+          
+        
+        +
+        
+          a
+          
+            n
+            −
+            1
+          
+        
+        
+          x
+          
+            n
+            −
+            1
+          
+        
+        +
+        …
+        +
+        
+          a
+          
+            0
+          
+        
+        =
+        
+          a
+          
+            n
+          
+        
+        (
+        x
+        −
+        
+          c
+          
+            1
+          
+        
+        )
+        (
+        x
+        −
+        
+          c
+          
+            2
+          
+        
+        )
+        …
+        (
+        x
+        −
+        
+          c
+          
+            n
+          
+        
+        )
+        .
+      
+    
+     
+  gdzie 
+  
+    
+      
+        
+          c
+          
+            1
+          
+        
+        ,
+        
+          c
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          c
+          
+            n
+          
+        
+      
+    
+     
+   są pierwiastkami wielomianu. Liczba iloczynów jest równa sumie krotności wszystkich pierwiastków, co wynika z zasadniczego twierdzenia algebry i twierdzenia Bézouta.
+Wielomian rzeczywisty jednej zmiennej można rozłożyć na iloczyn wielomianów rzeczywistych co najwyżej drugiego stopnia. Czynniki nieliniowe mają wtedy postać 
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+        +
+        p
+        x
+        +
+        q
+        ,
+      
+    
+     
+   przy czym 
+  
+    
+      
+        
+          p
+          
+            2
+          
+        
+        <
+        4
+        q
+        .
+      
+    
+     
+   Każdy taki czynnik odpowiada dwóm sprzężonym pierwiastkom zespolonym. Nie istnieje podobna reguła dla wielomianów wymiernych.
+Rozkład na czynniki przeprowadza się zwykle jednym z następujących sposobów:
+
+za pomocą wzorów skróconego mnożenia,
+znajdując pierwiastek i wykorzystując twierdzenie Bézouta;
+wykorzystując wzory Kroneckera i Hermite’a (dla dowolnych wielomianów), bądź ich uogólnienia dane przez Kleina.PrzykładWielomian
+
+  
+    
+      
+        
+          x
+          
+            3
+          
+        
+        +
+        
+          x
+          
+            2
+          
+        
+        −
+        x
+        −
+        1
+      
+    
+     
+  można zapisać w postaci
+
+  
+    
+      
+        (
+        x
+        +
+        1
+        
+          )
+          
+            2
+          
+        
+        (
+        x
+        −
+        1
+        )
+        ,
+      
+    
+     
+  stąd 
+  
+    
+      
+        −
+        1
+      
+    
+     
+   jest pierwiastkiem dwukrotnym, zaś 
+  
+    
+      
+        1
+      
+    
+     
+   pierwiastkiem jednokrotnym tego wielomianu.
+
+
+=== Szukanie pierwiastków ===
+Oprócz rozkładu na czynniki istnieje szereg metod ułatwiających wyznaczanie pierwiastków danego wielomianu. Niżej, tam gdzie wspomina się o liczbie pierwiastków, stosowana będzie konwencja mówiąca, iż równa jest ona sumie krotności wszystkich pierwiastków wielomianu.
+
+Zasadnicze twierdzenie algebry: każdy wielomian zespolony stopnia 
+  
+    
+      
+        n
+      
+    
+     
+   ma pierwiastek zespolony. Wynika z tego, że każdy wielomian zespolony ma dokładnie 
+  
+    
+      
+        n
+      
+    
+     
+   pierwiastków zespolonych.
+Pierwiastki zespolone wielomianu rzeczywistego występują jako pary liczb wzajemnie sprzężonych.
+Wielomian rzeczywisty stopnia 
+  
+    
+      
+        n
+      
+    
+     
+   ma 
+  
+    
+      
+        n
+      
+    
+     
+   pierwiastków rzeczywistych lub o parzystą liczbę mniej; w szczególności, wielomian rzeczywisty stopnia nieparzystego zawsze ma pierwiastek rzeczywisty.
+Twierdzenie Sturma pozwala wyznaczyć liczbę pierwiastków wielomianu rzeczywistego w przedziale 
+  
+    
+      
+        (
+        a
+        ,
+        b
+        )
+        .
+      
+    
+     
+  
+Twierdzenie Hurwitza pozwala rozstrzygnąć, czy wszystkie pierwiastki wielomianu rzeczywistego leżą w lewej półpłaszczyźnie zespolonej.
+Twierdzenie o pierwiastkach całkowitych wielomianu całkowitego: jeżeli liczba całkowita jest pierwiastkiem wielomianu całkowitego o niezerowym wyrazie wolnym, to jest ona dzielnikiem wyrazu wolnego.
+Twierdzenie o pierwiastkach wymiernych wielomianu całkowitego: jeżeli ułamek nieskracalny 
+  
+    
+      
+        
+          
+            
+              p
+              q
+            
+          
+        
+        ∈
+        
+          Q
+        
+      
+    
+     
+   jest pierwiastkiem wielomianu całkowitego, to 
+  
+    
+      
+        p
+      
+    
+     
+   jest dzielnikiem wyrazu wolnego oraz 
+  
+    
+      
+        q
+      
+    
+     
+   jest dzielnikiem współczynnika wiodącego.
+Wzory Viète’a łączą pierwiastki wielomianu z jego współczynnikami.
+Dla dowolnego wielomianu 
+  
+    
+      
+        f
+      
+    
+     
+   wielomian 
+  
+    
+      
+        
+          
+            f
+            
+              NWD
+              ⁡
+              (
+              f
+              ,
+              
+                f
+                ′
+              
+              )
+            
+          
+        
+      
+    
+     
+   jest wielomianem mającym te same pierwiastki co wyjściowy, lecz wszystkie są jednokrotne.
+Rugownik dwóch wielomianów jest równy zeru wtedy i tylko wtedy, gdy mają one wspólny pierwiastek.
+Reguła Kartezjusza: liczba dodatnich pierwiastków wielomianu jest równa liczbie zmian znaku pomiędzy kolejnymi niezerowymi współczynnikami lub też mniejsza od niej o wielokrotność liczby 2. Zamieniając 
+  
+    
+      
+        x
+      
+    
+     
+   na 
+  
+    
+      
+        −
+        x
+      
+    
+     
+   można oszacować liczbę ujemnych pierwiastków; przykładowo wielomian
+
+  
+    
+      
+        
+          x
+          
+            3
+          
+        
+        +
+        
+          x
+          
+            2
+          
+        
+        −
+        x
+        −
+        1
+      
+    
+     
+  ma dokładnie jeden pierwiastek dodatni – zmiana znaku występuje przy przejściu od współczynnika przy drugim wyrazie do współczynnika przy trzecim.
+
+
+== Wykresy ==
+W prostokątnym układzie współrzędnych:
+
+Wykres przecina on pionową oś w punkcie 
+  
+    
+      
+        (
+        0
+        ,
+        
+          a
+          
+            0
+          
+        
+        )
+        ,
+      
+    
+     
+   gdzie 
+  
+    
+      
+        
+          a
+          
+            0
+          
+        
+      
+    
+     
+   to wyraz wolny tego wielomianu;
+Wielomian zerowy i wielomian stopnia zerowego posiadają wykres będący prostą równoległą do poziomej osi;
+Wykresem wielomianu stopnia pierwszego jest prosta o współczynniku kierunkowym równym najstarszemu współczynnikowi wielomianu;
+Wykresem wielomianu stopnia drugiego lub wyższego jest krzywa ciągła, niebędąca prostą. Wykresem wielomianu stopnia drugiego jest parabola.
+W odciętej, gdzie pierwiastek wielomianu jest parzystokrotny, krzywa jest styczna do poziomej osi. W przeciwnym przypadku, krzywa przecina poziomą oś układu współrzędnych.Wykresy wielomianów można badać używając metod analizy matematycznej (przecięcia z osiami, punkty przegięcia, wypukłość, zachowanie w nieskończoności itd.)
+
+
+== Zastosowania ==
+
+
+=== Analiza matematyczna ===
+Wielomiany ze względu na swoje „silne” własności (ciągłość, różniczkowalność) odgrywają ważną rolę w analizie matematycznej.
+Wielomiany służą przybliżaniu (aproksymacji) funkcji. Do ważniejszych wyników w tej dziedzinie należą:
+
+Twierdzenie Weierstrassa: każdą funkcję ciągłą na przedziale domkniętym można z dowolną dokładnością przybliżać wielomianami.
+Układy wielomianów ortogonalnych takie jak wielomiany Czebyszewa i Legendre’a.
+
+
+=== Analiza numeryczna ===
+Mając dany dowolny 
+  
+    
+      
+        n
+        +
+        1
+      
+    
+     
+  -elementowy zbiór punktów 
+  
+    
+      
+        {
+        (
+        
+          x
+          
+            0
+          
+        
+        ,
+        
+          y
+          
+            0
+          
+        
+        )
+        ,
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          y
+          
+            1
+          
+        
+        )
+        ,
+        …
+        ,
+        (
+        
+          x
+          
+            n
+          
+        
+        ,
+        
+          y
+          
+            n
+          
+        
+        )
+        }
+      
+    
+     
+   w którym 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+      
+    
+     
+   są parami różne, istnieje wielomian stopnia co najwyżej 
+  
+    
+      
+        n
+      
+    
+     
+   którego wykres przechodzi przez te punkty. Zagadnienie znalezienia tego wielomianu nazywa się interpolacją wielomianową. Interpolacja może służyć do przybliżania funkcji wielomianami.
+Wielomian interpolacyjny istnieje dokładnie jeden. W szczególności wynika stąd, że jeśli dwa wielomiany stopnia nie większego od 
+  
+    
+      
+        n
+      
+    
+     
+   przyjmują takie same wartości w 
+  
+    
+      
+        n
+        +
+        1
+      
+    
+     
+   punktach to są równe.
+Do interpolowania można używać postaci Lagrange’a i postaci Newtona.
+
+
+=== Algebra liniowa ===
+W ujęciu algebry liniowej każdy wielomian jest kombinacją liniową funkcji potęgowych postaci 
+  
+    
+      
+        x
+        ↦
+        
+          x
+          
+            k
+          
+        
+        ,
+      
+    
+     
+   gdzie 
+  
+    
+      
+        k
+        =
+        0
+        ,
+        1
+        ,
+        2
+        ,
+        …
+      
+    
+     
+   Zbiór wielomianów rzeczywistych lub urojonych jest podprzestrzenią liniową przestrzeni wszystkich funkcji określonych odpowiednio na 
+  
+    
+      
+        
+          R
+        
+      
+    
+     
+   lub 
+  
+    
+      
+        
+          C
+        
+        .
+      
+    
+     
+   Twierdzenie Stone’a-Weierstrassa mówi, że przestrzeń wielomianów jest zbiorem gęstym w przestrzeni Banacha 
+  
+    
+      
+        C
+        
+          (
+          
+            [
+            a
+            ,
+            b
+            ]
+          
+          )
+        
+      
+    
+     
+   z normą supremum.
+Ważnym obiektem związanym z pojęciami macierzy oraz przekształcenia liniowego jest ich wielomian charakterystyczny.
+
+
+=== Algorytmika ===
+Naiwny algorytm obliczenia wartości wielomianu w punkcie wymaga 
+  
+    
+      
+        1
+        +
+        2
+        +
+        …
+        +
+        n
+        =
+        Θ
+        (
+        
+          n
+          
+            2
+          
+        
+        )
+      
+    
+     
+   mnożeń (zob. asymptotyczne tempo wzrostu). Zapisując wielomian w postaci:
+
+  
+    
+      
+        
+          a
+          
+            0
+          
+        
+        +
+        x
+        (
+        
+          a
+          
+            1
+          
+        
+        +
+        x
+        (
+        …
+        x
+        (
+        
+          a
+          
+            n
+            −
+            1
+          
+        
+        +
+        
+          a
+          
+            n
+          
+        
+        x
+        )
+        …
+        )
+        )
+      
+    
+     
+  potrzebny czas skraca się do 
+  
+    
+      
+        Θ
+        (
+        n
+        )
+        .
+      
+    
+     
+   Powyższy sposób obliczania, nazywany schematem Hornera, może służyć również do szybkiego dzielenia wielomianu przez dwumian 
+  
+    
+      
+        x
+        −
+        a
+        .
+      
+    
+     
+   Po znalezieniu pierwiastka równania można dzięki temu szybko obniżyć jego stopień.
+Naiwny algorytm mnożenia dwóch wielomianów stopnia 
+  
+    
+      
+        n
+      
+    
+     
+   wymaga czasu 
+  
+    
+      
+        Θ
+        (
+        
+          n
+          
+            2
+          
+        
+        )
+        .
+      
+    
+     
+   Za pomocą szybkiej transformaty Fouriera (FFT) czas ten można zmniejszyć do 
+  
+    
+      
+        Θ
+        (
+        n
+        log
+        ⁡
+        n
+        )
+        .
+      
+    
+     
+   Mówiąc w uproszczeniu, algorytm mnożenia wpierw przedstawia czynniki za pomocą listy ich wartości w zespolonych pierwiastkach z 1 (ewaluacja), dokonuje mnożenia i powraca do pierwotnej postaci (interpolacja).
+
+
+== Uogólnienia ==
+Zniesienie ograniczenia dotyczącego liczby wyrazów prowadzi do pojęcia szeregu potęgowego. Wiele ważnych funkcji daje się rozwinąć w szereg potęgowy (często ich istotność wynika właśnie z tego faktu), co ułatwia badanie ich własności. Przykładowo funkcja wykładnicza 
+  
+    
+      
+        exp
+        ⁡
+        (
+        x
+        )
+      
+    
+     
+   ma rozwinięcie:
+
+  
+    
+      
+        exp
+        ⁡
+        (
+        x
+        )
+        =
+        1
+        +
+        x
+        +
+        
+          
+            
+              x
+              
+                2
+              
+            
+            
+              2
+              !
+            
+          
+        
+        +
+        
+          
+            
+              x
+              
+                3
+              
+            
+            
+              3
+              !
+            
+          
+        
+        +
+        …
+      
+    
+     
+  Każdy wielomian będący wynikiem wzięcia pewnej skończonej liczby (zwykle początkowych) wyrazów tej sumy jest przybliżeniem funkcji. Rozwijanie funkcji w szeregi jest szczególnie ważne w przypadku funkcji, które nie są elementarne (zob. funkcje specjalne).
+Inną możliwością jest zdefiniowanie wielomianów jako skończonych napisów formalnych, w których współczynniki wzięte są z dowolnego pierścienia. Tego typu napisy dla porządnych pierścieni umożliwiają nawet uprawianie analizy, gdzie wiele pojęć zdefiniowanych jest także formalnie (pochodna, pierwotna wielomianu). Kolejnym uogólnieniem jest szereg formalny będący połączeniem dwóch powyższych możliwości.
+Pójściem w innym kierunku jest przyzwolenie na wyrazy o wykładnikach całkowitych, a nie tylko naturalnych – wielomiany takie nazywa się wielomianami Laurenta. Rozszerzenie wielomianów Laurenta w sposób podobny do rozszerzenia zwykłych wielomianów do szeregów potęgowych nazywa się szeregiem Laurenta.
+
+
+== Zobacz też ==
+wielomiany trygonometryczne
+
+
+== Uwagi ==
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+Zdzisław Opial: Algebra wyższa. Państwowe Wydawnictwo Naukowe, 1974.brak strony w książce
+Wielomiany i FFT. W: Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein: Wprowadzenie do algorytmów. Warszawa: Wydawnictwa Naukowo-Techniczne, 2005. ISBN 83-204-3149-2.brak strony w książce
+Małgorzata Dobrowolska, Marcin Karpiński, Jacek Lech: Matematyka II: podręcznik dla liceum i technikum. Gdańsk: Gdańskie Wydawnictwo Oświatowe, 2008, s. 39.
+
+
+== Linki zewnętrzne ==
+Polynomial, Encyclopedia of Mathematics [dostęp 2021-03-12].

@@ -1,0 +1,36 @@
+revision: 65026146
+title: Scholar
+url: https://pt.wikipedia.org/wiki/Google_Scholar
+
+
+---
+
+O Google Scholar — Google Académico (português europeu) ou Acadêmico (português brasileiro) em português — é um mecanismo virtual de pesquisa livremente acessível que organiza e lista textos completos ou metadados da literatura acadêmica em uma extensa variedade de formatos de publicação. Lançado em uma versão beta em 2004, inclui a maior parte de revistas e livros online revisados por pares, artigos de conferência, pré-impressões, teses e dissertações, resumos, relatórios técnicos e outras literaturas acadêmicas, entre elas, pareceres de tribunais e patentes. Embora o tamanho do banco de dados do Google Scholar não seja divulgado pelo Google, pesquisadores cientométricos estimaram que ele contenha cerca de 389 milhões de documentos, tornando-se o maior mecanismo de pesquisa acadêmica do mundo em janeiro de 2018. Em maio de 2014, o tamanho de seu acervo era estimado em 160 milhões de documentos. Antes disso, um prognóstico publicado no PLOS ONE, utilizando do método captura-recaptura estimou uma cobertura de aproximadamente 80-90% de todos os artigos publicados em inglês, em uma estimativa de 100 milhões.  Tal estimativa também determinou quantos documentos estavam disponíveis livremente na web. 
+O Google Acadêmico têm sido criticado por não vetar publicações e incluir, em seu índice, revistas predatórias. 
+
+
+== História ==
+O mecanismo de pesquisa nasceu de uma discussão entre Alex Verstak e Anurag Acharya, enquanto eles trabalhavam na construção do principal índice de web do Google . O objetivo de ambos era "tornar os solucionadores de problemas do mundo 10% mais eficientes", permitindo um acesso mais fácil e preciso ao conhecimento científico. Este objetivo se reflete no slogan publicitário do Google Scholar — Stand on the shoulders of giants, ou, em tradução livre, sobre os ombros de gigantes —, retirado de uma das citações de Bernardo Chartres, em uma alusão aos estudiosos que contribuíram para seus campos ao longo dos séculos, fornecendo a base para novas realizações intelectuais.
+Scholar recebeu diversas melhorias ao longo do tempo. Em 2006, um novo recurso de importação de citação foi adicionado, apoiando-se em softwares de gerenciamento de bibliografia (como RefWords, RefMan, EndNote e BibTeX). Já no ano de 2007, foi anunciado que o Google Scholar também iniciaria um programa para digitalizar e hospedar artigos de revistas em concordância com seus editores, em um projeto separado ao Google Livros, cujos periódicos mais antigos não incluíam os metadados necessários para identificar artigos ou questões específicas. Durante 2011, Google removeu o Google Acadêmico das barras de ferramenta em suas páginas de pesquisa, o tornando menos acessível, principalmente para usuários que não sabiam de sua existência até o momento. Por volta deste mesmo período, sites com recursos semelhantes como SiteCeer, Microsoft Windows Live Academic e Scirus foram desenvolvidos. Atualmente, alguns deles encontram-se extintos, embora a Microsoft tenha lançado um novo mecanismo de pesquisa acadêmica em 2016, o Microsoft Academic.  
+Google Scholar recebeu um grande aprimoramento em 2012, com a possibilidade dos estudantes individuais criarem "perfis de citações acadêmicas" pessoais. Além disso, uma ferramenta introduzida em novembro de 2013 permite que os usuários conectados por login salvem seus resultados de pesquisa na "Biblioteca do Google Scholar", em uma coleção que pode ser organizada por tags. O recurso de métricas agora suporta a visualização do impacto de revistas acadêmicas e de toda ciência através do botão "métricas". Isso revela os periódicos mais relevantes de um campo de interesse. 
+
+
+== Características e especificações ==
+Scholar permite que seus usuários busquem por cópias digitais ou físicas de artigos, seja online ou em bibliotecas. Ele indexa artigos de revistas na íntegra, relatórios técnicos, pré-impressões, teses, livros e vários outros documentos, incluindo páginas da Web selecionadas que são consideradas acadêmicas. Como grande parte dos resultados de pesquisa do Google Scholar se ligam a artigos de revistas comerciais, a maior parte das pessoas poderá acessar apenas um resumo, tendo que pagar uma taxa para acessar o conteúdo completo. Os resultados mais relevantes para as palavras chave pesquisadas serão listados primeiro, sempre por ordem do ranking do autor, o número de referências que estão ligadas a ele e sua relevância para outras literaturas acadêmicas. 
+
+
+=== Grupos e acesso à literatura ===
+Usando o recurso "grupo de", ele mostra os links disponíveis para artigos de revista. Na versão de 2005, este recurso forneceu links tanto para versões de acesso por assinatura de artigos quanto para versões gratuitas de artigos na íntegra; durante a maior parte de 2006, forneceu links apenas para versões dos editores. Porém, desde dezembro de 2006, fornece links para versões publicadas e grandes repositórios de acesso aberto, incluindo aqueles postados em páginas web individuais do corpo docente e outras fontes não estruturadas identificadas por similaridade. Por outro lado, a ferramenta não permite filtrar de maneira explicita o acesso às publicações gratuitas, um recurso oferecido por Unpaywall e oferramentas que incorporam seus dados, como Web of Science, Scopus e Unpaywall Journals, usados por algumas bibliotecas para calcular o valor de seus acervos.
+
+
+== Algoritmo de classificação ==
+Enquanto grande parte dos bancos de dados acadêmicos e mecanismos de busca permitem que os usuários selecionem um fator (por exemplo, relevância, contagem de citações ou data de publicação) para classificar os resultados, o Google Scholar os classifica com um algoritmo de classificação combinado de uma "maneira que os pesquisadores fazem, pesando o texto completo de cada artigo, o autor, a publicação em que o artigo aparece e com que frequência a peça foi citada em outra literatura acadêmica". Algumas pesquisas apontam que o Google Scholar coloca alto peso especialmente em contagem de citações e palavras incluídas no título de um documento. Consequentemente, os primeiros resultados de pesquisa são frequentemente artigos bastante citados.
+
+
+== Referências ==
+
+
+== Ligações externas ==
+«Site Oficial» (em inglês) 
+Pesquisa em Português
+«Google Scholar: The New Generation of Citation Indexes.» (PDF) (em inglês). Libri, 2005, vol. 55, pp. 170–180

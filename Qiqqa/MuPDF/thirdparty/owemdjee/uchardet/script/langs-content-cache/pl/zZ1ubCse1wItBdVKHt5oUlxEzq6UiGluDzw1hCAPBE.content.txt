@@ -1,0 +1,38 @@
+revision: 67692551
+title: transistor
+url: https://pl.wikipedia.org/wiki/Transistor-transistor_logic
+
+
+---
+
+Transistor-transistor logic, TTL (logika tranzystorowo-tranzystorowa) – klasa cyfrowych układów scalonych zapoczątkowana przez Jamesa L. Buie'a z TRW Inc. w 1961 r. Pierwsze układy TTL trafiły do sprzedaży w 1963 r. za sprawą firmy Sylvania i używane były m.in. w systemach sterowania pociskami AIM-54 Phoenix. Natomiast największą popularność  wśród projektantów urządzeń elektronicznych TTL zdobył Texas Instruments wraz ze swoją rodziną układów 7400 wprowadzoną w 1964 r. TTL była pierwszą techniką masowej produkcji cyfrowych układów scalonych i jest ona wykorzystywana do dzisiaj.
+Układy typu transistor-transistor logic zbudowane są z tranzystorów bipolarnych i zasilane napięciem stałym 5 V. Działają one w logice dodatniej, czyli sygnał niski (logiczne „0”) jest zdefiniowany jako napięcie w zakresie 0 V do 0,8 V w odniesieniu do masy, a wysoki (logiczna „1”) – 2,4 V do 5 V.
+W technice TTL buduje się – oprócz standardowych układów logicznych – także układy z tzw. otwartym kolektorem na wyjściu (OC). Dzięki temu można realizować tzw. „iloczyn na drucie” lub sterować odbiornikami wymagającymi innych napięć w stanie wysokim (wymagane użycie rezystora podciągającego łączącego wyjście z napięciem odpowiednim dla stanu wysokiego), albo do podłączania odbiorników większej mocy (np. diod świecących, a nawet żarówek) bezpośrednio do wyjścia bramki (UWAGA: tylko niektóre układy mogą sterować odbiornikami stosującymi napięcia wyższe niż 5 V).
+Wyróżnia się kilka odmian technologicznych układów TTL oznaczonych odpowiednio literami:
+
+L (ang. Low power) – wersja o małym poborze mocy (10 razy mniejszym niż typowy TTL), ale wolniejsza od standardowej (10 MHz); nigdy nie zyskała popularności, gdyż została niemal natychmiast zastąpiona układami CMOS serii 4000.
+H (ang. High speed) – wersja o większej prędkości od standardowej (58 MHz), ale również o większym poborze mocy. Większą szybkość uzyskano przez zastosowanie 2 razy mniejszych rezystorów, co powodowało przyspieszenie przełączania tranzystorów.
+S (ang. Schottky) – odmiana szybka (125 MHz), której tranzystory zawierają dodatkową diodę Schottky’ego włączoną równolegle do złącza kolektor-baza i zabezpieczającą tranzystor przed nasyceniem, co powoduje dużo szybsze przechodzenie tranzystora ze stanu przewodzenia do zatkania.
+AS (ang. Advanced Schottky) – ulepszona seria S, charakteryzuje się jeszcze większą szybkością działania.
+LS (ang. Low power Schottky) – wersja S o znacznie niższym poborze prądu, zbliżonym do standardowej bramki; główna seria układów TTL używana w większości zastosowań.
+ALS (ang. Advanced Low power Schottky) – unowocześniona seria LS z mniejszym poborem mocy.
+F (ang. Fast) – nowoczesna, najszybsza seria TTL (125 MHz).Układy te można łączyć ze specjalnie produkowanymi układami w technologii CMOS, które są zgodne końcówkowo z TTL o takich samych oznaczeniach i wyróżnione literami C, AC, HCT, HC itp., np. 74HC00. Ponadto układy CMOS w wersji HCT mają takie same poziomy stanów logicznych jak TTL, przez co w łatwy sposób można łączyć je ze sobą.
+Charakterystyczne dla układów TTL jest to, iż mają wyższy pobór prądu, niż układy wykonane w technologii CMOS, ponieważ pobierają energię przez cały czas ich zasilania, natomiast układy CMOS jedynie w momencie przełączania ich elementów. Nie bez znaczenia jest również niższe napięcie zasilania używane w technologii CMOS. Początkowo układy TTL były szybsze w działaniu, jednak wraz z rozwojem techniki układy CMOS osiągnęły bardzo duże prędkości działania, co jednak ujawniło pewną ich niedogodność polegającą na bardzo szybkim wzroście temperatury i pobieranej energii przy wysokich taktowaniach układu.
+
+
+== Schemat standardowej bramki ==
+
+Schemat typowej bramki NAND w technologii TTL przedstawia rysunek obok. Wartości poszczególnych rezystorów (w kΩ) podaje tabela:
+
+
+== Zobacz też ==
+ECL
+CMOS
+I2L
+seria 7400
+
+
+== Bibliografia ==
+Jan Pieńkos, Janusz Turczyński, Układy scalone TTL w systemach cyfrowych, Warszawa 1980.
+Dieter Nuhrmann (z j. niem. dr inż. Jan Fabianowski, dr inż. Mieczysław Nowak) Elektronika łatwiejsza niż przypuszczasz Technika cyfrowa, WKŁ Warszawa 1986. ISBN 83-206-0535-0
+Józef Kalisz, Podstawy elektroniki cyfrowej, WKŁ Warszawa 2007. ISBN 978-83-206-1667-5

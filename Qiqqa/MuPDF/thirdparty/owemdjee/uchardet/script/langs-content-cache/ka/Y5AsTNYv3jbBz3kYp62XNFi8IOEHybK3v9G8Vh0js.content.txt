@@ -1,0 +1,19 @@
+revision: 4168864
+title: Technology
+url: https://ka.wikipedia.org/wiki/MOS_Technology_6502
+
+
+---
+
+MOS Technology 6502, ან უბრალოდ 6502 — 8 ბიტიანი მიკროპროცესორი, შემუშავებული კომპანია MOS Technology-ის მიერ 1975 წელს. გამოშვებისთანავე ის გაცილებით იაფი ღირდა მისი კონკურენტი კომპანიების (Motorola და Intel) მიერ შემუშავებულ პროცესორებთან შედარებით. თუმცა დაბალი ფასისა და ნაკლები ტაქტური სიხშირის მიუხედავად, წარმადობით არ ჩამორჩებოდა მათ. 6502-ის და Zilog Z80-ის გამოსვლამ განსასღვრა სათამაშო კონსოლების გამოჩენა 1970-იან წლებში. მოგვიანებით მასზე ლიცენზია მოიპოვა რამდენიმე კომპანიამ, მათ შორის Rockwell-მა და Synertek-მა.  6502 და მისი მოდიფიკაციები დღემდე გამოიყენება ჩაშენებულ სისტემებში.
+
+
+== ლიტერატურა ==
+Leventhal, Lance A. (1986). 6502 Assembly Language Programming 2nd Edition.  Osborne/McGraw-Hill. ISBN 0-07-881216-X. 
+Leventhal, Lance A. (1982). 6502 Assembly Language Subroutines.  Osborne/McGraw-Hill. ISBN 0-931988-59-4. 
+Mansfield, Richard (1983). Machine Language For Beginners - Personal Computer Machine Language Programming For The Atari, VIC, Apple, Commodore 64, and PET/CBM Computers. Greensboro, North Carolina:  Compute! Publications. ISBN 0-942386-11-6. 
+
+
+== რესურსები ინტერნეტში ==
+ შეგიძლიათ იხილოთ მედიაფაილები თემაზე „MOS Technology 6502“ ვიკისაწყობში.
+6502.org

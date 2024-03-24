@@ -1,0 +1,147 @@
+revision: 7582935
+title: "tranzistor (polovodi\u010Dov\xE1 s\xFA\u010Diastka)"
+url: https://sk.wikipedia.org/wiki/Tranzistor_(polovodi%C4%8Dov%C3%A1_s%C3%BA%C4%8Diastka)
+
+
+---
+
+Tranzistor alebo zriedkavo polovodičová trióda je trojvrstvová polovodičová súčiastka, používaná ako zosilňovač, spínač, stabilizátor a modulátor elektrického napätia alebo prúdu.
+
+
+== Dejiny ==
+Prvý zaznamenaný objav tranzistora je datovaný v roku 1947 a pochádza z Bellových laboratórií v USA. Za tento objav dostali jeho autori John Bardeen, Walter Houser Brattain a William Bradford Shockley v roku 1956 Nobelovu cenu za fyziku. Avšak prvé pokusy, pri ktorých Julius Edgar Lilienfeld náhodou spozoroval zosilnenie prúdu pri vhodnom kontakte rôznych kovov (základ dnešného unipolárneho tranzistora) sa udiali už v roku 1925. V roku 1930 si dal doktor Lilienfeld patentovať svoj koncept elektronickej súčiastky s použitím Al/Al2O3/Cu2S. Dnes ju poznáme pod pojmom „elektrickým poľom riadený tranzistor“. Prvý unipolárny tranzistor bol vyrobený až v roku 1960 po objavení MOS (metal-oxide-semiconductor) štruktúry v roku 1958. Bol zhotovený na báze kremíka s využitím izolačnej vrstvy z SiO2.
+Tranzistory, hromadne integrované na spoločný polovodičový substrát, predstavujú základnú jednotku integrovaných obvodov. Pri súčasných (2021) technológiách je bežná integrácia do úrovne rádovo miliárd tranzistorov na jednom čipe. Od začiatku éry integrovaných obvodov malej hustoty integrácie až do súčasnosti sa toto zvyšovanie hustoty „riadi“ tzv. Moorovým zákonom – empirickým pravidlom, ktoré hovorí o zväčšení počtu integrovateľných tranzistorov na dvojnásobok približne každé dva roky.
+
+
+== Pôvod názvu ==
+V Bellových laboratóriách skúšali nájsť vhodné meno pre novoobjavenú súčiastku. Skúšali mená ako „polovodičová trióda“, „pevná trióda“, „kryštalická trióda“ alebo „iotatrón“, ale napokon sa ujal názov „tranzistor“, navrhnutý John R. Pierceom. Tranzistor je skratka zo slov transconductance alebo transfer (doslovne „prenos“) a resistor.
+
+
+== Schematické značky tranzistorov ==
+Pre označovanie tranzistorov v schémach zapojenia sa používajú nasledovné značky:
+
+
+== Použitie ==
+
+
+=== Úvod ===
+Tranzistor je základný stavebný prvok skoro každého dnešného elektronického zariadenia. Zdá sa, že pôvodnú elektrónku a relé úplne vytlačil (i keď ešte stále existujú i dnes elektrónkové aplikácie a spínacie zariadenia založené na relé). Tranzistor je základným stavebným prvkom integrovaných obvodov a dá sa povedať, že najviac vyrobených tranzistorov je v súčasnosti práve v nich.
+Výhodou tranzistorov oproti elektrónkam je až 1000x vyšší prúd ktorý znesú – tranzistory až do kiloampérov, zatiaľ čo elektrónky asi 10 A. Ale na druhej strane elektrónky znesú vyššie pracovné napätie, rádovo až kilovolty (vo vysielačoch rozhoduje napätie).
+
+
+=== Zapojenia ===
+
+
+==== So spoločným emitorom ====
+
+Najčastejšie zapojenie, používané hlavne pri spínacích zapojeniach. Špeciálne na veľké výkony, keď nerozhoduje rýchlosť:
+
+Nízkofrekvenčné zosilňovače na reproduktory
+Riadenie elektromotorčekov
+Zopnutie žiaroviek TTL alebo CMOS obvodmiMenej vhodné na:
+
+VF a VVF aplikácie ako napr. predzosilňovače pri prijímačoch – nosnú priamo z antény
+
+
+==== So spoločným kolektorom ====
+Druhé najčastejšie zapojenie. Používa sa na zníženie výstupného odporu niečoho analógového, napr. operačného zosilňovača alebo koncového zosilňovača pre reproduktory.
+Sleduje vstupné napätie so zosilnením cca. 0,9 V. Je to prakticky 1 V, len na výstupe sa odpočítava cca. 0,7 V kvôli diódovej charakteristike vstupu (to sa dá ale rôznymi trikmi eliminovať alebo výrazne zmenšiť).
+Výstup sa tentokrát berie nie z kolektora, ale z emitora. Princíp je založený na tom, že tranzistor sa snaží držať rovnaké napätie na báze aj na emitore, lebo:
+
+keď je na emitore väčšia záťaž, tak z emitora je odoberaný väčší prúd ⇒ napätie na emitore klesá
+keď je na emitore menšie napätie ako na báze, tak je na báze väčšie napätie ako na emitore a cez bázu tečie potom väčší prúd do emitora a z emitora do záťaže
+na záťaži logicky potom rastie napätie a rozdiel medzi bázou a emitorom klesá ⇒ menší prúd do kolektoraTakže emitorový sledovač sa snaží držať na emitore rovnaké napätie ako na báze (mínus 0,7 V). Ako presne ho drží závisí od vstupného odporu záťaže a zosilnenia tranzistora.
+
+
+==== Darlingtonove zapojenie ====
+Zosilnenie tranzistora môžeme zväčšiť zapojením do Darlingtonovho zapojenia. Vtedy sa prúdové zosilnenia násobia:
+hfe1 x hfe2Pri takom obrovskom prúdovom zosilnení môžeme slaboprúdovým obvodom (napr. mikrokontrolér) spínať veľké prúdy, lebo takto môžeme spojiť citlivý slabý tranzistor so silným výkonovým.
+Nevýhoda je, že sa pri tomto sčítava necitlivosť a tiež fázový posun pri vyšších frekvenciách (~180° miesto ~90°), takže keď ho zaväzbíme, čo často treba, tak môže byť taký obvod nestabilný.
+Dnes už nemá taký veľký zmysel pre spínacie aplikácie, lebo stačí zobrať výkonový NMOS tranzistor a ten má prúdové zosilnenie skoro nekonečno.
+Pre analógové výkonové aplikácie má ale stále zmysel.
+
+
+=== Spínač ===
+Hlavnou úlohou spínača je zopnúť v určitom čase a za určitý čas nejaký el. obvod. Ich hlavnou prednosťou je čas zopnutia a rozopnutia – má byť čo najkratší – rádovo jednotky ms u spínacích tranzistorov až jednotky ųs. Ďalšou vlastnosťou je spínací odpor. Má tiež byť čo najmenší v zopnutom stave a čo najväčší v rozopnutom. Ďalšia dôležitá vlastnosť je spínací výkon P = Imax.2.Rprech. alebo P = Imax..Uprech. Má byť menší ako výkon spínacieho prvku teda tranzistora.
+Najjednoduchšie použitie tranzistora je spínač. Tu sa používa takmer vždy zapojenie so spoločným emitorom pre vysoké výkonové zosilnenie.
+
+PríkladNapríklad chceme nejakým TTL obvodom (napr. blikačkou) zopnúť žiarovku, ktorá potrebuje prúd 20 mA. Bežný TTL obvod, ale dodá len 0,4 mA až 4 mA. Tu nastupuje tranzistor. Z katalógu vyberieme nejaký tranzistor, ktorý unesie tento prúd (a samozrejme aj napätie na našej žiarovke). Pri bipolárnom si pozrieme jeho zosilnenie (pri NMOS, napríklad rad IRF netreba, je totiž prakticky nekonečno). Tranzistory, ktoré znesú 1 000 mA mávajú zosilnenie obyčajne 100 a viac. Zosilnenie, ktoré potrebujeme, je:
+20 : 0,4 = 50
+Čo je ešte v norme. Použijeme zapojenie so spoločným emitorom a privedieme výstup TTL na bázu tranzistora. Tu sa dá použiť ešte ochranný odpor, ale pre TTL to funguje aj bez neho. Žiarovku pripojíme jedným koncom na kolektor tranzistora a druhým na plus zdroja (Vcc).
+Ak potrebujeme viac prúdu a zosilnenie je nato malé, tak použijeme darlingtonove zapojenie.
+
+
+=== Zosilňovač ===
+Pri zosilňovači volíme jedno z troch zapojení:
+
+Spoločný emitor – keď potrebujeme veľký výkon ale frekvencia je malá (NF koncové zosilňovače). Obracia fázu o 180°.
+Spoločná báza – potrebujeme zosilnenie napätia pri čo najvyššej frekvencii – napr. predzosilňovače pri rádioprijímačoch.
+Spoločný kolektor – potrebujeme z nejakého výstupu odoberať viac prúdu ako znesie, vtedy dáme za tento výstup toto zapojenie. Neobracia fázu.Tieto zapojenia sa osamote v málo ktorých aplikáciach používajú ako zosilnovače. Vždy tvoria jeden celok-zosilnovač (NF,VF)
+V prípadoch 1. a 2. potrebujeme nastaviť pracovný bod. Znamená to, že keď dáme pracovný bod na báze do 2 V, tak keď sa vstupné napätie mení od -0,1 V do +0,1 V, tak sa na báze tranzistora mení od 1,9 V do 2,1 V a na výstupe napr. od +1V do +7V. To preto, lebo pri 2 V na báze je na výstupe 4 V.
+Pracovný bod sa nastavuje lebo:
+
+V hraničných oblastiach prevodovej charakteristiky tranzistor nepracuje v lineárnom režime, preto sa pracovný bod nastavuje tam kde sa nachádza lineárna prevodová charakteristika.
+Zosilnenie tranzistora je najväčšie a nelinearita je najmenšia dosť vysoko nad 1 V.Pracovný bod sa nastavuje:
+
+Deličom
+Biasom – buď odporom alebo diódami
+
+
+== Typy tranzistorov ==
+Tranzistory môžeme rozlišovať na základe niekoľkých kategórií napr.:
+
+podľa materiálu na kremíkové, gálium-arzenidové, germániové,najviac (~99%) sa dnes používajú kremíkovépodľa vnútornej štruktúry na: bipolárne, JFET, MOSFET, atď…
+podľa polarity na: bipol. NPN: , bipol. PNP: , JFET N-kanálový: , JFET P-kanálový: mnemotechnická pomôcka: NPN – Nemám Peniaze Nejdem – šípka ide von alebo NPN – šípka ven
+mnemotechnická pomôcka: PNP – Poď Na Pivo – šípka ide dnupodľa výkonu nízkovýkonové, vysokovýkonové,...
+podľa rýchlosti spínania na nízkofrekvenčné, vysokofrekvenčné,...
+podľa usporiadania kontaktov na laterálne (usporiadanie kontaktov v jednej rovine, z jednej strany substrátu) a vertikálne (napríklad u DMOS,Trench-MOS, IGBT, drainov (kolektorový) kontakt je zo spodnej strany substrátu, emitor a hradlo z hornej strany substrátu). Vertikálne usporiadanie umožňuje väčšiu integráciu a vyššie prúdové zaťaženie.
+
+
+== Dynamické vlastnosti tranzistorov ==
+Vlastnosti tranzistora sa dosť výrazne menia podľa pracovnej frekvencie. Pri návrhu vysokofrekvenčných obvodov s tranzistormi musíme rátať:
+
+Zosilnenie je menšie ako pri malých frekvenciách
+Vstupný signál je rušený výstupným signálom (hlavne pri zapojení so spoločným emitorom, pri spoločnej báze rádove menej). To je pri bipolárnych spôsobené kapacitou prechodu CB, keďže je to dióda v závernom smere, a to je kondenzátor.Základný údaj pre dynamiku tranzistora je tzv. tranzitívna frekvencia fT. Je to frekvencia, pri ktorej je zosilnenie rovné 1.
+
+
+== Princíp bipolárneho tranzistora ==
+Princíp je nasledovný (NPN):
+Pri napätí medzi kolektorom a emitorom (Vcc na C a nula alebo mínus na E) je prechod BE priepustný a CB je nepriepustný. Takže medzi CE nemôže prejsť nijaký prúd, lebo otvorené musia byť obidva. V skutočnosti prechádza malý zvyškový prúd, ale ten je obyčajne rádovo v nanoampéroch.
+Keď ale privedieme na B napätie a cez BE začne prechádzať prúd, tento vyplní P-časť elektrónmi a tento už nie je čistý P ale má odrazu aj N-nosiče (elektróny), ktoré vytvoria malú cestičku pre elektróny z kolektora. Tie sa začnú doslova hrnúť do bázy a tam sú už v priepustnom smere a letia do emitora. Tu hovoríme, že tranzistor sa začína otvárať.
+Pri kremíkových tranzistoroch treba na otvorenie 0,5 V až 0,7 V na prechode BE. Pri germániových okolo 0,25 V.
+Lenže teraz je v báze ešte viac elektrónov, ktoré túto cestičku ešte zväčšujú. To znamená ešte viac elektrónov ktoré unikajú z kolektora do bázy a toto celé sa opakuje a vzniká takto lavína. Po čase sa táto cestička (pri rovnakom prúde z bázy) prestane zväčšovať a prúd z kolektora zostane konštantný, ale stále mnohokrát väčší ako bázový – pomer C-prúdu a B-prúdu sa nazýva zosilnenie tranzistora. Toto zosilnenie sa môže meniť s bázovým prúdom(=nelinearita), ale výraznejšie len pri malých bázových prúdoch alebo naopak pri veľmi veľkých (v saturačnej oblasti).
+Keď prúd na báze vypneme, chvíľu ešte trvá, kým elektróny z bázy odtečú do emitora a cestička sa uzavrie. To preto, lebo elektróny z kolektora ešte chvíľu cestičku zásobujú. Toto uzavretie trvá podľa toho, aký široký je CB-prechod. Preto sú vysokovýkonové tranzistory pomalšie ako malovýkonové. Hlavne pri veľkých napätiach medzi CE.
+Pri veľkých bázových prúdoch sa už báza správa ako N-polovodič, z tranzistora sa stane akoby jeden N-blok, t. j. úplne sa otvorí. Keď aj vtedy zvyšujeme bázový prúd, C-prúd sa už nezvyšuje, toto voláme saturácia. Saturovanému tranzistoru trvá dlhšie, kým sa vypne a preto sa pri VF obvodoch pridáva do tranzistora na CB-prechod paralelne tzv. antisaturačná dióda.
+Pri plnom zopnutí je úbytok napätia Uce veľmi malý (0.2 až 0.3V), tzv. saturačné napätie.
+Pri PNP je to rovnaké, len musíme prehodiť plusové napätia za mínusové (nulové) a opačne.
+
+
+== Princíp unipolárneho tranzistora (FET) ==
+
+
+=== N-kanál obohacovací ===
+
+Ak máme substrát P a elektródy (S a D) N, medzi ktorými je P substrát, tak je tento tranzistor normálne nevodivý. Ale nad substrátom je elektróda G. Na tú keď privedieme kladné napätie, tak k nej pritiahneme elektróny a zo substrátu P sa v blízkosti elektródy vytvorí N. Tak vznikne medzi S a D most a tranzistor je otvorený.
+Dôležitá je izolačná vrstva medzi hradlovou elektródou a substrátom.
+Keď ale hradlo odpojíme, tento most ešte dlho ostane (rádove sekundy, pri diskrétnych výkonových ešte dlhšie). Keď ho chceme vypnúť, musíme hradlo pripnúť na nulu (alebo vyrovnať s D). Toto sa využívalo v niektorých pamätiach. Príčinou je kapacita medzi hradlom a S a D. Táto kapacita tiež obmedzuje rýchlosť spínania na tranzistore, lebo pri väčších frekvenciách sa samozrejme správa ako skrat.
+
+
+== Fototranzistor ==
+Variantom tranzistora je fototranzistor, ktorý namiesto bázového vodiča využíva PN priechod citlivý na svetlo. (V podstate každý bipolárny tranzistor by sa dal prerobiť na fototranzistor tým, že namiesto vodiča na bázu sa na puzdre vyrobí vhodné okienko s optikou, kde prúd svetla je nasmerovaný na príslušný p-n prechod.) Pozri aj: fotodióda.
+
+
+== Referencie ==
+
+
+== Pozri aj ==
+Polovodič
+Dióda
+MOSFET
+IGBT
+Tyristor
+Integrovaný obvod
+
+
+== Iné projekty ==
+
+ Commons ponúka multimediálne súbory na tému Tranzistor (polovodičová súčiastka)

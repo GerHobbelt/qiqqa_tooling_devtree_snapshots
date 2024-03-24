@@ -1,0 +1,74 @@
+revision: 5545891
+title: VIAF (identifikator)
+url: https://sl.wikipedia.org/wiki/Virtualna_mednarodna_normativna_datoteka
+
+
+---
+
+Virtualna mednarodna normativna datoteka oz. VIAF (kratica za The Virtual International Authority File) je mednarodna normativna datoteka. VIAF je skupni projekt nacionalnih knjižnic ZDA, Nemčije in Francije, v sodelovanju z vedno večjim številom nacionalnih knjižnic ter drugih ustanov. Iz 18 organizacij, ki sodelujejo v projektu, je vključenih 21 normativnih datotek osebnih in korporacijskih imen. 
+Normativne datoteke osebnih in korporativnih imen vsebujejo različne oblike zapisa imena oseb in koprorativnih teles,  povezujejo prava imena s psevdonimi ter razlikujejo soimenjake. Namen zbiranja teh imen pa je, da bi v podatkovnih bazah vedno našli vsa dela, ne glede na obliko imena, s katero bi iskali. Če bi npr. v COBIBu, slovenski vzajemni bibliografski bazi, iskali z imenom Pavle Sedmak (eden od psevdonimov Franceta Bevka), najdemo vsa Bevkova dela prav zato, ker je vključena taka normativna datoteka CONOR.
+
+
+== Vključene knjižnice ==
+National Library of Australia, Avstralija
+Narodna knjižnica Češke republike, Češka
+Bibliotheca Alexandrina, Egipt
+Bibliothèque nationale de France, Francija
+Deutsche Nationalbibliothek, Nemčija
+Getty Research Institute, ZDA
+National Library of Israel, Izrael
+Istituto Centrale per il Catalogo Unico, Italija
+Biblioteca Nacional de Portugal, Portugalska
+Biblioteca Nacional de España, Španija
+Kungliga Biblioteket, Švedska
+Schweizerische Nationalbibliothek, Švica
+Kongresna knjižnica, ZDA
+Vatikanska knjižnica, Vatikan
+NUKAT Center, Poljska
+Library and Archives Canada, Kanada
+National Széchényi Library, Madžarska
+RERO, Švica
+Ruska državna knjižnica, Rusija
+Narodna in univerzitetna knjižnica/CONOR, Slovenija
+
+
+== O projektu VIAF ==
+Na 63. mednarodni IFLA konferenci v Berlinu leta 2003, je med Nemško nacionalno knjižnico (DNB), Ameriško nacionalno knjižnico (LC) in organizacijo OCLC, prišlo do dogovora za razvoj Virtualne mednarodne normativne datoteke za osebna imena. Naloga VIAF-a je bil prikaz zmožnosti in prednosti avtomatičnega povezovanja normativnih zapisov iz tujih nacionalnih datotek. 
+Projekt je sestavljen iz petih faz:
+
+Izgradnja naprednega normativnivnega zapisa iz obeh nacionalnih knjižnic (DNB in LC).
+Razvoj primerjalnih algoritmov in povezovanje zapisov, ki bi tvorili začetno verzijo VIAF-a.
+Implementacija Open Archive Initiative (odprt arhiv), ki nudi dostop do VIAF-a.
+Vzdrževanje podatkovne baze bi zahtevalo nadgradnje in spremembe normativnih in bibliografskih zapisov vseh sodelujočih ustanov.  Vzdrževanje sistema bi moralo biti načrtovano okoli protokolov OAI.
+Dostop do podatkov VIAF bi nudil vmesnik, ki bi bil dostopen na spletu. Sčasoma bi podatkovna baza podpirala Unicode in več jezikovne možnosti.
+
+
+=== Postopek prijave ===
+Ustanove, ki želijo sodelovati v projektu se morajo nanj prijaviti. Postopek poteka tako, da agencija, ki želi sodelovati, predloži testne bibliografske in normativne datoteke konzorciju VIAF-a. Organizacija OCLC Research obdela testne izvorne datoteke tako, da se imena naslovov ujemajo z naslovi v VIAF zapisih, katere so v preteklosti posredovale že sprejete članice. V primeru uspešnega prijavnega postopka mora ustanova predati vse bibliografske in normativne datoteke organizaciji OCLC Research in jih tudi redno dopolnjevati. Nove vsebine so objavljene in dostopne na spletni strani VIAF projekta. Nove članice prejemajo poročila in pomagajo pri prilagoditvenem procesu.
+
+
+=== Cilj projekta ===
+Dolgoročni cilj projekta je vključitev normativnih datotek številnih knjižnic v globalno storitev, ki bi bila prosto dostopna preko spleta, nižji stroški vzdrževanja in širjenje njihove uporabnost na tako knjižnična kot tudi ostala področja.  S prepoznavanjem različnih imen  iste osebe ali organizacije, VIAF nudi bolj ustrezne rešitve za širšo skupnost knjižnic, ki bi znale bolje izkoristiti bibliografske podatke iz različnih držav.
+
+
+=== Vodstvo ===
+Člani VIAF konzorcija so podpisniki VIAF kooperativne pogodbe, ki določa njihove pravice in obveznosti, o vseh drugih ključnih zadevah odločajo glavni predstojniki. Vsi udeleženci projekta določajo smer razvoja. Uradni predstavniki skrbijo za obveze svojih organizacij. Predstavniki nekaterih ustanov so: Barbara Pfeifer (Deutsche Nationalbibliothek), Françoise Bourdon (Bibliothèque nationale de France) in Barbara B. Tillett (Library of Congress).
+
+
+== Organizacija OCLC ==
+Spletni računalniški knjižnični center oz. OCLC (kratica za OCLC Online Computer Library Center) je "neprofitna, računalniško kjižnična in raziskovalna organizacija, ki deluje v korist javnega dostopanja do svetovnih informacij in nižanja informacijskih stroškov". Več kot 27,000 knjižnic v 86 državah uporablja storitve OCLC, ki omogočajo iskanje, katalogizacijo, izposojo in ohranjanje knjižničnih gradiv.  Organizacijo je ustanovil Fred Kilgour.
+
+
+== Glej tudi ==
+CONOR Normativna datoteka osebnih in korporativnih imen v sistemu COBISS.SI
+
+
+== Literatura ==
+
+Rick Bennett, Christina Hengel-Dittrich, Edward T. O'Neill, Barbara B. Tillett: VIAF (Virtual International Authority File): Linking Die Deutsche Bibliothek and Library of Congress Name Authority Files. Projektbeschreibung für den World Library and Information Congress: 72nd IFLA General Conference and Council, 20.–24.  August 2006, Seul, Korea. (Pridobljeno 17.5.2011)
+
+
+== Zunanje povezave ==
+
+VIAF The Virtual International Authority File
+OCLC Online Computer Library Center

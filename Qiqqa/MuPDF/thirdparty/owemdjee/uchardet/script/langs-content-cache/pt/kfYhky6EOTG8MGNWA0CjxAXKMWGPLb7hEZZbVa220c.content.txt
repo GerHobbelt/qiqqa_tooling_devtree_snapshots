@@ -1,0 +1,263 @@
+revision: 64459588
+title: Teorema Smn
+url: https://pt.wikipedia.org/wiki/Teorema_Smn
+
+
+---
+
+Na teoria da computabilidade, o teorema Smn (também chamado de lema da tradução, teorema do parâmetro ou teorema da parametrização), é um resultado básico sobre linguagens de programação (e, mais genericamente, numerações de Gödel das funções computáveis) (Soare 1987, Rogers 1967). Foi primeiramente provado por Stephen Cole Kleene (Kleene 1943).
+Em termos práticos, o teorema diz que para uma dada linguagem de programação e inteiros positivos 
+  
+    
+      
+        m
+      
+    
+     
+   e 
+  
+    
+      
+        n
+      
+    
+     
+  ', existe um algoritmo específico que aceita como entrada o código fonte do programa com 
+  
+    
+      
+        m
+        +
+        n
+      
+    
+     
+   variáveis livres, juntamente com 
+  
+    
+      
+        m
+      
+    
+     
+   valores. Esse algoritmo gera um código fonte que substitui efetivamente os valores para as primeiras 
+  
+    
+      
+        m
+      
+    
+     
+   variáveis livres, deixando o resto livre.
+
+
+== Detalhes ==
+A forma básica do teorema se aplica a funções de dois argumentos (Nies 2009, p. 6). Dada uma numeração de Gödel 
+  
+    
+      
+        φ
+      
+    
+     
+   de funções recursivas, há um função recursiva primitiva 
+  
+    
+      
+        s
+      
+    
+     
+   de dois argumentos com a seguinte propriedade: para cada número de Gödel 
+  
+    
+      
+        p
+      
+    
+     
+   de uma função computável parcial 
+  
+    
+      
+        f
+      
+    
+     
+   com dois argumentos, as expressões 
+  
+    
+      
+        
+          φ
+          
+            s
+            (
+            p
+            ,
+            x
+            )
+          
+        
+        (
+        y
+        )
+      
+    
+     
+   e 
+  
+    
+      
+        f
+        (
+        x
+        ,
+        y
+        )
+      
+    
+     
+   são definidas para as mesmas combinações de números naturais 
+  
+    
+      
+        x
+      
+    
+     
+   e 
+  
+    
+      
+        y
+      
+    
+     
+   e seus valores são iguais para qualquer combinação. Em outras palavras, a seguinte igualdade extensional de funções detém para cada 
+  
+    
+      
+        x
+      
+    
+     
+  :
+De forma mais genérica, para cada 
+  
+    
+      
+        m
+        ,
+        n
+        >
+        0
+      
+    
+     
+  , existe uma função recursiva primitiva 
+  
+    
+      
+        
+          s
+          
+            m
+          
+          
+            n
+          
+        
+      
+    
+     
+   de 
+  
+    
+      
+        m
+        +
+        1
+      
+    
+     
+   argumentos que funciona da seguinte maneira: para cada número de Gödel 
+  
+    
+      
+        p
+      
+    
+     
+   de uma função computável parcial com 
+  
+    
+      
+        m
+        +
+        n
+      
+    
+     
+   argumentos, e todos os valores de 
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        ,
+        ⋯
+        ,
+        
+          x
+          
+            m
+          
+        
+        :
+      
+    
+     
+  A função s descrita acima pode ser tida como sendo 
+  
+    
+      
+        
+          s
+          
+            1
+          
+          
+            1
+          
+        
+      
+    
+     
+  .
+
+
+== Exemplos ==
+O seguinte código implementa s11 para Lisp.Por exemplo, avalia para
+
+
+== Veja também ==
+Teorema da recursividade de Kleene
+Currying
+
+
+== Referências ==
+Kleene, S. C. (1936). "General recursive functions of natural numbers". Mathematische Annalen 112 (1): 727–742. doi:10.1007/BF01565439.
+Stephen Cole Kleen (1938). "On Notations for Ordinal Numbers" (PDF). The Journal of Simbolyc Logic 3: 150-155. (This is the reference that the 1989 edition of Odifreddi's "Classical Recursion Theory" gives on p. 131 for the smn theorem.)
+Nies, André (2009). Computability and randomness. Oxford Logic Guides 51. Oxford: Oxford University Press. ISBN 978-0-19-923076-1 Zbl [1]1169.03034
+Odifreddi, P. (1999). Classical Recursion Theory. North-Holland. ISBN 0-444-87295-7.
+Rogers, H. (1987) [1967]. The Theory of Recursive Functions and Effective Computability. First MIT press paperback edition. ISBN 0-262-68052-1.
+Soare, R. (1987). Recursively enumerable sets and degrees. Perspectives in Mathematical Logic. Springer-Verlag. ISBN 3-540-15299-7.
+
+
+== Ligações externas ==
+Weisstein, Eric W.,  [2]"Kleene's s-m-n Theorem", MathWorld.

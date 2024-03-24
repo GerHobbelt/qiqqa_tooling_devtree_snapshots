@@ -1,0 +1,30 @@
+revision: 28743894
+title: FileMaker Inc.
+url: https://tr.wikipedia.org/wiki/Rosetta_(yaz%C4%B1l%C4%B1m)
+
+
+---
+
+Rosetta, Apple Inc. tarafından Mac OS X işletim sistemi için geliştirilen dinamik bir ikili tercümandır. Birçok PowerPC uygulamasının belirli Intel tabanlı Macintosh bilgisayarlarda herhangi bir değişiklik yapmadan çalışmasına izin verir. Apple 2006 yılında Macintosh platformunun Komut kümesini PowerPC'den Intel işlemciye değiştirince Rosetta'yı piyasaya sürdü. "Rosetta" ismi, Mısır hiyerogliflerini anlama ve tercüme etmeyi mümkün kılan keşif olan Rosetta Taşı'na referans yapar.
+Rosetta, QuickTransit teknolojisine dayalıdır. Grafik kullanıcı arayüzü yoktur. Rosetta ilk olarak Mac OS X v10.4.4 "Tiger" ile birlikte piyasaya sürüldü; bu sürüm ilk Intel tabanlı Macintosh modelleriyle piyasaya sürüldü. Rosetta Mac OS X v10.6 "Snow Leopard" da varsayılan olarak yüklenmez, ancak PowerPC uygulamalarını çalıştırmak isteyen kullanıcılar için yükleyici veya Apple Software Update aracılığıyla bir seçenek olarak saklanabilir. Rosetta, Mac OS X v10.7 "Lion" ya da sonrasında dahil edilmez veya desteklenmez. Bu nedenle, Lion ve sonraki sürümlerde, geçerli Macintosh platformu PowerPC uygulamalarını desteklemez
+
+
+== Özellikleri ==
+Rosetta, Lion'dan önce Intel işletim sistemleri için Mac OS X'in bir parçasıdır. G3, G4 ve AltiVec talimatlarını çevirir; Ancak, G5 talimatlarını tercüme etmez. Bu nedenle, G5'e özgü yönerge setlerine dayanan uygulamalar geliştiricileri tarafından Rosetta destekli Intel tabanlı Mac'lerde çalışmak üzere değiştirilmelidir. Apple'a göre, yüksek bilgisayar gerektiren uygulamalar (AutoCAD, oyun veya Adobe Photoshop gibi) olan uygulamalar değil, ağır etkileşimli ancak düşük hesaplama gereksinimleri olan uygulamalar (örneğin, kelime işlemciler) Rosetta ile çeviri için çok uygundur. Apple'ın "Pro" medya üretim uygulamaların (FileMaker, Final Cut Pro, Final Cut Studio, Final Cut Pro X, Motion (yazılım), Compressor (yazılım) Aperture, Logic Studio, Mainstage (yazılım) ve Logic Pro gibi) önceden var olan PowerPC sürümleri Rosetta tarafından desteklenmiyor.
+Rosetta aşağıdakileri desteklemez
+
+Classic ortamı ve böylece Mac OS 9 veya daha eski sürümleri için yapılmış herhangi bir Karbon APİ içermeyen uygulama
+Tercihleri Sistem Tercihleri bölmesine ekleyen kod
+G5 işlemci gerektiren uygulamalar
+Kesin özel durum işleme gerektiren uygulamalar
+Ekran koruyucular
+Çekirdek uzantıları ve onlara bağımlı uygulamalar
+JNI kitaplıklarıyla birlikte paketlenemeyen Java uygulamaları veya Java uygulamaları tercüme edilemez
+Rosetta tarafından tercüme edilen uygulamalardaki Java uygulamaları, yani Java uygulamalarını yüklemek için eski bir PowerPC sürümü yerine yerel bir Intel web tarayıcı uygulamasının kullanılması gerektiği anlamına gelir
+
+
+== Kaynakça ==
+
+
+== Dış bağlantılar ==
+Sitesi Wayback Machine'de.

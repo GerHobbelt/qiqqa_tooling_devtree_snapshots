@@ -1,0 +1,269 @@
+revision: 20345805
+title: "Sva\u0159ov\xE1n\xED pod tavidlem"
+url: https://cs.wikipedia.org/wiki/Sva%C5%99ov%C3%A1n%C3%AD_pod_tavidlem
+
+
+---
+
+Svařování pod tavidlem (někdy také svařování automatem pod tavidlem ve zkratce APT) je metoda automatického vysokovýkonného obloukového svařování používaná zejména pro svařování ocelových svařenců dlouhými a nepřerušovanými svary nebo ocelových vinutých trub.
+Tento tavný způsob svařování využívá teplo dodávané hořením elektrického oblouku k roztavení svarových ploch a přídavného materiálu v tzv. svarové lázni. Svarová lázeň je chráněna před oxidací plyny, které se uvolňují při tavení granulovaného tavidla. Tavidlo je přidáváno do svarového úkosu před svarovou lázeň. Tavidlo má obdobnou funkci i složení jako obaly elektrod ručního obloukového svařování. Svarový kov vzniká z přídavného materiálu – na cívce navinutého svařovacího drátu. Metoda pod tavidlem se používá též pro navařování, u kterého se používají jako přídavný materiál svařovací pásky. Svařovat pod tavidlem lze pouze v tzv. poloze svařování shora.
+Automatizace procesu je zajištěna vybavením, které umožní svařování bez zásahu svářeče. Svařovací zařízení se umisťuje buď na tzv. traktory (vozíky), které pojíždějí po definované dráze nebo je svařenec za pomoci polohovadla podáván k stacionárně umístěnému zařízení. Svařovací zařízení se skládá ze svařovacího zdroje, svařovací hlavy, výsypky pro granulované tavidlo, průmyslového vysavače přebytečného tavidla a řídící jednotky.
+
+
+== Historie ==
+Metoda sdílí stejné historické kořeny s ostatními způsoby obloukového svařování. Od objevu fenoménu elektrického oblouku na začátku 18. století nezávisle na sobě Humphry Davym a Vasilijem Petrovem, přes patenty svařování kovovou elektrodou Nikolaje Slavjanova v roce 1888 a Charlese L. Coffina o rok později, či principy ochrany svarové lázně postulované opět Coffinem a rozvinuté Oscarem Kjellbergem a následně Arthurem Percy Strohmengerem z Velké Británie.
+Automatizací procesů podávání přídavného materiálu se zabýval např. Paul O. Noble, který získal patent pro svůj návrh v roce 1924, nebo Frank A. Haughton s patentem z roku 1928 na obdobné zařízení. Svařování však stále probíhalo bez jakékoliv ochrany proti okolní atmosféře.
+Boris S. Robinoff v roce 1929 obdržel patent pro automatizované svařování za použití tavidla, které při tavení uvolňuje plyny ochranné atmosféry a metalurgicky reaguje se svarovou lázní za vzniku strusky. Práva na tento patent v roce 1935 zakoupila společnost Linde Air Product, která přejmenovala metodu na Union-melt. O rok později byla metoda využita při výrobě tankeru o délce 153 metrů.
+
+
+== Charakteristika ==
+Metoda svařování pod tavidlem využívá teplo dodávané elektrickým obloukem pro roztavení svarových ploch základního materiálu a přídavného materiálu za využití plynných produktů tavícího se tavidla jako ochrany svarové lázně.
+Přídavným materiálem je automaticky podávaný svařovací drát nebo svařovací páska, podobně jako u metod svařování tavící se elektrodou.
+Pro ochranu svarové lázně je využíváno tavidlo ve formě granulí, které se sype do svarového úkosu před hořící elektrický oblouk. Složení a funkce tavidla je obdobná jako u ručního obloukového svařování obalenou elektrodou. Tavidlo se teplem roztaví a uvolní se z něj plyny, které ochrání svarovou lázeň před účinky okolní atmosféry. Kromě ochranné funkce obsahuje tavidlo prvky, kterými se doleguje svar na požadované vlastnosti, případně se doplní o vypálené prvky. Rafinační schopností tavidla dojde k odstranění nežádoucích prvků ze svaru, zejména síry. Z roztaveného tavidla vzniká struska, která těsně přiléhá k chladnoucímu svaru. Přebytečné tavidlo, které nevstoupilo do tavícího procesu, se vysaje a zrecykluje k dalšímu použití.Svařovací zařízení, které se skládá ze svařovacího zdroje, podavače a zásobníku přídavného materiálu, zásobníku tavidla a svařovací hlavy, je umístěno na vozíku – často nazýván traktorem. Pojezd vozíku, dodávání přídavného materiálu i tavidla je prováděno automaticky řídící jednotkou za dozoru svářecího operátora. Zařízení může být i stacionární s tím, že je zajištěn pohyb svařence, např. pro obvodové svary nebo při výrobě skružovaných trub. Poloautomatický (semiautomatický) režim označuje pouze mechanizaci podávání drátu a vedení hořáku zajišťuje ručně svářeč, tento režim se dnes používá již zřídka.
+
+
+== Technologie ==
+Protože zařízení pracuje samostatně, bez nutnosti přítomnosti svářeče resp. operátora ve svařované zóně, lze svařovat vyššími proudy až 2000 A (až 3600 A) i až vyšší rychlostí až 120 m/hod a s vyšším dodaným teplem, které by jinak ohrožovalo zdraví svářeče. Z toho také plyne vyšší výkon svařování. Nevýhody tohoto způsobu svařování je nulová vizuální kontrola svarové lázně, neboť ta je zcela zakryta tavidlem a provádění pouze takových svarů, ke kterým lze přistoupit shora případně šikmo shora s maximální úklonem cca 7° (tj. svařovací poloha PA). Tato metoda se často neobjede bez použití polohovadel či jiných speciálních přípravků, které zajistí požadovanou pozici pro svařování. Je také vyžadována náročná úprava svarových ploch a podložení kořenové vrstvy.Pro kořenovou vrstvu se může použít jiná metoda např. TIG, nebo se použijí podložky pod svar, které zajistí tvar a dostatečné provaření kořenové vrstvy. Podložky se používají ocelové, měděné nebo keramické.Pro zvýšení výkonu lze použít tzv. tandemových hořáků (tj. dva hořáky za sebou) nebo tandemové hořáky s dvěma svařovacími dráty, apod. Ekonomická výhoda metody roste s délkou svarů v jednom záběru, protože čím delší je svar tím vyšší je i využití svařovacího zařízení a nižší nutnost zásahu operátora. Zvyšuje se tím efektivita svařování, tj. poměr doby práce zařízení ku celkové době (např. délce směny).
+
+
+== Spotřební materiál ==
+
+
+=== Přídavný materiál ===
+Jako přídavný materiál pro svařování se vyrábějí dráty tažením za studena v průměrech od 2,0 do 8,0 mm. Pro navařování se používají spíše pásky nebo plněné dráty. Přídavný materiál by měl mít omezen obsah fosforu do hodnoty 0,15 hm. %. Kombinaci druhu drátu a příslušného tavidla zpravidla určuje výrobce spotřebního materiálu.
+
+
+=== Tavidla ===
+Stejně jako u metody ručního obloukového svařování je nezbytné dodržet technologické předpisy pro skladování a manipulaci s tavidlem, aby se zabránilo jeho navlhnutí. Zvýšená vlhkost vede na absorpci vodíku a jeho přenosu do svarového kovu, kde může způsobit tzv. vodíkovou křehkost.Tavidla se vyrábějí různými technologiemi:
+
+tavením suché směsi v peci – suchá směs se taví v peci při teplotě 1250 až 1500 °C a pak se ochladí ledovými bloky nebo se odlévají do proudící vody; tento postup omezuje absorpci vlhkosti a při recyklaci jsou tvarově i chemicky stálejší; dezoxidační a legující prvky se ale při výrobě obtížně dodávají;spojením práškové směsi pojivem – suchá prášková směs se spojí vhodným pojivem, buď křemičitanem draselným nebo křemičitanem sodným (vodní sklo) nebo oběma, následně se granuluje lisem a suší se při teplotě cca 400 °C; do tavidla se snadno dodávají oxidační příměsi a legury; lze je obarvovat a používat v silnějších vrstvách; nevýhodou je zvýšená citlivost k navlhání;aglomerovaná tavidla – se vyrábějí jako prášková, ale s keramickým pojivem; vysoká teplota výroby zabraňuje možnosti přidávání dezoxidačních a legujících prvků; mají zvýšenou citlivost k navlhání;sintrovaná tavidla – prášková směs se spojuje žíháním při teplotě 800 °C.Podle stupně bazicity se rozdělují tavidla na kyselá (SiO2, P2O5), neutrální (Al2O3, B2O3, Cr2O3), bazická (CaO, MgO, FeO, MnO, CrO, NiO, Na2O, K2O). Chemické složení tavidel je definováno v ČSN EN 760 podle obsahu jednotlivých komponent.
+Bazicitu tavidla lze odhadnout na základě výpočtu podle indexu Boniszewského:
+  
+    
+      
+        B
+        =
+        
+          
+            
+              C
+              a
+              O
+              +
+              M
+              g
+              O
+              +
+              N
+              
+                a
+                
+                  2
+                
+              
+              O
+              +
+              
+                K
+                
+                  2
+                
+              
+              O
+              +
+              C
+              a
+              
+                F
+                
+                  2
+                
+              
+              +
+              1
+              
+                /
+              
+              2
+              (
+              M
+              n
+              O
+              +
+              F
+              e
+              O
+              )
+            
+            
+              S
+              i
+              
+                O
+                
+                  2
+                
+              
+              +
+              1
+              
+                /
+              
+              2
+              (
+              A
+              
+                l
+                
+                  2
+                
+              
+              
+                O
+                
+                  3
+                
+              
+              +
+              T
+              i
+              
+                O
+                
+                  2
+                
+              
+              +
+              Z
+              r
+              
+                O
+                
+                  2
+                
+              
+              )
+            
+          
+        
+      
+    
+     
+  
+Jednotlivé složky se zadávají do rovnice jako hmotnostní procento.
+Hodnocení bazicity:
+
+  
+    
+      
+        B
+        ≤
+        0
+        ,
+        9
+      
+    
+     
+   – kyselá tavidla
+
+  
+    
+      
+        0
+        ,
+        9
+        <
+        B
+        <
+        1
+        ,
+        2
+      
+    
+     
+   – neutrální tavidla
+
+  
+    
+      
+        1
+        ,
+        2
+        ≤
+        B
+        ≤
+        2
+        ,
+        0
+      
+    
+     
+   – bazická tavidla
+
+  
+    
+      
+        B
+        ≥
+        2
+        ,
+        0
+      
+    
+     
+   – vysoká bazicita
+
+
+== Vybavení ==
+
+
+=== Svařovací zdroje ===
+Pro svařování pod tavidlem lze použít jak stejnosměrný tak střídavý proud.
+Svařovacími zdroji mohou být rotační dynama, která lze spojovat do páru, nebo usměřňovače s vyšší účinností – až 76 %, nebo transformátory pro svařování střídavým proudem.Transformátory se s výhodou používají při požadavku na hluboký závar tupého svaru s maximálním úklonem 2°. Nevýhodou je zvýšené riziko neroztavených zbytků drátů ve svarové lázni způsobené sinusovou změnou velikosti svařovacího proudu při průchodu nulovou hladinou. I proto se s výhodou využívají zdroje s obdélníkovou modulací průběhu svařovacího proudu. U střídavého proudu se též minimalizuje tzv. foukání oblouku.Svařovací zdroje pro svařování pod tavidlem by měly disponovat 100% hodnotou zatěžovatele. Statická charakteristika může být jak strmá tak i plochá. U strmé charakteristiky jsou změny napětí vyvolané proměnnou délkou elektrického oblouku registrovány elektronickým zařízením, které samočinně zvýší nebo sníží rychlost podávání drátu. Při ploché charakteristice dochází k tzv. samoregulaci, kdy kolísání délky oblouku vede na kolísání napětí, které vyvolá změnu velikosti svařovacího proudu resp. rychlost podávání drátu.
+
+
+=== Traktor ===
+Traktory neboli vozíky jsou zařízení, která umožňují pohyb celého zařízení ve zvolené dráze. Traktor bývá samostatně poháněn a je na něm umístěno veškeré potřebné vybavení, tj. svařovací zdroj, zásobník přídavného materiálu, zásobník tavidla, vysavač tavidla a řídící jednotka.
+
+
+=== Polohovadlo ===
+Polohovadla jsou strojně-mechanická zařízení, která manipulují se svařenci pro zabezpečení vhodné pozice svařovací hlavy při svařování. Při stacionárním umístění hlavy se svařencem pohybuje právě polohovadlo, např. při svařování trubek.
+
+
+=== Svařovací hlava ===
+Svařovací hlava je jednoúčelové zařízení, které se skládá se svařovacího hořáku, výsypky a vysavače tavidla. Svařovacím hořákem prochází svařovací drát či páska, která je přes kontaktní plochy připojena k elektrickému obvodu. Svařovacím hořákem mohou procházet i dva dráty, tzv. tandem. Výsypkou se ze zásobníku sype granulované tavidlo do úkosu před svařovací hořák (rozuměj ve směru postupu svařování). Přebytečné tavidlo se vysaje průmyslovým vysavačem umístěným za svařovacím hořákem.
+
+
+== Bezpečnost ==
+V porovnání s dalšími metodami obloukového svařování vykazuje metoda svařování pod tavidlem nižší rizika ohrožení zdraví. Protože granulované tavidlo zcela zakrývá elektrický oblouk, není vyzařováno elektromagnetického záření v ultrafialovém spektru, a tedy není nutná přímá ochrana zraku jak svářeče resp. operátora, tak osob nacházejících se v okolí. Rovněž odstřikování roztaveného kovu je eliminováno.
+Protože se však jedná o svařování elektrickým obloukem, vyskytuje se riziko úrazu elektrickým proudem. A jako u každé tavné metody existuje zvýšené riziko popálení dotykem nevychladlých částí svařenců nebo struskou. Při svařování pod tavidlem vzniká velké množství roztaveného kovu, které může protéct svarovou mezerou a způsobit popálení.
+Při vysokém výkonu svařování dochází i k uvolňování plynů a par kovů, které jsou nebezpečné až toxické ve větším měřítku než např. u metody ručního obloukového svařování, proto je nutné zajistit odsávání takových plynů a par a při návrhu pracoviště postupovat podle ČSN 05 0600, ČSN 05 0601 a ČSN 05 0630 a dalších předpisů.
+
+
+== Kvalita ==
+Metoda se využívá především pro vysoký výkon svařování, ale je nutné postupovat tak, aby došlo k co nejmenšímu ovlivnění základního materiálu vneseným teplem. U feritických ocelí může dojít k zakalení tepelně ovlivněné oblasti, čím se zvýší tvrdost a pevnost, ale významně se sníží houževnatost a tažnost.Svařování obloukovými metodami lze velmi dobře nejen kontrolovat, ale postup lze bez problémů opakovat díky stejnému nastavení tzv. základních parametrů svařování. To platí i o metodě svařování pod tavidlem, u které je navíc minimalizován lidský faktor. Mezi tyto parametry patří zejména velikost svařovacího proudu a napětí, rychlost postupu, druh tavidla, druh použitého přídavného materiálu, předehřev nebo dohřev. Rizikovou skupinou jsou tavidla, která mohou navlhnout. Z navlhlých tavidel se do svarové lázně dostane vodík, který způsobuje tzv. praskání za studena neboli vodíkovou křehkost. Toto riziko lze minimalizovat dodržováním technologické kázně a prosušováním tavidel. Při průmyslovém svařování jsou vesměs vyžadovány přístupy managementu jakosti, které nastavují technologické procesy za účelem dosažení požadované jakostní úrovně.
+
+
+== Odkazy ==
+
+
+=== Poznámky ===
+
+
+=== Reference ===
+
+
+=== Literatura ===
+AMBROŽ, Oldřich; KANDUS, Bohumil; KUBÍČEK, Jaroslav, 2001. Technologie svařování a zařízení. Recenzent Václav Minařík. 1. vyd. Ostrava: Česká svářečská společnost ANB, ZEROSS, c2001. 395 s. ISBN 80-85771-81-0. S. 210. [reference viz Ambrož et al.]. 
+ Submerged Arc Welding [online]. Miller Electric Mfg. Co., 1982, rev. 1985-11 [cit. 2011-05-27]. [reference viz Miller SAW]. Dostupné v archivu pořízeném dne 2008-05-17. (angličtina) 
+BARTÁK, Jiří; BUBENÍK, Vladimír; BUREŠ, Jan, Burkovič, Jan; Míšek, Bohumil; Neumann, Heinz., 2000. Výroba a aplikované inženýrství ve svařování. Recenzenti: Oldřich Ambrož, Leoš Havránek. 1. vyd. Ostrava: Česká svářečská společnost ANB, ZEROSS, c2000. 213 s. ISBN 80-85771-72-1. [reference viz Barták et al.]. 
+ Příručka pro svařování pod tavidlem [online]. ESAB, 2009-03-27 [cit. 2011-05-27]. S. 72. [reference viz ESAB SAW]. Dostupné online. 
+FOLDYNA, Václav; HENNHOFER, Karel; OLŠAROVÁ, Věra, Hlavatý, Ivo; Koukal, Jaroslav; Kristofory, František; Ochodek, Václav; Pilous, Václav; Purmenský, Jaroslav; Schwarz, Drahomír; Veselko, Július. Materiály a jejich svařitelnost. Recenzent: Jaroslav Koukal. 1. vyd. Ostrava: Česká svářečská společnost ANB, ZEROSS, 2000. 216 s. ISBN 80-85771-85-3. [reference viz Foldyna et al.]. 
+HLAVATÝ, Ivo. Svařování automatem pod tavidlem (121) [online]. VŠB - Technická univerzita, Fakulta strojní, Katedra mechanické technologie - 345, Ústav svařování, 2008-03-19 [cit. 2011-05-27]. [reference viz Hlavatý]. Dostupné v archivu pořízeném dne 2013-04-18. 
+
+
+=== Externí odkazy ===
+ Obrázky, zvuky či videa k tématu Svařování pod tavidlem na Wikimedia Commons 
+(anglicky) Process of Submerged Arc Welding (tj. Postup při svařování pod tavidlem) na YouTube – animace principu svařování pod tavidlem
+(anglicky) Fabrication: Submerged Arc (tj. Výroba: svařování pod tavidlem) na YouTube – ukázka svařování pod tavidlem
+(anglicky) Submerged Arc Welding (SAW welding) (tj. Svařování pod tavidlem) na YouTube – ukázka svařování pod tavidlem

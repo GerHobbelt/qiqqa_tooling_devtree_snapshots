@@ -1,0 +1,29 @@
+revision: 15284059
+title: Softimage
+url: https://ro.wikipedia.org/wiki/Indigo_Renderer
+
+
+---
+
+Indigo este un motor de randat freeware capabil de randări foto-realistice. 
+Indigo folosește, pentru randare, metode ca Metropolis Light Transport, Spectral light calculus, și virtual camera model. Scena este stocată în format XML sau IGS.
+Indigo beneficiază de path tracing Monte-Carlo, suport experimental pentru trasare bidirecțională a căilor și MLT, capabilități de randat distribuit și randat progresiv (imaginea devine treptat mai puțin neclară, odata cu progresul randării). Începând cu versiunea 0.7, test 5, el suportă SSS și are propriul format pentru imagini (.igs). Un subprogram pentru Post-render tone mapping este în dezvoltare sub numele violet, care, spre deosebire de Indigo, este open source, sub licență GPL.
+Momentan Indigo are versiuni pentru Windows XP, Windows Vista and Linux (versiuni sub 32 și 64 biți). El poate fi folosit și în Mac OS prin Parallels sau VMWare. Licența lui permite utilizarea personală, cât și comercială, dar pune unele restricții pe redistribuire și folosirea în fermele de randare.
+
+
+== Exportere ==
+Indigo are exportere pentru pachetele 3D:
+
+Blender 3D To Indigo 0.6
+Maxigo (3D Studio Max)
+MayaToIndigo Arhivat în 13 martie 2009, la Wayback Machine. (Maya)
+Blendigo Arhivat în 20 august 2008, la Wayback Machine. (Blender)
+Blendigo Exporterul Blender - Indigo, de SmartDen
+Cindigo Arhivat în 17 ianuarie 2008, la Wayback Machine. (Cinema 4D)
+XSIndigo Arhivat în 14 martie 2009, la Wayback Machine. (Softimage XSI)
+SkIndigo Arhivat în 17 ianuarie 2008, la Wayback Machine. (Sketchup)
+
+
+== Adrese externe ==
+Site-ul oficial
+Tutorial Blender+Indigo Arhivat în 7 februarie 2009, la Wayback Machine.

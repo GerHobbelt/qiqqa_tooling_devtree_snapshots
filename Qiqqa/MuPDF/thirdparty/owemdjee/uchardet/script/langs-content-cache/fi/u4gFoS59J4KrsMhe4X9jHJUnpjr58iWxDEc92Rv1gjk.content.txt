@@ -1,0 +1,84 @@
+revision: 21399797
+title: Alexander Grothendieck
+url: https://fi.wikipedia.org/wiki/Alexander_Grothendieck
+
+
+---
+
+Alexander Grothendieck (28. maaliskuuta 1928 Berliini, Saksa – 13. marraskuuta 2014 Saint-Girons, Ariège, Ranska) oli saksalaissyntyinen matemaatikko. Hänen on sanottu olleen yksi suurimmista 1900-luvun matemaatikoista.
+Grothendieck tunnetaan parhaiten algebrallisen geometrian tuloksistaan, mutta hän teki merkittäviä tuloksia myös algebrallisessa topologiassa, lukuteoriassa, kategoriateoriassa, Galois’n teoriassa, kommutatiivisessa homologisessa algebrassa ja funktionaalianalyysissä. Hän sai Fieldsin mitalin vuonna 1966 ja Crafoord-palkinnon Pierre Delignen kanssa vuonna 1988. Hän kieltäytyi jälkimmäisestä palkinnosta eettisiin syihin vedoten. Hän ilmoitti kieltäytymisestään kirjoittamalla medialle avoimen kirjeen.
+Hän oli tunnettu abstrakteista lähestymistavoista ongelmiin sekä perfektionismista matemaattisen tekstin muotoilussa ja esittämisessä. Erityisesti hänet tunnettiin kyvystä löytää tuloksia hyvin yleisillä menetelmillä.
+Melko vähäinen osa hänen tuotannostaan vuoden 1960 jälkeen julkaistiin tavanomaisella tavalla matemaattisissa julkaisuissa. Yleisemmin tulokset esiintyivät luentomuistiinpanojen kopioissa. Hänen vaikutuksensa on huomattava henkilökohtaisesti ja Zariskin koulukunnalle Harvardin yliopistossa. Hän oli monien tarinoiden ja väärien huhujen kohde. Huhut koskevat hänen työskentelytapojaan, politiikkaa, yhteenottoja toisten matemaatikoiden ja Ranskan viranomaisten kanssa, hänen vetäytymistään matematiikan parista 42 ikävuoden jälkeen, eläkkeelle jäämistään sekä hänen pitkiä kirjoituksiaan.
+
+
+== Matemaattiset saavutukset ==
+Grothendieck tutki funktionaalianalyysiä vuosina 1949–1953 kirjoittamalla tältä alalta väitöskirjan Nancyssä. Väitöskirjan ohjaajina toimivat Jean Dieudonné ja Laurent Schwartz. Hän tutki enimmäkseen vektoriavaruuksien topologisia tensorituloja, ydinavaruuksien teoriaa ja miten Lp-avaruuksia voidaan käyttää topologisten vektoriavaruuksien lineaarikuvausten tutkimisessa. Muutamassa vuodessa hänestä oli tullut topologisten vektoriavaruuksien johtava asiantuntija. Diudonné vertasi hänen vaikutustaan tällä alalla Banachiin.
+Grothendieck sai kuitenkin tärkeimmät tuloksensa algebrallisessa geometriassa ja siihen liittyvillä aloilla. Noin vuonna 1955 hän alkoi työskennellä lyhdeteorian ja homologisen algebran parissa, ja hän julkaisi nopeasti erittäin vaikutusvaltaisen ”Tôhoku-artikkelin” (Sur quelques points d’algèbre homologique) vuonna 1957. Tässä artikkelissa Grothendieck esitteli Abelin kategoriat ja sovelsi sitä osoittamalla, että lyhdekohomologia voidaan määritellä tiettynä johdettuna funktorina Abelin kategorioiden yhteydessä.
+Algebrallisessa geometriassa muun muassa Jean-Pierre Serre oli ottanut käyttöön homologiset metodit ja lyhdeteorian. Grothendieck tutki kyseisiä asioita pitemmälle ja alkoi tutkia algebrallista geometriaa näiden menetelmien avulla. Siten hän muutti algebrallisen geometrian tutkimusmenetelmät ja teki algebrallisesta geometriasta abstraktimpaa. Kun ennen algebrallisessa geometriassa tutkittiin yksittäisiä varistoja, niin Grothedieck alkoi tutkia varistopareja ja niiden välisiä morfismeja, jolloin moni klassinen algebrallinen lause yleistyi. Ensimmäinen suuri sovellus uudesta menetelmästä oli Serren lause, jonka mukaan täydellisen variston koherentin lyhteen kohomologia on äärellisulotteinen. Grothendieckin lause osoittaa, että korkeammat suorat kuva koherenteista lyhteistä sopivissa kuvauksissa ovat koherentteja. Serren lause on tästä pelkkä yhden pisteen erikoistapaus.
+Vuonna 1956 hän sovelsi samanlaista lähestymistapaa Riemannin–Rochin lauseeseen, jonka Hirzebruch oli aiemmin yleistänyt mielivaltaiselle dimensiolle. Grothendieck esitteli Grothendieckin–Riemannin–Rochin lause Mathematische Arbeitstagungin alussa Bonnissa vuonna 1957. Lause esitettiin artikkelissa, jonka oli kirjoittanut Armand Borel yhdessä Serren kanssa. Tämä lause oli ensimmäinen suuri tulos algebrallisessa geometriassa. Tämän jälkeen hän jatkoi algebrallisen geometrian perusteiden uudistamista. Hän paljasti projektinsa ääriviivat puhuessaan kansainvälisessä matemaatikkokonferenssissa vuonna 1958.
+Hänen lähestymistapansa algebralliseen geometriaan oli abstraktimpi kuin mikään edellinen tapa. Hän mukaili epäsuljettujen geneeristen pisteiden käyttöä, ja tämä johti skeemojen teoriaan. Hän oli myös ensimmäinen, joka käytti myös systemaattisesti nilpotentteja. Kuten funktiot, nilpotentit voidaan asettaa nollaksi, mutta ne kantavat mukanaan myös infinitesimaalista tietoa puhtaasti algebralliselta näkökannalta. Hänen skeemojen teoriansa on algebrallisessa geometriassa lyönyt itsensä läpi, koska se on niin ilmaisuvoimainen. Tämä mahdollistaa esimerkiksi birationaalisen geometrian, lukuteorian tekniikoiden, Galois’n teorian, kommutatiivisen algebran ja algebralliseen topologiaan liittyvien metodien käytön algebrallisessa geometriassa, ja näitä tekniikoita käytetään yleensä yhtä aikaa algebrallisessa geometriassa. Hänen vaikutuksensa näkyi myös monella muulla matematiikan osa-alueella, kuten D-modulien teoriassa.
+
+
+=== EGA ja SGA ===
+Suurin osa Grothendieckin julkaistuista töistä on koottu valtaviin mutta silti epätäydellisiin teoksiin Éléments de géométrie algébrique (EGA) ja Séminaire de géométrie algébrique (SGA). Bourbakin seminaariesitelmistä koottu Fondements de la Géometrie Algébrique (FGA) sisältää myös Grothendieckin tärkeitä tuloksia.
+Grothendieckin syvällisin yksittäinen tulos on kenties étalen- ja l-aditinen kohomologia. Nämä selittävät André Weilin havainnot, jonka mukaan variston topologisen karakteristikan ja sen lukuteoreettisten ominaisuuksien välillä on olemassa syvällinen yhteys. Esimerkiksi jos yhtälöä tutkitaan äärellisessä kunnassa, niin sen ratkaisujen lukumäärä kuvaa sen topologista luonnetta kompleksilukujen suhteen. Weil ymmärsi, että todistaakseen tuloksen hän tarvitsisi uudenlaisen kohomologiateorian, mutta hän ja muut alan asiantuntijat eivät tähän kyenneet. Grothendieck kuitenkin löysi kyseisen teorian. Teoria kulminoituu Weilin otaksumien todistukseen, joista viimeisimmän ratkaisi Grothendieckin oppilas Pierre Deligne 1970-luvun alkupuolella sen jälkeen, kun Grothendieck oli jättänyt matematiikan aktiivisen tutkimisen.
+
+
+=== Tärkeimmät matemaattiset aiheet (teoksesta Récoltes et Semailles) ===
+Grothendieck kirjoitti arvioinnin matemaattisista töistään. Hän valitsi seuraavat 12 aihetta tähän teokseen La Vision, jotka on esitetty alla aikajärjestyksessä:
+
+Topologiset tensoritulot ja ydinavaruudet
+”Jatkuva” ja ”diskreetti” duaalisuus (johdetut kategoria ja ”kuusi operaatiota”).
+Yoga Grothendieckin–Riemannin–Rochin lausesta (K-teoria, samantapainen kuin leikkausten teoria).
+Skeemat.
+Topot.
+Étalen kohomologia sisältäen l-aditisen kohomologian.
+Motiivit, motiivinen Galois’n ryhmä ja Grothendieckin kategoriat
+Kristallit ja kristallinen kohomologia, De Rhamin ja Hodgen kertoimien yoga.
+Topologinen algebra, ääretön-pinot, ’dérivateurs’, topojen kohomologinen formalismi inspiraationa uudelle homotooppiselle algebralle
+Tame topologia.
+anabelisen geometrian Yoga ja Galois’n–Teichmüllerin teoria.
+Säännöllisten monitahokkaiden ja säännöllisten konfiguraatioiden skemaattinen eli ”aritmeettinen” näkökulma.Hän kirjoitti, että hänen aiheidensa teema oli topojen teoria, ja toisaalta yllä olevassa listassa ensimmäinen ja viimeisin oli hänelle vähiten tärkeitä.
+Tässä yoga tarkoittaa eräänlaista ”meta-teoriaa”, jota voi käyttää heuristisesti.
+
+
+== Elämä ==
+
+
+=== Perhe ja alkuvuodet ===
+Alexander Grothendieck syntyi Berliinissä ja hänen vanhempansa olivat anarkisteja. Hänen isänsä oli venäläinen Aleksandr Šapiro aka Tanarov ja äiti Johanna ”Hanka” Grothendieck oli saksalaisesta protestanttiperheestä. Molemmat vanhemmat olivat katkaisseet lapsuuden ystävyydet teini-iässä. Alexanderin syntymän aikaan Johanna oli naimisissa saksalaisen toimittajan Johannes Raddatzin kanssa, ja Alexanderin syntymänimi oli alun perin Alexander Raddatz. Avioliitto purkautui vuonna 1929 ja Šapiro/Tanarov vahvisti isyyden, mutta ei mennyt koskaan naimisiin Hanka Grothendieckin kanssa.
+Grothendieck eli vanhempiensa kanssa vuoteen 1933 asti Berliinissä. Saman vuoden aikana Šapiro muutti Pariisiin ja Hanka muutti hänen perässään seuraavana vuonna. He jättivät Grothendieckin Wilhem Heydornin huostaan, joka oli luterilainen pastori ja opettaja Hampurissa. Hän kävi myös koulua Hampurissa. Tuohon aikaan Grothendieckin vanhemmat ottivat osaa Espanjan sisällissotaan anarkosyndikalistien riveissä joskaan eivät olleet rintamalla.
+
+
+=== Toisen maailmansodan aika ===
+Vuonna 1939 Grothendieck saapui Ranskaan ja eli erilaisilla leireillä, jotka oli tarkoitettu kotoa karkotetuille ihmisille. Hän eli leireillä äitinsä kanssa. He elivät ensiksi ei-toivotuille poliittisille pakolaisille varatulla Camp de Rieucros’lla ja viettivät Vichyn hallinnon suljettua leirin vuodet 1942–1944 vastarinnan avustuksella Le Chambon-sur-Lignonissa, jossa Grothendieck kykeni myös valmistumaan ylioppilaaksi ja kiinnostui matematiikasta. Grothendieckin isä Aleksandr Šapiro oli juutalaisena lähetetty Auschwitzin keskitysleirille, jolla hän kuoli yhtenä ensimmäisistä murhatuista vuonna 1942.
+
+
+=== Opinnot ja tutkijanuran alku ===
+Sodan jälkeen nuori Grothendieck opiskeli matematiikkaa Montpellier’n yliopistossa Ranskassa. Nuoren tutkijan kyvyt  huomattiin, ja häntä rohkaistiin lähtemään Pariisiin vuonna 1948.
+Aluksi Grothendieck osallistui Henri Cartanin seminaariin École Normale Supérieuressa, mutta koska hänellä ei ollut seminaaria seuratakseen tarvittavia esitietoja, hän siirtyi Nancyn yliopistoon, missä hän kirjoitti väitöskirjan Laurent Schwartzin ohjauksessa vuosina 1950–1952. Väitöskirja käsitteli funktionaalianalyysiä. Tuohon aikaan hän oli topologisten vektoriavaruuksien johtava asiantuntija. Vuonna 1957 hän jätti kyseisen aiheen ja alkoi työskennellä algebrallisen geometrian ja homologisen algebran parissa.
+
+
+=== Vuodet IHÉSissa ===
+Asetuttuaan Institut des hautes études scientifiquesiin (IHÉS) Grothendieck kiinnostui intensiivisestä ja tuotteliaista seminaareista (de facto ryhmä, joka valmentaa kyvykkäimmät ranskalaiset ja nuoret matemaatikot tutkijoiksi). Grothendieck lopetti käytännössä kokonaan julkaisemasta artikkeleja tavanomaisella, matemaattisiin lehtiin kirjoitetuilla artikkeleilla. Hän oli kuitenkin suuressa roolissa noin vuosikymmenen ajan ja seminaareista muodostui vahva koulukunta.
+Tuona aikana hänellä olivat virallisesti oppilainaan Michel Demazure (joka työskenteli SGA3:n kimpussa, ryhmäskeema), Luc Illusie (kotangenttikompleksi), Michel Raynaud, Jean-Louis Verdier (löysi Grothendieckin kanssa johdettujen kategorioiden teorian) ja Pierre Deligne. SGA-projektiin kuului myös Mike Artin (étalen kohomologia) ja Nick Katz (monodromiateoria ja Lefschetzin lyijykynät). Jean Giraud selvitti torsoriteorian laajennukset ei-abelisille kohomologialle. Samoin hän teki yhteistyötä monien muiden matemaatikoiden kanssa.
+
+
+=== Kultainen aika ===
+Alexander Grothendieckin aikaa IHÉSissä voi sanoa kultaiseksi ajaksi. Hän keksi useita samantyyppisiä asiota algebralliseen geometriaan, lukuteoriaan, topologiaan, kategoriateoriaan ja funktioteoriaan, Hänen ensimmäisen läpimurto algebrallisessa geometriassa oli Grothendieckin–Hirzebruchin–Riemannin–Rochin lause, joka on syvällinen yleistys Hirzebruchin–Riemannin–Rochin lauseesta, jonka todistus on luonteeltaan algebrallinen. Tässä yhteydessä hän esitteli myös K-teorian. Hän puhui vuonna 1958 kansainvälisessä matemaatikkokonferenssissa. Tässä esityksessään hän esitteli skeemat, jotka hän oli kehittänyt yksityiskohtaisesti teoksessaan Éléments de géométrie algébrique (EGA). Hän esitti myös aiempaa joustavamman ja yleisemmän algebrallisen geometrian perusteet. Hän jatkoi tästä esittämällä étalen kohomologiateorian skeemoille, kristallikohomologian ja de Rhamin kohomologian. Näihin kohomologiateorioihin liittyy läheisesti topojen teoria, joka on yleisempää kuin topologia. Hän määritteli skeemojen perusryhmät algebrallisesti ja samoin kategorisen Galois'n teorian päärakenteet. Runkona koherentille duaalisuusteoriallen hän esitteli johdetut kategoriat, joiden tutkimista jatkoi Verdier. Nämä ja muita tuloksia julkaistiin EGAssa ja vähemmän hiotussa muodossa teoksessa Séminaire de géométrie algébrique (SGA), joita hän kirjoitti IHÉSissä.
+
+
+=== Politiikka ja vetäytyminen tieteellisestä yhteisöstä ===
+Grothendieckin poliittiset näkemykset olivat radikaaleja ja pasifistisia mutta eivät kommunistisia. Hän ei hyväksynyt missään muodossa neuvostoliittolaista sotilaallista laajentumista. Hän piti kategoriateorian luentoja Hanoita ympäröivässä metsässä samaan aikaan kun kaupunkia pommitettiin. Tällä hän halusi protestoida Vietnamin sotaa vastaan. Hän vetäytyi tieteellisestä elämästä vuoden 1970 kieppeillä sen jälkeen, kun hän oli saanut osittain militaristisen rahoituksen IHÉSissä. Hän palasi IHÉSiin muutamaa vuotta myöhemmin työskenneltyään välillä Montpellier’n yliopistossa professorina. Hän työskenteli IHÉSissä vuoteen 1988 asti, jolloin hän jäi eläkkeelle. Hänen kritiikkinsä tieteellistä yhteisöä kohtaan ja erityisesti useita matemaattisia yhteisöjä kohtaan ilmenee vuonna 1988 kirjoitetusta kirjeestä. Kriittisen suhtautumisensa takia hän kieltäytyi Crafoordin palkinnosta.
+Vaikka militaristinen rahoitus oli kenties suurin syy Grothendieckin lähtöön IHÉSistä, Grothendieckin tunteneet sanoivat välien rikkoutumisen syiden ulottuvan syvemmälle. Pierre Cartier, pitkäaikainen vierailija IHÉSissä,  kirjoitti pätkän Grothendieckistä erikoisjulkaisuun, joka julkaistiin IHÉSin neljäntenäkymmenentenä vuosipäivänä. Grothendieck Festschrift oli kolmen niteen kokoelma Grothendieckin julkaisuja, ja se koottiin Grothendieckin 60. syntymäpäivää varten vuonna 1988 ja julkaistiin vuonna 1990. Siinä Cartier toteaa, että Grothendieck on keskenkasvuisen antimilitaristisen anarkistin poika, jolta oli riistetty äänioikeus. Grothendieck tunsi aina syvää myötätuntoa köyhiä ja sorrettuja kohtaan. Cartierin mukaan Grothendieck tuli Bures-sur-Yvetteen ”une cage dorée” (”kultaisessa häkissä”).
+
+
+== Lähteet ==
+Douroux, Philippe: Alexandre Grothendieck, ou la mort d’un génie qui voulait se faire oublier Libération.  13.11.2014.   Viitattu 14.11.2014. (ranskaksi)
+
+
+=== Viitteet ===
+
+
+== Aiheesta muualla ==
+Alexander Grothendieckin muistokirjoitus Helsingin Sanomissa (Internet Archive)

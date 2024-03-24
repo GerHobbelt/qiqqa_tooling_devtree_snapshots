@@ -1,0 +1,274 @@
+revision: 70569032
+title: lamp elektronowych
+url: https://pl.wikipedia.org/wiki/Lampa_elektronowa
+
+
+---
+
+Lampa elektronowa – element elektroniczny czynny składający się z elektrod umieszczonych w bańce z wypompowanym powietrzem (lampa próżniowa lub gazem pod niewielkim ciśnieniem (lampa gazowana), w którym wykorzystuje się wiązki elektronów lub jonów poruszające się między elektrodami lampy i sterowane elektrycznie elektrodami.
+
+
+== Historia ==
+
+W 1897 Joseph John Thomson zbadał oddziaływanie pola elektrycznego i magnetycznego na strumień elektronów. Jego prace doprowadziły do odkrycia elektronu i zostały nagrodzone Nagrodą Nobla z fizyki w 1906.
+W 1904 John Ambrose Fleming zbudował pierwszą lampę elektronową – diodę.
+Pierwszą lampę wzmacniającą – triodę – opracował w 1906 Lee De Forest.
+Irving Langmuir pracując dla General Electric w latach 1909–1916 udoskonalił znacznie technikę próżniową i wynalazł pompę dyfuzyjną, co umożliwiło osiąganie wysokiej próżni i poprawiło znacznie parametry lamp elektronowych. Langmuir opracował podstawy teorii lamp elektronowych, co miało duży wpływ na ich późniejszy rozwój.
+W 1923 powstał w Caernarvon pierwszy lampowy nadajnik radiowy dużej mocy; zawierał 48 połączonych równolegle lamp o mocy 600 W każda .
+W trakcie I wojny światowej Walter Schottky zbudował w zakładach Siemens & Halske lampę z dwiema siatkami – tetrodę.
+W 1923 i 1925 Vladimir Zworykin opatentował kineskop i ikonoskop. Były to pierwsze z jego serii patentów, które opisywały kompletne systemy telewizyjne poczynając od lamp analizujących, kończąc na odbiornikach telewizyjnych.
+W 1927 Bernard D.H. Tellegen wynalazł lampę z trzema siatkami – pentodę.
+Produkcję lamp elektronowych w 1945 roku szacowano na sto milionów sztuk .
+
+
+=== W Polsce ===
+Pierwsza informacja o produkcji lamp w Polsce (rozpoczętej 1 grudnia 1921) dotyczy warszawskiej firmy Radjopol.
+Polskie Towarzystwo Radiotechniczne rozpoczęło w 1923 licencyjną produkcję siedmiu typów lamp odbiorczych i jednego typu nadawczego.
+W 1928 rozpoczęły produkcję odbiorczych lamp elektronowych Polskie Zakłady Philips, polski oddział firmy Marconi produkował lampy nadawcze od roku 1934, a Zjednoczone Fabryki Żarówek Tungsram rozpoczęły produkcję lamp elektronowych w 1937. W latach 1935–1939 roczna produkcja lamp elektronowych w Polsce przekraczała pół miliona sztuk.
+W roku 1946 utworzono Państwową Wytwórnię Lamp Elektronowych w Dzierżoniowie.
+W 1947 zakupiono w firmie Philips licencje na wytwarzanie nowoczesnych lamp odbiorczych i w latach 1948–1949 dzierżoniowską fabrykę przeniesiono do Warszawy. Wraz z częściowo ocalałymi dawnymi zakładami Tungsram weszła ona w skład Zakładów Wytwórczych Lamp Elektrycznych im. Róży Luksemburg (ZWLE). W 1951 osiągnięto poziom produkcji lamp odbiorczych z roku 1939.
+W 1956 powołano w Warszawie Przemysłowy Instytut Elektroniki (PIE), w którym opracowywano procesy technologiczne i produkowano różnorakie lampy specjalne. Instytut utworzył wiele oddziałów filialnych, z których część się później usamodzielniła.
+W 1957 w Piasecznie powstały Zakłady Elektronowe Lamina, produkujące między innymi elektronowe lampy nadawcze i mikrofalowe. W latach 90 w wyniku podziału i przekształceń własnościowych powstały istniejące do dziś zakłady Thales Lamina (produkuje lampy nadawcze) i Z.E. Lamina S.A. (produkuje lampy mikrofalowe).
+W 1961 uruchomiony został we Wrocławiu Zakład Doświadczalny Przemysłowego Instytutu Elektroniki, w którym produkowano m.in. lampy elektronowe; w 1965 zakład usamodzielnił się i zmienił nazwę na Doświadczalny Zakład Lamp Elektronowych „Dolam”; w 1977 firma zmieniła nazwę na Centrum Naukowo-Produkcyjne Podzespołów i Urządzeń Elektronicznych „Unitra-Dolam” i w 1999 na Przedsiębiorstwo Produkcyjne Podzespołów Elektronicznych „Unitra-Dolam” S.A.; zakład ten, od 2005 roku pod nazwą Przedsiębiorstwo Produkcyjne Podzespołów Elektronicznych „Dolam” S.A., produkował m.in. lampy mikrofalowe. Po dalszych przekształceniach zakład ten wszedł w skład firmy PIT-Radwar.
+
+
+== Podział lamp elektronowych ==
+Podstawowym kryterium klasyfikacyjnym lamp elektronowych jest ciśnienie gazu w bańce – dzielą się na próżniowe oraz gazowane.
+Stosuje się również podział ze względu na przeznaczenie, na przykład: prostownicze, detekcyjne, wzmacniające, generacyjne, mieszające, fotoelektryczne, obrazowe, pamięciowe itp.
+Ze względu na zakres częstotliwości można wyróżnić lampy małej częstotliwości (zakres częstotliwości akustycznych), wielkiej częstotliwości (zakres częstotliwości radiowych) i mikrofalowe (powyżej 300 MHz).
+Spotyka się też podział na lampy małej i dużej mocy. Te pierwsze nazywa się zwykle odbiorczymi, a drugie nadawczymi. Linia podziału przebiegała zwykle około dopuszczalnej mocy wydzielanej na anodzie równej 25 W.
+Często używany jest podział ze względu na liczbę elektrod: dioda (2 elektrody), trioda (3 elektrody), tetroda (4 elektrody), pentoda (5 elektrod), heksoda (6 elektrod), heptoda (7 elektrod) itd.
+Ze względu na rodzaj katody można lampy podzielić na: lampy z zimną katodą, z fotokatodą, z katodą żarzoną pośrednio (odizolowany grzejnik umieszczony w rurce katody) i katodą żarzoną bezpośrednio (katoda w postaci żarzonego drucika). W zależności od parametrów żarzenia lampy były produkowane w „seriach” umożliwiających stosowanie jednego wspólnego źródła zasilania żarzenia dla wielu lamp.
+W praktycznych zastosowaniach ważny jest również typ cokołu lampy.
+Spotyka się wiele dodatkowych określeń lamp charakteryzujących ich cechy użytkowe (np. impulsowe – do pracy impulsowej, elektrometryczne – z małymi prądami upływu siatki sterującej), stopień miniaturyzacji, sposób zasilania, rodzaj obudowy, metodę chłodzenia itp.Konkretna lampa może być określana za pomocą różnych kombinacji, na przykład: gazowana tetroda impulsowa, pośrednio żarzona trioda wielkiej częstotliwości itp.
+
+
+== Lampy próżniowe małej mocy (odbiorcze) ==
+
+W lampach próżniowych ciśnienie gazów szczątkowych jest mniejsze niż 10−6 – 10−8 Tr. Obecność gazów nie ma wtedy wpływu na wartości prądów, nośnikami ładunku elektrycznego są zawsze elektrony. Resztki gazów pochłania umieszczany w lampie getter.
+Źródłem elektronów (dzięki zjawisku termoemisji) jest rozgrzana katoda. W przestrzeni między katodą a anodą pole elektryczne przyspiesza elektrony w kierunku anody. W niektórych lampach znajdują się tam też siatki, których potencjał wpływa na strumień elektronów.
+
+
+=== Dioda ===
+
+Lampowe diody próżniowe to najprostsze lampy elektronowe, składające się z dwóch elektrod umieszczonych w szklanej lub rzadziej metalowej bańce.
+Wytwarzano diody detekcyjne, z maksymalnymi dopuszczalnymi prądami katody rzędu kilkunastu miliamperów i prostownicze, z prądami sięgającymi pojedynczych amperów. Maksymalne napięcie pracy typowych lamp prostowniczych wynosiło kilkaset woltów, ale produkowano również specjalne lampy na dużo wyższe napięcia. Próżniowe diody prostownicze (zwłaszcza na wyższe napięcia) były nazywane kenotronami. Do prostowników pełnookresowych produkowano lampę złożoną z dwóch diod ze wspólną katodą w jednej bańce nazywaną duodiodą. Również diody detekcyjne były często umieszczane po dwie w jednej lampie.
+Po II wojnie światowej popularnymi przedstawicielami tych lamp w Polsce były UY1N (dioda prostownicza), AZ1, AZ4 (duodiody prostownicze), 6H6 (podwójna dioda detekcyjne) i kilka lamp używanych w odbiornikach telewizyjnych. Lampy EZ80 (prostownicza) i EAA91 (detekcyjna) były rozprowadzane przez Unitrę, choć nie były produkowane w Polsce.
+
+
+=== Trioda ===
+
+Trioda składa się z trzech elektrod anody, katody i siatki. Siatka steruje przepływem elektronów od katody do anody.
+Z użyciem triod możliwe jest budowanie wzmacniaczy i generatorów sygnałów elektrycznych. Triody mogą również służyć jako elektroniczne przełączniki w układach impulsowych i logicznych – były stosowane w między innymi w elektronicznych licznikach i komputerach.
+Triody zastosowane jako wzmacniacze napięciowe osiągają wzmocnienie do kilkudziesięciu V/V. W latach 30. i 40. XX w. produkowano również niewielkie triody mocy przeznaczone do wzmacniaczy mocy. W Europie zostały one szybko wyparte przez tetrody strumieniowe i pentody, w USA cały czas stosowano je do układów odchylania pionowego telewizorów.
+Po II wojnie światowej w Polsce produkowane były triody mocy AD1, podwójne triody 6N8S (małej częstotliwości) oraz ECC85 (oryginalnie przeznaczone do głowic UKF, ale używane również w innych celach). Popularne były również importowane lampy ECC88, PCC88, ECC81, ECC82 i ECC83.
+
+
+=== Tetroda ===
+
+Tetroda różni się od triody tym, że posiada dodatkową siatkę (zwaną siatką ekranującą) między siatką sterującą a anodą.
+Siatka ekranująca zmniejsza pojemność zwrotną pomiędzy anodą a siatką sterującą, co ułatwia stosowanie lampy w układach wielkiej częstotliwości. Ponadto siatka ekranująca zmniejsza wpływ pola elektrycznego anody na strumień elektronów w okolicy siatki sterującej, co umożliwia uzyskanie wzmocnień dużo większych, niż możliwe do uzyskania w układach opartych na triodach – rzędu kilkuset V/V.
+Wadą tetrody jest powstawanie efektu dynatronowego, polegającego na powrocie do siatki ekranującej elektronów wybitych z anody na skutek zjawiska emisji wtórnej. Jest to szczególnie widoczne przy małych prądach i napięciach anody i może doprowadzić do znacznych zniekształceń, a nawet niestabilności układu. Z tego względu we wzmacniaczach napięciowych tetrody zostały wyparte przez pentody.
+We wzmacniaczach mocy stosuje się tetrody strumieniowe, w których dzięki odpowiedniemu ukształtowaniu siatek i dodatkowym osłonom strumienie elektronów docierające do anody są bardzo wąskie. Popularne typy tetrod strumieniowych to 6L6 (w Polsce produkowana pod nazwą 6P3S) oraz 6V6 (wraz z dużą liczbą elektrycznie identycznych lamp z odmiennymi cokołami, na przykład 6P1P).
+
+
+=== Pentoda ===
+
+W stosunku do tetrody pentoda różni się dodatkową trzecią siatką. Znajduje się ona między siatką ekranującą a anodą i zapobiega powstawaniu zjawiska dynatronowego.
+Pentody dzieli się na małej mocy (napięciowe), przeznaczone do wzmacniaczy napięciowych małej i wielkiej częstotliwości, oraz na pentody mocy przeznaczone do wzmacniaczy końcowych. Specjalny typ pentody napięciowej to selektoda, w której dzięki specjalnej konstrukcji siatki sterującej można w szerokim zakresie zmieniać wzmocnienie. Selektody stosowano na przykład we wzmacniaczach pośredniej częstotliwości odbiorników radiowych.
+W Polsce popularne były pentody napięciowe EF22, EF80 (w.cz.), EF86 (do wzmacniaczy małych sygnałów m.cz.) oraz selektody EF89. Z pentod mocy najpopularniejsze to EL84, EL86 i kilka typów pentod do odbiorników telewizyjnych.
+Pentody mocy mają parametry bardzo zbliżone do tetrod strumieniowych – do tego stopnia, że są traktowane jako ścisłe zamienniki. Tak jest na przykład z europejską lampą EL34 (pentoda) i jej amerykańskim odpowiednikiem 6CA7 (zwykle tetroda strumieniowa) – niekiedy zaś można spotkać lampy z oboma nadrukami na bańce.
+
+
+=== Lampy wieloelektrodowe ===
+
+Lampami z większą liczbą elektrod są: heksoda (cztery siatki, łącznie sześć elektrod), heptoda (pięć siatek, łącznie siedem elektrod), oktoda (sześć siatek, łącznie osiem elektrod) i ennoda (zwana również nonodą). W zależności od typu lampy dwie lub trzy siatki są sterujące. Lampy o większej niż siedem liczbie siatek nie były produkowane ani stosowane masowo.
+Podstawowym zastosowaniem lamp tej grupy było mieszanie częstotliwości w superheterodynowych odbiornikach radiowych. Część lampy mogła być przy tym wykorzystywana jako heterodyna (oscylator lokalny), taki mieszacz nosił nazwę samowzbudnego.
+Lampy z tej grupy mogły być stosowane także w roli lamp kluczujących (na przykład jako selektory impulsów odchylania odbiorników telewizyjnych). Ponieważ zwykle współpracowały z lokalnym generatorem, często wchodziły w skład lamp złożonych (kombinowanych – zob. niżej).
+Po II wojnie światowej w Polsce była produkowana heptoda 1R5T, stosowana jako mieszacz w lampowych radioodbiornikach bateryjnych oraz heptoda 2A1, bardzo rzadko spotykana, nie stosowana w żadnym sprzęcie cywilnym.
+Jedyne produkowane ennody to lampa EQ80 (oznaczenie amerykańskie 6BE7) oraz EQ40 i UQ80 różniące się od niej jedynie typem cokołu i napięciem żarzenia. Były przeznaczone do detektorów FM, nie zdobyły jednak popularności.
+
+
+=== Lampy złożone ===
+Lampy złożone (kombinowane) zawierają kilka systemów (struktur) lamp umieszczonych w jednej bańce. Konstruowano je zwykle tak, by urządzenie zawierało niewielką ich liczbę, możliwie z jednakowym cokołem. Umożliwiało to zmniejszenie rozmiarów i kosztów urządzenia. Przykłady zestawów lamp kombinowanych:
+
+Zestaw w odbiornikach radiowych Pionier i pochodnych (cokół loktal, żarzenie szeregowe 100 mA): UCH21 (heterodyna i mieszacz), UCH21 (heptoda – wzmacniacz pośredniej częstotliwości, trioda – wzmacniacz małej częstotliwości), UBL21 (detektor AM, detektor ARW i wzmacniacz końcowy małej częstotliwości) i lampa prostownicza UY1N.
+Zestaw w odbiornikach radiowych Mazur i pochodnych (cokół loktal, żarzenie równoległe 6,3 V): ECH21, ECH21, EBL21 i prostownik AZ1.
+Bardzo popularny w odbiornikach radiowych był zestaw lamp z cokołem nowalowym: ECC85 (głowica UKF), ECH81 (heterodyna i mieszacz), EBF89 (wzmacniacz pośredniej częstotliwości, detektor AM, detektor ARW), ECL82 lub ECL86 (wzmacniacz napięciowy i wzmacniacz końcowy małej częstotliwości).
+Liczną grupę lamp kombinowanych opracowano do odbiorników telewizyjnych.
+
+
+==== Kompaktrony ====
+Kompaktrony zostały wprowadzone do produkcji przez General Electric na przełomie lat 50. i 60. XX w. jako odpowiedź na coraz szersze rozpowszechnianie się tranzystorów. Były wyposażone w nowy, 12-nóżkowy cokół, zawierały dwa lub trzy systemy w jednej bańce i umożliwiały zmniejszenie liczby lamp w urządzeniu o około połowę. Stosowano je w USA, w Europie się nie przyjęły.
+
+
+==== „Układy scalone” firmy Loewe AG ====
+W 1926 Manfred von Ardenne zaprojektował lampę 3NF, zawierającą w jednej bańce trzy systemy triody, dwa kondensatory i pięć rezystorów. Ze względu na konieczność utrzymania próżni rezystory i kondensatory były zatopione w szklanych rurkach. Lampa stanowiła w zasadzie kompletny odbiornik radiowy o bezpośrednim wzmocnieniu – wystarczyło dodać baterie, głośnik i wejściowy układ strojony. Lampę tę można uznać za bardzo wczesnego protoplastę układów scalonych. Pod koniec lat 20. i w pierwszej połowie 30 Loewe wyprodukowała jeszcze kilkanaście typów takich lamp.
+
+
+=== Nuwistory ===
+
+Nuwistory to miniaturowe lampy ceramiczno metalowe wprowadzone przez firmę RCA w 1956. Miały duże częstotliwości pracy, lepsze od zwykłych lamp parametry szumowe i stosunkowo niskie mikrofonowanie. Znajdowały zastosowanie głównie w telewizyjnych głowicach UKF i UHF telewizorów, oraz w sprzęcie specjalnym. Wyszły z użytku na przełomie lat 60. i 70.
+
+
+== Lampy nadawcze ==
+
+Podstawowym wymaganiem dotyczącym lamp nadawczych jest dostarczenie dużej mocy, charakteryzują się one zatem dużą dopuszczalną mocą strat (nawet ponad 100 kW), napięciem pracy rzędu kilku lub kilkunastu kV i dużymi dopuszczalnymi prądami. Przy większych częstotliwościach i mocach stosuje się triody, zaś pentody i tetrody w urządzeniach do mocy około 1 kW. Duża moc strat często wymaga odprowadzenia ciepła przez wymuszone chłodzenie powietrzem, wodą lub poprzez odparowanie wody (wapotrony). Obudowy lamp nadawczych są zwykle wykonane z ceramiki lub szkła łączonego z metalem.
+Wbrew nazwie lampy te nie były używane jedynie do celów nadawczych, ale także w układach przemysłowych (na przykład elektrotermicznych i sterowania), a także w stacjonarnych wzmacniaczach akustycznych dużej mocy (do nagłaśniania dużych obiektów i w radiowęzłach radiofonii przewodowej).
+Niektóre z lamp pierwotnie przeznaczonych do celów nadawczych (na przykład 807 i radziecka GU50) znalazły zastosowanie również w urządzeniach powszechnego użytku.
+
+
+== Lampy elektronopromieniowe ==
+Działanie lamp elektropromieniowych opiera się na zogniskowanym strumieniu elektronów wytwarzanym przez działo elektronowe (wyrzutnię elektronów). Do tej grupy przyrządów próżniowych zaliczane są następujące lampy: obrazowe, kineskopowe, oscyloskopowe, radaroskopowe, analizujące, pamięciowe.
+
+
+=== Lampy obrazowe ===
+
+Lampy obrazowe posiadają pokryty luminoforem ekran, na którym w wyniku bombardowania elektronami powstaje obraz świetlny. Źródłem strumienia elektronów jest wyrzutnia elektronów składająca się z katody oraz elektrod skupiających i sterujących. Strumień elektronów by trafić w odpowiednie miejsce ekranu jest odchylany elektrostatycznie lub magnetycznie.
+
+
+==== Kineskopy ====
+
+Kineskopy charakteryzują się magnetycznym odchylaniem strumienia elektronów. Cechami charakterystycznymi tego rozwiązania jest stosunkowo duży kąt odchylania, co umożliwia budowę ekranów o dużej wielkości, ma ono jednak mały zakres częstotliwości i wymaga dużych mocy zasilania cewek odchylających.
+Ze względu na zastosowania kineskopy można podzielić na:
+
+kineskopy monochromatyczne;
+kineskopy barwne, posiadające trzy niezależne działa elektronowe i punkty luminoforu w trzech kolorach (czerwonym, zielonym i niebieskim), co umożliwia składanie barw;
+kineskopy projekcyjne – przeznaczone do projektorów CRT, posiadające stosunkowo mały ekran o bardzo dużej jasności; obraz jest tworzony przez specjalny układ optyczny.Kineskopy były podstawowym wyświetlaczem odbiorników telewizyjnych i monitorów komputerowych przez drugą połowę XX wieku, zostały wyparte przez wyświetlacze plazmowe, LCD i LED (i OLED).
+
+
+==== Lampy oscyloskopowe ====
+
+W lampach oscyloskopowych odchylanie strumienia elektronów jest elektrostatyczne. Charakteryzują się one małymi kątami odchylania, mają za to dużą częstotliwość pracy (w specjalnych wykonaniach rzędu setek MHz).
+Lampy oscyloskopowe były używane głównie do obserwacji przebiegów elektrycznych w technice pomiarowej (na przykład w oscyloskopach), przy końcu XX wieku zostały wyparte przez techniki cyfrowej rejestracji sygnałów.
+
+
+==== Lampy radaroskopowe ====
+Lampy radaroskopowe znajdują zastosowanie we wskaźnikach radiolokacyjnych, współrzędne położenia badanego obiektu są rejestrowane jako współrzędne i jasność plamki na ekranie. Do jednoczesnej obserwacji dwóch współrzędnych używa się lamp z tak zwaną kołową podstawą czasu.
+
+
+=== Lampy analizujące ===
+
+Lampy analizujące służą do przetwarzania obrazów optycznych w sygnały elektryczne.
+
+Ikonoskop to historycznie pierwsza lampa analizująca. Składa się z mozaiki fotokomórek na którą jest rzutowany obraz powodując powstanie odpowiedniego rozkładu potencjałów. Rozkład ten jest skanowany za pomocą przemiatającego mozaikę strumienia elektronów.
+Ortikon różni się tym od ikonoskopu, że płytka analizująca jest półprzezroczysta, co umożliwia rzutowanie i skanowanie obrazu z przeciwnych stron. Superortikon (ortikon obrazowy) wykorzystuje półprzezroczystą fotokatodę, co umożliwia dodatkowe wzmocnienie strumienia elektronów i powoduje jego bardzo dużą czułość. Były to podstawowe lampy analizujące w początkowym okresie rozwoju telewizji.
+Widikon charakteryzuje się użyciem fotoprzewodzącej płytki analizującej. Widikony są proste w konstrukcji, początkowo stosowano je w głównie telewizji użytkowej. Wraz z rozwojem technologii (m.in. zastosowanie PbO jako fotoprzewodnika – plumbikon) wyparły ortikony.Lampy analizujące posiadały wiele odmian konstrukcyjnych, obecnie zostały praktycznie wyparte przez technologie półprzewodnikowe. Produkuje się jeszcze nieliczne widikony do celów medycznych.
+
+
+=== Lampy pamięciowe ===
+Lampy pamięciowe działają na zasadzie zapisu i odczytu promieniem elektronowym informacji zapisanych na tarczy pamięciowej. Informacja jest zapisana w postaci ładunków elektrostatycznych i może być przechowywana przez pewien czas. Podstawowe typy takich lamp to radechon, posiadający jedną wyrzutnię elektronową używaną zarówno do odczytu jak i zapisu, oraz grafechon posiadający dwie niezależne wyrzutnie.
+
+
+== Lampy mikrofalowe ==
+
+Lampy mikrofalowe przewidziane są do pracy przy bardzo wysokich częstotliwościach, w zakresie mikrofal. Wymaga to specjalnych konstrukcji lampy, gdyż długość fali elektromagnetycznej jest porównywalna z rozmiarami lampy, nie można też zaniedbać czasu przelotu elektronów między katodą a anodą.
+Najczęściej spotykane lampy mikrofalowe to
+
+Lampy tarczowe – triody o elektrodach w postaci równoległych tarcz, z wyprowadzeniami elektrod w postaci pierścieni umożliwiających bezpośrednie włączenie lampy do obwodu koncentrycznego.
+Klistrony, w których strumień elektronów jest modulowany w jednym układzie rezonansowym, a jego energia wydziela się w drugim. Odmianą klistronu jest klistron refleksowy, służący do generacji drgań, posiadający tylko jeden obwód rezonansowy i elektrodę reflektora, zawracającą zmodulowany strumień elektronów.
+Magnetrony to diody, w których odpowiednia konfiguracja pola magnetycznego i elektrycznego umożliwia samowzbudne powstanie drgań. Częstotliwość tych drgań jest określana przez geometrię magnetronu, istnieje wiele ich odmian konstrukcyjnych.
+Lampy o fali bieżącej – opierają się na oddziaływaniu biegnących równolegle ogniskowanego strumienia elektronów i fali elektromagnetycznej. Podstawowymi jej odmianami są lampa o fali wstecznej i lampa o fali postępującej.Niektóre z lamp mikrofalowych są nadal w powszechnym użytku.
+
+
+== Lampy gazowane ==
+
+Lampy gazowane zawierają celowo wprowadzone do bańki gazy, zwykle o ciśnieniu od kilkudziesięciu do 10−3 Tr. Dla ich pracy znaczenie mają zarówno elektrony, jak i jony.
+
+Gazotrony to dioda gazowana z żarzoną katodą. Stosowane były jako prostowniki w urządzeniach zasilających.
+Tyratrony to gazowane triody lub tetrody, stosowane jako elektroniczne przełączniki. Włączanie następowało poprzez dodatni impuls na siatce, wyłączenie wymagało spadku prądu poniżej pewnej wartości. Duże tyratrony stosowano w przemysłowych układach sterowania, głównie w obwodach prądu przemiennego – ich zastosowania były podobne do współczesnych tyrystorów, przez które też zostały wyparte.
+Ignitrony to prostowniki rtęciowe z ciekłą katodą. Były stosowane jako przemysłowe prostowniki bardzo dużych mocy w energetyce, metalurgii itp.
+Jarzeniówki stabilizacyjne to dwuelektrodowe lampy gazowane z zimną katodą. Podczas wyładowania jarzeniowego w stabilistorze napięcie między elektrodami jest prawie stałe w szerokim zakresie prądów, co umożliwia zastosowanie takiej lampy w układach stabilizatorów napięcia. Stabilistory wielosekcyjne umożliwiały stabilizację kilku napięć. Jarzeniówki stabilizacyjne, zwłaszcza wielosekcyjne, nazywa się stabiliwoltami.
+
+
+== Lampy wskaźnikowe ==
+Najprostsze lampy wskaźnikowe lampy neonowe (potocznie neonówki), jarzeniowe lampy wskaźnikowe – dwuelektrodowe lampy gazowane wypełnione neonem lub innym gazem szlachetnym albo ich mieszaniną. Miały elektrody o różnych kształtach, były powszechnie stosowane – na przykład do sygnalizacji włączenia napięcia zasilania.
+
+
+=== Lampy cyfrowe ===
+
+Lampy cyfrowe (digitrony, potocznie zwane lampami Nixie) to złożone jarzeniowe lampy wskaźnikowe zawierające odpowiednio ukształtowane katody (zwykle w kształcie cyfr od 0 do 9, często również znaków Plus i minus, plus, minus i przecinka) służące do wyświetlania informacji numerycznych.
+
+
+=== Wyświetlacze fluorescencyjne ===
+
+Wyświetlacz fluorescencyjny (używany bywa też skrót VFD) to wyświetlacz działający na zasadzie fluorescencji bombardowanego elektronami luminoforu.
+
+
+=== Elektronowy wskaźnik strojenia ===
+
+Elektronowy wskaźnik strojenia (potocznie zwany magicznym okiem) to lampa złożona, w której jedna z elektrod jest ekranem luminescencyjnym (rodzajem wyświetlacza). Wielkość powierzchni świecenia tego ekranu zależy od napięcia siatki. Wskaźniki takie były powszechnie stosowane w lampowych odbiornikach radiowych i sprzęcie pomiarowym.
+
+
+== Lampy fotoelektronowe ==
+Lampy fotoelektronowe wykorzystują zjawisko fotoemisji do przetwarzania sygnałów świetlnych w elektryczne.
+
+
+=== Fotokomórki ===
+To najprostsze lampy fotoelektronowe, posiadające światłoczułą katodę (fotokatodę). Prąd płynący przez fotokomórkę zależy od natężenia światła padającego na fotokatodę. W zależności od wypełnienia bańki fotokomórki dzielą się na próżniowe i gazowane. Fotokomórki gazowane są czulsze, ale też są wolniejsze i mają większe szumy. Nie są już stosowane, zostały wyparte przez fotoelementy półprzewodnikowe.
+
+
+=== Fotopowielacze ===
+
+W fotopowielaczu pomiędzy fotokatodą a anodą umieszczono pewną liczbę elektrod zwanych dynodami. Elektrony uderzając w kolejne dynody wybijają (na skutek zjawiska emisji wtórnej) dodatkowe elektrony, co powoduje wzmacnianie sygnału. Fotopowielacze są bardzo czułe i umożliwiają rejestrację światła o bardzo niewielkim natężeniu. Obecnie zostały częściowo wyparte przez kanałowe powielacze elektronów (channeltrony).
+
+
+=== Przetworniki obrazu ===
+Przetworniki obrazu służą do przetwarzania niewidocznych (z zakresu podczerwieni lub ultrafioletu) obrazów optycznych na obraz widzialny. Jest podstawowym elementem konstrukcyjnym noktowizora. Działanie opiera się na fotoemisji z półprzezroczystej fotokatody elektronów, które są następnie ogniskowane i na ekranie luminescencyjnym tworzą obraz widzialny. Obecnie w dużej mierze zostały wyparte przez płytki mikrokanalikowe.
+
+
+== Lampy zliczające ==
+
+Dekatrony to lampy gazowane zliczające impulsy w systemie dziesiętnym. Zawierają 20–40 katod umieszczonych na okręgu wokół anody. Dziesięć katod to katody główne (wskaźnikowe), rolą pozostałych jest przenoszenie wyładowania do następnej katody głównej w takt przychodzących impulsów. Maksymalna częstotliwość przychodzących impulsów waha się od kilku kHz do 2 MHz w zależności od typu lampy.
+Elektropromieniowe lampy zliczające to lampy próżniowe E1T umożliwiają odczyt bezpośrednio na ekranie luminescencyjnym z boku bańki. Ich konstrukcja jest skomplikowana, wymagają impulsów o określonej amplitudzie i kształcie. Maksymalna częstotliwość zliczania wynosi 100–300 kHz, były produkowane w Polsce pod nazwą ELW1.
+
+
+== Współczesne zastosowania lamp elektronowych ==
+Obecnie w zdecydowanej większości zastosowań konstrukcje lampowe zostały zastąpione rozwiązaniami wykorzystującymi przyrządy półprzewodnikowe. Przyczynami takiego stanu rzeczy są liczne wady lamp:
+
+duży pobór mocy (powodowany przez konieczność żarzenia włókien podgrzewających katody), a co za tym idzie wydzielanie dużych ilości ciepła;
+ograniczony czas pracy (zazwyczaj kilka tysięcy godzin, choć często mniej), duża awaryjność;
+niska wytrzymałość mechaniczna (szklana bańka, delikatne siatki), duża wrażliwość na warunki pracy (wstrząsy);
+bardzo duże wymiary.
+Od końca lat 80 prowadzone są badania nad wykorzystaniem technik produkcji elementów półprzewodnikowych do wytwarzania mikrominiaturowych lamp elektronowych. Rozważania teoretyczne i próby laboratoryjne sugerują, że takie elementy są możliwe i mogłyby mieć prędkość działania większą od półprzewodnikowych.
+wysokie koszty produkcji
+wysokie napięcie pracy obwodów anodowych (nie mniej niż kilkadziesiąt woltów, na ogół około 200–300 V, lampy dużej mocy 1 kV i więcej)W niektórych dziedzinach techniki lampy są jednak nadal stosowane:
+
+w technice mikrofalowej; lampy stosuje się tam do wzmacniania bardzo słabych sygnałów na granicy szumu np. w radarach, radioteleskopach czy łączności radiowej z sondami kosmicznymi oraz w urządzeniach dużej mocy;
+w radiowych i telewizyjnych urządzeniach nadawczych skrajnie wielkiej mocy;
+w niektórych urządzeniach elektroakustycznych. Wbrew obiegowej opinii popularnej w środowiskach audiofilskich, w zastosowaniach elektroakustycznych, w których elementy aktywne pracują w zakresie liniowym, poprawnie zaprojektowane urządzenia zarówno lampowe, jak i tranzystorowe łatwo osiągają poziom zakłóceń poniżej progu słyszalności i w rzetelnie przeprowadzanych testach nie są rozróżniane przez słuchaczy ; w zastosowaniach, w których dochodzi do przesterowania elementów aktywnych (na przykład celowo stosowany przester we wzmacniaczach gitarowych) charakterystyka zniekształceń wnoszonych przez tranzystory i lampy jest inna ; rozwój cyfrowych technik przetwarzania sygnałów umożliwia osiągnięcie „lampowej” charakterystyki zniekształceń także w układach półprzewodnikowych ;
+lampami elektronowymi są także elektroluminescencyjne wyświetlacze VFD;
+wirkator to rodzaj lampy mikrofalowej, umożliwiający generowanie impulsu mikrofal o olbrzymiej energii, jest on stosowany w konstrukcjach e-bomb generujących impuls elektromagnetyczny.Lampy mają też niską wrażliwość na impuls elektromagnetyczny, choć w praktyce reszta komponentów układu lampowego może być znacznie bardziej wrażliwa na impuls. W efekcie dobrze przygotowane urządzenia półprzewodnikowe mogą okazać się bardziej odporne.
+Uniwersalne lampy odbiorcze są jeszcze produkowane w Chinach i niektórych krajach byłego ZSRR i RWPG.
+
+
+== Uwagi ==
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+Andrzej Kajetan Wróblewski: Historia fizyki : od czasów najdawniejszych do współczesności. Warszawa: PWN, 2006. ISBN 83-01-14635-4.
+Roman Stinzing, Eugeniusz Szczygieł, Henryk Berezowski: Złote lata radia w II Rzeczypospolitej. Nowy Sącz: V.I.D.I., 2000. ISBN 83-909628-6-1.
+Elektronika. Bohdan Paszkowski (red.). Warszawa: WNT, 1971, seria: Poradnik Inżyniera.
+Janina Kaczmarek: Technologia produkcji lamp elektronowych i elementów półprzewodnikowych. Warszawa: PWSZ, 1966.brak strony w książce
+Zenon Mendygrał: 1000 słów o radiu i elektronice. Warszawa: Wydawnictwo Ministerstwa Obrony Narodowej, 1985. ISBN 83-11-07123-3.
+KazimierzK. Kolbiński KazimierzK. (red.), Historia Elektryki Polskiej, Tom III Elektronika i Telekomunikacja, Stowarzyszenie Elektryków Polskich, Warszawa: Wyd. N-T, 1974 .
+G.R. Jessop. Developments in thermionic valves during the last sixty years. „Electronic and Radio Engineers, Journal of the Institution of”. 57, s. 769, 1987. DOI: 10.1049/jiere.1987.0034. ISSN 0267-1689. 
+Elementy I Podzespoły. J. Antoniewicz (red.). Warszawa: PWT, 1959, seria: Poradnik Radio- i Teleelektryka.
+Russel O. Hamm. Tubes Versus Transistors: Is There an Audible Difference. „Journal of The Audio Engineering Society”. 21, s. 267–273, 1971-05. Toulouse: AES. 
+W. Bussey, R. Haigler. Tubes versus transistors in electric guitar amplifiers. „Acoustics, Speech, and Signal Processing, IEEE International Conference on ICASSP '81.”. 6, s. 800, 1981-04. Toulouse: IEEE. DOI: 10.1109/ICASSP.1981.1171205. 
+M. Karjalainen, J. Pakarinen. Wave Digital Simulation of a Vacuum-Tube Amplifier. „Acoustics, Speech and Signal Processing, 2006. ICASSP 2006 Proceedings. 2006 IEEE International Conference on”. 5, s. V, May 2006. IEEE. DOI: 10.1109/ICASSP.2006.1661235. 
+MieczysławM. Hutnik MieczysławM., TadeuszT. Pachniewicz TadeuszT., Zarys historii polskiego przemysłu elektronicznego do 1985r, SEP, Zeszyt Historyczny nr 2, Warszawa 1994 .
+UNITRA (katalog), Lampy odbiorcze, WEMA, Warszawa 1974.
+
+
+== Zobacz też ==
+Systemy oznaczania lamp elektronowych.
+Cokoły lamp elektronowych.
+Lampy elektronowe produkowane w Polsce.
+
+
+== Linki zewnętrzne ==
+Katalog lamp elektronowych.

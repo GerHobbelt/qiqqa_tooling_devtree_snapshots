@@ -1,0 +1,34 @@
+revision: 20187114
+title: +D
+url: https://cs.wikipedia.org/wiki/%2BD
+
+
+---
+
++D (také psáno jako Plus D) je řadič disketových jednotek pro počítače Sinclair ZX Spectrum vyvinutý britskou společností Miles Gordon Technology. Jedná se o zjednodušenou verzi řadiče Disciple. K řadiči je možné připojit jednu nebo dvě disketové jednotky. Řadič také obsahuje paralelní port pro tiskárnu. +D je pravděpodobně nejpoužívanější rozšiřující zařízení k ZX Spectru. Počítač Chrome má vestavěný disketový řadič, který je s řadičem +D kompatibilní.Pro uživatele řadičů Disciple a +D vycházely oficiální časopis Format a konkurenční časopis Network.
+
+
+== Popis řadiče ==
+Diskový operační systém je G+DOS a je kompatibilní s GDOSem řadiče Disciple. SAM DOS počítače SAM Coupé je zpětně kompatibilní s G+DOSem.
+Při použití v režimu 128 Basic počítačů Sinclair ZX Spectrum 128K+ a +2 mohou nastat některé problémy, kterým je možné předejít. Řadič využívá jiné porty než řadič Disciple a není kompatibilní s počítači Sinclair ZX Spectrum +3. Na druhou stranu je +D možné použít v Beta BASICu. Pro rozšíření možností řadiče +D existuje několik utilit, např. +D RECOVER pro obnovu smazaných souborů, +D CLOCK, která udržuje aktuální čas řízený přerušením, DOSCOP +D a TRANSIT, které umožňují převádět soubory pro počítače PC do formátu řadiče +D (druhý z dvojice umožňuje převádět i soubory pro počítače Amstrad PCW), či DISCOP +D>OP, která umožňuje převádět soubory z formátu řadiče +D do formátu řadiče Opus Discovery.Řadič +D byl vyráběn i firmou Datel Electronics Ltd., tato verze byla kompatibilní i s počítači +2A a +3.Pro +D bylo vytvořeno upgrade Plus D'lux, který rozšiřuje možnosti interface a který obsahuje 128 KiB PEROM, 32 KiB SRAM a paralelní bránu 8255, která může být využita pro Kempston joystick, síť ZXVGS, či pro připojení pevného disku a CD-ROM mechaniky.
+
+
+== Technické informace ==
+Řadič ke svojí činnosti využívá port 227, 235, 231, 239, 243, 247 a 251. Jejich význam je uveden v následující tabulce:
+
+
+== Poznámky ==
+
+
+== Reference ==
+
+
+== Literatura ==
+STEAD, Roy. As good as a +3?. Sinclair User. March 1988, čís. 72, s. 69. Dostupné online.  Rage Hard!. Your Sinclair. March 1988, čís. 27, s. 62. Dostupné online. ISSN 0269-6983.  Techniche Tips. Crash. March 1989, čís. 62, s. 55–57. Dostupné online. 
+
+
+== Externí odkazy ==
+(anglicky) +D na World of Spectrum
+(španělsky) PLUS D (Versión 1.0)
+(anglicky) Popis stavby repliky řadiče +D
+(španělsky) Plus D v přehledu interfaců pro ZX Spectrum na Program: Bytes: 48k

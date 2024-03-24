@@ -1,0 +1,51 @@
+revision: 22542811
+title: '''Phags-pa'
+url: https://cs.wikipedia.org/wiki/Phagpa
+
+
+---
+
+Phagpa, také 'Phags-pa (mongolsky дөрвөлжин үсэг, tj. kvadrátní písmo), je abugida vytvořená lámou Čhögjalem Phagpou během vlády dynastie Jüan, přičemž bylo navrženo tak, aby se s ním mohly zapisovat všechny jazyky mongolské říše. Během dynastie Jüan se těšilo široké státní podpoře, mimo oficiální užití se ale příliš nerozšířilo a po pádu dynastie užívání téměř zmizelo, pouze v Tibetu se stále v modifikované podobě užívá.
+
+
+== Historie ==
+V roce 1260 pověřil vládce mongolské říše Kublajchán (1215–1294) tibetského mnicha Čhögjela Phagpu, aby vytvořil nové písmo. Mělo nahradit mongolské písmo, přičemž nové písmo mělo být využitelné jak pro mongolštinu, tak pro další jazyky mongolské říše: čínštinu, tibetštinu a ujgurštinu. Tak vznikla v roce 1269 abugida pojmenovaná po svém vynálezci „phagpa“ nebo podle tvaru liter „kvadrátní písmo“ (ᠳᠥᠷᠪᠥᠯᠵᠢᠨ ᠪᠢᠴᠢᠭ᠌ / дөрвөлжин бичиг). Ačkoli byla založena na tibetském písmu, byla psána shora dolů po vzoru mongolského písma.
+Ačkoli vládce mimo jiné podporoval výuku písma na školách, nikdy se nestalo mezi obyvateli říše široce užívané. Jeho užívání se omezovalo na oficiální dokumenty, většina lidí pokračovala v používání svých starších písem. Po pádu dynastie Jüan v roce 1368 phagpa přišla i o svoji oficiální podporu.
+Písmo phagpa však nikdy úplně nezmizelo. V Tibetu se stále používá jako pečetní písmo, pro nápisy na stěnách tibetských klášterů a pro nápisy na mincích.
+
+
+== Formy písma ==
+U písma phagpa lze rozlišit tři formy.
+Standardní písmo bylo používáno hlavně v tištěných dílech. Vyznačuje se relativně kulatými tvary. Vedle něho bylo také pečetní písmo. To na rozdíl od standardního písma bylo zcela hranaté, provedení potom připomíná labyrint. To bylo používáno na oficiálních pečetích.
+Písmo, které se dnes používá v Tibetu, se vyvinulo ze pečetního písma, ale používá se jak pro pečeti, tak pro tištěná díla.
+
+
+== Korpus ==
+Protože písmo phagpa nezískalo příliš širokou oblibu, je stávající korpus z doby dynastie Jüan obvykle omezeno na oficiální dokumenty.Většina textů písma phagpa je psána v čínštině, přičemž text je většinou dvěma písmy, čínskými znaky a phagpou. Jedná se většinou o císařské edikty, bankovky, mince a pečeti. Mezi nejdůležitější práce ve písmu phagpa patří mimo jiné 蒙古 字 韻 Mĕnggŭ Zìyùn, slovníku rýmů pro 9 000 čínských znaků, který používá písmo phagpa jako přepis. Také lze nalézt několik textů v mongolštině zapsaných písmem phagpa, i zde se vesměs jedná o úřední dokumenty. Texty v tibetštině nebo ujgurštině z doby dynastie Jüan jsou velmi vzácné.
+
+
+== Princip fungování ==
+Stejně jako v případě tibetského písma je phagpa tzv. abugida. To znamená, že všechny souhlásky mají inherentní vokál a. Pokud je ve slabice jiná samohláska, značí se to samohláskovými znaky, které jsou vždy psány po odpovídající souhlásce. Znamení samohlásky kromě a mají různé formy v závislosti na tom, zda jsou na začátku nebo po souhlásce.
+Stejně jako mongolské písmo je phagpa psána shora dolů ve sloupcích zleva doprava. Znaky se navzájem spojují stejně jako v mongolském písmu. Znaky písma phagpa jsou sloučeny do slov oddělených mezerou.
+
+
+== Unicode ==
+Písmo phagpa je kódováno od Unicode 5.0 v rozsahu U+A840 až U+A877.
+
+
+== Odkazy ==
+
+
+=== Reference ===
+V tomto článku byl použit překlad textu z článku Phagpa-Schrift na německé Wikipedii.
+
+
+=== Literatura ===
+Karl-Heinz Everding. Herrscherurkunden aus der Zeit des mongolischen Großreiches für tibetische Adelshäuser, Geistliche und Klöster. Teil 1: Diplomata Mongolica. Mittelmongolische Urkunden in 'Phags-pa-Schrift. Edition, Übersetzung, Analyse. International Institute for Tibetan and Buddhist Studies, Halle 2006.
+Nicholas Poppe. The Mongolian Monuments in hP’ags-pa Script. 2. Auflage. Harrassowitz, Wiesbaden 1983.
+Dieter Schuh. Grundlagen tibetischer Siegelkunde. Eine Untersuchung über tibetische Siegelaufschriften in ’Phags-pa-Schrift. VGH Wissenschaftsverlag, Sankt Augustin 1981.
+Michael Weiers. Entwicklung der mongolischen Schriften. In: Studium Generale. Band 20, Berlin 1967.
+
+
+=== Externí odkazy ===
+ Obrázky, zvuky či videa k tématu phagpa na Wikimedia Commons

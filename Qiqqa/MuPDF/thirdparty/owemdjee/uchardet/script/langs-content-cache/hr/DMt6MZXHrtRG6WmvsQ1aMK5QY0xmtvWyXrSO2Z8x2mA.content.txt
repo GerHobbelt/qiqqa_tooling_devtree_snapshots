@@ -1,0 +1,28 @@
+revision: 6257029
+title: Evaluator (HSIN)
+url: https://hr.wikipedia.org/wiki/Evaluator_(HSIN)
+
+
+---
+
+Evaluator Hrvatskog saveza informatičara koristi se na Hrvatskoj informatičkoj olimpijadi, Hrvatskom otvorenom natjecanju u informatici, Juniorskoj hrvatskoj informatičkoj olimpijadi te drugim natjecanjima i olimpijadama.
+Natjecatelj rješava zadatak na svom računalu te rješenje šalje na evaluator.
+
+
+== Povijest ==
+Značajno, evaluator se koristio na Međunarodnoj informatičkoj olimpijadi 2007.
+Od 2004. do 2005. evaluator su razvijali Davor Bonači i Luka Kalinovčić, 2006. evaluator je razvijao Lovro Pužar, a iduće dvije godine evaluator su razvijali Goran Horak, Marko Ivanković i Tomislav Novak.
+
+
+== Značajke ==
+Evaluator se nalazi na operacijskom sustavu Linux. Na izvanmrežnim natjecanjima, preko evaluatora natjecatelj ima pristup pisaču. Natjecatelj može testirati svoja rješenja u evaluatorskom okruženju koristeći sučelje za testiranje. Postoji i sustav za postavljanje upita, odnosno zahtjeva za pojašnjenje određenih elemenata zadataka. Ako znanstveno povjerenstvo odluči svima najaviti pojašnjenje nekog zadatka, može poslati obavijest svim natjecateljima.
+Evaluator podržava programske jezike Java, Python 2, Python 3, Pascal, C i C++. Ako evaluator podržava inačicu C++-a noviju od C++99, natjecatelj ju može koristiti i pomoću padajućeg izbornika označiti u kojem programskom jeziku je riješio zadatak.
+Postoji mogućnost natjecanja s punim povratnim informacijama (engl. full feedback) koje natjecatelju daje broj bodova i uvid u sve test podatke tijekom natjecanja.
+
+
+== Vidi još ==
+Evaluator (MIOC)
+Hrvatski savez informatičara
+
+
+== Izvori ==

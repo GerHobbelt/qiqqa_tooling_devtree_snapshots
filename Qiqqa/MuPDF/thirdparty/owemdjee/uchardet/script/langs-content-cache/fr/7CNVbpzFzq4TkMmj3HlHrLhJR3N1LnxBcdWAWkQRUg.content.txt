@@ -1,0 +1,3882 @@
+revision: 203348060
+title: Pendule simple discret
+url: https://fr.wikipedia.org/wiki/Pendule_simple_discret
+
+
+---
+
+Un pendule simple discret est une méthode de description du mouvement d'un pendule simple à un niveau géométrique élémentaire par discrétisation, à l'aide de tracés géométriques à la règle et au compas.
+Dans le cas du mouvement d'un point restreint dans un cercle vertical dans un champ de pesanteur, l'analyse requiert les fonctions elliptiques.
+Dans le cas intégrable, pour un mouvement partant du pont bas du cercle et atteignant le point haut au bout d'un temps infini, le théorème du pendule discret décrit une façon de construire à la règle et au compas une suite d'arcs de cercle parcourus en des intervalles de temps identiques.
+D'autres méthodes de traçage existent pour décrire les mouvements de tournoiements ou d'oscillations, dans des cas particuliers ou plus généraux.
+
+
+== Définition ==
+Soit un pendule simple, c’est-à-dire un point matériel, M, de masse m, astreint à se déplacer sur un cercle vertical 
+  
+    
+      
+        (
+        C
+        )
+      
+    
+     
+  , de centre 
+  
+    
+      
+        O
+      
+    
+     
+  , de rayon 
+  
+    
+      
+        L
+      
+    
+     
+  , dans un champ de pesanteur 
+  
+    
+      
+        g
+      
+    
+     
+   uniforme.
+C'est donc un cas particulier de mouvement dans un puits de potentiel.
+Fait remarquable (et peu connu) : on peut étudier ce problème de fonctions elliptiques à un niveau élémentaire de géométrie à condition de discrétiser le mouvement : il s'agit du pendule simple discret.[réf. nécessaire]
+
+
+== Le cas intégrable ==
+Pour apprivoiser le sujet, décrivons le cas intégrable : celui où le pendule parti du point le plus bas du cercle (en 
+  
+    
+      
+        A
+      
+    
+     
+  ) possède la vitesse 
+  
+    
+      
+        
+          V
+          
+            o
+          
+        
+        =
+        
+          
+            2
+            g
+            L
+          
+        
+      
+    
+     
+   et atteindra le point le plus haut du cercle (en 
+  
+    
+      
+        B
+      
+    
+     
+  ) au bout d'un temps infini.
+
+
+=== Procédure de construction ===
+Matériel : crayon, règle, compas. 
+
+Construction : Soit 
+  
+    
+      
+        (
+        C
+        )
+      
+    
+     
+   la trajectoire de 
+  
+    
+      
+        A
+      
+    
+     
+   en 
+  
+    
+      
+        B
+      
+    
+     
+  , demi-cercle de diamètre vertical 
+  
+    
+      
+        A
+        B
+        =
+        2
+        L
+      
+    
+     
+  , de centre 
+  
+    
+      
+        O
+      
+    
+     
+  .Soit 
+  
+    
+      
+        
+          O
+          
+            2
+          
+        
+      
+    
+     
+  , situé à la verticale de 
+  
+    
+      
+        O
+      
+    
+     
+  ; 
+  
+    
+      
+        O
+        
+          O
+          
+            2
+          
+        
+        =
+        d
+      
+    
+     
+   . Tracer le demi-cercle 
+  
+    
+      
+        (
+        
+          C
+          
+            2
+          
+        
+        )
+      
+    
+     
+   de rayon 
+  
+    
+      
+        
+          O
+          
+            2
+          
+        
+        B
+        =
+        L
+        −
+        d
+      
+    
+     
+  , qui recoupe la verticale en 
+  
+    
+      
+        
+          B
+          ′
+        
+      
+    
+     
+  : 
+  
+    
+      
+        A
+        
+          B
+          ′
+        
+        =
+        2
+        d
+      
+    
+     
+  . (Par exemple 
+  
+    
+      
+        l
+        =
+        10
+        c
+        m
+      
+    
+     
+   et 
+  
+    
+      
+        d
+        =
+        1
+        c
+        m
+      
+    
+     
+  ).
+Depuis 
+  
+    
+      
+        A
+      
+    
+     
+  , mener la tangente à 
+  
+    
+      
+        (
+        
+          C
+          
+            2
+          
+        
+        )
+      
+    
+     
+   qui recoupe 
+  
+    
+      
+        (
+        C
+        )
+      
+    
+     
+   en 
+  
+    
+      
+        
+          A
+          
+            2
+          
+        
+      
+    
+     
+  .
+Depuis 
+  
+    
+      
+        
+          A
+          
+            2
+          
+        
+      
+    
+     
+  , mener la tangente à 
+  
+    
+      
+        (
+        
+          C
+          
+            2
+          
+        
+        )
+      
+    
+     
+   qui recoupe 
+  
+    
+      
+        (
+        C
+        )
+      
+    
+     
+   en 
+  
+    
+      
+        
+          A
+          
+            4
+          
+        
+      
+    
+     
+  .
+Continuer avec soin jusqu'à 
+  
+    
+      
+        
+          A
+          
+            8
+          
+        
+      
+    
+     
+  , voire 
+  
+    
+      
+        
+          A
+          
+            10
+          
+        
+      
+    
+     
+  .
+Depuis 
+  
+    
+      
+        
+          B
+          ′
+        
+      
+    
+     
+  ,tracer la tangente horizontale à 
+  
+    
+      
+        (
+        
+          C
+          
+            2
+          
+        
+        )
+      
+    
+     
+   qui coupe 
+  
+    
+      
+        (
+        C
+        )
+      
+    
+     
+   en 
+  
+    
+      
+        
+          A
+          
+            1
+          
+        
+      
+    
+     
+  , de cote 
+  
+    
+      
+        h
+        =
+        2
+        d
+      
+    
+     
+  .
+Depuis 
+  
+    
+      
+        
+          A
+          
+            1
+          
+        
+      
+    
+     
+  , mener la tangente à 
+  
+    
+      
+        (
+        
+          C
+          
+            2
+          
+        
+        )
+      
+    
+     
+   qui recoupe 
+  
+    
+      
+        (
+        C
+        )
+      
+    
+     
+   en 
+  
+    
+      
+        
+          A
+          
+            3
+          
+        
+      
+    
+     
+   .
+Depuis 
+  
+    
+      
+        
+          A
+          
+            3
+          
+        
+      
+    
+     
+  , mener la tangente à 
+  
+    
+      
+        (
+        
+          C
+          
+            2
+          
+        
+        )
+      
+    
+     
+   qui recoupe 
+  
+    
+      
+        (
+        C
+        )
+      
+    
+     
+   en 
+  
+    
+      
+        
+          A
+          
+            5
+          
+        
+      
+    
+     
+  .
+Continuer avec soin jusqu'à 
+  
+    
+      
+        
+          A
+          
+            9
+          
+        
+      
+    
+     
+  .
+
+
+=== Théorème du pendule discret ===
+Les points 
+  
+    
+      
+        
+          A
+          
+            n
+          
+        
+      
+    
+     
+   sont séparés par des intervalles de temps égaux. On ne peut jamais atteindre 
+  
+    
+      
+        B
+      
+    
+     
+  .
+
+
+=== Vérification expérimentale ===
+La suite polygonale des 
+  
+    
+      
+        
+          A
+          
+            n
+          
+        
+      
+    
+     
+   doit être circonscrite à un cercle 
+  
+    
+      
+        (
+        
+          c
+          
+            1
+          
+        
+        )
+      
+    
+     
+   de centre 
+  
+    
+      
+        
+          o
+          
+            1
+          
+        
+      
+    
+     
+   (compris entre 
+  
+    
+      
+        O
+      
+    
+     
+   et 
+  
+    
+      
+        
+          O
+          
+            2
+          
+        
+      
+    
+     
+  ), tangent en 
+  
+    
+      
+        B
+      
+    
+     
+   à 
+  
+    
+      
+        (
+        C
+        )
+      
+    
+     
+   et 
+  
+    
+      
+        (
+        
+          C
+          
+            2
+          
+        
+        )
+      
+    
+     
+  .
+De même, la suite 
+  
+    
+      
+        
+          A
+          
+            0
+          
+        
+        
+        
+          A
+          
+            3
+          
+        
+        
+        
+          A
+          
+            6
+          
+        
+        
+        
+          A
+          
+            9
+          
+        
+      
+    
+     
+   : cercle 
+  
+    
+      
+        (
+        
+          C
+          
+            3
+          
+        
+        )
+      
+    
+     
+   de centre 
+  
+    
+      
+        
+          O
+          
+            3
+          
+        
+      
+    
+     
+  . Compléter l'arbelos. Les segments radiaux, issus des 
+  
+    
+      
+        
+          A
+          
+            n
+          
+        
+      
+    
+     
+  , découpent l'arbélos en quadrangles curvilignes ; les griser en deux valeurs de gris : la figure donne une idée de la dynamique du pendule qui « s'essouffle en montant ».
+Pour aller plus loin :
+Considérons par exemple la suite 
+  
+    
+      
+        
+          A
+          
+            0
+          
+        
+        
+        
+          A
+          
+            3
+          
+        
+        
+        
+          A
+          
+            6
+          
+        
+        
+        
+          A
+          
+            9
+          
+        
+      
+    
+     
+  , tangente en 
+  
+    
+      
+        
+          T
+          
+            0
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          T
+          
+            3
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          T
+          
+            6
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          T
+          
+            9
+          
+        
+      
+    
+     
+   au cercle 
+  
+    
+      
+        (
+        
+          C
+          
+            3
+          
+        
+        )
+      
+    
+     
+   :
+La module de la vitesse en 
+  
+    
+      
+        
+          A
+          
+            0
+          
+        
+      
+    
+     
+   est 
+  
+    
+      
+        
+          A
+          
+            0
+          
+        
+        
+          T
+          
+            0
+          
+        
+      
+    
+     
+   : tracer le vecteur vitesse en 
+  
+    
+      
+        
+          A
+          
+            0
+          
+        
+      
+    
+     
+  .
+De même, pour 
+  
+    
+      
+        
+          A
+          
+            3
+          
+        
+        
+          T
+          
+            3
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          A
+          
+            6
+          
+        
+        
+          T
+          
+            6
+          
+        
+      
+    
+     
+   et 
+  
+    
+      
+        
+          A
+          
+            9
+          
+        
+        
+          T
+          
+            9
+          
+        
+      
+    
+     
+   (
+  
+    
+      
+        =
+        
+          A
+          
+            9
+          
+        
+        
+          T
+          
+            6
+          
+        
+      
+    
+     
+  ).
+Cette propriété est due au fait suivant : en appelant 
+  
+    
+      
+        
+          H
+          
+            n
+          
+        
+      
+    
+     
+   les projections des 
+  
+    
+      
+        
+          A
+          
+            n
+          
+        
+      
+    
+     
+   sur l'axe radical du faisceau de cercles, on a 
+  
+    
+      
+        
+          H
+          
+            n
+          
+        
+        
+          A
+          
+            n
+          
+        
+        .2
+        d
+        =
+        (
+        
+          A
+          
+            n
+          
+        
+        
+          T
+          
+            n
+          
+        
+        
+          )
+          
+            2
+          
+        
+      
+    
+     
+  , donc 
+  
+    
+      
+        
+          A
+          
+            n
+          
+        
+        
+          T
+          
+            n
+          
+        
+      
+    
+     
+   est proportionnel au module de la vitesse. On peut donc construire aisément beaucoup de point du diagramme horaire de 
+  
+    
+      
+        
+          
+            
+              
+                d
+                s
+              
+              
+                d
+                t
+              
+            
+          
+        
+        =
+        v
+        (
+        t
+        )
+      
+    
+     
+  : la forme caractéristique du soliton apparaît clairement (cf. Pendule simple).
+
+
+== Le cas du tournoiement lent ==
+On suppose la vitesse 
+  
+    
+      
+        
+          V
+          
+            0
+          
+        
+      
+    
+     
+   très légèrement plus grande. On se doute qu'avec une énergie supérieure de 
+  
+    
+      
+        
+          10
+          
+            −
+            37
+          
+        
+      
+    
+     
+   joules à 
+  
+    
+      
+        2
+        m
+        g
+        L
+      
+    
+     
+  , le pendule va tournoyer, mais sans que vraiment on puisse distinguer expérimentalement avec le cas précédent. Donc le pendule présentera entre l'intervalle très long d'une période, un phase de vitesse rapide (avec une vitesse 
+  
+    
+      
+        v
+        (
+        t
+        )
+      
+    
+     
+   quasi-égale à celle du soliton et dont l'intégrale sera 
+  
+    
+      
+        2
+        π
+      
+    
+     
+  ).
+
+
+== Expérience ==
+On la fait avec un pendule de Mach : la boule est lancée de B avec une vitesse minime. Une caméra filme le mouvement jusqu'au moment où l'on passe au régime de grandes oscillations à cause de la très faible (mais impossible à éliminer) déperdition d'énergie. On colle informatiquement les photos prises à des temps réguliers : on aura ainsi plusieurs lots. Il est facile de constater que les résultats précédents sont vrais, à l'erreur expérimentale près.
+
+
+== Cas du tournoiement très rapide ==
+Soit toujours 
+  
+    
+      
+        (
+        C
+        )
+      
+    
+     
+   le cercle de tournoiement, de diamètre vertical 
+  
+    
+      
+        
+          A
+          
+            0
+          
+        
+        B
+      
+    
+     
+  . Soit 
+  
+    
+      
+        H
+      
+    
+     
+   le point de cote 
+  
+    
+      
+        O
+        H
+      
+    
+     
+   telle que l'énergie soit 
+  
+    
+      
+        m
+        h
+        
+        O
+        H
+      
+    
+     
+   :
+la vitesse en 
+  
+    
+      
+        B
+      
+    
+     
+   sera 
+  
+    
+      
+        v
+        (
+        B
+        )
+        =
+        
+          
+            2
+            g
+            
+            O
+            H
+          
+        
+        
+          (
+          
+            1
+            −
+            
+              
+                
+                  L
+                  
+                    2
+                    
+                    O
+                    H
+                  
+                
+              
+            
+          
+          )
+        
+      
+    
+     
+   ; celle en 
+  
+    
+      
+        A
+      
+    
+     
+  , légèrement plus grande 
+  
+    
+      
+        v
+        (
+        A
+        )
+        =
+        
+          
+            2
+            g
+            
+            O
+            H
+          
+        
+        
+          (
+          
+            1
+            +
+            
+              
+                
+                  L
+                  
+                    2
+                    
+                    O
+                    H
+                  
+                
+              
+            
+          
+          )
+        
+      
+    
+     
+   ;
+c’est-à-dire que cette fois le diagramme de vitesse sera extrêmement plat, avec une vitesse moyenne très légèrement inférieure à 
+  
+    
+      
+        
+          
+            2
+            g
+            
+            O
+            H
+          
+        
+      
+    
+     
+    : comme on connaît 
+  
+    
+      
+        v
+        (
+        s
+        )
+      
+    
+     
+  , on sait résoudre ce cas par la méthode du diagramme horaire.
+
+
+== Le tournoiement : construction d'Euler ==
+Rappelons la relation d'Euler dans un triangle quelconque de cercle circonscrit 
+  
+    
+      
+        (
+        C
+        )
+      
+    
+     
+  , de centre 
+  
+    
+      
+        O
+      
+    
+     
+  , de rayon 
+  
+    
+      
+        R
+      
+    
+     
+  , et de cercle inscrit, de centre 
+  
+    
+      
+        I
+      
+    
+     
+  , de rayon 
+  
+    
+      
+        r
+      
+    
+     
+   :
+
+  
+    
+      
+        
+          R
+          
+            2
+          
+        
+        =
+        (
+        O
+        I
+        
+          )
+          
+            2
+          
+        
+        +
+        2
+        R
+        r
+      
+    
+     
+  .On va donner un cas facile à tracer d'un tournoiement assez rapide, correspondant à une épure calculée, selon la règle précédente :
+Tracer le cercle 
+  
+    
+      
+        (
+        C
+        )
+      
+    
+     
+   de rayon 100 (cm). Ce sera la trajectoire.
+Tracer le cercle 
+  
+    
+      
+        (
+        
+          C
+          
+            2
+          
+        
+        )
+      
+    
+     
+   de rayon 32 de centre 
+  
+    
+      
+        
+          O
+          
+            2
+          
+        
+      
+    
+     
+   tel que 
+  
+    
+      
+        O
+        
+          O
+          
+            2
+          
+        
+        =
+        60
+      
+    
+     
+  .
+La tangente horizontale haute correspond à deux points 
+  
+    
+      
+        
+          A
+          
+            2
+          
+        
+      
+    
+     
+   et 
+  
+    
+      
+        
+          A
+          
+            4
+          
+        
+      
+    
+     
+   (la corde 
+  
+    
+      
+        
+          A
+          
+            2
+          
+        
+        
+          A
+          
+            4
+          
+        
+        =
+        
+          
+            6144
+          
+        
+        ≃
+        78
+        
+          ,
+        
+        4
+      
+    
+     
+  ). La tangente basse correspond à deux points 
+  
+    
+      
+        
+          A
+          
+            1
+          
+        
+      
+    
+     
+   et 
+  
+    
+      
+        
+          A
+          
+            7
+          
+        
+      
+    
+     
+   (la corde 
+  
+    
+      
+        
+          A
+          
+            1
+          
+        
+        
+          A
+          
+            8
+          
+        
+        ≃
+        196
+        ,
+        7
+      
+    
+     
+  ).
+Les points 
+  
+    
+      
+        A
+        
+        
+          A
+          
+            1
+          
+        
+        
+        
+          A
+          
+            2
+          
+        
+        
+        B
+        
+        
+          A
+          
+            4
+          
+        
+        
+        
+          A
+          
+            5
+          
+        
+        
+        A
+      
+    
+     
+   sont atteints à des dates entières. On peut tracer le cercle inscrit à cet hexagone (dit de Euler-Poncelet), soit 
+  
+    
+      
+        (
+        
+          C
+          
+            1
+          
+        
+        )
+      
+    
+     
+   de centre 
+  
+    
+      
+        
+          O
+          
+            1
+          
+        
+      
+    
+     
+  . Soient les points de tangence 
+  
+    
+      
+        
+          T
+          
+            0
+          
+        
+        
+        
+          T
+          
+            1
+          
+        
+        
+        
+          T
+          
+            2
+          
+        
+      
+    
+     
+   et leurs symétriques. On obtient les 4 vitesses : en 
+  
+    
+      
+        A
+      
+    
+     
+  , le segment 
+  
+    
+      
+        A
+        
+          T
+          
+            0
+          
+        
+      
+    
+     
+  , en 
+  
+    
+      
+        
+          A
+          
+            1
+          
+        
+      
+    
+     
+  , le segment 
+  
+    
+      
+        
+          A
+          
+            1
+          
+        
+        
+          T
+          
+            1
+          
+        
+      
+    
+     
+  , en 
+  
+    
+      
+        
+          A
+          
+            2
+          
+        
+      
+    
+     
+  , le segment 
+  
+    
+      
+        A
+        
+          T
+          
+            2
+          
+        
+      
+    
+     
+  , et en 
+  
+    
+      
+        B
+      
+    
+     
+   le segment 
+  
+    
+      
+        B
+        
+          T
+          
+            2
+          
+        
+      
+    
+     
+  .
+Soit 
+  
+    
+      
+        H
+        (
+        M
+        )
+      
+    
+     
+   la projection de 
+  
+    
+      
+        M
+      
+    
+     
+   sur l'axe radical 
+  
+    
+      
+        (
+        D
+        )
+      
+    
+     
+   du faisceau de cercles à points limites (dits de Poncelet en France, dits de Landen ailleurs) : la vitesse en 
+  
+    
+      
+        M
+      
+    
+     
+   est proportionnelle à 
+  
+    
+      
+        
+          
+            H
+            M
+          
+        
+      
+    
+     
+   conformément à la règle de Baliani-Torricelli (le proto-théorème de l'énergie cinétique, cinquante ans avant Leibniz) : ici, 
+  
+    
+      
+        O
+        
+          H
+          
+            0
+          
+        
+        =
+        104
+        
+          ,
+        
+        8
+        
+           cm
+        
+      
+    
+     
+  . La puissance de 
+  
+    
+      
+        
+          H
+          
+            0
+          
+        
+      
+    
+     
+   par rapport au faisceau est 
+  
+    
+      
+        983
+        
+          ,
+        
+        04
+        
+          
+             cm
+          
+          
+            2
+          
+        
+      
+    
+     
+  , correspondant aux deux points de Poncelet 
+  
+    
+      
+        
+          L
+          ′
+        
+      
+    
+     
+   de cote 
+  
+    
+      
+        136
+        
+          ,
+        
+        15
+        
+           cm
+        
+      
+    
+     
+   et 
+  
+    
+      
+        L
+      
+    
+     
+   (point de Landen, ici), de cote : 
+  
+    
+      
+        73
+        
+          ,
+        
+        45
+        
+           cm
+        
+      
+    
+     
+  . Si la construction est correcte, alors 
+  
+    
+      
+        
+          A
+          
+            1
+          
+        
+        
+          A
+          
+            2
+          
+        
+      
+    
+     
+   et 
+  
+    
+      
+        
+          A
+          
+            4
+          
+        
+        
+          A
+          
+            5
+          
+        
+      
+    
+     
+   s'intersectent en 
+  
+    
+      
+        
+          L
+          ′
+        
+      
+    
+     
+   ; 
+  
+    
+      
+        
+          A
+          
+            1
+          
+        
+        
+          A
+          
+            4
+          
+        
+      
+    
+     
+   et 
+  
+    
+      
+        
+          A
+          
+            2
+          
+        
+        
+          A
+          
+            5
+          
+        
+      
+    
+     
+   en 
+  
+    
+      
+        L
+      
+    
+     
+  . 
+
+
+=== Vérification graphique ===
+Proposons la vérification suivante : prendre par convention un pas de temps 0,5 unité. Construire le point sur le cercle 
+  
+    
+      
+        
+          M
+          
+            3
+          
+        
+      
+    
+     
+   tel que 
+  
+    
+      
+        B
+        
+          M
+          
+            3
+          
+        
+        =
+        0
+        ,
+        5
+        B
+        
+          T
+          
+            3
+          
+        
+      
+    
+     
+  . Construire aussi précisément que possible l'hexagone circonscrit 
+  
+    
+      
+        
+          M
+          
+            3
+          
+        
+        
+          M
+          
+            4
+          
+        
+        
+          M
+          
+            5
+          
+        
+        
+          M
+          
+            0
+          
+        
+        
+          M
+          
+            1
+          
+        
+        
+          M
+          
+            2
+          
+        
+      
+    
+     
+   : on le verra se refermer en 
+  
+    
+      
+        
+          M
+          
+            3
+          
+        
+      
+    
+     
+  . Tracer les arcs 
+  
+    
+      
+        A
+        
+          M
+          
+            0
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          A
+          
+            1
+          
+        
+        
+          M
+          
+            1
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          A
+          
+            2
+          
+        
+        
+          M
+          
+            2
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        B
+        
+          M
+          
+            3
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          A
+          
+            4
+          
+        
+        
+          M
+          
+            4
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          A
+          
+            5
+          
+        
+        
+          M
+          
+            5
+          
+        
+      
+    
+     
+   : on constate que 
+  
+    
+      
+        
+          A
+          
+            1
+          
+        
+        
+          M
+          
+            1
+          
+        
+        <
+        
+          A
+          
+            5
+          
+        
+        
+          M
+          
+            5
+          
+        
+      
+    
+     
+  , légèrement (on peut comprendre : dans le même temps 
+  
+    
+      
+        M
+      
+    
+     
+   monte de 
+  
+    
+      
+        
+          A
+          
+            1
+          
+        
+      
+    
+     
+   en 
+  
+    
+      
+        
+          M
+          
+            1
+          
+        
+      
+    
+     
+   mais descend de 
+  
+    
+      
+        
+          A
+          
+            2
+          
+        
+      
+    
+     
+   en 
+  
+    
+      
+        
+          M
+          
+            2
+          
+        
+      
+    
+     
+  ) et surtout, que les 3 diagonales se coupent en 
+  
+    
+      
+        L
+      
+    
+     
+  . 
+Bien sûr, on peut obtenir les vitesses en 
+  
+    
+      
+        
+          M
+          
+            n
+          
+        
+      
+    
+     
+  , par la même méthode que pour les 
+  
+    
+      
+        
+          A
+          
+            n
+          
+        
+      
+    
+     
+  , et l'on voit que le compas ramène de 
+  
+    
+      
+        
+          T
+          
+            0
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          T
+          
+            1
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          T
+          
+            2
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          T
+          
+            3
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          T
+          
+            4
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          T
+          
+            5
+          
+        
+      
+    
+     
+   à 
+  
+    
+      
+        
+          T
+          
+            0
+          
+        
+      
+    
+     
+   et comme l'arc 
+  
+    
+      
+        
+          M
+          
+            0
+          
+        
+        
+          M
+          
+            1
+          
+        
+      
+    
+     
+   est « très vertical », un rapport exact des vitesses 
+  
+    
+      
+        
+          
+            
+              
+                
+                  M
+                  
+                    1
+                  
+                
+                
+                  T
+                  
+                    0
+                  
+                
+              
+              
+                
+                  M
+                  
+                    0
+                  
+                
+                
+                  T
+                  
+                    0
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+  , bien égal à 
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    H
+                    
+                      1
+                    
+                  
+                  
+                    M
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    H
+                    
+                      0
+                    
+                  
+                  
+                    M
+                    
+                      0
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+  . 
+
+
+== Le tournoiement : construction de Landen-Poncelet ==
+Au lieu de jouer avec un triangle, on joue avec un trapèze. La règle des quadrangles de Poncelet est plus compliquée que celle d'Euler pour les triangles ; le rayon 
+  
+    
+      
+        r
+      
+    
+     
+   du cercle inscrit de centre 
+  
+    
+      
+        I
+      
+    
+     
+  , avec 
+  
+    
+      
+        I
+        O
+        =
+        d
+      
+    
+     
+   est tel que : 
+  
+    
+      
+        r
+        
+          
+            2
+            
+              R
+              
+                2
+              
+            
+            +
+            2
+            
+              d
+              
+                2
+              
+            
+          
+        
+        =
+        
+          R
+          
+            2
+          
+        
+        −
+        
+          d
+          
+            2
+          
+        
+      
+    
+     
+  .
+Mais on peut « jouer simple », en acceptant la coupe diamantaire suivante : 
+Construire le cercle 
+  
+    
+      
+        (
+        C
+        )
+      
+    
+     
+  , de centre 
+  
+    
+      
+        O
+      
+    
+     
+  , de rayon 100, de diamètre horizontal 
+  
+    
+      
+        
+          A
+          
+            1
+          
+        
+        
+          A
+          
+            7
+          
+        
+      
+    
+     
+  , et le diamètre vertical 
+  
+    
+      
+        A
+        B
+      
+    
+     
+  , où l'on portera 
+  
+    
+      
+        O
+        M
+        =
+        127
+        
+          ,
+        
+        2
+      
+    
+     
+  .
+Le triangle 
+  
+    
+      
+        M
+        
+          A
+          
+            1
+          
+        
+        
+          A
+          
+            7
+          
+        
+      
+    
+     
+   recoupe 
+  
+    
+      
+        (
+        C
+        )
+      
+    
+     
+   en 
+  
+    
+      
+        
+          A
+          
+            3
+          
+        
+      
+    
+     
+   et 
+  
+    
+      
+        
+          A
+          
+            5
+          
+        
+      
+    
+     
+  . Finir la construction du quadrangle orthocentrique en traçant le point 
+  
+    
+      
+        L
+      
+    
+     
+   (point de Landen).
+Le milieu 
+  
+    
+      
+        H
+        O
+      
+    
+     
+   de 
+  
+    
+      
+        M
+        L
+      
+    
+     
+   définit l'axe radical horizontal des cercles à points limites 
+  
+    
+      
+        M
+      
+    
+     
+   et 
+  
+    
+      
+        L
+      
+    
+     
+  . 
+Construire le cercle 
+  
+    
+      
+        (
+        
+          C
+          
+            2
+          
+        
+        )
+      
+    
+     
+   inscrit dans le trapèze 
+  
+    
+      
+        
+          A
+          
+            1
+          
+        
+        
+          A
+          
+            3
+          
+        
+        
+          A
+          
+            5
+          
+        
+        
+          A
+          
+            7
+          
+        
+      
+    
+     
+  . 
+Tracer l'horizontale passant par 
+  
+    
+      
+        L
+      
+    
+     
+   qui coupe 
+  
+    
+      
+        (
+        C
+        )
+      
+    
+     
+   en 
+  
+    
+      
+        
+          A
+          
+            2
+          
+        
+      
+    
+     
+   et 
+  
+    
+      
+        
+          A
+          
+            6
+          
+        
+      
+    
+     
+   (on vérifiera 
+  
+    
+      
+        
+          A
+          
+            2
+          
+        
+        
+          A
+          
+            6
+          
+        
+        =
+        120
+      
+    
+     
+  ). On constatera avec joie que 
+  
+    
+      
+        A
+        
+          A
+          
+            2
+          
+        
+        B
+        
+          A
+          
+            6
+          
+        
+      
+    
+     
+   est circonscrit à 
+  
+    
+      
+        (
+        
+          C
+          
+            2
+          
+        
+        )
+      
+    
+     
+  . 
+On parachèvera par la construction du cercle 
+  
+    
+      
+        (
+        C
+        1
+        )
+      
+    
+     
+   tangent en 8 points à l'octogone 
+  
+    
+      
+        A
+        
+          A
+          
+            1
+          
+        
+        
+          A
+          
+            2
+          
+        
+        
+          A
+          
+            3
+          
+        
+        B
+        
+          A
+          
+            5
+          
+        
+        
+          A
+          
+            6
+          
+        
+        
+          A
+          
+            7
+          
+        
+      
+    
+     
+  , ce qui permet la détermination des vitesses.
+Les huit points obtenus sont atteints à dates entières.
+Les constructions sont plus délicates ; ainsi en est-il de l'octogone de tangente horizontale basse : on obtient alors 16 points isochrones avec leurs vitesses.
+La précision des logiciels met en évidence que la construction n'est qu'approchée : 
+  
+    
+      
+        O
+        M
+      
+    
+     
+   n'a pas exactement la bonne cote.
+La figure met toutefois en évidence la diminution drastique de vitesse du point 
+  
+    
+      
+        
+          B
+          
+            1
+          
+        
+      
+    
+     
+   au point 
+  
+    
+      
+        
+          B
+          
+            2
+          
+        
+      
+    
+     
+   car la corde est quasi verticale. A contrario, passage de 
+  
+    
+      
+        
+          B
+          
+            4
+          
+        
+      
+    
+     
+   à 
+  
+    
+      
+        
+          B
+          
+            5
+          
+        
+      
+    
+     
+   en passant par 
+  
+    
+      
+        B
+      
+    
+     
+   (alias 
+  
+    
+      
+        
+          A
+          
+            4
+          
+        
+      
+    
+     
+  ) à vitesse quasi uniforme : le mouvement est ralenti, mais la vitesse initiale en 
+  
+    
+      
+        B
+      
+    
+     
+   est grande devant la chute d'altitude : on comprend pourquoi le régime « logarithmique » du cas limite a du mal à s'installer.
+
+
+== Le tournoiement : cas général ==
+Tracer un 2n-polygone de Poncelet dont deux côtés soient horizontaux tangents au cercle 
+  
+    
+      
+        (
+        
+          C
+          
+            1
+          
+        
+        )
+      
+    
+     
+   "adéquat". Tracer alors la 2n-chaîne de Poncelet passant par 
+  
+    
+      
+        A
+      
+    
+     
+   et 
+  
+    
+      
+        B
+      
+    
+     
+   : les 2n points seront atteints à dates entières. La difficulté évidemment réside dans le mot "adéquat", qui cache la théorie de la duplication des fonctions elliptiques. Si 
+  
+    
+      
+        cos
+        ⁡
+        (
+        n
+        t
+        )
+      
+    
+     
+   s'exprime aisément à l'aide des polynômes de Tchebycheff à l'aide de 
+  
+    
+      
+        cos
+        ⁡
+        (
+        t
+        )
+      
+    
+     
+  , de même 
+  
+    
+      
+        
+          c
+          
+            n
+          
+        
+        (
+        n
+        t
+        ,
+        k
+        )
+      
+    
+     
+   est algébrique en 
+  
+    
+      
+        
+          c
+          
+            n
+          
+        
+        (
+        t
+        )
+      
+    
+     
+   et 
+  
+    
+      
+        
+          k
+          
+            2
+          
+        
+      
+    
+     
+  , mais la relation est autrement difficile!
+Néanmoins, on a compris : le point 
+  
+    
+      
+        
+          H
+          
+            0
+          
+        
+      
+    
+     
+   de l'axe radical des deux cercles 
+  
+    
+      
+        (
+        C
+        )
+      
+    
+     
+   et 
+  
+    
+      
+        (
+        
+          C
+          
+            1
+          
+        
+        )
+      
+    
+     
+  , de cote 
+  
+    
+      
+        h
+      
+    
+     
+   est tel que la vitesse 
+  
+    
+      
+        
+          V
+          
+            0
+          
+        
+      
+    
+     
+   en 
+  
+    
+      
+        A
+      
+    
+     
+   est 
+  
+    
+      
+        
+          
+            
+              V
+              
+                0
+              
+            
+          
+          
+            2
+          
+        
+        =
+        2
+        d
+        .
+        h
+      
+    
+     
+  
+Depuis 
+  
+    
+      
+        A
+      
+    
+     
+  , on trace la chaîne de Poncelet, qui représentent des points successifs du pendule simple à des temps égaux 
+  
+    
+      
+        
+          t
+          
+            0
+          
+        
+      
+    
+     
+   : en général,
+  
+    
+      
+        
+          t
+          
+            0
+          
+        
+      
+    
+     
+   n'est pas un rationnel fois la période 
+  
+    
+      
+        T
+        (
+        h
+        )
+      
+    
+     
+  , et la chaîne de Poncelet ne se referme jamais.
+Mais par continuité, il existe aussi des cercles 
+  
+    
+      
+        (
+        
+          C
+          
+            1
+          
+        
+        )
+      
+    
+     
+   pour lesquels la chaîne de Poncelet se ferme : par contre calculer la distance 
+  
+    
+      
+        O
+        
+          O
+          
+            1
+          
+        
+        =
+        d
+      
+    
+     
+   et le rayon 
+  
+    
+      
+        
+          R
+          
+            1
+          
+        
+      
+    
+     
+   correspondant exige de faire le calcul via les fonctions elliptiques (cf. Appell et Lacour[Quoi ?] ou cf. Greenhill[Quoi ?]).
+
+
+== Le cas des petites oscillations ==
+Le cas pendulaire est le cas où l'axe radical coupe 
+  
+    
+      
+        (
+        C
+        )
+      
+    
+     
+   en 
+  
+    
+      
+        C
+      
+    
+     
+   et 
+  
+    
+      
+        
+          C
+          ′
+        
+      
+    
+     
+   qui seront donc les points d'altitude maximale atteints par le point 
+  
+    
+      
+        M
+      
+    
+     
+   dans son oscillation pendulaire. Le point 
+  
+    
+      
+        
+          H
+          
+            0
+          
+        
+      
+    
+     
+   sera maintenant le milieu de la corde 
+  
+    
+      
+        C
+        
+          C
+          ′
+        
+      
+    
+     
+   : 
+  
+    
+      
+        A
+        
+          H
+          
+            0
+          
+        
+        =
+        h
+      
+    
+     
+  .
+Dans le cas pendulaire, traçons donc le cercle 
+  
+    
+      
+        (
+        B
+        )
+      
+    
+     
+   de centre 
+  
+    
+      
+        B
+      
+    
+     
+  , de rayon 
+  
+    
+      
+        B
+        C
+      
+    
+     
+  . Si on joint 
+  
+    
+      
+        A
+        C
+      
+    
+     
+  , évidemment 
+  
+    
+      
+        A
+        C
+      
+    
+     
+   est tangente à 
+  
+    
+      
+        B
+      
+    
+     
+  , et l'arc 
+  
+    
+      
+        A
+        B
+      
+    
+     
+   correspond à une durée 
+  
+    
+      
+        K
+        (
+        h
+        )
+      
+    
+     
+  , quart de période. La tangente horizontale 
+  
+    
+      
+        S
+        
+          S
+          ′
+        
+      
+    
+     
+   au cercle 
+  
+    
+      
+        (
+        B
+        )
+      
+    
+     
+   correspond forcément aux points de date 
+  
+    
+      
+        
+          
+            
+              K
+              2
+            
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          
+            
+              
+                3
+                K
+              
+              2
+            
+          
+        
+      
+    
+     
+   pour 
+  
+    
+      
+        S
+      
+    
+     
+   et 
+  
+    
+      
+        
+          
+            
+              
+                5
+                K
+              
+              2
+            
+          
+        
+      
+    
+     
+  , 
+  
+    
+      
+        
+          
+            
+              
+                7
+                K
+              
+              2
+            
+          
+        
+      
+    
+     
+   pour 
+  
+    
+      
+        
+          S
+          ′
+        
+      
+    
+     
+  .
+Puisque 
+  
+    
+      
+        h
+        ≪
+        l
+      
+    
+     
+  , on peut approximer arcs et cordes : 
+
+  
+    
+      
+        A
+        C
+        =
+        l
+        (
+        α
+        )
+      
+    
+     
+   et 
+  
+    
+      
+        B
+        C
+        =
+        l
+        c
+        o
+        s
+        (
+        α
+        )
+      
+    
+     
+  , puis 
+  
+    
+      
+        A
+        S
+        =
+        l
+        (
+        α
+        )
+        
+          
+            
+              
+                2
+              
+              2
+            
+          
+        
+      
+    
+     
+  .
+Ce qui correspond bien au huitième de période, pour une oscillation qui est donc quasi sinusoïdale.
+
+
+== Le cas des très grandes oscillations ==
+Cette fois, on a au contraire 
+  
+    
+      
+        l
+        −
+        h
+        ≪
+        l
+      
+    
+     
+  .
+Néanmoins la construction des points 
+  
+    
+      
+        S
+      
+    
+     
+   et 
+  
+    
+      
+        
+          S
+          ′
+        
+      
+    
+     
+   reste identique. Il est patent de reconnaître la différence des longueurs d'arcs huitième de période. Il est aussi facile de reconnaître la vitesse en 
+  
+    
+      
+        S
+      
+    
+     
+   par rapport à celle en 
+  
+    
+      
+        A
+      
+    
+     
+  . 
+Par contre, pas de moyen simple d'évaluer la valeur de la période 
+  
+    
+      
+        4
+        K
+        (
+        h
+        )
+      
+    
+     
+   ; et surtout pas moyen d'évaluer les hauteurs 
+  
+    
+      
+        h
+      
+    
+     
+   en oscillation (
+  
+    
+      
+        h
+        <
+        l
+      
+    
+     
+  ) et 
+  
+    
+      
+        
+          h
+          ′
+        
+      
+    
+     
+   en tournoiement (
+  
+    
+      
+        
+          h
+          ′
+        
+        >
+        l
+      
+    
+     
+  ) qui ont les mêmes périodes ; alors que la théorie mathématique donne la correspondance entre ces valeurs.
+
+
+== Quelques cas particuliers ==
+Bien sûr, le cas de l'oscillation d'amplitude 90° est auto-similaire à son complément. Le raisonnement de la transformation t-it joue à plein dans ce cas, et 
+  
+    
+      
+        K
+        =
+        
+          K
+          ′
+        
+      
+    
+     
+  .
+Le cas particulier le plus connu et utilisé en travaux pratiques est celui du pendule oscillant avec une élongation maximum 150°, et son "complément", l'oscillation de 30°. Alors 
+  
+    
+      
+        K
+        =
+        
+          K
+          ′
+        
+        
+          
+            3
+          
+        
+      
+    
+     
+  , comme on pourra le vérifier grâce aux vitesses.
+Un autre cas particulier est celui de l'élongation 120° et son « complément » de 60° : la figure discrète exacte est très jolie à faire.
+
+
+== Article connexe ==
+Grand théorème de Poncelet
+
+ Portail de la physique

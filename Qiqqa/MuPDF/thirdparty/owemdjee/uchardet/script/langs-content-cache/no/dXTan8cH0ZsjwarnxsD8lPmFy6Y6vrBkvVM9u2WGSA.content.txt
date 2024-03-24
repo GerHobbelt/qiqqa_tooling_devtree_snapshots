@@ -1,0 +1,73 @@
+revision: 22995748
+title: Luminositet
+url: https://no.wikipedia.org/wiki/Luminositet
+
+
+---
+
+Luminositet angir i astronomien et himmellegemes totale utstråling av elektromagnetisk energi. Luminositens naturlige SI-enhet er Watt. 
+Luminositeten kan også angis relativt til solens luminositet, eller som absolutt størrelsesklasse. Mellom en stjernes absolutte størrelsesklasse 
+  
+    
+      
+        M
+      
+    
+     
+   og dens luminositet 
+  
+    
+      
+        L
+      
+    
+     
+   har vi den logaritmiske sammenhengen 
+  
+    
+      
+        M
+        =
+        
+          
+            k
+            o
+            n
+            s
+            t
+            a
+            n
+            t
+          
+        
+        +
+        2
+        ,
+        5
+        ∗
+        lg
+        ⁡
+        (
+        L
+        )
+        ,
+      
+    
+     
+   
+der 
+  
+    
+      
+        lg
+      
+    
+     
+   angir logaritmen med grunntall 10.
+
+
+== Eksempel ==
+Solens luminositet er 3.9x1026 Watt og den har absolutt størrelsesklasse på Msol = -0m.37. 
+Stjernen Sirius er 21 ganger så lyssterk som Solen og har en luminositet på 8.2x1027 Watt.
+Dens absolutte størrelsesklasse er Msirus = -3m.7.
+Se også under størrelsesklasse.

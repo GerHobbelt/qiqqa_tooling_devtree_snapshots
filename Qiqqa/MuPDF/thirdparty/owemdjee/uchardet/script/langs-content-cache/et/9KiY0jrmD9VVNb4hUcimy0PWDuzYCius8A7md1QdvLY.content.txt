@@ -1,0 +1,104 @@
+revision: 6215619
+title: IBM
+url: https://et.wikipedia.org/wiki/IBM
+
+
+---
+
+International Business Machines ehk IBM (NYSE: IBM) on Ameerika päritolu rahvusvaheline arvutite, tehnoloogia, ärinõustamise ja infotehnoloogia konsultatsiooni ettevõte, mille peakorter asub Ameerika Ühendriikide New Yorgi osariigis Armonkis.
+IBM on suuruselt maailma neljas tehnoloogiaettevõte ning IBM-i bränd on 2013. aasta seisuga väärtuselt neljas (Apple'i, Google'i ja Coca-Cola järel). IBM on üks vähestest IT-ettevõtetest, mis on järjepidevalt tegutsenud 19. sajandist alates. IBM toodab ja müüb arvutite riist- ja tarkvara (keskendudes rohkem viimasele), pakub infrastruktuuri, andmemajutusteenust ja konsultatsioone (alates suurarvutitega seotust ning lõpetades nanotehnoloogiaga).IBM on hästi tuntud tänu tegevusele maailma suurima arvutifirma ja süsteemiintegraatorina. IBM annab tööd ligi 400 000 inimesele üle maailma ja on turu kapitalisatsiooni poolest suuruselt teine ja kasumlikkuse poolest teine infotehnoloogia ja teenuste tööandja maailmas. Forbes 2000 nimekirja järgi oli ettevõtte müügitulu üle 100 miljardi USA dollari. 
+IBM omab rohkem patente kui ükski teine USA tehnoloogiaettevõte ning sellel on üheksa teaduslaborit üle kogu maailma. Ettevõtte palgal on 200 riigis töötavad teadlased, insenerid, konsultandid ja müügispetsialistid. IBM-i töötajad on saanud viis Nobeli auhinda, neli Turingi auhinda, üheksa rahvusvahelist tehnoloogiamedalit ja viis rahvusvahelist teadusmedalit. IBM kui integraallülituste tootja on olnud üks 20-st maailma pooljuhtide müügi liidrist.
+
+
+== Ajalugu ==
+Ettevõte, millest hiljem sai IBM, asutati 1896 (toona oli nimeks Tabulating Machine Company). Selle asutas Herman Hollerith Broome'i maakonnas New Yorgis. Tänapäevani teeb seal teatud töid väike harukontor. 16. juunil 1911 moodustati aktsiaselts Computing Tabulating Recording Corporation (lühidalt CTR) ning ühtlasi siseneti New Yorgi aktsiaturule. Ettevõtte toonane juht oli George Winthrop Fairchild. 1917 sai CTR-i Kanada ja hiljem ka Lõuna-Ameerika tütarettevõtete nimeks International Business Machines ehk IBM. Kogu firma sai ühtse nime alla 1924, kui firma etteotsa asus Thomas J. Watson.
+Alates novembrist 1910 eksisteeris Hollerithi frantsiisettevõte ka Saksamaal, kandes nime DEHOMAG (Deutsche Hollerith-Maschinen GmbH). 1922 võttis aga nimevahetuse läbi teinud CTR üle 90% DEHOMAG-ist, mis oli aastatel 1914–1923 Saksamaal valitsenud inflatsiooni tõttu sattunud võlglaste nimekirja (litsentsitasu maksmata jätmise pärast). 1949 muutus lõpuks ka DEHOMAGi nimi – selleks sai IBM Germany.
+IBM-i ajaloos on oluline roll ettevõtete omandamisel ja spin-off-ettevõtete käivitamisel. Kõige tuntumate hulgas on näiteks German SAP asutamine 1972. aastal viie endise IBM-i inseneri poolt. Hiinlaste Lenovo saavutas maailmakuulsuse pärast IBM-i ThinkPadi brändi ülesostmist 2005. aastal.
+
+
+=== Korporatiivdisaini programm ===
+
+1950. aastate keskpaigaks oli Thomas J. Watson Jr. rabatud, kui halvasti IBM oma disainiga toime tuli. Ta palkas disainikonsultandi Eliot Noyesi, et ta vaataks üle ametliku CDP loomingu, ja andis Noyesile ülesande luua terviklik, maailmataseme väljanägemine ja õhkkond IBM-is. Järgmise kahe aastakümne jooksul palkas Noyes hulga mõjukaid arhitekte, disainereid ja kunstnikke, et disainida IBM-i tooteid, struktuuri, väljapanekuid ja graafikat.
+
+
+== Projektid ==
+
+
+=== Pooljuhtide disain ja tootmine ===
+
+Peaaegu kõik viimase põlvkonna mängukonsoolid kasutavad IBM-is välja töötatud mikroprotsessorit. Xbox 360 sisaldab PowerPC kolmetuumalist protsessorit, mille IBM disainis ja tootis pea 24 kuud. Sony PlayStation 3 funktsioonide Cell BE mikroprotsessor töötati välja ühiselt IBM-i, Toshiba ja Sony koostöös. Nintendo seitsmenda põlvkonna mängukonsool, Wii, omab IBM-i kiipi koodnimega Broadway. Vanem Nintendo GameCube kasutab Gekko protsessorit, mille väljatöötaja oli samuti IBM.
+Mais 2002 loodi IBM-i ja aktsiaseltsi Butterfly.net koostöös ühine andmetöötlusvõrgustik Butterfly Grid veebipõhiste mängude turustamiseks. Märtsis 2006 kuulutas IBM välja erinõusoleku Hoplon Infotainmentiga, Online Game Service Incorporate'ga (OGSI) ja RenderRocketiga, et tagada suure nõudluse tõttu sisuhalduse ja serveri ressursse.
+
+
+=== IBM Redbooks ===
+Redbooks Redbooks on avalik veebiraamatute IBM-i toodete kohta. Raamatutes kirjeldatakse toodete omadusi, jagatakse praktilisi kogemusi, käske ja keelde, jättes kõrvale müügisurve.
+
+
+=== Siseprogrammid ===
+Extreme Blue on algatus, mis kasutab IBM-i kogenud insenere ja andekaid ärijuhte, et arendada kõrgväärtuslikku tehnoloogiat. Projekti eesmärk on analüüsida uute ettevõtete vajadusi ja tehnoloogiat, mis neid lahendavad. Need projektid seisnevad põhiliselt kiirete prototüüpide ehitamises, kõrgtaseme tarkvaras ja riistvaras.Mais 2007 tutvustas IBM projekti Big Green, mille eesmärk oli suunata 1 miljard dollarit kogu ettevõtte energiatõhususe suurendamiseks.
+Novembris 2008 käis IBM tegevdirektor Sam Palmisano USA Välissuhete Nõukogu (CFR) kõne ajal välja uue idee ehitada "targem planeet". Lisaks on projektil oma blogi.
+
+
+== Ettevõtte kultuur ==
+
+IBM-i hüüdnimi on inglise keeles Big Blue ('suur sinine'). Ettevõtte nime päritolu on seletatud mitmeti. IBM-is töötanud inimesed on seda meelt, et IBM-i esindajad ise mõtlesid selle välja 1960. aastatel, viidates IBM-i sinistele suurarvutitele, mida ehitati 1960. ja 1970. aastatel. Inglise keeles True Blue ('tõeline sinine') oli nimetus, millega kirjeldati lojaalset IBM-i klienti. Teised väidavad, et ingliskeelne väljend Big Blue viitab lihtsalt firma logole. Kolmandad väidavad, et Big Blue viitab ettevõtte töötajate riietusele – valgele särfile ja sinisele ülikonnale, mida kästi paljudel IBM-i töötajatel kanda. Igal juhul IBM-i klaviatuurid, kirjutusmasinad ja mõned muud seadmed kannavad märksõna Big Blue, kuna Enter-klahv ja reavahetusklahv on vastavalt sinised. Alates 1947. aastast on ka IBM kasutanud siniseid logosid, mistõttu sinine värv on ettevõtte disainielement ja selgitab veelgi paremini nime Big Blue kasutust.
+
+
+=== Müük ===
+IBM-i on tihti kirjeldatud nii, nagu omaks ta müügikeskset või müügile orienteeritud ärikultuuri. Traditsiooniliselt on paljud IBM-i juhatajad ja peadirektorid valitud müügipersonali seast. Näiteks praegune tegevdirektor Samuel J. Palmisano oli alguses ettevõttes tööl müügimehena. Müügimehi on tihti värvatud otse kesk- ja tippjuhtkonda tegelema ettevõttele oluliste klientidega.
+
+
+=== Vormiriietus ===
+Tume või hall ülikond, valge särk ja siiras lips oli IBM töötajate üldiseks vormiriietuseks 20. sajandil. 1990-ndatel IBM-i juhtkonna ümberkujundamise käigus leevendas tegevdirektor Louis V. Gerstner jun selliseid piiranguid, ühtlustades riietus- ja käitumistavasid, et IBM-i töötajad sarnaneksid teiste suurte tehnoloogiaettevõtete töötajatega. Sellest ajast on IBM töötajate riietus vabaaja-äri stiilis, kuigi tööandjad, kes peavad klientidega koosolekuid, kannavad tihti formaalsemat riietust.
+
+
+=== Inimressursid ===
+2010. aastal andis ettevõte tööd umbes 105 000 töötajale Ameerika Ühendriikides. 2003. aastal oli see arv vaid 30 000.
+Teiselt poolt annab ettevõte ka Indias tööd 75 000 töötajale, 2003. aastal oli seal 9000 töötajat.
+
+
+== Sisehaldus ==
+
+
+=== Logod ===
+
+		
+		
+		
+Enne 1970. aastaid kavandatud logode suured värvitud alad jäid trükkimisel selle aja paljundusmasinate tehnilise küündimatuse tõttu ebakvaliteetsed. Seetõttu hakkas ettevõte eelistama logosid, millel sellised alad puuduvad. 1972. aasta IBM-i logo on näide sellest tendentsist. 1980. aastate keskpaigast see tehniline piirang kadus, kuna hakati kasutama digitaalseid paljundusmasinaid.
+
+
+=== Juhatus ===
+IBM-i praegused juhatuse liikmed on:
+Alain J. P. Belda – ettevõtte Alcoa Inc. juhatuse esimees
+Cathie Black – ajakirja Hearst president, lahkus 15. novembril
+William R. Brody – Johns Hopkinsi ülikooli endine president
+Kenneth Chenault – American Express Company esimees ja tegevdirektor
+Michael L. Eskew – ettevõtte United Parcel Service, Inc. endine esimees ja tegevdirektor
+Shirley Ann Jackson – Rensselaer Polytechnic Institute president
+Andrew N. Liveris – Dow Chemical Corp tegevdirektor
+W. James McNerney, Jr – Boeing Company esimees, president ja tegevjuht
+Taizo Nishimuro – Tokyo Stock Exchange Group juhatuse esimees
+James W. Owens – ettevõtte Caterpillar Inc. esimees ja tegevdirektor
+Samul J. Palmisano – IBM-i esimees, president ja tegevdirektor
+Joan Spero – Doris Duke'i Heategevusfondi endine president
+Sidney Taurel – Eli Lilly and Company esimees
+Lorenzo Zambrano – Cemex SAB de CV esimees ja tegevdirektor
+
+
+=== Ettevõtte peakorter ===
+IBM-i peakorterite kompleks asub Armonki linnas North Castle'is New Yorgi osariigis Ameerika Ühendriikides. Kolmekorruselise hoone pindala on 26 300 m² ja see asub 100 000 m² suurusel maa-alal.
+
+
+== Vaata ka ==
+Böblingen
+
+
+== Viited ==
+
+
+== Välislingid ==
+IBM koduleht
+IBM To Acquire Red Hat, prnewswire.com, 28. oktoober 2018
+IBM TO ACQUIRE RED HAT, redhat.com, 28. oktoober 2018
+IBM To Acquire Red Hat, ibm.com, 28. oktoober 2018

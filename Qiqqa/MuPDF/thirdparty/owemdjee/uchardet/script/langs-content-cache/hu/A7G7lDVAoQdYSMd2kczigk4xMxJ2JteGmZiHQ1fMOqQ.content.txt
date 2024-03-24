@@ -1,0 +1,58 @@
+revision: 24214542
+title: "Negat\xEDv sz\xE1l\xFA ssRNS v\xEDrusok"
+url: https://hu.wikipedia.org/wiki/Negat%C3%ADv_sz%C3%A1l%C3%BA_ssRNS_v%C3%ADrusok
+
+
+---
+
+A negatív szenzitású (negatív érzékű), egyszálú RNS vírusok (vagy (-)ssRNS vírusok) egy víruscsoport, amely negatív-szenz, egyszálú RNS-t használ, mint a genetikai anyag. Egyszálú RNS vírus besorolása lehet pozitív, vagy negatív, függően az RNS szenzitásától (érzékétől) vagy a polaritásától. A negatív virális RNS az mRNS komplementere, és átalakítható egy pozitív RNS-sé RNS polimerázzal a transzláció előtt. Ezért a tisztított (-)ssRNS vírus nem fertőző önmagában, pozitív-szálú RNS-sé kell átalakítani a replikációhoz. Ezek a vírusok a Baltimore-rendszer V. Csoportjába tartoznak.Továbbá a (-)ssRNS vírusoknak összetett genomszekvenciája, sejtciklusa, replikációs szokása van, amely hasznosítani tudja a különböző komplex fehérjéket annak érdekében, hogy gondoskodjon maga a konkrét szerkezetéről, túléléséről és a genomiális szekvenciájának továbbításáról. A (-)ssRNS vírusok bonyolultsága lehetővé teszi, hogy elnyomják a megfertőzött sejtek veleszületett immunválaszát, és kapszidburkot képezzen, amely a (-)ssRNS vírusok egyedi azonosítására alkalmas.
+
+
+== Replikáció ==
+A (-)ssRNS vírusoknak RNS-polimerázra van szükségük a pozitív-szenz RNS létrehozásához. A pozitív-szenz RNS úgy viselkedik, mint egy virális mRNS, amiről az új virion anyagaihoz szükséges fehérjék íródnak le. Az újonnan alakult virionokkal további negatív-szenz RNS molekulák jönnek létre.
+A vírus replikációja a következő lépéseket tartalmazza:
+A virion bejut a gazdasejtbe és kilöki a negatív szálú RNS-t a citoplazmába.
+A vírus a saját RNS-replikázát használja, az RNS-függő RNS-polimeráz (RNA-dependent RNA-polymerase)-t, hogy pozitív RNS-templát szálat készítsen, amellyel a kiegészítő bázis párosítás létrejön.
+A pozitív-szálú RNS úgy viselkedik, mint egy mRNS, ami a gazda riboszómáit használva a strukturális kapszomer fehérje és a virális RdRp transzlációja végbe megy.
+A replikációs komplex képződik a RdRp-vel: A pozitív szál lehet akár az mRNS, hogy több fehérjét termeljen vagy akár a templát, hogy több negatív RNS-szál keletkezzen.
+Új virális kapszidok összeszerelődnek a kapszomer fehérjeegységekből. A negatív-szálú RNS és az RNS-függő RNS-polimeráz (RdRp) beépül a kapszidokba, létrehozva az új negatív RNS virionokat.
+Az összeépülés és a nukleokapszid érése után, az új virionok a sejt sarjadzásával vagy a sejtmembrán feloldódásával jutnak ki, hogy tovább fertőzzenek más sejtek.A (-)ssRNS vírus genom mérete 10kb és 30kb között van. Két genom alcsoport különböztethető meg: a nem szegmentált és szegmentált. A fő különbség a két típus között a replikáció helye.
+
+A nem szegmentált genomot tartalmazó vírus a replikáció első lépéseként, a RdRp a negatív szálat átírja számos monocisztronos mRNS-sé, mely az egyedi virális fehérjéket tartalmazza. A negatív genom termelésére egy pozitív szálú másolat szolgál templátként. Ez a replikáció a citoplazmában zajlik.
+A szegmentált genomot tartalmazó vírusok replikációja a magban történik, de a RdRp termel egy monocisztronos mRNS szálat minden genom szegmensben.
+
+
+== Rendszertani besorolás ==
+Egy rend és tizenkét család van jelenleg elismerve ebben a csoportban. Több ilyen családnak rendkívül hasonló genetikai szerkezete, és a Mononegavirales rendbe vannak sorolva. Számos faj és nemzetség még besorolásra vár.
+Mononegavirales rendje
+Bornaviridae család – Borna vírus betegség
+Filoviridae család – beleértve az Ebola vírust, Marburg vírust
+Mymonaviridae család
+Nyamiviridae család
+Paramyxoviridae család – beleértve a Kanyaró vírust, Mumpsz vírust, Nipah vírust, Hendra-vírust, NDV-t
+Pneumoviridae család – beleértve a RSV-t, Metapneumovirus-t
+Rhabdoviridae család – beleértve a Veszettség vírust
+Sunviridae család
+Anphevirus nemzetség
+Arlivirus nemzetség
+Chengtivirus nemzetség
+Crustavirus nemzetség
+Wastrivirus nemzetség
+Besorolatlan családok:
+Arenaviridae család – beleértve a Lassa-vírus
+Bunyaviridae család – beleértve a Hantavírust, Krími-Kongói vérzéses lázat
+Ophioviridae család 
+Orthomyxoviridae család – beleértve az influenza vírusokat
+Besorolatlan nemzetségek:
+Deltavirus nemzetség – beleértve Hepatitis D vírust
+Emaravirus nemzetség
+Tenuivirus nemzetség
+Besorolatlan fajok:
+Taastrup vírus
+
+
+== Jegyzetek ==
+
+
+== Fordítás ==
+Ez a szócikk részben vagy egészben  a   Negative-sense single-stranded RNA virus című angol Wikipédia-szócikk fordításán alapul.  Az eredeti cikk szerkesztőit annak laptörténete sorolja fel. Ez a jelzés csupán a megfogalmazás eredetét és a szerzői jogokat jelzi, nem szolgál a cikkben szereplő információk forrásmegjelöléseként.

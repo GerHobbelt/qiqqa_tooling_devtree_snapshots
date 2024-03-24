@@ -1,0 +1,32 @@
+revision: 31967061
+title: Scholar
+url: https://ca.wikipedia.org/wiki/Google_Acad%C3%A8mic
+
+
+---
+
+Google Acadèmic (Google Scholar, en anglès) és un motor de cerca de Google que indexa el text complet o les metadades de literatura científico-acadèmica de gran quantitat de formats i disciplines. Entre els resultats que ofereix podem trobar citacions, enllaços a llibres, articles de revistes científiques, comunicacions i ponències a congressos, informes científico-tècnics, tesis i dissertacions, resums, informes tècnics i altra literatura acadèmica, incloent-hi patents. Google no publica el gruix de la base de dades de Google Acadèmic, i s'ha calculat que aquesta contenia vora 160 milions de documents el maig 2014.Va ser llançat al mercat en fase beta el 18 de novembre de 2004 i inclou les revistes més llegides del món científic amb excepció d'Elsevier.
+Google Acadèmic és similar a altres recursos lliures com ara CiteSeerX i getCITED. Així mateix, també s'assembla a les eines Scopus d'Elsevier i Web of Science, de Clarivate, les quals requereixen subscripció.
+
+
+== Història ==
+Google Acadèmic va sorgir arran d'una discussió entre Alex Verstak i Anurag Acharya, els quals treballaven en la construcció del principal índex web de Google. El seu objectiu era "fer els solucionadors de problemes del món un 10 % més eficaços" per permetre accés més fàcil i més acurat a coneixement científic. Aquest objectiu es reflecteix a l'eslògan del lloc: "Dempeus a les espatlles dels gegants", manllevat d'una cita d'Isaac Newton, és una mostra d'assentiment envers els acadèmics que han contribuït en el seu camp durant segles, proporcionant l'avenç del coneixement científic.
+Google Acadèmic ha implementat diverses característiques al llarg del temps. El 2006, es va afegir una característica per a importar citacions amb suport de gestors de bibliografia (tals com RefWorks, RefMan, EndNote i BibTeX). El 2007, Acharya va anunciar que Google Scholar havia començat un programa per a digitalitzar i hostatjar articles de revista d'acord amb els editors, un esforç diferenciat de Google Books, en què l'escanejat de les revistes més velles no inclou metadades necessàries per a identificar articles específics en temes determinats. El 2011, Google va eliminar Google Acadèmic de les barres d'eines de les seves pàgines de recerca, fent-lo menys fàcilment accessible i menys fàcil de descobrir per part d'usuaris que no en coneixien l'existència. Més o menys en aquest període, es van desenvolupar llocs amb característiques similars, com són CiteSeer, Scirus, i Windows Live Academic. Tots tres inoperatius a hores d'ara.
+El 2012 es va afegir la possibilitat que els acadèmics individuals poguessin crear "perfils de citacions acadèmiques", perfils públics d'autors que són editables pels mateixos autors. Els usuaris, els quals es connecten al seu compte de Google vinculant una adreça de correu generalment relacionada amb una institució acadèmica (per exemple, correu-e personal de la universitat), poden des d'aleshores gestionar els seus camps d'interès i citacions. Google Acadèmic calcula automàticament i mostra els índexs de citacions h-index, i també l'i10-index. El primer amb informació sobre el percentatge de citacions que els articles de l'autor han rebut en els darrers 5 anys (equivalència entre nombre màxim d'articles que han rebut sengles citacions) i el segon amb el càlcul d'articles que han rebut un mínim de 10 citacions.
+El novembre de 2013 es va introduir una característica que permet als usuaris registrats desar les seves cerques a la "Biblioteca del Google Acadèmic", una col·lecció personal que l'usuari pot buscar per separat i organitzar amb etiquetes o tags. Una funció de mètrica dona actualment suport per veure l'impacte de les revistes acadèmiques, així com camps complets de ciència, mitjançant el botó "mètrica". Aquesta funcionalitat permet revelar les revistes capdavanteres en un camp d'interès, i també podem conèixer l'impacte dels articles que hi són publicats.
+
+
+== Característiques ==
+Google Scholar permet als usuaris buscar còpies digitals o físiques d'articles, tant en línia com en biblioteques. Donat que molts dels resultats en la cerca a Google Acadèmic enllacen a articles de revistes comercials, la majoria d'usuaris només podran accedir a un resum i als detalls de citació de l'article en qüestió, havent de pagar un cost determinat per a poder accedir a l'article sencer. L'ordre de resultats es fa en funció de la rellevància per la cerca realitzada de cada document recuperat. Per calcular aquesta rellevància es té en compte "el text complet de cada document, on es va publicar, per qui va ser escrit, així com la freqüència que ha estat citat en altra bibliografia acadèmica". Diverses investigacions han demostrat que Google Scholar atorga un gran pes al nombre de citacions que reben els articles. Per tant, els primers resultats són sovint els articles més citats. En les cerques per autor o títol, el nombre de cites rebudes és el factor determinant, en canvi, en les cerques per paraules clau, és probablement el factor amb més pes, però també intervenen altres factors.Utilitzant la característica "grup de", es mostren els enllaços disponibles a articles de revista. En la versió de 2005, aquesta característica proporcionava un enllaç tant a versions d'accés als articles mitjançant subscripció com a versions de text complet i gratuïtes. L'any 2006, proporcionava enllaços només a les versions dels editors. De llavors ençà, ha proporcionat enllaç tant a versions publicades com a la majoria de repositoris d'accés obert, si bé encara no cobreix aquells que apareixen en pàgines web universitàries.
+A través de la seva eina "citat per", Google Acadèmic proporciona accés a resums d'articles en els quals s'hagi citat l'article que s'està consultant.
+
+
+== Limitacions i crítica ==
+
+
+== Referències ==
+
+
+== Enllaços externs ==
+Pàgina web de Google Acadèmic 
+Blog de Google Acadèmic

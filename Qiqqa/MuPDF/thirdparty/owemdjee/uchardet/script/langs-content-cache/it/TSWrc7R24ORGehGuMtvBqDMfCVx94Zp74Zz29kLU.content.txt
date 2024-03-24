@@ -1,0 +1,54 @@
+revision: 133434729
+title: Esafluoruro di xeno
+url: https://it.wikipedia.org/wiki/Esafluoruro_di_xeno
+
+
+---
+
+L'esafluoruro di xeno è il composto chimico di formula XeF6, dove lo xeno ha numero di ossidazione +6. A temperatura ambiente è un solido incolore facilmente volatile. Allo stato liquido e gassoso è di colore giallo. Ha forti proprietà ossidanti e fluoruranti, ed è più reattivo degli omologhi inferiori XeF2 e XeF4, ma non è un composto di uso comune. Si decompone rapidamente a contatto con l'acqua.
+
+
+== Struttura molecolare e configurazione elettronica ==
+A differenza di XeF2 e XeF4, la struttura di XeF6 è stata chiarita solo dopo vari anni dalla prima sintesi, che avvenne nel 1963. In fase gassosa il composto è monomerico. La teoria VSEPR prevedrebbe una struttura piramidale a base pentagonale (AX6E), a causa della presenza di sei leganti fluoruro e di una coppia di elettroni non condivisa. Studi di diffrazione elettronica accoppiati a calcoli teorici indicano che allo stato fondamentale la simmetria del composto è C3v, mentre una struttura con simmetria Oh richiede un'energia di pochissimo superiore, suggerendo che il minimo della superficie di energia è ben poco profondo. Secondo Konrad Seppelt, specialista di chimica dei gas nobili e del fluoro, "la miglior descrizione della struttura è quella di una coppia di elettroni mobile che si sposta su facce e spigoli dell'ottaedro e lo distorce in modo dinamico."In soluzione, studi di spettroscopia NMR 129Xe e 19F indicano che il composto assume una struttura tetramerica, con quattro atomi equivalenti di xeno disposti ai vertici di un tetraedro, attorniati da 24 atomi di fluoro che si scambiano continuamente di posizione.Allo stato solido XeF6 cristallizza in 6 possibili modificazioni, alcune delle quali contengono ioni XeF5+ e ponti di ioni F-.
+
+
+== Sintesi ==
+XeF6 originariamente era preparato mantenendo una miscela di Xe/F2 1:20 in un recipiente di nichel sotto pressione (6 MPa), scaldando ad alta temperatura (250-300 °C) per lungo tempo. Usando NiF2 come catalizzatore la reazione si può condurre anche a 120 °C con un rapporto Xe/F2 molto più basso, 1:5.
+
+
+== Reattività ==
+In generale XeF6 è più reattivo di XeF2 e XeF4, ed è caratterizzato da forti proprietà ossidanti e fluoruranti. XeF6 è un composto stabile che si può conservare per tempo illimitato in recipienti di nichel. Non si può conservare in recipienti di vetro o quarzo, dato che reagisce con la silice fino a formare XeO3, che è pericolosamente esplosivo:
+
+2XeF6 + SiO2 → 2XeOF4 + SiF42XeOF4 + SiO2 → 2XeO2F2 + SiF42XeO2F2 + SiO2 → 2XeO3 + SiF4
+
+
+=== Idrolisi ===
+Anche a contatto con l'acqua XeF6 reagisce rapidamente formando XeO3:
+XeF6 + H2O → XeOF4 + 2HFXeOF4 + H2O → XeO2F2 + 2HFXeO2F2 + H2O → XeO3 + 2HFIn soluzione fortemente alcalina il decorso della reazione di idrolisi è diverso, con disproporzione dello xeno e formazione dello ione perxenato, dove lo xeno ha numero di ossidazione +8:
+2XeF6 + 16OH → XeO64- + Xe + O2 + 12F- + 8H2O
+
+
+=== Come donatore di ioni fluoruro ===
+In queste reazioni si formano cationi fluorurati dello xeno. XeF6 reagisce con vari pentafluoruri come ad esempio RuF5, AsF5, SbF5, VF5 e PtF5.  Si ha la formazione del catione XeF5+, isoelettronico e isostrutturale con IF5:
+
+XeF6 + RuF5 → [XeF5]+[RuF6]-È noto anche il catione [Xe2F11]+.
+
+
+=== Come accettore di ioni fluoruro ===
+In queste reazioni si formano anioni fluorurati dello xeno. La capacità di accettare ioni fluoruro è caratteristica di XeF6, mentre in XeF2 questo tipo di reattività è assente, e in XeF4 sono noti solo pochi casi. Con i fluoruri di sodio e potassio XeF6 reagisce per formare direttamente lo ione octafluoroxenato(VI), XeF82-:
+2NaF + XeF6 → Na2XeF82KF + XeF6 → K2XeF8Lo ione XeF82- ha una struttura di antiprisma a base quadrata, come osservato dall'analisi a raggi X su singolo cristallo del composto (NO)2XeF8. Questi sali sono meno stabili degli analoghi composti di cesio e rubidio, che formano dapprima gli eptafluoroxenati:
+
+CsF + XeF6 → CsXeF7RbF + XeF6 → RbXeF7questi ultimi per pirolisi rispettivamente a 50 °C e 20 °C formano gli octafluoroxenati di colore giallo:
+2CsXeF7 → Cs2XeF8 + XeF62RbXeF7 → Rb2XeF8 + XeF6I sali Cs2XeF8 e Rb2XeF8 sono i più stabili composti di xeno sinora conosciuti, e si decompongono solo per riscaldamento oltre 400 °C. Questi sali si decompongono in presenza di acqua, formando vari prodotti contenenti xeno e ossigeno.
+
+
+== Note ==
+
+
+== Bibliografia ==
+ N. N. Greenwood, A. Earnshaw, Chemistry of the elements, 2ª ed., Oxford, Butterworth-Heinemann, 1997, ISBN 0-7506-3365-4.
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su Esafluoruro di xeno

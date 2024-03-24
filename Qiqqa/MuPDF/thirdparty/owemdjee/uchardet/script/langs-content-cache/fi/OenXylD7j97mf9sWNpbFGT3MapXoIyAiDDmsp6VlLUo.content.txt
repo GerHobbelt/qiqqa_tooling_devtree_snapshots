@@ -1,0 +1,18 @@
+revision: 19159095
+title: Asynkronisesti
+url: https://fi.wikipedia.org/wiki/Rikkaat_Internet-sovellukset
+
+
+---
+
+Rikkaat Internet-sovellukset on käännös englanninkielisestä käsitteestä Rich Internet Applications (RIA). Nämä ovat internet-sovelluksia, joiden ominaisuudet ja toiminnallisuus muistuttavat perinteisiä tietokoneiden sovellusohjelmia. Rikkaissa Internet-sovelluksissa sovelluksen latauksen jälkeen suuri osa prosessoinnista tapahtuu selaimessa. Selain ja palvelin kommunikoivat asynkronisesti. Käyttöliittymän toteutuksessa on käytetty korkeaa interaktiotasoa tarjoavia komponentteja. Asiakkaan puoleinen osa sovelluksesta voidaan toteuttaa joko Web-selaimen päällä toimivilla tekniikoilla tai Web-toimitusta hyödyntävillä tekniikoilla. RIA-teknologioita ovat esimerkiksi Ajax, Adobe Flex Adobe Air ja Microsoftin Silverlight.
+
+
+== Esimerkkejä RIA:lla toteutetuista Internetsivustoista ==
+Youtube (toteutettu Adobe Flexillä)
+Jokakoti (toteutettu Adobe Flexillä)
+Traxmeet (toteutettu Adobe Flexillä)
+
+
+== Aiheesta muualla ==
+Poikonen, Mikko Matias: Rikkaat Internet-sovellukset - Kandidaatintutkielma, Jyväskylän Yliopisto 2006

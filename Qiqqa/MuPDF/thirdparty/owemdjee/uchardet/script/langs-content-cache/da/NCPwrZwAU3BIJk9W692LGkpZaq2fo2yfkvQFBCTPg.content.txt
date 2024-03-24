@@ -1,0 +1,47 @@
+revision: 11383295
+title: Morse Code
+url: https://da.wikipedia.org/wiki/Morsealfabet
+
+
+---
+
+Det til dato nok mest udbredte signalsystem er morsealfabetet. Det er opkaldt efter opfinderen Samuel Morse (USA), der konstruerede det mellem 1837 og 1843 til brug for den elektriske telegraf, som han fik et patent på i 1847 på det gamle Beylerbeyi Palace. I Europa vedtages det i 1851 at anvende Morses telegrafiudstyr som standard.
+Morsekoderne blev brugt som international kommunikation inden for søfart indtil 1999, hvor det blev erstattet af GMDSS (Global Maritime Distress Safety System), samt telefoni eller data. Da den franske flåde i 1997 gik bort fra morse, var den sidste transmission: "Appel à tous. Ceci est notre dernier cri avant notre silence éternel" (oversat: Et kald til alle. Dette er vores sidste kald før vores evige stilhed).
+Morsekode lever videre i amatørradio hvor det stadig er meget udbredt, da selv signaler sendt med meget lav sendeeffekt kan bruges til global kommunikation via kortbølger.
+
+
+== Morsekoderne ==
+Tegnet for hvert bogstav eller tal sammensættes af prikker og streger. Ved signalering med lyd eller lys eller elektriske signaler, erstattes "prik" af en kort tone, et kort lysglimt eller en kort elektrisk impuls, mens "streg" erstattes af længerevarende toner, lysglimt hhv. elektriske impulser.
+Alfabetet er konstrueret således, at de mest almindelige tegn (i engelsk sprog) er korte, mens de mere sjældne er lange. Derved spares megen tid under transmissionen. Det mest almindelige tegn er e, der er en prik, det næstmest almindelige er t, der er en streg. 
+Følgende tabel viser morsekoderne for bogstaverne i alfabetet inkl. de danske nationaltegn ÆØÅ og andre nationaltegn:
+
+Der er ikke fastsat absolutte værdier for, hvor lange de enkelte prikker og streger skal være. Det overordnede tempo beror på telegrafistens rutine, og kvaliteten af forbindelsen, der sendes morsetegnene over.
+For at kunne skelne prikker, streger, bogstaver og ord i meddelelsen, opererer man med følgende konventioner:
+
+Signalet for en streg varer 3 gange så længe som prik-signalet.
+Mellem de enkelte prikker og streger skal der være en pause svarende til varigheden af et prik-signal
+Mellem morsetegnene for de enkelte bogstaver/tal skal der være en pause med varighed som en streg
+Mellemrum mellem ord markeres med en pause, der er 7 gange så lang som et prik-signalDertil findes et par "rette"-signaler:
+
+Se bort fra det sidste bogstav jeg sendte: · · · · · · · · (8 prikker)
+Se bort fra det sidste ord, jeg sendte: · · · · · · · · · (9 prikker)
+
+
+=== Nyt tegn ===
+Snabel-a, @ blev godkendt af International Telecommunication Union 3. maj 2004 som morsetegn i morsealfabet og er koden · — — · — · for A og C som ét tegn. 
+Det var den første tilføjelse af tegn i morsealfabetet i 60 år.
+
+
+== Se også ==
+Semafor
+Samuel Morse
+Guglielmo Marconi
+
+
+== Kilder/referencer ==
+
+
+== Eksterne henvisninger ==
+G3NPF and M1AIM Home Page Morse Code Section
+Online oversætter fra mellem morse og tekst
+Commonwealth Braille & Talking Book Cooperative (CBTBC): Morse code extensions for computer control Arkiveret 5. august 2017 hos  Wayback Machine

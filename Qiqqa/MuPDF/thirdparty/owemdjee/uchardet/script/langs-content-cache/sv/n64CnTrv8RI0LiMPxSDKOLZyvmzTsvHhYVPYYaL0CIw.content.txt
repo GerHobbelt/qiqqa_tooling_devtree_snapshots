@@ -1,0 +1,697 @@
+revision: 51213746
+title: "Vit dv\xE4rg"
+url: https://sv.wikipedia.org/wiki/Vit_dv%C3%A4rg
+
+
+---
+
+En vit dvärg är en stjärna som varit normalstor men kollapsat till en dvärgstjärna med mycket liten storlek efter att den gjort slut på sitt kärnbränsle. En typisk vit dvärg har en radie som är 1 procent av solens, men den har grovt räknat samma massa. Detta motsvarar en täthet på cirka 1 ton per kubikcentimeter.
+Den höga tätheten hos vita dvärgar förklaras av att de består av degenererad materia. Mer specifikt har elektronerna i den vita dvärgens materia blivit degenererade av den höga tätheten. En vit dvärgs största massa bestäms av chandrasekhargränsen, som är ungefär 1,4 solmassor. Över den storleken kan degenerationstrycket inte stå emot gravitationen från den vita dvärgens massa och stjärnan störtar samman till en neutronstjärna eller ett svart hål. Under chandrasekhargränsen hålls materien upp av degenerationstrycket. Solen kommer att sluta som en vit dvärg, eftersom dess massa ligger under chandrasekhargränsen.
+En vit dvärg kommer efter miljardtals år att ha kylts ner så mycket att den inte längre avger något synligt ljus och antas slutligen bli en svart dvärg. Eftersom universum uppskattas till 13,8 miljarder år, avger även de äldsta vita dvärgarna strålning från temperaturer på några tusen grader.
+
+
+== Upptäcktshistorik ==
+
+Den första vita dvärgen upptäcktes i trippelstjärnesystemet 40 Eridani, som innehåller den relativt ljusa huvudseriestjärnan 40 Eridani A, som på behörigt avstånd omkretsas av det tätare binära systemet bestående av den vita dvärgen 40 Eridani B och den röda huvudserie dvärgen 40 Eridani C. Denna dubbelstjärna upptäcktes av William Herschel den 31 januari 1783, Den sågs återigen av Friedrich Georg Wilhelm Struve 1825 och av Otto Wilhelm von Struve 1851. År 1910 uppdagade Henry Norris Russell, Edward Charles Pickering och Williamina Fleming att trots att den är en svag stjärna, så var 40 Eridani B av spektraltyp A, eller vit.Nästa upptäckt blev Sirius följeslagare Sirius B år 1862.
+
+
+== Sammansättning och struktur ==
+Fastän vita dvärgar är kända med uppskattade massor så låga som 0,17  och så höga som 1,33  solmassor når massfördelningen en kraftig topp vid 0,6 solmassor och de flesta ligger mellan 0,5 och 0,7 solmassor. Beräknade radier hos observerade vita dvärgar ligger dock vanligtvis på mellan 0,008 och 0,02 gånger solradien. Detta kan jämföras med jordens radie på cirka 0,009 solradier. En vit dvärg packar således massa jämförbar med solens till en volym som typiskt är en miljon gånger mindre än solens. Den genomsnittliga tätheten hos materien i en vit dvärg måste därför mycket grovt vara en miljon gånger större än solens genomsnittliga täthet eller ungefär 1 ton per kubikcentimeter. Vita dvärgar består av en av de tätaste formerna av känd materia, bara överträffad av andra kompakta objekt som neutronstjärnor, svarta hål och hypotetiska kvarkstjärnor.
+
+
+=== Massa-radie-förhållande och massgräns ===
+
+Det är förhållandevis enkelt att härleda ett grovt samband mellan massa och radie hos vita dvärgar genom att använda ett energiminimerande argument.En vit dvärgs energi kan som första approximation vara summan av dess gravitationella potentiella energi och dess rörelseenergi. Den gravitationella potentiella energin i en massenhet vit dvärg kommer att vara i storleksordningen -GM / R, där G är gravitationskonstanten, M är den vita dvärgens massa och R är dess radie. Massenhetens kinetiska energi, 
+  
+    
+      
+        
+          E
+          
+            k
+          
+        
+      
+    
+     
+  , kommer främst från elektronernas rörelse, så den blir ungefär 
+  
+    
+      
+        
+          
+            
+              
+                
+                  N
+                  
+                    
+                      
+                        p
+                        
+                          2
+                        
+                      
+                      
+                        2
+                        
+                          m
+                          
+                            e
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+  , där p är elektronens genomsnittliga rörelsemängd, 
+  
+    
+      
+        
+          m
+          
+            e
+          
+        
+      
+    
+     
+   är elektronens massa, och N är antalet elektroner per massenhet.
+Eftersom elektronerna är degenererade, kan man uppskatta 
+  
+    
+      
+        p
+      
+    
+     
+   till att vara av samma storleksordning som osäkerheten i rörelsemängd, 
+  
+    
+      
+        Δ
+        p
+      
+    
+     
+  , och ges av osäkerhetsrelationen. Denna säger att 
+  
+    
+      
+        Δ
+        p
+        Δ
+        x
+      
+    
+     
+   är av samma storleksordning som den reducerade Plancks konstant, h-streck ħ. 
+
+  
+    
+      
+        Δ
+        x
+      
+    
+     
+   får storleksordningen det genomsnittliga avståndet mellan elektronerna, som kommer att vara ungefär 
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    n
+                    
+                      −
+                      
+                        
+                          1
+                          3
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+  , dvs det inverterade värdet av kuben ur antalsdensiteten, 
+  
+    
+      
+        n
+      
+    
+     
+  , av elektroner per volymenhet. Eftersom det finns 
+  
+    
+      
+        
+          
+            
+              
+                
+                  N
+                  ⋅
+                  M
+                
+              
+            
+          
+        
+      
+    
+     
+   elektroner i den vita dvärgen och dess volym är av storleksordningen 
+  
+    
+      
+        
+          R
+          
+            3
+          
+        
+      
+    
+     
+  , så kommer 
+  
+    
+      
+        n
+      
+    
+     
+   att vara av storleksordningen 
+  
+    
+      
+        
+          
+            
+              
+                
+                  N
+                  
+                    
+                      M
+                      
+                        R
+                        
+                          3
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+  .Om man löser detta för kinetiska energin per massenhet, 
+  
+    
+      
+        
+          E
+          
+            k
+          
+        
+      
+    
+     
+  , blir resultatet:
+
+  
+    
+      
+        
+          E
+          
+            k
+          
+        
+        ≈
+        
+          
+            
+              N
+              (
+              Δ
+              p
+              
+                )
+                
+                  2
+                
+              
+            
+            
+              2
+              
+                m
+                
+                  e
+                
+              
+            
+          
+        
+        ≈
+        
+          
+            
+              N
+              
+                ℏ
+                
+                  2
+                
+              
+              
+                n
+                
+                  
+                    2
+                    3
+                  
+                
+              
+            
+            
+              2
+              
+                m
+                
+                  e
+                
+              
+            
+          
+        
+        ≈
+        
+          
+            
+              
+                M
+                
+                  
+                    2
+                    3
+                  
+                
+              
+              
+                N
+                
+                  
+                    5
+                    3
+                  
+                
+              
+              
+                ℏ
+                
+                  2
+                
+              
+            
+            
+              2
+              
+                m
+                
+                  e
+                
+              
+              
+                R
+                
+                  2
+                
+              
+            
+          
+        
+      
+    
+     
+  Den vita dvärgen kommer att nå jämvikt när dess totala energi, Eg + Ek , når sitt minimivärde. Vid denna punkt bör de kinetiska och gravitationella potentiella energierna vara jämförbara, så det går att härleda ett ungefärligt mass-radie samband genom att sätta deras absolutvärden lika:
+
+  
+    
+      
+        
+          |
+        
+        
+          E
+          
+            g
+          
+        
+        
+          |
+        
+        ≈
+        
+          
+            
+              G
+              M
+            
+            R
+          
+        
+        =
+        
+          E
+          
+            k
+          
+        
+        ≈
+        
+          
+            
+              
+                M
+                
+                  2
+                  
+                    /
+                  
+                  3
+                
+              
+              
+                N
+                
+                  5
+                  
+                    /
+                  
+                  3
+                
+              
+              
+                ℏ
+                
+                  2
+                
+              
+            
+            
+              2
+              
+                m
+                
+                  e
+                
+              
+              
+                R
+                
+                  2
+                
+              
+            
+          
+        
+        .
+      
+    
+     
+  Lös ut radien, R, så erhålles
+
+  
+    
+      
+        R
+        ≈
+        
+          
+            
+              
+                N
+                
+                  5
+                  
+                    /
+                  
+                  3
+                
+              
+              
+                ℏ
+                
+                  2
+                
+              
+            
+            
+              2
+              
+                m
+                
+                  e
+                
+              
+              G
+              
+                M
+                
+                  1
+                  
+                    /
+                  
+                  3
+                
+              
+            
+          
+        
+        .
+      
+    
+     
+  Om man bortser från de universella konstanterna och N, som enbart beror på den vita dvärgens sammansättning, återstår följande samband mellan massan och radien:
+
+  
+    
+      
+        R
+        ∼
+        
+          
+            1
+            
+              M
+              
+                1
+                
+                  /
+                
+                3
+              
+            
+          
+        
+        
+      
+    
+     
+   ,det vill säga att en vit dvärgs radie är omvänt proportionell mot kubikroten ur dess massa.
+Den här analysen har utgått från en icke-relativistisk formel för den kinetiska energin. En fullständigare analys kräver relativistiska beräkningar, som analyserar förhållanden när elektronens hastighet i en vit dvärg närmar sig ljushastigheten c. Då måste man ersätta 
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    
+                      
+                        p
+                        
+                          2
+                        
+                      
+                      
+                        2
+                        
+                          m
+                          
+                            e
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+   med den rent relativistiska approximationen p c för den kinetiska energin. Med den substitutionen gäller
+
+  
+    
+      
+        
+          E
+          
+            k
+             
+            
+              
+                r
+                e
+                l
+                a
+                t
+                i
+                v
+                i
+                s
+                t
+                i
+                c
+              
+            
+          
+        
+        ≈
+        
+          
+            
+              
+                M
+                
+                  1
+                  
+                    /
+                  
+                  3
+                
+              
+              
+                N
+                
+                  4
+                  
+                    /
+                  
+                  3
+                
+              
+              ℏ
+              c
+            
+            R
+          
+        
+        .
+      
+    
+     
+  Om man sätter detta uttryck lika med absolutbeloppet av Eg, så faller R ut och ger massan M som
+
+  
+    
+      
+        
+          M
+          
+            
+              l
+              i
+              m
+              i
+              t
+            
+          
+        
+        ≈
+        
+          N
+          
+            2
+          
+        
+        
+          
+            (
+            
+              
+                
+                  ℏ
+                  c
+                
+                G
+              
+            
+            )
+          
+          
+            3
+            
+              /
+            
+            2
+          
+        
+        .
+      
+    
+     
+  För att tolka detta resultat noterar man att då den vita dvärgen tar åt sig massa, så kommer dess radie att minska. Därför måste dess elektroners rörelsemängdsmoment och därmed deras hastighet öka i enlighet med osäkerhetsrelationen.  Då denna fart närmar sig ljushastigheten c,  blir den extrema relativistiska beräkningen allt mer exakt, och säger att den vita dvärgens massa M närmar sig Mgräns.  På så sätt sluter vi oss till att ingen vit dvärg kan vara tyngre än gränsmassan Mgräns.
+För att mer exakt beräkna mass-radie-förhållandet och en vit dvärgs begränsande massa, så måste man ta hänsyn till tillståndsekvationen som beskriver förhållandet mellan densitet och tryck i vit dvärg-materia. Om täthet och tryck båda sätts lika med funktioner av radien från stjärnans mitt, kan ekvationssystemet, som består av den hydrostatiska ekvationen tillsammans med tillståndsekvationen, sedan lösas för att finna strukturen hos en vit dvärg vid jämvikt.
+I det icke-relativistiska fallet är radien fortfarande omvänt proportionell mot kubikroten ur massan. Relativistisk korrigeringar förändrar resultatet så att radien blir noll vid ett ändligt värde på massan. Detta är det massagränsvärde som kallas Chandrasekhargränsen, vid vilken en vit dvärg inte längre kan hållas uppe genom elektronernas degenerationstryck. Diagrammet ovan till höger visar resultatet av en sådan beräkning. Där syns hur radien varierar med massan dels för en icke-relativistisk (blå kurva), dels en relativistisk (grön kurva) modell av en vit dvärg. Båda modellerna behandlar den vita dvärgen som en kall Fermi-gas i hydrostatisk jämvikt. Den genomsnittliga molekylvikten per elektron, μe, har satts lika med 2. Radien är angiven i standard-solradier och massan i standard-solmassor.  Dessa beräkningar förutsätter alla att den vita dvärgen inte roterar.
+
+
+== Se även ==
+Brun dvärg
+Röd dvärg
+Svart dvärg
+Svart hål
+Astronomi
+
+
+== Referenser ==
+
+
+== Externa länkar ==
+ Wikimedia Commons har media som rör Vit dvärg.
+Imagine the Universe! – Science – Introduction to White Dwarfs
+Imagine the Universe! – Advanced Science – White Dwarf Stars

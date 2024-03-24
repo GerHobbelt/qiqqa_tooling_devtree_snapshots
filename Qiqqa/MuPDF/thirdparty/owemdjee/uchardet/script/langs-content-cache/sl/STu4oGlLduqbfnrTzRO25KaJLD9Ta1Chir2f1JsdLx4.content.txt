@@ -1,0 +1,71 @@
+revision: 5832537
+title: Netscape (spletni brskalniki)
+url: https://sl.wikipedia.org/wiki/Netscape_(spletni_brskalniki)
+
+
+---
+
+Netscape je splošno ime za serijo spletnih brskalnikov, ki jih je razvijalo podjetje Netscape Communications (zdaj v lasti AOL). Prvotni brskalnik je bil v devetdesetih letih po deležu uporabe prevladujoči brskalnik, ki pa je v prvi vojni brskalnikov izgubil skoraj ves delež zaradi Internet Explorerja.Brskalnik Netscape ni več v razvoju, podpora za vse brskalnike in izdelke Netscape pa se je zaključila 1. marca 2008.
+
+
+== Zgodovina izdaj ==
+
+
+=== Izdaje na osnovi Netscapea (različice 1.0–4.8) ===
+
+
+==== Netscape Navigator (različice 1.0–3.0) ====
+Netscape Navigator je bilo ime Netscapovega spletnega brskalnika od različice 1.0 do 4.8. Prva beta izdaja je izšla leta 1994, znana po imenu Mosaic oziroma Mosaic Netscape, ki so ga po tožbi NCSA (ki je razvil NCSA Mosaic) spremenili v Netscape Navigator. Spremenilo se je tudi ime podjetja iz Mosaic Communications Corporation v Netscape Communications Corporation.
+Brskalnik je bil tedaj daleč najnaprednejši na voljo in je požel takojšen uspeh, saj je še v beta fazi postal vodilni brskalnik po deležu uporabe. Netscapov tržni delež je še naprej hitro naraščal po izidu različice 1.0. Različica 2.0 je dodala program za branje e-pošte po imenu Netscape Mail, s čimer se je Netscape iz zgolj brskalnika preobrazil v zbirko internetnih programov. V tem obdobju sta bila tako brskalnik kot zbirka znana kot Netscape Navigator. Približno v tem času je AOL začel ponujati svojo programsko opremo z vključenim Microsoft Internet Explorerjem.
+
+Različica 3.0 (z razvojnim imenom "Atlas") je bila prva z resno konkurenco (Microsoft Internet Explorer 3.0), ki pa takrat še ni predstavljala resne grožnje in Netscape je obdržal prvo mesto med brskalniki. Različica 3.0 je bila na voljo tudi v različici "Gold", ki je vključevala urejevalnik HTML WYSIWYG (kasneje dodan v Netscape Communicator kot standardna funkcija). Netscape 3.0 je uvedel številne nove funkcije, med njimi nove vtičnike, barve ozadja za tabele, atribut archive in element applet. Netscape Navigator 3 je požel izjemen uspeh in je za svojega časa imel delež čez 90%, ki pa se je pozneje zmanjšal zaradi brezplačnega Internet Explorerja, vključenega v operacijski sistem Windows 98. Najnovejša različica te linije je bila 3.04.
+
+
+==== Netscape Communicator (različice 4.0–4.8) ====
+Netscape je v različici 4 zbirko programov, ki se je prej enako kot brskalnik imenovala Netscape Navigator, preimenoval v Netscape Communicator. Končna različica Netscape Communicatorja je bila objavljena junija 1997. Tej novi različici, ki je bolj ali manj temeljila na kodi Netscape Navigatorja 3, so bile dodane nove funkcije, kot so podpora nekaterih elementov CSS1, minimalna podpora dinamičnih pisav in element object. Nova zbirka je bila uspešna navkljub naraščajoči konkurenci Internet Explorerja 4.0 in težavam z zastarelim jedrom brskalnika. Zbirka Communicator je bila sestavljena iz programov Netscape Navigator, Netscape Mail and Newsgroups, Netscape Address Book in Netscape Composer (urejevalnik HTML, ki je kasneje postal Mozilla Composer in se sčasoma odcepil v povsem drug izdelek, Nvu). Oktobra 1998 je bil izdan Netscape Communicator 4.5. Nova različica je vključevala različne izboljšave predvsem komponente za e-pošto in novičarske skupine, vendar ni posodobila jedra brskalnika. Le mesec dni kasneje je podjetje Netscape Communications Corporation kupil AOL. Samostojna različica Netscape Navigatorja je ostala na voljo, vendar je bil razvoj ukinjen po različici 4.08 za Windows. Samostojne različice za druge operacijske sisteme, kot je Unix/Linux, so bile vzdrževane do različice 4.8.
+Januarja 1998 je Netscape Communications Corporation oznanil, da bodo vse prihodnje različice njihove programske opreme brezplačne, razvijala pa jih bo odprtokodna skupnost (Mozilla). Napovedan je bil Netscape Communicator 5.0 (s kodnim imenom "Gromit"). Vendar pa je pri izdaji nove večje različice Netscapea prišlo do precejšnje zamude, zaradi česar se je Communicator z leti postaral, preden je bil sploh izdan. Zaradi tega in zaradi vse bolj napredne Internet Explorerjeve podpore tehnologij HTML 4, CSS, DOM in ECMAScript je novi Internet Explorer 5.0 prehitel Netscape po tržnem deležu. Novembra 1998 je bilo delo na Netscapu 5.0 opuščeno in začel se je razvoj čisto novega programa.
+
+
+==== Netscape Communicator 5.0 (preklican) ====
+Netscape 5.0 ("Gromit") je bil nadaljevanje kode 4.x, vendar sta bili razviti le dve predrazvojni različici, ena temelječa na izvirni kodi Communicatorja (z izboljšavami stabilnosti in učinkovitosti delovanja sredice glede na 4.0 - Mariner) in druga z uporabo tehnologije Gecko.Čeprav je Netscape prvotno nameraval najprej uporabiti sredico Mariner in jo kasneje nadomestiti z Geckom (ki je bil razvit docela na novo), Netscape 5 in Mariner nikoli nista bila izdana. Vseeno pa so bile različice oštevilčene, kot če bi različica bila izdana.
+Netscape je oblikoval skupnost Mozilla Foundation in razvil zbirko Mozilla Application Suite, temelječo na Gecku. Odprtokodni brskalnik Mozilla je bil nato uporabljen kot osnova za Netscape 6.
+
+
+=== Izdaje na osnovi Mozilla Application Suite ===
+
+
+==== Netscape 6 (različice 6.0–6.2.3) ====
+Leta 1998 se je oblikovala neuradna skupnost Mozilla.org, ki jo je večidel financiral Netscape in je bila namenjena koordiniranju razvoja Netscapea 5. S starajočo se kodo Netscape Communicatorja je bilo težavno delati, zato se je konec oktobra 1998 podjetje odločilo opustiti to vejo kode in na novo razviti celoten brskalnik z uporabo sodobnejše tehnologije Gecko. Gecko je bil uporabljen v spletnem brskalniku Mozilla, na osnovi katerega je bil razvit Netscape 6.
+Ta odločitev je pomenila veliko zakasnitev v izdaji nove različice Netscapea. V tem času je Netscape prevzel AOL, ki je zaradi pritiska skupnosti izsilil izdajo Netscapea 6.0 v letu 2000. Javne beta različice so bile objavljene aprila, avgusta in oktobra tega leta, Netscape 6.0 pa je bil izdan novembra 2000.Zbirka je bila tako kot doslej sestavljena iz brskalnika Netscape Navigator in drugih komponent Communicatorja, novost je bil odjemalec AOL Instant Messenger, imenovan Netscape Instant Messenger. Vendar pa je takoj postalo jasno, da Netscape 6 še ni bil pripravljen na izdajo, zaradi česar je doživel velik neuspeh. Temeljil je na Mozilla 0.6, ki še ni bil pripravljen za javno uporabo in je trpel zaradi številnih resnih napak, ki so povzročale pogosta sesutja ali počasno nalaganje strani.
+Novejše različice Netscapa 6 so bile veliko boljše (6.2.x je slovel kot posebej dobra različica), vendar se je brskalnik le s težavo odkupil razočarani skupnosti.
+
+
+==== Netscape (različice 7.0–7.2) ====
+
+Netscape 7.0 (s kodnim imenom "Mach Five", osnovan na Mozilli 1.0.1) je izšel avgusta 2002 in je bil neposredno nadaljevanje Netscapa 6 z zelo podobnimi komponentami. Brskalnik je imel nekaj uporabnikov, vendar je bil še vedno zelo manjšinski brskalnik; ena od težav je bila že to, da je bila zbirka Mozilla sama po sebi velika konkurenca. Poleg tega se je AOL odločil, da bo v Netscapu 7.0 izključil Mozillino funkcijo za blokiranje pojavnih oken, kar je zelo razburilo skupnost. Zaradi pritožb je AOL blokiranje pojavnih oken vključil v Netscape 7.01. Netscape je tudi razvil novo od AOL neodvisno različico zbirke (brez običajnih dodatkov AOL). Netscape 7.1 (s kodnim imenom "Buffy" in temelječ na Mozilli 1.4) je bil izdan v juniju 2003.
+Leta 2003 je AOL zaprl svoj oddelek Netscape in vse njegove zaposlene odpustil ali dodelil drugam. Mozilla.org je nadaljevala svojo pot kot neodvisna neprofitna organizacija Mozilla Foundation in prevzela številne bivše Netscapove zaposlene. AOL je še naprej razvijal Netscape, toda ker projekt ni imel osebja, so bile izboljšave minimalne.
+Leto pozneje, avgusta 2004, je bila izdana zadnja različica, temelječa na Mozilli: Netscape 7.2, na osnovi Mozille 1.7.2.
+
+
+=== Izdaje na osnovi Mozilla Firefox ===
+
+
+==== Netscape Browser (različica 8.0–8.1.3) ====
+Med letoma 2005 in 2007 so izdaje Netscapea postala znane kot Netscape Browser. AOL se je odločil zasnovati Netscape Browser na relativno uspešnem Mozilla Firefoxu, brskalniku Mozille Foundation, izpeljanem iz zbirke Mozilla. Ta izdaja ni bila več polna zbirka internetnih programov, marveč le še spletni brskalnik. Druga kontroverzna odločitev je bila, da je brskalnik za izris strani uporabljal tako tehnologijo Gecko iz prejšnjih izdaj kot tudi Trident iz Internet Explorerja.
+Netscape Browser 8.1.3 je bil izdan 2. aprila 2007 in je vključeval razne popravke napak iz različic 8.0–8.1.2
+
+
+==== Netscape Navigator (različica 9.0) ====
+Netscape je 23. januarja 2007 potrdil, da bo različice Netscape Browserja 8.0–8.1.2 nasledil nov samostojen brskalnik, Netscape Navigator 9. Dodana je bila podpora za spletne vire RSS in integracija z Netscapovim spletnim portalom Propeller. Prav tako je ta različica spet uvedla podporo za platformi Linux in Mac OS X. Kot Netscape 8.x je tudi ta izdaja temeljila na priljubljenem Mozilli Firefoxu (2.0), podpirala pa je tudi namestitev Firefoxovih dodatkov in vtičnikov, katerih je nekaj razvil tudi Netscape.Prva beta različica programa je izšla 5. junija 2007, končna različica pa 15. oktobra 2007.
+28. decembra 2007 so razvijalci Netscapea oznanili, da bo AOL ukinil svoj spletni brskalnik zaradi nizkega tržnega deleža. Netscape je ukinil brskalnik 1. marca 2008 in ponudil podporo za prehod na Flock ali Mozilla Firefox.
+
+
+== Združljivost izdaj ==
+
+
+== Glej tudi ==
+Netscape
+Mozilla Firefox
+
+
+== Reference ==

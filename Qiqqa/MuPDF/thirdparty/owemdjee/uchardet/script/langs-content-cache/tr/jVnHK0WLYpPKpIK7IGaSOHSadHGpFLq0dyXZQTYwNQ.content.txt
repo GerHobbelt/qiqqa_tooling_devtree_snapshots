@@ -1,0 +1,46 @@
+revision: 29915242
+title: computer
+url: https://tr.wikipedia.org/wiki/Bilgisayar
+
+
+---
+
+Bilgisayar, aritmetik veya mantıksal işlem dizilerini (berim) otomatik olarak yürütmek üzere programlanabilen dijital bir elektronik makinedir. Çağdaş bilgisayarlar, programlar olarak bilinen genel işlem kümelerini gerçekleştirebilir. Bu programlar, bilgisayarların çeşitli görevleri gerçekleştirmesini sağlar. Ayrıca bir bilgisayar sisteminin tam verimle çalışabilmesi için donanım, işletim sistemi ve çevresel cihazlara sahip olması gerekmektedir. Bu terim aynı zamanda bir bilgisayar ağı veya bilgisayar kümesi gibi birbirine bağlı ve birlikte çalışan bir grup bilgisayar anlamına da gelebilir.
+Çok amaçlı endüstriyel ve tüketici elektroniği, bilgisayarları kontrol sistemi olarak kullanır. Örneğin mikrodalga fırınlar ve uzaktan kumandalar gibi basit özel amaçlı aygıtlar, endüstriyel robotlar ve bilgisayar destekli tasarım gibi fabrika aygıtlarının yanı sıra kişisel bilgisayarlar gibi genel amaçlı aygıtlar ve akıllı telefonlar gibi mobil cihazlar da dahildir. Bilgisayarlar, milyarlarca başka bilgisayar ve kullanıcıyı birbirine bağlayan internete de (genel ağ) güç sağlar.
+Tarihteki ilk bilgisayarlar, sadece hesaplamalar için kullanılıyordu. Abaküs gibi basit elle işletilen araçlar, eski zamanlardan beri insanların hesaplama yapmasına yardımcı olmuştur. Sanayi Devrimi'nin başlarında, dokuma tezgâhları için gerekli olan kılavuz desenler gibi uzun sıkıcı görevleri otomatikleştirmek için bazı mekanik aygıtlar geliştirildi. Daha karmaşık elektrikli makineler, 20. yüzyılın başlarında özel eş hesaplamalar yaptı. İlk dijital elektronik hesap makinesi ise II. Dünya Savaşı sırasında geliştirildi. 1940'ların sonundaki ilk yarı iletken transistörleri, 1950'lerin sonlarında silisyum temelli MOSFET (MOS transistör) ve monolitik bütünleşmiş devre (IC) gibi çip teknolojileri izledi ve 1970'lerde mikroişlemci ve mikrobilgisayar devrimine yol açtı. Bilgisayarların hızı, gücü ve çok yönlülüğü, transistör sayılarının hızla artmasıyla (Moore yasasının öngördüğü gibi) o zamandan beri çarpıcı bir şekilde artmaktadır ve 20. yüzyılın sonları ile 21. yüzyılın başlarında Sayısal Devrim'e yol açmıştır.
+Geleneksel olarak, çağdaş bir bilgisayar en az bir işlem öğesinden, tipik olarak bir mikroişlemci biçiminde bir merkezî işlem biriminden (CPU), bir tür bilgisayar belleğinden ve tipik olarak yarı iletken bellek yongalarından oluşur. İşlem öğesi, aritmetik ve mantıksal işlemleri gerçekleştirir ve bir sıralama ve denetleme birimi, saklanan bilgilere yanıt olarak işlemlerin sırasını değiştirebilir. Çevresel aygıtlar arasında giriş aygıtları (klavyeler, fareler, oyun çubuğu vb.), çıktı aygıtları (monitörler, yazıcılar vb.) ve her iki işlevi de yerine getiren giriş/çıkış aygıtları (ör. 2000'li yılların dokunmalı ekranı) bulunur. Çevresel aygıt, bilgilerin dış bir kaynaktan alınmasına izin verir ve işlemlerin sonucunun kaydedilmesini ve alınmasını sağlar.
+
+
+== Etimoloji ==
+Oxford English Dictionary'e göre, bilgisayarın bilinen ilk kullanımı İngiliz yazar Richard Brathwait'in 1613 tarihli The Yong Mans Gleanings adlı kitabındaydı: "I haue [sic] read the truest computer of Times, and the best Arithmetician that euer [sic] breathed, and he reduceth thy dayes into a short number." Terimin bu kullanımı, bir insan bilgisayarı, hesaplamaları veya hesaplamaları yapan bir kişiyi ifade eder. Sözcük 20. yüzyılın ortalarına kadar aynı anlamda devam etmiştir. Bu dönemin ikinci yarısında kadınlar, erkek meslektaşlarından daha az ücret alabilecekleri için genellikle bilgisayar olarak işe alındı. 1943'te insan bilgisayarlarının çoğu kadındı.Türkçe "bilgisayar" sözcüğünün kökeni ise, Türk bilgisayar mühendisi ve dilbilimci Aydın Köksal tarafından bilgi + say + -ar köklerinden türetilmiştir.
+
+
+== Tarihçe ==
+
+
+=== 20. yüzyıl öncesi ===
+
+Cihazlar, çoğunlukla parmaklarla birebir örten fonksiyon kullanılarak binlerce yıldır hesaplamaya yardımcı olmak için kullanılmıştır. En eski sayma cihazı ise muhtemelen bir tür çetele çubuğuydu. Daha sonra, Bereketli Hilal boyunca kayıt tutma araçları, içi boş kil kaplarda mühürlenmiş, muhtemelen çiftlik hayvanları veya tahıllar gibi ögeleri temsil eden taşları (kil küreler, koniler, vb.) içeriyordu. Sayma çubuklarının kullanımı buna bir örnektir.
+Abaküs ise başlangıçta aritmetik görevler için kullanılmıştır. Roma abaküsü, MÖ 2400 gibi erken bir tarihte Babil'de kullanılan cihazlardan geliştirildi. O zamandan beri, birçok çeşitte hesap tahtaları veya tabloları icat edilmiştir. Bir Orta Çağ Avrupası sayım evinde, bir masanın üzerine kareli bir bez konur ve para miktarlarını hesaplamaya yardımcı olmak için işaretler belirli kurallara göre üzerinde hareket ettirilirdi. Derek J. de Solla Price'a göre Antikythera düzeneğinin bilinen en eski mekanik analog bilgisayar olduğuna inanılıyor.Astronomik ve navigasyon kullanımı için hesaplama ve ölçüm için birçok mekanik yardımcı yapılmıştır. Planisfer, 11. yüzyılın başlarında Bîrûnî tarafından icat edilen bir yıldız haritasıydı. Usturlap, Helenistik dönemde MÖ 1. veya 2. yüzyıllarda icat edildi ve genellikle Hipparkos'a atfedilir. Planisfer ve dioptra'nın bir kombinasyonu olan usturlap, küresel astronomide birkaç farklı problem türünü çözebilen bir analog bilgisayardı. Mekanik bir takvim bilgisayarı ve dişli çarkları içeren bir usturlap, 1235'te İran'ın İsfahan kentinden Abi Bakr tarafından icat edildi. Bîrûnî, ilk mekanik dişli ay-güneş takvimi usturlabını, bir dişli takımı ve dişli çarkları olan, erken dönem sabit kablolu bilgi işleme makinesini icat etti.
+
+
+=== İlk bilgisayarlar ===
+
+İngiliz makine mühendisi ve bilgin Charles Babbage, programlanabilir bir bilgisayar kavramını ortaya çıkardı. "Bilgisayarın babası" olarak kabul edilen, 19. yüzyılın başlarında ilk mekanik bilgisayarı kavramsallaştırdı ve icat etti. 1833'te seyir hesaplamalarına yardımcı olmak için tasarlanan devrim niteliğindeki fark motoru üzerinde çalıştıktan sonra, çok daha genel bir tasarımın, bir Analitik Makinenin mümkün olduğunu fark etti. Programların ve verilerin girişi, o zamanlar Jakar gibi mekanik dokuma tezgahlarını yönlendirmek için kullanılan bir yöntem olan delikli kartlar aracılığıyla makineye sağlanacaktı. Çıktı için makinede bir yazıcı, bir eğri çizici ve bir zil bulunur. Makine ayrıca daha sonra okunmak üzere kartların üzerine sayıları da basabilecektir. Ayrıca makine, bir aritmetik mantık birimi, koşullu dallanma ve döngüler biçimindeki kontrol akışı ve entegre belleği bir araya getirerek, onu modern terimlerle Turing-tamamlanmış olarak tanımlanabilecek genel amaçlı bir bilgisayar için ilk tasarım haline getirdi.
+
+
+=== Dijital bilgisayarlar ===
+
+
+==== Elektromekanik ====
+
+1938'de Amerika Birleşik Devletleri Donanması, bir denizaltıda kullanılabilecek kadar küçük bir elektromekanik analog bilgisayar geliştirdi. Bu, hareketli bir hedefe bir torpido ateşleme problemini çözmek için trigonometri kullanan Torpido Veri Bilgisayarıydı. II. Dünya Savaşı sırasında diğer ülkelerde de benzer cihazlar geliştirilmiştir.
+
+
+=== Modern bilgisayarlar ===
+
+
+== Ayrıca bakınız ==
+
+
+== Kaynakça ==

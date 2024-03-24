@@ -1,0 +1,82 @@
+revision: 26091486
+title: Proteinoplasztisz
+url: https://hu.wikipedia.org/wiki/Sejtmembr%C3%A1n
+
+
+---
+
+A sejtmembrán (más néven sejthártya, plazmamembrán vagy plazmalemma) az élő sejtek mindegyikének külső felszínén megtalálható, kb. 5 nm (10−9 m) vastagságú hártya. Feladata, hogy körülvegye és elkülönítse a sejt belső állományát (intracelluláris tér) annak külső környezetétől (extracelluláris tér), ugyanakkor kontrollált kapcsolatokat teremtsen a sejt külső és belső környezete között, valamint más sejtekkel.
+
+
+== A sejtmembrán szerkezetéről alkotott elképzelések fejlődése ==
+A sejtmembrán szerkezetéről alkotott elképzelések a vizsgálatára alkalmas biokémiai, morfológiai és egyéb eljárások fejlődésével változtak, és a vizsgálati eredményeknek mind jobban megfelelő membrán-modellek kidolgozásához vezettek. A jelenlegi korszerű biokémiai és morfológiai vizsgálatok eredményeivel kétségtelenül az ábrán is sémásan bemutatott Singer–Nicolson-féle folyékony mozaik modell van a leginkább összhangban.
+A sejtmembrán szerkezetére vonatkozó kutatásokban kétségtelenül a kémiai-biokémia módszerek jártak elöl. Ezekből következtettek arra, hogy a sejtmembrán alapja kettős lipid réteg, melyhez olyan fehérjekomponensek kapcsolódnak, amelyek a kettős réteg alapstruktúrájának megbontása nélkül nem vonhatók ki (integráns membránfehérjék), valamint olyanok, amelyek leválasztása az alapstruktúrát megőrző, kíméletesebb módszerekkel is lehetséges (perifériás membránfehérjék). Az ismeretek bővülésének függvényében követték egymást a Davson–Danielli-model, majd a megfelelő felbontóképességű elektronmikroszkópok és az alkalmas fixálási és ultravékony metszetkészítési eljárások kidolgozásával a Robertson-féle szendvics, vagy egység membrán (unit membrane) modell. Az ultravékony metszetek vizsgálatára alapuló elektronmikroszkópos eredmények azonban megint csak értelmezési problémákkal jártak a membrán alapszerkezetét tekintve, ugyanakkor jelentős előrelépés volt, hogy felismerték a sejtek közötti kapcsoló szerkezeteket (junctionalis complexus), valamint bizonyos hámsejtek felszíni és alapi membránjainak speciális képződményeit (csillók, mikrobolyhok illetve a vesehámsejtek alapi membránjának redőzöttsége, vagy a hámok alapi rétegének sajátos kapcsolódását az alaphártyához (féldesmosomák)). A morfológiai vizsgálatok terén az igazi áttörést a fagyasztva töréses (és fagyasztva maratásos technikák – angolul: freeze fracture, freeze etching – hozták). Ezeknél a gyorsan mélyhűtött anyagok vákuumtérben repesztésre kerülnek. A repedés leginkább a membránok mentén illetve belsejükben halad. A törési felszínekről vákuumgőzöléssel készített lenyomatok (replikák) nagy felbontású elektronmikroszkópokon vizsgálhatók. Így már közvetlen betekintést lehetett kapni a membránok és speciális kapcsolószerkezeteik struktúrájába. Az itt áttekintett kutatások vezettek el a ma általánosan elfogadott Singer–Nicolson-féle folyékony mozaik membránmodellhez.
+
+
+== A Singer–Nicolson-féle membránmodell ==
+A Singer–Nicolson-féle membránmodell szerint a membrán alapja egy folyékony lipid kettős réteg, amelyben beágyazva "úsznak" a hidrofób-hidrofil kölcsönhatásokkal rögzített integráns (transzmembrán) fehérjék. Ezekhez, valamint a külső felszín felé néző lipidmolekulák egy részéhez szénhidrát komponensek kapcsolódnak, melyeknek összessége a sejtburok. Ez utóbbi biztosítja a membránfelszín fix negatív töltéseit, egyesek közülük antigénként (pl. vércsoport antigének), vagy speciális anyagok (pl. növényi eredetű vörösvérsejt kicsapódást okozó anyagok, phitohemagglutininek) kötőhelyeiként szolgálnak. Az integráns fehérjék belül a belső perifériás fehérjékhez, illetve a sejtváz elemeihez kötődnek.
+A membránok alapszerkezetében vannak egységesen leírható elemek, de ez nem jelenti azt, hogy az alapstruktúra mellett ne lennének nagyon is sajátos feladatú membránrészletek.
+A membránok – viszonylag egységes alapszerkezetük ellenére – távolról sem statikus szerkezetek. Ellenkezőleg, még a legegyszerűbb membránokban is – mint pl. a vörösvértestek membránja – számos olyan tulajdonság és funkció ötvöződik, amelyek biztosítják az adott sejtféleség optimális működését.
+
+
+=== Az integráns fehérjék ===
+Ezek adják a fagyasztva hasított membránképeken a jellegzetes, intramembrán (8,5 nm-es) részecskéket. Az integráns membránfehérjék nevüket onnan kapták, hogy a membrán más elemeitől csak erőteljes, a membránszerkezetet súlyosan károsító kémiai módszerekkel távolíthatók el, míg a perifériás membránfehérjék enyhe behatásokkal is leválaszthatók. A folyékony lipid kettős réteg – amely a membrán alapja – lényegében a lipidek kettős tulajdonsága miatt jöhet létre, mely szerint a lipidek egyik vége hidrofil, a másik vége hidrofób jellegű. A hidrofób részek zsírsav maradékok, míg a hidrofil részeket (legegyszerűbb esetben foszfolipidek) foszforsav maradékon keresztül kapcsolódó molekularészek alkotják. Ebből következik, hogy a foszfolipidek hidrofil részei a sejten kívüli és belüli vizes fázisokhoz, míg hidrofób részeik (zsírsavláncok) hidrofób-hidrofób kölcsönhatással egymás felé orientálódnak.
+
+
+=== A membránkomponensek mozgékonyak ===
+Ez a mozgékonyság meglehetősen sokrétű. A legegyszerűbb a lipid komponensek mozgása, amely egyrészt jelenti a zsírsavláncok membránon belüli mozgásait, másrészt a molekulák forgó mozgását és oldalirányú vándorlását. Ritkán a két réteg közötti molekulacserélődés is megtörténik. Ez a mozgás egyrészt a zsírsavak telítettségi fokától, másrészt a membránba beépült koleszterin molekulák arányától függ. Minél nagyobb a telített zsírsavak és a koleszterin aránya, annál lassabbak ezek a mozgások. Az integráns fehérjék mozgásai szintén oldalirányúak (transzláció, laterális diffúzió), de sokkal több tényezőtől függenek és szabályozottabbak. Ezeket befolyásolja az, hogy kapcsolódnak a sejt belső vázához (sejtváz, citoszkeleton), amelyek részben meghatározzák mozgásaikat és eloszlásukat, ugyanakkor szerepe lehet a külső antigén- és növényi hemagglutinin (fitohemagglutinin) kötőhelyekhez kapcsolódó anyagoknak is.
+
+
+== Az integráns (transzmembrán) fehérjék szerteágazó funkciói ==
+A felszínre kinyúló részeik adják meg a sejtek sajátos „arculatát”, amelyek alapján pl. az összetartozó sejtek felismerik egymást, és szövetekbe tömörülnek. A felszíni régióikon vannak azok a receptorok, amelyek képesek azokat a hormonokat specifikusan megkötni, amelyek nem képesek áthatolni a membránon. (A membránon a zsíroldékony szteroid hormonok tudnak diffúzióval áthatolni.) A transzmembrán fehérjék receptoraihoz kötődő hormonok hatására a fehérjéken olyan szerkezeti módosulások (konformációváltozások) következnek be, amelyek vagy ioncsatornák nyitásával vagy zárásával, vagy a molekula citoplazmatikus végének szerkezetváltozásával képesek a sejtműködését módosítani. (Ahhoz tehát, hogy egy bizonyos sejt érzékeny legyen valamilyen hormonra, rendelkeznie kell az adott hormont kötő receptorral.) Az integráns fehérjemolekulák belső része szolgál ioncsatornaként, amely nyitott vagy zárt állapotát az említett hormonkötődések mellett még számos fizikai (pl. feszültség) és kémiai tényező (csatornablokkolók) befolyásolja. A sejtmembránok viszonylag jó zárófunkcióik ellenére sem képesek megakadályozni a vízoldékony kis molekulájú anyagok, így a K+-, Na+- és Ca2+-ionok passzív diffúzióját. A sejteken belüli folyadékban azonban ezeknek az ionoknak a koncentrációja alapvetően eltér a sejtközötti folyadékétól, és ennek az ionösszetételnek az állandósága a sejt normális működésének, sőt túlélésének is alapvető feltétele.
+
+
+=== A sejtmembrán aktív transzportmechanizmusai ===
+A sejtmembránban aktív transzportmechanizmusok, ionpumpák működnek (nagy valószínűség szerint a transzmembrán fehérjékhez kötődve), mint a Na–K pumpa és a Ca-pumpa, amelyek az ATP-t energiaforrásul használva, koncentrációgradienssel szemben is át tudják juttatni a membránon ezeket az ionokat, és képesek fenntartani a koncentrációviszonyokat. A sejteken belül is bonyolult membránrendszerek találhatók, melyek alapja szintén a lipid kettős réteg. A plazmamembránok komponenseinek „összeszerelését” a Golgi-készülék végzi.
+
+
+=== Nagyobb anyagrészecskék felvétele és leadása ===
+A sejtek jelentős része képes nagyobb anyagrészecskéket felvenni (pl. a falósejtek sejttörmelékeket, baktériumokat stb.), illetve nagyobb folyadékcseppeket leadni (pl. a mirigysejtek a váladékcseppeket). Ez nem a fentiekben ismertetett membránon keresztüli transzportmechanizmusokkal történik. A membrán itt mintegy „becsomagolja” a felvett, illetve leadott részecskéket vagy folyadékcseppeket, és másodlagosan, belső membránokkal fuzionálva juttatja el a sejten belüli lebontás sejtszervecskéjéhez (lizoszóma; lysosoma), vagy a mirigysejt csúcsi részének sejthártyájával fuzionálva a kilökődés helyéhez.
+
+
+== A sejtek oldalsó felszíne: sejtközötti kapcsolatok, kapcsolószerkezetek ==
+A sejtközötti kapcsolatok alaptípusai főként az egyrétegű hengerhámoknál figyelhetők meg a legtípusosabb formában.[1](Persze ezen kapcsolatok fő elemei más szövetekben is megvannak, és nagyon fontos funkciókkal bírnak.) A sejtközötti kapcsolatok legtípusabb formája a junkcionális komplexus. Egy sejt és a környező hámsejtek között (csúcsi, apicalis felszínükhöz közel, de még az oldalsó felszínükön) típusosan a következő kapcsolatok vannak:
+
+
+=== Zonula occludens (tight junction) ===
+Ez az intercelluláris rést lezáró kapcsolat. A szomszédos sejtek membránjai összeolvadnak. Ez hálózatosan, elhelyezkedő rajzolatot alkot fagyasztva töréses készítményeken. A képződmény folyamatosan körülveszi a sejtet, és kapcsolódik a szomszédos sejtekhez. Megakadályozza a kontrollálatlan anyagáramlást a sejtközötti réseken keresztül.
+
+
+=== Zonula adherens ===
+A szomszédos sejteken azonos magasságban helyezkedik el. A sejt-közötti résben vele azonos sávban „ragasztóanyag” van. A cytoplazmatikus felszínen sejtváz elemek kötődnek hozzá. A sejtek mechanikai kapcsolatában játszik szerepet.
+
+
+=== Macula communicans ===
+A szomszédos sejtek sejthártyái közvetlen közelségbe kerülnek egymással, és a megmaradó beszűkült rést olyan molekulák hidalják át, amelyek mindkét szomszédos sejt membránján áthatolnak, és ioncsatornaként működnek. Így az ingerület közvetlenül át tud terjedni egyik sejtről a másikra. A csillószőrös hengerhámnál fontos szerepük van a csillók mozgásainak összehangolásában, de ilyen jellegű kapcsolatokon terjednek az ingerületek a szív- és simaizom sejtjei között is.
+
+
+=== Macula adherens (desmosoma) ===
+A szomszédos sejtek membránjain egymással szemben, kerek vagy ovális foltként helyezkednek el. A sejt-közötti résben közöttük ragasztóanyag van. A cytoplazmatikus felszínen a sejtváz elemei – mikrotubulusok és mikrofialmentumok rögzülnek rajtuk. Szerepük a sejtek mechanikus kapcsolatának biztosításában van.
+
+
+== A sejtek alapi (basalis) felszíne ==
+A sejtek alapi, basalis felszínének speciális szerkezetei közül kettőt szükséges megemlíteni. Az egyik az alaphártyával bíró többrétegű hámok basalis sejtjei és a basalis membrán közötti – egyoldalú macula adheresnseknek megfelelő hemidesmososmák (ez a hámnak az alaphoz való mechanikai rögzítését szolgálja), a másik a nagy folyadékforgalmat lebonyolító vesehámsejtek basalis membránjának bőséges redőzöttsége basalis csíkolat. Utóbbit a nagy folyadékforgalmat szolgáló membrán-felszínt növelő sejtmembrán redők és a közöttük lévő mitokondriumok képezik.
+
+
+== A sejtek csúcsi (apicalis) felszíne ==
+Itt két funkcionálisan fontos képződmény említhető. Az egyik, a légutak egy részét bélelő csillószőrös hengerhám sajátos belső szerkezetű, összehangolt mozgásokra képes csillószőrei, amelyek mozgása a légutak tisztántartását szolgája; a másik, a mikrobolyhok bélhámsejteken, amelyek a bélhámsejtek felszívó felszínének megnagyobbítását eredményezik.
+
+
+== Források ==
+Dawson, H. – Danielli J. F.: The permeability of natural membranes, Cambridge University Press. (London 1943)
+Robertson, J. D.: The ultrastructure of cell membranes and derivatives. Biochem. Soc. Symp. 16: 3 (1959)
+Fawcett, D.: Structural specializations of the cell surface. In: Frontiers in cytology (ed.: Palay S. L.) (Ya le University Press, New Haven, Conn. 1958)
+Singer, S.J. and G. L. Nicolson. The fluid mosaic model of the structure of cell membranes. Science. 175: 720-731. (1972)
+Singer, S.J. 1992. The structure and function of membranes – a personal memoir. Journal of Membrane Biology. 129:3-12.
+De Robertis E. D. P.– Nowinski W. W. – Saez A. S.: Sejtbiológia (Akadémiai Kiadó – Budapest 1970)
+
+
+== Kapcsolódó szócikkek ==
+Sejtszervecske
+Idegsejt
+Szövet (biológia)

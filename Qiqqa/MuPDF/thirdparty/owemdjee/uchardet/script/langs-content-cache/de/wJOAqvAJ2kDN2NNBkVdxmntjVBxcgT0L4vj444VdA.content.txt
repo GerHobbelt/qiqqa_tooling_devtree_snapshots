@@ -1,0 +1,58 @@
+revision: 230656566
+title: "Bi\u0107"
+url: https://de.wikipedia.org/wiki/ISO_9362
+
+
+---
+
+Die Norm ISO 9362 beschreibt einen international standardisierten Code zur Identifikation von Geschäftsstellen im Zahlungsverkehr. Der entstehende BIC (Abkürzung für Business Identifier Code/Geschäftskennzeichen) findet weltweit bei Kreditinstituten, Brokern, Lagerstellen sowie ähnlichen Unternehmen Verwendung und kann jeden direkt oder indirekt teilnehmenden Partner eindeutig identifizieren. Nach seiner ursprünglichen Verwendung im SWIFT-Zahlungsverkehr wird er auch SWIFT-BIC genannt, umgangssprachlich ist auch BIC-Code oder SWIFT-Code üblich; korrekt wäre aber SWIFT-Adresse oder BIC.
+Bis Juli 2010 stand die Abkürzung BIC für „Bank Identifier Code“ (Bankkennzeichen – im übertragenen Sinne Bankleitzahl). Wenn der BIC einem Geschäftsbetrieb außerhalb des Finanzsektors zugeordnet ist, nennt man ihn auch Business Entity Identifier (Geschäftseinheitenkennung). Auf den BIC wird in ISO 13616 verwiesen, in der die Internationale Bankkontonummer (IBAN) beschrieben ist.
+Im Zahlungsverkehr des SWIFT-Netzwerkes bleibt das Zahlungsformat undefiniert. Somit bleibt es den beteiligten Banken überlassen, ein Konto zu identifizieren sowie die Transaktion zu bezeichnen. Bei der Schaffung des Europäischen Zahlungsraumes (SEPA) wurde ein Standard entworfen, der mittels IBAN und BIC die Zahlungsteilnehmer identifiziert. Mit TARGET2 haben die europäischen Notenbanken ein Echtzeit-Bruttoabwicklungssystem geschaffen, das im Clearing standardisierter Transaktionen nicht auf den SWIFT-Verbund angewiesen ist (siehe EBICS). Das TARGET-Directory listet alle BICs auf, die an das TARGET2-Netzwerk angeschlossen sind.
+
+
+== Aufbau ==
+Der BIC hat eine Länge von 8 oder 11 alphanumerischen Zeichen und folgenden Aufbau:
+
+SWIFT-Mitglieder (Banken) können für Nicht-SWIFT-Mitglieder (z. B. große Industrieunternehmen) bei SWIFT einen genauso aufgebauten Code registrieren lassen, der dann BEI (Business Entity Identifier) genannt wird. Ein typisches Anwendungsfeld sind Online-Applikationen von Unternehmen, um dem Kunden seine tatsächlichen Kontodaten anzuzeigen und auch Geldzahlungen automatisiert mit der jeweiligen Bank durchführen zu können. Unternehmen, die seit einiger Zeit bei SWIFT auch direkt angeschlossen werden können, erhalten auch als SWIFT-Teilnehmer einen BEI. Die unterschiedliche Namensgebung hat jedoch keinen Einfluss auf die Funktion des Codes des jeweiligen SWIFT-Teilnehmers.
+
+
+=== Vorteile des BIC ===
+Die Verwendung von BICs in einem Interbankauftrag (SWIFT-Nachricht) via SWIFT erleichtert die automatische Weiterverarbeitung, da ein BIC mit der entsprechenden Software bei jedem Institut in die interne Bankidentifikation umgesetzt werden kann (Straight Through Processing), auch wenn es sich um einen passiven SWIFT-Teilnehmer handelt. Dagegen müssen SWIFT-Volladressen einer Bank manuell interpretiert werden. SWIFT publiziert dazu regelmäßig, momentan monatlich, ein BIC-Directory mit Informationen über Neuaufnahmen, Änderungen und Löschungen.
+
+
+=== Nutzung ===
+Der BIC ist die internationale Bankleitzahl eines Zahlungsdienstleisters. Obwohl die IBAN auch den Zahlungsdienstleister eindeutig bestimmt, musste der BIC bei grenzüberschreitenden SEPA-Zahlungen bis Februar 2016 zusätzlich zur IBAN angegeben werden; im inländischen SEPA-Zahlungsverkehr wird er bereits seit Februar 2014 nicht mehr benötigt.
+
+
+=== Beispiele ===
+Der SWIFT-BIC BELADEBEXXX ist der Berliner Sparkasse zugewiesen. Diese gehört zur Berliner Landesbank (BE LA) in Deutschland (DE) mit Sitz in Berlin (BE).
+Der SWIFT-BIC RBOSGGSX ist der Natwest Offshore Bank auf der Kanalinsel Guernsey in Großbritannien zugeordnet, deren IBAN das Format GB00NWBK00000000000000 haben.
+Der SWIFT-BIC CHASGB2LXXX ist der JPMorgan Chase Bank in London, Großbritannien, zugeordnet.
+Der SWIFT-BIC RZTIAT22263 ist der Raiffeisenbank Kitzbühel (Bankleitzahl: 36263) in Österreich zugeordnet.
+Der SWIFT-BIC BCEELULL ist der „Banque et Caisse d’Epargne de l’Etat“ in Luxemburg zugeordnet.
+Der SWIFT-BIC MARKDEFF (oder auch MARKDEFFXXX) ist der Zentrale der Deutschen (DE) Bundesbank (MARK) in Frankfurt am Main (FF) zugeordnet.
+Der SWIFT-BIC GENODEF1JEV ist der Volksbank Jever zugeordnet. Sie befindet sich im deutschen (DE) Verbund der Genossenschaftsbanken (GENO) und ist passive SWIFT-Teilnehmerin (1), also ohne direkte Verbindung zum SWIFT-System.
+Der SWIFT-BIC UBSWCHZH80A ist der Schweizer Bank UBS AG zugeordnet.
+Der SWIFT-BIC CEDELULLXXX ist der Clearstream Banking S.A. in Luxemburg zugeordnet.
+Der SWIFT-BIC HELADEF1RRS ist der Rhön-Rennsteig-Sparkasse zugeordnet. Da sie passive SWIFT-Teilnehmerin ist, werden z. B. Transaktionen nur mit dem 8-stelligen Code HELADEFF der übergeordneten Landesbank Hessen-Thüringen akzeptiert.
+Der SWIFT-BIC GENODEF1S04 ist der Sparda-Bank München eG zugeordnet. Sie ist somit ebenfalls passive SWIFT-Teilnehmerin.
+
+
+=== Unzulänglichkeiten ===
+Die nationalen Stellen für die Vergabe der IBAN haben sich im Unterschied zu SWIFT, welche die BIC zuteilt, nicht an die Definitionen des ISO 3166-1 gehalten. Dadurch ist eine kleine Zahl von Banken im IBAN-Raum entstanden, bei denen die Ländercodes in BIC und IBAN voneinander abweichen.
+Online-Banking-Systeme, welche die Identität der beiden Ländercodes verlangen, erreichen nicht den gesamten IBAN-Raum.
+Die größte Gruppe der Länder mit abweichenden Ländercodes in BIC und IBAN sind die französischen Überseegebiete, die in ISO-3166-1 eigene Ländercodes erhalten haben, während die IBANs jedoch alle mit FR beginnen. Diese Ausnahmen sind in den Anmerkungen des IBAN-Registry zu Frankreich und dem jeweiligen Überseegebiet vermerkt.Die beiden Kanalinseln Guernsey und Jersey weisen über die Sonderheit abweichender Ländercodes hinaus noch die Komplikation auf, dass wohl jede Bank die Clearingstelle in Frankreich oder im Vereinigten Königreich wählen kann. Das gewählte Land der Clearingstelle bestimmt den Ländercode in der IBAN. Folglich sind folgende Kombinationen theoretisch alle möglich:
+
+Die Bestimmung des Ländercodes nach dem Land der Clearingstelle wird nicht durchgängig eingehalten. So befindet sich die Clearingstelle für Grönland (GL) in Dänemark (DK), die IBANs beginnen aber dennoch mit GL. Sie gehören damit zu den „Standard“-Ländern ohne Ländercode-Abweichung BIC gegen IBAN.
+Zweideutige Test-BICs: BICs, die sich nur in der letzten Stelle des zweistelligen Ortscodes LL unterscheiden, sind im Test nicht mehr unterscheidbar. Ebenso geht im Test die Unterscheidung zwischen aktiven und passiven SWIFT-Teilnehmern verloren.
+Nicht eindeutige BIC: die Zahl 0 = Null kann leicht mit dem Buchstaben O verwechselt werden.
+
+
+== Weblinks ==
+BIC Policy vom  30. Januar 2015 (engl.)
+White paper: ISO 9362:2014 – BIC Implementation (engl.)
+BIC-Verzeichnis der SWIFT, Suchmaske (engl.)
+Bundesbank: Verzeichnis der Kreditinstitute (TARGET-Directory) (Memento vom 8. Mai 2012 im Internet Archive)
+
+
+== Einzelnachweise ==

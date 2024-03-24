@@ -1,0 +1,60 @@
+revision: 195339670
+title: Insuffisance respiratoire chronique restrictive
+url: https://fr.wikipedia.org/wiki/Insuffisance_respiratoire
+
+
+---
+
+En médecine, l'insuffisance respiratoire désigne l'incapacité de l'appareil respiratoire à assumer correctement sa fonction, à savoir l’hématose. Elle peut être aiguë (on parle alors de détresse respiratoire) ou chronique, et plus ou moins grave. Le traitement symptomatique est le plus souvent l'oxygénothérapie, mais il peut nécessiter une ventilation mécanique.
+
+
+== Physiopathologie ==
+L'insuffisance respiratoire est liée à des phénomènes pouvant être :
+
+obstructifs (corps étranger entravant le passage de l'air) comme l'asthme, la mucoviscidose, la bronchite chronique ;
+restrictifs (phénomènes diminuant le volume maximal de la cage thoracique) tels qu'une scoliose ou une pathologie neuro-musculaire : on parle alors d'Insuffisance respiratoire chronique restrictive ;
+traumatiques : pneumothorax, hémothorax.Les symptômes dépendent du caractère aigu ou chronique.
+
+
+== Détresse respiratoire ==
+
+La détresse respiratoire est une insuffisance respiratoire survenant de manière brutale. C'est une urgence diagnostique et thérapeutique qui engage le pronostic vital du patient. Elle ne doit pas être confondue avec le syndrome de détresse respiratoire aiguë, qui est un œdème pulmonaire lésionnel.
+Les causes les plus fréquentes sont l’œdème aigu du poumon, d'origine cardiogénique et la décompensation de l'insuffisant respiratoire chronique.
+
+
+=== Signes cliniques ===
+Le tableau clinique combine les conséquences directes de l'atteinte de l'appareil respiratoire, et les mesures de compensation mises en œuvre par l'organisme.
+Les signes de lutte sont dominés par la polypnée et le tirage des muscles respiratoires.
+Les signes de gravité, aussi appelés signes de faillite, varient selon les organes atteints. Ils traduisent le retentissement global de la détresse respiratoire et indiquent le plus souvent la nécessité d'une assistance ventilatoire. Au plan respiratoire, la respiration abdominale paradoxale et la cyanose sont les signes majeurs. Cette dernière peut manquer en cas d'anémie majeure, si le taux d'hémoglobine est inférieur à 5 g·dl-1. Au plan neurologique, on peut observer un astérixis avec des troubles de la vigilance et du comportement (agitation ou coma). Enfin, au plan circulatoire, le cœur pulmonaire aigu est une défaillance cardiaque droite. Il est accompagné d'un pouls paradoxal et peut s'associer à une défaillance cardiovasculaire allant jusqu'à l'état de choc.
+Lorsqu'une hypercapnie est présente, le tableau peut se compléter de sueurs abondantes.
+
+
+=== Examens complémentaires ===
+Peu d'examens complémentaires sont nécessaires à l'établissement du diagnostic. Dans l'urgence, la radiographie thoracique et la gazométrie sanguine artérielle sont les seuls examens requis par l'algorithme diagnostic. Au besoin, d'autres examens seront demandés selon la cause de la détresse et son évolution (électrocardiogramme, TDM thoracique, fibroscopie bronchique avec lavage broncho-alvéolaire, analyse des crachats...), mais ils ne doivent pas retarder la mise en route du traitement.
+
+
+=== Prise en charge ===
+En raison du caractère d'urgence vitale de la détresse respiratoire, le traitement doit débuter dès la phase pré-hospitalière. Après s'être assuré de la liberté des voies aériennes supérieures, le premier traitement est l'oxygénothérapie, qui est le plus souvent initiée au masque haute concentration. Une assistance ventilatoire est nécessaire lorsque la sévérité de la détresse respiratoire engage le pronostic vital, et que l'on observe un ou plusieurs signes de défaillance. Elle peut également être mise en route sur des critères gazométriques d'hypoxémie résistant à l'oxygénothérapie, ou d'acidose respiratoire (pH sanguin artériel < 7,35) causée par une hypercapnie.
+L'assistance ventilatoire peut être réalisée de deux manières. La ventilation non invasive est réservée aux défaillances respiratoires isolées chez des patients coopérants. Un masque naso-buccal apporte de l'air sous pression positive. Lorsque la ventilation non invasive n'est pas possible, ou qu'elle ne permet pas d'amélioration du patient, une intubation trachéale est nécessaire.
+La prise en charge spécifique de la cause de la détresse respiratoire est fonction de l'étiologie de la détresse respiratoire.
+
+
+=== Étiologies ===
+
+Les causes de détresse respiratoire sont nombreuses. Le diagnostic étiologique repose sur l'examen clinique, complété de la radiographie thoracique et de l'analyse de la gazométrie artérielle.
+La première étape diagnostique est la vérification de la liberté des voies aériennes supérieures. Ce diagnostic est clinique. L'inhalation d'un corps étranger est la cause la plus fréquente chez l'enfant et la personne âgée souffrant de troubles de déglutition, mais toute obstruction laryngée ou trachéale est susceptible d'être en cause. Une sténose trachéale serrée, un œdème de Quincke ou une tumeur du larynx peuvent ainsi être impliquées.
+Lorsque les voies aériennes sont libres, la radiographie pulmonaire et l'auscultation permettent de diagnostiquer les atteintes de la plèvre et du parenchyme pulmonaire. Au niveau pleural, tout épanchement de grande abondance (pneumothorax ou épanchement liquidien) est susceptible d'entraîner une détresse respiratoire. Le traitement en est alors le drainage rapide. Au niveau pulmonaire, une atélectasie est l'absence de ventilation d'un territoire plus ou moins important, souvent par obstruction mécanique. Les pneumopathies, en particulier bactériennes, touchant un volume pulmonaire important, sont une cause fréquente de détresse respiratoire, de même que l’œdème pulmonaire, qu'il soit d'origine cardiaque (œdème aigu du poumon) ou lésionnelle (syndrome de détresse respiratoire aiguë). Enfin, les atteintes des pneumopathies interstitielles peuvent être à l'origine de la détresse respiratoire.
+Lorsque la radiographie et l'examen clinique sont peu contributifs, la gazométrie artérielle permet d'orienter le diagnostic. La normalité de la capnie (quantité de CO2) et du pH oriente vers une embolie pulmonaire ou un asthme aigu grave. L'embolie sera recherchée par un TDM thoracique ; l'examen clinique peut être très fruste, mais également comporter des signes d'insuffisance cardiaque droite et de cœur pulmonaire aigu, en particulier en cas d'embolie massive et proximale. Dans ce cas, le traitement sera l'anticoagulation ou la fibrinolyse. L'asthme aigu grave sera, lui, traité par des bronchodilatateurs. Lorsque la gazométrie retrouve une acidose respiratoire, qui se manifeste par une élévation de la capnie et des bicarbonates, la détresse respiratoire résulte généralement de l'aggravation d'une pathologie chronique. Il s'agit le plus souvent de l'exacerbation d'une BPCO. Les atteintes neuromusculaires comme la myasthénie ou un syndrome de Guillain-Barré peuvent être en cause. La poliomyélite était une cause fréquente jusqu'à l'introduction du vaccin ; la ventilation pulmonaire des patients était alors assurée, passée la phase aiguë, par un poumon d'acier. Enfin, les atteintes pariétales peuvent également être responsables d'une détresse respiratoire. Les fractures multiples de côtes peuvent être en cause, en particulier chez les patients dont l'état ventilatoire de base est précaire. Les myopathies, qu'elles soient congénitales ou acquises, sont également parfois en cause, par une atteinte des muscles inspiratoires. Dans le cas de ces maladies chroniques, il faut rechercher l'élément ayant causé la décompensation : surinfection bronchique, embolie pulmonaire, pneumopathie, chirurgie thoracique ou insuffisance cardiaque gauche peuvent alors être également en cause.
+
+
+== Insuffisance respiratoire chronique ==
+
+Par convention, l'IRC est définie par une pression artérielle partielle en dioxygène (PaO2) inférieure à 70 mmHg, détectée lors de la mesure des gaz du sang artériel à trois reprises, en dehors de tout épisode aigu.
+
+
+== Notes et références ==
+
+
+== Articles connexes ==
+Insuffisance respiratoire chronique
+Syndrome de détresse respiratoire aiguë Portail de la médecine   Portail du handicap

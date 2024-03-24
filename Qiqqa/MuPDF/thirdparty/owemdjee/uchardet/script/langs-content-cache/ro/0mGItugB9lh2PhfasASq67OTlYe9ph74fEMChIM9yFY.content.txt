@@ -1,0 +1,51 @@
+revision: 15487772
+title: "Fi\u0219ier"
+url: https://ro.wikipedia.org/wiki/Fi%C8%99ier
+
+
+---
+
+Pentru fișiere în sensul de colecții de fișe, vezi articolul Cartotecă.În informatică, un fișier este o colecție de orice natură ce cuprinde date, stocate de obicei pe un dispozitiv de stocare numit și „purtător de date”; un echipament modern este de exemplu discul dur. Termenul englez corespunzător fișierului este file (citit /fail/). Procedeul și algoritmul folosit pentru alocarea de spațiu unui fișier pe dispozitivul de stocare se numește „alocare de fișiere” (în engleză file allocation). Alocarea asigură accesul utilizatorilor la fișiere și facilitează lucrul cu acestea.
+
+
+== Etimologie ==
+
+Cuvântul „fișier” derivă din limba latină („fir”).
+Fișierele au fost folositu în contextul stocării pe computer încă din ianuarie 1940. În metodele cardului perforat în calculul științific, W. J. Eckert a declarat: "Prima utilizare extensivă a tabloului timpuriu Hollerith în astronomie a fost făcută de Comrie. El a folosit-o pentru a construi o masă din diferențe succesive și pentru a adăuga un număr mare de termeni armonici". "Tabelele de funcții sunt construite din diferențele lor cu o mare eficiență, fie ca tabele imprimate, fie ca un fișier de carduri perforate".
+În februarie 1950: Într-o publicație Radio Corporation of America (RCA) din revista Popular Science, care descria un nou tub "de memorie" de vid, RCA a declarat: "Rezultatele nenumăratelor calcule pot fi păstrate în dosar și scoase din nou. Un astfel de "dosar" există acum într-un tub de "memorie" dezvoltat la Laboratoarele RCA. Din punct de vedere electronic, el păstrează cifrele încărcate în mașini de calcul, le stochează în timp ce memorează altele noi - viteze de soluții inteligente prin labirinturi matematice. "
+În 1952, „fișierul” indica, inter alia, informațiile stocate pe carduri perforate.
+
+
+== Stocarea și organizarea internă a fișierelor ==
+Un dispozitiv de stocare poate găzdui în general mai mulți purtători de date, fiecare cu mai multe fișiere, chiar de ordinul a sutelor de mii. Pentru folosirea lor (creare, încărcare cu date, citire, modificare, renumire, relocare în cadrul ierarhiei, ștergerea conținutului, ștergerea fișierului și alte operații) ele sunt organizate de obicei într-un sistem ierarhic. Pentru accesare este nevoie mai întâi de citirea tabelei de conținut a purtătorului de date (în engleză Table of content, prescurtat TOC). Datele de identificare ale fișierelor sunt calea (path), numele (name) și extensia (extension). Acestea trei luate împreună determină univoc fiecare fișier aflat pe dispozitivul de stocare respectiv.
+Deseori organizarea internă a datelor din fișier este realizată drept șir secvențial de înregistrări (cu lungimi egale sau și diferite între ele). Alte organizări interne sunt: indexat; cu acces direct; ierarhic; lexicografic; alfabetic; în formă de bănci de date ș.a. Deseori însă se întâlnesc și organizări (formate) proprietare, secrete (nedocumentate) sau sofisticate.
+Procedeele de creare și actualizare a fișierelor de pe un purtător de date necesită un „sistem de fișiere” (file system). Acesta determină în primul rând tipul tabelei de conținut al acestui purtător de date, ca de exemplu FAT, FAT32, NTFS și altele.
+Caracteristic pentru toate fișierele este că poartă un nume univoc și conțin întotdeauna o cantitate de date bine definită, care determină "mărimea fișierului"; aceasta se măsoară în baiți sau octeți împreună cu multiplii lor: 1.024 baiți = 1 kB, 1.048.576 baiți = 1 MB, 1.073.741.824 baiți = 1 GB ș.a.m.d.
+
+
+== Conținut ==
+Natura datelor dintr-un fișier poate fi foarte variată: text, tabele, desene, fotografii, partituri, animații, filme, liste, sunete, voce sau combinații dintre ele, dar mereu datele se reduc la reprezentarea lor codificată binar cu ajutorul cifrelor 0 și 1. Pentru a putea fi stocate digital (numeric) în fișiere, informațiile de intrare, ca de ex. imaginile și sunetele, trebuie întâi digitalizate (codificate).
+Fișierele mai pot conține și programe în formă de text sau codificate cu cifre, în sistemul binar. Pentru a fi executate programele trebuiesc întâi încărcate de pe dispozitivul de stocare în memoria de lucru a calculatorului respectiv și, la nevoie, transformate în cod executabil.
+Prin contrast există și date de calculator care de obicei nu constituie fișiere propriu-zise. Așa de exemplu:
+
+datele furnizate de instrumente de măsură (ce-i drept ele pot fi colecționate în fișiere, dar pot fi și interpretate instantaneu de către un program de calculator, fără a fi stocate în formă de fișiere),
+datele de la un post digital de radio sau TV care emite permanent un program,
+un mesaj instantaneu, scurt, de tip chatși altele.
+La nevoie însă și aceste date pot fi stocate drept fișiere.
+
+
+== Formate de fișier ==
+Articol principal: Extensie de fișierÎn funcție de scopul și semnificația datelor unui fișier, dar și de organizarea lor internă, fișierele se creează într-unul dintre numeroasele formate predefinite. În lumea lui MS Windows și Unix numele fișierelor conțin de obicei și un sufix numit extensie de fișier. Dacă de exemplu numele fișierului este "desen3.ppt", atunci sufixul „.ppt” constituie extensia numelui fișierului. De obicei extensia exprimă chiar formatul fișierului, în acest exemplu fiind vorba de formatul principal folosit de către programul de desenat Microsoft PowerPoint. Inițial extensiile erau alcătuite dintr-un punct urmat de 3 caractere, așa de ex. la sistemul de operare MS-DOS. Sistemele de fișiere moderne permit și extensii cu mai mult de 3 caractere.
+În unele sisteme de operare (de ex. Windows, Unix, MacOS) se poate prestabili o asociere între extensie și un program standard, de executat la apăsarea cu mausul pe numele fișierului. Dacă această facilitate nu se dorește, atunci trebuie întâi chemat programul necesar, care apoi să deschidă / atașeze fișierele de prelucrat.
+
+
+== Note ==
+
+
+== Vezi și ==
+Sistem de fișiere
+
+
+== Legături externe ==
+http://www.file-extension.com/ (un sit web în engleză) - listă bogată cu formate de fișier
+http://mark0.net/soft-trid-deflist.html  Materiale media legate de fișier la Wikimedia Commons

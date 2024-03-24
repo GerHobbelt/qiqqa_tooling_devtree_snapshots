@@ -1,0 +1,40 @@
+revision: 7215359
+title: Amazon Web Services
+url: https://sk.wikipedia.org/wiki/Amazon_Web_Services
+
+
+---
+
+Amazon Web Services (skratka AWS; doslovne „webové služby Amazon“) je dcérska spoločnosť firmy Amazon, založená v roku 2006. Jej súčasný výkonný riaditeľ (CEO) je Andy Jassy.
+
+
+== Charakteristika ==
+Spoločnosť poskytuje internetové služby, tzv. „on-demand cloud computing“ platformy, prístupné 24/7 v rámci platobnej politiky „pay as you go“, kde klient platí len za služby a čas, ktorý využil. Medzi najvyužívanejšie patria dátové úložiská (služby spojené s infraštruktúrou), vzdialené počítačové plochy pre vývoj softvéru, testovanie, dátovú analýzu, produkciu webových aplikácií pre zákazníkov, prevádzkovanie online hier atď., služby pre strojové učenie a internet vecí. Tieto služby sú prístupné pre používateľov cez HTTP protokoly, používajú štýl architektúry REST, pre staršie API je možnosť využiť SOAP protokol.
+
+
+== Dejiny ==
+Počiatky firmy siahajú do roku 2002, kedy bola spustená prvá beta verzia s názvom „Amazon.com Web Service“. Produkt bol zameraný na služby spojené s poskytovaním IT infraštruktúry (výpočtová sila, úložiská, databázy). Myšlienka vznikla zo stretnutia Jeffa Bezosa a vedúceho tímu, kde sa komunikovali silné stránky firmy Amazon. Došlo k zhode v tom, že jedna z hlavných je efektívna infraštruktúra, poskytujúca zároveň konkurenčnú výhodu. Prvý zámer firmy bol teda poskytovať IT infraštruktúru spolu s vývojárskymi nástrojmi pre vytvorenie pseudo-operačného systému na internete. Od 19. marca 2006 AWS verejne ponúka služby ako S3 (Simple Storage Service), EC2 (Elastic Compute Cloud), nasledovala SQS (Simple Queue Service). Do roku 2009 boli služby prístupné aj v Európe.
+
+
+== Prínosy využívania a poskytované služby AWS ==
+AWS svojim zákazníkom ponúka stálu dostupnosť služieb a možnosť meniť využívanú kapacitu, prispôsobovať tak potreby pre databázy či počítačovú silu. Používateľ si môže dynamicky meniť mieru využívaných služieb a platí iba za tento rozsah. Vďaka robustnosti AWS služieb spoločnosť realizuje úspory z rozsahu a teda dokáže zabezpečiť nižšie ceny, než v prípade, ak by zákazník využíval vlastné úložiská a počítačovú silu. Navyše vďaka rozsahu pôsobenia AWS a ich globálnym „dátovým farmám“ je možné sprístupniť aplikácie používateľom na celom svete v priebehu niekoľkých minút.AWS sa zameriava na 3 hlavné typy poskytovaných služieb:
+
+IAAS, Infrastructure as a service – obsahuje základné stavebné kamene pre cloudové IT. Typicky poskytuje prístup k počítačom (napr. virtuálnym), dátovým úložiskám. Infraštruktúra je obdobou už existujúcich firemných IT zdrojov, poskytuje však vyššiu flexibilitu a kontrolu nad IT zdrojmi.
+PAAS, Platform as a service – táto služba z používateľa sníma potreby správy danej infraštruktúry IT zdrojov (ide najmä o hardvér a operačné systémy, ktoré na ňom bežia). Podporu efektivity vývoja IT softwaru, pretože odstraňuje povinnosti, týkajúce sa nákupu a údržby počítačových zdrojov, plánovania kapacity, aktualizovanie systémov a ich opravy.
+SAAS, Software as a service – prístup k iným softvérovým zdrojom, potrebných pre vývoj, či manažment vyvíjaných aplikácií. Používateľ nemusí rozumieť, ako je daný softvér riadený a aktualizovaný, môže sa sústrediť iba na jeho využitie.
+
+
+=== Najznámejšie AWS služby ===
+Amazon EC2 (Amazon Elastic Compute Cloud) – Internetová služba, ktorá ponúka zabezpečenú, škálovateľnú výpočtovú kapacitu na cloude. Na výber je celá škála počítačov, ktoré majú rôzne typy procesorov, typy a veľkosti pamätí, operačné systémy. Momentálne je AWS jediná firma, ktorá poskytuje počítače bežiace na operačnom systéme MacOS.[chýba zdroj] Dostupnosť služby je podľa SLA 99,99%.  V súčasnosti firma zabezpečuje internetovú sieť s rýchlosťou 400 Gbps.Amazon S3 (Amazon Simple Storage Service) – je produkt slúžiaci na ukladanie dát. Ponúka škálovateľnosť, bezpečnosť a prístupnosť k dátam a výkon. Prípady použitia tejto služby sú predovšetkým dátové jazerá, webové stránky, mobilné aplikácie, záloha dát, archívy, dáta pre IoT zariadenia, analýzu Big Data. Garantuje zachovanie dát na 99,999999999%. Pre dáta je možné nastaviť rôzne úrovne prístupov, zároveň je možné spravovať dáta v súlade so zvolenou legislatívou (napríklad klient, ktorý je aktívny v rámci EÚ využíva správu dát v súlade s opatreniami EÚ).AWS Lambda (tiež „serverless computing service“) – umožňuje spúšťať kód virtuálne, bez administratívy či konfigurácie. Používateľ len nahrá súbor s kódom vo formáte zip., alebo obrázok a nastaví, kedy sa ma kód spustiť (napríklad po kliknutí myšou, v prípade mobilných aplikácií po dotyku na nejaké miesto na obrazovke, aktivácii senzoru, zmeny v dátach, zmeny v stave systému). Zároveň je možné využiť službu pozorovania každej aktivity na Amazon Cloud Watch, kde sa ukladajú súbory s logmi. Používateľ platí len za čas, kedy bola služba spustená, čas sa meria v milisekundách. Medzi typické prípady užitia patrí automatické zmenšenie obrázka, indexovanie súborov, spracovanie logov, validácia obsahu, agregovanie a filtrovanie dát v reálnom čase. Podporuje súbory kódované vo všetkých najznámejších programovacích jazykoch (Node.js, Python, Go, Java atď.).Amazon GameLift – služba pre prevádzkovateľov multiplayer počítačových hier. Poskytuje webhosting s garanciou nízkej latencie (45 ms) a úspory nákladov (až 70% v porovnaní s prevádzkovaním na vlastných serveroch).Medzi najznámejším využívateľov týchto služieb patria napr. spoločnosť Behaviour Interactive s hrou Dead by daylight, či organizátori pretekov Formule 1.
+
+
+== Referencie ==
+
+
+== Iné projekty ==
+
+ Commons ponúka multimediálne súbory na tému Amazon Web Services
+
+
+== Externé odkazy ==
+Oficiálny web

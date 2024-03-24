@@ -1,0 +1,208 @@
+revision: 7467337
+title: Morse Code
+url: https://eo.wikipedia.org/wiki/Listo_de_radioamatoraj_programoj
+
+
+---
+
+Jen listo de radioamatoraj komputilaj programoj kreitaj por radioamatoroj. Kutime uzataj por radioamatoraj konkursoj, taglibroj, DX-Cluster, elsendi kaj elkodigi morsan kodon, aŭ samtempe por fari plurajn tiajn taskojn.
+
+
+== Por Androido ==
+Morse Decoder
+Android SDR
+Morse Trainer for Android
+25WPM Morse code trainer - Android App
+Amateur Radio Call Log
+DroidPSK 
+DroidRTTY
+DroidSSTV
+EchoLink Android (vidu eĥolink)
+Ham Radio Tools
+Morse Decoder
+Morse Trainer for Android
+QRZ Droid (vidu QRZ.com)
+QTH locator
+
+
+== Spurado de diplomoj ==
+KLog
+QSO Manager
+Award Manager by IK4ZIN
+Award Tracker
+County Hunting
+Ham Diplom
+IOTA Program
+
+
+== Beacon Monitoring ==
+PropView
+BeaconSee
+Faros
+HF Beacon tracker - senpaga
+
+
+== Por Konkursado ==
+N1MM Logger Classic
+N1MM Logger Plus
+WriteLog for Windows
+Contest LogChecker
+10 - 10 QSO Party Log
+CWJF logging
+DXLog.net
+QARTest
+Win-Test contest logging software - pagenda/vindoso
+IARU HF Contest
+
+
+== Datumbazoj ==
+Atlas software for DX hunters
+Amateur Radio Country Files
+CQ Callbook - Online Internet Callbook
+DxList
+FCC Call
+ON6DP QSL-Manager-Database
+Pathfinder
+
+
+== DX-Cluster ==
+DX Monitor
+SpotCollector
+HamAlert
+RDXCluster
+RXClus
+SpotCollector
+
+
+== Linukso ==
+Fldigi
+jLog
+CHIRP
+Linrad
+CLLOG
+QSSTV for Linux
+LinPsk
+CQRLOG
+CuteSDR
+CW Trainer for Linux
+DXSpider - DX Cluster
+Echolink on Linux - SvxLink and Qtel
+JTDX
+LinLogBook
+Trusted QSL
+VOACAP for Linux
+
+
+== Por analizo de taglibroj ==
+DXView
+Contest LogChecker
+Cabrillo Evaluator by W3KM
+ADIF to Map Amateur Ham Radio Contacts by K2DSL
+CBS - contest statistical software
+ClubLog - Log Inspector
+HRDLog
+QScope.org
+SH5 Contest Log Analysis
+WorkedFields
+
+
+== Tagibro registriloj ==
+DXKeeper
+BBLogger
+Ham Radio Deluxe
+Logger 32
+Winlog 32
+DX 4 Win
+DXtreme software
+CQ Log
+Fastlog
+KLog
+Easylog
+EA6DD WinLog 
+EZLog
+Log4OM
+MixW
+N7XG Logger
+Prolog2K
+PZTLog
+WD8LQB CountyLog
+Winlog 32
+WorkedGrids
+
+
+== Morsa kodo trejniloj ==
+MorseCat
+CW Player
+RufzXP
+Pileup Runner
+WinMorse
+Just Learn Morse Code
+CW Forever - CW Training Software
+CW Midi
+CW Trainer
+Morse Code Trainer
+Morse Machine
+Morse Quiz
+Morse Runner
+Morse test
+NuMorse
+Super Morse
+
+
+== Plurmodaj ==
+HamScope
+MixW V3
+Ham Radio Deluxe
+Fldigi
+gMFSK
+HamComm 3.1
+JTDX
+MMvari
+MultiMode
+PocketDigi
+WSJT
+
+
+== QSL (konfirmkartoj) ==
+Pathfinder
+QSL Maker
+Ham Label
+The AA4M ~ QQSL Web Page
+HamQSLer
+DF3CB BV QSL Management and printing
+DxQSL
+miLog Reporter
+QSL Buro Finder
+QSL Card Imaging
+QSL Print Manager
+QSL Studio
+QSL Wizard - pagenda
+Trusted QSL
+HRDLabel
+
+
+== Software Defined Radio ==
+WINRAD by I2PHD
+SDRadio
+FlexRadio Systems
+Rocky Software for SoftRock40
+Free PowerSDR Skins
+High Performance Software Defined Radio
+Linrad
+M0KGK SDR Decoder Software
+SDR Sharp
+SDR Touch - Android SDR
+WinradHD
+
+
+== Referencoj ==
+
+
+== Vidu ankaŭ ==
+Amatora radio
+komputila programo
+
+
+== Eksteraj ligiloj ==
+listo de programoj ĉe dxzone.com
+ligiloj pri radioamatoraj programoj

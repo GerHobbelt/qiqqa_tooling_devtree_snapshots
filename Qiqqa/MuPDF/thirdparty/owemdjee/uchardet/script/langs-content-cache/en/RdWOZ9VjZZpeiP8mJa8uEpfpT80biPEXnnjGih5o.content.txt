@@ -1,0 +1,66 @@
+revision: 1150733929
+title: American Morse code
+url: https://en.wikipedia.org/wiki/American_Morse_code
+
+
+---
+
+American Morse Code — also known as Railroad Morse—is the latter-day name for the original version of the Morse Code developed in the mid-1840s, by Samuel Morse and Alfred Vail for their electric telegraph. The "American" qualifier was added because, after most of the rest of the world adopted "International Morse Code," the companies that continued to use the original Morse Code were mainly located in the United States. American Morse is now nearly extinct—it is most frequently seen in American railroad museums and American Civil War reenactments—and "Morse Code" today virtually always means the International Morse which supplanted American Morse.
+
+
+== History ==
+American Morse Code was first used on the Baltimore-Washington telegraph line, a telegraph line constructed between Baltimore, Maryland, and the old Supreme Court chamber in the Capitol building in Washington, D.C. The first public message "What hath God wrought" was sent on May 24, 1844, by Morse in Washington to Alfred Vail at the Baltimore and Ohio Railroad (B&O) "outer depot" (now the B&O Railroad Museum) in Baltimore. The message is a Bible verse from Numbers 23:23, chosen for Morse by Annie Ellsworth, daughter of the Governor of Connecticut. The original paper tape received by Vail in Baltimore is on display in the Library of Congress in Washington, D.C.
+In its original implementation, the Morse Code specification included the following:
+
+short mark or dot (  ▄ )
+longer mark or dash (  ▄▄ )
+intra-character gap (standard gap between the dots and dashes in a character)
+short gap (between letters)
+medium gap (between words)
+long gap (between sentences)
+long intra-character gap (longer internal gap used in C, O, R, Y, Z and &)
+"long dash" (  ▄▄▄▄ , the letter L)
+even longer dash (  ▄▄▄▄▄▄▄▄▄▄▄ , the numeral 0)
+Various other companies and countries soon developed their own variations of the original Morse Code. Of special importance was one standard, originally created in Germany by Friedrich Clemens Gerke in 1848, which was simpler—it eliminated the long intra-character spaces and the two long dashes—but also included changes in the sequences for eleven of the letters and most of the numerals. The Gerke code had a distinct advantage for use on undersea telegraph cables.  Cables suffer from a type of distortion called dispersion that gets progressively worse with the length of the cable.  Dispersion severely limits the rate that Morse can be sent because of intersymbol interference.  For instance, the first transatlantic telegraph cable of 1858 could only sustain a transmission rate of less than 1 word per minute. This interference is worse with American Morse because it has a greater proportion of closely spaced dots than the Gerke code.The Gerke code was adopted as a standard for transmission over cables by the Austro-German Telegraph Union (which included many central European states) at a conference in 1851.  It was necessary to have a common code as the Union had also agreed to direct connection of cables across borders (as opposed to recoding and retransmission by an operator).
+The code was adopted as the European standard in 1865, and was known at first as "Continental Morse," although as its use spread it also became known as "International Morse." At this point the original Morse Code started to be called American Morse, to differentiate between the two main standards.
+There was some resistance to adopting International Morse in the US.  This resulted in international Morse operators in the US needing to be proficient in both codes since messages on transatlantic cables were in the international code, and incoming messages needed to be recoded and sent on in American Morse.  An attempt in 1854 to make International Morse the standard within the US was rejected by the telegraph companies.  Overhead wires, used for most land routes in the US, have nowhere near as big a problem with dispersion as undersea or underground cables, and the companies had no wish to retrain their staff.  The Chilean telegraph regulation of 1872 required operators to know both "German and American" code; some lines with the state system seem to have generally used one, some the other (and a few lines had Wheatstone equipment and so did not use Morse Code at all).In the late 1890s, radio communication—initially known as "wireless telegraphy"—was invented, and used Morse Code transmissions. Most radio operators used the version of the Code that they were most familiar with—the American Morse Code in the United States, and Continental Morse in Europe. However, because of the long range of radio signals, a single international standard was needed, especially for seagoing vessels.
+At the Radiotelegraphic Convention meeting in London in 1912, the section of the Convention covering "Transmission of Radiograms" included the statement that "The signals to be employed are those of Morse International Code." Even after this, the original Morse Code continued to be used throughout much of the United States. American Morse remained the standard for U.S. landline telegraph companies, including the dominant company, Western Union, in part because the original code, with fewer dashes, could be sent about 5% faster than International Morse. American Morse also was commonly used for domestic radio transmissions on the Great Lakes, and along the Atlantic and Pacific coasts. However, International Morse predominated for ocean-going vessels, and many U.S. shipboard operators became skilled in transmitting both versions of the Code as needed.
+
+
+== Advantages and disadvantages ==
+As already mentioned, American Morse is less suitable for use on cables because of the high density of dots.  However, this same feature, together with the shorter dash, leads to the advantage of a more compressed code and a faster sending rate.  The same operator could send at least 20% faster with American Morse than with International Morse.The greater complexity of American Morse meant that it was easier for operators to make errors.  American Morse has multiple lengths of dashes and spaces and inadvertently transmitting the wrong ones and other timing errors by novice operators is known as hog-Morse.
+
+
+== Later developments ==
+Over time, with the disappearance of landline telegraphy and the end of commercial radio use of Morse Code, American Morse has become nearly extinct. In the United States, the ranks of amateur radio operators used to include many active and retired commercial landline telegraph operators, who preferred to use American Morse for their amateur radio transmissions, so the CW (continuous wave) amateur bands used to have a mixture of American and International Morse. However, today even U.S. amateurs use International Morse almost exclusively.
+
+
+== Comparison of American and International Morse ==
+
+
+=== Common punctuation ===
+
+
+== Notes ==
+
+
+== See also ==
+Telegraph in United States history
+
+
+== References ==
+
+
+== Bibliography ==
+Chesnoy, Jose, Undersea Fiber Communication Systems, Academic Press, 2002 ISBN 0-08-049237-1.
+Coe, Lewis, The Telegraph: A History of Morse's Invention and Its Predecessors in the United States, McFarland, 2003 ISBN 0-7864-1808-7.
+Lyall, Francis, International Communications: The International Telecommunication Union and the Universal Postal Union, Routledge, 2016 ISBN 1-317-114345.
+Pope, Frank L. (1881). "Chapter VIII Hints to Learners". Modern Practice of the Electric Telegraph: A Handbook for Electricians and Operators (11th ed.). New York: D. van Nostrand.  Also available in PDF.
+
+
+== External links ==
+Samuel Morse's first "What hath God Wrought?" telegraph message, sent May 24, 1844 (American Morse recorded on a paper tape)
+Circa 1910 recording of an American Morse radio transmission
+Morse Telegraph Club, Inc.
+The Dot and Line Alphabet, a sketch from Edward Everett Hale about (American) Morse code, first published 1858
+Morse Code Sounder Allows conversion and sounding of American Morse

@@ -1,0 +1,229 @@
+revision: 6319992
+title: "J\xF5ud"
+url: https://et.wikipedia.org/wiki/J%C3%B5ud
+
+
+---
+
+Jõud on kehale suunatud mistahes toime, mis mõjutab tema liikumise iseloomu ja/või tema kuju. Mehaanikas on jõud kehade vastastikuse mõju mõõduks. Jõud on vektoriaalne suurus, mis tähendab, et tal on
+
+moodul ehk arväärtus ehk suurus (tugevus, intensiivsus),
+suund
+rakenduspunkt.Jõu mõjusirge (vanem nimetus jõu kandesirge) on sirge, mis läbib jõu rakenduspunkti ja sihilt ühtib jõu suunaga.
+Newtoni teise seadus defineerib kehale mõjuva jõu võrdelisena keha massi ning kiirenduse korrutisega.
+Jõu tähis füüsikalise suurusena on F, mis tuleneb ladina sõnast fortis ("tugev").
+Jõu mõõtühik SI-süsteemis on njuuton (N). Jõud 1 N annab kehale, mille mass on 1 kg, kiirenduse 1 m/s².
+
+
+== Jõu projektsioon teljel ==
+Jõu projektsioon teljel on skalaarne suurus, mis võrdub jõu algus- ja lõpp-punkti projektsioonide vahelise lõigu pikkusega, võetuna vastava märgiga. Projektsioon loetakse positiivseks, kui üleminek vektori alguse projektsioonist lõpu projektsioonini toimub telje positiivses suunas, ja negatiivseks, kui see toimub teljega vastupidises suunas.
+
+
+== Jõusüsteem ==
+Jõusüsteemiks nimetatakse staatikas kehale mõjuvate jõudude kogumit. Jõusüsteeme jaotatakse:
+
+Koonduv jõusüsteem – koonduvasse jõusüsteemi kuuluvate jõudude mõjusirged lõikuvad ühes ja samas punktis.
+Paralleeljõudude süsteem – paralleeljõudude süsteemi kuuluvate jõudude mõjusirged on paralleelsed.
+Üldine jõusüsteem – jõusüsteemi, mis pole ei koonduv jõusüsteem ega paralleeljõudude süsteem, nimetatakse üldiseks jõusüsteemiks.
+Tasapinnaline jõusüsteem – tasapinnalisse jõusüsteemi kuuluvate jõudude mõjusirged asuvad ühel ja samal tasandil.
+Ruumiline jõusüsteem – ruumilisse jõusüsteemi kuuluvate jõudude mõjusirged ei asu ühel ja samal tasandil.
+
+
+== Newtoni seadused ==
+ Pikemalt artiklis Newtoni seadusedJõu määramiseks saab kasutada Newtoni II seadust, mille kohaselt keha kiirendus (
+  
+    
+      
+        
+          
+            
+              a
+              →
+            
+          
+        
+      
+    
+     
+  ) on samasuunaline ja tugevuselt võrdeline talle mõjuva jõuga 
+  
+    
+      
+        
+          
+            
+              F
+              →
+            
+          
+        
+      
+    
+     
+  , kus võrdeteguriks on keha mass (
+  
+    
+      
+        m
+      
+    
+     
+  ):
+
+  
+    
+      
+        
+          
+            
+              F
+              →
+            
+          
+        
+        =
+        m
+        
+          
+            
+              a
+              →
+            
+          
+        
+      
+    
+     
+  .Kui kehale mõjub tundmatu jõud, siis tuleks eelnevalt leida keha (inertne) mass (see, mida kaaluga mõõdetakse, on raske mass). Selleks saab kasutada Newtoni III seadust, mille kohaselt mõju ja vastumõju on võrdsed (ja vastassuunalised). Seega, kui kaks keha (massidega m1 ja m2) on interaktsioonis, siis
+
+  
+    
+      
+        
+          m
+          
+            1
+          
+        
+        
+          
+            
+              
+                a
+                →
+              
+            
+          
+          
+            1
+          
+        
+        +
+        
+          m
+          
+            2
+          
+        
+        
+          
+            
+              
+                a
+                →
+              
+            
+          
+          
+            2
+          
+        
+        =
+        0
+      
+    
+     
+  ,mis lubab jõust sõltumatult määrata masside suhte
+
+  
+    
+      
+        
+          
+            
+              m
+              
+                1
+              
+            
+            
+              m
+              
+                2
+              
+            
+          
+        
+        =
+        
+          
+            
+              ‖
+              
+                
+                  
+                    
+                      a
+                      →
+                    
+                  
+                
+                
+                  2
+                
+              
+              ‖
+            
+            
+              ‖
+              
+                
+                  
+                    
+                      a
+                      →
+                    
+                  
+                
+                
+                  1
+                
+              
+              ‖
+            
+          
+        
+        .
+      
+    
+     
+  
+
+
+== Vaata ka ==
+aktiivne jõud
+elektromagnetiline vastastikmõju
+fundamentaalne vastastikmõju
+gravitatsioon
+inertsijõud
+konservatiivne jõud (füüsika)
+taastav jõud
+vardas mõjuv jõud
+üleslükkejõud
+Ampère'i jõud
+Lorentzi jõud
+Van der Waalsi jõud
+võimsus
+
+
+== Viited ==

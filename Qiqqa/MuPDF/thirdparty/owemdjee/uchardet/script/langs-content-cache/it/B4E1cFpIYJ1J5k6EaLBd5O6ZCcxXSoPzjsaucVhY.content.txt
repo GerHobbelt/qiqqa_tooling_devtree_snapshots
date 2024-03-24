@@ -1,0 +1,266 @@
+revision: 131699692
+title: Loss Given Default
+url: https://it.wikipedia.org/wiki/Loss_Given_Default
+
+
+---
+
+Loss Given Default (LGD) o severity of loss o perdita data predefinita è una misura del rischio di recupero dei crediti da parte di una banca. È una delle componenti del processo di determinazione del rischio di credito inserita dall'accordo Basilea II al fine di calcolare il patrimonio di vigilanza richiesto agli istituti bancari per la copertura dei rischi.
+La LGD è la perdita di credito che, in caso di default, non è possibile recuperare, né per via giudiziale né stragiudiziale, tenuto anche conto delle spese sostenute e dei tempi richiesti dal tentativo di recupero. La severity of loss riguarda le singole linee di credito, ossia l'obbligazione stessa, non già il debitore come soggetto passivo dell'obbligazione.
+La LGD è così definita dalla Circolare n 263 del 27 dicembre 2006 della Banca d'Italia: il tasso di perdita in caso di default, ossia il valore atteso (eventualmente condizionato a scenari avversi) del rapporto, espresso in termini percentuali, tra la perdita a causa del default e l’importo dell’esposizione al momento del default (Exposure At Default, EAD)
+
+
+== LGD e metodo di calcolo del rischio di credito ==
+L'accordo di Basilea 2 prevede che solo le banche che utilizzano l'internal rating-based approach siano interessate all'uso della severity of loss. Gli istituti che si avvalgono del metodo Advanced (AIRB) stimano la LGD internamente, al contrario quelli che utilizzano il metodo Foundation (FIRB) utilizzano dei coefficienti dettati dall'Autorità di Vigilanza a seconda delle caratteristiche del credito.
+Per accedere ai metodi appena citati, le banche devono essere accreditate dagli organi nazionali di vigilanza, i quali verificano il rispetto dei requisiti necessari; qualora non ne facessero richiesta, utilizzeranno il New standardised approach (metodo di base) che è basato in via principale sul rating esterno, quindi non richiede la determinazione autonoma di LGD.
+
+Il calcolo della LGD è facilmente comprensibile con l'aiuto di un esempio: se il cliente è inadempiente su un debito in essere di $ 200.000 e la banca o la compagnia di assicurazioni può vendere il titolo (ad esempio, un condominio) per un prezzo netto di $ 160.000 (compreso il riacquisto- costi correlati), allora la LGD è del 20% (= $40.000 / $200.000).
+Teoricamente, la LGD viene calcolata in diversi modi, ma la più popolare è la LGD "lorda", dove le perdite totali sono divise per esposizione al default (EAD). Un altro metodo consiste nel dividere le perdite per la parte non garantita di una linea di credito (dove la garanzia copre una parte dell'EAD). Questa è nota come LGD 'Blanco'. Se il valore della garanzia è zero in quest'ultimo caso, allora la LGD Blanco è equivalente alla LGD lorda. Per questo, possono essere utilizzati diversi tipi di metodi statistici.La LGD lorda è più popolare tra gli accademici per la sua semplicità e perché gli accademici hanno accesso solo ai dati del mercato obbligazionario, dove i valori collaterali sono spesso sconosciuti, non calcolati o irrilevanti. La LGD bianca è popolare tra alcuni professionisti (banche) perché le banche hanno spesso molte strutture garantite e le banche vorrebbero suddividere le loro perdite in perdite di quote non garantite e perdite di quote garantite a causa del deprezzamento della qualità della garanzia. Quest'ultimo calcolo è anche un requisito avanzato di Basilea II, ma la maggior parte delle banche non è abbastanza sofisticata in questo momento per fare quel tipo di calcolo. 
+
+
+== Tecniche di stima ==
+
+
+=== Actual payouts approach ===
+Usato per stimare la LGD dei prestiti bancari grazie alla sua capacità di catturare l'entità delle somme recuperate, nonché di tempi e costi impiegati per il rimborso del credito.
+
+  
+    
+      
+        L
+        G
+        D
+        =
+        1
+        −
+        
+          
+            
+              
+                ∑
+                
+                  t
+                  =
+                  1
+                
+                
+                  N
+                
+              
+              V
+              
+                R
+                
+                  t
+                
+              
+              
+                /
+              
+              (
+              1
+              +
+              i
+              
+                )
+                
+                  t
+                
+              
+              −
+              
+                ∑
+                
+                  t
+                  =
+                  1
+                
+                
+                  N
+                
+              
+              C
+              
+                A
+                
+                  t
+                
+              
+              
+                /
+              
+              (
+              1
+              +
+              i
+              
+                )
+                
+                  t
+                
+              
+            
+            
+              E
+              A
+              D
+            
+          
+        
+      
+    
+     
+  
+Con:
+
+  
+    
+      
+        V
+        
+          R
+          
+            i
+          
+        
+      
+    
+     
+  : ammontare del valore dei crediti recuperati
+
+  
+    
+      
+        C
+        
+          A
+          
+            t
+          
+        
+      
+    
+     
+  : spese per il recupero del credito
+
+  
+    
+      
+        E
+        A
+        D
+      
+    
+     
+  : exposure at default (esposizione al momento del default), ossia il valore delle attività di rischio per cassa
+
+  
+    
+      
+        i
+      
+    
+     
+  : valore finanziario del tempo (tasso di interesse)
+
+  
+    
+      
+        t
+      
+    
+     
+  : tempo in cui verranno recuperati i crediti e sostenute le speseÈ evidente che la LGD è espressa come il complemento a uno del valore del credito recuperato, al netto dei costi legali e amministrativi sostenuti per il recupero e del costo finanziario del tempo intercorso tra il verificarsi dello stato di default e il recupero effettivo (chiusura del contenzioso).
+
+
+=== Market price approach ===
+Utilizzato per la stima delle obbligazioni quotate.
+Il tasso di recupero (recovery rate) in questo caso è il rapporto tra il valore di mercato del titolo a trenta giorni dal default e il valore nominale dello stesso. La LGD, come nel caso precedente, non sarà altro che il complemento a uno del tasso di recupero.
+
+  
+    
+      
+        L
+        G
+        D
+        =
+        1
+        −
+        
+          
+            
+              V
+              
+                D
+                
+                  M
+                  K
+                  T
+                
+              
+            
+            
+              V
+              N
+            
+          
+        
+      
+    
+     
+  
+In cui:
+
+  
+    
+      
+        V
+        
+          D
+          
+            M
+            K
+            T
+          
+        
+      
+    
+     
+  : valore di mercato dell'obbligazione a un mese dal default
+
+  
+    
+      
+        V
+        N
+      
+    
+     
+  : valore nominale del titolo
+
+
+== Note ==
+
+
+=== Annotazioni ===
+
+
+=== Fonti ===
+
+
+== Bibliografia ==
+G. De Laurentis, Il credito alle imprese dopo la crisi, Bancaria Editrice, 2011
+Banca d'Italia, Circolare n 263 del 27 dicembre 2006
+
+Basel II: Revised international capital framework (BCBS)
+Basel II: International Convergence of Capital Measurement and Capital Standards: a Revised Framework (BCBS)
+Basel II: International Convergence of Capital Measurement and Capital Standards: a Revised Framework (BCBS) (November 2005 Revision)
+Basel II: International Convergence of Capital Measurement and Capital Standards: a Revised Framework, Comprehensive Version (BCBS) (June 2006 Revision)
+Validating Risk Rating Systems under the IRB Approaches, HKMA
+Basel II: Benefiting from improved risk management and governance
+(EN) Giuseppe Orlando, Michele Bufalo e Henry Penikas, Modern Financial Engineering, in Topics in Systems Engineering, 2022-02, DOI:10.1142/12725. URL consultato il 19 dicembre 2022.
+
+
+== Collegamenti esterni ==
+ Risk Management, su financechannel.it. URL consultato il 22 aprile 2019 (archiviato dall'url originale il 19 dicembre 2014).
+https://www.bancaditalia.it/compiti/vigilanza/normativa/archivio-norme/circolari/c263/Circ_263_annotata_V03.pdf Archiviato il 10 settembre 2016 in Internet Archive.

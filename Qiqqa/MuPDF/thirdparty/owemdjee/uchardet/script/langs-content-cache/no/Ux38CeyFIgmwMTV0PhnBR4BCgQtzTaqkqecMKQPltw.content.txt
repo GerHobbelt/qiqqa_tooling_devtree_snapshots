@@ -1,0 +1,93 @@
+revision: 19299387
+title: Integrert krets
+url: https://no.wikipedia.org/wiki/Integrert_krets
+
+
+---
+
+En integrert krets er en elektronisk krets som består av flere elementer som er plassert på samme halvlederkrystall. Antallet elektroniske elementer kan variere fra noen titalls til flere hundre millioner. Integrerte kretser har vært en forutsetning for utviklingen innen mobilkommunikasjon og trådløs kommunikasjon generelt, PC-er, klokker, implantater etc. Integrerte kretser har en generell anvendelse innen alle produktgrupper som omfatter elektronikk. Man finner integrerte kretser i hvitevarer (kjøleskap, vaskemaskiner, strykejern), brunevarer (TV, stereoanlegg), biler, dimmere, sensorer og alarmer o.s.v.
+Jack Kilby som var ansatt i Texas Instruments, utviklet den første integrerte kretsen i 1958. For denne oppfinnelsen ble han tildelt nobelprisen i fysikk i 2000.
+Integrerte kretser kalles også «micro chips» eller «monolittiske» kretser (Monolitt = «(av) én sten»).
+Betegnelsen integrerte kretser står i motsetning til «diskrete komponenter», hvor hvert elektronisk element er bygget inn i en selvstendig fysisk pakke.
+Sammenliknet med diskrete komponenter har integrerte kretser en rekke fordeler:
+
+Mindre størrelse
+Lavere vekt
+Færre komponenter
+Enklere logistikk
+Høyere klokke- og signalfrekvenser
+Høyere pålitelighet (En vesentlig feilårsak i elektronikk er brudd på kretskortet. Ved kretsintegrasjon reduserer man denne feilkilden)
+Mer motstandsdyktig og lettere å beskytte i tøffe omgivelser (kjemisk, temperatur, trykk o.s.v.)
+Lavere effektforbruk (medfører både mindre varme og at modulen kan fungere lenger på den samme energimengden)
+Mindre følsom for de fleste typer støy
+Genererer mindre støy
+Lavere stykkpris i medium og høye volumer (Ved høye volum er produksjonsprisen ca 1 USD).
+Bedre mulighet for å skjule konstruksjonsløsninger
+Bedre total systemytelse
+Økt fleksibilitet (noe funksjonalitet kan bare bli implementert på integrerte kretser)
+Bedre optimalisering mot sensorer, resulterende i bedre signalkvalitetIntegrerte kretser deles gjerne inn i standardkomponenter og ASICs (Application Specific Integrated Circuits). Standardkomponenter er fritt tilgjengelige komponenter som selges av produksjonsbedriftene. ASICs (på norsk: «bruksdefinerte kretser») er integrerte kretser som blir produsert på bestilling for et spesielt formål.
+Norge er og har vært en vesentlig aktør innen utvikling av integrerte kretser og omsetter for flere milliarder årlig.
+
+
+=== Integrert krets-teknologi ===
+Integrerte kretser kan utvikoes i forskjellige halvledermaterialer eller kombinasjoner av halvledermaterialer. Sterkt dominerende er silisium (Si). Eksempler på andre alternativer er f.eks. galliumarsenid (GaAs) og silisiumkarbid (SiC).
+Innen hvert halvledermateriale er det ofte flere alternativer. Innen silisium kan man f.eks. ha CMOS, bipolare transistorer, eller kombinasjonen BiCMOS. Man kan også ha SOI (Silicon on Isolator) hvor det aktive halvlederområdet ligger på toppen av en isolator. Det finnes også teknologier som er spesielt egnet for høye spenninger (opp mot noen tusen volt), høye temperaturer (opp mot 500 grader), som er mer motstandsdyktig mot høy partikkel- eller røntgenstråling, eller har tilpasning for lysfølsomme sensorer (billedpiksler), MEMS-strukturer, frie spoler, frie kondensatorer o.s.v.
+En annen viktig karakteristikk er linjebredden. Linjebredden er egentlig lengden til «gate» (kontrollinngangen til CMOS-transistorer), men alle andre bredder, lengder, tykkelser o.s.v. skaleres forholdsvis lineært med gate-lengden. Typiske linjebredder i dag er 90 nm, 45 nm og 25 nm. Vanligvis er det ren digital elektronikk som bruker de minste linjebreddene, mens analog elektronikk bruker mer konservative størrelser.
+
+
+== Utviklingstrinn for integrerte kretser ==
+Utvikling av integrerte kretser består av to trinn: konstruksjon og produksjon. Noen bedrifter tilbyr både konstruksjon og produksjon, mens andre tilbyr bare én av delene. Noen av produksjonsbedriftene («process fabs») tilbyr produksjonslinjen kun for interne konstruksjonsmiljøer, mens det vanligste er å tilby dette fritt. Antallet konstruksjonsbedrifter (uten produksjon = «fabless design houses») er vesentlig større enn antall produksjonsbedrifter. I utgangspunktet er disse uavhengige av produksjonsbedriftene, og kan tilby konstruksjon for flere forskjellige teknologier. Imidlertid er det tids- og  arbeidskrevende å skifte teknologi. Derfor vil konstruksjonshusene ofte knytte seg til én eller få produksjonsbedrifter.
+
+
+=== Konstruksjon ===
+Konstruksjon består av to deler: skjema-/nettlisteutvikling og utlegg. 
+Nettlisteutvikling av digitale deler gjøres gjerne i et høynivåspråk som VHDL eller Verilog og verifiseres på FPGAer. For å utvikle analoge kretser brukes kretsskjemaverktøy og kretssimulatorer. Konstruktøren vil ta utgangspunkt i et bibliotek av celler (kretsmoduler) og modifisere dem ved behov. Ofte vil det være nødvendig å modifisere cellene nærmest sensorene for å kunne oppnå optimale signalforhold.
+Utlegg innebærer å bestemme den fysiske plasseringen av elementene. Utleggfasen avsluttes med at det genereres en datafil (GDSII-format) som sendes til prosesshuset (produksjonsfabrikken). Hvis en digital krets er utviklet i et høynivåspråk som VHDL eller Verilog, vil synteseverktøy kunne utvikle utlegget i løpet av noen timer. Ved utlegg av analoge kretser vil verktøy som plasserer og forbinder elementene automatisk kunne gi stor tidsbesparelse.
+
+
+=== Produksjon ===
+Produksjon består at to faser: maskegenerering og prosessering.
+Maskegenerering kan sammenlignes med (og innebar tidligere) å lage den negative filmen før man starter volumproduksjon. Maskegenerering er en forholdsvis dyr prosess, spesielt i de mest moderne teknologiene med de minste linjebreddene. Produksjonshuset tilbyr derfor forskjellige muligheter hvor det blir satt sammen bidrag fra flere forskjellige aktører for å redusere prisen.
+Prosesseringen gjøres på «wafere». Wafere er runde skiver med en diameter på mellom fire og 22 tommer som er skåret ut av sylindriske barrer. Waferne er vanligvis under 1,5 mm tykke, typisk rundt 0,8 mm. På et wafer repeteres produksjonsmasken, slik at man vil få et større antall like moduler. Produksjonen innebærer blant annet å deponere mønstrede lag på waferet, slik at gasser av forskjellig sammensetning får tilgang til strukturer bestemt av masken. Dette er prosesser som krever optimale gasskonsentrasjoner, trykk og temperaturer, og som det er vanskelig å akselerere. Produksjonstid er mellom tolv og seksten uker, avhengig av antall maskelag. Dette har nærmest vært uendret i løpet av de siste 30 år.
+
+
+== ASIC ==
+Tidligere var det vanlig at bedrifter fikk utviklet egne ASICs for sitt spesielle behov. En årsak til at dette ikke lenger er så vanlig er det store utvalget i standardkomponenter som nå er tilgjengelig. Blant annet finnes det nå FPGAer som kan implementere store digitale systemer på en brikke. Selv om markedet for ASICs er redusert, er det fortsatt en del situasjoner hvor ASIC er foretrukket:
+
+Når en ønsker å oppnå ytterligere forbedring av de generelle fordelene til integrerte kretser (listet over). Man vil alltid kunne oppnå bedre resultat for alle de listede punktene med en ASIC enn med standardkomponenter. I noen tilfeller vil det være strengt nødvendig (f.eks. ved utvikling av et implantat). I andre tilfeller vil det gi en markedsmessig fordel (lavere pris i store volum, lavere effektforbruk, større robusthet/pålitelighet e.l.)
+Når kretsen skal operere under andre forhold enn det standardteknologier tilbyr. Eksempel er kretser som skal operere under høye temperaturer (125-450 grader), høye spenninger (5-2000 V), eller som skal fungere i spesielt strålingsutsatte miljøer (i satellitter, røntgen- eller måleutstyr for partikkeldeteksjon etc.)
+Kretser som består av ikke-digitale moduler. Eksempler er analoge moduler, MEMS-strukturer, optiske sensorer, fritthengende spoler og kondensatorer. Det samme gjelder enkeltelementer (I/O) som krever spesielt høy spenning o.s.v.
+Analoge front end-kretser for sensorutlesning. Optimal tilpasning mellom sensor og front end-elektronikk er essensiell for å få mest mulig informasjon ut av sensorsignalet (Se Støy (elektronikk)). Løsninger med standardkomponenter vil ofte ikke være optimale, og en vil miste noe av signalinformasjonen.
+
+
+== Integrert kretskonstruksjon og -produksjon i Norge ==
+Norge har hatt og har en betydelig aktivitet innen dette området.
+Noen hovedpunkter:
+
+Olaf Stavik konstruerte og produserte den første norske integrerte kretsen i 1963 ved SI (Senter for Industriforskning, nå SINTEF). Den hadde ca ti elementer. SI produserte sensorer og elektronisk integrerte kretser frem til 1975, da produksjonen ble begrenset til sensorer. Med unntak av SI har alle andre norske miljøer og bedrifter vært «fabless», d.v.s. selve produksjonen har foregått ved bedrifter utenfor Norge. (SINTEFs nåværende ASIC-gruppe er «fabless»).
+Fra 1970-tallet dukket det opp forskningsmiljøer og bedrifter med aktivitet på digital ASIC-konstruksjon.
+På begynnelsen av 1980-tallet startet man med undervisning i integrert kretskonstruksjon ved Universitetet i Oslo (1979) og NTH (NTNU) i Trondheim (1980).
+På 1990-tallet skjedde det et skifte i strategi for bedriftene. Med noen få unntak hadde fokuset vært på digital konstruksjon. En del av bedriftene sluttet med integrert kretskonstruksjon og fortsatte i stedet med digital utvikling for FPGAer. Andre bedrifter skiftet fra digital design til analog design. Flere av bedriftene som skiftet til analog design fokuserte på RF/trådløs-kommunikasjon, men det dukket også opp bedrifter innen røntgen- og partikkeldeteksjon og CMOS-kameraer. Bedriftene satset også på å utvikle egne serier med standard kretser for fritt salg og i mindre grad ønsket å utvikle spesiallagde integrerte kretser for én eller noen få kunder.Noen tidligere/nåværende norske bedrifter og miljøer med aktivitet innen integrert kretskonstruksjon:
+
+SI/SINTEF: signalkritisk sensorutlesning (innen de fleste områder) og spesielt krevende omgivelser,
+AE/AME: Trykkmåling
+Sun Microsystems/Dolphin/Norsk Data/Kongsberg Defence Systems/FFI: Digitale systemer, nettverk og multiprosessering
+Micrel/Bluechip/Gran-Jansen: RF
+Gamma Medica/Ideas: Røntgen og partikkeldeteksjon
+Interon: Røntgen og partikkeldeteksjon
+Atmel: Laveffekt mikroprosessorer
+Nordic Semiconductor: RF
+Texas Instruments/Chipcon: RF
+Omnivision/Micron/Photobit: CMOS-kameraer
+Novelda: UWB (Ultra-Wide-Band) kortdistanse radar
+EB/ABB: Digitale prosesseringsmoduler
+Kitron/Norkrets/STK: Digitale nettverksmoduler
+Silicon Labs/EnergyMicro: 32-bit ARM-prosessorer
+
+
+== Referanser ==
+
+
+== Eksterne lenker ==
+(en) Integrated circuits – kategori av bilder, video eller lyd på Commons 
+(en) Integrated circuit – galleri av bilder, video eller lyd på Commons

@@ -1,0 +1,171 @@
+revision: 286724
+title: computer
+url: https://mt.wikipedia.org/wiki/Kompjuter
+
+
+---
+
+Kompjuter hu magna li jimplimenta l-operazzjoni u l-funzjonijiet ta' magna ta' Turing.  Fi kliem iktar sempliċi, kompjuter hu magna elettronika diġitali li, taħt il-kontroll ta' programmi u struzzjonijiet, jipproċessa informazzjoni maħżuna biex jipproduċi informazzjoni oħra. Jeżistu diversi tipi ta' komputers, għal xogħlijiet speċifiċi u ta' daqsijiet varji.  Minn daqsijiet ta' sala li kapaċi jagħmlu diversi tipi ta' operazzjonijiet għal dawk żgħar ħafna bħal ċirkwit integrat kbar ftit millimetri li joqgħodu ġewwa arloġġ jew xi ġugarell.  Biss kollha kemm huma jobdu ċertu regoli: kollha għandhom memorja u proċessur ċentrali (CPU).
+Kull kompjuter għandu jobdi programm: għaldaqstant, kompjuter mingħajr programm hu magna inutili u bla skop. L-iktar programm bżonjuż għal kull kompjuter hi s-sistema operattiva li tieħu ħsieb li tikkontrolla il-magna, ir-riżorsi tagħha u l-programmi l-oħra li jkunu qegħdin joperaw.  Il-programm imsejjaħ sistema operattiva jipprovdi wkoll mezz biex dak li jkun juża' u jekk hemm bżonn jinteragixxi mal-kompjuter.  Il-programmi l-oħra huma ħafna drabi msejħa applikazzjonijiet jew softwer.  Il-parti fiżika, il-magna, hi msejħa hardwer.
+
+
+== Storja tal-kompjuters ==
+Biex tapprofondixxi, ara l-artiklu:  Storja tal-Kompjuters. 
+Oriġinalment il-kelma "kompjuter" kienet tirreferi għal persuna li kienet tagħmel kalkulazzjonijiet matematiċi, ħafna drabi bis-saħħa ta' apparat mekkaniku jew analogu.  Eżempji ta' dan l-apparat, meqjusin bħala l-antenati tal-kompjuters, huma l-abacus u l-mekkaniżmu Antikythera, apparat antik grieg li kien jintuża fis-sena 87 QK biex jiġi kalkulat l-movimenti tal-pjaneti. Lejn l-aħħar tas-Snin Medjevali matematiċi u inġinira Ewropej kienu fuq il-quċċata ta' riċerka u żvilupp f'dan il-qasam u fl-1623 Wilhelm Schickard żviluppa l-ewwel kalkulatur mekkaniku minn ħafna li ġew warajh.Fl-1801, Joseph Marie Jacquard għamel innovazjoni meta ħoloq magna tal-ħjata li kienet tuża karti b'toqob biex tħejt disinju komplessi.  Għalkemm din il-magna msemmijha għalih, Il-Magna Jacquard mhiex kunsidrata bħala kompjuter kienet pass fid-direzzjoni t-tajba għal kompjuters tal-llum.
+Charles Babbage kien l-ewwel li ddisinja l-ewwel kompjuter programmabli fis-sena 1820, iżda minħabba l-limiti tat-teknoloġija ta' dak iż-żmien u nuqqas ta' fondi, l-apparat qatt ma ġie mibni f'ħajtu.  Sa l-aħħar tas-seklu dsatax kienu krejati numru ta' teknoloġiji li l-quddiem kienu ser ikunu mportanti fil-bini tal-kompjuters.  Fl-1843, Ada Lovelace, bint Lord Byron, żviluppat dak li hu meqjus bħala l-ewwel programm tal-kompjuters: programm li bis-saħħa tal-magna ta' Babbage (li kieku kient mibnija) kien jikkalkula l-problema tan-numri ta' Bernoulli.
+Fl-ewwel nofs tas-seklu għoxrin, ħafna kalkulazzjonijiet xjentifiċi kienu solvuti permezz ta' kompjuters analogi, magni speċifiċi biex isolvu problema speċifika, li kienu juża mudell mekkaniku jew elettriku.  Dan saru rari wara l-iżvilupp tal-kompjuter diġitali programmabbli.
+Fis-snin 1930 u 1940 inbnew kompjuters iktar bsaħħithom u flessibli, li mil-mod introduċew funzjonijiet ġodda li nsibuhom f'kompjuters moderni bħala l-użu tat-teknoloġija diġitali eletronika (prinċipalment ivvintata minn Claude Shannon fis-sena 1937) u programmabilita iktar flessibli.
+
+Hu diffiċli li ngħidu liema kien l-ewwel kompjuter diġitali.  Fit-12 ta' Mejju, 1941  Konrad Zuse żviluppa l-ewwel kompjuter eletromekkaniku diġitali (iz-Z3).  Dan kien l-ewwel kompjuter li uża l-aritmetika binarja.  Oħrajn importanti ġew dak iż-żmien bħal kompjuter Atanasoff-Berry, il-kompjuter  Harvard Mark I (fis-sena 1944), il-kompjuter Amerikan ENIAC (1946 u bbażat fuq is-sistema deċimali) li kien l-ewwel kompjuter eletroniku għal użu ġenerali (għalkemm mhux oriġinalment hekk).
+It-tim li żviluppa l-ENIAC, tgħallem mid-difetti li kellu dan il-kompjuter u żviluppa disinn iktar eleganti magħruf illum bħala l-arkitettura ta' Von Neumann.  Din l-arkitettura saret il-bażi ta' kull kompjuter tal-lum.  Żviluppi oħra fuq dan il-mudell saru l-Ingilterra lejn l-aħħar tas-snin erbgħin fosthom insibu lil EDSAC. 
+Fis-snin ħamsin valvoli (tubi) kienu wżati; eventwalment imbiddla għal transistors fis-snin sittin; u fis-snin sebgħin, l-introduzzjoni tat-teknoloġija taċ-ċirkwit integrat wassal biex il-kompjuters setgħu ikunu irħas biżżejjed biex individwi setgħu ikollhom wieħed.
+Forsi hemm min jgħid li qisa t-tekonloġija waqfet għax sal-lum għadna nużaw dawn it-tip ta' kompjuters.  Mhux hekk!  Żviluppi oħra hemm iżda it-teknoloġija taċ-ċirkwit integrat kompliet tiżviluppa u infatti l-iżviluppaturi baqgħu minn dak iż-żmien l-hawn jobdu il-liġi ta' Moore (miktuba minn Gordon E. Moore fundatur ta' Intel) li tgħid li kull sentejn ser jirdipjaw it-transistors ġewwa iċ-ċirkwit integrat u l-prezz jorħos proporjonalment.  Bħala eżempju, li kieku ġara l-istess fl-industija ta' l-avjazzjoni, vjaġġ minn New York sa Pariġi li fl-1978 kien jiswa $900 u kien jieħu sebgħa siegħat, ikun illum jiswa $0.01 u jieħu inqas minn sekonda!
+
+
+== Ġenerazzjonijiet tal-kompjuters ==
+
+
+=== L-ewwel ġenerazzjoni (1940-1956): Tubi tal-vacuum ===
+
+L-ewwel kompjuters kienu jużaw tubi tal-vacuum għaċ-ċirkwijt tagħhom u bombli magnetiċi (bl-Ingliż magnetic drums) għall-memorja tagħhom.  Huma kienu għaljin ħafna fil-prezz u barra li kienu jużaw ħafna enerġija elettrika kienu jiġġeneraw sħana kbira li ħafna drabi kienet tkun il-kawża prinċipali tal-malfunzjonament tagħhom.
+L-ewwel ġenerazzjoni tal-kompjuters kienu jibbażaw fuq lingwi makkinarji biex jaħdmu u jipproċessaw l-istruzzjonijiet tagħhom.  Huma kienu kapaċi jsolvu problema waħda biss f'ħin wieħed.  Informazzjoni f'dawn il-kompjuters kienet tidħol permezz ta' punch cards jew tejp tal-karti u l-informazzjoni kont tista' taraha wara li tiġi stampata fuq karta.
+Il-kompjuters UNIVAC u ENIAC huma eżempju ta' kompjuters ta' l-ewwel ġenerazzjoni. UNIVAC kien l-ewwel kompjuter kummerċjali li fl-1951 kien magħmul għal klijent, l-Uffiċju taċ-Ċensiment Amerikan.
+
+
+=== It-tieni ġenerazzjoni (1956-1963): Transistors ===
+
+Transistors ħadu post it-tubi tal-vacuum fil-kompjuters tat-tieni ġenerazzjoni.  It-transistor kienu vvintati fl-1947 iżda l-użu tagħhom ftit li kien użat sa qabel l-aħħar tas-snin ħamsin.  It-transistor kien superjuri għat-tubu tal-vacuum u bis-saħħa tagħhom il-kompjuters setgħu jiċkienu, iżidu fil-veloċità ta' proċessar, jorħsu fil-prezz, jaħlu inqas enerġija u jkunu iktar affidabli mill-kompjuters ta' l-ewwel ġenerazzjoni.
+Għalkemm it-transistor xorta kien jiġġenera ħafna sħana li kien iwassal għal ħsara fil-kompjuter, dan kien żvilup sostanzjali mit-tubu tal-vacuum.  Dawn il-kompjuters xorta kienu jużaw il-punch card għad-dħul ta' informazzjoni u stampar għar-riżultat.
+Il-kompjuters tat-tieni ġenerazzjoni bdew jużaw lingwa simbolika magħrufa bħala assembly, lingwa li kienet tħalli l-programmatur jispeċifika struzzjonijiet fi kliem sempliċi u mhux numri u kodiċi tal-magna.  Dan iż-żmien bdew jiġu żviluppati wkoll lingwi ta' livell għola biex wieħed jipprogrammhom, fosthom, l-ewwel verżjonijiet tal-COBOL u FORTRAN.  Dawn kienu wkoll l-ewwel kompjuters li kienu jaħżnu struzzjonijiet fil-memorja.  Il-memorja issa kienet b'teknoloġija ġdida li kienet tuża kalamiti biex taħżen bits ta' informazzjoni.
+L-ewwel kompjuters ta' din il-ġenerazzjoni kienu żviluppati għall-industrija ta' l-enerġija atomika.
+
+
+=== It-tielet ġenerazzjoni (1964-1971): Ċirkwiti Integrati ===
+
+L-iżvilupp taċ-ċirkwit integrat kien dak li tefa' 'l quddiem il-kompjuters tat-tielet ġenerazzjoni.  It-transistors kienu mċekkna u mpoġġija fuq ċipep tas-silicon, imsejħa semikondutturi, li biddlu drastikalment l-veloċità ta' proċessar u effiċjenza tal-kompjuters.
+Minflok il-punch cards u stampar, l-utent setgħa jinteraġixxi mal-kompjuter permezz ta' kijbord u moniter biex jikkomunika ma' sistema operattiva li kienet tħalli l-apparat iħaddem applikazjonijiet diversi f'ħin wieħed bi proċessur ċentrali li kien jieħu jsieb il-memorja.  Għall-ewwel darba il-kompjuter setgħu jużawh ħafna iktar nies għax il-kompjuters tat-tielet ġenerazzjoni kienu iżgħar u orħos mill-kompjuters tal-ġenerazzjonijiet ta' qabilhom.
+
+
+=== Ir-raba' ġenerazzjoni (1971-llum): Mikroproċessur ===
+Il-mikroproċessur kien dak li ġab il-kompjuters tar-raba' ġenerazzjoni hekk kif eluf ta' ċirkwiti integrati kienu jiġu mpoġġija fuq ċippa waħda tas-silikon.  Dak li fl-ewwel ġenerazzjoni kien jimla kamra waħda setgħa issa joqgħod fuq l-idejn.  L-Intel 4004, żviluppata fl-1971, kienet ċippa waħda li fuqha kellha proċcessur ċentrali (CPU) u memorja.
+Fl-1981 l-IBM introduċiet l-ewwel kompjuters għall-utent fid-dar, u fl-1984 Apple introduċiet il-Macintosh.  Il-mikroproċessuri bdew ukoll jintużaw f'apparat ieħor li jintuża' fil-ħajja ta' kuljum.  Hekk kif dawn il-kompjuters daqstant żgħar bdew isiru iktar b'saħħithom setgħu jiġu maqgħuda f'networks li eventwalment wasslu għall-Internet.  
+Mal-kompjuters tar-raba' ġenerazzjoni kienu żviluppati interfaċċi grafiċi (GIU), il-maws, u apparat ta' l-idejn.
+
+
+=== Il-ħames ġenerazzjoni (1982-?): Intelliġenza Artifiċjali ===
+Il-kompjuter tal-ħames ġenerazzjoni hu proġett li beda fl-1982 mill-Ġappun.  L-idea tagħhom kienet li jibnu kompjuter mhux iktar billi jiffokaw fuq ħafna elementi f'ċippa waħda iżda billi jintużaw ħafna ċipep f'kompjuter wieħed u b'hekk ikun hemm proċessuri paralleli.  L-Intelliġenza artifiċjali kella tkun waħda mill-bżonnijiet għal dawn il-kompjuters bħal rikonoxximent tas-smigħ.
+Dawn il-kompjuters għadhom fi stadju ta' riċerka u sa issa għad m'hemm l-ebda kompjuter kummerċjali li juża din it-teknoloġija.  Biex jiddaħlu eluf ta' ċipep f'kompjuter wieħed l-ixjenzati qegħdin ifitxu metodi alternattivi, eżempju kompjuter bioloġiku fejn iċ-ċippa tkun molekula bioloġika.  Metodi oħra huma kompjuters kwantistiċi fejn pereżempju f'Awwisu tas-sena 2000, riċerkaturi ġewwa ċentru ta' riċerka IBM-Almaden żviluppaw kompjuter li kien juża in-nukleju ta' atomi tal-fluworin.
+L-iskop aħħari hu li jiġi żviluppat kompjuter li kapaċi jifhem u jinteraġixxi mal-bniedem b'mod naturali u f'xi każi billi jaqra anke l-moħħ!  Il-proġett oriġinali tal-Ġappun kien magħluq fl-1993 u ħafna jiddikjarawh fallut anke minħabba l-fatt li ħafna applikazzjonijiet li kellhom ikunu żviluppati għal din il-ġenerazzjoni ta' kompjuters ġew magħmula bi programmi tal-kompjuters tar-raba' ġenerazzjoni.
+
+
+== Komponenti ta' kompjuter ==
+
+
+=== Proċessur Ċentrali ===
+
+
+=== Il-Bord Prinċipali ===
+
+
+=== Memorja ===
+Biex tapprofondixxi, ara l-artiklu:  Memorja (Kompjuters).
+Meta ngħidu memorja ta' kompjuter ħafna drabi nkunu qegħdin nirreferu għal dik il-parti fil-kompjuter (f'kompjuter moderni hi ċippa) li żżomm informazzjoni.  Hi tinqasam fi tnejn:
+
+ROM (Memorja Mejta jew bl-Ingliż Read Only Memory) jew
+RAM (Memorja ħajja jew bl-Ingliż Random Access Memory).Mhux faċli li tinkiteb informazzjoni fir-ROM u għaldaqshekk ħafna drabi l-iskop prinċipali ta' ROM hi li żżomm il-firmwer, informazzjoni jew softwer speċjali għal kompjuter relatata mal-hardwer.
+Il-memorja RAM hi speċjali għax il-kompjuter jista' jaċċessa informazzjoni fi kwalunkwe post fiha mingħajr ma jrid jibda mill-ewwel parti (jiġifieri mhux sekwenzjali).  Ħafna drabi f'din it-tip ta' memorja tista' wkoll tikteb faċilment u allura hi dik il-memorja li tintuża waqt li kompjuter qiegħed jaħdem biex iżomm l-informazzjoni li l-programmi jkollhom bżonn dak il-mument.
+
+
+=== Periferali ===
+Biex tapprofondixxi, ara l-artiklu:  Apparat Periferali.
+Periferali hu hardwer li jiżdied ma' kompjuter biex jiżdiedulu l-abbiltajiet tiegħu.  Iktar minn hekk periferali huma apparati li huma opzjonali u mhux bżonjużi biex kompjuter bażiku jaħdem.  It-terminu periferali hu iktar użat għal apparati li jiżdiedu mal-kompjuter fuq barra bis-saħħa ta' konnesjonijiet bħal USB jew COM.  Eżempji tipiċi huma joystiks, printers, u skeners.  Apparat bħal moniter jew disk drajvs mhux konsiderati periferali meta mhux opzjonali.  Kards bħal vijdjo kards ukoll mhux konsiderati periferali għax huma apparati interni.
+
+
+== Programmi/Softwer ==
+Biex tapprofondixxi, ara l-artikli: Softwer u Programm (Kompjuter).Softwer tal-Kompjuter (softwer) hu programm li jgħin kompjuter jagħmel xogħol speċifiku.  Dan jinkludi applikazzjonijiet, bħal Word Processor, li jagħti faċilità lil min jużahom biex jagħmel xogħol speċifiku, jew Sistemi Operattivi li hu programm li jikkontrolla r-riżorisi tal-kompjuter.
+Il-kelma softwer ġiet użata f'dan is-sens għall-ewwel darba minn John W. Tukey fl-1957.  Fix-xjenza tal-kompjuter u inġinerija tas-softwer, il-kelma softwer tirreferi għal kull tip ta' programm tal-kompjuter.  Il-kunċett li jinqraw diversi linji ta' struzzjonijiet għal ġewwa l-memorja tal-kompjuter kienet ivvintata minn Charles Babbage bħala parti mill-magna tad-differenza tiegħu.  Din it-teorija hi l-bażi tal-softwer kollu propost l-ewwel darba minn Alan Turing fl-essej tiegħu tal-1935 Computable numbers with an application to the Entscheidungsproblem. 
+
+
+=== Sistema Operattiva ===
+Biex tapprofondixxi, ara l-artiklu:  Sistema Operattiva.Sistema Operattiva (bl-Ingliż Operating System) hu programm li jikkontrolla r-riżorsi tal-hardwer (il-magna fiżika) u tas-softwer.  Is-sistema operattiva hi ċ-ċentru tas-sistema tal-kompjuter għax tagħmel diversi xogħlijiet bażiċi bħal tikkontrolla u talloka memorja, tagħti prijorità lil struzzjonijiet li jingħataw, tikkontrolla l-periferali ta' input (dħul ta' informazzjoni) jew output (ħruġ ta' informazzjoni), tiffaċilita networks u l-immaniġjar tal-fajls.
+
+
+=== Applikazzjonijiet ===
+Biex tapprofondixxi, ara l-artiklu:  Applikazzjonijiet (Kompjuter).
+
+
+== Kif jaħdem kompjuter ==
+
+
+== Tipi differenti ta' kompjuters ==
+
+
+=== Superkompjuter ===
+Superkompjuter hu kompjuter b'hardwer b'sahhtu hafna u generalment jintuzaw ghal skopijiet xjentifici. Ezempji ta' dawn it-tip ta' Kompjuters huma l-Cray computers u l-IBM Roadrunner
+
+
+=== Mejnfrejm ===
+
+
+=== Minikompjuter ===
+
+
+=== Mikrokompjuter ===
+
+
+=== Kompjuter tad-dar ===
+
+
+=== Kompjuter personali ===
+
+
+=== Assistent diġitali personali (PDA) ===
+
+
+=== Mikrokontrollur ===
+
+
+=== Kompjuter kwantistiku ===
+
+
+== Nies Importanti fid-Dinja tal-Kompjuters ==
+Biex tapprofondixxi, ara l-artiklu:  Nies Importanti fid-Dinja tal-Kompjuters.
+Alan Turing, Matematiku Ingliż u kriptografu
+Charles Babbage, inventur tal-kompjuter li jista' jiġi pprogrammat
+Ada Lovelace, l-ewwel persuna li żviluppat programm tal-kompjuters
+Tim Berners-Lee, inventur tal-World Wide Web
+Larry Ellison, Gordon E. Moore u Bob Miner, , fundaturi tal l-Oracle Corporation
+Marc Ewing, żviluppatur ta' Red Hat Linux
+Bill Gates u Paul Allen, fundaturi tal-Microsoft
+James Gosling, "missier" il-Lingwa Java
+Steve Jobs, fundatur ta' l-Apple
+Bill Joy, fundatur ta' Sun Microsystems u BSD
+Brian W. Kernighan, Dennis M. Ritchie, żviluppaturi tal-Lingwa C
+Gordon E. Moore, fundatur ta' l-Intel u l-persuna li ħoloq Ir-Regola ta' Moore
+Niklaus Wirth, żviluppatur tal-Lingwa Pascal
+
+
+== Kumpaniji tal-Kompjuters ==
+
+
+=== Internazzjonali ===
+Biex tapprofondixxi, ara l-artiklu:  Kumpaniji tal-Kompjuters (Internazzjonali).Dawn huma uħud mill-ikbar kumpaniji tal-kompjuters fid-diinja.  Ara l-artiklu prinċipali għal iktar.
+
+Apple
+IBM
+Microsoft
+Oracle
+
+
+=== Maltin ===
+Biex tapprofondixxi, ara l-artiklu:  Kumpaniji tal-Kompjuters (Malta).
+
+
+== Definizjonijiet ==
+Diġitali – jaħdem billi juża bits (0 u 1)
+Elettroniku – jikkonsisti f'komponenti msejħa Ċirkwit Integrat (ICs), bla ebda parti li tiċċaqlaq
+Programm ta' Struzzjonijiet – sekwenza ta' struzzjonijiet li meta jinħadmu isolvu problema jew jagħmlu xi biċċa xogħol
+Proċess – l-operazzjoni fuq l-informazzjoni biex tiproduċi riżultat.
+
+
+== Referenzi ==

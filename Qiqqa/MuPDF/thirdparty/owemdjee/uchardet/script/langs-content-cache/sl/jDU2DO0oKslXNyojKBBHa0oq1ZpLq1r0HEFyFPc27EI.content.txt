@@ -1,0 +1,14 @@
+revision: 5406783
+title: Amazon Web Services
+url: https://sl.wikipedia.org/wiki/Amazon_Web_Services
+
+
+---
+
+AWS ali Amazon Web Service, je spletna storitev gostovanja v oblaku (angl. Cloud hosting), katerega ponuja Amazon. AWS je bil dolgo dominanten na tržišču gostenja v oblaku, dokler se ni pojavil Microsoftov Azure in Googlov Cloud.
+
+
+=== Kako deluje? ===
+AWS simulira operacijski sistem na strežniku. Navadno je na enem strežniku več simulacij, namreč tako prihranijo denar in električno energijo. Temu pravimo "oblak". Zaradi te simulacije, kateri lahko pravimo tudi emulacija lahko v minutah postavijo oblak s katerim koli operacijskim sistemom, najbolj popularen pa je Linux! Razvijalci ključ za dostop dobijo takoj po plačilu, kar jim omogoča da takoj razširijo kapacitete ali postavijo strežnik!
+Povežejo se z SSH konektorjem med računalnikom, kot je na primer PuTTY ali py WinSCP, in tako na daljavo upravljajo strežnik!
+Razvijalec si izbere eno od možnosti gostovanja, naj bo to shramba datotek, velika baza podatkov ali pa enostavno gostovanje z IP naslovom!

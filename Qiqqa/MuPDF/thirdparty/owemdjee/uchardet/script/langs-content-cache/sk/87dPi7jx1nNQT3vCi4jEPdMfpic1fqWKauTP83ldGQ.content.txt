@@ -1,0 +1,47 @@
+revision: 7400063
+title: Para
+url: https://sk.wikipedia.org/wiki/Para
+
+
+---
+
+Para je prechodný stav medzi kvapalinou (resp. pevnou látkou) a typickým plynom. Je to teda stav nekvapalnej a nepevnej látky, ktorej teplota a/alebo tlak je relatívne blízko jej bodu premeny na kvapalnú alebo pevnú fázu. Detaily definície sa rôznia - pozri nižšie. 
+V niektorých textoch sa para (bez ohľadu na detaily jej definície) terminologicky chápe ako podtyp plynu, v iných ako opak plynu. Ak sa chápe ako opak plynu, tak sa para a plyn niekedy spolu označujú ako vzdušniny.
+Chápanie pary v bežnom jazyku je odlišné od fyzikálnej definície (teda od definícií preberaných v tomto článku)  - pozri para (rozlišovacia stránka).
+
+
+== Ukážky definícií ==
+Para je plyn v podmienkach blízkych ku skvapalneniu. 
+Para je plynné skupenstvo látky v blízkosti teploty varu príslušnej kvapaliny. 
+Para je látka v plynnom skupenstve pre teplotách nižších ako kritická teplota.
+Para je plynná fáza látky pri teplotách nižších, než je kritická teplota (teplota, pri ktorej mizne rozdiel medzi kvapalnou a plynnou fázou); zvyčajne definovaná možnosťou skvapalnenia púhou kompresiou pri konštantnej teplote.
+Para je plynu podobná fáza látky pri teplote pod jej kritickým bodom. Paru možno kondenzovať na kvapalinu alebo pevnú látku zvýšením jej tlaku alebo znížením jej teploty. 
+Para je plynná fáza látky, ktorá je buď v interakcii so svojou kvapalnou alebo pevnou fázou, alebo sa nachádza v stave, z ktorého sa malou zmenou teploty alebo tlaku dá spôsobiť jej kondenzácia. 
+Para je neviditeľný plyn, ktorý je v priamom styku s pevnou látkou alebo kvapalinou - väčšina látky je kvapalnom alebo pevnom stave, malá časť je plynná.
+Para je plyn tvoriaci sa v dôsledku uvoľňovania molekúl z látky nachádzajúcej sa v kondenzovanom stave (kvapalina, pevná látka) do voľného objemu
+Podľa A. N. Gurejeva panuje je v používaní termínov para a plyn neporiadok, preto sú podľa neho výrazy plyn a para v terminológii termodynamiky fázových premien voľne zameniteľné. 
+
+
+== Diagram teplota-entropia ==
+V diagrame teplota-entropia (pozri obrázok) sa oblasť pary nachádza vpravo od krivky sýtych pár (pravá časť modrej zvonovitej krivky) a pod kritickou teplotou (dotyčnica k vrcholu zvonovej krivky). Stav nad kritickou teplotou sa v termodynamike považuje za plyn. 
+
+
+== Vodná para ==
+V technických aplikáciách je vodná para najčastejším zástupcom pary. Napríklad parný stroj alebo parná turbína pracujú s vodnou parou, aj keď to nie je v ich názve uvedené. V energetike sa takáto para nazýva aj prehriata para. Kritický bod vodnej pary má parametre: 
+
+teplota: 374,2°C
+tlak: 22,0453 MPa
+merný objem: 0,00304 m3.kg-1
+
+
+== Pozri aj ==
+mokrá para
+
+
+== Referencie ==
+
+
+== Iné projekty ==
+
+ Wikicitáty ponúkajú citáty   od alebo o Para
+ Wikislovník ponúka heslo  Para

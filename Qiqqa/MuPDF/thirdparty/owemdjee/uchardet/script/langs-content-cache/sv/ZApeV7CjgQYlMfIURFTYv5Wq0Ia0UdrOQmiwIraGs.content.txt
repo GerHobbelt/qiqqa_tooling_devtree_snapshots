@@ -1,0 +1,78 @@
+revision: 52329607
+title: transistor
+url: https://sv.wikipedia.org/wiki/Transistor
+
+
+---
+
+Transistor är en halvledarkomponent som används som signalförstärkare, strömbrytare, spänningsreglerare och för signalmodulering, men även andra applikationer förekommer. Den fungerar som en varierbar "ventil" som styr en utspänning eller utström baserat på en inspänning eller inström. Transistorer tillverkas som diskreta komponenter eller som delar av integrerade kretsar.
+
+
+== Inledning ==
+Transistorer kan delas in i två huvudtyper, bipolära transistorer baserade på PN-övergångar (NPN eller PNP polaritet) samt unipolära fälteffekttransistorer (N-kanal eller P-kanal) med undergrupperna utarmningstyp och anrikningstyp. En transistor har vanligen tre anslutningar (elektroder) som, i enkla termer, tillåter en spänning eller ström på en av anslutningarna att styra strömflödet genom de två andra. Man kan också se det som att det är en resistans som kan påverkas av en elektrisk ström eller spänning. De fysikaliska processerna bakom denna så kallade transistoreffekt är mycket skilda hos de två transistortyperna, vilket återspeglas i deras symboler.
+Transistorn är en nyckelkomponent inom modern elektronik. I digitala kretsar verkar flera sammankopplade transistorer som snabba omkopplare och bygger därigenom upp till exempel Logisk grind och RAM (arbetsminne). I analoga kretsar används transistorer för linjära eller icke linjära förstärkare samt för många andra (mestadels) kontinuerliga funktioner som byggs upp tillsammans med passiva komponenter.
+Ordet transistor är en sammandragning av transfer-resistor (ung. "överförings-motstånd"). Transistorn liknades alltså vid ett slags styrbart motstånd med kontrollerbar resistans vilket var en träffande liknelse - för fälteffekt-transistorer, dock användes termen främst i samband med beskrivningen av den första bipolära transistorn, spetstransistorn.
+
+
+== Historia ==
+Den första transistorn var en JFET-transistor byggd med tunnfilmsteknik. Denna transistor patenterades 1925 av fysikprofessorn Julius Edgar Lilienfeld; Han hade då varit verksam som professor i 19 år och hade ett flertal patent på vakuumrör. En fungerande kopia av transistorn har i efterhand byggts enligt ritningen i patentet, med motsvarande tillgänglig laboratorieteknik som på 1920-talet, av Bret Crawford på Physics Department Gettysburg college. I patentet från 1925 visas också en ritning på en fungerande transistorradio.   
+Tre forskare vid Bell Laboratories Murray Hill N.J. USA, John Bardeen, Walter H. Brattain och William B. Shockley, tog fram en germaniumtransistor i juli månad 1948 och erhöll nobelpriset i fysik för transistorn 1956, vilket är en av skandalerna inom Nobelprisets historia, då Nobelkommittén missade att uppmärksamma de flera tidigare patentansökningarna på transistorer. Och det är uppenbart att det var väl känt inom Bell Laboratories att de fick Nobelpriset dels på den falska grunden att de skulle ha upptäckt transistoreffekten (på grund av att Shockley tidigare nekats patent på fälteffekttransistorn på grund av Julius tidigare patent) dels då det framgått av dokumentation från Bell Laboratories, att teamet byggt fungerande kopior av Julius Edgar Lilienfelds transistorer.[källa behövs]I de första generationerna kommersiella transistorer använde man grundämnet germanium som halvledarmaterial. I stort sett alla masstillverkade germaniumtransistorer (sådana som OC71, AC127, 2N35, etc) använde dock mer robusta principer och tillverkningsmetoder som "grown junction" (dvs en pn-övergång), "alloy junction" (legerad pn-övergång) och "surface barrier" (en metod som medgav tunnare bas och därmed snabbare transistor). Även planartekniken (senare standard för kisel och för integrerade kretsar) användes för att göra germaniumtransistorer.
+Morris Tanenbaum vid Bell Laboratories var 1954 en av de första att utveckla en fungerande transistor baserad på kisel, något som framåt slutet på 1960-talet kom att bli det vanligaste materialet, förutom i tillämpningar där minimalt framspänningsfall är önskvärt, så som slutsteg i batteridrivna förstärkare. Transistorer och dioder av germanium finns ännu att tillgå för speciella tillämpningar.
+Transistorn skulle komma att ersätta det betydligt större och mer effektkrävande elektronröret. Den främsta drivkraften bakom tidiga försök med halvledare, var möjligheten till en mindre förstärkarkomponent än elektronröret, då man visste att halvledare var kapabla till detta tack vare Julius Edgar Lilienfelds olika patent, samt framgångarna med halvledardioder, som till exempel Cat's-whisker detektorn (vilket är den första kända tillverkade halvledaren), vilket antydde att halvledare skulle kunna göras små. Men det var först när transistorn blev tillräckligt tillförlitlig, som den kunde börja ersätta elektronröret. Tillförlitligheten på transistorer var till en början mycket låg och kunde enkelt kortslutas av lösa mikroskopiska partiklar i transistorn. Detta kvalitetsproblem kom först att lösas efter att man uppfunnit planarprocessen med ett isolerande kiseloxidskikt som inte transistorn helt plötsligt kunde sluta fungera på grund av vibrationer som satte partiklar i rörelse i transistorn. De mycket användbara mekanismer man lyckats skapa i och med dopat halvledarmaterial, var en mängd önskvärda egenskaper:
+
+Obegränsad livslängd i och med att materialtransport via elektroder (främst glödkatoden) elimineras
+Robusthet - en i jämförelse med elektronrör praktiskt taget total stötokänslighet
+Större reproducerbarhet; särskilt vid små enheter
+Möjlighet till mycket små enheterEftersom elektronrörens statiska karaktäristika helt byggde på fälteffekt var det naturligt att försöka konstruera en med elektronrör analog fälteffekttransistor. De första uppmärksammade transistorerna var av bipolär transistorer, vars funktion mer i detalj klarlades först i efterhand. Fälteffekttransistorn var redan patenterad av Julius Edgar Lilienfeld, så Shockley kunde inte patentera en transistor, som kunde förklaras med en fälteffekt, vilket han egentligen önskade, och även försökte göra. 
+De tekniska landvinningarna inom transistortillverkningen ledde i mitten av 1960-talet till integrerade kretsar.
+
+
+== Inflytande ==
+Transistorn anses av många vara en av de största uppfinningarna i modern historia, i samma klass som boktryckarkonsten, bilen, och telefonen. Transistorer är nyckelkomponenter i nästan all modern elektronik. Den stora användningen av transistorer beror på att de är billiga att masstillverka genom högautomatiserade processer som driver ner kostnaden av en enskild transistor till nästan ingenting.
+Trots att diskreta (det vill säga separata) transistorer masstillverkas så fabriceras den överväldigande mängden av transistorer i integrerad form, på integrerade kretsar (eller mikrochips, chips). I kombination med främst dioder och resistorer, men även kondensatorer och andra komponenter, bildar de färdiga elektroniska kretsar. En Logisk grind brukar bestå av mellan två och tiotalet transistorer (beroende på typ, teknologi, och sammanhang). En enklare mikroprocessor kan göras med ca 2500 transistorer medan en avancerad processor år 2008 kan ha nästan 1 miljard och en mobilprocessor år 2019 kan ha uppåt 7 miljarder transistorer inklusive integrerade cacheminnen (som utgör merparten transistorer).
+Transistorns låga kostnad, och därigenom digitala datorers låga kostnad, har skapat en trend där information digitaliseras i en ökande takt. Eftersom datorer har förmågan att snabbt söka igenom, sortera, och behandla digital information läggs mer och mer ansträngning ner på att göra information tillgänglig direkt i digital form. Mycket media levereras idag direkt i digital form (musik på cd-rom, film på dvd) för att sedan omvandlas till analog form med hjälp av datorer och digital-analoga transistorkretsar.
+
+
+== Transistortyper ==
+
+Utöver de två typerna av transistorer som nämndes ovan kan man även kategorisera transistorer baserat på bland annat:
+
+Halvledarmaterial: germanium, kisel, galliumarsenid, kiselkarbid, indiumfosfid
+Polaritet: NPN, PNP, P-kanal, N-kanal
+Maximaleffekt: småsignaltransistorer samt effekttransistorer.
+Tillämpningsområde: switch, audio, digitallogik, högfrekvens, högspänning.
+Två sammanbyggda transistorer (för högre strömförstärkning) i samma kåpa kallas för en darligtontransistor.
+En schottkytransistor innehåller en diod i samma kapsel, vilket förhindrar mättning.
+En fototransistor kan användas för att mäta ljus, samt till optokopplare.Småsignaltransistorn kan vara optimerad för lågt brus och/eller hög frekvens. Switchtransistorerna skall vara snabba och ha lågt bottenspänningsfall. Effekttransistorn skall, som namnet anger, klara effekt, ofta i kombination med andra egenskaper som hög ström- och spänningstålighet.
+
+
+=== Polaritet ===
+Såväl bipolära som fälteffekttransistorer görs i komplementära utföranden, så kallade polariteter, som är varandras spegelbild, det vill säga att strömmar och spänningar har motsatta tecken. De bipolära utförandena kallas NPN och PNP, och fälteffekttransistorerna N-kanal och P-kanal. Fälteffekttransistorer har dessutom två ytterligare huvudgrupper beroende på styrelektrodens utförande: JFET (junction field effect transistor), med en PN-övergång, och MOSFET (metal oxide semiconductor field effect transistor) med ett skikt av kiseldioxid.
+I fråga om funktionssätt finns ingen skillnad mellan en PNP- och en NPN-transistor. Men den motsatta polariteten gör att strömmarna flyter i motsatt riktning.
+
+
+== Tillverkning ==
+Den idag vanligaste transistorkonstruktionen är yttransistorn (planartransistorn). Den kan tillverkas billigt genom att man i ett fotolitografiskt förfarande i ett steg framställer hundratals transistorer ur en och samma kiselplatta (wafer). Förfarandet används för såväl låg- som högeffektstransistorer. Den så kallade spetstransistorn, i vilken anoden är en tunn tråd som svetsats fast mot en kristallplatta, förekommer enbart vid högfrekventa applikationer.
+Germanium var grundmaterialet för de första halvledarkomponenterna. Materialet ger dåliga högfrekvensegenskaper, hög temperaturdrift och lägre temperaturtålighet än kisel. En fördel är det låga bottenspänningsfallet som gör att germaniumtransistorer kan vara att föredra i effekttransistorer, till exempel för spänningsomvandlare.
+Kisel är det material som dominerar idag. Kisel är billigt och det går att producera mycket snabba transistorer med en förstärknings/bandbreddsprodukt (fT) upp till många GHz, spänningar kring 1000 V eller mer. Det förekommer transistorer i kraftsammanhang som klarar 1000-tals ampere. Man kan dock inte få allt samtidigt. Transistorerna är som regel byggda för småsignals-, switch- eller effekttillämpningar.
+Vissa transistorer, till exempel HF-effektransistorer, har en speciell uppbyggnad med uppdelade funktioner, till exempel en stor mängd emittrar, för att klara hög effekt samtidigt som högfrekvensegenskaperna är goda.
+Till skillnad från kisel är III-V materialen dyra. III-V materialen kallas så därför att de är sammansatta av material i det periodiska systemets kolumner tre och fem. Det betyder materialkombinationer som galliumarsenid (GaAs) och indiumfosfid (InP). Galliumarsenid används framförallt inom mikrovågsområdet. Fälteffekttransistorer (FET) i galliumarsenid, GaAsFET, har lågt brus och är särskilt lämpliga i ingångssteg för, till exempel, radar- och satellitmottagare. De ger låg intermodulation men är känsliga för överspänningar och speciellt för elektrostatiska urladdningar innan de är inlödda i kretsarna. Indiumfosfid används i huvudsak inom optoelektroniken.
+
+
+== Se även ==
+Signalförstärkning
+Bipolär transistor
+Fälteffekttransistor
+Transistorradio
+Tyristor
+
+
+== Referenser ==
+Den här artikeln är helt eller delvis baserad på material från engelskspråkiga Wikipedia, Transistor, 30 november 2012.
+
+
+=== Noter ===
+
+
+== Externa länkar ==
+ Wikimedia Commons har media som rör Transistor.

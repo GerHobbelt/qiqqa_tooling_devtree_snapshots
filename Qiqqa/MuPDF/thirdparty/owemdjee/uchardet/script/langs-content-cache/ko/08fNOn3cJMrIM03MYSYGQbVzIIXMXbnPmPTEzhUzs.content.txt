@@ -1,0 +1,23 @@
+revision: 32503656
+title: "\uD074\uB7EC\uC2A4\uD130\uB9C1 \uACC4\uC218"
+url: https://ko.wikipedia.org/wiki/%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0_%EB%B6%84%EC%84%9D
+
+
+---
+
+클러스터 분석(Cluster analysis)이란 주어진 데이터들의 특성을 고려해 데이터 집단(클러스터)을 정의하고 데이터 집단의 대표할 수 있는 대표점을 찾는 것으로 데이터 마이닝의 한 방법이다. 클러스터란 비슷한 특성을 가진 데이터들의 집단이다. 반대로 데이터의 특성이 다르면 다른 클러스터에 속해야 한다.
+
+
+== 효율성 ==
+클러스터 분석을 통해 수백만의 데이터를 직접 확인하지 않고 각각 클러스터의 대푯값만 확인해 전체 데이터의 특성을 파악할 수 있다.
+
+
+== 클러스터 분석 기법 ==
+partitioning : data를 구간구간으로 나눠서 그들의 중심을 계산하는 것k-means : 각 구간을 나눈 다음 centroid를 찾고 centroid를 기준으로 구간을 다시 나누고 변경 사항이 있을 경우 다시 centroid를 찾아가는 방식
+강점 : 빠르다 O(tkn)임. t=반복수, k=클러스터수, n=data수. 일반적으로 n이 매우 크므로 O(n)과 비슷
+단점 : local optimum이 될 수 있다. 이 때는 시작점을 달리하여 시작하여 해결categorical value는 mean를 구하기가 애매하다. k값을 미리 정해야 한다. outlier나 noisy에 취약하다. 원형이외의 data는 잘 안된다.
+해결책 : 거리 계산 방법을 달리한다. frequency정보를 고려하여 계산한다.k-medoid : k-mean의 outlier에 약한 단점을 보완 centroid대신 medoid를 사용
+단점 : 느림 O( k * pow( (n-k), 2) )
+해결책 : 샘플링함clara : 샘플링한 k-medoid
+장점 : k-medoid보다 빠르다
+단점 : 샘플에 따라 결과값이 좌우된다.clarans : 근처에 있는 데이터들끼리 샘플링함

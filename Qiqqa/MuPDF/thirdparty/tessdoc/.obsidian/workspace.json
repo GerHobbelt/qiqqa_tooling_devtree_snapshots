@@ -1,0 +1,197 @@
+{
+  "main": {
+    "id": "4dd827200fc744af",
+    "type": "split",
+    "children": [
+      {
+        "id": "1f03ac2fddb12f0c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d07353a4073d5bd5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ViewerDebugging.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1a5614fcd63e7f04",
+    "type": "split",
+    "children": [
+      {
+        "id": "29bd856a444d027a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "70ddc50dde4161ed",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2e93748594764938",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c3cbf4740ef03506",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0057a9517ebd2452",
+    "type": "split",
+    "children": [
+      {
+        "id": "393c4452f37f328d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cec385fda0785b00",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "ViewerDebugging.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "81431165dfb128a5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "ViewerDebugging.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "47b5ddc1dc57312d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0a1e8f601614687a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "ViewerDebugging.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "d07353a4073d5bd5",
+  "lastOpenFiles": [
+    "tess4/The-Hallucination-Effect.md.BASE.md",
+    "tess4/The-Hallucination-Effect.md.REMOTE.md",
+    "tess4/The-Hallucination-Effect.md.LOCAL.md",
+    "BC44137.tmp",
+    "TesseractOpenCL.md.BASE.md",
+    "TesseractOpenCL.md.REMOTE.md",
+    "TesseractOpenCL.md.LOCAL.md",
+    "BC414C8.tmp",
+    "Common-Errors-and-Resolutions.md.BASE.md",
+    "Common-Errors-and-Resolutions.md.REMOTE.md",
+    "Common-Errors-and-Resolutions.md.LOCAL.md",
+    "examples/CMakeLists.txt",
+    "tess5/BC457F3.tmp",
+    "examples/phototest.tif",
+    "examples/devatest-rotated-270.png",
+    "examples/choices.png",
+    "BC4EA7C.tmp",
+    "BC4C366.tmp",
+    "tess4/BC42A6.tmp",
+    "BC4DAC.tmp",
+    "BC424D2.tmp",
+    "tesseract.wiki/Planning.md",
+    "tesseract.wiki/NeuralNetsInTesseract4.00.md",
+    "tesseract.wiki/Making-Box-Files---4.0.md",
+    "tesseract.wiki/ImproveQuality.md",
+    "tesseract.wiki/Home.md",
+    "tesseract.wiki/Fonts.md",
+    "tesseract.wiki/FAQ.md",
+    "tesseract.wiki/FAQ-Old.md",
+    "tesseract.wiki/Downloads.md",
+    "tesseract.wiki/Documentation.md",
+    "tesseract.wiki/Data-Files.md",
+    "tesseract.wiki/Data-Files-in-tessdata_fast.md",
+    "tesseract.wiki/Data-Files-in-different-versions.md",
+    "tesseract.wiki/Data-Files-Contributions.md",
+    "tesseract.wiki/ControlParams.md",
+    "tesseract.wiki/Compiling.md",
+    "tesseract.wiki/tesseract_debug.png",
+    "tesseract.wiki/skew-linedetection.png",
+    "tesseract.wiki/noise.png",
+    "tesseract.wiki/borders.png",
+    "tesseract.wiki/binarisation.png",
+    "tesseract.wiki/api_abi_changes.png",
+    "images/toc.png",
+    "images/tesseract_debug.png"
+  ]
+}

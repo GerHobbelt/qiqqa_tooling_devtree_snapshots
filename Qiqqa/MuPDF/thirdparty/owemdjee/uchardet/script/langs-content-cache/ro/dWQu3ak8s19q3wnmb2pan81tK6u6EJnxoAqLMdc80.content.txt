@@ -1,0 +1,366 @@
+revision: 15596736
+title: "Fi\u0219ier World"
+url: https://ro.wikipedia.org/wiki/Fi%C8%99ier_World
+
+
+---
+
+Fișier-ul Word este un fișier sideral de tip text simplu cu șase linii utilizat de sistemele de informații geografice (GIS) pentru a georeferenția imaginile raster. Specificația fișierului a fost introdusă de Esri, și constă din șase coeficienți ai unei transformări afine care descrie locația, scara și rotația unui raster pe o hartă 
+
+
+== Definiție ==
+Semnificația generică a celor șase parametri dintr-un fișier mondial (așa cum este definit de Esri) este: 
+
+Linia 1: A : dimensiunea pixelilor în direcția x în unități/pixeli
+Linia 2: D : rotație axa- y
+Linia 3: B : rotație axa- x
+Linia 4: E : dimensiunea pixelilor în direcția y în unitatea de măsura a hărții, aproape întotdeauna negativă
+Linia 5: C : coordonata- x din centrul pixelului din stânga sus
+Linia 6: F : coordonata- y din centrul pixelului din stânga susAceastă descriere este totuși înșelătoare prin faptul că parametrii D și B nu sunt rotații unghiulare și că parametrii A și E nu corespund dimensiunii pixelilor dacă D sau B nu sunt zero. Parametrii A, D, B și E sunt uneori numiți „x-scale”, „y-skew”, „x-skew” și „y-scale”. 
+O descriere mai bună a parametrilor A, D, B și E este: 
+
+Linia 1: A : x - componenta lățimii pixelilor (scara x)
+Linia 2: D : y - componenta lățimii pixelului ( y - oblic)
+Linia 3: B: x  -component din înălțimea pixeli (x - oblic)
+Linia 4: Componenta E : y a înălțimii pixelului (scara y ), de obicei negativă
+Linia 5: C : x -coordonată din centrul pixelului din stânga sus al imaginii, transformată în hartă
+Linia 6: F : y -coordonată din centrul pixelului din stânga sus al imaginii originale transformată pe hartăToți cei patru parametri sunt exprimați în unitățile de hartă, care sunt descrise de sistemul de referință spațială pentru raster. 
+Când D sau B sunt zero, lățimea pixelilor este dată de: 
+
+  
+    
+      
+        
+          
+            
+              A
+              
+                2
+              
+            
+            +
+            
+              D
+              
+                2
+              
+            
+          
+        
+      
+    
+     
+  iar înălțimea pixelilor cu 
+
+  
+    
+      
+        
+          
+            
+              B
+              
+                2
+              
+            
+            +
+            
+              E
+              
+                2
+              
+            
+          
+        
+      
+    
+     
+  Fișierele world descriu o hartă pe sistemul de coordonate Universal Transverse Mercator (UTM) și folosesc aceste convenții: 
+
+D și B sunt de obicei 0, deoarece pixelii de imagine sunt de obicei realizați pentru a se alinia cu grila UTM
+C este estul UTM
+F este nordul UTM
+Unitățile sunt întotdeauna metri pe pixelDescrierea de mai sus se aplică și unei imagini dreptunghiulare, care nu este rotită, care ar putea fi, de exemplu, suprapusă pe o hartă proiectată ortogonal. Dacă fișierul world descrie o imagine care este rotită de pe axa proiecției țintă, atunci A, D, B și E trebuie să provină din transformarea afină necesară (vezi mai jos). Mai exact, A și E nu vor mai măsura mentru/pixelului pe axele respective. 
+Aceste valori sunt utilizate într-o transformare afină cu șase parametri: 
+
+  
+    
+      
+        
+          
+            [
+            
+              
+                
+                  x
+                  ′
+                
+              
+              
+                
+                  y
+                  ′
+                
+              
+            
+            ]
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  A
+                
+                
+                  B
+                
+                
+                  C
+                
+              
+              
+                
+                  D
+                
+                
+                  E
+                
+                
+                  F
+                
+              
+            
+            ]
+          
+        
+        
+          
+            [
+            
+              
+                
+                  x
+                
+              
+              
+                
+                  y
+                
+              
+              
+                
+                  1
+                
+              
+            
+            ]
+          
+        
+      
+    
+     
+  care poate fi scris ca acest set de ecuații: 
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  x
+                  ′
+                
+              
+              
+                
+                =
+                A
+                
+                x
+                +
+                B
+                
+                y
+                +
+                C
+              
+            
+            
+              
+                
+                  y
+                  ′
+                
+              
+              
+                
+                =
+                D
+                
+                x
+                +
+                E
+                
+                y
+                +
+                F
+              
+            
+          
+        
+      
+    
+     
+  Unde: 
+
+x ' este calculat UTM în estul pixelului de pe hartă
+y ' este calculat UTM la nordul pixelului de pe hartă
+x este numărul coloanei de pixeli din imaginea începând de la stânga
+y este numărul de rânduri al pixelilor din imagine începând de sus
+A sau scara x; dimensiunea unui pixel în unitățile de hartă în direcția x
+B, D sunt termeni de rotație
+C, F sunt termeni de traducere: x, y coordonatele hărții din centrul pixelului din stânga sus
+E este negativ la scala y : dimensiunea unui pixel în unitățile de hartă în direcția yScara y (E) este negativă, deoarece originile unei imagini și în sistemul UTM de coordonate sunt diferite. Originea unei imagini este situată în colțul din stânga sus, în timp ce originea sistemului de coordonate ale hărții este situată în colțul din stânga jos. Valorile rândurilor din imagine cresc de la origine în jos, în timp ce valorile y- coordonate din hartă cresc de la origine în sus. Multe programe de mapare nu pot gestiona imagini „cu susul în jos” (adică cele cu scară y pozitivă). 
+Pentru a trece de la UTM (x'y') la poziția pixelului (x, y), puteți folosi ecuația: 
+
+  
+    
+      
+        
+          
+            
+              
+                x
+              
+              
+                
+                =
+                
+                  
+                    
+                      E
+                      
+                        x
+                        ′
+                      
+                      −
+                      B
+                      
+                        y
+                        ′
+                      
+                      +
+                      B
+                      F
+                      −
+                      E
+                      C
+                    
+                    
+                      A
+                      E
+                      −
+                      D
+                      B
+                    
+                  
+                
+              
+            
+            
+              
+                y
+              
+              
+                
+                =
+                
+                  
+                    
+                      −
+                      D
+                      
+                        x
+                        ′
+                      
+                      +
+                      A
+                      
+                        y
+                        ′
+                      
+                      +
+                      D
+                      C
+                      −
+                      A
+                      F
+                    
+                    
+                      A
+                      E
+                      −
+                      D
+                      B
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+  Exemplu: falknermap.jpg original este de 800 × 600 pixeli (harta nu este afișată). Fișierul său world este falknermap.jgw și conține: 
+
+ 32.0
+0.0
+0.0
+-32.0
+691200.0
+4576000.0 
+
+Poziția luminii insulei Falkner pe imaginea hărții este: 
+
+ x = 171 pixeli de la stânga
+y = 343 pixeli de sus 
+
+Asta da: 
+
+x1 = 696672 metri spre est
+y1 = 4565024 metri spre nord
+
+Zona UTM (grilă) nu este dată, astfel încât coordonatele sunt ambigue — ele pot reprezenta o poziție în oricare dintre cele aproximativ 120 de zone din grila UTM . În acest caz, latitudinea și longitudinea aproximativă (41.2, − 072.7) au fost căutate într-un gazetier și s-a constatat că zona UTM (grilă) este 18 folosind un convertor bazat pe Web. 
+
+
+== Extensia nume de fișier ==
+Numele de bază de fișier al unui fișier world se potrivește cu numele de fișier de bază al rasterului, dar are o extensie diferită a fișierului (sufixul). Există trei convenții de denumire a extensiei de fișiere utilizate pentru fișierele world, cu suport variabil în software. 
+O convenție simplă, cu suport larg, este să atașați litera „w” la sfârșitul numelui de fișier raster. De exemplu, un raster numit mymap .jpg ar trebui să aibă un fișier mondial numit mymap .jpgw . 
+O convenție alternativă de denumire a fișierelor care folosește o extensie cu trei caractere pentru a se conforma convenției de denumire a fișierului 8.3 folosește primul și ultimul caracter al extensiei fișierului raster, urmată de „w” la final. De exemplu, iată câteva convenții de denumire pentru formate raster populare: 
+
+O a treia convenție este să folosești o extensie de fișier .wld, indiferent de tipul de fișier raster, susținut de GDAL și QGIS, dar nu de Esri.
+
+
+== Localizare ==
+Când scrieți fișiere world este recomandat să ignorați setările de localizare și să folosiți întotdeauna "." ca separator zecimal. De asemenea, numerele negative trebuie specificate exclusiv cu caracterul „-”. Acest lucru asigură portabilitatea maximă a imaginilor. 
+
+
+== Vezi si ==
+Grila Esri - include un context similar de georeferențiere într-un singur fișier raster
+Format MapInfo TAB - un format popular de date geospatiale vector pentru software GIS
+
+
+== Note și referințe ==
+
+
+== Legături externe ==
+Calculator online de fișiere online
+Bazele Worldfile
+Formatul de fișier Esri World

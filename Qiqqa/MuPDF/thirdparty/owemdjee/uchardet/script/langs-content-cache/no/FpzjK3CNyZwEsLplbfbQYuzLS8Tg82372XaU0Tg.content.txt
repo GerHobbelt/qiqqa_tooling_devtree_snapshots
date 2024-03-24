@@ -1,0 +1,219 @@
+revision: 22047783
+title: diode
+url: https://no.wikipedia.org/wiki/Diode
+
+
+---
+
+En diode er en topolet elektrisk/elektronisk komponent hvor de to polene kalles anode og katode. Dioden kan i all hovedsak kun lede elektrisk strøm fra anoden til katoden (se strømretning). Denne retningen kalles diodens lederetning og følger pilen i diodesymbolet. Den andre retningen kalles diodens sperreretning. En spenning i sperreretningen fører praktisk sett ikke til elektrisk strøm gjennom dioden; dioden sies å sperre.
+Diodene er ikke perfekte. Artikkelen tar utgangspunkt i halvlederdioder, elektronrør er nevnt noen steder.
+
+
+== Lederetningen ==
+Når dioden leder strøm i lederetningen ligger en liten spenning over den. Denne spenningen kalles diodespenningen. Den stiger ulineært med strømmen gjennom dioden. For silisium diodetyper er diodespenningen 0,6-0,7 volt. For elektronrør kan denne spenningen være flere volt og for germanium er den 0.3-0,5 V.
+
+
+== Sperreretningen ==
+Når dioden er forspent i sperreretningen vil det flyte en liten elektrisk strøm, men kun for halvledere. Opp til en viss grense er denne strømmen i noe grad uavhengig av spenningen over dioden, men den er temperaturavhengig og stiger med stigende temperatur. Økes spenningen i sperreretningen tilstrekkelig, vil dioden begynne å lede godt. Videre spenningsøkning fører til store strømmer.
+
+
+== Spenning/strøm-diagrammet ==
+Dette diagrammet viser halvlederdiodens oppførsel for begge strømretningene. Horisontalt ligger spenningsaksen. Til høyre for origo, i lederetningen, er skalaen fra 0 til rundt 1 V. Til venstre, i sperreretningen, går skalaen fra 0 til rundt -100 V. Skalaforskjellen er da 1:100. Den vertikale aksen viser strømmen gjennom dioden. I lederetningen, øvre del, er skalaen fra 0 til rundt 1 A. Nedenfor origo, i sperreretningen, er aksen fra 0 til noen uA. Dette gir en skalaforskjell på rundt 1:1 000 000 i diagrammet. Til venstre ses strømøkningen ved høye reversspenninger. Dette området kalles breakdown-området. Den noenlunde horisontale delen ved lavere reversspenninger viser reversstrømmen, også kalt lekkstrømmen. Denne er ganske temperaturavhengig og flytter seg nedover ved økende temperaturer.
+Spenninger ødelegger ikke dioder. Når spenningen i sperreretningen blir stor, skal det ikke mye revers strøm til før dioden får tilført mye effekt. Dioden kan derigjennom bli svært varm og kan smelte.
+Dioder som er spesielt lages for drift i sperreretningen kalles Zener- og avalanche-dioder.
+Dioden inneholder også en kapasitet mellom elektrodene, som til vanlig gjøres så liten som praktisk mulig. Dioden har også en liten resistans som opptrer som en serieresistans.
+Ledningsevnen i lederetningen er ikke-lineær, det vil si at den ikke er ohmsk, eller også at spenning og strøm ikke er proporsjonale med hverandre. Dioder kan lages som elektronrør, men idag er det vanligst at dioden er bygd opp av halvledermateriale. De vanligste halvledermateriale for dioder er selen (gått omtrent helt ut av bruk), germanium og silisium, der silisium er det materialet som brukes mest idag. En halvlederdiode består av to halvledere i ett krystall, som er dopet forskjellig, en såkalt P-N-overgang. Se Transistor for nærmere forklaring. 
+Dioder kan også kalles likerettere og omvendt, men begrepene brukes likevel ikke fritt. Med en likeretter menes konsekvent en komponent for kraft- og energiformål. "Diode" kan brukes for små likerettere, men hovedsakelig brukes begrepet for signalbehandling og i finere elektronikk generelt.
+
+
+== Diodens ledningsegenskaper ==
+Dioden i lederetningen leder en strøm som stiger eksponensielt med spenningen som legges over den. For strømmer i mA- til A- området ligger spenningen rundt 0,5 til ca. 1 Volt for en silisiumdiode. Schockley-ligningen kommer nært en diodes virkelige statiske oppførsel:
+
+
+=== Ideell diode / Shockley-ligningen ===
+
+Shockley-ligningen (oppkalt etter William Bradford Shockley) beskriver diodens oppførsel i lederetningen. Strømmen gjennom dioden blir
+
+  
+    
+      
+        
+          I
+          
+            D
+          
+        
+        =
+        
+          I
+          
+            S
+          
+        
+        
+        
+          (
+          
+            
+              e
+              
+                
+                  
+                    U
+                    
+                      D
+                    
+                  
+                  
+                    n
+                    
+                    
+                      U
+                      
+                        T
+                      
+                    
+                  
+                
+              
+            
+            −
+            1
+          
+          )
+        
+      
+    
+     
+  
+metningsstrømmen: 
+  
+    
+      
+        
+          I
+          
+            S
+          
+        
+        ≈
+        
+          
+            10
+            
+              −
+              12
+            
+          
+          …
+          
+            10
+            
+              −
+              6
+            
+          
+          
+             A
+          
+        
+      
+    
+     
+  
+Diodespenningen er 
+  
+    
+      
+        
+          U
+          
+            D
+          
+        
+      
+    
+     
+  
+Emisjonskoeffisienten: 
+  
+    
+      
+        n
+        ≈
+        1
+        …
+        2
+      
+    
+     
+  
+Temperaturspennungen: 
+  
+    
+      
+        
+          U
+          
+            T
+          
+        
+        =
+        
+          
+            
+              k
+              ⋅
+              T
+            
+            e
+          
+        
+      
+    
+     
+   med k: Boltzmanns konstant, T: absolutt temperatur, e: Elementærladningen;
+
+  
+    
+      
+        
+          U
+          
+            T
+          
+        
+        ≈
+        
+          25
+          
+             mV
+          
+        
+      
+    
+     
+   ved romtemperatur.Dioden har også en tidskonstant som stammer fra kapasiteten mellom elektrodene. Denne sier noe om hvor lang tid det tar etter et spenningspåtrykk, til dioden begynner å lede strøm, og hvor lenge dioden vil lede strøm etter spenningsavslag. Denne tiden måles i området ns (nanosekunder).
+
+
+== Bruksområder ==
+Det vanligste området for bruk av dioder er i generell elektronikk som komponenter med bare én lederetning. Store dioder brukes til kraftformål og kalles da helst likerettere. Den eksponensielle karakteristikken kan utnyttes til å styre dioden som en variabel motstand for små signaler (langt mindre enn diodespenningen). Karakteristikken kan også brukes til logaritmeering eller eksponensiering av et DC-signal. Dioder brukes hyppig for å holde signaler innenfor spenningsforsyningens grenser. For silisiumdioder synker spenningen med  ca. 1.85 mV per grad C ved konstant strøm, noe som kan utnyttes for å måle temperatur.
+
+
+== Typer ==
+Zenerdioder utnytter den effekten at reversspenningen ikke kan stige mye over grensespenningen uten at strømmen blir stor. Her lages ofte den reverse grensespenningen lav og diodene selges i serier med like egenskaper, men med forskjellige reversspenninger. Ekte Zenerdioder har reversspenninger fra ca. 5,6 V og nedover. Dioder med større reversspenninger er egentlig avalanchedioder, men kalles populært likevel Zenerdioder. Det engelske ordet avalanche betyr skred på norsk, effekten kan kalles en skredeffekt. Feltet fra reversspenningen fører til at enkeltelektroner trekkes ut av krystallgitteret og akselereres i feltet. Elektronene hjelper til å slå løs videre elektroner som alt er på grensen til å løsne. Derfor får en liten spenningsøkning en stor virkning, og dette kalles skredeffekten. 
+Diac og triac er styrbare dioder med tre terminaler. De leder ikke i fremoverretningen før de får tilført et kortvarig triggesignal på den tredje elektroden. Deretter oppfører de seg som normale dioder og kan ikke slås av igjen. Den ledende tilstanden opphører kun når det ikke ledes strøm gjennom komponenten lengre. 
+Lysdiode, LED (LED = light emitting diode) avgir lys når den leder strøm i lederetningen. Ledespenningen (foroverspenningen) ligger gjerne rundt 2-4 V
+Kapasitetsdioder utnytter at kapasiteten mellom katode og anode minker når sperrespenningen øker, fordi p-n overgangen blir lengre. 10-100 pF er typisk verdi på kapasitansen. Med slike dioder kan en enkelt styre resonansfrekvensen i HF-utstyr med en praktisk strømløs spenning.
+Gunndiode
+Impatt-diode
+
+
+== Se også ==
+elektriske komponenter
+halvleder
+lysdiode
+zenerdiode
+fotodiode
+triode
+pentode

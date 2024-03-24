@@ -1,0 +1,37 @@
+revision: 33537973
+title: Grumman G-30
+url: https://ko.wikipedia.org/wiki/%EB%A7%A5%EB%8F%84%EB%84%90_%EB%8D%94%EA%B8%80%EB%9F%AC%EC%8A%A4_T-45_%EA%B3%A0%EC%8A%A4%ED%98%B8%ED%81%AC
+
+
+---
+
+맥도넬 더글러스 T-45 고스호크는 미국 해군, 미국 해병대의 항공모함용 훈련기이다. 영국의 공군용 BAE 호크를 항공모함에 이착륙할 수 있도록 매우 많이 개조하였다. 
+
+
+== 제원 (T-45A) ==
+일반 특성
+
+승무원: 2 (학생, 교관)
+길이: 39 ft 4 in (11.99 m)
+날개폭: 30 ft 10 in (9.39 m)
+높이: 13 ft 5 in (4.08 m)
+날개면적: 190.1 ft2 (17.7 m2)
+공허중량: 10,403 lb (4,460 kg)
+최대이륙중량: 14,081 lb (6,387 kg)
+엔진: 1× 롤스로이스 터보메카 F405-RR-401 (Adour) 터보팬, 5,527 lbf (26 kN)성능
+
+최대속도: 560 knots, (645 mph, 1,038 km/h) at 8,000 ft
+항속거리: 700 nmi (805 mi, 1288 km)
+상승한도: 42,500 ft (12,950 m)
+상승률: 8,000 ft/min (40.6 m/s)무장
+보통 비무장이다. 좌우날개에 1개씩 하드포인트가 있다. 훈련용 폭탄 12발, 로켓포드, 드롭탱크를 장착할 수 있다. 동체하부 하드포인트는 화물포드를 장착할 수 있다.항법장비
+Data from naval-technology.com [1]
+
+Smiths Industries, Ltd. AN/USN-2(V) Standard Attitude Heading and Reference System (SAHRS). Later replaced by the BAE/Marconi AN/ASN-180 Navigation Guidance System (NGS).
+록웰 콜린스 AN/ARN-144 VHF Omnidirectional Radio Range / Instrument Landing System (VOR/ILS).
+허니웰 AN/APN-194 전파 고도계.
+노스럽 그러먼 AN/ASN-166 관성항법 (IGS). [2] Incorporates a Northrop Grumman (formerly Litton) LN-100G 링 레이저 자이로스코프, 록웰 콜린스 GPS, Kalman filter.[3]통신기기
+Data from naval-technology.com [4]
+
+록웰 콜린스 AN/ARC-182 UHF/VHF 라디오
+허니웰 AN/APX-100 IFF 시스템

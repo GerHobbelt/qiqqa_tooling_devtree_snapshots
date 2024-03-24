@@ -1,0 +1,84 @@
+revision: 22888610
+title: "Kl\xE1vesnice po\u010D\xEDta\u010D\u016F ZX Spectrum"
+url: https://cs.wikipedia.org/wiki/Kl%C3%A1vesnice_po%C4%8D%C3%ADta%C4%8D%C5%AF_ZX_Spectrum
+
+
+---
+
+Původní klávesnice počítačů ZX Spectrum vychází z klávesnice počítačů ZX81. Obsahuje 40 kláves. Klávesnice počítačů Sinclair ZX Spectrum+ a novějších obsahuje kláves více, klávesy navíc ale nepřidávají novou funkčnost, pouze usnadňují přístup k některým často používaným funkcím a symbolům.
+Jelikož způsob práce s klávesnicí ZX Spectra je v některých aspektech odlišný a umístění a význam některých kláves je jiný, než u současných počítačů PC, existují pro usnadnění orientace na klávesnici při emulaci ZX Spectra na počítačích PC samolepky s rozložením znaků na klávesách ZX Spectra.
+
+
+== Rozložení klávesnice ==
+
+
+== Klávesnice v editoru Sinclair Basicu ==
+Klávesnice pracuje v pěti režimech:
+
+K – režim klíčových slov,
+L – režim písmen,
+C – režim velkých písmen (Caps Lock),
+E – režim rozšířených klíčových slov a symbolů (Extend),
+G – režim grafických znaků.V režimu klíčových slov (K) je pomocí kláves A – Z možné vkládat některá klíčová slova, uvedená ve schématech klávesnic na druhém řádku odspoda klávesy. Tato klíčová slova jsou vkládána nezávisle na stisknutí kláves Caps Shift a Symbol Shift. Pomocí číselných kláves je možné vkládat čísla (potřebné pro čísla řádků) a pokud je stisknutá klávesa Caps Shift číselné klávesy přejdou do režimu funkčních kláves, kdy jsou vyvolány funkce uvedené v druhém řádku odspoda klávesy (např. pomocí kláves 5 – 8 při současném stisku klávesy Caps Shift je pohybováno řádkovým kurzorem vlevo a vpravo a programovým kurzorem nahoru a dolů, pomocí kombinace kláves Caps shift + 1 je aktuální řádek určený programovým kurzorem přenesen do editační oblasti k úpravám). Pomocí kombinace kláves Caps shift a Symbol Shift je možné přejít do Extend režimu (E), pomocí kombinace kláves Caps Shift a 9 do grafického režimu (G).
+V režimu písmen (L) je možné pomocí kláves A – Z vkládat tato písmena v jejich malé podobě. Pokud je současně s klávesou stisknuta klávesa Caps Shift, jsou vkládána velká písmena. Číselné klávesy fungují stejně jako v režimu klíčových slov. Pokud je současně se stiskem písmenné nebo číselné klávesy stisknuta klávesa Symbol Shift, jsou vkládány symboly a klíčová slova uvedená ve schématech na třetím řádku odspoda klávesy. Pomocí kombinace kláves Caps shift a Symbol Shift je možné přejít do Extend režimu (E), pomocí kombinace kláves Caps Shift a 9 do grafického režimu (G), pomocí kombinace kláves Caps Shift a 2 do režimu velkých písmen (C).
+V režimu velkých písmen (C) je funkce kláves shodná jako v režimu písmen (L), pouze písmenné klávesy vkládají vždy velká písmena bez ohledu na stisk klávesy Caps Shift. Pomocí kombinace kláves Caps shift a Symbol Shift je možné přejít do Extend režimu (E), pomocí kombinace kláves Caps Shift a 9 do grafického režimu (G), pomocí kombinace kláves Caps Shift a 2 do režimu písmen (L).
+V Extend režimu (E) jsou pomocí písmenných kláves, pokud není stisknutý ani Caps Shift ani Symbol Shift, vkládány symboly a klíčová slova uvedená ve schématech klávesnic na jednotlivých klávesách nahoře, pokud je při stisku písmenných kláves stisknut buď Caps Shift nebo Symbol Shift, jsou vkládány symboly a klíčová slova uvedená ve schématech klávesnic na jednotlivých klávesách dole. V případě číselných kláves, pokud není stisknuta ani klávesa Caps Shift ani klávesa Symbol Shift, jsou v Extend režimu stiskem kláves 1 – 7 a klávesy 0 vkládány řídicí kódy ovlivňující barvu podkladu, stiskem kláves 8 a 9 jsou vkládány řídicí kódy pro vypnutí, resp. zapnutí, zvýšeného jasu. Pokud je současně stisknuta klávesa Caps Shift, klávesy 1 – 7 a klávesa 0 vkládají řídicí znaky ovlivňující barvu písma a klávesy 8 a 9 vkládají řídicí kódy pro vypnutí, resp. zapnutí, blikání. Pokud je v Extend režimu současně s číselnou klávesou stisknuta klávesa Symbol Shift, jsou vkládány symboly a klíčová slova uvedená ve schématech klávesnic na jednotlivých klávesách dole. Pomocí kombinace kláves Caps shift a Symbol Shift je možné přejít do režimu písmen (L) nebo velkých písmen (C), podle toho, který režim byl aktivní před přepnutím do Extend režimu.
+V grafickém režimu se pomocí číselných kláves 1 – 8 vkládají znaky hrubé grafiky, klávesa 9 slouží k vypnutí grafického režimu a klávesa 0 funguje jako delete (klávesy 9 a 0 fungují stejně jako v režimech K, C a L pokus je v těchto režimech současně s těmito klávesami stisknutá klávesa Caps Shift, v režimu G není Caps Shift nutný). Pokud je s klávesami 1 – 8 současně stisknutý CAPS SHIFT, jsou vkládány inverzní znaky. Klávesy A – U v grafickém režimu vkládají znaky UDG. Klávesy V – Z chybně vkládají klíčová slova, která nekorespondují s popisem kláves.
+
+
+== Technická realizace klávesnice ==
+Klávesnice počítačů ZX Spectrum je membránová, stejně jako klávesnice počítače ZX81. U počítačů ZX Spectrum, je ale membrána překryta gumovými tlačítky.Klávesnice je organizována jako matice 5 x 8 kláves, stav kláves je čten na bitech 0 – 4 portu 254, kdy vyšší bajt adresy portu určuje konkrétní pětici kláves, jejíž stav je aktuálně čten. Celá adresa konkrétní pětice kláves, jejichž stav má být čten, je určena jako vyšší část adresy*256+254.
+
+Konkrétní pětice kláves je vybírána bitem s hodnotou nula ve vyšším bajtu adresy. je možné možné nastavit na nulu více bitů vyššího bajtu, pak je čten stav více pětic současně, není ale možné určit, ke které pětici kláves náleží klávesa, jejíž bit je aktivní. Např. pokud je vyšší bajt adresy roven hodnotě 245 (šestnáctkově F5, dvojkově 11110101, celá adresa portu 62974), je současně čten stav pětice kláves G, F, D, S, A a pětice kláves 5, 4, 3, 2, 1. Pokud je v tomto případě aktivní např. bit 1, není možné určit, zda je stisknuta klávesa S nebo klávesa 2.
+Navíc díky uspořádání klávesnice není možné testovat klávesy úplně nezávisle, v některých situacích může stisk více kláves vyvolat stav datových bitů na příslušných portech, jako kdyby byly stisknuty ještě další klávesy, přestože tyto stisknuty fyzicky nejsou.Přidané klávesy počítačů ZX Spectrum+ a novějších nemají zvláštní způsob čtení jejich stavu, jsou připojeny paralelně k původním klávesám. Stisk těchto kláves tak způsobí aktivaci bitu původní klávesy, na které se nachází příslušný symbol nebo funkce a současně aktivaci bitu klávesy odpovídající klávese Symbol Shift, resp. Caps Shift. Např. klávesa symbolu ; způsobí, že budou aktivní stejné bity na příslušných portech, jako kdyby byla stisknuta kombinace kláves Symbol shift a O. Stejně tak není možné určit zda byla stisknutá levá či pravá klávesa Caps Shift nebo Symbol Shift.
+
+
+== Klávesnice kompatibilních počítačů ==
+
+
+=== Klávesnice počítače SAM Coupé ===
+Způsob čtení stavu klávesnice počítače SAM Coupé je stejný jako u počítačů ZX Spectrum. Klávesy, které odpovídají klávesnici ZX Spectra jsou čteny na portu 254 (bity 0 – 4), přidané klávesy jsou čteny na portu 239 (bity 5 – 7). Stav kterých kláves je čten, je určeno nejvyššími 8 bity adresy portu. Adresa konkrétní pětice (resp. trojice) kláves, jejichž stav má být čten, je určena jako vyšší část adresy*256+254 (resp. jako vyšší část adresy*256+239).
+
+Klávesy odpovídající klávesám ZX Spectra jsou vyznačeny tučně (klávesa SHIFT odpovídá klávese CAPS SHIFT ZX Spectra, klávesa SYMBOL klávese SYMBOL SHIFT a klávesa RETURN klávese ENTER).
+
+
+=== Klávesnice počítače Orel BK-08 ===
+Počítač Orel BK-08 má celkem 67 kláves, pomocí kterých je možné psán nejen znaky latinky ale i cyrilice.  Mezi přídavné klávesy patří klávesy Таб, Упр, Згл, Рус, Р/A, Граф, Вш.
+Kvůli psaní znaků cyrilice jsou k původním režimům klávesnice ZX Spectra přidány dva nové režimy: 
+
+Р – režim písmen cyrilice,
+З – režim velkých písmen cyrilice.Z 67 kláves je 56 kláves nezávislých, ke čtení jejich stavu jsou využity bity 5 a 7 portu 254, které u ZX Spectra nejsou využity. Zbývajících 11 přidaných kláves je čteno stejným způsobem, jako přidané klávesy u počítačů ZX Spectrum+ (zjednodušení přístupu k funkcím a symbolům bez nutnosti stisknout současně klávesu Caps Shift nebo Symbol Shift).
+
+
+=== Klávesnice počítače Elwro 800 Junior ===
+Počítač Elwro 800 Junior má proti ZX Spectru navíc samostatné klávesy pro symboly a samostatné funkční klávesy. Také má klávesy s polskými písmeny s diakritikou. Ke čtení stavu těchto přidaných kláves jsou využity bity 5 a 7 portu 254 a porty 251 a 127.
+Klávesy odpovídající klávesám ZX Spectra jsou vyznačeny tučně (klávesa SHIFT odpovídá klávese CAPS SHIFT ZX Spectra a klávesa ALT klávese SYMBOL SHIFT).
+
+
+== Připojení klávesnice počítačů PC ==
+Protože práce na klávesnici počítačů PC je pohodlnější, vzniklo několik interfaců pro připojení této klávesnice k ZX Spectru:
+
+Keyboard Proface – může pracovat ve dvou režimech:
+emulace klávesnice ZX Spectra,
+čtení klávesových kódů příslušných jednotlivým klávesám,
+ZX Multi Card – kromě připojení klávesnice, která emuluje původní klávesnici ZX Spectra, umožňuje připojit sériovou myš jako Kempston mouse a obsahuje sériový port RS-232 a hodiny reálného času,
+PC Keyboard Interface – na numerické části klávesnice umožňuje emulovat Sinclair joystick 2,
+interface vyžadující připojení se přímo na vodiče, na které je připojena původní klávesnice (u Didaktiku M lze k tomu účelu využít konektoru pro Sinclair joystick),
+CS-Disk – disketový řadič, který umožňuje připojit PC klávesnici, tato ale neemuluje původní klávesnici ZX Spectra a funguje pouze v režimu CP/M řadiče.
+
+
+== Reference ==
+
+
+== Poznámky ==
+
+
+== Literatura ==
+Компьютер видеоигровой Орель БК-08 – Руководство по эксплуатации
+
+
+== Externí odkazy ==
+Sinclair ZX Spectrum keyboard layout – barevné schéma klávesnice počítačů ZX spectrum
+Klávesnice ZX Spectra na SpeccyWiki
+Připojení PC klávesnice k počítači Didaktik a ZX-Spectrum – popis připojení tak, aby bylo možné stav klávesnice číst stejně jako stav klávesnice původní
+ZX-Spectrum Keyboard – font OTF definující písmena a čísla jako klávesy ZX Spectra

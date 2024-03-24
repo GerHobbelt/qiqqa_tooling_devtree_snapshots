@@ -1,0 +1,148 @@
+revision: 26120912
+title: "T\xE1vk\xF6zl\xE9s"
+url: https://hu.wikipedia.org/wiki/T%C3%A1vk%C3%B6zl%C3%A9s
+
+
+---
+
+A távközlés (vagy telekommunikáció) nagy távolságra történő kommunikációt jelent: a kommunikáció lehetőségének kibővítését nagyobb távolságokra, anélkül, hogy az információ eredeti hordozóját kísérelnénk meg áthelyezni (ahogy például a levelekkel történik). A valóságban  egyelőre, nem megoldható a személyes kommunikáció teljes körű utánzása, hiszen ha például telefont használunk, nem láthatjuk a másik fél arcát, gesztusait, nem mutathatunk tárgyakra a könnyebb megértetés érdekében. A távközlés, ill. telekommunikáció olyan, jellemzően elektronikai eszközök segítségével történik, melyekkel (nem teljes körű) kommunikációt, esetleg adatátvitelt lehet megvalósítani: ilyen a távíró, a távbeszélő vagyis telefon, és még sok minden más. Az egyirányú információközlő, műsorszóró rendszerekkel a híradástechnika tárgya foglalkozik.
+A "telekommunikáció" elnevezés többnyire elektromos jelek átvitelét jelenti, azaz a energiát (az emberi hangot, zenét, ... stb.) az adónál először elektromos jellé alakítják és úgy továbbítják a vevőhöz, a kettőt összekötő közegen keresztül.
+Egy távközlő rendszer részei az adó, az átviteli közeg, csatorna, és a vevő. Az adó alakítja át, kódolja az üzenetet egy átvihető fizikai jelenséggé, a jellé. Az átviteli közegnek az a szerepe, hogy továbbítsa a jelet, de ez nem megy veszteségek nélkül: a jel romlani, módosulni fog. A vevő pedig megpróbálja visszaalakítani a vett jelet, több-kevesebb sikerrel, a jel útközbeni romlásától függően. Bizonyos esetekben a végső „vevők” az emberi érzékszervek, elsősorban a fül és a szem és a jel hibajavítása az agy feladata.
+A távközlő rendszer lehet pont-pont jellegű (egy-egy kapcsolatú), többesküldő (multicast) vagy műsorszóró (broadcast), mely utóbbi a többesküldés egy különleges változata, mely csak az adótól a vevők felé megy.
+
+
+== A szó eredete ==
+A telekommunikáció szó francia kreálmány: a görög eredetű "tele" szó (melynek jelentése táv, távoli) és a latin gyökerű "communicare" (megosztani) összeillesztéséből ered. Szótöve a „communis" vagyis közös jelentésben szerepel, azaz azok vesznek részt benne, akik valamiben közösek. Ez a közös dolog nem más mint az a jelrendszer (a nyelv), amit mind a ketten vagy éppen többen ismernek. Édouard Estaunié használta először a telekommunikáció kifejezést
+
+
+== Története ==
+A hírek, üzenetek lehető leggyorsabb célba juttatása minden korban stratégiai fontossággal bírt; emberi sorsok, csaták és háborúk kimenetelét befolyásolhatta. A fényjelzések terén akkor következett be jelentős fejlődés, amikor a mozdulatlan fényjelek helyébe a tetszés szerint mozgatható fényforrás (fáklya, lámpa) lépett; az ilyen fényforrásokat tetszés szerinti módon és időközökben lehetett eltakarni vagy mozgatni és így mód nyílt arra, hogy a legbonyolultabb jelentéseket is eljuttassák rendeltetési helyükre. Évszázadokon keresztül - többek között- a fény segítségével továbbították a jeleket, az emberek jól látható helyeken (pl. hegytetőkön) gyújtott jelzőtüzekkel üzentek egymásnak. Másik módszer a hang, mely segít az információ áramlásban.
+
+
+=== Kezdetei ===
+Egyes feljegyzések szerint a hírvivői hálózat már az ókori Egyiptomban is működött I. Sesostris (i. e. 1971–1928) alatt, és Babilonban Hammurapi babiloni király (i. e. 1792–1750) is hírvivők segítségével szerzett érvényt híres törvénykönyvének. A babiloni hírvivő hálózattól  származnak azok az újító megoldások , melyek az alkalmi futárkapcsolatot állandó, megbízható szolgáltatássá alakították át, melyet már a mai szóhasználattal is távközlésnek nevezhetünk. Ezek az utak mentén kiépített váltóállomások voltak,a melyek  védelmet nyújtottak az egyre gyakoribb beduin támadások ellen, illetve fáklyákkal látták el az állomásokat, és ezek segítségével  figyelmeztetőjeleket küldhettek egymásnak.A perzsák élő  ember-láncok segítségével továbbították az fontos híreket. Arisztotelész tanúsága szerint a perzsák használtak először optikai távjelző hálózatot, ezt vették át később a görögök is, az általuk továbbfejlesztett változatot tekinthetjük az első  betűrendes „táviratozásnak". A magaslati őrtornyokban tartózkodó emberek fáklyákkal jelezve adták tovább a fontos híreket. A fényjeleket táblázat segítségével „kódolták". Egy 5x5-ös négyzethálóban írták az ABC betűit és megfelelő fáklyajelekkel tudatták a „vevővel”, hogy melyik sorból hanyadik betű fog következni.
+A fényjelzések használata a görögöknél már a homéroszi korban ismert volt. A Danaosz-mondában Lünkeusz és Hüpermésztra előre egyeztetett fáklyajelekkel figyelmeztették egymást, hogy megmeneküljenek Danaosz bosszújától. Ókori adatok tanúsítják azt is, hogy a perzsa birodalmat a jelzőállomások hálózata szőtte be, melyek sugáralakban futottak össze a két királyi székhely, Szusza és Ekbatana központjába.Olyan közel álltak egymáshoz, hogy hangjelekkel-, éjjel fényjelekkel tudtak kommunikálni egymással. A perzsa uralkodó így birodalmának minden eseményéről még aznap értesülhetett. Ugyancsak ókori adatokból tudjuk, hogy a plataiai csatáról (Kr.e. 479) amelyben a görögök döntő győzelmet arattak a perzsákon, a kis-ázsiai Mükalé görög lakossága a görög szigeteken keresztül néhány óra alatt hírt kapott.Figyelemre méltó ókori távközlési megoldás a víztávíró, melynek működését egy görög katonai stratéga, az i. e. 350 körül élt Aineiasz írta le Az ostromlás művészete című könyvében. A berendezés nem más, mint egy edény, melynek az alján kis csap található. Az edényhez tartozik egy dugó, amelyik valamivel kisebb, mint az edény szája, a dugóba pedig egy, az edény magasságával megegyező hosszúságú pálca van beleszúrva. A pálcán három centiméterenként rovátkák vannak és minden rovátka fölé egy üzenet van írva (pl.: lovasságot, gyalogságot kérek). 
+Polübiosz (i. e. 200-112) görög történetíró leírásából ismerjük Kleoxenész és Demoklitosz fáklyatávíróját, melynek segítségével már a görög ábécé betűit lehetett továbbítani öt fáklya segítségével. A módszer sokáig fennmaradt, ezt használták a rómaiak is Karthágó ostrománál, illetve fáklyatávírón érkezett a hír a római szenátushoz i.sz. 70-ben, hogy Titusz elfoglalta Jeruzsálemet.
+
+
+=== 18. század - A hajózás szerepe ===
+A 18. században a gyarmatosítással összefüggésben a hajózás fejlődése fejlődést hozott a hajósok egymás közti kommunikációjában. 1738-ban Bertrand-François Mahé de la Bourdonnais, a Francia Kelet-India Társaság szolgálatában álló tengerész admirális, bevezette a számozott kódokat a zászlókra. 10 különböző színű zászló jelölte a számokat 0-9-ig. 3 készlet zászló 1000 különböző jelet eredményezett. 1763-ban Sébastien-François Bigot, a Francia Tengerészeti Akadémia megalapítója Brestben az első megoldás egy változatát tökéletesítette tovább. 336 eltérő zászlójelet vezetett be előre meghatározott eseményekhez vagy hajótól hajónak parancsokhoz. 1790-ben Lord Richard Howe, brit Királyi Tengerészetnél egy másik rendszert vezetett be, a Howe kódot. Az általa használt apparátus: 10 színes zászló, valamint 6 különleges zászló a kontroll kódokra, mint pl. „befejezés”. Ennek alapján 260 elemű számozott szócikkes szótárat hozott létre, mely 1799-ben 340-re bővült.
+
+
+=== 19. század első fele - Optikai és elektromos távírók ===
+Az ókori módszerek jellemzően egész a 19. századig nem változtak. Chudy József (1753–1813) zeneszerző és karmester találta föl redőnyös optikai távírót, amelyet 1787-ben mutatott be Pozsonyban. Ez tekinthető a világ első távírórendszerének, amely egymástól mintegy 10 kilométerre lévő őrházak láncolatán alapult, és a jeleket kivilágított ablakrendszerrel szándékozott továbbítani.
+Az 1789-ben győzedelmeskedő francia forradalom hosszú háborúskodást indított el Európában. A környező államok sorban támadták meg a frissen formálódott francia köztársaságot, a hírek gyors továbbítása kritikussá vált. Az első ismertté vált, gyors és jól bevált távírórendszer a semaphore (karjelző) volt, melyet a francia feltaláló, Claude Chappe (1763–1805) mutatott be 1792-ben. 196 különböző jelet lehetett róla leolvasni. Ezt a szerkezetet nevezték a világon először telegráfnak. Az Amerikai Egyesült Államokban Jonathan Grout 1801-ben dolgozott ki francia társához hasonló elveken alapuló jelzőrendszert. A hordozható szemaforos rendszereket  még a krími háború (1853–1856) idején is használtak. Később már nem csak harcászati célokat szolgált a szemafor rendszer, ezért egyre nagyobb mennyiségű üzenetet továbbított. A szemafor távíró egészen a 19. század közepéig üzemelt, csak a villamos távírók megjelenése tudta kiszorítani.
+A 19. század közepétől kezdődően az elektromos, illetve elektromágneses jelenségek, valamint az optikai képalkotás és a kémiai képrögzítés új információs forradalmat idézett elő. Az első sikeres elektromos távírót Samuel Thomas Sömmering (1755–1830) német anatómus szerkesztette meg, amely a galvánáram kémiai hatásának elvén működött. Találmányát 1809 augusztusában mutatta be a Müncheni Tudományos Akadémián. A világon elsőként William Sturgeon (1783–1850) barkácsolt össze elektromágnest, ellenben a gyakorlatban is jól használható elektromágnes megszerkesztése az amerikai Joseph Henry (1797–1878) nevéhez fűződik. Az 1786-os, tallini születésű Pavel Lvovics Silling is továbbfejlesztette Sömmering távíróját. Az eredeti ötlet legnagyobb problémája a 25 vezeték összekötése volt, ezért kétvezetékes megoldást vezetett be és az elektromos áram mágneses hatását használta ki az átvitel során. Silling távíróját gyakorlatban a Moszkva–Szentpétervár távíróvonal alkalmazták.
+Samuel Finley Breese Morse (1791–1872) a világméretben is elterjedt és még ma is sok helyen használatos, elektromágneses elven működő, nagy hatótávolságú távíró feltalálója. Telegráfjának lényege az volt, hogy az adó által történt a vevő elektromágnesének a vezérlése. Az első, kezdetleges távíróval Morse 1836-ban készült el. A berendezést egy festővászon keretére építette fel, utána még hosszú ideig dolgozott tökéletesítésén. A készülékre és a ma Morse-kód néven ismert ábécére 1837-ben nyújtotta be szabadalmát. Samuel Morse hozta létre 1844-ben az első távíróvonalat Baltimore és Washington között, melyet What hath God wrought?, „mit mívelt Isten!” bibliai idézet lepötyögésével nyitott meg. A távíró elterjedése felbecsülhetetlen gazdasági és politikai változásokat hozott. Az üzenetek továbbításának gyors lehetősége újfajta vállalkozások megjelenéséhez és elterjedéséhez vezetett, egymás után alakultak meg  a hírügynökségek (1835 - Párizs: Agence Havas; 1846 - New York: Associated Press; 1849 - Berlin: Wolffs Telegraphisches Bureau (WTB); 1851 - London: Reuter's Telegram Company).
+
+
+=== 19. század vége - Vezetékes telefon (messzeszóló) ===
+A beszéd nagyobb távolságra való átvitelére történtek kísérletek az elektromosság jelenségének felismerése előtt is. A Római Birodalom fénykorában például a városfalakba hosszú ólomcsöveket építettek be, s ezen keresztül beszéltek egymással a fal őrei. A távíró sikerének hatására  azonban több tudós párhuzamosan igyekezett az elektromosság segítségével eljuttatni az emberi beszédet nagy távolságra.
+Az egyidejű vezetékes hangközlés Alexander Graham Bell távbeszélő készülékével valósult meg. 1876-ban nyújtotta be Washingtonban a szabadalmi hivatalhoz a távbeszélő leírását, melynek alapján neki ítélték oda a találmány kidolgozásának és bemutatásának a jogát. Vele párhuzamosan Elisha Gray és a Western Union megbízásából Thomas Alva Edison is hasonló találmányon dolgozott. Bell kitartó munkáját 1876. március 10-én koronázta siker. Bell a következőt mondta tagoltan a készülékbe az elektrotechnikában jártas asszisztensének, Thomas Watson-nak: „Mr. Watson, come here, I want you!” (Mr. Watson, jöjjön át, látni szeretném!). Pár pillanat múlva Watson eldobta a szerszámokat, és szinte lélegzetet sem véve kiabálta: „Hallom Önt, uram! Érti? Hallom a szavakat, amit mond!” Ez volt az a pillanat, amikor megszületett a messzeszóló, amit ma telefonnak nevezünk.
+Más nézőpont szerint a telefonálás feltalálója Charles Bourseul francia távírdász, aki kb. 1854-ben, 22 évvel Bell első telefonhívása előtt azzal az ötlettel állt elő, hogy egy hangtól rezgő membrán által keltett elektromos jelek a vezeték végén egy másik membránt rezegtetve ismét hanggá alakulhatnak át. 1860-ban a német Johann Philipp Reis, akinek tudomása sem volt a francia távírdász ötletéről, az első telefonnak elnevezett készülékkel száz méterre továbbította a hangot. Bár kísérlete akkor teljes érdektelenségbe fulladt, a németek közül sokan őt tartják a telefon feltalálójának.
+2002 júniusában az Amerikai Egyesült Államok Képviselőháza határozatot fogadott el, melyben Antonio Meucci olasz-amerikai feltalálót ismeri el a telefon feltalálójaként. Indoklásuk szerint a firenzei származású színházi technikus már Bourseul tanulmánya előtt megalkotta a használható telefont, amit az Amerikai Egyesült Államokba áttelepülve 1860-ban mutatott be a sajtónak. Az amerikai képviselőház határozatára a kanadai törvényhozás tagjai ugyancsak 2002 júniusában egyhangú határozatban álltak ki a sajátjuknak tekintett Bell elsősége mellett, ugyanis Bell Skóciából Kanadán keresztül vándorolt be Amerikába.Általános vélekedés szerint Puskás Tivadar elvei szerint valósultak meg az első telefonközpontok 1878-ban Bostonban, majd 1879-ben Párizsban. Öccsével, Puskás Ferenccel 1881-ben megkezdte a Monarchia területén a telefonközpontok felépítését. Azonban a The Edison Papers archívumban nincs nyoma sem Puskás telefonközpont-ötletének, sem annak, hogy Edisonnál tervezőként dolgozott volna. De nevezettek levelezésében sem utal erre semmi, sőt magától Puskástól sem maradt fenn olyan dokumentum, amelyben magát a telefonközpont feltalálójának állította volna, ahogy ezt a nekrológok sem említették 1893-ban. Azonban egyértelműen a nevéhez köthető az általa 1892-ben szabadalmaztatott újítás, a következő évben beindult Telefonhírmondó, mely előfizetésért szolgáltatott híreket, nyelvleckéket és kulturális műsorokat.
+
+
+=== 20. század - Mobil távközlés ===
+A mai mobiltelefonok egyik őse az 1895-ben az olasz Guglielmo Marconi által feltalált rádióadó/vevő volt, amely lehetővé tette a megfelelő vevőkészülékkel rendelkezők számára, hogy a nyilvános rádióadások mellett valós időben, zárt hálózaton kétirányú kommunikáció jöjjön létre. A rádióadók használatára évtizedeken keresztül csak a hajósok és az állami szervek (rendőrség, katonaság, stb.) voltak jogosultak. Sokáig szintén csak számukra volt elérhető az 1970-es évektől világszerte földrajzipozíció-megha­tározásra használható GPS rendszer.
+
+
+==== Első generáció (1G) (1947–1980) ====
+Az 1980-as évek elején megjelentek az úgynevezett polgári sávot használó CB adó/vevők, továbbá az először Nyugat-Európában majd 1990-től Magyarországon is működő analóg mobiltelefon rendszerek.
+
+
+==== Második generáció (2G) (1990-) ====
+Ezt követték  1990-től (Magyarországon három évvel később) a digitális hálózatot használó GSM-rendszerek. Ezek a beszédalapú összeköttetésen kívül már alkalmasak rövid szöveges üzenetek (SMS), multimédiás üzenetek (MMS) továbbítására, illetve különböző sebességű adatátviteli szolgáltatások (HSCSD, GPRS, EDGE) nyújtására, illetve a mobiltelefonokra optimalizált Internet-honlapok tartalmának megjelenítésére (WAP szolgáltatás). Jelenleg több, mint 200 országban több mint félezer hálózat működik, amelyeken több, mint 1 milliárd  előfizető telefonál. A magyar szolgáltatók (Telekom, Telenor, Vodafone) ma több, mint 10 millió aktív előfizetéssel rendelkeznek, illetve a magyar felnőtt lakosság 95 százaléka rendelkezik mobiltelefonnal (2013-as adat).
+
+
+==== Más fejlődési utak ====
+Elsősorban a távközlési rendszerek különböző fejlődési útjai folytán az észak-amerikai földrészen PCS, Japánban pedig PHS néven, nem GSM-alapú digitális telefon­rendszerek működnek. A mobiltelefon-rendszerek a lefedendő területet cel­lákra osztják, az adó-/vevőtornyok e cellák középpontjában állnak. A cellák közötti kapcsolat szintén rádió-alapú, és hierarchikus; a rendszer közép­pontjában a kapcsolóközpontok állnak.
+Az elmúlt néhány évben a korábbi kizárólag hangalapú alkalmazások mellett megjelentek a mobil adatkommu­nikációs rendszerek, amelyek a GSM adatátvitel viszonylag lassú sebessége után a GPRS és az UMTS szabványnak köszönhetően egyre nagyobb sebes­ségű adatátvitelre adnak lehetőséget.
+
+
+==== Harmadik generáció (3G) (2000-) ====
+A 3G egy vezeték nélküli mobilinternet szabvány. A harmadik generációt képviseli, és jóval nagyobb adatátviteli sebességre képes (akár 21 Mbit/s HSPA + használatával, egyébként max. 384 kbit/s), mint a második generációs (2G), GSM-szabványnál legfeljebb 220 kbit/s az adatátviteli sebesség (EDGE). A Nemzetközi Távközlési Egyesület a 3G-t választotta ki, és ezért ez az egyik a szabványa a harmadik generációs mobilkommunikációnak. Eredetileg az Európai Távközlési Szabványügyi Intézet szabványosította, ma a 3rd Generation Partnership Project (3GPP) tovább fenntartja. A szabványt folyamatosan bővítik, például megnövekedett a maximális adatsebességű HSDPA-val.
+
+
+==== Negyedik generáció (4G vagy LTE) ====
+Az LTE rövidítés az angol Long Term Evolution kifejezésből származik, és egy olyan új rádiós technológiát jelöl, amely teljesen IP-alapú, kis késleltetésű, nagyon gyors adatátvitelt biztosít különböző nagy sávszélesség-igényű szolgáltatások számára. A 4G technológia jelenleg a mobil távközlési rendszerek közül a legfejlettebb, amely fix környezetben 1 Gbps, mobilkörnyezetben pedig akár 100 Mbps adatátviteli sebességet is biztosíthat. Az első 4G technológiát építő távközlési vállalat a brit Truphone volt, aki már 2006-ban elkezdte kiépíteni rendszerét. Magyarországon 2011 őszén indította el először a Magyar Telekom Budapest egy részén kísérleti jelleggel az LTE szolgáltatását az 1800 MHz-es frekvenciasávban, 2012-től már kereskedelmi forgalomban is elérhető.
+
+
+== Példa emberi (táv)közlésre ==
+Vegyünk először egy távközlés előtti megoldást, az egyszerűség kedvéért: két ember beszélget. Itt az átviendő üzenet a mondat amit a beszélő el szeretne juttatni a hallgatóhoz. Az adó „egység” az agy nyelvi központja, az agykéreg mozgatásért felelős része, a tüdő, a hangszálak, a gége és a száj együttese, mely végül olyan hangsorozatot hoz létre, amit mi beszédnek nevezünk. A jel a beszéd mint hangrezgések sorozata, vagyis a levegő nyomásváltozása mint észlelhető fizikai jelenség. Az átviteli közeg a hangot vivő levegő – a csatorna a levegő a környezet minden akusztikai jellegével együtt: visszaverődések, visszhangok, háttérzaj. A vevő pedig a hallgató személy, pontosabban az ő hallórendszere és agyának nyelvi területe.
+Távközléssé akkor válik ez a szituáció, ha közbeiktatunk olyan egyéb eszközöket, melyek segítségével a „közellét” már nem fontos – telefont, IP-telefont, amatőrrádiót stb. Ezek, minőségüktől, jellegüktől függően torzíthatnak a jelen.
+
+
+== Az átviteli közeg és a csatorna problémái ==
+Minden csatornán van zaj és minden csatornának véges a sávszélessége. Ezek olyan tények, melyek sok mérnök életét megkeserítették, másoknak pedig jó okot adtak arra, hogy fel- és kitaláljanak jobbnál jobb tömörítési, kódolási, hibajavítási algoritmusokat, tételeket.
+Ezekkel a problémákkal részletesen az információelmélet tárgya foglalkozik, melynek alapítója és talán legnagyobb alakja Claude Shannon volt.
+
+
+== Alapelvek ==
+Egy telekommunikációs rendszer elemei a küldő vagy forrás, a médium (vonal) és valószínűleg egy csatorna az átviteli médiumon (lásd alapsáv, műsorszórási sáv vagy multiplexálás), és a vevő. A küldő egy berendezés, amely átalakítja vagy átkódolja, tömöríti az üzenetet egy fizika jelenséggé: ez a jel. Az átviteli közeg(ek), a médium, amely átvitel alatt fizikai jellemzői miatt esetleg módosítja vagy torzítja a jelet a küldő és a vevő közötti úton. A vevőnek tehát rendelkeznie kell egy olyan mechanizmussal, amely felismeri és visszaalakítja vett jelet. Ennek a mechanizmusnak képesnek kell lennie arra, ahogy a jelet bizonyos torzítás esetén is felismerje és átalakítsa. Egyes esetekben a végső „vevő” az emberi szem, fül (vagy egyéb érzékszervünk) és a üzenet „felismerése” az agyban történik (lásd pszichoakusztika).
+A telekommunikáció lehet pont-pont közötti (angol terminológiával point-to-point), lehet pont-többpont közötti (angol terminológiával point-to-multipoint) vagy mindenkinek szóló (angol terminológiával broadcasting), amely tulajdonképpen a pont-többpont különleges esete, mert az üzenet a küldőtől a csak a vevő irányába (esetleg nagyon nagy számú vevő) haladhat.
+A telekommunikációval foglalkozó szakemberek egyik fontos feladata a vonal vagy az átviteli közeg fizikai tulajdonságainak elemzése, és az üzenetek statisztikai viselkedésének, jellemzőinek vizsgálata, hogy minél hatékonyabb át- és visszaalakító (kódoló és dekódoló) mechanizmusokat dolgozhassanak ki.
+Amikor egy telekommunikációs rendszereket direkt az emberi érzékelésre alkalmas jelek átvitelére terveznek (főként a vizuális és audió érzékelés – látás és hallás), akkor tervezéskor erősen támaszkodnak az emberi érzékelés bizonyos fiziológiai és pszichológiai jellemzőire. Bizonyos típusú hibák, hiányok, torzítások kevésbé zavaróak az emberi érzékelésben, ennek kihasználásával viszont csökkenthető az átvinni kívánt információ mennyisége, idő és költség takarítható meg (például a veszteséges tömörítési eljárások a CD technikában, MPEG képtömörítés stb.).
+
+
+== Távközlési cégek Magyarországon ==
+1993-ig a Matáv Magyar Távközlési Rt. uralta a magyar távközlési piacot. Ezt követően, a piac liberalizálódásával több távközlési cég is megjelent Magyarországon. A 90-es években a Matáv privatizációjával létre jött a ma már Magyar Telekom néven ismert szolgáltató, illetve piacra lépett a GTS Datanet, az Externet, a Drávanet, a Tarr, illetve a Monortel megvásárlásával a UPC. Ezek mellett megjelentek a mobil szolgáltatók is, a Westel 900 (2004-től T-Mobile) a Pannon GSM (2010-től Telenor) és a Vodafone. Az ezredfordulón tovább nőtt a magyar piacot lefedő szolgáltatók száma, pl. Enternet, HTCC, amely 2008-ban egybeolvadt a Pantel, Hungarotel, V-Holding és Euroweb cégekkel, létrehozva az Invitel Zrt.-t.
+
+
+== Kapcsolódó szócikkek ==
+International Telecommunication Union
+Számítógép-hálózatok
+kommunikációs csatorna
+Provisioning
+A miskolci távközlés története
+Invitel cégtörténete - [1]
+Magyar Telekom cégtörténete - [2]
+Samuel Morse
+
+
+== Egyéb, angol nyelvű információk ==
+Links to Telecom Tutorials/Whitepapers
+Intec Telecom Systems' Telecom Dictionary
+Mobile Phone Directory Telecommunications Glossary
+Telecommunications Industry Association (TIA)
+BT British Telecommunications company
+Teledata Networks' Telecom Dictionary and Telecom Knowledge Center (includes white papers)
+Telecommunications News Archiválva 2007. június 6-i dátummal a Wayback Machine-ben
+Telekommunikációs rövidítések
+
+
+== Fontos dátumok a távközlésben ==
+1837. Samuel Finley Breese Morse szabadalmaztatja a távírót, valamint a később róla elnevezett ABC-t
+1854. Davic Edwin Hughes szabadalmaztatja a távgépírót
+1865 Maxwell, az elektromágneses elmélet, egyenletek
+1876. Alexander Graham Bell szabadalmaztatja a távbeszélőt
+1877. Puskás Tivadar ötlete alapján Edison laboratóriumában kifejlesztik a (kézi kapcsolású) telefonközpontot
+1877. Edison, fonográf (az első „ROM”)
+1888 Herz kísérletileg előállítja a hullámokat
+1889. Automata telefonközpont, Almon Strowger
+1893. Telefonhírmondó
+1895 Lorenz, az elektronok felfedezése (elektroncső korszak)
+1896 Marconi, drótnélküli távíró
+1897 Braun, az első katódsugárcső
+1904 Flemming, az első dióda
+1920 rádió távközlés
+1940 televízió, radar
+1948 Bell labor, bipoláris eszköz: germánium-tűs tranzisztor
+1950 Shannon-tétel, ADC-DAC
+1954 szilícium tranzisztor
+1958 az első integrált áramkör, és a JFET
+1960 SSI (<100 elem), és a MOSFET
+1962 Távközlési műhold
+1971 Mikroprocesszor
+1977 Fénykábel
+1979 Az első LAN, Ethernet
+
+
+== Irodalom ==
+Fülöp Géza: (1984) Ember és információ. 2. átdolg. kiad. Budapest, Múzsák
+Forgó Sándor et al. (1997) Informatika a tanügyigazgatásban. Budapest: OKKER
+dr. Wesselényi György (2010): Telekommunikáció
+Tiner Tibor: A magyarországi távközlés fejlődésének történeti térpályái; MTA FKI, Bp., 2014 (Elmélet, módszer, gyakorlat)
+
+
+== Jegyzetek ==

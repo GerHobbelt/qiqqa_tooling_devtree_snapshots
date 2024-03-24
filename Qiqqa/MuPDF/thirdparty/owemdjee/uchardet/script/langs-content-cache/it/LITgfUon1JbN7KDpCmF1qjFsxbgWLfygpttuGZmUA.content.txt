@@ -1,0 +1,153 @@
+revision: 132379524
+title: Calendario romano
+url: https://it.wikipedia.org/wiki/Calendario_romano
+
+
+---
+
+Il calendario romano o calendario pre-giuliano denota l'insieme dei calendari che furono in uso nella Roma antica dalla sua fondazione fino all'avvento nel 46 a.C. del calendario giuliano. Secondo la tradizione, il calendario romano fu istituito nel 753 a.C. da Romolo, fondatore di Roma: subì diverse modifiche nel corso dei secoli, venendo infine sostituito nel 46 a.C. dal calendario giuliano promulgato da Gaio Giulio Cesare.
+
+
+== Organizzazione e revisioni ==
+
+
+=== Calendario di Romolo ===
+Il calendario romano fu revisionato diverse volte fra la fondazione di Roma e la caduta dell'Impero romano d'Occidente. 
+Una testimonianza importante è di Macrobio nella I giornata dei Saturnalia. In origine era un calendario lunare diviso in dieci mesi con inizio alla luna piena di marzo (il 15), istituito, secondo la tradizione, da Romolo, fondatore di Roma, nel 753 a.C.: sembra fosse basato sul calendario lunare greco. I mesi, in realtà non lunari in quanto la durata del mese avrebbe dovuto essere di 29,5 giorni, erano:
+
+In totale, quindi, il calendario durava 304 giorni e c'erano circa 61 giorni di inverno che non venivano assegnati ad alcun mese: in pratica, dopo dicembre, si smetteva di contare i giorni per riprendere nuovamente il conteggio al marzo successivo.
+I primi mesi prendevano il nome dalle principali divinità legate alle attività umane: Marte (la guerra), Afrodite (l'amore), Maia (la fertilità della terra) e Giunone (la maternità e la procreazione); gli altri avevano il nome che ricordava la loro posizione nel calendario: quintilis derivava da quinque, sextilis da sex, september da septem, october da octo, november da novem e december da decem.
+Ovidio nei suoi Fasti spiega che Romolo creò il primo calendario basandosi sul periodo di gestazione del nascituro nel grembo materno.Parte della critica moderna ritiene che il calendario romano sia sempre stato della durata di dodici mesi, relegando quindi a leggenda il calendario romuleo in dieci mesi.
+
+
+=== Calendario di Numa Pompilio ===
+Numa Pompilio, il secondo dei sette re di Roma, modificò il calendario nel 713 a.C., aggiungendo i mesi di gennaio e febbraio ai dieci preesistenti. Complessivamente, egli aggiunse 51 giorni ai 304 del calendario di Romolo, ma, togliendo un giorno da ciascuno dei sei mesi che ne avevano 30 (facendoli così diventare dispari), portò a 57 giorni il totale di quelli che i mesi di gennaio e febbraio dovevano spartirsi. A gennaio vennero assegnati 29 giorni e a febbraio 28. Degli undici mesi con un numero dispari di giorni, quattro ne avevano 31 e sette ne avevano 29.
+Poiché i numeri pari erano ritenuti sfortunati, febbraio fu considerato adatto come mese di purificazione. Esso fu diviso in due parti, ciascuna con un numero dispari di giorni: la prima parte finiva il giorno 23 con i Terminalia, considerati la fine dell'anno religioso, mentre i restanti cinque giorni formavano la seconda parte.
+
+In origine il primo mese dell'anno era considerato marzo, ma nel 154 a.C. i consoli entrarono in carica a gennaio per fronteggiare una ribellione. William Warde Fowler sostiene che gli ufficiali religiosi continuarono a ritenere però marzo come il primo mese.
+
+
+==== Mese intercalare ====
+
+Al fine di mantenere l'anno del calendario allineato all'anno tropico, veniva aggiunto di tanto in tanto, ma perlopiù ad anni alterni, un mese intercalare, il mercedonio (Mensis Intercalaris, anche noto come Mercedonius o Mercedinus). Esso era inserito al termine della prima parte di febbraio (la cui durata quindi restava di 23 giorni). I 22 giorni inseriti a cui venivano aggiunti i 5 giorni della seconda parte di febbraio componevano un mercedonio di 27 giorni: le sue none cadevano il quinto giorno e le idi il tredicesimo giorno. In questo modo, non si verificavano cambiamenti nelle date e nelle festività. L'anno intercalare, con l'aggiunta del mercedonio, risultava di 377 o 378 giorni, a seconda che esso iniziasse il giorno dopo o due giorni dopo i Terminalia.
+La decisione di inserire il mese intercalare spettava al pontefice massimo e in genere veniva inserito ad anni alterni. Inizialmente il mese intercalare era inserito con lo schema: anno normale, anno con mercedonio di 22 giorni, anno normale, anno con mercedonio di 23 e così via. Successivamente, per correggere lo sfasamento della corrispondenza tra mesi e stagioni dovuta all'eccesso di un giorno dell'anno medio romano sull'anno solare, l'inserimento del mese intercalare fu modificato secondo lo schema: anno normale, anno con mercedonio di 22 giorni, anno normale, anno con mercedonio di 23 e così via per i primi 16 anni di un ciclo di 24. Negli ultimi 8 anni l'intercalazione avveniva solo con mese mercedonio da 22 giorni, tranne l'ultima intercalazione che non avveniva: anno da 355, anno da 377, anno da 355, anno da 377, anno da 355, anno da 377, anno da 355, anno da 355. Il risultato di questo schema ventiquattrennale era di una grande precisione per l'epoca: 365,25 giorni, come risulta dal seguente calcolo:
+
+  
+    
+      
+        
+          
+            
+              355
+              ⋅
+              13
+              +
+              377
+              ⋅
+              7
+              +
+              378
+              ⋅
+              4
+            
+            24
+          
+        
+        =
+        
+          
+            8766
+            24
+          
+        
+        =
+        365
+        ,
+        25
+      
+    
+     
+  
+Tuttavia, nel corso del tempo, numerosi pontefici massimi, invece di seguire scrupolosamente lo schema del ciclo di 24 anni, si arrogarono il diritto di aggiungere e sopprimere il mese intercalare a loro piacere, in maniera arbitraria. Da ciò ne conseguì, nel corso dei secoli, un sempre più crescente sfasamento della corrispondenza tra mesi e stagioni, tanto che all'epoca di Giulio Cesare (I secolo a.C.) i mesi che avrebbero dovuto corrispondere all'inverno cadevano in realtà in autunno. Lo stesso Cesare, una volta rivestita la carica di pontefice massimo, volle porre rimedio allo sfasamento che si era nel frattempo creato, e nel 47 a.C. incaricò un astronomo alessandrino, Sosigene, di riformare il calendario romano. Sosigene, per correggere lo sfasamento di ben 67 giorni creatosi nel corso dei secoli a causa dell'arbitrio dei pontefici massimi, propose di aggiungere, oltre alla già prevista intercalazione di 23 giorni, due ulteriori mesi all'anno 46 a.C., che dunque fu eccezionalmente di ben 15 mesi (corrispondenti a 456 giorni). Secondo Svetonio, infatti:
+
+A partire dal 46 a.C. entrò in vigore il Calendario giuliano ideato da Sosigene, che, seppur in un ciclo di soli 4 anni (3 normali da 365 + 1 bisestile da 366), aveva la stessa precisione del calendario di Numa: 365 giorni e 1/4. Per migliorare davvero la precisione del calendario civile, avremmo dovuto attendere il 1582 d.C., quasi 23 secoli dopo Numa, con il Calendario gregoriano.
+
+
+=== Calendario giuliano ===
+
+Il calendario di Numa Pompilio venne riesaminato quando ad essere pontefice massimo fu Giulio Cesare: venne così istituito, nel 46 a.C., il calendario giuliano. Quest'ultimo eliminò il mese di mercedonio, portò la durata dell'anno a 365 giorni e introdusse l'anno bisestile: le riforme al calendario giuliano furono completate sotto il suo successore Augusto, che lo rimise in ordine dopo le guerre civili. Quintilis fu ribattezzato Iulius nel 44 a.C. in onore a Giulio Cesare e Sextilis fu ribattezzato Augustus nell'8 a.C. in onore allo stesso Augusto, in quanto quest'ultimo durante questo mese era divenuto per la prima volta console e aveva ottenuto grandi vittorie. Il calendario giuliano rimase in vigore per molti secoli anche dopo la caduta dell'impero romano, sostituito solo nel 1582 dal calendario gregoriano.
+
+
+== I giorni ==
+Nel calendario romano, tre erano i giorni che avevano un loro nome peculiare. Il primo era il giorno delle calende, da cui deriva la parola calendario: individuava il primo giorno di ogni mese. 
+Gli altri due erano le none e le idi, mobili a seconda della durata del mese: in marzo, maggio, quintile e ottobre, le none cadevano il settimo e le idi il quindicesimo giorno mentre negli altri mesi esse cadevano il quinto ed il tredicesimo giorno. Questo sistema era in origine basato sulle fasi lunari: le calende erano il giorno della luna nuova, le none erano il giorno del primo quarto (mezza luna), le idi il giorno della luna piena.
+
+Il modo di indicare una data era molto differente da quello attualmente in vigore. I Romani non contavano i giorni a partire dall'inizio del mese (primo, secondo, terzo, ..., giorno dall'inizio del mese), ma contavano i giorni mancanti alle calende, none o idi, a seconda di quali di esse fossero più prossime, un po' come quando si contano i giorni mancanti alla data di un particolare evento molto atteso.
+Essi, inoltre, contavano tutto incluso (cioè comprendevano nel conteggio anche i giorni di partenza e di arrivo): così, ad esempio, il 3 settembre era considerato il terzo, e non il secondo, giorno prima delle none, quando queste cadevano il 5.
+
+Guardando la tabella si può notare come, contando tutto incluso, non esistesse la possibilità di dire: "il secondo giorno prima di..."
+Il giorno precedente a queste date fisse era indicato con l'avverbio pridie (il giorno precedente) seguito da Kalendas, Nonas, Idus (in caso accusativo). Ad esempio il 14 luglio era detto pridie Idus Iulias, il 6 marzo pridie Nonas Martias. Il giorno successivo alla data fissa si indicava con l'avverbio postridie e poi con il caso accusativo (ad esempio l'8 marzo era detto postridie Nonas Martias).
+Pertanto, i mesi di marzo, maggio, luglio e ottobre con le idi cadenti il 15, avevano 31 giorni, come avviene anche attualmente, mentre gli altri ne avevano 29, a differenza di oggi che ne hanno 30, eccetto febbraio che ne aveva 28. Per riallineare l'anno di calendario con l'anno solare fu aggiunto il mese di mercedonio di 22 o 23 giorni: questa aggiunta doveva verificarsi ad anni alterni, ma non fu sempre così e ciò rese necessario apportare delle riforme.
+
+
+== I mesi ==
+La riforma di Numa Pompilio, con l'introduzione di gennaio e febbraio, portò da 10 a 12 il numero di mesi originariamente istituiti da Romolo. Essi erano:
+
+
+== Gli anni ==
+L'anno romano aveva inizio il 1º di marzo, come si ricava dai nomi dei mesi in latino che seguono Iunius (giugno), iniziando da Quintilis, cioè il Quinto (mese). Non si conosce il momento in cui si passò a considerare il 1º gennaio come l'inizio dell'anno. Alcuni autori antichi attribuirono la decisione a Numa Pompilio, mentre Marco Terenzio Varrone, sulla base di un commentario di Marco Fulvio Nobiliore (console 159 a.C.) sui fasti da lui stesso posti nel tempio di Ercole e le Muse nel 153 a.C., sosteneva che, poiché il nome gennaio (presente in questi fasti) deriva dal dio Giano bifronte, e quindi di frontiera (in questo caso tra due anni), tale innovazione fu introdotta a partire dal 153 a.C. Un calendario risalente alla tarda repubblica romana prova che l'anno iniziava a gennaio prima della riforma introdotta dal calendario giuliano.
+Agli inizi della Repubblica romana, gli anni non venivano contati: essi erano individuati con il nome del console che era in carica (per la corrispondenza si veda Consoli repubblicani romani). Per cui non si individuava l'anno con un'indicazione numerica, ma con i nomi dei consoli in carica. Successivamente, nella tarda Repubblica, si cominciò a contarli dalla fondazione di Roma (ab Urbe condita), avvenuta secondo la tradizione nel 753 a.C.. Perciò in alcune iscrizioni il numero dell'anno è seguito dall'acronimo AVC, che significa appunto Ab Urbe Condita (la lettera V rappresenta la U).
+Durante il tardo Impero romano si usò anche contarli dall'insediamento di Diocleziano con la sigla AD che sta per Anno Diocletiani da non confondere con la sigla A.D. usata nel medioevo con il significato di Anno Domini.
+
+
+== Il ciclo nundinale ==
+I Romani, così come gli Etruschi, adottavano una settimana di 8 giorni, i quali erano contrassegnati con le lettere dalla A alla H. Dato che l'anno iniziava sempre con la lettera "A", ogni data era sempre contraddistinta dalla stessa lettera. A questo scopo anche il giorno addizionale, che veniva inserito negli anni bisestili dopo il 24 febbraio, aveva la stessa lettera del giorno precedente.Tale settimana veniva chiamata ciclo nundinale ed era cadenzata dai giorni di mercato, che si svolgevano ogni otto giorni. Essi erano le cosiddette nùndine (dal lat. nundinae, composto da novem nove e dies giorno,) da cui l'aggettivo nundinale per scandire la periodicità settimanale di "nove giorni" (dovuta al conteggio tutto incluso dei Romani, laddove oggi diremmo periodicità di otto giorni). Poiché la durata dell'anno non era un multiplo di 8 e tenendo conto che esso iniziava sempre con la lettera "A", si aveva che la lettera per il giorno di mercato (nota come lettera nundinale), pur rimanendo costante durante tutto l'anno, non era la stessa al passare degli anni. Infatti nel calendario pregiuliano l'anno ordinario di 355 giorni era composto di 44 periodi nundinali (completi di 8 giorni) più 3 giorni residui (la lettera finale dell'anno era pertanto la "C"), nel calendario giuliano l'anno ordinario (di 365 giorni) era composto di 45 periodi nundinali più 5 giorni residui (la lettera finale dell'anno era dunque la "E").
+Volendo fare un esempio, se la lettera per i giorni di mercato di un dato anno era stata la "H" e l'anno era di 355 giorni, l'ultimo giorno di mercato nell'anno era il 352-esimo e la lettera nundinale per il giorno di mercato dell'anno successivo diventava la "E".
+Il ciclo nundinale scandiva la vita romana: sebbene esistessero tanto mercati giornalieri (macella) quanto fiere periodiche (mercatus), le nundinae erano i giorni nei quali la gente di campagna interrompeva il lavoro nei campi per andare in città a vendere i propri prodotti. Era un'occasione per informare la popolazione del contado degli atti amministrativi. L'importanza delle nundine era tale che fu approvata una legge nel 287 a.C. (la Lex Hortensia) che vietava i comizi e le elezioni in quel giorno, sebbene consentisse lo svolgimento delle cause, e questo perché i cittadini dalla campagna non fossero costretti a raggiungere appositamente l’Urbe per comporre le loro liti, ma lo potessero fare negli stessi giorni nei quali già venivano per il mercato.
+Agli inizi del periodo repubblicano nacque la superstizione che portasse sfortuna cominciare l'anno (calende di gennaio) con un giorno di mercato. Era anche considerato pericoloso che il giorno di mercato coincidesse con le none di ciascun mese, dal momento che, in quell'occasione si tenevano le celebrazioni per l’anniversario della nascita di Servio Tullio (si sapeva che era nato nelle none, ma non di quale mese); in particolare si temeva che nell'occasione, potessero avvenire dei tumulti tesi a riportare un re sul trono. Il pontefice massimo, a cui spettava la gestione del calendario, adottava le opportune misure per evitare che ciò accadesse.
+Poiché durante la Repubblica il ciclo nundinale era rigidamente di otto giorni, le informazioni sulle date dei giorni di mercato rappresentano uno degli strumenti più importanti in nostro possesso per determinare a quale giorno del calendario giuliano corrisponde un determinato giorno del calendario romano.
+Il ciclo nundinale venne successivamente sostituito dalla settimana di sette giorni, entrata in uso agli inizi del periodo imperiale, dopo l'avvento del calendario giuliano. Il vecchio sistema di lettere nundinali viene comunque utilizzato ancora oggi, riadattato per la settimana di sette giorni (cfr. lettera dominicale). Per qualche tempo la settimana e il ciclo nundinale coesistettero, ma quando la settimana fu ufficialmente istituita da Costantino I nel 321 d.C., il ciclo nundinale era già caduto in disuso.
+Costantino sostituì la dies solis (giorno del sole) con la dies dominica (giorno del Signore), effettuando un compromesso tra mondo pagano e mondo cristiano. Infatti, la durata di sette giorni corrispondeva alle attese dei cristiani, che ottenevano l'ufficializzazione della settimana ebraica, mentre ai giorni venivano dati i nomi degli dei pagani. I cristiani affiancarono le proprie denominazioni ad alcune denominazioni ufficiali dei giorni, in particolare per il sabato e la domenica.
+
+
+== Le ore ==
+Per i Romani il giorno iniziava al levare del sole: l'intervallo di tempo compreso tra l'alba e il tramonto veniva diviso in 12 ore (horae).
+In altri termini, il periodo di luce della giornata veniva diviso in 12 ore, indipendentemente dal fatto che ci si trovasse in estate o inverno. Questo comportava che la durata delle ore era variabile: all'equinozio un'ora "romana" durava quanto un'ora attuale, mentre al solstizio d'inverno essa era più corta e in quello d'estate più lunga.
+L'hora prima era la prima ora dell'alba, l'hora duodecima era l'ultima ora di luce al tramonto, mentre il punto mediano identificava l'hora sexta o meridies (mezzogiorno).
+Nella vita militare la notte era divisa in 4 vigiliae (prima vigilia, secunda vigilia, tertia vigilia e quarta vigilia) o turni di guardia, ciascuna di 3 ore in media. Nella vita civile si usavano dei termini più generici per indicare le varie parti della notte.
+Si riporta una tabella approssimativa di corrispondenza delle ore.
+
+
+== Festività ==
+
+
+== Note ==
+
+
+== Bibliografia ==
+Jérôme Carcopino, La vita quotidiana a Roma
+Angelo Brelich, Calendari festivi, Editori Riuniti university press, Roma, 2015
+www.saturniatellus.com, Kalendarium, https://www.saturniatellus.com/kalendarium/
+Paolo Casolari, Roma dentro, MMC Edizioni, Roma, 2013, pagg. 35-58, 275-298
+
+
+== Voci correlate ==
+Calendario giuliano
+Calendario gregoriano
+Cronografo del 354 (Calendario di Filocalo)
+
+
+== Altri progetti ==
+
+ Wikiquote contiene citazioni sul calendario romano
+ Wikimedia Commons contiene immagini o altri file sul calendario romano
+
+
+== Collegamenti esterni ==
+
+(EN) Calendario romano, su Enciclopedia Britannica, Encyclopædia Britannica, Inc. 
+ Introduzione alle feste pubbliche nel Calendario romano, su storia.archeologia.com.
+Il calendario di Furio Dionisio Filocalo
+ Convertitore di date, su csgnetwork.com.
+ Pagina su urbisetorbis.org, su urbisetorbis.org (archiviato dall'url originale il 3 dicembre 2013).
+ Articolo in inglese da Un. Chicago, su penelope.uchicago.edu.

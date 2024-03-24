@@ -1,0 +1,36 @@
+revision: 133128881
+title: Memoria racetrack
+url: https://es.wikipedia.org/wiki/Memoria_racetrack
+
+
+---
+
+La memoria racetrack es un dispositivo experimental de memoria no volátil en desarrollo en el Almaden Research Center de IBM por un equipo conducido por Stuart Parkin, así como equipos en otras localizaciones.[1]​ A principios de 2008 una versión de 3 bits fue demostrada exitosamente.[2]​
+
+
+== Física ==
+La versión del racetrack de IBM usa corriente eléctrica de spin coherente para mover los dominios magnéticos a lo largo de un alambre nanoscópico en forma de "U". A medida que la corriente está pasando a través del alambre, los dominios se mueven sobre las cabezas de lectura/escritura magnéticas posicionadas en el fondo de la "U", que altera los dominios para registrar patrones de bits. Un dispositivo de memoria está compuesto de muchos de estos alambres y elementos de lectura/escritura.[3]​ En un concepto operacional general, la memoria racetrack es similar a la anterior memoria twistor o a la memoria de burbuja de los años 1960s y 1970s, pero usa dominios magnéticos mucho más pequeños y mejoras notables en las capacidades de detección magnética para proporcionar mucho más altas densidades de área.
+
+
+== Comparación con la memoria Flash ==
+La densidad teórica de la memoria racetrack es mucho más alta que la de dispositivos comparables tales como la Flash RAM, estimaciones sugieren la máxima densidad de área entre 10 y 100 veces la de los mejores dispositivos de Flash posibles. Los dispositivos de Flash ya son construidos en las fabs más recientes de 45nm, y hay problemas que sugieren que reducir la escala a 30 nm pueda ser un límite fundamental más bajo. La Racetrack no es mucho más pequeña, los alambres son de cerca de 5 a 10 nm a lo largo, pero arreglándolos verticalmente, los dispositivos llegan a ser tridimensionales, ganando densidad.
+La memoria Flash es un dispositivo asimétrico, relativamente lenta para escribir, hasta 1000 veces más lenta que los tiempos de lectura, lo que limita su uso en muchas aplicaciones. Adicionalmente, la acción de enviar un voltaje grande en las celdas las degrada mecánicamente, por lo que tiene un tiempo de vida limitado, entre 10.000 y 100.000 escrituras. Los dispositivos de memoria Flash usan una variedad de técnicas para, si fuera posible, evitar escribir a la misma celda, pero esto solo limita el problema, no lo elimina.
+La memoria racetrack no tiene ninguno de estos problemas. La lectura y la escritura es bastante simétrica y primariamente es limitada por el tiempo en que el patrón magnético toma para ser movido a través de las cabezas de lectura/escritura.
+
+
+== Dificultades del desarrollo ==
+Una limitación de los dispositivos experimentales tempranos fue que los dominios magnéticos solo se podrían empujar lentamente a través de los alambres, requiriendo pulsos de corriente en el orden de microsegundos para moverlos con éxito. Esto era inesperado, y condujo a un desempeño más o menos igual al de las unidades de discos duros, como 1000 veces más lento de lo predicho. La investigación reciente en la universidad de Hamburgo ha seguido la pista a este problema y encontró que es debido a imperfecciones microscópicas en la estructura cristalina de los alambres que conduce a que las paredes de dominio "queden ancladas" en estas imperfecciones. Usando un microscopio de rayos X para tener imágenes directas entre los dominios, su investigación encontró que las paredes del dominio serían movidas por pulsos tan cortos como algunos nanosegundos cuando estas imperfecciones estaban ausentes. Esto corresponde a una velocidad macroscópica de cerca de 110 m/s.[4]​
+
+
+== Referencias ==
+
+
+== Véase también ==
+Espintrónica
+Magnetorresistencia gigante
+Transistor de espín
+MRAM
+
+
+== Enlaces externos ==
+Redefining the Architecture of Memory

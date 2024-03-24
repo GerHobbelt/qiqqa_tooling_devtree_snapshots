@@ -1,0 +1,20 @@
+revision: 35030843
+title: ISO/IEC 8859-7
+url: https://ko.wikipedia.org/wiki/ISO/IEC_8859-7
+
+
+---
+
+ISO/IEC 8859-7:2003(Information technology — 8-bit single-byte coded graphic character sets — Part 7: Latin/Greek alphabet)은 ASCII 기반 표준 문자 인코딩의 ISO/IEC 8859 시르즈의 일부로, 1987년 첫 에디션이 출판되었다. 비공식적으로 Latin/Greek로 호칭된다. 현대의 그리스어를 지원하기 위해 설계되었다. 오리지널 1987년 버전의 표준은 1986년 출판된 그리스어 국가 표준 ELOT 928과 동일한 문자 할당을 사용하였다. IBM은 코드 페이지 813을 ISO 8859-7로 할당하였다. (IBM CCSID 813이 오리지널 인코딩이다.
+CCSID 4909는 유로 사인을 추가한다. CCSID 9005는 추가적으로 드라크마 사인과 ypogegrammeni를 추가한다.)
+현대의 애플리케이션에서는 그리스어에 유니코드, 특히 인터넷상에서는 UTF-8 인코딩가 선호된다.
+
+
+== 각주 ==
+
+
+== 외부 링크 ==
+ISO/IEC 8859-7:1999 - 8-bit single-byte coded graphic character sets, Part 7: Latin/Greek alphabet (draft dated June 10, 1999; superseded by ISO/IEC 8859-7:2003, published October 10, 2003)
+Standard ECMA-118: 8-Bit Single-Byte Coded Graphic Character Sets - Latin/Greek Alphabet (December 1986)
+ISO-IR 126 Archived 2020년 10월 31일 - 웨이백 머신 Right-hand Part of Latin/Greek Alphabet (November 30, 1986; superseded by ISO-IR 227)
+ISO-IR 227 Right-hand Part of Latin/Greek Alphabet (July 28, 2003)

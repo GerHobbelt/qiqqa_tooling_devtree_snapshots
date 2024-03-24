@@ -1,0 +1,834 @@
+revision: 32033415
+title: "Distribuci\xF3 de Weibull"
+url: https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_Weibull
+
+
+---
+
+En teoria de la probabilitat i en estadística, la distribució de Weibull (batejada en honor de Waloddi Weibull) és una distribució de probabilitat contínua.
+La distribució de Weibull s'utilitza habitualment per a l'anàlisi de dades de supervivència, degut a la seva flexibilitat i tractabilitat matemàtica. Pot imitar el comportament d'altres distribucions com la distribució normal quan k=3.4 i reproduir exactament la distribució exponencial quan k=1.
+Si la funció de risc decreix al llarg del temps, aleshores k < 1. Si és constant, k = 1. Si creix al llarg del temps, k > 1.
+La funció de risc ajuda a comprendre què està causant les morts/fallides:
+
+Un risc decreixent suggereix "mortalitat infantil". És a dir, els ítems defectuosos fallen al principi i per tant a mesura que avança el temps només queden els ítems no defectuosos, i el risc de fallida disminueix.Un risc constant suggereix que no hi ha ítems defectuosos, i que els ítems no es desgasten amb el temps.Un risc creixent indica que els ítems es desgasten, i per tant a mesura que avança el temps augmenta el risc d'una fallida.
+
+
+== Caracterització ==
+
+
+=== Funció de probabilitat de densitat ===
+La seva funció de densitat de probabilitat és
+
+  
+    
+      
+        f
+        (
+        x
+        ;
+        k
+        ,
+        λ
+        )
+        =
+        
+          
+            k
+            λ
+          
+        
+        
+          
+            (
+            
+              
+                x
+                λ
+              
+            
+            )
+          
+          
+            k
+            −
+            1
+          
+        
+        
+          e
+          
+            −
+            (
+            x
+            
+              /
+            
+            λ
+            
+              )
+              
+                k
+              
+            
+          
+        
+        
+      
+    
+     
+  per a 
+  
+    
+      
+        x
+        ≥
+        0
+      
+    
+     
+   i f(x; k, λ) = 0 per a x < 0, on 
+  
+    
+      
+        k
+        >
+        0
+      
+    
+     
+   és el paràmetre de forma i 
+  
+    
+      
+        λ
+        >
+        0
+      
+    
+     
+   és el paràmetre d'escala.
+
+
+=== Funció de distribució ===
+La funció de distribució pot calcular-se de forma explícita, fet que fa la distribució de Weibull atractiva per a modelar certs tipus de dades, com per exemple en l'anàlisi de la supervivència.
+
+  
+    
+      
+        F
+        (
+        x
+        ;
+        k
+        ,
+        λ
+        )
+        =
+        1
+        −
+        
+          e
+          
+            −
+            (
+            x
+            
+              /
+            
+            λ
+            
+              )
+              
+                k
+              
+            
+          
+        
+      
+    
+     
+  
+
+
+=== Funció de risc ===
+
+  
+    
+      
+        h
+        (
+        x
+        ;
+        k
+        ,
+        λ
+        )
+        =
+        
+          
+            k
+            λ
+          
+        
+        
+          
+            (
+            
+              
+                x
+                λ
+              
+            
+            )
+          
+          
+            k
+            −
+            1
+          
+        
+        .
+      
+    
+     
+  
+
+
+== Propietats ==
+Mitjana: 
+  
+    
+      
+        λ
+        Γ
+        
+          (
+          
+            1
+            +
+            
+              
+                1
+                k
+              
+            
+          
+          )
+        
+        
+      
+    
+     
+  
+Mediana: 
+  
+    
+      
+        λ
+        ln
+        ⁡
+        (
+        2
+        
+          )
+          
+            1
+            
+              /
+            
+            k
+          
+        
+        
+      
+    
+     
+  
+Moda: 
+  
+    
+      
+        λ
+        
+          
+            (
+            
+              
+                
+                  k
+                  −
+                  1
+                
+                k
+              
+            
+            )
+          
+          
+            
+              1
+              k
+            
+          
+        
+        
+      
+    
+     
+   if 
+  
+    
+      
+        k
+        >
+        1
+      
+    
+     
+  
+Variància: 
+  
+    
+      
+        
+          λ
+          
+            2
+          
+        
+        Γ
+        
+          (
+          
+            1
+            +
+            
+              
+                2
+                k
+              
+            
+          
+          )
+        
+        −
+        
+          μ
+          
+            2
+          
+        
+        
+      
+    
+     
+  
+Asimetria: 
+  
+    
+      
+        
+          
+            
+              Γ
+              (
+              1
+              +
+              
+                
+                  3
+                  k
+                
+              
+              )
+              
+                λ
+                
+                  3
+                
+              
+              −
+              3
+              μ
+              
+                σ
+                
+                  2
+                
+              
+              −
+              
+                μ
+                
+                  3
+                
+              
+            
+            
+              σ
+              
+                3
+              
+            
+          
+        
+      
+    
+     
+  
+Moment d'ordre n: 
+  
+    
+      
+        
+          m
+          
+            n
+          
+        
+        =
+        
+          λ
+          
+            n
+          
+        
+        Γ
+        (
+        1
+        +
+        n
+        
+          /
+        
+        k
+        )
+        
+      
+    
+     
+  , on 
+  
+    
+      
+        Γ
+      
+    
+     
+   és la funció Gamma.
+
+
+== Generalització ==
+Existeix una genelització de la distribució de Weibull, que empra tres paràmetres. La funció de densitat de probabilitat és:
+
+  
+    
+      
+        f
+        (
+        x
+        ;
+        k
+        ,
+        λ
+        ,
+        θ
+        )
+        =
+        
+          
+            k
+            λ
+          
+        
+        
+          
+            (
+            
+              
+                
+                  x
+                  −
+                  θ
+                
+                λ
+              
+            
+            )
+          
+          
+            k
+            −
+            1
+          
+        
+        
+          e
+          
+            −
+            (
+            
+              
+                
+                  x
+                  −
+                  θ
+                
+                λ
+              
+            
+            
+              )
+              
+                k
+              
+            
+          
+        
+        
+      
+    
+     
+  per a 
+  
+    
+      
+        x
+        ≥
+        θ
+      
+    
+     
+   i f(x; k, λ, θ) = 0 per x < θ, on 
+  
+    
+      
+        k
+        >
+        0
+      
+    
+     
+   és el paràmetre de forma, 
+  
+    
+      
+        λ
+        >
+        0
+      
+    
+     
+   és el paràmetre d'escala i 
+  
+    
+      
+        θ
+      
+    
+     
+   és el paràmetre de localització. Quan θ=0, aquesta expressió es redueix a la distribució Gamma de dos paràmetres.
+La funció de distribució és
+
+  
+    
+      
+        F
+        (
+        x
+        ;
+        k
+        ,
+        λ
+        ,
+        θ
+        )
+        =
+        1
+        −
+        
+          e
+          
+            −
+            (
+            
+              
+                
+                  x
+                  −
+                  θ
+                
+                λ
+              
+            
+            
+              )
+              
+                k
+              
+            
+          
+        
+      
+    
+     
+  per a x ≥ θ, i F(x; k, λ, θ) = 0 per a x < θ.
+
+
+== Generació de valors aleatoris ==
+Donada una observació aleatòria U obtinguda de la distribució uniforme en l'interval (0, 1), aleshores
+
+  
+    
+      
+        X
+        =
+        λ
+        (
+        −
+        ln
+        ⁡
+        (
+        U
+        )
+        
+          )
+          
+            1
+            
+              /
+            
+            k
+          
+        
+        
+      
+    
+     
+  segueix una distribució de Weibull amb paràmetres k i λ.
+Aquest resultat és una conseqüència immediata d'aplicar la transformació de distribució inversa.
+
+
+== Distribucions relacionades ==
+
+  
+    
+      
+        X
+        ∼
+        
+          E
+          x
+          p
+          o
+          n
+          e
+          n
+          t
+          i
+          a
+          l
+        
+        (
+        λ
+        )
+      
+    
+     
+   és una distribució exponencial si 
+  
+    
+      
+        X
+        ∼
+        
+          W
+          e
+          i
+          b
+          u
+          l
+          l
+        
+        (
+        γ
+        =
+        1
+        ,
+        
+          λ
+          
+            −
+            1
+          
+        
+        )
+      
+    
+     
+  .
+
+  
+    
+      
+        X
+        ∼
+        
+          R
+          a
+          y
+          l
+          e
+          i
+          g
+          h
+        
+        (
+        β
+        )
+      
+    
+     
+   és una distribució de Rayleigh si 
+  
+    
+      
+        X
+        ∼
+        
+          W
+          e
+          i
+          b
+          u
+          l
+          l
+        
+        (
+        γ
+        =
+        2
+        ,
+        
+          
+            2
+          
+        
+        β
+        )
+      
+    
+     
+  .
+
+  
+    
+      
+        λ
+        (
+        −
+        ln
+        ⁡
+        (
+        X
+        )
+        
+          )
+          
+            1
+            
+              /
+            
+            k
+          
+        
+        
+      
+    
+     
+   segueix una distribució de Weibull si 
+  
+    
+      
+        X
+        ∼
+        
+          U
+          n
+          i
+          f
+          o
+          r
+          m
+        
+        (
+        0
+        ,
+        1
+        )
+      
+    
+     
+  .
+Si X segueix una distribució de Weibull, 1/X segueix una distribució de Weibull inversa amb funció de densitat de probabilitat 
+  
+    
+      
+        f
+        (
+        x
+        ;
+        k
+        ,
+        λ
+        )
+        =
+        (
+        k
+        
+          /
+        
+        λ
+        )
+        (
+        λ
+        
+          /
+        
+        x
+        
+          )
+          
+            (
+            k
+            +
+            1
+            )
+          
+        
+        
+          e
+          
+            −
+            (
+            λ
+            
+              /
+            
+            x
+            
+              )
+              
+                k
+              
+            
+          
+        
+      
+    
+     
+  
+Vegeu també la distribució generalitzada del valor extrem.
+
+
+== Referències ==

@@ -1,0 +1,25 @@
+revision: 25009314
+title: Amazon Web Services
+url: https://hu.wikipedia.org/wiki/Amazon_Web_Services
+
+
+---
+
+Az Amazon Web Services (röviden AWS vagy Amazon WS) az Amazon.com által az interneten kínált szolgáltatások gyűjteménye amelyek egy felhő alapú platformot alkotnak. A legismertebb szolgáltatások az S3 és az EC2. A szolgáltatás nagyon nagy számítási kapacitást szolgáltat.
+
+
+== Architektúra ==
+Az AWS 26 földrajzi régióban található: Egyesült Államok keleti (Észak-Virginia) és nyugati (Észak-Kalifornia és Oregon), Brazília, Írország, Szingapúr, Tokió és Sydney. Van egy "GovCloud"-nak nevezett régió is, amelyet az Egyesült Államok kormányzati szerveinek kínál. Minden régió egy ország területén található és az összes hozzá tartozó adat és szolgáltatások ebben a régióban érhető el.
+Minden régiónak több elérhetőségi zónája van, amelyek az AWS szolgáltatásait biztosító adatközpontok. Az elérhetőségi zónák egymástól el vannak különítve, hogy az kiesések ne terjedhessenek át másik elérhetőségi zónára. Több AWS szolgáltatás működik több elérhetőségi zónában, például az S3 és a DynamoDB, más szolgáltatásokat lehet úgy konfigurálni, hogy több elérhetőségi zóna között replikálódjanak az adatok.
+
+
+== Története ==
+Az Amazon Web Services hivatalosan 2006-ban indult el azzal a céllal, hogy más weboldalaknak és kliens oldali alkalmazásoknak szolgáltatásokat nyújtson. A legtöbb szolgáltatást nem közvetlenül a végfelhasználóknak adja, hanem a weboldalak fejlesztőinek ajánlja. A szolgáltatások HTTP protokollon keresztül REST és SOAP üzenetekkel érhetőek el. Az összes szolgáltatásért használat alapján számláz az Amazon.com, de a használat mérése eltér a szolgáltatások között.
+2003 végén Chris Pinkham és Benjamin Black kiadott egy dokumentumot, amelyben felvázolták, hogyan árulhatná az Amazon.com saját számítási és adattároló kapacitását az interneten keresztül. A dokumentum megemlíti annak lehetőségét is, hogy virtuális szervereket áruljanak. Az első elindított szolgáltatás az Amazon Simple Queue Service volt 2004-ben. Az Amazon EC2-t egy fokvárosi fejlesztőcsapat fejlesztette Chris Pinkham és Chris Brown irányítása alatt.2007 júniusára az Amazon állításai szerint 180.000 fejlesztő regisztrált és vette használatba a szolgáltatást.2010 novemberében az Amazon.com webáruház is átköltözött az EC2 rendszerre.Az AWS elterjedtsége jelentősen nőtt indulása óta. Az ismert felhasználók között megtalálható a NASA, Barack Obama kampánya, a Pinterest, a Netflix és a CIA. Bár az Amazon nem tüntette fel üzleti eredményeiben külön az Amazon Web Services bevételeit (az "egyéb" kategóriába került), megfigyelők szerint 2012-ben 1-5 milliárd USD felett lehetett.
+
+
+== Fordítás ==
+Ez a szócikk részben vagy egészben  az   Amazon Web Services című angol Wikipédia-szócikk fordításán alapul.  Az eredeti cikk szerkesztőit annak laptörténete sorolja fel. Ez a jelzés csupán a megfogalmazás eredetét és a szerzői jogokat jelzi, nem szolgál a cikkben szereplő információk forrásmegjelöléseként.
+
+
+== Jegyzetek ==

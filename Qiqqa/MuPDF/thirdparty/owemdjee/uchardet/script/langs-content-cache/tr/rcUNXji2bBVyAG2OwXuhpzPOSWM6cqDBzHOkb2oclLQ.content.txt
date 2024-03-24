@@ -1,0 +1,26 @@
+revision: 27288864
+title: Blink Home
+url: https://tr.wikipedia.org/wiki/Blink
+
+
+---
+
+Blink, Google, Facebook, Microsoft, Opera Software, Adobe Systems, Intel, IBM, Samsung ve diğerlerinin katkılarıyla Chromium projesinin  parçası olarak geliştirilmiş bir tarayıcı motorudur.  İlk olarak Nisan 2013'te duyuruldu.
+
+
+== Motor ==
+Blink, KDE'nin KHTML ve KJS kitaplıklarının bir çatalı olan WebKit'in WebCore bileşeninin bir çatalı. Chrome'da sürüm 28, Microsoft Edge Sürüm 79, Opera (15+),  Vivaldi, Brave, Amazon Silk ve diğer Chromium tabanlı tarayıcılar tarafından kullanılmaktadır.
+WebCore'un kodunun çoğu, Google Chrome'un korumalı alan oluşturma ve çoklu işlem modeli gibi farklı şekilde uyguladığı özellikler için kullanıldı. Bu parçalar, Blink çatalı için değiştirildi ve biraz daha hantal olmasına rağmen, yeni özellikler eklemek için daha fazla esneklik sağladı. Taahhüt sayısına göre Google, 2009'un sonundan bu yana WebKit kod tabanına en büyük katkıda bulunan şirket olmuştur.
+
+
+== Framework ==
+Chromium'un Blink'i diğer geliştiriciler için yeniden kullanılabilir bir yazılım çerçevesine dönüştürmek için birkaç proje mevcuttur:
+
+Android işletim sisteminin şu anda desteklenen sürümlerinde ( sürüm 4.4'ten beri) WebView bileşeni, WebKit yerine Blink'e dayanmaktadır.
+Chromium Embedded Framework , Adobe Systems, Spotify gibi medya akışı hizmetleri, Battle.net ve Steam gibi video oyun  vb. tarafından yazılımda yaygın olarak kullanılmaktadır.
+NW.js (daha önce Node-Webkit olarak biliniyordu), orijinal Node.js tabanlı çerçevedir ve Intel tarafından geliştirilmektedir.
+Electron, GitHub tarafından geliştirilen Node.js tabanlı bir çerçevedir.
+Qt 5 çerçevesinde Qt WebEngine modülü önceki QtWebKit modülünün yerini alır.Chromium Blink altı platformda uygulanmaktadır: Windows, macOS, Linux, Chrome OS, Android ve Android WebView. Chromium'un iOS sürümleri, ana oluşturucusu WebKit WebCore'u kullanmaya devam ediyor.
+
+
+== Kaynakça ==

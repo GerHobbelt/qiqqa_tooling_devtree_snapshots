@@ -1,0 +1,39 @@
+revision: 1158297862
+title: Asciminib
+url: https://en.wikipedia.org/wiki/Asciminib
+
+
+---
+
+Asciminib, sold under the brand name Scemblix, is a medication used to treat Philadelphia chromosome-positive chronic myeloid leukemia (Ph+ CML). Asciminib is a protein kinase inhibitor.The most common adverse reactions include upper respiratory tract infections, musculoskeletal pain, fatigue, nausea, rash, and diarrhea.Asciminib was approved for medical use in the United States in October 2021, and in the European Union in August 2022.
+
+
+== Mechanism of action ==
+Asciminib is described as a "STAMP inhibitor," which means "specifically targeting the ABL myristoyl pocket." The wild-type ABL has a myristoylated N-terminus, which binds to an allosteric site, but the ABL fusion protein does not have the myristoylated domain. In the wild-type protein, when myristoylated N-terminus binds to the allosteric site, the kinase has reduced activity. Since the mutant fusion protein does not have the myristoylated N-terminus domain, it is not subject to this form of regulation, and thus the fusion protein is constitutively active. Asciminib binds to the allosteric site, resulting in an inhibition of bcr-abl activity.Unlike other bcr-abl inhibitors, such as imatinib, asciminib does not bind to the ATP-binding site on the active site of the enzyme. Asciminib and active site bcr-abl inhibitors have non-overlapping resistance mutations. The mutations A337V and P223S overcome the inhibitory activity of asciminib, but asciminib is not affected by the notorious T315I mutation that affects most ATP-competitive active site inhibitors, except ponatinib.
+
+
+== Adverse effects ==
+Common side effects of Asciminib are symptoms of a cold, muscle pain, joint pain, bone pain, fatigue, nausea, diarrhea, rash as well as the patient displaying abnormal blood tests. Serious side effects of the medication include high blood pressure, low blood cell count, problems with the pancreas, and heart issues. Side effects of the medication on the pancreas may be observed via changes in serum lipase and amylase levels.
+
+
+== Pharmacodynamics ==
+Asciminib is a substrate of the CYP3A4 enzyme. Asciminib is an inhibitor of CYP3A4, CYP2C9, and P-glycoprotein. Asciminib reaches steady state in 3 days. The volume of distribution of Asciminib is 151 L.
+
+
+== History ==
+The FDA approved asciminib based on evidence from a clinical trial of 48 participants with chronic myeloid leukemia with a certain type of mutation (T315I mutation). The trial was conducted at 18 sites in ten countries (Australia, France, Germany, Italy, Japan, Netherlands, the Republic of Korea, Singapore, Spain, and the United States). Participants received asciminib twice daily until disease worsened or unacceptable toxicity occurred. The benefit of asciminib was evaluated in Philadelphia chromosome-positive chronic myeloid leukemia participants with the T315 mutation by measuring the reduction of abnormal cells in participants' blood to a very low level after 96 weeks of treatment.
+
+
+== Society and culture ==
+
+
+=== Legal status ===
+On 23 June 2022, the Committee for Medicinal Products for Human Use (CHMP) of the European Medicines Agency (EMA) adopted a positive opinion, recommending the granting of a marketing authorization for the medicinal product Scemblix, intended for the treatment of adults with Philadelphia chromosome‑positive chronic myeloid leukemia in chronic phase who have previously been treated with two or more tyrosine kinase inhibitors. The applicant for this medicinal product is Novartis Europharm Limited. Asciminib was approved for medical use in the European Union in August 2022.The US Food and Drug Administration (FDA) granted the application for asciminib priority review, fast track, orphan drug, and breakthrough therapy designations.
+
+
+== References ==
+
+
+== External links ==
+Clinical trial number NCT02081378 for "A Phase I Study of Oral ABL001 in Patients With CML or Ph+ ALL" at ClinicalTrials.gov
+Clinical trial number NCT03106779 for "Study of Efficacy of CML-CP Patients Treated With ABL001 Versus Bosutinib, Previously Treated With 2 or More TKIs" at ClinicalTrials.gov

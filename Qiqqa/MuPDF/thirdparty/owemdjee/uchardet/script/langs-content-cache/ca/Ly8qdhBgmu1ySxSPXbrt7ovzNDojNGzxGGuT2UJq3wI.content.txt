@@ -1,0 +1,190 @@
+revision: 31944499
+title: "Distribuci\xF3 de Gumbel de tipus II"
+url: https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_Gumbel_de_tipus_II
+
+
+---
+
+En teoria de la probabilitat i estadística, la distribució de Gumbel de tipus II és aquella distribució de probabilitat que té, com a funció de densitat de probabilitat:
+
+  
+    
+      
+        f
+        (
+        x
+        
+          |
+        
+        a
+        ,
+        b
+        )
+        =
+        a
+        b
+        
+          x
+          
+            −
+            a
+            −
+            1
+          
+        
+        
+          e
+          
+            −
+            b
+            
+              x
+              
+                −
+                a
+              
+            
+          
+        
+        
+      
+    
+     
+  per:
+
+  
+    
+      
+        0
+        <
+        x
+        <
+        ∞
+      
+    
+     
+  .Això implica que és similar a la distribució de Weibull, substituint 
+  
+    
+      
+        b
+        =
+        
+          λ
+          
+            −
+            k
+          
+        
+      
+    
+     
+   i 
+  
+    
+      
+        a
+        =
+        −
+        k
+      
+    
+     
+  . Noti's, tanmateix, que un valor positiu de k (com és el cas en la distribució de Weibull) faria que a fos negatiu, cosa que no està permesa en aquesta distribució, ja que es tindria una densitat de probabilitat negativa.
+Per 
+  
+    
+      
+        0
+        <
+        a
+        ≤
+        1
+      
+    
+     
+   la mitjana és infinita. Per 
+  
+    
+      
+        0
+        <
+        a
+        ≤
+        2
+      
+    
+     
+   la variància és infinita.
+La seva funció de distribució acumulada és:
+
+  
+    
+      
+        F
+        (
+        x
+        
+          |
+        
+        a
+        ,
+        b
+        )
+        =
+        
+          e
+          
+            −
+            b
+            
+              x
+              
+                −
+                a
+              
+            
+          
+        
+        
+      
+    
+     
+  Els moments 
+  
+    
+      
+        E
+        [
+        
+          X
+          
+            k
+          
+        
+        ]
+        
+      
+    
+     
+   existeixen per 
+  
+    
+      
+        k
+        <
+        a
+        
+      
+    
+     
+  
+El cas particular en què b = 1 correspon a la distribució de Fréchet.
+La distribució rep el nom del matemàtic alemany Emil Julius Gumbel (1891 – 1966).
+
+
+== Vegeu també ==
+Distribució de Gumbel de tipus I
+
+
+== Referències ==

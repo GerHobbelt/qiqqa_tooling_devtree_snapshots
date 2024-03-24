@@ -1,0 +1,44 @@
+revision: 6524895
+title: 0,999...
+url: https://hr.wikipedia.org/wiki/Amper
+
+
+---
+
+Amper (simbol: A) je osnovna jedinica SI sustava za jakost električne struje jednaka kulonu po sekundi. Ime je dobila po André-Marie Ampèreu, jednom od glavnih pronalazača na području elektromagnetizma.
+
+
+== Definicija ==
+Jedan amper je takva jakost konstantne električne struje koja će prolazeći kroz dva beskonačno duga međusobno usporedna vodiča zanemarivog presjeka u vakuumu, na udaljenosti od jednog metra, prouzročiti među njima silu od 2·10–7 njutna po metru duljine vodiča.
+
+
+== Objašnjenje ==
+Zbog toga što je to osnovna jedinica, definicija ampera nije vezana ni za jednu drugu električnu veličinu. Definicija ampera je ekvivalent za popravljanje vrijednosti permeabilnosti vakuuma prema μ0 = 4π·10−7 H/m. Prije 1948. Koristio se tzv. međunarodni amper definiran preko pojma elektrolitske brzine raspadanja srebra. Stara jedinica je jednaka 0,999 85 A.
+Amper se najtočnije realizira korištenjem strujne vage, ali se u praksi ustanovljuje prema Ohmovom zakonu iz jedinica napona i otpora, volta i ohma, otkad se posljednje dvije veličine (napon i otpor) mogu povezati s fizikalnim pojavama koje se relativno lako mogu reproducirati: Josephsonov spoj i kvantni Hallov efekt.
+Jedinica električnog naboja, kulon, definira se preko ampera: jedan kulon je vrijednost električnog naboja prenesena u struji od jednog ampera tijekom jedne sekunde. Električna struja je brzina kojom naboj teče kroz vodič ili površinu. Jedan amper struje (I) jednak je toku od jednog kulona naboja (Q) po sekundi vremena (t):
+
+  
+    
+      
+        
+          I
+          =
+          Q
+          
+            /
+          
+          t
+        
+        
+      
+    
+     
+  Kako je kulon približno jednak 6,24·1018 elementarnih naboja, jedan amper je ekvivalentan 6,24·1018 elementarnih naboja, kao što je elektron, protjecanih kroz površinu u jednoj sekundi. Ili preciznije, koristeći SI definicije za konvencijalne vrijednosti  Josephsonove i von Klitzingove konstante, amper se može definirati egzaktno kao 6,241 509 629 152 65·1018 elementarnih naboja u sekundi.
+
+
+== Pogledaj ==
+SI osnovne jedinice
+Ohmov zakon
+
+
+== Izvori ==

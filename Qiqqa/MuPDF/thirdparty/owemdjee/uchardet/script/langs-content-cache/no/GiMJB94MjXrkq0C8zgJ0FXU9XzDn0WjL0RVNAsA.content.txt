@@ -1,0 +1,436 @@
+revision: 21355197
+title: Pulsbreddemodulasjon
+url: https://no.wikipedia.org/wiki/Pulsbreddemodulasjon
+
+
+---
+
+Pulsbreddemodulasjon eller pulsbreddemodulering (PBM eller engelsk Pulse-Width Modulation, PWM) er styring av et firkantpulstog på en slik måte at de aktive pulslengdene endres, mens periodetiden (og derfor grunnfrekvensen) er konstant. Forholdet mellom den aktive tiden (D.T i illustrasjonen) og periodetiden T blir D.T/T og kalles pulstogets arbeidssyklus, også kjent som duty cycle (på engelsk). Den aktive pulslengden D.T kan ligge mellom 0 og 100 % av periodetiden, altså mellom 0 og T.
+Ved integrering av pulstoget oppstår en spenning som tilsvarer pulslengdens prosentandel av den aktive spenningen 
+  
+    
+      
+        
+          y
+          
+            m
+            a
+            x
+          
+        
+      
+    
+     
+   – 
+  
+    
+      
+        
+          y
+          
+            m
+            i
+            n
+          
+        
+      
+    
+     
+  . Dette kan måles som effektiv-verdien av spenningen, som er et resultat av pulsbredden. Det er oftest hovedformålet med prosessen å styre en spenning slik. For overføring av styrespenningen, nyttesignalet, kan en bruke en kanal som ikke kan overføre så lave frekvenser, for eksempel likestrøm.
+Pulsbreddemodulasjon brukes i stor grad til å regulere hastighet på likestrømsmotorer, lysstyring og til andre reguleringsformål. Fordelene med denne type regulering er at det oppstår veldig lite tap i systemet, sammenlignet med for eksempel serieregulatorsystemer.
+I modulasjonsterminologi styrer nyttesignalet pulsbredden, og bæresignalet er en likespenning (lik 
+  
+    
+      
+        
+          y
+          
+            m
+            a
+            x
+          
+        
+      
+    
+     
+   – 
+  
+    
+      
+        
+          y
+          
+            m
+            i
+            n
+          
+        
+      
+    
+     
+  ). Demodulasjon gjøres ved hjelp av integrering, som her gjøres ved lavpassfiltrering. Se pol.
+Den demodulerte spenningen kan ikke inneholde frekvenser som er høyere enn halve signalfrekvensen 1/T, noe som følger av samplingsteoremet.
+
+
+== Matematisk utledning av demodulasjonen ==
+Det modulerte signalet kan generelt uttrykkes som
+
+  
+    
+      
+        y
+        =
+        f
+        (
+        t
+        )
+      
+    
+     
+  
+Demodulasjonen kan beregnes ved midlet integrasjon av signalet over en periode:
+
+  
+    
+      
+        
+          
+            
+              y
+              ¯
+            
+          
+        
+        =
+        
+          
+            1
+            T
+          
+        
+        
+          ∫
+          
+            0
+          
+          
+            T
+          
+        
+        f
+        (
+        t
+        )
+        
+        d
+        t
+      
+    
+     
+  
+Spenningsverdiene av 
+  
+    
+      
+        f
+        (
+        t
+        )
+      
+    
+     
+   er
+
+  
+    
+      
+        
+          y
+          
+            m
+            a
+            x
+          
+        
+      
+    
+     
+   for tiden 
+  
+    
+      
+        0
+        <
+        t
+        <
+        D
+        .
+        T
+      
+    
+     
+   og
+
+  
+    
+      
+        
+          y
+          
+            m
+            i
+            n
+          
+        
+      
+    
+     
+   for tiden 
+  
+    
+      
+        D
+        .
+        T
+        <
+        t
+        <
+        T
+      
+    
+     
+  , og integrasjonen gir oss:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    
+                      y
+                      ¯
+                    
+                  
+                
+              
+              
+                =
+              
+              
+                
+                  
+                    1
+                    T
+                  
+                
+                
+                  (
+                  
+                    
+                      ∫
+                      
+                        0
+                      
+                      
+                        D
+                        .
+                        T
+                      
+                    
+                    
+                      y
+                      
+                        m
+                        a
+                        x
+                      
+                    
+                    
+                    d
+                    t
+                    +
+                    
+                      ∫
+                      
+                        D
+                        .
+                        T
+                      
+                      
+                        T
+                      
+                    
+                    
+                      y
+                      
+                        m
+                        i
+                        n
+                      
+                    
+                    
+                    d
+                    t
+                  
+                  )
+                
+              
+            
+            
+              
+              
+                =
+              
+              
+                
+                  
+                    
+                      D
+                      .
+                      T
+                      ⋅
+                      
+                        y
+                        
+                          m
+                          a
+                          x
+                        
+                      
+                      +
+                      (
+                      T
+                      −
+                      D
+                      .
+                      T
+                      )
+                      ⋅
+                      
+                        y
+                        
+                          m
+                          i
+                          n
+                        
+                      
+                    
+                    T
+                  
+                
+              
+            
+            
+              
+              
+                =
+              
+              
+                (
+                
+                  y
+                  
+                    m
+                    a
+                    x
+                  
+                
+                −
+                
+                  y
+                  
+                    m
+                    i
+                    n
+                  
+                
+                )
+                ⋅
+                D
+                .
+                T
+                
+                  /
+                
+                T
+              
+            
+          
+        
+      
+    
+     
+  
+Dette uttrykket kan forenkles der 
+  
+    
+      
+        
+          y
+          
+            m
+            i
+            n
+          
+        
+        =
+        0
+      
+    
+     
+   og vi får 
+  
+    
+      
+        
+          
+            
+              y
+              ¯
+            
+          
+        
+        =
+        D
+        .
+        T
+        
+          /
+        
+        T
+        ⋅
+        
+          y
+          
+            m
+            a
+            x
+          
+        
+      
+    
+     
+  .
+Av dette ser en at middelvedien av utsignalet (
+  
+    
+      
+        
+          
+            
+              y
+              ¯
+            
+          
+        
+      
+    
+     
+  ) er proporsjonal med duty cycle D.T.
+
+En enkel måte å generere et PBM-signal på er ved hjelp av en sagtanngenerator og en komparator. Når nyttesignalet, her gitt ved den grønne sinuskurven, er større enn sagtannsignalet (blå) settes utgangssignalet (magenta) «høyt», ellers settes det «lavt», se figur 2.
+En annen, og kanskje den mest brukte, metoden idag er ved hjelp av mikroprosessorer som kan være spesialdesignet til dette formålet.

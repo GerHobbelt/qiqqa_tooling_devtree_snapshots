@@ -1,0 +1,124 @@
+revision: 70429356
+title: olimpiada informatyczna
+url: https://pl.wikipedia.org/wiki/Olimpiada_Informatyczna
+
+
+---
+
+Olimpiada Informatyczna – przedmiotowa olimpiada szkolna z zakresu informatyki, powołana 10 grudnia 1993 przez Instytut Informatyki Uniwersytetu Wrocławskiego. Olimpiada organizowana jest corocznie od 1993 i skierowana do uczniów szkół średnich, choć mogą brać w niej udział także młodsi uczniowie. Zadania polegają na napisaniu programu komputerowego rozwiązującego określony problem algorytmiczny ukryty w treści podanego zadania.
+W zadaniach określona jest relacja pomiędzy danymi wejściowymi a danymi wyjściowymi. Zawodnik musi opracować taki algorytm, by ta relacja została zachowana dla wszystkich danych z przedziałów określonych w zadaniu. Opracowany algorytm musi zostać zaimplementowany w jednym z dwóch języków programowania: C++ lub Pythonie. Od 2018 roku Olimpiada Informatyczna wycofała wsparcie dla C oraz Pascala. Jako efekt końcowy zawodnik udostępnia kod źródłowy swojego programu.
+Organizatorzy dokonują sprawdzenia zadania w kilku krokach wykorzystując sprawdzaczkę: System Informatyczny Olimpiady (SIO). Najpierw kod zostaje skompilowany, po czym sprawdzana zostaje poprawność działania programu na zbiorze danych testowych. W zależności od poprawności oraz czasu wykonania w zależności od poszczególnych danych testowych przez program zostaje on odpowiednio oceniony.
+Sprawozdania z przebiegu pierwszych 23 edycji konkursu dostępne są do pobrania ze strony internetowej Olimpiady Informatycznej.
+Odpowiednikiem Olimpiady dla uczniów szkół podstawowych jest Olimpiada Informatyczna Juniorów.
+
+
+== Przebieg ==
+Całe zawody podzielone są na 3 etapy:
+
+Etap pierwszy jest rozgrywany zdalnie. Uczestnicy rozwiązują zadania w domu. Rozwiązania są przesłane przez Internet lub zwykłą pocztą.
+Etap drugi (okręgowy) jest rozgrywany w warunkach kontrolowanej samodzielności. Do tego etapu przechodzą osoby, które najlepiej wykonały zadania z pierwszego etapu. Zawodnicy rozwiązują zadania przez 5 godzin, każdego z dwóch dni zawodów.
+Etap trzeci (finałowy) jest rozgrywany w warunkach kontrolowanej samodzielności w jednym miejscu. Do trzeciego etapu przechodzi około 80-100 osób, które najlepiej wykonały zadania z II etapu. Zawodnicy, którzy dostali się do trzeciego etapu otrzymują tytuł finalistów, mają zapewnione miejsce na niemalże wszystkich uczelniach w Polsce na kierunkach informatycznych i pokrewnych bez potrzeby zdawania egzaminu. Czołowi zawodnicy III etapu otrzymują tytuł laureata. Spośród nich wyłaniana jest reprezentacja na Międzynarodową Olimpiadę Informatyczną i inne zawody międzynarodowe. Tytuł finalisty lub laureata Olimpiady Informatycznej zapewnia wynik 100% na maturze z informatyki.
+
+
+== Zwycięzcy ==
+
+
+== Osiągnięcia międzynarodowe ==
+Spośród osób, które osiągnęły najwyższe wyniki na Olimpiadzie Informatycznej, wybierani są reprezentanci do konkursów międzynarodowych.
+
+
+=== Międzynarodowa Olimpiada Informatyczna (IOI) ===
+Do 2018 roku Polacy zdobyli 109 medali na Międzynarodowej Olimpiadzie Informatycznej: 40 złotych, 39 srebrnych oraz 30 brązowych. Dwa razy także Polacy stali na najwyższym miejscu podium tej olimpiady:
+
+XVIII IOI, 2006 – zwycięzcą Filip Wolski
+XIX IOI, 2007 – zwycięzcą Tomasz KulczyńskiPoniższa tabela przedstawia reprezentacje Polski razem z wynikami na poszczególnych olimpiadach.
+
+
+=== Olimpiada Informatyczna Krajów Europy Środkowej (CEOI) ===
+Do 2018 roku odbyło się 25 edycji Olimpiady Informatycznej Krajów Europy Środkowej. Polacy zdobyli w niej 32 złote medale, 38 srebrnych oraz 30 brązowych medali. Dodatkowo 11 razy Polacy byli zwycięzcami CEOI.
+
+CEOI 1996 – zwycięzcą Adam Borowski
+CEOI 1998 – zwycięzcą Andrzej Gąsienica-Samek
+CEOI 1999 – zwycięzcą Andrzej Gąsienica-Samek
+CEOI 2001 – zwycięzcą Paweł Parys
+CEOI 2003 – zwycięzcą Bartosz Walczak
+CEOI 2006 – zwycięzcą Filip Wolski
+CEOI 2010 – zwyciężczynią Anna Piekarska
+CEOI 2011 – zwycięzcą Krzysztof Pszeniczny
+CEOI 2015 – zwycięzcą Przemysław Jakub Kozłowski
+CEOI 2017 – zwycięzcą Anadi Agrawal
+CEOI 2018 – zwycięzcą Mariusz Trela
+
+
+=== Bałtycka Olimpiada Informatyczna (BOI) ===
+Do 2019 roku odbyło się 25 edycji Bałtyckiej Olimpiady Informatycznej. Polacy zdobyli w niej 50 złotych, 48 srebrnych oraz 25 brązowych medale, a 12 razy zostawali zwycięzcami BOI.
+
+BOI 1997 – zwycięzcą Tomasz Waleń
+BOI 1999 – zwycięzcą Andrzej Gąsienica-Samek
+BOI 2003 – zwycięzcą Bartosz Walczak
+BOI 2004 – zwycięzcą Filip Wolski
+BOI 2005 – zwycięzcą Filip Wolski
+BOI 2006 – zwycięzcą Tomasz Kulczyński
+BOI 2008 – największą liczbę punktów zdobył startujący w drugiej (nieoficjalnej) drużynie polskiej Jakub Pachocki
+BOI 2009 – zwycięzcą Jakub Pachocki
+BOI 2011 – zwycięzcą Mateusz Gołębiewski
+BOI 2012 – zwycięzcą Krzysztof Pszeniczny
+BOI 2014 – zwycięzcą Jarosław Kwiecień
+BOI 2015 – zwycięzcą Artur Puzio
+BOI 2016 – zwycięzcą Mariusz Trela
+
+
+=== Inne konkursy ===
+Laureaci olimpiady osiągali później sukcesy w konkursach na poziomie akademickim (ACM ICPC) oraz innych otwartych konkursach programistycznych o charakterze algorytmicznym, takich jak: Google Code Jam, Internet Problem Solving Contest, TopCoder, Codechef i innych.
+
+
+== Komitet główny ==
+Poniższa lista przedstawia obecnych i byłych członków Komitetu Głównego Olimpiady Informatycznej. W nawiasach przedstawione są edycje Olimpiady, w których byli oni członkami tegoż komitetu.
+
+Szymon Acedański (XV-obecnie)
+Jacek Błażewicz (I-III)
+Piotr Chrząstowski-Wachtel (I-V, XIII-obecnie)
+Wojciech Coplak (II-III)
+Zbigniew Czech (VII-obecnie)
+Jerzy Dałek (I-XII)
+Krzysztof Diks (II-obecnie)
+Piotr Formanowicz (XVI-obecnie)
+Paweł Gawrychowski (XXV-obecnie)
+Paweł Idziak (X-obecnie)
+Tomasz Idziaszek (XXI-obecnie)
+Przemysława Kanarek (IV-XXIV)
+Barbara Klunder (XVI-XVIII)
+Krystyna Kominek (I-III)
+Monika Kozłowska Zając (IV-obecnie)
+Marcin Kubica (II-obecnie)
+Tadeusz Kuran (I-obecnie)
+Anna Beata Kwiatkowska (XI-obecnie)
+Krzysztof Loryś (IV-obecnie)
+Jan Madey (I-obecnie)
+Andrzej W. Mostowski (I-III)
+Jerzy Nawrocki (XIII-XV)
+Jakub Radoszewski (XV-obecnie)
+Wojciech Rytter (I-obecnie)
+Mirosława Skowrońska (X-XV)
+Krzysztof Stencel (IV-obecnie)
+Maciej M. Sysło (I-obecnie)
+Maciej Ślusarek (VII-obecnie)
+Krzysztof J. Święcicki (I-obecnie)
+Andrzej Walat (I-XV)
+Tomasz Waleń (X-obecnie)
+Stanisław Waligórski (I-XX)
+Szymon Wąsik (XXI-obecnie)
+Bolesław Wojdyło (I-IX)
+
+
+== Zobacz też ==
+Międzynarodowa Olimpiada Informatyczna
+Olimpiada Informatyczna Juniorów
+
+
+== Przypisy ==
+
+
+== Linki zewnętrzne ==
+Oficjalna strona olimpiady
+Serwis internetowy olimpiady

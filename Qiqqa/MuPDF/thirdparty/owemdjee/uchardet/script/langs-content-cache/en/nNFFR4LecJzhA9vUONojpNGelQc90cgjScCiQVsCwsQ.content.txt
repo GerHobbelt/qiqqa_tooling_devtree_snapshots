@@ -1,0 +1,354 @@
+revision: 1145035538
+title: Digital signal (signal processing)
+url: https://en.wikipedia.org/wiki/Downsampling_(signal_processing)
+
+
+---
+
+In digital signal processing, downsampling, compression, and decimation are terms associated with the process of resampling in a multi-rate digital signal processing system. Both downsampling and decimation can be synonymous with compression, or they can describe an entire process of bandwidth reduction (filtering) and sample-rate reduction. When the process is performed on a sequence of samples of a signal or a continuous function, it produces an approximation of the sequence that would have been obtained by sampling the signal at a lower rate (or density, as in the case of a photograph).
+Decimation is a term that historically means the removal of every tenth one. But in signal processing, decimation by a factor of 10 actually means keeping only every tenth sample. This factor multiplies the sampling interval or, equivalently, divides the sampling rate. For example, if compact disc audio at 44,100 samples/second is decimated by a factor of 5/4, the resulting sample rate is 35,280. A system component that performs decimation is called a decimator. Decimation by an integer factor is also called compression.
+
+
+== Downsampling by an integer factor ==
+Rate reduction by an integer factor M can be explained as a two-step process, with an equivalent implementation that is more efficient:
+Reduce high-frequency signal components with a digital lowpass filter.
+Decimate the filtered signal by M; that is, keep only every Mth sample.Step 2 alone allows high-frequency signal components to be misinterpreted by subsequent users of the data, which is a form of distortion called aliasing. Step 1, when necessary, suppresses aliasing to an acceptable level. In this application, the filter is called an anti-aliasing filter, and its design is discussed below. Also see undersampling for information about decimating bandpass functions and signals.
+When the anti-aliasing filter is an IIR design, it relies on feedback from output to input, prior to the second step. With FIR filtering, it is an easy matter to compute only every Mth output. The calculation performed by a decimating FIR filter for the nth output sample is a dot product:
+
+  
+    
+      
+        y
+        [
+        n
+        ]
+        =
+        
+          ∑
+          
+            k
+            =
+            0
+          
+          
+            K
+            −
+            1
+          
+        
+        x
+        [
+        n
+        M
+        −
+        k
+        ]
+        ⋅
+        h
+        [
+        k
+        ]
+        ,
+      
+    
+     
+  where the h[•] sequence is the impulse response, and K is its length.  x[•] represents the input sequence being downsampled. In a general purpose processor, after computing y[n], the easiest way to compute y[n+1] is to advance the starting index in the x[•] array by M, and recompute the dot product. In the case M=2, h[•] can be designed as a half-band filter, where almost half of the coefficients are zero and need not be included in the dot products.
+Impulse response coefficients taken at intervals of M form a subsequence, and there are M such subsequences (phases) multiplexed together. The dot product is the sum of the dot products of each subsequence with the corresponding samples of the x[•] sequence. Furthermore, because of downsampling by M, the stream of x[•] samples involved in any one of the M dot products is never involved in the other dot products. Thus M low-order FIR filters are each filtering one of M multiplexed phases of the input stream, and the M outputs are being summed. This viewpoint offers a different implementation that might be advantageous in a multi-processor architecture. In other words, the input stream is demultiplexed and sent through a bank of M filters whose outputs are summed. When implemented that way, it is called a polyphase filter.
+For completeness, we now mention that a possible, but unlikely, implementation of each phase is to replace the coefficients of the other phases with zeros in a copy of the h[•] array, process the original x[•] sequence at the input rate (which means multiplying by zeros), and decimate the output by a factor of M. The equivalence of this inefficient method and the implementation described above is known as the first Noble identity. It is sometimes used in derivations of the polyphase method.
+
+
+=== Anti-aliasing filter ===
+Let X(f) be the Fourier transform of any function, x(t), whose samples at some interval, T, equal the x[n] sequence. Then the discrete-time Fourier transform (DTFT) is a Fourier series representation of a periodic summation of X(f):
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  ∑
+                  
+                    n
+                    =
+                    −
+                    ∞
+                  
+                  
+                    ∞
+                  
+                
+                
+                  
+                    
+                      
+                        x
+                        (
+                        n
+                        T
+                        )
+                      
+                      ⏞
+                    
+                  
+                  
+                    x
+                    [
+                    n
+                    ]
+                  
+                
+                 
+                
+                  
+                    e
+                  
+                  
+                    −
+                    
+                      i
+                    
+                    2
+                    π
+                    f
+                    n
+                    T
+                  
+                
+              
+              ⏟
+            
+          
+          
+            DTFT
+          
+        
+        =
+        
+          
+            1
+            T
+          
+        
+        
+          ∑
+          
+            k
+            =
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        X
+        
+          
+            (
+          
+        
+        f
+        −
+        
+          
+            k
+            T
+          
+        
+        
+          
+            )
+          
+        
+        .
+      
+    
+     
+  When T has units of seconds, 
+  
+    
+      
+        f
+      
+    
+     
+   has units of hertz. Replacing T with MT in the formulas above gives the DTFT of the decimated sequence, x[nM]:
+
+  
+    
+      
+        
+          ∑
+          
+            n
+            =
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        x
+        (
+        n
+        ⋅
+        M
+        T
+        )
+         
+        
+          
+            e
+          
+          
+            −
+            
+              i
+            
+            2
+            π
+            f
+            n
+            (
+            M
+            T
+            )
+          
+        
+        =
+        
+          
+            1
+            
+              M
+              T
+            
+          
+        
+        
+          ∑
+          
+            k
+            =
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        X
+        
+          (
+          
+            f
+            −
+            
+              
+                
+                  k
+                  
+                    M
+                    T
+                  
+                
+              
+            
+          
+          )
+        
+        .
+      
+    
+     
+  The periodic summation has been reduced in amplitude and periodicity by a factor of M.  An example of both these distributions is depicted in the two traces of Fig 1.
+Aliasing occurs when adjacent copies of X(f) overlap. The purpose of the anti-aliasing filter is to ensure that the reduced periodicity does not create overlap. The condition that ensures the copies of X(f) do not overlap each other is: 
+  
+    
+      
+        B
+        <
+        
+          
+            
+              0.5
+              T
+            
+          
+        
+        ⋅
+        
+          
+            
+              1
+              M
+            
+          
+        
+        ,
+      
+    
+     
+   so that is the maximum cutoff frequency of an ideal anti-aliasing filter.
+
+
+== By a rational factor ==
+Let M/L denote the decimation factor, where: M, L ∈ 
+  
+    
+      
+        
+          Z
+        
+      
+    
+     
+  ; M > L.
+
+Increase (resample) the sequence by a factor of L. This is called Upsampling, or interpolation.
+Decimate by a factor of MStep 1 requires a lowpass filter after increasing (expanding) the data rate, and step 2 requires a lowpass filter before decimation. Therefore, both operations can be accomplished by a single filter with the lower of the two cutoff frequencies. For the M > L case, the anti-aliasing filter cutoff, 
+  
+    
+      
+        
+          
+            
+              0.5
+              M
+            
+          
+        
+      
+    
+     
+   cycles per intermediate sample, is the lower frequency.
+
+
+== See also ==
+Upsampling
+Posterization
+Sample-rate conversion
+Aliasing
+Visvalingam–Whyatt algorithm
+
+
+== Notes ==
+
+
+== Page citations ==
+
+
+== References ==
+
+
+== Further reading ==
+Proakis, John G. (2000). Digital Signal Processing: Principles, Algorithms and Applications (3rd ed.). India: Prentice-Hall. ISBN 8120311299.
+Lyons, Richard (2001). Understanding Digital Signal Processing. Prentice Hall. p. 304. ISBN 0-201-63467-8. Decreasing the sampling rate is known as decimation.
+Antoniou, Andreas (2006). Digital Signal Processing. McGraw-Hill. p. 830. ISBN 0-07-145424-1. Decimators can be used to reduce the sampling frequency, whereas interpolators can be used to increase it.
+Milic, Ljiljana (2009). Multirate Filtering for Digital Signal Processing. New York: Hershey. p. 35. ISBN 978-1-60566-178-0. Sampling rate conversion systems are used to change the sampling rate of a signal. The process of sampling rate decrease is called decimation, and the process of sampling rate increase is called interpolation.
+T. Schilcher. RF applications in digital signal processing//" Digital signal processing". Proceedings, CERN Accelerator School, Sigtuna, Sweden, May 31-June 9, 2007. - Geneva, Switzerland: CERN (2008). - P. 258. - DOI: 10.5170/CERN-2008-003. [1]
+Sliusar I.I., Slyusar V.I., Voloshko S.V., Smolyar V.G. Next Generation Optical Access based on N-OFDM with decimation.// Third International Scientific-Practical Conference "Problems of Infocommunications. Science and Technology (PIC S&T'2016)". – Kharkiv. - October 3 –6, 2016. [2]
+Saska Lindfors, Aarno Pärssinen, Kari A. I. Halonen. A 3-V 230-MHz CMOS Decimation Subsampler.// IEEE transactions on circuits and systems— Vol. 52, No. 2, February 2005. – P. 110.

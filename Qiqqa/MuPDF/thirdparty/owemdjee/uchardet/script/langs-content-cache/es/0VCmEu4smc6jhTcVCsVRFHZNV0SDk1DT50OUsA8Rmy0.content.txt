@@ -1,0 +1,64 @@
+revision: 150771818
+title: Steel Yard
+url: https://es.wikipedia.org/wiki/P%C3%A1jaro_Carpintero_Ruso
+
+
+---
+
+El "Pájaro Carpintero Ruso" (conocido en inglés como Russian Woodpecker) fue una notoria señal proveniente de la Unión Soviética que pudo ser oída en la onda corta entre julio de 1976 y diciembre de 1989. La señal consistía en un repetitivo sonido grabado que se emitía en los 10 MHz; a raíz de su similitud con el sonido del pájaro carpintero se originó su apodo. La frecuencia empleada y sus saltos generaban interrupciones en estaciones legales, radio aficionados y emisoras utilitarias que resultaron en muchísimas quejas de gran cantidad de países alrededor del mundo.
+La señal se cree era emitida por un radar sobre el horizonte (Over The Horizon Radar, OTH por sus siglas en inglés). Esta teoría fue confirmada después de la caída de la Unión Soviética y ahora es conocido como el sistema Duga-3,[1]​ un escudo antimisiles soviético, algo que la OTAN sabía muy bien desde hace tiempo teniendo en sus archivos fotos, e inclusive recibió la Designación OTAN de Steel Yard.
+
+
+== Historia ==
+Los soviéticos habían estado trabajando en un sistema de detección temprana para sus sistemas de escudo Antimisiles en los años 60, pero la mayoría de ellos estaban basados en un sistema de línea de visión que era útil solo para detectar e interceptar posibles ataques. Ninguno de estos sistemas tenía la capacidad de alertar tempranamente el lanzamiento de un misil, el cual podría facilitar a los militares el tiempo necesario para defenderse y preparar un plan de contraataque. Al mismo tiempo los sistemas satelitales soviéticos de detección temprana no habían sido bien desarrollados, es así como los trabajos en radares sobre el horizonte (OTH por sus siglas en inglés) para este rol comenzaron a finales de los años 60.
+El primer sistema experimental fue el Duga-1, fue construido a las afueras de Mykolaiv, Unión Soviética, y tuvo éxito en la detección de misiles lanzados desde el Cosmódromo de Baikonur a 2500 kilómetros. Este experimento fue seguido por el prototipo Duga-2 construido en el mismo lugar quién logró detectar y seguir misiles lanzados desde el este y desde submarinos en el Océano Pacífico así como misiles lanzados hacia Nueva Zembla. Ambos sistemas fueron apuntados hacia el este ya como sistemas operacionales completamente probados. El nuevo sistema Duga-3 empleó un transmisor de baja potencia y un receptor separados por 60 km.[2]​
+
+
+== Aparición ==
+A comienzos de 1976 una nueva y poderosa señal fue detectada en el mundo entero, y rápidamente fue apodada como el pájaro carpintero por los radioaficionados. La potencia de algunas de sus transmisiones fueron estimadas en 10 MW. Era capaz de interrumpir en la onda corta y las emisoras legales de onda corta y hasta algunas veces podía ser oído sobre los circuitos telefónicos debido a lo poderoso de su señal. Esto llevó a una próspera industria de filtros para el pájaro carpintero y bloqueadores de ruido.
+Una idea que tuvieron los radioaficionados para tratar de combatir el pájaro carpintero fue tratar de interferirlo a través de una serie de transmisiones simultáneas y sincronizadas sin modulación con señales continuas de onda.[3]​ La idea fue considerada pero al mismo tiempo abandonada por impráctica. Simples pulsos de CW no parecían tener ningún efecto sobre el pájaro carpintero. Sin embargo, la retransmisión de señales del pájaro carpintero generaban que este subiera lentamente de frecuencia lo que generó la creencia que las estaciones de recepción no eran capaces de diferenciar las señales de la estación emisora o las que le estaban transmitiendo.[4]​
+
+
+== Identificación ==
+Una rápida identificación permitió localizar que la señal provenía de República Socialista Soviética de Ucrania. La confusión se debía a pequeñas diferencias en reportes provenientes de fuentes militares que ubicaban la fuente de transmisiones en localizaciones alternativas: Kiev, Minsk, Chernóbil, Gómel o Chernígov; todas ellas fueron descritas con el mismo despliegue, con un pequeño transmisor cerca de 50 kilómetros al noroeste de Chernóbil (sur de Minsk, noroeste de Kiev y un receptor cerca de 50 kilómetros al noroeste de Kiev (justo al este de Chernígov, sur de Gomel). Desconocida para la mayoría del mundo, la OTAN sabía de su existencia y la denominaba Steel Yard.
+Inclusive desde los reportes más tempranos se sospechó que se trataba de un radar sobre el horizonte[5]​ y esto recordaba a la teoría más popular durante la guerra fría. Otras teorías también surgieron incluyendo interferencias intencionadas del bloque oriental hacía las comunicaciones entre submarinos. La teoría de las interferencias hacia emisoras occidentales fue desechada tempranamente cuando se comprobó que Radio Moscú y otras emisoras del bloque eran afectadas por la interferencia. Otras explicaciones especulativas fueron ofrecidas indicando que se trataba de un sistema de control del clima o inclusive un intento masivo de control mental.
+Cuando más información empezó a estar disponible, el propósito de la señal como un radar comenzó a ser suficientemente obvia. En particular, su señal contenía una estructura claramente reconocible en cada pulsación, la cual fue identificada posteriormente como un sistema de una secuencia de 31-bit pseudo-aleatoria, con un ancho de banda de 100 μs resultando en 3.1 ms por pulso.[6]​
+En 1988, la Comisión Federal de Comunicaciones condujo un estudio sobre el Pájaro Carpintero. Los datos del análisis mostraron que el período entre pulsos era de 90 ms y en un rango de frecuencias entre 7 y 19 MHz y un ancho de banda de 0.02 a 0.8 MHz y una continua transmisión de cerca de 7 minutos. 
+
+Se observó que la señal usaba patrones de repetición a 10 Hz, 16 Hz y 20 Hz.
+El patrón más común era de 10 Hz, mientras que los de 16 Hz y 20 Hz eran más raros.
+Los pulsos transmitidos por el Pájaro Carpintero tenían un ancho de banda de 40 kHz.
+
+
+== Desaparición ==
+A finales de los años 80, después de la publicación del informe de la Comisión Federal de Comunicaciones, las señales se volvieron menos frecuentes y en 1989 desaparecieron por completo. Las razones para la desactivación del sistema Duga-3 no han sido hechas públicas, el cambio estratégico por la finalización de la Guerra Fría y la Caída de la Unión Soviética, parecen ser la causa principal. Otro factor parece ser el éxito de los sistemas satelitales de detección temprana US-KS los cuales entraron preliminarmente en servicio a principios de los 80, pero solo a finales de la década se convirtieron en una red completa. El sistema satelital proveía un sistema altamente fiable y seguro de detección temprana mientras que los sistemas de radar estaban sujetos a interferencias propias de la onda corta, además de que la efectividad de los sistemas OTH se veían afectados por las condiciones atmosféricas.
+De acuerdo a algunos reportes, la instalación Komsomolsk-na-Amure, URSS, fue dada de baja en noviembre de 1989 y algunos de sus equipos fueron desmantelados. Fotografías de Google Maps del área muestran la retirada de equipos. El sistema original Duga-3 está ubicado en los 30 kilómetros de la zona de alienación de la central nuclear de Chernóbil. Aparentemente las instalaciones han sido desactivadas permanentemente. La antena continúa de pie y ha sido usada como soporte para sus propias antenas por radioaficionados siendo extensamente fotografiada.
+
+
+== Posiciones ==
+Duga 1 y 2, Mykolaiv, 47°02′28.33″N 32°11′57.29″E
+Duga 3, Gómel/Minsk, (Chernóbil-2) emisor en 51°18′19.06″N 30°03′57.35″E y receptor en 51°38′15.98″N 30°42′10.41″E
+Duga 3, Komsomolsk-na-Amure, emisor en 50°23′07.98″N 137°19′41.87″E y receptor en 50°53′34.66″N 136°50′12.38″E
+
+
+== Véase también ==
+ Wikimedia Commons alberga una categoría multimedia sobre Duga-3.
+Emisora de números
+UVB-76
+HAARP
+The Russian Woodpecker (documental)
+
+
+== Enlaces externos ==
+Artículo del "The Miami Herald" (en inglés)
+Artículo del "Monitoring Times" (en inglés)
+
+
+== Bibliografía ==
+Headrick, James M.IEEE Spectrum, pp. 36 a 39 (julio de 1990).
+Headrick, James M. y Skolnik, Merrill I., Radar de horizonte en la banda de HF, Actas de la IEEE, vol. 62, no. 6 pp. 664 a 673 (junio de 1974).
+Headrick, James M., Cap. 24: "HF over-the-radar horizonte", en: Radar Handbook, 2 ª ed., Merrill I. Skolnik, ed. [New York: McGraw-Hill, 1990].
+Kosolov, A. A., ed. Fundamentos del radar sobre el horizonte (traducido por WF Barton) [Norton, Mass.: Artech House, 1987].
+
+
+== Referencias ==

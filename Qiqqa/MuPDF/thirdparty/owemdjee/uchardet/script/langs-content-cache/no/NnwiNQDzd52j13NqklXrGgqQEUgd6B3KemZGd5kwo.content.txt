@@ -1,0 +1,110 @@
+revision: 21759348
+title: Elektromagnetisk spekter
+url: https://no.wikipedia.org/wiki/Elektromagnetisk_spekter
+
+
+---
+
+Det elektromagnetiske spekteret er en benevnelse som omfavner all elektromagnetisk stråling. Stråling ved ulike frekvenser (bølgelengder) har svært ulike fysiske (og praktiske) egenskaper. Både radiobølger, lys og gammastråling er ulike typer elektromagnetisk stråling i det elektromagnetiske spekteret. 
+
+
+== Inndeling i ulike områder ==
+
+Strålingen er delt inn i noen bølgelengdeområder med navn: (andre kilder vil kunne gi litt andre tall)
+Ikke-ioniserende stråling:
+
+Radiobølger (bølgelengde over 1 m)
+Mikrobølger (1 mm – 1 000 mm)
+Infrarød stråling (700 nm – 1 mm)
+Lys (400 nm – 700 nm)Ioniserende stråling:
+
+Ultrafiolett stråling (bølgelengde 10 nm – 400 nm)
+Røntgenstråling (0,01 nm – 10 nm)
+Gammastråling (alt under 0,01 nm)
+Bildet til høyre viser en grov inndeling grafisk. Fra venstre mot høyre ser vi gammastråling, røntgenstråling, ultrafiolett stråling, synlig lys, infrarød stråling og til slutt mikro- og radiobølger. 
+Egenskapene til strålingen avhenger av frekvens (og bølgelengde). 
+Energimengden i elektromagnetisk stråling er gitt ved formlene
+
+  
+    
+      
+        E
+        =
+        h
+        c
+        
+          /
+        
+        λ
+        
+      
+    
+     
+   eller 
+  
+    
+      
+        E
+        =
+        h
+        f
+      
+    
+     
+  der
+E er energien i ett foton,
+h er Plancks konstant,
+c er lysets hastighet i vakuum,
+f er frekvens
+og λ (lambda) er bølgelengden til strålingen.  Jo kortere bølgelengde, desto større fotonenergi.
+Sammenhengen mellom bølgelengde og frekvens er gitt slik: 
+
+  
+    
+      
+        c
+        =
+        λ
+        ∗
+        f
+        
+      
+    
+     
+  
+
+
+=== Mikro- og radiobølger ===
+Hovedartikkel: radiobølgerI den nedre delen av det elektromagnetiske spekteret (lavest frekvens) finner vi den type stråling som kan bre seg godt ut i omgivelsene rundt oss. Dette utnytter man for å sende trådløse informasjonssignaler slik som radio, tv og mobiltelefoni gjennom luften. Stråling ved disse frekvensene brer seg ut slik at man kan dekke større områder. Til sammenligning vil en lys laserstråle gå rett fram og ikke spre seg utover. 
+Mikrobølger brer seg ikke så godt ut som radiobølger, men kan benyttes til kommunikasjon der sender og mottaker ser hverandre, eller på korte avstander. 
+Mikrobølger kan også benyttes for å varme opp maten i en mikrobølgeovn. Mikrobølger har en bølgelengde som gjør at de greier å sette molekylene i maten i bevegelse (vibrasjon), og det gir varme. 
+Radarer opererer også i dette området av spekteret.
+
+
+=== Infrarød stråling ===
+Alle fysiske legemer med en viss temperatur sender ut elektromagnetisk stråling styrt av Plancks strålingslov. Ved temperaturer rundt romtemperatur og litt oppover vil mesteparten av strålingen bli sendt ut i det infrarøde området som varme. Kameraer som ser infrarød stråling blir for eksempel benyttet for å finne savnede personer etter skipsforlis eller på fjellet, da alle levende vesen sender ut varmestråling. 
+Mange bevegelsesdetektorer for eksempel i alarmer eller lysbrytere måler infrarød stråling for å detektere personer i nærheten. 
+
+
+=== Lys ===
+
+Hovedartikkel: lysTabellen til høyre viser hvor de ulike fargene av synlig lys ligger i spekteret. Rødt har lengst bølgelengde, og dermed minst energi, fiolett er den mest "energirike" fargen. Alle ting vi ser, ser vi fordi de sender ut stråling i det synlige området. Denne strålingen kan være reflektert (solen lyser opp omgivelsene rundt oss), utstrålt – emitert på grunn av temperatur (for eksempel glødetråden i en lyspære). Hvilken farge lyset får avgjør de fysiske egenskapene til det som for eksempel blir belyst. Et blad er grønt fordi klorofyllet i bladet absorberer de andre fargene og reflekterer kun den grønne fargen.
+
+
+=== Ultrafiolett stråling ===
+Hovedartikkel: ultrafiolett strålingUltrafiolett stråling forekommer blant annet i sollys. Den blir også ofte brukt til fotolitografi. Dette området har også de bølgelengdene hvor stråling begynner å bli ioniserende.
+
+
+=== Røntgenstråling ===
+Hovedartikkel: røntgenstrålingStråling ved denne bølgelengden er så energirik at den vil greie å gå gjennom mykt vev slik som hud og muskler, men den greier ikke å trenge gjennom beinvev. Derfor kan røntgenstråling benyttes til å fotografere skjelettet til mennesker og dyr.
+
+
+=== Gammastråling ===
+Hovedartikkel: gammastrålingGammastråling (γ-stråling) er den mest energirike strålingen. Gammastråler trenger mer eller mindre gjennom det meste av fast stoff. Strålingen er en ioniserende radioaktiv stråling, det vil si at den evner å ødelegge molekyler i levende vev slik at vevet skades av strålingen. 
+
+
+== Referanser ==
+
+
+== Eksterne lenker ==
+Superspektrum - Multimedia fra forskning.no 1.5.06

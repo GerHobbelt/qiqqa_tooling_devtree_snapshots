@@ -1,0 +1,32 @@
+revision: 32576771
+title: EBCDIC 1122
+url: https://ko.wikipedia.org/wiki/ISO/IEC_6937
+
+
+---
+
+ISO/IEC 6937:2001, 즉 Information technology — Coded graphic character set for text communication — Latin alphabet은 ASCII의 멀티바이트 확장 또는 ISO/IEC 646-IRV이다. T.51이라는 이름으로 컴퓨터 통신 서비스를 위해 ITU-T(당시 CCITT)를 통해 개발되었으며 1983년 처음으로 ISO 표준이 되었다.
+IANA는 ISO_6937-2-25과 ISO_6937-2-add라는 이 표준의 두 개의 (더 오래된) 버전을 등록하였다. 그러나 현실적으로 이 문자 인코딩은 인터넷에서 사용되지 않는다.
+ISO/IEC 6937 문자 집합의 오른손잡이 사이드를 지정하기 위한 ISO/IEC 2022 이스케이프 시퀀스는 ESC - R (16진 1B 2D 52)이다.
+
+
+== 1바이트 문자 ==
+	!"#¤%&'()*+,-./0123456789:;<=>?@
+	ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`
+	abcdefghijklmnopqrstuvwxyz{|}
+
+
+== 2바이트 문자 ==
+  문자   숫자   구두점   기호   기타   미정의
+
+
+== 같이 보기 ==
+ITU T.50
+
+
+== 각주 ==
+
+
+== 외부 링크 ==
+ISO pages: ISO 6937-1:1983, ISO 6937-2:1983, ISO 6937-2:1983/Add 1:1989, ISO/IEC 6937:1994, ISO/IEC 6937:2001
+WD 6937, Coded graphic character set for text communication - Latin alphabet (Revision of ISO/IEC 6937:1994) (ISO/IEC 6937:1994 draft)

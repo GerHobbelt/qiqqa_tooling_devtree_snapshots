@@ -1,0 +1,74 @@
+revision: 70398191
+title: Ada Lovelace
+url: https://pl.wikipedia.org/wiki/Ada_Lovelace
+
+
+---
+
+Augusta Ada King, hrabina Lovelace (ur. 10 grudnia 1815, zm. 27 listopada 1852) – brytyjska matematyczka i poetka, znana przede wszystkim z publikacji na temat mechanicznego komputera Charlesa Babbage’a, zwanego maszyną analityczną. Praca zawiera notatki, wśród nich pierwszy opublikowany algorytm napisany z zamiarem wykonania na maszynie, jednak istnieją kontrowersje odnośnie jego autorstwa. Niemniej z tego powodu uważana bywa za pierwszą programistkę. Kompletny egzemplarz maszyny analitycznej nigdy nie powstał, jednak w 2011 ogłoszono zamiar jego budowy.
+
+
+== Życiorys ==
+Ada Lovelace urodziła się 10 grudnia 1815 jako jedyne ślubne dziecko poety lorda Byrona i Annabelli Milbanke, kuzynki lady Caroline Lamb, z którą Byron miał romans będący przyczyną skandalu w ówczesnym Londynie. Ada otrzymała imię po przyrodniej siostrze Byrona, Auguście Leigh, która rozpuściła pogłoskę, że Byron został ojcem. Za namową Augusty, w celu uniknięcia skandalu, Byron niechętnie poślubił Annabellę. 16 stycznia 1816 Annabella porzuciła Byrona, zabierając ze sobą miesięczną Adę. 21 kwietnia Byron zawarł z nią umowę o separacji i kilka dni później opuścił Anglię na dobre. Zmarł w trakcie wojny o niepodległość Grecji w 1824.
+Matka Ady próbowała odwieść córkę od poezji, która jej zdaniem doprowadziła Byrona do obłędu, i skierować jej zainteresowania na matematykę i logikę. Mimo tego Ada przez całe życie była zafascynowana postacią ojca i na własne życzenie po śmierci została pochowana obok niego. Jej prywatnymi nauczycielami matematyki i fizyki byli William Frend, doktor William King i Mary Somerville. Później jej korepetytorem został matematyk i logik Augustus De Morgan.
+Jej talent matematyczny przyczynił się z czasem do współpracy i przyjaźni z brytyjskim matematykiem Charlesem Babbage’em, zwanym również „ojcem komputerów”.
+Mężem Ady był William King – ósmy baron Ockham, późniejszy pierwszy hrabia Lovelace, z którym miała troje dzieci. Łączyła ich również miłość do koni.
+Przyjaźniła się z Mary Somerville, uznaną badaczką i naukowczynią XIX wieku. Utrzymywała też kontakty z Davidem Brewsterem, Charlesem Wheatstone'em, Charlesem Dickensem i Michaelem Faradayem.
+
+
+== Praca ==
+Lovelace poznała Charlesa Babbage’a w czerwcu 1833 przez wspólną przyjaciółkę Mary Somerville. Babbage zaprosił Lovelace do obejrzenia swojego prototypu maszyny różnicowej, która ją zafascynowała. Wykorzystała znajomość z Somerville do częstego odwiedzania Babbage’a, który chętnie utrzymywał kontakty z hrabiną Lovelace, również z uwagi na jej znajomości we wpływowych, wyższych sferach.
+Lovelace często kwestionowała podstawowe założenia przez łączenie poezji i nauki. Wierzyła, że intuicja i wyobraźnia są kluczowe do efektywnego korzystania z matematycznych i naukowych konceptów. Ceniła metafizykę na równi z matematyką, widząc w obu narzędzia do poznawania otaczającego nas świata. Łącząc poezję z matematyką, Ada opisywała swoje podejście jako „naukę poetycką” (ang. poetical science), a siebie jako „analityka i metafizyka”.
+W 1840 Babbage prowadził seminarium na Uniwersytecie Turyńskim na temat swojego najnowszego pomysłu. Młody włoski inżynier, Luigi Menabresa (późniejszy Prezes Rady Ministrów Włoch), spisał po francusku wykład i opublikował go w piśmie Bibliothèque universelle de Genève w październiku 1842. Na zlecenie przyjaciela wykładowcy, Charlesa Wheatstone’a, na przełomie lat 1842-43 Lovelace przetłumaczyła artykuł na temat maszyny analitycznej. Do publikacji dołączyła notatki, dłuższe od oryginalnego artykułu.
+
+
+=== Pierwszy program komputerowy ===
+
+Za pierwszy program komputerowy uważa się diagram, który Lovelace wykonała w swoich notatkach do tłumaczenia artykułu o maszynie analitycznej Babbage’a napisanego przez Lugiego Menabrea. W części G opisuje ona algorytm do obliczenia liczb Bernoulliego. Urządzenie to nie zostało nigdy zbudowane, więc algorytm ten nie został przetestowany.
+W 1953, ponad wiek po śmierci Ady, notatki zostały ponownie opublikowane. Maszynę uważa się obecnie za inspirację do skonstruowania późniejszych komputerów, z kolei algorytm uznawany jest przez wielu za pierwszy program komputerowy.
+
+
+=== Kontrowersje wokół zakresu pracy ===
+Chociaż Ada Lovelace jest czasem określana jako pierwsza programistka komputerowa, wielu historyków informatyki i biografów uważa inaczej.
+Allan G. Bromley, historyk informatyki, w publikacji z 1990 „Difference and Analytical Engines” stwierdza: „Wszystkie, oprócz jednego z programów wymienionych w jej notatkach, zostały przygotowane przez Babbage’a od trzech do siedmiu lat wcześniej. Nie tylko nie ma dowodów, że Ada kiedykolwiek przygotowała program dla maszyny analitycznej, ale jej korespondencja z Babbagem pokazuje, że nie posiadała wiedzy, by to zrobić”.
+Dr Bruce Collier z Harvard University w opisie biografii Babbage’a z 1970 „The Little Engines That Could've: The Calculating Machines of Charles Babbage” napisał: „Chociaż jasne jest, że lady Lovelace była kobietą utalentowaną i rozumiała pomysły Babbage’a o ogólnym charakterze i znaczeniu maszyny analitycznej oraz wyraziła je w formie swoich notatek do pracy Menabrei, to równie oczywiste jest, że w rzeczywistości były to idee Babbage’a, a nie jej. I rzeczywiście, nigdy nie zaprzeczyła, że było inaczej. W znaczny sposób przyczyniła się do reklamowania maszyny analitycznej, ale nie ma dowodów, że w jakiś sposób rozwinęła jej projekt lub teorię”.
+Eugene Eric Kim i Betty Alexandra Toole w artykule z 1990 „Ada and the First Computer” twierdzą: „Wiele osób błędnie uważa, że Ada była pierwszym programistą komputerowym. Babbage, nie Ada, napisał pierwsze programy dla swojej maszyny analitycznej, choć większość z nich nie została opublikowana”.
+A.G. Bromley stwierdza: „dwa tuziny programów dla maszyny analitycznej istniały między 1837 i 1840 rokiem”.
+
+
+== Śmierć ==
+Lovelace zmarła 27 listopada 1852 w wieku 36 lat na raka macicy. Choroba trwała kilka miesięcy, jej stan zdrowia pogorszyło prawdopodobnie upuszczanie krwi wykonywane przez lekarza. W tym czasie Annabella przejęła kontrolę nad tym, kogo Ada widywała, wykluczając z jej życia przyjaciół i powierników, nakłoniła córkę do nawrócenia się oraz odpokutowania swoich zachowań. Ada straciła kontakt z mężem, który ją opuścił po tym, jak 30 sierpnia wyznała mu coś, czego treść nie jest znana. Została pochowana, zgodnie z życzeniem, obok swego ojca w Kościele św. Marii Magdaleny w Hucknall, w hrabstwie Nottingham.
+
+
+== Nawiązania ==
+
+10 grudnia 1980 Departament Obrony Stanów Zjednoczonych zatwierdził opis nowego języka programowania nazwanego Ada.
+Jest jedną z głównych postaci książki Maszyna różnicowa (The Difference Engine), napisanej przez Bruce’a Sterlinga i Williama Gibsona, która opisuje świat w którym maszyny Babbage’a weszły do masowej produkcji i era komputerów zaczęła się o wiek wcześniej.
+W sztuce Toma Stopparda Arkadia wzorowana jest na niej postać Thomasiny Coverly.
+Kostium Ady Lovelace pojawił się jako dodatek do pobrania w grze LittleBigPlanet.
+10 grudnia 2012 strona główna Google z okazji 197. rocznicy jej urodzin została opatrzona grafiką nawiązującą do tej postaci i jej osiągnięć.
+Postać Ady Lovelace pojawiła się w jednym z odcinków serialu Doctor Who (seria 12, odcinek 2: Wszechświat to za mało - część II; ang. Spyfall - Part Two).
+Podobizna Ady występuje także na hologramach cerytifkatów autentyczności produktów Microsoftu.
+Architektura zaprezentowanych w 2022 kart graficznych firmy Nvidia otrzymała nazwę Ada Lovelace.
+
+
+== Publikacje ==
+Menabrea, Luigi Federico; Lovelace, Ada (1843). „Sketch of the Analytical Engine invented by Charles Babbage... with notes by the translator. Translated by Ada Lovelace”. In Richard Taylor. Scientific Memoirs 3. London: Richard and John E. Taylor. pp. 666–731.
+
+
+== Zobacz też ==
+Grace Hopper
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+Allan G.A.G. Bromley Allan G.A.G., Difference and Analytical Engines, [w:] WilliamW. Aspray (red.), Computing Before Computers, Ames: Iowa State University Press, 1990, s. 59–98, ISBN 0-8138-0047-1 .
+JJ. Fuegi JJ., JJ. Francis JJ., Lovelace & Babbage and the creation of the 1843 'notes', „Annals of the History of Computing”, 25 (4), IEEE, 2003, s. 16–26, DOI: 10.1109/MAHC.2003.1253887 .
+
+
+== Linki zewnętrzne ==
+ John J. O'Connor; Edmund F. Robertson: Ada Lovelace w MacTutor History of Mathematics archive (ang.)
+Biografia Ady Lovelace
+Biografia Ady Lovelace na Geniuses.club

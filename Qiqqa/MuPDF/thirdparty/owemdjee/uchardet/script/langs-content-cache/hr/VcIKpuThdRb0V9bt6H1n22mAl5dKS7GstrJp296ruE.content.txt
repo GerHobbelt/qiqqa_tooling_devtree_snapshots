@@ -1,0 +1,66 @@
+revision: 6304065
+title: Alphabet
+url: https://hr.wikipedia.org/wiki/Me%C4%91unarodna_fonetska_abeceda
+
+
+---
+
+Međunarodna fonetska abeceda (kratica: MFA ili IPA od engl. International Phonetic Alphabet) sustav je znakova za fonetsku i fonološku transkripciju.
+Kao pismo za znanstvenu transkripciju međunarodna fonetska abeceda uglavnom se upotrebljava pri navođenju primjera, primjerice navođenje izgovora u rječniku.
+
+
+== Znakovi ==
+Međunarodna fonetska abeceda uglavnom se koristi mallim slovima latiničkog i grčkog pisma. Svakom znaku određen je jedan glas. Dodatni dijakritički znakovi služe za razlikovanje različitih realizacija ili funkcija jednog glasa. Dijakritičkim znakovima označavaju se i prozodijske osobine.
+
+
+=== Samoglasnici ===
+Samoglasnici se predstavljaju trapezom. Ordinata (okomita os) pokazuje visinu jezika (i vrijednost prvog formanta) a apscisa (vodoravna os) mjesto tvorbe (i vrijednost drugog formanta).
+
+Napomene:
+
+Gdje znakovi stoje u paru, lijevi predstavlja nezaobljeni a desni zaobljeni samoglasnik.
+Znak [a] definiran je kao otvoreni prednji nezaobljeni samoglasnik, ali njime se koristi i za označavanje otvorenog srednjeg nezaobljenog samoglasnika.
+Nazalnost samoglasnika označava se tildom (~) iznad samoglasničkog znaka.
+
+
+=== Suglasnici ===
+Suglasnici se dijele na plućne i pregradne glasove.
+
+
+==== Plućni suglasnici ====
+Napomene:
+
+Gdje znakovi stoje u paru, lijevi predstavlja bezvučni, a desni zvučni suglasnik.
+
+
+==== Koartikulirani suglasnici ====
+
+
+==== Pregradni suglasnici ====
+
+
+== Literatura ==
+Handbook of the International Phonetic Association. Cambridge University Press, Cambridge, 1999. ISBN 0-521-63751-1, ISBN 0-521-65236-7
+
+
+== Vanjske poveznice ==
+službene web stranice IPA-e (engl.)
+
+
+=== Unicode ===
+»IPA Extensions« (PDF)
+»Spacing Modifier Letters: IPA modifiers« (PDF)
+»Combining Diacritical Marks: Additions for IPA« (PDF)
+The International Phonetic Alphabet in Unicode (engl.)
+Unicode Entity Codes for Phonetic Symbols  Inačica izvorne stranice arhivirana 28. kolovoza 2006. (engl.)
+Unicode test-stranica za IPA (engl.)
+
+
+=== Fontovi ===
+Gentium
+Charis SIL
+Doulos SIL
+SIL93
+
+
+== Bilješke ==

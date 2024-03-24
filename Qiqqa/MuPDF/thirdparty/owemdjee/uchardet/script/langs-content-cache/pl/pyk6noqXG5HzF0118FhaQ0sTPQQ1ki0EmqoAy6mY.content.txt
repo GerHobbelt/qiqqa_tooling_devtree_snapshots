@@ -1,0 +1,570 @@
+revision: 70378625
+title: "Ca\u0142ka"
+url: https://pl.wikipedia.org/wiki/Ca%C5%82ka
+
+
+---
+
+Całka – ogólne określenie wielu różnych, choć powiązanych ze sobą pojęć analizy matematycznej. Najczęściej przez „całkę” rozumie się całkę oznaczoną lub całkę nieoznaczoną, choć istnieje wiele innych odmian całki. Ścisłe definicje można znaleźć w artykułach dotyczących poszczególnych całek.
+W artykule rachunek różniczkowy i całkowy podana jest historia ewolucji znaczenia samego słowa całka. Polskojęzyczna nazwa została wprowadzona przez Jana Śniadeckiego jako tłumaczenie niem. Integral (wraz z „różniczką” jako tłumaczeniem niem. Differential).
+
+
+== Intuicyjne określenie całki ==
+Całki można sobie wyobrazić jako sumy nieskończenie wielu nieskończenie małych wartości, takich jak np. wartość funkcji pomnożona przez nieskończenie małą różniczkę jej zmiennej: 
+  
+    
+      
+        f
+        (
+        x
+        )
+        d
+        x
+      
+    
+     
+   (co znajduje odzwierciedlenie w podejściu Riemanna, zob. dalej). Jest to określenie nieścisłe i nieformalne, choć używane w początkach rachunku całkowego przez G.W. Leibniza. Dziś ma ono znaczenie jedynie poglądowe i historyczne, natomiast poszczególne rodzaje całek są definiowane ściśle.
+
+
+== Rodzaje całek ==
+
+
+=== Całka oznaczona ===
+
+Intuicyjnie całka oznaczona to pole powierzchni między wykresem funkcji 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+     
+   w pewnym przedziale 
+  
+    
+      
+        [
+        a
+        ,
+        b
+        ]
+      
+    
+     
+   a osią odciętych, wzięte ze znakiem plus dla dodatnich wartości funkcji i minus dla ujemnych. Pojęcie całki oznaczonej, choć intuicyjnie proste, może być sformalizowane na wiele sposobów. Jeśli jakaś funkcja jest całkowalna według dwóch różnych definicji całki oznaczonej, wynik całkowania będzie taki sam.
+Znane są następujące całki oznaczone:
+
+całka Riemanna, całka Darboux – najprostsze (równoważne ze sobą) definicje całki oznaczonej (zobacz rysunek obok), jednak nie obejmujące wielu ważnych funkcji. Stąd powstało wiele uogólnień tych całek na szerszą klasę funkcji:
+całka niewłaściwa (Riemanna) – uogólnienie całki Riemanna na niektóre funkcje określone na przedziałach nieskończonych oraz na niektóre funkcje nieograniczone na przedziałach ograniczonych bądź nie.
+całka Riemanna-Stieltjesa – uogólnienie całki niewłaściwej, gdy obszarem całkowania nie jest przedział, lecz zbiór wartości pewnej funkcji.
+całka Russo-Vallois – uogólnienie całki Riemanna-Stieltjesa.
+całka Daniella-Stone’a.
+całka Henstocka-Kurzweila (inne nazwy: całka Łuzina, całka Denjoy, całka Perrona, całka Denjoy-Perrona).
+całka Lebesgue’a – najczęściej stosowane uogólnienie całki Riemanna. Rozszerza klasę całkowalnych funkcji jednej zmiennej rzeczywistej. Pozwala także na całkowanie funkcji określonych na innych przestrzeniach mierzalnych i w tym sensie wykracza poza tradycyjne rozumienie całki oznaczonej. Całka Lebesgue’a ma własne uogólnienia i szczególne przypadki:
+całka Lebesgue’a-Stieltjesa – odpowiednik całki Riemanna-Stieltjesa, gdzie funkcja jest całkowana tak jak w całce Lebesgue’a;
+całka Haara – całka Lebesgue’a dla funkcji mierzalnych względem miary Haara, określonej na σ-ciele zbiorów borelowskich lokalnie zwartej grupy topologicznej.
+całki w przestrzeniach funkcyjnych:
+całka względem miary wektorowej – całka z funkcji skalarnej względem miary wektorowej.
+całki z funkcji o wartościach wektorowych (np. w przestrzeniach Banacha bądź szerszej klasie przestrzeni):
+całka Pettisa, całka Gelfanda;
+całka Dunforda;
+całka McShane’a;
+całka Bochnera.
+całka Bartle’a – całka z funkcji o wartościach wektorowych względem miar wektorowych.
+
+
+=== Całka nieoznaczona ===
+Przez całkę nieoznaczoną (albo funkcję pierwotną) rozumie się pojęcie odwrotne do pochodnej funkcji (zob. podstawowe twierdzenie rachunku całkowego). Całkę oznaczoną na przedziale 
+  
+    
+      
+        [
+        a
+        ,
+        b
+        ]
+      
+    
+     
+   można też zdefiniować (tzw. całka Newtona-Leibniza) jako różnicę między wartościami całki nieoznaczonej w punktach 
+  
+    
+      
+        b
+      
+    
+     
+   oraz 
+  
+    
+      
+        a
+        .
+      
+    
+     
+   Stąd obliczenie całki nieoznaczonej jest często pierwszym krokiem przy obliczaniu całek oznaczonych.
+Uogólnieniem całki nieoznaczonej jest całka równania różniczkowego będąca rozwiązaniem równania różniczkowego: 
+  
+    
+      
+        
+          F
+          ′
+        
+        (
+        x
+        )
+        =
+        f
+        (
+        x
+        )
+        ,
+      
+    
+     
+   gdzie 
+  
+    
+      
+        F
+        (
+        x
+        )
+      
+    
+     
+   jest pierwotną, a 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+     
+   oznacza całkowaną funkcję.
+W drugiej połowie XX wieku wprowadzono nowe rodzaje całek nieoznaczonych, które umożliwiają obliczenia w obszarze analizy niearchimedesowej. Jedną z nich jest całka Volkenborna, określona przez granicę
+
+  
+    
+      
+        
+          ∫
+          
+            
+              
+                Z
+              
+              
+                p
+              
+            
+          
+        
+        f
+        (
+        x
+        )
+        
+        
+          d
+        
+        x
+        =
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        
+          
+            1
+            
+              p
+              
+                n
+              
+            
+          
+        
+        
+          ∑
+          
+            x
+            =
+            0
+          
+          
+            
+              p
+              
+                n
+              
+            
+            −
+            1
+          
+        
+        f
+        (
+        x
+        )
+        .
+      
+    
+     
+  
+
+
+=== Pozostałe ===
+całka krzywoliniowa – odpowiednik całki oznaczonej, gdzie obszarem całkowania jest pewna krzywa.
+całka powierzchniowa – odpowiednik całki oznaczonej, gdzie obszarem całkowania jest pewna powierzchnia, np. pewne koło, albo połowa sfery. Całka krzywoliniowa i całka powierzchniowa to szczególne przypadki całki na hiperpowierzchni. W nowoczesnej teorii całkowania, traktuje się je jako całki Lebesgue’a względem pewnych niezmienniczych miar, określonych na σ-ciałach związanych z daną hiperpowierzchnią.
+całka podwójna – potocznie: całka z całki (z parametrem). Analogicznie całka potrójna, i ogólnie wielokrotna. Obecnie, całki 
+  
+    
+      
+        n
+      
+    
+     
+  -krotne traktuje się jako całki Lebesgue’a względem 
+  
+    
+      
+        n
+      
+    
+     
+  -wymiarowej miary Lebesgue’a.
+całka stochastyczna – specjalny rodzaj całki używany w rachunku prawdopodobieństwa. Ma kilka wersji:
+całka Paleya-Wienera (całka Paleya-Wienera-Zygmunda);
+całka Itō – najpowszechniej używana całka stochastyczna;
+całka Stratonowicza – najczęstsza alternatywa dla całki Itō, czasem wygodniejsza.Niektóre przypadki całek oznaczonych i nieoznaczonych dla pewnych szczególnych funkcji mają własne nazwy:
+
+całki eliptyczne;
+całka abelowa;
+całka Duhamela (pochodna splotu funkcji);
+całka Fresnela;
+całka Poissona;
+całka wymiany;
+całka J.
+
+
+== Wyznaczanie całki ==
+
+Całki niektórych funkcji nie istnieją, a niektórych innych funkcji nie dają się zapisać za pomocą standardowych funkcji matematycznych. Często całkowanie jest twórczym procesem nie opierającym się na żadnym ścisłym algorytmie. Co prawda, algorytm Rischa pozwala dla każdej funkcji elementarnej sprawdzić, czy jej całka jest funkcją elementarną i jeśli tak, znaleźć ją. Ten algorytm jednak jest bardzo długi i skomplikowany, dlatego też rzadko stosowany; ponadto nie obejmuje on całek wyrażonych przez funkcje specjalne.
+Zwykle w praktycznych problemach całkuje się numerycznie lub próbuje się sprowadzić całkę (m.in. za pomocą tzw. całkowania przez podstawienie, całkowania przez części, przekształceń algebraicznych lub trygonometrycznych) do znanych całek, których szuka się w tablicach.
+
+
+== Przykłady zapisu ==
+
+  
+    
+      
+        ∫
+        f
+        (
+        x
+        )
+        d
+        x
+      
+    
+     
+   – całka nieoznaczona (funkcja pierwotna)
+  
+    
+      
+        
+          ∫
+          
+            a
+          
+          
+            b
+          
+        
+        f
+        (
+        x
+        )
+        d
+        x
+      
+    
+     
+   – całka oznaczona
+  
+    
+      
+        
+          ∫
+          
+            −
+            ∞
+          
+          
+            0
+          
+        
+        f
+        (
+        x
+        )
+        d
+        x
+      
+    
+     
+   – całka niewłaściwa
+  
+    
+      
+        
+          ∫
+          
+            E
+          
+        
+        f
+        (
+        x
+        )
+        d
+        x
+      
+    
+     
+   – całka Lebesgue’a
+  
+    
+      
+        
+          ∬
+          
+            D
+          
+        
+        f
+        (
+        x
+        ,
+        y
+        )
+        d
+        x
+        d
+        y
+      
+    
+     
+   – całka podwójna po obszarze 
+  
+    
+      
+        D
+        ∈
+        
+          
+            R
+          
+          
+            2
+          
+        
+      
+    
+     
+  
+  
+    
+      
+        
+          ∭
+          
+            D
+          
+        
+        f
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        d
+        x
+        d
+        y
+        d
+        z
+      
+    
+     
+   – całka potrójna po obszarze 
+  
+    
+      
+        D
+        ∈
+        
+          
+            R
+          
+          
+            3
+          
+        
+      
+    
+     
+  
+  
+    
+      
+        
+          ∬
+          
+            S
+          
+        
+        f
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        d
+        S
+      
+    
+     
+   – całka powierzchniowa
+  
+    
+      
+        
+          ∫
+          
+            S
+          
+        
+        f
+        (
+        x
+        ,
+        y
+        )
+        d
+        l
+      
+    
+     
+   – całka krzywoliniowa nieskierowana po krzywej 
+  
+    
+      
+        S
+      
+    
+     
+  
+  
+    
+      
+        
+          ∫
+          
+            S
+          
+        
+        P
+        (
+        x
+        ,
+        y
+        )
+        d
+        x
+        +
+        Q
+        (
+        x
+        ,
+        y
+        )
+        d
+        y
+      
+    
+     
+   – całka krzywoliniowa skierowana po krzywej 
+  
+    
+      
+        S
+      
+    
+     
+  
+  
+    
+      
+        
+          ∮
+          
+            C
+          
+        
+        f
+        (
+        z
+        )
+        d
+        z
+      
+    
+     
+   – zespolona całka krzywoliniowa skierowana po krzywej zamkniętej (np. konturze) 
+  
+    
+      
+        C
+      
+    
+     
+  
+
+
+== Symbol całki ==
+Symbol całki ∫ powstał jako wydłużona litera ſ („długie s”) lub mała litera esz.
+Gottfried Wilhelm von Leibniz oparł symbol całki na łacińskim słowie summa (suma), które pisał ſumma.
+
+
+== Zobacz też ==
+metody Newtona-Cotesa
+podstawowe twierdzenie rachunku całkowego
+rachunek różniczkowy i całkowy
+
+
+== Uwagi ==
+
+
+== Przypisy ==
+
+
+== Linki zewnętrzne ==
+Kalkulator całek nieoznaczonych

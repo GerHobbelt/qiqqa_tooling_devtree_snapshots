@@ -1,0 +1,179 @@
+revision: 5769721
+title: Ip Man
+url: https://sl.wikipedia.org/wiki/Brez%C5%BEi%C4%8Dno_omre%C5%BEje
+
+
+---
+
+Brezžično lokalno omrežje (angl. wireless LAN) je povezava dveh ali več računalnikov brez uporabe kablov. WLAN za komunikacijo med napravami v omejenem področju izkorišča tehnologijo razširjenega spektra (spread-spectrum) na podlagi radijskih valov. To omogoča uporabnikom da so kljub premikanju znotraj območja pokritosti povezave še vedno povezani v omrežje.
+Ta tehnologija zelo hitro pridobiva na popularnosti, še posebej z naglim razvojem majhnih prenosnih naprav, kot so osebni organizatorji. Za domačega uporabnika je WLAN uporaben zaradi nekomplicirane namestitve in zaradi popularnosti prenosnih računalnikov, tudi prostega premikanja po stanovanju. Nekateri lokali in veleblagovnice svojim strankam že nudijo brezžičen dostop do interneta, nekateri to ponujajo celo brezplačno. V veliko glavnih mestih potekajo projekti velikanskih brezžičnih mrež, tako Google ponuja brezplačno storitev v Mountain View v Kaliforniji, brezžični dostop pa naj bi ponudil tudi v San Franciscu in New Yorku, v Ljubljani pa nastaja odprto brezžično omrežje wlan ljubljana.
+
+
+== Zgodovina ==
+Leta 1971 so raziskovalci na Havajski Univerzi razvili prvo brezžično omrežje na svetu, imenovano ALOHAnet. Sistem je vključeval sedem računalnikov na štirih otokih, ki so z glavnim računalnikom na otoku Oahu komunicirali brez uporabe telefonskih žic.
+Prvotno je bila strojna oprema za WLAN zelo draga, zato se je uporabljala za alternativo klasičnemu lokalnemu omrežju tam, kjer je bilo le-to nemogoče. Zgodnji razvoj je vključeval rešitve specifične za eno industrijo in lastninske protokole, toda ti so bili ob koncu devetdesetih let nadomeščeni s standardi, največ z različicami IEEE 802.11 (WiFi). Alternativna 5 GHz standardizirana tehnologija HIPERLAN na trgu ni uspela, in z izdajo hitrejših 54 Mbit/s standardov 802.11a (5 GHz) in 802.11g (2.4 GHz) skoraj zagotovo tudi nikoli ne bo.
+
+
+== Prednosti ==
+Brezžična omrežja uporabnikom ponujajo veliko prednosti, od cenovne ugodnosti do popolne vključitve v druga omrežja.
+
+Priročnost: brezžična svoboda uporabnikom omogoča uporabo omrežnih sredstev iz katerekoli lokacije pokrite s signalom
+Prenosnost: s pojavom javnih brezžičnih omrežij lahko uporabniki do interneta dostopajo tudi izven njihovega delovnega okolja
+Storilnost: z uporabo osebnih organizatorjev ali drugih digitalnih naprav je lahko uporabnik ves čas povezan na internet
+Postavitev: namestitev omrežja zahteva le malo več od dostopne točke, za razliko od klasičnih omrežij, ki za delovanje na vseh lokacijah potrebujejo žice.
+Razširljivost: dodajanje novih uporabnikov ne zahteva nobene dodatne strojne opreme, vse dokler je uporabnik v dosegu signala
+Cena: strojna oprema potrebna za postavitev brezžičnega omrežja je le malenkost dražja od opreme za običajno omrežje, vendar pa je glede na prosto razširljivost strošek upravičen.
+
+
+== Slabosti ==
+Brezžična omrežja so kljub zgoraj navedenim prednostim še vedno nepopularna v marsikaterem okolju, predvsem zaradi podedovanih slabosti tehnologije:
+
+Varnost: brezžična omrežja imajo podedovano napako, da lahko signale prejema vsakdo v območju pokritosti. Kakorkoli že, za boj proti temu so na voljo različne metode kriptiranja podatkov.
+Doseg: povprečen omrežja 802.11g je približno 30 metrov, za doseg večjih razdalj potrebujemo dodatne dostopne točke ali ponavljalnik. Druge tehnologije, kot je WiMax ponujajo doseg preko 100 km, kar je veliko več od navadnega omrežja.
+Zanesljivost: brezžični signal je zelo dovzeten za vplive iz okolja, zato lahko povezava postane nestabilna. Zaradi tega se uporaba brezžične povezave za pomembne omrežne vire kot so strežniki močno odsvetuje.
+Hitrost: najbolj pogosto brezžično omrežje 802.11g deluje pri 54 Mbps, najbolj pogosto običajno omrežje pri 100 Mbps, s tem da se čedalje več uporablja 1 Gbps omrežje, v razvoju pa so že omrežja s hitrostjo 10 Gbps. Brezžične tehnologije prihodnosti, kot je 802.11n delujejo pri 540 Mbps, kar močno zmanjša vrzel med brezžično in žično hitrostjo.
+
+
+== Arhitektura brezžičnega omrežja ==
+
+
+=== Postaje ===
+Vse naprave, ki se povežejo v omrežje, imenujemo postaje. Vse postaje so opremljene z brezžično omrežno kartico. Postaje delimo v dve kategoriji: Odjemalci in dostopne točke.
+
+
+==== Dostopne točke ====
+Dostopne točke (angl. access point) so osnovne postaje brezžičnega omrežja. Oddajajo in prejemajo radijske frekvence za komunikacijo z brezžičnimi napravami.
+
+
+==== Odjemalci ====
+Odjemalec (angl. client) je lahko prenosna naprava, kot je prenosni računalnik, osebni organizator, IP-telefon, ali statična naprava, kot so namizni računalniki ali delovne postaje, ki so opremljeni z brezžično omrežno kartico.
+
+
+=== Basic Service Set ===
+Basic service set (BSS) je množica vseh postaj, ki lahko druga z drugo komunicirajo. Poznamo dva tipa BSS: neodvisni in infrastrukturni. Vsak BSS ima svojo izkaznico, ki jo imenujemo BSSID, sestavljena pa je iz naslova MAC dostopne točke.
+Neodvisni Basic Service Set je ad-hoc omrežje, ki ne vsebuje dostopnih točk. Ker nima dostopnih točk, se ne more povezati na drug Basic Service Set.
+Infrastrukturni Basic Service Set lahko preko dostopnih točk komunicira s postajami, ki niso v istem BSS.
+
+
+=== Extended Service Set ===
+Extended Service Set (ESS) je množica povezanih BSS. Dostopne točke v ESS so povezane s pomočjo distributivnega sistema. Vsak ESS ima izkaznico, ki jo imenujemo SSID. Ta predstavlja največ 32 bajtov dolg niz znakov. Primer: linksys (privzet SSID za Linksys-ove usmerjevalnike).
+
+
+=== Distributivni sistem ===
+Distributivni sistem povezuje dostopne točke v ESS. Distributivni sistem je običajno realiziran z običajnim omrežjem, lahko pa tudi z brezžičnim.
+
+
+== Tipi (načini) delovanja ==
+
+
+=== Dostopna točka ===
+AP-način delovanja je namenjen infrastrukturnemu postavljanju brezžičnih omrežij, kjer je sama dostopna točka priklopljena na ožičeno omrežje, sama pa tako služi za prehod odjemalcem v to ožičeno omrežje. Ta način delovanja podpira tudi enkripcijo, avtentikacijo in avtorizacijo povezave med točko in odjemalcem, kar pripomore k večji varnosti omrežja, hkrati pa tudi zahteva večjo usklajenost (recimo poznavanje gesla za dostop do omrežja) med točko in odjemalcem.
+Ta usklajenost se odraža tudi v sami usklajenosti brezžične komunikacije, ki lahko zato dosega hitrejši in kvalitetnejši prenos podatkov v primerjavi z ad-hoc načinom delovanja.
+To je način delovanja, ki je splošnim uporabnikom najbolj znan.
+
+
+=== Peer-to-peer ali ad-hoc ===
+
+Ad hoc (na horuk) način delovanja brezžičnega omrežja omogoča vsem brezžičnim napravam v območju enostavno in neposredno komunikacijo med seboj brez centralizirane dostopne točke. Ker so vse naprave v tem načinu delovanja enakovredne, ne zahteva veliko usklajenosti med WiFi točko in odjemalcem in zato predstavlja skupni imenovalec za najširši nabor brezžičnih omrežnih naprav.
+Zaradi svojega preprostega delovanja omogoča tudi medsebojno povezovanje več mrežnih naprav (točk in odjemalcev, saj med njimi ne razlikuje), ki se tako mrežijo med seboj. Po navadi se uporablja, kadar se dva računalnika povežeta in tvorita omrežje.
+
+
+=== Nadzorna postaja ===
+Boljše brezžične omrežne kartice se lahko nastavi za nadzor omrežja brez povezave na dostopno točko. Ta lastnost se lahko uporabi za diagnosticiranje in odpravljanje težav.
+
+
+== Varnostna tveganja ==
+S popularnostjo brezžičnih omrežij raste tudi tveganje. Ko je bila tehnologija predstavljena, je bilo nevarnosti le malo, vendar pa je danes z brezžično tehnologijo povezanih veliko varnostnih tveganj, nekatera bolj očitna, nekatera manj. Napadalci so v trenutnih brezžičnih protokolih, metodah kriptiranja podatkov in brezbrižnosti uporabnikov odkrili veliko ranljivosti. S prihodom brezžičnih tehnologij so metode vdiranja postale veliko bolj inovativne in enostavne, saj je v brezžično omrežje mogoče vdreti z brezplačnimi programi, prosto dostopnimi na internetu.
+
+
+=== Uporaba za vdor v običajna omrežja ===
+Nekatere organizacije, ki nimajo nameščenih brezžičnih dostopnih točk, ne čutijo potrebe za osnovne varnostne ukrepe. Problem nastane, ko se v omrežje priključi prenosni računalnik, ki ima delujočo brezžično mrežno kartico. Napadalec si lahko preko te kartice pridobi dostop do običajnega omrežja in s tem tudi dostop do potencialno zaupnih informacij.
+
+
+== Tipi nepooblaščenega dostopa v omrežja ==
+
+
+=== Naključna povezava ===
+Do nepooblaščenega dostopa v brezžično omrežje lahko pride na veliko načinov, z različnimi metodami in nameni. Ena izmed njih je naključna povezava. Do te pride, ko uporabnik prižge prenosni računalnik znotraj dosega signala brezžičnega omrežja. Uporabnik se tega najbrž niti ne zaveda, vendar pa je to zelo resna varnostna pomanjkljivost omrežja.
+
+
+=== Zlonamerna povezava ===
+Za zlonamerno povezavo napadalec ustvari brezžično napravo, da se v omrežje poveže preko svojega prenosnega računalnika, namesto preko omrežne dostopne točke. Te vrste prenosnikov so znane kot „mehka dostopna točka“ in z različnimi programi dosežejo, da njihova brezžična mrežna kartica izgleda kot dostopna točka. Ko napadalec dobi dostop do omrežja, lahko ukrade gesla, izvrši napad na običajno omrežje ali pa podtakne trojanskega konja.
+
+
+=== Omrežja Ad-hoc ===
+Omrežja Ad-Hoc zaradi neposredne povezave med računalniki brez vmesnih dostopnih točk predstavljajo veliko varnostno grožnjo. Ker tovrstna omrežja navadno niso zaščitena, je priporočljiva uporaba metod za kriptiranje podatkov.
+
+
+=== Netradicionalna omrežja ===
+Tudi netradicionalna omrežja, kot je omrežje Bluetooth, niso varna pred napadi. Zaščito potrebujejo celo osebni organizatorji in brezžični omrežni tiskalniki in fotokopirni stroji. Ta netradicionalna omrežja so pogosto spregledana, saj se ljudje osredotočajo le na prenosne računalnike in dostopne točke.
+
+
+=== Kraja identitete ===
+Do kraje identitete pride, ko ima napadalec možnost opazovanja omrežnega prometa in identifikacije naslova MAC računalnika, ki ima v omrežju visoke privilegije. Večina brezžičnih sistemov omogoča filtriranje naslovov MAC, zato da lahko le določeni računalniki dostopajo do nastavitev omrežja. Kljub temu pa se da s številnimi programi MAC naslov ponarediti, tako da lahko napadalec, če pozna MAC naslov privilegiranega računalnika, poljubno spreminja nastavitve omrežja.
+
+
+=== Denial of Service ===
+Napad Denial of Service (Dos) je ime za napad, pri katerem napadalec dostopne točke nenehoma obsipava z lažnimi zahtevami in ukazi. Tako početje drugim uporabnikom onemogoči dostop do omrežja, v določenih primerih pa povzroči celo sesutje omrežja. Tovrstni napadi se opirajo na zlorabo protokolov.
+
+
+=== Napad Man-In-The-Middle ===
+Napad Man-In-The-Middle je eden bolj izpopolnjenih napadov, ki jih uporabljajo napadalci. Vrti se okrog nezavarovanega računalnika, preko katerega se napadalec poveže na svoj računalnik, ki je nastavljen kot mehka dostopna točka. Ko je to opravljeno se napadalec s pomočjo druge brezžične kartice, ki ponuja stabilen tok podatkov skozi transparenten računalnik, uporabljen za napad, poveže na pravo dostopno točko. Napadalec lahko nato prestreza uporabniška imena, gesla, številke kreditnih kartic itd.
+
+
+=== Network Injection ===
+Pri napadu Network Injection napadalec izkoristi dostopne točke, ki so izpostavljene nefiltriranemu prometu. Napadalec v promet vstavi lažne zahteve in ukaze, ki vplivajo na usmerjevalnike in stikala. S to metodo se lahko zruši celotno omrežje, zato je potreben ponoven zagon ali celo ponovno nastavljanje vseh omrežnih naprav.
+
+
+== Varnostni ukrepi ==
+Grožnja vdora bo vedno z nami, vse kar lahko storimo, je da smo vedno korak pred napadalci. Spoznavati moramo nove vrste napadov in tudi načine, kako se jih ubraniti.
+
+
+=== Metode zavarovanja ===
+Na voljo je veliko tehnologij za zavarovanje brezžičnega omrežja, vendar na žalost trenutno nobena zaščita ni stoodstotna. Zaradi tega je najbolje uporabiti kombinacijo različnih ukrepov.
+Trije koraki pomembni za zavarovanje brezžičnega omrežja:
+
+Vse brezžične omrežne naprave morajo biti zavarovane
+Vsi uporabniki brezžičnega omrežja morajo biti poučeni o varnosti brezžičnih omrežij
+Vsa omrežja morajo biti opazovana za odkrivanje šibkosti
+
+
+=== Filtriranje MAC ID ===
+Večina brezžičnih dostopnih točk vključuje možnost filtriranje MAC ID, ki administratorju omogoči omejevanje dostopa do omrežja le na računalnike z določenim MAC ID. To je lahko v velikansko pomoč, vendar pa ne smemo pozabiti, da je MAC ID prek omrežja mogoče ponarediti. Orodja za tako početje so prosto dostopna, nekaterim računalnikom pa lahko MAC ID celo prosto določimo v BIOS-u.
+
+
+=== Statični naslovi IP ===
+Onemogočanje funkcije avtomatske dodelitve naslova IP strežnika DHCP, ter nato ročna dodelitev naslovov IP, bo manj izkušenemu napadalcu povzročilo precej preglavic, še posebej če je velikost podmreže zmanjšana iz privzete nastavitve na le nujno potrebno in če so v požarnem zidu dostopne točke blokirani dovoljeni, a ne uporabljeni naslovi IP.
+
+
+=== WEP ===
+Ta standard je izviren standard kriptiranja brezžičnih omrežij. Sodeč po imenu (Wired Equivalent Privacy) je bil njegov namen postaviti raven varnosti brezžičnih omrežij na raven navadnih. Vendar pa mu to na žalost ni uspelo, saj so bile napake hitro najdene in izkoriščene. Na voljo je precej odprtokodnih programov, ki jih napadalci uporabljajo za vlom z iskanjem vzorcev v enkripciji. WEP delimo glede na velikost ključev. Pogosti dolžini sta 128 in 256 bitov. Daljši kot je ključ, bolj otežimo delo napadalcu.
+
+
+=== WPA ===
+WPA je zgodnja različica varnostnega standarda 802.11i, ki ga je za nadomestitev WEP razvila WiFi Alliance. Kriptirni algoritem TKIP je bil razvit kot izboljšava za WEP, ki bi se lahko kot firmware naložila tudi na že obstoječe naprave 802.11. WPA ponuja tudi omejeno podporo za algoritem AES-CCMP
+
+WPA Enterprise ponuja avtentikacijo na podlagi strežnika RADIUS.
+WPA Personal za varno povezavo uporablja PSK (Pre-shared Shared Key), ki uporablja 8 do 64 znakovno geslo. Šibka PSK gesla lahko različni programi strejo v manj kot minuti. WPA je varna, kadar za PSK geslo uporabimo poln 64 znakovni šestnajstiški ključ.
+
+
+=== WPA2 ===
+WPA2 je ime za dokončan standard 802.11i. Glavna razlika med WPA2 in WPA je polna podpora algoritmu AES-CCMP. Oba WPA in WPA2 podpirata avtentikacijske metode EAP, ki uporabljajo strežnike RADIUS in ključe PSK.
+
+
+=== Pametne kartice ===
+To je zelo visoka oblika zavarovanja. V kombinaciji s strežniško programsko pametna kartica uporabi svojo identifikacijsko kodo kombinirano z uporabnikovo kodo PIN za generiranje algoritma, ki v določenih časovnih intervalih generira novo enkripcijsko geslo. Strežnik je sinhroniziran s pametno kartico. To je najvarnejši način za opravljanje brezžičnih prenosov.
+
+
+== Koraki zavarovanja brezžičnega omrežja ==
+Naslednji koraki so osnova za zavarovanje brezžičnega omrežja, razvrščeni po pomembnosti:
+
+Uporaba kriptiranja, po možnosti WPA2. Najboljša alternativa je WPA, WEP pa je boljše kot nič.
+Sprememba privzetega gesla za dostop do brezžičnih naprav. Privzeta gesla nastavijo proizvajalci in so znana vsem napadalcem. S spremembo gesla preprečite napadalcem dostop in spremembo vaših omrežnih nastavitev.
+Sprememba privzetega SSID. Napadalci poznajo privzeta imena različnih proizvajalcev strojne opreme. Uporaba privzetega imena tudi nakazuje nezavarovano omrežje.
+Izklop deljenja datotek in tiskalnikov, če le to ni v uporabi. S tem lahko napadalcu omejite krajo podatkov v primeru da se prebije mimo enkripcije.
+Omrežne točke naj bojo razporejene tako, da nudijo signal le v potrebnem območju. Vsak presežek je lahko priložnost, da napadalec dostopa do omrežja brez vstopa v objekt, v katerem se omrežje nahaja. Priporočena je uporaba usmeritvenih anten. Nekatere dostopne točke celo omogočajo nadzor nad močjo signala za omejevanje območja dostopa.
+Ločitev brezžičnega in običajnega omrežja s požarnim zidom. To lahko napadalcu, ki je vdrl v brezžično omrežje, prepreči dostop do običajnega omrežja.Obstaja nekaj pogosto priporočenih korakov, ki pa po navadi ne zadoščajo proti izkušenim napadalcem (zavarujejo pa pred veliko skupino neizkušenih). Ti so:
+
+Izklop možnosti SSID broadcast – Teoretično lahko skrivanje SSID prepreči neizkušenim uporabnikom neavtoriziran dostop do omrežja. V bistvu, medtem ko bo skril omrežje neizkušenim uporabnikom, lahko izkušenejši napadalci s skeniranjem omrežnega prometa brez težav odkrijejo SSID. Prav tako pa legitimnim uporabnikom oteži dostop, saj morajo poznati SSID in ga vnesti v svojo napravo. Skrivanje SSID ne bo nikomur preprečilo spremljanje omrežnega prometa, to lahko stori le enkripcija.
+Vklop možnosti filtriranja naslovov MAC – filtriranje naslovov MAC s seznamom dovoljenih naslovov lahko neizkušenim uporabnikom prepreči dostop do omrežja, resen napadalec pa bo preprosto skeniral promet, ugotovil dovoljen MAC naslov in svojo strojno opremo nastavil na uporabo le-tega. Vsaka nova naprava pred priključitvijo zahteva dodajanje novega naslova na seznam. Tudi filtriranje MAC naslovov ne prepreči branja podatkov, posredovanih brez enkripcije.

@@ -1,0 +1,237 @@
+revision: 133350980
+title: Google Glass
+url: https://it.wikipedia.org/wiki/Google_Glass
+
+
+---
+
+Google Glass è una marca di smart glasses, un head mounted display (HMD) che ha la forma di un paio di occhiali. I Google Glass sono stati sviluppati da X (in precedenza Google X) e sono un paio di occhiali dotati di realtà aumentata, tramite i quali è possibile visualizzare informazioni come sugli smartphone senza l'uso delle mani (hands-free). I Glass si operano tramite l'uso di comandi vocali. I Google Glass rientrano nel concetto di ubiquitous computing.
+
+
+== Versioni ==
+
+
+=== Il progetto civile (Explorer Edition) ===
+Il prodotto (Google Glass Explorer Edition) è stato reso disponibile per gli sviluppatori di Google I/O, negli Stati Uniti, a inizio 2013.Per ampliare il programma di Explorer, Google ha deciso, nel mese di aprile 2014, di renderli disponibili a tutti i residenti U.S. che li volessero acquistare per 1500$ + tasse. Possibilità limitata solo per il giorno 15 aprile 2014 e solo fino ad esaurimento scorte. Google ha cominciato la grande distribuzione del dispositivo a partire dalla Gran Bretagna, via Google Play Store, ad un prezzo di £1000.
+All'inizio del 2014 Google rende noto che gli occhiali Google Glass verranno prodotti da Luxottica. I Google Glass vengono usati per la prima volta nella WWE a Summerslam.
+Nel mese di agosto 2014 Google deposita un nuovo brevetto che va a modificare il design dei Google Glass uscendo da una versione prototipo con un archetto standard installato come montatura e da possibilità di essere agganciato su diverse montature di occhiali. Scelta che non darà soltanto modo di personalizzare la propria montatura, ma di avere una nuova montatura elaborata per essere flessibile e comoda. Tale brevetto viene assegnato a Google dall'USPTO.
+Dal 2014 fino al 2016 il progetto è stato guidato da Ivy Ross e dal 2015 prende il nome di Project Aura. Nel mese di Gennaio 2016 Google chiude definitivamente il progetto per fini civili.Nel febbraio 2015, il New York Times ha riferito che Google Glass era stato riprogettato dall'ex dirigente Apple Tony Fadell e che non sarebbe stato rilasciato fino a quando non lo avesse ritenuto "perfetto".
+
+
+=== Il progetto professionale (Enterprise Edition) ===
+Venne lanciato sul mercato nel 2017 al prezzo di 1550 € ed è un prodotto del programma "Glass at Work".
+Nel luglio 2017 è stato annunciato che la seconda iterazione, Google Glass Enterprise Edition, sarebbe stata rilasciata negli Stati Uniti per aziende come Boeing. Google Glass Enterprise Edition è già stato utilizzato con successo dal Dr. Ned Sahin per aiutare i bambini con autismo ad apprendere abilità sociali.
+A maggio 2019, Google ha annunciato Google Glass Enterprise Edition 2 e anche una partnership con Smith Optics per sviluppare montature di sicurezza compatibili con Glass.
+
+
+== Hardware ==
+Il 16 aprile 2013 Google LLC ha pubblicato le specifiche tecniche di Google Glass Explorer Edition:
+Aste regolabili e telaio resistente, adatti a qualsiasi viso
+Display ad alta risoluzione, equivalente ad uno schermo ad alta definizione da 25 pollici da due metri di distanza
+Fotocamera da 5MP e registrazioni video a 720p
+Audio a conduzione ossea
+Wi-Fi - 802.11 b/g
+Bluetooth
+12 GB di memoria utilizzabile, sincronizzato con Google Cloud Storage
+Compatibile con qualsiasi cellulare BluetoothPer la versione di Google Glass Enterprise Edition 2017 le specifiche sono:
+
+Fotocamera da 5MP e registrazioni video a 720p
+Wi-Fi - 802.11 2,4/5 GHz
+Bluetooth Low Energy con possibilità di connettere più dispositivi contemporaneamente
+32 GB di memoria ROM
+2 GB di memoria RAM
+batteria da 780 mAh
+sensore capacitivo
+barometro
+magnetometro
+componenti per il rilevamento delle gesture effettuate con gli occhi
+
+
+== Privacy ==
+Google ha comunicato che non verranno accettate nello store applicazioni in grado di effettuare il riconoscimento facciale attraverso i Glass. È però bene non confondersi con quello che in inglese viene chiamato "Face detection" ovvero l'individuazione delle facce all'interno di una immagine, che è ritenuto accettabile e che differisce dal "Face recognition".
+
+
+== Caratteristiche ==
+Touchpad: simile a quello di un laptop, si trova sul lato di Google Glass, consentendo agli utenti di controllare il dispositivo scorrendo attraverso un'interfaccia simile a una timeline visualizzata sullo schermo. Lo scorrimento all'indietro mostra gli eventi correnti, come il meteo, mentre lo scorrimento in avanti mostra gli eventi passati, come le telefonate, le foto e gli aggiornamenti di Google+.
+Fotocamera: Google Glass ha la capacità di scattare foto da 5 MP e registrare video HD a 720p. Glass Enterprise Edition 2 ha una fotocamera 8MP FOV 80° migliorata.
+Display: la versione Explorer di Google Glass utilizza un cristallo liquido su silicio (basato su un chip LCoS di Himax), sistema di colori sequenziale, display illuminato a LED. L'illuminazione a LED del display è prima polarizzata P e quindi risplende attraverso il giunto interno polarizzante beam splitter (PBS - polarizing beam splitter, in questo caso "in-coupling PBS") verso il pannello LCoS. Il pannello riflette la luce e la altera alla polarizzazione S nei siti del sensore a pixel attivi. Il giunto PBS riflette quindi le aree di luce polarizzate S a 45° attraverso il giunto esterno beam splitter verso un riflettore di collimazione dall'altra parte. Infine, il giunto esterno beam splitter (out-coupling beam splitter, che è uno specchio parzialmente riflettente, non un polarizzante beam splitter) riflette la luce collimata di altri 45° e nell'occhio di chi lo indossa.
+
+
+== Software ==
+
+
+=== Applicazioni ===
+Le applicazioni Google Glass sono applicazioni gratuite create da sviluppatori di terze parti. Glass utilizza anche molte applicazioni Google esistenti, come Google Maps e Gmail. Molti sviluppatori e aziende hanno creato applicazioni per Glass, tra cui app di notizie, riconoscimento facciale, esercizio fisico, manipolazione di foto, traduzione e condivisione sui social network, come Facebook e Twitter. Le applicazioni di terze parti annunciate a South by Southwest (SXSW) includono Evernote, Skitch, The New York Times e Path.
+Il 23 marzo 2013, Google ha rilasciato l'API Mirror, consentendo agli sviluppatori di iniziare a creare app per Glass. Nei termini di servizio, è stato affermato che gli sviluppatori non possono inserire annunci nelle loro app o addebitare commissioni; un rappresentante di Google ha detto a The Verge che questo potrebbe cambiare in futuro.
+Il 16 maggio 2013, Google ha annunciato il rilascio di sette nuovi programmi, inclusi promemoria da Evernote, notizie di moda da Elle e avvisi di notizie dalla CNN. In seguito all'aggiornamento di XE7 Glass Explorer Edition di Google all'inizio di luglio 2013, è stata rilevata la prova di una "Glass Boutique", un negozio che consentirà la sincronizzazione con Glass of Glassware e APK.
+La versione XE8 ha debuttato per Google Glass il 12 agosto 2013. Offre un lettore video integrato con controlli di riproduzione, la possibilità di pubblicare un aggiornamento su Path e consente agli utenti di salvare le note su Evernote. Diversi altri piccoli miglioramenti includono controlli del volume, riconoscimento vocale migliorato e diverse nuove schede Google Now.
+Il 19 novembre 2013, Google ha presentato il suo Glass Development Kit, mostrando lo strumento di traduzione Word Lens, il programma di cucina AllTheCooks e il programma di esercizi Strava tra gli altri come esempi di successo. Google ha annunciato tre notiziari nel maggio 2014 (TripIt, FourSquare e OpenTable) per attirare i viaggiatori. Il 25 giugno 2014, Google ha annunciato che le notifiche di Android Wear sarebbero state inviate a Glass.
+La European University Press ha pubblicato il primo libro da leggere con i Google Glass l'8 ottobre 2014, presentato alla Fiera del Libro di Francoforte. Il libro può essere letto come un normale libro cartaceo oppure, arricchito di elementi multimediali, con Google Glass, Kindle, su Smartphone e Pad sulle piattaforme iOS e Android.
+
+
+=== MyGlass ===
+Google ha offerto un'app complementare per Android e iOS chiamata MyGlass, che ha permesso all'utente di configurare e gestire il dispositivo. È stato rimosso il 22 febbraio 2020 dal Play Store.
+
+
+=== Attivazione vocale ===
+Oltre al touchpad, Google Glass può essere controllato utilizzando solo "azioni vocali". Per attivare Glass, chi lo indossa inclina la testa di 30° verso l'alto (che può essere modificata a piacere) o semplicemente tocca il touchpad e dice "OK, Glass". Una volta attivato Glass, chi lo indossa può pronunciare un'azione, ad esempio "Scatta una foto", "Registra un video", "Hangout con [persona/cerchia di Google+]", "Google 'In che anno è stata fondata Wikipedia'?'", "Dai indicazioni per la Torre Eiffel" e "Invia un messaggio a John" (molti di questi comandi possono essere visti in un video del prodotto rilasciato nel febbraio 2013). Per i risultati della ricerca che vengono riletti all'utente, la risposta vocale viene trasmessa utilizzando la conduzione ossea attraverso un trasduttore che si trova accanto all'orecchio, rendendo così il suono quasi impercettibile ad altre persone.
+
+
+== Uso in medicina ==
+
+
+=== Negli ospedali ===
+Augmedix ha sviluppato un'app per il dispositivo indossabile che consente ai medici di trasmettere in live streaming la visita del paziente e afferma che eliminerà i problemi delle cartelle cliniche elettroniche, possibilmente risparmiandole fino a 15 ore a settimana e migliorando la qualità delle registrazioni. Il flusso video viene trasmesso agli scribi remoti nelle stanze protette HIPAA dove viene trascritta l'interazione medico-paziente, consentendo in ultima analisi ai medici di concentrarsi sul paziente. Centinaia di utenti stavano valutando l'app a metà del 2015.
+Nel luglio 2013, Lucien Engelen ha avviato una ricerca sull'usabilità e l'impatto dei Google Glass nel campo dell'assistenza sanitaria. Ad agosto 2013, Engelen, con sede presso la Singularity University e in Europa presso il Radboud University Nijmegen Medical Center, è stato il primo professionista sanitario in Europa a partecipare al programma Glass Explorer. La sua ricerca sui Google Glass (a partire dal 9 agosto 2013) è stata condotta in sale operatorie, ambulanze, un elicottero traumatologico, medicina generale e assistenza domiciliare, nonché l'uso nei trasporti pubblici per ipovedenti. La ricerca ha incluso lo scatto di foto, lo streaming di video in altri luoghi, la dettatura del registro operativo, la visione delle procedure da parte degli studenti e il teleconsulto tramite Hangout. Engelen ha documentato le sue scoperte in blog, video, immagini, su Twitter, e su Google+, con ricerche in corso a partire da quella data.
+Nel giugno 2014, la capacità di Google Glass di acquisire immagini della retina di un paziente ("Glass Fundoscopy") è stata dimostrata pubblicamente per la prima volta al Wilmer Clinical Meeting presso la Johns Hopkins University School of Medicine dal Dr. Aaron Wang e dal Dr. Allen Eghrari. Questa tecnica è stata descritta sulla copertina del Journal for Mobile Technology in Medicine per gennaio 2015. I dottori Phil Haslam e Sebastian Mafeld hanno dimostrato la prima applicazione di Google Glass nel campo della radiologia interventistica. Hanno dimostrato come i Google Glass potrebbero aiutare una biopsia epatica e una fistuloplastica e la coppia ha dichiarato che i Google Glass hanno il potenziale per migliorare la sicurezza del paziente, il comfort dell'operatore e l'efficienza delle procedure nel campo della radiologia interventistica.
+Nel 2015, IOS Press ha pubblicato "Applicazioni cliniche e chirurgiche degli occhiali intelligenti", un articolo di ricerca scritto da un team del Laboratorio cerebrovascolare del Dipartimento di neurochirurgia della Columbia University Medical Center. Sotto la guida del neurochirurgo Dr. Sander E. Connolly, Stefan Mitrasinovic, Elvis Camacho, Nirali Trivedi e altri hanno analizzato le utili applicazioni di Google Glass, tra cui documentazione fotografica e video a mani libere, telemedicina, recupero e input di cartelle cliniche elettroniche, analisi rapida dei test diagnostici, istruzione, e trasmissione in diretta.
+Nel 2017, i ricercatori svizzeri hanno valutato in uno studio controllato randomizzato l'aderenza dei leader dei team di emergenza alle linee guida Pediatric Advanced Life Support (PALS) dell'American Heart Association (AHA) adattandole e visualizzandole in Google Glasses durante scenari di arresto cardiaco pediatrico basati sulla simulazione.
+
+
+=== Nelle procedure chirurgiche ===
+Il 20 giugno 2013, Rafael J. Grossmann, un medico venezuelano che esercita negli Stati Uniti, è stato il primo chirurgo a dimostrare l'uso dei Google Glass durante una procedura chirurgica dal vivo. Nell'agosto 2013, Google Glass è stato utilizzato presso il Wexner Medical Center presso la Ohio State University. Il chirurgo Dr. Christopher Kaeding ha utilizzato Google Glass per consultarsi con un lontano collega a Columbus, Ohio. Anche un gruppo di studenti dell'Ohio State University College of Medicine ha osservato l'operazione sui loro computer portatili. Dopo la procedura, Kaeding ha dichiarato: "Ad essere onesti, una volta entrati in sala operatoria, spesso dimenticavo che il dispositivo era lì. Sembrava molto intuitivo e si adattava perfettamente".
+Il 21 giugno 2013, anche il dottor Pedro Guillen, capo del servizio traumatologico della Clínica CEMTRO di Madrid, ha trasmesso un intervento chirurgico utilizzando i Google Glass. Nel luglio 2014, la startup Surgery Academy, a Milano, in Italia, ha lanciato una piattaforma di formazione a distanza per studenti di medicina. La piattaforma è un MOOC che consente agli studenti di accedere a qualsiasi sala operatoria grazie ai Google Glass indossati dal chirurgo. Sempre nel luglio 2014, This Place ha rilasciato un'app, MindRDR, per collegare Glass a un monitor EEG Neurosky per consentire alle persone di scattare foto e condividerle su Twitter o Facebook utilizzando i segnali cerebrali. Si spera che ciò consentirà alle persone con gravi disabilità fisiche di interagire con i social media.
+
+
+=== Consultazione per l'allattamento ===
+In Australia, nel gennaio 2014, la startup tecnologica di Melbourne Small World Social ha collaborato con l'Australian Breastfeeding Association (ABA) per creare la prima applicazione Google Glass per l'allattamento al seno a mani libere per le neomamme. L'applicazione, denominata Breastfeeding Through Glass, consentiva alle madri di allattare il loro bambino mentre visualizzavano le istruzioni sui problemi comuni dell'allattamento al seno (attaccamento, postura) o di chiamare un consulente per l'allattamento tramite un Google Hangout sicuro, che poteva visualizzare il problema tramite la telecamera Google Glass della madre.
+Il processo è durato 7 settimane, iniziando il 1 marzo e terminando il 13 aprile 2014. C'erano cinque madri e i loro neonati nel processo, quindici consulenti volontari dell'ABA e sette membri del team di progetto di Small World Social. I consiglieri si trovavano in cinque diversi Stati australiani. I consulenti erano certificati in consulenza per l'allattamento, e si trovavano lontano dalle madri fino a Perth, nell'Australia occidentale, a 3.500 chilometri di distanza. Pur essendo fisicamente distanti dalle madri, i consulenti hanno fornito supporto utilizzando videochiamate con Google Glass, live on demand.
+
+Secondo i commenti dei media, il progetto sull'allattamento al seno ha dimostrato il potenziale dei dispositivi indossabili per fornire alle comunità modi per fornire servizi sanitari e di sostegno alla famiglia su grandi distanze. Gli usi positivi dimostrati di tali dispositivi hanno contrastato le critiche diffuse sulle preoccupazioni sulla privacy che tali dispositivi. Un articolo su Motherboard affermava: "Google Glass, garantito o meno, sopporta la sua giusta dose di critiche, soprattutto perché molti casi d'uso iniziali sono stati, beh, un po' inquietanti. Quindi è bello vedere invece che Glass viene utilizzato per fini unicamente positivi, come è con il progetto di sostegno all'allattamento al seno dell'Associazione australiana per l'allattamento al seno". Anche altri giornalisti e commentatori hanno definito il processo vantaggioso e un'applicazione innovativa delle tecnologie indossabili. Il giornalista e presentatore della ABC Penny Johnston del programma radiofonico Babytalk ha osservato:I Google Glass, se ci pensi, sono perfetti per istruire qualcuno sull'allattamento al seno: se stai tenendo in braccio o allattando un bambino, immagina una telecamera montata sugli occhiali e guarda in basso. Lì hai la migliore visuale al mondo per controllare l'attaccamento del bambino e la tua tecnica di allattamento al seno! A maggio 2014, Small World Social e ABA hanno vinto il Gold Questar Award nella sezione Emerging Media: App, per l'App Breastfeeding with Google Glass. Nel giugno 2014, il progetto di sostegno all'allattamento al seno di Small World Social ha ricevuto il premio Questar Best of Category Grand Prize for Emerging Media, che viene assegnato al 5% dei partecipanti migliori.
+ABA è ottimista sul futuro delle tecnologie indossabili a supporto del loro lavoro. Small World Social ha avviato un processo negli Stati Uniti nel giugno 2014.
+
+
+== Copertura mediatica ==
+
+
+=== Giornalismo ===
+Nel 2014, la corrispondente televisiva di Voice of America Carolyn Presutti e l'ingegnere elettronico di VOA Jose Vega hanno avviato un progetto web chiamato VOA e Google Glass, che ha esplorato i potenziali usi della tecnologia nel giornalismo. Questa serie di notizie ha esaminato le applicazioni di reportistica in tempo reale della tecnologia, inclusa la conduzione di interviste e la copertura di storie dal punto di vista del giornalista. Il 29 marzo 2014, il gruppo americano a cappella Pentatonix ha collaborato con Voice of America quando il cantante Scott Hoying ha indossato Glass nell'esibizione della band alla DAR Constitution Hall di Washington, DC, durante il tour mondiale della band: il primo utilizzo di Glass da parte di un protagonista cantante in un concerto professionale.
+Nell'autunno del 2014, la University of Southern California ha condotto un corso chiamato Glass Journalism, che ha esplorato l'applicazione del dispositivo nel giornalismo.
+Il WWF a metà del 2014 ha utilizzato Google Glass e UAV per tracciare vari animali e uccelli nella giungla, che potrebbe essere il primo utilizzo del dispositivo da parte di un'organizzazione non governativa (ONG) senza scopo di lucro.
+A partire dal 2022 il prodotto è stato visto come un fallimento, essendo stato una volta considerato la prossima grande novità tecnologica. Sebbene non esistano più, la tecnologia sopravvive nei prodotti futuri.
+
+
+=== Eventi pubblici ===
+Nel 2014, il programma Young Reporters del Comitato Olimpico Internazionale ha portato i Google Glass ai Giochi Olimpici della Gioventù di Nanchino 2014 e li ha messi su una serie di atleti di diverse discipline per esplorare nuovi punti di vista cinematografici.
+Un ballerino ipovedente, Benjamin Yonattan, ha utilizzato i Google Glass per superare la sua condizione di vista cronica. Nel 2015, Yonattan si è esibito nel programma televisivo di realtà America's Got Talent.
+
+
+== Critica ==
+
+
+=== Problemi di privacy ===
+Preoccupazioni sono state sollevate da varie fonti in merito all'intrusione nella privacy, all'etichetta e all'etica dell'uso del dispositivo in pubblico e della registrazione delle persone senza il loro permesso. Il co-fondatore di Google, Sergey Brin, afferma che Glass potrebbe essere visto come un modo per isolarsi ancora di più in pubblico, ma l'intento era esattamente l'opposto: Brin vede il controllo dei social media come una costante "tic nervoso", motivo per cui Glass può avvisare l'utente di notifiche e aggiornamenti importanti e non ostruisce la visuale.
+Inoltre, vi è controversia sul fatto che Google Glass causerebbe problemi di sicurezza e violerebbe i diritti alla privacy. Organizzazioni come la FTC Fair Information Practice lavorano per sostenere i diritti alla privacy attraverso i Fair Information Practice Principles (FIPPS), che sono linee guida che rappresentano concetti che riguardano la corretta pratica dell'informazione in un mercato elettronico.
+I sostenitori della privacy temono che le persone che indossano tali occhiali possano essere in grado di identificare estranei in pubblico utilizzando il riconoscimento facciale o registrare e trasmettere di nascosto conversazioni private. La funzione "Trova il mio viso" su Google+ funziona per creare un modello del viso dell'utente e delle persone che conosce, al fine di semplificare l'etichettatura delle foto. Tuttavia, l'unica app attuale in grado di identificare estranei si chiama MORIS (Mobile Offender Recognition and Identification System) ed è un'app per iPhone da 3.000 dollari utilizzata dagli agenti di polizia.
+Alcune aziende negli Stati Uniti hanno affisso cartelli anti-Google Glass nei loro stabilimenti. Nel luglio 2013, prima del rilascio ufficiale del prodotto, Stephen Balaban, co-fondatore della società di software Lambda Labs, ha eluso il blocco dell'app di riconoscimento facciale di Google costruendo il proprio sistema operativo non approvato da Google. Balaban ha quindi installato Glassware per la scansione del volto che crea un riepilogo dei punti in comune condivisi dalla persona scansionata e da chi lo indossa, come amici e interessi comuni. È stato creato anche Winky, un programma che consente a un utente di Google Glass di scattare una foto con un battito di ciglia, mentre Marc Rogers, uno dei principali ricercatori di sicurezza di Lookout, ha scoperto che Glass può essere dirottato se un utente può essere indotto a scattare una foto di un malintenzionato Codice QR, che dimostra il potenziale per essere utilizzato come arma nella guerra informatica.
+Nel febbraio 2013, un utente di Google+ ha notato problemi legali con Glass e ha postato nella comunità Glass Explorers i problemi, affermando che il dispositivo potrebbe essere illegale da utilizzare secondo la legislazione vigente in Russia e Ucraina, che vieta l'uso di gadget spia che possono registrare video, audio o scattare fotografie in modo poco appariscente.
+Sono state inoltre sollevate preoccupazioni in merito alla privacy e alla sicurezza degli utenti di Glass in caso di furto o smarrimento del dispositivo, questione sollevata da un comitato del Congresso degli Stati Uniti. Come parte della sua risposta al comitato, Google ha dichiarato che è in fase di sviluppo un sistema di blocco per il dispositivo. Google ha anche ricordato agli utenti che Glass può essere ripristinato da remoto. La polizia di vari stati ha anche avvertito i portatori di occhiali di fare attenzione ai rapinatori di strada.
+Lisa A. Goldstein, una giornalista freelance nata sorda, ha testato il prodotto per conto di persone con disabilità e ha pubblicato una recensione il 6 agosto 2013. Nella sua recensione, Goldstein afferma che Google Glass non è compatibile con gli apparecchi acustici e non è adatto per le persone che non possono capire il discorso. Goldstein ha anche spiegato le opzioni limitate per l'assistenza clienti, poiché il contatto telefonico era il suo unico mezzo di comunicazione.
+Diverse strutture hanno vietato l'uso di Google Glass prima del suo rilascio al pubblico, citando preoccupazioni su potenziali capacità di violazione della privacy. Altre strutture, come i casinò di Las Vegas, hanno vietato i Google Glass, citando il loro desiderio di rispettare la legge dello stato del Nevada e le normative comuni sui giochi che vietano l'uso di dispositivi di registrazione vicino alle aree di gioco. Il 29 ottobre 2014, la Motion Picture Association of America (MPAA) e la National Association of Theatre Owners (NATO) hanno annunciato il divieto della tecnologia indossabile, inclusi i Google Glass, ponendola sotto le stesse regole di telefoni cellulari e videocamere.
+Ci sono state anche preoccupazioni per il potenziale dolore agli occhi causato da utenti nuovi a Glass. Queste preoccupazioni sono state convalidate dal consulente di optometria di Google, il dottor Eli Peli di Harvard, anche se in seguito ha in parte fatto marcia indietro a causa della controversia che è derivata dalle sue osservazioni.
+Le preoccupazioni sono state sollevate dagli esperti di cyber forensics dell'Università del Massachusetts che hanno sviluppato un modo per rubare le password di smartphone e tablet utilizzando Google Glass. Gli specialisti hanno sviluppato un programma software che utilizza Google Glass per tenere traccia delle ombre delle dita mentre qualcuno digita la propria password. Il loro programma quindi converte i punti di contatto nei tasti che stavano toccando, consentendo loro di catturare i passcode.
+Un'altra preoccupazione riguardante l'applicazione della fotocamera solleva polemiche sulla privacy. Alcune persone sono preoccupate per come il prodotto abbia la capacità di registrare durante eventi come le conversazioni. Il dispositivo accende una luce per indicare che sta registrando, ma molti ipotizzano che ci sarà un'app per disabilitarlo.
+Gli utenti sono stati chiamati in modo derisorio "Glassholes".
+
+
+=== Considerazioni sulla sicurezza ===
+Sono state inoltre sollevate preoccupazioni sulla guida di veicoli a motore mentre si indossa il dispositivo. Il 31 luglio 2013 è stato riferito che la guida indossando Google Glass sarebbe stata probabilmente vietata nel Regno Unito, essendo considerata guida imprudente, quindi un reato di pena fissa, a seguito di una decisione del Dipartimento dei trasporti.
+Negli Stati Uniti, il rappresentante dello stato del West Virginia Gary G. Howell ha introdotto nel marzo 2013 un emendamento alla legge dello stato contro l'invio di messaggi di testo durante la guida che includerebbe il divieto di "utilizzare un computer indossabile con display montato sulla testa". In un'intervista, Howell ha dichiarato: "La cosa principale è un problema di sicurezza, [l'auricolare] potrebbe proiettare testo o video nel tuo campo visivo. Penso che ci sia un grande potenziale di distrazione".
+Nell'ottobre 2013, un conducente in California è stato multato per "guida con il monitor visibile al conducente (Google Glass)" dopo essere stato fermato per eccesso di velocità da un agente del dipartimento di polizia di San Diego. Secondo quanto riferito, l'autista è stato il primo a essere multato per aver guidato mentre indossava i Google Glass. Sebbene il giudice abbia osservato che "i Google Glass rientravano 'nell'ambito e nell'intento' del divieto di guidare con un monitor", il caso è stato respinto dal tribunale per mancanza di prove che il dispositivo fosse acceso in quel momento.
+Nel novembre 2014, Sawyer et al., dell'Università della Florida centrale e dell'US Air Force Research Laboratory, hanno pubblicato i risultati di uno studio comparativo in un simulatore di guida. Ai soggetti è stato chiesto di utilizzare Google Glass o un'interfaccia di messaggistica basata su smartphone e sono stati poi interrotti con un evento di emergenza. I messaggi forniti da Glass sono serviti a moderare ma non a eliminare le richieste cognitive che distraggono. È stato anche osservato un potenziale costo passivo per i conducenti che indossano semplicemente i Google Glass.
+Nel febbraio 2014, una donna che indossava Google Glass ha affermato di essere stata aggredita verbalmente e fisicamente in un bar di San Francisco dopo che un cliente l'ha affrontata mentre mostrava il dispositivo, presumibilmente portando un uomo che l'accompagnava a vendicarsi fisicamente. I testimoni hanno suggerito che gli avventori fossero sconvolti dalla possibilità di essere registrati.
+
+
+=== Termini di servizio ===
+In base ai termini di servizio di Google Glass per il programma di rilascio pre-pubblico di Glass Explorer, si afferma specificamente: "Non puoi rivendere, prestare, trasferire o dare il tuo dispositivo a nessun'altra persona. Se rivendi, presti, trasferisci o dai il tuo dispositivo a qualsiasi altra persona senza l'autorizzazione di Google, Google si riserva il diritto di disattivare il dispositivo e né tu né la persona non autorizzata che utilizza il dispositivo avrete diritto ad alcun rimborso, supporto del prodotto o garanzia del prodotto." Wired ha commentato questa politica di un'azienda che rivendica la proprietà del suo prodotto dopo che è stato venduto, dicendo: "Benvenuti nel Nuovo Mondo, uno in cui le aziende mantengono il controllo dei propri prodotti anche dopo che i consumatori li hanno acquistati". Altri hanno sottolineato che Glass non era affatto per la vendita pubblica, ma piuttosto in test privati per sviluppatori selezionati, e che non consentire agli sviluppatori in una versione beta chiusa di vendere al pubblico non equivale a vietare ai consumatori di rivendere un dispositivo rilasciato pubblicamente.
+
+
+== Specifiche tecniche ==
+
+
+=== Google Glass Explorer ===
+
+
+==== Explorer versione 1 ====
+Il display LCoS dell'Explorer è illuminato utilizzando LED a colori sequenziali che passano attraverso un sistema di conversione della polarizzazione, un divisore di raggio polarizzante, uno specchio semi-argentato e un riflettore collimatore anastigmatico formato all'estremità anteriore del gruppo ottico. Per le unità Developer Explorer versione 1:
+
+Android 4.4 (KitKat)
+Display 640×360 Himax HX7309 LCoS
+Fotocamera da 5 megapixel, in grado di registrare video a 720p
+Wi-Fi 802.11 b/g
+Bluetooth
+16 GB di spazio di archiviazione (12 GB disponibili)
+Texas Instruments OMAP 4430 SoC 1,2 Ghz doppio (ARMv7)
+RAM da 1GB
+Giroscopio a 3 assi, accelerometro a 3 assi e magnetometro a 3 assi (bussola)
+Rilevamento della luce ambientale e sensore di prossimità
+Trasduttore audio a conduzione ossea
+
+
+==== Explorer versione 2 ====
+Per le unità Developer Explorer versione 2, la RAM è stata espansa a 2 GB e sono state rese disponibili le montature da vista:
+
+tutte le funzionalità della versione 1 di Explorer più:
+RAM da 2GB
+Montature da vista disponibili
+
+
+=== Google Glass Enterprise Edition ===
+Google Glass Enterprise Edition migliora rispetto alle edizioni precedenti con le seguenti specifiche:
+
+Processore Intel Atom
+Wi-Fi 802.11n/ac dual-band,
+GPS assistito e GLONASS
+Barometro
+32 GB di spazio di archiviazione
+Batteria da 780 mAh
+Altoparlante driver dinamico anziché trasduttore audio a conduzione ossea
+
+
+==== Google Glass Enterprise Edition 2 ====
+Google Glass Enterprise Edition 2 migliora rispetto alle edizioni precedenti con le seguenti specifiche:
+
+Qualcomm Snapdragon XR1 quad-core, fino a 1,7 GHz, 10 nm
+Android Oreo con gestione dei dispositivi mobili Android Enterprise
+LPDDR da 3 GB4
+Bluetooth 5.xAoA
+Fotocamera da 8 MP con campo visivo di 80°
+3 microfoni beamforming
+Porta USB di tipo C che supporta USB 2.0 480 Mbps
+Batteria da 820 mAh con ricarica rapida
+Accelerometro/giroscopio a 6 assi
+Sensore di rilevamento sulla testa e sensore Eye-on-screen per funzioni di risparmio energetico
+Resistente all'acqua e alla polvere
+~ 46 g di peso
+
+
+== Galleria d'immagini ==
+
+			
+			
+		
+		
+			
+			
+		
+		
+			
+			
+		
+		
+			
+			
+		
+
+
+== Note ==
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su Google Glass
+
+
+== Collegamenti esterni ==
+ Sito ufficiale, su google.com.
+ Specifiche tecniche, su support.google.com.

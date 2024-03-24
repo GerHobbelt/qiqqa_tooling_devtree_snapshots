@@ -1,0 +1,112 @@
+revision: 7580937
+title: "osobn\xFD po\u010D\xEDta\u010D"
+url: https://sk.wikipedia.org/wiki/Osobn%C3%BD_po%C4%8D%C3%ADta%C4%8D
+
+
+---
+
+Osobný počítač (iné názvy: personálny počítač, PC - vyslov: [pé cé] alebo [pí sí]; hovorovo: pécéčko, písíčko; staršie (nepresne): mikropočítač; neodborne: počítač, komputer, kompúter, computer; v slangu: komp(ík); angl. personal computer alebo PC [pí sí]) je počítač určený pre osobné použitie, pre použitie jednotlivcom. Osobný počítač je štandardizovaný a integrovaný mikropočítačový komplex, ktorý vychádza zo štandardov vytvorených IBM a Apple.
+Tento názov vznikol v čase, keď boli počítače väčšinou veľké (sálové, strediskové a pod.) a ich čas sa zdieľal medzi viacerých používateľov (strojový čas). Dnes je väčšina počítačov osobných, preto pod označením počítač často rozumieme osobný počítač. Osobný počítač nahradil aj pojem počítačová zostava, takže pod pojmom PC rozumieme samotný počítač s jeho vstupnými a výstupnými jednotkami.
+Tento termín sa začal používať na konci sedemdesiatych a začiatkom osemdesiatych rokov minulého storočia, kedy sa prvé počítače dostali do domácností. Prechod zo sálového do domáceho prostredia spôsobil aj zmenu v chápaní počítača z vedeckého ponímania (počítač na vedecké výpočty) na zábavné zariadenie. Dnešné osobné počítače sa v prvom rade používajú ako domáce zábavné elektrospotrebiče s prístupom na internet, schopnosťou prehrávať a modifikovať multimediálny obsah, slúžiace tiež ako spojivo medzi ďalšími zariadeniami – prehrávačmi hudby, filmov, fotoaparátmi, televízorom a pod. Slúžia tiež ako sklad multimediálneho obsahu (fotografie, hudba, filmy, texty a pod.)
+
+
+== Osobný počítač ==
+Osobný počítač dneška (2017) je postavený na báze procesorov architektúry x86, s výkonnou grafickou kartou umožňujúcou prehrávať multimediálny obsah, s optickou mechanikou umožňujúcou zápis na veľkokapacitné médiá (DVD, Blu-Ray), s operačnou pamäťou rádovo ~ jednotkách GB, s vysokokapacitným pevným diskom ~ stovky GB-jednotky TB, s možnosťou pripojenia do počítačovej siete a k internetu. PC je tiež vybavené portami na pripojenie periférnych zariadení (vstupné a výstupné periférie, ako aj zariadenia schopné komunikovať s počítačom – MP3 prehrávač, mobilný telefón, a pod.). Ako výstupné zariadenie sa používa LCD monitor s uhlopriečkou 17“-30“, tlačiareň (monochromatická obvykle laserová alebo farebná obvykle atramentová prípadne vo forme multifunkčného zariadenia) ako vstupné zariadenie sa používa klávesnica a optická prípadne laserová myš.
+V oblasti programového vybavenia je najrozšírenejším operačným systémom Windows od firmy Microsoft (verzia XP, Vista, 7,8 alebo 10), s rozšírením až po úroveň monopolu. Druhou najväčšou skupinou je macOS firmy Apple. Alternatívou - aj keď relatívne málo rozšírenou sú Open Source operačné systémy s jadrom Linux.
+
+
+== Zloženie osobného počítača ==
+
+Ak hovoríme o dieloch osobného počítača, musíme oddeliť dve základné roviny – softvér a hardvér. Hardvér je zjednodušene „železo“, teda to, čo sa dá chytiť do ruky. To, čo „vdýchne ducha“, teda čo mu umožní pracovať, je jeho softvérové vybavenie. 
+
+
+=== Hardvér ===
+Osobný počítač sa skladá zo základnej jednotky (systémová jednotka), vstupných a výstupných zariadení.
+
+
+==== Systémová jednotka ====
+Typický osobný počítač (jeho systémová jednotka) je uložený v plechovej (resp. plastovej) skrinke v ktorej sú uložené všetky podstatné časti počítača (prípadne spolu s monitorom a V/V jednotkami integrovaný v jednom tele – notebook). 
+
+Počítačová skriňa (case) je dnes obvykle vo forme tower (anglicky veža), čiže nastojato orientovaná skrinka. Tento formát nahradil predtým najrozšírenejšie usporiadanie desktop (skrinka naležato). Usporiadanie tower zaberá menej miesta, a je aj vhodnejšie z hľadiska chladenia komponentov. Najbežnejšie používanou formou je minitower, čo je skrinka o rozmeroch cca 520 x 520 x 210 mm. Obvykle je vyrobená z plechu. Má odnímateľné veko (alebo bočné steny), ktoré po odstránení odhalia samotné šasi. Šasi je kostra skrine s vytvorenými upevňovacími plochami a otvormi na a do ktorých sa pripevňujú všetky interné mechanické a elektrické diely počítača.
+Počítačový zdroj (power supply) je zariadenie modifikujúce napájacie napätie elektrickej rozvodnej siete, na napätia potrebné pre jednotlivé komponenty počítača (matičná doska, mechaniky a pod.). Dnešné zdroje majú príkon (výkon) 300-500VA.
+Matičná doska (základná doska, motherboard) je v doska plošného spoja obsahujúca konektory a prípojné miesta všetkých vnútorných periférií. Obsahuje soket na upevnenie procesora, pamäťového modulu, zbernice na pripojenie rozširujúcich kariet, hodiny reálneho času, čipset (obvody riadiace komunikáciu medzi komponentmi a vonkajším okolím), porty (konektory pre pripojenie vstupných a výstupných zariadení – klávesnice, myši a pod. Obvyklé je aj integrovanie rozširujúcich kariet priamo na základnú dosku (zvuková karta, sieťová karta, modem, grafická karta a pod.).
+Rozširujúce karty. Sú to externé moduly počítača vo forme karty (doska plošného spoja veľkosti pohľadnice), ktorá má na spodnej časti zásuvné kontakty. Kontakty sa zasúvajú do zbernice matičnej dosky. Použitá karta musí zodpovedať typu zbernice na matičnej doske. Najčastejšie používanou rozširujúcou kartou je grafická karta, pomocou ktorej počítač zobrazuje na monitore. Ďalšími príkladmi sú sieťová karta (pripojenie do počítačovej siete), zvuková karta (karta vytvárajúca zvuky), TV karta (karta pre príjem TV signálu) a pod. Viacero rozširujúcich „kariet“ – modulov sa pripája externe pomocou zbernice USB.
+Procesor (CPU) alebo tiež centrálny procesor je „mozgom“ počítača. Pre procesor je na matičnej doske pripravená pätica – konektor do ktorého sa procesor zasunie. Procesor vyvíja veľké množstvo tepla a preto musí byť pri prevádzke neustále chladený. Procesor vykonáva inštrukcie programového vybavenia a umožňuje chod celého počítača.
+Pamäť (RAM) je modul slúžiaci na uloženie dát počas chodu počítača. Je to malá doska plošného spoja s pamäťovými čipmi. Umiestňuje sa do soketu (konektora) na matičnej doske.
+Mechanika. Mechaník je viacero typov. Najčastejšie sa používa optická mechanika (číta a zapisuje na optické disky (CD a DVD) a disketová mechanika (číta a zapisuje na magnetické diskety). Mechanika je plechová skrinka s plastovým čelným panelom. Mechanicky sa upevní do skrine a elektricky káblami prepojí s matičnou doskou. Optická mechanika môže byť štandardu IDE (plochý kábel), alebo SATA (úzky kábel). Napája sa zo zdroja. Zariadenie slúži na čítanie a zápis optických médií.
+Pevný disk. Je zariadenie na ukladanie dát. Je to kovová skrinka veľkosti 3.5“. Disk sa upevňuje do skrine a elektricky (plochým IDE káblom , alebo SATA káblom) prepojí s matičnou doskou a napájacím zdrojom. Je na ňom uložené celé softvérové vybavenie počítača.
+
+
+==== Vstupné zariadenie ====
+Vstupné zariadenie (vstupná jednotka) je periférne zariadenie (hardvér) osobného počítača, ktoré umožňuje vstup údajov alebo signálov do počítača za účelom ich ďalšieho spracovania alebo ich využitia pre riadenie počítača a k nemu pripojených zariadení. Vstupné zariadenie transformuje informácie z “vonkajšieho” sveta do formy použiteľnej pre počítač. Vstupné zariadenia často slúžia užívateľovi – človeku ktorý ich používa pre zadanie príkazov, alebo ďalších informácií spracovávaných počítačom. Počítač odpovedá užívateľovi pomocou výstupných zariadení počítača. Niektoré zariadenia sú kombinované vstupno-výstupné zariadenia. Typickým príkladom vstupného zariadenia je klávesnica, myš, mikrofón, skener, webová kamera.
+
+
+==== Výstupné zariadenie ====
+Výstupné zariadenie (výstupná jednotka) je periférne zariadenie (hardvér) počítača, ktoré umožňuje výstup údajov alebo signálov z počítača. Výstupné zariadenie transformuje informácie z počítača do formy použiteľnej pre človeka (alebo pre iné zariadenie resp. ďalší počítač). najpoužívanejším výstupným zariadením je monitor (displej), a počítačová tlačiareň.
+
+
+==== Iné zariadenia ====
+Osobný počítač sa využíva aj ako zariadenie spracúvajúce, alebo ukladajúce údaje pre iné zariadenia, ktoré nie sú typickými perifériami počítača. Príkladom je pripojenie mobilného telefónu (ukladanie kontaktov, ich triedenie a odoslanie späť do telefónu), spracovanie obrazu a zvuku pre multimediálne prehrávače (strihanie filmov, prevody multimediálnych formátov, úpravy fotografií a ich tlač a pod.). Z tohto hľadiska je počítač jedným z najvšestrannejších zariadení na komunikáciu vôbec.
+
+
+=== Softvér ===
+Fungovanie počítača nie je možné bez programového vybavenia. Samotný počítač je kompilácia programovateľných obvodov, pamätí a úložísk, ktorá však nie je schopná samostatnej práce. Pre svoju činnosť potrebuje základný tzv. operačný systém, na ktorom bežia aplikácie – aplikačný softvér.
+
+
+==== Operačný systém ====
+Operačný systém (skratka OS) je základné programové vybavenie počítača. Je to „rozhranie“, ktorým používateľ komunikuje s hardvérom. Operačný systém zabezpečuje čiastočne komunikáciu s užívateľom prostredníctvom periférnych zariadení, prideľovanie prostriedkov systému užívateľom alebo aplikáciám, prideľovanie času užívateľom (tzv. timesharing) alebo aplikáciám (multitasking), organizácia programov a súborov údajov na vonkajších pamäťových médiách, vytváranie a spúšťanie užívateľských programov, diagnostické funkcie systému, ochraňuje systém proti strate údajov pri výpadku napätia, proti neoprávnenej manipulácii, komunikáciu s inými systémami (počítačmi) v sieti - pri použití sieťových operačných systémov. Operačný systém sa skladá z jadra, používateľského rozhrania napr. GUI a ovládačov (softvér prepájajúci špecifický hardvér s jadrom operačného systému). 
+V súčasnosti je najpoužívanejší operačný systém Microsoft Windows. Je to viacgeneračný systém. Jeho hlavnou výhodou je rozšírenie, takže pre neho existuje obrovské množstvo komerčného i voľne šíriteľného softvéru a aplikácií. 
+Najrozšírenejšou alternatívou MS Windows je operačný systém OS X firmy Apple a operačný systém Linux. Hlavnou výhodou je, že je zadarmo, ale i to, že preň už existuje veľké množstvo aplikácií z oblasti voľne šíriteľného softvéru.
+
+
+==== Aplikačný softvér ====
+V súčasnosti sú možnosti osobných počítačov také, že zahŕňajú takmer všetko, čo sme schopní zadefinovať. Preto existuje i obrovské množstvo softvéru, ktoré tieto predstavy realizuje. 
+
+Textový editor (MS Word,  Writer a pod.) Softvér pre písanie textov a vytváranie stránok kombinujúcich text a grafiku.
+Tabuľkový kalkulátor (MS Excel, Quattro, Calc atď.) Je program na vytváranie tabuliek. Je to matica čísel (textu, vzorcov) medzi ktorými je možné vykonávať matematické a textové operácie.
+Databázové systémy (Microsoft Access, MySQL) Programy na vytváranie a správu databáz.
+Prezentačný softvér (Microsoft PowerPoint, Impress) Programy na vytváranie prezentácií, multimediálnych súborov určených pre prezentovanie činnosti, alebo veci. Je možné vkladať text, obraz, video, zvuk ...
+Antivírusové programy a antispywarové (NOD, AVG, Avast, Norton Antivirus, ClamAV) slúžia na ochranu počítača pred tzv. škodlivými programami - vírusmi, trójskymi koňmi, spyware a pod.
+ Správa súborov (Windows Commander, Servant Salamander, Turbo Navigator, Midnight Commander, Free Commander) Programy na správu súborov. Umožňujú kopírovanie, prenášanie, náhľady, sledovanie zmien, vytváranie a správu adresárovej štruktúry.
+ Zálohovacie, archivačné a kompresné nástroje (Nero Burning ROM, WinZip, WinRAR, Power Archiver, UltimateZip, 7-Zip ...) Programy pre vytváranie záloh, kompresiu dát a pod.
+ Multimediálne utility (CD a DVD prehrávač, MP3player, VLC, prezerač grafických súborov) Programy pre prehrávanie a vytváranie multimediálneho obsahu.
+Grafický editor (Adobe Photoshop, Paint Shop Pro, Corel Draw!, Corel Photo-Paint, GIMP, Inkscape)
+ Vývojové prostredia programovacích jazykov (Turbo Pascal, Borland Delphi, MS Visual Basic, FreePascal...) Sú programy na vytváranie softvéru. Vyššie programovacie jazyky umožňujú naprogramovať aplikačný softvér. Súčasťou balíka sú ladiace programy a simulátory.
+ Internetové nástroje (Opera, Firefox, Thunderbird, Internet Explorer, Netscape, off-line sťahovače www stránok, FTP, downloadery, HTML editory, ... ) Nástroje na prezeranie obsahu internetu, sťahovanie, vyhľadávanie stránok, sťahovanie a odosielanie pošty.
+ Systémové nástroje (ovládače, defragmentácia) Systémové nástroje sú programy na správu operačného systému, správu a údržbu softvéru.
+ Vzdelávacie programy (encyklopédie, slovníky, prekladače a iné)
+ Geografické informačné systémy a GPS Programy pre prácu s GPS, mapové softvéry, navigačné softvéry.
+ Ekonomické aplikácie (účtovnícke, skladové, výpožičné) Ekonomické balíky, účtovníctvo, mzdy, fakturácia, správa skladu, spolupráca s registračnými pokladňami.
+ DTP (DeskTop publishing) Programy pre prípravu tlače - kníh a časopisov.
+ CAD a 3D modelovanie Programy pre kreslenie stavebným a strojárskych výkresov, modelovanie, 3D výstupy, renderovanie a pod.
+ Programy na oddych a relax (hry)
+
+
+== História PC ==
+
+Pojem bol používaný v priebehu 70. rokov 20. storočia. Ako zlomový dátum je uvádzaný január 1977, kedy vyšlo prvé číslo Personal Computing Magazine. Ale až s uvedením počítače IBM PC (IBM 5150) na trh v 1981 sa ustálilo označenie PC (alebo Personal computer) pre počítač s procesorom Intel x86 kompatibilným (t. j. vnútornou architektúrou, komponentmi a programovým vybavením zlučiteľným) s týmto modelom.
+Je nutné podotknúť, že vývoj výpočtovej techniky v tej dobe bol veľmi prudký a práve platforma osobných počítačov sa stala hnacím motorom rozvoja tejto techniky. V tejto dobe boli na trhu aj ucelenejšie, technicky dokonalejšie a možno priekopníckejšie riešenia (Apple) ako IBM PC. Zásadnú úlohu však zohral fakt, že IBM zvolila otvorenú politiku, ktorá umožnila tretím výrobcom vyrábať komponenty pre PC. Politika drahého značkového výrobku, ktorú razila firma Apple nakoniec neuspela, pretože vďaka obrovskej konkurencii na trhu komponentov pre nasledovníkov IBM PC začal tento segment rásť raketovým tempom pri súčasnom poklese cien, takže výrobky Apple začali zaostávať aj po technickej stránke. 
+Prvý model IBM PC bol dodávaný procesorom Intel 8088, pracujúcom na frekvencii 4,77 MHz a s operačnou pamäťou RAM o veľkosti 16 alebo 64 kB (maximálne 256 KByte). Pre záznam dát sa používal kazetový magnetofón, neskôr osempalcová disketová mechanika.
+V priebehu niekoľkých rokov sa objavili viaceré vylepšenia a tiež veľké množstvo výrobkov nadväzujúcich na platformu PC – periférií, tlačiarní monitorov a pod. Objavili sa prvé klony PC (PC kompatibilné počítače). V roku 1983 sa objavili prvé pevné disky o kapacite 10 MB, v roku 1986 prvé modely s procesorom 80286 (16bitová zbernica, adresovateľná RAM až 16 MB) a v roku 1989 s procesorom 80386. Došlo ku zmenšenie disketovej mechaniky na formát 5.25" pre /mini/diskety o kapacite 360 kB, k zvýšeniu kapacity 5.25" diskiet na 1.2 MB a nakoniec k ich náhrade 3.5" disketami o kapacite 1.44 MB
+Operačným systémom pôvodných osobných počítačov IBM PC a IBM PC kompatibilných býval takmer výlučne MS-DOS alebo jeho klon (PC-DOS, DR-DOS), ktorý bežal v textovom režime. Od roku 1984 sa ale začalo u osobných počítačov presadzovať grafické užívateľské rozhranie (GUI), najprv na počítačoch Apple Macintosh a neskôr na začiatku 90. rokov 20. storočia na počítačoch IBM PC kompatibilných v podobe MS Windows 3.0. Posledné roky 20. storočia znamenali rýchly nárast výkonu hardvérových komponentov i softvéru používaného v PC. Pribudli 80486, integrovaný matematický koprocesor sa stal samozrejmosťou. Následne prišla architektúra Intel Pentium, ktorá priniesla ďalšie zrýchlenie (1990 taktovacie frekvencie 10 – 20 MHz, 2000 okolo 100 – 200 MHz). Monochromatické monitory boli nahradené farebnými. Rozlíšenie stúplo na 1024 x 768 pix. Samozrejmosťou sa stala mechanika pre čítanie optických diskov CD ROM. Pribudla zvuková karta a modem. Ihličkové tlačiarne boli nahradené laserovými a neskôr sa objavili atramentové tlačiarne.
+
+
+== Súčasnosť a budúcnosť PC ==
+
+Bežným operačným systémom (2010) je multimediálny graficky orientované prostredie, napr. Windows XP, Windows Vista,Windows 7,Windows 8, prípadne niektorá z variánt systému GNU/Linux.
+Drvivá prevaha v oblasti operačných systémov patrí Microsoft Windows, ktoré nie sú prenositeľné na architektúru nekompatibilnú s PC. MS Windows sa snaží zachovať tento monopol používaním komplikovaných neštandardizovaných licencovaných formátov, aplikáciou klonov úspešnejších konkurenčných aplikácií priamo do operačného systému, čím vzniká „nepotrebnosť“ konkurenčného prostredia, neuvoľňovaním zdrojových kódov pre potreby vývoja konkurenčného softvéru, ale aj poskytovaním softvéru zadarmo pre školy, čím si vychovávajú ďalších potenciálnych zákazníkov a pod. Je zaujímavé, že v oblasti hardvéru bol podobný monopol firmy Intel prelomený procesormi firmy AMD. 
+Súčasné osobné počítače sa používajú pri kancelárskej práci, kde dokonale vytlačili písacie stroje, pre riadenie priemyselných aplikácií a zariadení, v domácom prostredí pre reprodukciu a editáciu multimediálneho obsahu (hudba, film, obrázky). Skoro samozrejmé je pripojenie k internetu.
+V súčasnosti je však badateľný odklon od tradične ponímaného osobného počítača „na stole“ k osobnému počítaču „pri sebe“. Rýchly rast výkonu mikroprocesorov, miniaturizácia, pokles cien flash pamätí a pod. vedie k rýchlemu rozvoja segmentu prenosných osobných počítačov – notebookov a PDA. Z druhej strany sa k tomuto segmentu rýchlo približujú mobilné telefóny, do ktorých sú integrované operačné systémy kompatibilné s PC. Už dnes (2013) je predaj mobilných počítačov plne porovnateľný s predajom stacionárnych čo do počtu kusov, i finančného objemu.
+Vynárajú sa nové operačné systémy pre malé zariadenia do vrecka (PDA) ktoré často používajú operačné systémy Android firmy Google, iOS Apple, Windows RT firmy Microsoft, alebo Linux. 
+Objavujú sa tiež multimediálne počítače ako náhrada za domáce HiFi zariadenia, používajúce na zobrazovanie veľkoplošné TV LCD prijímače ako displeje.
+Všetky technické parametre osobných počítačov rastú až udivujúcim tempom. Inovačný cyklus je veľmi krátky, a niektoré technológie nemajú životnosť ani jeden rok. Výkony počítačov vzrástli niekoľko tisícnásobne vo všetkých ukazovateľoch. Rýchle rastie aj kapacita záznamových médií, či už zabudovaných, alebo prenosných. 
+Spomalil sa rast frekvencií procesorov, ktorý prinášal problémy s nestabilitou a prehrievaním a objavili sa nové riešenia – multijadrové procesory. Je predpoklad, že vývoj pôjde i naďalej smerom zvyšovania výkonu zmenou (násobením) vnútorných štruktúr. Klesá spotreba, klesajú napájacie napätia i množstvo produkovaného tepla. Ukazuje sa, že viacerými procesormi je možné dosiahnuť vyšší výkon pri nižšej spotrebe. Frekvencia procesora prestala byť hlavným ukazovateľom jeho výkonu.
+
+
+== Referencie ==
+
+
+== Pozri aj ==
+Počítač
+Hardvér
+Softvér

@@ -1,0 +1,32 @@
+revision: 6306676
+title: 0-13-144329-1
+url: https://et.wikipedia.org/wiki/Grampositiivsed_bakterid
+
+
+---
+
+Grampositiivsed bakterid (tähistatakse G(+) või GP) on bakterid, mis erinevalt gramnegatiivsetest bakteritest hoiavad Grami meetodiga uurimisel aluselist värvust (kristallvioletti) pärast etanooliga loputamist. Grami meetodil lisatakse pärast kristallvioleti kasutamist kontrastvärvus (tavaliselt safraniin), mistõttu kõik grampositiivsed bakterid värvuvad violetseks või tumesiniseks. Nad on võimelised säilitama kristallvioletti tänu paksu peptidoglükaankihi olemasolule rakuümbrises. Erinevalt gramnegatiivsetest bakteritest ei ole grampositiivsetel bakteritel rakuümbrises välismembraani. Esineb tsütoplasma membraan, aga rakukesta moodustab paks peptidoglükaankiht ning nendevahelist ruumi nimetatakse periplasmaks.
+
+
+== Omadused ==
+Allpool nimetatud omadused on grampositiivsetele bakteritele iseloomulikud: 
+Fosfolipiidide kaksikkihist koosnev tsütoplasma membraan.
+Paks peptidoglükaankiht. Esinevad teihhoiinhapped, moodustades lipoididega (rasvataolised ained ) lipoteihhoiinhappeid, mis toimivad nagu kelaadid ehk kelaatühendid ning osalevad mõnda tüüpi adhesioonis.
+Kapsli polüsahhariidid (mõnedel liikidel).
+Vibur ehk flagell (mõnedel liikidel). Kui on olemas, siis viburi basaalkeha koosneb vaid kahestest sisemistest ketastest: M (membraan) ja S (supramembraan), sest grampositiivsetel bakteritel on vaid üks rakumembraani kiht. Üksikud peptidoglükaani molekulid on omavahel risti seotud peptiidahelatega, näiteks pentaglütsiiniga (S.aureus).  Ensüüm DD-transpeptidaas aitab seda sidet moodustada. Gramnegatiivsetel bakteritel moodustab transpeptidaas kovalentsidet otseselt peptidoglükaani molekulite vahel ilma vahepealse sillata.Nii grampositiivsetel kui ka gramnegatiivsetel bakteritel võib olla lisamembraan, mida nimetatakse S-kihiks. Gramnegatiivsete bakterite S-kiht on otseselt seotud välismembraaniga. Grampositiivsete bakterite S-kiht on seotud peptidoglükaankihile. Rakukestas olevad teihhoiinhapped omavad lipiidse komponenti ning võivad osaleda peptidoglükaani ankurdamises, kuna lipiidne komponent on üheks membraani elemendiks.
+
+
+== Klassifikatsioon ==
+Grami järgi värvimine on kiire ja tõhus diagnostiline meetod selleks, et grupeerida Bacteria domeeni liike. Traditsioonilises ja tänapäevases mikrobioloogias on palju kriteeriume, mille järgi klassifitseeritakse ja jagatakse allüksusteks domeen Bacteria. Peale Grami järgi värvimise võivad kriteeriumiks olla ka kasvu kiirus, antibiootikumitundlikkus või teised makroskoopilised ja füsioloogilised omadused.
+
+Riik Monera oli jagatud neljaks hõimkonnaks Grami meetodi järgi: Firmacutes (Firmicutes), Gracilicutes, Mollicutes ning Mendocutes. Carl Woese (mikrobioloogia teaduskond, Illinois Ülikool) töökaaslastega tegeles 16S ribosomaalse RNA-ga seotud fülogeneetiliste uuringutega. Alates 1987 hakkas Carl Woese kahtlema grampositiivsete bakterite monofüleetiliste rühmade õigsuses.  Uuringud andsid positiivse tulemuse, mis on kasuks nende organismide järgnevatele terapeutilistele ning üldistele uuringutele. Kasutades 16S rRNA molekulaarseid meetodeid, leidis Woese 12 bakterihõimkonda, millest kaks olid grampositiivsed: suure GC (guaniin-tsütosiin) sisaldusega grampositiivsed (Actinobacteria) ja väikse GC sisaldusega grampositiivsed bakterid (Firmicutes). Hõimkonda Actinobacteria kuuluvad perekonnad, nagu Corynebacterium, Mycobacterium, Nocardia ja Streptomyces. 
+Hõimkond Firmicutes sisaldab 45–60% ulatuses aluspaari GC, mis ei ole päris madal, kuid madalam kui hõimkonnal Actinobacteria. Hõimkonda Firmicutes kuuluvad perekonnad, nagu Staphylococcus, Streptococcus, Enterococcus, Bacillus, Clostridium ja Listeria. Need perekonnad sisaldavad põhilisi haigusi tekitavaid liike. 
+Hõimkonda Firmicutes oli üle viidud Mycoplasma, kuna see on bakterisarnane organism. Mükoplasmal ei ole rakukesta. Vaatamata sellele, et mükoplasma ei saa olla värvitud, tuleneb see organism hõimkonnast Firmicutes.
+Vaatamata laialt levitud arvamusele ning praktilistele teadmistele molekulaarses fülogeenias, peavad mõned inimesed senini Monera riiki monofüleetiliseks klaadiks. Nende inimeste hulka kuulub ka Cavalier-Smith. 
+
+
+== Patogeensus ==
+Grampositiivsed bakterid on kõige levinumaks inimese haiguse tekkimise põhjuseks. Praegu on teada 6 GP bakterite perekonda, mis mõjutavad inimese tervist. Kaks nendest, Streptococcus ja Staphylococcus, on kokid. Ülejäänud bakterid on batsillid (kepikesekujulised bakterid). Nad jagatakse kaheks rühmaks spoori moodustumise võimaluse järgi. Näidiseks võib esitada Corynebacterium ja Listeria (mittesporuleeruvad liigid) ning Bacillus ja Clostridium (liigid, mis moodustavad spoore).  Peale selle jagatakse sporuleeruvad bakterid veel fakultatiivseteks ja obligatoorseteks anaeroobideks. Esimesse rühma kuulub Bacillus perekond ja teise Clostridium.
+
+
+== Viited ==

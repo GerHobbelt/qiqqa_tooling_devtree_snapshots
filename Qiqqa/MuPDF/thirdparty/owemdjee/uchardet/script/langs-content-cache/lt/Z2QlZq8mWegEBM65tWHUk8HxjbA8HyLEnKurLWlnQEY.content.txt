@@ -1,0 +1,50 @@
+revision: 6917185
+title: "\u017Daidim\u0173 automatas"
+url: https://lt.wikipedia.org/wiki/%C5%BDaidimo_automatas
+
+
+---
+
+Žaidimo automatas – elektroninis prietaisas, skirtas žaisti arkadinius video žaidimus. Juo pradedama žaisti įmetus monetą ar žetoną. Dažniausiai žaidimo laikas yra ribotas ir priklauso, pvz., nuo bandymų skaičiaus, tam tikro tikslo, kurį reikia atlikti per numatytą laiką, žaidimo pabaigos ir pan.
+Žaidimo automatas paprastai turi įmontuotą valdymo įrenginį, kaip antai vairasvirtę, pistoletą, transporto priemonę ar vairą, kiekvienam žaidimui pagal paskirtį.
+
+
+== Sudedamosios dalys ==
+Pastaba: kadangi žaidimų automatai buvo kuriami konkrečiam žaidimui, taigi jie gali ir neturėti visų žemiau išvardintų dalių:
+
+Monitorius, kuriame vaizduojamas žaidimas. Žaidimai gali būti vaizduojami taškine ar vektorine grafika, dažniausiai taškine. Standartinė rezoliucija yra tarp 262,5 ir 315 vertikalių linijų, priklausomai nuo kadrų dažnio (paprastai tarp 50 ir 60 Hz). Monitoriai gali būti pakreipti horizontaliai ar vertikaliai, priklausomai nuo žaidimo. Kai kurie žaidimai naudoja daugiau nei vieną monitorių. Taip pat naujesni žaidimų automatai turi monitorius, kurie geba atvaizduoti aukštos raiškos vaizdą.
+Spausdinta schema – techninė įranga, kurios dėka žaidimas ir veikia. Įtaisyta mašinos viduje, iš išorės nematoma.
+Maitinimo šaltinis, kuris tiekia elektros srovę, pagrindinei mašinos plokštei ir taip pat nedidelį elektros kiekį monetos įmetimo vietos bei mygtukų apšvietimui.
+Ženklas virš monitoriaus, kuris vaizduoja žaidimo pavadinimą. Dažniausiai yra ryškių spalvų ir apšviestas.
+Rėmelis aplink monitorių, kuriame vaizduojamos instrukcijos ar tiesiog papuošimai.
+Valdymo skydelis, lygus ir horizontalus paviršius, kuriame išdėstyti valdikliai ir mygtukai. Kartais vaizduojamos instrukcijos.
+Monetos įmetimo/grąžinimo langeliai, kur metamos ar grąžinamos monetos/žetonai, taip pat gali būti galimybė juos iškeisti. Visa tai dažniausiai yra žemiau valdymo skydelio. Pirmieji monetų langeliai galėjo būti „apgaunami“ prie plieninio mašinos paviršiaus uždegant pjezoelektrinį žiebtuvėlį ar viryklės uždegiklį, taip leidžiant žaisti nemokamai. Kai kuriuose žaidimų automatuose monetų langeliai yra pakeisti kortelių skaitytuvais, nuskaitančiais informaciją nuo žaidimo kortelės, kurią galima nusipirkti iš žaidimų automatų operatoriaus.Žaidimo automato šonai dažniausiai yra apklijuoti spalvingais paveikslėliais ar apipaišyti dažais, kurie apibūdina žaidimą.
+
+
+== Pelningiausi žaidimai ==
+Pelningiausių žaidimų automatų žaidimų sąrašas (Pastaba. Duomenys ne pilnai patikrinami):
+
+„Pac-Man“ (leidėjas „Namco“, 400 000 instaliuotų žaidimų automatų, 3500 mln. USD pajamų 1990 m. duomenimis.)
+„Space Invaders“ („Taito“, 340 000 automatų, 2702 mln. USD 1982 m.)
+„Street Fighter II“ („Capcom“, 200 000 automatų, 2312 mln. USD 1995 m.)
+„Ms. Pac-Man“ („Bally Midway“, 125 000 automatų, 1200 mln. USD 1987 m.)
+„NBA Jam“ („Midway“, 20 000 automatų, 1100 mln. USD 1994 m.)
+„Defender“ („Williams“, 60 000 automatų, 1000 mln. USD 1993 m.)
+„Asteroids“ („Atari“, 100 000 automatų, 800 mln. USD 1991 m.)
+„Mortal Kombat II“ („Midway“, 27 000 automatų, 600 mln. USD 2002 m.)
+„Mortal Kombat“ („Midway“, 24 000 automatų, 570 mln. USD 2002 m.)
+„Donkey Kong“ (leidėjas „Nintendo“, 132 000 automatų, 280 mln. USD 1982 m.)
+
+
+== Taip pat skaitykite ==
+Arkadinis žaidimas
+Kompiuterinių žaidimų istorija
+Kompiuterinių žaidimų konsolė
+Lošimo automatas
+
+
+== Išnašos ==
+
+
+== Nuorodos ==
+Žaidimų automatai Archyvuota kopija 2011-05-22 iš Wayback Machine projekto.. Atviro katalogo projekto portale. (angl.)

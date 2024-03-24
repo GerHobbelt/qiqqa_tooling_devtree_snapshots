@@ -1,0 +1,37 @@
+revision: 24023942
+title: Anaerobni organizam
+url: https://sr.wikipedia.org/wiki/Anaerobni_organizam
+
+
+---
+
+Anaerobni organizam ili anaerob je organizam kome nije neophodan kiseonik za rast. Takav organizam može da ima negativnu reakciju ili čak da ugine u prisustvu kiseonika, jer bolje izvršava svoje telesne funkcije u odsustvu kiseonika. Anaerobni organizam može da bude jednoćelijski ili višećelijski (poput metazoa ili kompleksnijih organizama kao što su crvi iz dubokog mora). Pojedini paraziti (npr. Trichinella spiralis) imaju anaerobnu respiraciju u infektiranim ćelijama. Neki od uglavnom jednoćelijskih anaerobnih mikroba su protozoe, mada većinu anaerobnih mikroba sačinjavaju bakterije i arheje. Iz praktičnih razloga se dele u tri kategorije: 
+
+obligatni anaerobi - kod njih kiseonik izaziva oštećenja
+aerotolerantni organizmi - oni ne mogu da koriste kiseonik za rast, ali su tolerantni na njegovo prisustvo
+fakultativni anaerobi - oni mogu da rastu sa i bez kiseonika, ali koriste kiseonik kad je dostupanU ljudskim bićina ti organizmi se obično nalaze u gastrointestinalnom traktu. Neke od anaerobnih bakterija proizvode klinički važne toksine (e.g. tetanus).
+
+
+== Energetski metabolizam ==
+Obligativni anaerobi mogu da koriste fermentaciju ili anaerobnu respiraciju. Aerotolerantni organizmi su strogo fermentativni. U prisustvu kiseonika, fakultativni anaerobi koriste aerobnu respiraciju; dok u odsustvu kiseonika, neki od njih vrše fermentaciju, a neki anaerobnu respiraciju.
+
+
+=== Fermentacija ===
+Postoji mnoštvo anaerobnih fermentativnih reakcija.
+Fermentativni anaerobni organizmi uglavnom koriste mlečno kiselinski fermentacioni put:
+
+C6H12O6 + 2 ADP + 2 fosfat → 2 mlečna kiselina + 2 ATPEnergija oslobođena u ovoj reakciji je oko 150 kJ / mol. Ona se konzervira regeneracijom dva molekula ATP iz ADP po molekulu glukoze. To je samo 5% energije po molekulu šećera koju tipično generiše aerobna reakcija.
+Biljke i gljive (e.g., kvasci) generalno koriste alkoholnu (etanolnu) fermentaciju, kad je pristup kiseoniku ograničen:
+
+C6H12O6 + 2 ADP + 2 phosphate → 2 C2H5OH + 2 CO2↑ + 2 ATPOslobođena energija je oko 180 kJ / mol, što se konzervira regeneracijom dva ATP molekula iz ADP po molekulu glukoze.
+Anaerobne bakterije i arheje koriste ove i niz drugih fermentativnih pateva, e.g., propionsko kiselinska fermentacija, buterno kiselinska fermentacija, mešovita kiselinska fermentacija, butandiolna fermentacija, Stiklandova fermentacija, acetogeneza, ili metanogeneza.
+
+
+== Reference ==
+
+
+== Vidi još ==
+Aerobni organizam
+Anaerobna infekcija
+Anaerobno varenje
+Biogas

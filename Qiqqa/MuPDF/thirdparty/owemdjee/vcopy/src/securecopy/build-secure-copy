@@ -1,0 +1,145 @@
+#!/bin/bash
+
+#set -e
+
+# run as root
+
+# assumption is that coreutils-X.Y.tar.xz is located in current directory
+
+# TODO https://www.tecmint.com/advanced-copy-command-shows-progress-bar-while-copying-files/
+
+
+# local system directory where crccp, crcmv and crcsum will be copied
+# remainder of core utils will not be installed!
+# Change to meet local system
+TARGETDIR="/opt/ansible/roles/cron-files/files/system/bin/"
+LOCALTARGETDIR="/opt/bin/"
+
+# Internal for this script
+CURRENTDIR=${PWD}
+
+# bin dir after build
+BINDIR="${CURRENTDIR}/bin"
+
+# Target coreutils (tested version)
+COREUTILS="coreutils-9.3"
+
+# required on debian
+# Can be commented-out after first run
+apt-get update && apt-get install -y --no-install-recommends -qq \
+        procps \
+        git \
+        build-essential \
+        automake \
+        texinfo \
+        ca-certificates \
+        wget \
+        libattr1-dev
+
+# Coreutils
+# Can be commented-out after first run
+wget -v -O ${CURRENTDIR}/${COREUTILS}.tar.xz  https://ftp.gnu.org/gnu/coreutils/${COREUTILS}.tar.xz
+
+# Clean source directory
+rm -rf ${CURRENTDIR}/${COREUTILS}
+
+rm ${CURRENTDIR}/bin/*
+
+
+# Extract Coreutils
+cd ${CURRENTDIR}
+tar -xvf ${COREUTILS}.tar.xz
+
+
+# PRE-REQUISITE - CAN I BUILD STOCK CORE UTILS?
+# COMMENT WHEN SUCCESSFULL
+#cd ${CURRENTDIR}/${COREUTILS}
+#export FORCE_UNSAFE_CONFIGURE=1
+#./bootstrap
+#./configure
+#make
+#exit
+
+#############################################################################################
+## START SECURE COPY
+
+
+# Install Securecopy files
+cd ${CURRENTDIR}/src
+cp crc64.* crcsum.* crcsum_cli.c ${CURRENTDIR}/${COREUTILS}/src/
+cp *.x ${CURRENTDIR}/${COREUTILS}/man/
+
+cd ${CURRENTDIR}/${COREUTILS}/src
+cp mv.c crcmv.c
+cp cp.c crccp.c
+cp copy.c copy.c.org
+cp copy.h copy.h.org
+cp cu-progs.mk cu-progs.mk.org
+cp local.mk local.mk.org
+
+
+cd ${CURRENTDIR}/${COREUTILS}/src
+patch copy.c ${CURRENTDIR}/src/copy.c.patch
+patch copy.h ${CURRENTDIR}/src/copy.h.patch
+patch crccp.c ${CURRENTDIR}/src/crccp.c.patch
+patch crcmv.c ${CURRENTDIR}/src/crcmv.c.patch
+patch cu-progs.mk ${CURRENTDIR}/src/cu-progs.mk.patch
+patch local.mk ${CURRENTDIR}/src/local.mk.patch
+
+cd ${CURRENTDIR}/${COREUTILS}/m4
+cp cu-progs.m4 cu-progs.m4.org
+patch cu-progs.m4 ${CURRENTDIR}/src/cu-progs.m4.patch
+
+#exit
+
+# Combine version number from coreutils and securecopy
+version_crc=$( cat ${CURRENTDIR}/.version )
+version_gnu=$( cat ${CURRENTDIR}/${COREUTILS}/.version )
+version="[${version_gnu}-${version_crc}]"
+
+echo "${version_gnu}-${version_crc}" > ${CURRENTDIR}/${COREUTILS}/.version
+sed -i "s/m4_esyscmd(\[build-aux\/git-version-gen .tarball-version\])/${version}/g" ${CURRENTDIR}/${COREUTILS}/configure.ac
+
+# Sometimes required:
+#cd ${CURRENTDIR}/${COREUTILS}
+#make distclean
+
+# Configure
+cd ${CURRENTDIR}/${COREUTILS}
+export FORCE_UNSAFE_CONFIGURE=1
+./configure
+make
+
+cd ${CURRENTDIR}/${COREUTILS}/src
+cp   crccp crcmv crcsum  ${BINDIR}/
+chmod 555 ${BINDIR}/*
+chown root.root ${BINDIR}/*
+echo "crccp crcmv and crcsum copied to ${BINDIR}"
+
+
+#ADD TEST TEST TEST
+while true; do
+    read -p "Do you wish to install securecopy tools in ${TARGETDIR}?" yn
+    case $yn in
+        [Yy]* ) sudo /bin/cp ${BINDIR}/* ${TARGETDIR} ; break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
+while true; do
+    read -p "Do you wish to install securecopy tools in ${LOCALTARGETDIR}?" yn
+    case $yn in
+        [Yy]* ) sudo /bin/cp ${BINDIR}/* ${LOCALTARGETDIR} ; break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
+
+
+echo "++++++++++++++++++++++++++++++++++++"
+echo "OPTIONAL: Add to ~/.bashrc:"
+echo   "alias cp='${TARGETDIR}/crccp -cx'"
+echo   "alias mv='${TARGETDIR}/crcmv -cx'"
+echo   "alias crcsum='${TARGETDIR}/crcsum'"

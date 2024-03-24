@@ -1,0 +1,992 @@
+revision: 6336801
+title: Hiperbolne funkcije
+url: https://hr.wikipedia.org/wiki/Hiperbolne_funkcije
+
+
+---
+
+Hiperbolne funkcije su funkcije u matematici koje odgovaraju trigonometrijskim funkcijama (sinus, kosinus itd.) na hiperboli. Nezavisno su ih otkrili 1760.-ih godina matematičari Vincenzo Riccati i Johann Heinrich Lambert, koji ih je koristio za računanje površine hiperbolnog trokuta. Tek su u 19. stoljeću našle širu upotrebu nakon Lobačevskijevog otkrića hiperbolne geometrije.
+Dok skup svih točaka oblika (cos x, sin x) čini jediničnu kružnicu x2 + y2 = 1, skup (ch x, sh x) čini desnu stranu hiperbole x2 - y2 = 1. Hiperbolne funkcije usko su povezane s trigonometrijskim funkcijama, između ostalog zbog jednakosti (iy)2 = −y2.
+
+
+== Osnovne hiperbolne funkcije ==
+Osnovne hiperbolne funkcije su:
+
+sinus hiperbolni: 
+  
+    
+      
+        sh
+        ⁡
+        x
+        =
+        sinh
+        ⁡
+        x
+        =
+        
+          
+            
+              
+                e
+                
+                  x
+                
+              
+              −
+              
+                e
+                
+                  −
+                  x
+                
+              
+            
+            2
+          
+        
+      
+    
+     
+  
+kosinus hiperbolni: 
+  
+    
+      
+        ch
+        ⁡
+        x
+        =
+        cosh
+        ⁡
+        x
+        =
+        
+          
+            
+              
+                e
+                
+                  x
+                
+              
+              +
+              
+                e
+                
+                  −
+                  x
+                
+              
+            
+            2
+          
+        
+      
+    
+     
+  Prethodne dvije funkcije su ujedno redomi neparni i parni dio eksponencijalne funkcije. Iz njih se izvode tangens i kotangens hiperbolni:
+
+tangens hiperbolni: 
+  
+    
+      
+        th
+        ⁡
+        x
+        =
+        tanh
+        ⁡
+        x
+        =
+        
+          
+            
+              sh
+              ⁡
+              x
+            
+            
+              ch
+              ⁡
+              x
+            
+          
+        
+        =
+        
+          
+            
+              
+                e
+                
+                  x
+                
+              
+              −
+              
+                e
+                
+                  −
+                  x
+                
+              
+            
+            
+              
+                e
+                
+                  x
+                
+              
+              +
+              
+                e
+                
+                  −
+                  x
+                
+              
+            
+          
+        
+      
+    
+     
+  
+kotangens hiperbolni: 
+  
+    
+      
+        cth
+        ⁡
+        x
+        =
+        coth
+        ⁡
+        x
+        =
+        
+          
+            
+              ch
+              ⁡
+              x
+            
+            
+              sh
+              ⁡
+              x
+            
+          
+        
+        =
+        
+          
+            
+              
+                e
+                
+                  x
+                
+              
+              +
+              
+                e
+                
+                  −
+                  x
+                
+              
+            
+            
+              
+                e
+                
+                  x
+                
+              
+              −
+              
+                e
+                
+                  −
+                  x
+                
+              
+            
+          
+        
+        =
+        
+          
+            1
+            
+              th
+              ⁡
+              x
+            
+          
+        
+      
+    
+     
+  Rijetko se koriste:
+
+sekans hiperbolni: 
+  
+    
+      
+        sech
+        ⁡
+        x
+        =
+        
+          
+            1
+            
+              ch
+              ⁡
+              x
+            
+          
+        
+        =
+        
+          
+            2
+            
+              
+                e
+                
+                  x
+                
+              
+              +
+              
+                e
+                
+                  −
+                  x
+                
+              
+            
+          
+        
+      
+    
+     
+  
+kosekans hiperbolni: 
+  
+    
+      
+        cosech
+        ⁡
+        x
+        =
+        
+          
+            1
+            
+              sh
+              ⁡
+              x
+            
+          
+        
+        =
+        
+          
+            2
+            
+              
+                e
+                
+                  x
+                
+              
+              −
+              
+                e
+                
+                  −
+                  x
+                
+              
+            
+          
+        
+      
+    
+     
+  
+
+
+== Area funkcije ==
+Hiperbolne funkcije nisu periodične, za razliku od običnih trigonometrijskih funkcija, stoga mogu imati prave inverze. Inverzi hiperbolnih funkcija su area funkcije (oznaka: Ar); to je hiperbolni analogon arkus funkcijama na kružnici:
+
+area sinus hiperbolni, Arsh
+area kosinus hiperbolni, Arch
+area tangens hiperbolni, Arth
+area kotangens hiperbolni, Arcth, itd.Hiperbolni sinus, tangens i kotangens su neparne funkcije, te stoga imaju prave inverze, dok je kosinus hiperbolni paran, pa area kosinus hiperbolni definiramo kao inverz desne polovice (x ≥ 0) funkcije ch x.
+
+
+=== Jednakosti ===
+
+  
+    
+      
+        Arsh
+        ⁡
+        x
+        =
+        ln
+        ⁡
+        
+          (
+          
+            x
+            +
+            
+              
+                
+                  x
+                  
+                    2
+                  
+                
+                +
+                1
+              
+            
+          
+          )
+        
+      
+    
+     
+  
+
+  
+    
+      
+        Arch
+        ⁡
+        x
+        =
+        ln
+        ⁡
+        
+          (
+          
+            x
+            +
+            
+              
+                
+                  x
+                  
+                    2
+                  
+                
+                −
+                1
+              
+            
+          
+          )
+        
+        ,
+        
+        x
+        ≥
+        1
+      
+    
+     
+  
+
+  
+    
+      
+        Arth
+        ⁡
+        x
+        =
+        
+          
+            1
+            2
+          
+        
+        ln
+        ⁡
+        
+          
+            
+              1
+              +
+              x
+            
+            
+              1
+              −
+              x
+            
+          
+        
+        ,
+        
+        
+          |
+          x
+          |
+        
+        <
+        1
+      
+    
+     
+  
+
+  
+    
+      
+        Arcth
+        ⁡
+        x
+        =
+        
+          
+            1
+            2
+          
+        
+        ln
+        ⁡
+        
+          
+            
+              x
+              +
+              1
+            
+            
+              x
+              −
+              1
+            
+          
+        
+        ,
+        
+        
+          |
+          x
+          |
+        
+        >
+        1
+      
+    
+     
+  
+
+
+== Derivacije ==
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  sh
+                  ′
+                
+                ⁡
+                x
+              
+              
+                
+                =
+                ch
+                ⁡
+                x
+              
+            
+            
+              
+                
+                  ch
+                  ′
+                
+                ⁡
+                x
+              
+              
+                
+                =
+                sh
+                ⁡
+                x
+              
+            
+            
+              
+                
+                  th
+                  ′
+                
+                ⁡
+                x
+              
+              
+                
+                =
+                1
+                −
+                
+                  th
+                  
+                    2
+                  
+                
+                ⁡
+                x
+                =
+                
+                  sech
+                  
+                    2
+                  
+                
+                ⁡
+                x
+                =
+                
+                  
+                    1
+                    
+                      
+                        ch
+                        
+                          2
+                        
+                      
+                      ⁡
+                      x
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  cth
+                  ′
+                
+                ⁡
+                x
+              
+              
+                
+                =
+                1
+                −
+                
+                  cth
+                  
+                    2
+                  
+                
+                ⁡
+                x
+                =
+                −
+                
+                  cosech
+                  
+                    2
+                  
+                
+                ⁡
+                x
+                =
+                −
+                
+                  
+                    1
+                    
+                      
+                        sh
+                        
+                          2
+                        
+                      
+                      ⁡
+                      x
+                    
+                  
+                
+              
+              
+              
+                x
+                ≠
+                0
+              
+            
+            
+              
+                
+                  sech
+                  ′
+                
+                ⁡
+                x
+              
+              
+                
+                =
+                −
+                th
+                ⁡
+                x
+                sech
+                ⁡
+                x
+              
+            
+            
+              
+                
+                  cosech
+                  ′
+                
+                ⁡
+                x
+              
+              
+                
+                =
+                −
+                cth
+                ⁡
+                x
+                cosech
+                ⁡
+                x
+              
+              
+              
+                x
+                ≠
+                0
+              
+            
+            
+              
+                
+                  Arsh
+                  ′
+                
+                ⁡
+                x
+              
+              
+                
+                =
+                
+                  
+                    1
+                    
+                      
+                        x
+                        
+                          2
+                        
+                      
+                      +
+                      1
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  Arch
+                  ′
+                
+                ⁡
+                x
+              
+              
+                
+                =
+                
+                  
+                    1
+                    
+                      
+                        x
+                        
+                          2
+                        
+                      
+                      −
+                      1
+                    
+                  
+                
+              
+              
+              
+                x
+                >
+                1
+              
+            
+            
+              
+                
+                  Arth
+                  ′
+                
+                ⁡
+                x
+              
+              
+                
+                =
+                
+                  
+                    1
+                    
+                      1
+                      −
+                      
+                        x
+                        
+                          2
+                        
+                      
+                    
+                  
+                
+              
+              
+              
+                
+                
+                  |
+                
+                x
+                
+                  |
+                
+                <
+                1
+              
+            
+            
+              
+                
+                  Arcth
+                  ′
+                
+                ⁡
+                x
+              
+              
+                
+                =
+                
+                  
+                    1
+                    
+                      1
+                      −
+                      
+                        x
+                        
+                          2
+                        
+                      
+                    
+                  
+                
+              
+              
+              
+                
+                
+                  |
+                
+                x
+                
+                  |
+                
+                >
+                1
+              
+            
+            
+              
+                
+                  Arsech
+                  ′
+                
+                ⁡
+                x
+              
+              
+                
+                =
+                −
+                
+                  
+                    1
+                    
+                      x
+                      
+                        
+                          1
+                          −
+                          
+                            x
+                            
+                              2
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+              
+              
+                0
+                <
+                x
+                <
+                1
+              
+            
+            
+              
+                
+                  Arcosech
+                  ′
+                
+                ⁡
+                x
+              
+              
+                
+                =
+                −
+                
+                  
+                    1
+                    
+                      
+                        |
+                      
+                      x
+                      
+                        |
+                      
+                      
+                        
+                          1
+                          +
+                          
+                            x
+                            
+                              2
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+              
+              
+                x
+                ≠
+                0
+              
+            
+          
+        
+      
+    
+     
+  Zbog svojih banalnih derivacija, area funkcije se relativno često pojavljuju kao integrali jednostavnijih funkcija.
+Sinus hiperbolni i kosinus hiperbolni jednaki su vlastitoj drugoj derivaciji:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  sh
+                  ″
+                
+                ⁡
+                x
+              
+              
+                
+                =
+                sh
+                ⁡
+                x
+              
+            
+            
+              
+                
+                  ch
+                  ″
+                
+                ⁡
+                x
+              
+              
+                
+                =
+                ch
+                ⁡
+                x
+              
+            
+          
+        
+      
+    
+     
+  Sve funkcije s tim svojstvom (uključujući ex i e−x) su linearne kombinacije sh i ch.
+
+
+== Vidi i ==
+Popis integrala hiperbolnih funkcija
+Popis integrala inverznih hiperbolnih funkcija
+
+
+== Vanjske poveznice ==
+Hiperbolne funkcije, Hrvatska enciklopedija
+Elementarne funkcije, grad.hr

@@ -1,0 +1,50 @@
+revision: 23641549
+title: Nummerplan
+url: https://no.wikipedia.org/wiki/Nummerplan
+
+
+---
+
+En nummerplan er en tilordning av serier av numre til et formål. Innen telebransjen definerer nummerplaner hva som skal være tillatte format for telefonnummer og andre typer tele-nummer.  Nummerplanen deler så de tillatte nummerseriene inn i grupper og reserverer disse gruppene av numre for ulike teleoperatører og ulike bruksformål.
+
+
+== Norge ==
+Nummerplanene for det norske telenettet er utarbeidet i henhold til internasjonale ITU-standarder. De er også underlagt en forskrift fra Samferdselsdepartementet. Detaljene i nummerplanene fastsettes av Nasjonal kommunikasjonsmyndighet.For en oversikt over Norges viktigste nummerplan, Nummerplan for telefoni, ISDN og mobiltelefoni, se Nummerplan (E.164).
+
+
+== Historisk bakgrunn ==
+I telefoniens barndom trengte man ikke avanserte systemer for å tildele telefonummer. De manuelle telefonsentralene var små, slik at telefonnumrene gjerne var 2- eller 3-sifrede. Det fantes altså veldig mange med samme telefonnummer (for eksempel ”27”) i Norge. Hvis man ville snakke med nr 27 i en annen by, oppga man byens navn og telefonnummeret. Operatøren på sentralen (”telefondamen”) visste da hvordan hun skulle koble opp samtalen frem til denne byen.
+Da telenettet ble automatisert, hadde det veldig mye lavere intelligens enn telefondamene. Man måtte derfor innføre et system som gjorde at telenettet meget enkelt kunne koble frem (dirigere) en telefonsamtale til riktig abonnent i riktig by.
+Løsningen ble å innføre en nasjonal nummerplan der man tildelte folk telefonnumre etter hvor de bodde i landet.  Man la da inn dirigeringsinformasjonen forrest i alle telefonnumre. En periode var dette en tresifret kode (kalt retningsnummer) som man kun tastet foran numre utenfor eget nærområde. I dag (siden 1993) tastes i Norge samme telefonnummer uansett hvor man ringer fra, men dirigeringsinformasjonen ligger fremdeles i prinsippet forrest i nummeret.  Numre som begynner med 4 eller 9 er mobilnumre, de som begynner med 22 er fasttelefoner i Oslo-området osv.
+
+
+== Krav til en nummerplan ==
+En god nummerplan må tilfredsstille flere krav:
+- Hovedkravet er å legge til rette for at telenettet kan dirigere og taksere all teletrafikk på en korrekt, enkel, rask og effektiv måte.
+- Det teoretiske antallet mulige nummer må utnyttes på en best mulig måte. Det blir en stor samfunnsmessig kostnad hvis man slipper opp for nummer og må legge om hele nummerplanen (slik Norge gjorde sist for telefoni i 1993).
+- Telebrukerne skal enkelt kunne skjelne mellom ulike typer nummer og ringepriser, de skal for eksempel ut fra telefonnummerets form se om de ringer et nødnummer, et mobiltelefonnummer,  et gratisnummer eller et dyrt teletorgnummer.
+
+
+== Nyere endringer i norsk nummerplan for telefoni ==
+For å utnytte nummerplanen for telefoni best mulig, gjør Post- og teletilsynet stadig justeringer i takt med samfunnsutviklingen. De viktigste endringene i senere år har vært å tildele mobiltelefoni 4-serien i tillegg til 9-serien (år 2000) samt å nekte mobiloperatørene å dele ut egne mobilsvarnummer for hver abonnent (år 2006).En annen større prinsipiell endring var omdisponeringen av den 8-sifrede serien 59 xx xx xx (år 2006) og innføringen av den 12-sifrede serien 58 x (år 2010), begge for maskinelle samtaler (M2M). Dette gjelder for eksempel automatisk strømavlesing, der kontrollører tidligere dro ut og kontrollerte strømmålere.Serien 85 0x xx xx ble i 1998 introdusert for softphone-klienter og gitt til Telenor Nextel. Da kunne vanlige telefoner ringe opp et klientprogram på datamaskiner, f.eks. Skype. Det var verdens første nummerplan som reserverte nummerserier for et slikt formål.Post- og teletilsynet  har lagt ut en oversikt over nyere nummerplanendringer på sin hjemmeside.
+
+
+== Telekonkurransen utfordrer nummerplanen ==
+Det fins i Norge i dag flere konkurrerende teleoperatører. For at konkurransen mellom disse skal fungere, må det være enkelt å bytte teleoperatør. Ikke minst må man kunne beholde sitt gamle telefonnummer selv om man bytter operatør.  Norske myndigheter har derfor bestemt at alle teleoperatører må tilby dette, på fagspråket kalt nummerportabilitet eller utportering av telefonnummer.Man kan altså for eksempel beholde et mobilnummer i Telenors nummerserie selv om man blir Telia-abonnent. Telenettet har fått avanserte funksjoner som håndterer dette, slik at samtalen kommer frem til riktig operatør.
+Men en konsekvens av dette er at man ikke lenger kan se sikkert ut fra et telefonnummer hvilken operatør det tilhører – det er blitt «hull» i nummerplanens nummerserier.
+
+
+== IP-telefoni utfordrer nummerplanen ==
+I dag er det ikke lenger mulig å si med sikkerhet hvor et telefonnummer har geografisk tilknytning, fordi utstyr brukt til bredbåndstelefoni enkelt kan flyttes fra sted til sted. Dette har skapt en del problemer for blant annet politi, brannvesen og andre nødtjenester. De vet ikke lenger med sikkerhet hvor samtalen kommer fra ved å se på nummeret. Ved sammenkobling av telefonkatalogen og GAB-registeret som registrerer alle eiendommer og eiere, får AMK-sentralene opp eiendommens plassering når noen ringer 113.
+
+
+== Andre problemstillinger ==
+I EU er det kommet et direktiv som sier at brukere av et telefonnummer må ha bosted i landet som nummeret tilhører. Norge har som et av de første land innført dette direktivet. Dette gjorde blant annet at Skype måtte trekke sin «SkypeIn»-tjeneste som tilordnet et norsk telefonnummer til en hvilken som helst bruker av Skype.De tradisjonelle teleselskapene har også bekymringer for hvordan slike nummerplaner benyttes, særlig med hensyn til terminering av samtaler og samtrafikkavtaler. Spesielt utviklingen innen mobiltelefoni, med støtte for wifi (Wireless LAN) eller Bluetooth, i tillegg til vanlig GSM- eller CDMA-nett gjør at tradisjonelle inntektsmodeller er i ferd med å endres. Blant annet er dette synlig med introduksjon av Skype på plattformer for mobiltelefoni. For nummerplaner vil dette si at verdien av disse er i ferd med å endre seg, siden de gis under konsesjonsvilkår og en del kostnader er knyttet til nummerplanen. De nyere telefonitjenestene over internett er fortsatt mye friere enn på de tradisjonelle telenettene.
+I USA er det mye diskusjon om innføring av «tollmekanismer» for ulike typer datakommunikasjon som IP-telefoni, men også fra enkeltleverandører som for eksempel Google. Teleselskapene er oftest også leverandører av bredbånd til sine kunder, og kan oppleve datatrafikk som er i direkte konkurranse med tjenester på sine egne datanettverk og telenett.
+
+
+== Se også ==
+Liste over landsnumre for telefon
+
+
+== Referanser ==

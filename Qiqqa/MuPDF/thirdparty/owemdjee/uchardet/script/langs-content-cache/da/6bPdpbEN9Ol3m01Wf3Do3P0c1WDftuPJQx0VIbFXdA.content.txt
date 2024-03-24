@@ -1,0 +1,47 @@
+revision: 10593021
+title: FELS
+url: https://da.wikipedia.org/wiki/FELS
+
+
+---
+
+FELS (Forsvarets ELektroniske Skole) er indgang til Forsvarets centralt formidlet fjernundervisning (e-læring).
+FELS er en internetbaseret undervisningsplatform som indeholder forskellige elektronisk formidlet uddannelser. FELS består af flere elementer, bl.a. en konference- og mødeplatform (hvor der kan gennemføres synkrone og asynkrone uddannelsesforløb), et uddannelsessystem (et såkaldt LCMS) og forskellige online programmer.
+
+
+== Historie ==
+I starten af 2001 udarbejdede et par medarbejder ved UUA under Forsvarets Center for Lederskab en beskrivelse af et koncept for en samlende internetbaseret platform som skulle understøtte anvendelsen af fjernundervisning for alle ansatte indenfor Forsvarsministeriets område. 
+I maj 2001 blev ideen godkendt af den daværende chef OL L.G. Schunck og arbejdet med at sætte konceptet i søen gik i gang. At man valgte at lave noget selv og ikke købe licenser til en af de på det tidspunkt få løsninger der kunne det samme, skyldtes at disse løsninger var ret dyre, og ikke fuldt ud tilgodeså de ønsker og behov som man ønskede. 
+Først skulle der besluttes et navn og en forkortelse som kunne danne grundlag for en hjemmesideadresse. Navnet blev Forsvarets Elektroniske Skole, forkortet FELS. 
+15. juni blev domænet FELS.DK registreret og har siden dannet rammen for konceptets hjemmeside www.fels.dk. 
+
+
+== Individuelle uddannelser ==
+FELS bygger oprindelig på en elektronificering af knap 50 års erfaring med fjernundervisning i Forsvaret. FELS første elektroniske tiltag, der skete midt i 1990’erne, var at udvikle elektroniske udgaver af de forskellige Programmeret undervisningsprogrammer, der med stor succes blev brugt i en papirudgave, og som blev udviklet fra midten af 1970’erne og frem.
+Samtidig blev der, set med vore dages øjne, udviklet enkle, men effektive ”lær selv-programmer”, som kunne gennemføres på en almindelig IBM-kompatibel PC. I starten blev programmerne distribueret på diskette. Sidenhen på CD-rom. 
+I starten var alt centraliseret, både planlægning, produktion og distribution. Siden blev det, i takt med udvikling af internettet, mere og mere populært at benytte disse muligheder. I 2008 går tendensen mere mod udvikling af enkle netformidlede programmer med kort levetid og til tider lille en målgruppe.
+
+
+== Kollaborative uddannelser ==
+FELS første kollaborative elektroniske tiltag, som blev udviklet sidst i 1990’erne, og bestod i oprettelse af et videns- og debatfora udviklet i Lotus Notes. Her havde eleverne mulighed for at gennemføre asynkrone debatter og dele dokumenter. Lotus Notes blev i 2002 udskiftet med en mere gennemdesignet platform, som hed SiteScape. SiteScape indeholdt flere faciliteter end Lotus Notes, og i de seneste udgaver har der været mulighed for at gennemføre egentlige netmøder. 
+SiteScape blev i 2008 overtaget af Novell. Brugergrænsefladen fik et kraftigt facelift og navnet på en open source udgave af programmet blev ICEcore (ICE = Integrated Collaboration Enviroment). Kort tid efter kom betalingsversionen Teaming & Conferencing. Denne version skiftede senere navn til Novell Vibe, men open source versionen i dag hedder Kablink. Novell er sidenhen blevet opkøbt et par gange og produktet Vibe er nu ejet og vedligeholdt af Micro Focus. Forsvaret har valgt at beholde navnet ICEcore til deres platform. 
+
+
+== Fremtidens FELS ==
+FELS er i sin udvikling på vej fra en ren virtuel centraliseret skole til at blive en stærkt, men decentral styret og udviklet uddannelsesfacilitet, der inddrages og benyttes efter behov og ønsker.
+
+
+== Indhold af FELS ==
+Uddannelsestilbuddene er designet ud fra forskellige læringsbehov og indeholder forskellige grader af nærvær og interaktionsmuligheder mellem underviser og elev og eleverne imellem. Uddannelserne er overordnet opdelt i fem kategorier:
+
+Variationer af en computerkonference (Kollaborative kurser)
+Dataformidlet undervisning (DFU)
+Programmeret undervisning (PU)
+Korrespondanceundervisning via brev eller e-mail (Brevskole)
+Simulation og spilEt eksempel på e-læring er DeMarsgrundkursus
+
+
+== Drift af FELS ==
+FELS udvikles og drives af Sektionen for Digital Læring ved Forsvarsakademiet og anvendes af alle skoler og myndigheder i Forsvaret, herunder også Hjemmeværnet. Beredskabskorpset. 
+Politiskolen fik for nogle år siden med støtte fra forsvaret etableret deres version af Micro Vibe til brug på Politiskolens uddannelser. Deres platform kaldes Studieweb.  
+Du finder Forsvarets Elektroniske Skole på adressen [1] Arkiveret 10. december 2008 hos  Wayback Machine

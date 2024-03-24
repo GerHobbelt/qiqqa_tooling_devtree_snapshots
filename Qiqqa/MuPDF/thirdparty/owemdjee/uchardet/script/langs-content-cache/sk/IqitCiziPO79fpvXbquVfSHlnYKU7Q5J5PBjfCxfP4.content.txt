@@ -1,0 +1,22 @@
+revision: 6121987
+title: "Motorgener\xE1tor"
+url: https://sk.wikipedia.org/wiki/Motorgener%C3%A1tor
+
+
+---
+
+Motorgenerátor je agregát zložený z elektromotora a generátora (buď dynama, alebo alternátora) na spoločnom hriadeli, ktoré slúžia na transformáciu elektrickej energie. Je možné ho použiť na zmenu napätia, kmitočtu, alebo na galvanické oddelenie obvodov. Tiež sa používa na konverziu jednosmerného prúdu na striedavý alebo naopak (pozri usmerňovač).
+U striedavých generátorov býva na jednu os s hlavným generátorom pridávané ešte menšie dynamo, ktoré má za úlohu vyrábať pre väčší generátor budiaci prúd. Toto riešenie sa používalo v čase, keď neboli k dispozícii použiteľné polovodičové usmerňovače.
+V porovnaní s transformátorom má motorgenerátor nižšiu účinnosť, menšiu spoľahlivosť a je hlučnejší. Jeho výhodou je však možnosť pracovať aj s jednosmerným napätím a schopnosť meniť kmitočet. Dnes je však aj v týchto prípadoch nahradzovaný elektronickými obvodmi s modernými polovodičovými súčiastkami.
+Používa sa napr. v starších dopravných prostriedkoch, kde slúži na transformáciu jednosmerného trakčného napätia na napätie pre napájanie palubnej siete (osvetlenie, ovládanie, riadenie a pod.). Na jednom rotora mohli byť aj lopatky ventilátora, čo má výhodu, že nie je potrebné zavádzať ďalšie chladiče.
+Príkladom tohto využitia môžu byť lokomotívy série VL (ВЛ) z Ruska. Lokomotíva VL10 (ВЛ10) využíva motorgenerátor na nabíjanie batérie, napájanie budičov rekuperačné brzdy a chladenie trakčných motorov. U strojov VL80 (ВЛ80) slúži motorgenerátor na pohon olejového čerpadla, ktoré chladí trakčný transformátor.
+Rotačné meniče sa tiež používali vo vojenských rádiostaniciach pre výrobu anódového vysokého napätia pre elektrónky pri napájaní staníc akumulátorovými batériami.
+
+
+== Literatúra ==
+Voženílek, L., Lstibůrek, F .: Základy elektrotechniky II. SNTL - vydavateľstvo technickej literatúry, Praha, 1989,
+Р. Т. Майорова, Н. И. Первова, Электровозы ВЛ10 и ВЛ10у (Lokomotívy VL10 a VL10u), nakladateľstvo ТРАНСПОРТ (transport), Moskva, 1981,
+
+
+== Zdroj ==
+Tento článok je čiastočný alebo úplný preklad článku Motorgenerátor na českej Wikipédii.

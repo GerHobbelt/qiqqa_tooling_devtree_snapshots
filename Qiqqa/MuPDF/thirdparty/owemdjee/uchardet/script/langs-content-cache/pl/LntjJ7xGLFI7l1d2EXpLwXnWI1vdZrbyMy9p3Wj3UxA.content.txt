@@ -1,0 +1,957 @@
+revision: 70681620
+title: Twierdzenie Banacha o kontrakcji
+url: https://pl.wikipedia.org/wiki/Twierdzenie_Banacha_o_kontrakcji
+
+
+---
+
+Twierdzenie Banacha o kontrakcji (lub o punkcie stałym, nazywane też niekiedy Banacha zasadą kontrakcji) głosi, że dowolna kontrakcja przestrzeni metrycznej zupełnej w siebie ma dokładnie jeden punkt stały; co więcej, jest on granicą ciągu iteracji danej kontrakcji, zaczynającego się w dowolnym punkcie przestrzeni.
+
+
+== Sformułowanie ==
+Jeśli 
+  
+    
+      
+        (
+        X
+        ,
+        ρ
+        )
+      
+    
+     
+   jest przestrzenią metryczną zupełną, zaś 
+  
+    
+      
+        f
+        :
+        X
+        →
+        X
+      
+    
+     
+   jest kontrakcją, to:
+
+odwzorowanie 
+  
+    
+      
+        f
+      
+    
+     
+   ma dokładnie jeden punkt stały 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+   oraz
+dla dowolnego 
+  
+    
+      
+        x
+        ∈
+        X
+      
+    
+     
+   ciąg 
+  
+    
+      
+        (
+        x
+        ,
+        f
+        (
+        x
+        )
+        ,
+        f
+        (
+        f
+        (
+        x
+        )
+        )
+        ,
+        …
+        )
+      
+    
+     
+   jest zbieżny do 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+        .
+      
+    
+     
+  
+
+
+== Szkic dowodu ==
+Jednoznaczność punktu stałego jest dość oczywista: niech bowiem 
+  
+    
+      
+        α
+        ∈
+        (
+        0
+        ,
+        1
+        )
+      
+    
+     
+   będzie stałą Lipschitza kontrakcji 
+  
+    
+      
+        f
+        ,
+      
+    
+     
+   a 
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        ,
+      
+    
+     
+   
+  
+    
+      
+        
+          x
+          
+            2
+          
+        
+      
+    
+     
+   jej punktami stałymi. Mamy wówczas
+
+  
+    
+      
+        ρ
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        )
+        =
+        ρ
+        (
+        f
+        (
+        
+          x
+          
+            1
+          
+        
+        )
+        ,
+        f
+        (
+        
+          x
+          
+            2
+          
+        
+        )
+        )
+        ⩽
+        α
+        ρ
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        )
+        ,
+      
+    
+     
+  co przy 
+  
+    
+      
+        α
+      
+    
+     
+   mniejszym od jedności zachodzi tylko gdy 
+  
+    
+      
+        ρ
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        )
+        =
+        0
+        ,
+      
+    
+     
+   co z definicji metryki oznacza, że 
+  
+    
+      
+        
+          x
+          
+            1
+          
+        
+        =
+        
+          x
+          
+            2
+          
+        
+        ,
+      
+    
+     
+   a więc istnieje co najwyżej jeden punkt stały.
+Aby wykazać pozostałą część tezy, wybierzmy dowolny punkt 
+  
+    
+      
+        x
+        ∈
+        X
+      
+    
+     
+   i oszacujmy odległość 
+  
+    
+      
+        ρ
+        (
+        
+          f
+          
+            n
+          
+        
+        (
+        x
+        )
+        ,
+        
+          f
+          
+            m
+          
+        
+        (
+        x
+        )
+        )
+      
+    
+     
+   między wartością 
+  
+    
+      
+        n
+      
+    
+     
+  -tej i 
+  
+    
+      
+        m
+      
+    
+     
+  -tej iteracji kontrakcji 
+  
+    
+      
+        f
+      
+    
+     
+   dla punktu 
+  
+    
+      
+        x
+      
+    
+     
+   (korzystając przy tym 
+  
+    
+      
+        (
+        
+          |
+        
+        m
+        −
+        n
+        
+          |
+        
+        −
+        1
+        )
+      
+    
+     
+  -krotnie z nierówności trójkąta). Można wykazać, iż ciąg 
+  
+    
+      
+        (
+        x
+        ,
+        f
+        (
+        x
+        )
+        ,
+        f
+        (
+        f
+        (
+        x
+        )
+        )
+        ,
+        …
+        )
+      
+    
+     
+   jest ciągiem Cauchy’ego, a zatem ma granicę (bo 
+  
+    
+      
+        X
+      
+    
+     
+   jest zupełna). Następnie łatwo już zauważyć, wykorzystując ciągłość funkcji 
+  
+    
+      
+        f
+        ,
+      
+    
+     
+   że jego granica jest punktem stałym przekształcenia 
+  
+    
+      
+        f
+        .
+      
+    
+     
+  
+
+
+== Zastosowania ==
+Twierdzenie Banacha, mimo swej prostoty, ma liczne i ważne zastosowania. Można np. przy jego pomocy wykazać twierdzenie o funkcji odwrotnej, istnienie atraktora układu przekształceń zwężających, czy zbieżności niektórych algorytmów numerycznych (zob. np. metoda Gaussa-Seidla); jest ono też wykorzystywane m.in. w teorii równań całkowych i różniczkowych. Żartobliwym jego zastosowaniem (i ilustracją) jest obserwacja, że gdy położymy mapę Polski na ziemi gdzieś w Polsce, to dokładnie jeden punkt na mapie pokrywa się z odpowiadającym mu punktem na ziemi.
+
+
+== Uogólnienia ==
+Stosunkowo łatwo wykazać, że w twierdzeniu Banacha nie można opuścić ani założenia zupełności, ani osłabić warunku kontrakcji, zastępując go warunkiem
+
+  
+    
+      
+        
+          ρ
+          
+            Y
+          
+        
+        (
+        f
+        (
+        
+          x
+          
+            1
+          
+        
+        )
+        ,
+        f
+        (
+        
+          x
+          
+            2
+          
+        
+        )
+        )
+        <
+        
+          ρ
+          
+            X
+          
+        
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        )
+      
+    
+     
+  (ani tym bardziej założeniem, że 
+  
+    
+      
+        f
+      
+    
+     
+   jest nierozszerzające). Istotnie, odwzorowanie 
+  
+    
+      
+        x
+        ↦
+        
+          
+            1
+            2
+          
+        
+        x
+      
+    
+     
+   jest kontrakcją (niezupełnej) przestrzeni 
+  
+    
+      
+        (
+        0
+        ,
+        1
+        )
+      
+    
+     
+   w siebie, pozbawioną punktów stałych; nietrudno też zauważyć, że funkcja 
+  
+    
+      
+        x
+        ↦
+        x
+        +
+        
+          
+            1
+            x
+          
+        
+        :
+        [
+        1
+        ,
+        +
+        ∞
+        )
+        →
+        [
+        1
+        ,
+        +
+        ∞
+        )
+      
+    
+     
+   zmniejsza odległości punktów (choć nie jest kontrakcją) i nie ma punktu stałego. (Okazuje się jednak, że jeśli założymy, że 
+  
+    
+      
+        X
+      
+    
+     
+   jest zwarta, powyższa nierówność zapewnia istnienie i jednoznaczność punktu stałego.)
+Mimo powyższych kontrprzykładów, istnieje szereg twierdzeń, które uogólniają twierdzenie Banacha. Często zastępuje się w nich warunek kontraktywności warunkiem typu
+
+  
+    
+      
+        
+          ρ
+          
+            Y
+          
+        
+        (
+        f
+        (
+        
+          x
+          
+            1
+          
+        
+        )
+        ,
+        f
+        (
+        
+          x
+          
+            2
+          
+        
+        )
+        )
+        ⩽
+        φ
+        (
+        
+          ρ
+          
+            X
+          
+        
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        
+          x
+          
+            2
+          
+        
+        )
+        )
+        ,
+      
+    
+     
+  gdzie 
+  
+    
+      
+        φ
+      
+    
+     
+   jest funkcją odwzorowującą zbiór 
+  
+    
+      
+        [
+        0
+        ,
+        +
+        ∞
+        )
+      
+    
+     
+   w siebie, mającą pewne szczególne własności, takie jak ciągłość, monotoniczność i inne.
+
+
+== Twierdzenia odwrotne ==
+
+
+=== Twierdzenie Bessagi ===
+Jeśli 
+  
+    
+      
+        f
+        :
+        X
+        →
+        X
+      
+    
+     
+   jest taką funkcją określoną na niepustym zbiorze 
+  
+    
+      
+        X
+        ,
+      
+    
+     
+   że każda jej iteracja ma dokładnie jeden punkt stały, to 
+  
+    
+      
+        X
+      
+    
+     
+   można zmetryzować w sposób zupełny tak, by 
+  
+    
+      
+        f
+      
+    
+     
+   było kontrakcją względem tej metryki (i to o dowolnej, z góry zadanej stałej kontrakcji z przedziału 
+  
+    
+      
+        (
+        0
+        ,
+        1
+        )
+      
+    
+     
+  ).
+
+
+=== Twierdzenie Meyersa ===
+Niech 
+  
+    
+      
+        (
+        X
+        ,
+        ρ
+        )
+      
+    
+     
+   będzie zupełną przestrzenią metryczną, a 
+  
+    
+      
+        f
+        :
+        X
+        →
+        X
+      
+    
+     
+   odwzorowaniem spełniającym następujące warunki:
+
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+   dla pewnego 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+        ∈
+        X
+        ,
+      
+    
+     
+  
+
+  
+    
+      
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        
+          f
+          
+            n
+          
+        
+        (
+        x
+        )
+        =
+        
+          x
+          
+            0
+          
+        
+      
+    
+     
+   dla każdego 
+  
+    
+      
+        x
+        ∈
+        X
+        ,
+      
+    
+     
+  
+istnieje takie otoczenie 
+  
+    
+      
+        U
+      
+    
+     
+   punktu 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+        ,
+      
+    
+     
+   że dla dowolnego otoczenia 
+  
+    
+      
+        V
+      
+    
+     
+   tego punktu istnieje taki indeks 
+  
+    
+      
+        
+          n
+          
+            V
+          
+        
+        ,
+      
+    
+     
+   że 
+  
+    
+      
+        
+          F
+          
+            n
+          
+        
+        (
+        V
+        )
+        ⊂
+        U
+      
+    
+     
+   dla 
+  
+    
+      
+        n
+        ⩾
+        
+          n
+          
+            V
+          
+        
+        .
+      
+    
+     
+  Wówczas dla dowolnej stałej 
+  
+    
+      
+        α
+        ∈
+        (
+        0
+        ,
+        1
+        )
+      
+    
+     
+   istnieje równoważna z 
+  
+    
+      
+        ρ
+      
+    
+     
+   metryka zupełna na 
+  
+    
+      
+        X
+        ,
+      
+    
+     
+   przy której 
+  
+    
+      
+        f
+      
+    
+     
+   jest kontrakcją ze stałą 
+  
+    
+      
+        α
+        .
+      
+    
+     
+  
+
+
+== Zobacz też ==
+Teoria punktu stałego
+
+
+== Bibliografia ==
+Andrzej Granas, James Dugundji, Fixed Point Theory (2003) Springer-Verlag, New York, ISBN 0-387-00173-5.
+William A. Kirk, Brailey Sims, Handbook of Metric Fixed Point Theory (2001), Kluwer Academic, London ISBN 0-7923-7073-2.
+
+
+== Linki zewnętrzne ==
+ Contracting-mapping principle (ang.), Encyclopedia of Mathematics, encyclopediaofmath.org, [dostęp 2023-06-18].

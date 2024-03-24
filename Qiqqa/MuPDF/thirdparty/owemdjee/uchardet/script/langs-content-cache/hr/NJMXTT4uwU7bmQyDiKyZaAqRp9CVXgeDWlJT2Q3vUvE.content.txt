@@ -1,0 +1,16 @@
+revision: 6283613
+title: Glass
+url: https://hr.wikipedia.org/wiki/%22Glass_cockpit%22_pilotska_kabina
+
+
+---
+
+"Glass cockpit" je pilotska kabina zrakoplova s ugrađenim višenamjenskim elektronskim zaslonima. Dok se u tradicionalnoj pilotskoj kabini pilot oslanja na brojne mehaničke pokazivače za prikaz informacija, "glass cockpit" koristi nekoliko računala koja se mogu podesiti za prikaz informacija leta prema potrebi. To pojednostavljuje rad i navigaciju zrakoplova i pilotu omogućava fokusiranje samo na trenutno najvažnije informacije. Pojava ovakvih pilotskih kabina u potpunosti je kod aviokompanija eliminirala potrebu za trećim članom posade, inženjerom leta.  U posljednjih nekoliko godina ova tehnologija je postala široko dostupna i u malim zrakoplovima.
+
+
+== Opis ==
+Glavni sastavni dio "glass cockpita" je EFIS (eng.: Electronic Flight Instrument System) sustav koji prikazuje sve informacije u vezi zrakoplova, njegovom položaju i kretanju tijekom leta. Sastoji se od lijevog i desnog glavnog zaslona leta (eng.: Primary flight display (PFD)) i navigacijskog zaslona (eng.: Navigation display (ND)) na kojima se prvenstveno obuhvaća vodoravni i okomiti položaj te vrijeme i brzina. Drugi dio "glass cockpita", zasloni iznad i ispod glavnih zaslona, pokazuju očitanja sustava zrakoplova i trenutne osobine rada motora. Svi ovi podatci prikazani su grafički i prikazuju stanja koje pilot treba znati iako se po potrebi može podesiti prikaz i detaljnijih podataka.
+Prve ovakve pilotske kabine pojavile su se u avionima McDonnell Douglas MD-80/MD-90, klasičnim Boeinzima 737, 757 i 767-200/-300, Airbus A300-600 i A310, koristeći EFIS sustav samo za prikaz položaja zrakoplova i za navigacijske informacije dok su brzina, visina i vertikalna brzina prikazivani na klasičnim instrumentima. Kasniji "glass cockpit" koje se nalaze u Boeinzima 737NG, 747-400, 767-400, 777, A320 i kasnijim Airbusima, zamijenjene potpuno mehaničke pokazivače i svjetala upozorenja kakva su se nalazila na starijim avionima.
+
+
+== Izvori ==

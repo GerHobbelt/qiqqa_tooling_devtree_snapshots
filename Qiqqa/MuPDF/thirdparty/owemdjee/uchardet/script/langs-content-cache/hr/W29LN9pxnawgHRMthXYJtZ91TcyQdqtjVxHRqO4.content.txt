@@ -1,0 +1,259 @@
+revision: 6604088
+title: Charles-Augustin de Coulomb
+url: https://hr.wikipedia.org/wiki/Charles-Augustin_de_Coulomb
+
+
+---
+
+Charles-Augustin de Coulomb (Angoulême, 14. lipnja 1736. – Pariz, 23. kolovoza 1806.), francuski fizičar. Do 1772. vojni inženjer, poslije fizičar, proučavao trenje u strojevima poput vjetrenjača, elastičnost metalnih i svilenih vlakana, viskoznost, izumio torzijsku vagu, otkrio zakon uvijanja ili torzije. Torzijskom vagom mjerio je jakost sile između električki nabijenih tijela i istražio njezinu ovisnost o njihovu međusobnom razmaku i iznosima električnih naboja na tijelima, što se po njemu naziva Coulombov zakon. Po njemu se elektrostatičko polje naziva Coulombovo polje a elektrostatičke sile Coulombove sile. Mjerna jedinica električnoga naboja po njemu je nazvana kulon (C). Njegovo ime nalazi se na listi 72 znanstvenika ugraviranih na Eifellovom tornju.
+
+
+== Životopis ==
+Coulomb je rođen u francuskom gradu Angoulême. Izabrao je posao vojnog inženjera, i taj je posao radio tri godine, do ozljede koja mu je uvelike ugrozila zdravlje, na Martiniku. Na povratku zaposlio se u La Rochelleu. Tu je otkrio inverznu vezu između sile naboja i kvadratu njihove udaljenosti, taj je zakon kasnije po njemu nazvan Coulombov zakon.
+Godine 1781. Coulomb je permanentno stacioniran u Parizu. Prije početka revolucije 1789. Coulomb daje otkaz na mjestu  intendant des eaux et fontaines, i otišao u mirovinu na svoje imanje u Bloisu. Ponovno je pozvan u Pariz na konferenciju da se odrede nove mjerne jedinice, a sve to po naredbi Revolucionarne vlade. Iz Državnog instituta bio je jedan od prvih članova, a 1802. postavili su ga za inspektora javnih instrukcija. No njegovo zdravlje je već tada bilo jako krhko, te je umro četiri godine poslije u Parizu. 
+Coulombovo ime zauvijek je urezano u povijesti mehanike i elektriciteta magnetizma. On je 1779. izdao važnu publikaciju o zakonima trenja (fr. Théorie des machines simples, en ayant égard au frottement de leurs parties et à la roideur des cordages) koji je uslijedio nakon dvadeset godina po memoaru o viskoznosti. 
+SI jedinica za električni naboj kulon (C), i Coulombov zakon nazvani su u njegovu čast. 
+
+
+== Doprinosi ==
+
+
+=== Coulombov zakon ===
+
+Coulombov zakon je jedan od osnovnih zakona elektrostatike koji je 1785. utvrdio Charles-Augustin de Coulomb: "električna sila F između dvaju električki nabijenih točkastih tijela (odbojna ili privlačna, ovisno o tome jesu li tijela jednakih ili suprotnih električnih naboja) razmjerna je količinama električnoga naboja q a obrnuto razmjerna kvadratu udaljenosti r između tijela" (napomena: vrijedi samo u vakuumu):
+
+  
+    
+      
+        F
+        =
+        
+          
+            1
+            
+              4
+              ⋅
+              π
+              ⋅
+              
+                ε
+                
+                  0
+                
+              
+            
+          
+        
+        ⋅
+        
+          
+            
+              
+                q
+                
+                  1
+                
+              
+              ⋅
+              
+                q
+                
+                  2
+                
+              
+            
+            
+              r
+              
+                2
+              
+            
+          
+        
+      
+    
+     
+  gdje je: ε0 - dielektrična permitivnost vakuuma. Sila je najjača u vakuumu, a slabija u svim drugim sredstvima:
+
+  
+    
+      
+        F
+        =
+        
+          
+            1
+            
+              4
+              ⋅
+              π
+              ⋅
+              ε
+            
+          
+        
+        ⋅
+        
+          
+            
+              
+                q
+                
+                  1
+                
+              
+              ⋅
+              
+                q
+                
+                  2
+                
+              
+            
+            
+              r
+              
+                2
+              
+            
+          
+        
+        =
+        
+          
+            1
+            
+              ε
+              
+                r
+              
+            
+          
+        
+        ⋅
+        
+          
+            1
+            
+              4
+              ⋅
+              π
+              ⋅
+              
+                ε
+                
+                  0
+                
+              
+            
+          
+        
+        ⋅
+        
+          
+            
+              
+                q
+                
+                  1
+                
+              
+              ⋅
+              
+                q
+                
+                  2
+                
+              
+            
+            
+              r
+              
+                2
+              
+            
+          
+        
+      
+    
+     
+  gdje je: εr - relativna dielektrična permitivnost nekog sredstva ili tvari, ε - dielektrična permitivnost (ili samo permitivnosti) tvari.
+
+
+=== Torzijska vaga ===
+
+Torzijska vaga je vaga kojom se iznos neke sile određuje putem zakretnoga momenta torzije (uvijanje) napete niti (konstruirao Charles-Augustin de Coulomb, 1777.). Sastoji se od vertikalne, na jednom kraju učvršćene metalne niti, na drugom kraju koje je obješena transverzalna šipka kao kod torzijskoga njihala. Za male zakrete šipke sila je razmjerna (proporcionalna) kutu uvijanja ili torzije. Tom je vagom Coulomb 1785. pokusima utvrdio zakon privlačenja električnih naboja (Coulombov zakon), a nešto kasnije (1798.) je Henry Cavendish sličnom vagom vlastite konstrukcije odredio gravitacijsku konstantu.
+
+
+=== Coulombov zakon trenja ===
+
+Coulombov zakon trenja glasi: "Trenje gibanja, trenje klizanja ili kinematičko trenje je neovisno o brzini gibanja". Iznos trenja klizanja između dva tijela proporcionalan je sili kojom se tijela međusobno stišću na plohi dodira. U najjednostavnijem slučaju ravne dodirne plohe, iznos trenja klizanja 
+  
+    
+      
+        
+          T
+        
+      
+    
+     
+   računa se tako da se ukupni iznos sile 
+  
+    
+      
+        
+          N
+        
+      
+    
+     
+   kojom jedno tijelo pritišće drugo pomnoži brojem koji se zove koeficijent trenja klizanja 
+  
+    
+      
+        
+          μ
+        
+      
+    
+     
+  :
+
+  
+    
+      
+        T
+        =
+        μ
+        N
+        
+        .
+      
+    
+     
+  Koeficijent trenja klizanja ovisi o vrsti i obradi dodirnih ploha; na primjer za automobilsku gumu na suhom asfaltu iznosi oko 0,80 - 0,85 (ako guma nije izlizana), a za istu gumu na mokrom asfaltu oko 0,45 - 0,50, dok je na zaleđenom kolniku samo 0,05 - 0,10. Iznos sile kojom jedno tijelo pritišće drugo uobičajeno se obilježava slovom 
+  
+    
+      
+        
+          N
+        
+      
+    
+     
+  , zato što ta sila djeluje okomito, to jest u smjeru normale, na dodirnu plohu i smjer klizanja.
+
+
+== Djela ==
+Godine 1785. Coulomb je izdao tri spisa o elektricitetu i magnetizmu:
+
+Premier Mémoire sur l’Electricité et le Magnétisme, Histoire de l’Académie Royale des Sciences, 569-577, 1785. U ovoj publikaciji Coulomb opisuje kako konstruirati i koristiti električni balans (torzioni balans), bazirajući se na osobini metalnih žica da imaju reaktivnu torzionu silu koja je proporcionalna torzionom uglu. Coulomb također eksperimentalno određuje zakon koji objašnjava kako dva tijela naelektrizirana istom vrstom elektriciteta utječu jedno na drugo.
+Sécond Mémoire sur l’Electricité et le Magnétisme, Histoire de l’Académie Royale des Sciences, 578-611, 1785. U ovoj publikaciji Coulomb izvodi zakonitosti po kojima se ponašaju i magnetski i električni tokovi, bilo po privlačnosti ili odbojnosti.
+Troisième Mémoire sur l’Electricité et le Magnétisme, Histoire de l’Académie Royale des Sciences, 612-638, 1785. O količini elektriciteta koju izolirano tijelo gubi u određenom vremenskom periodu, bilo u kontaktu s manje vlažnim zrakom, ili u manje-više idio-električnoj podršci.
+
+
+== Izvori ==
+
+
+== Vanjske poveznice ==
+French National Library The Mémoires of Coulomb available in pdf format.

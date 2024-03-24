@@ -1,0 +1,30 @@
+revision: 126490066
+title: Windows Calendar
+url: https://it.wikipedia.org/wiki/Calendario_(Windows)
+
+
+---
+
+Calendario di Windows è un'applicazione di calendario personale creata da Microsoft che è inclusa con Windows Vista e Windows Server 2008. Offre la sincronizzazione dei calendari utilizzando Microsoft Exchange Server, Outlook.com il servizio di calendario iCloud di Apple e Google Calendar. Supporta il popolare formato di file iCalendar e ha la capacità di pubblicare e sottoscrivere calendari web-based utilizzando HTTP e WebDAV. Calendari possono anche essere pubblicate le quote di unità di rete.
+Calendario di Windows ha una vista del calendario, tra cui "Giorno", "Settimana" (5 e 7 giorni) e "Mese", e supporta anche le attività. Il calendario di Windows supporta oltre 100 calendari per ogni utente.
+Calendario di Windows può essere esteso usando le API incluse con il C4F kit per gli sviluppatori. In Windows Server 2008, Windows Calendar non è installato di default, diventa disponibile se il componente "Desktop Experience" è installato.
+Calendario di Windows non è fornito con Windows 7, in quanto integrata in Windows Live Mail.
+
+
+== Storia ==
+Microsoft ha incluso innanzitutto un'app Calendario in Windows 1.0, inclusa fino a Windows 3.1, ed è stata sostituita da Schedule + in Windows per Workgroup e Windows NT 3.1. Schedule + è stato successivamente spostato da Windows alla suite Microsoft Office,, e Windows non includeva un'altra applicazione di Calendar fino al calendario di Windows in Windows Vista. Il calendario è stato creato dalla Beta 2 di Windows Vista.
+
+
+=== Windows Vista ===
+Questa versione supporta la condivisione, la sottoscrizione e la pubblicazione di calendari su server Web e condivisioni di rete abilitate per WebDAV. Ha sempre supportato i file .ics e la funzione di iscrizione consente la sincronizzazione con Google Calendar. La sua interfaccia corrisponde a Windows Vista Mail, ma le due app non sono collegate in questo sistema operativo. Il calendario predefinito può essere rinominato.
+
+
+=== Windows 8 ===
+Una nuova versione di Calendar con un testo pesante è stata aggiunta a Windows 8 come una delle tante app scritte per essere eseguite a schermo intero o scattate come parte della filosofia del linguaggio di progettazione Metro di Microsoft. È una delle tre app su Windows che provengono da Microsoft Outlook, le altre due sono app Mail e People. Strutturalmente, le tre app sono una e sono installate e disinstallate come tali. Ma ognuno ha la sua interfaccia utente. Il calendario in Windows 8 supportava originariamente Outlook.com, Exchange, Google Calendar e calendari di Facebook. A causa delle modifiche apportate all'API, i calendari di Facebook e Google non possono più essere sincronizzati direttamente su Windows 8. Come molte app Microsoft introdotte per Windows 8, molte delle funzionalità sono nascoste negli accessi o in un menu nella parte inferiore dello schermo che viene attivato facendo clic con il pulsante destro del mouse. Calendari diversi possono essere etichettati con colori diversi. Quando un utente con un account Microsoft aggiunge un account di calendario su un computer con Calendario di Windows 8, l'account verrà automaticamente aggiunto a tutti gli altri computer Windows 8 in cui l'utente ha effettuato l'accesso. i file .ics non sono supportati in questa versione.
+
+
+=== Windows 10 ===
+Mail ha configurazioni di server preimpostate per Outlook.com, Exchange, Google Calendar e iCloud Calendar. Gli utenti possono impostarlo per utilizzare il tema di sistema o scegliere un colore accento personalizzato, un'immagine di sfondo e una preferenza chiaro / scuro. Windows 10 Calendar ha il supporto multi-finestra per la visualizzazione e la modifica di eventi. Calendari diversi possono essere etichettati con colori diversi e gli eventi possono essere riorganizzati trascinandoli e rilasciandoli. L'interfaccia predefinita è Vista mese, ma gli utenti possono anche utilizzare le viste Giorno, Settimana e Anno e stampare queste viste. L'app per Windows 10 utilizza anche un pannello delle impostazioni flyout e una mini interfaccia Ribbon nel riquadro di visualizzazione. Il giorno dell'anno e gli eventi del calendario vengono visualizzati sul riquadro live. Come la versione di Vista, i controlli importanti sono facilmente visibili e usano le icone per abbinare il sistema. Gli account possono essere raggruppati e contrassegnati, ma le cartelle non possono essere modificate dall'interno dell'app. il supporto per .ics è stato aggiunto a questa versione in tempo per Windows 10 Anniversary Update.
+
+
+== Note ==

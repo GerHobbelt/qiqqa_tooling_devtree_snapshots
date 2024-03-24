@@ -1,0 +1,36 @@
+revision: 6318308
+title: Rahvusvaheline raamatu standardnumber
+url: https://et.wikipedia.org/wiki/Rahvusvaheline_raamatu_standardnumber
+
+
+---
+
+ISBN (International Standard Book Number) on raamatute identifitseerimiseks kasutatav numbrikombinatsioon. ISBN võeti ISO 2108 standardi järgi kasutusele 1970. aastal. Eestis välja antud raamatutel hakati ISBN-i kasutama alates 1992. aastast.
+Lisaks raamatutele on ISBN ette nähtud ka brošüüridele, jätkväljaannetele, kaardiväljaannetele, dia- ja mikroväljaannetele, õppematerjalide komplektidele, mis koosnevad nii trükitud kui ka audiovisuaalvahenditest, õppeotstarbelistele videotele ja filmidele, CD-ROM-idele ja arvutiprogrammidele.
+ISBN on igale väljaandele omane unikaalne tunnus. Kui kirjastus laseb välja ühe ja sama väljaande erinevast materjalist kaante vahel või erinevas formaadis, siis on kõigil neil variantidel ka oma ISBN. Lisatiraaži korral jäetakse ISBN enamasti samaks, kuid kordustrüki korral saab väljaanne uue ISBN-i. Ühel ja samal väljaandel võib olla ka mitu ISBN-i. Näiteks mitmeköitelistel teostel on oma ISBN igal köitel ning ka kogu köidete komplektil.
+ISBN koosneb neljast osast, mis võivad olla sidekriipsudega eraldatud. Esimene osa määratleb maa või keelepiirkonna, kus raamat on välja antud:
+
+0 ja 1 – ingliskeelsed piirkonnad
+2 – prantsuskeelsed piirkonnad
+3 – saksakeelsed piirkonnad
+4 – Jaapan
+5 – endine NSV Liit
+6 (määratlemata)
+7 – Hiina
+8... ja 9... – muud maad ja piirkonnadEestis väljaantavate raamatute maatunnus on 9949-, 9985- või 5-. ISBN teine osa määratleb kirjastuse. Kolmas osa määratleb antud kirjastuse väljaande. Viimane number on kontrollnumber, mis saadakse arvutuslikult. Viimaseks numbriks võib olla ka X. 
+Alates 1. jaanuarist 2007 võeti senise 10-kohalise ISBN-i asemel kasutusele 13-kohaline ISBN.
+
+
+== Vaata ka ==
+DOI (Digital Object Identifier), digitaalsete objektide tähistamiseks
+Handle System digitaalsete objektide, püsi-identifikaatorite tähistamiseks
+ISAN (International Standard Audiovisual Number), filmide ja muude audiovisuaalsete toodete tähistamiseks
+ISMN (International Standard Music Number), noodiväljaannete tähistamiseks
+ISRC (International Standard Recording Code), helisalvestiste tähistamiseks
+ISSN (International Standard Serial Number), perioodiliste väljaannete (ajalehtede, ajakirjade jmt) tähistamiseks
+ISWC (International Standard Musical Work Code), muusikateoste tähistamiseks
+LCCN (Library of Congress Control Number), USA Kongressi Raamatukogu katalooginumber
+
+
+== Välislingid ==
+Eesti ISBN Agentuur

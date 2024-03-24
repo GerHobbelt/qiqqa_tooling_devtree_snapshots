@@ -1,0 +1,1124 @@
+revision: 21007781
+title: Gradiente
+url: https://fi.wikipedia.org/wiki/Gradientti
+
+
+---
+
+Gradientti on matemaattinen differentiaalioperaattori, joka on määritelty usean muuttujan skalaarifunktioille 
+  
+    
+      
+        f
+        :
+        
+          
+            R
+          
+          
+            n
+          
+        
+        →
+        
+          R
+        
+      
+    
+     
+  . Gradientti ilmaisee funktion suurimman muutosnopeuden (gradienttivektorin pituus) ja tämän suurimman muutoksen suunnan. Funktio kasvaa voimakkaimmin gradientin suuntaan ja vähenee voimakkaimmin negatiivisen gradientin suuntaan.Karteesisessa koordinaatistossa gradientti on vektori, jonka komponentteina ovat funktion osittaisderivaatat. Esimerkiksi kolmen muuttujan funktion gradientti merkitään 
+  
+    
+      
+        g
+        r
+        a
+        d
+        (
+        f
+        )
+      
+    
+     
+   tai symbolin nabla avulla 
+  
+    
+      
+        ∇
+        f
+      
+    
+     
+   ja määritellään
+
+  
+    
+      
+        ∇
+        f
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        =
+        
+          
+            ∂
+            
+              ∂
+              x
+            
+          
+        
+        f
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        
+          
+            
+              i
+              →
+            
+          
+        
+        +
+        
+          
+            ∂
+            
+              ∂
+              y
+            
+          
+        
+        f
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        
+          
+            
+              j
+              →
+            
+          
+        
+        +
+        
+          
+            ∂
+            
+              ∂
+              z
+            
+          
+        
+        f
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        
+          
+            
+              k
+              →
+            
+          
+        
+      
+    
+     
+  ,missä 
+  
+    
+      
+        
+          
+            
+              i
+              →
+            
+          
+        
+        ,
+        
+          
+            
+              j
+              →
+            
+          
+        
+      
+    
+     
+   ja 
+  
+    
+      
+        
+          
+            
+              k
+              →
+            
+          
+        
+      
+    
+     
+   -komponenttien kertoimet ovat funktion osittaisderivaattoja muuttujien 
+  
+    
+      
+        x
+        ,
+        y
+      
+    
+     
+   ja 
+  
+    
+      
+        z
+      
+    
+     
+   suhteen.  Yleisen 
+  
+    
+      
+        n
+      
+    
+     
+   muuttujan funktion gradientti määritellään
+
+  
+    
+      
+        ∇
+        f
+        (
+        
+          x
+        
+        )
+        =
+        
+          
+            
+              [
+              
+                
+                  
+                    
+                      
+                        
+                          ∂
+                          f
+                        
+                        
+                          ∂
+                          
+                            x
+                            
+                              1
+                            
+                          
+                        
+                      
+                    
+                    (
+                    
+                      x
+                    
+                    )
+                    ,
+                  
+                  
+                    
+                      
+                        
+                          ∂
+                          f
+                        
+                        
+                          ∂
+                          
+                            x
+                            
+                              2
+                            
+                          
+                        
+                      
+                    
+                    (
+                    
+                      x
+                    
+                    )
+                    ,
+                  
+                  
+                    ⋯
+                  
+                  
+                    ,
+                    
+                      
+                        
+                          ∂
+                          f
+                        
+                        
+                          ∂
+                          
+                            x
+                            
+                              n
+                            
+                          
+                        
+                      
+                    
+                    (
+                    
+                      x
+                    
+                    )
+                  
+                
+              
+              ]
+            
+          
+          
+            T
+          
+        
+      
+    
+     
+  ,missä 
+  
+    
+      
+        
+          x
+        
+      
+    
+     
+   on funktion muuttujien muodostama vektori
+
+  
+    
+      
+        
+          x
+        
+        =
+        
+          
+            
+              [
+              
+                
+                  
+                    
+                      x
+                      
+                        1
+                      
+                    
+                    ,
+                  
+                  
+                    
+                      x
+                      
+                        2
+                      
+                    
+                    ,
+                  
+                  
+                    ⋯
+                    ,
+                  
+                  
+                    
+                      x
+                      
+                        n
+                      
+                    
+                  
+                
+              
+              ]
+            
+          
+          
+            T
+          
+        
+      
+    
+     
+  .Gradienttia voidaan pitää derivaatan yleistyksenä usean muuttujan funktioille. Gradientti on erikoistapaus Jacobin matriisista, joka on määritelty monen muuttujan vektoriarvoisille funktioille 
+  
+    
+      
+        
+          f
+        
+        :
+        
+          
+            R
+          
+          
+            n
+          
+        
+        →
+        
+          
+            R
+          
+          
+            p
+          
+        
+      
+    
+     
+  .
+
+
+== Määritelmiä ja laskusääntöjä ==
+
+
+=== Differentiaali ===
+Yhden muuttujan tapauksessa funktion differentiaali määriteltiin
+
+  
+    
+      
+        Δ
+        f
+        (
+        x
+        )
+        =
+        
+          f
+          ′
+        
+        (
+        x
+        )
+        Δ
+        x
+        
+      
+    
+     
+  ,ja yleisesti funktion differentiaali määritellään gradientin avulla
+
+  
+    
+      
+        Δ
+        f
+        (
+        
+          x
+        
+        )
+        =
+        ∇
+        f
+        ⋅
+        Δ
+        
+          x
+        
+      
+    
+     
+  ,missä piste kuvaa kahden vektorin pistetuloa.
+
+
+=== Suunnattu derivaatta ===
+Gradientin avulla voidaan määrittää helposti myös suunnattu derivaatta: Funktion suunnattu derivaatta vektorin 
+  
+    
+      
+        
+          
+            
+              e
+              →
+            
+          
+        
+      
+    
+     
+   suuntaan on
+
+  
+    
+      
+        
+          ∂
+          
+            
+              
+                e
+                →
+              
+            
+          
+        
+        f
+        (
+        
+          x
+        
+        )
+        =
+        ∇
+        f
+        (
+        
+          x
+        
+        )
+        ⋅
+        
+          
+            
+              
+                e
+                →
+              
+            
+          
+          
+            0
+          
+        
+      
+    
+     
+  ,missä 
+  
+    
+      
+        
+          
+            
+              
+                e
+                →
+              
+            
+          
+          
+            0
+          
+        
+        
+      
+    
+     
+   on 
+  
+    
+      
+        
+          
+            
+              e
+              →
+            
+          
+        
+        
+      
+    
+     
+  :n suuntainen yksikkövektori (vektori, jonka pituus on yksi). Pistetulo on suurin, kun lasketaan suunnattua derivaattaa gradientin suuntaan ja pienin, kun lasketaan suunnattua derivaattaa negatiivisen gradientin suuntaan.
+
+
+=== Ketjusääntö ===
+Mikäli funktion muuttujat riippuvat esimerkiksi parametrista t, eli 
+
+  
+    
+      
+        
+          x
+        
+        =
+        
+          
+            
+              [
+              
+                
+                  
+                    
+                      x
+                      
+                        1
+                      
+                    
+                    (
+                    t
+                    )
+                    ,
+                  
+                  
+                    
+                      x
+                      
+                        2
+                      
+                    
+                    (
+                    t
+                    )
+                    ,
+                  
+                  
+                    ⋯
+                    ,
+                  
+                  
+                    
+                      x
+                      
+                        n
+                      
+                    
+                    (
+                    t
+                    )
+                  
+                
+              
+              ]
+            
+          
+          
+            T
+          
+        
+      
+    
+     
+  ,saadaan funktion derivaatta parametrin suhteen gradientin avulla lausekkeesta
+
+  
+    
+      
+        
+          
+            
+              d
+              f
+              (
+              
+                x
+              
+              (
+              t
+              )
+              )
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        ∇
+        f
+        (
+        
+          x
+        
+        )
+        ⋅
+        
+          
+            x
+          
+          ′
+        
+        (
+        t
+        )
+      
+    
+     
+  ,missä siis
+
+  
+    
+      
+        
+          
+            x
+          
+          ′
+        
+        (
+        t
+        )
+        =
+        
+          
+            
+              [
+              
+                
+                  
+                    
+                      x
+                      
+                        1
+                      
+                      ′
+                    
+                    (
+                    t
+                    )
+                    ,
+                  
+                  
+                    
+                      x
+                      
+                        2
+                      
+                      ′
+                    
+                    (
+                    t
+                    )
+                    ,
+                  
+                  
+                    ⋯
+                    ,
+                  
+                  
+                    
+                      x
+                      
+                        n
+                      
+                      ′
+                    
+                    (
+                    t
+                    )
+                  
+                
+              
+              ]
+            
+          
+          
+            T
+          
+        
+      
+    
+     
+  .Tämä tunnetaan niin sanottuna ketjusääntönä.
+
+
+== Gradientti käyräviivaisissa koordinaatistoissa ==
+Napakoordinaatistossa annetulle funktiolle gradientti on
+
+  
+    
+      
+        ∇
+        f
+        (
+        r
+        ,
+        ϕ
+        )
+        =
+        
+          
+            
+              
+                e
+                →
+              
+            
+          
+          
+            r
+          
+        
+        
+          
+            
+              ∂
+              f
+            
+            
+              ∂
+              r
+            
+          
+        
+        +
+        
+          
+            
+              
+                e
+                →
+              
+            
+          
+          
+            ϕ
+          
+        
+        
+          
+            1
+            r
+          
+        
+        
+          
+            
+              ∂
+              f
+            
+            
+              ∂
+              ϕ
+            
+          
+        
+      
+    
+     
+  ,sylinterikoordinaatistossa
+
+  
+    
+      
+        ∇
+        f
+        (
+        r
+        ,
+        ϕ
+        ,
+        z
+        )
+        =
+        
+          
+            
+              
+                e
+                →
+              
+            
+          
+          
+            r
+          
+        
+        
+          
+            
+              ∂
+              f
+            
+            
+              ∂
+              r
+            
+          
+        
+        +
+        
+          
+            
+              
+                e
+                →
+              
+            
+          
+          
+            ϕ
+          
+        
+        
+          
+            1
+            r
+          
+        
+        
+          
+            
+              ∂
+              f
+            
+            
+              ∂
+              ϕ
+            
+          
+        
+        +
+        
+          
+            
+              
+                e
+                →
+              
+            
+          
+          
+            z
+          
+        
+        
+          
+            
+              ∂
+              f
+            
+            
+              ∂
+              z
+            
+          
+        
+      
+    
+     
+  sekä pallokoordinaatistossa
+
+  
+    
+      
+        ∇
+        f
+        (
+        r
+        ,
+        θ
+        ,
+        ϕ
+        )
+        =
+        
+          
+            
+              
+                e
+                →
+              
+            
+          
+          
+            r
+          
+        
+        
+          
+            
+              ∂
+              f
+            
+            
+              ∂
+              r
+            
+          
+        
+        +
+        
+          
+            
+              
+                e
+                →
+              
+            
+          
+          
+            θ
+          
+        
+        
+          
+            1
+            r
+          
+        
+        
+          
+            
+              ∂
+              f
+            
+            
+              ∂
+              θ
+            
+          
+        
+        +
+        
+          
+            
+              
+                e
+                →
+              
+            
+          
+          
+            ϕ
+          
+        
+        
+          
+            1
+            
+              r
+              sin
+              ⁡
+              θ
+            
+          
+        
+        
+          
+            
+              ∂
+              f
+            
+            
+              ∂
+              ϕ
+            
+          
+        
+      
+    
+     
+  .Huomaa, että viimeinen laskusääntö on pätevä pallokoordinaatistossa, jossa muunnoskaavat ovat
+
+  
+    
+      
+        
+          
+            {
+            
+              
+                
+                  x
+                  =
+                  r
+                  sin
+                  ⁡
+                  θ
+                  cos
+                  ⁡
+                  ϕ
+                
+              
+              
+                
+                  y
+                  =
+                  r
+                  sin
+                  ⁡
+                  θ
+                  sin
+                  ⁡
+                  ϕ
+                
+              
+              
+                
+                  z
+                  =
+                  r
+                  cos
+                  ⁡
+                  θ
+                
+              
+            
+            
+          
+        
+      
+    
+     
+  
+
+
+== Katso myös ==
+Derivaatta
+Roottori
+Divergenssi
+
+
+== Lähteet ==
+
+
+== Kirjallisuutta ==
+Pitkäranta, Juhani: Calculus Fennicus – TKK:n 1. lukuvuoden laaja matematiikka (2000–2013) (pdf) Helsinki:  Avoimet oppimateriaalit ry. ISBN 978-952-7010-12-9 ISBN 978-952-7010-6 (pdf).    
+
+
+== Aiheesta muualla ==
+Weisstein, Eric W.: Gradient MathWorld.    (englanniksi)
+"Gradient 1" (Arkistoitu – Internet Archive) – Khan Academy (englanniksi)

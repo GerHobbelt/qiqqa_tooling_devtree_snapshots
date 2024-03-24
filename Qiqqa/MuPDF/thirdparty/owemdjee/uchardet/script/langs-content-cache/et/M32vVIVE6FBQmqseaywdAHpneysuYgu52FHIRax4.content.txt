@@ -1,0 +1,72 @@
+revision: 6358114
+title: Plasmiid
+url: https://et.wikipedia.org/wiki/Plasmiid
+
+
+---
+
+Plasmiidid on kromosoomivälised DNA molekulid, mis avastati Enterobacteriaceae sugukonda kuuluvatest bakteritest. Praeguseks on leitud neid peaaegu kõikidest uuritud bakteritaksonitest. Plasmiidid on enamasti kaksikahelalised DNA rõngasmolekulid, mis replitseeruvad bakteri genoomist sõltumatult. Nende suurus võib varieeruda mõnesajast kuni mõnesaja tuhande aluspaarini. Plasmiidid sisaldavad geene, mis on vajalikud nende talitlemiseks ja säilimiseks peremeesrakus. Mõnedel plasmiididel on geenid, mis tagavad plasmiidi stabiilse püsimise bakterirakus, näiteks toksiini-antitoksiini süsteemi kodeerivad geenid. Kuigi plasmiidid pole bakterite populatsiooni kasvuks ja bakteritele elutähtsateks funktsioonideks vajalikud, siis teatud juhtudel, näiteks ebasoodsate keskkonnatingimuste korral, võib plasmiidi olemasolu oluliselt soodustada bakteriraku ellujäämist. Soodsates keskkonnatingimustes võib bakterirakk plasmiidist vabaneda, ilma et sellele järgneks peremeesraku jaoks eluohtlikke tagajärgi. Plasmiidid kanduvad ühest bakterirakust teise peremeesraku pooldumise ajal ja horisontaalselt, peamiselt konjugatsiooni teel.
+
+
+== Geneetiline struktuur ==
+Klassikalise lähenemise kohaselt on plasmiidid modulaarse struktuuriga, mis tähendab seda, et üksteisega seotud funktsioonid on kodeeritud ja rühmitatud kindlatesse DNA lõikudesse. Iga moodul (DNA fragment) on plasmiidi genoomis sageli erineva fülogeneetilise päritoluga. Arvestatava osa plasmiidide struktuurist hõlmavad plasmiidi ellujäämise, levimise ja replikatsiooni jaoks vajalikud geenid. Neid nimetatakse plasmiidi selgrooks.
+Selgroo-geenid on plasmiidide süstematiseerimise aluseks. Plasmiidide klassifitseerimine põhineb geneetilistel tunnustel, mis on kõigis plasmiidides püsivalt esindatud. Need tagavad plasmiidide võime säilitada end peremeesrakus ja kontrollida replikatsiooniprotsessi.
+
+
+== Plasmiidide klassifitseerimise ajalugu ==
+Plasmiidide klassifitseerimise vajadus tekkis 1950. aastate lõpus, kui avastati R-plasmiidid ehk resistentsust põhjustavad plasmiidid. Varasemate uuringute tähelepanu oli valdavalt suunatud F-plasmiididele ehk fertiilsust põhjustavatele plasmiididele ja nende osalusele geeniülekandes, ning samuti kolitsiine kodeerivatele (Col) plasmiididele. Multiresistentsust tagavad R-plasmiidid avastati tänu nende võimele kanda konjugatsiooni teel ühest bakterirakust teise mitme ravimi suhtes resistentsust kodeerivaid geene.
+Esmane kriteerium, mida plasmiidide klassifitseerimisel kasutati, oli seotud konjugatiivse ülekandevõimega. Selgus, et R-plasmiidid kanduvad üle madala sagedusega, F-plasmiidid aga kõrge sagedusega. Samuti täheldati, et teatud juhtudel pärssis samas peremeesrakus olev R-plasmiid F-plasmiidi ülekannet. Selle tunnuse põhjal jaotas Watanabe plasmiide fi+ (fertiilsuse pärssimine) ja fi– plasmiidideks. Hiljem selgus, peamiselt tänu Meynelli ja Datta uurimistööle, et on olemas seos plasmiidi fi-oleku ja sugukiu (sex pili) tüübi vahel. Fi+ tüvedel olid sugukiud immunoloogiliselt ja struktuuri poolest sarnased F-plasmiide sisaldavate tüvede kiududega, samas kui fi-tüvede kiud sarnanesid ColI-plasmiide omavate bakteritüvede sugukiududega.
+1960. aastatel, mil plasmiidide uurimine pälvis suuremat tähelepanu, avastati plasmiidid, mis olid mittekonjugatiivsed ega pärssinud konjugatiivset ülekannet. Seetõttu ei saanud neid fi-süsteemi järgi määrata. Lisaks avastati veel uusi sugukiudude tüüpe. Need avastused muutsid plasmiidide senise klassifitseerimise ebapiisavaks.
+
+
+== Plasmiidide mittesobivusgrupid ja määramine replikonide järgi ==
+Mittesobivus (incompatibility) on eripära, mis on omane plasmiididele ning sobib nende klassifitseerimiseks. Plasmiidide mittesobivust kirjeldati esmakordselt F-plasmiidide näitel 1960. aastate alguses. Klassifitseerimise ametliku skeemi, mis põhineb plasmiidide mittesobivusel, töötasid 1970. aastate alguses välja Datta ja Hedges. Mittesobivus on kahe plasmiidi suutmatus samas rakuliinis stabiilselt säilida. Plasmiidid, mis on üksteise suhtes mittesobivad, paigutatakse samasse mittesobivusgruppi. Praeguseks on teada umbes 30 mittesobivusgruppi enterobakterite plasmiidide seas ja 7 stafülokokkide plasmiidide seas.
+Mittesobivust testitakse plasmiidi sisestamisega tüvesse, mis kannab teist plasmiidi. Mõlemal plasmiidil peavad olema erinevad geneetilised markerid, et peremeesrakk saaks plasmiide eristada. Valik langetatakse siseneva plasmiidi järgi. Seejärel kontrollitakse, kas järgmises põlvkonnas on plasmiide, mida bakteris esialgselt leidus. Kui antud plasmiidi järglaskonnas ei ole, loetakse need kaks plasmiidi mittesobivaks (incompatible) ja määratakse samasse mittesobivusgruppi.Eristatakse mitmesuguseid mittesobivusgruppe: IncP, IncW, IncN, IncT, IncY, IncF, IncB/O jne.
+Kirjeldatud metoodika rakendamine on töö- ja ajamahukas ning sellega kaasnevad mitmed raskused, mis on tingitud näiteks arvukatest replikatsiooni kontrollmehhanismidest ning sobivate geenide puudumisest. Seetõttu töötati välja uus meetod plasmiidide identifitseerimiseks – määramine replikonide järgi (plasmid replicon typing). Selle meetodi aluseks on erinevate replikonide genotüübi äratundmine. Plasmiididele, mis kannavad enam kui ühte replikoni või sarnast, aga siiski kokkusobivat replikoni, annab plasmiidide määramine replikonide järgi kõige täpsemaid tulemusi. Replikoni järgi liigitamine on lihtsam kui mittesobivusgruppide testimine ja nõuab ühtlasi ka vähem aega. See on rakendatav paljude eri bakteriliikide puhul.
+
+
+== Konjugatsioon ==
+Bakteritevaheline plasmiidide ülekanne toimub horisontaalselt konjugatsiooni teel. Konjugatsioon on protsess, kus rakkudevahelise kontakti teel doonorraku (rakk, mis loovutab plasmiidi) DNA kantakse üle retsipientrakku (rakk, mis võtab DNA vastu).
+Sõltuvalt konjugatiivsusest saab plasmiidid jagada kahte klassi. Plasmiide, mis kannavad tervet konjugatsiooniks vajalike geenide komplekti, nimetatakse konjugatiivseteks plasmiidideks, näiteks enterobakterist pärit IncW rühma kuuluv R-plasmiid R388. Teised plasmiidid sisaldavad vaid minimaalset geenide hulka, mis võimaldavad neil konjugatsiooni teel liikuda vaid konjugatiivsete plasmiidide abiga. Neid nimetatakse mittekonjugatiivseteks või mobiliseeritavateks plasmiidideks, näiteks IncQ1 rühma plasmiid RSF1010. Konjugatiivsed plasmiidid on tavaliselt väikese koopiaarvuga, samas kui mittekonjugatiivsed plasmiidid on kõrge koopiaarvuga.
+Konjugatiivsed plasmiidid kannavad konjugatsiooniprotsessi tagavaid geene, sealhulgas sugukiude kodeerivaid geene, mis on vajalikud rakkudevaheliste kontaktide loomiseks. Plasmiidid, mis kuuluvad samasse mittesobivusgruppi, omavad tavaliselt DNA homoloogiat ja nad kodeerivad sarnaseid sugukiude ja konjugatsioonisüsteeme.
+Konjugatsiooniprotsessis toimuvad sündmused:
+
+DNA ülekande algus ülekande lähtekohast (oriT), kuhu ensüüm relaksaas teeb üheahelalise katke;
+plasmiidi DNA ahelate lahtiharutamine;
+ühe ahela ülekanne retsipientrakku;
+üksikahelalisele DNA-le komplementaarse ahela süntees nii doonor- kui ka retsipientrakus;
+plasmiidse DNA rõngasmolekuli moodustumine.
+
+
+== Plasmiidide funktsioonid ==
+Plasmiidide olemasolu on rakkudele kasulik: paljud plasmiidide omadused aitavad rakul kindlates tingimustes ellu jääda. Need tunnused jagatakse nelja peamisse rühma:
+
+resistentsus – kannavad resistentsust raskmetallide, antibiootikumide suhtes;
+energeetiline metabolism – võimaldavad peremeesrakul lagundada saasteaineid;
+patogeensus, sümbioos ja virulentsus – plasmiidid sisaldavad virulentsusgeene, mis tõstavad bakterite patogeensust ja põhjustavad haigusi, näiteks katku ja teetanust;
+levik ja säilimine – viivad läbi sugukiudude sünteesi ja võimaldavad kemotaksise toimumist.
+
+
+== Plasmiidide tüübid ==
+Funktsioonide järgi liigitatakse plasmiidid viide gruppi:
+
+resistentsusplasmiidid – kannavad tavaliselt geene, mis kodeerivad antibiootikumide või mürkide suhtes resistentsust. R-plasmiidid on sageli konjugatiivsed ning võimelised levima bakterikoosluses horisontaalselt;
+degradatiivsed plasmiidid – suured kataboolsed plasmiidid, mis kodeerivad erinevate orgaaniliste ainete, näiteks tolueen, naftaleen, fenool jt, lagundamiseks vajalikke ensüüme;
+fertiilsusplasmiidid (F-plasmiidid) – sisaldavad tra-geene, mille kodeeritud produkte kasutatakse konjugatsiooniprotsessis ning geneetilise materjali ülekandmisel bakterite vahel;
+col-plasmiidid – sisaldavad antibiootikume kodeerivaid geene. Neid antibiootikume nimetatakse kolitsiinideks. Kolitsiinid toimivad teistele bakteritele surmavalt;
+virulentsusplasmiidid – nendel plasmiididel on võime muuta bakterid patogeenideks. Virulentsusplasmiidid osalevad haigusi põhjustavate geenide kandmises.
+
+
+== Antibiootikumiresistentsuse levik ==
+Plasmiididel on antibiootikumiresistentsuse saavutamises keskne roll. Plasmiidid võivad resistentsusgeene koguda ja levitada. Antibiootikumide resistentsusmehhanismid bakterites on erinevad. Nendeks on sihtmärgi kaitsmine, märklaua asendamine, antibiootikumi mürgitustamine ja antibiootikumi rakusisese kuhjumise blokeerimine. Resistentsusmehhanismide läbiviimiseks vajalike geenide omandamine võib toimuda erineval viisil, näiteks transpositsiooni abil. Transpositsioon on protsess, kus kindel järjestus, mis pärineb kindlast replikonist, on sisestatud teise replikoni (plasmiid või kromosoom). Vastupidi klassikalisele rekombinatsioonile ei nõua transpositsioon geneetilist homoloogsust doonori ja retsipiendi vahel.
+Transposoonid on geneetilised elemendid, mis on võimelised teistesse geneetilistesse struktuuridesse sisenema, kuid võivad transpositsiooni käigus nendest ka lahkuda. Sageli esinevad nad plasmiididel. Transposoonid võivad sisaldada resistentsusgeene peaaegu kõigi antibiootikumide vastu: ampitsilliini (ja teiste penitsilliinide), tetratsükliini, klooramfenikooli, trimetoprimi, streptomütsiini, kanamütsiini, neomütsiini, gentamütsiini ja tobramütsiini vastu. Need "hüppavad geenid" suudavad ennast ümber paigutada ühest plasmiidist teise või plasmiidist kromosoomi. Transposoonid võivad olla kiire resistentsuse leviku põhjustajateks bakteriperekondade seas.
+Kui gramnegatiivsed enterobakterid sisaldavad tavaliselt ühte tüüpi suurt plasmiidi mitme ravimi suhtes resistentsuse saavutamiseks, siis osa grampositiivseid baktereid, nagu stafülokokid, omandavad multiresistentsuse tänu mitmele eri tüüpi väiksemale plasmiidile. Resistentsusplasmiidid võivad sageli kanduda üle konjugatsiooni teel nii sama liigi eri tüvede kui ka erinevatesse taksonitesse kuuluvate bakterite vahel.
+
+
+== Vaata ka ==
+kataboolne plasmiid
+TOL-plasmiid
+plastiid
+
+
+== Viited ==

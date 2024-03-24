@@ -1,0 +1,128 @@
+revision: 69406172
+title: diode
+url: https://pl.wikipedia.org/wiki/Dioda
+
+
+---
+
+Dioda – dwuzaciskowy (dwuelektrodowy) element elektroniczny, który przewodzi prąd elektryczny w sposób niesymetryczny, to jest w jednym kierunku bardziej  niż w przeciwnym.
+
+Historycznie pierwszymi diodami były detektory kryształkowe i diody próżniowe. Obecnie najczęściej spotykanym rodzajem są diody półprzewodnikowe, zbudowane z dwóch warstw odmiennie domieszkowanego półprzewodnika, tworzących razem złącze p-n.
+Istotą działania większości diod jest przewodzenie prądu w jednym kierunku (zwanym kierunkiem przewodzenia) i znaczne blokowanie jego przepływu w drugim (tu występuje wada diod, mają tzw. prąd wsteczny, prąd upływu). Właściwość tę wykorzystuje się do prostowania napięcia przemiennego oraz demodulacji sygnałów w odbiornikach radiowych.
+Poprzez odpowiedni dobór materiałów oraz parametrów wytwarzania złącza p-n można zmienić charakterystykę diody, dzięki czemu może się ona zachowywać w sposób bardziej skomplikowany niż prosty zawór elektryczny. Przykładem są diody Zenera (używane do stabilizowania napięcia), diody pojemnościowe (używane w obwodach strojenia), diody tunelowe (używane w generatorach mikrofalowych) czy LED (emitujące światło).
+
+
+== Historia ==
+
+W 1897 Ferdinand Braun odkrył zjawisko prostowania na złączu metal-półprzewodnik, za co między innymi otrzymał w 1909 roku Nagrodę Nobla z fizyki.
+W 1904 John Ambrose Fleming skonstruował diodę próżniową.
+W 1922 Oleg Władimirowicz Łosiew zbudował radio z półprzewodnikowym wzmacniaczem (krystadyna) zawierającym złącze metal-półprzewodnik.
+W 1927 Lars Grondahl i Paul Geiger zbudowali prostownik kuprytowy, wkrótce uruchomiono ich seryjną produkcję.
+W 1939 Russell Shoemaker Ohl zbudował złącze p-n.
+W trakcie II wojny światowej rozpoczęto masową produkcję germanowych diod ostrzowych do celów radarowych.
+
+
+== Podział diod ==
+
+
+=== Lampy elektronowe ===
+
+
+==== Próżniowe ====
+Lampowe diody próżniowe składają się z dwóch elektrod umieszczonych w szklanej lub rzadziej metalowej bańce o wysokiej próżni. Katoda jest żarzona za pomocą prądu elektrycznego, a pod wpływem wysokiej temperatury zachodzi emisja termoelektronowa. W ten sposób katoda staje się źródłem elektronów, a ich przepływ jest możliwy tylko w jedną stronę: od katody do anody. Były produkowane w dwóch zasadniczych rodzajach: diody detekcyjne (do niewielkich sygnałów) i prostownicze (do układów zasilających).
+Próżniowe diody prostownicze (zwłaszcza na wyższe napięcia) były nazywane kenotronami. Lampę złożoną z dwóch diod w jednej bańce nazywa się duodiodą.
+Diody próżniowe wyszły z użycia i zostały zastąpione przez diody półprzewodnikowe.
+
+
+==== Gazowane ====
+Gazotron również składa się z dwóch elektrod (żarzonej katody i anody), ale są one umieszczone w bańce wypełnionej gazem (zwykle gazem szlachetnym, parami rtęci lub ich mieszaniną). Były stosowane w urządzeniach zasilających większej mocy (wyszły z użycia).
+
+
+=== Półprzewodnikowe ===
+
+
+==== Podział ze względu na materiał ====
+
+Na różnych etapach rozwoju techniki półprzewodnikowej wprowadzano do użytku różne materiały.
+
+Wczesne diody półprzewodnikowe, używane jako detektor kryształkowy, były wytwarzane głównie z kryształów galeny, rzadziej z innych minerałów.
+W latach 50. i 60. XX w. dominowały diody germanowe.
+Obecnie większość diod to diody krzemowe
+W diodach na duże napięcia i moce używa się też węgliku krzemu.
+Bardzo duża rozmaitość materiałów półprzewodnikowych występuje w diodach (elektroluminescencyjnych, laserowych i fotodiodach) będących przyrządami elektronowo-optycznymi, na przykład arsenek galu, azotek galu, antymonek indu.
+
+
+==== Podział ze względu na budowę ====
+Ze względu na budowę diody półprzewodnikowe możemy podzielić na:
+
+
+===== Diody złączowe (dawniej warstwowe) =====
+Są zrealizowane jako złącze p-n składające się z dwóch obszarów półprzewodnika o różnym typie przewodnictwa. To współcześnie najpopularniejszy rodzaj diody półprzewodnikowej.
+
+
+===== Diody Schottky’ego =====
+
+Dioda Schottky’ego jest złączem metal-półprzewodnik. Formalnie do tej grupy zaliczyć można także detektory kryształkowe składające się z półprzewodnikowego kryształu i metalowego drucika. Złącze metal-półprzewodnik występuje także w pierwszych produkowanych wielkoseryjnie prostownikach: kuprytowym i selenowym. W prostowniku kuprytowym (produkowanym w latach 30. i 40. XX w. i wypartym przez prostowniki selenowe) było to złącze Cu-Cu2O.
+
+
+===== Diody ostrzowe =====
+Diody ostrzowe to diody, w których jedną z elektrod stanowi metalowe ostrze będące w kontakcie z półprzewodnikiem. W zależności od technologii wytwarzania mogą mieć strukturę fizyczną złącza p-n albo złącza metal-półprzewodnik. Obecnie mają znaczenie jedynie historyczne.
+
+
+===== Diody PIN =====
+Diody PIN (ang. p, intrinsic, n) posiadają pomiędzy warstwami złącza p i n warstwę niedomieszkowaną. Charakteryzują się małą pojemnością złącza i są używane w układach wielkiej częstotliwości.
+
+
+==== Ze względu na funkcję ====
+
+
+===== Diody uniwersalne =====
+Diody uniwersalne charakteryzują się umiarkowanymi maksymalnymi napięciami wstecznymi i dopuszczalnymi prądami, średnimi częstotliwościami pracy i czasami przełączania. Są stosowane w obwodach sygnałowych jako detektory, przełączniki itp.
+
+
+===== Diody prostownicze =====
+Diody prostownicze służą do prostowania prądu przemiennego w układach zasilających. Charakteryzują się dużymi dopuszczalnymi napięciami wstecznymi i dopuszczalnymi prądami, natomiast zwykle mają niewielką maksymalną częstotliwość pracy.
+
+
+===== Diody impulsowe =====
+Diody impulsowe (przełączające) charakteryzują się niewielkim czasem przełączania przy zmianie polaryzacji pomiędzy kierunkiem przewodzenia i zaporowym.
+Różnorakie diody specjalne spełniają w obwodach zadania inne niż jednokierunkowe przewodzenie prądu. Należą do nich:
+
+
+===== Diody pojemnościowe =====
+
+Diody pojemnościowe (warikapy, waraktory) pełniące rolę zmiennej pojemności sterowanej napięciem. Są wykorzystywane między innymi w przestrajanych elektronicznie obwodach rezonansowych.
+
+
+===== Diody elektroluminescencyjne =====
+
+Do diod emitujących promieniowanie elektromagnetyczne o różnej charakterystyce, w zakresie ultrafioletu, podczerwieni i widzialnym, należą diody elektroluminescencyjne (LED) i diody superluminescencyjne (SLD).
+
+
+===== Diody laserowe =====
+Jedną z klas laserów półprzewodnikowych są lasery złączowe, zwane diodami laserowymi.
+
+
+===== Diody mikrofalowe =====
+
+Diody mikrofalowe to diody przeznaczone do prostowania, generacji i wzmacniania przebiegów elektrycznych w zakresie częstotliwości mikrofalowych. Należą do nich diody tunelowe (Esakiego), diody Gunna, diody ładunkowe i inne.
+
+
+===== Diody Zenera =====
+
+Diody Zenera (stabilistory) mają określone napięcie w kierunku zaporowym, przy którym zaczyna gwałtownie wzrastać ich prąd wsteczny. Są wykorzystywane w układach stabilizacji napięcia. Podobne diody lawinowe stosuje się w układach zabezpieczających przed przepięciami, mają one dużą zdolność absorbowania energii.
+
+
+== Zobacz też ==
+pasmowa teoria przewodnictwa
+diak, transil, triak, tyrystor
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+Bogdan Maciej Wilamowski: Specjalne przyrządy półprzewodnikowe. Warszawa: Wydawnictwa Komunikacji i Łączności, 1982. ISBN 83-206-0283-1.brak strony w książce
+Zenon Mendygrał: 1000 słów o radiu i elektronice. Warszawa: Wydawnictwo Ministerstwa Obrony Narodowej, 1985. ISBN 83-11-07123-3.brak strony w książce
+John Orton: The Story of Semiconductors. Oxford: Oxford University Press, 2004. ISBN 0-19-853083-8.brak strony w książce
+Robert Buderi: Radar – wynalazek, który zmienił świat. Warszawa: Prószyński i S-ka, 2006. ISBN 83-7469-188-3.brak strony w książce

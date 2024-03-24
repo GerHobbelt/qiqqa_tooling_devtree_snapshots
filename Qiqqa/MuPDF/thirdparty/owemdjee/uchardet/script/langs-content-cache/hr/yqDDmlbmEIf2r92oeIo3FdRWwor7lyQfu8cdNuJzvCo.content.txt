@@ -1,0 +1,96 @@
+revision: 6604103
+title: "Elektromagnetsko zra\u010Denje"
+url: https://hr.wikipedia.org/wiki/Elektromagnetsko_zra%C4%8Denje
+
+
+---
+
+Elektromagnetsko zračenje predstavlja elektromagnetske valove svih valnih duljina: infracrveno, ultraljubičasto, rendgensko i gama-zračenje. Sva ugrijana fizikalna tijela zrače elektromagnetske valove. Svako tijelo se sastoji od atoma. Prilikom grijanja nekog tijela, u njega se ulaže energija i atomi počinju titrati jer prelaze u pobuđena stanja (energija im se povećava). Jezgre atoma nose električne naboje, pa tako pri titranju atoma dolazi zapravo do titranja električnih naboja. U točkama prostora oko električnog naboja uvijek postoji električno polje, a ako se električni naboj giba, onda postoji još i magnetsko polje. Time, električni naboj koji titra predstavlja izvor elektromagnetskog vala.
+
+
+== Elektromagnetski valovi ==
+Elektromagnetski valovi predstavljaju širenje elektromagnetskoga polja. Električki nabijena tijela proizvode u svom okolišu električno polje, a električna struja u električnim vodičima proizvodi u svojoj okolini magnetsko polje. Međutim, ako se u strujnom krugu bilo kako mijenjaju električni napon ili struja, pojavljuju se elektromagnetski valovi, koji se šire u prostor.Sredinom 19. stoljeća veliki izazov bio je poznat kao svjetlost, magnetizam i elektricitet. Stoljeća ranije T. Young je izmjerio valnu duljinu svjetlosti, William Gilbert je otkrio polaritet magneta i brojni istraživači su eksperimentirali s novim otkrićem – elektricitetom. J. C. Maxwell je 1865. napravio teoretski opis elektromagnetskih valova, ali se nije znalo kako ih proizvesti, iako je prema Maxwellu to trebalo biti moguće postići titranjem električne struje.
+J. C. Maxwell utvrdio je da postoji uzajamno djelovanje između električnog i magnetskog polja. Promjenljivo magnetsko polje proizvodi električno, a promjenljivo električno polje – magnetsko. Proces uzajamnoga proizvođenja električnog i magnetskog polja širi se po prostoru konačnom brzinom, koja je jednaka brzini svjetlosti. Širenje toga procesa naziva se elektromagnetski val u najširem smislu. Ako električnim vodičem protječe električna struja koja se vremenski mijenja harmonički određenom frekvencijom, elektromagnetsko je polje sinusno promjenljivo s istom frekvencijom, a u prostoru se dobiva valni učinak. To je elektromagnetski val u užem smislu. Tek je dvadeset godina kasnije H. R. Hertz pokusom uspio pokazati povezanost elektromagnetskih valova sa svjetlošću. Taj pokus je puno pomogao u razumijevanju elektromagnetskog spektra, dokaz da se valovi mogu stvoriti i širiti kroz prostor.
+Ako se valni učinak širi brzinom v, a polje se mijenja frekvencijom f, odgovarajuća duljina vala λ iznosi: 
+
+  
+    
+      
+        λ
+        =
+        
+          
+            v
+            f
+          
+        
+      
+    
+     
+  Sredstvo koje ispunjava prostor sudjeluje aktivno u širenju elektromagnetskih valova. Ono se opire prodiranju vala. Zato se val u sredstvu širi manjom brzinom nego u praznom prostoru. Ako je brzina elektromagnetskoga vala u vakuumu c0, a u prostoru ispunjenom nekim sredstvom c, njihov omjer:
+
+  
+    
+      
+        n
+        =
+        
+          
+            
+              c
+              
+                0
+              
+            
+            c
+          
+        
+      
+    
+     
+  određuje indeks loma. Ako je sredstvo u prostoru električki vodljivo, u njemu pod utjecajem elektromagnetskih valova nastaju električne struje. Val gubi na energiji i prigušuje se. Nastale električne struje proizvedu sa svoje strane valove te nastaje zbirni valni učinak, koji se širi manjom brzinom nego u sredstvu bez gubitaka. U vodljivim sredstvima mora se razlikovati brzina širenja procesa stvaranja vala ili brzina čela vala (grupna brzina) od brzine valnog učinka (fazna brzina). Čelo vala širi se uvijek brzinom svjetlosti, a fazna je brzina manja ako sredstvo troši energiju vala. Čim sredstvo troši energiju vala, val se pri prodiranju u vodljivo sredstvo prigušuje i njegove amplitude padaju. Udaljenost na kojoj se one smanje na 37% svojega prvotnog iznosa zove se dubina prodiranja vala. Ona ovisi o električnim i magnetskim svojstvima sredstva i o frekvenciji. Dubina prodiranja televizijskoga vala u morskoj vodi iznosi tek nekoliko centimetara. Kada val dođe na granicu između dvaju sredstava, drugo se sredstvo opire njegovu prodiranju. Val se jednim dijelom reflektira natrag u prvo sredstvo, a drugi dio nastavlja širenje u drugom sredstvu. Val ostvaruje tlak na drugo sredstvo. Tlak je vrlo malen jer je gustoća energije koju val prenosi vrlo malena. Na električki vodljivim plohama događa se totalna refleksija vala. Svojstvo refleksije vala iskorištava se u izradbi valnih reflektora, a na njemu se osniva i rad radara. Električni vodiči troše energiju elektromagnetskoga vala. Val gubi na energiji šireći se niz vodljivu plohu, on se prigušuje kao u sredstvu s gubitcima. Struje proizvedene u vodljivoj plohi sile val da se širi niz plohu. Takav je slučaj u vodova za prijenos električne energije. Valovi se na vodovima šire po njihovoj duljini također brzinom svjetlosti. Harmoničkim se valovima pripisuje duljina vala određena kao prije u prostornih valova. Razmak među vodičima voda mora biti mnogo puta manji od duljine vala. Tada vod emitira u prostor tek zanemariv iznos svoje energije koju prenosi. Visokofrekventna električna energija prenosi se vodovima sve dok može biti zadovoljen spomenuti zahtjev. U području vrlo visokih frekvencija, odnosno vrlo malih duljina vala, primjenjuju se za prijenos takve električne energije cijevi vodljivih stijenki, valovodi. Uz harmoničke valove pojavljuju se kod svake promjene električnoga naboja ili električne struje valni impulsi. Atmosferska izbijanja izazivaju jake elektromagnetske valove. Slično djeluju i eksplozije na Suncu. Iskrenja u električnim instalacijama proizvode također valne impulse, koji smetaju na primjer u radioprijamu. Elektromagnetski valovi iskorištavaju se za prijenos različitih signala na daljinu. U emisijskim uređajima proizvode se promjenljive električne struje koje prolaze vodičima te tako stvaraju elektromagnetske valove. Prvi je Nikola Tesla primijenio antenu u emisijskom uređaju. 
+
+
+=== Maxwellove jednadžbe ===
+
+Maxwell je u svojim jednadžbama elektromagnetske valove objasnio jednadžbama za električna i magnetska polja. Prema tome elektromagnetski valovi nastaju zato što:
+
+promjenljivo magnetsko polje B stvara promjenljivo električno polje E,
+promjenljivo električno polje E stvara promjenljivo magnetsko polje BNa taj način iz Maxwellovih jednadžbi slijedi niz uzajamnih promjena električnih polja koji se prostiru prostorom kao elektromagnetski valovi. Ti "lanci" električnih i magnetskih polja mogu se odvojiti od električnih naboja i struja te se slobodno širiti prostorom u obliku elektromagnetskih valova. Oni postoje i nakon što se ukloni njihov izvor. Polja su tada samostalna i mogu postojati i širiti se bez postojanja električnih naboja i struja.
+U Maxwellovim jednadžbama elektromagnetskog polja dolazi konstanta c s fizičkim značenjem brzine. Točni pokusi su pokazali da se ta elektrodinamička konstanta podudara s brzinom svjetlosti. Iz same elektrodinamike neprimjetno je rastao most prema optici. Već je M. Faraday tvrdio da se elektromagnetska djelovanja postupno šire prostorom. Promijeni li se elektromagnetsko polje na nekom mjestu, ta se promjena prenosi na bližu okolinu, a iz te neposredne okoline sve se dalje širi prostorom. Ako se električni kondenzator iznenada električki nabije, između njegovih ploča nastaje električno polje. Nastajanje električnog polja praćeno je magnetskim vrtlogom. Postanak magnetskih silnica prouzrokuje opet nove električne silnice, koje ovijaju magnetske. Najedanput izazvana elektromagnetska promjena na jednom mjestu postupno se širi prostorom. Maxwell je iz svojih jednadžbi izveo da se te promjene u obliku valova šire s brzinom c kroz prostor. To je bio početak elektromagnetske teorije svjetlosti.
+
+
+=== Hertzovi pokusi ===
+J. C. Mexwell je svojom teorijim našao da se elektromagnetski valovi šire u vakuumu istom brzinom (300 000 km/s) kao i valovi svjetlosti i da imaju ista svojstva. Valjanost Maxwellove teorije potvrdio je svojim pokusima njemački fizičar H. R. Hertz 1888. Pri tom se Hertz služio aparatom za proizvodnju oscilacija koji se zove oscilator. Taj se oscilator sastoji od dviju metalnih šipki koje na svojim unutarnjim krajevima imaju metalne kuglice. Te su kuglice spojene s induktorom koji ih nabija. Kadgod između kuglica preskoči električna iskra, nastaju električne oscilacije. U iskrištu je električna struja najjača, a na krajevima šipki jednaka je nuli. Drugim rječima, u iskrištu nastaju trbusi, a na krajevima šipki čvorovi elektromagnetskog vala. 
+Za dokaz elektromagnetskih valova služi aparat koji se zove rezonator. Taj se rezonator sastoji također od dvije ravne šipke na čijim se unutarnjim krajevima nalaze kuglice. Da bi rezonator prilagodio na rezonanciju, Hertz je mijenjao njegov električni kapacitet tako da je produljivao ili skraćivao duljinu šipki. Kada je rezonator u rezonanciji s oscilatorom i ako je s njime paralelan, između kuglica rezonatora preskakat će električna iskra. Budući da se električna iskra slabo vidi, rezonator se veže za drugi aparat koji se zove koherer, a s njime je zajedno u spoju električno zvonce i galvanska baterija.
+
+Iskra koja skače između metalnih kugala predstavlja brzu izmjeničnu struju. Po Maxwellovoj teoriji takvo se periodično titranje električnog naboja mora očitovati u periodičnom titranju elektromagnetskog polja u prostoru oko kugala. Kako se mijenja električna struja u Hertzovu oscilatoru, tako isto se mijenja i električno i magnetsko polje. Kad struja teče odozdo prema gore, tada magnetsko polje poput prstenova ovija struju slijeva prema desno; a kad struja teče odozgo prema dolje, tada je magnetsko polje ovija zdesna prema lijevo. U svakom trenutku se u prostoru izmjenično redaju ista stanja elektromagnetskog polja. Širenje elektromagnetskog polja nalikuje na kuglasti val, koji ima izvore u titranjima iskre. 
+Velika je zasluga H. Hertza što je pokusima dokazao postojanje Maxwellovih valova. Ako u prostoru oko izmjenične struje doista titraju električna i magnetska polja, tada ta titranja elektromagnetskog polja moraju proizvesti slične izmjenične struje u žicama ili periodične iskre u rezonatorima. U Hertzovim rezonatorima pojavila su se titranja iskre u istom ritmu kako je skakala iskra u emisionom oscilatoru. Time je Hertz nedvojbeno utvrdio da elektromagnetsko polje oko izmjenične struje titra isto tako kao i sama struja. 
+Hertzovi elektromagnetski valovi imaju valne duljine od nekoliko centimetara. Na takvim valovima lijepo su se mogla proučavati valna svojstva. Hertz je opazio da se elektromagnetski valovi na metalnim pločama reflektiraju točno po zakonima valne refleksije. Zakrivljenim metalnim pločama Hertz je mogao elektromagnetski val fokusirati u točkama koje su odgovarale žarištima svjetlosnih zraka. Također su elektromagnetski valovi pokazivali iste interferentne i ogibne pojave kao i ostala valna gibanja. Elektromagnetski valovi "zakreću oko ugla", oni se među sobom pojačavaju i oslabljuju. Pri prolazu u novo sredstvo elektromagnetski valovi se djelomično lome, a djelomično reflektiraju. Prema tim svojstvenim osobinama ne može biti sumnje o valnoj prirodi elektromagnetskih širenja. 
+Savršeno slaganje između svjetlosnih i elektromagnetskih valova je Maxwellovu hipotezu učinilo osnovom moderne fizike. Svjetlost je elektromagnetska pojava. Ovim stapanjem optike s dinamikom električnih i magnetskih polja bio je okrunjen snažan uspon znanosti o elektricitetu.
+Razlike između elektromagnetskih valova osnovane su veličinom valnih duljina. Valne duljine Hertzovih elektromagnetskih valova bile su oko milijun puta veće od valnih duljina svjetlosti. Tako velike razlike uzrokuju i sasvim različito ponašanje u uzajamnom djelovanju s materijom. Elektromagnetski valovi rasprostiru se u golemom rasponu valnih duljina. Prema njihovim valnim duljinama dijelimo ih na radio valove, infracrvenu, vidljivu i ultraljubičastu svjetlost, rendgenske zrake i gama zrake. 
+
+
+== Svojstva elektromagnetskih valova ==
+
+Elektromagnetski valovi imaju četiri važna svojstva:
+
+Za razliku od ostalih valova koji se šire nekim sredstvom, elektromagnetski se valovi mogu širiti vakuumom.
+Titrajuća električna i magnetska polja u linearno polariziranom elektromagnetskom valu su u fazi.
+Smjerovi električnoga i magnetskog polja u elektromagnetskom valu okomiti su jedan na drugi i oba su okomita na smjer širenja vala, što ih čini transverzalnim valovima.
+Brzina elektromagnetskih valova ovisi samo o električnim i magnetskim svojstvima medija kojim se šire, a ne ovise o amplitudi elektromagnetskog polja.Za razliku od većine ostalih valova, za širenje elektromagnetskih valova nije potreban medij (na primjer zrak, voda, valovod i slično). Na putu kojem se elektromagnetski valovi šire ne trebaju titrati čestice nekog medija, nego pri širenju elektromagnetskog vala titraju električna i magnetska polja. Elektromagnetske valove stvaraju električni naboji koji se gibaju ubrzano (akcelerirano). Ako električni naboj titra, on emitira kontinuirani elektromagnetski val, a ako ima samo kratkotrajnu akceleraciju, tada emitira pulsni elektromagnetski val.
+
+
+=== Širenje elektromagnetskih valova ===
+Iz antene isijava električna energija u obliku električnog polja. Primjer je dipol antena koja se sastoji od dviju jednakih duguh žica, priključenih na oba pola jednog iskrišta. Znamo da se oko svakog nabijenog električnog vodiča javlja električno polje, a oko svakog vodiča kojim teče struja javlja se magnetsko polje. Između kuglica iskrišta postoji električni napon, a time i električno polje. To se električno polje nakon četvrtine perioda, kad preskoči električna iskra, pretvara u magnetsko polje, pa se oko iskrišta stvaraju magnetske silnice. U idućoj četvrtini perioda dipol je ponovo nabijen, ali u protivnom smjeru, te električno polje ima suprotan smjer. Kad se dipol izbije u idućoj četvrtini perioda, stvara se ponovo magnetsko polje, ali suprotnoga smjera nego u drugoj četvrtini perioda. Pri tom se električne i magnetske silnice šire u prostor i odvajaju od dipola kao zatvoreni snopovi linija. Na taj način antena isijava (emitira) električno i magnetsko polje u prostor u obliku valova koji se zovu zajedničkim imenom elektromagnetski valovi.
+
+
+=== Što je nosilac elektromagnetskih valova? ===
+Valovi svjetlosti i elektromagnetski valovi imaju ista osnovna svojstva i šire se istom brzinom (brzina svjetlosti). Između njih nema nikakve razlike u njihovim fizičkim svojstvima, već se samo razlikuju u valnoj duljini, odnosno frekvenciji. Ogib, interferencija i polarizacija su pokazali da je svjetlost transverzalni val. Kod elektromagnetskog vala električno titranje je okomito na magnetsko, pa se te dvije promjene šire u prostor okomito na smjer svoga kretanja. Prema tome je i elektromagnetski val također transverzalno titranje. Pokusi pokazuju da električne promjene u elektromagnetskom valu djeluju na fotografsku ploču i na vidni živac u našem oku, pa imamo osjet svjetla. Sve nas to upućuje na to da su vidljivi valovi svjetlosti, kao i infracrvene, ultraljubičaste, rendgenske i gama zrake također elektromagnetski valovi, samo mnogo manje valne duljine. O valnoj duljini ovise njihova posebna svojstva. Svi valovi raspoređeni po svojoj valnoj duljini čine elektromagnetski spektar. 
+No sada se postavlja pitanje što je nosilac elektromagnetskih valova? Prije se smatralo da je nosilac tih valova neka hipotetična tvar, takozvani eter koji ispunjava čitav svemir. No, dalji razvoj znanosti odbacio je potpuno tu hipotezu. Ta bi, naime, tvar morala imati čudna svojstva, to jest ona bi morala biti savršeno kruta, a ipak bi se kroz nju gibala sva nebeska tijela bez ikakvog otpora. Osim toga morala bi biti i savršeno elastična. Danas se smatra da za elektromagnetske valove ne treba nikakav materijalni nosilac, i da su to samo periodičke promjene određenog fizičkog stanja u prostoru. Njihov je nosilac sam prostor, u kome se te promjene zbivaju. 
+
+
+== Izvori ==
+
+
+== Vanjske poveznice ==

@@ -1,0 +1,26 @@
+revision: 15140404
+title: Executabil
+url: https://ro.wikipedia.org/wiki/Executabil
+
+
+---
+
+În tehnica de calcul, codul executabil, fișierul executabil sau programul executabil, uneori denumit pur și simplu executabil sau binar, determină un calculator „să execute sarcinile indicate conform instrucțiunilor codificate”, spre deosebire de un fișier de date care trebuie să fie interpretat (parsat) de un program pentru a avea sens.
+Interpretarea exactă depinde de utilizare. Cuvântul „instrucțiuni” este, de regulă, interpretat ca reprezentând instrucțiuni de cod de mașină pentru un procesor fizic.  În unele contexte, un fișier care conține instrucțiuni de scriptare (cum ar fi bytecode) ar putea fi considerat executabil.
+
+
+== Generarea de fișiere executabile ==
+Fișierele executabile pot fi codificate manual în limbajul mașinii, deși este mult mai convenabil să se dezvolte software ca cod sursă într-un limbaj de nivel înalt care poate fi ușor de înțeles de către oameni. În unele cazuri, codul sursă poate fi specificat în limbaj de asamblare, cu o lizibilitate limitată pentru om, în timp ce este strâns asociat cu instrucțiunile codului mașinii.
+Limbajul de nivel înalt este compilat fie într-un fișier de cod de mașină executabil, fie într-un cod de mașină neexecutabil – fișier de tip obiect; procesul echivalent pe codul sursă în limbajul de asamblare se numește asamblare. Mai multe fișiere de tip obiect sunt legate pentru a crea executabilul. Fișierele de tip obiect — executabile sau nu — sunt de obicei stocate într-un format de container, cum ar fi Executable and Linkable Format (ELF) sau executabilul portabil (PE), care este specific sistemului de operare. Acest lucru dă structura codului mașină generat, de exemplu împărțindu-l în secțiuni precum .text⁠(d) (cod executabil), .data⁠(d) (variabile globale și statice inițiate⁠(d)) și .rodata (date numai pentru citire, cum ar fi constante și șiruri).
+Fișierele executabile includ de obicei și un sistem de rulare, care implementează caracteristici ale limbajului de rulare (cum ar fi planificarea taskurilor, gestionarea excepțiilor, apelul constructorilor și destructorilor statici etc.) și interacțiunile cu sistemul de operare, în special transmiterea de argumente, mediul și returnarea unei stări de ieșire, împreună cu alte funcții de pornire și oprire, cum ar fi eliberarea de resurse, cum ar fi file descriptorii (say handle-urile). Pentru C, acest lucru se face prin conectarea la obiectul crt0⁠(d), care conține punctul de intrare real și efectuează configurarea și oprirea apelând biblioteca de runtime.Astfel, fișierele executabile conțin în mod normal un cod de mașină suplimentar semnificativ în afara celui generat direct din codul sursă specific. În unele cazuri, este de dorit ca acesta să fie omis, de exemplu pentru dezvoltarea sistemelor încorporate sau pur și simplu pentru a înțelege cum funcționează compilarea, linkarea și încărcarea. În C, acest lucru se poate face prin omiterea runtime-ului obișnuit, specificând, în schimb, în mod explicit un script de linkare (linker), care generează punctul de intrare și se ocupă de pornire și oprire, cum ar fi apelarea funcției main pentru a porni și returnarea stării de ieșire către kernel la final.
+
+
+== Execuție ==
+Pentru a fi executat de sistem (cum ar fi un sistem de operare, firmware sau încărcător de pornire⁠(d) (bootloader)), un fișier executabil trebuie să se conformeze interfeței binare de aplicație (ABI) a sistemului.  În interfețele simple, un fișier este executat încărcându-l în memorie și sărind la începutul spațiului de adrese și executând de acolo. În interfețele mai complicate, fișierele executabile au metadate suplimentare care specifică un punct de intrare separat. De exemplu, în ELF, punctul de intrare este specificat în câmpul e_entry al antetului, care specifică adresa de memorie (virtuală) la care să înceapă execuția. În GCC (GNU Compiler Collection), acest câmp este setat de către linker pe baza simbolului _start.
+
+
+== Note ==
+
+
+== Legături externe ==
+Format de fișier EXE la "What Is"

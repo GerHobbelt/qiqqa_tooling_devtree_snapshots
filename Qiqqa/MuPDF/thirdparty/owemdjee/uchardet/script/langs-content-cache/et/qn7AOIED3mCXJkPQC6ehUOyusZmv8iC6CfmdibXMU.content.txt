@@ -1,0 +1,53 @@
+revision: 6254722
+title: Veeb
+url: https://et.wikipedia.org/wiki/Veeb
+
+
+---
+
+Veeb (ingl web, ’võrk’, täisnimi World Wide Web, WWW) on Internetis toimiv ja hüpertekstil põhinev elektrooniliste dokumentide – veebisaitide – süsteem. Veebisaitides kasutatakse märgistuskeelena HTML-i ning saidid on omavahel seostatud viitadega, mida nimetatakse hüperlinkideks (siit ka nimetus hüpertekst). Hüperlinkideks on nn võtmesõnad, samuti ikoonid ja pildid, millel klõpsates (või mida ekraanil puudutades) avaneb vastav sihtobjekt, nt uus hüperteksti dokument. Hüperlingid edastatakse HTTP- või HTTPS-protokolli (reeglistiku) kohaselt. Lisaks tekstile kuuluvad hüperteksti mõistesse pildid (ka liikuvad), heli- ja videodokumendid.
+Veebilehtede kuvamiseks ja võrgus liikumiseks on vajalik spetsiaalne rakendusprogramm – brauser ehk veebilehitseja, nt Google Chrome, Mozilla Firefox, Internet Explorer või viimase uuem versioon Microsoft Edge.
+
+
+== Veebiaadress ==
+Veebisaidi aadress (URL) määrab dokumendi asukoha võrgus. Veebiaadress (näiteks http://www.microsoft.com/eesti või https://www.eesti.ee/est) koosneb järgmistest osadest: 
+
+http (hypertext transfer protocol) või https (hypertext transfer protocol secure) näitab, et on tegemist hüperteksti sisaldava veebidokumendiga;
+lühendile www (world wide web) järgnev domeeninimi koosneb saidi nimest (saidi sisu väljendav sõna või lühend, firma või asutuse nimi vm) ja riigi koodist (nt ee – Eesti, uk – Suurbritannia, de – Saksamaa, fr – Prantsusmaa, ru – Venemaa, fi – Soome; USA aadressides on riigi koodi asemel domeenitüüp: com – kommertsorganisatsioon, org – mittetulunduslikud organisatsioonid, net – võrguteenuse pakkuja jm);
+kaldkriipsu(de) järel võivad olla kataloogi, alamkataloogi ja lehe(külje) nimed.
+
+
+== Ajalugu ==
+Veeb sai alguse Euroopa Tuumauuringute Keskusest (CERN), kus 1989. aastal hakati Tim Berners-Lee eestvedamisel ühendama eri teadusdokumente hüpertekstiks – tekstiks, kus mingi võtmesõna kaudu sai pöörduda teise sellega seotud dokumendi poole. Seesuguse elektrooniliste dokumentide kogu loomiseks märgistati dokumendid SGML-i rakenduse HTMLi eeskirjade järgi ning paigutati jaotusserveritesse. Selle koguga hakati siduma teisigi dokumente ja niiviisi tekkis ülemaailmne, akadeemilisele sfäärile suunatud infomaterjalide võrk.Tõeline veebiplahvatus aga toimus 1993. aastal, kui Interneti hüpertekst toodi väikearvutite jaoks Windowsi operatsioonisüsteemi keskkonda. Varajane veebikeskkond sisaldas ainult teksti, nüüd aga avanes võimalus lisada dokumentidele pilte ja fotosid ning töötada mugavas ning tuttavas graafilises keskkonnas. Esimene spetsiaalne Windowsi veebilehitseja Mosaic saavutas suure populaarsuse, selle ületas aga veelgi tugevamalt 90. aastate esimese poole turuliider – Netscape Navigator.
+Vastukaaluks Netscape'ile töötas PC-tarkvara pikka aega valitsenud gigant Microsoft välja brauseri Internet Explorer (IE), mis suutis turu 1997. aastaks praktiliselt vallutada (suuresti aitas kaasa Microsofti monopoliseisund tarkvaraturul). Netscape'i lähtekoodi avaldamine samal aastal aga lõi soodsa pinnase rea uute alternatiivsete veebilehitsejate tekkeks, nagu Mozilla (eriti heaks peetakse tema edasiarendust Mozilla Firefoxi), Opera, Konqueror jpt. Ehkki suur osa brauseriturust jäi IE kätte, ei saa tänaseks enam rääkida Microsofti brauseri monopolist.
+Ärikeelu tühistamisega 1991. aastal muutus Internet märgatavalt kommertslikumaks, seega oluliseks reklaami- ja äriinfokanaliks. Sellega tuli kaasa ka rida vanemaist meedialiikidest tuttavaid hädasid – tavakasutajale tuttavaim on ilmselt rämpsreklaam (spämm). Siiski on veebist tänapäevaks saanud väga mitmekülgsete kasutusvõimalustega meedialiik, mida pruugitakse kõigis ühiskonnaelu valdkondades.
+
+
+== Veebi tehniline külg ==
+Veebilehed paiknevad neid edastavates arvutites ehk veebiserverites, mis on 21. sajandi alguses enamasti virtuaalserverid, klastrid ja pilved. Veebiserverite juhttarkvara ehk operatsioonisüsteemina on traditsiooniliselt oluline osa Unixil. Tuntuim tarkvarasüsteem on Apache HTTP Server, mis töötab nii Unixi/Linuxi kui ka Windowsi keskkonnas.
+Veebilehefail (tavaliselt laiendiga .html) on tegelikult puhas ASCII-tekstifail (viimasel ajal ka UTF-8), s.t koosneb täielikult arusaadavatest sümbolitest (erinevalt paljudest programmifailidest, mille kuvamisel näeme vaid hulka arusaamatuid märke). Leheküljefail luuakse tavaliselt kas otse serveris (kasutades virtuaalterminaliühendust) mõne kohaliku tekstitöötlusvahendi abil või kirjutatakse valmis kuskil teises arvutis ning viiakse FTP abil serverisse.
+
+
+== Veebi areng ==
+Veebiteenus on tarkvarasüsteem, mille eesmärgiks on toetada arvutitevahelist suhtlust internetis. 
+Web 1.0 – kuni 1999. aastani tähendas veeb staatilisi veebilehti, mis olemuslikult olid passiivsed (nn kirjutuskaitstud), s.t see oli teabe esitamise keskkond ja selle lehtedel tutvustati valdavalt oma kaupu või teenuseid potentsiaalsetele tarbijatele. Nende hulk koos esimeste ostukorvi rakendustega kasvas plahvatuslikult kuni dot.com-mullini. 
+Web 2.0 – pani aluse globaalsele ja aktiivsele suhtlusele. Teerajajateks oli LiveJournal (rakendus võeti kasutusele aprillis 1999) ja Blogger (august 1999). Need rakendused lõid sobiva keskkonna ajaveebide, sotsiaalmeedia ja videovoogude edastamiseks, pakkudes samas lugejatele võimalust lisada loetule oma arvamus ning vahetada omavahel mõtteid. Web 2.0 otsingumootorid (Yahoo! Outlook jts) lõid mugava võimaluse leida lihtsalt enesele vajalikku teavet ning panid aluse info üliküllusele. 
+Web 3.0 – 2006. aastal kujunes välja uut tüüpi „loe-kirjuta-teosta“ suhtluskeskkond, mille aluseks on semantiline märgistus ja veebiteenused. Määrav roll on selles siiski suurtel otsingumootoritel (Google, Airnbnb, Facebook jne), mille kaudu ja mille poolt kehtestatud reeglite järgi leiavad inimesed enesele vajaliku teabe. Kasutusel olev semantiline märgistus viitab suhtluslüngale inimeste veebikasutuse ja arvutipõhiste rakenduste vahel, s.t et veebirakendused ei suutnud andmeanalüüsi programme varustada vajaliku selgitusega (kontekst) ning seetõttu ei saanud nad ka aru, mis on asjakohane ja mis mitte. Kuna aga teabe formeerimise ja selle analüüsimise viisid arenevad jätkuvalt, siis parandab see tarkvara agentide võimekust mõista internetis liikuvat teavet ning seeläbi arendada edasi veebiteenust. Olulised täiendused andis süsteemile tehisintellekt, mis suudab kasutajatega peaaegu inimlikult suhelda ja seda koguni nii hästi, et on suuteline mõjutama tegelikkust. Selles protsessis sulanduvad senised poolused (kasutaja ja veeb), ühinedes ja sulandudes ühtseks ühisloomeprotsessiks. Web 3.0-ist on saanud hiiglaslik andmebaas (BigData), mis pakub teenuseid, nagu tellijapõhised otsingud, isikupärastatud otsingud, 3D-suhtluskeskkonna loomine (näiteks Second Life) ja deduktiivsel analüüsil põhinev analüüs. 
+Web 4.0 on alles kujunev veebikeskkond, mis püüab kohaneda üha dünaamilisemaks muutuva keskkonnaga ning ühendada reaalajas kõiki materiaalseid ja virtuaalseid seadmeid. Seda võiks nimetada ka aktiivseks veebiks, sest selles on oluline koht ennast juhtivatel seadmetel (asjade internet). Erinevalt tsentraliseeritud Web 3.0-ist liigub Web 4.0 arhitektuur plokiahela lahendusel põhineva detsentralisatsiooni suunas. Keskseks tegijaks selles saab isiklik, tehisintellektil põhinev ja neurotehnoloogia võimalusi ära kasutav virtuaalne assistent, mis suhtleb inimestega nii kõnes (nagu praegused Siri, Cortana, Alexa, Google Now) kui kirjas ning püüab rahuldada tema vajadusi juba ettevaates ja konteksti arvestades. See assistent valib, millise suhtluskanali ta valib ja kellega suhtleb, vastavalt omaniku juhenditele. Seetõttu nimetatakse seda ka sümbiootiliseks veebiks. Juba praegu on olemas nii inimeste emotsioone kaardistavaid rakendusi (www.wefeelfine.org) kui ka paindlikke jälgimistarkvarasid (www.pandorafms.com), mis kohanduvad tarbija vajadustega ning on võimelised jälgima isikule kuuluvaid seadmeid, infrastruktuure, rakendusi, teenuseid ja äriprotsesse ning liitreaalsuse kaudu juhendeid pakkuvaid tarkvaralahendusi. See, kas andmetöötlus saab toimuma teenuse tarbija enda seadmes või pilves või koostöös teiste seadmetaga, näitab tulevik. Web 4.0 loob aluse ka uut tüüpi rahasüsteemile (nn sotsiaalne Bitcoin), milles maksete tegemisel võetakse arvesse isiku tarbimisharjumusi, sotsiaalset käitumist jms tegureid. Sellesuunalist pilootprojekti on juba mõned aastad edendanud rahvusvaheline töörühm, mis on saanud tuntuks nime all Finance 4.0.
+
+
+== Vaata ka ==
+Veeb 2.0
+Internetiaadress
+Tim Berners-Lee
+World Wide Web Consortium
+World Wide Web Foundation
+
+
+== Välislingid ==
+Esimene teadaolev veebileht
+Veebilehtede arhiiv
+Kas tead? 6 põnevat fakti 29-aastaseks saanud veebist ehk WWW-st, Geenius, 16. märts 2018
+
+
+== Viited ==

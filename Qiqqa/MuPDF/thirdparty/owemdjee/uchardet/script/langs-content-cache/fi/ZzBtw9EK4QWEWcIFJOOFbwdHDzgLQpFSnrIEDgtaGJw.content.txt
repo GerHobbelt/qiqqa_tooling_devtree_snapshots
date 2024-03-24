@@ -1,0 +1,47 @@
+revision: 21014321
+title: Uomaverkosto
+url: https://fi.wikipedia.org/wiki/Uomaverkosto
+
+
+---
+
+Uomaverkosto  tai joki- ja puroverkosto  ( tai –”verkko” , engl. drainage system, river system, flood system) on virtaveden pääuoman ja sen sivu-uomien muodostama geomorfologinen virtavesien rakenne, joka johtaa verkoston valuma-alueelle satavan veden pääuomasta järveen tai mereen.Suomen ympäristökeskuksella on GIS-tuote Uomatietojärjestelmä, jota kutsutaan yleisesti nimellä Uomaverkosto.
+
+
+== Uomaverkostojen muoto ==
+
+Uomaverkostojen muodot syntyvät, kun kallioperän rakenne, sen kivilajien tavat kulua ja maaperän paksuudet määrittävät vedelle luontaisia kulkureittejä. Yhdysvaltalainen geomorfologi Marie Morisawa (1919–1994), joka oli alan pioneereja, kuvaili yhdeksän uomaverkoston rakennemuotoa.Uomaverkoston muotoa voidaan kutsua: 
+puumaiseksi eli dendriittiseksi ( engl. dendritic drainage pattern), kun virtavesien uomat virtaavat lähes tasaisella ja homogeenisella pinnalla. Sivu-uomat yhtyvät pääuomaan kuin puun oksat ja sivu-uomaissakin on pienet oksamaisesti niihin yhtyvät sivu-uomansa. Sivu-uomien yhtymiskulma jää varsin teräväksi ja verkoston uomat ovat yleensä uurtaneet itselleen V-laaksoja. Tämä on yleisimmin esiintyvä uomaverkosto.
+rinnakkaiseksi ( engl. parallel drainage pattern), jos sivu-uomat virtaavat lähes yhdensuuntaisesti ja yhtyvät pääuomaan hyvin pienessä kulmassa. Tällainen rakenne esiintyy uomaverkostoilla, jotka sijaitsevat yhteen suuntaan viettävällä kallioisella rinteellä.
+”trellismäiseksi” ( engl. trellis drainage pattern), kun uomaverkosto syntyy rinnakkaisiin ja kapeisiin laaksoihin, jotka ovat pitkiä. Pääuomat ja sivu-uomat virtaavat laakson pohjalla ja siihen yhtyy molemmilta rinteiltä pieniä sivu-uomia tasaisin välimatkoin. ”Trellis” tarkoittaa pitkille kukkakasveille ja muille puutarhan kiipijäkasveille pystytettävää ristikkoa tai kasvitukea.
+suorakulmaiseksi ( engl. rectangular drainage pattern), kun kallioperässä on murroksia ja siirroksia, jotka leikkaavat toisiaan lähes kohtisuorasti. Vesi on löytänyt kallioista nämä murrokset, jotka kestävät eroosiota heikommin kuin muu ehjä kalliopinta. Uomat tekevät murroksissa jyrkkiä käännöksiä ja yhtyvät pääuomaansa melkein kohtisuoraan. Suomessa tällaisen rakenteen aiheuttaa esimerkiksi rakoileva graniitti .
+vinokulmaiseksi ( engl. deranged drainage pattern), kun murrokset ja siirrokset risteävät toisensa terävässä kulmassa (ei kohtisuoraan).
+säteittäiseksi ( engl. radial drainage pattern), kun uomaverkostot muodostuvat keskeisen kohdan ympärillä ja laskevat sieltä eri suuntiin. Tällainen tilanne esiintyy esimerkiksi ylänköjen tai yksittäisten vuorten rinteillä (katso valokuva).
+keskihakuiseksi ( engl. centripetal drainage pattern), kun uomaverkostot muodostuvat kaukana toisistaan ja laskevat sieltä kohti alangon tai painauman keskustaa.
+kehämäiseksi ( engl. annular drainage pattern), kun kallioperässä on heikompaa kivilajia kerroksittain keskipisteen suhteen järjestäyneenä. Tällainen tilanne voi syntyä, jos kallioperä on muodostunut emäksisestä syväkivestä tai poimuttuneesta liuskeesta .
+epäsäännölliseksi ( engl. deranged or contorted drainage pattern), kun alkujaan puumainen uomaverkosto peittyy mannerjäätikön alle. Vapauduttuaan jäätiköstä, alueelle on jäänyt paljon hienojakoista moreenia , joka patoaa vettä järviksi, lammiksi ja aiheuttaa alueella soistumista. Uomaverkosto on vielä geologisesti nuorta ja se on vasta aloittanut eroosioon perustuvan kulutuksensa ja uomaverkoston syventämisen. Tällainen tilanne on vallitseva esimerkiksi Suomessa.
+		
+		
+		
+		
+		
+
+
+== Uomien järjestys valuma-alueen sisällä ==
+
+Valuma-alueen uomaverkoston eri sivu-uomille voidaan luoda luokittelu, joka perustuu hierarkiselle järjestykselle. Kullekin uomalle annetaan luokittelunumero, joka ilmaisee sen asemaa uomaverkostossa. Tämän tapaista luokittelua on kirjallisuudessa nimitetty esimerkiksi Strahler-luokitteluksi (, engl. Strahler number, tai Horton–Strahler-luokittelu (engl. Horton–Strahler number)). Valuma-alueen vedenjakajalta valuva vesi kerääntyy aluksi pieniin noroihin, jotka voivat muuttua puroiksi. Maastossa selvästi erottuvat purot luokitellaan Strahler-numerolla 1. Jos kaksi 1. luokan uomaa yhtyvät toisiinsa, luokitellaan yhteinen uoma Strahler-numerolla 2. Sen sijaan, 1. luokan uoma ei yhtyessään 2. luokan uomaan nosta yhtymäkohdasta alkavaa uomaa luokkaan 3, vaan siihen tarvitaan kaksi 2. luokan uomaa. Luokittelu on tarpeen hydrologisessa tarkasteluissa, mutta sen tulokset voidaan pelkistää kahteen nimitykseen: korkeimman Strahler-luvun saanut uoma on osa pääuoma ja muut uomat ovat sivu-uomia tai sivu-uomien sivu-uomia.Jotta Strahler-luokittelua voisi hyödyntää uomaverkoston ekologisissa tarkasteluissa, tulee 1. luokan uomat määritellä oikein. Niissä tehdyt virheet siirtyvät luokittelussa luokkiin 2., 3. ja niin edelleen. Väärä luokittelu voi johtaa vääriin ekologisiin johtopäätöksiin, jolloin sitä ei kannata tehdä nojaamalla pelkästään eptarkkoihin karttoihin. Sen sijaan uomat kannattaa käydä maastossa tarkistamassa, että siinä virtaisi edes jatkuvasti vettä ja että se voidaan varmasti luokitella 1. luokkaan.Strahler-luokittelun luokkanumero korreloi usein uomien sijainnista uomaverkostossa, muulla tavalla tehdyn kokoluokituksen kanssa, uomien pituuden kanssa, vastaavien uomien lukumäärän kanssa ja uomien kaltevuuksien kanssa. Luokituksen järjestysnumero ei kuitenkaan korreloi esimerkiksi uoman pohjanlaadun kanssa.
+
+
+== Huomioita ==
+
+
+== Kirjallisuutta ==
+Horton, R. E.: Erosional developments of streams and their drainage basins; hydrophysical approach to quantitative morphology.  Geological Society of America Bulletin, 1945, nro 56, s. 275–370.  USA:   (englanniksi)Strahler, A. N.: Quantitative analysis of watershed geomorphology.  Transactions, 1957, nro 38, s. 913–920.   American Geophysical Union.   (englanniksi)
+
+
+== Lähteet ==
+
+
+== Aiheesta muualla ==
+Karvonen, Tuomo & Warsta, Lassi: Hydrologisten mallien pilvipalvelu, 5.12.2019
+Briney, Amanda: What is stream order?

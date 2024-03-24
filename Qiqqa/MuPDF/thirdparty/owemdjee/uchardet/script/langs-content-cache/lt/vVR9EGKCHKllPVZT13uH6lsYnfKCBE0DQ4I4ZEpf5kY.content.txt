@@ -1,0 +1,26 @@
+revision: 6586797
+title: Windows XP Mode
+url: https://lt.wikipedia.org/wiki/Windows_Me
+
+
+---
+
+Windows Millennium Edition (Windows Me) – hibridinė 16/32 bitų grafinė operacinė sistema, kurią 2000 m. rugsėjo 14 d. išleido Microsoft kompanija. Originalus versijos kodinis pavadinimas buvo Millennium (pagal anglišką žodį Millenium, reiškiantį tūkstantmetį).
+
+
+== Apžvalga ==
+Išleista po Windows 95 ir Windows 98 pasirodymo rinkoje, Windows Me buvo rinkoje pažymima kaip Windows 2000 (išleistos septyniais mėnesiais anksčiau) versijos „namų rinkai skirta versija“ (angl. home edition). Į ją įėjo Internet Explorer 5.5, Windows Media Player 7, ir pirmąkart pasirodžiusi Windows Movie Maker programinė įranga, kuri suteikė pagrindines video medžiagos montavimo ir karpymo galimybes ir buvo sukurta kaip intuityvi montavimo programa namų vartotojams. Microsoft taip pat šioje versijoje atnaujino grafinę vartotojo sąsają įskaitant tuos grafinės sąsajos atributus, kurie buvo šiek tiek anksčiau pristatyti Windows 2000 operacinėje sistemoje.
+Kitaip nei Windows XP „Home edition“, kuri pakeitė po metų Windows Me, Windows Me nėra pagaminta Windows NT architektūros pagrindu. Windows Me yra MS-DOS (Windows 9x) grįsta versija kaip ir jos pirmtakai, tačiau turėjo „real mode“ MS-DOS (realiojo režimo MS-DOS sistemai) suvaržymus siekiant greitesnio sistemos užkrovimo laiko. Tai buvo vienas iš labiausiai aptarinėjamų pakeitimų Windows Me sistemoje, kadangi tos programos (tokios kaip senesnių diskų tvarkyklės), kurių veikimui reikėjo real mode DOS, nebeveikė Windows Me operacinėje sistemoje. 
+Palyginus su kitomis versijomis, Windows Me buvo rinkoje labai trumpą laiką, nes ji netrukus buvo pakeista Windows XP operacine sistema, kuri buvo išleista 2001 m. spalio 25 d. 
+2006 metais, PC World laikraštis paskelbė Windows Me ketvirtuoju „Blogiausiu visų laikų kompiuterijos produktu“ (Windows Me nusileido tik AOL, RealPlayer ir Syncronys SoftRAM) dėl įvairių techninių problemų ir aspektų.
+
+
+== Sistemos reikalavimai ==
+
+
+== Šaltiniai ==
+
+
+== Nuorodos ==
+Microsoft's Windows Me puslapis
+GUIdebook: Windows Me Galerija Archyvuota kopija 2006-10-04 iš Wayback Machine projekto.

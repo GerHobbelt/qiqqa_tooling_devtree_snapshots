@@ -1,0 +1,35 @@
+revision: 6328433
+title: Olovo-kristal baterija
+url: https://hr.wikipedia.org/wiki/Olovo-kristal_baterija
+
+
+---
+
+Olovo-kristal baterija, vrsta olovne baterije.
+
+
+== Opis ==
+Elektrolit ove baterije neškodljiv je za okoliš, nije otrovan, nema mirisa, ne nagriza i nije korozivan. Kod ove vrste elektrolit je kompozitni na osnovi silicijevog dioksida, za razliku od ostalih olovnih baterija kojima je elektrolit otopina sumporne kiseline, čak i od AGM i GEL VRLA baterija. Pored izostanka štetna ekološkog utjecaja, nemaju nikakva štetna učinka na električne uređaje ili instalacije s kojima se zajedno montiraju. Tehnologija olovo-kristala od otkrića do završnog atestiranog proizvoda trajala je više od desetljeća. Jednostavni su supstitut AGM i GEL baterijama jer su naponi punjenja i održavanja jednaki, što otklanja potrebu zamjene opreme priključene na baterije ili punjače. Također su dimenzije i težina približno isti.
+
+
+=== Otpornost na krajnje pražnjenje i posljedice ===
+Dosta su otpornije od ostalih olovnih baterija. Mogu podnijeti krajnje pražnjenje, ne oštećuje se čak ni kad se u potpunosti isprazni, do 0 volta. Osim toga ne gubi ni na kapacitetu nakon toga pa nakon punjenja poslije krajnjeg pražnjenja opet će imati nazivni kapacitet. Ne podliježe oštećenjima zbog sulfatizacije, čak i ako se baterija ne napuni odmah nakon kranjeg pražnjenja, za razliku od ostalih olovnih baterija koje ostaju trajno oštećene nakon toga.
+
+
+=== Otpornost na temperaturne krajnje vrijednosti ===
+Vrlo dobro podnose temperaturne ekstreme i ne ometaju ih nikoji radni ni klimatski uvjeti. Stabilne su i do +65°C. Ako se prazne na -40°C još uvijek funkcioniraju i iskoristivo im je 40% nazivnog kapaciteta.
+
+
+=== Otpornost na dugotrajno skladištenje ===
+Tek mali dio kapaciteta gubi ako se dugotrajno skladišti bez nadopunjavanja. Dopušta se skladištiti bez nadopunjavanja do 3 godine, neusporedivo više od inih vrsta olovnih baterija koje u takvim uvjetima propadaju.
+
+
+=== Vijek ===
+Prosječno imaju dvaput do triput veći broj ciklusa pražnjenja-punjenja u usporedbi s GEL i ostalim olovnim baterijam. Životni vijek je zbog toga dulji i u praksi traju peterostruko više. Razlog je osjetljivost GEL i AGM baterija na sulfatizaciju i povišenu temperaturu.
+
+
+== Primjena ==
+Sustavi na pogon vjetrom i sunčevom energijom, telekomunikacijama, UPS-ovima, rasvjetnim sustavima, plovilima, vozilima, industriji, rudarstvu i dr.
+
+
+== Izvori ==

@@ -1,0 +1,206 @@
+revision: 6944636
+title: Invarianta maso
+url: https://eo.wikipedia.org/wiki/Invarianta_maso
+
+
+---
+
+Je la speciala teorio de relativeco, la invarianta maso aŭ ripoza maso aŭ simple maso estas la normo de la kvardimensia movokvanto de korpo — alivorte, la mas-ekvivalento de tiu energio, kiun korpo havas en sia referenckadro (“dum ripozo”).
+
+
+== Difino ==
+Supozu ke la energio de korpo estas 
+  
+    
+      
+        E
+      
+    
+     
+  , kaj la (tridimensia) movokvanto estas 
+  
+    
+      
+        
+          
+            
+              p
+              →
+            
+          
+        
+      
+    
+     
+  . Alivorte, la kvardimensia movokvanto estas la ĉi-subo:
+
+  
+    
+      
+        
+          p
+          
+            μ
+          
+        
+        =
+        (
+        E
+        
+          /
+        
+        c
+        ,
+        
+          
+            
+              p
+              →
+            
+          
+        
+        )
+      
+    
+     
+  .(En tio, 
+  
+    
+      
+        c
+      
+    
+     
+   signifas la lumrapidon.) Supozu ke la signaro de la spactempa metriko estas plejparte plusa:
+
+  
+    
+      
+        
+          η
+          
+            μ
+            ν
+          
+        
+        =
+        diag
+        ⁡
+        (
+        −
+        1
+        ,
+        +
+        1
+        ,
+        +
+        1
+        ,
+        +
+        1
+        )
+      
+    
+     
+  .Do, la invarianta maso de la korpo estas la ĉi-suba kvanto:
+
+  
+    
+      
+        
+          m
+          
+            0
+          
+        
+        =
+        
+          
+            −
+            
+              η
+              
+                μ
+                ν
+              
+            
+            
+              p
+              
+                μ
+              
+            
+            
+              p
+              
+                ν
+              
+            
+            
+              /
+            
+            
+              c
+              
+                2
+              
+            
+          
+        
+        =
+        
+          
+            
+              E
+              
+                2
+              
+            
+            
+              /
+            
+            
+              c
+              
+                4
+              
+            
+            −
+            ‖
+            
+              
+                
+                  p
+                  →
+                
+              
+            
+            
+              ‖
+              
+                2
+              
+            
+            
+              /
+            
+            
+              c
+              
+                2
+              
+            
+          
+        
+      
+    
+     
+  .
+
+
+== Propraĵoj ==
+La invarianta maso estas fizika invarianto: ĝi ne dependas de la referenckadro de la observanto.
+
+
+== Eksteraj ligiloj ==
+Weisstein, Eric.  Rest mass (angle). Eric Weisstein’s World of Physics.

@@ -1,0 +1,94 @@
+revision: 70136258
+title: "Akumulator kwasowo-o\u0142owiowy"
+url: https://pl.wikipedia.org/wiki/Akumulator_kwasowo-o%C5%82owiowy
+
+
+---
+
+Akumulator kwasowo-ołowiowy – rodzaj akumulatora elektrycznego, opartego na ogniwach galwanicznych zbudowanych z elektrody ołowiowej, elektrody z ditlenku ołowiu (PbO2) oraz ok. 37% roztworu wodnego kwasu siarkowego, spełniającego funkcję elektrolitu.
+W 1850 roku niemiecki fizyk Wilhelm Josef Sinsteden opracował pierwszy akumulator kwasowo-ołowiowy. Udoskonalenia nadeszły w czasie, gdy gospodarka była nastawiona na efektywne przechowywanie energii. W 1887 roku przedsiębiorca Adolph Müller założył pierwszą niemiecką fabrykę akumulatorów. Pozostałe niemieckie przedsiębiorstwa wkrótce produkowały seryjne akumulatory ołowiowe. Wkrótce produkowano pojazdy z zasilaniem akumulatorowym. Mimo wielu jego wad jest to wciąż najbardziej popularny rodzaj akumulatorów elektrycznych. Występuje w niemal wszystkich samochodach, a także wielu innych pojazdach (np. w wolnobieżnych pojazdach elektrycznych typu Melex). Oprócz tego stanowi często jeden z elementów awaryjnego zasilania budynków, zakładów przemysłowych, szpitali, central telefonicznych i polowych systemów oświetleniowych.
+
+
+== Konstrukcja i działanie ==
+
+Każde ogniwo składa się z:
+
+anody wykonanej z metalicznego ołowiu: (−) w trakcie poboru prądu i (+) w trakcie ładowania
+separatora izolującego elektrody między sobą
+katody wykonanej z PbO2: (+) w trakcie poboru prądu i (−) w trakcie ładowania
+elektrolitu, którym jest ok. 37% wodny roztwór kwasu siarkowego z rozmaitymi dodatkami
+
+
+=== Rozładowywanie ===
+W trakcie poboru prądu z akumulatora, na elektrodach zachodzą następujące reakcje chemiczne:
+
+anoda – utlenianie:
+Pb0 + SO2−4 ⇄ PbIISO4 + 2e− (E° = - 0,356 V)
+katoda – redukcja:
+PbIVO2 + SO2−4 + 4H+ + 2e− ⇄ PbIISO4 + 2H2O (E° = 1,685 V)Na obu elektrodach w trakcie poboru prądu wydziela się siarczan ołowiu(II) (PbSO4). W trakcie ładowania zachodzą dokładnie takie same reakcje, tyle że w drugą stronę.
+W naładowanym akumulatorze gęstość elektrolitu wynosi 1,26–1,28 g/cm³ (w akumulatorach stosowanych w klimacie tropikalnym: 1,23 g/cm³). Proces rozładowywania powoduje zmniejszenie stężenia elektrolitu, jego gęstości i poziomu. Kiedy w rozładowanym akumulatorze napięcie na biegunach spadnie do 1,8 V na ogniwo (10,8 V w 12-woltowym akumulatorze samochodowym), a gęstość elektrolitu do 1,18 g/cm³, akumulator należy niezwłocznie naładować. Stan naładowania można i należy mierzyć areometrem (a nie woltomierzem, zwłaszcza bez obciążenia), każda cela osobno.
+Stan całkowitego rozładowania akumulatora polega na całkowitym przekształceniu obu elektrod w stały siarczan ołowiu i jest odwracalny. Siarczan ołowiu jednak po pewnym czasie przechodzi w stan krystaliczny (elektryczny izolator), powodując tym samym spadek pojemności akumulatora. W takiej sytuacji niemożliwe staje się naładowanie akumulatora, gdyż skrystalizowany siarczan ołowiu nie bierze udziału w procesach chemicznych. W praktyce zapobiega się tzw. zasiarczeniu elektrod stosując specjalną ich konstrukcję, która utrudnia osadzanie się na ich powierzchni nieprzenikalnej warstwy kryształów siarczanu ołowiu. Istnieje też procedura regeneracji (odsiarczania) akumulatorów.
+
+
+=== Ładowanie ===
+
+Proces ładowania polega na podłączeniu akumulatora do odpowiednich biegunów źródła prądu stałego (np. zasilacza lub prostownika) i trwa on około 10 godzin (akumulatory samochodowe ładowane są sukcesywnie podczas pracy silnika, np. za pomocą alternatora – co dla akumulatora nie jest jednak optymalne, powinien być okresowo, szczególnie przed zimą, ładowany poza pojazdem). Prąd ładowania powinien wynosić liczbowo 10% pojemności akumulatora (dla akumulatora 40 Ah prąd ładowania wynosi 4 A). Inne metody ładowania, np. większym prądem lub stałym napięciem, powinno być przeprowadzane zgodnie z zaleceniami producenta. Podczas ładowania napięcie ogniwa wzrasta powoli od ok. 2 V do 2,35 V, potem szybciej. Gęstość oraz poziom elektrolitu rośnie (stąd decyzję o ewentualnym dolaniu wody dokonuje się po naładowaniu, bo można przelać cele i niepotrzebnie rozrzedzić elektrolit – najczęstszy błąd). Po przekroczeniu napięcia 2,4 V zaczyna się rozkład wody na tlen i wodór (tzw. gazowanie akumulatora). Po osiągnięciu napięcia 2,5 V należy przerwać ładowanie, w przeciwnym razie dochodzi do przeładowania akumulatora. Skutkuje to wydzieleniem dużych ilości wodoru (tzw. „zagotowanie”). Wodór w połączeniu z powietrzem tworzy mieszankę wybuchową, która może eksplodować pod wpływem iskry elektrycznej. Stąd ładowanie akumulatorów należy przeprowadzać w dobrze wentylowanych wnętrzach lub na otwartym terenie i unikać iskrzenia przy odłączaniu zacisków prostownika (w pierwszej kolejności należy odłączyć prostownik z sieci). W czasie ładowania w elektrolicie wydziela się ciepło, które przy temperaturze powyżej 40 °C działa szkodliwie na płyty akumulatora. Dlatego np. alternatory samochodowe mają regulację napięcia zależną od temperatury (w lecie celowo zaniżają napięcie, aby nie wygotować elektrolitu, w zimie zawyżają, by przyspieszyć reakcje chemiczne).
+Nieużywany akumulator trzeba okresowo doładowywać aby nie dopuścić do zasiarczenia spowodowanego procesem samorozładowania.
+
+
+=== Pojemność ===
+Pojemność akumulatorów ołowiowych podaje się w amperogodzinach (Ah). Pojemność zależy od sposobu rozładowywania, dlatego wprowadzono pojęcie pojemności 10-godzinnej. Dla przykładu, aby rozładować w ciągu 10 godzin akumulator 40 Ah, należy czerpać z niego prąd o natężeniu 4 A. Niektórzy producenci stosują inne pojęcia pojemności akumulatora, np. pojemność 5-godzinną (5HR) lub 20-godzinną (20HR).
+
+
+=== Obsługa ===
+Utrzymanie klasycznych akumulatorów w nienagannym stanie wymaga stałej okresowej obsługi. W intensywnie użytkowanych akumulatorach należy uzupełniać poziom elektrolitu wodą destylowaną (dotyczy akumulatorów z płynnym elektrolitem), jednak decyzję o tym czego dolać (bo kwasu też może ubywać), dokonujemy tylko i wyłącznie po pomiarze gęstości elektrolitu w stanie naładowanym (najpowszechniejszym błędem obsługi jest dolewanie wody do rozładowanego akumulatora – przy ładowaniu może dojść do przelania nadmiaru). Obniżanie się poziomu elektrolitu i jednoczesne zwiększanie jego gęstości wpływa negatywnie na jego trwałość (tak samo jak sukcesywne rozrzedzanie wodą). Nieużywane akumulatory należy okresowo doładowywać (i sprawdzać gęstość elektrolitu) aby nie uległy zasiarczeniu (proces w dużym stopniu odwracalny). Zużyte akumulatory należy składować w specjalnie przeznaczonych do tego miejscach. Przetrzymywanie ich na własną rękę jest zabronione z powodu wysokiego stopnia zagrożenia dla środowiska.
+
+
+== Akumulatory bezobsługowe i żelowe ==
+Wadą akumulatorów ołowiowych jest ryzyko wycieku z nich kwasu siarkowego oraz parowanie wody powodujące zbyt duże stężenie elektrolitu, co wymaga okresowego jej uzupełniania. Oba problemy rozwiązuje się stosując specjalną konstrukcję uwięzienia elektrolitu w zamkniętej obudowie. Rozróżnia się trzy technologie:
+
+MF (ang. maintenance free) – bezobsługowe klasyczne akumulatory z płynnym elektrolitem o zamkniętej konstrukcji i ograniczonej możliwości otwarcia obudowy;
+AGM (ang. absorbtive glass mat) – akumulatory z płynnym elektrolitem zabsorbowanym w separatorze wykonanym z maty szklanej;
+żelowe (ang. gel) – akumulatory z elektrolitem żelowym. Elektrolity żelowe są nadal wodnymi roztworami kwasu siarkowego, jednak dodaje się do nich środka żelującego (np. żywice silikonowe), który jednocześnie zapobiega parowaniu wody i wyciekom.Akumulatory AGM i żelowe także nazywa się bezobsługowymi, gdyż w zasadzie nie wymagają one kontrolowania składu i ilości elektrolitu.
+Żadna forma elektrolitu nie zapobiega jednak problemom wynikającym z częstego rozładowywania akumulatora. Ładowanie akumulatorów bezobsługowych jest przeprowadzane podobnie jak klasycznych, lecz należy użyć automatycznego prostownika chroniącego akumulator przed przeładowaniem. Kontrola naładowania w tym wypadku polega na obserwowaniu napięcia na zaciskach akumulatora.
+Obudowy akumulatorów nigdy nie są absolutnie szczelne, bo powodowałoby to niebezpieczeństwo wybuchu na skutek dużego wzrostu ciśnienia we wnętrzu w efekcie wydzielania wodoru w przypadku przeładowywania.
+
+
+== Rodzaje akumulatorów i zastosowanie ==
+
+
+=== Akumulator rozruchowy ===
+
+Akumulatory rozruchowe silników spalinowych stanowią największą grupę produkowanych na świecie akumulatorów kwasowo-ołowiowych. Obecnym standardem są baterie akumulatorów o napięciu nominalnym 12 V, zbudowane z sześciu ogniw połączonych szeregowo. W samochodach ciężarowych stosowane są baterie akumulatorów o nominalnym napięciu 24 V. Dawniej były stosowane także baterie akumulatorów o napięciu nominalnym 6 V, używane w motocyklach oraz samochodach (np. Trabant do 1983 roku).
+Akumulatory rozruchowe charakteryzują się bardzo małą rezystancją wewnętrzną, umożliwiając przepływ bardzo dużych prądów. W ujemnych temperaturach maksymalny prąd uzyskiwany z akumulatora jest mniejszy, co może powodować trudności z uruchomieniem pojazdów. Jest to spowodowane tym, że w niższych temperaturach procesy chemiczne zachodzą wolniej. Przy dużych mrozach w rozładowanym akumulatorze o małej gęstości elektrolitu może dojść do zamarznięcia elektrolitu, doprowadzając do jego uszkodzenia (dawniej praktykowane było wyjmowanie akumulatora z samochodu, przechowywanie w ciepłym miejscu i zamontowanie przed uruchomieniem silnika). Wysoka temperatura ma także negatywny wpływ na trwałość akumulatora. Nie powinno się użytkować akumulatorów sprzedawanych w Polsce w temperaturze otoczenia powyżej 40 °C (w krajach o klimacie tropikalnym). Akumulatory rozruchowe nie są zaprojektowane do częstego całkowitego rozładowania, lecz raczej do funkcjonowania w stanie całkowitego naładowania.
+
+
+=== Akumulator do głębokich rozładowań ===
+Akumulatory do głębokich rozładowań są przeznaczone głównie do pracy cyklicznej. Znajdują one zastosowanie w przemyśle, energetyce, odnawialnych źródłach energii. Największą grupę stanowią akumulatory trakcyjne służące do napędu wózków widłowych, Melexów oraz samochodów elektrycznych. Akumulatory tego typu są zbudowane w oparciu o tzw. pancerną płytę dodatnią. Uzyskuje się dzięki temu znacznie większą żywotność na poziomie 1200–1500 cykli rozładowań i ładowań, podczas gdy standardowe akumulatory z płytą pastowaną osiągają żywotność około 500 cykli.
+
+
+=== Baterie stacjonarne ===
+
+Baterie stacjonarne, składające się z pojedynczych ogniw akumulatorów głębokiego rozładowania o napięciu 2 V, stosuje się m.in. w rozwiązaniach buforowego zasilania bezprzerwowego w instalacjach przemysłowych. Zgodnie z zasadami bezpieczeństwa są one montowane w wydzielonym pomieszczeniu z wymuszoną wentylacją, zwanym akumulatorownią.
+
+
+== Akumulator w liczbach ==
+Parametry typowego akumulatora samochodowego, złożonego z 6 ogniw:
+
+siła elektromotoryczna: ok. 12,6 V
+napięcie znamionowe pojedynczego ogniwa: 2,1 V
+minimalne napięcie (wskazujące na stan głębokiego rozładowania): 10,5-10,8 V
+prawidłowe napięcie ładowania zależy od temperatury: 13,8-14,5 V
+po pełnym naładowaniu napięcie szybko spada do 13,2 V, a później powoli do 12,6-12,7 V
+napięcie akumulatora powinno być mierzone 12 godzin po ładowaniu aby zapewnić dokładny pomiar
+wydzielanie wodoru następuje po przekroczeniu napięcia 14,4 V
+w przypadku głębokiego rozładowania akumulatora celowe jest ładowanie go niskim stałym prądem do napięcia nawet 16,5 V
+typowy prąd ładowania to liczbowo 1/10 pojemności akumulatora
+współczynnik samorozładowania: około 3–20% miesięcznie
+wytrzymałość: średnio 500–800 cykli (po czym możliwa jest regeneracja)
+
+
+== Przykładowe parametry ==
+
+
+== Przypisy ==

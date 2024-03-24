@@ -1,0 +1,21 @@
+revision: 6847970
+title: Plasma (KDE)
+url: https://sk.wikipedia.org/wiki/Plasma_(KDE)
+
+
+---
+
+Plasma je súhrnné označenie pre niektoré aplikácie obstarávajúce beh grafického užívateľského rozhrania v prostredí KDE Plasma 5.
+Plasma zahŕňa pracovnú plochu a panely. Na panely aj plochu je možné pridávať rôzne miniaplikácie (napr. indikátor nabitia batérie alebo hodiny). Tieto aplikácie sa nazývajú widgety či plasmoidy.
+Koncepcia miniaplikácií znamená pre užívateľov vyššiu a jednoduchšiu prispôsobiteľnosť tohto prostredia a pre vývojárov možnosť jednoduchšie vytvárať veľmi konkrétne aplikácie. Naopak nevýhodou zo začiatku môže byť zložité ovládanie.
+Do verzie 4.2 bol používaný ako predvolený vzhľad tmavý Oxygen, dnes je východiskovým vzhľadom Breeze. Ten naopak používa svetlé odtiene a priesvitné prvky.
+Logo Plasma sa skladá z oranžovej kvapky, ktorá značí eleganciu a rýchlosť a troch farebných bodiek - programov Kicker (panel), KDesktop (plocha) a Super Karamba (miniaplikácie na ploche). To boli v KDE 3 samostatné programy, v KDE 4 ich funkciu prevzala Plasma. Podľa iných vysvetlení logo značí programovacie jazyky: hlavná C++, v ktorom je celé KDE napísané, a JavaScript, Python a Ruby, v ktorých môžu byť písané miniaplikácie. Tri bodky tiež poukazujú na kombináciu technickej dokonalosti, pekného vzhľadu a použiteľnosti.
+
+
+== Pozri aj ==
+KDE Plasma 5
+
+
+== Zdroje ==
+Tento článok je čiastočný alebo úplný preklad článku Plasma (KDE) na českej Wikipédii.
+Tento článok je čiastočný alebo úplný preklad článku KDE Plasma Workspaces na anglickej Wikipédii.

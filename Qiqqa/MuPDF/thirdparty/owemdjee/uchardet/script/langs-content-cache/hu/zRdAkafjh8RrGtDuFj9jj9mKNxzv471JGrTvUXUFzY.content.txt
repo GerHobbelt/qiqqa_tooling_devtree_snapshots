@@ -1,0 +1,79 @@
+revision: 25135990
+title: Phycodnaviridae
+url: https://hu.wikipedia.org/wiki/A_v%C3%ADrusok_oszt%C3%A1lyoz%C3%A1sa
+
+
+---
+
+A vírusok osztályozása a vírusokat próbálja elhelyezni a biológiai rendszertan keretein belül. A sejtes szerveződésű élőlények viszonylag kiforrott rendszerezéseivel szemben a vírusok osztályozása állandó viták és javaslatok tárgya. Az élő és élettelen határán állnak, és az a tény, hogy szaporodásukban teljes mértékben a gazdasejtre utaltak, arra enged következtetni, hogy a sejtes szerveződés után alakultak ki. Ma leginkább sejtekből kiszakadt, bizonyos önállóságra szert tett, makromolekuláris rendszernek tekintik őket. A vírusok az óceánok leggyakrabban előforduló biológiai entitásai.
+
+
+== Rendszerezésük ==
+A vírusokat főként fenotípusuk alapján rendszerezik, ezen belül a morfológiájuk, nukleinsavtípusuk, szaporodásuk módja, gazdaszervezetük és az általuk okozott betegség jellege szerint. Jelenleg két fő séma kombinációja alapján osztályozzák a vírusokat leggyakrabban. David Baltimore Nobel-díjas biológus kidolgozta a Baltimore-rendszert, ami a vírusokat római I-VII. közötti csoportokba osztotta genomuk típusa és a replikáció módja szerint. Ehhez csatlakoznak a nevezéktani szabályok és irányelvek, amiket az International Committee on Taxonomy of Viruses dolgozott ki.
+A csoportok a következők:
+
+I: kettős szálú DNS-vírusok (dsDNA) (pl. adenovírusok, herpeszvírusok, himlővírusok)
+II: egyszálú DNS-vírusok (ssDNA) (pl. parvovírusok)
+III: kettős szálú RNS-vírusok (dsRNA)(pl. reovírusok)
+IV: (+)egyszálú RNS-vírusok ((+)ssRNA) (pl. picornavírusok)
+V: (−)egyszálú RNS-vírusok ((−)ssRNA) (pl. orthomyxovírusok)
+VI: egyszálú reverz transzkripciós RNS-vírusok (ssRNA-RT) (pl. retrovírusok)
+VII: kettős szálú reverz transzkripciós DNS-vírusok (dsDNA-RT) (pl. hepadnavírusok)
+
+
+== I. Csoport, kettős szálú DNS-vírusok ==
+rend:Caudovirales
+család:MyoviridaePodoviridaeSyphoviridae
+rend:Herpesvirales
+család:AlloherpesviridaeHerpesviridaeMalacoherpesviridae
+rend:Ligamenvirales
+család:LipothrixviridaeRudiviridae
+rendbe besorolatlan családok:AdenoviridaeAmpullaviridaeAscoviridaeAsfarviridaeBaculoviridaeBicaudaviridaeClavaviridaeCorticoviridaeFuselloviridaeGlobuloviridaeGuttaviridaeHytrosaviridaeIridoviridaeMimiviridaeNimaviridaePapillomaviridaePhycodnaviridaePlasmaviridaePolydnaviridaePolyomaviridaePoxviridaeTectiviridae
+családba sorolatlan nemek:DinodnavirusRhizidiovirusSalterprovirus
+
+
+== II. Csoport, egyszálú DNS-vírusok ==
+rendbe besorolatlan családok:AnelloviridaeBidnaviridaeCircoviridaeGeminiviridaeInoviridaeMicroviridaeNanoviridaeParvoviridae
+osztályba sorolatlan nemek:Bacilladnavirus
+
+
+== III. Csoport, kettős szálú RNS-vírusok ==
+rendbe besorolatlan családok:BirnaviridaeChrysoviridaeCystoviridaeEndornaviridaeHypoviridaeMegabirnaviridaePartitiviridaePicobirnaviridaeReoviridaeTotiviridae
+családba sorolatlan nemek:Varicosavirus
+
+
+== IV. Csoport, (+)egyszálú RNS-vírusok ==
+rend:Nidovirales
+család:ArteriviridaeCoronaviridaeMesoniviridaeRoniviridae
+rend:Picornavirales
+család:DicistroviridaeIflaviridaeMarnaviridaePicornaviridaeSecoviridae
+rend:Tymovirales
+család:AlphaflexiviridaeBetaflexiviridaeGammaflexiviridaeTymoviridae
+rendbe besorolatlan családok: AlphatetraviridaeAlvernaviridaeAstroviridaeBarnaviridaeBromoviridaeCaliciviridaeCarmotetraviridaeClosteroviridaeFlaviviridaeHepeviridaeLeviviridaeLuteoviridaeNarnaviridaeNodaviridaePermutotetraviridaePotyviridaeTogaviridaeTombusviridaeVirgaviridae
+családba sorolatlan nemek:BenyvirusCilevirusIdaeovirusOurmiavirusPolemovirusSobemovirusUmbravirus
+
+
+== V. Csoport, (−)egyszálú RNS-vírusok ==
+rend:Mononegavirales
+család:BornaviridaeFiloviridaeParamyxoviridaeRhabdoviridae
+rendbe besorolatlan családok:ArenaviridaeBunyaviridaeOphioviridaeOrthomyxoviridae
+családba besorolatlan nemek:DeltavirusEmaravirusTenuivirus
+
+
+== VI. Csoport, egyszálú reverz transzkripciós RNS-vírusok ==
+rendbe besorolatlan családok:MetaviridaePseudoviridaeRetroviridae
+
+
+== VII. Csoport, kettős szálú reverz transzkripciós DNS-vírusok ==
+rendbe besorolatlan családok:CaulimoviridaeHepadnaviridae
+
+
+== Besorolatlan csoportok ==
+Viroidok:AvsunviroidaePospiviroidae
+
+
+== További információk ==
+
+ICTV Taxonomic Information
+MicrobiologyBytes: 8th ICTV Index classification
+The Baltimore Method

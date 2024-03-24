@@ -1,0 +1,51 @@
+revision: 15328478
+title: MP3
+url: https://ro.wikipedia.org/wiki/MP3
+
+
+---
+
+MP3 (MPEG-1/2 Layer 3) este un format audio multimedia, având la bază comprimarea sunetului cu ajutorul metodei de comprimare a datelor cu pierdere, numite în engleză „lossy MPEG compression” (datele care nu pot fi auzite în mod normal nu sunt incluse în fișier). Dezvoltat de Institutul Fraunhofer din Germania, MP3 a fost a treia reușită a acestuia, după MPEG Audio (folosit pentru casetele digitale Philips DCC) și MPEG Layer 2 (utilizat la sonorul Video). Un fișier MP3 este de aproape zece ori mai mic decât fișierul audio original, dar sunetul este de aproape aceeași calitate ca și pe CD. Fișierele MP3 au devenit cel mai popular mijloc de stocare a fișierelor cu muzică atât pe calculatoare, cât și pe dispozitivele portabile. 
+
+
+== Structura ==
+
+
+== Istorie ==
+Încă din 1987, institutul lol[Fraunhofer] din Germania a început să lucreze la un proiect destinat compresiei audio cu metoda descrisă mai sus, bazat pe tehnica perceptual coding. Este vorba de un algoritm care exploatează slăbiciunile urechii umane, oferind un sunet cât mai apropiat de cel original. 
+În 1894, fizicianul american Alfred M. Mayer a raportat faptul că un ton poate fi redat inaudibil de un alt ton cu frecvență mai mică. În 1959 Richard Ehmer a descris un set complet de curbe auditive în ceea ce privește acest fenomen. Între 1967 și 1974, Eberhard Zwicker a lucrat în domeniile reglării și mascării benzilor critice de frecvență și care la rândul său s-a bazat pe cercetările fundamentale din zonă de la Harvey Fletcher și colaboratorii săi de la Bell Labs.
+Formatul MPEG Audio MPA ( mpeg audio ) este prima reușită a institutului si a fost folosit doar pentru casetele digitale Philips DCC (Digital Compact Casette, un competitor al lui MiniDisc-urilor Sony) între anii 1992 și 1996. Urmașul său, MPEG Layer 2 (MP2), a fost utilizat pentru sonorul Video CD-urilor și a altor dispozitive multimedia, fiind relativ răspândit și astăzi în domeniul video. A treia versiune a standardului, MPEG Audio Layer 3, are avantajul unei calități audio ridicate, ce i-a adus o popularitate foarte mare. Odată cu răspândirea Internet-ului și implicit a rețelelor de partajat resurse tip "P2P" ( o retea de partajat resurse tip 'peer to peer' permite accesarea concomitenta de fisiere intre mai multi utilizatori ), fenomenul MP3 a luat amploare, devenind un mijloc ilegal de transfer și stocare a muzicii ilegal ( vezi cazul Metallica-Napster ).
+
+
+== Modul de lucru ==
+
+Perceptual coding este o tehnică ce permite eliminarea cu o acuratețe destul de mare a sunetelor pe care urechea noastră nu le poate distinge, bazându-se pe un model psihoacustic, adică modul în care urechea umană percepe undele sonore. În principiu, se caută crearea unui astfel de model care să ducă la înmagazinarea sunetului folosind cât mai puțini biți; nu se exclude posibilitatea unui sunet total diferit din punct de vedere matematic (eșantioane cu valori depărtate de original) în condițiile în care urechea umană nu observă nici o diferență.
+Scăderea calității sunetului este datorată apariției de „goluri” în cazul frecvențelor înalte, ducând la apariția a două fenomene nedorite: dedublarea semnalelor și ringing-ul. Pentru a evita acest lucru, aceste frecvențe sunt pur și simplu eliminate din pasajul muzical, sunetul rezultat fiind „închis”, foarte asemănător cu cazul downsampling-ului. Cu alte cuvinte, downsampling-ul elimină prin natura sa frecvențele înalte, pe când la compresia MP3 această eliminare este necesară pentru păstrarea calității sunetului în limite decente. În plus, chiar dacă aliasing-ul nu este supărător într-un caz particular, frecvențele joase și medii sunt cele mai evidente într-un pasaj muzical, deci avem un motiv în plus pentru a nu ocupa relativ inutil biții (și așa puțini) cu frecvențele înalte.
+Tehnic vorbind, este vorba de o combinație dintre doi algoritmi: subband și transform. În cazul unui codec de tip subband, informația audio este separată în funcție de frecvențe, segmentele fiind procesate independent, folosindu-se o acuratețe variabilă, potrivită modului de percepție al urechii. Pentru reținerea unui sunet de calitate este însă necesar un bitrate mare. Pentru un codec de tip transform, sunetul suferă o transformare cosinus (MDCT = Modified Discrete Cosine Transform). Această combinație mai mult sau mai puțin fericită duce la inferioritatea lui MP3 în fața multor alte formate subband, precum MPEG Audio și MPEG Layer 2, dar numai la bitrate-uri mari, adică exact în situațiile în care urechea umană nu (prea) mai face diferența. MP3 moștenește de la ambii algoritmi punctele slabe: calitatea slabă la bitrate-uri foarte mici, sub 128 kbps - de la subband, și imposibilitatea atingerii unei calități foarte bune la bitrate-uri mari - de la transform (materializată în problema pre-echo). El nu este altceva decât un compromis de calitate creat pentru necesitățile anilor '90.
+
+
+== Encodere și setări recomandate ==
+LAME (Lame Ain't an MP3 Encoder), un encoder open-source, este pentru moment encoder-ul ce oferă calitate maximă în cazul comprimării sunetului folosind algoritmul MP3.
+Începuturile lui LAME datează din 1998, când un anume Mike Cheng a modificat surselele standard de codare MP3, primele versiuni de LAME fiind simple patch-uri aplicate codului original. Cu timpul, LAME a fost îmbunătățit de numeroși programatori, codul fiind rescris și adăugându-i-se facilități deosebite, precum tehnica VBR. În anul 2000 a depășit din punct de vedere al calității concurentul direct sub acest aspect codarea FhG, în diversele sale variante comerciale.
+Setările recomandate constau în folosirea unor preset-uri, care conferă o configurație optimă a parametrilor, determinând obținerea calității maxime la un anumit bitrate. Aceste preset-uri sunt --alt-preset standard, --alt-preset extreme și --alt-preset insane, ele generând un bitrate de aproximativ 192, 256 și respectiv exact 320 kbps. În general, nu este folosită direct aplicația Lame, ci se apelează la frontend-uri, ce au rolul de a ușura operația de comprimare și care deseori sunt însoțite de o funcție de ripping a pieselor muzicale de pe CD-urile audio.
+
+
+== Note ==
+
+
+== Vezi și ==
+LAME
+MPEG
+Podcasting
+
+
+== Legături externe ==
+
+MP3 la DMOZ
+Situl oficial al proiectului LAME Arhivat în 1 decembrie 2015, la Wayback Machine.
+Forum de discuții legate de formatul MP3 Arhivat în 30 august 2005, la Wayback Machine.
+Articol incomplet despre formate de comprimare Arhivat în 8 octombrie 2007, la Wayback Machine.
+FLASH TO MP3
+
+
+== Bibliografie ==

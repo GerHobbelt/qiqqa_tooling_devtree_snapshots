@@ -1,0 +1,264 @@
+revision: 205090066
+title: Morse Code
+url: https://fr.wikipedia.org/wiki/Code_Morse_international
+
+
+---
+
+Le code Morse international, ou l’alphabet Morse international, est un code permettant de transmettre un texte à l’aide de séries d’impulsions courtes et longues, qu’elles soient produites par des signes, une lumière, un son ou un geste.
+Ce code est souvent attribué à Samuel Morse, cependant plusieurs contestent cette primauté, et tendent à attribuer la paternité du langage à son assistant, Alfred Vail,,.
+Inventé en 1838 pour la télégraphie, ce codage de caractères assigne à chaque lettre, chiffre et signe de ponctuation une combinaison unique de signaux intermittents. Le code morse est considéré comme le précurseur des communications numériques.
+Le morse est principalement utilisé par les militaires comme moyen de transmission, souvent chiffrée, ainsi que dans le civil pour certaines émissions à caractère automatique : radiobalises en aviation, indicatif d’appel des stations maritimes, des émetteurs internationaux (horloges atomiques), ou bien encore pour la signalisation maritime par certains transpondeurs radar et feux, dits « à lettre morse » (par exemple, la lettre A transmise par un tel feu sous la forme .- signifie « eaux saines »). Le morse est également pratiqué par des amateurs comme de nombreux radioamateurs, scouts (morse sonore et lumineux), plongeurs ou alpinistes (morse lumineux), par des joueurs pour résoudre des énigmes, ainsi que comme sonnerie par défaut de réception de message pour les téléphones portables de marque Nokia (« SMS SMS » en morse).
+
+
+== Utilisation du morse ==
+
+Le code peut être transporté via un signal radio permanent que l’on allume et éteint (onde continue, généralement abrégé en CW, pour continuous wave en anglais), ou une impulsion électrique à travers un câble télégraphique (de nos jours remplacé par d'autres moyens de communication numérique), ou encore un signal visuel (flash lumineux). L’idée qui préside à l’élaboration du code morse est de coder les caractères fréquents avec peu de signaux, et de coder en revanche sur des séquences plus longues les caractères qui reviennent plus rarement. Par exemple, le « e », lettre très fréquente, est codée par un simple point, le plus bref de tous les signes. Les 25 autres lettres sont toutes codées sur quatre signaux au maximum, les chiffres sur cinq signaux. Les séquences plus longues correspondent à des symboles les plus rares : signes de ponctuation, symboles et caractères spéciaux.
+Parallèlement au code morse, des abréviations commerciales plus élaborées ont été créées codant des phrases complètes en un seul mot (groupe de 5 lettres). Les opérateurs de télégraphie conversaient alors en utilisant des mots tels que BYOXO (Essayez-vous de vous dérober ?), LIOUY (Pourquoi ne répondez-vous pas à la question ?) et AYYLU (Confus, réitérez plus clairement). L’intention de ces codes était d’optimiser le coût des transmissions sur les câbles. Les radioamateurs utilisent toujours certains codes appelés code Q et code Z. Ils sont utilisés par les opérateurs afin de s’échanger des informations récurrentes, portant par exemple sur la qualité de la liaison, les changements de fréquences et les télégrammes.
+
+
+=== Service maritime ===
+
+Les premières liaisons radiotélégraphiques sans fil utilisant le code morse datent du début du XXe siècle. En 1903, la conférence de Berlin attribue la longueur d’onde de 600 mètres (500 kHz) au trafic en radiotélégraphie morse en mer et officialise en 1906 le signal SOS comme appel de détresse. Jusqu’en 1987, plusieurs conférences mondiales des radiocommunications définissent les bandes à utiliser pour les communications en télégraphie morse.
+Depuis le 1er février 1999, dans le cadre du SMDSM 1999, les services maritimes côtiers et mobiles de France et de nombreux autres pays ont abandonné la veille radiotélégraphique obligatoire et cessé les émissions en morse, notamment sur la fréquence de 500 kHz (maritime et aéronautique) et sur la fréquence de 8 364 kHz, affectées au trafic de détresse ou d’appel en radiotélégraphie, depuis les années 1970, un système de satellites de télécommunications ayant pris le relais. À partir de ce moment, le trafic maritime radiotélégraphique et radiotéléphonique utilisant les ondes hertziennes commence à décliner lentement. Cependant, il existe encore à ce jour (2010) des fréquences internationales affectées par l’UIT à la diffusion de l’heure, de la météo marine ou aux communications maritimes en radiotélégraphie (parmi d’autres, 4 182 kHz à 4 186,5 kHz, ou 4 187 kHz à 4 202 kHz pouvant aussi être utilisé par l’Aviation civile). La bande des 600 mètres notamment reste utilisée par une vingtaine de pays dans le monde, parmi lesquels : l’Arabie saoudite, l’Argentine, l’Azerbaïdjan, le Cameroun, la Chine, la république du Congo, Djibouti, l’Érythrée, les États-Unis, l’Indonésie, l’Italie, l’Irlande, Oman, la Roumanie, la fédération de Russie, les Samoa américaines et les Seychelles. À quelques exceptions près, la plupart des stations maritimes encore en activité n’émettent plus en morse que leur indicatif d’appel et éventuellement leur fréquence d’émission. Aujourd’hui, certaines fréquences destinées au trafic en CW  de la marine marchande ont encore une affectation, même si elles ne sont plus utilisées que par quelques pays et très rarement.
+Depuis le début du XXe siècle et l’invention de la lampe Aldis, les bateaux peuvent également communiquer en morse lumineux. Alors que la capacité à émettre de tels signaux reste exigée pour devenir officier de la marine marchande dans de nombreux pays, dont la France, cette pratique a tendance à devenir rare et ne se retrouve plus que dans la marine de guerre et chez certains plaisanciers.
+
+
+=== Service aéronautique ===
+
+Les premières liaisons radiotélégraphiques aéronautiques remontent au début du XXe siècle et ont cessé avant les années 1970, à une époque où les ballons dirigeables et les avions communiquaient en radiotélégraphie dans la bande aéronautique des 900 mètres (333,33 kHz), en vol au-dessus des mers et des océans dans la bande marine des 600 mètres (500 kHz), sur la longueur d’onde de radiogoniométrie de 450 mètres (666,66 kHz) et jusqu’en 1930 pour un échange de correspondances transcontinental radiotélégraphique au-dessus des océans dans la bande des 1 800 mètres (166,66 kHz).
+En vol une antenne pendante longue de 120 mètres à 450 mètres avait pour but d'établir les communications radiotélégraphiques sur ces longueurs d’onde. À l’extrémité de l’antenne pendait un plomb de lest avec l’indicatif radio de l’aéronef.
+Une autre antenne tendue le long de la coque de l’aéronef établissait (à courte distance) les communications radiotélégraphiques en vol et au sol sur la longueur d’onde de 900 mètres (333,33 kHz) et dès 1930 les communications radios NVIS.
+Les fréquences utilisées autrefois par l’aviation pour les communications (notamment celles voisines de 300 kHz) sont aujourd’hui attribuées aux radiobalises de type NDB qui émettent des signaux radiotélégraphiques automatisés (indicatif composé de deux à trois lettres, transmis en morse à intervalles réguliers). L’aviation utilise également la sous-bande VHF pour d’autres types de radiobalises (systèmes VOR et ILS) qui transmettent également leurs indicatifs (de 3  à   4 lettres) en morse. Pour ce qui est des communications radiotéléphoniques, elles s’effectuent de nos jours sur les bandes VHF pour le trafic local, et HF pour le trafic transcontinental ou transocéanique.
+
+
+=== Usage militaire ===
+Dans certaines circonstances, la radiotélégraphie présente des avantages par rapport à la radiotéléphonie : par exemple, en cas de fort parasitage, il est plus aisé de reconnaître les signaux codés en morse que ceux, beaucoup plus complexes, transmis par la voix. Également, la radiotélégraphie s’avère être un moyen de communication plus discret que la radiotéléphonie qui demande de prononcer les mots hautement et clairement. Pour ces raisons, la plupart des armées dans le monde forment des officiers radio maîtrisant la télégraphie et disposent de fréquences réservées par l’UIT.
+Il arrive également que les navires de guerre, s’ils sont suffisamment proches, utilisent le morse lumineux appelé le Scott pour communiquer à l’aide d’un projecteur, d'un feu de mâture visible sur tout l'horizon (FVTH) ou d'une lampe Aldis. C’est par exemple le cas lorsqu’ils sont contraints d’observer une période de silence radio.
+
+
+=== Utilisation par les radioamateurs ===
+Les radioamateurs utilisent assez fréquemment le code morse pour les communications de loisir en radiotélégraphie et jouissent à cet effet de fréquences allouées par l’UIT.
+Jusque dans les années 1990, pour obtenir la licence de radioamateur aux États-Unis (de la FCC), il fallait être capable d’envoyer 5 mots encodés en morse par minute. La licence avec le plus de droits exigeait 20 mots par minute. L’épreuve actuelle de lecture au son à l’examen (jusqu'en 2011 en France, uniquement pour la 1re classe de radioamateurisme) requiert une vitesse minimum de 12 mots par minute. Les opérateurs radio militaires et radioamateurs entraînés peuvent comprendre et enregistrer jusqu’à 40 mots par minute.
+Le Règlement des radiocommunications (RR) se compose de règles liées au service de radio amateur. Il est révisé tous les trois ans à la Conférence mondiale des radiocommunications (CMR). La révision de l’article 25 du Règlement des radiocommunications à la Conférence de 2003, en particulier, a supprimé l’exigence de connaissance du code Morse à l’utilisation des fréquences inférieures à 29,7 MHz. Cela affecte la plupart des pays, mais certains (dont la Russie) continuent (en 2008) à l’exiger.
+
+
+=== Autre ===
+On connaît plusieurs cas avérés d’utilisation par les espions du code morse. On soupçonne d’ailleurs ces derniers d’effectuer régulièrement des communications chiffrées utilisant le morse.
+Le code morse permet de transmettre un texte à distance à l’aide d’un signal lumineux. Il est à ce titre un passe-temps présent notamment chez les scouts et éclaireurs. Pour les mêmes raisons, le code a été adopté par certains sportifs que les activités amènent à être isolés : alpinistes ou plongeurs par exemple. Le morse peut entre autres servir à signaler une situation de détresse.
+Il existe un exemple célèbre d'utilisation du code morse faite par un prisonnier de guerre, Jeremiah Denton, lors d'une interview télévisée de propagande réalisée par ses gardiens nord-vietnamiens en 1966. Tout en parlant, il énonça le mot « torture » par une série de clignements des yeux.
+
+
+== Code Morse de Samuel Morse ==
+
+La version originale du code Morse est développée au milieu des années 1830 par Samuel Morse et Alfred Vail pour leur télégraphe électrique ; également connu sous le nom American Morse Code et Railroad Morse.
+Le code Morse américain est utilisé pour la première fois sur la ligne télégraphique Baltimore-Washington. Après de nombreux essais et réglages, le premier télégramme public fut envoyé le 24 mai 1844 avec la phrase « Qu'est-ce que Dieu a fait ».
+La plupart des autres pays du monde adoptent le « code Morse international», les entreprises qui ont continué à utiliser le code Morse original étaient principalement situées aux États-Unis (le code Morse américain est dans les musées des chemins de fer américains et dans les reconstitutions de la guerre civile américaine.) 
+Le « code Morse international » a supplanté les différents codes Morse.Le code Morse international est la référence mondiale.
+Différents types de code morse ont été utilisés, chacun avec ses particularités quant à la représentation des symboles de l’anglais écrit. Le code morse américain a été utilisé dans le système télégraphique à l’origine de la première télécommunication à longue distance. Le code Morse international est le code le plus communément utilisé de nos jours.
+C’est en 1838 que Friedrich Clemens Gerke crée un alphabet « morse » très proche de celui que nous connaissons actuellement. Il s'agit d'une modification du code morse originel, plus tard appelé code morse américain. Auparavant, certains espaces étaient plus longs que le point à l'intérieur même d'un caractère, ou le trait pouvait être plus long, comme pour la lettre L. Gerke simplifie le code en n'utilisant plus que deux longueurs standards, le point et le trait.
+Deux types d’impulsions sont utilisés. Les impulsions courtes (notées « . », point) qui correspondent à une impulsion électrique de 1⁄4 de temps et les longues (notées « - », trait) à une impulsion de 3⁄4 de temps, les impulsions étant elles-mêmes séparées par 1⁄4 de temps (l’unité de temps élémentaire étant alors voisine de la seconde pour la manipulation et l’interprétation humaine).
+Alors que se développent de plus en plus de variantes du code Morse dans le monde, l'ITU adopte en 1865, comme code morse international, l'alphabet morse de Gerke avec quelques modifications. Il sera rapidement utilisé en Europe. Les compagnies de (radio)télégraphie américaines continueront à utiliser le code originel, qui sera alors appelé code morse américain.
+Le code morse international est toujours utilisé aujourd’hui (certaines parties du spectre radio sont toujours réservées aux seules transmissions en morse). Utilisant un simple signal radio non modulé, il demande moins d’équipement pour envoyer et recevoir que d’autres formes de communications radio. Il peut être utilisé avec un bruit de fond important, un signal faible et demande très peu de bande passante.
+
+
+== Représentation et cadence ==
+On utilise deux symboles « positifs », appelés point et trait (ou « ti » et « taah »), et deux durées d’espacement, la coupure élémentaire entre signaux et l’espace séparant les mots. La durée totale d’émission d’un trait (y compris la coupure élémentaire entre signaux) détermine la vitesse à laquelle le message est envoyé, elle est utilisée en tant que cadence de référence. Un message simple serait écrit (où « ▄ » représente « ti » et « ▄▄▄ » représente « taah ») :
+
+▄▄▄ ▄ ▄▄▄ ▄   ▄▄▄ ▄▄▄ ▄▄▄   ▄▄▄ ▄ ▄   ▄       ▄▄▄ ▄▄▄   ▄▄▄ ▄▄▄ ▄▄▄   ▄ ▄▄▄ ▄   ▄ ▄ ▄   ▄
+
+     C             O           D      E          M           O           R        S     E 
+
+Voici la cadence du même message (« = » signifie « signal actif », « · » signifie « signal inactif », chacun ayant pour durée un « ti ») :
+
+===·=·===·=···===·===·===···===·=·=···=·······===·===···===·===·===···=·===·=···=·=·=···=
+   ^      ^    ^          ^               ^
+   |      ti   ta         |               espace entre les mots (7 points)
+   |                      espace entre les lettres (3 points)
+   | 
+   espace entre les symboles
+
+Conventions de cadence :
+
+Le rythme élémentaire est donné par la durée du point, le « ti ». Il se note par un point « . ».
+Un « taah » est conventionnellement 3 fois plus long qu’un « ti ». Il se note par un trait horizontal « – ».
+L’espacement entre les « ti » et « taah » dans une lettre a la longueur d’un « ti ». Il se note par le passage d’un symbole à l’autre.
+L’espacement entre les lettres d’un mot a pour longueur un « taah » (3 « ti »). Il se note par un espace.
+L’espacement entre les mots est d’au moins 5 « ti » (7 recommandés, comme ici). Il se note par une barre oblique « / ».Les personnes familières du morse écriraient donc « code morse » ainsi : -.-. --- -.. . / -- --- .-. ... . et le prononceraient « taahtitaahti taahtaahtaah taahtiti ti, taahtaah taahtaahtaah titaahti tititi ti ».
+Il existe d'autres formes de représentation, la représentation compressée, par exemple, qui associe au « ti » un point en bas, et au « taah » un point en haut ou encore le morse en dents de scie.
+
+
+== Génération des messages ==
+
+Les opérateurs composent des messages en morse à l’aide d'un dispositif appelé manipulateur.
+
+Les modèles les plus simples (pioches) ne comportent qu’une seule touche : un signal est envoyé lorsque cette dernière est enfoncée. L’opérateur doit donc calibrer lui-même la durée des points et des traits, ce qui donne à chaque émission un caractère personnel, mais demande trois ou quatre mouvements de doigt par signe.Les modèles plus évolués (dits « iambiques ») comportent deux palets, dont l’un génère les traits, et l’autre génère les points, l’appui simultané déclenchant l’alternance point-trait. Avec un tel manipulateur, un seul « mouvement » de deux doigts tenant la tige levier du manipulateur par caractère, en poussant à gauche le dit levier pour (entre pouce et index) produire les points et à droite pour produire les traits, c’est un circuit logique, en général incorporé à l’émetteur, qui génère intervalles, traits et points de durées appropriées, et qui sont de ce fait réglables. Ce type de manipulateur permet une moindre fatigue, et par là même une possibilité de manipulation plus rapide, avec pour résultat final une meilleure transmission du message en morse, mais la maîtrise en est nettement plus ardue que pour l'usage du manipulateur classique (type pioche), et est réservée en quelque sorte à « l'élite » des opérateurs de code morse.La vitesse de manipulation s’exprime en mots par minute, et varie d’une dizaine de mots par minute pour un débutant ou une identification d’émetteur compréhensible par tous, à 60 mots par minute ou plus pour un manipulateur expert. Le record est détenu par Theodore Roosevelt McElroy qui atteint le score de 75,2 mots par minute au championnat mondial de 1939, à Asheville.
+Il existe également des générateurs informatiques automatiques, qui sont généralement couplés avec des décodeurs automatiques.
+
+
+== Tables d’encodage ==
+Voici quelques tables récapitulant l’alphabet morse et quelques signes communément utilisés.
+
+
+=== Lettres ===
+
+
+=== Chiffres ===
+
+
+=== Signes de ponctuation et symboles ===
+Note : le symbole « @ » a été ajouté en 2004. Il combine le A et le C en un seul caractère.
+
+
+=== Extension aux caractères internationaux ou digrammes [réf. souhaitée] ===
+
+
+=== Codes spéciaux ===
+Abréviations et signaux divers à employer dans les radiocommunications du service mobile maritime.
+
+Une erreur fréquente est de considérer le code de détresse international comme la succession des lettres « S O S » et de l’envoyer en tant que tel (=·=·=···===·===·===···=·=·=). La bonne façon de l’envoyer est en enchaînant les 9 éléments comme s’ils formaient une seule lettre (=·=·=·===·===·===·=·=·=).
+
+
+== Autres langues et alphabets ==
+Lorsque étendre l’alphabet morse à d’autres lettres ne suffit pas, on recourt à d’autres codes.
+Ainsi, le code wabun est utilisé pour transmettre du texte en japonais. Les symboles représentent des kana syllabiques.
+En Chine, un autre système était utilisé, le code télégraphique chinois (en).
+
+
+== Méthode d'apprentissage ==
+
+
+=== Méthode Koch ===
+Cette méthode a été inventée par un psychologue allemand, Ludwig Karl Koch, dans les années 1930. C'est une des méthodes permettant un apprentissage rapide du morse.
+Cette méthode considère que :
+
+c'est une erreur d'associer un code visuel à chaque lettre, parce qu'il est invariablement divisé en ces constituants : le ti et le ta ;
+chaque code doit garder son caractère unitaire, pour cela :
+utiliser dès le départ une vitesse d'au moins 12 mots/minute,
+mettre en avant la mélodie des codes en utilisant une fréquence légèrement différente pour le ta (en réduisant cette différence au fur et à mesure) ;
+il faut pratiquer dès le départ avec des blocs de 5 lettres (optionnel).La méthode Koch nécessite un ordinateur (équipé d'un logiciel spécifique) ou un professeur pour pouvoir écouter du code. En commençant tout de suite avec une vitesse supérieure à 12 mots/minute, elle permet d'apprendre à écouter du code morse correct, et non déformé par une vitesse faible. Elle permet aussi la reconnaissance des caractères par réflexe et sans phase de réflexion (ce qui est de toute façon impossible à une telle vitesse, et aux vitesses supérieures).
+Dans les méthodes « traditionnelles », on apprend l'ensemble de l'alphabet et on pratique à une vitesse faible, par exemple, 5 mots/min. Avec la méthode Koch, on commence par reconnaître seulement 2 caractères, puis 3, puis 4… mais une vitesse d'au moins 12 mots/minute. Cela évite les frustrations du « plateau des 10 mots/minute » des méthodes « traditionnelles ».
+On utilise traditionnellement cet ordre pour les caractères : K, M, R, S, U, A, P, T, L, O, W, I, « . », N, J, E, F, 0, Y, « , », V, G, 5, « / », Q, 9, Z, H, 3, 8, B, « ? », 4, 2, 7, C, 1, D, 6, X, <BT>, <SK>, <AR>
+
+
+=== Méthode Farnsworth ===
+Donald R. « Russ » Farnsworth propose dans sa méthode d'utiliser la vitesse cible pour l'apprentissage (commencer tout de suite à 20 mots/minute, par exemple) mais avec des espaces inter-mots et inter-lettres plus élevés que requis par la vitesse cible. Elle donne ainsi plus de temps à la compréhension de chaque signe, tout en utilisant une vitesse élevée dès le départ pour la reconnaissance des signes.
+On peut d'ailleurs combiner la méthode Farnsworth avec la méthode Koch : en commençant à 20 mots/minute, avec 2 caractères, avec des espaces triples par rapport à la normale, par exemple.
+
+
+== Moyens mnémotechniques ==
+Il existe différents moyens mnémotechniques assez simples pour apprendre les 26 lettres de l’alphabet en morse mais vu qu’ils induisent des ralentissements dans la compréhension des messages, il n’est pas recommandé de les utiliser pour apprendre le morse à l’oreille.
+
+
+=== Méthode des consonances en « o » ou « on » ===
+Dans le tableau ci-dessous, un mot est affecté à chaque lettre de l’alphabet. Ces mots se trouvent dans les 3e et 4e colonnes du tableau. Au cas où plusieurs mots possibles sont affectés à une lettre, il suffit d’en choisir un. Le procédé mnémotechnique consiste simplement à apprendre une liste de 26 mots correspondant aux 26 lettres de l’alphabet.
+Chaque mot traduit le codage morse de la lettre qui lui est associée. Pour chaque syllabe du mot on a un ▄ ou un ▄▄▄. Le ▄▄▄ sera représenté pour une syllabe à consonance « o » ou « on » et le ▄ pour toutes les autres syllabes.
+Par exemple, pour la lettre P, le mot « psychologie » (Psy/cho/lo/gie) a ses 2 syllabes centrales en « o » (cho/lo), les autres n’ont pas de consonance en « o » ou en « on ». Le code de la lettre P est donc .--. avec 2 signaux longs pour les 2 syllabes centrales et 2 courts aux extrémités pour les syllabes restantes.
+
+
+=== Méthode des voyelles-consonnes ===
+Un autre moyen est d’utiliser les mots de la dernière colonne du tableau. Pour chaque lettre des mots on a un ti ou un ta. Une consonne représente un ta et une voyelle un ti.
+Il existe une règle différente pour les lettres composées uniquement de points ou de traits. Il faut retenir les mots mnémotechniques :
+
+« E I S H » pour celles composées de points ;
+« T M O CH» pour celles composées de traits.La position de la lettre dans ces mots renvoie au nombre de traits ou de points.
+Par exemple, le S est codé par 3 points car la lettre est en 3e position dans le mot « EISH »
+
+
+=== Tableau mnémotechnique ===
+Le code morse est facilement mémorisable à l’aide des codes courts et longs remplacés par des syllabes. Le code long (-) remplacé par une syllabe en « o ». Le code court (.) remplacé par une des autres voyelles. Par exemple, A = .- = Al/lO (une syllabe en « a » pour le . et une syllabe en « o » pour le -).
+Pour l’utilisation de la méthode consonne-voyelle, toute consonne remplace un trait (-) alors que toute voyelle signifie un point (.). L’idéal étant de trouver un mot correspondant qui comprend la lettre ou le son et l’on obtient ainsi :
+
+Il est aussi simple de mémoriser le S et le O grâce au fameux signal SOS : trois brèves, trois longues, trois brèves (...---...).
+
+
+=== Arbre mnémotechnique de décodage ===
+Pour les personnes qui ont plutôt une mémoire visuelle, il est également possible de retenir l’alphabet morse en utilisant un arbre binaire :
+
+Les lettres sont regroupées par 2, celle de gauche représentant un (.) et celle de droite un (-). Un symbole (*) est mis quand il n’existe pas de lettre correspondant au code de l’emplacement. Dans cet arbre, le « CH » et les chiffres ne sont pas représentés (car réduisant la lisibilité de l’arbre et ayant peu d’intérêt), mais il ne tient qu’au lecteur de les ajouter pour obtenir un arbre complet. Cela ajouterait une ligne et remplacerait le symbole (*) correspondant à (----).
+Pour retenir cet arbre, on peut se servir des groupes de lettres et les retenir dans l’ordre des lignes : ET/IA/NM/SU/RW… avec pour chaque groupe un moyen. On peut trouver ses propres moyens à partir de choses côtoyées tous les jours et abrégées, pour plus de facilité à le mémoriser. Sinon on peut reprendre ceux-ci :
+
+ET comme le célèbre « ExtraTerrestre » de fiction ;
+IA pour « Intelligence Artificielle » ;
+NM pour « Nautical Miles (mile nautique) » ;
+SU pour Soukhoï (marque aéronautique russe), ou « Soviet Union » (en anglais) ;
+RW pour CD-RW (CD réinscriptible) ;
+DK comme « Donkey Kong », ou le code du Danemark ;
+GO comme « Go! » (Partez !) ou « Grandes Ondes » ;
+HV par paraphonie avec « HiVer » ou « achever » ;
+F*/L* pour « Flight Level » (aéronautique en anglais) ; attention à retenir qu’ils sont séparés ;
+PJ comme « Police Judiciaire » ;
+BX comme le modèle chez Citroën, ou bien l’abréviation de « BordeauX » ;
+CY comme « Control Yetal (opération militaire américaine[réf. nécessaire]), ou « CYprus » (Chypre en anglais) ;
+ZQ comme « Zephyr Quadrill » (radar militaire).Certaines personnes retiennent ces groupes de lettres en apprenant une phrase. Par exemple : « Encore très irritée après nos manigances sexuelles, Ursuline réimplora Wendy de kidnapper Gérard ou Hervé, violeurs fanatiques et libérés, en promettant-jurant buter X, ce yankee zélé quadragénaire. » Ici, chaque première lettre de chaque mot doit être prise en compte ; les mots « et » et « en » ayant pour but de combler les « trous » après les lettres « F » et « L ».
+Une fois l’arbre mémorisé, il suffit alors de le parcourir et à chaque intersection de regarder si on passe par la lettre de gauche (un point) ou celle de droite (un trait). Par exemple :
+
+E : lettre de gauche à la racine de l’arbre : .
+N : on passe à droite (T) puis à gauche (N) : -.
+R : on passe à gauche (E), à droite (A) et à gauche (R) : .-.
+J : on passe à gauche (E), à droite (A), à droite (W) et à droite (J) : .---L’avantage de cet arbre est de fonctionner dans les deux sens de transcription de morse vers lettre (partir d’en haut en suivant un trajet et aboutir à la lettre) et de lettre vers morse (trouver la lettre dans l’arbre et en déduire le trajet, en partant du bas) avec beaucoup de facilité.
+
+
+=== Méthodes diverses ===
+D’autres moyens existent, qui font appel à des phrases ou à des expressions permettant d’ordonner les signes en fonction de leurs valeurs. Par exemple :
+
+« EISH » peut devenir : « Eric a obtenu un bon point, Isabelle deux, Salomé trois et Hector quatre. »
+« Tous Mes Oiseaux CHantent Et Ils Sont Heureux. »
+« Les Wallons ne sont point barbares. » (.--)
+« Monsieur X porte des lunettes : -oo- » (-..-)
+« Les Athéniens ont gagné, point barre. » (.-)
+« Quentin a sauté sur ces deux barres, point barre. » (--.-)
+« Les haltères de monsieur R : o-o » (.-.)
+
+
+== Références culturelles ==
+La lettre V a été identifiée à la très célèbre cellule rythmique du premier mouvement Allegro con brio de la Symphonie no 5 en ut mineur de Beethoven. En voici la représentation notée établissant un lien avec celle en alphabet Morse :Elle laisse entendre « ti ti ti ta » (...-). C’est ce premier mouvement de la symphonie qui servait usuellement d'indicatif aux émissions de la BBC adressées aux pays occupés par l'Allemagne, V signifiant victoire. En outre, pour cette raison, la symphonie fut diffusée sur Radio Londres en juin 1944 pour annoncer aux réseaux de Résistance le débarquement allié en Normandie.
+Le refrain de la chanson Communication du chanteur et musicien de jazz Slim Gaillard est construit selon la répétition du préfixe général demandant l'attention, « CQ » (celui-ci précédait le « D » pour composer le signal radio de détresse « CQD » utilisé entre 1904 et 1906, avant l'adoption définitive du code « SOS » à la conférence internationale de Berlin, le 3 novembre 1906).
+La musique Radioactivity (1975) du groupe de musique électronique allemand Kraftwerk fait intervenir le code Morse dans sa ligne mélodique.
+Le musicien britannique Mike Oldfield a souvent caché des codes dans ses compositions. Ainsi, considérant un manque de soutien de la part de Virgin pour sa création musicale, il insère un message codé en Morse à destination de son PDG, Richard Branson dans son album Amarok paru en 1990. Le message apparaît vers la 48e minute et est le suivant : « F.U.C.K. O.F.F. R.B. » (R.B. pour Richard Branson.)
+En 1987, le générique du journal Le Six’ de la chaîne M6 fait entendre « M6 » en morse (--/-....).
+La chanson Waves, issue de l'album Music Hole de Camille (2008), utilise le code Morse en tant que phrase rythmique répétée en ostinato. Celle-ci est scandée par un chœur de femmes l'oralisant selon la prononciation anglaise des deux symboles : dot (« point ») et dash (« trait »). Cette phrase est la suivante et a pour signification :Une des sonneries proposées dans certains téléphones Nokia appelée « Special » est le mot « S M S » en morse (.../--/...). Une autre sonnerie appelée « Ascending » est la phrase « Connecting people », le slogan de Nokia.
+Les sculptures de la bande de roulement des pneus de l'astromobile Curiosity contiennent le code Morse J, P et L du nom de son constructeur JPL (Jet Propulsion Laboratory). Le but des chercheurs de la NASA est d'utiliser les marques laissées par les roues sur la surface de Mars pour en observer (par comparaison entre les distances calculées et celles réellement parcourues) d'éventuels dysfonctionnements.
+Le motif rythmique du début de la chanson YYZ du groupe de musique Rush correspond au rythme obtenu quand on joue YYZ en morse (-.--/-.--/--..).  De fait, YYZ est le code aéronautique (OACI) de l'aéroport de Toronto, la ville natale du groupe, et il s'agit donc du patron de signal émis par la balise de l'aéroport.
+Dans la chanson London Calling des Clash, la guitare électrique joue à la fin trois notes courtes, trois notes longues et trois notes courtes à nouveau, autrement dit « SOS » en morse.
+Une des lettres de la façade sur la Tour de la Terreur de Disneyland Paris grésille. Il s'agit en fait d'un message en morse disant « SOS ».
+Dans le MMORPG The Secret World, le joueur doit à certaines occasions traduire des messages en morse (notamment dans les quêtes d'investigation). C'est le cas dans la quête « C'est mort », ou encore « Pas moyen de reposer en paix ».
+Le thème musical de la série britannique Inspecteur Morse composé par Barrington Pheloung est construit sur une rythmique créée à partir de la transcription en code morse du nom de l’inspecteur éponyme. Le code morse de « MORSE » est : (--/---/.-./.../.) Barrington Pheloung insère ce motif dans quatre mesures à trois temps : une mesure pour chacune des 3 premières lettres (m, o, r) et une mesure pour les deux dernières (s, e). Le schéma rythmique choisi est le suivant :  Le motif est d’abord joué solo au violon de manière itérative, il est ensuite modifié et temporairement abandonné par le compositeur durant le développement instrumental du morceau, avant de revenir solo en fin de thème.
+La batterie dans la chanson Starlight du groupe de rock britannique Muse répète un motif pouvant s'interpréter en morse -/../-/..., ce qui signifie "TITS" (tétons en anglais). Il semble cependant ne s'agir que d'une coïncidence.
+
+
+== Notes et références ==
+
+
+== Voir aussi ==
+
+
+=== Bibliographie ===
+(en) Radio Communication Laws Of The United States And The International Radiotelegraphic Convention 1914
+(fr) Manuel à l’usage des services mobile maritime
+(fr) Conférence de Berlin de 1906
+(fr) Nomenclature des stations côtières 2017
+
+
+=== Articles connexes ===
+Alphabet radio
+Samuel Morse
+Code Baudot
+Sémaphore
+Chiffre Pollux
+Lampe Aldis
+Télégraphe
+Radioamateur
+500 kHz (maritime et aéronautique)
+Télégraphie sans fil
+Radiotélégraphiste
+Code frappé.
+
+
+=== Liens externes ===
+
+Traducteur de code Morse, audio et signal flash( EN )
+Convertisseur lexilogos en ligne
+Transcodeur : Convertisseur de texte en code Morse (entre autres)
+Video présentant l'alphabet
+ Portail des télécommunications   Portail des langues   Portail du monde maritime

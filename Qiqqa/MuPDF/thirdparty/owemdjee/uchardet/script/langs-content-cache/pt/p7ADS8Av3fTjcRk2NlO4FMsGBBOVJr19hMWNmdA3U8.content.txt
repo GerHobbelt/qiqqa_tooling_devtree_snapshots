@@ -1,0 +1,30 @@
+revision: 64524950
+title: "Corretor ortogr\xE1fico"
+url: https://pt.wikipedia.org/wiki/Corretor_ortogr%C3%A1fico
+
+
+---
+
+No software, um corretor ortográfico é um recurso de software que verifica erros ortográficos em um texto. Os recursos de verificação ortográfica geralmente são incorporados em software ou serviços, como processador de texto, cliente de e-mail, dicionário eletrônico ou mecanismo de pesquisa.
+
+
+== Design ==
+Um corretor ortográfico básico realiza os seguintes processos:
+
+Ele escaneia o texto e extrai as palavras nele contidas.
+Em seguida, compara cada palavra com uma lista conhecida de palavras escritas corretamente (ou seja, um dicionário). Isso pode conter apenas uma lista de palavras ou também pode conter informações adicionais, como pontos de hifenização ou atributos lexicais e gramaticais.
+Uma etapa adicional é um algoritmo dependente de linguagem para lidar com morfologia. Mesmo para um idioma levemente flexionado como o inglês, o corretor ortográfico precisará considerar diferentes formas da mesma palavra, como plurais, formas verbais, contrações e possessivos. Para muitas outras linguagens, como aquelas que apresentam aglutinação e declinação e conjugação mais complexas, essa parte do processo é mais complicada.Não está claro se a análise morfológica – permitindo muitas formas de uma palavra dependendo de seu papel gramatical – fornece um benefício significativo para o inglês, embora seus benefícios para idiomas altamente sintéticos como alemão, húngaro ou turco sejam claros.
+Como complemento a esses componentes, a interface de usuário do programa permite que os usuários aprovem ou rejeitem substituições e modifiquem a operação do programa.
+Os corretores ortográficos podem usar algoritmos de correspondência aproximada de cadeia de caracteres, como a distância de Levenshtein, para encontrar grafias corretas de palavras com erros ortográficos. Um tipo alternativo de corretor ortográfico usa apenas informações estatísticas, como n-gramas, para reconhecer erros em vez de palavras escritas corretamente. Essa abordagem geralmente requer muito esforço para obter informações estatísticas suficientes. As principais vantagens incluem a necessidade de menos armazenamento em tempo de execução e a capacidade de corrigir erros em palavras que não estão incluídas em um dicionário.Em alguns casos, os corretores ortográficos usam uma lista fixa de erros ortográficos e sugestões para esses erros ortográficos; essa abordagem menos flexível é frequentemente usada em métodos de correção baseados em papel, como ver também verbetes de enciclopédias.
+Algoritmos de clustering também têm sido usados ​​para verificação ortográfica combinada com informações fonéticas.
+
+
+== Referências ==
+
+
+== Ligações externas ==
+
+«Norvig.com». , "How to Write a Spelling Corrector", by Peter Norvig 
+«BBK.ac.uk». , "Spellchecking by computer", by Roger Mitton 
+«CBSNews.com». , Spell-Check Crutch Curtails Correctness, by Lloyd de Vries 
+«History and text of "Candidate for a Pullet Surprise" by Mark Eckman and Jerrold H. Zar»

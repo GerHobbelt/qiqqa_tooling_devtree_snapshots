@@ -1,0 +1,2475 @@
+revision: 5963137
+title: Lambertova funkcija W
+url: https://sl.wikipedia.org/wiki/Lambertova_funkcija_W
+
+
+---
+
+Lambertova fúnkcija W [lámbertova ~ v] (tudi fúnkcija ω [~ ómega]) je v matematiki obratna funkcija:
+
+  
+    
+      
+        f
+        (
+        w
+        )
+        =
+        w
+        
+          e
+          
+            w
+          
+        
+        
+        
+        ,
+      
+    
+     
+  kjer je ew naravna eksponentna funkcija in w kompleksno število. Imenuje se po Johannu Heinrichu Lambertu.
+Tu je funkcija označena z W. To oznako sta prva uporabila Pólya in Szegő leta 1925. Za vsako kompleksno število z velja:
+
+  
+    
+      
+        z
+        =
+        W
+        ⁡
+        (
+        z
+        )
+        
+          e
+          
+            W
+            ⁡
+            (
+            z
+            )
+          
+        
+        
+        
+        .
+      
+    
+     
+  Ker funkcija f v (−∞, 0) ni injektivna, zavzame funkcija W v [−1/e, 0) več vrednosti. Če se omejimo na realne argumente x ≥ −1/e in zahtevamo w ≥ −1, je na ta način določena funkcija W0(x) z enoličnimi vrednostmi in njen graf je prikazan na sliki. Velja W0(0) = 0 in W0(−1/e) = −1.
+Lambertove funkcije W ne moremo izraziti s členi elementarnih funkcij. Funkcija je uporabna v kombinatoriki, na primer pri preštevanju dreves. Z njo lahko rešimo različne enačbe, ki vsebujejo eksponente. Pojavlja se pri reševanju časovno zakasnelih diferencialnih enačb, kot je na primer y'(t) − a y(t − 1) = 0.
+
+
+== Odvajanje in integriranje ==
+Z implicitnim odvajanjem je moč pokazati, da za W velja navadna diferencialna enačba:
+
+  
+    
+      
+        z
+        (
+        1
+        +
+        W
+        )
+        
+          
+            
+              
+                d
+              
+              W
+            
+            
+              
+                d
+              
+              z
+            
+          
+        
+        =
+        W
+        ;
+        
+        (
+        z
+        ≠
+        −
+        1
+        
+          /
+        
+        e
+        )
+        
+        
+      
+    
+     
+  in od tod odvod:
+
+  
+    
+      
+        
+          
+            
+              
+                d
+              
+              W
+              ⁡
+              (
+              z
+              )
+            
+            
+              
+                d
+              
+              z
+            
+          
+        
+        =
+        
+          
+            
+              W
+              ⁡
+              (
+              z
+              )
+            
+            
+              z
+              (
+              1
+              +
+              W
+              ⁡
+              (
+              z
+              )
+              )
+            
+          
+        
+        ;
+        
+        (
+        z
+        ≠
+        −
+        1
+        
+          /
+        
+        e
+        )
+        
+        
+        .
+      
+    
+     
+  Funkcija W(x) in mnogo izrazov, ki vsebujejo W(x), se lahko integrirajo s substitucijo w = W(x), oziroma x = w ew:
+
+  
+    
+      
+        ∫
+        W
+        ⁡
+        (
+        x
+        )
+        
+        
+          d
+        
+        x
+        =
+        x
+        
+          [
+          
+            W
+            ⁡
+            (
+            x
+            )
+            −
+            1
+            +
+            
+              
+                1
+                
+                  W
+                  ⁡
+                  (
+                  x
+                  )
+                
+              
+            
+          
+          ]
+        
+        +
+        C
+        
+        
+        .
+      
+    
+     
+  
+
+
+== Taylorjeva vrsta ==
+Taylorjeva vrsta funkcije W0 okrog točke 0 se lahko izračuna z Lagrangeevim izrekom o obratu in je dana z:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  W
+                  
+                    0
+                  
+                
+                ⁡
+                (
+                x
+                )
+              
+              
+                
+                =
+                
+                  ∑
+                  
+                    n
+                    =
+                    1
+                  
+                  
+                    ∞
+                  
+                
+                
+                  
+                    
+                      (
+                      −
+                      n
+                      
+                        )
+                        
+                          n
+                          −
+                          1
+                        
+                      
+                    
+                    
+                      n
+                      !
+                    
+                  
+                
+                 
+                
+                  x
+                  
+                    n
+                  
+                
+                =
+              
+            
+            
+              
+              
+                
+                =
+                x
+                −
+                
+                  x
+                  
+                    2
+                  
+                
+                +
+                
+                  
+                    3
+                    2
+                  
+                
+                
+                  x
+                  
+                    3
+                  
+                
+                −
+                
+                  
+                    8
+                    3
+                  
+                
+                
+                  x
+                  
+                    4
+                  
+                
+                +
+                
+                  
+                    125
+                    24
+                  
+                
+                
+                  x
+                  
+                    5
+                  
+                
+                −
+                
+                  
+                    54
+                    5
+                  
+                
+                
+                  x
+                  
+                    6
+                  
+                
+                +
+                
+                  
+                    16807
+                    720
+                  
+                
+                
+                  x
+                  
+                    7
+                  
+                
+                −
+                
+                  
+                    16384
+                    315
+                  
+                
+                
+                  x
+                  
+                    8
+                  
+                
+                +
+                
+                  
+                    531441
+                    4480
+                  
+                
+                
+                  x
+                  
+                    9
+                  
+                
+                −
+                
+                  
+                    156250
+                    567
+                  
+                
+                
+                  x
+                  
+                    10
+                  
+                
+                +
+                ⋯
+                
+                
+                .
+              
+            
+          
+        
+      
+    
+     
+  Njen konvergenčni polmer je 1/e, kot se lahko vidi iz d'Alembertovega kriterija. Funkcijo, določeno s to vrsto, se lahko razširi v holomorfno funkcijo, ki je določena za vsa kompleksna števila z vejiščem vzdolž intervala (-∞, -1/e]. Ta holomorfna funkcija določa glavno vejitev Lambertove funkcije W.
+
+
+== Uporaba ==
+S funkcijo se lahko reši več enačb, ki vsebujejo eksponente. V splošnem se dajo vsi členi z neznanko na eno stran enačbe, tako da ima obliko Y = XeX, v katere točki funkcija W da rešitev.
+Z drugimi besedami :
+
+  
+    
+      
+        X
+        =
+        Y
+        
+          e
+          
+            Y
+          
+        
+        
+        ⟺
+        
+        Y
+        =
+        W
+        ⁡
+        (
+        X
+        )
+        
+        
+        .
+      
+    
+     
+  
+
+
+=== Matematika ===
+Zgled 1
+  
+    
+      
+        
+          2
+          
+            t
+          
+        
+        =
+        5
+        t
+        
+        
+        ,
+      
+    
+     
+  
+  
+    
+      
+        ⇒
+        1
+        =
+        
+          
+            
+              5
+              t
+            
+            
+              2
+              
+                t
+              
+            
+          
+        
+        
+      
+    
+     
+  
+  
+    
+      
+        ⇒
+        1
+        =
+        5
+        t
+        
+        
+          e
+          
+            −
+            t
+            ln
+            ⁡
+            2
+          
+        
+        
+      
+    
+     
+  
+  
+    
+      
+        ⇒
+        
+          
+            1
+            5
+          
+        
+        =
+        t
+        
+        
+          e
+          
+            −
+            t
+            ln
+            ⁡
+            2
+          
+        
+        
+      
+    
+     
+  
+  
+    
+      
+        ⇒
+        
+          
+            
+              −
+              
+              ln
+              ⁡
+              2
+            
+            5
+          
+        
+        =
+        (
+        −
+        
+        t
+        
+        ln
+        ⁡
+        2
+        )
+        
+        
+          e
+          
+            (
+            −
+            t
+            ln
+            ⁡
+            2
+            )
+          
+        
+        
+      
+    
+     
+  
+  
+    
+      
+        ⇒
+        −
+        t
+        ln
+        ⁡
+        2
+        =
+        W
+        ⁡
+        
+          (
+          
+            
+              
+                −
+                ln
+                ⁡
+                2
+              
+              5
+            
+          
+          )
+        
+        
+      
+    
+     
+  
+  
+    
+      
+        ⇒
+        t
+        =
+        
+          
+            
+              −
+              W
+              ⁡
+              
+                (
+                
+                  
+                    
+                      −
+                      ln
+                      ⁡
+                      2
+                    
+                    5
+                  
+                
+                )
+              
+            
+            
+              ln
+              ⁡
+              2
+            
+          
+        
+        
+        
+        .
+      
+    
+     
+  Bolj splošno se lahko enačba:
+
+  
+    
+      
+        
+          p
+          
+            a
+            x
+            +
+            b
+          
+        
+        =
+        c
+        x
+        +
+        d
+        
+        
+        ,
+      
+    
+     
+  kjer je:
+
+  
+    
+      
+        p
+        >
+        0
+        ∧
+        c
+        ,
+        d
+        ≠
+        0
+        
+        
+        ,
+      
+    
+     
+  pretvori prek substitucije:
+
+  
+    
+      
+        −
+        t
+        =
+        a
+        x
+        +
+        
+          
+            
+              a
+              d
+            
+            c
+          
+        
+      
+    
+     
+  v:
+
+  
+    
+      
+        t
+        
+          p
+          
+            t
+          
+        
+        =
+        R
+        =
+        −
+        
+          
+            a
+            c
+          
+        
+        
+          p
+          
+            b
+            −
+            
+              
+                
+                  a
+                  d
+                
+                c
+              
+            
+          
+        
+        
+        
+        ,
+      
+    
+     
+  kar da:
+
+  
+    
+      
+        t
+        =
+        
+          
+            
+              W
+              ⁡
+              (
+              R
+              ln
+              ⁡
+              p
+              )
+            
+            
+              ln
+              ⁡
+              p
+            
+          
+        
+      
+    
+     
+  in končno rešitev:
+
+  
+    
+      
+        x
+        =
+        −
+        
+          
+            
+              W
+              ⁡
+              (
+              −
+              
+                
+                  
+                    a
+                    ln
+                    ⁡
+                    p
+                  
+                  c
+                
+              
+              
+              
+                p
+                
+                  b
+                  −
+                  
+                    
+                      
+                        a
+                        d
+                      
+                      c
+                    
+                  
+                
+              
+              )
+            
+            
+              a
+              ln
+              ⁡
+              p
+            
+          
+        
+        −
+        
+          
+            d
+            c
+          
+        
+        
+        
+        .
+      
+    
+     
+  Zgled 2Podobno se pokaže, da ima enačba:
+
+  
+    
+      
+        
+          x
+          
+            x
+          
+        
+        =
+        z
+        
+        
+      
+    
+     
+  rešitev:
+
+  
+    
+      
+        x
+        =
+        
+          
+            
+              ln
+              ⁡
+              z
+            
+            
+              W
+              ⁡
+              (
+              ln
+              ⁡
+              z
+              )
+            
+          
+        
+        
+        
+      
+    
+     
+  ali enakovredno:
+
+  
+    
+      
+        x
+        =
+        exp
+        ⁡
+        
+          (
+          
+            W
+            ⁡
+            (
+            ln
+            ⁡
+            z
+            )
+          
+          )
+        
+        
+        
+        .
+      
+    
+     
+  Zgled 3Če kompleksna neskončna eksponentna funkcija (tetracija):
+
+  
+    
+      
+        
+          z
+          
+            
+              z
+              
+                
+                  z
+                  
+                    
+                      ⋅
+                      
+                        
+                          ⋅
+                          
+                            ⋅
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+        
+        
+      
+    
+     
+  konvergira, Lambertova funkcija W da dejansko vrednost limite:
+
+  
+    
+      
+        c
+        =
+        
+          
+            
+              W
+              ⁡
+              (
+              −
+              ln
+              ⁡
+              z
+              )
+            
+            
+              −
+              ln
+              ⁡
+              z
+            
+          
+        
+        
+        
+        ,
+      
+    
+     
+  kjer je ln z glavno vejišče funkcije kompleksnega logaritma.
+
+Zgled 4Rešitve enačbe:
+
+  
+    
+      
+        x
+        
+          log
+          
+            b
+          
+        
+        ⁡
+        x
+        =
+        a
+        
+        
+      
+    
+     
+  imajo obliko:
+
+  
+    
+      
+        x
+        =
+        
+          
+            
+              a
+              ln
+              ⁡
+              b
+            
+            
+              W
+              ⁡
+              (
+              a
+              ln
+              ⁡
+              b
+              )
+            
+          
+        
+        
+        
+        .
+      
+    
+     
+  Zgled 5Asimptotična enačba za Bellova števila:
+
+  
+    
+      
+        
+          B
+          
+            n
+          
+        
+        ∼
+        
+          
+            1
+            
+              n
+            
+          
+        
+        
+          
+            [
+            
+              
+                e
+                
+                  W
+                  ⁡
+                  (
+                  n
+                  )
+                
+              
+            
+            ]
+          
+          
+            n
+            +
+            
+              
+                1
+                2
+              
+            
+          
+        
+        
+          e
+          
+            
+              e
+              
+                W
+                ⁡
+                (
+                n
+                )
+              
+            
+            −
+            n
+            −
+            1
+          
+        
+        .
+      
+    
+     
+  
+
+
+=== Fizika ===
+Zgled 6Rešitev za tok v električnem tokokrogu zaporedno vezanih diod/upornikov se lahko zapiše s členi funkcije W. Glej modeliranje diod.
+
+Zgled 7Časovno zakasnela diferencialna enačba:
+
+  
+    
+      
+        
+          
+            
+              
+                d
+              
+              y
+              (
+              t
+              )
+            
+            
+              
+                d
+              
+              t
+            
+          
+        
+        −
+        a
+        y
+        (
+        t
+        −
+        1
+        )
+        =
+        0
+        
+        
+      
+    
+     
+  ima karakteristično enačbo 
+  
+    
+      
+        λ
+        =
+        a
+        
+          e
+          
+            −
+            λ
+          
+        
+      
+    
+     
+  , kar vodi do 
+  
+    
+      
+        λ
+        =
+        
+          W
+          
+            k
+          
+        
+        ⁡
+        (
+        a
+        )
+      
+    
+     
+   in 
+  
+    
+      
+        y
+        (
+        t
+        )
+        =
+        
+          e
+          
+            
+              W
+              
+                k
+              
+            
+            (
+            a
+            )
+            t
+          
+        
+      
+    
+     
+  , kjer je 
+  
+    
+      
+        k
+      
+    
+     
+   indeks vejišča. Če je 
+  
+    
+      
+        a
+      
+    
+     
+   realen, je treba obravnavati le 
+  
+    
+      
+        
+          W
+          
+            0
+          
+        
+        ⁡
+        (
+        a
+        )
+      
+    
+     
+  .
+
+Zgled 8Planckov zakon sevanja črnega telesa ima vrhove za:
+
+  
+    
+      
+        h
+        ν
+        =
+        
+          [
+          
+            3
+            +
+            W
+            ⁡
+            
+              (
+              
+                
+                  
+                    −
+                    3
+                  
+                  
+                    e
+                    
+                      3
+                    
+                  
+                
+              
+              )
+            
+          
+          ]
+        
+        
+          k
+          
+            
+              B
+            
+          
+        
+        T
+        =
+        2
+        ,
+        8214393721
+        
+        
+          k
+          
+            
+              B
+            
+          
+        
+        T
+        
+        
+        ,
+      
+    
+     
+  
+
+  
+    
+      
+        
+          
+            
+              h
+              c
+            
+            λ
+          
+        
+        =
+        
+          [
+          
+            5
+            +
+            W
+            ⁡
+            
+              (
+              
+                
+                  
+                    −
+                    5
+                  
+                  
+                    e
+                    
+                      5
+                    
+                  
+                
+              
+              )
+            
+          
+          ]
+        
+        
+          k
+          
+            
+              B
+            
+          
+        
+        T
+        =
+        4
+        ,
+        9651142317
+        
+        
+          k
+          
+            
+              B
+            
+          
+        
+        T
+        
+        
+        ,
+      
+    
+     
+  kar določa Wienov zakon. Frekvence in valovne dolžine vrhov spektralnih gostot sevanja so različne za vsako temperaturo, in okrog njih telesa najmočneje sevajo.
+
+Zgled 9Zrnati in naplavni tok front in naplavin, ter fronte viskoznih tekočin v naravnih pojavih kot tudi v laboratorijskih poskusih lahko opišemo z Lambert-Eulerjevo funkcijo omega:
+
+  
+    
+      
+        H
+        (
+        x
+        )
+        =
+        1
+        +
+        W
+        ⁡
+        
+          [
+          
+            (
+            H
+            (
+            0
+            )
+            −
+            1
+            )
+            exp
+            ⁡
+            (
+            (
+            H
+            (
+            0
+            )
+            −
+            1
+            )
+            −
+            
+              
+                x
+                L
+              
+            
+            )
+          
+          ]
+        
+        
+        
+        ,
+      
+    
+     
+  kjer je H(x) višina toka naplavin, x lega kanalskega toka, L poenoteni modelni parameter, ki ga sestavlja več fizikalnih in geometrijskih parametrov toka, višina toka in gradient hidravličnega tlaka.
+
+Zgled 10Lambertova funkcija W je optimalna rešitev za potrebno magnetno polje Zeemanovega zaviralnika.
+
+
+=== Tehnologija preoblikovanja ===
+Zgled 11Sila preoblikovanja kovine s posrednim delovanjem sile je dana z enačbo:
+
+  
+    
+      
+        F
+        =
+        S
+        w
+        
+          
+            1
+            
+              η
+              
+                p
+                r
+              
+            
+          
+        
+        
+        
+        .
+      
+    
+     
+  Za istosmerno iztiskavanje valjčka je na primer posebej:
+
+  
+    
+      
+        F
+        =
+        
+          
+            
+              π
+              
+                d
+                
+                  1
+                
+                
+                  2
+                
+              
+            
+            4
+          
+        
+        C
+        
+          
+            (
+            
+              2
+              ln
+              ⁡
+              
+                
+                  
+                    d
+                    
+                      1
+                    
+                  
+                  
+                    d
+                    
+                      0
+                    
+                  
+                
+              
+            
+            )
+          
+          
+            n
+          
+        
+        
+          
+            1
+            
+              η
+              
+                p
+                r
+              
+            
+          
+        
+        
+        
+        ,
+      
+    
+     
+  tako da je končni premer valjčka 
+  
+    
+      
+        
+          d
+          
+            1
+          
+        
+      
+    
+     
+   dan z rešitvijo:
+
+  
+    
+      
+        
+          d
+          
+            1
+          
+        
+        =
+        
+          d
+          
+            0
+          
+        
+        
+          e
+          
+            n
+            W
+            ⁡
+            
+              (
+              
+                x
+                
+                  /
+                
+                n
+              
+              )
+            
+            
+              /
+            
+            2
+          
+        
+        
+        
+        ,
+      
+    
+     
+  kjer je:
+
+  
+    
+      
+        x
+        =
+        
+          e
+          
+            ln
+            ⁡
+            
+              [
+              
+                4
+                F
+                
+                  η
+                  
+                    p
+                    r
+                  
+                
+                
+                  /
+                
+                (
+                π
+                C
+                
+                  d
+                  
+                    0
+                  
+                  
+                    2
+                  
+                
+                )
+              
+              ]
+            
+            
+              /
+            
+            n
+          
+        
+        
+        
+        ,
+      
+    
+     
+  
+  
+    
+      
+        
+          d
+          
+            0
+          
+        
+      
+    
+     
+   pa začetni premer.
+
+
+=== Medicina/nevroznanosti/psihologija ===
+Zgled 12Lambertovo funkcijo W so uporabili na področju nevrološkega slikanja pri povezovanju možganskega pretoka krvi in sprememb porabe kisika med možganskimi voksli na ustreznem signalu nivoja krvne oksigenacije (BOLD).
+
+
+== Posebne vrednosti ==
+
+  
+    
+      
+        W
+        ⁡
+        
+          (
+          
+            −
+            
+              
+                π
+                2
+              
+            
+          
+          )
+        
+        =
+        
+          
+            
+              
+                i
+              
+              π
+            
+            2
+          
+        
+        
+        
+      
+    
+     
+  
+  
+    
+      
+        W
+        ⁡
+        
+          (
+          
+            −
+            
+              
+                
+                  ln
+                  ⁡
+                  a
+                
+                a
+              
+            
+          
+          )
+        
+        =
+        −
+        ln
+        ⁡
+        a
+        ,
+        
+        
+          
+            1
+            e
+          
+        
+        ≤
+        a
+        ≤
+        e
+        
+        
+      
+    
+     
+  
+  
+    
+      
+        W
+        ⁡
+        
+          (
+          
+            −
+            
+              
+                1
+                e
+              
+            
+          
+          )
+        
+        =
+        −
+        1
+        
+        
+      
+    
+     
+  
+  
+    
+      
+        W
+        ⁡
+        (
+        0
+        )
+        =
+        0
+        
+        
+      
+    
+     
+  
+  
+    
+      
+        W
+        ⁡
+        (
+        1
+        )
+        ≡
+        Ω
+        =
+        
+          
+            1
+            
+              
+                ∫
+                
+                  −
+                  ∞
+                
+                
+                  ∞
+                
+              
+              
+                
+                  
+                    
+                      
+                        d
+                      
+                    
+                    x
+                  
+                  
+                    (
+                    
+                      e
+                      
+                        x
+                      
+                    
+                    −
+                    x
+                    
+                      )
+                      
+                        2
+                      
+                    
+                    +
+                    
+                      π
+                      
+                        2
+                      
+                    
+                  
+                
+              
+            
+          
+        
+        −
+        1
+        =
+        0
+        ,
+        567143290409783872999968662210...
+        
+        
+      
+    
+     
+   (konstanta Ω, (OEIS A030178))
+  
+    
+      
+        W
+        ⁡
+        (
+        e
+        )
+        =
+        1
+        
+        
+      
+    
+     
+  
+  
+    
+      
+        W
+        ⁡
+        
+          (
+          
+            −
+            1
+          
+          )
+        
+        ≈
+        −
+        0
+        ,
+        31813
+        −
+        1
+        ,
+        33723
+        
+          
+            i
+          
+        
+        
+        
+      
+    
+     
+  
+  
+    
+      
+        
+          W
+          ′
+        
+        ⁡
+        
+          (
+          0
+          )
+        
+        =
+        1
+        
+        
+      
+    
+     
+  
+
+
+== Druge formule ==
+
+  
+    
+      
+        
+          ∫
+          
+            0
+          
+          
+            π
+          
+        
+        W
+        ⁡
+        
+          
+            (
+          
+        
+        2
+        
+          cot
+          
+            2
+          
+        
+        ⁡
+        (
+        x
+        )
+        
+          
+            )
+          
+        
+        
+          sec
+          
+            2
+          
+        
+        ⁡
+        (
+        x
+        )
+        
+        
+          d
+        
+        x
+        =
+        4
+        
+          
+            π
+          
+        
+        
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          ∫
+          
+            0
+          
+          
+            +
+            ∞
+          
+        
+        W
+        ⁡
+        
+          (
+          
+            
+              1
+              
+                x
+                
+                  2
+                
+              
+            
+          
+          )
+        
+        
+        
+          d
+        
+        x
+        =
+        
+          
+            2
+            π
+          
+        
+        
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          ∫
+          
+            0
+          
+          
+            +
+            ∞
+          
+        
+        
+          
+            
+              W
+              ⁡
+              (
+              x
+              )
+            
+            
+              x
+              
+                
+                  x
+                
+              
+            
+          
+        
+        
+          d
+        
+        x
+        =
+        2
+        
+          
+            2
+            π
+          
+        
+        
+        
+      
+    
+     
+  
+
+
+== Računski algoritem ==
+Funkcijo W se lahko izračuna z rekurenčno enačbo:
+
+  
+    
+      
+        
+          w
+          
+            j
+            +
+            1
+          
+        
+        =
+        
+          w
+          
+            j
+          
+        
+        −
+        
+          
+            
+              
+                w
+                
+                  j
+                
+              
+              
+                e
+                
+                  
+                    w
+                    
+                      j
+                    
+                  
+                
+              
+              −
+              z
+            
+            
+              
+                e
+                
+                  
+                    w
+                    
+                      j
+                    
+                  
+                
+              
+              (
+              
+                w
+                
+                  j
+                
+              
+              +
+              1
+              )
+              −
+              
+                
+                  
+                    (
+                    
+                      w
+                      
+                        j
+                      
+                    
+                    +
+                    2
+                    )
+                    (
+                    
+                      w
+                      
+                        j
+                      
+                    
+                    
+                      e
+                      
+                        
+                          w
+                          
+                            j
+                          
+                        
+                      
+                    
+                    −
+                    z
+                    )
+                  
+                  
+                    2
+                    
+                      w
+                      
+                        j
+                      
+                    
+                    +
+                    2
+                  
+                
+              
+            
+          
+        
+        
+        
+        ,
+      
+    
+     
+  ki so jo podali Corless idr. Naslednja Pythonova koda uporablja zgornjo zvezo in oceno računske napake, dano v delu Chapeau-Blondeauja in Monirja:
+
+Program izračuna glavno vejišče za 
+  
+    
+      
+        x
+        >
+        1
+        
+          /
+        
+        e
+      
+    
+     
+  . lahko se izboljša z boljšimi začetnimi ocenami.
+Če je potrebna manjša točnost, se lahko uporabi zaprta oblika približka v C, ali pa se lahko vzame kot odlična začetna ocena zgornjega programa, ki nato računa le z nekaj iteracijami:
+
+(povzeto iz: http://www.desy.de/~t00fri/qcdins/texhtml/lambertw/)
+
+
+== Zgodovina ==
+Lambertova funkcija W ima nenavadno zgodovino. Raziskovanje njenih značilnosti vodi do Eulerjevega članka iz leta 1779. Inverza wew, kot omembe vredne funkcije, niso raziskovali vse do 1980-ih. Razpoznanje je prišlo pri uporabi v računalniškem programu za simbolno računanje Maple, kjer so v ta namen uvedli rezervirano ime LambertW. Izbrali so Lambertovo ime, ker se je Euler v svojem članku skliceval na predhodno Lambertovo delo in morda zaradi tega, »ker poimenovanje še ene funkcije po Eulerju ne bi bilo uporabno« (Corless idr.).
+Lambert je leta 1758 obravnaval rešitev enačbe:
+
+  
+    
+      
+        
+          x
+          
+            a
+          
+        
+        −
+        
+          x
+          
+            b
+          
+        
+        =
+        (
+        a
+        −
+        b
+        )
+        v
+        
+          x
+          
+            a
+            +
+            b
+          
+        
+        
+        
+        ,
+      
+    
+     
+  sedaj znane kot Lambertova transcendentna enačba. Euler je izvedel za Lambertov članek leta 1764. Leta 1783 je napisal članek o tej enačbi, kjer je obravnaval posebni primer z obliko:
+
+  
+    
+      
+        w
+        
+          a
+          
+            w
+          
+        
+        =
+        l
+        x
+        
+        
+        ,
+      
+    
+     
+  ki je skoraj enaka definiciji funkcije 
+  
+    
+      
+        W
+        ⁡
+        (
+        x
+        )
+      
+    
+     
+  , čeprav je predlagal definicijo funkcije v obliki 
+  
+    
+      
+        −
+        W
+        ⁡
+        (
+        −
+        x
+        )
+      
+    
+     
+  . Enačba ima rešitev:
+
+  
+    
+      
+        x
+        =
+        
+          
+            1
+            
+              e
+              
+                W
+                ⁡
+                (
+                −
+                a
+                v
+                )
+                
+                  /
+                
+                b
+              
+            
+          
+        
+        
+        
+        .
+      
+    
+     
+  
+
+
+== Glej tudi ==
+Wrightova funkcija omega
+trinom (Lambertova trinomska funkcija)
+eksperimentalna matematika
+Jackiw-Teitelboimova gravitacija (model R=T)
+
+
+== Sklici ==
+
+
+== Viri ==
+
+
+== Zunanje povezave ==
+Corles idr., Zapiski o raziskovanju funkcije Lambert W (angleško)
+Corless idr., »On the Lambert W function« Adv. Computational Maths. 5, 329 - 359 (1996) (PDF)
+Scott, T.C.; Mann, R.B.; Martinez Ii, Roberto E. (2006). »General Relativity and Quantum Mechanics: Towards a Generalization of the Lambert W Function«. AAECC (Applicable Algebra in Engineering, Communication and Computing). Zv. 17, št. 1. str. 41–47. arXiv:math-ph/0607011. doi:10.1007/s00200-006-0196-1.
+Scott, T. C.; Fee, G.; Grotendorst, J. (2013). »Asymptotic series of Generalized Lambert W Function«. SIGSAM (ACM Special Interest Group in Symbolic and Algebraic Manipulation). Zv. 47, št. 185. str. 75–83.
+Scott, T. C.; Fee, G.; Grotendorst, J.; Zhang, W.Z. (2014). »Numerics of the Generalized Lambert W Function«. SIGSAM. Zv. 48, št. 1–2. str. 42–56.
+Maignan, Aude; Scott, T. C. (2016). »Fleshing out the Generalized Lambert W Function«. SIGSAM. Zv. 50, št. 2. str. 45–60. doi:10.1145/2992274.2992275.
+Chapeau-Blondeau, F. in Monir, A., »Evaluation of the Lambert W Function and Application to Generation of Generalized Gaussian Noise With Exponent 1/2«, IEEE Trans. Signal Processing, 50(9), 2002 Arhivirano 2012-03-28 na Wayback Machine.
+Weisstein, Eric W. »Lambert W-Function«. MathWorld.
+Lambertova funkcija na Wolframovi strani funkcij. (angleško)
+Francis idr., »Quantitative General Theory for Periodic Breathing« Circulation 102 (18): 2214. (2000). Uporaba Lambertove funkcije pri reševanju časovno zakasnele dinamike v bolezni človeka.
+Extreme Mathematics. Monografije o Lambertovi funkciji W, njeni numerični aproksimaciji in posplošitvah za inverze W transcendentnih oblik s ponavljajočimi eksponetnimi stolpi. (angleško)
+Računanje Lambertove funkcije W Arhivirano 2008-01-30 na Wayback Machine. (angleško)
+Hayes, Brian, Zakaj W? (Why W?) Arhivirano 2008-04-07 na Wayback Machine. (angleško)

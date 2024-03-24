@@ -1,0 +1,33 @@
+revision: 4976062
+title: Bendro atradimo metodas
+url: https://lt.wikipedia.org/wiki/Bendro_atradimo_metodas
+
+
+---
+
+Bendro atradimo metodas (angl. co-discovery), kartais dar vadinamas platesne sąvoka konstruktyvi sąveika (angl. constructive interaction) – vartotojo patyrimo  bei tinkamumo (angl. usability) testavimo metodas. Metodo esmė – moderatoriaus pasiūlytą užduotį prie kompiuterio vienu metu atlieka du vartotojai: vienas naudojasi tik pele, kitas – tik klaviatūra. Užduoties vykdymo metu vartotojai natūraliai bendrauja, dalinasi pastebėjimais ir bando padėti vienas kitam siekdami bendro užduoties tikslo. Tiesa, vartotojai prieš testavimą turi būti perspėti, kad, bandant padėti ar paaiškinti, negalima rodyti pirštu į ekrane esantį objektą. Be to, metodas neturėtų būti taikomas kaip vienintelis vartotojų tyrimo metodas.
+
+
+= Privalumai =
+Moderatorius beveik neįtakoja testavimo proceso, todėl susidaro natūralesnė atmosfera ir klausimais nepertraukiamas vartotojų darbas.
+Testuojami iškart du vartotojai, todėl probleminės vietos išaiškinamos greičiau.
+Natūralus bendravimas tarp vartotojų, nes vartotojas turi paaiškinti kitam ką daryti, o ne dirbtinai reikšti mintis kaip, pvz., taikant mąstymo garsiai metodą (angl. think aloud), todėl iškart matomi naudotojo sąsajos suvokimo, lūkesčių bei naudojimosi strategijų skirtumai tarp skirtingų vartotojų.
+Gaunama informacija iškart iš dviejų vartotojų.
+Tikėtina, kad vienas iš dviejų žmonių šio tyrimo metu tampa lyderiu – daugiau kalba, reiškia savo nuomonę, vadovauja kito vartotojo veiksmams (dažniausiai, tai būna arba vyras, arba tas/ta, kas turi pelę), todėl bendrai moderatorius gauna daugiau informacijos iš abiejų vartotojų, negu iš vieno (ypač jei vartotojas labai kuklus ir santūrus).
+
+
+= Trūkumai =
+Sunku apskaičiuoti kiekybinius tinkamumo rodiklius (klaidų skaičių, užduoties įvykdymo laiką).
+Sukuriamas nestandartinis naudojimosi scenarijus, nes dažniausiai žmogus prie kompiuterio dirba vienas.
+Vartotojui sunkiau pasinerti į atliekamos užduoties vykdymą, nes reikia dar bendrauti ir su testavimo kolega.
+Vartotojui sunkiau išreikšti savo individualią nuomonę. Turbūt suprasite mane, jei kada nors teko rinktis kartu su grupe kitų žmonių į kokį filmą nueiti. Jei lyderiu tapęs vartotojas iš tikro yra gan aktyvus, tylesnio vartotojo mintys gali likti neišsakytos arba užgožtos.
+Testavimas užtrunka ilgiau nei su vienu vartotoju.
+
+
+= Papildomas skaitymas =
+J.Nielsen, Usability Engineering p.198, Academic Press, 1993.
+Dumas and Redish, A Practical Guide to Usability Testing, Ablex Publishing. p. 31, Co-discovery.
+Rubin, J. Handbook of Usability Testing. John Wiley & Sons. p. 240, Testing two participants at a time.
+
+
+= Šaltiniai =

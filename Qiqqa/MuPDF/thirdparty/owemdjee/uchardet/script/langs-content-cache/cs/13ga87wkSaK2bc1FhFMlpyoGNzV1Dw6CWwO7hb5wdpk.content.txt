@@ -1,0 +1,79 @@
+revision: 22054116
+title: Communications Technology High School
+url: https://cs.wikipedia.org/wiki/Calvin_Northrup_Mooers
+
+
+---
+
+Calvin Northrup Mooers (24. října 1919, Minneapolis – 1. prosince 1994, Cambridge) byl americký počítačový vědec a jeden z nejvýznamnějších průkopníků informační vědy. Proslul zejména vytvořením zcela převratného způsobu mechanického třídění informací Zatocoding a programovacích jazyků TRAC a TRAC 2. Z hlediska oboru informační vědy byl významný zejména jeho zákon týkající se využívání „information retrieval“ systémů uživateli. Mooers se také angažoval v oblasti ochrany duševního vlastnictví a jeho úsilí dokonce ovlivnilo celkovou podobu novely Copyright Act v roce 1976.
+
+
+== Životopis ==
+
+
+=== Dětství a mládí ===
+Calvin Northrup Mooers se narodil dne 24. října 1919 v americkém městě Minneapolis ve státě Minnesota. O jeho rodičích nejsou dostupné informace; jisté však je, že měl jednoho mladšího bratra – Howarda. Calvin své dětství strávil v rodném městě, kde navštěvoval nejprve Logan School, a po jejím absolvování Franklin Junior High School a North High School.
+Již od raného věku Calvin projevoval zájem o elektroniku, zejména o rádiové vysílače a přijímače. Tento zájem dokonce vedl k tomu, že ve svých třinácti letech začal s několika kamarády provozovat ilegální radiostanici. V tomto ohledu byl natolik úspěšný, že jen o rok později mu byla udělena amatérská licence, což mu na jednu stranu sice vzalo radost z provozování zmíněné stanice, na druhou stranu ho to ovšem podnítilo ve stavbě dalších přijímačů.
+Na základní škole Calvin studijně nikterak neexceloval, ale jak sám uvedl: „…patřil jsem k těm lepším ve třídě a žáci i učitelé o mně mluvili jako o chytrolínovi“. Teprve na střední škole začal vynikat, jeho práce byla hodnocena nejlepšími známkami a z toho důvodu mu také bylo umožněno přeskočit celý ročník – North High School absolvoval, na rozdíl od svých spolužáků, již v roce 1937.
+Velkou zásluhu na Calvinově dalším směřování měla jeho učitelka matematiky, paní Viola A. Marti. Ta si byla velmi dobře vědoma jeho vynikajících výsledků i zájmu o studium, a proto mu v průběhu letních kurzů matematiky pro učitele zprostředkovala kontakt s University of Minnesota. Calvin byl téměř okamžitě přijat, v létě 1937 prošel rozřazovacími testy a od září začal studovat matematiku a analytickou geometrii. Podobně jako na střední škole i na univerzitě byl vynikajícím studentem (jako známky dostával výhradě A), hravě zvládal probíranou látku a rozšiřoval své znalosti i směrem k humanitním vědám a ekonomii.
+Díky své píli a vytrvalosti měl již na konci třetího ročníku absolvované všechny povinné předměty a chyběl mu jediný kredit k tomu, aby mohl studium na univerzitě úspěšně zakončit. Na začátku čtvrtého ročníku, v září 1940, byl Calvin zapsán do nejtěžších seminářů matematiky a fyziky, které University of Minnesota nabízela.
+
+
+=== Působení v Naval Ordnance Laboratory a White Oak Laboratory ===
+V souvislosti s 2. Světovou válkou a zhoršením situace v Evropě na jaře 1941 byl profesor fyziky Lynn H. Rumbaugh na University of Minnesota povolán do Washingtonu D.C., aby pracoval ve výzkumném středisku Naval Ordnance Laboratory (NOL). Profesor pak oslovil Calvina, jako jednoho z nejúspěšnějších studentů, aby se podílel na pracích v laboratoři společně s ním. Mooers se tedy stal civilním kontraktorem a po Rumbaughově boku se významnou měrou podílel například na výzkumu tzv. demagnetizace (ochrana lodí proti magnetickým minám). Do Minnesoty se Mooers už po zbytek svého života (s výjimkou příležitostných návštěv) nevrátil; kvůli práci v NOL například také zmeškal svou promoci v roce 1941.
+V dalších letech války začaly německé námořní síly používat akustické a tlakové miny, proti kterým se demagnetizace ukázala být neúspěšná. Z tohoto důvodu bylo záhy v NOL otevřeno nové výzkumné oddělení, v jehož čele stál později světově proslulý fyzik John Vincent Atanasoff, vynálezce prvního elektronického digitálního počítače. Do oddělení byl přesunut i Mooers a bylo to právě zde, kde se seznámil s Charlotte Davis (po skončení 2. světové války roku 1945 se vzali).
+Poté, co utichly boje 2. světové války, došlo k reorganizaci personálu NOL a vytvoření Počítačové divize v rámci nově otevřeného White Oak Laboratory (WOL) nedaleko Washingtonu, v jejímž čele se vystřídalo mnoho významných odborníků své doby – jakými byli George Hiram Shortley, Mitch a Zaka Slawsky – než se vedení permanentně zhostil právě J. V. Atanasoff. Ani přes usilovnou práci Mooerse, inspirovaného dílem významného počítačového vědce Johna Mauchlyho, však divize příliš úspěšná nebyla (vina byla zejména na straně Atanasoffa, který vývoj údajně brzdil svou nečinností). Mooers proto v září 1946 z WOL odešel a činnost samy divize byla ukončena jen o tři měsíce později, v prosinci téhož roku.
+
+
+=== Poválečné působení ===
+
+
+==== MIT ====
+Mooers byl záhy přijat na postgraduální studium na Massachusettský technologický institut (MIT), kde hodlal plně zužitkovat svých přímých zkušeností s výpočetní technikou. Chtěl se zaměřit zejména na její potenciální aplikaci v oblasti knihovnické klasifikace, která byla – podle jeho vlastních slov – „velmi primitivní“. Své představy pevně konkretizoval na základě dvou událostí. První z nich byla přednáška Clauda Edwooda Shannona o informační teorii; druhou pak setkání s významným americkým chemikem Jamesem Perrym, který se zabýval indexováním a vyhledáváním informací v oboru chemie.
+Mooers tedy zahájil výzkum v oblasti „information retrieval“. Své rané myšlenky konzultoval právě s Perrym, který mu později umožnil vystoupit na výroční konferenci American Chemical Society v září 1947. Zde Mooers prezentoval teoretické principy skenovacího mechanismu, který by byl schopen nejen automatického zpracování záznamů uložených v mikrofilmové formě, ale zároveň booleovského vyhledávání (s využitím operátorů AND, OR a NOT).
+
+
+==== Zatocoding ====
+Výše zmíněný výzkum Mooerse vedl k vytvoření Zatocodingu, zcela převratného způsobu třídění informací, který se vyznačoval následujícími charakteristikami:
+
+Jednalo se o automatický a mechanický (nikoliv elektronický) znalostní systém,
+Jehož základem byla papírová (Zator) karta s obsahem vyjádřeným v textové nebo jiné podobě a vruby na okraji, které reprezentovaly deskriptory, a Zator Selector, konfigurovatelné zařízení, které karty vyhovující předem specifikovaným kritériím zarovnalo a ostatní pak odebralo.
+Zator selector byl přitom schopen zpracovat až 800 karet za minutu.
+Deskriptory na kartách bylo možné využít také k vytváření křížových referencí.S cílem principy Zatocodingu prakticky a komerčně využít, Calvin přizval k projektu svého staršího bratra Howarda a společně na sklonku roku 1947 založili Zator Company. Následujícího roku Calvin úspěšně ukončil magisterské studium matematiky na MIT. Téma jeho závěrečné práce se týkalo právě Zatocodingu a jeho statistického využití při analýze záznamů.
+Rok a půl po založení Zator Company Mooersův bratr společnost opustil frustrován tím, že dosud nezaznamenali výraznější úspěch. Calvin nicméně setrval a po zbytek 40. a v průběhu 50. let se nadále snažil Zatocoding komerčně prosadit, navíc si zažádal o patent (dlužno dodat, že jeho žádosti bylo vyhověno až o celých 23 let později). Kromě toho pokračoval ve výzkumu v oblasti „information retrieval“.
+Jak sám Mooers uvedl, paradoxně byli nejméně z funkčního modelu Zatocodingu nadšeni ti, pro které byl určen – tedy knihovníci. Věřili totiž, že k tak komplexnímu procesu, jakým je výběr a třídění informací, je bezpodmínečně zapotřebí lidský mozek a jeho intelektuální potenciál – a tuto představu jim Mooers dokonale zhatil, když demonstroval, že jej lze bezchybně provést mechanicky.
+
+
+==== Mooersův zákon ====
+Během 50. a počátku 60. let 20. století také Mooers externě pracoval pro několik vládních agentur, pro které vyhotovoval studie o vyhledávání informací. Roku 1957 přišel Mooers do kontaktu s Raymondem Solomonoffem, který se zabýval výzkumem v oblasti umělé inteligence (nebo také „myslících strojů“, jak ji nazýval sám Mooers, pozn. aut.). Jeho práce Mooerse velmi nadchla a proto Solomonoffa přizval do Zator Company. Společně sepsali návrh na výzkumný projekt a představili jej Haroldovi Woosterovi z vědeckého oddělení amerických vzdušných sil (Air Force Office of Scientific Research).
+Na základě uvedeného návrhu Zator Company roku 1957 obdržela vládní grant na výzkum umělé inteligence. V roce 1959, po několika letech teoretického i praktického výzkumu v oblasti „information retrieval“, Mooers zformuloval a vzápětí publikoval empirický zákon týkající se využívání systémů IR. V anglickém originále zní zákon následovně:
+„An information retrieval system will tend not to be used whenever it is more painful and troublesome for a customer to have information than for him not to have it.“Mooers sám jej také interpretoval: Každá nová informace s sebou přináší riziko, že se dostane do rozporu se zájmy a postoji jednotlivců nebo organizací, popřípadě prokáže jejich dosavadní znalosti za nepravdivé a irelevantní. Ti proto preferují takovou informaci ignorovat, aby se ušetřili potupy či výtek ze strany svých nadřízených.
+
+
+==== TRAC a výzkum v oblasti ochrany duševního vlastnictví ====
+Roku 1959 Mooers také zahájil práci na programovacím jazyce TRAC (Text Reckoning and Compiling). Pro podporu svého a Solomonoffova výzkumu na začátku následujícího roku založil neziskovou korporaci Rockford Research Institute, která se – jak sám přiznal – stala prioritou místo Zator Company.
+Práce na TRAC trvala do roku 1964, kdy Mooers definoval jeho výslednou podobu (verzi T64, která se používala až do roku 1984). Téhož roku získal také kontrakt od ARPA a společně s inženýrem Eugenem Stuartem Fergusonem, který pracoval v Rockford Research Institute na půl úvazku, se začali účastnit jednání pracovní skupiny, která se zabývala vývojem ASCII specifikace. Nespokojeni se soudobým stavem, kdy velké společnosti (včetně IBM) preferovaly používání pouze tzv. monocase znaků, rozjeli petiční kampaň pro podporu používání i tzv. uppercase a lowercase znaků.
+V roce 1965 Mooers rekrutoval mladého programátora Laurence Petera Deutsche, aby TRAC naprogramoval pro počítač typu PDP-1 ve společnosti Bolt, Baranek & Newmann (dnes BNN Technologies, pozn. aut.). Téhož roku také napsal popis TRAC pro prestižní časopis Communications of the ACM. Jeho editoři o něm zpočátku měli velké pochybnosti, protože nepatřil k velkým programátorským osobnostem – Mooers je však přesvědčil o opaku, když demonstroval plně funkční TRAC právě na počítači PDP-1.
+V následujících letech se Mooers snažil TRAC komerčně prosadit, ale narazil na značné potíže týkající se ochrany autorských práv. Počítačový software totiž tehdy ještě nebyl považován za duševní vlastnictví, respektive něco, co by mohlo být chráněno autorským zákonem. Za příklad naprosto benevolentního zacházení může posloužit například Dartmouth College, kde bez jeho souhlasu používali Mooersův program pod návzem CART (TRAC vyhláskovaný pozpátku, pozn. aut.). Pro ochranu svého výtvoru se pokoušel aplikovat ochrannou známku. Jeho zájem o problematiku duševního vlastnictví dokonce vedl k navázání komunikace s Billem Gatesem a vyústil roku 1975 publikováním článku „Computer Software and Copyright“ v časopisu ACM Computing Surveys. Článek významnou měrou ovlivnil podobu novely autorského zákona (Copyright Act of 1976), který vstoupil v platnost k 1. lednu 1976.
+Na sklonku 70. let 20. století Thorpe Wright a Andy Diamond založili společnost Data Concepts, Inc. v Lexingtonu. Snažili se vyvinout program, který by asistoval zaměstnancům v pojišťovnictví. Byli přesvědčeni, že právě TRAC je pro tento účel ideální, a proto do společnosti přizvali Mooerse. Přestože se jim podařilo vytvořit prototyp funkčního a adaptabilního systému SIMPL!E, který byl schopen na základě vstupních dat vypočítat výši pojistky, Data Concepts se dostala roku 1984 do finančních potíží kvůli Wrightovým chabým schopnostem coby podnikatele a v březnu téhož roku byla nucena vyhlásit bankrot.
+
+
+==== TRAC 2 ====
+Po neúspěchu v Data Concepts se Mooers začal věnovat pečlivému redefinování a reprogramování původní verze TRACu. V červenci 1984 představil TRAC-2 (respektive verzi T84). Jeho práce se stala středem zájmu Franca Vitaliana, který chtěl nový TRAC-2 komerčně prosadit. Přestože byl schopný přitáhnout pozornost spousty lidí a organizací, nedařilo se mu program skutečně prodat. Po několika letech jejich spolupráce skončila a Mooers nadále pokračoval ve vývoji TRAC-2 a prozkoumávání možností jeho využití v síťovém prostředí. Podařilo se mu například na základě TRAC napsat program, který byl schopen „listovat“ stránkami elektronického dokumentu přes protokol Telnet.
+I v posledních letech svého života byl Mooers vědecky a výzkumně aktivní a prozkoumával možnosti využití TRAC-2 v kombinaci s objektově-orientovaným modelováním na osobních počítačích.
+Calvin Northrup Mooers zemřel 1. prosince 1994 na infarkt myokardu v Mount Auburn Hospital v Cambridgi.
+
+
+== Reference ==
+
+
+== Literatura ==
+ARFIELD, Eugene. A Tribute to Calvin N. Mooers, A Pioneer Of Information Retrieval. The Scientist [online]. March 1997, vol. 11, issue 6 [cit. 2013-04-11]. Dostupný z: http://www.garfield.library.upenn.edu/commentaries/tsv11%2806%29p09y19970317.pdf.
+BRICE, Austin. Mooers‘ law: in and out of context. Journal of the American Society for Information Science and Technology. June 2001, vol. 52, issue 8, s. 607-609. ISSN 1532-2882.
+Calvin N. Mooers. In: Internet Archive WayBack Machine [online]. San Francisco (Kalifornie): Internet Archive, 2010 -, page updated 14 January 1998 [cit. 2013-04-11]. Dostupný z: https://web.archive.org/web/20021218172440/http://www.asis.org/Features/Pioneers/mooers.htm.
+Calvin Northrup Mooers. In: Wiki Kabinetu informačních studií a knihovnictví Filozofické fakulty Masarykovy univerzity [online]. Brno (Česká republika): Masarykova Univerzita, 2008 -, naposledy edit. 16. 5. 2011 [cit. 2013-04-11]. Dostupný z: http://kisk.phil.muni.cz/wiki/Calvin_Northrup_Mooers[nedostupný zdroj].
+HENDERSON, Madeline M. Calvin N. Mooers, October 24, 1919 – December 1, 1994. Journal of The American Society of Information Science [online]. September 1996, vol. 47, issue 9 [cit. 2013-04-11].
+JVA Biography. In: JVA: John Vincent Atanasoff and the Birth of Electronic Digital Computing [online]. Ames (Iowa): Iowa State University, 2011 -, [cit. 2013-06-20]. Dostupný z: http://jva.cs.iastate.edu/jvabio.php.
+MOOERS, Calvin N. Coding, information retrieval and the Rapid selector. American Documentation. October 1950, vol. 1, s. 225-229. ISSN 1936-6108.
+MOOERS, Calvin N. TRAC, A Procedure-Describing Language for the Reactive Typewriter. Communications of the ACM. March 1966, vol. 9, issue 3, s. 215-219. ISSN 0001-0782. Dostupný komerčně z: http://dl.acm.org/citation.cfm?id=365270.
+MOOERS, Calvin N. Zatocoding applied to mechanical organization of knowledge. American documentation. January 1951, vol. 2, s. 20-32. ISSN 1936-6108.

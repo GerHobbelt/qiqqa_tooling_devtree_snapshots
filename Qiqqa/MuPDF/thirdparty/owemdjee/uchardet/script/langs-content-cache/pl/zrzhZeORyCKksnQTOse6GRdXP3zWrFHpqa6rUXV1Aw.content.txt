@@ -1,0 +1,22 @@
+revision: 69834555
+title: Bateria alkaliczna
+url: https://pl.wikipedia.org/wiki/Bateria_alkaliczna
+
+
+---
+
+Bateria alkaliczna (ogniwo alkaliczne) – ogniwo galwaniczne jednorazowego użytku (bez możliwości ładowania) w którym w charakterze elektrolitu zastosowano roztwory alkaliczne (zasadowe). Zasada działania ogniwa polega na reakcji chemicznej, która zachodzi pomiędzy cynkiem a tlenkiem manganu(IV) (Zn/MnO2). Napięcie znamionowe wynosi 1,5 V. Ogniwo alkaliczne zostało wynalezione przez amerykańskiego chemika Lewisa Urry'ego w 1959 w firmie Eveready Battery (obecnie Energizer). Współczesne ogniwa alkaliczne, dzięki technologicznym udoskonaleniom, mogą wytrzymać 40 razy dłużej niż oryginalny prototyp. Występuje powszechnie w handlu np. jako popularne tzw. „baterie” okrągłe różnej wielkości, oznaczane symbolami LR03 (AAA), LR6 (AA, tzw. paluszek), LR14 (C) lub LR20 (D). Ogniwa LR6 osiągają pojemność rzędu 2500 mAh.
+
+
+== Reakcja chemiczna ==
+katoda: 2MnO2 + H2O + 2e− → Mn2O3 + 2OH−
+anoda: Zn + 2OH− → Zn(OH)2 + 2e−
+reakcja całkowita: 2MnO2 + H2O + Zn → Mn2O3 + Zn(OH)2
+
+
+== Zobacz też ==
+ogniwo Leclanchégo
+systematyka nazewnictwa ogniw w obrocie konsumenckim
+
+
+== Przypisy ==

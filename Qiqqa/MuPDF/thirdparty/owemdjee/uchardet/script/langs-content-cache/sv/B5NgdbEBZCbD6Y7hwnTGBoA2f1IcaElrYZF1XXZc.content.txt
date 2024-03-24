@@ -1,0 +1,192 @@
+revision: 52734346
+title: Area
+url: https://sv.wikipedia.org/wiki/Area
+
+
+---
+
+Area är en storhet som beskriver utsträckningen av en tvådimensionell yta i planet. Arean hos en form kan mätas genom att jämföra den med en kvadrat av bestämd storlek. SI-enheten för area är kvadratmeter (m²). Inom matematiken är enhetskvadraten definierad till att ha arean 1. Ibland används yta som synonym till area (men jämför artikeln yta). När man talar om arean hos landområden används ibland areal.Det finns flera välkända formler som beskriver arean hos enkla geometriska former, såsom trianglar, rektanglar och cirklar. Med dessa formler kan arean av en godtycklig polygon beräknas med polygontriangulering, det vill säga att dela upp polygonen i trianglar. För geometriska former med krökta ränder måste man vanligen använda matematisk analys för att beräkna arean. Faktum är att behovet att kunna bestämma arean hos plana geometriska former var en av anledningarna till att den matematiska analysen utvecklades.Ytarean hos enkla tredimensionella geometriska former såsom sfärer, koner och cylindrar kunde redan de gamla grekerna bestämma. Mer komplicerade kroppars ytarea kan beräknas med matematisk analys i flera variabler.
+Area har stor betydelse inom modern matematik. Detta gäller inte bara den uppenbara betydelsen inom geometri och matematisk analys; area är besläktat med definitionen av determinanter i linjär algebra, och är en grundläggande egenskap i differentialgeometri.
+
+
+== Definition ==
+En ansats att definiera vad som menas med area är genom ett antal axiom. Till exempel kan vi definiera area som en funktion a från en samling speciella plana figurer (benämns mätbara mängder) M till mängden reella tal som har följande egenskaper:
+
+a(S) ≥ 0 för alla S i M.
+Om S och T tillhör M så gör även S ∪ T, S ∩ T det och a(S ∪ T) = a(S) + a(T) - a(S ∩ T).
+Om S och T tillhör M med S ⊆ T så tillhör T - S också M och a(T - S) = a(T) - a(S).
+Om en mängd S tillhör M och S är kongruent med T så tillhör T också M och a(S) = a(T).
+Varje rektangel R tillhör M. Om rektangeln har längden h och bredden k så är a(R) = hk.
+Låt Q vara en mängd innesluten mellan två rektangelområden S och T. Ett rektangelområde utgörs av en finit union av närliggande rektanglar på en gemensam bas, det vill säga S ⊆ Q ⊆ T. Om det finns ett unikt tal c sådant att a(S) ≤ c ≤ a(T) för alla sådana rektangelområden S och T, så är a(Q) = c.
+
+
+== Enheter ==
+
+Varje längdenhet har en motsvarande ytenhet, där längdenheten motsvarar alla sidor i en kvadrat. Alltså kan area mätas i till exempel kvadratmeter (m²), kvadratcentimeter (cm²), kvadratmillimeter (mm²), kvadratkilometer (km²).
+
+
+=== Enhetsomvandlingar ===
+
+Omvandlingar mellan två ytenheter är kvadraten av deras längdförhållande. Till exempel är 
+
+1 cm = 10 mmoch förhållandet mellan cm² och mm² är 100, det vill säga 102.
+Vidare är:
+
+1 kvadratkilometer = 1 000 000 kvadratmeter
+1 kvadratmeter = 10 000 kvadratcentimeter = 1 000 000 kvadratmillimeter
+
+
+=== Andra enheter ===
+Det finns flera andra vanliga enheter för area. Aret var den första enheten i det metriska måttsystemet, där
+
+1 ar = 100 kvadratmeterÄven om ar sällan används idag används hektar fortfarande vanligen som enhet för markarea.
+
+1 hektar = 100 ar = 10 000 kvadratmeter = 0,01 kvadratkilometer.
+
+
+== Grundläggande formler för area ==
+
+
+=== Rektanglar ===
+Den enklaste areaformeln är rektangeln. Givet en rektangel med längden l och bredden b, är arean
+
+  
+    
+      
+        A
+        =
+        l
+        ⋅
+        b
+      
+    
+     
+     (rektangel)Alltså, arean hos en rektangel är längden multiplicerat med bredden. Som ett specialfall av detta har en kvadrat med sidolängd s arean 
+
+  
+    
+      
+        A
+        =
+        
+          s
+          
+            2
+          
+        
+      
+    
+     
+     (kvadrat)Formeln för arean hos en rektangel följer direkt från de grundläggande egenskaperna hos area, och betraktas ibland som en definition eller ett axiom. Å andra sidan, om geometri utvecklas före aritmetik, kan denna formel användas för att definiera multiplikation av reella tal.
+
+
+=== Dissektionsformeln ===
+De flesta andra enkla formlerna för area följer av dissektion. Detta innebär att man skär en plan figur i bitar, som summerar till arean hos originalfiguren.
+Till exempel kan alla parallellogram delas upp i en trapetsoid och en rät triangel (enligt figuren till vänster). Om triangeln flyttas till andra sidan av trapetsoiden resulterar detta i en rektangel. Därför är arena hos en parallellogram samma som för en rektangel:
+
+  
+    
+      
+        A
+        =
+        b
+        ⋅
+        h
+      
+    
+     
+     (parallellogram)Men samma parallellogram kan också skäras längs sin ena diagonal till två kongruenta trianglar, som i figuren till höger. Från detta får man att arean hos vardera triangel är hälften av arean hos parallellogrammet:
+
+  
+    
+      
+        A
+        =
+        
+          
+            
+              b
+              ⋅
+              h
+            
+            2
+          
+        
+      
+    
+     
+     (triangel)Liknande resonemang kan föras för att hitta formler för arean hos trapetsoider, romber och mer avancerade polygoner.
+
+
+=== Cirklar ===
+
+Formeln för cirkelns area grundar sig i en liknande metod. Givet en cirkel med radien r kan den delas in i sektorer enligt figuren till höger. Varje sektor är approximativt en triangulär, och kan fördelas om till en approximativ parallellogram. Höjden hos denna parallellogram är r och bredden hälften av omkretsen hos cirkeln, eller πr. Alltså är den totala arean hos cirkeln r⋅πr eller π⋅r2.
+
+  
+    
+      
+        A
+        =
+        π
+        
+          r
+          
+            2
+          
+        
+      
+    
+     
+     (cirkel)Trots att dissektionen av cirkeln till sektorer är approximativ blir felet mindre och mindre, ju fler sektorer som cirkeln delas in i. Gränsvärdet som arean hos parallellogrammen går mot är exakt π⋅r2, som är cirkelns area. Detta resonemang är en enkel tillämpning av matematisk analys.
+
+
+=== Mantelarea ===
+
+De flesta enkla formler för mantelarea kan fås genom att skära upp ytan och släta ut till ett plan. Till exempel, om sidan hos en cylinder eller ett prisma skärs på längden kan ytan slätas ut till en rektangel. På samma sätt, om en kon skärs från basen till toppen kan ytan slätas ut till en cirkelsektor, och arean räknas ut.
+Formeln för mantelarean hos en sfär är svårare: eftersom ytan på en sfär har Gausskrökning som är skild från noll kan den inte slätas ut till ett plan. Mantelarean hos en sfär beräknades först av Arkimedes i hans verk 'Om mätning av cirkeln'. Formeln är
+
+  
+    
+      
+        A
+        =
+        4
+        π
+        
+          r
+          
+            2
+          
+        
+      
+    
+     
+     (sfär)där r är radien hos sfären. Precis som för cirkeln använder härledningar av denna formel metoder som påminner om matematisk analys.
+
+
+== Lista över areaformler ==
+Formlerna ovan visar hur arean kan beräknas för många enkla och regelbundna figurer. Arean hos oregelbundna polygoner kan beräknas med koordinatareaformeln.
+
+
+== Se även ==
+Integraler
+Perimeter
+Volym
+Omkrets
+Areal
+Area och volym för husbyggnader
+
+
+== Källor ==
+Den här artikeln är helt eller delvis baserad på material från Engelskspråkiga Wikipedia.
+
+
+=== Fotnoter ===
+
+
+== Externa länkar ==
+
+ Wikimedia Commons har media som rör Area.
+
+ Wiktionary har ett uppslag om area.
+Areaformler

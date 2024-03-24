@@ -1,0 +1,13 @@
+revision: 13884834
+title: "DOC (format fi\u0219ier)"
+url: https://ro.wikipedia.org/wiki/DOC_(format_fi%C8%99ier)
+
+
+---
+
+= .DOC, scris și .doc, o abreviere de la cuvântul englez document, este extensia numelui de fișier al documentelor produse de diverse procesoare de text, precum și formatul corespunzător al fișierului, impus de Microsoft Word versiunile 1.0-2003. =
+Deși este considerat învechit și a fost înlocuit la proiectele noi inclusiv de către creatorii săi, rămâne deocamdată cel mai utilizat format pentru procesare de text. Este un tip de fișier binar, care pe lângă textul propriu-zis stochează și datele legate de formatarea acestuia, de asemenea și elemente netextuale precum imagini, grafică sau diagrame. Este un format închis, standardul oficial pentru acest format fiind deținut exclusiv de către compania Microsoft și nefiind făcut niciodată public. Cu toate acestea, prin metode de inginerie inversă, s-a reușit reconstituirea formatului de către alți producători de software. Astăzi un număr mare de programe non-Microsoft (în special open source) pot să deschidă și să lucreze cu fișiere de tip .DOC fără probleme. Printre acestea se numără de exemplu Open Office și AbiWord. Începând cu 2006 formatul .DOC a început să aibă concurență din ce în ce mai puternică din partea unor formate deschise precum OpenDocument (cu extensia .ODT), formatul standard al programului Open Office.
+Începând cu Office 2007 Microsoft a înlocuit standardul .DOC cu un nou standard, de data aceasta deschis și publicat, bazat pe XML, și deci folosind fișiere text în locul celor binare. Office 2007, însă, continuă să poată lucra și cu fișiere .DOC.
+
+
+== Note ==

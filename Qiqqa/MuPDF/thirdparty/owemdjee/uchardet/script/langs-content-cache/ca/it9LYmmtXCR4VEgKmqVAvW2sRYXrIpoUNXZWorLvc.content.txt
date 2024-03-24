@@ -1,0 +1,162 @@
+revision: 31520946
+title: transistor
+url: https://ca.wikipedia.org/wiki/Transistor
+
+
+---
+
+El transistor és un component electrònic semiconductor d'estat sòlid que s'utilitza com a amplificador o com a commutador, i té tres terminals que s'anomenen col·lector, base i emissor. Físicament, la base sempre està entre l'emissor i el col·lector: un petit corrent o voltatge aplicat a un dels terminals controla el corrent als altres dos. El transistor és el component principal de tota l'electrònica moderna i pedra angular dels dispositius electrònics moderns, i s'utilitza en ràdio, telefonia, ordinadors i altres sistemes electrònics. El transistor se cita sovint com un dels majors èxits del segle xx, i alguns el consideren un dels més importants avenços tecnològics en la història de la humanitat. Alguns transistors són envasats individualment, però la majoria es troben en circuit integrats. En els circuits digitals, el transistor s'utilitza com un interruptor elèctric molt ràpid, i l'organització sistemàtica dels transistors permet que funcionin com a portes lògiques, memòries tipus RAM i microprocessadors.
+Als circuits analògics els transistors s'usen com a amplificadors. Els amplificadors d'àudio, les fonts d'alimentació estabilitzades i els amplificadors de freqüència són circuits analògics que duen transistors.
+Per metonímia, el terme transistor designa igualment els Receptors de ràdio equipats amb de transistors.
+
+
+== Origen del nom i història ==
+El terme transistor ve de l'anglès transconductance varistor (variable resistor transconductance). El terme va ser encunyat per John R. Pierce.
+ Va ser votat per un comitè directiu de 26 persones dels Bell Labs el 28 de maig de 1948 (memorandum 48-130-10), entre els següents noms: semiconductor triode, surface states triode, crystal triode, solid triode, iotatron, transistor. Per motius comercials, calia un nom curt, que de manera inequívoca el relacionés amb la tecnologia dels tubs electrònics. Va ser escollit transistor.
+La primera patent pel principi del transistor d'efecte camp va ser presentat al Canadà pel físic austrohongarès Julius Edgar Lilienfeld el 22 d'octubre de 1925, però Lilienfeld no va publicar cap article d'investigació sobre els seus dispositius. El 1934, el físic alemany Oskar Heil va patentar un altre transistor d'efecte camp. Segons el físic i historiador Robert Arns, els documents legals de la patent de Bell Labs que William Shockley havia construït eren versions operatives de la patent de Lilienfeld de patents, però mai no es fa referència al seu treball en cap treball de recerca històrica o article.
+El transistor va sortir de Silicon Valley, i va ser inventat el 23 de desembre de 1947 pels estatunidencs John Bardeen, William Shockley i Walter Houser Brattain, investigadors de la companyia telefònica Bell, que van observar que quan els contactes elèctrics s'apliquen a un cristall de germani, la potència de sortida és més gran que la d'entrada. William Shockley en va veure el potencial i van treballar els mesos següents en ampliar el coneixement dels semiconductors. Aquests investigadors van rebre per aquesta invenció el Premi Nobel de Física de 1956.
+El transistor es considera un enorme progrés en relació al tub electrònic molt més petit, més lleuger, més robust, funciona amb voltatges baixos, permetent alimentació per bateries, i funciona instantàniament un cop encès, a diferència dels tubs electrònics que requerien uns dotze segons d'escalfament, generant un major consum i requerint una font d'alta tensió (diversos centenars de volts).
+Va ser ràpidament integrat, junt amb altres components, als circuits integrats, cosa que li va permetre guanyar encara més terreny respecte a altres formes d'electrònica activa.
+El transistor ha constituït un invent determinant sense el qual l'electrònica i la informàtica no tindrien la seva forma actual (2009).
+
+
+== Importància ==
+El transistor és considerat per molts com el «més gran invent del segle xx.» És el component actiu clau en pràcticament tota l'electrònica moderna. La seva importància en la societat actual es basa en la seva capacitat de ser produït en massa mitjançant un procés altament automatitzat de fabricació de semiconductors que aconsegueix baixos costos per transistor.
+Encara que diverses empreses produeixen cadascuna més de mil milions d'elements individuals (coneguts com a transistors discrets) cada any la gran majoria dels transistors es produeix per a circuits integrats,  microxips o simplement xips, juntament amb díodes, resistències, condensadors i altres components electrònics per produir circuits electrònics complets. Una porta lògica es compon de fins a una vintena de transistors mentre que un microprocessador avançat, el 2006, podia utilitzar fins a 1,7 milions de transistors (MOSFET s).
+"Al voltant de 60 milions de transistors es van construir l'any [2002] ... per cada home, dona i nen que hi ha a la Terra".El baix cost d'un transistor, la flexibilitat i fiabilitat n'han fet un dispositiu únic. Els circuits transistoritzats han substituït els dispositius electromecànics en el control dels aparells i maquinària. Sovint és més fàcil i més barat utilitzar un microcontrolador, i escriure un programa d'ordinador per dur a terme una funció de control que el disseny d'una funció de control mecànica equivalent.
+
+
+=== Ús ===
+El transistor bipolar d'unió, o BJT, va ser el primer transistor inventat, i fins a la dècada de 1970, va ser el més comunament utilitzat. Fins i tot després que el MOSFET estigués disponible, el BJT es va mantenir com el transistor que es feia servir per a molts circuits analògics com a senzill amplificador degut a la seva més gran linealitat i facilitat de fabricació. Les propietats dels MOSFETs, com la seva utilitat en dispositius de baixa potència, generalment en configuració CMOS, els va permetre capturar gairebé tota la quota de mercat per a tots els circuits digitals. Els MOSFETs, més recentment, abasten la majoria de les aplicacions analògiques com ara circuits analògics de rellotges, reguladors de tensió, amplificadors, transmissors d'energia, controladors de motor, etc.
+La utilitat fonamental d'un transistor ve de la seva capacitat per utilitzar un petit senyal aplicat entre un parell de terminals per controlar un senyal molt més gran en un altre parell de terminals. Aquesta propietat s'anomena guany. Un transistor pot controlar la seva sortida en proporció al senyal d'entrada. És a dir, pot actuar com un amplificador electrònic. O bé, el transistor es pot utilitzar per activar o desactivar el corrent en un circuit de control elèctric com un commutador, on la quantitat de corrent està determinada per altres elements del circuit.
+
+
+== Base química del funcionament d'un transistor ==
+
+
+=== Estructura atòmica dels semiconductors ===
+Les propietats elèctriques d'un material semiconductor estan determinades per la seva estructura atòmica. En un cristall pur de germani o de silici, els àtoms estan units entre si en disposició periòdica, formant una reixeta cúbica tipus diamant perfectament regular. Cada àtom del cristall té quatre electrons de valència, cadascun dels quals interacciona amb l'electró de l'àtom veí formant un enllaç covalent. En no tenir els electrons llibertat de moviment, a baixes temperatures i en estat cristal·lí pur, el material actua com un aïllant.
+
+
+=== Paper de les impureses ===
+Però els cristalls de germani o de silici contenen petites quantitats d'impureses que permeten conduir l'electricitat, fins i tot a baixes temperatures. Segons el tipus d'impuresa, hi ha dos efectes en el cristall:
+
+Les impureses de fòsfor, antimoni o arsènic es denominen impureses donants perquè aporten un excés d'electrons. Aquest grup d'elements té cinc electrons de valència, dels quals només quatre estableixen enllaços amb els àtoms de germani o silici. Per tant, quan s'aplica un camp elèctric, els electrons restants de les impureses donants queden lliures per desplaçar-se a través del material cristal·lí.
+Per contra, les impureses de gal·li i d'indi disposen de només tres electrons de valència, és a dir, en falta un per completar l'estructura d'enllaços interatòmics amb el cristall. Aquestes impureses es coneixen com a impureses receptores, perquè accepten electrons d'àtoms veïns. Per la seva banda, les deficiències resultants o buits, l'estructura dels àtoms veïns s'omple amb altres electrons i així successivament. Aquests forats es comporten com a càrregues positives, com si es moguessin en direcció oposada a la dels electrons quan se'ls aplica un voltatge des de l'exterior. La unió PN actua com un rectificador, permetent que el corrent circuli en un sol sentit (rectificació). Si la regió tipus P es troba connectada al terminal positiu d'una bateria i la regió tipus N al terminal negatiu, circula un corrent intens a través del material al llarg de la unió. Si la bateria es connecta a l'inrevés, no fluirà el corrent.
+
+
+=== Funcionament del transistor ===
+Hi ha dos tipus bàsics de transistors, els bipolars (BJT) i els d'efecte camp (FET), i cadascun funciona de forma diferent.
+
+
+==== Transistor bipolar ====
+El transistor bipolar (conegut també per BJT, de les sigles angleses de Bipolar Junction Transistor) va ser el primer tipus de transistor en ser produït massivament i és un dispositiu de tres terminals, anomenats emissor, base i col·lector. La propietat més destacada d'aquest dispositiu és que, dintre d'uns marges determinats, el corrent en l'emissor i el col·lector és controlat per corrent relativament petit de la base.L'estructura física d'un transistor bipolar consta de dues unions PN disposades una a continuació de l'altra. Entre els terminals emissor i base hi ha una unió PN, anomenada unió emissora i entre els terminals base i col·lector una altra unió PN anomenada unió col·lectora. Hi ha dos tipus de transistors bipolars: el NPN i el PNP. Aquests noms venen de la seva descripció física : En el transistor NPN, l'emissor és un semiconductor tipus N, la base és del tipus P i el col·lector és de tipus N. L'estructura física del transistor PNP és igual a l'anterior si canviem les regions P per regions N, i les N per P.
+
+El transistor pot funcionar de dues formes que permeten aplicacions diferents:
+
+
+===== El transistor com a commutador =====
+S'utilitzen els transistors com interruptors electrònics, tant per a aplicacions d'alta potència com fonts d'alimentació commutada o per aplicacions de baixa potència, com ara portes lògiques.
+Una vegada la tensió de la base assoleix un determinat nivell, el corrent no augmentarà en augmentar la tensió V BE  i la sortida es durà a terme en un determinat voltatge. Aleshores es diu que el transistor està saturat. Per tant, els valors de la tensió d'entrada poden ser escollits de tal manera que la sortida estigui totalment apagada (off), o completament encesa (on). El transistor actua com un interruptor, i aquest tipus d'operacions és comuna en circuits digitals, on només els valors "on" i "off" són rellevants.
+El mode de treball del transistor com a commutador és similar al funcionament d'un interruptor, té dos estats definits:
+
+Estat obert o de no conducció (OFF). Presenta una resistència infinita.
+Estat tancat o de conducció (ON). Presenta una resistència zero.El control de l'estat de sortida del transistor, format pels terminals col·lector-emissor, s'efectua a través del terminal base.
+Els sentits dels corrents al transistor varien segons el tipus de transistor, si és NPN o PNP. L'emissor, que en el símbol està representat amb una punta de fletxa per diferenciar-lo del col·lector, indica el sentit que pot seguir el corrent en aquest terminal.
+Al transistor NPN:
+
+El corrent d'emissor (Ie) surt de l'interior a l'exterior.
+El corrent de col·lector (Ic) entra al transistor.
+El corrent de base (Ib) entra al transistor.Les intensitats que circulen pel transistor compleixen una relació numèrica en els dos modes de funcionament i en els dos tipus de transistor. El valor de la intensitat d'emissor és la suma dels valors de les intensitats de base i de col·lector:
+Ie = Ib + Ic
+Pel que fa al corrent, el transistor es comporta com un nus on entren o surten dos corrents (Ib i Ic) i un altre corrent que va al revés dels altres (Ie).
+La intensitat de base, que controla l'estat del transistor, és molt petita en relació a les altres dues, Ie i Ic. Aleshores, per aproximació, es pot dir que les intensitats de col·lector i emissor pràcticament tenen el mateix valor.
+Ie = Ic
+Pel que fa a les diferències de potencial entre els terminals, també segueixen una relació sempre que es facin servir els seus valors absoluts:
+Uce = Ucb + Ube
+En estat de conducció, la tensió entre base i emissor, Ube, és d'aproximadament 0,65 V. Tenint present que aquests valors normalment són molt petits en relació a la tensió d'alimentació, ho considerem de valor zero i simplificant: Ube = 0 Uce = 0 
+Sintetitzant, en estat de conducció, el transistor es comporta com un interruptor tancat controlat per un petit corrent a la base, el corrent commutat pel transistor passa entre col·lector i emissor (NPN), i la tensió entre col·lector i emissor és zero.
+En estat de blocatge, la situació del transistor canvia, no hi ha corrent a la base, per tant, la conducció no existeix entre col·lector i emissor (NPN): no és possible que hi hagi corrent, aleshores, el transistor es comporta com un interruptor obert.
+I podem parlar de les següents zones de treball:
+Zona de tall : El fet de fer nul el corrent de base, és equivalent a mantenir el circuit base emissor obert, en aquestes circumstàncies el corrent de col·lector és pràcticament nul i per això es pot considerar el transistor en el seu circuit com un interruptor obert.
+Zona de saturació : El díode col·lector està polaritzat directament i el transistor es comporta com una petita resistència. En aquesta zona un augment del corrent de base no provoca un augment del corrent de col·lector, aquest depèn exclusivament de la tensió entre emissor i col·lector. El transistor s'assembla en el seu circuit emissor-col·lector a un interruptor tancat.
+
+
+===== El transistor com amplificador =====
+
+Està dissenyat de forma que un petit canvi en el voltatge (V ref) canviï el petit corrent a través de la base del transistor i l'amplificació del corrent del transistor combinat amb les propietats del circuit significa que petits canvis a V ref produeix grans canvis a Ve .
+Són possibles diferents configuracions d'un sol transistor amplificador, amb algunes que proporcionen guany de corrent, d'altres guany de tensió, i algunes ambdues coses.
+Des del telèfon mòbil fins a la televisió, un gran nombre de productes inclouen amplificadors electrònics per reproducció de so, transmissió de ràdio i processament de senyals. El primer transistor discret d'àudio amplificava tot just uns pocs centenars de mil·liwatts, però la potència i l'alta fidelitat l'han fet augmentar gradualment i es disposés de millors transistors i arquitectura d'amplificació evolucionada.
+Els moderns transistors d'àudio amplifiquen fins a uns pocs centenars de vats i són comuns i relativament barats.
+Alguns fabricants d'instruments musicals barregen transistors i tubs de buit en el mateix circuit, ja que alguns creuen que els tubs tenen un so característic.
+I podem parlar de la següents zona de treball:
+Zona activa directa: Correspon a una polarització directa de la unió emissor-base i a una polarització inversa de la unió col·lector-base. Aquesta és la regió d'operació normal del transistor per a amplificació.
+
+
+==== Transistor d'efecte camp (MOS I JFET) ====
+
+Entre els transistors d'efecte de camp (FET o, Field Efecte Transistor), podem distingir les següents famílies: 
+
+Transistors MOSFET utilitzen les propietats de les estructures de metall/òxid/semiconductors;
+Transistors JFET: que utilitzen les propietats de les unions PN.El transistor d'efecte de camp FET o MOS, també anomenat MOSFET (de les sigles angleses de Metal Oxide Semiconductor Field Effect Transistor) és un dispositiu de tres terminals anomenats drenador D (de l'anglès drain), porta G (de l'anglès gate) i sortidor o font S (de l'anglès source). El corrent que circula entre drenador i sortidor és controlat per la tensió aplicada a la porta. Aquest transistor té, de fet, un quart terminal cos B (de l'anglès bulk). A aquest terminal se li aplica una tensió fixa. Un element fonamental en aquest transistor és el condensador de porta que, en els primers transistors, era format per un metall, una capa d'òxid de silici com a dielèctric i un semiconductor com a segona placa del condensador. Precisament el nom d'aquest transistor deriva d'aquesta estructura. Un aspecte molt important d'aquest dispositiu és que ocupa una extensió menor sobre el silici que el transistor bipolar i això permet una alta densitat d'integració. En FETS, el drenatge a la font actual dels fluxos a través de la realització d'un canal 
+
+L'estructura d'un transistor MOS d'acumulació (o enriquiment de canal N) es representa a la figura. És constituït per un semiconductor de tipus P, on s'han creat dues regions N que constitueixen el sortidor S i el drenador D. Entre aquestes regions, es forma el condensador de porta, constituït per una placa metàl·lica, on el terminal de porta G fa contacte, un òxid de porta que actua com a dielèctric, i el semiconductor que forma la segona placa. El quart terminal, anomenat substat B, fa contacte amb el semiconductor P. El seu funcionament de forma resumida és el següent: quan s'aplica una tensió positiva al terminal de porta es crea un camp entre les plaques del condensador que incideix perpendicularment sobre la superfície del semiconductor. Aquest camp atreu càrregues negatives cap a la superfície i repel·leix les positives. Si el camp té prou intensitat aconsegueix crear, a la proximitat de la superfície del semiconductor, una regió molt rica en càrregues negatives que s'anomena canal N. Aquest canal de longitud L i amplària W, connecta les dues regions N i permet el pas de corrent entre drenador i sortidor. Si el camp transversal es fa més intens, el canal es fa més ric en càrregues negatives, la seva resistència disminueix i permet el pas d'una corrent més gran. El transistor MOS s'anomena d'efecte de camp perquè el corrent que circula entre els terminals de drenador i sortidor és controlat per aquest camp perpendicular a la superfície del semiconductor entre les regions de drenador i sortidor. A la figura es representen els símbols d'aquest transistor. La fletxa al terminal G va en el sentit del substrat P cap al canal N. 
+El transistor MOS s'utilitza principalment a circuits integrats com a resistència, ja que l'ús d'aquesta no és convenient per raons tecnològiques (un valor elevat requereix molta superfície de silici)
+
+
+== Tipus ==
+Els transistors es poden classificar segons: 
+
+El material semiconductor: de germani, silici, arsenur de gal·li, carbur de silici, etc
+Estructura: BJT, JFET, IGFET (MOSFET), IGBT, altres tipus
+Polaritat: NPN, PNP (BJTs);
+Nivell de potència: baixa, mitjana, alta
+Màxima freqüència de funcionament: baixa, mitjana, alta, radiofreqüència (RF), microones (La màxima freqüència efectiva d'un transistor s'indica amb el terme 
+  
+    
+      
+        
+          f
+          
+            
+              T
+            
+          
+        
+      
+    
+     
+  , una abreviatura de "freqüència de transició". La freqüència de transició és la freqüència màxima a la qual el transistor actua com a amplificador.
+Aplicació: commutació, de propòsit general, àudio, alta tensió, super-beta
+Física encapsulat: tecnologia-throuh-hole metal·líca o de plàstic, tecnologia de muntatge en superfície, ball grid array, mòduls de potència.
+Factor d'amplificació h  fe  (transistor beta)Per tant, un transistor es pot descriure com: de silici, per a muntatge en superfície, BJT, NPN, de baixa potència, i d'alta freqüència de commutació.
+
+Significat de les primeres lletres d'un transistor comú com ara BC547B:
+
+Els transistors van en una àmplia gamma d'encapsulats, normalment de vidre, metall, ceràmica o plàstic. Els transistors de potència tenen un encapsulat relativament gran que pot ser muntat sobre un dissipador de calor per evitar que es cremen. En l'extrem oposat, alguns transistors d'alta freqüència i de muntatge superficial són tan menuts com un gra de pols. Hi ha molts transistors, especialment els de potència que tenen un terminal (normalment el col·lector o el drenador) connectat internament amb l'encapsulat per facilitar dissipació de la calor.
+Els primers transistors estaven fets de germani (Ge) però ara la majoria estan fets de silici (Si). Alguns dels de major rendiment es fabriquen amb arsenur de gal·li (GaAs).
+
+
+== Sensibilitat a la llum ==
+Els transistors bipolars poden ser activats amb llum a més d'amb electricitat. Els dispositius dissenyats per a aquest propòsit s'anomenen fototransistors, però no són més que transistors estàndards amb un encapsulat transparent.
+
+
+== Vegeu també ==
+Llei de Moore
+Passivitat (electrònica)
+Transistor Darlington
+TFT
+TFT-LCD
+Circuit integrat a molt gran escala
+Transistor unijunció
+
+
+== Referències ==
+
+
+== Bibliografia ==
+Campos, Joaquín. Electrònica analògica. El transistor;.  Barcelona: Edebé, 1994. ISBN 84-236-3561-9. 
+Gelder, Erich. El transistor;.  Barcelona: Marcombo, 1988. ISBN 84-267-0699-1. 
+Gelder, Erich. El Transistor como amplificador de BF: fases previas, 1988. ISBN 84-267-0700-9. 
+Angulo del Otero, Carlos. Prácticas de electrónica. 1, Semiconductores básicos: diodo y transistor, 1997. ISBN 84-7615-345-7. 
+Viccionari

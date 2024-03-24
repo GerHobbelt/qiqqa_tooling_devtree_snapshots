@@ -1,0 +1,89 @@
+revision: 6408314
+title: Earth
+url: https://et.wikipedia.org/wiki/Google_Earth
+
+
+---
+
+Google Earth (algul nimega EarthViewer 3D) on ettevõtte Google mitmeplatvormiline programm planeedi Maa liitfotode vaatamiseks.
+See programm loob satelliidipiltide, aerofotode ja muus vormis ruumiandmete mitmekülgsel kombineerimisel planeedist Maa kolmemõõtmelise mudeli. Google Earth võimaldab vaadata kogu maailma paiku linnulennult, ükskõik kui kõrgelt, pannes kokku tervikpildi paljudest satelliidipiltidest. See lubab kasutajatel vaadata linnu, tänavaid, maju jne. Satelliidipildi kvaliteet on varieeruv, mõnes eraldatumas ja vähemasustatud kohas on pilt üpriski halb.  
+2019. aastal avalikustas Google, et Google Earth katab 98 % maailma asustatud piirkondadest, sealjuures on programmi Street View tööriista jaoks pildistatud üle 10 miljoni miili tänavaid. Google Earthis saab liikuda sisestades koordinaate või lihtsalt hiirega mingile kohale liikudes. Esimene täiesti 3D-s vaadeldav linn oli Hamburg aastal 2007. Google Earth on saadaval väga paljudes keeltes (37 keelt, neist 4 on kahes variandis), kusjuures on Google Earth saadaval läti ja leedu keeles, kuid mitte veel eesti keeles.  
+Google Earth koosneb paljudest võimalustest ehk kihtidest, millest näiteks üks on Vikipeedia. Seega jõudes kaardil mingi punktini on kohe võimalik näha pilti ja lugeda Vikipeediast sellekohast artiklit. Nüüdsest on võimalik läbi Google Earthi ka kasutada lennusimulaatorit, millega piloot saab valida lennu alustamiseks ükskõik missuguse koha maailmas, seega saab katsetada piloodiametit. Lennusimulaatoril on kolm kiirklahvikombinatsiooni, mis varieeruvad olenevalt programmist: Control+Alt+A, Control+A, või Command+Option+A. Sellega Google Earthi võimalused ei piirdu, veel on võimalik vaadata teedel liiklusummikute kohti. 
+
+
+== Pildi kujutamine ==
+Google Earthi pildid kuvatakse digitaalsel gloobusel, mis kuvab planeedi pinna ühe liitpildi abil. Sisse suumides muutuvad kujutised detailsemaks ning need kujutised hangitakse satelliitidelt või lennukitelt. Google Earth kasutab Landsat 8 kõrge kvaliteediga ja suurema sagedusega kujutisi. Pilte hoiustatakse Google'i serverites, mis internetiühenduse abil käivitatakse programmi avamisel. Piltide eraldusvõime ulatub 15 meetrist  15 sentimeetrini. Suure osa Maa kohta kasutab Google Earth “NASA Shuttle Radar Topography Missioni” kogutud digitaalsete kõrgusmudelite andmeid. See loob mulje kolmemõõtmelisest maastikust. 
+Versioonis 5.0 lisandus rakendusse ajalooliste kujutiste (Historical Imagery) funktsioon, mis võimaldab kasutajal tutvuda kõigi Landsati satelliidiandmetega alates aastast 1984. Sarnast, aga veidi kureeritumat rolli täidab Google Earthi veebirakenduses aegrea funktsioon (Timelapse). Timelapse on ülemaailmse skaalaga sissesuumitav video, mis koosneb tuhandetest või miljonitest satelliidipiltidest. Timelapse aitab visualiseerida ja mõista Maal toimuvaid protsesse: linnastumist ja linnade laialivalgumist, metsade raiet või taastumist, maakattemuutusi, veeolusid ja palju muud. Kasutajad saavad vaadelda enda huvialasid või tutvuda mõne teadlaste väljavalitud piirkonnaga, kus üks või teine protsess satelliidipiltide aegrealt hästi kajastub. 
+
+
+=== 3D-kujutis ===
+Esimesed Google Earthi 3D-hooned loodi 3D-modelleerimise rakendustega nagu SketchUp ja alates 2009. aastast Building Makeri abil, mis laaditi 3D Warehouse'i kaudu üles Google Earth. 2012. aasta juunis teatas Google, et asendab kasutajate loodud 3D-hooned automaatselt genereeritud 3D-võrguga. See võetaks kasutusele järk-järgult, alustades valitud suurematest linnadest, välja arvatud sellised linnad nagu London ja Toronto, mis nõudsid oma suure hulga hoonete üksikasjalike kujutiste töötlemiseks rohkem aega. Põhjuseks tuuakse 3D-hoonete suurem ühtlus ja konkureerimine Nokia Here'i ja Apple Mapsiga, mis seda tehnoloogiat juba kasutasid. 2016. aasta alguseks olid 3D-kujutised laienenud sadadesse linnadesse enam kui 40 riigis, sealhulgas kõigis USA osariikides ja hõlmates kõiki kontinente peale Antarktika.
+2009. aastal valmis Google ja Madriidis asuva Prado muuseumi koostöös 3D Prado muuseumi kujutis, mudelis kujutati muuseumi sees 14 000-megapikslise resolutsiooniga 14 kuulsamat muuseumi maali.
+
+
+=== Tänavavaade ===
+15. aprillil 2008 lisas Google Google Earth versiooniga 4.3 tänavavaate, mis kuvab 360° panoraamfotosid tänava tasandil valitud linnadest ja nende ümbrusest. Fotod on tehtud autodele paigaldatud kaameratega, neid saab vaadata erinevas mõõtkavas ja mitme nurga alt ning on navigeeritavad neile pandud noole ikoonide järgi. Google Earthi tänavavaate abil saavad kasutajad külastada ja uurida 30 UNESCO maailmapärandi nimistusse kantud saiti koos ajaloolise kirjeldusega. Nende paikade hulka kuuluvad näiteks Giza püramiidid, Tāj Mahal, Sagrada Família, Dolomiidid ja kuninglik botaanikaaed.
+2019. aastal koostas Google koostöös Walt Disney World-iga Pixar Street View. Programm võimaldas vaatajatel street view kaudu otsida Toy Story teemaparki peidetud Pixari lihavõttemune.[1]
+
+
+== Kosmos ==
+Google Earthi kaudu saab avastada erinevaid taevakehasid (Mars, Kuu) ja vaadata Maad kosmosest.
+
+
+=== Google Sky ===
+Lisati Google Earthile 2007. aastal. See võimaldab kasutajal vaadelda taevatähti ja teisi taevakehasid. Programm valmis koostöös STScI-ga (Space Telescope Science Institute), mis on Hubble'i kosmoseteleskoobi teaduslik keskus.
+
+
+=== Google Mars ===
+Google Mars võimaldab kasutajal avastada Marsi pinda. Tutvuda saab Marsi reljeefiga ja nähtava valguse ning infrapuna kaartidega.
+
+
+=== Google Moon ===
+Apollo 11 40ndal aastapäeval 20. juulil 2009 avalikustatud Google Moon pakub kasutajatele erinevaid virtuaaltuure Kuu pinnal, sealjuures üht Apollo missioonidest. Google Moon valmis koostöös NASA-ga.
+
+
+== Google Earthi kihid ==
+Google Earthi kihid, mis aitavad kokku viia geograafilist kohta ja sellekohast infot: 
+
+Panoramio (üks Google Inci pakutavatest programmidest), näitab suure relevantsusega pilte, mis on üles laaditud Panoramiosse
+Teedevõrgustik, kus iga erinev tee kategooria on märgitud erimärgistusega.
+3D-ehitised, mis näitab maailma suurlinnade ehitisi 3D-pildina (graafika on üpriski väikese eraldusvõimega)
+Google'i tänavavaade, millega saab 360° panoraamvaate suurlinnade tänavatest
+Piirimärgistus, kus riikide piirid on märgitud, olenevalt liigist, eri värvidega
+Liiklus, kus kasutaja saab vaadelda teede läbilaskevõimet
+Ilm, kust saab informatsiooni ilma kohta kogu maailmas
+Pildigalerii, mis on tehtud koostöös paljude institutsioonidega
+Ookean, mis võimaldab tutvuda ookeanide ja veealuse maailmaga
+Globaalne teadlikkus, mis avardab inimeste silmaringi erinevate globaalprobleemide kohta
+Kasutajatele huvi pakkuvad teenindusasutused ja vaba aja veetmise kohad
+Taevas, kus saab tutvuda taevatähtedega ja nende asukohaga
+Planeet Marss, kus saab tutvuda Marsi pinna reljeefiga
+
+
+== Google Earthi versioonid ==
+Google Earthi saab kasutada järgmistel tuntud operatsioonisüsteemidel: Windows, macOS, Linux, iOS ja Android.
+Google Earth Pro - algselt oli tegemist äriklientidele suunatud versiooniga, mille kasutamine maksis 399 $ aastas. 2015. aasta jaanuaris otsustas Google Pro versiooni vabavaraks teha. Praegu on Google Earth Pro programmi standardversioon arvutite jaoks. Pro versioon sisaldab lisavõimalusi videote tegemiseks, printimiseks ja kauguste mõõtmiseks. Seda saab kasutada nii Windowsi, macOS-i kui Linuxi operatsioonisüsteemidel.
+Google Earth Plus - 2008. aastal lõpetatud Plus versioon oli tasuline (20 $ aastas) uuendus, mis pakkus kasutajatele erinevaid lisavõimalusi, nagu näiteks ühilduvus GPS seadmetega. Praguseks on need võimalused saanud tasuta versiooni osaks.
+Google Earth for Web - kergesti kasutatav ja lihtsasti ligipääsetav veebipõhine versioon, mille funktsioonid on limiteeritud. Praegu saab Webi versiooni kasutada ainult Chrome veebibrauseris.
+Google Earth Enterprise -  2006. aastal avaldatud Enterprise pakkus ettevõtetele võimalust luua ja majutada oma privaatseid kaarte ja 3D gloobuse versioone. 2015. aasta märtsis lõpetas Google selle toote arendamise, ent 2017. aastal avaldati GitHubis GEE Fusion, GEE Server ja GEE Portable Server koodiread. Praegu on need vabavarana kõigile kättesaadavad. 
+Google Earth Studio - Studio on tööriist, mille abil saab Google Earthi 3D mudelitest luua animatsioone. Praegu töötab see ainult Chrome veebibrauseriga ning nõuab eelnevat registreerimist.
+Google Earth for Mobile - rakendus, mis funktsioonidelt on sarnane veebipõhise Google Earth-iga. Vaatamisvõimalused samad, kuid programme ei saa koostada. Rakendus on olemas Androidi ja iOS-i operatsioonisüsteemidele.
+Google Earth VR - 2016. aasta novembris avalikustas Google programmi virutaalreaalsuse versiooni.
+
+
+== Google Earth Engine ==
+Google Earth Engine on pilvandmetöötluse platvorm satelliidipiltide ning muude georuumiliste andmete töötlemiseks. See tagab kõigile ligipääsu suurtele satelliidipiltide andmebaasile. Google Earth Engine rakendusaladeks on näiteks muutuste vaatlemine põllumajanduses, loodusressurssides ning kliimas, kasutades georuumilisi andmeid satelliitidelt. Seiret viiakse läbi Landsati satelliidiga ning Google Earth Engine põhineb andmetel antud satelliidi programmilt. 
+Tänu Google Earth Engine ja Google Cloud Storage’ile on Landsat ja Sentinel-2 andmestik kergesti kättesaadav nii teadlastele, kui ka tavainimestele. Programmis on rakendatud JavaScripti ja Pythoni programmeerimise liidesed, mis võimaldab teha serveritele päringuid ja graafilist kasutajaliidest.
+2013. aastal koostasid teadlased Marylandi ülikoolis Earth Engine'i abil esimesed kõrge eraldusvõimega ülemaailmse metsakatte ja kadude kaardid, mis andsid aimu ülemaailmse metsakatte üldisest vähenemisest. Teised Earth Engine'i varasemad rakendused hõlmasid mitmesuguseid teemasid, sealhulgas tiigrite elupaikade jälgimine, malaaria riskiga alade kaardistamist, ülemaailmset pinnavee osakaalu, iga-aastast metsaga kaetud pindade osakaalu hindamist jne. Sellest ajast alates on Earth Engine'is töödeldud andmeid kasutatud erinevates valdkondades, sealhulgas metsandus ja põllumajanduses, hüdroloogias, loodusõnnetuste hindamisel, linnade kaardistamisel, atmosfääri- ja pinnase kaardistamisel.
+
+
+== Kriitika ==
+Google Earthi tarkvara on aastate jooksul saanud kriitikat nii riigiametnikelt, julgeolekuasutustelt kui ka inimõiguste eest seisvatelt organisatsioonidelt. Ühelt poolt on tarkvara peetud inimeste privaatsust rikkuvaks, teiselt poolt on riikliku tähtsusega militaarobjektide ja muude strateegiliselt oluliste paikade kohta detailse kolmemõõtmelise info jagamine tõstatanud ka laiemaid julgeolekuküsimusi. Mitmes Lähis-Ida riigis on programmi kasutamine võimatu, Iraani ja Sudaanis on see alates 2007. aastast olnud blokeeritud USA valitsuse ekspordipiirangute tõttu. Marokos blokeeris riiklik telekommunikatsiooniettevõte Maroc Telecom Google Earthi aastal 2006.Lisaks on privaatsusmuredest lähtuvalt mitmed teised riigid (mh India, Tšehhi, Austria) ise ajutiselt keelustanud või piiranud Google Earthi tänavavaate jaoks andmete kogumist ja nende avalikustamist. Üldjuhul on sellistest piirangutest läbirääkimiste tulemustel loobutud tingimusel, et Google suudab järgida meetmeid nõutud olukordades kõrgendatud privaatsuse tagamiseks. Lisaks automaatsele nägude ja auto numbrimärkide hägustamisele on igal Google’i kasutajal võimalik paluda enda kodu hägustamist tänavavaates. Nii on näiteks Saksamaal enda kodu detailse kujutise Street View-st eemaldada lasknud ligi 250 000 majapidamist.Hägustamist ning potentsiaalselt haavava info eemaldamist (sh 3D-mudelite või tekstiinfo eemaldamist) on Google Earthis kasutatud ka riikliku julgeoleku tugevdamise meetmetena. Rakenduses on hägustatud või moonutatud mitmete sõjaväe- ja õhutõrjebaaside, lennuväljade, tuumajaamade ja riiklikult tähtsate isikute elupindade ruumikujud. Üheks privaatsus- ja julgeolekumeetmete tugevdamise ajendiks oli kindlasti terrorismioht – terroristid kasutasid Google Earthi nii 2008. aasta Mumbai pommitamiste kui ka 2009. aastal toimunud Paul Findley administratiivhoone terrorirünnaku planeerimiseks.
+
+
+== Viited ==
+
+
+== Välislingid ==
+Koduleht
+Allalaadimisleht

@@ -1,0 +1,44 @@
+revision: 7590877
+title: Robot
+url: https://sk.wikipedia.org/wiki/Robot
+
+
+---
+
+Robot  je stroj pracujúci s určitou mierou samostatnosti, vykonávajúci určené úlohy, a to predpísaným spôsobom a pri rôznych mierach potreby interakcie s okolitým svetom a so zadávateľom: Robot je schopný svoje okolie vnímať pomocou senzorov, reagovať na neho, zasahovať do neho, prípadne si o ňom vytvárať vlastnú predstavu, model. Vnímaním sveta môže nielen spoznávať svet samotný, ale môže tiež vyhodnocovať svoj vplyv na neho a využívať tak spätnú väzbu. Robot je fyzickou realizáciou všeobecnejšieho pojmu agent.
+
+
+== Etymológia ==
+
+Slovo robota (práca) bolo známe už v 17.storočí, vo význame otrocká práca poddaných. Mierne pozmenene ho v roku 1921 prvýkrát vo význame stroj použil český spisovateľ Karel Čapek v dráme R.U.R. Slovo mu poradil jeho brat Josef Čapek, keď sa s ním Karel rozprával o tom, ako umelú bytosť pomenovať. Pôvodne zamýšľaný labor znel autorovi príliš "papierovo".      Josef Čapek podľa bratovho svedectva navrhol slovo robot "so štetcom v ústach a maľoval ďalej ". Tak vzniklo jedno zo svetovo najznámejších slov českého pôvodu, všeobecne rozšírené najmä vďaka preniknutiu do angličtiny .
+V Čapkovom diele je slovo robot skloňované ako životné podstatné meno. Skratka RUR je označuje veľkými písmenami a nazýva v množnom čísle Rozumoví Univerzálni Roboti. V češtine sa neskôr vyvinuli dva spôsoby skloňovanie podľa charakteru robota: Pre inteligentné alebo humanoidné roboty sa (obvykle vo vedecko-fantastickej literatúre ) spravidla používa životné skloňovanie. Pre priemyselné a iné, človeku nepodobné roboty (napr. " Kuchynský robot ") sa používa skôr neživotné skloňovanie.
+
+
+== Rozdeľovanie robotov ==
+Podľa generácie na:
+
+roboty 1. generácie - pracujú na základe pevného programu
+roboty 2. generácie - vybavené senzormi a senzormi, vďaka ktorým reagujú na okolité podmienkyPodľa ich schopnosti premiestňovať sa na:
+
+stacionárne - nemôžu sa pohybovať z miesta na miesto (napríklad priemyselné manipulátory)
+mobilné - môžu sa premiestňovať (napríklad vesmírne sondy a vozidlá na Marse)Ďalej tiež podľa:
+
+pohybových možností,
+autonómie,
+úlohy (boj, výroba, tlačiarne a plotre, preprava, prieskum),
+spôsobe programovania, a aj inak.Podľa úlohy, vzhľadu, spôsobu vzniku, schopností a ďalších aspektov rozlišujeme tieto roboty:
+
+Manipulátor - stroj nemá vlastnú inteligenciu. Je ovládaný na diaľku.
+Kuchynský robot - kombinácia mixéra, šľahača a ďalších kuchynských strojov, zvyčajne vyrobený ako motorová jednotka s nadstavcami.
+Android - robot podobný človeku - obvykle sa očakáva biologické zloženie. Roboti v R.U.R. boli podľa tohto delenia androidi.
+Droid - akýkoľvek inteligentný a samočinný robot, jeho typom je aj dron, teda droid pracujúci ako robotník.
+Humanoid - robot podobný človeku principiálne stavbou tela a najmä spôsobom pohybu.
+Antropomorfný - stroj, ktorý sa človeku približuje (napodobňuje ho) buď fyzicky, spôsobom pohybu, alebo naopak mentálne (napr. HAL 9000).
+Kyborg (kybernetický organizmus) - umelá bytosť či myseľ, biologické telo pod vládou stroja, cez bio-kybernetické prepojenia. Je opačným pólom prírodnej živej bytosti. Najčastejšie vyobrazovaná ako entita s umelo upraveným telom, napr. obohateným o mechanické či elektronické súčiastky. V extrémnom prípade môže z tela zostať iba mozog, ale je stále považovaná za človeka.Termín robot sa používa tiež pre počítačové programy, ktorý za svojho majiteľa vykonáva opakované činnosti (pozri internetový robot).
+
+
+== Referencie ==
+
+
+== Zdroj ==
+Tento článok je čiastočný alebo úplný preklad článku Robot na českej Wikipédii.

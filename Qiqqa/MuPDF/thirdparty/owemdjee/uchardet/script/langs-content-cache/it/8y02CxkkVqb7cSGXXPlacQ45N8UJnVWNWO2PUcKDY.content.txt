@@ -1,0 +1,92 @@
+revision: 132032146
+title: Boot manager
+url: https://it.wikipedia.org/wiki/Boot
+
+
+---
+
+In informatica, il boot (o bootstrap, o più raramente booting) o avvio è, in generale, l'insieme dei processi che vengono eseguiti da un computer dall'accensione fino al completo caricamento in memoria primaria del kernel del sistema operativo a partire dalla memoria secondaria.
+
+
+== Storia ==
+Nei primi calcolatori, il bootstrap era tipicamente un processo che coinvolgeva un operatore umano specializzato. Questo prevedeva l'inserimento manuale nel calcolatore delle istruzioni di avvio tramite una serie di supporti di memoria intermedi di vario tipo, tipicamente composti a base di ferrite (chiamate memorie a nuclei che è una tipologia di memoria informatica non volatile. ) o, più comunemente, nastri magnetici o più semplicemente schede perforate (schede di cartoncino di formato ben definito contenente l'informazione da dare in input). Sono state proprio le schede perforate il primo dispositivo "a sola lettura" a contenere le istruzioni per l'avvio del calcolatore, già negli elaboratori IBM degli anni 50-60: è in questo periodo che si comincia ad utilizzare il termine bootstrap con il significato attuale.
+Alcuni di questi eleboratori possedevano già un processo di avvio tramite la pressione di un singolo bottone, ma non una "memoria a sola lettura" in senso stretto, cioè un dispositivo a semiconduttore contenente le istruzioni di avvio cablate al suo interno; inoltre prevedevano di solito un processo di avvio molto complesso, non cioè tramite la pressione di un singolo tasto, ma attraverso una lunga procedura manuale: questo avveniva, ad esempio nel Micral N (1973), il primo microcomputer a microprocessore, e ancora nel 1975 (l'anno dei "pionieri del microcomputer") sia nei microcomputer portatili più innovativi, come l'Altair 8800, che nei minicomputer più diffusi (comunque molto voluminosi rispetto ai loro successori moderni), come il PDP-11. I microprocessori fecero il loro ingresso nell'informatica negli anni 1970 - 1971, rivoluzionando le prestazioni dei componenti e, di conseguenza, le architetture: in questi anni, il loro costo tuttavia era estremamente elevato anche per memorie limitate a 16 bit. Nel caso del boot in questa fase, ad incidere è il bilanciamento tra la possibilità di caricare il programma di avvio, residente in ROM, e la memoria di esecuzione.
+Una delle innovazioni maggiori del boot, nel 1975, è stata dunque l'introduzione di un processo di caricamento automatico da una memoria in sola lettura (ovvero, una moderna memoria fissa a semiconduttore), come quello che fu realizzato e brevettato dall'italiano Alberto Ciaramella, giovane ingegnere dello CSELT nel 1975 nell'elaboratore di processo della prima centrale telefonica numerica italiana (denominata "Gruppi Speciali"), con una tecnica indipendente dall'architettura complessiva dell'elaboratore e sotto forma di un dispositivo esterno all'elaboratore stesso: tale tecnica costruisce il processo di boot moderno, unendo cioè il vantaggio dell'avvio dalla pressione di un singolo bottone (con risparmio di tempo) all'affidabilità dell'uso della memoria ROM propriamente detta per caricare le istruzioni di avvio direttamente nel sistema operativo. Un altro vantaggio nel boostrap dei Gruppi Speciali era la memorizzazione dello stato dell'elaboratore a fronte dello spegnimento (ad esempio, nel caso di guasto), caratteristica che verrà ripresa dai computer degli anni successivi (ma era ancora assente nei primi personal computer IBM degli anni Ottanta).
+L'affidabilità del processo di riavvio (l'automatizzazione dello stesso, la sua velocità e la memorizzazione allo stato prima dello spegnimento), era particolarmente sentita proprio nel campo delle centrali telefoniche. In quanto procedimento indipendente dall'architettura, era dunque possibile utilizzare la nuova tecnica di avvio dei Gruppi Speciali anche per elaboratori che non la prevedevano in fase di progetto, semplicemente tramite l'aggiunta esterna di tale dispositivo analogamente a quanto fatto nei Gruppi Speciali stessi, aggiunto all'architettura della centrale telefonica nel corso della fase di sperimentazione. Tuttavia, l'architettura generale del sistema da avviare non era ancora quella integrata in uso oggi.
+Il passo successivo, cioè l'integrazione del processo di un bootstrap analogo così strutturato (compresa la sua componente della ROM di boot a semiconduttore) nativamente all'interno della scheda dell'elaboratore è stata introdotta per la prima volta in un calcolatore in concomitanza della nascita del primo personal computer consumer (anche detto microcomputer, per distinguersi dalla generazione di calcolatori precedente, di maggiori dimensioni), ovvero con l'Apple-1 solo l'anno successivo, nel corso del 1976, lo stesso anno della fondazione della Apple: tale architettura integrata del dispositivo di boot è analoga allo standard dei personal computer attuali. Il boot tramite un dispositivo esterno oggi è usato solo in casi particolari, come possibile policy di sicurezza.
+
+
+=== Note terminologiche ===
+Il termine originale inglese è bootstrap (la fascetta di cuoio cucita sul bordo posteriore degli stivali per aiutarsi a calzarli), da cui la contrazione boot (e termini derivati come booting e reboot).  Esiste il modo di dire inglese pull yourself up by your bootstraps ("tirati su da solo prendendoti per le stringhe degli stivali"), che significa "risolvi da solo i tuoi problemi, senza aspettare l'aiuto di altri".
+L'analogia è con il fatto (solo apparentemente paradossale) che, durante il bootstrap, il computer esegue un determinato processo allo scopo di mettersi in condizione di operare (eseguire processi). In italiano si può rendere questo concetto anche come "avvio" ("riavvio"), sebbene questi termini (come i loro corrispondenti diretti inglese "start" e "restart") abbiano generalmente una connotazione meno tecnica.
+Dalle espressioni boot e bootstrap anche in italiano sono derivati alcuni termini di gergo informatico come il verbo bootare (o boottare) o l'aggettivo bootabile (o boottabile) che si riferisce a un supporto di memorizzazione (per esempio un CD o un altro genere di disco) dal quale sia possibile caricare il sistema operativo all'avvio del computer (e quindi completare il boot).
+Infine, una bootrom è un componente di inizializzazione di dispositivi hardware.
+
+
+== Descrizione ==
+
+All'accensione di un computer, il processore resta inizialmente nello stato di RESET dall'hardware che tiene attivo il corrispondente ingresso della CPU finché le tensioni di alimentazione non sono stabili. Appena il segnale di RESET viene disattivato, il processore esegue la sua prima istruzione da una locazione fissa del suo spazio di memoria, a cui di solito corrisponde una ROM o altra memoria non volatile. Si tratta quasi sempre di un'istruzione di salto incondizionato (JMP) che porta l'esecuzione al vero inizio del programma di firmware (o del BIOS, se si tratta di un personal IBM compatibile) il quale, successivamente, prende il controllo del computer.
+Nel caso di dispositivi embedded dotati di semplice firmware, le procedure di bootstrap sono estremamente variabili da caso a caso. Nei personal computer IBM-compatibili, il firmware è costituito dal BIOS, che compie una serie di operazioni ben definite prima di caricare in memoria primaria  il sistema operativo e trasferire ad esso il controllo.
+
+
+=== Bootstrap ===
+Tutti i processori IA32 caricano la prima istruzione dopo il RESET dall'indirizzo esadecimale 0xFFFFFFF0 (i loro predecessori a 16 bit dall'indirizzo 0xFFFF0), a cui corrisponde una locazione di memoria non volatile. I passi compiuti dal BIOS sono:
+
+il POST (Power On Self Test), una serie di test diagnostici per verificare il corretto funzionamento dell'hardware e della scheda madre: se tutti i dispositivi controllati sono funzionanti emette un solo "beep" dall'altoparlantino di sistema e prosegue, ma se uno o più dispositivi fra quelli testati non funzionano, l'altoparlante emetterà una serie di bip, lunghi o corti, in numero variabile secondo un codice ben preciso che indica la periferica guasta e il tipo di problema riscontrato
+cerca una scheda video installata, prima di tutto quella che secondo i suoi dati interni dovrebbe essere presente, ed esegue il POST video che si trova nella ROM interna della scheda video.
+cerca eventuali ROM di altri dispositivi installati e ne esegue le routine POST.
+esegue altri test, come il conteggio della memoria e lo stato della tastiera. Se incontra degli errori, non ricorre al codice sonoro dei bip ma (ora può farlo) mostra un messaggio a video.
+mostra a video una schermata di presentazione, con alcuni dati sull'hardware di quel particolare computer.
+compila l'inventario completo del tipo di hardware installato e delle capacità riscontrate: registra i timing della memoria, i parametri fisici dei dischi rigidi e i modi di accesso che questi supportano, le porte seriali e parallele e le loro velocità, se hanno una FIFO, e altri.
+(se il BIOS supporta il Plug and Play) configura automaticamente i dispositivi Plug and Play presenti e mostra un messaggio a video per ciascuno di essi.
+si interfaccia con la memoria CMOS, contenente i parametri di configurazione suscettibili di modifica, ed esegue le relative istruzioni dopo averne verificato l'integrità attraverso un algoritmo di checksum.
+Infine, cerca un'unità a disco da cui caricare il sistema operativo. Se c'è, carica in RAM, all'indirizzo 0000:7C00, il primo settore del disco (cilindro 0, testina 0, settore 1), che corrisponde al master boot record (MBR) e l'esecuzione continua da lì.Da questo punto in poi il processo di bootstrap dipende dal particolare sistema operativo installato.
+
+
+=== Il boot manager e il boot loader ===
+
+Se sono installati più sistemi operativi sulla stessa macchina la selezione del sistema operativo desiderato è lasciata all'utente o su impostazione di default, in entrambi i casi attraverso il boot manager. Talvolta quindi il codice nel primo settore di un disco non è quello del sistema operativo, ma quello di questo particolare programma, il cui compito è di mostrare a video un menu da cui l'utente può scegliere quale, fra più sistemi operativi installati, far partire: una volta fatta la scelta un altro programma detto boot loader carica il codice del primo settore del sistema operativo scelto, che inizia l'esecuzione come fosse stato lanciato dallo stesso BIOS.
+Alcuni sistemi operativi possono ricevere dei parametri di boot: il boot loader può permettere di definire questi parametri sia in un file di configurazione che al momento del boot.
+Oltre a sistemi operativi in senso stretto potrebbero esserci anche sistemi (avviabili) pre-sistema operativo, come gli ambienti di ripristino, gli strumenti di cifratura o sincronizzazione unità, software di sicurezza di tipo enterprise, elencati anch'essi dal gestore di avvio.
+
+
+=== Boot da rete ===
+Molte schede di rete ethernet dispongono di una funzionalità denominata Preboot Execution Environment (PXE), che permette di caricare un sistema operativo (o più spesso un boot loader) dalla rete invece che da un disco locale.
+
+
+=== Avvio del sistema operativo ===
+Se viene usato un boot loader, esso caricherà il kernel del sistema operativo, e talvolta un initrd che eseguirà la prima fase del boot.
+
+
+== Il reboot ==
+
+L'espressione derivata reboot (analoga a "riavviare") si riferisce alla sequenza di spegnimento e riavvio del computer, di solito per installazioni di software di sistema o per riparare a gravi errori hardware o software che hanno compromesso la stabilità o le prestazioni della macchina.
+Il reboot può essere effettuato in tre modi:
+
+spegnimento e riaccensione fisici (interruzione e ripristino della alimentazione elettrica). Chiamato hard reboot, è pericoloso sia per l'integrità dei dati che per quella dell'hardware e non dovrebbe mai essere effettuato se non in casi estremi;
+pressione del tasto di reset (per i PC che ne sono dotati), che attiva il segnale di reset della CPU. Anche questo è un hard reboot ed anche questa è un'operazione sconsigliabile, perché può creare perdite di dati, ma non presenta rischi per l'hardware. L'intera sequenza di operazioni di bootstrapping del BIOS e del sistema operativo riparte da capo, tuttavia è possibile che alcuni dispositivi già in condizioni di errore prima del reset non rispondano al BIOS durante l'inizializzazione, costringendo ad uno spegnimento fisico della macchina.
+riavvio con combinazioni di tasti (p.e. su PC, nella piattaforma di Windows, attraverso la combinazione dei tasti Ctrl+Alt+Canc, o nei sistemi UNIX Ctrl+Alt+SysReq+B) chiamato soft reboot: a differenza del boot completo, nel soft reboot non viene eseguito il POST e la ricerca di tastiera e video, ma il processo riparte circa dal passo 6 del paragrafo precedente (inventario dell'hardware).
+
+
+== Note ==
+
+
+== Voci correlate ==
+BIOS
+Master boot record
+Boot manager
+Boot loader
+Bootrom
+Instant on
+Sistema operativo
+Power-on self-test
+Init
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su boot
+
+
+== Collegamenti esterni ==
+ Guida all'avvio ed allo spegnimento di un sistema Linux, su pluto.it.

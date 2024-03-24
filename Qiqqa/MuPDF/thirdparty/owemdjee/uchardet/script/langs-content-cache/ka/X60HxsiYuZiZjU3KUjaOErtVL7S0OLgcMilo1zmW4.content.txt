@@ -1,0 +1,29 @@
+revision: 4105992
+title: transistor
+url: https://ka.wikipedia.org/wiki/%E1%83%A2%E1%83%A0%E1%83%90%E1%83%9C%E1%83%96%E1%83%98%E1%83%A1%E1%83%A2%E1%83%9D%E1%83%A0%E1%83%98
+
+
+---
+
+ტრანზისტორი (ინგლ. transfer; „გადატანა“ და resistor „წინაღობა“) — სამ- ან მეტ- ელექტროდიანი ნახევარგამტარი მოწყობილობა, რომელშიც ორ ელექტროდს შორის ძაბვა იმართება მესამე ელექტროდით. გამომავალ ჯაჭვში ძაბვის მართვა ხორციელდება შემავალ ჯაჭვში ძაბვის ცვალებადობით (ბიპოლარულ ტრანზისტორებში). ძაბვის მცირედ ცვალებადობას შემავალ ჯაჭვში შეუძლია გამოიწვიოს არსებითად დიდი ცვლილება გამომავალ ჯაჭვში. ეს გამაძლიერებელი თვისება გამოიყენება ანალოგურ მოწყობილობებში (ტელევიზორი, რადიო და ა.შ.) ამჟამად ანალოგურ ტექნიკაში დომინირებს ბიპოლარული ტრანზისტორები. (საერთაშორისო ტერმინი - BJT, bipolar junction transistor). მნიშვნელოვანი გამოყენება აქვს ტრანზისტორებს ციფრულ ტექნიკაში (ლოგიკა, მეხსიერება, პროცესორები, კომპიუტერები, ციფრული კავშირი და ა.შ.)
+ყველა თანამედროვე ციფრული ტექნიკა დაფუძნებულია მოპ (металл-окисел-полупроводник) ტრანზისტორებზე.
+ტრანზისტორები მზადდება ერთ კრისტალზე (ჩიპზე) და შეადგენს ელემენტარულ „აგურს“ მეხსიერების, პროცესორის და მათდაგვარების აშენებისათვის. თანამედროვე მოპ ტრანზისტორების ზომები შეადგენენ 130 დან 60 ნანომეტრამდე. ერთ ჩიპზე (ჩვეულებრივ 1-2 კვადრატული სანტიმეტრის ფართობით) განლაგდება ათეულობით მილიონი ტრანზისტორი. ათეულობით წლების განმავლობაში უფრო და უფრო მცირდება ტრანზისტორების ზომა, ხოლო იზრდება მათი რაოდენობა ჩიპებზე. უახლოეს მომავალში მოსალოდნელია მათი რაოდენობის გაზრდა ჩიპებზე ასეულობით მილიონამდე. ტრანზისტორების ზომების შემცირებით ასევე ხდება პროცესორის რეაქციის აჩქარება (ტაქტური სიხშირე).
+
+
+== იხილეთ აგრეთვე ==
+ციფრული სისტემა
+დიოდი
+
+
+== ლიტერატურა ==
+Amos S W & James M R (1999). Principles of Transistor Circuits.  Butterworth-Heinemann. ISBN 0-7506-4427-3. 
+Bacon, W. Stevenson (1968). „The Transistor's 20th Anniversary: How Germanium And A Bit of Wire Changed The World“. Bonnier Corp.: Popular Science, retrieved from Google Books 2009-03-22. Bonnier Corporation. 192 (6): 80–84. ISSN 0161-7370.
+Paul Horowitz & Hill, Winfield (1989). The Art of Electronics.  Cambridge University Press. ISBN 0-521-37095-7. 
+Riordan, Michael & Hoddeson, Lillian (1998). Crystal Fire.  W.W Norton & Company Limited. ISBN 0-393-31851-6.  The invention of the transistor & the birth of the information age
+
+
+== რესურსები ინტერნეტში ==
+
+The CK722 Museum. Website devoted to the "classic" hobbyist germanium transistor
+Jerry Russell's Transistor Cross Reference Database დაარქივებული 2007-02-16 საიტზე Wayback Machine. .
+The DatasheetArchive. Searchable database of transistor specifications and datasheets.

@@ -1,0 +1,46 @@
+revision: 3520204
+title: Diode (elektronu lampa)
+url: https://lv.wikipedia.org/wiki/Diode_(elektronu_lampa)
+
+
+---
+
+Diode (grieķu: di(s)... - divreiz + (elektr)ods) - vienkāršākā elektronu lampa ar diviem elektrodiem - anodu un karsējamu katodu. Mūsdienās ar jēdzienu diode parasti saprot pusvadītāju ierīces.
+
+
+== Uzbūve ==
+
+Vakuuma diodes elektrodi - anods un katods - atrodas stikla balonā, no kura izsūknēts gaiss. Agrāk lietoja arī metāliskus balonus, kuros iekausēja stikla vai keramikas gabaliņus elektrodu izvadiem. Stikla balonos izvadi tiek iekausēti tieši balonā. Anodam ir viens izvads un cilindriska vai paralēlu plāksnīšu forma (jaudīgām diodēm anodiem ir papildus radiatori siltuma novadīšanai). Katodi iedalās tiešas kvēles katodos (ar diviem izvadiem) un netiešās kvēles katodos (tiem ir divi kvēldiega izvadi un viens paša katoda izvads).
+
+
+== Darbības princips ==
+Termoelektronu emisijas rezultātā no sakarsētā katoda atraujas brīvi elektroni. Tā kā visiem elektroniem ir vienāds negatīvs lādiņš, tie savstarpēji atgrūžas un veido elektronu mākoni ap katodu. Noteiktā temperatūrā ap katodu rodas noteikta izmēra elektronu mākonis, no kura uz katodu krīt tikpat daudz elektronu, cik no katoda izlido. Ja katodam pievieno sprieguma avota negatīvo polu, bet anodam - pozitīvo, elektroni sāk pārvietoties no katoda uz anodu un vakuumā sāk plūst elektriskā strāva. Turpretī, ja sprieguma avotu pievieno otrādi, anodam ir negatīvs potenciāls, elektroni no tā atgrūžas un strāva (sproststrāva) neplūst. Tādējādi, ja uz diodi padod maiņspriegumu, tā darbojas kā savdabīgs ventilis (notiek strāvas taisngriešana).
+
+
+== Īpašības ==
+
+Diodes voltampēru raksturlīknei ir 3 apgabali:
+
+1 - nelineārs sākuma apgabals, kurā, palielinot spriegumu, strāva pieaug lēni, jo elektronu mākoņa negatīvais lādiņš darbojas pretī anoda pozitīvajam lādiņam.
+2 - lineārais posms. Tajā anodstrāva praktiski tieši proporcionāla pieliktajam spriegumam.
+3 - piesātinājuma apgabals. Pieliekot vēl lielāku spriegumu, anodstrāvas pieaugums sāk samazināties un pēc noteikta sprieguma sasniegšanas strāva (piesātinājuma strāva) vairs nepalielinās, jo visi elektroni, ko emitē katods, sasniedz anodu. Piesātinājuma strāvu var palielināt, paaugstinot katoda kvēles spriegumu - tad katods kļūst karstāks un emitē vairāk elektronu, taču tas samazina lampas kalpošanas laiku.
+
+
+=== Diodes galvenie parametri ===
+Voltampēru raksturlīknes slīpums (strāvas izmaiņas attiecība pret sprieguma izmaiņu lineārajā apgabalā).
+Iekšējā pretestība.
+Maksimālais spriegums.
+Maksimāli pieļaujamā izkliedētā jauda.
+
+
+=== Salīdzinājums ar pusvadītāju diodēm ===
+Vakuuma diodēm ir daudz lielāki izmēri un mazāks lietderības koeficients, nekā pusvadītāju ierīcēm, tādēļ mūsdienās tās tikpat kā neizmanto. Tomēr tām ir arī priekšrocības - nav sproststrāvas, tās iztur lielākus spriegumus, ir mazjutīgas pret īslaicīgām pārslodzēm un radiācijas iedarbību. Tām nav arī novērojams barjerspriegums, līdz ar to tās spēj taisngriezt arī ļoti mazus spriegumus.
+
+
+== Izmantošana ==
+
+Vakuuma diodes agrāk izmantoja kā detektorus un strāvas taisngriežus (sk. kenotrons). Sevišķi lielam spriegumam paredzētas vakuuma diodes (kenotronus) lieto arī mūsdienās. Kenotronus bieži izmanto arī kvalitatīvos lampu skaņas pastiprinātājos anodsprieguma taisngriešanai, jo pusvadītāju taisngrieži iedarbojas bez aiztures, bet padod pilnu anodspriegumu uz aukstām lampām tūlīt pēc ieslēgšanas, kas samazina lampu kalpošanas laiku vai pat var sabojāt lampas vispār.
+
+
+== Ārējās saites ==
+ Vikikrātuvē par šo tēmu ir pieejami multivides faili. Skatīt: Diode.

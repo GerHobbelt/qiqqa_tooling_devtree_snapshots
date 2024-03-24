@@ -1,0 +1,127 @@
+revision: 7393053
+title: "galvanick\xFD \u010Dl\xE1nok#Sp\xE1janie galvanick\xFDch \u010Dl\xE1nkov (t.j.\
+  \ bat\xE9ria v zmysle spojenie viacer\xFDch \u010Dl\xE1nkov)"
+url: https://sk.wikipedia.org/wiki/Galvanick%C3%BD_%C4%8Dl%C3%A1nok
+
+
+---
+
+Galvanický článok (iné názvy pozri nižšie) je jednoduché zariadenie meniace (resp. schopné meniť) chemickú energiu na elektrickú energiu, ktoré pozostáva z (minimálne) dvoch elektród, ktoré sú spojené iónovým vodičom (spravidla elektrolytom). Elektródy sú spravidla navyše od seba (čiastočne) oddelené tzv. soľným mostíkom alebo pórovitou membránou niekde v strede nádoby s elektrolytom alebo podobným spôsobom. Najčastejšie sú elektródy zložené z odlišných materiálov; po vložení do iónového vodiča sa preto každá z nich nabije na iný potenciál, vznikne teda medzi nimi potenciálový rozdiel − elektrické napätie, čiže galvanický článok slúži ako zdroj elektrickej energie. Alternatívne (v tzv. koncentračných článkoch) môžu byť elektródy z rovnakého materiálu, ale každá je ponorená do iónového vodiča s inou koncentráciou; aj tu je výsledkom vznik elektrickej energie. 
+
+
+== Terminológia ==
+Galvanický článok v širšom zmysle je definovaný vyššie; alternatívne sa označuje ako článok v užšom zmysle, elektrický článok v užšom zmysle, elektrochemický článok v užšom zmysle, elektrolytický článok v užšom zmysle, zriedkavo ako Voltov [alebo voltický alebo voltaický] článok v širšom zmysle a nepresne ako batéria (elektrická batéria, monočlánok, hovorovo baterka). Uvedené výrazy majú však aj iné významy, konkrétne:
+
+Galvanický článok v užšom zmysle je len primárny článok (pozri nižšie).
+Elektrický článok (či jednoducho článok) v širšom zmysle zahŕňa aj zariadenia premieňajúce energiu žiarenia (napr. solárnu či jadrovú) na elektrickú energiu.
+Iné významy výrazov elektrochemický článok a elektrolytický článok pozri v článku elektrochemický článok.
+Voltov (alebo voltický alebo voltaický) článok v užšom zmysle je len najstarší typ galvanického článku, t.j. galvanický článok zložený z medenej katódy, zinkovej anódy a elektrolytu v podobe roztoku kyseliny sírovej.
+Batéria (elektrická batéria, monočlánok či hovorovo baterka) prísne vzaté znamená jeden alebo viac galvanických článkov vybavených prvkami nevyhnutnými na použitie, napr. puzdrom, pólovými vývodmi, značením a ochrannými prvkami. Okrem toho sa ako batéria  (elektrická batéria, vo významoch 1 a 2 hovorovo aj baterka) označuje (1) len (takto vybavený alebo akýkoľvek) primárny článok, (2) len suchý primárny článok, či (3) paralelné alebo sériové spojenie galvanických článkov v širšom zmysle na zvýšenie napätia či kapacity − pozri aj článok batéria. Ako monočlánok sa alternatívne označuje len (primárny) galvanický článok v puzdre veľkosti D (prípadne C).Druhy galvanických článkov v širšom zmysle sú:
+
+primárny článok (iné názvy: primárny galvanický [alebo elektrochemický] článok, nevratný článok, nevratný galvanický [alebo elektrochemický] článok, galvanický článok v užšom zmysle, batéria [elektrická batéria, hovorovo baterka] v užšom zmysle) - t.j. galvanický článok, ktorý sa nedá znova nabiť
+sekundárny článok (iné názvy: sekundárny galvanický [alebo elektrochemický] článok, vratný článok, vratný galvanický [alebo elektrochemický] článok, akumulátor, akumulátorový článok) - t.j. galvanický článok, ktorý sa dá znova nabiť
+špeciálny typ: palivový článok
+
+
+== Dejiny galvanických článkov ==
+Galvanický článok dostal svoj názov podľa talianskeho lekára a prírodovedca Luigiho Galvaniho, ktorý v roku 1780 pri pitvaní žabích stehienok spozoroval ich zášklby po dotyku dvoch rozdielnych kovových predmetov na rôzne konce nervov, podobné zášklbom vyvolávaným elektrickým nábojom. Tento jav správne vysvetlil taliansky fyzik Alessandro Volta, a to vznikom elektrického napätia medzi dvoma kovmi (nástrojom a kovovým podkladom) vodivo prepojenými elektrolytom (obsiahnutým v bunkách). Na základe týchto úvah zostavil v roku 1800 článok, skladajúci sa z medenej a zinkovej elektródy ponorenej do roztoku kyseliny sírovej. Voltov článok dával napätie približne 1 V a stal sa prvým zdrojom stáleho elektrického prúdu, do tej doby sa elektrina vytvárala trením alebo indukčnou elektrinou. Objav Voltovho článku vydláždil cestu pre rozvoj skúmania elektrických javov.
+
+
+== Použitie galvanických článkov ==
+Galvanické články sa používajú predovšetkým v prenosných elektrických spotrebičoch – baterkách, hodinkách, mobilných telefónoch, prenosných počítačoch, fotoaparátoch, kamerách, všade tam, kde sa spotrebič nedá pripojiť na elektrickú sieť alebo priamo použiť mechanický zdroj generátora. Ich nevýhodou môže byť nízke elektromotorické napätie, nízky výkon a krátka životnosť. Akumulátory sa dajú použiť aj na uloženie elektrickej energie, sú potrebné pri prerušení dodávky zo siete, napríklad v záložných zdrojoch alebo ako zdroj elektriny v stojacom automobile.
+
+
+== Galvanický článok v elektrickom obvode ==
+Po zapojení článku do elektrického obvodu prebiehajú vo vnútri článku reakcie, ktorými sa postupne znižuje elektrická energia, článok sa vybíja. Tieto reakcie môžu byť nevratné – napätie článku sa po vybití nedá obnoviť (primárny článok) alebo vratné – článok sa dá znova nabiť (sekundárny článok = akumulátor).
+Pri prechode elektrického prúdu článkom sa prejaví vnútorný odpor článku. Vnútorný odpor Ri má za následok zníženie napätia článku na svorkovom napätí U:
+
+  
+    
+      
+        U
+        =
+        
+          U
+          
+            e
+          
+        
+        −
+        
+          R
+          
+            i
+          
+        
+        I
+      
+    
+     
+  , kde Ue je elektromotorické napätie, I je elektrický prúd (pri vyššom zaťažení – vyššom prúde – sa napätie článku viac zníži).Galvanický článok je vždy zdroj jednosmerného prúdu. V elektrických obvodoch, kde záleží na smere prúdu, je treba pred zapojením skontrolovať správnu polaritu elektród.
+
+
+== Zloženie galvanických článkov ==
+Pri zostavovaní galvanického článku sa pre elektródy a elektrolyty používa taká kombinácia chemických látok, aby potenciál vznikajúci na elektróde bol čo najväčší, a zároveň aby článok čo najviac vydržal.
+Vhodnými a najčastejšími látkami pre zápornú elektródu je zinok, kadmium, lítium a hydrid rôznych kovov, pre kladnú elektródu uhlík (grafit) obklopený burelom (MnO2), nikel a striebro.
+Ako elektrolyt sa používa v suchých článkoch a v olovenom akumulátore roztok kyseliny, v alkalických článkoch a v akumulátoroch sa používa roztok zásaditých zlúčenín alkalických kovov.
+Prípadné ďalšie látky v elektrochemických článkoch majú za úlohu regulovať chemické reakcie tak, aby sa napríklad predĺžila životnosť článku, znížila možnosť úniku nebezpečných látok a pod.
+
+
+== Parametre galvanických článkov ==
+druh článku – primárny alebo sekundárny (akumulátor)
+elektromotorické napätie – veľkosť napätia medzi elektródami nezaťaženého článku
+vnútorný odpor – veľkosť odporu článku pri priechode elektrického prúdu
+elektrický výkon – množstvo energie, ktorú je článok schopný dodať za jednotku času, články s veľkým výkonom sa označujú ako tvrdé zdroje, články s malým výkonom sa označujú ako mäkké zdroje
+celková elektrická energia, ktorá sa dá dostať z čerstvého článku až do úplného vybitia (kapacita)
+merná energia – podiel celkovej energie a hmotnosti článku
+hustota energie – podiel celkovej energie na objeme článku
+životnosť článku – doba dodávania energie pri bežnom zaťažení
+nabíjací prúd a nabíjacia doba – pre sekundárne články (akumulátory)
+účinnosť – podiel vydanej a dodanej energie u akumulátorov
+cena – ovplyvnená cenou materiálu (zlato a med je lacnejší, striebro a lítium sú drahšie)
+
+
+== Prehľad galvanických článkov ==
+Ue = elektromotorické napätieem = merná energia (E/m, kde E je elektrická energia, m je hmotnosť)eV = hustota energie (E/V, kde E je elektrická energia, V je objem)
+hodnoty em a ev platia pre čerstvý článok, pri vybíjaní sa znižujú
++ kladná elektróda
+− záporná elektróda
+elektrolyt – vždy roztok uvedenej látky
+
+vodík viazaný v hydride kovu MH, kde M je niektorý z kovov (z angl. nickel metal-hydrid).
+
+
+== Rozmery najbežnejších batérií ==
+
+Primárne články aj akumulátory sa vyrábajú v rôznych rozmeroch a tvaroch (a v súvislosti s tým v rôznych kapacitách). Niektoré rozmery najmä článkov a batérií používaných v spotrebnej elektronike sú štandardizované napríklad:
+
+článok AAA (= tzv. batéria AAA, mikroceruzková batéria)
+článok AA (= tzv. batéria AA, ceruzková batéria)
+článok C (=tzv. malý monočlánok)
+článok D (=tzv. monočlánok)
+
+
+== Spájanie galvanických článkov (t.j. batéria v zmysle spojenie viacerých článkov) ==
+Na dosiahnutie vyššieho napätia sa články spájajú sériovo do batérií (v najvšeobecnejšom zmysle tohto slova). Celkové napätie sa získa ako súčet napätí jednotlivých článkov v batérii. Napríklad plochá batéria obsahuje 3 suché články, 9V batéria obsahuje 6 suchých alebo alkalických článkov, automobilový akumulátor obsahuje 6 akumulátorových článkov:
+
+Pri paralelnom spojení článkov zostáva elektromotorické napätie rovnaké, batéria však znesie vyššie zaťaženie (môže dodávať väčší elektrický prúd). Paralelné spojenie článkov sa používa len zriedkavo, keďže vplyvom malých rozdielov vo vlastnostiach článkov môžu mať články rozdielne napätie, čo má za následok vyrovnávacie prúdy a zníženie kapacity batérie.
+Ak sériovo zapojené články nemajú rovnakú kapacitu, môže pri hlbokom vybíjaní byť článok s najnižšou kapacitou vybitý pod prípustnú hranicu, v extrémnom prípade dôjde až k reverzácii napätia na článku a jeho zničeniu.
+
+
+=== Séria akumulátorov ===
+Všeobecne povedané batériové zapojenie akumulátorov do trvalých sérií znižuje ich životnosť a kvalitu. Pri pohľade zvonku nie je žiadna nevýhoda zrejmá a pri použití v režime zdroja je situácia rovnaká ako u primárnych článkov, nenabíjacích. Všeobecne možno povedať, že sériové zapojenie pôsobí ako priemerovanie: Prúd je daný podľa Ohmovho zákona ako podiel súčtu napätia a súčtu vnútorných odporov.
+V režime záťaže, nabíjanie, séria núti každému článku rovnaký spoločný prúd: To je v poriadku u identických článkov, avšak reálne je každý trochu iný. Navyše so zvyšujúcim sa počtom prebehnutých nabíjacích cyklov majú tieto rozdiely tendenciu sa rozchádzať. Život akumulátorovej série končí v extrémnom prípade úplným zničením ktoréhokoľvek článku. Kvôli jedinému defektnému článku sa potom musí zlikvidovať celá batérie: Ide teda o obdobu pravidla reťaze: Reťaz je práve tak silná, ako silný je jej najslabší článok.
+Z pohľadu úspornosti a maximalizácie úžitku by bolo lepšie mať možnosť túto sériu rozbiť a zvyšné funkčné články ďalej použiť. A aj pri nabíjaní sériu rozpájvať a každý článok nabíjať zvlášť: Každý je totiž trochu iný, predovšetkým s iným vlastným odporom, preto aj pri rovnakom prúde potrebuje iné nabíjacie napätie. A to možno dosiahnuť jedine regulovanými zdrojmi prúdu zvlášť pre každý článok.
+V praxi sa prijíma kompromis, kedy niekoľko málo akumulátorových článkov v sérii ešte možno považovať za prijateľnú mieru neefektivity: Do trvalej série sa zapája vždy len niekoľko článkov a ďalšie spojenia už sú rozoberateľné.
+
+
+== Pozri aj ==
+
+Elektrina
+Elektronika
+Elektrický prúd v kvapalinách
+Elektrolýza
+Elektrický zdroj
+
+
+== Zdroje ==

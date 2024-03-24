@@ -1,0 +1,1766 @@
+revision: 70685614
+title: "Przekszta\u0142cenie liniowe"
+url: https://pl.wikipedia.org/wiki/Przekszta%C5%82cenie_liniowe
+
+
+---
+
+Przekształcenie liniowe (homomorfizm liniowy, operator liniowy, odwzorowanie liniowe, transformacja liniowa) – w algebrze liniowej jest to funkcja 
+  
+    
+      
+        
+          f
+        
+        :
+        U
+        →
+        V
+      
+    
+     
+   między przestrzeniami liniowymi 
+  
+    
+      
+        U
+        ,
+      
+    
+     
+   
+  
+    
+      
+        V
+      
+    
+     
+   zachowująca ich działania w tym sensie, że (dokładna definicja – patrz niżej):
+
+odwzorowanie sumy wektorów z jednej przestrzeni w drugą jest równe sumie odwzorowań poszczególnych wektorów tej sumy,
+odwzorowanie iloczynu wektora przez skalar jest równe iloczynowi skalara przez odwzorowanie danego wektora.Przekształcenie liniowe jest więc homomorfizmem przestrzeni liniowych.
+Przekształcenia liniowe są najogólniejszymi funkcjami między przestrzeniami liniowymi, zachowującymi kombinacje liniowe wektorów. Przekształcenie liniowe m.in. przekształcają proste w proste lub punkt, przy czym prosta musi przechodzić przez punkt początkowy początek przestrzeni zwany wektorem zerowym.
+W przypadku przestrzeni liniowych skończonego wymiaru z ustalonymi bazami przekształcenia liniowe opisuje się zwykle za pomocą macierzy (zob. wybór baz). Np. operacje odbicia/obrotu są operacjami liniowymi – reprezentują je macierz odbicia/macierz obrotu.
+Przekształcenia liniowe znajdują zastosowanie m.in. w zagadnieniach linearyzacji czy aproksymacji liniowej.
+Uwaga:
+W większości wypadków słowa „funkcja”, „przekształcenie” i „odwzorowanie” są używane zamiennie. Jednak nie można używać terminu „funkcja liniowa” wymiennie z terminem „odwzorowanie liniowe” – termin funkcja liniowa jest zarezerwowany dla funkcji na płaszczyźnie opisującej prostą.
+
+
+== Definicja ==
+Niech 
+  
+    
+      
+        K
+      
+    
+     
+   oznacza pewne ciało (np. liczby rzeczywiste czy zespolone), a 
+  
+    
+      
+        U
+      
+    
+     
+   i 
+  
+    
+      
+        V
+      
+    
+     
+   będą przestrzeniami liniowymi nad tym ciałem. Funkcję 
+  
+    
+      
+        
+          f
+        
+        :
+        U
+        →
+        V
+      
+    
+     
+   nazywa się przekształceniem liniowym, jeżeli jest
+
+addytywna (zachowuje dodawanie wektorów),
+
+  
+    
+      
+        
+          f
+        
+        (
+        
+          x
+        
+        +
+        
+          y
+        
+        )
+        =
+        
+          f
+        
+        (
+        
+          x
+        
+        )
+        +
+        
+          f
+        
+        (
+        
+          y
+        
+        )
+      
+    
+     
+  
+jednorodna (zachowuje mnożenie przez skalar),
+
+  
+    
+      
+        
+          f
+        
+        (
+        c
+        
+        
+          x
+        
+        )
+        =
+        c
+        
+          
+        
+        f
+        (
+        
+          x
+        
+        )
+        .
+      
+    
+     
+  Powyższe warunki można połączyć w jeden, równoważny z nimi warunek liniowości:
+
+  
+    
+      
+        
+          f
+        
+        (
+        c
+        
+        
+          x
+        
+        +
+        d
+        
+        
+          y
+        
+        )
+        =
+        c
+        
+        
+          f
+        
+        (
+        
+          x
+        
+        )
+        +
+        d
+        
+          
+        
+        
+          
+            f
+          
+          (
+          
+            y
+          
+          )
+          .
+        
+      
+    
+     
+  
+
+
+== Przykłady ==
+
+
+=== Odwzorowania nieliniowe ===
+Dla liczb rzeczywistych odwzorowanie 
+  
+    
+      
+        x
+        ↦
+        
+          x
+          
+            2
+          
+        
+      
+    
+     
+   nie jest liniowe.
+Dla liczb rzeczywistych odwzorowanie 
+  
+    
+      
+        x
+        ↦
+        x
+        +
+        1
+      
+    
+     
+   nie jest liniowe (choć równanie 
+  
+    
+      
+        y
+        =
+        x
+        +
+        1
+      
+    
+     
+   jest równaniem liniowym według terminologii używanej w geometrii analitycznej).Powyższe odwzorowania nie spełniają warunków addytywności.
+
+
+=== Odwzorowania liniowe ===
+Funkcje jednorodne są funkcjami liniowymi, np.
+funkcja stała 
+  
+    
+      
+        
+          x
+        
+        →
+        
+          0
+        
+      
+    
+     
+   (odwzorowanie w przestrzeń trywialną)
+funkcja tożsamościowa 
+  
+    
+      
+        
+          x
+        
+        →
+        
+          x
+        
+      
+    
+     
+  
+jednokładność 
+  
+    
+      
+        
+          x
+        
+        →
+        a
+        
+          x
+        
+      
+    
+     
+  
+Pochodna 
+  
+    
+      
+        f
+        →
+        
+          D
+        
+        f
+      
+    
+     
+   jest liniowa, gdzie 
+  
+    
+      
+        f
+      
+    
+     
+   jest funkcją różniczkowalną (np. funkcją rzeczywistą; funkcje różniczkowalne tworzą przestrzeń funkcyjną, która jest przestrzenią liniową).
+Operacja różniczkowania 
+  
+    
+      
+        f
+        →
+        
+          D
+        
+        f
+      
+    
+     
+   przyporządkowania funkcji różniczkowalnej 
+  
+    
+      
+        f
+      
+    
+     
+   jej funkcji pochodnej 
+  
+    
+      
+        
+          D
+        
+        f
+      
+    
+     
+   jest operacją liniową ze zbioru funkcji różniczkowalnych na zbiór wszystkich funkcji (funkcje różniczkowalne tworzą przestrzeń funkcyjną, która jest przestrzenią liniową).
+Operacja różniczkowania definiuje także operator liniowy na przestrzeni wszystkich funkcji gładkich (tj. różniczkowalnych dowolną liczbę razy).
+Całka oznaczona, określona na przedziale 
+  
+    
+      
+        I
+      
+    
+     
+   jest odwzorowaniem liniowym ze zbioru funkcji całkowalnych o wartościach rzeczywistych z przedziału 
+  
+    
+      
+        I
+      
+    
+     
+   na zbiór 
+  
+    
+      
+        
+          R
+        
+        .
+      
+    
+     
+  
+Całka nieoznaczona o ustalonym punkcie początkowym definiuje odwzorowanie liniowe ze zbioru funkcji całkowalnych na zbiorze 
+  
+    
+      
+        
+          R
+        
+      
+    
+     
+   na przestrzeń funkcji o wartościach rzeczywistych, różniczkowalnych na zbiorze 
+  
+    
+      
+        
+          R
+        
+        .
+      
+    
+     
+  
+Jeżeli 
+  
+    
+      
+        A
+      
+    
+     
+   jest macierzą 
+  
+    
+      
+        m
+        ×
+        n
+      
+    
+     
+   o elementach rzeczywistych, to 
+  
+    
+      
+        A
+      
+    
+     
+   definiuje odwzorowanie liniowe ze zbioru 
+  
+    
+      
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   do zbioru 
+  
+    
+      
+        
+          
+            R
+          
+          
+            m
+          
+        
+        ,
+      
+    
+     
+   gdy przyporządkowuje wektorowi kolumnowemu 
+  
+    
+      
+        
+          x
+        
+        ∈
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   wektor kolumnowy 
+  
+    
+      
+        A
+        
+          x
+        
+        ∈
+        
+          
+            R
+          
+          
+            m
+          
+        
+        .
+      
+    
+     
+   Odwrotnie, każde odwzorowanie liniowe pomiędzy przestrzeniami liniowymi skończonego wymiary może być reprezentowane za pomocą macierzy 
+  
+    
+      
+        m
+        ×
+        n
+        .
+      
+    
+     
+  
+Operator liniowy przekształcenia Fouriera, który przyporządkowuje funkcji 
+  
+    
+      
+        f
+      
+    
+     
+   funkcję 
+  
+    
+      
+        g
+      
+    
+     
+  :
+
+  
+    
+      
+        g
+        (
+        ω
+        )
+        =
+        
+          
+            1
+            
+              2
+              π
+            
+          
+        
+        
+          ∫
+          
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        f
+        (
+        t
+        )
+        
+          e
+          
+            −
+            i
+            ω
+            t
+          
+        
+        d
+        t
+      
+    
+     
+  
+		
+		
+
+
+== Własności ==
+(1) Jeżeli funkcja 
+  
+    
+      
+        
+          f
+        
+        :
+        U
+        →
+        V
+      
+    
+     
+   spełnia dodatkowe warunki, np.
+
+różnowartościowości,
+odwzorowywania na całą przeciwdziedzinę,
+odwracalności,to odwzorowanie liniowe (homomorfizm) mające powyższe własności nazywa się odpowiednio
+
+monomorfizmem liniowym,
+epimorfizmem liniowym,
+izomorfizmem liniowym.(2) Ponadto:
+
+przekształcenie liniowe przestrzeni w siebie nazywa się endomorfizmem,
+jeżeli jest ono dodatkowo odwracalne (jest izomorfizmem), to nazywa się je automorfizmem.(3) Istnieje też szereg pojęć służących do opisu przekształceń liniowych i przestrzeni, na których są one określone. Definiuje się je za pomocą pojęć kombinacji liniowej, bazy i wymiaru, do najważniejszych należą:
+
+jądro, czyli przeciwobraz wektora zerowego (należy do każdej przestrzeni liniowej),
+rząd, definiowany jako wymiar obrazu całej przestrzeni.Za ich pomocą można scharakteryzować każdy z powyższych rodzajów homomorfizmów:
+
+monomorfizm ma trywialne jądro (tj. złożone wyłącznie z wektora zerowego),
+epimorfizm ma pełny rząd (tzn. równy wymiarowi przeciwdziedziny),
+izomorfizm jest zarazem mono- jak i epimorfizmem.(4) Twierdzenie Sylvestera o rzędzie: wymiar dziedziny jest równy sumie wymiarów obrazu i jądra przekształcenia. Wynika stąd ważna obserwacja dotycząca izomorfizmów: wszystkie przestrzenie liniowe (nad ustalonym ciałem) równego wymiaru są izomorficzne, skąd wynika, iż wymiar jest niezmiennikiem izomorfizmów. Ponadto jeśli przekształcenie liniowe określone jest między dwoma przestrzeniami liniowymi równego, skończonego wymiaru, to z twierdzenia wynika, iż każdy monomorfizm czy epimorfizm jest izomorfizmem – innymi słowy w tym wypadku pojęcia mono-, epi- i izomorfizmu wynikają z siebie wzajemnie.
+(5) Twierdzenie o wykresie charakteryzuje przekształcenia liniowe spośród wszystkich funkcji określonych między dwoma przestrzeniami liniowymi: odwzorowanie 
+  
+    
+      
+        
+          T
+        
+        :
+        U
+        →
+        V
+      
+    
+     
+   jest liniowe wtedy i tylko wtedy, gdy jej wykres, czyli zbiór par 
+  
+    
+      
+        (
+        
+          u
+        
+        ,
+         
+        
+          T
+        
+        (
+        
+          u
+        
+        )
+        )
+        ,
+      
+    
+     
+   jest podprzestrzenią liniową przestrzeni 
+  
+    
+      
+        U
+        ×
+        V
+      
+    
+     
+   (której wykres jest zawsze podzbiorem).
+Pojęcia topologiczne czy analityczne, takie jak ciągłość czy różniczkowalność, nie przydają niczego w przypadku przestrzeni skończonego wymiaru – przekształcenia liniowe między nimi są ciągłe i gładkie na całej dziedzinie; sytuacja zmienia się diametralnie, jeśli rozpatruje się przestrzenie nieskończeniewymiarowe, zob. osobną sekcję.
+
+
+=== Wybór baz ===
+Jeśli 
+  
+    
+      
+        U
+        ,
+        V
+      
+    
+     
+   są przestrzeniami liniowymi skończonego wymiaru, 
+  
+    
+      
+        dim
+        ⁡
+        U
+        =
+        n
+        ,
+      
+    
+     
+   
+  
+    
+      
+        dim
+        ⁡
+        V
+        =
+        m
+        ,
+      
+    
+     
+   to przekształcenie liniowe między nimi można przedstawić za pomocą macierzy 
+  
+    
+      
+        m
+        ×
+        n
+        ,
+      
+    
+     
+   przy czym:
+
+wybranie bazy 
+  
+    
+      
+        (
+        
+          
+            a
+          
+          
+            i
+          
+        
+        )
+      
+    
+     
+   w przestrzeni 
+  
+    
+      
+        U
+      
+    
+     
+   oraz bazy 
+  
+    
+      
+        (
+        
+          
+            b
+          
+          
+            j
+          
+        
+        )
+      
+    
+     
+   w przestrzeni 
+  
+    
+      
+        V
+      
+    
+     
+   prowadzi do wskazania izomorfizmów 
+  
+    
+      
+        U
+        →
+        
+          K
+          
+            n
+          
+        
+      
+    
+     
+   oraz 
+  
+    
+      
+        V
+        →
+        
+          K
+          
+            m
+          
+        
+      
+    
+     
+   w przestrzenie współrzędnych (które są przestrzeniami liniowymi)
+odwrotnie, każda macierz typu 
+  
+    
+      
+        m
+        ×
+        n
+      
+    
+     
+   opisuje przekształcenie liniowe 
+  
+    
+      
+        
+          K
+          
+            n
+          
+        
+        →
+        
+          K
+          
+            m
+          
+        
+        ,
+      
+    
+     
+   a dzięki wyborom baz również przekształcenie 
+  
+    
+      
+        U
+        →
+        V
+        .
+      
+    
+     
+  Jeśli 
+  
+    
+      
+        
+          A
+        
+      
+    
+     
+   jest macierzą przekształcenia liniowego 
+  
+    
+      
+        
+          A
+        
+        ,
+      
+    
+     
+   a macierz jednokolumnowa 
+  
+    
+      
+        
+          X
+        
+      
+    
+     
+   odpowiada wektorowi przestrzeni 
+  
+    
+      
+        
+          x
+        
+      
+    
+     
+  , to:
+
+działanie przekształcenia liniowego na wektor 
+  
+    
+      
+        
+          A
+        
+        (
+        
+          x
+        
+        )
+      
+    
+     
+   opisuje się jako mnożenie macierzy 
+  
+    
+      
+        
+          A
+        
+      
+    
+     
+   przez macierz jednokolumnowa 
+  
+    
+      
+        
+          X
+        
+        ,
+      
+    
+     
+   tj. 
+  
+    
+      
+        
+          A
+        
+        (
+        
+          x
+        
+        )
+        →
+        
+          A
+          X
+        
+        ,
+      
+    
+     
+  
+składaniu przekształceń liniowych odpowiada mnożenie odpowiadających im macierzy.W ten sposób ogólna teoria macierzy może być wykorzystana do opisu przekształceń liniowych.
+Istnieją jednak dwa zasadnicze powody, dla których rozpatruje się ogólne przekształcenia liniowe zamiast ich macierzy:
+
+w przestrzeniach liniowych nieskończonego wymiaru zapis za pomocą macierzy nie ułatwia przeprowadzania konkretnych rachunków, jak ma to miejsce w przypadku skończeniewymiarowym,
+istnieją własności, które łatwiej traktować w bardziej abstrakcyjny sposób, np. dowodząc, iż dana własność nie zależy od wyboru bazy; w szczególności dowodząc, iż istnieją przestrzenie, w których wybór bazy nie jest kanoniczny, tj. nie istnieje naturalny izomorfizm z przestrzenią współrzędnych (lub jej nieskończonym odpowiednikiem, zob. przykłady przestrzeni liniowych).
+
+
+=== Endomorfizmy ===
+Zbiór 
+  
+    
+      
+        
+          E
+          n
+          d
+        
+         
+        V
+      
+    
+     
+   wszystkich endomorfizmów przestrzeni 
+  
+    
+      
+        V
+      
+    
+     
+   tworzy pierścień nazywany po prostu pierścieniem endomorfizmów 
+  
+    
+      
+        V
+        .
+      
+    
+     
+   Do opisu endomorfizmów liniowych, nazywanych niekiedy „operatorami liniowymi”, na przestrzeniach skończonego wymiaru i ich macierzy kwadratowych stosuje się często pojęcia wyznacznika i śladu. Zwykle definiuje się je dla macierzy, dowodząc ich niezależności od wyboru bazy, możliwe jest jednak zdefiniowanie bez wyboru bazy dla przekształceń liniowych, jednak wtedy konieczne jest podanie przepisu na ich obliczenie – wyraża się ją wtedy za pomocą macierzy w ustalonej bazie – odzwierciedla to równoważność obu definicji. Niezmienniczość tych pojęć można tłumaczyć za pomocą podprzestrzeni niezmienniczych, w tym wektorów własnych i stowarzyszonych z nimi wartości własnych, które opisują kierunki zachowywane przez dane przekształcenie liniowe i stosunki jednokładności w tychże kierunkach: wyznacznik jest iloczynem wartości własnych, a ślad – ich sumą. Rząd jest wtedy równy liczbie niezerowych wartości własnych. Jeśli choć jedna wartość własna jest zerowa, to wyznacznik również jest zerowy – przekształcenie (lub macierz) nazywa się wtedy osobliwym (lub zdegenerowanym, a rząd nie jest pełny, skąd przekształcenie nie jest epimorfizmem). Dowodzi się, że osobliwość jest równoważna nieodwracalności.
+
+Twierdzenie o endomorfizmieJeśli 
+  
+    
+      
+        V
+      
+    
+     
+   jest przestrzenią liniową skończonego wymiaru, zaś 
+  
+    
+      
+        
+          E
+        
+        ∈
+        
+          E
+          n
+          d
+        
+         
+        V
+      
+    
+     
+   oraz 
+  
+    
+      
+        
+          λ
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          λ
+          
+            k
+          
+        
+      
+    
+     
+   są wszystkimi, parami różnymi wartościami własnymi tego endomorfizmu, to następujące warunki są równoważne:
+
+  
+    
+      
+        
+          E
+        
+      
+    
+     
+   jest endomorfizmem,
+
+  
+    
+      
+        V
+        =
+        V
+        (
+        
+          λ
+          
+            1
+          
+        
+        ,
+        
+          E
+        
+        )
+        ⊕
+        …
+        ⊕
+        V
+        (
+        
+          λ
+          
+            k
+          
+        
+        ,
+        
+          E
+        
+        )
+        ,
+      
+    
+     
+  
+
+  
+    
+      
+        dim
+        ⁡
+        V
+        =
+        dim
+        ⁡
+        V
+        (
+        
+          λ
+          
+            1
+          
+        
+        ,
+        
+          E
+        
+        )
+        +
+        …
+        +
+        dim
+        ⁡
+        V
+        (
+        
+          λ
+          
+            k
+          
+        
+        ,
+        
+          E
+        
+        )
+        ,
+      
+    
+     
+  gdzie 
+  
+    
+      
+        ⊕
+      
+    
+     
+   oznacza sumę prostą przestrzeni liniowych, a 
+  
+    
+      
+        V
+        (
+        
+          λ
+          
+            i
+          
+        
+        ,
+        
+          E
+        
+        )
+      
+    
+     
+   jest podprzestrzenią niezmienniczą stowarzyszoną z wartością własną 
+  
+    
+      
+        
+          λ
+          
+            i
+          
+        
+      
+    
+     
+   endomorfizmu 
+  
+    
+      
+        
+          E
+        
+        .
+      
+    
+     
+  
+Z powyższych uwag wynika, że wyznacznik, ślad i rząd są niezmiennikami endomorfizmów. Wszystkie te informacje zawarte są w wielomianie charakterystycznym przekształcenia (bądź macierzy): pierwiastkami tego wielomianu są wartości własne. Środki te okazują się niewystarczające w przypadku nieskończeniewymiarowym, gdzie pojęcia te mają odpowiednie uogólnienia (zob. Wymiar nieskończony).
+Endomorfizm 
+  
+    
+      
+        A
+      
+    
+     
+   przestrzeni 
+  
+    
+      
+        V
+      
+    
+     
+   nazywa się
+
+redukowalnym, jeśli istnieje nietrywialna właściwa podprzestrzeń niezmiennicza endomorfizmu 
+  
+    
+      
+        A
+        ;
+      
+    
+     
+  
+rozkładalnym, jeśli istnieją nietrywialne (właściwe) podprzestrzenie niezmiennicze 
+  
+    
+      
+        
+          V
+          
+            1
+          
+        
+        ,
+        
+          V
+          
+            2
+          
+        
+        ⊆
+        V
+      
+    
+     
+   endomorfizmu 
+  
+    
+      
+        A
+        ,
+      
+    
+     
+   dla których suma prosta 
+  
+    
+      
+        
+          V
+          
+            1
+          
+        
+        ⊕
+        
+          V
+          
+            2
+          
+        
+        =
+        V
+        ;
+      
+    
+     
+  
+diagonalizowalnym, jeśli istnieją jednowymiarowe podprzestrzenie niezmiennicze 
+  
+    
+      
+        
+          V
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          V
+          
+            n
+          
+        
+        ⊆
+        V
+      
+    
+     
+   endomorfizmu 
+  
+    
+      
+        A
+        ,
+      
+    
+     
+   dla których suma prosta 
+  
+    
+      
+        
+          ⨁
+          
+            i
+            =
+            1
+          
+          
+            n
+          
+        
+        
+          V
+          
+            i
+          
+        
+        =
+        V
+        ;
+      
+    
+     
+   diagonalizacją nazywa się wybór tych podprzestrzeni.
+
+
+=== Automorfizmy ===
+W ogólności automorfizmy liniowe, czyli odwracalne przekształcenie liniowe przestrzeni na siebie, opisują „symetrie” przestrzeni takie jak opisane wyżej (liniowe) zmiany bazy. Ponieważ złożenie automorfizmów jest automorfizmem, jest łączne z definicji, przekształcenie tożsamościowe jest automorfizmem, a dla każdego automorfizmu istnieje automorfizm do niego odwrotny, to zbiór automorfizmów 
+  
+    
+      
+        
+          A
+          u
+          t
+        
+         
+        V
+      
+    
+     
+   przestrzeni 
+  
+    
+      
+        V
+      
+    
+     
+   tworzy grupę nazywaną ogólną lub pełną grupą liniową 
+  
+    
+      
+        
+          G
+          L
+        
+        (
+        V
+        )
+      
+    
+     
+   przestrzeni 
+  
+    
+      
+        V
+        .
+      
+    
+     
+  
+
+
+== Przestrzenie przekształceń ==
+Przekształcenia liniowe 
+  
+    
+      
+        U
+        →
+        V
+      
+    
+     
+   tworzą przestrzeń liniową z działaniami określonymi „punktowo”, tj. które wykonywane są dla każdego wektora w ten sam sposób:
+
+  
+    
+      
+        (
+        
+          A
+        
+        +
+        
+          B
+        
+        )
+        (
+        
+          x
+        
+        )
+        =
+        
+          A
+        
+        (
+        
+          x
+        
+        )
+        +
+        
+          B
+        
+        (
+        
+          x
+        
+        )
+      
+    
+     
+  oraz
+
+  
+    
+      
+        (
+        c
+        
+          A
+        
+        )
+        (
+        
+          x
+        
+        )
+        =
+        c
+        
+          A
+        
+        (
+        
+          x
+        
+        )
+        .
+      
+    
+     
+  Jeśli 
+  
+    
+      
+        dim
+        ⁡
+        U
+        =
+        n
+      
+    
+     
+   i 
+  
+    
+      
+        dim
+        ⁡
+        V
+        =
+        m
+        ,
+      
+    
+     
+   to zgodnie z rozważaniami w sekcji Wybór baz każde przekształcenie 
+  
+    
+      
+        U
+        →
+        V
+      
+    
+     
+   jest izomorficzne z pewnym przekształceniem 
+  
+    
+      
+        
+          K
+          
+            n
+          
+        
+        →
+        
+          K
+          
+            m
+          
+        
+        ,
+      
+    
+     
+   a co za tym idzie, z macierzą 
+  
+    
+      
+        {
+        1
+        ,
+        …
+        ,
+        m
+        }
+        ×
+        {
+        1
+        ,
+        …
+        ,
+        n
+        }
+        →
+        K
+        .
+      
+    
+     
+   Oznacza to, że przestrzeń 
+  
+    
+      
+        
+          L
+        
+        (
+        U
+        ,
+        V
+        )
+      
+    
+     
+   wszystkich przekształceń liniowych 
+  
+    
+      
+        U
+        →
+        V
+      
+    
+     
+   jest izomorficzna z przestrzenią 
+  
+    
+      
+        
+          L
+        
+        (
+        
+          K
+          
+            n
+          
+        
+        ,
+        
+          K
+          
+            m
+          
+        
+        )
+        ,
+      
+    
+     
+   która jest z kolei izomorficzna z przestrzenią 
+  
+    
+      
+        
+          
+            M
+            a
+            t
+          
+          
+            m
+            ×
+            n
+          
+        
+        (
+        K
+        )
+      
+    
+     
+   macierzy typu 
+  
+    
+      
+        m
+        ×
+        n
+        .
+      
+    
+     
+   Wynika stąd, że każda z tych przestrzeni ma (zachowywany przy izomorfizmach) wymiar 
+  
+    
+      
+        m
+        n
+        .
+      
+    
+     
+   Jeśli choć jedna z liczb 
+  
+    
+      
+        m
+        ,
+        n
+      
+    
+     
+   jest nieskończona, to powyższa równość dalej pozostaje w mocy – wymiar przestrzeni przekształceń również jest wtedy nieskończony.
+
+
+== Wymiar nieskończony ==
+Bezpośrednim uogólnieniem przestrzeni współrzędnych na nieskończoną liczbę wymiarów jest nieskończona przestrzeń współrzędnych, w której tylko skończenie wiele współrzędnych jest różnych od zera, co umożliwia branie dowolnie długich, lecz mimo wszystko skończonych kombinacji liniowych; przykładem może być przestrzeń wielomianów jednej zmiennej (o współczynnikach z ustalonego ciała). Przekształcenia liniowe są określone w nich zupełnie analogicznie jak wyżej, jednak nie mają one swoich dobrych własności, np. endomorfizm przestrzeni nieskończonego wymiaru będący monomorfizmem nie musi być epimorfizmem (i na odwrót), przykładami są operatory przesunięcia czy określone w przestrzeni wielomianów przekształcenia pochodnej formalnej i antypochodnej formalnej (zob. wielomian – działania). Wynika to wprost z faktu, iż dla wzajemnie odwrotnych przekształceń liniowych 
+  
+    
+      
+        
+          T
+        
+        ,
+        
+          S
+        
+      
+    
+     
+   określonych na skończeniewymiarowej przestrzeni liniowej warunek 
+  
+    
+      
+        
+          T
+          S
+        
+        =
+        
+          i
+          d
+        
+      
+    
+     
+   pociąga za sobą 
+  
+    
+      
+        
+          S
+          T
+        
+        =
+        
+          i
+          d
+        
+      
+    
+     
+  , który nie zachodzi w przypadku przestrzeni nieskończeniewymiarowych. Podobnie w przestrzeniach skończonego wymiaru nie istnieją przekształcenia liniowe spełniające 
+  
+    
+      
+        
+          S
+          T
+        
+        −
+        
+          T
+          S
+        
+        =
+        
+          i
+          d
+        
+        ,
+      
+    
+     
+   choć własność tę mają ww. operatory pochodnej formalnej czy przesunięcia (zob. komutator).
+Opisem przestrzeni liniowych nieskończonego wymiaru, które dodatkowo wyposażone są w jakąś strukturę umożliwiającą rozpatrywanie nieskończonych szeregów odpowiadających kombinacjom liniowym, zajmuje się dział matematyki nazywany analizą funkcjonalną. Klasyczna teoria dotyczy przestrzeni unormowanych, czyli przestrzeni liniowych ze zdefiniowanym pojęciem „długości” wektora (można w niej w naturalny sposób określić strukturę metryczną, czyli wprowadzić pojęcie „odległości”); aby zapewnić istnienie wektorów, dla których wspomniane szeregi są zbieżne zakłada się, że przestrzenie te są zupełne – przestrzenie takie nazywa się przestrzeniami Banacha. Z przyczyn historycznych przekształcenia liniowe zwykło nazywać się w analizie funkcjonalnej „operatorami liniowymi”, a formy liniowe – „funkcjonałami liniowymi” (skąd wziął swą nazwę sam dział).
+Jeśli 
+  
+    
+      
+        U
+      
+    
+     
+   i 
+  
+    
+      
+        V
+      
+    
+     
+   są unormowanymi przestrzeniami liniowymi, to ograniczoność operatora definiuje się za pomocą warunku ograniczającego normę obrazu dowolnego wektora przez pewną wielokrotność normy tego wektora. Operator liniowy jest ograniczony wtedy i tylko wtedy, gdy jest ciągły (pojęcie to można zdefiniować w ogólniejszych przestrzeniach liniowo-topologicznych). W przestrzeniach Banacha ciągłość globalna jest równoważna ciągłości lokalnej, jak również przeprowadzaniu ciągów zbieżnych do zera w ciągi ograniczone. Rozpatrywanie operatorów ograniczonych i ciągłych w przestrzeniach skończonego wymiaru mija się z celem, gdyż wszystkie przekształcenia liniowe między nimi są ciągłe i ograniczone, co wynika z równoważności norm na tych przestrzeniach.
+Wśród ważnych twierdzeń dotyczących przestrzeni nieskończonego wymiaru można wymienić twierdzenie Hahna-Banacha, twierdzenie Banacha-Steinhausa, twierdzenie o wykresie domkniętym czy twierdzenie o odwzorowaniu otwartym. Pojęcia wyznacznika i śladu uogólnia się na te przestrzenie pod postacią wyznacznika Fredholma i śladu funkcyjnego dla szczególnego rodzaju przekształceń, tzw. operatorów śladowych; innym rozszerzeniem jest wyznacznik funkcyjny. Wektory i wartości własne uogólniają się poprzez widmo (spektrum) operatora; diagonalizacji różnymi metodami odpowiadają wtedy różnorodne twierdzenia spektralne.
+
+
+== Uogólnienia ==
+Przekształcenia liniowe są homomorfizmami szczególnych struktur algebraicznych – przestrzeni liniowych, które z punktu widzenia algebry są modułami nad ciałem, podczas gdy w ogólności skalary modułów mogą należeć do ogólniejszej struktury nazywanej pierścieniem (tworzą go np. liczby całkowite). Wszystkie wyniki natury czysto algebraicznej niewykorzystujące liniowej niezależności są prawdziwe także w teorii modułów.
+Przekształcenia liniowe można traktować jako przypadki szczególne innych przekształceń geometrycznych, najbliższym jej uogólnieniem jest przekształcenie afiniczne określane na przestrzeniach afinicznych; jego odpowiednikiem dla przestrzeni rzutowych jest przekształcenie rzutowe itd.
+
+
+== Zobacz też ==
+przestrzeń ilorazowa, kojądro
+przekształcenie półliniowe, forma liniowa
+przekształcenie antyliniowe, forma półtoraliniowa
+przekształcenie dwuliniowe, forma dwuliniowa
+przekształcenie wieloliniowe, forma wieloliniowa
+
+
+== Uwagi ==
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+Linear operator, [w:] Encyklopedia of Mathematics [dostęp 2021-08-17].l

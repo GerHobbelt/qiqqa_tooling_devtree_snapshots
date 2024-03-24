@@ -1,0 +1,13 @@
+revision: 20739084
+title: Glutation
+url: https://no.wikipedia.org/wiki/Glutation
+
+
+---
+
+Glutation (GSH) er et tripeptid, også kalt (gamma-)glutamyl-cysteinyl-glycin (se Gamma-Glutamylsyklusen for syntesevei) som finnes i alle kroppens celler og har som hovedfunksjon å beskytte mot frie radikaler. Dette gjør den ved å redusere hydrogen- og lipidperoksider. 
+Et eksempel er reduksjonen av hydrogenperoksid (H2O2) til vann, med glutation peroksidase som katalysator:
+
+H2O2 + 2 GSH  → 2 H2O + GSSGGlutation kan så tilbakedannes med glutation reduktase som katalysator:
+
+GSSG + 2 NADPH + 2 H+  → 2 GSH + 2 NAD+Dermed er glutation tilbakedannet, og H2O2 redusert til vann vha. NADPH. NADPH genereres av pentosefosfatshunten.

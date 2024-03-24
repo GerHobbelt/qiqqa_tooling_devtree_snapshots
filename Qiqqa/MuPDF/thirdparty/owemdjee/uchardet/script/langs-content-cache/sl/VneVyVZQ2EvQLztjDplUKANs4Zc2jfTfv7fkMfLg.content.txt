@@ -1,0 +1,90 @@
+revision: 5998759
+title: Coxeter-Dinkinov diagram
+url: https://sl.wikipedia.org/wiki/Coxeter-Dinkinov_diagram
+
+
+---
+
+Coxeter-Dinkinov diagram (tudi Coxeterjev diagram ali Coxeterjev graf) je graf, ki ima s številkami označene stranice (imenujejo se veje) s katerimi se prikaže prostorske odnose med zbirko zrcal oziroma odbojnih hiperravnin. Opisujejo kalejdoskopsko konstrukcijo: vsak vozel grafa predstavlja ogledalo (v domeni facete). Oznaka pri vsaki veji določa stopnjo diedrskega kota dveh ogledal (v domeni grebena). Neoznačene veje pomenijo red 3.
+Vsak diagram predstavlja Coxeterjevo grupo in tudi Coxeterjeve grupe so razvrščene po pripadajočih diagramih.
+Podobni so Dinkinovi diagrami. Ti se od Coxeterjevih diagramov razlikujejo samo v tem, da so v Dinkinovih diagramih veje, ki imajo oznako 4 ali več, usmerjene. Coxeterjevi diagrami so neusmerjeni. Razen tega morajo Dinkinovi diagrami zadoščati še dodatni kristalografski omejitvi, ki zahteva, da so dovoljene veje samo 2, 3, 4 in 6.
+
+
+== Opis diagramov ==
+Veje Coxeter-Dinkinovih diagramov so označene z racionalnimi števili 
+  
+    
+      
+        p
+        
+      
+    
+     
+  , kar predstavlja diedrski kot v velikosti 180°/p. Če je p enako 2, je kot 90° in se lahko v diagramu veja izpusti. Kadar je veja neoznačena, to pomeni, da zanjo velja 
+  
+    
+      
+        p
+        =
+        3
+        
+      
+    
+     
+  , kar pomeni kot 60º. Vzporedni zrcali imata oznako "∞"
+
+
+== Geometrijska ponazoritev ==
+Coxeter-Dinkinov diagram se lahko prikaže kot domena ogledal. Ogledalo v tem primeru predstavlja hiperravnino s pomočjo sfernega ali evklidskega ali hiperboličnega prostora z dano razsežnostjo.
+Takšna ponazoritev kaže osnovne domene za dvo in trirazsežne evklidske grupe in dvorazsežne sferne grupe.
+
+
+== Uporaba v uniformnih politopih ==
+Coxeter-Dinkinovi diagrami lahko opišejo skoraj vse vrste uniformnih politopov in uniformnih teselacij
+
+
+== Cartanove matrike ==
+Vsakemu Coxeterjevemu diagramu pripada odgovarjajoča Cartanova matrika. Vse Cartanove matrike Coxeterjevih grup so simetrične. Elementi Cartanove matrike so ai,j = aj,i = -2*cos(π/p),
+kjer je:
+
+  
+    
+      
+        p
+        
+      
+    
+     
+   red veje med pari zrcal.Determinanta Cartanove matrike določa ali je grupa končna (pozitivna), afina (nič) ali hiperbolična (negativna). Hiperbolična grupa ja kompaktna, če so vse njene podgrupe končne.
+
+
+== Končne Coxeterjeve grupe ==
+
+
+== Afine Coxeterjeve grupe ==
+
+
+== Hiperbolične Coxeterjeve grupe ==
+
+
+=== Kompaktne ===
+
+
+==== Rang 3 ====
+
+
+==== Rangi od 4 do 5 ====
+
+
+=== Nekompaktni ===
+
+
+==== rang 3 ====
+
+
+==== Rangi od 4 do 10 ====
+Znanih je skupno 48 nekompaktnih hiperboličnih Coxeterjevih grup z rangom od 4 do 10. V naslednji preglednici je vseh 58 razvrščenih v pet skupin.
+
+
+== Zunanje povezave ==
+Weisstein, Eric W. »Coxeter-Dynkin Diagram«. MathWorld.

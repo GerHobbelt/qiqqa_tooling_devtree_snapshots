@@ -1,0 +1,75 @@
+revision: 6161333
+title: Robot
+url: https://et.wikipedia.org/wiki/Robot
+
+
+---
+
+Robot (tšehhi sõnast robota – 'sunnitöö') on programmeeritav, automaatselt isetoimiv/-töötav masin, mida kasutatakse inimese liikumist ja tajumist asendavates töödes või toimingutes. Robot asendab inimest inimesele mittejõukohastel töödel, kuid robot ei saa olla täiuslik asendaja inimese enda töötegemisega ega täita funktsioone inimlikult. Roboteid on mitut tüüpi, näiteks tööstus-, militaar-, uurimis-, meditsiini-, põllumajandus- ja majapidamisrobotid.
+Robotid on kaugjuhitavad, programmeeritavad või mõlemat korraga. Roboteid on ehitatud inimesekujuliseks, kuid enamik roboteid on mingi vajaliku funktsiooni täitva mehhanismi sarnased. Robotid on konstrueeritud teatud ülesannete täitmiseks, näiteks tööstusrobotid. 
+Teadus- ja tehnikaharu, mis tegeleb robotite uurimisega, nimetatakse robootikaks ehk robotitehnikaks. Lisaks on robootika inseneriteadus, mis tegeleb robotite kavandamise, ehitamise ja kasutamisega.
+
+
+== Ajalugu ==
+Tänapäevane termin "robot" on tulnud tšehhi sõnast robota, mis tähendab sunnitöölist või pärisorja. Tšehh Karel Čapek kasutas 1920. aastal oma näidendis „Rossumi universaalsed robotid“ (inglise keeles „Rossum’s Universal Robots”) kunstlikku inimest ehk robotit. Näidendis valmistasid inimesed roboteid ning tehaseomanikud kasutasid neid meeleldi, kuni robotid hakkasid mässama ja hävitasid inimkonna.Sõna "robootika" ilmus esimest korda Isaac Asimovi teadusulmeloos „Runaround“. Hilisemate Asimovi robotilugudega andis ta ideid ja eeskuju intelligentsete robotite väljatöötamiseks. Teadusulmeloos „Runaround“ sisaldub Asimovi kolm robootika seadust:
+
+Robot ei tohi vigastada inimest ega lase tegevusetuse tõttu inimesel kahju saada.
+Robot peab järgima inimeste antud korraldusi, välja arvatud juhtutel, kui mingid korraldused oleksid vastuolus esimesega seadusega.
+Robot peab kaitsma end seni, kuni kaitsmine ei ole vastuolus esimese ega teise seadusega.
+
+
+== Esimene põlvkond ==
+Esimesse põlvkonda kuuluvad kergema arhitektuuriga robotid, mis saavad edukalt hakkama vaid täpselt kindlaks määratud (determineeritud) tingimustes. Kui roboti mällu on salvestatud programm ja programmi ei muudeta roboti töötamise ajal, siis on tegu jäiga programmijuhtimisega robotiga. Sellistel robotitel puudub ümbrusetaju ja järelikult puudub neil võimalus saada välist tagasisidet. Manipulaatori liikumist ruumis juhitakse üksnes sisemistelt asendi- ja kiirusanduritelt saadud signaalide järgi.Esimese põlvkonna robotid suudavad haarata esemeid, mille asukoht ruumis on roboti suhtes täpselt fikseeritud. Robotsüsteemis kasutatakse tehnoloogilisi abivahendeid, näiteks enne orienteeritakse töödeldavad detailid ruumiliselt või paigutatakse fikseeritud pesadega kassettidesse. Nii suureneb oluliselt robotsüsteemi hind ja väheneb töö paindlikkus. Kokkuvõtteks võib öelda, et esimese põlvkonna robotite juhtseadmete ülesanne on realiseerida jäigalt etteantud programm.
+
+
+== Teine põlvkond ==
+
+Teise põlvkonda kuuluvad ümbruskonda tajuvad robotid, mis kohastuvad keskkonnas toimuvate muutustega. Ümbrusetajuks vajaliku välise informatsiooni allikad on mitmesugused andurid, näiteks puute-, lähedus- ja lokatsiooniandurid ning tehisnägemine. Teise põlvkonna robotite juhtimisalgoritm sõltub konkreetsest olukorrast töötsoonis.Eri olukorrad nõuavad robotitelt erilaadset tegutsemist, mistõttu peab teise põlvkonna robotite juhtimisseade peale juhtalgoritmi realiseerimise vajaduse korral algoritmi ümber häälestama. Robotite tööd juhib kõrgematasandiline programm, mis sõltuvalt olukorrast muudab roboti tööprogrammi. See tähendab, et keerukuse tõttu on otstarbekas jaotada juhtimisfunktsioonid eri tasandite vahel ja kasutada hierarhilist juhtimist.
+
+
+== Kolmas põlvkond ==
+Kolmanda põlvkonna robotid on autonoomsed ja saavad enamasti töötada ilma inimese järelevalveta. Sellistel robotitel on keskjuhtimissüsteem. Selle generatsiooni robotid õpivad kiiresti eri testitest, mis toimuvad simulatsiooni kaudu, mis modelleerivad füüsilisi, psühholoogilisi ja kultuurilisi tegureid.Füüsilised tegurid on eseme kuju, kaal, tugevus, tekstuur, välimus ja käsitlemisviis. Psühholoogilised tegurid, mida kasutatakse nii inimestele nüüd ka robotitele. Selle alla kuuluvad inimese eesmärgid, uskumused, tundeid ja eelistusi. Kultuuriliste aspektide hulka kuuluvad inimese või asja nimi, väärtus, asukoht ja ülesanne.Selliste simulaatorite arendamine ja väljatöötamine on tohutu ettevõtmine, mille kallal töötavad tuhandeid programmeerijad ja robotid, mis tegutsemise kohta kogutakse andmeid.
+
+
+== Majapidamisrobotid ==
+Autonoomsete robotite arendamine koduste ülesannete täitmiseks on keerulisem, kui see esmapilgul tundub. Kuigi inimesel on kergem aru saada, kuidas teha mingit kindlat majapidamistööd. Kuid autonoomse roboti jaoks on see keeruline, et seda mõista ja teostada sarnaselt inimesega.Robotitel pole kaasasündinud teadmisi. Robotil on vaja eelnevalt palju informatsiooni, et pesu pesta. Robot tahab teada, kuidas ja kuna ta peab mingit kindlat liigutust tegema. Selleks kasutab robot enda kaameraid ja andureid.
+
+Majapidamisrobotite seas on tänapäeval
+
+robottolmuimeja
+põrandapesurobot
+mobiilsed veebikaamerad
+vihmaveerenni puhastusrobot
+robotmuruniiduk
+basseinipuhastusrobot
+pesulappamisrobot
+nutitriikraud
+aknapesurobot
+grillipuhastusrobot
+tualetipuhastusrobot
+
+
+== Tehisintellekt ==
+Kaasaegne arvutite tarkvara on juba nii täiuslik, et kasutatavat masintarkvara nimetatakse ülekantud mõttes tinglikult masinintellektiks ehk tehisintellektiks. Robotid suudavad piiratud valdkondades probleeme iseseisvalt lahendada, on nii öelda õppimisvõimelised. Tehisintellektiga robotid on saanud võimalikuks tänu tohutule arvutusvõimsuste arengule: kompaktse kerge "aju" ehitamine ülivõimsate miniprotsessorite abil, täiustatud tundlikkuse, selektiivsusega andurid (sensorid) ja võimalus määrata roboti täpset asukohta (GPS) ning MEMS inertsiaalandurite abil määrata asendit ruumis. Robot võrdleb kogutud/saadud informatsiooni oma andmekandjal salvestatuga ning tegutseb vastavalt sellele.Roboti "aju" ei ole võimeline bioloogilisele ajule omasteks emotsioonideks ega empaatiaks, robotil pole instinkte ega võimet leiutada midagi uut. Roboteid on programmeeritud inimese liigutusi matkima. Näiteks Jaapanis "õpetasid" arendajad roboti tantsima, näidates tantsusammu ette.
+
+
+== Robotite kasutamise põhjused ==
+Roboteid kasutatakse peamiselt inimvõimeid ületavas või ohtlikus tegevuses.
+
+Keskkond pole inimesele sobiv: kõrge või madal temperatuur, puudub atmosfäär, kõrge rõhk, kestev kaaluta olek (raskuskiirenduse puudus), raadioaktiivsus, mürgituse oht).
+Inimese jaoks nüri, kestev ja ühetaoline (monotoonne) töö.
+Inimese füüsilised võimed: jõud, liigutuste (töö) täpsus, kiirus jms pole piisavad.
+Sõjanduses, kus on otsene oht inimese elule.
+
+
+== Vaata ka ==
+Robootika
+Robotex
+Sotsiaalne robot
+Humanoidrobot
+Tööstusrobot
+Robottolmuimeja
+Militaarrobot
+
+
+== Viited ==

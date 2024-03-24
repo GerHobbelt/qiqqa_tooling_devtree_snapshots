@@ -1,0 +1,33 @@
+revision: 3172462
+title: Zemvirsmas izkliede
+url: https://lv.wikipedia.org/wiki/Zemvirsmas_izkliede
+
+
+---
+
+Zemvirsmas izkliede (angļu: subsurface scattering) jeb zemvirsmas gaismas pārnese (angļu: subsurface light transport) ir gaismas pārneses mehānisms, kurā gaisma iekļūst caurspīdīga objekta virsmā, tad tiek izkliedēta mijiedarbojoties ar materiālu un iziet no virsmas citā punktā. Gaisma parasti iekļūs virsmā un tiks atstarota vairākkārt neregulāros leņķos materiāla iekšienē, pirms tā izies ārā no materiāla leņķī, kas nav vienāds ar to, kādā tā būtu izgājusi, ja tiktu tieši atstarota no virsmas. Zemvirsmas izkliede ir svarīga 3D datorgrafikā, jo nepieciešama reālistiskai materiālu, piemēram, ādas, lapu, vaska, piena vai marmora renderēšanai.
+
+
+== Renderēšanas paņēmieni ==
+Vairums šodienas materiālu, kas tiek izmantoti reāllaika datorgrafikā, atbild tikai par gaismas mijiedarbību ar objekta virsmu. Realitātē daudzi materiāli ir nedaudz caurspīdīgi: gaisma iekļūst virsmā; tiek absorbēta, izkliedēta un atkārtoti izstarota — potenciāli citā punktā. Āda ir labs piemērs — tikai 6% ādas atstarojas tieši, pārējie 94% tiek izkliedēti zem tās virsmas. [1] Daļēji caurspīdīgu materiālu raksturīga īpašība ir spēja absorbēt. Jo tālāk caur materiālu gaisma ceļo, jo lielāka tā daļa tiek absorbēta. Lai simulētu šo efektu, ir jāgūst mērījums, kas atspoguļo attālumu, ko gaisma ir veikusi caur materiālu.
+
+
+=== Zemvirsmas izkliede, kas balstīta uz Dziļuma Karti ===
+Viens veids, kā aprēķināt šo attālumu ir izmantot dziļuma kartes. [2], līdzīgi kā ēnu kartēšanā. Aina tiek renderēta no gaismas skatu punkta dziļuma kartē tā, ka attālums līdz tuvākajai virsmai tiek glabāts. Pēc tam dziļuma karte tiek projicēta uz tās, izmantojot standarta projektīvo tekstūras kartēšanu un tad aina tiek atkārtoti renderēta. Šajā posmā, kad tiek ēnots dotais punkts, attālums no gaismas, punktā, kur stars ieiet virsmā, var tikts iegūts, izmantojot tekstūras izpēti. Atņemot šo vērtību no punkta, kur stars atstāja objektu, var aprēķināt aptuveno attālumu, ko gaisma ir veikusi objektā.
+Problēmas var rasties, ja modeļi nav izliekti, bet renderējot dziļumu vairākas reizes, problēmu ir iespējams apiet. Līdzīgi šo metodi var izmantot, lai kompensētu zem virsmas esošos dažādos blīvumus, piemēram, kaulos vai muskuļos, lai iegūtu precīzāku izkliedes modeli.
+
+
+=== Tekstūras telpas difūzija ===
+Viens no visacīmredzamākajiem zemvirsmas izkliedes efektiem ir difūzās gaismas vispārīga aizmiglošana. Tā vietā lai patvaļīgi modificētu difūzo funkciju, difūzija var precīzi modelēta, simulējot to tekstūras laukā. Šī tehnika tika izmantota renderējot sejas The Matrix Reloaded, taču nesen ir iekļuvis reāllaika tehniku jomā.
+Metode izklāj objekta tīklojumu, izmantojot verteksa tonējumu, vispirms aprēķinot gaismu, balstoties uz oriģinālajām verteksa koordinātēm. Krustpunkti tiek atkārtoti kartētas, izmantojot UV tekstūras koordinātes kā verteksa ekrāna atrašanās vietu, atbilstoši pārveidotas no [0, 1] tekstūru koordinātu apgabala uz [-1, 1] normalizētu ierīču koordinātām. Apgaismojot izklāto tīklojumu šādā veidā, tiek saņemts 2D attēls, kas atspoguļo gaismojumu uz objekta, ko tālāk var apstrādāt un atkārtoti uzklāt modelim kā gaismas karti. Lai simulētu difūziju, gaismas kartes tekstūra var vienkārši tikt aizmiglota. Renderējot apgaismojumu uz zemākas izšķirtspējas tekstūru kā tādu, nodrošina noteiktu aizmiglojuma daudzumu. Nepieciešamais aizmiglojuma daudzums, lai precīzi modelētu zemvirsmas izkliedi ādā, joprojām tiek pētīts, taču, izmantojot vienu aizmiglojumu tiek vāji attēlots patiesais efekts. Lai imitētu viļņa garuma atkarību no difūzijas, piemēri, kas izmantoti Gausa (angļu: Gaussian) aizmiglojumā var tikt svaroti pa kanāliem. Šis ir savā ziņā māksliniecisks process. Cilvēka ādai, skaidrākā izkliede ir sarkanā, tad zaļā, bet zilajam ir ļoti neliela izkliede.
+Liela šīs metodes priekšrocība ir ekrāna izšķirtspējas neatkarība; ēnojums veic tikai vienreiz tekselī (angļu: texel) tekstūras kartē, nevis katrā objekta pikselī. Acīmredzama prasība ir tāda, kad objektam ir labs UV kartējums. Tajā katram punktam tekstūrā ir jāatbilst vienam punktam objektā. Papildus iepriekš minētajam, tekstūras telpas difūzijas izmantošana nodrošina vienu no vairākiem faktoriem, kas veicina maigas ēnas, mazinot vienu iemeslu reālisma deficītam ēnu kartēšanā.
+
+
+== Atsauces ==
+
+
+== Ārējās saites ==
+Henrik Wann Jensen's subsurface scattering website
+An academic paper by Jensen on modeling subsurface scattering
+Maya Tutorial — Subsurface Scattering: Using the Misss_Fast_Simple_Maya shader
+3d Studio Max Tutorial — The definitive guide to using subsurface scattering in 3dsMax

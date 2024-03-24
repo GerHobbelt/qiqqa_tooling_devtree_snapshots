@@ -1,0 +1,24 @@
+revision: 26751808
+title: Bakteriyel konjugasyon
+url: https://tr.wikipedia.org/wiki/Bakteriyel_konjugasyon
+
+
+---
+
+Bakteriyel konjugasyon hücre teması yoluyla bakteriler arasında genetik malzeme aktarımıdır. Transformasyon ve transdüksiyon gibi bu da bir yatay gen transferi mekanizmasıdır.
+Bakteriyel konjügasyona, çoğu zaman hatalı olarak cinsel birleşmenin veya üremenin bir benzeri olarak değinilir. Oysa bu süreç cinsel değildir, çünkü eşey hücrelerinin birleşip bir zigot oluşturmasıyla ilişkisi yoktur. Olay, verici bir hücreden alıcı bir hücreye genetik malzeme aktarımından ibarettir. Konjugasyon olabilmesi için verici bakterinin konjugatif, yani hareket ettirilebilir bir genetik unsura sahip olması gerekir, bu çoğu zaman bir konjugatif plazmittir. Çoğu konjugatif plazmid, alıcı hücrede benzer bir plazmidin olmadığını anlayacak bir sisteme sahiptir.
+Aktarılan genetik bilgi alıcı hücreye bir yarar sağlayabilir, örneğin ona antibiyotik direnci verebilir veya ortamda bulunan bir besin maddesini daha iyi sindirmesini sağlayacak bir enzim sentezlenmesini sağlayabilir. Ancak, bu genetik elemanlar bakterinin genetik parazitleri olarak, konjugasyon da bu elemanların kendini yeni konaklara aktarmak için evrimleştirmiş olduğu bir mekanizma olarak da görülebilirler.
+
+
+== Mekanizma ==
+ 
+Konjugatif plazmidlerin prototipi F-plazmididir, F-faktörü olarak da bilinir. F-plazmidi 100 kilo baz çifti uzunluğunda bir epizomdur, yani bakteri kromozomuna entegre olabilen bir plazmittir. Kendi ikileşme merkezine (İng. origin of replication) sahiptir, bunun adı oriT 'dir. Bir bakterinin entegre olmuş veya serbest tek bir F plazmidi olabilir, bu durumda bakteriye F-pozitif denir. Başka genetik bilgilerin yanı sıra F-plazmidi tra ve trb adlı konumlarına (locus) sahiptir. Bunlar toplam 33 kilo baz çifti uzunluğundadır ve 40 genden oluşurlar. Tra konumu pilin geni ve denetleyici genlerden oluşur, bunlar sayesinde F-negatif bakterilere bağlanabilen piluslar oluşur. Mekanizmanin ayrıntıları hâlâ tartışilmakla beraber, DNA'nın pilu içinden geçmediği, tra ve trb konumlarında kodlanan başka proteinlerin hücreler arasında bir kanal açtığı zannedilmektedir.
+Konjugasyon başladığında relaksozom adı verilen bir protein kompleksi, transfer merkezi olan oriT 'de DNA'ya bir çentik atar. F-plazmid sisteminde relaksozom TraI, TraY, TraM ve konak faktörü IHF'den oluşur. Transfer olan 
+T sarmalı cift sarmaldan ayrışıp alıcı bakteriye 5' ucundan 3' ucuna doğru aktarılır. Kalan sarmal ikileşir, ya konjugasyondan bağımsız olarak (vejetatif ikileşme, oriV 'den başlar) ya da konjugasyonla birlikte (konjugatif ikileşme, lambda fajın döner çember (rolling circle) ikileşmesine benzer şekilde gelişir.
+Eğer F-plazmid konak genome entegre olursa vericinin kromozom DNA'sı plazmid DNA'sı ile beraber aktarılabilir. Kromozomla DNA'nın ne kadarını aktarıldığı iki bakterinin ne süreyle temas halinde kaldıklarını bağlıdır. E. coli 'nin laboratuvarda çalışılan suşları için bütün bakteri kromozomunun transferi yaklaşık 100 dakika tutar. Aktarılan DNA rekombinasyon yoluyla alıcı genoma entegre olabilir.
+Entegre olmamış F plazmidli bir hücre kültüründe genelde birkaç hücrede plazmid kromozoma entegre olmuştur, bunlar bu tür kültürlerde seyrek olarak gözlemlenen kromozomal gen transferlerinden sorumludur. Entegre F-plazmidi olan bakteri suşları izole edilip saf kültür olarak çoğaltılabilirler. Bu suşlar kromozomal genleri çok verimli bir şekilde aktarabildikleri için Hfr (İngilizce  high frequency of recombination, yüksek rekombinasyon frekansı) olarak adlandırılırlar. E. coli genomunun haritalanması için ilk kullanılan yöntem "durdurulmuş çiftleşme" (interrupted mating) deneyleri olmuş, bunlarda konjugasyon yapmakta olan çeşitli Hfr hücreleri 100 dakika tamamlanmadan evvel alıcı hücrelerden kopartılmış, sonra da hangi genlerin aktarıldığına bakılmıştı.
+
+
+== Dış bağlantılar ==
+Plazmid DNA'nin Trasnferi
+Önemli bakteriyel plazmitlerin Özellikleri

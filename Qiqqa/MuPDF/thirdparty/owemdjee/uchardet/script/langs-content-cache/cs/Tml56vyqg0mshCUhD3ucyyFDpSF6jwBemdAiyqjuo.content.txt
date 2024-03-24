@@ -1,0 +1,19 @@
+revision: 17768964
+title: Calendar
+url: https://cs.wikipedia.org/wiki/Mozilla_Calendar
+
+
+---
+
+Mozilla Calendar je označení pro projekt zastřešující kalendářové aplikace projektu Mozilla. V současné době jde pouze rozšíření Lightning, dříve sem patřila také samostatná aplikace Mozilla Sunbird. Projekt vznikl v říjnu 2001 a původní kód pocházel od společnosti OEone (nyní Axentra), která jej vyvíjela pro svůj HomeBase DESKTOP system, který byl postaven na Mozille. 
+Původním plánem bylo vyvinout rozšíření Mozilla Calendar, které by se později integrovalo do balíku webových aplikací Mozilla Suite. Tento plán však padl, když se Mozilla Foundation rozhodla dále vyvíjet jen samostatné aplikace jako Mozilla Firefox či Mozilla Thunderbird. Calendar byl tedy vždy nabízen jen jako samostatné rozšíření pro aplikace Mozilla, ale jeho vývoj byl již ukončen. Nahradilo ho rozšíření Lightning, které se snaží o integraci kalendářových služeb s Thunderbirdem.
+Mozilla Calendar (ve smyslu rozšíření, nikoliv projektu) bylo multiplatformní rozšíření, které přidávalo kalendářové funkce jako plánování či úkoly do aplikací Mozilla. Bylo založeno na standardu iCalendar, který dnes nahradil úložný systém MozStorage.
+
+
+== Související články ==
+Lightning
+Mozilla Sunbird
+
+
+== Externí odkazy ==
+Domovská stránka projektu

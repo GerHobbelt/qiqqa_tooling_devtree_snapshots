@@ -1,0 +1,146 @@
+revision: 132871733
+title: Morse Code
+url: https://it.wikipedia.org/wiki/Codice_Morse
+
+
+---
+
+Il codice Morse, detto anche alfabeto Morse, è un sistema per trasmettere lettere, numeri e segni di punteggiatura per mezzo di un segnale in codice a intermittenza e fu uno dei primi metodi di comunicazione a distanza. Un altro metodo per usare il codice morse è con le dita seguendo questa legenda: per esprimere il punto si può usare l’indice, per il trattino si può usare l’indice e il medio.
+Fu oggetto di studio di Samuel Morse dal 1835, ma venne realizzato dal tecnico Alfred Vail, suo collaboratore dal settembre 1837. Fu da entrambi sperimentato per la prima volta l'8 gennaio 1848 allorché, in presenza di una Commissione del Franklin Institute di Filadelfia, venne impiegato il telegrafo scrivente register.
+
+Il codice Morse è una forma ante litteram di comunicazione digitale. Tuttavia, a differenza dei moderni codici binari che usano solo due simboli (comunemente rappresentati con 0 e 1), il Morse ne usa quattro: punto seguito da un intervallo intersimbolo  (•  ), linea seguita da un intervallo intersimbolo  (—  ), intervallo corto (tra lettere) e intervallo lungo (tra parole).
+
+
+== Storia ==
+Samuel Morse iniziò a interessarsi di telegrafia nel 1832 e nel 1835 aveva già progettato un primitivo sistema di relè. Il sistema fu presentato pubblicamente nel 1837 e migliorato nel 1838 (anno in cui depositò il brevetto del telegrafo), infine brevettato nel 1840. Fu presto costruita la prima linea telegrafica tra Baltimora e Washington in cui il 24 maggio 1844 fu inviato il primo messaggio: "What hath God wrought?" (dall'inglese: Cosa ha fatto Dio?, espressione tratta dai Numeri).
+Il codice Morse originale consisteva in combinazioni di punti e linee ognuna corrispondente a un numero. A sua volta ogni numero corrispondeva a una parola ricavabile attraverso la ricerca del numero in un apposito libretto. I numeri venivano trasmessi mediante l'uso del tasto telegrafico.
+Sebbene Morse fosse l'inventore del telegrafo, non eccellendo in perizia tecnica chiese la collaborazione di Alfred Vail. Vail sviluppò un sistema nel quale ogni lettera o simbolo veniva inviata singolarmente usando una combinazione di punti, linee e pause. I due convennero che fosse proprio il metodo di Vail il più adatto ad essere inserito nel brevetto che Morse si accingeva a richiedere. Fu proprio questo sistema, conosciuto come American Morse code (detto anche Railroad Morse), che fu usato per trasmettere il primo messaggio telegrafico.
+Il codice Morse fu subito considerato lo standard per la codifica delle informazioni ed ebbe un così ampio e incontrastato successo che nessun altro sistema alternativo riuscì a soppiantarlo, rimanendo lo standard internazionale per le comunicazioni marittime fino al 1999.
+Il costo di un messaggio telegrafato dipendeva dalla sua lunghezza, per questo vennero escogitati alcuni codici commerciali in modo da codificare intere frasi in gruppi di poche lettere (normalmente cinque) che venivano poi inviati come singole parole. Per esempio: LIOUY ("Perché non rispondi alla mia domanda?") o AYYLU ("Non codificato chiaramente, ripeti più chiaramente"). Tra questi, il codice Q e il codice Z hanno ancora una discreta fortuna tanto che attualmente sono usati sia dai radioamatori che dagli operatori di telegrafia per informazioni di servizio come la qualità del collegamento, il cambio di frequenza o la numerazione dei telegrammi.
+
+
+== Descrizione ==
+
+
+=== Codice Morse internazionale moderno ===
+Il codice Morse americano era usato nei primi sistemi di telegrafia su filo, il primo vero e proprio sistema elettronico di telecomunicazione a distanza. Il suo successore, il codice Morse internazionale, non si serve delle pause, e quindi è formato solo da punti e linee.
+Il codice Morse internazionale è usato quasi esclusivamente dai radioamatori, tant'è che per ottenere la licenza di radioamatore di classe A era necessario sostenere una prova di ricezione e trasmissione in codice Morse; il superamento della prova permetteva di operare con potenze di trasmissione fino a 300 W e di comunicare sulle lunghezze d'onda decametriche (sotto i 30 MHz), la classe B era limitata a 50 W e su frequenze superiori. Le potenze sono da intendersi come in input allo stadio finale.
+Dal 2005, l'Unione internazionale delle telecomunicazioni (ITU) ha stabilito che il codice Morse sia dismesso dalle prove di esame per ottenere la patente di radioamatore eliminando la distinzione tra classe A e B. La maggior parte dei paesi si è quindi adeguata alla normativa ITU e la prova pratica di ricezione e trasmissione del codice Morse è stata stralciata dai test di esame. Ancor oggi le bande radioamatoriali hanno porzioni di frequenza dedicate ai soli segnali Morse.
+La Nokia, azienda produttrice di telefoni cellulari e smartphone, utilizza in numerosi modelli una suoneria predefinita per avvisare dell'arrivo di messaggi di testo: si tratta delle sequenze in tre bip, seguita da due più lunghi e terminata da tre brevi (• • • — — • • •) il cui significato è la parola SMS. Esistono varianti di tale suoneria, anche più complesse e sempre in codice Morse; ad esempio, quella che veniva denominata "speciale", in cui veniva proposto in CW (Continuous Wave) lo slogan della compagnia, ovvero: "Connecting People".
+
+
+=== Metodi di trasmissione ===
+Il codice può essere trasmesso come tono audio, come segnale radio (CW o telegrafia on/off senza modulazione), come impulso elettrico attraverso un cavo telegrafico, o come segnale meccanico o visivo (per esempio una luce lampeggiante).
+La trasmissione in codice Morse può appoggiarsi a un segnale radio fisso senza modulazione, quindi necessita di un equipaggiamento molto meno complesso rispetto alle altre forme di radiocomunicazione e soprattutto dà buoni risultati anche in ambienti con segnale molto basso o disturbato. Richiede poca ampiezza di banda e agevola alquanto la comunicazione tra radioamatori che non usano la stessa lingua o che hanno grande difficoltà nella comunicazione a voce.
+
+
+=== Cadenza temporale e rappresentazione ===
+Per rappresentare le lettere e gli altri segni vengono usati i punti e le linee. La lunghezza di un punto determina la velocità con cui viene inviato il messaggio ed è usato come unità di tempo di riferimento. Qui sotto un esempio di rappresentazione di un messaggio in Morse:
+
+-- | •- | •-• | •           -••• | •-•• | ••-         
+ M   A     R    E  (spazio)   B     L      U    
+
+dove - corrisponde a "linea" e • corrisponde a "punto".
+Esiste comunque un modo convenzionale e più corretto di rappresentare la cadenza temporale dei segnali da trasmettere. L'esatta rappresentazione del messaggio precedente è come segue ("=" corrisponde al segnale on, "•" corrisponde al segnale off, ognuno della lunghezza di un punto):
+
+ ===•===•••=•===•••=•===•=•••=•••••••===•=•=•=•••=•===•=•=•••=•=•===
+    ^         ^          ^       ^             ^
+    |         linea      punto   |             spazio tra lettere
+    spazio tra simboli           spazio tra parole      
+
+Una linea è convenzionalmente tre volte un punto. Gli spazi tra i punti e le linee di un carattere sono della lunghezza di un punto, quelli tra le lettere sono ampi come una linea (tre punti), quelli tra parole sono lunghi sette punti.
+Per familiarizzare con il codice Morse, si usa scriverlo e leggerlo usando i fonemi "ti" per il punto e "ta" per la linea, ovvero nel caso precedente:
+
+ --    •-    •-•     •   /  -•••      •-••      ••-
+ TaTa  TiTa  TiTaTi  Ti  /  TaTiTiTi  TiTaTiTi  TiTiTa
+
+Il codice Morse viene infatti memorizzato ascoltando il suono caratteristico di ogni carattere, come se ogni insieme di suoni fosse una lettera, e non associando i punti o le linee al suono.
+
+
+== Rappresentazione del codice ==
+
+
+=== Lettere, numeri e punteggiatura ===
+
+Quando non esiste possibilità di confusione, le cifre 0, 1 e 9 possono essere trasmesse in forma abbreviata e divengono:
+
+
+=== Codici speciali ===
+
+
+=== Segnalazione errori ===
+
+
+=== Abbreviazioni comunemente usate ===
+Le abbreviazioni differiscono dai caratteri speciali perché vengono trasmesse con degli spazi tra lettera e lettera, non come fossero un unico carattere.
+
+
+=== Schema di conversazione in codice Morse ===
+Un inizio di conversazione radioamatoriale in codice Morse (chiamato in gergo CW) tra la stazione S1 e la stazione S2 è il seguente:
+
+CQ = Chiamata generale da (DE) S1, trasmettete (K).
+
+S1 da (DE) S2, trasmettete (K).
+
+(Segue lo scambio di messaggi). Al termine si trasmette
+
+Ciao.
+
+Ciao.
+
+Il gruppo VA ("ciao" o "fine") è trasmesso come una singola lettera "···—·—" e può così essere trascritta sia con SK che con VA.
+Applicando al precedente schema le abbreviazioni elencate, è possibile formare un completo scambio di informazioni in forma breve e indipendente dalla lingua dei due corrispondenti.
+La chiamata, o CQ si effettua in questo modo:
+
+CQ CQ CQ DE IZ0FYL IZ0FYL ARLa risposta ad una chiamata si articola in:
+
+IZ0FYL DE IK0YGJ ARA questo punto, una volta che i due corrispondenti si sono ascoltati, la prima stazione richiama:
+
+IK0YGJ DE IZ0FYL GM OM TNX FER CALL BT UR RST IS 599 QSB BT MY QTH IS ROMA ES MY NAME IS LUCA BT HW ? IK0YGJ DE IZ0FYL KIn CW si osservano solitamente le regole seguenti: si va sempre ad una velocità che non fa commettere errori, si saluta, si ringrazia e si risponde sempre alle domande, si abbassa sempre la velocità al più lento dei due corrispondenti. È buona norma ripetere due volte nome e QTH, mentre IS ed ES possono essere anche rimossi.
+Una volta ricevuta risposta, la stazione chiamante inizia dicendo "buongiorno/buonasera" e ringrazia il corrispondente per la chiamata. A questo punto il chiamante passa il controllo del segnale usando la scala RST (R - Radio da 1 a 5, S - Segnale da 1 a 9, T - Qualità del tono da 1 a 9). Se c'è QRM, QRN o QSB viene detto subito dopo l'RST.
+Il corrispondente a cui è stato chiesto HW deve fornire a sua volta l'RST:
+
+IZ0FYL DE IK0YGJ BT GM DR OM CARLO TNX FER RPRT BT UR RST IS 599 BT QTH ROMA OP CARLO BT MY RIG IS FT 817 PWR 5W ES ANT IS VERTICAL BT HR WX IS SUNNY TEMP 10C IZ0FYL DE IK0YGJ Ksupponendo che il corrispondente non abbia capito una cosa, per fare una domanda (sempre PSE) può abbreviare usando il prosign BK, di norma impiegato per interrompere il QSO proprio o degli altri.
+
+BK DE IZ0FYL PSE UR PWR IS 5W ? BKBK DE IK0YGJ R MY PWR IS 5W BKse non si è capita la risposta, si può chiedere la ripetizione dell'ultimo messaggio:
+
+BK DE IZ0FYL ?? SRI QRM PSE AGN BKa richiesta di ripetizione occorre ripetere più lentamente per due-tre volte l'informazione principale:
+
+BK DE IK0YGJ R MY PWR IS 5W PWR IS 5W PWR IS 5W BKdopo la risposta, si dà conferma di aver capito e si prosegue il QSO, ringraziando e ricambiando le informazioni:
+
+BK DE IZ0FYL R R TNX FER INFO VY FB UR PWR ES 5W QRP BT MY RIG IS FT 817 PWR 5W ES ANT IS DIPOLE BT HR WX IS CLOUDY TEMP 12C IK0YGJ DE IZ0FYL KA questo punto il QSO può chiudersi con i saluti:
+
+IZ0FYL DE IK0YGJ DR LUCA TNX FER INFO ES FER QSO MY QSL VIA BURO BT IK0YGJ DE IZ0FYL 73 ES HPE CUAGN SK TUdi norma dopo il TU si finisce con i "two bits" cioè due punti finali (dit - dit), quindi il corrispondente ricambia i saluti.
+
+BK DE IZ0FYL TNX FER VY FB QSO DR OM CARLO MY 73 GL ES GD DX IK0YGJ DE IZ0FYL 73 SK TU
+
+
+== Note ==
+
+
+== Voci correlate ==
+500 kHz
+Charset
+Codice Internazionale dei Segnali
+Codice Morse russo
+Codice Wabun
+Marconista
+Telegrafo
+Telegrafo di Chappe
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file sul codice Morse
+
+
+== Collegamenti esterni ==
+
+(EN) Codice Morse / Codice Morse (altra versione), su Enciclopedia Britannica, Encyclopædia Britannica, Inc. 
+Traduttore di codice Morse, audio e segnale flash - morsecodetranslator.co.( EN )
+(EN) Morse Code Translator, su morse-code-translator.net.
+Just Learn Morse Code - A freeware Koch / Farnsworth Morse code trainer for Windows.
+(EN) Esercitatore codice morse con metodo Koch, su g4fon.net. URL consultato il 24 febbraio 2009 (archiviato dall'url originale il 18 febbraio 2009).
+(EN) Programma gratuito per tradurre il testo in codice morse e viceversa., su winmorse.com.
+ L'uso dell'alfabeto Morse negli uffici postali italiani negli anni '40, su memoro.org.
+(EN) A Closer Look at Morse Code, su thefancytext.com.

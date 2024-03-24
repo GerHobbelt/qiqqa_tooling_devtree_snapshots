@@ -1,0 +1,63 @@
+revision: 15313186
+title: Morse Code
+url: https://ro.wikipedia.org/wiki/Codul_Morse
+
+
+---
+
+Codul Morse sau alfabetul Morse este o metodă de transmitere a informației folosind secvențe standardizate de semne sau pulsații scurte și lungi - cunoscute în mod comun ca „puncte” și „linii” - pentru litere, cifre și caracterele speciale specifice oricărui mesaj.
+
+
+== Inventarea sistemului ==
+Creat inițial de către Samuel Morse pe la mijlocul anilor 1830 pentru a fi folosit la transmiterea informației cu ajutorul telegrafului electric, al cărui inventator a fost, alfabetul Morse a fost folosit pe scară largă începând cu perioada timpurie a comunicațiilor radio (anii 1890).
+În ultimul timp, există un număr tot mai mare de dovezi ce indică faptul că adevăratul inventator al alfabetului Morse, cel puțin în varianta sa de început, a fost asistentul lui Morse, Alfred Vail. Acesta a murit sărac și aproape uitat. Vail a avut, de asemenea, și contribuții importante la realizarea tehnologică a primului telegraf și a variantelor sale ulterioare. Morse și urmașii săi au susținut și continuă să susțină contrariul.
+Începând din 1836, artistul american Samuel F.B. Morse, fizicianul american Joseph Henry și Alfred Vail au dezvoltat un sistem de telegraf electric. Acest sistem a trimis impulsuri de curent electric de-a lungul unor fire ce controlau un electromagnet ce a fost situat la capătul receptor al sistemului de telegraf.
+În 1837, William Cooke și Charles Wheatstone în Anglia au început să folosească un telegraf electric ce, de asemenea, utiliza electromagneți în capătul de recepție. Cu toate acestea, în contrast cu orice sistem ce făcea sunete de click-uri, sistemul lor folosea ace ce se învârteau asupra literelor ce erau transmise. Cooke și Wheatstone în 1841 au construit un telegraf ce tipărea litere de pe o roată de fonturi lovită cu un ciocan. Această mașină a fost construită pe baza telegrafului lor din 1840 și a lucrat bine; cu toate acestea, ei nu au reușit să găsească clienți pentru acest sistem și doar două exemple s-au construit vreodată.
+Pe de altă parte, sistemul de celor trei americani pentru telegrafie, ce a fost folosit prima dată în aproximativ 1844, a fost proiectat pentru a face crestături pe o bandă de hârtie, când curenții electrici erau primiți. Codul Morse a fost dezvoltat astfel încât operatorii să poată traduce crestăturile marcat pe banda de hârtie în mesaje text. La început, Morse a planificat să transmită doar cifre și folosea un dicționar pentru a căuta fiecare cuvânt în funcție de numărul ce a fost trimis. Cu toate acestea, codul a fost extins de către Alfred Vail, care a inclus litere și caractere speciale, așa că ar putea fi folosit mai în general. Apoi, Vail a determinat frecvența de utilizare a literelor în limba engleză: semnele scurte se numeau „puncte”, și cele lungi „linii”, și literele cele mai folosite au primit secvente de puncte și linii cât mai scurte.
+În telegraful original Morse, armatura receptor făcea un zgomot clic, deoarece se mișca pentru a marca bandă de hârtie. Operatorii telegraf curând au aflat că ei ar putea traduce clicurile direct în puncte și linii și le-ar putea scrie de mână, astfel nemaifiind necesară utilizarea unei bande de hârtie.
+Când codul Morse a fost adaptat pentru comunicarea radio, punctele și liniile erau transmise ca pulsuri scurte și lungi. Mai târziu, oamenii și-au dat seama că ar putea învăța mai ușor codul Morse ca o limbă auzită decât o limbă scrisă.
+Pentru a reproduce sunetele scoase de un receptor Morse, operatorii au vocalizat punctul ca „dit”, și linia ca „dah”. Punctele ce nu se aflau la finalul unei secvențe, au devenit „di”. Ca exemplu, litera „c” era vocalizată ca „dah-di-dah-dit”.
+În aviatie, codul Morse a început să fie des folosit ca bază de comunicare în jurul anilor 1920. Cu toate că emițătoarele erau voluminoase și greu de utilizat, s-a mai încercat folosirea lor în aviație. În 1910, armata din SUA a încercat transmiterea de cod Morse dintr-un avion. 
+În același an, un sistem radio de pe dirijabilul „America” a fost esențial în coordonarea salvării echipajului acestuia. Dirijabile Zeppelin echipate cu sisteme radio au fost folosite pentru bombardarea obiectivelor sau pentru supravegherea navelor în timpul primului război mondial. Cu toate acestea, sistemele radio au fost puțin utilizate în aeronautică în timpul primului război mondial. 
+Începând cu 1930, piloților militari dar și celor civili le era cerut să cunoască codul Morse, atât pentru comunicare, cât și pentru recunoașterea balizelor. 
+Telegrafia Radio ce a folosit codul Morse a fost vitală în timpul celui de-al doilea război mondial, în special în transmiterea de mesaje între nave de război și bazele navale ale Marinei Regale Britanice, Kriegsmarine, Marina imperială japoneză, Marina imperială canadiană, Marina imperială australiană, Marina americană și Paza de Coastă a SUA. Comunicarea la rază lungă de acțiune tip navă-navă a fost pe baza telegrafiei radio, prin intermediul unor mesaje criptate, deoarece sistemele de radio de pe acea vreme erau limitate în rază și securitate. Radio telegrafie a fost, de asemenea, utilizată pe scară largă de către avioane, în special de avioanele de patrulare pe arii mari. În plus, armatele ce se deplasează rapid nu ar fi putut lupta efectiv fără telegrafie radio, pentru că se mișcau mai repede decât puteau fi instalate liniile de telegraf și telefon.
+Codul Morse a fost folosit ca un standard internațional pentru comunicații maritime până în 1999, când a fost înlocuit de către GMDSS (sisteme de comunicare marină de mare frecvență). Când Marina franceză a încetat folosirea codului Morse în 1997, ultimul mesaj transmis de aceasta a fost: „Către toți. Acesta e strigătul ultim înainte de tăcerea noastră veșnică.” Și SUA a procedat la fel, însă din 2015, Forțele aeriene americane antrenează 10 oameni/an pentru a cunoaște codul. De asemenea, Comisia Federală de Comunicare din SUA acordă autorizații de funcționare operatorilor comerciali de telegrafie dacă aceștia îi trec testele. 
+
+
+== Utilizări ==
+Datorită dezvoltării ulterioare a comunicațiilor, folosind o gamă largă de unde electromagnetice și folosind metode mai avansate tehnologic, utilizarea alfabetului Morse a devenit în zilele noastre, într-un fel, desuetă și aproape uitată.
+Totuși, există domenii de utilizare, așa cum ar fi navigarea maritimă și aeriană, precum și comunicarea radio-amatoare (ce folosește unde electromagnetice continue), în care folosirea invenției americanului Morse este de neînlocuit. De fapt, codificarea Morse este singura modalitate digitală de modulare și transmitere a informației ce poate fi folosită eficient și citită ușor de către oameni, fără a necesita existența unui computer, fapt ce permite transmiterea digitală a informației pe canale de comunicare destinate transmiterii sunetelor și deci a vocii umane.
+Alfabetul Morse poate fi transmis în mai multe feluri. Inițial, a fost transmis sub formă de pulsații electrice de-a lungul unei linii telegrafice, dar poate fi transmis ca un ton audio, ca un semnal radio având pulsații ori tonuri lungi și scurte, sau ca semnale mecanice ori vizuale, utilizând o lanternă, un heliograf sau așa-numita lampă Aldis.
+Codul Morse poate fi considerat o formă timpurie de transmitere digitală a informației; totuși, este dificil de adaptat la transmiterea automată din cauza lungimii variabile a caracterelor sale. Ca atare, a fost înlocuit cu alte coduri de transmitere, incluzând codul Baudot și ASCII, ce au lungimi standard pentru fiecare caracter distinct al mesajului.
+Codul Morse a fost utilizat pentru mai mult de 160 de ani - mai mult decât orice alt sistem electric de codificare. Ceea ce se numește astăzi codul Morse este, de fapt, oarecum diferit de ceea ce a fost inițial dezvoltat de Morse și Vail. După unele modificări minore, „Codul Morse Internațional” a fost standardizat la Congresul Internațional de Telegrafie în 1865 la Paris și, mai târziu, alfabetul Morse Internațional a făcut standard de Uniunea Internațională a Telecomunicațiilor (UIT).
+Oamenii interesați să învețe alfabetul Morse au la dispoziție:
+- metoda Farnsworth (Donald R. „Russ” Farnsworth, inventatorul „indicativului”, W6TTB), ei trebuind să știe să trimită și să primească scrisori la viteza maximă, respectând pauzele dintre linii și puncte. Totuși, pentru a memora mai ușor, se vor exagera pauzele respective, pentru a permite ucenicului să aibă timp de gândire în a modela literele și simbolurile. Doar prin repetiție, ucenicul va putea identifica mesajul scris prin Morse.
+- metoda Koch (psihologul german Ludwig Koch), ce solicită învățarea la viteză maximă, însă pornind, la început, cu două caractere. După ce învățătorul e sigur că ucenicii știu să redea cu 90% acuratețe a primelor caractere Morse alese, se va adăuga unul nou, apoi încă unul, până ce tot alfabetul va fi stăpânit.
+Computerele pot permite traducerea mesajelor elaborate în Morse de către persoanele cu nevoi speciale (instruite inițial) pentru vorbirea obișnuită. Persoanele handicapate pot comunica cu ajutorul alfabetului Morse, singura condiție fiind să posede o minimă capacitate locomotorie. Sunt cunoscute două cazuri celebre: 
+- potrivit revistei QST, un electronist aflat la bordul unui vapor, care a suferit un atac de cord, fiind în acel moment lipsit de capacitatea de a vorbi și de a scrie, a putut comunica cu medicul (un amator de radio) clipind din ochi în Morse. - în 1966, Jeremiah Denton, un prizonier de război american, prezentat televiziunii nord-vietnameze de către autoritățile comuniste, a comunicat „TORTURA”, clipind în Morse.
+
+
+== Elementele codului Morse. Variante ==
+Există un alfabet Morse internațional, ce este compus din șase elemente diferite:
+
+semn scurt, denumit punct sau dit (•);
+semn lung, denumit linie, dash sau dah (--);
+un spațiu liber între semne (între puncte și linii), egal, ca lungime, cu cea a unui punct;
+spațiu scurt (între litere), egal, ca lungime, cu cea a unei linii;
+spațiu mediu (între cuvinte), egal, ca lungime, cu cea a doua linii;
+spațiu lung (între propoziții), egal, ca lungime, cu cea a trei linii, sau mai mare.Ceea ce este cunoscut ca alfabetul Morse diferă, într-un fel, de ceea ce a fost inițial creat și dezvoltat de către Morse și Vail. O îmbunătățire substanțială a codului, incluzând modificări la 11 litere, a fost creată și publicată în Germania în 1848, inventatorul acestei versiuni fiind Friedrich Clemens Gerke. Versiunea lui Gerke a fost ulterior adoptată ca standard în întreaga lume, primind numele de alfabet Morse internațional sau, pe scurt, Morse internațional. În forma sa inițială, alfabetul Morse era limitat în special ca utilizare în Statele Unite ale Americii și a devenit ulterior cunoscut ca Railroad Code sau codul Morse american.
+
+
+== Variante locale ==
+
+
+=== limba română ===
+
+
+== Note ==
+
+
+== Legături externe ==
+
+Traducere în cod morse și viceversa Arhivat în 11 octombrie 2007, la Wayback Machine.
+Codul Morse, un sistem de comunicare revoluționar Arhivat în 21 ianuarie 2014, la Wayback Machine., 27 aprilie 2013, Dan Cârlea, Ziarul Lumina

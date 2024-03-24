@@ -1,0 +1,64 @@
+revision: 70050694
+title: Adres IP
+url: https://pl.wikipedia.org/wiki/Adres_IP
+
+
+---
+
+Adres IP (ang. IP address) – liczbowy identyfikator nadawany interfejsowi sieciowemu, grupie interfejsów (broadcast, multicast), bądź całej sieci komputerowej w protokole IP, służący identyfikacji elementów sieci w warstwie trzeciej modelu OSI – w obrębie sieci lokalnej oraz poza nią (tzw. adres publiczny).
+Adres IP nie jest „numerem rejestracyjnym” komputera – nie identyfikuje jednoznacznie fizycznego urządzenia – może się dowolnie często zmieniać (np. przy każdym wejściu do sieci Internet), jak również kilka urządzeń może dzielić jeden publiczny adres IP, lub pojedynczy adapter sieciowy może mieć wiele adresów IP (tzw. IP aliasing). Ustalenie prawdziwego adresu IP użytkownika, do którego następowała transmisja w danym czasie, jest możliwe dla systemu/sieci odpornej na przypadki tzw. IP spoofingu (por. man in the middle, zapora sieciowa, ettercap) na podstawie historycznych zapisów systemowych.
+W najpopularniejszej wersji czwartej (IPv4) jest zapisywany zwykle w podziale na oktety zapisywane w systemie dziesiętnym i oddzielane kropkami, rzadziej szesnastkowym bądź dwójkowym (oddzielane dwukropkami bądź spacjami).
+
+
+== IP a pozostałe warstwy ==
+W przeciwieństwie do adresu sprzętowego (MAC; warstwa druga modelu OSI) adres IP nie musi identyfikować jednoznacznie urządzenia ani w czasie, ani fizycznie (szczególnie, jeśli nie należy on do zakresu publicznego, a jest adresem podlegającym translacji, bądź jest przydzielany dynamicznie). Protokół komunikacyjny IP pracuje w trzeciej warstwie modelu (warstwie sieciowej) niezależnie od rodzaju nośnika warstwy pierwszej. Jest trasowalny (routowalny), a więc umożliwia trasowanie, które odbywa się właśnie w warstwie trzeciej. Aby zapewnić pomyślność komunikacji w tym protokole, konieczne jest przyporządkowanie adresów IP interfejsom sieciowym urządzeń.
+Z warstwą łącza danych, drugą warstwą rzeczonego modelu, komunikuje się zwykle za pomocą protokołów ARP i RARP. Pierwszy z nich informuje warstwę trzecią o adresie sprzętowym urządzenia, drugi umożliwia wskazanie adresu IP urządzenia przy znajomości adresu sprzętowego.
+Protokół IP gwarantuje jedynie odnalezienie interfejsu lub grupy interfejsów sieciowych w pewnej sieci, jednak nie zapewnia poprawności transmisji danych. Współpracę z czwartą we wspomnianym modelu OSI warstwą transportową, która służy właśnie temu celowi, umożliwia m.in. protokół TCP w niej działający. Z tego powodu powstał stos protokołów TCP/IP będący kombinacją m.in. tych dwóch protokołów.
+Adresy IP stosuje się nie tylko w Internecie, ale również w sieciach lokalnych korzystających z TCP/IP. W pierwszym przypadku przypisywany jest on przez dostawcę internetu, w drugim o poprawne jego przypisanie dba zwykle jej administrator.
+W celu zapewnienia jednoznaczności rozpoznawania się poszczególnych uczestników komunikacji stosuje się system odwzorowania unikatowej nazwy symbolicznej do adresów IP (protokół DNS), dzięki czemu użytkownicy Internetu nie muszą ich pamiętać i aktualizować. Np. adresowi 208.80.152.2 odpowiada obecnie interfejs sieciowy urządzenia/urządzeń (por. redundancja) obsługujących serwis Wikipedii. Aby korzystać z tej encyklopedii, wystarczy zapamiętanie łatwiejszej nazwy wikipedia.org, która tłumaczona jest na adres IP serwera przez serwery DNS (warstwy: piąta, szósta i siódma modelu OSI nazywane odpowiednio: sesji, prezentacji i aplikacji).
+
+
+== Rodzaje ==
+Od 1977 w Internecie używane są adresy IP protokołu w wersji czwartej, IPv4. Zapotrzebowanie na adresy IPv4 stało się na tyle duże, że pula nieprzydzielonych adresów zaczęła się wyczerpywać (w 2011 roku zakładano, że w zależności od regionu nastąpi to w roku między 2011 a 2016), z tego powodu powstała nowa, szósta wersja protokołu – IPv6, której test odbył się 8 czerwca 2011 roku. Piąta wersja, IPv5 mająca rozszerzyć możliwości poprzedniczki nie zdobyła popularności, protokół ten znany jest szerzej pod angielską nazwą Internet Stream Protocol (pol. „protokół strumieni internetowych”), skracaną do ST.
+
+
+== Dynamiczne i statyczne adresy IP ==
+Istnieją dwa podstawowe rodzaje przydzielania adresów IP - dynamiczne i statyczne. Dynamiczne adresy IP są przydzielane przez serwer DHCP (Dynamic Host Configuration Protocol) w sieci. Serwer DHCP zarządza pulą dostępnych adresów IP i przydziela je tymczasowo urządzeniom w sieci na żądanie. Gdy urządzenie opuszcza sieć lub wygasa czas przydzielonego adresu IP, serwer DHCP może przydzielić ten adres innemu urządzeniu. Dynamiczne adresy IP są powszechnie stosowane w sieciach domowych i firmowych, ponieważ pozwalają na oszczędność dostępnych adresów IP.
+Statyczne adresy IP są przypisywane ręcznie przez administratora sieci i nie zmieniają się automatycznie. Są one używane dla urządzeń, które wymagają stałego adresu IP, takich jak serwery, drukarki sieciowe czy systemy monitoringu. Statyczne adresy IP ułatwiają zarządzanie siecią oraz dostęp do krytycznych zasobów, ale jednocześnie zwiększają ryzyko wyczerpania puli dostępnych adresów IP oraz możliwość wystąpienia konfliktów adresowych, jeśli nie są odpowiednio zarządzane.
+
+
+== Zapis ==
+Adresy IPv4 są 32-bitowymi liczbami całkowitymi. Tak więc adres serwisu działający pod adresem wikipedia.org to liczba 3 494 942 722, która w zapisie szesnastkowym ma postać D0 50 98 02. Adres w postaci szesnastkowej zapisywany jest zwykle jako D0:50:98:02, z której łatwo przekształcić go na łatwiejszą do zapamiętania formę dziesiętną, oddzielaną już kropkami: 208.80.152.2 (każdą z liczb szesnastkowych zamienia się na jej dziesiętny odpowiednik z zakresu 0-255). Adresy IP w postaci dwójkowej wykorzystywane są niezmiernie rzadko, najczęściej do wyznaczenia maski sieci lub maski podsieci, powyższy adres w postaci dwójkowej to
+
+11010000 01010000 10011000 00000010.Adresy IPv6 są 128-bitowymi liczbami całkowitymi, dlatego przykładowy adres sieci IPv6 w zapisie szesnastkowym, zgodnym ze specyfikacją Media:CIDR, która dotyczy również IPv4 (RFC1518, RFC1519, RFC1812), wygląda następująco:
+
+3ffe:0902:0012:0000:0000:0000:0000:0000/48,gdzie /48 oznacza długość pierwszego prefiksu wyrażoną w bitach (człony adresu grupuje się po 16 bitów i oddziela dwukropkiem).
+Przyjmuje się, że najstarsze niepodane bity danej sekcji są zerami (np. :: oznacza :0000:), dlatego jego skrócona wersja to 3ffe:902:12::/48. Adres IPv6 w zapisie dziesiętnym byłby cztery razy dłuższy, a więc składałby się z 16 liczb dziesiętnych z zakresu 0-255.
+
+
+== Zobacz też ==
+wirtualny adres IP
+adres prywatny
+IP spoofing
+podsieć
+ping
+voice over Internet Protocol
+Model TCP/IP
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+JonJ. Postel JonJ., Internet Protocol, STD 5, RFC 791, IETF, wrzesień 1981, DOI: 10.17487/RFC0791, ISSN 2070-1721, OCLC 943595667  (ang.).
+P.P. Almquist P.P., Type of Service in the Internet Protocol Suite, RFC 1349, IETF, lipiec 1992, DOI: 10.17487/RFC1349, ISSN 2070-1721, OCLC 943595667  (ang.).
+V.V. Fuller V.V. i inni, Classless Inter-Domain Routing (CIDR): an Address Assignment and Aggregation Strategy, RFC 1519, IETF, wrzesień 1993, DOI: 10.17487/RFC1519, ISSN 2070-1721, OCLC 943595667  (ang.).
+Y.Y. Rekhter Y.Y. i inni, Address Allocation for Private Internets, BCP 5, RFC 1918, IETF, luty 1996, DOI: 10.17487/RFC1918, ISSN 2070-1721, OCLC 943595667  (ang.).
+R.R. Hinden R.R., S.S. Deering S.S., IP Version 6 Addressing Architecture, RFC 2373, IETF, lipiec 1998, DOI: 10.17487/RFC2373, ISSN 2070-1721, OCLC 943595667  (ang.).
+R.R. Hinden R.R., S.S. Deering S.S., Internet Protocol Version 6 (IPv6) Addressing Architecture, RFC 3513, IETF, kwiecień 2003, DOI: 10.17487/RFC3513, ISSN 2070-1721, OCLC 943595667  (ang.).
+R.R. Hinden R.R., S.S. Deering S.S., IP Version 6 Addressing Architecture, RFC 4291, IETF, luty 2006, DOI: 10.17487/RFC4291, ISSN 2070-1721, OCLC 943595667  (ang.).
+
+
+== Linki zewnętrzne ==
+Adres IP - Geolokalizacja
+Wyświetla sam adres zakończony znakiem nowej linii

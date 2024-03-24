@@ -1,0 +1,160 @@
+revision: 24807479
+title: Nvidia
+url: https://hu.wikipedia.org/wiki/Nvidia
+
+
+---
+
+Az NVIDIA Corporation egy kaliforniai székhelyű, elsősorban korszerű grafikus processzorai révén ismert számítástechnikai vállalat. Újabban több platformhoz (PC, Macintosh, Xbox és PlayStation 3) is gyárt perifériákat.
+
+
+== Története ==
+A céget 1993-ban alapította Jen-Hsun Huang, a jelenlegi cégvezető, Curtis Priem és Chris Malachowsky.
+2000-ben felvásárolta riválisát a 3dfx-et, az egyik legnagyobb céget az iparágban.
+2005. december 14-én felvásárolta az ULI Electronics vállalatot.
+2006 márciusában felvásárolta a Hybrid Graphics vállalatot majd 2007. január 5-én bejelentették, hogy befejezték a PortalPlayer, Inc. akvizícióját.
+
+
+== Piaci története ==
+
+
+=== Pre-DirectX ===
+1995-ben kiadták első NV1 elnevezésű grafikus kártyájukat. quadratic surface technológiával, integrált audió kártyával és Sega Saturn porttal rendelkezett. Több Saturn játékot átportoltak PC-re az NV1 segítségével, ilyen volt a Panzer Dragoon és a Virtua Fighter.
+A piaci érdekeltsége a Microsoft DirectX bejelentésével megszűnt. Következésképpen az NV1 fejlesztése folytatódott, de már egy új név alatt, ez volt az NV2 project, amibe dollármilliókat fektettek be. A Sega remélte, hogy az integrált audió és grafikus chip lefaragja a gyártási költségeket, így olcsóbban elő tudja állítani a következő konzolját. Hamarosan rá kellett azonban jönnie, hogy a quadratic surface technológia nem a járható út, így az NV2 fejlesztése sosem fejeződött be.
+
+
+=== Egy friss start ===
+Az NVIDIA cégvezetője, Jen-Hsun két sikertelen termék után rákényszerült, hogy változtasson valamin, hogy a céget életben tudja tartani. Felvette ezért David Kirk, Ph.D. tudományos szakembert, aki szoftverfejlesztőként dolgozott a Crystal Dynamics vállalatnál.
+A cég átalakítása során a teljes DirectX támogatás mellett döntöttek, és lemondtak a multimédiás funkcionalitásról a költségek leszorítása érdekében. A vállalat bevezetésre hozott egy 6 havi termékkiadási ciklust. Egy termék jövőbeni kudarca ezáltal nem veszélyezteti a cég fennmaradását.
+
+
+=== RIVA TNT befolyása ===
+Miután elérték, hogy piacvezetőként integrált grafikus chipkészletet tudtak szállítani, az NVIDIA újabb célként tűzte ki, hogy megduplázzák a pixel-futószalag számát a chipen, hogy újabb teljesítménynövekedést érjenek el.
+Az új fejlesztés magával hozta a 24 bites Z-buffer-t a 8 bites stencil support-el, az anizotróp szűrést és a per-pixel MIP mapping-t.
+A tranzisztorok számával és komplexitásával, a TNT felvette a versenyt a rivális Intel Pentium processzorával. Ettől függetlenül hiába ajánlott minőségi integrált megoldást, ezzel még nem tudta elvenni Voodoo 2 piacvezető helyét.
+A fordulat a RIVA TNT2 megjelenésével esett meg. Végre elérték, hogy a termék gyorsabb legyen a többi piacon lévő más gyártók termékeinél, kitűnő tulajdonságokkal, erős 2D-s funkcionalitással, mindez belesűrítve egy önálló egységbe.
+
+
+=== Piacvezető: GeForce ===
+1999 őszén látott napvilágot a GeForce 256 (NV10). 120 MHz-en futott és profi videógyorsítóval, mozgás kompenzációval, hardveres alpha-blendinggel, és 4 pixeles futószalaggal (pipeline) látták el. A GeForce lesöpörte vetélytársait, köztük az ATI Rage 128-at, 3dfx Voodoo 3-at, és a Matrox G400 MAX-ot.
+Sikerei révén, együttműködésre jutott a Microsofttal, miszerint az NVIDIA fejleszti a GeForce 3 grafikus kártyát az Xbox játék konzolhoz. A vállalat legjobb mérnökei minden idejüket a projektbe fektették.
+A GTS megérte a fáradságot és fontos tapasztalatot szereztek a jelentősen integrált magokból, így végeredményül képessé váltak arra, hogy optimalizálják a mag órajelét. A GTS 200 MHz-en futott. A pixel fill arány közel a duplájára ugrott. Új fejlesztések révén elérhetővé vált az S3TC tömörítés, az FSAA, és a fejlesztett MPEG-2 mozgáskompenzáció.
+Fontos lépésként útjára bocsátotta GeForce 2 MX grafikus kártyáját célba véve az OEM piacot. Két pixel-futószalaggal kevesebb volt benne, és 175 MHz-en futott, de később a 200 MHz is elérhetővé vált vele. Középkategóriás áron erős teljesítményével a GeForce 2MX minden idők legsikeresebb grafikus kártyája lett. A mobil gépekbe szánt változat GeForce2 Go néven 2000 végén került forgalomba.
+Az NVIDIA sikerei bizonyították, hogy a 3dfx-nek vissza kell szereznie a volt piaci pozícióját. A sokat váratott Voodoo 5 végül nem hozta a beharangozott ígéretét, kudarcba fulladt. Nem lehetett összehasonlítani sem árban sem teljesítményben a GeForce 2-vel. A 3dfx a 2000. év végén csődközeli állapotba került, majd rövidesen az NVIDIA kezébe került heves vitákat kiváltva.Úttörőként a GeForce 3-al, kihasználták a DirectX 8 vertex és pixel shader technológiáját, majd finomra hangolták a GeForce 4 Ti sorozattal. A GeForce 4 Ti, MX, és a Go 2002 januárjában lett bejelentve, az egyik legnagyobb "release" az NVIDIA történetében. A Ti és a Go sorozat mindössze a chip és memória órajelben különböztek.
+
+
+=== Az FX széria hiányosságai ===
+Úgy tűnt az NVIDIA piaci pozíciója megtámadhatatlan, és az ipar megfigyelői a NVIDIA-ra úgy hivatkoztak, mint a „grafikus iparág Intel”-ére. Ettől függetlenül a fennmaradt legnagyobb rivális, az ATI Technologies versenyképességét megőrizte Radeon grafikus kártyájával, amit leginkább a GeForce 2 GTS-hez lehet hasonlítani. Válaszuk a GeForce 3-ra a Radeon 8500 volt. A kezdeti driver gondokat leküzdve, a 8500 komoly versenytársat jelentett alacsony árával és komolyabb teljesítményével. Az NVIDIA a GeForce 4 Ti sorozattal rászámolt az ATI-ra, mindenesetre a 4200-as sorozat késleltetett kiadása lehetővé tette a 8500-as kártya számára, hogy kifaragjon egy piaci szegmenst magának. Az ATI nekilátott a következő generációs kártyája fejlesztéséhez, ez volt a Radeon 9700.
+Amíg a következő generációs GeForce FX fejlesztése tartott, a legjobb NVIDIA mérnökök közül sokan az Xbox-on dolgoztak, dolgoztak az alaplapon, beleértve azt az API-t is amit a SoundStorm platform része volt. Az NVIDIA mérnökei a megegyezéshez híven újabb chipen a NV2A is dolgoztak. A kezdeti nagyon jó Microsoft-NVIDIA viszony megromlott, s az NVIDIA végül úgy döntött, hogy az a Sony-val dolgozik inkább a PlayStation 3 játékgépen.
+Az Xbox vita során az NVIDIA nem konzultált amikor a DirectX 9 specifikációját kihirdették, s az ATI eközben a Radeon 9700 kártyáját elkészítette. Az NVIDIA lebecsülte a Microsoft szabványát és ezért kemény árat fizetett: amint egyre több és több játék kezdte használni a DirectX 9 tudását, a gyenge shader teljesítmény a GeForce FX sorozatú kártyákban egyre nyilvánvalóbbá vált.
+Az NVIDIA kétségbeesetten próbálta eltüntetni a GeForce FX sorozat hiányosságait. Az optimalizált driver (meghajtóprogram) frissítésekkel próbálta a teljesítményt növelni. Néhány felhasználó vitatni kezdte, hogy a megnövelt teljesítmény ténylegesen megállja-e a helyét. A hardver teszteléssel foglalkozó oldalak jelentették meg a cikküket, miszerint az „optimalizált” driverek mesterségesen befolyásolják a teljesítménymérő programok eredményeit, tehát nem a valós eredményeket mutatják. A driverek legendás stabilitása és kompatibilitása hitelét vesztette. Az NVIDIA elvesztette piacvezető pozícióját az ATI-val szemben.
+
+
+=== GeForce 6 sorozat és a továbbiak ===
+A GeForce 6 sorozatban az NVIDIA elmélyedt a DX9 teljesítmény problémájában, ami aláásta az előző generáció sikerét. A GeForce 6 sorozat nem csak a Direct 3D shader-t, de a DirectX Shader Model 3.0-t is támogatta, amíg az ATI X800-as sorozata csak az előző 2.0-s verziót támogatta. Ez egy jelentéktelen erőfeszítésnek tűnt, ugyanis az akkori játékok nem támogatták. Ennek ellenére bemutatta, hogy az NVIDIA újra felveszi a harcot és újabb fejlesztéseket tervez. Ami szemmel láthatóan feltűnt az az volt, hogy a két cég termékei ugyanolyan teljesítményt nyújtottak. A közép-kategóriás kártyák a két cégtől demonstrálták a fogyasztók étvágyát egy megfizethető, magas-teljesítményű grafikus kártyára. A GeForce 6 sorozat egy nagyon érdekes periódusban került forgalomba: a Doom 3 játék megjelenésekor az ATI Radeon 9700 gondokkal küzdött az OpenGL teljesítményben. A GeForce 6600GT elérhetővé tette a játékosok számára, hogy a Doom 3-at nagyon magas felbontásban tudják élvezni. Az SLI technológia és a teljesítmény tuning révén az NVIDIA újra piacvezető szerepbe küzdötte fel magát.
+A GeForce 7 széria egy erőteljesen feljavított 6-os sorozatnak tekinthető. Az iparági PCI Express szabvány bejelentésével elérhetővé tette az NVIDIA számára, hogy útjára engedje az „SLI” megoldást, ami két hasonló kártya teljesítményét egyesíti egy rendering egységbe. Ezek a megoldások azonban nem duplázták meg a teljesítményt, és több elektronikára volt szükség hozzá. Az ATI válasza az X1000 sorozat volt, amit „Crossfire”-nek nevez. A Sony az NVIDIA-t választotta, hogy kifejlessze az "RSX" chipet, amit a PlayStation 3-ban használ. Tulajdonképpen ez egy módosított 7800 GPU.
+2006 végén forgalomba hozta a 8800 sorozatot, ami elsőként támogatja a Microsoft DirectX 10 specifikációját.
+2008-ban jelent meg a 9000 sorozat, többek közt a dupla GPU-val rendelkező 9800GX2.
+2009-ben a GT200 sorozat jelent meg, az ATI HD 4000 sorozatot jelentette be ellenfélként.
+Támogatta a Dx10.1-et és az Shader Model 4.0-t.
+Majd hosszas várakozás után 2010 tavaszán fél éves lemaradással adta ki a Fermit azaz a GT400 családot.
+A fermi két nagyágyúja a GTX480/470 videókártyái, megosztották a fogyasztókat, de mindenki beszámolt a sok fogyasztásról, és a nagy melegedésről. Mivel az ATI 5000 sorozat akkor már fél éve kijött, a zöldek nagy lemaradásban voltak.
+És ha ez még nem volt elég, 2010 őszén megérkeztek a HD 6000 Radeonok, de az NVIDIA tanulva az esetből kidobta a GTX500
+sorozatok ami a 'Fermi újratöltve' címszó alatt jelent meg, Orvosolni tudták a problémákat, és a GTX580 felülhetett ismét a leggyorsabb egy GPU-s videókártyák trónjára.
+2011. március 24-én jelent meg a 2 db csökkentett órajelű GF110-es GPU-val ellátott GTX590, ami az Antilles kódnevű AMD Radeon HD 6990 ellen volt hivatott versenyezni. A Radeon ugyan egy nagyon picikét erősebbnek bizonyult a tesztekben, mégis kicsit többet fogyasztott és több hőt is termelt mint a GeForce (referencia hűtésen), így a kettőt egyenlő félnek tekinthetjük.
+A GTX600-as modellekre ismét többet kellett várni. Az AMD már 2011 decemberében bemutatta, új generációs GCN (Graphics Core Next)architektúrára épülő HD7970-et, ám az NVIDIA csak jó pár hónappal később tudott válaszolni. Ekkor már kint volt az AMD felső, és közép kategóriába szánt kártyái is.
+Kepler architektúrára épült a GTX600 sorozat, melynek jelenlegi tagjai GTX690, 680 és 670 modellekkel száll harcba. Sajnos innen nagy a szakadék, hiszen a 640 eléggé gyengére sikerült. Így az AMD 7700, 7800-as termékeire ez idáig nem érkezett ellenfél.
+A mai helyzet nem éppen jó, a vásárlók szemszögéből. A kártyák egyre gyorsabbak, és ez lehetővé tette a két gyártónak, hogy feljebb tolja az árakat. Nos, ez annyit jelent, hogy míg régebben 70-100 000 Ft között lehetett venni csúcs kártyákat (1 GPU pl: HD5870) most ez inkább 110 és 130 000 Ft között mozog. Árversenyre csak akkor lehet számítani, ha az NVIDIA tud válaszolni az AMD termékeire. GTX660 Ti, GTX 660 és 650 modellek várhatóak még.
+
+
+=== Jelenlegi piaci megosztottság ===
+A tanulmány szerint amit a Jon Peddie Research piackutató cég készített, az NVIDIA piaci megosztottsága a 4. negyedévben finoman esett, viszont a mobil grafikus piacban növekedett a részesedése. Összegezve az NVIDIA a második legnagyobb grafikus eszköz kibocsátó 28,5%-os részesedéssel. Az NVIDIA még mindig a legnagyobb "különálló grafikus eszköz" ("discrete graphic device")-gyártó, 53,8%-os részesedéssel.
+
+
+== Termékek ==
+Az NVIDIA termék portfóliója tartalmaz grafikus processzorokat, vezeték nélküli kommunikációs processzorokat, PC platformokat, és digitális média lejátszókat. A Mac/PC fogyasztók körében az NVIDIA a "GeForce" termék alapján ismert leginkább, ami nem a teljes sorozata a "discreete" grafikus chipeknek, de alapvetően a technológiai alapja a Microsoft Xbox játék-konzol és az nForce alaplapnak.
+Az NVIDIA, hasonlóan versenytársához az ATI-hoz, a PC piacot vette célpontba, később azonban kiterjesztette érdekeltségét a nem PC alapú applikációkhoz való chipek készítésére. Az NVIDIA nem ad el grafikus kártyákat a "retail" piacra, inkább a GPU fejlesztésre koncentrál. Az ATI és az NVIDIA referencia tervet készítenek (board schematics) és ezt továbbítják a partnereiknek, mint például az ASUS.
+2004 decemberében, bejelentették, hogy az NVIDIA szeretne közreműködni a Sony PlayStation 3 játék-konzol grafikus processzorának tervezésében. Ahogy 2006 márciusában megtudtuk, az NVIDIA fogja szállítani az RSX-et a Sony-nak.
+Az NVIDIA Tegra néven ARM alapú SoC-k gyártásába is belefogott. Igen nagy sikerrel teszi ezt. Tegra 2 és 3 modellek mobil, Android alapú készülékekben található meg.
+
+
+=== Grafikus chipszetek ===
+NV1 – az NVIDIA első terméke
+RIVA 128 és RIVA 128ZX – DirectX 5 támogatás, OpenGL 1 támogatás, az NVIDIA első DirectX-re kész terméke
+RIVA TNT, RIVA TNT2 – DirectX 6 támogatás, OpenGL 1 támogatás; a sorozat ami piacvezetővé tette az NVIDIA-t
+NVIDIA GeForce - asztali GPU megoldások
+NVIDIA Quadro – nagy teljesítményű munkaállomásokba szánt megoldás
+NVIDIA Tesla - dedikált GPGPU feldolgozás High Performance Computing systems számára
+NVIDIA GoForce – Media processzorok PDA-hoz, okostelefonhoz, és mobiltelefonokhoz (nPower technológia)
+GPU játék-konzolokhoz
+Xbox GeForce 3 -
+PlayStation 3 - RSX 'Reality Synthesizer'
+
+
+=== PC platformok és chipszetek ===
+NVIDIA nForce
+nForce
+nForce2
+nForce3
+nForce4
+nForce5
+nForce6
+nForce7
+nForce8
+nForce9
+nForce 500
+nForce 600
+nForce 700
+
+
+=== Dokumentáció és driverek ===
+Az NVIDIA nem ad dokumentációt a termékeihez, ami fontos lehet egy programozónak, inkább felkínálja a saját driver-ét.
+
+
+=== Videókártya-gyártók ===
+Az NVIDIA elsősorban chipseteket, nem videókártyákat gyárt. Meghatározzák a chipek és a videomemória sebességét, amit a külső eszközöknek követni kell. A kártyákat a következő gyártók szerelik össze:
+
+Albatron
+AOpen
+ASUS
+BFG
+BIG
+Biostar
+Chaintech
+Club 3D
+Creative
+ELSA
+eVGA
+Foxconn
+Gainward
+GALAXY Technology
+Gigabyte
+Inno3D
+Jaton
+Leadtek
+Mad Dog Multimedia
+Manli
+Micro-Star International (MSI)
+OCZ
+Palit
+Point of View
+PNY
+Sparkle Computer
+TwinTech
+VTX3D
+XFX
+Zebronics
+Zogis
+Zotac
+
+
+== Jegyzetek ==
+
+
+== További információk ==
+Hivatalos weboldal   (angolul)
+geforce.com (angolul)
+
+
+== Kapcsolódó szócikkek ==
+ATI Technologies

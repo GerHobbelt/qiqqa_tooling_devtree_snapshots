@@ -1,0 +1,766 @@
+revision: 152127641
+title: "\xCDndice de desarrollo humano"
+url: https://es.wikipedia.org/wiki/%C3%8Dndice_de_desarrollo_humano
+
+
+---
+
+El índice de desarrollo humano (IDH) es un indicador, elaborado por el Programa de las Naciones Unidas para el Desarrollo (PNUD), que se utiliza para clasificar a los países en tres niveles de desarrollo humano. El índice está compuesto por la esperanza de vida, la educación (tasa de alfabetización, tasa bruta de matriculación en diferentes niveles y asistencia neta) e indicadores de ingreso per cápita. Un país obtiene un IDH más alto cuando la esperanza de vida es mayor, el nivel de educación es mayor y el ingreso nacional bruto INB (PPA, o paridades de poder adquisitivo) per cápita es mayor. Fue desarrollado por un equipo liderado por el economista Amartya Sen.
+El Informe sobre desarrollo humano de 2010 introdujo un índice de desarrollo humano ajustado por desigualdad (IHDI). Si bien el IDH simple sigue siendo útil, PNUD afirma que «el IHDI es el nivel real de desarrollo humano (que representa la  desigualdad), mientras que el IDH puede verse como un índice de desarrollo humano 'potencial' (o el nivel máximo de IDH) que podría lograrse si no hubiera desigualdad.»[1]​ 
+El índice se basa en el enfoque de desarrollo humano, desarrollado por Mahbub ul Haq, a menudo enmarcado en términos de si las personas pueden «ser» y «hacer» cosas deseables en su vida. Los ejemplos incluyen estar bien alimentado, protegido, sano y haciendo cosas como trabajar, educarse, votar y participar en la vida comunitaria. La libertad de elección es fundamental: alguien que elige tener hambre (como durante un ayuno religioso) es diferente de alguien que tiene hambre porque no puede permitirse comprar comida o porque el país está en una hambruna.[2]​ 
+El índice no tiene en cuenta varios factores, como la riqueza neta per cápita o la relativa calidad de los productos en un país. Esta situación tiende a bajar la clasificación de algunos de los países más avanzados, como los miembros del G7 y otros.[3]​
+
+
+== Características del índice de desarrollo humano ==
+Salud: medida según la esperanza de vida al nacer.
+Educación: medida por la tasa de alfabetización de adultos y la tasa bruta combinada de matriculación en educación primaria, secundaria y superior, así como los años de duración de la educación obligatoria.
+Riqueza: medida por el PBI per cápita PPA y Producto Bruto Interno[4]​ en dólares internacionales.
+
+
+=== Otros índices relacionados con el desarrollo humano ===
+Además del IDH, el PNUD elabora:
+
+El índice de pobreza multidimensional (IPM), que desde 2010 suplanta a los índices de pobreza humana (IPH e IPH-1/IPH-2).[5]​El índice de pobreza (o indicadores de pobreza).El índice de pobreza humana para países en desarrollo (IPH-1, elaborado a partir de 1998).
+El índice de pobreza humana para países de la OCDE seleccionados (IPH-2, elaborado a partir de 1998).
+
+
+== Definición de desarrollo humano ==
+
+Proceso por el que una sociedad mejora las condiciones de vida de sus ciudadanos a través de un incremento de los bienes con los que puede cubrir sus necesidades básicas y complementarias, y de la creación de un entorno en el que se respeten los derechos humanos de todos ellos.
+Es la cantidad de opciones que tiene un ser humano en su propio medio, para ser o hacer lo que él desea. A mayor cantidad de opciones mayor desarrollo humano, a menor cantidad de opciones, menor desarrollo humano. El Desarrollo Humano podría definirse también como una forma de medir la calidad de vida del ente humano en el medio en que se desenvuelve, y una variable fundamental para la calificación de un país o región.
+
+
+== Clasificación del IDH que hace el PNUD ==
+En el informe publicado en 2018 el índice de desarrollo humano fluctuaba entre Noruega con un índice de 0,953 en la primera posición al 0,354 de Níger en el puesto 190
+El PNUD divide los países en cuatro grandes categorías de desarrollo humano, de acuerdo a la siguiente tabla:
+
+Desde el informe correspondiente a 2012, los países se separan por cuartiles IDH muy alto, alto, medio y bajo.
+En el último informe no se clasifica como país desarrollado un país con IDH muy alto, sino que se tienen en cuenta varios factores más.
+
+
+== Historia del IDH ==
+
+El IDH surge como una iniciativa del economista paquistaní Mahbub ul Haq para clasificar los países a partir de otras variables que no fueran las usadas tradicionalmente en economía (producto interno bruto, balanza comercial, consumo energético, desempleo, etc.), en educación (Índice de alfabetización, número de matriculados según nivel educacional, etc.), en salud (tasa de natalidad, esperanza de vida, etc.) o en otras áreas (gasto militar). El IDH busca medir dichas variables a través de un índice compuesto, por medio de indicadores que se relacionan en los tres aspectos mencionados en forma sinóptica.
+Es calculado desde 1990 por el Programa de las Naciones Unidas para el Desarrollo (PNUD) de acuerdo con el trabajo de investigación del economista paquistaní Mahbub ul Haq realizado en 1990. En gran parte, se basa en las ideas desarrolladas por Amartya Sen.
+
+
+== Metodología ==
+
+Cada uno de los componentes se expresa con un valor entre 0 y 1, para lo cual se utiliza la siguiente fórmula general total.
+
+  
+    
+      
+        
+          
+            
+              I
+              ´
+            
+          
+        
+        n
+        d
+        i
+        c
+        e
+         
+        d
+        e
+        l
+         
+        c
+        o
+        m
+        p
+        o
+        n
+        e
+        n
+        t
+        e
+        =
+        
+          
+            
+              
+                v
+                a
+                l
+                o
+                r
+                 
+                r
+                e
+                a
+                l
+                −
+                v
+                a
+                l
+                o
+                r
+                 
+                m
+                
+                  
+                    
+                      ı
+                      ´
+                    
+                  
+                
+                n
+                i
+                m
+                o
+              
+              
+                v
+                a
+                l
+                o
+                r
+                 
+                m
+                
+                  
+                    
+                      a
+                      ´
+                    
+                  
+                
+                x
+                i
+                m
+                o
+                −
+                v
+                a
+                l
+                o
+                r
+                 
+                m
+                
+                  
+                    
+                      ı
+                      ´
+                    
+                  
+                
+                n
+                i
+                m
+                o
+              
+            
+          
+        
+      
+    
+     
+  
+
+
+=== Nueva metodología ===
+Desde el informe del año 2010 el PNUD usa un nuevo método para calcular el IDH, en el cual el mínimo del INB se sitúa en 100 USD, el mínimo para ambos indicadores de educación, en 0 y, el mínimo de esperanza de vida, en 20 años:
+
+  
+    
+      
+        
+          I
+          E
+          V
+        
+        =
+        
+          
+            
+              
+                
+                  Eu
+                
+              
+              −
+              20
+            
+            
+              m
+              a
+              x
+              E
+              u
+              −
+              20
+            
+          
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          I
+          E
+        
+        =
+        
+          
+            
+              
+                
+                  IAPE
+                
+              
+              ⋅
+              
+                
+                  IAEE
+                
+              
+            
+            
+              max
+              
+                
+                  
+                    
+                      IAPE
+                    
+                  
+                  ⋅
+                  
+                    
+                      IAEE
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          I
+          A
+          P
+          E
+        
+        =
+        
+          
+            
+              APE
+            
+            
+              m
+              a
+              x
+              A
+              P
+              E
+              −
+              0
+            
+          
+        
+      
+    
+     
+  
+  
+    
+      
+        
+          I
+          A
+          E
+          E
+        
+        =
+        
+          
+            
+              AEE
+            
+            
+              m
+              a
+              x
+              A
+              E
+              E
+              −
+              0
+            
+          
+        
+      
+    
+     
+  
+  
+    
+      
+        
+          I
+          P
+          I
+          B
+        
+        =
+        
+          
+            
+              ln
+              ⁡
+              (
+              
+                
+                  GNIpc
+                
+              
+              )
+              −
+              ln
+              ⁡
+              (
+              100
+              )
+            
+            
+              ln
+              ⁡
+              (
+              40
+              ,
+              000
+              )
+              −
+              ln
+              ⁡
+              (
+              100
+              )
+            
+          
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          
+            IDH
+          
+        
+        =
+        
+          
+            
+              
+                1
+                3
+              
+            
+          
+          (
+          
+            
+              IEV
+            
+          
+          )
+          +
+          
+            
+              
+                1
+                3
+              
+            
+          
+          (
+          
+            
+              IE
+            
+          
+          )
+          +
+          
+            
+              
+                1
+                3
+              
+            
+          
+          (
+          
+            
+              IPIB
+            
+          
+          )
+        
+      
+    
+     
+  
+
+
+=== Vieja metodología ===
+El siguiente es un ejemplo de su cálculo tomando como referencia los valores de España en el informe 2007 (esperanza de vida al nacer de 80,5 años; tasa de alfabetización adulta del 99%;[6]​ tasa bruta de matriculación del 98%; PBI PPA per cápita de 27.169 $US):
+
+
+==== Cálculo del índice de esperanza de vida ====
+
+  
+    
+      
+        
+          I
+          E
+          V
+        
+        =
+        
+          
+            
+              
+                80
+                ,
+                5
+                −
+                20
+              
+              
+                85
+                −
+                20
+              
+            
+          
+        
+        =
+        0
+        ,
+        931
+      
+    
+     
+  
+
+
+==== Cálculo del índice de educación ====
+
+  
+    
+      
+        
+          I
+          E
+        
+        =
+        
+          
+            
+              
+                
+                  98
+                
+              
+              ⋅
+              
+                
+                  99
+                
+              
+            
+            
+              max
+              
+                
+                  
+                    
+                      100
+                    
+                  
+                  ⋅
+                  
+                    
+                      100
+                    
+                  
+                
+              
+            
+          
+        
+        =
+        
+          
+            0,985
+          
+        
+      
+    
+     
+  
+
+
+==== Cálculo del índice del PIB ====
+
+  
+    
+      
+        
+          I
+          P
+          I
+          B
+        
+        =
+        
+          
+            
+              
+                log
+                ⁡
+                (
+                25.667
+                )
+                −
+                log
+                ⁡
+                (
+                100
+                )
+              
+              
+                log
+                ⁡
+                (
+                40.000
+                )
+                −
+                log
+                ⁡
+                (
+                100
+                )
+              
+            
+          
+        
+        =
+        0
+        ,
+        935
+      
+    
+     
+  
+
+
+=== Cálculo del IDH ===
+
+  
+    
+      
+        
+          I
+          D
+          H
+        
+        =
+        
+          
+            
+              
+                1
+                3
+              
+            
+          
+          (
+          
+            I
+            E
+            V
+          
+          )
+          +
+          
+            
+              
+                1
+                3
+              
+            
+          
+          (
+          
+            I
+            E
+          
+          )
+          +
+          
+            
+              
+                1
+                3
+              
+            
+          
+          (
+          
+            I
+            P
+            I
+            B
+          
+          )
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          I
+          D
+          H
+        
+        =
+        
+          
+            
+              
+                1
+                3
+              
+            
+          
+          (
+          0
+          ,
+          931
+          )
+          +
+          
+            
+              
+                1
+                3
+              
+            
+          
+          (
+          0
+          ,
+          985
+          )
+          +
+          
+            
+              
+                1
+                3
+              
+            
+          
+          (
+          0
+          ,
+          935
+          )
+        
+        =
+        0
+        ,
+        950
+      
+    
+     
+  
+
+
+== Informe de 2021 ==
+
+
+== Primeros/últimos países de listas pasadas ==
+
+
+== Otros indicadores ==
+Además del IDH se calculan los siguientes índices:
+
+Índice de Desarrollo Humano Ajustado por Desigualdad.
+Índice de pobreza multidimensional (IPM o MPI -Multidimensional Poverty Index-), desde 2010 suplanta a los índices de pobreza humana (IPH e IPH-1/IPH-2).[5]​Índice de pobreza (o indicadores de pobreza).Índice de pobreza humana para países en desarrollo (IPH-1, elaborado a partir de 1998).
+Índice de pobreza humana para países de la OCDE seleccionados (IPH-2, elaborado a partir de 1998).Índice de desarrollo humano relativo al género (IDG, elaborado a partir de 1996).
+Índice de potenciación de género (IPG, elaborado a partir de 1996).
+Índice de Paz Global (elaborado a partir de 2007).
+Índice de privación material, aplicado en Gran Bretaña en 2010, que incluye el cálculo de pobreza en el ingreso y el cálculo de la privación material; mejora el propuesto cálculo complementario de pobreza (SPM) de Estados Unidos para 2011.[8]​
+Índice de Progreso Social (SPI, del inglés Social Progress Index), liderado por Michael Porter de la Universidad de Harvard, que pretende mejorar sobre el IDH al incluir únicamente indicadores de resultado sociales. De esta manera, el SPI evita incluir indicadores puramente económicos, tales como el GDP, que son más considerados indicadores de entrada y no necesariamente indicadores que reflejen verdaderos resultados sociales. La última versión publicada es la de 2016.[9]​Anteriormente fueron elaborados:
+
+Índice de libertad humana (ILH, 1991 - 1993).
+Índice de desarrollo de la mujer (IDM, 1995, cambiado por el IPG).
+Índice de potenciación de la mujer (IPM, 1995, cambiado por el IDG).
+Índice de pobreza de capacidad (IPC, 1996).
+Índice de pobreza humana (IPH, 1997, después derivado en el IPH-1 e IPH-2).
+
+
+== Véase también ==
+Índice de gobernanza mundial
+Índice de eficacia del Estado
+Economía del bienestar
+Índice de Progreso Social
+Índice del Planeta Feliz
+Índice global de felicidad
+Organización de las Naciones Unidas
+Países por IDH
+Países por IDH ajustado por desigualdad
+Países por igualdad de ingreso
+Países por índice de desigualdad de género
+Países por Índice Prescott-Allen
+
+
+== Referencias ==
+
+
+== Enlaces externos ==
+Informe sobre desarrollo humano 2013.
+Informe sobre desarrollo humano 2010, 2009, 2008-2007.
+Informe sobre desarrollo humano 2005.
+Informe sobre desarrollo humano 2007 (ONU).
+Informes sobre el desarrollo humano, con datos de 2014.
+Web oficial del PNUD sobre el desarrollo humano en Argentina. Archivado el 2 de junio de 2014 en Wayback Machine.
+Web oficial del PNUD sobre el desarrollo humano en Chile.
+Web oficial del PNUD sobre el desarrollo humano en Colombia.
+Web oficial del PNUD sobre el desarrollo humano en México.
+Web oficial del PNUD sobre el desarrollo humano en Perú.
+Web oficial del PNUD sobre el desarrollo humano en Venezuela.

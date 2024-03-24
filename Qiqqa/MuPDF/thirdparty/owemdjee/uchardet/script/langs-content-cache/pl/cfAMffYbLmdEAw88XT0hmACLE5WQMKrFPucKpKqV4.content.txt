@@ -1,0 +1,81 @@
+revision: 70355468
+title: "Ogniwo s\u0142oneczne"
+url: https://pl.wikipedia.org/wiki/Ogniwo_s%C5%82oneczne
+
+
+---
+
+Ogniwo słoneczne, ogniwo fotowoltaiczne, ogniwo fotoelektryczne, fotoogniwo –  element półprzewodnikowy, w którym następuje przemiana (konwersja) energii promieniowania słonecznego (światła) w energię elektryczną w wyniku zjawiska fotowoltaicznego. Poprzez wykorzystanie półprzewodnikowego złącza typu p-n, w którym pod wpływem fotonów o energii większej niż szerokość przerwy energetycznej półprzewodnika, elektrony przemieszczają się do obszaru n, a dziury (zob. nośniki ładunku) do obszaru p. Takie przemieszczenie ładunków elektrycznych powoduje pojawienie się różnicy potencjałów, czyli napięcia elektrycznego.
+Po raz pierwszy efekt fotowoltaiczny zaobserwował A.C. Becquerel w 1839 r. w obwodzie oświetlonych elektrod umieszczonych w elektrolicie, a obserwacji tego zjawiska na granicy dwóch ciał stałych dokonali 37 lat później W. Adams i R. Day.
+Fotoogniwa są produkowane z materiałów półprzewodnikowych, najczęściej z krzemu (Si), germanu (Ge), selenu (Se). Zwykłe ogniwo słoneczne z krystalicznego krzemu ma nominalne napięcie ok. 0,5 wolta. Poprzez połączenie szeregowe ogniw słonecznych można otrzymać baterie słoneczne. Istnieją baterie z różną liczbą ogniw, w zależności od zastosowania, jak i od jakości ogniw.
+
+
+== Zasada działania ==
+Fotoogniwo jest zbudowane z półprzewodnika i tworzy złącze p-n, na które pada światło. Padające na złącze fotony o energii większej od szerokości przerwy energetycznej półprzewodnika powodują powstanie par elektron-dziura. Pole elektryczne wewnątrz półprzewodnika, związane z obecnością złącza p-n, przesuwa nośniki różnych rodzajów w różne strony. Elektrony trafiają do obszaru n, dziury do obszaru p. Rozdzielenie nośników ładunku w złączu powoduje powstanie na nim zewnętrznego napięcia elektrycznego. Ponieważ rozdzielone nośniki są nośnikami nadmiarowymi (mają nieskończony czas życia), a napięcie na złączu p-n jest stałe, oświetlone złącze działa jako ogniwo elektryczne, czyli takie, w którym źródłem prądu są reakcje chemiczne zachodzące między elektrodą a elektrolitem.
+
+
+== Zastosowania ==
+Fotoogniwa są stosowane przede wszystkim jako trwałe i niezawodne źródła energii w elektrowniach słonecznych, kalkulatorach, zegarkach, plecakach, sztucznych satelitach, samochodach z napędem hybrydowym, a także w automatyce – jako czujniki fotoelektryczne i fotodetektory w fotometrii. Inne zastosowania to:
+
+elektronika użytkowa, lampy ogrodowe, oświetlanie znaków drogowych i wspomaganie sygnalizacji świetlnej;
+zasilanie elektroniki promów i sond kosmicznych, stacji orbitalnych i sztucznych satelitów Ziemi (w przestrzeni kosmicznej promieniowanie słoneczne jest o wiele silniejsze);
+doładowywanie akumulatorów w dzień i wykorzystywanie energii w nocy na jachtach, kempingach, domach jednorodzinnych;
+zasilanie układów telemetrycznych w stacjach pomiarowo-rozliczeniowych gazu ziemnego, ropy naftowej oraz energii elektrycznej;
+zasilanie automatyki przemysłowej i pomiarowej;
+produkcja energii w pierwszych elektrowniach słonecznych.
+
+
+=== Skala przemysłowa ===
+Ze względu na wysoką cenę, ogniwa fotowoltaiczne nie były w XX wieku masowo wykorzystywane jako źródło energii. Cena ta jednak stopniowo spadała, a na początku XXI wieku wiele państw zaczęło wprowadzać subwencje na budowę przemysłowych instalacji słonecznych. Wywołało to rozwój fotowoltaiki przemysłowej i dalszy spadek cen ogniw słonecznych. W styczniu 2002 roku średnia cena ogniw wynosiła około 5,5 $/wat, w styczniu 2012 roku wynosiła 2,3 $/wat. Poniższa tabela przedstawia sumaryczną moc elektrowni słonecznych w kolejnych latach.
+
+Gwałtowny wzrost inwestycji w instalacje fotowoltaiczne oraz spadek ich cen doprowadził do ograniczenia wsparcia w formie taryf gwarantowanych w krajach takich jak Niemcy czy Austria. Mimo obniżenia wsparcia rynek energii ze źródeł odnawialnych w tamtych krajach nadal dynamicznie rośnie. Szacuje się, że trend ten dopiero wejdzie do Polski. Od 14 września 2013 r. obowiązuje bowiem nowelizacja ustawy prawo energetyczne, która umożliwia podłączenie systemu fotowoltaicznego (zdefiniowanego w ustawie jako „mikroinstalacja” o mocy do 40 kW) do sieci elektrycznej bez uzyskiwania zezwoleń.
+
+
+== Rodzaje ogniw fotowoltaicznych ==
+
+
+=== Ogniwa I generacji (grubowarstwowe) ===
+monokrystaliczne – najwydajniejszy rodzaj ogniw fotowoltaicznych. Wytwarzane z monokryształu krzemu, charakteryzują się wysoką sprawnością i długą żywotnością. Ze względu na czasochłonny proces produkcji, ogniwa monokrystaliczne są najdroższym rodzajem ogniw. Mają charakterystyczny, czarny kolor.
+polikrystaliczne – tańsze w produkcji i mniej wydajne niż ogniwa monokrystaliczne. Wytwarzane z płytek krzemowych, których struktura krystaliczna jest nieregularna. Ich sprawność oscyluje pomiędzy 15-18%. Mają niebieski kolor i widoczną strukturę kryształów krzemu, która przypomina szron.
+
+
+=== Ogniwa II generacji (cienkowarstwowe) ===
+Ogniwa drugiej generacji wykonywane są z takich materiałów jak tellurek kadmu, krzemu amorficznego, czy też mieszanki miedzi, indu, galu i selenu. Ze względu na bardzo cienką warstwę (od 0,001 do 0,08 mm) ogniwa tej generacji są znacznie tańsze niż ogniwa z krystalicznego krzemu. Półprzewodniki w tych ogniwach nakłada się za pomocą naparowywania, napylania oraz epitaksji. Ogniwa II generacji mogą być bardzo elastyczne, dzięki czemu można je wykorzystywać jako elementy budowlane.
+
+
+=== Ogniwa III generacji (w trakcie badań) ===
+Bazują na bardzo różnych technologiach i nie są oparte o złącza półprzewodnikowe p-n. Tego typu ogniwa nie są jeszcze skomercjalizowane i mają charakter nowatorski. Ze względu na to, że ogniwa te są w trakcie badań, charakteryzują się jeszcze niską sprawnością i żywotnością. Największą zaletą ogniw III generacji jest niezwykle niski koszt produkcji oraz nietoksyczność. Można wymienić takie ogniwa jak:
+
+barwnikowe (w trakcie badań)
+polimerowe (III generacja, w trakcie badań)
+
+
+== Awaryjność paneli fotowoltaicznych ==
+Na podstawie danych Instytutu TÜV Rheinland zebranych z wielu farm fotowoltaicznych, instalacji przemysłowych i mikroinstalacji domowych, przeanalizowano najczęstsze problemy i uszkodzenia modułów pv. Do nich należą: 
+
+Pęknięcia szyby
+PID (Potential Induced Degradation)
+Ślimacze ścieżki
+Wadliwa folia ochronna
+Odklejanie się folii ochronnej
+Hotspoty
+Zabrudzenia paneli pv
+Przegrzewanie się skrzynki przyłączeniowej
+Awaria diody bocznikowej lub skrzynki przyłączeniowej
+Wadliwa instalacjaW panelach fotowoltaicznych nie wykonuje się żadnych napraw. Każda z wyżej wymienionych usterek wiąże się z wymianą całego modułu pv, oprócz czyszczenia, wymiany skrzynki przyłączeniowej, czy diody bocznikowej. Niemniej jednak panele fotowoltaiczne mogą działać przez długi czas, pomimo wystąpienia usterek. Delaminacja folii czy problemy z PID nie powodują natychmiastowej awarii modułu, a jedynie jego przyśpieszoną degradację i niższe uzyski energii.
+
+
+== Testy wytrzymałościowe paneli fotowoltaicznych ==
+Panele fotowoltaiczne poddaje się czterem głównym testom wytrzymałościowym. Do nich należą: 
+
+Test cyklów termicznych – badanie sprawdza połączenia między warstwami poddane nagłym zmianom temperatury. Procedura polega na wykonaniu 800 cykli chłodzenia i przegrzewania paneli od -40 do 85 °C oraz traktowanie modułów wysokim prądem podczas ochładzania i podgrzewania. Najlepsze panele tracą mniej niż 2% na teście. Normalne panele certyfikowane według IEC 61215 tracą  mniej niż 5% mocy po 200 takich cyklach.
+Test wilgoci i ciepła – badanie sprawdza połączenia między poszczególnymi warstwami panelu słonecznego. Test polega na umieszczeniu modułu w środowisku względnej wilgotności na poziomie 85%, przy temperaturze 85 °C, na 2000 godzin (ok 84 dni). Normalne panele słoneczne certyfikowane według IEC 61215 wytrzymują w takich warunkach ok. 1000 godzin. Najlepsze panele słoneczne tracą mniej niż 2% mocy po takim teście.
+Test obciążeń dynamicznych – badanie sprawdza odporność na mikropęknięcia i pękanie poszczególnych elementów pod wpływem uciążliwych warunków i obciążeń. Procedura polega na obciążaniu modułów naprzemiennym naciskiem 1000 Pa (1000 cykli), następnie badanie obciążeń termicznych od -40 do 85 °C (50 cykli), kolejny etap to 3 serie po 10 cykli nawilgacania i zamarzania (85 °C i wilgotność na poziomie 85% przez 20 godzin, a potem gwałtowne oziębianie do -40 °C). Najlepsze panele fotowoltaiczne tracą mniej niż 2% mocy po takim teście.
+Test PID – badanie dotyczy odporności na zjawisko PID. Test składa się z dwóch 96-ściu godzinnych sesji. Podczas tych sesji panele poddawane są ich maksymalnemu napięciu (-1000 lub -1500V) w warunkach 85 °C oraz względnej wilgotności na poziomie 85%. Najlepsze panele fotowoltaiczne tracą mniej niż 2% mocy po takim teście.
+
+
+== Przypisy ==
+
+
+== Linki zewnętrzne ==
+Historia opisana na łamach Młodego Technika

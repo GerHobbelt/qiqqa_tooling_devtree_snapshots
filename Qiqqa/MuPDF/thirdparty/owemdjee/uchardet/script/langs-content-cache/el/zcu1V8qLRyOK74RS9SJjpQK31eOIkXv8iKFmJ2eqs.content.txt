@@ -1,0 +1,99 @@
+revision: 9718440
+title: "\u039D\u03C4\u03CC\u03BD\u03B1\u03BB\u03BD\u03C4 \u039A\u03BD\u03BF\u03C5\u03B8"
+url: https://el.wikipedia.org/wiki/%CE%9D%CF%84%CF%8C%CE%BD%CE%B1%CE%BB%CE%BD%CF%84_%CE%9A%CE%BD%CE%BF%CF%85%CE%B8
+
+
+---
+
+Ο Ντόναλντ Έρβιν Κνουθ (αγγλικά: Donald Ervin Knuth [knuːθ], 10 Ιανουαρίου 1938) είναι Αμερικανός διεθνώς αναγνωρισμένος επιστήμονας πληροφορικής και ομότιμος καθηγητής της «Τέχνης του Προγραμματισμού Υπολογιστών» στο Πανεπιστήμιο Στάνφορντ.
+Συγγραφέας του σημαντικού πολύτομου έργου «Η Τέχνη του Προγραμματισμού Υπολογιστών» (αγγλ.: The Art of Computer Programming) ο Κνουθ έχει χαρακτηριστεί ο πατέρας της ανάλυσης αλγορίθμων, συμβάλλοντας στην ανάπτυξη και στη συστηματοποίηση μαθηματικών τεχνικών για την εις βάθος ανάλυση της υπολογιστικής πολυπλοκότητας των αλγορίθμων.
+Εκτός από την ουσιαστική συνεισφορά του σε αρκετούς κλάδους της θεωρητικής πληροφορικής, ο Κνουθ είναι ο κύριος δημιουργός του διάσημου συστήματος στοιχειοθεσίας μέσω υπολογιστή TeX, της σχετιζόμενης γλώσσας ορισμού γραμματοσειρών και συστήματος σχεδίασης METAFONT και της οικογένειας γραμματοσειρών Computer Modern.
+Πολυγραφότατος συγγραφέας, ο Κνουθ δημιούργησε τα συστήματα προγραμματισμού υπολογιστών WEB/CWEB, τα οποία είναι σχεδιασμένα για να ενθαρρύνουν και να διευκολύνουν τον «λόγιο προγραμματισμό» (literate programming). Έχει σχεδιάσει επίσης την αρχιτεκτονική συνόλου εντολών MMIX.
+
+
+== Εκπαίδευση και ακαδημαϊκό έργο ==
+Ο Κνουθ γεννήθηκε στο Μιλγουόκι του Ουισκόνσιν, όπου ο πατέρας του είχε ένα μικρό τυπογραφείο και δίδασκε λογιστική στο Λουθηρανικό Λύκειο του Μιλγουόκι, το οποίο παρακολούθησε και ο Ντόναλντ. Ήταν άριστος μαθητής, κερδίζοντας διάφορους επαίνους. Εφάρμοζε την εξυπνάδα του με αντισυμβατικούς τρόπους, κερδίζοντας για παράδειγμα ένα διαγωνισμό όπου βρήκε περισσότερες από 4500 λέξεις που μπορούσαν να σχηματιστούν από τα γράμματα της φράσης «Ziegler's Giant Bar». Το έπαθλό του ήταν μια τηλεόραση για το σχολείο του και ένα γλύκισμα για όλους τους συμμαθητές στην τάξη του.
+Ο Κνουθ δυσκολεύτηκε να επιλέξει τη φυσική ως βασικό αντικείμενο σπουδών αντί για τη μουσική, κατά τη φοίτησή του στο Ινστιτούτο Τεχνολογίας Κέις. Στη συνέχεια μεταπήδησε από τη φυσική στα μαθηματικά και το 1960 πήρε το πτυχίο Bachelor of Science, λαμβάνοντας ταυτόχρονα και το ανώτερο πτυχίο Master of Science, ως ειδικό βραβείο από το διδακτικό προσωπικό του Πανεπιστημίου που θεώρησε το έργο του εξαιρετικό. Στο Κέις προπονούσε την ομάδα καλαθοσφαίρισης και αξιοποιούσε το ταλέντο του κατασκευάζοντας ένα μαθηματικό τύπο για τον υπολογισμό της «αξίας» κάθε παίκτη. Αυτή η πρωτότυπη προσέγγιση καλύφθηκε από το περιοδικό Newsweek και τον δημοσιογράφο Ουόλτερ Κρόνκαϊτ στο τηλεοπτικό δίκτυο CBS.Κατά τις μεταπτυχιακές σπουδές του ο Κνουθ δούλεψε ως σύμβουλος, συγγράφοντας μεταγλωττιστές για διάφορους υπολογιστές. Το 1963 ολοκλήρωσε το διδακτορικό του στα μαθηματικά (επιβλέπων: Μάρσαλ Χωλ) στο Ινστιτούτο Τεχνολογίας της Καλιφόρνιας, όπου και έγινε καθηγητής, ξεκινώντας παράλληλα τη συγγραφή του βιβλίου του Η τέχνη του προγραμματισμού υπολογιστών. Ο αρχικός στόχος ήταν να γίνει μόνο ένας τόμος (εκδόθηκε τελικά το 1968), ο οποίος όμως μετατράπηκε σε εξάτομο έργο, για να προστεθεί αργότερα και ένας έβδομος τόμος. Τον ίδιο χρόνο έγινε δεκτός στο διδακτικό προσωπικό του πανεπιστημίου Στάνφορντ, έχοντας απορρίψει μια πρόταση εργασίας από την Υπηρεσία Εθνικής Ασφαλείας των ΗΠΑ.
+Το 1971 ο Κνουθ έγινε ο πρώτος παραλήπτης του Βραβείου Γκρέις Μάρεϊ Χόπερ του Συλλόγου Μηχανημάτων Υπολογισμού (ACM). Έχει τιμηθεί με πολλές ακόμα διακρίσεις, ανάμεσα στις οποίες το Βραβείο Τούρινγκ (1974), το Εθνικό Μετάλλιο Επιστημών των ΗΠΑ, το Μετάλλιο Τζον φον Νόιμαν και το Βραβείο Κιότο. Μετά την έκδοση του τρίτου τόμου του έργου του το 1976, ένιωσε τέτοια απογοήτευση για τη βρεφική κατάσταση των τότε πρωτόλειων ηλεκτρονικών εργαλείων στοιχειοθεσίας, ώστε δαπάνησε χρόνο από την εργασία του για να δημιουργήσει τα εργαλεία στοιχειοθεσίας TeX και METAFONT.
+Σε αναγνώριση για τη συμβολή του Κνουθ στην πληροφορική, το 1990 του απενεμήθη ο μοναδικός ακαδημαϊκός τίτλος του «Καθηγητή της Τέχνης του Προγραμματισμού Υπολογιστών». Το 1992 έγινε μέλος της Γαλλικής Ακαδημίας Επιστημών, ενώ τον ίδιο χρόνο παραιτήθηκε από τα τακτικά καθήκοντα έρευνας και διδασκαλίας στο Στάνφορντ, ώστε να τελειώσει το πολύτομο βιβλίο του. Το 2003 εξελέγη αλλοδαπό μέλος της Βασιλικής Εταιρείας. Το 2004 επανεκδόθηκαν οι τρεις πρώτοι τόμοι του έργου του και ο Κνουθ εργαζόταν πάνω στον τέταρτο, αποσπάσματα του οποίου δημοσίευε περιοδικά στην ιστοσελίδα του. Εν τω μεταξύ, παραδίδει ανεπίσημες διαλέξεις μερικές φορές το χρόνο στο Στάνφορντ, τις οποίες αποκαλεί «Computer Musings». Είναι επίσης επισκέπτης καθηγητής στο Εργαστήριο Πληροφορικής του Πανεπιστημίου της Οξφόρδης.
+Εκτός από το συγγραφικό έργο του στην πληροφορική, ο Κνουθ, πιστός λουθηρανός, είναι επίσης και συγγραφέας του 3:16 Bible Texts Illuminated (1991), ISBN 0-89579-252-4, στο οποίο αποπειράται να εξετάσει τη Βίβλο με μια διαδικασία συστηματικής δειγματοληψίας, αναλύοντας το κεφάλαιο 3, στίχος 16 από κάθε βιβλίο της. Κάθε στίχος συνοδεύεται από καλλιγραφία, την οποία παρείχε ομάδα καλλιγράφων υπό την καθοδήγηση του τυπογράφου Χέρμαν Ζαπφ.
+Είναι επίσης ο συγγραφέας του Surreal Numbers (1974) ISBN 0-201-03812-9, ενός μυθιστορήματος με θέμα τη θεωρία συνόλων του Τζον Κόνγουεϊ για κατασκευή ενός εναλλακτικού συστήματος αριθμών. Αντί να εξηγεί απλώς το θέμα, το βιβλίο προσπαθεί να δείξει την ανάπτυξη των μαθηματικών. Στόχος του Κνουθ ήταν να προετοιμάσει τους φοιτητές για την πραγματοποίηση πρωτότυπης και δημιουργικής έρευνας. 
+Στις 1 Ιανουαρίου 1990 ο Κνουθ ανακοίνωσε στους συναδέλφους του ότι δεν θα είχε πλέον διεύθυνση ηλεκτρονικού ταχυδρομείου, ώστε να συγκεντρωθεί στο έργο του.
+
+
+== Το χιούμορ του Κνουθ ==
+Ο Κνουθ είναι γνωστός για το «επαγγελματικό του χιούμορ».
+
+Συνήθιζε να πληρώνει εύρετρα 2,56 δολαρίων για κάθε λάθος (τυπογραφικό ή περιεχομένου) στα βιβλία του, γιατί "256 δεκάρες είναι ένα δεκαεξαδικό δολάριο". (Τα εύρετρα για λάθη στο 3:16 Bible Texts Illuminated, είναι αντίστοιχα 3,16 δολάρια). Σύμφωνα με άρθρο του περιοδικού Technology Review του ΜΙΤ αυτές οι επιταγές είναι από τα πλέον περιζήτητα «τρόπαια» στον κόσμο της πληροφορικής. Ο Κνουθ σταμάτησε την αποστολή των επιταγών το 2008, λόγω τραπεζικής απάτης και πλέον δίνει σε κάθε δικαιούχο πίστωση στην εικονική «Τράπεζα του Σαν Σερίφ».
+Οι αριθμοί εκδόσεων του λογισμικού TeX του Κνουθ αποτελούν προσέγγιση του αριθμού π, δηλαδή εξελίσσονται ως 3, 3.1, 3.14, 3.141 κ.ο.κ. Όπως έχει ζητήσει ο ίδιος, μετά τον θάνατό του η μόνη αλλαγή που θα γίνει στον κώδικα του TeX θα είναι η αναβάθμιση του αριθμού έκδοσης σε π. Ομοίως στο λογισμικό Metafont οι αριθμοί εκδόσεων αποτελούν προσέγγιση του αριθμού e.
+Κάποτε προειδοποίησε έναν αλληλογράφο: «Πρόσεξε για σφάλματα στον παραπάνω κώδικα. Έχω απλώς αποδείξει ότι είναι σωστός, δεν τον έχω δοκιμάσει».
+Όλα τα παραρτήματα στην σειρά Computers and Typesetting έχουν τίτλους που ξεκινούν με το γράμμα που χαρακτηρίζει το παράρτημα.
+Στον τρίτο τόμο (δεύτερη έκδοση) του The Art of Computer Programming, υπάρχει στα περιεχόμενα η καταχώρηση «Εισοδήματα από δικαιώματα, χρήση των, 407». Στην σελίδα 407 δεν υπάρχει σαφής αναφορά στα εισοδήματα από δικαιώματα, υπάρχει όμως το διάγραμμα ενός εκκλησιαστικού οργάνου στο σχήμα 2. Προφανώς η αγορά του οργάνου για το σπίτι του χρηματοδοτήθηκε από τα έσοδά του από το βιβλίο.
+
+
+== Εργογραφία ==
+Σύντομος κατάλογος των έργων του:
+Donald E. Knuth, The Art of Computer Programming, Volumes 1–4, Addison-Wesley ProfessionalVolume 1: Fundamental Algorithms (3rd edition),  1997. Addison-Wesley Professional, ISBN 0-201-89683-4
+Volume 2: Seminumerical Algorithms (3rd Edition), 1997. Addison-Wesley Professional, ISBN 0-201-89684-2
+Volume 3: Sorting and Searching (2nd Edition), 1998. Addison-Wesley Professional, ISBN 0-201-89685-0
+Volume 4: Combinatorial Algorithms, in preparationDonald E. Knuth, The Art of Computer Programming, fascicles:Volume 1, Fascicle 1: MMIX — A RISC Computer for the New Millennium, 2005. ISBN 0-201-85392-2
+Volume 4, Fascicle 0: Introduction to Combinatorial Algorithms and Boolean Functions. 2008.  ISBN 0-321-53496-4
+Volume 4, Fascicle 1: in preparation.
+Volume 4, Fascicle 2: Generating All Tuples and Permutations, 2005. ISBN 0-201-85393-0
+Volume 4, Fascicle 3: Generating All Combinations and Partitions, 2005. ISBN 0-201-85394-9
+Volume 4, Fascicle 4: Generating All Trees -- History of Combinatorial Generation, 2006. ISBN 0-321-33570-8Donald E. Knuth, The TeXbook (Reading, Massachusetts: Addison-Wesley), 1984. ISBN 0-201-13448-9
+Donald E. Knuth, The METAFONTbook (Reading, Massachusetts: Addison-Wesley), 1986. ISBN 0-201-13444-6
+Ronald L. Graham, Donald E. Knuth, Oren Patashnik, Concrete Mathematics: A Foundation for Computer Science, 2nd edition (Reading, Massachusetts: Addison-Wesley), 1994. ISBN 0-201-55802-5
+Selected papers series:Donald E. Knuth, Literate Programming (Center for the Study of Language and Information — Lecture Notes), 1992. ISBN 0-937073-80-6
+Donald E. Knuth, Selected Papers on Computer Science (Stanford, California: Center for the Study of Language and Information — CSLI Lecture Notes, no. 59), 1996. ISBN 1-881526-91-7
+Donald E. Knuth, Digital Typography (Stanford, California: Center for the Study of Language and Information — CSLI Lecture Notes, no. 78), 1999. ISBN 1-57586-010-4
+Donald E. Knuth, Selected Papers on Analysis of Algorithms (Stanford, California: Center for the Study of Language and Information — CSLI Lecture Notes, no. 102), 2000. ISBN 1-57586-212-3
+Donald E. Knuth, Selected Papers on Computer Languages (Stanford, California: Center for the Study of Language and Information — CSLI Lecture Notes, no. 139), 2003. ISBN 1-57586-381-2 (cloth), ISBN 1-57586-382-0 (paperback)
+Donald E. Knuth, Selected Papers on Discrete Mathematics (Stanford, California: Center for the Study of Language and Information — CSLI Lecture Notes, no. 106), 2003. ISBN 1-57586-249-2 (cloth), ISBN 1-57586-248-4 (paperback)
+Donald E. Knuth, Selected Papers on Design of Algorithms (publication planned after Vol 4 Fasc 1)
+Donald E. Knuth, Selected Papers on Fun and Games (publication planned after Vol 4 Fasc 1)Donald E. Knuth, 3:16 Bible Texts Illuminated (Madison, Wisconsin: A-R Editions), 1990. ISBN 0-89579-252-4
+Donald E. Knuth, Things a Computer Scientist Rarely Talks About (Center for the Study of Language and Information — CSLI Lecture Notes no 136), 2001. ISBN 1-57586-326-X
+
+
+== Συνεντεύξεις και διαλέξεις ==
+TUG'95 (St Petersburg, FL, USA) Questions and answers with Prof. Donald E. Knuth. TUGboat 17 (1), 1996
+Woehr, J. An interview with Donald Knuth Dr. Dobb's Journal, April 1996, p. 16-22.
+Donald Knuth on The Art of Computer Programming Αρχειοθετήθηκε 2007-03-29 στο Wayback Machine. Addison-Wesley Innovations, 1996
+Questions and Answers with Prof. Donald E. Knuth. Czech TUG, Charles University, Prague, 1996
+Knuth meets NTG members, Amsterdam, March 13, 1996.
+Knuth Comments on Code, Byte magazine, September 1996.
+Donald Knuth: A life's work in the art of programming Amazon.com, 1997.
+U.K. TUG, Oxford, September 12, 1999: Question & Answer Session with Donald Knuth. TUGboat, 22 (1/2), 2001.
+Dr. Dobb's Audio & Video Archive of Knuth's MMIX and God & Computers Lectures @ MIT, Fall 1999
+Donald Knuth: MMIX, A RISC Computer for the New Millennium. Audio recording of a presentation at the monthly meeting of the Boston ACM December 30, 1999
+Wallace, Mark. The art of Don E. Knuth Αρχειοθετήθηκε 2008-10-06 στο Wayback Machine. Interview on salon.com, 1999.
+Things A Computer Scientist Rarely Talks About - Lecture 1: Introduction, October 6, 1999
+Advogato, 2000, also available as HTML Version
+AMS, 2001
+Oslo, 2002
+c't, 2002 (in German)
+NZZ Folio, 2002 (in German)
+Donald Knuth, Founding Artist of Computer Science. Audio interview by David Kestenbaum on National Public Radio; or Transcript, March 14, 2005.
+Free Software Magazine interview by Gianluca Pignalberi, August 2005.
+InformIT Interview by Andrew Binstock, April 2008.
+Communications of the ACM, Vol.51,7 pp.35-39, Interview, part 1 by Len Shustek, July 2008.
+
+
+== Παραπομπές ==
+
+
+== Εξωτερικοί σύνδεσμοι ==
+Donald Knuth’s home page at Stanford University.
+Oral history interview with Donald E. Knuth at Charles Babbage Institute, University of Minnesota, Minneapolis.
+“Love at First Byte,” Kara Platoni, with photography by Timothy Archibald, STANFORD Magazine, May/June 2006.  A retrospective of Knuth’s life and work, with some rare, recent photos.
+Donald Knuth: Leonard Euler of Computer Science (Softpanorama)
+Videos of presentations w/ Donald Knuth
+The Potrzebie System of Weights and Measures
+Finite Semifields and Projective Planes - Donald Knuth's Ph.D. dissertation
+Letter sent in February 1994 by Donald Knuth to the Patent and Trademark Office
+Donald E. Knuth, "Algorithmic Themes", in AMS History of Mathematics, Volume 1: A Century of Mathematics in America, AMS, Providence, RI, 1988.
+Donald E. Knuth Knuth email
+A cartoon mentioning Donald Knuth
+Oral History of Donald Knuth
+Donald Knuth video autobiography
+Kill Yr Idols - Donald Knuth - a critique of Donald Knuth by Adequacy.org

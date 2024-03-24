@@ -1,0 +1,164 @@
+revision: 11295190
+title: Alphabet
+url: https://da.wikipedia.org/wiki/Alfabet
+
+
+---
+
+Et alfabet (fra græsk: alfa αλφα og beta βητα) er en ordnet rækkefølge af bogstaver. Alfabeter afviger fra andre skriftsystemer ved at konsonanter og vokaler skrives med lignende tegn. 
+
+
+== Danske alfabet ==
+Det danske alfabet ser således ud med store blokbogstaver:
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Æ Ø Å
+Bogstaverne Æ, Ø og Å kan også skrives: Ae, Oe og Aa. 
+Det danske alfabet ser således ud med små bogstaver:
+a b c d e f g h i j k l m n o p q r s t u v w x y z æ ø å
+De små bogstavs varianter af æ, ø og å kan også skrives: ae, oe og aa.
+
+
+== Alfabetisering ==
+Der er ofte forskellige regler i forskellige sprog for hvordan man alfabetiserer, det vil sige opstiller ordene i alfabetisk rækkefølge, også selvom sprogene bruger de samme bogstaver.
+
+
+=== Dansk ===
+På dansk gældende følgende specielle regler:
+
+Aa skal alfabetiseres som å når det udtales som én vokal uanset om den betegnet en a-lyd eller en å-lyd. Hvis den eneste forskel på to ord er at det ene har å hvor den andet har aa, skal ordet med å stå først af de to ord.
+Aa skal kun alfabetiseres som to a'er når det udtales som særskilte vokaler, det vil sige når de to a'er tilhører hver sin stavelse som for eksempel i ordet ekstraarbejde.
+Fremmede bogstaver og accenter: Ü alfabetiseres som y, ä som æ, ö som ø, ð som d, þ som th, œ som oe. Hvis den eneste forskel på to ord er at det ene har et fremmed bogstav hvor den andet har det tilsvarende danske bogstav, skal ordet med det almindelige danske bogstav stå først af de to ord.
+Ved alfabetisering ses bort fra accenter. For eksempel alfabetiseres é, è og ë som e, og č og ç som c. Hvis den eneste forskel på to ord er, at det ene skrives med accent, mens den andet ikke gør, skal ordet uden accent stå først af de to ord.Kilde: Retskrivningsordbogen.
+Frem til 1980 skulle v og w derudover alfabetiseres som samme bogstav - idet w behandledes som en variant af v.Fra bolle-å'ets indførsel i 1948 og frem til 1955 var der tvivl om, hvordan det skulle alfabetiseres. Fra 1952 til 1955 var den officielle politik, at det skulle stå først i alfabetet.
+
+
+=== Wikipedia ===
+Programmet som styrer Wikipedia, kan desværre ikke alfabetisere korrekt, når det laver en liste over alle artikler i en bestemt kategori eller laver en alfabetisk liste med alle artikler startende fra et bestemt ord. Der sorteres altid efter ISO 8859-1 (en udvidet variant af ASCII). Dette medfører blandt andet følgende fejl i Wikipedias sortering:
+
+Aa behandles aldrig som å.
+Der skelnes mellem store og små bogstaver. De store bogstaver kommer før de små bogstaver. Således vil Wikipedia placere USA før Uafhængighed.
+Æ, ø, å og alle bogstaver med accenter (både de små og de store) kommer efter det lille z i en tilsyneladende vilkårlig rækkefølge (blandt andre: å, æ, é, ê, ö, ø).Man kan påvirke alfabetiseringen ved at angive en streng, der alfabetiseres efter, fx René Müller-Søndergaard som i {{FD|1916|1995|Myller-Søndergård, Rene}}. Når det ikke er en artikel om en person, kan alfabetiseringen angives med »defaultsort«: {{DEFAULTSORT:Hebraiske alfabet}}, hvorved artiklen »Det hebraiske alfabet« ikke sorteres under D, men under H.
+
+
+=== Biblioteker ===
+Bibliotekerne har en standard for alfabetisering af bibliografiske indførsler i kataloger, bibliografier, bibliografiske databaser mv. En undertiden overset ting er, at man ser bort fra bestemte og ubestemte artikler som en, et, den, det ved alfabetisering af artikler. En anden er, at man alfabetiserer sammensatte efternavne specielt, f.eks. vægtes mellemnavn over -sen navne.
+
+Katalogiseringsregler udarbejdet af Det Danske Katalogregeludvalg
+
+
+== Ortografiske særtegn ==
+Som ortografiske særtegn regnes diakritiske tegn, herunder accenter og omlydstegn, der er tegn knyttet til bogstaver, f.eks. ogonek, i modsætning til tegnsætningstegn (komma, punktum etc.). Nogle særtegn har deres oprindelse i den gotiske skrift, som flere s-former, og f.eks. islandsk og færøsk kender separate bogstaver i deres alfabeter. 
+
+
+== Gotisk skrift ==
+
+I Danmark blev den gotiske skrift officielt afskaffet i 1875 og i Sverige i begyndelsen af samme 
+århundrede. Tyskerne kalder den for die deutsche Schrift, selv om i hvert fald 
+Skandinavien også har benyttet den i århundreder i såvel trykt som håndskreven skrift, og også 
+polske, tjekkiske, litauiske og finske skrifter med gotisk skrift findes. I Tyskland blev gotisk 
+skrift anvendt til efter anden verdenskrig.
+Kært barn har mange navne, siger man; og det er rigtigt. Forskellige skriftsnit får af 
+bogtrykkeren forskellige navne, og der er forskelle, som den almindelige mand slet ikke kan følge 
+med i. Her skelnes kun mellem to hovedformer: gotisk skrift og latinsk skrift.
+Den gotiske skrift stammer tilbage til 1200-tallet og er karakteristisk ved sine kantede linjer 
+og meget varierende stregtykkelser. På dansk er trykskriften ofte kaldt »krøllede bogstaver«. Et 
+andet navn er frakturskrift, og selv om det i bogtrykkerfagsprog er en afart af gotisk skrift 
+opstået i 16. århundrede i Tyskland, så er der ingen forskel i forbindelse med de grafiske 
+detaljer, som er omhandlet i denne lille artikel. På engelsk bruges »blackletters« om trykt 
+gotisk skrift og »German hand« om den håndskrevne.
+På grund af dens dystre udseende og forbindelse til gotisk kultur er den gotiske skrift i moderne tid blevet brugt flere gange i kulturen såsom i black og gothic metal.
+Med »latinsk skrift« henvises til alle de skrifttyper, der i dag er gængse, og som betegnes 
+som »almindelige bogstaver«.
+
+
+== Omlydstegnet ¨ ==
+
+Det er almindeligt kendt, at det tyske omlydstegn, Umlaut, kan erstattes af et efterskrevet e. Hvis man på en skrivemaskine ikke har mulighed for at skrive ä, kan man i stedet skrive ae. I mange år blev tyskerne erindret om denne mulighed, når de fik edb-udskrifter i hænde. Op gennem 70'erne og 80'erne var det almindeligt, at tyske printere kun indeholdt det engelsk/amerikanske tegnsæt, A-Z og a-z (og nogle specialtegn), hvorimod danske printere fik udskiftet tegnene [\]{|} med ÆØÅæøå (i denne rækkefølge). Dette er bemærkelsesværdigt, idet danskerne i øvrigt har været mere 
+tilbøjelige til at tillægge sig engelsk/amerikanske normer end tyskerne.
+Men hvad er forbindelsen mellem e og omlydstegnet ¨? Oprindelsen af omlydstegnet skal findes i, 
+at et gotisk håndskrevet e som hovedbestanddel består af to parallelle streger. Et sådant e skrevet 
+over et bogstav blev snart reduceret til to streger, og når disse blev forkortet, blev det til to 
+prikker.
+Faktisk kan man finde en række eksempler i både gotisk og latinsk skrift, hvor omlyden er angivet 
+ved et regelret e over omlydsvokalen.
+
+
+== I/J ==
+Ligesom med U og V har der i oldtiden ikke været skelnet mellem I og J i romernes efterladte indskrifter på latin, og brugen af j i latinske ord er sjælden, men forekommer.
+I den trykte gotiske skrift skelnes der ikke mellem I og J som store bogstaver, så når man på tryk så et navn som I. C. Iacobsen, kunne man ikke med sikkerhed vide, om det første I stod for I eller J, så man sagde I. C. Jacobsen, selv om han måske hed Jens Christian. Helt op i nutiden har forfatteren Jens Peter Jacobsen været kendt som I. P. Jacobsen, og flere andre eksempler kunne nævnes.
+Kryds- og tværsløsere ved også, at man i krydsord ofte bruger I for både I og J.
+
+
+== ø-/ö-former ==
+
+Efter retskrivningen i 1800-tallet skelnedes der mellem to ø'er i dansk, nemlig ø og ö.
+I ABC'er frem til 1900 står der öm med ö, fordi det er et åbent ø. I hø, sø og tø er der ø, fordi 
+ø skal udtales lukket.
+Hvad gör hunden? Den gør.
+
+
+== Gotiske s-former ==
+
+Et stort S kan have forskelligt udseende afhængig af skriftsnittet. Det er rent typografisk 
+betinget, uden at der er nogen forskel. Men der er to forskellige små s'er. Det ene ligner det 
+almindelige latinske s (til forskel betegnet som »kort s« uden at dette må tillægges nogen 
+fonetisk betydning). Det andet har i ethvert givet skriftsnit et udseende som et f uden tværstreg 
+(betegnet som »langt s«). Der er forskel på anvendelsen i dansk og i tysk.
+På dansk anvendes »kort s«, når det er sidste bogstav i stavelser og ord, og andre steder bruges 
+»langt s«.
+På tysk bruges »kort s« kun som sidste bogstav i et ord. Det er samme regel, som gælder for de to 
+s-former, der findes på græsk.
+Det tyske »dobbelt-s«, ß, kan i dag transskriberes til ss, men tidligere transskriberedes det til 
+sz, hvilket også er oprindelsen, en ligatur af gotisk »langt s« og z. I det tysksprogede Schweiz 
+bruges altid kun ss.
+
+
+== Latinske s-former ==
+
+Almindeligvis kender vi i latinsk skrift kun ét lille s. Det »lange s« med udseende som f uden 
+tværstreg kan imidlertid godt findes. Det nyeste eksempel, jeg kender, er i min 7. udgave af Der 
+Sprach-Brockhaus (Wiesbaden 1967). I håndskreven udgave ser det lange latinske s ligesådan ud som 
+et håndskrevet gotisk h.
+
+
+== U/V ==
+De gamle romere, hvis sprog var latin, skelnede ikke mellem U og V, så i indskrifter indhugget i sten finder man V brugt for både u- og v-lyden, fordi V var lettere at hugge end U. I middelalderens latinske skrifter trænger efterhånden en skelnen mellem u og v igennem nogle steder, men med forskel. I den angelsaksiske verden har man i latinsksprogede skrifter i stor udstrækning brugt u for både u og v, mens vi har været vant til en skelnen mellem u og v undtagen efter g og q, hvor der mest bruges u, selv om det udtales som v, f .eks. i ord som anguis og quis.
+
+
+== Geminationsstreg ==
+
+En streg sat over en konsonant angiver, at tegnet skal fordobles. Gemination betyder fordobling 
+og er sprogligt i familie med det latinske ord gemini = tvillinger. Geminationsstregen er gået af 
+brug, men findes i gamle håndskrifter og til tider også på skilte. Hvis der i ordet samen skrives en vandret streg over m'et, skal det læses som sammen.
+
+
+== Udtale ==
+Udtalen af c var i klassisk latin som k overalt, men i middelalderlatin ændredes udtalen til s, når 'c' stod foran en fortungevokal, og samme udtaleregel gælder i dag i dansk, tysk, fransk, engelsk og en række andre sprog.
+C udtales som s foran en fortungevokal (e, i, y, æ, ø, å), f.eks. celle, citron, cykel, Cæsar, cølibat.
+C udtales som k foran en bagtungevokal (a, o, u), foran de fleste konsonanter og i udlyd, f.eks. Carl, container, curler, clever, crepe og sidste 'c' i choc (men ch udtales som hvislelyd: /ʃok/).
+
+
+== Se også ==
+Alfabeter tilknyttet bestemte sprog:
+
+Græske alfabet
+Hangul, det koreanske alfabet
+Kyrilliske alfabet, Kyrillisk
+Runealfabetet, futhark,
+Glagolitiske alfabet
+Fønikiske alfabet
+Deseret-alfabetet - alternativt fonetisk tilpasset alfabet til det engelske sprog, udviklet omkring 1854Alfabeter til specielle formål:
+
+Det internationale fonetiske alfabet (bruges i f.eks. ordbøger til at beskrive hvordan ordene udtales)
+Morsealfabetet
+NATO's fonetiske alfabet (der sætter "navne" på hvert bogstav, til brug i f.eks. radiosamtaler)Forskellige europæiske sprogs alfabetiseringsregler og mulig implementering på computer: 
+
+Alphabetisierung auf Computer God oversigt over alfabetiseringsdetaljer.
+
+
+== Litteratur ==
+Franz Blatt: Alfabetets historia. Albert Bonniers Forlag, Stockholm 1945.
+
+
+== Noter ==
+
+ Denne artikel bør gennemlæses af en person med fagkendskab for at sikre den faglige korrekthed.

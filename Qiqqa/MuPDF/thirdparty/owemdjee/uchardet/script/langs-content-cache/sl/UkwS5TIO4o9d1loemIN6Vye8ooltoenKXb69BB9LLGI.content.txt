@@ -1,0 +1,162 @@
+revision: 5958573
+title: Elektronika
+url: https://sl.wikipedia.org/wiki/Elektronika
+
+
+---
+
+Elektrónika je področje elektrotehnike, s poudarkom na električnih napravah, s katerimi krmilimo. Te naprave so sestavljene iz gradnikov, ki jim rečemo elektronski elementi: tranzistor, dioda, triak, elektronka, kondenzator, upor, dušilka, ... S povezovanjem elektronskih elementov dobimo elektronska vezja kot so: ojačevalnik, filter, multiplekser, flip flop, logična vrata,... Te naprave se delijo na analogne (nizkofrekvenčne in visokofrekvenčne) in digitalne.
+
+
+== Zgodovina ==
+Na začetku 20. stoletja so odkrili elektronko. Ena od elektronk se imenuje trioda. Bila je prvi elektronski element v zgodovini elektrotehnike, ki je omogočal ojačevanje. S tem je bil položen temelj za radio, televizijo in mnoge druge elektronske naprave. Elektronke so razmeroma energetsko razsipne, velike in kratkega veka. V petdesetih letih 20. stoletja so odkrili tranzistor. To je polprevodniški ojačevalni elektronski element. Tranzistor je v skoraj vseh ozirih boljši od elektronke, zato jo je izpodrinil. Danes lahko množico tranzistorjev združimo v enem ohišju - integrirano vezje ali čip.
+
+
+== Tehnika spajkanja ==
+Spajkanje je tehnika spajanja elektronskih komponent z napravo za spajkanje. Spajkanje poteka z zlitino imenovano cin, ki ima tališče pri 350 °C. Poznamo tako imenovane THT (through hole technology) in SMD (surface mount device) komponente.
+
+
+=== SMD ===
+Za SMD (Surface Mount Device), tudi SMT (Surface Mount) komponente je posebno, da so izjemno majhne. Njih namreč poznamo veliko velikosti, kot so na primer:
+
+Imena so poimenovana po velikosti, čeprav nastane zmeda, ker so nekatera imena SMD komponent v milimetrih druga pa v inčih. Standard je inč. SMD komponente so direktno prispajkane na tiskano ploščo (PCB), kar pomeni, da lahko to delo opravljajo tudi t.i. pick and place naprave.
+
+
+=== THT ===
+THT (Through hole technology) komponente prepoznamo po dolgih kovinskih konicah. Te komponente so navadno večje od SMD komponent, zato so veliko lažje za spajkanje.
+
+
+== Pomembne osebnosti ==
+Nikola Tesla
+Thomas Alva Edison
+
+
+== Napetosti ==
+
+
+=== Standarizirane napetosti ===
+Najbolj uporabljene napetosti ali tudi standarizirane napetosti so:
+
+1.5V - AA, AAA baterije
+3.3V - predvsem mikrokontrolerji (Arduino)
+5V - mikrokontrolerji, USB naprave (telefoni)
+12V - avtomobili, luči...
+24V
+110V AC - standard za vtičnice v Indiji
+220V AC - standard za vtičnice v Evropi
+
+
+=== Napetosti v baterijah ===
+1.5V - AA, AAA, gumbne baterije...
+3V - gumbne baterije
+3.7V - LiPo in Li-ion baterije
+4.5V - ploščata baterija (4.5V baterija)
+6V AC - dinamo
+9V - 9V baterija
+12V - avtomobilska baterija
+
+
+== Multimeter ==
+Multimeter je osnovno orodje vsakega elektronika. Meri lahko razne uporabne lastnosti stvari. Večina jih meri upornost (v ohmih), napetost (v voltih) in moč elektrike (v amperih).
+
+
+== Standardne komponente v elektroniki ==
+
+
+=== Električni upor ===
+Električni upori so pasivne komponente v elektroniki, ki omejujejo moč elektrike (amperi) in s tem posledično tudi napetost (v voltih). Izgubljeno energijo oddajajo v okolje v obliki vročine. Čim večji je upor, tem več toka lahko prenese, a zato je tudi manj učinkovit.
+
+Georg Simon Ohm si je izmislil zakon, ki je v elektroniki eden izmed najosnovnejših - ohmov zakon, ki govori: 
+  
+    
+      
+        R
+        =
+        V
+        
+          /
+        
+        I
+      
+    
+     
+  
+
+
+=== Diode ===
+
+
+==== LED diode ====
+LED diode so diode, ki na določeni napetosti, ki je navadno do 5 voltov oddajajo svetlobo. So zelo varčne in majhne, navadno porabljajo do 2 mA. Navadno imajo daljšo konico, ki pa je vedno pozitivni pol.
+
+
+==== Schottky dioda ====
+Schottky dioda je vrsta diod, ki omogoča hitro preklapljanje, podobno kot tranzistorji. Omogoča zaščito pred narobe obrnjeno polariteto. Uporablja se predvsem kot prej omenjeno zaščito in v transformatorjih iz AC v DC tok.
+
+
+==== Zener dioda ====
+
+Zener dioda je zelo podobna schottky diodi, ta omogoča varčnejše preklapljanje, a zato tudi manjši tok in moč.
+
+
+=== Kondenzator ===
+
+Kondenzatorji so pomemben del in prav tako pasivne komponente. Uporabljajo se v veliki večini vezij, večinoma kot filtri. Shranjujejo le malo električne energije, a pri kratkem stiku naberejo veliko več moči, kot navadne baterije. Energija se meri v F (faradih), posledično pa lahko iz tega izračunamo tudi energijo v J (joulih). Poznamo keramične, elektrolitske in druge vrste kondenzatorjev.
+
+
+=== Induktorji ===
+Induktorji ali tuljave (angleško Inductor ali coil, nemško Induktor) so pasivne komponente. Shranjujejo energijo v obliki magnetnega polja in jo tudi nazaj sproščajo. Uporabljajo se predvsem v transformatorjih, a so na splošno zelo uporaben element. Njihova energija se meri v H (henrijih).
+
+
+=== SOC in Mikrokontrolerji ===
+Na tržišču so razni SOC (System On a Chip) računalniki ali manj zmogljivi mikrokontrolerji.
+
+
+==== Arduino ====
+Arduino je zagotovo najbolj priljubljen mikrokontroler. Programira se ga z Arduino Okoljem za Razvijalce (Arduino IDE), programski jezik pa je prilagojen C.
+
+
+==== Raspberry Pi ====
+Raspberry Pi je najbolj priljubljen SOC (System On a Chip). Poganja prilagojeno različico Ubuntuja, katerega kličejo Raspberry Pi OS, včasih tudi Raspbian. Ima tudi programljive vhode in izhode, ki se lahko programirajo v Pythonu ali C-ju
+
+
+=== Tranzistorji ===
+Tranzistorji so hitra in učinkovita električna stikala, ki navadno preklapljajo DC (dvosmerne) toke. Najbolje zastopani tranzistorji so MOSFET, BJT in IGBT
+
+
+==== MOSFET ====
+MOSFETi so hitra električna stikala za preklapljanje enosmernega toka (DC). So zelo učinkovita. Razlikujemo jih na P-kanalne MOSFETE (P-channel MOSFET) in na N-kanalne MOSFETE (N-channel MOSFET). Razlika med tema različicama je samo, ali preklaplja negativno (ozemljeni) pol (N-channel), ali preklaplja pozitivni tok (P-channel). Prenesejo veliko več toka (v voltih) in veliko več moči (v amperih).
+
+
+==== BJT ====
+BJTji (angleško Bipolar Junction Transistors) so električna stikala za preklapljanje manjšega toka, kot MOSFETI. Zato so tudi varčejši kot MOSFETI.
+
+
+=== Rele ===
+Rele (angleško Relay, nemško das Relais) je komponenta, ki lahko preklaplja AC (dvosmerni tok) napetost s pomočjo enosmernega (DC) signala. Ko je DC tok vključen, tuljava sklene krog med AC vhodom in AC izhodom.
+
+
+=== Motorji ===
+
+Poznamo več vrst elektromotorjev, kot so DC motorji, BLDC motorji, servo motorji in stepper motorji.
+
+
+==== DC motorji ====
+DC motorji so najosnovnejši elektromotorji. Vrtijo se, ko imajo določeno napetost priklopljeno. Če obrneš pola, se bo vrtel v nasprotno smer. Narejeni so iz enega velikega elektromagneta in feromagnetne kovine na ohišju.
+
+
+==== BLDC motorji ====
+BLDC motorji (angleško BrushLess DC motors) so vrsta motorjev, ki imajo 3 priključke, in sicer PWM signal, ozemljitev in napetost. PWM signal se kontrolira s pomočjo t.i. ESC-ja (angleško Electric Speed Controller). Slovijo po svoji hitrosti, ki jo je možno upravljati. Uporabljajo se predvsem v dronih.
+
+
+=== Zasloni ===
+Poznamo mnogo zaslonov, najbolj znani pa so OLED (organic light-emitting diode), AMOLED (active-matrix organic light-emitting diode), LCD (LiquidCrystal Display), TFT (Thin Film Transistor) zasloni.
+
+
+==== LCD ====
+
+LCD zasloni (angleško Liquid Crystal Display) so najosnovnejši zasloni in prvi zasloni, ki so se pojavili na tržišču. Delujejo s pomočjo svetlobe in filtra, ki pomaga prikazovati določeno (vprogramirano) animacijo...
+
+
+== PCB ==
+PCB-ji (angleško Printed Circuit Board) so plošče iz ogljikovih vlaken ali plastike s tanko plastjo bakra na eni ali obeh straneh plošče. Primer PCB-ja so matične plošče v računalnikih. Rečemo jim tudi tiskana vezja ali samo vezja. Najdemo jih v skoraj vseh elektronskih napravah. Postopek izrezovanja plošče se angleško imenuje PCB milling! Ta postopek se lahko izvaja na dva načina, z jedkanjem oz. obdelovanja plošče z jedkimi kemikalijami ali z vgraviranjem z laserskim rezalnikom ali pogosteje CNC-jem.

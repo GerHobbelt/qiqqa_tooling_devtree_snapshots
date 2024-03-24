@@ -1,0 +1,112 @@
+revision: 7543687
+title: Phonetics
+url: https://sk.wikipedia.org/wiki/Medzin%C3%A1rodn%C3%A1_fonetick%C3%A1_abeceda
+
+
+---
+
+Medzinárodná fonetická abeceda (známa aj pod skratkou IPA, z angl. International Phonetic Alphabet) je systém fonetického prepisu (transkripcie) vytvorený jazykovedcami na presné a jednoznačné vyjadrenie každého z veľkého množstva zvukov (tzv. foném), ktoré sa používajú v hovorenej ľudskej reči. Je určená ako medzinárodná norma pre fonemické a fonetické vyjadrenie všetkých hovorených jazykov.
+
+
+== Dejiny ==
+
+
+== Opis ==
+Všeobecným princípom IPA je poskytnúť samostatný symbol pre každý segment reči a vyhýbať sa tak písmenkovým kombináciám (digrafémam), ako napríklad sh a th v anglickej ortografii, a vyhýbať sa nejednoznačnostiam, ako napríklad výslovnosti anglického c.
+
+
+=== Princíp vytvárania ===
+IPA je fonetická abeceda, ktorú MacMahon (1996) nazval pojmom "selektívna". Jej cieľom je poskytovať samostatný symbol pre každý kontrastívny (t. j. fonemický) zvuk vyskytujúci sa v ľudskej reči. Napríklad trepotavá spoluhláska (flap) a klepaná spoluhláska (tap) sú dve rôzne artikulácie, ale keďže sa (zatiaľ) nenašiel žiadny jazyk, ktorý by robil medzi nimi fonemický rozdiel, IPA na ne neposkytuje dva rozdielne symboly. Namiesto toho poskytuje len jeden symbol, ɾ, ktorý pokrýva oba zvuky. Pre nekontrastívne (t. j. fonetické alebo subfonemické) detaily týchto zvukov sa IPA spolieha na diakritiku, ktorá však nie je povinná. Pri vyjadrovaní jazyka pomocou IPA teda existuje určitá úroveň flexibility. 
+
+
+=== Princíp výberu symbolov ===
+Písmená (znaky) pre IPA sú vo všeobecnosti vyberané z latinskej a gréckej abecedy, alebo sú modifikáciami latinských a gréckych písmen. Takisto je zopár znakov IPA odvodených z latinskej interpunkcie, ako napríklad hlasivkový ráz ʔ (pôvodne označovaný apostrofom, ale neskôr nahradený formou "bezbodkového" otáznika, aby mal vizuálny vplyv ďalších spoluhlások), a znak ʕ, ktorý má síce latinskú formu, ale bol inšpirovaný arabským písmenom <ﻉ> `ain. Na druhej strane pôvodné symboly odvodené z latinčiny pre mľaskavé hlásky boli nahradené vhodnejšími ikonickými khoisanskými symbolmi, ako napríklad ǁ.
+Zvukové hodnoty spoluhlások zvolených z latinskej abecedy zodpovedajú používaniu vo francúzštine, a sú tiež blízke spoluhláskam väčšiny ostatných európskych jazykov: [b], [d], [f], [ɡ], [k], [l], [m], [n], [p], (neznelé) [s], [t], [v], [z]. Anglické hodnoty sa používajú pre [h] a [w].
+Samohlásky z latinskej abecedy ([a], [e], [i], [o], [u]) zodpovedajú samohláskam španielčiny a sú podobné talianskym samohláskam. [i] je ako samohláska v slove šíp, [u] ako v slove júl atď.
+Ostatné symboly z latinskej abecedy, [c], [j], [q], [r], [x], a [y], zodpovedajú zvukom, ktoré tieto písmená predstavujú v rozličných iných jazykoch. [j] má slovanskú a germánsku hodnotu <j>, ako napríklad spoluhláska j v slove ja;
+[y] má škandinávsku a staro-anglickú hodnotu: fínske y, nemecké y alebo ü, francúzske u, holandské u.
+Písmená s tou istou konkrétnou modifikáciou niekedy zodpovedajú podobnému typu zvuku. Napríklad všetky retroflexívne spoluhlásky majú ten istý symbol ako príslušná predo-ďasnová spoluhláska, avšak sú pozmenené pridaním háčika (orientovaného vpravo) na spodnú časť daného písmena. Hoci existuje nejaká korešpondencia medzi modifikovanými znakmi, vo všeobecnosti symboly IPA nemajú systematický charakteristický vzťah medzi svojim tvarom a artikuláciou. Napríklad medzi malými písmenami a im prislúchajúcimi veľkými písmenami nie je konzistentný vzťah, a takisto nie všetky perné spoluhlásky spája spoločný dizajn.
+K písmenám IPA je možné pridávať i diakritické znaky na vyjadrenie modifikovaných fonetických hodnôt alebo sekundárnych artikulácií. Existujú ešte aj špeciálne symboly pre suprasegmentálne znaky, akými sú prízvuk a tón.
+
+
+=== Typy fonetického prepisu ===
+Medzinárodné fonetické združenie odporúča, aby bol fonetický prepis (tzv. transkripcia) uzatvorený v hranatých zátvorkách "[ ]". Zápis, ktorý špecificky zaznamenáva iba fonologické kontrasty, môže byť namiesto toho uzatvorený v lomkách "/ /". Lepšie je použiť hranaté zátvorky, keďže zápis v lomkách teoreticky tvrdí, že každý symbol vo vnútri je fonemicky kontrastívny pre daný zapisovaný jazyk. 
+Fonetické transkripcie sa snažia objektívne zachytiť skutočnú výslovnosť slova, zatiaľ čo fonemické transkripcie sú závislé od modelu. Napríklad, v diele Zvukové vzory v angličtine, Noam Chomsky a Morris Halle zapísali anglické slovo night fonemicky ako /nixt/. V tomto modely sa fonéma /x/ nikdy nerealizuje ako [x], ale ukazuje svoju prítomnosť "predĺžením" predchádzajúcej samohlásky. Predchádzajúca samohláska je v tomto prípade fonéma /i/, ktorá sa vyslovuje [aj] keď je "dlhá". Takže fonemické /nixt/ je ekvivalentné fonetickému [naɪt], ale len vtedy, ak zdieľate presvedčenie, že historické zvuky ako napríklad gh v slove night môžu v slove zostať dlho po tom, čo sa prestali vyslovovať, alebo že fonéma môže existovať v jazyku bez toho, aby niekedy bola priamo vyjadrená. (Toto neskoršie Chomsky & Halle zamietli.) 
+U fonetických transkripcií je flexibilita v tom, ako blízko (presne) môžu byť zvuky zapísané. Transkripcia, ktorá dáva len základnú predstavu zvukov jazyka v najširšom zmysle sa nazýva široká transkripcia; v niektorých prípadoch môže byť ekvivalentná s fonemickou transkripciou (akurát bez teoretických tvrdení). Blízka transkripcia, označujúca precízne detaily daných zvukov, sa nazýva úzka transkripcia. Nejedná sa o binárne voľby ale konce kontinua, medzi ktorými je mnoho možností. Všetky sú uzatvorené v hranatých zátvorkách. 
+Napríklad, v niektorých dialektoch angličtiny slovo pretzel by v úzkej transkripcii bolo [ˈpʰɹ̥ʷɛʔt.sɫ̩], čo vyjadruje viacero fonetických charakteristík, ktoré nemusia byť evidentné ani rodenému Angličanovi. Príklad širokej transkripcie je [ˈpʰɹɛt.sɫ̩], ktorá vyjadruje len niektoré ľahšie počuteľné charakteristiky. Ešte širšia transkripcia by bola [ˈpɹɛtsl]. Tu každý symbol reprezentuje jednoznačný rečový zvuk, avšak bez akýchkoľvek tvrdení čo sa týka ich postaveniu v danom jazyku. 
+Existuje tiež viacero možností ako toto slovo zapísať fonemicky, ale tu sú vo všeobecnosti rozdiely nie v precíznosti, ale v analýze. Napríklad, pretzel by mohol byť /ˈprɛtsl/ alebo /ˈpretsəl/. Špeciálny symbol pre anglické r sa nepoužíva, pretože nie je zmysluplné ho rozlišovať od točeného r. Rozdiely v písmene e odráža tvrdenia týkajúce sa toho, čo je základný rozdiel medzi samohláskami v slovách pretzel a pray; v literatúre je viacero myšlienok čo by to mohlo byť. Druhá transkripcia tvrdí, že v danom slove sú dve samohlásky, aj keď sa obe naraz nedajú počuť, naproti tomu prvá transkripcia tvrdí, že samohláska je v danom slove len jedna. 
+Avšak, fonemické transkripcie môžu tiež byť široké alebo úzke, alebo možno by ich bolo lepšie nazývať abstraktné vs. konkrétne. Môžu ukazovať relatívne veľa fonetických detailov, zvyčajne o najbežnejších alofónoch danej fonémy, ale keďže sú to abstraktné symboly, nemusia priamo vôbec odrážať nejaký zvuk. Fonemické symboly sa často budú voliť kvôli tomu, aby sa v maximálnej možnej miere vyhlo použitiu diakritiky, v rámci stratégie 'jeden zvuk, jeden symbol', alebo dokonca aby sa obmedzilo iba na použitie symbolov ASCII na typickej klávesnici. Napríklad, anglické slovo church sa môže prepísať ako /tʃɚtʃ/, čo je veľmi dobré priblíženie skutočnej výslovnosti, alebo abstraktnejšie ako /crc/ (tri fonémy, tri symboly), čo je ľahšie napísať na počítači. Fonemické symboly by mali byť vždy vysvetlené, najmä vtedy, keď sú tak vzdialené od skutočnej výslovnosti ako /crc/. 
+Zriedkavo môže byť transkripcia uzatvorená vo vertikálnych rúrkach ("| |"). To už presahuje fonológiu a zasahuje do morfologickej analýzy. Napríklad, anglické slová pets a beds by sa mohli foneticky prepísať ako [pʰɛʔts] a [b̥ɛdz] (v dosť úzkej transkripcii), a fonemicky ako /pets/ a /bedz/. Nakoľko /s/ a /z/ sú dve rôzne fonémy v angličtine (na rozdiel od španielčiny, napríklad), vo fonemickej analýze majú oddelené symboly. Avšak okrem uvedeného tieto dve slová predstavujú tú istú koncovku množného čísla. Tento fakt sa môže naznačiť zápisom medzi vertikálnymi rúrkami. Pri názore, že v podstate koncovka množného čísla v angličtine je s, čo by naznačoval anglický pravopis, dané slová sa môžu zapísať |pets| a |beds|. Ak, čo by naznačovala väčšina jazykovedcov, je to v podstate z, dané slová by sa mohli zapísať |petz| a |bedz|.
+Aby sa predišlo zmätku so symbolmi IPA, očividne je vhodné špecifikovať, kedy sa používa národná ortografia, aby napríklad anglické slovo jet sa nečítalo ako "yet". To sa urobí pomocou zložených zátvoriek: 〈jet〉. Je tiež bežné takéto slová uvádzať šikmým písmom, ale zložené zátvorky konkrétne naznačujú, že sú v ortografii pôvodného jazyka, a nie v anglickej transliterácii.
+Rozšírená IPA pre rečovú patológiu pridala ďalšie zátvorkové zápisy. Zátvorky sa používajú na vyjadrenie reči úst (tichej artikulácie), ako napríklad v (ʃːː) na zachovanie ticha.
+
+
+== Spoluhlásky ==
+
+
+=== Pulmonické spoluhlásky s jediným miestom artikulácie ===
+Tabuľka pulmonických spoluhlások (t. j. tvorených pomocou prúdu vzduchu vznikajúceho v pľúcach), ktorá obsahuje takmer všetky spoluhlásky, je usporiadaná do riadkov podľa spôsobu artikulácie, a do stĺpcov podľa miesta artikulácie.
+
+Poznámky:
+
+Hviezdičky (*) označujú evidované zvuky, ktoré zatiaľ nemajú oficiálne symboly IPA.
+V riadkoch, kde sa niektoré symboly objavujú v dvojiciach, symbol vpravo predstavuje znelú spoluhlásku. Avšak [ʔ] nemôže byť znelé. V ostatných riadkoch predstavuje daný symbol znelú spoluhlásku.
+Zatienené oblasti predstavujú oblasti artikulácie, ktoré sa považujú za nemožné.
+Symboly [ʁ, ʕ, ʢ] predstavujú buď znelé trené alebo kĺzavé spoluhlásky.
+Trené spoluhlásky [ʃ ʒ], [ɕ ʑ], a [ʂ ʐ] sa primárne líšia skôr tvarom jazyka než jeho polohou.
+Nie je (dnes) známe, že by v nejakom jazyku existovala ako fonéma perno-zubná nosová spoluhláska [ɱ].
+
+
+== Samohlásky ==
+Tabuľka samohlások je usporiadaná do riadkov podľa polohy jazyka vo vertikálnom smere, a do stĺpcov podľa polohy jazyka v horizontálnom smere.
+
+Poznámky:
+
+V riadkoch, kde sa niektoré symboly objavujú v dvojiciach, symbol vpravo predstavuje okrúhlu samohlásku, akou je [ʊ] (aspoň prototypicky). Všetky ostatné samohlásky sú neokrúhle.
+[ɶ] nie je potvrdenou odlišnou fonémou v žiadnom jazyku.
+[a] je oficiálne predná samohláska, ale medzi prednými otvorenými a strednými otvorenými samohláskami nie je výrazný rozdiel, a fonéma [a] sa často používa pre otvorenú strednú samohlásku.
+
+
+== Technická poznámka ==
+Mnohé symboly IPA nie sú obsiahnuté vo fonte Times New Roman, ktorý je prednastaveným fontom pre skripty Latin v prehliadači Internet Explorer pre Windows. Na správne prezeranie symobolov IPA v Internet Exploreri si musíte nastaviť font svojho prehliadača na taký typ písma, ktoré obsahuje rozšírenia IPA, ako napríklad Lucida Sans Unicode (dodáva sa s Windows XP); alebo Gentium, Charis (SIL), a Doulos (SIL), ktoré sú voľne dostupné (pozrite vyššie-uvedené linky); alebo Arial Unicode MS, ktorý sa dodáva s Microsoft Office. Poprípade by sa mohol štýlový hárok pokúsiť použiť špecifikácie unicodovej škály na zistenie miest, kde Times nemá glyfy pre IPA, Hawajský ‘okina (hlasivkový ráz), atď. a tým (snáď) prinútiť prehliadač, aby ďalej skontroloval zoznam fontov.
+Na tejto stránke sme prinútili prehliadač použiť taký font, aby sa IPA symboly zobrazili správne, ale nie je to zatiaľ urobené pre všetky stránky obsahujúce IPA. To sa týka aj ostatných stránok používajúcich špeciálne symboly. Majte to na pamäti ak uvidíte chybné symboly ako „蚟“ v článkoch.
+Špeciálne symboly by sa mali správne zobraziť bez ďalšej konfigurácie v prehliadačoch Mozilla Firefox, Konqueror, Opera, Safari a vo väčšine moderných prehliadačov.
+
+
+== Referencie ==
+Albright, Robert W. (1958). The International Phonetic Alphabet: Its background and development. International journal of American linguistics (Vol. 24, No. 1, Part 3); Indiana University research center in anthropology, folklore, and linguistics, publ. 7. Baltimore. (Doctoral dissertation, Stanford University, 1953).
+Ball, Martin J.; Esling, John H.; & Dickson, B. Craig. (1995). The VoQS system for the transcription of voice quality. Journal of the International Phonetic Alphabet, 25 (2), 71-80.
+Canepari, Luciano. (2005a). „A Handbook of Phonetics: ‹Natural› Phonetics.“ München: Lincom Europa, pp. 518. ISBN 3-89586-480-3 (hb).
+Canepari, Luciano. (2005b) „A Handbook of Pronunciation: English, Italian, French, German, Spanish, Portuguese, Russian, Arabic, Hindi, Chinese, Japanese, Esperanto.“ München: Lincom Europa, pp. 436. ISBN 3-89586-481-1 (hb).
+Duckworth, M.; Allen, G.; Hardcastle, W.; & Ball, M. J. (1990). Extensions to the International Phonetic Alphabet for the transcription of atypical speech. Clinical Linguistics and Phonetics, 4, 273-280.
+Ellis, Alexander J. (1869-1889). On early English pronunciation (Parts 1 & 5). London: Philological Society by Asher & Co.; London: Trübner & Co.
+Hill, Kenneth C. (1988). [Review of Phonetic symbol guide by G. K. Pullum & W. Ladusaw]. Language, 64 (1), 143-144.
+Hultzen, Lee S. (1958). [Review of The International Phonetic Alphabet: Its backgrounds and development by R. W. Albright]. Language, 34 (3), 438-442.
+International Phonetic Association. (1949). The principles of the International Phonetic Association, being a description of the International Phonetic Alphabet and the manner of using it, illustrated by texts in 51 languages. London: University College, Department of Phonetics.
+International Phonetic Association. (1989). Report on the 1989 Kiel convention. Journal of the International Phonetic Association, 19 (2), 67-80.
+International Phonetic Association. (1999). Handbook of the International Phonetic Association: A guide to the use of the International Phonetic Alphabet. Cambridge: Cambridge University Press. ISBN 0-521-65236-7 (hb); ISBN 0-521-63751-1 (pb).
+Jespersen, Otto. (1889). The articulations of speech sounds represented by means of analphabetic symbols. Marburg: Elwert.
+Jones, Daniel. (1989). English pronouncing dictionary (14 ed.). London: Dent.
+Kelly, John. (1981). The 1847 alphabet: An episode of phonotypy. In R. E. Asher & E. J. A. Henderson (Eds.), Towards a history of phonetics. Edinburgh: Edinburgh University Press.
+Kemp, J. Alan. (1994). Phonetic transcription: History. In R. E. Asher & J. M. Y. Simpson (Eds.), The encyclopedia of language and linguistics (Vol. 6, pp. 3040-3051). Oxford: Pergamon.
+Ladefoged, Peter. (1990). The revised International Phonetic Alphabet. Language, 66 (3), 550-552.
+Ladefoged, Peter; & Halle, Morris. (1988). Some major features of the International Phonetic Alphabet. Language, 64 (3), 577-582.
+MacMahon, Michael K. C. (1996). Phonetic notation. In P. T. Daniels & W. Bright (Ed.), The world's writing systems (pp. 821-846). New York: Oxford University Press. ISBN 0-19-507993-0.
+Passy, Paul. (1888). Our revised alphabet. The Phonetic Teacher, 57-60.
+Pike, Kenneth L. (1943). Phonetics: A critical analysis of phonetic theory and a technic for the practical description of sounds. Ann Arbor: University of Michigan Press.
+Pullum, Geoffrey K.; & Laduslaw, William A. (1986). Phonetic symbol guide. Chicago: University of Chicago Press. ISBN 0-226-68532-2.
+Sweet, Henry. (1880-1881). Sound notation. Transactions of the Philological Society, 177-235.
+Sweet, Henry. (1971). The indispensable foundation: A selection from the writings of Henry Sweet. Henderson, Eugénie J. A. (Ed.). Language and language learning 28. London: Oxford University Press.
+Wells, John C. (1987). Computer-coded phonetic transcription. Journal of the International Phonetic Association, 17, 94-114.
+
+
+== Pozri aj ==
+Medzinárodná fonetická abeceda pre anglický jazyk
+Tabuľka IPA pre anglický jazyk
+Medzinárodná fonetická abeceda pre slovenský jazyk
+Tabuľka IPA pre slovenský jazyk.
+
+
+== Iné projekty ==
+
+ Commons ponúka multimediálne súbory na tému Medzinárodná fonetická abeceda

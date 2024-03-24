@@ -1,0 +1,99 @@
+revision: 6121915
+title: Teraviknanolitograafia
+url: https://et.wikipedia.org/wiki/Teraviknanolitograafia
+
+
+---
+
+Teraviknanolitograafia (Dip pen nanolithography, DPN) on skaneeriva kiire nanolitograafia meetod, mille puhul kasutatakse aatomijõumikroskoobi (AFM) teravikku, et sadestada mustreid erinevate materjalide pinnale. Mustri "kirjutamiseks" või "loomiseks" kasutatakse spetsiaalset molekulaarset "tinti". Levinud näide selle tehnika kohta on alkaantiolaadi sadestamine kulla pinnale. See meetod võimaldab luua pinnastruktuure mõõtmetega alla 100 nanomeetri. DPN on tindikirja nanotehnoloogia analoog, mille korral aatomijõumikroskoobi teravikku võib vaadelda kui "sulge", mille pind on kaetud keemilise seguga, mis käitub kui "tint", ja "paberi" rollis on materjal, millele "kirjutatakse".DPN võimaldab mitmekülgset otsest nanoskaalas materjali sadestamist alusele. On suudetud luua massiivseid paralleelselt kirjutavaid kahemõõtmelisi 55 000 teravikust koosnevaid massiive. DPN leiab rakendust keemias, materjaliteaduses ja nanotehnoloogias.
+
+
+== Ajalugu ==
+Kontrollimatut molekulaarse "tindi" kandumist kaetud AFM-i teravikult alusele märkasid esimesena Jaschke ja Butt 1995. aastal, aga ekslikult järeldati, et stabiilsete alkaantiolaadi nanostruktuuride moodustamine kullast alusele ei ole võimalik. Chad Mirkini juhitud töörühm Northwesterni Ülikoolist hakkas nähtust uurima ja leiti, et õigete tingimuste korral on võimalik molekule sadestada erinevast materjalist pindadele, moodustades stabiilseid suure lahutusvõimega ühe molekuli paksusi kihte. Väljatöötatud litograafiameetodile anti nimeks teraviknanolitograafia (Dip pen nanolithography, DPN). Selle meetodi patendid on endiselt Mirkini ja tema kolleegide nimel, lisaks on tehnoloogia laienenud vedelikust "tintidele". Viimase puhul on oluline meeles pidada, et vedelike jaoks on sadestamise meetod väga erinev võrreldes molekulaarsete "tintidega".
+
+
+== Sadestatavad materjalid ==
+
+
+=== Molekulaartindid ===
+Molekulaartindid koosnevad tavaliselt väikestest molekulidest, mis on sadestatud teraviku pinnale ja mis difundeeruvad alusele läbi veemeniski. Teraviku katmine molekulidega käib aursadestusmeetodil või teraviku otsa kastmisel lahjendatud molekulaarse tindi lahusesse. Viimasel juhul tuleb lahusti teravikult enne alusele sadestamist eemaldada. Molekulaartindi sadestamise kiirus sõltub molekulide difusiooni kiirusest, mis on iga molekuli jaoks erinev. Sadestatud kihi paksus ja laius sõltuvad veemeniski mõõtmetest, mis on määratud keskkonna niiskusega (eeldades, et teraviku tipu kõverusraadius on palju väiksem meniski mõõtmetest), ja ajast, kui kaua teravikku ühe koha peal hoitakse (millisekund kuni sekundi suurusjärk).Meetodile omased tunnused:
+
+sadestamine toimub veemeniski vahendusel (leidub erandeid);
+lahutusvõime 50–200 nanomeetrit;
+sadestamine ainult ühelt teravikult;
+iga konkreetne molekulaartint on limiteeritud teatud tüüpi alusega.
+
+
+==== Näited ====
+Alkaantioolide sadestamine kullast alusele
+Tahkes faasis silaani sadestamine klaasile või ränile
+
+
+=== Vedeliktindid ===
+
+Vedeliktintideks loetakse kõik materjalid, mis on sadestamise protsessis vedelas olekus. Vedeliku sadestamise omadused on määratud vastasmõjude vedeliku ja teraviku, vedeliku ja aluse vahel ning ka vedeliku viskoossuse poolt. Need interaktsioonid seavad sadestatavate detailide mõõtmetele piiriks umbes ühe mikromeetri olenevalt vedeliku märgumisnurgast. Suurema viskoossusega vedelikud on eelistatud, sest nende puhul on võimalik saavutada parem lahutus. Erinevalt molekulaartintidest on võimalik läbi viia väga keerukaid sadestamisi, kasutades selleks kandevedelikku. Näiteks viskoosse puhvri abil on võimalik sadestada erinevaid proteiine samaaegselt.
+Meetodile omased tunnused:
+
+lahutusvõime 1–10 mikromeetrit;
+võimalik sadestada paralleelselt tuhandetelt teravikelt korraga;
+tindi ja aluse materjalide valik ei ole nii piiratud;
+suure viskoossusega materjalide otsene sadestamine.
+
+
+==== Näited ====
+Proteiinid, peptiidid ja DNA
+Hüdrogeelid
+Sool-geelid
+Juhtivad tindid
+Lipiidid
+Vedelas faasis silaani sadestamine klaasile või ränile
+
+
+== DPN-i omadused ==
+
+DPN on otsese kirjutamise meetod, seda saab kasutada nii ülalt-alla kui ka alt-üles litograafilise vahendina. Ülalt-alla meetodi puhul kasutatakse teravikku, et otseselt lõigata või graveerida alust. Sellele järgneb söövitamine ja sadestamine. Alt-üles tehnoloogia puhul sadestatakse materjal teravikult otse alusele. Oluline DPN omadus on veel sõltumatus teravikule mõjuvast jõust. Kõigi tindi ja aluste kombinatsiooni korral jäävad sadestatava kihi mõõtmed samaks, ükskõik kui tugevasti teravikku vastu alust surutakse.
+
+
+==== Eelised ====
+Võimeline otse printima nano- ja mikromeeter suurusjärgus alustele kõrge lahutusega detaile
+Võimalik fotomaskita luua objekte mõõtmetega alates 50 nanomeetrist kuni 10 mikromeetrini
+Biosobiv
+Võimalik paralleelne sadestamine
+
+
+== Rakendused ==
+Määratlemaks head DPN rakendust tuleb aru saada, mida suudab teraviknanolitograafia sellist, mida teised meetodid ei suuda. Otsesed kirjutusmeetodid nagu kontaktlitograafia on võimelised looma mustreid erinevatest bioloogilistest materjalidest, kuid ei ulatu rakusiseste detailide lahutuseni. Mitmed kõrglahutusvõimelised litograafiameetodid suudavad luua detaile mõõtmetega alla mikromeetri, kuid need on kallid ja ei ole ette nähtud biomolekulide sadestamiseks ja rakukultuuuridega töötamiseks.
+
+
+=== Tööstluslikud rakendused ===
+
+Biosensorite funktsionaliseerimine – võimalus katta üksikuid biosensoreid tundlike domeenidega
+Nanoskaalas sensorite tootmine – väiksed suure võimekusega detektorid
+Plasmoonika ja metamaterjalid
+
+
+=== Rakutehnoloogia ===
+DPN on kujunemas võimsaks uurimisvahendiks rakkude manipuleerimisel rakusisesel lahutusvõimel.
+Tüvirakkude diferentseerimine
+Rakusisene ravimite transport
+Rakkude sorteerimine
+Rakkude adhesioon
+
+
+== Termiline DPN ==
+Sadestamist teostatakse ka kuumutatud teravikuga, seda protsessi kutsutakse termiliseks teraviknanolitograafiaks (thermal dip pen lithography, tDPL). Seda kasutatakse pooljuht, magnetiliste, metalliliste ja optiliselt aktiivsete nanoosakeste sadestamiseks ainele. Osakesi hoitakse polümetüülmetakrülaadis ehk pleksiklaasis või mõnes sarnases polümeermaatriksis ja kuumutatakse teraviku otsaga, kuni nad hakkavad voolama. Teravik toimib just nagu nanopliiats, millega saab joonistada ettemääratud struktuure. Olenevalt nanoosakeste suurusest on saavutatud lahutus 78–400 nanomeetrit. Polümeermaatriksi eemaldamiseks saab kasutada O2 plasmat ja sel viisil on suudetud, kasutades raudoksiidi nanoosakesi, vähendada lahutusvõime 10 nanomeetrini.Termilise DPN-i suureks eeliseks on väga kõrge lahutusvõime, lisaks on võimalik sadestada erinevat tüüpi nanoosakesi ilma, et oleks vaja ette valmistada spetsiaalseid lahuseid. Kuid meetodil esineb ka piiranguid. Esiteks ei saa nanoosakesed olla väga suured – pleksiklaasi puhul umbes 6 nanomeetrit. Teiseks nanoosakeste suuruse kasvades tõuseb ka viskoossus, mille tõttu langeb kogu protsessi kiirus. Näiteks puhta polümeeri sadestamisel on võimalik saavutada kiirus 200 μm/s, kuid nanoosakeste lisamine aeglustab selle kiiruseni 2 μm/s.
+
+
+== Levinud väärarusaamad ==
+
+
+=== Võrdlus teiste meetoditega ===
+DPN-i kritiseeritakse enim just sadestamise kiiruse pärast. Põhjus selleks peitub rohkem asjaolus, kuidas teda teiste meetoditega võrreldakse, mitte mõnes DPN-le omases nõrkuses.
+Võttes võrdluseks pehme litograafia (microcontact printing, μCP), mis on odav mikro- ja nanoskaalas trükkimise meetod, siis on kerge mõista, miks DPN-i võrreldakse μCP-ga. Probleem seisneb selles, et võrdluse aluseks võetakse rakendused, mis sobivad väga hästi μCP-le. Pehme litograafia suudab kanda ühte materjali suurele pinnale kindlat mustrit sammhaaval tembeldades. Sarnaselt kannab fotolitograafia mustri suurele alusele ühe särituse jooksul. Sellise võrdluse puhul on DPN muidugi aeglane. DPN on otsene fotomaskita sadestamise meetod, millega saab luua erinevaid struktuure erineva suuruse, kuju ja lahutusega ning seda kõike ühele alusele. Pehme litograafia puhul ei oleks rahaliselt ja ajaliselt mõistlik iga erineva detaili jaoks valmistada uut templit.
+
+
+=== Seos aatomijõumikroskoopiaga ===
+Teraviknanolitograafia arenes otse aatomijõumikroskoopiast. Seetõttu ei ole üllatav, et levib arusaam nagu suudaks iga kommertslik aatomijõumikroskoop (AFM) teha sama, mida DPN. Tegelikult ei vaja DPN töötamiseks AFM-i ja AFM-l ei ole tingimata DPN-i võimekusi. Täpselt samasugune analoogia on skaneeriv elektronmikroskoobi (SEM) ja elektronkiirlitograafiaga. Viimane arenes välja esimesest ja mõlemad kasutavad fokuseeritud elektronide voogu, kuid mõeldud on nad täitma erinevaid ülesandeid.
+
+
+== Viited ==

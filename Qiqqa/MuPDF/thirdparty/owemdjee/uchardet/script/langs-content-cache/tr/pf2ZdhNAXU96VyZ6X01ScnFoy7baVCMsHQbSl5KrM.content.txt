@@ -1,0 +1,67 @@
+revision: 28333142
+title: Astroviridae
+url: https://tr.wikipedia.org/wiki/Baltimor_s%C4%B1n%C4%B1fland%C4%B1rmas%C4%B1
+
+
+---
+
+Baltimor sınıflandırması, David Baltimore tarafından geliştirilmiştir. Virüs ailelerini genom türlerine ve replikasyon yöntemlerine bağlı olarak gruplara bölen bir virüs sınıflandırma sistemidir.
+
+
+== Sınıflandırma ==
+Virüsleri genom yapılarına göre sınıflandırmak, belli kategorilerde olanlar arasında daha ileri araştırmalar yapma konusunda bazı kolaylıklar sağlamaktadırlar . Bu gruplar aşağıdaki gibidir:
+
+
+=== Grup I: Çift iplikçikli DNA virüsleri ===
+Bu gruptaki virüslerin replike olabilmeleri için konak hücre çekirdeğine taşınmaları gerekir. Ayrıca bu virüsler genomlarını replike edebilmek için konak polimerazına gereksinim duyarlar, bundan dolayı hücre döngüsüne oldukça bağımlıdırlar. Virüs enfeksiyonunun ve progeni virüslerinin oluşumu hücrenin çoğalabilmesini gerektirir, hücre polimerazının çoğalma sırasında olduğu gibi  aktif olması gereklidir. Virüs hücrenin zorla bölünmesine neden olabilir, bu durum hücrenin dönüşümüne ve bu nedenle kansere yol açabilir. Herpesvirüsler, Adenovirüsler ve Papovavirüsler kanser oluşturan virüslere örnektir.
+Poxvirüsler replike olabimek için hücre çekirdeğine taşınmaya gereksinim duymazlar: Poksvirüs ailesi çiçek hastalığı virüsünü de barındıran ve omurgalıları enfekte eden yüksek patojenik bir virüs ailesidir.
+mRNA, konak hücre transkriptaz enzimleri aracılığıyla viral DNA'dan normal yolla yazılır, mRNA'nın iki tipi vardır:
+1) erken mRNA, viral DNA sentezinden önce yazılır ve 2) geç mRNA, progeni DNA tarafından yazılır.
+
+
+=== Grup II: Tek iplikçikli DNA virüsleri ===
+Anellovirüsler, Sirkovirüsler ve Parvovirüsler (omurgalıları enfekte eden), Geminivirüsler ve Nanovirüsler (bitkileri enfekte eden) ve Mikrovirüsler (Prokaryotları enfekte eden) gibi virüsler bu kategoridedirler. Çoğu dairesel genoma sahiptirler (bunun bilinen tek istisnası parvovirüslerdir). Ökaryotları enfekte edenleri çoğunlukla dönen çember mekanizması ile ve hücre çekirdeğinde replike olurlar.
+
+
+=== Grup III: Çift iplikçikli RNA virüsleri ===
+Çoğu RNA virüsü gibi cytoplasm, replike olabilmek için konak hücre polimerazına DNA virüsleri kadar ihtiyaç duymazlar. Replikasyon monosistroniktir ve segmentli genomlar özgünlük içerir, bunun anlamı çok karmaşık translasyon sergileyen diğer virüslerin aksine her gen bir protein kodlar.
+
+
+=== Grup IV ve V: Tek iplikçikli RNA virüsleri ===
+Tek iplikçikli RNA virüsleri, Baltimor sınıflandırmasının IV. ya da  V. sınıfında yer alırlar. RNA'larının yönelimine göre negatif ya da pozitif polariteli olarak sınıflandırılırlar. Replikasyonları sitoplazma veya çekirdekte olabilir. Sınıf IV ve V deki tiRNA virüslerinin replikasyonları DNA virüslerindeki kadar hücre döngüsüne bağımlı değildir.
+
+
+==== Grup IV: Pozitif polariteli tek iplikçikli RNA virüsleri ====
+Genomlarını mRNA gibi kullanabilen virüslere pozitif polariteli ya da pozitif yönelimli virüsler denir.
+Bu grupta Astroviridae, Caliciviridae, Coronaviridae, Flaviviridae, Picornaviridae, Arteriviridae veTogaviridae gibi virüs aileleri bulunmaktadır.
+
+
+==== Grup V: Negatif polariteli tek iplikçikli RNA virüsleri ====
+Genomlarını mRNA olarak kullanamayan virüslere negatif polariteli ya da negatif yönelimli virüsler denir. Bu virüsler protein sentezi yapabilmek için genomlarının pozitif iplikçiğini sentezletmek zorundadırlar.
+Bu grupta Arenaviridae, Orthomyxoviridae, Paramyxoviridae, Bunyaviridae, Filoviridae ve Rhabdoviridae (kuduz virüsünü de içerir) gibi virüs aileleri bulunmaktadır.
+
+
+=== Grup VI: DNA aracılı replike olan pozitif polariteli tek iplikçikli RNA virüsleri ===
+Bu virüs sınıfında çok iyi çalışılmış retrovirüs ailesi vardır. Bu virüslerde replikasyon sırasında ters transkriptaz enzimi aracılığı ile RNA'nın pozitif iplikçiğinden bir DNA sentezlenir.Protein şablonları için RNA kullanmak yerine integraz kullanarak konak DNA'sına eklenen DNA kullanırlar kullanırlar. Replikasyon konak hücrenin polimerazı yardımıyla gerçekleştirilir.
+
+
+=== Grup VII: Tek iplikçikli RNA aracılı replike olan çift iplikçikli DNA virüsleri ===
+Bunlar virüslerin küçük bir grubudur, Hepatit B virüsü bu gruptadır, bu virüs kısmi çift iplikçikli genoma sahiptir, bu sonradan kovalent olarak kapalı çembersel çift iplikli DNA (cccDNA) ile tamamlanarak viral mRNA ve subgenomik RNA üretiminde şablon olarak kullanılır. Pregenomik RNA, DNA genomu üretiminde viral ters transkriptaz için bir şablon olarak hizmet verir.
+
+
+== Ayrıca bakınız ==
+Virüsler
+UAVTK
+
+
+== Kaynakça ==
+
+"Virus Taxonomy Portal." (Website.) Viral Bioinformatics Resource Center & Viral Bioinformatics - Canada. Retrieved on 2007-09-27.
+
+
+== Dış bağlantılar ==
+Grupların aileleri - Baltimor metodu30 Mart 2013 tarihinde Wayback Machine sitesinde arşivlendi.
+UAVTK Virüs Veri Tabanı13 Mart 2010 tarihinde Wayback Machine sitesinde arşivlendi.
+Genbank veri tabanı sınıflandırma portali9 Mart 2017 tarihinde Wayback Machine sitesinde arşivlendi.
+ViralZone21 Haziran 2011 tarihinde Wayback Machine sitesinde arşivlendi.
+Baltimor sistemi - Viroloji Bloğu27 Ağustos 2016 tarihinde Wayback Machine sitesinde arşivlendi.

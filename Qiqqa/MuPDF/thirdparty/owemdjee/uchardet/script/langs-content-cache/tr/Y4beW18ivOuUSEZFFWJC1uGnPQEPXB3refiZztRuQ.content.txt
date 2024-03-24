@@ -1,0 +1,70 @@
+revision: 29881275
+title: Apple Developer Tools
+url: https://tr.wikipedia.org/wiki/Swift_(programlama_dili)
+
+
+---
+
+Swift, Apple tarafından iOS ve macOS platformlarına iOS ve Mac uygulamaları geliştirmek için oluşturulan, derlenerek çalışan güçlü ve kullanımı kolay, nesne yönelimli bir programlama dili.
+İlk olarak WWDC 2014 konferansında duyurulmuştur. Swift Apple'ın Cocoa ve Cocoa Touch geliştirme çatıları ve Objective-C ile yazılmış çoğu Apple ürünüyle beraber çalışabilecek şekilde tasarlanmıştır.
+Swift, TIOBE25 Şubat 2018 tarihinde Wayback Machine sitesinde arşivlendi. indeksinin Mart 2017 verilerine göre dünyada en çok kullanılan 10 programlama dilinden birisi haline gelmiştir. Mevcut Objective-C koduna sorunsuz entegre edilebilmesi sayesinde, yazılım geliştiriciler için zamandan tasarruf sağlamaktadır.
+Swift programlama dilinde programlama geliştirmek için Xcode programı kullanılır.
+
+
+== Geçmiş ==
+Swift dilinin geliştirilmesi, Chris Lattner ve birçok Apple yazılımcısının işbirliği ile 2010 yılında başlamıştır. Swift Objective-C, Rust, Haskell, Ruby, Python, C#, CLU gibi birçok programlama dilinden esinlenilerek yazılmıştır.
+2 Haziran 2014'te Swift ile yazılmış ilk WWDC uygulaması tanıtıldı. Dilin beta sürümü konferansa katılan kayıtlı Apple geliştiricilerine tanıtıldı fakat şirket Swift'in test sürümüyle son sürümünün kaynak uyumluluğunun sözünü vermedi. Apple gerektiği durumda nihai sürüm için bir kaynak kod dönüştürücü yapmayı planlamaktadır.
+500 sayfalık ve ücretsiz Swift Programming Language el kitabı WWDC’de yayınlandı. Kitap iBooks Store ve resmi web sayfasından ulaşılabilir durumda.Swift ilk olarak iOS için olan Xcode 6.0’ın Gold Master versiyonuyla 1.0 milestone sürümünü 9 Eylül 2014 tarihinde çıkardı. Swift 1.1 versiyonu Xcode 6.1 güncellemesiyle beraber 22 Ekim 2014 tarihinde geldi. Swift 1.2 versiyonu 8 Nisan 2015 tarihinde Xcode 6.3 güncellemesiyle geldi. Swift 2.0 WWDC 2015 tarihinde tanıtıldı ve 21 Eylül tarihi itibarıyla App Store’a bu dil ile yazılmış uygulamaların gönderilebileceği duyuruldu. Swift 3.0 versiyonu ise 13 Eylül 2016 tarihinde geldi.Swift Stack Overflow Developer Survey 2015'in En Çok Sevilen Programlama Dili kategorisinde birinci sırayı, 2016 tarihinde ise ikinci sırayı kazandı.WWDC 2016’da Apple, Swift ile kodlama nasıl öğretilir amacını taşıyan iPad özel uygulaması olan Swift Playgrounds’u tanıttı. Belirli sırada yerleştirilmiş ve çalıştırılan kodlar ile geri bildirim sağlayan bu uygulama 3 boyutlu video oyununu andıran bir arayüz içinde sunuldu.
+2017 tarihinde Chris Lattner Apple içerinde Tesla Motors’da yeni bir pozisyona geçtiğini duyurdu ve Swift projesindeki rolünü Ted Kremenek üstlendi.
+
+
+== Özellikler ==
+Swift modern programlama dilleri teori konseptine sahip ve mevcut sözdizimini basitleştirmeye çalışan Objective-C alternatifi bir dildir. Bu tanıtım boyunca Swift kısaca "C’siz Objective-C" olarak tarif edildi.
+
+
+=== Kütüphaneler, çalışma zamanı ve geliştirme ===
+Swift Objective-C ile aynı çalışma zamanı sistemini kullanır fakat iOS 7 veya macOS 10.9 ve üstü versiyonları gerektirir. Swift ve Objective-C kodları uzantı ile C ve C++ da dahil aynı program içinde kullanılabilir. C’nin aksine C++ kodları doğrudan Swift içinde kullanılamaz. Bir Objective-C veya C wrapper Swift ile C++ arasında oluşturulmuş olmalıdır.
+
+
+=== Bellek yönetimi ===
+Swift bellek yönetimi için Otomatik Referans Sayıcı (ARC) kullanır. Apple Objective-C’de elle bellek yönetimi yapmayı gerektiriyordu. 2011 yılında bellek tahsis etme ve serbest bırakma işlemlerini basitleştirmek için ARC tanıtıldı. ARC’nin olası sorunlarından biri İki farklı örneğin birbirine güçlü referans çevrimi ile bağlandığı bir durumda birbirlerinin referanslarını hiçbir zaman bırakmayacak olmalarıdır. Swift bu durumdan kaçınmak için weak ve unowned anahtar kelimelerini sağlar.
+
+
+=== C ile benzerlikleri ===
+Birçok C operatörü Swift içinde kullanıldı. Bunun yanında yeni operatörler eklendi.
+Köşeli parantez grup ifadelerinde kullanıldı.
+
+
+=== Objective-C ile benzerlikleri ===
+Basit sayısal türler (Int, UInt, Float, Double)
+Benzer for…in numaralandırma sözdizimi.
+
+
+=== Objective-C'den farkları ===
+İfadeler noktalı virgül (;) ile bitmek zorunda değil. Bir satırda birden çok ifade için kullanmaya izin verir.
+Başlık dosyaları yok.
+Otomatik tür algılama kullanır.
+Jenerik programlama.
+Fonksiyonlar birinci sınıf nesnelerdir.
+Stringler Unicode’u tamamıyla destekler. Birçok Unicode karakteri tanımlama ve operatör için kullanılabilir.
+
+
+== Örnek kod ==
+
+
+== Sürüm Geçmişi ==
+
+
+== Ayrıca bakınız ==
+Xcode
+Objective-C
+D dili
+
+
+== Kaynakça ==
+
+
+== Dış bağlantılar ==
+Apple Developer - Swift
+Swift.org
+Swift Programlama Dili 29 Aralık 2014 tarihinde Wayback Machine sitesinde arşivlendi.

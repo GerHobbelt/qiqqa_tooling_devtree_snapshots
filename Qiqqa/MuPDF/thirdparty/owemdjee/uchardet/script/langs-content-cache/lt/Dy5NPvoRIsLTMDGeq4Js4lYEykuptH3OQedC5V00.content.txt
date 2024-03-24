@@ -1,0 +1,49 @@
+revision: 6989737
+title: Ip Man
+url: https://lt.wikipedia.org/wiki/IP_adresas
+
+
+---
+
+IP adresas – kompiuterio identifikatorius IP tinkluose. Tai tam tikrame tinkle unikalus skaičius, naudojamas vienareikšmei duomenų paketo siuntėjo ir gavėjo identifikacijai ir skiriamas žmogaus ar organizacijos, administruojančios duotąjį IP tinklą. 
+Dėl to, kad IP adresai suteikiami kontroliuojamai ir yra unikalūs, jie leidžia duomenis persiųsti ir labai dideliais kompiuterių tinklais, pvz., Internetu, kadangi maršrutizatoriai, per kuriuos keliauja duomenys, žino kur juos toliau nukreipti. Kita vertus, tokių adresų administravimas reikalauja papildomų organizacinių bei darbo išlaidų.
+Domenų vardų susiejimu su IP adresais užsiima vardų sričių sistema.
+
+
+== IP 4-a versija ==
+Šiuo metu naudojama sistema skaitiniams adresams naudoja 32 bitus, todėl teoriškai iš viso galima panaudoti virš keturių milijardų adresų. Praktiškai šių adresų yra žymiai mažiau, nes nemaža dalis naudojama specialioms reikmėms. Kadangi laisvų 4-os versijos adresų mažėja, raginama pereiti prie IP 6-os versijos.
+Ketvirtos versijos adresas sudaromas iš keturių taškais atskirtų skirtingų skaičių, kurių kiekvienas nėra didesnis už 255. Adresas 255.255.255.255 laikomas bet kokio kompiuterio adresu.
+
+
+== Specialios paskirties adresai ==
+Vidinio tinklo vidiniai adresai:
+
+10.0.0.0/8 (10.0.0.0–10.255.255.255)
+172.16.0.0/12 (172.16.0.0–172.31.255.255)
+192.168.0.0/16 (192.168.0.0–192.168.255.255)Toks kompiuterio adresas yra unikalus vietiniame tinkle.
+Specialūs adresai:
+
+169.254.0.0/16
+224.0.0.0/4 – grupinio transliavimo (multicast) adresų sritis
+240.0.0.0/2 – rezervuota adresų sritis127.0.0.0/8 – kompiuterio adresas kreipiantis iš to paties kompiuterio.Kai kuriais atvejais (dažniausiai kuriant ir derinant Interneto programas) serveris ir klientas veikia viename kompiuteryje. Tuomet naudojamas sutartinis IP adresas, reiškiantis „šis kompiuteris“. Šiuo adresu, pavyzdžiui, galima pamatyti tinklalapio turinį paleidus serverio programą toje pat mašinoje kaip ir naršyklę (jokia tinklo jungtis tam nereikalinga).
+Be keleto mažesnių išimčių, visi likę adresai vienareikšmiškai identifikuoja kompiuterį internete.
+
+
+== IP adresų klasifikacija ==
+IP adresas susideda iš dviejų dalių: tinklo ir kompiuterio tame tinkle adresų, pvz.: IP adresas 150.10.46.12 nusako, kad kompiuteris yra 150.10 tinkle ir jo adresas tame tinkle yra 46.12, t. y. 2 baitai tinklo adresui ir 2 baitai adresams tame tinkle. Iš pateikto pavyzdžio matosi, kad adresų erdvė 150.10.0.0 tinkle yra 65534 adresai. Tam, kad būtų galima panaudoti skirtingų dydžio tinklus, IP adresų erdvė yra padalinta į skirtingas klases. Kiekvienas tinklas aprėpia tam tikrą adresų intervalą, kur pirmas galimas IP adresas tinkle identifikuoja patį tinklą (angl. network address) ir todėl yra rezervuotas, pvz.: tinklo 150.10 pirmas IP adresas yra 150.10.0.0. Taip pat rezervuotas yra paskutinis IP adresas tinkle, kuris naudojamas adresuoti visiems IP adresams tinkle (angl. broadcast address), pvz.: visi IP adresai tinkle 150.10 yra adresuojami IP adresu 150.10.255.255. Panašiai yra rezervuoti pirmas ir paskutinis tinklai kiekvienoje IP klasėje.
+
+
+== IP 6-a versija ==
+Šis standartas adresui skiria 128 bitus, todėl galimų adresų skaičius išauga, ir patenkina visas augimo prognozes.
+
+
+== Dinaminiai adresai ==
+Kiekvienas prie interneto jungiamas kompiuteris turi savo IP adresą. Kiekvieną kartą jungiantis prie kompiuterio, statinis IP adresas lieka toks pat. Dinaminis IP adresas yra laikinas, todėl, kaskart prisijungus prie interneto tinklo, jis gali būti vis kitoks, t. y. maršrutizatorius kompiuteriui kiekvieną kartą priskiria naują adresą, parinktą iš daugelio maršrutizatoriaus turimų ir tuo metu esančių laisvų adresų.
+Pvz., kompanija turi tam tikrą fiksuotą kiekį IP adresų (pvz., 200) ir (dažniausiai) dar daugiau klientų (pvz., 400). Jeigu visiems tiems klientams būtų išdalinta po IP adresą, tokiu atveju kompanija galėtų turėti tik 200 klientų. Panašiais atvejais ir naudojami dinaminiai IP adresai. Internetu vienu metu nesinaudoja visi 400 klientų. Manykime, kad pastoviai prisijungę yra apie 150 žmonių. Taigi, užimti būna 150 IP adresų ir 50 lieka laisvi (rezerve). Kai prie Interneto prisijungia dar keli vartojai (pvz., 4), jiems iškarto priskiriami kompanijos turimi, bet nenaudojami IP adresai. Kompanijai dar lieka laisvi 46 IP adresai. Bet kažkas tuo pat metu ir atsijungia nuo Interneto (pvz., 8 žmonės). Jų naudoti IP adresai tampa laisvais ir kompanija jau (vėl) rezerve turi 54 laisvus IP adresus. Kai vėl prisijungia koks vartotojas, jam priskiriamas atsilaisvinęs adresas. Tokiu būdu kompanija, turėdama tik 200 IP adresų, gali tiekti Internetą didesniam už šį skaičių klientų kiekiui. T. y. bet kuriuo kompanijos turimu IP adresu, laikui bėgant, gali pasinaudoti visi 400 klientų.
+
+
+== Šaltiniai ==
+
+
+== Nuorodos ==
+Kas yra IP adresas?

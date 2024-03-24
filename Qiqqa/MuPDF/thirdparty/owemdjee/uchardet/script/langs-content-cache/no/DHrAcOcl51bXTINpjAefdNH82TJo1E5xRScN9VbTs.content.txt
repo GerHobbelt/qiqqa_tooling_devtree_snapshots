@@ -1,0 +1,1068 @@
+revision: 23124437
+title: transistor
+url: https://no.wikipedia.org/wiki/Transistor
+
+
+---
+
+Denne artikkel omhandler elektronikkomponenter. For transistor i betydningen radiomottager, se transistorradioEn transistor er en elektronisk komponent som brukes sammen med andre elektroniske komponenter til å forsterke eller generere signaler, eller som en bryter for å slå på og av signaler eller energitransport. Den har tre tilkoplinger og er fremstilt av et halvlederkrystall. To av tilkoplingene brukes til å styre strømmen som går gjennom den tredje tilkoplingen og en av styretilkoplingene. Den styrte energien er større enn den som trengs til å styre, noe som gir energetisk forsterkning av et signal. Transistoren brukes både i analoge og i digitale kretser. Transistorer kan finnes som enkeltkomponenter pakket i et hus med tilkoplinger, eller de kan, sammen med ledningsføring og andre komponenter, pakkes tett sammen i et stort antall inne i en funksjonell enhet, kalt en integrert krets.
+Den første funksjonsdyktige transistoren ble utviklet i 1947 og transistorer ble tilgjengelige fra rundt 1950. Transistoren overtok etterhvert de fleste bruksområder som frem til da hadde vært forbeholdt radiorøret.
+Betegnelsen transistor er sammensatt av ordene transfer resistor, som antyder en styrbar motstand. 
+
+
+== Oversikt ==
+
+
+==== Forsterkning ====
+Med en transistor kan en større elektrisk strøm gradvis styres ved hjelp av en mindre strøm, slik radiorøret kan (for røret med spenningsstyring). Dette til forskjell fra reléer som bare kan slå store strømmer enten på eller av ved hjelp av mindre strømmer.
+Den gradvise styringen er essensiell for å kunne oppnå energetisk signalforsterkning. Med en transformator kan spenningsforsterkning eller strømforsterkning av et signal oppnås, men ikke energiforsterkning. Et mikrofonsignal kan eksempelvis ikke drive en høyttaler; signalet må først forsterkes energetisk. I ytterpunktene av det gradvise, eller analoge, styringsområdet ligger de funksjonene som betegner en bryter: Fullt 'på' eller fullt 'av'.
+Komponenter som må brukes for å oppnå energetisk signalforsterkning kalles aktive komponenter. Transistorer og radiorør er de eneste kjente aktive komponentene.
+
+
+==== Frekvenser ====
+Frekvensmessig kan transistorer forsterke alt fra likespenningssignaler til frekvenser over 100 GHz, men dagligdagse transistorer slutter å forsterke i MHz-området et sted. Store transistorer som behandler stor effekt er langsommere enn små transistorer.
+
+
+==== Halvledermaterialer ====
+Alle transistorer er fremstilt av et halvledende krystallgitter, i dag for det aller meste av grunnstoffet silisium. Germanium var enerådende rundt de første 20 år etter oppfinnelsen. Sammensatte krystaller som galliumarsenid og silisiumkarbid er i bruk i dag for spesielle anvendelser, liksom Silisium-Germanium legeringer. Av prosessteknologiske årsaker tok silisium over fra germanium, først og fremst fordi det med silisium kan dannes oksidlag som er velegnet for kjemisk prosessering. Der var også andre årsaker, som høyere lekkstrømmer, begrenset maksimalspenning og dårligere temperaturstabilitet for germanium.
+
+
+==== Størrelser ====
+Transistorer kan i dag (2014) fremstilles så små at det er plass til millioner av dem på en kvadratcentimeter. Når større spenninger og strømmer skal behandles blir transistorene fremstilt adskillig større for å kunne lede bort varmetapene til omgivelsene. Som enkeltkomponenter er de også større; de pakkes inn i plast- eller metallhus, med tilledninger, og er minst et par mm store for mekanisk å kunne behandles (identifiseres, flyttes på, loddes) av mennesker. Analoge kretser forlanger større transistorer enn digitale kretser. I analoge kretser ligger det alltid en spenning over transistoren og det går alltid en strøm gjennom den. Produktet av strøm og spenning er lik den effekten som transistoren får tilført, og som termisk må ledes bort. Digitale kretser bruker transistorene som brytere, som ideelt sett ikke avgir varme. Svært kraftige transistorer kan være så store som en tommel.
+
+
+==== Polariteter ====
+I motsetning til radiorøret kan alle transistortyper fremstilles i hver av to mulige polariteter. Både strømmer og spenninger har motsatt retning av hverandre i de to typene. Bokstaven N assosieres ofte med den ene, bokstaven P med den andre typen, der N og P antyder Negativ og Positiv. Radiorør er i denne sammenheng å betrakte som N.
+
+
+==== Transistortyper ====
+Transistorer kan bygges etter forskjellige arbeidsprinsipper, der de to hovedtypene kalles 
+
+bipolar transistor, en kortform for "Bipolar Junction Transistor", forkortet BJT
+felteffekttransistor, "Field Effect Transistor", forkortet FETBegge hovedtypene har tre terminaler, men terminalene har forskjellige betegnelser.
+
+En BJT kjenner terminalene E, B og C, fra engelsk Emitter, Basis, Collector (norsk: Sender, Base, Samler)
+En FET kjenner terminalene S, G og D, fra engelsk Source, Gate og Drain (norsk: Kilde, Port, Utløp)(De norske betegnelsene er uttrykkelig ikke i bruk; de tjener her kun som oversettelser. På norsk kan dog terminalnavnene Base og Kollektor brukes, men terminalnavnet Kollektor i kortform er helst C, ikke K).
+
+
+====== BJT- eller bipolare transistorer ======
+Krystallet i transistorene er fremstilt slik at det danner to dioder koplet i serie. Diodene har forskjellige lederetninger slik at det ikke kan gå strøm noen vei i seriekoplingen ende-til-ende; en av diodene vil sperre. Endepunktene er kollektor og emitter. Basen er tilkoplet midtpunktet, som er enten felles anode for begge diodene (N-typer) eller felles katode (P-typer). Kollektor-base-dioden forspennes i sperreretningen og emitter-base-dioden i lederetningen. Transistorvirkningen oppstår i den felles basen og består i at C-B-dioden kan styres til å lede strøm likevel. Hvordan dette foregår fysisk er beskrevet nøyere i kapitlet "halvledere" nedenfor. Den styrende strømmen går gjennom base-emitterdioden og den styrte strømmen gjennom begge diodene, altså mellom kollektor og emitter.
+
+
+====== Felteffekttransistorer ======
+Felteffekttransistorer deles i to underkategorier med noe forskjellig oppbygning. I begge kategorier ledes strømmen gjennom en halvlederkanal forbundet til drain og source. Et ytre felt (sett fra kanalens indre) som styres av spenningen mellom gate og source er i stand til enten å modulere kanalens ledende areal (JFET) eller å trekke ladningsbærerne i kanalen ut av området (MOSFET). Dette er felteffekten: Kanalens ledningsevne styres av feltet som settes opp av inngangsspenningen.
+Her beskrives retninger for N-typer i det videre. De har positiv spenning på Drain i forhold til Source.
+
+JFET: Her ligger det en diode som er forspent i sperreretningen, mellom kanalen og gate. Feltet mellom katode og anode i dioden er feltet som styrer kanalens oppførsel. Uten noe felt leder kanalen godt; en negativ spenning på gate, sett fra source, må tilføres for å redusere kanalens ledningsevne. For å knipe kanalen helt igjen slik at den ikke lengre leder noe strøm, trengs en viss negativ spenning. Denne kalles på engelsk 'pinch-off voltage'. Det går en liten (uønsket) lekkstrøm i dioden, som det gjør i alle dioder som er forspent i sperreretningen. J i JFET står for Junction = forbindelse, som et presisert motstykke til FET-er med isolert gate, altså uten forbindelse, se nedenfor. JFET-er lages aldri for kraftformål. JFET har særlig lav egenstøy og egner seg derfor til forforsterkere.På prinsippskissen ses en snittegning av transistoren. Tegningen viser en klar symmetri om gate. Det er også i virkeligheten slik, mange JFET-typer er i datablader spesifisert som symmetriske, og S og D-terminalene kan forbyttes. De fleste typer er imidlertid fremstilt som ikke-symmetriske.
+
+MOSFET eller også IGFET: Kanalen påvirkes av feltet fra inngangen gjennom et tynt, godt isolerende sjikt. Sjiktet fremstilles av et metalloxid, i betegnelsen kommer 'MOS' herfra. IG betyr 'Insulated Gate'. Sistnevnte er egentlig en mere treffende betegnelse fordi metalloksid som isolator ikke brukes lengre, men MOS er blitt en meget innarbeidet betegnelse. Også her ligger kanalen mellom drain og source. Gate koples til en ledende flate nær kanalen, og er isolert fra den gjennom isolasjons-sjiktet. Her er det altså ingen forbindelse (junction) med Gate. Feltet mellom gate-lederen og source bestemmer også her kanalens ledeevne.Til forskjell fra andre transistortyper inneholder MOSFET-er konstruksjonsbetinget oftest en diode mellom drain og source som ved normal bruk blir forspent i sperreretningen. På noen skjemasymboler tegnes denne dioden inn og symbolet får to dioder. MOSFET-typene deles nå igjen i to undergrupper.
+
+Depletion MOSFET: (Depletion = utarming). Kanalen lages slik at den oppfører seg likt JFETen sin, idet den leder godt uten spenning på gate i forhold til source. En negativ spenning (sett fra source) må til for å minke kanalens ledningsevne. Dette er utarmingen.
+Enhancement MOSFET (Enhancement = forøkning). Kanalen lages slik at den ikke leder strøm uten å få tilført spenning til gate i forhold til source. Spenningen må økes for at kanalen skal lede. Dette er forøkningen.Enhancement MOSFET er den mest brukte FET-typen. Den er enerådende i alle vanlige digitale regneenheter, som mikroprosessorer, i dag.  Den er også populær i analoge kretser, både til småsignal- og kraftformål.
+Alle FET transistorer øker drain-source-strømmen når inngangsspenningen gate til source øker i verdi. Polaritetene er som nevnt motsatt for N- og P-typer.
+
+
+==== Polaritetsbetegnelser ====
+De bipolare transistorene assosiert med N kalles NPN-typer, og for P er det PNP. Kollektorspenningen gjøres positiv for NPN og negativ for PNP, sett fra Emitter.
+For alle felteffekttransistorene er betegnelsen N-kanal eller P-kanal typer, på engelsk N-channel og P-channel. Drainspenningen gjøres positiv for N-kanal typer og negativ for P-kanal typer, sett fra source.
+
+
+==== Symboler for transistorene ====
+Alle transistorene her er snudd slik at den positive terminalen er oppe. Hovedstrømmen, den som blir styrt, går alltid nedover her. Styringen er alltid gjennom E-B eller S-G og den styrte strømmen går gjennom C-E eller D-S i en eller annen retning.
+BJT-transistorer:
+
+		
+P-kanal FET-er:
+
+		
+		
+		
+N-kanal FET-er:
+
+		
+		
+		
+Pilene går alltid INN for N-typer FET, noe som gjør det lett å huske. For de bipolare typene er det omvendt, der kan NPN assosieres med Not In.
+
+
+=== Andre transistortyper ===
+
+Det fins flere transistortyper enn de som er nevnt til nå. Flere av dem er ganske eksotiske og noen blir ikke laget lengre. Nedenfor beskrives bare en type, kalt IGBT, da den er blitt meget populær.
+Noen koplinger kalles transistorer, men er ikke annet enn én eller to vanlige BJT transistorer koplet sammen, og med en motstand eller to i tillegg. Darlingtontransistorer og Sziklaitransistorer er bygd av to transistorer og en eller to motstander, og en såkalt 'digital transistor' er en PNP- eller NPN-type som har fått en spenningsdeler til basen for enklere design i digitale kretser. Dobbeltransistorer er komponenter med seks eller fem ben (de to emitterne kan være koplet sammen) som inneholder to mest mulig likeartede transistorer. Dette er viktig i noen koplinger, men det er likevel to helt vanlige transistorer i pakken. Fototransistorer er også vanlige transistorer, men lys kan treffe P-N-overgangen til B-E-dioden og slå løs elektroner der, noe som fører til basestrøm.
+IGBT (eng: Insulated Gate Bipolar Transistor) ble utviklet på 1980- og 1990-tallet og er nå (2014) i tredje generasjon hvor barnesykdommene er overkommet. Den er en slags blandingstransistor, med MOSFET inngang og bipolar kropp. Tilsvarende heter tilkoplingene Emitter, Gate og Collector.
+IGBT-er brukes kun til kraftelektronikk, og da stort sett som brytere. De er meget hurtige både ved på- og avslag, og kan fremstilles både for svært høye strømmer og spenninger. Det brukes ofte pulsbreddemodulasjon av en solid likespenning før den tilføres lasten, noe som utenfra virker som analog styring, men der effekttapene minimeres. De finner stor anvendelse i elektriske biler, men også i pulsede kraftforsterkere (klasse D) for høyttalerdrift. Transistorene kobles ofte sammen i parallelkopling og pakkes i kraftige moduler. IGBT-er har ikke en intern diode i sperreretning mellom source og drain, slik som MOSFET typer har. Ved bruk mot induktiv last overtar denne dioden strømledning den andre veien i den passive fasen. Den trenger ikke egen styring for dette, noe som er meget praktisk. I dette tilfellet kalles dioden en friløpsdiode (freewheeling diode). I IGBT moduler kan slike dioder være tilføyd som ekstra komponenter.
+
+
+== Halvledere ==
+Her gjennomgås i kompakt form halvlederes oppførsel og fremstilling, samt de grunnlegende mekanismene i dioder og transistorer. Det handler her utelukkende om faststoff-halvledere brukt til elektroniske komponenter, ikke om halvledere generelt. Det introduseres også en del begreper som er knyttet til elektronisk halvlederteknikk.
+Utgangspunktet for en halvleder er et egnet grunnstoff som forekommer i krystallinsk form. På engelsk brukes uttrykket 'solid state' for å si at det ikke dreier seg om en gass eller væske. Krystallene gros langsomt ved høy temperatur i ovner og resultatet er et meget homogent og rent (99.9999999 %, eller 1:1 000 000 000) krystall. I denne prosessen blir krystallet av praktiske grunner ofte målrettet forurenset (dopet), men her betraktes først et rent krystall, som kalles en intrisikk halvleder. Krystallet vil ikke kunne lede strøm siden det mangler bevegelige, eller frie, ladningsbærere.  Elektroner er i sum bundet til hver sitt atom, selv om de enkeltvis på grunn av termisk energi gjerne bytter plasser med hverandre. Det er helst stoffer med fire elektroner i valensbåndet, som germanium og silisium, som brukes til halvledere for elektronikk. Se Bohrs atommodell og Det periodiske system. I metaller finnes det en del naturlig frie elektroner, altså elektroner som ikke er bundet til atomene sine. Disse sørger for at metall kan lede strøm godt.
+
+Det grodde krystallet er stort. Det deles senere opp i tynne skiver (eng: wafers) og poleres, og på hver skive lages et antall halvlederkomponenter (eng: die, dies) som senere skjæres ut enkeltvis.
+
+
+=== N-type ===
+Hvis krystallet målbevisst forurenses litt av et annet grunnstoff som har flere elektroner enn fire i valensbåndet, som fosfor eller arsen med fem elektroner, vil disse atomene kunne styres til å fordele seg jevnt i krystallet. Det overskuddet av elektroner som fremmedatomene har, blir da til frie elektroner; de kan fritt vandre hvorhen de vil i krystallet. Det dopede krystallet kan nå lede strøm med elektroner som ladningsbærere. Fremmedstoffet kalles i denne sammenhengen en donor (giver) siden det gir fra seg elektroner. Halvlederen gis betegnelsen N-type siden elektroner er negativt ladet.
+
+
+=== P-type ===
+Krystallet kan også gjøres ledende på en annen måte; det kan dopes med andre stoffer. Bor og aluminium har færre elektroner i valensbåndet enn halvledermaterialet; begge har tre. At mangel på elektroner kan føre til lede-egenskaper er ikke helt intuitivt. Som før fordeles fremmedstoffets atomer jevnt fordelt i krystallgitteret. Mangelen på elektroner merkes av naboatomene i vertskrystallet, og elektroner der som befinner seg i valensbåndet blir sterkt tiltrukket av mangelstedet. Et elektron besøker da gjerne fremmedatomet en tid, og etterlater et nytt, tomt sted, denne gang i vertsatomet. Et elektron i dets naboskap tiltrekkes på samme vis av det nye mangelstedet og slik vandrer en tom plass videre. Ledning av strøm betyr her at elektronet vandrer fra plassen sin til den neste mangelplassen. Mangelplassen og elektronet bytter derved plass.
+
+
+==== Hull ====
+Det kan lønne seg å gå bort fra betraktningen av bare elektroner. Et sted hvor elektronet mangler, altså en mangelplass, kan kalles et hull, og hull kan sies å bevege seg i motsatt retning av elektronet. Et hull har i denne betraktningen en positiv ladning. Selv om det kun er elektroner som virkelig beveger seg, er det lettere å beskrive, tenke og beregne ved å innføre hullet som en egen ladningsbærer. Fremmedstoffet kalles nå en akseptor da det aksepterer mottak av elektroner. Halvlederen er nå av P-type, siden den har positive ladningsbærere.
+Felteffekttransistorer har eksempelvis slike dopede halvledere i den strømledende kanalen (se senere), som gir navn til N- og P-kanal FET-er. Merk at strøm i vanlig elektronikk kan betraktes som ledet av positive ladningsbærere. Dette fordi strømretningen er definert som den motsatte retningen av elektronstrømretningen, den flyter altså fra pluss til minus i en last.
+
+
+==== Mobiliteter ====
+Det viser seg at elektroner er litt mere lettbevegelige enn hull. Uten å gå inn på hvorfor det forholder seg slik, fører det til at N-type transistorer i samme teknologi blir noe hurtigere enn P-typer (se lengre ned). N-typer har altså høyere øvre grensefrkvens. Dette igjen har ført til at N-type transistorer favoriseres over P-typer. Emitter legges i retning jord og kollektor mot forsyningen i forsterkertrinn, og siden forsyningen er positiv ved bruk av N-typer, blir spenningsforsyningene i de fleste enpolaritets koplinger positiv i forhold til jord.
+Germanium oppviser høyere mobiliteter enn silisium og er slik hurtigere, men andre faktorer gjør at silisium likevel foretrekkes. For høyere mobiliteter enn germanium har, anvendes gjerne galliumarsenid.
+
+
+=== PN-overgangen ===
+
+Det rene krystallet kan gis akseptorer eller donorer på en slik måte at de trenger noe inn i dybden i krystallet. Når donorer tilføres den ene siden og akseptorer den andre siden av en svært tynn halvlederplate, dannes en såkalt P-N-overgang midt i. Akkurat i overgangen vandrer elektroner over til akseptorene og hullene over til donorene på grunn av de elektrostatiske kreftene, og de blir værende der. Overgangen har da ikke lengre frie ladningsbærere (den er tømt, eng: depleted) og den isolerer, noe som kan måles ved og med små spenninger. Donoratomene i N-sonen (fastsittende) er nå blitt positive ioner, og i P-sonen sitter negativt ladete akseptoratomer som fastsittende ioner. Dopingen som helhet setter opp et elektrisk felt over overgangen, nå også kalt barrieren (eng: barrier). Elektronene i N-delen kalles majoritetsbærere fordi det er langt flest av dem der. Likeledes er hullene i P-delen majoritetsbærere der.
+En ytre spenning kan tilkoples mellom N-delen og P-delen. Feltet fra spenningen ligger over overgangen og virker inn på ladninsbærerne ved elektrostatiske krefter.
+Settes den negative spenningen til P-delen og den positive til N-delen, vil elektronene i N-delen tiltrekkes av den positive spenningen og hullene i P-delen av den negative. Overgangen blr derfor bredere og det vil ikke flyte strøm gjennom den. Overgangen kalles utarmingssonen (eng:depletion Zone) eller romladningssonen (eng: space charge layer).
+Ompoles den påtrykte spenningen, vil den positive siden av spenningen ligge til P-delen og den negative til N-delen. Spenningens negative side vil nå frastøte elektroner i N-delen, og hull frastøtes i P-delen av den positive delen av spenningen. Overgangen blir således kortere. Økes spenningen nok, blir overgangen smal nok til at elektroner kan krysse den og injiseres inn i P-delen. Likeledes blir hull injisert inn i N-delen. Inne i overgangen rekombineres elektroner og hull. Dette fører til en strømledning gjennom krystallet: Elektronstrømmen går inn i N-delen og den samme mengden strøm går ut av P-delen ved hull-ledning etter rekombinasjonen i midten. Økes påtrykt spenning ytterligere, vil strømmen naturligvis bli sterkere.
+
+
+==== Dioden ====
+En PN-overgang er hovedinnholdet av en diode. Resten utgjøres av de metalliske tilkoplingene til krystallet, som blir utført slik at de blir ohmske resistanser. Mengden av strøm som flyter i lederetningen er eksponentielt stigende med påtrykt spenning, så en grensespenningsverdi for at strømledning skal finne sted kan ikke defineres. Likevel kan det sies at med rundt 0.6 V for silisiumdioder vil strømmen ligge i mA-området. Germanium trenger for mA-området rundt 0.25 til 0.3 V spenning. Strøm-spenning-sammenhengene er noe temperaturavhengige.
+Terminalen som er forbundet med P-delen kalles diodens anode og N-delen er forbundet med diodens katode. Diodesymbolet er en pil, og lederetningen av strøm følger pilens retning; strømmen går inn i anoden og kommer ut av katoden. Elektroner går da inn i katoden.
+At den isolerende utarmingssonen blir lengre jo større spenning som tilføres i diodens sperreretning utnyttes i kapasitetsdioder for å oppnå en spenningsstyrt kapasitet.
+
+
+=== Grader av doping ===
+Fremmedatomene er ikke mange i forhold til antall vertsatomer. En konsentrasjon av 1:50 000 er ansett som meget kraftig doping av silisium; og 1:5 000 000 000 som en meget svak doping. Forurensningen i et rent krystall består hovedsakelig av atomtyper som ikke fører til frie ladningsbærere, altså til nyttig doping.
+
+
+=== Masker ===
+Under fremstillengen gjøres en utstrakt bruk av midlertidige masker. En maske er et lag eller sjikt som begrenser området som behandles av prosessen. Masken dekker områder som ikke skal behandles, og er åpen der prosessen, for eksempel doping, skal foregå. Masken består av et sjikt som tåler prosessen uten å skades. Ved legging av masken er den lysfølsom. Sjiktet påføres først hele overflaten for etter tørking å bli belyst med maskens form. Deretter blir sjiktet kjemisk behandlet slik at de belyste delene vaskes vekk (eller omvendt, alt ettersom). Etter at prosessen er ferdig blir hele masken vasket vekk. Presisjonen av masken ligger i nm-området; belysningen foregår ikke nødvendigvis med synlig lys.
+
+
+=== Endring fra P- til N-type halvleder eller omvendt ===
+I løpet av fremstillingsprosessen er det ikke noe problem å forvandle P-typer halvledere til N-typer eller omvendt, og det gjøres da også i stor utstrekning. Eksemplet over med å dope en tynn plate med akseptorer fra den ene siden og donorer fra den andre siden tilhører fortiden. I dag gros krystallet som for eksempel N-dotert før det blir kuttet opp i skiver. Ved å utsette umaskerte soner på den ene siden av skiven for et P-doterende stoff en tid i en ovn eller slik (det fins mange muligheter), vil halvlederen etterhvert inneholde like mange donorer (de gamle) som akseptorer (de nye). Dette nøytraliserer dopingen og krystallet har globalt ingen frie ladningsbærere lengre. Etter mere tid vil akseptorene være i flertall og krystallet er blitt til en P-type halvleder.
+Denne prosessen blir også kontrollert i dybden, slik at N-typen fortsatt ligger i bunnen, og geografisk ved hjelp av en midlertidig maske slik at N-materialet ligger på kanten og omgir den nye P-typen halvleder som er i midten.
+
+
+==== Dioder, fremstilling ====
+En P-N-overgang er oppstått og skiven (waferen) kan etter metallisering av terminalene kuttes opp, og bitene kan monteres som dioder med tilkopling av ringen (N, katode) og øya i midten (P, anode) til ytre terminaler.
+
+
+==== Transistorer, fremstilling ====
+
+Prosessen kan gjentas ved tilførsel av et N-dopende grunnstoff, ikke så dypt som P-området stikker og ikke så stort som det, men inne på P sitt område. Resultatet er to ringer (N ytterst og P innenfor) og et midtparti N, og alle ligger tilgjengelig på overflaten. Disse tre områdene kan metalliseres og etter oppdeling av skiven få påsatt tilkoplinger. Området er blitt en NPN type transistor og inneholder to dioder, eller PN-overganger. Den ytterste ringen er størst og lages som kollektor, fordi kollektoren er den delen av en transistor som til vanlig får tilført den største effekten. Kollektoren kan koples termisk til en kjøleflate. Den koples da gjerne også elektrisk til denne for ikke å redusere varmeledningen. Basen er felles for begge diodene, og den lages tynn for å oppnå transistorfunksjonen, se nedenfor. Se ellers prinsippskissen av en transistor under Oversikt/Transistortyper, NPN planar transistor, for illustrasjon.
+
+
+== Transistorene: Funksjonsbeskrivelser og grafer ==
+
+
+=== Den bipolare Transistoren, funksjon ===
+En NPN transistor består som sagt av tre lag av halvledertypene N, P og N. Tilkoplingene til de tre lagene får i transistorer navnene emitter, base og kollektor. Baseområdet er gjort forholdsvis kort og emitteren er mye kraftigere dopet enn base og kollektor er. Siden en enkelt P-N-overgang representerer en diode, består transistoren av to dioder med basen tilkoplet begge. Basen er enten en felles anode (NPN-typer) eller felles katode (PNP-typer) for de to diodene.
+Ved bruk av bipolare transistorer forspennes B-E dioden i lederetning og C-B dioden i sperreretning. Eksempelvis for en NPN transistor er da emitteren mest negativ, basens spenning ligger rundt 0.6 V høyere, og kollektorspenningen kan ligge så høyt som transistoren tåler, eller lavere. I P-N overgangen i dioden mellom base og emitter rekombineres hull og elektroner, og elektroner injiseres i baseområdet, som nevnt over under P-N-overgangen. Disse elektronene kan rekombinere med hull der som i en diode, men feltet fra kollektoren (+) er sterkt og trekker de fleste elektroner til seg som før rekombinasjon finner sted. Dette går forterte jo tynnere basen er fremstilt. Det tallmessige forholdet mellom de elektronene som går mot kollektor og de som rekombinerer til å danne strøm i basen, er lik strømforsterkningsfaktoren β.
+Strømmen i kollektor ledes i C-B-diodens sperreretning. I denne dioden er hull normalt ladningsbærere, så strømmen til kollektor ledes nå av minoritetsbærere, elektroner her. BJT-er kalles også minoritetsbærer-typer transistorer.
+Transistorene kalles bipolare fordi både minoritets- og majoritetsbærere deltar i funksjon og strømledning. Felteffekttransistorer er unipolare, siden kanalen enten er fremstilt av P- eller av N-type halvleder.
+
+
+==== Graf ====
+
+Diagrammet viser grafisk forholdene i en typisk NPN-transistor. Kollektorstrømmens verdi leses på den loddrette aksen (y-aksen) Ic. Kollektorspenningens verdi (mot emitter) vises på den horisontale aksen (x-aksen) Uce. De fire sorte kurvene gjelder for forskjellige faste basestrømmer IB1 (svak) til IB4 (sterkere).  Fra disse kurvene kan en avlese at mere base-emitterstrøm fører til høyere kollektorstrøm. At kurvene har lik avstand til hverandre viser at Ic og Ib har en noenlunde linjær sammenheng, og det har blitt vist over at sammenhengen er gitt av strømforsterkningsfaktoren β. Diagrammet viser også at strømmen i kollektor er nesten helt uavhengig av kollektorspenningen der den er flat. Dette kan omskrives til å si at transistoren er en ganske god konstant-strømkilde.
+Diagrammet viser også to områder som har med bruk av transistoren som bryter å gjøre. Disse områdene er her grafisk noe overdrevne for klarhetens skyld; kurvene ligger noe nærmere aksene enn vist. Cut-off kalles området der basestrømmen er null, og det flyter derfor heller ikke kollektorstrøm. Området ligger under den horisontale røde linjen nede i diagrammet. Dette tilsvarer en åpen bryter; det går ikke strøm, selv med store spenninger.
+Saturation viser metningsområdet, som tilsvarer at bryteren er på. Det ligger bare en liten spenning over bryteren uansett hvor kraftig strøm det går gjennom den. I en virkelig bryter av metallkontakter er denne spenningen svært nær null. Transistoren oppviser en liten spenning som ikke kan gjøres særlig mindre enn ca. 0.2 V. Denne spenningen kalles metningsspenningen for transistoren.
+I resten av området, altså på omtrent hele flaten, kan spenninger og strømmer kontrolleres analogt; området kalles det aktive området. I en forsterkerkopling beveger spenninger og strømmer seg i dette området. En gitt DC-spenning og en gitt DC-strøm utgjør et punkt et sted i diagrammet.
+Produktet av strømmen gjennom transistoren og spenningen over den utgjør effekten som tapes i, eller varmer opp, eller (slang) koker bort i transistoren. Langs den røde punkterte kurven vises spenning og strøm for et fast effekttap; alle punkter på linjen fører til den samme verdien for effekttapet. Her er det effekttapet som transistoren er spesifisert for maksimalt å tåle over tid, altså med DC strømmer og spenninger, som er vist. Transistoren får ikke drives over denne kurven, da skades krystallet av høye temperaturer. At spenning-strøm-grafene kan tegnes godt utenfor dette området kommer av at verdiene kan måles med korte pulser i stedet for med DC. For en kort puls rekker ikke tiden til å varme opp krystallet til destruktive temperaturer. Dette er også tillatt å gjøre i praksis. Strømmen må likevel alltid ligge lavere enn Ic (max) og spenningen alltid ligge lavere enn Uce (max). Kurven for maksimalt tap er en hyperbel, og den kalles for transistorer effekthyperbelen.
+
+
+==== Second breakdown ====
+
+Begrepet second breakdown (eng: omtrent «annet sammenbrudd») er et destruktivt fenomen som er viktig for design med bipolare effekttransistorer. Fenomenet skyldes at krystallets ledningsevne stiger med temperaturen. På en større krystallflate fordeler temperaturen seg selvfølgelig ikke helt likt. Når mye effekt tilføres, vil det gå større lokale strømmer der temperaturene er høyest. Dette igjen fører til at det eller de varme punktene får mer tilført effekt enn de andre stedene. Dette er en positiv tilbakekobling som fører til et termisk runaway-fenomen; til slutt oppstår en eller flere varmetunneler som ødelegger krystallet ved lokal overoppheting.
+Av den grunn har grensediagrammet for spenning og strøm for en effekttransistor fire begrensende linjer. Fra venstre: 1) Maksimal strøm, vertikal akse, gitt av bondetråden, den interne forbindelsen mellom krystallet og terminalen. 2) Effekthyperbelen, hvor U • I = konstant = maksimal tillatt effekt. 3) Second breakdown-linjen, som reduserer effekthyperbelen. 4) Spenning, horisontal akse. Større spenninger fører til egenledning. Dette kalles "first breakdown" (første sammenbrudd) og er uskadelig hvis egenlednings-strømmen ikke blir så stor at maksimal-effekten overskrides. Egenledningen skyldes skred-effekten, hvor feltet over krystallet blir så sterkt at ladningsbærere trekkes løs i krystallet.
+MOSFET-effekttransistorer har negativ temperaturkoeffisient for krystallets ledningsevne og er dermed automatisk beskyttet mot dette fenomenet. Dette gjør at MOSFET-krafttransistorer er ganske robuste.
+Begge aksene i diagrammet er her logaritmiske, da blir en hyperbel til en rett linje.
+
+
+==== Snudd bipolar transistor ====
+En bipolar transistor kan også funksjonere når emitter og kollektor bytter plass. Transistoren vil fortsatt virke på normalt vis og den vil beholde polariteten sin; PNP snudd er enda PNP. Transistoren sies å drives i 'revers'. Maksimal spenning på den nye kollektoren reduseres til ca. 5 V og strømforsterkningen β blir sterkt redusert. Redusert β kommer av at den nye emitteren er svakt dopet, redusert maksimalspenning følger av at kollektor er hardt dopet og virker som en zenerdiode mot basen. En fordel ved å gjøre dette er at metningsspenningen kan gjøres lavere enn mulig på andre måter med bipolare transistorer. Denne innsikten ble naturligvis mindre viktig da MOSFET-er med lav indre motstand kom på markedet.
+
+
+=== Felteffekttransistorer, funksjon ===
+Her beskrives retninger for N-typer i det videre. De har positiv spenning på Drain i forhold til Source. For P-typer er retningene av spenning og strøm motsatt.
+
+
+==== JFET ====
+
+Her er vist strøm-spennings karakteristikker for en N-kanal JFET transistor. Grafen til høyre viser drain-strømmen som funksjon av styrespenningen Vgs. Her har drain maksimalt tillatt spenning, som ses ved den horisontale stiplede linjen øverst, som projiserer drainstrømmen mellom grafene. Styrespenningen er negativ og drainstrømmen blir null ved Vp, pinch-off og lavere spenninger. Stort høyere styrespenninger enn null er umulig på grunn av inngangsdioden, som da ville begynne å lede.
+Til høyre vises drainstrømmen som funksjon av drain-source-spenningen for noen utvalgte styrespenninger Vgs. Den øverste kurven gjelder for styrespenningen null, og helt nederst, merket 'channel off' vises at ingen strøm flyter ved Vp eller lavere styrespenninger.
+I den linjære regionen til venstre oppfører transistoren seg som en ohmsk motstand, særlig ved små spenninger nær origo. En ideell motstand vises som en rett linje gjennom origo, og linjens stigning gis av resistansverdien.
+I metningsområdet er sourcestrømmen mettet, mere strøm kan ikke flyte med den gitte inngangsspenningen. I dette området flyter en tilnærmet konstant strøm (nesten horisontale grafer) for en gitt inngangsspenning, nesten uavhengig av sourcespenningens størrelse. Dette området brukes i forsterkerkoplinger og kalles også det aktive området. (For bipolare transistorer har 'metningsområde' en helt annen betydning, nemlig der transistoren er styrt til å lede så godt som den kan.)
+JFET som bryter: I 'av'- stillingen er bryteren styrt med en spenning som er lavere enn pinch-off-spenningen. Det flyter ikke strøm; bryteren er åpen. I 'på' stillingen: I diagrammet kan ses hvorfor JFETen ikke brukes for store strømmer: Når bryteren er på, Vgs = 0, oppviser transistoren en betydelig motstand som sørger for et spenningsfall når det går substansiell strøm. Spenningsfallet sammen med strømmen ville sørge for et betydelig effekttap i transistoren. JFET brukes derfor bare ved småsignaler; en effekthyperbel er ikke interessant å vise.
+Det ble nevnt over at en JFET har lav egenstøy. Det er særlig 1/f-støyen som er lav, noe som gjør transistoren støymessig velegnet for å forsterke lave frekvenser. For termisk støy egner transistoren seg best ved høye impedansnivåer, som ved elektret- og kondensatormikrofoner.
+Pinch-off-spenningen for en enkelt transistor har en klart definert, målbar, verdi. Pinch-off-spenningen er ellers en svært varierende parameter, altså innenfor samme transistortype. Et godt design tar hensyn til at Vp-spenningen kan være forskjellig fra eksemplar til eksemplar. Pinch-off spenningen er noe temperaturavhengig.
+
+
+==== MOSFET eller IGFET ====
+
+Source og drain er utført som to nærliggende ledende (hardt dopede) områder inne i krystallet. Gate er en elektrode plassert like over området mellom drain og source, men isolert fra det med et isolerende sjikt. Kanalen kan styres på to forskjellige vis, som gir oppav til to forskjellige typer MOS-transistorer, enhancement-typer og depletion-typer, se nedenfor. Området i krystallet like under gate er (depletion typer) eller blir til kanalen (enhancement typer).
+
+Enhancement MOSFET (Enhancement = forøkning). Krystallet selv er lett P-dopet for en N-kanal transistor. Når gate gjøres positiv, frastøter feltet hullene i P-materialet. Elektroner fra det sterkt dopede source-området trekkes i retning mot gate og sørger for strømledning gjennom krystallet, like under gate. Dette blir nå til kanalen, som ikke oppstår før transistoren tilkoples spenninger. Kanalen blir ganske tynn på grunn av gate sin lokale tiltrekning. Fordi det opprinnelige P-doterte krystallet nå leder elektroner i stedet for hull i den tynne kanalen, kalles kanalen også inversjonslaget (eng: inversion layer). Elektrontrømmen går fra source til drain i N-typer. Betegnelsene source og drain kommer fra elektronkilden og elektronutløpet.
+Depletion MOSFET: (Depletion = utarming). I motsetning til Enhancement MOSFET-typer fremstilles kanalen, plassert like under gate, godt ledende ved hjelp av et tynt, dopet sjikt under gate og MOS isolasjonssjiktet. Kanalen er altså alltid til stede. Ladningsbærerne frastøtes av gatespenningen, som i N-typer må gjøres negativ for å redusere ledeevnen. Dette kalles utarming. At ledeevnen må reduseres med tilført negativ spenning er likt som for JFET-er og radiorør.Strøm-spenning-karakteristikkene er i prinsipp ganske like for alle MOSFET-typer. Fortegnene endres mellom N- og P-typer, og styrespenningens område får andre grenser mellom enhancement- og depletion-typer (henholdsvis positiv og negativ styrespenning). For effekt-typer tegnes for det meste også effekthyperbelen inn i grafene. Også MOSFET-typer kan drives over effekthyperbelen for pulser som er korte nok til at krystallet alltid holdes innenfor et sunt temperaturområde. MOSFET typer oppviser ikke noen second breakdown-mekanisme, som bipolare transistorer gjør.
+Det linjære området kan lages svært smalt for MOSFET-typer (det ledes høy strøm med svært lavt spenningsfall over transistoren; diagrammet overdriver størrelsen på spenningen i det linjære området). Dette gjør MOSFET-typer svært velegnete både for kraftforsterkere og som brytere. Motstandsverdien ved 'på' kan ligge helt nede til 1 mOhm for kraftige transistorer (2014). Motstandsverdien er mye høyere for mikroskopiske typer som brukes i mikroprosessorer, men det går knapt strøm ved slik bruk. Fordi det knapt oppstår effekttap hverken når bryteren er av (strøm ~ null) eller på (spenning ~ null), kan slike transistorer pakkes utrolig tett sammen.
+Nedenfor vises en liten oversikt over utviklingen for mikroprosessorer i de siste årene. 'Technology node' er en klassifisering av de minste størrelsene som fotolitografiske metoder kan frembringe. I 2012 kunne altså en chip med 7 milliarder transistorer lages.
+
+
+===== Gate overslag =====
+MOSFET-enes nesten ideelle isolasjon i GS-strekningen fører til en spesiell fare for ødeleggelse som kun gjelder denne type transistor. For at følsomheten, transkonduktansen eller forsterkningen skal bli så stor som mulig er transistoren bygd for å danne et sterkest mulig felt for en gitt inngangsspenning. Metalloksidsjiktet fremstilles derfor så tynt som praktisk mulig. Av den grunn tåler sjiktet ganske lite spenning før den fører til et destruktivt overslag. ±20–30 volt er blitt vanlige industrielle grenser for maksimal GS-spenning. Fremfor alt statisk elektrisitet kan lett lade opp GS-kondensatoren som sjiktet utgjør. I en ferdig kopling finnes det alltid en strømvei som lader ut gatespenninger når koplingen er strømløs; transistorene er mest utsatt når de håndteres som enkeltkomponenter.
+
+
+== Bryter- og forsterkerkoplinger ==
+Her vises noen enkle og fundamentale koplinger som belyser transistorens oppførsel. Noen koplinger er praksisfjerne, men skal være illustrative ved å fokusere på transistoren selv, med et minimum av andre komponenter.
+
+
+=== Koplinger med bipolare transistorer ===
+
+
+==== Bryter ====
+
+Her vises en NPN transistor som brukes som en bryter for en glødelampe. Basestrømmen IBE blir (6-0.6)V/1kOhm = 5.4 mA. Motstanden er nødvendig for å begrense basestrømmen siden basespenningen knapt kan gå over 0.8V på grunn av B-E-dioden. Lampestrømmen = kollektorstrømmen = ICE er langt høyere enn basestrømmen. For β lik 200 x kan transistoren lede opptil 1.08 A i kollektor.Transistoren kan da slå 6 W på og av. Med en metningsspenning på 0.2 V får transistoren selv tilført bare 0.2 W. Når bryteren er åpen, flyter ingen strømmer.
+
+
+==== Spenningsforsterker, prinsipp ====
+
+Bildet 'NPN-transistor i en enkel forsterkerkopling' viser forholdene ved bruk av NPN-transistoren BC547B til spenningsforsterkning. Transistoren er en populær allround småsignaltype. Her er basestyringen gitt ved en fast spenning V1 med tillegg av inngangs-vekselspenningen V2. Koplingen kalles et felles-emittertrinn, siden emitter er felles for både inn- og utgangssignaler, her jord.
+Transistorens kollektorkrets drives av en 12 V spenningsforsyning, kalt V+. I kollektoren kan det flyte en maksimal strøm på 12V/5kOhm = 2.4 mA. Strømaksen er til høyre for grafene.
+Forsterkeren som helhet er spenningsstyrt med et spenningssignal inn på basemotstanden R2 = 50 kOhm. Transistoren selv blir her strømstyrt; basespenningen ligger noenlunde fast nær 0.6 V, og basestrømmen blir gitt av inngangsspenningen minus diodespenningen, delt på R2.
+I kretssimulatoren kan y-aksen til grafene fritt skaleres, individuelt for hvert signal. Slik kan signalene gjøres tydelig synlige. Skaleringene kan avleses øverst, der skriftfargen er tilpasset graf-fargen. Grafene kan også gis fortegn etter ønske. Her er det satt inn minus foran noen grafer, for å få strømmene til å gå inn i transistoren. n004 er basetilkoplingen og n003 er på andre siden av R2, inngangen. Navnene ble gitt av simulatoren da den ikke fikk opplyst andre navn fra skjemaet.
+Inngangssignalet består av en likespenning på 0.82 V og et 200 Hz sinussignal med 0.3 V amplitude. Simulasjonen varer 10 ms og grafene viser derfor to signalperioder.
+Inngangssignalet, som er skalert opp 10x, kan ses som den mørkegule grafen mellom 11.2 og 5.2 V på skalaen. Signalet er 0.82 +/- 0.3 V = 1.12 til 0.52 V. Den resulterende inngangsstrømmen ses som den røde grafen, som er skalert opp 200 ganger. Den leses av som 0 til 1.8 mA, som tilsvarer 0 til 9 uA.
+Basisdioden sørger for å holde basespenningen på rundt 0.65 V, spenningen kan ikke bli vesentlig større uten at store strømmer flyter. Base-emitterspenningen kan ses på den magenta grafen, som også er skalert opp 10 x. Den viser at signalet blir komprimert i de positive halvbølgene, men synker lett der inngangsstrømmen blir lav, her ved ca. 4 ms på tidsaksen. Siden transistoren i koplingen er strømstyrt, vil denne forvrengningen ikke merkes i utgangssignalet; grafen er kun tatt med for illustrasjon.
+Den blå og den grønne grafen viser henholdsvis spenningen på og strømmen gjennom kollektor. Inngangs-vekselspenningen er for illustrasjonens skyld gitt et så kraftig signal at grenseområdene for transistoren kommer med i grafene; signalet klippes litt flatt helt øverst og nederst. Det er ikke brukt skaleringer. Det ses at utgangssignalet er i motfase med inngangssignalet. Ved mindre signalspenning ville forvrengningen bli nær usynlig; utgangssignalet ville vært nær sinusformet.
+Ved tiden rundt 1.8 ms er inngangssignalet høyest. Da går det maksimal strøm i transistoren, begrenset av V+ og R1 til 2.4 mA, som vist over. Ved maksimal strøm er spenningsfallet over R1 maksimal og utgangsspenningen minimal. Spenningen over transistoren er 0.1-0.2 V et sted, bedre (med mindre spenningsfall) kan ikke transistoren lede. Transistoren er her mettet.
+Rundt 4 ms i tid er inngangsspenningen lavest. Som kan ses av den røde kurven, basestrømmen, blir styrestrømmen til transistoren slått helt av. R1 har da ikke noe spenningsfall og kollektor (VUT) får full forsyningsspenning, 12 V (blå graf). Kollektorstrømmen (grønn) er null her.
+Forsterkningsberegning: Uforvrengt (uklippet) ville utgangsspenningen vært rundt 15 Vpp (14 V topp, -1 V bunn). Inngangs-signalspenningen er 0.6 Vpp; dette forsterkertrinnet har altså en moderat signal-spenningsforsterkning på ca. 25 ganger. Den moderate forsterkningen skyldes den høye verdien som er valgt for eksemplets R2. Transistorens strømforsterkning β kan også avleses. I arbeidspunktet (som er de verdier vi ville fått uten inngangssignal V2) er inngangsspenningen 0.82 V, her ved ca. 2.4 ms. Basestrømmen (rød) avleses til 0.7 mA/200 = 3.5 uA. Kollektorstrømmen (grønn) avleses til 1.3 mA og strømforsterkningen blir rundt 1.3/0.0035 = 370 x. Databladet oppgir β til typisk 330x for BC547B.
+Den grå kurven viser transistorens tilførte effekt til enhver tid, skalaen er helt til venstre. Effekten er hovedsakelig gitt av kollektorstrømmen ganger kollektorspenningen, men også basestrømmen ganger basespenningen gir noe effekt og er tatt med i beregningen. Ved utgangsspenningens minimal- og maksimalverdier er tapt effekt nær null; da er henholdsvis kollektorstrømmen null eller kollektorspenningen null. Dette skjer to ganger i perioden, derfor har effekttapet dobbel frekvens. Imellom, i transistorens aktive område, er effekttapet størst. Omtrent 3 mW kan avleses som en middelverdi, spissverdien er noe over 7 mW.
+
+
+=== Koplinger med felteffekttransistorer ===
+
+
+==== JFET forsterker ====
+
+Bildet 'N JFET transistor i en enkel forsterkerkopling' viser forholdene ved bruk av N-FET transistoren 2N3819 (en høyfrekvenstype, 700 MHz) som en enkel spenningsforsterker. Inngangssignalet (mørkegult) er lagt til å svinge om -2.2 VDC og amplituden til signalspenningen er 0.6 V. Frekvensen er 20 kHz og tidsvinduet viser to perioder.
+Utgangsspenningen er vist blå og drainstrømmen grønn. Som det kan ses på strøm-spennings-karakteristikken for en J-FET, trengs en viss spenning på drain for at det skal gå en drainstrøm, synlig på grensen til 'linear region'. Utgangsspenningen ved maksimal utstyring ved tiden 10 us klippes nede ved 1 V (da har R1 11 V over seg) og strømmen klippes følgelig ved 2.2 mA. Minimal utstyring ved ca. 40 us viser at inngangen drives til nær pinch-off-spenningen ved -2.8 V, men ikke helt. Databladet spesifiserer denne spenningen til 'høyere enn -8 V'. Den flattrykte formen på spenningskurven kommer av at VGS/IDS-kurven flater ut mot venstre. Spenningsforsterkningen kan ikke leses klart ut på grunn av forvrengningene, men med nedsatt utstyring ble den i simulatoren funnet til å være 10.7x.
+Transkonduktansen er oppgitt i databladet til å være 'typisk 5.6 mS'. Hvis forvrengningene overses, leses en signalstrøm på drain til å være ca. 3 mApp med inngangsspenningen 0.6 Vpp, noe som gir 5 mS transkonduktans. I arbeidspunktet er UUT lik 7.8 V og drainstrømmen ID 840 uA.
+Inngangsstrømmen (ut av gate her) er vist rød. Den svinger om null og viser strømmen for lading og utlading av transistorens interne (parasittiske) kapasiteter i løpet av perioden. Amplituden er proporsjonal med frekvensen. Denne strømmen blir relativt rufsete der transistoren drives inn i og ut av metning. Amplituden er skalert opp 1000 ganger og er 0.9 uA for 20 kHz.
+De instantane effekttapene er vist i grått med skala til venstre.
+
+
+==== NMOS bryter ====
+
+Bildene viser bruk av NMOS krafttransistoren BSB014N04LX3 G mot sine grenser. Koplingen simulerer på- og avslag av 400 A strøm til en 0.1 Ohms lastmotstand ved 20 kHz. De to siste bildene viser på- og avslag forstørret i tid. Tapene i transistoren er ca. 82 W ved 50 % på.
+Databladet setter grenser ved 40 V på drain, ved 400 A pulset strøm og effekttap på 89 W. Pakken (huset) er bare 5x6.5 mm stor, med en tykkelse på 0.7 mm. Transistoren trenger en ekstern kjøleflate i tillegg. De interne kapasitetene er oppgitt til 140 pF g-s (millerkapasiteten), 12.7 nF (gate til source og drain (kortsluttet ved måling)) Ciss, og 2.4 nF (drain til source og gate) Coss.
+Akkurat i overgangene får transistoren tilført opptil 4 kW i korte øyeblikk; da er det både spenning over og strøm gjennom transistoren samtidig. I simulasjonen er gatespenningen satt til 0 og 10 V, samt å bruke 0.1 us på transienten. Gatestrømmen (rød) er skalert opp 100 ganger, og blir maksimalt +/- 1.6 A. Denne strømmen må driverkretsen være i stand til å levere, ved over 10-20 MHz bandbredde.
+Spenningsfallet i R2, gatemotstanden på 1 Ohm, kan ses på den lyseblå og den mørkegule grafen. Hoveddelen av tapene i transistoren kommer fra spenningsfallet i 'på' som kan leses av til 0.4 V. En overslagsberegning gir da et tap på 0.4*400/2 = 80 W. Transienteffekten på 4 kW bidrar altså ikke mye til transistortapene her.
+
+
+== Matematiske beskrivelser ==
+For transistorer, som ved de fleste mekanismer, kan det lages matematiske modeller som mer eller mindre nøyaktig beskriver dem, eller i det minste viktige deler av deres oppførsel.
+
+
+=== Den bipolare transistoren ===
+En enkel, men ganske nøyaktig modell av strømforsterkningen får vi med Ebers – Molls modell. Den ser på hFE (en alternativ betegnelse for β) som konstant gitt av αF, der F står for 'Forward'. Strømmene uttrykkes ved to ligninger:
+
+  
+    
+      
+        
+          I
+          
+            
+              E
+            
+          
+        
+        =
+        
+          I
+          
+            
+              E
+              S
+            
+          
+        
+        (
+        
+          e
+          
+            
+              V
+              
+                
+                  B
+                  E
+                
+              
+            
+            
+              /
+            
+            
+              V
+              
+                
+                  T
+                
+              
+            
+          
+        
+        −
+        1
+        )
+      
+    
+     
+  som for ikke-mikroskopisk strøm er identisk med 
+  
+    
+      
+        
+          I
+          
+            
+              E
+            
+          
+        
+        =
+        
+          I
+          
+            
+              E
+              S
+            
+          
+        
+        (
+        
+          e
+          
+            
+              V
+              
+                
+                  B
+                  E
+                
+              
+            
+            
+              /
+            
+            
+              V
+              
+                
+                  T
+                
+              
+            
+          
+        
+        )
+      
+    
+     
+  , og 
+
+  
+    
+      
+        
+          I
+          
+            
+              C
+            
+          
+        
+        =
+        
+          α
+          
+            F
+          
+        
+        
+          I
+          
+            
+              E
+            
+          
+        
+      
+    
+     
+  hvor
+
+  
+    
+      
+        
+          I
+          
+            
+              E
+            
+          
+        
+      
+    
+     
+   er emitterstrømmen,
+
+  
+    
+      
+        
+          I
+          
+            
+              C
+            
+          
+        
+      
+    
+     
+   er kollektorstrømmen,
+
+  
+    
+      
+        
+          α
+          
+            F
+          
+        
+      
+    
+     
+   kalles felles-base-forover-kortslutningsstrømforsterkning (0,98 til 0,998),
+
+  
+    
+      
+        
+          I
+          
+            
+              E
+              S
+            
+          
+        
+      
+    
+     
+   kalles revers metningsstrøm av base-emitter-dioden (størrelse omtrent 10−15 til 10−12 ampere),
+
+  
+    
+      
+        
+          V
+          
+            
+              T
+            
+          
+        
+      
+    
+     
+   er den såkalte termiske spenningen (omtrent 26 mV ved romtemperatur ≈ 300 K),
+
+  
+    
+      
+        
+          V
+          
+            
+              B
+              E
+            
+          
+        
+      
+    
+     
+   er base-emitter-spenningen, og
+
+  
+    
+      
+        
+          h
+          
+            
+              F
+              E
+            
+          
+        
+        =
+        
+          
+            1
+            
+              1
+              −
+              
+                α
+                
+                  
+                    F
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+    er strømforsterkningsfaktoren, lik βDen termiske spenningen er gitt ved
+
+  
+    
+      
+        
+          V
+          
+            
+              T
+            
+          
+        
+        =
+        
+          
+            
+              k
+              T
+            
+            q
+          
+        
+      
+    
+     
+  hvor
+
+k er Boltzmanns konstant og lik 1,38 • 10−23,
+T er den absolutte temperaturen i kelvin og er lik 273,15 + °C, og
+q er elektronets ladning og er lik 1,6 • 10−19  coulomb.Uttrykt med ord og sett bort fra natukonstanter og temperatur: Emitterstrømmen stiger eksponensielt med base-emitterspenningen, og Kollektorstrømmen er nesten lik emitterstrømmen.
+Forskjellen mellom emitterstrømmen og kollektorstrømmen er basestrømmen. Forholdet mellom kollektorstrømmen og basestrømmen er strømforsterkningen.
+Ebers -Molls modell fører til ligninger som sier at transistoren i prinsippet er en transkonduktans-forsterker, idet den får spenning inn, VBE som styrer en strøm ut, IC. Transistorens forsterkning måles altså i A(ut)/V(inn), som har dimensjonen for konduktans, S.
+Ebers-Molls ligninger beskriver inngangen som spenningsstyrt. Beskrivelsen er korrekt over minst seks dekader med strøm, men spenningsstyring av bipolare transistorer er likevel ikke gjennomførbart i praksis. Forspenningen av basedioden krever 0,4–0,8 V, og denne spenningen er svært temperaturavhengig, som modellens ligninger også sier gjennom VT. Ligningene viser en sterk ulinearitet – eksponensialfunksjonen – for en spenningsstyring. Med strømstyring er det i praksis mye lettere; strømforsterkningen er noenlunde konstant, som nevnt over.
+Videreførende, mer nøyaktige modeller er fremfor alt viktig i elektroniske kretssimulatorer som med datakraft prøver å etterligne oppførselen til elektriske og elektroniske koblinger så nær virkeligheten som mulig. To utvidete modeller er Standard og Modifisert Gummel-Poon, kalt SGP og MGP.
+
+
+=== Felteffekt-transistorene ===
+Felteffekt-transistorer av alle typer kan beskrives ved noenlunde de samme ligningene. Som grafene og teksten over viser, har transistorene to distinkte arbeidsområder, det ohmske eller linjære området for små d-s spenninger, og det aktive eller metnings-området for høyere drainspenninger. Disse to områdene beskrives hver for seg med forskjellige matematiske tilnærmelser.
+Det skilles likevel mellom JFET-er og MOS depletion og enhancement typer fordi betegnelser ikke er like mellom typene.
+
+
+==== JFET ====
+I det aktive området (eng: Saturation region) er drainstrømmen noenlunde uavhengig av drainspenningen, som følgelig da ikke inngår i ligningen.
+
+  
+    
+      
+        
+          I
+          
+            D
+          
+        
+        =
+        
+          I
+          
+            D
+            S
+            S
+          
+        
+        
+          
+            (
+            
+              1
+              −
+              
+                
+                  
+                    V
+                    
+                      G
+                      S
+                    
+                  
+                  
+                    V
+                    
+                      P
+                    
+                  
+                
+              
+            
+            )
+          
+          
+            2
+          
+        
+      
+    
+     
+  hvor
+
+Formelen kan for greiere lesbarhet forenkles til
+
+  
+    
+      
+        
+          I
+          
+            D
+            S
+          
+        
+        =
+        k
+        o
+        n
+        s
+        t
+        (
+        
+          
+            V
+            
+              G
+              S
+            
+          
+        
+        −
+        
+          
+            V
+            
+              P
+            
+          
+        
+        
+          )
+          
+            2
+          
+        
+      
+    
+     
+  , siden VP er en konstant.Formelen sier med ord at draistrømmen øker kvadratisk med hvor mye høyere gatespenningen er enn pinch-off-spenningen. Dette medfører at avstanden mellom de horisontale linjene (konstant drainstrøm) ligger tettere nede i diagrammet når gatespenningen har samme verdisprang fra graf til graf. Dette fører til noe forvrengning i en forsterkerkopling.
+I det linjære, eller ohmske, området beskrives sammenhengene som
+
+  
+    
+      
+        
+          I
+          
+            D
+          
+        
+        =
+        
+          
+            
+              2
+              
+                I
+                
+                  D
+                  S
+                  S
+                
+              
+            
+            
+              V
+              
+                P
+              
+              
+                2
+              
+            
+          
+        
+        
+          (
+          
+            
+              V
+              
+                G
+                S
+              
+            
+            −
+            
+              V
+              
+                P
+              
+            
+            −
+            
+              
+                
+                  V
+                  
+                    D
+                    S
+                  
+                
+                2
+              
+            
+          
+          )
+        
+        
+          V
+          
+            D
+            S
+          
+        
+      
+    
+     
+  Der VDS er drainspenningen mot source.
+Området kalles linjært eller ohmsk fordi kurvene er rettlinjet der de går gjennom origo, slik det er for motstander. Da har VDS en lav verdi. For små VDS får kvadratleddet VDS2 liten betydning og kan strykes for tilnærmet beregning. (VGS-VP) kan kalles drivspenningen her, og formelen sier da at RDS blir omvendt proporsjonal til drivspenningen. 
+
+  
+    
+      
+        
+          R
+          
+            D
+            S
+          
+        
+        =
+        
+          
+            
+              V
+              
+                D
+                S
+              
+            
+            
+              I
+              
+                D
+              
+            
+          
+        
+        =
+        
+          
+            
+              V
+              
+                P
+              
+              
+                2
+              
+            
+            
+              2
+              
+                I
+                
+                  D
+                  S
+                  S
+                
+              
+              (
+              
+                V
+                
+                  G
+                  S
+                
+              
+              −
+              
+                V
+                
+                  P
+                
+              
+              )
+            
+          
+        
+        =
+        
+          
+            k
+            
+              
+                V
+                
+                  G
+                  S
+                
+              
+              −
+              
+                V
+                
+                  P
+                
+              
+            
+          
+        
+      
+    
+     
+  hvor RDS er motstandsverdien mellom drain og source.
+Tas kvadratleddet med blir kurven krum, som den gjør for noe større VDS.
+Felteffekttransistorer oppviser slik en styrbar motstand i det linjære området. Dette området strekker seg opp til der VDS er lik VGS-VP, drivspenningen.
+
+
+==== MOSFET ====
+Den inngangsspenningen VGS som skal til for å slå av sourcestrømmen kalles for MOSFET-er Vth for terskelspenning (eng: threshold voltage). Den kjennes igjen for JFET-er som pinch-off spenningen. For N-kanal transistorer er Vth negativ for depletion-typer og noe over null for enhancement-typer.
+I det linjære området blir drainstrømmen
+
+  
+    
+      
+        
+          I
+          
+            
+              D
+              S
+            
+          
+        
+        =
+        2
+        k
+        o
+        n
+        s
+        t
+        
+          (
+          
+            
+              (
+              
+                
+                  U
+                  
+                    
+                      G
+                      S
+                    
+                  
+                
+                −
+                
+                  U
+                  
+                    
+                      t
+                      h
+                    
+                  
+                
+              
+              )
+            
+            ⋅
+            
+              U
+              
+                
+                  D
+                  S
+                
+              
+            
+            −
+            
+              
+                
+                  
+                    
+                      U
+                      
+                        
+                          D
+                          S
+                        
+                      
+                    
+                  
+                  
+                    2
+                  
+                
+                2
+              
+            
+          
+          )
+        
+      
+    
+     
+  som tilsvarer formelen for JFET-transistoren. Motstandsverdien kan beregnes på tilsvarende vis.
+Metningsområdet for MOSFET-er beskrives ved:
+
+  
+    
+      
+        
+          I
+          
+            
+              D
+              S
+            
+          
+        
+        =
+        
+          k
+          o
+          n
+          s
+          t
+        
+        
+          
+            (
+            
+              
+                U
+                
+                  
+                    G
+                    S
+                  
+                
+              
+              −
+              
+                U
+                
+                  
+                    t
+                    h
+                  
+                
+              
+            
+            )
+          
+          
+            2
+          
+        
+      
+    
+     
+  der verdien for konstanten, en forsterkningsfaktor, er den samme.
+Enhancement MOSFET transistorer er blitt populære fordi det ikke trenges negative spenninger for å drive dem. Enhancement-typer er i tillegg populære fordi de ikke leder før de får tilført et eksternt styresignal. De kan ikke lede av seg selv.
+
+
+== Transistorkoblinger ==
+For å få den høyst ulineære komponenten transistor til å arbeide til å gi nesten helt lineære forsterkere, benyttes forskjellige erkjennelser som er samlet opp med tiden. Faget som hovedsakelig beskjeftiger seg med dette kalles elektronikk.
+
+Det gjøres en utstrakt bruk av motstander, som er meget lineære strøm-til-spennings-omformere og omvendt. Motstander brukes også som spenningsdelere til å sette opp arbeidsbetingelsene for transistoren.
+Forsterkertrinn kobles et sammen på en slik måte at de uønskede egenskapene ikke oppstår, gjøres svært små eller kompenseres for, mens de ønskede egenskapene gis så gode forhold som mulig.
+Det blir også gjort en utstrakt bruk av negativ tilbakekobling, ofte ganske subtilt som ved en enkel emittermotstand. Negativ tilbakekobling medfører at vi øker lineæritet mot å gi fra oss forsterkningsmengde.
+Vi finner opp en rekke transistorkoblinger med funksjoner som vi kan anse som byggeklosser som det er lett å sette sammen.En ikke fullstendig liste slike byggeklosser er (tall i parentes viser til at flere transistorer enn angitt kan brukes for ytterligere forbedring):
+
+
+=== 1 transistor ===
+Felles emitterkobling: det typiske én-transistors forsterkertrinnet, med mest effektforsterkning (både signalstrøm og -spenning forsterkes). Basis er inngang, kollektor er utgang.
+Felles-basiskobling: er god for HF, lav inngangsimpedans, ingen strømforsterking. Emitter er inngang.
+Felles-kollektorkobling eller emitterfølger, strømforsterkeren uten spenningsforsterkning. Basis er inngang, emitter er utgang.
+Bryteren: gir full spenning eller strøm ("på"), eller er null ("av"), til en last eller som et digitalt signal
+Konstant-strømkilde for DC (2, 3)
+Fasesplitter: som deler signalet opp i to like sterke signaler med motsatt fase
+Bootstrap forsterkertrinn: forsterkningen brukes til å lette styringen ved å bruke en del positiv tilbakekobling (2+)
+VBE-strekker: brukes som enkel småspennings forsyning, ofte til forspenningskontroll av utgangstrinnet i effektforsterkere
+
+
+=== 2 transistorer ===
+Kaskoden
+Darlingtontransistor: to likepolaritets transistorer (strømforsterkere) etter hverandre, enorm strømforsterkning
+Sziklaitransistor: to forskjelligpolaritets transistorer (strømforsterkere) etter hverandre, enorm strømforsterkning
+Strømspeil: strømmen som sendes inn i én terminal (mot en spenningsforsyning) trekkes spenningsuavhengig i en annen terminal (3)
+Differensialforsterker: klassisk inngang til effektforsterkere og operasjonsforsterkere (4)
+Et utall forsterkerkonfigurasjoner
+
+
+=== Spesifisering av bipolare transistorer ===
+Transistorer spesifiseres i et datablad (eng: datasheet). Databladene spesifiserer alt mulig som konstruktørene kunne tenke seg å være interessert i. Både begrensende og beskrivende tall eller grafer angis. Det gjelder elektrisk relevante spesifikasjoner for strøm, spenning, effekt, temperatur og hurtighet, men også mekaniske mål og anbefalt loddemetode for serieproduksjon. Noen av de viktigste størrelser er
+
+Maksimal spenning VCEO. Det gjelder i hovedsak kollektordiodens sperrespenning. Det vanlige området er fra 30 til 80 volt, men det finnes spesialtyper som tåler flere tusen volt. Hvis spenningen overskrides, vil krystallet begynne å lede på samme vis som en Zener-diode. Dette er i seg selv ikke destruktivt, men transistoren skades dersom krystalltemperaturen blir for høy på grunn av effekttapet.
+Maksimal strøm i kollektoren ICmax. Småsignaltyper tåler typisk 50 til 250 mA, men det er ikke egentlig noen grense oppover. Det skilles mellom korte strømpulser og kontinuerlig strøm i spesifikasjonene.
+Strømforsterkningsfaktoren hfe eller 
+  
+    
+      
+        β
+      
+    
+     
+  . Den er ofte gitt som en graf eller samling av grafer. Den stiger gjerne litt med kollektorstrømmen for plutselig å avta ved høye strømmer. Verdien kan ha forholdsvis stor spredning mellom individuelle transistorer, og et godt design bør være en krets som er relativt uavhengig av denne verdien. En minimumsverdi er ofte oppgitt. 100 til 400 er vanlige verdier for småsignaltyper. Noen småsignal typer tilbys som undertyper med forskjellige forsterkningsfaktorer.
+Emitter – base-spenning VEB0. Denne gjelder for sperreretningen av BE-dioden og er oftest å finne i 5–6 V-området. Dioden oppfører seg her som en Zener-diode med 5-6 V.
+Maksimalt tillatelig tilført effekt Ptot. Tilført effekt fører til oppvarming av krystallet. Oppvarmingen kommer i tillegg til omgivelsestemperaturen. Man anbefaler å holde krystallet under 150 grader i alle tilfeller, både i bruk og under lagring. Man regner i allmennhet med at for silisium øker feilkvoten til det dobbelte for hver 10 grader økning av temperaturen. Maksimal effekt blir gitt for forskjellig grad av ekstern kjøling.
+Termisk motstand Rth oppgis i grader K per watt. Denne beskriver hvor godt varmen ledes fra krystallet til overflaten eller kjøleflaten for effekttransistorer.
+Metningsspenningen VCEsat. Transistoren kan aldri klare å trekke kollektorspenningen helt til emitterspenningen, altså lede uten noe spenningsfall over transistoren. Både basen og kollektoren tilføres oppgitte strømmer og metningsspenningen oppgis for disse betingelsene.
+Lekkstrøm i kollektor til base ICB0 (engelsk: cutoff current). Kollektordioden er ikke perfekt, men lekker en liten strøm. Emitteren er åpen; emitterstrømmen er 0 ved denne målingen. Denne strømmen stiger sterkt med temperaturen.
+Kollektorkapasiteten mot base. CCB. Denne kalles også millerkapasiteten og kan begrense øvre grensefrekvens. Se kaskode. De to andre parasittkapasitetene (CE og EB) oppgis også, men de er for det meste mindre viktige.
+Transisjonsfrekvensen fT. Ved denne frekvensen er strømforsterkningen lik 1. fT er derfor den høyeste frekvensen som kan forsterkes.
+Støytallet F. F angis i dB ved gitte betingelser.
+
+
+== Eksterne lenker ==
+(en) Transistors – kategori av bilder, video eller lyd på Commons

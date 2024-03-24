@@ -1,0 +1,45 @@
+revision: 70784290
+title: Behavior-driven development
+url: https://pl.wikipedia.org/wiki/Behavior-driven_development
+
+
+---
+
+Behavior-driven development (BDD) – proces wytwórczy oprogramowania który powstał na podstawie procesu Test driven development (TDD). BDD to połączenie wspólnych metod i zasad TDD z cechami procesu domain-driven design (DDD) i obiektowo-zorientowanej analizy i projektowania (OOAD) w celu dostarczenia zespołom tworzącym oprogramowanie oraz zespołom zarządzającym wspólnych narzędzi umożliwiających współpracę przy tworzeniu oprogramowania.
+Chociaż BDD to głównie pomysł na to, jak rozwój oprogramowania powinien być zarządzany zarówno przez interesy biznesowe, jak i wiedzę techniczną, praktyka BDD zakłada wykorzystanie wyspecjalizowanego oprogramowania do wspierania procesu rozwoju. Chociaż narzędzia te są często dedykowane projektom BDD, mogą być postrzegane jako specjalistyczne formy narzędzi obsługujących rozwój oparty na testach. Narzędzia służą do automatyzacji wszechobecnego języka, co jest głównym tematem BDD.BDD jest w dużej mierze ułatwiony dzięki użyciu prostego języka specyficznego dla danej domeny (ang. Domain specific language - DSL) z wykorzystaniem składni języka naturalnego (np. Zdań w języku angielskim), które mogą wyrażać zachowanie i oczekiwane rezultaty. Testy od dłuższego czasu są popularnym zastosowaniem języków dziedzinowych o różnym stopniu zaawansowania. BDD jest uważane za skuteczną praktykę techniczną, zwłaszcza gdy "zakres problemu" zagadnienia biznesowego które trzeba rozwiązać jest złożony.
+
+
+== Historia ==
+BDD jest rozszerzeniem praktyki rozwoju poprzez testy: rozwoju który korzysta z prostego, dziedzinowego języka skryptowego. Te języki przekształcają zdania języka naturalnego w wykonywalne testy. Wynikiem jest bliższy związek z kryteriami akceptacji dla danej funkcji i testami używanymi do sprawdzania poprawności tej funkcjonalności. W tej postaci jest to ogólne rozszerzenie metodyki TDD.BDD skupia się na następujących aspektach:
+
+Od czego zacząć w procesie
+Co testować, a czego nie testować
+Ile można przetestować za jednym razem
+Jak nazwać testy
+Jak zrozumieć przyczynę ewentualnego niepowodzenia testuGłównym celem BDD jest ponowna analiza podejścia testów jednostkowych i akceptacyjnych , które naturalnie pojawiają się w tych kwestiach. Przykładowo, BDD sugeruje, aby nazwy testów jednostkowych były całymi zdaniami zaczynającymi się od warunkowego czasownika (np. w języku angielskim - od czasownika "should" - "powinien") i powinny być pisane w kolejności ich wartości biznesowej. Testy akceptacyjne powinny być napisane za pomocą tzw. "historyjek użytkowników" o następującej strukturze: "jako [rola] chcę [opis oczekiwanej funkcji], aby [opis oczekiwanej korzyści]". Kryteria akceptacyjne powinny być pisane w kategoriach scenariuszy i zaimplementowane w postaci klas: Given [początkowy kontekst], When [opis występującego zdarzenia], then [potwierdzenie wystąpienia oczekiwanego rezultatu] .
+Od tego momentu wiele osób opracowało ramy BDD przez kilka lat, definiując je ostatecznie jako platformę komunikacji i współpracy dla programistów, testerów i nietechnicznych lub biznesowych uczestników projektu. Podczas konferencji pt. "Agile specifications, BDD and Testing eXchange" w listopadzie 2009 roku w Londynie, Dan North przedstawił następujący opis BDD:BDD jest metodologią drugiej generacji, zewnętrzną, opartą na ciągnięciu, wielostronną, wieloskalową, o wysokiej automatyzacji i zwinności. Opisuje cykl interakcji ze ściśle zdefiniowanymi rezultatami, w wyniku czego powstaje działające, przetestowane oprogramowanie, które ma realną wartość.Dan North stworzył framework BDD o nazwie JBehave, a następnie framework BDD (na poziomie historyjek) dla języka Ruby o nazwie RBehave, który później został zintegrowany z projektem RSpec. Pracował również z takimi osobami jak David Chelimsky, Aslak Hellesøy i innymi w celu opracowania testów RSpec, a także napisał książkę pt. "The RSpec Book: Behaviour Driven Development with RSpec, Cucumber, and Friends". Pierwszy, oparty na historyjkach framework w RSpec został później zastąpiony przez narzędzie Cucumber. opracowane głównie przez Hellesøy'a. Capybara, która jest częścią platformy Cucumber, jest jednym z takich opartych na sieci oprogramowaniem do automatyzacji testów.
+
+
+== Zaawansowane techniki wyizolowania dziedziny ==
+Fragment oprogramowania adresujący główne problemy dziedziny, stanowi najczęściej niewielką część całego systemu informatycznego. Jego znaczenie jednak jest nieproporcjonalne w stosunku do jego rozmiaru. Użytkownik musi być w stanie dostrzec w poszczególnych elementach modelu cały system. Musi być on w stanie oddzielić obiekty dziedziny od innych funkcji systemu, aby nie mieszać pojęć dziedzinowych z innymi.
+W tym celu stosowanie są techniki służące wyizolowaniu dziedziny. W programowaniu obiektowym kod obsługujący interfejs użytkownika, bazę danych, a także wykonujący inne czynności pomocnicze jest bardzo często umieszczany w obiektach biznesowych. Dzieje się tak dlatego, iż jest to najprostszy sposób na stworzenie działającego kodu.
+Gdy kod związany z dziedziną jest rozproszony niezmiernie trudno jest go zrozumieć oraz dostrzec. Pobieżne zmiany do interfejsu użytkownika mogą zmienić również logikę biznesową, natomiast zmiana reguły biznesowej może wymagać skrupulatnego śledzenia kodu użytkownika. Implementacja spójnych obiektów staje się niepraktyczna, a testowanie automatyczne jest niewygodne.
+Istnieje wiele sposobów podziału systemu informatycznego, jednak doświadczenie przemysłowe pozwoliło utworzyć i zdefiniować architektury warstwowe.
+
+Warstwa interfejsu użytkownika - odpowiedzialna za wyświetlanie informacji dla użytkownika wraz z interpretacją jego poleceń
+Warstwa aplikacji - definiuje zamierzone zadania programu i steruje obiektami dziedziny w celu rozwiązania postawionych przed nimi zadań
+Warstwa dziedziny - warstwa odpowiedzialna za reprezentację zagadnień biznesowych, informacji o sytuacji biznesowej oraz reguł biznesowych
+Warstwa infrastruktury - udostępnia podstawowe możliwości techniczne wspierające warstwy wyższe tj. komunikaty wysyłane do aplikacji, zachowanie dziedziny, rysowanie elementów interfejsu użytkownika itp.
+
+
+== Zasady BDD ==
+Zgodnie z metodyką TDD, dla każdej jednostki oprogramowania programista musi:
+
+najpierw zdefiniować zestaw testów dla danego modułu;
+doprowadzić do niezaliczenia testów;
+zaimplementować moduł;
+na końcu upewnić się, że wdrożenie modułu sprawiło, iż testy zostały wykonane pomyślnieTa definicja jest raczej niespecyficzna, ponieważ umożliwia testy pod kątem wysokopoziomowych wymagań oprogramowania, szczegółów technicznych niskiego poziomu lub czegokolwiek pomiędzy. Z tego powodu, BDD można postrzegać jako ciągły rozwój TDD, który dokonuje bardziej szczegółowych wyborów niż TDD.
+BDD określa, że testy dowolnej jednostki oprogramowania powinny być opisane pod kątem pożądanego zachowania urządzenia. Zapożyczone z programowania zwinnego pojęcie "pożądanego zachowania" w tym przypadku składa się z wymagań stawianych przez firmę - to jest pożądanego zachowania, które ma wartość biznesową dla dowolnego podmiotu, który zlecił stworzenie danej jednostki oprogramowania. W praktyce BDD jest to określane jako działanie "na zewnątrz".
+
+
+== Przypisy ==

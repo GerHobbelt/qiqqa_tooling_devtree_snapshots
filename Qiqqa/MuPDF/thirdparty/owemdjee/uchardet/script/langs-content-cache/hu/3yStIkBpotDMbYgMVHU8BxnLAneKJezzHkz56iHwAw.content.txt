@@ -1,0 +1,62 @@
+revision: 26009445
+title: AutoCAD
+url: https://hu.wikipedia.org/wiki/AutoCAD
+
+
+---
+
+Az AutoCAD a személyi számítógépeken piacvezető CAD, mérnöki tervező szoftver. Eredetileg vektorgrafikus rajzoló programnak indult. Rendkívül rugalmas és változatos eszközökkel rendelkezik, melyekkel a program testreszabható, így AutoLISP és C nyelveken, valamint Visual Basic for Application nyelven programozható, de könnyen alakítható a menürendszer, különböző makro lehetőségek is rendelkezésre állnak.
+Ez a rugalmasság lehetővé tette, hogy alapul szolgáljon egy sor AutoCAD-re épülő alkalmazásnak, melyeket egyrészt maga a fejlesztő Autodesk cég, másrészt külső fejlesztők készítettek. Különlegessége, hogy rengeteg szakági alkalmazást fejlesztettek alá többek között építészeti, gépészeti, építőipari, elektromos, geodéziai, térinformatikai stb. céllal.
+Az AutoCAD rajzelemekből építkezik. Vannak egyszerű rajzelemek például vonal, kör, körív és összetett rajzelemek: vonallánc, méretezés. A blokk a felhasználó által tetszőleges rajzelemekből összeállított rajzelem. Az AutoCAD rajzba be lehet illeszteni raszter-fájlokat is. A külső referencia egy másik AutoCAD rajz beillesztése a rajzba úgy, hogy csak a közeli, vagy távoli hálózaton elfoglalt helyét kell megadni és a program beilleszti a rajzba. Ezzel a technikával az interneten keresztül elérhető távoli munkahelyek is képesek ugyanazon a terven dolgozni.
+Legújabb változata már biztosítja a parametrikus blokkok használatát is. Támogatja a térbeli modellezést, látványtervezést, adatbázisok számára kivonatok készítését, rajzok és hagyományos alfanumerikus adatbázisok dinamikus összekapcsolását, internetes közzétételi lehetőségeket, a nyomtatási elrendezések, stílusok kezelését. Az Autodesk már régóta magyarítja is ezt a programot [1].
+Az AutoCAD rajzfájl formátumát, gyakorlatilag minden más CAD és CAM program is legalább olvasni, de gyakran írni is tudja. Létezik a rajzfájlnak egy másik, szövegszerkesztővel olvasható és írható változata is, a DXF formátum, ez is általánosan elterjedt, ipari szabvánnyá vált.
+A programnak elkészült egy csökkentett funkcionalitású, olcsóbb változata is, amelyet AutoCAD LT néven forgalmaznak.
+Az AutoCAD a legelterjedtebb CAD szoftver a világon, Autodesk becslések szerint 2006-ban, mintegy egymilliárd AutoCAD DWG formátumú rajz volt használatban.
+
+
+== AutoCAD alapú szakmai CAD szoftverek ==
+Az AutoCAD rugalmas felépítése lehetővé teszi, hogy a különböző mérnöki területek eltérő szakmai igényeihez alkalmazkodó speciális CAD szoftverek készüljenek, melyek egész sorát fejlesztették ki független szoftverfejlesztő cégek. Az Autodesk saját AutoCAD alapú szakmaspecifikus szoftverjei 2012-ben az alábbiak:
+
+AutoCAD Architecture építészeti tervezésre. Ablakok, ajtók, lépcső szerkesztése, metszetek, homlokzat generálás alaprajzból.
+AutoCAD Civil 3D közlekedéssel, területfejlesztéssel, vízelvezető rendszerekkel kapcsolatos projektek tervezése AutoCAD környezetben.
+AutoCAD Electrical villamos szabályozás és vezérlés tervezéséhez
+AutoCAD LT olcsóbb változat Windows és Macintosh környezetre. Minden DWG rajz beolvasható, de csak 2D-ben szerkeszthető, néhány további korlátozással.
+AutoCAD Map 3D térbeli terepmodell, GIS és rajzi információk összekapcsolása
+AutoCAD Mechanical gépészeti tervezéshez
+AutoCAD MEP épületgépészeti és épületvillamossági tervezőrendszer
+AutoCAD P&ID csővezeték és műszerezés tervező szoftver
+AutoCAD Raster Design raszteres képek feldolgozása DWG formátumba automatikus és fél automatikus eljárásokkal. Papír térképek, műhold felvételek feldolgozására alkalmas
+AutoCAD Structural Detailing acélszerkezetek csomópontjainak és egyéb részleteinek tervezésére szolgáló eszköz.
+AutoCAD Utility Design szoftver villamos hálózat tervezéséhez
+
+
+== Verziók (amerikai kiadás) ==
+
+
+== Jegyzetek ==
+
+
+== Források ==
+Mercator Stúdió Elektronikus könyvkiadó 264 AutoCAD kötete a 14-2013 változatokhoz: [2] Archiválva 2017. december 12-i dátummal a Wayback Machine-ben
+Mercator Stúdió Elektronikus könyvkiadó 285 AutoCAD LT kötete az 1-2013 változatokhoz: [3] Archiválva 2017. december 12-i dátummal a Wayback Machine-ben
+E-könyv webáruház: [4]
+Dr. Pétery Kristóf: AutoCAD 2018 Biblia. 2017, Mercator Stúdió, AutoCAD 2018 Biblia Archiválva 2017. december 12-i dátummal a Wayback Machine-ben ISBN 978-963-365-845-1
+Dr. Pétery Kristóf: AutoCAD LT 2018 Biblia. 2017, Mercator Stúdió, AutoCAD LT 2018 Biblia Archiválva 2017. december 12-i dátummal a Wayback Machine-ben ISBN 978-963-365-834-5
+Varga Tibor: Autocad 2004 kezdőknek, haladóknak. 2003, Computer Studio, ISBN 9632126246
+Pintér Miklós: AutoCAD tankönyv és példatár síkbeli és térbeli rajzokhoz, Computerbooks, 2006, ISBN 9636183430
+Pintér Miklós: MECHANICAL DESKTOP - Tankönyv és példatár, Műszaki Könyvkiadó, 2002, ISBN 9631619346
+Pintér Miklós: Számítógéppel segített rajzolás. Síkbeli ábrázolás, Tankönyvmester Kiadó, 2006, ISBN 963946032X
+Pintér Miklós: Számítógéppel segített rajzolás. Térbeli ábrázolás, Tankönyvmester Kiadó, 2006, ISBN 9639460338
+
+
+== További információk ==
+Magyarországi forgalmazó: [5]
+Az Autodesk saját, ingyenes DWG fájlmegtekintője: DWG TrueView
+
+
+== Kapcsolódó szócikkek ==
+
+Autodesk Inventor
+Pro/Engineer
+Solidworks
+LibreCAD

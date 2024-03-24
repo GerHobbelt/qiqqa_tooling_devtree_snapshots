@@ -1,0 +1,17 @@
+revision: 19698919
+title: Ftrace
+url: https://fi.wikipedia.org/wiki/Ftrace
+
+
+---
+
+ftrace (lyhenne sanoista Function Tracer) on Linux-ytimen funktiokutsujen seurantatyökalu. ftrace on lisätty ytimeen versiossa 2.6.27 ja sillä voi seurata melkein kaikkia ytimen funktioita. Seuranta ei aiheuta lisäkuormaa kun se ei ole käytössä. Alkuperäinen kehittäjä on Steven Rostedt. ftracea on laajennettu tukemaan myös muita seurattavia asioita kuten miten pitkään keskeytykset ovat kytkettynä pois päältä ja kauanko korkean prioriteetin tehtäviä ajetaan niiden herättämisen jälkeen.ftracen keräämiä tietojen käsittelyyn on sovellusohjelmia kuten trace-cmd ja KernelShark.Android-alustalla atrace käyttää ftracea keräämään ytimen tapahtumia.
+
+
+== Lähteet ==
+
+
+== Aiheesta muualla ==
+Measuring Function Duration with Ftrace (PDF) (englanniksi)
+Kernel Recipes 2019 - ftrace: Where modifying a running kernel all started YouTube (englanniksi)
+Kernel Recipes 2019 - ftrace: Where modifying a running kernel all started SlideShare (englanniksi)

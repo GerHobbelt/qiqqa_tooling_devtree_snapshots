@@ -1,0 +1,125 @@
+revision: 21246765
+title: "Nelj\xE4nnen asteen yht\xE4l\xF6n ratkaisukaava"
+url: https://fi.wikipedia.org/wiki/Nelj%C3%A4nnen_asteen_yht%C3%A4l%C3%B6n_ratkaisukaava
+
+
+---
+
+Neljännen asteen yhtälön ratkaisukaava on kaava, jolla voidaan ratkaista polynomiyhtälöt, jotka ovat muotoa 
+  
+    
+      
+        a
+        
+          x
+          
+            4
+          
+        
+        +
+        b
+        
+          x
+          
+            3
+          
+        
+        +
+        c
+        
+          x
+          
+            2
+          
+        
+        +
+        e
+        x
+        +
+        f
+        =
+        0
+      
+    
+     
+  , missä 
+  
+    
+      
+        a
+        ≠
+        0
+      
+    
+     
+  . Neljättä astetta korkeamman asteen yhtälön ratkaisuille ei ole yleistä kaavaa. Yksinkertaisesti selitettynä tämä johtuu siitä, että sekä kolmannen että neljännen asteen yhtälön ratkaisut palautuvat toisen asteen yhtälön ratkaisuun. Jos samaa ratkaisutapaa yritetään viidennen tai korkeamman asteen yhtälölle, on saatu yhtälö korkeampaa astetta kuin alkuperäinen, joten ratkaisu ei onnistu. Tiettyjä erikoistapauksia varten ratkaisukaava voidaan kuitenkin johtaa.
+
+
+== Kaavan johdon idea ==
+Neljännen asteen yhtälön ratkaisukaava on varsin pitkä, joten esitetään vain idea, jolla kaavaan päädytään. Aluksi yhtälöön tehdään sopiva muotoa 
+  
+    
+      
+        x
+        =
+        y
+        +
+        g
+      
+    
+     
+   oleva sijoitus, jolloin kolmannen asteen termin kerroin häviää. Lisätään nyt yhtälöön puolittain termejä siten, että yhtälön vasen puoli voidaan tulkita olevan neliö muotoa 
+  
+    
+      
+        (
+        
+          x
+          
+            2
+          
+        
+        +
+        g
+        
+          )
+          
+            2
+          
+        
+      
+    
+     
+  . Lisätään tämän jälkeen puolittain yhtälön molemmille puolille termejä siten, että yhtälön vasen puoli voidaan tulkita neliöksi 
+  
+    
+      
+        (
+        
+          x
+          
+            2
+          
+        
+        +
+        g
+        +
+        y
+        
+          )
+          
+            2
+          
+        
+      
+    
+     
+  , missä y on tuntematon suure. Kiinnitetään nyt y:n arvo sellaiseksi, että yhtälön oikealla puolella oleva trinomi tulee neliöksi. Tämä saadaan, kun ratkaistaan yhtälön oikealla puolella olevan lausekkeen nollakohdat y:n suhteen. Tämä on mahdollista, sillä saatu yhtälö on kolmatta astetta, ja sille on kehitetty ratkaisukaava. Nyt y:n arvo voidaan sijoittaa alkuperäiseen yhtälöön, ja ottaa yhtälöstä puolittain neliöjuuri. Saatu yhtälö on toista astetta, joten ratkaisemalla tämä yhtälö saadaan selville alkuperäisen yhtälön juuret.
+
+
+== Katso myös ==
+Bikvadraattinen yhtälö
+
+
+== Aiheesta muualla ==
+Ohjelma, joka antaa 2., 3. ja 4. asteen yhtälön ratkaisut, kun siihen syötetään kertoimet

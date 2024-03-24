@@ -1,0 +1,3969 @@
+revision: 3853318
+title: "Matricu reizin\u0101\u0161ana"
+url: https://lv.wikipedia.org/wiki/Matricu_reizin%C4%81%C5%A1ana
+
+
+---
+
+Matricu reizināšana ir bināra operācija, kurā tiek reizināts matricu pāris, šīs operācijas rezultātā tiek iegūta jauna matrica. Skaitļi (piemēram, reāli, kompleksi skaitļi) var tikt reizināti kā elementārajā aritmētikā.
+Pastāv vairāki veidi, kā reizināt matricas, no kuriem vienkāršākais ir reizināšana ar skaitli. Matricu reizināšana nav komutatīva, kas nozīmē, ka A · B ≠ B · A. Ja tiek reizināta matrica A (n × m matrica) un B (m × p matrica), tad reizināšanas rezultāts AB ir n × p matrica.
+
+
+== Reizināšana ==
+
+
+=== Reizināšana ar skaitli ===
+Vienkāršākā reizināšana ar matricām ir matricas reizināšana ar skaitli.
+Skaitļa λ reizinājums ar matricu A ir matrica λA, kuras izmērs ir tāds pats, kā matricai A. Matricas λA locekļus definē kā
+
+  
+    
+      
+        (
+        λ
+        
+          A
+        
+        
+          )
+          
+            i
+            j
+          
+        
+        =
+        λ
+        
+          
+            (
+            
+              A
+            
+            )
+          
+          
+            i
+            j
+          
+        
+        
+        ,
+      
+    
+     
+  kas izvērstā pierakstā izskatās šādi:
+
+  
+    
+      
+        λ
+        
+          A
+        
+        =
+        λ
+        
+          
+            (
+            
+              
+                
+                  
+                    A
+                    
+                      11
+                    
+                  
+                
+                
+                  
+                    A
+                    
+                      12
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    A
+                    
+                      1
+                      m
+                    
+                  
+                
+              
+              
+                
+                  
+                    A
+                    
+                      21
+                    
+                  
+                
+                
+                  
+                    A
+                    
+                      22
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    A
+                    
+                      2
+                      m
+                    
+                  
+                
+              
+              
+                
+                  ⋮
+                
+                
+                  ⋮
+                
+                
+                  ⋱
+                
+                
+                  ⋮
+                
+              
+              
+                
+                  
+                    A
+                    
+                      n
+                      1
+                    
+                  
+                
+                
+                  
+                    A
+                    
+                      n
+                      2
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    A
+                    
+                      n
+                      m
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  λ
+                  
+                    A
+                    
+                      11
+                    
+                  
+                
+                
+                  λ
+                  
+                    A
+                    
+                      12
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  λ
+                  
+                    A
+                    
+                      1
+                      m
+                    
+                  
+                
+              
+              
+                
+                  λ
+                  
+                    A
+                    
+                      21
+                    
+                  
+                
+                
+                  λ
+                  
+                    A
+                    
+                      22
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  λ
+                  
+                    A
+                    
+                      2
+                      m
+                    
+                  
+                
+              
+              
+                
+                  ⋮
+                
+                
+                  ⋮
+                
+                
+                  ⋱
+                
+                
+                  ⋮
+                
+              
+              
+                
+                  λ
+                  
+                    A
+                    
+                      n
+                      1
+                    
+                  
+                
+                
+                  λ
+                  
+                    A
+                    
+                      n
+                      2
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  λ
+                  
+                    A
+                    
+                      n
+                      m
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        
+        .
+      
+    
+     
+  Līdzīgi tiek definēts matricas A reizinājums ar skaitli λ
+
+  
+    
+      
+        (
+        
+          A
+        
+        λ
+        
+          )
+          
+            i
+            j
+          
+        
+        =
+        
+          
+            (
+            
+              A
+            
+            )
+          
+          
+            i
+            j
+          
+        
+        λ
+        
+        ,
+      
+    
+     
+  kas izvērstā pierakstā izskatās šādi:
+
+  
+    
+      
+        
+          A
+        
+        λ
+        =
+        
+          
+            (
+            
+              
+                
+                  
+                    A
+                    
+                      11
+                    
+                  
+                
+                
+                  
+                    A
+                    
+                      12
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    A
+                    
+                      1
+                      m
+                    
+                  
+                
+              
+              
+                
+                  
+                    A
+                    
+                      21
+                    
+                  
+                
+                
+                  
+                    A
+                    
+                      22
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    A
+                    
+                      2
+                      m
+                    
+                  
+                
+              
+              
+                
+                  ⋮
+                
+                
+                  ⋮
+                
+                
+                  ⋱
+                
+                
+                  ⋮
+                
+              
+              
+                
+                  
+                    A
+                    
+                      n
+                      1
+                    
+                  
+                
+                
+                  
+                    A
+                    
+                      n
+                      2
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    A
+                    
+                      n
+                      m
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        λ
+        =
+        
+          
+            (
+            
+              
+                
+                  
+                    A
+                    
+                      11
+                    
+                  
+                  λ
+                
+                
+                  
+                    A
+                    
+                      12
+                    
+                  
+                  λ
+                
+                
+                  ⋯
+                
+                
+                  
+                    A
+                    
+                      1
+                      m
+                    
+                  
+                  λ
+                
+              
+              
+                
+                  
+                    A
+                    
+                      21
+                    
+                  
+                  λ
+                
+                
+                  
+                    A
+                    
+                      22
+                    
+                  
+                  λ
+                
+                
+                  ⋯
+                
+                
+                  
+                    A
+                    
+                      2
+                      m
+                    
+                  
+                  λ
+                
+              
+              
+                
+                  ⋮
+                
+                
+                  ⋮
+                
+                
+                  ⋱
+                
+                
+                  ⋮
+                
+              
+              
+                
+                  
+                    A
+                    
+                      n
+                      1
+                    
+                  
+                  λ
+                
+                
+                  
+                    A
+                    
+                      n
+                      2
+                    
+                  
+                  λ
+                
+                
+                  ⋯
+                
+                
+                  
+                    A
+                    
+                      n
+                      m
+                    
+                  
+                  λ
+                
+              
+            
+            )
+          
+        
+        
+        .
+      
+    
+     
+  Piemērs ar reālu skaitli un matricu:
+
+  
+    
+      
+        λ
+        =
+        2
+        ,
+        
+        
+          A
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  a
+                
+                
+                  b
+                
+              
+              
+                
+                  c
+                
+                
+                  d
+                
+              
+            
+            )
+          
+        
+      
+    
+     
+  
+  
+    
+      
+        2
+        
+          A
+        
+        =
+        2
+        
+          
+            (
+            
+              
+                
+                  a
+                
+                
+                  b
+                
+              
+              
+                
+                  c
+                
+                
+                  d
+                
+              
+            
+            )
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  2
+                  
+                  ⋅
+                  
+                  a
+                
+                
+                  2
+                  
+                  ⋅
+                  
+                  b
+                
+              
+              
+                
+                  2
+                  
+                  ⋅
+                  
+                  c
+                
+                
+                  2
+                  
+                  ⋅
+                  
+                  d
+                
+              
+            
+            )
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  a
+                  
+                  ⋅
+                  
+                  2
+                
+                
+                  b
+                  
+                  ⋅
+                  
+                  2
+                
+              
+              
+                
+                  c
+                  
+                  ⋅
+                  
+                  2
+                
+                
+                  d
+                  
+                  ⋅
+                  
+                  2
+                
+              
+            
+            )
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  a
+                
+                
+                  b
+                
+              
+              
+                
+                  c
+                
+                
+                  d
+                
+              
+            
+            )
+          
+        
+        2
+        =
+        
+          A
+        
+        2.
+      
+    
+     
+  
+
+
+=== Divu matricu reizināšana ===
+
+Ja A ir n × m matrica un B ir m × p matrica,
+
+  
+    
+      
+        
+          A
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  
+                    A
+                    
+                      11
+                    
+                  
+                
+                
+                  
+                    A
+                    
+                      12
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    A
+                    
+                      1
+                      m
+                    
+                  
+                
+              
+              
+                
+                  
+                    A
+                    
+                      21
+                    
+                  
+                
+                
+                  
+                    A
+                    
+                      22
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    A
+                    
+                      2
+                      m
+                    
+                  
+                
+              
+              
+                
+                  ⋮
+                
+                
+                  ⋮
+                
+                
+                  ⋱
+                
+                
+                  ⋮
+                
+              
+              
+                
+                  
+                    A
+                    
+                      n
+                      1
+                    
+                  
+                
+                
+                  
+                    A
+                    
+                      n
+                      2
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    A
+                    
+                      n
+                      m
+                    
+                  
+                
+              
+            
+            )
+          
+        
+        ,
+        
+        
+          B
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  
+                    B
+                    
+                      11
+                    
+                  
+                
+                
+                  
+                    B
+                    
+                      12
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    B
+                    
+                      1
+                      p
+                    
+                  
+                
+              
+              
+                
+                  
+                    B
+                    
+                      21
+                    
+                  
+                
+                
+                  
+                    B
+                    
+                      22
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    B
+                    
+                      2
+                      p
+                    
+                  
+                
+              
+              
+                
+                  ⋮
+                
+                
+                  ⋮
+                
+                
+                  ⋱
+                
+                
+                  ⋮
+                
+              
+              
+                
+                  
+                    B
+                    
+                      m
+                      1
+                    
+                  
+                
+                
+                  
+                    B
+                    
+                      m
+                      2
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    B
+                    
+                      m
+                      p
+                    
+                  
+                
+              
+            
+            )
+          
+        
+      
+    
+     
+  tad matricu reizinājums AB (kas tiek apzīmēts bez kaut kādām reizinājuma zīmēm vai punktiem) ir n × p matrica
+
+  
+    
+      
+        
+          A
+        
+        
+          B
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  
+                    
+                      (
+                      
+                        A
+                        B
+                      
+                      )
+                    
+                    
+                      11
+                    
+                  
+                
+                
+                  
+                    
+                      (
+                      
+                        A
+                        B
+                      
+                      )
+                    
+                    
+                      12
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    
+                      (
+                      
+                        A
+                        B
+                      
+                      )
+                    
+                    
+                      1
+                      p
+                    
+                  
+                
+              
+              
+                
+                  
+                    
+                      (
+                      
+                        A
+                        B
+                      
+                      )
+                    
+                    
+                      21
+                    
+                  
+                
+                
+                  
+                    
+                      (
+                      
+                        A
+                        B
+                      
+                      )
+                    
+                    
+                      22
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    
+                      (
+                      
+                        A
+                        B
+                      
+                      )
+                    
+                    
+                      2
+                      p
+                    
+                  
+                
+              
+              
+                
+                  ⋮
+                
+                
+                  ⋮
+                
+                
+                  ⋱
+                
+                
+                  ⋮
+                
+              
+              
+                
+                  
+                    
+                      (
+                      
+                        A
+                        B
+                      
+                      )
+                    
+                    
+                      n
+                      1
+                    
+                  
+                
+                
+                  
+                    
+                      (
+                      
+                        A
+                        B
+                      
+                      )
+                    
+                    
+                      n
+                      2
+                    
+                  
+                
+                
+                  ⋯
+                
+                
+                  
+                    
+                      (
+                      
+                        A
+                        B
+                      
+                      )
+                    
+                    
+                      n
+                      p
+                    
+                  
+                
+              
+            
+            )
+          
+        
+      
+    
+     
+  kur katrs i, j loceklis ir iegūts, reizinot Aik elementu ar Bkj elementu, kur k = 1, 2, ..., m un tiek saskaitīti rezultāti līdz k:
+
+  
+    
+      
+        (
+        
+          A
+        
+        
+          B
+        
+        
+          )
+          
+            i
+            j
+          
+        
+        =
+        
+          ∑
+          
+            k
+            =
+            1
+          
+          
+            m
+          
+        
+        
+          A
+          
+            i
+            k
+          
+        
+        
+          B
+          
+            k
+            j
+          
+        
+        
+        .
+      
+    
+     
+  Tas nozīmē, ka reizinājums AB ir definēts, ja kolonnu skaits A matricā sakrīt ar rindu skaitu B matricā. Reizinājuma rezultāta matricā rindu skaits ir vienāds ar A rindu skaitu, savukārt kolonnu skaits — ar B kolonnu skaitu.
+
+
+==== Ilustrācija ====
+
+  
+    
+      
+        
+          
+            
+              [
+              
+                
+                  
+                    
+                      
+                        
+                          
+                            a
+                            
+                              11
+                            
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                      
+                        
+                          
+                            a
+                            
+                              12
+                            
+                          
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    ⋅
+                  
+                  
+                    ⋅
+                  
+                
+                
+                  
+                    
+                      
+                        
+                          
+                            a
+                            
+                              31
+                            
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                      
+                        
+                          
+                            a
+                            
+                              32
+                            
+                          
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    ⋅
+                  
+                  
+                    ⋅
+                  
+                
+              
+              ]
+            
+            
+              4
+              ×
+              2
+              
+                 matrica
+              
+            
+          
+        
+        
+          
+            
+              [
+              
+                
+                  
+                    ⋅
+                  
+                  
+                    
+                      
+                        
+                          
+                            b
+                            
+                              12
+                            
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                      
+                        
+                          
+                            b
+                            
+                              13
+                            
+                          
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    ⋅
+                  
+                  
+                    
+                      
+                        
+                          
+                            b
+                            
+                              22
+                            
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                      
+                        
+                          
+                            b
+                            
+                              23
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+              ]
+            
+            
+              2
+              ×
+              3
+              
+                 matrica
+              
+            
+          
+        
+        =
+        
+          
+            
+              [
+              
+                
+                  
+                    ⋅
+                  
+                  
+                    
+                      x
+                      
+                        12
+                      
+                    
+                  
+                  
+                    
+                      x
+                      
+                        13
+                      
+                    
+                  
+                
+                
+                  
+                    ⋅
+                  
+                  
+                    ⋅
+                  
+                  
+                    ⋅
+                  
+                
+                
+                  
+                    ⋅
+                  
+                  
+                    
+                      x
+                      
+                        32
+                      
+                    
+                  
+                  
+                    
+                      x
+                      
+                        33
+                      
+                    
+                  
+                
+                
+                  
+                    ⋅
+                  
+                  
+                    ⋅
+                  
+                  
+                    ⋅
+                  
+                
+              
+              ]
+            
+            
+              4
+              ×
+              3
+              
+                 matrica
+              
+            
+          
+        
+      
+    
+     
+  Vērtības krustpunktos ir iegūstamas ar šādām darbībām:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  x
+                  
+                    12
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        a
+                        
+                          11
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        b
+                        
+                          12
+                        
+                      
+                    
+                  
+                
+                +
+                
+                  
+                    
+                      
+                        a
+                        
+                          12
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        b
+                        
+                          22
+                        
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  x
+                  
+                    13
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        a
+                        
+                          11
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        b
+                        
+                          13
+                        
+                      
+                    
+                  
+                
+                +
+                
+                  
+                    
+                      
+                        a
+                        
+                          12
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        b
+                        
+                          23
+                        
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  x
+                  
+                    32
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        a
+                        
+                          31
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        b
+                        
+                          12
+                        
+                      
+                    
+                  
+                
+                +
+                
+                  
+                    
+                      
+                        a
+                        
+                          32
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        b
+                        
+                          22
+                        
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  x
+                  
+                    33
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        a
+                        
+                          31
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        b
+                        
+                          13
+                        
+                      
+                    
+                  
+                
+                +
+                
+                  
+                    
+                      
+                        a
+                        
+                          32
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        b
+                        
+                          23
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+  
+
+
+=== Matricu reizināšanas piemēri ===
+Rindas matrica un kolonnas matricaJa
+
+  
+    
+      
+        
+          A
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  a
+                
+                
+                  b
+                
+                
+                  c
+                
+              
+            
+            )
+          
+        
+        
+        ,
+        
+        
+          B
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  x
+                
+              
+              
+                
+                  y
+                
+              
+              
+                
+                  z
+                
+              
+            
+            )
+          
+        
+        
+        ,
+      
+    
+     
+  tad matricu reizināšanas rezultāts ir:
+
+  
+    
+      
+        
+          A
+          B
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  a
+                
+                
+                  b
+                
+                
+                  c
+                
+              
+            
+            )
+          
+        
+        
+          
+            (
+            
+              
+                
+                  x
+                
+              
+              
+                
+                  y
+                
+              
+              
+                
+                  z
+                
+              
+            
+            )
+          
+        
+        =
+        a
+        x
+        +
+        b
+        y
+        +
+        c
+        z
+        
+        ,
+      
+    
+     
+  un
+
+  
+    
+      
+        
+          B
+          A
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  x
+                
+              
+              
+                
+                  y
+                
+              
+              
+                
+                  z
+                
+              
+            
+            )
+          
+        
+        
+          
+            (
+            
+              
+                
+                  a
+                
+                
+                  b
+                
+                
+                  c
+                
+              
+            
+            )
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  x
+                  a
+                
+                
+                  x
+                  b
+                
+                
+                  x
+                  c
+                
+              
+              
+                
+                  y
+                  a
+                
+                
+                  y
+                  b
+                
+                
+                  y
+                  c
+                
+              
+              
+                
+                  z
+                  a
+                
+                
+                  z
+                  b
+                
+                
+                  z
+                  c
+                
+              
+            
+            )
+          
+        
+        
+        .
+      
+    
+     
+  Jāievēro, ka AB un BA ir divas dažādas matricas. Pirmā ir 1 × 1 matrica, bet otrā — 3 × 3 matrica.
+
+Kvadrātiska matrica un kolonnas matricaJa
+
+  
+    
+      
+        
+          A
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  a
+                
+                
+                  b
+                
+                
+                  c
+                
+              
+              
+                
+                  p
+                
+                
+                  q
+                
+                
+                  r
+                
+              
+              
+                
+                  u
+                
+                
+                  v
+                
+                
+                  w
+                
+              
+            
+            )
+          
+        
+        ,
+        
+        
+          B
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  x
+                
+              
+              
+                
+                  y
+                
+              
+              
+                
+                  z
+                
+              
+            
+            )
+          
+        
+        
+        ,
+      
+    
+     
+  tad matricu reizināšanas rezultāts ir:
+
+  
+    
+      
+        
+          A
+          B
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  a
+                
+                
+                  b
+                
+                
+                  c
+                
+              
+              
+                
+                  p
+                
+                
+                  q
+                
+                
+                  r
+                
+              
+              
+                
+                  u
+                
+                
+                  v
+                
+                
+                  w
+                
+              
+            
+            )
+          
+        
+        
+          
+            (
+            
+              
+                
+                  x
+                
+              
+              
+                
+                  y
+                
+              
+              
+                
+                  z
+                
+              
+            
+            )
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  a
+                  x
+                  +
+                  b
+                  y
+                  +
+                  c
+                  z
+                
+              
+              
+                
+                  p
+                  x
+                  +
+                  q
+                  y
+                  +
+                  r
+                  z
+                
+              
+              
+                
+                  u
+                  x
+                  +
+                  v
+                  y
+                  +
+                  w
+                  z
+                
+              
+            
+            )
+          
+        
+        
+        ,
+      
+    
+     
+  savukārt BA nav definēts.
+
+Kvadrātiskas matricasJa
+
+  
+    
+      
+        
+          A
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  a
+                
+                
+                  b
+                
+                
+                  c
+                
+              
+              
+                
+                  p
+                
+                
+                  q
+                
+                
+                  r
+                
+              
+              
+                
+                  u
+                
+                
+                  v
+                
+                
+                  w
+                
+              
+            
+            )
+          
+        
+        ,
+        
+        
+          B
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  α
+                
+                
+                  β
+                
+                
+                  γ
+                
+              
+              
+                
+                  λ
+                
+                
+                  μ
+                
+                
+                  ν
+                
+              
+              
+                
+                  ρ
+                
+                
+                  σ
+                
+                
+                  τ
+                
+              
+            
+            )
+          
+        
+        
+        ,
+      
+    
+     
+  tad matricu reizināšanas rezultāts ir:
+
+  
+    
+      
+        
+          A
+          B
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  a
+                
+                
+                  b
+                
+                
+                  c
+                
+              
+              
+                
+                  p
+                
+                
+                  q
+                
+                
+                  r
+                
+              
+              
+                
+                  u
+                
+                
+                  v
+                
+                
+                  w
+                
+              
+            
+            )
+          
+        
+        
+          
+            (
+            
+              
+                
+                  α
+                
+                
+                  β
+                
+                
+                  γ
+                
+              
+              
+                
+                  λ
+                
+                
+                  μ
+                
+                
+                  ν
+                
+              
+              
+                
+                  ρ
+                
+                
+                  σ
+                
+                
+                  τ
+                
+              
+            
+            )
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  a
+                  α
+                  +
+                  b
+                  λ
+                  +
+                  c
+                  ρ
+                
+                
+                  a
+                  β
+                  +
+                  b
+                  μ
+                  +
+                  c
+                  σ
+                
+                
+                  a
+                  γ
+                  +
+                  b
+                  ν
+                  +
+                  c
+                  τ
+                
+              
+              
+                
+                  p
+                  α
+                  +
+                  q
+                  λ
+                  +
+                  r
+                  ρ
+                
+                
+                  p
+                  β
+                  +
+                  q
+                  μ
+                  +
+                  r
+                  σ
+                
+                
+                  p
+                  γ
+                  +
+                  q
+                  ν
+                  +
+                  r
+                  τ
+                
+              
+              
+                
+                  u
+                  α
+                  +
+                  v
+                  λ
+                  +
+                  w
+                  ρ
+                
+                
+                  u
+                  β
+                  +
+                  v
+                  μ
+                  +
+                  w
+                  σ
+                
+                
+                  u
+                  γ
+                  +
+                  v
+                  ν
+                  +
+                  w
+                  τ
+                
+              
+            
+            )
+          
+        
+        
+        ,
+      
+    
+     
+  un
+
+  
+    
+      
+        
+          B
+          A
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  α
+                
+                
+                  β
+                
+                
+                  γ
+                
+              
+              
+                
+                  λ
+                
+                
+                  μ
+                
+                
+                  ν
+                
+              
+              
+                
+                  ρ
+                
+                
+                  σ
+                
+                
+                  τ
+                
+              
+            
+            )
+          
+        
+        
+          
+            (
+            
+              
+                
+                  a
+                
+                
+                  b
+                
+                
+                  c
+                
+              
+              
+                
+                  p
+                
+                
+                  q
+                
+                
+                  r
+                
+              
+              
+                
+                  u
+                
+                
+                  v
+                
+                
+                  w
+                
+              
+            
+            )
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  α
+                  a
+                  +
+                  β
+                  p
+                  +
+                  γ
+                  u
+                
+                
+                  α
+                  b
+                  +
+                  β
+                  q
+                  +
+                  γ
+                  v
+                
+                
+                  α
+                  c
+                  +
+                  β
+                  r
+                  +
+                  γ
+                  w
+                
+              
+              
+                
+                  λ
+                  a
+                  +
+                  μ
+                  p
+                  +
+                  ν
+                  u
+                
+                
+                  λ
+                  b
+                  +
+                  μ
+                  q
+                  +
+                  ν
+                  v
+                
+                
+                  λ
+                  c
+                  +
+                  μ
+                  r
+                  +
+                  ν
+                  w
+                
+              
+              
+                
+                  ρ
+                  a
+                  +
+                  σ
+                  p
+                  +
+                  τ
+                  u
+                
+                
+                  ρ
+                  b
+                  +
+                  σ
+                  q
+                  +
+                  τ
+                  v
+                
+                
+                  ρ
+                  c
+                  +
+                  σ
+                  r
+                  +
+                  τ
+                  w
+                
+              
+            
+            )
+          
+        
+        
+        .
+      
+    
+     
+  Rindas matrica, kvadrātiska matrica un kolonnas matricaJa
+
+  
+    
+      
+        
+          A
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  a
+                
+                
+                  b
+                
+                
+                  c
+                
+              
+            
+            )
+          
+        
+        
+        ,
+        
+        
+          B
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  α
+                
+                
+                  β
+                
+                
+                  γ
+                
+              
+              
+                
+                  λ
+                
+                
+                  μ
+                
+                
+                  ν
+                
+              
+              
+                
+                  ρ
+                
+                
+                  σ
+                
+                
+                  τ
+                
+              
+            
+            )
+          
+        
+        
+        ,
+        
+        
+          C
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  x
+                
+              
+              
+                
+                  y
+                
+              
+              
+                
+                  z
+                
+              
+            
+            )
+          
+        
+        
+        ,
+      
+    
+     
+  tad matricu reizināšanas rezultāts ir:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  A
+                  B
+                  C
+                
+              
+              
+                
+                =
+                
+                  
+                    (
+                    
+                      
+                        
+                          a
+                        
+                        
+                          b
+                        
+                        
+                          c
+                        
+                      
+                    
+                    )
+                  
+                
+                
+                  [
+                  
+                    
+                      
+                        (
+                        
+                          
+                            
+                              α
+                            
+                            
+                              β
+                            
+                            
+                              γ
+                            
+                          
+                          
+                            
+                              λ
+                            
+                            
+                              μ
+                            
+                            
+                              ν
+                            
+                          
+                          
+                            
+                              ρ
+                            
+                            
+                              σ
+                            
+                            
+                              τ
+                            
+                          
+                        
+                        )
+                      
+                    
+                    
+                      
+                        (
+                        
+                          
+                            
+                              x
+                            
+                          
+                          
+                            
+                              y
+                            
+                          
+                          
+                            
+                              z
+                            
+                          
+                        
+                        )
+                      
+                    
+                  
+                  ]
+                
+                =
+                
+                  [
+                  
+                    
+                      
+                        (
+                        
+                          
+                            
+                              a
+                            
+                            
+                              b
+                            
+                            
+                              c
+                            
+                          
+                        
+                        )
+                      
+                    
+                    
+                      
+                        (
+                        
+                          
+                            
+                              α
+                            
+                            
+                              β
+                            
+                            
+                              γ
+                            
+                          
+                          
+                            
+                              λ
+                            
+                            
+                              μ
+                            
+                            
+                              ν
+                            
+                          
+                          
+                            
+                              ρ
+                            
+                            
+                              σ
+                            
+                            
+                              τ
+                            
+                          
+                        
+                        )
+                      
+                    
+                  
+                  ]
+                
+                
+                  
+                    (
+                    
+                      
+                        
+                          x
+                        
+                      
+                      
+                        
+                          y
+                        
+                      
+                      
+                        
+                          z
+                        
+                      
+                    
+                    )
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    (
+                    
+                      
+                        
+                          a
+                        
+                        
+                          b
+                        
+                        
+                          c
+                        
+                      
+                    
+                    )
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        
+                          α
+                          x
+                          +
+                          β
+                          y
+                          +
+                          γ
+                          z
+                        
+                      
+                      
+                        
+                          λ
+                          x
+                          +
+                          μ
+                          y
+                          +
+                          ν
+                          z
+                        
+                      
+                      
+                        
+                          ρ
+                          x
+                          +
+                          σ
+                          y
+                          +
+                          τ
+                          z
+                        
+                      
+                    
+                    )
+                  
+                
+                =
+                
+                  
+                    (
+                    
+                      
+                        
+                          a
+                          α
+                          +
+                          b
+                          λ
+                          +
+                          c
+                          ρ
+                        
+                        
+                          a
+                          β
+                          +
+                          b
+                          μ
+                          +
+                          c
+                          σ
+                        
+                        
+                          a
+                          γ
+                          +
+                          b
+                          ν
+                          +
+                          c
+                          τ
+                        
+                      
+                    
+                    )
+                  
+                
+                
+                  
+                    (
+                    
+                      
+                        
+                          x
+                        
+                      
+                      
+                        
+                          y
+                        
+                      
+                      
+                        
+                          z
+                        
+                      
+                    
+                    )
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                a
+                α
+                x
+                +
+                b
+                λ
+                x
+                +
+                c
+                ρ
+                x
+                +
+                a
+                β
+                y
+                +
+                b
+                μ
+                y
+                +
+                c
+                σ
+                y
+                +
+                a
+                γ
+                z
+                +
+                b
+                ν
+                z
+                +
+                c
+                τ
+                z
+                
+                ,
+              
+            
+          
+        
+      
+    
+     
+  CBA nav definēts. Jāievēro, ka A(BC) = (AB)C, kas ir viena no matricu reizināšanas īpašībām.
+
+Taisnstūrveida matricasJa
+
+  
+    
+      
+        
+          A
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  a
+                
+                
+                  b
+                
+                
+                  c
+                
+              
+              
+                
+                  x
+                
+                
+                  y
+                
+                
+                  z
+                
+              
+            
+            )
+          
+        
+        
+        ,
+        
+        
+          B
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  α
+                
+                
+                  ρ
+                
+              
+              
+                
+                  β
+                
+                
+                  σ
+                
+              
+              
+                
+                  γ
+                
+                
+                  τ
+                
+              
+            
+            )
+          
+        
+        
+        ,
+      
+    
+     
+  tad matricu reizināšanas rezultāts ir:
+
+  
+    
+      
+        
+          A
+        
+        
+          B
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  a
+                
+                
+                  b
+                
+                
+                  c
+                
+              
+              
+                
+                  x
+                
+                
+                  y
+                
+                
+                  z
+                
+              
+            
+            )
+          
+        
+        
+          
+            (
+            
+              
+                
+                  α
+                
+                
+                  ρ
+                
+              
+              
+                
+                  β
+                
+                
+                  σ
+                
+              
+              
+                
+                  γ
+                
+                
+                  τ
+                
+              
+            
+            )
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  a
+                  α
+                  +
+                  b
+                  β
+                  +
+                  c
+                  γ
+                
+                
+                  a
+                  ρ
+                  +
+                  b
+                  σ
+                  +
+                  c
+                  τ
+                
+              
+              
+                
+                  x
+                  α
+                  +
+                  y
+                  β
+                  +
+                  z
+                  γ
+                
+                
+                  x
+                  ρ
+                  +
+                  y
+                  σ
+                  +
+                  z
+                  τ
+                
+              
+            
+            )
+          
+        
+        
+        ,
+      
+    
+     
+  un
+
+  
+    
+      
+        
+          B
+        
+        
+          A
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  α
+                
+                
+                  ρ
+                
+              
+              
+                
+                  β
+                
+                
+                  σ
+                
+              
+              
+                
+                  γ
+                
+                
+                  τ
+                
+              
+            
+            )
+          
+        
+        
+          
+            (
+            
+              
+                
+                  a
+                
+                
+                  b
+                
+                
+                  c
+                
+              
+              
+                
+                  x
+                
+                
+                  y
+                
+                
+                  z
+                
+              
+            
+            )
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  α
+                  a
+                  +
+                  ρ
+                  x
+                
+                
+                  α
+                  b
+                  +
+                  ρ
+                  y
+                
+                
+                  α
+                  c
+                  +
+                  ρ
+                  z
+                
+              
+              
+                
+                  β
+                  a
+                  +
+                  σ
+                  x
+                
+                
+                  β
+                  b
+                  +
+                  σ
+                  y
+                
+                
+                  β
+                  c
+                  +
+                  σ
+                  z
+                
+              
+              
+                
+                  γ
+                  a
+                  +
+                  τ
+                  x
+                
+                
+                  γ
+                  b
+                  +
+                  τ
+                  y
+                
+                
+                  γ
+                  c
+                  +
+                  τ
+                  z
+                
+              
+            
+            )
+          
+        
+        
+        .
+      
+    
+     
+  
+
+
+== Komutativitāte ==
+Piemērs, kas parāda, ka matricu reizināšana nav komutatīva.
+
+  
+    
+      
+        A
+        =
+        
+          
+            (
+          
+        
+        
+          
+            
+              
+                
+                  0
+                
+                
+                  1
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+              
+            
+          
+        
+        
+          
+            )
+          
+        
+        ,
+        
+        B
+        =
+        
+          
+            (
+          
+        
+        
+          
+            
+              
+                
+                  0
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  1
+                
+              
+            
+          
+        
+        
+          
+            )
+          
+        
+        ,
+      
+    
+     
+  
+  
+    
+      
+        
+          
+            
+              
+                A
+                ⋅
+                B
+              
+              
+                
+                =
+                
+                  
+                    (
+                  
+                
+                
+                  
+                    
+                      
+                        
+                          0
+                        
+                        
+                          1
+                        
+                      
+                      
+                        
+                          0
+                        
+                        
+                          0
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    )
+                  
+                
+                ⋅
+                
+                  
+                    (
+                  
+                
+                
+                  
+                    
+                      
+                        
+                          0
+                        
+                        
+                          0
+                        
+                      
+                      
+                        
+                          0
+                        
+                        
+                          1
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    )
+                  
+                
+                =
+                
+                  
+                    (
+                  
+                
+                
+                  
+                    
+                      
+                        
+                          0
+                        
+                        
+                          1
+                        
+                      
+                      
+                        
+                          0
+                        
+                        
+                          0
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    )
+                  
+                
+                ,
+              
+            
+            
+              
+                B
+                ⋅
+                A
+              
+              
+                
+                =
+                
+                  
+                    (
+                  
+                
+                
+                  
+                    
+                      
+                        
+                          0
+                        
+                        
+                          0
+                        
+                      
+                      
+                        
+                          0
+                        
+                        
+                          1
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    )
+                  
+                
+                ⋅
+                
+                  
+                    (
+                  
+                
+                
+                  
+                    
+                      
+                        
+                          0
+                        
+                        
+                          1
+                        
+                      
+                      
+                        
+                          0
+                        
+                        
+                          0
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    )
+                  
+                
+                =
+                
+                  
+                    (
+                  
+                
+                
+                  
+                    
+                      
+                        
+                          0
+                        
+                        
+                          0
+                        
+                      
+                      
+                        
+                          0
+                        
+                        
+                          0
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    )
+                  
+                
+                .
+              
+            
+          
+        
+      
+    
+     
+  
+
+
+== Atsauces ==
+
+
+== Ārējās saites ==
+MathWorld ieraksts (angliski)
+PlanetMath ieraksts (angliski)
+Kā reizināt matricas (angliski)
+Kā operēt ar matricām (angliski)

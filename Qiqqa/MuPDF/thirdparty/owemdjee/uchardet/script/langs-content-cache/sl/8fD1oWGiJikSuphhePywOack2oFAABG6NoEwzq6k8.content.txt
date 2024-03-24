@@ -1,0 +1,59 @@
+revision: 5770353
+title: Detektor svetlobe
+url: https://sl.wikipedia.org/wiki/Detektor_svetlobe
+
+
+---
+
+Detéktor svetlôbe ali fótodetéktor je fizikalna naprava, ki se uporablja v sistemih razsvetljave in fotometriji. Delimo jih na detektorje svetlosti, ki merijo svetlost določene površine in detektorje osvetljenosti, ki merijo koliko svetlobnega toka pade na določeno površino. Zadnji so najpogostejši pri regulaciji razsvetljave.
+
+
+== Diode PIN ==
+Daleč najpogostejši detektorji v sistemih regulirane razsvetljave so diode p-i-n. Delovanje temelji na svetlobnem vzbujanju elektronov, kar povzroči povečanje toka preko diode. To se zgodi tudi pri navadni diodi, torej pn spoju, a intrinzični pas pri diodi p-i-n občutno poveča odvisnost električnega toka od vpadne svetlobe. Odlikuje jih nizka cena, preprostost uporabe, majhnost in robustnost. Ključna karakteristika detektorja je krivulja njegove spektralne občutljivosti, ki se mora čim bolje ujemati s krivuljo spektralne občutljivosti očesa - V(λ), saj je od tega odvisna njegova točnost. Pri uporabi v fotometriji merimo namreč vedno glede na občutljivost človeškega očesa, ki jo podaja funkcija V(λ).
+
+
+== Fotopomnoževalke ==
+Fotopomnoževalke temeljijo na fotoelektričnem pojavu. Naprava je sestavljena iz kovinskih elementov – dinod, ter iz anode in katode. Katoda je negativno naelektrena in ob vpadu fotona se sprosti elektron, ki zaradi močnega električnega polja z veliko hitrostjo poleti proti anodi. Hitrost elektrona podaja naslednja enačba:
+
+  
+    
+      
+        
+          
+            1
+            2
+          
+        
+        m
+        
+          v
+          
+            2
+          
+        
+        =
+        h
+        f
+        −
+        Φ
+        
+        
+        ,
+      
+    
+     
+  pri čemer je:
+
+m – masa elektrona,
+v – hitrost elektrona,
+h – Planckova konstanta,
+f – frekvenca svetlobe,
+Φ – svetlobni tok.Ta elektron se nato zaleti v najbližjo dinodo in, ker ima veliko energijo, povzroči, da se iz dinode sprostita dva elektrona. Ta se nato zaletita v naslednjo dinodo in to povzroči plazovno naraščanje toka, kar se brez težav zazna. Spektralna občutljivost je odvisna od fotokatode, kar je razvidno iz zgornje enačbe. Običajno se uporablja katode, ki imajo veliko občutljivost v modrem in UV območju spektra, vendar so slabo občutljive v rdečem območju. Torej bi bila uporaba za namene razsvetljave nujno povezana z uporabo korekcijskih filtrov. Da se plazovni pojav doseže mora biti med elektrodama napetost več kV, kar je seveda velik problem za praktično uporabo. Druga slabost teh detektorjev pa je občutljivost na mehanske motnje, kajti cevi so običajno izvedene kot tanke steklene cevke z natančno pozicioniranimi dinodami, kar seveda zahteva veliko previdnost v ravnanju.
+
+
+== Izvori napak ==
+Skupna lastnost obeh detektorjev, ki jih lahko združimo pod imenom fotocelica, je podvrženost motnjam. Največji izvor napak je neustrezna spektralna porazdelitev, katero popravljamo z uporabo barvnih filtrov, medtem ko drugi najpogostejši izvor pogreškov predstavljajo razpršitelji svetlobe, ki so vgrajeni v vse fotocelice, saj je za pravilno delovanje detektorja, bodisi pin diode, bodisi fotomultiplikativne cevi, potrebno doseči homogeno porazdelitev svetlobe po površini senzorja. Slabost skoraj vseh razpršilcev (diffusorjev) je odvisnost prepustnosti od vpadnega kota svetlobe.
+
+
+== Zunanje povezave ==
+Detektorji svetlobe in uporaba le-teh v sistemih razsvetljave Arhivirano 2007-05-20 na Wayback Machine.

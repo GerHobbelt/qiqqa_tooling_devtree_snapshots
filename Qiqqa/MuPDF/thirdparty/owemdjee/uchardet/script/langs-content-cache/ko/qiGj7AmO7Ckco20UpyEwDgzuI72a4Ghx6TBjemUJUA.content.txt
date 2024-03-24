@@ -1,0 +1,55 @@
+revision: 32070628
+title: "\uB9C8\uC774\uD06C\uB85C\uC544\uD0A4\uD14D\uCC98"
+url: https://ko.wikipedia.org/wiki/%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98
+
+
+---
+
+마이크로아키텍처(microarchitecture) 또는 CPU 아키텍처는 컴퓨터 공학에서 컴퓨터의 CPU 또는 이와 관련된 디지털 신호 처리기의 전자 회로에 대한 설명으로 하드웨어의 운영에 대해 세세하게 기술이 되어 있다.
+학술 모임에서는 컴퓨터 시스템이라는 용어가 쓰이는 반면, 컴퓨터 산업에서는 마이크로아키텍처라는 용어가 더 자주 쓰인다. 마이크로아키텍처와 명령어 집합 구조 (ISA)는 함께 컴퓨터 아키텍처의 분야를 구성하고 있다.
+
+
+== 용어의 역사 ==
+1950년대부터 1970년대까지 많은 컴퓨터들이 마이크로프로그래밍을 사용하여 프로그램 함수를 디코딩하여 실행하는 제어 논리를 도입하였다. 마이크로프로그램의 언어들 안의 비트는 실제로 컴퓨터 계산을 했던 장치들을 제어했던 전기적 신호였다. 마이크로아키텍처라는 용어는 마이크로프로그램의 언어들이 통제하는 장치를 일컫는 데에 쓰인다.
+
+
+== 마이크로아키텍처의 측면 ==
+칩 영역/비용
+전력 소비
+논리의 복잡함
+연결의 쉬움
+제조할 수 있음
+오류 정정의 쉬움
+시험할 수 있음
+
+
+== 마이크로아키텍처의 개념 ==
+일반적으로 모든 CPU들, 곧 단일 칩 멀티프로세서나 다중 칩 프로세서들은 다음의 단계를 수행하며 프로그램들을 실행한다:
+
+함수를 읽어서, 읽은 함수를 디코딩한다.
+함수를 처리해야 하는 연결 데이터를 찾는다.
+함수를 처리한다.
+결과 출력을 기록한다.
+
+
+== CPU 아키텍처의 종류 ==
+일반적인 운영 체제(OS)를 참고하여 PC 및 서버 환경을 기준으로 하는 마이크로아키텍처의  대중적인 CPU 종류는 다음과 같다.
+
+
+== 같이 보기 ==
+마이크로프로세서
+마이크로컨트롤러
+디지털 신호 처리기
+CPU 설계
+하드웨어 아키텍처
+
+
+== 참고 문헌 ==
+
+D. Patterson and J. Hennessy (2004년 8월 2일). 《Computer Organization and Design: The Hardware/Software Interface》. Morgan Kaufmann Publishers, Inc. ISBN 1558606041. 
+V. C. Hamacher, Z. G. Vrasenic, and S. G. Zaky (2001년 8월 2일). 《Computer Organization》. McGraw-Hill. ISBN 0072320869.  CS1 관리 - 여러 이름 (링크)
+William Stallings (2002년 7월 15일). 《Computer Organization and Architecture》. Prentice Hall. ISBN 0130351199. 
+J. P. Hayes (2002년 9월 3일). 《Computer Architecture and Organization》. McGraw-Hill. ISBN 0072861983. 
+Gary Michael Schneider (1985). 《The Principles of Computer Organization》. Wiley. 6–7쪽. ISBN 0471885525. 
+M. Morris Mano (1992년 10월 19일). 《Computer System Architecture》. Prentice Hall. 3쪽. ISBN 0131755633. 
+Mostafa Abd-El-Barr and Hesham El-Rewini (2004년 12월 3일). 《Fundamentals of Computer Organization and Architecture》. Wiley-Interscience. 1쪽. ISBN 0471467413.

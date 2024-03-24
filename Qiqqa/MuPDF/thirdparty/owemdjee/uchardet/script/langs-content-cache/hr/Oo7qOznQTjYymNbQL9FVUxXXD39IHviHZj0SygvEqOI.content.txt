@@ -1,0 +1,106 @@
+revision: 6455846
+title: "Tlak elektromagnetskog zra\u010Denja"
+url: https://hr.wikipedia.org/wiki/Tlak_elektromagnetskog_zra%C4%8Denja
+
+
+---
+
+Tlak elektromagnetskog zračenja, radijacijski tlak ili svjetlosni tlak je tlak kojim svjetlost ili drugo elektromagnetsko zračenje djeluje na plohu na koju pada. U svakodnevnim uvjetima zanemarivo je malen, ali može biti velik za lasersko zračenje usmjereno na malu površinu. Tlak elektromagnetskog zračenja Sunca nije zanemariv pri proračunima putanja međuplanetarnih letjelica. Prvi ga je opisao J. Kepler (1619.) tumačeći zašto je rep kometa uvijek usmjeren poprečno (radijalno) od Sunca, teorijski ga je predvidio J. C. Maxwell (1862.), a prvi je pokusom dokazao njegovo postojanje (1899.) i izmjerio njegovo djelovanje na molekule plina (1909.) P. N. Lebedev.Tlak elektromagnetskog zračenja je tlak koji pritišće bilo koju površinu, koja je izložena elektromagnetskom zračenju. Ako ga površina upije, onda je tlak jednak iznosu zračenja podijeljenim brzinom svjetlosti. Ako je zračenje potpuno odbijeno (reflektirano), onda je tlak elektromagnetskog zračenja dvostruk. Tako na primjer, Sunčevo zračenje ima snagu 1 370 W/m2, pa je onda tlak elektromagnetskog zračenja 4,6 x 10-6 Pa (upijeno).
+
+
+== Otkriće ==
+Činjenicu da elektromagnetsko zračenje vrši tlak na izloženu površinu je teoretski zaključio J. C. Maxwell 1871. Kasnije je to dokazao ruski fizičar P. N. Lebedev 1900. i drugi znanstvenici. Tlak je jako slab, ali se može otkriti osjetljivim i uravnoteženim vjetrokazom, koji se sastoji od reflektivnog metala u Nicholsovom radiometru. 
+
+
+== Osnove teorije ==
+Kod toplinskog zračenja crnog tijela, kada je u ravnoteži s ozračenom površinom, gustoća energije je prema Stefan-Boltzmannovom zakonu jednaka je:  
+
+  
+    
+      
+        
+          j
+          
+            ⋆
+          
+        
+        =
+        4
+        ⋅
+        σ
+        ⋅
+        
+          T
+          
+            4
+          
+        
+      
+    
+     
+  gdje je σ - Stefan–Boltzmannova konstanta, c jebrzina svjetlosti u vakuumu i T je apsolutna temperatura.
+
+
+=== Tlak u međuplanetarnom prostoru ===
+Tlak elektromagnetskog zračenja je oko 4,6 x 10-6 Pa, na udaljenosti Zemlje od Sunca i smanjuje se kvadratom udaljenosti od Sunca. Iako je taj tlak vrlo malen u usporedbi s kemijskim raketnim pogonima, on se ipak može primijeniti i nije potrebno gorivo. Ako bi se primijenio na putovanju od Zemlje do Plutona, trebalo bi samo 25 – 50 % više vremena od kemijskih svemirskih letjelica. 
+
+Tablica pokazuje da je sila ubrzanja dosta velika u blizini Sunca, a u blizini Jupitera vrlo slaba. Većina sond koje su putovale u blizinu Sunca su bile gurane prema vani zbog tog tlaka. Osim toga, smatra se da je tlak elektromagnetskog zračenja dosta utjecao na razvoj vanjskih prstenova na Saturnu. 
+
+
+=== Iznos tlaka elektromagnetskog zračenja ===
+Prosječni iznos elektromagnetskog zračenja 
+  
+    
+      
+        ⟨
+        
+          S
+        
+        ⟩
+      
+    
+     
+    na neku površinu, podijeljen brzinom svjetla daje iznos tlaka elektromagnetskog zračenja:
+
+  
+    
+      
+        
+          P
+          
+            r
+            a
+            d
+          
+        
+        =
+        
+          
+            
+              ⟨
+              S
+              ⟩
+            
+            c
+          
+        
+      
+    
+     
+  
+
+
+=== U unutrašnjosti zvijezda ===
+U jezgri zvijezda superdivova je temperature oko 1 GK, pa je tlak elektromagnetskog zračenja prilično značajan za oblikovanje zvijezda.
+
+
+== Sunčeva jedrilica ==
+
+Sunčeva jedrilica je predlagan oblik svemirskih letjelica, gdje bi tlak elektromagnetskog zračenja Sunca, služio za pogon. Ideju je predlagao ruski znanstvenik Friedrich Zander 1924. Svemirska letjelica Cosmos 1 je trebala koristiti taj pogon. Japanska svemirska agencija JAXA je uspjela razviti Sunčevo jedro i koristila ga je na letjelici IKAROS.
+
+
+== Izvori ==
+
+
+== Poveznice ==
+Poynting-Robertsonov učinak

@@ -1,0 +1,128 @@
+revision: 151962993
+title: Google Glass
+url: https://es.wikipedia.org/wiki/Google_Glass
+
+
+---
+
+Glass es un dispositivo de visualización de tipo gafas de realidad aumentada desarrollado por Google[2]​ y presentado en el congreso I/O de junio de 2012. Glass Explorer Edition fue puesto a la venta para los desarrolladores calificados el 15 de abril de 2013 por 1500 USD[3]​ mientras que la versión para consumidores salió a la venta el 15 de mayo de 2014 en Estados Unidos. 
+El 23 de junio de 2014, Google anunció el lanzamiento de Glass fuera de Estados Unidos y llegó a los consumidores del Reino Unido por un precio de 1000 € con la posibilidad de adquirir el dispositivo en colores: rojo, negro, carbón, blanco y azul.[4]​
+Durante la conferencia Google I/O 2014, uno de los ausentes fue Glass, sin embargo días después se dio a conocer que el dispositivo habría recibido una mejora en cuanto a su hardware, cambiando de 1 GB de memoria RAM a 2 GB, además de la incorporación de nuevas aplicaciones.
+Actualmente las gafas vendidas ya incluyen los 2 GB de memoria RAM, pero los propietarios de un modelo anterior no podrán realizar una actualización.[5]​
+Ha vuelto a salir a la venta el 23 de julio de 2017, pero con colaboración de 11 empresas las cuales venderán la Google Glasses por ellos.
+El propósito de Glass era mostrar información disponible para los usuarios de teléfonos inteligentes sin utilizar las manos,[6]​ permitiendo también el acceso a Internet mediante órdenes de voz,[7]​ de manera comparable a lo que Google Now ofrece en dispositivos Android. El sistema operativo será Android.[8]​ El proyecto Glass es parte de la sección Google X de la compañía,[9]​ que ha trabajado en otras tecnologías futuristas, como un vehículo autónomo. El proyecto fue anunciado en Google+ por Babak Parviz, un ingeniero eléctrico que trabajó poniendo las pantallas en las lentes; Steve Lee, gerente del proyecto y especialista en geolocalización; y Sebastian Thrun, quien desarrolló la universidad en línea Udacity y trabajó en el proyecto de piloto automático para coches Google Car.[10]​ Google ya ha patentado Glass.[11]​
+El 15 de enero de 2015 la compañía anunció que dejaría de producir el prototipo de Glass.
+
+
+== Hardware ==
+
+
+=== Cámara ===
+Google Glass tiene la capacidad de tomar fotos a una resolución de 5 Mpx y grabar vídeo en 720 pixeles. 
+
+
+=== Touchpad ===
+La patilla derecha del dispositivo Google Glass tiene una superficie táctil que permite a los usuarios controlar el mismo mediante gestos como desplazar y tocar el dedo por el panel táctil.
+
+
+=== Lentes adicionales ===
+Estos lentes incluyen 2 cristales (pueden variar de negro o transparentes) sueltos de la marca Ray-Ban.
+
+
+=== Monturas ===
+
+Google amplió el público objetivo de Google Glass al hacer posible que personas que llevan gafas por prescripción médica puedan ajustar monturas de cristales graduados al dispositivo de realidad aumentada. El precio inicial de las monturas de Google para Google Glass es de 225 dólares y hay disponibles siete modelos: Classic, Bold, Edge, Active, Curve, Thin y Split.[12]​
+Además, otras empresas como Rochester Optical también han lanzado su línea de lentes graduadas para Google Glass.
+
+
+=== Especificaciones técnicas ===
+No hay información oficial sobre la resolución de pantalla. Se ha sugerido la de 640 × 360 ya que se recomienda para los desarrolladores de aplicaciones.
+Cámara de 5 Mpx, capaz de grabar vídeo 720p
+Wi-fi 802.11b/g
+Bluetooth
+Batería: hasta un día de uso, aunque indican que utilizarlas con Hangouts o para grabar vídeo reducirá la batería.
+Almacenamiento de 16 GB sincronizados con la nube (12 GB disponibles)
+Texas Instruments OMAP 4430 SoC 1.2GHz Dual (ARMv7)
+682 MB RAM.
+Giroscopio de 3 ejes.
+Acelerómetro de 3 ejes.
+Sensor geomagnético (brújula)
+Sensores de luz ambiente y sensor de proximidad interno.
+Sistema de conducción ósea para la transmisión del sonido. A partir de la versión 2.0 se permite la utilización de auriculares específicos.
+La montura es ajustable.
+Actualmente se basa en Android 4.0.4 modificado y adaptado al dispositivo [1] Archivado el 21 de marzo de 2016 en Wayback Machine..
+
+
+=== Características físicas ===
+En cuanto a sus características físicas con respecto al diseño ergonómico y materiales de construcción:
+
+El marco es de titanio es de materiales duraderos y se ajusta a cualquier tamaño de cabeza.
+Las almohadillas de la nariz son ajustables, por lo cual se adaptan a cualquier tamaño de cara y nariz.
+Peso de 50 g.
+
+
+== Software ==
+
+
+=== Aplicaciones ===
+Las aplicaciones de Glass son aplicaciones gratuitas creadas por desarrolladores de terceros. Glass también utiliza muchas aplicaciones existentes de Google, como Maps, Google + y Gmail.
+El 15 de abril de 2013, Google lanzó la API llamada Mirror para permitir a los desarrolladores empezar a hacer aplicaciones para Glass. En los términos del servicio, se afirma que los desarrolladores no pueden poner anuncios en sus aplicaciones o exigir tasas; un representante de Google dijo a The Verge que esto podría cambiar en el futuro[cita requerida] .
+
+Muchos desarrolladores y empresas han creado aplicaciones para Glass, incluyendo aplicaciones de noticias, edición de fotografías, aplicaciones médicas y redes sociales como Facebook y Twitter.
+
+
+=== Comandos de voz ===
+Una de la atracciones de este producto es que puede ser controlado mediante comandos de voz.
+Para activar Glass, los usuarios pueden inclinar la cabeza hacia arriba en un ángulo anteriormente configurado y decir "Ok, Glass".
+Una vez Glass está activada, los usuarios pueden dar un comando, como "haz una foto", "graba un vídeo" así como "Google" para iniciar una búsqueda, "guíame hacia",  "envía un mensaje a", "haz una (video) llamada a". Muchos de estos comandos se pueden ver en un vídeo de producto publicado en febrero de 2013 [2].
+
+
+== Prototipos ==
+Aunque las gafas de realidad aumentada no son una idea nueva, el proyecto consiguió la atención de la prensa[13]​ por tener un diseño más fino y ligero que otros prototipos y por estar desarrollado por Google.[14]​ El primer prototipo del proyecto Glass se parecía a un par de gafas normales donde se habían sustituido las lentes por pantallas.[15]​ En el futuro, se podría permitir la integración de la pantalla con las gafas corrientes.[16]​[8]​
+The New York Times publicó que las gafas estarían disponibles al público "más o menos al precio de un smartphone normal" a finales de 2012,[17]​ pero otras publicaciones afirmaron que las gafas iban a tardar más en estar a la venta.[18]​[19]​[20]​
+El producto se empezó a probar en abril de 2012.[21]​ Sergey Brin llevó un prototipo de estas lentes el 5 de abril de 2012 en un evento en San Francisco.[22]​[23]​ El 23 de mayo de 2012, Sergey Brin hizo una demostración de las gafas en The Gavin Newsom Show y dejó que el vicegobernador de California Gavin Newsom llevara las gafas.[24]​ El 27 de junio de ese año, Sergey Brin hizo una demostración de las gafas en el Google I/O donde paracaidistas, gente haciendo rápel, y ciclistas de montaña emitían en un hangout desde las Glass.[25]​
+El 21 de junio de 2013, el doctor español Pedro Guillén, jefe del Servicio de Traumatología de la Clínica CEMTRO de Madrid, junto a los desarrolladores españoles de Droiders, fueron los primeros a nivel mundial en retransmitir una intervención quirúrgica usando Google Glass. El implante de condrocitos realizado en la rodilla a una persona pudo seguirse en línea, lo que hizo posible que el doctor Homero Rivas, experto en telemedicina y Director de Cirugía Innovadora de la Escuela de Medicina de la Universidad de Stanford, colaborara en la cirugía.[26]​[27]​
+La tecnología de los desarrolladores de Droiders también hizo posible que el 26 de octubre de 2013 tres dentistas españoles (Peña, Piqueras y López)realizaran la primera intervención maxilofacial del mundo transmitida con Google Glass y que el 10 de diciembre se realizase la primera operación con Google Glass en Portugal (enlace roto disponible en Internet Archive; véase el historial, la primera versión y la última).
+
+ El 16 de noviembre de 2013 en Santiago de Chile el equipo de cirujanos maxilofaciales a cargo del Dr. Antonio Marino, Dres. Juan Argandoña, María Antonieta Inostroza y Axel Camousseight, efectuaron la primera cirugía ortognática en América Latina, transmitiendo el procedimiento mediante hangout de Google a un círculo ampliado. El procedimiento quirúrgico duró 4 horas y la autonomía de Glass fue de 1 hora de transmisión continua. El dispositivo fue utilizado además para mostrar imágenes 3d de simplant oms, sistema de navegación virtual en cirugía ortognática. Diversos medios periodísticos transmitieron la información. ADN Radio. Diario Las Últimas Noticias
+Asimismo, el 5 de marzo de 2014 en Matacán, Aeropuerto de Salamanca, la escuela de pilotos española Adventia, European College of Aeronautics, sucesora de la Escuela Nacional de Aeronáutica y centro adscrito a la Universidad de Salamanca, fue la primera del mundo en realizar un vuelo con este dispositivo, utilizándolo de modo real durante las diferentes fases de vuelo, especialmente en las varias listas de verificación que los pilotos tienen que desarrollar durante el mismo.[28]​
+
+
+== Recepción ==
+La recepción por parte de los usuarios fue buena y tuvo mucha repercusión en Internet y las redes sociales. A pesar de la recepción positiva general del prototipo, hubo numerosas parodias y críticas a este proyecto, que fueron desde el potencial de Google para insertar publicidad (su principal fuente de ingresos) hasta más distópicos resultados.[29]​[30]​
+
+
+== Receso ==
+Aunque las Google Glass son una realidad y tuvo buena acogida en muchos usuarios, aún limitando su enfoque a programadores, la compañía decidió no sacar el proyecto final en 2015, cancelando por ahora la venta masiva al público comercial o dar más información. A pesar de esto, aún puede esperarse que en un futuro Google de a conocer otros prototipos de lentes.
+
+
+== Reinicio del Proyecto ==
+El 18 de julio de 2017 la gran G dependiente de Alphabet sacó al mercado la nueva edición de Google Glass. La nueva edición es la denominada Google Glass Enterprise Edition. Desde el año 2015 el proyecto se detuvo, continuó el soporte a las miles de unidades activas y en su sitio web Glass dije que nuestra tarea no termina aquí. En ese momento ya nos indicaban que continuarían adelante. En ese momento continuaron con el trabajo las empresas asociadas. Empresas relacionadas con logística, internationals couriers, tele medicina, servicios médicos especializados en rescates y diseño y soporte de alta complejidad como mantención de líneas aéreas.
+El año 2016 apareció una filtración de un modelo, aparentemente era un prototipo, con muy buen despliegue de diseño, con bisagras y un prisma algo más largo. En ese instante aparece en ebay una venta a un alto valor. A las pocas horas dieron de baja el remate y el usuario desapareció. Ahora que podemos ver el diseño definitivo nos damos cuenta que efectivamente era una unidad de Google Glass Enterprise.
+Esta nueva Edición Enterprise tiene un nuevo concepto. Está enfocada al usuario específico. Está a cargo de empresas su venta y soporte y la plataforma no está entregada por Google. Las aplicaciones cargadas dependen exclusivamente de los servidores externos y dichos servicios serán manejados y desarrollados por terceros. Posiblemente las aplicaciones enfocadas a redes sociales sean limitadas y poco relacionadas con la gran G.
+Se mantiene la cámara, ahora con un led que indica su actividad. El bluetooth mejorado a 4.1. Incorpora nuevos sensores. El sistema de carga es magnético, el marco posee una curvatura y se pueden flectar las varillas, permitiendo así guardarlos en un estuche similar al de un anteojo convencional.
+En marzo de 2023, Google anunció el cese de fabricación de la Edición 2, manteniendo el soporte al 15 de septiembre de este año, para ser descontinuada.[31]​
+
+
+== Véase también ==
+OrCam MyEye
+Google Lens
+Spectacles - las gafas de Snapchat.
+EyeTap - cámara montada en gafas.
+Google Goggles – aplicación de realidad aumentada.
+Microsoft HoloLens
+Ropa tecnológica
+
+
+== Referencias ==
+Diario el Nacional España
+Dental Tribune
+Web Dental
+
+
+== Enlaces externos ==
+ Wikimedia Commons alberga una categoría multimedia sobre Google Glass.
+Google +
+Samsung podría presentar las gafas Gear Glass en el Consumer Electronics Show (CES)
+Las Últimas Noticias de Chile
+ADN Radio

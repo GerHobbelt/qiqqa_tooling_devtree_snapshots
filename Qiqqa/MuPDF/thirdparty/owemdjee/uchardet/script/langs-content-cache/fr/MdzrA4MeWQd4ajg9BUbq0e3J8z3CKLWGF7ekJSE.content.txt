@@ -1,0 +1,40 @@
+revision: 204330417
+title: Streaming SIMD Extension 2
+url: https://fr.wikipedia.org/wiki/Streaming_SIMD_Extension_2
+
+
+---
+
+Streaming SIMD Extension 2, généralement abrégé SSE2, est un jeu d'instructions pour microprocesseurs x86 implémenté pour la première fois par Intel en 2000, sur le Pentium IV. Le fonctionnement est de type SIMD et ajoute 144 instructions à son prédécesseur, le SSE, qui en possédait 70. Elle gère des registres 128 bits pour les entiers ainsi que les flottants simples et doubles précision.
+SSE2 est un prérequis pour pouvoir installer Windows 8 (et les versions suivantes de Windows) ainsi que Microsoft Office 2013.
+
+
+== Liste des processeurs ==
+SSE2 est une extension de l'architecture IA-32, basée sur le jeu d'instructions x86. Ainsi, seuls les processeurs x86 peuvent inclure SSE2. L'architecture AMD64 prend en charge l'IA-32 en mode de compatibilité et possède le SSE2 dans ses spécifications. 
+La liste des processeurs compatibles est la suivante :
+
+Processeurs Intel NetBurst (Pentium 4, Xeon, Celeron, Pentium D, Celeron D)
+Intel Pentium M et Celeron M
+Intel Atom
+AMD Athlon 64
+Transmeta Efficeon
+VIA C7
+
+
+== Évolutions ==
+Le SSE3 sur le Pentium IV Prescott, ajoute des instructions mathématiques orientées DSP et quelques instructions de gestion de processus.
+Le SSSE3 ajoute 16 nouveaux opcodes qui incluent la permutation des octets dans un mot, la multiplication des nombres à virgule fixe 16 bits avec un arrondissement correct et des instructions d'accumulation dans un mot. SSSE3 est souvent confondu avec SSE4 car ce terme a été utilisé pendant la phase de développement de la microarchitecture.
+Le SSE4 est une autre avancée majeure, ajoutant une instruction de produit scalaire, de nombreuses instructions d'additions entières, une instruction popcnt et d'autres instructions. SSE4 arrête le support des registres MMX. Le SSE4 est supporté par la version 'Penryn' de la microarchitecture Core 2,.
+Le SSE5 prévu initialement pour mi-août 2007 par AMD et implémenté dans la microarchitecture Bulldozer en octobre 2011, permet, comme dans les processeurs RISC, de préciser dans l'instruction un troisième registre destination, ce qui permet d'économiser un bon nombre d'instructions et devrait intrinsèquement accélérer les calculs. Auparavant, il fallait d'abord copier le contenu du registre destination dans un nouveau registre afin de ne pas détruire les informations précédentes,.
+
+
+== Voir aussi ==
+Jeu d'instructions x86
+MMX
+3DNow!
+SSE, SSE3, SSE4
+
+
+== Notes et références ==
+
+ Portail de l’informatique

@@ -1,0 +1,67 @@
+revision: 31799132
+title: "Bateria el\xE8ctrica"
+url: https://ca.wikipedia.org/wiki/Bateria_el%C3%A8ctrica
+
+
+---
+
+Una bateria elèctrica o pila elèctrica, és un dispositiu que genera energia elèctrica mitjançant un procediment electroquímic que transforma l'energia d'una reacció química en energia elèctrica. Una bateria és formada per dues o més cel·les electroquímiques connectades en sèrie. Hi ha molts tipus de cel·les electroquímiques: galvàniques, electrolítiques, piles de combustible, voltaiques o d'altres.
+S'ha de distingir entre bateries recarregables (acumuladors) i bateries o piles d'un sol ús. La diferència fonamental entre ambdós tipus és que les bateries recarregables permeten revertir la reacció química en la qual està basat el seu funcionament, mentre que les d'un sol ús no, quan s'esgoten els reactius, s'esgota la pila.
+
+
+== Història ==
+En termes estrictes, una bateria és un conjunt de cèl·lules electroquímiques múltiples, però en la bateria d'ús popular sovint es refereix a una sola cèl·lula. Per exemple, una pila d'1,5 volts AAA és una cèl·lula única d'1,5 V i una pila de 9 V té sis cèl·lules d'1,5 V en sèrie. La primera cel·la electroquímica va ser desenvolupada pel físic italià Alessandro Volta el 1792, i el 1800 va inventar la primera bateria, una "pila" de moltes cèl·lules en sèrie.
+L'ús del mot "bateria" per descriure els aparells elèctrics es remunta a Benjamin Franklin, que el 1748 va descriure diverses ampolles de Leyden (condensadors elèctrics primerencs) per analogia amb una bateria de canons. Per tant, l'ús de Franklin per descriure múltiples ampolles de Leyden precedí el de Volta fent-ho per diverses cel·les galvàniques. S'especula, però no s'ha establert definitivament, que diversos artefactes antics que consistien en làmines de coure i barres de ferro, conegudes com a piles Bagdad, podien haver estat cèl·lules galvàniques.
+El treball de Volta va ser estimulat per l'anatomista i fisiòleg italià Luigi Galvani que el 1780 s'havia adonat que les anques de granota disseccionada tremolaven en ser colpejades per l'espurna elèctrica provinent d'una gerra de Leyden. El 1786, es va adonar que es crispaven en cas de tempesta. Després de molts anys Galvani va aprendre a produir contraccions sense utilitzar cap font externa d'electricitat. El 1791, va publicar un informe sobre "electricitat animal". Va crear un circuit elèctric que consistia en la cama d'una granota (FL) i dos metalls diferents A i B, cada metall tocant la cama de la granota i entre si, produint d'aquesta manera el circuit de FL-A-B-A-FL-B... En termes actuals, la cama de la granota va servir com a electròlit i sensor, i els metalls va servir com a elèctrodes. Es va adonar que tot i que la granota era morta, les seves cames li tremolen quan les tocava amb els metalls.
+En menys d'un any, Volta es va adonar que els teixits humits de la granota podrien ser reemplaçades per cartó mullat en aigua salada, i que la resposta muscular de la granota podia ser substituïda per una altra forma de detecció elèctrica. El científic ja havia estudiat el fenomen electroestàtic de la capacitància, que requereix mesures de càrrega elèctrica i potencial elèctric ("tensió"). Sobre la base d'aquesta experiència, Volta va ser capaç de detectar el corrent elèctric mitjançant el seu sistema, també anomenat "cèl·lula galvànica". El voltatge terminal d'una cèl·lula que no està donant l'alta s'anomena la força electromotriu (EMF) i compta amb el mateix unitat com a potencial elèctric, anomenat (tensió) i es mesura en V, en honor de Volta. En 1800, Volta inventà la bateria mitjançant la col·locació de moltes cèl·lules fotovoltaiques en sèrie apilades una sobre l'altra. Aquesta pila voltaica va donar un rendiment enormement millorat gràcies a la combinació d'elements, amb una tensió d'aproximadament 50 V en una pila de 32 cèl·lules. A molts llocs d'Europa, les bateries elèctriques segueixen denominant-se pel concepte de "pila" o "munt".
+Volta no aprecià que la tensió fos a causa de reaccions químiques. Va pensar que les seves cèl·lules eren una font d'energia inesgotable i que els efectes de la corrosió associats als elèctrodes no eren sinó una simple molèstia, més que una conseqüència inevitable del seu funcionament, com Michael Faraday demostraria el 1834. D'acord amb Faraday, els cations (ions carregats positivament) eren atrets pel càtode, i els anions (ions carregats negativament) eren atrets cap a l'ànode.
+Encara que les bateries primerenques eren de gran valor per a finalitats experimentals, a la pràctica les seves tensions fluctuaven i no podien proporcionar un gran corrent durant un període sostingut. Després, començant per la pila Daniell en 1836, les bateries proporcionaren corrents més fiables i van ser adoptades per la indústria per a ús en dispositius fixos, en particular en les xarxes telegràfiques disperses pel territori, en un moment on les xarxes de distribució elèctrica encara no havien estat desenvolupades. Aquestes cèl·lules humides, que utilitzaven electròlits líquids, eren propenses a les fuites i vessaments si no es manipulaven correctament; en molts casos s'utilitzaven fràgils flascons de vidre per contenir els components. Vora el final del segle xix, la invenció de les piles seques, que substituïen l'electròlit líquid amb una pasta sòlida, permeté la creació d'aparells elèctrics portàtils realment pràctics.
+Des del moment que les piles es convertiren en fàcilment portàtils, que s'han emprat per a una gran varietat de propòsits.
+El 1976 es patentà la bateria d'aigua de mar.El 2016 es desenvolupà una bateria híbrida que combinava el funcionament de la bateria d'aigua de mar i la bateria de sodi-aire.
+
+
+== Principi de funcionament ==
+Dins d'una bateria elèctrica es produeix una reacció química entre dues substàncies, una que pot cedir fàcilment electrons (material reductor) i una altra que els absorbeix (material oxidant). Una reacció d'aquestes característiques rep el nom de reacció d'oxidació-reducció.
+Cada element de la parella oxidant-reductor es relaciona amb un dels dos elèctrodes que en ser connectats a un consumidor d'electricitat provoquen la circulació d'un corrent elèctric, la reacció química que es desenvolupa provoca una circulació de càrregues (electrons, ions entre els elèctrodes a través del circuit extern connectat).
+Una pila proporciona un corrent continu:
+
+El born negatiu (-) d'una pila correspon a l'ànode i s'hi produeix una reacció d'oxidació que proveeix d'electrons.
+El born positiu (+) d'una pila correspon al càtode i s'hi produeix una reacció de reducció que consumeix electrons.Aquest sistema s'utilitza a les piles i a les bateries recarregables amb diversos tipus de parelles de reactius electroquímics. La connexió en sèrie de diverses cel·les permet augmentar la tensió elèctrica disponible als extrems o borns de la pila.
+
+
+== Relació amb el medi ambient ==
+Les bateries estan fetes de metalls i composts químics, molts dels quals són perjudicials per al medi ambient. Per tal de no contaminar és important no llençar-les a les escombraries (en alguns països està prohibit) i portar-les a un centre de reciclatge. Actualment, la majoria dels proveïdors i botigues especialitzades (fins i tot alguns supermercats) també es fan càrrec de les bateries esgotades.
+
+
+== Tipus de bateries ==
+
+
+== Mides de piles ==
+Les bateries primàries més accessibles als consumidors van des de petites piles de botó, que s'utilitzen per a rellotges elèctrics, a la cel·la número 6, utilitzada per circuits de senyals o altres aplicacions de llarga durada. Cèl·lules secundàries es fabriquen en mides molt grans, i bateries de grans dimensions poden alimentar un submarí. Bateries secundàries grans s'han utilitzat per estabilitzar la xarxa elèctrica i per a mantenir el nivell en pics de càrrega.
+
+
+== Bateries casolanes ==
+Gairebé qualsevol objecte líquid o humit que tingui ions suficients per ser conductor d'electricitat, atès que pot servir de l'electròlit d'una cel·la. A tall d'experiment és possible inserir dos elèctrodes fets de diferents metalls en una llimona, patata,... i generar petites quantitats d'electricitat. "Rellotges de dues patates" també estan àmpliament disponibles en magatzems de joguines o "hobbies", i consisteixen en un parell de cèl·lules, cadascuna composta d'una patata (o llimona,..) amb dos elèctrodes inserits en ella, connectats en sèrie per formar una bateria amb suficient tensió per alimentar un rellotge digital. Bateries casolanes d'aquest tipus no són d'utilitat pràctica i real, ja que produeixen molta menys electricitat que una de normal i costen molt més per unitat d'energia generada que les cèl·lules comercials.
+Una pila voltaica es pot fer amb dues monedes (com ara un cèntim, que porta níquel) i un tros de tovallola de paper mullada en aigua salada. Aquesta pila genera un voltatge molt baix, però, quan molts s'apilen en sèrie, es poden reemplaçar les bateries normals durant un curt període.
+Sony ha desenvolupat una bateria biològica que genera electricitat a partir de sucre d'una manera que és similar als processos observats en els organismes vius. La bateria genera energia elèctrica mitjançant l'ús d'enzims que descomponen els hidrats de carboni, que són, en essència, el sucre.
+Cèl·lules de plom-àcid poden ser fàcilment fabricades a casa, però es necessita una càrrega tediosa / cicle de descàrrega per a 'formar' les plaques. Aquest és un procés en què es forma sulfat de plom a les plaques, i durant la càrrega aquest es converteix en diòxid de plom (placa positiva) i plom pur (placa negativa). Repetint aquest procés es tradueix en una superfície microscòpicament rugosa, amb molt major àrea de superfície que s'està exposat. Això augmenta el corrent de la cèl·lula pot lliurar.
+Cèl·lules de Daniell també són fàcils de fer a casa. Bateries d'alumini-aire que també poden ser produïdes amb alumini d'alta puresa. Bateries de paper d'alumini produeixen una mica d'electricitat, però no són gaire eficients, en part perquè produeixen una quantitat significativa de gas hidrogen.
+
+
+== Vegeu també ==
+Bateria tèrmica
+Pila Daniell
+Pila de botó
+Bateria d'automòbil
+Bateria d'ió liti
+Bateria d'ió liti en polímer
+Bateria de plom i àcid
+Bateria d'alumini-aire
+Pila de níquel i hidrur metàl·lic
+
+
+== Referències ==
+
+
+== Enllaços externs ==
+Projectes de la Unió Europea sobre bateries de tota mena: «Base de dades de projectes de recerca de bateries» (en anglès).   Comissií europea, 05-07-2021. [Consulta: 16 juliol 2022].

@@ -1,0 +1,337 @@
+
+# WavPack
+# https://wavpack.com/
+# From: Toni Ruottu <toni.ruottu@iki.fi>
+
+# WavPack with RIFF header ( WavPack versions 1-3 )
+
+0		string			RIFF
+>&0		search			wvpk		WavPack audio bitstream data
+
+# v0 ( correction files had no header, so has to be audio )
+
+!:ext           wv
+!:mime          audio/x-wavpack
+
+# file format version ( for debugging )
+>>&4		string
+#>>>&0		uleshort&0xff		x		v0.%u
+
+# v0 / audio format
+
+# samples
+>>&4		string
+# sample count was not recorded in header before 0.3
+>>>&0		uleshort&0xff		>2
+>>>>&6		ulelong			x		\b, %u samples
+
+# read format from RIFF header
+>>>12		search			fmt\x20
+
+# bit depth
+>>>>&18		uleshort		x		\b, %u bit
+
+# channels
+>>>>&6		uleshort		1		\b, mono
+>>>>&6		uleshort		2		\b, stereo
+
+# sample rate
+>>>>&8		uleshort		x		\b, %u Hz
+
+# compression settings
+>>&4		string
+# only lossless compression was supported before 0.2
+>>>&0		uleshort&0xff		<2		\b, lossless compression
+>>>&0		default			x
+# infer compression from "bits" field in header
+>>>>&2		uleshort		0		\b, lossless compression
+>>>>&2		default			x		\b, lossy compression
+
+# encoder version
+>>&4		uleshort&0xff		x		\b, encoder version %u
+
+# RIFF header
+>>&0		string			x		\b, RIFF header
+
+
+# v0 / quest for metadata
+>>&0		string
+
+# v0 / quest for metadata / RIFF metadata
+>>>&0		search		INFO
+>>>>&-12	string		LIST		\b, RIFF metadata
+
+# v0 / quest for metadata / APE tag
+>>>&0		search		APETAGEX	\b, APE
+>>>>&0		uleshort/1000	x		version %u
+>>>>>&0		uleshort%1000	x		\b.%u
+
+# v0 / quest for metadata / ID3v2 tag
+>>>&0		search		ID3		\b, ID3 version 2
+>>>>&0		byte		x		\b.%u
+>>>>&1		byte		x		\b.%u
+
+# v0 / quest for metadata / ID3v1 tag
+>>>-128		string		TAG		\b, ID3 version 1
+>>>>-3		byte		!0		\b.0
+>>>>-3		default		x
+>>>>>-2		byte		!0		\b.1
+>>>>>-2		default		x		\b.0
+
+# v0 / quest for metadata / failure ( possibly due to -P bytes=... being too low )
+>>>&0		default		x		\b, ID3 missing (or unreachable)
+
+
+# WavPack without RIFF header ( WavPack versions 4-5, and version 3 in raw mode )
+
+0		string			wvpk
+
+>&4		uleshort/0xff		0		WavPack audio bitstream data
+
+# v0 raw ( correction files had no header, so has to be audio )
+
+!:ext           wv
+!:mime          audio/x-wavpack
+
+# file format version ( for debugging )
+>>&0		string
+#>>>&-2		uleshort&0xff		x		v0.%u
+
+# v0 raw / audio format
+
+# samples
+>>&0		string
+# sample count was not recorded in header before 0.3
+>>&-2		uleshort&0xff		>2
+>>>&6		ulelong			x		\b, %u samples
+
+# bit depth (always 16 in v0 raw mode)
+>>&0		string 			x		\b, 16 bit
+# mono indicator was added in version 0.3
+>>&-2		uleshort&0xff		>2
+>>>&2		uleshort&0x0001		0		\b, stereo
+>>>&2		uleshort&0x0001		!0		\b, mono
+# sample rate (always 44100 in v0 raw mode)
+>>&0		string 			x		\b, 44100 Hz
+
+# compression settings
+>>&0		string
+# only lossless compression was supported before 0.2
+>>>&0		uleshort&0xff		<2		\b, lossless compression
+>>>&0		default			x
+# infer compression from "bits" field in header
+>>>>&2		uleshort		0		\b, lossless compression
+>>>>&2		default			x		\b, lossy compression
+
+
+# encoder version
+>>&-2		uleshort&0xff		x		\b, encoder version %u
+
+# raw v0 / quest for metadata
+>>&0		string
+
+# raw v0 / quest for metadata / APE tag
+>>>&0		search		APETAGEX	\b, APE
+>>>>&0		uleshort/1000	x		version %u
+>>>>>&0		uleshort%1000	x		\b.%u
+
+# raw v0 / quest for metadata / ID3v2 tag
+>>>&0		search		ID3		\b, ID3 version 2
+>>>>&0		byte		x		\b.%u
+>>>>&1		byte		x		\b.%u
+
+# raw v0 / quest for metadata / ID3v1 tag
+>>>-128		string		TAG		\b, ID3 version 1
+>>>>-3		byte		!0		\b.0
+>>>>-3		default		x
+>>>>>-2		byte		!0		\b.1
+>>>>>-2		default		x		\b.0
+
+# raw v0 / quest for metadata / failure ( possibly due to -P bytes=... being too low )
+>>>&0		default		x		\b, ID3 missing (or unreachable)
+
+
+>8		uleshort/0xff		4
+
+# v4
+
+# skip non-audio blocks
+>>&10		ulelong		0
+>>>(4.l+8)	indirect	x
+>>&10		default		x
+
+# v4 / file type
+
+>>>24		ulelong&0x00000008	0x00000000	WavPack audio bitstream data
+# lossless files are always audio files
+!:ext	wv
+!:mime	audio/x-wavpack
+>>>24		default			x
+>>>>32		ubyte			0x7		WavPack audio bitstream correction data
+# hybrid files with initial sub block 0x7 are correction files
+!:ext	wvc
+!:mime	audio/x-wavpack-correction
+>>>>32		ubyte			0xb		WavPack audio bitstream correction data
+# hybrid files with initial sub block 0xb are correction files
+!:ext	wvc
+!:mime	audio/x-wavpack-correction
+>>>>32		default 		x		WavPack audio bitstream data
+# hybrid files with other initial sub blocks are audio files
+!:ext	wv
+!:mime	audio/x-wavpack
+
+
+# file format version ( for debugging )
+>>>8	string
+#>>>>&0	uleshort&0xff		x		v4.%u
+
+# v4 / audio format
+
+# samples
+>>>8	string
+>>>>10	uleshort		0
+>>>>>12	ulelong			x		\b, %u samples
+
+# bit depth
+>>>8	string
+>>>>24	ulelong			&0x80000000
+# DSD bit depth
+>>>>>&0	string			x		\b, 1 bit
+>>>>24	default 		x
+# PCM bit depth
+>>>>>24	ulelong&0x0003e003	0x00000000	\b, 8 bit
+>>>>>24	ulelong&0x0003e003	0x00008001	\b, 12 bit
+>>>>>24	ulelong&0x0003e003	0x00000001	\b, 16 bit
+>>>>>24	ulelong&0x0003e003	0x00008002	\b, 20 bit
+>>>>>24	ulelong&0x0003e003	0x00000002	\b, 24 bit
+>>>>>24	ulelong&0x0003e003	0x00000003	\b, 32 bit
+
+# channels
+>>>>&0		string
+>>>>>24		ulelong&0x00001800	0x00001800
+# single mono/stereo block
+>>>>>>24	ulelong&0x00000004	0x00000004	\b, mono
+>>>>>>24	ulelong&0x40000004	0x00000000	\b, stereo
+>>>>>>24	ulelong&0x40000004	0x40000000	\b, false stereo
+>>>>>24		default			x		\b, multichannel
+
+# sample rate
+>>>>&0	string
+>>>>>24	ulelong		&0x80000000
+# DSD sample rate
+>>>>>>24		lelong&0x07800000	0x06000000
+# standard base rate
+>>>>>>>32		ubyte		&0x28
+# alt extension sub block
+>>>>>>>>&(&0.B*2)	ubyte		x
+>>>>>>>>>&0		ubyte		&0x23
+# alt header sub block
+>>>>>>>>>>&(&0.B*2)	ubyte		x
+>>>>>>>>>>>&0		ubyte		&0x25
+# config sub block
+>>>>>>>>>>>>&(&0.B*2)	ubyte		x
+>>>>>>>>>>>>>&0		ubyte		&0x2a
+# new config sub block
+>>>>>>>>>>>>>>&(&0.B*2)	ubyte		x
+>>>>>>>>>>>>>>>&0	ubyte		&0x0e
+# dsd sub block
+>>>>>>>>>>>>>>>>&3	ubyte		2	\b, "DSD 64" 2822400 Hz
+>>>>>>>>>>>>>>>>&3	ubyte		3	\b, "DSD 128" 5644800 Hz
+>>>>>>>>>>>>>>>>&3	ubyte		4	\b, "DSD 256" 11289600 Hz
+>>>>>>>>>>>>>>>>&3	ubyte		5	\b, "DSD 512" 22579200 Hz
+>>>>>>>>>>>>>>>>&3	ubyte		6	\b, "DSD 1024" 45158400 Hz
+>>>>>>>>>>>>>>>>&3	default 	x	\b, unknown Hz
+>>>>>>>>>>>>>>>&0	default 	x	\b, unknown Hz
+>>>>>>>>>>>>>&0		default 	x	\b, unknown Hz
+>>>>>>>>>>>&0		default 	x	\b, unknown Hz
+>>>>>>>>>&0		default 	x	\b, unknown Hz
+>>>>>>>&0		default 	x	\b, unknown Hz
+>>>>>>24		default 	x	\b, unknown Hz
+>>>>>24			default 	x
+# PCM sample rate
+# if we are lucky the input has one of these default sample rates
+>>>>>>24	ulelong&0x07800000	0x00000000	\b, 6000 Hz
+>>>>>>24	ulelong&0x07800000	0x00800000	\b, 8000 Hz
+>>>>>>24	ulelong&0x07800000	0x01000000	\b, 9600 Hz
+>>>>>>24	ulelong&0x07800000	0x01800000	\b, 11025 Hz
+>>>>>>24	ulelong&0x07800000	0x02000000	\b, 12000 Hz
+>>>>>>24	ulelong&0x07800000	0x02800000	\b, 16000 Hz
+>>>>>>24	ulelong&0x07800000	0x03000000	\b, 22050 Hz
+>>>>>>24	ulelong&0x07800000	0x03800000	\b, 24000 Hz
+>>>>>>24	ulelong&0x07800000	0x04000000	\b, 32000 Hz
+>>>>>>24	ulelong&0x07800000	0x04800000	\b, 44100 Hz
+>>>>>>24	ulelong&0x07800000	0x05000000	\b, 48000 Hz
+>>>>>>24	ulelong&0x07800000	0x05800000	\b, 64000 Hz
+>>>>>>24	ulelong&0x07800000	0x06000000	\b, 88200 Hz
+>>>>>>24	ulelong&0x07800000	0x06800000	\b, 96000 Hz
+>>>>>>24	ulelong&0x07800000	0x07000000	\b, 192000 Hz
+>>>>>>24	ulelong&0x07800000	0x07800000
+# sample rate stored in sub blocks
+>>>>>>>32			ubyte		&0x28
+# alt extension sub block
+>>>>>>>>&(&0.B*2)		ubyte		x
+>>>>>>>>>&0			ubyte&0xaf		0x21
+# riff header sub block
+>>>>>>>>>>&(&0.B*2)		ubyte		x
+>>>>>>>>>>>&0			ubyte&0xaf		0x02
+# decor terms sub block
+>>>>>>>>>>>>&(&0.B*2)		ubyte		x
+>>>>>>>>>>>>>&0			ubyte&0xaf		0x03
+# decor weights sub block
+>>>>>>>>>>>>>>&(&0.B*2)		ubyte		x
+>>>>>>>>>>>>>>>&0		ubyte&0xaf		0x04
+# decor samples sub block
+>>>>>>>>>>>>>>>>&(&0.B*2)	ubyte		x
+>>>>>>>>>>>>>>>>>&0		ubyte&0xaf		0x05
+# entropy vars sub block
+>>>>>>>>>>>>>>>>>>&(&0.B*2)	ubyte		x
+>>>>>>>>>>>>>>>>>>>&0		ubyte&0xaf		0x27
+# sample rate sub block
+>>>>>>>>>>>>>>>>>>>>&0		ubyte*2		4
+# 4 byte sample rate buffer
+>>>>>>>>>>>>>>>>>>>>>&-2	ubyte&0x40		0x40
+# 3 byte field with padding
+>>>>>>>>>>>>>>>>>>>>>>&1	ulelong&0xffffff	x	\b, %u Hz
+>>>>>>>>>>>>>>>>>>>>>&-2	default			x
+# 4 byte field with no padding
+>>>>>>>>>>>>>>>>>>>>>>&1	ulelong			x	\b, %u Hz
+
+# compression
+>>>>24		ulelong&0x00000008	0x00000000	\b, lossless compression
+>>>>24		ulelong&0x00000008	0x00000008
+>>>>>32		ubyte			0x7
+# correction file ( omit output )
+>>>>>32		ubyte			0xb
+# correction file ( omit output )
+>>>>>32		default 		x		\b, lossy compression
+
+# encoder version
+>>>&0		string
+>>>>24		ulelong&0x10000000	0x10000000	\b, encoder version 5
+>>>>24		default			x		\b, encoder version 4
+
+# v4 / quest for metadata
+>>>&0		string
+
+# v4 / quest for metadata / APE tag
+>>>>&0		search		APETAGEX	\b, APE
+>>>>>&0		uleshort/1000	x		version %u
+>>>>>>&0	uleshort%1000	x		\b.%u
+
+# v4 / quest for metadata / ID3v2 tag
+>>>>&0		search		ID3		\b, ID3 version 2
+>>>>>&0		byte		x		\b.%u
+>>>>>&1		byte		x		\b.%u
+
+# v4 / quest for metadata / ID3v1 tag
+>>>>-128	string		TAG		\b, ID3 version 1
+>>>>>-3		byte		!0		\b.0
+>>>>>-3		default		x
+>>>>>>-2	byte		!0		\b.1
+>>>>>>-2	default		x		\b.0
+
+# v4 / quest for metadata / failure ( possibly due to -P bytes=... being too low )
+>>>>&0		default		x		\b, ID3 missing (or unreachable)
+
+# So far WavPack 1-5 have produced only v0 and v4.
+>&4		default		x		\b, unknown version

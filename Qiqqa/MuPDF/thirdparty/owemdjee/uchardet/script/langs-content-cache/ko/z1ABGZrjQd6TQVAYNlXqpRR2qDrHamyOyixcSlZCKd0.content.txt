@@ -1,0 +1,54 @@
+revision: 34782311
+title: EBCDIC 252
+url: https://ko.wikipedia.org/wiki/%ED%99%95%EC%9E%A5_%EC%9D%B4%EC%A7%84%ED%99%94_%EC%8B%AD%EC%A7%84%EB%B2%95_%EA%B5%90%ED%99%98_%EB%B6%80%ED%98%B8
+
+
+---
+
+확장 이진화 십진법 교환 부호(EBCDIC, Extended Binary Coded Decimal Interchange Code)는 IBM 메인프레임용 운영 체제인 z/OS, OS/390, VM 운영 체제, VSE 운영 체제와 IBM의 중급 컴퓨터 운영 체제인 OS/400과 i5/OS 등에서 사용되는 8비트 문자 인코딩(코드 페이지)이다(BCD 참조). 또한 후지쯔-지멘스의 BS2000/OSD나 휴렛 패커드의 MPE/iX, 유니시스의 MCP 등 IBM 외 플랫폼에서도 사용된다. EBCDIC은 천공 카드에서 사용하던 코드와 1950년대 후반에서 1960년대 초에 나온 대부분의 IBM 컴퓨터 주변 기기에서 사용됐던 6비트 이진화 십진법 부호에서 유래하였다.
+
+
+== 역사 ==
+EBCDIC('엡시딕'으로 읽는다)은 IBM에서 1963년과 1964년에 걸쳐 고안되었고 IBM System/360 계열의 메인프레임 컴퓨터와 함께 소개되었다. 별도로 개발된 7비트 인코딩 방식인 ASCII와 달리 8비트 문자열 인코딩이다. 천공 카드 상의 두 "존(zone)"과 "숫자"를 6비트에 인코딩하는 효율적인 방법으로 고안된 기존 IBM 이진화 십진법 인코딩을 확장하기 위해 만들어졌다.
+IBM은 ASCII 표준화 위원회의 주요 지지자였지만 ASCII 주변장치(일례로 카드 천공기)를 System/360 출시에 맞춰 내어 놓을 수 없었다. IBM은 이 때문에 당시 EBCDIC을 사용할 수 밖에 없었다. System/360은 큰 성공을 거뒀고 자연히 EBCDIC도 널리 사용되었다.
+z시리즈나 i시리즈에 사용된 리눅스 외에 모든 IBM 메인프레임 주변장치와 운영 체제는 고유 인코딩으로 EBCDIC를 사용한다.하지만 소프트웨어 수준에서는 다른 인코딩 간 변환이 가능하다. 많은 하드웨어 주변장치 역시 인코딩 간 변환을 지원하며, IBM z시리즈 같은 최신 메인프레임은 하드웨어 수준에서 서로 다른 문자 집합 간 변환을 빠르게 하기 위한 프로세서 명령어를 포함하고 있다.
+EBCDIC은 ISO-8859 계열이나 유니코드 같은 ASCII 기반 코드 페이지에 비해 최근 기술적인 관점에서는 장점이 없다. 각 부호는 기술적으로 기발하게 설계된 부분도 있다. 일례로 ASCII와 EBCDIC은 특정 1비트만 보면 대문자인지 소문자인지 구분할 수 있게 되어 있다. 하지만 알파벳이 연속적이지 않은 등 EBCDIC은 ASCII에 비해 사용하기 어려운 측면도 있다. 단일 바이트 확장 ASCII 코드 페이지들처럼 대부분의 EBCDIC 코드 페이지를 사용할 때 하나의 데이터베이스나 텍스트 파일 내에서 최대 언어 2개까지만(즉, 영어와 또 다른 한 언어) 사용할 수 있었다.
+제대로 된 다중 언어 문장을 지원하려면 훨씬 더 많은 문자들을 지원하는 시스템이 필요하다. 이를 위해서는 일반적으로 어떤 형태든 유니코드가 지원되어야 한다. 유니코드 컨소시엄에서는 UTF-EBCDIC이라는 EBCDIC 유니코드 변환 형식(Unicode Transformation Format)을 제안했으나 원래 일반적인 시스템 간 정보 교환을 위해 사용할 목적으로 설계되지 않았고, EBCDIC을 사용하는 시스템 상에서도 사용된 바가 없다. IBM 메인프레임은 UTF-16은 지원하나 UTF-EBCDIC은 지원하지 않는다.
+아랍어를 위한 EBCDIC 버전들은 유니코드와 같은 최근 인코딩처럼 논리 순서대로 오른쪽에서 왼쪽에서 인코딩하는 대신, 통상 화면에 보이는 순서, 즉, 더 오래된 메인프레임이나 라인 프린터처럼 왼쪽에서 오른쪽으로 인코딩한다.
+
+
+== 코드 페이지 배열 ==
+아래 표는 EBCDIC의 코드 페이즈 변형 중 하나인 CCSID 500을 기본으로 한 것으로 기본 영어 EBCDIC 문자만 표시했다. 00-3F와 FF는 제어 문자이고, 40은 공백, 41은 단어 잘림 방지 공백("RSP": "Required Space" 즉, "필요한 공백"), E1은 수치 간 공백("NSP": "Numeric Space" 즉, "숫자 공백"), CA는 소프트 하이픈(줄 바꿈 시 한 단어 중간에서 하이픈을 넣고 줄 바꿈이 가능한 위치 표시)을 나타낸다. 각 문자는 동등한 유니코드 코드를 표기했다. 모든 EBCDIC 코드 페이지에 포함되는 알파벳, 숫자, 구두점, 제어 문자는 볼드체로 표시하였다. 할당되지 않은 코드들은 보통 다양한 EBCDIC 코드 페이지 변형들에서 국제 혹은 지역 특화된 문자에 할당된다.
+
+
+== 비판 및 유머 ==
+오픈 소스 소프트웨어 옹호자이자 해커인 에릭 레이먼드는 자신의 "자곤 파일(Jargon File)"에서 서로 닮지도 않은 다양한 EBCDIC의 다른 버전들 때문에 초기 해커와 프로그래머는 거의 예외 없이 EBCDIC을 싫어했고, IBM은 이미 자리 잡고 있던 ASCII가 있음에도 같은 목적으로 EBCDIC를 만들었다고 언급했다.
+자곤 파일 4.4.7에는 EBCDIC을 다음과 같이 정의하고 있다.
+
+또 다른 잘 알려진 불평은 EBCDIC의 알파벳 문자가 ASCII처럼 순차적이지 않고 태고적 천공 카드의 인코딩을 따르고 있다는 것이다. 일례로 "I"에 해당하는 문자 코드를 1만큼 증가시키면 "J"에 해당하는 코드가 나오지 않는다. 마찬가지로 "R"과 "S" 사이에도 틈이 있다. 따라서 알파벳 문자만 훑는 간단한 루프를 작성하는 것조차 쉽지 않다.
+이런 비호환성은 또한 많은 농담의 원인이 되었다. 잘 알려진 한 농담은 다음과 같다.
+
+교수: "그래서 미국 정부가 암호화 표준을 만들기 위해 IBM에 갔습니다. 그리고 IBM은 그 결과로—"학생: "EBCDIC을 내 놨죠!"인포콤(Infocom)에서 만든 고전 모험 게임인 "Zork II"에도 EBCDIC 문자 집합이 나온다. "기계실"에 고대 컴퓨터들과 무슨 용도인지 알 수 없는 다른 기계들이 있다. 다음은 그 방에 대한 설명인데 이해할 수 없는 언어라는 것을 설명하기 위해 EBCDIC이 사용되었다.
+
+
+== 같이 보기 ==
+라틴-1-문자 집합을 포함한 EBCDIC 코드페이지
+코드페이지 037 (영어, 포르투갈어)
+코드페이지 285 (영국 아일랜드)
+UTF-EBCDIC
+
+
+== 참조 ==
+
+
+== 외부 링크 ==
+Character Data Representation Architecture (CDRA) from IBM Contains IBM's official information on codepages and charsets.
+Codepage 37
+Codepage 1047
+F.0 Appendix F. Code Pages Archived 2001년 3월 21일 - 웨이백 머신 from AS/400 International Application Development V4R2 Archived 2001년 2월 15일 - 웨이백 머신
+ICU Converter Explorer Archived 2020년 1월 2일 - 웨이백 머신 Contains more information about EBCDIC derived from IBM's CDRA, including DBCS EBCDIC (Double Byte Character Set EBCDIC)
+ICU Charset Mapping Tables Contains computer readable Unicode mapping tables for EBCDIC and many other character sets
+ASCII/EBCDIC Conversion Table for HP 3000 MPE/iX Computer Systems
+EBCDIC character list, including decimal and hex values, symbolic name, and character/function
+iconv.com Online tool to convert from ASCII to/from EBCDIC
+EBCDIC-codepages with Latin-1-charset (JavaScript) Archived 2007년 1월 18일 - 웨이백 머신

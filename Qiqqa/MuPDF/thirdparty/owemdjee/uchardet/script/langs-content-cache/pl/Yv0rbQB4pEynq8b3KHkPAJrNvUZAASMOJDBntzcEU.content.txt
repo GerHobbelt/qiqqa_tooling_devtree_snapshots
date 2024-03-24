@@ -1,0 +1,1893 @@
+revision: 56959205
+title: "Operator liniowy nieci\u0105g\u0142y"
+url: https://pl.wikipedia.org/wiki/Operator_liniowy_nieci%C4%85g%C5%82y
+
+
+---
+
+Operator liniowy nieciągły – operator liniowy (przekształcenie liniowe), który nie jest ciągły. Odwzorowania tego typu mogą pojawić się jedynie w kontekście przestrzeni nieskończeniewymiarowych. Ze względu na fakt, iż operatory liniowe stanowią klasę funkcji w pewnym sensie naturalnych (zachowują one strukturę algebraiczną przestrzeni liniowych; stosuje się je często w celu przybliżenia ogólniejszych funkcji – zob. aproksymacja liniowa, pochodna Frécheta), to mimo wszystko należy mieć na uwadze, że mogą one nie być ciągłe. Przekształcenia tego typu, mimo pozornie niepożądanych własności, znajdują zastosowanie w matematycznym opisie fizyki kwantowej.
+
+Jeśli 
+  
+    
+      
+        X
+        ,
+        Y
+      
+    
+     
+   są skończeniewymiarowymi przestrzeniami unormowanymi (nad tym samym ciałem), to każdy operator liniowy 
+  
+    
+      
+        
+          f
+        
+        :
+        X
+        →
+        Y
+      
+    
+     
+   jest ciągły. Dowód:Każda skończenie wymiarowa przestrzeń unormowana 
+  
+    
+      
+        X
+      
+    
+     
+   (ogólniej, przestrzeń liniowo-topologiczna) nad 
+  
+    
+      
+        
+          R
+        
+      
+    
+     
+   lub 
+  
+    
+      
+        
+          C
+        
+      
+    
+     
+   jest liniowo homeomorficzna odpowiednio z 
+  
+    
+      
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   lub 
+  
+    
+      
+        
+          
+            C
+          
+          
+            n
+          
+        
+        ,
+      
+    
+     
+   gdzie 
+  
+    
+      
+        n
+      
+    
+     
+   to wymiar przestrzeni 
+  
+    
+      
+        X
+        .
+      
+    
+     
+   Dowód wystarczy zatem przeprowadzić dla przypadku, gdy 
+  
+    
+      
+        X
+        =
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   lub 
+  
+    
+      
+        X
+        =
+        
+          
+            C
+          
+          
+            n
+          
+        
+      
+    
+     
+   – w obydwu wypadkach jest on identyczny.
+Niech 
+  
+    
+      
+        (
+        
+          
+            e
+          
+          
+            1
+          
+        
+        ,
+        
+          
+            e
+          
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          
+            e
+          
+          
+            n
+          
+        
+        )
+      
+    
+     
+   będzie bazą przestrzeni 
+  
+    
+      
+        X
+      
+    
+     
+   złożoną z wektorów jednostkowych. Z algebry liniowej wiadomo, że jeżeli 
+  
+    
+      
+        
+          x
+        
+        =
+        (
+        
+          x
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          x
+          
+            n
+          
+        
+        )
+        ∈
+        X
+        ,
+      
+    
+     
+   to wartość 
+  
+    
+      
+        
+          f
+        
+        (
+        
+          x
+        
+        )
+      
+    
+     
+   można przedstawić w postaci
+
+  
+    
+      
+        
+          f
+        
+        (
+        
+          x
+        
+        )
+        =
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            n
+          
+        
+        
+          x
+          
+            i
+          
+        
+        
+          f
+        
+        (
+        
+          
+            e
+          
+          
+            i
+          
+        
+        )
+        .
+      
+    
+     
+  
+Nierówność trójkąta dla normy pociąga, iż
+
+  
+    
+      
+        
+          
+            ‖
+          
+        
+        
+          f
+        
+        (
+        
+          x
+        
+        )
+        
+          
+            ‖
+          
+        
+        =
+        
+          ‖
+          
+            
+              ∑
+              
+                i
+                =
+                1
+              
+              
+                n
+              
+            
+            
+              x
+              
+                i
+              
+            
+            
+              f
+            
+            (
+            
+              
+                e
+              
+              
+                i
+              
+            
+            )
+          
+          ‖
+        
+        ⩽
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            n
+          
+        
+        
+          |
+        
+        
+          x
+          
+            i
+          
+        
+        
+          |
+        
+        
+          
+            ‖
+          
+        
+        
+          f
+        
+        (
+        
+          
+            e
+          
+          
+            i
+          
+        
+        )
+        
+          
+            ‖
+          
+        
+        .
+      
+    
+     
+  
+Niech 
+  
+    
+      
+        M
+        =
+        max
+        
+          
+            {
+          
+        
+        
+          
+            ‖
+          
+        
+        
+          f
+        
+        (
+        
+          
+            e
+          
+          
+            1
+          
+        
+        )
+        
+          
+            ‖
+          
+        
+        ,
+        …
+        ,
+        
+          
+            ‖
+          
+        
+        
+          f
+        
+        (
+        
+          
+            e
+          
+          
+            n
+          
+        
+        )
+        
+          
+            ‖
+          
+        
+        
+          
+            }
+          
+        
+        .
+      
+    
+     
+   Z faktu
+
+  
+    
+      
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            n
+          
+        
+        
+          |
+        
+        
+          x
+          
+            i
+          
+        
+        
+          |
+        
+        ⩽
+        C
+        ‖
+        
+          x
+        
+        ‖
+      
+    
+     
+  
+dla pewnego 
+  
+    
+      
+        C
+        >
+        0
+        ,
+      
+    
+     
+   wynika, że wszystkie normy określone w przestrzeni skończeniewymiarowej są równoważne. Ostatecznie:
+
+  
+    
+      
+        
+          
+            ‖
+          
+        
+        
+          f
+        
+        (
+        
+          x
+        
+        )
+        
+          
+            ‖
+          
+        
+        ⩽
+        
+          (
+          
+            
+              ∑
+              
+                i
+                =
+                1
+              
+              
+                n
+              
+            
+            
+              |
+            
+            
+              x
+              
+                i
+              
+            
+            
+              |
+            
+          
+          )
+        
+        M
+        ⩽
+        C
+        M
+        ‖
+        
+          x
+        
+        ‖
+        .
+      
+    
+     
+  
+Powyższe oszacowanie pokazuje, że 
+  
+    
+      
+        
+          f
+        
+      
+    
+     
+   jest operatorem ograniczonym, a zatem jest ciągły.Jeżeli 
+  
+    
+      
+        X
+      
+    
+     
+   jest przestrzenią nieskończeniewymiarową, to powyższy dowód załamie się, gdyż nie ma gwarancji istnienia supremum 
+  
+    
+      
+        M
+        .
+      
+    
+     
+   Jeżeli 
+  
+    
+      
+        Y
+      
+    
+     
+   jest przestrzenią zerową 
+  
+    
+      
+        {
+        
+          0
+        
+        }
+        ,
+      
+    
+     
+   to jedynym przekształceniem między 
+  
+    
+      
+        X
+      
+    
+     
+   a 
+  
+    
+      
+        Y
+      
+    
+     
+   jest przekształcenie zerowe, które jest ciągłe w trywialny sposób. We wszystkich innych przypadkach, gdy 
+  
+    
+      
+        X
+      
+    
+     
+   jest nieskończeniewymiarowa, a 
+  
+    
+      
+        Y
+      
+    
+     
+   nie jest zerowa, można znaleźć przekształcenie nieciągłe z 
+  
+    
+      
+        X
+      
+    
+     
+   w 
+  
+    
+      
+        Y
+        .
+      
+    
+     
+  
+
+
+== Przykład konkretny ==
+Stosunkowo łatwo skonstruować przykłady operatorów liniowych nieciągłych w przestrzeniach niezupełnych; operator liniowy może rosnąć nieograniczenie na ciągu Cauchy’ego wektorów liniowo niezależnych, który nie ma granicy. Obrazowo: operatory liniowe mogą nie być ciągłe, ponieważ przestrzeń jest, w pewnym sensie, „dziurawa”.
+Niech 
+  
+    
+      
+        X
+      
+    
+     
+   będzie przestrzenią funkcji różniczkowalnych określonych na przedziale 
+  
+    
+      
+        [
+        −
+        1
+        ,
+        1
+        ]
+      
+    
+     
+   z normą supremum, tzn.
+
+  
+    
+      
+        ‖
+        f
+        ‖
+        =
+        
+          sup
+          
+            x
+            ∈
+            [
+            0
+            ,
+            1
+            ]
+          
+        
+        
+          
+            |
+          
+        
+        f
+        (
+        x
+        )
+        
+          
+            |
+          
+        
+        .
+      
+    
+     
+  Przekształcenie pochodnej w punkcie określone na 
+  
+    
+      
+        X
+      
+    
+     
+   o wartościach rzeczywistych, dane wzorem
+
+  
+    
+      
+        T
+        ⁡
+        (
+        f
+        )
+        =
+        
+          f
+          ′
+        
+        (
+        0
+        )
+        ,
+      
+    
+     
+  jest liniowe, lecz nie jest ciągłe. Rzeczywiście, niech dany będzie ciąg
+
+  
+    
+      
+        
+          f
+          
+            n
+          
+        
+        (
+        x
+        )
+        =
+        
+          
+            
+              sin
+              ⁡
+              (
+              
+                n
+                
+                  2
+                
+              
+              x
+              )
+            
+            n
+          
+        
+      
+    
+     
+  dla 
+  
+    
+      
+        n
+        ⩾
+        1.
+      
+    
+     
+   Ciąg ten jest zbieżny jednostajnie do funkcji stale równej zeru, ale
+
+  
+    
+      
+        T
+        ⁡
+        (
+        
+          f
+          
+            n
+          
+        
+        )
+        =
+        
+          
+            
+              
+                n
+                
+                  2
+                
+              
+              cos
+              ⁡
+              (
+              
+                n
+                
+                  2
+                
+              
+              ⋅
+              0
+              )
+            
+            n
+          
+        
+        =
+        n
+        →
+        ∞
+        ,
+      
+    
+     
+  przy 
+  
+    
+      
+        n
+        →
+        ∞
+        ,
+      
+    
+     
+   zamiast 
+  
+    
+      
+        T
+        ⁡
+        (
+        
+          f
+          
+            n
+          
+        
+        )
+        →
+        T
+        ⁡
+        (
+        0
+        )
+        =
+        0
+        ,
+      
+    
+     
+   jak by to było w przypadku operatora ciągłego. Ponieważ 
+  
+    
+      
+        T
+      
+    
+     
+   ma wartości rzeczywiste, jest więc funkcjonałem liniowym na 
+  
+    
+      
+        X
+      
+    
+     
+   (elementem przestrzeni sprzężonej algebraicznie). Przekształcenie liniowe 
+  
+    
+      
+        X
+        →
+        X
+        ,
+      
+    
+     
+   które przypisuje każdej funkcji jej pochodną jest podobnie nieciągłe. Należy zwrócić uwagę, iż choć operator pochodnej nie jest ciągły, to jest domknięty.
+Wyżej istotnie korzystano z faktu, iż rozważana przestrzeń nie była zupełna.
+
+
+== Przykład niekonstruktywny ==
+Ciało liczb rzeczywistych traktowane jako przestrzeń liniowa nad ciałem liczb wymiernych ma, na mocy aksjomatu wyboru, bazę nazywaną bazą Hamela (niektórzy matematycy bazą Hamela nazywają bazę dowolnej przestrzeni liniowej). Liczby 1 i 
+  
+    
+      
+        π
+      
+    
+     
+  , jako elementy przestrzeni liczb rzeczywistych nad ciałem liczby wymiernych, są liniowo niezależne. Z twierdzenia Steinitza wynika, że można znaleźć taką bazę Hamela, która zawiera te elementy. Na mocy twierdzenia o przekształceniu liniowym zadanym na bazie wynika, że dowolną funkcję określoną na elementach bazy Hamela można przedłużyć do przekształcenia liniowego określonego na 
+  
+    
+      
+        
+          R
+        
+        .
+      
+    
+     
+   Niech 
+  
+    
+      
+        B
+        ⊆
+        
+          R
+        
+      
+    
+     
+   będzie bazą Hamela taką, że 
+  
+    
+      
+        1
+        ,
+        π
+        ∈
+        B
+      
+    
+     
+   oraz niech 
+  
+    
+      
+        f
+        :
+        B
+        →
+        
+          R
+        
+      
+    
+     
+   będzie określone następująco: 
+  
+    
+      
+        f
+        (
+        π
+        )
+        =
+        0
+      
+    
+     
+   oraz 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        x
+      
+    
+     
+   dla elementów zbioru 
+  
+    
+      
+        B
+      
+    
+     
+   różnych od 
+  
+    
+      
+        π
+        .
+      
+    
+     
+   Niech ponadto 
+  
+    
+      
+        
+          
+            f
+            ¯
+          
+        
+        :
+        
+          R
+        
+        →
+        
+          R
+        
+      
+    
+     
+   będzie takim przekształceniem liniowym, że 
+  
+    
+      
+        
+          
+            f
+            ¯
+          
+        
+        
+          
+            
+              |
+            
+          
+          
+            B
+          
+        
+        =
+        f
+        .
+      
+    
+     
+   Jeżeli 
+  
+    
+      
+        (
+        
+          q
+          
+            n
+          
+        
+        
+          )
+          
+            n
+            ∈
+            
+              N
+            
+          
+        
+      
+    
+     
+   jest ciągiem liczb wymiernych, zbieżnym do 
+  
+    
+      
+        π
+        ,
+      
+    
+     
+   to zachodzi
+
+  
+    
+      
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        
+          
+            f
+            ¯
+          
+        
+        (
+        
+          q
+          
+            n
+          
+        
+        )
+        =
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        
+          q
+          
+            n
+          
+        
+        f
+        (
+        1
+        )
+        =
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        
+          q
+          
+            n
+          
+        
+        =
+        π
+        ≠
+        0
+        =
+        f
+        (
+        π
+        )
+        .
+      
+    
+     
+  Funkcja 
+  
+    
+      
+        
+          
+            f
+            ¯
+          
+        
+      
+    
+     
+   jest przykładem nieciągłego odwzorowania 
+  
+    
+      
+        
+          Q
+        
+      
+    
+     
+  -liniowego. Można pokazać, że odwzorowanie 
+  
+    
+      
+        
+          Q
+        
+      
+    
+     
+  -liniowe jest ciągłe wtedy i tylko wtedy, gdy jest mierzalne.
+
+
+== Ogólne twierdzenie o istnieniu ==
+Można dowieść istnienia nieciągłych operatorów liniowych w przypadku ogólnym; nawet, gdy rozważana przestrzeń jest zupełna. Niech 
+  
+    
+      
+        X
+      
+    
+     
+   i 
+  
+    
+      
+        Y
+      
+    
+     
+   będą przestrzeniami unormowanymi nad ciałem 
+  
+    
+      
+        K
+        ,
+      
+    
+     
+   gdzie 
+  
+    
+      
+        K
+        =
+        
+          R
+        
+      
+    
+     
+   lub 
+  
+    
+      
+        K
+        =
+        
+          C
+        
+        .
+      
+    
+     
+   Bez zmniejszania ogólności można założyć, że 
+  
+    
+      
+        X
+      
+    
+     
+   jest nieskończeniewymiarowa, a 
+  
+    
+      
+        Y
+      
+    
+     
+   nie jest zerowa. Dowód polega na wskazaniu nieciągłego funkcjonału liniowego 
+  
+    
+      
+        f
+        :
+        X
+        →
+        K
+        ,
+      
+    
+     
+   co będzie pociągać istnienie nieciągłego operatora liniowego 
+  
+    
+      
+        
+          g
+        
+        :
+        X
+        →
+        Y
+      
+    
+     
+   danego wzorem 
+  
+    
+      
+        
+          g
+        
+        (
+        
+          x
+        
+        )
+        =
+        f
+        (
+        
+          x
+        
+        )
+        
+          
+            y
+          
+          
+            0
+          
+        
+        ,
+      
+    
+     
+   gdzie 
+  
+    
+      
+        
+          
+            y
+          
+          
+            0
+          
+        
+      
+    
+     
+   jest dowolnym niezerowym wektorem przestrzeni 
+  
+    
+      
+        Y
+        .
+      
+    
+     
+  
+W przypadku, gdy 
+  
+    
+      
+        X
+      
+    
+     
+   jest nieskończeniewymiarowa, wykazanie istnienia funkcjonału liniowego, który nie jest ciągły, sprowadza się do skonstruowania przekształcenia 
+  
+    
+      
+        
+          f
+        
+        ,
+      
+    
+     
+   które nie jest ograniczone. Niech dany będzie więc ciąg 
+  
+    
+      
+        (
+        
+          
+            e
+          
+          
+            n
+          
+        
+        
+          )
+          
+            n
+            ⩾
+            1
+          
+        
+      
+    
+     
+   liniowo niezależnych wektorów 
+  
+    
+      
+        X
+        .
+      
+    
+     
+   Niech dla każdego 
+  
+    
+      
+        n
+        =
+        1
+        ,
+        2
+        ,
+        …
+      
+    
+     
+   dany będzie operator
+
+  
+    
+      
+        T
+        ⁡
+        (
+        
+          
+            e
+          
+          
+            n
+          
+        
+        )
+        =
+        n
+        ‖
+        
+          
+            e
+          
+          
+            n
+          
+        
+        ‖
+        .
+      
+    
+     
+  Kolejny krok polega na uzupełnieniu tego ciągu liniowo niezależnych wektorów do bazy przestrzeni liniowej 
+  
+    
+      
+        X
+      
+    
+     
+   i określenie 
+  
+    
+      
+        T
+      
+    
+     
+   w pozostałych wektorach bazy jako równego zeru. Tak zdefiniowany 
+  
+    
+      
+        T
+      
+    
+     
+   można jednoznacznie rozszerzyć do operatora liniowego na 
+  
+    
+      
+        X
+        ,
+      
+    
+     
+   a ponieważ nie jest on ograniczony, to nie może być ciągły.
+Skorzystanie z faktu, iż dowolny zbiór liniowo niezależnych wektorów można uzupełnić do bazy, jest niejawnym użyciem aksjomatu wyboru, co nie było konieczne w poprzednim przykładzie.
+
+
+== Aksjomat wyboru ==
+Jak pokazano wyżej, ogólne twierdzenie o istnieniu nieciągłych operatorów liniowych wymaga użycia aksjomatu wyboru (AC). Istotnie, nie ma niekonstruktywnych przykładów nieciągłych operatorów liniowych określonych w dziedzinie zupełnej (jak na przykład przestrzeni Banacha). W analizie zakłada się zwykle aksjomat wyboru (jako jeden z aksjomatów teorii mnogości ZFC), dlatego praktykujący analitycy mogą stwierdzić, iż na wszystkich nieskończeniewymiarowych przestrzeniach liniowo-topologicznych można określić nieciągłe przekształcenia liniowe.
+Z drugiej strony, w 1970 roku Robert M. Solovay przedstawił model teorii mnogości, w którym wszystkie podzbiory liczb rzeczywistych są mierzalne (np. w ZF + aksjomat determinacji wszystkie podzbiory prostej są mierzalne). Oznacza to, że nie istnieją nieciągłe rzeczywiste funkcje liniowe. Oczywiście brak w tym modelu AC.
+Wynik Solovaya pokazuje, że założenie, iż na wszystkich nieskończeniewymiarowych przestrzeniach liniowych można zdefiniować nieciągłe przekształcenia liniowe jest zbędne, gdyż istnieją szkoły analizy, które przyjmują bardziej konstruktywistyczny punkt widzenia. Przykładowo H.G. Garnir poszukując tzw. „przestrzeni marzeń” (przestrzeni liniowo-topologicznych, w których każde przekształcenie liniowe w przestrzeń unormowaną jest ciągłe) przyjął w toku poszukiwań aksjomaty ZF + zasadę DC + BP (reguła wyborów zależnych, DC, jest słabszą formą AC, zaś własność Baire’a, BP, jest zaprzeczeniem silnego AC), aby udowodnić twierdzenie o wykresie domkniętym Garnira-Wrighta, które mówi między innymi, że dowolny operator liniowy z F-przestrzeni w przestrzeń liniowo-topologiczną jest ciągłe. Przy odpowiednich założeniach, zgodnie z duchem ekstremalnego konstruktywizmu, zachodzi twierdzenie Ceitina, które mówi, iż każde przekształcenie jest ciągłe. Takie zapatrywania przyjmuje zdecydowana mniejszość matematyków.
+Ostateczną konkluzją jest to, iż nie można zrezygnować z AC: wszystkie nieciągłe przekształcenia liniowe określone na zupełnych przestrzeniach liniowo-metrycznych są niekonstruowalne. Dodatkowym, płynącym stąd wnioskiem, jest fakt, że konstruowalnych operatorów nieciągłych, takich jak operator pochodnej, nie można określić na całej przestrzeni zupełnej.
+
+
+== Operatory domknięte ==
+Wiele powszechnie występujących nieciągłych operatorów liniowych jest domkniętych, jest to klasa operatorów, które dzielą pewne wspólne cechy z operatorami ciągłymi. Ma sens analogiczne pytanie, czy wszystkie operatory liniowe określone na danej przestrzeni są domknięte. Twierdzenie o wykresie domkniętym zapewnia, że wszystkie wszędzie określone na przestrzeni zupełnej operatory domknięte są ciągłe, a więc w kontekście nieciągłych operatorów domkniętych trzeba zgodzić się na operatory, które nie są określone w każdym punkcie.
+Tak więc niech 
+  
+    
+      
+        T
+        :
+        X
+        →
+        Y
+      
+    
+     
+   ma dziedzinę 
+  
+    
+      
+        Dom
+        ⁡
+        (
+        T
+        )
+      
+    
+     
+   Wykres 
+  
+    
+      
+        Γ
+        (
+        T
+        )
+      
+    
+     
+   operatora 
+  
+    
+      
+        T
+        ,
+      
+    
+     
+   który nie jest wszędzie określony, będzie miał różne od niego domknięcie 
+  
+    
+      
+        
+          
+            
+              Γ
+              (
+              T
+              )
+            
+            ¯
+          
+        
+        .
+      
+    
+     
+   Jeżeli domknięcie wykresu samo jest wykresem pewnego operatora 
+  
+    
+      
+        
+          
+            T
+            ¯
+          
+        
+        ,
+      
+    
+     
+   to 
+  
+    
+      
+        T
+      
+    
+     
+   nazywa się domykalnym, a 
+  
+    
+      
+        
+          
+            T
+            ¯
+          
+        
+      
+    
+     
+   nazywa się domknięciem 
+  
+    
+      
+        T
+        .
+      
+    
+     
+  
+Nie wszystkie operatory liniowe określone na zbiorze gęstym są domykalne: można udowodnić, że na każdej nieskończeniewymiarowej przestrzeni unormowanej można określić niedomykalny operator liniowy. Dowód wymaga aksjomatu wyboru, stąd w ogólności jest niekonstruktywny, nie mniej jednak jeżeli 
+  
+    
+      
+        X
+      
+    
+     
+   nie jest zupełna, to istnieją przykłady konstruowalne.
+Istotnie, można podać przykład operatora liniowego, którego wykres ma domknięcie będące całym 
+  
+    
+      
+        X
+        ×
+        Y
+        .
+      
+    
+     
+   Taki operator nie jest domykalny. Niech 
+  
+    
+      
+        X
+      
+    
+     
+   będzie przestrzenią funkcji wielomianowych 
+  
+    
+      
+        [
+        0
+        ,
+        1
+        ]
+        →
+        
+          R
+        
+        ,
+      
+    
+     
+   a 
+  
+    
+      
+        Y
+      
+    
+     
+   będzie przestrzenią funkcji wielomianowych 
+  
+    
+      
+        [
+        2
+        ,
+        3
+        ]
+        →
+        
+          R
+        
+        ,
+      
+    
+     
+   Są one podprzestrzeniami odpowiednio przestrzeni 
+  
+    
+      
+        C
+        ⁡
+        
+          
+            (
+          
+        
+        [
+        0
+        ,
+        1
+        ]
+        
+          
+            )
+          
+        
+      
+    
+     
+   oraz 
+  
+    
+      
+        C
+        ⁡
+        
+          
+            (
+          
+        
+        [
+        2
+        ,
+        3
+        ]
+        
+          
+            )
+          
+        
+        ,
+      
+    
+     
+   są więc unormowane. Niech dany będzie operator 
+  
+    
+      
+        T
+      
+    
+     
+   przypisujący funkcji wielomianowej 
+  
+    
+      
+        x
+        ↦
+        p
+        (
+        x
+        )
+      
+    
+     
+   określonej na zbiorze 
+  
+    
+      
+        [
+        0
+        ,
+        1
+        ]
+      
+    
+     
+   tę samą funkcję określoną na zbiorze 
+  
+    
+      
+        [
+        2
+        ,
+        3
+        ]
+        .
+      
+    
+     
+   Z twierdzenia Stone’a-Weierstrassa wynika, że wykres tego operatora jest gęsty w 
+  
+    
+      
+        X
+        ×
+        Y
+        ,
+      
+    
+     
+   co daje przykład w pewnym sensie maksymalnie nieciągłego operatora liniowego (por. funkcja nigdzieciągła). Należy zauważyć, że 
+  
+    
+      
+        X
+      
+    
+     
+   nie jest zupełna, co musi być prawdą, skoro można skonstruować taki operator.
+
+
+== Trywialne przestrzenie sprzężone ==
+Jeżeli 
+  
+    
+      
+        X
+      
+    
+     
+   jest przestrzenią liniową nad ciałem 
+  
+    
+      
+        K
+        ,
+      
+    
+     
+   to zbiór 
+  
+    
+      
+        
+          X
+          ′
+        
+      
+    
+     
+   wszystkich przekształceń liniowych przestrzeni 
+  
+    
+      
+        X
+        →
+        K
+      
+    
+     
+   jest niepusty (dowolną funkcję określoną na wektorach bazy Hamela tej przestrzeni można przedłużyć do przekształcenia liniowego na całej przestrzeni). Istnieje jednak szeroka klasa przestrzeni liniowo-topologicznych, których przestrzeń sprzężona topologicznie 
+  
+    
+      
+        
+          X
+          
+            ∗
+          
+        
+        ,
+      
+    
+     
+   tzn. przestrzeń wszystkich ciągłych przekształceń liniowych tej przestrzeni w ciało skalarów, złożona jest tylko z przekształcenia zerowego (przestrzeń ta jest trywialna) – przykładem przestrzeni o takiej własności są przestrzenie Lp dla 
+  
+    
+      
+        0
+        ⩽
+        p
+        <
+        1.
+      
+    
+     
+  
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+Constantin Costara, Dumitru Popa, Exercises in Functional Analysis, Springer, 2003. ISBN 1-4020-1560-7.
+EricE. Schechter EricE., Handbook of Analysis and its Foundations, San Diego, CA.: Academic Press, 1997, ISBN 0-12-622760-8, OCLC 175294365 .brak strony (książka)

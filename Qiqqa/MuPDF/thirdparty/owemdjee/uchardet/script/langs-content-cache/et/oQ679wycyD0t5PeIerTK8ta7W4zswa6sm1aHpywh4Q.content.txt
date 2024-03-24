@@ -1,0 +1,30 @@
+revision: 5664591
+title: Ada Lovelace
+url: https://et.wikipedia.org/wiki/Ada_Lovelace
+
+
+---
+
+Ada Lovelace ehk Augusta Ada King, Lovelace'i krahvinna, sünninimega Augusta Ada Byron (10. detsember 1815 – 27. november 1852), oli Inglismaa matemaatik, kes on tuntud eelkõige Charles Babbage'il pooleli jäänud mehaanilise universaalarvuti kirjeldamise ja rakendusvõimaluste arendamise poolest. Lovelace nägi ette, et Babbage'i masinat saaks lisaks arvutamisele kasutada ka ükskõik millise sisu numbriteks teisendamiseks. Lovelace'i ideed olid oma ajast nii palju ees, et neid tunnustati lõplikult alles sada aastat hiljem, 1950. aastatel.
+
+
+== Koostöö Charles Babbage'ga ==
+Lovelace kohtus Babbage'ga 1833. aastal oma eraõpetaja Mary Somerville'i kaudu. 
+Aastal 1842 kutsuti Babbage Torino ülikooli pidama loengut oma analüütilisest masinast. Noor insener ja pärastine Itaalia peaminister Luigi Menabrea kirjutas Babbage'i loengu prantsuse keeles üles ja see avaldati 1842. aasta oktoobris Genfi ülikooli ajakirjas. Babbage'i sõber Charles Wheatstone palus Lovelace'il tõlkida see artikkel inglise keelde. Töö võttis aega 9 kuud, Lovelace lisas tõlkele märkusi algtekstist kolm korda suuremas mahus. Tõlge ilmus Richard Taylori toimetatud loodusteaduste raamatusarjas "Scientific Memoirs" ('teaduslikud memuaarid') initsiaalide AAL all.Lovelace koostas sellele arvutile ka programmi, mis arvutas Bernoulli arve. Selle programmi kirjelduse avaldas ta oma artikli märkuste osas. Mil määral ta selle programmi ise välja mõtles, on teadmata. Babbage väitis hiljem, et kirjeldas Lovelace'ile mitut võimalikku arvutamise viisi ja Lovelace valis neist ühe, parandades sealjuures ühe Babbage'i tehtud jämeda vea.
+Lovelace'i mõju Babbage'ile on raske hinnata ka sellepärast, et Babbage kaldus üldse eitama teiste inimeste mõju endale. Kuid Lovelace oli kindlasti üks neid väheseid inimesi, kes täielikult mõistis Babbage'i tööd ning koostas tema analüütilisele masinale keeruka programmi. Lovelace'i kirjatöödes on vihjatud ka niisugustele arvutite kasutusvõimalustele, mida üheski Babbage'i avaldatud teoses pole mainitud, näiteks oletus, et "masin võib luua ükskõik missuguse keerukusastme ja ulatusega üksikasjalikke ja teaduslikke muusikateoseid".
+
+
+== Isiklikku ==
+Ada oli luuletaja lord Byroni ainus seaduslik laps. 1835. aastal abiellus ta Briti loodusteadlase William Kingiga, kes sai 1838. aastal krahvitiitli, misjärel Adast sai Lovelace'i krahvinna. Neil oli kolm last: Byron, Anne Isabella ja Ralph. Ada suri 36-aastaselt vähki.
+
+
+== Pärand ==
+Aastal 1953 avaldati Lovelace'i artikkel uuesti. Babbage'i masinat oli vahepeal hakatud tunnustama esimese arvutina ning Lovelace'i artiklit arvuti ja selle tarkvara kirjeldusena. Sel põhjusel peetakse Ada Lovelace'i esimeseks programmeerijaks.
+Ameerika Ühendriikide Kaitseministeeriumi loodud programmeerimiskeel, mis avaldati 1983, sai Lovelace'i järgi nimeks Ada.
+
+
+== Viited ==
+
+
+== Välislingid ==
+Ada Byron Lovelace, Countess of Lovelace

@@ -1,0 +1,29 @@
+revision: 14580365
+title: "Deb (format de fi\u0219iere)"
+url: https://ro.wikipedia.org/wiki/Deb_(format_de_fi%C8%99iere)
+
+
+---
+
+deb este un format, precum și extensia formatului pachetului program pentru distribuția Linux Debian și derivatele sale.
+
+
+== Note ==
+
+
+== Vezi și ==
+CheckInstall
+dpkg
+Listă de formate arhivă
+Listă de sisteme de gestiune de programe
+wpkg
+
+
+== Legături externe ==
+Debian FAQ: Basics of the Debian package management system
+Debreate - Constructor de pachete Debian puternic
+suportul funcționalităților .deb
+Manipularea directă a deburilor cu utilite standarde
+Video - Anatomy of a Debian package
+Format:Formate de arhivă
+Format:Sisteme de gestiune de pachete

@@ -1,0 +1,232 @@
+revision: 15297411
+title: Problema punctelor
+url: https://ro.wikipedia.org/wiki/Problema_punctelor
+
+
+---
+
+Problema punctelor, numită și problema împărțirii mizei (potului), este o problemă clasică de probabilitate, ce a motivat începuturile teoriei moderne a probabilităților în secolul XVII. Rezolvarea ei l-a condus pe Blaise Pascal la explicitarea pentru prima dată a ceea ce astăzi se cunoaște drept "valoare așteptată (sperată)".   
+Problema se referă la un joc de noroc cu doi jucători ce au șanse egale pentru câștigarea fiecărei runde. Jucătorii contribuie în mod egal la formarea potului și convin în avans ca primul jucător ce câștigă un anumit număr de runde să încaseze miza. Presupunând că jocul este întrerupt de anumite circumstanțe externe înainte ca vreun jucător să câștige potul, obținând victoria, întrebarea ce se pune este: Cum se va împărți miză în mod corect? Se înțelege implicit că împărțirea ar trebui să depindă de numărul de runde câștigate (până la întrerupere) de fiecare jucător, așa încât jucătorul mai aproape de victorie să ia partea mai mare din pot. Totuși, problema nu ține doar de calculul matematic; ea include de asemenea accepțiunea noastră asupra ceea ce ar trebui să fie o împărțire corectă.. 
+
+
+== Soluții inițiale ==
+Luca Pacioli a luat în considerare o astfel de problemă în cartea sa din 1494 Summa de arithmetica, geometrica, proportioni et proportionalita. Această metodă presupunea împărțirea potului în proporție cu rundele câștigate de fiecare jucător până la întreruperea jocului, fără să se ia în seamă numărul de runde ce mai trebuiau jucate.La mijlocul secolului XVI, Niccolò Tartaglia a observat că metoda lui Pacioli duce la rezultate contraintuitive, dacă jocul este întrerupt după desfășurarea unei singure runde. În acest caz, regula lui Pacioli ar atribui întreg premiul câștigătorului acelei singure runde, deși un avans de o rundă câștigată într-un joc cu multe runde poate fi insignifiant. Tartaglia produce o metodă de rezolvare care evită acest impediment prin întemeierea împărțirii potului pe raportul dintre rundele în plus câștigate față de adversar și lungimea jocului. Această soluție are însă dificultățile ei; spre exemplu, într-un joc de 100 de runde, Tartaglia împarte potul în aceeași manieră pentru un scor de 65 la 55 ca și pentru un scor de 99 la 89. În primul caz jocul este încă deschis, pe când în cel de-al doilea victoria este aproape certă pentru jucătorul ce conduce la scor. Tartaglia însuși a fost nesigur de posibilitatea rezolvării acestei probleme într-un mod care să fie corect față de ambii jucători: "în orice fel s-ar face împărțirea, tot vor exista pricini pentru litigii".
+
+
+== Pascal și Fermat ==
+Problema a apărut din nou în jurul anului 1654, când Cavalerul de Méré i-a propus-o lui Blaise Pascal. Acesta din urmă va discuta rezolvarea ei cu Pierre de Fermat. Datorită acestei corespondențe, Pascal și Fermat nu numai că au ajuns la o soluție convingătoare și consistentă, dar au dezvoltat în același timp concepte ce au rămas fundamentale în teoria probabilităților.    
+Perspectiva de pornire a celor doi a fost aceea că împărțirea potului nu ar trebui să depindă atât de mult de istoria jocului înainte de întrerupere, ci de posibilitățile în care jocul ar fi putut fi continuat dacă nu ar fi fost întrerupt. Intuitiv, este corect ca jucătorul ce conduce cu scorul de 7 la 5 într-un joc de 10 runde să aibă aceeași șansă de câștig a jocului ca și unul ce conduce cu 17 la 15 într-un joc de 20 de runde. Astfel, Pascal și Fermat s-au gândit că întreruperea jocului în oricare din aceste două situații trebuie să ducă la aceeași împărțire a potului. Cu alte cuvinte, nu este important numărul de runde câștigate deja de jucători, ci numărul de runde ce mai trebuiesc a fi câștigate până la adjudecarea potului de unul dintre ei..  
+Fermat a judecat problema în felul următor:dacă un jucător are nevoie de r runde câștigătoare pentru a câștiga jocul, pe când celălalt are nevoie de s runde, jocul va fi cu siguranță câștigat de cineva după 
+  
+    
+      
+        r
+        +
+        s
+        −
+        1
+      
+    
+     
+   runde. Prin urmare, presupunând că jucătorii ar mai juca 
+  
+    
+      
+        r
+        +
+        s
+        −
+        1
+      
+    
+     
+   runde, în total ar exista 
+  
+    
+      
+        
+          2
+          
+            r
+            +
+            s
+            −
+            1
+          
+        
+      
+    
+     
+   rezultate diferite pentru aceste runde. În unele din aceste viitoruri posibile, jocul va fi decis după mai puțin de 
+  
+    
+      
+        r
+        +
+        s
+        −
+        1
+      
+    
+     
+   runde, dar nu strică să ne imaginăm că jucătorii continuă jocul fără scop determinat. Doar astfel, presupunând aceeași întindere în timp a jocului (i.e. număr de runde), ne putem convinge că fiecare din cele  
+  
+    
+      
+        
+          2
+          
+            r
+            +
+            s
+            −
+            1
+          
+        
+      
+    
+     
+   posibilități de desfășurare a rundelor este egal probabilă. Fermat a fost astfel capabil să calculeze șansa ca fiecare jucător să câștige prin simpla enumerare într-un tabel a celor 
+  
+    
+      
+        
+          2
+          
+            r
+            +
+            s
+            −
+            1
+          
+        
+      
+    
+     
+   posibile continuări, numărând pe rând câte dintre ele ar favoriza fiecare jucător. Fermat considera absolut îndreptățita o astfel de împărțire a potului, corespunzătoare proporțiilor rezultate.
+Soluția lui Fermat, corectă după standardele de azi, a fost îmbunătățită de Pascal în două moduri. În primul rând, Pascal a produs un argument mai elaborat pentru motivul considerării împărțiri propuse de Fermat drept corectă. În al doilea rând, a arătat cum se pot calcula proporțiile de împărțire a potului într-un mod mai eficient, căci metoda tabulară a lui Fermat devine impracticabilă (fără ajutorul calculatoarelor moderne) pentru 
+  
+    
+      
+        r
+        +
+        s
+        −
+        1
+      
+    
+     
+   mai mare decât 10.
+În locul considerării în exclusivitate a probabilității de câștigare a întregului joc rămas, Pascal a conceput o metodă bazată pe un principiu al pașilor mici: Presupunând că jucătorii ar fi capabili a juca încă o rundă înainte de a fi întrerupți, și că s-a decis modul în care să se împartă corect potul după acea rundă adițională (posibil deoarece acea rundă permite unuia dintre jucători să câștige), runda adițională poate conduce la una din două posibile scenarii, fiecare cu propria modalitate corectă de împărțire a potului, dar de vreme ce jucătorii au șanse egale pentru câștigarea rundei următoare (celei adiționale), ar trebui să împartă diferența dintre cele două modalități viitoare de împărțire a potului în mod egal. În acest fel, cunoașterea modului de împărțire a potului pentru jocuri cu mai puține runde rămase poate ajuta în calcularea împărțirii potului în cazul celor cu mai multe runde rămase.
+Este mai ușor a convinge pe cineva despre corectitudinea acestui principiu decât dacă s-ar folosi metoda tabulară a lui Fermat, care are o ipoteză dificilă de vreme ce se presupune că jocul poate continua chiar și după ce un anume jucător l-a câștigat. Analiza lui Pascal în acest caz este unul dintre primele exemple a folosirii valorii așteptate (sperate) în locul cotelor când vine vorba de probabilități. La scurt timp după aceasta, ideea lui Pascal va forma baza primului tratat sistematic despre probabilități scris de Christiaan Huygens. Mai târziu, conceptul modern de probabilitate s-a dezvoltat din folosirea valorilor așteptate (denumite și valori expectate sau valori sperate).   
+Aplicarea directă a regulii lui Pascal oferă o soluție mai rapidă decât metoda lui Fermat, atunci când rămân multe runde de jucat. Pascal a folosit această regulă ca punct de plecare pentru dezvoltarea altor metode computaționale mai avansate. Prin iscusita manipulare a identităților specifice Triunghiului lui Pascal
+(incluzând câteva din primele demonstrații unde inducția se folosește în mod explicit), Pascal a arătat că într-un joc unde unui jucător îi trebuiesc r puncte pentru a câștiga, iar celuilalt îi trebuiesc s, împărțirea corectă a potului se calculează conform formulei:  
+
+  
+    
+      
+        
+          ∑
+          
+            k
+            =
+            0
+          
+          
+            s
+            −
+            1
+          
+        
+        
+          
+            
+              (
+            
+            
+              
+                r
+                +
+                s
+                −
+                1
+              
+              k
+            
+            
+              )
+            
+          
+        
+        
+          
+             la 
+          
+        
+        
+          ∑
+          
+            k
+            =
+            s
+          
+          
+            r
+            +
+            s
+            −
+            1
+          
+        
+        
+          
+            
+              (
+            
+            
+              
+                r
+                +
+                s
+                −
+                1
+              
+              k
+            
+            
+              )
+            
+          
+        
+      
+    
+     
+  
+
+Problema de împărțire a potului a devenit o motivație majoră pentru lucrarea lui Pascal Traité du triangle arithmétique (Tratat despre triunghiul artimetic).Deși Pascal a găsit această metodă independent de Fermat cu a sa metodă tabulară, este evident că cuprinde numărarea diferitelor rezultate a celor  
+  
+    
+      
+        r
+        +
+        s
+        −
+        1
+      
+    
+     
+   runde suplimentare, după cum a sugerat Fermat.
+
+
+== Note ==
+
+
+== Referințe ==
+Anders Hald: A history of Probability and Statistics and their Applications before 1750. Wiley 2003, ISBN 978-0-471-47129-5, p. 35, 54
+Keith Devlin: The Unfinished Game: Pascal, Fermat, and the Seventeenth-Century Letter that Made the World Modern. Basic Books 2010, ISBN 978-0465018963
+
+
+== Link-uri externe ==
+Eric W. Weisstein, Pascal's triangle la MathWorld.
+The Early Development of Mathematical Probability
+Problem of points at MathForum

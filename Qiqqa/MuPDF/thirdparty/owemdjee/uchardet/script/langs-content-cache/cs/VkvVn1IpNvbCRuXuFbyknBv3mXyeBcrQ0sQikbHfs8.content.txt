@@ -1,0 +1,38 @@
+revision: 20288966
+title: Technology
+url: https://cs.wikipedia.org/wiki/Creative_Technology
+
+
+---
+
+Creative Technology Ltd. je firma zabývající se návrhem a výrobou zvukových čipů a ovladačů.
+
+
+== Produkty ==
+Sound Blaster
+
+1. generace zvukových čipů, které byly před příchodem dostatečně dobrých integrovaných zvukových čipů oblíbené.X-Fi
+
+2. generace zvukových čipů, které jsou výkonnější, mají podporu novějších standardů.Sound Core3D
+
+3. generace zvukových čipů
+Trh: platforma PC a spotřební elektronika
+Možnost umístit na základní desku i samostatnou kartu
+Čip
+Zpracování probíhá pomocí více výkonných jednotek pro zpracování digitálního signálu.
+Jednotky Quartet DSP se 4 nezávislými jádry
+6kanálové 24bitové D/A převodníky s odstupem signál/šum 102 dB
+4kanálové 24bitové A/D převodníky s odstupem signál/šum 101 dB
+Integrovaný sluchátkový zesilovač a digitální rozhraní pro mikrofon
+10pásmový grafický ekvalizér, který umí nastavit úroveň basů, kalibrovat reproduktory, obsahuje omezovač, potlačit ozvěny a zesilovat/zeslabovat výšku tónu
+Čip obsahuje vstupy a výstupy S/PDIF a obecné vstupy a výstupy GPIO
+Čip je umístěn do 56 pinového pouzdra QFP
+Podporuje: standard HD Audio, Dolby Digital, CrystalVoice (odstranění odezvy při komunikaci, potlačení okolního šumu, automatické nastavení hlasitosti, efekty FX na úpravu hlasu a ekvalizér) a THX TruStudio Pro (slouží k zlepšení zvuku).
+
+
+== Externí odkazy ==
+ Obrázky, zvuky či videa k tématu Creative Technology na Wikimedia Commons 
+Oficiální web Creative Technology
+Portál od Creative věnovaný Open Source ovladačům a programům
+Profil společnosti Creative Technology na Yahoo!
+Creative uvádí zvukové karty s technologií Sound Core 3D

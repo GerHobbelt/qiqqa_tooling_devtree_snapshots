@@ -1,0 +1,74 @@
+revision: 11177952
+title: diode
+url: https://da.wikipedia.org/wiki/Diode
+
+
+---
+
+En diode er en  elektronisk komponent typisk i et hus, der har to elektroder og hvor strømmen løber igennem lufttomt rum, gas eller en halvleder og som har en asymmetrisk overførselskarakteristik.
+En ensretterdiode funktion er populært sagt elektricitetens modsvar til en ensretterventil; under normale driftsbetingelser kan der gå elektrisk strøm fra anoden til katoden, men ikke den anden vej. Dioder kan realiseres på forskellige måder, f.eks. som et radiorør, en halvleder, eller ved hjælp af et flydende metal, som f.eks. i kviksølvensretteren.
+
+
+== Ensrettende halvlederdiode ==
+Den mest kendte halvlederdiode er en almindelig strømensrettende halvlederdiode, der består af en overgang mellem to forskelligt "let forurenede" halvledermaterialer. De "let forurenede" dele er:
+
+N-doteret ("let forurenet"). Betyder at halvlederen er forurenet med et hovedgruppe V-grundstof (fx fosfor). Resultatet er, at der er nogle få frie valenselektroner i N-materialet og at det er en rimelig elektrisk leder.
+P-doteret. Betyder at halvlederen er forurenet med et hovedgruppe III-grundstof (fx bor eller gallium). Resultatet er, at der er underskud af elektroner i P-materialet. De steder der mangler en elektron kaldes et elektronhul (eller blot hul) og at det er en rimelig elektrisk leder.Når disse to doterede dele N og P sættes sammen, så lader komponenten kun elektrisk strøm løbe via PN, men ikke i retningen via NP.
+Da elektroner (negative ladning) løber i modsat retning af strømmens, sker der følgende: Elektronerne kan løbe via NP, men ikke i retningen PN. 
+Forklaringen på dette er i den tynde zone mellem P og N. Her vil frie elektroner blive bundet i de nærliggende "huller". Det betyder at denne zone er elektrisk isolerende ved 0 volt over NP.
+Når der påtrykkes en positiv spænding over PN, vil elektronerne løbe gennem N til NP-zone, og hullerne vil løbe gennem P til NP-zone fra den anden side. Det resulterer i at elektroner og hullerne annihilerer under udsendelse af fotoner – dette anvendes især i lysdioder. Der vil dog være et spændingsfald over PN, der afhænger af PN halvledermaterialet, temperatur, aktive areal+tykkelse og strømstyrke/areal:
+Når der påtrykkes en positiv spænding over NP, vil elektronerne og hullerne løbe væk fra NP-zonen og resultatet er, at der ingen elektrisk strøm løber, fordi der ingen frie ladningsbærere er. NP-overgangslaget fungerer som isolator, men kan kun klare en vis spænding før der sker et destruktivt gennemslag. Ved småsignaldioder kan denne spænding være så lav som 20-30 volt, mens det´ved ensretterdioder kan være 1000 volt (1N4007) eller højere. Gennembrudsspændingen kaldes zenerspændingen, og denne udnyttes hos zenerdioderne, der er konstrueret til at tåle dette gennemslag, blot man sørger for at begrænse strømmen gennem komponenten.
+
+
+== Fotodiode og solcellediode ==
+Når en diode absorberer fotoner med en egnet bølgelængde vil dioden fungere som en strømgenerator, der er stort set proportional med lysstyrken. Det er NP-zonen, som under fotonabsorptionen genererer en elektron og et elektronhul.
+En effektiv lysdiode fungerer også som en retningsbestemt solcellediode, men med det areal som lysdiodens linsetværsnit har.
+
+
+== Ensrettende elektronrørsdiode (radiorørsdiode) ==
+Den mest kendte ensrettende elektronrørsdiode har et lufttomt rør med to elektroder, hvoraf den ene har let ved at afgive elektroner (katode) og den anden ikke let kan (anode).
+
+
+== Halvleder diodetyper ==
+
+Halvlederbaserede dioders to terminaler kaldes, ligesom elektronrørsdioden, for elektroder, hvor den ene kaldes katode og den anden kaldes anode.
+Af nutidige og fortidige ensretterdioder findes der:
+
+Chip-diode – mest almindelige i dag (2012).
+Schottky diode
+Schottky diodevarianter:
+Punktkontaktdiode
+KrystaldetektorDer findes mange varianter af halvlederbaserede dioder udover den almindelige diode. Her er nogle af dem:
+
+diac (symmetrisk overføringsfunktion)
+fotodiode
+kapacitetsdiode
+laserdiode
+lysdiode LED
+pin-diode
+solcellediode
+Transient-dæmper-diode (kan have asymmetrisk eller symmetrisk overføringsfunktion)
+tunneldiode
+Zenerdiode
+
+
+== Se også ==
+Universaldiode
+Ensretterbro, diodebro
+Elektronrør
+Elektronik
+Transducer
+Diodeligningen
+Diffusionsstrøm
+Driftstrøm
+
+
+== Kilder/referencer ==
+Web archive backup: The Unusual Diode FAQ – v4.5g Maintained by Dr. Michael J. Chudobiak, at Avtech Electrosystems Ltd., Ældre mirror: The Unusual Diode FAQ – v3.2 Arkiveret 3. august 2003 hos  Wayback Machine
+Web archive backup: Diodes and Semiconductors
+Tony R. Kuphaldt: Lessons In Electric Circuits -- Volume III: Diodes and rectifiers Arkiveret 27. januar 2013 hos  Wayback Machine
+
+
+== Eksterne henvisninger ==
+Web archive backup: cree.com: SiC Power Schottky (Barrier) Diodes (SBD) in Power Factor Correction Circuits (pdf)
+30.01.2002, Heise: Thermo-Diode gewinnt Strom aus Abwärme Arkiveret 15. november 2002 hos  Wayback Machine Citat: "...So konnten die Forscher bisher rund 17 Prozent der Wärmeenergie in elektrischen Strom umwandeln. Zudem setzte dieser thermionische Prozess bereits bei Temperaturen zwischen 100 und 300 Grad Celsius ein..."

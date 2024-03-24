@@ -1,0 +1,267 @@
+revision: 21329060
+title: "Spektroskooppinen kaksoist\xE4hti"
+url: https://fi.wikipedia.org/wiki/Spektroskooppinen_kaksoist%C3%A4hti
+
+
+---
+
+Spektroskooppinen kaksoistähti  näyttää yhdeltä tähdeltä, mutta sen spektrissä näkyy merkkejä kahdesta toisiaan kiertävästä tähdestä. 
+Tähdet ovat niin lähekkäin, tavallisesti alle 0,01" :n päässä toisistaan, ettei niitä havaita kaukoputkella, täpläinterferometrialla tai tähdenpeiton avulla. Spektroskooppisen kaksoistähden kiertoaika on lähes aina alle 5 vuotta, ja yleensä spektroskooppiset kaksoistähdet ovat ahtaita kaksoistähtiä, joiden kiertoaika on 8–20 vuotta. Radat ovat yleensä melko pyöreitä.
+Spektroskooppinen kaksoistähti saattaa olla pimennysmuuttuja, muttei läheskään aina. Jotkut spektroskooppiset kaksoistähdet on onnistuttu todentamaan tarkemmilla kaukoputkihavainnoilla visuaalisiksi kaksoistähdiksi.
+Monet niin sanotuista eksoplaneetoista on havaittu spektrometrillä niin kuin spektroskooppiset kaksoistähdetkin. 
+
+ 
+Kaksoistähti koostuu kahdesta komponentista, osatähdestä, jotka kiertävät toisiaan tavallisesti soikealla radalla yhteisen painopisteen ympäri. Monesti ajatellaan yksinkertaistaen himmeämmän tähden kiertävän kirkkaampaa. Spekroskooppinen kaksoistähti ilmenee vain spektristä eli analysoitaessa spektroskoopilla tähden säteilemää valoa. Tämä johtuu siitä, että tähdet ovat niin lähellä toisiaan ja tähtijärjestelmä niin kaukana, ettei järjestelmä erotu kaukoputkessa tai interferometrissa.
+Ensimmäinen havaittu spektroskooppinen kaksoistähti oli ζ1 Ursae Majoris. Sen löysi Pickering 1889. Jo sitä ennen Vogel oli havainnut Algolilla säteisnopeuden vaihteluja spektristä, mutta koska tuo tähti on pimennysmuuttuja, se ei ole spektrin pohjalta havaittu kaksoistähti. Sattumalta tuntuu se, että Zeta1,2 Ursae Majoris on ensimmäinen havaittu kaksoistähti.
+Spektroskooppisten kaksoistähtien ominaisuuksia ei yleensä tunneta tarkasti, varsinkaan jos ne eivät ole pimennysmuuttujia. Jotkut spektroskooppiset kaksoistähdet on tarkemmilla teleskoopeilla tai interferometrilla todettu näkyviksi kaksoistähdiksi.
+
+
+== Spektroskooppisen kaksoistähden spektri ==
+Spektroskooppisen kaksoistähden spektrissä viivat vaeltavat kiertoliikkeen tahdissa Dopplerin ilmiön takia. Spektriä tarkasteltaessa huomataan, miten tähden tai tähtien spektriviivat heilahtelevat ajan mukana. Välillä viivat ovat välillä siirtyneet punaiseen päin, välillä ne ovat oikealla kohdallaan ja välillä siirtyneet siniseen päin. Tämä spektriviivojen huojunta kielii tähden säteisnopeuden säännöllisestä vaihtelusta, eli soikeasta rataliikkeestä. Näin tähden spektriviivojen liikkeestä pystytään havaitsemaan jopa näkymätön tähti tai planeetta, joka huojuttaa vetovoimallaan keskustähteään. Toisissa spektroskooppisissa kaksoistähdissä näkyy mitattaessa kahden tähden spektriviivat, toisissa yhden.
+Jos havaitaan kaksi spektriä, päätähden spektri ja sivutähden spektri, sivutähden viivat ovat spektrissä aina siirtyneet toiseen suuntaan kuin päätähden viivat. Esimerkki kaksiviivaisesta spektroskooppisesta kaksoistähdestä on HD 80715. Esimerkiksi jos päätähden spektriviivat siirtyvät punaiseen päin, sivutähden viivat siniseen toisiaan.
+Jos tähdet ovat suunnilleen yhtä kirkkaita, spektrissä näkyy suuren osan aikaa kahden tähden spektrit päällekkäin. Näin on Mizarin ja Beta Aurigaen tapauksessa. Jos toinen tähti on hyvin himmeä, havaitaan vain toisen tähden spektriviivojen siirtymistä säännöllisesti.  Tämä johtuu siitä, että kirkkaampi tähti hukuttaa himmeämmän valoonsa. Tämän tyyppilnen on Alfa-2 Geminorum eli Castor.
+
+
+== Spektroskooppisten kaksoistähtien laskennalliset ominaisuudet ==
+
+Spektroskooppisen kaksoistähden massoja tai ratojen muotoa ei voida suoraan havainnoista todentaa. Havainnoista voidaan kuitenkin muodostaa massafunktio, joka ilmaisee massojen ja ratojen suhteen.Tyypillisesti kaksoisviivaisesta spektroskooppisesta kaksoistähdestä voidaan laskea nopeuden ja kaltevuuden tulo v sin i  tähden radan isoakselin ja kaltevuuden tulo a sin( i), ja tähtien massojen suhde. Massojen summaa ei pysty tällä tavoin selvittämään, vaan 
+  
+    
+      
+        
+          (
+          
+            m
+            
+              1
+            
+          
+          +
+          
+            m
+            
+              2
+            
+          
+          )
+          
+            sin
+            
+              3
+            
+          
+          ⁡
+          
+            i
+          
+        
+      
+    
+     
+  .
+Yksiviivaiselle spektroskooppiselle kaksoistähdelle voidaan spektristä laskea vain massafunktio 
+
+  
+    
+      
+        f
+        (
+        
+          m
+          
+            1
+          
+        
+        )
+        =
+        
+          
+            
+              m
+              
+                2
+              
+              
+                3
+              
+            
+            
+              
+                m
+                
+                  1
+                
+              
+              +
+              
+                m
+                
+                  2
+                
+              
+            
+          
+        
+        
+          sin
+          
+            3
+          
+        
+        ⁡
+        
+          i
+        
+        ,
+      
+    
+     
+  
+jossa 
+  
+    
+      
+        
+          
+            m
+            
+              1
+            
+          
+        
+      
+    
+     
+   ja 
+  
+    
+      
+        
+          
+            m
+            
+              2
+            
+          
+        
+      
+    
+     
+   ovat tähtien massat ja 
+  
+    
+      
+        
+          i
+        
+      
+    
+     
+   on radan kaltevuus.  
+Massafunktio voidaan ilmaista myös muodossa
+  
+    
+      
+        
+          
+            
+              
+                m
+                
+                  2
+                
+                
+                  3
+                
+              
+              ⋅
+              
+                sin
+                
+                  3
+                
+              
+              ⁡
+              
+                i
+              
+            
+            
+              (
+              
+                m
+                
+                  1
+                
+              
+              +
+              
+                m
+                
+                  2
+                
+              
+              
+                )
+                
+                  2
+                
+              
+            
+          
+        
+        =
+        
+          
+            
+              
+                v
+                
+                  1
+                
+                
+                  3
+                
+              
+              ⋅
+              P
+            
+            
+              2
+              π
+              G
+            
+          
+        
+        ,
+      
+    
+     
+  
+missä P on kiertoaika, 
+  
+    
+      
+        
+          π
+        
+      
+    
+     
+   on 3.14...  ja G gravitaatiovakio.
+
+
+== Katso myös ==
+Ellipsirata
+Luettelo spektroskooppisista kaksoistähdistä
+
+
+== Lähteet ==
+
+
+== Aiheesta muualla ==
+spectroscopic binaries  (Arkistoitu – Internet Archive)
+spectroscopic binary applet - ORBITING BINARY STARS Terry Herter
+Spectroscopic binaries
+Orbital Characteristics of Spectroscopic Binaries  (Arkistoitu – Internet Archive)
+Eighth Catalogue of the Orbital Elements of Spectroscopic Binary Systems (Arkistoitu – Internet Archive)

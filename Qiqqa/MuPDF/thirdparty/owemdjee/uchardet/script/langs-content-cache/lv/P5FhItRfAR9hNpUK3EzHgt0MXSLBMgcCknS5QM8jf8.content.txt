@@ -1,0 +1,22 @@
+revision: 2697802
+title: HAVELSAT
+url: https://lv.wikipedia.org/wiki/HAVELSAT
+
+
+---
+
+HAVELSAT jeb HavelSat ir Turcijas nanopavadonis, daļa no Eiropas Komisijas finansētās Zemes apakšējās termosfēras izpētes programmas QB50 (kods QB50 TR02). Tas 2017. gada aprīlī ar kravas kuģi Cygnus OA-7 nogādāts Starptautiskajā kosmosa stacijā, no kurienes brīvā lidojumā orbītā palaists  maijā.
+HAVELSAT izgatavoja uzņēmums HAVELSAT A.S. un Stambulas tehniskā universitāte. Tas veidots pēc CubeSat 2U formas standarta ar masu aptuveni 2 kg.
+Pavadoņa tehnoloģiskā derīgā krava ir programmvadāms radio (SDR) sakaru nodrošināšanai. Pavadonis arī veic attēlu neliela mēroga apstrādi.
+Zinātniskā krava QB50 projektam ir daudzadatu Lengmīra zonde elektronu blīvuma noteikšanai apkārtējā vidē.
+
+
+== Lidojuma gaita ==
+HAVELSAT tika palaists 2017. gada 17. aprīlī 15:11 UTC kravas kuģa Cygnus OA-7 hermētiskajā nodalījumā ar nesējraķeti Atlas V/401 no Kanaveralas zemesraga Gaisa spēku stacijas starta laukuma SLC-41.
+22. aprīlī Cygnus ieradās stacijā.
+16. maijā 08:25 UTC trīs 2U pavadoņi, to skaitā HavelSat, tika palaisti brīvā lidojumā no Nanoracks NRCSD-11 izmešanas ierīces, kuru turēja Kibo moduļa manipulators.
+
+
+== Ārējās saites ==
+QB50 Project, R01/TR02 BeEagleSAT and HavelSat
+HAVELSAT Gunter Dirk Krebs

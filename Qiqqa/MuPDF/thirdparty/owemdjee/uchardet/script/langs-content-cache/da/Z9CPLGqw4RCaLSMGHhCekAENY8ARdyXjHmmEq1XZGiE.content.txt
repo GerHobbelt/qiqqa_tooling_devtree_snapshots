@@ -1,0 +1,73 @@
+revision: 11493032
+title: transistor
+url: https://da.wikipedia.org/wiki/Transistor
+
+
+---
+
+Denne artikel handler om elektronikkomponenter. For transistor i betydningen radiomodtager, se transistorradio
+
+En transistor er en elektronisk halvlederkomponent til styring af for det meste lave elektriske spændinger og strømme.  Det er en elektrisk modstand, der kan ændres af en påført elektrisk spænding eller elektrisk strøm.  Driftsmåden for en transistor ligner den for et tilsvarende elektronrør, nemlig en triode.
+Transistorer er langt de vigtigste komponenter i elektroniske kredsløb, der blandtandet bruges i kommunikationsteknik, energistyring og computersystemer.  Transistorer – mest som tænd/sluk-kontakter – er af særlig betydning i integrerede kredsløb, hvilket er det, der gør udbredt mikroelektronik mulig.
+Udtrykket "transistor" er et portmanteau af de to engelske ord transfer resistor.
+
+
+== Generelt ==
+En transistor er en elektronisk komponent lavet af en halvleder og med mindst 3 tilledninger. Den enkelte transistor kan være indlejret i en lille mikrochip på fx 1 mm x 1 mm. Transistorens mikrochip pakkes ind i et lille hus med rumfangsdimensioner på typisk 2 mm (hus SOT23-3) til 4 cm (hus TO-3). Flere transistorer kan også indlejres i samme mikrochip, som kaldes et integreret kredsløb (IC).
+Som andre halvlederkomponenter er transistoren indlejret i en mikrochip af et halvledermateriale; et materiale med elektriske egenskaber i "gråzonen" mellem de elektriske ledere og isolatorer – ældre transistorchips er oftest lavet med germanium, mens man i dag hovedsageligt bruger silicium til formålet.
+På illustrationerne ses forskellige typer såkaldt diskrete transistorer, hvor hvert hus indeholder én transistor. Som det ses på illustrationerne ovenfor til højre, har transistorer almindeligvis tre tilledninger, eller ben som de kaldes i fagterminologien: Et af benene, typisk kaldet basis eller gate, tager imod det svage signal der skal "styre" transistoren; den strøm eller spænding der findes her, afgør hvor meget strøm transistoren "lader slippe" ind og ud gennem de to andre tilledninger.
+
+
+== Opfindelse ==
+
+Den halvlederbaserede forstærkertrintransistor blev opfundet i december 1947 af John Bardeen, Walter Houser Brattain og William Bradford Shockley i Bell Laboratorierne, men opfindelsen/opdagelsen blev først offentliggjort i juni 1948.Man forsøgte at lave forstærkende komponenter (fx elektronrør) i faststof mellem ca. 1930-1947, men uden større succes. Men den 17. november 1947 lavede John Bardeen og Walter Brattain fra Bell Laboratory nogle overflademålinger på et rent germaniumkrystal, som er en halvleder, og opdagede, at to elektroder, med en indbyrdes afstand på langt under en mm, havde en kraftig indbyrdes strømindvirkning – i forhold til den fælles elektrode; bagsiden af krystallet – basen.
+
+
+=== Andre forstærkende eller transistorlignende opdagelser ===
+Det vides ikke om dr. Julius Edgar Lilienfeld byggede sine patenterede "metode og apparat til at kontrollere elektrisk strøm": "MESFET" (
+US Patent 1,745,175) i 1926/1930; "MOSFET" (
+US Patent 1,900,018) i 1928/1933 og en forstærker (
+US Patent 1,877,140).
+
+
+== Transistorproduktion ==
+Fra 1947 til ca. 1960 (ikke tjekket) blev transistorerne håndlavet og var derfor dyre. Datidens transistorer vil med dagens priser koste ca. 1000 kr/stk.
+Fra ca. 1960 (ikke tjekket) til nu anvendes litografi til masseproduktion af transistorer. Fra ca. 1970 (ikke tjekket) blev også ledningerne (bonding wire) mellem halvlederchippen og tilledningerne automatisk placeret og svejset med ultralyd. I dag (2003) kan transistorer købes for under 1 kr/stk.
+I chips (integrerede kredsløb, IC'er) bliver transistorerne endnu billigere: En Intel Pentium 4 Northwood har 55 millioner transistorer i chippen og 2 GHz-udgaven kan købes for 660 kr. (2003). Prisen per transistor er her: 0,000012 kr.
+
+
+== Transistortyper ==
+
+Der findes en række forskellige typer transistorer. De mest udbredte er felteffekttransistoren (FET, Field Effect Transistor) og den bipolare transistor (BJT, Bipolar Junction Transistor). Den bipolare transistor var den mest udbredte ind til midten af 1970'erne, da den er mindre krævende at fremstille end felteffekttransistoren, som dog i dag i antal er mere udbredt end den bipolare transistor.
+Herudover findes der den ikke særligt kendte og udbredte unijunction-transistor (UJT).
+Visse tyristorer, der både kan tændes og slukkes fra en gate, er "digitale" transistorer; fx Emitter turn-off tyristor (ETO) og Gate turn-off tyristor (GTO).En transistortype, som måske ikke er en selvstændig type, er IGBT (eng. Insulated Gate Bipolar Transistor). Den kan bedst beskrives som en sammenbygning af en bipolar transistor og en MOSFET. Den bliver stort set kun anvendt til højeffektanvendelser.
+
+
+== Funktion ==
+Ligesom de gamle radiorør, er en transistors opgave at lade et svagt elektrisk signal "regulere" en mange gange større strøm eller spænding, sådan at der kommer en forstærket "kopi" af det svage signal ud i den anden ende af transistoren.
+I analoge kredsløb, for eksempel et forstærkertrin, kan man groft sagt sammenligne transistoren med en lysdæmper; transistoren skal bare have et lille elektrisk signal i stedet for en drejeknap, til at "fortælle" den hvor meget strøm der skal "slippe igennem". Tilsvarende kan man i digital elektronik sammenligne transistoren med en almindelig lyskontakt; i stedet for en trykknap skal transistoren blot have et elektrisk signal, der fortæller den om den skal være "tændt" eller "slukket".
+
+
+== Hvordan virker en bipolar transistor i praksis ==
+
+
+=== Strømstyring ===
+I den mest anvendte bipolare transistorkobling; fælles emitterkobling anvendes strømstyring af input (Ib), da strømmen Ic næsten er en konstant faktor af Ib. Fordi Ic/Ib næsten er konstant for varierende Ib, har man givet den et navn: Strømforstærkningsfaktoren og benævnelsen beta, Hfe eller hFE. Den er nogenlunde konstant overfor Tchip ændringer ved Vce > 1 V. Typisk er Hfe i følgende interval for laveffekt småsignal transistorer: 10 < Hfe < 800.
+Det skal bemærkes, at det er hældningen ΔIc/ΔIb, som er mest interessant i signalforstærkere.
+
+
+=== Hvorfor er det interessant med strømforstærkning? ===
+Det er det fordi vi er interesseret i at forstærke signaler. Det at forstærke vil sige at gange med en fast faktor, uafhængig af input-signalets styrke. F.eks. er spændingen mellem en svag og stærk radiokanal 7,5 uV og 75mV på en radioantenne ved en belastning på 75 Ohm. Via Ohms lov kan vi regne strømmen ud til at være mellem 0,1uA og 1mA. Skal vi lytte til lyden fra en radiokanal, skal vi strømforstærke mellem 1.000.000 og 100 gange, for at vi kan høre radiokanalen i højttaleren. Her forudsættes en strøm på 100mA i en højttaler på f.eks. 8 Ohm.
+En transistor i fælles-emitter kobling i det lineare arbejdsområde fungerer tilnærmelsesvis som en strømstyret strømgenerator.
+
+
+== Kilder/referencer ==
+
+
+== Se også ==
+Universaltransistor
+MOSFET
+Elektronik
+
+
+== Eksterne henvisninger ==

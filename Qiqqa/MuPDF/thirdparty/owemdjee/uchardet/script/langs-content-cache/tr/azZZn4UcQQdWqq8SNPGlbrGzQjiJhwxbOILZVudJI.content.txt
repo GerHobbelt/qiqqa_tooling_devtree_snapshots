@@ -1,0 +1,143 @@
+revision: 25737873
+title: "Yar\u0131\xE7ap"
+url: https://tr.wikipedia.org/wiki/Yar%C4%B1%C3%A7ap
+
+
+---
+
+Yarıçap, bir daire veya kürenin özeğinin (merkezinin) çemberine olan mesafesidir. Çapın yarısına eşittir.
+Bir dairenin yarıçapı (r), çemberinin (c) 
+  
+    
+      
+        2
+        π
+      
+    
+     
+   ile bölümüne eşittir:
+
+  
+    
+      
+        r
+        =
+        
+          
+            c
+            
+              2
+              π
+            
+          
+        
+      
+    
+     
+  
+Üç nokta 
+  
+    
+      
+        
+          P
+          
+            1
+          
+        
+        ,
+        
+          P
+          
+            2
+          
+        
+        ,
+        
+          P
+          
+            3
+          
+        
+      
+    
+     
+   ve
+
+  
+    
+      
+        θ
+      
+    
+     
+   açısı 
+  
+    
+      
+        ∠
+        
+          P
+          
+            1
+          
+        
+        
+          P
+          
+            2
+          
+        
+        
+          P
+          
+            3
+          
+        
+        .
+      
+    
+     
+   ise
+
+  
+    
+      
+        r
+        =
+        
+          
+            
+              
+                |
+              
+              
+                P
+                
+                  1
+                
+              
+              −
+              
+                P
+                
+                  3
+                
+              
+              
+                |
+              
+            
+            
+              2
+              sin
+              ⁡
+              (
+              θ
+              )
+            
+          
+        
+      
+    
+     

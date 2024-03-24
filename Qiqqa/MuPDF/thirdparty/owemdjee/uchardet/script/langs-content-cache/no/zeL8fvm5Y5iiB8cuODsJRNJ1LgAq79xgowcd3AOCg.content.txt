@@ -1,0 +1,46 @@
+revision: 23032955
+title: Morse Code
+url: https://no.wikipedia.org/wiki/Morsealfabetet
+
+
+---
+
+Morsealfabetet eller morsetegn er et kodesystem for å sende og motta tekst ved å slå av og på et signal i pulser med kort eller lang varighet atskilt med mellomrom (prikker og streker, eller korte og lange pip). Med litt øvelse kan morsekode både sendes og mottas direkte av mennesker uten at det er behov for noe teknisk utstyr eller hjelpemidler. Selve signalet kan være en tone, et lys, en berøring, et radiosignal eller et hvilket som helst annet signal som man presist kan styre av og på. Morsetegn blir brukt ved morsetelegrafi og ble utviklet av Samuel Morse for hans oppfinnelse den elektriske telegrafen i 1838. 
+
+
+== System ==
+Morsealfabetet har koder, såkalte morsetegn, for bokstaver, tall, andre skrifttegn samt noen såkalte prosedyretegn. Prosedyretegnene har betydninger som for eksempel: «her begynner meldingen», «her slutter meldingen», «vent», «forstått», «begynn nytt avsnitt». I tillegg til de få prosedyretegnene brukes også tidsbesparende tre‑bokstavs‑koder (såkalte Q-koder) med internasjonalt standardiserte betydninger. Noen morsetegn har flere betydninger. For eksempel:  Morsetegnet: · − · − · betyr både «+» og «her slutter meldingen».
+Signalpulsvarigheten av én «strek» tilsvarer tre «prikker»; pausen mellom pulsene inne i hvert enkelt morsetegn tilsvarer én «prikk»; pausen mellom hvert morsetegn i et ord tilsvarer tre «prikker»; pausen mellom hvert ord tilsvarer syv «prikker».
+
+
+== Historie ==
+
+Morsekoden ble opprinnelig skapt for amerikanske Morses elektriske telegraf tidlig på 1840-tallet. Samuel Finley Breese Morse (1791 – 1872) var amerikansk kunstner og oppfinner som lagde sitt første apparat for elektromagnetisk telegrafi i 1837. I 1838 presenterte han et alfabet av morsetegn der hver bokstav blir presentert ved en kombinasjon av korte og lange signaler. I 1844 ble det første telegrammet overført fra Washington til Baltimore. Da regjeringen i USA ikke ville kjøpe patentrettighetene, laget Morse sitt eget selskap, og telegrafen bredte seg raskt. Ideene var for øvrig tidligere utprøvd av andre, blant annet den tyske matematikeren Carl Friedrich Gauss.
+Morsekoden ble opprinnelig skapt for amerikanske Samuel Morses elektriske telegraf tidlig i 1840-årene. Morsekode ble også i omfattende grad benyttet for de tidlige radiokommunikasjonene på begynnelsen av 1890-tallet før det ble mulig å overføre stemme. I den tiden vokste det fram mange morsealfabeter, alle noe forskjellige. Enkelt sett var det slik at hvert land hadde sitt morsealfabet. Tegnene ble tilpasset språkene slik at de tegnene som opptrådte oftest, var de enkleste. Det som vi i dag kaller for morsealfabetet, stammer fra standardiseringsarbeidet til en komité som utgikk fra statstelegrafene i Tyskland og Østerrike i 1852, basert på deres respektive morsealfabeter. Alfabetet ble videreutviklet av Den internasjonale telegrafkongressen i Paris i 1865, og har vært stort sett uforandret siden. Den første halvdelen av 1900-tallet ble flertallet av internasjonal høyhastighetskommunikasjon gjort med morsekode via telegraflinjer, undersjøiske kabler og radiosamband. Imidlertid ble den variable lengden på morsetegnene vanskelig å tilpasse til automatisk samband slik at det meste av elektronisk kommunikasjon ble erstattet av maskinlesbare formater som Baudotkode og ASCII.
+
+
+=== Bruk i Norge ===
+Telegrafi har i Norge vært brukt mellom skip og kystradiostasjoner siden 1908, og var i bruk ved Vardø radio til og med 31. desember 2002.
+Telegrafi er i daglig bruk innen amatørradio. Det er ikke lenger krav til ferdigheter for å få lisens, men telegrafi beholder sin popularitet av flere grunner:
+
+Glede ved å utvikle og beherske manuelle ferdigheter som telegrafien krever.
+Krever enkelt utstyr som er godt egnet for selvbygging av amatører uten profesjonell bakgrunn innen elektronikk.
+Svært robust og gjør kontakter mulig over lengre avstander og under tunge støyforhold.
+Effektiv bruk av frekvensressurser.Sjøforsvaret sluttet å utdanne telegrafister i 2000, da det siste marinetelegrafistkurset ble avholdt. Men de bruker fremdeles morse ved å blinke med Aldislamper mellom fartøyene. Dette brukes dersom det er beordret f.eks. radiotaushet. Menige ble utdannet til dette om de valgte et kurs som het SRMA etter de var ferdig på rekruttskolen på Madla. De måtte da bestå speed 8 (40 tegn i minuttet) etter endt kurs. I dag er det kun matroser (konstabler) som lærer optisk signalering hvis de går kurset MarINI.
+
+
+== Tegnsettet ==
+Morsealfabetet er felles for alle språk med det latinske alfabetet når det gjelder bokstavene A–Z og tallene 0–9; på norsk har vi i tillegg Æ, Ø og Å. 
+Uttalen av tegnene foregår slik: (for eksempel SY, leses på denne måten: TI-TI-TI TA-TI-TA-TA.) Altså at prikkene leses som TI og strekene leses som TA. 
+
+
+== Se også ==
+Samuel Morse
+Bokstaveringsalfabet
+
+
+== Eksterne lenker ==
+(en) Morse code – kategori av bilder, video eller lyd på Commons 
+(en) Morse code – galleri av bilder, video eller lyd på Commons 
+Opplæringsvideo i Morse, fra United States Army i 1966, på youtube.com (engelsk)
+Opplæringsvideo i Morse, fra United States Navy i 1944, på youtube.com (engelsk)

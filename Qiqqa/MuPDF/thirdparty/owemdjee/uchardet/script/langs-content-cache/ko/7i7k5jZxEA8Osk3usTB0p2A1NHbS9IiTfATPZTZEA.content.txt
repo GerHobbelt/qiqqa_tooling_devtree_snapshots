@@ -1,0 +1,23 @@
+revision: 33957215
+title: Ip Man
+url: https://ko.wikipedia.org/wiki/Ip_(%EB%AA%85%EB%A0%B9%EC%96%B4)
+
+
+---
+
+ip는 리눅스 운영체계에서 네트워크 매니저 데몬 (network manager daemon)수준에서 ip 관련 정보 조회및 설정에 관련한 명령어이다.ip 명령어는 링크(link), 라우트(route), ip address 등  컴퓨터상의 네트워크에 관한 광범위한 정보조회가 가능한 기본 명령어이다.
+
+
+== 예 ==
+ip address  : 이 명령어 옵션은 ifconfig 명령어와 조회 결과가 유사하나 보다 광범위하다.
+ip address show : ip address처럼 ifconfig 명령어와 조회 결과가 유사하다.
+ip -help  :  ip 명령어에 대한 개괄 안내 명령어 옵션
+ip address help : ip address 명령어 옵션에 대한 개괄 안내
+
+
+== 같이 보기 ==
+게이트웨이
+netstat
+
+
+== 참고 ==

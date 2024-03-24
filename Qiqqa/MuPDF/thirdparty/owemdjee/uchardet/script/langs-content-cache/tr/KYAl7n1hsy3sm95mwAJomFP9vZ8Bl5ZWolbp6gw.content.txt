@@ -1,0 +1,209 @@
+revision: 28686807
+title: Zeeman etkisi
+url: https://tr.wikipedia.org/wiki/Zeeman_etkisi
+
+
+---
+
+Zeeman efekti, ismini Hollandalı fizikçi Pieter Zeeman'dan alan; tayf çizgilerinin, bir manyetik alan olması durumunda birden fazla bileşene ayrılması efektidir. Zeeman alt katmanlarının arasındaki mesafe bir manyetik alan fonksiyonu olduğundan, bu efekt manyetik alanı ölçmek için kullanılabilir.
+Kadmiyum buharının ışığını inceleyen Zeeman, 1896′da, gaz-manyetik alana konduğu zaman tayftaki çizgilerin bölündü­ğünü gözlemlemiştir. Kuantum teorisine göre atomdaki elektronlar daha düşük enerji düzeylerine geçerken ışık yayınlayarak tayfta görülen çizgileri oluş­turur. Manyetik alanın çizgilerde bölünmeye yol açması­nın nedeni, daha önce tümünün enerjileri aynı olan elektronların, manyetik alanın etkisiyle yönlerine göre farklı enerjiler kazanmalarıdır.
+Açısal momentumuyla ilişkili yörünge manyetik momentten dolayı 2(l+1) tane dejenere m bileşeninin yarılması olayına Zeeman olayı denir.
+
+
+== Teorik açıklaması ==
+Manyetik bir alan içindeki bir atomun toplam Hamiltonu
+
+  
+    
+      
+        H
+        =
+        
+          H
+          
+            0
+          
+        
+        +
+        
+          V
+          
+            M
+          
+        
+      
+    
+     
+  
+şeklinde yazılabilir. Burada 
+  
+    
+      
+        
+          H
+          
+            0
+          
+        
+      
+    
+     
+   etkilenmemiş atom Hamiltonu ve 
+  
+    
+      
+        
+          V
+          
+            M
+          
+        
+      
+    
+     
+   de manyetik alandan dolayı etkilenmedir:
+
+  
+    
+      
+        
+          V
+          
+            M
+          
+        
+        =
+        −
+        
+          
+            
+              μ
+              →
+            
+          
+        
+        ⋅
+        
+          
+            
+              B
+              →
+            
+          
+        
+        ,
+      
+    
+     
+  
+diye tanımlanır. Burada 
+  
+    
+      
+        
+          
+            
+              μ
+              →
+            
+          
+        
+      
+    
+     
+   atomun manyetik momentidir. Manyetik moment elektronik ve nükleer bileşenler içerir, ancak oldukça küçük olduğu için burada önemsenmeyecektir. Bu durumda;
+
+  
+    
+      
+        
+          
+            
+              μ
+              →
+            
+          
+        
+        ≈
+        −
+        
+          
+            
+              
+                μ
+                
+                  B
+                
+              
+              g
+              
+                
+                  
+                    J
+                    →
+                  
+                
+              
+            
+            ℏ
+          
+        
+        ,
+      
+    
+     
+  
+yazılabilir. Burada 
+  
+    
+      
+        
+          μ
+          
+            B
+          
+        
+      
+    
+     
+   Bohr manyetiğini, 
+  
+    
+      
+        
+          
+            
+              J
+              →
+            
+          
+        
+      
+    
+     
+   toplam elektronik açısal momentumu ve 
+  
+    
+      
+        g
+      
+    
+     
+   Landé Faktörünü tanımlar.
+
+
+== Kaynakça ==
+
+
+=== Tarihi ===
+Condon, E. U. (1935). The Theory of Atomic Spectra. Cambridge University Press. ISBN 0-521-09209-4.  (Chapter 16 provides a comprehensive treatment, as of 1935.)
+Zeeman, P. (1897). "On the influence of Magnetism on the Nature of the Light emitted by a Substance". Phil. Mag. Cilt 43. s. 226. 
+Zeeman, P. (1897). "Doubles and triplets in the spectrum produced by external magnetic forces". Phil. Mag. Cilt 44. s. 55. 
+Zeeman, P. (11 Şubat 1897). "The Effect of Magnetisation on the Nature of Light Emitted by a Substance". Nature. Cilt 55. s. 347. doi:10.1038/055347a0. 4 Temmuz 2007 tarihinde kaynağından arşivlendi. Erişim tarihi: 3 Temmuz 2009. 
+
+
+=== Modern ===
+Forman, Paul (1970). "Alfred Landé and the anomalous Zeeman Effect, 1919-1921". Historical Studies in the Physical Sciences. Cilt 2. ss. 153-261. 
+Griffiths, David J. (2004). Introduction to Quantum Mechanics (2nd ed.). Prentice Hall. ISBN 0-13-805326-X. 
+Liboff, Richard L. (2002). Introductory Quantum Mechanics. Addison-Wesley. ISBN 0-8053-8714-5. 
+Sobelman, Igor I. (2006). Theory of Atomic Spectra. Alpha Science. ISBN 1-84265-203-6.

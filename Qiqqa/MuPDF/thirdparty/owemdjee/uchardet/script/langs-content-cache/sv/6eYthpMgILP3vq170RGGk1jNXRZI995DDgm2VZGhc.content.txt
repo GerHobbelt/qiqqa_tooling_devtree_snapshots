@@ -1,0 +1,545 @@
+revision: 51637670
+title: PH
+url: https://sv.wikipedia.org/wiki/PH
+
+
+---
+
+pH är ett logaritmiskt mått på surhet, det vill säga på aktiviteten av vätejoner (H+) i en lösning (egentligen oxoniumjoner, H3O+, en vattenmolekyl med en extra proton, det vill säga en extra H+). Lösningar med låga pH-värden kallas sura och de med höga kallas basiska. Lösningar som har pH 7 (vid 25 °C) kallas neutrala. Symbolen p i pH är en operatorbeteckning innebärande att man anger den negativa 10-logaritmen av vätejonaktiviteten; det vill säga
+
+  
+    
+      
+        p
+        
+          H
+        
+        =
+        −
+        
+          log
+          
+            10
+          
+        
+        ⁡
+        {
+        
+          
+            
+              H
+            
+          
+          
+            +
+          
+        
+        }
+      
+    
+     
+  där {H+} betecknar aktiviteten av vätejoner. pH-skalan infördes av S. P. L. Sørensen 1909. 
+En stark syra med hög koncentration (egentligen aktivitet) har ett pH-värde nära 0; en stark bas med hög koncentration (egentligen aktivitet) har pH-värde nära 14. pH-skalan är dock inte begränsad till 0-14 och det finns till exempel riktigt starka syror med negativa pH-värden (under 0). Utifrån definitionen av pH får man:
+
+Vid pH 1 är vätejonaktiviteten {H+} = 1·10-1.
+Vid pH 7 är vätejonaktiviteten {H+} = 1·10-7.
+Vid pH 14 är vätejonaktiviteten {H+} = 1·10-14.pH-värdet mäts vanligen genom en kombinationselektrod. Det kan också grovt mätas med pH-indikatorer, kemiska föreningar som har olika färg vid olika pH.
+
+
+== pOH ==
+Man kan även definiera pOH, som på motsvarande sätt är den negativa 10-logaritmen av hydroxidjonaktiviteten, {OH-}. Följaktligen gäller att
+
+  
+    
+      
+        p
+        
+          O
+          H
+        
+        =
+        −
+        
+          log
+          
+            10
+          
+        
+        ⁡
+        {
+        O
+        
+          H
+          
+            −
+          
+        
+        }
+      
+    
+     
+  .
+
+
+== Relation mellan pH och pOH ==
+Sambandet mellan pH och pOH styrs av vattnets autoprotolys, som innebär att en liten del av vattenmolekylerna alltid dissocieras och bildar vätejoner och hydroxidjoner enligt 
+
+  
+    
+      
+        
+          
+            
+              H
+            
+          
+          
+            2
+          
+        
+        
+          
+            O
+          
+        
+        ⇌
+        
+          
+            
+              H
+            
+          
+          
+            +
+          
+        
+        +
+        
+          
+            
+              OH
+            
+          
+          
+            −
+          
+        
+        
+        ;
+        
+        
+          K
+          
+            w
+          
+        
+      
+    
+     
+  där Kw är jämviktskonstanten, som definieras utifrån aktiviteterna, vilka approximativt är lika med mätetalen för koncentrationerna. Aktiviteten för det rena vattnet, H2O, sätts till 1 och därför gäller
+
+  
+    
+      
+        
+          K
+          
+            w
+          
+        
+        =
+        
+          
+            
+              {
+              
+                H
+                
+                  +
+                
+              
+              }
+              ⋅
+              {
+              O
+              
+                H
+                
+                  −
+                
+              
+              }
+            
+            
+              {
+              
+                H
+                
+                  2
+                
+              
+              O
+              (
+              l
+              )
+              }
+            
+          
+        
+        =
+        {
+        
+          H
+          
+            +
+          
+        
+        }
+        ⋅
+        {
+        O
+        
+          H
+          
+            −
+          
+        
+        }
+        ≈
+        [
+        
+          H
+          
+            +
+          
+        
+        ]
+        ⋅
+        [
+        O
+        
+          H
+          
+            −
+          
+        
+        ]
+      
+    
+     
+  där {H+} och {OH-} betecknar aktiviteterna av vätejoner respektive hydroxidjoner. Jämviktskonstanten Kw är temperaturberoende och har ett värde på 10-14 vid 25 °C (298,15 K). Ofta anges jämviktskonstanten på en logaritmisk skala, som negativa tiologaritmen:
+
+  
+    
+      
+        p
+        
+          K
+          
+            w
+          
+        
+        =
+        −
+        l
+        o
+        
+          g
+          
+            10
+          
+        
+        
+          K
+          
+            w
+          
+        
+        =
+        14
+        ,
+        00
+        
+        (
+        
+          vid
+        
+        
+        
+          25
+          
+            ∘
+          
+        
+        C
+        )
+      
+    
+     
+  Härav följer att vid 25 °C (298,15 K) är
+
+  
+    
+      
+        p
+        
+          
+            H
+          
+        
+        +
+        p
+        
+          
+            O
+            H
+            =
+            14
+            
+          
+        
+      
+    
+     
+  .Då pH = pOH, det vill säga då det finns lika mycket vätejoner som hydroxidjoner, säger man att pH är neutralt. Detta inträffar följaktligen vid pH = 7 då temperaturen är 25 °C och vid lägre pH-värde vid högre temperatur eftersom dissociationen är temperaturberoende, se vidare vattnets autoprotolys.
+
+
+== ph – "pH" med koncentrationer som mätetal ==
+Ibland kan det vara relevant att använda koncentrationer i stället för aktiviteter när man anger mängden vätejoner; i samband med till exempel titreringar med syra kan det vara intressant att ha ett direkt mått på relationen mellan syraåtgång och koncentrationen vätejoner i lösningen. Därför definieras ph-värdet (h skrivs med liten bokstav för att skilja det från pH) enligt
+
+  
+    
+      
+        p
+        
+          h
+        
+        =
+        −
+        
+          log
+          
+            10
+          
+        
+        ⁡
+        [
+        
+          H
+          
+            +
+          
+        
+        ]
+      
+    
+     
+  där [H+] nu betecknar koncentrationen av vätejoner.
+Det finns en viss skillnad mellan ph och pH, vilken beror på aktivitetskoefficienten för vätejoner, vilken i sin tur beror på jonstyrkan (I). I starkt utspädda lösningar är ph = pH. Med införande av aktivitetskoefficienter gäller att
+
+  
+    
+      
+        p
+        
+          H
+        
+        =
+        −
+        
+          log
+          
+            10
+          
+        
+        ⁡
+        γ
+        [
+        
+          H
+          
+            +
+          
+        
+        ]
+        =
+        −
+        
+          log
+          
+            10
+          
+        
+        ⁡
+        γ
+        −
+        
+          log
+          
+            10
+          
+        
+        ⁡
+        [
+        
+          H
+          
+            +
+          
+        
+        ]
+        =
+        p
+        
+          h
+        
+        −
+        
+          log
+          
+            10
+          
+        
+        ⁡
+        γ
+      
+    
+     
+  där γ (den grekiska bokstaven gamma) betecknar aktivitetskoefficienten för vätejonerna. Aktivitetskoefficienten γ kan teoretiskt beräknas med hjälp av Debye-Hückels (utvidgade) ekvation
+
+  
+    
+      
+         
+        −
+        
+          log
+          
+            10
+          
+        
+        ⁡
+        γ
+        =
+        
+          
+            
+              0
+              ,
+              5
+              
+                |
+              
+              
+                z
+                
+                  +
+                
+              
+              
+                z
+                
+                  −
+                
+              
+              
+                |
+              
+              
+                
+                  I
+                
+              
+            
+            
+              1
+              +
+              1
+              ,
+              6
+              
+                
+                  I
+                
+              
+            
+          
+        
+        
+      
+    
+     
+  Denna ekvation gäller med god noggrannhet för jonstyrkor upp till åtminstone I = 0,1. Vid högre jonstyrkor uppträder avvikelser mellan denna ekvations resultat och verkligt värde. Avvikelserna växer snabbt med jonstyrkan och beror på slaget av de joner som bidrar till jonstyrkan. Joner med högre laddning ger normalt högre avvikelser. Följaktligen är avvikelsen mellan ph och pH som störst vid höga jonstyrkor.
+Vid högre jonstyrkor ger Davies ekvation (delvis empirisk) från 1938 bättre noggrannhet för beräkning av aktivitetskoefficienter i vattenlösningar:
+
+  
+    
+      
+         
+        −
+        
+          log
+          
+            10
+          
+        
+        ⁡
+        γ
+        =
+        0
+        ,
+        51
+        
+          z
+          
+            2
+          
+        
+        
+          (
+          
+            
+              
+                
+                  I
+                
+                
+                  1
+                  +
+                  
+                    
+                      I
+                    
+                  
+                
+              
+            
+            −
+            0
+            ,
+            3
+            I
+          
+          )
+        
+        
+        ,
+      
+    
+     
+  Man kan mäta pH (med elektroder eller dylikt), men inte ph. För att få fram data enligt nedanstående tabell för avvikelsen mellan ph och pH kan man t.ex. mäta pH i en vattenlösning vid olika jonstyrkor (varvid jonstyrkan måste genereras eller skapas av salter som inte kan bilda väte- eller hydroxidjoner). Därefter justerar (neutraliserar) man lösningen till pH = 7 genom tillsats av t.ex. NaOH eller HCl. (Dessa tillsatser skapar ju också viss jonstyrka som också bör beaktas.) Därefter kan man beräkna ph utifrån den mängd hydroxid eller syra som tillsats, varigenom avvikelsedata erhålles.
+Följande tabell visar avvikelsen mellan ph och pH dels genom nämnda experimentella förfaringssätt (kolumn 2), dels genom beräkningar med Debye-Hückels utvidgade ekvation respektive med Davies ekvation.
+
+Vid jonstyrkan lika med 1 och pH = 7,0 uppvisar Davies ekvation bättre överensstämmelse gentemot det uppmätta värdet för ph än Debye-Hückels utvidgade ekvation. Pitzer har senare utvecklat relativt komplicerade ekvationer som ger större noggrannhet vid beräkning av aktivitetskoefficienter vid höga jonstyrkor i vattenlösningar då Debye-Hückels ekvation inte längre gäller. Även den specifika jon-interaktionsteorin ("the SIT theory") kan här nämnas som metod för beräkning av aktivitetskoefficienter vid högre jonstyrkor.
+(För att få en storleksuppfattning av vad en jonstyrka lika med 1 innebär från i huvudsak t.ex. natriumklorid, NaCl, så skapas denna av 1 mol/dm3 eller 58 g/dm3 av NaCl. Detta kan jämföras med NaCl-halten i havsvatten, som i de öppna haven ligger vid ca 35 g/dm3.)
+
+
+== Effekter av pH i naturen ==
+För att mäta effekten av lågt pH-värde i vattendrag mäter man förutom vattnets pH, dessutom alltmer biologiska indikatorer. Det kan vara artsammansättning och diversitet av bottendjur (everterbrater), påväxtalger, fisk eller vattenväxter. Biologiska indikatorer är överlägsna när det gäller att se effekter av enstaka händelser (t.ex. plötsliga surstötar vid snösmältning som lätt kan missas mellan två vattenprovtagningar). Det beror på att organismerna är närvarande i vattnet hela tiden och påverkas av den allra sämsta vattenkvaliteten. Exempelvis kan nämnas mört, som inte fortplantar sig i sura miljöer eller snäckor och kräftdjur som behöver basiska ämnen för att bygga sina skal.
+
+
+== Se även ==
+Lackmuspapper
+Massverkans lag
+pE (måttenhet)
+pH-indikator

@@ -1,0 +1,129 @@
+revision: 70112114
+title: "Regu\u0142a prawej d\u0142oni"
+url: https://pl.wikipedia.org/wiki/Regu%C5%82a_prawej_d%C5%82oni
+
+
+---
+
+Reguła prawej dłoni (także reguła prawej ręki) – konwencja określania względnych zwrotów pewnych wektorów w przestrzeni.
+
+
+== Zwrot wektora związanego z uporządkowaną parą wektorów ==
+
+
+=== Matematyka ===
+
+Pierwsza reguła ma zastosowanie w przestrzeni trójwymiarowej. Osie OX i OY kartezjańskiego układu współrzędnych wyznaczają tu pewną zorientowaną płaszczyznę. Ponadto istnieje trzecia oś OZ, prostopadła do płaszczyzny OXY. Na mocy reguły prawej ręki stosuje się poniższe procedury wyboru jednego z dwóch możliwych zwrotów osi OZ tak, aby otrzymany układ był prawoskrętny.
+Ustawiamy dłoń z palcami wyprostowanymi wzdłuż osi OX. Następnie zginamy palce, z wyjątkiem kciuka, wskazując zwrot osi OY. Odwiedziony kciuk wskazuje zwrot osi OZ w układzie prawoskrętnym.
+Zbliżona technika nazywana jest regułą trzech palców. Wyprostowany palec wskazujący prawej dłoni pokazuje zwrot osi OX. Zgięty palec środkowy pokazuje zwrot osi OY. Odwiedziony kciuk wskazuje wówczas zwrot osi OZ w układzie prawoskrętnym.
+Jeżeli wyprostowany palec wskazujący prawej dłoni wskazuje kierunek i zwrot wektora 
+  
+    
+      
+        
+          
+            
+              A
+              →
+            
+          
+        
+        ,
+      
+    
+     
+   a palec środkowy kierunek i zwrot wektora 
+  
+    
+      
+        
+          
+            
+              B
+              →
+            
+          
+        
+        ,
+      
+    
+     
+   wówczas kciuk pokazuje kierunek i zwrot ich iloczynu wektorowego 
+  
+    
+      
+        
+          
+            
+              A
+              →
+            
+          
+        
+        ×
+        
+          
+            
+              B
+              →
+            
+          
+        
+        .
+      
+    
+     
+  
+Można także umówić się, że kolejne palce prawej dłoni w opisanym powyżej układzie pokazują zwrot kolejnych osi: odwiedziony kciuk pokazuje zwrot osi OX, wyprostowany palec wskazujący osi OY, zgięty palec środkowy osi OZ.
+Istnieje jeszcze jeden sposób skorzystania z reguły prawej ręki. Należy wyobrazić sobie osobę stojącą z rozłożonymi rękami i patrzącą w stronę, w którą zwrócona jest oś OX (do przodu). Głowa tej osoby wskazuje zwrot osi OY (w górę), zaś prawa ręka pokazuje zwrot osi OZ (w prawo).
+
+
+=== Fizyka ===
+
+W fizyce reguła prawej dłoni pozwala określić kierunek ruchu przewodnika w polu magnetycznym. Jeżeli 4 wyprostowane palce prawej dłoni (lub wyprostowany palec wskazujący) wskazują zwrot linii pola magnetycznego, a kciuk wskazuje umowny zwrot linii pola elektrycznego (od plusa do minusa), wówczas przewodnik poruszy się w tym samym kierunku, w którym otwarta dłoń wykonuje ruch popychający (lub w kierunku zgiętego palca środkowego, patrz rysunek).
+Inna reguła prawej dłoni pozwala określić kierunek prądu indukowanego w przewodniku. Jeżeli wektor indukcji pola magnetycznego wchodzi w prawą dłoń, a kciuk pokazuje kierunek ruchu przewodnika, wówczas wyciągnięte 4 palce wskazują zwrot linii pola elektrycznego indukcji, powstającego w przewodniku.
+W innej wersji, znanej też jako reguła trzech palców, palec wskazujący prawej ręki wskazuje zwrot indukcji pola magnetycznego, a kciuk – zwrot prędkości ruchu przewodnika. Odgięty palec środkowy wskazuje wówczas zwrot indukowanego prądu.
+
+
+== Zwrot związany z rotacją ==
+
+W fizyce druga forma reguły prawej dłoni określa regułę, w myśl której jeśli prawą dłonią obejmiemy przewodnik elektryczny tak, że kciuk wskazuje kierunek przepływu prądu elektrycznego 
+  
+    
+      
+        
+          
+            
+              I
+              →
+            
+          
+        
+      
+    
+     
+   w przewodniku, to zgięte pozostałe palce wskażą kierunek i zwrot wektora indukcji magnetycznej 
+  
+    
+      
+        
+          
+            
+              B
+              →
+            
+          
+        
+        .
+      
+    
+     
+  
+
+
+== Zobacz też ==
+reguła lewej dłoni
+reguła śruby prawoskrętnej
+
+
+== Przypisy ==

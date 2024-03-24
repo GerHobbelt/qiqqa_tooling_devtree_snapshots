@@ -1,0 +1,238 @@
+revision: 6121154
+title: Kahendpuu
+url: https://et.wikipedia.org/wiki/Kahendpuu
+
+
+---
+
+Kahendpuu ehk binaarpuu on arvutiteaduses kasutusel olev andmestruktuur, mis koosneb tippudest, kusjuures igal tipul on maksimaalselt kaks alluvat. Tipu ühte alluvat nimetatakse vasakuks alluvaks ja teist paremaks alluvaks. Hulgateoorias saab (mittetühja) kahendpuud defineerida rekursiivselt kui ennikut (L, S, R), kus L ja R on kahendpuud või tühjad hulgad ja S on üheelemendiline hulk.Graafiteoorias vaadeldakse kahendpuid (üldisemalt kõiki k-aarseid puid) kui suunatud graafe, kus üks tipp u on juurtipp ning igasse teise tippu v leidub temast täpselt üks suunatud lihtahel.
+Kahendpuud võib vaadelda ka kui suunamata graafi. Täpsemalt on tegemist järjestatud juurega puuga. Mõned autorid kasutavad terminit juurega kahendpuu, et rõhutada asjaolu, et tegemist on juurega puuga. Samas on ülaltoodud definitsioonidest näha, et iga kahendpuu on juurega puu.
+Matemaatikas ei ole kahendpuudel ühtset definitsiooni. Mõned matemaatikud kasutavad arvutiteaduses levinud definitsioone, kuid mõnedes definitsioonides peab igal tipul, mis pole leht, olema täpselt kaks alluvat ning tingimata ei nõuta alluvate (vasaku/parema) järjestamist.
+
+
+== Kahendpuude kasutusviisid ==
+Kahendpuudel on palju otstarbeid. Üldiselt võib need jagada kaheks.
+
+Esiteks saab kahendpuid kasutada, et saada ligi tippudele, lähtudes tipuga seotud infost. Sellist ideed kasutatakse, et implementeerida kahendotsimispuid ja kahendkuhjasid, ning need on väga kasulikud andmete otsimiseks ja sorteerimiseks. Sellisel juhul on oluline, kas tipp on oma ülemuse parem või vasak alluv, isegi siis, kui ülemusel on ainult üks alluv. Samas ei ole tippude üldine paigutus tingimata infot kandev. Näiteks kahendotsimispuus sõltub tippude paigutus suuresti sellest, mis järjekorras nad lisati. Samas võib neid ümber tõsta (näiteks tasakaalustades) ilma infot kaotamata.
+Kahendpuid võib kasutada ka andmete salvestamiseks arvutis, kui andmetel on kaheks jagunev struktuur. Sel juhul on tippude paigutus puus osa informatsioonist. Näide sellisest kasutusest on Huffmani kodeering.
+
+
+== Kahendpuude tüübid ==
+
+Kahendpuude terminoloogia pole standardiseeritud, seega kirjeldatakse kahendpuid kirjanduses paljude mõistetega.
+Kahendpuus nimetatakse tasemeks kõikide tippude hulka, mis asuvad samal kaugusel juurtipust.
+Täis-kahendpuu on kahendpuu, mille igal tipul on täpselt 0 või 2 alluvat. Teisisõnu, kõikidel tippudel peale lehtede on täpselt 2 alluvat.
+Täielik kahendpuu on kahendpuu, mille kõik lehttipud asuvad samal tasemel ning iga sisetipu aste on 2.
+Kompaktne kahendpuu on puu, mis on saadud täielikust kahendpuu viimasest tasemest mingi arvu lehttippude eemaldamisel.Tasakaalus kahendpuu on selline kahendpuu, mille iga tipu vasaku ja parema alampuu kõrgused ei erine rohkem kui ühe võrra.
+
+
+== Kahendpuude omadused ==
+Kahendpuude teoorias ei ole kokkulepet, mis on ühetipulise puu kõrgus. Mõnes allikas kirjutatakse, et see on 0 , aga teises, et see on 1. Järgnevates näidetes eeldatakse, et ühetipulise puu kõrgus on 0.
+
+Täis-kahendpuus on vähemalt 
+  
+    
+      
+        n
+        =
+        2
+        h
+        +
+        1
+      
+    
+     
+  ja maksimaalselt 
+  
+    
+      
+        n
+        =
+        
+          2
+          
+            h
+            +
+            1
+          
+        
+        −
+        1
+      
+    
+     
+  tippu, kus 
+  
+    
+      
+        h
+      
+    
+     
+  on puu kõrgus.
+Täielikus kahendpuus on täpselt 
+  
+    
+      
+        l
+        =
+        (
+        n
+        +
+        1
+        )
+        
+          /
+        
+        2
+      
+    
+     
+  lehttippu, kus 
+  
+    
+      
+        n
+      
+    
+     
+  on puu tippude arv. See tuleneb sellest, et sisetippude arvu saame leida 
+  
+    
+      
+        n
+        −
+        l
+        =
+        
+          ∑
+          
+            k
+            =
+            0
+          
+          
+            
+              log
+              
+                2
+              
+            
+            ⁡
+            (
+            l
+            )
+            −
+            1
+          
+        
+        
+          2
+          
+            k
+          
+        
+        =
+        
+          2
+          
+            
+              log
+              
+                2
+              
+            
+            ⁡
+            (
+            l
+            )
+          
+        
+        −
+        1
+        =
+        l
+        −
+        1
+      
+    
+     
+  .
+Seega on täielikus 
+  
+    
+      
+        l
+      
+    
+     
+  lehega kahendpuus 
+  
+    
+      
+        n
+        =
+        2
+        l
+        −
+        1
+      
+    
+     
+   tippu.
+Täielikus kahendpuus on lehtede arv 
+  
+    
+      
+        l
+        =
+        
+          2
+          
+            h
+          
+        
+      
+    
+     
+  ja tippude arv 
+  
+    
+      
+        n
+        =
+        
+          2
+          
+            h
+            +
+            1
+          
+        
+        −
+        1
+      
+    
+     
+  .
+
+
+== Kahendpuude esitus arvutis ==
+Kahendpuid saab arvutis programmeerimiskeelte abil esitada mitut moodi.
+
+
+=== Haskell ===
+Näiteks Haskellis saab kahendpuud esitada uue andmetüübina, millel on kaks konstruktorit:
+konstruktor lehttipu jaoks;
+konstruktor tipu jaoks koos väärtuse ning vasaku ja parema haruga.
+
+
+=== Python ===
+Pythonis (ja ka paljudes teiste keeltes) saab kahendpuud esitada tipuklassina, kus igal isendil on viide oma alluvatele, mis on samuti tipud.
+
+
+=== Massiivina ===
+Mõnel juhul soovitakse kahendpuid kujutada massiividena. Näiteks kahendkuhi, mis põhineb kompaktsel kahendpuul, esitatakse tihti lihtsalt massiivina, kus elemendid paiknevad järjestikuselt tasemete kaupa. See tähendab, et massiivi alguses on juurtipp, siis tema alluvad, siis nende alluvate alluvad jne.
+
+
+= Viited =

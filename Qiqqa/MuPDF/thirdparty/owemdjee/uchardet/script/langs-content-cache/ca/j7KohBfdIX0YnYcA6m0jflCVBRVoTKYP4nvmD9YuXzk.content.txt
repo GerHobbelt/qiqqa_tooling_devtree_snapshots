@@ -1,0 +1,728 @@
+revision: 32070793
+title: "Distribuci\xF3 beta-binomial negativa"
+url: https://ca.wikipedia.org/wiki/Distribuci%C3%B3_beta-binomial_negativa
+
+
+---
+
+En la teoria de la probabilitat, una distribució beta-binomial negativa és la distribució de probabilitat d'una variable aleatòria discreta X igual al nombre d'errors necessaris per obtenir r èxits en una seqüència d'assajos de Bernoulli independents on la probabilitat d'èxit p en cada assaig és constant dins de qualsevol experiment donat, però és en si mateixa una variable aleatòria seguint una distribució beta, que varia entre els diferents experiments. Així, la distribució és una distribució de probabilitat composta.
+Aquesta distribució també s'anomena distribució de Markov-Pólya inversa i distribució de Waring generalitzada. Una forma desplaçada de la distribució s'anomena distribució beta-Pascal.Si els paràmetres de la distribució beta són α i β, i si
+
+  
+    
+      
+        X
+        ∣
+        p
+        ∼
+        
+          N
+          B
+        
+        (
+        r
+        ,
+        p
+        )
+        ,
+      
+    
+     
+  on
+
+  
+    
+      
+        p
+        ∼
+        
+          
+            B
+          
+        
+        (
+        α
+        ,
+        β
+        )
+        ,
+      
+    
+     
+  llavors, la distribució marginal de X és una distribució beta-binomial negativa:
+
+  
+    
+      
+        X
+        ∼
+        
+          B
+          N
+          B
+        
+        (
+        r
+        ,
+        α
+        ,
+        β
+        )
+        .
+      
+    
+     
+  on NB(r, p) és la distribució binomial negativa i B(α, β) és la distribució beta.
+La seva relació de recurrència és
+
+  
+    
+      
+        
+          {
+          
+            (
+            k
+            +
+            1
+            )
+            p
+            (
+            k
+            +
+            1
+            )
+            (
+            α
+            +
+            β
+            +
+            k
+            +
+            r
+            )
+            +
+            (
+            β
+            +
+            k
+            )
+            (
+            −
+            k
+            −
+            r
+            )
+            p
+            (
+            k
+            )
+            =
+            0
+            ,
+            p
+            (
+            0
+            )
+            =
+            
+              
+                
+                  (
+                  α
+                  
+                    )
+                    
+                      r
+                    
+                  
+                
+                
+                  (
+                  α
+                  +
+                  β
+                  
+                    )
+                    
+                      r
+                    
+                  
+                
+              
+            
+          
+          }
+        
+      
+    
+     
+  
+
+
+== Definició ==
+Si 
+  
+    
+      
+        r
+      
+    
+     
+   és un nombre enter, llavors la FPM es pot escriure en termes de la funció beta
+
+  
+    
+      
+        f
+        (
+        k
+        
+          |
+        
+        α
+        ,
+        β
+        ,
+        r
+        )
+        =
+        
+          
+            
+              (
+            
+            
+              
+                r
+                +
+                k
+                −
+                1
+              
+              k
+            
+            
+              )
+            
+          
+        
+        
+          
+            
+              
+                B
+              
+              (
+              α
+              +
+              r
+              ,
+              β
+              +
+              k
+              )
+            
+            
+              
+                B
+              
+              (
+              α
+              ,
+              β
+              )
+            
+          
+        
+      
+    
+     
+  .Més en general, la FPM es pot escriure 
+
+  
+    
+      
+        f
+        (
+        k
+        
+          |
+        
+        α
+        ,
+        β
+        ,
+        r
+        )
+        =
+        
+          
+            
+              Γ
+              (
+              r
+              +
+              k
+              )
+            
+            
+              k
+              !
+              
+              Γ
+              (
+              r
+              )
+            
+          
+        
+        
+          
+            
+              
+                B
+              
+              (
+              α
+              +
+              r
+              ,
+              β
+              +
+              k
+              )
+            
+            
+              
+                B
+              
+              (
+              α
+              ,
+              β
+              )
+            
+          
+        
+      
+    
+     
+  .
+
+
+=== FPM expressada amb Gamma ===
+Usant les propietats de la funció beta, la PMF amb nombre enter 
+  
+    
+      
+        r
+      
+    
+     
+   es pot reescriure com
+
+  
+    
+      
+        f
+        (
+        k
+        
+          |
+        
+        α
+        ,
+        β
+        ,
+        r
+        )
+        =
+        
+          
+            
+              (
+            
+            
+              
+                r
+                +
+                k
+                −
+                1
+              
+              k
+            
+            
+              )
+            
+          
+        
+        
+          
+            
+              Γ
+              (
+              α
+              +
+              r
+              )
+              Γ
+              (
+              β
+              +
+              k
+              )
+              Γ
+              (
+              α
+              +
+              β
+              )
+            
+            
+              Γ
+              (
+              α
+              +
+              r
+              +
+              β
+              +
+              k
+              )
+              Γ
+              (
+              α
+              )
+              Γ
+              (
+              β
+              )
+            
+          
+        
+      
+    
+     
+  .Més en general, la PMF es pot escriure com
+
+  
+    
+      
+        f
+        (
+        k
+        
+          |
+        
+        α
+        ,
+        β
+        ,
+        r
+        )
+        =
+        
+          
+            
+              Γ
+              (
+              r
+              +
+              k
+              )
+            
+            
+              k
+              !
+              
+              Γ
+              (
+              r
+              )
+            
+          
+        
+        
+          
+            
+              Γ
+              (
+              α
+              +
+              r
+              )
+              Γ
+              (
+              β
+              +
+              k
+              )
+              Γ
+              (
+              α
+              +
+              β
+              )
+            
+            
+              Γ
+              (
+              α
+              +
+              r
+              +
+              β
+              +
+              k
+              )
+              Γ
+              (
+              α
+              )
+              Γ
+              (
+              β
+              )
+            
+          
+        
+      
+    
+     
+  .
+
+
+=== FPM expressada amb el símbol de Pochhammer ===
+Sovint, la PMF també es presenta en termes de símbol de Pochhammer per a enters 
+  
+    
+      
+        r
+      
+    
+     
+  
+
+  
+    
+      
+        f
+        (
+        k
+        
+          |
+        
+        α
+        ,
+        β
+        ,
+        r
+        )
+        =
+        
+          
+            
+              
+                r
+                
+                  (
+                  k
+                  )
+                
+              
+              
+                α
+                
+                  (
+                  r
+                  )
+                
+              
+              
+                β
+                
+                  (
+                  k
+                  )
+                
+              
+            
+            
+              k
+              !
+              (
+              α
+              +
+              β
+              
+                )
+                
+                  (
+                  r
+                  )
+                
+              
+              (
+              r
+              +
+              α
+              +
+              β
+              
+                )
+                
+                  (
+                  k
+                  )
+                
+              
+            
+          
+        
+      
+    
+     
+  
+
+
+== Propietats ==
+La distribució beta-binomial negativa conté la distribució geomètrica beta com un cas especial quan 
+  
+    
+      
+        r
+        =
+        1
+      
+    
+     
+  . Per tant, es pot aproximar a la distribució geomètrica arbitràriament bé. També s'aproxima a la distribució binomial negativa arbitràriament per a 
+  
+    
+      
+        α
+      
+    
+     
+   i 
+  
+    
+      
+        β
+      
+    
+     
+   grans. Per tant, es pot aproximar la distribució de Poisson arbitràriament bé per a 
+  
+    
+      
+        α
+      
+    
+     
+  , 
+  
+    
+      
+        β
+      
+    
+     
+   i 
+  
+    
+      
+        r
+      
+    
+     
+   grans.
+Per l'aproximació de Stirling a la funció beta, es pot demostrar fàcilment que
+
+  
+    
+      
+        f
+        (
+        k
+        
+          |
+        
+        α
+        ,
+        β
+        ,
+        r
+        )
+        ∼
+        
+          
+            
+              Γ
+              (
+              α
+              +
+              r
+              )
+            
+            
+              Γ
+              (
+              r
+              )
+              
+                B
+              
+              (
+              α
+              ,
+              β
+              )
+            
+          
+        
+        
+          
+            
+              k
+              
+                r
+                −
+                1
+              
+            
+            
+              (
+              β
+              +
+              k
+              
+                )
+                
+                  r
+                  +
+                  α
+                
+              
+            
+          
+        
+      
+    
+     
+  el que implica que la distribució beta-binomial negativa és de cua pesada.
+
+
+== Referències ==
+
+
+== Bibliografia ==
+Jonhnson, N.L; Kotz, S; Kemp, A.W. Univariate Discrete Distributions (en anglès).  Wiley, 1993. ISBN 0-471-54897-9. 
+Kemp, C.D; Kemp, A.W. Generalized hypergeometric distributions (en anglès).  Journal of the Royal Statistical Society, 1956, p. 202-211 (Series B, 18). 
+Wang, Zhaoliang. One mixed negative binomial distribution with application (en anglès).  Journal of Statistical Planning and Inference, J, 141 (3), 2011, p. 1153-1160. DOI 10.1016/j.jspi.2010.09.020. 
+
+
+== Enllaços externs ==
+Gràfic interactiu: Univariate Distribution Relationships

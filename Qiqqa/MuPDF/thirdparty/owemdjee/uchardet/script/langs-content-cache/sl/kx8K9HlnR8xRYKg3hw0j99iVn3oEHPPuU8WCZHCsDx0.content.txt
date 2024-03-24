@@ -1,0 +1,343 @@
+revision: 5992014
+title: Programski jezik C
+url: https://sl.wikipedia.org/wiki/Programski_jezik_C
+
+
+---
+
+Prográmski jêzik C ali kar C (izgovorjava [cé] ali po izvirniku [sí], ) je nizkonivojski imperativni standardizirani računalniški programski jezik tretje generacije (3GL) za splošno rabo. Podpira strukturalno programiranje, leksično območje spremenljivk in rekurzijo, statični sistem tipov pa preprečuje mnogo nenameravanih operacij. Zasnova jezika C omogoča konstrukte, ki se učinkovito preslikujejo v tipične strojne ukaze, in zaradi tega se je C začel rabiti v aplikacijah, ki so bile prej razvite v zbirnem jeziku, še posebej v sistemskem programju, kot je npr. računalniški operacijski sistem Unix, kot tudi v različnem uporabniškem programju za računalnike od superračunalnikov do vgradnih sistemov.
+Programski jezik C je prvotno razvil Dennis Ritchie med letoma 1969 in 1973 v AT&T Bellovih laboratorijih. Ritchie in Ken Thompson sta najprej razvila prevajalnik za operacijski sistem Unix, ki je bil v osnovi napisan v zbirnem jeziku. Unixovo jedro je bilo tako prvo napisano v drugem jeziku in ne v zbirnem. Kasneje se je C hitro pojavil tudi na drugih operacijskih sistemih.
+Pred uradnim standardom za C se je mnogo uporabnikov in izvršiteljev opiralo na neuradno specifikacijo, opisano v knjigi Programski jezik C Briana Kernighana in Ritchieja. Ta različica je v splošnem znana kot »K&R« C. Leta 1989 je Ameriški državni inštitut za standarde (ANSI) objavil standard za C (v splošnem imenovan »ANSI C« ali »C89«). Naslednje leto je to specifikacijo potrdila Mednarodna organizacija za standardizacijo (ISO) kot mednarodni standard (v splošnem imenovan »C90«). ISO je kasneje izdala razširitev standarda za podporo internacionalizacije leta 1995 in popravljeni standard (znan kot »C99«) leta 1999. Ta standard je do sedaj najbolj razširjen. Trenutna različica standarda (sedaj imenovana »C11«) je ISO kot ISO/IEC 9899:2011 potrdila 8. decembra 2011.
+
+
+== Zasnova ==
+C je imperativni (proceduralni) jezik. Izdelan je bil za prevajanje na relativno preprostem prevajalniku in da bi zagotavljal nizkonivojski dostop do pomnilnika, jezikovne konstrukte, ki bi se učinkovito preslikali v tipične strojne ukaze in, da bi potreboval najmanjšo podporo izvajanja. Zaradi tega se C začel rabiti v mnogih aplikacijah, ki so bile prej razvite z zbirnem jeziku, še posebej v sistemskem programiranju.
+Navkljub svojim nizkonivojskim zmožnostim se je jezik C razvil v smislu boljšega programiranja na mnogih platformah. Program zapisan v C, ki je v skladu s standardom in napisan prenosljivo, se lahko prevede za zelo širok nabor računalniških platform in operacijskih sistemov z zelo malo spremembami v izvorni kodi. Tako je C postal razpoložljiv na mnogih platformah od vgrajenih mikrokrmilnikov do superračunalnikov.
+C velja za učinkovit jezik in je primeren za sistemska opravila, ni pa najprimernejši za učenje programiranja, čeprav se pogosto pojavlja v izobraževanju. Je tudi eden od najbolj razširjenih programskih jezikov, skupaj z javo, C++ ali PHP, od leta 2008 pa mu priljubljenost celo rahlo narašča. Obstaja zelo malo arhitektur in operacijskih sistemov za katere ni na voljo prevajalnika za C. C se veliko rabi tudi za razvoj prenosljivega uporabniškega programja.
+
+
+== Pregled in osnovne značilnosti jezika ==
+Kot večina imperativnih jezikov v tradiciji ALGOLa je C zmožen strukturalnega programiranja in omogoča leksično območje spremenljivk ter rekurzijo, statični sistem tipov pa preprečuje mnogo nenameravanih operacij.
+C je dokaj skop programski jezik, ki deluje blizu strojne opreme, in je za razliko od večine programskih jezikov bolj podoben zbirniku. Včasih ga imenujejo »prenosljivi zbirnik«, kar tudi označuje njegovo pomembno razliko od zbirniškega jezika. Izvorno kodo, napisano v C, se da prevesti in pognati na skoraj vsakem stroju. Tega ne zmore skoraj noben obstoječ programski jezik in tudi kodo, zapisano v zbirniku, se lahko požene le na določenih vrstah strojev. C po navadi imenujejo nizkonivojski ali srednjenivojski jezik, kar označuje kako blizu strojne opreme lahko deluje.
+V C-ju je vsa izvršna koda vsebovana znotraj podprogramov, imenovanih »funkcije«, čeprav ne v strogem pomenu funkcionalnega programiranja. Parametri funkcij se vedno prenašajo po vrednosti. Prenos po sklicu se v C simulira z eksplicitnim prenašanjem vrednosti kazalcev. Izvorno besedilo programa v C je v prostem formatu in za končnik stavkov rabi podpičje (;), ter zavita oklepaja ({ }) za združevanje blokov stavkov.
+C so naredili zaradi enega samega pomembnega namena, kar ni slučajnost, da bi bilo moč pisati velike programe z manj napakami v proceduralnem programiranju in, da pisec programov ne bi nosil bremena tvorjenja prevajalnika za C, ki ga otežujejo zapleteni gradniki jezika. V tem smislu ima C naslednje pomembne značilnosti:
+
+majhno fiksno število rezerviranih besed, ki vključuje polno množico primitivov nadzornega pretoka: for, if/else, while, switch in do/while. Obstaja en imenski prostor, imena, ki jih opredeli uporabnik, se ne morejo razlikovati od rezerviranih besed z nobeno vrsto sigle,
+veliko število aritmetičnih, logičnih (eniških, dvojiških, trojiških) in pozapisnih operatorjev, kot so npr.: +, -, !, *, &, ~, +=, ++, <<, ? :, ., -> ipd.,
+v enem stavku se lahko izvede več kot ena prireditev,
+preprost sistem podatkovnih tipov, ki obvaruje pred brezpredmetnimi operacijami,
+slovarsko področje spremenljivk,
+tipizacija je statična, vendar prisiljeno šibka: vsi podatki imajo tip, lahko pa se izvede implicitno pretvarjanje. Znaki se lahko na primer rabijo kot cela števila,
+usmeritev na proceduralno programiranje z zmožnostjo programiranja v slogu strukturalnega programiranja,
+označitvena skladnja posnema kontekst rabe. C nima rezervirane besede »define« in se namesto tega stavek, ki se začne z imenom tipa, vzame kot označitev. Ne obstaja rezervirana beseda »function«, namesto tega je funkcija naznačena z oklepajema, ki objemata seznam njenih parametrov,
+uporabniško definirani tipi (typedef) in sestavljeni tipi,
+naštevni tipi (enumerated types) z rezervirano besedo enum. Niso opremljeni z označbami in so prosto medsebojno spremenljivi s celimi števili,
+zapisi ali skupki raznovrstnih podatkovnih tipov (struct), ki jih določi uporabnik, in omogočajo združevanje in upravljanje podobnih podatkovnih elementov v celoti,
+indeksiranje polj je sekundarni zapis, definiran s pomočjo kazalčne aritmetike. Z razliko od unij, polja niso prvorazredni objekti – ni jih moč prirediti ali primerjati s pomočjo posameznih vgrajenih operatorjev. Pri rabi ali opredelitvi ne obstaja rezervirana beseda »array«. Namesto tega oglata oklepaja ([ ]) nakazujeta polja skladenjsko, na primer mesec[11],
+znakovni nizi niso posebni podatkovni tip, ampak so po navadi izvedeni kot ničelno omejena polja znakov z nadzornim ničelnim znakom '\0',
+uporaba predprocesorskega jezika, predprocesorja C, za naloge kot so določevanje makrojev, vključevanje večkratnih datotek z izvorno kodo in pogojno prevajanje,
+nizkonivojski nepreverjeni dostop do računalniškega pomnilnika s pomočjo pretvorbe strojnih naslovov v tipske kazalce,
+parametri, ki prehajajo v funkcije po vrednosti in ne po sklicu (referenci),
+kadar se ne rabi, se lahko vrednost vračanja funkcije prezre,
+podprogrami, ki ne vračajo vrednosti, so posebni primer funkcij z netipskim vrnitvenim tipom void.
+funkcije se ne morejo opredeliti znotraj slovarskega področja drugih funkcij.
+kazalci na funkcije, ki omogočajo osnovno obliko zaprtja (closure) in izvajalnega polimorfizma,
+osnovna oblika modularnosti: datoteke se lahko prevedejo samostojno in povežejo skupaj, z nadzorom katere funkcije in podatkovni objekti so vidni v drugih datotekah prek atributov static ali extern,
+zelo omejena raba ukaza else (načelo KISS).
+preprost jedrski jezik s pomembno kompleksno funkcionalnostjo, kot na primer upravljanje V/I nalog in delo z znakovnimi nizi, matematične funkcije ali delo z datotekami omogočajo knjižniški podprogrami,C ne vsebuje nekaterih gradnikov, ki so sestavni deli novejših, sodobnejših visokonivojskih jezikov, kot na primer objektne usmerjenosti ali samodejnega čiščenja pomnilnika, tako da ima ročno upravljanje pomnilnika.
+
+
+=== Povezave z drugimi jeziki ===
+Razvoj jezika C je zelo vplival na druge programske jezike, še posebej na C++, ki se je razvil kot razširitev C-ja. Mnogo kasnejših jezikov si je neposredno ali posredno sposodilo določene gradnike C-ja, na primer: D, Go, Rust, java, JavaScript, Limbo, LPC, C#, Objective-C, Perl, PHP, Python, Swift, Vala, Verilog (strojni opisni jezik), in Unixova C shell. Ti jeziki so dobili mnogo svojih nadzornih struktur in drugih osnovnih gradnikov od C-ja. Večina od njih, kjer je Python največja izjema, je tudi skladenjsko zelo podobnih C-ju v splošnem in so usmerjeni na združevanje prepoznavnih izrazov in stavkov skladnje jezika C z osnovo sistemov tipa, podatkovnih modelov in semantiko, ki je lahko popolnoma drugačna. Skladnja pri teh jezikih včasih vključuje tudi enakovredne preproste nadzorne strukture. C++ in Objective-C sta bila na začetku jezika prevajalnikov, ki so tvorila kodo v C. C++ je trenutno skoraj supermnožica C, Objective-C pa je stroga supermnožica C. C se rabi tudi kot posredni jezik za druge jezike ter za ustvarjanje standardnih knjižnic in izvajalnih sistemov za višjenivojske jezike, kot je npr. CPython.
+
+
+== Razvoj ==
+
+
+=== Zgodnji razvoj ===
+
+Izvor jezika C je tesno povezan z razvojem operacijskega sistema Unix, ki so ga izvirno razvili v zbirnem jeziku na miniračunalniku DEC PDP-7 Ritchie, Thompson, Joe Ossana, Rudd Canaday in Doug McIlroy v AT&T Bellovih laboratorijih, in vključili več zamisli svojih kolegov. V začetku Thompson niti ni programiral na samem PDP-7, ampak je rabil množico makrojev za zbirni jezik GEMAP na 32-bitnem osrednjem stroju General Electric GE-635. Nato je poprocesor tvoril papirni trak, ki ga je PDP-7 lahko prebiral. Kmalu je Unix s preprostim jedrom, zbirnim jezikom, preprosto lupino (tolmačem ukazov) in z nekaterimi pripomočki (kot npr. Unixovi ukazi rm, cat, cp) leta 1969 postal samozadosten, in razvoj se je lahko nadaljeval neodvisno na samem PDP-7. Douglas McIlroy je kmalu zatem tvoril prvi visokonivojski jezik sistema Unix, izvedbo prevajalnika prevajalnikov TMG Roberta M. McClurea. McIlroy in Bob Morris sta uporabila TMG za zgodnji prevajalnik jezika PL/I v operacijskem sistemu Multics. Thompson se je zaradi McIlroyjevega uspeha reproduciranja TMG odločil, da je Unix, ki verjetno tedaj še ni bil imenovan tako, potreboval lasten sistemski programski jezik.
+Pisanje v zbirnem jeziku novo nastalega Unixa je bilo nerodno. Za pisanje programskih struktur se je porabilo več časa, kodo je bilo težje razhroščevati in jo razumeti. Thomson je želel imeti prednosti visokonivojskega jezika vendar ne v smislu operacijskega sistema Multics, napisanega v PL/I in zbirnem jeziku. Bil je vodja neformalne skupine v AT&T, ki je začela pregledovati možnosti drugih operacijskih sistemov in višjenivojskih jezikov. Najprej je s pomočjo TMG leta 1970 neuspešno hotel uporabiti Fortran, nato pa je ustvaril jezik B s poenostavitvijo raziskovalnega jezika BCPL, ki ga je leta 1967 razvil Martin Richards, tako da je lahko njegov tolmač šel v 8 kB 18-bitni besedni pomnilnik računalnika PDP-7.
+B se je izkazal za zelo počasnega in nezmožnega za sistemsko programiranje v samem Unixu. Tako kot BCPL je bil brez tipov. Pri novem zmogljivejšem računalniku DEC PDP-11 je bil jezik brez tipov neizvršljiv. Njegov procesor je podpiral podatkovne tipe različnih velikosti in z jezikom B tega ni bilo moč izraziti. Problem je bilo tudi izvajanje. Thompson in Ritchie sta se odločila prenesti operacijski sistem na PDP-11. Prva različica PDP-11 je imela 16 kB pomnilnika za operacijski sistem in 8 kB za uporabniške programe. Tudi njegov operacijski sistem je bil napisan v zbirnem jeziku. Želela sta napisati operacijski sistem v jeziku B. Najprej je zaradi nezmožnosti rabe nekaterih prednosti računalnika PDP-11, še posebej bajtno naslovljivost, v letu 1971 nastal »novi B« (NB), ki je rešil te probleme. Ta jezik se je kmalu razvil in preimenoval (leta 1972) v C. Postal je prevajalni in ne tolmačitveni jezik.
+Začetni razvoj jezika C je po Ritchiejevih besedah potekal v AT&T Bellovih laboratorijih med letoma 1969 in 1973. Najbolj kreativno obdobje je bilo leta 1972. Tedaj je bila večina Unixa ponovno napisana v C-ju. Do leta 1973 z dodatkom podatkovnega tipa zapisov struct je C postal dovolj močan za prevod Unixovega jedra. Novi jezik je dobil ime »C«, ker so bili njegovi gradniki izvedeni iz jezika »B«, ta pa je bil po Thompsonovih besedah okleščena različica jezika BCPL.Tako je bilo Unixovo jedro prvo jedro kakšnega operacijskega sistema napisano v drugem jeziku od zbirnega. Pred tem sta bila na primer še operacijska sistema Multics (napisan v PL/I) in MCP (Master Control Program) za sistem Burroughs B5000 (napisan v ALGOLu leta 1961.) Leta 1977 sta Ritchie in Stephen Curtis Johnson dodatno spremenila jezik C za pospešitev prenosljivosti operacijskega sistema Unix. Johnsonov Portable C Compiler (PCC) je služil kot osnova za več izvedb C-ja na novih platformah.
+
+
+=== K&R C ===
+
+Leta 1978 sta Kernighan in Ritchie objavila prvo izdajo knjige Programski jezik C (The C Programming Language). Ta knjiga, pri programerjih v C-ju znana kot »bela knjiga« (white book), oziroma »K&R«, je bila mnogo let neformalna specifikacija jezika. Različica jezika C, ki ga knjiga opisuje, se navadno imenuje K&R C. Druga izdaja knjige pokriva kasnejši standard ANSI C.
+K&R je uvedla nekaj jezikovnih gradnikov:
+
+standardna V/I knjižnica
+podatkovni tip long int
+podatkovni tip unsigned int
+sestavljeni prireditveni operatorji v obliki =op (kot npr. =-) so spremenjeni v obliko op= zaradi semantične dvoumnosti pri tvorjenju takšnih konstruktov kot npr. i=-10, kar je bilo tolmačeno kot i =- 10 (zmanjšaj i za vrednost 10) namesto možno predvidenega i = -10 (priredi i vrednost -10)Tudi po objavi standarda C leta 1989, je K&R C še vedno mnogo let veljal za »najmanjši skupni imenovalec« na katerega so se programerji v C-ju omejili, kadar je bila žaželena največja možna prenosljivost, saj je bilo v rabi še vedno več starejših prevajalnikov, skrbno napisana koda v K$R C pa je bila lahko tudi veljavni standard za C.
+V zgodnejših različicah C-ja je bilo treba pred opredelitvijo (definicijo) uvesti le funkcije, ki so vračale vrednosti razen tipov int. Funkcija, ki se je rabila brez predhodne označitve (deklaracije), je privzeto vračala vrednosti int, če se je njena vrednost uporabila. Na primer:
+
+Določilnike tipa int, ki so izpuščeni, v K&R C ni bilo treba navajati, kasnejši standardi pa so jih zahtevali.
+Ker označitev funkcij v K&R C ni vsebovala nobenega podatka o parametrih funkcije, njihovo preverjanje ni bilo izvedeno, čeprav je nekaj prevajalnikov javljalo opozorilno sporočilo, če je bila lokalna funkcija klicana z napačnim številom parametrov, ali, če je več klicev zunanje funkcije rabilo različno število tipov parametrov. Razvili so več ločenih orodij, kot na primer Unixov pripomoček lint, ki so poleg drugih stvari lahko preverjala doslednost rabe funkcij križem v več datotekah izvorne kode.
+Po objavi K&R C so k jeziku dodali več gradnikov, ki so jih podpirali prevajalniki, na primer od AT&T (še posebej PCC) in od nekaterih drugih ponudnikov. Med njimi so:
+
+funkcije void (funkcije, ki ne vračajo vrednosti)
+funkcije, ki vračajo podatkovne tipe struct ali union (namesto kazalcev)
+prireditev za podatkovne tipe struct
+naštevni tipi (enumerated types)Veliko število razširitev, pomanjkanje dogovora o standardni knjižnici, priljubljenost jezika in dejstvo, da tudi na operacijskem sistemu Unix prevajalniki niso dosledno izvrševali specifikacije K&R, je vodilo do potrebe za standardizacijo.
+
+
+=== ANSI C in ISO C ===
+V poznih 1970-ih in 1980-ih so izvedli različice C-ja za širok razpon osrednjih računalnikov, miniračunalnikov in mikroračunalnikov, vključno z osebnim računalnikom IBM PC, saj se je tedaj njegova priljubljenost zelo povečala.
+Leta 1983 je Ameriški državni inštitut za standarde (ANSI) ustanovil odbor X3J11 za ustanovitev standardne specifikacije jezika C. X3J11 je osnoval standard za C na Unixovi izvedbi; vendar so neprenosljivi del Unixove knjižnice C predali delovni skupini 1003 IEEE, ki je postala osnova za standard POSIX leta 1983. Leta 1989 so standard C potrdili kot ANSI X3.159-1989 »Programming Language C«. Ta različica jezika se po navadi imenuje ANSI C, Standard C ali včasih C89.
+Leta 1990 je standard ANSI C (z oblikovnimi spremembami) sprejela Mednarodna organizacija za standardizacijo (ISO) kot ISO/IEC 9899:1990, kar se včasih imenuje C90. Tako se izraza »C89« in »C90« nanašata na isti programski jezik.
+Kakor druge nacionalne ustanove za standarde ANSI ni več razvijal standarda C neodvisno, ampak ga je odložil k mednarodnemu standardu C, ki ga vzdržuje delovna skupina ISO/IEC JTC1/SC22/WG14. Nacionalna usvojtev posodobitve mednarodenga standarda se po navadi izvede še v letu publikacije ISO.
+Eden od ciljev procesa standardizacije jezika C je bilo tvorjenje supermnožice K&R C, ki bi vključevala več predhodno uvedenih neuradnih gradnikov. Standardizacijski odbor je vključil tudi več dodatnih gradnikov, kot so npr. prototipi funkcij (izposojeno od C++), kazalci void, podpora za mednarodni nabor znakov in lokalnih parametrov, ter predprocesorske izboljšave. Čeprav je bila skladnja za označitev parametrov povečana, da bi vključevala slog rabljen v C++, je bil vmesnik K&R zaradi združljivosti z obstoječo izvorno kodo še naprej dovoljen.
+C89 podpirajo trenutni prevajalniki za C, večina kode v C-ju, ki je zapisana sedaj, temelji na njem. Vsak program, zapisan le v ANSI C in brez privzetkov odvisne strojne opreme, se bo izvajal pravilno na katerikoli platformi v skladu z izvedbo C-ja v mejah svojih virov. Brez takšnih previdnosti se lahko programi prevedejo le na določenih platformah ali z določenim prevajalnikom zaradi na primer rabe nestandardnih knjižnic, kot so knjižnice grafičnih uporabniških vmesnikov, ali oslonitev na računalniške ali specifične platformske atribute, kot je točna velikost podatkovnih tipov in ureditev bajtov (endianness).
+V primerih, ko mora biti koda prevedljiva tako v skladu s standardom ali s prevalniki na osnovi K&R C, se lahko rabi makro __STDC__, ki razdeli kodo na dele z ANSI C in K&R, ter tako prepreči prevajalnikom na osnovi K&R C uporabo gradnikov, razpoložljivih le v ANSI C.
+Po standardizacijskem procesu ANSI/ISO je specifikacija jezika C več let ostala statična. Leta 1995 so k standardu C iz leta 1990 dodali Normative Amendment 1 (ISO/IEC 9899/AMD1:1995, neformalno znan kot C95). Z njim so popravili nekaj podrobnosti in dodali obsežnejšo podporo mednarodnega nabora znakov.
+
+
+=== C99 ===
+Standard C so v poznih 1990-ih na novo popravili, kar je leta 1999 vodilo do objave standarda ISO/IEC 9899:1999, ki je v splošnem znan kot »C99«. Od tedaj so ga s tehniškimi popravki dopolnili trikrat.C99 je uvedel več novih gradnikov. Na primer znotrajvrstične funkcije (inline functions), nove podatkovne tipe (na primer long long int in complex za delo s kompleksnimi števili), polja s spremenljivo dolžino (variable-length arrays (VLA)), izboljšano podporo aritmetike s plavajočo vejico IEEE 754, podporo variarnih makrojev (variadic macros, makrojev s spremenljivo arnostjo) in podporo enovrstičnih komentarjev, ki se začnejo z dvema poševnicama //, kot v BCPL ali C++. Več teh gradnikov je kot razširitve tedaj že podpiralo nekaj prevajalnikov za C.
+C 99 je večinoma nazaj združljiv s C90, vendar je na nekaterih mestih strožji. Še posebej, označitev, ki je brez določilnika tipa, implicitno privzeto ni več tipa int. Standardni makro __STDC_VERSION__ je določen z vrednostjo 199901L in nakazuje, da je na voljo podpora C99. GCC, Solaris Studio in drugi prevajalniki za C sedaj podpirajo mnogo ali pa vse nove gradnike C-ja v standardu C99. Prevajalnik za C v Microsoft Visual C++ izpolnjuje standard C89 in tiste dele C99, ki so zahtevani za združljivost z različico standarda C++11.
+
+
+=== C11 ===
+Leta 2007 so se začela dela na novi različici standarda C, ANSI C11 ali ISO/IEC 9899:2011, do objave 8. decembra 2011 neformalno imenovane »C1X«. Standardizacijski odbor je sprejel smernice za omejitev usvojitve novih gradnikov, ki jih niso preskusili z obstoječimi izvedbami.
+V standardu C11 se je pojavilo več novih gradnikov jezika C in knjižnic, na primer: makroji rodovnih tipov, anonimne strukture, izboljšana podpora kodirnega standarda Unicode, atomske operacije, mnogonitnost in funkcije s preverjanjem mej. Neketeri deli obstoječe knjižnice C99 so postali izbirni, izboljšana je bila tudi združljivost s C++. Standardni makro __STDC_VERSION__ je definiran kot 201112L in tako označuje, da je na voljo podpora standardu C11.
+
+
+=== Vgradni C ===
+Programiranje z vgradnim C-jem (embedded C) zgodovinsko zahteva nestandardne razširitve k jeziku C, da se lahko podpirajo C-ju tuji gradniki, kot so npr.: aritmetika s fiksno vejico, mnogokratne različne pomnilniške vrstice in osnovne V/I operacije.
+Leta 2008 je standardizacijski pododbor SC 22 objavil tehniško poročilo z razširitvijo jezika C, ki se je nanašala na probleme med razširitvami jezika C za različne vgradne sisteme, in tako zagotovila splošni standard za vse ustrezne izvedbe. Vključuje več gradnikov, ki v normalnem C niso na voljo: aritmetika s fiksno vejico, prostori z imenovanimi naslovi in osnovno V/I naslavljanje strojne opreme.
+Vgradni C rabi večino skladnje in semantike standardnega C-ja: funkcija main, opredelitev spremenljivk, označitev podatkovnih tipov, pogojni stavki (if, switch, case), zanke (while, for), funkcije, polja in znakovni nizi, strukture in unije, bitne operacije, makroji ipd.
+
+
+== Skladnja ==
+C ima formalno slovnico, ki jo določa standard C. Z razliko od nekaterih drugih jezikov, kot je npr. FORTRAN 77, je izvorna koda C-ja proste oblike, kjer se znaki za prazni prostor lahko rabijo poljubno, koda pa ni odvisna od stolpčnih ali besedilno-vrstičnih omejitev. Meje vrstic so drugače med predprocesorsko fazo pomembne.
+
+
+=== Komentarji ===
+Komentarji so lahko med razmejilnima znakoma /* in */ enovrstično ali mnogovrstično, od standarda C99 naprej pa tudi za razmejilnima znakoma // enovrstično do konca vrstice. Komentarji, ki jih razmejujeta /* in */, ne smejo biti vgnezdeni. Če se zaporedje teh dveh znakov pojavi znotraj znakovnega niza ali znakovnega črkovnega simbola, se ne obravnavata kot razmejilna znaka komentarja. Komentarji oblike:
+
+so v redu, vgnezdeni enovrstično pa npr. ne:
+
+ali vgnezdeni mnogovrstično:
+
+saj drugo zaporedje /* ne velja za razmejilni znak komentarja, kot tudi ne drugo zaporedje */, ki je sedaj zunaj komentarja, in prevajalnik bi v obeh primerih javil napako.
+
+
+=== Izrazi ===
+Datoteke s C-jevsko izvorno kodo vsebujejo označitev (deklaracijo) in opredelitev (definicijo) funkcij. Opredelitve funkcij po vrsti vsebujejo označitve in stavke. Označitve opredeljujejo nove podatkovne tipe z rezerviranimi besedami, kot so: struct, union in enum, ali prirejajo tipe in morda rezervirajo pomnilniška mesta novim spremenljivkam, po navadi z zapisom tipa, ki mu sledi ime spremenljivke. Rezervirane besede, kot sta char in int, označujejo vgrajene tipe. Deli kode so obdani z zavitima oklepajema { in }, ki omejujeta označitveno področje ali pa delujeta kot samostojni stavek za nadzorne strukture.
+C kot imperativni jezik za označitev dejanj rabi stavke. Najbolj razširjeni stavek je izrazni stavek, ki vsebuje izraz, kateremu je treba določiti vrednost, izrazu pa sledi podpičje. Zaradi še večje preglednosti se podpičje velikokrat razmakne od označitvenih/ukaznih besed z dodatnim presledkom. Na primer:
+
+Kot stranski pojav določitve vrednosti se funkcije lahko kličejo in spremenljivkam se lahko priredijo nove vrednosti. Za spreminjanje normalne zaporedne izvršitve stavkov ima C več stavkov za nadzor toka, ki jih označujejo rezervirane besede. Strukturalno programiranje je podprto s pogojno izvršitvijo if(-else), z iterativnimi izvršitvami (zankami) if(-else), while in for. Stavek for ima ločene dodelitvene izraze, izraze za preverjanje in izraze za ponovno dodelitev – vsak od njih pa se lahko opusti. Izraza break in continue se lahko rabita za zapustitev najbolj notranjega zančnega stavka ali za preskočitev na njeno ponovno dodelitev. Obstaja tudi nestrukturalni stavek goto, ki preusmerja neposredno na imenovano oznako znotraj funkcije. switch izbere primer, ki se izvede na podlagi vrednosti celoštevilskega izraza.
+Izrazi lahko rabijo različne vgrajene operatorje in lahko vsebujejo klice funkcij. Vrstni red po katerem se določijo vrednosti parametrom funkcij in operandom večine operatorjev ni določen. Določevanje vrednost je lahko tudi vloženo vmes. Vendar se bodo vsi stranski vplivi (vključno s pomnilnikom do spremenljivk) pojavili pred naslednjo »zaporedno točko«. Zaporedne točke vsebujejo zaključek vsakega izraznega stavka ter vstop in vračanje iz vsakega klica funkcije. Zaporedne točke se pojavijo tudi med določevanjem vrednosti izrazov, ki vsebujejo določene operatorje (&&, ||, ?: in operator vejica). To dovoljuje visoko stopnjo optimizacije kode prevajalnika, vendar od programerjev v C zahteva večjo skrb za dosego zanesljivih rezultatov kot je potrebna pri drugih programskih jezikih.
+Kernighan in Ritchie v uvodu knjige Programski jezik C pravita: »Kakor drugi jeziki ima C svoje hibe. Nekateri od operatorjev imajo napačno prednost; nekateri deli skladnje bi lahko bili boljši.« Standard C ni poskušal popraviti veliko od teh hib zaradi vpliva takšnih sprememb na že obstoječo programsko opremo.
+
+
+=== Nabor znakov ===
+Osnovni nabor znakov izvorne kode jezika C vsebuje:
+
+neštevilske znake:
+26 velikih in 26 majhnih angleških latiničnih črk iz standardnega nabora ASCII:A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
+a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, zpodčrtaj: _
+številske znake:
+10 desetiških števk: 0 1 2 3 4 5 6 7 8 9
+dodatnih 28 grafičnih znakov: ! " # % & ' ( ) * + , - . / : ; < = > ? [ \ ] ^ { | } ~
+znake za prazni prostor (whitespace): presledek, vodoravni tabulator, navpični tabulator, pomik na novo stran, nova vrstica (newline)Nova vrstica označuje konec vrstice besedila. Ni treba da odgovarja dejanskemu posameznemu znaku, čeprav je v C zaradi prikladnosti to posamezen znak.
+Lahko se rabijo tudi dodatni mnogobitno zakodirani znaki v prikazu znakovnih nizov, vendar niso povsem prenosljivi. Zadnji standard za C (C11) dovoljuje mnogonacionalne znake kodirnega standarda Unicode, ki so prenosljivo lahko del besedila izvorne kode C s pomočjo kodiranj \uXXXX ali \UXXXXXXXX, kjer X označuje šestnajstiško zapisan znak. Ta možnost še ni v široki rabi.
+Osnovni izvršni nabor znakov C obsega enake znake, skupaj s prikazom opozorila (alert), povratnega znaka (backspace) in pomika na začetek vrstice (carriage return). Podpora izvajalnemu času za razširjene nabore znakov se je z vsako različico standarda za C povečevala.
+
+
+=== Rezervirane besede ===
+Naslednje besede (keywords; reserved words) so v jeziku C rezervirane in imajo strog pomen kot posamezni znaki (tokens). Ne smejo se na novo opredeliti ali se rabiti kot identifikatorji v drugih kontekstih:
+
+Besede so občutljive na male ali velike črke. INT, INt, InT, Int, iNT, iNt ali inT na primer ni enako kot int. V različnih izvedbah prevajalnikov za C se lahko pojavijo tudi druge rezervirane besede, npr. ada, asm, fortran, pascal, čeprav se tam običajno nestandardne besede začnejo z enim ali dvema podčrtajema, npr. __asm, _Cdecl ipd. V primerjavi z drugimi velikimi jeziki ima C majhno število rezerviranih besed. Ada jih ima na primer 62. Ena od značilnosti jezika C je, da lahko naredi veliko z relativno malo posebnimi simboli in rezerviranimi besedami. Na začetku je imel C manj rezerviranih besed, na primer 29, sedaj pa jih pozna 44. Kasneje so bile dodane rezervirane besede, kot so: _Bool, _Complex, const, _Imaginary, inline, restrict, signed in volatile. Beseda entry se ni nikoli rabila in sedaj ni več rezervirana.
+
+
+=== Operatorji ===
+C podpira bogat nabor operatorjev, ki so simboli znotraj izraza za določevanje potrebnih opravil med njegovim izvajanjem. C ima operatorje za:
+
+aritmetiko: +, -, *, /, %
+prireditev: =
+povečano prireditev: +=, -=, *=, /=, %=, &=, |=, ^=, <<=, >>=
+bitno logiko: ~, &, |, ^
+bitni pomik: <<, >>
+Booleovo logiko: !, &&, ||
+pogojno določitev vrednosti: ? :
+primerjanje enakosti: ==, !=
+klicanje funkcij: ( )
+povečanje in zmanjšanje: ++, --
+izbiro elementa: ., ->
+velikost objekta: sizeof
+relacije urejenosti: <, <=, >, >=
+referenco in dereferenco: &, *, [ ]
+vrstni red: ,
+združevanje podizrazov: ( )
+pretvorbo tipov: (typename)C rabi operator =, ki je v matematiki rezerviran za izražanje enakosti, za naznanitev prireditve po zgledu predhodnih jezikov Fortrana in PL/I, vendar z razliko od ALGOLa in njegovih izpeljank. Podobnost med cejevskima operatorjema za prireditev in za primerjanje enakosti (==) so kritizirali, saj se ju lahko preprosto zamenja. V mnogih primerih mora biti vsak rabljen v kontekstu drugega brez napak prevajalnika, čeprav nekateri prevajalniki tvorijo opozorila. Pogojni izraz v if(a=b+1) je pravilen, če a ni enak nič po prireditvi. Poleg tega operatorska prednost ni intuitivna, saj se operator == zvezuje tesneje kot operatorja & in | v izrazih, kot je x & 1 == 0, ki bi moral biti zapisan kot (x & 1) == 0 za pravilno določitev vrednosti.
+
+
+== Zgradba, oblika programa in slog v C ==
+Osnovni gradnik programa v C je funkcija. Vsak program v C je zbirka ene ali več funkcij. Funkcije sestavljajo označitve spremenljivk in stavki, ali zapleteni ukazi, obkrožata pa jih zavita oklepaja ({ in }).
+
+
+=== Zgleda programov ===
+
+
+==== Program Pozdravljen, svet ====
+Spodnji zgled izpiše znakovni niz »Pozdravljen svet!« na standardni izhod. Navadno je standardni izhod povezan z zaslonom monitorja, lahko pa je tudi datoteka ali kakšna druga strojna naprava. Program je napisan v skladu s standardom ANSI C.
+
+Sledi analiza programa po vrsticah:
+
+Prva vrstica v programu je predprocesorski ukaz (navodilo, direktiva) #include. Pred samim prevajanjem programa predprocesor pregleda izvorno kodo in izvrši vse predprocesorske ukaze. Ti ukazi se vedno začnejo z znakom #. Ukaz #include povzroči, da se na njegovo mesto v izvorno kodo vključi datoteka stdio.h, ki vsebuje standardne vhodno izhodne funkcije.
+
+V naslednji vrstici se opredeli funkcija z imenom main. Ta funkcija ima poseben pomen v C programih. Pri začetku izvajanja programa se najprej kliče ta funkcija. Ključna beseda int na začetku vrstice pove, da funkcija main() vrne celo število, ključna beseda void pa, da funkcija ne sprejme nobenih parametrov. Funkcija main po standardu ANSI C vedno vrača vrednost, čeprav nekateri prevajalniki prevedejo kodo uspešno, četudi temu ni tako. Tudi v jeziku C++ je ta funkcija še vedno C-jevska. Funkcija main je lahko opredeljena s pomočjo naslednjih štirih oblik ob označitvi:
+
+oziroma prototipno:
+
+Prvi dve opredelitvi sta enakovredni (in združljivi s C++).
+
+Odprti zaviti oklepaj pomeni začetek opredelitve funkcije main.
+
+V tej vrstici se kliče funkcija printf, ki je označena v datoteki stdio.h. Pri tem klicu se funkciji printf poda en parameter v obliki znakovnega niza. Na koncu znakovnega niza je še posebni dvoznakovni niz \n, ki se prevede v znak EOL (end of line). Znak je namenjen kot ukaz izhodni napravi, da postavi trenutno lego na začetek naslednje vrstice.
+
+Vrstica zaključi izvajanje funkcije main in vrne celo število 0.
+
+Zaprti zaviti oklepaj pomeni zaključek opredelitve funkcije main.
+
+
+==== Najmanjši program ====
+Katera opredelitev funkcije main se uporabi v programu, je verjetno odvisno od posamezne izbire. Trenutni standard C vsebuje dva zgleda rabe main() in dva main(void), standard C++ pa rabi main(). Vrednost, ki jo main vrača (in mora biti tipa int), služi kot status prekinitve. Tega program vrne gostiteljevemu okolju.
+Standard C definira vrnitveni vrednosti 0 (»nič napak« (zero errors)) in EXIT_SUCCESS, ki označujeta uspeh, ter EXIT_FAILURE za označevanje neuspešnega izvajanja programa. (EXIT_SUCCESS in EXIT_FAILURE sta opredeljeni v standardni zaglavni datoteki stdlib.h). Druge vrnitvene vrednosti služijo kot izvedbeni opredelitveni pomeni. V Linuxu na primer program, ki ga je prekinil ukaz signal, vrne kodo številske vrednosti signala plus 128.
+Najmanjši pravilen program v C vsebuje prazno funkcijo main brez parametrov:
+
+Lahko se zapiše tudi v več vrsticah:
+
+ali redkeje sicer v skladu z dobrim slogom:
+
+Sploh pa je slaba praksa pisati neporavnano, kot npr:
+
+ali:
+
+oziroma poravnano brez reda:
+
+Preveden program bo sicer deloval, izvorna koda pa je že v preprostem zgledu nepregledna. Seveda je treba rezervirane besede, imena spremenljivk in funkcij pisati brez presledkov.
+Okrogla oklepaja (), ki sledita imenu funkcije, morata biti vključena, saj na ta način C razlikuje funkcije od navadnih spremenljivk. Načeloma pri funkcijah za imenom funkcije in odprtim oklepajem ni presledka, npr. main(void) in ne main (void), z razliko od sizeof (), ki dejansko strogo ni funkcija, in je skladenjska rezervirana beseda za enočleni operator. sizeof je lahko podobno kot return brez okroglih oklepajev. Pri return je to celo zaželeno, razen če je dvoumno.
+Ker nista navedena return ali exit, funkcija main ob izhodu vrne 0. To je poseben primer predstavljen v standardu C99, ki velja le za funkcijo main. Če se zahteva še ta navedba, ima najmanjši program obliko:
+
+Funkcija main bo za uspešno delovanje programa po navadi klicala druge funkcije. Ni treba, da je na vrhu programa, tako da se program v C ne začne v prvi vrstici, ampak tam kjer je navedena funkcija main. Funkcije main ni možno klicati ali jo zagnati s kakšno drugo funkcijo v programu. Kliče jo lahko le operacijski sistem in na ta način se zažene program v C. Funkcija main ni nikoli statična, in, če je navedena kot static int main(), bo prevajalnik običajno javil napako.
+Nekatere izvedbe niso izvedljive, po navadi zaradi tega, ker niso mišljene za rabo z operacijskim sistemom. Takšne izvedbe se v standardu C imenujejo prostostoječe (free-standing). V prostostoječi izvedbi ni podrobnega opisa kako naj obravnava izvajanje programa. V programu še posebej ni treba opredeliti funkcije main.
+Druge funkcije se lahko imenujejo poljubno v skladu s skladnjo jezika. Lahko jih napiše programer sam ali pa se rabijo obstoječe iz knjižnic. Vmesniki za knjižniške funkcije so običajno navedeni z vključitvijo zaglavnih datotek s preprocesorsko direktivo #include, objekti knjižnice pa se povežejo v končno izvršno sliko. Določene knjižniške funkcije, kot sta na primer printf ali scanf, so definirane s standardom C, in se imenujejo standardne knjižniške funkcije.
+Funkcija lahko vrne vrednost klicatelju - po navadi drugi funkciji C-ja, ali gostiteljevemu okolju za funkcijo main. Zgoraj omenjena funkcija printf vrne koliko znakov je bilo izpisano, vendar se ta vrednost običajno prezre.
+
+
+== Podatkovni tipi ==
+C ima statični šibki sistem tipov, ki je deloma podoben potomcem ALGOLa, kot je npr. paskal, vendar C sam ni potomec Algola. V C obstajajo vgrajeni tipi za cela števila različnih velikosti, tako predznačena in nepredznačena, števila s plavajočo vejico (npr. racionalna števila), znake in naštevne tipe (enum). C99 je z rezervirano besedo _Bool dodal Booleov podatkovni tip (Booleova spremenljivka). Obstajajo tudi izpeljani tipi, kot so: polja (tabele, arrays), kazalci, zapisi (struct) in nenaznačene unije (union).
+C se velikokrat rabi v programiranju nizkonivojskih sistemov, kjer morda ni potrebe za sistemom tipov. Prevajalnik poskuša zagotoviti pravilnost tipov večine izrazov, vendar lahko programer zaobide preverbe na več načinov, ali s pomočjo opustitve tipov (type cast), kjer ekscplicitno pretvori vrednost iz enega tipa v drugega, ali s pomočjo kazalcev ali unij, kjer se osnovni biti podatkovnega objekta na novo tolmačijo na kakšen drug način.
+Za nekatere je označitvena skladnja v C neintuitivna, še posebej kazalci na funkcije. (Richiejeva zamisel je bila, da se določilniki označijo v kontekstu njihove rabe: »označitev zrcali rabo.«)C-jevske običajne aritmetične pretvorbe dovoljujejo tvorjenje učinkovite kode, vendar lahko včasih pride do nepričakovanih rezultatov. Primerjava predznačenih in nepredznačenih celih števil enale širine na primer zahteva pretvorbo predznačene vrednosti v nepredznačeno. To lahko povzroči nepričakovane rezultate, če je predznačena vrednost negativna.
+
+
+=== Osnovni podatkovni tipi ===
+V jeziku C je več osnovnih podatkovnih tipov. Večina od njih se tvori iz enega od štirih osnovnih aritmetičnih določilnikov tipov v C (char, int, float in double), ter štirih izbirnih določilnikov (signed, unsigned, short in long). Vsi razpoložljivi osnovni aritmetični tipi so navedeni v razpredelnici:
+
+Dejanska velikost celoštevilskih tipov se v izvedbah razlikuje. Standar zahteva le velikostne povezave med podatkovnimi tipi in najmanšimi vrednostmi za vsak podatkovni tip:
+Zahteve za povezave so, da long long ni manjši od long, ki ni manjši od int, ta pa ne manjši od short. Ker je velikost char vedno najmanjši podprti podatkovni tip, vsi drugi podatkovni tipi ne morejo biti manjši.
+Najmanjša velikost za char je 8 bitov, najmanjši velikosti za short in int sta 16 bitov, za long 32 bitov in za long long mora vsebovati vsaj 64 bitov.
+Tip int mora biti celoštevilski tip, za katerega je ciljni procesor najbolj učinkovit. To omogoča veliko prilagodljivost, saj so lahko na primer vsi tipi 64-bitni. Vendar je priljubljeno več različnih shem celoštevilskih širin (podatkovnih modelov). To je zato ker podatkovni model definira kako različni programi med seboj komunicirajo, enotni podatkovni model se rabi znotraj uporabniškega vmesnika danega operacijskega sistema.Treba je omeniti, da je v praksi velikost tipa char po navadi 8 bitov, tipa short pa 16 bitov (kakor tudi njihova nepredznačena dvojnika). To velja za platforme pogoste v 1990-ih, kot so: SunOS 4 Unix, Microsoft MS-DOS, sodobni Linux in Microchip MCC18 za vgradne 8-bitne mikrokontrolerje PIC. POSIX zahteva, da je velikost char točno 8 bitov.
+Tudi dejanska velikost in obnašanje tipov s plavajočo vejico se razlikuje v izvedbah. Edino zagotovilo je, da long double ni manjši od double, ki ni manjši od float. Če ju strojna oprema podpira, se po navadi rabita 32-bitna in 64-bitna dvojiška formata s plavajočo vejico IEEE 754.
+
+
+=== Kazalci ===
+C podpira rabo kazalcev, vrsto sklica, ki zapisuje naslov ali mesto objekta ali funkcije v pomnilniku. Naslov objekta je odvisen od sistema. Kazalci v C so izpeljani podatkovni tipi in se lahko dereferencirajo za dostop podatkov, ki so shranjeni na naslovu na katere kažejo, ali kličejo funkcije na katere kažejo. S kazalci se lahko upravlja s pomočjo prirejanja ali kazalčne aritmetike. Predstavitev vrednosti kazalca pri izvajanju je običajno surov pomnilniški naslov (mogoče povečan z izravnavo znotraj besedilnega polja), vendar ker kazalčni tip vsebuje tip objekta na katerega kaže, se lahko izrazi, ki vključujejo kazalce, preverijo glede na tip že med prevajanjem. Kazalčna aritmetika se samodejno skalira z velikostjo podatkovnega tipa na katero se kaže.
+Osnovna skladnja za opredelitev kazalca v C je:
+
+Na primer:
+
+To označi ptr kot identifikator objekta naslednjega tipa:
+
+kazalec, ki kaže na objekt tipa intTo se običajno navede bolj zgoščeno kot 'ptr je kazalec na int'. Pri tem znak »*« (zvezdica) pomeni unarni ali nomadski operator posrednosti (indirektnosti, indirection operator) ali dereferenčni operator (dereference operator).
+Slogov zapisa kazalcev je lahko več. Na primer:
+
+Običajno se rabi zapis operatorja posrednosti brez presledka pred imenom kazalca int *ptr;, predvsem zaradi nedvomljivosti pri hkratnih večkratnih opredelitvah:
+
+Ker C ne opredeljuje implicitne dodelitve za objekte z avtomatičnim pomnilniškim trajanjem, je treba biti velikokrat previden pri zagotavljanju, da je naslov, na katerega kaže ptr, veljaven. Zaradi tega včasih predlagajo, da se kazalcu eksplicitno dodeli vrednost ničelnega kazalca (null pointer value), ki je v C tradicionalno določena s standardiziranim makrojem NULL:
+
+Sicer v tem primeru kazalec še ne 'kaže nikamor', razen da ima vrednost ničelnega kazalca. Pri tem je npr. izpis 'neobstoječe' vrednosti (ničelnega kazalca), kamor naj bi kazal kazalec v funkciji printf s formatom izpisa podatkovnega tipa int %din formatom izpisa kazalcev %p v redu, izpis 'praznega' naslova, pa ne:
+
+Vrednost ničelnega kazalca tako eksplicitno ne kaže na nobeno veljavno mesto v pomnilniku. Dereferenciranje njegove vrednosti je nedoločeno, kar velikokrat povzroča segmentacijsko odpoved (segmentation fault). Vrednosti ničelnih kazalcev so uporabne pri nakazovanju posebnih primerov, kot so brez »naslednjega« kazalca v končnem vozlišču povezanega seznama, ali kot naznanitev napake iz funkcij, ki vračajo kazalce. V ustreznih kontekstih izvorne kode, ko je prirejanje kazalčne spremenljivke, se lahko konstanta ničelnega kazalca zapiše kot 0, z ali brez eksplicitne opustitve na tip kazalca, ali kot makro NULL, ki je opredeljen v več standardnih zaglavnih datotekah. V pogojnih zvezah imajo vrednosti ničelnih kazalcev napačno vrednost, vse druge vrednosti kazalcev pa pravilno.
+Kazalci se v C rabijo za več namenov. Z besedilnimi znakovnimi nizi se običajno upravlja s pomočjo kazalcev v polja znakov. Dinamična dodelitev pomnilnika se izvaja s kazalci. Veliko podatkovnih tipov, kot so na primer povezani seznami ali drevesa, je velikokrat izvedeno kot dinamično dodeljeni objekti struct, ki so med seboj povezani s kazalci.
+Kazalci na funkcije so uporabni za prenašanje funkcij kot parametrov funkcij višjega reda, kot na primer qsort ali bsearch, ali kot povratni klic (callback), ki ga izvedejo obdelovalniki dogodkov (event handlers).Prazni kazalci (void *) kažejo na objekte nedoločenega tipa, in se lahko zaradi tega uporabijo kot »generični« podatkovni kazalci. Ker velikost in tip nakazanih objektov nista znana, se prazni kazalci ne morejo dereferencirati, in tudi kazalčna aritmetika nad njimi ni dovoljena, čeprav se lahko enostavno (in v mnogih zvezah so) pretvorjeni v in iz poljubnega tipa objektnega kazalca.Neprevidna raba kazalcev je potencialno nevarna. Ker se njihov tip ne preverja, lahko kazalčna spremenljivka kaže na poljubno mesto v pomnilniku, kar lahko povzroči nezaželene učinke. Čeprav pravilno rabljeni kazalci kažejo na varna mesta, lahko kažejo na nevarna mesta, če se zanje rabi nepravilna kazalčna aritmetika. Objekti na katera kažejo se lahko ponovno dodelijo in uporabijo (obviseli kazalci) – lahko se uporabijo brez, da bi se jim dodelila vrednost (divji kazalci), ali pa se jim lahko neposredno dodeli nevarno vrednost s pomočjo opustitve, unije ali prek drugega pokvarjenega kazalca. V splošnem C dopušča upravljanje in pretvarjanje med tipi kazalcev, čeprav običajno prevajalniki preskrbijo možnosti za različne nivoje preverjanja. Nekateri drugi programski jeziki te probleme rešujejo z bolj omejevalnimi tipi sklicev.
+
+
+=== Polja ===
+
+Podatkovni tipi polj imajo v C tradicionalno fiksno, statično velikost med prevajanjem. Standard C99 dovoljuje tudi obliko polj s sprememnljivo dolžino. Možno je tudi dodeliti blok pomnilnika (poljubne velikosti) pri izvajanju s pomočjo funkcije malloc (calloc) iz standardne knjižnice in ga obravnavati kot polje. Cejevska združitev polj in kazalcev pomeni, da so označena polja in ta dinamično dodeljena simulirana polja dejansko zamenljiva med seboj.
+Ker se do polj (v bistvu) vedno dostopa prek kazalcev, se dostopi polj tipično ne preverjajo za vezano velikost polja, čeprav nekateri prevajalniki lahko preskrbijo preverjanje mej kot možnost. Zaradi tega so možne prekršitve mej polj in te so kar vsakdanje v neprevidno napisani kodi. Lahko vodijo do različnih neugodnih stranskih pojavov, kot so: nepravilni dostopi do pomnilnika, popačenje podatkov, preplavljanje medpomnilnika in izjeme med izvajanjem. Če je zahtevano preverjanje mej, mora biti izvedeno ročno.
+C nima posebnega predpisa za označitev mnogorazsežnih polj, in se raje zanaša na rekurzijo znotraj sistema tipov tako da označuje polja polj, ki učinkovito opravljajo enako stvar. Vrednosti indeksov nastalega »mnogorazsežnega polja« se lahko obravnava kot (linearno) povečevanje ureditve po vrsticah.
+Mnogorazsežna polja se velikokrat rabijo v numeričnih algoritmih, večinoma iz uporabne linearne algebra za hranjenje podatkov matrik. Zgradba cejevskega polja je zo ta posebno nalogo zelo primerna. Ker se polja večinoma prenašajo kot kazalci, morajo biti njegove meje fiksne vrednosti ali drugače eksplicitno prenesene v poljubni podprogram, ki jih zahteva. Dinamično oblikovana polja polj se ne morejo dostopati s pomočjo dvojnega indeksiranja. To se lahko naredi z dodelitvijo polja z dodatnim »vrstičnim vektorjem« kazalcev k stolpcem.
+Polje polje se na primer lahko označi in uporabi na naslednje načine:
+
+Standard C99 je uvedel »polja s spremenljivo velikostjo«, ki rešujejo nekatere, vendar ne vse, probleme običajnih cejevskih polj.
+
+
+=== Izmenljivost polj in kazalcev ===
+Zapis s spuščenimi indeksi x[i] (kjer x označuje kazalec) je skladenjski sladkor za *(x+i). S prednostjo pomnilnikovega znanja o kazalčnem tipu naslov, na katerega kaže x + i, ni osnovni naslov (na katerega kaže x), povečan za i bitov, ampak je določen kot osnovni naslov, povečan z i pomnoženim z velikostjo elementa, na katerega kaže x. Tako x[i] označuje i+1-ti element polja.
+V večini izraznih kontekstov, kjer je večja izjema operand sizeof, se naprej ime polja samodejno pretvori v kazalec na prvi element polja. To pomeni, da se polje nikoli v celoti ne skopira, ko je imenovan kot parameter funkciji, ampak se prenese le naslov njegovega prvega elementa. Čeprav klici funkcij v C uporabljajo semantiko klicev po vrednosti, so tako polja učinkovito prenesena v sklicu.
+Velikost elementa se lahko določi s pomočjo operatorja sizeof na katerikoli dereferenciran element x, kot v izrazu n = sizeof *x ali n = sizeof x[0], tako, da se število elementov v označenem polju polje lahko določi kot sizeof polje / sizeof polje[0]. Zadnji izraz velja le za imena polj: spremenljivke označene s spuščenimi indeksi (int polje[20]). Zaradi semantike C-ja ni mogoče določiti celotne velikosti polj prek kazalcev na polja ali polj tvorjenih z dinamično dodelitvijo (malloc). Tako izrazi, kot je sizeof vptr / sizeof vptr[0] (kjer vptr označuje kazalec), ne bodo delovali, saj prevajalnik privzame, da se zahteva velikost kazalca samega. Ker parametri imena polja na sizeof niso pretvorjeni v kazalce, ne kažejo takšne nejasnosti. V polja tvorjena z dinamično dodelitvijo pa se dostopa s kazalci in ne kot prave spremenljivke polja, zato imajo enake težave z operatorjem sizeof kot kazalci na polja. Če se v kakšni funkciji potrebuje vrednost velikosti (enorazsežnega) poljavptr, jo je treba vključiti kot njen parameter (npr. velikost). Na primer:
+
+Podobno velja za mnogorazsežna polja.
+Navkljub tej navidezni enakosti med polji in kazalčnimi spremenljivkami je tako med njimi še vedno razlika. Čeprav se v večini izraznih kontekstih ime polja pretvori v kazalec (na njegov prvi element), kazalec sam ne zajema nobega dela pomnilnika – ime polja ni l-vrednost in njegov naslov je konstanta, z razliko od kazalčne spremenljivke. Zaradi tega se področje »na katerega kaže polje, ne more spremeniti, in na ime polja je nemogoče prirediti nov naslov. Vsebina polj pa se lahko kopira, na primer s pomočjo funkcije memcpy ali z dostopanjem do posameznih elementov.
+
+
+== Upravljanje pomnilnika ==
+Ena od najpomembnejših funkcij programskega jezika je zagotovitev pripomočkov za upravljanje pomnilnika in objektov, ki so shranjeni v njem. C zagotavlja tri različne načine dodelitve pomnilnika objektom:
+statični: prostor za objekt je zagotovljen v dvojiški obliki med prevajanjem. Življenjska doba teh objektov je enaka času, ko je dvojiška datoteka, ki jih vsebuje, naložena v pomnilnik.
+avtomatični: začasni objekti se lahko shranijo na sklad, ta prostor pa se samodejno sprosti in je ponovno uporaben po tem ko se izstopi iz bloka v katerem so objekti označeni.
+dinamični: bloki pomnilnika poljubne velikosti se lahko zahtevajo med izvajanjem s pomočjo funkcij, kot sta malloc ali calloc, iz dela pomnilnika, ki se imenuje kopica. Ti bloki obstajajo dokler se jih s klicanjem knjižničnih funkcij realloc ali free ne sprosti za ponovno rabo.Ti trije pristopi so primerni v različnih razmerah in imajo različne izkupnine. Statična dodelitev pomnilnika ima majhno dodelitveno povprečnino, avtomatična dodelitev jo lahko vsebuje nekaj več, dinamična dodelitev pomnilnika pa ima lahko precej večjo povprečnino tako za dodelitev kot za sprostitev. Trajna narava statičnih objektov je uporabna za ohranjanje stanja informacij med klici funkcij. Avtomatična dodelitev je preprosta za uporabo, vendar je običajno prostor sklada tipično bolj omejen in prehoden tako od statičnega pomnilnika ali od prostora kopice. Dinamična dodelitev pomnilnika omogoča priročno dodelitev objektov, katerih velikost je znana le med izvajanjem. Večina programov v C s pridom uporablja vse tri načine.
+Kjer je možno, sta avtomatična in statična dodelitev najpreprostjši, ker pomnilnik upravlja prevajalnik, in programerju ni treba paziti na opravila, ki so potencialno dovzetna za napake ročnega dodeljevanja in sproščanja pomnilnika. Vendar se lahko veliko podatkovnih struktur med izvajanjem spreminja po velikosti, in, ker morajo imeti statične dodelitve (in avtomatične dodelitve pred standardom C99) fiksno velikost med prevajanjem, je velikokrat potrebna dinamična dodelitev. Pred standardom C99 so bila polja s spreminjajočo velikostjo običajen primer tega. (Glej članek o funkciji malloc za primer dinamično dodeljenih polj.) Z razliko od avtomatične dodelitve, ki lahko med izvajanjem odpove z nepredvidljivimi posledicami, funkcije dinamične dodelitve vračajo pokazatelj (v obliki vrednosti ničelnega kazalca) kadar zahtevan pomnilnik ne more biti dodeljen. (Statično dodelitev, ki je prevelika, po navadi zazna povezovalnik ali nalagalnik (loader), preden program sploh začne izvajanje.)
+Dokler ni posebej označeno, statični objekti vsebujejo vrednosti nič ali ničelnih kazalcev pri izvajanju programa. Avtomatičnim in dinamičnim dodeljenim objektom se dodeli vrednost le, če je začetna vrednost eksplicitno označena, drugače imajo na začetku nedoločene vrednosti (tipično, katerikoli bitni vzorec, ki se nahaja v pomnilniku, in lahko predstavlja tudi nepravilno vrednost za določeni tip). Če program poskuša dostopati do nedodeljene vrednosti, so rezultati nedoločeni. Veliko sodobnih prevajalnikov poskuša zaznati in opozoriti na ta problem, vendar se lahko pojavijo tako napačno pozitivni kot napačno negativni.
+Drug problem je, da mora biti dodelitev pomnilnika s kopico sinhronizirana s svojo dejansko rabo v kateremkoli programu da se lahko ponovno uporabi kolikokrat je mogoče. Če na primer vrednost edinega kazalca na pomnilniško dodelitev s kopico uide iz svojega področja ali se prepiše preko preden je klicana funkcija free(), potem se tisti del pomnilnika ne more obnoviti za kasnejšo ponovno rabo in je dejansko za program izgubljen. Ta pojav je znan kot puščanje pomnilnika (memory leak). Možno je tudi obratno, da se pomnilnik sprosti, vendar se nanj še vedno sklicuje, kar lahko spet povzroči neprevidljive rezultate. Tipično se bodo simptomi pokazali v delu programa, ki je zelo oddaljen od dejanske napake, kar bo oteževalo sledenje problemu. Takšni problemi so izboljšani v jezikih s samodejnim čiščenjem pomnilnika.
+
+
+== Knjižnice ==
+Osnovno razširitev jezika C predstavljajo knjižnice. Knjižnica je v C množica funkcij zbrana v eni »arhivski« datoteki. Vsaka knjižnica ima po navadi zaglavno datoteko s prototipi funkcij, ki jih vsebuje knjižnica in se lahko rabijo v programu, in označitvami posebnih podatkovnih tipov in makro simbolov znotraj teh funkcij. Da lahko program rabi knjižnico, mora vsebovati njeno zaglavno datoteko, knjižnica pa mora biti povezana s programom, kar v mnogih primerih zahteva prevajalnikove zastavice (na primer -lm, okrajšano za »poveži z matematično knjižnico« (link the math library)).Najobičajnejša knjižnica C je standardna knjižnica jezika C, ki jo navajata standarda ISO in ANSI C. Standardna knjižnica je del vsake implementacije C. Implementacije, ki ciljajo na omejena okolja, kot so na primer vgradni sistemi, lahko zagotavljajo le podmnožico standardne knjižnice. Standardna knjižnica C podpira vhodno-izhodni tok, dodelitev pomnilnika, matematične funkcije in količine, znakovne nize in časovne vrednosti. Več ločenih standardnih zaglavnih datotek (na primer stdio.h) določa vmesnike zanje in druge pripomočke standardne knjižnice.
+Druge običajne množice funkcij knjižnice C so tiste, ki se rabijo v aplikacijah, posebej prirejenih za Unix in sisteme podobne Unix, še posebej funkcije, ki zagotavljajo vmesnik za jedro. Te funkcije v podrobnosti navajajo standardi, kot sta POSIX in Single UNIX Specification.
+Ker je veliko programov napisanih v C, so na voljo raznolike druge knjižnice. Knjižnice so običajno napisane v C, ker C-jevski prevajalniki tvorijo učinkovito objektno kodo. Programerji nato naredijo vmesnike h knjižnici, tako da se lahko njeni podprogrami rabijo v visokonivojskih jezikih, kot so java, Perl in Python.
+
+
+== Jezikovna orodja ==
+Za pomoč programerjem v C pri iskanju in popravljanju stavkov z nedefiniranim obnašanjem ali z možnimi napačnimi izrazi so razvili več orodij z večjo strogostjo, ki jo zagotavljajo prevajalniki. Med prvimi takšnimi orodji je bilo orodje lint. Njegov razvoj je vodil do nastanka mnogih drugih.
+Avtomatizirano preverjanje izvorne kode in preglejevanje je koristno v vsakem jeziku. Za C obstaja več takšnih orodij, kot na primer lint. Običajna praksa je, da se z orodjem lint odkrije vprašljiva koda, ko je program prvič napisan. Ko program preveri lint, se ga s prevajalnikom za C prevede. Poleg tega lahko mnogi prevejalniki opcijsko opozorijo o skladenjsko pravilnih konmstruktih, ki bodo verjetno dejansko napake. MISRA C je lastniška množica navodil v izogib takšni vprašljivi kodi, razvita za vgradne sisteme.Obstajajo tudi prevajalniki, knjižnice in mehanizmi na nivoju operacijskih sistemov za izvajanje procesov, ki niso standardni deli jezika C, kot na primer: preverjanje mej polj, odkrivanje prekoračitve medpomnilnika, serializacija, sledenje dinamičnemu pomnilniku in samodejno čiščenje pomnilnika.
+Orodja, kot so pomnilniški razhroščevalniki: Purify, Valgrind, Insure++, dmalloc, Electric Fence, Inspector, libcwd, Memwatch, MTuner, Oracle Developer Studio, Splint, TotalView ali WinDbg skupaj s povezovanjem knjižnic, ki vsebujejo posebne različice funkcij dinamičnih dodelitev pomnilnika, lahko pomagajo odkrivati napake v rabi pomnilnika pri izvajanju.
+
+
+== Glej tudi ==
+C++
+C#
+primerjava paskala in C
+primerjava programskih jezikov
+
+
+== Opombe ==
+
+
+== Sklici ==
+
+
+== Viri ==
+
+
+== Zunanje povezave ==
+
+Stran o programskem jeziku C na eŠtudentu Arhivirano 2006-02-16 na Wayback Machine.
+http://www.educa.fmf.uni-lj.si/izodel/sola/2001/di/Rupar/izobrazevanje/tutorc/index.html
+Burden, Peter, Programming in C Arhivirano 2016-04-04 na Wayback Machine. (angleško)
+C na Dictionary of Programming Languages (angleško)
+Programming in C (zbirka dokumentov na Lysator) (angleško)
+Spletišče wiki IRC-kanala ##C na Freenode (angleško)
+Category/Library/C na FSF (angleško)
+ISO/IEC JTC1/SC22/WG14 - C (angleško)
+Free Online C / C++ Tutorials and Documentation (angleško)
+C reference na cppreference.com (angleško)
+
+
+=== Spletni prevajalniki ===
+opp

@@ -1,0 +1,34 @@
+revision: 151747240
+title: Tap code
+url: https://es.wikipedia.org/wiki/Tap_code
+
+
+---
+
+El tap code (del inglés: código a golpecitos), también llamado knock code, es una forma muy simple de codificar mensajes de texto letra por letra. El mensaje se transmite usando una serie de sonidos a base de pequeños golpes (tap sounds), de ahí el nombre.
+El tap code ha sido usado comúnmente por los prisioneros para comunicarse entre ellos. El método se realiza golpeando materiales tales como barras de metal, tuberías o los propios muros.
+
+
+== Diseño ==
+Este código se basa en el cuadrado de Polibio usando una cuadrícula de 5×5 donde se incluyen todas las letras del alfabeto latino, a excepción de la K, que se sustituye por C.
+Cada letra es comunicada golpeando dos números, el primero marcando la fila y el segundo (tras una pausa) marcando la columna. Por ejemplo, para especificar la letra «b», se da un golpe, pausa, y luego dos golpes. El interlocutor solo necesita notar el tiempo de los golpes para reconocer las letras.
+Para comunicar la palabra «water», el cifrado sería el siguiente (con la pausa entre cada número de una pareja siendo más corta que la pausa entre las letras):
+
+La letra «x» se usa para separar oraciones, y la «k» para agradecimientos.
+Debido a la dificultad y tiempo requerido para especificar una sola letra, los prisioneros a menudo idean abreviaturas y acrónimos para iconos comunes o algunas frases, como «GN» para good night (buenas noches) o «GBU» para God bless you (Dios te bendiga).[1]​
+Por comparación, el código morse es más difícil de enviar por medio de toques o golpes porque un solo toque se desvanece y, por lo tanto, no tiene una longitud discernible. El código Morse, sin embargo, requiere la capacidad de crear dos longitudes (o tipos) distinguibles de toques. Por lo tanto, para simular el código Morse mediante toques se necesitan dos sonidos diferentes (tono, volumen) o una sincronización muy precisa, de modo que un guion dentro de un carácter (por ejemplo, el carácter N, - ·) siga siendo distinguible de un punto al final de un carácter (por ejemplo, E-E, · ·). El código Morse también tarda más en aprenderse. El aprendizaje del sistema de grifos requiere simplemente conocer el alfabeto y la secuencia corta «AFLQV» (la letra inicial de cada fila), sin memorizar toda la cuadrícula. Por ejemplo, si una persona oye cuatro golpes, puede pensar «A... F... L... Q». Si después de una pausa hay tres golpes, piensa «Q... R... S» para llegar a la letra S.
+
+
+== Historia ==
+Los orígenes de este código se remontan al cuadrado de Polibio en la antigua Grecia. Igual que el knock code, se dice que una versión de la escritura cirílica fue usada por prisioneros nihilistas de los zares rusos.[3]​  Esta clase de código fue destacado en el trabajo de Arthur Koestler de 1941, El Cero y el Infinito.[4]​ La novela de 1952 de Kurt Vonnegut, La Pianola, también incluye una conversación entre prisioneros usando el tap code. Este código usado en la novela es más primitivo y no hace uso del cuadrado de Polibio (por ejemplo, el «p» consiste en seis golpecitos seguidos)
+Prisioneros estadounidenses durante la guerra de Vietnam son mayormente conocidos por haber usado el tap code. Fue introducido en enero de 1965 por cuatro PDG cautivos en la prisión Hỏa-Lò: el capitán Carlyle «Smitty» Harris, los tenientes Phillip Butler y Robert Peel y el teniente comandante  Robert Shumaker.[1]​[5]​ Harris oyó hablar del tap code siendo usado por prisioneros en la segunda guerra mundial[6]​ y recordó a un instructor de la Fuerza Aérea de los Estados Unidos que también habló de ello.[1]​[7]​
+En Vietnam, el tap code se volvió una forma de comunicación muy exitosa[8]​ para los prisioneros aislados.[6]​[9]​ Los PDG lo usarían para comunicarse entre ellos en las celdas de forma que los guardias no pudieran descubrirlo.[10]​ Lo usaron para comunicar todo sobre lo que preguntaban en los interrogatorios (para que pudieran ser consistentes dando una historia falsa), para saber quién estaba herido y necesitaban donar sus raciones de comida. Era fácil de enseñar y los prisioneros recién llegados los empleaban con fluidez a los pocos días.[11]​[12]​ Incluso fue usado cuando los prisioneros se sentaban juntos pero no tenían permiso de hablar, golpeándose en los muslos.[12]​Para sobrellevar el aislamiento con el tap code, les fue dicho a los prisioneros que construyesen una cadena de mando y mantengan la moral.[6]​[13]​
+
+
+== Referencias ==
+
+
+== Enlaces externos ==
+Online Tap Code Encoder/Decoder
+Russian Prison Tap Codes
+L' Alfabeto Quadrato(Codice a Colpi) - An Degrida Artist An Degrida's Tap Code artistic illustration.

@@ -1,0 +1,205 @@
+revision: 6429426
+title: Eesti ID-kaart
+url: https://et.wikipedia.org/wiki/Eesti_ID-kaart
+
+
+---
+
+Eesti ID-kaart on esmane isikut tõendav dokument ehk isikutunnistus Eesti Vabariigis.ID-kaart on kiipkaart, mida antakse välja alates 2002. aastast. ID-kaardiga teostatavad olulisemad elektroonilised toimingud on isikutuvastus ja digitaalallkirjastamine. Igal Eestis püsivalt viibival/elaval vähemalt 15-aastasel Eesti kodanikul peab olema ID-kaart. Eesti kodanik saab ID-kaardiga reisida Euroopa Liidu ja Euroopa Majanduspiirkonna riikides ning Šveitsis.Hädaolukorra seaduse kohaselt on ID-kaardiga autentimine ja digiallkirjastamine elutähtis teenus.ID-kaardi peamine info- ja abikanal on veebileht https://id.ee/. Sellelt leiab lahendused ID-tarkvara ja ID-kaardi elektroonilisel kasutamisel tekkivatele muredele. Seni pakkus ID-kaardi abiliinil kasutajatuge AS SK ID Solutions. Alates 1. juulist 2018 osutab teenust AS Tieto Estonia.
+
+
+== Taotlemine ==
+
+Eesti kodanike korduvate ID-kaartide taotlemiseks võttis Politsei- ja Piirivalveamet kasutusele uue e-teenuse aadressil https://etaotlus.politsei.ee/. ID-kaarti saab taotleda ka alaealisele lapsele, kellele ei ole varem dokumenti antud. Teenus avati 2017. aasta 15. juunil. E-teenusesse saab sisse logida lisaks ID-kaardile ka mobiil-ID-ga või pangalinkide kaudu. See tähendab seda, et dokumenti saab taotleda ka juhul, kui varem välja antud ID-kaart on juba kehtivuse kaotanud.
+
+
+== Andmeväljad ==
+Kaardile kantud kirjeldused on eesti- ja ingliskeelsed.
+Esiküljel on andmeväljad:
+
+perekonnanimi;
+eesnimed;
+sugu lühendina nii eesti kui ka inglise keeles;
+kodakondsus kolmetähelise lühendina;
+sünniaeg;
+isikukood;
+dokumendi number;
+kuupäev, milleni dokument kehtib;
+omaniku allkiri (allkirjavõimetu puhul kolm rukkilille märki);
+omaniku foto.Tagaküljele on kantud:
+
+Sünnikoht riigi täpsusega (enne 1. augustit 2005 väljastatud kaartidel asula täpsusega);
+Kuupäev, millal isikutunnistus on välja antud;
+Masinloetav kood Eesti kodaniku puhul või elamis- ja/või tööloa andmed välismaalase puhul.
+
+
+== Turvaelemendid ==
+Eesti ID-kaardil on järgmised turvaelemendid:
+
+värvi muutev lõvi kujutis esiküljel,
+reljeefne Eesti kaardi kujutis esiküljel,
+hologramm tagaküljel.ID-kaardile on mikrokirjas kantud katkend Paul-Eerik Rummo luuletusest "Me hoiame nõnda ühte":
+
+
+== Elektrooniline isikutuvastus ==
+ Pikemalt artiklis Elektrooniline identiteetID-kaardi elektroonilise isikutuvastuse funktsioon võimaldab kõigil soovijail oma kliente või teenuste kasutajaid interneti vahendusel turvaliselt tuvastada. See on virtuaalses maailmas sarnane toiming, nagu näiteks tavapoes dokumendi näitamine. ID-kaardiga autentimine annab teenusepakkujale veendumuse, et inimene, kes ostab ja/või tarbib tema pakutavat teenust, on see inimene, kes ta väidab end olevat. Elektroonilist isikutuvastust on võimalik kasutada isikule suunatud veebiteenustes nii avalikus kui erasektoris, aga ka muudes valdkondades, nt mobiilseadmetes.
+Võrreldes varem laialt levinud panga paroolikaartidega või näiteks olukordadega, kus inimene kasutab kümne firma veebiteenuseid, omades iga teenuse kasutamiseks erinevat kasutajanime ja parooli, on ID-kaart tunduvalt lihtsam ja turvalisem. ID-kaardi puhul kehtib kõiki teenuseid kasutades sama kaart ja sama PIN-kood. Enam ei ole vaja meeles pidada erinevaid kasutajanimesid ja paroole, samuti võib loobuda pankade koodikaartide kasutamisest. Lisaks asjaolule, et ID-kaart lihtsustab kaardi kasutaja elu, vähendab see ka teenusepakkuja riske. Kasutajanime ja parooli saamiseks palutakse kasutajal küll enda isikuandmed sisestada, kuid aja- ja rahakulud, mis oleksid vajalikud selleks, et lõplikult kontrollida, kas niisugusel moel registreerunud kasutaja on tõesti see, kes ta väidab end olevat, võivad osutuda ebamõistlikult suurteks. 
+ID-kaardi kasutamise nõudmisel võib teenusepakkuja olla kindel, et kaardilt tulevad andmed on õiged ning et kaart on õige isiku käes. Oma isiku Internetis tuvastamiseks peab inimene panema oma ID-kaardi kaardilugerisse ning teadma ja sisestama oma ID-kaardi PIN-koodi. ID-kaardi põhist autentimist saavad kasutada kõik asutused ja ettevõtted, kes soovivad oma teenuse kasutajaid identifitseerida. ID-kaardi kaudu isiku tuvastamise korral puudub firmadel vajadus korraldada iga kliendiga uue lepingu sõlmimiseks silmast silma kohtumine, enamikku teenuseid saab pakkuda veebist otse ja turvaliselt kõigile ID-kaardi omanikele, ilma täiendavate registreerimiste või kohtumisteta. Lisaks elektroonilisele isikutuvastusvõimalusele on ID-kaardi väga oluliseks funktsiooniks ka digitaalallkirja andmise võimalus. Alati ei pruugi ühe teenuse raames kasutusel olla kasutusel mõlemad funktsionaalsused.
+
+
+== Digitaalallkiri ==
+ID-kaardi abil antav digiallkiri on seaduse silmis võrdne omakäelise allkirjaga. Kõik Eesti avalikud asutused on kohustatud võtma vastu digiallkirjastatud dokumente.
+
+
+=== ID-kaart ja allkirjastamisvahend – isiklik võti ===
+ID-kaardil on salajane allkirjastamisvõti, mida saab kasutada PIN-koodi abil. Selle võtmega märgistatakse allkirjastatud dokument ainulaadsel ja võltsimatul viisil, mis võimaldab hiljem tõestada, et just sina selle allkirjastasid.
+
+
+=== Sertifikaadid ===
+ID-kaardi väljastamisel väljastatakse igale kaardiomanikule kaks sertifikaati, millest üks on isikutuvastuseks (eID), teine digiallkirjastamiseks. Sertifikaati võib võrrelda omaniku allkirjanäidisega – see on avalik ja selle abil saavad kõik kontrollida kaardiga antud allkirja ehtsust. Sertifikaadis on kirjas ka omaniku isikuandmed, sealhulgas nimi ja isikukood.
+Sertifikaadi abil saab kontrollida digitaalallkirju – kui sertifikaat ja allkiri omavahel matemaatiliselt klapivad, võib olla kindel, et allkirja on andnud see isik, kes on sertifikaadis kirjas.
+ID-kaardi sertifikaatide kauguuendamine algas 17. märtsil 2016. Juhendeid sertifikaatide uuendamisest saab lugeda veebilehtedelt https://www.politsei.ee/et/teenused/isikut-toendavad-dokumendid/sertifikaatide-uuendamine/ ja https://blog.ria.ee/tag/kauguuendamine/.2017. aasta juunis avalikustati ID-kaardi tarkvara uus väljalase (reliis).
+
+Lühikokkuvõte olulisimast4K-ekraanidel paistavad haldusvahendi ja Digidoc3 aknad nüüd normaalsuuruses.
+Kaasa tuleb TeRa rakendus – riist vanade SHA-1-põhiste DDOC-vormingus digiallkirjade ületembeldamiseks.
+Olulised täpsustused eritüübiliste allkirjade kehtivuse ja kasutuspiirangute kuvamisel. Allkirja kõlblikkuse tasemeid osutatakse nüüd värviga.
+Läti vormingus allkirjadega saab Digidoc3 hakkama oluliselt paremini kui enne.
+
+
+=== Kehtivuskinnitused ===
+Vastavalt Digitaalallkirja seadusele on kehtetu või peatatud sertifikaadiga antud allkirjad kehtetud.
+Pärast allkirja andmist tuleb kontrollida, kas allkirja andja sertifikaat kehtib ehk kas tal on õigus sel hetkel digitaalallkirja anda. Selleks võtab allkirja andmiseks kasutatud programm automaatselt ühendust Sertifitseerimiskeskuse serveriga ning kontrollib, kas sertifikaadi kehtivust, mille kohta Sertifitseerimiskeskuse server väljastab talle spetsiaalse tõendi, mis lisatakse allkirjale.
+
+Digiallkirjastamiseks on vaja ID-kaarti, Interneti-ühendusega arvutit, kaardilugerit ja digiallkirjastamiseks mõeldud ID-kaardi PIN-koodi.
+Digiallkirju saab anda sertifikaadi kehtimise ajal.
+Digiallkirja kontrollimisel vaata alati, kas allkirjaga on seotud kehtivuskinnitus.Digitaalallkirju on lihtne ja mugav anda ja kontrollida Sertifitseerimiskeskuse DigiDoc-süsteemi abil, mida saab kasutada tasuta.
+Digitaalallkirja võib anda mitmel moel ja senistele võimalustele võib tulla lisa, sest digitaalallkirja andmise süsteemid pole kuidagi piiratud. Digitaalallkirja toe saab lisada praktiliselt kõigisse rakendustesse ja programmidesse, kus seda vaja on.
+ID.ee koolitusvideodEesti esimene digiallkiri anti 7. oktoobril 2002 kell 17:10:19. Esimeseks allkirjastatud dokumendiks oli Tartu ja Tallinna linna koostööleping infotehnoloogia vallas ning selle allkirjastasid linnapead Andrus Ansip ja Edgar Savisaar.
+Saja miljones (100 000 000) digiallkiri anti 3. detsembril 2012 kell 17:27:54 Eesti aja järgi.
+
+
+== Krüpteerimine ==
+
+
+=== Mis on krüpteerimine? ===
+ Pikemalt artiklis KrüptograafiaFaili krüpteerimise eesmärgiks on muuta selles asuvad andmed võõrastele loetamatuteks.
+Krüpteerimiseks on võimalik kasutada kas sümmeetrilist või asümmeetrilist krüptoalgoritmi.
+Krüpteerimisalgoritm on matemaatiline valem, mis šifreerib andmefaili. Seda saab dešifreerida ainult krüptovõtmega. Sümmeetrilisel krüpteerimisel krüpteeritakse ja dekrüpteeritakse fail ühe ja sama salajase võtmega. Asümmeetrilisel krüpteerimisel kasutatakse aga krüpteerimiseks ühte ja dekrüpteerimiseks teist võtit, millest üks on avalik ja teine salajane ning kasutaja ainuomanduses.
+
+
+=== Kuidas toimub krüpteerimine DigiDoc'is? ===
+DigiDocis koosneb faili krüpteerimine kahest etapist. Kõigepealt krüpteeritakse fail sümmeetrilise algoritmiga, mille jaoks genereeritakse juhuslik võti (edaspidi transpordivõti). Seejärel krüpteeritakse transpordi võti adressaadi avaliku võtmega, kasutades asümmeetrilist algoritmi. Kui adressaate on mitu, siis krüpteeritakse transpordivõti iga adressaadi avaliku võtmega eraldi.
+ID-kaardiga krüpteerimine on eelkõige mõeldud failide turvaliseks transpordiks, mitte nende pikaajaliseks säilitamiseks. Põhjuseks asjaolu, et ID-kaardiga dekrüpteerimiseks on vajalik autentimissertifikaadis olevale avalikule võtmele vastav salajane võti, mis asub AINULT kasutaja ID-kaardil.
+Juhul, kui kasutaja kaotab oma ID-kaardi, pole failide dekrüpteerimine enam võimalik. Samamoodi ei ole võimalik varasema sertifikaadiga krüpteeritud failide dekrüpteerimine pärast seda, kui kasutaja on uuendanud oma ID-kaardi sertifikaate, sest uute sertifikaatide väljastamisel genereeritakse ka uus salajane ja avalik võti.
+Failide krüpteerimisel tuleb arvestada, et dekrüpteerida saavad neid ainult adressaatide hulka lisatud sertifikaatide kasutajad. Seetõttu ei tohi unustada ka ennast adressaatide hulka lisada, kui hiljem võib tekkida vajadus faili avada.
+Adressaatide leidmiseks on DigiDoc klientprogrammis neli võimalust: leida need arvuti sertifikaadihoidlast, pärida LDAP kataloogist, laadida failist või ID-kaardilt.
+Kõige lihtsam moodus ongi krüpteerimiseks kasutada juba sertifikaadi hoidlas olevat sertifikaati. Kui sinna ei ole veel jõutud vajalikku sertifikaati talletada, siis võib seda isikukoodi järgi otsida LDAP kataloogist. 
+Kolmandaks võimaluseks on laadida sertifikaat ID-kaardilt, mis eeldab kaardilugeriga ühendatud arvutit ja vastavat ID-kaarti lugeris.
+Neljandaks võimaluseks on laadida sertifikaat failist, kui näiteks sertifikaat on e-postiga saadetud.
+Kord juba krüpteerimiseks kasutatud sertifikaadid talletab DigiDoc klient "Other People" sertifikaadi hoidlasse, kust neid saab hiljem lihtsalt leida.
+
+
+== E-hääletamine ==
+ Pikemalt artiklis Elektrooniline hääletamine EestisInterneti teel hääletada saab igast arvutist, millel on:
+
+Kiipkaardiluger ja selle tarkvara, või Mobiil-ID vastavat teenust võimaldava SIM-kaardiga telefonis
+Kehtivate sertifikaatidega ID-kaart ja selle PIN-koodid, või aktiveeritud Mobiil-ID. (Smart-ID-d hääletamiseks kasutada ei saa.)
+Internetiühendus,
+Üks toetatud operatsioonisüsteemidest:
+Windows 7, Windows 8.1 või Windows 10;
+Mac OS X 10.11 El Capitan, 10.13 High Sierra, või 10.14 Mojave;
+Linux. Ametlikult on toetatud Ubuntu 16.04 Xenial Xerus ja Ubuntu 18.10 Cosmic Cuttlefish. Valijarakendus võib töötada ka Debian 9.x Stretch ja uuemate põhjal toodetud distributsioonides, nagu BunsenLabs.Veenduge, et teie arvuti on puhas viirustest! 
+Teil on korduvalt võimalik elektrooniliselt ümber hääletada, arvesse läheb vaid viimasena antud hääl.
+Elektrooniliselt antud hääle võite tühistada, hääletades eelhääletamise ajal valimisjaoskonnas.
+Enne hääletama asumist veenduge, et ID-kaart oleks kiipkaardilugeris ning PIN1- ja PIN2-kood käepärast. Hääletamise käigus läbitakse järgmised etapid:
+
+Laasige valimiste kodulehelt https://valimised.ee alla oma opsüsteemile sobiv valijarakendus.
+Pärast valijarakenduse käivitamist küsitakse Teilt isikutuvastuseks PIN1-koodi.
+Kui olete hääleõiguslik, kuvatakse teile veebileht elukohajärgsete kandidaatide nimedega.
+Teete valiku.
+Valiku kinnitamiseks ehk selle digitaalseks allkirjastamiseks küsitakse teilt PIN2-koodi.
+Eduka hääletamise järel kuvatakse sellekohane teade ja QR-kood, mille abil saab oma häält kontrollida mobiilirakendusega EH kontrollrakendus. Rakenduses tuleb seadme kaameraga skaneerida QR-kood, mille krüpteeritud informatsioon saadetakse valimiste serverisse. Eduka kontrolli puhul näidatakse hääletaja andmeid kui ka seda kelle poolt valija hääletas. Hiljem lahutatakse hääletajate isikuandmed saadud häältest, et tagada valijate ja nende häälte anonüümsus.
+Vajalik on, et nutiseadmel oleks autofookusega 5 Mpix või suurema eraldusvõimega põhikaamera, kuna QR-kood on detailne ja andmerohke.
+EH kontrollrakendus toetab Android 4.1 Jelly Bean ja uuemaid, ning iOS 8.0 ja uuemaid versioone.
+
+
+== @eesti.ee meiliaadress ==
+ Pikemalt artiklis eesti.ee#E-posti aadressIgal ID-kaardi kasutajal olemas oma personaalne Eesti Vabariigi poolt antud meiliaadress. Aadress toimib ka kujul isikukood@eesti.ee, nt 47302200234@eesti.ee.
+See aadress on mõeldud riigi ja isiku vaheliseks ametlikuks suhtluskanaliks, kuhu riik võib saata ametlikke teateid ja isikut puudutavat personaalset infot. Nimelisi aadresse võivad suhtluseks kasutada kõik soovijad. E-posti aadressile kujul isikukood@eesti.ee ja registrikood@eesti.ee on rakendatud saatjate piirang, mida teenuse kasutajal ei ole võimalik välja lülitada.
+@eesti.ee aadressid on avalikult nähtavad SK sertifikaatide kataloogis isikutuvastuse sertifikaatide sees.
+@eesti.ee aadressiga on seotud ümbersuunav postiserver, mis suunab isiku @eesti.ee aadressil tulnud kirjad ümber mõnele tegelikule isiku meiliaadressile, näiteks oma hot.ee, mail.ee vms aadressile või hoopis tööga seotud meiliaadressile. Suunata võib mitmele meiliaadressile korraga.
+Oma @eesti.ee aadressi seadistamiseks pöördu aadressile https://eesti.ee/.
+
+
+== ID-pilet ==
+Tallinna ja Tartu linn käivitasid mõlemad 2003. aastal arendusprojektid ühistranspordi elektroonilise tasukogumissüsteemi juurutamiseks. Tartus oli juba varem käigus pilootprojekt nn IDEE-kaardi baasil. Füüsilist piletit hakkab neis linnades asendama ID-kaart, mille abil reisija tõendab oma sõiduõigust ja vastavate volitustega kontrolör kontrollib piletite baasist, kas isikul on tõesti vastav pilet olemas.
+2003. aastal Tallinna korraldatud elektroonilise tasukogumissüsteemi teostamise riigihanke võitsid ühispakkumisega AS Sertifitseerimiskeskus, Eesti Ühispank ja EMT, kes töötasid välja ID-pileti süsteemi. 
+Reisija saab ühistranspordi perioodipiletit hakata ostma mitmetest eri kanalitest, valides endale sobivaima.
+
+Internetist netipanga vahendusel – ühekordse ostu või otsekorralduse alusel
+mobiiltelefoni vahendusel
+lauatelefoni vahendusel
+sularaha eest vastavates maksekohtades (müügikohtade loetelu)Internetis on avatud teenusekeskkond www.pilet.ee, kust saab piletit osta, vaadata oma pileti hetkeseisu ja sooritada muid vajalikke toiminguid, sh on saadaval täiendav informatsioon süsteemi toimimise ja kasutamise kohta.
+
+
+== Turvarisk ==
+
+2017. aasta septembri alguses teavitati Eesti avalikkust, et Gemalto toodetud uuetüübiliste ID-kaartide kiipides olevast tarkvarast avastati turvaviga, mis sel ajal hinnati teoreetiliseks. See puudutab ID-kaarte, mis on väljastatud ajavahemikus 16. oktoober 2014 — 26. oktoober 2017.Seda, kas ID-kaardil olev tarkvara vajab uuendamist, oli võimalik kontrollida aadressil https://www.politsei.ee/id-kaardi-kontroll/ . ID-kaardi haldustööriista uusim versioon näitab samuti ära, kas kaardi sertifikaadid vajavad uuendamist või mitte.
+2017. aasta oktoobri lõpus lasti välja ID-kaartide turvaparandus sertifikaadiuuenduse kujul, mille saab kätte ID-kaardi uuendatud haldustarkvaraga, mis on saadaval aadressil https://www.id.ee
+3. novembril andis CERT Eesti välja hoiatuse võimalike õngitsuskirjade tekkimise kohta, kui kasutajaile võib saabuda elektronkiri või sõnum, mis pakub abi ID-kaardi probleemide lahendamisel ühes lingiga, mis võib viia õngitsuslehele, mille kaudu võidakse levitada pahavara või püüda toime panna identiteedivargust. Sellistele linkidele klikkimine/puutumine ei ole arvuti või nutiseadme turvalisuse huvides soovitatav.Turvauuendust vajavate ID-kaartide tarkvara on võimalik uuendada ka Politsei- ja Piirivalveameti (PPA) klienditeenindustes, mis olid avatud ka 3.–5. novembri nädalavahetusel.Sertifikaate uuendama oodatakse eelkõige neid inimesi, kes aktiivselt kasutavad ID-kaardi PIN1 ja PIN2 koode.ID-kaartide sertifikaatide korraline uuendamine on võimalik 31. märtsini 2018, millest järgmisel päeval kõikide turvariskist puudutatud kaartide sertifikaadid tühistatakse. Elektrooniliseks kasutamiseks ehk PIN-koodidega isikutuvastuseks ja digiallkirjastamiseks tuleb seejärel taotleda uus ID-kaart.Peatatud või tühistatud sertifikaatidega ID-kaarti saab mitte-elektrooniliseks isikutuvastuseks kasutada edaspidigi, ning seda kuni dokumendi kehtivusaja lõpuni. Selliseid ID-kaarte on võimalik edasi kasutada digiretsepti väljaostmiseks apteegis ning ka poodide kliendikaartidena, sest poodide süsteemid ID-kaardi PIN-koodidel põhinevat isikutuvastust ei kasuta.
+
+
+=== Sertifikaatide peatamine ja uuendamine 2017. aasta novembrist alates ===
+2. novembril 2017 teatas Jüri Ratase esimene valitsus, et turvariskiga ID-kaartide sertifikaadid suletakse 3. novembril vastu 4. novembrit kell 00.00. Samuti peatati sertifikaatide kauguuendamine tavakasutajatele (v.a erandid) ajavahemikuks 3.–5. november. Selles ajavahemikus oli kaartide kauguuendamise õigus antud 35 000 kõrgkasutajale, kelle hulka kuuluvad riigi õigusvaldkonna töötajad, perekonnaseisutoiminguid teostavad ametnikud ja arstid, kuna nemad kasutavad ID-kaarti kõige aktiivsemalt. 3.–5. novembril sai ID-kaartide sertifikaate uuendada PPA klienditeenindustes, eelisjärjekorras olid eelnimetatud aktiivsed kasutajad. Kauguuendamise võimalus taastati kõigile kasutajatele alates 6. novembrist.Turvariskiga ID-kaarte saab uuendada nii oma arvutist kui ka politsei- ja piirivalveameti teeninduses kuni 31. märtsini 2018. Turvakaalutlustel tühistatakse uuendamata sertifikaadid 1. aprillil 2018. Tühistatud sertifikaatidega dokumenti uuendada ei saa ning elektrooniliseks kasutamiseks tuleb taotleda uus kaart.
+
+
+== Kehtivus ==
+Enne 2007. aastat välja antud ID-kaartide kehtivusaeg isikut tõendava dokumendina on kümme aastat ning sertifikaadid kehtivad kolm aastat. Alates 2007. aastast kehtivad ID-kaardid dokumentidena viis aastat ning nende sertifikaadid samuti viis aastat.Seisuga 20. november 2007 oli Eestis välja antud 972 605 ID-kaarti. Enne 2005. aastat väljastati 549 175 ID-kaarti, millest on uuendatud sertifikaadid kõigest 54 200 kaardil. Seisuga 26. mai 2010 oli kasutusel 1 105 302 ID-kaarti, 1. veebruaril 2011 1 140 298 ID-kaarti ja 1. veebruaril 2012 1 163 918 kaarti.ID-kaardi sertifikaatide kehtivust on võimalik igal ajal peatada, helistades abiliini lühinumbril 1777. 
+Kaarte trükib Šveitsi firma TRÜB Baltic AS. Alates aastast 2002 väljastab Sertifitseerimiskeskus AS ühes TRÜB Baltic partnerina sertifikaate Politsei- ja Piirivalveameti poolt väljastatavatele ID-kaartidele.Politsei- ja Piirivalveametil kehtis ID-kaardi tootmise leping Gemalto AG-ga maksimaalselt 2018. aasta lõpuni.Eesti ID-kaarte, digitaalseid isikutunnistusi, elamisloakaarte ja e-residendi kaarte hakkab peagi tootma Prantsuse suurfirma Safran Morpho, mis võitis Politsei- ja Piirivalveameti korraldatud riigihanke.
+
+
+== Vaata ka ==
+Ajatempel
+Digi-ID
+Dokumendivahetuskeskus
+E-residentsus
+Krüptovõtme loomine ehk genereerimine
+Mobiil-ID
+Täiustatud krüpteerimisstandard
+Veebilehitseja
+Pistikprogramm
+Wikiversity ID-kaart
+
+
+== Viited ==
+
+
+== Välislingid ==
+ID-kaart on esmane isikuttõendav dokument
+ID-kaardi saamislugu
+ID-kaardi näidised
+ID-kaardid trükivalmis, Eesti Päevaleht, 24. oktoober 2001
+ID-kaarte trükkiva firma TRÜB Baltic koduleht
+Digitaalne allkiri, Riigiportaal eesti.ee
+Uus kujundus tõstab ID-kaardi hinda, Postimees, 4. november 2010
+Eesti ID-kaardi draiverid ja programmid
+RIA blogi, 27. jaanuar 2017
+ID-kaardi tarkvara paigaldamine (eellugu)
+ID-kaardi tarkvara paigaldamisest,
+ID-tarkvara paigaldamine Windowsile
+ID-tarkvara paigaldamine macOSile
+ID-kaardi kiibis avastati teoreetiline turvarisk (pressikonverents), Postimees, 5. september 2017
+Mis ID-kaardiga ilmselt tegelikult juhtus ja kui ohtlik see Eestile on?, Geenius, 5. september 2017
+RIA rahustab: tegemist on vaid ID-kaardi nõrkusega, mida pole võimalik reaalses elus ära kasutada, Delfi, 6. september 2017
+ID-kaardi uuendamisest, RIA blogi, 26. oktoober 2017
+Cybernetica analüüs ID-kaardi kriisist: peame ka edaspidi olema valmis massiliseks kiirkorras uuendamiseks, Geenius, 14. detsember 2017
+Juhtumianalüüs: Eesti ID-kaardi turvanõrkuse kõrvaldamine — Cybernetica AS, cyber.ee, 13. dets. 2017
+Kohus ei rahuldanud Gemalto kaebust politsei ID-kaardi uuele hankele, ERR, 28. detsember 2017
+ID-kaardi kriis maksis ametitele miljoneid, ERR, 1. aprill 2018
+Anto Veldre: ID-kaardi ökosüsteemi osadeks lahti, Geenius, 6. aprill 2018
+Tagasivaade: hääletus otsustas, et ID-kaardi turvariski avalikustab peaminister, 14. aprill 2018
+TTÜ raport kritiseerib ID-kaardi kriisi valguses Eesti hädaolukordade plaane, ERR, 18. aprill 2018
+ID-kaart murti lahti. RIA tõestas, et kära ID-kaardi turvanõrkuse pärast polnud asjata, Eesti Päevaleht, 19. aprill 2018 (tasuline)
+Aasta lõpus tuleb välja kontaktivaba liidesega ID-kaart, Postimees, 29. juuni 2018
+PPA hakkab uuest aastast andma välja värske kujundusega ID-kaart, RIA, 27. september 2018
+Mari-Liis Madisson, Andreas Ventsel. Semiotics of threats: Discourse on the vulnerability of the Estonian identity card. Sign Systems Studies 47(1/2), 2019, 126–151.

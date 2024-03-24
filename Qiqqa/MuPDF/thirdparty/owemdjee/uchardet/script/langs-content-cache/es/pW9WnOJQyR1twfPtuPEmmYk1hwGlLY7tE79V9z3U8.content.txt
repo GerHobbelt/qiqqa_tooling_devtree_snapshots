@@ -1,0 +1,106 @@
+revision: 151897413
+title: "C\xF3digo morse"
+url: https://es.wikipedia.org/wiki/C%C3%B3digo_morse
+
+
+---
+
+El código morse, también conocido como alfabeto morse o clave morse es un sistema de representación de letras y números mediante señales emitidas de forma intermitente.
+
+
+== Desarrollo e historia ==
+
+
+=== Telégrafos y códigos pre-Morse ===
+
+A principios del siglo XIX, investigadores europeos avanzaron con los sistemas de señalización eléctrica, utilizando una variedad de técnicas que incluyen electricidad estática y electricidad de pila voltaica que producen cambios electroquímicos y electromagnéticos. Estos diseños experimentales fueron precursores de aplicaciones telegráficas prácticas.[1]​
+
+Tras el descubrimiento de electromagnetismo por Hans Christian Ørsted en 1820 y la invención del Electroimán por William Sturgeon en 1824, hubo desarrollos en telegrafía electromagnética en Europa y América. Pulsos de corriente eléctrica eran enviados a lo largo de cables para controlar un electroimán en el instrumento receptor. Muchos de los primeros sistemas de telégrafo utilizaban un sistema de aguja única que daba un instrumento muy simple y robusto. Sin embargo, era lento, ya que el operador receptor tenía que alternar entre mirar la aguja y escribir el mensaje. En el código Morse, una desviación de la aguja a la izquierda correspondía a un «dit» y una deflexión a la derecha a un «dah».[2]​
+Al hacer que los dos clics sonasen diferentes con un tope de marfil y otro de metal, el dispositivo de una sola aguja se convirtió en un instrumento audible, lo que llevó a su vez al sistema de telégrafo sonoro de doble placa.[3]​
+William Fothergill Cooke y Charles Wheatstone en el Reino Unido desarrollaron un telégrafo eléctrico que utilizaba electroimanes en sus receptores. Obtuvieron una patente inglesa en junio de 1837 y la demostraron en el ferrocarril de Londres y Birmingham, convirtiéndose en el primer telégrafo comercial. Carl Friedrich Gauss y Wilhelm Eduard Weber (1833), así como Carl August von Steinheil (1837) utilizaron códigos con longitudes de palabra variables para sus sistemas telegráficos.[4]​ En 1841, Cooke y Wheatstone construyeron un telégrafo que imprimía las letras de una rueda de tipografías golpeadas por un martillo.[5]​ : 79 
+
+
+=== Samuel Morse y Alfred Vail ===
+
+El artista estadounidense Samuel F. B. Morse, el físico estadounidense  Joseph Henry, y el ingeniero mecánico Alfred Vail desarrollaron un sistema telégrafo eléctrico. Necesitaba un método para transmitir el lenguaje natural utilizando solo pulsos eléctricos y el silencio entre ellos. Alrededor de 1837, Morse, por lo tanto, desarrolló un precursor temprano del código Morse Internacional moderno.[5]​: 79 El sistema Morse para telegrafía, que fue utilizado por primera vez en 1844, fue diseñado para hacer huecos en una cinta de papel cuando se recibieron corrientes eléctricas. El receptor de telégrafos original de Morse usaba un reloj mecánico para mover una cinta de papel. Cuando se recibía una corriente eléctrica, un electroimán empujaba una armadura que empujaba un lápiz sobre la cinta de papel en movimiento, haciendo una sangría en la cinta. Cuando la corriente se interrumpía, un resorte retiraba el lápiz y esa parte de la cinta móvil permanecía sin marcar. El código Morse fue desarrollado para que los operadores pudieran traducir las sangrías marcadas en la cinta de papel en mensajes de texto.
+En su primer diseño para un código, Morse había planeado transmitir solo números, y usar un libro de códigos para buscar cada palabra según el número que había sido enviado. Sin embargo, el código pronto fue ampliado por Alfred Vail en 1840 para incluir letras y caracteres especiales, por lo que podría ser utilizado de manera más general. Vail estimó la frecuencia de uso de letras en el idioma inglés contando lo que encontró en los casos tipo de un periódico local en Morristown, Nueva Jersey.[5]​: 84  Las marcas más cortas se llamaban «puntos» y las más largas «dashes», y a las letras más utilizadas les fueron asignadas las secuencias más cortas de puntos y guiones. Este código, usado por primera vez en 1844, llegó a ser conocido como «Código de línea fija Morse», «Código Morse Americano», o «Railroad Morse», hasta el final de la telegrafía ferroviaria en los Estados Unidos en la década de 1970.
+
+
+=== Cambio de código gráfico a sonoro ===
+En el sistema de telégrafo Morse original, la armadura del receptor hacía un ruido de clics a medida que se movía hacia adentro y hacia fuera de la posición para marcar la cinta de papel. Los operadores de telégrafos pronto se dieron cuenta de que podían traducir los clics directamente en puntos y guiones, y escribirlos a mano, haciendo que la cinta de papel fuera innecesaria. Cuando el código Morse fue adaptado a la comunicación radioeléctrica, los puntos y guiones se enviaban como pulsos cortos y largos. Más tarde se descubrió que las personas se vuelven más competentes en la recepción del código Morse cuando se enseña como un idioma que se escucha, en lugar de uno leído de una página.[6]​
+Con el advenimiento de los tonos producidos por los receptores de radiotelegrafía, los operadores comenzaron a vocalizar un punto como «dit», y un guion como «dah», para reflejar los sonidos del código Morse que escuchaban. Para ajustarse a la velocidad de envío normal, los «dits» que no son el último elemento de un código se hicieron expresados como «di». Por ejemplo, la letra ‘L’ se expresa como «di dah di dit».[7]​  [8]​ Código Morse fue a veces conocido como «iddy-umpty».[9]​
+
+
+=== Refinamiento de Gerke del código de Morse ===
+El código Morse tal como se especifica en la norma internacional actual, la "International Morse Code Recommendation", ITU-R M.1677-1,[10]​ fue derivado de una propuesta muy mejorada por Friedrich Clemens Gerke en 1848 que se conoció como el «alfabeto de Hamburgo».
+Gerke cambió muchos de los puntos de código, en el proceso eliminando los diferentes guiones de longitud y diferentes espacios interelementos de Código  Morse americano, dejando solo dos elementos de codificación, el punto y el guion. Se introdujeron códigos para el umlaut de la Alemán  y «‘SCH»’. El código de Gerke fue adoptado en Alemania y Austria en 1851.[11]​
+Esto finalmente llevó al código Morse Internacional en 1865. El código Morse Internacional adoptó la mayoría de los puntos de código de Gerke. Los códigos de ‘O’ y ‘P’ fueron tomados de un sistema de código desarrollado por Steinheil. Se añadió un nuevo punto de código para la ‘J’ ya que Gerke no distinguía entre ‘I’ y ‘J’. También se hicieron cambios en las 'X', 'Y', y 'Z’. Esto dejó solo cuatro puntos de código idénticos al código Morse original, a saber, 'E', 'H', 'K' y 'N', y los dos últimos tenían sus "dahs" extendidos a toda la longitud. [4]​
+
+
+=== Radiotelegrafía y aviación ===
+En la década de 1890, el código Morse comenzó a usarse ampliamente para la comunicación temprana por radio antes de que fuera posible transmitir voz. A finales del siglo XIX y principios del 20, la mayoría de las comunicaciones internacionales de alta velocidad utilizaban código Morse en líneas de telégrafo, cables submarinos y circuitos de radio.
+Aunque los transmisores anteriores eran voluminosos y el sistema de transmisión por chispa era peligroso y difícil de usar, había habido algunos intentos tempranos: En 1910, la Marina de los EE. UU. experimentó con enviar Morse desde un avión.[12]​ Sin embargo, la primera radiotelegrafía de aviación regular estaba en la aeronave, que tenía espacio para acomodar el equipo de radio grande y pesado entonces en uso. El mismo año, 1910, una radio en el dirigible «America» fue fundamental en la coordinación del rescate de su tripulación.[13]​
+Durante la Primera Guerra Mundial, globos Zepelín equipados con radio fueron utilizados para el bombardeo y la vigilancia naval,[14]​  y los buscadores de dirección de radio en tierra fueron utilizados para la navegación aérea.[14]​ Aeronaves aliadas y aviones militares también hicieron algún uso de la radiotelegrafía.
+Sin embargo, hubo poco radio aeronáutico en uso general durante la Primera Guerra Mundial, y en la década de 1920, no había ningún sistema de radio utilizado para vuelos tan importantes como el de Charles Lindbergh desde Nueva York a París en 1927. Una vez él y su Spirit of St. Louis estaban en vuelo, Lindbergh estaba verdaderamente incomunicado y solo. El código Morse en la aviación comenzó su uso regular a mediados de la década de 1920. En 1928, cuando el primer vuelo de avión fue realizado por la Southern Cross de California a Australia, uno de sus cuatro tripulantes era un operador de radio que se comunicaba con las estaciones en tierra a través de radio telégrafo.
+A partir de la década de 1930, tanto los pilotos civiles como los militares debían poder utilizar el código Morse, tanto para su uso con sistemas de comunicaciones tempranas como para la identificación de balizas de navegación que transmitían identificadores continuos de dos o tres letras en el código Morse. Las cartas aeronáuticas mostraban el identificador de cada ayuda de navegación junto a su ubicación en el mapa.
+Además, los ejércitos de campo que se mueven rápidamente no podrían haber luchado eficazmente sin radiotelegrafía; se movían más rápidamente de lo que sus servicios de comunicaciones podían poner nuevos telégrafos y líneas telefónicas. Esto se vio especialmente en las ofensivas relámpago blitzkrieg de Wehrmacht la Alemania nazi  en Polonia, Bélgica, Francia (en 1940), la Unión Soviética, y en África del Norte; por el Ejército Británico en África del Norte, Italia y Países Bajos; y por el Ejército de los Estados Unidos en Francia y Bélgica (en 1944), y en el sur de Alemania en 1945.
+
+
+=== Telegrafía de flash marítimo y radiotelegrafía ===
+La radiotelegrafía usando el código Morse fue vital durante la Segunda Guerra Mundial, especialmente en el transporte de mensajes entre los buques de guerra y las bases navales de los beligerantes. La comunicación buque-a-buque de largo alcance era por radiotelegrafía, utilizando mensajes encriptados porque los sistemas de radio de voz en los buques entonces eran bastante limitados tanto en su alcance como en su seguridad. La radiotelegrafía también fue ampliamente utilizada por aviones de guerra, especialmente por aviones patrulla de largo alcance que eran enviados por esas fuerzas navales para explorar buques de guerra enemigos, buques de carga y buques de tropas.
+El código Morse se utilizó como norma internacional para los problemas marítimos hasta 1999, cuando fue reemplazado por el Sistema mundial de socorro y seguridad marítimos. Cuando la Armada Francesa dejó de usar el código Morse el 31 de enero de 1997, el mensaje final transmitido fue "Llamada a todos. Este es nuestro último mensaje antes de nuestro silencio eterno."[15]​
+
+
+=== Abandono de la telegrafía comercial ===
+
+En los Estados Unidos, la última transmisión comercial del código Morse fue el 12 de julio de 1999, firmando con Samuel Morse el mensaje original de 1844.[16]​
+Incluso en 2015, la Fuerza Aérea de los Estados Unidos todavía entrena a unas diez personas al año en Morse.[17]​
+La Guardia Costera de los Estados Unidos ha cesado el uso del código Morse en la radio, y ya no monitorea ninguna frecuencia radioeléctrica para transmisiones de código Morse, incluida la frecuencia de socorro internacional de 500 kHz.[18]​  Sin embargo, la Comisión Federal de Comunicaciones de EE. UU. sigue otorgando licencias de operador de radiotelegrafía comercial a los solicitantes que pasan sus pruebas escritas.[19]​  Ha habido licenciatarios que han reactivado la antigua estación costera de Morse de California KPH y transmiten regularmente desde el sitio bajo esta señal de llamada o como KSM. Del mismo modo, algunas estaciones estadounidenses en buques museo son operadas por entusiastas de Morse.[20]​
+
+
+== Funcionamiento morfológico ==
+La duración del punto es la mínima posible. Una raya tiene una duración de aproximadamente tres veces la del punto. Entre cada par de símbolos de una misma letra existe una ausencia de señal con duración aproximada a la de un punto. Entre las letras de una misma palabra, la ausencia es de aproximadamente tres puntos. Para la separación de palabras transmitidas el tiempo es de aproximadamente tres veces el de la raya. 
+Toda correspondencia entre dos estaciones deberá comenzar con la señal de llamada. Para llamar, la estación que llama transmitirá el distintivo de llamada (no más de dos veces) de la estación requerida, la palabra DE seguida por su propia señal de llamada y la señal -. - a menos que haya reglas especiales peculiares al tipo de aparato utilizado.[21]​
+
+
+== Usos ==
+En sus comienzos, el alfabeto Morse se empleó en las líneas telegráficas mediante los tendidos de cable que se fueron instalando. Más tarde, se utilizó también en las transmisiones por radio, sobre todo en el mar y en el aire, hasta que surgieron las emisoras y los receptores de radiodifusión mediante voz.
+En la actualidad, el alfabeto Morse tiene aplicación casi exclusiva en el ámbito de los radioaficionados y escultistas, y aunque fue exigido frecuentemente su conocimiento para la obtención de la licencia de radioperador aficionado hasta el año 2005, posteriormente, los organismos que conceden esa licencia en todos los países están invitados a dispensar del examen de telegrafía a los candidatos.[22]​[23]​
+También se utiliza en la aviación instrumental para sintonizar las estaciones VOR, ILS y NDB. En las cartas de navegación está indicada la frecuencia junto con una señal Morse que sirve, mediante radio, para confirmar que ha sido sintonizada correctamente.[24]​
+
+
+== Alfabeto morse ==
+
+Pulsa en los enlaces para oír el sonido.
+
+convenciones: — : raya (señal larga) · : punto (señal corta)
+Si se comete un error al transmitir el mensaje en morse, la señal "error" son seis ecos "E" en grupos de dos (../../..):
+....--.....---..-...-..
+
+
+== Regla mnemotécnica ==
+Para facilitar el aprendizaje del código morse, se suele utilizar una regla mnemotécnica que permite aprendérselo mediante un código consistente en asignar a cada letra una palabra clave determinada, que comienza con la letra que se quiere recordar. Luego, basta con sustituir cada vocal de la palabra clave por un punto o una raya según la siguiente regla:
+
+La inicial de la palabra clave es la letra correspondiente.
+El número de vocales que contiene la palabra clave indica la longitud de la codificación en morse de dicha letra.
+Si la vocal es una O se sustituye por una raya (—)
+Si se trata de cualquier otra vocal se sustituye por un punto (·)
+Al sustituir, solamente se tendrá en cuenta los puntos y rayas obtenidos hasta la totalidad de la longitud en morse.
+
+
+== Regla mnemotécnica gráfica ==
+Otra regla para mejorar el aprendizaje del código morse, recurre a la fuerte presencia que tienen las imágenes de las letras. A fin de ser el recurso que ayuda a la memoria. En las siguientes letras, se han marcado con color los puntos y líneas que corresponden a su respectivo código en morse.
+
+
+== Véase también ==
+Clavisaje
+Clave telegráfico
+CW
+Samuel Morse
+SOS
+Telegrafía
+Código Q de señales
+Semáforo (alfabeto)
+
+
+== Referencias ==

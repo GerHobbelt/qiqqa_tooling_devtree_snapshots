@@ -1,0 +1,76 @@
+revision: 70339679
+title: "D\u1EEF li\u1EC7u li\xEAn k\u1EBFt"
+url: https://vi.wikipedia.org/wiki/D%E1%BB%AF_li%E1%BB%87u_li%C3%AAn_k%E1%BA%BFt
+
+
+---
+
+Trong hoạt động tính toán máy tính, dữ liệu liên kết mô tả một phương thức tạo ra dữ liệu có cấu trúc để có thể liên kết được với nhau và trở nên có ích. Dữ liệu liên kết được xây dựng dựa trên các tiêu chuẩn công nghệ Web như HTTP và URI để mở rộng khả năng chia sẻ thông tin theo cách có thể được đọc tự động từ các máy tính hơn là việc chia sẻ nội dung trên các trang web để phục vụ cho người dùng. Điều này cho phép các nguồn tài nguyên khác nhau được kết nối và truy vấn.Ông Tim Berners-Lee, cha đẻ của W3C, đặt ra thuật ngữ trong thảo luận lưu ý thiết kế xoay quanh dự án Semantic Web.
+
+
+== Các nguyên lý ==
+Tim Berners-Lee liệt kê bốn nguyên lý dữ liệu liên kết trong các thảo luận của mình: ghi chú dữ liệu liên kết, được tóm gọn trong các dòng sau:
+
+Dùng URI để nhận dạng mọi thứ.
+Sử dụng HTTP URI để mọi thứ này được tham khảo và tìm kiếm ("tham khảo lại") bởi mọi người hay các user agent (phần mềm dưới danh nghĩa người dùng).
+Cung cấp thông tin hữu ích về các thứ trên khi các URI của nó được tham khảo lại, sử dụng các định dạng tiêu chuẩn như RDF/XML.
+Bao gồm các liên kết đến liên kết khác, các URL có quan hệ bên trong dữ liệu tìm thấy để phát triển khả năng tìm kiếm các thông tin liên quan khác trên Web.
+Tim Berners-Lee đã có báo cáo về dữ liệu liên kết tại hội nghị TED năm 2009. Trong hội nghị, ông xác nhận các nguyên lý dữ liệu liên kết bao gồm ba điều đơn giản như sau:
+
+Tất cả các dạng của các thứ khái niệm, chúng có tên và bắt đầu với HTTP ngay bây giờ.
+Tôi lấy lại thông tin quan trọng. Tôi sẽ lấy lại một số thông tin trong định dạng tiêu chuẩn là dạng hữu ích mà có thể có ai đó biết về nó và về sự kiện.
+Tôi lấy lại thông tin đó, không chỉ lấy về chiều cao và cân nặng của ai đó và nơi họ sinh ra, nó có mối liên hệ. Và khi đó, bất cứ khi nào nó nhấn mạnh một mối quan hệ, sau đó những thứ khác mà nó liên hệ được cho bởi một trong các tên bắt đầu với HTTP.
+Lưu ý rằng mặc dù luật thứ hai đề cập đến "các định dạng tiêu chuẩn", nó không cần bất cứ tiêu chuẩn đặc tả nào cả, chẳng hạn như RDF/XML.
+
+
+== Các thành phần ==
+URI (đặc biệt là các Dereferenceable URI)
+Hypertext Transfer Protocol
+RDF (RDF)
+Các định dạng Serialization: (RDFa, RDF/XML, N3, Turtle, và các thứ khác)
+
+
+== Dự án liên kết dữ liệu mở cộng đồng ==
+Mục tiêu của dự án liên kết dữ liệu mở cộng đồng của nhóm W3C Semantic Web Education and Outreach là mở rộng Web với dữ liệu chung bằng cách xuất bản các tập dữ liệu mở khác nhau như RDF trên Web và thiết lập các liên kết RDF giữa các mục dữ liệu từ các nguồn tài nguyên khác nhau. Vào tháng 10 năm 2007, tập dữ liệu đã chứa hơn 2 tỷ RDF triple, được liên kết với hơn 2 triệu liên kết RDF. Vào tháng 9 năm 2011, tập dữ liệu đã phát triển lên đến 31 triệu triple, liên kết khoảng 504 triệu liên kết RDF. Ngoài ra, còn có một tương tác trực quan của các tập dữ liệu được liên kết để duyệt thông qua các đám mây.
+
+
+== Các dự án châu Âu ==
+Có nhiều dự án châu Âu về liên kết dữ liệu. Những dự án này bao gồm dữ liệu liên kết mở xoay quanh dự án đồng hồ (LAC), dự án PlanetData, và dự án Linked Open Data 2 (LOD2).
+
+
+== Tập dữ liệu ==
+CKAN – đăng ký dữ liệu mở và các gói nội dung được cung cấp bởi Open Knowledge Foundation
+DBpedia là một tập dữ liệu liên kết có trích xuất từ Wikipedia bao gồm 3.4 triệu khái niệm được mô tả bởi 1 tỷ triple và các tóm tắt trong 11 ngôn ngữ khác nhau.
+GeoNames cung cấp các mô tả RDF của 7.500.000 tính năng địa lý toàn cầu.
+UMBEL – một cấu trúc tham khảo đơn giản của 20,000 các lớp chủ đề khái niệm và mối quan hệ giữa chúng kế thừa từ OpenCyc, có thể hoạt động như gắn các lớp vào dữ liệu bên ngoài; cũng chứa các liên kết đến 1,5 triệu tên thực thể từ DBpedia và YAGO.
+FOAF – mô tả tập dữ liệu về người, các thuộc tính và mối quan hệ liên quan.
+
+
+=== Mối quan hệ lớp và tập thể hiện dữ liệu ===
+Sơ đồ click chuột cho thấy các tập dữ liệu cá nhân và các mối quan hệ của chúng trong vòng điện toán đám mây DBpedia-sinh ra LOD, như thể hiện bởi hình phía trên:
+
+Các quan hệ thể hiện trong tập dữ liệu 
+Các quan hệ lớp trong tập dữ liệu  Lưu trữ 2011-08-28 tại Wayback Machine
+
+
+== Xem thêm ==
+Dữ liệu mở
+Wikidata
+Dự án Callimachus
+
+
+== Tham khảo ==
+
+
+== Nghiên cứu thêm ==
+
+
+== Liên kết ngoài ==
+LinkedData at the W3C Wiki
+LinkedData.org Lưu trữ 2020-02-05 tại Wayback Machine
+OpenLink Software white papers Lưu trữ 2012-07-22 tại Wayback Machine
+
+
+=== Các trường hợp thử nghiệm ===
+Data from Northwind SQL schema as linked data
+Linked data for the discipline of numismatics

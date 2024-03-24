@@ -1,0 +1,136 @@
+revision: 15753193
+title: "Gen (matematic\u0103)"
+url: https://ro.wikipedia.org/wiki/Gen_(matematic%C4%83)
+
+
+---
+
+În matematică termenul de gen are câteva semnificații diferite, dar strâns legate. Cea mai simplă și mai intuitivă modalitate de a introduce conceptul de gen este că este numărul de „găuri” ale unei suprafețe. O sferă are genul 0, iar un tor are genul 1.
+
+
+== Topologie ==
+
+
+=== Suprafețe orientabile ===
+
+Genul unei suprafețe conexe orientabile este un număr întreg care reprezintă numărul maxim de tăieturi pe o curbă simplă închisă care nu se autointersectează, situată pe suprafață, fără ca varietatea rezultată să nu mai fie conexă. Este egal cu numărul de toarte de pe suprafață. Alternativ, poate fi definit în termenii caracteristicii Euler χ, prin relația χ = 2 − 2g pentru suprafețe închise, unde g este genul. Pentru suprafețe cu b componente de frontieră, ecuația devine χ = 2 − 2g − b. Informal, genul este numărul de „găuri” pe care le are un obiect (o „gaură” fiind interpretată ca fiind cea de la un inel; o sferă goală ar fi astfel considerată ca având zero găuri). Un inel, sau un tor, are 1 astfel de gaură, în timp ce o sferă are 0. Suprafața verde din imaginea de mai sus are 2 găuri de tipul în discuție.
+Exemple:
+
+Sfera S2 și discul au ambele genul 0.
+Torul are genul 1, la fel cu o ceașcă cu o toartă sau o gogoașă. Aceasta este sursa glumei „topologiștii sunt persoane care nu pot deosebi ceașca de gogoașă”.Genuri ale suprafețelor orientabile
+		
+		
+		
+		
+
+
+=== Suprafețe neorientable ===
+Genul neorientabil, demigenul sau genul Euler al unei suprafețe închise conexe, neorientabile este un număr întreg pozitiv reprezentând numărul de benzi Möbius autointersectate atașate unei sfere. Alternativ, poate fi definit pentru o suprafață închisă în termenii caracteristicii Euler χ, prin relația χ = 2 − k, unde k este genul neorientabil.
+Exemple:
+
+planul proiectiv real⁠(d) are genul neorientabil 1.
+Sticla lui Klein are genul neorientabil 2.
+
+
+=== Noduri ===
+Genul unui nod K este definit ca genul minim al tuturor suprafețelor Seifert pentru K. O suprafață Seifert a unui nod⁠(d) este o varietate cu frontieră, frontiera fiind nodul, de exemplu homeomorf⁠(d) cu cercul unitate. Genul unei astfel de suprafețe este definit ca fiind genul unei varietăți duble, care se obține prin lipirea discului unitate de-a lungul frontierei.
+
+
+=== Corpuri ===
+Genul unui corp tridimensional este un număr întreg care reprezintă numărul maxim de tăieturi de-a lungul discurilor încorporate fără ca varietatea rezultată să nu mai fie conexă. Este egal cu numărul de „toarte” de pe el.
+Exemple:
+
+O bilă are genul 0.
+Un tor (plin) D2 × S1 are genul 1.
+
+
+== Geometrie algebrică ==
+Există două definiții legate de gen a oricărei scheme⁠(d) algebrice proiective X: genul aritmetic și genul geometric. Când X este o curbă algebrică⁠(d) cu numerele complexe drept corp de definiție, iar dacă X nu are puncte singulare⁠(d), atunci aceste definiții coincid cu definiția topologică aplicată suprafeței Riemann⁠(d) a lui X (varietatea sa de puncte complexe). De exemplu, definiția curbei eliptice din geometria algebrică este curba proiectivă nesingulară conexă de genul 1 cu un punct rațional⁠(d) pe ea dat.
+Din teorema Riemann–Roch⁠(d) reiese că o curbă plană ireductibilă de grad 
+  
+    
+      
+        d
+      
+    
+     
+   generată în locul de dispariție al unei secțiuni 
+  
+    
+      
+        s
+        ∈
+        Γ
+        (
+        
+          
+            P
+          
+          
+            2
+          
+        
+        ,
+        
+          
+            
+              O
+            
+          
+          
+            
+              
+                P
+              
+              
+                2
+              
+            
+          
+        
+        (
+        d
+        )
+        )
+      
+    
+     
+   este de genul geometric
+
+  
+    
+      
+        g
+        =
+        
+          
+            
+              (
+              d
+              −
+              1
+              )
+              (
+              d
+              −
+              2
+              )
+            
+            2
+          
+        
+        −
+        s
+        ,
+      
+    
+     
+  unde s este numărul singularităților numărate corect.
+
+
+== Note ==
+
+
+== Bibliografie ==
+
+en  Popescu-Pampu, Patrick (2016). What is the Genus?. Springer Verlag. ISBN 978-3-319-42312-8.

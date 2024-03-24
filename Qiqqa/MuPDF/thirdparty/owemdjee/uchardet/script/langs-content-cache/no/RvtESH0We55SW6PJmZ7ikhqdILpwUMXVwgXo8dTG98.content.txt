@@ -1,0 +1,61 @@
+revision: 23178454
+title: Personlig datamaskin
+url: https://no.wikipedia.org/wiki/Personlig_datamaskin
+
+
+---
+
+Se også PC (andre betydninger)
+
+En personlig datamaskin (forkortet PC, fra engelsk personal computer) er en datamaskin for personlig bruk. PC brukes mest om maskiner bygget opp rundt x86-prosessorer. PC-en er en selvstendig, frittstående datamaskin, hvor operativsystem, programvare og egne data kan lagres lokalt (i dag vanligvis på en harddisk). Den kan stå i et nettverk, men er ikke avhengig av det slik som terminaler og tynnklienter. PC-en er i utgangspunktet forholdsvis allsidig, selv om noen PC-er anskaffes til én eller få oppgaver.
+Begrepet personal computer ble opprinnelig brukt om enhver datamaskin for personlig bruk. Etter introduksjon av IBM PC i 1981 ble begrepet oftest brukt om IBM-kompatible maskiner som kjørte operativsystemet MS-DOS. Senere har flere operativsystem kommet til og begrepet brukes igjen uformelt om alle typer bærbare og stasjonære datamaskiner for personlig bruk. Norsk språkråd prøvde i en periode å få betegnelsen PD inn i det norske språket, uten å lykkes, selv om PD per 2019 fortsatt står på listen over Språkrådets forkortelser.
+
+
+== En inndeling av PC-er ==
+
+
+=== Arbeidsstasjoner ===
+
+Arbeidsstasjoner, i dag kraftige PC-er beregnet for bruk av tekniske og vitenskapelige applikasjoner i en profesjonell sammenheng, f.eks. blant ingeniører og meteorologer. Arbeidsstasjoner ble lenge bygget med prosessorer og andre komponenter som var kraftigere enn det som fantes for PC-standarden. Sun, Silicon Graphics, Apollo og HP var blant leverandørene. Nå brukes gjerne standard x86-prosessorer, men maskinene leveres vanligvis med kraftige grafikkort optimert for én eller få oppgaver, ofte med mulighet for å styre to eller flere skjermer. I tillegg brukes gjerne særlig driftssikre komponenter med høy ytelse, beregnet på intens bruk. De fleste arbeidsstasjoner er stasjonære, men de kraftigste bærbare PC-ene selges ofte som arbeidsstasjoner.
+
+
+=== Stasjonære PC-er ===
+
+Stasjonære PC-er dominerte lenge markedet, men er langt på vei fortrengt av bærbare. Stasjonære PC-er brukes gjerne som arbeidsstasjoner, eller som hjemme-PC-er med stor vekt på spill. De lages i vidt forskjellige størrelser og fasonger – fra små bokser som er lette å ta med seg (selv om de ikke kan brukes med batteri) og enheter integrert i skjermen – til himmelstrebende «maksitårn» for dem som trenger store utbyggingsmuligheter. Forholdsvis flate bokser var vanlig i PC-ens barndom, men har for lengst stort sett gått av bruk. Det samme gjelder forholdsvis tunge, transportable PC-er med innebygget skjerm, men uten batteridrift. Hjemmedatamaskiner tidlig på 1980-tallet var ofte innebygget i tastaturet, men denne løsningen har vært sjelden for PC-er.
+
+
+=== Bærbare PC-er ===
+
+Bærbare PC-er (engelsk «notebooks» eller «laptops») har batteridrift og innebygget skjerm som gjerne måler 13–17" (ofte 15,6") diagonalt. Disse har overtatt mye av PC-salget etter hvert som prisene på dem har nærmet seg tilsvarende for stasjonær-PC-er med samme ytelse. De brukes ofte også stasjonært, ikke sjelden med ekstern skjerm, tastatur og mus. I 2017 ble det solgt 204 mill. stasjonære (inkl. arbeidsstasjoner) og bærbare PC-er. 
+
+
+=== Ultramobile ===
+Ultramobile omfatter på Gartners salgsstatistikker nettbrett og de minste, tynneste og letteste PC-ene. Ca. 219 mill. ultramobile ble solgt i 2017.
+
+
+== Historie ==
+Fram til slutten av 1970-årene ble de fleste datamaskiner brukt av flere brukere av gangen.  Disse ble kalt minimaskiner og stormaskiner, og brukeren fikk kontakt med dem via en tynnklient.  Ofte var selve datamaskinen på størrelse med et rom, og krevde kjøleutstyr og vedlikehold. Minimaskinene var gjerne mindre, ofte som et stort kjøleskap, og de kunne gjerne stå på et vanlig kontor.
+Utviklingen av mikroprosessoren gjorde at man kunne gjøre datamaskiner mye mindre enn tidligere, og samtidig mye kraftigere.
+Ordet PC har blitt dagligtale for enhver datamaskin som er liten nok til å ha på et skrivebord, men de het først mikrodatamaskiner.  Da disse kom så lavt i pris at privatpersoner kunne ha råd til dem, så kom begrepet hjemmedatamaskin.  Disse var først byggesett for entusiaster, men ble senere solgt ferdig montert. Commodore-64 var en umåtelig populær hjemmedatamaskin rundt 1983. Disse maskinene kunne gjerne kobles på et vanlig TV-apparat, og lagringsmediet var alminnelige musikkassetter.
+Fra midten av 1980-årene gikk begrepene hjemmedatamaskin og mikrodatamaskin ut av alminnelig bruk, og ordet PC tok over.  Begrepet kom for fullt da IBM PC ble lansert, den første datamaskinen som brukte operativsystemet MS-DOS.  En periode ble andre datamaskiner som nyttet MS-DOS gruppert under navnet IBM-kompatible PC-er.  Per 2019 nytter de fleste PC-er operativsystemet Microsoft Windows, en etterkommer av MS-DOS.
+Det var lanseringen av regnearket VisiCalc, først for Apple II-datamaskiner, som virkelig satte fart på salget av mikrodatamaskiner som forretningsverktøy.  I august 1981 kom IBM PC, og denne fikk også en versjon av VisiCalc.  I 1983 kom Lotus 1-2-3, en integrert løsning med tekstbehandling, regneark, presentasjonsprogramvare og database, en svært populær pakke som drev salget av IBM PC i været. Utover i 1980-årene ble WordPerfect den mest populære tekstbehandleren.
+Personlige datamaskiner tok fra tidlig av 1980-årene over som de mest solgte datamaskinene, og fra begynnelsen av 1990-årene forsvant det skarpe skillet mellom personlige datamaskiner på den ene siden og stormaskiner og servere (tjenestemaskiner) på den andre siden. De samme komponentene ble ofte brukt i begge kategorier maskiner, men dedikerte servere fikk ofte komponenter som var valgt ut for å være spesielt pålitelige eller gjøre det lettere å kjøre flere oppgaver på samme maskin. Ren ytelse per prosessorer spilte etter hvert mindre rolle, men servere fikk ofte flere prosessorer etter at Compaq lanserte sin Systempro med støtte for to prosessorer i 1989. Alt i 2009 fantes servere med 32 prosessorer, mens Windows Server 2008 på den tiden støttet opptil 64.
+
+
+== IBM-kompatibel PC ==
+En IBM-kompatibel PC er en personlig datamaskin av den vanligste typen i hjem og kontorer. Den opprinnelige IBM PC ble utviklet av IBM og lansert 12. august 1981. På den tiden fantes et rikt mangfold av mikrodatamaskiner, men de var ikke innbyrdes kompatible, og de fleste av dem ble snart utkonkurrert. IBM PC ble klonet og videreutviklet av flere produsenter. Compaq Portable fra mars 1983 var en av de første. Derfor begynte en snart å snakke om «IBM-kompatible» eller «bransjekompatible» PC-er. I dag anvendes begrepet PC for personlige datamaskiner med x86-arkitektur slik som Intel 8088 og dens etterfølgere, produsert av Intel og Advanced Micro Devices. Også NEC, Cyrix/VIA, Harris m.fl. har produsert x86-prosessorer.
+PC-er har også standardiserte brikkesett, med (BIOS) (Basic Input-Output System) eller en mer moderne UEFI (Unified Extended Firmware Interface). PC-en laster programvaren fra BIOR/UEFI straks den slås på – med PC-ens oppsett, instrukser om hvor operativsystemet skal hentes fra osv. En del innstillinger kan konfigureres av brukeren.
+IBM-kompatible PC-er benytter operativsystemet Microsoft Windows, men også GNU/Linux. (Apple-maskiner bruker Mac OS X). Delene i en IBM-kompatibel PC, særlig en stasjonær maskin, er i sin alminnelighet standardiserte. Dette gir mange konkurrerende produsenter og dermed kraftfulle komponenter til lave priser. De fleste IBM-kompatible modeller selges ferdigbygde fra store produsenter som Lenovo, Dell, Hewlett-Packard, Acer og Asus. Konkurransen fra mange mindre produsenter og personer som bygger sine PC-er selv med byggesett bidrar til å holde prisene nede, selv om de mindre stanardiserte, bærbare PC-ene har overtatt mesteparten av markedet. Sammen med et veldig utvalg av programvare har konkurransen gjort PC-standarden til en enorm suksess, selv om salget har gått litt ned de siste årene. I 1. kvartal 2019 ble det solgt 54,5 mill. IBM-kompatible PC-er ifølge analyseselskapet Gartner (til dette kom 4 mill. Apple-maskiner).
+
+
+== Referanser ==
+
+
+== Eksterne lenker ==
+Old Computers Museum – alle typer datamaskiner (engelsk)
+Rune's PC Museum (engelsk)
+The PC Guide med historisk og teknisk informasjon (engelsk)
+Howstuffworks' artikkel om "How PCs Work" (engelsk)
+BlinkenLights Archaeological Insititute – Personal Computer Milestones – diskusjon om hva som var den første personlige datamaskin (engelsk)
+Total share: 30 years of personal computer market share figures – statistikk om PC-markedet (engelsk)
+PC-prat - Interaktiv multimedia fra forskning.no 24.6.05

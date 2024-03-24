@@ -1,0 +1,54 @@
+revision: 133073388
+title: Argentometria
+url: https://it.wikipedia.org/wiki/Argentometria
+
+
+---
+
+L'argentometria è una tecnica analitica usata in chimica, in cui, per determinare la quantità di analita presente in un campione da analizzare, si sfrutta l'insolubilità dei sali di argento, che si formano titolando la soluzione dell'analita con nitrato d'argento (AgNO3). 
+A seconda del metodo utilizzato per la determinazione del punto finale si possono avere tre tipologie di titolazioni argentometriche: metodo di Mohr, metodo di Volhard e metodo di Fajans.
+
+
+== Metodo di Mohr ==
+Nel metodo di Karl Friedrich Mohr si usa cromato di potassio come indicatore che, reagendo con il AgNO3, forma cromato d'argento (di colore rosso). Essendo il cromato d'argento più solubile dell'alogenuro d'argento formatosi, precipita al punto di equivalenza dando colorazione rossa alla soluzione. Durante la titolazione, per ragioni cinetiche, precipita per primo il cloruro d'argento, e successivamente il cromato d'argento; la titolazione viene condotta sempre in condizioni di vivace agitazione. La metodica deve essere effettuata a pH neutro o debolmente basico poiché a pH troppo basici (pH > 10,5) l'argento tende a precipitare come idrossido e a pH troppo acidi (pH < 6,5) il cromato si trasforma in Bicromato, il quale è più solubile e precipiterebbe dopo il punto di equivalenza portando l'operatore a commettere un errore in eccesso. 
+
+
+== Metodo di Volhard ==
+Si tratta di una retrotitolazione descritta da Jacob Volhard: al campione acidificato per acido nitrico viene aggiunto un eccesso di nitrato d'argento che precipita tutto l'analita. Il restante Ag+ viene titolato con tiocianato e il punto finale indicato con allume ferrico o nitrato ferrico. Gli ioni argento reagiscono con lo ione tiocianato precipitando come tiocianato d'argento, bianco
+
+SCN− + AgNO3 → AgSCN↓ + NO−3finché sono presenti ioni argento liberi. Quando tutti gli ioni argento sono precipitati, l'aggiunta di ulteriore tiocianato di potassio porta alla reazione con il Fe3+ a formare uno ione complesso
+
+SCN− + Fe3+ → [Fe(SCN)]2+dal caratteristico colore rosso sangue, immediatamente visibile. Poiché il tiocianato di argento è 100 volte più insolubile del cloruro di argento il punto di fine della titolazione non è stabile (il primo eccesso di tiocianato scioglie il precipitato di AgCl). Si consiglia di ricoprire il precipitato di AgCl con un solvente inerte e immiscibile (ad esempio il nitrobenzene), prima della retrotitolazione, in modo da evitare la reazione:
+
+SCN− + AgCl → AgSCN + Cl−
+
+
+== Metodo di Fajans ==
+Viene utilizzato un indicatore per adsorbimento, l'indicatore originale descritto da Kazimierz Fajans era la fluoresceina. 
+Il meccanismo di azione dell'indicatore è di comprensione meno immediata di un comune indicatore acido-base ma non complicato: occorre analizzare l'intorno chimico del precipitato nel corso della titolazione.
+
+Prima del punto equivalente
+in soluzione sono presenti cloruri in eccesso e quindi il primo strato di adsorbimento sul precipitato sarà composto principalmente da Cl− e avrà come controione uno dei cationi presenti nella soluzione.
+Dopo il punto equivalente
+i cloruri sono tutti precipitati e gli Ag+ sono in eccesso e vengono adsorbiti sul precipitato che ha quindi una carica positiva superficiale e può adsorbire l'anione fluoresceinato (qui abbreviato con Fl−) che acquista una colorazione rossa.
+Nella titolazione secondo Fajans la soluzione deve essere neutra o debolmente basica perché la fluoresceina, che è un acido debole, deve essere nella sua forma dissociata e va condotta in presenza di luce ridotta poiché la fluoresceina è fotosensibile e si decompone formando un composto nero che maschera il viraggio.
+
+
+== Bibliografia ==
+ G. Pezzatini e M. Innocenti, Introduzione alla chimica analitica, Firenze, Edizioni CUSL, ISBN 88-8021-022-X.
+ G. D. Christian, Chimica analitica, Piccin, ISBN 88-299-0464-3.
+
+
+== Voci correlate ==
+Titolazione (chimica)
+Analisi dei cloruri
+Nitrato d'argento
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su argentometria
+
+
+== Collegamenti esterni ==
+(EN) Chemistry 3.1: Practical Investigations in Chemistry, su outreach.canterbury.ac.nz. URL consultato il 7 aprile 2009 (archiviato dall'url originale il 14 agosto 2009).

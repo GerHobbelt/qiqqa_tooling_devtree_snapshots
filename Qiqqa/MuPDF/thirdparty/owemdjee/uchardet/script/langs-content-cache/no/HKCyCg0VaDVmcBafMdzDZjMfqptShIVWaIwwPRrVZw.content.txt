@@ -1,0 +1,42 @@
+revision: 23567439
+title: Language
+url: https://no.wikipedia.org/wiki/Structured_Query_Language
+
+
+---
+
+Structured Query Language (SQL) er et spørrespråk for databaser som benyttes til å formulere og kjøre operasjoner mot relasjonsdatabaser (RDBMS) og som originalt er basert på relasjonsalgebra og -regning. Mange av dagens databasesystemer tilbyr SQL som kontrollgrensesnitt. På norsk brukes også begrepet "strukturert spørrespråk" .
+
+
+== Operasjoner ==
+SQL definerer flere operasjoner og disse kan sorteres inn i tre grupper:
+
+Strukturelle operasjoner (data definition language)
+create, lage database, databasetabell, databaseregel eller lignende
+drop, slette database, databasetabell, databaseregel eller lignende
+alter, endre databasetabell, databaseregel eller lignendeOperasjoner mot data (data manipulation language)
+insert, sette data inn i en databasetabell
+delete, slette data fra en databasetabell
+update, oppdatere data i en databasetabell
+select, velge ut data fra en eller flere databasetabellerKontrolloperasjoner (data control language)
+grant, gi brukere av databasen eksplisitte rettigheter til å utføre en eller flere operasjoner, eventuelt på bestemte tabeller
+revoke, frata brukere av databasen eksplisitte rettigheter til å utføre en eller flere operasjoner, eventuelt på bestemte tabellerSelv om SQL er både ANSI- og ISO-standardisert, leveres de fleste databaseprodukter med proprietære utvidelser av språket. Særlig merkes forskjellene i de deler av SQL som omhandler databasetransaksjoner, for ikke å nevne de utvidelser som blir gjort av databaseleverandørene for å støtte scripting.
+
+
+== Dokumentasjon ==
+SQL-standarden er ikke fritt tilgjengelig, men kan kjøpes fra ISO (for eksempel via Standard Norge) som ISO/IEC 9075(1-4, 9-11, 13, 14):2008.
+
+
+== Historie ==
+Den første versjonen av SQL ble utviklet hos IBM av Donald D. Chamberlin og Raymond F. Boyce tidlig på 1970-tallet. Denne versjonen som het SEQUEL (Structured English Query Language) var designet for å manipulere og hente data lagret i IBMs originale relasjonsdatabaseprodukt System R. I 1986 ble språket formelt standardisert av American National Standards Institute (ANSI) med SQL-86, og i 1987 av Den internasjonale standardiseringsorganisasjonen (ISO). Etterførlgende versjoner av SQL standarden har blitt utgitt som ISO-standarder. Nye versjoner av SQL-standarden har blitt publisert i 1989, 1992, 1996, 1999, 2003, 2006, 2008, 2011 og 2016.
+
+
+== Se også ==
+ISO/IEC 9075, den internasjonale SQL-standarden, hvis opprinnelse kommer fra SEQUEL
+
+
+== Referanser ==
+
+
+== Eksterne lenker ==
+Fritt nedlastbare utkast til SQL-standarden

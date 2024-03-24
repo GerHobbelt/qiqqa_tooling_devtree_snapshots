@@ -1,0 +1,130 @@
+revision: 23657968
+title: Trafikkdata (telekommunikasjon)
+url: https://no.wikipedia.org/wiki/Trafikkdata_(telekommunikasjon)
+
+
+---
+
+Begrepet trafikkdata brukes ofte i media, spesielt i forbindelse med kriminalsaker eller datalagringsdirektivet (DLD). Da menes de opplysninger eller  elektroniske spor teleoperatøren oppbevarer etter enkeltkunders telebruk, for eksempel hvilket telefonnummer som har ringt eller sms-et hvilket nummer når. Trafikkdata kalles også metadata.Selve innholdet i en telefonsamtale eller sms er ikke trafikkdata.En type elektronisk spor som ofte omtales, er lokasjonsdata eller lokaliseringsdata, eksempelvis basestasjonstilknytning ved bruk av mobiltelefoni. Slike data forteller hvor de kommuniserende parter befant seg geografisk under kommunikasjonen. Noen omtaler lokasjonsdata som en undergruppe av trafikkdata, andre ser det som to ulike typer data.Trafikkdata regnes som personopplysninger etter Personopplysningsloven.I telefaglig sammenheng arbeider man også med en annen type trafikkdata, teknisk-administrative data for nettelementer og teletjenester. Slike data gir ingen informasjon om den enkelte kundes telebruk.
+
+
+== Hva er trafikk ==
+Innen telekommunikasjon er trafikk formidling av telefonsamtaler, e-poster osv gjennom et telenett. Litt forenklet kan man si at teletrafikk er bruk av telenettet, slik veitrafikk er bruk av veinettet. Når for eksempel mange ringer samtidig, sier man at det er stor trafikk i telenettet.Å «betale for trafikk» betyr å betale for bruk av telenettet, for eksempel pr minutt eller pr MB, til forskjell fra for eksempel en fast månedsavgift uansett bruk.
+
+
+=== Taletrafikk, datatrafikk og signaleringstrafikk ===
+Trafikk i telenettet deles ofte i tre typer eller kategorier. Litt forenklet kan disse forklares slik:
+i) Taletrafikk er formidling av telefonsamtaler, vanlig snakking i telefonen.
+ii) Datatrafikk er (for den vanlige telebruker) formidling av internettbruk, fra PC eller mobiltelefon.
+Det er ofte behov for å skjelne mellom tale- og datatrafikk. De er for eksempel ulikt priset i et mobilabonnement, og er på flere måter teknologisk ulike. Men både tale- og datatrafikk er formidling av telekundenes egen kommunikasjon.
+iii) Den tredje trafikktypen, signaleringstrafikk, er telenettets interne kommunikasjon. Den foregår når ulike deler av telenettet sender hverandre «beskjeder», mens de samarbeider om å overføre eller forberede overføring av tale- eller datatrafikk. For eksempel beskjeder mellom en påslått mobiltelefon og mobilnettet, eller beskjeder mellom to telefonsentraler. En enkelt beskjed kan resultere i en rekke beskjeder videre i telenettet, og krever gjerne «beskjed-svar». Eksempel: «Tlf nr 22 22 22 22 her i mitt område ønsker å snakke med tlf nr 33 33 33 33, som er i ditt område. Kan du koble opp samtale til han?» «Nei, tlf nr 33 33 33 33 er opptatt.»
+Signaleringstrafikk pleier å være gratis. Det koster ikke noe å ha mobilen påslått, eller å ringe noen som er opptatt eller ikke svarer.
+
+
+== Hva er trafikkdata ==
+Trafikkdata er ulike typer informasjon om teletrafikk. Det kan være data om type formidling, hvor mye som formidles når og mellom hvilke punkter. Innholdet i det som formidles er ikke trafikkdata.
+
+
+=== Ulike typer trafikkdata: Elektroniske spor, teknisk-administrative data ===
+For teletrafikk er det to hovedtyper trafikkdata: data om den enkeltes telebruk, for eksempel telefonnummer, tidspunkt og basestasjon for en sms, og så data om det større bildet: hvor mye trafikk det er i ulike nettdeler til ulike tider.
+Teleoperatører oppbevarer elektroniske spor etter enkeltmenneskers telebruk, med tanke på drift og fakturering. Noen slike trafikkdata oppbevares også av telefoner eller datamaskiner som kommuniserer over telenett – man kan se tidspunkt og telefonnummer eller IP-adresse for den man har kommunisert med. Denne typen trafikkdata er personopplysninger etter Personopplysningsloven.En annen gruppe trafikkdata handler om drift og dimensjonering av nett, om tjenestekvalitet (QoS) og for eksempel måling av belegg, andel tap eller sperr på et nettelement. Slike aggregerte data inneholder ingen informasjon om enkeltpersoners teleaktivitet, datalagringsdirektivet handler ikke om dem, og de omtales ikke videre i denne artikkelen.
+
+
+=== Sammenblanding av ordene «trafikkdata» og «datatrafikk» ===
+Media skriver ofte «datatrafikk» når de mener «trafikkdata». Men dette er to helt ulike begrep. Datatrafikk er en type teletrafikk, mens trafikkdata er informasjon, data om teletrafikk, alle typer trafikk. Ordet «data» i trafikkdata betyr rett og slett informasjon som er uttrykt med tall, for eksempel telefonnummer, dato, klokkeslett. Ordet «data» i datatrafikk indikerer noe helt annet – det betegner for den jevne telebruker internettbruk. (Profesjonelle telekunder bruker også annen type datatrafikk enn internett.)
+
+
+=== Trafikkdata og abonnements-/brukerdata ===
+I debatten om datalagringsdirektivet bruktes ofte begrepet trafikkdata i en annen betydning enn det vanlige faguttrykket. Det var da en kortversjon for abonnements-/brukerdata, lokaliserings- og trafikkdata, de tre datatypene som skulle få lagringsplikt under datalagringsdirektivet.Trafikkdata betyr i fagspråket data om telebruk, for eksempel «Telefonnummer 44 44 44 44 ringte telefonnummer 55 55 55 55 på tidspunkt si og så, via basestasjon Høyfjellet.» Slike data inneholder ingen informasjon om brukerens identitet (navn, adresse, fødselsnummer).
+Abonnements-/brukerdata er opplysninger som er nødvendige for å knytte en bestemt abonnent til et telefonnummer eller en IP-adresse. Eksempel: «Per Hansen, personnummer DDMMÅÅ xxxxx, postadresse Storgata 1, 1234 Lillevik, er innehaver av mobilnummer 44 44 44 44». Slike data trengs for at trafikkdata skal kunne brukes til fakturering eller av Politiet, siden de indikerer hvem som står bak en kommunikasjon.Trafikkdata og abonnementsdata sammenholdt viser at Per Hansen, eller noen som har lånt/stjålet hans mobil eller SIM-kort, står bak oppringningen fra telefonnummer 44 44 44 44 til telefonnummer 55 55 55 55. Denne personen må ha vært i nærheten av basestasjon Høyfjellet på det registrerte tidspunktet.
+Abonnementsdata regnes i vanlig fagterminologi ikke som trafikkdata. De oppbevares utenfor telenettet. I denne artikkelen omfatter begrepet trafikkdata data om trafikk, inklusive lokaliseringsdata for mobiltelfoni, men ikke abonnementsdata.
+
+
+== Når begynte norske teleoperatører å lagre trafikkdata ==
+Før telenettet i Norge ble automatisert, noterte Rikstelefonen ned trafikkdata manuelt på papirlapper, og oppbevarte lappene frem til fakturering. Etter automatiseringen var notering ikke teknisk mulig igjen før man fikk digitale telefonsentraler. Mobiltelefonisystemet NMT var analogt, mens GSM (lansert 1993) er digitalt.  Fasttelefonsentralene ble digitalisert i perioden 1986-1997. Telenor fikk i 1994 konsesjon av Datatilsynet til lagring av trafikkdata. Trafikkdata har altså blitt lagret for faktureringsformål de siste ca 15 år, for alle norske telefonsamtaler.
+
+
+== Hvorfor lagres trafikkdata ==
+
+
+=== Situasjonen før lagringen startet ===
+Tidligere var nettkapasitet veldig dyrt. For å fordele og begrense kostnadene trengte man at kundene betalte etter hvor langt og hvor lenge de ringte, og en teknisk innretning måtte kunne måle forbruket. Aller helst også måle tidspunkt, slik at en via prisstrukturen kunne stimulere til å utnytte nettet døgnet og uka rundt.
+I de analoge telefonsentralene målte man forbruket med et slags taksameter for hver abonnent. Dette løp med ulik hastighet, telte såkalte tellerskritt, alt etter hvilken takstsone kunden ringte til. Takstsonen var basert på bl. a. geografiske soner, tid på døgnet og ukedag. Pris for hver samtale ble da: antall påløpte tellerskritt multiplisert med tellerskrittprisen.
+
+
+=== Svakheter ved tellerskrittsystemet ===
+Tellerskrittsystemet var sårbart for elektriske feil i taksameteret. Når samtalen var slutt, kunne man ikke dokumentere at samtalen hadde funnet sted. På fakturaen ble kun oppgitt taksameterøkning, kalt antall tellerskritt, for hele fakturaperioden. Ved uenighet om en faktura kunne man altså ikke dokumentere om taksameterøkningen skyldtes samtaler eller (delvis) en elektrisk feil.
+Videre var det begrenset hva slags prisstrukturer systemet kunne håndtere. Det var for eksempel ikke mulig med 800-nummer – at folk skulle kunne ringe gratis til et firma, mens firmaet betalte for samtalen. (Såkalt reversert taksering.) Det var ikke mulig å prise flere samtaler under ett - tilby kvantumsrabatt, et fritt antall sms-er pr måned osv.
+
+
+=== Tellerskritt erstattet av minuttpris og datalagring ===
+Med digitale telefonsentraler kasserte man på 1990-tallet tellerskrittsystemet. Man begynte i stedet å lagre samtaledata og taksere disse samlet. I stedet for å multiplisere antall tellerskritt med en fast tellerskrittpris, begynte man å multiplisere samtalens varighet med en varierende minuttpris. Uttrykket «å betale for tellerskritt» brukes likevel fremdeles av noen. Da menes å betale for trafikk, altså for bruk, til forskjell fra en fast månedsavgift uansett bruk.
+
+
+=== Fordeler og ulemper ved lagring ===
+Som nevnt over ga overgang til lagring av trafikkdata en del fordeler for kunden: Bedre fakturadokumentasjon (spesifisert faktura), mer korrekte fakturaer, mer avanserte teletjenester og abonnementstyper. Teleoperatøren kan bruke dataene til drift og administrasjon av nett og produkter: sikre kvalitet, observere brukstrender, utvikle nye produkter og planlegge tekniske investeringer i tide.  Lagrede data brukes av politiet til oppklaring og eventuelt forebygging av kriminalitet.Avregning av samtrafikk: En stor andel av telefonsamtaler involverer mer enn én teleoperatør. Hvis for eksempel en mobilabonnent hos Telenor ringer en NetCom-abonnent, betaler kun Telenorabonnenten for samtalen, mens kostnader påløper også i NetComs nett og kanskje flere nett. Teleoperatørene har avtaler seg imellom (samtrafikkavtaler) for å avregne disse kostnadene. Til dette må man ha kontinuerlige målinger av hvor mye trafikk operatør A skylder operatør B for. Til slik administrasjon trenger man imidlertid ikke lagre komplett sett av CDR-er over lang tid.
+Med debatten om EUs datalagringsdirektiv har lagring av trafikkdata blitt mer omstridt på grunn av personvernaspektet.
+
+
+=== Formålsendring med DLD ===
+Historisk har altså trafikkdata blitt lagret med tanke på fakturering. Med datalagringsdirektivet skulle dette endres. Det ville da bli påbudt å lagre nærmere angitte data med formål kriminalitetsbekjempelse. Dermed ville data bli lagret lenger, og flere typer data ville blitt lagret.
+
+
+== Hvor lenge oppbevares trafikkdata ==
+
+
+=== Skillet mellom nednotering og lagring av data ===
+Telenett må håndtere et stort antall eksterne og interne hendelser i parallell. For å få til dette bruker mange nettelementer veldig mange «huskelapper» om pågående hendelser, for eksempel mens de venter på «beskjed-svar» fra andre nettelementer. Veldig mye av disse «huskelappene» har en kortsiktig funksjon og slettes ganske raskt.
+Det er svært viktig å merke seg skillet mellom slike «huskelapper» og lagring av data. Generering av data betegner den notering/nedskriving og kortsiktige oppbevaring av data som skjer i telenettet, mens lagring  betegner mer langsiktig oppbevaring, ofte i en database utenfor telenettet. Debatten om datalagringsdirektivet dreide seg om lagring.
+Teleplan Consultings undersøkelse (oppdrag fra Regjeringen i 2006, 2008 og 2010) gir en oversikt over hvilke data som lagres, og hvilke data som genereres uten å lagres over tid. Teknisk Ukeblad har også publisert en oversikt over hva som lagres. Det er noe sprik mellom de to oversiktene. Teleplan oppgir at praksis varierer mellom operatører.
+
+
+=== Balanse mellom nyttehensyn, personvern og kriminalitetsbekjempelse ===
+Trafikkdata regnes som personopplysninger etter Personopplysningsloven, slik at teleselskaper må ha konsesjon fra Datatilsynet for å ha lov til å føre logger med trafikkdata. Ekomlovens §2-7  bestemmer hvor lenge trafikkdata kan oppbevares: «Trafikkdata, lokaliseringsdata og data nødvendige for å identifisere abonnenten eller brukeren skal slettes eller anonymiseres så snart de ikke lenger er nødvendig…» Dette slettekravet er utdypet i Datatilsynets konsesjon.Ut fra dette lagrer teleoperatørene trafikkdata fram til første fakturering, og deretter fram til klagefristen utløper. I praksis vil det si maksimum 3-5 måneder, avhengig av hvor ofte abonnenten faktureres.
+Ekomlovens §2-8 pålegger i tillegg teleoperatørene en tilretteleggingsplikt for å sikre politiets lovbestemte tilgang til informasjon. Dette innebærer at politiet på visse vilkår kan få se de data teleoperatøren har lagret. Men §2-8 er ikke en lagringsplikt, politiet har ikke krav på lagring av data som teleoperatøren ikke selv trenger til egne kommersielle formål. Ved konkrete mistanker kan det gjøres unntak – data «fryses», dvs de slettes ikke etter de vanlige 3-5 måneder.
+
+
+== Hvilke data lagres ==
+
+
+=== Fasttelefoni og mobiltelefoni ===
+Telefontrafikk og sms faktureres etter bruk. Også såkalte fastprisabonnement har en øvre grense for bruk, eller nummer (spesialnummer og utenlandsnummer) som ikke er omfattet av fastprisen. Teleoperatøren trenger derfor å lagre A-nummer, B-nummer, dato og klokkeslett for samtalens start og slutt.For mobiltelefoni lagres også Celle ID og IMEI (unik mobil-ID). Celle ID er navnet på den basestasjon (mobilmast) mobilen var tilkoblet. Mobilen må ha vært innenfor denne mobilmastens rekkevidde. Celle ID angir dermed et omtrentlig geografisk område, eller en veldig omtrentlig geografisk posisjon. (Radiusen for en mobilmasts faktiske dekningsområde kan variere fra noen hundre meter til noen kilometer.) Celle ID omtales derfor ofte som lokasjonsdata eller lokaliseringsdata.
+
+
+=== Internett ===
+Når det gjelder oppbevaring av internett trafikkdata (data om e-poster, chatting, besøk på internettsider, nedlasting av materiale) er forholdene pr i dag annerledes enn for telefoni, beskrevet av Teleplan og Teknisk Ukeblad. Siden internettbrukere ikke betaler for bruk av internett pr sendt e-post, pr åpnet nettside etc, trenger ikke teleoperatørene lagre slike data med tanke på fakturering. Det blir da ut fra Ekomlovens §2-7 sletteplikt for dataene. Datatilsynet har f. eks. våren 2009 konkretisert dette til at opplysninger om kunders dynamiske IP-adresser ikke kan lagres lenger enn 3 uker.
+
+
+=== Signaleringstrafikk ===
+Politiet ønsker noen ganger data om hvilke basestasjoner en mobil har ”slått inn på”, kommunisert med. Hvis man har ringt med mobilen, vil det være lagret taletrafikkdata, og dermed data om basestasjoner. Hvis mobilen ikke har vært i bruk, bare påslått, vil det likevel være registrert signaleringsdata. Siden det ikke koster noe å ha mobilen påslått,  lagres slike data ikke for fakturering. De vil heller ikke få lagringsplikt under DLD. De oppbevares av driftshensyn fra noen få timer til noen få dager, gjennomsnittlig ett døgn. Data fra signaleringstrafikk kalles av og til for passive data.
+
+
+== Hvordan oppbevares data, teknisk og organisatorisk ==
+Nednotering og oppbevaring av trafikkdata vil kunne skje på ulik måte for ulike teletjenester. For telefoni noteres trafikkdataene først ned ute i den enkelte telefonsentral. Det skjer ved at det genereres en såkalt samtalerecord (CDR, Call Detail Record) for hver telefonsamtale. Telefonsentralene tømmes jevnlig for CDR-er, som så lagres i en egen database koblet opp mot faktureringssystemet. Hver gang teleoperatøren skal fakturere en kunde, samles alle CDR-er for denne kunden, de sammenholdes med prisene i det abonnement kunden har valgt, og faktura produseres. Når klagefrist for faktura er utløpt, skal CDR-ene slettes.
+For andre tjenester kan nednoteringen skje i enklere logg- systemer.Trafikkdata og andre data nødvendige for fakturering (abonnements-/brukerdata) er i Norge i dag spredt over en rekke ulike datasystemer som eies og forvaltes av et stort antall (ca 230) ulike teleoperatører. Flere av operatørene er relativt små bedrifter med begrensede ressurser. Datasystemene er spredt på grunn av markedsforhold, kommersielle avtaler mellom operatørene, tekniske forhold og historiske forhold. En teleoperatør trenger for eksempel oppbevare navn og adresse kun for egne abonnenter, ikke navn og adresse for alle som abonnenten har ringt til.  Hvis operatøren ikke har eget nett, bare formidler tjenester,  er kanskje mange trafikkdata lagret  hos vedkommendes nettoperatør, ikke hos teleoperatøren selv.Hvis politiet ønsker innsyn rundt en konkret samtale mellom person A og person B,  må de derfor kontakte begge de to teleoperatørene der A og B er abonnenter. Kanskje må de i tillegg kontakte begges underleverandører, og søke i flere datasystemer hos den enkelte operatør. Dette skyldes at datasystemene er konstruert ut fra teleoperatørenes operative behov, ikke politiets informasjonsbehov.Lagringskostnadene dekkes av teleoperatørene selv siden dette er deres egne interne produksjonsdata. Teleoperatørens kostnader ved politiets uthenting av data dekkes av Staten/politiet.
+
+
+== Trafikkdatalagring i fremtiden ==
+
+
+=== DLD vil endre reglene for datalagring ===
+Stortinget vedtok datalagringsdirektivet 4. april 2011. Hvis det trer i kraft, vil reglene for datalagring endres.
+
+
+=== Med DLD: Sterkt økende mengde trafikkdata pr person ===
+Etter hvert som flere og flere tar i bruk smarttelefon, vil det med DLD-regler bli vanlig å etterlate seg en svært omfattende lokasjonsdata-logg. Dette vil gjøre den enkeltes samlede mengde trafikkdata mye mer sensitiv.En kort forklaring: Mobilnettet holder til enhver tid oversikt over hvor alle påslåtte mobiler befinner seg, eller hvor de befant seg sist gang de var slått på. Dette er nettet nødt til å gjøre for å vite hvor det skal sende ringesignal når noen blir oppringt. Nettet har ikke kapasitet til å sende ringesignal til alle basestasjoner i verden hver gang noen ringer. Men slike passive data har sletteplikt etter en viss tid, også under DLD.
+Når man bruker internett via mobiltelefon, kalles det mobil internettaksess. På-og avlogginger mot internett skal lagres med DLD, uansett aksessform. Lokasjon (Celle ID) ved pålogging skal også lagres. Smarttelefoner gjør stadige på- og avlogginger mot internett. Dermed vil det bli oppbevart omfattende lokasjonsdatalogger mye lenger enn i dag.
+
+
+=== Uten lagringsplikt: effekt av fastprisabonnement ===
+I en høringsuttalelse til Datalagringsdirektivet i 2010 la Kripos til grunn at lagring av trafikkdata for faktureringsformål vil være borte i løpet av få år. Dette på grunn av en trend med stadig mer fastprisabonnement. NetCom ønsket i sin uttalelse å holde døren åpen for en slik utvikling. Temaet ble igjen omtalt etter regjeringens islegging av DLD i april 2014.Telenor understreket i muntlig høring 9. februar 2011 at de ikke hadde noen planer om å slutte å lagre trafikkdata.
+«Det blir hevdet fra flere, og senest i høringen her på mandag, at uten en lovfestet plikt til lagring vil politiet stå uten tilgang til elektroniske spor i fremtiden, fordi teleoperatørene vil slutte å lagre trafikkdata som lagres i dag. Det er ikke en virkelighet Telenor kjenner seg igjen i.
+Vi vil fortsatt lagre data, fordi det er nødvendig i vår forretningsvirksomhet. Det vil fortsatt være mange kunder som betaler etter forbruk,  og selv om mange skulle gå over til fastprisordninger, så er vi nødt til å ta vare på dataene, fordi de fleste fastprisordningene har et tak, enten på antall ringeminutter, eller antall megabyte eller hvilken trafikk som er inkludert, og vi trenger dataene for å kunne avgjøre om forbruket er over eller under taket, eller om man har brukt innenfor eller utenfor fastprisordningen. I tillegg har vi behov for dataene av hensyn til drift og vedlikehold, klagebehandling og dialog med kundene. Kort sagt for å gi kundene en god tjeneste. Telenor har ingen planer om å slutte å lagre trafikkdata.»
+
+
+== Se også ==
+Så mye er lagret om deg. Mobilen.no 4. juni 2012.
+Datalagringsdirektivet
+
+
+== Referanser ==

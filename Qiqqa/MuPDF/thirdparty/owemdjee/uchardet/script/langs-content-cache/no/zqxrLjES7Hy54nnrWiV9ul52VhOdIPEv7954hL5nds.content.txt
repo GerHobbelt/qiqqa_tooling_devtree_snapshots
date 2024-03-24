@@ -1,0 +1,34 @@
+revision: 23665087
+title: Ada Lovelace
+url: https://no.wikipedia.org/wiki/Ada_Lovelace
+
+
+---
+
+Augusta Ada Byron King (født 10. desember 1815, død 27. november 1852), grevinne av Lovelace, var en britisk grevinne og datapionér. Mest kjent er hun for å ha laget en beskrivelse av Charles Babbages mekaniske, generelle datamaskin, Den analytiske maskinen. Hun blir ansett som verdens første dataprogrammerer.Lovelace forutså at den analytiske maskinen ville kunne brukes til både vitenskapelige og dagligdags formål, til å gjøre kalkulasjoner, fremstille musikk og grafikk. Lovelace fremholdt samtidig det som kalles «Lovelaces innsigelse» (Lady Lovelace's objection): «The Analytical Engine has no pretensions to originate anything. It can do whatever we know how to order it to perform.»
+
+
+== Bakgrunn ==
+Ada Byron Lovelace var datter av den britiske poeten Lord Byron og Anna Isabel «Annabella» Milbanke. Faren var ganske velstående, og moren var velutdannet og en svært selvstendig kvinne.
+Ada ble oppkalt etter Byrons halvsøster Augusta Leigh, som var den som oppfordret ham til å gifte seg med Anna Isabel for å unngå skandale da hun ble gravid. I januar 1816 tok Annabella med seg den to måneder gamle Ada og forlot ektemannen. Tre måneder senere underskrev Lord Byron skilsmissepapirene og reiste noen dager senere fra England for aldri mer å vende tilbake. Adas bakgrunn ga henne muligheter til en god utdanning innen både matematikk, astronomi, musikk og latin.
+Ada Byron Lovelace giftet seg i 1835 med William King, den åttende baron av King, senere den første jarl av Lovelace. De fikk tre barn sammen: Byron, født 12. mai 1836, Annabella (Lady Anne Blunt), født 22. september 1837, og Ralph Gordon, født 2. juli 1839.
+
+
+== Virke som matematiker ==
+Ada Byron Lovelace var en svært begavet matematiker. Ada Byron var på samme alder som vitenskapskvinne Mary Somervilles døtre, og Mary Somerville ble også Adas private matematikklærer. Lady Byron synes matematikk var viktig og ønsket at Ada skulle få en god opplæring i det. Mary Somerville oppmuntret Ada til å satse videre innen fagfeltet, noe som ikke var enkelt ettersom universitetene var forbeholdt menn. I 1834 begynte Ada Byron Lovelace likevel å følge forelesningene til matematikeren Charles Babbage, som viste stor interesse for regnemaskiner. Babbage hadde planer om å bygge en regnemaskin som kunne foreta mange slags utregninger, i motsetning til de regnemaskinene som fantes, der man måtte konstruere en regnemaskin til hver oppgave som skulle løses. Denne nye regnemaskinen skulle hete Den analytiske maskinen. Ada tok kontakt med Babbage for å inngå et samarbeid med ham, men Babbage var for opptatt med å samle inn penger til prosjektet til å sette av tid til henne. Ada Lovelace holdt god kontakt med familien Somerville gjennom hele livet. Det var Mary Somerville som introduserte Ada til Charles Babbage.Babbage og Lovelace beskrev komponentene i den tenkte analytiske maskinen som: en enhet for input (instrukser) og for output (visning av resultat), en styreenhet for å holde orden på tallene, en lager (minne for å ta vare på mellomregning) og en prosessor for beregning. De så for seg hullkort til programmering. Dette er de grunnleggende delene i moderne datamaskiner og trolig var det ingen før Lovelace og Babbage som hadde tenkt ut noe slikt.I 1842 skrev imidlertid en italiensk ingeniør en artikkel om Babbages maskin. Lovelace tilbød seg nå å oversette artikkelen til engelsk, noe Babbage straks gikk med på. I tillegg ba han henne også skrive noen kommentarer til artikkelen. Disse kommentarene ble tre ganger så omfattende som selve artikkelen. Hun hadde flere tanker om hvordan maskinen kunne mates med ulike instruksjoner for å foreta beregninger. Hun regnes dermed som historiens første dataprogrammerer.Med støtte fra både Babbage og egen familie arbeidet hun videre langs disse tankebanene. Imidlertid ble Lovelace alvorlig syk, og den foreskrevne medisinen som inneholdt morfin, opium, alkohol og igler, gjorde henne ikke friskere.Ettertiden har gitt henne en viktig plass i datahistorien. I 1979 bestemte den amerikanske regjeringen at det skulle utvikles et nytt programmeringsspråk for datamaskiner. Det fikk navnet Ada.
+
+
+== Referanser ==
+
+
+== Litteratur ==
+Turney, Catherine (1972), Byron's Daughter: A Biography of Elizabeth Medora Leigh, Scribner, , https://books.google.com/books?id=eE1aAAAAMAAJ 
+Baum, Joan (1986), The Calculating Passion of Ada Byron, Archon,  
+Kim, Eugene; Toole, Betty Alexandra (1999). «Ada and the First Computer». Scientific American. 280 (5): 76–81. Bibcode:1999SciAm.280e..76E. doi:10.1038/scientificamerican0599-76. 
+Toole, Betty Alexandra (1992), Ada, the Enchantress of Numbers: A Selection from the Letters of Ada Lovelace, and her Description of the First Computer, Strawberry Press, , http://books.google.com/books?id=wlZQAAAAMAAJ 
+Toole, Betty Alexandra (1992), Ada, the Enchantress of Numbers: A Selection from the Letters of Ada Lovelace, and her Description of the First Computer, Strawberry Press, , http://books.google.com/books?id=wlZQAAAAMAAJ 
+Woolley, Benjamin (February 1999), The Bride of Science: Romance, Reason, and Byron's Daughter, AU: Pan Macmillan, , http://books.google.com/books?id=K8-sQgAACAAJ, besøkt 7 April 20* Woolley, Benjamin (February 2002) [1999], The Bride of Science: Romance, Reason, and Byron's Daughter, McGraw-Hill Ryerson, , http://books.google.com/books?id=VGMFAAAACAAJ, besøkt 7 April 2013 13 
+
+
+== Eksterne lenker ==
+Stephen Wolfram, Untangling the tale about Ada Lovelace

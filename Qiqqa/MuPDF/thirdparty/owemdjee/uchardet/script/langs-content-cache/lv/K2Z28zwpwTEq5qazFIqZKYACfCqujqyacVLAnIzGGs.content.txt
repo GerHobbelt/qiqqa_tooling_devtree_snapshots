@@ -1,0 +1,25 @@
+revision: 3724825
+title: Hitomi
+url: https://lv.wikipedia.org/wiki/Hitomi
+
+
+---
+
+Hitomi jeb ASTRO-H (arī NeXT) ir Japānas Aerokosmisko pētījumu aģentūras (JAXA) orbitālā observatorija, kura paredzēta novērojumiem rentgenstaru spektrā. Palaista 2016. gada februārī. Kopš 2016. gada 26. marta pavadonis nekontrolēti griežas un ar to ir zaudēti sakari.
+Hitomi uzstādīti četri teleskopi un seši detektori, kuri veic novērojumus cietajos un mīkstajos rentgenstaros un gamma staros:
+Soft X-ray Telescope
+Soft X-ray Spectrometer (SXS), 0,4—12 keV, augstas izšķirtspējas rentgenstaru spektroskopijai
+Soft X-ray Imager (SXI), 0,3—12 keV
+Hard X-ray Telescope (HXT)
+Hard X-ray Imager (HXI), 5—80 keV
+Soft Gamma-ray Detector (SGD), 60—600 keVASTRO-H tika palaists 2016. gada 17. februārī 08:45 UTC ar nesējraķeti H-IIA (lidojums F30) no Tanegasimas kosmosa centra. Kā sekundārā krava palaisti pavadoņi ChubuSat-2, ChubuSat-3, Horyu-4. Pēc ievadīšanas orbītā observatorijai dots nosaukums Hitomi. Tās darbības laika bija plānots 3 gadi.
+27. martā JAXA paziņoja, ka 26. martā plānotajā sakaru seansā nav izdevies sazināties ar Hitomi. Savukārt ASV kosmisko objektu novērošanas dienests Joint Space Operations Center bija novērojis to, ka no pavadonis 26. martā 08:20 UTC ir sadalījies piecās daļās. Pēc rūpīgākas analīzes Joint Space Operations Center paziņoja, ka fragmentācija notikusi 01:42 UTC, bet nav pazīmju, ka pavadoņa galvenais ķermenis būtu sadalījies. Līdz 1. aprīlim JAXA speciālistiem četras reizes izdevās nodibināt uztvert signālus no Hitomi.
+Pēc telemetrijas fragmentiem izdevies noskaidrot, ka pavadonis bija sācis griezties, sākotnēji 21,7 grādi stundā. Orientācijas sistēma tāpēc deva komandu žiroskopiem neitralizēt rotāciju. Šīs darbības rezultātā inerciālās sistēmas kļūdas dēļ kosmiskais aparāts sāka griezties pretējā virzienā. Žiroskopos uzkrājās griezes moments, kuru nespēja izlādēt magnētiskie griezes momenta kontrolieri, līdz žiroskopi sasniedza robežu. Hitomi vadības dators secināja bīstamu situāciju un pavadoni ievadīja drošajā režīmā. Lai saules baterijas būtu vērstas pret Sauli, kosmisko aparātu centās stabilizēt ar hidrazīna raķešdzinējiem. Tas neizdevās, jo saules sensors nespēja atrast Sauli. Tā vietā, lai labotu pieaugošo griešanās ātrumu, mazās raķešdzinēju iedarbināšanas netīši izraisīja Hitomi rotēt ātrāk.Aprīlī ir pamanīti 11 ar Hitomi saistīti fragmenti. Lielākais no tiem griežas ar ātrumu 5,2 apgriezieni sekundē, kas ir par ātru, lai kosmiskais aparāts iegūtu enerģiju no saules baterijām.29. aprīlī JAXA paziņoja, ka pārtraukti mēģinājumi atgūt kontroli pār Hitomi.
+
+
+== Atsauces ==
+
+
+== Ārējās saites ==
+Hitomi JAXA
+Astro H (NeXT, Hitomi)) Gunter's Space Page

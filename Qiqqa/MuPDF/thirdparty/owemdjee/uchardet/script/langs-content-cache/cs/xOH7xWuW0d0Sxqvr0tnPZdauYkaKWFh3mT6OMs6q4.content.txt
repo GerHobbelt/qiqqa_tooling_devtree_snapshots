@@ -1,0 +1,314 @@
+revision: 22935345
+title: Mafia II
+url: https://cs.wikipedia.org/wiki/Mafia_II
+
+
+---
+
+Mafia II (nebo Mafia 2) je pokračování 3D akční počítačové hry Mafia: The City of Lost Heaven (2002). Jedná se o kriminální drama z prostředí poválečné Ameriky, jehož scénář napsal Daniel Vávra. Vývojářem je herní studio 2K Czech (dříve Illusion Softworks) a vývoj druhého dílu série byl oznámen 21. srpna 2007 na herní výstavě Leipzig Games Convention. Hra oficiálně vyšla 27. srpna 2010 v Evropě a 24. srpna v Severní Americe. O rok později byla na třeboňském festivalu GameDay zvolena Českou hrou roku v kategorii "Nejlepší český herní titul v českém jazyce". Hra byla určená pro Mac OS X (Lion a vyšší), PlayStation 3, Windows a Xbox 360. V roce 2020 vyšel remaster se jménem Mafia II: Definitive Edition, dostupný mimo jiné jako součást Mafia: Trilogy, určen pro PlayStation 4, Xbox One a Microsoft Windows.  
+
+
+== Technologie ==
+Mafia II využívá The Illusion Engine, který v 2K Czech vyrobili přímo pro potřeby hry. S jeho pomocí se dle slov vývojářů úspěšně daří minimalizovat hardwarové nároky hry, aniž by tím trpěla kvalita grafického zpracování. O demolici modelů se stará technologie NVIDIA PhysX, která hráči dovoluje zdemolovat karosérii (nejen svého) auta či rozstřílet sklo, přičemž veškerá takováto fyzika působí velice realisticky. Jako první hra bude mít funkci NVIDIA Apex Clothing. Je to simulace látek a oblečení, díky ní budou vypadat modely postav realističtěji. Modely díky ní odpovídají na změny směru větru, zapalují se o oheň, atd.
+Mafii 2 nejspíš půjde spustit v plně stereoskopickém 3D.
+
+
+=== Grafické technologie ===
+Ve hře je použito spoustu efektů, zlepšujících reálnost hry. Mezi efekty které jsou nejnáročnější na výkon počítače patří: odrazy modelů, geometrie a detaily stínů.
+
+Ambient Occlusion vytváří odrazy od modelů. V Mafii II má jeden z největších vlivů na počtu snímků za sekundu.
+Shadow quality vytváří stíny stromů a budov na zemi, a také na modelech. Když si uživatel nastaví hodnotu na Low, stíny se přestanou vykreslovat (nebo jen v malém počtu) a svět začne působit méně reálně.
+Antialiasing vyhlazování hran. Ve hře má uživatel možnosti pouze On a Off.
+Anisotropické filtrování provádí filtrování textur ve větší vzdálenosti. Textury dostávají kvůli filtrování výraznější detaily. Ve hře tento efekt moc neubírá výkon.
+Geometry detail - mění geometrii (především pak obrysy) modelů a objektů ve větších vzdálenostech.
+
+
+=== Požadavky na minimální počítačovou konfiguraci ===
+Pro spuštění PhysX efektů je nutno mít nainstalovaný ovladač NVIDIA PhysX driver: 10.04.02_9.10.0522. Je také nutno vlastnit grafickou kartu, která podporuje tuto technologii.
+
+
+== Hratelnost ==
+Oproti prvnímu dílu je v pokračování zastoupeno automatické obnovování zdraví, které je např. v sérii Call of Duty či ve hře El Matador. Dle hráčem nastavené obtížnosti se pak bude odvíjet, do jaké míry se při zranění hráčovo zdraví obnoví. Ve hře je možno po stisku klávesy se skrýt za okolními předměty a zpoza nich střílet (jako například v Gears of War). Do hry lze stáhnout neoficiální mód volné jízdy.
+
+
+=== Vozidla ===
+Ve hře je 44 vozidel a dalších 12 se stahovatelným obsahem. Auta lze i různě upravovat - měnit laky, kola, motory, ráfky, tuning atd. - s DLC lze ještě přemalovat vzor a nebo přidat turbodmychadlo. Vozidla jsou z různých období, a to: předválečná, válečná a poválečná. Auta lze do těchto kategorií rozdělit podle materiálu (v poválečném USA byl nedostatek železa a proto výrobci aut dělali některé části aut ze dřeva - střecha, dveře...) a několika dalších znaků. Ve hře se vyskytuje autobus, nákladní vůz a mnoho dalších vozidel. Ve hře jsou dokonce i tzv. Hot Rody, tedy auta, které si podomácku upravili a vylepšili obyčejní lidé. Tato auta skutečně existovala, Evropané o nich však často nikdy neslyšeli, a proto si myslí, že je to výmysl. Takové auto můžete vidět zde.
+Auta, stejně jako v prvním dílu, je možné krást. Na výběr jsou dva způsoby: Smash the window (Rozbít okénko) a Pick lock (vypáčit zámek), případně lze zámek rozstřílet. Přičemž rozbití je mnohem rychlejší, ale hlasitější a páčení delší a tišší, rozstřílení zámku je rozhodně nejhlasitější, ale i nejrychlejší.
+
+
+=== Zbraně ===
+Ve hře se opět vyskytují zbraně z prvního dílu, několik je jich však přidáno. Mezi "staré" patří: Colt 1911 (ve hře je možné pořídit "vylepšená" verze s prodlouženým, a tím pádem větším, zásobníkem), revolver Smith & Wesson Model 38, Smith & Wesson Model 29, Thompson M1928, Thompson M1A1 a opakovací (pumpovací) brokovnice. Mezi "nové" patří: brokovnice Remington 870, MP40 (německý válečný samopal), M3 Grease Gun (americký válečný samopal - tzv. olejnička) a MP 28 (samopal) případně MG42 (německý válečný kulomet - americkými vojáky často nazýván Hitler's Buzzsaw - Hitlerova Pila), Mauser C 96 (německá válečná pistole - častý suvenýr amerických vojáků), Beretta Model 38 (italský samopal), M1 Garand (americká puška), samopal.33, Kar 98k (německá puška). Ze "studených" zbraní jsou tu pouze pěsti. V dřívějších trailerech byla zobrazena baseballová pálka a nůž. Ty byly později ze hry odebrány.
+
+
+=== Cut-scény ===
+Hra obsahuje dvě hodiny in-game cutscén. Předchozí hra, Mafia: The City of Lost Heaven, měla scénář dlouhý 400 stránek, oproti tomu scénář Mafie II má 700 stran. Daniel Vávra, scenárista, designér a režisér předchozí hry, srovnal tyto dvě hry "Mafia byla úctou ke gangsterským filmům a jejich romantické vizi. Mafia II je odvážnější, reálnější, temnější a s efekty založenými na realitě. "
+
+
+== Lokace v Empire Bay ==
+
+
+=== Mosty ===
+V Empire Bay se nacházejí dva významnější mosty. Oba vedou přes řeku Culver. První a známější je Grand Upper Bridge spojující čtvrti Hunters Point a Uptown. S tímto mostem se v příběhu můžeme setkat ve všech kapitolách kromě kapitol číslo 1 a 6. Druhý most se nazývá Highbrook Bridge a spojuje už podle názvu čtvrti Highbrook a Dipton.
+
+
+=== Doky ===
+Ve městě se nachází tři doky. První, nejvýznamnější a zároveň jediné, se kterými se v příběhu setkáme se nachází v Southportu. Další se nachází v Sand Islandu a South Millville. O těchto docích v příběhu není žádná zmínka. Do doků v Southportu se dostaneme v příběhu hry třikrát. Poprvé ve 3. kapitole Nepřítel státu, kdy se zde poprvé potkáme se šéfem doků Derekem Pappalardem a jeho pobočníkem Stevem Coynem. Podruhé v 8. kapitole Divočáci, kdy sem dovezeme Hot rod ze staré slévárny, abychom získali peníze. Potřetí se s nimi setkáme ve 14. kapitole Schody do nebe, kde zde Dereka i Steva zabijeme za zabití Vitova otce.
+
+
+=== Kostely ===
+Ve městě se nachází dva kostely. První Červený kostel se nachází v Midtownu. Druhý je ve West Side. O ani jednom není v příběhu žádná zmínka, ale kostel v Midtownu se nachází v jednom z trailerů na hru.
+
+
+=== Lone Star ===
+Jedná se o černošský bar v Hunters. Stejně jako většina známých barů je volně přístupný. V příběhu se s tímto barem setkáme dvakrát. Poprvé ve 2. kapitole Domov, sladký domov, kdy na dvorku za barem ukradneme auto pro automechanika Mikea Bruskiho a podruhé v kapitole 10, kdy odsud musíme odvézt opilého Joea, který zapíjí smrt Martyho.
+
+
+=== Hill of Tara ===
+Jedná se o menší hospodu v Kingstonu. Je sídlem irského gangu v Empire Bay. V příběhu se s ním setkáme pouze jednou a to v 11. kapitole Náš přítel, kdy tuto hospodu v závěru kapitoly spolu s Joem rozstřílíme jako odplatu za zapálení Vitova domu.
+
+
+=== Freddieho bar ===
+Jde o bar v Little Italy, který je hlavním sídlem rodiny Clemente a je volně přístupný. Barmanem je zde muž jménem Freddy Marchione. Stejně jako ve většině větších barů ani v něm nemůžeme používat zbraně. V příběhu se s ním setkáme celkem 5krát. Postupně v kapitolách číslo 2, 3, 4 a 5. Naposledy se s ním máme možnost částečně setkat v 9. kapitole Drsňák a účetní, kdy před barem čekáme na Lucu Gurina.
+
+
+=== Maltese Falcon ===
+Již podle jména sídlo rodiny Falcone a luxusní bar v Midtownu. V příběhu se s ním setkáme pouze v rodinných záležitostech a to v kapitolách 8, 9, 11 a naposledy 14. Barmanem je Jack Oliveiro.
+
+
+=== Mona Lisa ===
+Jedná se o bar ve West Side podobný Freddieho baru, ale je sídlem rodiny Vinci. Bar je pojmenován podle zesnulé manželky dona Franka Vinciho. V příběhu se s tímto barem setkáme jedinkrát a to ve 14. kapitole Schody do nebe, kdy zde hledáme Joea. 
+
+
+=== Tunely ===
+Ve městě se nachází tři respektive čtyři tunely. První je Southportský tunel, který se nachází na jihu města a spojuje čtvrti Southport a Sand Island. Druhý tunel je Uptownský, který spojuje Uptown a Kingston. Dalším je Riversidský tunel, díky kterému jsou spojeny čtvrti Riverside a Little Italy. Posledním tunelem, který se ale vyskytuje pouze v DLC Joeova dobrodružství spojuje východní část města ze severu s Riverside a také s venkovem.
+
+
+== Nástin děje ==
+Vito Scaletta se narodil roku 1925 na Sicílii (Messina), ale už jako malý chlapec emigroval s otcem, matkou a sestrou Francescou do USA. Vitův otec zde začal pracovat v přístavu a jednoho dne se nešťastnou náhodou utopil. Aby si Vito pomohl k penězům, začal s kamarádem Joem vykrádat auta a obchody. V roce 1943 byl však Vito při jedné z krádeží chycen. Jelikož však v té době zuří v Evropě válka a armáda potřebuje na invazi na Sicílii vojáky, co se dokážou domluvit italsky, dostane Vito možnost stát se místo vězněm výsadkářem 82. výsadkové divize (82nd Airborne). Vito je později v boji zraněn a s Purpurovým srdcem a válečným křížem se po dvou letech vrací na měsíc do Ameriky.
+Na nádraží v Empire Bay potká Vito Joea, který tenkrát stačil uprchnout. Joe Vitovi zařídí přes zloděje Giuseppeho falešné propouštěcí doklady, takže se Vito nemusí vrátit do Evropy, a také ho zasvětí do svých nekalých kšeftů. Takřka hned po svém příjezdu se Vito zúčastní krádeže auta pro Joeova přítele Mika Bruskiho. Matka ale po Vitovi chce, aby pracoval poctivě. Vito tedy navštíví Frederica Papalarda (Dereka), zaměstnavatele svého otce, a jeho pravou ruku Steva. Po krátkém pokusu o poctivou práci Vito zjistí, že Derek se také zná s Joem, a díky tomu získá dobře placenou, i když opět ne zrovna poctivou práci.
+Zanedlouho se Vito přes Joea seznámí s mafiánem Henrym Tomasinem. Dostane od něj „pořádný kšeft“, musí ukrást cenné přídělové lístky na benzin ze střežené federální budovy. Po úspěšném Vitově vloupání ale Henry zjistí, že lístky už mají vyplněné datum splatnosti, a lze je využít jen do půlnoci. Vito je tedy musí co nejrychleji rozprodat po benzinových stanicích.
+Později dostanou Vito s Joem od Henryho další úkol - vykrást klenotnictví, které patří jistému podnikateli, jenž nesplácí Henryho rodině své dluhy. Během vloupání se však na scéně objeví zlodějská banda Ira O’Neilla a po krátce šarvátce s hlavními hrdiny i policií. Vitovi s Joem se však podaří utéci a policie zatkne jen O'Neilla a jeho kumpány.
+Později se Vito seznámí s Lucou Gurinem, consiglierim rodiny Clemente. Ten Vita i s Joem a Henrym zaúkoluje, že je nutné zlikvidovat tlouštíka, jenž vlastní lihovar na Clementeho území a nechce mafii platit výpalné. Tlouštík je zastřelen a Vito za odměnu získá dost peněz na to, aby splatili otcův dluh, jenž trápí jeho matku a sestru.
+Zanedlouho je však Vito zatčen za onu krádež přídělových lístků a je odsouzen na 10 let do vězení. Zde potká O'Neilla, který je ve vězení právě kvůli Vitovi, ale díky této události se také spřátelí s mužem jménem Leo Galante. Díky němu se Vito dostane do skupiny rváčů, která pořádá souboje s jinými skupinami, např. čínskou, černošskou nebo irskou. Peppé, hlavní člen Vitovy skupiny, se má utkat s O'Neillem, Irové jej však v přesile napadnou a zmlátí ještě před utkáním, aby nemohl bojovat a Peppému zlomí ruku. Vitovi se naskytne možnost vrátit to O'Neillovi samotnému v prázdné tělocvičně; tento souboj již O'Neill nepřežije. Vito ho zabije jeho vlastním nožem. Během Vitova pobytu ve vězení také zemře jeho matka a jeho sestra Francesca se vdá za jistého Ira.
+Po 6 letech je Vito (díky vlivu Lea Galanteho) předčasně propuštěn. Píšou se 50. léta a mnohé se změnilo. Joe Vita rád vidí a pronajímá mu byt. Také představí Vita Eddiemu Scarpovi, který je Joeovým novým nadřízeným. Posléze se Vito od Joea dozvídá, že oba dva Clementeho rodina zradila a právě Clementeho rodina Vita udala, a Joe proto přešel k rodině Falcone.
+Poté se Vito seznámí také s Martym, mladíkem, jenž se touží stát mafiánem. Společně s Joem dělá Vito lehkou, ale výdělečnou práci - prodává po městě kradené cigarety. Prodej se však zvrtne, jelikož jeden gang ze čtvrti, kde chtějí Vito s Joem vydělávat, si přijde pro svůj podíl. Následuje přestřelka, při níž je sice několik členů gangu zastřeleno, ale Vito s Joem přijdou o své zboží. Společně se Stevem, který je také napojený na klan Falcone a jeho muže, se však gangsterům krvavě pomstí, když zapálí jejich hospodu a poté je všechny zastřelí ve staré slévárně.
+V restauraci Maltese Falcon se Vito poprvé setká se samotným Carlem Falconem, Donem rodiny Falcone. Zde dostane úkol zachránit tři Falconovy lidi, kteří byli zajati Clementeho rodinou (konkrétně Gurinem, který Vita kdysi nechal zatknout). Vito sleduje Lucu a zjistí, že zajatci jsou drženi, krvavě mučeni a vyslýcháni na Clementeho jatkách. Jeden z Falconeho lidí je sice již mrtev, zbylé dva však Vito zachrání a Luca je pomalu a bolestivě zabit již zmíněným přeživším. Po této akci si vyslouží takový respekt, že jej chce Falcone spolu s Joem přibrat do rodiny. Zároveň se do rodiny dostane díky Galantemu, který jej Falconemu doporučil. Konečně je z Vita „Někdo“.
+Vito zbohatne a vydobude si úctu. V té době dostane společně s Joem přes Eddieho další úkol - atentát na samotného Alberta Clementeho, který je Donem rodiny, jež brání té Falconeho k ovládnutí takřka celého města. Joe na akci přibere i Martyho. Mají připravený rafinovaný plán, jak Clementeho zabít - umístit do místnosti, kde se má konat konference rodiny, bombu, a poté ji z bezpečí odpálit. To se sice povede, ale bomba vybuchne zrovna v době, kdy Clemente v místnosti na okamžik není. Joe a Vito se pustí do jeho pronásledování, při kterém sice Clemente zemře, je však při něm zabit Marty, což zvlášť Joe nese velmi těžce. Večer jde zapít Martyho smrt do hospody Lone Star a opije se. Vito jede za ním, aby ho mohl odvézt domů, ale při odchodu z hospody opilý Joe omylem zastřelí barmana, z čehož naštěstí nemají větší problémy.
+Krátce po atentátu navštíví Vita Henry, který díky smrti svého šéfa a pádu rodiny Clemente ztratil práci. Vito jej tedy představí Eddiemu. Eddie Henryho přijme do party, ale jako první úkol mu dá zavraždit Lea Galanteho, jenž je consiglierim poslední konkurenční rodiny, rodiny Franka Vinciho. Vito se rozhodne Lea zachránit, neboť je to jeho dobrý přítel a právě díky němu se Vito vůbec dostal z vězení. Henry Lea sice nezabije, protože ho předtím Vito varuje, přesto je Henry do rodiny přijat. Leo odchází z Empire Bay.
+Při návratu domů potká Vito před svým domem plačící sestru Francescu. Ta mu řekne že její manžel Eric je ochlasta a bije ji. Vito proto vtrhne na večírek, kterého se Eric účastní, a zmlátí ho. Eric se sice polepší, ale Francesca vlastního bratra zavrhne.
+Následující noc vypálí Irové Vitovi dům, zřejmě kvůli vraždě O'Neilla. Vito jim naštěstí unikne a dostane se k Joeovi. Společně napadnou irský bar Hill of Tara, celý jej vystřílí a zabijí vůdce irského gangu, O'Neillova nástupce.
+Vito je bez peněz i veškerého majetku, ale Joe mu přenechá starý byt po zesnulém Martym. Zanedlouho se oběma ozve Henry, který pro ně má připraven velmi dobrý kšeft. Jde o nakoupení a rozprodání drog. Vito i Joe souhlasí, přestože dobře ví, že kdyby to zjistil Falcone (tedy hlavně Vinci) tak jim to jen tak neprojde. Vypůjčí si proto u lichváře Bruna 35 tisíc dolarů a zakoupí od čínského mafiána Wonga drogy. Je na ně ale přichystána léčka, objeví se falešní policisté. Trojice však šťastně vyvázne a podaří se jí drogy rozprodat a vydělat obrovský balík.
+Stane se však to, čeho se Henry obával - Carlo Falcone na jejich kšeft přijde a dožaduje se svého podílu (samotný Falcone totiž jel v drogách). Henry se chce s Vitem a Joem setkat v parku a projednat, co budou dělat dále; když však na místo schůzky oba dorazí, uvidí skupinu Číňanů, jež v kaluži krve mordují Henryho sekáčky na maso. Spustí se přestřelka, většina čínských gangsterů však stihne uprchnout a Henry je mrtvý. Vito s Joem si ale všimnou, že vrahy vedl Wong, jenž jim prodal drogy, a pustí se do jeho pronásledování. To je zavede až do Čínské čtvrti do Wongovy restaurace Rudý drak. Vito s Joem celý podnik vystřílí a zabijí i Wonga, který ještě před smrtí tvrdí, že Henry byl práskač a informátor Federální policie. Peníze z prodeje drog, které měl mít Henry na schůzce u sebe, a které mu Číňané sebrali, jsou pryč.
+Joe s Vitem jsou ve velké šlamastice, od Eddieho však dostanou jednoduchou, ale dobře placenou práci - zabití jistého člověka, který zradil celou svou rodinu. Tím člověkem je Thomas Angelo, hlavní hrdina prvního dílu hry, který celou rodinu Dona Ennia Salieriho udal Federálům a scéna, ve které ho Vito s Joem luparou usmrtí se slovy „Pozdravuje Vás pan Salieri" je také závěrečnou scénou prvního dílu.
+Přestože si touto špinavou prací něco málo vydělali, potřebují Vito s Joem ještě mnoho peněz, aby mohli splatit dluh Brunovi. Vito proto navštíví Dereka; ten má problém se stávkujícími dělníky, takže slíbí Vitovi odměnu za to, že mu je pomůže zastrašit. Mezi dělníky a vůdci přístavu se strhne horlivá hádka, při níž jeden z dělníků Vitovi prozradí, že to byl právě Derek, kdo nechal utopit Vitova otce. Derek to sice popírá, ale Vito poté, co se Steve prozradí, dělníkům uvěří. V přestřelce, která se strhne, pak Vito Dereka i jeho pravou ruku Steva zastřelí, a k tomu získá jeho nemalé úspory.
+Když Vito nasbírá svoji polovinu peněz na splacení dluhu, jde za Joem. Ten však není doma. Vito ho hledá všude po městě; nakonec se zastaví v restauraci Mona Lisa patřící rodině Vinci, zde je však zajat. Na střeše mrakodrapu je pak i s Joem šéfem rodiny vyslýchán kvůli záležitosti s drogami, kvůli které proteklo více krve, než si kdokoli původně dokázal představit. Oběma se však podaří ze zajetí dostat a prostřílet se na svobodu. Vito pak odveze polomrtvého Joa k lékaři El Grecovi a následně jde se svými i Joeovými úsporami splatit dluh Brunovi. Po úspěšném vrácení peněz se také dozví, že právě u Bruna se zadlužil i jeho otec.
+Další den Vitovi zavolá Eddie. Carlo se s ním prý chce setkat ve své observatoři. Po cestě tam však Vita odchytne Galante (jehož návratem do města je Vito pochopitelně velmi překvapen). Vito se od Lea dozví, že Henry skutečně byl práskač, a že Joeovi s Vitem, kteří masakrem v čínské čtvrti rozpoutali válku rodin, jež zachvátila celé město, jdou po krku doslova všichni. Od Lea však dostává Vito ještě jednu šanci, jak to všechno odčinit - zabít Carla Falconeho. Jen co přijede do observatoře, chtějí po něm Falconeho lidé zbraň. Strhne se malá přestřelka. Nakonec se Vito probojuje až do hlavního sálu, kde spatří Carla. Chce jej samozřejmě zastřelit, náhle se však objeví Joe, který zase dostal poslední šanci od Carla a přidal se na jeho stranu. Carlo Joeovi nařídí, aby Vita zastřelil, ten však na poslední chvíli svůj revolver obrátí proti Carlovi. Po krátké přestřelce je nakonec Falcone Vitem několikrát postřelen a nakonec i zabit. Jeho poslední slova byla „Jdi do hajzlu".
+Před planetáriem již na Vita s Joem čeká Leo Galante. Leo navrhne, že Falconeho smrt půjdou oslavit do bordelu. Vito nastoupí k němu do auta, Joe nastoupí do druhého. Chvíli jedou oba automobily pospolu, ale později se auto, v němž jede Joe, oddělí. Vita to silně znepokojí. Hra končí Galanteho větou, kterou vysvětlí, proč nejede Joe s nimi: „Promiň, chlapče. Joe nebyl součástí naší dohody".
+
+
+== Joeův osud ==
+Jednou z mnoha záhad hry je i osud Vitova přítele Joea Barbara.
+Ten není jasný, protože hra končí jeho nástupem do auta a oddělením od Vita.
+Na toto téma existuje několik teorií:
+
+Joe zemřel buď rukou mužů z rodiny Franka Vinciho (Napovídá tomu dialog Vita a Lea Galanteho na konci poslední kapitoly: Vito: „Hej, hej! Co se děje? Kam berou Joea!?" (Nejvíce pravděpodobná možnost)Leo: „Promiň, chlapče. Joe nebyl součástí naší dohody..."), nebo rukou Tongů.
+
+Joe přežil a stal se šoférem a ochrankářem Lea Galanteho (říká se, že řidič Lea Galanteho je Joe, protože vypadal stejně jako on). (Malá pravděpodobnost)
+Není sice 100% důkazem že Joe přežil, ale jeho textury hlavy v Mafii 2 se shodují s Mafií 3 akorát má použitých více polygonů.
+
+
+== Město ==
+Příběh se odehrává ve fiktivním americkém přístavním městě Empire Bay, jehož předlohou se staly San Francisco a New York, s vlivy Chicaga a Detroitu. Na ploše přibližně 16 čtverečních kilometrů může hráč potkat známé monumenty nového světa - např. Woolworth Building, Empire State Building, Brooklyn Bridge nebo Golden Gate Bridge. Dále je Empire Bay rozděleno na několik městských čtvrtí, z nichž každá má svou charakteristickou kulturu a zajímavosti. Hráč tak může navštívit například Čínskou nebo Italskou čtvrť, ve kterých organizovaný zločin jen kvete. Hráč může rovněž navštívit několik desítek interiérů, a to bez jakéhokoliv načítání, při pobytu v interiérech tedy bude moci sledovat, co se právě děje v exteriérech a naopak.
+Ve městě je asi 25 000 stromů a keřů, 100 telefonních budek, 14 000 interaktivních objektů (plot, který jde zničit, odpadkový koš, jenž jde převrátit) a 3000 statických objektů.
+
+
+=== Lokace ===
+Město i jednotlivé lokace se během hry mění. Jako příklad je často uváděn Joeův byt. Ve hře projde celkem třemi změnami.
+40. léta - je konec války a v USA je skličující čas. Byt vládne domáckými barvami a je vybaven starým nábytkem.
+50. léta - Začátek - Po vstupu světa do padesátých let, všechno vypadá zajímavěji. Lidé začínají vyjadřovat sebe sama. Joe nakupuje nové a drahé kusy nábytku - nová televize.
+50. léta - Průběh - Joe vkládá všechny peníze do realizace vlastních snů. Byt znázorňuje nabytý majetek. Naneštěstí také jeho trochu excentrickou povahu.
+
+
+== Postavy ==
+Hlavní postavou v Mafii 2 je mladý Vito Scaletta, jenž bojoval ve druhé světové válce. Jeho dlouholetý přítel, Joe Barbaro, mu ze začátku pomůže dostat se natrvalo z armády. Dalšími dvěma důležitými postavami jsou Henry Tomasino a Eddie Scarpa. V DLC Jimmyho zrada a Vendetta je zabiják Jimmy.
+Ve hře je přes 200 postav a průměrně práce na jedné z nich, trvaly přes dva týdny.
+
+
+=== Postavy ze hry ===
+
+
+==== Vito ====
+Vittorio Antonio Scaletta je hlavní postava hry. Narodil se v Sicílii v roce 1925, v dětství se přistěhoval s rodiči a sestrou Francescou do USA, kvůli práci a tak zvaný "Americký sen". Vito asi tak v šesti letech potkal Joa Barbaru a začali vykrádat auta a obchody. V roce 1943 ho ale chytili a poslali jako výsadkáře do Itálie (Operace Husky). Následně byl zraněn a s vyznamenáními poslán na měsíc do Spojených států. Sešel se s Joem a ten mu sehnal propouštěcí doklady z armády. Přes Joa se Vito také seznámil s mafiánem Henrym. Po několika akcích pro něj je však Vito zatčen policií a poslán na 10 let do vězení. Ve vězení potká Lea Galanteho, díky kterému se dostane do rváčského klubu. Díky Leově vlivu je ve vězení nakonec jen šest let. Po propuštění se spolu s Joem přidává do rodiny Carla Falcona. Během práce pro něj se také pomstí rodině Clemente, která jej zradila a nechala zatknout. Po úspěšném atentátu na dona Clementeho se k Vitovi a Joeovi přidá ještě Henry, se kterým začnou za Falconeho zády kšeftovat s drogami. Falcone na to přijde a sebere jim peníze. To ale není všechno, Henry je brutálním způsobem zabit Číňany a kvůli jeho pomstě nakonec vyvolají Vito s Joem v celém městě obrovskou válku mezi mafiemi. Joea kvůli tomu zajme a mučí Don Vinci a vyslýchá ho. Vito mu pomůže utéct. Poté se znovu setká s Leem Galantem. Ten Vita upozorní na to, že on a Joe jsou na černé listině všech mafiánu, ale dá mu také poslední šanci, jak to všechno odčinit - zabít Carla Falcona. Vito svého šéfa tedy zastřelí a zůstane naživu. Výška 184 cm
+
+
+==== Joe ====
+Joe Barbaro je nejlepší kamarád Vita. Už zamlada s Vitem vykrádal auta a obchody, a poté, co byl Vito odveden do mise husky, začal pracovat pro mafii, konkrétně rodinu Clemente. Poté, co se Vito vrátí z války,Joe chce přibrat do svých kšeftů, po jedné z akcí je však Vito zatčen a díky zradě od Clementevo rodiny poslán do vězení. Během Vitova pobytu zde Joe přestoupí k rodině Falcone, a když se Vito vrátí, tak oba opět pracují u této rodiny spolu. Oba dva se dostanou do mafie, nicméně začnou si zahrávat s obchodem s drogami a nakonec rozpoutají válku, jež uchvátí celé město. Joe je posléze zajat a mučen rodinou Vinci, ale Vito jej osvobodí. Poté se, ve Vitově nepřítomnosti, za Joem zastaví Falcone, a nabídne mu odpuštění jeho zločinů proti mafii, za to, že jej bude Joe plnit jejich přání a zabije Vita. Když se ale Joe setká s Vitem a má ho zabít, Vito Joa přemluví, aby spolu zabili Falcona. To se jim také podaří, po zastřelení Dona Falconeho však Joe nastoupí do jednoho z aut Lea Galanteho, které jej odveze neznámo kam. Muži, kteří s Joem společně jeli v autě ho poté s největší pravděpodobností zabili. Existuje ale spekulace, že Joe přežil a je Galanteho řidič v Mafii 3. Na konci této hry je spatřena postava velmi podobná Joeovi, když Galante přijede za Lincolnem.
+
+
+==== Henry ====
+Henry Tomasino hraje roli Vitova a Joeova dobrého kamaráda. Původně pracoval pro Clementeho, ale po pádu jeho mafie se nakonec na zkoušku přidal k Falconemu, jemuž slouží i Vito s Joem. Od Falconeho dostal úkol zabít Lea Galanteho, což se mu sice díky Vitovi nepodařilo, ale stejně byl do mafie přijat. Spolu s Vitem a Joem začne obchodovat s drogami, pro což je později také čínskou mafií brutálně zavražděn - uprostřed parku za denního světla je rozsekán sekáčky na kung pao (maso). Důvodem jeho zavraždění bylo to, že byl označen za federálního agenta (práskače). Možnost, že by Henry byl opravdu práskač, vyvrátil sám autor scénáře, Daniel Vávra.
+
+
+==== Eddie ====
+Eddie Scarpa je jedním z nejdůležitějších členů rodiny Falcone a Joeův a Vitův nadřízený. Má dost ostrý smysl pro humor a velice rád a velice často se opije, i když je potom jak utržený z řetězu a zapomíná na věci, které má udělat. Po smrti Carla Falconeho je horkým kandidátem na nového šéfa rodiny Falcone.
+
+
+==== Leo ====
+Leo Galante je consiglierem rodiny Vinci. Za podvody v hazardních hrách byl na nedlouho poslán do vězení, kde se setkal s Vitem. Stal se zde Vitovým patronem a něco jako otcem. Po svém propuštění také zajistil Vitovi zkrácení trestu, později také Vita dohodil Falconemu. Po atentátu na Alberta Clementeho dostal Henry Tomasino za úkol Lea zabít. Leo však přežil díky pevnému přátelství Vita a Henryho a utekl do Lost Heaven. Po vypuknutí války mezi gangy se do Empire Bay vrátil, vyhledal Vita a dal mu nabídku. Buď smrt jako trest ze spáchané zločiny proti mafii, nebo život, pokud Vito zabije Carla Falconeho. Vražda se nakonec podaří a mafie Lea Galanteho tak ovládne celé město.
+
+
+==== Frankie ====
+Francesca Scalettová je Vitova sestra. Je starší než Vito. Vystudovala  Střední školu s maturitou. Pracuje jako účetní ve Společnosti Trago Oil Co. Francesca Vita Navštěvovala ve vězení. Její manžel, irský pouliční grázl Eric Reilly, ji podváděl a bil, proto ho Vito zmlátil a pohrozil mu smrtí. Francesca pak Vitovi řekla, že ho nepoznává, a že ho nechce už nikdy vidět. V českém znění ji dabovala Petra Hřebíčková.
+
+
+==== Marty ====
+Martin Santorelli byl Joeův kamarád. Když byli Vito s Joem malí, tak se kolem nich Marty motal, ale oni ho nechtěli brát mezi sebe. Později, v době, kdy byl Vito ve vězení, ho Joe vzal pod svá křídla a začal jej zaučovat na mafiána. Marty se s Vitem a Joem zúčastní několika akcí, při jedné z nich, atentátu na Alberta Clementeho, je však zastřelen.
+
+
+==== Luca ====
+Luca Gurino je jedním z nejvýznamnějších členů rodiny Clemente. Za vstup Vita a Joa do mafie požadoval 5000 dolarů, což byla ovšem nehoráznost, neboť za přijetí do rodiny se podle nepsaných zákonů neplatí nic. Byl nadřízeným Henryho a přes něj úkoloval Vita a Joa. Díky jednomu z jeho rozkazů je Vito zatčen. Luca jej však nechá hnít ve vězení. Po návratu Vita z vězení se Luca zviditelní tím, že zajme a mučí na jatkách tři lidi Carla Falcona (Harveyho Beanse - účetního Carla Falcona, a dva jeho "bodyguardy" Tonyho Ballse a Frankieho Micka). Micka nakonec umučí k smrti, ale Ballse a Beanse se Vitovi podaří zachránit. Ze msty za Mickovu smrt pak Balls s Beansem Lucu na jatkách brutálně umučí a pravděpodobně i zabije (i když to ve hře není nějak zvýrazněno).
+
+
+==== Carlo Falcone ====
+Carlo Falcone je šéfem jedné ze tří nejmocnějších rodin ve městě a majitelem restaurace Maltese Falcon a empirebayské observatoře. Za zády svého spojence, Franka Vinciho, tajně obchodoval s drogami, pro což nechal zabít Alberta Clementeho, čímž zároveň přispěl k rozpoutání obrovské války. Nechá zabít Vita, jenž je členem jeho mafie, nakonec je ale zrazen Joem a ten ho s Vitem zastřelí.
+
+
+==== Frank Vinci ====
+Frank Vinci je šéfem jedné ze tří nejmocnějších rodin ve městě a majitel restaurace Mona Lisa. Je známý dodržováním starých tradic a velkým odporem k drogám. Původně byl spojencem Carla Falcona, později zajal dva Falconeho mafiány, Vita a Joa, a vyslýchal je kvůli válce, kterou rozpoutali.
+
+
+==== Alberto Clemente ====
+Alberto Clemente je šéfem jedné ze tří nejmocnější rodin ve městě a majitel restaurace Freddyho bar. Kvůli tomu, že se Alberto snaží přimíchat do kšeftů s drogami Falconeho rodiny, na něj Carlo Falcone nechá spáchat atentát, který provádí Vito s Joem. Alberto sice přežije výbuch na něj směřované bomby, je však zabit po automobilové honičce - Joe ho zblízka rozstřílí Thompsonem 1928.
+
+
+==== Že Jun Wong ====
+Wong je jedním z nejvýznamnějších členů čínské mafie a majitel firmy Mořský dar a restaurace Rudý drak. Prodá Henrymu, Vitovi a Joeovi drogy, nedlouho poté nechá Henryho brutálně zabít. V pomstě je pak Vitem a Joem zastřelen.
+
+
+==== Pan Ču ====
+Pan Ču je vůbec nejvyšším vůdcem čínské mafiánské sítě, která se nazývá Triáda. Společně s Leem zosnuje prostřednictvím Vita atentát na Carla Falcona.
+
+
+==== Mike Bruski ====
+Šrotař. Dává Vitovi první úkoly. Je to rváč, který se porval na dostizích, kde chtěl zpět své peníze, jinak je to klidný a nápomocný muž. V DLC vám může nabídnout práci.
+
+
+==== Další postavy ====
+Bruno Levine - Židovský lichvář. Zadlužil se u něj Vitův otec. Později si u něj půjčí peníze i Vito s Henrym a Joem.
+Frederico Pappalardo - Mafián, který šéfuje empirebayskému přístavu a vládne zde železnou rukou. Vito ho zastřelí, jakmile zjistí, že nechal zabít jeho otce.
+Stephen "Steve" Coyne - Poskok Dereka Pappalarda jeho typickou hláškou je: "Ano, šéfe.", nebo: "Jasně, Dereku." Po odhalení kruté pravdy o Vitově otci je Vitem zastřelen.
+Brian O'Neill - Irský zloděj. Vito s Joem ho dostali do vězení. Když se tam dostane i Vito, Brian se ho pokusí zabít, ale zemře při tom sám (Vito mu podřízne hrdlo).
+Mickey Desmond - Bratranec Briana O'Neilla, kterého se pokusí pomstít. Nakonec je ale sám při odvetné akci Vitem zabit.
+Maria Scalettová - Vitova matka. Zemře během jeho pobytu ve vězení.
+Harry Marsden III - Válečný hrdina stejně jako Vito, je obchodník Podobný Vincenzovi z Mafia: The City of Lost Heaven, jelikož stejně jako on sežene vše od špuntovky po kanón.
+
+
+=== Dabing ===
+V první řadě je nutné podotknout, že díky dabingu se Mafia 2 "proslavila" jako hra s nejvíce sprostými slovy na světě (předčila i GTA). V kontextu hry to ovšem nevyznívá tak nepřijatelně.
+Společnost Cenega Czech coby český distributor hry potvrdila, že na domácí trh uvede kompletní českou lokalizaci. Lokalizovaná verze hry je pro PC, Xbox 360 a dokonce i pro PlayStation 3.
+Cenega Czech také nedávno[kdy?] uvolnila informaci, že verze s českým dabingem má mít v sobě zabudovaný i anglický dabing, nejde ale s anglickým dabingem použít české titulky.
+
+
+== Hudba ==
+Hudba je ve hře velmi důležitým prvkem pro navození atmosféry. 2K Games se nechalo slyšet, že právě Mafia 2 je titulem, který má zatím největší soundtrack ze všech jejích dosavadních titulů. Setkáme se jak s dobovou hudbou počátků dvacátého století, tak s originálními díly přímo z dílen 2K Czech, které v listopadu 2009 začal nahrávat Pražský filharmonický orchestr. Hlavním skladatelem a autorem hudby v 2K Czech je Matúš Široký, který na ozvučení pracuje společně s externistou, kterým je Adam Koruc. Celkem nahráli přes 3 hodiny orchestrální hudby.
+Ve hře jsou tři rádia (Empire Central Radio, Empire Classic, Delta Radio), které mají mít přes sto skladeb a písní, ze čtyřicátých a padesátých let. Rádia se vyskytují nejen v autech, ale i v domácnostech, garážích atd. V soundtracku je pak přes 200 dobových skladeb, např. Boom Boom od Johna Lee Hookera, Rave On od Buddy Hollyho, Ain't that a Kick in the Head' od Deana Martina, Mambo Italiano od Rosemary Clooney, It Don't Mean a Thing od Dukea Ellingtona, Long tall sally od Little Richarda.
+
+
+== Sběratelská edice ==
+26. května 2010 byla oznámena sběratelská edice ke hře. Tato edice není dostupná v české lokalizaci. Edice obsahuje:
+
+Železný obal SteelBook hard case s vyraženým logem
+Made Man Pack: Volný přístup ke stahovatelnému obsahu (obsahující několik luxusních aut, hot rodů a oblečení)
+Hardcover Art Book: Sto-stránková kniha s nákresy ve tvrdých deskách ukazující umělecký design hry
+Mafia II Orchestral Soundtrack: Skladby nahrané pražským filharmonickým orchestrem
+Mapu Empire Bay (odolnou)
+
+
+== Stahovatelný obsah ==
+Ke hře, stejně jako k mnoha dalším hrám, bude postupně dodáván dodatečně stahovatelný obsah. Budou to další auta a oblečení. Malé DLC jsou přidávány podle toho, ve kterém obchodě si hru hráč pořídil.
+
+
+=== Malé DLC ===
+Vegas Pack: Dvě auta a dva obleky pro Vita.
+Greaser Pack: Dva hot rod speedstery a dva nové obleky pro Vita, jeden s koženou bundou a těžkými botami a kožené závodní oblečení.
+War Hero Pack: Dvě vozidla ve vojenském stylu a dva nové, armádou inspirované, obleky obsahující uniformu a maskáče.
+Renegade Pack: Dvě nová auta, malé sportovní kupé a hot rod. Kožené a plátěné obleky pro Vita (podobné jako ve filmu Rebel bez Příčiny).
+Made Man Pack: Dva luxusní obleky a dvě luxusní auta.
+
+
+=== Obyčejné DLC ===
+Betrayal of Jimmy nebo v češtině Zrada Jimmyho je DLC, ve kterém je za hlavní postavu místo Vita Scaletty postava Jimmyho.
+Jimmy's Vendetta nebo v češtině Jimmyho vendeta je DLC, ve kterém je hlavním hrdinou Jimmy. Toto DLC je zaměřeno především na arkádový styl a akci. Vyšlo v první polovině září roku 2010, pro PlayStation Network, Xbox Live Marketplace a Steam.
+Joe's Adventures nebo v češtině Joeova dobrodružství je DLC, které se věnuje především postavě Joea a příběhu v období původní hry mezi "první - zimní" a "druhou - letní" částí. DLC "dodává" do hry několik nových lokací a příběh viděný očima Joea. Toto DLC vyšlo pro PC, Xbox 360 a PlayStation 3 na podzim roku 2010.
+
+
+=== Kompilace ===
+Mafia II DLC Pack je kompilace DLC pro Mafii obsahující všechny tři DLC a to: Zrada Jimmyho, Jimmyho Vendeta a Joeova dobrodružství. Tuto kompilaci si individuálně uvede na trh Cenega.
+
+
+== Verze ==
+
+
+=== Verze pro Playstation 3 ===
+15. června 2010 Sony na E3 oznámila, že vlastníci Playstationové verze hry, budou moci zdarma stahovat bonusový obsah po vydání. Pro PlayStation 3 se dokonce vyrobí verze pro český trh, která bude kompletně nadabovaná.
+
+
+=== Demoverze ===
+Demoverze byla uvolněna 10. srpna 2010 pro PC, Xbox (pouze majitelé Gold účtu na Xbox Live) a PlayStation 3 (pouze pro majitele PlayStation Plus), pro ostatní (zbytek majitelů Xboxu a PS3) byla demoverze uvolněna 11. srpna 2010. Hratelná ukázka obsahuje misi Buzzsaw (Pila), která je pátou misí kampaně. V demu je zvláštní to, že ačkoliv v plné verzi bude tato mise umístěna do zimy 1945, demo se odehrává v létě 1950. Demo je nyní volně přístupné na Steamu.
+
+
+==== Děj mise ====
+Do vily v Greenfieldu Vitovi zavolá jeho kamarád Joe Barbaro. Pošle Vita do bytu naproti lihovaru, kde se má zbavit problémové osoby. Ve skříni si může zvolit mezi koženou bundou, oblekem na míru nebo košilí. Hned poté, co vyjde z domu, má deset minut na to, aby dojel na místo určení, případně na průzkum města. Po doražení do bytu začnete vykládat s Henrym zatímco Joe chrápe. Potom dojede Špekoun a vy popadnete kulomet MG-42 a snažíte se ho zabít.
+V demu je okolo čtyřiceti skladeb:
+
+
+=== Mafia II: Special Extended Edition ===
+V prosinci roku 2010 vyšla v České republice, Polsku a v Rusku rozšířená edice. Obsahovala hru a všechny obyčejné a malé DLC.
+
+
+=== Mafia II: Directors Cut Edition ===
+Tato edice má naprosto stejný obsah jako Extended Edition. Edice vyšla jak pro konzole PlayStation 3, Xbox 360 tak i pro osobní počítače. Tato edice vychází pro Playstation pod hlavičkou Greatest Hits a pro Xbox 360 pod hlavičkou Platinum Hits, a proto se edice jmenuje Mafia 2: Greatest Hits pro Playstation 3 a Mafia 2: Platinum Hits pro Xbox 360 (pro PC se jmenuje edice Mafia II: Directors Cut Edition).
+
+
+== Marketing ==
+
+S blížícím se vydáním se očekával narůstající počet marketingových akcí či materiálů, jak je to ostatně u 2K a 2K Games zvykem. Marketing byl také hlavní důvod odkladu vydání hry. Konkrétně v březnu 2010 vycházelo mnoho kvalitních her, a proto by hra zapadla. V červnu byla moc drahá reklama v Evropě, a to díky mistrovství světa ve fotbale, a tak hra vyšla až v srpnu 2010, po obvyklé mediální kampani. Stejnými problémy trpěl i předchozí díl. V seznamu níže je uveden výběr videí, jež byly uveřejněny.
+
+
+=== Pro veřejnost ===
+První trailer - Debut Trailer nebo také Teaser vyšel v srpnu 2007, v podstatě k podpoření oznámení hry. Trailer začíná večeří Šéfa (nebo Dona) DeLuca, který večeří s Henrym Tomasinem, Joem Barbarem a Vitem Scalettou, hráčovým avatarem. "Minulou noc jsem se díval na televizi. Byl tam jeden chlápek. Znáte vegetariány. Tihle šílenci mleli nějaké kraviny o tom, že je špatné zabíjet zvířata pro jídlo. Jsem pro zabíjení, jestli je pro to dobrý důvod. A tenhle steak je rozhodně dobrý důvod." začíná DeLuca,"Tak, co ty Vito? Jsi proti zabíjení zvířat? A,"na chvilku se odmlčí,"co zabíjení lidských zvířat?" Poté následuje sestřih akčních scén. Další scéna se odehrává ve skladišti. Nějaký tlouštík se plazí po podlaze a křičí: "Prosím! Mám ženu a děti!" "To sis měl rozmyslet dřív..." řekne Henry Tomasino, ozve se výstřel a objeví se logo hry. Trailer nicméně ještě nekončí. Poslední scéna se podobá scéně z filmu Mafiáni (Godfellas). Henry Tomasino, Joe Barbara a Vito Scaletta jedou autem. V dálce za okýnkem Joeho se na malý okamžik objeví policista pokutujícího chodce. V traileru se objevila píseň "Oh Marie" od Louise Primy.Druhý trailer - Holiday Trailer I byl vypuštěn v Spike VGA show 14. prosince 2008. V první scéně je zobrazen zasněžený kostel ve městě Empire Bay. Všímaví lidé si dokážou všimnout procházejícího, a poté uhýbajícího chodce vlevo dole. Poté následuje scéna v kostele. Do toho hraje koleda. Poté opět následuje sestřih akčních scén. Zase se objevuje logo hry. Následuje scéna z nastupující matkou Vita do taxíku a nasedajícím Vitem do auta s Henrym Tomasinem, Joem Barbarem a neznámým mužem. V traileru se objevila píseň "Long Tall Sally" od Little Richarda. Rozšířená verze traileru vyšla 15. ledna a obsahovala navíc třicet sekund videa. V obyčejné verzi nebyla scéna s nastupujícím Vitem.... Rozšířená verze se jmenovala Holiday Trailer II.První nahrávka gameplaye (first gameplay footage) byl zveřejněn na stránce gamespot.com 17. dubna 2009, jako část rozhovoru s producentem hry Denby Gracem. Video zobrazovalo řidičské a střelecké aspekty, stejně jako fyzikální engine. Rozhovor byl ale později odstraněn.Třetí trailer - E3 2009 byl uploadován na webové stránky 28. května 2009. Ukazuje Vita, Joeho a Henryho mluvícího o zabití "Fat Mana (tlouštík) z druhé strany řeky". Tento trailer je mnohem temnější a kostrbatější než předchozí trailery. Má ukázat temnější stranu "Mafiánského" života. V průběhu traileru mu Vito rozstřílí těžkým kulometem opancéřované auto a dobijí se do palírny, kde se ukrývá. Tento trailer byl kupodivu také vydán v české verzi.E3 Demo plným názvem E3 demonstration of Mafia II nebo také Mafia II Walk-Through Video 1, zveřejněné 15. července 2009 ukazuje kompletně celou misi Buzzsaw, i s příběhovými ukázkami. Konkrétně obsahuje jízdu zasněženým městem, poté ukázku při čekání na Fat mana, pak přestřelku v palírně, zastřelení Fat mana a postřelení Henryho a útěk před policejními vozy.Boom boom boom trailer je trailer, který byl uveřejněn 5. března 2010 exkluzivně pro Gametrailers.com. Video obsahuje sestřih krátkých cut-scén a gameplaye.GDC Gameplay video je gameplayové video, které vyšlo 10. března 2010 a zobrazuje jízdu sportovním autem, rozstřílení baru a přestřelku v ocelárně. Trailer zobrazuje všechny gameplayové prvky jako je počet nábojů, radar, rychlost atd.The Buzzsaw - jiné gameplayové video pocházející z této mise. Video zobrazuje průchod touto misí a osud "Fat mana".PhysX developer's diary - video zobrazující grafické výdobytky, jako je např. odpadající úlomky, vlající kabát za postavou běžící po ulici nebo možnost prostřelit autům pneumatiky. Ve videu je řečeno, že hra hardwarově podporuje PhysX na grafických kartách NVIDIA, takže některé particle efekty budou počítány přes PhysX. Video je importováno na stránkách games.tiscali.cz Archivováno 30. 5. 2010 na Wayback Machine.Made man trailer - tento trailer uvolněný na E3 2010, v červnu 2010. Ukazuje několik nových příběhových ukázek a kromě toho i několik už uveřejněných. V sestřihu jde poznat přijímací rituál Vita u jedné z rodin.Kick in the head - tento trailer zobrazuje veškeré herní činnosti, které se ve hře provádějí. Jednotlivé záběry jsou spojeny v jeden působivými střihy. Tento trailer byl uvolněn exkluzivně pro Gametrailer.com 31. července 2010.All In A Day's Work Gameplay toto gameplayové video obsahuje několik přestřelek, jízdu v autě, plížení, úvodní chůzi po městě, atd. Jako první video ukazuje kompletní interface hry (radary v autě, nepřátele na radaru, atd.). Toto video bylo uvolněno 2. srpna 2010.Boom boom boom trailer s českým dabingem byl uveřejněn 10. srpna 2010 a byl obsažen v českém demu Mafie 2.Mafia Clothing and Car Packs Trailer ukazuje čtyři malé DLC a to, co budou obsahovat. Tento trailer byl uveřejněn 29. září 2010, k propagaci těchto balíčků.Joe's Adventures - toto video je určené k propagaci DLC Joe's Adventures a zobrazuje ukázky ze začátku DLC. Tento trailer byl uveřejněn 23. října 2010.Mafia II: Joe's Adventures - startovní trailer byl vydán k příležitosti vydání DLC Joe's Adventures 26. listopadu 2010.
+
+
+=== Čtveřice videí na oficiálních stránkách ===
+The Art Of Persuasion je první ze čtyř uploadovaných videí na oficiální stránky, 1. června 2009 a obsahuje skladbu "Mercy, Mr Percy" od zpěvačky Varetty Dillardové. Video je rozděleno na tři části. Části od sebe odděluje profil postavy (na profilu je napsáno základní info o postavě a možnost pustit si hlášku). První a druhou odděluje profil Vita a druhou a třetí odděluje profil Joeho. Tato funkce je pouze na oficiálních stránkáchThe Tools of the Trade je druhé ze čtyř videí na oficiálních stránkách, který se objevilo 11. června 2010. Video je opět rozděleno na tři části, které oddělují profil postavy Henryho Tomasina (syn advokáta spojovaného s Mafií, unikl v roce 1931 před Mussolinovým honem na Mafii, v Empire Bay je pod ochranou Alberta Clementa, starého rodinného přítele) a auta Shubert Beverly (162 koňských sil, max. rychlost 102 mil za hodinu, váha 3450 liber). Klikáním na ostatní auta v tomto profilu, jde zobrazit informace o nich. Video i s profily je importováno na oficiálních stránkáchTies That Bind  ukazuje rodinu hlavního hrdiny a část jeho příjezdu. V prvním profilu je jeho zbožná matka Maria Scaletta a v druhém starší sestra Francesca Scaletta. Dále je ve videu několik záběrů na Falconeho rodinu. Toto video bylo uveřejněno 2. srpna 2010. Video a profily jsou opět na oficiálních stránkách.Earning Your Keep  zobrazuje několik příběhových sekvencí, především o dostávání se dovnitř Mafie. V profilu je uvedena Falconeho restaurace jako "jedna z luxusních restaurací a základna pro Falconeho operace". Na druhém profilu je uveden Carlo Falcone. O něm je v profilu uvedena jeho historie. Přišel do USA v roce 1913 jako Caporegime Morretiho rodiny. Po konspiraci na zabití Tomase Maorretiho se stal on vůdce jeho klanu. Jako stratég a modernista nemá čas na mafiánské tradice. Vydělal hodně peněz během prohibice a teď hledá podobný zdroj peněz, aby zůstal mír. Stejně jako předchozí video, i toto bylo uveřejněno 2. srpna 2010. Video a profily jsou opět na oficiálních stránkách.
+
+
+=== Vývojářské deníky - Mafia II Developer video series ===
+Episode 1 - Story and & Characters - první vývojářský deník ukazující důležité postavy a několik cut-scén. Ve videu dávají informace: Jack Scalici (Director of creative production - ředitel produkce), Denby Grace, Tomáš Hřebíček (režisér), Alex Cocx (asociativní producent). Video je známo tím, že když promluví Tomáš Hřebíček, tak jeho první dvě až tři slova jsou v češtině, následně je předabován, někým kdo mluví anglicky. V traileru je trochu poodkryt příběh.Episode 2 - Taking Care of Bussiness - Gunfights, Car Chases and Melee combat Ve videu se mluví o střílení, o systému zdraví a o zbraních. Je hlouběji odkryt systém krytí. Ve videu uvádějí informace: Denby Grace, Alex Cox (associate producer), Jarek Kolář (gameplay producer), Michal Janáček (game team leader), Jan Kratochvíl (senior coder), Roman Hladík (art director), Tomáš Hřebíček (animation director)Behind the Scenes - The World of Mafia II - Pohled do zákulisí - Svět Mafie II  - Ve videu je popisováno příběh (první část má být v zimě), město (z jakých měst se inspirovaly budovy), zajímavé technologické novinky (odlétávání sněhu při akceleraci), hudba (vznik rock'n'rollu, Little Richards).Behind the Scenes - The Technology of Mafia II  - Pohled do zákulisí - Technologie Mafie II V tomto videu jsou popisovány technologické vymoženosti hry. Toto video bylo uveřejněno 4. srpna 2010.Mafia 2 - Behind the Scenes: Bringing the Action to Life - Přinášení akce k životu V tomto videu se mluví o hudbě, dabingu atd.
+
+
+=== Pro komunitu ===
+Exclusive community trailer from Gamescom demo - 9. září 2009 byl uveřejněn na oficiálních stránkách uzavřený trailer pro komunitu.
+
+
+== Multiplayer ==
+Pro hru Mafia II oficiální multiplayer není, ale existují i neoficiální módy. S prvním multiplayerovým modem přišli krátce po vydání hry modaři z Modmywhat. Krátce po nich pak přišli na scénu nezávislí vývojáři, kteří 12. června 2012 vydali betaverzi svého multiplayer modu Mafie 2. Zatím[kdy?] existuje asi 7 serverů.
+
+
+== Odkazy ==
+
+
+=== Reference ===
+
+
+=== Související články ===
+Mafia: The City of Lost Heaven – první díl Mafie
+
+
+=== Externí odkazy ===
+ Obrázky, zvuky či videa k tématu Mafia II na Wikimedia Commons 
+Oficiální stránka
+Recenze hry Mafia 2 na Vytukej.cz
+2. trailer (prosinec 2008) Archivováno 17. 12. 2008 na Wayback Machine., - prodloužená verze Archivováno 22. 1. 2009 na Wayback Machine.
+Česká informativní stránka o neoficiálním multiplayeru Mafia II
+Fan stránky herní série

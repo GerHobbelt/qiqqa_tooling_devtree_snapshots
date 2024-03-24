@@ -1,0 +1,93 @@
+revision: 23490589
+title: Virus
+url: https://no.wikipedia.org/wiki/Virus
+
+
+---
+
+Virus (Viruses) er ei stor urangert biologisk gruppe som består av seks overriker med tilsammen elleve riker, samt en bolk av diverse biologiske grupper som ikke har fått et overrike å tilhøre ennå. Det knytter seg altså fortsatt stor usikkerhet til den biologiske klassifiseringen av virus. To av de mest kjente virusene i dag er trolig den historiske influensapandemien vi kaller spanskesyken (1918–1920) og den pågående (fra 2019–d.d.) koronapandemien som forårsakes av viruset SARS-CoV-2. Virus står også bak alvorlige sykdommer som meslinger, polio og humant immunsviktvirus (hiv), og mindre alvorlige sykdommer som en alminnelig forkjølelse.
+I motsetning til mye annet så er ikke virus levende organismer, men snarere litt arvestoff pakket inn i en proteinkappe. Virus må imidlertid formere seg for å ikke forsvinne. For å lage flere nye viruskopier må virus trenge inn i levende celler. Til det bruker det proteinkappen. Og virusets gener er alt det trenger for å få cellen til å lage kopier av seg selv.
+
+
+== Taksonomi ==
+Nomenklaturen for virus er uavhengig av andre biologiske nomenklaturer, og den er anerkjent som et unntak i den foreslåtte International Code of Bionomenclature (BioCode). Den internasjonale koden for virusklassifisering og nomenklatur (ICVCN) bestemmes av International Committee on Taxonomy of Viruses (ICTV). Et særtrekk er at ICTV ikke angir nivåer i klassifiseringen lavere enn på artsnivå (species).ICTV fører tilsyn med taksonomien og organiserer virus på basalnivå rangert i riker. Virusriker tilsvarer rangeringen av domene som brukes for cellulært liv, men skiller seg ved at virus innenfor et rike ikke nødvendigvis deler felles aner, og heller ikke deler rikene felles aner med hverandre. Som sådan representerer hvert virusrike minst én forekomst av virus. Innenfor hvert rike er virus gruppert sammen, basert på felles egenskaper som er bevart over tid. Tre riker med DNA-virus aksepteres: Duplodnaviria, Monodnaviria, og Varidnaviria. Klassifiseringen av RNA-virus er lang mer kompleks og skjer hovedsakelig basert på typen genom, gennummer og organisering. For øyeblikket regner man med 5 ordener og 47 familier med RNA-virus, men det finnes også mange ikke-tilordnede arter og slekter. Også viroider og RNA satelittvirus er beslektet, men forskjellig fra RNA-virus og de er heller ikke klassifisert som dette.
+
+
+== Biologi ==
+Virus (latin slim, gift) er genetiske elementer som kan reprodusere seg uavhengig av cellenes kromosomer, men er avhengig av selve cellen. Dette er fordi virus ikke har en egen metabolisme. En del forskere regner virus blant de mest tallrike «mikroorganismer» på vår planet som kan infisere alle typer av cellulære organismer. Det er et spørsmål om virus egentlig skal regnes som levende organismer eller ikke. Virologer i dag vil gjerne si at de ikke oppfyller alle kravene til mikrorganismer, siden de ikke har egen metabolisme. Formering av virus skjer via den lytiske syklus eller den lysogene syklus.
+I ekstracellulær form kalles virus for viron. I denne formen er de i stand til å trenge inn i vertscellene, for reproduksjon. Dette ødelegger cellene, og det er dette som forårsaker sykdommer. Virusskapte sykdommer eller forandringer i genene avhenger ofte av vertscellen og hvilket miljø den er i. Virus er hovedårsak til mange sykdommer hos mennesker, fra influensa til kopper og aids. Blant de verste virussykdommene i dag, finner man sykdommene forårsaket av hiv (aids) og Ebola. 
+Antibiotika hjelper ikke mot virussykdommer, bare mot sykdommer som skyldes bakterier. Vanlige virussykdommer vil man vanligvis overlate til kroppen selv å arbeide med. Mange virussykdommer kan man vaksineres mot.
+Det finnes noen typer legemidler mot virus, såkalte antivirale midler. Men fortsatt har man ikke kommet så langt på dette området sammenlignet med legemidler mot bakterier. De antivirale legemidlene må enten påvirke reseptorer på utsiden av vertscellen eller trenge inn i cellen for å kunne bekjempe det sykdomsfremkallende virus, noe som har vært vanskelig å få til. Antivirale midler har i mange tilfelle flere og mer alvorlige bivirkninger enn midler mot bakterier. Resistens mot antivirale midler kan dessuten utvikles. 
+Virus har vanligvis en negativ effekt på cellene de invaderer, men det har blitt påvist at bakterier som lever rundt varme kilder på havbunnen har inngått symbiose med noen virus.
+
+
+== Inndeling ==
+
+Inndelingen følger Catalogue of Life Checklist versjon 2022-06-23. Det er tatt med et eksempel, som viser kompleksiteten i inndelingen av virus, i kraft av såkalte SARS-virus. Det er verd å merke seg at ICTV ikke angir nivåer i klassifiseringen lavere enn på artsnivå (species). De som vises i eksemplet her er altså ikke offisielle med hensyn til klassifisering og nomenklatur.
+
+Virus (urangert takson)
+Adnaviria (overrike)
+Zilligvirae (rike)
+Duplodnaviria (overrike)
+Heunggongvirae (rike)
+Monodnaviria (overrike)
+Loebvirae (rike)
+Sangervirae (rike)
+Shotokuvirae (rike)
+Trapavirae (rike)
+Riboviria (overrike)
+Orthornavirae (rike)
+Pisuviricota (rekke)
+Pisoniviricetes (klasse)
+Nidovirales (orden)
+Cornidovirineae (underorden)
+Coronaviridae (familie)
+Orthocoronavirinae (underfamilie)
+Betacoronavirus (slekt)
+Sarbecovirus (underslekt)
+Severe acute respiratory syndrome-related coronavirus (SARSr-CoV) (art)
+Severe acute respiratory syndrome coronavirus 1 (SARS-CoV-1)
+Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
+Bat SARS-like coronavirus WIV1
+Bat coronavirus RaTG13
+Pararnavirae (rike)
+Virus som ikke er tildelt et rike
+Ribozyviria (overrike)
+Kolmioviridae (rike)
+Varidnaviria (overrike)
+Bamfordvirae (rike)
+Helvetiavirae (rike)
+Virus som ikke er tildelt et overrike
+Naldaviricetes (klasse)
+Virus som ikke er tildelt en klasse
+
+
+== Statistikk ==
+Statistikken følger GBIF og Catalogue of Life Checklist 2022-06-23.
+
+
+== Se også ==
+Baltimoreklassifiseringen
+DNA-virus
+dsDNA-virus
+ssDNA-virus
+RNA-virus
+dsRNA-virus
+ssRNA-virus
+Retrovirus
+Liste over virus
+
+
+== Fotnoter og referanser ==
+
+
+== Eksterne lenker ==
+(en) virus – oversikt og omtale av artene i WORMS-databasen 
+(en) virus i Encyclopedia of Life 
+(en) virus i Global Biodiversity Information Facility 
+(no) virus hos Artsdatabanken 
+(en) virus hos NCBI 
+(en) Kategori:Viruses – bilder, video eller lyd på Wikimedia Commons 
+(en) Virus – galleri av bilder, video eller lyd på Wikimedia Commons 
+Virus – detaljert informasjon på Wikispecies 
+Hva er virus? - artikkel fra forskning.no 7.8.02

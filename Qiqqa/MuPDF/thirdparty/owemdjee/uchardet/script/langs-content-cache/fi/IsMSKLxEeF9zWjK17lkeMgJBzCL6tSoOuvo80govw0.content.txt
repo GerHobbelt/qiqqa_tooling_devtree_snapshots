@@ -1,0 +1,26 @@
+revision: 15131893
+title: "Simons\u2019 BASIC"
+url: https://fi.wikipedia.org/wiki/Simons%E2%80%99_BASIC
+
+
+---
+
+Simons’ BASIC on Commodore 64-tietokoneelle tarkoitettu BASIC-ohjelmointikielen laajennus.
+
+
+== Tausta ==
+Simons’ BASIC:in nimi viittaa David Simonsiin, joka 16-vuotiaana opiskelijana määritteli laajennuksen Commodore 64:n niukkaan BASIC-kieleen perehdyttyään eri mikrojen ja minitietokoneiden BASIC-murteisiin. Commodore 64:n alkuperäinen BASIC oli laadittu Commodore PET:iin, jossa oli muistia vain 8 kilotavua.
+
+
+== Toteutus ==
+
+Simons’ BASIC sisältää 114 käskyä, komentoa tai muuta varattua sanaa. Laajennus on pakattu ROM-moduuliin. Moduuli kiinnitetään koneeseen virran ollessa koneesta pois kytkettynä. Kun kone käynnistetään, lisäkäskyt ja -komennot ovat käytössä, käyttöliittymän värit ovat muuttuneet ja käytössä oleva muisti pienentynyt 8:lla kilotavulla.
+Ohjekirjassa Simons’ BASIC:in käskyt ja komennot on ryhmitelty 11 ryhmään. Ryhmät ovat seuraavat: ohjelmoinnin apukomennot (programming aids), syötteen tarkastus ja tekstin käsittely (input validation and text manipulation), laskennan aputoiminnot (extra numeric aids), levykekomennot (diskette commands), grafiikka (graphics), kuvaruudun käsittely (screen manipulation), MOB-grafiikka (sprite and user-defined graphics), ohjelmoinnin rakenteet (structured programming), virhetilanteiden käsittely (error trapping), musiikki (making music), syöttölaitteiden käsittely (read functions).
+
+
+== Lähteet ==
+Simons’ BASIC: 114 Additional Programming Commands. Agincourt: Commodore Business Machines Limited
+Onosko, Tim: Simons’ Basic (evaluation) Creative Computing Vol.9 No.11, Nov 1983, p.60
+
+
+=== Viitteet ===

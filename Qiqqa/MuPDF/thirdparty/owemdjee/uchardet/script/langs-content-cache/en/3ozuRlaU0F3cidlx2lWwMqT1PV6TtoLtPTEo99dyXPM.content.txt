@@ -1,0 +1,27 @@
+revision: 1152765746
+title: Zip bomb
+url: https://en.wikipedia.org/wiki/Zip_bomb
+
+
+---
+
+In computing, a zip bomb, also known as a decompression bomb or zip of death, is a malicious archive file designed to crash or render useless the program  or system reading it. It is often employed to disable antivirus software, in order to create an opening for more traditional malware.A zip bomb allows a program to function normally, but, instead of hijacking the program's operation, creates an archive that requires an excessive amount of time, disk space, or memory to unpack.Most modern antivirus programs can detect whether a file is a zip bomb in order to avoid unpacking it.
+
+
+== Details and use ==
+A zip bomb is usually a small file for ease of transport and to avoid suspicion. However, when the file is unpacked, its contents are more than the system can handle.
+One example of a zip bomb is the file 42.zip, which is a zip file consisting of 42 kilobytes of compressed data, containing five layers of nested zip files in sets of 16, each bottom-layer archive containing a 4.3-gigabyte (4294967295 bytes; 4 GiB − 1 B) file for a total of 4.5 petabytes (4503599626321920 bytes; 4 PiB − 1 MiB) of uncompressed data. This zip bomb is freely available for download online. In many anti-virus scanners, only a few layers of recursion are performed on archives to help prevent attacks that would cause a buffer overflow, an out-of-memory condition, or exceed an acceptable amount of program execution time.
+Zip bombs often rely on repetition of identical files to achieve their extreme compression ratios. Dynamic programming methods can be employed to limit traversal of such files, so that only one file is followed recursively at each level, effectively converting their exponential growth to linear.
+There are also zip files that, when uncompressed, yield identical copies of themselves. A sophisticated form of zip bomb exploits the specifications of zip files and the Deflate compression algorithm to create bombs without the use of nested layers as used in 42.zip.
+
+
+== See also ==
+Billion laughs attack, a similar attack on XML parsers
+Black fax
+Busy beaver, a program that produces the maximal possible output before terminating
+E-mail bomb
+Fork bomb
+Logic bomb
+
+
+== References ==

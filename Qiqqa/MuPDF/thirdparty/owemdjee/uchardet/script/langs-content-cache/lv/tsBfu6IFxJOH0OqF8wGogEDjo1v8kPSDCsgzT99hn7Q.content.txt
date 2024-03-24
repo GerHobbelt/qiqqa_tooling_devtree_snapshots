@@ -1,0 +1,9 @@
+revision: 2068393
+title: Zenmap
+url: https://lv.wikipedia.org/wiki/Zenmap
+
+
+---
+
+Zenmap ir oficiālā grafiskā lietotāja saskarne Nmap Security Scanner lietojumprogrammatūrai. Programma sarakstīta Python valodā, un strādā uz platformām, kurās strādā Python un Nmap. Izplata, ievērojot nosacījumus - brīvā GNU (General Public License).
+Bieži izmantotie skenēšanas iestatījumi, var būt saglabāti kā profils, atkārtotai lietošanai. Masters komandu veidošanā atbalsta interaktīvo Nmap komandu līniju izveidi. Skenētie rezultāti saglabājās un var tikt skatīti vēlāk, salīdzināt ar citiem rezultātiem izmaiņas. Rezultāti saglabājās meklēšanas datu bāzē.

@@ -1,0 +1,47 @@
+revision: 6784661
+title: Explorer 7
+url: https://sk.wikipedia.org/wiki/Explorer_7
+
+
+---
+
+Explorer 7 bola americká vedecká družica, vypustená v roku 1959. Družica sa zaoberala výskumom nabitých častíc, solárnej radiácie a mikrometeoritov. Konštrukčne bola zhodná s predchádzajúcou neúspešnou družicou Explorer 7X (S-1), ktorá bola zničená pri štarte.
+
+
+== Opis ==
+Družica bola stabilizovaná rotáciou a jej vonkajšia konštrukcia sa skladala z dvoch kužeľových škrupín zo sklolaminátu, ktoré boli spojené stredovou hliníkovou sekciou valcovitého tvaru. Priemer sondy v stredovej časti bol 750 milimetrov a výška bola taktiež 750 milimetrov. Dodávku elektrickej energie zabezpečovalo približne 3000 solárnych článkov umiestnených na hornej i dolnej kónickej časti. Dodatočné napájanie obstarávalo 15 nikel-kadmiových batérií. Tieto batérie boli umiestnené po obvode centrálnej sekcie a pri rotácii družice slúžili ako zotrvačník a napomáhali tak jej stabilizácii. Na centrálnej sekcii boli umiestnené dve dipólové antény s výkonom jedného wattu pracujúce v pásme HF (na frekvencii 20 MHz), ktoré vysielali telemetrické dáta späť na Zem. Anténa rádiomajáku pre sledovanie družice bola nainštalovaná na spodku dolnej kónickej časti a pracovala v pásme VHF (na frekvencii 108 MHz).
+Po obvode centrálnej sekcie bolo umiestnených päť bolometrov na meranie tepelného (infračerveného) žiarenia a tri detekčné bunky mikrometeoritov na báze sulfidov kadmia. Na detekciu a meranie Lymanovho-α žiarenia boli v hornej kužeľovej sekcii naproti sebe umiestnené ionizačné komory. Jedna s okienkom z fluoridu lítneho a druhá s okienkom berýlia. Na vrchu satelitu by Geigerov počítač pre detekciu kozmického žiarenia. Hlavná ionizačná komora pre detekciu nabitých častíc z radiačných pásov Zeme a kozmického žiarenia bola umiestnená uprostred vrchnej kužeľové sekcie.
+
+
+== Experimenty ==
+
+
+=== Tepelné vyžarovanie ===
+Experiment bol navrhnutý na meranie dopadajúceho a odrazeného slnečného ultrafialového a infračerveného žiarenia vyžarovaného Zemou s cieľom lepšie pochopiť hnacie sily v zemskej atmosfére. Na meranie slúžilo päť bolometrov. Prvé dva reagovali rovnako na vyžarovanie Slnka aj Zeme, tretí reagoval lepšie na vyžarovanie zo Zeme, štvrtý bol zameraný na priame slnečné žiarenie a piaty bol chránený pred priamym slnečným žiarením a meral iba žiarenie odrazené Zemou. Celá meracia sekvencia trvala 30 sekúnd. Počas jedného obehu tak bolo možné vykonať približne 180 meraní. Experiment bol úspešný a použiteľné dáta boli získavané až do 28. februára 1961. Vedúcim tohto výskumu bol Verner E. Suomi z University of Wisconsin-Madison.
+
+
+=== Slnečné röntgenové žiarenie a Lymanovo-α žiarenia ===
+Cieľom merania bolo zaznamenávať dlhodobé dáta o röntgenovom žiarení pochádzajúceho zo Slnka a o Lymanovom-α žiarenia a tie potom zladiť s reakciami a správaním zemskej atmosféry. Merania bola vykonávané v dvoch ionizačných komorách. Namerané údaje však nebolo možné interpretovať v zmysle dopadajúceho slnečného žiarenia. Bolo to spôsobené prienikmi častíc (elektróny s energiu 150 keV) z Van Allenových radiačných pásov do obvodov detektora a tiež problémami so spätnou väzbou zosilňovača. Vedúcim výskumu bol Herbert D. Friedman z US Naval Research Laboratory.
+
+
+=== Ťažké častice primárneho kozmického žiarenia ===
+Tento experiment bol navrhnutý na meranie ťažkých častíc v toku primárneho kozmického žiarenia. Častice boli detegované a oddelené v ionizačný komorách podľa ich atómových čísiel, Z> 5, Z> 8 a Z> 15. Pri prieniku častice do ionizačnej komory bol vydaný pulz, ktorého amplitúda bola v podstate nezávislá od energie častice, ale bola úmerná druhej mocnine atómového čísla dopadajúcej častice. Odčítanie hodnôt zo všetkých troch nezávislých počítadiel prebiehalo raz za 15 sekúnd. Meranie prebiehalo podľa plánu od vypustenia do 25. októbra 1959. Experiment bežal i po plánovanom ukončení a dáta odoslané do 31. mája 1960 boli použiteľné približne na 80 %. Problémy však predstavovala detekcia častíc s nízkymi atómovými číslami a od júna 1960 už bolo získaných veľmi málo použiteľných údajov. Výskum viedol Martin A. Pomerantz z Bartol Research Foundation.
+
+
+=== Zachytená časticová radiácia a slnečné protóny ===
+Dva všesmerové Geigerove počítače (Anton 302 a 112) boli použité ku komplexnému priestorovému a časovému monitorovaniu celkovej intenzity kozmického žiarenia, časticového žiarenia zachyteného v geomagnetickej pasci a solárnych protónov. Detektor bol citlivý na protóny (energia nad 20 MeV) a elektróny (energia nad 30 keV). Experiment fungoval uspokojivo od vypustenia družice až do 28. februára 1961. Vedúcim výskumníkom bol James Van Allen z University of Iowa.
+
+
+== Zdroje ==
+Tento článok je čiastočný alebo úplný preklad článku Explorer 7 na českej Wikipédii.
+Tento text alebo jeho časť bola prevzatá z článku - 1959-009A - Explorer 7 (verzia  2008-01-30 22:20:45 UT) uverejneného na stránkach SPACE 40, ktorého autorom je Antonín Vítek
+. (licencia GFDL a CC-BY-SA 3.0, povolenie autora)
+
+
+== Externé odkazy ==
+
+http://nssdc.gsfc.nasa.gov/nmc/spacecraftDisplay.do?id=1959-009A (po anglicky)
+http://nssdc.gsfc.nasa.gov/nmc/experimentDisplay.do?id=1959-009A-01 (po anglicky)
+http://nssdc.gsfc.nasa.gov/nmc/experimentDisplay.do?id=1959-009A-02 (po anglicky)
+http://nssdc.gsfc.nasa.gov/nmc/experimentDisplay.do?id=1959-009A-03 (po anglicky)
+http://space.skyrocket.de/doc_sdat/explorer_s1.htm (po anglicky)

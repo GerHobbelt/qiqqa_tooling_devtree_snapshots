@@ -1,0 +1,83 @@
+revision: 23284322
+title: Liste over versjoner av Debian
+url: https://no.wikipedia.org/wiki/Debian
+
+
+---
+
+Debian (IPA: /ˈdɛbiən/, et teleskopord som er dannet av navnene Debra Lynn og Ian Murdock) er en fellesbetegnelse på en rekke frie og åpne Unix-liknende operativsystemer. Betegnelsen omfatter Debian GNU/Linux (en Linuxdistribusjon som er basert på Linuxkjernen), Debian GNU/kFreeBSD (basert på FreeBSD), Debian GNU/NetBSD (basert på NetBSD) og Debian GNU/Hurd som er basert på mikrokjernen GNU Mach/GNU Hurd. I tillegg er Linuxdistribusjonen blitt portert til en rekke datamaskinarkitekturer, nåværende så vel som tidligere. Operativsystemene benytter GNU-brukerprogrammer og er utviklet ved hjelp av GNU C Compiler og GNU C Library. 
+Debian er et amerikansk prosjekt, og første betautgave (Debian 0.01) ble lansert den 16. august 1993. Prosjektet ble opprinnelig startet av den tyskfødte programvareutvikleren Ian Murdock (1973–2015), som på det daværende tidspunkt var student ved Land-grant-universitetet Purdue University i delstaten Indiana. Selve navnet Debian er et teleskopord, som ble dannet som en kombinasjon av opphavsmannens fornavn og fornavnet til Debra Lynn, som på det daværende tidspunkt var hans kjæreste. Debian 1.1 «Buzz» var første offisielle versjon, og ble lansert den 17. juni 1996.
+Debian er stort sett lisensiert under GNU General Public License (GPL) versjonene 2 og 3. Deler av programvaren er også lisensiert under BSD-lisensen og andre frie programvarelisenser som følger veiledningene i Debian Free Software Guidelines (DFSG). Debian blir utviklet av Debian Project – et brukernettverk av frivillige over hele verden.
+Prosjektet utvikles over internett under ledelse av Debians prosjektleder. Siden april 2017 er dette den britiske freelanceren Chris Lamb. Debian blir utviklet med basis i tre grunnleggende dokumenter: Debian Social Contract (som inneholder en moralsk agenda), Debian Constitution (som beskriver prosjektets organisatoriske struktur) og Debian Free Software Guidelines (lisensveiledninger). Nye distribusjoner blir oppdatert kontinuerlig, og den neste kandidat blir lansert etter en tidsbasert kodefrysing. Den stabile utviklingsgreinen av Debian GNU/Linux for personlige datamaskiner og nettverkstjenere, har blitt brukt som basis for en familie av andre Linuxdistribusjoner, deriblant Ubuntu, Linux Mint, elementary OS, Zorin OS og Linux Deepin.
+Debian GNU/Linux er en av de eldre Linuxdistribusjonene, og det ble tidlig avgjort at Debian skulle utvikles fritt og åpent i tråd med ånden i GNU-prosjektet. Denne beslutningen tiltrakk seg oppmerksomhet og støtte fra Free Software Foundation, som sponset prosjektet fra november 1994 til november 1995.  Etter at deres økonomiske støtte opphørte, ble den ideelle organisasjonen Software in the Public Interest dannet den 16. juni 1997 av Debian Project.
+
+
+== Utgaver ==
+
+Debian finnes til en hver tid i tre forskjellige utgaver, «stable», «testing» og «unstable». «stable»-utgaven er den som anbefales for sluttbrukere, «testing» er utgaven som kommer til å bli neste stabile versjon, «unstable» er hvor utviklingen foregår. Hver utgave har i tillegg et kodenavn som er hentet fra figurer i filmen Toy Story.
+Pr. oktober 2017 er den siste «stable»-utgaven (versjon 9.0) kalt «stretch», og «testing»-versjonen (versjon 10.0) kalt «buster». Navnet «sid» blir aldri tildelt en utgivelse, men representerer alltid «unstable»-utgaven hvor utviklingen foregår.
+Grunnet en uoffisiell utgivelse merket «1.0» ble den første offisielle utgivelsen kalt «1.1».
+
+
+== Pakkesystemet ==
+Pakkesystemet til debian heter dpkg. .deb filer blir tatt hånd om av Debians pakkeverktøy dpkg og apt (advanced package tool). Pakker hentes av apt fra et av Debians speil og installeres av dpkg.
+
+
+== Sosial kontrakt med fri-programvarefellesskapet ==
+Debian vil forbli 100 prosent fri programvare
+Debian vil gi noe tilbake til fri programvare-fellesskapet
+Debian vil ikke skjule problemer
+Debian priorieterer sine brukere og fri programvare høyest
+Verk som ikke lever opp til DFSG ("Debian Free Software Guidelines"), støttes ikke av Debian, men er tilgjengelig via contrib og non-free.
+
+
+== Debians retningslinjer for fri programvare (DFSG) ==
+Programmet skal kunne gis videre uten restriksjoner.
+Programmet skal inkludere kildekode og tillate at både kildekode og kompilert program kan distribueres videre.
+Lisensen skal tillate endringer og verk basert på programmet, og at disse distribueres under de samme betingelsene som det originale programmet.
+Lisensen må kun begrense distribusjon av kildekoden i endret form, hvis lisensen tillater distribusjon av "patch-filer" sammen med kildekoden. Lisensen skal uttryksvis tillate distribusjon av programmer basert på endret kildekode. Lisensen kan kreve at baserte verk har et endret navn eller versjonsnummer. (Dette er et kompromiss. Debian-gruppen oppfordrer alle forfattere til å ikke begrense endring av noen filer, hverken i  kildekode- eller kompilert form).
+Lisensen må ikke diskriminere noen personer eller grupper.
+Lisensen må ikke forhindre noen i å bruke programmet innenfor et spesifikt bruksområde. Den må for eksempel ikke forhindre at programmet brukes kommersielt eller i forbindelse med genetisk forskning.
+Rettighetene knyttet til programmet skal gjelde alle som programmet er videresendt til, uten å kreve ytterligere lisensiering.
+Hvis programmet tas fra Debian og anvendes eller distribueres uten Debian, men ellers innenfor lisensbetingelsene, skal alle parter som programmet er videredistribuert til ha de samme rettighetene som lisensen gir i forbindelse med Debian.
+Lisensen må ikke legge restriksjoner på annen programvare som distribueres sammen med den lisensierte programvaren.
+Eksempler på lisenser: GPL-, BSD-, og Artistic-lisensene er eksempler på lisenser som Debian anser som frie.
+
+
+== Distribusjoner basert på Debian ==
+Debian danner grunnlaget for flere andre Linux-distribusjoner. Noen av de mer kjente er listet under.
+
+Knoppix – LiveCD-distribusjon, kan kjøres rett fra CD-ROM uten behov for installering.
+MEPIS
+Linspire
+Lycoris
+Progeny
+Skolelinux – Norsk distribusjon laget med tanke på bruk i skolen.
+Ubuntu – Med GNOME som standard skrivebordsmiljø.
+Kubuntu – En versjon av Ubuntu med KDE som standard skrivebordsmiljø.
+Xubuntu – En versjon av Ubuntu med Xfce som standard skrivebordsmiljø.
+Edubuntu – En versjon av Ubuntu som er tilpasset bruk i skolen.
+Xandros
+Raspbian
+
+
+== Noter ==
+
+
+== Referanser ==
+
+
+== Eksterne lenker ==
+(en) Offisielt nettsted 
+(en) Offisiell blogg 
+Mate-URL 
+(en) Mate-URL 
+(en) Debian – kategori av bilder, video eller lyd på Commons 
+(en) Debian – galleri av bilder, video eller lyd på Commons 
+http://www.debianguiden.dk – Dansk guide.
+http://www.debianforum.dk – Et forum om og for Debian.
+https://web.archive.org/web/20170425210150/http://www.debianplanet.org/ – Nyheter med henhold til Debian.
+https://www.debian.org/News/weekly/ – Ukentlig nyheter om Debian.
+https://web.archive.org/web/20161222132134/http://www.debianhelp.org/ – En hjelpeside om og for Debian.
+https://web.archive.org/web/20040929082356/http://planet.debian.net/ – Bloggene til flere av utviklerne av Debian.
+Debian på openhub.net

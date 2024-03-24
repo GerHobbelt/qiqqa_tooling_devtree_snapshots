@@ -1,0 +1,17 @@
+revision: 27260253
+title: BACnet
+url: https://tr.wikipedia.org/wiki/BACnet
+
+
+---
+
+BACnet (ing.Building Automation and Control Networks kısaltması) Bina otomasyon kontrol ağı.
+Bir tür bina otomasyonu haberleşme protokolüdür. Bacnet sadece bina otomasyonu entegrasyonunu sağlamaz aynı zamanda ünitelerin birbiri ile ileşimini gerçekleştirir. Bu özelliği ile bina otomasyonu içerisinde en çok tercih edilen protokollerin başında gelir.
+
+
+== Tarihçe ==
+BACnet, ısıtma, havalandırma ve iklimlendirme kontrolü (HVAC), aydınlatma kontrolü, erişim kontrolü ve yangın algılama sistemleri ve bunlarla ilgili ekipman gibi uygulamalar için bina otomasyonu ve kontrol sistemlerinin iletişimini sağlamak üzere tasarlanmıştır. BACnet protokolü, gerçekleştirdikleri belirli bina hizmetinden bağımsız olarak, bilgisayarlı bina otomasyon cihazlarının bilgi alışverişinde bulunmaları için mekanizmalar sağlar.İlk defa 1987 yılında ASHRAE (American Society of Heating, Refrigerating and Air-Conditioning Engineers) tarafından oluşturulmuş ve 1995 yılında standart olarak yayımlanmıştır.
+
+
+== Kaynakça ==
+[1]5 Mart 2016 tarihinde Wayback Machine sitesinde arşivlendi. BACnet nedir

@@ -1,0 +1,34 @@
+revision: 34240851
+title: "\uADFC\uAC70\uB9AC \uBB34\uC120 \uD1B5\uC2E0"
+url: https://ko.wikipedia.org/wiki/%EA%B7%BC%EA%B1%B0%EB%A6%AC_%EB%AC%B4%EC%84%A0_%ED%86%B5%EC%8B%A0
+
+
+---
+
+근거리 무선 통신(近距離無線通信, 영어: Near Field Communication, NFC)는 13.56MHz의 대역을 가지며, 아주 가까운 거리(접촉 및 근접 비접촉 모두 포함)의 무선 통신을 하기 위한 기술이다. 현재 지원되는 데이터 통신 속도는 초당 424 킬로비트다. 교통, 티켓, 지불 등 여러 서비스에서 사용할 수 있다.
+
+
+== 모드 ==
+
+
+== 규격 ==
+
+
+== 블루투스와의 비교 ==
+
+
+== IC칩 ==
+NFC(Near Field Communication)의 근접통신기술은  USIM칩 또는 IC칩과 함께 RF칩이 활용된다.
+
+
+== 같이 보기 ==
+RFID
+비콘
+와이파이
+근거리 통신망
+
+
+== 외부 링크 ==
+(영어) NFC포럼 홈페이지
+(일본어) RFID/NFC Real Touch Shop
+(영어) Open source NFC Eclipse plugin

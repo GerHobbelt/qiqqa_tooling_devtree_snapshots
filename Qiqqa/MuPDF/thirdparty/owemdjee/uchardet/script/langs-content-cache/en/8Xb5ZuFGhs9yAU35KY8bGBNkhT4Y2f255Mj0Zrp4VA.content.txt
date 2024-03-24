@@ -1,0 +1,2453 @@
+revision: 1147546136
+title: Flow (mathematics)
+url: https://en.wikipedia.org/wiki/Flow_(mathematics)
+
+
+---
+
+In mathematics, a flow formalizes the idea of the motion of particles in a fluid.  Flows are ubiquitous in science, including engineering and physics. The notion of flow is basic to the study of ordinary differential equations. Informally, a flow may be viewed as a continuous motion of points over time. More formally, a flow is a group action of the real numbers on a set.
+The idea of a vector flow, that is, the flow determined by a vector field, occurs in the areas of differential topology, Riemannian geometry and Lie groups. Specific examples of vector flows include the geodesic flow, the Hamiltonian flow, the Ricci flow, the mean curvature flow, and Anosov flows.  Flows may also be defined for systems of random variables and stochastic processes, and occur in the study of ergodic dynamical systems.  The most celebrated of these is perhaps the Bernoulli flow.
+
+
+== Formal definition ==
+A flow on a set X is a group action of the additive group of real numbers on  X. More explicitly, a flow is a mapping
+
+  
+    
+      
+        φ
+        :
+        X
+        ×
+        
+          R
+        
+        →
+        X
+      
+    
+     
+  such that, for all x ∈ X and all real numbers s and t,
+
+  
+    
+      
+        
+          
+            
+              
+              
+                φ
+                (
+                x
+                ,
+                0
+                )
+                =
+                x
+                ;
+              
+            
+            
+              
+              
+                φ
+                (
+                φ
+                (
+                x
+                ,
+                t
+                )
+                ,
+                s
+                )
+                =
+                φ
+                (
+                x
+                ,
+                s
+                +
+                t
+                )
+                .
+              
+            
+          
+        
+      
+    
+     
+  It is customary to write φt(x) instead of φ(x, t), so that the equations above can be expressed as 
+  
+    
+      
+        
+          φ
+          
+            0
+          
+        
+        =
+        
+          Id
+        
+      
+    
+     
+   (the identity function) and 
+  
+    
+      
+        
+          φ
+          
+            s
+          
+        
+        ∘
+        
+          φ
+          
+            t
+          
+        
+        =
+        
+          φ
+          
+            s
+            +
+            t
+          
+        
+      
+    
+     
+   (group law). Then, for all 
+  
+    
+      
+        t
+        ∈
+        
+          R
+        
+        ,
+      
+    
+     
+   the mapping 
+  
+    
+      
+        
+          φ
+          
+            t
+          
+        
+        :
+        X
+        →
+        X
+      
+    
+     
+   is a bijection with inverse 
+  
+    
+      
+        
+          φ
+          
+            −
+            t
+          
+        
+        :
+        X
+        →
+        X
+        .
+      
+    
+     
+   This follows from the above definition, and the real parameter t  may be taken as a generalized functional power, as in function iteration.
+Flows are usually required to be compatible with structures furnished on the set X.  In particular, if X  is equipped with a topology, then φ is usually required to be continuous. If X  is equipped with a differentiable structure, then φ is usually required to be differentiable. In these cases the flow forms a one-parameter group of homeomorphisms and diffeomorphisms, respectively.
+In certain situations one might also consider local flows, which are defined only in some subset
+
+  
+    
+      
+        
+          d
+          o
+          m
+        
+        (
+        φ
+        )
+        =
+        {
+        (
+        x
+        ,
+        t
+        )
+         
+        
+          |
+        
+         
+        t
+        ∈
+        [
+        
+          a
+          
+            x
+          
+        
+        ,
+        
+          b
+          
+            x
+          
+        
+        ]
+        ,
+         
+        
+          a
+          
+            x
+          
+        
+        <
+        0
+        <
+        
+          b
+          
+            x
+          
+        
+        ,
+         
+        x
+        ∈
+        X
+        }
+        ⊂
+        X
+        ×
+        
+          R
+        
+      
+    
+     
+  called the flow domain of φ. This is often the case with the flows of vector fields.
+
+
+=== Alternative notations ===
+It is very common in many fields, including engineering, physics and  the study of differential equations, to use a notation that makes the flow implicit.  Thus, x(t) is written for 
+  
+    
+      
+        
+          φ
+          
+            t
+          
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        ,
+      
+    
+     
+   and one might say that the variable x depends on the time t and the initial condition x = x0. Examples are given below.
+In the case of a flow of a vector field V on a smooth manifold X, the flow is often denoted in such a way that its generator is made explicit. For example,
+
+  
+    
+      
+        
+          Φ
+          
+            V
+          
+        
+        :
+        X
+        ×
+        
+          R
+        
+        →
+        X
+        ;
+        
+        (
+        x
+        ,
+        t
+        )
+        ↦
+        
+          Φ
+          
+            V
+          
+          
+            t
+          
+        
+        (
+        x
+        )
+        .
+      
+    
+     
+  
+
+
+== Orbits ==
+Given x in X, the set 
+  
+    
+      
+        {
+        φ
+        (
+        x
+        ,
+        t
+        )
+        :
+        t
+        ∈
+        
+          R
+        
+        }
+      
+    
+     
+   is called the orbit of x under φ. Informally, it may be regarded as the trajectory of a particle that was initially positioned at x. If the flow is generated by a vector field, then its orbits are the images of its integral curves.
+
+
+== Examples ==
+
+
+=== Algebraic equation ===
+Let 
+  
+    
+      
+        f
+        :
+        
+          R
+        
+        →
+        X
+      
+    
+     
+   be a time-dependent trajectory which is a bijective function, i.e, non-periodic function. Then a flow can be defined by
+
+  
+    
+      
+        φ
+        (
+        x
+        ,
+        t
+        )
+        =
+        f
+        (
+        t
+        +
+        
+          f
+          
+            −
+            1
+          
+        
+        (
+        x
+        )
+        )
+        .
+      
+    
+     
+  
+
+
+=== Autonomous systems of ordinary differential equations ===
+Let 
+  
+    
+      
+        
+          F
+        
+        :
+        
+          
+            R
+          
+          
+            n
+          
+        
+        →
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   be a (time-independent) vector field
+and 
+  
+    
+      
+        
+          x
+        
+        :
+        
+          R
+        
+        →
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   the solution of the initial value problem
+
+  
+    
+      
+        
+          
+            
+              x
+              ˙
+            
+          
+        
+        (
+        t
+        )
+        =
+        
+          F
+        
+        (
+        
+          x
+        
+        (
+        t
+        )
+        )
+        ,
+        
+        
+          x
+        
+        (
+        0
+        )
+        =
+        
+          
+            x
+          
+          
+            0
+          
+        
+        .
+      
+    
+     
+  Then 
+  
+    
+      
+        φ
+        (
+        
+          
+            x
+          
+          
+            0
+          
+        
+        ,
+        t
+        )
+        =
+        
+          x
+        
+        (
+        t
+        )
+      
+    
+     
+   is the flow of the vector field F. It is a well-defined local flow provided that the vector field 
+
+  
+    
+      
+        
+          F
+        
+        :
+        
+          
+            R
+          
+          
+            n
+          
+        
+        →
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   is Lipschitz-continuous. Then 
+  
+    
+      
+        φ
+        :
+        
+          
+            R
+          
+          
+            n
+          
+        
+        ×
+        
+          R
+        
+        →
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   is also Lipschitz-continuous wherever defined. In general it may be hard to show that the flow φ is globally defined, but one simple criterion is that the vector field F is compactly supported.
+
+
+=== Time-dependent ordinary differential equations ===
+In the case of time-dependent vector fields 
+  
+    
+      
+        
+          F
+        
+        :
+        
+          
+            R
+          
+          
+            n
+          
+        
+        ×
+        
+          R
+        
+        →
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+  , one denotes 
+  
+    
+      
+        
+          φ
+          
+            t
+            ,
+            
+              t
+              
+                0
+              
+            
+          
+        
+        (
+        
+          
+            x
+          
+          
+            0
+          
+        
+        )
+        =
+        
+          x
+        
+        (
+        t
+        +
+        
+          t
+          
+            0
+          
+        
+        )
+        ,
+      
+    
+     
+   where 
+  
+    
+      
+        
+          x
+        
+        :
+        
+          R
+        
+        →
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   is the solution of
+
+  
+    
+      
+        
+          
+            
+              x
+              ˙
+            
+          
+        
+        (
+        t
+        )
+        =
+        
+          F
+        
+        (
+        
+          x
+        
+        (
+        t
+        )
+        ,
+        t
+        )
+        ,
+        
+        
+          x
+        
+        (
+        
+          t
+          
+            0
+          
+        
+        )
+        =
+        
+          
+            x
+          
+          
+            0
+          
+        
+        .
+      
+    
+     
+  Then 
+  
+    
+      
+        
+          φ
+          
+            t
+            ,
+            
+              t
+              
+                0
+              
+            
+          
+        
+        (
+        
+          
+            x
+          
+          
+            0
+          
+        
+        )
+      
+    
+     
+   is the time-dependent flow of F. It is not a "flow" by the definition above, but it can easily be seen as one by rearranging its arguments. Namely, the mapping
+
+  
+    
+      
+        φ
+        :
+        (
+        
+          
+            R
+          
+          
+            n
+          
+        
+        ×
+        
+          R
+        
+        )
+        ×
+        
+          R
+        
+        →
+        
+          
+            R
+          
+          
+            n
+          
+        
+        ×
+        
+          R
+        
+        ;
+        
+        φ
+        (
+        (
+        
+          
+            x
+          
+          
+            0
+          
+        
+        ,
+        
+          t
+          
+            0
+          
+        
+        )
+        ,
+        t
+        )
+        =
+        (
+        
+          φ
+          
+            t
+            ,
+            
+              t
+              
+                0
+              
+            
+          
+        
+        (
+        
+          
+            x
+          
+          
+            0
+          
+        
+        )
+        ,
+        t
+        +
+        
+          t
+          
+            0
+          
+        
+        )
+      
+    
+     
+  indeed satisfies the group law for the last variable:
+
+  
+    
+      
+        
+          
+            
+              
+                φ
+                (
+                φ
+                (
+                (
+                
+                  
+                    x
+                  
+                  
+                    0
+                  
+                
+                ,
+                
+                  t
+                  
+                    0
+                  
+                
+                )
+                ,
+                t
+                )
+                ,
+                s
+                )
+              
+              
+                
+                =
+                φ
+                (
+                (
+                
+                  φ
+                  
+                    t
+                    ,
+                    
+                      t
+                      
+                        0
+                      
+                    
+                  
+                
+                (
+                
+                  
+                    x
+                  
+                  
+                    0
+                  
+                
+                )
+                ,
+                t
+                +
+                
+                  t
+                  
+                    0
+                  
+                
+                )
+                ,
+                s
+                )
+              
+            
+            
+              
+              
+                
+                =
+                (
+                
+                  φ
+                  
+                    s
+                    ,
+                    t
+                    +
+                    
+                      t
+                      
+                        0
+                      
+                    
+                  
+                
+                (
+                
+                  φ
+                  
+                    t
+                    ,
+                    
+                      t
+                      
+                        0
+                      
+                    
+                  
+                
+                (
+                
+                  
+                    x
+                  
+                  
+                    0
+                  
+                
+                )
+                )
+                ,
+                s
+                +
+                t
+                +
+                
+                  t
+                  
+                    0
+                  
+                
+                )
+              
+            
+            
+              
+              
+                
+                =
+                (
+                
+                  φ
+                  
+                    s
+                    ,
+                    t
+                    +
+                    
+                      t
+                      
+                        0
+                      
+                    
+                  
+                
+                (
+                
+                  x
+                
+                (
+                t
+                +
+                
+                  t
+                  
+                    0
+                  
+                
+                )
+                )
+                ,
+                s
+                +
+                t
+                +
+                
+                  t
+                  
+                    0
+                  
+                
+                )
+              
+            
+            
+              
+              
+                
+                =
+                (
+                
+                  x
+                
+                (
+                s
+                +
+                t
+                +
+                
+                  t
+                  
+                    0
+                  
+                
+                )
+                ,
+                s
+                +
+                t
+                +
+                
+                  t
+                  
+                    0
+                  
+                
+                )
+              
+            
+            
+              
+              
+                
+                =
+                (
+                
+                  φ
+                  
+                    s
+                    +
+                    t
+                    ,
+                    
+                      t
+                      
+                        0
+                      
+                    
+                  
+                
+                (
+                
+                  
+                    x
+                  
+                  
+                    0
+                  
+                
+                )
+                ,
+                s
+                +
+                t
+                +
+                
+                  t
+                  
+                    0
+                  
+                
+                )
+              
+            
+            
+              
+              
+                
+                =
+                φ
+                (
+                (
+                
+                  
+                    x
+                  
+                  
+                    0
+                  
+                
+                ,
+                
+                  t
+                  
+                    0
+                  
+                
+                )
+                ,
+                s
+                +
+                t
+                )
+                .
+              
+            
+          
+        
+      
+    
+     
+  One can see time-dependent flows of vector fields as special cases of time-independent ones by the following trick. Define
+
+  
+    
+      
+        
+          G
+        
+        (
+        
+          x
+        
+        ,
+        t
+        )
+        :=
+        (
+        
+          F
+        
+        (
+        
+          x
+        
+        ,
+        t
+        )
+        ,
+        1
+        )
+        ,
+        
+        
+          y
+        
+        (
+        t
+        )
+        :=
+        (
+        
+          x
+        
+        (
+        t
+        +
+        
+          t
+          
+            0
+          
+        
+        )
+        ,
+        t
+        +
+        
+          t
+          
+            0
+          
+        
+        )
+        .
+      
+    
+     
+  Then y(t) is the solution of the "time-independent" initial value problem
+
+  
+    
+      
+        
+          
+            
+              y
+              ˙
+            
+          
+        
+        (
+        s
+        )
+        =
+        
+          G
+        
+        (
+        
+          y
+        
+        (
+        s
+        )
+        )
+        ,
+        
+        
+          y
+        
+        (
+        0
+        )
+        =
+        (
+        
+          
+            x
+          
+          
+            0
+          
+        
+        ,
+        
+          t
+          
+            0
+          
+        
+        )
+      
+    
+     
+  if and only if x(t) is the solution of the original time-dependent initial value problem. Furthermore, then the mapping φ is exactly the flow of the "time-independent" vector field G.
+
+
+=== Flows of vector fields on manifolds ===
+The flows of time-independent and time-dependent vector fields are defined on smooth manifolds exactly as they are defined on the Euclidean space 
+  
+    
+      
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   and their local behavior is the same. However, the global topological structure of a smooth manifold is strongly manifest in what kind of global vector fields it can support, and flows of vector fields on smooth manifolds are indeed an important tool in differential topology. The bulk of studies in dynamical systems are conducted on smooth manifolds, which are thought of as "parameter spaces" in applications.
+Formally: Let 
+  
+    
+      
+        
+          
+            M
+          
+        
+      
+    
+     
+   be a differentiable manifold. Let 
+  
+    
+      
+        
+          
+            T
+          
+          
+            p
+          
+        
+        
+          
+            M
+          
+        
+      
+    
+     
+   denote the tangent space of a point 
+  
+    
+      
+        p
+        ∈
+        
+          
+            M
+          
+        
+        .
+      
+    
+     
+   Let 
+  
+    
+      
+        
+          T
+        
+        
+          
+            M
+          
+        
+      
+    
+     
+   be the complete tangent manifold; that is, 
+  
+    
+      
+        
+          T
+        
+        
+          
+            M
+          
+        
+        =
+        
+          ∪
+          
+            p
+            ∈
+            
+              
+                M
+              
+            
+          
+        
+        
+          
+            T
+          
+          
+            p
+          
+        
+        
+          
+            M
+          
+        
+        .
+      
+    
+     
+   Let
+
+be a time-dependent vector field on 
+  
+    
+      
+        
+          
+            M
+          
+        
+      
+    
+     
+  ; that is, f is a smooth map such that for each 
+  
+    
+      
+        t
+        ∈
+        
+          R
+        
+      
+    
+     
+   and 
+  
+    
+      
+        p
+        ∈
+        
+          
+            M
+          
+        
+      
+    
+     
+  , one has 
+  
+    
+      
+        f
+        (
+        t
+        ,
+        p
+        )
+        ∈
+        
+          
+            T
+          
+          
+            p
+          
+        
+        
+          
+            M
+          
+        
+        ;
+      
+    
+     
+   that is, the map 
+  
+    
+      
+        x
+        ↦
+        f
+        (
+        t
+        ,
+        x
+        )
+      
+    
+     
+   maps each point to an element of its own tangent space. For a suitable interval 
+  
+    
+      
+        I
+        ⊆
+        
+          R
+        
+      
+    
+     
+   containing 0, the flow of f is a function 
+  
+    
+      
+        ϕ
+        :
+        I
+        ×
+        
+          
+            M
+          
+        
+        →
+        
+          
+            M
+          
+        
+      
+    
+     
+   that satisfies
+
+
+=== Solutions of heat equation ===
+Let Ω be a subdomain (bounded or not) of 
+  
+    
+      
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   (with n an integer). Denote by Γ its boundary (assumed smooth). 
+Consider the following heat equation on  Ω × (0, T), for T > 0,
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                  
+                    t
+                  
+                
+                −
+                Δ
+                u
+              
+              
+                =
+              
+              
+                0
+              
+              
+                
+                  
+                     in 
+                  
+                
+                Ω
+                ×
+                (
+                0
+                ,
+                T
+                )
+                ,
+              
+            
+            
+              
+                u
+              
+              
+                =
+              
+              
+                0
+              
+              
+                
+                  
+                     on 
+                  
+                
+                Γ
+                ×
+                (
+                0
+                ,
+                T
+                )
+                ,
+              
+            
+          
+        
+      
+    
+     
+  with the following initial value condition  u(0) = u0 in Ω .
+The equation  u = 0 on Γ × (0, T) corresponds to the Homogeneous Dirichlet boundary condition. The mathematical setting for this problem can be the semigroup approach. To use this tool, we introduce the unbounded operator  ΔD  defined on 
+  
+    
+      
+        
+          L
+          
+            2
+          
+        
+        (
+        Ω
+        )
+      
+    
+     
+   by its domain
+
+  
+    
+      
+        D
+        (
+        
+          Δ
+          
+            D
+          
+        
+        )
+        =
+        
+          H
+          
+            2
+          
+        
+        (
+        Ω
+        )
+        ∩
+        
+          H
+          
+            0
+          
+          
+            1
+          
+        
+        (
+        Ω
+        )
+      
+    
+     
+  (see the classical Sobolev spaces with 
+  
+    
+      
+        
+          H
+          
+            k
+          
+        
+        (
+        Ω
+        )
+        =
+        
+          W
+          
+            k
+            ,
+            2
+          
+        
+        (
+        Ω
+        )
+      
+    
+     
+   
+and 
+
+  
+    
+      
+        
+          H
+          
+            0
+          
+          
+            1
+          
+        
+        (
+        Ω
+        )
+        =
+        
+          
+            
+              
+                
+                  C
+                  
+                    0
+                  
+                  
+                    ∞
+                  
+                
+                (
+                Ω
+                )
+              
+              ¯
+            
+          
+          
+            
+              H
+              
+                1
+              
+            
+            (
+            Ω
+            )
+          
+        
+      
+    
+     
+  is the closure of the infinitely differentiable functions with compact support in Ω for the 
+  
+    
+      
+        
+          H
+          
+            1
+          
+        
+        (
+        Ω
+        )
+        −
+      
+    
+     
+  norm). 
+For any 
+  
+    
+      
+        v
+        ∈
+        D
+        (
+        
+          Δ
+          
+            D
+          
+        
+        )
+      
+    
+     
+  , we have
+
+  
+    
+      
+        
+          Δ
+          
+            D
+          
+        
+        v
+        =
+        Δ
+        v
+        =
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            n
+          
+        
+        
+          
+            
+              ∂
+              
+                2
+              
+            
+            
+              ∂
+              
+                x
+                
+                  i
+                
+                
+                  2
+                
+              
+            
+          
+        
+        v
+         
+        .
+      
+    
+     
+  With this operator, the heat equation becomes 
+  
+    
+      
+        
+          u
+          ′
+        
+        (
+        t
+        )
+        =
+        
+          Δ
+          
+            D
+          
+        
+        u
+        (
+        t
+        )
+      
+    
+     
+   and   u(0) = u0. Thus, the flow corresponding to this equation is (see notations above)
+
+  
+    
+      
+        φ
+        (
+        
+          u
+          
+            0
+          
+        
+        ,
+        t
+        )
+        =
+        
+          
+            
+              e
+            
+          
+          
+            t
+            
+              Δ
+              
+                D
+              
+            
+          
+        
+        
+          u
+          
+            0
+          
+        
+        ,
+      
+    
+     
+  where exp(tΔD)  is the (analytic) semigroup generated by ΔD.
+
+
+=== Solutions of wave equation ===
+Again, let Ω be a subdomain (bounded or not) of 
+  
+    
+      
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+     
+   (with n an integer). We denote by Γ its boundary (assumed smooth). 
+Consider the following wave equation on 
+  
+    
+      
+        Ω
+        ×
+        (
+        0
+        ,
+        T
+        )
+      
+    
+     
+   (for T > 0),
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  u
+                  
+                    t
+                    t
+                  
+                
+                −
+                Δ
+                u
+              
+              
+                =
+              
+              
+                0
+              
+              
+                
+                  
+                     in 
+                  
+                
+                Ω
+                ×
+                (
+                0
+                ,
+                T
+                )
+                ,
+              
+            
+            
+              
+                u
+              
+              
+                =
+              
+              
+                0
+              
+              
+                
+                  
+                     on 
+                  
+                
+                Γ
+                ×
+                (
+                0
+                ,
+                T
+                )
+                ,
+              
+            
+          
+        
+      
+    
+     
+  with the following initial condition   u(0) = u1,0 in Ω and 
+  
+    
+      
+        
+          u
+          
+            t
+          
+        
+        (
+        0
+        )
+        =
+        
+          u
+          
+            2
+            ,
+            0
+          
+        
+        
+          
+             in 
+          
+        
+        Ω
+        .
+      
+    
+     
+  
+Using the same semigroup approach as in the case of the Heat Equation above. We write the wave equation as a first order in time partial differential equation by introducing the following unbounded operator,
+
+  
+    
+      
+        
+          
+            A
+          
+        
+        =
+        
+          (
+          
+            
+              
+                
+                  0
+                
+                
+                  I
+                  d
+                
+              
+              
+                
+                  
+                    Δ
+                    
+                      D
+                    
+                  
+                
+                
+                  0
+                
+              
+            
+          
+          )
+        
+      
+    
+     
+  with domain 
+  
+    
+      
+        D
+        (
+        
+          
+            A
+          
+        
+        )
+        =
+        
+          H
+          
+            2
+          
+        
+        (
+        Ω
+        )
+        ∩
+        
+          H
+          
+            0
+          
+          
+            1
+          
+        
+        (
+        Ω
+        )
+        ×
+        
+          H
+          
+            0
+          
+          
+            1
+          
+        
+        (
+        Ω
+        )
+      
+    
+     
+   on 
+  
+    
+      
+        H
+        =
+        
+          H
+          
+            0
+          
+          
+            1
+          
+        
+        (
+        Ω
+        )
+        ×
+        
+          L
+          
+            2
+          
+        
+        (
+        Ω
+        )
+      
+    
+     
+   (the operator ΔD is defined in the previous example). 
+We introduce the column vectors  
+
+  
+    
+      
+        U
+        =
+        
+          (
+          
+            
+              
+                
+                  
+                    u
+                    
+                      1
+                    
+                  
+                
+              
+              
+                
+                  
+                    u
+                    
+                      2
+                    
+                  
+                
+              
+            
+          
+          )
+        
+      
+    
+     
+  (where 
+  
+    
+      
+        
+          u
+          
+            1
+          
+        
+        =
+        u
+      
+    
+     
+   and 
+  
+    
+      
+        
+          u
+          
+            2
+          
+        
+        =
+        
+          u
+          
+            t
+          
+        
+      
+    
+     
+  ) and 
+
+  
+    
+      
+        
+          U
+          
+            0
+          
+        
+        =
+        
+          (
+          
+            
+              
+                
+                  
+                    u
+                    
+                      1
+                      ,
+                      0
+                    
+                  
+                
+              
+              
+                
+                  
+                    u
+                    
+                      2
+                      ,
+                      0
+                    
+                  
+                
+              
+            
+          
+          )
+        
+        .
+      
+    
+     
+  With these notions, the Wave Equation becomes 
+  
+    
+      
+        
+          U
+          ′
+        
+        (
+        t
+        )
+        =
+        
+          
+            A
+          
+        
+        U
+        (
+        t
+        )
+      
+    
+     
+   and U(0) = U0.
+Thus, the flow corresponding to this equation is 
+
+  
+    
+      
+        φ
+        (
+        
+          U
+          
+            0
+          
+        
+        ,
+        t
+        )
+        =
+        
+          
+            
+              e
+            
+          
+          
+            t
+            
+              
+                A
+              
+            
+          
+        
+        
+          U
+          
+            0
+          
+        
+      
+    
+     
+  where 
+  
+    
+      
+        
+          
+            
+              e
+            
+          
+          
+            t
+            
+              
+                A
+              
+            
+          
+        
+      
+    
+     
+   is the (unitary) semigroup generated by 
+  
+    
+      
+        
+          
+            A
+          
+        
+        .
+      
+    
+     
+  
+
+
+=== Bernoulli flow ===
+Ergodic dynamical systems, that is, systems exhibiting randomness, exhibit  flows as well.  The most celebrated of these is perhaps the Bernoulli flow.  The Ornstein isomorphism theorem states that, for any given entropy H, there exists a flow φ(x, t), called the Bernoulli flow, such that the flow at time t = 1, i.e.  φ(x, 1),  is a Bernoulli shift.
+Furthermore, this flow is unique, up to a constant rescaling of time.  That is, if  ψ(x, t),  is another flow with the same entropy, then ψ(x, t) = φ(x, t), for some constant c.  The notion of uniqueness and isomorphism here is that of the isomorphism of dynamical systems.  Many dynamical systems, including Sinai's billiards and Anosov flows are isomorphic to Bernoulli shifts.
+
+
+== See also ==
+Abel equation
+Iterated function
+Schröder's equation
+Infinite compositions of analytic functions
+
+
+== References ==
+
+D.V. Anosov (2001) [1994], "Continuous flow", Encyclopedia of Mathematics, EMS Press
+D.V. Anosov (2001) [1994], "Measureable flow", Encyclopedia of Mathematics, EMS Press
+D.V. Anosov (2001) [1994], "Special flow", Encyclopedia of Mathematics, EMS Press
+This article incorporates material from Flow on PlanetMath, which is licensed under the Creative Commons Attribution/Share-Alike License.

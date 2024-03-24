@@ -1,0 +1,19 @@
+revision: 25802282
+title: BackTrack
+url: https://sr.wikipedia.org/wiki/BackTrack
+
+
+---
+
+BackTrack je Linuks distribucija bazirana na Ubuntu odnosno Debianu namenjena radu u oblasti IT sigurnosti, prvenstveno za penetracijska testiranja, digitalnu forenziku i istragu. Koristi KDE interfejs i posjeduje mnoštvo sigurnosnih i forenzičkih alata, a kolekciju alata moguće je jednostavno ažurirati i proširivati preuzimanjem iz onlajn repozitorijuma.
+BackTrack je nastao spajanjem Auditor Security Linuksa sa WHAX (nekadašnji Whoppix). Aktuelna verzija BackTrack 4 dostupna je od 12. januara 2010. godine. BackTrack 4 je moguće instalirati i koristiti kao primarni operativni sistem, ili ga pokretati sa LiveDVD-a ili USB drajva.
+Izuzetno je popularan među profesionalnim penetracijskim testerima, vladinim agencijama kao i entuzijastima na polju informatičke sigurnosti.
+
+
+== Vidi još ==
+Digitalna forenzika
+
+
+== Spoljašnje veze ==
+
+BackTrack-Linux.org

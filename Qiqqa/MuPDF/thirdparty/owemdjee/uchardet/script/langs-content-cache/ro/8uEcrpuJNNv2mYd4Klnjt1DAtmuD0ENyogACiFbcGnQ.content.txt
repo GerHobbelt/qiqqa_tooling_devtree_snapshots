@@ -1,0 +1,62 @@
+revision: 15131440
+title: "Extensie de fi\u0219ier"
+url: https://ro.wikipedia.org/wiki/Extensie_de_fi%C8%99ier
+
+
+---
+
+În domeniul calculatoarelor este numit extensie sau format de fișier sufixul numelui de fișier, separat de numele propriu-zis al fișierului printr-un punct („.”). Convențional extensia exprimă formatul intern sau tipul de date conținute în fișier. În sistemele de operare UNIX și Linux extensia numelui fișierului este opțională, în timp ce în altele (de exemplu Microsoft Windows) ea este importantă și poate determina modul sau chiar programul în care sistemul de operare va accesa datele din fișierul respectiv. Un sistem de operare poate să limiteze lungimea extensiei. De exemplu, în cazul vechilor sisteme de operare Microsoft DOS și OS/2 extensia putea avea maxim 3 caractere.
+
+
+== Formate de fișier ==
+În funcție de scopul și semnificația datelor unui fișier, dar și de organizarea lor internă, fișierele se creează într-unul dintre numeroasele formate predefinite. În lumea lui MS Windows și Unix numele fișierelor conțin de obicei și un sufix numit „extensie de fișier”. Dacă de exemplu numele fișierului este „desen3.ppt”, atunci sufixul „ppt” constituie extensia numelui fișierului. De obicei extensia exprimă chiar formatul fișierului, în acest exemplu fiind vorba de formatul principal folosit de către programul de desenat Microsoft PowerPoint. Inițial extensiile erau alcătuite dintr-un punct urmat de 3 caractere, așa de ex. la sistemul de operare MS-DOS. Sistemele de fișiere actuale permit extensii cu mai mult de 3 caractere.
+În unele sisteme de operare (de ex. Windows, Unix, MacOS) se poate prestabili o asociere între extensie și un program standard, de executat automat la apăsarea cu mausul pe numele fișierului. Dacă această facilitate nu se dorește, atunci trebuie întâi chemat programul necesar, care apoi să deschidă / atașeze fișierele de prelucrat.
+
+
+== Exemple ==
+Exemple pentru formate predefinite foarte răspândite și extensiile respective:
+
+.AC3 - format audio conform cu specificații Dolby Digital
+.alc, a1ac - pentru MacOS
+.AVI - format container pentru conținut audio-video
+.BIN - fișier care conține program binar executabil Unix
+.BMP - fișier grafic în formatul bitmap de la Microsoft; se aplică și la MacOS
+.DOC - document pentru programul de prelucrare complexă a textului Microsoft Word
+.docx - fișier text cu inserții de imagini folosit de programul Microsoft Word 2007
+.EXE - fișier ce conține program binar executabil. Format specific pentru Microsoft Windows.
+.f1c, flac - format pentru un codec audio
+.HTM, HTML - format HTML pentru pagini web (pagini WWW)
+.JPG, JPEG - fișier grafic în formatul definit de Joint Photographic Experts Group (JPEG)
+.M2A - fișier audio folosit de programul Winamp
+.M4A - fișier container audio
+.MKV - fișier complex multimedia
+.MPA - fișier audio folosit de programele Winamp și Microsoft Windows Media Player
+.MP2 - fișier audio folosit de programul Winamp
+.MP3 - fișier audio cu datele comprimate cu ajutorul algoritmelor de tip MP3
+.MP4, MPG4 - fișier container audio sau video.
+.NFO - fișier Microsoft
+.PPT - fișier cu grafice și prezentări grafice, pentru programul Microsoft PowerPoint
+.RTF - fișier cu text formatat, de complexitate medie
+.swf - fisier complex conținând cod binar
+.TXT - fișier cu text simplu, pur, neformatat
+.WAV - fișier audio codat în format specific firmei Microsoft
+.XLS - foaie de calcul tabelar pentru programul Microsoft Excel
+.xlsx - foaie de calcul tabelar pentru programul Microsoft Excel 2007
+
+Pentru încapsularea mai multor fișiere, chiar de formate diferite, într-un singur fișier cu format de tip „container” - vezi articolul Format container.
+
+
+== Note ==
+
+
+== Vezi și ==
+Multimedia
+
+
+== Legături externe ==
+http://www.solvusoft.com/ro/file-extensions Listă deosebit de completă cu extensii de fișiere
+List of file formats
+http://fileinfo.com/
+
+
+== Bibliografie ==

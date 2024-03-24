@@ -1,0 +1,94 @@
+revision: 66525387
+title: Modulacja
+url: https://pl.wikipedia.org/wiki/Modulacja
+
+
+---
+
+Modulacja – samorzutna lub celowa zmiana parametrów sygnału. Jeżeli modulowane są sygnały sinusoidalne, to proces ten może powodować zmiany amplitudy, częstotliwości lub fazy drgań. W przypadku fal prostokątnych (często stosowanych w technice cyfrowej) procesowi modulacji podlega szerokość, amplituda, pozycja (układ) oraz gęstość impulsów.
+Częstotliwość zmian wywołanych modulacją jest dużo mniejsza od częstotliwości fali. Przykładem może być modulowany dźwięk syreny alarmowej o zmiennej częstotliwości.
+
+
+== Modulacja analogowa ==
+
+Najpopularniejsze techniki modulacji:
+
+Modulacje amplitudy – zmiana amplitudy
+DSB-LC (inaczej AM) (ang. Double-SideBand Large Carrier) – modulacja dwuwstęgowa z nośną
+DSB-SC (ang. Double-SideBand Suppressed Carrier) – modulacja dwuwstęgowa z wytłumioną nośną
+SSB (ang. Single-Sideband Modulation) – modulacja jednowstęgowa
+VSB (ang. Vestigial-Sideband Modulation) – modulacja amplitudy z częściowo tłumioną wstęga boczną
+Modulacje kąta
+PM (ang. Phase Modulation) – modulacja fazy, zmiana fazy fali
+FM (ang. Frequency Modulation) – modulacja częstotliwości, zmiana częstotliwości
+sigma-delta.
+
+
+== Modulacja impulsowa ==
+Rodzaje modulacji impulsowej:
+
+PCM – (ang. Pulse-Code Modulation) impulsowo-kodowa
+DPCM – (ang. Differential Pulse-Code Modulation) różnicowa impulsowo-kodowa
+PWM – (ang. Pulse-Width Modulation) szerokości impulsów
+PAM – (ang. Pulse-Amplitude Modulation) amplitudy impulsów
+PPM – (ang. Pulse-Position Modulation) położenia impulsu
+PDM – (ang. Pulse-Density Modulation)  gęstości impulsów.
+
+
+== Kluczowanie ==
+Kluczowanie (ang. keying) jest najstarszą techniką modulacji. Kiedy w XIX wieku zbudowano pierwsze elektryczne urządzenia do przekazywania informacji na odległość, pojawił się problem kodowania znaków do postaci nadającej się do przesłania. Pierwszym pomysłem było użycie tylu przewodów, ile jest liter w alfabecie. Pomysł ten okazał się niepraktyczny i dlatego Samuel Morse stworzył system kodowania znaków alfabetu w postaci serii krótkich (kropka) lub długich (kreska) impulsów. Urządzeniem kodującym był klucz mający postać przełącznika zwierającego obwód elektryczny. Operator wysyłał serię impulsów, którą odczytywał człowiek lub elektromagnes zapisywał na papierowej taśmie. Kiedy technologia transmisji się rozwinęła, powstał szereg technik kluczowania. Potem wszystkie te metody określono jednym terminem – modulacja.
+Najpopularniejsze techniki kluczowania:
+
+ASK – (ang. Amplitude Shift Keying) amplitudowe
+QAM – (ang. Quadrature Amplitude Modulation)
+FSK – (ang. Frequency-Shift Keying) częstotliwościowe
+MFSK – (ang. Multiple Frequency-Shift Keying) wieloczęstotliwościowe
+GFSK – (ang. Gaussian Frequency Shift Keying) częstotliwościowe z filtrem Gaussowskim
+MSK – (ang. Minimum Shift Keying) minimalnofazowe
+GMSK – (ang. Gaussian Minimum Shift Keying) minimalnofazowe z filtrem Gaussowskim
+PSK – (ang. Phase-Shift Keying) fazowe, czyli PM np. BPSK, DPSK, QPSK, n-PSK, O-QPSK, 
+  
+    
+      
+        π
+        
+          /
+        
+        4
+      
+    
+     
+  -QPSK, 
+  
+    
+      
+        
+          U
+          
+            2
+          
+        
+      
+    
+     
+  -PSK
+Systemy szerokopasmowe
+DSSS – (ang. Direct Sequence Spread Spectrum) systemy z bezpośrednim rozpraszaniem widma
+FHSS – (ang. Frequency Hopping Spread Spectrum) systemy szerokopasmowe ze skakaniem po częstotliwościach
+Pulsed-FM
+OFDM – (ang. Ortogonal Frequency Division Multiplexing) nazywane też DMT (ang. Discrete Multitone Modulation)
+CDMA – (ang. Code Division Multiple Access) systemy wielodostępowe z zastosowaniem sekwencji rozpraszających
+RTTY – dalekopis na falach radiowych (ang. Radio TeleTYpe) – prosta modulacja impulsowo-kodowa
+
+
+== Modulacja w telekomunikacji ==
+
+Modulacją w technice nazywa się celowy proces zmiany parametrów fali nośnej umożliwiający przesyłanie informacji (komunikację).
+Modulacja jest konieczna, ponieważ sygnał musi nadawać się do realizacji transmisji poprzez sieć telekomunikacyjną. Zwykle medium transmisyjnym w takiej sieci są przewody miedziane, światłowody, fale elektromagnetyczne (głównie fale radiowe). Ograniczenia fizyczne powodują, że informacja może zostać przekłamana na skutek szumów, zniekształceń i przesłuchów pochodzących od innych sygnałów przesyłanych w tym samym ośrodku. Modulowany komunikat po pokonaniu tych wszystkich przeszkód musi być na tyle poprawny, aby odbiorca mógł wydzielić z niego użyteczne dane.
+Urządzenie dokonujące modulacji nosi nazwę modulatora. Demodulacja (inaczej: detekcja) to proces odwrotny do modulacji. Urządzenie nazywane demodulatorem lub detektorem odtwarza sygnał modulujący z przebiegu  zmodulowanego. Jeżeli komunikacja ma charakter dwustronny (np. full duplex), to jedno urządzenie dokonuje równocześnie modulacji nadawanych sygnałów i demodulacji tych, które odbiera (modulator-demodulator, czyli w skrócie modem).
+
+
+== Zobacz też ==
+kanał komunikacyjny
+telekomunikacja
+obwiednia sygnału

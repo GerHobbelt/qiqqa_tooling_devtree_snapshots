@@ -1,0 +1,59 @@
+revision: 68271162
+title: Bateria ogniw
+url: https://pl.wikipedia.org/wiki/Bateria_ogniw
+
+
+---
+
+Bateria ogniw, bateria elektryczna – zestaw dwóch lub więcej pojedynczych ogniw elektrycznych. Mimo że określenie „bateria” oznacza zestaw składający się z kilku elementów, potocznie jest używane także w odniesieniu do pojedynczych ogniw.
+
+
+== Oznaczenia i parametry baterii ==
+Spotykane standardy konstrukcji baterii przedstawione są w tabeli. Podano oznaczenia ich typów: amerykańskie handlowe (USA), Międzynarodowej Komisji Elektrotechnicznej – International Electrotechnical Commission (IEC) oraz Amerykańskiego Instytutu Standaryzacji – American National Standards Institute (ANSI), a także inne spotykane w Polsce.
+
+„prostop. prostok.” – oznacza prostopadłościan o podstawie prostokątnej,„prostop. kwadr.” – prostopadłościan o podstawie kwadratowej,a w konstrukcjach w postaci walca – „L” – długość, a „D” – średnicę
+(∗) Baterie 4,5 V, 6 V, 9 V, i 12 V budowane są jako zestawy ogniw 1,5 V połączonych szeregowo.
+Standardy europejskie opisano w IEC 60086-1 Primary batteries – Part 1: General (BS397 w Wielkiej Brytanii), natomiast amerykańskie opisano w ANSI C18.1 American National Standard for Dry Cells and Batteries-Specifications.
+
+
+== Oznaczenia według IEC ==
+pierwsza litera – technologia wykonania:
+(brak) – ogniwo cynkowo-grafitowe (anoda: cynk; elektrolit: chlorek amonu lub chlorek cynku; katoda: tlenek manganu(IV)/grafit)
+A – ogniwo cynkowo-powietrzne (anoda: cynk; elektrolit: chlorek amonu lub cynku; katoda: tlen / węgiel)
+B – ogniwo litowo-węglowe (anoda: lit; elektrolit organiczny; katoda: monofluorek węgla); 3 V; ogniwa tego rodzaju używane są zamiennie z ogniwami litowo-manganowymi
+C – ogniwo litowo-manganowe (anoda: lit; elektrolit organiczny; katoda: tlenek manganu(IV)); 3 V
+E – ogniwo litowo-tionylowe (anoda: lit; elektrolit niewodny nieorganiczny; katoda: chlorek tionylu)
+F – (oznaczenie nieujęte w normie) ogniwo litowo-żelazowe
+H – (oznaczenie nieujęte w normie) ogniwo niklowo-metalowo-wodorkowe ładowalne (akumulator NiMH); 1,2 V
+K – (oznaczenie nieujęte w normie) ogniwo niklowo-kadmowe ładowalne (akumulator Ni-Cd); 1,2 V
+L – ogniwo alkaliczno-braunsztynowe (anoda: cynk; elektrolit: wodorotlenek metalu alkalicznego; katoda: tlenek manganu(IV))
+M –
+dawniej: ogniwo rtęciowe (anoda: cynk; elektrolit: wodorotlenek metalu alkalicznego; katoda: tlenek rtęci(II)) – stosowanie tego rodzaju ogniw zostało zabronione
+obecnie: ogniwo litowe ładowalne
+P – ogniwo alkaliczno-powietrzne (anoda: cynk; elektrolit: wodorotlenek metalu alkalicznego; katoda: tlen/węgiel); napięcie nominalne 1,4 V
+S – ogniwo srebrowo-cynkowe (anoda: cynk; elektrolit: wodorotlenek potasu; katoda: tlenek srebra(I) lub tlenek srebra(II))
+Z – ogniwo niklowo-manganowe (Ni-Mn)druga litera – kształt ogniwa
+R – ogniwo cylindryczne
+F – ogniwo płytkowe
+S – ogniwo prostopadłościenneliczba – numer katalogowy.W przypadku baterii pastylkowych rozpowszechnił się wymiarowy system oznaczania wielkości przy zachowaniu oznaczeń literowych IEC (choć spotyka się opuszczanie litery R). I tak np. LR1130 oznacza baterię alkaliczno-braunsztynową cylindryczną o wysokości 3,0 mm (dwie ostatnie cyfry) i średnicy 11 mm (według oznaczeń IEC – LR54), a SR621 baterię srebrową o wysokości 2,1 mm i średnicy 6 mm (IEC – SR60).
+Wśród akumulatorów spotyka się oznaczenia wymiarowe według schematu średnica/wysokość (w mm): HR 11/45 (KR 11/45) – akumulator NiMH (Ni-Cd) formatu R3, HR 15/51 (KR 15/51) – akumulator NiMH (Ni-Cd) formatu R6.
+
+
+== Zobacz też ==
+bateria alkaliczna
+bateria srebrowa
+akumulator elektryczny
+
+
+== Uwagi ==
+
+
+== Przypisy ==
+
+
+== Linki zewnętrzne ==
+Buchmann.ca (ang.)
+Oznaczenia baterii pastylkowych (pol.)
+Oznaczenia baterii pastylkowych. cellpacksolutions.com. [zarchiwizowane z tego adresu (2006-11-01)]. (ang.).
+Oznaczenia baterii pastylkowych (ang.)
+Battery University – informacje o bateriach (ang.)

@@ -1,0 +1,57 @@
+revision: 21560343
+title: Google Earth
+url: https://cs.wikipedia.org/wiki/Google_Earth
+
+
+---
+
+Google Earth je virtuální glóbus dříve známý jako Earth Viewer. Tento software byl vytvořen firmou Keyhole, Inc. a v roce 2004 zakoupen portálem Google. Jedná se o program, který umožňuje prohlížet Zemi jako ze satelitu. Umožňuje naklonění a přiblížení, někdy i ve velkém rozlišení (zejména online, kdy si program nahrává další detaily). Má řadu příznivců po celém světě.
+
+
+== Rysy programu ==
+Google Earth nabízí 3D modely větších měst. Tento produkt má několik softwarových variant. Google nabízí ke stažení volnou verzi i další placené verze s funkcemi navíc (jako například zobrazení cesty podle údajů z GPS). Kromě ryze geografického zobrazení může zobrazovat názvy států, regionů, obcí či důležitých silnic. Jako volitelnou možnost též nabízí definovat si vrstvy (často dodávané třetími stranami), jež tvoří body na zemském povrchu, které mají společné určité téma: například různé galerie jako třeba obrázky přírody z National Geographic, staré mapy území z různých období, internetové projekty (např. Panoramio), kde každý uživatel může svojí zveřejněné fotce přiřadit GPS souřadnice, a mnohé další.
+
+
+== Verze Google Earth ==
+V listopadu 2005 Google uvolnil zkušební verzi programu Google Local mobilní verze, což je podobná aplikace, která umožňuje volbu map, nebo satelitních snímků. Je určena pro mobilní telefony podporující Javu (MIDP 2.0). Od dubna 2010 je pro uživatele dostupná služba Google Earth také prostřednictvím internetového prohlížeče, jako jedna z možností zobrazení v mapách Google Maps.
+V roce 2017 byla k výročí dne Země uvolněna Google Earth verze 9 aplikace, která běží v prohlížeči bez nutnosti cokoliv instalovat. Ke dni uvedení ale aplikace fungovala pouze v prohlížeči Google Chrome. Verze aplikace pro prohlížeče, je založena technologii PNaCl, jejíž běh zajišťuje samotný prohlížeč Chrome.
+Související program Google SketchUp umožňuje ve 3D modelovat stavby a vložit je do systému Google Earth.
+
+
+== Připojení WMS vrstev ==
+Google Earth umožňuje připojení služby WMS jako vrstvy.
+Postup pro přidání: Přidat → Překryvný obrázek → Obnovit → Parametry služby WMS → zadání URL → volba vrstev → potvrzení výběru.
+Pro přidání vrstev WMS serveru je potřeba znát URL WMS serveru, např.
+
+http://wms.cuzk.cz/wms.asp?
+
+
+== Podpora geodatových formátů ==
+Google Earth podporuje nativně práci s geodatovým formátem Keyhole Markup Language (KML), založeným na XML.
+
+
+== Předchůdce Google Earth ==
+Projekt TerraVision zadaný v roce 1994 společností Deutsche Telekom a realizovaný ART+COM.
+
+
+== Odkazy ==
+
+
+=== Reference ===
+
+
+=== Související články ===
+NASA World Wind
+
+
+=== Externí odkazy ===
+ Obrázky, zvuky či videa k tématu Google Earth na Wikimedia Commons 
+Oficiální stránka programu Google Earth – oficiální stránky ke stažení
+Soubory souřadnic z článků Wikipedie pro Google Earth
+EarthSpots Directory Of Interesting Places with links to open in Google Earth.
+Ogle Earth – blog
+Google Local for mobile
+Google maps
+German Google Earth Community
+Recenze programu na serveru Slunečnice.cz
+Google Earth plugin

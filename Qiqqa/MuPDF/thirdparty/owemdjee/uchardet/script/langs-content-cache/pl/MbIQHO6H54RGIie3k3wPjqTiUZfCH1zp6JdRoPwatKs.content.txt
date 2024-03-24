@@ -1,0 +1,36 @@
+revision: 66065493
+title: Digamma
+url: https://pl.wikipedia.org/wiki/Digamma
+
+
+---
+
+Digamma (ϝαύ/δίγάμμα, pisana Ϝϝ lub Ͷͷ) – litera, która występowała w archaicznym alfabecie greckim, w którym oznaczała głoskę [v] lub [w]. W greckim systemie liczbowym oznacza liczbę 6. Pochodzi prawdopodobnie (tak jak i ypsilon) od fenickiej litery waw. Nie znamy jej oryginalnej greckiej nazwy, prawdopodobnie brzmiała ona Ϝαῦ (wym. wau). Nazwa „digamma” („podwójna gamma”) powstała później, ze względu na jej kształt. Digammy używano do zapisu liczby 6 tylko w starożytności, od czasów bizantyjskich służy do tego ligatura stigma () stanowiąca połączenie sigmy i tau. Współcześnie zamiast stigmy często używa się ciągu liter sigma i tau (ΣΤ στ). Za pośrednictwem alfabetu zachodniogreckiego digamma jako litera F przeszła do alfabetu łacińskiego.
+Gdy Grecy ok. IX w. p.n.e. zapożyczyli litery semickie, by stworzyć swój własny alfabet, użyli do zapisu odziedziczonej po języku praindoeuropejskim spółgłoski [w] fenickiej litery  wāw. Spółgłoska [w] zanikła jednak razem z dialektami greckimi, gdy wyparła je oparta głównie na dialekcie attyckim i jońskim greka koine, przodek języka nowogreckiego. Głoska [w] była obecna w dialektach Lakonii, Beocji, Cypru i kilku innych, nie występowała jednak (lub bardzo wcześnie zanikła) w dialektach attyckim, jońskim i wschodnich odmianach dialektu doryckiego. Stopniowy zanik głoski [w] w dialektach czynił obecność digammy w alfabecie greckim zbyteczną.
+Litera digamma znalazła się także w alfabecie gockim i koptyjskim. W obu przypadkach służy do zapisu liczb za pomocą liter.
+
+
+== Użycie jako symbolu ==
+
+
+=== Ϝ ===
+Majuskuły digammy nie używa się jako symbolu, ponieważ wygląda ona podobnie do łacińskiej litery F.
+
+
+=== ϝ ===
+w matematyce:
+funkcja digamma
+
+
+== Kodowanie ==
+W Unicode litera jest zakodowana:
+
+W LaTeX-u używa się znacznika:
+
+
+== Zobacz też ==
+lista jednoliterowych skrótów i symboli
+
+
+== Linki zewnętrzne ==
+Nick Nicholas, Digamma

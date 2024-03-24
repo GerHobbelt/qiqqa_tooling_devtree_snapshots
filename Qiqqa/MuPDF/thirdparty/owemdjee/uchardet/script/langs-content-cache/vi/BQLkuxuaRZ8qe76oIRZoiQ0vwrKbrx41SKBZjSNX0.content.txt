@@ -1,0 +1,23 @@
+revision: 69159099
+title: "\u0110\u1ECBnh lu\u1EADt Moore"
+url: https://vi.wikipedia.org/wiki/%C4%90%E1%BB%8Bnh_lu%E1%BA%ADt_Moore
+
+
+---
+
+Định luật Moore được xây dựng bởi Gordon Moore - một trong những sáng lập viên của tập đoàn sản xuất chip máy tính nổi tiếng Intel. Định luật ban đầu được phát biểu như sau:
+"Số lượng transistor trên mỗi đơn vị inch vuông sẽ tăng lên gấp đôi sau mỗi 24 tháng." (1 inch vuông xấp xỉ 6,45 cm²). Năm 2000 định luật được sửa đổi và công nhận là sau mỗi chu kỳ 18 tháng. Tuy nhiên, có một số thông tin cho rằng Gordon Moore đã công bố sửa đổi định luật của ông là 24 tháng nhưng báo chí tại thời điểm đó đã viết là 18 tháng.
+Định luật Moore lần đầu tiên được công bố rộng rãi trên tạp chí Electronics Magazine số ra ngày 19 tháng 4 năm 1965.
+
+
+== Tác dụng của Định luật Moore ==
+Định luật Moore là một bước ngoặt lớn trong ngành công nghệ điện tử, giải thích tại sao nhà sản xuất có thể giảm giá thành trong khi vẫn tiếp tục nâng cao hiệu suất của phần cứng.
+Định luật Moore cũng là một động lực kích thích cho ngành công nghiệp điện tử duy trì sự phát triển mạnh mẽ trong hàng thập kỷ qua.
+Thực tế, từ "định luật" trong tên gọi "Định luật Moore" không mang cùng một ý nghĩa với từ "định luật" trong tên gọi "định luật Newton" hay "định luật Gauss". Vào năm 1965, trong một bài báo có tiêu đề "Đưa thêm nhiều thành phần vào mạch tích hợp" cho tạp chí Electronics, Gordon Moore đưa ra tiên đoán rằng số lượng thành phần (bóng bán dẫn) trong các mạch tích hợp – bộ não của máy tính – sẽ tăng gấp đôi sau mỗi năm. Khoảng 1 thập kỷ sau, tiến sĩ Moore thay đổi lại kết luận của mình, theo đó số lượng bóng bán dẫn sẽ phải mất 2 năm để tăng gấp đôi - con số "18 tháng" được nhiều người đưa ra chưa bao giờ tồn tại trên Định luật Moore.
+
+
+== Định luật Moore tại thời điểm hiện tại và dự báo trong tương lai ==
+Tuy nhiên, trong thời gian gần đây định luật Moore đã có nhiều biểu hiện bị thay đổi và kéo dài dần thời gian tăng đôi số transistor trên một đơn vị diện tích (một inch vuông). Tại thời điểm hiện nay (năm 2007), khoảng thời gian để tăng đôi số transistor là xấp xỉ 60 tháng. Nhiều nhà phân tích cho rằng trong tương lai không xa khi mà các áp dụng kỹ thuật đã không thể rút nhỏ kích cỡ của một transistor xuống hơn được (cụ thể là khi kiến trúc của transistor đã được rút xuống đến mức độ phân tử) thì định luật Moore sẽ không còn đúng nữa.
+
+
+== Tham khảo ==

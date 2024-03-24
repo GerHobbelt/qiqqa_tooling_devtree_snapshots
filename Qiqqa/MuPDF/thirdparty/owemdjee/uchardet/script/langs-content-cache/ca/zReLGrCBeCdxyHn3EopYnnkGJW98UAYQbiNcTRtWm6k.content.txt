@@ -1,0 +1,271 @@
+revision: 32070801
+title: "Distribuci\xF3 binomial negativa"
+url: https://ca.wikipedia.org/wiki/Distribuci%C3%B3_binomial_negativa
+
+
+---
+
+En la teoria de la probabilitat i l'estadística, la distribució binomial negativa és una distribució de probabilitat discreta que modela el nombre d'errors en una seqüència d'assaigs de Bernoulli independents i distribuïts de manera idèntica abans d'un nombre especificat (no aleatori) d'èxits (indicat 
+  
+    
+      
+        r
+      
+    
+     
+  ) es produeix. Per exemple, podem definir tirar un 6 en un dau com un èxit, i llançar qualsevol altre número com un fracàs, i preguntar quantes tirades de fallada es produiran abans de veure el tercer èxit (
+  
+    
+      
+        r
+        =
+        3
+      
+    
+     
+  ). En aquest cas, la distribució de probabilitat del nombre de fallades que apareixen serà una distribució binomial negativa.Una formulació alternativa és modelar el nombre de proves totals (en lloc del nombre de fracassos). De fet, per a un nombre especificat (no aleatori) d'èxits (r), el nombre d'errors (n − r) són aleatoris perquè els assaigs totals (n) són aleatoris. Per exemple, podríem utilitzar la distribució binomial negativa per modelar el nombre de dies n (aleatoris) que funciona una determinada màquina (especificada per r) abans que s'avaria.La distribució Pascal (després de Blaise Pascal) i la distribució Polya (per a George Pólya) són casos especials de la distribució binomial negativa. Una convenció entre enginyers, climatòlegs i altres és utilitzar "binomi negatiu" o "Pascal" per al cas d'un paràmetre de temps d'aturada amb valors enters (
+  
+    
+      
+        r
+      
+    
+     
+  ) i utilitzeu "Polya" per al cas de valor real.Per a les ocurrències d'esdeveniments discrets associats, com els brots de tornados, les distribucions de Polya es poden utilitzar per donar models més precisos que la distribució de Poisson permetent que la mitjana i la variància siguin diferents, a diferència de la de Poisson. La distribució binomial negativa té una variància 
+  
+    
+      
+        μ
+        
+          /
+        
+        p
+      
+    
+     
+  , amb la distribució esdevenint idèntica a Poisson al límit 
+  
+    
+      
+        p
+        →
+        1
+      
+    
+     
+   per a un mitjà donat 
+  
+    
+      
+        μ
+      
+    
+     
+   (és a dir, quan les falles són cada cop més rares). Això pot fer que la distribució sigui una alternativa útil sobredispersa a la distribució de Poisson, per exemple, per a una modificació robusta de la regressió de Poisson. En epidemiologia, s'ha utilitzat per modelar la transmissió de malalties per a malalties infeccioses on el nombre probable d'infeccions posteriors pot variar considerablement d'un individu a un altre i d'un entorn a un altre.  De manera més general, pot ser apropiat quan els esdeveniments tenen esdeveniments correlacionats positivament causant una variància més gran que si els esdeveniments fossin independents, a causa d'un terme de covariància positiva.
+
+
+== Definició ==
+Imagineu una seqüència d'assaigs Bernoulli independents: cada assaig té dos resultats potencials anomenats "èxit" i "fracàs". En cada assaig la probabilitat d'èxit és 
+  
+    
+      
+        p
+      
+    
+     
+   i del fracàs és 
+  
+    
+      
+        1
+        −
+        p
+      
+    
+     
+  . Observem aquesta seqüència fins a un nombre predefinit 
+  
+    
+      
+        r
+      
+    
+     
+   d'èxits es produeix. A continuació, el nombre aleatori de fallades observades, 
+  
+    
+      
+        X
+      
+    
+     
+  , segueix la distribució binomial negativa (o Pascal):
+
+  
+    
+      
+        X
+        ∼
+        NB
+        ⁡
+        (
+        r
+        ,
+        p
+        )
+      
+    
+     
+  
+La funció de massa de probabilitat de la distribució binomial negativa és
+
+  
+    
+      
+        f
+        (
+        k
+        ;
+        r
+        ,
+        p
+        )
+        ≡
+        Pr
+        (
+        X
+        =
+        k
+        )
+        =
+        
+          
+            
+              (
+            
+            
+              
+                k
+                +
+                r
+                −
+                1
+              
+              k
+            
+            
+              )
+            
+          
+        
+        (
+        1
+        −
+        p
+        
+          )
+          
+            k
+          
+        
+        
+          p
+          
+            r
+          
+        
+      
+    
+     
+  
+on r és el nombre d'èxits, k és el nombre de fracassos i p és la probabilitat d'èxit en cada assaig.
+Aquí, la quantitat entre parèntesis és el coeficient binomial i és igual a
+
+  
+    
+      
+        
+          
+            
+              (
+            
+            
+              
+                k
+                +
+                r
+                −
+                1
+              
+              k
+            
+            
+              )
+            
+          
+        
+        =
+        
+          
+            
+              (
+              k
+              +
+              r
+              −
+              1
+              )
+              !
+            
+            
+              (
+              r
+              −
+              1
+              )
+              !
+              
+              (
+              k
+              )
+              !
+            
+          
+        
+        =
+        
+          
+            
+              (
+              k
+              +
+              r
+              −
+              1
+              )
+              (
+              k
+              +
+              r
+              −
+              2
+              )
+              ⋯
+              (
+              r
+              )
+            
+            
+              k
+              !
+            
+          
+        
+        .
+      
+    
+     
+  
+
+
+== Referències ==

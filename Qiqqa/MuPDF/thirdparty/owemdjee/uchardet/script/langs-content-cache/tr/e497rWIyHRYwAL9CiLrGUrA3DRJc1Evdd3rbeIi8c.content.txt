@@ -1,0 +1,47 @@
+revision: 29229631
+title: "Molek\xFCler onkoloji"
+url: https://tr.wikipedia.org/wiki/Molek%C3%BCler_onkoloji
+
+
+---
+
+Moleküler onkoloji; tümörlerin moleküler düzeyde araştırıldığı ve kanser kimyası ile ilgilenen disiplinler arası bir daldır. Kanser riskinin öngörülmesinden kanserin tedavi edilmesine kadar birçok konuda önemli rol oynamaktadır.
+
+
+== Ana dallar ==
+Moleküler onkoloji kanser gelişiminde rol oynayan genleri tanımlamıştır.  Araştırma, biyolojik ve klinik fenotipleri incelemek için genomik, hesaplamalı biyoloji, tümör görüntüleme, yapay ortamlarda (in vitro) ve canlıda (in vivo) fonksiyonel modellerden çeşitli teknikleri birleştirmiştir. Bu genler tarafından üretilen proteinler, yeni kemoterapi ilaçları ve diğer kanser tedavileri veya görüntüleme taramaları için hedef olarak hizmet edebilmektedir. Bilim adamları, yeni aday genlerin kanser gelişimindeki rolünü doğrulamak için bir dizi teknik kullanmaktadır. Nihai amaç, bu bulguları kanser hastaları için geliştirilmiş tedavi seçeneklerine dönüştürmektir.
+
+
+=== Gen hedefleri ===
+Olası kanser tedavileri için araştırılan birçok farklı gen vardır. En çok çalışılanlar arasında p53 geni ve PTEN geni bulunmaktadır. Bu genler, hücre döngüsünün ve hücresel genomik bütünlükte yer alan diğer yolların ana düzenleyicileridir. Bu genler hücre döngüsünü durdurarak, genetik olarak hasar görmüş hücrelerin bu hasarı yavru hücrelere aktarılmamasını sağlamaktadır. Hücre döngüsü duraklatılabilmektedir. Hasar yeterince büyükse, p53 ve PTEN gen yolları hasarlı hücrelerin ölümü için sinyal verebilmektedir. Hem p53 hem de PTEN genleri, tümör baskılayıcılar olarak sınıflandırılmaktadır Çünkü onların görevleri hasarlı genetik materyal ile kontrol dışı çoğalabilen ve kontrol altında tutulmazsa sonunda kanser büyümesine yol açabilen hücrelerin onarımını denetlemektir. Bu genlerdeki mutasyonlar, insan kanserlerinin yarısından fazlasında görülmektedir.
+
+
+== Moleküler onkolojik tedaviler ==
+
+
+=== İmmünoterapi ===
+İmmünoterapi bağışıklık sisteminin kanser hücreleri ile savaşmasını sağlayan bir tedavi türüdür. Bağışıklık sistemi vücudun enfeksiyon hastalıkları ve diğer hastalıklarla savaşmasını sağlamaktadır. Akyuvarlar, lenf sisteminin doku ve organlarından oluşmaktadır. İmmünoterapi bir biyolojik tedavidir. Biyolojik tedavide kullanılan maddeler canlı organizmalardan elde edilmektedir. Bu tedavide vücudun kendi bağışıklık sistemi, tümör hücrelerine saldırmak için kullanılmaktadır. Bu nedenle bağışıklık sistemi, gerekirse gelecekte belirli kanser hücrelerine doğal olarak tekrar saldırabilmektedir. Kemik iliği nakilleri, antikor terapileri ve kanser hücrelerini hedefleyerek öldürmek için konakçı bağışıklık hücrelerinin çeşitli yönlendirmeleri dahil olmak üzere birçok immünoterapi türü mevcuttur.
+
+
+==== Kimerik Antijen Reseptörü T Hücresi ====
+Bir tür immünoterapi olan kimerik antijen reseptörü-T (CAR-T) hücre tedavisi, kanser tedavisinde umut verici yeni bir T hücresi immünoterapisidir. CAR-T bir antijen tanıma parçası ve T hücresi sinyalleşme alanlarından oluşan bir birleşme proteinidir. CAR-T hücresi, ağırlıklı olarak; akut lenfoblastik lösemi (ALL), kronik lenfositik lösemi (KLL), lenfoma (Lenf kanseri), multipl miyeloma (kemik iliği kanseri) dahil olmak üzere hematolojik kanserlerin tedavisinde kullanılmıştır. CAR-T hücresi; melanom (cilt kanseri), meme kanseri ve sarkom (bağ dokusunda oluşan tümör) gibi tümörlerin tedavisinde ise büyük umut vadetmektedir. CAR-T, bir kimerik antijen reseptörünü ifade etmek için bir hastanın doğal T hücrelerinin manipülasyonunu içermektedir. Şu anda milyonlarca hastanın T hücresinde bulunan bu reseptör, özgül antijenleri ifade eden kanserli hücreleri tanımaktadır. Genellikle, T hücresi antijen reseptörü aktif değildir ancak reseptör belirli bir kanserli antijeni tanıdığında, kanser hücresini yok etmek için T hücresinin fiziksel yapısı değişmektedir. Bu, hücresel ve moleküler düzeyde çalışan bir kanser tedavisi yöntemidir.
+
+
+==== CAR-T'yi Kontrol Noktası İnhibitörleri ve Sitokinlerle Birleştirmek ====
+Bazı düzenleyici proteinlerin, özellikle bağışıklık kontrol noktası inhibitörlerinin, T hücrelerinin vücutta çoğalma yeteneğini azalttığı bulunmuştur. CAR-T gen terapisinin etkinliğini en iyi şekilde kullanabilmek için bu kontrol noktası inhibitörleri, CAR-T hücrelerinin öncülük ettiği sağlam bir anti-tümör bağışıklık tepkisini uyarmak için engellenebilmektedir. CAR-T hücresi üzerinde bilinen çeşitli engelleyici alıcılar vardır. Bu alıcıların ve onları bağlayan moleküllerin manipülasyonu yoluyla, CAR-T hücresinin dışa vurumu güçlendirilebilmektedir.CAR-T hücreleri ayrıca immünoterapi yönteminin etkinliğini artırmak için sitokinlerle birleştirilebilmektedir. Sitokinler; kendilerine, yakındaki hücrelere veya uzaktaki hücrelere etki edebilen haberci moleküllerdir. Bu sitokinlerin sinyal yolları, CAR-T anti-tümör özelliklerini geliştirmek için kullanılabilmektedir.
+
+
+==== CAR-T Terapisi ile ilgili sorunlar ====
+Kanser hücrelerinde ifade edilen ilgili antijenler bazen normal vücut hücrelerinde de ifade edilebilmektedir. Bu, antijenin sadece kanser hücresine özgüllüğü olmadığında vücudun T hücrelerinin kanser hücreleri yerine kendi sağlıklı hücrelerine saldıracağı anlamına gelmektedir. Bu soruna olası bir çözüm, onları daha da özel hale getirmek için CAR-T hücrelerine iki farklı antijen reseptörü eklemektir. CAR-T immünoterapi yaklaşımıyla ilgili ikinci konu, sitokin salınım sendromuna neden olabilmesidir. Bu, bağışıklık sistemi tarafından aşırı miktarda pro-inflamatuar (iltihap yapıcı) faktörlerin salındığı ve hasta için bulantı, yüksek ateş gibi hoş olmayan yan etkilere neden olabileceği zamandır.
+
+
+=== Gen tedavisi ===
+Gen tedavisi, ciddi şekilde hasar görmüş genomlarla işlev gören kanserli hücrelerin ifadesini değiştirmek için hastalıklı hücrelere yabancı genetik diziler sunmaktadır. Gen tedavisi/terapisi/sağaltımı, genetik hastalıkların iyileştirilmesi amacıyla hastaya DNA aktarımı yapılmasıdır. Hastaya aktarılan yeni DNA, genellikle hastalığa yol açan mutasyonun etkilerini düzeltme işlevine sahip genler içermektedir. Gen tedavisi, hastalık iyileştirme ya da önleme amacıyla DNA bölümlerinin (genellikle genlerin) kullanılmasıdır. DNA, hastalığa neden olan değişmiş (mutant) genin etkilerini düzeltecek şekilde dikkatle seçilmektedir.
+
+
+== Ayrıca bakınız ==
+Onkoloji
+Moleküler tıp
+
+
+== Kaynakça ==

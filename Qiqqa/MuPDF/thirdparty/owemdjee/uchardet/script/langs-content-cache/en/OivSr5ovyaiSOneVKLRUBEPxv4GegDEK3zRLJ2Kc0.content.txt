@@ -1,0 +1,13 @@
+revision: 1067171623
+title: Applications of sensitivity analysis to model calibration
+url: https://en.wikipedia.org/wiki/Applications_of_sensitivity_analysis_to_model_calibration
+
+
+---
+
+Sensitivity analysis has important applications in model calibration. 
+One application of sensitivity analysis addresses the question of "What's important to model or system development?" One can seek to identify important connections between observations, model inputs, and predictions or forecasts. That is, one can seek to understand what observations (measurements of dependent variables) are most and least important to model inputs (parameters representing system characteristics or excitation), what model inputs are most and least important to predictions or forecasts, and what observations are most and least important to the predictions and forecasts. Often the results are surprising, lead to finding problems in the data or model development, and fixing the problems. This leads to better models.
+In biomedical engineering, sensitivity analysis can be used to determine system dynamics in ODE-based kinetic models. Parameters corresponding to stages of differentiation can be varied to determine which parameter is most influential on cell fate. Therefore, the most limiting step can be identified and the cell state for most advantageous scale-up and expansion can be determined. Additionally, complex networks in systems biology can be better understood through fitting mass-action kinetic models. Sensitivity analysis on rate coefficients can then be conducted to determine optimal therapeutic targets within the system of interest.
+
+
+== References ==

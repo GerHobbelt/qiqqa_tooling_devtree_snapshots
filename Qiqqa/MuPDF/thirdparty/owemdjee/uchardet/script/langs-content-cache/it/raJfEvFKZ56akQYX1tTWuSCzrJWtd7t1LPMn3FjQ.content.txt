@@ -1,0 +1,64 @@
+revision: 132689174
+title: Click chemistry
+url: https://it.wikipedia.org/wiki/Click_chemistry
+
+
+---
+
+La click chemistry, termine inglese che si può tradurre come "chimica a scatto", è una filosofia della chimica introdotta da Barry Sharpless nel 2001, si riferisce alla possibilità di sintetizzare sostanze complesse in modo semplice e rapido, unendo molecole più piccole. Questo tipo di reattività si ispira alla natura, che operando per lo più in ambiente acquoso produce un'enorme varietà di molecole complesse a partire da poche molecole di base.
+Nel 2022 Carolyn R. Bertozzi, Morten Meldal e K. Barry Sharpless hanno vinto il Premio Nobel per la chimica per i loro contributi inerenti alla click chemistry e alla chimica bioortogonale.Per fare parte della click chemistry, le reazioni devono (o dovrebbero idealmente):
+
+essere modulari e versatili
+dare rese molto elevate
+formare prodotti secondari inoffensivi
+essere stereospecifiche
+avere una forza trainante termodinamica elevata (>80 kJ/mol) per favorire una reazione rapida e completa verso un singolo prodotto di reazione. Si dice in questo caso che la reazione è "caricata a molla" (spring loaded) per formare il prodotto
+portare a prodotti stabili in condizioni fisiologiche
+essere efficienti dal punto di vista della economia atomica.La procedura utilizzata deve (o dovrebbe idealmente)
+
+avvenire in condizioni blande
+utilizzare materiali e reagenti facilmente reperibili
+evitare l'utilizzo di solventi, o quanto meno richiedere solventi non dannosi e facilmente rimovibili, preferibilmente acqua
+portare a prodotti finali facilmente isolabili con metodi non cromatografici, tipo cristallizzazione e distillazione.
+
+
+== Giustificazione ==
+A partire da CO2, la natura ha prodotto solo circa 35 molecole di base semplici che hanno richiesto la formazione di legami carbonio - carbonio (C-C). Tutte le altre molecole complesse che si trovano nei sistemi biologici e in biochimica sono formate collegando tra loro quelle stesse molecole semplici. Ad esempio, le proteine sono costituite da unità di aminoacidi che si ripetono, e gli zuccheri sono costituiti da unità di monosaccaridi che si ripetono. In natura i collegamenti tra le unità di base non sono basati su legami C-C, ma su legami carbonio - eteroatomo C-X-C, indicando che creare connessioni C-X-C è più semplice ed efficiente.
+Ispirandosi a quanto fa la natura, la click chemistry si propone di sviluppare reazioni che portino in modo semplice e rapido alla sintesi di molecole complesse utilizzando connessioni C-X-C. Questo approccio generale può essere molto utile, ad esempio, per la scoperta di nuovi farmaci, dato che è facile creare un gran numero di strutture differenti. Il fatto di limitarsi ad usare connessioni C-X-C non costituisce un vincolo significativo al numero di nuove molecole sintetizzabili. Infatti, nel 1996 Wayne C. Guida stimò in 1063 il numero di possibili farmaci, considerando come possibile candidata ogni molecola con meno di 30 atomi diversi dall'idrogeno, peso molecolare minore di 500 dalton, formata utilizzando solo idrogeno, carbonio, azoto, ossigeno, fosforo, zolfo, cloro e bromo, e stabile a temperatura ambiente in presenza di acqua e ossigeno. Usata in combinazione con chimica combinatoria, tecniche HTS (high-throughput screening) e librerie chimiche, la click chemistry si propone di accorciare i tempi necessari per la scoperta di nuovi farmaci, rendendo efficiente e rapida la sintesi di prodotti anche quando si utilizzano reazioni in più stadi.
+
+
+== Esempi ==
+I criteri richiesti dalla click chemistry sono piuttosto stringenti, ed è improbabile che una certa reazione li rispetti tutti integralmente. Tuttavia, tra tutte le reazioni che avvengono con formazione di legami carbonio-eteroatomo, le seguenti classi di reazioni si prestano ad essere comprese nell'ambito della click chemistry:
+
+cicloaddizioni [3+2], come la cicloaddizione di Huisgen azide-alchino, in particolare la variante catalizzata da Cu(I), che è spesso considerata la reazione "click" per antonomasia.
+reazioni tiolo-ene
+reazioni di Diels-Alder e reazioni di Diels-Alder inverse electron demand
+cicloaddizioni [4+1] tra isocianuri e tetrazine
+sostituzioni nucleofile specie su anelli piccoli e tensionati come negli epossidi e le aziridine
+chimica del carbonile di tipo non aldolico: ad esempio sintesi di uree, eterocicli aromatici e idrazoni
+reazioni di addizione a doppi legami carbonio-carbonio come la diidrossilazione e l'epossidazione.
+
+
+== Note ==
+
+
+== Bibliografia ==
+ M. L. Blackman, M. Royzen, J. M. Fox, Tetrazine Ligation: Fast Bioconjugation Based on Inverse-Electron-Demand Diels−Alder Reactivity, in J. Am. Chem. Soc., vol. 130, n. 41, 2008,  pp. 13518–13519, DOI:10.1021/ja8053805. URL consultato il 10 ottobre 2011.
+ R. S. Bohacek, C. McMartin, W. C. Guida, <3::AID-MED1>3.0.CO;2-6 The art and practice of structure-based drug design: a molecular modeling perspective, in Med. Res. Rev., vol. 16, n. 1, 1996,  pp. 3-50, DOI:10.1002/(SICI)1098-1128(199601)16:1<3::AID-MED1>3.0.CO;2-6. URL consultato il 10 ottobre 2011.
+ C. E. Hoyle, C. N. Bowman, Thiol–Ene Click Chemistry, in Angew. Chem. Int. Ed., vol. 49, n. 9, 2010,  pp. 1540–1573, DOI:10.1002/anie.200903924. URL consultato il 10 ottobre 2011.
+ H. C. Kolb, M. G. Finn, K. B. Sharpless, <2004::AID-ANIE2004>3.0.CO;2-5 Click Chemistry: Diverse Chemical Function from a Few Good Reactions, in Angew. Chem. Int. Ed., vol. 40, n. 11, 2001,  pp. 2004 ± 2021, DOI:10.1002/1521-3773(20010601)40:11<2004::AID-ANIE2004>3.0.CO;2-5. URL consultato il 10 ottobre 2011.
+ C. Spiteri, J. E. Moses, Copper-Catalyzed Azide–Alkyne Cycloaddition: Regioselective Synthesis of 1,4,5-Trisubstituted 1,2,3-Triazoles, in Angew. Chem. Int. Ed., vol. 49, n. 1, 2010,  pp. 31-33, DOI:10.1002/anie.200905322. URL consultato il 10 ottobre 2011.
+ H. Stöckmann, A. A. Neves, S. Stairs, K. M. Brindle, F. J. Leeper, Exploring isonitrile-based click chemistry for ligation with biomolecules, in Org. Biomol. Chem., vol. 9, 2011,  pp. 7303-7305, DOI:10.1039/C1OB06424J. URL consultato il 10 ottobre 2011.
+
+
+== Altri progetti ==
+
+ Wikiquote contiene citazioni di o su click chemistry
+
+
+== Collegamenti esterni ==
+(EN) Numero monografico di Chem. Soc. Rev. sulla click chemistry, su rsc.org. URL consultato l'11 ottobre 2011.
+(EN) Sito web del professor Sharpless, con un elenco di articoli sulla click chemistry, su scripps.edu. URL consultato l'11 ottobre 2011.
+(EN) Pagina di Organic Chemistry Portal con recente letteratura sulla click chemistry, su organic-chemistry.org. URL consultato l'11 ottobre 2011.
+(EN) "In situ click chemistry" su Chemical & Engineering News, su pubs.acs.org. URL consultato l'11 ottobre 2011.
+(EN) "Copper-free click chemistry" su Chemical & Engineering News, su pubs.acs.org. URL consultato l'11 ottobre 2011.

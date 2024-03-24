@@ -1,0 +1,28 @@
+revision: 1136850
+title: SGML
+url: https://ga.wikipedia.org/wiki/SGML
+
+
+---
+
+Is meititheanga agus caighdeán ISO í an Teanga Chaighdeánach Mharcála Ghinearálaithe (SGML .i. Standard Generalized Markup Language) chun teangacha marcála a chruthú. D'eascair SGML as an Teanga Mharcála Ghinearálaithe (GML) IBM a chuir Charles Goldfarb, Edward Mosher agus Raymond Lorie chun cinn sna 1960í. 
+
+
+== Stair ==
+Foilsíodh SGML sa bhliain 1986 mar oidhre teanga eile, GML (Generalized Markup Language), a chum Charles Goldfarb and cúpla duine eile. Bhí Goldfarb ina cheann tionscadail ag IBM (International Business Machines Corporation) ag an am. Tharraing GML clú air, agus d'fhág sé IBM agus chuaigh i mbun SGML. 
+Bhain na Comhphobail Eorpacha feidhm as SGML mar chaighdeán a gcuid foilseachán de réir FORMEX (Formalized Exchange of Electronic Publications). Chum siad Mark-It, an chéad pharsálaí SGML nach raibh srianta de réir na sonraíochtaí ba dhéanaí de SGML. 
+Déanann SGML idirdhealú bunúsach idir comhdhéanamh loighciúil cáipéise (teidil, caibidlí, paragraif, léaráidí), rud a thaispeántar le marcálaithe, agus an nochtadh, rud atá taobh leis an gcineál foilseacháin atá i gceist (leabhar, iris, scáileán etc.) agus a chuirtear in iúl trí litreacha, trí ailíniú agus spásáil na bparagraf agus eile. Ligeann sé d'fhoras an chuma chéanna a chur ar a chuid cáipéisí uile ach gan cloí i gcónaí leis an gclóghrafaíocht chéanna. 
+Is féidir eilimintí SGML a pharsáil mar chrann sonraí i nodaireachtaí difriúla, i dtreo gurb í an cháipéis an bun-nód agus gur nóid thánaisteacha iad rudaí atá i nodaireachtaí eile (téacs, grafaicí). Cuireann SGML áiseanna ar fáil chun nascadh a dhéanamh le haonáin sheachtracha agus nótaí a chur leo.
+
+
+== Tagairtí ==
+
+
+== Naisc sheachtracha ==
+Formex - Formalized Exchange of Electronic Publications Curtha i gcartlann 2009-10-14 ar an Wayback Machine
+Web Services Definitions - SGML Curtha i gcartlann 2007-10-18 ar an Wayback Machine
+Léargas ginearálta ar acmhainní SGML  ar shuíomh W3C.
+Réamhrá agus samplaí de cháipéisiú in SGML
+SC34 Committee Records, Charles Babbage Institute - Bailiúchán a bhaineann le cumadh SGML agus teangacha caighdeánacha eile a chuaigh i bhfeidhm ar uirlisí XML; i measc na gcáipéisí tá dréachtaí luatha páipéir riaracháin, moltaí grúpaí oibre, agus caighdeáin do theangacha ríomhaireachta.
+Buntús éasca SGML
+Achoimre chomhréir SGML ó lámh Charles Goldfarb

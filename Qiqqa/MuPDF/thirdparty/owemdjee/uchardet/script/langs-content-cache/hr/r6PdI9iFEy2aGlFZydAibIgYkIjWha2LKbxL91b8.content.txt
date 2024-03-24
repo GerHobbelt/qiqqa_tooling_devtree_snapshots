@@ -1,0 +1,84 @@
+revision: 6424977
+title: Pretvornik pomaka
+url: https://hr.wikipedia.org/wiki/Pretvornik_pomaka
+
+
+---
+
+Pretvornik pomaka, davač pomaka, osjetilo pomaka ili enkoder (engl. encoder) je uređaj ili senzor (mjerno osjetilo) koji fizikalne veličine pretvara u električne signale preko pomaka. Dijele se na ravne (linearne) i kutne (rotacijske). Kutni enkoder je elektromehanički uređaj koji pretvara kutni položaj ili kružno gibanje vratila ili osovine u analogni ili digitalni signal.
+
+
+== Podjela ==
+Pretvornike pomaka ili enkodere možemo razvrstati prema vrsti mjernog signala na električne, pneumatske i hidrauličke. Najčešće se primjenjuju električni enkoderi. Izvedbe enkodera su otpornički, kapacitivni, induktivni,  magnetski, ultrazvučni, optički, digitalni enkoder.
+
+
+=== Otpornički pretvornici pomaka ===
+
+Otporničke davače pomaka ili enkodere dijelimo na:
+
+enkodere za mjerenje linearnog pomaka:
+linearni potenciometar,
+s užetom,
+enkodere za mjerenje kutnog pomaka:
+jednookretajni,
+višeokretajni (linearni pretvaraju rotacijsko u linearno gibanje),
+rotacijski (bez ograničenja broja okretaja, na osovini motora, mali moment trenja).Otpornički davači pomaka se najčešće koriste u potenciometarskom spoju. Potenciometri su uređaji koji se sastoje od otporničkog tijela uzduž kojeg se giba klizač spojen s osjetnikom pomaka. Otporničko tijelo je namotano žicom koje mogu biti od različitih legura kao što su: nikal-krom, srebro-paladij, platina-iridij i slično. Žica je namotana na izolacijsko tijelo ili na izolirani metal. Otpornička tijela se rade najčešće od ugljena, metalnog filma, plastičnog filma i posebne keramičko-metalne smjese zvanom kermet. Potenciometarski pretvornici linijskog (linearnog) pomaka imaju mjerno područje od 10 mm do više metara, dok potenciometarski pretvornici kutnog pomaka imaju najmanje mjerno područje od 0° do 1°, a najveće od 0° do više od 3600°. Za mjerno područje veće od 355° koriste se višenavojni potenciometri.
+
+
+=== Kapacitivni pretvornici pomaka ===
+
+Kapacitivni enkoderi rade na način promjene razmaka među pločama, promjene površine ploča ili promjene dielektrika između ploča:
+
+promjena razmaka među pločama ili izvedba s jednom mirnom i jednom pomičnom pločom:
+pomična ploča vezana je uz osjetilo pomaka pa se tako mijenja razmak između ploča a time i električni kapacitet. Ovakva izvedba se koristi pri mjerenju malih pomaka, reda veličine 1 μm. Koristi se na primjer kod kondenzatorskih mikrofona gdje se tlak mjeri pomoću pomaka. Svojstva su:  nelinearna karakteristika, osjetljivost je veća ako su ploče bliže i relativna promjena električnog kapaciteta jednaka je relativnoj promjeni pomaka.
+diferencijalna izvedba ima moguće dvije izvedbe: srednja ploča je mirna, a vanjske ploče su pomične i srednja ploča je pomična, a vanjske su ploče mirne. Svojstva su: linearna ovisnost električnog napona o udaljenosti između ploča.  Ovaj se spoj koristi kod integriranih mjerača ubrzanja (akcelerometara).
+promjena površine ploča; kapacitet se mijenja promjenom radne površine između ploča. Pomična ploča je vezana uz osjetilo pomaka pa se mijenja efektivna površina između ploča.
+linijski ili linearni pomak,
+kutni pomak: odgovarajućim oblikom ploča može se ostvariti linearna ili nelinearna ovisnost,
+promjena dielektrika između ploča: radi na sličan način kao promjena površine između ploča, samo što je ovdje uzrok promjene kapaciteta promjena dielektrika. Elektrode su nepomične, a dielektrik je vezan uz osjetilo pomaka.
+
+
+=== Induktivni pretvornici pomaka ===
+
+Rad induktivnih pretvornika pomaka se temelji na ovisnosti električnog induktiviteta električne zavojnice (svitka) o promjeni magnetskog otpora. Primjenjuju se u industriji, robusni su i kompaktni. Manje su osjetljivi na uvjete okoline (vlaga, prašina) od kapacitivnih. Moraju se oklopiti radi smanjenja utjecaja vanjskog magnetskog polja.
+
+
+=== Pretvornici pomaka s promjenjivim magnetskim otporom ===
+
+Pretvornici pomaka s promjenjivim magnetskim otporom promjenom zračnog razmala (raspora) mijenja se ukupni koeficijent magnetska permeabilnost magnetskog kruga zavojnice, što se na izlazu očituje kao promjena električnog napona ili jačine električne struje zavojnice. Pomični dio ne mora nužno biti od istog materijala kao i jezgra. Nedostatci su: nelinearna ovisnost, postoji magnetska privlačna sila na pomični dio jezgre i ovisnost o temperaturi.
+
+
+=== Diferencijalna izvedba induktivnih pretvornika pomaka ===
+
+Diferencijalni induktivni enkoderi služe za mjerenje malih linijskih (linearnih)  pomaka: linearna promjena električnog napona s pomakom. U ravnotežnom položaju se sile na pomični dio poništavaju. Pretvornici pomaka s promjenjivim magnetskim otporom se mogu koristiti u izvedbama u kojima se umjesto pokretnog dijela koristi membrana (na primjer pretvornik tlaka, mikrofon).
+
+
+=== Digitalni pretvornici pomaka ===
+Postoje dva osnovan tipa digitalnih enkodera:
+
+apsolutni,
+inkrementalni.S obzirom na izvedbu mogu biti:
+
+kontaktni,
+magnetski,
+optički.S obzirom na tip pomaka mogu biti
+
+ravni ili linearni,
+kutni ili rotacijski.
+
+
+==== Apsolutni pretvornik pomaka ====
+Apsolutni pretvornici pomaka se nazivaju apsolutni zato što svaka pozicija ima svoj jedinstveni kod. Na izlazu apsolutni enkoderi daju binarni kod trenutne pozicije, na primjer 1010. Apsolutni enkoderi najčešće koriste binarni kód koji se sastoji od 4 znamenke. Za svaku znamenku je potrebna jedna traka (na primjer glava čitača može imati četiri otvora. 
+
+
+==== Inkrementalni pretvornik pomaka ====
+Inkrementalni optički pretvornici pomaka ili inkrementalni enkoderi se najčešće koriste na mjestima gdje se mehanički pokret treba pretvoriti u digitalni signal. Koriste se gdje se precizno treba odrediti brzina, udaljenost, pozicija ili smjer. Inkrementalni enkoder daje informaciju o pomaku relativno u odnosu na referentnu točku, a ako nestane napajanja gubi se informacija o položaju u odnosu na referentnu točku, na primjer položaj koljenastog vratila u odnosu na gornju mrtvu točku kod motora s unutarnjim izgaranjem. Inkrementalni enkoder se sastoji od:
+
+maske,
+kotača (diska),
+osovine motora,
+fotoćelije (fototranzistora),
+svjetleće diode ili LED (engl. Light Emitting Diode).Maska se sastoji od niza naizmjeničnih tamnih i svijetlih područja jednake duljine i jednakog broja. Tamno i svjetlo područje detektira se pomoću stacionarnih maski A i B razmaknutih za ¼ periode ponavljanja tamno-svijetlo. Izlazni signal je binarnog oblika, svijetlo područje daje "1", a tamno "0". Izlazni signali "A" i "B" su (nakon obrade) pravokutni signali fazno pomaknuti za 90°, takozvani kvadratni signal. Pomoću dva čitača pomaknuta za 90° moguće je odrediti smjer vrtnje. Signali "A" i "B" se koriste za inkrement ili dekrement brojila koje daje informaciju o trenutnoj poziciji. Signal "Z" se koristi za pokretanje brojila. Postavljanjem dviju fotoćelija na odgovarajuća mjesta dobije se kvadraturni signal.
+
+
+== Izvori ==

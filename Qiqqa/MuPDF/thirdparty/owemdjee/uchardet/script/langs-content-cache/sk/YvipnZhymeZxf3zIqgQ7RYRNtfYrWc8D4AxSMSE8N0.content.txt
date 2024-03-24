@@ -1,0 +1,19 @@
+revision: 6835115
+title: "Podsie\u0165"
+url: https://sk.wikipedia.org/wiki/Podsie%C5%A5
+
+
+---
+
+Podsieť (angl. subnet, subnetwork) je v informatike označenie pre samostatnú časť počítačovej siete. Označením podsieť je obvykle myslená konkrétna (menšia) vyčlenená časť väčšej IP siete. Rozdelenie siete na dve alebo viac menších podsietí je v angličtine označované ako subnetting.
+
+
+== Časti IP adresy ==
+
+Počítače, ktoré sú umiestnené v jednej sieti (resp. podsieti), majú vo svojich IP adresách zhodné najvýznamnejšie bity tejto IP adresy. Tým je IP adresa rozdelená na dve časti, ktoré označujeme ako "číslo siete" a "číslo počítača". Namiesto označenia "číslo počítača" by malo byť uvedené "číslo sieťového rozhrania", pretože niektoré počítače môžu mať viac sieťových kariet a tým aj viac sieťových rozhraní s viacerými IP adresami.
+Veľkosť významnejšej časti IP adresy (t. j. veľkosť časti, ktorá vyjadruje "číslo siete") je definovaná pomocou CIDR notácie počtom bitov zľava (tzv. prefix) alebo pomocou masky siete. Jednu a tú istú podsieť je teda možné zapísať pomocou prefixu ako 198.51.100.0/24 alebo pomocou masky siete ako 198.51.100.0/255.255.255.0.
+Druhá časť IP adresy, ktorá nesie "číslo sieťového rozhrania", sa nesmie v rovnakej sieti opakovať. Pokiaľ sú v tejto časti IP adresy v binárnom zápise samé nuly, je výsledná IP adresa označovaná ako "číslo siete". Takúto IP adresu nie je vhodné (a väčšinou ani možné) používať ako IP adresu sieťového rozhrania (t. j. nepoužíva sa). Ak sú v tejto druhej časti IP adresy v binárnom zápise samé jednotky, ide o sieťový broadcast, ktorý slúži k hromadnému osloveniu všetkých počítačov v danej podsieti. Ani broadcast nie je vhodné používať ako IP adresu bežného sieťového rozhrania. Z vyššie uvedeného vyplýva, že vo všetkých podsieťach sú vždy dve IP adresy, ktoré majú špeciálne použitie (t. j. číslo siete a broadcast), a preto sa pre sieťové rozhrania nepoužívajú. Najmenšia podsieť musí mať preto štyri IP adresy, aby ostávajúce dve mohli byť použité pre dve rôzne sieťové rozhrania a mohla tak vzniknúť najmenšia možná IP podsieť.
+
+
+== Zdroj ==
+Tento článok je čiastočný alebo úplný preklad článku Podsíť na českej Wikipédii.

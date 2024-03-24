@@ -1,0 +1,87 @@
+revision: 15722300
+title: Ada Lovelace
+url: https://ro.wikipedia.org/wiki/Ada_Lovelace
+
+
+---
+
+Augusta Ada King, Contesă de Lovelace (10 decembrie 1815 - 27 noiembrie 1852), născută Augusta Ada Byron, iar acum cunoscută sub numele de Ada Lovelace, a fost o matematiciană engleză și o scriitoare cunoscută în principal pentru munca ei la calculatorul mecanic al lui Charles Babbage, motorul analitic. Consemnările ei privind motorul includ ceea ce este recunoscut ca fiind primul algoritm care urmează să fie procesat de către o mașină. Din acest motiv, ea este adesea considerată primul programator de calculator din lume.
+
+
+== Biografie ==
+Augusta Ada Byron s-a născut la 10 decembrie 1815, fiind singurul copil legitim al poetului Lord Byron. Mama ei a fost Anne Isabella (Annabella) Milbanke. Toți ceilalți copii ai poetului au fost ilegitimi. Anne Isabella Byron s-a despărțit de poet la doar la o lună după nașterea Adei, iar poetul a părăsit Anglia pentru totdeauna patru luni mai târziu. Byron a decedat din cauza unei boli în timpul Războiului de independență al Greciei, când Ada avea doar opt ani. Mama Adei a rămas supărată pe Lord Byron și i-a susținut interesul Adei pentru matematică și logică, într-un efort de a împiedica dezvoltarea a ceea ce vedea ca nebunie în tatăl Adei. Dar Ada a rămas interesată de poet, în ciuda eforturilor mamei de a-l face uitat, și la cererea ei a fost înmormântată lângă tatăl său, la biserica St. Mary Magdalene în Hucknall, Nottingham.
+Deși obișnuia să fie adesea bolnavă pe parcursul copilăriei, Ada a continuat să fie interesată de studiile sale. S-a căsătorit cu William King în 1835. Ada a devenit Contesă de Lovelace în 1838, odată cu redenumirea soțului ei.
+Aranjamentele educaționale și sociale din care făcea parte i-au oferit posibilitatea de a întâlni oameni de știință precum Charles Babbage, Charles Wheatstone, Michael Faraday și autorul Charles Dickens, pe care adesea îi contacta pentru a-și lărgi cunoștințele.
+Ea se autointitula „poetical scientist” („savantul poetic”).
+
+
+== Munca ==
+De-a lungul vieții,
+Lovelace a fost pasionată de cercetarea științifică, incluzând  frenologia  și hipnoza..
+În 1844 Lovelace si-a exprimat dorința de a crea un model matematic care să reprezinte felul în care creierul uman recepționează gândurile și emoțiile ("analiza matematică a sistemului nervos").
+Cu toate acestea, ea nu și-a împlinit dorința.
+Parte a acestui proiect de cercetare, ea l-a vizitat pe inginerul Andrew Crosse în 1844, de la care a învățat cum se efectuează experimentele electrice. 
+În același an, Lovelace a scris un articol care rezuma un articol de Baron Karl von Reichenbach, intitulat Cercetări despre magnetism, dar care nu a fost publicat. În 1851 i-a scris mamei sale o scrisoare în care a menționat rezultatele muncii sale legate de muzică și matematică. 
+
+Lovelace l-a întâlnit pe Charles Babbage în iunie 1833, prin prietena lor comună Mary Somerville. În acea lună Babbage a invitat-o să vadă prototipul mașinii diferențiale. Ada a fost fascinată de mașină și a început să-l viziteze des pe Babbage. Acesta era impresionat de gândirea ei critică.
+
+
+== Primul program de calculator ==
+Timp de 9 luni, între 1842–43, Lovelace a tradus un articol al matematicianului italian Luigi Menabrea, despre mașina lui Charles Babbage, numită „Motorul analitic”. Pe lângă traducerea articolului în sine, Ada a adăugat mai multe notițe, explicând dificultatea funcției mașinii. Notițele Adei explicau în ce fel noua mașină era diferită față de mașina diferențială. Munca ei a fost apreciată la momentul respectiv. Omul de știință Michael Faraday i-a susținut munca.Notițele Adei la traducerea articolului sunt de trei ori mai lungi decât articolul în sine și includ, în detaliu, o metodă corectă de calcul pentru o serie de numere Bernoulli cu ajutorul noii mașinării, dacă aceasta ar fi fost construită. Doar mașina diferențială a fost construită însă, abia în 2002, în Londra.
+Datorită acestei munci, Lovelace este considerată primul programator din toate timpurile., iar munca ei este considerată ca fiind primul program de calculator .În notițele sale, Lovelace se opune inteligenței artificiale.
+Ea a scris că Mașina analitică nu depune nicio muncă originală. Mașina efectuează numai ceea ce i se spune să efectueze. Poate să efectueze analize, dar nu are abilități analitice. Aceste notițe au fost criticate de mulți, un critic important fiind Alan Turing, în articolul „Mașina de calcul și inteligența” (în engleză "Computing Machinery and Intelligence").
+Conform istoricului Doron Swade, specializat pe istoria computerizată și Babbage, Ada avea o viziune mai extinsă ca cea a lui Babbage. Babbage considera că lumea mașinilor era limitată de numere, pe când Ada vedea numerele drept entități, nu drept cantități. Odată ce o mașină poate manipula numerele, dacă numerele ar reprezenta alte lucruri precum litere sau sunete muzicale, mașina ar putea manipula simboluri. Aceasta ar fi tranziția principală spre computerizarea calculatorului matematic, explicată de Ada în publicarea din 1843.Limbajul de programare Ada îi poartă numele.
+
+
+== Ada Lovelace în cultura populară ==
+
+
+=== Anii 1810 ===
+Lordul Byron a scris în 1816 poemul Fare Thee Well, soției sale, Lady Byron, după nașterea Adei Lovelace  și a scris despre ea în poem.
+
+
+=== Anii 1970 ===
+Ada Lovelace a fost menționată în piesa lui Romulus Linney din 1977, Childe Byron.
+
+
+=== Anii 2020 ===
+La 5 ianuarie 2020, actrița Sylvie Briggs a jucat rolul Adei Lovelace în al doilea episod Doctor Who, sezonul al doisprezecelea.
+
+
+== Publicații ==
+Lovelace, Ada King. Ada, the Enchantress of Numbers: A Selection from the Letters of Lord Byron's Daughter and her Description of the First Computer. Mill Valley, CA: Strawberry Press, 1992. ISBN 9780912647098.
+Menabrea, Luigi Federico; Lovelace, Ada (1843). "Sketch of the Analytical Engine invented by Charles Babbage... cu notițe scrise de traducător.Tradus de Ada Lovelace". 
+În Richard Taylor (ed.). Scientific Memoirs. 3. London: Richard and John E. Taylor. pp. 666–731.
+
+
+== Istoricul publicărilor ==
+Au fost localizate șase exemplare ale primei ediții din 1843 a lucrării Sketch of the Analytique Engine. Trei dintre acestea se află la Universitatea Harvard, una la Universitatea din Oklahoma, iar una la Academia Forțelor Aeriene din Statele Unite. La 20 iulie 2018, al șaselea exemplar a fost vândut la licitație unui cumpărător anonim pentru 95.000 de lire sterline.
+
+
+== Referințe ==
+
+
+== Bibliografie ==
+Woolley, Benjamin (februarie 1999), The Bride of Science: Romance, Reason, and Byron's Daughter, AU: Pan Macmillan, ISBN 0-333-72436-4, accesat în 7 aprilie 2013 .
+Woolley, Benjamin (februarie 2002) [1999], The Bride of Science: Romance, Reason, and Byron's Daughter, McGraw-Hill Ryerson, ISBN 978-0-07138860-3, accesat în 7 aprilie 2013 .
+
+
+== Vezi și ==
+Programatori celebri
+Ai-Da
+
+
+== Legături externe ==
+
+Ada Lovelace: Founder of Scientific Computing (SDSC Women in Science)
+"Ada Byron, Lady Lovelace", Biographies of Women Mathematicians, Agnes Scott College
+Google Doodle for honoring Ada Lovelace Arhivat în 12 decembrie 2012, la Wayback Machine.
+Papers of the Noel, Byron and Lovelace families
+O'Connor, John J.; Robertson, Edmund F., „Ada Lovelace”, MacTutor History of Mathematics archive, University of St Andrews .
+Ada Lovelace & The Analytical Engine
+Ada & the Analytical Engine Arhivat în 10 august 2009, la Wayback Machine.
+Ada Lovelace, Countess of Controversy (g4tv.com)
+BBC Radio 4 – In Our Time – Ada Lovelace – streaming audio
+Biography of Ada Lovelace at L'Oreal: Women in Science
+Sketch of The Analytical Engine Invented by Charles Babbage by L. F. Menabrea with notes upon the Memoir by the translator Ada Augusta, Countess of Lovelace
+Ada Lovelace's Notes and The Ladies Diary

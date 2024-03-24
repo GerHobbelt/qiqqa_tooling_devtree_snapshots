@@ -1,0 +1,64 @@
+revision: 6665916
+title: SIRUTA
+url: https://eo.wikipedia.org/wiki/SIRUTA
+
+
+---
+
+SIRUTA (rumane Sistemul Informatic al Registrului Unităților Teritorial-Administrative = informadika sistemo de registro de teritoriaj-administraj unuoj) estas klasada sistemo uzata de la rumana Nacia Instituto pri Statistiko (Institutul Național de Statistică = INS) por registri administrajn teritoriajn unuojn (Unitățile administrativ-teritoriale = UAT). Ĝi atribuas al ĉiu UAT nombran kodon.
+La sistemo dividas la unuojn en tri nivelojn:
+
+distriktoj kaj la ĉefurbo Bukareŝto
+municipoj, urboj kaj komunumoj (unuoj administrataj de urbestro)
+kvartaloj, vilaĝoj, sektoroj de BukareŝtoUnuoj de la unua nivelo havas du- aŭ triciferajn kodojn, aliaj kvin- aŭ sesciferajn. La kodoj de la tri niveloj ne estas strukture interligitaj. Ekzemple distrikto Sibiu havas la kodon 323, ĝia ĉefurbo Sibiu havas 143450, komunumo Șelimbăr havas 143557 kaj 143566 kaj vilaĝo Veștem en tiu komunumo 143593.
+Ĉiujare la 6-an de junio SIRUTA adaptiĝas al la intertempaj administraj ŝanĝoj.
+
+
+== La distriktoj ==
+La distriktoj kaj la ĉefurbo Bukareŝto havas jenajn SIRUTA-kodojn:
+
+Distrikto Alba: 10
+Distrikto Arad: 29
+Distrikto Argeș: 38
+Distrikto Bacău: 47
+Distrikto Bihor: 56
+Distrikto Bistrița-Năsăud: 65
+Distrikto Botoșani: 74
+Distrikto Brașov: 83
+Distrikto Brăila: 92
+Distrikto Buzău: 109
+Distrikto Caraș-Severin: 118
+Distrikto Călărași: 519
+Distrikto Cluj: 127
+Distrikto Constanța: 136
+Distrikto Covasna: 145
+Distrikto Dâmbovița: 154
+Distrikto Dolj: 163
+Distrikto Galați: 172
+Distrikto Giurgiu: 528
+Distrikto Gorj: 181
+Distrikto Harghita:190
+Distrikto Hunedoara: 207
+Distrikto Ialomița: 216
+Distrikto Iași: 225
+Distrikto Ilfov: 234
+Distrikto Maramureș: 243
+Distrikto Mehedinți: 252
+Distrikto Mureș: 261
+Distrikto Neamț: 270
+Distrikto Olt: 289
+Distrikto Prahova: 298
+Distrikto Satu Mare: 305
+Distrikto Sălaj: 314
+Distrikto Sibiu: 323
+Distrikto Suceava: 332
+Distrikto Teleorman: 341
+Distrikto Timiș: 350
+Distrikto Tulcea: 369
+Distrikto Vaslui: 378
+Distrikto Vâlcea: 387
+Distrikto Vrancea: 396
+Bukareŝto: 403Kiel oni vidas, la kodoj kreskas laŭ la (rumana) alfabeta ordo de la distriktaj nomoj, escepte de la distriktoj Călărași kaj Giurgiu, kiuj havas numerojn super 500.
+
+
+== Notoj ==

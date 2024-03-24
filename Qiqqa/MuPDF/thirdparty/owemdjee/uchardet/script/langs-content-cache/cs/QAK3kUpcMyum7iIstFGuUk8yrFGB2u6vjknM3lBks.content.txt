@@ -1,0 +1,105 @@
+revision: 22928664
+title: computer
+url: https://cs.wikipedia.org/wiki/Po%C4%8D%C3%ADta%C4%8D
+
+
+---
+
+Počítač je číslicový elektronický stroj, který lze naprogramovat tak, aby automaticky prováděl posloupnosti aritmetických nebo logických operací (výpočty). Moderní počítače dokáží provádět obecné množiny operací známé jako programy. Tyto programy umožňují počítačům provádět širokou škálu úloh. Počítačový systém je "úplný" počítač, který zahrnuje hardware, operační systém (základní software) a periferní zařízení potřebná a používaná pro "plnohodnotný" provoz. Tento pojem může také označovat skupinu počítačů, které jsou propojeny a fungují společně, například počítačovou síť nebo počítačový klastr.
+Široká škála průmyslových a spotřebitelských výrobků využívá počítače jako řídicí systémy. Patří sem jednoduchá zařízení pro speciální účely, jako jsou mikrovlnné trouby a dálkové ovladače, tovární zařízení, jako jsou průmyslové roboty a počítačem podporované projektování, i zařízení pro všeobecné použití, jako jsou osobní počítače a mobilní zařízení, kterými jsou např. chytré telefony. Počítače pohánějí internet, který propojuje miliardy dalších počítačů a uživatelů.
+První počítače byly určeny pouze k výpočtům. Jednoduché ruční nástroje, jako je počítadlo, pomáhaly lidem při výpočtech již od starověku. Na počátku průmyslové revoluce byla sestrojena některá mechanická zařízení, která automatizovala dlouhé únavné úkony, například vedení vzorů pro tkalcovské stavy. Na počátku 20. století prováděly specializované analogové výpočty sofistikovanější elektrické stroje. První digitální elektronické počítací stroje byly vyvinuty během druhé světové války. Po prvních polovodičových tranzistorech na konci 40. let 20. století následovaly koncem 50. let 20. století technologie MOSFET (tranzistor MOS) na bázi křemíku a monolitické čipy integrovaných obvodů, které přinesly v 70. letech 20. století mikroprocesor a revoluci v oblasti mikropočítačů. Od té doby se rychlost, výkon a všestrannost počítačů dramaticky zvyšovaly, přičemž počet tranzistorů rostl rychlým tempem (jak předpovídal Moorův zákon), což vedlo k digitální revoluci na přelomu 20. a 21. století.
+Moderní počítač se obvykle skládá z alespoň jednoho výpočetního prvku, obvykle centrální procesorové jednotky v podobě mikroprocesoru, spolu s nějakým typem počítačové paměti, obvykle polovodičových paměťových čipů. Procesorová jednotka provádí aritmetické a logické operace a sekvenční a řídicí jednotka může měnit pořadí operací v závislosti na uložených informacích. Mezi periferní zařízení patří vstupní zařízení (klávesnice, myš, joystick atd.), výstupní zařízení (monitory, tiskárny atd.) a vstupně-výstupní zařízení, která plní obě funkce (např. dotyková obrazovka). Periferní zařízení umožňují získávat informace z externího zdroje a umožňují ukládat a načítat výsledky operací.
+Práce s počítačem je kvůli různým, ale relativně častým chybám, stále frustrující.
+
+
+== Historie ==
+
+Je obtížné najít v historii první počítač, protože význam slova se v průběhu času měnil. Původně slovo počítač označovalo člověka, který prováděl výpočty. Změna významu slova ve smyslu označení hardwaru nastala v době projektu Manhattan (vývoj atomové bomby).
+Za prvního předchůdce počítače lze považovat mechanické počitadlo (tzv. abakus), které se používalo již v Babylonii od poloviny třetího tisíciletí př. n. l.[zdroj?]. Za vynálezce dnešních počítačů je považován Charles Babbage, který v 19. století vymyslel základní principy fungování mechanického stroje pro řešení složitých výpočtů. Za prvního přímého předchůdce současných elektronických počítačů lze považovat elektronkový ENIAC. Od 70. let 20. století docházelo k produkci prvních osobních počítačů. IBM PC 5150 z roku 1981 byl první IBM PC kompatibilní počítač.
+
+
+== Charakteristika počítače ==
+Pod pojmem počítač si mnoho lidí představí buď notebook nebo PC, tedy osobní počítač. Ve skutečnosti je tento pojem daleko širší. Počítače řídí činnosti nejrůznějších zařízení a nacházejí se všude kolem nás – v automobilech, mobilních telefonech, automatických pračkách, mikrovlnných troubách, průmyslových robotech, letadlech, digitálních fotoaparátech, CD a DVD přehrávačích, záchodových splachovadlech, klikách od dveří (tedy, zámcích na karty), v dětských hračkách, …
+
+
+=== Princip činnosti počítače ===
+Princip činnosti počítače může být dvojí:
+
+analogový počítač – pracuje na analogovém principu (data jsou reprezentována např. velikostí proudu)
+číslicový počítač – zpracovává digitální data
+Analogové počítače bývají úzce specializované obvykle na jednu úlohu nebo pouze na jednu třídu úloh. Oproti tomu číslicové počítače lze snadno zkonstruovat coby univerzální (ne všechny číslicové počítače ovšem zcela univerzální jsou). Podle Churchovy–Turingovy teze je jakýkoliv číslicový počítač s určitými minimálními schopnostmi schopný provést v principu totéž jako libovolný jiný počítač. Vzhledem k této univerzalitě jsou dnes převážně používány i konstruovány číslicové počítače, protože jsou dnes již rychlejší a přesnější, než analogové počítače zpracovávající analogové úlohy.
+
+
+=== Koncepce konstrukce počítače ===
+Existují dvě základní koncepce konstrukce číslicového počítače:
+
+John von Neumannovo schéma počítače – Neumannovo používá jednu elektronickou paměť pro program i pro data
+Harvardská architektura – používá oddělenou paměť pro data a pro programSoučasné počítače nejsou konstruovány důsledně ani podle jednoho z těchto dvou základních schémat. Univerzální osobní počítače obsahují jen jednu paměť, do které se umisťují programy i zpracovávaná data, avšak mikroprocesor umožňuje paměť obsahující program označit jen pro čtení a naopak část paměti, která obsahuje data označit tak, že nelze vykonávat strojové instrukce, které jsou v ní uloženy. Harvardské schéma s oddělenou pamětí pro program a data se často používá u jednočipových počítačů a dalších malých vestavěných systémů (PDA, mobilní telefony a podobně) a především u signálových procesorů (DSP) u nichž dovoluje dosáhnout velké rychlosti zpracování dat.
+
+
+== Součásti počítače ==
+Počítače se skládají ze dvou základních druhů komponentů:
+
+software – programové vybavení počítače, tedy řada instrukcí, které jsou počítačem postupně provedeny
+hardware – technické vybavení počítače, tedy fyzické části (slangově železo)
+
+
+=== Software ===
+
+Software zahrnuje nejen operační systém, pomocné programy a aplikační software, ale i programy, které jsou uloženy v počítači napevno (například v BIOSu, UEFI, nebo v některých vstupně-výstupních zařízeních). Software je nezbytný pro provoz počítače a řeší konkrétní úlohy ve spolupráci s uživatelem. Program vzniká při programování jako zápis algoritmu v nějakém programovacím jazyku. Spuštěný program označujeme jako proces.
+
+
+=== Hardware ===
+Hardware je technické vybavení počítače. Zahrnujeme do něj všechny fyzické součásti počítače.
+
+Běžný počítač se skládá z těchto součástí:
+
+počítačová skříň – skříň z plechu (nebo jiných materiálů), může být též součástí monitoru (iMac)
+základní deska – obsahuje většinu elektronických částí počítače
+mikroprocesor – vykonává strojové instrukce, ze kterých jsou složeny programy
+operační paměť – za běhu počítače uchovává programy a data (viz elektronická paměť)
+sběrnice – propojuje vstupně-výstupní zařízení s procesorem, umožňuje připojení rozšiřujících karet
+grafická karta – umožňuje vytvořit v paměti obraz, který zobrazí na monitoru
+zvuková karta – vytváří signál, který se v reproduktoru mění na zvuk
+síťová karta – zprostředkovává připojení k počítačové síti
+a další rozšiřující zařízení
+pevný disk – uchovává programy i data i po vypnutí počítače
+elektrický zdroj – mění síťové střídavé napětí 230 V na nižší stejnosměrné napětí (obvykle 12, 5 a 3,3 V), vhodné pro napájení komponent počítače
+monitor – zobrazuje informace uživateli, je připojen ke grafické kartě nebo základní desce.
+počítačová klávesnice – zprostředkovává alfanumerický vstup od uživatele
+počítačová myš – umožňuje pohybovat kurzorem myši a vyvolávat události stiskem tlačítka
+a další vstupní-výstupní zařízení (počítačová tiskárna, scanner, …)
+
+
+== Budoucnost počítačů ==
+Počítače již dnes zasahují téměř do všech lidských činností i do běžného života. Předpokládá se, že jejich vliv se bude nadále zvyšovat a budou lidem poskytovat komfortnější služby. Počítače jsou stále více propojovány pomocí počítačových sítí a využívají celosvětovou síť Internet. Počítačové sítě umožňují sdílení zdrojů (soubory, tiskárny), ale i vzájemnou komunikaci, která je dnes jedním z hlavních moderních komunikačních nástrojů informační společnosti. Cloud computing tak nahrazuje stále více nezávislost osobních počítačů a centralizace zasahuje i do přístupu k informacím.
+Zvyšovaná počítačová bezpečnost a práva v tomto celosvětovém propojení povedou k růstu v tlaku na důvěryhodné počítače. To již vede k omezování práv uživatelů počítačů i mobilních zařízení. Trusted Platform Module spolu s UEFI (respektive z App Store či Google Play) brání spouštění aplikací a přístupu k datům, které neschválí výrobce či majitel práv.
+
+
+== Odkazy ==
+
+
+=== Reference ===
+V tomto článku byl použit překlad textu z článku Computer na anglické Wikipedii.
+
+
+=== Literatura ===
+Vrátil Zdeněk: Postavte si PC, BEN - technická literatura, 2004, ISBN 80-7300-155-1
+Šedý Václav: Rozeberte si PC – kniha pro kutily nového tisíciletí, BEN - technická literatura, 2002, ISBN 80-7300-016-4
+Procházka David: Nebojte se počítače, 2011, ISBN 978-80-247-3717-1
+Král Mojmír, Král David: Komunikace na počítači pro seniory, 2016, ISBN 978-80-247-5812-1
+
+
+=== Související články ===
+Osobní počítač
+Kvantový počítač
+Fotonový počítač
+
+
+=== Externí odkazy ===
+ Obrázky, zvuky či videa k tématu počítač na Wikimedia Commons 
+Počítač v České terminologické databázi knihovnictví a informační vědy (TDKIV)
+ Téma Počítač ve Wikicitátech
+ Slovníkové heslo počítač ve Wikislovníku
+Pavel Tišnovský: Co se děje v počítači? – seriál článků na Root.cz
+Historie výpočetní techniky v Československu

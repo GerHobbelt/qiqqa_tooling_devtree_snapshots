@@ -1,0 +1,62 @@
+revision: 21149400
+title: HF (taajuusalue)
+url: https://fi.wikipedia.org/wiki/HF_(taajuusalue)
+
+
+---
+
+HF on Kansainvälisen televiestintäliiton (ITU) ja Institute of Electrical and Electronics Engineers:n (IEEE) termi radiotaajuusalueelle, joka kattaa 3 MHz–30 MHz:n radioaallot   (aallopituusalue 10–100 m). HF on akronyymi englannin kielen sanoista 'High frequency' (suom. korkeat taajuudet). Alueesta saatetaan käyttää myös nimitystä dekametriaallot ('kymmenet metrit', engl. Decametric waves) aallonpituusalueensa (10–100 m) mukaan.Taajuusalueelle sijoittuu osa historiallisesta yleisradiotoiminnan amplitudimoduloiduille (AM) lähetyksille tarkoitetusta lyhytaaltoaluesta (engl. short wave, SW). Alueet ei siis ole synonyymeja; lyhytaaltoalue (SW) kattaa taajuudet 2 300 kHz:sta 26 100 kHz:siin. Eli vain SW-alueen osa-alue 3 000 kHz–26 100 kHz osuu HF-taajuusalueelle ja osa-alue 2 300 kHz–3 000 kHz jää alueen ulkopuolelle. Vastaavasti HF-alueen taajuudet 26 100 kHz–30 000 kHz jää SW-alueen ulkopuolelle.
+
+ITU:n määritys:
+
+HF-alueen erikoisuus on – lyhyen kantaman (noin 50 km, meren yli pidempi) pinta-aallon lisäksi – alueella esiintyvä avaruusaalto. Ilmakehässä on 100–300 kilometrin korkeudessa ionisoituneita kerroksia, jotka heijastavat HF-alueen radioaaltoja. Tällöin muutaman watin teholla saadaan yhteyksiä jopa maapallon toiselle puolelle.
+
+
+== Käyttö ==
+
+
+=== Sähkötysradiokäyttö ===
+Taajuusalueen lähetysten kantavuus - jo muutaman watin teholla saatetaan saada yhteyksiä jopa maapallon toiselle puolelle - tekee
+taajuusalueesta hyvin käytännöllisen sähkötysradiotaajuutena radioamatööritiiminnassa. HF-alue on käytössä myös sissiradiotoiminnassa niin kymmenien kilometrien kuin satojenkin kilometrien etäisyyksillä. Sotilaallisina ongelmina on kaukoyhteyksien herkkyys ilmakehän ydinräjähdyksille sekä heijastavien kerrosten vaihtelut vuorokauden, vuodenajan sekä auringonpilkkurytmin mukaan. Tämä tekee yhteyden varman saannin kahden pisteen välillä ammattitaitoa vaativaksi tehtäväksi. Lisäksi avaruusaalto tarkoittaa, että periaatteessa kaikki maailman samalla taajuudella olevat HF-radiot ovat kuultavissa lähes joka paikkaan. HF-alue on siis globaalissa mittakaavassa täynnä.
+
+
+=== Tutka-aaltokäyttö ===
+HF-alueen erikoiskäyttö on ns. OTH-tutka eli yli-horisontin-tutka. Lähettämällä HF-alueen radiopulssin tutkan kantama voidaan kasvattaa muutamaan tuhanteen kilometriin. Ongelmina on suuren antennin ja tehon tarve sekä kansainväliset häiriöt HF-alueella. OTH-tutkia on kokeiltu pitkään muun muassa Yhdysvalloissa, Neuvostoliitossa ja Australiassa.
+
+
+=== Yleisradiokäyttö ===
+Tällä alueella on myös yleisradiolähetyksiä (AM-lyhytaaltolähetyksiä (SW-alue)). Kaukaisten yleisradioasemien kuunteluharrastusta kutsutaan DX-kuunteluksi. 
+Kuunteluolosuhteisiin vaikuttavat yleensä suuresti ilmakehässä tapahtuvat radioaaltojen heijastumiset, vuorokaudenaika ja vuodenaika, kuten myös auringonpilkut. Pienitehoinenkin lähetyssignaali saattaa suotuisissa olosuhteissa kuulua maapallon toiselle puolelle.
+Tähtitieteen harrastusta haittaavaa ”valosaastetta” vastaa DX-kuuntelussa radiolähettimien runsas määrä ja juurikin kaikkien lähettimien - pientenkin - hyvä kantavuus, mikä johtaa siihen, että pienitehoisemmat signaalit pyrkivät hukkumaan ”taustakohinaan”.
+Kuuluvuuteen voi vaikuttaa käyttämällä suuntaavampia antenneja, joilla voidaan vaimentaa muista suunnista tulevia lähetteitä tai suodattimia, joilla voidaan tarkalla vastaanottimella suodattaa vastaanotettavan lähetyksen ympäriltä kohinaa tai muita lähetyksiä pois.
+
+
+=== Alialueet ===
+
+
+==== 27 MHz:n lyhytaaltoalue ====
+27 MHz radio-ohjattavat lelut, langaton näppäimistö ja hiiri
+lupavapaiden LA-radiopuhelimien taajuusalue (AM/FM).
+
+
+==== SW-taajuusalue ====
+Lyhyet aallot tulivat yleisradiokäyttöön pitkien ja keskipitkien aaltojen jälkeen. Lyhyiden aaltojen (engl. short wave, SW) 120 metrin aaltoalue (2 300 kHz–3 000 kHz) sijoittuu MF-taajuusalueelle (0,3–3 MHz), kun taas kaikki loput 90 metrin radioaalloista 11 metrin radioaaltoihin (3 000 kHz–26 100 kHz) HF-taajuusalueelle (3 000 kHz–30 000 kHz).
+
+Lyhyet aallot 2 300–26 100 kHz (lyh. SW; engl. short waves)
+120 metrin aallot 2 300–2 495 kHz, tropiikkiaallot
+90 metrin aallot 3 200–3 400 kHz, tropiikkiaallot
+75 metrin aallot 3 900–4 000 kHz, tropiikkiaallot
+60 metrin aallot 4 750–5 060 kHz, tropiikkiaallot
+49 metrin aallot 5 900–6 200 kHz
+41 metrin aallot 7 100–7 350 kHz
+31 metrin aallot 9 400–9 900 kHz
+25 metrin aallot 11 600–12 100 kHz
+22 metrin aallot 13 570–13 870 kHz
+19 metrin aallot 15 100–15 800 kHz
+16 metrin aallot 17 480–17 900 kHz
+15 metrin aallot 18 900–19 020 kHz
+13 metrin aallot 21 450–21 850 kHz
+11 metrin aallot 25 600–26 100 kHz
+
+
+== Lähteet ==

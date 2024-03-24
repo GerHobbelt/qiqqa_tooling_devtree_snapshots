@@ -1,0 +1,65 @@
+revision: 29329805
+title: Amazon CloudFront
+url: https://tr.wikipedia.org/wiki/Amazon_CloudFront
+
+
+---
+
+Amazon CloudFront, Amazon Web Servisleri tarafından sunulan bir içerik dağıtım ağıdır. İçerik dağıtım ağları, videolar ya da diğer yüksek hacim gerektiren içerikler için içeriği tüketicilere yerel sunucular da ya da en yakın yerel sunucu da önbelleğe alan, böylece içeriği indirmek için erişim hızını artıran global olarak dağıtılmış proxy sunucuları ağı sağlar.
+CloudFront'un Avrupa (İngiltere, İrlanda, Hollanda, Almanya, İspanya), Asya (Hong Kong, Singapur, Japonya, Tayvan ve Hindistan), Avustralya, Güney Amerika ve Amerika Birleşik Devletleri'ndeki birçok büyük şehirde sunucuları bulunmaktadır. Aralık 2017 itibarıyla Cloudfront, beş kıtada 107 içerik dağıtım ağı noktasıdan hizmet veriyor.CloudFront, Akamai ve Limelight Networks gibi daha büyük içerik dağıtım ağlarıyla rekabet halindedir.
+İlk Lansman sonrasında ZDNet News'den Larry Dignan, CloudFront'un rakip CDN'ler için fiyat ve marj düşüşlerine neden olabileceğini söylemiştir.
+
+
+== Zaman çizelgesi ==
+18 Kasım 2008 - CloudFront'un beta sürümü yayınlandı
+28 Ocak 2009 - Amazon fiyatlandırma katmanlarını düşürdü
+7 Mayıs 2009 - Erişim günlüğü özelliği eklendi
+11 Kasım 2009 - Özel içerik için destek eklendi
+15 Aralık 2009 - Amazon CloudFront Streaming Desteği Açıkladı
+28 Mart 2010 - Amazon, Singapur'da CDN lokasyonları devriye aldı ve akış için özel içerik ekledi.
+Mayıs 2014, Amazon CloudFront, ücretsiz kullanım hizmeti açıldı 
+
+
+== Amazon CloudFront CDN Lokasyonları ==
+Ekim 2018 itibarıyla Amazon CloudFront, 29 ülkede 63 şehirde 138 erişim noktasından (127 lokasyon ve 11 bölgesel önbellek lokasyonu) oluşmaktadır.
+Kuzey Amerika
+Lokasyonlar: Ashburn, VA (3); Atlanta, GA (3); Boston, MA; Chicago, IL (2); Dallas / Fort Worth, TX (5); Denver, CO (2); Hayward, CA; Jacksonville, FL; Los Angeles, CA (4); Miami, FL (3); Minneapolis, MN; Montreal, QC; New York, NY (3); Newark, NJ (3); Palo Alto, CA; Philadelphia, PA; Phoenix, AZ; San Jose, CA (2); Seattle, WA (3); South Bend, IN; St. Louis, MO; Toronto, ON
+Bölgesel önbellek lokasyonları: Virginia; Ohio; Oregon
+Avrupa
+Lokasyonlar: Amsterdam, Hollanda (2); Berlin, Almanya; Kopenhag, Danimarka; Dublin, İrlanda; Frankfurt, Almanya (8); Helsinki, Finlandiya; Londra, İngiltere (7); Madrid, İspanya (2); Manchester, İngiltere; Marsilya, Fransa; Milan, İtalya; Münih, Almanya; Oslo, Norveç; Palermo, İtalya; Paris, Fransa (4); Prag, Çek Cumhuriyeti; Stockholm, İsveç (3); Viyana, Avusturya; Varşova, Polonya; Zürih, İsviçre
+Bölgesel önbellek lokasyonları: Frankfurt, Almanya; Londra, İngiltere
+Asya
+Lokasyonlar: Bangalore, Hindistan; Chennai, Hindistan (2); Hong Kong, Çin (3); Kuala Lumpur, Malezya; Mumbai, Hindistan (2); Manila, Filipinler; Yeni Delhi, Hindistan (2); Osaka, Japonya; Seul, Güney Kore (4); Singapur (3); Taipei, Tayvan (3); Tokyo, Japonya (9)
+Bölgesel önbellek lokasyonları: Mumbai, Hindistan; Singapur; Seul, Güney Kore; Tokyo, Japonya
+Avustralya
+Lokasyonlar: Melbourne; Perth; Sidney
+Bölgesel önbellek lokasyonları: Sydney
+Güney Amerika
+Lokasyonlar: São Paulo, Brezilya (2); Rio de Janeiro, Brezilya (2)
+Bölgesel önbellek lokasyonları: São Paulo, Brezilya
+Orta Doğu
+Kenar konumu: Dubai, Birleşik Arap Emirlikleri; Fujairah, Birleşik Arap Emirlikleri
+Afrika
+Lokasyonlar: Johannesburg, Güney Afrika; Cape Town, Güney Afrika
+
+
+== Kullanımı ==
+Web sitesi hızlandırma
+Video akışı
+İçerik indirme
+Statik veya dinamik içerik
+
+
+== Günlükler ==
+CloudFront, kullanıcıların günlük tutabilmeyi etkinleştirmesine veya devre dışı bırakmasına imkân verir. Etkinleştirilirse, günlükler daha sonra analiz edilebilecek Amazon S3 servisinde depolanır. Bu günlükler,
+
+Tarih / saat
+Lokasyon
+Kullanılan protokol vb.Bu günlükler S3Stat, Cloudlytics, Qloudstat veya AWS İstatistikleri gibi üçüncü taraf araçlar kullanılarak analiz edilebilir.
+
+
+== Kaynakça ==
+
+
+== Dış bağlantılar ==
+Resmî site

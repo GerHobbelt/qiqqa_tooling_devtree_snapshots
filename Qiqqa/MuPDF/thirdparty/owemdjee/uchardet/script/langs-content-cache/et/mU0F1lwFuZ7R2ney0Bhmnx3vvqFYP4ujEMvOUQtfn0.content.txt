@@ -1,0 +1,84 @@
+revision: 6418689
+title: Bitcoin
+url: https://et.wikipedia.org/wiki/Bitcoin
+
+
+---
+
+Bitcoin (otsetõlge inglise keelest 'bitimünt') on detsentraliseeritud digitaalne käibevahend ehk virtuaalraha ehk e-raha, millega saab kaubelda kogu maailmas. Bitcoin '​i lõi 2008. aastal Satoshi Nakamoto pseudonüümi kandev inimene või inimeste grupp. Bitcoin on ka selle e-raha kasutamiseks mõeldud avatud lähtekoodiga (MIT litsentsiga) programm. Bitcoin'i münte (lühend BTC) saab talletada arvutis failina, hoida kolmanda osapoole käes, kes osutab "rahakoti" teenust ja loomulikult ära kulutada, saates neid võrgu kaudu teisele bitcoin'i aadressile.
+Erinevalt paljudest valuutadest ei tugine bitcoin ühegi keskse asutuse usaldamisele. Selle asemel kasutab bitcoin hajusraamatu tehnoloogiat, mis talletab bitcoin'ide kuuluvuse, ning mille pidamisse on kaasatud kõik bitcoin '​i võrgustikus osalevad arvutid. Kuna aadressid ei ole isikustatud ja on hetkega loodavad suurtes kogustes, on võimalik sularahale omane anonüümsus.
+Bitcoin '​i andmestruktuurid ja protokoll tagavad krüptograafia abil, et tehingu saab kinnitada vaid bitcoin'ide tuntud omanik, kellele eelmine omanik on mündid oma allkirjaga omistanud, ning et tehing saab toimuda vaid ühekordselt.
+Bitcoin '​i P2P-võrgustik ja keskse organisatsiooni puudumine raskendavad mistahes osapoole jaoks bitcoin'ide väärtusega manipuleerimist, sealhulgas inflatsiooni tekitamist bitcoin'ide jõulise juurde loomisega. Siiski on juba esinenud ka bitcoin'i hinnamanipuleerimise juhtumeid. Näiteks 2013. aasta lõpus tegi bitcoin'i hind kahe kuuga hüppe 150 dollari tasemelt rohkem kui tuhandele dollarile. Nagu selgus Journal of Monetary Economicsis avaldatud uurimisaruandest, mille autorid on Neil Gandal, JT Hamerick, Tyler Moore ja Tali Oberma, olid selle taga tõenäoliselt ühe või kahe osalise poolt toonasel suurimal krüptorahabörsil Mt Gox organiseeritud fiktiivsed tehingud, mida pandi omavahel tegema kaks ilma bitcoin'ideta botti. Näiliste tehingutega ajasid need üles bitcoin'i-tehingute mahu, mis pani õhukesel turul ka reaalsete tehingute hinna kerkima. Kuna krüptorahabörs lõikas toimuvast teenustasude läbi kasu, siis neid selline pettus ei häirinud.Bitcoin on üks esimesi seda tüüpi krüptograafilise raha rakendusi, millist kirjeldas 1998. aastal Wei Dai šifferpunkide (cypherpunks) postiloendis oma "b-money" ettepanekuga ning Nick Szabo oma Bitgoldi ettepanekuga. Satoshi Nakamoto kirjeldab oma loodud süsteemi tööpõhimõtteid dokumendis "Bitcoin: A Peer-to-Peer Electronic Cash System" .
+
+
+== Etümoloogia ==
+Sõna bitcoin on loodud ingliskeelsete sõnade bit ('bitt') ja coin ('münt') liitmisel. Suure algustähega ehk nimemalli järgi kirjutatakse bitcoin enamasti siis, kui osutatakse võrgule või tehnoloogiale. Väikese algustähega kirjutatakse bitcoin siis, kui osutatakse rahaühikule. Ingliskeelses ortograafias pooldavad Wall Street Journal ja Oxfordi inglise sõnaraamat väiketähelist kasutust kõigil juhtudel.
+
+
+== Tehniline olemus ==
+
+Bitcoin on P2P võrgustik, kus võrgusõlmed peavad koos andmebaasi. Andmebaasi abil peetakse arvet bitcoin'ide kuuluvuse üle aadressidele.
+Iga andmebaasi kirje omistab mingi koguse bitcoin'e kindlale aadressile, kusjuures aadressiks on krüptograafilise võtmepaari avaliku poole kontrollsumma (hash-väärtus). Võtmepaari privaatset poolt teab vaid selle omanik, ning privaatvõti on vajalik bitcoin'ide ülekandmiseks teisele omanikule.
+Bitcoin '​i aadresside inimloetav kuju on 33-tärgine tekstijupp, näiteks "1rYK1YzEGa59pI314159KUF2Za4jAYYTd". Igaüks võib luua omale niipalju erinevaid aadresse, kui vaid hallata jaksab, aadresside loomine on hetkeline ega vaja suhtlust võrguga. Ühekordsete ja sihtotstarbeliste aadresside kasutamine võimaldab hoida anonüümsust.
+
+
+== Ülekanne ==
+Bitcoin'ide ülekanne toimub, kui nende algne omanik (saatja) saadab võrku digitaalselt allkirjastatud teate, millega kinnitab, et loovutab oma bitcoin'id uuele omanikule. Teised võrgusõlmed kontrollivad tehingu kehtivust, vaadates kas saatja avaliku võtme kontrollsumma on sama, mis hajutatud žurnaalis hetkel omanikuna tuntud kontrollsumma, ning kas saatja loodud digiallkiri sobib tema avaliku võtmega. Kui tehing on korrektne, võtavad nad selle teatavaks.
+Enne kehtima hakkamist peab tehing omakorda kinnistuma žurnaalis. Žurnaal on realiseeritud andmestruktuurina, mida tuntakse kui plokiahelat (block chain). Et tehinguid plokiahelasse lisada, valib võrk regulaarselt mõne võrgusõlme, mille ülesandeks saab viimase ploki loomisest saati toimunud tehingute sertifitseerimine.
+
+
+== Võltsimiskindlus ja tööpõhimõtted ==
+Sertifitseerijana töötav võrgusõlm koostab tehinguid kinnitava faili, mida bitcoin '​i protokollis nimetatakse plokiks, ja levitab selle teistele võrgusõlmedele, kes kontrollivad kõik tehingud enne ploki aktsepteerimist üle. Aktsepteeritud plokk lisatakse plokiahela lõppu, ning saab aluseks uuele plokile.
+Sertifitseerija valimine põhineb David Chaumi välja pakutud "töö tõendamise" meetodil. Võrgusõlmed otsivad pidevalt juhumeetodil variante läbi proovides lahendeid ajamahukale, kuid teatud piirides ennustamatu lahenduskiirusega ülesandele, kus lahenduse leidmise aeg sõltub mitte vaid arvutusjõust vaid ka õnnest (sellest, mis järjekorras lahenduse otsija võrdselt tõenäolisi lahendeid proovib).
+Esimene võrgusõlm, mis plokiahela lõppu sobiva uue lahendi leiab, teatab sellest teistele võrgusõlmedele, ning saab uueks sertifitseerijaks. Tema poolt võrku saadetud teade saab uue ploki aluseks. Kui uue ploki loomine on matemaatiliselt raske, siis tema kontrollimine on vastupidi väga kerge.
+Jõumeetodil uueks sertifitseerijaks trügimist takistab asjaolu, et tõenäosus sertifitseerijaks saada sõltub mitte ainult arvutusjõust ja õnnest, vaid ka võrgusõlme arvutusjõu ja kogu võrgu arvutusjõu suhtest. Mida rohkem on bitcoin '​i võrgus sõlmi, seda raskem on pääseda "töö tõendamisega loteriis" esimeseks ja saada lühikeseks ajaks järgmise sertifitseerija roll.
+Uue ploki looja saab auhinnaks teatud koguse bitcoin'e, kusjuures ploki generaatorile antavate bitcoin'ide kogus poolitub iga 210 000 ploki järel. Esimesed 210 000 plokki annavad oma loojale 50 bitcoin'i, järgmised juba 25, edasised 12,5 jne.
+
+
+== Teenustasud ==
+Bitcoin '​i süsteem lubab tehingu tegijal täiendavalt pakkuda teenustasuks oma tehingu plokki lisamise eest kindla koguse bitcoin'e. Ploki looja saab tasuks kõik plokki lisatud tehingutega välja pakutud teenustasud eelmise ploki lõpust alates. Sedaviisi on võimalik väärtustada võrgu jaoks vajalikku plokkide loomise tööd, kuid seda võimalust ei pea kasutama just sel hetkel.
+Bitcoin '​i süsteemi algses realisatsioonis saab ploki looja protokolli reeglite põhjal teatud koguse bitcoin'e sõltumata teenustasust, et tagada bitcoin'ide sujuv teke ja levik kuni nende kogus jõuab teoreetilise piiri lähedale. Seejärel peaks uute plokkide loomist hakkama soodustama teenustasu.
+
+
+== Kasutamine ==
+Käibel olevate bitcoin'ide arvu teoreetiline piir on 21 miljonit. Piiri on valinud bitcoin '​i süsteemi arendaja ja see on lähtekoodis püsivalt kirjas. Kuigi lähtekoodi võib muuta, loeb võrk kehtetuks tehingud, mis sellest kokkuleppest kinni ei pea, mistõttu selle praktiline muutmine nõuaks enamiku süsteemi kasutajate nõusolekut.
+Eelneva tulemusena on bitcoin'ide loomise raskus tulevikus ennustatav. Süsteemi on sisse kodeeritud mõningane inflatsioon uute bitcoin'ide tekke läbi, kuni enamik neist loodud saab. Võib ennustada, et 2013. aastaks on loodud pool kõigist bitcoin'idest ning 2017. aastaks 3/4 nendest. Seejärel algab deflatsioon, sest uusi bitcoin'e enam ei teki. Deflatsiooni peaksid bitcoin'id taluma sujuvalt, sest nende väärtust saab esitada kaheksa kümnendkohaga pärast koma.
+Bitcoin on oma olemuselt eksperiment, mis võib nurjuda. Võimalikud nurjumise põhjused võivad olla usalduse kaotus valuuta vastu (näiteks nõrkuste leidmisel selle krüptograafilistes alustes), kasutajate arvu vähenemine või ülemaailmne keelamine paljude riikide koostöös. Siiski võib bitcoin'i moodi krüptograafilise raha üldine keelamine võimudel üle jõu käia.
+Annetusena aktsepteerivad bitcoin'e mitmed organisatsioonid, näiteks Vaba Tarkvara Sihtasutus (Free Software Foundation), I2P ehk Invisible Internet Project. Samas EFF ehk Electronic Frontier Foundation (mittetulundusühing, mis tegeleb põhivabaduste kaitsega digimaailmas) loobus annetuste vastuvõtmisest bitcoin'ides kartuses, et pole võimalik tõendada annetatud raha legaalselt päritolu. 2013. aasta kevadel hakkasid bitcoin'e vastu võtma ka Wordpress, Internet Archive ja Facebook.
+
+
+== Kaevandamine ==
+Uute bitcoin '​ide emissioon on detsentraliseeritud, ei sõltu ühestki reguleerivast asutusest, emissiooni maht on ette teada. Järgmises plokis sisalduvate tehingute komisjonitasude summale lisatakse standardosa uusi bitcoin '​e. Kogusumma autasuna saab isik, kes lisas järgmise ploki tehingute andmebaasi.Kliendiprogrammi esimestes versioonides oli nupp "genereeri uued bitcoin '​id". Alates 2013. aastast on kaevandamine ilma spetsialiseeritud protsessoriteta (videokaartidel või keskprotsessoril) muutunud kahjumlikuks: tarbitava elektrienergia maksumus on ületanud keskmise tulemuse.2017. aastal ilmus üüritud võimsust kasutades pilvekaevandusteenus. Seadmete hooldust, konfiguratsiooni ja Interneti-ühendust võtab endale seda teenust pakkuv ettevõte. Enamikul juhtudel saab üürnik valida kaevandamiseks krüptoraha ja kaevandamise basseini ühendamiseks.
+Pärast iga 210 000 ploki moodustamist (ligikaudu üks kord 4 aasta jooksul) on programmeeritud vähendama preemia suurust poole võrra uute bitcoin '​idega, see tähendab, et see väärtus on kahanev geomeetriline progressioon (autasu suurus 50 → 25 → 12,5 → …). Bitcoin '​ide emissiooni kohumaht on piiratud, kuna see on kahaneva geomeetrilise progressiooni liikmete summa ja ei ületa 21 miljonit. 2014. aasta mais oli ringluses 12,7 miljonit bitcoin '​i, 2021. aasta juulis oli ringluses 18,77 miljonit bitcoin '​i.
+
+
+== Bitcoin'i keskkonnamõju ==
+Bitcoin'i energiatarve on tohutu. Selle võrgustiku arvutite summaarne elektrienergia kulu on suurem kui Iirimaal, Uus-Meremaal või Ungaril, ületades 42 TWh elektrit aastas (võrdluseks: Eestis oli 2016. aastal elektrienergia tarbimine koos võrgukadudega suurusjärgus 8,38 TWh ehk üle viie korra väiksem). Bitcoin'i CO2 emissioon, 20 miljonit tonni aastas, on umbes sama suur kui miljonil transatlantilisel lennul, kujutades endast sellega tõsist ohtu keskkonnale. Seega olemuselt on bitcoin keskkonnasõbralikkusest kaugel – lihtsustatult võttes ongi bitcoin'i kaevandamise mõte kulutada võimalikult palju energiat sellele, et teha võimalikult kiiresti võimalikult palju mõttetuid aritmeetilisi tehteid.
+
+
+== Bitcoin Eestis ==
+
+Eestis võtsid 2013. aasta kevadest bitcoin'e vastu Hooandja ja Piraadipartei, aga ükski kohalik valuutavahetus bitcoin'e ei pakkunud. Mõnda aega eksisteeris hobi korras vahetusteenus, kuid see suleti 2014. aastal pärast seda, kui politsei nõudis rahapesu ja terrorismi ennetamise seaduses ettenähtud nõuete täitmist.
+
+
+== Vaata ka ==
+Alternatiivraha
+Blockstack (Plokikogum)
+Detsentraliseeritud andmetöötlusplatvorm
+Digiraha
+E-raha
+Krüptoraha
+
+
+== Viited ==
+
+
+== Välislingid ==
+Bitcoin '​i koduleht
+March 10, 2014, By Felix Salmon, Satoshi: Why Newsweek isn't convincing reuters.com
+Arvamus: Milleks üks uus valuuta? Parem mitu!
+Euroopa Kohtu otsus lükkab ümber Eesti seisukohad kübervaluuta osas – ERR, 23. oktoober 2015
+European Central Bank; Virtual Currency Schemes
+Bitcoin Billionaire Winklevoss Sees Surge of as Much as 20 Fold
+bitcoin '​id Eesti prokuratuur konfiskeeris esimesed bitcoin '​id postimees.ee, 13. detsember 2017
+bitcoin '​i-sotsiaalne-eksperiment-muudab-vaikselt-maailma "Kümme aastat bitcoin '​i – sotsiaalne eksperiment muudab vaikselt maailma" ERR, 7. november 2018

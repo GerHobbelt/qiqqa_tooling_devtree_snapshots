@@ -1,0 +1,187 @@
+revision: 34662033
+title: American Journal of Physics
+url: https://ko.wikipedia.org/wiki/%EB%9D%BC%ED%94%8C%EB%9D%BC%EC%8A%A4-%EB%A3%BD%EA%B2%8C-%EB%A0%8C%EC%B8%A0_%EB%B2%A1%ED%84%B0
+
+
+---
+
+고전역학에서 라플라스-룽게-렌츠 벡터(영어: Laplace-Runge-Lenz vector, 약자 LRL 벡터)는 행성의 궤도를 계산할 때 사용할 수 있는 벡터이다. 이를 이용해서 행성의 궤도가 중력장에서 타원궤도가 됨을 보일 수 있다. 라플라스 벡터, 룽게-렌츠 벡터, 렌츠 벡터로 불리기도 한다. 하지만, 실제로는 이들이 처음 발견한 것은 아니며 여러 차례에 걸쳐 재발견되었다.
+
+
+== 수학적 정의 ==
+어떤 입자에 거리 제곱에 반비례하는 중심력 (예:중력, 전자기력 등)이 작용하고, 그 중심력이 다음 식으로 나타난다고 하자.
+
+  
+    
+      
+        
+          F
+        
+        (
+        r
+        )
+        =
+        
+          
+            
+              −
+              k
+            
+            
+              r
+              
+                2
+              
+            
+          
+        
+        
+          
+            
+              r
+              ^
+            
+          
+        
+      
+    
+     
+  
+LRL 벡터 A는 수학적으로 다음 공식으로 정의한다.
+
+  
+    
+      
+        
+          A
+        
+        =
+        
+          p
+        
+        ×
+        
+          L
+        
+        −
+        m
+        k
+        
+          
+            
+              
+                r
+              
+              ^
+            
+          
+        
+      
+    
+     
+  여기서 기호는 다음과 같다.
+
+  
+    
+      
+        m
+      
+    
+     
+  : 중심력을 받는 입자의 질량
+
+  
+    
+      
+        
+          p
+        
+      
+    
+     
+  : 운동량 벡터
+
+  
+    
+      
+        
+          L
+        
+        =
+        
+          r
+        
+        ×
+        
+          p
+        
+      
+    
+     
+  : 각운동량 벡터
+
+  
+    
+      
+        k
+      
+    
+     
+  : 중심력의 세기를 나타내는 수
+
+  
+    
+      
+        
+          r
+        
+      
+    
+     
+  : 중심력을 받는 입자의 위치 벡터
+
+  
+    
+      
+        
+          
+            
+              
+                r
+              
+              ^
+            
+          
+        
+      
+    
+     
+  : 
+  
+    
+      
+        
+          r
+        
+      
+    
+     
+   방향의 단위벡터
+
+
+== 같이 보기 ==
+이체문제
+양자 역학
+비네 방정식
+베르트랑 원리
+천체물리학: 궤도
+피에르시몽 라플라스
+카를 다비트 톨메 룽게
+
+
+== 참고 문헌 ==
+
+Baez, John (2012년 3월 25일). “Mysteries of the gravitational 2-body problem” (영어). 2008년 10월 21일에 원본 문서에서 보존된 문서. 2008년 10월 24일에 확인함. 
+Goldstein, Herbert (1975). “Prehistory of the Runge-Lenz vector”. 《American Journal of Physics》 (영어) 43 (8): 735–738. doi:10.1119/1.9745. 
+Goldstein, Herbert (1976). “More on the prehistory of the Runge-Lenz vector”. 《American Journal of Physics》 (영어) 44 (11): 1123–1124. doi:10.1119/1.10202. 
+P.G.L. Leach, G.P. Flessas (2003). “Generalisations of the Laplace–Runge–Lenz vector”. 《Journal of Nonlinear Mathematical Physics》 (영어) 10 (3): 340–423. arXiv:math-ph/0403028. doi:10.2991/jnmp.2003.10.3.6.

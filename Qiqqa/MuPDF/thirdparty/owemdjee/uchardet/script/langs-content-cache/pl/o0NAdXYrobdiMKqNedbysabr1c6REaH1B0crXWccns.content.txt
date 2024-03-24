@@ -1,0 +1,47 @@
+revision: 64630872
+title: Akumulator niklowo-kadmowy
+url: https://pl.wikipedia.org/wiki/Akumulator_niklowo-kadmowy
+
+
+---
+
+Akumulator niklowo-kadmowy (NiCd lub Ni-Cd) – rodzaj akumulatora, w którym elektrody wykonane są z zasadowego tlenku niklu(III) NiO(OH) (katoda) i metalicznego kadmu (anoda).
+Akumulatory Ni-Cd cechują się dość dużą wydajnością prądową, ale występuje w nich uciążliwy efekt pamięci. Powinny być rozładowywane i ładowane w pełnych cyklach, tj. zaleca się pełne rozładowanie, a po rozładowaniu należy akumulator niezwłocznie naładować, nie pozostawiając go na dłużej w stanie rozładowanym. Efekt pamięci można naprawić ładowarką z funkcją refresh.
+Akumulatory te były do niedawna stosowane na szeroką skalę w różnych urządzeniach przenośnych (między innymi w modelach zdalnie sterowanych (RC), modelarstwie, krótkofalarstwie i innych dziedzinach). Obecnie są prawie całkowicie wyparte przez ogniwa Ni-MH i litowo-polimerowe. Mają mniejszą pojemność na jednostkę objętości niż podobne ogniwa Ni-MH.
+Pierwsze ogniwa (akumulatorki Ni-Cd w postaci paluszków AA (R6)) miały pojemność 500 mAh. Obecnie najnowsze ogniwa o technologii innej niż Ni-Cd w AA mają pojemności większe niż 2000 mAh, a napięcie znamionowe wynosi ok. 1,2 V.
+Dla ogniwa AA KR6 pojemność standardowa powinna wynosić do około 800 mAh – zbyt duża pojemność zmniejsza trwałość i wydajność prądową akumulatora.
+Akumulator Ni-Cd jest do dziś najtrwalszym ogniwem miniaturowym (przy poprawnym użytkowaniu – częste doładowywanie powoduje występowanie efektu pamięci i tym samym szybkiego zużycia ogniwa), ma też niską cenę. Jednakże niższa pojemność i większa masa w stosunku do przechowywanej energii powodują, że są wypierane przez nowsze typy akumulatorów – Ni-MH w formie baterii o standardowych rozmiarach (R6, R14 i podobne). Charakteryzują się niemal identycznym napięciem ogniwa, bardzo dużą wydajnością prądową, oraz podobną ceną w stosunku do ogniw litowo-jonowych, bądź litowo-polimerowych w zastosowaniach takich jak akumulatory telefonów, laptopów, bądź zasilanie modeli zdalnie sterowanych. Te ostatnie jednak wymagają wielu układów zabezpieczających i mają ograniczoną trwałość oraz są droższe Mimo tego zyskują na popularności dzięki niezwykle małej masie i znacznej pojemności.
+Akumulator Ni-Cd wytrzymuje około 1000 cykli ładowania i rozładowania. Ładowanie takich ogniw nie jest łatwe, gdyż w trakcie ładowania napięcie na ogniwie praktycznie nie rośnie. Zaleca się ładowanie przez 16 godzin prądem o wartości będącej ilorazem ładunku akumulatora w mAh przez 10 (C/10). Można stosować też procedury szybkiego ładowania, w których natężenie prądu ładującego jest zależne od czasu ładowania i temperatury ogniwa.
+Konsumenckie akumulatory są wycofywane z użycia z trzech powodów – zużyte są niebezpieczne dla środowiska, a liczba odpowiednich zakładów utylizacji i miejsc składowania takich akumulatorów jest niewystarczająca. Drugi powód to zbyt mały zysk dla firm produkujących takie ogniwa – akumulator jest bardzo trwały, a cena nie jest wysoka. Poza tym ogniwa Ni-Cd mają niższą pojemność i większą masę od nowocześniejszych ogniw. Obecnie prowadzi się zbiórkę, a nawet skup akumulatorów niklowo-kadmowych przez firmy produkujące akumulatory w wersji przemysłowej w celu ochrony środowiska i powtórnego wykorzystania surowców wtórnych znajdujących się w starych akumulatorach niklowo-kadmowych.
+Wiele firm jednak nadal produkuje przemysłowe akumulatory niklowo-kadmowe w postaci pojedynczych cel 1,2 V lub baterii akumulatorów: od 2 do 10 cel (przy pojemności do 10 Ah na celę) do narzędzi przenośnych wymagających bardzo dużych prądów typu odkurzacze, wkrętarki, wiertarki lub zamontowanych na drewnianych stelażach i pojemności od 10 do 1250 Ah na celę, wykorzystywanych w przemyśle energetycznym, kolejnictwie, telekomunikacji i innych wymagających dużej niezawodności.
+Akumulatory te dodatkowo oferują:
+
+pracę w szerokim zakresie temperatur −20 °C do +50 °C z ekstremami w krótkim okresie −50 °C do +70 °C;
+dobrą wydajność w niskich temperaturach;
+odporność na starzenie w wysokich temperaturach;
+odporność na niewłaściwe użycie elektryczne;
+odporność na wstrząsy i drgania;
+wymagają jedynie podstawowej obsługi;
+ich instalacja jest tania i łatwa;
+mogą być opcjonalnie wyposażone w centralny system napełniania wodą;
+do 20 lat niezawodnego działania przy znacznie niższych kosztach w porównaniu z akumulatorami kwasowo-ołowiowymi.Płyty niklowo-kadmowe są całkowicie niezawodne, bez ryzyka rozbiegania termicznego czy nagłej śmierci: struktura wspierająca płyt dodatnich i ujemnych jest wykonana ze stali, co oznacza że nie występuje korozja w przeciwieństwie do akumulatorów kwasowych.
+Do niedawna wydawało się, że ogniwa te nie znikną zupełnie z rynku przez wiele lat, gdyż w przeciwieństwie do ogniw niklowo-metalowo-wodorkowych mają znacznie mniejsze samorozładowanie, co umożliwia ich przechowywanie w stanie naładowanym. Niedawno jednak pojawiły się ogniwa niklowo-wodorkowe nowej generacji ze zmienionym separatorem, które wykazują się znikomym samorozładowaniem. Te nowoczesne ogniwa mają jednak mniejsze pojemności oraz są droższe od standardowych. W przeciwieństwie do nich akumulatorki niklowo-kadmowe są stosunkowo tanie, a wiele osób w domach ma ładowarki niezdolne ładować akumulatorów Ni-MH.
+Akumulatory tego typu są nadal stosowane w najcięższych warunkach pracy, a także w środowiskach zagrożonych wybuchem. Są one odporne na złe warunki pracy, czyli wysoką temperaturę (40 °C) i przeładowania. Nie mają tendencji do eksplozji przy wysokiej temperaturze. Dzięki temu są one dobrym źródłem energii w trudnych warunkach eksploatacji.
+Spotykane oznaczenia: KR3, KR6, KR14 itd. (analogicznie do R3, R6, R14 itd.); KR11/45 (rozmiar R3), KR15/51 (rozmiar R6).
+
+
+== Procesy elektrodowe ==
+katoda: tlenek wodorotlenek niklu(III), NiO(OH)
+anoda: kadm, Cd
+elektrolit: wodorotlenek potasu, KOHReakcje zachodzące podczas rozładowania ogniwa:
+
+anoda: Cd0 + 2OH− → CdII(OH)2 + 2e−
+katoda: 2NiIIIO(OH) + 2H2O + 2e− → 2NiII(OH)2 + 2OH−Sumarycznie:
+
+2NiO(OH) + Cd + 2H2O → 2Ni(OH)2 + Cd(OH)2W trakcie ładowania kierunek reakcji jest odwrotny.
+
+
+== Uwagi ==
+
+
+== Przypisy ==

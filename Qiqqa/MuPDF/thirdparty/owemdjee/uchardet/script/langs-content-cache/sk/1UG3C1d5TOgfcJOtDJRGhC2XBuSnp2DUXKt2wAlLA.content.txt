@@ -1,0 +1,459 @@
+revision: 7536019
+title: "Bakt\xE9rie"
+url: https://sk.wikipedia.org/wiki/Bakt%C3%A9rie
+
+
+---
+
+Baktérie (lat. Bacteria; iné slovenské a latinské názvy pozri nižšie) sú v súčasnom ponímaní doména z taxónu bunkovce (=bunkové organizmy; lat. Cellulata). Spolu s archeónmi tvoria neformálnu skupinu prokaryoty. Pojem baktérie sa pri bližšom pohľade v literatúre rôzne chápe (pozri nižšie); predmetom tohto článku (okrem čiastočne kapitoly o systematike) sú baktérie v najužšom zmysle, tzv. eubaktérie (Eubacteria).
+Bakteriálna bunka sa bežne skladá z peptidoglykánovej bunkovej steny, jadrovej oblasti (nukleoidu),  DNA bez intrónov, plazmidov a ribozómov prokaryotického typu. U baktérií sa nevyskytuje pohlavné rozmnožovanie, namiesto toho sa najčastejšie delia binárne. Baktérie sú najrozšírenejšou skupinou organizmov na svete. 
+Baktérie majú veľký význam v planetárnom obehu živín a často vstupujú do obojstranne prospešných vzťahov s inými organizmami. Na druhej strane je známych aj veľa patogénnych baktérií, teda druhov, ktoré spôsobujú infekcie.
+
+
+== Názvy ==
+
+
+=== Vedecké názvy ===
+Vedecké (latinské) názvy sú: Bacteria, Bacteriae, Bacteriophyta, Bacteriaceae, Bacteriomycetes; staršie: Schizomycetes, Schistomycetes, Schizomycet(ac)eae, Schizomycophyta. V textoch, v ktorých sú baktérie definované ako synonymum prokaryotov (porovnaj nižšie) sú ďalšími vedeckými názvami baktérií vedecké názvy prokaryotov (i keď prokaryoty v minulosti niekedy zahŕňali aj vírusy resp. nebunkovce).
+Eubacteria:
+V roku 1977 Woese vyčlenil z baktérií archeóny do samostatného taxónu. Názvy prokaryotov (teda baktérií v tradičnom ponímaní) bez archeónov sú:  Eubacteria (Woese 1977), [bez siníc] Eubacteriophyta, zriedkavo Neobacteria, zriedkavo [bez siníc] Bacteriobionta, ale dnes sa zďaleka najčastejšie používa názov Bacteria v užšom zmysle (Woese 1990). Názov Eubacteria sa teda vo význame prokaryoty bez archeónov používa od roku 1977; do začiatku 20. storočia sa však názvom Eubacteria označovalo niečo iné, a to všetky prokaryoty okrem sírnych baktérií (Thiobacteria), prípadne aj okrem myxobaktérií. . Okrem toho Möhn 1984 názvom Eubacteria označil všetky Bacteriobionta (pozri vyššie) okrem spirochét a myxobaktérií .
+Eubacteriae:
+V 40. - 60. rokov 20. storočia sa u niektorých autorov v rámci baktérií vyskytoval taxón (trieda, kmeň a pod.) Eubacteriae, ktorým sa označovala podskupina baktérií zahŕňajúca typické baktérie, t.j. spravidla všetky prokaryoty okrem siníc, rickettsií v širšom zmysle (=rickettsie v užšom zmysle + bartonely + chlamýdie), mykoplaziem, spirochét a myxobaktérií, neskôr aj okrem aktinomycét.Eubacteriales:
+V 20. - 70. rokoch 20. storočia sa u mnohých autorov v rámci baktérií vyskytoval rad Eubacteriales (v niektorých systémoch bol zaradený ako jeden z radov vyššie spomínaného taxónu Eubacteriae). Rad Eubacteriales zahŕňal najtypickejšie baktérie; t.j. konkrétne:
+
+a) podľa Bergey's Manual 1948 zahŕňal všetky prokaryoty okrem taxónov: sinice, rickettsie v širšom zmysle (porov. vyššie), aktinomycéty, Chlamydobacteriales (vrátane Beggiatoales; toto nie je zhodné s chlamýdiami), Caryophanales, myxobaktérie, spirochéty a mykoplazmy (=Borrelomycetaceae),
+b) podľa Bergey's Manual 1957 zahŕňal to isté ako v bode a), ale navyše okrem taxónov Pseudomonadales (zahŕňa aj Rhodobacteriales - po slovensky: purpurové baktérie) a Hyphomicrobiales.Taxónu Eubacteriales podľa definície a) je podobný zriedkavo sa vyskytujúci taxón (trieda) Bacteridae.
+
+
+=== Slovenské názvy ===
+Slovenské názvy sú: baktérie; staršie: poltivky, schizomycéty; neformálne alebo staršie: mikróby, bacily; zastarano nevhodne: plesne. 
+Eubacteria:
+Slovenský ekvivalent vyššie spomínaného Woesovho latinského názvu Eubacteria (= prokaryoty okrem archeónov) je eubaktérie alebo pravé baktérie. Keďže tento taxón dnes spravidla označujeme po latinsky ako Bacteria v užšom zmysle, označujeme ho aj po slovensky spravidla ako baktérie v užšom zmysle. Slovenský ekvivalent vyššie spomínaného podobného pojmu Eubacteriophyta (=Eubacteria okrem siníc) je pravé baktérie.
+Eubacteriales:
+Slovenský ekvivalent vyššie spomínaného radu baktérií nazývaného Eubacteriales je baktérie [v užšom zmysle] , pravé baktérie alebo ojedinele eubaktérie. Slovenský ekvivalent vyššie spomínanej triedy Bacteridae je baktérie pravé.
+
+
+== Systematická klasifikácia ==
+
+
+=== Rozsah pojmu a zaradenie v systéme ===
+Rozsah pojmu baktéria sa menil v závislosti od času aj autora. Pojem "baktérie" môže teda v závislosti od použitého systému označovať:
+
+v minulosti:
+prokaryoty
+prokaryoty okrem siníc, rickettsií v širšom zmysle (= rickettsií v užšom zmysle, bartonel a chlamýdií) a prípadne mykoplaziem, niekedy aj okrem spirochét a občas aj okrem aktinomycét (Rickettsie, bartonely, chlamýdie a mykoplazmy sa v takýchto systémoch považovali za vírusy alebo organizmy na prechode medzi baktériami a vírusmi; spirochéty sa považovali za živočíchy alebo organizmy na prechode medzi baktériami a živočíchmi; aktinomycéty sa považovali za huby alebo za organizmy na prechode medzi baktériami a hubami.)
+prokaryoty (prípadne okrem siníc) vrátane nebunkovcov, najmä vírusov
+prokaryoty okrem siníc
+prokaryoty okrem archeónov a siníc (Tento variant je pomerne zriedkavý. Synonymum: Eubacteriophyta)
+dnes:
+prokaryoty okrem archeónov (Synonymum:Eubacteria)Vysvetlivka: Termín prokaryoty tu zahŕňa klasické baktérie (vrátane rickettsií, bartonel, chlamýdií, mykoplaziem, spirochét, aktinomycét), archeóny a sinice (vrátane prvozelených rias).
+O variantoch zaradenia baktérií v systéme živých organizmov pozri Systém živých organizmov.
+
+
+=== Delenie ===
+Uvádzame príklady delenia baktérií (Z tu uvedených delení baktérií niektoré do pojmu baktérie zahŕňajú sinice a/alebo archeóny, iné ich nezahŕňajú):
+
+
+==== Tradičné systémy ====
+
+
+===== Podľa 8. vydania Bergey's Manual of Determinative Bacteriology (1974) (Delenie na 19 častí plus cyanobaktérie) =====
+ríša prokaryoty (Procaryotae):
+
+oddelenie cyanobaktérie [G-] (v neskorších systémoch uvádzané aj ako "oxygénne fototrofné baktérie")
+oddelenie baktérie:
+časť 1 fototrofné baktérie [G-] (v neskorších systémoch uvádzané aj ako "anoxygénne fototrofné baktérie")
+rad Rhodospirillales
+časť 2 kĺzavé baktérie (iný slovenský názov: kĺzajúce baktérie) [G-]
+rad myxobaktérie (Myxobacterales) (v neskorších systémoch uvádzané aj ako "fruktifikujúce kĺzavé baktérie")
+rad Cytophagales  (v neskorších systémoch uvádzané aj ako "nefotosyntetizujúce nefruktifikujúce kĺzavé baktérie")
+časť 3 pošvovité baktérie (iné slovenské názvy: pošvaté baktérie, opuzdrené baktérie, baktérie v spoločnej pošve) [G-]
+časť 4 pučiace baktérie a/alebo príveskovité baktérie [G-]
+časť 5 spirochéty [G-]
+rad spirochéty (Spirochaetales)
+časť 6 špirálovité a zakrivené baktérie [G-] (v neskorších systémoch uvádzané aj ako "aeróbne/mikroaerofilné pohyblivé vibrioidné/helikálne gramnegatívne baktérie" + "nepohyblivé (alebo ojedinele pohyblivé) gramnegatívne zakrivené baktérie")
+časť 7 gramnegatívne aeróbne paličky a koky [G-] (vrátane časti toho, čo sa neskôr označovalo ako archebaktérie)
+časť 8 gramnegatívne fakultatívne anaeróbne paličky [G-]
+časť 9 gramnegatívne anaeróbne baktérie [G-] (v neskorších systémoch uvádzané aj ako "anaeróbne gramnegatívne rovné, ohnuté alebo závitnicovité paličky" + "baktérie disimilačne redukujúce sulfát a síru")
+časť 10 gramnegatívne koky a kokobacily [G-] (v neskorších systémoch uvádzané ako súčasť gramnegatívnych aeróbnych paličiek a kokov - pozri vyššie)
+časť 11 gramnegatívne anaeróbne koky [G-]
+časť 12 gramnegatívne chemolitotrofné baktérie [G-] (v neskorších systémoch nazývané "aeróbne chemolitotrofné baktérie a súvisiace organizmy")
+časť 13 baktérie produkujúce metán [G+] (v neskorších systémoch uvádzané ako súčasť archebaktérií)
+časť 14 grampozitívne koky [G+]
+časť 15 paličky a koky tvoriace endospóry [G+] (v neskorších systémoch nazývané "grampozitívne paličky a koky tvoriace endospóry")
+časť 16 grampozitívne nesporulujúce paličkovité baktérie [G+] (v neskorších systémoch nazývané "pravidelné nesporulujúce grampozitívne paličky")
+časť 17 aktinomycéty a príbuzné organizmy [G+] (v neskorších systémoch uvádzané aj rozdelené na viacero častí)
+koryneformná skupina baktérií
+rad aktinomycéty (Actinomycetales) - vrátane napr. mykobaktérií a nokardiovitých baktérií
+časť 18 rickettsie [G-]
+rad rickettsie (Rickettsiales)
+rad chlamýdie (Chlamydiales)
+časť 19 Mollicutes [G-]
+rad mykoplazmy (Mycoplasmatales)Poznámky:
+
+- Tie časti, ktoré nemajú uvedené rady, sa delia buď priamo na čeľade alebo priamo na rody.
+- G+ znamená gramnegatívne, G- znamená grampozitívne
+- Vyššie je zahrnuté aj to, čo sa neskôr označovalo ako archebaktérie, a to konkrétne jednak pod názvom "baktérie produkujúce metán" a jednak ako súčasť "gramnegatívnych aeróbnych paličiek".Toto delenie baktérií na 19 skupín ("častí") je založené na rôznych charakteristikách ako Gramovo farbenie, tvar bunky, usporiadanie buniek do kolónií, požiadaviek na kyslík, pohyblivosti, či výživových a metabolických vlastnostiach.
+V úvode tejto knihy je uvedené alternatívne základné delenie (chápané ako akýsi návrh do budúcnosti), a to takéto:
+ríša prokaryoty (Procaryotae):
+
+oddelenie fototrofné prokaryoty (Photobacteria)
+trieda modrozelené fotobaktérie - t.j. vyššie uvedené prvé oddelenie (cyanobaktérie)
+trieda červené fotobaktérie - t.j. časť vyššie uvedenej časti 1 (fototrofné baktérie)
+trieda zelené fotobaktérie - t.j. časť vyššie uvedenej časti 1 (fototrofné baktérie)
+oddelenie prokaryoty indiferentné voči svetlu (Scotobacteria)
+trieda baktérie [v užšom zmysle] - t.j. vyššie uvedené časti 2 až 17
+trieda obligátne vnútrobunkové Scotobacteria v eukaryotických bunkách (Rickettsiae) - t.j. vyššie uvedená časť 18 (rickettsie)
+trieda Scotobacteria bez bunkových stien (Mollicutes) - t.j. vyššie uvedená časť 19 (mykoplazmy)Zdroje tejto kapitoly: 
+
+
+===== Podľa 1. vydania Bergey's Manual of Systematic Bacteriology (1984-1989) (Delenie na 33 sekcií) =====
+ríša Procaryotae (prokaryoty):
+
+oddelenie Gracilicutes (gramnegatívne baktérie okrem mykoplaziem a archebaktérií)
+trieda Scotobacteria (gramnegatívne nefotosyntetizujúce baktérie)
+sekcia 1 spirochéty
+rad spirochéty (Spirochaetales)
+ďalšie taxóny
+sekcia 2 aeróbne/mikroaerofilné pohyblivé vibrioidné/helikálne gramnegatívne baktérie
+sekcia 3 nepohyblivé (alebo ojedinele pohyblivé) gramnegatívne zakrivené baktérie
+sekcia 4 gramnegatívne aeróbne paličky a koky
+sekcia 5 fakultatívne anaeróbne gramnegatívne paličky (inde nazývané: gramnegatívne fakultatívne anaeróbne paličky)
+sekcia 6 anaeróbne gramnegatívne rovné, ohnuté alebo závitnicovité paličky
+sekcia 7 baktérie disimilačne redukujúce sulfát a síru
+sekcia 8 anaeróbne gramnegatívne koky
+sekcia 9 rickettsie a chlamýdie
+rad rickettsie (Rickettsiales)
+rad chlamýdie (Chlamydiales)
+sekcia 20 aeróbne chemolitotrofné baktérie a súvisiace organizmy (inde nazývané: gramnegatívne chemolitotrofné baktérie)
+sekcia 21 pučiace a/alebo príveskovité baktérie
+sekcia 22 pošvovité baktérie
+sekcia 23 nefotosyntetizujúce nefruktifikujúce kĺzavé baktérie
+rad Cytophagales
+rad Lysobacterales
+rad Baggiatoales
+ďalšie taxóny
+sekcia 24 fruktifikujúce kĺzavé baktérie
+rad myxobaktérie (Myxobacteriales/Myxococcales)
+trieda Anoxyphotobacteria (gramnegatívne fotosyntetizujúce baktérie neprodujujúce kyslík)
+sekcia 18 anoxygénne fototrofné baktérie
+trieda Oxyphotobacteria (gramnegatívne fotosyntetizujúce baktérie produjujúce kyslík, t.j. sinice/cyanobaktérie a prvozelené riasy/prochlorofyty)
+sekcia 19 oxygénne fotosyntetizujúce baktérie (inde nazývané: oxygénne fototrofné baktérie)
+skupina cyanobaktérie
+rad Chroococcales
+rad Pleurocapsales
+rad Oscillatoriales
+rad Nostocales
+rad Stigonemales
+skupina/rad prochlorofyty/prvozelené riasy (Prochlorales)
+oddelenie Firmicutes (grampozitívne baktérie okrem archebaktérií)
+trieda Firmibacteria (grampozitívne jednoduché paličky a koky)
+sekcia 12 grampozitívne koky
+sekcia 13 grampozitívne paličky a koky tvoriace endospóry
+sekcia 14 pravidelné nesporulujúce grampozitívne paličky
+trieda Thallobacteria (grampozitívne vetviace sa baktérie, t.j. aktinomycéty a príbuzné organizmy)
+sekcia 15 nepravidelné nesporulujúce grampozitívne paličky
+sekcia 16 mykobaktérie
+sekcia 17 nokardiovité (iný slovenský názov: nokardioformné baktérie) - porov. komentár k sekcii 26
+sekcia 26 nokardiovité aktinomycéty (iný slovenský názov: nokardioformné aktinomycéty) - tu ide zrejme o duplicitu k sekcii 17, ktorá vznikla tým, že sekcie 17 a 26 vyšli v dvoch rôznych zväzkoch
+sekcia 27 aktinomycéty s multilokulárnymi sporangiami
+sekcia 28 aktinoplanety (iný slovenský názov: aktinoplanéty)
+sekcia 29 streptomycéty a príbuzné rody
+sekcia 30 maduromycéty
+sekcia 31 termomonospóry a príbuzné rody
+sekcia 32 termoaktinomycéty
+sekcia 33 iné rody - t.j. rody Glycomyces, Kibdelosporangium, Kitasatosporia a Sascharothrix
+oddelenie Tenericutes (prokaryoty bez bunkovej steny)
+trieda Mollicutes
+sekcia 10 mykoplazmy
+rad mykoplazmy (Mycoplasmatales)
+niekoľko rodov
+oddelenie Mendosicutes (prokaryoty s nezvyčajnou bunkovou stenou)
+trieda Archaebacteria
+sekcia 25 archebaktérie
+skupina metanogénne archebaktérie
+rad Methanobacteriales
+rad Methanococcales
+rad Methanomicrobiales
+skupina archebakteriálni sulfátoví reducenti
+rad Archaeoglobales
+skupina extrémne halofilné archebaktérie
+rad Halobacteriales
+skupina archebaktérie bez bunkovej steny
+rad Thermoplasmales
+skupina extrémne termofilní sulfátoví metabolizéri
+rad Thermoproteales
+rad Thermococcales
+rad Sulfolobales
+sekcia 11 endosymbionty (zvláštna skupina)Základ tohto systému tvorí delenie na 33 sekcií; týchto 33 sekcií vlastne predstavuje len rozpracovanejšiu verziu vyššie spomínaných 19 "častí" z 8. vydania Bergey's Manual of Determinative Bacteriology. Tieto sekcie sa buď delia priamo na rody alebo sa delia na čeľade (a tie na rody) alebo sa delia na rady (a tie na čeľade a tie na rody) alebo sa delia na skupiny (a tie na spomínané rody resp. čeľade resp. rady). Toto delenie je založené na podobných (teda nie fylogenetických) princípoch ako vyššie uvedené delenie z 8. vydania Bergey's Manual of Determinative Bacteriology.
+Rozdiel medzi (33) "sekciami" tohto systému a (19 resp. 20) "časťami" vyššie uvedeného systému podľa 8. vydania Bergey's Manual of Determinative Bacteriology spočíva (popri niektorých štylistických úpravách názvov) v tom, že:
+
+-časť "špirálovité a zakrivené baktérie" (časť 6) bola rozdelená na dve sekcie (sekcie 2 a 3)
+-časť "gramnegatívne koky a kokobacily" (časť 10) bola včlenená do gramnegatívnych aeróbnych paličiek a kokov (sekcia 4)
+-časť "kĺzavé baktérie" (časť 2) bola rozdelená na dve sekcie (sekcie 23 a 24)
+-časť "gramnegatívne anaeróbne baktérie" (časť 9) bola rozdelená na dve sekcie (sekcie 6 a 7)
+-časť "aktinomycéty a príbuzné organizmy" (časť 17) bola rozdelená na 11 samostatných sekcií (všetky sekcie v triede Thallobacteria)
+-archebaktérie (predtým časť 13 plus jedna súčasť časti 7) teraz tvoria 1 samostatnú skupinu (sekcia 25)
+-sinice a prvozelené riasy, ktoré predtým tvorili špecifický taxón (prvé oddelenie), teraz tvoria normálnu sekciu (sekcia 19)
+-pribudla nová sekcia "endosymbionty" (sekcia 11)Zdroje tejto kapitoly: 
+
+
+===== Podľa 9. vydania Bergey's Manual of Determinative Bacteriology (1994) (Delenie na 35 skupín) =====
+V tomto vydaní je vlastne použitý modifikovaný systém z vyššie uvedeného 1. vydania Bergey's Manual of Systematic Bacteriology. Formálne oddelenia sú tu nahradené nasledujúcimi skôr neformálnymi "kategóriami": 
+
+gramnegatívne eubaktérie, ktoré majú bunkové steny (zodpovedá oddeleniu Gracilicutes)
+grampozitívne eubaktérie, ktoré majú bunkové steny (zodpovedá oddeleniu Firmicutes)
+eubaktérie bez bunkových stien (zodpovedá oddeleniu Tenericutes)
+archebaktérie (zodpovedá oddeleniu Mendosicutes)Tieto kategórie sa nedelia na triedy, ale sa priamo delia na 35 "skupín" (veľmi podobných sekciám z 1. vydania Bergey's Manual of Systematic Bacteriology), ktoré sa buď delia priamo na rody alebo sa ďalej delia na "podskupiny" a tie na rody, pričom niektoré z týchto podskupín sú zároveň rady alebo čeľade. 
+Rozdiel medzi (35) "skupinami" tohto systému a (33) "sekciami" vyššie uvedeného systému podľa 1. vydania Bergey's Manual of Systematic Bacteriology spočíva v tom, že:
+
+-ubudol taxón "endosymbionty"
+-ubudla jedna skupina z bývalého taxónu "aktinomycéty a príbuzné organizmy"
+-archebaktérie teraz už netvoria jednu sekciu, ale tvoria 5 samostatných skupínZdroje tejto kapitoly:
+
+
+===== Varianty odvodené z delení podľa Bergey's Manual z konca 20. storočia =====
+V literatúre existujú rôzne varianty vyššie uvedených delení z 1. vydania Bergey's Manual of Systematic Bacteriology (1984-1989) alebo z 9. vydania Bergey's Manual of Determinative Bacteriology (1994).
+V jednom takomto upravenom systéme sa baktérie delia priamo na 21 sekcií. Takéto delenie vzniká tak, že sa 33 sekcií z 1. vydania Bergey's Manual of Systematic Bacteriology (1984-1989) zredukuje nasledujúcimi úpravami:
+
+-početné sekcie pokrývajúce aktinomycéty sú spojené do jedinej sekcie pod názvom "aktinomycéty" (ale nasledujúce organizmy, ktoré sú s aktinomycétami príbuzné, majú samostatné sekcie: nepravidelné nesporulujúce gramnegatívne paličky, nokardiovité, mykobaktérie)
+-sekcia "endosymbionty" je vynechaná
+-sekcie "oxygénne fototrofné baktérie" (t.j. sinice a prvozelené riasy) a "anoxygénne fototrofné baktérie" sú spojené do jednej sekcie (pod názvom: "anoxygénne alebo oxygénne fotosyntetizujúce gramnegatívne baktérie")
+-sekcie "pučiace a/alebo príveskovité baktérie", "pošvovité baktérie", "kĺzavé nefotosyntetizujúce nefruktifikujúce kĺzavé baktérie" a "fruktifikujúce kĺzavé baktérie" sú spojené do jednej sekcie (pod názvom: "pučiace a (alebo) príveskovité; pošvovité; nefotosyntetizujúce nefruktifikujúce kĺzavé; fruktifikujúce gramnegatívne baktérie")V inom systéme sa baktérie delia priamo na 25 skupín. Takéto delenie vzniká tak, že sa z úprav uvedených v predchádzajúcom odseku vykonajú prvé dve, ale nevykonajú sa posledné dve.
+
+
+==== Fylogenetické systémy ====
+
+
+===== Podľa Woese 1987 (Delenie na 11 kmeňov) =====
+praríša eubaktérie (Eubacteria):
+
+kmeň purpurové baktérie - t.j. väčšina toho, čo dnes voláme proteobaktérie (vrátane rickettsií)
+kmeň grampozitívne eubaktérie - vrátane mykoplaziem
+kmeň cyanobaktérie a chloroplasty - chloroplastmi sa tu myslia prvozelené riasy/prochlorofyty
+kmeň spirochéty a príbuzné organizmy - napr. rody Spirochaeta, Leptospira
+kmeň zelené sírne baktérie - napr. rody Chlorobium, Chloroherpeton
+kmeň Bacteroides, flavobaktérie a príbuzné organizmy - napr. rody Bacteroides, Fusobacterium, Flavobacterium
+kmeň Planctomyces a príbuzné organizmy - napr. rody Planctomyces, Isocystis
+kmeň chlamýdie
+kmeň rádiorezistentné mikrokoky a príbuzné organizmy - napr. rody Deinococcus, Thermus
+kmeň zelené nesírne baktérie a príbuzné organizmy - napr. rody Chloroflexus, Thermomicrobium
+rod Thermothoga - sesterský taxón všetkých vyššie uvedených kmeňovToto je jeden z prvých čisto fylogenetických systémov baktérií. Archebaktérie v tomto systéme tvoria samostatnú praríšu.
+Zdroje tejto kapitoly: 
+
+
+===== Podľa 2. vydania Bergey's Manual of Systematic Bacteriology (stav 2004) a Systema naturae 2000 (stav 2005) =====
+Toto delenie používame v slovenskej Wikipédii.
+Doména: Bacteria* (Eubacteria; nepresne Prokarya, Prokaryota) – baktérie (eubaktérie) skladajúca sa z jedinej rovnomennej ríše sa delí takto:
+
+plus:
+
+Čeľaď Halanaerobiaceae
+Rod Acetanaerobacterium Chen & Dong, 2004
+Rod Acidilobus Prokofeva et al., 2000
+Rod Actinopolymorpha Wang et al., 2001
+Rod Advenella Coenye et al., 2005
+Rod Aequorivita Bowman & Nichols, 2002
+Rod Aeriscardovia Simpson et al., 2004
+Rod Aestuariibacter Yi et al., 2004
+Rod Agarivorans Kurahashi & Yokota, 2004
+Rod Agreia Evtushenko et al., 2001
+Rod Akkermansia Derrien et al., 2004
+Rod Albibacter Doronina et al., 2001
+Rod Albidovulum Albuquerque et al., 2003
+Rod Algibacter Nedashkovskaya et al., 2004
+Rod Algoriphagus Bowman et al., 2003
+Rod Alicycliphilus Mechichi et al., 2003
+Rod Alistipes Rautio et al., 2003
+Rod Alkalibacterium Ntougias & Russell, 2001
+Rod Alkalilimnicola corrig. Yakimov et al., 2001
+Rod Alkaliphilus Takai et al., 2001
+Rod Alkalispirillum Rijkenberg et al., 2002
+Rod Alkanindiges Bogan et al., 2003
+Rod Allisonella Garner et al., 2003
+Rod Allofustis Collins et al., 2003
+Rod Amorphosporangium Couch, 1963
+Rod Amycolata Lechevalier et al., 1986
+Rod Anaerococcus Ezaki et al., 2001
+Rod Anaerofustis Finegold et al., 2004
+Rod Anaeroglobus Carlier et al., 2002
+Rod Anaerolinea Sekiguchi et al., 2003
+Rod Anaeromyxobacter Sanford et al., 2002
+Rod Anaerophaga Denger et al., 2002
+Rod Anaerostipes Schwiertz et al., 2002
+Rod Anaerotruncus Lawson et al., 2004
+Rod Anoxynatronum Garnova, Zhilina & Tourova, 2003
+Rod Aquicella Santos et al., 2004
+Rod Aquiflexum Brettar et al., 2004
+Rod Aquimarina Nedashkovskaya et al., 2005
+Rod Arcicella Nikitin et al., 2004
+Rod Arenibacter Ivanova et al., 2001
+Rod Asanoa Lee & Hah, 2002
+Rod Atopostipes Cotta et al., 2004
+Rod Aurantimonas Denner et al., 2003
+Rod Avibacterium Blackall et al., 2005
+Rod Azomonotrichon Thompson & Skerman, 1981
+Rod Azorhizophilus Thompson & Skerman, 1981
+Rod Bactoderma Tepper & Korshunova, 1973
+Rod Balnearium Takai et al., 2003
+Rod Balneimonas corrig. Takeda et al., 2004
+Rod Halanaerobacter
+Rod Halanaerobium
+Rod Pelagibacter
+Rod Tetrachloris Pascher, 1925
+
+
+== Iné rozdelenie ==
+Podľa vzťahu ku kyslíku sa delia na :
+
+aeróbne – kyslík je pre nich nenahraditeľný
+fakultatívne anaeróbne – v prítomnosti kyslíka ho využívajú, inak získavajú energiu anaeróbne
+anaeróbne – nepotrebujú (alebo netolerujú) kyslíkPodľa vzťahu k uhlíku sa delia na:
+
+autotrofné (primárnym zdrojom je CO2)
+heterotrofné (primárnym zdrojom sú organické zlúčeniny)Podľa spôsobu získavania energie sa delia na:
+
+chemotrofné (primárnym zdrojom je chemická energia)
+fototrofné (primárnym zdrojom energie je svetelná energia)Podľa zdroja dusíka 
+
+nitrogénne (žijú na koreňoch hľúzkovitých rastlín)
+renitrifikačné (rozkladajú dusičnany na molekulový dusík)Podľa štruktúry bunkovej steny sa delia na:
+
+grampozitívne baktérie - sem patria:
+Firmicutes [v novšom ponímaní] okrem mykloplaziem a taxónu Negativicutes
+Actinobacteria
+časť taxónu Deinococcus-Thermus
+Saccharibacteria (=TM7)
+časť archebaktérií
+gramnegatívne baktérie - sem patria všetky ostatné baktérie, t.j. v podstate Gracilicutes v tradičnom ponímaní a mykoplazmyPoznámka: Archebaktérie (Mendosicutes) patria do oboch kategórií (t.j. niektoré sú grampozitívne a niektoré sú gramnegatívne).
+Podľa pH optimálneho pre rast sa delia na:
+
+acidofilné
+alkalifilnéPodľa teploty optimálnej pre rast sa delia na:
+
+psychrofilné
+mezofilné
+termofilné
+
+
+== Fotosyntetizujúce baktérie ==
+U fotosyntetizujúcich baktérií sa vyskytuje bakteriochlorofyl, farbivo potrebné na priebeh fotosyntézy. Fotosyntetizujúce baktérie majú cytoplazmatickú membránu na niektorých miestach preliačenú. Utvára vačky, ktoré obsahujú farbivo umožňujúce premenu energie svetelného (slnečného) žiarenia na energiu chemickú. Je to látka podobná chlorofylu. Bakteriálna fotosyntéza je anoxygénna (produktom nie je kyslík).
+
+
+== Tvar ==
+
+Podľa tvaru bunky delíme baktérie na:
+
+koky (guľovité baktérie): guľovité bunky usporiadané do retiazok sa volajú streptokoky, koky zoskupené do strapca sú stafylokoky, sarciny (balíčkovité kolónie), diplokoky (kolónie tvorené dvoma bunkami), tetrakoky (štyri bunky v kolónií)
+paličky (= tyčinky, paličkovité baktérie, tyčinkovité baktérie): sú rovné, rožtekovito zahnuté, špirálovité alebo vláknité útvary:Tvar baktérií je premenlivý v závislosti od mnohých faktorov, napríklad rastová fáza, vek kultúry, zloženia, kultivačného média, účinku antibiotík. Premenlivosť sťažuje diagnostiku.
+
+
+== Stavba ==
+
+
+=== Veľkosť ===
+Priemerná veľkosť bunky baktérií sa pohybuje okolo 0,3 – 2,0 µm. Len niektoré vodné baktérie majú veľkosť niekoľko desiatok i stoviek mikrometrov. Dajú sa pozorovať pod svetelným mikroskopom. Najväčšou známou baktériou je Epulopiscium fishelsoni dlhá až pol milimetra do roku 1999. Vtedy bola objavená baktéria Thiomargarita namibiensis s dĺžkou až 0.75mm. 
+
+
+=== Cytoplazma ===
+Cytoplazma tvorí 75 – 95 % bunkovej hmoty. Obsahuje mnohé vysokomolekulové a nízkomolekulárne látky. K nim patria rozpustné lipidy, bielkoviny, stopové prvky a minerálne soli. V cytoplazme sa nachádzajú ribozómy, chromozóm, plazmidy.
+Okrem toho sa v cytoplazme nachádzajú ešte rôzne inklúzie. Ide o granulá a vezikuly.
+
+
+=== Cytoplazmatická membrána ===
+Cytoplazma je obklopená membránou, ktorá sa volá cytoplazmatická membrána. Pozostáva z dvojitej vrstvy fosfolipidov. Fosfátová časť je hydrofilná, lipidická časť ležiaca vo vnútri membrány vodu odpudzuje. Cytoplazmatická membrána má funkciu bariéry. Nachádzajú sa v nej mnohé polypeptidové molekuly, ktoré bunke umožňujú kontrolovať výmenu látok medzi vnútorným a vonkajším prostredím. Vďaka membránovému transportu sa tak môžu látky dostať do bunky alebo von.
+V membráne sa nachádzajú enzýmy dýchacieho reťazca a enzýmy nutné pre stavbu bunkovej steny.
+
+
+=== Bunková stena ===
+S výnimkou mykoplaziem majú baktérie bunkovú stenu, ktorá im určuje vonkajší tvar. Hlavnou časťou steny baktérií je mureín. Bunková stena tvorí pri Grampozitívnych baktériách až jednu tretinu hmoty baktérie. Pri Gramnegatívnych baktériách je to len 10 %. Bunka baktérie má na vonkajšej strane bunkovej steny slizovitú vrstvu (puzdro), niekedy aj bičíky.
+
+
+==== Bičíky ====
+Bičíky umožňujú baktériám pohyb. Bičíky pôsobia ako silný antigén. Nazývajú sa aj H-antigény. Existuje rôzne rozmiestnenie bičíkov: 
+
+monotriché (jeden bičík)
+lofotriché (viac zväzkovitých bičíkov)
+peritriché baktérie (bičíky rozdelené po celom povrchu)
+
+
+==== Glykokalyx ====
+Útvary na povrchu baktérie sú oveľa menšie než bičíky. Slúžia baktériám na pevné prilepenie k podkladu. Skladajú sa z vláknitých proteínov, ktoré sa spájajú s glykoproteínmi hostiteľskej bunky. Sú buď vo forme fimbrií (vlákienok) alebo pilusov (vláskov).
+
+
+== Gramovo farbenie ==
+Gramovo farbenie zaviedol v roku 1884 Hans Christian Gram. Je to diferenciačné farbenie založené na sfarbení grampozitívnych a gramnegatívnych buniek baktérií. Rozdiel medzi týmito dvoma bunkami je predovšetkým v ich bunkovej stene. Bunkové steny G+ baktérií majú oveľa hrubšiu vrstvu peptidoglykánu ako bunkové steny G− baktérií. G− bunky majú vo vonkajšej bunkovej stene aj množstvo lipidov.
+Princíp Gramovo farbenia spočíva v tom, že sa obidve bunky (G+ aj G−) zafarbia farbivom kryštálovou violeťou, čím sa obe sfarbia do fialova. Preparát sa potom morí jódom v roztoku jodidu draselného, ktorý s farbivom vytvorí komplex v obidvoch bunkách. Potom sa farbivo vymýva etanolom (alebo acetónom), pričom komplex sa vyplavuje len z G− baktérií (rozpúšťa sa vonkajšia lipidová vrstva bunkovej steny), ktoré sa odfarbia. Napokon sa preparát dofarbuje karbolfuchsínom (alebo safranínom). G+ bunky teda po Gramovom farbení ostávajú fialové, G− bunky sú červené (alebo ružové).
+Rozdelenie baktérií na základe Gramovo farbenia má hlbší význam, medzi obidvoma kategóriami existujú mnohé ďalšie rozdiely (napríklad v citlivosti na antibakteriálne látky typu antibiotík).
+
+
+== Rozmnožovanie ==
+Rozmnožujú sa nepohlavne, priečnym delením, prípadne pučaním.
+Pri priečnom delení sa bunka predĺži na dvojnásobnú veľkosť, pričom sa uprostred vytvorí septum (prehriadka zložená z membrány a základu bunkovej steny), ktoré bunku rozdelia na dve rovnaké časti. Z každej potom vznikne jedna sesterská bunka. Pri priečnom delení dochádza k replikácii DNA.
+Pučanie prebieha tak, že zrelá bunka začne na svojom povrchu vytvárať novú bunku. Keď dcérska bunka dorastie do dostatočnej veľkosti, je do nej vpustená DNA a bunka je odpojená. Časom dorastie a môže sa začať sama rozmnožovať.
+
+
+== Výskyt ==
+Baktérie patria k najstarším organizmom nájdeným vo forme fosílií. Môžeme ich nájsť už v staršom proterozoiku. Skupina baktérie sa považuje za najrozšírenejšie živé organizmy. Dokážu prežiť vo vesmíre, v 100 °C teplých plameňov i v činných kráteroch na dne Mariánskej priekopy. Sú to prvé organizmy, ktoré kolonizujú oblasť, ktorá je napríklad postihnutá sopečnou erupciou.
+Baktérie obývajú rôzne biotopy. Vyskytujú sa vo vzduchu, vo vode (sladkej i slanej) aj v pôde, vyskytujú sa na povrchu i vo vnútri organizmov.  Ich rozšírenie a množstvo závisí od vhodnosti životných podmienok: od zdroja potravy, teploty, pH prostredia.
+Aeróbne baktérie vyžadujú kyslík, anaeróbne baktérie žijú v prostredí bez kyslíka. Prevažná časť baktérií patrí medzi heterotrofné organizmy – saprofyty a parazity. Početné sú aj symbiotické baktérie.
+Dajú sa odstrániť buď sterilizáciou (plameň, para, tlak, manganistan draselný, antibiotiká), alebo pasterizáciou.
+
+
+=== Spóry ===
+Pri zhoršení životných podmienok, napríklad pri nedostatku potravy, môže dôjsť k tvoreniu spór. Spóry sú trvalou formou baktérií, ktoré prežívajú dlhodobo a môžu byť infekčné aj po dlhom čase. Spóry vznikajú zmršťovaním a zmenšovaním pôvodných buniek. Počas tejto fázy je zastavená výmena bunkových látok. Baktéria tak nepotrebuje ani potravu ani energiu na udržiavanie svojich životných pochodov. Len čo spóra natrafí na výhodnejšie životné podmienky, zmení sa opäť na živú baktériu.
+
+
+== Štúdium baktérií ==
+Štúdiom mikroskopických organizmov sa zaoberá mikrobiológia. Jej zakladateľom bol v 19. storočí Louis Pasteur. Neskoršie sa mikrobiológia rozdelila na viacero disciplín. Štúdiom baktérií sa zaoberá bakteriológia, o jej vznik sa výrazne zaslúžil nemecký lekár Robert Koch.
+
+
+== Význam ==
+
+
+=== Pozitívne vlastnosti ===
+Hlavný význam spočíva v tom, že spolu s hubami sa zúčastňujú na rozkladaní potravových reťazcov a premieňajú odumretú organickú hmotu späť na anorganickú (mineralizujú ju), čím umožňujú jej ďalšie využitie v prírodných ekologických systémoch. Baktérie Escherichia coli žijú v hrubom čreve.
+Baktérie (aj niektoré nálevníky) majú v prírode aj veľkú úlohu v čistení vôd. Využívajú sa pre tento účel aj priemyselne. Niektoré druhy dokážu rozkladať uhľovodíky pochádzajúce z ropných havárií.
+Veľké využitie baktérií je hlavne v potravinárskom priemysle. Používajú sa na výrobu syrov (Streptococcus thermophilus – ementál, Brevibacterium linens – olomoucké syrečky), pri výrobe smotany (Streptococcus cremoris), pri spracovaní mlieka (Streptococcus lactis), acidofilného mlieka (Lactobacillus acidophilus) a mliečnych výrobkov (jogurty – Lactobacillus bulgaricus, Streptococcus thermophillus). Využívajú sa na maslové kvasenie, alkoholové kvasenie (prebieha anaeróbne), octové kvasenie (prebieha aeróbne), výroba rozpúšťadiel (acetón, butanol – Clostridium acetobutylicum), enzýmov, výroba liehu zo škrobu, mliekarenský priemysel, výroba vitamínov, antibiotik, alkaloidov, aminokyselín, bielkovín.
+V súčasnosti má veľký význam aj šľachtenie baktérií, ktoré nám umožňuje docielenie nadprodukcie žiadaných látok.
+
+
+=== Negatívne vlastnosti ===
+Okrem žiadúceho rozkladu odumretého materiálu dochádza často k nechcenému rozkladu, hlavne potravín, ale aj iných výrobkov.
+Najväčší negatívny význam majú baktérie, ktoré spôsobujú rozličné ochorenia ľudí. Veľký význam v boji proti týmto patogénnym baktériám má očkovanie. Väčšina baktérii spôsobuje infekcie svojim premnožením, sú však aj baktérie, ktoré spôsobujú intoxikácie. Do tejto skupiny patrí pôvodca tetanu. Ale oveľa nebezpečnejším ochorením je botulizmus. Botulotoxín, produkt druhu Clostridium botulinum, je jedným z najsilnejších bakteriálnych toxínov vôbec.
+Okrem chorôb človeka spôsobujú veľké ekonomické straty aj choroby poľnohospodárskych zvierat (mor ošípaných, hydiny). Rastlinné bakteriálne infekcie sú pomerne nevýrazné.
+
+
+== Choroby ==
+Prenášajú sa priamym stykom, potravou, vdychovaním, poranenou kožou (infekcia rán, pohlavné choroby, tetanus), bodnutím hmyzom.
+
+antrax – Bacillus anthracis
+čierny kašeľ – Bordetella pertussis
+tuberkulóza (TBC) – Mycobacterium tuberculosis
+záškrt – Corynebacterium diphtheriae
+tetanus – Clostridium tetani
+zápal pľúc – Streptococcus pneumoniae
+salmonelóza – Salmonella sp.
+cholera – Vibrio cholerae
+mor – Yersinia pestis
+škvrnitý týfus – Rickettsia prowazeki
+tularémia – Francisella tularensis
+gangréna – Clostridium perfringens
+lepra – Mycobacterium leprae
+syfilis – Treponema pallidum
+kvapavka – Neisseria gonorrhoeae
+dyzentéria – Campylobacter pylori Shigella dysenteriaeIné bakteriálne choroby sú napríklad: kokcidióza, angína, úplavica, paratýfus,enterotoxikóza, trachóm, borelióza
+
+
+== Iné projekty ==
+
+ Commons ponúka multimediálne súbory na tému Baktérie
+ Wikidruhy ponúkajú informácie na tému Baktérie
+ Wikislovník ponúka heslo  Baktérie
+
+
+== Referencie ==
+
+
+== Externé odkazy ==
+Odborná encyklopédia prokaryotov (po anglicky)

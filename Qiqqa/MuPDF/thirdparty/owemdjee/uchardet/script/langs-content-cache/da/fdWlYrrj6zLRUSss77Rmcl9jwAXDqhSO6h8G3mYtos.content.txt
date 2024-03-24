@@ -1,0 +1,234 @@
+revision: 11404882
+title: Virus
+url: https://da.wikipedia.org/wiki/Virus
+
+
+---
+
+For alternative betydninger, se Virus (flertydig). (Se også artikler, som begynder med Virus)
+ "Vira" omdirigeres hertil. For den franske by Vira, se Vira (Pyrénées-Orientales).
+
+En biologisk virus består af et genom af DNA eller RNA og et antal enzymer, der er indlejret i en proteinkappe (en kapsid) eventuelt omkranset af en membrankappe. Virus kan ikke formere sig, men overtager en værtscelle og underkaster sig værtscellens molekylære maskineri for at fremstille kopier af sig selv og producere den næste generation af virus.Viruspartiklen fungerer som en parasit, da den kræver en celle for at kopiere sine gener og sig selv. Derfor blev virus typisk ikke betragtet som levende organismer, fordi de ikke kan formere sig eller lave stofskifte, men kræver en vært. Dog har nye genetiske undersøgelser ændret på denne opfattelse, da det har vist sig at virus nedstammer fra en fælles stamform med moderne celler og har været en faktor, der har præget evolutionen. Da viruset ikke har et stofskifte, er det ofte svært at bekæmpe virussygdomme medicinsk.
+Da en virus overtager værtens celler med cellulære ødelæggelser som følge, fører en virusinfektion ofte til sygdom. Nye virusssygdomme manifesterer sig som epidemier og pandemier, jf. coronavirus og influenza.
+
+
+== Sprogligt ==
+Flertalsformen er virus. (Vira og virusser er fordanskede udgaver)
+
+
+== De 12 farligste virus ==
+De 12 mest dødelige virus er: Marburgvirus, Ebolavirus, Rabiesvirus, HIV, Koppevirus, Hantavirus, Influenzavirus, Denguevirus, Rotavirus, SARS-CoV, SARS-CoV-2 og MERS-CoV.
+
+
+== Historisk ==
+Virus er opdaget af botanikeren D. Iwanowski i 1892, da vand fra en syg tobaksplante, efter at have været filtreret i et bakteriefilter, inficerede en rask tobaksplante. Virus betyder gift.
+I 1935 krystalliserede virologen W. M. Stanley TMV (tobaksmosaikvirus) og påviste virus' semilivsform.
+
+
+== Beskrivelse ==
+De mindste og mest simple virus består af et genom og nogle gange et par enzymer, der er indlejret i en proteinkappe (en kapsid) eventuelt omkranset af membrankappe, dvs. en lipid-membran, eng. envelope. Andre og større virus kan have en mere kompliceret opbygning. Virus kan ikke formere sig alene, men overtager i stedet for en værtscelle, dvs. overtager værtscellens molekylære maskineri til at fremstille kopier af sig selv og således producere den næste generation. Se f.eks. under influenzavirus.
+Vedhæftning til en værtscelle er altafgørende for en sygdomsfremkaldende virus. Det specielle ved en virusinfektion fremkommer gennem de celler og organer, der bliver  angrebet. Derfor er identifikation og kendskab til ​​receptorer for virus - de såkaldte “virushæftere” - og andre værtsfaktorer vigtige for sygdoms-forståelsen. 
+De virale livscyklusser varierer i deres detaljer, afhængigt af virustypen, men de har alle et generelt mønster:
+
+Vedhæftning til en værtscelle 
+Overførsel af virus-genomet og eventuelt nogle enzymer til værtscellen
+Replikation af virale komponenter under anvendelse af værtscellens molekylære maskineri.
+Samling af virus-komponenterne til komplette virus-partikler.
+Frigivelse af virus-partiklerne fra værtscellen for at inficere nye værtsceller.
+
+
+== Definition af termer ==
+Viridae = virusfamilie
+Virion = viruspartikel
+Viroid = lille virus
+Bakteriofag eller “fag”, ofte skrevet som det græske bogstav Φ (phi), reproducerer i en bakterie.
+bp = antal basepar, størrelsen af dsDNA; for enkeltstrengede nukleinsyrer lig med antallet af nukleotider eller baser; kbp = 1000 bp
+dsDNA = dobbeltstrenget DNA
+scRNA = lille cytoplasma RNA (small cytoplasmic RNA)
++ssRNA eller ssRNA(+) = positivt polariseret enkeltstrenget RNA, virker direkte som mRNA
+-ssRNA eller ssRNA(-) = negativt polariseret enkeltstrenget RNA
+ssRNA-RT = reverstranskriberende enkeltstrenget RNA
+Membrankappe = lipidkappe, lipidhylster (eng. envelope)
+Kapsid = Proteinkappe eller proteinkapsel.
+Nucleokappe, synonom for proteinkappe (men bruges også om kombinationen af nukleinsyre og proteinkappe)
+
+
+== Fysisk størrelse ==
+De fleste virus, der er undersøgt, har en diameter på mellem 20 og 300 nm. Nogle virus har en større kapsid: Mimivirus på op til 750 nm og Megavirus på op til 680 nm. Nogle Filovirus har en længde på op til 1400 nm, men deres diameter er kun omkring 80 nm.
+
+
+== Genomers størrelse ==
+Pandoravirus har det største genom af alle kendte virus. Det er et genom af dsDNA på omkring 2.500.000 basepar, der koder for omkring 2.500 proteiner. Til sammenligning findes det mindste genom i HVD (Hepatitis virus delta) med et cirkulært genom af -ssRNA af kun 1.679 nukleotider, som gør HVD til den mindste af alle sygdomsfremkaldende virus. HVD -genomet er det mindste funktionelle genom, man kan forestille sig, da det kun koder for 1 protein, og HVD formerer sig kun gennem coinfektion med HVB (Hepatitis virus beta). CoV (Coronavirus) har det største genom af alle RNA-virus med omkring 30.000 baser.
+Andre store virus er Megavirus med 1.300.000 bp og Mimivirus med 1.200.000 bp.
+Bakteriofager har genomer på mellem 3569 og 500.000 bp/nukleotider. En meget velundersøgt bakteriofag, Phi-X174 har et genom af ssDNA på 5386 nukleotider, der koder for 11 proteiner. Det mindste genom, fundet hos MS2, er af ssRNA på 3569 nukleotider, der koder for blot fire proteiner. De største fager kaldes Jumbo-fager, som f.eks. “Phage G” med et genom af dsDNA på 497.000 bp.
+
+
+== Overlappende gener ==
+To til fire overlappende gener er et karakteristisk træk for de fleste virus. Eksempelvis kan et gen eller dele af et gen læses i en alternativ læseramme som et andet gen.
+
+
+== Kapsid og Membrankappe ==
+
+En virus består af nukleinsyre omgivet af en beskyttende kapsel af protein kaldet en kapsid. Kapsiden er dannet af identiske proteinunderenheder kaldet kapsomerer. Nogle virus kan yderligere have en lipid-kappe afledt af værten cellemembranen, hvori der er indlejret proteiner kodet af virusgenomet, som f.eks. spike. Også kapsidens proteiner er kodet af det virale genom. Der kan også indbygges yderligere strukturproteiner i virionet eller proteiner der fungerer ved produktionen af viruskomponenterne.
+Mange virus er opbygget i en symmetrisk struktur, se f.eks. billederne af Tobaksmosaikvirus, Poliovirus og Zikavirus.
+Andre virus som f.eks. nogle bakteriofager er opbygget i en mere kompleks struktur med en hale med specielle proteiner.
+
+
+== Udbredelse ==
+Der er indtil nu identificeret 117 virusfamilier, hvoraf der i 24 virusfamilier kendes virus, der inficerer mennesket.Vira har ikke et traditionelt, taksonomisk slægtskab. De er nærmest beslægtet med deres værtsorganismer, et genetisk slægtsskab, der fremkommer fordi virus og tidligere værter har har efterladt spor i hinanden igennem udveksling af gener og genstumper, jf. endogen retrovirus. Tobaksmosaikvirus er tættere beslægtet med tobaksplanten end den er beslægtet med influenzavirus, der igen er tættere beslægtet med mennesket. Dog kan nært beslægtede vira (efter Baltimore-klassifikationen) inficere forskellige værter.
+2/3 af alle kendte virus inficerer planter, resten inficerer dyr/mennesker og bakterier (bakteriofag). Virus synes at være utroligt mangfoldige og synes at være overalt i et overordentligt stort antal, således er der i havvand fundet næsten 200.000 slags virus. Det anslås at der blandt pattedyr og fugle cirkulerer o. 1.670.000 ukendte virus, hvoraf op til halvdelen kunne risikere at blive overført til mennesker, jf. zoonose.Dyrs immunsystem er udviklet til at bekæmpe indtrængende virus, jf. de specielle intracellulære receptorer, der reagerer med virus nukleinsyrer, se Toll-like receptorer, TLR. De fleste vira har en negativ korttidseffekt eller langtidseffekt for værten, men i få situationer kan vira være en fordel.
+
+
+== Sygdomme forårsaget af virus ==
+Mange sygdomme forårsages af virus. Nogle virus forårsager kræft, se oncovirus.
+
+AIDS forårsages af HIV, en retrovirus med membrankappe og proteinkappe og med et genom af +ssRNA på 9.750 nukleotider, som udgør 9-10 gener, der koder for 19 proteiner.
+COVID-19 forårsages af SARS-CoV-2, Severe acute respiratory syndrome coronavirus 2, en Coronavirus med membrankappe, proteinkappe og et genom af +ssRNA med omkring 30.000 nukleotider, der koder for mere end 27 proteiner.
+Denguefeber forårsages af Denguevirus, DENV, en Flavivirus med membrankappe og en proteinkappe og et genom af +ssRNA på 11.000 nukleotider der koder for 12 proteiner.
+Ebola (en. Ebola virus disease (EVD) eller tidligere Ebola haemorrhagic fever (EHF)) forårsages af Ebolavirus, EBOV, er en trådformet, membrankappet virus med et genom af -ssRNA på 18-19.000 nukleotider, der koder for 7 proteiner.
+Forkølelsessår, Herpes labialis forårsages af Herpes simplex virus 1 (HSV1), sjældnere af Herpes simplexvirus 2 (HSV2). HSV1 er en relativ stor virus med en membrankappe og en proteinkappe og et genom af lineært dsDNA med 152-155 kbp og mindst 84 gener.
+Fugleinfluenza forårsages af Influenzavirus A der er en membrankappet virus med et genom af segmenteret -ssRNA.
+Fåresyge forårsages af fåresygevirus, MuV, en membrankappet Rubulavirus med et genom af -ssRNA med 15.300 baser og 8 gener.
+Helvedesild forårsages af Varicella zoster virus ligesom Skoldkopper, se nedenfor.
+Hepatitis, smitsom leverbetændelse, viral hepatitis forårsages af Hepatitis virus A, B, C, D og E samt sjældnere af cytomegalovirus, Epstein-Barr virus, yellow fever virus og herpes simplex virus.
+Hepatitis A forårsages af Hepatitis A virus, HAV er en picornavirus med en proteinkappe med et genom af +ssRNA af 7.500 nukleotider kodende for 10-11 proteiner.
+Hepatitis B forårsages af Hepatitis B virus, HBV er en lille Orthohepadnavirus med en membrankappe og en nukleokappe og et cirkulært, pdsDNA med 4 gener, der koder for 7 proteiner.
+Hepatitis C, leverkræft og lymfeknudekræft forårsages af Hepatitis C virus, HCV er en lille Hepacivirus med en membrankappe og et genom af +ssRNA med 9.600 nukleotider, der koder for 10 proteiner.
+Hepatitis D, (hepatitis delta) forårsages af hepatitis delta virus (HDV), men kun ved en coinfektion med HBV. HDV er en lille membrankappet virusoid (dvs. en lille virus-partikel) med et cirkulært genom af -ssRNA af kun 1.679 nukleotider, der kun koder for et protein, som gør HDV til den mindste af alle sygdomsfremkaldende virus.
+Hepatitis E forårsages af Hepatitis E virus, HEV  en proteinkappet orthohepevirus med et genom af +ssRNA med omkring 7.200 nukleotider.
+Herpes genitalis forårsages af Herpes simplex virus 2 (HSV2), sjældnere af Herpes simplexvirus 1 (HSV1). HSV2 er en relativ stor virus med en membrankappe og en proteinkappe og et genom af lineært dsDNA på 152-155 kbp med mindst 84 gener.
+Hundegalskab forårsages bl.a. af en Lyssavirus med helisk symmetri med en membrankappe og en nukleokappe og et genom af -ssRNA på 12 kbp, der koder for fem proteiner.
+Influenza forårsages af Influenzavirus der er en virus med membrankappe, proteinkappe og et genom af -ssRNA med 8 gener i 8 RNA segmenter.
+Kopper (en. smallpox) forårsages af Variola virus, en stor Orthopoxvirus med en indre og en ydre membrankappe og med et genom af lineært dsDNA på 186 kbp.
+Kræftformerne B-celle lymphoma, T-celle lymphoma, Hodgkin lymphoma, Burkitt’s lymphoma, mavekræft og nasopharyngeal carcinoma kan forårsages af Epstein-Barr virus, EBV, Human gammaherpesvirus 4, en herpesvirus med membrankappe og et genom af dsDNA med ca. 172.000 basepar fordelt i 85 gener.
+Lassafeber forårsages af Lassavirus, en Mammarenavirus med et genom af to segmenter af ambipolært RNA, der koder for fire proteiner.
+Leverbetændelse, viral hepatitis, smitsom leverbetændelse, se Hepatitis ovenfor.
+Livmoderhalskræft forårsages af HPV, human papillomavirus, en lille DNA oncovirus med en proteinkappe og et genom af cirkulært dsDNA med omkring 8.000 bp, der koder for 8 proteiner, deraf 2 oncogener.
+MERS = Middle East respiratory syndrome eller kamel-influenza forårsages af MERS-coronavirus MERS-CoV med proteinkappe og et genom af +ssRNA med omkring 30.000 nukleotider.
+Mononukleose eller kyssesyge forårsages af Epstein-Barr virus, EBV, Human gammaherpesvirus 4, se en herpesvirus med membrankappe og et genom af en dobbelthelix af DNA (dsDNA, dobbeltstrænget DNA) med ca. 172.000 basepar og 85 gener. Sjældnere forårsages kyssesyge af Cytomegalovirus, (CMV, human herpesvirus 5, HHV5), en herpesvirus med membrankappe og en proteinkappe og et genom af dsDNA med ca. 235.000 basepar.
+Mæslinger forårsages af mæslingevirus, MV, er en membrankappet morbilivirus med et genom af -ssRNA med 15.896 baser og 6 gener, der koder for 8 proteiner.
+Musepest (fra norsk), sorkfeber (svensk) eller Hantavirus hemorrhagic fever with renal syndrome, forårsages af Hantavirus, en membrankappet virus med et genom af tre -ssRNA-segmenter.
+Polio eller poliomyelitis forårsages af poliovirus, en lille Enterovirus C med en proteinkappe og et genom af +ssRNA på 7.500 nukleotider, der koder for 10-11 proteiner.
+Roskildesyge, epidemisk non-bakteriel gastroenteritis forårsages af norovirus med en proteinkappe og et genom af +ssRNA på ca. 7.500 nukleotider, der koder for 8-9 proteiner.
+Røde hunde forårsages af rubellavirus, med en membrankappe og en nukleokappe og et genom af +ssRNA på 9.762 nukleotider og gener for 5 proteiner og flere ikke-kodende RNA (ncRNA).
+SARS eller akut luftvejssyndrom forårsages af SARS-CoV, en Coronavirus med proteinkappe og et genom af +ssRNA med omkring 30.000 nukleotider.
+Skoldkopper (en. chicken pox) og Helvedesild forårsages af Varicella zoster virus, VZV, Human alphaherpesvirus 3, HHV-3, en herpesvirus med membrankappe og en nukleokappe og et genom af dsDNA med 125-129 kbp med mindst 70 gener.
+Zikafeber, forårsages af Zikavirus, der er en Flavivirus med en membrankappe og en proteinkappe og et genom af +ssRNA på ca. 10.000 nukleotider der koder for 10 proteiner.
+
+
+== Klassifikation ==
+Biota
+
+Viridae
+DNA-virus
+Dobbeltstrenget DNA-virus
+Orden: Caudovirales
+enkeltstrenget DNA-virus
+Revers transkriberende virus
+DNA revers transkriberende virus
+RNA revers transkriberende virus Retrovirus
+Familie: Retroviridae
+RNA-virus
+Dobbeltstrenget RNA-virus
+negativt polariseret enkeltstrenget RNA-virus
+Orden: Mononegavirales
+positivt polariseret enkeltstrenget RNA-virus
+Orden: Nidovirales
+Subvirale agens
+Satellitter
+Viroider kort-kodede (220 nukleobaser), nøgne vira der kun angriber planter; har scRNA (small cytoplasmic RNA)
+Prioner (cum grano salis)
+
+
+=== Baltimore klassifikation ===
+Deler virus i 7 grupper, efter deres arvemasse og deres replikationsmetode.
+
+
+==== Gruppe I – Dobbeltstrenget DNA-virus (dsDNA) ====
+Adenoviridae
+Herpesviridae (skoldkopper, Epstein-Barr virus og mononukleose)
+Mimiviridae Langkodede vira med tykke skaller, måske en overgang mellem bakterier og vira
+Papillomaviridae
+Papovaviridae (fodvorter)
+Poxviridae (koppevirus)
+
+
+==== Gruppe II – Enkeltstrenget DNA-virus (ssDNA) ====
+Nanoviridae
+Parvoviridae
+Parvovirus B19 – lussingesyge/5. børnesygdom
+
+
+==== Gruppe III – Dobbeltstrenget RNA-virus (dsRNA) ====
+Reoviridae indgår i neonatal kolestase
+
+
+==== Gruppe IV – Positivt polariseret enkeltstrenget RNA-virus (+ssRNA) ====
+
+Togaviridae (røde hunde og gul feber)
+Coronaviridae (fugleinfluenza)
+Picornaviridae (polio)
+
+
+==== Gruppe V – Negativt polariseret enkeltstrenget RNA-virus (-ssRNA) ====
+Arenaviridae (Lassafeber)
+Bunyaviridae
+Rhabdoviridae (hundegalskab) 
+Orthomyxoviridae (influenza A, influenza B)
+Paramyxoviridae (Newcastle disease, fåresyge, mæslinger og nipahvirusfeber)
+Filoviridae (Ebola og Marburgfeber) 
+
+
+==== Gruppe VI – Reverstranskriberende enkeltstrenget RNA-virus (ssRNA-RT) ====
+Retroviridae HIV
+
+
+==== Gruppe VII – Reverstranskriberende dobbeltstrenget DNA-virus (dsDNA-RT) ====
+Hepadnaviridae 
+
+
+=== Morfologisk klassifikation af vira ===
+Icosahedriske (kubiske) capsider.
+Adenoviridae
+Caliciviridae
+Hepadnaviridae f.eks. Hepatitis B
+Papovaviridae f.eks. fodvorter
+Parvoviridae f.eks. lussingesyge/5. børnesygdom
+Picornaviridae f.eks. et forkølelsesvirus
+Reoviridae f.eks rotavirus
+Med membrankappe:
+Flaviviridae f.eks. Gul feber
+Herpesviridae f.eks. skoldkopper
+Togaviridae f.eks. røde hunde
+Heliske (filamentøse) capsider.
+TMV Tobaksmosaikvirus
+Med membrankappe:
+Bunyaviridae
+Coronaviridae f.eks. SARS
+Filoviridae f.eks. ebola
+Orthomyxoviridae f.eks. influenza A
+Paramyxoviridae
+Rhabdoviridae f.eks. rabies
+Komplekse capsider.
+f.eks. Bakteriofag
+Med membrankappe:
+Arenaviridae f.eks. Lassafeber
+Poxviridae f.eks. kopper
+Retroviridae f.eks. HIV
+
+
+== Se også ==
+
+
+== Noter ==
+
+
+== Kilder/litteratur ==
+Henderson's Dictionary of Biological Terms, 11th Edition, 1997, ISBN 0-582-22708-9, Longman
+L. Margulis, Schwartz, K.V.:Five Kingdoms, An Illustrated Guide to the Phyla of Life on Earth, 2nd Edition, 1988, ISBN 0-7167-1912-6, Freeman.
+G. Witzany.: Natural Genome Editing Competences of Viruses. Acta Biotheoretica. 2006, 54: 235-253.
+
+
+== Eksterne henvisninger ==
+Statens Serum Institut
+Giant Viruses May Have Played Important Role in Evolution of Life. SciNews 2018

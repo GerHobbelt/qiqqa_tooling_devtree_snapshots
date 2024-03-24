@@ -1,0 +1,71 @@
+revision: 70158349
+title: "Ludzki wirus niedoboru odporno\u015Bci"
+url: https://pl.wikipedia.org/wiki/Ludzki_wirus_niedoboru_odporno%C5%9Bci
+
+
+---
+
+Ludzki wirus niedoboru odporności, ludzki wirus upośledzenia odporności, HIV (z ang. human immunodeficiency virus) – wirus z rodzaju lentiwirusów, z rodziny retrowirusów, wywołujący AIDS.
+Wirus HIV zakaża komórki posiadające receptor CD4 znajdujący się na powierzchni limfocytów pomocniczych Th, a także na powierzchni komórek dendrytycznych, makrofagów, monocytów, eozynofilów i komórkach mikrogleju. Do zakażenia dochodzi za pośrednictwem kontaktu seksualnego, okołoporodowo albo w konsekwencji ekspozycji na wydzieliny albo tkanki zawierające wirusa. Materiałem zakaźnym jest krew, nasienie, preejakulat, wydzielina z pochwy, wydzielina z odbytu, mleko ludzkie i nieutrwalone tkanki.
+
+
+== Klasyfikacja ==
+Wirus HIV należy do rodzaju lentiwirusów, będących częścią rodziny retrowirusów. Na podstawie cech genetycznych i różnic antygenowych wyróżnia się dwa typy wirusa: HIV-1 i HIV-2. Wirusy HIV-1 i HIV-2 pod względem morfologicznym są nierozróżnialne. Wirus najprawdopodobniej wyewoluował od małpiego wirusa niedoboru odporności (simian immunodeficiency virus, SIV).
+Wirus HIV-1 jest dzielony na kilka typów: M, N, O i P. Typ M zróżnicował się na 9 podtypów A-D, F-H, J i K. Podtyp C dominuje w Afryce i Indiach, podtyp B dominuje w Europie, Ameryce Północnej i Południowej oraz Australii. Z kolei w przypadku wirusa HIV-2 wyróżnia się 8 typów A-H.
+
+
+== Budowa ==
+
+Wirion jest kształtu kulistego i w przybliżeniu ma średnicę 100–150 nm. Wirus posiada podwójną (czyli dwuwarstwową) otoczkę lipidową z zakotwiczonymi w niej glikoproteinami przezbłonowymi (gp41) i połączonymi z nimi glikoproteinami powierzchniowymi (gp120). Monomery złożone z połączonych gp120 i gp41 tworzą trimery. Od wewnętrznej strony otoczki lipidowej są przytwierdzone p17 (matrix protein, MA), które stabilizują wirion. Ponadto p17 pełni rolę w kotwiczeniu białek otoczkowych (gp41 i gp120) oraz w montażu wirionu. Osłonka lipidowa zawiera liczne białka błonowe pobrane z komórki gospodarzowej podczas procesu pączkowania, szczególnie istotne są cząstki MHC, cząsteczki adhezyjne i inhibitory dopełniacza.
+Osłonka lipidowa otacza kapsyd zawierający dwie kopie dodatnio spolaryzowanego RNA. Kapsyd jest stożkowatego kształtu, buduje go około 1300–1500 kopii p24 połączonego głównie w heksamery albo w mniejszym stopniu w pentamery położone w górnej i dolnej części kapsydu ułatwiając powstanie koniecznych krzywizn tej struktury. Kapsyd ma za zadanie chronić genom wirusa i utrzymywać odwrotną transkryptazę w zamkniętym środowisku, co może pomagać inicjować odwrotną transkrypcję oraz podtrzymywać elongację powstałego DNA wirusowego, oraz chronić zawartość kapsydu przed czynnikami gospodarza mających za zadanie hamowanie infekcji.
+Wewnątrz kapsydu poza materiałem genetycznym znajdują się odwrotna transkryptaza (RT), integraza (IN), proteaza HIV, białka nukleokapsydu i wirusowe białka regulacyjne. RNA wirusa ma 9,7 tysięcy par nukleotydów (kb). Na końcu 5' RNA posiada czapeczkę, z kolei na końcu 3' kilka otwartych ramek odczytu. W skład genomu HIV wchodzą następujące geny: gag, pol, env, tat, rev, nef, vif, vpu, tev, które kodują łącznie 19 białek.
+NC (nucleocapsid protein, p7) jest chaperonem wiążącym się z materiałem genetycznym wirusa, pełni rolę w odwrotnej transkrypcji oraz integracji, ponadto ułatwia formowanie wironów. Nukleoproteina występuje w trzech odmiennych formach NCp15 (p9+p6), NCp9 (p7+SP2) i NCp7.
+
+
+== Geny wirusowe ==
+
+gagGen gag (group-specific antigen) koduje prekursorowy glikopeptyp (p55), który ulega enzymatycznemu pocięciu przez proteazę wirusową. W wyniku działania proteazy wirusowej powstają p24 (CA), p17 (MA), p7 (NC) oraz p6. p24 buduje kapsyd wirusa. p17 (MA) jest przymocowany do wewnętrznej strony podwójnej otoczki lipidowej i bierze udział w stabilizacji struktury wirionu. Część p17 znajduje się w głębszych częściach wirionu i odpowiada za transport wirusowego DNA do gospodarzowego jądra komórkowego. p7 wiąże się z materiałem genetycznym wirusa umożliwiając jego upakowanie, ułatwia przeprowadzenie odwrotnej transkrypcji oraz pełni rolę w integracji wirusowego materiału genetycznego.
+
+envGen env koduje prekursorową glikoproteinę gp160, która w aparacie Golgiego pod wpływem proteaz jest przekształcana w gp120 i gp41. Obie glikoproteiny są połączone niekowalencyjne i biorą udział w zakażaniu komórek posiadających receptor CD4.
+
+polGen pol koduje prekursor enzymów wirusowych: odwrotnej transkryptazy (RT), integrazy (IN) i HIV proteazy (PR). Proteaza HIV (PR) ma za zadanie pocięcie białek prekursorowych gag i pol na docelowe funkcjonalne białka. Odwrotna transkryptaza (RT) na podstawie nici wirusowego RNA tworzy komplementarną nić DNA, a następnie drugą nić i ostatecznie dając dwuniciowy DNA. Integraza (IN) rozpoznaje odpowiednie sekwencje nukleotydowe zlokalizowane na końcach regionów LTR U3 oraz U5 w wirusowym DNA i katalizuje włączenie go do chromosomu gospodarzowego.
+
+tatGen tat koduje czynnik transkrypcyjny o nazwie tat, który zwiększa wydajność transkrypcji materiału genetycznego wirusa.
+
+revGen rev koduje czynnik transkrypcyjny o nazwie rev regulujący powstawanie białek strukturalnych i enzymatycznych.
+
+nefBiałko nef kodowane przez gen o tej samej nazwie hamuje ekspresję cząstek MHC klasy I oraz II przez komórki prezentujące antygen i komórki docelowe, a także hamuje ekspresję CD4 oraz CD28 w limfocytarnych pomocniczych. Białko stymuluje stałą aktywację immunologiczną i stan zapalny, a także promuje przetrwanie zakażonych komórek. 
+
+vifBiałko vif hamuje aktywność APOBEC3G posiadającej zdolność do dezaminacji deoksycytydyny do deoksyurydyny w ujemnej nici prowirusowego DNA i przerwania cyklu życiowego wirusa. Białko vif wiąże APOBEC3G i sprzyja jego ubikwitynacji, a następnie degradacji.
+
+vpuBiałko vpu wpływa na degradację w retikulum endoplazmatycznym receptora CD4 oraz promuje uwalnianie wirionów HIV z zakażonej komórki.
+
+tevGen tev składa się z części genów  tat, env i rev, kodowane białko posiada wiele właściwości białka tat, ale niewiele lub brak aktywności rev.
+
+
+== Cykl replikacyjny ==
+Wirus HIV zakaża komórki posiadające receptor CD4, który występuje na powierzchni limfocytów pomocniczych Th, ale również innych komórek takich jak komórki prekursorowe limfocytów T w szpiku i grasicy, komórki dendrytyczne, makrofagi, monocyty, eozynofile i mikroglej. Cykl replikacyjny rozpoczyna przyłączenie wirusowej glikoproteiny gp120 ze swoim receptorem komórkowym CD4+ przy udziale koreceptorów. Połączenie gp120 z CD4 wywołuje kaskadę zmian komformacyjnych gp120 i odsłonięcie miejsca wiązania gp120 z koreceptorami, których rolę pełnią CCR5 (receptor β-chemokin) oraz CXCR4 (receptor α-chemokin). Dalsze zmiany konformacyjne gp120 po związaniu z koreceptorami powoduje odsłonięcie hydrofobowej domeny gp41. Dochodzi do fuzji osłonki wirusowej z błoną komórkową i przemieszczenia otoczonego przez kapsyd RNA wirusa do cytoplazmy komórki gospodarzowej. RNA wirusa ulega odwrotnej transkrypcji przy udziale wirusowego enzymu odwrotnej transkryptazy. Następnie DNA wirusowy związany z różnymi białkami  jest transportowany do jądra komórkowego i integraza katalizuje włączenie go do chromosomu gospodarzowego. Dochodzi do translacji materiału genetycznego wirusa, a ostatecznie do powstania białek wirusowych i powstania zakaźnego wirionu, który w wyniku pączkowania opuszcza komórkę gospodarzową, powodując jej zniszczenie (lizę).
+
+
+== Transmisja wirusa ==
+Zakażenie wirusem HIV następuje za pośrednictwem kontaktu seksualnego, poprzez skażony sprzęt do wstrzykiwań, okołoporodowo oraz w konsekwencji ekspozycji na wydzieliny albo tkanki zawierające wirusa. Materiał zakaźny zawierający wirusa musi kontaktować się z nieuszkodzoną lub uszkodzoną błoną śluzową pochwy, odbytnicy, prącia lub jamy ustnej albo z uszkodzoną skórą, albo zostać przeniesiony bezpośrednio do krwiobiegu.
+Materiałem zakaźnym jest krew, sperma, preejakulat, wydzielina pochwy, wydzielina odbytnicy, mleko i tkanki nieutrwalone formaliną. Potencjalnym źródłem wirusa może być również płyn mózgowo-rdzeniowy, maź stawowa, płyn opłucnowy, płyn otrzewnowy i płyn osierdziowy, choć zakażenie za ich pośrednictwem jest bardzo mało prawdopodobne. Niezanieczyszczone krwią ślina, plwocina, pot, łzy, mocz, kał i wymioty nie są uważane za materiał zakaźny.
+
+
+== Zakażenie wirusem HIV i zespół nabytego niedoboru odporności ==
+U części chorych w ostrej fazie zakażenia obserwuje się chorobę o niecharakterystycznym przebiegu nazywaną ostrą chorobą retrowirusową, która może przybierać przebieg bezobjawowy lub objawowy podobny do mononukleozy zakaźnej, grypy albo przeziębienia.
+Po ostrej fazie zakażenia niezależnie od wystąpienia ostrej choroby retrowirusowej następuje okres bezobjawowy zakażenia HIV trwający przeciętnie 8–10 lat. W tym czasie dochodzi do replikacji wirusa i powolnego, postępującego spadku liczby limfocytów CD4+ i pogorszenia funkcji układu odpornościowego. U niektórych chorych pod koniec okresu bezobjawowego może pojawić się powiększenie różnych grup węzłów chłonnych nazywane przewlekłą limfadenopatią uogólnioną.
+Po okresie bezobjawowym początkowo pojawiają się zakażenia głównie o charakterze oportunistycznym o jeszcze stosunkowo łagodnym przebiegu, które nie spełniają definicji zespołu nabytego niedoboru odporności. Dalsze pogarszanie się funkcji układu immunologicznego skutkuje pojawieniem się zakażeń oportunistycznych, nowotworów złośliwych oraz zespołów chorobowych bardzo rzadko występujących u osób z prawidłową funkcją układu immunologicznego, dowodzących głębokiego deficytu odporności i pozwalających rozpoznać AIDS.
+
+
+== Zobacz też ==
+berliński pacjent
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+Janusz Cianciara, Jacek Juszczyk: Choroby zakaźne i pasożytnicze. Lublin: CZELEJ, 2007. ISBN 978-83-60608-34-0.
+Leslie Collier, John Oxford, Paul Kellam: Human Virology. Oxford University Press, 2016. ISBN 978-0-19-871468-2.
+Patric R. Murray, Ken S. Rosenthal, Michale A. Pfaller: Mikrobiologia. Wrocław: Elsevier Urban & Partner, 2011. ISBN 978-0-323-05470-6.

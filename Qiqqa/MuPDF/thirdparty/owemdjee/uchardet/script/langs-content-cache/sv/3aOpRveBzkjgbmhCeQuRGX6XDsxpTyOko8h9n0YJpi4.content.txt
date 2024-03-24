@@ -1,0 +1,99 @@
+revision: 51242299
+title: Robot
+url: https://sv.wikipedia.org/wiki/Robot
+
+
+---
+
+Robot är en teknisk anordning, oftast en elektromekanisk maskin som styrs av elektronisk programmering, som utför fysiska uppgifter.
+
+
+== Etymologi ==
+Ordet "robot" i sin ungefärliga nutida betydelse användes första gången av den tjeckiska författaren Karel Čapek i hans pjäs Rossums universalrobotar (R.U.R.) som publicerades 1920. I pjäsen förekommer robotliknande slavarbetare som kallas robotar. Egentligen är de inte robotar utifrån dagens terminologi då de inte är människoliknande maskiner, utan snarare maskinliknande människor vilka idag kallas för androider. Det var inte heller Karel Čapek som myntade begreppet "Robot". I ett brev som han skrev till Oxford English Dictionary berättar han att det egentligen var hans bror, målaren och författaren Josef Čapek, som myntade begreppet. I en artikel i den tjeckiska dagstidningen Lidové noviny från 1933 berättar han att han ursprungligen hade tänkt att kalla figurerna för laboři ("arbetare", från latinets labor). Men av någon anledning gillade han inte detta ord och sökte därför råd av sin bror som föreslog "roboti". 
+Ordet robota betyder på slaviska språk "arbete", bildligt "slit" eller "tungt, monotont och påtvingat arbete". Traditionellt syftade robota på de två eller tre dagar per vecka då bönderna i dåtidens feodalsamhälle tvingades lämna arbetet vid den egna gården för att arbeta på adelsmännens marker utan ersättning. Ursprunget till ordet är fornkyrkoslaviskans rabota som betyder "träldom" eller "slaveri", samt "arbete" på samtida bulgariska och ryska som i sin tur härstammar från indoeuropeiskans rot *orbh-. I och med att livegenskap förbjöds i Böhmen år 1848 så försvann trälarna och vid tiden då Čapek skrev R.U.R. hade termen robota breddats till att omfatta olika typer av arbete. Den gamla betydelsen av träldom fanns dock fortfarande kvar.
+
+
+== Robotens historia ==
+Den första kända robotritningen som finns bevarad är en robotriddare ritad av Leonardo da Vinci. Den är visserligen primitiv med dagens mått mätt, men var väl före sin tid under senare delen av 1400-talet.
+Enligt Svenska Akademiens ordbok hade ordet två betydelser 1959. För det första "En mekanisk inrättning som till det yttre liknar en människa och genom elektriska impulser eller på annat sätt kan fås att utföra visst arbete eller vissa rörelser" och för det andra  "Ett obemannat flygplan eller luftgående stridsmedel som styres automatiskt eller genom radiovågor" (se robot (vapen) för den senare betydelsen).
+Det var för att ersätta människor i tunga och farliga arbeten som de första industrirobotarna utvecklades. Under den första tiden var det främst den amerikanska bilindustrin som använde robotar. Den första kommersiella roboten började användas 1961 på General Motors där den betjänade en pressgjutningsmaskin.
+
+
+== Robotik ==
+
+Robotik är läran om robotar och vetenskapen om mekaniska automatiserade anordningar. Inom robotiken ingår många andra vetenskaper som fysik, datavetenskap, ellära och matematik.
+Robotiken har på senare år fått allt större betydelse där främst bilindustrin är den drivande kraften bakom utvecklingen, i synnerhet den japanska bilindustrin.
+
+
+== Industrirobot ==
+
+En industrirobot är en automatiskt styrd programmerbar universell manipulator. Den är programmerbar i minst tre axlar. Den kan vara antingen fast monterad eller mobil och används i automatiserad industriell produktion.
+Man kan dela in industrirobotar i tre grupper beroende på vad de används till:
+
+Materialhantering - roboten flyttar objekt
+Tillverkningsoperationer - roboten utför arbetsprocesser, till exempel svetsning
+Montering - roboten sätter samman komponenter
+
+
+== Autonoma robotar ==
+Den stora expansionen inom robotiken sker bland de autonoma robotarna. Under första decenniet 2000 tillverkades och såldes mer än 10 miljoner sådana i världen. En stor del av dessa är dammsugarrobotar.
+Definitionen av denna typ av robot skiljer sig en del från industrirobotens. Den autonoma roboten har tre framträdande egenskaper:
+
+"Känna" - har programmerats att ta hänsyn till etiska lagar i sin interaktion med omvärlden.
+"Tänka" - processa information (lagrad data eller intryck från omvärlden) och självständigt få fram en slutsats av denna
+Agera - utifrån ovan nämnda slutsats utföra en lämplig handling.En autonom robot är inte självmedveten (den har ingen egen vilja utan reagerar endast i enlighet med sitt program) men kan beskrivas som självstyrande.
+
+
+=== Robotsystemets delar ===
+Manipulator, det man oftast kallar "roboten". De vanligaste robotarna består av en fot, underarm, överarm och handled.
+Styrsystem, som skapar signaler som sänds till manipulatorns drivdon och det i sin tur skapar rörelsen. Det sköter även kommunikationen med annan utrustning och det är även möjligt att styra flera manipulatorer med ett styrsystem.
+Program, som talar om för styrsystemet vad som ska göras.
+Arbetsdon, som monteras längst ut på manipulatorns handled. Exempel på arbetsdon är gripdon och svetspistol.
+Sensorer, som känner av händelser, ofta rörelser, som robotsystemet ska reagera på. Ett exempel är en givare som talar om att en detalj som ska svetsas befinner sig på rätt ställe.
+Övrig utrustning, till exempel transportband, matarutrustning och åkbana.
+
+
+== Asimovs robotlagar ==
+Science fiction-författaren Isaac Asimov ställde 1950 upp tre lagar för robotar.
+
+
+== Framtida utveckling ==
+Det pågår mycket forskning kring robottekniken och robotar kommer att användas på nya områden, även utanför industrin. Exempel på detta är:
+
+Robotar i hemmet - en början till detta som finns redan idag är dammsugare och gräsklippare.
+Robotar i sjukvården - hos bland annat Mälarsjukhuset i Eskilstuna har man inlett försök med automatiserade transporter av allt från mediciner till sjukhussängar.
+Enligt tyska Fraunhofer Institut kommer Robotar i framtiden att användas i vårdsektorn, ett pilotprojekt är "Care-O-bot", läs mer på
+Robotar inom kirurgi - till exempel att låta robotar operera i hjärnan eftersom precisionen kan göras hög.
+"Mobilisse" - kallas en språkstyrd servicerobot i trafiksektorn som upplyser om vägleder. Den bär även tunga laster för resenärer.
+Telerobotar - robotar fjärrstyrda över Internet, finns idag som prototyper av olika slag.
+Robotar som hobby - allt fler bygger och programmerar robotar själv som hobby.
+Robotar inom jordbruket - Automatiskt mjölkningssystem, kon går in i en boxliknande robot och laser känner av spenarna och en arm sätter på mjölkmaskinen. Maskinen kan även känna av kvalitén på mjölken om så önskas.
+Militära, beväpnade robotar 
+Miljöfrämjande robotar - robotar som arbetar för miljöns bästa, ofta på ställen där människor inte kan/vill arbeta. Ett exempel är Naiad 
+
+
+== Sverigemästerskap för autonoma robotar ==
+Robot-SM är en tävling och ett evenemang som är öppet för alla som är intresserade av framtidens teknik. Huvudattraktionen är kampen mellan autonoma robotar i grenarna Sumobrottning och Femkamp.
+
+
+== I kulturen ==
+1915 publicerade Selma Lagerlöf dikten Slåtterkarlarna på Ekolsund som publicerades i den första delen av Troll och människor. I dikten anlitas Christopher Polhem för att han ska skapa mekaniska slåttermän åt en storbonde.
+I september 1924 var det premiär för den sovjetiska science fiction-filmen Aelita av Yakow Protazanov. Filmens kostym och delar av scenografin skapades av kubofuturisten Alexandra Exter. Hon lät marsianerna i filmen ikläs en sorts kubistiska robotliknande kostymer och de framstår då som maskinliknade varelser liknande de robotar som förekommer i R.U.R. När filmen senare visades i en nedklippt version för den amerikanska marknaden hade filmen fått undertiteln "Revolts of the Robots".År 1926 kom romanen Metropolis skriven av Thea van Harbou och året därpå kom filmen med samma namn regisserad av hennes man Fritz Lang. I Metropolis finns en berömd scen där professor Rotwang ger liv åt den människolika metallmaskinen Maria. Detta var enligt dagens terminologi verkligen en robot men detta begrepp finns varken i romanen eller filmen.År 1928 publicerades i den amerikanska science fiction-tidskriften Amazing Stories den långa novellen Armageddon 2418 A.D, skriven av Philip Francis Nowlan. Tecknaren Dick Calkins skapade sedan serien Buck Rogers in the 25th Century som är baserad på denna novell. I första episoden, Meeting the Mongols, som kom ut 1929, presenteras en så kallad "iron man" vilket är en fjärrstyrd robotliknande apparat som heter just Robot #792. Trots att detta inte är en robot utifrån dagens terminologi (den är inte är autonom utan fjärrstyrd) så är det ett av de tidigaste kända exemplen på att ordet "robot" bytt betydelse från att vara maskinliknande människor till att vara människoliknande maskiner. I tidskriften Amazing Stories publicerades senare flera noveller om tänkande autonoma maskiner men det var först 1934 i novellen Rex, av Harl Vincent, som en sådan tänkande maskin kallades för "robot".
+
+
+== Se även ==
+Android
+Artificiell intelligens
+Cyborg
+Datorseende
+Hemautomation
+
+
+== Referenser ==
+
+
+== Externa länkar ==
+Chalmers Robotförening - Sveriges största robotförening
+Aros Robotics Club - Sweden - Robotförening i Västerås
+telerobotar
+ Wikimedia Commons har media som rör Robot.

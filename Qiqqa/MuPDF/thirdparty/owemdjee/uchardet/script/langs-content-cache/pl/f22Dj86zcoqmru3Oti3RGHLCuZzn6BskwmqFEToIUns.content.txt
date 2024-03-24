@@ -1,0 +1,133 @@
+revision: 69408533
+title: "Dope\u0142niacz (biologia)"
+url: https://pl.wikipedia.org/wiki/Dope%C5%82niacz_(biologia)
+
+
+---
+
+Dopełniacz, układ dopełniacza – zespół kilkudziesięciu białek obecnych w osoczu, a także w innych płynach ustrojowych, wraz z powiązanymi z nimi funkcjonalnie licznymi receptorami i regulatorami. Układ dopełniacza spełnia ważną rolę we wrodzonych, humoralnych mechanizmach nieswoistej odpowiedzi odpornościowej, ale także wiąże się ściśle z niektórymi mechanizmami odpowiedzi swoistej. Jego działanie polega na aktywacji kaskady enzymatycznej, doprowadzającej do szeregu zjawisk mających istotne znaczenie w przebiegu odpowiedzi immunologicznej i reakcji zapalnej. Pomimo istnienia układu białek regulujących działanie dopełniacza, nadmierne jego pobudzenie lub defekty białek regulacyjnych mogą być przyczyną powstawania pewnych schorzeń.
+Do głównych zadań układu dopełniacza należą:
+
+liza komórek bakteryjnych i niektórych wirusów, a także zmodyfikowanych lub uszkodzonych komórek organizmu
+opsonizacja bakterii, wirusów, grzybów i pasożytów (ułatwienie fagocytozy, zwanej immunofagocytozą)
+działanie chemotaktyczne i aktywujące na fagocyty
+ogólna aktywacja odpowiedzi odpornościowej (reakcji zapalnej)
+udział w usuwaniu kompleksów immunologicznych.
+
+
+== Historia ==
+Pod koniec XIX wieku George Nuttall, Paul Ehrlich i Jules Bordet zajmowali się badaniem zawartego w surowicy czynnika termolabilnego, który wykazywał własności bakteriobójcze. Czynnik ten nazwano początkowo aleksyną. W 1890 roku Bordet przeprowadził badania, które wykazały, że dochodzi do bakteriolizy komórek przecinkowca cholery przy udziale surowicy odpornościowej (zawierającej przeciwciała) i dodatkowego czynnika. W 1899 roku Ehrlich, przedstawiając szerszą teorię systemu odpornościowego, wprowadził dla tego dodatkowego czynnika nazwę „dopełniacz” (complement).
+Według Ehrlicha system odpornościowy składa się z komórek, które na swojej powierzchni posiadają swoiste receptory rozpoznające antygeny. Po immunizacji antygenem powstaje większa ilość tych receptorów, które są uwalniane i krążą we krwi. Te receptory, które dziś nazywamy przeciwciałami, określane były przez Ehrlicha „amboceptorami”, dla podkreślenia ich podwójnej roli: rozpoznają i łączą się ze swoistym antygenem, ale również rozpoznają i łączą się z termolabilnym składnikiem osoczowym. Ehrlich wprowadził nazwę „dopełniacz”, ponieważ dopełnia on działanie komórek układu odpornościowego.
+Na początku XX wieku rozstały został spór, który polegał na tym, że Ehrlich uważał, że każdy amboceptor ma swój dopełniacz, a Bordet, że jest tylko jeden rodzaj dopełniacza. Ostatecznie odkryto, że dopełniacz działa zarówno w drodze klasycznej (ze swoistymi przeciwciałami), jak i na drodze alternatywnej oraz lektynowej.
+
+
+== Nazewnictwo składników dopełniacza ==
+Białka dopełniacza noszą nazwy składające się z: litery C, cyfry arabskiej oraz, ewentualnie, małej litery lub liter alfabetu łacińskiego. W ten sposób możemy wyróżnić białka o symbolach od C1 do C9, które były nazywane w kolejności odkrywania, zatem ich nazwa nie jest związana z kolejnością udziału w reakcjach dopełniacza, choć w znacznym stopniu się z nią pokrywa. Ta konwencja nazewnicza odnosi się jedynie do tzw. klasycznej drogi aktywacji dopełniacza (patrz dalej), dlatego po odkryciu kolejnych dwóch dróg poznano następne białka, które jednak nie zostały oznaczone numerami. W ten sposób dwa dodatkowe białka drogi alternatywnej uzyskały nazwy czynnika B i czynnika D, zaś w drodze lektynowej biorą udział kolektyny (zwłaszcza MBL) oraz proteazy MASP-1 i MASP-2.
+Tworzone w wyniku aktywacji dopełniacza kompleksy są nazywane poprzez podanie części składowych w kolejności ich przyłączania się, z tym jednak zastrzeżeniem, że litera "C" pojawia się jedynie na początku nazwy kompleksu, np. C4b i C2a po połączeniu się utworzą kompleks C4b2a, nie zaś C4bC2a. Ponadto jeśli dany kompleks wykazuje aktywność enzymatyczną, to taką aktywną formę oznaczamy poziomą kreską przeciągniętą nad nazwą kompleksu. Jeżeli kompleks jest utworzony ze składników o kolejnych, wzrastających numerach, jego nazwa jest odpowiednio skracana, np. C5b-8 oznacza kompleks zawierający składniki C5b, C6, C7 i C8.
+Białka regulujące układ dopełniacza nie są nazywane w żaden systematyczny sposób, tym bardziej, że większość z nich została już wcześniej poznana i w związku z pełnionymi funkcjami białka te noszą mniej lub bardziej adekwatne dla ich roli nazwy.
+
+
+== Aktywacja dopełniacza ==
+Układ dopełniacza może być aktywowany trzema drogami: klasyczną, alternatywną i lektynową.
+Aktywacja dopełniacza polega na serii enzymatycznych i nieenzymatycznych reakcji o charakterze kaskadowym. Oznacza to, że każdy uaktywniony składnik aktywuje z kolei następny. W przypadku każdej z trzech dróg aktywacji, przedstawionych poniżej, dochodzi do utworzenia dwóch istotnych enzymów: konwertazy C3 i konwertazy C5, które bardzo silnie wzmacniają efekt dopełniacza. Niezależnie jednak od sposobu aktywacji, końcowe etapy wszystkich tych reakcji są identyczne i doprowadzają do utworzenia kompleksu atakującego błonę (MAC, ang. membrane-attacking complex), który składa się z C5b, C6, C7, C8 i polimerycznego C9 . Najpierw zostaną zatem omówione drogi aktywacji do momentu utworzenia konwertazy C5, potem natomiast przedstawione zostaną reakcje doprowadzające do utworzenia MAC.
+
+
+=== Droga klasyczna ===
+Klasyczna droga aktywacji dopełniacza została poznana najwcześniej. Najważniejszą jej cechą jest niewątpliwie zależność od przeciwciał, które związały epitopy na antygenie (np. epitop antygenu E. coli i przeciwciało skierowane przeciw niemu). Przeciwciała jako takie nie mogą wpływać niszcząco na komórkę patogennego mikroorganizmu lub pasożyta, ale mogą uruchomić dopełniacz, który tego dokona. Z tą właściwością związana jest także nazwa dopełniacza, jest on bowiem dopełnieniem (ang. complement, dopełnienie zadania) obronnej funkcji przeciwciał.
+Klasyczna droga aktywacji dopełniacza jest przedstawiona na poniższym rysunku. Zostanie ona omówiona w punktach, których oznaczenia odpowiadają numerom na rysunku.
+
+Przeciwciała przyłączają się do epitopów, do nich z kolei przyłącza się cząsteczka C1q, rozpoczynająca drogę klasyczną. Jej kształt przypomina wiązkę 6 tulipanów, przy czym do aktywacji dopełniacza niezbędne jest połączenie przynajmniej dwóch główek „tulipanów” z przynajmniej dwoma przeciwciałami wiążącymi antygen. Związanie przeciwciał wywołuje zmianę konformacyjną „łodyżek tulipanów”, pomiędzy którymi związane są proteazy serynowe C1r i C1s. Przeciwciała zdolne do aktywacji C1q to przede wszystkim IgM i IgG (oprócz podklasy IgG4).
+C1r jest pobudzana za pomocą zmiany konformacyjnej C1q i w rezultacie powoduje przecięcie, i tym samym uaktywnienie, proteazy C1s. Ta aktywacja jest już trwała i nie zależy od dalszych zmian konformacyjnych C1q.
+Aktywowana C1s ma zdolność rozkładu białek C4 i C2. W pierwszej kolejności rozkładane jest C4, w wyniku czego powstają dwa fragmenty: C4a i C4b. Pierwszy z nich jest uwalniany do środowiska reakcji (osocza lub płynu tkankowego) i pełni funkcję anafilatoksyny.
+C4b ma natomiast zdolność do łączenia się z błoną komórkową, zwłaszcza z białkami lub cukrami w niej zawartymi. Po przyłączeniu się do błony następuje przyłączenie C2 do C4b.
+Następnie C2 jest rozkładany do C2a i C2b przez C1s. Tak powstały kompleks C4b2a nosi nazwę konwertazy C3 drogi klasycznej i jest niezwykle ważny dla prawidłowego działania dopełniacza.
+Konwertaza C3 rozkłada składnik C3 do C3a (kolejna anafilatoksyna) oraz C3b, który może:
+przyłączyć się do błony komórkowej patogenu i funkcjonować jako opsonina
+przyłączyć się do konwertazy C3, tworząc konwertazę C5 drogi klasycznej
+powyższe procesy podlegają amplifikacji
+Tak powstała konwertaza C5 rozkłada białko C5 do C5a (anafilatoksyna) i C5b. Ten drugi fragment będzie brał udział we wspólnym dla wszystkich dróg tworzeniu MAC.Niezwykle istotne dla prawidłowego działania dopełniacza są konwertazy. Ich znaczenie wynika przede wszystkim z wzmacniającego działania: pojedyncza konwertaza C3 może potencjalnie wyprodukować setki tysięcy cząsteczek C3b, z których każda może dać początek kolejnej konwertazie C3 lub C5. Z kolei konwertaza C5 może wyprodukować znaczne ilości C5b, a każda z tych cząsteczek może potencjalnie utworzyć nowy MAC. W rzeczywistości jednak znaczna liczba fragmentów C3b w ogóle nie odłoży się w błonie, ani nie stworzy konwertazy C5, gdyż ze względu na swoją reaktywność może połączyć się z białkami w płynie tkankowym albo z wodą. Dlatego też wytworzenie znacznych ilości C3b jest w ogóle niezbędne do zadziałania dopełniacza. Niemniej jednak, funkcja amplifikacyjna konwertaz jest bardzo istotna. Podobną rolę odgrywa także C1s, która może dostarczyć dużych ilości C4b.
+
+
+=== Droga alternatywna ===
+Droga alternatywna była drugą w kolejności odkrytą drogą aktywacji dopełniacza. Rozpoczyna się spontanicznie od hydrolizy C3 bezpośrednio na powierzchni i atakuje każdą dostępną błonę biologiczną, jednak na komórkach własnego organizmu jest unieszkodliwiana. W przeciwieństwie do pozostałych dróg aktywacji, nie zależy ona od białek wiążących się z patogenami.
+
+Etapy drogi alternatywnej:
+
+W osoczu występuje białko C3(H2O), będące pobudzoną formą C3. Ta cząsteczka może wiązać czynnik B, który w obecności jonów magnezu oraz czynnika D jest rozbijany na fragmenty Ba (nie można mylić tego fragmentu z barem!) oraz Bb.
+Fragment Ba wydostaje się do środowiska reakcji, natomiast fragment Bb pozostaje związany z C3(H2O). Tak powstały kompleks jest aktywny enzymatycznie i tworzy rozpuszczalną konwertazę C3 drogi alternatywnej.
+Taka konwertaza rozbija C3, tworząc anafilatoksynę C3a oraz C3b, który może się przyłączać do błony komórkowej.
+Związany z błoną C3b przyłącza czynnik B, który jest w podobny sposób jak wcześniej rozbijany na Ba i Bb. W ten sposób powstaje związana z błoną konwertaza C3 drogi alternatywnej, która jest dodatkowo stabilizowana czynnikiem P, czyli properdyną. Z tego powodu droga alternatywna nazywana bywa także properdynową. Konwertazy drogi alternatywnej mają znaczenie podobne jak konwertazy drogi klasycznej.
+Konwertaza C3 rozkłada C3, dając w efekcie C3a i C3b. Ten drugi może teraz przyłączyć się do błony, dając początek kolejnej konwertazie, może również przyłączać się do już istniejącej konwertazy C3, tworząc konwertazę C5 drogi alternatywnej.
+Konwertaza C5 rozkłada C5 do anafilatoksyny C5a oraz fragmentu C5b, który zapoczątkuje tworzenie MAC.Droga alternatywna jest powiązana z drogą klasyczną poprzez C3b. Wytworzony bowiem podczas drogi klasycznej C3b może po związaniu się z błoną wiązać czynnik B i tworzyć konwertazę C3 drogi alternatywnej.
+
+
+=== Droga lektynowa ===
+Droga lektynowa jest w ogólnych zarysach podobna do drogi klasycznej, różnią się one tylko pierwszymi etapami. W przypadku drogi lektynowej antygen nie musi być rozpoznany przez przeciwciała, są one bowiem zastąpione nieswoiście wiążącymi cukry kolektynami, czyli białkami mającymi domeny lektynowe oraz długie ogonki o strukturze przypominającej kolagen. Do kolektyn należą białka A i D surfaktantu płucnego oraz lektyna wiążąca mannozę (MBL), występująca w osoczu.
+Lektyna wiążąca mannozę jest głównym czynnikiem zapoczątkowującym drogę lektynową. Podobnie jak C1q ma ona 6 główek umieszczonych na długim styliku, który może wiązać proteazy serynowe MASP-1 i MASP-2. Gdy nastąpi związanie MBL do powierzchni antygenu, MASP-1 zostaje aktywowana na skutek zmiany konformacyjnej trzonka MBL, po czym, podobnie jak C1r aktywuje C1s, MASP-1 może dokonać proteolitycznego cięcia MASP-2. Ten enzym z kolei jest odpowiednikiem C1s i może rozkładać C2 i C4. Dalsze etapy są identyczne jak w klasycznej drodze aktywacji dopełniacza. Kompleks kolektyna-MASP-1-MASP-2 zastępuje więc zarówno przeciwciało, jak i C1q, C1r i C1s drogi klasycznej.
+Ze względu na swoje właściwości oraz prawdopodobnie wczesne pojawienie się w trakcie filogenezy MBL bywa czasem określana jako „praprzeciwciało”. Droga alternatywna i droga lektynowa mają duże znaczenie, mogą bowiem zapoczątkować reakcję odpornościową bezpośrednio po wniknięciu patogenu do organizmu. Droga klasyczna może być rozpoczęta dopiero na skutek wytworzenia przeciwciał, co następuje po upływie pewnego czasu po pojawieniu się antygenu w organizmie.
+
+
+=== Tworzenie kompleksu atakującego błonę (MAC) ===
+Tworzenie kompleksu atakującego błonę składa się już wyłącznie z reakcji nie wymagających aktywności enzymatycznych.
+
+Po wytworzeniu C5b przez konwertazę dowolnej z dróg aktywacji dopełniacza, dochodzi do połączenia się C5b z C6. W kolejnym etapie do C5b-6 dołączane są C7 i C8. Powstaje kompleks C5b-8, który ma zdolność włączania się w błonę komórkową i przyłączania kolejnych cząsteczek C9. Przyłączenie 2–14 cząsteczek C9 powoduje utworzenie w błonie komórkowej kanału, którego średnica zależy od liczby wbudowanych C9. Powstanie kanałów powoduje wypływ z komórki jonów, ATP, substancji odżywczych i wielu innych związków, z drugiej strony natomiast do komórki napływa woda (ze względu na wyższe ciśnienie osmotyczne w komórce), mogą się do niej dostawać różne czynniki bakteriobójcze i bakteriostatyczne (np. lizozym) oraz różne leki, na przykład antybiotyki.
+Mimo takiego działania, tworzenie MAC prawdopodobnie nie jest najważniejszym skutkiem uaktywnienia dopełniacza. Obecnie wydaje się, iż najważniejszy jest fakt, że związane z błoną składowe dopełniacza mogą działać jako opsoniny i brać udział w immunofagocytozie.
+
+
+== Regulacja układu dopełniacza ==
+Układ dopełniacza wymaga regulacji, o czym najdobitniej świadczą przykłady patologii wywołanych jego nadmierną aktywacją.
+W tym celu w osoczu i na powierzchni błon komórkowych znajduje się system białek regulujących (kontrolujących) działanie dopełniacza.
+Czynniki te mają charakter dezaktywujący, a ich działanie polega zwykle na skróceniu i tak już krótkiego okresu połowicznego rozpadu konwertaz C3 i C5. Praktycznie jedynym czynnikiem stabilizującym dopełniacz jest wspomniana poprzednio properdyna.
+
+
+=== Czynniki osoczowe ===
+Czynnikami zawartymi w osoczu są:
+
+inhibitor C1 – hamuje aktywne proteazy C1r i C1s
+czynnik I – rozkłada C3b i C4b występujące w formie wolnej i związanej w konwertazach i powoduje rozpad konwertaz
+białko wiążące C4 – wiąże C4b i wspomaga czynnik I w hamowaniu konwertazy C3 drogi klasycznej
+czynnik H – wiąże C3b i wspomaga czynnik I w hamowaniu konwertazy C3 drogi alternatywnej
+białko S – blokuje C5b67 uniemożliwiając przyłączenie do błony komórkowej.
+
+
+=== Czynniki obecne na komórkach ===
+Czynniki obecne na komórkach są odpowiedzialne za wyłapywanie dopełniacza, zwłaszcza tych fragmentów, które powstają na skutek działania drogi alternatywnej. Umożliwia on obronę komórek własnego organizmu przed dopełniaczem aktywowanym spontanicznie. W gruncie rzeczy działanie drogi alternatywnej wynika tylko i wyłącznie z faktu, że drobnoustroje nie posiadają tego rodzaju czynników hamujących dopełniacz. Do czynników obecnych na komórkach należą:
+
+receptor dla dopełniacza (CR1) – inaktywuje konwertazy przez rozkład C3b i C4b
+błonowy kofaktor białkowy (ang. membrane cofactor protein, MCP, CD46) – wiąże C3b i C4b, obecny praktycznie na wszystkich komórkach jądrzastych organizmu
+czynnik przyspieszający rozkład (ang. decay-accelerating factor, DAF) – drastycznie skraca okres półtrwania konwertaz
+czynniki restrykcji homologicznej (ang. homologous restriction factor, HRF, CD59) – wiążą C8 i C9, hamując tworzenie MAC
+MIRL (ang. membrane inhibitor of reactive lysis) – blokuje przyłączenie C9 i tworzenie MAC.
+
+
+== Znaczenie dopełniacza w stanach chorobowych ==
+Nieprawidłowości układu dopełniacza mogą być odpowiedzialne za wystąpienie stanów patologicznych. Zaburzenia te mają najczęściej charakter niedoborów składników, co związane jest z reguły z nawracającymi zakażeniami i chorobami autoimmunizacyjnymi.
+Najważniejsze przykłady stanów chorobowych związanych z układem dopełniacza to:
+
+kłębuszkowe zapalenie nerek powstające na skutek aktywacji dopełniacza przez kompleksy immunologiczne odłożone w nerkach, np. podczas infekcji HBV
+anafilatoksyny (C3a, C4a i C5a) mogą wywoływać wstrząs anafilaktyczny
+obrzęk naczynioruchowy (obrzęk Quinckego) – niedobór inhibitora C1
+nadwrażliwość typu III, co także jest związane z reakcją zapoczątkowaną przez kompleksy immunologiczne
+udział w niektórych chorobach autoimmunizacyjnych (np. toczeń układowy, reumatoidalne zapalenie stawów)
+choroba Alzheimera, udar mózgu
+napadowa nocna hemoglobinuria
+jad kobry działa poprzez aktywację dopełniacza, która nie podlega regulacji żadnego z wymienionych wcześniej czynników osoczowych ani komórkowych i doprowadza do śmierci.Mutacje w genach regulatorów aktywności dopełniacza: czynniku H i błonowego kofaktora białkowego (CD46) wiążą się z występowaniem atypowej postaci zespołu hemolityczno-mocznicowego, a polimorfizm pojedynczego nukleotydu genu dla czynnika H (Y402H) wiąże się z występowaniem zwyrodnienia plamki żółtej. Uważa się, że oba zaburzenia są spowodowane nieprawidłową aktywacją dopełniacza.
+Niedawne wyniki badań wskazują, że układ dopełniacza ulega manipulacji w czasie zakażenia HIV/AIDS, powodując dalsze uszkodzenia organizmu.
+
+
+== Zobacz też ==
+odczyn wiązania dopełniacza
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+StefanS. Ślopek StefanS., Ilustrowany słownik immunologiczny, Warszawa: Państ. Zakład Wydawnictw Lekarskich, 1983, ISBN 83-200-0534-5, OCLC 830219922 .brak strony (książka)
+Janeway CA Jr., Travers P, Walport M, Shlomchik MJ, Immunobiology, Garland Publishing, 2001, ISBN 0-8153-3642-X, bezpłatna wersja on-line: Dopełniacz i odpowiedź immunologiczna nieswoista
+Zbigniew Gliński, Krzysztof Kostro, Immunobiologia, Państwowe Wydawnictwo Rolnicze i Leśne, 2004.
+H Chaplin, Review: the burgeoning history of the complement system 1888-2005 Immunohematology / American Red Cross 21, no. 3 (2005): 85-93.
+
+
+== Linki zewnętrzne ==
+Anna Karina Kaczorowska, Układ dopełniacza w Podstawy immunologii, Uniwersytet Gdański Katedra Mikrobiologii. microbiology.univ.gda.pl. [zarchiwizowane z tego adresu (2004-12-16)]. PDF

@@ -1,0 +1,104 @@
+revision: 25810322
+title: "\xC1ltelefon"
+url: https://hu.wikipedia.org/wiki/Telefonk%C3%A9sz%C3%BCl%C3%A9k
+
+
+---
+
+A telefonkészülék – mára már a magyar köznyelvből kikopott nevén távbeszélő – olyan távközlő eszköz, amely a hangot a készülék mikrofonjának segítségével elektromos jelekké alakítja át és azt különböző módon nagy távolságra továbbítva a telefonkészülék hangszórójával újra hallható hanggá alakítja.
+A telefon lehetővé teszi, hogy emberek egymással olyankor is tudjanak beszélgetést folytatni, amikor esetenként hallótávolságon kívül tartózkodnak. Ennek természetesen feltétele, hogy mindkét fél rendelkezzen olyan készülékkel, amely a telefonhálózathoz van csatlakoztatva. A telefon ma az emberek közötti személyes kommunikáció egyik alapvető és meghatározó eszköze.
+
+
+== Története ==
+
+Legtöbben úgy tudják, hogy Alexander Graham Bell találta fel, majd építette meg az első telefont 1876-ban, az amerikai Massachusetts államban. Rajta kívül voltak még sokan mások, akik rendkívül fontosak voltak a telefon kifejlesztésében. Az alapokat Morse találmánya, a távíró fektette le, ez volt ugyanis az első, elektromos jeleket továbbító hálózat. 1854-ben Charles Bourseul belga származású francia mérnök felvetette annak lehetőségét, hogy hangot is lehetne valahogy a hálózaton továbbítani. Szintén ebben az időszakban kísérletezett még Johann Philipp Reis és Elisha Gray is. Bell egy olasz bevándorló, Antonio Meucci nyomdokain indult el. Amit Meucci 1874-ben anyagi nehézségek miatt nem tudott jogi védelem alá helyezni, azt két évvel később Bell szabadalmaztatatta. Meucci emléke mégsem merült feledésbe. 2002-ben az Egyesült Államok képviselőháza nyilatkozatot fogadott el, melyben az olasz feltalálót ismeri el a telefon feltalálójaként. Végül Bell és az ő csapata építette meg a telefont, ami végül 1876 után Bostonból kiindulva meghódította a világot.
+Nem sokkal később, 1878-ban feltalálták a szénporos mikrofont, amely jelentősen javított a hang minőségén.
+1888-ban Almon Strowger feltalálta és megépítette az első automata telefonközpontot.
+
+
+== Fajtái ==
+A készülékek csoportosítása többféleképpen lehetséges.
+
+Vezetékes telefonok
+nyilvános
+nosztalgia
+cselédhívó (az ebédlő és konyha között)
+kezelői
+ISDN telefon
+IP-telefon
+Hordozható (vezetékes, de hordozható kivitelű)
+vizsgáló
+tábori (főleg a katonaság használja)
+vezeték nélküli (rádióhullámokkal) korlátozott helyen (például lakásban) működő
+Rádióhullámokkal működő
+rádiótelefon
+mobiltelefon
+műholdas (Thuraya, Inmarsat, Iridium (Globális)
+Egyebek
+kaputelefon
+áltelefonMás csoportosításban asztali, fali (falra szerelt) és egységes (használható asztalon és falon is) készülékek ismertek. A legtöbb készülékház fából, fémből, bakelitből vagy másféle műanyagból készül.
+A telefonok a mikrofontáplálás módja szerint lehetnek helyi vagy központi teleptáplálásúak. Ennél a csoportosításnál rendszerint az angol rövidítéseket használják (LB: helyi telep, CB: központi telep).
+
+
+== A készülék ==
+A készülék feladata, hogy egy mikrofonnal elektromos jellé alakítsa a hangot, ezt a jelet – esetleges további átalakítások, például tömörítés, kódolás stb. után – a hálózatra kiküldje és az onnan vett jelet egy hangszórón keresztül a használóhoz eljuttassa. A Bell-féle kísérleti telefon mindössze egy hallgatóból állt. A membrán átvette a hang rezgéseit, rezgése következtében az állandó mágnes erővonalait elmetszette. A tekercsben létrejött indukciós áram a másik készülék tekercsén át záródott. Ott megváltoztatta az állandó mágnes erőterét, a membrán az adókészülék ütemében mozgott. Már Bell is kísérletezett külön mikrofonnal (folyadékos mikrofon), de a megoldást ezek alapján Hughes, Hunnings és Edison szénmikrofonjai jelentették.
+A szénporos mikrofon külön áramellátást igényelt. Kezdetben elemeket alkalmaztak a készülék mellett, ez a helyi telepes rendszer, angol rövidítése LB. A hallgatót és a mikrofont transzformátorral választották szét. A csengetést induktorral (kis kézi áramfejlesztő) oldották meg. A csengő ennek megfelelően váltóáramú volt. Mivel a csengetés és a beszéd közös vezetéken volt, a két funkciót átkapcsolóval választották szét. Alapállapotban a hallgató (később kézibeszélő) az átkapcsolóra, közismert nevén villára nehezedik. A kapcsoló a vonalat a csengőre és az induktorra kapcsolja. Beszéd közben a hallgató már kézben van, ekkor a kapcsoló a vonalat átteszi a csengőről a transzformátor felé.
+
+Sok gondot okozott a telepek rendszeres cseréje. Amerikai találmány a közös telep, angol rövidítése CB. Egy nagy telepet a telefonközpontban helyeztek el, a teleptáplálás a vonalon át érkezik a mikrofonhoz. A készülékben a mikrofont a transzformátor vonali oldalára helyezték. Az induktor fölöslegessé vált. A csengő az egyenáramot átengedi, ezért a csengővel sorban egy kondenzátort helyeztek el. A kézibeszélő felemelésekor a kapcsoló átvált, a mikrofon teleptáplálást kap. A telefonközpontban ebbe az áramkörbe valamilyen érzékelőt (pl. lámpát) szereltek, ami jelezte, hogy a kézibeszélőt felvették. A központkezelő belépett a vonalába és kapcsolt.
+Az automata központokban egy jelfogó az érzékelő. A központ tárcsahangot ad, mellyel jelzi, hogy várja a számokat. Ezért van szükség tárcsára, korszerűbb változatában nyomógombkészletre.
+
+
+=== Magyar készülékek ===
+Az első telefonközpontokhoz az Egyesült Államokból hoztak készülékeket, de hamarosan ezek magyar műhelyekben is készültek.
+
+
+==== Helyi telepes készülékek ====
+A Horthy-korszakig a Posta fadobozos fali készülékeket szabványosított, valamint volt az ún. mágnestalpas telefon, amely csengő nélkül készült az Ericsson-készülék alapján. 1924-től gyártották az LB-24-et, amely fémdobozos és asztali-fali készülék volt. Az LB-37-es és LB-55-ös asztali, bakelitházas (1937-től, ill. 1955-től).
+
+
+==== Központi telepes készülékek ====
+
+Kezdetben ugyancsak fali fadobozos készülékek voltak, 1924-től a fémdobozos, már kézibeszélős CB-24 volt szabványosítva (Kabos Gyula ilyen telefonokon beszélt). Jobb hangminőséget garantált a CB-35 és CB-555 általában fekete bakelit készülékházban (önhangcsökkentő kapcsolással). A CB 667 színes, könnyen törő plasztik készülék volt. Kis szériában volt forgalomban az alumíniumházas CB-47 és az első nyomógombos műanyagházas CB-76. Ezután következett a CB-81 és ennek alfajai lapos, törhetetlen színes, műanyag kivitelben.
+Ezután nagy szériájú szabványkészülékeket nem gyártottak, amik voltak, azokat kiszorították a bécsi és szingapúri telefonok.
+
+
+== Jegyzetek ==
+
+
+== Források ==
+Kapcsoltak / Kapcsoltunk / Kapcsolunk (A Magyar Posta szóróanyaga 1980/81-ből)
+
+
+== Irodalom ==
+Brooks, John (1976). Telephone: The first hundred years. HarperCollins.
+Bruce, Robert V.. Bell: Alexander Graham Bell and the Conquest of Solitude. Cornell University Press (1990). ISBN 978-0-8014-9691-2 
+Casson, Herbert Newton. (1910) The history of the telephone online.
+Coe, Lewis (1995). The Telephone and Its Several Inventors: A History. Jefferson, NC: McFarland & Co.
+Evenson, A. Edward (2000). The Telephone Patent Conspiracy of 1876: The Elisha Gray – Alexander Bell Controversy. Jefferson, NC: McFarland & Co.
+Fischer, Claude S. (1994) America calling: A social history of the telephone to 1940 (Univ of California Press, 1994)
+Huurdeman, Anton A. (2003). The Worldwide History of Telecommunications Hoboken: NJ: Wiley-IEEE Press.
+John, Richard R. (2010). Network Nation: Inventing American Telecommunications. Cambridge, MA: Harvard University Press.
+MacDougall, Robert. The People's Network: The Political Economy of the Telephone in the Gilded Age. Philadelphia: University of Pennsylvania Press.
+Mueller, Milton. (1993) "Universal service in telephone history: A reconstruction." Telecommunications Policy 17.5 (1993): 352–69.
+Todd, Kenneth P. (1998), A Capsule History of the Bell System. American Telephone & Telegraph Company (AT&T).
+
+
+== További információk ==
+Mit talált fel Puskás és Bell?
+Cell Phone Mobil telefon leírások
+Telefónia – A távközlés története
+- Telefonmúzeum
+- Magyar telefon légvezetékes konstrukciók (Angol nyelvű)
+- Magyar telefon légvezetékes hálózat, fényképek (Angol nyelvű)
+- Halló, halló! Itt Szabadka beszél! - Kisvárosi történetek 
+
+
+== Kapcsolódó szócikkek ==
+
+Puskás Tivadar
+A miskolci távközlés története
+Halló
+Telefonközpont
+Telefonhálózat
+Telefonhírmondó
+Mobiltelefon

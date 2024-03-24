@@ -1,0 +1,167 @@
+revision: 65849788
+title: Phonetics
+url: https://pt.wikipedia.org/wiki/Alfabeto_fon%C3%A9tico_internacional
+
+
+---
+
+Esta página contém alguns caracteres especiais e é possível que a impressão não corresponda ao artigo original.
+
+O Alfabeto Fonético Internacional (referenciado pela sigla AFI e pela sigla em inglês IPA, de International Phonetic Alphabet) é um sistema de notação fonética composto por 157 caracteres, baseado no alfabeto latino, criado em 1886 no projeto orientado pelo linguista francês Paul Passy (Associação Fonética Internacional), com objetivo de ter uma representação padronizada dos sons do idioma falado. O AFI é utilizado por linguistas, fonoaudiólogos, professores e estudantes de idiomas estrangeiros, cantores, atores, lexicógrafos e tradutores.O AFI foi projetado para representar apenas aquelas características da fala que podem ser distinguidas no idioma falado: fonemas, entonação e a separação de palavras e sílabas. Para representar características adicionais da fala, como o ranger dos dentes, sigmatismo (língua presa) e sons feitos com lábios leporinos, utiliza-se de um conjunto ampliado de símbolos, chamados de extensões ao AFI.Ocasionalmente letras ou diacríticos são adicionados, removidos ou modificados pela Associação Fonética Internacional. A partir da alteração mais recente em 2015, existem 107 letras, 52 diacríticos e quatro marcas de prosódia no AFI.
+Os símbolos do alfabeto fonético internacional são divididos em três categorias: letras (que indicam os sons básicos), diacríticos (que especificam mais esses sons básicos) e suprassegmentais (que indicam características, como velocidade, tom e acento tônico). Essas categorias são divididas em seções menores: as letras podem ser vogais ou consoantes e os diacríticos e suprassegmentais são classificados de acordo com o que indicam: articulação, fonação, tom, entonação ou acentuação tônica.
+
+
+== História ==
+
+
+=== Precursores ===
+Os alfabetos percussores:1845 - Alfabeto fonotípico inglês (EPA), de Sir Isaac Pitman (1813-1897)
+1852 - Alfabeto standard, de Karl Richard Lepsius (1810-1884)
+1869 - Alfabeto paleótipo (EPA), de Alexander John Ellis (1814-1890).
+1877: Alfabeto rômico, de Henry Sweet (1845-1912) - Sweet, Henry. A handbook of phonetics, including a popular exposition of the principles of spelling reform. Oxford: Clarendon Press, 1877. Sweet, Henry. A Primer of Phonetics. Oxford: Clarendon Press, 1892. 
+
+
+=== Alfabeto Universal ===
+Em 1686, o linguista holandês Francis Lodwick propôs a criação de um alfabeto universal, com objetivo de escrever muitas línguas de forma eficiente, após observar a dificuldade que existia para escrever de forma precisa o que era falado, e de pronunciar corretamente o que era escrito (em essência, uma escrita fonética sofisticada).Considera-se que, Lodwick pode ter sido influenciado pelo estudo das línguas indianas e pela escrita Brahmi, fonologicamente sistemática (século III a.C.). Ele organiza as consoantes em séries, baseado na localização e no modo de articulação (plosiva sonora, plosiva surda, nasal, fricativa sonora, fricativa surda) e; também identificou 14 vogais distintas, representadas pelas palavras (em inglês, francês e baixo holandês) tall, tallow, tale, tell, teal, till, dure (fr.), muis (hol.), tile, tone, tunne,  une (fr.), tool e could.As consoantes foram agrupadas em 10 colunas de 6 linhas, porém algumas foram omitidas porque seus sons seriam tão parecidos que causariam confusão. Por exemplo, a coluna 2 continha as consoantes  dark,  tart,  name,  this,  thing e dante (fr.); em cada coluna estão consoantes que são pronunciadas pelas mesmas partes da boca.Em 1886, o linguista Paul Passy cria o grupo Dhi Fonètik Tîtcerz' Asóciécon (FTA), composto por professores de idiomas franceses e britânicos - o que passaria a ser conhecido de 1897 em diante como a Associação Fonética Internacional (do francês L'Association Phonétique Internationale (API), em inglês International Phonetic Association (IPA). Em 1888, o grupo fez o primeiro esboço do International Phonetic Alphabet no artigo nomeado "aur rivàizd ælfəbit", publicado na edição 7/8 da revista Le Maître Phonétique (volume 3). O alfabeto original teve como base uma reforma ortográfica do inglês conhecida como alfabeto rômico, porém para adequá-lo a outros idiomas os valores dos símbolos tornaram-se variáveis de acordo com as características de cada língua. Por exemplo, o som IPA ʃ (ch em "chave") era representado originalmente com a letra <c> no inglês, porém com a letra <x> em francês. Em 1888, entretanto, o alfabeto foi revisado e uniformizado em todos os idiomas, e adquiriu assim uma base para todas as revisões futuras.Desde a sua criação o AFI passou por diversas revisões. Depois das principais revisões e expansões, permaneceu inalterado até a convenção de Kiel, realizada em 1989. Uma revisão de menor importância ocorreu em 1993, com a adição de quatro vogais semicentrais, e a eliminação dos símbolos para as implosivas surdas. O alfabeto foi revisado pela última vez em maio de 2005, com a adição de um símbolo para o flape labiodental. Além da adição e eliminação de símbolos, as mudanças no AFI consistiram na sua maior parte da renomeação dos símbolos e de suas categorias, e na modificação das fontes utilizadas.Recentemente o alfabeto foi expandido: As extensões do alfabeto fonético internacional foram criadas em 1990, e oficialmente adotadas pela Associação Internacional de Linguística e Fonética Clínica em 1994.A maioria das letras do alfabeto é originária do alfabeto romano ou derivada dele, algumas são do alfabeto grego e outras não parecem pertencer a alfabeto nenhum.
+Esse alfabeto especial, chamado também quadro fonético, passou por inúmeras mudanças através dos estudos promovidos por esse grupo. Sua última atualização foi feita em 2005.
+
+
+=== Revisões ===
+As revisões e expansões do Alfabeto Fonético Internacional:
+1900: primeiro quadro do IPA (Association phonétique internationale. "Exposé des principes de l'Association phonétique internationale". Le Maître Phonétique. 1900);
+1904: segundo quadro (Association phonétique internationale. "Aim and Principles of the International Phonetic Association". Le Maître Phonétique. 1904);
+1912: terceiro quadro (Association phonétique internationale, "The Principles of the International Phonetic Association". Le Maître Phonétique, 1912);
+1921: quarto quadro (Association phonétique internationale, L'Ecriture phonétique internationale: exposé populaire avec application au français et à plusieurs autres langues, 2ª edição)
+1927/1928: Revisões
+1932: quinto quadro (Association phonétique internationale "The International Phonetic Alphabet (revised to 1932)". Le Maître Phonétique. Troisième série,1932);
+1938: sexto quadro (Association phonétique internationale, "The International Phonetic Alphabet (revised to 1938)". Le Maître Phonétique. Troisième série,1938);
+1947: sétimo quadro (Association phonétique internationale, "The International Phonetic Alphabet (revised to 1947)". Le Maître Phonétique. Troisième série, 1947);
+1951: oitavo quadro (Association phonétique internationale, "The International Phonetic Alphabet (revised to 1951)". Le Maître Phonétique. Troisième série,1952);
+1978: nono quadro do IPA International Phonetic Association, "The International Phonetic Alphabet (Revised to 1979)". Journal of the International Phonetic Association, 1978);
+1989: décimo quadro (Convenção de Kiel, International Phonetic Association. "Report on the 1989 Kiel Convention". Journal of the International Phonetic Association.1989. doi:10.1017/S0025100300003868);
+1993: décimo primeiro quadro (International Phonetic Association. "Council actions on revisions of the IPA". Journal of the International Phonetic Association, doi:10.1017/S002510030000476X);
+1999: décimo segundo quadro (International Phonetic Association. Handbook of the International Phonetic Association: A Guide to the Use of the International Phonetic Alphabet. Cambridge University Press, 1999, ISBN 0-521-63751-1);
+2005: décimo terceiro quadro (Nicolaidis, Katerina. "Approval of new IPA sound: the labiodental flap". Journal of the International Phonetic Association. 2005, doi:10.1017/S0025100305002227).
+
+
+== Descrição ==
+O princípio geral do alfabeto fonético internacional é fornecer um símbolo para cada som ou segmento de fala distinto. Isto significa que o alfabeto não se utiliza de combinações de letras para representar sons únicos, ou de letras únicas para representar mais de um som (como o <x> pode representar [ks] no português). Não existem letras que têm valores sonoros diferentes de acordo com o contexto (como o <c> possui no português e em outros idiomas europeus) e, finalmente, o AFI não costuma ter letras separadas para dois sons, se nenhuma língua conhecida fizer distinção entre eles (uma propriedade conhecida como "seletividade").Entre os símbolos do alfabeto, 107 representam consoantes e vogais, 31 são diacríticos utilizados para especificar ainda mais estes sons, e 19 são utilizados para indicar características como quantidade, tom, tonicidade e entonação.
+
+
+=== Formatos das letras ===
+Os símbolos escolhidos para o alfabeto fonético internacional têm como intenção a harmonia com o alfabeto latino. Por este motivo, a maioria dos símbolos ou é derivada das próprias letras latinas ou das gregas, ou modificações de ambas. Existem, no entanto, símbolos que não pertencem a nenhuma das duas: por exemplo, o símbolo que indica a oclusiva glotal, <ʔ>, tem a forma de uma espécie de ponto de interrogação, e era originalmente um apóstrofo. Outros símbolos, como aqueles da faringal fricativa sonora <ʕ>, embora modificados para serem utilizados em conjunto com o alfabeto latino, foram inspirados por glifos em outros sistemas de escrita (neste caso, a letra ﻉ, `ain, do alfabeto árabe).Apesar desta preferência por letras que se harmonizem com o alfabeto latino, a Associação Fonética Internacional admitiu ocasionalmente símbolos que não têm esta propriedade. Por exemplo, antes de 1989, os símbolos do AFI para os cliques eram <ʘ>, <ʇ>, <ʗ> e <ʖ>, todos derivados tanto de símbolos já existentes para representá-los, ou de letras greco-latinas. No entanto, com a exceção de <ʘ>, nenhum destes símbolos era utilizado pelos hotentotistas ou bantólogos, e, como resultado disso, foram substituídos por símbolos não latinos porém mais difundidos entre os povos que os utilizam: <ʘ>, <ǀ>, <ǃ>, <ǂ>, e <ǁ> na Convenção de Kiel, realizada em 1989.
+
+
+=== Símbolos e sons ===
+O alfabeto fonético internacional baseia-se no alfabeto latino, utilizando-se de quanto menos formas não latinas possível. A Associação Fonética Internacional criou o AFI para que os valores sonoros da maioria das consoantes retiradas do alfabeto latino correspondessem ao seu "uso internacional". As letras <b>, <d>, <f>, <k>, <l>, <m>, <n>, <p>, <t>, <v>, <w> e <z> têm os mesmos valores utilizados no português; e as vogais, também do alfabeto latino (<a>, <e>, <i>, <o>, <u>) correspondem aos seus valores sonoros do português, equivalentes aos sons originais latinos. Outras letras representam valores diferentes do português, representando valores que lhe são dadas em outras línguas, como <j>, <x> e <y>.
+Este inventário foi ampliado com o uso de formas maiúsculas ou cursivas, diacríticos e rotações. Existem ainda diversas letras que foram derivadas ou adaptadas do alfabeto grego, embora os valores sonoros nem sempre tenham permanecido equivalentes. Por exemplo, <ʋ> é uma vogal no grego, porém é apenas uma consoante indiretamente relacionada, no AFI. Três destas letras derivadas do grego (<β>, <θ> e <χ>) são utilizadas sem quaisquer modificações à sua forma, enquanto outras (incluindo <ɣ>, <ɛ>, <ɸ>, e <ʋ>) foram levemente modificadas, e codificadas separadamente de suas "letras-mãe" no Unicode.
+Os valores sonoros das letras latinas modificadas frequentemente são derivados daqueles utilizados nas letras originais. Por exemplo, letras que apresentam em sua grafia um gancho para baixo e para a direita representam consoantes retroflexas, enquanto letras maiúsculas em tamanho pequeno costumam representar consoantes uvulares. Além do fato de que certos tipos de modificação ao formato de uma letra geralmente correspondem a certos tipos de modificação aos sons que elas representam, normalmente não há maneira de deduzir o som representado por um símbolo através da forma de sua grafia (ao contrário, por exemplo, da Fala Visível).
+Além das próprias letras, existe uma grande variedade de símbolos secundários que auxiliam na transcrição fonética. Sinais diacríticos podem ser combinados com os símbolos do AFI de maneira a transcrever os valores fonéticos modificados, ou articulações secundárias. Existem também símbolos especiais para características suprassegmentais, como tonicidade e entonação, que são utilizados com frequência.
+
+
+== Utilização ==
+
+Existem duas maneiras de utilizar os caracteres do alfabeto fonético internacional para transcrever um determinado idioma: pode-se representar os fonemas, através da transcrição fonológica (que transcreve os caracteres entre barras) e a transcrição fonética, que representa os sons dos fonemas (e costuma transcrever os caracteres entre colchetes).
+Embora o AFI ofereça mais de cem símbolos para transcrever a fala, não é necessário que se utilize de todos os símbolos relevantes ao mesmo tempo; é possível transcrever a fala com diferentes níveis de precisão. O tipo mais preciso de transcrição fonética, no qual os sons são descritos com o maior nível de detalhe que o sistema permite, sem qualquer preocupação com a significância linguística das distinções feitas desta maneira, é conhecido como transcrição estreita, ou detalhada. Qualquer outra coisa recebe o nome de transcrição larga ou ampla, embora estes termos sejam, obviamente, relativos. Os dois tipos de transcrição são representados geralmente entre colchetes, porém a transcrição larga por vezes pode estar entre barras e não colchetes.
+
+A transcrição larga apenas distingue entre os sons que são considerados diferentes pelos falantes de um determinado idioma. Os sons que são pronunciados diferentemente de acordo com os dialetos ou estilos do idioma, ou de acordo com os sons vizinhos, podem ser considerados como sendo sons "iguais", já que são alófonos dos mesmos fonemas. Por exemplo, a pronúncia da palavra "porta" pode ser transcrita de maneira ampla utilizando-se do AFI como /pɔɾtɐ/, e esta transcrição larga (e imprecisa) é uma descrição correta de muitas, ainda que não todas, as pronúncias da palavra no português. Esta transcrição ampla meramente identifica os diferentes componentes foneticamente relevantes da palavra, sem indicar a variedade de sons correspondentes. Por outro lado, as transcrições estreitas (colocadas entre colchetes) especificam a maneira com que cada som é pronunciado. Uma transcrição mais estreita de "porta" iria variar de acordo com a maneira, o sotaque ou o dialeto em que for falada: [pɔːhtɐ], [pɔːɹtɐ] e [pɔːɾtə̆] são algumas das possibilidades.
+Nem a transcrição larga nem a estreita para o alfabeto fonético internacional fornecem uma descrição absoluta; elas são descrições relativas dos sons fonéticos. Esta definição se aplica especialmente às vogais no AFI: não existe um mapeamento rápido e consistente entre os símbolos do alfabeto e as faixas de frequência formantes, dependendo da fonologia do idioma em questão.
+
+
+=== Linguistas ===
+Embora o alfabeto fonético internacional seja popular entre os linguistas para transliterações, outros métodos, como a notação fonética americanista ou mesmo o AFI aliado a certos símbolos não oficiais, são utilizados por motivos que incluem a redução da margem de erros na leitura de transcrições manuscritas, ou uma suposta inadequação do AFI a certas situações. A prática exata varia consideravelmente de idioma para idioma e mesmo entre cada estudioso ou pesquisador, de maneira que os autores frequentemente optam por incluir uma explicação do motivo de suas escolhas.
+
+
+=== Dicionários ===
+O alfabeto fonético internacional não é universal entre os dicionários dos diversos idiomas do mundo. Na República Tcheca, por exemplo, os dicionários de grande circulação no mercado tendem a utilizar o AFI apenas para os sons que não existem no tcheco.Nos Estados Unidos da América, para representar os sons do inglês, muito dicionários se utilizam de um alfabeto fonético diferente, chamado American phonemic transcription. O sistema americano foi concebido para usar diacríticos em vez de caracteres especiais, o que facilita muito para quem usa computadores sem as fontes do AFI ou máquina de escrever. Contudo, com o crescente uso de computadores e processadores de texto que podem produzir os caracteres do AFI, o sistema de transcrição americano vem sendo, aos poucos, suplantado.
+
+
+=== Ortografias e variantes maiusculizadas ===
+Os símbolos do alfabeto fonético internacional foram incorporados às ortografias-padrão de várias línguas, principalmente na África subsaariana, assim como em outras regiões daquele continente; entre os principais exemplos estão o hauçá, o fula, o acã, o bê e o mandinga.
+Um exemplo das formas maiusculizadas dos símbolos AFI está no cabié do norte do Togo, que tem Ɔ Ɛ Ɖ Ŋ Ɣ Ʃ Ʊ (ou Ʋ)  - formas maiúsculas de ɔ ɛ ɖ ŋ ɣ ʃ ʊ (ou ʋ): MBƱ AJƐYA KIGBƐNDƱƱ ŊGBƐYƐ KEDIƔZAƔ SƆSƆƆ TƆM SE. Outras formas maiúsculas do alfabeto utilizadas incluem Ɑ Ɓ Ƈ Ɗ Ə/Ǝ Ɠ Ħ Ɯ Ɱ Ɲ Ɵ Ʈ Ʒ Ɽ.
+
+
+== Letras ==
+As letras representam os sons básicos do AFI. Os valores dos sons das consoantes são idênticos aos do alfabeto latino e, em muitos casos, correspondem ao uso na língua portuguesa. Os símbolos das vogais são idênticos aos do alfabeto latino ([a], [e], [i], [o], [u]), correspondendo, grosso modo, às vogais da língua espanhola ou italiana. Já as consoantes do alfabeto latino que foram mantidas nem sempre equivalem aos sons que suas equivalentes têm na língua portuguesa ou nas línguas latinas; o [j], não representa o que aparenta na língua portuguesa, mas o j alemão e holandês, que equivale ao som produzido em ditongos com "i", no português, como na palavra "ideia"; o y corresponde ao u francês ou o ü alemão). O princípio é usar um só símbolo por som, e não como, por exemplo, na língua portuguesa, em que ch e nh, são combinações de letras para um som.
+O alfabeto fonético internacional divide seus caracteres que representam letras em três categorias: As consoantes egressivas, as consoantes não egressivas e as vogais. Cada caractere recebe um número, para evitar confusão entre letras semelhantes (como ɵ e θ), e cada categoria diferente de som recebe diferentes sequências numéricas.
+Abaixo estão os símbolos do alfabeto segundo estas divisões. Para saber os códigos correspondentes no Unicode, veja AFI no Unicode. Para mais informações sobre os sons (fonemas) em si, veja Fonética.
+As letras que possuem correspondente no alfabeto latino geralmente recebem também fonema equivalente ao da mesma letra em algum idioma que as usa. Algumas delas aparecem também ligeiramente modificadas. Quando isso ocorre, correspondem a um som similar ao da letra-base. Por exemplo, todas as consoantes retroflexas têm o mesmo símbolo que as consoantes alveolares equivalentes, exceto por adicionarem um "gancho" no canto inferior esquerdo da letra.
+Diacríticos podem ser combinados com os símbolos do AFI para transcreverem ligeiras modificações fonéticas ou articulações secundárias. Também, há símbolos especiais para características suprassegmentais, como a tonicidade e o tom.
+
+
+=== Consoantes ===
+
+
+==== Consoantes egressivas ====
+Uma consoante egressiva ou pulmônica é uma consoante que é produzida com a obstrução da glote (o espaço entre as pregas vocais) ou da cavidade oral (a boca), e uma emissão de ar, simultânea ou subsequente, vinda dos pulmões. Estas consoantes são a maior parte das consoantes existentes no Alfabeto Fonético Internacional, bem como em todos os idiomas humanos. Todas as consoantes do português e do inglês, por exemplo, estão nesta categoria.A tabela está dividida em linhas que designam o modo de articulação, indicando como a consoante é produzida, e por colunas que indicam o ponto de articulação, indicando em que região do trato vocal a consoante é produzida. A tabela principal inclui apenas consoantes com um único ponto de articulação.
+
+NotasAsteriscos (*) ao lado dos símbolos indicam sons que (até agora) ainda não têm símbolos oficiais no AFI. Ver os respectivos particos para os símbolos ad hoc encontrados na literatura específica.
+Cruzes (†) marcam aqueles símbolos do AFI que foram adicionados recentemente ao Unicode. Até o Unicode 5.1.0 este é o caso da vibrante simples labiodental, simbolizada por um v com um "gancho" para a direita: . Estas serão exibidas corretamente com uma instalação de alguma versão recente das seguintes fontes: Charis SIL, Doulos SIL ou DejaVu Sans.
+Nas linhas onde alguns símbolos aparecem em pares (as obstruentes), o símbolo à direita sempre representa uma consoante sonora, com exceção do [ɦ]) sussurrado. No entanto, o [ʔ] nunca é sonoro, e a sonoridade do [ʡ] é ambígua. Nas outras linhas (as soantes), cada símbolo representa uma consoante sonora.
+Embora exista um símbolo específico para o ponto coronal de articulação para cada uma das consoantes, exceto as fricativas, em se tratando de determinados idiomas os símbolos podem ser tratados como especificamente dentais, alveolares ou palatoalveolares, de acordo como for apropriado para cada idioma, sem o uso dos diacríticos.
+Áreas escurecidas indicam articulações tidas como impossíveis.
+Os símbolos [ʁ, ʕ, ʢ] representam aproximantes ou fricativas sonoras.
+Em muitos idiomas, como o inglês, [h] e [ɦ] não são exatamente glotais, fricativas ou aproximantes; ao invés disso, são tidas como meras fonações.
+A forma assumida pela língua, e não a sua posição, é que distingue as fricativas [ʃ ʒ], [ɕ ʑ], e [ʂ ʐ].
+Alguns estudiosos sustentam a opinião de que a nasal labiodental [ɱ] não existe como fonema em qualquer idioma.
+
+
+==== Coarticulação ====
+As consoantes complexas são sons que envolvem dois pontos de articulação simultâneos, isto é, são pronunciados com o uso de duas partes diferentes do trato vocal ao mesmo tempo. Em inglês o [w] do verbo went ("foi") é uma consoante complexa, ou coarticulada, pois é pronunciada com o arrendondamento dos lábios enquanto o fundo da língua é erguido. Outros idiomas, como o francês e o sueco, possuem diferentes consoantes coarticuladas.
+
+Nota[ɧ] é descrito como "simultaneamente [ʃ] e [x]". No entanto, esta visão é contestada.
+
+
+==== Africadas e articulação dupla ====
+Consoantes africadas e oclusivas duplamente articuladas são representadas por dois símbolos unidos por uma linha, que pode ocorrer tanto na sua parte superior como inferior. As seis africadas mais comuns podem ser representadas ainda por ligaduras, embora esta não seja mais a prática oficial do alfabeto fonético internacional, já que um número excessivo de ligaduras seria necessário para representar todas as africadas desta maneira. Outra notação também costuma ser utilizada para transcrever as africadas, como tˢ no lugar de t͡s, de maneira paralela a kˣ ~ k͡x. Os símbolos para as plosivas palatais <c ɟ>, frequentemente são utilizados como uma forma mais conveniente de [t͡ʃ d͡ʒ] ou africadas parecidas, mesmo em publicações oficiais que usam o AFI, e portanto tais símbolos devem ser interpretados com cuidado.
+
+NotaSe seu browser se utiliza da fonte Arial Unicode MS para mostrar os caracteres AFI, as seguintes sequências poderão ser formadas incorretamente devido a um bug nesta fonte: ts͡, tʃ͡, tɕ͡, dz͡, dʒ͡, dʑ͡, tɬ͡, kp͡, ɡb͡, ŋm͡.
+
+
+==== Consoantes não egressivas ====
+As consoantes não egressivas são sons cujo fluxo de ar não depende dos pulmões. Entre eles estão os cliques (encontrados nas línguas khoisan, da África) e implosivas (encontradas no suaíli, outro idioma africano).
+
+NotasOs cliques são duplamente articulados, e foram descritos tradicionalmente como tendo tanto uma 'liberação' de ar para a frente como um 'acompanhamento' na parte de trás, com as letras do clique representando a liberação de ar. Portanto todos os cliques precisariam de duas letras para uma notação mais adequada [k͡ǂ, ɡ͡ǂ, ŋ͡ǂ, q͡ǂ, ɢ͡ǂ, ɴ͡ǂ] etc., ou [ǂ͡k, ǂ͡ɡ, ǂ͡ŋ, ǂ͡q, ǂ͡ɢ, ǂ͡ɴ]. Quando a articulação dorsal foi omitida, um [k] poderá ser presumido. Pesquisas recentes, no entanto, vêm questionando este conceito do 'acompanhamento'. Nestes casos, a letra do clique representa as duas articulações, não há distinção uvular-velar, e a letra que acompanha representa o tipo de clique: [ǂ, ɡǂ, ŋǂ] etc.
+Os símbolos para as implosivas surdas [ƥ, ƭ, ƈ, ƙ, ʠ] não são mais reconhecidas como parte do AFI, embora ainda permaneçam no Unicode. Atualmente o alfabeto se utiliza da equivalente sonora com um diacrítico indicando que é surda: [ɓ̥, ʛ̥], etc.
+Embora ainda não tenha sido confirmado em qualquer idioma, e, portanto, não seja reconhecido explicitamente pela AFI, uma implosiva retroflexa, [ᶑ], está disponível em suplementos para a Unicode (Unicode Phonetic Extensions Supplement), acrescentados à versão 4.1 do Unicode Standard, ou podem ser criadas como um [ɗ̢] composto.
+O símbolo para a ejetiva frequentemente toma o lugar de uma oclusiva glotal sobrescrita nas soantes glotalizadas porém egressivas, como [mˀ], [lˀ], [wˀ], [aˀ]. Estes podem ser transcritos também pelos pouco acurados [m̰], [l̰], [w̰], [a̰].
+
+
+=== Vogais ===
+
+As vogais são produzidas sem nenhum impedimento na passagem da corrente de ar: [i], [e], [a], [o], [u], etc.
+As semivogais, conforme o nome diz, são sons que têm ao mesmo tempo traços de consoantes e de vogais: [j], [w].
+As vogais constituem uma classe de sons cuja produção não envolve uma constrição significativa dos articuladores na cavidade oral, espaço onde a maioria das vogais é produzida. Contrariamente às consoantes, que requerem três parâmetros para a sua descrição, a descrição de vogais requer o fornecimento de informação sobre quatro aspectos da sua articulação, nomeadamente:
+
+Subida ou descida do corpo da língua (altura: altas, médias, baixas);
+Avanço ou recuo do corpo da língua (anteriores vs. posterior/recuadas);
+Arredondamento ou não dos lábios (arredondadas vs. não arredondadas);
+Realização destes movimentos com gestos tensos ou relaxados.
+
+
+== Alternativa ==
+Jakub Marian desenvolveu um alfabeto fonético mais genérico e universal em contraposição ao IPA, que é baseado e referenciado tão somente ao Alfabeto latino. Cada consoante é definida por um símbolo gráfico formado por dois parâmetros "maiores" (modo e ponto de articulação) e um "menor" (sonora ou surda). Por suas vez, cada vogal apresenta dois parâmetros maiores para abertura e posição (frontal, média, posterior, etc.), havendo um menor "arredondamento" da mesma.
+
+
+== Licença ==
+O IPA e todas as suas subpartes são licenciadas desde 2005 para a Associação Fonética Internacional. A partir de 2012, são disponibilizados gratuitamente sob a licença Creative Commons Attribution-Sharealike 3.0 Unported (CC-BY-SA); que permite qualquer tipo de reutilização (incluindo reprodução comercial e trabalhos derivados), desde que: seja colocada no texto a atribuição e a reprodução, ou o trabalho derivado esteja com a mesma licença.
+
+
+== Ver também ==
+
+SAMPA, um método de mapear sinais IPA para ASCII
+Kirshenbaum, outro método
+X-SAMPA, alfabeto fonético dos métodos de avaliação da fal
+Alfabeto fonético da OTAN (informalmente conhecido como "alfabeto Zulu" na aeronáutica brasileira)
+
+
+== Referências ==
+
+
+== Ligações externas ==
+«Página oficial do IPA» 
+«Tabela do IPA pronunciável» 
+«Origem das tabelas do IPA» 
+«Ouvir e pronunciar as letras do alfabeto português». com exemplos, exercícios, ditados, arquivos de som (pt–fr) 
+«Tabela IPA com pronúncia» (em inglês). Laboratório de Fonética, Universidade de Torino, Itália . 
+«Transcrição fonética AFI de texto Inglês». utilizando o Alfabeto Fonético Internacional (britânica e americana pronunciação). «Transcrição fonética de palavras automática e pronúncia fonética». por Easy Pronunciation

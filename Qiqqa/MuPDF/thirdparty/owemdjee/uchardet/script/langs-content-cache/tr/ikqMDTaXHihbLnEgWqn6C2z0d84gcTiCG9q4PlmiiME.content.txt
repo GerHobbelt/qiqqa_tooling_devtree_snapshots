@@ -1,0 +1,170 @@
+revision: 28825466
+title: Labyrnavirus
+url: https://tr.wikipedia.org/wiki/RNA_vir%C3%BCsleri
+
+
+---
+
+Genetik materyali RNA (ribonükleik asit) olan virüslere RNA virüsü denir. Nükleik asitleri genellikle tek iplikçikli RNA (tiRNA) yapısındadır ancak çift iplikçikli olanlar da mevcuttur (çiRNA). Önemli insan hastalıklarına neden olan RNA virüslerine örnekler: ebola virüsü, SARS, nezle, grip, hepatit C, batı nil virüsü, çocuk felci ve kızamık.
+UAVTK sınıflandırmasındaki RNA virüs aileleri, Baltimor sınıflandırmasında Grup III, Grup IV ve Grup V'in altında yer almaktadırlar, genetik materyal olarak RNA barındıran ancak replikasyonda aracı olarak DNA kullanan virüsler (Retrovirüs) ise Grup VI'da yer alırlar.
+Retrovirüsler haricindeki tüm RNA virüslere ribovirüs de denilmektedir.
+
+
+== Karakteristikleri ==
+
+
+=== Tek iplikçikli RNA virüsleri ve RNA yönelimi ===
+Tek iplikçikli RNA virüsleri genom yönelimlerine (polarite) göre de alt gruplara ayrılırlar, bunlar pozitif yönelimli, negatif yönelimli ya da çift yönelimli (ambises) olabilmektedirler. Pozitif yönelimli RNA, mRNA'ya benzer ve bu nedenle konak hücre ribozomları tarafından doğrudan okunabilir. Negatif yönelimli RNA ise mRNA'nın tamamlayıcısıdır, konak hücre ribozomlarının okuyabilmesi için RNA polimeraz enzimi tarafından pozitif iplikçiğe dönüştürülmesi gerekir. Pozitif yönelimli RNA'ya enfektif RNA'da denmektedir. Ambisens RNA virüsleri, pozitif iplikçikli genlere çevirmek dışında negatif yönelimli RNA virüslerine benzerler.
+
+
+=== çift iplikçikli RNA virüsleri ===
+
+Çift iplikçikli RNA virüsleri, virüslerin çok geniş konak aralığına sahip (insan, hayvan, bitki, mantar ve bakteri),  genom segment sayısı birden onikiye kadar değişebilen ve virion organizasyonu (T-sayısı, kapsid katmanları ya da taretleri) farklı bir grubunu temsil eder. Bu grubun içinde rotavirüsler de dahil olmak üzere önemli birçok patojen virüsler yer almaktadır. 
+
+
+=== tek iplikçikli ters transkripsiyonlu RNA virüsleri ===
+Bu grupta Retrovirüsler yer alır. Bu virüslerin genomları diploit yapıdadır (tek iplikçikten iki adet barındırır). Relikasyonda RNA ters transkripsiyon (RNA'ya bağımlı DNA polimeraz) enzimi vasıtasıyla DNA'ya dönüştürülür. Bu DNA konak hücre genomuna entegre olabilmektedir (profaj).
+
+
+=== Mutasyon oranları ===
+RNA virüslerinin mutasyon oranları DNA virüslerine oranla çok daha fazladır, bunun nedeni DNA polimeraz enziminin hata düzeltme kabiliyetinin olmasıdır. Bu durum RNA virüslerine karşı etkili aşı geliştirme çabalarını zorlaştrmaktadır. Retrovirüsler yüksek mutasyon oranlarına sahip olmalarının yanı sıra, aracı DNA ile konak genomuna entegre olabilmektedirler (ve böylece konak DNA'sının hata düzeltme sisteminden faydalanırlar). Bazı RNA virüslerinde replikasyon döngüsünü etkileyecek mutasyonlar tolere edilemez. Örneğin, hepatit C virüsü genomunun kor proteinlerini kodlayan bölgeleri yüksek oranda korunur, çünkü bu kısım dahili ribozom giriş sahasını kapsayan RNA yapısını içerir.
+
+
+== Grup III—çiRNA virüsleri ==
+On bir aile, belirlenmemiş cinsler ve türlerin tanımlandığı bir gruptur.
+Aile Amalgaviridae
+Aile Birnaviridae
+Aile Chrysoviridae
+Aile Cystoviridae
+Aile Endornaviridae
+Aile Hypoviridae
+Aile Megabirnaviridae
+Aile Partitiviridae
+Aile Picobirnaviridae
+Aile Reoviridae—Rotavirus dahil
+Aile Totiviridae
+Aile Quadriviridae
+Belirlenmemiş türler:
+Botrytis porri RNA virus 1
+Circulifer tenellus virus 1
+Cucurbit yellows associated virus
+Sclerotinia sclerotiorum debilitation-associated virus
+Spissistilus festinus virus 1
+
+
+== Grup IV—pozitif yönelimli tiRNA virüsleri ==
+Bu grup altında üç takım ve 33 aile tanımlanmıştır. Bunun yanında sınıflandırılmamış türler ve cinsler de bulunmaktadır.
+
+Takım Nidovirales
+Aile Arteriviridae
+Aile Koronavirüsler — Koronavirüs, MERS, SARS ve 2019-nCoV dahil
+Aile Mesoniviridae
+Aile Roniviridae
+Takım Picornavirales
+Aile Dicistroviridae
+Aile Iflaviridae
+Aile Marnaviridae
+Aile Picornaviridae—Poliovirus, Rhinovirus (nezle virüsü), Hepatitis A virüsü dahil
+Aile Secoviridae, Comovirinae alt ailesi dahil
+Cins Bacillariornavirus
+Cins Dicipivirus
+Cins Labyrnavirus
+Cins Sequiviridae
+Tür Kelp fly virus
+Takım Tymovirales
+Aile Alphaflexiviridae
+Aile Betaflexiviridae
+Aile Gammaflexiviridae
+Aile Tymoviridae
+Belirlenmemiş:
+Aile Alphatetraviridae
+Aile Alvernaviridae
+Aile Astroviridae
+Aile Barnaviridae
+Aile Benyviridae
+Aile Bromoviridae
+Aile Caliciviridae — Norwalk virüsü dahil
+Aile Carmotetraviridae
+Aile Closteroviridae
+Aile Flaviviridae — Sarıhumma virüsü, Batı Nil virüsü, Hepatit C virüsü, Deng humması virüsü, Zika virüsü dahil
+Aile Fusariviridae
+Aile Hepeviridae
+Aile Leviviridae
+Aile Luteoviridae — Arpa sarı bodur virüsü dahil
+Aile Narnaviridae
+Aile Nodaviridae
+Aile Permutotetraviridae
+Aile Potyviridae
+Aile Togaviridae — Kızamıkçık virüsü, Ross Nehri virüsü, Sindbis virüsü, Chikungunya virüsü dahil
+Aile Tombusviridae
+Aile Virgaviridae
+Belirlenmemiş cinsler:
+Cins Blunervirus
+Cins Cilevirus
+Cins Higrevirus
+Cins Idaeovirus
+Cins Negevirus
+Cins Ourmiavirus
+Cins Polemovirus
+Cins Sobemovirus
+Belirlenmemiş türler:
+Acyrthosiphon pisum virus
+Blueberry necrotic ring blotch virus
+Chara australis virus
+Extra small virus
+Jingmen tick virus
+Le Blanc virus
+Nylanderia fulva virus 1
+Orsay virus
+Plasmopara halstedii virus
+Rosellinia necatrix fusarivirus 1
+Santeuil virus
+Solenopsis invicta virus 2
+Solenopsis invicta virus 3
+Uydu virüsler
+Chronic bee paralysis associated satellite virus
+
+
+== Grup V—negatif yönelimli tiRNA virüsleri ==
+Bu grup altında bir takım ve 8 ailetanımlanmıştır. Ayrıca belirlenmemiş cinsler ve türler de bulunmaktadır.
+
+Takım Mononegavirales
+Aile Bornaviridae—Borna disease virus
+Aile Filoviridae—includes Ebola virus, Marburg virus
+Aile Paramyxoviridae—includes Measles virus, Mumps virus, Nipah virus, Hendra virus, RSV and NDV
+Aile Rhabdoviridae—includes Rabies virus
+Aile Nyamiviridae—includes Nyavirus
+Belirlenmemiş aileler:
+Aile Arenaviridae—includes Lassa virus
+Aile Bunyaviridae—includes Hantavirus, Crimean-Congo hemorrhagic fever
+Aile Ophioviridae
+Aile Orthomyxoviridae—includes Influenza viruses
+Belirlenmemiş cinsler:
+Cins Deltavirus—includes Hepatitis D virus
+Cins Dichorhavirus
+Cins Emaravirus
+Cins Nyavirus—includes Nyamanini and Midway viruses
+Cins Tenuivirus
+Cins Varicosavirus
+Belirlenmemiş türler:
+Sclerotinia sclerotiorum negative-stranded RNA virus 1Source:
+
+
+== Notlar ==
+Mantar virüslerinin çoğunluğu çiRNA virüsleridir. +RNA virüslerinin az bir kısmı tanımlanmıştır. İnsanlarda hastalık yapan sarmal RNA virüsleri aynı zamanda zarflıdır.
+
+
+== Ayrıca bakınız ==
+Virüs sınıflandırması
+Positive/negative-sense
+Retrovirüs
+DNA virüsleri
+Viroid
+
+
+== Kaynakça ==
+
+
+== Dış bağlantılar ==
+Medical Subject Headings RNA Viruses
+Animal viruses28 Mart 2010 tarihinde Wayback Machine sitesinde arşivlendi.

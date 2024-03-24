@@ -1,0 +1,29 @@
+revision: 26780675
+title: NeXTSTEP
+url: https://tr.wikipedia.org/wiki/NextStep
+
+
+---
+
+Kapalı kaynak kodlu NeXTStep, NeXTcube gibi özel iş istasyonu bilgisayarları yelpazesini çalıştıracak NeXT Computer tarafından geliştirilen nesne tabanlı, çoklu işletim sistemidir. Daha sonra bilgisayar mimarileri olmuştur.
+NeXTStep'in 1.0 1986'den başlayarak birkaç önizlemelerinden sonra, ilk kararlı sürümü 18 Eylül 1989 tarihinde yayımlanmıştır. NeXTStep doğrudan şu anki Apple Mac OS X işletim sisteminin de doğrudan atası olarak gösterilebilir.Kısacası şimdiki adıyla Mac OS X işletim sisteminin ilki NeXTStep'ti
+
+
+== Tanımlama ==
+NeXTStep şu şekilde tanımlanabilir:
+
+*NIX (Unix-benzeri) tabanlıdır.
+Ağırlıklı olarak Mach ve FreeBSD kernelleri kullanılmıştır.
+Kapalı Kaynak Kodludur.
+C ve Objective C dilleri ile kodlanmıştır.
+Hibrit kernellidir.
+Son Kararlı Sürümü 3.3'dür
+Görsel bir kullanıcı arayüzüne sahiptir.NeXTStep, C ve Objective C dilleri ile kodlandığından, diğer işletim sistemlerine göre daha kolay ve daha hızlı yazılım üretilebiliyordu. Bu nedenle de diğer işletim sistemleri kurulu olan bir bilgisayara göre NeXTStep kurulu bir bilgisayarın daha hızlı kalkınabileceğini söylemişlerdir.
+Bunun yanında NeXTStep, daha önce bu kadar net sunulmamış olan Dock fikrini, daha güçlü bir görsel arayüzü ve rafine edilmiş bir görünümü kullanıcılarına tanıttı. Sevilen fikirler daha sonradan Mac OS X'de de kullanıldı. Bugün hala Dock, Mac OS X 'de kullanılıyor ve sistemin ayrılmaz bir parçası. Ayrıca sistem genelnde kullanılabilen büyük boyutlu ve renkli ikonlar, sürükle bırak özellikleri, 3D ayrıntılar ve sistem genelinde hizmet veren ayrıntılı şekilde basit gösterimlerle hoş görünen dosya sistemini de kullanıcılarına sunmuştur. Şeffaflık, Renk gösterimleri ve Pencere-Sürükleme özellikleri de bunlar arasındaydı.
+
+
+== Tarihi ==
+Apple'dan belli nedenlerle ayrılan Steve Jobs, kendi firması olan NeXT'i kurdu ve Mac OS X'in temelleri olan NeXTStep adlı İşletim Sistemini yaptı. Çok geçmeden gelişti ancak Apple, batmak üzereyken Steve Jobsu CEO olarak işine getirdi. Çok geçmeden Steve Jobs, bu firmayı da kurtardı ayrıca NeXTStep'i yeni Mac OS olarak düşünmeye başladı.
+
+
+== Sürüm Bilgileri ==

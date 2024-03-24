@@ -1,0 +1,52 @@
+revision: 6189849
+title: Ctrip
+url: https://et.wikipedia.org/wiki/Suur_tulem%C3%BC%C3%BCr
+
+
+---
+
+Hiina suur tulemüür (inglise keeles Great Firewall of China) on Hiina Rahvavabariigi jõustatud seadusandlike meetmete ja tehnoloogiate kombinatsioon, mis reguleerib Interneti kasutamist Hiina territooriumil. Selle roll Hiina Interneti-tsensuuris on blokeerida juurdepääs valitud välismaistele veebisaitidele ja aeglustada piiriülest Internetiliiklust.Mõju hõlmab välismaistele teabeallikatele juurdepääsu piiramist, välismaiste Interneti-tööriistade (nt Google'i otsing, Facebook, Twitter, Wikipedia jt) ja mobiilirakenduste blokeerimist või välisettevõtete sundimist kohalikke tsensuuriseadusi järgima. Lisaks tsensuurile on Hiina suur tulemüür mõjutanud ka Hiina sisemise Interneti-majanduse arengut, turgutades kodumaiseid ettevõtteid ja vähendades välismaiste Interneti-ettevõtete toodete tõhusust.Alates 2013. aastast haldab tulemüüri Hiina Küberruumi Keskagentuur (CAC), kes vastutab Hiina Kommunistliku Partei tahte elluviimise eest küberruumis. 
+Lähtuvalt põhimõttest "üks riik, kaks süsteemi" ei mõjuta tulemüür selliseid Hiina erihalduspiirkondi nagu Hongkong ja Macau, kuna neil piirkondadel on oma valitsus- ja õigussüsteem ning suur autonoomia. Sellegipoolest on USA välisministeerium teatanud, et keskvalitsuse ametivõimud on neis piirkondades hoolikalt jälginud Interneti kasutamist.Mõiste Hiina suur tulemüür tuleneb informaatika terminist "tulemüür" ja viitest suurele Hiina müürile. Seda kasutas esmakordselt trükisena Geremie Barmé 1997. aastal. Terminit hakkas Pekingis kasutama 1996. aastal Stephen Guerin, kes töötas Pekingis asuvas veebinõustamisettevõttes. Mõiste hakkas laialdasemalt levima peale Guerini 1996. aastal CNN-ile ja NPR-ile intervjuud Gueriniga hõlmasid Guerinit Hiina tulemüüri ümberpööramist.
+
+
+== Tõkestusmeetodid ==
+
+
+=== Aktiivne filtreerimine ===
+Hiina tulemüür takistab valikuliselt sisule juurdepääsu saamist. Seda teostatakse enamasti Cisco, Huawei ja Semptiani riistvara abil, mis pakub tsensuuriteenuseid peamiselt võrguseadmetele nagu IPS, PE ruuterid või DNS-serverid. California ja New Mexico ülikooli teadlased, kes on suurt tulemüüri uurinud, on väitnud, et tsensuurisüsteem pole tõeline tulemüür, kuna keelatud materjali on mõnikord võimalik liigutada läbi mitme ruuteri või isegi kogu süsteemi ilma, et see oleks blokeeritud.
+
+
+== Tõhusus ja mõju ==
+Hiina suur tulemüür avaldab otsest mõju elanikkonna veendumustele ja mõtteviisile. Hiina valitsus kasutab seda peamiselt ajupesu tegemiseks ja "õige mõtlemise" õhutamiseks dissidentlike ideede tsenseerimise teel. Hiina tulemüüri üks peamisi eesmärke on luua keskkond, kus inimestel on samad väärtused ja sama arvamus. Seetõttu on see poliitiline tööriist, mida Hiina kommunistliku partei kasutab oma ideede edendamiseks. 
+Selle tööriista mõju on raske täpselt hinnata, kuid selle tagajärjed võivad olla väga tugevad ja kogu maailma mõjutavad: selle asemel, et otseselt elanikkonna kontrollimiseks jõudu kasutada, loob Hiina suur tulemüür vaikselt keskkonna, kus inimestel on samad väärtused ja ideed, mida CAC otseselt kontrollib. Mõned näited propageeritavatest ideedest: 
+
+Taiwan ja Tiibet on osa Hiinast.
+1989. aasta Tiananmeni väljaku proteste ei tohiks pidada oluliseks
+Pornograafia, roppused ja erootika on räige tegevus.
+Demokraatia ei ole riigi juhtimiseks parim süsteem. Selliseid demokraatia pooldajaid tuleks käsitleda terroristidena ja Hongkongi meeleavaldusi korraldavad kindlasti välismaised üksused.
+Falun Gong ja muud Hiina Kommunistliku Partei vastased rühmitused on "keelatud".Tulemüüri roll on mõjutada Hiina kodanike, blokeerides juurdepääsu veebisaitidele, mis ülaltoodud ideid pärsivad või kritiseerivad. Veebiruumi nn "õige mõtlemisega" täitmiseks kasutatakse ka muid vahendeid, näiteks 50-sendine partei, laenude ja ähvardust kasutamine sundimaks Hiina ettevõtteid neid ideid reklaamima ning kodanike survestamine parteile vastumeelseid ideid mitte järgima. 
+Lisaks rahvastiku kontrolli aspektile toimib suur tulemüür ka kaubanduse protektsionismi vormina, mis on võimaldanud Hiinal kasvatada oma kodumaiseid internetihiiglasi, nagu Tencent, Alibaba ja Baidu. Hiinal on oma versioon paljudest välismaistest veebisaititest ja rakendustest, näiteks: Tencent Video (YouTube), Tencent Weibo (Twitter), Qzone (Facebook), WeChat (WhatsApp), Ctrip (Orbitz ja teised), Zhihu (Quora). Ligikaudu veerand maailma internatikasutajatest (u 700 miljonit kasutajat), kes elab Hiina suure tulemüüri "taga", võib pidada väljaspool Hiinat eksisteeriva Internetiga "paralleelses universumis" olevateks.
+
+
+== Kõrvalehoidmine ==
+Kuna suur tulemüür blokeerib sihtkoha IP-aadressid ja domeeninimed ning kontrollib saadetavaid või vastuvõetavaid andmeid, on põhiline tsensuurist kõrvalehoidmise strateegia puhverserverite kasutamine ja andmete krüpteerimine. Enamik kõrvalehoidmise tööriistu ühendab need kaks mehhanismi.
+
+
+== Tehnoloogia eksport ==
+Rahvusvaheline meediavabaduse eest võitlev organisatsioon, piirideta ajakirjanikud kahtlustavad, et sellised riigid nagu Kuuba, Vietnam, Zimbabwe ja Valgevene on Hiinast hankinud jälgimistehnoloogia, ehkki neis riikides on tsensuur leebem kui Hiinas.
+
+
+== Protestid Hiinas ==
+Hoolimata rangetest seadustest, jätkavad Hiina elanikud protesti oma valitsuse katse vastu Internetti tsenseerida. Varjatumad protestijad loovad turvalised SSH- ja VPN-ühendused, kasutades selliseid tööriistu nagu UltraSurf. Nad saavad kasutada ka laialdaselt kättesaadavaid puhverservereid ja virtuaalseid privaatvõrke, et "ronida üle müüri". Esineb ka aktiivset protesti. Hiinlased postitavad oma kaebused veebis ja mõnel juhul on need olnud edukad. Noore võõrtöötaja Sun Zhigangi surm 2003. aastal äratas Hiina avalikkusele intensiivse ja laialdase veebipõhise reageerimise, hoolimata valitsuse karistamise ohust. Mõni kuu hiljem tühistas peaminister Wen Jiabao Hiina seaduse, mis tõi kaasa Suni surma. Kui Google teatas 2010. aasta jaanuaris, et ta ei tsenseeri enam oma Hiinast tulenevate veebiotsingute tulemusi, isegi kui see tähendab, et peab tegevuse Hiina täielikult lõpetama, käisid paljud hiinlased ettevõtte Hiina kontorites pakkuda kingitusi, näiteks lilli, puuvilju ja sigarette.
+
+
+== Nõuete täitmine ==
+Hiina äriseadustik kohustab Mandri-Hiinas äri tegevatele kodu- ja välismaistele Interneti-ettevõtetele koostöö suure tulemüüriga. Ettevõtted vastutavad sisu eest, mille nad oma veebisaitidele panevad, samuti sisu eest, mille kasutajad nende veebisaidile postitavad. See aitab Hiinal edendada enesetsensuuri, muutes nende tsenseerimise töö lihtsamaks ja võimaldades neil jääda riigiks, kes kontrollib kogu oma meediaruumi.Ameerika ettevõtete Hiina tütarettevõtted Yahoo!, Google (Google'i teenused on blokeeritud, kuid Google on endiselt Hiinas esindatud) ja Microsoft täidavad Hiinas tegutsemise tingimust. Ehkki nende ettevõtete juhtkond on väljendanud korrapäraselt oma vastumeelsust Hiina suure tulemüüri poliitika suhtes, peavad nad samas Hiinas äritegevuse oluliseks osaks ja paremaks kui alternatiivi (ehk Hiinas mitte üldse tegutsemist). Yahoo! Asutaja Jerry Yang on lisaks vihjanud, et välismaiste Interneti-ettevõtete olemasolu Hiinas aitab pikas perspektiivis Hiinas vähendada Interneti-piiranguid kehtestada.
+
+
+== Viited ==
+
+
+== Lisalugemist ==
+Nilekani, Nandan, "Andmed inimestele: India kaasav Internet", Foreign Affairst, vol. 97, nr. 5 (september / oktoober 2018), lk. 19–26.
+Segal, Adam, "Kui Hiina valitseb veebi: tehnoloogia riigi teenimiseks", Foreign Affairs, vol. 97, nr. 5 (september / oktoober 2018), lk. 10–14, 16–18.

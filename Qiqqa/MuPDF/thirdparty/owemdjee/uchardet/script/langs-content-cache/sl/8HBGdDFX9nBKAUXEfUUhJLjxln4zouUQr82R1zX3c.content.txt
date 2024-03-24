@@ -1,0 +1,156 @@
+revision: 5037738
+title: Slanost
+url: https://sl.wikipedia.org/wiki/Slanost
+
+
+---
+
+Slánost je merilo za vsebnost soli (natrijevega klorida) v vodi. Navadno je izražena v procentih ali promilih, ki ustrezajo utežnemu deležu natrijevega klorida v skupni masi raztopine; tako pomeni slanost 3 % ali 30‰, da je v 1000 g vodne raztopine (slane vode) raztopljeno 30 g natrijevega klorida.
+Vodne biotope glede na slanost delimo na sladkovodne, brakične in slanovodne.
+
+
+== Slanost morij in oceanov ==
+Slanost svetovnih morij variira od skoraj 0 do prek 40 promilov, pri čemer pa ima 90 odstotkov vse vode na svetu slanost med 34 in 35 promili.
+
+
+== Zveza med slanostjo in gostoto ==
+Gostota čiste vode je približno 1000 kg/m³. Morska voda ima zaradi raztopljene soli večjo gostoto; povprečna gostota na gladini je približno 1027 kg/m³. Dva dejavnika vplivata na to, da lahko gostota morske vode odstopa od te vrednosti: temperatura in slanost. Z višanjem temperature gostota morske vode pada, z večanjem slanosti pa raste.
+Plast vode z manjšo gostoto plava na plasti gostejše vode. Če vzamemo dve plasti vode z enako slanostjo, bo plast toplejše vode plavala na plasti hladnejše vode. Razmere pa se zapletejo, ker ima temperatura večji vpliv na gostoto od slanosti. Tako se lahko zgodi, da plast toplejše vode z večjo slanostjo plava na plasti hladnejše vode z manjšo slanostjo. Temperatura vode v oceanih je z naraščajočo globino vse nižja, kar posledično pomeni, da je na oceanskem dnu gostota vode največja, na gladini pa najmanjša. Tokovi v globini so horizontalni, kar pomeni, da se voda premika le v plasti vode enake gostote.
+Gostoto oceanske vode redkokdaj merijo neposredno, saj to zahteva zajem vzorcev vode v različnih globinah, ki jih moramo privleči na gladino in jim določiti gostoto. Namesto tega gostoto navadno izračunajo iz formule, ki upošteva temperaturo, slanost in tlak (hidrostatski tlak, ki narašča z globino). Približna formula za izračun gostote morske vode je:
+
+  
+    
+      
+        ρ
+        =
+        C
+        (
+        h
+        )
+        +
+        β
+        (
+        h
+        )
+        S
+        −
+        α
+        (
+        T
+        ,
+        h
+        )
+        −
+        γ
+        (
+        T
+        ,
+        h
+        )
+        (
+        35
+        −
+        S
+        )
+        T
+      
+    
+     
+  Pri tem je gostota ρ izražena v kilogram/m³, slanost S v promilih, temperatura T v stopinjah Celzija in globina h v kilometrih. Korekcijski faktorji v enačbi so:
+
+  
+    
+      
+        C
+        =
+        999
+        
+          ,
+        
+        83
+        +
+        5,053
+        h
+        −
+        0,048
+        
+          h
+          
+            2
+          
+        
+      
+    
+     
+  
+
+  
+    
+      
+        β
+        =
+        0,808
+        −
+        0,008
+        5
+        h
+      
+    
+     
+  
+
+  
+    
+      
+        α
+        =
+        0,708
+        [
+        1
+        +
+        0,351
+        h
+        +
+        0,068
+        (
+        1
+        −
+        0,068
+        3
+        h
+        )
+        T
+        ]
+      
+    
+     
+  
+
+  
+    
+      
+        γ
+        =
+        0,003
+        [
+        1
+        −
+        0,059
+        h
+        −
+        0,012
+        (
+        1
+        −
+        0,064
+        h
+        )
+        T
+        ]
+      
+    
+     
+  
+
+
+== Zunanje povezave ==

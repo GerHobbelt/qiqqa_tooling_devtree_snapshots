@@ -1,0 +1,98 @@
+revision: 22889771
+title: Morse Code
+url: https://cs.wikipedia.org/wiki/Morseova_abeceda
+
+
+---
+
+Morseova abeceda (obecně morseovka) je skupina symbolů, která je používána v telegrafii. Kóduje znaky latinské abecedy, číslice a speciální znaky do kombinací krátkých a dlouhých signálů. Ty je možné přenášet na dálku jednodušším způsobem než všechny znaky abecedy.
+K přenosu morseovky je možné použít zvukový signál, elektrický signál (telegraf) a optický signál (signalizace vlajkami). Záznam na papír pomocí teček a čárek, světelné záblesky. Nejběžnější použití je dnes v amatérské radiotelegrafii. Rychlost komunikace se pohybuje od 60 do 250 znaků za minutu.
+
+
+== Užití Morseovy abecedy ==
+Celá historie vzniku telegrafní abecedy je popsána například v knize Williama G. Pierponta The Art and Skill of Radio Telegraphy. Kódování abecedy podobné tomu dnešnímu vymyslel Alfred Vail, asistent amerického vynálezce, malíře a sochaře Samuela Morse. Ten také uskutečnil v roce 1844 první telegrafické spojení mezi Washingtonem a Baltimorem. Původní Morseova abeceda obsahovala pouze číslice vyjádřené sekvencí teček, písmena a slova byla v tomto systému kódována jako kombinace číslic. Vail tento nepraktický systém nahradil vlastním, který se později nazýval American Code. Později vznikla verze používaná v Evropě, (viz Mezinárodní telekomunikační unie) až nakonec byly oba kódy sjednoceny a v roce 1918 byla přijata mezinárodní verze „Morseovy“ abecedy (tzv. International Code). Při volbě kódování byly znaky voleny tak, aby nejfrekventovanějším písmenům (v angličtině) odpovídaly nejkratší sekvence teček a čárek. Proto má také nejfrekventovanější písmeno „E“ znak „•“ (tečka), tedy jeden jediný krátký signál. (Na podobné optimalizaci, kdy nejčastěji používaným znakům je přiřazen nejkratší kód, je založeno také Huffmanovo kódování užívané při bezeztrátové komprimaci dat.)
+Morseovka se používala na celém světě k vysílání a příjmu zpráv telegrafem (elektrický signál po drátech), nebo radiotelegrafem (přenos radiovými vlnami). Přenášená zpráva se nazývá telegram. V pozdější době byly tyto způsoby komunikace nahrazeny telefonií, dálnopisem a v současné době také internetovými službami.
+Morseovka je však stále používána pro svou technickou nenáročnost a snadné použití, a to hlavně radioamatéry nebo skauty. Do roku 1996 ji ještě používaly jako prostředek tísňového volání všechny lodě o výtlaku větším než 300 tun. Od začátku 21. století byla telegrafie postupně vytlačena digitálními a satelitními systémy, například globálním námořním a tísňovým systémem GMDSS.
+Pro nouzové volání na moři se používal známý signál SOS. Jedná se o nepřerušenou sekvenci tří teček, tří čárek a tří teček. Tento signál byl vybrán kvůli své výraznosti. Obecně tradované tvrzení, že má znamenat „save our souls“, česky „spaste naše duše“, rusky „Spaste Od Smerti“ je pozdější výmysl, sousloví bylo používáno jen jako mnemotechnická pomůcka. SOS znělo i z paluby potápějícího se Titanicu, byť pouze jedenkrát. Ve všech ostatních voláních použil Titanic starší a tehdy ještě rozšířenější nouzový signál CQD (seek you, distress). Pro nouzové volání na souši se používal signál QRRR.Morseovka se v současnosti používá mj. pro dorozumívání s paralyzovanými osobami, kteří nejsou schopni jiných druhů komunikace. Existují také snahy o použití Morseovky v mobilních telefonech. Při jejím dobrém ovládání je kódování textových zpráv rychlejší, než pomocí „klávesnice“ na mobilu. Stačí jen 2 tlačítka nebo jen 1 tlačítko s krátkým a dlouhým stiskem. Příjemci je zpráva ovšem zobrazována v latince [zdroj?]. 
+V dobách před nástupem chytrých telefonů (konec 90. let, začátek 21. století) byla rychlost telegrafie v porovnání s moderními technologiemi mobilních telefonů několikrát demonstrována v televizních show. Telegrafista přijal zprávu odvysílanou v morseovce mnohem dříve, než dokázal tutéž zprávu ve formě SMS naťukat a odeslat uživatel běžného telefonu.
+Analogicky mohou být příchozí textové zprávy převedeny do Morseovky a zobrazeny pomocí vibrací, což by umožnilo „hands-free čtení“ textových zpráv.
+Morseovka se hojně používá v šifrovacích hrách, protože je hodně známá a dá se pěkně kódovat mnoha různými způsoby (stačí rozlišit tři typy objektů: tečka, čárka, oddělovač).
+
+
+== Kód Morseovy abecedy ==
+Pro výuku Morseovky se někdy jako mnemotechnická pomůcka používají pomocná slova, jejichž počáteční písmeno a délka slabik pomáhá zapamatovat si kód písmene. U některých písmen může být pomocných slov více (např. F – Filipíny/Fifipírko, I – ibis/Ivan, S – Sekera/Sobota…). Díky lidové tvořivosti existují i jiné skupiny pomocných slov, např. „alkoholická morseovka“ (A = absťák, B = blít až doma, C = cíl je výčep, … [1], [2]).
+Tato metoda je nevhodná až kontraproduktivní pro výuku vyšších rychlostí příjmu, které jsou používány v armádě nebo radioamatéry. Při takových rychlostech je nutné si automaticky pamatovat, jaké sekvenci tónů odpovídá jaké písmenko. Používání pomocných slov je v tomto případě spíše matoucí a obvykle se snáze naučí přijímat Morseovy značky sluchem ten, kdo pomocná slova nezná, než ten, kdo se je někdy naučil.
+Jinou vhodnou pomůckou je barevná tabulka znaků. Používáním přejde pořadí znaků lépe do krve a později nezatěžuje neustálým opakováním pomocných slov.
+
+
+=== Základní písmena ===
+
+
+=== Další písmena ===
+
+
+=== Číslice ===
+Zkrácené kódy číslic je možno užít tehdy, pokud je zřejmé, že vysíláme číslice a je důležitá co nejvyšší rychlost vysílání. V hojné míře se užívají při radioamatérských soutěžích. Zkrácené kódy se zásadně neužívají, pokud hrozí jejich nechtěná záměna s písmeny, například pokud jde o číslici uvnitř volacího znaku.
+
+
+=== Ostatní znaky ===
+Ostatní znaky patřící do mezinárodní Morseovy abecedy.
+
+
+==== Vykřičník ====
+Vykřičník v mezinárodním Morseově kódu chybí, ale existují různé neoficiální varianty.
+
+
+==== Zavináč ====
+Znak zavináče byl oficiálně přidán do Morseovy abecedy v prosinci 2003 na zasedání ITU. Byl prvním přidaným znakem po několika desetiletích. Předchozí znak byl přidán ještě před 2. světovou válkou.
+Znak pro zavináč vznikl spojením kódů pro „A“ a „C“, což je zkratka pro „at commercial“. Nový kód se oficiálně jmenuje „commat“ (zkratka pro „commercial at“, formální anglický název pro zavináč).
+
+
+=== Příklady ===
+  
+
+
+== Pomůcka pro čtení Morseovy abecedy ==
+Její použití je jednoduché a vhodné zvláště pro děti, které se teprve učí přijímat zprávy. Při čtení postupujeme zleva doprava. Každé políčko představuje část jednoho vyslaného znaku a to podle barvy (tečka nebo čárka) a sloupce (pořadí tečky či čárky ve vysílaném znaku). V následující tabulce představují modrá pole čárku a žlutá tečku.
+Pokud Váš prohlížeč nepodporuje kaskádové styly nebo z jiného důvodu nevidíte barevná políčka, pak vězte, že modré (čárka) je vždy políčko horní (T, M, X, U, …) a žluté (tečka) je políčko spodní (E, I, S, D, Z, …).
+
+Tabulku je možné dále rozšířit o speciální či národní znaky, případně číslice. Velmi podstatně se nám ale zvětší její formát.
+
+
+=== Příklad čtení ===
+Přijato: -..-
+
+Rozdělíme přijatý znak na jednotlivé části.
+Postupujeme zleva doprava.
+Vybereme políčko v prvním sloupci odpovídající první části (čárka) – T
+Dále již postupujeme pouze v řádku s vybraným písmenem.
+Vybereme políčko v druhém sloupci odpovídající druhé části (tečka) – N
+Vybereme políčko v třetím sloupci odpovídající třetí části (tečka) – D
+Vybereme políčko v čtvrtém sloupci odpovídající čtvrté části (čárka) – X
+Zpracovali jsme všechny části. Písmeno X odpovídá přijatému znaku  -..-
+
+
+== Tempo „PARIS“ ==
+Při vysílání Morseovy abecedy v akustické podobě se používají následující pravidla:
+základní časovou jednotkou je délka tečky
+čárka má stejnou dobu trvání jako tři tečky
+zvuková pauza uvnitř značky má stejnou dobu trvání jako jedna tečka
+zvuková pauza mezi značkami má stejnou dobu trvání jako jedna čárka
+zvuková pauza mezi slovy má stejnou dobu trvání jako sedm tečekTyto poměry umožňují sluchem zcela spolehlivě rozlišit tečku od čárky i druh akustické pauzy. Za další, poměr celkové doby trvání vysílání tečky nebo čárky včetně pauzy uvnitř značky je 2:1, což usnadňuje udržet konstantní rychlost vysílání. Tempo vysílání je tedy obdobné, jako kdybychom na hudební nástroj tečku hráli jako osminovou notu a čárku jako čtvrťovou notu, pochopitelně pokud předpokládáme, že hrajeme značně staccato.
+Pro určení rychlosti vysílání se bere jako reference pětipísmenné slovo „PARIS“ (celkem 10 teček, 4 čárky, 4 mezery). Celková doba jeho odvysílání včetně mezery za slovem je tedy 50 základních jednotek (délek teček). Pokud tedy například hovoříme o tempu vysílání 12 slov za minutu (WPM, words per minute), odpovídá to právě rychlosti průměrně jednoho písmene (znaku) za sekundu (12*5 = 60 znaků za minutu), délka tečky je 60/(12*50) = 0,1 sekundy.
+
+
+== Morseova signální lampa ==
+Pro předávání zpráv na menší vzdálenosti za přiměřené viditelnosti je možno používat morseovu signální lampu, kdy se nejedná o přenos elektrických impulsů po drátech nebo rádiově ale o přenos pomocí světelného paprsku. Tento způsob se často využívá v lodní dopravě a u vojenských námořních sil. Výhodou je, že vysílání neporuší rádiový klid. Nevýhodou je naopak snadné prozrazení vysílajícího objektu a nutná přímá dohlednost mezi vysílající a přijímací stranou. Protože světelný zdroj (žárovka, výbojka) nelze použít pro rychlé střídání stavu svítí/nesvítí, používá se předsazená clona tvořená několika žaluziemi, které se otevírají/zavírají vysílající obsluhou.
+
+
+== Reference ==
+
+
+== Externí odkazy ==
+ Obrázky, zvuky či videa k tématu Morseova abeceda na Wikimedia Commons 
+ Galerie Morseova abeceda na Wikimedia Commons
+ Téma Morseovka ve Wikicitátech
+Morseova abeceda – informace o morseovce, Samuelu Morseovi, telegrafii + online překladač
+Morseova abeceda a převodní tabulka – web věnovaný morseově abecedě a její historii
+Překladač morseovy abecedy Archivováno 23. 8. 2015 na Wayback Machine. – Překladač morseovy abecedy s možností volby znaků pro čárku/tečku a možností šifrování/dešifrování (binární kód, velká a malá písmena ap.)

@@ -1,0 +1,67 @@
+revision: 15499368
+title: datele
+url: https://ro.wikipedia.org/wiki/Baz%C4%83_de_date
+
+
+---
+
+O bază de date, uneori numită și bancă de date (abreviat BD), reprezintă o modalitate de stocare a unor informații și date pe un suport extern (un dispozitiv de stocare), cu posibilitatea extinderii ușoare și a regăsirii rapide a acestora. La prima vedere sarcina poate părea banală. Totuși, în condițiile în care este vorba de a lucra cu milioane de elemente, fiecare putând consta din cantități de date care trebuie accesate simultan prin Internet de către mii de utilizatori răspândiți pe întreg globul; și în condițiile când disponibilitatea aplicației și datelor trebuie să fie permanentă (de ex. pentru a nu pierde ocazia de a încheia afaceri), soluțiile bune nu sunt de loc simple.
+De obicei o bază de date este memorată într-unul sau mai multe fișiere. Bazele de date sunt manipulate cu ajutorul sistemelor de gestiune a bazelor de date.
+
+
+== Tipuri de baze de date ==
+Există multe tipuri de baze de date:
+
+Baze de date relaționale: elementele dintr-o bază de date relațională sunt organizate ca un set te tabele, cu rânduri și coloane. Tehnologia bazelor de date relaționale oferă cel mai eficient și flexibil mod de a accesa informațiile structurate.Baze de date orientate pe obiecte: în care informațiile sunt reprezentate sub formă de obiecteBaze de date distribuite: sunt formate din două sau mai multe fișiere aflate în locații diferite. Baza de date poate fi stocată pe mai multe computere aflate în aceeași locație fizică sau aflate în diferite rețele.Baze de date NoSQL:  denumite si baze de date nerelationale, permit stocarea și gestionarea datelor nestructurate sau semi-structurate. Sunt populare ca aplicații web, devenind din ce în ce mai uzuale și mai complexe.Baze de date grafice: stochează datele sub forma unor entități și a relațiilor dintre acestea.Baze de date OLTP: sunt baze de date rapide, pentru analize, destinate rulării unui număr mare de tranzacții efectuate de mai mulți utilizatori (tranzacții bancare online și ATM, comerț electronic și achiziții din magazine, rezervări la hoteluri și companii aeriene)Baze de date ierarhice: stochează informații într-o structură ierarhică care leagă înregistrările într-o structură arborescentă. Sunt organizate în formă de noduri unde fiecare nod se subordonează unui nod de nivel ierarhic imediat superior.Baze de date open source: au codul sursă de tip open source, cele mai cunoscute fiind cele SQL și NoSQLBaze de date în cloud: colectie de date, structurate sau nestructurate aflate în platformă cloud privată, publică sau hibridă. Există două tipuri de modele de baze de date în cloud: bazele de date tradiționale și bazele de date ca serviciu (DBaaS). Cu DBaaS, activitățile administrative și de mentenanță sunt efectuare de furnizorul serviciului.Baze de date multi-model: combină diferite tipuri de modele de baze de date într-un singur sistem back-end integrat cu care se pot acomoda diverse tipuri de date.Baze de date pentru documente: concepute pentru stocarea, preluarea și managementul informațiilor orientate pe documente. Reprezintă o modalitate modernă de stocare a datelor în format JSON, în loc de stocarea acestora pe rânduri și coloane.Baze de date autonome: sunt cele mai noi sisteme ce funcționează în cloud și utilizează machine learning. Astfel se automatizează securizarea, reglarea, actualizarea, backupul, dar și alte activități comune de management, fără aportul administratorilor.Depozite de date: tip de baze de date creat special pentru interogări și analize rapide.Baze de date bazate pe blockchain: sunt combinație de baze de date tradiționale și baze de date distribuite cu proprietăți blockchain: imuabilitate a datelor, asigurare a integrității, control descentralizat, toleranță bizantină a erorilor și trasabilitate a tranzacțiilor. Datele sunt tranzacționate și înregistrate prin interfața bazei de date susținută de mai multe straturi de blockchain. Baza de date în sine este partajată sub forma unui registru criptat/imuabil, care face ca informațiile să fie deschise pentru oricine. Exemple sunt: BigchainDB, ChainifyDB, Cassandra etc.Cel mai răspândit tip de baze de date este cel relațional, în care datele sunt memorate în tabele. Pe lânga tabele, o bază de date relațională mai poate conține: indecși, proceduri stocate, declanșatori, utilizatori și grupuri de utilizatori, tipuri de date, mecanisme de securitate și de gestiune a tranzacțiilor etc.
+Alte tipuri de baze de date sunt modelul ierarhic, modelul orientat pe obiecte și, mai nou, modelul XML. Bazele de date XML sunt baze de date orientate spre documente care sunt, la rândul lor sunt o categorie de baze de date NoSQL.
+
+
+== Baze de date importante ==
+Scientific and Technical Network
+Zentralblatt MATH
+MRLookup
+ABC-CLIO
+SPIRES
+ArXiv
+BDD
+Didactics of Mathematics
+Jahrbuch Database
+J-EAST
+Audiostreet
+Bazele de date ale proiectelor Wiki, inclusiv Wikipedia
+
+
+== Alte baze de date ==
+Bibliophil
+BIBLUS
+ZVUKI.RU
+Baza de date a muzicienilor din Republica Moldova
+
+
+== Note ==
+
+
+== Vezi și ==
+CUBRID
+PostgreSQL
+MySQL
+Oracle Database
+IBM DB2
+SAP
+SQLite
+HSQLDB (sau HyperSQL)
+NOSQL-Database
+MongoDB
+H2 (DBMS)
+Berkeley DB
+Bază de date distribuită
+Depozit de date
+Structură de date
+
+
+== Legături externe ==
+
+Search Engine and Web Directory
+HSQLDB
+FirebirdSQL
+SQLite

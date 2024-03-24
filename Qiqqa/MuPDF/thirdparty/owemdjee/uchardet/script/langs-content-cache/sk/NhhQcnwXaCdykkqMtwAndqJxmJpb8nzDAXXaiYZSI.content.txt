@@ -1,0 +1,237 @@
+revision: 7592370
+title: Apple
+url: https://sk.wikipedia.org/wiki/Apple
+
+
+---
+
+Apple Inc. (výslovnosť [ˈæpl iŋk]; vo význame Incorporated [inˈkoːpəˌreitid] – akciová spoločnosť) je americká nadnárodná technologická spoločnosť založená v roku 1976 v Silicon Valley, v kalifornskom meste Cupertino v USA. Hlavným programom spoločnosti je výroba a vývoj osobných počítačov Macintosh a ich programového vybavenia, výroba a vývoj smartfónov iPhone, tabletov iPad a predaj hudby, televíznych relácií a filmov prostredníctvom internetového obchodu iTunes Store. Prvých tridsať rokov svojej existencie bola spoločnosť známa ako Apple Computer, Inc. Zmena názvu bola ohlásená 9. januára 2007 po predstavení nových produktov iPhone a Apple TV a je symbolom postupného odklonu od tradičného dôrazu spoločnosti na výrobu osobných počítačov smerom k produkcii širšieho okruhu inovatívnej spotrebnej elektroniky.
+Apple je spoločnosť, ktorá pomohla spustiť revolúciu osobných počítačov koncom 70-tych rokov 20. storočia. Je známa vysoko inovatívnym hardvérom ako iPod a iMac, rovnako ako i softvérom ako iTunes, iLife a operačným systémom macOS. 
+
+
+== História spoločnosti ==
+
+
+=== Vznik ===
+
+Zakladatelia spoločnosti Steve Jobs a Steve Wozniak sa spoznali v roku 1971, keď mal Jobs 16 a Wozniak 21 rokov. Prvý počítač spolu vytvorili v roku 1975, keď Jobs vybavil objednávku na 50 osobných počítačov od miestnej počítačovej predajne a presvedčil Wozniaka, aby počítač zostavil. Spolu s niekoľkými nadšencami zostavili Apple I, ktorý mal niekoľko pozoruhodných vlastností. Používal televízor ako displej (mnohé vtedajšie počítače displej vôbec nemali) a bol tiež schopný používať kazetový magnetofón na spúšťanie a ukladanie programov na tie časy v neuveriteľnej rýchlosti 1 200 bitov za sekundu. Spolu s tretím kamarátom, Ronaldom Waynom sa im podarilo vytvoriť počítače pre objednávku včas a celkovo bolo vyrobených viac ako 200 Apple I.
+V roku 1977 Wozniak vytvoril nový počítač, Apple II, ktorý už pracoval s grafickým rozhraním a neskôr dokonca dokázal pracovať s farbami. Jobs medzičasom skúšal presadiť myšlienku lepšej počítačovej skrinky a klávesnice, keďže veril, že počítač by sa mal dodávať ako celok.
+Budovanie počítača v tom čase bola drahá záležitosť a Jobsovou úlohou bolo zháňať peniaze. Práve pre nedostatok prostriedkov od spolupráce odstúpil Wayne, ktorý mal skúsenosti s kolapsom inej malej spoločnosti v minulosti. Banky Jobsovi peniaze požičať nechceli, keďže myšlienka počítača pre bežných ľudí sa zdala byť v polovici sedemdesiatych rokov absurdná. Jobs napokon stretol Mika Markkulu, ktorý spolu podpísali bankovú pôžičku na 250 tisíc amerických dolárov a títo traja, spolu s Wozniakom, vytvorili 1. apríla 1976 Apple Computer, Inc.
+
+
+=== Apple III a Lisa ===
+
+Do roku 1980 už Apple muselo čeliť rastúcej konkurencii na poli osobných počítačov. Najmä IBM so svojím PC, na ktorom bežal MS-DOS (diskový operačný systém od Microsoftu) uberal Apple z trhového podielu.
+Mnohé malé firmy používali Apple II, ale spoločnosť potrebovala nový a silnejší počítač pre náročnejších firemných zákazníkov. Takýmto počítačom sa mal stať Apple III, ale vzhľadom na niektoré nepraktické Jobsove požiadavky (ktoré sa v histórii Apple vyskytujú opakovane) ako napr. odstránenie ventilátora (kvôli hlučnosti), boli mnohé stroje mŕtve pri prvom zapnutí, resp. podľahli prehriatiu neskôr. Kvôli tomuto a iným nedostatkom, a i napriek vylepšeniam z roku 1983, bol Apple III prepadákom.
+Medzičasom ľudia ako Jef Raskin a Bill Atkinson začali v Apple pracovať na novom druhu počítača, ktorý by používal GUI, myš, objektovo orientované programovanie a siete. Presvedčili Jobsa k návšteve laboratórií spoločnosti XEROX v Palo Alto v decembri 1979 a následne sa Jobs rozhodol, že budúcnosť patrí počítačom využívajúcim grafické rozhranie a ikony. V januári 1983 Apple uviedlo na trh počítač Apple Lisa za cenu 10 tisíc dolárov. Lisa predbehla svoju dobu, no bola príliš drahá a Apple nepokorilo korporátny trh.
+
+
+=== Macintosh ===
+
+Ešte počas vývoja Lisy sa Jobs začal sústreďovať na vývoj Macintosha, ktorý mal byť a bol skutočne osobným počítačom, so všetkým čo by bežný užívateľ potreboval, obsiahnutým priamo v krabici. Macintosh bol uvedený v januári 1984 spolu so slávnou reklamou počas prestávky Superbowlu vychádzajúcou z románu Georgea Orwella 1984 a vyhlasujúcou:
+„24. januára Apple uvedie Macintosh. A uvidíte, prečo 1984 nebude ako 1984“ – implikujúc, že nové, používateľsky priateľské grafické rozhranie Macintosha oslobodí používanie počítačov a informácií od predstáv veľkých spoločností a technokratov.
+Niekoľko prototypov Macintosha spoločnosť Apple darovala Billovi Gatesovi, spoluzakladateľovi Microsoftu, aby jeho spoločnosť pre Macintosh vytvorila programové vybavenie. V roku 1985 však Microsoft uviedol na trh Microsoft Windows, vlastný operačný systém s grafickým rozhraním, ktoré používalo množstvo prvkov vtedajších Macintoshov. To viedlo k dlhému právnemu sporu medzi Apple a Microsoftom, ktorý sa skončil mimosúdnym vyrovnaním, na základe ktorého Microsoft získal prístup k neobmedzenému použitiu grafického rozhrania Macintosha. V tom čase však už boli na základe tzv. spätného inžinierstva vytvorené mnohé lacné PC klony a hoci systém Windows bol technologicky zaostalý oproti Macintoshu, rýchlo sa rozšíril práve vďaka klonom pôvodného IBM PC. Apple pravdepodobne už nikdy nezíska široký trhový podiel z konca sedemdesiatych rokov (takmer 29 %), Macintosh sa stal de facto štandardnou platformou pre záležitosti ako tvorba filmov, hudby, desktop publishing a ďalšie oblasti umenia.
+
+
+=== 1984 – 1997 ===
+
+Po roku 1984 podporovalo Apple dve rozdielne platformy: Apple II a Macintosh. To neprispievalo k rozšíreniu Macintosha. Apple predávalo obe nekompatibilné platformy až do začiatku deväťdesiatych rokov 20. storočia. V rovnakom čase pribúdali počítače rodiny Macintosh, v roku 1989 Apple vytvorilo aj prvý, nepríliš úspešný prenosný počítač Macintosh Portable, nasledovaný mimoriadne populárnym Powerbook v roku 1991. Úspešné výrobky ako Powerbook priniesli zvýšenie výnosov až do tej miery, že časopis MacAddict nazval roky 1989 až 1991 prvou zlatou dobou Macintosha. Tá doba však netrvala dlho. Apple muselo bojovať nielen s progresívnymi technologickými rivalmi ako Amiga a Atari, ale po roku 1990 stále viac s počítačmi založenými na IBM PC. Apple nebolo schopné svoje modely správne umiestniť na trhu a vysvetliť zákazníkom dobré technické rozdiely medzi mnohými uvedenými modelmi.
+V roku 1994 Apple uviedlo na trh Power Macintosh založený na procesore PowerPC s architektúrou RISC, pričom operačný systém Macitoshov bol upravený tak, aby staršie aplikácie vytvorené pre procesory Motorola mohli byť emulované na PowerPC. Spolu s počítačmi v deväťdesiatych rokoch Apple začalo vyrábať aj osobných digitálnych asistentov (PDA) Apple Newton. Komerčne bol Newton neúspešný, ale technologicky bol predchodcom a inšpiráciou pre dnešné vreckové počítače ako Palm a neskoršie Pocket PC.
+V roku 1985 po boji o moc s novým riaditeľom spoločnosti Johnom Scullym opustil Apple Steve Jobs. Následne založil spoločnosť NeXT, ktorá síce nebola komerčne príliš úspešná, ale vytvorila progresívny operačný systém NeXTstep založený na Unixe, ktorý v roku 1997 úspešne predala Apple. Apple týmto systémom nahradilo starnúci MacOS 9 a vznikol tak Mac OS X. Kúpou spoločnosti NexT sa Jobs vrátil do Apple a ešte ten istý rok sa stal dočasným šéfom spoločnosti a začal s kritickou reštrukturalizáciou spoločnosti, ktorá bola v zložitom stave.
+
+
+=== 1998 – 2003 ===
+
+Medzi Jobsove prvé kroky patril vývoj počítača iMac, ktorý bol obrovským predajným hitom s počtom približne milión predaných kusov ročne. Následnými úspešnými produktami boli iBook a PowerMac G4, ale i rada produktov AirPort, ktorá spopularizovala bezdrôtové siete ešte pred rokom 2000.
+V roku 2001 bol vydaný Mac OS X, unixový operačný systém založený na NeXTSTEPe. So stabilitou, spoľahlivosťou a bezpečnosťou Unixu a prepracovaným rozhraním, OS X umožňoval aj spúšťanie starších aplikácií v prostredí Classic. V tom istom roku začalo Apple otvárať aj svoje vlastné obchody, najprv v USA a potom i inde po svete. V rovnakom roku uzrel svetlo sveta aj prvý iPod, digitálny prehrávač hudby. V roku 2002 iMac získal procesor G4 a Apple vytvorilo aj niekoľko úspešných serverových produktov. V roku 2003 bol uvedený na trh procesor G5 so 64-bitovou architektúrou a s ním počítač PowerMac G5. G5 bol neskôr použitý v ďalších počítačoch Apple s výnimkou Mac mini a prenosných počítačov PowerBook a iBook.
+Počas deväťdesiatych rokov získali počítače s Microsoft Windows dominantné postavenie na trhu a trhový podiel Apple klesol na približne 5 %. Spoločnosť finančne trpela a Microsoft dokonca kúpil akcie Apple bez možnosti voliť za 150 miliónov dolárov ako výsledok jedného súdneho sporu. Odvtedy však tieto akcie Microsoft opäť predal. Microsoft však stále podporuje programové vybavenie počítačov Apple, ako napr. vývojom Microsoft Office pre Mac. Napriek tomu však podiel Macu na trhu neprestáva klesať a v roku 2004 už bol len 3 %.
+
+
+=== 2003 – 2008 ===
+
+V roku 2003 Apple otvorilo svoje prvé obchody mimo územia USA, najprv v Japonsku a potom i v Európe. V roku 2005 Apple vydalo novú verziu Mac OS X 10.4 Tiger. Taktiež predstavil BootCamp, aplikáciu ktorá dovolila nainštalovať Microsoft Windows na počítače Macintosh. Táto aplikácia bola ako súčasť systému Mac OS X 10.5 Leopard.
+Steve Jobs v júni 2005 oficiálne ohlásil, že Apple začne od roku 2006 vyrábať počítače založené na procesoroch Intel. Zároveň potvrdil neoverené správy, že spoločnosť od začiatku tajne vyvíjala Mac OS X nielen pre PowerPC, ale i pre Intel. Na jeseň 2007 bola zároveň naplánovaná nová verzia Mac OS X 10.5 Leopard, ktorá bude bežať natívne na oboch typoch procesorov, rovnako 10.4 Tiger. Táto verzia bola vydaná až 26. októbra 2007. Prvé dva počítače s procesorom Intel Jobs predstavil 10. januára 2006 – nový prenosný počítač nazvaný MacBook Pro, ktorý postupne nahradil dovtedajšie Powerbooky a nový iMac. Do augusta 2006 prešli na procesory spoločnosti Intel všetky počítače vyrábané Apple. 
+V roku 2007 Steve Jobs predstavil a predviedol iPhone – prvý telefón od spoločnosti Apple a nové počítače Mac Pro s dvoj- a štvorjadrovými procesormi Intel. Apple vydalo novú verziu Mac OS X 10.5 Leopard a novú generáciu iPodov, pribudol iPod touch. V roku 2008 Steve Jobs predstavil MacBook Air – najtenší notebook na svete. Apple vydal nový Mac Pro s 8-jadrovými procesormi na 3,2 GHz a Software Development Kit pre iPhone OS (neskorší iOS), ktorý dovolil vyvíjať natívne aplikácie pre zariadenia ktoré bežia na tomto operačnom systéme.
+
+
+=== 2008 – 2012 ===
+
+V roku 2008 Apple predstavil a uviedol do predaja mobilný telefón iPhone 3G (2. generácia) a 2. generáciu iPodu touch. V roku 2009 Apple vydalo novú verziu Mac OS X 10.6 Snow Leopard, predstavil a uviedol do predaja mobilný telefón iPhone 3GS (3. generácia) a 3. generáciu iPodu touch. V roku 2010 Apple vydalo iOS 4, 1. generáciu tabletu iPad, predstavil a uviedol do predaja mobilný telefón iPhone 4 (4. generácia) a 4. generáciu iPodu touch.
+V roku 2011 Apple vydalo novú verziu Mac OS X 10.7 Lion, iOS 5, uviedol do predaja tablet iPad 2 (2. generácia) a mobilný telefón iPhone 4S (5. generácia). V auguste spoluzakladateľ Steve Jobs († 5. október 2011) opustil post generálneho riaditeľa firmy zo zdravotných dôvodov a nahradil ho Tim Cook, ktorého Steve Jobs navrhol. V roku 2012 Apple uviedol do predaja Nový iPad. Na konferencii WWDC 2012 Apple predstavilo novú verziu OS X 10.8 Mountain Lion, nový MacBook Pro s Retina displejom, nové verzie MacBook Air a MacBook Pro a iOS 6. OS X 10.8 Mountaion Lion bol vydaný 25. júla 2012 a iOS 6 19. septembra 2012. Nové MacBooky sa čoskoro dostali do predaja. 12. septembra 2012 Apple predstavil iPhone 5, iPod touch 5G a iPod nano 7G. iPhone 5 sa v niektorých krajinách dostal do predaja 21. septembra 2012, v ostatných 28. septembra 2012 (vrátane Slovenska).
+
+
+== Súčasné produkty Apple ==
+
+
+=== Počítače Mac ===
+
+MacBook – najtenší notebook na svete, v predaji s 12″ Retina displejom
+MacBook Air – druhý najtenší notebook na svete, v predaji s 13″ displejom
+MacBook Pro – profesionálny notebook, v predaji s 13″ a 15″ Retina displejom
+iMac – výkonný stolný počítač, v predaji s 21,5″ Retina 4K displejom a 27″ Retina 5K displejom
+iMac Pro – vysoko výkonný stolný počítač, v predaji s 8, 10, 14 a 18-jadrovým procesorom Intel Xeon W
+Mac mini – miniatúrny stolný počítač, v predaji s 1,4, 2,6 a 2,8 GHz procesorom
+Mac Pro – výkonný stolný počítač pre profesionálov, v predaji s 6-jadrovým a 8-jadrovým procesorom Intel Xeox E5
+
+
+=== Tablety iPad ===
+
+iPad Pro – výkonný tablet s 11″ a 12,9″ Retina displejom
+iPad Air – veľmi ľahký a výkonný tablet s 10,5″ Retina displejom
+iPad Mini 4 – malý výkonný tablet  s 7,9″ Retina displejom
+iPad – dostupný tablet s 9,7″ displejom
+
+
+=== Digitálne prehrávače hudby iPod ===
+iPod touch (6. generácia) – zariadenie podobné iPhonu bez funkcií telefonovania, s dotykovou multi-touch obrazovkou, FaceTime hovory, podpora aplikácií z online obchodu App Store, hlasová asistentka Siri, 8MP zadná a 1.2MP predná kamera, dva modely s 32 a 128 GB, v rôznych farbách
+
+
+=== Mobilné telefóny iPhone ===
+
+iPhone XS Max – mobilný telefón, 6,5″ Super Retina HD displej, pamäť 64, 256 a 512GB, odolnosť IP68, dual kamera, 3D touch, bezdrôtové nabíjanie, vzadu sklo
+iPhone XS – mobilný telefón, 5,8″ Super Retina HD displej, pamäť 64, 256 a 512GB, odolnosť IP68, dual kamera, 3D touch, bezdrôtové nabíjanie, vzadu sklo
+iPhone XR – mobilný telefón, 6,1″ Liquid Retina HD displej, pamäť 64, 128 a 256GB, odolnosť IP67, bezdrôtové nabíjanie, vzadu sklo
+iPhone X – mobilný telefón, 5,8″ Super Retina HD displej, pamäť 64 a 256GB, odolnosť IP67, dual kamera, 3D touch, bezdrôtové nabíjanie, vzadu sklo
+iPhone 8 Plus – mobilný telefón, 5,5″ Retina HD displej, pamäť 64 a 256GB, odolnosť IP67, dual kamera, 3D touch, bezdrôtové nabíjanie, vzadu sklo
+iPhone 8 – mobilný telefón, 4,7″ Retina HD displej, pamäť 64 a 256GB, odolnosť IP67, 3D touch, bezdrôtové nabíjanie, vzadu sklo
+iPhone 7 Plus – mobilný telefón, 5,5″ Retina HD displej, pamäť 32 a 128GB, odolnosť IP67,dual kamera, 3D touch, vzadu hliník
+iPhone 7 – mobilný telefón, 4,7″ Retina HD displej, pamäť 32 a 128GB, odolnosť IP67, 3D touch, vzadu hliník
+iPhone 6S Plus – mobilný telefón, 5,5″ Retina HD displej, pamäť 32 a 128GB, 3D touch, vzadu hliník
+iPhone 6S – mobilný telefón, 4,7″ Retina HD displej, kapacita pamäť 32 a 128GB, 3D touch, vzadu hliník
+iPhone SE –  mobilný telefón, 4″ Retina displej, kapacita pamäť 32 a 128GB, vzadu hliník
+
+
+=== Smart hodinky Apple Watch ===
+
+Apple Watch 1 – Retina displej s technológiou Force Touch so zafírovým sklom. Digital Crown, snímač tepovej frekvencie, WiFi, Bluetooth 4.0, výdrž batérie až 18 hodín, watchOS - kompatibilný s iPhone 5 a vyšším s iOS 8.2 a vyšším
+Apple Watch 2 – OLED Retina displej druhej generácie s Force Touch (2x jasnejší),  dvojjadrový procesor S2. Digital Crown, snímač tepovej frekvencie, WiFi, Bluetooth 4.0, výdrž batérie až 18 hodín, watchOS 3
+Apple Watch 3 – OLED Retina displej s technológiou Force Touch s Ion-X sklom, dvojjadrový procesor s čipom W2. Digital Crown, snímač tepovej frekvencie, WiFi, GPS, Bluetooth 4.2, vodoodolné podľa 50M, výdrž batérie až 18 hodín, watchOS 4
+Apple Watch 4 – OLED Retina displej s technológiou Force Touch s Ion-X sklom, 64-bitový dvojjadrový procesor s čipom W3, kapacita 16GB Digital Crown s haptickou odozvou, snímač tepovej frekvencie, WiFi, GPS, Bluetooth 5.0, vodoodolné 50m, výdrž batérie až 18 hodín, watchOS 5
+
+
+=== Príslušenstvo ===
+
+Magic Keyboard – klávesnica pre iMac, iMac Pro, Mac mini a Mac Pro
+Magic Mouse 2 – počítačová myš pre iMac, iMac Pro, Mac mini a Mac Pro
+Magic Trackpad 2 –  bezdrôtový ovládač pre iMac, iMac Pro, Mac mini a Mac Pro
+AirPods – bezdrôtové slúchadlá kompatibilne so všetkými aktuálnymi Apple zariadeniami
+Apple Pencil – dotykové pero pre iPad Pro a iPad (6. generácia)
+Apple TV – set-top box zariadenie s rozlíšením FullHD, 32GB
+Apple TV 4K – set-top box zariadenie s rozlíšením 4K / UHD, 32 a 64GB
+
+
+== Súčasný softvér vyrábaný Apple ==
+
+
+=== Operačné systémy ===
+macOS – operačný systém pre pracovné stanice. Súčasná verzia je 10.15 macOS Catalina.
+iOS – operačný systém pre iPhone, iPad a iPod. Súčasná verzia je iOS 15.1
+watchOS – operačný systém pre Apple watch. Súčasná verzia je watchOS 6.1.3.
+OS X Server – operačný systém pre servery. Súčasná verzia je 10.7.4.
+
+
+=== Profesionálne aplikácie ===
+Final Cut Studio – skupina aplikácií dodávaná s nasledujúcimi programami:
+Final Cut Pro – profesionálny program pre strih videa
+DVD Studio Pro – profesionálny program pre tvorbu DVD
+Soundtrack Pro – profesionálny program pre prípravu zvukových stôp k videu (soundtrackov)
+Motion – nástroj pre tvorbu videografiky v reálnom čase
+Logic Pro – nástroj na úpravu hudby
+Shake – nástroj pre tvorbu efektov
+Aperture – nástroj pre profesionálnych fotografov na úpravu digitálnych fotografií
+
+
+=== Spotrebiteľské aplikácie ===
+Final Cut Express HD – nástroj na strih videa
+Logic Express – nástroj na strih hudby
+iLife – balík aplikácií, ktorý obsahuje:
+iDVD – jednoduchá aplikácia na tvorbu DVD
+iMovie – jednoduchá aplikácia na strih videa
+iPhoto – nástroj na správu fotografií
+iTunes – nástroj na správu hudobných súborov, tiež plniaci funkciu jukeboxu a umožňujúci prístup k internetovej službe iTunes Music Store, jediná aplikácia zo skupiny iLife, ktorá je dostupná aj pre platformu Microsoft Windows
+GarageBand – nástroj na nahrávanie a tvorbu hudby
+iWeb – nástroj na tvorbu webových stránok, blogov a ich jednoduché umiestnenie na internet
+iWork – obsahuje:
+Keynote – profesionálny nástroj na tvorbu prezentácií
+Pages – aplikácia na tvorbu textových dokumentov
+Numbers – aplikácia na tvorbu tabuľkových dokumentov
+
+
+=== QuickTime ===
+QuickTime Player – program na prehrávanie videa
+QuickTime Pro
+QuickTime Streaming Server
+QuickTime Broadcaster
+
+
+=== Serverové riešenia ===
+OS X Server – serverový operačný systém
+Xsan – distribuovaný súborový systém pre správu tzv. storage area networks
+Apple Remote Desktop – aplikácia pre vzdialenú správu počítačov Macintosh
+WebObjects – webový aplikačný server založený na Jave
+
+
+== Záležitosti spoločnosti ==
+
+
+=== Logo ===
+Originálne logo Apple bolo vytvorené Robom Janoffom v roku 1976 ako dúhové jablko, z ktorého je odhryznuté. V roku 1998 sa logo zmenilo na jednofarebné, no nemá predpísanú špecifickú farbu. Napríklad, je sivé na PowerMacu G5, modré v macOS, chrómové na paneli O tomto Macu v macOS 10.3 a 10.4, a biele na iBooku a PowerBooku. Tvar loga je jedným z najlepšie spoznateľných symbolov značiek vo svete a je vystavené na dobre viditeľných miestach na všetkých produktoch a vo všetkých obchodoch spoločnosti.
+
+		
+		
+		
+		
+
+
+== Hlavní výkonní riaditelia spoločnosti ==
+
+1977 – 1981: Michael Scott
+1981 – 1983: Mike Markkula
+1983 – 1993: John Sculley
+1993 – 1996: Michael Spindler
+1996 – 1997: Gil Amelio
+1997 – 2011: Steve Jobs
+od 2011: Tim Cook
+
+
+== Významné súdne spory ==
+Od osemdesiatych rokov 20. storočia bolo Apple obvinenou alebo žalujúcou stranou v mnohých súdnych sporoch. Výsledky niektorých týchto súdnych sporov sa stali dôležitým precedensom pre technologický priemysel, kým iné boli iba sústom pre médiá.
+
+
+=== Súdne spory so spoločnosťou Apple Corps ===
+V roku 1978 Apple Corps (hudobná spoločnosť založená skupinou The Beatles) napadla Apple Computer pre porušenie obchodnej značky Apple. Súd sa skončil v roku 1981 finančným vyrovnaním za nezverejnenú sumu. Neskôr bolo zverejnené, že to bolo 80 tisíc dolárov, hoci sa odhadovalo, že to bolo 50–200 miliónov. Podmienkou vyrovnania bolo, že Apple Computer sa nebude miešať do hudobného obchodu.V roku 1986 Apple pridalo podporu MIDI a nahrávania zvuku svojim počítačom a následne Apple Corps napadla Apple Computer na súde v roku 1989 opäť, tvrdiac, že došlo k porušeniu vyrovnania z roku 1981. V roku 1991 došlo k druhému vyrovnaniu za sumu okolo 26,5 milióna dolárov.Vyrovnanie z roku 1991 načrtáva práva oboch spoločností na značku Apple. Apple Corps dostalo právo na používanie mena v súvislosti s akýmikoľvek kreatívnymi prácami, ktorých základným obsahom je hudba a Apple Computer dostalo právo na použitie mena na výrobkoch a službách, ktoré sa používajú na reprodukovanie, prehrávanie alebo inými spôsobmi distribuovanie takéhoto obsahu, okrem obsahu distribuovanom na fyzických médiách. Inými slovami, Apple Computer súhlasilo, že nebude baliť, predávať alebo rozširovať nahrávky s hudbou.V septembri 2003 však Apple Corps napadlo Apple Computer po tretí raz, tentoraz za uvedenie iTunes a prehrávača iPod. Apple Corps tvrdí, že tieto produkty a služby porušujú predchádzajúcu dohodu o nešírení hudby spoločnosťou Apple Computer. V tomto prípade zvíťazila spoločnosť Apple Computer,
+ale v súčasnosti prebieha odvolacie konanie.
+
+
+== Časová os zariadení so systémom iOS ==
+
+
+== Slováci a Apple ==
+Slovenská umelecká fotografka Mária Švarbová nafotila pre spoločnosť Apple exkluzívnu sériu fotografií na iPhone XS.
+
+
+== Referencie ==
+
+
+== Pozri aj ==
+macOS
+MacBook Air
+MacBook Pro
+Mac mini
+Mac Pro
+iMac
+iPad
+iPod
+iPhone
+Apple TV
+Apple Watch
+AirPort
+
+
+== Iné projekty ==
+
+ Commons ponúka multimediálne súbory na tému Apple
+
+
+== Externé odkazy ==
+Oficiálna stránka (po slovensky)

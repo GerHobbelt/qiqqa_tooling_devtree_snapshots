@@ -1,0 +1,63 @@
+revision: 1163149308
+title: Prosigns for Morse code
+url: https://en.wikipedia.org/wiki/Prosigns_for_Morse_code
+
+
+---
+
+Procedural signs or prosigns are shorthand signals used in Morse code radio telegraphy procedure, for the purpose of simplifying and standardizing radio communication protocol. They are separate from Morse code abbreviations, which consist mainly of brevity codes that convey messages to other parties with greater speed and accuracy.
+In general prosigns are just standardised parts of short form radio protocol, and can include any abbreviation. An example would be K for "okay, heard you, continue". In a more limited role the term refers to something akin to that of the nonprinting control characters in teleprinter and computer character sets, such as Baudot or ASCII. Different from abbreviations, those are universally recognizable across language barriers as distinct and well-defined symbols.
+At the coding level, prosigns admit any form the Morse code can take, unlike abbreviations which have to follow letter form. Many of them are longer than typical characters and are rendered without intercharacter commas or pauses. They are individual and indivisible code points within the broader Morse code, fully at par with basic letters.
+The development of prosigns began in the 1860s for wired telegraphy. Since telegraphy preceded voice communications by several decades, many of the much older Morse prosigns have acquired precisely equivalent prowords for use in more recent voice protocols.
+In printed material describing their meaning and use, prosigns are represented by either a sequence of dots and dashes for the sound of a telegraph, or by an overlined sequence of letters composed of International Morse Code, which if sent without the usual spacing, sounds like the prosign symbol. The most well-known example of the convention is the preamble to the standard distress call: SOS. As a prosign it is not really composed of the three separate letters S, O and S, but is run together as a single symbol of   ▄ ▄ ▄ ▄▄▄ ▄▄▄ ▄▄▄ ▄ ▄ ▄ ; it is a sign in its own right.
+Not all prosigns are standardised. There are specialised variations of the coding convention used in certain radio networks to manage transmission and formatting of messages, and many unofficial prosign conventions exist; some of which might be ambiguous. One typical example of something which is not a recognized prosign but is yet recognizable is one or two freely timed dits at the end of a message, for OUT (the formal version being prosign AR, or   ▄ ▄▄▄ ▄ ▄▄▄ ▄ ).
+
+
+== History ==
+In the early decades of telegraphy, many efficiency improvements were incorporated into operations. The Morse code itself was one of these: it roughly coded more commonly used symbols into shorter keying sequences, and the rare ones into longer, thus leading to data compression online. The introduction of Morse symbols called procedural signs or prosigns was then just a logical progression. They were not defined by the inventors of Morse code, but were gradually introduced to improve the speed and accuracy of high-volume message handling, especially between professional telegraph operators operating over the time's long distance contacts, such as short wave radio and transatlantic cable.
+Improvements to the legibility of formal written telegraph messages (telegrams) using white space formatting were thus supported by the creation of procedure symbols. Mastery of these Morse code prosigns was important in becoming an efficient telegraph operator, as was the command of many other forms of abbreviation.
+
+
+== Notation and representations ==
+There are at least three methods used to represent Morse prosign symbols:  
+
+Unique dot/dash sequences, e.g.   ▄▄▄ ▄ ▄ ▄ ▄▄▄  
+Unique audible sounds, e.g. dah di di di dah 
+Non-unique printed or written overlined character groups, e.g. BT (When overlining is not available, the same characters can be written in angle brackets <BT> or with underlining BT.)Although some of the prosigns as-written appear to be simply two adjacent letters, most prosigns are transmitted as digraphs that have no spacing between the patterns that represent the "combined" letters, and are most commonly written with a single bar over the merged letters (if more than one single character) to indicate this. The difference in the transmission is subtle, but the difference in meaning is gross. For example, the prosign AA (  ▄ ▄▄▄ ▄ ▄▄▄ ) indicates that the receiving Morse operator should space down one line, but the two separate letter sign or abbreviation AA (  ▄ ▄▄▄   ▄ ▄▄▄ ) indicates either the voice procedure words ALL AFTER, used to indicate that part of the previously transmitted message needs to be re-transmitted, or for signal lights, has the same meaning as the voice procedure word UNKNOWN STATION. The difference in representation between the Morse code prosign and the separate letter signs is the presence or absence of an inter-letter space between the two "dot dash" sequences.
+Because there are no letter boundaries in the transmitted prosigns, their division into letters is arbitrary and may be done in multiple equivalent ways. For example, AA (  ▄ ▄▄▄ +  ▄ ▄▄▄ ) is exactly equivalent to EK (  ▄ +  ▄▄▄ ▄ ▄▄▄ ) and RT (  ▄ ▄▄▄ ▄ +  ▄▄▄ ). Likewise, the well-known prosign SOS could just as well be written VZE (  ▄ ▄ ▄ ▄▄▄ +  ▄▄▄ ▄▄▄ ▄ ▄ +  ▄ ), VGI (  ▄ ▄ ▄ ▄▄▄ +  ▄▄▄ ▄▄▄ ▄ +  ▄ ▄ ), or even 3B (  ▄ ▄ ▄ ▄▄▄ ▄▄▄ +  ▄▄▄ ▄ ▄ ▄ ). Normally, one particular form is used by convention, but some prosigns have multiple forms in common use.
+Many Morse code prosigns do not have written or printed textual character representations in the original source information, even if they do represent characters in other contexts. For example, when embedded in text the Morse code sequence   ▄▄▄ ▄ ▄ ▄ ▄▄▄  represents the "double hyphen" character (normally "=", but also "– –"). When the same code appears alone it indicates the action of spacing down two lines on a page in order to create the white space indicating the start of a new paragraph or new section in a message heading. When used as a prosign, there is no actual written or printed character representation or symbol for a new paragraph (i.e. no symbol corresponding to "¶"), other than the two-line white space itself.
+Some prosigns are in unofficial use for special characters in languages other than English, for example AA is used unofficially for both the "blank line" prosign and for "Ä", neither of which is in the international standard. Other prosigns are officially designated for both letters and prosigns, such as AR equiv. "+", which marks the end of a message. Some genuinely have only one use, such as CT or the equivalent KA (  ▄▄▄ ▄ ▄▄▄ ▄ ▄▄▄ ), the International Morse prosign that marks the start of a new transmission or new message.
+
+
+== International Morse code ==
+The procedure signs below are compiled from the official specification for Morse Code, ITU-R M.1677, International Morse Code, while others are defined the International Radio Regulations, including ITU-R M.1170, ITU-R M.1172, and the International Code of Signals, with a few details of their usage appearing in ACP-131, which otherwise defines operating signals, not procedure signals.
+
+
+=== Prosigns ===
+The following table of prosigns includes K and R, which could be considered either abbreviations (for "okay, go ahead", and for "received") or prosigns that are also letters. All of the rest of the symbols are not letters, but in some cases are also used as punctuation.
+
+
+=== Abbreviations for message handling ===
+The following table of abbreviations are strictly used as strings of one to several letters, never as digraph symbols, and have standard meanings used for the management of sending and receiving messages. Dots following indicate that in use, the abbreviation is always followed by more information.
+
+
+== Amateur radio National Traffic System ==
+For the special purpose of exchanging ARRL Radiograms during National Traffic System nets, the following prosigns and signals can be used, but many of them do not have equivalents in any other definition of Morse code signals, including the ITU-R and Combined Communications Electronics Board telecommunications specifications.
+
+
+== Obsolete prosigns ==
+
+
+== See also ==
+Morse code abbreviations
+Brevity code
+Procedure word (proword)
+Q code
+QSA and QRK code
+Z code
+
+
+== Notes ==
+
+
+== References ==

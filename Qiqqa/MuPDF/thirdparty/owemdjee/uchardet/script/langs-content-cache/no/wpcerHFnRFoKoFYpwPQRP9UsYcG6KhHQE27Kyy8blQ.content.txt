@@ -1,0 +1,143 @@
+revision: 23255956
+title: "M\xE5leenhet"
+url: https://no.wikipedia.org/wiki/M%C3%A5leenhet
+
+
+---
+
+Måleenhet eller målenhet er en gjenstand eller definisjon som brukes for å kunne angi størrelsen av en fysisk egenskap.  Når den samme enheten blir brukt ved måling av samme slags egenskap, blir det mulig å sammenlikne ulike mengder av denne.  For eksempel, hvis man skal sammenligne lengden av et år med lengden av et døgn, kan man uttrykke ett år som et visst antall døgn eller man kan uttrykke dem begge i for eksempel timer.Størrelsen av enhver målbar egenskap kan angis som et produkt av et måltall og en måleenhet. Hvis en person er 182 cm høy, er 182 måltallet og cm måleenheten for lengde. I dette og lignende tilfeller kaller man måleenheten for «benevningen» som benyttes for denne størrelsen eller dens dimensjon.
+En måleenhet for lengde kan for eksempel være en meter eller en nautisk mil og er eksempel på basisenheter eller grunnenheter for måling av lengder. De kan benyttes til å konstruere nye enheter for areal eller volum. Størrelsen av et areal kan finnes ved å måle hvor mange små kvadrat det inneholder. Hvis lengden av siden i et kvadrat angis i meter m, vil det ha et areal som er et visst antall kvadratmeter m2. Dette er derfor en mulig måleenhet for areal. I andre sammenhenger er det mer praktisk å benytte ar = 100 m2 eller mål  = 1000 m2.  
+Ved å bestemme et visst antall grunnenheter, har man etablert et enhetssystem. Ett av de første  eksempel på dette var CGS-systemet hvor man måler lengder i cm, masser i gram g og tidsintervall i sekunder. I dag bruker man stort sett overalt det lignende SI-systemet basert på grunnenhetene meter m,  kilogram kg, sekund s og i tillegg ampere A for elektrisk strøm.Før innføringen av metersystemet ble påbegynt i Norge i 1875, fantes det en rekke ulike norske måleenheter. Det finnes også mange uoffisielle måleenheter. Eksempelvis gamle nordiske lengdemål brukes fortsatt i dagliglivet, skjønt flere av dem mangler en nøyaktig definisjon. I dag er dette arbeidet internasjonalisert og er overlatt til
+det internasjonale byrå for mål og vekt.
+
+
+== Sammensatte enheter ==
+I dagliglivet kan vi ikke uten videre sammenligne et tidsintervall T med en viss lengde L. Man sier de har forskjellige dimensjoner og hver av dem må uttrykkes ved forskjellige måleenheter. Hvilke man velger, er opp til den som vil foreta en måling. For eksempel vil definisjonen av hastighet gi opphav til en ny dimensjon som man skriver som L/T eller  LT-1. Avhengig av enhetene som man benytter for disse to størrelsene, vil da hastigheten kunne uttrykkes i sammensatte enheter som m/s eller km/h. Kun størrelser med samme dimensjon kan sammenlignes. Alle naturlover uttrykkes ved matematiske ligninger der hver side i ligningen må ha samme dimensjon. Dette kan benyttes ved dimensjonsanalyse i all naturvitenskap.Ved multiplikasjon eller divisjon av fysiske størrelser vil enhetene som inngår i produktet opptre som faktorer. For eksempel følger enheten for kraft  fra Newtons andre lov som sier at den har dimensjon masse multiplisert med akselerasjon. Hvis masse har dimensjon M, vil derfor kraft ha dimensjonen M⋅LT-2 = ML/T2. I SI-systemet  måles denne i den sammensatte enheten newton N definert som
+
+  
+    
+      
+        1
+        
+        
+          N
+        
+        =
+        1
+        
+        
+          k
+          g
+        
+        ⋅
+        
+          m
+        
+        
+          /
+        
+        
+          
+            s
+          
+          
+            2
+          
+        
+      
+    
+     
+  På denne måten kan sammensatte enheter for mange andre størrelser finnes.
+
+
+=== Omregninger ===
+Ved å behandle måleenheter som faktorer i produkt, kan man også gjennomføre systematiske omregninger av fysiske størrelser gitt i et enhetssystem til enheter brukt i et annet system. Det kan illustreres ved å uttrykke enheten knop som vanligvis benyttes for hastigheter på sjøen, til den sammensatte enheten m/s som benyttes i SI-systemet. Da én knop tilsvarer at man legger én nautisk mil Nmil = 1852 m bak seg i løpet av én time h = 60⋅60 s = 3600 s, har man
+
+  
+    
+      
+        1
+        
+        
+          k
+          n
+          o
+          p
+        
+        =
+        1
+        
+        
+          N
+          m
+          i
+          l
+        
+        
+          /
+        
+        
+          h
+        
+        =
+        1852
+        
+        
+          m
+        
+        
+          /
+        
+        3600
+        
+        
+          s
+        
+        =
+        0
+        ,
+        514
+        
+        
+          m
+        
+        
+          /
+        
+        
+          s
+        
+      
+    
+     
+  Alternativt kan man uttrykke denne maritime enheten ved den vanlige enheten km/h for hastighet som brukes ved bilkjøring på land. Da har man med en gang at 1 knop = 1,852 km/h. En bil med denne hastigheten ville kjøre svært langsomt.
+
+
+== Naturlige enheter ==
+For å angi avstanden til et sted man skal reise til med bil, kan man for eksempel si at det tar fem timer. Da er det implisitt forstått at bilen kjører med en typisk hastighet på omtrent 70 km/h. Et tilsvarende eksempel er å måle avstander ved bruk av enheten lysår som sier hvor langt lyset forplanter seg i løpet av ett år, I praksis er det å måle avstander i samme enheter som brukes for tid. Alle hastigheter kan da angis i forhold til  lyshastigheten og dermed bli dimensjonløse. Det betyr at lyshastigheten har verdien c = 1. Dette benyttes vanligvis i Einsteins relativitetsteori og er et eksempel på bruk av naturlige enheter for tid og lengde. Masseenergiloven E = mc2 vil da skrives som E = m som er noe enklere og viser samtidig at energi og masse har samme dimensjon.Naturlige enheter er basert på fysiske konstanter i naturen. For eksempel er elektronets masse me  en naturlig enhet for å angi størrelsen av masse.  Det er ofte et nyttig valg i atomfysikken, men ville vært lite praktisk i dagliglivet. Likedan kan man for kvantemekaniske beregninger benytte enheter der Plancks konstant ħ = 1. Når problemet som studeres også skal være i overensstemmelse med relativitetsteorien, velges vanligvis enheter der både  ħ = 1 og c = 1. Slike enheter benyttes i elementærpartikkelfysikken og gir matematiske resultat ved formler som ser enklere ut.
+
+
+== Se også ==
+Enhetssystem
+Naturlige enheter
+
+
+== Referanser ==
+
+
+== Eksterne lenker ==
+D.O. Forfar, Maxwell on Physical Standards, IEEE Microwave Magazine, 90-92, January (2021).
+Måleenheter og tegn - hit.uib.noMåleenheter for elektromagnetiske felt – rolv.no
+
+
+=== Omregning ===
+Konvertering mellom metriske størrelser og engelske enheter – nettguiden.info
+Omregningskalkulator (på engelsk) – digitaldutch.com
+Omfattende omregningskalkulator (på engelsk) – megaconverter.com
+omregner.com – enkel konvertering av enheter – omregner.com
+
+
+=== Gamle måleenheter ===
+Gamle norske måleenheter arkeliet.net
+Gamle og utenlandske måleenheter - matematikk.net
+Om gammel dansk (og norsk) mynt, mål og vekt i Nordisk familjebok (2. utgave, 1906)

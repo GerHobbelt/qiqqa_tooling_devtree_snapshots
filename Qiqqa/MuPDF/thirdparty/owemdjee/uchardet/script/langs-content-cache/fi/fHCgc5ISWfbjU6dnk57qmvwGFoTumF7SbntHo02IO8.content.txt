@@ -1,0 +1,74 @@
+revision: 21234421
+title: Amazon Kindle
+url: https://fi.wikipedia.org/wiki/Amazon_Kindle
+
+
+---
+
+Amazon Kindle on ohjelmisto- ja laitteistoalusta sähköisten kirjojen lukemiseen. Laitteen on kehittänyt Amazon.comin Lab126. Yhdysvalloissa laitealusta julkaistiin 19. marraskuuta 2007. Kindlestä on kaksi tuotelinjaa, Kindle ja Kindle DX, joista kummastakin on tällä hetkellämilloin? kolmen eri sukupolven mallit. Lisäksi Kindlen voi hankkia erillisenä 3G-versiona. iPhonelle on myös ohjelma nimeltään Kindle for iPhone ja Android-laitteille ohjelma Kindle for Android.
+
+
+== Laitteet ==
+Kindle-laitteisto käyttää E Ink -näyttöä (sähköpaperia) ja sisältö ladataan kaapelin avulla Amazonin Whispernetistä Sprint EVDO -verkon tai 3G-verkon kautta. Kindle-laitteisto ei tarvitse erillistä tietokonetta toimiakseen. Kindleen ei ole vielä suomenkielistä sisältöä.
+Loppuvuodesta 2010 julkaistiin kolmannen sukupolven Kindle. Se on sekä kevyempi että ohuempi kuin aikaisemmat, sen akunkestoa ja PDF-tukea on parannettu ja siihen on lisätty myös WLAN-tuki. 
+Amazon on julkaissut vuonna 2011 LCD-näyttöä käyttävän taulutietokonesarjan nimellä Kindle Fire.
+
+
+=== Ensimmäinen sukupolvi ===
+Kindle 1 -laitteet käyttävät Marvell XScale -suoritinta.
+
+
+=== Toinen sukupolvi ===
+Kindle 2 -laitteet käyttävät Freescale i.MX31 -suoritinta.
+Toisessa sukupolvessa on myös Kindle DX -malleja.
+
+
+=== Kolmas sukupolvi ===
+Kindle Keyboard -laitteet käyttävät Freescale i.MX35 -suoritinta.
+Kolmannen sukupolven Kindleä myydään kahtena eri versiona: 3G-tuen kanssa ja ilman 3G-yhteyttä.
+
+
+=== Neljäs sukupolvi ===
+Kindlen neljännen sukupolven laitteet käyttävät Freescale i.MX508 -suoritinta.
+Kindle 4 ja Kindle Touch on julkaistu neljännessä sukupolvessa.
+
+
+=== Viides sukupolvi ===
+
+Kindlen viidennen sukupolven laitteet käyttävät Freescale i.MX508 -suoritinta.
+Viidennen sukupolven malleja ovat Kindle 5 ja Kindle Paperwhite (ensimmäinen versio).
+
+
+=== Kuudes sukupolvi ===
+Kindle Paperwhite (toinen versio) on julkaistu kuudennessa sukupolvessa.
+
+
+=== Seitsemäs sukupolvi ===
+Seitsemännessä sukupolvessa julkaistuja malleja ovat Kindle 7, Kindle Voyage ja Kindle Paperwhite (kolmas versio).
+
+
+=== Kahdeksas sukupolvi ===
+Kahdeksannessa sukupolvessa julkaistuja malleja ovat Kindle Oasis (ensimmäinen versio) ja Kindle 8.
+
+
+=== Yhdeksäs sukupolvi ===
+Yhdeksännessä sukupolvessa julkaistu malli on Kindle Oasis (toinen versio).
+
+
+=== Kymmenes sukupolvi ===
+Kymmenennessä sukupolvessa julkaistuja malleja ovat Kindle Paperwhite (neljäs versio), Kindle (10. versio) ja Kindle Oasis (kolmas versio).
+
+
+=== Yhdestoista sukupolvi ===
+Yhdestoista sukupolvi sisältää Kindle Paperwhite (viides versio) -mallin.
+
+
+== Tuote ja sovelluskauppa ==
+Alkuperäisen Kindlen julkaisun aikoihin marraskuussa 2007 Amazonin Kindle Storessa oli ladattavana yli 88 000 digitaalista teosta. Ensimmäinen erä myytiin viidessä ja puolessa tunnissa, ja laitetta ei ollut sen jälkeen saatavilla ennen huhtikuun 2008 loppupuolta.
+Kindle maksoi 399 Yhdysvaltain dollaria. Sittemmin Amazon laski laitteen hintaa 359 dollariin. Kesällä 2010 Kindle 2 -laitteen hinta oli 189 dollaria. Amazon aloitti Kindle 2 -laitteen 3G-version myynnin Yhdysvaltojen ulkopuolelle lokakuussa 2009 siten, että toimitukset alkoivat 19.10.2009, ja ensimmäiset laitteet saapuivat Suomeen 21.10.2009. Amazon on saanut useimmissa Euroopan maissa solmittua sopimukset teleoperaattoreiden kanssa käyttäjälle ilmaisesta verkkoyhteydestä. Suomessa on laitteen langattomia ominaisuuksia voinut käyttää kesäkuusta 2010 alkaen rajoitetusti (langattomat laitteistopäivitykset ja Amazonin Kindle-kirjakauppa sekä Wikipedia ovat avoimia, muu verkkokäyttö on rajattu pois).
+
+
+== Aiheesta muualla ==
+Hilavitkutin.com: 3 Sukupolven Amazon Kindle -videoarvostelu
+Tekniikan maailma: Amazon Kindle -pikakoe
+Kindle 3 review (englanniksi)

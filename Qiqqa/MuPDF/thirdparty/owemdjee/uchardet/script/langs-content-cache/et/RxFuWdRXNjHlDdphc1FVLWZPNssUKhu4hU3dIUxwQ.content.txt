@@ -1,0 +1,23 @@
+revision: 5842685
+title: DVB-C
+url: https://et.wikipedia.org/wiki/DVB-C
+
+
+---
+
+DVB-C (Digital Video Broadcast - Cable ehk 'digitaalse videosignaali ülekanne – kaabel') on tehnoloogia digitaalse televisioonisignaali ülekandeks koaksiaalkaabelvõrgu kaudu seal seni edastatud analoogtelevisiooni signaali asemel.
+DVB-C olulisteks eelisteks analoogtelevisiooni ees on võimalus edastada samas sageduskanalis kuni 15 korda rohkem programme, sealhulgas kõrglahutusega programme. Programme edastatakse ühtse paketina, mida nimetatakse multipleksiks (mux). Ka puuduvad analoogtelevisioonile omased häired ning on võimalik edastada krüpteeritud programme. Lisaks saab DVB-C multipleksides koos teleprogrammidega edastada ka raadioprogramme.
+Euroopa Telekommunikatsioonistandardite Instituut TSI kinnitas 1998. aastal DVB-C-standardi EN 300 429  ja 2010. aastal selle edasiarenduse DVB-C2 standardi EN 302 769 . Viimane võimaldab edastada ka ultrakõrglahutusega televisiooni signaali.
+DVB-C on peale Euroopa kasutusel suures osas Aasias, samuti Aafrikas, Austraalias ja Lõuna-Ameerikas. Põhja-Ameerikas ja Jaapanis on oma kaabeltelevisioonisüsteemid.
+Eestis kasutavad DVB-C-standardit Starman, Telia (vaid üksikutes uuemates elamupiirkondades), STV ja Telset. Enamik nende edastatavaid programme on krüpteeritud ning avanevad vaid teenusega liitumisel kiipkaardi abil.
+
+
+== Vaata ka ==
+Kaabeltelevisioon
+
+
+== Viited ==
+
+
+== Välislingid ==
+https://www.dvb.org/standards/dvb-c2  DVB-C2

@@ -1,0 +1,60 @@
+revision: 25842290
+title: Thomas Hunt Morgan
+url: https://hu.wikipedia.org/wiki/Thomas_Hunt_Morgan
+
+
+---
+
+Thomas Hunt Morgan (Lexington, Kentucky, 1866. szeptember 25. – Pasadena, Kalifornia, 1945. december 4.) Nobel-díjas amerikai genetikus, embriológus. Ecetmuslicákkal végzett kutatásaival bebizonyította, hogy a gének a kromoszómákhoz köthetőek és felfedezte az alapvető genetikai törvényszerűségeket. Munkáját 1933-ban orvostudományi Nobel-díjjal jutalmazták.
+
+
+== Tanulmányai ==
+Thomas Hunt Morgan 1866. szeptember 25-én született a Kentucky-beli Lexingtonban. Apja, Charlton Hunt Morgan az 1860-as évek elején a szicíliai Messinában volt amerikai konzul és segítette Garibaldi és a vörösingesek harcát. Családja a tehetős déli ültetvénytulajdonosok közé tartozott, akik az amerikai polgárháborúban a Konföderációt támogatták, ezért a háború után anyagi nehézségekkel néztek szembe. Apai nagybátyja, John Hunt Morgan ezredesként, majd tábornokként szolgálta a délieket saját gerillacsapata, a "Morgan's Raiders" élén. Thomas anyja – Charlton Morgan felesége – Ellen Key Howard volt, Francis Scott Key, az amerikai nemzeti himnusz szerzőjének unokája.
+Morgan gyerekként sok időt töltött a természetben, járta a hegyeket és erdőket és fosszíliákat gyűjtött. Két nyáron át segédkezett a kentuckyi hegyeket felmérő geológusoknak. 1880-ban elkezdte a Kentuckyi Főiskola (ma egyetem) előkészítő tanfolyamát, két évvel később pedig a főiskolán tanult tovább. 1886-ban summa cum laude minősítéssel kapta meg B.Sc. diplomáját zoológiából. Barátja, a két évvel fölötte járó Joseph H. Kastle példáját követve a baltimore-i Johns Hopkins Egyetemen tanult tovább, ekkor kezdte tanulmányozni a tengeri élővilágot. 1890-ben megvédte doktori disszertációját, amelyben a tengeri pókok többi ízeltlábúakkal való filogenetikai kapcsolatát taglalta embrionális fejlődésük alapján. Bár Morgan később a muslicákkal végzett kísérleteiről lett híres, fenntartotta a tenger iránti szeretetét és egészen 1942-ig szinte minden nyáron a Woods Hole-i tengerbiológiai állomáson dolgozott.
+
+
+== Pályafutása ==
+Ph.D-jának megszerzése után kutatói ösztöndíjjal egy évig a Hopkinson maradt; az ösztöndíj azt is lehetővé tette számára, hogy Jamaicán, a Bahamákon és Európában tanulmányozza a tengeri élővilágot. 1891 őszén a Bryn Mawr College női főiskola ajánlott neki oktatói és kutatói állást, amelyet 1904-ig töltött be. 
+Morgan itt elsősorban zoológiai morfológiát tanított és eközben a tengeri makkokat, zsákállatokat, békákat tanulmányozta. 1894-ben és 1900-ban kutatói szabadságot kapott, amit a neves nápolyi tengerbiológiai állomáson töltött.
+1904-ben barátja, Edmund Wilson (aki előtte töltötte be a Bryn Mawr-on Morgan állását) meghívta, hogy legyen a Columbia Egyetemen az akkor alapított kísérletes zoológia tanszék professzora. Wilson volt az egyik első amerikai sejtbiológus és meggyőzte Morgant, hogy az embrionális fejlődés (amely Morgan egyik fő kutatási területe volt) kulcsa az öröklődésben rejlik, amelyről akkoriban szinte semmit nem tudtak. A brünni Gregor Mendel felismerte ugyan a gének létezését a 19. század közepén, de munkáját elfeledték és csak 1900-ban fedezték fel újra. Többek között Wilson volt az, aki felismerte, hogy a mendeli "faktorok" vagy gének és a kromoszómák nagyon hasonlóan viselkednek, bár az nyilvánvaló volt, hogy kromoszómából sokkal kevesebb volt, mint tulajdonságból, amit hordozniuk kellett volna. 
+
+
+=== A Drosophila-genetika ===
+
+Morgan nekikezdett a genetikai kísérleteknek, de rájött, hogy a szokásos laboratóriumi állatok, a patkányok és egerek az ő céljaihoz túlságosan lassan szaporodnak, ezért figyelme 1907-ben az ecetmuslica (Drosophila melanogaster) felé fordult. A muslicát könnyű tenyészteni, 12 naponként új generáció nő fel, egész évben szaporodik, tartása olcsó és egy tejesüvegben akár ezret is tarthatott belőlük. A probléma az volt, hogy nem talált jól azonosítható mutációt (mint Mendel esetében a sárga és zöld borsószemek), amelynek követhette volna az öröklésmenetét. Egészen 1910-ig kellett várnia, amikor felfigyelt egy hím példányra, amelynek a szokásos vörösbarna helyett fehér volt a szeme. Amikor a hímet egy normális, vörös szemű nősténnyel keresztezte, az utódok (F1 generáció) mind vörös szeműek voltak, vagyis megállapíthatta, hogy a fehér szem recesszív tulajdonság. Ezután az utódokat egymás között szaporította (F2 generáció) és a mendeli törvények szerint várható 3:1 arányban újra megjelentek a fehér szemű muslicák. A meglepetés ekkor érte Morgant, amikor észrevette, hogy a fehér szeműek mind hímek: a hímek fele fehér, fele pedig vörös szemű volt. Morgan a kísérletből azt a következtetést vonta le, hogy a fehér szemszínt okozó mutáció a nemet meghatározó X-kromoszómán található (a muslicák nemét az emberhez hasonlóan az XX-XY rendszer határozza meg). Ezzel elsőként sikerült egy genetikai tulajdonságot a kromoszómákhoz kötnie (érdekes módon Morgan korábban ellenezte Wilson kromoszómaelméletét). 
+
+Ezután tanítványaival együtt nekikezdett a mutációk szisztematikus keresésének és rövid időn belül számos újat találtak, amelyek közül többet sikerült az X-kromoszómához kötniük. Ezeknek a mutációknak az egymáshoz viszonyított öröklődésmenete azonban igen változatos volt: egyes esetekben a mendeli törvényeknek megfelelően a két vizsgált tulajdonságra vonatkozó 9:3:3:1-es arányt kapták, máskor viszont ettől különböző mértékben eltértek az eredmények. Morgan a jelenséget úgy magyarázta, hogy az ivarsejtek létrejötte, a meiózis során a homológ kromoszómák egymáshoz simulnak (ezt a belga Frans Alfons Janssens 1909-ben mikroszkóp alatt meg is figyelte) és kicserélik egymással egyes részeiket. A folyamatot crossing overnek (átkereszteződésnek nevezte el). Úgy vélte, hogy a kromoszómán a gének egymás után, lineárisan helyezkednek el és minél közelebb vannak egymáshoz, annál nagyobb az esélye hogy nem történik közöttik ilyen crossing over és együtt öröklődnek át. Morgan tanítványának, Alfred Sturtevantnak támadt az az ötlete, hogy az együttöröklődés esélyéből meg lehet határozni a gének egymás utáni sorrendjét és relatív távolságát. 1913-ban elkészítette az első genetikai térképet, amelyen a távolság mértékegysége J. B. S. Haldane javaslatára a morgan nevet kapta. A kutatócsoport (amelyben Morganon és Sturtevanton kívül Calvin Bridges és a későbbi Nobel-díjas Hermann Muller dolgozott) 1915-ben a The Mechanism of Mendelian Heredity (A mendeli öröklődés mechanizmusa) c. könyvben jelentette meg addigi eredményeit, amivel gyakorlatilag megalapozták a modern genetika tudományát.
+Sikereik nyomán világszerte számos kutató kezdett neki a muslicagenetikai kísérleteknek. Morgan laboratóriuma (a híres légyszoba, Fly room) az informális központjává vált a genetikai kutatásoknak, összefogta a kísérleti eredmények terjesztését, továbbította közöttük az új mutációkat hordozó muslicatörzseket. A Drosphila melanogaster lett a biológia első modellszervezete. Maga Morgan visszavonult a muslicakutatástól és visszatért az embriológiához, illetve ismertségét kihasználva támogatásokat gyűjtött és kutatásszervezéssel foglalkozott.   
+
+
+=== A Caltech ===
+
+1928-ban Morgan elvállalta a California Institute of Technology akkor alapított biológiai részlegének vezetését. A kutatási programokat a keleti part egyetemeitől eltérően határozta meg: főleg genetikával, evolúcióval, embriológiával, élettannal, biokémiával és biofizikával foglalkoztak. A segítségével alapították meg Corona del Marban a tengerbiológiai állomást. A Columbiáról magával vitte legkiválóbb munkatársait, Bridgest, Sturtevantot, valamint a kiváló evolúcióbiológus Theodosius Dobzhanskyt. Az idők során számos kiváló tudós dolgozott Morgan részlegén, többek között George Beadle, Edward L. Tatum, Linus Pauling vagy Sidney W. Fox.
+Híres tudósként és kutatásszervezőként Morgan több amerikai tudományos társaság elnökségében vállalt feladatokat. 1927 és 1931 között ő volt a Nemzeti Tudományos Akadémia elnöke; 1930-ban Tudomány Előrehaladását Segítő Amerikai Társaság elnöke; 1932-ben ő vezette le a New York állambeli Ithacában tartott 6. nemzetközi genetikai kongresszust. 1933-ban (miután 1919-ben és 1930-ban is jelölték) elnyerte a fiziológiai és orvostudományi Nobel-díjat. A díjjal együtt járó pénzjutalmat megosztotta Bridgesszel, Sturtevanttal és a gyerekeivel. Ismeretlen okból (talán a muslica nyálmirigyében felfedezett óriáskromoszómák miatti nagy munkaterhelés miatt) csak 1934-ben utazott el az átadási ceremóniára.
+Szerződését a Caltech kétszer is meghosszabbította, végül 1972-ben vonult vissza az aktív munkától, bár professor emeritusként fenntartott egy laboratóriumot az egyetemen.
+
+
+== Nézetei az evolúcióról ==
+Morgan egész pályafutása alatt nagy figyelmet szentelt az evolúcióelméletnek. Doktori dolgozatát is a tengeri pókok törzsfejlődési kapcsolatairól írta és összesen négy könyvet publikált az evolúcióról. 1903-as könyvében antidarwinista álláspontot képviselt, véleménye szerint apró különbségek szelekciójával nem jöhetnek létre teljesen új fajok. Ebben az 1875-1925 közötti korban, amikor a genetikai ismeretek kezdetlegesek voltak, a tudósok között népszerű volt az evolúció szaltácionista elmélete, miszerint a változások nem fokozatosak, hanem egy-egy alapvető mutáció hoz létre új fajokat vagy akár magasabb rendszertani osztályokat. A Morgan által felfedezett nagymértékű mutációk a muslicában ellentmondani látszottak Darwin nézeteinek, aki sok apró változás felhalmozódásában látta az új fajok keletkezésének nyitját. Morgan idővel közeledett nézeteivel Darwinhoz, rájött, hogy a mutációk hozzák létre azt a változatosságot, ami előreviszi az evolúciós folyamatot és genetikai felfedezéseinek beépítésével maga is hozzájárult a neodarwinizmus kialakításához, amelyet végül Ronald Fisher, J. B. S. Haldane, Sewall Wright és másik vittek végbe az 1920-as években.    
+
+
+== Elismerései ==
+1924 Darwin-érem
+1933 Fiziológiai és orvostudományi Nobel-díj
+1939 Copley-éremAz amerikai tudományos társaságokon kívül 1919-től tagja volt a brit Royal Societynek. Róla nevezték a Kentuckyi Egyetem biológiai részlegét (Hunt Morgan School of Biological Sciences) és az Amerikai Gentikai Társaság Thomas Hunt Morgan-érmét.  
+
+
+== Családja ==
+Thomas Morgan 1904-ben vette feleségül Lilian Vaughan Sampsont, a Bryn Mawr College diákját, aki korábban gyakran segítette kutatásaiban. Egy fiuk és három lányuk született.
+Ismerősei, barátai Morgant energikus, jó humorú, barátságos embernek írták le. A laboratóriumban nem vonta ki magát a kétkezi munka alól sem, de inkább az ötletek embere volt, aki a részletek kidolgozását tanítványaira osztotta. Hagyta őket is érvényesülni, számos munkatársa ragyogó pályát futott be és egyikük maga is Nobel-díjat kapott.
+Thomas Hunt Morgan élete nagy részében nyombélfekélytől szenvedett. 1945-ben, 79 évesen szívrohamot kapott és artériarepedés miatt életét vesztette. 
+
+
+== Jegyzetek ==
+
+
+== Források ==
+Thomas H. Morgan – Biographical Nobelprize.org
+Thomas Hunt Morgan (1866-1945) DNA From the Beginning
+Thomas Hunt Morgan at Columbia Universizty Columbia University
+Thomas Hunt Morgan (1866-1945) establishes the chromosomal theory of heredity Genome News Network

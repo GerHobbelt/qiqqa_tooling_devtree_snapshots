@@ -1,0 +1,97 @@
+revision: 62829292
+title: "N\xFAmero CAS"
+url: https://pt.wikipedia.org/wiki/N%C3%BAmero_CAS
+
+
+---
+
+O número CAS ou registro CAS (CAS number ou CAS registry number, em inglês) de um composto químico, polímero, sequência biológica e liga é um número com um registro único no banco de dados do Chemical Abstracts Service, uma divisão da Chemical American Society. O Chemical Abstracts Service atribui esses números a cada produto químico que é descrito na literatura. Além disso, CAS mantém e comercializa um banco de dados destas substâncias: o CAS Registry.O registro mantido pelo CAS é uma coleção oficial de informações divulgadas sobre substâncias químicas. Aproximadamente 182 milhões de substâncias orgânicas e inorgânicas únicas e 68 milhões de sequências de proteínas e DNA foram identificadas. Cerca de 15 000 novos números são acrescentados cada dia. O objetivo é facilitar as pesquisas no banco de dados, visto que, muitas vezes, os produtos químicos têm mais de um nome. Quase todos os bancos de dados atuais de moléculas permitem uma pesquisa pelo número CAS.
+O registro CAS é separado por traços em três partes: a primeira parte tem até 6 algarismos, a segunda, até dois algarismos e a terceira é um número de controle de um algarismo. Os números são atribuídos cronologicamente e não têm significação particular.
+O algarismo de controle é calculado multiplicando-se o último algarismo por um, o seguinte por dois etc. ; soma-se então todos os produtos obtidos e calcula-se o módulo aritmético 10 dessa soma (o módulo aritmético 10 de um número é, em poucas palavras, o resto da operação de divisão desse número por 10). Por exemplo, o número CAS da água é 
+  
+    
+      
+        7732
+        −
+        18
+        −
+        
+          
+            5
+          
+        
+      
+    
+     
+  ; o algarismo de controle é calculado da seguinte maneira:
+
+  
+    
+      
+        (
+        8
+        ⋅
+        1
+        +
+        1
+        ⋅
+        2
+        +
+        2
+        ⋅
+        3
+        +
+        3
+        ⋅
+        4
+        +
+        7
+        ⋅
+        5
+        +
+        7
+        ⋅
+        6
+        )
+         
+        m
+        o
+        d
+         
+        10
+        =
+        105
+         
+        m
+        o
+        d
+         
+        10
+        =
+        
+          
+            5
+          
+        
+      
+    
+     
+  .Diferentes isômeros de uma molécula recebem diferentes números CAS: D–glicose tem 50-99-7, L-glicose tem 921-60-8, e α-D-glicose tem 26655-34-5, etc. Às vezes, toda uma série completa de moléculas recebem um só número CAS: o grupo das desidrogenases alco
+
+NIH's ChemIDplus
+NIST's Chemistry WebBook
+O NCI Database Browser
+Chemical Identifier Resolver
+NIOSH HomeNIOSH Pocket Guide to Chemical Hazards
+Common Chemistry™ from Chemical Abstracts Service (CAS)
+
+
+== Ver também ==
+
+
+== Referências ==
+
+
+== Ligações externas ==
+Descrição do registro CAS (em inglês)
+chemfinder (em inglês)

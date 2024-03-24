@@ -1,0 +1,30 @@
+revision: 51330714
+title: UTC+1
+url: https://sv.wikipedia.org/wiki/Koordinerad_universell_tid
+
+
+---
+
+Koordinerad universell tid (UTC, kompromissförkortning mellan engelska Coordinated Universal Time och franska temps universel coordonné) är en utgångspunkt för exakta tidsangivelser världen över. Tidsangivelsen skiljer sig med en timme i förhållande till centraleuropeisk tid som tillämpas i Sverige. När klockan är 12:00 enligt UTC är den 13:00 i Sverige (normaltid) eller 14:00 (sommartid).
+
+
+== Definition och historik ==
+UTC-tiden baserar sig på den internationella atomtiden TAI som iakttas med hjälp av atomur med hög precision av tidslaboratorier runt om i världen. UTC avviker från TAI med ett visst antal hela sekunder på ett sådant sätt att skillnaden mellan UTC och nollmeridianens medelsoltid Greenwich Mean Time (GMT) aldrig ska vara mer än högst en sekund. Sammanställningen av TAI med utgångspunkt från de olika atomuren administreras av Internationella byrån för mått och vikt (BIPM). En annan internationell organisation, International Earth Rotation and Reference Systems Service, fastställer när skottsekunder skall fogas till UTC för att skillnaden mellan UTC och GMT skall hållas under den fastställda gränsen. Skillnaden förändras med viss oregelbundenhet på grund av att jordens rotation är föremål för små variationer.
+UTC har ersatt den tidigare använda Greenwich Mean Time, GMT, från vilken UTC skiljer sig mindre än en sekund. Märk väl att GMT ibland, speciellt i engelskspråkiga länder, används som synonym för UTC trots att GMT strikt taget avser medelsoltiden vid nollmeridianen, som går genom Greenwich i London.
+Exempel (dagens datum):
+
+2023-07-05T05.41+00:00 (W3C Date and Time Formats)En variant, UT1, bestäms av jordrotationen medan UTC bestäms av ett antal högprecisions-atomur. En internationell överenskommelse anger att skillnaden mellan aktuell jordtid, GMT, och klockorna inte får skilja mer än 0,9 sekunder, varför  synkronisering mellan UT1 och UTC behöver göras då och då. Detta görs med hjälp av en inskjuten skottsekund, i genomsnitt efter ett eller ett och ett halvt år. Variationen är inte helt förutsägbar. Ett exempel på detta är att 2000-talets första skottsekund beslutades infalla först under år 2005.
+Ursprunget till att UTC/GMT ibland skrivs Z är militärt och kommer troligtvis från de allierade styrkorna under andra världskriget. Allmänt används Z för att markera UTC/GMT inom olika typer av radiotjänster internationellt, och andra bokstäver för andra tidszoner, som till exempel efter ett klockslag då en radioförbindelse ägt rum eller då en tidsangivelse begärs eller anges.
+
+
+== Se även ==
+Världstid
+International Earth Rotation and Reference Systems Service
+ISO 8601
+
+
+== Referenser ==
+
+
+== Externa länkar ==
+”Nationell och internationell tidhållning”. SP Sveriges Tekniska Forskningsinstitut. http://www.sp.se/sv/index/information/national_and_international_time/Sidor/default.aspx. Läst 22 januari 2010.

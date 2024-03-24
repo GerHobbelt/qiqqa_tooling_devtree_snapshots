@@ -1,0 +1,34 @@
+revision: 146641879
+title: Scholar
+url: https://es.wikipedia.org/wiki/Semantic_Scholar
+
+
+---
+
+Semantic Scholar es un motor de búsqueda respaldado por un sistema de inteligencia artificial dedicado a trabajar con publicaciones académicas. Desarrollado en el Allen Institute for Artificial Intelligence, se lanzó al público en noviembre de 2015.[1]​ Utiliza avances recientes en el procesamiento del lenguaje natural para proporcionar resúmenes de artículos académicos.[2]​
+
+
+== Tecnología ==
+Semantic Scholar está concebido para proporcionar resúmenes en una sola frase de artículos científicos. Uno de sus objetivos era abordar el desafío de leer numerosos títulos y extensos resúmenes en dispositivos móviles.[3]​ También busca asegurar que los tres millones de artículos científicos publicados anualmente lleguen a los lectores, ya que se estima que solo la mitad de esta literatura se lee alguna vez.[4]​
+La inteligencia artificial se utiliza para captar la esencia de un artículo mediante una técnica "abstractiva".[2]​ El proyecto se vale de una combinación de aprendizaje automático, procesamiento de lenguajes naturales y visión artificial para agregar un factor de análisis semántico a los métodos tradicionales de análisis de citas, pudiendo a su vez extraer figuras, entidades y aspectos relevantes de los artículos.[5]​
+En comparación con Google Académico y PubMed, Semantic Scholar está diseñado para destacar los artículos más importantes e influyentes e identificar las conexiones entre ellos. A cada artículo alojado por Semantic Scholar se le asigna un identificador único llamado Semantic Scholar Corpus ID (o S2CID para abreviar), como por ejemplo
+
+Liu, Ying; Gayle, Albert A; Wilder-Smith, Annelies; Rocklöv, Joacim (marzo de 2020). «The reproductive number of COVID-19 is higher compared to SARS coronavirus». Journal of Travel Medicine 27 (2). PMC 7074654. PMID 32052846. doi:10.1093/jtm/taaa021. S2CID . En enero de 2018, tras un proyecto de 2017 que agregó artículos y resúmenes de temas biomédicos, el corpus de Semantic Scholar incluía más de 40 millones de artículos sobre ciencias de la computación y biomedicina.[6]​ En marzo de 2018, Doug Raymond, quien desarrolló las iniciativas de aprendizaje automático para la plataforma Amazon Alexa, fue contratado para liderar el proyecto Semantic Scholar.[7]​ En agosto de 2019, la cantidad de artículos incluidos había aumentado a más de 173 millones[8]​ después de la adición de los registros de Microsoft Academic.[9]​
+En 2020, los usuarios de Semantic Scholar alcanzaron los siete millones al mes.[3]​
+
+
+== Véase también ==
+Análisis de citas
+Índice de citas
+Extracción de conocimiento
+Anexo:Bases de datos académicas y motores de búsqueda
+Cienciometría
+
+
+== Referencias ==
+
+
+== Enlaces externos ==
+Propiedades de wikidata: P6611, P4012, P8299 y P4011
+
+Sitio web oficial  (en inglés)

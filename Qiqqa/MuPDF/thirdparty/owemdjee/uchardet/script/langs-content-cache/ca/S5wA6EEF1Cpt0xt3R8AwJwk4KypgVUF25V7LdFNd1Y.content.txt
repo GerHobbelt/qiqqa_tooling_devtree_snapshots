@@ -1,0 +1,61 @@
+revision: 28804755
+title: Calendar
+url: https://ca.wikipedia.org/wiki/Calendari_musulm%C3%A0
+
+
+---
+
+El calendari musulmà, calendari islàmic o calendari de l'Hègira (àrab: التقويم الهجري, at-taqwīm al-hijrī; persa: تقویم هجری قمری, taqwīm-e hejri-ye qamari, taqwīm-e hejri-ye qamari; turc: Hicri Takvim) és el calendari utilitzat en el món musulmà (a vegades en paral·lel amb el calendari gregorià) que determina les dates assenyalades de la religió islàmica. Es va iniciar arran de l'esdeveniment anomenat Hègira, la fugida del profeta Muhàmmad cap a Medina on es va crear la primera comunitat de creients (umma) de la nova religió, i que tingué lloc l'any 622 de l'era cristiana.Es tracta de l'antic calendari emprat pels àrabs, que era estrictament lunar. Es basa en cicles lunars de 30 anys (360 llunacions, de tradició sumèria). Els 30 anys del cicle es divideixen en 19 anys de 354 dies i 11 anys de 355 dies. Els anys de 354 dies s'anomenen anys simples i es divideixen en sis mesos de 30 dies i en uns altres sis mesos de 29 dies. Els anys de 355 dies s'anomenen intercalars i es divideixen en set mesos de 30 dies i en uns altres cinc de 29 dies. Anys i mesos van alternant-se. És a dir, cada 33 anys musulmans equivalen a 32 anys cristians. Les intercalacions es fan afegint un dia al final del mes de dhu-l-hijja en els anys 2n, 5è, 7è, 10è, 13è, 16è, 18è, 21è, 24è, 26è i 29è de cada cicle de 30 anys.
+
+
+== Divisions del calendari musulmà ==
+
+
+=== Mesos ===
+L'any musulmà es compon de 12 mesos de 30 o 29 dies:
+muhàrram (àrab: محرّم, muḥarram) (30 dies)
+sàfar (àrab: صفر, ṣafar) (29)
+rabí al-àwwal (àrab: ربيع الأول, rabīʿ al-awwal), ‘primer rabí’ (30)
+rabí al-àkhir (àrab: ربيع الآخر, rabīʿ al-āḫir) o rabí ath-thani (àrab: ربيع الثاني, rabīʿ aṯ-ṯānī) ‘últim rabí’ o ‘segon rabí’ (29)
+jumada al-ula (àrab: جمادى الأولى, jumādà al-ūlà) o jumada al-àwwal (àrab: جمادى الأول, jumādà al-awwal), ‘primer jumada’ (30)
+jumada al-àkhira (àrab: جمادى الآخرة, jumādà al-āḫira), jumada al-àkhir (àrab: جمادى الآخر, jumādà al-āḫir), jumada ath-thàniya (àrab: جمادى الثانية, jumādà aṯ-ṯāniya) o jumada ath-thani (àrab: جمادى الثاني, jumādà aṯ-ṯānī), ‘últim jumada’ o ‘segon jumada’ (29)
+ràjab (àrab: رجب, rajab) (30)
+xaban (àrab: شعبان, xaʿbān) (29)
+ramadan o ramadà (àrab: رمضان, ramaḍān) (30)
+xawwal (àrab: شوّال, xawwāl) (29)
+dhu-l-qada (àrab: ذو القعدة, ḏū l-qaʿda) (30)
+dhu-l-hijja (àrab: ذو الحجة, ḏū l-ḥijja) (29 o 30)
+
+
+=== Dies ===
+El dia comença amb la posta del sol, i el mes comença uns dos dies després de la lluna nova, quan comença a veure's el creixent.
+Els dies de la setmana són set:
+yawm al-àkhad (àrab: يوم الأحد, yawm al-aḥad, ‘primer dia’, diumenge)
+yawm al-ithnín (àrab: يوم الإثنين, yawm al-iṯnīn, ‘segon dia’, dilluns)
+yawm ath-thulathà (àrab: يوم الثـﻻثاء, yawm aṯ-ṯulāṯāʾ, ‘tercer dia’, dimarts)
+yawm al-arbià (àrab: يوم اﻷربعاء, yawm al-arbiʿāʾ, ‘quart dia’, dimecres)
+yawm al-khamís (àrab: يوم الخميس, yawm al-ḫamīs, ‘cinquè dia’, dijous)
+yawm al-juma (àrab: يوم الجمعة, yawm al-jumʿa, ‘dia de la reunió’, divendres)
+yawm as-sabt (àrab: يوم السبت, yawm as-sabt, ‘dia del sàbat’, dissabte)
+
+
+== Correspondència amb el calendari gregorià ==
+Si es considera la diferència de dies entre el calendari lunar i el solar, i el fet de començar l'any en dates diferents, és observable la dificultat d'establir una correspondència entre el calendari musulmà i el cristià. Hi ha taules de correspondència d'anys, però per a un càlcul ràpid i aproximat serveixen les fórmules següents:
+Per a passar de l'any musulmà al cristià G = H + 622 – (H/33) 
+Per a passar de l'any cristià al musulmà H = G – 622 + (G - 622)/32
+On: 
+G = any cristià (calendari gregorià) 
+H = any musulmà (hègira)
+
+Estes fórmules serveixen per a establir la correspondència d'anys musulmans i cristians d'una manera aproximada. Per a establir la correspondència d'una data concreta la cosa és quasi impossible, i fins i tot els historiadors admeten un error d'un dia més o menys. La causa d'aquest desfasament és que l'inici i la fi de cada mes es regula segons el cicle lunar observable, la qual cosa porta a introduir un dia de més quan les observacions no coincideixen amb el càlcul teòric.
+
+
+== Notes i referències ==
+
+
+== Vegeu també ==
+Celebracions islàmiques
+
+
+== Enllaços externs ==
+Calendar.sk. La data d'avui al calendari islàmic.

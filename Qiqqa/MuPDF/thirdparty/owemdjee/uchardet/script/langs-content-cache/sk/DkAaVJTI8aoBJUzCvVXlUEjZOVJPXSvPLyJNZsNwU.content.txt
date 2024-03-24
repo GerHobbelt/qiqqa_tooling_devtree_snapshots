@@ -1,0 +1,145 @@
+revision: 6720199
+title: "Scheme (programovac\xED jazyk)"
+url: https://sk.wikipedia.org/wiki/Scheme_(programovac%C3%AD_jazyk)
+
+
+---
+
+Scheme je funkcionálny programovací jazyk a je dialektom jazyka LISP. Vyvinuli ho Guy L. Steele a Gerald Jay Sussman v 70. rokoch 20. storočia
+najprv ako pokus o pochopenie Actor modelu a predstavili ho akademickému svetu pomocou série článkov, ktoré sú v súčasnosti označované Sussmanove a Steeleove Lambda články. Implementácie sa zvyknú líšiť v malých detailoch, preto je Scheme občas označovaný ako rodina tesne príbuzných programovacích jazykov.
+Filozofia jazyku Scheme je minimalistická. Jej cieľom je odstrániť slabosti a obmedzenia minulých jazykov, ktoré spôsobujú, že nové črty vyzerajú byť potrebné. Preto Scheme poskytuje čo najmenší počet základných pojmov a kdekoľvek to je praktické v implementácií, snaží sa aby všetko ostatné bolo poskytované programovacími knižnicami, ktoré sú vybudované nad týmito základnými pojmami. Napríklad hlavný mechanizmus pre ovládanie toku riadenia je rekurzia na chvoste.
+Scheme bol prvý dialekt jazyku Lisp, ktorý si zvolil statický (známy aj ako lexikálny) pred dynamický rozsahom platnosti premenných. Bol jedným z prvých programovacích jazykov s podporou explicitných pokračovaní. Scheme taktiež podporuje Automatickú správu pamäte.
+Jazyk Scheme používa ako základnú údajovú štruktúru zoznam, ale podporuje aj vektory. Vzhľadom na svoj minimalistický návrh, neexistuje štandardná syntax pre vytváranie štruktúr s pomenovanými položkami, alebo pre objektovo orientované programovanie, ale veľa implementácií má takéto možnosti.
+
+
+== Štandardy ==
+Sú dva štandardy, ktoré definujú jazyk Scheme:
+oficiálny IEEE štandard a de facto štandard nazývaný Revisedn Report on the Algorithmic Language Scheme takmer vždy skracovaný ako RnRS, kde n je číslo revízie.
+Posledná RnRS verzia (v januári 2006) je R5RS.
+Štandardizačný proces nového jazyka sa začal na 2003 Scheme workshop, ktorý ma za cieľ pripraviť R6RS štandard v roku 2006. Ukončuje jednohlasný postup použitý pri predchádzajúcich RnRS štandardoch.
+Asi najdôležitejšia nová vlastnosť v R6RS bude štandardný modulový  systém. To umožní rozdelenie medzi hlavný jazyk a knižnice.
+
+
+== Časti jazyka ==
+
+
+=== Komentáre ===
+Komentáre začínajú bodkočiarkou (;) a pokračujú až po koniec riadku. Komentáre rozprestierajúce sa cez viaceré riadky sú ohraničené v #|...|# (môžu byť vnorené).
+
+
+=== Premenné ===
+Premenné sú dynamicky typované. Premenné sú viazané pomocou define a let výrazov a pár ďalších Scheme form. Tie premenné, ktoré sú viazané s define na najvyššej úrovni, sa nachádzajú v globálnom rozsahu platnosti.
+
+Rozsah platnosti pre premenné viazané pomocou let je telo let formy.
+
+
+=== Funkcie ===
+Funkcie sú "first-class" objekty v Scheme (dá sa s nimi manipulovať ako s ostatnými hodnotami, napríklad s číslami). Môžu byť priraďované do premenných. Napríklad funkcia s dvoma argumentmi arg1 a arg2 sa dá definovať ako
+
+čo sa dá nasledovne skrátiť:
+
+Aplikácia funkcie má nasledujúcu syntax:
+
+Aplikovaná funkcia je na prvom mieste v zozname zatiaľ čozvyšok zoznamu obsahuje argumenty. Funkcia apply zoberie prvý argument a aplikuje ho na daný zoznam argumentov, takže predchádzajúce funkčné volanie môže byť zapísané aj ako:
+
+V Scheme sú funkcie rozdelené do dvoch základných kategórií: procedúry a primitíva. Primitíva sú preddefinované funkcie. To zahŕňa +, -, *,/, set!, car, cdr a ďalšie základné procedúry. Procedúry sú používateľom definované funkcie. Vo viacerých variantoch Scheme môže používateľ predefinovať primitívum. Napríklad kód
+
+predefinuje primitívum + tak, aby vykonávalo odčítanie namiesto sčítania.
+
+
+=== Zoznam ===
+Scheme používa dátovú štruktúru "linked-list" - zreťazený zoznam v rovnakej forme aká existuje v Lispe.
+List je možné implementovať čistou pomocou funkcie cons, ktorá predstavuje paralelu k funkcii "pair" v C++, teda spojí dve premenné dokopy. List je teda zreťazením funkcie cons, kde druhá premenná predstavuej ukazovateľ na ďalšiu cons bunku.
+
+list vytvorí nový zreťazený zoznam. napríklad: (list 1 2 3) (list (list 1  2) 3)
+car vráti hodnotu hlavičkového uzla zreťazeného zoznamu. napríklad: (car (list 1 2 3)) vráti 1, (car (list (list 1 2) 3) vráti (1 2)
+cdr vráti zoznam za hlavičkovým uzlom zreťazeného zoznamu. napríklad: (cdr (list 1 2 3)) vráti (2 3), (cdr (list (list 1 2) 3) vráti (3)
+cons vytvorí nový zoznam s danou car hodnotou a cdr zoznamom. napríklad: (cons 1 (list 2 3)) vráti (1 2 3), (cons (list 1 2) (list 3)) vráti ((1 2) 3)
+
+
+=== Údajové typy ===
+Ostatné údajové typy v jazyku Scheme okrem funkcií a zoznamov sú: celé čísla, racionálne čísla, reálne čísla,komplexné čísla, symboly, reťazce, porty.  Väčšina implementácií Scheme taktiež poskytuje asociatívne zoznamy, hašovacie tabuľky, vektory, polia a štruktúry. Od vtedy ako bol vydaný IEEE štandard a R4RS štandard určuje jazyk Scheme, že všetky hore uvedené typy sú disjunktné teda, že každá hodnota nemôže byť viac než jedného typu. Ale niektoré zastarané implementácie jazyku Scheme anti-datujú tieto štandardy tak, že #f a '() predstavujú tú istú hodnotu, rovnako ako v prípad jazyku Common Lisp.
+Väčšina implementácií Scheme poskytujú plnú číselnú vežu a taktiež presnú a nepresnú aritmetiku.
+Pravda a nepravda sú reprezentované ako #t a #f. Presnejšie iba #f je nepravda a kdekoľvek je požadovaná hodnota typu Boolean, je ľubovolná iná hodnota ako #f (aj prázdny zoznam) považovaná za pravda.
+Symboly sa dajú vytvárať minimálne týmito spôsobmi:
+
+
+=== Rovnosť ===
+Scheme má tri rôzne typy rovnosti:
+
+eq?
+Vracia #t ak jeho parametre reprezentujú tie isté dátové objekty v pamäti.
+eqv?
+Vo všeobecnosti to isté ako eq?, ale zaobchádza špeciálne s niektorými objektami (napr. so znakmi a číslami), tak aby čísla ktoré sú = rovné boli aj eqv? rovné aj keď nie sú eq? rovné.
+equal?
+Porovnáva údajové štruktúry ako napríklad zoznamy, vektory a reťazce, aby rozhodol či majú zhodnú štruktúru a eqv? rovný obsah.
+
+
+=== Riadiace štruktúry ===
+
+
+==== Podmienené vyhodnocovanie ====
+
+Výraz test je vyhodnotený a ak výsledok vyhodnotenia je pravda (čokoľvek iné ako #f), tak je vyhodnotený výraz tak-výraz, inak je vyhodnotený inak-výraz.
+Forma cond je vhodnejšia, keď sú podmienky vnorené:
+
+Prvý výraz, pre ktorý sa vyhodnotí test ako pravdivý, bude vyhodnotený. Ak výsledkom všetkých testov je #f tak vyhodnotená else klauzula.
+Variantom cond klauzuly je
+
+V tomto prípade sa má výraz vyhodnotiť na jednoargumentovú funkciu. Ak je test vyhodnotený ako pravdivý, je zavolaná táto funkcia s návratovou hodnotou testu.
+
+
+==== Cykly ====
+Cykly v Scheme majú väčšinou formu rekurzie na chvoste. Je požadované, aby implementácie jazyku Scheme optimalizovali rekurziou na chvoste, tak aby sa odstránilo obsadzovanie zásobníkového miesta kdekoľvek to je možné, aby bolo možné používať túto techniku pre ľubovolne dlhé cykly.
+Klasickým príkladom je funkcia faktoriál, ktorá sa dá definovať bez rekurzie na chvoste.
+
+Toto je priamy preklad matematickej rekurzívnej definície faktoriálu: faktoriál nuly (väčšinou zapisovaný 
+  
+    
+      
+        0
+        !
+      
+    
+     
+  ) je rovný 1, zatiaľ čo faktoriál ľubovolného väčšieho prirodzeného čísla n je definovaný ako 
+  
+    
+      
+        n
+        !
+        =
+        n
+        ∗
+        (
+        n
+        −
+        1
+        )
+        !
+      
+    
+     
+  .
+Ale, jednoduchá rekurzia prirodzene menej efektívna, lebo Scheme systém si musí udržovať záznamy o návratoch všetkých vnorených funkčných volaní. Definícia s rekurziou na chvoste je taká, čo zaistí, že v rekurzívnom prípade naj-vonkajšie volanie priamo vracia hodnotu von z funkcie. V našom prípade nebudeme priamo rekurzívne volať funkciu faktoriál, ale pomocnú rutinu s dvoma parametrami reprezentujúcimi stav iterácie:
+
+Funkcia vyššieho rádu ako napríklad map, ktorá volá funkciu na každý prvok zoznamu a môže byť definovaná bez rekurzie na chvoste:
+
+Toto môže byť definované aj pomocou rekurzie na chvoste:
+
+V oboch prípadoch je verzia s rekurziou na chvoste vhodnejšia, kvôli menšej spotrebe pamäti
+
+
+=== Vstup/Výstup ===
+Jazyk Scheme obsahuje koncept brán (angl. port) na čítanie a zápis. R5RS definuje dve implicitný brány prístupné pomocou funkcií: current-input-port, current-output-port. Väčšina implementácií taktiež poskytuje bránu: current-error-port.
+
+
+== Referencie ==
+
+
+== Literatúra ==
+Structure and Interpretation of Computer Programs, klasická učebnica informatiky s veľkým množstvom programovacích cvičení v jazyku Scheme.
+How to Design Programs od Felleisena a ďalších. Určená pre výučbu návrhu programov pomocou Scheme.
+Gerald Sussman a Guy Steele. SCHEME: An Interpreter for Extended Lambda Calculus AI Memo 349, MIT Artificial Intelligence Laboratory, Cambridge, Massachusetts, december 1975.
+Richard Kelsey, William Clinger, Jonathan Rees (editory), Report on the Algorithmic Language Scheme
+Guy L. Steele, Jr., Richard P. Gabriel, The Evolution of Lisp

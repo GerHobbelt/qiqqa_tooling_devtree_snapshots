@@ -1,0 +1,210 @@
+revision: 7572844
+title: "Po\u010D\xEDta\u010D"
+url: https://sk.wikipedia.org/wiki/Po%C4%8D%C3%ADta%C4%8D
+
+
+---
+
+Počítač (iné názvy: komputer, kompúter, computer; v slangu: komp(ík); angl. computer) je zariadenie alebo stroj na realizáciu výpočtov alebo riadenie operácií vyjadriteľných číselnými alebo logickými výrazmi. Počítače sa skladajú z komponentov, ktoré vykonávajú čiastkové, dobre definované funkcie. Komplexné vzťahy medzi týmito komponentmi dávajú počítačom schopnosti spracovávať informácie. Ak je správne na konfigurovaný (aj správne naprogramovaný), možno počítač použiť na reprezentáciu aspektu problému alebo časti systému (pozri napríklad modelovanie). Ak sa takto nakonfigurovanému počítaču dodajú vhodné vstupné údaje, môže automaticky problém vyriešiť alebo predvídať správanie systému. 
+Vedná disciplína, zaoberajúca sa teóriou, konštrukciou a použitím počítačov, sa nazýva veda o počítačoch alebo počítačová veda. Súbor vedeckých disciplín a špeciálnych postupov pri spracovaní informácií, spravidla využívajúci počítače, sa nazýva informatika. Schopnosť človeka komunikovať s počítačom využívaním znalostí o jeho technickom (hardvéri) a programovom vybavení (softvéri) a o informačných technológiách sa nazýva počítačová gramotnosť.
+
+
+== Etymológia ==
+Slovo "computer" sa v angličtine pôvodne používalo na označenie osoby zaoberajúcej sa umením počítať (hoci sa toto použitie v USA a UK v súčasnosti už vytráca). Oxfordský slovník angličtiny uvádza prvé použitie tohto slova na označenie mechanického počítacieho zariadenia v roku 1897. V roku 1946 bolo zavedených niekoľko prídavných mien umožňujúcich rozlíšiť medzi typmi takéhoto zariadenia. Tieto prídavné mená boli: analógový (v princípe nie digitálny, teda aj mechanický), digitálny a elektronický. Podľa Online etymologického slovníka prvé použitie pojmu počítač v súčasnom zmysle ako "programovateľný digitálny elektronický počítač" ("programmable digital electronic device for performing mathematical or logical operations") pochádza z roku 1945, teda z obdobia keď boli vyrobené prvé takéto počítače (napr. ENIAC v roku 1946). Teoreticky rovnocenné je pomenovanie Turingov stroj používané od roku 1937. V súčasnosti je tento význam ("programovateľný digitálny elektronický počítač") jediný, ktorý sa spája so slovom počítač. Je preto zbytočné sa pri definíciách vracať k histórii a rozdeľovať počítače na analógové a digitálne, pretože tie prvé prakticky zanikli v minulom tisícročí. 
+
+
+== História ==
+Pred vznikom elektronických počítačov (najprv analógových, potom digitálnych) existovali mechanické pomôcky na uľahčenie počítania. Počítadlo (abakus), ktorý slúžil na sčítanie a odčítanie sa používa už asi 5 000 rokov. Spôsob, akým sa ešte v stredoveku delilo sa nazýval galejným. Jediná pomôcka, ktorá ho zjednodušovala boli tabuľky už vypočítaných hodnôt. Najstaršia takáto tabuľka, ktorá sa zachovala, pochádza zo 17. storočia pred naším letopočtom. Neskôr sa postupne začali objavovať dômyselnejšie tabuľky, ktoré slúžili napríklad na výpočet dráhy nebeských telies. Išlo hlavne o tabuľky druhých a tretích mocnín a trigonometrických funkcií. Mechanickou pomôckou, ktorá významným spôsobom ovplyvnila vznik ďalších mechanických strojov, boli Napierove kosti (zverejnené až po jeho smrti v roku 1617), ktoré umožňovali násobiť a deliť, ale dá sa pomocou nich zistiť aj druhá odmocnina. John Napier bol aj autorom myšlienky, ktorá viedla k zostrojeniu logaritmického pravítka. Zdokonaľovaniu a vývoju nových mechanických kalkulátorov sa venovali aj významní matematici ako Blaise Pascal (1642), Wilhelm Gottfried von Leibniz (1673). Významným predchodcom priekopníkom počítačov bol  Charles Babbage, ktorý v 19. storočí vymyslel základné princípy fungovania mechanického, programovateľného stroja pre riešenie zložitých výpočtov.
+Od mechanických kalkulátorov bol však ešte dlhá cesta k elektronickej kalkulačke tak ako ju poznáme dnes. Ako sa ukázalo neskôr dôležité bolo využiť práve elektrické namiesto mechanických zákonitostí. Na základe myšlienky James Thompson, brata Lorda Kelvina z roku 1886 (princíp analógie meranej elektrickej veličiny a mechanického posunu) zostrojil v roku 1930 Vannevar Bush analógový počítač, ktorý dokázal riešiť diferenciálne rovnice s osemnástimi nezávislými premennými.
+Za počítače v súčasnom slova zmysle, teda také ktorých princíp prevodu problému na čísla (digitálny počítač) sa používa doteraz, možno považovať elektromechanické počítače nultej generácie. Založené sú na myšlienke, ktorú v roku 1937 prezentoval Claude Shannon, keď demonštroval, že výpočty Boolovej algebry možno realizovať pomocou elektromagnetických relé. Za počítače prvej generácie sa označujú počítače skonštruované pomocou vákuových elektrónok. Za priamych predchodcov súčasných univerzálnych plne elektronických počítačov možno považovať napríklad elektrónkový ENIAC, na vývoji ktorého sa počas druhej svetovej vojny v Británii podieľal Alan M. Turing. Američan John von Neumann v tomto období navrhol schému počítača, ktorá je používaná dodnes. 
+
+
+== Všeobecné princípy ==
+Počítače môžu fungovať na základe pohybu mechanických častí, elektrónov, fotónov, kvantových častíc alebo akéhokoľvek iného dobre pochopeného fyzikálneho javu. Hoci boli zostavené počítače, fungujúce na základe rôznych princípov, takmer všetky populárne typy počítačov používajú elektronické prvky.
+Počítače môžu priamo modelovať riešenú úlohu v tom zmysle, že riešený problém je mapovaný tak presne, ako je to možné na skúmaný fyzikálny jav. Napríklad tok elektrónov možno použiť na modelovanie toku vody priehradou. Takéto počítače, ktoré modelovali fyzikálne veličiny analógovou veľkosťou prúdu alebo napätia (analógové počítače) boli bežne používané v 60. rokoch 20. storočia, ale dnes sú zriedkavé.
+Vo väčšine dnešných počítačov sa problém prevedie na jeho číselnú (digitálnu) matematickú reprezentáciu tak, že sa všetky relevantné informácie prevedú zvyčajne do dvojkovej číselnej sústavy. Všetky operácie nad takýmito údajmi sa redukujú na jednoduchú booleovskú algebru.
+Na reprezentáciu booleovských operácií sa používajú hradlá elektronických obvodov. Keďže väčšina matematických operácií je redukovateľná na booleovské operátory, elektronický počítač je schopný riešiť množstvo matematických problémov (a spracovávať informácie, ktoré je možné transformovať na matematické úlohy) veľmi rýchlo. Základnú myšlienku, ktorá umožnila vznik moderných digitálnych (číslicových) počítačov, formálne izoloval a opísal Claude E. Shannon.
+Počítače nie sú schopné riešiť všetky matematické problémy. Alan Turing identifikoval problémy riešiteľné na počítači, čím položil základy teoretickej informatiky.
+Po dokončení výpočtu môže byť výsledok zobrazený používateľovi na výstupe pomocou výstupných zariadení ako svetelné žiarovky, LED diódy, monitory a tlačiarne.
+Noví používatelia, obzvlášť deti, majú problém pochopiť dôležitú vec, že počítač je iba stroj a nemôže „myslieť“, ani „pochopiť“ to, čo zobrazuje. Počítač jednoducho vykonáva operácie na vopred naprogramovaných štruktúrach, ktoré sa potom prekladajú do ľubovoľnej formy na výstupnom zariadení. Na rozdiel od počítača je ľudský mozog schopný rozpoznať vzory a znaky a priradiť im význam. Všetko, čo počítač robí, je, že vopred určeným spôsobom manipuluje s elektrónmi; doteraz nie je známy spôsob, ako úspešne napodobňovať ľudské chápanie alebo sebauvedomenie. Pozri umelá inteligencia.
+
+
+== Exponenciálny rast použitia počítačov ==
+
+Od začiatku využívania polovodičových prvkov sa kapacita počítačov (tu vo význame počet inštrukcií spracovaných za sekundu na 1000 dolárov) zdvojnásobila každých 18-24 mesiacov. Gordon E. Moore, spoluzakladateľ spoločnosti Intel prvýkrát opísal tento trend vo vývoji počítačov v roku 1965. Jeho pozorovanie, že zložitosť integrovaných obvodov sa zdvojnásobuje približne každých 18 mesiacov, pričom cena ostáva konštantná, sa stalo známe ako Moorov zákon. Toto empirické pravidlo platí do súčasnosti (2020). Ruka v ruke s nárastom kapacity na jednotku ceny išiel aj dramatický proces miniaturizácie. Prvé elektronické počítače ako ENIAC (1946) boli obrovské zariadenia s hmotnosťou ton, ktoré zaberali celé miestnosti, a ktorých fungovanie vyžadovalo pozornosť niekoľkých operátorov. Boli také drahé, že si ich mohli dovoliť iba vlády a veľké výskumné organizácie, a boli považované za také exotické, že ich stačilo iba zopár na uspokojenie globálneho dopytu. Na rozdiel od nich sú dnešné počítače rádovo rýchlejšie, lacnejšie, menšie a je možné ich nájsť takmer všade. Exponenciálny rast použitia počítačov sťažuje klasifikáciu počítačov, pretože moderné počítače sú rádovo rýchlejšie ako skôr používané zariadenia.
+
+
+== Klasifikácia počítačov ==
+
+
+=== Klasifikácia podľa zamýšľaného použitia ===
+
+superpočítač
+minisuperpočítač
+mainframe (strediskový počítač)
+podnikový aplikačný server
+minipočítač
+pracovná stanica
+osobný počítač (PC)
+desktop (stolový počítač)
+prenosné (osobné) počítače: laptop (notebook), tablet (tabletový počítač), osobný digitálny asistent (Personal Digital Assistant - PDA),
+Špecifické (účelové) formy prenosných počítačov:wearable computer – počítač na nosenie na tele
+čítačka elektronických kníh
+prenosná hracia konzola
+kalkulačka
+prenosný prehrávač médií (portable media player) [okrem prehrávačov kaziet a pod.]:
+prenosný multimediálny prehrávač (portable multimedia player)
+digitálny audio prehrávač (digital audio player/digital music player)
+prenosný prehrávač DVD (portable DVD player) a prenosný prehrávač CD (portable CD player)
+portable data terminal a mobile data terminal
+prenosné navigačné systémyTáto klasifikácia sa zvykne používať iba pre zariadenia dostupné v súčasnosti. Rýchly vývoj v oblasti informačných technológií znamená, že sa neustále nachádzajú nové využitia počítačov a aktuálne definície rýchlo zastarávajú. Mnohé triedy počítačov, ktoré sa už nepoužívajú, ako napríklad diferenciálne analyzátory, sa v takýchto zoznamoch bežne neuvádzajú. Na jednoznačnú definíciu slova "počítač" sú potrebné iné klasifikačné schémy..
+
+
+=== Klasifikácia podľa implementovanej technológie ===
+
+Jednoznačnejší prístup klasifikácie počítačov je založený na implementovanej technológii. Najranejšie počítače boli čisto mechanické. V 30. rokoch 20. storočia sa používali elektromechanické komponenty (relé) známe z telekomunikácií a v 40. rokoch prvé čisto elektronické počítače pozostávali z elektrónok. V 50-60. rokoch boli elektrónky postupne nahradené tranzistormi a v neskorých 60. rokoch polovodičovými integrovanými obvodmi (kremíkové čipy), ktoré zostali hlavnými prvkami do súčasnosti.
+Takýto opis implementovaných technológií nie je vyčerpávajúci; pokrýva iba hlavný prúd vývoja. Počas vývoja počítačov bolo skúmaných a zanechaných veľa exotických technológií. Napríklad boli zostavené ekonomické modely za pomoci vody tečúcej spletitými kanálmi a v medzi rokmi 1903 a 1909 vyvinul Percy E. Ludgate návrh programovateľného analytického stroja založeného na technológii pletenia, kde boli premenné obsiahnuté v člnkoch.
+V súčasnosti prebieha snaha o vyvinutie počítača pracujúceho na optickom princípe namiesto elektrického (optický počítač). Tiež sa skúma možnosť využitia DNA pri výpočtovom procese (DNA počítač). Jedným z radikálne nových oblastí výskumu s dramatickými možnosťami je výskum využitia kvantových technológií v informatike, ale v súčasnosti je v ranom štádiu (kvantový počítač).
+
+
+=== Klasifikácia podľa konštrukčných vlastností ===
+Moderné počítače kombinujú rôzne základné konštrukčné vlastnosti, ktoré vynašli rôzni ľudia v priebehu mnohých rokov. Tieto vlastnosti sú často nezávislé od implementovanej technológie. Celkové schopnosti moderných počítačov sú závislé od spôsobu, akým tieto vlastnosti spolupracujú. Ďalej sú uvedené niektoré z najdôležitejších konštrukčných vlastností.
+
+
+==== Digitálne verzus analógové ====
+
+Základným rozhodnutím pri navrhovaní počítača je, či má byť digitálny alebo analógový. Digitálne počítače pracujú s diskrétnymi číselnými alebo symbolickými hodnotami, kým analógové počítače pracujú so spojitými dátovými signálmi. Od 40. rokov 20. storočia sa stali digitálne počítače zďaleka najrozšírenejšími, hoci analógové sa stále používajú na niektoré špeciálne účely ako riadenie v robotike a cyklotrónoch. Iné prístupy ako pulzné počítače a kvantové počítače sú možné, ale buď sa používajú na špeciálne účely, alebo sú stále experimentálne.
+
+
+==== Binárne verzus desiatkové ====
+Dôležitým krokom vo vývoji bolo zavedenie dvojkovej (binárnej) sústavy pre vnútornú reprezentáciu čísel. To odstránilo potrebu komplexných mechanizmov posúvania bitov, ktorú mali počítače pracujúce v iných číselných sústavách (napríklad desiatkovej). Prijatie dvojkovej sústavy znamenalo zjednodušenie návrhu a implementácie aritmetických a logických operácií.
+
+
+==== Programovateľnosť ====
+
+Možnosť programovať počítač – poskytnúť mu množinu inštrukcií, ktorú má vykonať – bez toho, aby bolo potrebné zmeniť konfiguráciu stroja, je fundamentálnou vlastnosťou počítača. Významným prínosom v tejto oblasti bolo dynamické riadenie výpočtovej cesty programu. Umožnilo to počítaču rozhodnúť o poradí, v ktorom sa vykonajú inštrukcie, napríklad na základe závislostí počítaných údajov.
+
+
+==== Ukladanie údajov ====
+V priebehu výpočtu je často potrebné si zapamätať okamžité hodnoty pre použitie v ďalších výpočtoch. Výkonnosť počítača je do veľkej miery závislá na rýchlosti, s akou je schopný čítať a zapisovať údaje do tejto pamäte a možnosti počítača od jej veľkosti. Pôvodne sa pamäť používala pre okamžité hodnoty, ale v 40. rokoch 20. storočia bolo navrhnuté, aby v nej bol uložený aj program. Tento krok viedol k vývoju prvých počítačoch s programom v pamäti, typu, ktorý používame dodnes.
+
+
+=== Klasifikácia podľa schopností ===
+Snáď najlepším spôsobom klasifikácie počítačov je podľa ich vnútorných schopností, nie podľa ich použitia, implementovanej technológie či konštrukčných vlastností. Počítače môžeme na základe schopností rozdeliť do troch typov: jednoúčelové zariadenia, ktoré môžu vykonávať iba jednu funkciu (napr. Mechanizmus z Antikytéry, 87 pred Kr. a predpovedač prílivu Lorda Kelvina, 1876), jednoúčelové zariadenia schopné vykonávať viac funkcií (napr. Diferenčný stroj č. 1 Charlesa Babbagea, 1832 a Diferenčný analyzátor Vannevara Busha, 1932) a nakoniec dnes používané všeobecné zariadenia. V histórii sa slovom počítač označovali všetky typy zariadení, ale súčasné použitie zvyčajne obmedzuje termín na všeobecné počítače.
+
+
+==== Všeobecné počítače ====
+Z definície, všeobecný počítač môže riešiť akýkoľvek algoritmizovateľný problém vyjadriteľný v rámci praktických obmedzení určených kapacitou pamäte, veľkosťou programu, rýchlosťou vykonania programu a spoľahlivosti stroja. Alan Turing v roku 1934 dokázal, že všeobecný počítač po zadaní správneho programu môže emulovať správanie akéhokoľvek iného všeobecného počítača. Tento matematický dôkaz bol čisto teoretický, keďže v tej dobe neexistoval žiaden všeobecný počítač. Dôsledky dôkazu sú však zásadného charakteru; napríklad ktorýkoľvek súčasný všeobecný počítač by bol schopný emulovať, hoci pomaly, akýkoľvek všeobecný počítač, ktorý môžeme skonštruovať v budúcnosti.
+Počítače so schopnosťami všeobecného počítača sa nazývajú turingovo úplné a tento stav sa používa ako prahová možnosť schopností súčasného počítača. Definícia je však problematická. Pre niekoľko počítacích strojov triviálnej konštrukcie bola dokázaná turingova úplnosť. Počítač Z3, ktorý vyvinul v roku 1941 Konrad Zuse bol prvým počítačom, ktorému bola dokázaná turingova úplnosť (v roku 1998). Hoci Z3 a iné rané zariadenia sú turingovo úplné, sú ako počítače nepraktické. Spadajú do oblasti, ktorá sa žartom prezýva Turingova dechtová diera – „miesto, kde je čokoľvek možné, ale nič zaujímavé pre prax“ (The Jargon File). Moderné počítače sú viac ako teoreticky všeobecné, sú schopné všeobecne riešiť praktické úlohy. Moderné digitálne elektronické všeobecné počítače sa vyvinuli za prispenia mnohých ľudí počas obdobia od polovice 30. rokov 20. storočia do konca 40. rokov, kedy boli zostavené mnohé stroje, ktoré mali blízko turingovej úplnosti (ABC, ENIAC, Harvard Mk I, Colossus atď., pozri História hardvéru). O všetkých týchto strojoch sa hovorilo v určitom zmysle ako o prvom počítači, ale všetky mali obmedzenú použiteľnosť ako všeobecný počítač a ich konštrukcia bola prekonaná.
+
+
+==== Počítače s programom v pamäti ====
+Koncom štyridsiatych rokov bol vyvinutý a zdokumentovaný prvý návrh počítača s programom v pamäti v Mooreovej škole elektrotechniky na Pennsylvánskej univerzite. Prístup opísaný týmto dokumentom sa stal známy ako von Neumannova architektúra po jej jedinom uvedenom autorovi Johnovi von Neumannovi, hoci návrh prakticky vyvinuli iní z Mooreovej školy. Von Neumannova architektúra riešila inherentné konštrukčné problémy ENIACu, ktorý bol vtedy vo výrobe, tak, že uchovávala program stroja v jeho vlastnej pamäti. Von Neumann tento návrh sprístupnil iným výskumníkom krátko na to, ako bol ENIAC v roku 1946 ohlásený. Vyvinuli sa plány na konštrukciu návrhu na Mooreovej škole—stroja zvaného EDVAC. EDVAC nebol funkčný do roku 1953 kvôli technickým problémom pri implementácii spoľahlivej pamäte. Iné výskumné inštitúcie, ktoré dostali kópie návrhu, vyriešili technické problémy implementáciou funkčnej pamäte predtým, ako sa to podarilo Mooreovmu tímu a implementovali vlastné počítače s programom v pamäti. Prvých 5 počítačov s programom v pamäti podľa poradia prvého úspešného spustenia, implementovaných podľa von Neumennovej architektúry, bolo:
+
+Manchester Mk I Prototype (Baby) University of Manchester UK. 21. jún 1948,
+EDSAC. Cambridge University. UK. 6. máj 1949
+BINAC USA, apríl 1949 alebo august 1949.
+CSIR Mk 1 Austrália november 1949
+SEAC USA 9. máj 1950Návrh s programom v pamäti definovaný von Neumannovou architektúrou nakoniec umožnil počítačom s prehľadom využiť ich všeobecný potenciál. Uložením programu do pamäte boli umožnené rýchle „skoky“ z jednej inštrukcie na inú na základe výsledku definovanej podmienky. Táto podmienka zvyčajne závisela na hodnote vypočítanej v medzikroku výpočtu, čo umožnilo dynamický proces výpočtu. Bolo tiež možné program počas vykonávania v pamäti prepísať, čo je mocný nástroj, ktorý treba využívať opatrne. Tieto schopnosti sa stali základom moderného počítača.
+Pre upresnenie, väčšina moderných počítačov sú elektronické binárne všeobecné počítače s programom uloženým v pamäti.
+
+
+==== Počítače na špeciálne účely ====
+
+Počítače na špeciálne účely, ktoré boli populárne v tridsiatych a skorých štyridsiatych rokoch neboli úplne nahradené všeobecnými počítačmi.[chýba zdroj] Keďže cena a veľkosť počítačov klesla a schopnosti sa zvýšili, bolo ekonomicky výhodné ich použiť pre špeciálne aplikácie; vrátane domácich a priemyselných aplikácií – mobilný telefón, videorekordér, automobilové zapaľovacie systémy atď. v súčasnosti používajú počítače na špeciálne účely.
+V niektorých prípadoch sú tieto počítače turingovo úplné (videohry, PDA), ale mnohé sú predprogramované pri výrobe a iba zriedka, ak vôbec, preprogramované. Program, ktorý vykonávajú sa často nachádza v ROM pamäti, ktorá by musela byť vymenená, aby sa fungovanie stroja zmenilo. Počítače vložené v rámci iných počítačov sa bežné nazývajú mikroovládačmi alebo vloženými (embedded) počítačmi.
+
+
+==== Jednoúčelové počítače ====
+Jednoúčelové počítače boli najranejšie počítacie stroje. Po zadaní vstupov vypočítali výsledok jedinej funkcie, ktorá bola implementovaná ich mechanizmom. Všeobecné počítače takmer úplne nahradili jednoúčelové počítače a tým vzniklo úplne nové pole ľudskej pôsobnosti -- vývoj softvéru. Všeobecné počítače musia byť programované sadou inštrukcií špecificky vzhľadom na úlohu, ktorú majú vykonávať, a postupnosť týchto inštrukcií nazývame softvér. Návrh jednoúčelových zariadení a mnohých zariadení na špeciálne účely je dnes konceptuálnym cvičením, ktoré sa vykonáva návrhom špeciálneho softvéru.
+
+
+== Aplikácia počítačov ==
+Prvé elektronické digitálne počítače s ich veľkosťou a cenou zväčša vykonávali vedecké výpočty, často na podporu vojenských cieľov. ENIAC mal pôvodne počítať balistické tabuľky pre delostrelectvo, ale počítal aj neutrónové hustoty prierezu pri návrhu vodíkovej bomby. Tieto výpočty uskutočnil medzi decembrom 1945 a januárom 1946 a bolo pri tom použitých viac ako milión diernych štítkov údajov. Ukázalo sa, že návrh by zlyhal. Mnohé dnešné superpočítače sa tiež používajú na simuláciu účinkov jadrových zbraní. CSIR Mk I, prvý austrálsky počítač s programom v pamäti vyhodnocoval vzorky dažďových zrážok v spádovej oblasti Snowy Mountains pre veľký hydroelektrický projekt. Iné sa používajú v kryptoanalýze, napríklad prvý programovateľný (hoci nie všeobecný) digitálny elektronický počítač Colossus, postavený počas Druhej svetovej vojny v roku 1943. Napriek vedeckému zameraniu v začiatkoch sa počítače rýchlo rozšírili do iných oblastí.
+Od začiatku bývali počítače s programom v pamäti aplikované pri obchodných problémoch. Počítač LEO s programom v pamäti postavený v J. Lyons and Co. vo Veľkej Británii bol schopný pracovať a pracoval v oblasti skladového manažmentu a na iné úlohy 3 roky predtým, ako IBM postavili ich prvý komerčný počítač s programom v pamäti. Vďaka postupnej redukcii ceny a veľkosti počítačov nachádzali použitie v stále menších organizáciách. Vynájdenie mikroprocesora v sedemdesiatych rokoch umožnilo konštrukciu lacných počítačov. V osemdesiatych rokoch bol popularizovaný osobný počítač na mnohé úlohy, vrátane knihovníctva, písania a tlače dokumentov, počítanie predpovedí a iné opakujúce sa matematické úkony vrátane tabuľkových výpočtov.
+
+
+=== Internet ===
+
+V sedemdesiatych rokoch začali výskumníci v ústavoch v rámci USA spájať počítače pomocou telekomunikačných technológií. Tieto snahy začali v ARPA a počítačová sieť, ktorá takto vznikla, sa nazývala ARPANET. Technológie, ktoré umožnili vznik ARPANETu, sa rozširovali a vyvíjali. Po čase sa sieť rozšírila mimo akademickú sféru a stala sa známa ako internet. V deväťdesiatych rokoch umožnil vývoj technológií World Wide Webu prístup ľuďom bez technických schopností a rýchlo sa rozrástol na globálne komunikačné médium.
+
+
+== Fungovanie počítača ==
+Hoci sa počítačové technológie od čias prvých elektronických všeobecných počítačov zo štyridsiatych rokov dramaticky zmenili, väčšina stále používa von Neumannovu architektúru.
+Fungovanie takéhoto počítača je principiálne pomerne jednoduché. Zvyčajne v každom hodinovom cykle prenesie počítač inštrukcie a dáta z pamäte. Inštrukcie sa vykonajú, výsledky uložia a prinesie sa ďalšia inštrukcia. Procedúra sa opakuje až do výskytu inštrukcie pre zastavenie.
+Von Neumannova architektúra opisuje počítač pomocou štyroch hlavných častí: aritmeticko-logická jednotka (ALU), radiaca jednotka (CU), pamäť a vstupno/výstupné zariadenia (spoločne označované V/V). Tieto časti sú poprepájané kabelážou (zbernica) a zvyčajne synchronizované hodinami (hoci môžu byť riadené aj inými udalosťami).
+
+
+=== Inštrukcie ===
+Inštrukcie počítača nemusia byť nevyhnutne výrazovo bohaté ako ľudský jazyk. Počítač pracuje s obmedzeným počtom dobre definovaných, jednoduchých, jednoznačných inštrukcií. Typickou inštrukciou, implementovanou vo väčšine počítačov, je „skopíruj obsah pamäťovej bunky 5 do pamäťovej bunky 10“, „pričítaj obsah bunky 7 k obsahu bunky 13 a ulož výsledok do bunky 20“, „ak obsah bunky 999 je 0, ďalšiu inštrukciu nájdeš v bunke 30“.
+Inštrukcie sú v počítači reprezentované binárnym kódom. Napríklad kód jednej z operácií kopírovania v mikroprocesoroch radu Intel je 10110000. Inštrukčná sada podporovaná počítačom, vyjadrená vo forme čísel tak, ako je reprezentovaná v stroji, je známa ako strojový kód.
+V praxi sa nepíše program priamo v strojovom kóde, ale používajú sa programovacie jazyky "vyššej úrovne", ktoré do strojového kódu automaticky prekladajú špecializované programy (interpreter alebo kompilátor). Niektoré programovacie jazyky, ako assembler, sú mapované veľmi blízko na strojový kód (jazyky "nízkej úrovne"); na druhej strane jazyky ako Prolog sú založené na abstraktných princípoch nezávislých od skutočnej reprezentácie operácií strojom (jazyky „vyššej úrovne“).
+
+
+=== Pamäť ===
+
+Pamäť je postupnosť očíslovaných homogénnych buniek, z ktorých každá obsahuje malé množstvo informácie. Informáciou môže byť inštrukcia, ktorá hovorí počítaču, čo má robiť. Bunka môže obsahovať údaje, ktoré počítač potrebuje na vykonanie inštrukcie. Ľubovoľná bunka môže obsahovať inštrukciu alebo údaj a reprezentácia uloženej hodnoty môže byť v čase odlišná.
+Vo všeobecnosti je možné obsah ktorejkoľvek pamäťovej bunky kedykoľvek zmeniť.
+Veľkosť jednotlivej bunky a počet buniek sa medzi rôznymi počítačmi výrazne líši, ako aj technológie použité na implementáciu pamäte—od elektromechanických relé, cez ortuťou naplnené tuby (a neskôr pružiny) v ktorých sa formujú akustické impulzy, jednotlivé tranzistory až po integrované obvody s miliónmi tranzistorov a kondenzátorov na jedinom čipe.
+
+
+=== Procesor ===
+
+Aritmeticko-logická jednotka (ALU) je zariadenie, vykonávajúce jednotlivé operácie ako aritmetické operácie (sčítanie, odčítanie atď.), logické operácie (and, or, not) a operácie porovnania (napr. porovnanie rovnosti dvoch bajtov). Toto je jednotka, ktorá vykonáva výpočty.
+
+
+=== Radiaca jednotka ===
+Radiaca jednotka (CPU) sleduje, ktoré bajty v pamäti obsahujú aktuálne vykonávanú inštrukciu, hovorí aritmeticko-logickej jednotke, ktorú operáciu má vykonať, získava informácie (z pamäte), ktoré sú potrebné na jej vykonanie a prenáša výsledok naspäť na správne miesto v pamäti. Po dokončení tohto cyklu sa prejde na ďalšiu inštrukciu (zvyčajne sa nachádza v ďalšej pamäťovej bunke—na ďalšej adrese, v prípade, že nenastala inštrukcia skoku oznamujúca počítaču, že ďalšia informácia sa nachádza na inom mieste). Keď hovoríme o pamäti, pri hľadaní aktuálnej inštrukcie je možné použiť niekoľko adresných modelov určenia relevantnej adresy. Niektoré základné dosky tiež podporujú dva alebo viac procesorov. Počítačové servery často využívajú dva a viac procesorov na zvýšenie výkonu.
+
+
+=== Vstup a výstup ===
+                     
+V/V umožňuje počítaču výmenu informácií s vonkajším svetom. Existuje široké spektrum V/V zariadení, od známej klávesnice, myši, monitora a tlačiarne po menej zvyčajné ako skener, webkamera a dotyková obrazovka.
+Všetky vstupné zariadenia charakterizuje to, že kódujú (konvertujú) určitý druh informácie na dáta, ktoré je schopný počítač ďalej spracovať. Výstupné zariadenia zasa dekódujú dáta na informáciu, ktorá je zrozumiteľná používateľovi. V tomto zmysle je počítač príkladom systému spracovania dát.
+
+
+=== Architektúra ===
+Súčasné počítače integrujú aritmeticko-logickú jednotku a riadiacu jednotku do jediného integrovaného obvodu známeho ako Centrálna procesná jednotka alebo CPU. Počítačová pamäť sa zvyčajne nachádza na niekoľkých integrovaných obvodoch v blízkosti CPU. Prevažnú väčšinu hmotnosti počítača tvoria pomocné systémy (napríklad zdroj napätia) alebo V/V zariadenia.
+Niektoré veľké počítače sa líšia od hore uvedeného modelu v jednom bode—majú viaceré CPU pracujúce súčasne. Navyše sa niekoľko počítačov používaných prevažne na výskumné a vedecké účely od modelu významne líšili, ale našli len malé komerčné uplatnenie, pretože ich programovací model nebol štandardizovaný.
+
+
+=== Programy ===
+
+Počítačové programy sú veľké zoznamy inštrukcií na vykonanie počítačom, zvyčajne s tabuľkami dát. Mnohé počítačové programy obsahujú milióny inštrukcií a mnohé z nich sa vykonávajú opakovane. Typický moderný osobný počítač (v roku 2003) je schopný vykonať 2-3 miliardy inštrukcií za sekundu. Počítače nezískavajú výnimočné schopnosti vďaka vykonávaniu komplexných operácií. Namiesto toho vykonávajú milióny jednoduchých inštrukcií, ktoré zostavujú ľudia známi ako programátori.
+V súčasnosti sa zdá, že počítače sú schopné vykonávať niekoľko programov súčasne. Toto sa nazýva multitasking. V skutočnosti CPU vykonáva inštrukcie z jedného programu, po krátkom časovom intervale sa prepne, a vykonáva inštrukcie druhého atď. až sa dostane opäť k prvému. Tak vzniká dojem viacerých programov bežiacich súčasne zdieľaním času CPU medzi programami. Podobá sa to na ilúziu pohybu pri premietaní filmu ako rýchleho sledu obrázkov. Operačný systém je program, ktorý má zvyčajne na starosti zdieľanie času.
+
+
+=== Operačný systém ===
+Keď počítač beží, potrebuje vykonávať program, či už preň existuje užitočná práca alebo nie. V typickom stolovom počítači je takýto program operačný systém (OS). Operačný systém rozhoduje, ktoré programy sa budú vykonávať, kedy, a aké zdroje (ako pamäť, V/V) im budú pridelené.
+Operačný systém tiež poskytuje vrstvu abstrakcie nad hardvérom a poskytuje služby iným programom ako kódy („ovládače“), ktoré umožňujú programátorom písať programy bez toho, aby museli poznať detaily použitej elektroniky. Väčšina operačných systémov s vrstvou abstrakcie hardvéru tiež poskytuje štandardizované používateľské rozhranie.
+
+
+== Referencie ==
+
+
+== Pozri aj ==
+história počítačov
+Typy počítačov: stolový počítač (desktop), laptop, barebone
+osobný počítač
+počítačová veda
+hardvér (hardware)
+informatika
+teória spočítateľnosti
+word processing
+programovanie (informatika)
+
+
+== Iné projekty ==
+
+ Wikicitáty ponúkajú citáty   od alebo o Počítač
+ Commons ponúka multimediálne súbory na tému Počítač
+ Wikislovník ponúka heslo  Počítač
+
+
+== Externé odkazy ==
+Patent v USA 3120606 -- "Elektronický číselný integrátor a počítač"
+múzeum počítačovej histórie (en)
+Obrázky a informácie o starých počítačoch (en)
+Definícia počítača na Webopédii (en)
+Old-Computers.com: Obrázky, informácie, odkazy a zábava (en)
+Slovník bežných počítačových termínov (en)

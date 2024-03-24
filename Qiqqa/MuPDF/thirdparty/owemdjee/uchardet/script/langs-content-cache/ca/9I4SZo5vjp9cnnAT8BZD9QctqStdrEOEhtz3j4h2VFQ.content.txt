@@ -1,0 +1,269 @@
+revision: 32153532
+title: "Quadrat v\xE8dic"
+url: https://ca.wikipedia.org/wiki/Quadrat_v%C3%A8dic
+
+
+---
+
+En les matemàtiques índies, un quadrat vèdic és una variació en una taula de multiplicar típica de 9 × 9 on l'entrada a cada cel·la és l'arrel digital del producte dels encapçalaments de columna i fila, és a dir, el residu quan el producte dels encapçalaments de fila i columna és dividit per 9 (amb la resta 0 representada per 9). Es poden observar nombrosos patrons i simetries geomètriques en un quadrat vèdic, alguns dels quals es poden trobar en l'art tradicional islàmic.
+
+
+== Propietats algebraiques ==
+El quadrat vèdic es pot veure com la taula de multiplicar del monoide 
+  
+    
+      
+        (
+        (
+        
+          Z
+        
+        
+          /
+        
+        9
+        
+          Z
+        
+        
+          )
+          
+            ×
+          
+        
+        ,
+        {
+        1
+        ,
+        ∘
+        }
+        )
+      
+    
+     
+   on 
+  
+    
+      
+        
+          Z
+        
+        
+          /
+        
+        9
+        
+          Z
+        
+      
+    
+     
+   és el conjunt d'enters positius repartits per les classes de residus mòdul 9. (l'operador 
+  
+    
+      
+        ∘
+      
+    
+     
+   fa referència a la «multiplicació» abstracta entre els elements d'aquest monoide).
+Si 
+  
+    
+      
+        a
+        ,
+        b
+      
+    
+     
+   són elements de 
+  
+    
+      
+        (
+        (
+        
+          Z
+        
+        
+          /
+        
+        9
+        
+          Z
+        
+        
+          )
+          
+            ×
+          
+        
+        ,
+        {
+        1
+        ,
+        ∘
+        }
+        )
+      
+    
+     
+  , on 
+  
+    
+      
+        a
+        ∘
+        b
+      
+    
+     
+   són definits per 
+  
+    
+      
+        (
+        a
+        ×
+        b
+        )
+        
+        mod
+        
+        
+        9
+      
+    
+     
+  , on l'element 9 representa el residu 0 en lloc de l'elecció tradicional de 0.
+Això no forma un grup perquè no tots els elements que no són zero tenen un element invers corresponent; per exemple 
+  
+    
+      
+        6
+        ∘
+        3
+        =
+        9
+      
+    
+     
+   però no n'hi ha 
+  
+    
+      
+        a
+        ∈
+        {
+        1
+        ,
+        ⋯
+        ,
+        9
+        }
+      
+    
+     
+   de tal manera que 
+  
+    
+      
+        9
+        ∘
+        a
+        =
+        6.
+      
+    
+     
+  .
+
+
+=== Propietats del subconjunt ===
+El subconjunt 
+  
+    
+      
+        {
+        1
+        ,
+        2
+        ,
+        4
+        ,
+        5
+        ,
+        7
+        ,
+        8
+        }
+      
+    
+     
+   forma un grup cíclic amb 2 com a opció de generador: aquest és el grup d'unitats multiplicatives de l'anell 
+  
+    
+      
+        
+          Z
+        
+        
+          /
+        
+        9
+        
+          Z
+        
+      
+    
+     
+  . Cada columna i fila inclou tots els sis nombres, de manera que aquest subconjunt forma un quadrat llatí.
+
+
+== De dues dimensions a tres dimensions ==
+Un cub vèdic es defineix com la disposició de cada arrel digital en una taula de multiplicar tridimensional.
+
+
+== Quadrats vèdics amb bases superiors ==
+Es poden calcular quadrats vèdics amb una base superior, per analitzar els patrons simètrics que es plantegen, utilitzant el càlcul anterior, 
+  
+    
+      
+        (
+        a
+        ×
+        b
+        )
+        
+        mod
+        
+        
+        (
+        
+          
+            base
+          
+        
+        −
+        1
+        )
+      
+    
+     
+  . Les imatges d'aquesta secció (base 100 i base 1000) tenen un codi de color de manera que l'arrel digital d'1 és fosca i l'arrel digital de (base-1) és clara.
+
+
+== Referències ==
+
+
+== Bibliografia ==
+Deskins, W.E.. Abstract Algebra (en anglès).  Nova York: Dover, 1996, p. 162–167. ISBN 0-486-68888-7. 
+Chia-Yu, Lin «Digital Root Patterns of Three-Dimensional Space» (en anglès). Recreational Mathematics Magazine, 2016, pàg. 9–31. ISSN: 2182-1976.
+Ghannam, Talal. The Mystery of Numbers: Revealed Through Their Digital Root (en anglès).  CreateSpace Publications, 2012, p. 68–73. ISBN 978-1-4776-7841-1. 
+Pritchard, Chris. The Changing Shape of Geometry: Celebrating a Century of Geometry and Geometry Teaching (en anglès).  Great Britain: Cambridge University Press, 2003, p. 119–122. ISBN 0-521-53162-4. 
+Teknomo, Kadi «Digital Root: Vedic Square» (en anglès). Revoledu, 2005.
+
+
+== Vegeu també ==
+Aritmètica modular

@@ -1,0 +1,31 @@
+revision: 6525951
+title: Google Talk
+url: https://lt.wikipedia.org/wiki/Google_Talk
+
+
+---
+
+Google Talk – atviro Jabber/XMPP protokolu veikianti sparčiųjų žinučių (IM) ir garso (bei kitų realaus laiko duomenų) perdavimo internetu paslauga, sukurta Google korporacijos.
+„Google Talk“ vardu taip pat pavadinta nedidelė programa, kurios pagalba vartotojai gali susirašinėti ir kalbėtis balsu tarpusavyje per internetą.
+Su šia paslauga interneto paieškos lyderė įsiveržė į teksto ir balso komunikacijos sritį ir tapo tiesiogine panašias paslaugas teikiančių kompanijų (Skype, Gizmo5, AOL ICQ ir kt.) konkurente, kurios yra pritraukę dešimtis milijonų vartotojų.
+Nuo 2006 metų „Google Talk“ paslauga tapo integruota į Google sukurtą internetinę el. pašto sistemą – Gmail („Google Mail“).
+
+
+== Bendravimas su kitomis sparčiųjų žinučių (IM) sistemomis ==
+Google sparčiųjų žinučių bei garso pokalbių paslauga yra padaryta interneto stardartu tapusio XMPP protokolo pagrindu, kuris savo ruožtu yra sukurtas iš laisvos (atvirojo kodo) sistemos, žinomos XMPP vardu.
+XMPP technologija leidžia Google sparčiųjų žinučių bei garso pokalbių paslaugos vartotojams bendrauti ne tik su „Google Talk“, bet ir su kitais serveriais, palaikančiais XMPP protokolą (pvz., akl.lt XMPP serveriu ar „Apple Computer“ iChat), taip pat prisijungti prie kitus protokolus naudojančių sistemų, tokių kaip „America Online“ ICQ, MSN Messanger ar Yahoo IM.
+Nuo 2006 metų „Google Talk“ prisijungė prie atviro sparčiųjų žinučių federacijos (IM Federation) tinklo, kuris apjungia įvairių šalių sparčiųjų žinučių serverius, tarp jų ir pirmąjį atvirą Lietuvos sparčiųjų žinučių serverį (akl.lt), žr.: http://www.imfederation.com/networks.html Archyvuota kopija 2006-04-04 iš Wayback Machine projekto.
+Naudojantis XMPP protokolą palaikančią programinę įrangą (dar vadinamą „XMPP klientu“) galima gauti ir pranešimus apie naujus laiškus, atsiųstus į Gmail pašto dėžutę.
+
+
+== Taip pat skaitykite ==
+Extensible Messaging and Presence Protocol (XMPP)
+Gizmo5
+IP telefonija
+Skype
+
+
+== Nuorodos ==
+Trumpai apie Jabber pokalbių sistemą (naudojimosi instrukcijos lietuviškai) Archyvuota kopija 2004-12-15 iš Wayback Machine projekto.
+Jabber/XMPP internetinių pokalbių protokolo standartą suprantančių programų sąrašas
+Jabbin – Laisva, multiplatforminė, Jabber/XMPP protokolu dirbanti (suderinama su Google Talk) internetinės telefonijos bei susirašinėjimo programa.

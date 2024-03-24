@@ -1,0 +1,65 @@
+revision: 11404281
+title: International Olympiad in Informatics
+url: https://da.wikipedia.org/wiki/International_Olympiad_in_Informatics
+
+
+---
+
+International Olympiad in Informatics (IOI) er en årlig programmeringskonkurrence for gymnasieelever. Den første IOI blev afholdt i 1989 i Pravetz, Bulgarien.
+Konkurrencen består af to dages programmering, hvor man skal løse problemer af algoritmisk karakter. Deltagerne konkurrerer på individuel basis, og der er op til 4 deltagere fra hvert land. I 2009 deltager ca. 85 lande. Deltagerne fra de enkelte lande er udvalgte via nationale konkurrencer. I Danmark hedder konkurrencen Dansk Datalogi Dyst, der arrangeres af Jørgen E.G. Nielsen og Knud Fjeldsted i samarbejde med Datalærerforeningen.
+IOI er en af de mest prestigefyldte programmeringskonkurrencer i verden. Protektorerne for International Olympiad in Informatics er UNESCO og IFIP.
+
+
+== Konkurrencens struktur ==
+På hver af de 2 konkurrencedage får deltagerne 3 eller 4 opgaver, som de skal løse inden for 5 timer. Hver deltager arbejder alene med en computer som det eneste tilladte hjælpemiddel. Det er altså ikke tilladt at kommunikere med andre deltagere eller gøre brug af bøger. For at løse den enkelte opgave, skal deltager skrive et computerprogram (i enten C, C++ eller Pascal) og aflevere det inden for de 5 timer. Efterfølgende bliver programmet vurderet via tests mod hemmelige test data, der typisk består af 10 til 20 test cases. Deltagerne får point for hver test case, som programmet klarer korrekt indenfor en given tid og brug af hukommelse (RAM).
+Scoren fra alle opgaverne fra de 2 konkurrencedage summeres op for den enkelte deltager. Ved medaljeceremonien får deltagerne medaljer afhængig af deres total score relativt til resten af deltagerne. De bedste 50% får medaljer, idet 1/12 får guld, 1/6 får sølv og 1/4 får bronze.
+
+
+== Liste over IOI websites og lokationer ==
+IOI 2013 bliver afholdt i Brisbane, Australien, 6. - 13. juli 2013
+IOI 2012 blev afholdt i Milano, Italien, 23. - 30. september 2012
+IOI 2011 Arkiveret 4. september 2010 hos  Wayback Machine blev afholdt i Thailand, 22. - 29. juli 2011
+IOI 2010 blev afholdt i Waterloo, Ontario, Canada, 14. – 21. august 2010
+IOI 2009 Arkiveret 4. marts 2010 hos  Wayback Machine blev afholdt i Plovdiv, Bulgarien, 8. – 15. august 2009
+IOI 2008 blev afholdt i Cairo, Egypt, 16. – 23. august 2008 (results Arkiveret 14. januar 2010 hos  Wayback Machine)
+IOI 2007 blev afholdt i Zagreb, Kroatien, 15. – 22. august 2007 (results)
+IOI 2006 blev afholdt i Mérida, Yucatán, Mexico, 13. – 20. august 2006
+IOI 2005 blev afholdt i Nowy Sącz, Polen, 18. – 25. august 2005 (results Arkiveret 17. august 2007 hos  Wayback Machine)
+IOI 2004 Arkiveret 24. juli 2012 hos  Wayback Machine blev afholdt i Athen, Grækenland, 11. – 18. september 2004 (results Arkiveret 23. august 2007 hos  Wayback Machine)
+IOI 2003 blev afholdt i Kenosha, Wisconsin, USA, 16. – 23. august 2003 (results)
+IOI 2002 Arkiveret 23. januar 2009 hos  Wayback Machine blev afholdt i Yong-In, Taiwan, 18. – 25. august 2002
+IOI 2001 Arkiveret 5. april 2007 hos  Wayback Machine blev afholdt i Tampere, Finland, 14. – 21. juli 2001
+IOI 2000 blev afholdt i Beijing, Kina, 23. – 30. september 2000
+IOI 1999 Arkiveret 16. maj 2001 hos  Wayback Machine blev afholdt i Antalya-Belek, Tyrkiet, 9. – 16. oktober 1999
+IOI 1998 blev afholdt i Setúbal, Portugal, 5. – 12. september 1998
+IOI 1997 blev afholdt i Cape Town, Sydafrika, 30. november – 7. december 1997
+IOI 1996 blev afholdt i Veszprém, Ungarn, 25. juli – 2. august 1996
+IOI 1995 blev afholdt i Eindhoven, Holland, 26. juni – 3. juli 1995
+IOI 1994 blev afholdt i Haninge, Sverige, 3. – 10. juli 1994
+IOI 1993 Arkiveret 5. januar 2004 hos  Wayback Machine blev afholdt i Mendoza, Argentina, 16. – 25. oktober 1993
+IOI 1992 blev afholdt i Bonn, Tyskland, 11. – 21. juli 1992
+IOI 1991 blev afholdt i Athen, Grækenland, 19. – 25. juli 1991
+IOI 1990 blev afholdt i Minsk, Hviderusland, Sovjetunionen, 15. – 21. juli 1990
+IOI 1989 blev afholdt i Pravetz, Bulgarien, 16. – 19. maj 1989.
+
+
+== Gentagne IOI vindere ==
+Det følgende er en liste over de 26 bedste deltagere i IOI's historie. 1. (I), 2. (II) og 3. (III) pladser er indikeret. Listen inkluderer kun de lande, hvor den nationale konkurrence tillader, at den enkelte deltager flere gange ved IOI.
+
+
+== Se også ==
+International Science Olympiad
+ACM International Collegiate Programming Contest
+
+
+== Eksterne henvisninger ==
+
+Dansk DatalogiDyst som er udtagelseskonkurrencen til de danske olympiadehold Arkiveret 11. februar 2011 hos  Wayback Machine
+IOI International Committee Website
+IOI Secretariat Website
+IOI 2004 Website Arkiveret 24. juli 2012 hos  Wayback Machine
+IOI 2005 Website
+IOI 2007 Website
+IOI 2008 Website
+IOI 2009 Website Arkiveret 4. marts 2010 hos  Wayback Machine
+IOI 2010 Website

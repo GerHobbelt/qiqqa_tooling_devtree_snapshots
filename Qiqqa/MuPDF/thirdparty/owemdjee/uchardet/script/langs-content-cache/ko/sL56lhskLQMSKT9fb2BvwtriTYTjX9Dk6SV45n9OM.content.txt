@@ -1,0 +1,15 @@
+revision: 32048217
+title: YAGNI
+url: https://ko.wikipedia.org/wiki/YAGNI
+
+
+---
+
+YAGNI(You aren't gonna need it)는 프로그래머가 필요하다고 간주할 때까지 기능을 추가하지 않는 것이 좋다는 익스트림 프로그래밍(XP)의 원칙이다. 익스트림 프로그래밍의 공동 설립자 론 제프리스는 다음과 같이 썼다: "실제로 필요할 때 무조건 구현하되, 그저 필요할 것이라고 예상할 때에는 절대 구현하지 말라." "You aren't going to need it"와 "You ain't gonna need it"의 준말로도 인용된다.
+
+
+== 문맥 ==
+YAGNI는 DTSTTCPW(동작이 가능한 가장 단순한 것을 하라, do the simplest thing that could possibly work)는 XP 원칙에 기반한 원칙이다.
+
+
+== 각주 ==

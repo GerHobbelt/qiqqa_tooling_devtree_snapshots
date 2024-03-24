@@ -1,0 +1,429 @@
+revision: 6613833
+title: "Izmjenjiva\u010D topline"
+url: https://hr.wikipedia.org/wiki/Izmjenjiva%C4%8D_topline
+
+
+---
+
+Izmjenjivač topline je naprava namijenjena prelazu topline s jednog medija na drugi, a može biti izveden da se mediji dodiruju, ili da su odvojeni pregradom koja sprječava njihov izravni kontakt. Njihova je upotreba vrlo rasprostranjena, od kućnih grijača i hladnjaka, automobilskih rashladnika, industrijskih izmjenjivača...
+
+
+== Strujanje u izmjenjivačima ==
+
+Izmjenjivači topline se mogu podijeliti na više načina. Jedan od načina je prema namjeni gdje ih dijelimo na:
+
+rashladnike
+grijačeKako samo ime govori, rashladnici hlade medij, ponekad služe i kao kondenzatori,a grijači služe za zagrijavanje, a ponekad služe i kao isparivači.
+Izmjenjivači topline se mogu podijeliti i prema strujanju u njima. Po tome poznamo tri tipa izmjenjivača:
+
+izmjenjivači s paralelnim tokom fluida
+izmjenjivači s protustrujnim tokom
+križni izmjenjivači toplineU izmjenjivačima s paralelnim tokom fluida, dva fluida ulaze u izmjenjivač na istom kraju, te struje paralelno prema drugom kraju. U izmjenjivačima s protustrujnim tokom fluida, fluidi ulaze u izmjenjivač na suprotnim krajevima. Protustrujna konstrukcija je najefikasnija pošto može prenijeti najviše topline s toplinskog medija zbog činjenice da je srednja temperaturna razlika duž bilo koje jedinice duljine veća. U križnom izmjenjivaču topline, fluidi struje okomito jedan na drugoga kroz izmjenjivač
+Izmjenjivači topline, kao i sve naprave se izrađuju da bi bili što ekonomičniji. Kod izmjenjivača topline to znači da imaju što veću površinu izmjene topline smještenu u što manji volumen, te što veći koeficijent prijelaza topline. Kako razne vrste strujanja imaju različite koeficijente prijelaza topline, izmjenjivačima se često ugrađuju umeci koji usmjeruju tok fluida kroz njih kako bi, ili stvorili ili pospješili turbulenciju.
+Ukupna toplina koja se u izmjenjivaču topline izmjenjuje ovisi o nekoliko čimbenika, a računa se po formuli za prijelaz topline:
+
+  
+    
+      
+        Q
+        =
+        K
+        ×
+         
+        A
+        ×
+        Δ
+        t
+        
+      
+    
+     
+  
+Iz gornje formule možemo izvesti površinu na kojoj se izmjenjuje toplina:
+
+  
+    
+      
+        A
+        =
+        
+          
+            Q
+            
+              K
+              ×
+              Δ
+              t
+            
+          
+        
+      
+    
+     
+    (m2)
+gdje su:
+
+K - koeficijent prijelaza topline
+A - površina prijelaza topline
+Q - izmijenjena toplina
+
+  
+    
+      
+        δ
+        t
+      
+    
+     
+   - temperaturni padZa proračun prijelaza topline u izmjenjivačima topline potrebno je poznavati koeficijent, vrste materijala izmjenjivača, kao i srednje temperature medija koji će izmjenjivati toplinu.
+Koeficijent prijelaza topline s jednog medija na drugi se općenito računa po formuli:
+
+  
+    
+      
+        K
+        =
+        
+          
+            
+              
+                
+              
+              
+                
+                  1
+                
+              
+            
+            
+              
+                
+              
+              
+                
+                  
+                    
+                      
+                        
+                          
+                        
+                        
+                          
+                            1
+                          
+                        
+                      
+                      
+                        
+                          
+                        
+                        
+                          
+                            
+                              α
+                              
+                                1
+                              
+                            
+                          
+                        
+                      
+                    
+                  
+                  +
+                  
+                    
+                      
+                        
+                          
+                        
+                        
+                          
+                            1
+                          
+                        
+                      
+                      
+                        
+                          
+                        
+                        
+                          
+                            
+                              α
+                              
+                                2
+                              
+                            
+                          
+                        
+                      
+                    
+                  
+                  +
+                  
+                    
+                      
+                        
+                          
+                        
+                        
+                          
+                            λ
+                          
+                        
+                      
+                      
+                        
+                          
+                        
+                        
+                          
+                            δ
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+  
+gdje su:
+
+  
+    
+      
+        α
+        
+      
+    
+     
+  - koeficijent prijelaza topline s medija na stijenku
+  
+    
+      
+        λ
+        
+      
+    
+     
+  -  koeficijent toplinske provodljivosti stijenke
+  
+    
+      
+        δ
+        
+      
+    
+     
+  -  debljina stijenke izmjenjivača
+		
+		
+
+
+== Vrste izmjenjivača topline ==
+
+
+=== Izmjenjivač topline cijev u plaštu (shell and tube) ===
+
+Izmjenjivači topline tipa cijev u plaštu su načinjeni od niza cijevi. Snop tih cijevi sadrži fluid koji se mora hladiti ili zagrijavati. Drugi fluid struji preko cijevi koje se griju ili hlade tako da može dati ili apsorbirati traženu količinu topline. Snop cijevi može biti načinjen od nekoliko vrsta cijevi: običnih, uzdužno orebrenih itd. Ovi se izmjenjivači u pravilu koriste u visokotlačnim primjenama (s tlakovima iznad 30 bara i temperaturama većim od 260 °C). To je iz razloga što su izmjenjivači cijev u plaštu robusni radi njihova oblika. Pri konstruiranju cijevi u izmjenjivačima topline tipa cijev u cijevi potrebno je uzeti u obzir više značajki :
+
+Promjer cijevi: Korištenje malih promjera cijevi čini izmjenjivač topline ekonomičnim i kompaktnim. S druge strane veća je vjerojatnost da dođe do bržeg stvaranja naslaga u izmjenjivaču topline, a zbog male veličine mehaničko čišćenje naslaga je teško. Da bi se prevladali problemi začepljenja i čišćenja, mogu se koristiti veći promjeri cijevi. Stoga, da bi odredili promjer cijevi moraju se uzeti u obzir cijena, raspoloživ prostor te mogućnost pojave naslaga.
+Debljina cijevi: Debljina stijenke cijevi se najčešće određuje na način da se osigura sljedeće:
+da ima dovoljno mjesta za koroziju
+da vibracija inducirana protokom ima otpor
+aksijalna čvrstoća
+dostupnost rezervnih dijelova
+čvrstoća na obodno opterečenje (da izdrži unutarnji pritisak cijevi)
+čvrstoća na izvijanje (da izdrži pretlak u plaštu)
+Duljina cijevi: izmjenjivači topline su najčešće jeftiniji kada imaju manji promjer plašta i veliku duljinu cijevi. Prema tome, cilj je da izmjenjivači topline budu najdulji mogući, a da se ne premaše proizvodne mogućnosti. Međutim, za to postoje mnoga ograničenja koja uključuju dostupan prostor na ugradbenoj lokaciji i potrebu da se osigura dostupnost cijevi u duljinama dvostruko većim od zahtjevane (tako da mogu biti izvučene i zamijenjene). Isto tako, dugačke, tanke cijevi se teško daju izvaditi i zamijeniti
+Razmak cijevi: pri konstruiranju cijevi, praktično je osigurati da razmak cijevi (udaljenost središta susjednih cijevi) ne bude 1,25 puta manji od vanjskog promjera cijevi. Veći razmak cijevi dovodi do većeg sveukupnog promjera plašta, što u konačnici znači skuplji izmjenjivač topline.
+Naboranost cijevi: ova vrsta cijevi, koja se uglavnom koristi za unutrašnje cijevi, povećava turbulenciju fluida i to svojstvo je vrlo važno u prijenosu topline jer daje bolju učinkovitost
+Razmještaj cijevi: odnosi se na to kako su cijevi položene unutar plašta. Postoje četiri glavna tipa položaja cijevi: trokutni (30°), zaokrenuti trokutni (60°), pravokutni (90°) i zaokrenuti pravokutni (45°). Trokutni uzorci se koriste da bi se postigao veći prijelaz topline pošto oni natjeraju fluid da struji na turbulentniji način oko cijevi. Pravokutni uzorci se koriste gdje češće dolazi do stvaranja naslaga pa je potrebno redovitije čišćenje.
+Konstrukcija s pregradama: pregrade se koriste u izmjenjivačima topline cijev u plaštu da bi usmjeravali fluid preko snopa cijevi. Izvode se okomito na plašt i drže snop, sprječavajući progib cijevi na velikim duljinama. Također, mogu spriječiti vibraciju cijevi. Najčešći tip pregrade je segmentna pregrada. Polukružne segmentne pregrade su za 180° zakrenute od susjedne pregrade te time tjeraju fluid da struji gore-dolje između snopa cijevi. Smještaj pregrada je od velike termodinamičke važnosti pri konstruiranju izmjenjivača cijev u plaštu. Pregrade moraju biti smještene uzimajući u obzir pretvorbu pada tlaka i prijenos topline. Radi termoekonomske optimizacije, preporuča se da pregrade budu smještene ne bliže od 20 % unutarnjeg promjera plašta. Ako su pregrade smještene preblizu doći će do većeg pada tlaka radi premještanja strujanja. Prema tome, ako su pregrade smještene predaleko jedna od druge može doći do pojave hladnijih dijelova u kutovima između pregrada. Također je važno osigurati da su pregrade smještene dovoljno blizu jedna drugoj da ne bi došlo do savijanja cijevi. Drugi glavni tip pregrada su pregrade koje se sastoje od dvije koncentrične pregrade. Vanjska, šira pregrada izgleda kao američka krafna (dakle s rupom u sredini), dok je unutarnja pregrada oblika diska. Ovaj tip pregrade tjera fluid da prostruji oko obje strane diska te da prođe kroz rupu druge pregrade pri čemu se generiraju drugačiji tipovi strujanja fluida.
+
+
+=== Pločasti izmjenjivač topline ===
+Drugi tip izmjenjivača topline je pločasti izmjenjivač topline. Načinjen je od mnogo tankih, blago razdvojenih ploča koje imaju vrlo veliku površinu i prolaze za struju fluida kako bi došlo do prijenosa topline. Ovaj oblik naslaganih ploča može biti bolje iskoristiv, u zadanom prostoru, od izmjenjivača cijev u plaštu.
+Napredci u tehnologijama brtvljenja i lemljenja su učinili pločaste izmjenjivače topline sve praktičnijim. Kod primjene u HVAC (en. heating, ventilation and air conditioning) sustavima, ondnosno sustavima za grijanje, ventilaciju i klimatizaciju zraka, veliki izmjenjivači topline ovog tipa (pločasti izmjenjivači topline s okvirom) se rade na način da se mogu rastaviti, očistiti i pregledati. Postoji mnogo vrsta pločastih izmjenjivača topline lemljene izvedbe kao što su izmjenjivači rađeni lemljenjem uronjavanjem, lemljenjem u vakuumu ili zavarivanjem.
+
+
+=== Pločasto-cijevni izmjenjivač topline (shell and plate) ===
+Treći tip izmjenjivača topline je pločasto-cijevni izmjenjivač koji kombinira tehnologije pločastog i cijev u plaštu izmjenjivača topline. Sastoji se od potpuno zavarenog kompleta okruglih ploča izrađenih prešanjem i rezanjem te njihovim međusobnim zavarivanjem. Mlaznice uvlače i izbacuju struju fluida iz kompleta ploča (strujnica sa strane ploče). Potpuno zavareni komplet ploča je ugrađen u vanjski omotač (shell) koji stvara drugu strujnicu (sa strane plašta).
+Tehnologija pločasto-cijevnog izmjenjivača topline nudi visoki prijenos topline, visoke tlakove, visoke radne temperature, kompaktnu velečinu te malu vjerojatnost pojavljivanja naslaga. Velika je prednost što ovakav tip izmjenjivača topline nudi visoku sigurnost od propuštanja fluida pri visokim temperaturama i tlakovima.
+
+
+=== Izmjenjivač topline s akumulacijskom masom ===
+Četvrta vrsta izmjenjivača topline koristi akumulacijsku masu izrađenu od žice u obliku saća koja polagano rotira na okomitoj osovini. S jedne strane struji topliji fluid i predaje toplinu rotirajučoj masi koja ju akumulira, pri čemu se topliji fluid hladi. S druge strane preko tako zagrijane mase struji hladniji fluid koji preuzima na sebe ovu akumuliranu toplinu i pri tome se zagrijava. Ova vrsta izmjenjivača topline spada pod regenerativne izmjenjivače topline.
+
+
+=== Lamelni izmjenjivač topline ===
+Ovaj tip izmjenjivača topline koristi prolaze naslagane u obliku sendviča koji sadrže lamele kako bi se povećala efikasnost te jedinice. U pogledu konstrukcije, postoje protustrujni i križni izmjenjivači s različitim oblicima lamela kao što su ravne i valovite lamele. Lamelni izmjenjivač topline se najčešće radi od aluminijskih slitina zbog kojih ima visoku efikasnost prolaza topline. Materijal omogućuje sustavu da radi na nižim temperaturama i da težina izmjenjivača bude manja. Lamelni izmjenjivači topline se najčešće koriste u primjenama s niskim temperaturama kao što su postrojenja za ukapljivanje prirodnog plina, helija ili kisika te industrija transporta (motori za avione).
+Prednosti lamelnih izmjenjivača topline:
+
+visoka efikasnost prolaza topline, posebno u procesima s plinom
+veće područje prolaza topline
+približno su 5 puta lakši od izmjenjivača topline cijev u plaštu
+mogu podnijeti visoke tlakoveNedostaci lamelnih izmjenjivača topline
+
+može doći do pojave naslaga pošto su prolazi vrlo uski
+prolazi se teško čiste
+slitine aluminija sklone su krutom lomu uzrokovanom tekućim metalom (živom)
+
+
+=== Pločasti izmjenjivač topline s profiliranom pločom ===
+Pločasti izmjenjivač topline s profiliranom pločom se koristi u mliječnoj industriji za hlađenje mlijeka u velikim spremnicima od nehrđajućeg čelika. Profilirane ploče omogućuju hlađenje preko gotovo cijele površine spremnika bez praznina koje bi se javljale između cijevi zavarenih na vanjsku stranu spremnika.
+Profilirana ploča se radi na način da se tanak komad metala točkasto zavari na površinu drugog, debljeg komada metala. Razmak točaka točkastog zavarivanja je jednolik. Nakon zavarivanja, u ograđenom prostoru se poveća tlak tako da tanji metal nabubri oko zavara čime se dobiva prostor za strujanje fluida.
+
+
+=== Izmjenjivači topline s promjenom agregatnog stanja ===
+
+ 
+Izmjenjivači topline se mogu koristiti i za isparavanje fluida, a također se mogu koristiti i kao kondenzatori za ohlađivanje pare ili njenu kondenzaciju u tekućinu. U kemijskim postrojenjima i rafinerijama, grijači koji zagrijavaju nadolazeće napajanje za destilacijske tornjeve su često izmjenjivači topline.Energetska postrojenja koja koriste parne turbine često koriste izmjenjivače topline da voda zavrije i ispari. Izmjenjivači topline za proizvodnju pare iz vode se često zovu bojleri ili generatori pare.
+U nuklearnim elektranama, posebni veliki izmjenjivači topline predaju toplinu iz primarnog sustava (reaktorsko postrojenje)  sekundarnim sustavima (parno postrojenje), čime se u tom procesu proizvodi para iz vode. Ti izmjenjivači se zovu generatori pare. Sva energetska postrojenja na fosilna goriva i sve nuklearne elektrane koje koriste parne turbine imaju površinske kondenzatore koji pretvaraju ispušnu paru iz turbina u kondenzat (vodu) za ponovnu upotrebu.Kako bi se sačuvala energija i kapacitet hlađenja u kemijskim i ostalim postrojenjima, regenerativni izmjenjivači topline mogu prenijeti toplinu od struje koja mora biti ohlađena do druge struje koja mora biti zagrijana.
+U ovu skupinu izmjenjivača topline također se ubrajaju i izmjenjivači koji u svojoj strukturi imaju materijal koji mijenja agregatno stanje. Ta pretvorba je najčešće iz krutog u kapljevito agregatno stanje zbog male promjene volumena tih stanja. Ta promjena agregatnog stanja efikasno djeluje kao međuspremnik, jer se odvija pri konstantnoj temperaturi, ali svejedno omogućuje da izmjenjivač topline primi dodatnu toplinu. Jedan od primjera gdje se to pokušava primijeniti je u zrakoplovnoj elektronici.
+
+
+=== Izravni izmjenjivači topline ===
+Kod izravnih izmjenjivača topline se prolaz topline između vrućih i hladnih struja odvija bez razdjelne površine. Podjela takvih izmjenjivača topline s obzirom na agregatno stanje je sljedeća:
+
+plin-kapljevina
+dvije nemiješajuće kapljevine
+krutina-kapljevina ili krutina-plinVećina izravnih izmjenjivača topline spadaju pod kategoriju plin-kapljevina gdje se toplina prenosi između plina i kapljevine u obliku kapljica, tankih slojeva ili mlazeva (raspršina). Ovakvi izmjenjivači topline se najviše koriste u klima uređajima, uređajima za ovlaživanje zraka, hlađenje vode i kondenzacijskim postrojenjima.
+
+
+== Primjena u HVAC (grijanje, ventilacija i klimatizacija) sustavima ==
+Jedna od najširih upotreba izmjenjivača topline je za klimatizaciju zgrada i vozila. Kapljevina-zrak ili zrak-kapljevina HVAC uređaji su najčešće križne izvedbe.
+Kao kapljevina se najčešće koristi voda, otopina vode i antifriza, kapljevina za hladnjake (ukapljeni amonijak, sumporov dioksid itd). Za zagrijavanje se najčešće koriste vruća voda i para, a za hlađenje hladna voda i kapljevina za hladnjake. Što se tiče zraka, tu se javljaju velike razlike između izmjenjivača za hlađenje i izmjenjivača za grijanje. Iz zraka koji se hladi često se kondenzira vlaga uz iznimku vrlo suhih struja zraka. Zagrijavanje zraka povećava kapacitet te struje zraka da zadržava vodu. Stoga izmjenjivači za zagrijavanje na strani zraka ne moraju uzimati u obzir kondenzaciju vlage, ali izmjenjivači za hlađenje moraju biti tako konstruirani kako bi se nosili s vlagom. Izbačena voda se naziva kondenzatom.
+U mnogim dijelovima svijeta, HVAC sustavi na vodu ili paru mogu biti izloženi uvjetima zamrzavanja. Pošto se volumen vode povećava tijekom zamrzavanja, ti skupi i teško zamjenjivi izmjenjivači topline lako se mogu oštetiti ili uništiti za vrijeme niskih temperatura. Zbog toga je zaštita od zamrzavanja glavna briga konstruktora HVAC sustava.
+Izmjenjivači topline u pećima s izravnim izgaranjem, karakteristični za mnoge zgrade su plin-zrak izmjenjivači koji se rade od čeličnih prešanih ploča. Produkti izgaranja prolaze s jedne strane izmjenjivača, a zrak za zagrijavanje s druge. Pojava pukotina u ovim izmjenjivačima je opasna i zahtjeva brzo uočavanje i popravak jer bi produkti izgaranja mogli ući u prostor gdje ljudi žive.
+
+
+== Spiralni izmjenjivači topline ==
+
+Spiralni izmjenjivač topline može biti u obliku zavinutih cijevi, ali češće se pojam spiralnog izmjenjivača odnosi na par ravnih površina koje su zavinute kako bi činile dva kanala koji rade na protustrujnom načelu. Svaki od kanala ima jedan dugački zakrivljen prolaz.
+Glavna prednost spiralnog izmjenjivača topline je njegova velika iskoristivost prostora.
+
+
+=== Konstrukcija ===
+Udaljenost između ploča u spiralnim kanalima se održava korištenjem svornjaka koji se zavare prije namatanja u spiralu. Kada se glavni spiralni paket namota, dopunski gornji i donji bridovi se zavaruju i svaki kraj se zatvara brtvenom ravnom ili koničnom navlakom koja se pričvrsti vijcima za konstrukciju. To omogućava da ne dođe do miješanja dvaju fluida. Bilo koje curenje se odvija ili prema atmosferi ili u prolaze koji sadrže isti fluid.
+
+
+=== Samočišćenje ===
+Spiralni izmjenjivači topline se često koriste za zagrijavanje fluida koji sadrže krutine pa može doći do stvaranja naslaga unutar izmjenjivača. Malen pad tlaka omogućava spiralnom izmjenjivaču topline da se bolje nosi s naslagama. Oni koriste mehanizam samočišćenja pri čemu naslage uzrokuju povećanu brzinu fluida u tom području, čime se povećava trenje fluida na površini s naslagama i one se otkidaju. Time izmjenjivač topline ostaje čist. Unutarnje stjenke koje čine površinu izmjene topline su često dosta debele, što čini spiralne izmjenjivače vrlo robusnima. Iz tog razloga oni imaju dug vijek trajanja u zadanim okolinama. Također, lako se čiste jer se mogu rastvoriti te se naslage mogu očistitit pranjem pod visokim tlakom.
+
+
+=== Načini strujanja ===
+
+Postoje tri glavna tipa strujanja u spiralnom izmjenjivaču topline:
+
+Protustrujni: Fluidi struje u suprotnim smjerovima. Ovi izmjenjivači se koriste za primjene kondenzacije, hlađenja plina ili prolaza topline između dviju kapljevina. Kada se koriste za kondenzaciju pare postavljaju se okomito, a kada se koriste u primjenama s visokim koncentracijama krutina, postavljaju se vodoravno.
+Spiralni tok/Križni tok: Jedan fluid je u spiralnom toku, a drugi u križnom. Prolazi za spiralni tok se zavaruju s obje strane za ovu vrstu spiralnog izmjenjivača topline. Ovakva vrsta toka je pogodna za plinove male gustoće koji prolaze kroz križni tok, izbjegavajući pad tlaka. Može se koristiti i za prolaz topline između dvije kapljevine ako jedna kapljevina ima znatno veću brzinu strujanja od druge.
+Distribuirana para/spiralni tok: Ovo je konstrukcija kondenzatora i najčešće se postavlja okomito. Antifriz prolazi spiralom i izlazi na vrhu. Vrući plinovi koji ulaze izlaze kao kondenzati na doljnjem izlazu.
+
+
+=== Primjena ===
+Spiralni izmjenjivač topline je dobar za primjene kao što su pasterizacija, predgrijavanje i sl.
+
+
+== Izbor izmjenjivača topline ==
+S obzirom na to da postoji mnogo vrsta, izbor optimalnog izmjenjivača topline nije lagan. Najčešće je potrebno mnogo iteracija. Zbog toga se izmjenjivači topline najčešće biraju kompjuterskim programima na kojima rade ili konstruktori izmjenjivača (najčešće inženjeri) ili prodavači opreme.
+Kako bi izabrali odgovarajući izmjenjivač topline, konstruktori (ili prodavači opreme) prvo uzimaju u obzir ograničenja za konstrukcije za svaki tip izmjenjivača. Iako je cijena često prvi kriterij, postoji još bitnih kriterija za odabir:
+
+ograničenja tlaka (najviši/najniži)
+opseg temperatura
+tvari koje će se mješati u izmjenjivaču
+kapacitet toka fluida
+mogućnost čišćenja, održavanja i popravka
+materijali potrebni za konstrukciju
+mogućnost povećanja u budućnostiKako bi izabrali pravi izmjenjivač topline, potrebno je znanje o različitim tipovima izmjenjivača topline, kao i o okolini gdje izmjenjivač mora raditi. Kao primjer možemo uzeti proizvodnu industriju gdje se nekoliko različitih tipova izmjenjivača topline koristi za samo jedan proces kako bi se dobio konačan produkt.
+
+
+== Održavanje i nadgledanje ==
+Online nadgledanje komercijalnih izmjenjivača topline se obavlja računanjem sveukupnog koeficijenta prolaza topline. 
+Sveukupni koeficijent prolaza topline može s vremenom pasti zbog stvaranja naslaga.
+U=Q/AΔTlmPeriodičkim računanjem sveukupnog koeficijenta prolaza topline izmjenjivača iz temperatura i ukupnog toplinskog toka, vlasnik izmjenjivača topline može predodrediti kada je potrebno čišćenje izmjenjivača.
+Mehaničko nadgledanje izmjenjivača topline se može provesti nerazornim metodama.
+
+
+== Stvaranje naslaga ==
+
+Naslage se stvaraju kada se na površinu izmjenjivača topline uhvate nečistoće. Do primanja nečistoća dolazi iz raznih razloga:
+
+malo smično naprezanje stjenke
+male brzine fluida
+velike brzine fluida
+taloženje disociranih nečistoća radi povećanih temperatura stjenkiUčestalost pojave naslaga je određena učestalošću primanja čestica.
+Ovaj model su originalno predstavili Kern i Seaton 1959. godine.
+
+
+=== Stvaranje naslaga u postrojenjima sa sirovom naftom ===
+U komercijalnom prerađivanju sirove nafte, ona se grije s 21 °C na 343 °C prije ulaska u dio za destilaciju. Niz izmjenjivača topline tipa cijev u plaštu izmjenjuju toplinu između sirove nafte i drugih struja nafte kako bi zagrijali sirovu naftu na 260 °C prije zagrijavanja u peći. Naslage nastaju na strani sirove nafte radi netopljivosti asfaltena.
+
+
+=== Stvaranje naslaga u postrojenjima za hlađenje vode ===
+Sustavi za hlađenje vode su skloni pojavi naslaga. Lokalno taloženje disociranih krutina se javlja na površini izmjenjivača topline zbog toga što su temperature stijenke više od temperature fluida. Male brzine fluida omogućavaju krutinama u fluidu da se zaustave na površini izmjenjivača topline. Hlađena voda je najčešće na strani unutarnje cijevi u izmjenjivaču topline cijev u plaštu jer se lako čisti. Kako bi spriječili pojavu naslaga, konstruktori osiguraju da brzina hlađene vode bude viša od 0,9 m/s, a temperatura okolnog fluida se održava na manje od 60 °C. Još jedan od načina sprječavanja stvaranja naslaga je korištenje kemikalija.
+
+
+=== Održavanje ===
+Pločasti izmjenjivači topline se moraju povremeno rastaviti i očistiti. Cijevni izmjenjivači topline se mogu čistiti različitim metodama, poput čišćenja kiselinom, pjeskarenja, ispiranja pod visokim tlakom, sačmarenjem itd.
+U velikim sustavima hlađenja vode koriste se tretmani vodom poput pročišćavanja i dodavanja kemikalija kako bi se pojava naslaga na izmjenjivačima topline svela na minimum. Drugi tretmani vodom se također koriste u parnim postrojenjima u elektranama kako bi se smanjila korozija i pojava naslaga na izmjenjivačima i ostaloj opremi.
+Mnoge tvrtke su počele koristiti nove tehnologije koje isključuju primjenu kemikalija, čime se smanjuje pad tlaka u izmjenjivačima topline.
+
+
+== Izmjenjivači topline u prirodi ==
+
+
+=== Ljudi ===
+Ljudski nosni kanali služe kao izmjenjivači topline, grijući udahnuti zrak i hladeći izdahnuti zrak. To se može isprobati stavljanjem ruke ispred lica i izdisanjem prvo kroz nos pa kroz usta. Zrak izdahnut iz usta je topliji od onog iz nosa.
+
+
+=== Ptice, ribe i morski sisavci ===
+
+Protustrujni izmjenjivači topline se u prirodi javljaju u cirkulacijskom sustavu riba, kitova i ostalih morskih sisavaca. Arterije usmjerene prema koži nose toplu krv i isprekidane su venama usmjerenim od kože koje nose hladnu krv. To uzrokuje izmjenu topline između tople arterijske krvi i hladne venske. To smanjuje sveukupni gubitak topline u hladnoj vodi.
+Izmjenjivači topline su prisutni i u jezicima plavetnih kitova, pošto velika količina vode prolazi kroz njihova usta.Močvarne ptice na sličan način ograničavaju gubitke topline iz njihovog tijela dok stoje u vodi.
+
+
+== Izmjenjivači topline u industriji ==
+Izmjenjivači topline nailaze na široku primjenu u industriji, kako za hlađenje, tako i za zagrijavanje procesa u raznim postrojenjima. Vrsta i veličina izmjenjivača topline se odabire ovisno o vrsti fluida, njegovom agregatnom stanju, temperaturi, gustoći, viskoznosti, tlakovima, kemijskoj strukturi i mnogim drugim termodinamičkim svojstvima.
+U mnogim industrijskim procesima postoji rasipanje energije ili struja fluida pa se izmjenjivači topline mogu koristiti za ponovno dobivanje te topline i njeno korištenje za grijanje neke druge struje u procesu. Ovaj princip uštedi dosta novca u industriji, pošto bi toplina dovedena ostalim strujama u izmjenivačima topline inače dolazila iz vanjskog izvora koji bi bio skuplji i štetniji za prirodu.
+Izmjenjivači topline se koriste u mnogim industrijama, uključujući:
+
+hlađenje (u hladnjacima)
+protočni pasterozatori mlijeka, sokova i piva
+rafiniranje petroleja
+tretiranje otpadnih vodaU tretiranju otpadnih voda, izmjenjivači topline igraju glavnu ulogu u održavanju idealnih temperatura anaerobni h organizama kako bi se potaknuo rast mikroorganizama koji uklanjaju zagađivače. Česti tipovi izmjenjivača topline koji se koriste u ovim primjenama su izmjenjivač s dvostrukom cijevi i pločasti izmjenjivač s okvirom.
+
+
+== Izmjenjivači topline u zrakoplovstvu ==
+U komercijalnim zrakoplovima, izmjenjivači topline se koriste kako bi odveli toplinu od sustava za uljenje motora kako bi zagrijali hladno gorivo. To smanjuje potrošnju goriva, a također smanjuje mogućnost da se voda koja se nalazi u gorivu zamrzne u dijelovima motora.Početkom 2008. godine, Boeing 777 British Airwaysa se srušio nedaleko od piste. Početkom 2009. godine je otkriveno da je problem vezan uz izmjenjivače topline između ulja i goriva u motorima Rolls-Royce-a.  Na ostale izmjenjivače topline ili avione marke Boeing 777 pokretane GE ili Pratt and Whitney motorima nije utjecao ovaj problem.
+
+
+== Vidi članke ==
+Rashladnik
+Proračun rashladnika
+Brodski rashladnici
+Parni kondenzator
+Koeficijent prijelaza topline
+
+
+== Izvori ==
+
+Coulson, J. and Richardson, J (1999). Chemical Engineering- Fluid Flow. Heat Transfer and Mass Transfer- Volume 1; Reed Educational & Professional Publishing LTD
+Dogan Eryener (2005), ‘Thermoeconomic optimization of baffle spacing for shell and tube heat exchangers’, Energy Conservation and Management, Volume 47, Issue 11–12, Pages 1478–1489.
+G. F. Hewitt, G. L. Shires, T. R. Bott (1994.) Process Heat Transfer, CRC Press, Inc, United States Of America.
+
+
+== Vanjske poveznice ==
+Kategorija Heat Exchangers na Open Directory Project (Dodaj URL)
+Shell and Tube Heat Exchanger Design Software for Educational Applications (PDF)
+EU Pressure Equipment Guideline  Inačica izvorne stranice arhivirana 10. ožujka 2007.
+A Thermal Management Concept For More Electric Aircraft Power System Application (PDF)
+Heat exchanger shellside and tubeside pressure drop calculator  Inačica izvorne stranice arhivirana 19. veljače 2021. Calculate shellside / tubeside pressure drop for an exchanger.
+IPROS

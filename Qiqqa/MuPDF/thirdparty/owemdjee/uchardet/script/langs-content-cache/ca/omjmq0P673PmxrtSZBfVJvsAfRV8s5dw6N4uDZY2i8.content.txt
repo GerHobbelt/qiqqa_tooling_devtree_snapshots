@@ -1,0 +1,392 @@
+revision: 32070836
+title: "Gauss\u2013Kuzmin distribution"
+url: https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_Gauss-Kuzmin
+
+
+---
+
+En matemàtiques, la distribució de Gauss–Kuzmin és una distribució de probabilitat discreta que apareix com la distribució de probabilitat límit en una expansió en fracció contínua d'una variable aleatòria uniformement distribuïda en l'interval (0, 1). La distribució duu el nom de Carl Friedrich Gauß, que la va derivar al voltant de 1800, i de Rodion Kuzmin, que va donar una fita de la seva taxa de convergència l'any 1929. La distribució ve donada per la funció de probabilitat:
+
+  
+    
+      
+        p
+        (
+        k
+        )
+        =
+        −
+        
+          log
+          
+            2
+          
+        
+        ⁡
+        
+          (
+          
+            1
+            −
+            
+              
+                1
+                
+                  (
+                  1
+                  +
+                  k
+                  
+                    )
+                    
+                      2
+                    
+                  
+                
+              
+            
+          
+          )
+        
+         
+        .
+      
+    
+     
+  
+
+
+== Teorema de Gauss-Kuzmin ==
+Sigui
+
+  
+    
+      
+        x
+        =
+        
+          
+            1
+            
+              
+                k
+                
+                  1
+                
+              
+              +
+              
+                
+                  1
+                  
+                    
+                      k
+                      
+                        2
+                      
+                    
+                    +
+                    ⋯
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+  l'expansió en fracció contínua d'un nombre aleatori x uniformement distribuït en l'interval (0, 1). Llavors:
+
+  
+    
+      
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        
+          P
+        
+        
+          {
+          
+            
+              k
+              
+                n
+              
+            
+            =
+            k
+          
+          }
+        
+        =
+        −
+        
+          log
+          
+            2
+          
+        
+        ⁡
+        
+          (
+          
+            1
+            −
+            
+              
+                1
+                
+                  (
+                  k
+                  +
+                  1
+                  
+                    )
+                    
+                      2
+                    
+                  
+                
+              
+            
+          
+          )
+        
+         
+        .
+      
+    
+     
+  De manera equivalent, sigui
+
+  
+    
+      
+        
+          x
+          
+            n
+          
+        
+        =
+        
+          
+            1
+            
+              
+                k
+                
+                  n
+                  +
+                  1
+                
+              
+              +
+              
+                
+                  1
+                  
+                    
+                      k
+                      
+                        n
+                        +
+                        2
+                      
+                    
+                    +
+                    ⋯
+                  
+                
+              
+            
+          
+        
+         
+        ;
+      
+    
+     
+  llavors:
+
+  
+    
+      
+        
+          Δ
+          
+            n
+          
+        
+        (
+        s
+        )
+        =
+        
+          P
+        
+        
+          {
+          
+            
+              x
+              
+                n
+              
+            
+            ≤
+            s
+          
+          }
+        
+        −
+        
+          log
+          
+            2
+          
+        
+        ⁡
+        (
+        1
+        +
+        s
+        )
+      
+    
+     
+  tendeix a zero a mesura que n tendeix a infinit.
+
+
+== Taxa de convergència ==
+L'any 1928, Kuzmin va donar la fita:
+
+  
+    
+      
+        
+          |
+        
+        
+          Δ
+          
+            n
+          
+        
+        (
+        s
+        )
+        
+          |
+        
+        ≤
+        C
+        exp
+        ⁡
+        (
+        −
+        α
+        
+          
+            n
+          
+        
+        )
+         
+        .
+      
+    
+     
+  L'any 1929, Paul Lévy va millorar-la a:
+
+  
+    
+      
+        
+          |
+        
+        
+          Δ
+          
+            n
+          
+        
+        (
+        s
+        )
+        
+          |
+        
+        ≤
+        C
+        
+        
+          0.7
+          
+            n
+          
+        
+         
+        .
+      
+    
+     
+  Més tard, el matemàtic alemany Eduard Wirsing va demostrar que, per λ=0.30366... (la constant de Gauss-Kuzmin-Wirsing), el límit
+
+  
+    
+      
+        Ψ
+        (
+        s
+        )
+        =
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        
+          
+            
+              
+                Δ
+                
+                  n
+                
+              
+              (
+              s
+              )
+            
+            
+              (
+              −
+              λ
+              
+                )
+                
+                  n
+                
+              
+            
+          
+        
+      
+    
+     
+  existeix per tot s en [0, 1], i la funció Ψ(s) és analítica i satisfà Ψ(0)=Ψ(1)=0. Més enllà d'aquestes, K.I. Babenko va demostrar altres fites.
+
+
+== Referències ==

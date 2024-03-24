@@ -1,0 +1,46 @@
+revision: 8104020
+title: Deep Blue
+url: https://eo.wikipedia.org/wiki/Deep_Blue
+
+
+---
+
+Deep Blue estas IBM-evoluigita ŝak-komputilo.
+Deep Blue sukcesis kiel unua komputilo de la mondo venki la oficialan ŝakan grandmajstron Garri Kasparov. Kasparov gajnis la unuan ludaron la 10-an de februaro 1996; li venkis 3 ludojn, faris 2 nedecidajn kaj malvenkis unu ludon. Tiel li venkis je Deep Blue per 4:2. La unua ludo famiĝis.
+
+
+== La unua turnira venko ==
+Post la malvenko de la ŝakkomputilo, IBM ekipis pli fortan aparataron kaj en majo de 1997 okazis nova ludaro kontraŭ Kasparov. Deep Blue venkis en la revanĉo je 3,5:2,5. La sesa kaj lasta ludo iĝis la plej mallonga por Kasparov inter liaj malvenkoj.
+
+ 1. e2-e4 c7-c6
+ 2. d2-d4 d7-d5
+ 3. Sb1-c3 d5xe4
+ 4. Sc3xe4 Sb8-d7
+ 5. Se4-g5 Sg8-f6
+ 6. Lf1-d3 e7-e6
+ 7. Sg1-f3 h7-h6
+ 8. Sg5xe6 Dd8-e7
+ 9. 0-0 f7xe6
+10. Ld3-g6+ Ke8-d8
+11. Lc1-f4 b7-b5
+12. a2-a4 Lc8-b7
+13. Tf1-e1 Sf6-d5
+14. Lf4-g3 Kd8-c8
+15. a4xb5 c6xb5
+16. Dd1-d3 Lb7-c6
+17. Lg6-f5 e6xf5
+18. Te1xe7 Lf8xe7
+19. c2-c4 1-0
+
+
+== La sistemo de Deep Blue ==
+La elpensinto de la projekto estis Feng-hsiung Hsu, kiu ekis evoluigon en 1985 kaj la unue pretan sistemon nomis Deep Thought laŭ samnoma fikcia komputilo en romano La Petveturista Gvidlibro pri la Galaksio de Douglas Adams. Hsu laboris ekde 1989 ĉe IBM kaj esploris kun Murray pri paralelaj kalkuloj. Deep Blue estiĝis el tiu laboro, kalkulante 100 milionojn da ŝak-situoj je sekundo. La ŝakprogramon plibonigis granda majstro
+Joel Benjamin, dum malfermaj pozicioj venis de grandaj majstroj Miguel Illescas, John Fedorovich kaj Nick De Firmain.
+Post malvenko, Kasparov postulis revanĉon, sed pro la akuzoj pri manipulado IBM rifuzis tion. Post iom da tempo, eĉ Kasparov rifuzis revanĉon.
+Fakte oni modifis la programon inter la ludoj, oni adaptis ĝin al la stilo de Kasparov.
+
+
+== Eksteraj ligiloj ==
+
+IBM-esplorejo pri Deep Blue
+publika letero de Feng-hsiung Hsu pri la rifuzita reludo kun Kasparov

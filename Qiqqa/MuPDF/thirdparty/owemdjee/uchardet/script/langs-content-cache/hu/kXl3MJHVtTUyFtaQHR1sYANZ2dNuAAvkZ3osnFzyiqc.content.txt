@@ -1,0 +1,58 @@
+revision: 26167190
+title: "Hertzsprung\u2013Russell-diagram"
+url: https://hu.wikipedia.org/wiki/Hertzsprung%E2%80%93Russell-diagram
+
+
+---
+
+A Hertzsprung–Russell diagram (rendszerint a H-R diagram vagy a HRD rövidítését használják) az asztrofizika területén az Ejnar Hertzsprung (1873-1967) dán–holland és Henry Norris Russell (1877-1957) amerikai csillagász által 1905 és 1913 között felállított csillagfejlődési diagram, amely egy grafikonon a csillagok és a csillagcsoportok legszembetűnőbb tulajdonságait (szín, luminozitás, abszolút magnitúdó, felszíni hőmérséklet, színképosztály) mutatja. A színképtípus és a színindex között fennálló összefüggés miatt a HRD-vel ekvivalens a szín-fényesség diagram.
+
+
+== Felépítése ==
+Vízszintes tengelyre a csillagok felszíni hőmérsékletét, az úgynevezett színindexet (BV), vagy a színképosztályt viszik fel, a forró kék csillagoktól a hideg vörösekig, balról jobbra.
+A függőleges tengelyen a csillagok fényességét tüntetik fel valamely mértékegység szerint, például abszolút fényességet vagy a luminozitást, melyhez általában a Napra jellemző mennyiséget használják mértékegységül.
+Így lényegében egy szín–fényesség diagramhoz jutunk. Ez az egyszerű ötlet nagyon nagy jelentőségűnek bizonyult, nem csupán a csillagok felismerhető kategóriák szerinti csoportosításában, hanem kiemeli az adott csillag sajátosságait. A vízszintes tengelyen három skálát is találhatunk, melyek révén jobban érzékelhetőek az egyes skálához tartozó szabálytalanságok.
+A diagram a Nap szomszédságában lévő csillagok alapján készült. Az Univerzum más részeiben levő csillagok diagramja hasonló, de a részleteket tekintve vannak különbségek, és éppen ezek a differenciák adhatnak érdekes információt. Az egyik érdekesség az, hogy a diagram ismert távolságban levő csillagokat tüntet fel, melyeknek kiszámítható az abszolút fényességük. Ez ugyanis nem mindig lehetséges, jóllehet ha egy csillagcsoportot valamely csillaghalmaz tagjának tekintünk, úgy a halmaz minden tagja lényegében azonos távolságra van a Földtől, s így elegendő a halmaz látszólagos fényességét használni, és az abszolút fényességre való átszámításkor a korrekció minden csillagnál ugyanaz. A halmaz minden csillaga látóvonalunkba esőnek tekinthető.
+
+
+== Tartalma ==
+A diagramon három területet jól el lehet különíteni: az átlósan elhelyezkedő keskeny sáv az ún. fősorozat; felette helyezkednek el az óriás-ágak (I-IV luminozitási osztályok) és alatta van a VII luminozitási osztályba sorolható fehér törpék régiója. Egy fejlődő Univerzumban ezek külön-külön stabil állapotokat jelentenek. A HR-diagramon ott vannak sűrűsödési helyek, ahol a csillagok életük során sok ideig tartózkodnak, tehát ahol sok csillag található. Az itt található csillagok az V luminozitási osztályba tartoznak. Közvetlenül a fősorozat jobb alsó sarokba eső részétől balra találhatóak a szubtörpék.
+
+
+=== Fősorozat ===
+A fősorozat, amelyhez a csillagok nagy része tartozik, azt a szakaszt mutatja, melyen egy aktív csillag életének jelentős része zajlik. Az itt lévő csillagok nem változtatják észrevehetően a helyzetüket a diagramon, nem mozognak a sávban egyik irányba sem. A fősorozati csillagok tömegének alsó és felső tömeghatára van: 0,08 M☉ < M < 60 M☉. A csillagtömegek kicsiny egységekben, de rendre növekednek balra felfelé. Ezt a progresszív növekedést tükrözi a tömeg-fényesség reláció.
+A fősorozat mentén elhelyezkedő csillagok energetikailag stabil állapotban vannak, energiatermelésüket hidrogén-hélium fúzió fedezi. Valójában a fősorozat két „tartományra” bomlik, ez az alsó és felső fősorozat. Az alsó fősorozaton elhelyezkedő csillagok elsődleges energiaforrása a proton-proton ciklus, a felső fősorozatba tartozóké pedig a CNO-ciklus.
+
+
+=== Szubóriás ág ===
+Ha a fősorozati csillagok energiakészlete kimerül, a magbeli hidrogén mennyisége a kezdetihez képest századára csökken, a csillag energiatermelése rohamosan gyengül. Megszűnik a mag sugárzási egyensúlya, ezért zsugorodni kezd. Az összehúzódás miatt a hőmérséklet emelkedik, így a mag körüli héjban beindul a hidrogén fúziója; ekkor a csillag eléri a szubóriás állapotot. A csillag azonban továbbra sincs sugárzásegyensúlyban, ezért előbb lassan, majd gyorsabban mozog a vörös óriás-ág felé.
+
+
+=== Óriáság ===
+A csillagok egy része, miután a fűtőanyaguk kimerült, óriás csillaggá fúvódik fel, melyek fejlődése a diagram jobb felső sarka felé vezet. A főág és az óriás-ág között egy üres rész figyelhető meg, ez az ún. Hertzsprung-rés, itt kevés csillag található, ami egy viszonylag gyorsan lezajló fejlődés fázisra utal.
+Óriásként egy csillagnak lehet egy másik nyugalmasabb időszaka, mielőtt viszonylag  gyorsan és esetenként látványosan fehér törpe állapotba kerül. A grafikon bal alsó részében levő csillagok esetében nincs fényesen égő mag, csak lassú hősugárzás, végül lehűlés.
+
+
+=== Aszimptotikus óriáság ===
+A 0,4 – 10 naptömeg közötti csillagok fejlődésének késői állapota. Az aszimptotikus jelző az ág HRD-n való elhelyezkedésére utal, aszimptotaként hozzásimul a fősorozathoz. Az aszimptotikus óriáságon fekvő csillagok fejlődési átmenetet képeznek a vörös óriások és a fehér törpék között. E csillagok magjában héliumégés zajlik, melyet egy hidrogénégető héj vesz körül. A héliumégés végeztével a csillag jobbra és felfele mozog a diagramon. A csillagoknak e fejlődési fázisa asztrofizikai szempontból jelentős, ugyanis ekkor porburkot (protoplanetáris ködöt) dobnak le magukról. A porburok ledobása szakaszokban történik, és az egész folyamat nem tart tovább 500-1000 évnél.
+
+
+== A csillagok fejlődése ==
+A csillagok életkorát kezdeti paramétereik határozzák meg, ezek pedig a véletlenszerűen válogatott mintában igen különbözőek. Ez az oka annak, hogy igen sok csillagot találunk a diagram főbb ágain kívül is. Hogy egyáltalán látunk ágakat, az arra utal, hogy ezek az ágak olyan fejlődési szakaszoknak felelnek meg, amelyekben a csillagok állapota hosszú időn keresztül alig változik, vagyis ezekben a tartományokban a csillag sok időt tölt el. A HRD ágai tehát a csillagfejlődés fő fázisait szemléltetik. A HRD szerkezetének pontosabb felderítésére jobban megfelel egy adott tulajdonsággal rendelkező csillagcsoport, mint a véletlenszerű mintavétel. erre adnak lehetőséget a gravitációsan kötött csillagrendszerek (nyílthalmazok, gömbhalmazok) tanulmányozása. egy adott halmaz csillagainak kémiai összetétele és kora közel egyezik, így a HRD-n való elhelyezkedésüket csak a tömegük határozza meg.
+
+
+== Nyílthalmazok HRD-je ==
+
+
+== Gömbhalmazok HRD-je ==
+
+
+== A diagram ==
+
+
+== Külső hivatkozások ==
+Interaktív Flash szimuláció a Hertzsprung–Russell-diagramról magyar szövegkörnyezetbe ágyazva. Forrás: University of Nebraska-Lincoln
+
+
+== Források ==
+A Tudás Könyvtára: Csillagászati kislexikon

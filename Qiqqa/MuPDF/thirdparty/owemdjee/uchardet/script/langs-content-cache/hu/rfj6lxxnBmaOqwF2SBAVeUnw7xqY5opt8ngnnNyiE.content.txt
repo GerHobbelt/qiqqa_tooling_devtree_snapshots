@@ -1,0 +1,203 @@
+revision: 25342348
+title: Frekvencia
+url: https://hu.wikipedia.org/wiki/Frekvencia
+
+
+---
+
+A frekvencia egy periodikus jelenség (rezgés) „ismétlődési gyakoriságát” jelenti: egy esemény hányszor ismétlődik meg egységnyi idő alatt (idő alatti periódussűrűség).
+Jele: f vagy ν (görög nű).
+SI-mértékegysége: Hz (hertz, Heinrich Rudolf Hertz német fizikus neve után), ami ugyanazt jelenti, mint az s−1 (egy teljes periódus másodpercenként).
+
+
+== Rezgésfrekvenciája ==
+Harmonikus rezgés során egy periódus megtételéhez szükséges idő a (T) periódusidő.
+A frekvencia (f) azt adja meg, hány periódusa megy végbe a rezgésnek adott idő alatt: 
+  
+    
+      
+        f
+        =
+        
+          
+            1
+            T
+          
+        
+      
+    
+     
+  .
+
+
+=== Körfrekvencia ===
+Egy rezgés vagy hullám 
+  
+    
+      
+        ω
+      
+    
+     
+   körfrekvenciáján a frekvencia 
+  
+    
+      
+        2
+        π
+      
+    
+     
+  -szeresét értjük:
+
+  
+    
+      
+        ω
+        =
+        2
+        π
+        f
+      
+    
+     
+  .
+Ez azt adja meg, hogy a leíráshoz használt szögváltozó (fázisa) mennyit változik egységnyi idő alatt (azaz a szögsebességet). Mértékegysége radián per másodperc (rad/s).
+Ilyen módon egy harmonikus rezgés a következő alakok bármelyikével egyaránt jellemezhető:
+  
+    
+      
+        A
+        sin
+        ⁡
+        
+          
+            (
+          
+        
+        ω
+        t
+        
+          
+            )
+          
+        
+        =
+        A
+        sin
+        ⁡
+        
+          
+            (
+          
+        
+        
+          2
+          π
+        
+        f
+        t
+        
+          
+            )
+          
+        
+        =
+        A
+        sin
+        ⁡
+        
+          
+            (
+          
+        
+        
+          
+            
+              2
+              π
+            
+            T
+          
+        
+        t
+        
+          
+            )
+          
+        
+      
+    
+     
+  
+
+
+== Haladó hullám frekvenciája ==
+Hang, elektromágneses hullám (mint a rádióhullám vagy a fény), elektromos jelek vagy más hullámok frekvenciáját mérve, a hertzben kapott frekvencia a másodpercenkénti periódusok száma. A görbe torzulása esetén mindig az alapgörbe frekvenciája értendő.
+Az f frekvencia a hullám v sebességének és λ hullámhosszának a hányadosa:
+
+  
+    
+      
+        f
+        =
+        
+          
+            v
+            λ
+          
+        
+      
+    
+     
+  tehát a frekvencia a hullámhosszal fordítottan arányos.
+A vákuumon keresztül haladó elektromágneses hullámok ennek a speciális esete (v = c), ahol c a fénysebesség:
+
+  
+    
+      
+        f
+        =
+        
+          
+            c
+            λ
+          
+        
+      
+    
+     
+  Amikor a hullám egyik közegből átlép egy másikba (pl. fénytörés), a frekvenciája ugyanaz marad, csak a sebessége és - ennek következtében - a hullámhossza változik meg.
+
+
+== Mérése ==
+A frekvencia mérésekor megszámoljuk, hogy egy adott időtartam alatt hányszor ismétlődik meg az esemény, majd elosztjuk az illető időtartam hosszával.
+1 Hz azt jelenti, másodpercenként egyszer következik be az esemény, 2 Hz azt, hogy kétszer stb. Az egység eredeti neve ciklus per másodperc (cps) volt, amit néha még ma is használnak. Más, a frekvenciát mérő egységek például a fordulat per perc (rpm) vagy a radián per másodperc (rad/s). A szívritmust és a zenei ritmust ütés per percben (bpm, beats per minute) mérik.
+
+
+== Referenciafrekvenciák ==
+Vannak általánosan elfogadott referenciafrekvenciák az idő mérése céljából. Az egyik ilyen az atomórák által használt frekvencia, a céziumatom egyik átmenetének frekvenciája.
+
+
+== Példák ==
+A normál zenei A hang frekvenciája 1939 óta 440 Hz („concert pitch"); a zenekarok erre hangolnak. Érdekesség, hogy 1895-ig ez 415 Hz (historikus A), 1938-ig 435 Hz volt (bécsi A).
+A csecsemő kb. 20 kHz-ig képes hallani a hangokat, de a korral ez a felső határ csökken, akár 6–8 kHz-ig vagy az alá is
+Európában a váltakozó áram frekvenciája 50 Hz (a zenei G hanghoz közeli frekvencia), Amerikában és Japánban 60 Hz
+
+
+== Jegyzetek ==
+
+
+== További információk ==
+https://web.archive.org/web/20090101183418/http://itl7.elte.hu/html/elektronika/node5_1.html
+http://tankonyv.ham.hu/A_vizsga-DJ4UF/?cid=a03
+http://science.howstuffworks.com/light3.htm
+
+
+== Kapcsolódó szócikkek ==
+hullámhossz
+körfrekvencia
+Doppler-effektus
+Relativisztikus Doppler-effektus
+elektromos hálózatok és csatlakozók listája
+Repülősávos rádiófrekvencia

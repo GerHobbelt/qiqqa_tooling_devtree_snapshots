@@ -1,0 +1,154 @@
+revision: 66172038
+title: Cost Per Action
+url: https://vi.wikipedia.org/wiki/Cost_Per_Action
+
+
+---
+
+CPA là viết tắt của Cost Per Action, là một mô hình thanh toán quảng cáo trực tuyến dựa trên các hành động như bán hàng hoặc đăng ký.CPA được xác định cho mỗi hành động liên quan trực tiếp đến một số loại chuyển đổi, trong đó doanh số và lượt đăng ký là phổ biến nhất. CPA không bao gồm các giao dịch chỉ dựa trên chi phí mỗi lần nhấp (CPC).Trong mô hình CPA, Publishers sẽ chịu phần lớn rủi ro, vì hoa hồng của họ phụ thuộc vào tỷ lệ chuyển đổi tốt từ sự sáng tạo và trang web của Advertisers.
+
+
+=== Công thức tính của CPA ===
+CPA = Chi phí cho quảng cáo/Số lượng chuyển đổiCPA được tính bằng cách chia chi phí cho quảng cáo cho Số lần hiển thị (Impression), Tỷ lệ nhấp (Click-through-rate) và tỷ lệ chuyển đổi (Conversion rate).Như vậy:
+CPA = Chi phí cho nhà quảng cáo / (Số lần hiển thị quảng cáo x CTR x CR)
+Ví dụ: Giả sử, một chiến dịch quảng cáo đã được xem 5000 lần, nhận được 200 lần nhấp và có tổng cộng 20 chuyển đổi. Tổng chi phí mà Advertiser quyết định trả là 200 đô la, thì CPA có thể được tính như sau:
+CTR = (200/5000) x 100 = 4% = 0,04
+20 chuyển đổi
+Vậy: CR = (20/200) x 100 = 10% = 0.10
+Tổng chi phí cho nhà quảng cáo = $ 200
+Như vậy:
+CPA = 200/20 = $ 10
+CPA = 200 / (5000 x 0,04 x 0,10) = $ 10
+
+
+== Các trường hợp của CPA ==
+
+
+=== Cost per Acquisition (CPA) ===
+Cost per Acquisition - chi phí mỗi lần mua lại, hoặc CPA là một số liệu tiếp thị đo lường tổng hợp cho biết để có được một khách hàng trả tiền cho mỗi hành động như sale, đăng ký form, hay những chiến dịch quảng cáo.Hầu hết các nhà tiếp thị thích mô hình định giá CPA giúp tối ưu chi phí quảng cáo một cách tối đa  vì họ có thể đặt mục tiêu cho mỗi hành động trước khi bắt đầu chạy quảng cáo và chỉ phải trả phí khi người dùng thực hiện hành vi cụ thể như mục tiêu đã đặt ra. CPA là thước đo quan trọng trong việc quyết định marketing có thành công hay không.
+Công thức tính CPACPA = total campaign cost/conversion.
+Không có điểm chuẩn chung trong thương mại điện tử như thế nào là chỉ số CPA tốt. Mỗi doanh nghiệp có tỷ suất lợi nhuận, giá cả và chi phí hoạt động khác nhau. Yếu tố quan trọng nhất trong việc xác định CPA mong muốn là hiểu được các yếu tố này, để doanh nghiệp tính toán số tiền chi trả một cách hợp lý để có được khách hàng.
+
+
+=== Cost per lead (CPL)/Pay per lead (PPL) ===
+CPL là tên viết tắt của Cost-Per-Lead, phương pháp quảng cáo/ Marketing tính chi phí theo số lead thu về. Lead ở đây có thể là lead đơn thuần, những người quan tâm đến sản phẩm và điền thông tin (tên, số điện thoại, email…) vào form, hoặc cao hơn là warm lead, qualified lead, những lead có sự quan tâm và nhu cầu mua sản phẩm, dịch vụ rất mạnh mẽ.Lead có thể được thu nhờ các phương pháp quảng cáo trên kênh Facebook, Google, event, hội thảo, sự kiện dùng thử….Lead là phần tiền đề để chuyển thành Sale (đơn hàng) sau này nếu doanh nghiệp biết chăm sóc và chuyển đổi tốt.
+
+
+==== Những lĩnh vực nào phù hợp với quảng cáo CPL? ====
+Do đặc thù quảng cáo CPL là tạo ra Lead, những người có nhu cầu và quan tâm đến sản phẩm chứ chưa phải khách hàng, nên CPL phù hợp với những ngành nghề dịch vụ và sản phẩm có giá trị cao mà khách hàng cần được tư vấn, chăm sóc và cân nhắc rất kỹ trước khi quyết định xuống tiền. Đó có thể là các ngành như bất động sản, định cư du học, bảo hiểm, dịch vụ y tế, xe ô tô. Ví dụ như:
+Bất động sản: Những người muốn mua dự án nhưng cần tư vấn thêm về vay
+Định cư du học: Những người muốn đi nước ngoài định cư hay du học nhưng cần tư vấn thêm về pháp lý
+Bảo hiểm: Người có nhu cầu mua BH cho bản thân và gia đình nhưng cần tư vấn thêm về điều kiện ràng buộc
+Ô tô: Người có nhu cầu lái thử xe và có ý định, tài chính để mua xe
+Và còn rất nhiều lĩnh vực khác…
+
+
+=== Cost per conversion (CPC or CPCons)/ Pay per conversion (PPC) ===
+Chi phí mỗi lần chuyển đổi (CPC hoặc CP Cons), đôi khi cũng được gọi là CPA. CPC này cho thấy chi phí thực sự để một khách hàng thực hiện chuyển đổi thành công. Chuyển đổi (Conversion) có thể là mua hàng, đăng ký gì đó hoặc là xem video, tuỳ thuộc vào mục tiêu quảng cáo là gì. CPC thể hiện mức độ thành công của quảng cáo khi đạt được mục tiêu dựa trên tổng chi phí của quảng cáo đó.
+Công thức cho Chi phí mỗi lần chuyển đổi
+  
+    
+      
+        C
+        D
+        C
+        =
+        
+          
+            Totalcost
+            Convernsion
+          
+        
+      
+    
+     
+  
+Chi phí mỗi lần chuyển đổi = Tổng chi phí tạo lưu lượng truy cập / Tổng số chuyển đổi
+Ví dụ: một chiến dịch quảng cáo có giá 50 đô la cho 50 lượt xem và 5 chuyển đổi đã được tạo. Chi phí mỗi lần chuyển đổi = $50/5 chuyển đổi, dẫn đến $ 10 mỗi lần chuyển đổi. Điều này rất quan trọng để biết để bạn có thể quản lý ngân sách của mình và quyết định những cách tốt nhất để quảng cáo. Bằng cách tăng tỷ lệ chuyển đổi, bạn sẽ giảm Chi phí cho mỗi Chuyển đổi.
+
+
+=== Cost per call (CPC)/Pay per call (CPC) ===
+Trả tiền cho mỗi cuộc gọi (PPCall, còn được gọi là chi phí cho mỗi cuộc gọi) là một mô hình quảng cáo mà Advertiser sẽ trả tiền dựa trên số lượng cuộc gọi mà người xem quảng cáo thực hiện. Nhà cung cấp trải tính phí cho mỗi cuộc gọi, mỗi lần hiển thị hoặc mỗi lần chuyển đổi. Nó tương tự như Pay per click (PPC) online, nhưng khiến người xem thực hiện cuộc gọi thay vì xem một trang web. Doanh nghiệp đều có thể hưởng lợi từ các chiến dịch Pay Per Call, vì nó cho phép khách hàng nói chuyện với người bán trước khi mua sản phẩm hoặc dịch vụ.
+
+
+=== Cost per download (CPD) /Pay per download (PPD) ===
+CPD (chi phí cho mỗi lần tải xuống) được tính chia chi phí cho các lần tải xuống hoặc chia chi phí cho mỗi lần nhấp (CPC) cho tốc độ tải xuống. Đây là các công thức để tính CPD:
+  
+    
+      
+        C
+        D
+        P
+        =
+        
+          
+            Cost
+            Downloads
+          
+        
+        C
+        P
+        D
+        =
+        
+          
+            Cost
+            Downloadsrate
+          
+        
+      
+    
+     
+  
+
+
+=== Cost per install (CPI)/Pay per install (PPI) ===
+Cost Per Install (viết tắt CPI) với loại hình này nhà quảng cáo sẽ chỉ mất tiền khi nào user cài đặt ứng dụng từ quảng cáo. Các marketer sẽ tính toán chi phí CPI bằng cách chia tổng chi tiêu quảng cáo của họ cho tổng số lượt cài đặt ứng dụng được tạo bởi chiến dịch marketing. CPI đại diện cho chi phí cơ bản để có được một người dùng cài đặt phần mềm. Trong affiliate marketing, CPI là chi phí mà nhà cung cấp phải trả cho người quảng bá cho mỗi lượt cài đặt app thành công.
+Nếu chỉ nhìn vào giá cả, chi phí cho mỗi CPI thường cao hơn CPC và CPM, nhưng khi tính ra số tiền bạn phải trả cho mỗi đợt quảng cáo để nhận được cài đặt mới sẽ thấp hơn so với chạy CPC hoặc CPM. Với các nhà phát triển chỉ yêu cầu vào một chỉ tiêu là tăng số lượng download/cài đặt thì đây là một mô hình quảng cáo rất hiệu quả.
+
+
+==== Ai là người nên sử dụng các chiến dịch CPI Marketing? ====
+Các chiến dịch CPI có thể được sử dụng bởi các nhà phát triển ứng dụng di động hoặc nào bất kỳ ai có ý định quảng bá và phân phối ứng dụng đến nhiều đối tượng theo cách hiệu quả về chi phí. Tuy nhiên, những lợi ích này có thể tác động đến từng đối tượng khác nhau theo những cách khác nhau:
+
+Nhà phát triển app: Giá CPI có thể được hiển thị dưới dạng trung bình theo khu vực hoặc nhân khẩu học để xác định phân khúc thị trường nào hiệu quả nhất và có giá trị nhất cho ứng dụng. Với thông tin này trong tay, các nhà phát triển app sẽ có thể hình dung được chiến lược target  người dùng phù hợp nhất.
+App Marketer: Các chiến dịch CPI cung cấp một chi phí rõ ràng cho việc thu hút khách hàng mà các marketer có thể sử dụng khi tạo chiến lược tăng trưởng. Các nhà tiếp thị không chỉ đạt được những hiểu biết về nhân khẩu học được mô tả ở trên, mà họ còn có thể ghép các số liệu CPI với dữ liệu hành vi chi tiết. Thông tin này cho phép các marketer tối ưu hóa chuyển đổi cho các phân khúc thị trường tham gia quảng cáo để cài đặt ứng dụng mới.
+D2C Marketing (direct to customer marketing): Với chiến dịch tiếp thị CPI, các thương hiệu có cơ hội đo lường chi phí để có được các phân khúc khách hàng mục tiêu cao. Dữ liệu này sau đó có thể được tham chiếu chéo với dữ liệu mua sắm để hiểu thị trường nào mang lại lợi tức đầu tư cao nhất.
+
+
+== Lợi ích của CPA ==
+Cost per Action (CPA) cho phép Advertiser kiểm soát chi phí quảng cáo cho các mục tiêu tiếp thị cụ thể, vì nó được thiết kế để chỉ tính phí cho quảng cáo khi hành động đã được hoàn thành. Với việc thanh toán cho quảng cáo dựa trên các hành động đã hoàn thành, nó cũng giúp theo dõi, kiểm soát tốt hơn và tối đa hóa lợi tức đầu tư trên các kênh tiếp thị khác nhau. Theo dõi CPA đảm bảo rằng bạn đang đầu tư vào các kênh hiệu quả nhất về chi phí cũng như giúp đánh giá sự thành công của các nỗ lực tiếp thị khác nhau.
+
+
+=== Đối với nhà quảng cáo (Merchant) ===
+CPA sẽ mang lại một con số cụ thể, chính xác nhất về số tiền bỏ ra và số tiền thu lại được.
+CPA mang đến một chiến dịch rõ nét hơn về hoạt động kinh doanh cho một doanh nghiệp.
+Mang lại sự tiếp thị liên kết dựa trên những yêu cầu mà họ đặt ra đối với nhà phân phối.
+Phù hợp với chiến lược kinh doanh mà họ mong muốn.
+Với CPA thì sẽ mang lại hiệu quả công việc rõ ràng, Merchant chỉ phải trả tiền khi khách hàng của họ đã thực hiện thành công một hành động.
+
+
+=== Đối với người phân phối (Affiliate) ===
+Mang lại một khoản lợi nhuận hoa hồng lớn, phát sinh khi người dùng hoàn thành một hành động theo yêu cầu.
+Đóng vai trò quan trọng trong việc thiết lập và xây dựng nên một nền tảng của mô hình tiếp thị liên kết hiện đại.
+Giúp xây dựng danh sách khách hàng tiềm năng với những sản phẩm, dịch vụ mà doanh nghiệp cung cấp.
+
+
+== Theo dõi CPA (Tracking CPA) ==
+Các doanh nghiệp trực tuyến có thể theo dõi CPA thông qua nhiều phương pháp, bao gồm:
+
+Theo dõi cookie (cookie tracking) - khi khách hàng tiềm năng nhấp chuột, cookie sẽ được đặt trên máy tính của họ. Cookie sẽ dò tìm hoạt động người dùng trên website cho đến khi “hành động” được thực hiện.  
+Theo dõi cuộc gọi (call tracking) - số điện thoại duy nhất được sử dụng cho một chiến dịch. Vì vậy, chủ sở hữu phương tiện XYZ có số điện thoại của riêng họ cho một đề nghị và khi số này được gọi là bất kỳ "hành động" nào được phân bổ cho chủ sở hữu phương tiện XYZ. Thông thường các khoản thanh toán dựa trên thời lượng cuộc gọi (thường là 90 giây) - nếu cuộc gọi kéo dài hơn 90 giây, người ta sẽ thấy rằng có một sự quan tâm thực sự và một "khách hàng tiềm năng" được trả tiền.
+Mã khuyến mại - mã khuyến mại hoặc phiếu thưởng thường được sử dụng để theo dõi các chiến dịch bán lẻ. Khách hàng tiềm năng được yêu cầu sử dụng mã tại quầy thanh toán để đủ điều kiện nhận ưu đãi. Mã sau đó có thể được khớp lại với chủ phương tiện đã thúc đẩy việc bán hàng.
+
+
+== Các công ty quảng cáo ==
+Google bắt đầu chương trình quảng cáo này vào năm 2006, đến tháng 6 năm 2007 thì phổ biến thành bản dùng thử Beta. Mở cho tất cả người dùng của AdWords.
+eBay cũng chuyển thành quảng cáo CPA với hệ thống AdContext vào năm 2006.
+Snap tiên phong cho CPA và kết hợp với bản đăng ký từ mạng NBC (NCBi), mời chào khách quảng cáo qua chế độ CPA như việc loại bỏ hoàn toàn các click gian lận.
+VỉalyticsMedia Tạo bản quảng cáo mạng giao dịch CPA qua email đầu tiên trên Fall vào năm 2007.
+Jellyfish.com lần đầu tiên giới thiệu cỗ máy tìm kiếm mua bán tới hệ thống riêng biệt cho quảng cáo CPA. Nó đã được nhận bằng sáng chế và phát triên cao hơn, vượt qua cả CPA khi một phần lợi nhuận thu được từ người tiêu dùng. Nó đã được mua bởi Microsoft và được thêm vào sự thông mình của cỗ máy tìm kiếm Live Search.
+Hydra, LLC đã khởi chạy chương trình độc quyền đầu tiên, chuyển hoàn toàn quảng cáo thành CPA được gọi là Hydra Elite vào năm 2008
+PT Media...,JSC bắt đầu chương trình quảng cáo này vào năm 2011, tuy nhiên CPC đang được ưu tiên với nhà cung cấp này. Hiện nhà cung cấp này không cho đăng ký mà họ sẽ xét duyệt qua mạng quảng cáo mobile MAD.
+
+
+== Tham khảo ==

@@ -1,0 +1,154 @@
+revision: 32068901
+title: computer
+url: https://ca.wikipedia.org/wiki/Computador_anal%C3%B2gic
+
+
+---
+
+Una computador analògic o computador real és un tipus de computador que utilitza dispositius electrònics o mecànics per a modelar el problema a resoldre utilitzant un tipus de quantitat física per representar una altra.
+
+Per al modelat es fa servir l'analogia existent en termes matemàtics d'algunes situacions en diferents camps. Per exemple, la que existeix entre els moviments oscil·latoris en mecànica i l'anàlisi de corrents alternes en electricitat. Aquests dos problemes es resolen per equacions diferencials i poden assemblar termes entre un i altre problema per obtenir una solució satisfactòria.
+Usat en contraposició a les computadors digitals, en els quals els fenòmens físics o mecànics són utilitzats per construir una màquina d'estat finit que és utilitzat per modelar el problema a resoldre. Hi ha un grup intermedi, el dels computadors híbrids, en què un computador digital és utilitzat per controlar i organitzar entrades i sortides cap ai des de dispositius analògics annexos, per exemple, els dispositius analògics podrien ser utilitzats per a generar valors inicials per iteracions. Així, un àbac seria un computador digital, i una regla de càlcul un computador analògic.
+
+
+== Computador analògic ideal ==
+Els computadors analògics ideals operen amb nombres reals i són diferencials, mentre que els computadors digitals es limiten a nombres computables i són algebraics. Això significa que els computadors analògics tenen una taxa de dimensió de la informació (veure teoria de la informació), o potencial de domini informàtic més gran que els computadors digitals (vegeu teorema d'incompletesa de Gödel). Això, en teoria, permet als computadors analògics resoldre problemes que són indesxifrables amb computadors digitals.
+Els teòrics de la informàtica solen utilitzar el terme computador real (anomenat així perquè opera dins del conjunt de nombres reals), per evitar els malentesos populars sobre els computadors analògics.
+Alguns exemples de computadors analògics són:
+
+Predictors de marea
+Integrador d'aigua
+computador de dades de l'objectiu per submarins
+Model Hidràulic de l'economia del Regne Unit
+El Mecanisme d'Anticitera
+El regle de càlcul
+
+
+== Cronologia dels computadors analògics ==
+Es creu que el mecanisme d'Anticitera és el primer computador analògic mecànic conegut. Va ser dissenyat per calcular posicions astronòmiques. Descobert el 1901 a la ruïna de Anticitera de l'illa grega de Anticitera, entre Citera i Creta, i s'ha datat a prop de l'any 100 AC Dispositius d'un nivell de complexitat comparable al del mecanisme d'Anticitera no reapareixeria fins a mil anys més tard.
+L'astrolabi va ser inventat en el món hel·lenístic en el primer o segon segle abans de la Era Comú, i sovint és atribuït a Hiparc de Nicea. Com una combinació del planisferi i de la dioptra, l'astrolabi va ser efectivament un computador analògic capaç de resoldre diferents tipus de problemes en astronomia esfèrica.
+Posteriorment, astrònoms musulmans van produir molts tipus diferents de astrolabis i els van usar per més de mil problemes diversos relacionats amb l'astronomia, astrologia, horòscops, la navegació, agrimensura, mesura del temps, la alquibla (direcció de la Meca), Salat (rés), etc.
+Al-Biruni va inventar el primer astrolabi mecànic d'engranatges per al calendari lunisolar, una primerenca màquina de cable-fix de processament de coneixement  amb un tren d'engranatge i rodes dentades, al voltant del 1000 AD.
+El planisferi va ser un astrolabi de carta d'estrella s també inventat per Al-Biruni en el segle xi.
+El Equatorium va ser un instrument calculador astromètric inventat per Azarquiel a la Espanya islàmica al voltant de 1015.
+El "rellotge del castell, un rellotge astronòmic inventat per Al Jazarí el 1206, és considerat ser el primer computador analògic programable. exhibir el zodíac, les òrbites solars i lunars, un indicador amb forma de lluna creixent viatjant a través d'una entrada que feia que portes automàtiques obrissin cada hora, i cinc músics robòtics que tocaven música quan eren colpejats per les palanques operades per un arbre de lleves lligat a una roda d'aigua. La longitud del dia i la nit podien ser reprogramades cada dia per portar el compte de les longituds canviants del dia i la nit a través de l'any.
+El 1235, un astrolabi que incorporava un computador mecànic de calendari i rodes dentades. va ser inventat per Abi Bakr d'Isfahan,
+La regla de càlcul és un computador analògic manual per fer la multiplicació i la divisió, inventada al voltant 1620-1630, poc després de la publicació del concepte del logaritme.
+L'analitzador diferencial, un computador analògic mecànic dissenyat per solucionar equacions diferencials per integració, utilitzant mecanismes de rodes i discs per realitzar la integració. Inventat el 1876 per James Thomson, primer van ser construïts en els anys 1920 i els anys 1930.
+Per 1912, Arthur Pollen havia desenvolupat un computador analògic mecànic dirigit elèctricament per al sistema del control de tret, basat en l'analitzador diferencial. Va ser usat per la Marina Imperial Russa de la Primera Guerra Mundial.
+En l'era de la Segona Guerra Mundial lloa apuntadors d'armes i visors de bombes van usar computadors analògics mecànics.
+La calculadora de Curta era un dispositiu accionat per una petita maneta cilíndrica que podria fer multiplicacions, divisions, i un nombre d'altres operacions.
+La MONIAC Computer va ser un model hidràulic d'una economia nacional, revelat per primera vegada el 1949.
+El Computer Engineering Associates va ser una volta?? de Caltech el 1950 per proporcionar serveis comercials utilitzant el "Direct Analogy Electric Analog Computer" (computador Analògic Elèctric d'Analogia Directa) ("la facilitat d'analitzador de propòsit general més gran i impressionant per a la solució de problemes de camp") que s'hi desenvolupa per Gilbert D. McCann, Charles H. Wilts, i Bart Locanthi.
+El Heathkit EC-1, un computador analògic educatiu fet per la Heath Company, Estats Units, al voltant de 1960.
+El computador analògic de Comdyna GP-6 introduït el 1968 i produït per 36 anys.
+
+
+== Computadors analògics electrònics ==
+La semblança entre els components mecànics lineals, com ara ressorts i amortidors hidràulics. No obstant això, la diferència entre aquests sistemes és el que fa útil a la computació analògic. Si un considera un simple sistema massa-ressort, construir el sistema físic requeriria la compra dels ressorts i de les masses. Això seria procedit a subjectar l'un a l'altre i un ancoratge apropiat, recaptar equip de prova amb l'apropiada gamma d'entrada, i finalment, prendre mesures (una cosa que és difícil).
+L'equivalent elèctric pot ser construït amb alguns amplificadors operacionals i alguns components lineals passius; totes les mesures es poden prendre directament amb un oscil·loscopi. En el circuit, la "massa (simulada) del ressort" pot ser canviada ajustant un potenciòmetre. El sistema elèctric és una analogia del sistema físic, per això el nom, però és menys costós de construir, més segur, i més fàcil de modificar. També, un circuit electrònic pot operar típicament en freqüències més altes que el sistema que és simulat. Això permet que la simulació funcioni més ràpidament que en temps real, per a resultats més ràpids.
+El desavantatge de l'analogia mecànic-elèctrica és que l'electrònica és limitada pel rang sobre el qual les variables poden variar. Això és anomenat rang dinàmic. També són limitats pels nivells de soroll.
+Aquests circuits elèctrics també poden realitzar fàcilment altres simulacions. Per exemple, el voltatge pot simular la pressió d'aigua i els ampers es poden simular el corrent de l'aigua en termes de metres cúbics per segon.
+Un sistema digital utilitza nivells de voltatge elèctric discrets per representar codis per als símbols. La manipulació d'aquests símbols és el mètode d'operació del computador digital. El computador analògic electrònic manipula les quantitats físiques de formes d'ona, (voltatge o corrent). La precisió de la lectura de El computador anàloga està limitada principalment per la precisió de l'equip de lectura usat, generalment tres o quatre dígits significatius. La precisió del computador digital és pràcticament infinita (típicament 15 dígits de precisió), però la precisió del seu resultat està limitada només pel temps. Un computador digital pot calcular molts dígits en paral·lel, o obtenir el mateix nombre de dígits realitzant els còmputs en seqüència de temps.
+
+
+== Computadors híbrids analògics-digitals ==
+
+Hi ha un dispositiu intermedi, un computador híbrid, en el qual un computador digital és combinat amb un computador analògic. Els computadors híbrids són usats per obtenir un molt exacte però no completament exacte valor de 'llavor', utilitzant un computador analògic com la part frontal (front-end), que és llavors alimentat dins d'un procés iteratiu del Computador Digital per assolir el grau final de precisió desitjat. Amb una llavor numèrica altament exacta de tres o quatre dígits, és reduït dramàticament el temps total de còmput digital necessari per aconseguir la precisió desitjada, ja que són requerides moltes menys iteracions. Per exemple, El computador analògic pot ser usat per solucionar un problema no analític de l'equació diferencial, per a l'ús en una determinada etapa d'un còmput (on la precisió no és molt important). En tot cas, El computador híbrid generalment és substancialment més ràpid que un computador digital, però pot subministrar un còmput molt més exacte que un computador analògic. És útil per a aplicacions en temps real que requereixen aquesta combinació, per exemple, un radar phased array d'alta freqüència o un còmput de sistema de temps.
+
+
+== Mecanismes ==
+En els computadors analògics, freqüentment els còmputs són realitzats usant les propietats de la resistència elèctrica, dels voltatges i així successivament. Per exemple, un simple sumador de dues variables pot ser creat per dos fonts de corrent en paral·lel. El primer valor és fixat ajustant la primera font de corrent (diguem  x  mil·liamperes), i el segon valor és fixat ajustant la segona font de corrent (diguem  i  mil·liamperes). El mesurament del corrent a través dels dos a la seva juntura cap al senyal de terra donarà la suma com un corrent a través d'una resistència al senyal de terra, és a dir,  x+y  mil·liamperes. (Veure les lleis de Kirchhoff). Similarment, altres càlculs són realitzats utilitzant amplificadors operacionals i circuits especialment dissenyats per a altres tasques.
+L'ús de les propietats elèctriques en els computadors analògics significa que els càlculs són realitzats normalment en temps real (o més ràpid), a una fracció significativa de la velocitat de la llum, sense els retards de càlcul relativament grans dels computadors digitals. Aquesta característica permet certs càlculs útils que són comparativament "difícils" de realitzar pels computadors digitals, per exemple la integració numèrica. Els computadors analògics poden integrar una forma d'ona de voltatge, usualment per mitjà d'un condensador, que acumula càrrega en el temps.
+Les funcions i els càlculs no lineals poden ser construïts per a una precisió limitada (tres o quatre dígits) dissenyant circuits de generador de funcions - circuits especials de diverses combinacions de capacitància, inductància, resistència, en combinació amb díodes (ex, díodes Zener) per proporcionar la no-linealitat. Generalment, una funció no lineal és simulada per una forma d'ona no lineal la forma varia amb el voltatge (o la corrent). Per exemple, a mesura que el voltatge augmenta, la impedància total pot canviar mentre els díodes successivament permeten que flueixi el corrent.
+Qualsevol procés físic que modele algun còmput pot ser interpretat com un computador analògic. Alguns exemples, inventats per tal d'il·lustrar el concepte de còmput analògic, inclouen utilitzar un grup desordenat d'espaguetis, com a model d'ordenació de nombres, un tauler, un conjunt de claus, i una banda elàstica de goma, com a model per trobar la embolcall convexa d'un sistema de punts, i cadenes enllaçades entre si, com a model per trobar la ruta més curta en una xarxa. Tots aquests es descriuen en A.K. Dewdney (vegeu la cita a sota).
+
+
+== Components ==
+Els computadors analògics sovint tenen una carcassa complicat, però tenen en el seu nucli, un conjunt d'elements clau que realitzen els càlculs, que l'operador manipula a través de la carcassa del computador.
+Els components hidràulics clau poden incloure pipes, vàlvules o torres, els components mecànics poden incloure engranatges i palanques, els components elèctrics clau poden incloure:
+
+Potenciòmetres
+amplificadors operacionals
+Integradors
+generadors de funció-fixaLes principals operacions matemàtiques usades en un computador analògic elèctric són:
+
+Addició
+Inversió
+Exponenciació
+Logaritme
+Integració pel que fa al temps
+Diferenciació pel que fa al temps
+Multiplicació i divisióLa diferenciació respecte al temps no és usada freqüentment. Correspon en el domini de freqüència a un filtre pas alt, el que significa que el soroll d'alta freqüència és amplificat.
+
+
+== Limitacions ==
+En general, els computadors analògics estan limitades per efectes reals, no-ideals. Un senyal analògic està compost de quatre components bàsics: Magnituds de corrent continu i corrent altern, freqüència, i fase. Els límits reals de rang en aquestes característiques limiten als computadors analògics. Alguns d'aquests límits inclouen el pis de soroll, la no-linealitat, el coeficient de temperatura, i els efectes paràsits dins dels dispositius semiconductor és, i la càrrega finita d'un electró. Per als components electrònics disponibles en el comerç, els rangs d'aquests aspectes dels senyals d'entrada i sortida són sempre figures de mèrit.
+
+
+== Recerca actual ==
+Mentre que la computació digital és extremadament popular, la recerca en la computació analògica està feta per un grapat de gent per tot el món. Als Estats Units, Jonathan Mills de la Universitat d'Indiana, Bloomington, Indiana han estat treballant en la recerca usant computadors analògics estesos. Al Laboratori de robòtica de Harvard, la computació analògica és un tema de recerca.
+
+
+== Exemples pràctics ==
+Aquests són exemples de computadors analògics que han estat construïts o usats pràcticament:
+
+Mecanisme d'Anticitera
+Astrolabi
+Analitzador diferential
+Kerrison Predictor
+Integrator Mechanic
+MONIAC Computer (model hidràulic de l'economia de Regne Unit)
+Planisferi celeste
+Nomograma
+Mira Norden
+Amplificador operacional
+Planímetre
+Rangekeeper
+Regle de càlcul
+Termòstat
+Predictors de marees
+Torpedo Data Computer
+Torquetum
+Integrador d'aigua
+computador mecànicEls sintetitzadors anàlegs també poden ser vistos com una forma de computador analògic, i van ser basats originalment en la tecnologia de El computador analògic electrònic.
+
+
+== Computadors reals ==
+Els teòrics de la computació refereixen sovint als computadors analògics idealitzades com computadors reals (perquè operen en un conjunt de nombres reals). Per contra, els computadors digitals han de primer quantificar el senyal en un nombre finit de valors, i així poden treballar només amb el conjunt de nombres racionals (o, amb una aproximació de nombres irracionals).
+Aquests computadors analògics idealitzats en teoria poden solucionar els problemes que són intractables en els computadors digitals; però segons això, en realitat, els computadors analògics estan lluny d'assolir aquest ideal, en gran part a causa a problemes de la minimització del soroll.
+
+
+== Referències ==
+
+
+== Vegeu també ==
+Senyal analògic
+Senyal digital
+Teoria de conjunts
+Teoria de la computabilitat
+Teoria del caos
+Regla de càlcul
+Mecanisme d'Anticitera
+Amplificador operacional
+Computador híbrid
+
+
+== Enllaços externs ==
+Video sobre el càlcul analógic
+L'analitzador diferencial, precursor de l'ordinador Arxivat 2013-08-31 a Wayback Machine.
+Large collection of electronic analog computers with lots of pictures and documentation
+of a car suspension system with an electronic analog computer
+Introduction to Analog-/Hybrid-Computing (pdf)
+Example programs for Analog Computers (pdf)
+Large collection of old analog and digital computers at Old Computer Museum
+A great disappearing act: the electronic analogue computer Arxivat 2007-06-16 a Wayback Machine. Chris Bissell, The Open University, Milton Keynes, UK Accessed February 2007
+German computer museum with still runnable analog computers
+computer basics
+Lecture 20: Analog vs Digital Arxivat 2007-02-25 a Wayback Machine.  (in a series of lectures on "History of computing and information technology") 
+Analog computer Trumps Turing model Arxivat 2008-05-09 a Wayback Machine.
+Jonathan W. Mills's Analog Notebook
+University Extended Analog Computer
+Robotics Laboratory Analog Computation
+A current manufacturer of analog computing maquinari
+The Enns Power Network Computer - an analog computer for the analysis of electric power systems (advertisement from 1955)

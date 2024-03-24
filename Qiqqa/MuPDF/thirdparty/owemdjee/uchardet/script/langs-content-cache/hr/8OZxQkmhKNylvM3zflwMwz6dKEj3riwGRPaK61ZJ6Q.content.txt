@@ -1,0 +1,89 @@
+revision: 6457524
+title: Rezanje laserom
+url: https://hr.wikipedia.org/wiki/Rezanje_laserom
+
+
+---
+
+Rezanje laserom je tehnologija koja koristi laser za rezanje materijala, i uglavnom se koristi za industrijsku primjenu, ali sve češće se koristi i u školama, malim poduzećima i kod hobista. Rezanje laserom radi tako da se direktno kontrolira izlazna snaga lasera, djelujući obično kompjuterom. Materijal se ili topi, ili izgara, ili isparava, ili ga otpuhne mlaz zraka pod pritiskom, ostavljajući visoko kvalitetne rubove reza. Ne režu se samo limovi, nego i profili i cijevi.
+
+
+== Vrste lasera ==
+Kod rezanja laserom koriste se 3 vrste lasera. CO2 laser je pogodan za rezanje, bušenje i graviranje. Nd laser i Nd:YAG laseri su slični laseri, a razlikuju se po primjeni. Nd laser se koristi za bušenje, gdje je potreba velika snaga, ali s malo ponavljanja. Nd:YAG laser se koristi za velike snage kod bušenja i graviranja, s velikim brojem ponavljanja. Svi ovi laseri se mogu koristiti i kod zavarivanja.CO2 laseri obično za lasersku pumpu koriste prolaz električne struje kroz mješavinu plina (istosmjerna struja) ili korištenjem radio frekventne energije, koja je novija metoda. Budući da pobuda s istosmjernom strujom, zahtijeva da se elektrode nalaze unutar optičkog rezonatora, može doći do trošenja elektroda i do stvaranja naslaga materijala s elektroda na staklu i ogledalima. Zato se i počelo s korištenjem radio frekvencije, da se izbjegnu ti problemi. 
+CO2 laseri se koriste u industriji za rezanje mnogih materijala: meki čelik, aluminij, nehrđajući čelik, titanij, papir, vosak, drvo i tkanine. YAG laseri se prvenstveno koriste za rezanje i označavanje metala i keramike. 
+
+Osim izvora snage, za karakteristike rada može utjecati i način mješanja i protoka plina unutar optičkog rezonatora. Kod brzih aksijalnih protoka, mješavina ugljičnog dioksida, helija i dušika, kruži s velikim brzinama, pogonjena turbinom ili ventilatorom. Kod poprečnog toka, mješavina zraka se miješa s manjim brzinama i za to treba manji ventilator. Kod novijih rješenja, imamo difuziono hlađenje sa statičkim poljem izvana, tako da se štedi na održavanju i zamjeni dijelova.
+Stvaranje laserskih zraka i vanjska optika (uključujući i fokusne leće), trebaju hlađenje. Ovisno o veličini i rasporedu, ogromna količina topline treba biti odvođena s rashladnim sredstvom. Najbolje rješenje je voda, u zatvorenom rashladnom sistemu.
+
+
+=== Laserski mikromlaz vode ===
+
+Laserski mikromlaz vode je vrsta lasera, kod kojeg impulsna laserska zraka djeluje zajedno s mlazom vode, pod malim tlakom. Prednost je što mlaz vode odstranjuje ostatke materijala nakon rezanja, ima veliku brzinu rezanja pločica, paralelan rez i mogućnost rezanja u više smjerova.
+
+
+== Postupak rezanja ==
+Kod rezanja plazmom, obično je debljina laserske zrake manja od 0,3 mm, a moguće je ostvariti debljinu rezanja i manju od 0,1 mm. Kod rezanja treba napomenuti da prvo treba izbušiti rupu kroz materijal, a za to se koristi velika snaga lasera, i traje obično 5 do 15 sekundi, za 14 mm debljine lima od nehrđajućeg čelika. 
+Laserska izlazna zraka je paralelna i debljine od 1,5 do 12,5 mm, a zatim se fokusira s lećama i ogledalima na veoma malu točku, ponekad do 0,025 mm, da se stvori laserska zraka velikog intenziteta. Da bi se ostvarila mala površinska hrapavost na materijalu, lasersku zraku je potrebno polarizirati.
+
+
+=== Rezanje isparavanjem ===
+Kod rezanja isparavanjem, fokusirana zraka grije materijal do točke isparavanja, stvarajući malo suženje. To suženje postaje sve dublje, budući se materijal koji isparava odstranjuje ispuhivanjem. Ova metoda se koristi za drvo, ugljik i termoplastike.
+
+
+=== Topljenje i ispuhivanje ===
+Ova metoda koristi plin pod velikim tlakom za ispuhivanje otopljenog materijala, s mjesta rezanja, znatno smanjujući potrebnu snagu za laser. Tom metodom se obično rezu metali. 
+
+
+=== Toplinsko pucanje ===
+Staklo je veoma osjetljivo na toplinske lomove, pa se laserska zraka fokusira na površinu, stvarajući toplinu na maloj površini, sve dok se ne pojavi lom. Zatim se lom vodi s laserskom zrakom povećanom brzinom.
+
+
+=== Odvajanje tankih pločica ===
+Odvajanje tankih pločica poluvodiča se vrči s Nd:YAG laserom, koji ima radnu valnu duljinu 1064 nm, koja je prilagođena spektralnoj liniji silicija (1,11 eV ili 1117 nm). 
+
+
+=== Rezanje plamenom ===
+Taj postupak je sličan klasičnom plinskom rezanju s kisikom i acetilenom, i obično se koristi za čelicne limove deblje od 1 mm. Mogu se rezati i vrlo debeli limovi, s relativno malom snagom lasera. 
+
+
+=== Tolerancije i površinska obrada ===
+Nove generacije lasera imaju točnost pozicioniranja i rezanja do 0,01 mm. Standardna površinska hrapovost se povećava s debljinom lima, ali se smanjuje što je veća snaga lasera i brzina rezanja. Tako na primjer, ako režemo s laserom snage 800 W, standardna hrapavost površine Rz je za 1 mm lim 10 μm, za lim 3 mm je 20 μm, a za lim 6 mm je 25 μm. Može se koristiti formula:
+Rz = 12,528 x(S0.542) x (P0,528) x (V0,322)   [μm]
+Gdje je S – debljina lima (mm), P – snaga lasera (kW) i V – brzina rezanja (m/min)Rezanje plazmom može održati veoma dobre tolerancije obrade, manje od 0,025 mm. Paralelnost plohe nakon obrade radnog komada može biti između 0,003 do 0,006 mm.
+
+
+== Postavke alatnog stroja ==
+Kod rezanja plazmom uglavnom postoje 3 postavke: kretanje radnog komada, miješano kretanje i kretanje laserske glave. Uobičajeno je da se glava za rezanje označuje sa Z osi, dok su ostale osi radnog komada, X i Y os.
+Kod kretanja radnog komada, laserska glava za rezanje je nepomična. Takva postavka je jednostavna, ali je i rezanje plazmom najsporije. Kod miješanog kretanja, radni komad se kreće obično po dužoj X osi, dok se laserska glava kreće po kraćoj Y osi, pa daje brže rezanje. Kada se laserska glava samo kreće, dobivaju se najveće brzine rezanja, radni komad miruje i uglavnom nije potreno stezanje. Kod najnovijih generacija laserskog rezanja, moguće je održavati cijelo vrijeme istu udaljenost između laserske glave i radnog komada, što daje najbolje rezultate.
+
+
+== Prednosti i nedostaci ==
+Prednost rezanja laserom, u odnosu na klačicno mehaničko rezanje, je prije svega u jednostavnijem stezanju radnog komada i smanjuje se promjena strukture materijala radnog komada, jer kod mehaničkog rezanja, alat za rezanje i radni komad su u dodiru. Preciznost rezanja je bolja, budući se laserska zraka ne troši s vremenom. Smanjena je i deformacija radnog komada nakon rezanja, a rezanje laserom stvara i malu zonu utjecaja topline (ZUT), gdje dolazi do promjene strukture materijala i mehaničkih svojstava. Neke materijale je gotovo nemoguće rezati na tradicionalni način. 
+Rezanje laserom u odnosu na rezanje plazmom daje veću preciznost i troši manje energije kada se režu limovi, ali rezanje plazmom omogućuje rezanje debljih limova. Novije generacije su vrlo blizu rezanju plazmom, što se tiče debljine lima, ali su i takvi strojevi skuplji.
+Glavni nedostatak rezanja plazmom je velika potrošnja energije. Industrijski laseri imaju stupanj efikasnosti od 5 do 15%. 
+
+
+== Produktivnost ==
+Za standardne industrijske procese, kao što je snaga stroja 1 kW i rezanje limova od 1 do 2 mm, rezanje laserom može biti i do 30 puta brže, u odnosu na klasične strojeve za rezanje.  
+
+
+== Povijesne činjenice ==
+1965. se počeo koristiti laser za bušenje dijamanta. 1967. u Velikoj Britaniji se počeo koristiti kisik za pomoć kod rezanja metala. U 1970-tim se uvodi lasersko rezanje za titanij, u avionskoj industriji. U to vrijeme, CO2 laser se prilagodio za rezanje i nemetalnih materijala, kao što je tekstil.
+
+
+== Poveznice: ==
+Građa lasera
+Popis osnovnih vrsta lasera
+Rezanje plazmom
+Rezanje vodenim mlazom
+
+
+== Vanjske poveznice ==
+Laser cutting steel parts  Inačica izvorne stranice arhivirana 27. svibnja 2012. for a miniature Live steam locomotive
+Laser Glass Cutting  Inačica izvorne stranice arhivirana 25. siječnja 2012. Good Further Information Resource with White Paper
+Laser Cutting and Laser Drilling TRUMPF's page with good information.
+Laser Cutting Articles The Fabricator's list of laser cutting articles.
+Laser Microjet, a large amount of documentation from the industry
+
+
+== Izvori ==

@@ -1,0 +1,1188 @@
+revision: 6014311
+title: "\u010Crna luknja"
+url: https://sl.wikipedia.org/wiki/%C4%8Crna_luknja
+
+
+---
+
+Čŕna lúknja je v astrofiziki območje prostora-časa, v katerem je gravitacijska sila tolikšna, da ne more nič, niti svetloba ali drugo elektromagnetno valovanje, zapustiti dogodkovnega horizonta. Njeno težnostno polje je tolikšno, da ubežna hitrost (druga kozmična hitrost) presega hitrost svetlobe, zato je dobila pridevnik »črna«. Teorija splošne relativnosti napoveduje, da lahko dovolj gosta masa deformira prostor-čas v taki meri, da nastane črna luknja. Meja pobega se imenuje dogodkovni horizont. Čeprav močno vpliva na usodo in okoliščine objekta, ki ga prečka, v skladu s teorijo splošne relativnosti nima lokalno zaznavnih lastnosti. Črna luknja je v številnih ozirih podobna idealnemu črnemu telesu, saj ne seva nobene svetlobe. Poleg tega teorija kvantnega polja v ukrivljenem prostoru-času napoveduje, da dogodkovni horizont seva Hawkingovo sevanje z enakim spektrom kot črno telo s temperaturo, ki je obratno sorazmerna njegovi masi. Ta temperatura je na ravni milijoninke kelvina, zato je praktično ni mogoče neposredno izmeriti.
+
+
+== Izvor imena ==
+Besedo »črna luknja« je v ameriški angleščini (black hole) 18. januarja 1964 prvič uporabila novinarka Ann Ewing v svojem članku Black Holes' in Space v poročilu na srečanju Ameriške zveze za napredek znanosti (AAAS). Wheeler, ameriški fizik, eden od Einsteinovih zadnjih sodelavcev in naslednikov, je uporabil izraz leta 1967 na predavanju, zaradi česar so mislili, da je on skoval izraz. Izraz je uporabil tudi naslednje leto v članku za Scientific American. Verjetno je izraz v tem času poznalo več majhnih skupin, ki so raziskovale na tem področju. Bil je krajši nadomestek za izraz »gravitacijsko popolnoma kolapsirana zvezda (telo)« (gravitationally completely collapsed star (object)). Kmalu po tem so izraz črna luknja sprejeli v splošnem in ime se je prijelo. Večkrat uporabljajo tudi izraz kolapsar. Feynman je rabil še izraz črvina (wormhole), vendar ne v današnjem smislu.
+
+
+== Pregled ==
+Teoretično so lahko črne luknje poljubne velikosti, od mikroskopskih do skoraj velikosti vidnega Vesolja.
+Klasična splošna teorija relativnosti predpostavlja, da zunanji opazovalec ne more zaznati nobene snovi ali informacije, ki bi zapustila notranjost črne luknje. S črne luknje se torej ne da odnesti nekaj mase, ne da se posvetiti s svetilko, niti se ne da od zunaj dokopati do nobenih podatkov o snovi, ki je vstopila v črno luknjo. Kvantnomehanski pojavi dovoljujejo, da črna luknja seva snov in energijo (Hawkingovo sevanje), vendar znanstveniki verjamejo, da je narava sevanja neodvisna od tega, kaj je v preteklosti padlo v črno luknjo.
+Obstoj črnih lukenj v Vesolju podpira vrsta teoretičnih raziskav in astronomskih opazovanj, še posebej iz raziskovanja supernov in sevanja rentgenskih žarkov iz aktivnih galaktičnih jeder. Kljub temu pa manjšina fizikov v obstoj črnih lukenj še naprej dvomi.
+
+
+=== Lega ===
+Znano je, da se črne luknje nahajajo v središčih praktično vseh galaksij. Obstajajo tudi v rentgenskih dvozvezdjih, kot je Labod X-1, ali pa so prosto tavajoče po medzvezdnem prostoru. Submasivne črne luknje, ki ležijo več tisoč svetlobnih let narazen, se zaradi združenja galaksij tudi same združijo. Do zdaj odkriti črni luknji z najmanjšo medsebojno razdaljo ležita v galaksiji NGC 7727 in sta med seboj oddaljeni 1600 svetlobnih let.Leta 2021 je bila odkrita nova črna luknja v sosednji galaksiji Veliki Magellanov oblak. Črna luknja je od Zemlje oddaljena 160.000 svetlobnih let.
+
+
+== Zgodovina raziskovanj ==
+
+
+=== Newtonovske teorije ===
+Od vseh sil v fiziki so gravitacijo najprej spoznali. Bullialdus je leta 1640 predlagal obratni kvadratni zakon gravitacije. Leta 1684 je Newton zapisal svoj obratni kvadratni splošni gravitacijski zakon in ga leta 1687 v Matematičnih načelih, skupaj s svojimi tremi znamenitimi zakoni gibanja, objavil:
+
+  
+    
+      
+        F
+        =
+        κ
+        
+          
+            
+              
+                m
+                
+                  1
+                
+              
+              
+                m
+                
+                  2
+                
+              
+            
+            
+              r
+              
+                2
+              
+            
+          
+        
+        
+        
+        ,
+      
+    
+     
+  kjer je:
+
+  
+    
+      
+        F
+        
+      
+    
+     
+   – gravitacijska sila med dvema telesoma,
+
+  
+    
+      
+        
+          m
+          
+            1
+          
+        
+        
+      
+    
+     
+   – masa prvega telesa,
+
+  
+    
+      
+        
+          m
+          
+            2
+          
+        
+        
+      
+    
+     
+   – masa drugega telesa,
+
+  
+    
+      
+        r
+        
+      
+    
+     
+   – razdalja med težiščema obeh teles,
+
+  
+    
+      
+        κ
+        
+      
+    
+     
+   – gravitacijska konstanta.Od objave njegovega dela so se začele porajati precej drzne misli o gravitaciji.
+Bošković je leta 1758 razvil svojo teorijo sil, kjer je gravitacija lahko na majhnih razdaljah odbojna sila. Po njem lahko obstajajo takšna čudna klasična telesa, podobna belim luknjam, in ne dovoljujejo, da bi jih dosegla druga snovna telesa.
+
+V Kraljevi družbi v Londonu so leta 1784 v Philosophical Transactions izdali zanimivo Michellovo pismo Cavendishu, v katerem je nakazal nekakšna čudna telesa v Vesolju, v katera bi se, če bi bila le dovolj masivna in gosta kot 500 Sonc, druga telesa zaletavala z večjo hitrostjo od svetlobne. Ali obratno, če bi takšna podivjana krogla sevala, bi se njena svetloba zaradi lastne gravitacije na neki višini obrnila, in bi padla nazaj. Mislil je, da bi bilo takšnih teles veliko. To se je tedaj zdelo dokaj verjetno, saj so imeli svetlobo za delce, ki imajo maso. Kako je prišel do vrednosti, saj gravitacijske konstante 
+  
+    
+      
+        κ
+        
+        
+      
+    
+     
+   Cavendish do tedaj še ni zmeril? Michell je že okoli leta 1768 prišel na misel, da bi občutljivo torzijsko tehntnico, s katero je delal poskuse tudi Coulomb na področju raziskave sil v elektriki in magnetizmu, uporabil za merjenje gravitacijske sile med dvema telesoma v laboratoriju. Izdelal je tudi merilno napravo, vendar pred smrtjo ni opravil nobenih meritev. Da se je ognil gravitacijski konstanti, je sklepal takole. Neka zvezda, s katere je ubežna hitrost enaka svetlobni hitrosti v vakuumu 
+  
+    
+      
+        
+          c
+          
+            0
+          
+        
+        
+      
+    
+     
+  , bo imela polmer 
+  
+    
+      
+        
+          r
+          
+            
+              M
+            
+          
+        
+        
+        
+      
+    
+     
+  , ki bo večji od Sončevega 
+  
+    
+      
+        
+          r
+          
+            ⊙
+          
+        
+        
+        
+      
+    
+     
+  , za vrednost:
+
+  
+    
+      
+        
+          
+            
+              r
+              
+                
+                  M
+                
+              
+            
+            
+              r
+              
+                ⊙
+              
+            
+          
+        
+        =
+        
+          
+            
+              
+                c
+                
+                  0
+                
+              
+              S
+              
+                
+                  2
+                
+              
+              
+                
+                  
+                    
+                      r
+                      
+                        ⊙
+                      
+                    
+                    
+                      a
+                      
+                        0
+                      
+                    
+                  
+                
+              
+            
+            
+              4
+              π
+              
+                a
+                
+                  0
+                
+              
+            
+          
+        
+        ≈
+        486
+        
+        
+        ,
+      
+    
+     
+  kjer se vzame, da je, kakor zgoraj, razmerje ubežne hitrosti s Sonca in ubežne hitrosti neke zvezde s polmerom, enakim astronomski enoti 
+  
+    
+      
+        
+          a
+          
+            0
+          
+        
+        
+        
+      
+    
+     
+  , enako. Za ubežno hitrost v radialni smeri s take zvezde se vzame kar krožilno hitrost Zemlje v majhni višini. Zgoraj je 
+  
+    
+      
+        S
+        
+        
+      
+    
+     
+   sidersko leto. Navedel je še malo večjo vrednost, sklepal pa je napačno, saj je treba pri hitrih telesih in močni gravitaciji računati drugače. Pravzaprav so dejanske vrednosti 435, 382 in tudi 558, s podatki iz njegovega časa, saj je treba vzeti tedanjo vrednost astronomske enote 
+  
+    
+      
+        139
+        ⋅
+        
+          10
+          
+            9
+          
+        
+      
+    
+     
+   m, ki jo je leta 1672 v Bologni s paralakso Sonca dobil Cassini in z njo hitrosti svetlobe 
+  
+    
+      
+        211
+        ⋅
+        
+          10
+          
+            6
+          
+        
+      
+    
+     
+   m/s in 
+  
+    
+      
+        240
+        ⋅
+        
+          10
+          
+            6
+          
+        
+      
+    
+     
+   m/s, ki ju je leta 1675 in 1676 v Parizu z opazovanji Iovih in Ganimedovih mrkov ob Jupitrovi opoziciji dobil Rømer, in preko njega hitrost svetlobe 
+  
+    
+      
+        308
+        ,
+        56
+        ⋅
+        
+          10
+          
+            6
+          
+        
+      
+    
+     
+   m/s, ki jo je leta 1725 v Oxfordu z zvezdno aberacijo Eltanina (γ Zmaja (Draconis)) dobil Bradley. Katera meritev je bila bolj točna, so takrat težje ocenili. Za največjo zakasnitev satelitov je Rømer navedel 22 minut, za najmanjšo pa 20 minut. Bradley pa je izmeril odklon 18,5". Michell tako ostaja prvi, ki je pomislil na takšno telo.
+Cavendish je nazadnje dobil Michellovo napravo, jo predelal in začel skrbno meriti. Uspelo mu je določiti gostoto Zemlje, kar je leta 1798 objavil v razpravi Poskusi za določitev gostote Zemlje (Experiments to determine the Density of the Earth) za Kraljevo družbo. Gravitacijske konstante 
+  
+    
+      
+        κ
+        
+        
+      
+    
+     
+   sicer ni navedel, vendar se njegova izmerjena vrednost ni dosti razlikovala od današnje.
+Ko je Cavendish izmeril gravitacijsko konstanto, je podobno in neodvisno od Michella razmišljal Laplace. Mislil je, da bi lahko okroglo telo z gostoto vode zadržalo svetlobo, če bi imelo polmer približno 10×1012 m. Razmišljal je sicer prav in je celo našel pravo vrednost za svoj gravitacijski polmer. Prav tako kot Michell je menil, da bo takšnih velikih in nevidnih teles veliko. To zamisel pa je vključil samo v prvo in drugo izdajo svoje knjige Ustroji sveta (Exposition du système du monde), ker je pozneje verjetno ugotovil, da je zamisel preveč neverjetna. Pa Laplaceovsko gre obravnava takole. Če sestavljajo svetlobo delci z maso 
+  
+    
+      
+        m
+        
+        
+      
+    
+     
+  , lahko priletijo razdaljo od telesa z maso 
+  
+    
+      
+        
+          m
+          
+            ∗
+          
+        
+        
+        
+      
+    
+     
+   iz razdalje 
+  
+    
+      
+        r
+        
+        
+      
+    
+     
+   v neskončnost, če je njihova kinetična energija ravno enaka gravitaciji, ki jih veže na telo 
+  
+    
+      
+        κ
+        m
+        
+          m
+          
+            ∗
+          
+        
+        
+          /
+        
+        r
+        =
+        m
+        
+          v
+          
+            2
+          
+        
+        
+          /
+        
+        2
+        
+        
+      
+    
+     
+   z radialno hitrostjo 
+  
+    
+      
+        v
+        
+        
+      
+    
+     
+  . Če se namesto te hitrosti vzame svetlobno hitrost 
+  
+    
+      
+        
+          c
+          
+            0
+          
+        
+        
+      
+    
+     
+  , se po Laplaceovi poti dobi gravitacijski polmer:
+
+  
+    
+      
+        
+          r
+          
+            
+              g
+            
+          
+        
+        =
+        
+          
+            
+              2
+              κ
+              
+                m
+                
+                  ∗
+                
+              
+            
+            
+              c
+              
+                0
+              
+              
+                2
+              
+            
+          
+        
+        =
+        
+          c
+          
+            0
+          
+        
+        
+          
+            
+              3
+              
+                8
+                π
+                κ
+                ρ
+              
+            
+          
+        
+        ≈
+        12
+        ,
+        7
+        ⋅
+        
+          10
+          
+            12
+          
+        
+        
+        
+          m
+        
+        
+        
+        ,
+      
+    
+     
+  pri čemer se 'masa' te svetlobe poniči. Če se hoče računati po Laplaceovo, je treba namesto »mase« 
+  
+    
+      
+        m
+        
+        
+      
+    
+     
+  , vzeti energijo fotonov. Poleg tega je pri tako hitrih delcih kinetična energija relativistična. Clifford je leta 1876 predlagal, da so lahko vzrok gibanju snovi spremembe geometrije prostora. Nato so na gravitacijo v tej zvezi nekako pozabili.
+Telesa, ki jih je opisovala klasična mehanika, da jih razlikujejo od črnih lukenj, opisljivih s splošno teorijo relativnosti, običajno imenujejo temne zvezde (angl. dark star). Zamisli o črnih luknjah in »temnih zvezdah« v 19. stoletju niso naprej razvijali, saj so menili da je svetloba brezmasno valovanje in zaradi tega nanjo gravitacija ne deluje. Prevladovalo je tudi prepričanje, ki se je razlikovalo od novejšega pojmovanja črnih lukenj, da so telesa za dogodkovnim obzorjem stabilna za gravitacijsko sesedanje.
+
+
+=== Splošna teorija relativnosti ===
+
+Einstein je leta 1909 skupaj z Grossmannom začel razvijati teorijo, ki bi povezala metrični tenzor 
+  
+    
+      
+        
+          g
+          
+            μ
+            ν
+          
+        
+        
+      
+    
+     
+  , ki določa geometrijo prostora, z izvirom gravitacije, oziroma z maso. Reissner in Nordström sta leta 1910 določila Reissner-Nordströmovo singularnost, Weyl pa je rešil posebni primer za točkasti izvir. Einstein in Grossman sta leta 1913 podala različico teorije Entwurf z enačbami v obliki:
+
+  
+    
+      
+        
+          Γ
+          
+            μ
+            ν
+          
+        
+        =
+        κ
+        
+          Θ
+          
+            μ
+            ν
+          
+        
+        
+        
+        .
+      
+    
+     
+  Grossmann je omenil, da bi se namesto tenzorja 
+  
+    
+      
+        
+          Γ
+          
+            μ
+            ν
+          
+        
+        
+      
+    
+     
+   rabil Riccijev tenzor 
+  
+    
+      
+        
+          R
+          
+            μ
+            ν
+          
+        
+        
+      
+    
+     
+  . Uvidel je tudi, da tenzor 
+  
+    
+      
+        
+          Γ
+          
+            μ
+            ν
+          
+        
+        
+      
+    
+     
+   v posebnem primeru neskončno šibkega statičnega polja sil ne da člena za gravitacijski potencial 
+  
+    
+      
+        
+          
+            ∇
+          
+          
+            2
+          
+        
+        Φ
+        
+      
+    
+     
+   v Poissonovi enačbi.Einstein je leta 1915 naprej in do konca razvil splošno teorijo relativnosti. Pred tem je pokazal, da gravitacija vpliva na gibanje svetlobe. Oktobra je objavil svoje enačbe polja v obliki:
+
+  
+    
+      
+        
+          R
+          
+            μ
+            ν
+          
+        
+        =
+        
+          T
+          
+            μ
+            ν
+          
+        
+        
+        
+        ,
+      
+    
+     
+  kjer je:
+
+  
+    
+      
+        
+          R
+          
+            μ
+            ν
+          
+        
+        
+      
+    
+     
+   – Riccijev tenzor
+
+  
+    
+      
+        
+          T
+          
+            μ
+            ν
+          
+        
+        
+      
+    
+     
+   – napetostni tenzor.Ta oblika enačb je predvidevala newtonovsko precesijo prisončja Merkurja. Kmalu pa se je ugotovilo, da ta oblika ni v skladu s krajevno ohranitvijo energije in gibalne količine, razen če ima Vesolje konstantno gostoto mase, energije in gibalne količine. Če bi to veljalo, bi imeli zrak, kamen in celo vakuum enako gostoto. Tudi kovariantni odvod Riccijevega tenzorja pri tem ni enak nič. Pravilna oblika enačb nikakor ni bila jasna. Einstein je 25. novembra predstavil dejansko obliko enačb:
+
+  
+    
+      
+        
+          G
+          
+            μ
+            ν
+          
+        
+        =
+        
+          T
+          
+            μ
+            ν
+          
+        
+        
+        
+        ,
+      
+    
+     
+  kjer je:
+
+  
+    
+      
+        
+          G
+          
+            μ
+            ν
+          
+        
+        
+      
+    
+     
+   – Einsteinov tenzor:
+  
+    
+      
+        
+          G
+          
+            μ
+            ν
+          
+        
+        =
+        
+          R
+          
+            μ
+            ν
+          
+        
+        −
+        
+          
+            1
+            2
+          
+        
+        R
+        
+          g
+          
+            μ
+            ν
+          
+        
+        
+        
+        ,
+      
+    
+     
+  
+  
+    
+      
+        R
+        
+      
+    
+     
+   – Riccijev skalar
+
+  
+    
+      
+        
+          g
+          
+            μ
+            ν
+          
+        
+        
+      
+    
+     
+   – metrični tenzor.Nekako ob istem času je prišel do sorodne enačbe tudi Hilbert, ki pa se je delno zgledoval po njem. V objavo jih je poslal pet dni pred Einsteinom 20. novembra, objavljene pa so bile 31. marca 1916. Po letu 1997 so, kakor je poročal Shapiro, tudi videli po Hilbertovih zapiskih, da je Hilbert računal drugače, v drugačnem smislu in matematično strožje, tako, da je enačba v celoti Einsteinovo izvirno delo.Einstein je že pred tem leta 1907 (gravitacijski rdeči premik spektralnih črt) in leta 1911 (odklon svetlobnega curka v gravitacijskem polju telesa) pokazal, da gravitacija vpliva na gibanje svetlobe. Pred njim so o vplivu gravitacije na svetlobo razmišljali Newton leta 1703, Michell leta 1783, Cavendish leta 1784 in Soldner leta 1801.
+Ker so enačbe polja nelinearne, je Einstein domneval, da nimajo eksaktnih rešitev. Nekaj mesecev kasneje je na njegovo začudenje Schwarzschild našel rešitev vakuumskih enačb polja, ki opisuje gravitacijsko polje točkastega telesa s sferno simetrično porazdeljeno maso brez električnega naboja:
+
+  
+    
+      
+        
+          c
+          
+            0
+          
+          
+            2
+          
+        
+        
+          d
+        
+        
+          τ
+          
+            2
+          
+        
+        =
+        
+          d
+        
+        
+          s
+          
+            2
+          
+        
+        =
+        
+          
+            
+              
+                d
+              
+              
+                r
+                
+                  2
+                
+              
+            
+            γ
+          
+        
+        +
+        
+          r
+          
+            2
+          
+        
+        
+          d
+        
+        
+          
+            Ω
+          
+          
+            2
+          
+        
+        −
+        
+          c
+          
+            0
+          
+          
+            2
+          
+        
+        γ
+        
+          d
+        
+        
+          t
+          
+            2
+          
+        
+        
+        
+        ,
+      
+    
+     
+  kjer je:
+
+  
+    
+      
+        τ
+        
+      
+    
+     
+   – lastni čas (čas, ki ga meri ura gibajoča se vzdolž enake svetovnice s preskusnim delcem),
+
+  
+    
+      
+        
+          c
+          
+            0
+          
+        
+        
+      
+    
+     
+   – hitrost svetlobe v vakuumu,
+
+  
+    
+      
+        t
+        
+      
+    
+     
+   – časovna koordinata (ki jo meri mirujoča ura na neskončni razdalji od masivnega telesa),
+
+  
+    
+      
+        r
+        
+      
+    
+     
+   – radialna koordinata (merjena kot obseg, deljen z 2π, sfere v središču okrog masivnega telesa),
+
+  
+    
+      
+        
+          d
+        
+        
+          
+            Ω
+          
+          
+            2
+          
+        
+        =
+        
+          d
+        
+        
+          θ
+          
+            2
+          
+        
+        +
+        
+          sin
+          
+            2
+          
+        
+        ⁡
+        θ
+        
+        
+          d
+        
+        
+          φ
+          
+            2
+          
+        
+        
+        ,
+      
+    
+     
+  
+
+  
+    
+      
+        θ
+        
+      
+    
+     
+   – kolatituda (kot od severa v radianih),
+
+  
+    
+      
+        φ
+        
+      
+    
+     
+   – longituda (tudi v radianih),
+
+  
+    
+      
+        γ
+        =
+        1
+        −
+        
+          
+            
+              r
+              
+                
+                  s
+                
+              
+            
+            r
+          
+        
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          r
+          
+            
+              s
+            
+          
+        
+        =
+        2
+        κ
+        m
+        
+          /
+        
+        
+          c
+          
+            0
+          
+          
+            2
+          
+        
+        
+      
+    
+     
+   – Schwarzschildov polmer masivnega telesa kot skalirni faktor.Še nekaj mesecev kasneje je Lorentzev študent Droste neodvisno našel enako rešitev za točkasto telo in napisal obširni članek o njenih značilnostih. Ta rešitev je imela čudno posledico, kar se sedaj imenuje Schwarzschildov polmer, kjer postane singularna, kar pomeni, da nekateri členi v Einsteinovih enačbah postanejo neskončno veliki. Narave te ploskve tedaj niso dobro razumeli.
+Reissner in Nordström sta leta 1918 rešila Einstein-Maxwellove enačbe polja za nabite krogelno simetrične nevrteče sisteme. Kottler je istega leta prišel do Schwarzschildove rešitve brez Einsteinovih vakuumskih enačb polja.
+Hadamard je leta 1922 prvi uvidel pomen singularnosti pri 
+  
+    
+      
+        
+          r
+          
+            
+              s
+            
+          
+          
+            
+              N
+            
+          
+        
+        =
+        2
+        m
+        
+      
+    
+     
+   (Schwarzschildov polmer v naravnih enotah) in postavil vprašanje kaj se lahko zgodi, če lahko fizikalni sistem sploh kdaj doseže to singularnost. Einstein je vztrajal, da je ne more doseči, in je nakazal hude posledice na Vesolje, ter hudomušno imenoval singularnost »Hadamardova katastrofa«.
+Birkhoff je leta 1923 pokazal da je geometrija Schwarzschildovega prostor-časa edina sferno simetrična rešitev Einsteinovih vakuumskih enačb polja (Birkhoffov izrek). Posledica tega dejstva je bila, da črne luknje niso le matematična posebnost, ampak lahko nastanejo iz vsake dovolj masivne krogelne zvezde. Birkhoffov izrek je neodvisno dokazal dve leti prej tudi Jebsen.Leta 1924 je Eddington pokazal, da singularnost izgine pri spremembi koordinat (glej Eddington-Finkelsteinove koordinate), čeprav je trajalo do leta 1933, ko je Lemaître spoznal, da je to pomenilo, da singularnost ob Schwarzschildovem polmeru ni bila fizična koordinatna singularnost. Eddington je v knjigi leta 1926 omenil možnost, da bi bila lahko zvezda zgoščena na Schwarzschildov polmer, in, da Einsteinova teorija dopušča izločevanje skrajno velikih gostot za vidne zvezde, kot je Betelgeza, saj »zvezda s polmerom 250 milijonov km ne more imeti tako veliko gostoto kot Sonce. Prvič bi bila sila gravitacije tako velika, da ji svetloba ne bi mogla uiti, in bi bila kot žarki, ki bi padali nazaj na zvezdo kakor pada kamen na Zemljo. Drugič bi bil rdeči premik spektralnih črt tako velik, da bi bil spekter premaknjen zunaj obstoja. Tretjič bi masa povzročila toliko ukrivljenosti prostorsko-časovne metrike, da bi se prostor uvil okrog zvezde, in bi nas pustil zunaj nje – to je nikjer.«Chandrasekhar je leta 1931 v okviru splošne teorije relativnosti izračunal, da nevrteče se telo iz elektronsko degenerirane snovi nad določeno mejno maso (sedaj imenovano Chandrasekharjeva meja pri 1,4 m☉) nima stabilnih rešitev. Njegove argumente je spodbijalo mnogo njegovih sodobnikov, vključno z Eddingtonom in Landaujem, ki sta sklepala, da bi še nek neznani mehanizem preprečil gravitacijsko sesedanje. Imela sta deloma prav, saj se bo bela pritlikavka, malo masivnejša od Sonca od Chandrasekharjeve meje, sesedla v nevtronsko zvezdo, ki je že sama stabilna zaradi Paulijevega izključitvenega načela. Oppenheimer, Snyder in drugi so leta 1939 napovedali, da se bodo nevtronske zvezde z masami nad 3 m☉ (Tolman-Oppenheimer-Volkoffova meja) sesedle v črne luknje zaradi razlogov, ki jih je predstavil Chandrasekhar. Oppenhaimer je zaključil, da ne bo posredoval noben fizikalni zakon in preprečil vsaj nekaterim zvezdam sesedanje v črne luknje.Oppenheimer in soavtorji so interpretirali singularnost na meji Schwarzschildovega polmera kot pokazatelj meje mehurja v katerem se je ustavil čas. To je pravilni pogled za zunanje opazovalce, ne pa za v notranjost padajoče opazovalce. Zaradi te značilnosti so sesedle zvezde imenovali »zamrznjene zvezde,« saj bi zunanji opazovalec videl površino zvezde zamrznjeno v času na mestu, kjer njeno sesedanje pade pod Schwarzschildov polmer.
+
+
+=== Zlata doba ===
+Finkelstein je leta 1958 poistovetil Schwarzschildovo ploskev 
+  
+    
+      
+        
+          r
+          
+            
+              s
+            
+          
+          
+            
+              N
+            
+          
+        
+        =
+        2
+        m
+        
+      
+    
+     
+   kot dogodkovno obzorje in ne kot singularnost, »popolna enosmerna opna: vzročni vplivi jo lahko prečkajo le v eni smeri.« To strogo ni nasprotovalo Oppenheimerjevim rezultatom, ampak jih je razširilo s pogledom padajočih opazovalcev. Finkelsteinova rešitev je razširila Schwarzschildovo rešitev za prihodnost opazovalcev, ki padajo v črno luknjo. Polno razširitev je našel Kruskal, ki jo je objavil pod pritiskom leta 1960. Tangherlini je leta 1963 našel mnogorazsežno posplošitev Schwarzschildove rešitve.Ti rezultati so se pojavili na začetku zlate dobe splošne teorije relativnosti, ki sta jo zaznamovali splošna teorija relativnosti in črne luknje kot glavni temi raziskovanj. Temu procesu je pomagalo odkritje pulzarjev leta 1967, za katere se je do leta 1969 pokazalo, da so hitro vrteče nevtronske zvezde. Do tedaj so nevtronske zvezde kakor črne luknje obravnavali le kot teoretične posebnosti. Odkritje pulzarjev je pokazalo na njihov fizični pomen in vzpodbudilo nadaljnje zanimanje za vse vrste zgoščenih teles, ki bi lahko nastala z gravitacijskim sesedanjem.
+V tem obdobju so našli splošnejše rešitve za črne luknje. Kerr je leta 1963 našel eksaktno rešitev za vrtečo črno luknjo. Newman je dve leti kasneje našel osnosimetrično rešitev za črno luknjo, ki se vrti in ima električni naboj. Z Israelovim, Carterjevim, in Robinsonovim delom se je pojavil izrek odsotnosti las, ki pravi, da je rešitev stacionarne črne luknje popolnoma določena s tremi parametri Kerr-Newmanove metrike: maso, vrtilno količino in električnim nabojem.Sprva se je domnevalo, da so nenavadne značilnosti rešitev črnih lukenj patološki ostanki vsiljenih simetrijskih pogojev in, da se singularnosti v generičnih primerih ne bodo pojavljale. Ta pogled so še posebej podpirali Belinski, Halatnikov in Lifšic, ki so poskušali dokazati, da se singularnosti v generičnih rešitvah ne pojavljajo. Vendar sta v poznih 1960-ih Penrose in Hawking s pomočjo globalnih tehnik dokazala, da se singularnosti pojavljajo generično.Bardeenovo, Bekensteinovo, Carterjevo in Hawkingovo delo v začetku 1970-ih je vodilo do formulacije termodinamike črnih lukenj. Ti zakoni opisujejo obnašanje črne luknje v tesni podobnosti z zakoni termodinamike in povezujejo maso z energijo, površino z entropijo in površinsko gravitacijo s temperaturo. Analogija je bila zaključena, ko je Hawking leta 1974 pokazal, da kvantna teorija polja napoveduje, da bodo črne luknje sevale kot črno telo s temperaturo sorazmerno površinski gravitaciji črne luknje (Hawkingovo sevanje).
+
+
+== Vrste črnih lukenj ==
+Na podlagi tega kako so nastale in na podlagi njihove mase je znanih več vrst črnih lukenj:
+
+mikročrne luknje,
+prvobitne črne luknje,
+zvezdne črne luknje,
+srednje težke črne luknje in
+supermasivne črne luknje.
+
+
+== Glej tudi ==
+
+bela luknja
+črvina
+črna zvezda (polklasična gravitacija)
+časovni pregled fizike črnih lukenj
+model CGHS
+črna luknja AdS
+črna luknja BTZ
+mnogorazsežna gravitacija (črni obroč)
+
+
+== Opombe ==
+
+
+== Sklici ==
+
+
+== Viri ==
+
+
+== Zunanje povezave ==
+
+Black Holes na In Our Time, BBC (angleško)
+Stanford Encyclopedia of Philosophy: "Singularities and Black Holes", Erik Curiel, Erik; Bokulich, Peter (angleško)
+Black Holes: Gravity's Relentless Pull Interaktivna multimedijska spletna stran o fiziki in astronomiji črnih lukenj, Space Telescope Science Institute (angleško)
+Pogosto postavljena vprašanja (FAQs) o črnih luknjah (angleško)
+Schwarzschildova geometrija (angleško)
+Napredna matematika o izhlapevanju črnih lukenj Arhivirano 2012-10-17 na Wayback Machine. (angleško)Videi16-letno raziskovanje zvezdnih sledi okrog črne luknje krajevne Galaksije (angleško)
+Film o kandidatu za črno luknjo, Inštitut Maxa Plancka za zunajzemeljsko fiziko (angleško)
+Nature.com 2015-04-20 Trirazsežne simulacije trkajočih črnih lukenj (angleško)
+Računalniška vizualizacija signala zaznanega v projektu LIGO (angleško)
+Dve črni luknji se združujeta v eno (na podlagi signala GW150914 (angleško)

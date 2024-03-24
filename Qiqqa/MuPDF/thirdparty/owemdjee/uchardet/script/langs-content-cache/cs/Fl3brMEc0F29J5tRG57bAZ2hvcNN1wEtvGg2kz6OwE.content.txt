@@ -1,0 +1,98 @@
+revision: 22721246
+title: Andrew S. Tanenbaum
+url: https://cs.wikipedia.org/wiki/Andrew_S._Tanenbaum
+
+
+---
+
+Andrew Stuart "Andy" Tanenbaum (přezdívka ast) je profesorem informatiky na Svobodné univerzitě (Vrije Universiteit) v Amsterdamu v Nizozemsku. Je znám jako autor MINIXu – volně šiřitelného unixového operačního systému, jako učitel a autor mnoha knih z oblasti informatiky, které jsou považovány za základní texty ve svém oboru. Výuku považuje za svoji nejdůležitější práci.
+
+
+== Biografie ==
+Tanenbaum se narodil v New Yorku a vyrostl v jeho příměstské části White Plains. Titul bakaláře získal ve fyzice na Massachusettském technologickém institutu (MIT) v roce 1965. Titul Ph.D. ve fyzice získal v roce 1971 na University of California, Berkeley. Odstěhoval se do Nizozemska, odkud pochází jeho žena, avšak zachoval si občanství USA. V současné době je zaměstnán na Svobodné univerzitě v Amsterdamu, kde přednáší teorii počítačů a operační systémy a vede kandidáty Ph.D.
+
+
+== Knihy ==
+Nejznámějších 10 knih bylo přeloženo do 20 jazyků ve více než 120 edicích a používají se na univerzitách na celém světě:
+Computer Networks (Počítačové sítě), ISBN 0-13-066102-3
+Operating Systems: Design and Implementation (Operační systémy: design a implementace, spoluautor Albert Woodhull), ISBN 0-13-142938-8
+stala se spolu s MINIXem inspirací pro vytvoření Linuxu, který vytvořil Linus Torvalds (ve své autobiografii Just For Fun ji označil „jako knihu, která mě odstartovala k novým cílům“
+Modern Operating Systems (Moderní operační systémy), ISBN 0-13-031358-0
+Distributed Operating Systems (Distribuované operační systémy). ISBN 0-13-219908-4
+Structured Computer Organization (Strukturovaná organizace počítačů), ISBN 0-13-148521-0
+Distributed Systems: Principles and Paradigms (Distribuované systémy: Principy a paradigmata, spoluautor Maarten van Steen), ISBN 0-13-239227-5
+
+
+== Amsterdam Compiler Kit ==
+Sada nástrojů Amsterdam Compiler Kit slouží k vytváření přenositelných překladačů. Vývoj byl zahájen před rokem 1981 a Tanenbaum byl architektem od počátku až do verze 5.5.
+
+
+== MINIX ==
+V roce 1987 napsal Tanenbaum pro IBM PC kompatibilní počítače svůj první klon Unixu, který nazval MINIX (MIni-uNIX). Jeho cílem byli studenti, kteří se chtěli naučit, jak pracuje operační systém. Proto napsal i knihu, která obsahovala v příloze zdrojové kódy, které byly v textu podrobně rozebrány a vysvětleny. Samotné zdrojové kódy byly dostupné na sadě disket. Během tří měsíců získala usenetová skupina comp.os.minix 40 000 diskutujících a přispívajících zájemců. Jeden ze čtenářů, finský student Linus Torvalds začal do MINIXu přidávat další vlastnosti a přizpůsoboval ho svým potřebám. Dne 5. října 1991 oznámil Linus svůj vlastní nový, na POSIXu založený operační systém nazvaný Linux, který používal souborový systém MINIXu, avšak nebyl na kódu MINIXu založen.Přestože se MINIX a Linux rozešly, je MINIX dále vyvíjen a je nyní jak výukovým, tak produkčním systémem vhodným pro běžné nasazení. Cílem je vytvořit vysoce modulární, spolehlivý a bezpečný operační systém. Systém je založen na architektuře mikrojádra, které obsahuje jen 4000 řádků zdrojového kódu, který běží v jaderném režimu. Zbytek systému běží jako samostatné nezávislé procesy v uživatelském režimu (včetně obsluhy systému souborů, správce procesů a ovladačů). Systém neustále monitoruje běh těchto procesů a automaticky nahradí (restartuje) havarovaný proces bez nutnosti restartu samotného systému a aniž by byl přerušen běh ostatních programů nebo si toho uživatel všiml.
+Aktuální verze MINIX 3 je volně k dispozici pod BSD licencí na adrese http://www.minix3.org.
+
+
+== Výzkumné projekty ==
+Tanenbaum se zapojil do mnoha dalších výzkumných projektů v oblastech operačních systémů, distribuovaných systémů a dalších projektů:
+
+Amoeba
+Globe
+Mansion
+Orca
+Paramecium
+RFID Guardian
+S3MS
+Turtle F2F
+
+
+== Ph.D. studenti ==
+Tanenbaum vedl mnoho Ph.D. studentů, kteří se poté stali známými výzkumníky v oblasti informatiky:
+Henri Bal (profesor na univerzitě Vrije Universiteit v Amsterdamu, Frans Kaashoek (profesor na MIT), Sape Mullender (výzkumník v Bell Labs), Robbert van Renesse (profesor na Cornell University),
+Leendert van Doorn (společník v AMD Corporation) a Werner Vogels (Chief Technology Officer v Amazonu).
+
+
+== Ocenění ==
+Fellow of the ACM (1996)
+Fellow of the IEEE
+Člen Royal Netherlands Academy of Arts and Sciences
+Akademický Profesor
+Spoluautor Best Paper Award na USENIX LISA Conference v prosinci 2006
+Spoluautor Best Paper for High Impact na 2006 IEEE Percom conference
+Držitel medaile IEEE James H. Mulligan, Jr. Education Medal 2006
+Držitel ceny TAA McGuffey Award for classic textbooks 2003
+Držitel ceny TAA Texty Award for new textbooks 2002
+Držitel ceny ACM SIGCSE for contributions to computer science education 1997
+Držitel ceny ACM Karl V. Karlstrom Outstanding Educator Award 1994
+Spoluautor ACM SOSP Distinguished Paper Award 1984
+
+
+== Čestné doktoráty ==
+Tanenbaum se stal 12. května 2008 čestným doktorem (dr. h. c.) Polytechnické Univerzity v Bukurešti v Rumunsku (University Politehnica of Bucharest). Titul získal od komory akademického senátu a poté zde přednášel o svých vizích o budoucnosti počítačů. Doktorát vyjadřuje uznání za svou práci včetně zhruba 150 publikací, 18 knih přeložených do 20 jazyků (včetně rumunštiny) a za vytvoření velkého množství Open source software jako je Amsterdam Compiler Kit, Amoeba, Globe a MINIX.
+
+
+== Hlavní přednášky ==
+Tanenbaum přednáší na mnoha konferencích; v poslední době:
+
+Free and Open Source Conference Sankt Augustin, Germany, 23. srpna 2008
+XV Semana Informática Archivováno 28. 5. 2020 na Wayback Machine. na Instituto Superior Técnico, Lisabon, Portugalsko, 13. března 2008
+linux.conf.au v Sydney, Austrálie, 17. ledna 2007
+ACM Symposium on Operating System Principles, Brighton, Anglie, 24. říjen 2005
+
+
+== Bibliografie ==
+Knihy A. S. Tanenbauma publikované v Prentice Hall
+Akademické publikace A. S. Tanenbauma z DBLP
+Seznam publikací
+
+
+== Reference ==
+
+
+== Externí odkazy ==
+ Galerie Andrew S. Tanenbaum na Wikimedia Commons
+ Obrázky, zvuky či videa k tématu Andrew S. Tanenbaum na Wikimedia Commons 
+ Osoba Andrew S. Tanenbaum ve Wikicitátech (anglicky)
+Professor Andrew S Tanenbaum at the Dept. of Computer Systems at VU
+Minix Article in Free Software Magazine – rozhovor s Andrewem Tanenbaumem (anglicky)
+en:Tanenbaum-Torvalds debate – debata mezi Tanenbaumem a Linusem Torvaldsem o designu jádra (anglicky)
+Jaderné noviny – 9. 11. 2017: Novinky v testování jádra sebou samým (česky)

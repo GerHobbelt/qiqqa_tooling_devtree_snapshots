@@ -1,0 +1,44 @@
+revision: 5788861
+title: transistor
+url: https://hi.wikipedia.org/wiki/%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%82%E0%A4%9C%E0%A4%BF%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0
+
+
+---
+
+ट्रान्जिस्टर एक अर्धचालक युक्ति है जिसे मुख्यतः प्रवर्धक (Amplifier) तथा इलेक्ट्रॉनिक स्विच के रूप में प्रयोग किया जाता है। कुछ लोग इसे बीसवीं शताब्दी की सबसे महत्वपूर्ण खोज मानते हैं।
+ट्रान्जिस्टर का उपयोग अनेक प्रकार से होता है। इसे प्रवर्धक, स्विच, वोल्टेज नियामक (रेगुलेटर), सिग्नल माडुलेटर, आसिलेटर आदि के रूप में काम में लाया जाता है। पहले जो कार्य ट्रायोड या त्रयाग्र से किये जाते थे वे अधिकांशत: अब ट्रान्जिस्टर के द्वारा किये जाते हैं।  इसका उपयोग एम्पलीफायर के रूप मे किया जाता है n= nagetiv p= positive, ट्रांसिस्टर का निर्माण सिलिकॉन और जेर्मनियम के दुअरा होता है, अकार मे बहुत कहता होता है लेकिन इसके बिना इलेक्ट्रिक सर्किट नहीं बनाया जा सकता. ट्रांसिस्टर के तीन भाग है बेस, कलेक्टर और अमिटर, ये तीनो भाग बिजली को पकडे रखते है. 
+
+
+== प्रकार ==
+ट्रांजिस्टर दो प्रकार के होते हैं।
+
+बीजेटी या (BJT) या द्विध्रुवी संधि प्रथनक(1) एनपीएन (NPN)
+(2) पीएनपी (PNP)फिल्ड इफेक्ट ट्रांजिस्टर या फेट (FET) या क्षेत्र प्रभाव प्रथनक(1) जेफेट (JFET)
+(2) मॉसफेट (MOSFET)
+
+
+== इन्हें भी देखें ==
+प्रवर्धक
+ट्रांजिस्टर के मॉडल
+ट्रांजिस्टर का इतिहास
+
+
+== संदर्भ ==
+
+
+== बाहरी कड़ियाँ ==
+ट्रांजिस्टर फुल डिटेल
+How transistors work
+ट्रांसिस्टर का निर्माण सिलिकॉन और जेर्मनियम के दुअरा होता है. Perfectalex.in कि तरफ से.
+BBC: Building the digital age photo history of transistors
+Transistor Flow Control — Scientific American Magazine (October 2005)
+The Bell Systems Memorial on Transistors
+IEEE Virtual Museum, Let's Get Small: The Shrinking World of Microelectronics. All about the history of transistors and integrated circuits.
+Transistorized. Historical and technical information from the Public Broadcasting Service
+This Month in Physics History: November 17 to December 23 1947: Invention of the First Transistor to  : Invention of the First Transistor. From the American Physical Society
+50 Years of the Transistor. From Science Friday, December 12 1997
+Bob's Virtual Transistor Museum & History. Treasure trove of transistor history
+Jerry Russell's Transistor Cross Reference Database.
+The DatasheetArchive. Searchable database of transistor specifications and datasheets.
+History of the Transistor
+Charts showing many characteristics and giving direct access to most datasheets for 2N, 2SA, 2SB. 2SC, 2SD, 2SH-K, and other numbers.

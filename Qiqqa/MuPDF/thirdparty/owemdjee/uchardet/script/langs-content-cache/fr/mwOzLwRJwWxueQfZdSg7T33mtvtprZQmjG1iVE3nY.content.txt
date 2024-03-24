@@ -1,0 +1,155 @@
+revision: 203552351
+title: Earth
+url: https://fr.wikipedia.org/wiki/Google_Earth
+
+
+---
+
+Google Earth est un logiciel développé par la société Google, permettant une visualisation de la Terre avec un assemblage de photographies aériennes ou satellitaires.
+Anciennement produit par Keyhole inc., alors d'accès payant, ce logiciel permet à tout utilisateur de survoler la Terre et de zoomer sur un lieu de son choix. Selon les régions géographiques, les informations disponibles sont plus ou moins précises. Ainsi un habitant d'une métropole peut localiser son restaurant préféré, obtenir une vue en 3D des immeubles de la métropole, alors que la résolution des photos d'une bonne partie de la Terre est très faible. La modélisation en trois dimensions des constructions, initialement réalisée à l'aide du logiciel SketchUp, est maintenant créée automatiquement à l'aide d'algorithmes utilisant pour une part les prises de vues Street View et des données d'altitude.
+En octobre 2011, Google annonce que Google Earth a été téléchargé et installé plus d'un milliard de fois à travers la planète. Cela en fait un Système d'information géographique (SIG) particulièrement utilisé.
+
+
+== Généralités ==
+Initialement connu sous le nom de Earth Viewer, Google Earth a été développé par la société Keyhole Inc., dans laquelle a investi le fonds américain de capital investissement In-Q-Tel géré par la CIA,. Keyhole Inc. est rachetée par Google en 2004. Le produit, renommé Google Earth en 2005, est désormais disponible pour les ordinateurs personnels équipés de Windows 2000, XP, Vista, Seven, Mac OS X 10.3.9 ou supérieur, Linux (depuis le 12 juin 2006), et FreeBSD. En plus d'avoir poursuivi le développement du client commencé par Keyhole, Google a également intégré l'imagerie de la base de données de Earth à leur logiciel de cartographie en ligne (Google Maps).
+Plusieurs grandes villes peuvent être observées avec une résolution suffisamment élevée pour pouvoir distinguer individuellement chaque immeuble, maison et même voiture. Dans certaines villes telles que Montréal, Paris, Londres, Washington et Seattle, il est même possible de distinguer les gens dans la rue. La résolution d'observation maximale des lieux géographiques dépend de leur intérêt, cependant toute la surface de la Terre a été photographiée avec une résolution d'au moins 15 mètres. Les lieux qui ont été photographiés avec la meilleure résolution (6 pouces) sont les suivants : Las Vegas dans l'État du Nevada, Cambridge dans le Massachusetts et le comté de Fulton dans l'État de New York.
+Google Earth permet aussi d'aller directement à un lieu en entrant son adresse postale (États-Unis, Canada et Europe uniquement), ses coordonnées ou bien en naviguant manuellement.
+Google Earth est également pourvu des données topographiques rassemblées par la NASA lors de la mission SRTM, ce qui permet d'afficher la surface de la Terre en 3D. Ainsi, le Grand Canyon et l'Everest peuvent être observés en 3D contrairement à d'autres logiciels de cartographie ne permettant que des observations 2D, c'est-à-dire depuis le ciel et perpendiculairement au sol. Google a de plus rajouté une couche sur la surface de la Terre qui modélise progressivement en 3D la totalité des constructions d'un grand nombre de villes sur toute la planète. Depuis la version 5, il est possible de visionner en 3D les surfaces sous marines.
+Beaucoup d'utilisateurs ajoutent leurs propres données, et les rendent disponibles par l'intermédiaire de plusieurs sources comme le BBS ou les blogs cités dans les liens externes plus bas.
+Google Earth est disponible en version gratuite, et versions payantes. Il est disponible pour Windows XP, Vista, 7, 8, 10, Mac OS X et Linux.
+Entre 2004 et 2010, le directeur de « Google Earth and Maps » est John Hanke.
+
+
+== Spécifications ==
+
+
+=== Versions disponibles ===
+Google Earth est disponible en 4 versions :
+
+Free Version.
+Google Earth Plus version sur Windows (arrêtée d'être distribué en décembre 2008).
+Google Earth Pro : version entreprise.
+Google Earth Studio : version destinée aux chaînes de télévision.Le logiciel est présent sur diverses plateformes : Linux, Mac OS X, Windows, Android, Blackberry, Storm  et IOS.
+
+
+=== Version Mac OS X ===
+Le 10 janvier 2006, Google a sorti une version destinée pour le système d'exploitation Mac OS X, téléchargeable à partir du site web de Google Earth. Excepté les quelques remarques faites un peu plus loin dans cet article, la version Mac semble être stable et finie, avec pratiquement toutes les mêmes fonctionnalités que la version originale pour Windows. Le 8 août 2005, une version Macintosh fonctionnelle ainsi que quelques captures d'écran ont fuité sur Internet, soit à peu près un mois avant sa sortie. Cependant, cette version paraissait réellement inachevée notamment parce que le menu d'aide et l'affichage de la licence n'étaient pas opérationnels, signe révélateur que cette version était uniquement destinée à un usage interne à Google. Cette dernière n'a pas fait de remarque sur cet événement.
+Actuellement, il est nécessaire de posséder la version 10.3.9 ou 10.4 de Mac OS X pour pouvoir utiliser la version Mac de Google Earth. De plus, actuellement, aucune version « Pro » ou « Plus » n'existe en version stable, et il n'y a pas non plus de navigateur embarqué (boussole en haut à droite) et ni d'interface directe vers Gmail. Quelques bugs apparaissent également au niveau de la barre de menu (notamment lors d'un basculement vers d'autres programmes), au niveau des bulles infos et au niveau de l'impression.
+La dernière version (la 4.0.2722, sortie le 5 janvier 2007) est actuellement disponible en tant que version bêta et apporte de nouvelles fonctionnalités avec entre autres une nouvelle interface utilisateur et la possibilité pour les utilisateurs de Mac OS X de passer à la version « Plus ».
+
+
+=== Version Linux ===
+Google Earth est apparu sur Linux avec la version 4 beta, en tant que produit natif utilisant la bibliothèque logicielle Qt.
+
+
+=== Version mobile ===
+Le 25 octobre 2008, Google Earth est sorti en version iPhone. Cette version est disponible pour les iPhone et iPod Touch. Cette version a été grandement critiquée par les utilisateurs à cause de sa difficulté d'utilisation. Par contre, une fois que l'utilisateur comprend comment utiliser ce logiciel, il se retrouve alors dans une version très complète de Google Earth. Il suffit de bouger l'appareil afin de voir le relief. On peut aussi dessiner un cercle avec ses doigts afin de faire changer la direction.
+
+
+=== Résolution ===
+La résolution de l'image fournie par le programme Google Earth dépend avant tout de l'endroit géographique. En effet, la résolution n'est pas homogène sur toute la planète et, d'une manière générale, les grandes agglomérations sont beaucoup plus détaillées que les milieux ruraux. L'endroit précis où l'image a une résolution maximale se trouve aux coordonnées 37° 25′ 20,35″ N, 122° 05′ 06″ O ou voici l'adresse : Siège de Google, Mountain View, Californie, USA. Il s'agit du Campus Google, le siège de l'entreprise, où l'on peut observer le logo du moteur de recherche aux abords d'une piscine avec une résolution d'1 pouce par pixel (environ 2,58 cm/pixel).[réf. nécessaire]. Certains endroits sont encore plus précis, notamment ici en Afrique du Sud, où l'on peut observer un troupeau d'hippopotames.
+
+
+== Fonctionnalités ==
+
+
+=== Bâtiments en 3D ===
+Après son acquisition de Keyhole, Google a ajouté au logiciel une fonction permettant d'afficher des bâtiments en 3D modélisés par des blocs de couleur grise. Ainsi, grâce aux informations fournies par les Sanborn maps[réf. nécessaire], il était possible d'observer de nombreuses villes américaines dès septembre 2006. Le 14 mars 2006, Google rachète @Last Software (entreprise à l'origine du logiciel SketchUp) qui crée un plugin pour permettre d'obtenir un rendu 3D dans Google Earth.
+À l'origine, seules quelques villes américaines étaient concernées par cette fonction. En 2015, certaines villes, même de moyenne importance, sont modélisées en 3D. L'intérieur d'un certain nombre de bâtiments célèbres comme le musée du Prado de Madrid, accessible avec ses principales œuvres, est également modélisé.
+
+
+=== Modélisation 3D automatisée ===
+Il existait une banque d'images 3D créée par la communauté d'utilisateurs, qui permettait de visualiser directement des œuvres dans Google Earth. En juin 2012, Google a annoncé que les bâtiments en 3D créés par les utilisateurs seraient progressivement remplacés par une modélisation automatique. Les raisons principales sont une homogénéité plus forte, et le renforcement de la compétitivité vis-à-vis de services utilisant cette technologie, tels que Here Maps ou Bing Maps.
+La version du logiciel Google Earth 7 au minimum est requise pour visualiser cette modélisation.
+La version 7.3 de Google Earth sortie en mars 2019 est entièrement réalisé en 3D, les reliefs terrestres et maritimes ainsi que les bâtiments sont visibles.
+
+
+=== Simulateur de vol ===
+Dans la version 4.2 de Google Earth, un simulateur de vol est inclus. La combinaison de touche (Ctrl + Alt. + A) active cette fonctionnalité.
+
+
+=== Navigateur web interne ===
+Dans la version 5.2 de Google Earth, un navigateur web est inclus. Ne pas cocher "Afficher les résultats Web dans un navigateur externe" active cette fonctionnalité.
+
+
+=== Mesure des distances ===
+Dans une nouvelle version de Google Earth, lancée en avril 2018, un outil permet de mesurer les distances entre plusieurs lieux sur la carte. Cet outil permet aussi de mesurer des surfaces, des périmètres, et des circonférences. Cette fonctionnalité est disponible pour le web (Google Chrome), ainsi que pour Android et IOS.
+
+
+=== Images historiques ===
+La fonction Timelapse permet de consulter des images satellites anciennes. Elle est enrichie et unifiée en avril 2021, permettant alors de consulter partout dans le monde l'évolution d'un espace sur les quarante dernières années.
+
+
+=== Google Earth en ligne et l'application Google Earth Pro ===
+Pour accéder aux principales fonctionnalités de Google Earth, il n'est plus nécessaire de télécharger une application, mais simplement d'accéder à un lien . Initialement uniquement compatible avec Chrome, Google Earth en ligne est maintenant avec les autres navigateurs (Edge ou Firefox).
+Pour des fonctionnalités plus avancées, images d'archives ou travail sur SIG, il faudra toujours télécharger Google Earth Pro.
+
+
+== Polémiques ==
+Il existe de nombreuses polémiques vis-à-vis de ce logiciel, quant à la possibilité de visualiser des images de zones sensibles (installations militaires, nucléaires) ou des éléments de la vie privée,.
+Le logiciel pose également des problèmes de sécurité aux individus, ayant aidé des cambrioleurs à dévaliser des maisons dans un quartier chic de la banlieue de Moscou.
+En 1994, la société allemande ART+COM a présenté TerraVision pour la première fois au public lors de la conférence de l'UIT à Kyoto. ART+COM a déposé un brevet aux États-Unis en décembre 1996, reconduit en octobre 2013. La société a attaqué Google pour violation de brevet en 2014. Un procès a eu lieu aux États-Unis entre 2014 et 2017 pour déterminer si Google Earth s'était inspiré du code de Terravision. ART+COM a perdu en première instance, puis en appel. 
+En 2021, Netflix a produit une série romancée relatant cette histoire, The Billion Dollar Code. La série Netflix décrit l'invalidation du brevet d'ART+COM lors du procès, mais ne présente pas le témoignage, pourtant décisif, de Stephen Lau, un ancien employé (décédé du COVID-19 en mars 2020) du Stanford Research Institute (SRI), organisme à but non lucratif financé par le gouvernement fédéral. Il avait témoigné avoir développé pour le SRI une application de visualisation de la terre appelée TerraVision, dont il avait partagé et discuté le code avec ART+COM. Les systèmes de SRI et d'ART+COM, appelés tous deux Terravision, utilisaient une pyramide d'images multirésolution permettant aux utilisateurs de zoomer de la haute à la basse altitude. ART+COM a ensuite accepté de renommer son produit en raison de l'antériorité de celui de SRI. Parce qu'ART+COM n'a pas fait référence au TerraVision de SRI comme "prior art" dans sa demande de brevet, le brevet d'ART+COM a été invalidé.
+
+
+== Découvertes liées à Google Earth ==
+En décembre 2008, des scientifiques des Jardins botaniques royaux de Kew annoncent la découverte d'un « monde perdu » abritant plusieurs nouvelles espèces animales grâce à Google Earth.
+Le 8 avril 2010, plusieurs paléontologues de l'université de Wits découvrent deux squelettes partiels d'hominidés, conservés depuis environ 1,78 à 1,95 million d'années grâce au logiciel de Google.
+
+
+== Apparitions ==
+
+
+=== Dans les œuvres de fiction ===
+Dans Hyper Tension, un film américain de 2006, des images animées tirées du logiciel Google Earth apparaissent régulièrement à l'écran pour situer l'action.
+Dans l'épisode 17 de la saison 18 des Simpson, Marge Simpson utilise le logiciel Google Earth.
+Dans Lion, le personnage principal Saroo Brierley arrive à localiser son village d'enfance grâce à Google Earth.
+
+
+=== Utilisation dans les médias ===
+De nombreuses chaînes de télévision (comme CNN, France 2, RTL-TVI ou TF1) utilisent ce logiciel pour situer un lieu.
+
+
+== Notes et références ==
+
+
+== Voir aussi ==
+
+
+=== Articles connexes ===
+Google Maps
+Google Mars
+Google Moon
+Google Street View
+Bruciel
+Keyhole Markup Language
+Neven Vision
+
+
+=== Logiciels similaires ===
+D'autres logiciels ou services permettent de naviguer sur des globes virtuels :
+
+Géoportail (IGN - France)
+Mappy (PagesJaunes)
+World Wind (NASA)
+Bhuvan (ISRO)
+WikiMapia
+Marble
+
+
+=== Bibliographie ===
+Gorelick N & al. (2017) Google Earth Engine: planetary-scale geospatial analysis for everyone. Remote Sens. Environ. 202, 18–27.
+
+
+=== Liens externes ===
+
+www.google.com/earth
+www.geo-trotter.com - Visite guidée de la Terre sur Google Earth & Google Maps
+googlearth.forumpro.fr - Forum d'échanges consacré aux découvertes avec Google Earth/Maps
+Carte de la couverture de l'imagerie en 3D dans Google Earth
+
+
+==== Critiques et comparaison ====
+NASA Worldwind, Google Earth, Géoportail à l’école : un monde à portée de clic ?, article de la revue géographique Mappemonde, 20 mars 2007.
+Comparatif Google Earth - GeoPortail, 4 juillet 2006.
+ Portail de l’information géographique   Portail de Google

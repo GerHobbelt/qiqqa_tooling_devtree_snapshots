@@ -1,0 +1,248 @@
+revision: 31698339
+title: "\uBBF8\uB514\uC5B4\uBE0C\uB77C\uC6B0\uC800"
+url: https://ko.wikipedia.org/wiki/%EC%9B%B9_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EB%AA%A9%EB%A1%9D
+
+
+---
+
+아래는 저명한 웹 브라우저의 목록이다.
+
+
+== 역사 ==
+
+
+=== 저명한 브라우저 ===
+출시순:
+
+월드와이드웹, 1991
+모자이크 1993
+넷스케이프 내비게이터, 넷스케이프 커뮤니케이터, 1994
+인터넷 익스플로러, 1995
+오페라, 1996
+모질라 내비게이터, 2002
+사파리, 2003
+모질라 파이어폭스, 2004
+구글 크롬, 2008
+
+
+== 저명한 레이아웃 엔진 ==
+게코
+KHTML
+프레스토
+태즈먼
+MSHTML
+웹키트
+블링크
+서보
+
+
+== 그래픽 ==
+
+
+=== MSHTML 기반 ===
+360 시큐어 브라우저
+AOL 익스플로러 (단종)
+벤토 브라우저 (윈앰프 내장)
+그린브라우저
+인터넷 익스플로러
+미디어브라우저 (단종)
+메뉴박스
+MSN 익스플로러 (단종)
+네오플래닛 (단종)
+넷캡터 (단종)
+리얼플레이어
+사이트키오스크
+슬림브라우저
+텐센트 트래블러
+스리티스 브라우저
+툼레이더
+울트라브라우저 (단종)
+웹IE
+
+
+=== 게코(GECKO) 기반 ===
+모질라 파이어폭스 (이전 이름: 파이어버드, 피닉스)넷스케이프 브라우저 8 ~ 넷스케이프 내비게이터 9 (단종)
+에픽
+Iceweasel, 데비안 파이어폭스의 리브랜드
+GNU 아이스캣, GNU 포크
+페일 문 (윈도 전용으로 최적화된 브라우저, 파이어폭스 기반)AT&T Pogo (단종, 파이어폭스 기반)
+Flock (단종)
+Swiftfox (단종)
+Swiftweasel (단종)
+xB 브라우저 (단종)파이어폭스 포 모바일
+스카이파이어 (모바일)
+카미노 (OS X)
+컨커러 키보드 구동 브라우저
+모질라 애플리케이션 스위트 (단종)시몽키
+Iceape 데비안 시몽키 리브랜드
+Classilla
+그누질라 GNU 포크
+넷스케이프 (단종)
+Beonex 커뮤니케이터야후! 브라우저
+Galeon, GNOME의 옛 기본 브라우저 (단종)
+K-Meleon - 윈도우K-Ninja 윈도 (단종)
+K-MeleonCCF MEMicroB (마에모)
+Minimo (모바일, 단종)
+
+
+=== 게코 및 MSHTML 기반 ===
+K-Meleon (IE 탭 확장 포함)
+모질라 파이어폭스 (IE 탭 확장 포함)
+넷스케이프 브라우저 8 (단종)
+
+
+=== 웹키트 및 MSHTML 기반 ===
+바이두 브라우저
+Maxthon (MyIE2)
+Sleipnir
+
+
+=== 게코, MSHTML, 웹키트 기반 ===
+아방트 브라우저
+루나스케이프
+
+
+=== KHTML 기반 ===
+컨커러
+컨커러 임베디드
+
+
+=== 프레스토 기반 ===
+인터넷 채널 (위 콘솔, 오페라 기반)
+닌텐도 DS 브라우저 (오페라 기반)
+오페라
+
+
+=== 웹키트 기반 ===
+아마존 킨들 (실험적)
+아로라 (단종)
+BOLT 브라우저 (단종)
+크로미엄
+구글 크롬
+오페라
+스윙 브라우저
+Amigo
+토치 브라우저
+코모도 드래건
+QIP 서프
+Nichrome
+SRWare Iron
+RockMelt
+Uran 브라우저
+Yandex 브라우저
+네이버 웨일 브라우저
+돌핀 브라우저 (안드로이드, 바다)
+Dooble
+Flock (단종)
+iCab
+Iris 브라우저
+컨커러
+맥스톤 (버전 3.0 이상)
+미도리
+닌텐도 3DS  넷프론트 브라우저 NX
+옴니웹
+OWB
+QupZilla
+Rekonq
+사파리
+Shiira
+스틸 (안드로이드)
+스팀 인게임 브라우저
+티샤크
+울트라라이트 (안드로이드)
+Uzbl
+웹
+웹 브라우저 포 S60
+웹OS
+웹포지티브(WebPositive)
+xombrero
+
+
+=== 자바 플랫폼 ===
+비트스트림 선더호크
+BOLT 브라우저 (단종)
+핫자바 (단종)
+오페라 미니
+uZard Web
+UCWEB
+HtmlUnit (GUI 없음)
+
+
+=== 전문 브라우저 ===
+
+
+==== 지원 중 ====
+골룸 브라우저
+Image Xplorer
+Kirix Strata
+미로
+송버드
+스페이스타임
+Wyzo
+잭 브라우저(Zac)
+에픽 브라우저
+
+
+==== 단종 ====
+고스트질라
+프로디지 클래식
+Flock
+록멜트
+
+
+=== 모자이크 기반 ===
+AMosaic
+IBM Web익스플로러
+인터넷 익스플로러
+인터넷 in a Box
+Mosaic-CK
+넷스케이프
+Spyglass Mosaic
+VMS Mosaic
+
+
+=== 기타 ===
+Abaco
+Amaya
+아라크네 (도스용)
+아레나
+AMSD Ariadna (러시아 최초의 웹 브라우저, 단종)
+AWeb (아미가OS)
+바이두 모바일 브라우저
+코모도 드래건 웹 브라우저
+Charon
+Dillo (다중 플랫폼)
+DR 웹스파이더 (도스용, 단종)
+EmBrowser (도스용, 단종)
+Gazelle
+IBrowse (아미가OS)
+Mothra
+NetPositive (BeOS)
+넷서프 (오픈 소스 웹 브라우저)
+플래닛웹 브라우저 (단종)
+Qihoo 360 모바일 브라우저
+피닉스
+tkWWW
+보이저 (아미가OS)
+
+
+=== 모바일 ===
+
+
+== 텍스트 기반 ==
+
+Alynx
+ELinks (링크의 활성화 버전)
+Emacs/W3
+라인 모드 브라우저
+링크
+링크스
+Net-Tamer
+w3m
+WebbIE
+
+
+== 외부 링크 ==
+Adrian Roselli, evolt.org Browser Archive (2004). List and archive of many current and obsolete web browsers.
+Daniel R. Tobias, Brand-X Browsers (2002).
+Michael Bernadi, DOS Applications for Internet Use (2006).

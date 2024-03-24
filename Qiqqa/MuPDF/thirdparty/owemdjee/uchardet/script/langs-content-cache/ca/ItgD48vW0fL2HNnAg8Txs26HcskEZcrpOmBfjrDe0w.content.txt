@@ -1,0 +1,60 @@
+revision: 30688731
+title: Morse Code
+url: https://ca.wikipedia.org/wiki/Codi_Morse
+
+
+---
+
+El codi Morse és un mètode per transmetre informació telegràfica, utilitzant seqüències d'elements curts i llargs per representar les lletres, nombres, puntuació i altres caràcters especials d'un missatge. Els elements curts i llargs poden estar formats per sons o polsos, i se solen conèixer per "punts" i "ratlles".El codi Morse internacional està compost per sis elements:
+
+Marca curta, punt (·)
+Una marca més llarga, ratlla (-)
+Espai entre caràcters (entre els punts i les ratlles d'un mateix caràcter)
+Espai curt (entre lletres)
+Espai mitjà (entre paraules)
+Espai llarg (entre frases — d'unes set unitats de temps)Aquests sis elements serveixen de base per al codi Morse internacional i, per tant, poden ser aplicats a l'ús del codi Morse a nivell mundial.
+
+
+== Història ==
+Va ser desenvolupat per Alfred Vail mentre col·laborava el 1835 amb Samuel Morse en la invenció del telègraf elèctric. Vail va crear un mètode pel qual cada lletra o nombre era tramès de manera individual en un codi consistent en ratlles i punts, és a dir, senyals telegràfics que es diferenciaven en el temps de duració del senyal actiu. Morse va reconèixer la idoneïtat d'aquest sistema i el va patentar juntament amb el telègraf elèctric. Aquest codi es va conèixer com l'American Morse Code i va ser utilitzat en la primera transmissió per telègraf.
+En els seus inicis, el codi Morse es va utilitzar en les línies telegràfiques construïdes a partir dels cables que es van anar instal·lant. Més endavant, es va utilitzar també en les transmissions per ràdio, sobretot en mar i aire, fins que van sorgir les emissores i receptors de radiodifusió per veu. En l'actualitat, el codi Morse té aplicació gairebé exclusiva en l'àmbit dels radioaficionats, i és exigible sovint el seu coneixement per a l'obtenció de la llicència de radiooperador aficionat fins a l'any 2005; des de llavors, s'anima els organismes que concedeixen aquesta llicència en tots els països a dispensar l'examen de telegrafia als candidats a la llicència, tot i que no és obligatori.
+
+
+== Representació i temporització ==
+Els missatges en Morse se solen transmetre per un aparell operat a mà, com pot ser un telègraf; per tant, hi ha variacions introduïdes per l'habilitat de l'emissor i del receptor; operadors amb més experiència poden enviar i rebre missatges a velocitats més ràpides. Dels dos símbols utilitzats per a representar lletres, els punts i les ratlles, el que marca la velocitat a la qual s'envia el missatge és el punt, que s'utilitza com a referència per a la temporització.
+La velocitat del codi Morse se sol especificar en "paraules per minut". Una ratlla acostuma a ser 3 vegades més llarga que un punt. L'espai entre ratlles i punts d'un mateix caràcter té la longitud d'un punt; entre lletres d'una paraula la longitud és d'una ratlla (3 punts); i entre paraules és de 7 punts. L'estàndard de París defineix la velocitat de la transmissió com el temps necessari per a enviar la paraula "Paris" un cert nombre de vegades per minut. S'utilitza la paraula "Paris" com a referència perquè té precisament 50 punts de durada.
+A continuació, hi ha una il·lustració de les convencions de temporització. La frase "MORSE CODE" s'escriuria normalment així, en què - representen ratlles i · representen punts:
+
+-- --- ·-· ··· · / -·-· --- -·· ·
+M O R S E (espai) C O D E
+
+La temporització convencional per a aquesta frase, amb = representant un senyal actiu, i. representant un senyal inactiu, cadascun amb la longitud exacta d'un punt:
+
+1 2 3 4 5 6 7 8 
+12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789
+
+M------ O---------- R------ S---- E C---------- O---------- D------ E
+===.===...===.===.===...=.===.=...=.=.=...=.......===.=.===.=...===.===.===...===.=.=...=
+^ ^ ^ ^ ^
+| ratlla punt | |
+espai entre símbols espai entre paraules espai entre lletres
+
+
+== Lletres, nombres i puntuació ==
+Existeixen codis Morse adaptats a altres sistemes d'escriptura, com el japonès, el ciríl·lic, el grec, l'àrab, l'hebreu i, fins i tot, els ideogrames xinesos.
+
+
+== Vegeu també ==
+Comunicació sèrie.
+Friedrich Clemens Gerke.
+Codi Baudot
+
+
+== Referències ==
+
+
+== Enllaços externs ==
+Traductor de codi Morse, àudio i senyal flash. (anglès)
+Just Learn Morse Code - Un entrenador de codi morse per a Windows. (anglès)
+Algorisme convertidor de text a codi Morse en C++ (castellà).
+UltraMorse, un programa per a aprendre codi Morse (anglès).

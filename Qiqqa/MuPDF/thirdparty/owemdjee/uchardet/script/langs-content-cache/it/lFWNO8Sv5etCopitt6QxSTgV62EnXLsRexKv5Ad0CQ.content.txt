@@ -1,0 +1,49 @@
+revision: 131557682
+title: Laser a eccimeri
+url: https://it.wikipedia.org/wiki/Laser_a_eccimeri
+
+
+---
+
+Un laser a eccimeri (o laser a ecciplessi) è un dispositivo che produce luce laser nella regione dell'ultravioletto, impiegato nella chirurgia refrattiva e nella produzione di semiconduttori.
+Il termine eccimero è la contrazione di dimero eccitato e si riferisce al materiale con cui la luce laser viene prodotta.
+Un laser ad eccimeri utilizza tipicamente una combinazione di un gas nobile (argon, kripton o xenon) e un gas reattivo (fluoro o cloro). Sotto appropriate condizioni di stimolazione elettrica e alta pressione, viene creata una pseudo-molecola chiamata eccimero. Questa è stabile solo in uno stato eccitato e può dar luogo a luce laser nella regione ultravioletta.
+
+
+== Origini e sviluppo ==
+Il primo laser a eccimeri è stato inventato nel 1971 da Nikolaj Basov, V. A. Danilyčev e Ju. M. Popov presso l'istituto di Fisica "Lebedev" di Mosca. Utilizzava un dimero di xeno (Xe2) eccitato con un fascio di elettroni per stimolare un'emissione di luce coerente alla lunghezza d'onda di 172 nm. Nel 1972 H.A. Koehler e colleghi presentarono un miglioramento dell'emissione usando gas di xeno ad alta pressione.Un'evidenza definitiva dell'emissione del laser a eccimeri a 173 nm, usando gas compresso a 12 atmosfere e pompato da un raggio elettronico, fu presentata nel 1973 da Mani Lal Bhaumik a Los Angeles. Il restringimento della linea spettrale a soli 0,25 nm portò ad un aumento di circa mille volte dell'intensità emessa che raggiunse 1 joule, sufficiente a far evaporare il rivestimento dello specchio. Questo confermò la possibilità di sviluppare laser ad alta potenza utilizzando lunghezze d'onda corte.I successivi miglioramenti della tecnica hanno visto l'impiego di alogenuri dei gas nobili, tra cui il bromuro di xeno (XeBr) originariamente sviluppato nel 1975. Miglioramenti furono apportati da diversi gruppi di ricerca, tra cui Avco Everett Research Laboratory, Sandia Laboratories, Northrop Research and Technology Center, il Naval Research Laboratory, che sviluppò anche il laser a XeCl in cui l'eccitazione era prodotta da una scarica a micro onde, e il Los Alamos National Laboratory.
+
+
+== Principio di funzionamento ==
+L'emissione di luce laser è resa possibile dal fatto che una molecola di eccimero possiede uno stato eccitato di legame ed uno stato fondamentale di non-legame, questo perché i gas nobili sono normalmente inerti e non formano legami chimici con altri elementi. Tuttavia, quando vengono eccitati (tramite una scarica elettrica o un fascio di elettroni) gli atomi dei gas nobili possono legarsi temporaneamente in dimeri (molecole composte da due atomi di gas nobile) o complessi con atomi di alogeni. Tali dimeri e complessi cedono il loro eccesso di energia emettendo un fotone e tornando nel loro stato fondamentale, dove nell'arco di pochi picosecondi si dissociano nuovamente in atomi isolati.
+La maggior parte dei laser a eccimeri funziona con alogenuri di gas nobili. La lunghezza d'onda della luce laser prodotta dipende dalla molecola usata; in genere la luce prodotta ricade nelle frequenze dell'ultravioletto.
+
+
+=== Lunghezze d'onda di emissione di tipici laser a eccimeri ===
+Alcuni di queste linee di emissione possono anche essere modulate per mezzo di prismi e modifiche alle cavità risonanti.
+
+
+== Applicazioni ==
+I laser a eccimeri funzionano generalmente a impulsi, con una frequenza di circa 100 Hz ed una durata dell'impulso di circa 10 ns; vi sono anche modelli che operano a 200 Hz e 30 ns.
+L'elevata energia della luce ultravioletta li rende utili in microchirurgia (in special modo quella oftalmica), in angioplastica, in applicazioni dermatologiche e nella produzione di semiconduttori.
+Nella fotolitografia, si utilizzano lampade a UV estremo la cui luce è prodotta da laser a eccimeri KrF e ArF, che emettono alle lunghezze d'onda di 248 e 193 nm.I laser a eccimeri sono dispositivi piuttosto grossi e ingombranti e questo rappresenta uno svantaggio in campo medico; tuttavia il progredire della tecnica sta riducendo le dimensioni dei dispositivi.
+
+
+=== Ricerca scientifica ===
+I laser a eccimeri sono ampiamente utilizzati in numerosi campi di ricerca scientifica, sia come sorgente primaria che, particolarmente con i laser a XeCl, come pompaggio per i laser a coloranti dove vengono impiegati nella regione verde e blu dello spettro. Vengono utilizzati comunemente nei sistemi di deposizione fisica da vapore con la Pulsed laser deposition, dove la loro elevata pressione radiante, la corta lunghezza d'onda e le proprietà del raggio li rendono ideali per le tecniche di ablazione in una vasta gamma di materiali.
+
+
+== Note ==
+
+
+== Voci correlate ==
+Laser
+Lista di tipi di laser
+Chirurgia refrattiva
+Miopia
+Ipermetropia
+Astigmatismo (occhio)
+
+
+== Collegamenti esterni ==
+(EN) IUPAC Gold Book, "excimer laser", su goldbook.iupac.org.

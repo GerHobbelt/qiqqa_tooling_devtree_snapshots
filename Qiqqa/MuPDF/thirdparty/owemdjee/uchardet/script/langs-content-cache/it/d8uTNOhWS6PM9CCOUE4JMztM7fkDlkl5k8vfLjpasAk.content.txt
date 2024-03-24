@@ -1,0 +1,80 @@
+revision: 134046879
+title: Progetto genoma umano
+url: https://it.wikipedia.org/wiki/Progetto_genoma_umano
+
+
+---
+
+Il Progetto genoma umano (HGP, acronimo di Human Genome Project) è stato un progetto di ricerca scientifica internazionale il cui obiettivo principale era quello di determinare la sequenza delle coppie di basi azotate che formano il DNA e di identificare e mappare i geni del genoma umano (previsti circa centomila, trovati circa 20-25000) dal punto di vista sia fisico sia funzionale.. Il progetto è stato completato il 20 giugno 2003 dal Genome Bioinformatics Group della UCSC, composto da Jim Kent (laureando in biologia molecolare, cellulare e dello sviluppo), Patrick Gavin, Terrence Furey e David Kulp. Inoltre fu sostenuto da Renato Dulbecco, genetista italiano premio Nobel nel 1975, e da Walter Gilbert.
+
+
+== Generalità ==
+Il progetto ha avuto inizio nel 1990 sotto la guida di Jamelia D. Wilkinson presso i National Institutes of Health degli Stati Uniti. La prima bozza del genoma è stata pubblicata nel 2000 mentre quella completa si è avuta nel 2003 e ulteriori analisi sono ancora in corso di pubblicazione. Un progetto parallelo e indipendente dal governo è stato condotto dalla Celera Genomics. La maggior parte del sequenziamento sponsorizzato dal governo statunitense è avvenuta in università e centri di ricerca degli USA, del Regno Unito, del Canada e della Nuova Zelanda. La mappatura dei geni umani è un passo importante per lo sviluppo di medicinali e trattamenti medici.
+L'obiettivo principale del Progetto genoma umano è quello di comprendere la funzione dei geni appartenenti al genere umano. Il progetto ha inoltre studiato vari altri organismi non umani quali il batterio Escherichia coli, il moscerino della frutta Drosophila melanogaster e il topo da laboratorio. A tutt'oggi è uno dei maggiori progetti di ricerca svolti nell'ambito della scienza moderna.
+Originariamente il Progetto Genoma Umano aveva l'obiettivo di mappare i nucleotidi contenuti in un genoma umano (quindi aploide) di riferimento, che conta oltre tre miliardi di nucleotidi. Altri gruppi, tra i quali l'International HapMap Project, Applied Biosystems, Perlegen, Illumina, JCVI, Personal Genome Project e Roche-454, hanno annunciato di voler estendere il progetto ai genomi umani diploidi.
+Il genoma di un singolo individuo (tranne quello dei gemelli monozigoti e degli organismi clonati) è unico; mappare quindi il genoma umano significa fare il sequenziamento delle variazioni multiple di ciascun gene. Il progetto non ha studiato il DNA intero contenuto nelle cellule umane; alcune zone eterocromatiche (l'8% del totale circa) non sono state sequenziate. Il primo aprile 2022 è stato completato il restante 8% (T2T project)
+Per portare a termine la ricerca si è lavorato sul DNA offerto da un certo numero di donatori selezionati con criteri di rappresentatività statistica. Nel 2011 è stato portato a termine e il primo essere umano a cui è stato decodificato il genoma è stato James Watson.
+
+
+== Il progetto ==
+
+
+=== Origine ===
+Il progetto genoma è iniziato al culmine di vari anni di lavoro finanziati dal Dipartimento dell'Energia degli Stati Uniti d'America, in particolare dopo i workshop del 1984 e del 1986 e l'iniziativa di Charles DeLisi presso il Dipartimento dell'Energia [1] Le tecnologie candidate all'utilizzo erano già state prese in considerazione dal 1985. James D. Watson guidava il National Center for Human Genome Research presso i National Institutes of Health (NIH) degli USA dal 1988. Principalmente a causa di un disaccordo con il suo superiore Bernardine Healy sulla questione dei brevetti per i geni, Watson è stato costretto a dare le dimissioni nel 1992. Nell'aprile del 1993 gli è succeduto Francis Collins e nel 1997 il nome del centro è stato modificato in National Human Genome Research Institute (NHGRI).
+Il progetto da tre miliardi di dollari è stato lanciato ufficialmente nel 1990 dal Dipartimento dell'Energia e dai National Institutes of Health degli USA. La durata prevista era di quindici anni. Oltre agli USA, il consorzio internazionale era formato anche da genetisti del Regno Unito, della Francia, della Germania, del Giappone, della Cina e dell'India.
+Grazie ad un vasto sforzo di cooperazione internazionale e ai progressi nel campo della genomica, soprattutto nell'analisi delle sequenze, e nella tecnologia informatica, una "bozza" di genoma era già pronta nel 2000 e venne annunciata congiuntamente dall'allora Presidente degli Stati Uniti Bill Clinton e dall'allora Primo Ministro britannico Tony Blair il 26 giugno 2000. L'annuncio del completamento del genoma si è poi avuto nell'aprile del 2003, due anni prima del previsto. A maggio 2006 è stata raggiunta un'altra pietra miliare sulla via del completamento del progetto, quando la sequenza dell'ultimo cromosoma umano è stata pubblicata sulla rivista Nature.
+
+
+=== Principali scoperte del Progetto Genoma ===
+Il genoma umano è lungo circa 3200Mb, di cui solo 48Mb di DNA codificante (1,5%), 1152Mb (36%) costituiscono il cosiddetto "gene related" DNA (Introni, UTR, Pseudogeni, frammenti genici) e le restanti 2000Mb costituiscono il DNA intergenico, formato da sequenze ripetute intersperse chiamate LINE (21%), SINE (15%), LTR (9%), Transposoni a DNA (3%), sequenze ripetute in tandem anche dette microsatelliti (3%) e una piccola percentuale di altri tipi.
+I geni umani sono circa 20-25000, in media contengono 8.8 esoni ognuno dei quali è lungo all'incirca 170bp. Il numero di introni è in media 7.8 con una lunghezza media di 5420bp.
+Sono stati sequenziati in un secondo momento anche i genomi di altri organismi e da un confronto si è visto che:
+
+Non c'è correlazione tra la complessità degli organismi e il numero di geni codificanti (in moltissimi organismi anche evolutivamente molto distanti si aggira intorno ai 20000) e la dimensione totale del loro genoma.
+Anche se varia il numero di ORF, il loro range di dimensione non fa lo stesso, ciò probabilmente è dovuto alla dimensione delle proteine che non può cambiare più di tanto, pena la perdita di funzionalità.
+La frammentazione dei geni aumenta attraverso l'evoluzione, e si manifesta in un accorciamento degli esoni e un allungamento degli introni.
+
+
+== Controversie ==
+Il fatto che per il progetto genoma umano sia stato utilizzato un singolo donatore europeo di sesso maschile ha sollevato polemiche in merito alla sua rappresentatività. 
+In seguito sono sorti altri progetti simili a livello nazionale:
+
+Progetto genoma umano iraniano (2000)
+Consorzio indiano sulla variazione del genoma (2003)
+Progetto genoma turco (2010)
+Progetto genoma russo (2015)
+Iniziativa sul genoma cinese Han (2017).
+
+
+== Note ==
+
+
+== Bibliografia ==
+ International Human Genome Sequencing Consortium, Initial sequencing and analysis of the human genome, in Nature, 409(6822), (15 febbraio 2001),  pp. 860-921, DOI:10.1038/35057062, PMID 11237011..
+ International Human Genome Sequencing Consortium, Finishing the euchromatic sequence of the human genome, in Nature, 431(7011), (21 ottobre 2004),  pp. (931-945), DOI:10.1038/nature03001, PMID 15496913.
+ D. D. Shoemaker et al., Experimental annotation of the human genome using microarray technology, in Nature, 409(6822), (15 febbraio 2001),  pp. (922-927), DOI:10.1038/35057141.
+ Venter JC et al., The sequence of the human genome, in Science, 291(5507), (16 febbraio 2001),  pp. 1304-1351, DOI:10.1126/science.1058040, PMID 11181995..
+
+
+== Voci correlate ==
+Human Genome Project - Write
+Progetto Earth BioGenome
+Kyoto Encyclopedia of Genes and Genomes
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su progetto Genoma umano
+
+
+== Collegamenti esterni ==
+Human Genome Project sito ufficiale
+Delaware Valley Personalized Medicine Project Utilizza i dati del Progetto Genoma Umano per una medicina personalizzata
+National Human Genome Research Institute (NHGRI). Sito dell'Istituto Nazionale americano per le ricerche sul genoma umano
+Human Genome News. Newsletter pubblicata dal 1989 al 2002 dal Dipartimento dell'Energia americano per coordinare il Progetto Genoma Umano. Gli archivi completi sono disponibili online
+Project Gutenberg Qui si possono trovare alcuni testi in inglese del Progetto Genoma Umano, intitolati Human Genome Project, Chromosome Number # (# denota 01-22, X e Y). L'accesso alle pagine contenenti i collegamenti per scaricare i testi è disponibile tramite https://www.gutenberg.org/etext/3501 per il Cromosoma 1 fino a https://www.gutenberg.org/etext/3524 per il Cromosoma Y. NB: questa sequenza potrebbe non essere considerata definitiva a causa di continui aggiornamenti e revisioni. Oltre ai file dei cromosomi vi è un file di informazioni supplementari del marzo 2004
+Portale del Dipartimento dell'Energia riguardante il Progetto Genoma Umano, Microbial Genome Program, e Genomics: GTL systems biology for energy and environment
+yourgenome.org: pagine pubbliche del Sanger Institute contenenti informazioni dettagliate su DNA, geni e genomi, sul Progetto Genoma Umano e su altre scoperte scientifiche
+Progetto Ensembl, un sistema di annotazioni automatizzato e un browser per il genoma umano
+ Browser del genoma dell'UCSC, su genome.ucsc.edu.
+ Portale del genoma della rivista Nature, su nature.com.

@@ -1,0 +1,11 @@
+revision: 37224997
+title: Amazon Athena
+url: https://uk.wikipedia.org/wiki/Amazon_Athena
+
+
+---
+
+Amazon Athena — це хмарний сервіс що дозволяє безсерверні запити до вмісту що зберігається на AWS S3 використовуючи Presto з підтримкою ANSI SQL.Amazon Athena підтримує різні формати даних, на зразок CSV, TSV, та JSON а також дані в колонкових форматах і  стиснені дані.До випуску Athena, AWS не мав аналогу сервісу Google BigQuery що був запущений ще в 2011. І хоча BigQuery та Athena використовують різні технології (Dremel та Presto), вони обоє позиціонуються як безсерверні сервіси аналітики.
+
+
+== Зноски ==

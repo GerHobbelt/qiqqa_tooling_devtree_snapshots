@@ -1,0 +1,32 @@
+revision: 8146069
+title: TTT
+url: https://eo.wikipedia.org/wiki/TTT
+
+
+---
+
+La Tut-Tera Teksaĵo (TTT; angle World Wide Web (mallonge WWW) aŭ simile the Web [ŭeb]), estas unu el la multaj partoj de la Interreto, kaj post retpoŝto la duarange plej uzata parto. Ĝi estas sistemo de hipertekstaj dosieroj (aŭ paĝoj) interligitaj per la protokolo HTTP. Plej multaj TTT-paĝoj estas verkitaj en la hiperteksta marklingvo HTML aŭ XHTML. Iuj paĝoj kaj servoj uzas iun formon de XML aŭ SGML.
+Ankaŭ alispecaj dokumentoj, kiel plata teksto, PDF, Word-dokumentoj k.s. povas esti alligitaj hipertekste en TTT. TTT-dokumentoj povas ankaŭ esti uzataj kiel alirmaniero al aliaj partoj de la Interreto, kiel ekzemple retpoŝto kaj FTP.
+
+
+== Historio ==
+
+La Tut-Tera Teksaĵo estis lanĉita en marto 1989 kiel loka projekto de Tim Berners-Lee ĉe CERN en Ĝenevo en 1991. Ĝi estis planita kiel "universal linked information system" (universale ligita informosistemo). Li planis tion kiel sistemo por informadmnistrado uzanta kelkajn konceptojn kaj teknologiojn, el kiuj la plej fundamentaj estis la konektojn kiuj ekzistas inter informado. La unua propono estis verkita en 1989, kaj laborsistemo estis plibonigita je la fino de 1990 inkludanta Tut-Ter-Teksaĵan serĉilon kaj HTTP servilon.Li verkis la praversion en NeXT-komputilo en 1990, uzante la programon www, kiu estis TTT-legilo negrafika. Tiu teknologio estis publikigita ekster CERNal aliaj esplorinstitucioj startinta en Januaro 1991. Je la 6-a de aŭgusto 1991 Tim Berners-Lee prezentis, en reta konferenco alt.hypertext, mallongan priskribon de projekto World Wide Web (Tut-Tera Teksaĵo). Samtage TTT iĝis uzebla por ĉiuj interreta servo, kaj la 15-an de januaro 1992 fariĝis ekster-CERN-a servo. Ĝi estis prezentita al la ĝenerala publiko la 23an de Aŭgusto 1991. La TTT-sistemo estis sukcesa ĉe CERN, kaj ekdisvastiĝis tuj al aliaj sciencaj kaj akademiaj institucioj. En la sekvaj du jaroj, oni kreis 50 retejojn.CERN kreis ttt-an protokolon kaj kodon disponeblan senrajtpage en 1993, kio permesis la tuj disvastigitan uzadon de la retejaro.En 1993 Marc Andreessen ĉe la Universitato de Ilinojo verkis la unuan grafikan TTT-legilon, Mosaic [mozej'ek]. Mosaic faciligis la uzadon de la TTT, kaj tial plipopularigis la TTT-on. Tio estis publikigita fare de la National Center for Supercomputing Applications (NCSA) kaj tuj poste la populareco de la retejaro rapide kreskiĝis dum miloj da retejoj estis kreitaj en malpli ol unu jaro. Mosaic estis grafika esplorilo kiu povis montri retajn bildojn kaj transsendi retejan formularon HTML kiu estis procezita de la servilo HTTPd. Marc Andreessen kaj Jim Clark fondis Netscape la sekvan jaron kaj publikigis la esplorilon Navigator, kiu enkondukis la lingvoprogramojn Java kaj JavaScript en la reton. Ĝi tuj iĝis la dominanta serĉilo. Netscape iĝis publika kompanio en 1995 kio akcelis frenezecon por la reto kaj startigis la bobelon "dot.com". Microsoft reagis per la disvolvigo de sia propra esplorilo, Internet Explorer, kio siavice startigis la "militon de esploriloj". Fuziiĝinte kun Windows, ĝi iĝis la dominanta esplorilo dum 14 jaroj. Depost tiu tempo lanĉiĝis longa vico da diversaj TTT-legiloj kaj kompletaj retumiloj, per kiuj oni aliras TTT-on.
+Tim Berners-Lee fondis la Konsorcion de la Tut-Tera Teksaĵo (W3C) kiu siavice kreis XML en 1996 kaj rekomendis anstataŭi HTML per la pli strikta XHTML. Dume, disvolvigistoj ekekspluatis traĵton IE nome "XMLHttpRequest" por krei la aplikaĵojn de Ajax kaj lanĉis la revolucion de "Web 2.0". Mozilla, Opera kaj Apple malakceptis XHTML kaj kreis WHATWG kiu siavice disvolvigis HTML5. En 2009, W3C kapitulacis kaj forlasis XHTML kaj en 2019, cedis kontrolon de la specifikaĵoj HTML al la WHATWG.La rimarkinde rapida kreskorapideco de la nova teknologio ŝuldiĝis al ĝia adopto preskaŭ tuj de la komerca kaj privata sektoro, por la celoj de reklamado kaj komerco, eduko, pornografio, kaj pli. La TTTaro ludis fundamentan rolon en la disvolvigo de la Ciferecepoko kaj estas la ĉefa instrumento por miloj da milionoj de homoj kiuj interagadas per Interreto.Post mallonga periodo, la nova teknologio estis adoptita ankaŭ de la industrio de informsistemoj en organizoj, kiuj serĉis manieron reveni al centralizita komputado kiu ŝparas pri bontenad-kostoj de distribuitaj komputikaj sistemoj, sen perdi la avantaĝojn de distribuita komputado kiel ekzemple loka prilaborado kaj grafikaj kapabloj.
+
+
+== Referencoj ==
+
+
+== Literaturo ==
+ (15a de Decembro 2004) “Architecture of the World Wide Web, Volume One”.  (August 1996) “The World Wide Web: Past, Present and Future”. Brügger, Niels, eld, Web25: Histories from the first 25 years of the World Wide Web (Peter Lang, 2017).
+ (June 1999) “Hypertext Transfer Protocol – HTTP/1.1”. Niels Brügger, eld. Web History (2010) 362 paĝoj.
+Polo, Luciano (2003) World Wide Web Technology Architecture: A Conceptual Analysis. New Devices.Skau, H.O. (Marto 1990). "The World Wide Web and Health Information". New Devices.
+
+
+== Vidu ankaŭ ==
+
+
+== Eksteraj ligiloj ==
+
+Ĉi tiu artikolo legita ĉe YouTube

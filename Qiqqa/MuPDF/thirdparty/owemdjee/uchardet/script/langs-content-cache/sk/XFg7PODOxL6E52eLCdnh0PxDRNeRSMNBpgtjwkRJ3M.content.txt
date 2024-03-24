@@ -1,0 +1,47 @@
+revision: 7291586
+title: Audacity
+url: https://sk.wikipedia.org/wiki/Audacity
+
+
+---
+
+Audacity je slobodný open source, multiplatformový program na úpravu digitálneho zvuku. Zdrojový kód Audacity je uvoľnený pod GNU General Public License a je dostupný na platformách Microsoft windows, Linux, Mac OS X, BSD. Grafické užívateľské rozhranie editoru bolo vytvorené za pomoci wxWidgets knižnice, vďaka čomu program vyzerá na rozličných platformách natívne (prirodzene).
+Audacity vytvorili Dominikom Mazzonim a Roger Dannenberg ako študenti na univerzite Carnegie-Mellon University  na jeseň roku 1999. 28. mája 2000 vydali prvú oficiálnu verzia 0.8. Dominic Mazzoni je stále hlavný vývojár Audacity.
+
+
+== Použitie ==
+Audacity môže byť použitý okrem priameho nahrávania zvuku z rozličných zdrojov, aj na spracovanie a import / export nahrávok v rozličných formátoch, spracovanie podcastingu ale aj na prehrávanie MIDI. Na webovej stránke programu sú k dispozícii návody nielen v anglickom jazyku, ktoré vysvetľujú, ako s Audacity pracovať. Program je preložený aj do slovenčiny.
+
+
+== Vlastnosti ==
+multiplatformový softvér, beží na Windows 98/ME/2000/XP/Vista/7/8/10, Linux a BSD, Mac OS X
+nahrávanie a prehrávanie zvuku
+prevod nahrávok z pásiek a platní do digitálnej formy s poloautomatickým rozdeľovaním skladieb
+odstraňovanie šumu pomocou vzorky šumu, ktorá má byť odstránená
+editácia zvukových súborov vo formátoch WAV; Ogg ; Vorbis ; AIFF ; MP3 (kvôli proprietárnosti tohoto formátu s využitím knižnice LAME, ktorú treba inštalovať zvlášť). Od verzie 1.3.2 podporuje bezstratový kodek FLAC, a od verzie 1.3.6 podporuje formáty WMA, AAC, AMR a AC3 pomocou FFmpeg knižnice.
+strihanie, kopírovanie, vkladanie a rozdeľovanie nahrávok, pričom si program pamätá neobmedzený počet krokov vpred/vzad (undo/redo)
+zmeny rýchlosti a ladenia nahrávok
+viac stopové mixovanie
+rozšíriteľnosť funkcií pomocou pluginov a digitálnych efektov, podporuje štandard LADSPA.
+analýza zvukového spektra pomocou Furierovej transformácie
+úprava amplitúdovej obálky
+podpora pre viackanálové módy s vzorkovacími frekvenciami 96 kHz / 32bit
+generátory bieleho, hnedého a ružového šumu, generátory signálu so sínusovým, pílovým, obdĺžnikovým priebehom, metronómových klikov atď.
+
+
+== Obmedzenia ==
+chýbajú efekty bežiace v reálnom čase
+MIDI dáta sa dajú len zobraziť
+Audacity nepodporuje priamo properitárne kodeky AAC, WMA, AC3, AMR(NB), M4A a ďalšie. Podpora je len nepriamo, pomocou knižnice FFmpeg.
+
+
+== Referencie ==
+
+
+== Iné projekty ==
+
+ Commons ponúka multimediálne súbory na tému Audacity
+
+
+== Externé odkazy ==
+Oficiálny web

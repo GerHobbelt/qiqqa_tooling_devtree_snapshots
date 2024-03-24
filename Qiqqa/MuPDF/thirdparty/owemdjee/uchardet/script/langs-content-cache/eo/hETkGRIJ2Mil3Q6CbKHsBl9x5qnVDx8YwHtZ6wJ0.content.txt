@@ -1,0 +1,126 @@
+revision: 8038100
+title: transistor
+url: https://eo.wikipedia.org/wiki/Transistoro
+
+
+---
+
+Transistoro estas duonkonduktaĵa disponaĵo uzata por amplifado kaj ŝaltado de elektronikaj signaloj kaj elektraj cirkvitoj. Ĝi konsistas el materialoj kun duonkonduktaj ecoj kaj havas minimume tri konektilojn, kiuj kondukas al la tri elektrodoj — emitoro, bazo, kaj kolektoro. Kiam oni fluigas (kutime tre malgrandan) kurenton inter la emitoro kaj la bazo, ĝi povas regi proporcie ege pli grandan kurenton inter la emitoro kaj la kolektoro. Tiamaniere la efiko de transistoro povas esti rigardata kiel amplifiko de la kurento el unu cirkvito (emitoro - bazo) en la dua (emitoro - kolektoro).
+En analogaj cirkvitoj, transistoroj uziĝas kiel amplifiloj, frekvence fakte ekde 0 Hz, do konstanta kurento, ĝis en la gigaherca regiono (2012).
+En ciferecaj cirkvitoj, la unua cirkvito povas kontroli la trapas-eblecon de la transistoro por la dua cirkvito. Tiam la transistoro restas en ŝlosita stato se neniu kurento estas inter emitoro kaj bazo, kaj malfermiĝas (komencas trapasi kurenton preskaŭ sen rezisto) se malgranda kurento ekfluas ĉi tie. Dank' al tiu sia eco transistoro povas roli kiel tre rapidaj elektraj ŝaltiloj, kaj aranĝoj de transistoroj povas funkcii kiel logikaj pordoj, RAM-tipa storejo kaj esti aplikataj por aliaj bitlogikaj taskoj. Fakte transistoroj estas la plej gravaj eroj de integra cirkvito, la tiel nomata splito. Splitoj povas enhavi milionojn da transistoroj malgraŭ sia malgrandeco. Plej ofte splito plenumas siajn celfunkciojn baze de ciferecaj metodoj.
+La termino "transistoro" estas akronimo de la anglalingva transfer resistor kiu priskribas la funkcion de ĝi kiel reguleblan rezistancon depende de la aplikita kurento aŭ ŝargo. Per tia sia funktio transistoro similas al elektrona valvo, nome triodo, kaj foje pro tio estas nomata ankaŭ "duonkondukta triodo".
+Antaŭ la erao de transistoroj oni vaste uzis vakutubojn por la sama celo. En moderna tekniko oni nun pli kaj pli malofte uzas unuopajn transistorojn, sed kunigas arojn de ili en integraj cirkvitoj. Jam tuj post sia enkonduko ĉirkaŭ 1950 la transistoro malfermis la vojon al ĝis tiam neimageble pli malgrandaj kaj pli malmultekostaj radioj, poŝkalkuliloj kaj komputiloj. Ĝi fariĝis la ĉefa komponanto en ĉia moderna elektronikaĵo.
+
+
+== Inventado ==
+
+La transistoro estis inventita ĉe Bell Laboratories dum Decembro 1947 de John Bardeen, Walter Houser Brattain, kaj William Bradford Shockley, kiuj estis aljuĝitaj la Nobel-premion pri fiziko dum 1956. Ironie, ili klopodis konstrui kampefikan transistoron (FET — field effect transistor) antaŭdirita de Julius Edgar Lilienfeld tiom frue kiom 1925, sed fine malkovris kurentan amplifadon en dupolusa punkt-kontakta transistoro (bipolar point-contact transistor), kio sekve kondukis al la evoluo de la dupolusa junta transistoro (bipolar junction transistor).
+Antaŭe la triodo, tre simpla speco de vakutubo eltrovita jam en 1907, antaŭenigis la elektronikan epokon, ebligante amplifitan radiofonion kaj granddistancan telefonion. La triodo, tamen, estis rompiĝema disponaĵo konsumanta multe da povumo. En 1925 la fizikisto Julius Edgar Lilienfeld registris patenton pri kampefika transistoro en Kanado. Per tio oni celis anstataŭigi la rompiĝeman, ekstere vitran, ene vakuan triodon per solidmateriala disponaĵo similefika. Lilienfeld registris patentojn ankaŭ en Usono en 1926. kaj 1928.Tamen, Lilienfeld ne publikigis iujn reserĉajn artikolojn pri sia eltrovo, kaj liaj patentoj ne menciis iujn ekzemplojn de funkcipovaj pratipoj. Tiam estis daŭronte ankoraŭ jardekojn ĝis la efika produktado de altkvalitaj duonkonduktaĵoj ebliĝos, do eĉ se oni sukcesus konstrui tian kampefikan transistoron, en la 1920-oj kaj 1930-oj la ideoj de Lilienfeld pri solideca amplifilo ne trovus praktikan aplikon.
+En 1934 Germana inventisto Oskar Heil patentis similan disponaĵon.De Novembro la 17-a ĝis Decembro la 23-a, 1945, John Bardeen kaj Walter Brattain ĉe Bell Labs de la entrepreno AT&T en Usono plu eksperimentis kaj observis, ke, kiam oni aplikas du or-pintajn kontaktilojn al kristalo el germaniumo oni povas produkti signalon kun elira povumo pli granda ol la enira povumo.La estro de la skipo dediĉita al la fiziko de solidmateriala elektroniko (Solid State Physics Group), William Shockley, ekkonis ties potencialon kaj dum kelkaj sekvantaj monatoj laboris por ege etendi la sciojn pri duonkonduktaĵoj. La terminon "transistoro" ekuzis John R. Pierce kiel mantelon por "transfera rezistilo" (transfer resistor).Laŭ Lillian Hoddeson kaj Vicki Daitch, la aŭtoroj de biografio pri John Bardeen, Shockley proponis, ke la unua patento pri transistoro fare de Bell Labs baziĝu sur la kampa efiko, kaj, ke li nomiĝu kiel inventinto. Elfosinte la patentojn de Lilienfeld, kiuj jam de jaroj forgesiĝis, la advokatoj ĉe Bell Labs konsilis ne sekvi la proponon de Shockley, ĉar la ideo pri kampefika transistoro uzanta elektran kampon kiel "kradon" — alude al la krada elektrodo de vakutubo — ne plu novis.
+Fakte, tio, kion oni inventis, estis la unua dupolusa punkto-kontakta transistoro. Kiel agnosko de tiu akomplaĵo ricevis en 1956 Shockley, Bardeen kaj Brattain komune la Nobelpremion pri Fiziko por: sia reserĉado pri duonkonduktaĵoj kaj sia malkovro de la transistora efiko.En 1948 la punkto-kontaktan transistoron inventis, sendepende de la Usonanoj, la Germanaj fizikistoj Herbert Mataré kaj Heinrich Welker, laborante ĉe la firmao Compagnie des Freins et Signaux, filio de Westinghouse en Parizo. Jam antaŭe, dum la Germana klopodoj pri radaro dum la Dua Mondmilito, Mataré spertiĝis pri la evoluigo de kat-vangharegaj detektiloj — speco de kristalbaza rektifilo uzata por demodulado de radisignaloj — aplikantaj kristalojn el germaniumo kaj silicio. Ĉi-sperte li komencis reserĉi pri la fenomeno de interfero en 1947. Observinte kurentojn fluantajn tra puntokontaktiloj, simile al tio, kion Bardeen kaj Brattain pli frue en decembro 1947 akomplis, Mataré jam en junio 1948 kapablis produkti stabilajn rezultojn baze de specimenoj de germaniumo produktitaj de Welker. Ekkoninte, ke la
+sciencistoj de Bell Labs estis inventintaj la transistoron jam antaŭ ĝi, la firmao hastis enproduktadigi sian "transistronon" por apliko en amplifiloj por la Franca telefonreto.La unua siliciobaza transistoro estis produktita de Texas Instruments dum 1954. Tio estis la laboro de Gordon Teal, spertulo pri la kreskigo de puregaj kristaloj, antaŭe ĉe Bell Labs.La unuan kampefikan transistoron — fakte MOSFET (MOSFET — metal oxide semiconductor field effect transistor) — konstruis Kahng kaj Atalla ĉe Bell Labs en 1960.
+
+
+== Klasifiko de transistoroj laŭ ties funkci-principo ==
+
+
+== Transistora funkciado ==
+Transistoro estas tri-elektroda aparato. En la DJTo (dupolusa junta transistoro), elektra kurento enmetiĝas en la bazo (B) kaj modulas kurentan fluon inter la aliaj du elektrodoj sciitaj kiel elsendilo kaj kolektilo. En FEToj (angle Field Efefect Tansistor), la tri elektrodoj nomiĝas pordo (P), fonto (F), kaj drenilo (D) respektive, kaj elektra tensio aplikita al la pordo modulas la kurenton inter la fonto kaj la drenilo.
+Estas du specoj de transistoroj kaj ili estas NPN kaj PNP.
+En NPN, vi devas havi pozitivan kurenton en la bazo por ŝalti la transistoron. Kaj en PNP vi devas have negativan kurenton en la bazo por ŝalti la transistoron.
+Ĉar tiu diferenco multe gravas, la simboloj en la cirkvitaj bildoj estas malsamaj por la du specoj.
+
+
+== Dupolusa junta transistoro ==
+Koncepte, oni povas kompreni dupolusan juntan transistoron kiel kunigon de du oponaj diodoj, konektitajn tiel ke ili kunhavas aŭ siajn pozitivajn aŭ negativajn elektrodojn. La antaŭen-biasita elsendil-baza junto allasas portantoj facile flui el la elsendilo. La bazo fabrikiĝas sufiĉe maldika, ke plej multaj injektitaj portantoj atingas la kolektilon anstataŭ rekombini en la bazo. Ĉar malgrandaj ŝanĝoj de la baza kurento signife efikas kolektilan kurenton, la transistoro povas funkcii kiel elektronika amplifilo. La rilatumo  de amplifado, kutime nomita la kurenta pliiĝo (b), estas proksimume cent por plej multaj specoj de DJT-oj. Tio estas unu miliampero de baza kurento kutime igas kolektilan kurenton de proksimume cent miliamperoj. DJT-oj venkas je ĉiaj amplifikiloj de sone al radiofonie frekvencaj aplikaĵoj kaj estas ankaŭ popularaj kiel elektronikaj ŝaltiloj.
+Pri iaj transistoroj (nomataj fototransistoroj), la bazo estas sentiva al la lumo, el kiu fotonoj kreas eligadon de elektronoj, do bazkurenton sufiĉe por amplifado per "transistorefiko". Asociitaj kun lum-emisiaj diodoj (LED-oj) en fotokuplilo, ili permesas transferi signalojn inter du elektre izolitajn cirkvitojn.
+
+
+== Kamp-efikaj transistoroj (FEToj) ==
+La kamp-efika transistoro (ofte mallongigata kiel FET, de la angla field-effect transistor) estas transistoro, kiu uzas elektran kampon por ŝanĝi kondukecon de kanalo en duonkonduktaĵo. Tiaj tipoj de transistoroj estas unupolusaj, ĉar ili uzas nur unu tipon de partikloj por kondukeco (tiuj partikloj nomiĝas "portantoj", angle carrier).
+
+
+=== Bazaj informoj ===
+
+Kamp-efikaj transistoroj depende de la tipo de partiklo-portanto, klasiĝas en tiuj de majoritataj portantoj (kie la kurento okazas pro flue de majoritataj portanto-partikloj) kaj tiuj de minoritataj portantoj (kiuj baziĝas sur la minoritataj portantoj). Unuopa transistoro konsistas el aktiva kanalo tra kiu fluas ŝargo-portantoj, elektronoj aŭ truoj, direkte de la fonto (ofte montrata kiel S por la angla source) ĝis la dreno (D, angle drain). Fonto kaj dreno estas ligitaj al la semikonduktaĵo tra ohmaj kontaktoj. La kondukeco de la kanalo estas funkcio de potencialo aplikita trans la pordego kaj fontoelektrodoj.
+La tri elektrodoj de la kamp-efika transistoro estas:
+
+Fonto (S, angle source), tra kiuj la portanto-partikloj eniras la kanalon. Konvencie, la kurento kiu enfluas tra tiu ĉi kanalo estas indikita kiel IS.
+Dreno (D, angle drain), tra kiuj la portanto-partikloj forlasas la kanalon. Konvencie, la kurento kiu elfluas tra dren-kanalo estas indikita kiel ID. La respektiva elektra tensio inter fonto kaj dreno estas indikita kiel VDS
+Pordo (G, angle gate), la terminalo kiu modulas la kondukecon de la kanalo. Aplikante voltaĵon al G, oni povas kontroli ID.
+
+
+=== Elektrodoj de kamp-efika transistoro ===
+
+Ĉiuj kamp-efikaj transistoroj havas fonton (S), drenon (D), kaj pordon (G) kiel elektrodojn, kiuj respektivas proksimume al la emitoro, kolektoro, kaj bazo de bipolaraj transistoroj.
+La plej multaj FEToj havas kroman kvaran elektrodon nomitan la korpo, bazo, aŭ substrato. Tiu kvara elektrodo helpas ŝargi la transistoron en operacion; oni malofte uzas tiun elektrodon en cirkvito-dezajnoj, sed ĝia ĉeesto estas grava dum por fizika enpakiĝo de integra cirkvito. La grandeco de la pordo, longo L en la diagramo, estas la distanco inter fonto kaj dreno. La larĝo estas la etendaĵo de la transistoro, en la diagramo perpendikulara al la sekco. Kutime la larĝo estas multe pli granda ol la longo de la pordo. Pordolongo de 1 µm limigas la supran frekvencon al proksimume 5 GHz, 0.2 µm al proksimume 30 GHz.
+La nomoj de la elektrodoj rilatas al ties funkcioj. La pordo-elektrodo povas servi kiel stirilo por fermo kaj malfermo de fizika pordo. Tiu pordo permesas elektronojn traflui aŭ blokas ilian trafluon per kreado aŭ forigo de kanalo inter la fonto kaj la dreno. Elektronoj elfluas el la fonto-terminalo direkte al la dreno-elektrodo pro influo de aplikita tensio. La korpo simple rilatas al la ĉefa parto de la duonkonduktaĵo, en kiu la pordo, fonto kaj drenilo situas. Kutime la korp-elektrodo estas ligita al la plej alta aŭ plej negativa tensio ene de la cirkvito (depende de ties tipo). La korpo-elektrodo kaj la fonto-elektrodo foje estas ligitaj kune, ĉar la fonto ankaŭ estas foje ligita al la plej alta aŭ plej malalta tensio de la cirkvito, sed tamen ekzistas pluraj uzoj de FEToj, kiuj ne havas tian konfiguracion, kiel ekzemple transmisiaj pordoj aŭ kaskod-amplifikilaj cirkvitoj.
+
+
+=== Specoj de kamp-efikaj transistoroj ===
+
+La kanalo de FET estas pliriĉigita por produkti aŭ N-tipan aŭ P-specan duonkonduktaĵon.
+La dreno kaj fonto povas esti pliriĉigita de kontraŭa tipo al la kanalo, en tiel-nomataj "malplenigaj FEToj" (depletion mode FET), aŭ pliriĉigitaj de simila tipo kiel la kanalo kiel en "plenigaj FEToj" (enhanced mode FET).
+Kamp-efikaj transistoroj ankaŭ estas distingitaj per la metodo de izol-materialo inter kanalo kaj pordo.
+Specoj de FEToj estas:
+
+CNTFET (nanotuba kamp-efika transistoro)
+DEPFET estas FET formita en tute malplenigita substrato kaj funkcias kiel sensilo, amplifikilo kaj memor-nodo samtempe. Ĝi povas esti utiligita kiel bilda (fotona) sensilo.
+DGMOSFET estas MOSFET kun duoblaj pordoj.
+DNAFET estas speciala FET kiu funkcias kiel bio-sensilo, per uzado de pordo konstruita ele unu-fadenaj DNA-molekuloj por detekti kompletigajn DNA-fadenojn.
+FREDFET (Fast Reverse or Fast Recovery Epitaxial Diode FET) estas speciala FET dizajnita por disponigi superrapidan normaligon (malŝaltixgon) de la korpdiodo.
+En HEMT (transistoro kun alta mobileco de elektronoj), ankaŭ nomita HFET (heterostruktura FET), la tute malplenigita larĝ-bendbreĉa materialo formas la izolaĵon inter pordo kaj korpo.
+HIGFET (transistoro kun heterostruktura izolita pordo), estas uzita plejparte en scienca esplorado.
+IGBT ( izolaĵ-porda dupolusa transistoro) estas uzata por stiri potencon. Ĝi havas strukturon similan al MOSFET konektita kun dupolus-simila ĉefa kondukokanalo. Tiatipaj transistoro estas ofte uzataj por kiam la tensio inter dreno kaj fonto atingas 200-3000 Voltojn. Potencaj MOSFETs (power MOSFETs) plu estas pli taŭgaj por dren-fontaj tensioj de 1 ĝis 200 V.
+ISFET (jon-sentiva kamp-efika transistoro) kutime estas uzataj por mezuri koncentriĝojn de diversaj jonoj en solvaĵo; kiam la jonokoncentriĝo (kiel ekzemple H+, vidu pH) ŝanĝiĝas ankaŭ la kurento-fluo tra la transistoro ŝanĝiĝas respektive.
+JFET (junta kamp-efika transistoro) uzas inversitan pliriĉigitan n-p junton por izoli la pordon de la korpo.
+MESFET (metal-semikonduktaĵa kamp-efika transistoro) anstataŭigas la junton de la JFET per Schottky-baro; oni uzas GaAs-komponaĵo kaj aliaj III-V semikonduktaĵoj.
+MODFET (modulacie-pliriĉigita kampo-efika transistoro) uzas kvantan puton, formitan per selektiva pliriĉigo de la aktiva regiono.
+MOSFET (Metal-oksida semikonduktaĵa kamp-efika transistoro) utiligas izolaĵon (tipe SiO2) inter la pordo kaj la korpo.
+NOMFET estas Nano-partikla Organika Memora Kamp-Efika Transistoro (angle Nanoparticle Organic Memory Field-Effect Transistor).
+OFET estas Organika Kamp-Efika Transistoro (Organic Field-Effect Transistor) kiu uzas organikan semikonduktaĵon en sia kanalo.
+GNRFET estas kamp-efika transistoro kiu uzas nano-rubandon el grafeno por sia kanalo.
+VESFET (Vertikal-Fenda Kamp-Efika Transistoro) estas al kvarangula sen-junta FET kun mallarĝa fendo liganta la fonton kaj drenon ĉe kontraŭaj anguloj. Du pordoj okupas la aliajn angulojn, kaj kontrolas la fluon tra la fendo.
+TFET (Tunela Kamp-Efika Transistoro) estas bazita sur band-al-banda al tunelado.
+
+
+=== MOSFED ===
+La plej kutima speco de kamp-efika transistoro, la MOSFED (metal-oksid-duonkonduktaĵa kamp-efika transistoro) povas ankaŭ esti regardata kiel du malantaŭ-al-malantaŭ-aj diodoj kiuj apartigas la fontan terminalon de la drenila terminalo. La volumenaĵo intera kovriĝas de ekstreme maldika izola tavolo kiu portas la pordan elektrodon. Kiam tensio aplikiĝas inter la pordo kaj la fonton, elektran kampo kreiĝas en tiu volumenaĵo, kiu kaŭzas konduktivan kanalon formi inter lal fonto kaj la dernilo kaj kiu allasas kurentan fluon transe flui. La kvanto da tiu ĉi fluo povas esti modulata aŭ tute haltita per variado de la porda tensio. Ĉar la pordo estas izola, nenioma DK-a kurento fluas al aŭ de la la porda elektrodo. Tiu ĉi manko de porda kurento (komare al la baza kurento de la DJT), kaj la kapablo de la MOSKET agi kiel ŝaltilo, allasas kreadon de aparte rendimentaj cirkvitoj. De tio, MOSKET-oj jam fariĝas la domina teknologio uzita en komputa ekipaĵo tiel kiel mikroprocesoro kaj stora aparato tiel kiel RAMo.
+La plej ofta formo de MOSKET-a transistoro uzata hodiaŭ estas la KMOS-o (komplementa metal-oksid-duonkonduktaĵo), kiu estas la bazo de preskaŭ ĉiuj integraj cirkvitoj produktitaj.
+
+
+== Avantaĝoj de Transistoroj Super Vakutuboj ==
+Antaŭ la transistoro, la termjona valvo aŭ vakutubo estis la ĉefa komponanto de amplifilo. Gravaj avantaĝoj, kiuj allasis transistorojn anstataŭi iliajn valvajn antaŭulojn en preskaŭ ĉiuj aplikaĵoj, estas:
+
+plia malgrandeco
+pli simpla manufakturado, kaj de tio
+pli malalta kosto
+pli malalta operacia tensio
+malĉeesto de hejtita filamento, kaj de tio
+pli malalta pova disipado
+pli alta fidindeco, kaj
+pli longa vivdaŭro.Termjonaj valvoj estas plu uzata ĉe tre alt-povaj aplikaĵoj tiel kiel signala amplifado por radiofonia dissendado. Iuj sonaj amplifiloj ankaŭ uzas ilin, iliaj entuziasmuloj asertas, ke la sono estas pli bona. Aparte, iuj argumentas, ke la pli granda nombro da elektronoj en vakutubo pli bone kondutas kun pli granda statistika precizeco. Aliaj detektas distingan "varmecon" en la sono. La "varmeco" estas fakte distordo kaŭzita de la vakutuboj, sed aŭdamantoj trovas ian kvanton da "nebuleco" plaĉa.
+La "dua generacio" de komputiloj tra la 1950-oj kaj 1960-oj elstarigis tabelojn kun multaj individuaj transistoroj. Sekve, transistoroj, aliaj komponantoj, kaj la necesaj konduktiloj estis integritaj en unuopaj, amas-produktitaj komponantoj en icoj. Ĉe moderna cifera elektroniko, unuopaj transistoroj estas maloftaj, kvankam ili restas kutimaj en povaj kaj analogaj aplikaĵoj.
+
+
+== Kromsignifo ==
+Laŭ la komuna parolmaniero, ricevaparato kun transistoroj estas metonimie ankaŭ nomata transistoro, kiel ekzemple radioricevilo.
+
+
+== Vidu ankaŭ ==
+Diodo
+Integrita cirkvito
+Tiristoro
+
+
+== Eksteraj ligiloj ==
+(esperante) De la fizika fundamento tra la konsisteroj ĝis la funkcikapablaj cirkvitoj kaj elektrofaka terminaro Arkivigite je 2016-12-12 per la retarkivo Wayback Machine kompilita de Kristály Tibor.
+PBS's Transistorized!
+American Physical Society (APS) This Month in Physics History - November 17 - December 23, 1947: Invention of the First Transistor (el Retarkivo 2003)
+Science Friday, "50 Years of the Transistor Arkivigite je 2007-07-14 per la retarkivo Wayback Machine". 12-an de decembro 1997.
+Transistor Cross Reference Database Arkivigite je 2007-02-16 per la retarkivo Wayback Machine de Jerry Russell
+AudioUK's Milestones: http://www.audiouk.com/info/transistor.htm
+The CK722 Museum
+
+
+== Referencoj ==

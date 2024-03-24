@@ -1,0 +1,633 @@
+revision: 7155968
+title: "Algebrick\xE1 \u0161trukt\xFAra"
+url: https://sk.wikipedia.org/wiki/Algebrick%C3%A1_%C5%A1trukt%C3%BAra
+
+
+---
+
+V matematike, presnejšie v abstraktnej algebre, je algebrická štruktúra (iné názvy: algebra, algebrický systém, staršie algebraická štruktúra, algebraický systém) označenie pre množinu (nazývanú nosná množina) spolu s jednou alebo viacerými operáciami definovanými na tejto množine, pričom musí byť splnený nejaký súbor axióm.Algebrická štruktúra na množine A je teda daná dvoma množinami (môže sa definovať ako dvojica týchto množín):
+
+množinou A, ktorú nazývame oborom algebrickej štruktúry alebo poľom algebrickej štruktúry. Podľa toho, či je konečná alebo nekonečná, nazýva sa algebraická štruktúra konečnou alebo nekonečnou.
+Množinou operácií na množine A (aj táto množina môže byť nekonečná).Príklady algebraických štruktúr zahŕňajú grupy, okruhy, pole, či zväzy. Zložitejšie štruktúry môžu byť definované predstavením viacerých operácií, rôznymi nosnými množinami, alebo zamieňaním definujúcich axióm. Príkladom komplexnejšej algebraickej štruktúry je vektorový priestor.
+Vlastnosti špecifických algebraických štruktúr sa študujú v abstraktnej algebre. Všeobecná teória algebraických štruktúr bola formalizovaná odborom univerzálna algebra.
+
+
+== Úvod ==
+Sčítanie a násobenie na číslach sú prototypickým príkladom operácií, ktoré kombinujú dva prvky z množiny na vyprodukovanie tretieho. Tieto operácie spĺňajú niektoré z algebraických vlastností (viď vlastnosti binárnych operácií). Napríklad a + (b + c) = (a + b) + c a a(bc) = (ab)c sú obe príkladom asociativity operácií sčítania, resp. násobenia. Ďalej a + b = b + a, a ab = ba sú príkladmi komutativity. Mnoho systémov študovaných matematikou má nad sebou definované operácie, ktoré majú niektoré (nie zákonite všetky) z takýchto vlastností. 
+Matematici množiny spolu s operáciami, ktoré spĺňajú niektoré takéto vlastnosti pomenovávajú a študujú ich ako algebraické štruktúry. Keď pre nejaký nový problém je možné ukázať, že spĺňa vlastnosti niektorej algebraickej štruktúry, všetka práca, ktorá bola v tejto kategórii urobená, môže byť aplikovaná aj na nový problém.
+Vo všeobecnosti môžu algebraické štruktúry obsahovať ľubovoľný počet množín a operácií z rôznou aritou, tu sa však budeme zameriavať na algebraické štruktúry s binárnymi operáciami nad jednou množinou.
+
+
+== Druhy/príklady ==
+Nasledujúce príklady rozhodne nie sú úplným výčtom algebraických štruktúr, ale sú mienené ako reprezentatívny zoznam a zahŕňajú najčastejšie štruktúry.
+
+
+=== Grupoidné štruktúry ===
+Štruktúry s jednou množinou a jednou operáciou.
+Nech 
+  
+    
+      
+        G
+      
+    
+     
+   je množina a 
+  
+    
+      
+        ∘
+      
+    
+     
+   je binárna operácia na množine 
+  
+    
+      
+        G
+      
+    
+     
+  .
+
+Grupoid je usporiadaná dvojica 
+  
+    
+      
+        (
+        G
+        ,
+        ∘
+        )
+      
+    
+     
+  .
+Pologrupa (alebo asociatívny grupoid) je grupoid, v ktorom je operácia 
+  
+    
+      
+        ∘
+      
+    
+     
+   asociatívna.
+Monoid je pologrupa s neutrálnym prvkom 
+  
+    
+      
+        e
+        ∈
+        G
+      
+    
+     
+  
+Grupa je monoid, v ktorom má každý prvok inverziu.Vyššie uvedené štruktúry sa nazývajú komutatívne ak operácia 
+  
+    
+      
+        ∘
+      
+    
+     
+   je komutatívna.
+
+
+=== Okruhové štruktúry ===
+Štruktúry s jednou množinou a dvoma operáciami.
+Nech 
+  
+    
+      
+        R
+      
+    
+     
+   je množina a 
+  
+    
+      
+        +
+      
+    
+     
+   a 
+  
+    
+      
+        ⋅
+      
+    
+     
+   sú binárne operácie na množine 
+  
+    
+      
+        R
+      
+    
+     
+  .
+
+Okruh je trojica 
+  
+    
+      
+        (
+        R
+        ,
+        +
+        ,
+        ⋅
+        )
+      
+    
+     
+  , kde 
+  
+    
+      
+        (
+        R
+        ,
+        +
+        )
+      
+    
+     
+   je komutatívna grupa (tzv. Abelovská grupa), 
+  
+    
+      
+        (
+        R
+        ,
+        ⋅
+        )
+      
+    
+     
+   je monoid a pre všetky 
+  
+    
+      
+        a
+        ,
+        b
+        ,
+        c
+        ∈
+        R
+      
+    
+     
+   platí
+
+  
+    
+      
+        a
+        ⋅
+        (
+        b
+        +
+        c
+        )
+        =
+        (
+        a
+        ⋅
+        b
+        )
+        +
+        (
+        a
+        ⋅
+        c
+        )
+      
+    
+     
+   (ľavá distributivita) a
+
+  
+    
+      
+        (
+        b
+        +
+        c
+        )
+        ⋅
+        a
+        =
+        (
+        b
+        ⋅
+        a
+        )
+        +
+        (
+        c
+        ⋅
+        a
+        )
+      
+    
+     
+   (pravá distributivita).
+Komutatívny okruh je taký okruh, že monoid 
+  
+    
+      
+        (
+        R
+        ,
+        ⋅
+        )
+      
+    
+     
+   je komutatívny.
+Triviálny okruh je okruh 
+  
+    
+      
+        (
+        {
+        0
+        }
+        ,
+        +
+        ,
+        ⋅
+        )
+      
+    
+     
+   (teda okruh s nosnou množinou velkosti 1).
+Obor integrity je taký netriviálny komutatívny okruh, že pre všetky 
+  
+    
+      
+        a
+        ,
+        b
+        ∈
+        R
+      
+    
+     
+   platí: 
+  
+    
+      
+        a
+        ,
+        b
+        ≠
+        0
+        ⇒
+        a
+        ⋅
+        b
+        ≠
+        0
+      
+    
+     
+   (t.j. práve keď 
+  
+    
+      
+        (
+        
+          R
+          
+            ∗
+          
+        
+        ,
+        ⋅
+        )
+      
+    
+     
+   je grupoid).
+Teleso je netriviálny komutatívny okruh, ktorého každý nenulový prvok je invertibilný aj vzhľadom k druhej operácií tohto okruhu (t.j. okruh 
+  
+    
+      
+        (
+        R
+        ,
+        +
+        ,
+        ⋅
+        )
+      
+    
+     
+   je teleso, ak 
+  
+    
+      
+        (
+        
+          R
+          
+            ∗
+          
+        
+        ,
+        ⋅
+        )
+      
+    
+     
+   je grupa).
+
+
+== Notácia ==
+Často sa pri práci s algebraickými štruktúrami používa miesto celého označenia algebraickej štruktúry vrátane jej operácií, iba označenie pre jej nosné množiny. V tomto prípade sa predpokladá, že je z kontextu jasné s akými operáciami danú štruktúru myslíme. Napríklad grupa 
+  
+    
+      
+        (
+        G
+        ,
+        ⋅
+        )
+      
+    
+     
+   sa môže označiť len ako grupa 
+  
+    
+      
+        G
+      
+    
+     
+  , keď je v kontexte zrejmé, že jej asociovaná operácia je operácia 
+  
+    
+      
+        ⋅
+      
+    
+     
+  .
+Pri zapisovaní a práci s algebraickými štruktúrami je možno použiť ako multiplikatívnu, tak aditívnu notáciu.
+
+
+=== Multiplikatívna notácia ===
+Pri multiplikatívnej notácii sa na operáciu nad nosnou množinou algebraickej štruktúry nahliada ako na operáciu násobenia. Operáciu danej štruktúry medzi dvoma prvkami nosnej množiny, pri používaní multiplikatívnej notácie, nazývame súčin. Súčin rovnakého prvku nazveme umocnením. Neutrálny prvok nazveme jednotkovým.
+Nech 
+  
+    
+      
+        (
+        G
+        ,
+        ∘
+        )
+      
+    
+     
+   je algebraická štruktúra (v tomto prípade grupoid) a 
+  
+    
+      
+        a
+        ,
+        b
+        ∈
+        G
+      
+    
+     
+  . Potom v multiplikatívnej notácii zapíšeme:
+
+"súčin" 
+  
+    
+      
+        a
+        ∘
+        b
+      
+    
+     
+   ako 
+  
+    
+      
+        a
+        b
+      
+    
+     
+  
+"mocninu" prvku 
+  
+    
+      
+        a
+        ∘
+        a
+      
+    
+     
+   ako 
+  
+    
+      
+        
+          a
+          
+            2
+          
+        
+      
+    
+     
+  
+neutrálny prvok ako 
+  
+    
+      
+        1
+      
+    
+     
+  , prípadne 
+  
+    
+      
+        
+          1
+          
+            G
+          
+        
+      
+    
+     
+  
+inverziu prvku 
+  
+    
+      
+        a
+      
+    
+     
+   ako 
+  
+    
+      
+        
+          a
+          
+            −
+            1
+          
+        
+      
+    
+     
+  
+
+
+=== Aditívna notácia ===
+Pri aditívnej notácii sa na operáciu nad nosnou množinou algebraickej štruktúry nahliada ako na operáciu sčítania. Operáciu danej štruktúry medzi dvoma prvkami nosnej množiny, pri používaní multiplikatívnej notácie, nazývame súčet. Súčet rovnakého prvku nazveme násobením. Neutrálny prvok nazveme nulovým.
+Nech 
+  
+    
+      
+        (
+        G
+        ,
+        ∘
+        )
+      
+    
+     
+   je algebraická štruktúra (v tomto prípade grupoid) a 
+  
+    
+      
+        a
+        ,
+        b
+        ∈
+        G
+      
+    
+     
+  . Potom v aditívnej notácii zapíšeme:
+
+"sčítanie" 
+  
+    
+      
+        a
+        ∘
+        b
+      
+    
+     
+   ako 
+  
+    
+      
+        a
+        +
+        b
+      
+    
+     
+  
+"násobenie" prvku 
+  
+    
+      
+        a
+        ∘
+        a
+      
+    
+     
+   ako 
+  
+    
+      
+        2
+        a
+      
+    
+     
+  
+neutrálny prvok ako 
+  
+    
+      
+        0
+      
+    
+     
+  , prípadne 
+  
+    
+      
+        
+          0
+          
+            G
+          
+        
+      
+    
+     
+  
+inverziu prvku 
+  
+    
+      
+        a
+      
+    
+     
+   ako 
+  
+    
+      
+        −
+        a
+      
+    
+     
+  Pre neutrálny prvok sa v oboch spôsoboch notácie tiež často používa symbol 
+  
+    
+      
+        e
+      
+    
+     
+   (tiež je možné pridať v dolnom indexe názov nosnej množiny).
+
+
+=== Použitie ===
+Spravidla sa v kontexte operácie bežného násobenia (napr. na číselných množinách, či násobenia matíc) používa multiplikatívna notácia. V kontexte bežného sčítania (napr. sčítanie na číselných množinách) sa používa aditívna notácia.
+V prípade iných operácií je možné použiť ľubovoľnú notáciu. Najčastejšie sa však je možné, z dôvodu jej úspornejšieho zápisu, stretnúť s multiplikatívnou notáciou.
+
+
+== Referencie ==
+
+
+== Externé odkazy ==
+FILIT – zdroj, z ktorého pôvodne čerpal tento článok.
+Teória grúp

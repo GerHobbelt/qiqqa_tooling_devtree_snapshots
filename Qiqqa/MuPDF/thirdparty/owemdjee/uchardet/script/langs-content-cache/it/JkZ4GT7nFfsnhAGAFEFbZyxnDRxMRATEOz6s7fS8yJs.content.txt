@@ -1,0 +1,40 @@
+revision: 127628664
+title: Interblocco ricontrollato
+url: https://it.wikipedia.org/wiki/Interblocco_ricontrollato
+
+
+---
+
+L'interblocco ricontrollato o Double Checked Locking è uno dei più subdoli antipattern della programmazione concorrente, principalmente in Java. A prima vista sembra un utile strumento per migliorare le prestazioni, tuttavia questo schema non funzionava prima dell'introduzione dell'attuale JavaMemoryModel.
+
+
+== Esempio ==
+
+Inizializzare un oggetto comporta la scrittura di alcune variabili (stato dell'oggetto), pubblicare un oggetto riguarda la scrittura di altre variabili (il reference). Se non si assicura che l'inizializzazione di un oggetto accada prima che un thread possa leggerne il reference, la scrittura del reference può essere riordinata con le scritture dello stato dell'oggetto.
+In tale caso un Thread può vedere un valore aggiornato per il reference, ma un valore non aggiornato per alcune delle variabili che compongono lo stato dell'oggetto. Si ottiene quindi il reference ad un oggetto parzialmente costruito.
+Senza utilizzare tecniche troppo elaborate e spesso inutili è possibile risolvere il problema con il seguente codice:
+
+Un'alternativa è l'utilizzo di una variabile booleana che mantenga lo stato dell'inizializzazione dell'istanza del singleton. Questo impedisce che thread concorrenti possano ottenere un riferimento all'istanza prima che il costruttore dell'oggetto abbia terminato e reso l'oggetto consistente:
+
+Il momento in cui avviene l'istruzione di assegnazione alla variabile booleana garantisce che il costruttore abbia terminato l'inizializzazione dell'oggetto.
+Anche nello scenario in cui il thread che ha avviato la costruzione dell'oggetto non sia ancora uscito dalla sezione critica, qualsiasi altro thread concorrente che ottenga un esito negativo dal primo test fuori dalla sezione critica, restituirà direttamente (senza attendere sul mutex) l'oggetto correttamente inizializzato.
+Questa soluzione al problema, quindi, si basa sull'idea di non testare direttamente il riferimento all'oggetto, ma una variabile distinta che sia stata settata successivamente alla costruzione dell'oggetto.
+
+
+== Note ==
+
+
+== Bibliografia ==
+Reality Check, Douglas C. Schmidt, C++ Report, SIGS, Vol. 8, No. 3, March 1996.
+Double-Checked Locking: An Optimization Pattern for Efficiently Initializing and Accessing Thread-safe Objects, Douglas Schmidt e Tim Harrison. 3rd annual Pattern Languages of Program Design conference, 1996
+Lazy instantiation, Philip Bishop e Nigel Warren, JavaWorld Magazine
+Programming Java threads in the real world, Part 7, Allen Holub, Javaworld Magazine, April 1999.
+Java 2 Performance and Idiom Guide, Craig Larman e Rhett Guthrie, p100.
+Java in Practice: Design Styles and Idioms for Effective Java, Nigel Warren and Philip Bishop, p142.
+Rule 99, The Elements of Java Style, Allan Vermeulen, Scott Ambler, Greg Bumgardner, Eldon Metz, Trvor Misfeldt, Jim Shur, Patrick Thompson, SIGS Reference library
+
+
+== Collegamenti esterni ==
+(EN) Declaration: Double Checked Locking Idiom is broken, su cs.umd.edu.
+(EN) http://www.javaworld.com/jw-02-2001/jw-0209-double.html Archiviato il 4 febbraio 2012 in Internet Archive.
+(EN) http://www-128.ibm.com/developerworks/java/library/j-dcl.html

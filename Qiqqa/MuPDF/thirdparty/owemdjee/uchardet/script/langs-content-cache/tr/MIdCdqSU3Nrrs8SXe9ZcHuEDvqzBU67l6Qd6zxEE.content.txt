@@ -1,0 +1,181 @@
+revision: 29295859
+title: Caulimoviridae
+url: https://tr.wikipedia.org/wiki/Vir%C3%BCs_s%C4%B1n%C4%B1fland%C4%B1rmas%C4%B1
+
+
+---
+
+Virüs sınıflandırması, virüslerin taksonomik bir sistem içinde adlandırılma ve gruplandırılmalarını içerir. Hücresel canlıların görece oturmuş sınıflandırma sistemlerinde olduğu gibi, virüs sınıflandırması da süregiden tartışma ve önerilerin konusudur. Bu, büyük ölçüde, virüslerin henüz kesin bir şekilde "canlı" ya da "canlı olmayan" varlıklar olarak tanımlanamamış olmasından kaynaklanmaktadır. Dolayısıyla da virüsler, bitkiler ve hayvanlar gibi hücresel canlıları konu edinen biyolojik sınıflandırma sistemleri içine çeşitli nedenlerle sorunsuz bir şekilde yerleştirilememektedir.
+Virüs sınıflandırması, virüslerin yapı (morfoloji), nükleik asit tipi, çoğalma tarzı, konak canlı ve neden oldukları hastalık gibi fenotipik özelliklerini temel alır. Bunun için günümüzde Baltimor sınıflandırması ve UVTK sınıflandırması olarak iki ana sistem birlikte kullanılmaktadır.
+
+
+== Sınıflandırma yöntemleri ==
+
+
+=== Baltimore sınıflandırması ===
+
+Baltimore sınıflandırması, virüsleri nükleik asit türü (DNA ya da RNA), nükleik asiti ipliği sayısı (tek iplikli ya da çift iplikli) ve çoğalma yöntemine göre Roma rakamları ile numaralanmış yedi gruptan birinin içine yerleştirir. Neden oldukları hastalıklar ve morfolojik özelliklerine göre de sınıflandırılmaları mümkünse de farklı virüslerin aynı hastalığa yol açabiliyor olması ve yapılarının çok benzer olabilmesi nedeniyle bu yöntemler tatminkar değildir. Ayrıca, çok küçük boyutları nedeniyle virüslerin yapılarının mikroskop altında belirlenmesi de oldukça zordur. Bu noktada, genomlarına göre sınıflandırmak, benzer davranış gösteren virüslerin belli kategorilerde toplanmasını sağlar. Böylece, ileri araştırmalar için belli bir yol da çizilebilmektedir. Nobel Ödülü biyolog David Baltimore tarafından geliştirilmiştir.
+Baltimore sınıflandırmasının sunduğu ve Roma rakamlarıyla numaralandırılmış olan yedi grup aşağıda verilmiştir:
+
+I: çiDNA virüsleri (örneğin  Adenovirüsler, Herpesvirüsler, Poksvirüsler)
+II: tiDNA virüsleri (+ iplikçikli veya "yönelimli") DNA (örneğin  Parvovirüsler)
+III: çiRNA virüsleri (örneğin  Reovirüsler)
+IV: (+) tiRNA virüsleri (+ iplikçikli veya "yönelimli") RNA (örneğin Pikornavirüsler, Togavirüsler)
+V: (−) tiRNA virüsleri (− iplikçikli veya "yönelimli") RNA (örneğin  Ortomiksovirüsler, Rabdovirüsler)
+VI: tiRNA-RT virüsleri (+ iplikçikli veya "yönelimli") Hayat döngüsü içerisinde DNA aracılı RNA kullanır (örneğin Retrovirüsler)
+VII: çiDNA-RT virüsleri (örneğin Hepadnavirüsler)
+
+
+=== UVTK sınıflandırması ===
+Uluslararası Virüs Taksonom Komitesi (UVTK), 1990'ların başında, virüslerin adlandırılması ve sınıflanması için çeşitli kurallar geliştirerek uygulamaya koymuştur ve günümüzde de virüs türlerinin adlandırılması ve bu sistem içinde yerleştirilmesini gözetmektedir. UVTK sınıflandırması, takson yapısına sahip olması gibi özellikleriyle biyolojik sınıflandırma yöntemleri ile çeşitli benzerlikler taşısa da bazı farklarla onlardan ayrılır:
+
+UVTK sınıflandırması takım seviyesinden başlar ve tür seviyesine kadar iner. Geçerli seviyeler, ilgili takson son ekleri parantez içinde belirtilmiş halde, şöyledir:• Takım (-virales)
+• Familya (-viridae)
+• Alt familya (-virinae)
+• Cins (-virus)
+• Tür (-virus)Uluslararası Bitkibilimsel Adlandırma Kuralları'ndakine benzer şekilde, cins ve tür adlarından başka takım ve familya adları da italik yazılır.
+Önemli bir fark, tür adlarının genellikle [Hastalık]virus biçiminde belirlenmesidir.Yaklaşık 80 familya ve 4.000 türün bilindiği bu sistemde takımların tanımlanması henüz çok yenidir ve yavaş işlemektedir: bugüne dek yalnızca üç takım belirlenmiştir (Caudovirales, Nidovirales, Mononegavirales) ve çoğu familya herhangi bir takım altına yerleştirilmemiş durumdadır. Benzer şekilde, 24 kadar cinsin de familyaları henüz belli değildir.
+
+
+== Sınıflandırma ==
+
+
+=== Grup I: çift iplikli DNA virüsleri ===
+Takım Caudovirales
+Familya Myoviridae
+Familya Podoviridae
+Familya Siphoviridae
+Hastalık yapanlar:
+Familya Ascoviridae
+Familya Adenoviridae
+Familya Asfiviridae
+Familya Baculoviridae
+Familya Corticoviridae
+Familya Fuselloviridae
+Familya Guttaviridae
+Familya Herpesviridae
+Familya Iridoviridae
+Familya Lipothrixviridae
+Familya Nimaviridae
+Familya Papillomaviridae
+Familya Phycodnaviridae
+Familya Plasmaviridae
+Familya Polyomaviridae - Simian virüs 40
+Familya Poxviridae - e.g. Cowpox virus, Variola virus (smallpox)
+Familya Rudiviridae
+Familya Tectiviridae
+Hastalık yapanlar:
+Mimivirüs; Tipik türü: Acanthamoeba polyphaga mimivirus
+
+
+=== Grup II: tek iplikli DNA virüsleri ===
+Unassigned bakteriyofajlar
+Familya Inoviridae
+Familya Microviridae
+Hastalık yapan virüsler:
+Familya Geminiviridae
+Familya Circoviridae
+Familya Nanoviridae
+Familya Parvoviridae - Parvovirüs B19 adenovirüs
+Hastalık yapanlar:
+Anellovirus; Tipik türü: Torque teno virus
+
+
+=== Grup III: çift iplikli RNA virüsleri ===
+Familya Birnaviridae
+Familya Chrysoviridae
+Familya Cystoviridae
+Familya Hypoviridae
+Familya Partitiviridae
+Familya Reoviridae - Rotavirüs
+Familya Totiviridae
+Hastalık yapanlar:
+Endornavirüs; Tipik türü: Vicia faba endornavirus
+
+
+=== Grup IV: pozitif polariteli tek iplikli RNA virüsleri ===
+TakımNidovirales
+Familya Arteriviridae
+Familya Coronaviridae
+Familya Roniviridae
+Hastalık yapanlar:
+Familya Astroviridae
+Familya Barnaviridae
+Familya Bromoviridae
+Familya Caliciviridae
+Familya Closteroviridae
+Familya Comoviridae
+Familya Dicistroviridae
+Familya Flaviviridae - Hepatit C virüsü
+Familya Flexiviridae
+Familya Hepeviridae - Hepatit E virüsü
+Familya Leviviridae
+Familya Luteoviridae
+Familya Marnaviridae
+Familya Narnaviridae
+Familya Nodaviridae
+Familya Picornaviridae - Hepatit A virüsü
+Familya Potyviridae
+Familya Sequiviridae
+Familya Tetraviridae
+Familya Togaviridae - Kızamıkçık virüsü
+Familya Tombusviridae
+Familya Tymoviridae
+Hastalık yapanlar:
+Cins Benyvirus; Tipik türü: Pancar nekrotik sarı damar virüsü
+Cins Cheravirus; Tipik türü: Kiraz yaprak virüsü
+Cins Furovirus; Tipik türü: Soil-borne buğday mozaik virüsü
+Cins Hordeivirus; Tipik türü: Arpa çizgili mozaik virüsü
+Cins Idaeovirus; Tipik türü: Ahududu cüce virüsü
+Cins Machlomovirus; Tipik türü: Mısır klorotik benekli virüsü
+Cins Ourmiavirus; Tipik türü: Kavun virüsü
+Cins Pecluvirus; Tipik türü: Yerfıstığı clump virüsü
+Cins Pomovirus; Tipik türü: Patates mop-top virüsü
+Cins Sadwavirus; Tipik türü; Satsuma cüce virüsü
+Cins Sobemovirus; Tipik türü: Fasulye mozaik virüsü
+Cins Tobamovirus; Tipik türü: Tütün mozaik virüsü
+Cins Tobravirus; Tipik türü: Tütün rattle virüsü
+Cins Umbravirus; Tipik türü: Havuç benekli virüsü
+
+
+=== Grup V: negatif polariteli tek iplikli RNA virüsleri ===
+Takım Mononegavirales (Segmentli olmayan negatif virüsler)
+Familya Bornaviridae
+Familya Filoviridae - Ebola virüsü, Marburg virüsü
+FamilyaParamyxoviridae - Kızamık virüsü, Kabakulak virüsü
+Familya Rhabdoviridae - Kuduz virüsü
+Segmentli negatif virüsler:
+Familya Arenaviridae
+Familya Bunyaviridae - Hantavirüs
+Familya Orthomyxoviridae - Influenza virüsü
+Hastalık yapanlar:
+Cins Deltavirus; Tipik türü: Hepatit delta virüsü
+Cins Ophiovirus; Tipik türü: Citrus psorosis virüsü
+Cins Tenuivirus; Tipik türü: Prinç çizgili virüsü
+Cins Varicosavirus; Tipik türü: Lettuce big-vein associated virus
+
+
+=== Grup VI: ters transkripsiyon yapan RNA virüsleri ===
+Familya Metaviridae
+Familya Retroviridae
+
+
+=== Grup VII: ters transkripsiyon yapan DNA virüsleri ===
+Familya Hepadnaviridae - Hepatit B virüsü
+Familya Caulimoviridae - Karnabahar mozaik virüsü
+
+
+== Viral ajanlar ==
+Sözü edilen ajanlar oldukça küçük virüslerdir. 
+
+
+=== Viroidler ===
+Familya Pospiviroidae
+Cins Pospiviroid; Tipik türü: Patates yumru viroidi
+Cins Hostuviroid; Tipik türü: Hop stunt viroid
+Cins Cocadviroid; Tipik türü: Coconut cadang-cadang viroid
+Cins Apscaviroid; Tipik türü: Elma scar skin viroid
+Cins Coleviroid; Tipik türü: Coleus blumei viroid 1
+Familya Avsunviroidae
+Cins Avsunviroid; Tipik türü: Avokado sunblotch viroidi
+Cins Pelamoviroid; Tipik türü: Şeftali mozaik viroidi

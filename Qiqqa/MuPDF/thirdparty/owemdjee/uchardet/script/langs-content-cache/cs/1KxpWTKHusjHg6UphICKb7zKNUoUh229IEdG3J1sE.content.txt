@@ -1,0 +1,46 @@
+revision: 22722978
+title: SteamOS
+url: https://cs.wikipedia.org/wiki/SteamOS
+
+
+---
+
+SteamOS je linuxová distribuce založena na distribuci Debian, kterou společnost Valve Corporation vyvíjela jako primární operační systém pro své herní konzole Steam Machine. Byla odhalena 13. prosince 2013 zároveň s oznámením začátku uživatelského betatestování Steam Machines. K 25. únoru 2022 se operační systém SteamOS ve verzi 3.0, nově založené na Arch Linuxu, používá primárně v handheldech Steam Deck.
+
+
+== Vlastnosti ==
+Operační systém SteamOS je určen primárně k hraní počítačových her v obývacím pokoji. Jeho uživatelé mohou streamovat hry z počítačů běžících na jiných operační systémech (Windows, macOS, Linux) na počítač používající SteamOS a mohou využít sdílení herní knihovny stejně jako v programu Steam. Valve tvrdí, že pomocí SteamOS dokázali zvýšit rychlost vykreslování snímků her (FPS).Jelikož SteamOS je určený pouze k hraní her v obývacím pokoji, nemá mnoho jiných vestavěných funkcí s výjimkou prohližení internetu a hraní her; v základní instalaci chybí například správce souborů a prohlížeč obrázků, uživatelé ovšem mohou použít dostupné prostředí pracovní plochy GNOME a doinstalovat libovolný software. SteamOS zatím nepodporuje streamovací služby, ale Valve v současné době vyjednává se službami jako Spotify a Netflix o budoucí spolupráci a již nyní jsou na obchodu Steam k dispozici filmy nezávislých tvůrců. SteamOS nativně podporuje grafické karty od výrobců Nvidia, Intel a AMD.Valve později do SteamOS přidalo podporu přehrávaní filmů (ovšem pouze filmů, které se prodávají na obchodu Steam), televizních programů a hudby z lokálních úložišť. Aktualizace systému z října 2015 přidala do vestavěného internetového prohlížeče podporu pro Netflix a další obsah chráněný ochranou DRM.Současné hardwarové požadavky výchozí instalace SteamOS jsou:
+64bitový procesor od Intel či AMD
+4 GB (a více) RAM
+200 GB (a více) místa na pevném disku
+grafická karta od NVIDIA (architektura Fermi a novější), Intel či AMD (Radeon 8500 a novější)
+port USB pro instalaci
+podpora UEFIExistuje také upravený instalátor, pomocí kterého jde SteamOS nainstalovat na pevné disky o menší velikosti a instalátor, který podporuje základní desky využívající BIOS. Tyto instalátory se dají najít v repozitáři Valve.
+
+
+== Historie ==
+Při přednášce na LinuxConu v roce 2013 prohlásil spoluzakladatel a ředitel firmy Valve Gabe Newell, že věří, že „Linux a otevřený software jsou budoucností hraní“ (ačkoliv není jasné, zda si myslí, že i samotné hry by měly mít otevřenou licenci), oznámil, že jeho společnost pomáhá herním vývojářům, kteří chtějí dostat své hry na Linux a že Valve připravuje oznámení iniciativy, která dostane Linux do obývacích pokojů. Dne 20. září 2013 Valve na svém webu vydalo prohlášení sdělující, že „svět Steamu se rozšíří v roce 2014“ a že připravují tři oznámení pro „zákazníky, kteří chtějí Steam ve svém obývacím pokoji“. 23. září bylo odhaleno první oznámení, SteamOS. Valve prohlásilo, že „došli k závěru, že nejlepší prostředí pro jejich zákazníky bude operační systém postavený kolem samotného Steamu.“ Odhalení se soustředilo především na otevřenost SteamOS; bylo oznámeno, že uživatelé budou moci upravit či nahradit jakoukoliv z jeho částí a že bude k dispozici zdarma.V říjnu 2013 Valve oznámilo dvoudenní konferenci „Steam Dev Days“, kde si herní vývojáři mohli ozkoušet SteamOS a Steam Machines a sdělit Valve své připomínky. Stejný měsíc Nvidia oznámila spolupráci s Valve na podpoře SteamOS s pomocí vývojového prostředí Nvidia GameWorks obsahujícího PhysX, OptiX, VisualFX a další API od Nvidie.V listopadu 2013 Valve potvrdilo, že nebudou vyvíjet žádné exkluzivní hry pro SteamOS a doporučili ostatním vývojářům to samé, jelikož jejich cílem je rozšířit hry mezi co největší množství zákazníků. V prosinci Valve oznámilo, že beta verze SteamOS vyjde 13. prosince 2013. Po vydání této beta verze Valve doporučilo uživatelům, že pokud nemají zkušenosti s linuxovými systémy, měli by počkat až na další verze v roce 2014.
+
+
+== Výkon ==
+Web Phoronix v prosinci 2013 porovnal výkon tří grafických karet od firmy Nvidia na SteamOS a Windows 8.1. Závěrem bylo, že linuxové ovladače od firmy Nvidia dosahují srovnatelného výkonu jako ovladače na Windows, ze kterých vycházejí.
+GameSpot v lednu 2014 porovnal výkon SteamOS ve hrách s výkonem Windows s použitím stejného hardwaru na dvou počítačových sestavách s grafickými kartami od Nvidia a AMD a nastavení. Bylo zjištěno, že na grafické kartě od AMD při použití SteamOS běží Dota 2, Left 4 Dead 2 a Metro: Last Light o poznání pomaleji. Left 4 Dead 2 se taktéž zasekávalo, což bylo přiřčeno chybě v ovladači. Na kartě Nvidia běželo Metro: Last Light o něco rychleji a Dota 2 běžela stejně. Ve článku bylo řečeno, že Left 4 Dead 2 na kartě Nvidia pod SteamOS běželo rychleji, ale nebylo specifikováno jak, protože podle grafu uvedeném ve článku mělo v porovnání s Windows méně snímků za sekundu. Na obou kartách měly v porovnání s Windows Left 4 Dead 2 a Dota 2 na SteamOS delší nahrávací časy.Web Ars Technica v listopadu 2015 po oficiálním vydání Steam Machines porovnal výkon multiplatformních her na SteamOS a Windows 10 na stejném počítači a zjistil, že hry na SteamOS měly v porovnání s Windows 10 o 21% až 58% nižší průměrný počet snímků za sekundu. Dle názoru autora článku na Ars Technica to mohlo být způsobeno nedostatkem zkušeností vývojářů s optimalizací pro OpenGL a v budoucnu by mohlo dojít k zlepšení. V článku také bylo poznamenáno, že jejich test, obsahující pouhých šest her na jediném počítači, není příliš směrodatný.
+Hry programované primárně pro OpenGL a Linux mohou běžet rychleji než jejich verze na Windows, což je vidět na testu webu Phoronix, kde Open Source klon hry Quake 3 OpenArena běžel na Ubuntu 15.04 rychleji než ve Windows 10. Primární subjekty testu webu Phoronix byly hry OpenArena, Xonotic a program GpuTest. V OpenArena a GpuTest bylo Ubuntu 15.04 mírně rychlejší než Windows 10 pro všechny grafické karty použité v testu. Xonotic v0.8 ovšem běžel mnohem lépe na Windows 10 než na Ubuntu 15.04.
+
+
+== Přijetí ==
+Oznámení systému SteamOS bylo komentováno spoustou vývojářů počítačových her. Tvůrce hry Minecraft Markus Persson prohlásil, že to je „skvělá zpráva“ a tvůrce hry Thomas Was Alone Mike Bithell nazval systém „povzbudivým“ pro nezávislé hry. Další vývojáři jako DICE, tvůrci série Battlefield, a Creative Assembly, tvůrci série Total War, prohlásili, že je možné, že jejich budoucí tituly vyjdou na Linux a SteamOS.Ředitel studia Gearbox Software Randy Pitchford prohlásil, že podle něj SteamOS potřebuje nějakou exkluzivní aplikaci, která k němu přitáhne vývojáře a že „bez nějaké hry, kterou by každý musel mít, čekám, že herní průmysl bude SteamOS zvědavě pozorovat, ale celkově ho to příliš neovlivní.“ Richard Stallman, hlava nadace Free Software Foundation, SteamOS opatrně podporuje, ale nesouhlasí s použitím DRM a prodejem her.Beta verze SteamOS se setkala se smíšenými recenzemi. Henry Winchester v recenzi webu TechRadar pochválil přehledné uživatelské prostředí a budoucí potenciál, ale zkritizoval obtížnou instalaci a chybějící funkce z programu Steam. Thomas Morgan z webu Eurogamer na problémy při instalaci nenarazil, ale negativně komentoval absenci detekce nativního rozlišení monitoru a audio výstupu a malý počet dostupných her. Také ovšem pochválil uživatelské prostředí a nazval beta verzi „dobrým začátkem.“Od prvotního vydání se média jako Ars Technica k SteamOS vrátily a vydaly články o jeho růstu, kladech a záporech. Dva z výrobců, kteří plánovali vyrábět soustavy se značkou Steam Machine – Falcon Northwest a Origin PC – nakonec od plánu nabízet soustavy upustili kvůli limitacím SteamOS v porovnání s Windows; zástupci firmy Falcon Northwest ale prohlásili, že pokud dojde k zlepšení výkonu SteamOS, začnou o výrobě Steam Machines opět uvažovat.
+
+
+== Vydání ==
+
+
+== Odkazy ==
+
+
+=== Reference ===
+V tomto článku byl použit překlad textu z článku SteamOS na anglické Wikipedii.
+
+
+=== Externí odkazy ===
+ Obrázky, zvuky či videa k tématu SteamOS na Wikimedia Commons

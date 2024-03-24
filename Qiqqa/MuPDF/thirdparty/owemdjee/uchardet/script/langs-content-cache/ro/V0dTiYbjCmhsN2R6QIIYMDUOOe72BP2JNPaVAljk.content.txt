@@ -1,0 +1,112 @@
+revision: 15670278
+title: Robot
+url: https://ro.wikipedia.org/wiki/Robot
+
+
+---
+
+Despre roboții folosiți la Wikipedia vezi Wikipedia:Bot.Un robot este un operator mecanic sau virtual, artificial. Robotul este un sistem compus din mai multe elemente: mecanică, senzori și actuatori precum și un mecanism de direcționare. Mecanica stabilește înfățișarea robotului și mișcările posibile pe timp de funcționare. Senzorii și actuatorii sunt întrebuințați la interacțiunea cu mediul sistemului. Mecanismul de direcționare are grijă ca robotul să-și îndeplinească obiectivul cu succes, evaluând de exemplu informațiile senzorilor. Acest mecanism reglează motoarele și planifică mișcările care trebuiesc efectuate. Roboții cu formă umană sunt numiți androizi.
+Tot „robot”, prescurtat „bot”, pot fi numite programe (software) de calculator care îndeplinesc automat anumite funcții sau operațiuni. Astfel de roboți sunt virtuali, și nu mecanici.
+
+
+== Terminologie ==
+Sensul cuvântului s-a schimbat de-alungul timpului. Termenul robot (din cehă robot) a fost utilizat de Josef Čapek și Karel Čapek în lucrările lor de science fiction la începutul secolului al XX-lea. Cuvântul robot este de origine slavă și se poate traduce prin iobag (persoană obligată a presta robota = clacă sau muncă silnică). Karel Čapek a descris în piesa sa R.U.R. din anul 1921 muncitori de asemănare umană, care sunt crescuți în rezervoare. Čapek folosește în lucrarea sa motivele clasice de golem. Denumirea de astăzi a creaturilor lui Čapek este de android. Înaintea apariției termenului de robot s-au utilizat de exemplu în uzinele lui Stanisław Lem termenii automat și semiautomat.
+
+
+== Istorie ==
+Bazele roboților de azi stau mult mai departe. Primele modele de mașini pot fi mai degrabă numite automate (provenind din grecescul automatos, care se mișcă singur). Acestea nu puteau executa decât câte un singur obiectiv, fiind constrânse de construcție.
+Matematicianul grec Archytas a construit, conform unor relatări, unul dintre aceste prime automate: un porumbel propulsat cu vapori, care putea zbura singur. Acest porumbel cavernos din lemn era umplut cu aer sub presiune. Acesta avea un ventil care permitea deschiderea și închiderea printr-o contragreutate. Au urmat multe modele dealungul secolelor. Unele înlesneau munca iar altele deserveau la amuzamentul oamenilor.
+Cu descoperirea ceasului mecanic din secolul XIV s-a deschis calea unor posibilități noi și complexe. Nu mult după aceea au apărut primele mașini, care semănau îndepărtat cu roboții de azi. Posibil era însă numai ca mișcările să urmeze una după alta, fără să fie nevoie de intervenția manuală în acel sistem.
+Dezvoltarea electrotehnicii din secolul XX a adus cu sine și o dezvoltare a roboticii. Printre primii roboți mobili se numără sistemul Elmer și Elsie construit de William Grey Walter în anul 1948. Aceste triciclete se puteau îndrepta spre o sursă de lumină și puteau să recunoască coliziuni în împrejurimi.
+Anul 1956 este considerat ca anul nașterii a robotului industrial. George Devol a depus candidatura în acest an în SUA pentru un patent pentru "transferul programat de articole". Câțiva ani după aceea a construit împreună cu Joseph Engelberger UNIMATE. Acest robot de cca. două tone a fost mai întâi introdus în montarea de iconoscoape pentru televizoare, găsindu-și apoi drumul în industria automobilă. Programele pentru acest robot au fost salvate sub formă de comenzi direcționate pentru motoare pe un cilindru magnetic. Din acest moment se introduc roboți industriali ca UNIMATE în multe domenii ale producției fiind permanent dezvoltați mai departe pentru a putea face față cererilor complexe care li se impun.
+
+
+== Robotică ==
+Apariția deasă a roboților în film și literatură a atras atenția științei asupra acestui tip de mașini. Domeniul științific, care se ocupă de construcția roboților se numește robotică. Termenul a fost folosit pentru prima dată în 1942 de Isaac Asimov în cartea sa, Runaround. Un domeniu general teoretic științific, care se ocupă de roboți, nu există. Acestea sunt mai ales subdomenii ale informaticii.
+
+
+=== Tehnica de bază ===
+Roboții sunt realizați mai ales prin combinația disciplinelor: mecanică, electrotehnică și informatică. Între timp s-a creat din legătura acestora mecatronica. Pentru realizarea de sisteme autonome (care să găsească singure soluții) este necesară legătura a cât mai multor discipline de robotică. Aici se pune accent pe legătura conceptelor de inteligență artificială sau neuroinformatică (parte a informaticii) precum și idealul lor biologic biocibernetică (parte a biologiei). Din legătura între biologie și tehnică s-a dezvoltat bionica.
+Cele mai importante componente ale roboților sunt senzorii, care permit mobilitatea acestora în mediu și o dirijare cât mai precisă. Un robot nu trebuie neapărat să poată să acționeze autonom, fapt pentru care se distinge între roboții autonomi și cei teleghidați.
+
+
+=== Tipuri de roboți ===
+Termenul de robot descrie un domeniu destul de vast, cauză din care roboții sunt sortați în multe categorii. Iată câteva din acestea:
+
+Robot autonom mobil
+Robot umanoid
+Robot industrial
+Robot de servicii
+Robot jucărie
+Robot explorator
+Robot pășitor
+BEAM
+Robot militar
+
+
+=== Robot umanoid (sau android) ===
+
+Imaginea roboților umanoizi a luat formă în literatură, mai ales în romanele lui Isaac Asimov în anii 1940. Acești roboți au fost pentru un timp lung irealizabili. Pentru realizarea lor trebuiesc rezolvate multe probleme importante. Ei trebuie să acționeze și să reacționeze autonom în mediu, mobilitatea lor fiind restrânsă la cele două picioare ca locomoție. Pe deasupra mai trebuie să fie capabili de a lucra cu brațele și mâinile. Din anul 2000 probleme de bază par să fie rezolvate (cu apariția lui ASIMO (Honda) de exemplu ). Între timp apar dezvoltări noi în acest domeniu.
+Roboții umanoizi pot fi descriși ca roboți pășitori.
+
+
+=== Robot industrial ===
+George Devol a înregistrat în anul 1954 primul patent pentru un robot industrial. Roboții industriali din prezent nu sunt de obicei mobili. După forma și funcția lor, domeniul lor operațional este restrâns. Ei au fost introduși pentru prima oară pe linia de producția a General Motors în 1961. Roboții industriali au fost folosiți prima dată în Germania la lucrări de sudură începând din 1970.
+Printre roboții industriali se numără și roboții de portale, care sunt introduși în producția de wafere, în instalații de turnat colofoniu sau la măsurări. În prezent roboții industriali execută și probleme de maniabilitate. Vezi și: sistem de maniabilitate (handling device).
+
+
+=== Robot casnic ===
+Robotul casnic lucrează autonom în gospodărie. aplicațiile cunoscute sunt:
+
+robot aspirator (produs de expemplu de: Electrolux, Siemens sau iRobot)
+robot de tuns gazonul
+robot de spălat ferestrele
+
+
+=== Robot jucărie ===
+
+
+=== Robot explorator ===
+
+Roboții exploratori sunt roboți care operează în locații greu accesibile și periculoase teleghidați sau parțial autonom. Aceștia pot lucra de exemplu într-o regiune aflată în conflict militar, pe Lună sau Marte. O navigare teleghidată de pe pământ în ultimele două cazuri este imposibilă din cauza distanței. Semnalele de comunicatie ajung la destinatie in cateva ore , iar receptionarea lor dureaza la fel de mult. În astfel de situații roboții trebuie să fie programați cu mai multe tipuri de comportare, din care ei să aleagă pe cel mai adecvat și să-l execute.
+Acest tip de robot dotat cu senzori a fost folosit și la cercetarea puțurilor din piramide. Mai mulți cryoboți au fost deja testați de NASA în Antarctica. Acest tip de robot poate pătrunde până la 3.600 de m prin gheață. Cryoboți pot fi astfel folosiți în cercetarea capelor polare pe Marte și Europa în speranța descoperirii de viață extraterestră.
+
+
+=== Astromobil ===
+
+
+=== Alții ===
+
+Robotii se mai numesc și unități mobile. Aceste unitati pot depista și dezamorsa sau distruge bombe sau mine (de exemplu robotul TALON). Există și roboți care ajută la căutarea de oameni îngropați după cutremure. Între timp există și așa-numiții killer-roboți.
+
+
+== Dezvoltarea pe viitor ==
+În 2004 au fost 2 milioane de roboți în uz, pe când doar pentru anul 2008 se așteaptă 7 milioane de instalații noi. Uniunea Europeană susține financiar lucrările din cercetare, care până în 2010 ar putea permite ca roboții să fie introduși în spitale în activități simple, ca de exemplu: transporturi de paturi în spital, livrarea mâncării, salubrizare. Până la sfârșitul lui 2008 va fi dezvoltat un robot, care să ajute la recoltarea livezilor.
+
+
+== Note ==
+
+
+== Legături externe ==
+
+„Robot” la DEX online
+en  IEEE Robotics and Automation Society (RAS)
+en  Fundația Internațională de Cercetare în Robotică (IFRR)
+Primii roboți Arhivat în 26 septembrie 2012, la Wayback Machine., 13 decembrie 2008, Jurnalul Național
+FORESIGHT ROBOETIC- Roboetică Arhivat în 26 decembrie 2012, la Wayback Machine.- de Bianca Stan Almanahul Anticipația
+Robotul modern[nefuncțională], 20 decembrie 2008, Anca Aldea, Jurnalul Național
+Roboti printre noi, 5 septembrie 2007, Claudiu Andone, Descoperă
+Viața noastră cu roboții, 8 iulie 2011, Mihaela Stănescu, Descoperă
+Cum vom supravietui Revoltei Robotilor?, 16 iunie 2009, Alexandru Safta, Descoperă
+Dincolo de frontiera hi-tech, 14 aprilie 2008, Mihaela Stanescu, Descoperă
+Robotii ne copiaza, 14 decembrie 2007, Claudiu Andone, Descoperă
+Expansiunea roboților - șanse și provocări pentru viitor Arhivat în 3 septembrie 2014, la Wayback Machine., 18 iulie 2008, Diac. Dr. Adrian Sorin Mihalache, Ziarul Lumina
+
+
+== Vezi și ==
+Cibernetică
+Cyborg
+Mecatronică
+Nanotehnologie
+NASA
+Robotică

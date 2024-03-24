@@ -1,0 +1,16 @@
+revision: 53245388
+title: .example
+url: https://sv.wikipedia.org/wiki/.example
+
+
+---
+
+.example, .example.com, .example.net och .example.org är domännamn reserverade att användas i exempel och dokumentation, för att visa att det rör sig om ett exempel och eftersom sådana exempel kan komma att bli kodade i verkligheten. Domänerna används inte för andra ändamål i DNS-systemet.[källa behövs]Toppdomänen .example och domännamnen example.com, example.net och example.org definierades 1999 i RFC 2606, tillsammans med .invalid, .localhost och .test. Jämför 192.0.2.0/24, IPv4-adresser som är reserverade för exempel enligt RFC 3330.[källa behövs]
+
+
+== Referenser ==
+
+
+== Se även ==
+Toppdomän#Generiska toppdomäner
+.invalid

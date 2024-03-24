@@ -1,0 +1,41 @@
+revision: 7458224
+title: Edsger Wybe Dijkstra
+url: https://sk.wikipedia.org/wiki/Edsger_Wybe_Dijkstra
+
+
+---
+
+Edsger Wybe Dijkstra (* 11. máj 1930, Rotterdam, Holandsko – † 6. august 2002, Nuenen) bol holandský informatik.
+
+
+== Život ==
+Dijkstra vyštudoval teoretickú fyziku na University of Leiden.
+Začiatkom sedemdesiatych rokov pracoval ako výskumník v Burroughs Corporation.
+Pracoval v Eindhoven University of Technology v Holandsku a neskôr zastával funkciu Schlumberger Centennial Chair in Computer Sciences na University of Texas v Austine v USA. Odišiel do dôchodku v roku 2000.
+Medzi jeho prínosy do informatiky patrí algoritmus hľadania najkratšej cesty, známy aj ako Dijkstrov algoritmus. V roku 1972 dostal Turingovu cenu.
+Bol tiež známy svojim zlým mienením o príkaze GOTO pri programovaní, čo vyústilo v roku 1968 do článku Príkaz Go To je považovaný za škodlivý, čo bolo považované za veľký krok k všeobecnému zatrateniu príkazu GOTO a jeho efektívne nahradenie riadiacimi štruktúrami ako napr. slučka while. Známy názov dokumentu nebol Dijkstrovou prácou, ale nápadom Niklausa Wirtha, v tom čase redaktora Communications of the ACM. Dijkstra bol známym prívržencom ALGOLu 60 a pracoval v tíme, ktorý implementoval prvý kompilátor tohto jazyka. Dijkstra a Jaap Zonneveld, ktorí spolupracovali na kompilátore sa dohodli, že sa neoholia, kým ho nedokončia. Zonneveld si nakoniec bradu oholil, Dijkstra si ju ponechal do smrti.
+Od sedemdesiatych rokov bola v centre záujmu Dijkstru formálna verifikácia. Prevládal názor, že by mal byť najprv napísaný program a potom poskytnutý matematický dôkaz správnosti. Dijkstra namietal, že výsledné dôkazy sú zdĺhavé a ťažkopádne, a že taký dôkaz neposkytuje pohľad na fungovanie algoritmu.
+Alternatívnou metódou je derivácia programu, „vyvíjať program a dôkaz ruku v ruke“. Začne sa matematickou špecifikáciou, čo by mal program robiť a použijú sa na ňu matematické transformácie, až sa pretaví do programu, ktorý je vykonateľný. Výsledný program je potom správny podľa konštrukcie. Mnoho z Dijkstrovej neskoršej práce sa týka spôsobov zjednodušenia dôkazu správnosti.
+Dijkstra bol známy svojimi priamymi názormi na programovanie a zvykom dôsledného zostavovania rukopisov svojím atramentovým perom. Mnohé z jeho poznámok boli naskenované a sú sprístupnené online (pozri zdroje).
+Po dlhom boji s rakovinou zomrel 6. augusta 2002.
+
+
+== Citáty ==
+"Otázka, či je počítač schopný premýšľať nie je zaujímavejšia, ako otázka, či vie ponorka plávať."
+"Informatika nie je viac o počítačoch ako astronómia o teleskopoch."
+
+
+== Pozri aj ==
+Dijkstrov algoritmus
+Problém obedujúcich filozofov
+The Cruelty of Really Teaching Computer Science
+
+
+== Externé odkazy a zdroje ==
+Edsger Wybe Dijkstra 1930 – 2002
+U. of Texas, nekrológ & biografia
+Biography, Digidome
+Práce E. W. Dijkstru
+E.W. Dijkstra, Go To Statement Considered Harmful, Communications of the ACM, Vol. 11 (1968) 147 – 148; online vydanie
+Súborné dielo
+Návod na holandskú výslovnosť

@@ -1,0 +1,131 @@
+revision: 5757957
+title: Bipiramida
+url: https://sl.wikipedia.org/wiki/Bipiramida
+
+
+---
+
+Bipiramida (tudi dipiramida) je polieder, ki nastane tako, da se poveže n-kotniško piramido in njeno zrcalno sliko tako, da se zlepi osnovni ploskvi. 
+Pripadajoč n-kotnik v imenu bipiramide ne predstavlja zunanje stranske ploskve, ampak notranjo, ki obstaja v ravnini osnovne simetrije in povezuje obe polovici piramide.
+Tranzitivne stranske ploskve bipiramid so dualni poliedri uniformne prizme, ki ima enakokrake stranske ploskve.
+
+
+== Prostornina ==
+Prostornina bipiramide je enaka:
+
+  
+    
+      
+        
+          
+            V
+            =
+          
+          
+            
+              
+                2
+                3
+              
+            
+          
+          
+            
+              B
+              h
+            
+            
+            
+            ,
+          
+        
+      
+    
+     
+  kjer je:
+
+  
+    
+      
+        B
+      
+    
+     
+   ploščina osnovnica
+
+  
+    
+      
+        h
+      
+    
+     
+   višina od osnovnice do vrha bipiramide.Ta obrazec velja za poljubno lego vrha, v tem primeru je treba vzeti za h pravokotnico na ravnino, ki vsebuje osnovnico. Prostornina bipiramide, katere osnovnica je pravilni n-stranski mnogokotnik, ki ima stranico dolgo s in višino h, je enak:
+
+  
+    
+      
+        V
+        =
+        
+          
+            n
+            6
+          
+        
+        h
+        
+          s
+          
+            2
+          
+        
+        cot
+        ⁡
+        
+          
+            π
+            n
+          
+        
+        
+        
+        .
+      
+    
+     
+  
+
+
+== Bipiramida z enakostraničnimi trikotniki ==
+
+
+== Oblike ==
+Tristrana bipiramida – 6 stranskih ploskev – dualna oblika je tristrana prizma
+kvadratna bipiramida (pravilni oktaeder je posebni primer) – 8 stranskih ploskev – dualna oblika je  kvader (posebna oblika duala kocke)
+petstrana bipiramida – 10 stranskih ploskev – dual petstrana prizma
+šeststrana bipiramida – 12 stranskih ploskev – dualna oblika je šeststrana prizma
+sedemstrana bipiramida – 14 stranskih ploskev – dualna oblika sedemstrana prizma
+osemstrana bipiramida – 16 stranskih ploskev – dualna oblika osemstrana prizma
+devetstrana bipiramida – 18 stranskih ploskev – dualna oblika je  devetstrana prizma
+desetstrana bipiramida – 20 stranskih ploskev – dualna oblika je desetstrana prizma...n-strana bipiramida – 2n stranskih ploskev – dualna oblika je n-strana prizma
+
+
+== Grupe simetrije ==
+Kadar je osnova pravilna in premica skozi vrh seka osnovo v njenem središču, ima grupa simetrije n-kotniške bipiramide diedrsko simetrijo Dnh reda 4n, razen v primeru pravilnega oktaedra, ki ima oktaedrsko simetrijo Oh reda 48, ki pa ima tri oblike D4h kot podgrupe. Rotacijska grupa je Dn reda 2n, razen pri pravilnem oktaedru, ki ima višjo grupo simetrije O reda 24, ki pa ima tri oblike D4 kot podgrupe. 
+
+
+== Zvezdne bipiramide ==
+Obstajajo tudi sebesekajoče bipiramide, ki imajo za osrednjo obliko zvezdni mnogokotnik. Ta je definiran kot trikotniška stranska ploskev, ki povezuje vsak rob mnogokotnika s tema dvema točkama. 
+
+
+== Polihoroni z bipiramidnimi celicami ==
+Dualni polieder rektifikacije vsakega konveksnega pravilnega polihorona je celičnoprehodni polihoron s piramidalnimi celicami.
+
+
+== Zunanje povezave ==
+Weisstein, Eric W. »Dipyramid«. MathWorld.
+Bipiramida v Glossary forHyperspace (angleško)
+Uniformni poliedri (angleško)
+Poliedri navidezne resničnosti v Encyclopedia of Polyhedra (angleško)
+Conwayjeva notacija poliedrov (angleško)

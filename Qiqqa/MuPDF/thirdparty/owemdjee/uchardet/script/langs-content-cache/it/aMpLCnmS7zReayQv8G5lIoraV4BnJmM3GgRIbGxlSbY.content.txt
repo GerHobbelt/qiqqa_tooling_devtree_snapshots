@@ -1,0 +1,725 @@
+revision: 124813683
+title: Difluoruro di xeno
+url: https://it.wikipedia.org/wiki/Difluoruro_di_xeno
+
+
+---
+
+Il difluoruro di xeno è il composto di formula XeF2. In condizioni normali è un solido cristallino incolore. Ha una bassa pressione di vapore e i vapori hanno un odore nauseante. XeF2 è uno dei più stabili composti dello xeno, con forti proprietà ossidanti e fluoruranti, ma meno energico di XeF4 e XeF6. Come la maggior parte dei fluoruri covalenti è sensibile all'umidità. Si decompone a contatto con l'acqua. XeF2 è disponibile commercialmente ed è usato in reazioni di fluorurazione.
+
+
+== Struttura molecolare e configurazione elettronica ==
+Il difluoruro di xeno è un composto molecolare, dove lo xeno ha numero di ossidazione +2. La molecola è lineare con una distanza di legame Xe–F di 197,73±0,15 pm in fase gassosa, e di 200 pm in fase solida. L'impaccamento nel cristallo di XeF2 mostra che gli atomi di fluoro delle molecole vicine evitano la regione equatoriale di ogni molecola XeF2. Ciò è in accordo con la teoria VSEPR, che prevede che attorno alla regione equatoriale dell'atomo di xeno ci siano tre coppie di elettroni non condivise.La molecola di XeF2 non segue la regola dell'ottetto, per cui è una molecola ipervalente.
+Ad alta pressione si possono ottenere nuove forme non molecolari di XeF2. Alla pressione di circa 50 GPa XeF2 si trasforma in un semiconduttore rossiccio composto da unità XeF4 unite a formare una struttura infinita tridimensionale simile alla grafite. A pressione ancora più elevata, sopra 70 GPa, si ha trasformazione in una forma metallica nera, con una struttura tridimensionale che contiene unità XeF8.
+
+
+== Sintesi ==
+Il difluoruro di xeno viene prodotto per sintesi diretta:
+
+  
+    
+      
+        
+          Xe
+          +
+          
+            F
+            
+              2
+            
+            
+              
+            
+          
+          ⟶
+          
+            XeF
+            
+              2
+            
+            
+              
+            
+          
+        
+      
+    
+     
+  la reazione deve essere promossa con calore, irradiazione o scariche elettriche. Si ottiene un prodotto gassoso, che si può condensare a −30 °C. Il prodotto grezzo viene purificato per distillazione frazionata o per condensazione selettiva usando una linea da vuoto.La prima notizia su XeF2 fu pubblicata nell'ottobre 1962 da Chernick e altri. Tuttavia, anche se la notizia fu pubblicata successivamente, XeF2 fu probabilmente sintetizzato per la prima volta all'inizio del 1962 da Rudolf Hoppe all'Università di Münster, Germania, facendo reagire una miscela di fluoro e xeno gassosi tramite una scarica elettrica. Di lì a poco Weeks, Chernick e Matheson dell'Argonne National Laboratory sintetizzarono XeF2 usando un recipiente completamente di nichel con finestre trasparenti di allumina, facendo reagire parti uguali di Xe e F2 a bassa pressione sotto irradiazione UV. Williamson riportò che la reazione funziona altrettanto bene a pressione atmosferica irradiando con luce solare un recipiente di vetro Pyrex secco. Fu notato che la sintesi funziona anche in giornate nuvolose.
+Nelle sintesi precedenti il reagente F2 era purificato per rimuovere HF. Šmalc e Lutar trovarono che se si tralascia questa purificazione, la velocità di reazione aumenta di quattro volte.Nel 1965 XeF2 fu preparato anche facendo reagire xeno gassoso con difluoruro di diossigeno.
+
+
+== Reattività ==
+XeF2 ha proprietà ossidanti e fluoruranti. Il composto è abbastanza solubile in acqua, dove si decompone lentamente. La decomposizione è invece quasi istantanea in presenza di basi:
+
+  
+    
+      
+        
+          2
+          
+          
+            XeF
+            
+              2
+            
+            
+              
+            
+          
+          +
+          2
+          
+          
+            H
+            
+              2
+            
+            
+              
+            
+          
+          O
+          ⟶
+          2
+          
+          Xe
+          +
+          4
+          
+          HF
+          +
+          
+            O
+            
+              2
+            
+            
+              
+            
+          
+        
+      
+    
+     
+  Reagisce con il fluoro per formare XeF4:
+
+  
+    
+      
+        
+          
+            XeF
+            
+              2
+            
+            
+              
+            
+          
+          +
+          
+            F
+            
+              2
+            
+            
+              
+            
+          
+          ⟶
+          
+            XeF
+            
+              4
+            
+            
+              
+            
+          
+        
+      
+    
+     
+  In solventi come BrF5, BrF3, IF5, o CH3CN e altri solventi organici anidri si scioglie senza reagire. È molto solubile in HF (167 g per 100 g di HF a 29,95 °C).XeF2 forma sali contenenti il catione XeF+ quando reagisce con forti accettori di ioni fluoruro. Ad esempio usando come solvente il pentafluoruro di antimonio (SbF5) liquido si formano sali tipo [XeF]+[SbF6]−, [XeF]+[Sb2F11]− e simili. In presenza di un eccesso di xeno la soluzione giallo chiaro diventa verde, dovuto alla formazione del catione paramagnetico Xe2+. In questo ione è presente un legame Xe−Xe. La reazione è reversibile; allontanando lo xeno gassoso dalla soluzione di SbF5 si riforma XeF+ e il colore della soluzione torna giallo chiaro.XeF2 può servire per preparare altri composti di xeno. Il composto organoxeno instabile Xe(CF3)2 può essere preparato irradiando esafluoroetano in modo da generare radicali CF3·, e facendo passare il gas sopra XeF2. Si forma un solido ceroso bianco che si decompone completamente entro 4 ore a temperatura ambiente.
+
+
+=== Chimica di coordinazione ===
+XeF2 può fungere da legante in complessi dei metalli di transizione. Ad esempio, in soluzione di HF:
+
+  
+    
+      
+        
+          Mg
+          
+            
+              (
+              
+                AsF
+                
+                  6
+                
+                
+                  
+                
+              
+              )
+            
+            
+              2
+            
+            
+              
+            
+          
+          +
+          4
+          
+          
+            XeF
+            
+              2
+            
+            
+              
+            
+          
+          ⟶
+          
+            [
+            Mg
+            
+              
+                (
+                
+                  XeF
+                  
+                    2
+                  
+                  
+                    
+                  
+                
+                )
+              
+              
+                4
+              
+              
+                
+              
+            
+            ]
+          
+          
+            
+              (
+              
+                AsF
+                
+                  6
+                
+                
+                  
+                
+              
+              )
+            
+            
+              2
+            
+            
+              
+            
+          
+        
+      
+    
+     
+  Misure cristallografiche indicano che l'atomo di magnesio è coordinato con geometria ottaedrica a sei atomi di fluoro. Di questi, quattro appartengono ai quattro leganti XeF2, mentre gli altri due sono atomi F di gruppi AsF6− disposti in cis.Una reazione simile è
+
+  
+    
+      
+        
+          Mg
+          
+            
+              (
+              
+                AsF
+                
+                  6
+                
+                
+                  
+                
+              
+              )
+            
+            
+              2
+            
+            
+              
+            
+          
+          +
+          2
+          
+          
+            XeF
+            
+              2
+            
+            
+              
+            
+          
+          ⟶
+          
+            [
+            Mg
+            
+              
+                (
+                
+                  XeF
+                  
+                    2
+                  
+                  
+                    
+                  
+                
+                )
+              
+              
+                2
+              
+              
+                
+              
+            
+            ]
+          
+          
+            
+              (
+              
+                AsF
+                
+                  6
+                
+                
+                  
+                
+              
+              )
+            
+            
+              2
+            
+            
+              
+            
+          
+        
+      
+    
+     
+  La struttura cristallina di questo prodotto mostra che l'atomo di magnesio ha coordinazione ottaedrica; i due leganti XeF2 sono in posizione assiale, mentre i leganti AsF6− sono in posizione equatoriale.
+Sono state osservate molte altre reazioni che formano prodotti tipo  [Mx(XeF2)n](AF6)x, dove M può essere Ca, Sr, Ba, Pb, Ag, La, o Nd e A può essere As, Sb o P.
+Di recente è stato sintetizzato un composto dove un atomo metallico è coordinato solo da atomi fluoro di XeF2:
+
+  
+    
+      
+        
+          2
+          
+          Ca
+          
+            
+              (
+              
+                AsF
+                
+                  6
+                
+                
+                  
+                
+              
+              )
+            
+            
+              2
+            
+            
+              
+            
+          
+          +
+          9
+          
+          
+            XeF
+            
+              2
+            
+            
+              
+            
+          
+          ⟶
+          
+            Ca
+            
+              2
+            
+            
+              
+            
+          
+          
+            
+              (
+              
+                XeF
+                
+                  2
+                
+                
+                  
+                
+              
+              )
+            
+            
+              9
+            
+            
+              
+            
+          
+          
+            
+              (
+              
+                AsF
+                
+                  6
+                
+                
+                  
+                
+              
+              )
+            
+            
+              4
+            
+            
+              
+            
+          
+        
+      
+    
+     
+  Questa reazione richiede un grande eccesso di XeF2. La struttura del sale è tale che metà degli ioni Ca2+ sono coordinati dagli atomi fluoro del difluoruro di xeno, mentre gli altri ioni Ca2+ sono coordinati sia da XeF2 sia da AsF6−.
+
+
+== Usi ==
+
+
+=== Come agente fluorurante ===
+Il difluoruro di xeno è un forte agente ossidante e fluorurante. In presenza di accettori di ioni fluoruro si formano le specie XeF+ e Xe2F3+ che sono fluoruranti ancora più potenti.
+Alcune reazioni di fluorurazione del difluoruro di xeno sono le seguenti:
+
+Fluorurazione ossidativa:
+  
+    
+      
+        
+          
+            Ph
+            
+              3
+            
+            
+              
+            
+          
+          TeF
+          +
+          
+            XeF
+            
+              2
+            
+            
+              
+            
+          
+          ⟶
+          
+            Ph
+            
+              3
+            
+            
+              
+            
+          
+          
+            TeF
+            
+              3
+            
+            
+              
+            
+          
+          +
+          Xe
+        
+      
+    
+     
+  Fluorurazione riduttiva:
+  
+    
+      
+        
+          2
+          
+          
+            CrO
+            
+              2
+            
+            
+              
+            
+          
+          
+            F
+            
+              2
+            
+            
+              
+            
+          
+          +
+          
+            XeF
+            
+              2
+            
+            
+              
+            
+          
+          ⟶
+          2
+          
+          
+            CrOF
+            
+              3
+            
+            
+              
+            
+          
+          +
+          Xe
+          +
+          
+            O
+            
+              2
+            
+            
+              
+            
+          
+        
+      
+    
+     
+  Fluorurazione aromatica:
+Fluorurazione di alcheni:XeF2 è un fluorurante selettivo, ed è quindi un reagente utile per fluorurare eteroatomi senza toccare altri sostituenti in composti organici. Ad esempio, fluorura l'atomo di arsenico della trimetilarsina, senza toccare i gruppi metilici:
+
+  
+    
+      
+        
+          
+            
+              (
+              
+                CH
+                
+                  3
+                
+                
+                  
+                
+              
+              )
+            
+            
+              3
+            
+            
+              
+            
+          
+          As
+          +
+          
+            XeF
+            
+              2
+            
+            
+              
+            
+          
+          ⟶
+          
+            
+              (
+              
+                CH
+                
+                  3
+                
+                
+                  
+                
+              
+              )
+            
+            
+              3
+            
+            
+              
+            
+          
+          
+            AsF
+            
+              2
+            
+            
+              
+            
+          
+          +
+          Xe
+        
+      
+    
+     
+  XeF2 può anche decarbossilare ossidativamente acidi carbossilici formando i corrispondenti alcani fluorurati:
+
+  
+    
+      
+        
+          RCOOH
+          +
+          
+            XeF
+            
+              2
+            
+            
+              
+            
+          
+          ⟶
+          RF
+          +
+          
+            CO
+            
+              2
+            
+            
+              
+            
+          
+          +
+          Xe
+          +
+          HF
+        
+      
+    
+     
+  
+
+
+=== Come reagente per incisione chimica ===
+Il difluoruro di xeno gassoso è usato anche per incidere chimicamente il silicio, specie nella produzione di Sistemi Micro Elettro Meccanici (MEMS). Brazzle e altri così descrivono il processo:
+Il meccanismo dell'incisione chimica è il seguente. Per prima cosa XeF2 si adsorbe sulla superficie del silicio e si dissocia in xeno (Xe) e fluoro (F). Il fluoro è il principale responsabile dell'attacco chimico nell'incisione del silicio. La reazione del silicio con XeF2 si può descrivere come
+
+  
+    
+      
+        
+          2
+          
+          
+            XeF
+            
+              2
+            
+            
+              
+            
+          
+          +
+          Si
+          ⟶
+          2
+          
+          Xe
+          +
+          
+            SiF
+            
+              4
+            
+            
+              
+            
+          
+        
+      
+    
+     
+  
+XeF2 ha una velocità di incisione relativamente elevata e per incidere il silicio non necessita di bombardamento di ioni o altre sorgenti esterne di energia. 
+
+
+== Note ==
+
+
+== Bibliografia ==
+ C. E. Housecroft, A. G. Sharpe, Inorganic chemistry, 2ª ed., Harlow (England), Pearson Education Limited, 2005, ISBN 0-13-039913-2.
+ N. N. Greenwood, A. Earnshaw, Chemistry of the elements, 2ª ed., Oxford, Butterworth-Heinemann, 1997, ISBN 0-7506-3365-4.
+ J. G. Malm, H. Selig, J. Jortner e S. A. Rice, The chemistry of xenon, in Chem. Rev., vol. 65, n. 2, 1965,  pp. 199-236, DOI:10.1021/cr60234a003. URL consultato il 22 giugno 2010.
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su Difluoruro di xeno

@@ -1,0 +1,78 @@
+revision: 30986354
+title: Cercus
+url: https://ca.wikipedia.org/wiki/Motor_de_cerca
+
+
+---
+
+Un motor de cerca o de recerca o bé cercador és un programa informàtic dissenyat per ajudar a trobar informació emmagatzemada en un sistema informàtic com ara una xarxa, Internet, un servidor o un ordinador personal. L'objectiu principal és el de trobar altres programes informàtics, pàgines web i documents, entre d'altres.
+A partir d'una determinada paraula o paraules o una determinada frase, l'usuari demana un contingut sota un criteri determinat, i llavors recupera una llista de referències que compleixen aquest criteri. El procés es realitza a través de les metadades, elements que permeten recuperar informació als motors de cerca. Els índexs que utilitzen els cercadors sempre estan actualitzats a través d'un robot web per generar rapidesa i eficàcia en la recerca. Els directoris, en canvi, són gestionats per editors humans.
+La forma més pública i visible d'un motor de cerca és un motor de cerca web que cerca informació a la World Wide Web.
+
+
+== Tipus de cercadors ==
+Índexs o directoris: Són repertoris de pàgines web ordenats per temàtiques. El seu ús és simple i senzill, només cal anar clicant sobre les categories i subcategories. L'ordre l'estableix una persona, no una màquina, és a dir, el criteri acostuma a ser subjectiu.
+Motors de cerca: Són cercadors que, a través d'un robot anomenat aranya, rastregen Internet recol·lectant pàgines web i introduint-les a la base de dades automàticament. La característica principal és que aquesta cerca es du a terme a partir d'una paraula clau. Els principals motors de cerca són Google, Yahoo! i Bing, entre d'altres.
+Multicercadors o metacercadors: Busquen pàgines web en diferents cercadors, i combinen els resultats que obtenen. Els multicercadors no disposen de bases de dades pròpies. Dos exemples de multicercadors són Metasearch i MetaCrawler.
+FFA (Free For All): Aquests cercadors són gratuïts i permeten que l'usuari pugui inscriure-hi la seva pàgina web durant un temps limitat. No és permanent.
+
+
+=== Cercadors jeràrquics (aranyes o spiders) ===
+Un rastrejador web, indexador web, o aranya web és una programa informàtic que inspecciona les pàgines de World Wide Web de forma metòdica i automatizada. Un dels usos més freqüents que se'ls dona consisteix a crear una còpia de totes les pàgines web visitades per al seu processament posterior per un motor de cerca que indexa les pàgines proporcionant un sistema de recerques ràpid. Les aranyes web solen ser bots.Les aranyes web comencen visitant una llista d'URL, identifica els hiperenllaços en aquestes pàgines i els afegeix a la llista d'URL a visitar de manera recurrent d'acord a determinat conjunt de regles. L'operació normal és que se li dona a el programa un grup d'adreces inicials, l'aranya descàrrega aquestes adreces, analitza les pàgines i busca enllaços a pàgines noves. Després descàrrega aquestes pàgines noves, analitza els seus enllaços, i així successivament.
+Entre les tasques més comunes de les aranyes del web tenim:
+
+Crear l'índex d'una màquina de cerca.
+Analitzar els enllaços d'un lloc per buscar links trencats.
+Recol·lectar informació d'un cert tipus, com preus de productes per recopilar un catàleg.
+
+
+=== Directoris ===
+Un directori web és un tipus de lloc web que conté un directori organitzat de dades, imatges o, més generalment, enllaços a altres llocs web. Els directoris web, contràriament als motors de cerca, es caracteritzen per estar estructurats en categories i subcategories. Habitualment, els directoris web permeten als administradors web o creadors de llocs web que informin del seu lloc perquè sigui inclòs, i després els editors autoritzats revisen aquestes sol·licituds abans d'incloure les seves enllaços per comprovar que s'adeqüen als requisits d'acceptació determinats pel directori web.Entre els directoris web generalistes més coneguts es poden esmentar el Yahoo! Directory (inactiu des 2014) i DMOZ (inactiu des 2017). En l'actualitat els directoris web supervivents són petites bases de dades especialitzades en temes concrets i per això ja no són tan populars. Els grans repertoris generalistes com van ser Yahoo! Directory o DMOZ ja han estat definitivament reemplaçats pels motors de cerca, principalment el cercador de Google.
+Els directoris web regionals integren en un mateix lloc a comerços, serveis, empreses o participants de determinat sector, enfocant-se en un territori comercial en específic, creant d'aquesta manera una comunitat que facilita la navegació, localització i mercadeig. Aquests directoris promouen el creixement econòmic de el sector a què estan enfocats ja que posen a l'abast de l'usuari la possibilitat de descobrir proveïdors que desconeixia que existissin i amb això resoldre una necessitat de compra.
+Una tecnologia molt simple per gran quantitat de scripts disponibles, ja que no es requereixen molts recursos. En canvi, es requereix més suport humà i mantenimient.
+
+
+=== Multicercadors ===
+Un metacercador és un sistema que localitza informació en els motors de cerca més usats, no té base de dades pròpia pel que fa servir les d'altres cercadors i mostra una combinació de les millors pàgines que ha cada un. Un cercador normal recopila la informació de les pàgines mitjançant la seva indexació, com Google o bé manté un ampli directori temàtic, com Yahoo. La definició simplista seria que un metacercador és un cercador en cercadors.
+«En altres paraules per al·ludir a el concepte més genèric d'un cercador, podem afirmar que un metacercador és el cercador que incorpora un conjunt de cercadors. Alguns exemples de metacercadors són: Dogpile, Aleyares  MetaCrawler, entre d'altres. Aquests metacercadors presenten avantatges, com ampliar l'espai de recerca i en alguns casos mostrar la posició del web ».
+
+
+== Funcionament ==
+Els motors de cerca proporcionen una interfície a un grup d'elements que permet als usuaris especificar criteris sobre un article d'interès i que el motor trobi els elements coincidents. Els criteris s'anomenen consulta de cerca. En el cas dels motors de cerca de text, la consulta de cerca normalment s'expressa com un conjunt de paraules que identifiquen el concepte desitjat que un o més documents poden contenir. Hi ha diversos estils de sintaxi de consulta de cerca que varien en rigor. També pot canviar de nom als motors de cerca dels llocs anteriors. Mentre que alguns motors de cerca de text requereixen que els usuaris introdueixin dues o tres paraules separades per espai en blanc, altres motors de cerca poden permetre als usuaris especificar documents sencers, imatges, sons i diverses formes de llenguatge natural. Alguns motors de cerca apliquen millores a les consultes de cerca per augmentar la probabilitat de proporcionar un conjunt d'elements de qualitat mitjançant un procés conegut com a expansió de la consulta. Els mètodes de comprensió de consultes es poden utilitzar com a llenguatge de consulta estandarditzat.
+
+La llista d'elements que compleixen els criteris especificats per la consulta normalment s'ordena o es classifica. La classificació dels elements per rellevància (de major a menor) redueix el temps necessari per trobar la informació desitjada. Els motors de cerca probabilístics classifiquen els elements basant-se en mesures de similaritat (entre cada element i la consulta, normalment en una escala d'1 a 0, l'1 és el més semblant) i de vegades la popularitat o autoritat (vegeu bibliometria) o utilitza la opinió sobre la rellevància. Els motors de cerca booleans normalment només retornen elements que coincideixen exactament sense tenir en compte l'ordre, tot i que el terme motor de cerca booleà pot referir-se simplement a l'ús de la sintaxi d'estil booleà (l'ús d'operadors AND, OR, NOT i XOR) en un context probabilístic.
+Per proporcionar un conjunt d'elements coincidents que s'ordenen d'acord amb alguns criteris ràpidament, un motor de cerca normalment recopilarà metadades sobre el grup d'elements que s'està considerant prèviament mitjançant un procés anomenat indexació. L'índex normalment requereix una quantitat més petita d'emmagatzematge informàtic, per la qual cosa alguns motors de cerca només emmagatzemen la informació indexada i no el contingut complet de cada element, i en canvi proporcionen un mètode per navegar als elements a la pàgina de resultats del cercador. Alternativament, el motor de cerca pot emmagatzemar una còpia de cada element en una caché perquè els usuaris puguin veure l'estat de l'element en el moment en què es va indexar o amb finalitats d'arxiu o perquè funcionin processos repetitius. de manera més eficient i ràpida.
+Altres tipus de cercadors no emmagatzemen un índex. Els Crawler, o motors de cerca de tipus aranya (també coneguts com motors de cerca en temps real) poden recollir i avaluar elements en el moment de la consulta de cerca, considerant dinàmicament elements addicionals basats en el contingut d'un element inicial (conegut com a una llavor, o URL de llavor en el cas d'un rastrejador d'Internet). Els motors de cerca meta no emmagatzemen ni un índex ni una memòria cau i, en canvi, simplement reutilitzen l'índex o els resultats d'un o més motors de cerca per proporcionar un conjunt final agregat de resultats.
+
+
+== Història ==
+El primer cercador va ser "Wandex", un índex realitzat pel World Wide Web Wanderer, un robot desenvolupat per Mattew Gray al MIT, el 1993. Un altre dels primers cercadors, Aliweb, també va aparèixer en 1993 i encara està en funcionament. El primer motor de cerca de text complet va ser WebCrawler, que va aparèixer el 1994. A diferència dels seus predecessors, aquest permetia als seus usuaris una recerca per paraules en qualsevol pàgina web, el que va arribar a ser un estàndard per a la gran majoria dels cercadors . WebCrawler va ser així mateix el primer a donar-se a conèixer àmpliament entre el públic. També va aparèixer en 1994 Lycos (que va començar a la Carnegie Mellon University).
+Molt aviat van aparèixer molts més cercadors, com Excite, Infoseek, Inktomi, Northern Light i Altavista. D'alguna manera, competien amb directoris (o índexs temàtics) populars com Yahoo!. Més tard, els directoris es van integrar o es van afegir a la tecnologia dels cercadors per augmentar la seva funcionalitat. Abans de l'adveniment de la Web, hi havia motors de cerca per a altres protocols o usos, com el cercador Archie, per a llocs FTP anònims i el motor de cerca Verònica, per al protocol Gopher.
+El 1996 Larry Page i Serguei Brin van començar un projecte que portaria a l'aparició del cercador més utilitzat avui dia: Google. El projecte inicial es va cridar BackRub, que era el nom de la tecnologia utilitzada per al seu desenvolupament. BackRub basava la importància dels llocs web en la quantitat d'enllaços que rebia. Presentava una interfície molt senzilla i capaç de mostrar als l'usuari els resultats més rellevants per a cadascuna de les recerques. Amb l'arribada de Google, la manera en què els motors de cerca funcionaven va canviar de forma radical, democratitzant els resultats que s'ofereixen en el seu cercador. Google va basar el funcionament del seu motor de cerca a la rellevància dels continguts de cada lloc web per als propis usuaris, és a dir, prioritzant aquells resultats que els usuaris consideraven més rellevants per a una temàtica concreta. Per a això va patentar el seu famós PageRank, un conjunt d'algoritmes que valoraven la rellevància d'un lloc web assignant-li un valor numèric de el 0 a el 10.
+En la majoria de països Google.com o la versió de Google per al país concret, és el cercador més utilitzat, però, això no passa en alguns països. Per exemple, a Rússia el cercador més utilitzat és Yandex i a la Xina és Baidu.La Unió Europea en 2018 li va imposar una multa de 5.000 milions d'euros per pràctiques monopolístiques, al considerar que força injustament als fabricants per a que la seva aplicació de recerca estigui a tots els telèfons que executin Android.
+
+
+== Cercadors en català ==
+Cercacat
+Google
+Bing
+The Pirate Bay
+DuckDuckGo
+
+
+== Referències ==
+
+
+== Vegeu també ==
+Llista de cercadors
+Cercador visual
+OpenSearch: sintaxi normalitzada per a cercadors, que permet incloure'ls directament dins del navegador web o d'altres aplicacions
+Hyper Search
+
+
+== Enllaços externs ==
+Motors de cerca en tots els països en el món
+Motors de cerca de recursos en llengua catalana per a navegadors
+Projecte de codi lliure del cercador distribuït Ripple (català) Arxivat 2009-05-05 a Wayback Machine.
+Motors de cerca directa dels Serveis Lingüístics de la Universitat de Barcelona
+Viccionari

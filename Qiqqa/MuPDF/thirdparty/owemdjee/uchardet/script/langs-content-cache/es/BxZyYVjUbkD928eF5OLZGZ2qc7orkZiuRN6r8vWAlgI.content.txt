@@ -1,0 +1,41 @@
+revision: 151091238
+title: apertura Bird
+url: https://es.wikipedia.org/wiki/Apertura_Bird
+
+
+---
+
+La Apertura Bird es una apertura de ajedrez  irregular. Se caracteriza por el movimiento (en notación algebraica):
+1.f4  
+Tras este movimiento existen innumerables continuaciones. Las variantes más empleadas por las negras son: 1...,d5; 1...,e5 Gambito From; 1...c5; 1...,f5 Gambito Suizo; 1...g5 Gambito Hobbs.
+El ajedrecista danés Bent Larsen fue un gran seguidor de esta apertura.
+Por sus similitudes con la Defensa neerlandesa en ocasiones se la llama Ataque neerlandés. La idea estratégica básica es la misma que la de la Apertura inglesa: retrasar la definición de los peones centrales al tiempo que se controla el centro desde un lateral. El problema es que el peón con el que se controla el centro es de rey, y por lo tanto le deja con menos protección. Hay que recordar que es la primera jugada del mate del loco. Contra la Apertura Bird hay dos respuestas básicas, el interesante gambito From respondiendo 1. ... e5 —que se puede rechazar jugando 2.e4 y entrando en el Gambito de rey— y 1.... d5, que entra en los esquemas de la Defensa neerlandesa pero jugada con blancas.
+Línea principal
+
+1.f41.f4 e5 Gambito From
+1.f4 e5 2.fxe5 d6 3.exd6 Axd6 4.Cf3 g5
+1.f4 e5 2.fxe5 d6 3.exd6 Axd6 4.Cf3 Ch6 5.d4
+1.f4 f5 2.e4 fxe4 3.Cc3 Cf6 4.g4
+1.f4 g5
+
+
+== La línea 1....d5 ==
+1.f4 d5
+1.f4 d5 2.c4
+1.f4 d5 2.e4
+1.f4 d5 2.Cf3 Cf6
+1.f4 d5 2.Cf3 Cf6 3.e3 g6 4.b3 Ag7 5.Ab2 0-0 6.Ae2 c5 7.0-0 Cc6 8.Ce5 Dc7 con ligera ventaja blanca.
+1.f4 d5 2.Cf3 Cf6 3.e3 c5 4.Ae2 Cc6 5.0-0 g6 6.d3 Ag7 7.c3 0-0 8.Dc2 d4 con igualdad
+
+
+== La línea 1....c5 ==
+1.f4 c5 2.Cf3 Cf6 3.e3 g6 4.b3 Ag7 5.Ab2 Cc6 6.Ae2 d6 7.a4 a6 con igualdad
+
+
+== Referencias ==
+Bibliográficas:
+
+El contenido de este artículo incorpora material de una entrada de la Enciclopedia Libre Universal, publicada en español bajo la licencia Creative Commons Compartir-Igual 3.0.
+
+
+== Véase también ==

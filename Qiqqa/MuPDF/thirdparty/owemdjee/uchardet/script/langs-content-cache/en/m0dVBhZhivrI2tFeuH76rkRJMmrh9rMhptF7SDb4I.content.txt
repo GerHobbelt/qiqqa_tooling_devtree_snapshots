@@ -1,0 +1,56 @@
+revision: 1143724903
+title: Underwater glider
+url: https://en.wikipedia.org/wiki/Underwater_glider
+
+
+---
+
+An underwater glider is a type of autonomous underwater vehicle (AUV) that employs variable-buoyancy propulsion instead of traditional propellers or thrusters. It employs variable buoyancy in a similar way to a profiling float, but unlike a float, which can move only up and down, an underwater glider is fitted with hydrofoils (underwater wings) that allow it to glide forward while descending through the water. At a certain depth, the glider switches to positive buoyancy to climb back up and forward, and the cycle is then repeated.
+While not as fast as conventional AUVs, gliders offer significantly greater range and endurance compared to traditional AUVs, extending ocean sampling missions from hours to weeks or months, and to thousands of kilometers of range. The typical up-and-down, sawtooth-like profile followed by a glider can provide data on temporal and spatial scales unattainable by powered AUVs and much more costly to sample using traditional shipboard techniques. A wide variety of glider designs are in use by navies and ocean research organizations, with gliders typically costing around US$100,000.
+
+
+== History ==
+
+The concept of an underwater glider was first explored in the early 1960s with a prototype swimmer delivery vehicle named Concept Whisper. The sawtooth glide pattern, stealth properties and the idea of a buoyancy engine powered by the swimmer-passenger was described by Ewan Fallon in his Hydroglider patent submitted in 1960. In 1992, the University of Tokyo conducted tests on ALBAC, a drop weight glider with no buoyancy control and only one glide cycle. The DARPA SBIR program received a proposal for a temperature gradient glider in 1988. DARPA was aware at that time of similar research projects underway in the USSR.
+This idea, a glider with a buoyancy engine powered by a heat exchanger, was introduced to the oceanographic community by Henry Stommel in a 1989 article in Oceanography, when he proposed a glider concept called Slocum, developed with research engineer Doug Webb. They named the glider after Joshua Slocum, who made the first solo circumnavigation of the globe by sailboat. They proposed harnessing energy from the thermal gradient between deep ocean water (2-4 °C) and surface water (near atmospheric temperature) to achieve globe-circling range, constrained only by battery power on board for communications, sensors, and navigational computers.By 2003, not only had a working thermal-powered glider (Slocum Thermal) been demonstrated by Webb Research (founded by Doug Webb), but they and other institutions had introduced battery-powered gliders with impressive duration and efficiency, far exceeding that of traditional survey-class AUVs. These vehicles have been widely deployed in the years since then. The University of Washington Seaglider, Scripps Institution of Oceanography Spray, and Teledyne Webb Research Slocum vehicles have performed feats such as completing a transatlantic journey and conducting sustained, multi-vehicle collaborative monitoring of oceanographic variables. In 2011, the first wingless glider, SeaExplorer, was released by a collaboration of French institutions and companies.In 2020, NOAA was using "hurricane gliders" to monitor the temperature of the water around the Gulf Stream, for the agency to better understand how warm waters affect hurricanes and storms.
+
+
+== Functional description ==
+
+Gliders typically make measurements such as temperature, conductivity (to calculate salinity), currents, chlorophyll fluorescence, optical backscatter, bottom depth, and sometimes acoustic backscatter or ambient sound. They navigate with the help of periodic surface GPS fixes, pressure sensors, tilt sensors, and magnetic compasses. Vehicle pitch is controllable by movable internal ballast (usually battery packs), and steering is accomplished either with a rudder (as in Slocum) or by moving internal ballast to control roll (as in SeaExplorer, Spray and Seaglider). Buoyancy is adjusted either by using a piston to flood/evacuate a compartment with seawater (Slocum) or by moving oil in/out of an external bladder (SeaExplorer, Seaglider, Spray, and Slocum Thermal). Because buoyancy adjustments are relatively small, a glider's ballast must typically be adjusted before the start of a mission to achieve an overall vehicle density close to that of the water it will be deployed in. Commands and data are relayed between gliders and shore by satellite.Gliders vary in the pressure they are able to withstand. The Slocum model is rated for 200 meter or 1000 meter depths. Spray can operate to 1500 meters, Seaglider to 1000 meters, SeaExplorer to 700, and Slocum Thermal to 1200. In August 2010, a Deep Glider variant of the Seaglider achieved a repeated 6000-meter operating depth. Similar depths have been reached by a Chinese glider in 2016.
+
+
+== Liberdade class flying wings ==
+In 2004, the US Navy Office of Naval Research began developing the world's largest gliders, the Liberdade class flying wing gliders, which uses a blended wing body hullform to achieve hydrodynamic efficiency. They were initially designed to quietly track diesel electric submarines in littoral waters, remaining on station for up to 6 months. By 2012, a newer model, known as the ZRay, was designed to track and identify marine mammals for extended periods of time. It uses water jets for fine attitude control as well as propulsion on the surface.
+
+
+== See also ==
+Autonomous underwater vehicle – Unmanned underwater vehicle with autonomous guidance system
+Argo floats – International oceanographic observation program
+Liquid Robotics – American marine robotics corporation, developers of the Wave Glider
+Paravane (weapon) – Towed hydrofoiled underwater objectPages displaying short descriptions of redirect targets
+Paravane (water kite) – Towed hydrofoiled underwater object
+DeepFlight Super Falcon – Winged personal submarine
+Autonomous Robotics Ltd – UK company developing an autonomous underwater vehicle
+
+
+== References ==
+
+
+== External links ==
+
+GROOM - Gliders for Research, Ocean Observation and Management
+COST Action ES0904
+EGO network - glider user group
+Seaexplorer page at ALSEAMAR-ALCEN
+Oceanic Platform of the Canary Islands -PLOCAN-
+Spray page at Scripps Institution of Oceanography
+Spray underwater glider database
+Seaglider page at Applied Physics Laboratory - University of Washington
+Seaglider Operations page at APL-UW
+Rutgers University Coastal Ocean Observations Lab -- Glider Operations
+Slocum page at Webb Research Corp.
+Underwater glider configurations and details - AUVAC.org
+Underwater Gliders for Ocean Research
+Robot glider harvests ocean heat
+National Oceanography Centre, UK. Glider Home Page

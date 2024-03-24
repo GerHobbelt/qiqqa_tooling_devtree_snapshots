@@ -1,0 +1,28 @@
+revision: 14595266
+title: Format container
+url: https://ro.wikipedia.org/wiki/Format_container
+
+
+---
+
+Formatul container este o procedură sau algoritm utilizat la stocarea împreună a mai multor fișiere de date. Cuvântul „container” provine din limba engleză unde înseamnă în general o cutie, un recipient sau un ambalaj. Este un termen care se aplică și în domeniul software, iar termenul consacrat în literatura engleză de specialitate este to embed, embedded și to wrap, wrapped.
+Algoritmul precizează modul (întrețesut) în care informațiile sunt împachetate împreună într-un singur fișier container. Algoritmul prelucrează simultan una sau mai multe coloane cu imagine (fluxuri) ale unui film sau video, pistele audio, multiplele subtitrări etc. Rezultatul este un singur fișier container, ca de exemplu un fișier în formatul AVI. Coloanele video de prelucrat individuale pot avea de ex. formatul MPG sau DIVX, iar coloanele sonore de ex. formatul MP3.
+Pe lângă sincronizarea stream-urilor de pachete video și audio, constând din numeroase cadre video și audio, se mai poate folosi la intrare și un stream suplimentar de tip text, așa ca la un televizor care decodifică nu numai imaginea cu sunet, dar și semnalul de teletext.
+
+
+== Software ==
+Un program care execută operațiile de mai sus și produce un fișier în formatul container AVI este de exemplu programul shareware AVI-Mux GUI al lui Alexander Noé.
+A nu se confunda un flux cu un codec video sau codec audio.
+
+
+== Note ==
+
+
+== Vezi și ==
+
+
+== Legături externe ==
+http://www.alexander-noe.com/video/amg/
+
+
+== Bibliografie ==

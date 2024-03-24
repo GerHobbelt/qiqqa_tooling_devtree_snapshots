@@ -1,0 +1,85 @@
+revision: 7279831
+title: Integrated Truss Structure
+url: https://sk.wikipedia.org/wiki/Integrated_Truss_Structure
+
+
+---
+
+Integrated Truss Structure je štrukturálna chrbtica Medzinárodnej vesmírnej stanice. Ide o takmer 100 m dlhý nosník, ku ktorému budú pripevnené celkom 4 páry solárnych panelov s celkovým výkonom 110 kW (v súčasnosti 3 páry), radiátory termoregulačného systému, nepretlakové plošiny pre experimenty a ďalšie zariadenia.
+V počiatočných plánoch pre stanicu Freedom bolo použitých množstvo rôznych návrhov pre hlavný nosník, všetky však boli zamýšľané ako samostatne vynášané diely, na ktoré by astronauti namontovali zariadenia až počas výstupov do otvoreného vesmíru. Po prehodnotení návrhov v roku 1991, NASA zvolila kratšie prefabrikované kusy, ktorých inštalácia je ľahšia.
+
+
+== Časti nosníka ==
+
+
+=== Z1 ===
+
+Prvá časť nosníka, Z1, ktorá bola vynesená počas misie STS-92 v októbri 2000, sa používala ako dočasná ukotvovacia pozícia pre nosník P6 a solárne panely, ktoré boli pripojené pri nasledujúcej misii STS-97. Aj keď nie ako časť hlavného nosníka, sa časť Z1 stala prvou trvalou štruktúrou ISS. Veľmi podobná trámu bola dobrým základom pre budúce rozšírenie o hlavný nosník a kostru stanice. Obsahuje agregát CMG, elektrické vedenie, komunikačné zariadenia a dve plazmové kontaktory navrhnuté na neutralizáciu statickej elektrickej energie stanice. Nosník Z1 je nepretlakový, ale obsahuje dve prípojné miesta Common Berthing Mechanism pre ľahké pripojenie a dátovú komunikáciu. Na jedno miesto je pripojený modul Unity, na druhé bol dočasne pripojený PMA-3. V októbri 2007 bola časť P6 presunutá na konečnú pozíciu hneď za P5 a nosník Z1 teraz nespája žiadne elementy. Sú na ňom nainštalované iba gyroskopy, komunikačné zariadenie a plazmové kontaktory.
+
+
+=== S0 ===
+
+Nosník S0 (označovaný ako Center Integrated Truss Assembly Starboard 0 Truss) formuje centrálnu chrbtovú kosť Medzinárodnej vesmírnej stanice. Bol pripevnený na vrchol laboratórneho modulu Destiny počas misie STS-110 v apríli 2002. S0 privádza energiu k pretlakovým modulom stanice a odvádza teplo z modulov k nosníkom S1 a P1 Trusses. Nosník S0 nie je pripevnený k stanici, ale je spojený štyrmi modulmi k nosníkovej štruktúre stanice.
+
+
+=== P1, S1 ===
+
+Nosníky P1 a S1 (označované ako Port and Starboard Side Thermal Radiator Trusses) sú pripojené k nosníku S0 a disponujú vozíkmi na prenos Canadarm2 a astronautov k pracovným miestam okolo vesmírnej stanice. Na každom sú pripevnené tri radiátory termoregulačného systému, cez ktoré preteká 290 kg amoniaku. Nosník S1 bol vynesený letom STS-112 v októbri 2002 a nosník P1 letom STS-113 v novembri 2002. Podrobný návrh, testy a výroba oboch nosníkov bola pridelaná firme McDonnell Douglas (teraz Boeing) v Huntington Beach, Kalifornia. Prvé časti boli vyrobené v roku 1996. O tri roky neskôr bol dodaný prvý nosník.
+
+
+=== P2, S2 ===
+Nosníky P2 a S2 boli v pôvodnom pláne stanice Freedom plánované pre uloženie raketových motorov. Keďže ruské časti stanice tiež poskytujú túto funkciu, miesto pre motory nebolo nutné a tak bolo z plánov Medzinárodnej vesmírnej stanice vypustené. Časti P2 a S2 boli teda zrušené.
+
+
+=== P3/P4, S3/S4 ===
+
+Nosníky P3/P4 boli pripojené na nosník P1 počas misie STS-115 raketoplánu Atlantis, ktorá odštartovala 9. septembra 2006. P3 a P4 spolu obsahujú pár solárnych panelov, termoregulačný radiátor, rotačný mechanizmus, ktorý dovoľuje pohybovať solárnymi panelmi a spája oba nosníky. Po inštalácii cez tento mechanizmus neprechádzala energia, takže vygenerovaná elektrina zo solárnych panelov bola použitá iba v segmente P4 a nie pre zvyšok stanice. Následne v decembri 2006 bolo počas misie STS-116 vykonané celkové prekáblovanie stanice, aby bolo možné využiť aj túto energiu. Nosníky S3/S4 -- zrkadlový obraz nosníkov P3/P4 -- boli vynesené 11. júna 2007 počas letu STS-117 takisto raketoplánom Atlantis a pripojené na nosník S1.
+Hlavné podsystémy častí P3 a S3 zahrňujú Segment-to-Segment Attach System (SSAS), Solar Alpha Rotary Joint (SARJ) a Unpressurized Cargo Carrier Attach System (UCCAS). Primárnou funkciou P3 je poskytovať mechanické, energetické a dátové rozhranie k nákladu pripojenému k dvom platformám UCCAS; otáčať solárne panely za Slnkom pomocou SARJ;  poskytnúť dopravné a pracovné miesta pre Mobile Transporter. Základnú štruktúru nosníkov P3/S3 tvoria hexagonálne hliníkové dielce, štyri priečky a šesť dlhých nosníkov rámu.  Nosník S3 má tiež miesta pre EXPRESS Logistics Carrier, prvý by mal byť vynesený v roku 2009. 
+Hlavnými podsystémami častí fotovoltaických modulov P4 a S4 (PVM) zahrňujú dva solárne panely (SAW), Fotovoltaické radiátory (PVR), Alpha Joint Interface Structure (AJIS), Modified Rocketdyne Truss Attachment System (MRTAS) a Beta Gimbal Assembly (BGA).
+
+
+=== P5, S5 ===
+
+Prepojovacie nosníky P5 a S5 budú podporovať nosníky P6 resp. S6. Dĺžka nosníkov P3/P4 a S3/S4 bola obmedzená nákladovým priestorom raketoplánu, takže tieto krátke časti boli potrebné na predĺženie nosníka. P5 bol inštalovaný 12. decembra 2006 počas prvého výstupu do otvoreného vesmíru misie STS-116. S5 bol na obežnú dráhu vynesený misiou STS-118 a inštalovaný 11. augusta 2007.
+
+
+=== P6, S6 ===
+Nosník P6 bol druhý segment, ktorý bol nainštalovaný, pretože sú na ňom veľké solárne panely (SAW), ktoré generujú podstatnú časť elektrickej energie pre stanicu. Bol rozvinutý skôr ako SAW na nosníku P4. Pôvodne bol pripojený k nosníku Z1 a svoje panely rozvinul počas misie STS-97, ale neskôr boli panely na dvakrát zrolované naspäť, aby sa uvoľnilo miesto pre solárne panely na nosníkoch P4 a S4, a to počas misií STS-116 a STS-117. Počas letu STS-120 bol P6 odpojený od Z1, presunutý na nosník P5, znovu spojazdnené fotovoltaické radiátory a rozvinuté solárne panely. Jeden z panelov (2B) bol rozvinutý úspešne, kým druhý (4B) sa počas rozvinutia roztrhol a operácia musela byť prerušená, keď bol rozvinutý na asi 80 %.  Po oprave bol rozvinutý na plnú dĺžku. Misia STS-119 pripojí nosník S6 na nosník S5 a rozvinie štvrtý a posledný pár solárny panelov a radiátorov.
+
+
+== Podsystémy nosníkov ==
+
+
+=== Solárne panely ===
+Hlavným zdrojom energie pre Medzinárodnú vesmírnu stanicu sú tri zo štyroch veľkých amerických fotovoltaických panelov, ktoré sa v súčasnosti na stanici nachádzajú, niekedy označované ako Solar Array Wings (SAW). Prvý pár je pripojený k nosníkovému segmentu P6, ktorý bol pripojený k nosníku Z1 v roku 2000 počas misie STS-97. V novembri 2007 počas misie STS-120 bol presunutý na konečnú pozíciu na nosníku P5. Druhý pár bol vynesený a inštalovaný v septembri 2006 počas misie STS-115, ale neposkytoval energiu až kým posádka misie STS-116 v decembri 2006 neprekáblovala elektrické vedenie na stanici. Tretí pár bol inštalkovaný misiou STS-117 v júni 2007. Vynesenie a inštalovanie posledného páru je plánované pre misiu STS-119. Viac solárnych panelov malo byť inštalovaných na ruskej Science Power Platform, ale tie boli zrušené.Každý solárny panel je 34 m dlhý a 12 m široký a je schopný generovať skoro 32,8 kW DC energie. Je rozdelený na dve fotovoltaické plochy s inštalačným stožiarom uprostred. Každá plocha obsahuje 16 400 kremíkových fotovoltaických článkov, zoskupených do 82 aktívnych panelov, každý s 200 článkami. Každý článok má plochu 8 cm², na ktorej je 4 100 diód.
+
+Každý panel bol pri vynesení zložený ako akordeón. Na obežnej dráhe sa panely pomocou stožiara uprostred rozvinuli do plnej dĺžky. Na otáčenie panelov za Slnkom sa používa zariadenia známe ako Beta Gimbal Assembly (BGA).
+
+
+=== Solar Alpha Rotary Joint ===
+Solar Alpha Rotary Joint (SARJ) je hlavné rotačné zariadenia, ktoré umožňuje solárnym panelom sledovať Slnko; v normálnej prevádzke sa zariadenie počas jedného obehu otočí o 360° (pozri aj Night Glider mode). Jeden SARJ je umiestnený medzi nosníkmi P3 a P4 a druhý medzi nosníkmi S3 a S4. Ak sú v prevádzke, tak sa pomaly otáčajú, čím umožňujú solárnym panelom byť stále natočené na Slnko. Každý SARJ má priemer približne 3 m, hmotnosť 1130 kg a môže sa neprerušovane otáčať pomocou ložiska a servoriadenia. Cez Utility Transfer Assembly (UTA), ktorý sa nachádza vo vnútri SARJ prúdi všetká vygenerovaná elektrická energia z panelov. Uchopenie SARJ umožňuje neprerušovaný prenos dát a energie. SARJ bol navrhnutý, skonštruovaný a testovaný firmou Lockheed Martin a jej dodávateľmi.
+
+
+=== Elektrické vedenie a uskladnenie ===
+Jednotka Sequential Shunt Unit (SSU) slúži na reguláciu zozbieranej energie zo solárnych panelov počas insolácie - času, keď na slnečné panely dopadá slnečné svetlo. Séria 82 vodiacich káblov vedie od solárnych panelov priamo do SSU. Riadenie výstupov každého kábla reguluje množstvo prenesenej energie. Nastavenie výstupného napätia je riadené počítačom umiestneným na IEA a v normálnych podmienkach je nastavené na 140 voltov. SSU má prepäťovú ochranu urdžujúcu výstupné napätie pod 200 V DC, čo je maximum pre všetky operačné podmienky. Táto energia sa prenáša cez BMRRM do DCSU umiestnenej v IEA. Rozmery SSU sú 81,3 × 50,8 × 30,5 cm a hmotnosť 84 kg.
+Systém na uskladnenie elektrickej energie pozostáva z dobíjaco-vybíjacej jdenotky (BCDU) a dvoch batériových agregátov.
+BCDU má dvojitú funkciu. Nabíja batériové agregáty počas insolácie a odvádza energiu z batériového agregátu (cez DCSU) počas noci. BCDU ma kapacitu nabíjania 8,4 kW a vybíjania 6,6 kW. Tiež monitoruje stav batérií a chráni pred výpadkami energie. Riadi ju počítač v IEA.
+Každý batériový agregát pozostáva z 38 ľahkých Ni-H článkov a pridruženého mechanického a elektrického zariadenia. Má kapacitu 81 A·h a 4 kW·h. Táto energia je vedená do zariadení stannice cez BCDU resp. DCSU. Batérie majú plánovanú životnosť 6,5 roka a vydržia 38 000 cyklov nabitie/vybitie s 35% stratou výkonu. Každá batéria má rozmery 101 × 91,4 × 45,7 cm a hmotnosť 170 kg.
+
+
+== Výstavba nosníkov a solárnych panelov ==
+Časti na obežbej dráhe
+Časti čakajúce na vynesenie
+
+
+== Pozri aj ==
+Výstavba Medzinárodnej vesmírnej stanice
+Zoznam pilotovaných letov na Medzinárodnú vesmírnu stanicu
+
+
+== Referencie ==
+
+
+== Externé odkazy ==
+
+NASA Flash ITS Interactive

@@ -1,0 +1,89 @@
+revision: 15664350
+title: Virus
+url: https://ro.wikipedia.org/wiki/Virus
+
+
+---
+
+În biologie, un virus este un agent patogen inframicrobian, invizibil la microscopul optic, care nu are capacitatea de autoreproducere, ci este multiplicat de celula parazitată. Virusurile provoacă diverse boli infecțioase numite viroze.Virusurile reprezintă cea mai simplă formă de viață acelulară. Virusurile nu sunt considerate ființe vii, dar cu toate aceste dispun de material genetic, aflându-se la intersecția dintre viu și neviu. Spre deosebire de celelalte forme de viață, nu consuma hrană și nu produc energie.
+Ca structură, virusul este o particulă submicroscopică, alcătuită dintr-o parte centrală numită genom viral, format din material genetic, care poate fi ADN sau ARN, și o teacă sau înveliș protector de natură proteică, numită capsidă. Capsida și genomul viral alcătuiesc nucleocapsida. La virusurile mai complexe mai apare un înveliș exterior de natură proteică numit pericapsidă, peplos sau anvelopă virală. Din punct de vedere al prezenței învelișului pericapsidal, virusurile se împart în două categorii: nude și învelite în peplos. Particula virală completă a unui virus, aflata extracelular, capabilă să supraviețuiască sub formă cristalină și să infecteze celule vii se numește virion.
+
+
+== Istoric ==
+Existența unor microorganisme invizibile la microscop a fost intuită de Pasteur după ce toate încercările de a pune în evidență agentul turbării au părut a fi zadarnice.
+După unii precursori geniali (Edward Jenner, Pasteur), progresele în domeniul virologiei au rămas neînsemnate și până la începutul secolului al XX-lea, s-a vorbit în continuare de acele „ființe imaginare”, fără ca ele să fie cunoscute.
+Printre primii care au dovedit indirect, neavând la îndemână microscoapele actuale, a fost Martinus Beierink. Tatăl său care vindea tabac, a fost ruinat de boala numită mozaicul tutunului, care se credea pe atunci că este boală produsă de bacterii. Beierink a filtrat prin porțelan un triturat din frunze bolnave de tutun. Cu microscoapele vremii el n-a reușit să observe agentul patogen. Însă el presupune, după ce cu filtratul obținut a reușit să infecteze plante sănătoase, că agentul infecțios trebuie să fie ceva mai mic ca bacteria.
+Cu ajutorul microscopului optic cu lumină ultravioletă ("ultramicroscopul"), se pot distinge obiecte până la o finețe dimensională de 0,15 μm, la măriri de 6.000-7.000 ori. Cu toate acestea, virusurile (inframicrobii), nu se pot observa cu aceste microscoape. Observarea lor cere o mărire de ordinul 10.000-15.000 ori, ceea ce nu se poate obține cu microscopul optic, deoarece astfel de măriri necesită puteri separatoare de 0,2 μm.
+La sfârșitul secolului al XIX-lea, s-a reușit detectarea lor printr-o metodă indirectă; după triturarea țesuturilor care le conțin, virusurile traversează filtrele și prin injectare transmit o anumită boală, astfel că li s-a atribuit denumirea de virusuri filtrante.
+Lucrările lui R. Degkwitz (1927) și T. Taniguchi (1935) au demonstrat că rujeola este cauzată de un virus. La fel și rubeola. Aceste două virusuri vor fi cultivate ulterior de Enders (1962).
+În 1935, W. M. Stanley izolează o „proteină” și demonstrează că inocularea acesteia unor plante provoacă boala numită mozaicul tutunului; de asemenea, arată că „proteina” păstrează această proprietate și după cristalizare; Bowden și Pirie îi confirmă descoperirile în 1937. Ulterior s-a văzut că de fapt era vorba de un acid nucleic cu un înveliș de natură proteică; în cazul virusurilor patogene pentru animale, aceste două componente pot, în anumite condiții, să se separe.
+În 1939, G. Kausche, E. Pfankuch și E. Ruska au început să studieze virusurile la microscopul electronic.
+În 1943, Goodpasture este inițiatorul infectării membranei alantoidiene a oului embrionat de pui (variola aviară, vaccina, herpesul), care va fi dezvoltată de F. M. Burnet și colaboratorii săi, iar apoi de mulți alții (Levaditi, Myakawa, etc).
+După ce demonstrează că la baza reproducerii virusului mozaicului tutunului stă ARN-ul, Heinz Fraenkel-Conrat arată în 1955 împreună cu Robley Williams că un virus funcțional poate fi obținut din ARN purificat și o proteină, acestea două unindu-se spontan (proteina învelește materialul genetic), - deci aceasta este cea mai stabilă structură (cu energia cea mai mică) -, și este foarte probabil ca acesta să fie și mecanismul de formare a virusului în celula gazdă.
+În 1958, Stanley a stabilit că ceea ce credea a fi „proteina” virusului mozaicului tutunului are proprietățile moleculelor chimice dar dispune și de capacitatea de a se reproduce și de a se transforma.
+
+
+== Proprietăți ==
+Din punct de vedere chimic virusurile sunt constituite din nucleoproteide. La un înalt grad de puritate ele pot cristaliza.
+La virusul herpesului capsida este prevăzută cu prelungiri proteinice (capsomeri) care acoperă toată suprafața virionului.
+Deosebiri față de bacterii:
+Virusurile au dimensiuni foarte mici (de la 8 nm până la 500 nm, astfel că pot traversa filtrele poroase ce rețin bacteriile).
+Reproducerea virusurilor este posibilă numai în interiorul celulelor vii, în organisme sau în medii de cultură care conțin astfel de celule.
+Au rezistență mare la glicerină și la solvenții lipoidelor, față de care sunt sensibili majoritatea microbilor.
+Virusurile sunt agenți patogeni ai unor boli denumite generic viroze.
+În general, virusurile dau imunitate, dar infecția poate fi determinată și de acizii nucleici extrași din virusuri; în acest caz nu se obține imunizare, datorită lipsei proteinei.
+Exemple: virusul variolei, virusul turbării, virusul encefalitei, HIV, virusul gripal, etc.
+Există și viroze ale plantelor, cel mai cunoscut agent fiind Virusul mozaicului tutunului.
+Alte viroze ale plantelor: mozaicul castraveților, viroza mozaicului porumbului, răsucirea frunzelor de cartof, bășicarea frunzelor de piersic.
+Viroze ale animalelor: febra aftoasă, turbarea, pesta porcină, aviară, ovină.
+Viroze ale oamenilor: turbarea, gripa, oreionul, varicela, variola, poliomielita.
+
+
+== Clasificare ==
+Încrengătura Virophyta cuprinde numai ordinul Virales, împărțit în 3 subordine:
+Subordinul Phytophagineae (virusurile plantelor), cuprinzând ribovirusuri care produc fitoviroze.
+Subordinul Zoophagineae (virusurile animalelor), grupând dezoxivirusuri sau adenovirusuri care parazitează animalele și omul (virusul gripei, turbării, poliomelitei, variolei etc.)
+Subordinul Fhagineae (virusuri bacteriofage), grupează adenovirusuri parazite în celulele bacteriene, distruse prin liză.
+După gazda care îi primește, se împart în patru grupe:
+virusuri patogene pentru bacterii: bacteriofagi:
+virusuri patogene pentru vegetalele superioare: virusurile plantelor;
+virusuri patogene pentru nevertebrate: virusurile insectelor;
+virusuri patogene pentru vertebrate, cuprinzând cinci grupe:
+virusuri al căror tropism este marcat pentru ectoderm (vaccin, variolă),
+virusuri neurotrope pure (turbare),
+virusuri endoteliomezodermice (limfogranulomatoză venerică la om),
+virusuri septicemice (rujeolă, rubeolă),
+virusuri proliferative (sarcomul lui Roux, leucoze și leucemii transmisibile).După proprietățile fizico-chimice:După tipul de acid nucleic pe care îl conțin (clasificarea actuală uzuală)
+Virusuri care conțin în genomul lor ARN sau ribovirusuri
+Virusuri care conțin în genomul lor ADN sau deoxiribovirusuri
+
+
+== Vezi și ==
+Clasificarea virusurilor
+Clasificare Baltimore
+HIV
+Listă de virusuri
+Viroid
+Virusoid
+Virusologie
+Virusul herpes simplex
+
+
+== Note ==
+
+
+== Bibliografie ==
+Elvira Sînziana Ciufescu. Virusologie medicală. Editura Medicală Națională. 2003
+Costin Cernescu. Virusologie medicală. Editura Medicală. 2012
+Aurel Ivan. Tratat de epidemiologie a bolilor transmisibile. Polirom 2002
+René Taton, Istoria generală a științei, vol. IV, Editura științifică și enciclopedică, București, 1976, (pag. 285, 633-638, 838-840, 864, 879, 880-881, 885, 889);
+Dicționar enciclopedic român, Editura Politică, București, 1966, (pag.867);
+Ion Enescu, Microbii, Editura Ceres, 1988.
+
+
+== Legături externe ==
+
+Date cronologice Arhivat în 21 martie 2007, la Wayback Machine.
+Virusuri (Directiva 93/88 din 12 octombrie 1993)
+Virusurile - arma terapeutică a viitorului, 3 aprilie 2012, Mihaela Stănescu, Descoperă
+Surpriză! Virusurile ne pot fi aliați, 2 iulie 2011, Mihaela Stănescu, Descoperă

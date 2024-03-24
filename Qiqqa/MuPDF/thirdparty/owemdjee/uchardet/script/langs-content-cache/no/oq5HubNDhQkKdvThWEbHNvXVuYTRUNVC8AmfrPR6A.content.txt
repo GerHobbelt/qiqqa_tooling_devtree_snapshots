@@ -1,0 +1,67 @@
+revision: 23565392
+title: Vitenskapelig metode
+url: https://no.wikipedia.org/wiki/Vitenskapelig_metode
+
+
+---
+
+Vitenskapelig metode er en samling teknikker for å undersøke fenomener, finne ny kunnskap eller å samordne og integrere gammel kunnskap.
+Den vitenskapelige metode eller prosess blir betraktet som fundamental for den vitenskapelige utforskning og tilegnelse av ny kunnskap basert på fysiske bevis – såkalt empiri eller erfaring. Ibn al-Haytham og Roger Bacon var av de første som brukte vitenskapelig metode, og bidro til at grunnlaget for moderne vitenskap ble lagt i opplysningstiden av datidens vitenskapsfilosofer.
+Kunnskap kan, ved bruk av vitenskapelig metode, oppnås ved bruk av deduksjon eller induksjon. Deduktiv metode trekker logisk nødvendige slutninger fra allmenne til mindre allmenne - singulære eller partikulære - utsagn. Fordelen er at de alltid blir sikre og sanne, men deres relevans for virkeligheten er tvilsom. Induktiv metode tar utgangspunkt i enkeltfenomener som generaliseres, og spesielle fenomener går over til generelle utsagn eller teorier. Induktive metoder har som svakhet at de ikke gir visshet, men bare grader av sannsynlighet.En viktig del av den vitenskapelig forskningen er å rapportere resultatene. En av de mest vanlige rapporteringsprosedyrene er å skrive fagfellevurderte artikler i vitenskapelige tidsskrifter. Disse artikler følger ofte logikken i ITMRD-strukturen.
+
+
+== Metoder ==
+Vitenskapelig metode er en kontinuerlig prosess og begynner med observasjon av verden. Den nysgjerrige vil da stille spørsmål om årsaker og sammenhenger og lage hypoteser om hvorfor ting er som de er. De beste hypotesene vil føre til at man kan gjøre forutsigelser som kan testes. Nøyaktig utførte eksperimenter kan så gi empiriske data som viser om forutsigelsen basert på hypotesen stemte. Avhengig av hvor godt dataene fra flere tester stemmer med forutsigelsen kan hypotesen forbedres, forandres eller forkastes.
+
+
+=== Hypotetisk deduktiv-metode ===
+Hypotetisk-deduktiv metode (HDM) regnes av mange som den grunnleggende metode i moderne naturvitenskap. 
+ Den tar utgangspunkt i en hypotese, og ved deduksjon finner man forutsigbar effekt som man så forsøker å observere. Hypotesen er normalt framsatt på bakgrunn av induksjon, men trenger ikke å være basert på observasjoner. Det avgjørende er at den må være falsifiserbar; det må altså være mulig å bevise at hypotesen er feilaktig dersom den ikke stemmer med forsøksresultatene.  Karl Popper argumenterte for at denne metoden bringer oss stadig «nærmere sannheten», men ikke kan bevise hypotesene.
+
+
+=== Induktiv metode ===
+Induktiv metode trekker slutninger basert på sterke bevis og erfaringer. Metoden gir stor grad av troverdighet, men konklusjonen kan være feil selv om alle premissene logisk sett er korrekte. Hvis alle observerte eksemplarer av X er i gruppen Y, og alle observerte Z er X, vil man konkludere at alle Z er Y. Det trengs imidlertid bare ett tilfelle av Z som ikke er Y, for at konklusjonen skal være feil.
+
+
+=== Aksiomatisk-deduktivt system ===
+Innen et aksiomatisk-deduktivt system, for eksempel matematikk eller teologi, kan man få ny kunnskap ved deduksjon uten å måtte gjøre observasjoner. Dersom man logisk kan resonnere seg fram til et resultat basert på grunnleggende sannheter, kalt aksiomer, må resultatet være sant. Hvis alle X er Y og alle Z er X, må alle Z være Y. Aksiomatiske systemer er konsistente så lenge de ikke er selvmotsigende, og da kan man utlede både beviser og falsifikasjoner fra aksiomene.
+
+
+=== Holisme ===
+Holisme er en gammel, gresk vitenskapsteoretisk retning der man anser helheten som mer enn summen av delene. Holistisk metode er en tilnærming der delene av et system må ses i sammenheng, i kontrast til reduksjonisme der delene plukkes fra hverandre og analyseres hver for seg. Vitenskapelig holisme er basert på at oppførselen til et system ikke kan være perfekt spådd uansett hvor mye data som er tilgjengelig. Holistisk vitenskap er ofte opptatt av at vitenskap ikke er en upartisk observatør, men at observasjoner og eksperimenter påvirker helheten.
+
+
+=== Abduksjon ===
+Filosofen Charles Sanders Peirce hadde en pragmatisk tilnærming og mente at abduksjon (det å dra logiske slutninger på premisser som bare er sannsynlige) var en akseptabel metode for å gjøre seg opp en mening. Hva som er den grunnleggende «første årsak» man bruker ved deduksjon, kan bestrides, men Pierce mente at jo mindre man betvilte denne, desto mer tilfreds var man. Når verden er overbevist om noe, er det nytteløst å bestride det. Pierce hevdet at hver enkelt burde holde fast ved sin metode i praktiske saker, hva enten det gjaldt å stole på autoriteter, følge folkemeningen eller tro på falsifiserbare teorier.
+
+
+== Historie ==
+
+Aristoteles grunnla logikken og fastsatte kontradiksjonsprinsippet og «loven om det utelukkede tredje» (tertium non datur) – enten har noe en egenskap, eller så har det det ikke. Aristoteles skrev Organon, seks arbeider om logikk, der han introduserte «empiri» og holdt frem induksjon som et redskap for å finne universelle sannheter.
+Ibn al-Haytham regnes med sin Optikk (Kitab al-Manazir) av mange som den første som brukte vitenskapelig metode. Der skrev han hvordan andre kunne repetere hans eksperimenter ved å etterprøve selv, ikke bare tro på hans ord.Munken Roger Bacon forsøkte å skille spekulativ forskning og kunst fra eksperimentell vitenskap. Bacon fremholdt matematikk som vitenskapens metode og mente at ekte vitenskap kunne bekreftes ved eksperimenter.
+René Descartes hevdet at perfekt kunnskap måtte deduseres fra en første årsak, og at all kunnskap måtte deduseres av det vi har sikker viten om. Han mente også at det måtte være sammenheng i kunnskapen slik at ikke noe ledd i kjeden ikke var perfekt.
+Isaac Newton hadde en empirisk tilnærming til vitenskapelig metode og støttet ikke Descartes rasjonalisme. Newtons bidrag til naturvitenskapen var så betydelig at hans mekanistiske forståelse av verden og induktive metodikk formet ettertiden.
+På 1800-tallet bidro blant andre Hans Christian Ørsted til vitenskapelig metode ved å eksemplifisere observasjon, hypotese og deduksjon. I 1934 kom Karl Popper med boken Logik der Forschung med ideen om at falsifisering var et kriterium for vitenskap. Thomas Kuhn skrev i 1962 at forskere arbeider innenfor en rekke paradigmer, og at ny viten ikke vinner frem fordi den motbeviser den gamle, men fordi tilhengerne av den gamle kunnskapen erstattes av en yngre generasjon som vokser opp med kjennskap til den.
+
+
+== Kritikk ==
+
+Den vitenskapelige metode er stadig blitt kritisert. Det aristoteliske verdensbilde, der iboende egenskaper og formål ble ansett som gyldige forklaringer på årsaker i naturen, var et paradigme som stod svært sterkt, og som var en rådende verdensforklaring før Kopernikus’, Keplers og Newtons omveltninger. Francis Bacon var kritisk til Aristoteles’ metoder som han mente for raskt trakk slutninger fra enkelttilfeller til generelle regler. Newtons teorier brøt med ideen om «ekte», fysisk påvirkning. Han begrunnet usynlige krefter med fenomener, og ikke logisk utledning fra en første årsak, og ble slik en implisitt kritiker av datidens vitenskapssyn. Albert Einsteins teorier og kvantefysikken, som kom på 1900-tallet, mente å vise at selv de sikreste antagelser om tid, rom og gjenstander kunne være feilaktige, og fornyet den filosofiske debatten om hva vitenskapelig metode er.
+Charles Sanders Peirce mente at vitenskapelig metode ikke egentlig lette etter sannhet, men var et forsøk på å lage forklaringer slik at irriterende tvil kan bli en tro som man har nok tillit til å handle på bakgrunn av. Han var pragmatiker og mente at hvilken metode man brukte, var mindre viktig enn om man hadde tro på metoden.
+Thomas Kuhn og hans paradigmeforklaring anfektet troen på den vitenskapelige metodes objektivitet. Willard Van Orman Quine hadde en holistisk tilnærming og kritiserte begrepet analyse som han hevdet logisk sett var en sirkeldefinisjon. Paul Feyerabend hevdet at det ikke finnes noen spilleregler for vitenskapelig metode, og at «det behøves en reform av vitenskapen som gjør den mer anarkistisk og mer subjektiv (i Kierkegaards forstand)».Vitenskapelig metode kritiseres også for å være utilstrekkelig i møte med etiske problemer. For eksempel er mengden NOx eller radioaktivt avfall det er farlig å slippe ut, avhengig av hvordan «farlig» er definert, og det er en politisk og etisk diskusjon som påvirker både metodikk og resultater.
+
+
+== Se også ==
+Blindtest
+Erkjennelsesteori
+Forklaringsmodell
+Forskning
+Hypotese
+Teori
+Vitenskapsfilosofi
+Fagfellevurdering
+Hypotetisk-deduktiv metode
+Aksiomatisk-deduktivt system
+
+
+== Referanser ==

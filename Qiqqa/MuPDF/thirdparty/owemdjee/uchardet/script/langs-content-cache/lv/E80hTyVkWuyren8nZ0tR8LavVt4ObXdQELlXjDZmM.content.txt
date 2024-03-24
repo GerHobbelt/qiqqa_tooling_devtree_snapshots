@@ -1,0 +1,62 @@
+revision: 2927661
+title: Agrobacterium tumefaciens
+url: https://lv.wikipedia.org/wiki/Augu_biotehnolo%C4%A3ija
+
+
+---
+
+Augu biotehnoloģija ir biotehnoloģijas nozare, kas izmanto augus, lai ražotu bioloģiski nozīmīgas vielas, un uzlabo augu īpašības. Augu biotehnoloģija ir tehnisku paņēmienu kopums, kurus izmanto, lai pielāgotu augus īpašām vajadzībām (piemēram, pastiprināta sekundāro metabolītu sintēze, vairāk šķiedras u.tml.). Augu biotehnoloģija arī izstrādā un pēta dzīvo šūnu un audu audzēšanas un pavairošanas metodes.
+
+
+== Vēsture ==
+Vēsturiski biotehnoloģiju iedala vairākos posmos:
+
+Tradicionālā biotehnoloģija, kas nav balstīta uz zinātniskiem pamatiem. Tā balstīta uz praktiskiem novērojumiem vīna ražošanā Mezopotāmijā 5000-4000 g. p.m.ē., Šumeru alus ražošanā 6000 g. p.m.ē. vai maizes ražošanā 4000-3000 g. p.m.ē. Senajā Ēģiptē.Klasiskā biotehnoloģija uzskata, ka veidojusies 19-20. gadsimtā, kad sāka izprast tradicionālās biotehnoloģijas procesus. Augu biotehnoloģija balstās uz šūnu totipotenci - spēju reģenerēt visu augu no vienas šūnas. Totipotences ideja iekļaujas arī Šleidena (Schleiden) un Švāna (Schwann) šūnu teorijā. Šūnu teorija apgalvo, ka šūna ir organisma (dzīvības) pamatvienība un jauna šūna var veidoties daloties citai šūnai. Vairāki mēģinājumi demonstrēt šūnu totipotenci bija 20. gadsimta piecdesmitajos gados. Pirmie pierādījumi tam, ka izolēti var kultivēt augstāko augu šūnu radās 1954. gadā, kad Muirs (Muir) novēroja izolētas tabakas šūnas dalīšanos .Modernā augu biotehnoloģija kopš 1970 gada, kad sāka izmantot rekombinantās DNS tehnoloģijas. Pirmie komerciālie mēģinājumi pārdot augus, kuri uzlaboti ar augu biotehnoloģijas palīdzību parādījās 1989. gadā, kad Kaldžena (Calgene) akciju sabiedrība lūdza atļauju tirgot tomātus, kurus ilgāk var uzglabāt veikalu plauktos 
+
+
+== Galvenie augu biotehnoloģijas virzieni mūsdienās ==
+
+
+=== Gēnu inženierija ===
+Gēnu inženierija ir cilvēka manipulēšana ar kāda organisma genomu tādā veidā, kas nebūtu iespējams dabiskos apstākļos. Gēnu inženierijas rezultātā iegūst ģenētiski modificētu organismu. Sasniegumi augu ģenētiskajā modificēšanā ir tieši saistīti ar augu molekulārās bioloģijas sasniegumiem, augu genomu sekvenēšanu, daudzu ekonomiski nozīmīgu gēnu identificēšanu un raksturošanu. Gēnu inženierijas rezultātā iegūti lauksaimniecībā nozīmīgi augi, kas ir izturīgāki pret biotiskajiem un abiotiskajiem stresa faktoriem un ir ar palielinātu uzturvērtību. Biežāk ģenētiski modificētie kultūraugi ir rapsis, kokvilna, kukurūza un soja. 
+
+
+==== Gēnu netiešā pārnese ====
+
+Gēnu netiešā pārnese izmantojot baktērijas Agrobacterium tumefaciens, Agrobacterium rhiziogenes, vīrusus.
+Jau sen zināms, ka baktērija Agrobacterium tumefaciens augiem izraisa audzēju veidošanos (kādas auga daļas pastiprinātu, augšanu). Brauns 1958. gadā ieguva no dabiska audzēja šūnas un atbrīvoja tās no baktērijām. Iegūtās šūnas spēja augt uz barotnes bez fitohormoniem, bet šūnas, kas nenāca no audzēja to nespēja. Vēlāk 1974. gadā atklāja virulentajiem Agrobacterium tumefaciens celmiem plazmīdu - Ti plazmīdu (no angļu valodas ‘ Tumor inducing’). Tālākos pētījumos konstatēja, ka tikai neliela daļa no Ti plazmīdas gēniem ir atbildīgi par transformāciju un integrējas auga genomā. Radās metodes kā modificēt Ti plazmīdu ievietojot gēnus, kurus nepieciešams ienest auga šūnā un izņemot gēnus, kas radīja audzēju. Lai atlasītu transformētās šūnas, izmanto kanamicīna rezistences gēnu .
+
+
+==== Gēnu tiešā pārnese ====
+Gēnu tiešajai pārnesei izmantojamās metodes: 
+
+Mikroinjekcija - izmantojot smalku adatu DNS injicē protoplastā;Elektroporācija - ar elektroporācijas metodi iespējams veikt tiešo gēnu pārnesi protoplastiem. Elektroporācijas rezultātā (elektriskā lauka ietekmē) palielinās šūnas membrānu caurlaidība. DNS molekulas, kuras nepieciešams nogādāt šūnā, migrē cauri elektriskā lauka radītajām membrānas porām un integrējas genomā. Lai elektroporācija noritētu veiksmīgi, protoplastus pirms un pēc apstrādes inkubē buferšķīdumos ar augstu osmotisko aktivitāti;
+Šūnu bombardēšana ar DNS daļiņām - DNS daļiņas saista ar nesēju, kuru ar paātrinājumu raida šūnu virzienā. DNS nesējs var būt ķīmiski inerts metāls, lai tas aktīvi neieisaistītos ķīmiskās reakcijās šūnā, piemēram, zelts vai volframs. Nesējam jābūt pietiekami smagam, lai tas spētu iespiesties izvēlētajos audos un ienestu DNS šūnā .
+
+
+=== Augu audu kultūras ===
+Ar augu audu kultūrām saprot izolētu šūnu, augu daļu (audu) un orgānu audzēšanu sterilos apstākļos (in vitro) . Audu audu kultūru metodes balstās uz augu spēju reģenerēt visu augu no vienas šūnas, šūnas protoplasta, lapas vai kāda cita orgāna daļas, ja audi ir novietoti piemērotā barotnē ar nepieciešamajām barības vielām un fitohormoniem.
+Augu audu kultūras izmanto:
+
+precīzu augu kopiju iegūšanai (klonēšanai). Pavairo augus ar vēlamajām īpašībām,
+pavairo augus, kuriem neveidojas sēklas, vai arī trūkst apputeksnētāju,
+augu reģenerācijai no ģenētiski modificētām šūnām,
+augus pārvadājot sterilos apstākļos samazinās slimību, kaitēkļu un patogēnu pārneses iespēja,
+augu diedzēšana no sēklām, kurām dabiskos apstākļos būtu samazināta dīgtspēja un augšana, piemēram, orhidejas,
+augu atbrīvošanai no vīrusu un cita veida infekcijām kā arī, lai savairotu "tīros augus".
+
+
+== Augu biotehnoloģijas izmantošana ==
+
+Augu biotehnoloģiju izmanto:
+
+izturības pret kaitēkļiem palielināšanai, piemēram, Bt kukurūza. Kukurūzas genomā ienests Bacillus thuringiensis gēns, kas kodē Bt toksīnu. Bt toksīna kristālus veido lieli, normālos apstākļos nešķīstoši protoksīni. Tie ir samērā droši cilvēkam, augstākajiem dzīvniekiem un lielai daļai kukaiņu. Bt protoksīns kļūst šķīstošs stipri sārmainā vidē (pH 9,5) . Šāda sārmaina vide ir kukaiņu kāpuru viduszarnā, kur protoksīns sašķeļas, veidojas toksīns un rezultātā kāpurs iet bojā;
+herbicīdu rezistence iegūšanai – kultūraugu rezistence pret kādu no herbicīdiem ļauj vieglāk atbrīvoties no nezālēm;
+vīrusu rezistences iegūšanai – augi mazāk slimo;
+novēlotas augļu nogatavošanās panākšanai – augļus vieglāk un tālāk iespējams transportēt;
+eļļu sastāva izmainīšanai – parasti tādiem eļļas augiem kā rapsim;
+putekšņu veidošanās kontrolei - bieži ģenētiski modificētiem augiem ir vīrišķā sterilitāte, lai ierobežotu nejaušu augā ienesto gēnu nokļūšanu savvaļā.
+nākotnē ekonomiski nozīmīgu sekundāro metabolītu ražošanaiSekundārie metabolīti, kurus iespējams iegūt no augiem, lai gan komerciāli pagaidām vēl ieguves process ir neizdevīgs:
+
+
+== Piezīmes un atsauces ==

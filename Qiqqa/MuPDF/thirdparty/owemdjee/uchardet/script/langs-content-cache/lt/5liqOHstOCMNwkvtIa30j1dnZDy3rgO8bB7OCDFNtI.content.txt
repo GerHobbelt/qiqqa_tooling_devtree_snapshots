@@ -1,0 +1,42 @@
+revision: 6185400
+title: "Nat\u016Bralios kalbos apdorojimas"
+url: https://lt.wikipedia.org/wiki/Nat%C5%ABralios_kalbos_apdorojimas
+
+
+---
+
+Natūralios kalbos apdorojimas (Natural language processing) – lingvistikos ir informatikos sandūroje esanti disciplina, tirianti informacinių technologijų ir kompiuterinių programų pritaikymo visoms natūralios kalbos naudojimo sritims galimybes. Tarp taikymo sričių yra:
+
+Teksto skaitymas (įgarsinimas)
+Automatinis vertimas
+automatinis teksto taisymas
+informacijos paieška
+automatinis tekstų kūrimas
+Automatizuotas teksto apibendrinimas
+skaitomo teksto atpažinimas.Pradinės sistemos kaip SHRDLU, dirbančios „ribotame pasaulyje“ su ribotu žodynu, dirbo puikiai, suteikdamos mokslininkams optimizmo, kuris buvo nuslopintas, kai sistemos buvo praplėstos iki realesnių bei sudėtingesnių gyvenimiškų situacijų.
+Natūralios kalbos suvokimui priskiriamos labai sudėtingoms problemoms, kurias galėtų spręsti tik dirbtinio intelekto sistemos (AI-complete), dėl to, kad natūralios kalbos atpažinimas reikalauja gilių žinių apie išorinį pasaulį ir galimybės juo manipuliuoti. „Suvokimo“ apibrėžimas yra viena iš esminių natūralios kalbos apdorojimo problemų.
+Kelių problemų pavyzdžiai, su kuriais susiduria natūralios kalbos apdorojimo sistemos:
+
+Sakiniai Mes davėme beždžionėms kriaušių, nes jos buvo alkanos. ir Mes davėme beždžionėms kriaušių, nes jos buvo persirpusios. turi vienodą gramatinę struktūrą, tačiau pirmame sakinyje jos nurodo į beždžiones, o antrame jos nurodo į kriaušes, todėl sakinys negali būti suprastas teisingai nežinant kriaušių ir beždžionių savybių ir elgesio.
+
+
+== Problemos, darančios natūralios kalbos apdorojimą sudėtingu ==
+Žodžių ribų atpažinimas
+Kalbant, žodžiai dažnai nėra atskiriami vienas nuo kito; kur atskirti žodžius dažnai priklauso nuo to, kuris pasirinkimas tinka labiau gramatiškai ir pagal kontekstąŽodžių įvairiaprasmiškumas
+Daugelis žodžių turi daugiau kaip vieną reikšmę; mes turime pasirinkti tokią reikšmę, kuri labiausiai tinka pagal kontekstą.Sintaksinis įvairiaprasmiškumas
+Natūralios kalbos gramatika nėra vienareikšmiška. Tam tikram sakiniui gali būti sugeneruoti keli apdorojimo medžiai. Tinkamiausio pasirinkimas dažniausiai reikalauja semantinės bei kontekstinės informacijos.Klaidingas arba nenumatytas įvedimas
+Užsieniečio akcentas arba regioninė tarmė, spausdinimo arba gramatinės klaidos. Optinio ženklų atpažinimo klaidos.Reiškinių konstatavimas ir sakymų planai
+Dažnai sakinių reikšmė yra netiesioginė. Pavyzdžiui, normali reakcija į sakinį „Ar galite paduoti puoduką?“ yra paduoti poduką, nekorektiška būtų tiesiog atsakyti „taip“, šiek tiek tinkamesnis yra paneigimas „ne“. Dar geriau paneigimą išreikšti sakiniu „Ne, deja, aš jo nematau.“
+
+
+== Statistinis natūralios kalbos apdorojimas ==
+Statistinis natūralios kalbos apdorojimas naudoja stochastinį, tikimybinį ir statistinį metodus sprendžiant aukščiau aprašytas problemas, ypač tas, kurios kyla apdorojant ilgus nevienareikšmiškus sakinius dėl ko apdorojimo kelių gali būti šimtai ar tūkstančiai. Tinkamiausiai reikšmei nusatyti dažnai naudojami rinkinių (corpora) ir Markovo modelai.
+Statistinio natūralios kalbos apdorojimo technologija iš esmės išplaukia iš sistemos mokymosi ir duomenų išgavimo (data mining), kurios abi yra dirbtinio intelekto sritys tiriančios mokymąsi.
+
+
+== Nuorodos ==
+
+
+==== Angliškai ====
+A.L.I.C.E – bendravimo sistema
+Natūralios kalbos apdorojimas Archyvuota kopija 2005-11-10 iš Wayback Machine projekto.

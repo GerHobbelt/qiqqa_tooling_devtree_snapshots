@@ -1,0 +1,97 @@
+revision: 25811119
+title: Serial ATA
+url: https://hu.wikipedia.org/wiki/Serial_ATA
+
+
+---
+
+A Serial ATA (Serial Advanced Technology Attachment) vagy SATA busz egy számítógépes pont-pont kapcsolat, amelyet adatok továbbítására terveztek a számítógép és a tároló eszközök között (tipikusan merevlemezek és optikai meghajtók számára).
+A régebbi ATA szabványhoz képest (amit a SATA megjelenése után átneveztek párhuzamos ATA-nak, ennek angol rövidítése a PATA) fő előnye a vékonyabb adatkábel, nagyobb átviteli sebesség, az eszközök kikapcsolás nélküli csatlakoztatásának és leválasztásának lehetősége („hot-swap”) és jobb adatkapcsolatot biztosít, mint a régi párhuzamos ATA (PATA) csatlakozók.
+Arra tervezték, hogy az örököse legyen az ATA hagyatékának és remélik, hogy végül felváltja a régi technológiát.
+
+
+== Fejlett Gazdavezérlő Interfész ==
+Az alapértelmezett üzemmód a SATA-hoz az AHCI, mely elérhetővé teszi a SATA újabb funkcióit, mint amilyen a hot swap és a Native Command Queuing (NCQ). Ha a számítógép alaplapja vagy operációs rendszere nem támogatja az AHCI-t, akkor lehetőség van az IDE emulációra, azonban ekkor a SATA nem képes hozzáférni az ATA/IDE által nem támogatott képességekhez. A Windows eszközkezelő általában IDE emulációban működteti a SATA eszközöket mindaddig, amíg be nem állítják AHCI módra. A Windows XP hivatalosan nem támogatja az AHCI-t, azonban néhány saját eszközmeghajtó engedélyezheti azt. A Windows Vista, Windows 7, a jelenlegi Mac OS X és a Linux már alapból támogatják az AHCI-t.
+Native Command Queuing (NCQ): a merevlemezen elhelyezkedő adatok kiolvasását optimalizáló algoritmus, az eszköz a pufferében tárolt olvasási és írási parancsok sorrendjét változtatja meg, így csökkenti azt a holtidőt, amikor a merevlemez az olvasófejének mozgatására és a lemeztányér elfordulására vár. A merevlemez véletlenszerű olvasási-írási sebességét növeli.
+„Hot swap”: a hardvereszközök azon képessége, amely lehetővé teszi eszközök csatlakoztatását és leválasztását a rendszer leállítása és újraindítása nélkül. Ezt az operációs rendszernek is támogatnia kell. Pl. az USB egy ilyen szabvány, de a régi (ATA, U-ATA) merevlemezek esetén a mobil racket nem szabad ki- vagy bekapcsolni működő Windows alatt (Linux alatt más a helyzet).
+
+
+== Verziók ==
+A különböző SATA változatok eltérő sebességű adatátvitelre képesek. Csak 4 jelvonalat használ, kompaktabb és olcsóbb, mint a PATA. Lehetőség van a hot swapping-ra (bekapcsolt állapotban végrehajtott hardvercsere) és NCQ-ra. Van egy speciális változata, az eSATA (external-SATA), mely lehetőséget ad külső eszközök csatlakoztatására, de az USB csatlakozókkal szemben nem képes aktív eszközök, például merevlemezek meghajtására. A SATA eszközök csatlakoztathatóak a Serial Attached SCSI (SAS) csatlakozókhoz és ugyanazon a kábelen kommunikálnak, mint a SAS lemezek. Viszont a SAS lemezek nem csatolhatóak SATA csatlakozókhoz.
+Valamennyi SATA verzió csatlakozójának fizikai kialakítása azonos, továbbá visszafelé kompatibilis, ez alól kivétel az eSATA, mely egy speciális (módosított SATA) kábelt igényel a csatlakoztatáshoz.
+
+
+=== SATA 1.0 (1,5 Gbit/s) ===
+Az első generációs SATA csatlakozók SATA/150 vagy SATA I néven futottak és 1,5 Gbit/s sebességgel kommunikáltak. Az első szabvány 2003 januárjában jelent meg. Az aktuális kódolatlan átviteli sebesség 1,2 Gbit/s vagy 150 MB/s. Tényleges működés közben a SATA/150 és a PATA/133 különbsége alig észrevehető. Mindazonáltal a SATA eszközök erősen ajánlottak egy SATA multitask környezet kialakításához. Összehasonlításképpen a modern asztali merevlemezek átviteli sebessége maximum ~100 MB/s, mely bőven benne van a működési sebességében még a régi PATA/133 eszközöknek is. (2009 áprilisában a mechanikus merevlemezek legnagyobb átviteli sebessége 131 MB/s, ehhez is elég volt).
+A kezdeti időszak alatt a SATA/150 véglegesítésére az adapter- és meghajtógyártók „híd chipet” használtak, hogy a már létező, PATA csatolóhoz készült áramköreiket SATA felületen át csatlakoztathassák. Az áthidalt meghajtóknak volt egy SATA csatlakozójuk és tartalmazhatták bármelyik vagy mindkét fajta tápcsatlakozót, és azonos teljesítményt nyújtottak, mint PATA megfelelőjük. Legtöbbjükből hiányoztak az olyan SATA lehetőségek, mint pl. az NCQ. Az áthidalt eszközöket fokozatosan felváltották a tisztán SATA eszközök.
+
+
+=== SATA 2.0 (3,0 Gbit/s) ===
+A SATA 2.0 változat 2004 áprilisában jelent meg. A SATA/150 bemutatása után sok hiányosságot fedeztek fel az eredeti SATA-ban. Alkalmazási szinten a SATA működése közben, amikor PATA interfészt emulál, csak egyetlen függőben lévő átvitelt tud kezelni egy időben. A SCSI lemezeknek nagyobb előnyük van az SCSI-támogatott többszörös kérésekben, melyek újra kérik a meghajtót, hogy optimalizálja a válaszidőt. A sorbarendező parancsot hozzáadták a SATA alap parancsaihoz. Az NCQ egy választható lehetőség és használható mind SATA/1,5 Gbps, mind SATA/3,0 Gbps-os eszközökben is.
+Az első generációs SATA eszközök alig voltak gyorsabbak, mint a párhuzamos ATA/133 eszközök. Tehát a  fizikai réteg jelzésátviteli sebességét 3,0 Gbit/s-ra növelték, melynek eredménye a 150 MB/s-ról 300 MB/s-ra való gyorsulás lett. A SATA/300 átviteli sebessége most egy ideig ki tudja elégíteni a meghajtók átviteli sebességét, mivelhogy a leggyorsabb asztali merevlemez adattovábbítása is éppen csak eléri a SATA/150-es maximális átviteli sebességét. Ezért van az, hogy az 1,5 Gbit/s-os átvitelt csak a második generációs tudja kielégíteni. A SATA 3,0 Gbit/s-on veszteség nélkül képes hosszú ideig működni.
+A SATA/1,5 és a SATA/3,0 közötti kompatibilitás fontos, ezért a SATA/300-ban van egy visszakapcsoló szekvencia, ami SATA/1,5-be állítja az átvitelt, mikor olyan eszközzel kommunikál. A gyakorlatban néhány régebbi SATA vezérlő nem valósítja meg a megfelelő SATA sebesség-kritériumokat. Az érintett rendszerekben a felhasználónak kell kézzel átállnia SATA 3,0-ról SATA 1,5-re egy jumper segítségével. Ismertek a hibás chipsetek, köztük a VIA VT8237 és a VT8237R déli híd, a VIA VT6420 és a VT642L önálló SATA kontroller. A SiS 760 és 964 chipsetek is tartalmazzák ezt a hibát, de egy frissített SATA vezérlő ROM-mal ezt javították.
+
+
+=== SATA 3.0 (6,0 Gbit/s) ===
+2008 augusztusában  megjelent a SATA 3.0 6,0 Gbit/s-os szabvány, amely több módosításon esett át. Jelenleg (2021-ben) a legkorszerűbb változata a SATA 3.5 amelyik 2020 júniusában jelent meg. A 6,0 Gbit/s szabványt kombinálták portmegosztással, hogy több meghajtót lehessen egy Serial ATA porthoz kapcsolni. Sebességben ezt is lekörözik a mozgó alkatrészt nem tartalmazó meghajtók, az ún. SSD-k.
+
+
+== Kábelek és csatlakozók ==
+A SATA táp- és adatkábele kívülről a legszembetűnőbb változás a párhuzamos ATA-hoz képest. A párhuzamos ATA-tól eltérően ugyanazt a kábelt és csatlakozókat használja az asztali és a hordozható számítógép meghajtója, ezért nincs szükség ilyen átalakító adapter használatára.
+A SATA szabvány szerinti adatkábel 7 erű (ebből 3 a földelés és 4 az aktív adatvezeték 2 párban), a végén a csatlakozó 8mm széles. A kábel 1 m hosszú lehet. A régebbi, PATA szabványú szalagkábel 40 vagy 80 vezetéket tartalmaz és maximum 45 cm hosszú lehet, ezért a SATA kábelek kisebb helyet foglalnak, ami számítógép zárt térében javítja a levegő áramlását, egyszerűbbé teszi a hűtést. A SATA kábelek a PATA-nál könnyebben kihúzhatók (részben a hot swap lehetősége miatt), de lehetőség van fix, biztonsági rögzítésre is.
+
+A SATA szabvány egyúttal a tápkábelt is specifikálta. Mint az adatkábel, ez is egy vékony csatlakozót tartalmaz, azonban ez szélesebb, hogy véletlenül se erőltessék bele rossz csatlakozóba. A SATA eszközök csak SATA tápkábellel tudnak csatlakozni, a 4 tűs Molexszel nem (bár egyes SATA eszközökben az is megtalálható). Sokan kritizálták a SATA tápkábelt gyenge, könnyen törő műanyag anyaga miatt. A látszólag nagyszámú érintkezőt arra használja, hogy három különböző feszültséget szállítson: 3,3 V, 5 V és 12 V. Minden egyes feszültséget 3 egymás melletti érintkező szállítja, további 3 érintkező pedig a földelésre szolgál. Az érintkezők 1,5 A-re méretezettek. Feszültségenként 1-1 érintkező felelős a hotplugért.
+Átalakító segítségével a 4 tűs Molex csatlakozót SATA csatlakozóvá lehet alakítani. Azonban a 4 tűs Molex csatlakozó nem tud 3,3 V-ot előállítani, ezek az átalakítók csak 5 V-os és 12 V-ot képesek előállítani és a 3,3 V-os csatlakozót szabadon hagyják. Így ilyen átalakítóval 3,3 V-ot használó eszközöket nem tudunk használni. Részben ezért a legtöbb gyártó kerüli a 3,3 V-os ág használatát.
+Néhány, elsősorban szerverekbe szánt merevlemez támogatja a késleltetett indítást, azaz, hogy a rendszer indításakor ne egyszerre, hanem egymás után induljanak el az merevlemezek. Sok egyszerre induló meghajtó ugyanis nagyon leterheli a tápegységet, mivel a merevlemezek elinduláskor a tányérok felpörgetéséhez nagy áramot vesznek fel.
+
+
+=== Külső SATA (eSATA) ===
+2004 közepén szabványosították az eSATA (external SATA) különböző kábeleit, a csatlakozókat, és jelszinteket:
+
+A minimális kimenő feszültségkülönbség növekedett: 400–600 mV helyett 500–600 mV.
+A minimális bejövő feszültségkülönbség csökkent: 325–600 mV helyett 240–600 mV.
+Azonosító protokoll és logikai jelzés: (vonal/átvivő-réteg és a feletti), lehetőség van SATA-eszközt a külső csatlakozóhoz kapcsolni minimális átalakítással.
+A maximális kábelhossz 2 m (USB-nél és FireWire-nél nagyobb távolság is lehetséges)Az eSATA-t a külső tárolók piacára szánták, amelyet akkor az USB és a FireWire uralt. A legtöbb FireWire vagy USB csatlakozójú külső merevlemez esetében átalakítóra volt szükség a PATA és SATA csatolójú meghajtók és a külső port között, ez az átalakítás azonban ront az átvitel sebességén. USB 2.0 esetén például a meghajtó sebessége nagyjából 2/3-ra csökken. Modern merevlemezek esetében az USB szűk keresztmetszet. A FireWire izokrón átviteli módjával hatékonyabb, még a lassabb FireWire 400-as is lényegesen gyorsabb, mint az USB 2.0, de ez még mindig szűk keresztmetszet a gyors meghajtók, és főleg a RAID tömbök számára. Néhány single disk több mint 100 MB/s sebességre képes USB 2.0-val vagy FireWire 400-zal. Néhány alacsony szintű meghajtójellemző, mint a S.M.A.R.T. USB vagy FireWire hídon keresztül nem érhető el, az eSATA-nál viszont ezek a problémák nem merülnek fel.
+Az eSATA-nak együttesen kellene szerepelnie az USB 2.0 és a FireWire csatlakozókkal, több érv is e mellett szól. A számítógépen és sok fogyasztói eszközön megtalálható USB, illetve FireWire port garantálják számukra a nagy fogyasztói piacot. Kis eszközök áramellátását az USB vagy a Firewire port is tudja biztosítani. Az eSATA port viszont nem ad elegendő áramot, ezért kevesebben érdeklődnek iránta.
+2007-től, az eSATA külső meghajtók tartalmazni fognak passzív eSATA-SATA átalakítót, hogy olyan asztali gépekhez is csatolhatók legyenek, amelyek nem tartalmaznak eSATA portot, vagy szükség van egy másikra. Az asztali számítógépek bővíthetők lesznek eSATA host bus adapterrel (HBA), a laptopok pedig bővítőkártyákkal és a külső kártya verziójával az eSATA HBA-nak. Passzív átalakítókkal a kábelhossz 1 méterre csökken a megfelelő eSATA jelerősség miatt. A külső SATA eszközök maximális sebessége 115 MB/s.
+A vállalkozások és a szerverpiac nem annyira érdeklődik az eSATA iránt, mert már szabványosítottak külön fejlesztésű Serial Attached SCSI (SAS) interfészt. Ennek extra lehetőségei vannak távoli elérésre, vonali redundanciára és vonalfigyelésre. Az eSATA hotplug lehetősége és a fogyasztó-szint ár-szint kombinációja nagyobb piacot jelent, mint azt gondolnák.
+
+
+== Összehasonlítás ==
+
+
+=== SATA és PATA ===
+Eszköz szinten a SATA és PATA eszközök teljesen inkompatibilisek – képtelenek egymással kommunikálni. Az alkalmazási szinten a SATA eszközöknek úgy kell kinézniük és működniük, mint a PATA eszközök. A korai alaplapok SATA megvalósítása a visszamaradt kompatibilitás miatt lehetővé tette a SATA meghajtóknak, hogy tartalék PATA meghajtóként működjenek, még az operációs rendszer támogatása nélkül is.
+A közös öröksége a SATA parancscsoportnak, hogy elterjedtek az olcsó PATA-ból SATA összekötő-chipek. Az összekötő chipeket PATA meghajtókon sokszor használták hardverkulcsként. Amikor a PATA meghajtóhoz csatlakozik, egy eszközoldali kulcs engedélyezi a PATA meghajtónak, hogy SATA meghajtóként működjön. A gazda oldali kulcsok lehetővé teszik, hogy az alaplap PATA port része SATA gazdaportként működjön.
+A működő mellékletek rendelkezésre állnak PATA és SATA meghajtókhoz is. Vannak PCI kártyák, amelyek SATA csatlakozót tartalmaznak, hogy olyan gépekhez is csatolhassanak, amelyekben nincs SATA csatlakozó.
+
+
+=== SATA és SCSI ===
+Az SCSI jelenleg nagyobb átviteli sebességet kínál, mint a SATA, de a komplexebb buszrendszer drágább előállítási költséggel jár. Néhány meghajtógyártó hosszabb garanciát vállal az SCSI eszközökért, mindazonáltal ez nagyobb energiaráfordítást jelent, mintha PATA vagy SATA meghajtók lennének. A SCSI meghajtók lehetőséget adnak több meghajtó csatlakoztatására (több csatornát használ: 7 vagy 15 meghajtót csatornánként), a SATA pedig 1 meghajtót tud egyszerre csatlakoztatni, hacsak nem használ portsokszorosítót.
+A SATA 2. 3,0 Gbit/s maximum 300 MB/s per eszköz sebességet tesz lehetővé, SATA 3. 6,0 Gbit/s maximum 600 MB/s per eszköz sebességet tesz lehetővé, az SCSI pedig maximum 320 MB/s-ot vagy 640 MB/s-ot. Tehát az SCSI meghajtók jobb eredményt érnek el a SATA-nál a kapcsolat/kapcsolatbontás és a jobb teljesítmény miatt. Viszont jelenleg lényegesen drágább eszközök. A SATA eszközök kompatibilisek a SAS rendszerrel, azonban ez visszafelé nem teljesül.
+Az SCSI, SAS, és Fibre Channel meghajtók átlagosan drágábbak, szerverekben és gépparkokban használják őket. A kevésbé drága ATA és SATA rendszereket az otthoni gépekhez fejlesztették, ezért kevésbé tartják megbízhatónak őket. Ahogy ez a két világ átfedésbe került a SATA esetében, a megbízhatóság szó ellentmondásossá válik. A SATA meghajtók megbízhatósága a fejegység, a lemezek és a gyártótechnológia fejlődése miatt javult és nem egy bizonyos interface miatt.
+
+
+=== Az eSATA összehasonlítása más külső sinekkel ===
+A PATA-tól eltérően a SATA és az eSATA támogatják a 'hot swapping'-ot. Habár ez a tulajdonság megfelelő támogatást igényel a gazdánál, eszköznél és a működő rendszer szintjén. Általában, az összes SATA meghajtó támogatja a 'hot swappingot', de a szükséges támogatás nem közös az elosztó adapterekben.
+Az USB lehetővé teszi a hot swappingot, amit gyakorlatilag minden általános operációs rendszer támogat. Mindazonáltal az USB központú tároló hardver néha adatvesztést okozhat, mikor szétkapcsolják. Ez a probléma médialejátszókkal, flash memóriát alkalmazó fényképezőkkel és a 2.5" mobil USB meghajtókkal fordul elő. A firmware meghibásodása és az adatveszteség néha vezethet hibás leforgáshoz és teljesítménycsökkenéshez, amikor a meghajtót vagy az eszközt eltávolítják az USB portból anélkül, hogy először eszközleállítást kezdeményezne a számítógép operációs rendszerén keresztül.
+A SCSI meghajtókat csak SCA-2-es konnektorokkal lehet hot swapolni. Sok szerver és RAID rendszer támogatja a hot swapot. A SCA-2-es csatlakozókat megelőző szabvány SCSI nem tartalmazott hot swapot, de a gyakorlatban a legtöbb RAID implementáció már támogatja.
+
+
+== Jegyzetek ==
+
+
+== Források ==
+↑ SATA 20: 20th Anniversary. SATA-IO. (Hozzáférés: 2021. december 18.)
+
+
+== További információk ==
+
+Serial ATA International Organization ( SATA-IO )
+"SATA-1" specification, as a zipped pdf; Serial ATA: High Speed Serialized AT Attachment, Revision 1.0a, 7-January-2003.
+Errata and Engineering Change Notices to above "SATA-1" specification, as a zip of pdfs
+Dispelling the Confusion: SATA II does not mean 3Gb/s
+SATA-IO White Paper – External SATA (eSATA)PDF(502 KiB<!– application/pdf, 514383 bytes –>)
+SATA motherboard connector pinout
+AHCI/RAID Intel® Matrix Storage Technology: Unattended installation instructions under Windows XP
+Intel® Matrix Storage Manager: How do I install an operating system on single serial ATA hard drive?

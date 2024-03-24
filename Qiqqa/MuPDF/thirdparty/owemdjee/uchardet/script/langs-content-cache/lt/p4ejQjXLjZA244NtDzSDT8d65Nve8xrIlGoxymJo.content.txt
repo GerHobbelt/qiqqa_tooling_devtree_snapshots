@@ -1,0 +1,25 @@
+revision: 6135542
+title: Bandomoji lenta
+url: https://lt.wikipedia.org/wiki/Bandomoji_lenta
+
+
+---
+
+Bandomoji plokštė (angl. breadboard) – daugkartinio naudojimo įtaisas, kuriuo galima surinkti įvairiaus sudėtingumo bandomuosius įtaisus (netgi veikiančius procesorių modelius).Šiuolaikinė bandomoji montažinė plokštė susideda iš daug skylučių turinčio plastikinio bloko ir kiekvienai skylutei įrengtų bronzinių spyruoklinių kontaktų. Skylutės išdėstytos taip, jog galima įstatyti įprastiniam (ne paviršiniam) montavimui skirtas mikroschemas, likusius schemos elementus bei jungiančius laidus. Skylutės tarpusavyje jau sujungtos kaip parodyta iliustracijoje.
+Kalbama, jog bandomoji 1970 m. pasirodžiusios fotokameros Polaroid SX-70 elektronikos versija buvo surinkta ant 4 pėdų pločio ir aštuonių pėdų ilgio prototipavimo plokštės ir buvo visiškai veikianti. Projektas buvo toks slaptas, jog montuojantys inžinieriai nežinojo kuriamos schemos paskirties. Vėliau ši elektronika buvo perkelta į specializuotą integrinę mikroschemą.
+
+
+== Privalumai ==
+Nereikia lituoti, todėl mažiau kenčia detalės. Be to, tokią metodiką saugiau taikyti vaikų mokymui.
+Visus komponentus lengva panaudoti pakartotinai.
+Galima surinkti ir gana sudėtingas schemas.
+Galima modeliuoti ir tokias schemas, kurioms nesukurti pakankamai tikslūs matematinai modeliai (privalumas palyginus su matematiniu modeliavimu nerenkant schemų).
+
+
+== Trūkumai ==
+Dėl didelės elektrinės talpos schemų veikimo dažnis apribotas maždaug 10 MHz.
+Konstrukcija neatspari smūgiams ir vibracijai (netinka, pavyzdžiui, montuoti į judantį modelį).
+Konstrukcija užima gana daug vietos.
+
+
+== Šaltiniai ==

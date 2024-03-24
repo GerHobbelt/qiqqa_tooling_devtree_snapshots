@@ -1,0 +1,61 @@
+revision: 7486296
+title: Juno (sonda)
+url: https://sk.wikipedia.org/wiki/Juno_(sonda)
+
+
+---
+
+Juno je kozmická sonda NASA určená na výskum planéty Jupiter. Je súčasťou programu New Frontiers. Poznatky získané sondou majú prispieť k pochopeniu vzniku a vývoja Jupitera a tým prispieť k dokonalejšiemu pochopeniu nielen ďalších telies slnečnej sústavy, ale aj mnohých exoplanét.Sondu postavila firma Lockheed Martin Space Systems Co. a o jej prevádzku sa stará Laboratórium prúdového pohonu (Jet Propulsion Laboratory). Vedeckú náplň misie riadia a koordinujú ústav Southwest Research Institute a stredisko Goddard Space Flight Center.Sonda odštartovala 5. augusta 2011 a Jupiter dosiahla 5. júla 2016, o päť rokov neskôr. Tam bola navedená na obežnú dráhu nad pólmi planéty. Obežná dráha bola oproti predpokladom výstrednejšia, a tak sa primárna misia oproti pôvodne plánovaným 20 mesiacom predĺžila až do roku 2021. Začiatkom tohto roka bola misia opäť predĺžená, a to do septembra roku 2025. Sonda zbiera údaje o gravitačnom poli, magnetickom poli a štruktúre atmosféry Jupitera. V rámci predĺženej misie sa navyše bude venovať aj prieskumu jeho mesiacov a prstencov.Sonda je pomenovaná podľa rímskej bohyne Juno, ktorá bola manželkou boha Jupitera.
+
+
+== Konštrukcia ==
+Telo sondy Juno má tvar nízkeho pravidelného šesťbokého hranola s priemerom 3,5 m a celkovou výškou vrátane antén 3,5 m. Je stabilizovaná rotáciou: V priebehu preletu a vedeckých pozorovaní sa bude otáčať dvakrát za minútu, v priebehu motorických manévrov päťkrát za minútu. Je vybavená troma rozkladacími panelmi fotovoltaických batérií – 2 panely sú štvordielne s rozmermi 9,0×2,65 m a 1 panel trojdielny (6,75×2,65 m). Panely navzájom zvierajú uhol 120° a majú celkovú plochu asi 60 m², vďaka ktorej dodávajú v blízkosti Zeme na počiatku letu elektrickú energiu s výkonom 14 kW a pri navedení na obežnú dráhu okolo Jupitera 400 W. Solárne panely dobíjajú 2 lítium-iónové akumulátorové batérie s kapacitou 2×55 Ah. Juno je prvá sonda, ktorá letí do takých vzdialených končín slnečnej sústavy odkázaná len na solárne panely. Predošlé sondy boli vybavené rádioizotopovými batériami, pretože na rovnakú jednotku plochy dopadá na obežnej dráhe Jupitera 25-krát menej slnečného žiarenia, ako na orbite Zeme. Dnešné moderné solárne články však majú o 50 % vyššiu účinnosť a sú odolnejšie voči radiácii, ako články spred 20 rokov, navyše energetické nároky sondy Juno nie sú veľké.
+Systémy sondy riadi počítač RAD750 (256 megabajtov pamäte flash, 128 megabajtov pamäte DRAM, objem spracovania údajov až 100 Mbit/s) uložený spoločne s väčšinou ďalšej elektroniky do protiradiačného krytu v tvare kocky s hranou približne 1 m vyrobenej z 10 mm hrubého titánového panciera. Komunikačný systém pracuje v pásme X (8 GHz); využíva parabolickú anténu s priemerom približne 3 m pevne umiestnenú na hornej podstave tela sondy. Tá poslúžila ako tepelný štít v dobe, keď sa sonda pohybovala v blízkosti Slnka.
+Na veľké korekcie dráhy a navedenie na obežnú dráhu okolo Jupitera slúži motor LEROS-1b s ťahom 645 N na dvojzložkovú kvapalnú pohonnú látku, umiestnený na spodnej podstave telesa. Jej zložky sú hydrazín a ako okysličovadlo slúži oxid dusičitý. Motor je chránený v priebehu letu uzatvárateľným protimeteorickým štítom, ktorý je otvorený počas práce motora. Na menšie korekcie dráhy, úpravu smeru osi rotácie sondy a zmeny rýchlosti rotácie slúži 12 motorčekov systému RCS (Reaction Control System) rozdelených do 4 skupín. Predpokladaná aktívna životnosť sondy Juno je 6 rokov.
+Počas štartu sondu chránil aerodynamický kryt, namontovaný v laboratóriách Astrotech v Titusville na Floride. 
+
+
+=== Vedecké vybavenie ===
+Magnetometer umiestnený na nosníku na konci krátkeho fotovoltaického panelu spoločne s hviezdnym kompasom na určenie jeho presnej orientácie v priebehu merania magnetického poľa;
+mikrovlnný rádiometer MWR (Microwave Radiometer) tvorený 6 samostatnými rádiometrami s anténami na bočných stenách tela sondy schopnými sondáže Jupiterovej atmosféry do hĺbky 550 km;
+3 jednotky JEDI (Jupiter Energetic Particle Detector Instrument), každá tvorená 6 detektormi iónov a 6 detektormi elektrónov pre štúdium procesov tvorby polárnych žiar na Jupiteri;
+súbor detektorov JADE (Jupiter Auroral Distribution Experiment) tvorený 3 detektormi elektrónov a 1 detektorom iónov vodíka, hélia, kyslíka a síry;
+prístroj Waves na detekciu rádiových a plazmových vĺn v magnetosfére Jupitera;
+ultrafialový zobrazujúci spektrometer UVS (Ultraviolet Imaging Spectrograph) na štúdium polárnych žiar;
+infračervený mapujúci spektrometer JIRAM (Jupiter Infrared Auroral Mapper), ktorý tvorí infračervená kamera (spektrálny rozsah 2 až 5 µm) a infračervený spektrometer na výskum chemického zloženia atmosféry v blízkosti polárnych žiar do hĺbky 50 až 70 km;
+širokouhlá kamera JunoCAM (zorný uhol 58°, maximálne priestorové rozlíšenie na hranici mrakov Jupitera 2 až 3 km/px);
+2 transpondéry pracujúce v pásmach X a Ka na presné dopplerovské meranie parametrov dráhy pre detailné mapovanie gravitačného poľa planéty (experiment Gravity Science) a tým aj zistenie vnútornej štruktúry Jupitera.
+
+
+== Prípravy na štart ==
+Základné skúšky sondy prebehli už vo výrobnom závode. Po nich, v apríli 2011, bola sonda prevezená na Floridu, kde pokračovali prípravné práce a testy. Týždeň pred plánovaným štartom sa sonda presunula do haly VAB (Vehicle Assembly Building), kde bola vo vnútri ochranného štítu pripevnená na vrchol svojho nosiča, rakety Atlas. Pred presunom zostavy na štartovaciu rampu 41 panovali obavy z hurikánu Emily. Napriek tomu sa však 4. augusta začal prevoz zostavy na rampu vzdialenú od VAB 550 metrov. 5. augusta v čase 08:34 UT, sedem hodín pred plánovaným štartom, sa rozbehlo odpočítavanie. V čase 12:48 UT došlo k evakuácii a uzavretiu nebezpečnej zóny okolo štartovacieho komplexu. V čase 13:36 UT sa začalo tankovať palivo do druhého a následnej aj do prvého stupňa rakety. Počas druhého plánovaného prerušenia odpočítavania došlo ku kolísaniu tlaku hélia v raketovom stupni Centaur. Odpočítavanie sa však napokon v čase 16:21 UT opäť rozbehlo. Štartovacie okno v daný deň trvalo viac než hodinu, raketa so sondou napokon vzlietla 18 minút pred jeho koncom.
+
+
+== Priebeh letu ==
+
+
+=== Cesta k Jupiteru ===
+Zážihom motora RD-180 sa v čase 16:25:00,146 UT raketa Atlas V so svojim nákladom sa odpútala od rampy. O pätnásť sekúnd neskôr minula vrchol obslužnej veže, 40 sekúnd po štarte ťah hlavného motora plánovane poklesol, aby sa znížilo aerodynamické namáhanie. V čase T+94 sekúnd ukončila svoju činnosť pätica prídavných rakiet, v čase T+1 minúta 40 sekúnd dosiahol výkon motora RD-180 opäť maximum. O osem sekúnd neskôr sa od rakety oddelili vyhasnuté štartovacie motory. Tri minúty a 38 sekúnd po štarte sa aerodynamický kryt chrániaci družicu rozpadol na polovice a bol odhodený. V čase T+4 minúty 32 sekúnd motor RD-180 ukončil svoju činnosť. Nasledovalo oddelenie prvého stupňa Atlas V a k činnosti sa dostal druhý stupeň nazývaný Centaur. Motor RL10 raketového stupňa Centaur bol zapnutý v čase T+4 minút 52 sekúnd a vypnutý v čase T+10 minút 49 sekúnd. Sonda s raketovým stupňom sa ostala na obežnú dráhu okolo Zeme. Neabsolvovala však ani jeden celý obeh. V čase 17:05 UT sa motor Centauru opäť zapálil a postupne odpútal sondu od Zeme. V čase T+49 minút 59 sekúnd sa motor definitívne vypol – jeho náklad sa nachádzal na únikovej dráhe k Jupiteru. Následne Centaur zaujal polohu vhodnú na oddelenie nákladu, roztočil sa rýchlosťou 4,8 otáčky za minútu, aby udržal správnu orientáciu a v čase T+53 minút 14 sekúnd (17:18 UT) sa od sondy odpojil. Samostatne letiaca sonda nadviazala spojenie so stanicou v Canberre (Austrália) a vyklopila solárne panely. Začali sa skúšky a kontroly rôznych prístrojov a systémov. Raketa Atlas naviedla sondu na obežnú dráhu tak presne, že nebolo potrebné vykonať ani prvú plánovanú korekciu dráhy. 
+30. augusta 2012 a 14. septembra 2012 prebehli dve korekcie dráhy. 
+V októbri 2013 sonda preletela okolo Zeme, čo ju urýchlilo na jej ceste k Jupiteru. Ten dosiahla päť rokov po štarte, v júli 2016. 
+
+
+=== Na obežnej dráhe ===
+Na obežnú dráhu okolo najväčšej planéty slnečnej sústavy bola navedená 34 minút trvajúcim manévrom OIM (Orbit Insertion Maneuver), ktorý ju dostal na veľmi výstrednú eliptickú dráhu. Už nasledujúceho dňa po navedení na orbitu sa zaplo prvých päť vedeckých prístrojov. 27. augusta sonda prvýkrát preletela veľmi blízko Jupitera a zistila, že jeho výrazné oranžové pásy pokračujú aj pod vrstvou oblačnosti. 
+19. októbra sa sonda nečakane prepla do bezpečnostného módu. Stalo sa tak počas blízkeho preletu okolo planéty, čo sonde znemožnilo zberať údaje. V bezpečnostnom móde zotrvala šesť dní a potom sa jej činnosť úspešne obnovila. Zároveň sa zistil problém na dvojici ventilov motorového systému Juno, čo ale nesúvisí s prvou spomenutou poruchou. 
+Z doterajších výsledkov sondy vyplýva, že dynamika Jupiterovej atmosféry je oveľa zložitejšia, než si vedci dovtedy mysleli. Ďalej zistila, že vo vnútri planéty sa nachádza síce veľké, ale akoby zriedené, rozpustené jadro.
+7. júna 2021 vykonala sonda blízky prelet okolo najväčšieho Jupiterovho mesiaca Ganymeda. Minula ho vo vzdialenosti približne 1000 kilometrov nad povrchom, pričom vyhotovila detailné snímky jeho povrchu.
+
+
+=== Plánovaný ďalší priebeh letu ===
+Koncom roku 2022 ju čaká prelet iba vo výške 320 km okolo mesiaca Európa. Sonda by mohla skúmať hrúbku jej ľadu mikrovlnným rádiometrom. Jej spektrometre by mohli skúmať zloženie ľadu, snímky zase zmeny za uplynulé dvadsaťročie a prípadné vodné gejzíry. V roku 2024 by sa sonda mohla dvakrát stretnúť s mesiacom Io a študovať jeho vulkanizmus. Skúmať bude aj slabé prstence Jupitera. Popritom bude Juno pokračovať aj vo svojej hlavnej činnosti, čiže v sledovaní Jupitera.Misia sondy bude ukončená jej plánovaným navedením do atmosféry Jupitera. Udeje sa tak preto, aby sa zabránilo prípadnej kontaminácii jupiterových mesiacov.
+
+
+== Referencie ==
+Tento text alebo jeho časť bola prevzatá z článku http://www.lib.cas.cz/space.40/INDEX1.HTM (verzia  2011-08-06) uverejneného na stránkach SPACE 40, ktorého autorom je Antonín Vítek
+. (licencia GFDL a CC-BY-SA 3.0, povolenie autora)
+
+
+== Iné projekty ==
+
+ Commons ponúka multimediálne súbory na tému Juno (sonda)

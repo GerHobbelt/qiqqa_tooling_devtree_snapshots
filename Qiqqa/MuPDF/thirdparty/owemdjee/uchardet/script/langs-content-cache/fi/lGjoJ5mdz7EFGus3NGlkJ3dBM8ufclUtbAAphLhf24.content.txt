@@ -1,0 +1,153 @@
+revision: 20487569
+title: Mysterium Cosmographicum
+url: https://fi.wikipedia.org/wiki/Mysterium_Cosmographicum
+
+
+---
+
+Mysterium Cosmographicum, täydelliseltä nimeltään Prodromus dissertationum cosmographicarum, continens mysterium cosmographicum, de admirabili proportione orbium coelestium, de que causis coelorum numeri, magnitudinis, motuumque periodicorum genuinis & proprijs, demonstratum, per quinque regularia corpora geometrica ("Kosmograafisten dissertaatioiden ennakoija, joka sisältää kosmograafisen mysteerin taivaankehien ihmeteltävistä suhteista sekä taivaiden lukumäärien, suuruuksien ja niiden todellisten omien jaksollisten liikkeiden syyt todistettuna viiden säännöllisen kappaleen avulla") oli saksalaisen tähtitieteilijä Johannes Keplerin kirjoittama latinankielinen, Tübingenissä vuonna 1597 julkaistu teos, josta julkaistiin uusi painos vuonna 1621. Siinä Kepler esitti, että silloin tunnettujen kuuden planeetan etäisyyksien suhteet voitiin ymmärtää sisäkkäisten Platonin kappaleiden avulla, joista uloin oli sijoitettu Saturnuksen rataa esittävän pallopinnan sisään.
+Kirja esitteli Keplerin kosmologisen teorian, joka perustui Kopernikuksen aurinkokeskeiseen malliin ja jossa lisäksi oletettiin, että viisi Platonin kappaletta määrittivät maailmankaikkeuden muodon ja kuvastivat Jumalan suunnitelmaa geometrisessa muodossa. Samalla teos oli yksi ensimmäisistä Kopernikuksen jälkeen tehdyistä yrityksistä todistaa aurinkokeskeinen teoria fysikaalisesti oikeaksi. Thomas Digges oli tosin julkaissut Kopernikuksen teoriaa puolustavan kirjoituksen vuonna 1576. 
+Omien sanojensa mukaan Kepler päätyi malliinsa tutkittuaan kahden ympyrän välisiä geometrisia suhteita. Hän saattoi todeta vastaavan suhteen vallitsevan Jupiterin ja Saturnuksen ratojen välillä. Tarkemmat laskut kuitenkin osoittivat, ettei vastaavaa suhdetta voitu löytää muiden planeettojen ratojen välillä, ja niinpä hän päätyi käyttämään niiden sijasta viittä Platonin kappaletta.
+Keplerin aikana tunnetut kuusi planeettaa olivat sisimmästä uloimpaan lueteltuina Merkurius, Venus, Maa, Mars, Jupiter ja Saturnus. Näiden ratojen väliin Kepler sijoitti Platonin kappaleet seuraavassa järjestyksessä: sisimmäksi Merkuriuksen ja Venuksen ratojen väliin oktaedri, sen jälkeen ulospäin edetessä ikosaedri, dodekaedri, tetraedri ja kuutio. Kepler totesi, että näiden sisään ja ympäri piirrettyjen pallojen säteiden suhteet poikkesivat tähtitieteellisten havaintojen mukaisista planeettojen ratojen suhteista vähemmän kuin 10 %. Hän väitti näiden poikkeamien johtuvan mittausten epätarkkuudesta.Kirjan nimilehdelle merkittiin ilmestymisvuodeksi 1696, mutta todellisuudessa se lienee 
+­
+
+
+== Kappaleet ja planeetat ==
+
+Omien sanojensa mukaan Kepler löysi mallinsa perusteet 19. heinäkuuta 1595 sen jälkeen, kun hän oli pitänyt luennon Jupiterin ja Saturnuksen suurista konjunktioista.  Hän oli todennut, että näiden planeettojen ratojen suhde oli kutakuinkin sama kuin tasasivuisen kolmion sisään ja ympäri piirrettyjen ympyröiden säteiden suhde. Hän yritti etsiä vastaavia suhteita muidenkin planeettojen ratojen suhteista, mutta ei onnistunut, ennen kuin sai, omien sanojensa mukaan "jumalallisen asioiden puuttumisen" avulla oivalluksen, johon hän ei ollut ankaralla työlläkään saavuttanut. Tämän mukaan planeetojen ratojen suhteet eivät vastanneet monikulmioiden sisään ja ympäri piirrettyjen ympyröiden, vaan Platonin kappaleiden sisään ja ympäri piirrettyjen pallojen säteiden suhteita. Tämän hän katsoi samalla selittäneen, miksi planeettoja oli juuri kuusi: kun erilaisia Platonin kappaleita on viisi, voitiin kuuden sisäkkäisiä ratoja kiertäneiden planeettojen väliin sijoittaa nämä viisi kappaletta.Kepler väitti löytäneensä myös kaavan, joka yhdisti kunkin planeetan radan sen kiertoaikaan. Sen mukaan kahden peräkkäisen planeetan kiertoaikojen erotuksen suhde näistä sisemmän kiertoaikaan olisi sama kuin suhde olisi puolet niiden ratojen säteiden suhteesta, mikä nykyisin voitaisiin esittää kaavalla
+
+  
+    
+      
+        
+          
+            
+              R
+              
+                2
+              
+            
+            
+              R
+              
+                1
+              
+            
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          
+            T
+            
+              2
+            
+          
+          −
+          
+            T
+            
+              1
+            
+          
+        
+        
+          
+            T
+            
+              1
+            
+          
+        
+      
+    
+     
+  ,missä R1 ja R2 ovat kahden peräkkäisen planeetan ratojen säteet, T1 ja T2 niiden kiertoajat. Myöhemmin Kepler kuitenkin hylkäsi tämän kaavan, koska se ei ollut tarpeeksi tarkka. Sen sijaan hän esitti vuoden 1621 painoksessa säännön, joka nykyisin tunnetaan Keplerin kolmantena lakina: planeettojen kiertoaikojen neliöiden suhde on sama kuin niiden Auringosta mitattujen etäisyyksien kuutioiden suhde, toisin sanoen:
+
+  
+    
+      
+        
+          
+            
+              T
+              
+                2
+              
+            
+            
+              T
+              
+                1
+              
+            
+          
+        
+        =
+        (
+        
+          
+            
+              R
+              
+                2
+              
+            
+            
+              R
+              
+                1
+              
+            
+          
+        
+        
+          )
+          
+            3
+            
+              /
+            
+            2
+          
+        
+      
+    
+     
+  
+
+
+== Teologinen ja filosofinen perusta ==
+Kuten teoksen nimi osoittaa, Kepler uskoi paljastaneensa geometrisen suunnitelman, jonka mukaisesti Jumala oli luonut maailman. Keplerin kannatti Kopernikuksen järjestelmää innokkaasti pitkälti fysikaalisen ja hengellisen maailman välillä vallitsevaa yhteyttä koskevan teologisten vakaumuksensa vuoksi: maailmankaikkeus itse oli kolmi­yhteisen Jumalan kuva, jossa Aurinko vastasi Isää, tähtitaivas Poikaa ja niiden välissä oleva alue, jossa planeetat liikkuivat, Pyhää Henkeä.  Mysterium -teoksen ensimmäinen käsikirjoitus sisältää laajan kappaleen, jossa selitetään, miten aurinkokeskeinen maailmankuva on sopusoinnussa sellaistenkin Raamatun kohtien kanssa, jotka näyttäisivät tukevan maakeskeistä käsitystä.Mentorinsa Michael Mästlinin tukemana Kepler sai Tübingenin yliopiston senaatilta luvan julkaista käsikirjoituksensa, mutta hän poisti siitä Raamattua selittävän osuuden ja lisäsi siihen yksinkertaisemman Kopernikuksen teoriaa selostavan osuuden. "Mysterium" -teoksen nimilehdelle merkittiin ilmestymisvuodeksi 1596, mutta todellisuudessa se lienee ilmestynyt vasta seuraavan vuoden puolella. Kepler itse sai teoksesta omat kappaleensa, jotka hän seuraavan vuoden alussa lähetti huomattavimmille tähtitieteilijöille ja tukijoilleen. Teosta ei kovin yleisesti luettu, mutta se vakiinnutti Keplerin maineen hyvin lahjakkaana tähtitieteilijänä. Kepler omisti teoksensa tukijoilleen ja niille esimiehilleen, joiden alaisuudessa hän toimi Grazissa matematiikan ja tähtitieteen opettajana, mikä myös avasi hänelle uusia etenemis­mahdollisuuksia urallaan.Vaikka Kepler myöhempien tutkimustensa vuoksi joutui muuttamaan teoriansa yksityis­kohtia, hän ei koskaan hylännyt Platonin kappaleisiin ja pallopintoihin perustuvan kosmologiansa perusteita. Hänen myöhemmät tähtitieteelliset työnsä olivat tietyssä mielessä vain sen jatkokehitystä, jonka tarkoituksena oli löytää pallopinnoille tarkemmat sisä- ja ulkomitat laskemalla niiden sisäpuolella kulkevien planeettojen ratojen eksentrisyydet.  Vuonna 1621 Kepler julkaisi teoksestaan uomattavasti laajennetun toisen painoksen, jonka alaviitteissä hän selosti yksityiskohtaisesti korjauksia ja parannuksia, jotka hän oli ensimmäisen painoksen julkaisemisesta kuluneiden 25 vuoden aikana tehnyt.
+
+
+== Epistemologia ja tieteenfilosofia ==
+Monet Keplerin epistemologiaa koskevat ajatukset esiintyvät hänen teoksessaan Contra Ursum, jonka tarkoituksena oli puolustaa Tyko Brahea Nicolaus Raimarus Ursuksen (1551–1600) esittämiltä plagiointisyytöksiltä. Nämä ajatukset koskevat muun muassa kausaliteettia ja tähtitieteellisten teorioiden fysikaalista luonnetta, tähtitieteelisten hypoteesien käsitettä ja asemaa, realismin ja instrumentalismin välistä kiistaa, skeptisismin arvostelua ylipäänsä ja historian epistemologista merkitystä. Nicolas Jardinen mukaan Keplerin Contra Ursus on lähinnä suunnattu skeptisismiä vastaan eikä sillä niinkään ole merkitystä nykyisen realismin ja instrumentalismin välisen kiistan kannalta.Toisaalta kausaliteetti on käsite, joka liittyy yleisimpään ajatukseen "todellisesta tieteellisestä tieosta", joka toimii virikkeenä kaikelle tutkimukselle. Tässä mielessä Kepler esitti jo Mysterium -teoksessaan kausaalisia selityksiä taivaan sfäärien lukumäärille, suuruuksille ja liikkeille. Toisaalta "kausaliteetti" merkitsi Keplerille, Aristoteleen fysikaalisia tieteitä koskevan käsityksen mukaisesti, "konkreettista "fysikaalista syytä", vaikuttavaa syytä, jonka saa aikaa liikkeen tai pitää sitä yllä. Omaperäistä Keplerillä ja tyypillistä hänen lähestymis­tavalleen oli kuitenkin hänen luja vakaumuksensa, että kysymys tähtitieteellisten hypoteesien yhteen­sopivuudesta voitiin ratkaista ja että siihen liittyen kausaliteetin käsite voitiin tuoda tähtitieteeseen, jota vanhastaan oli pidetty matemaattisena tieteenä. Tämä lähestymistapa oli mukana jo Mysterium-teoksessa, jossa hän esimerkiksi ensimmäisenä yhdisti planeettojen etäisyydet Auringosta lähtevään voimaan, joka heikkeni verrannollisena kunkin planeetan etäisyyteen mutta ulottui kiintotähtien sfääriin saakka.
+
+
+== Vastaanotto ==
+Tanskalainen tähtitieteilijä Tyko Brahe, jolle Kepler lähetti yhden kappaleen Mysterium-teoksestaan,, ilmaisi mielipiteenään, että tämän esittämät ajatukset olivat mielenkiintoisia, mutta että vain niiden havaintojen avulla, joita Brahe itse oli tehnyt jo 30 vuoden ajan, voitaisiin selvittää, pitivätkö ne paikkansa. Luvattuaan käyttää näitä havaintoja hyväkseen Kepler muutti vuonna 1600 Prahaan, jossa hän toimi Keplerin avustajana. Brahe antoi Keplerille tehtäväksi tutkia tarkemmin Marsin liikettä, mikä johti planeettojen liikkeitä koskevien Keplerin lakien keksimiseen.
+
+
+== Planeettojen todelliset ja mallin mukaiset etäisyydet ==
+Platonin kappaleiden sisään ja ympäri piirrettyjen pallojen säteet ja niiden suhteet ovat seuraavat, kun yksikkönä käytetään kappaleen särmän pituutta:
+Näin ollen Keplerin mallin mukaan planeettojen ratojen säteiden tulisi olla seuraavan taulukon mukaiset, kun yksikkönä käytetään tähtitieteellistä yksikköä eli Maan radan sädettä:
+
+Kuten tästä ilmenee, Keplerin monitahokasmalli on osoittautunut virheelliseksi. Siitä huolimatta se vaikutt osaltaan siihen, että hän myöhemmin keksi planeettojen liikettä kuvaavat lait, jotka nykyisin tunnetaan Keplerin lakeina.Eri planeettojen etäisyyksille Auringosta on silti myöhemminkin on yritetty esittää säännönmukaisuuksia, josta tunnetuin on Titiuksen-Boden laki.
+
+
+== Kulttuurisia viittauksia ==
+Itävallassa laskettiin vuonna 2002 liikkeeseen hopeinen 10 euron juhlaraha, jossa on kuvattuna Johannes Kepler ja hänen monitahokasmalliaan esittävä rakennelma.
+
+
+== Lähteet ==
+
+
+== Aiheesta muualla ==
+Johannes Keplerin Mysterium cosmographicum, koko teksti latinaksi vuoden 1596 painoksen mukaisesti e-rara.ch.

@@ -1,0 +1,54 @@
+revision: 6318986
+title: "Tvrdo\u0107a"
+url: https://hr.wikipedia.org/wiki/Tvrdo%C4%87a
+
+
+---
+
+Tvrdoća je svojstvo materijala koje se protivi zadiranju stranog tijela u njegovu strukturu (ili površinu). Tvrdoća je svojstvo krutina jer tekućine i plinovi nemaju tvrdoću. Podaci o tvrdoći materijala su neophodni kada se radi o ručnoj ili strojnoj obradi. Uvijek alati moraju biti tvrđi od materijala koji se obrađuje. Ne možemo drvenom pilom rezati metalni predmete. Oprečan pojam tvrdoći je mekoća (tvrdo - mekano). Najtvrđi materijal je dijamant pa ga koristimo za oštrenje brusnih ploča. Brusne ploče se rade od korunda, karborunduma i elektrokorunda. Brusne ploče su tvrđe od kaljenog čelika i služe za oštrenje raznih alata (svrdla, pila, sjekača, glodala, noževa itd). 
+U strojarstvu postoji nekoliko načina za određivanje tvrdoće:
+
+tvrdoća po Vickersu, oznaka HV
+tvrdoća po Rockwellu, oznake HRC i HRB
+tvrdoća po Brinellu, oznaka HB
+tvrdoća po Shoreu, oznaka HSU mineralogiji se koristi Mohsova ljestvica tvrdoće na kojoj je najtvrđi materijal dijamant, a najmekši talk.
+
+
+== Postupci mjerenja tvrdoće ==
+Tvrdoća predstavlja otpornost materijala prema prodiranju nekog drugog, znatno tvrđeg tijela. Tvrdoća se može izraziti i kao otpor materijala prema plastičnoj deformaciji. Unatoč tome što tvrdoća ne predstavlja fizikalno egzaktno definirano mehaničko svojstvo, mjerenje tvrdoće je jedan od najraširenijih postupaka na području ispitivanja mehaničkih svojstava. Razlog tome je s jedne strane što je tvrdoća u vezi s nekim drugim mehaničkim svojstvima (npr. vlačna čvrstoća), a s druge strane mjerenje tvrdoće je jednostavnije i prije svega brže od ispitivanja nekih drugih mehaničkih svojstava.
+Nadalje, za mjerenje tvrdoće nisu potrebni posebno izrađeni uzorci već je mjerenje moguće, ovisno o metodi, na poluproizvodima ili čak na gotovim proizvodima. Zbog toga su se s vremenom razvile različite metode mjerenja tvrdoće:
+Ispitivanje tvrdoće zarezom:Mohsova ljestvica tvrdoćeIspitivanje tvrdoće utiskivanjem:Tvrdoća po Brinellu
+Tvrdoća po Vickersu
+Tvrdoća po RockwelluIspitivanje tvrdoće odskokom:Tvrdoća po Shoreu
+
+
+=== Mohsova ljestvica ===
+
+Mohsova ljestvica je niz od deset minerala poredanih po tvrdoći koji se koristi za procjenu relativne tvrdoće drugih minerala ili tvari. Ovu ljestvicu je prvi predložio njemački mineralog Frederich Mohs (1773. – 1839.) izabravši deset dostupnih minerala. Ljestvica nije pravocrtna: tvrdoća dijamanta nije deset puta veća tvrdoće od talka (dijamant je mnogo tvrđi). Mineral koji je "viši" u Mohsovoj ljestvici ima i veću tvrdoću. Ako ispitivana tvar može zarezati površinu minerala iz Mohsove ljestvice, ona je tvrđa od tog minerala.
+
+
+=== Tvrdoća po Brinellu ===
+
+Tvrdoća po Brinellu (oznaka: HB) je otpor što ga materijal pruža prodiranju zakaljene čelične kuglice promjera D (mm), tlačene silom F (N). U ispitivanom materijalu nastaje otisak u obliku kuglične kalote promjera baze d i dubine h. Ispitivanje tvrdoće po Brinellu spada u grupu ispitivanja materijala bez razaranja (oštećenja površine su neznatna) i to je postupak utiskivanjem (penetracija). Ovaj postupak ispitivanja tvrdoće materijala predložio je švedski inženjer Johan August Brinell 1900., i to je bio prvi široko prihvaćeni i standardizirani postupak ispitivanja tvrdoće materijala u znanosti o materijalima.
+
+
+=== Tvrdoća po Vickersu ===
+
+Tvrdoća po Vickersu (oznaka: HV) je mjera otpornosti što ga neki materijal pruža prodiranju dijamantne četverostrane piramide s vršnim kutom od 136º, opterećene silom F (N). Taj je vršni kut odabran prema čeličnoj kuglici promjera D (mm), koja se koristi kod ispitivanja tvrdoće po Brinellu, a ostavlja udubljenje promjera d = 0,375 D (to odgovara prosječnoj vrijednosti donje i gornje granice promjera udubljenja, koje se krece od 0,25 do 0,5 promjera kuglice D, unutar kojih su upotrebljivi rezultati ispitivanja tvrdoće po Brinellu). Udubljenje piramide daje kvadrat na površini uzorka, ali zbog netočnosti rada, nesavršenosti uzorka i sličnog (često puta je kvadrat iskrivljen), mjere se obje dijagonale kvadrata (d1 i d2) i uzima se srednja vrijednost dijagonale d. Zbog toga se rezultati ispitivanja tvrdoće po Brinellu i tvrdoće po Vickersu dobro podudaraju do 4500 N/mm2.
+
+
+=== Tvrdoća po Rockwellu ===
+
+Tvrdoća po Rockwellu je postupak za određivanje tvrdoće materijala, gdje se utiskuje poseban utiskivač u površinu ispitivanog materijala, pri čemu se ne mjeri površina otiska (kao kod ispitivanja tvrdoće po Brinellu i tvrdoće po Vickersu), već njegova dubina. Utiskivač je dijamantni stožac s vršnim kutom od 120º (s polumjerom zaobljenja na vrhu od 0,2 mm) ili zakaljena čelična kuglica promjera 1,5875 mm (1/16 inča) ili 3,175 mm (1/8 inča).
+
+
+=== Tvrdoća po Shoreu ===
+
+Tvrdoća po Shoreu zasniva se na mjerenju elastičnog odskoka probojca (durometar) s čeličnim ili dijamantnim vrhom, određene mase, pada na ispitivani materijal s određene visine i mjeri se visina odskoka. Visina odskoka je proporcionalna tvrdoći materijala. Ovaj je postupak pogodan za mjerenje tvrdoće kod plastike (polimera i elastomera) i guma. Pri mjerenju tvrdoće po Shoreu postoji nekoliko varijanti mjerenja u dinamičkim i statičkim uvjetima. Skala tvrdoće je od 0 za materijale male tvrdoće, kada se probojac u cijelosti utisne u uzorak, do 100, kada je dubina utiskivanja 0 ili nema nikakvog utiskivanja. Ispitni uzorak treba biti deblji od 6 mm i promjera većeg od 30 mm.
+
+
+== Poveznice ==
+Tvrdoća kemijskih elemenata
+
+
+== Izvori ==

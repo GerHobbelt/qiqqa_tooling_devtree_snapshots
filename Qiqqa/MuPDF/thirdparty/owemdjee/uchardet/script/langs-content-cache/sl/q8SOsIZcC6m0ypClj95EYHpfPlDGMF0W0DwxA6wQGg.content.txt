@@ -1,0 +1,110 @@
+revision: 5756382
+title: Anagram
+url: https://sl.wikipedia.org/wiki/Anagram
+
+
+---
+
+Anagrám ali premetánka (grško ana- - nazaj + graphein - pisati) nastane s permutacijo črk v besedi ali frazi, tako da dobimo drugo besedo ali frazo, ki ima neki pomen (glej tudi metateza). Besede, ki jih dobimo z anagramiranjem so lahko na kak zanimiv način povezane s prvotnimi ali pa tudi ne. 
+Primer leto = telo, mentor = monter. 
+Poseben primer anagramov so palindromi, anagrami, ki se nazaj in naprej preberejo enako:  potop, kisik, perica reže raci rep.
+Krajše besede imajo navadno več anagramov: vrana = varan (tropski kuščar) = Anvar (el Sadat) = Varna (pristanišče v Bolgariji) = ravan. Po drugi strani pa je za daljše besede težje najti anagram: destilarna = nadrealist
+
+
+== Zgodovina ==
+Že stari Grki so sestavljali anagrame, pesnik Likofron naj bi iz črk svojega vladarja Ptolemaios sestavil apo melitos (grško meden) in imena njegove žene Arsinoe pa Ion eras (Herina ljubljenka).
+Poznani so anagrami v latinščini.
+»Ave Maria, gratia plena, Dominus tecum« (Sveta Marija, milosti polna, Gospod je s teboj) je tako spremenjena v »Virgo serena, pia, munda et immaculata« (Svetla devica, čista in brezmadežna). 
+Med drugimi je odgovor na Pilatovo vprašanje, »Quid est veritas?« (Kaj je resnica?), namreč, »Est vir qui adest« (To je človek, ki je tu.); in transpozicija »Horatio Nelson« v »Honor est a Nilo« (Latinsko čast z Nila).
+
+
+== Psevdonimi ==
+Nekateri avtorji so uporabljali psevdonime, ki so nastali s premetavanjem njihovih imen: 
+
+Vladimir Nabokov = »Vivian Darkbloom«
+Erich Maria Remarque (priimek fonetično) Remark = »Kramer«
+Vid Pečjak = »Div Kajčep«
+
+
+== Programiranje ==
+Ugotavljanje ali sta dve besedi anagrama je pogosta programerska 
+naloga Arhivirano 2006-06-23 na Wayback Machine..
+
+
+== Ugankarstvo ==
+V ugankarstvu se anagram uporablja pogosto, kot samostojna uganka ali kot del drugih ugank. Anagram je lahko uporabljen v stavku, pogosto pa tudi v verzih.
+Nekaj primerov ugankarja Pavla Gregorca:
+DAN JE LE… za počitek! (rešitev nedelja)
+OBVLADA TO NERODA? 
+Saj to ne bo res,
+Da obvlada šport, 
+Ki je ples teles. (rešitev orodna telovadba).
+A BLATNO jezero na Madžarskem? Seveda, njegovo originalno ime. (rešitev Balaton)
+Posebej zanimivi so tematski anagrami, kjer so pojmi med seboj povezani:
+Amur = Ruma = Mura in Bari = Ibar.
+Znanje anagramiranja je zelo uporabno pri igri scrabble, kjer imamo na volj sedem črk, ki jih skušamo premetati in namestiti na igralno ploščo, tako da nam prinesejo čim več točk.
+
+
+== Primeri anagramov ==
+
+
+=== Slovenščina ===
+Vikipedija = Ekipa, divji!
+monogram = nomogram
+nasprotje = Petrosjan
+nadarjenec = Jeanne d'Arc
+enakost = ostanek = Estonka = kontesa = stoenka
+pijanost = stopinja = tajnopis
+sliva = Silva = Slavi = svila = Vilas = Visla = Vlasi
+
+
+=== Angleščina ===
+Tony Blair MP = I'm Tory plan B
+George Bush = He bugs Gore.
+George W Bush = He grew bogus.
+John Kerry = Jerky horn
+I have nothing to offer but blood, sweat, and tears." = "Defeat boaster Adolf Hitler!" bought Winston ovation. (Churchill)
+Statue of Liberty = Built to Stay Free
+Anagrams = Ars Magna
+Wikipedia = A Pied Kiwi
+The public art galleries = Large picture halls, I bet.
+The Morse code = Here come dots.
+A decimal point = I'm a dot in place
+Eleven plus two = Twelve plus one
+The eyes = they see
+Princess Diana = End is a car spin.
+Year Two Thousand = A year to shut down.
+Slot machines = Cash lost in 'em.
+Mother-in-law = Woman Hitler
+Tasmania = I am Satan
+"To be or not to be: that is the question, whether 'tis nobler in the mind to suffer the slings and arrows of outrageous fortune." = "In one of the Bard's best-thought-of tragedies: our insistent hero, Hamlet, queries on two fronts about how life turns rotten." (discoverd by Cory Calhoun)
+
+
+=== Francoščina ===
+Verjetno najbolj znan anagram v francoščini: Révolution française = Un véto corse la finira. (Francoska revolucija = Korziški veto jo bo končal (kar se je res zgodilo – glej Napoleon))
+
+
+== Glej tudi ==
+igra anagrami
+ambigram
+metateza
+palindrom
+
+
+== Viri ==
+Pavle Gregorc in Drago Bajt, Od uganke do uganke, Ljubljana 1987
+
+
+== Zunanje povezave ==
+
+(slovensko)
+
+http://www.pef.uni-lj.si/~markor/Javor/uganke/uganke.htm
+http://www.hpslo.com/?hpslo=anagrami(angleško)
+
+Anagrams, Long and Short
+Anagram Genius Archive: Database of thousands of example anagrams
+The Anagrammed Bible : Proverbs, Ecclesiastes, Song of Solomon, ISBN 0-9702148-0-4
+Internet Anagram Server (= I, rearrangement servant)
+The Anagrammy Awards
+Anagram Finder (fourmilab.ch)

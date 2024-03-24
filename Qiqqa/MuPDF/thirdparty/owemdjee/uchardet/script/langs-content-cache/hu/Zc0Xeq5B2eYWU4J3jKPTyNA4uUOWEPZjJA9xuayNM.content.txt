@@ -1,0 +1,2335 @@
+revision: 25950595
+title: "Pi (sz\xE1m)"
+url: https://hu.wikipedia.org/wiki/Pi_(sz%C3%A1m)
+
+
+---
+
+A 
+  
+    
+      
+        π
+      
+    
+     
+   (pi) egy matematikában és fizikában használt valós szám. A leggyakrabban használt, euklideszi geometriában a kör kerületének és átmérőjének hányadosaként definiálják, ami a körök hasonlósága miatt minden kör esetén azonos.
+A matematikai analízisben a körre való hivatkozás elkerülése érdekében szokás először a koszinuszt egy végtelen hatványsor összegeként definiálni, majd a 
+  
+    
+      
+        π
+      
+    
+     
+  -t a koszinuszfüggvény legkisebb pozitív zérushelyének kétszereseként rögzíteni.
+A görög 
+  
+    
+      
+        π
+      
+    
+     
+   betű a „περίμετρος” (perimetrosz, azaz kerület) szót rövidíti. Ezt a jelölést először William Jones használta 1707-ben, majd Leonhard Euler által 1737-ben lett igazán ismert. A 
+  
+    
+      
+        π
+      
+    
+     
+  -t ritkábban Ludolph-féle számnak is nevezik, a német matematikus Ludolph van Ceulen tiszteletére, aki a 
+  
+    
+      
+        π
+      
+    
+     
+  -nek minél több tizedesjegyét próbálta meghatározni.
+A 
+  
+    
+      
+        π
+      
+    
+     
+   irracionális, azon belül transzcendens szám.
+
+
+== A ==
+  
+    
+      
+        π
+      
+    
+     
+   szám értéke
+A mindennapi életben a 
+  
+    
+      
+        π
+      
+    
+     
+   értékére 3,14 használatos, de a tudományban sokkal nagyobb pontossággal használják ezt a számot.
+A 
+  
+    
+      
+        π
+      
+    
+     
+   ötven tizedesjegyig:
+
+3,1415926535 8979323846 2643383279 5028841971 6939937510 …Mivel a 
+  
+    
+      
+        π
+      
+    
+     
+   irracionális szám (bizonyítás), tizedestört alakja végtelen és nem ismétlődik periodikusan. Néhány tizedesjegynyi pontosság többnyire elegendő a mérnöki és tudományos munkákhoz, de modern számítástechnikai módszerekkel már 100 billió (1014) jegyét is kiszámították, mégsem fedeztek fel a számjegyek közt semmilyen mintázatot.
+
+A 
+  
+    
+      
+        π
+      
+    
+     
+   értéke:  
+  
+    
+      
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        
+          (
+          
+            
+              n
+            
+            ⋅
+            cos
+            ⁡
+            γ
+            ⋅
+            sin
+            ⁡
+            γ
+          
+          )
+        
+      
+    
+     
+  , ahol n egy egységnyi sugarú körbe írt szabályos konvex sokszög oldalainak száma, 
+  
+    
+      
+        γ
+      
+    
+     
+   a szabályos sokszöget alkotó n darab egyenlő szárú háromszög középponti szögének fele. A 
+  
+    
+      
+        cos
+        ⁡
+        γ
+        ⋅
+        sin
+        ⁡
+        γ
+      
+    
+     
+   értéke megegyezik az ábrán látható citromsárgával jelölt háromszög területével. Minél több oldalú a sokszög, a pí értéke annál pontosabb lesz.
+
+
+== A matematikai analízisben ==
+A 
+  
+    
+      
+        π
+      
+    
+     
+  -t a körre való hivatkozás nélkül is lehet definiálni.
+A matematikai analízisben a koszinusz definíciója tetszőleges x komplex számra (ebben a valós számok is benne foglaltatnak):
+
+  
+    
+      
+        cos
+        ⁡
+        x
+        =
+        1
+        −
+        
+          
+            
+              x
+              
+                2
+              
+            
+            
+              2
+              !
+            
+          
+        
+        +
+        
+          
+            
+              x
+              
+                4
+              
+            
+            
+              4
+              !
+            
+          
+        
+        −
+        
+          
+            
+              x
+              
+                6
+              
+            
+            
+              6
+              !
+            
+          
+        
+        +
+        ⋯
+        =
+        
+          ∑
+          
+            k
+            =
+            0
+          
+          
+            ∞
+          
+        
+        
+          
+            
+              (
+              −
+              1
+              
+                )
+                
+                  k
+                
+              
+            
+            
+              (
+              2
+              k
+              )
+              !
+            
+          
+        
+        ⋅
+        
+          x
+          
+            2
+            k
+          
+        
+      
+    
+     
+  Ezután azt a lehető legkisebb pozitív valós számot jelölik 
+  
+    
+      
+        π
+      
+    
+     
+  -vel, amire teljesül, hogy
+
+  
+    
+      
+        cos
+        ⁡
+        
+          
+            π
+            2
+          
+        
+        =
+        0
+      
+    
+     
+  
+
+
+== Története ==
+
+
+=== Egyiptom ===
+Az ókori Egyiptomban a 
+  
+    
+      
+        π
+      
+    
+     
+   a kör területének kiszámításakor jelent meg mint probléma. Már az i. e. 2000 körüli időkből származó egyiptomi Rhind-papiruszon található egy képlet a kör területének kiszámítására. Természetesen az egyiptomiak nem állandóként használták a pit, a számításaikban nem fordul elő olyan elem, ami azt valószínűsítené, hogy a kör területének és kerületének pi-szerű összefüggéseit felismerték. Egy megoldóképletet alkalmaztak, amelynek mai megoldása eredményezi a 3,14 számértéket.
+
+– Kákosy László fordítása
+
+A kör területének megoldóképlete eszerint:
+
+  
+    
+      
+        T
+        ≈
+        
+          
+            
+              64
+              
+                d
+                
+                  2
+                
+              
+            
+            81
+          
+        
+      
+    
+     
+  ahol d a kör átmérője (a feladatban ezt még meg kell szorozni a magassággal, aztán pedig 1,5-del is, hogy a könyök hosszmérték és a har köbmérték közti váltás is megtörténjen, köbkönyökben 640 lett volna a végeredmény). Ebből a 
+  
+    
+      
+        π
+      
+    
+     
+   értékére a
+
+  
+    
+      
+        π
+        ≈
+        4
+        ⋅
+        
+          
+            (
+            
+              
+                8
+                9
+              
+            
+            )
+          
+          
+            2
+          
+        
+        =
+        3
+        ,
+        160493827
+        
+        160493827
+        
+        160493827
+        
+        …
+      
+    
+     
+  közelítés adódik, ami ebben az időben csodálatos pontosságnak számított, és a jól eltalált kilencedből ered. Mivel az egyiptomiak néhány kivétellel csak egységtörteket alkalmaztak (vagyis olyan törteket, amelyeknek számlálója 1), és az 1/8, illetve 1/10 már feltűnően rossz eredményt adna, ezt a matematikai eredményt egyszerű próbálkozással elérhették. 1/10-del 2,56, 1/8-dal 4,0 lett volna az eredmény.
+
+
+=== Mezopotámia ===
+Ugyanekkor Mezopotámiában a  
+  
+    
+      
+        π
+        ≈
+        3
+        
+          
+            1
+            8
+          
+        
+        =
+        3
+        ,
+        125
+      
+    
+     
+   és a lényegesen durvább 
+  
+    
+      
+        π
+        ≈
+        3
+      
+    
+     
+   közelítő értéket használták. Ez utóbbit a zsidók is átvették, a Bibliában is megjelenik (Kir. 7:23). Az ókorban szinte minden országban, minden matematikával foglalkozó tudós más és más közelítést alkalmazott.
+
+
+=== Görögország ===
+
+Az ókori görögök felismerték, hogy a kör területe egy olyan háromszög területével egyezik, amelynek alapja a kör kerülete, magassága a kör sugara. Ezzel a 
+  
+    
+      
+        π
+      
+    
+     
+   nem csupán körterület, hanem a körkerület kiszámításával is kapcsolatba került. Arkhimédész a körbe és a kör köré írt sokszögekkel a 
+  
+    
+      
+        3
+        
+          
+            10
+            71
+          
+        
+        <
+        π
+        <
+        3
+        
+          
+            10
+            70
+          
+        
+      
+    
+     
+   közelítésig pontosította elődei eredményét (3,140845-3,142857). Az Arkhimédész becsléséből származó 
+  
+    
+      
+        π
+        ≈
+        
+          
+            22
+            7
+          
+        
+      
+    
+     
+   (3,142857) közelítésnél pontosabb eredményre jutott Klaudiosz Ptolemaiosz: 
+  
+    
+      
+        π
+        ≈
+        
+          
+            377
+            120
+          
+        
+      
+    
+     
+   (3,141667).
+
+
+=== Kína ===
+Kínában a földmérők a 
+  
+    
+      
+        π
+        ≈
+        3
+      
+    
+     
+   értékkel számoltak: Az i. e. 2. században készült összefoglaló munkában (Matematika kilenc könyvben) szerepel az a becslés, miszerint a kör területe a köré írt négyzetének 
+  
+    
+      
+        
+          
+            3
+            4
+          
+        
+      
+    
+     
+  -e, ebből pedig 
+  
+    
+      
+        π
+        ≈
+        3
+      
+    
+     
+   adódik.
+Ugyanakkor a gömb térfogatát a 
+  
+    
+      
+        V
+        =
+        
+          
+            9
+            16
+          
+        
+        ⋅
+        
+          d
+          
+            3
+          
+        
+      
+    
+     
+   képlettel számolták, ami a 
+  
+    
+      
+        π
+        ≈
+        
+          
+            27
+            8
+          
+        
+        =
+        3
+        ,
+        375
+      
+    
+     
+   közelítésnek felel meg.
+A Han-dinasztia alatt elrendelték a mértékegységek egységesítését. Ezt a munkát Liu Hszin csillagász (időszámításunk kezdete körül) hajtotta végre. Ekkor történt a matematika történetében először, hogy törvény szabta meg a 
+  
+    
+      
+        π
+        ≈
+        3
+        ,
+        1547
+      
+    
+     
+   értékét.
+A II. és III. század fordulóján Csang Heng jutott arra a becslésre, hogy a kör kerületének és a köré írt négyzet kerületének aránya 5:8, ami a 
+  
+    
+      
+        π
+        ≈
+        
+          
+            10
+          
+        
+        =
+        3
+        ,
+        16227766
+        …
+      
+    
+     
+   közelítéshez vezet. A III. század végén Vang Fan a 
+  
+    
+      
+        π
+        ≈
+        
+          
+            142
+            45
+          
+        
+        =
+        3
+        ,
+        15555
+        …
+      
+    
+     
+   közelítést használta, ugyanakkor Liu Huj a d=100 átmérőjű körrel számolva Arkhimédész módszerével, de nála pontosabban a 
+  
+    
+      
+        314
+        
+          
+            64
+            625
+          
+        
+        <
+        100
+        π
+        <
+        314
+        
+          
+            169
+            625
+          
+        
+      
+    
+     
+   közelítést adta, melyet a 3072 oldalú szabályos sokszög oldalainak kiszámításával kapott.
+Később Cu Csung-cse (430-501) csillagász adott pontosabb becslést, számításra a közelítő 
+  
+    
+      
+        
+          
+            355
+            113
+          
+        
+        <
+        π
+        <
+        
+          
+            22
+            7
+          
+        
+      
+    
+     
+   törteket használta. (
+  
+    
+      
+        3
+        ,
+        1415929
+        <
+        π
+        <
+        3
+        ,
+        1428571
+      
+    
+     
+  ). A 
+  
+    
+      
+        
+          
+            355
+            113
+          
+        
+      
+    
+     
+   már 6 tizedesjegyig pontos értéket ad.
+
+
+=== India ===
+Az 5–6. század fordulója körül alkotó Árjakhabata alkalmazta a helyes összefüggést a kör 
+  
+    
+      
+        T
+      
+    
+     
+   területe, 
+  
+    
+      
+        k
+      
+    
+     
+   kerülete és 
+  
+    
+      
+        d
+      
+    
+     
+   átmérője között:
+
+  
+    
+      
+        T
+        =
+        
+          
+            k
+            2
+          
+        
+        ⋅
+        
+          
+            d
+            2
+          
+        
+      
+    
+     
+  de a gömb térfogatának és a főkör területének kapcsolatára a hibás 
+  
+    
+      
+        V
+        =
+        T
+        ⋅
+        
+          
+            T
+          
+        
+      
+    
+     
+   képletet adja meg, ami a 
+  
+    
+      
+        π
+        ≈
+        
+          
+            16
+            9
+          
+        
+        =
+        1
+        ,
+        777
+        …
+      
+    
+     
+   közelítést adja. Ugyanakkor a feladatok kidolgozásánál ő maga is az akkor általánosan használt 3,1416 értékkel számol, ami a hinduk által kapott 9 tizedesjegyre pontos 
+  
+    
+      
+        π
+        ≈
+        
+          
+            104348
+            33215
+          
+        
+        =
+        3
+        ,
+        1415926539
+        …
+      
+    
+     
+   becslés kerekítése. A numerikus közelítések mellett említést érdemelnek a 
+  
+    
+      
+        π
+      
+    
+     
+  -vel kapcsolatos konvergens sorok, köztük a később Európában újra felfedezett Leibniz-sor 
+  
+    
+      
+        π
+        
+          /
+        
+        4
+      
+    
+     
+  -hez konvergáló sora. Ennek közelítésre használt részösszege a 
+  
+    
+      
+        
+          
+            π
+            4
+          
+        
+        ≈
+        
+          
+            377
+            480
+          
+        
+      
+    
+     
+   a Ptolemaiosz-féle fentebbi becsléssel egyezik.
+
+
+=== Iszlám országok ===
+A perzsák 16 tizedesjegyig számították ki az értékét. Az arab matematikusok Arkhimédész módszerének alkalmazásával előbb 180 oldalú, majd 720 oldalú sokszöggel számoltak, de később kiderült, hogy számolási hibát ejtettek. Végül az 1424-ben befejezett munkájában (Értekezés a körről) Dzsamsid Gijászaddín al-Kási adott immáron helyes becslést a 228, azaz 268 435 456 oldalú sokszög kerületének kiszámításával. Eredményét babiloni hatvanados helyiértékes törtben 10 helyiérték pontossággal, azaz decimálisan 17 jegyig közölte (ez utóbbi versbe szedve a fenti ábrán látható):
+
+  
+    
+      
+        2
+        π
+        ≈
+        6
+        ;
+        
+          16
+          
+            I
+          
+        
+        
+          59
+          
+            I
+            I
+          
+        
+        
+          28
+          
+            I
+            I
+            I
+          
+        
+        
+          1
+          
+            I
+            V
+          
+        
+        
+          34
+          
+            V
+          
+        
+        
+          51
+          
+            V
+            I
+          
+        
+        
+          46
+          
+            V
+            I
+            I
+          
+        
+        
+          14
+          
+            V
+            I
+            I
+            I
+          
+        
+        
+          50
+          
+            I
+            X
+          
+        
+        =
+        6
+        ,
+        2831853071795865
+      
+    
+     
+  ,ami a 
+  
+    
+      
+        π
+        ≈
+        3
+        ,
+        14159265358979325
+      
+    
+     
+   közelítést adja.
+
+
+=== Európa ===
+A középkori Európából a legkorábbi konkrét írásos emlék Novgorodból származik. Kirik diakónus 1134-es jegyzeteiben több számítás között szerepel az égitestek (Föld, Nap, Hold) térfogatának kiszámítása Eratoszthenész mérései alapján. E számításokhoz az ismeretlen forrásból származó 
+  
+    
+      
+        π
+        ≈
+        3
+        ,
+        125
+      
+    
+     
+   közelítést használták.
+Nyugaton a sokoldalú humanista, Nicolaus Cusanus 1445–59 között több művében foglalkozott a körkerület kiegyenesítésével, de csak egy eredménye volt jobb Arkhimédészénél. Módszere kissé eltért Arkhimédészétől: Arkhimédész fix kerületű körbe és köré írt 3, 6, 12, 24, …, 3·2n oldalú sokszögekkel számol, Cusanus 4, 8, 16… oldalú fix kerületű sokszögekbe és köréjük írt körökkel.
+Az 
+  
+    
+      
+        r
+      
+    
+     
+   sugarú körben 
+  
+    
+      
+        α
+      
+    
+     
+   középponti szöghöz tartozó körív 
+  
+    
+      
+        i
+      
+    
+     
+   hosszára a következő képletet adta:
+
+  
+    
+      
+        
+          
+            i
+            r
+          
+        
+        =
+        
+          
+            
+              3
+              sin
+              ⁡
+              α
+            
+            
+              2
+              +
+              cos
+              ⁡
+              α
+            
+          
+        
+      
+    
+     
+  Cusanus eredményeit a 16. század végén François Viète, Willebrord Snellius, Christiaan Huygens, a 17–18. században többen, köztük Isaac Newton javították.
+1597-ben Adriaan van Roomen ismételte meg az arab Al-Kási eredményét. Ezzel egyidőben Ludolph van Ceulen (1550–1617) német származású holland matematikus 1596-ban megjelent könyvében 60·233=515 396 075 520 oldalú befoglaló és körülíró sokszöget használt a 
+  
+    
+      
+        π
+      
+    
+     
+   értékének számításához. Ezzel a módszerrel húsz tizedesjegyig határozta meg a 
+  
+    
+      
+        π
+      
+    
+     
+   értékét, majd 1615-ben 32 jegyű közelítést publikált. Munkássága nyomán nevezik a 
+  
+    
+      
+        π
+      
+    
+     
+  -t „Ludolph-féle számnak”.
+A matematikai szakirodalom 18–19. századi eredményei között igen sok foglalkozik ezzel az akkortájt divatos problémával. Ezek nagy része naiv műkedvelők hibáktól hemzsegő munkája. A Magyar Tudományos Akadémia a 19. század közepén úgy rendelkezett, hogy „kör négyszegesítését, a szög háromfelé metszését, az örök mozgony feltalálását előadó értekezések vizsgálatlanul visszautasíttatnak”.
+1761-ben Johann Heinrich Lambert svájci matematikus bizonyította be, hogy a 
+  
+    
+      
+        π
+      
+    
+     
+   irracionális szám. Jelölésére a kis görög pi betűt 1739-ben Leonhard Euler vezette be William Jones nyomán.
+1873-ban William Shanks angol matematikus 30 évi munkával 707 tizedesjegyig számította ki, de 1944-ben a szintén angol Fergusson kimutatta, hogy Shanks az 528. tizedestől kezdve tévedett.
+
+
+==  ==
+  
+    
+      
+        π
+      
+    
+     
+  -t tartalmazó képletek
+A 
+  
+    
+      
+        π
+      
+    
+     
+   sok olyan geometriai képletben szerepel, amelyek körökkel és gömbökkel kapcsolatosak.
+
+
+== Végtelen összeggel és szorzattal való közelítés ==
+Viète-féle sor:
+  
+    
+      
+        
+          
+            
+              2
+            
+            2
+          
+        
+        ⋅
+        
+          
+            
+              2
+              +
+              
+                
+                  2
+                
+              
+            
+            2
+          
+        
+        ⋅
+        
+          
+            
+              2
+              +
+              
+                
+                  2
+                  +
+                  
+                    
+                      2
+                    
+                  
+                
+              
+            
+            2
+          
+        
+        ⋅
+        ⋯
+        =
+        
+          
+            2
+            π
+          
+        
+      
+    
+     
+  Leibniz-féle sor:
+  
+    
+      
+        
+          
+            
+              π
+              4
+            
+          
+          =
+          1
+          −
+          
+            
+              1
+              3
+            
+          
+          +
+          
+            
+              1
+              5
+            
+          
+          −
+          
+            
+              1
+              7
+            
+          
+          +
+          ⋅
+          .
+          .
+          .
+        
+        
+        
+      
+    
+     
+  Wallis-formula:
+  
+    
+      
+        π
+        =
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        
+          
+            [
+            
+              
+                
+                  2
+                  ⋅
+                  4
+                  ⋅
+                  ⋅
+                  ⋅
+                  2
+                  n
+                
+                
+                  1
+                  ⋅
+                  3
+                  ⋅
+                  ⋅
+                  ⋅
+                  
+                    (
+                    
+                      2
+                      n
+                      −
+                      1
+                    
+                    )
+                  
+                
+              
+            
+            ]
+          
+          
+            2
+          
+        
+        ⋅
+        
+          
+            1
+            n
+          
+        
+      
+    
+     
+   avagy
+  
+    
+      
+        
+          
+            
+              π
+              2
+            
+          
+          =
+          
+            
+              2
+              1
+            
+          
+          ⋅
+          
+            
+              2
+              3
+            
+          
+          ⋅
+          
+            
+              4
+              3
+            
+          
+          ⋅
+          
+            
+              4
+              5
+            
+          
+          ⋅
+          
+            
+              6
+              5
+            
+          
+          ⋅
+          .
+          .
+          .
+        
+        
+        
+      
+    
+     
+  Machin-formula (1706):
+  
+    
+      
+        
+          
+            π
+            4
+          
+        
+        =
+        4
+        
+          arctg
+        
+        
+          
+            1
+            5
+          
+        
+        −
+        
+          arctg
+        
+        
+          
+            1
+            239
+          
+        
+      
+    
+     
+  Euler-féle sor:
+  
+    
+      
+        
+          
+            
+              
+                π
+                
+                  2
+                
+              
+              6
+            
+          
+          =
+          1
+          +
+          
+            
+              1
+              
+                2
+                
+                  2
+                
+              
+            
+          
+          +
+          
+            
+              1
+              
+                3
+                
+                  2
+                
+              
+            
+          
+          +
+          
+            
+              1
+              
+                4
+                
+                  2
+                
+              
+            
+          
+          +
+          .
+          .
+          .
+        
+        
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          
+            
+              
+                π
+                
+                  4
+                
+              
+              90
+            
+          
+          =
+          1
+          +
+          
+            
+              1
+              
+                2
+                
+                  4
+                
+              
+            
+          
+          +
+          
+            
+              1
+              
+                3
+                
+                  4
+                
+              
+            
+          
+          +
+          
+            
+              1
+              
+                4
+                
+                  4
+                
+              
+            
+          
+          +
+          .
+          .
+          .
+        
+        
+        
+      
+    
+     
+  William Brouncker lánctörtje:
+  
+    
+      
+        
+          
+            
+              4
+              π
+            
+          
+          =
+          1
+          +
+          
+            
+              
+                1
+                
+                  2
+                
+              
+              
+                2
+                +
+                
+                  
+                    
+                      3
+                      
+                        2
+                      
+                    
+                    
+                      2
+                      +
+                      
+                        
+                          
+                            5
+                            
+                              2
+                            
+                          
+                          
+                            2
+                            +
+                            ⋯
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+        
+        
+      
+    
+     
+  Rámánudzsan-féle sorok:
+  
+    
+      
+        
+          
+            
+              4
+              π
+            
+          
+          =
+          
+            ∑
+            
+              n
+              =
+              0
+            
+            
+              ∞
+            
+          
+          
+            
+              
+                (
+                −
+                1
+                
+                  )
+                  
+                    n
+                  
+                
+                (
+                1123
+                +
+                21460
+                n
+                )
+                (
+                2
+                n
+                −
+                1
+                )
+                !
+                !
+                (
+                4
+                n
+                −
+                1
+                )
+                !
+                !
+              
+              
+                
+                  882
+                  
+                    2
+                    n
+                    +
+                    1
+                  
+                
+                
+                  32
+                  
+                    n
+                  
+                
+                n
+                
+                  !
+                  
+                    3
+                  
+                
+              
+            
+          
+        
+        
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  99
+                  
+                    2
+                  
+                
+              
+              
+                
+                  
+                    8
+                  
+                
+                π
+              
+            
+          
+          =
+          
+            ∑
+            
+              n
+              =
+              0
+            
+            
+              ∞
+            
+          
+          
+            
+              
+                (
+                4
+                n
+                )
+                !
+                (
+                1103
+                +
+                26390
+                n
+                )
+              
+              
+                (
+                n
+                !
+                
+                  )
+                  
+                    4
+                  
+                
+                
+                  396
+                  
+                    4
+                    n
+                  
+                
+              
+            
+          
+        
+        
+        
+      
+    
+     
+  
+
+  
+    
+      
+        π
+        =
+        
+          
+            (
+            
+              
+                9
+                
+                  2
+                
+              
+              +
+              
+                
+                  
+                    19
+                    
+                      2
+                    
+                  
+                  22
+                
+              
+            
+            )
+          
+          
+            
+              1
+              4
+            
+          
+        
+      
+    
+     
+   (a közelítés 9 jegyre pontos)Csebisev-sorokból (1957)
+  
+    
+      
+        
+          
+            ∑
+            
+              k
+              =
+              0
+            
+            
+              ∞
+            
+          
+          
+            
+              
+                (
+                −
+                1
+                
+                  )
+                  
+                    k
+                  
+                
+                (
+                
+                  
+                    2
+                  
+                
+                −
+                1
+                
+                  )
+                  
+                    2
+                    k
+                    +
+                    1
+                  
+                
+              
+              
+                2
+                k
+                +
+                1
+              
+            
+          
+          =
+          
+            
+              π
+              8
+            
+          
+          .
+        
+        
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          
+            ∑
+            
+              k
+              =
+              0
+            
+            
+              ∞
+            
+          
+          
+            
+              
+                (
+                −
+                1
+                
+                  )
+                  
+                    k
+                  
+                
+                (
+                2
+                −
+                
+                  
+                    3
+                  
+                
+                
+                  )
+                  
+                    2
+                    k
+                    +
+                    1
+                  
+                
+              
+              
+                2
+                k
+                +
+                1
+              
+            
+          
+          =
+          
+            
+              π
+              12
+            
+          
+          .
+        
+        
+        
+      
+    
+     
+  Egy szimmetrikus formula (1997):
+  
+    
+      
+        
+          π
+          =
+          
+            
+              
+                
+                  ∏
+                  
+                    n
+                    =
+                    1
+                  
+                  
+                    ∞
+                  
+                
+                
+                  (
+                  
+                    1
+                    +
+                    
+                      
+                        1
+                        
+                          4
+                          
+                            n
+                            
+                              2
+                            
+                          
+                          −
+                          1
+                        
+                      
+                    
+                  
+                  )
+                
+              
+              
+                
+                  ∑
+                  
+                    n
+                    =
+                    1
+                  
+                  
+                    ∞
+                  
+                
+                
+                  
+                    1
+                    
+                      4
+                      
+                        n
+                        
+                          2
+                        
+                      
+                      −
+                      1
+                    
+                  
+                
+              
+            
+          
+          =
+          
+            
+              
+                
+                  (
+                  
+                    1
+                    +
+                    
+                      
+                        1
+                        3
+                      
+                    
+                  
+                  )
+                
+                
+                  (
+                  
+                    1
+                    +
+                    
+                      
+                        1
+                        15
+                      
+                    
+                  
+                  )
+                
+                
+                  (
+                  
+                    1
+                    +
+                    
+                      
+                        1
+                        35
+                      
+                    
+                  
+                  )
+                
+                ⋯
+              
+              
+                
+                  
+                    1
+                    3
+                  
+                
+                +
+                
+                  
+                    1
+                    15
+                  
+                
+                +
+                
+                  
+                    1
+                    35
+                  
+                
+                +
+                ⋯
+              
+            
+          
+        
+        
+        
+      
+    
+     
+  Bailey–Borwein–Plouffe-formula (1997):
+  
+    
+      
+        
+          π
+          =
+          
+            ∑
+            
+              k
+              =
+              0
+            
+            
+              ∞
+            
+          
+          
+            
+              1
+              
+                16
+                
+                  k
+                
+              
+            
+          
+          
+            (
+            
+              
+                
+                  4
+                  
+                    8
+                    k
+                    +
+                    1
+                  
+                
+              
+              −
+              
+                
+                  2
+                  
+                    8
+                    k
+                    +
+                    4
+                  
+                
+              
+              −
+              
+                
+                  1
+                  
+                    8
+                    k
+                    +
+                    5
+                  
+                
+              
+              −
+              
+                
+                  1
+                  
+                    8
+                    k
+                    +
+                    6
+                  
+                
+              
+            
+            )
+          
+        
+        
+        
+      
+    
+     
+  
+
+
+== Matematikai tulajdonságai ==
+Transzcendenciáját Lindemann bizonyította be. De attól még nem Liouville-szám, hogy transzcendens, ugyanis, mint Kurt Mahler 1953-ban igazolta,
+
+  
+    
+      
+        
+          
+            |
+            
+              π
+              −
+              
+                
+                  p
+                  q
+                
+              
+            
+            |
+          
+          >
+          
+            
+              1
+              
+                q
+                
+                  42
+                
+              
+            
+          
+        
+        
+        
+      
+    
+     
+  minden olyan 
+  
+    
+      
+        
+          p
+          
+            /
+          
+          q
+        
+      
+    
+     
+   racionális számra, amiben 
+  
+    
+      
+        
+          q
+          ≥
+          2
+        
+      
+    
+     
+  .
+
+
+== Pi-versek ==
+
+Ismeretesek olyan mnemotechnikai „versek”, amiknek szavai annyi betűt tartalmaznak, mint a 
+  
+    
+      
+        π
+      
+    
+     
+   soron következő számjegye.
+A következő négy vers harminc tizedesjegyig adja meg a 
+  
+    
+      
+        π
+      
+    
+     
+   értékét:
+
+Az utolsó vers érdekessége, hogy a második versszakban (5-8. sor) szereplő számokat meg sem kell jegyezni, hiszen azok már bele vannak kódolva a vers elejébe a szavak hosszúsága által.
+Az alábbi vers 48 tizedesjegyig követi a pi értékét.
+
+
+=== Pi-vers 150 tizedesjegyig ===
+A valaha közölt pi-versek közül az alábbi a leghosszabb, amelyik valójában a piről, és annak keletkezéséről szól, és 150 tizedesjegyig készítette alkotója, Pothurszky Géza. A nullák helyén három pont ... szerepel.
+(3,1415926535 8979323846 2643383279 5028841971 6939937510
+5820974944 5923078164 0628620899 8628034825 3421170679
+8214808651 3282306647 0938446095 5058223172 5359408128)
+
+Egy angol változat 14 tizedesjegyig (figyeljük meg, hogy az első szó 3, a második 1, a harmadik 4, a negyedik 1... betűt tartalmaz):
+
+
+== Pi a kultúrában ==
+Pi (1998), Darren Aronofsky filmje
+Pi 3,14 (1981), a Rockets zenekar nagylemeze
+Carl Sagan Kapcsolat c. regénye
+
+
+== Jegyzetek ==
+
+
+== Hivatkozások ==
+
+
+=== Számjegytáblázatok ===
+
+  
+    
+      
+        π
+      
+    
+     
+   egymillió számjegyig Archiválva 2004. július 1-i dátummal a Wayback Machine-ben
+
+  
+    
+      
+        π
+      
+    
+     
+   négymillió számjegyig
+
+  
+    
+      
+        π
+      
+    
+     
+   kétszázmillió számjegyig
+
+
+=== Történeti, természettudományi és matematikai vonatkozások ===
+Kürschák József: A körmérés elmélete (első rész)
+Miért fontos a pi (
+  
+    
+      
+        π
+      
+    
+     
+  ) pontos értékét meghatározni?
+3,14 – Tökéletes hamisítvány Archiválva 2008. május 15-i dátummal a Wayback Machine-ben (Magyar Narancs, XX. évf. 11. szám, 2008. március 13.)
+
+
+=== Pi-versek és pi-dalok ===
+Minden idők legjobb magyar nyelvű pi-verse
+További pi-versek magyarul (Elemi matematika IV., egy elemi matematikakurzus weblapja a Szegedi Tudományegyetemen)
+
+  
+    
+      
+        π
+      
+    
+     
+  -dal - dallam a 
+  
+    
+      
+        π
+      
+    
+     
+   számjegyeiből
+
+
+=== Egyéb ===
+Pi-memory
+
+  
+    
+      
+        π
+      
+    
+     
+   a japánoktól
+Pi.lap.hu - linkgyűjtemény
+Pi-day március 14.
+Pi-blog magyar pi-blog
+
+
+== Irodalom ==
+Arisztotelész: Metafizika. Budapest: Hatágú Síp Alapítvány. 1992.  ISBN 963-7615-11-3  
+Courant – Robbins: Mi a matematika? (hely nélkül): Gondolat. 1966.   
+Heinrich Dörrie: A diadalmas matematika. Budapest: Gondolat. 1965.   
+Hajós György: Bevezetés a geometriába. Budapest: Tankönyvkiadó. 1960.   
+Adolf Pavlovics Juskevics: A középkori matematika története. Budapest: Gondolat. 1982.  ISBN 963-281-088-0  
+Konsztantin Alekszeevics Ribnyikov: A matematika története. Budapest: Tankönyvkiadó. 1968.   
+Sain Márton: Matematikatörténeti ABC. Budapest: Nemzeti Tankönyvkiadó; Budapest: Typotex. 1993.  ISBN 963-7546-41-3  
+Paul Strathern: Arkhimédész. [Budapest]: Elektra Alkotóház. 2000.  ISBN 963-9205-46-X  
+Szőkefalvi-Nagy Gyula: A geometriai szerkesztések elmélete. 2., bőv. és átdolg. kiad. Budapest: Akadémiai. 1968.   
+Bartel Leendert van der Waerden: Egy tudomány ébredése. Budapest: Gondolat. 1977.  ISBN 963-280-326-4  
+Laczkovich Miklós – T. Sós Vera: Analízis II. Budapest: Nemzeti Tankönyvkiadó. ISBN 978-963-19-6084-6

@@ -1,0 +1,27 @@
+revision: 25607609
+title: Scholar
+url: https://hu.wikipedia.org/wiki/Google_Tud%C3%B3s
+
+
+---
+
+A Google Tudós (eredetileg Google Scholar) a Google tudományos keresője, amely különféle témájú és formájú tudományos publikációk között keres. 2004. november 18-án indult, mára szinte minden online elérhető referált folyóiratban keres. 2006. február 20-ától a magyar könyvtárakban is keres a MOKKA-n keresztül.
+A Google Scholar keresőalgoritmusa hasonló a hagyományos Google keresőéhez, de nem a hiperlinkeket használja fel egy-egy publikáció fontosságának meghatározásához, hanem azt, hogy más cikkek milyen gyakran hivatkoznak rá. A keresések a publikációk teljes szövegében történnek, szűkíthetők szerző, év vagy megjelenési hely alapján, a találatoknál a kereső megjeleníti a cím és az esetleges online elérhetőség mellett azt is, hogy milyen más tudományos munkák hivatkoznak rá, és milyen könyvtárakban található meg. Utóbbihoz a WorldCat adatbázist, és egy saját, Library Links nevű szolgáltatást használ.
+A tudóstársadalom részéről már több bírálat érte a Google Scholart, mert a neten eddig a tudományos szakirodalomnak csak kisebb része jelent meg, így a kereső számos, papíralapú hagyományos szakirodalmat értelemszerűen nem figyel.
+
+
+== Lásd még ==
+Scopus (az Elsevier hasonló keresője)
+Web of Science (a Thomson ISI hasonló keresője)
+CiteSeer
+Scirus
+
+
+== Források ==
+Alireza Noruzi: Google Scholar: The New Generation of Citation Indexes (Libri 55. évfolyam, 4. szám, 2005. december)
+Dollfuß, H.: Google Scholar: Kleiner Fisch oder zukünftiger Hecht im medizinischen Literaturteich?. In: Medizin – Bibliothek – Information 2005; 5(3): 34-37 (PDF)
+Jacso, Peter: As we may search Comparison of major features of the Web of Science, Scopus, and Google Scholar citation-base , Current Science, Vol. 89, No. 9, 10. November 2005 (PDF)
+
+
+== További információk ==
+A Google Scholar nyitólapja

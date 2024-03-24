@@ -1,0 +1,11 @@
+revision: 4764962
+title: Detektorski sprejemnik
+url: https://sl.wikipedia.org/wiki/Detektorski_sprejemnik
+
+
+---
+
+Detektorski sprejemnik je ime za zasnovo prvega uporabnega radijskega sprejemnika, ki lahko iz amplitudno moduliranega visokofrekvenčnega signala izloči nizkofrekvenčni signal. Ime detektor izvira iz dejstva, da so bile prve izvedbe uporabljene le za detekcijo prisotnosti radijskih valov. 
+Sestavljen je bil iz tuljave (brez jedra), vrtljivi kondenzator in naravnega polprevodniškega kristala, ki je deloval podobno, kot današnje polprevodniške diode. 
+Vrtljivi kondenzator s spremenljivo kapacitivnostjo je bil uporabljen za uglasitev nihajnega kroga na določeno frekvenco, v kombinaciji s polprevodniškim kristalom pa je iz radijskega signala izločil visokofrekvenčni nosilni signal. Za uglaševanje je bila namesto vrtljivega kondenzatorja lahko uporabljena tudi tuljava s spremenljivo induktivnostjo.
+Posebnost detektorskega sprejemnika je, da za delovanje ne potrebuje zunanjega napajanja, kot so npr. baterije, temveč zadošča moč radijskih signalov (slednje je zahtevalo velike in dolge antene). Ker detektorski sprejemnik ne vsebuje ojačevalnika, je bilo z njim možno poslušati le radijske postaje katerih oddajniki so bili zadosti blizu. Običajno je moč zadostovala le za poslušanje preko slušalk.

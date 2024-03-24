@@ -1,0 +1,92 @@
+revision: 3807204
+title: Wayback Machine
+url: https://lv.wikipedia.org/wiki/Wayback_Machine
+
+
+---
+
+Wayback Machine ir digitāls Tīmekļa arhīvs un citas informācijas krātuve, rakstīta Java un Python programmēšanas valodās. 2001. gadā to izveidoja bezpeļņas organizācija Internet Archive, kas atrodas Sanfrancisko, Kalifornijā, ASV. Aleksas Tīmekļa vietņu pasaules reitingā šī vietne 2019. gada sākumā bija 253. vietā.
+
+
+== Vēsture ==
+"Internet Archive" dibinātāji 2001. gadā radīja "Wayback Machine", lai risinātu problēmas ar tīmekļa vietņu satura izzušanu, kad tā maina URL vai tiek slēgta. Serviss ļauj lietotājiem redzēt tīmekļa lapu arhivētās versijas, ko arhīvs sauc par "trīsdimensiju indeksu". Viņi izveidoja servisu, cerot arhivēt visu internetu un nodrošināt "vispārēju piekļuvi visām zināšanām"."Wayback Machine" jau 1996. gadā sāka glabāt kešatmiņā glabātās tīmekļa lapas ar mērķi padarīt pakalpojumu publiski pieejamu piecus gadus vēlāk. No 1996. līdz 2001. gadam informācijai nebija publiskas pieejas, lai gan veidotāji reizēm ļāva pētniekiem un zinātniekiem pameklēt vēl trūcīgajā datu bāzē. Kad arhīvs 2001. gadā sasniedza piekto gadadienu, tas tika atklāts sabiedrībai ceremonijā Kalifornijas Universitātē Bērklijā. Uz brīdi, kad "Wayback Machine" tika palaista oficiāli, tajā jau bija vairāk nekā 10 miljardi arhivēto lapu.
+Mūsdienās dati tiek glabāti lielā "Internet Archive" klasterī Linux mezglā. Mašīna pārskata un arhivē jaunas tīmekļa vietņu versijas. Vietnes var arī ierakstīt manuāli, ievadot meklēšanas lodziņā vietnes URL, ja vietne ļauj Wayback Machine to "pārmeklēt" un saglabāt datus. Serviss vairs nesavāc datus par visām vietnēm, izvēloties tās pēc sava algoritma.
+
+
+== Tehniskas detaļas ==
+Programmatūra tika izstrādāta, lai pārmeklētu Tīmekli un lejupielādētu visas publiski pieejamās tīmekļa vietnes, Gopher hierarhiju, Netnews (Usenet) ziņojumu dēļu sistēmu un lejupielādējamu programmatūru. Šo "rāpuļprogrammu" apkopotā informācija neietvēra visu informāciju, kas pieejama internetā, jo lielāko daļu datu izplatību ierobežo to īpašnieki vai saglabā to datu bāzēs, kas nav publiski pieejamas. Lai pārvarētu nepilnīgi saglabātajās tīmekļa vietnēs, 2005. gadā "Internet Archive" izstrādāja "Archive-It.org", kas ļāva iestādēm un satura veidotājiem brīvprātīgi saglabāt digitālā satura kolekcijas un izveidot digitālos arhīvus.Pārmeklēšanu veic no dažādiem avotiem, no kuriem daži tiek importēti no trešām pusēm un citus ģenerē pats arhīvs. "Worldwide Web Crawls" darbojas kopš 2010. gada un caurskata globālo Tīmekli.Vietņu un lappušu tveršanas biežums dažādās tīmekļa vietnēs atšķiras. Daļa vietņu ir iekļautas "pārmeklēšanas sarakstā", un vietne tiek arhivēta vairākkārtīgi. Vietnes pārmeklēšana var ilgt mēnešus vai pat gadus. Tomēr vietne var būt iekļauta vairāk nekā vienā pārmeklēšanas sarakstā, tāpēc top pārmeklēta biežāk un dziļāk.
+
+
+=== Uzglabāšanas apjoms un izaugsme ===
+Tā kā tehnoloģijas gadu gaitā ir attīstījušās, "Wayback Machine" uzglabāšanas jauda ir palielinājusies. 2003. gadā pēc tikai divu gadu publiskās piekļuves "Wayback Machine" apjoms palielinājās par 12 terabaitiem mēnesī. Dati tika glabāti "Internet Archive" personāla izstrādātajās PetaBox plauktu sistēmās. Pirmais 100TB plaukts pilnībā sāka darboties 2004. gada jūnijā, taču drīz kļuva skaidrs, ka viņiem būs nepieciešams daudz vairāk uzglabāšanas vietas."Internet Archive" 2009. gadā pārvietoja savu pielāgoto uzglabāšanas arhitektūru uz "Sun Open Storage" un saņēma jaunu datu centru "Sun Modular Datacenter" iekš "Sun Microsystems" Kalifornijas Universitātē. Kopš 2009. gada "Wayback Machine" saturēja aptuveni trīs petabaitus datu un katru mēnesi auga par 100 terabaitiem.2011. gadā publiskai testēšanai kļuva pieejama jauna, uzlabota "Wayback Machine" versija ar atjauninātu saskarni un jaunāku arhivētā satura rādītāju. Šā gada martā "Wayback Machine" forumā tika ziņots, ka "jaunajā beta versijā ir pilnīgāks un aktuālāks indeksēto materiālu indekss, un tas tiks regulāri atjaunināts.”2013. gada janvārī uzņēmums paziņoja par sasniegto 240 miljardu URL robežu. 2013. gada oktobrī uzņēmums radīja funkciju "Saglabāt lapu", kas ļauj jebkuram interneta lietotājam arhivēt URL saturu.Uz 2014. gada decembri "Wayback Machine" saturēja 435 miljardus tīmekļa lapu — gandrīz deviņus petabaitus datu, un tas palielinājās par aptuveni 20 terabaitiem nedēļā. 2016. gada jūlijā tajā bija aptuveni 15 petabaitu datu, bet 2018. gada septembrī vairāk nekā 25 petabaitu datu.
+
+
+=== Vietņu izslēgšanas politika ===
+Vēsturiski "Wayback Machine" ir ievērojusi robotu izslēgšanas standartu (robots.txt), nosakot, vai vietne tiks pārmeklēta vai nē. Tīmekļa vietņu īpašniekiem bija iespēja atteikties no "Wayback Machine", izmantojot robots.txt. Tā piemēroja robots.txt noteikumus ar atpakaļejošu datumu; ja vietne bloķēja arhīvu, visas iepriekš arhivētās lapas no domēna nekavējoties tika izņemtas. Turklāt "Internet Archive" norādīja, ka "dažreiz tīmekļa vietnes īpašnieks sazinās ar mums tieši un lūdz mūs pārtraukt vietnes pārmeklēšanu vai arhivēšanu. Mēs izpildām šādus pieprasījumus." Viņu tīmekļa vietnē teikts: ""Internet Archive" nav ieinteresēts saglabāt vai piedāvāt piekļuvi tīmekļa vietnēm vai citiem Interneta dokumentiem personām, kuras nevēlas savu materiālu vākšanu." Tomēr kopš 2017. gada arhīvs sācis ignorēt standartu robots.txt, īpaši attiecībā uz ASV iestāžu vietnēm.
+
+
+== Lietošana ==
+Kopš 2001. gada publiskās atklāšanas studenti un zinātnieki ir pētījuši gan to, kā "Wayback Machine" tiek glabāti un apkopoti dati, gan tās arhīvā esošās lapas. 2013. gadā bija uzrakstīti aptuveni 350 pētnieciski raksti par "Wayback Machine", galvenokārt par informācijas tehnoloģiju, bibliotēku zinātnes un sociālās zinātnes jomām. Sociālo zinātņu pētnieki ir izmantojuši "Wayback Machine", lai analizētu, kā tīmekļa vietņu attīstība no 90. gadu vidus līdz mūsdienām ir ietekmējusi uzņēmuma izaugsmi.Kad "Wayback Machine" arhivē lapu, tā parasti ietver lielāko daļu hipersaišu, saglabājot tās saites aktīvas, lai tās netiktu bojātas ar interneta nestabilitāti. Zinātnieki Indijā pētīja "Wayback Machine" spēju saglabāt hipersaites tiešsaistes zinātniskajās publikācijās un konstatēja, ka tā saglabā nedaudz vairāk nekā pusi no tām.Žurnālisti izmanto "Wayback Machine", lai apskatītu mirušās vietnes, datētu ziņojumus un izmaiņas tīmekļa vietnes saturā. Tās saturs ir izmantots, lai uzspiestu politiķiem atbildību un atklātu melus. Tā, 2014. gadā Ukrainas Donbasa separātistu līdera Igora Girkina arhivēta sociālā medija lapa apliecināja, ka viņš ar savu militāro grupu notriecis domājamu Ukrainas militāru lidmašīnu, pirms kļuva zināms, ka lidmašīna patiesībā bija civilā Malaizijas aviokompānijas lidmašīna; pēc tam viņš izdzēsa ziņojumu un vainoja Ukrainas armiju par lidmašīnas notriekšanu. 2017. gada apmeklētāji archive.org bija atklājuši, ka visas atsauces uz klimata pārmaiņām ir pazudušas no Baltā nama tīmekļa vietnes.Turklāt vietne tiek izmantota verificēšanai, nodrošinot Vikipēdijas redaktoriem piekļuvi atsauču un satura veidošanai.
+
+
+=== Ierobežojumi ===
+Neskatoties uz tās iespējām, "Wayback Machine" ir arī daži svarīgi ierobežojumi. 2014. gadā bija sešu mēnešu kavēšanās laiks starp brīžiem, kad tīmekļa vietne ir pārmeklēta un kad tā ir pieejama skatīšanās mašīnā. Pašlaik kavēšanās laiks ir no 3 līdz 10 stundām. "Wayback Machine" nav "vēsturisks Google"; lietotājiem ir jāzina to vietņu URL, ko viņi vēlas redzēt. Tajā ir funkcija "vietnes meklēšana", kas ļauj lietotājiem atrast vietni, pamatojoties uz vārdiem, kas apraksta vietni, nevis vārdiem, kas atrodami pašās tīmekļa lapās.
+"Wayback Machine" neietver katru tīmekļa lapu, kas jebkad radīta, dēļ tās tīmekļa pārmeklēšanas ierobežojumiem. "Wayback Machine" nevar pilnībā arhivēt tīmekļa lapas, kurās ir interaktīvas funkcijas, piemēram, Flash platformas un JavaScript, jo šīm funkcijām ir nepieciešama mijiedarbība ar mītnes vietni. Viņu tīmekļa pārmeklētājam ir grūti iegūt visu, kas nav kodēts HTML (vai kādā no tā variantiem), kas bieži izraisa bojātas hipersaites un trūkstošus attēlus. Turklāt tīmekļa rāpuļprogramma nevar arhivēt "bāreņu lapas", kas nesatur saites uz citām lapām. Īpaši noteikumi, kas reglamentē "Wayback Machine" rāpuļprogrammu, var sekot tikai iepriekš noteiktam hipersaišu skaitam, pamatojoties uz iepriekš iestatītu dziļuma ierobežojumu, tāpēc tā nevar arhivēt katru hipersaiti katrā lapā.Daži īpašnieki savā tīmekļa vietnē ievieto robots.txt failu, kas parasti novērš "Wayback Machine" tās atklāšanu un arhivēšanu. Turklāt tīmekļa vietņu īpašnieki var arī tiešā kontaktā pieprasīt, lai viņu lapas tiktu izslēgtas no arhīva.
+
+
+== Likumi ==
+
+
+=== Civilprocesi ===
+
+
+==== Netbula LLC pret Chordiant Software Inc ====
+2009. gada lietā "Netbula, LLC pret Chordiant Software Inc.", atbildētājs Chordiant iesniedza lūgumu piespiest Netbula atslēgt robots.txt failu savā tīmekļa vietnē, jo šis fails neļāva "Wayback Machine" publicēt arhivētās iepriekšējo lapu versijas Netbulas vietnē, kuras, pēc Chordiant uzskata, atbalstītu tās pozīciju.Netbula iebilda pret šo priekšlikumu, pamatojoties uz to, ka atbildētājiem vajadzētu tieši griezties pie "Internet Archive". Tomēr "Internet Archive" darbinieks sniedza zvērinātu paziņojumu, atbalstot Chordiant ierosinājumu, norādot, ka tas nevar publicēt bloķētas tīmekļa lapas ar jebkādiem citiem līdzekļiem "bez ievērojama sloga, izdevumiem un darbības traucējumiem".Tiesnesis Hovards Loids noraidīja Netbulas argumentus un lika viņiem īslaicīgi atspējot robots.txt bloķēšanu, lai ļautu Chordiant ielādēt arhivētās lapas, ko viņi meklēja.
+
+
+==== Telewizja Polska ====
+2004. gada oktobra lietā "Telewizja Polska USA, Inc. pret Echostar Satellite", lietas dalībnieks mēģināja izmantot "Wayback Machine" arhīvu kā pieņemamu pierādījumu avotu. Pirms tiesas procesa EchoStar norādīja, ka tā plāno piedāvāt "Wayback Machine" momentuzņēmumus kā pierādījumu par iepriekšējo Telewizja Polska tīmekļa vietnes saturu. Telewizja Polska cēla ierosinājumu, lai apturētu momentuzņēmumus, pamatojoties uz avota neautentificētību, bet maģistrāta tiesnesis Arlanders Kejs noraidīja šo ierosinājumu. Tomēr tiesas procesā tiesnesis Ronalds Gusmans atcēla Keja secinājumus, norādīja, ka ne "Internet Archive" darbinieka apliecinājums, ne tā pamatā esošās lapas (t.i., arhivētā Telewizja Polska tīmekļa vietne) nav pieņemami kā pierādījumi. Tiesnesis Gusmans pamatoja savu lēmumu, ka darbinieka liecība bija nepietiekami pierādoša, un Tīmekļa lapas izdrukas nebija pašautentificējošas.
+
+
+==== Patentu tiesības ====
+Ja ir izpildītas dažas papildu prasības (piemēram, arhīvam sniedzot autoritatīvus paziņojumus), Amerikas Savienoto Valstu patentu birojs un Eiropas Patentu birojs pieņem datuma zīmogus no interneta arhīva kā pierādījumu tam, kad konkrētā tīmekļa lapa bijusi pieejama sabiedrībai. Šie datumi tiek izmantoti, piemēram, izskatot patenta pieteikumu.
+
+
+==== Lietderības ierobežojumi ====
+Tīmekļa vietnes arhivēšanai ir tehniski ierobežojumi, un tādējādi pretējās puses tiesvedībā var ļaunprātīgi izmantot tīmekļa vietņu arhīvu rezultātus. Šo problēmu var saasināt prakse, kad sūdzību, atbilžu vai ekspertu liecību iesniegšanas laikā tiek parādīti tīmekļa lapu ekrānšāviņi, kad pamatā esošās saites nav parādītas un tādēļ var saturēt kļūdas. Piemēram, "Wayback Machine" neaizpilda veidlapas un tādēļ neietver daudzu e-komercijas datubāzu saturu savos arhīvos.
+
+
+=== Tiesiskais statuss ===
+Eiropā "Wayback Machine" var tikt interpretēta kā autortiesību likumu pārkāpums. Tikai satura veidotājs var izlemt, kur tas tiek publicēts vai dublēts, tāpēc arhīvam pēc radītāja pieprasījuma būtu jāizdzēš lapas no sistēmas.
+
+
+=== Arhivētā satura juridiskie jautājumi ===
+Vairākas lietas bijušas vērstas pret "Internet Archive", jo īpaši pret tā "Wayback Machine" arhivēšanas pasākumiem.
+
+
+==== Scientoloģija ====
+2002. gada beigās "Internet Archive" no "Wayback Machine" izņēma dažādas vietnes, kas kritizēja scientoloģiju. Kļūdas paziņojumā tika norādīts, ka tā bija atbilde uz "vietnes īpašnieka pieprasījumu". Vēlāk tika noskaidrots, ka juristi no scientoloģijas baznīcas bija pieprasījuši šo noņemšanu un ka tas noticis pretēji vietņu īpašnieku gribai.
+
+
+==== Healthcare Advocates, Inc ====
+2003. gadā "Harding Earley Follmer & Frailey" aizstāvēja klientu no strīdiem, kas saistīti ar preču zīmēm, izmantojot "Wayback Machine". Advokāti varēja pierādīt, ka prasītāja iesniegtie pieprasījumi bija nederīgi, pamatojoties uz viņu tīmekļa vietnes saturu vairākus gadus iepriekš. Prasītājs, "Healthcare Advocates", pēc tam grozīja savu sūdzību, lai iekļautu tajā "Internet Archive", apsūdzot to autortiesību pārkāpuma organizēšanā. Advokāti apgalvoja, ka, tā kā viņi savā tīmekļa vietnē bija instalējuši robots.txt failu, pat ja pēc sākotnējās tiesas prāvas iesniegšanas arhīvam bija jānoņem visas iepriekšējās prasītājas tīmekļa vietnes kopijas no "Wayback Machine", tomēr daži materiāli turpināja būt publiski redzami. Lieta tika atrisināta ārpus tiesas, pēc tam, kad tika noteikta tehniskā problēma.
+
+
+==== Sjūzena Šela ====
+Bērnu aizsardzības aktīviste Sjūzena Šela iesniedza prasību 2005. gada decembrī, pieprasot "Internet Archive" samaksāt 100 000 ASV dolāru par viņas tīmekļa vietnes profane-justice.org arhivēšanu no 1999. līdz 2004. gadam. 2007. gada 25. aprīlī "Internet Archive" un Sjūzena Šela kopīgi paziņoja par viņu tiesas prāvas izšķiršanu.
+
+
+==== Daniels Davidjuks ====
+Laikā no 2013. līdz 2016. gadam pornoaktieris Daniels Davidjuks mēģināja noņemt arhivētos attēlus no "Wayback Machine" arhīva, vispirms nosūtot vairākus pieprasījumus arhīvam un pēc tam pārsūdzot Kanādas Federālajā tiesā.
+
+
+== Cenzūra ==
+Archive.org tiek bloķēts Ķīnā. Pēc tam, kad vietne iespējoja šifrētu HTTPS protokolu, tas 2015. gadā tika bloķēts Krievijā. 2016. gada aprīlī vietnes bloķēšana Krievijā tika pārtraukta. Šādas pašas problēmas raksturīgas arī citām NVS valstīm: archive.org Kazahstānā tika bloķēts 2015. gadā, 2017. gadā tas pats notika Kirgizstānā.
+
+
+== Ārējās saites ==
+Oficiālā vietne
+Oficiālā rezerves vietne ("spogulis")
+
+
+== Atsauces ==

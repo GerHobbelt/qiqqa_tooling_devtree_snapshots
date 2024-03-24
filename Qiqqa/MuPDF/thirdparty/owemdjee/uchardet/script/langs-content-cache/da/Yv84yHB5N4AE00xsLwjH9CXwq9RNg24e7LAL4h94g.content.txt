@@ -1,0 +1,56 @@
+revision: 11241130
+title: Counter-Strike
+url: https://da.wikipedia.org/wiki/Counter-Strike
+
+
+---
+
+Counter-Strike (CS) er et holdbaseret førstepersonsskydespil til PC og Xbox. Det er en modifikation af spillet Half-Life. Der findes 4 udgaver af spillet: Counter Strike, Counter-Strike: Condition Zero, Counter Strike: Source og det nyeste: Counter Strike: Global Offensive, som blev udgivet d. 21. august 2012.
+
+
+== Historie ==
+Den første version af Counter-Strike som blev publiceret var et Mod betaversion til HalfLife, udviklet af Valve software sammen med medskaberne Minh Le og Jess Cliffe, som brugte GoldSrc, en modificeret udgave af John Carmack og Michael Abrashs Quake-motor som Id software har udviklet. Dette spil blev udgivet i juni 1999 af Valve. I 2003 blev der udgivet en version til Xbox, og foråret 2004 offentliggjorde Valve Counter-Strike: Condition Zero, som foruden opdateret grafik og spilbarhed introducerede en enspiller-del. Senere samme år udgav Valve også Counter-Strike: Source, som i modsætning til de gamle versioner af spillet byggede på Half-Life 2 og dermed den nye Source-spilmotor.
+
+
+== Opbygning ==
+CS spilles sædvanligvis over internettet mod andre mennesker, selv om der findes datastyrede spillere, de såkaldte bots som findes i easy, medium, hard og expert samt ekstrem hvis man sætter dem selv. I starten af hvert spil har spilleren to hold at vælge mellem: Terroristerne (T) eller antiterroristerne (CT). Valget har indvirkning på hvilket opdrag spilleren får, men også udvalget af våben man kan købe. Både antiterroristerne og terroristerne starter med samme pengebeholdning, som, såfremt serveren følger spillets standardindstillinger, er 800 dollar. En runde kan altid vindes ved at dræbe alle modstanderne – bortset fra baner af typen de_, hvor CT, også selv om alle terrorister dræbes, skal demontere (defuse) bomben såfremt den er blevet armeret. I baner af typen cs_ skal antiterroristerne redde fire gidsler (hostages) og eskortere dem tilbage til antiterrorist spawn
+Spillet spilles i runder, som sædvanligvis varer i to til tre minutter, afhængigt af serverens indstillinger. Efter hver runde bliver alle bragt til live igen, returneres til sine startpositioner ("spawns"), og en ny runde starter. For hver gang antiterroristerne klarer at ”demontere” bomben (se Sprængningsopgave) eller terroristerne klarer at få den sprængt, får det respektive vinderhold af runden flere penge til at købe kraftigere og bedre våben til at vinde fremtidige runder.
+
+
+== Baner ==
+Der er mange baner i spillet. Hvis du opretter din egen "server" kan du bestemme hvilken bane du vil spille. Du kan enten vælge en af de standard baner eller gå ud på en server på nettet og spille net - serverens bane efter at have downloaded den.
+
+
+=== Sprængningsopgave ===
+Terroristerne skal plante en bombe på et af to anviste steder. Enten på bombested A eller B. Dette kalder man ofte "A-spot og B-spot". Antiterroristernes mål er at forhindre at bomben sprænges. Når bomben er armeret, sprænger den efter 40 sekunder, afhængig af serverens indstillinger. baner med denne spilmåde har almindeligvis "de_" i begyndelsen af navnet. De_ dust2 er den mest spillede bane når det gælder baner med denne spilmåde har almindeligvis <<de_>> i begyndelsen af navnet.
+
+
+=== Gidselopgave ===
+Terroristerne har taget et antal gidsler til fange. Antiterroristerne skal finde gidslerne på et eller flere steder, og bringe dem tilbage til startstedet(også kaldt "Spawn"). Terroristernes opgave er at forhindre dette til tiden går ud, eller at dræbe alle antiterroristerne. Baner med denne spilmåde har almindeligvis "cs_" i begyndelsen af navnet.
+
+
+=== Eskorteopgave ===
+Antiterroristerne skal eskortere en på sit eget hold som bliver kaldt VIP, fra ”spawn’et” til et angivet punkt på banen før tiden udløber. VIP-en starter med en USP, og kan ikke købe nogle andre våben, men har til gengæld to hundrede liv (mod hundrede point som er det maksimale for andre spillere). Terroristernes opgave er at dræbe VIP'en. Baner med denne spilmåde har almindeligvis "as_" i begyndelsen af navnet.
+
+
+== Klaner ==
+Fællesskabet og miljøet omkring Counter-Strike er i høj grad baseret omkring klaner, som er hold bestående af oftest 5 personer( Kan dog beså af mange flere personer), som spiller mod andre klaner. I klankampene (kaldet Clan Wars) gælder som oftest ét af to hovedregelsæt: MR12 eller MR15 (maxround 12 eller 15), og for begges vedkommende gælder det for terroristerne og antiterroristerne at opfylde banens opgaver. Banen vil i en klankamp næsten altid være en de_-bane, idet begge hold her har muligheden for at vinde på anden måde end ved blot at dræbe modstanderholdet; terroristerne kan forsøge at armere bomben og få den til at sprænge, og antiterroristerne kan forsøge at holde dem fra det.
+
+
+=== Counter-strike i Danmark ===
+I Danmark er der en stor interesse for Counter-Strike, en såkaldt "scene". 
+I Danmark har det bedste hold Astralis flere gange optrådt til store internationale turneringer, og har også vundet nogle stykker.Specielt i 2008 vandt mTw bl.a. guld til OL (World Cyber Games) og blev kåret til Verdens bedste hold.
+I 2017 er det bedste hold Astralis som har vundet forskellige store turneringer og været i finalen i mange. Deres største sejr var da de vandt ELEAGUE major i januar 2017.
+
+
+=== International rangering ===
+GotFrag har også rangering af de forskellige lande i verden. Der er 79 lande med på listen.
+Det bedste land i CS er Danmark.
+
+
+== Eksterne henvisninger ==
+Counter-Strike på Internet Movie Database (engelsk)
+Counter-Strike på Metacritic (engelsk)
+Officielle hjemmeside
+Valve hjemmeside
+Valve Anti-Cheat System (VAC)https://www.ign.com/games/half-life-1

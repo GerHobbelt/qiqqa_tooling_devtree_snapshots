@@ -1,0 +1,74 @@
+revision: 233557108
+title: Carboxylic acid
+url: https://de.wikipedia.org/wiki/Ramipril
+
+
+---
+
+Ramipril ist ein Arzneistoff der Gruppe der ACE-Hemmer, der zur Behandlung der arteriellen Hypertonie (Bluthochdruck), der Herzinsuffizienz und zur Vorbeugung gegen einen Herzinfarkt eingesetzt wird. Ramipril gehört zur Gruppe der sogenannten ACE-Hemmer der zweiten Generation. Ramipril selbst ist ein inaktives Prodrug. Sein Wirkprinzip beruht nach Aktivierung zum Ramiprilat durch hydrolytische Abspaltung von Ethanol auf der Hemmung des Angiotensin-konvertierenden Enzyms (ACE).
+
+
+== Chemie ==
+Die Verbindung stammt aus der Pharmaforschung der ehemaligen Hoechst AG (Hoe 498). Sie wurde 1983 zum Europäischen Patent angemeldet und auch in den USA patentiert.
+Im Jahr 1984 berichteten die Erfinder Volker Teetz, Rolf Geiger, Rainer Henning und Hansjörg Urbach auch in einer Fachzeitschrift über ihre Synthese.Vorbild des Wirkstoffs war der ACE-Inhibitor Enalapril, wobei dessen Prolin-Teil durch die bicyclische unnatürliche Aminosäure (all-S)-Octahydrocyclopenta[b]pyrrol-2-carbonsäure (2-Azabicyclo[3.3.0]octan-3-carbonsäure) ersetzt wurde. Mit anderen Worten: der Prolin-Teil wurde durch einen Cyclopentan-Ring anelliert.
+Das Grundgerüst enthält außerdem die in ACE-Hemmern häufig präsente α-Aminosäure (S)-Alanin, deren Aminogruppe mit dem C-2-Atom des 4-Phenylbuttersäure-ethylesters verknüpft wurde. Man könnte die Verbindung aber auch als Derivat des  (S)-Homophenylalanins auffassen.
+
+
+=== Synthese ===
+Der bicyclische Baustein wurde durch Alkylierung von Pyrrolidinocyclopenten mit einem chlorierten Serinderivat erzeugt. Das Reaktionsprodukt wurde mit verdünnter Salzsäure behandelt, wobei alle Schutzgruppen abgespalten wurden, und ein Iminiumsalz entstand. Dieses wurde katalytisch hydriert. In diesem Fall erfolgt die Addition des Hydrid-Wasserstoffatoms auf derselben Seite wie das am benachbarten Brückenkopfatom vorhandene H-Atom, d. h. die beiden Fünfringe werden cis-verknüpft (vgl. z. B. Decalin). Sie bilden eine konkave Teilstruktur. Die Carbonsäure-Gruppe (COOH) ragt ‚ins Innere‘ des gefalteten Moleküls, nimmt also mit anderen Worten die endo-Position ein.
+
+Die ausschließlich gebildete endo-cis-Säure, ein Racemat, wurde in den Benzylester übergeführt. Dieses Racemat konnte mit chiralen Hilfsstoffen, d. h. über Salze mit chiralen Säuren in die Enantiomeren zerlegt werden: (R,S,S)- und (S,S,S)-2-Azabicyclo[3.3.0]octan-3-carbonsäure-benzylester. Letzterer wurde zur Peptidverknüpfung verwendet.
+Der größere Baustein wurde durch Addition von L-Alanin-benzylester, d. h. mit (S)-Konfiguration, an 4-Oxo-4-phenylbut-2-ensäure-ethylester mit (E)-Konfiguration aufgebaut.
+Dieses prochirale Molekül kann an der ‚Vorderseite‘ oder an der ‚Rückseite‘ mit der NH2-Gruppe des chiralen Aminosäureesters verknüpft werden, wodurch Diastereomere mit (S,S)- und (R,S)-Konfiguration gebildet werden können. Das Reaktionsprodukt bei Raumtemperatur besteht aus einem Gemisch beider Stereoisomere. Das erwünschte (S,S)-Diastereomer überwiegt (ca. 2:1). Bei höherer Temperatur stellt sich ein chemisches Gleichgewicht ein, was zur weiteren Anreicherung der (S,S)-Verbindung ausgenutzt werden konnte. Vom Prinzip einer diastereoselektiven Syntheseplanung, d. h. chiralen Ökonomie, ist diese Reaktionsstufe der entscheidende Schritt.
+
+Hydrogenolyse in Gegenwart eines Palladium-Katalysators entfernte die Benzyl-Schutzgruppe und reduzierte auch die Ketogruppe, sodass die angestrebte Carbonsäure erhalten wurde. Diese wurde nun mit dem bicyclischen Prolin-Derivat kondensiert.
+Zum Schluss wurde die noch verbliebene Benzyl-Schutzgruppe wiederum hydrogenolytisch entfernt.
+
+
+== Pharmakologie ==
+Ramipril ist ein inaktives Prodrug, was durch Veresterung der freien Carbonsäurefunktion mit Ethanol erreicht wurde. Dieser Ethylester wird im Organismus in der Leber durch Esterasen hydrolysiert, wodurch das aktive, sogenannte Ramiprilat (besser wäre „Ramipril-disäure“) entsteht. In der Strukturformel ist der aktive Metabolit als Dicarbonsäure gezeigt; da er außerdem ein basisches NH-Atom enthält, muss die Verbindung unter physiologischen Bedingungen bevorzugt als Zwitterion vorliegen.
+
+Der Wirkmechanismus des Ramipril beruht darauf, dass sein Stoffwechselprodukt Ramiprilat das Angiotensin-konvertierende Enzym hemmt (inhibiert). Es bildet mit dem als Cofaktor enthaltenen Zinkion einen stärkeren Komplex aus als Angiotensin I, wodurch dieses vermindert zu Angiotensin II umgebildet wird. Dies bedingt eine Abnahme des Tonus der Blutgefäße und damit eine Abnahme des Blutdrucks. Ebenfalls führt die Abnahme des Angiotensin-II-Spiegels zu einer Verringerung der Aldosteron-Freisetzung aus der Nebennierenrinde und somit zu einer Beeinflussung des Wasserhaushalts.
+
+
+== Analytik ==
+Die zuverlässige qualitative und quantitative Bestimmung von Ramipril gelingt nach angemessener Probenvorbereitung durch Kombination der HPLC mit der Massenspektrometrie.
+
+
+== Therapeutische Verwendung ==
+
+
+=== Anwendungsgebiete ===
+Ramipril wird einzeln (Monotherapie) und in Kombination mit anderen Blutdrucksenkern (Kombinationstherapie, insbesondere mit Diuretika wie zum Beispiel Hydrochlorothiazid oder Calciumkanalblockern) überwiegend zur Therapie des Bluthochdrucks eingesetzt. Auch zur Behandlung der Herzinsuffizienz gilt es als Mittel der ersten Wahl. Ramipril konnte in mehreren klinischen Studien auch eine Wirksamkeit in der Prophylaxe (Vorbeugung) des Herzinfarkts zeigen.
+Ramipril findet auch in der Tiermedizin zur Behandlung der Herzinsuffizienz Anwendung.
+Eine Gehstreckenverlängerung, wohl durch Vasodilatation, ist beschrieben.
+
+
+=== Nebenwirkungen ===
+Die meisten Nebenwirkungen von Ramipril werden mit einem durch ACE-Hemmer bedingten verlangsamten Abbau und Kumulation von Bradykinin in Verbindung gebracht. Dazu zählen Hautreaktionen, wie z. B. Exantheme und Nesselsucht, ferner auch Angioödeme. Schwere allergische Hautreaktionen werden hingegen nur sehr selten beobachtet.
+Zu den Nebenwirkungen auf die Atemwege zählen häufig trockener Husten. Auch Heiserkeit und Halsschmerz können auftreten. Asthmaanfälle und Atemnot können ebenfalls, wenn auch selten, auftreten.
+Als Folge der Hauptwirkung von Ramipril kann es zu einer zu starken Blutdrucksenkung kommen. Infolgedessen können gelegentlich Schwindel, Kopfschmerz und Benommenheit beobachtet werden. Von schweren Herz-Kreislaufereignissen, wie Brustenge, Herzinfarkt und Synkope, wurde nur in Einzelfällen berichtet.
+Durch Eingriff in den Wasser- und Elektrolythaushalt können gelegentlich funktionelle Nierenfunktionsstörungen beobachtet werden. Eine Proteinurie (Ausscheidung von Proteinen im Harn) wurde hingegen nur selten beobachtet.
+Da Ramipril in der Schwangerschaft u. a. Wachstums- und Knochenbildungsstörungen beim Kind verbunden mit einer erhöhten Sterblichkeit hervorrufen kann, darf Ramipril in dieser Zeit nicht eingenommen werden und sollte durch andere geeignete therapeutische Maßnahmen ersetzt werden.
+
+
+=== Wechselwirkungen ===
+Ramipril verstärkt die blutzuckersenkende Wirkung von Insulin und oralen Antidiabetika sowie die blutbildverändernden Wirkungen von Immunsuppressiva.
+Durch einen Eingriff in den Wasser- und Elektrolythaushalt kann die Ausscheidung von Elektrolyten verlangsamt werden, wodurch sich diese im Körper anreichern. Dies sollte insbesondere bei einer Therapie mit Lithium oder kaliumsparenden Diuretika beachtet werden, da durch die gleichzeitige Anwendung von Ramipril die Plasmaspiegel von Lithium bzw. Kalium kritisch steigen können.
+Bei Kombination mit anderen blutdrucksenkenden Arzneimitteln sollte eine verstärkte Blutdrucksenkung berücksichtigt werden.
+
+
+== Handelsnamen ==
+Monopräparate
+Delix (D), Hypren (A), Lannapril (A), RamiLich (D), Triatec (CH), Tritace (A), Vasotop (D, Vet.) Vesdil (D), zahlreiche Generika (D, A, CH)
+Kombinationspräparate
+
+In Kombination mit Hydrochlorothiazid: Delix plus (D), Hypren plus (A), Lannapril plus (A), Triatec comp. (CH), Tritazide (A), Generika (D, A, CH)
+In Kombination mit Furosemid: Lasitace (A)
+In Kombination mit Amlodipin: Tonotec (D), Generika (D)
+In Kombination mit Piretanid: Trialix (CH), Arelix ACE (D), Generika (D)
+In Kombination mit Felodipin: Unimax (D), Delmuno (D)
+In Kombination mit Atorvastatin und Acetylsalicylsäure: Sincronium (D)
+
+
+== Einzelnachweise ==

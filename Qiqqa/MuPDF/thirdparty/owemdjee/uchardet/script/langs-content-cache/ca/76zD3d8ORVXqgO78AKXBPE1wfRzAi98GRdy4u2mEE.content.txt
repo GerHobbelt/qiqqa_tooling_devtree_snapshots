@@ -1,0 +1,131 @@
+revision: 31512639
+title: Mobile 150
+url: https://ca.wikipedia.org/wiki/Aplicaci%C3%B3_m%C3%B2bil
+
+
+---
+
+Una aplicació mòbil (app o apli) és una aplicació informàtica dissenyada per ser utilitzada en tauletes tàctils, telèfons intel·ligents i altres dispositius mòbils. Es poden adquirir a través de plataformes de distribució d'aplicació. Algunes aplicacions són gratuïtes, mentre que altres han de ser comprades. Solen ser descarregades de la plataforma de distribució a un dispositiu de destinació mòbil com un iPhone, una Blackberry o un telèfon d'Android, però de vegades poden ser descarregades directament a ordinadors, tant portàtils com de sobretaula.
+Les aplicacions mòbils van ser originalment ofertes per millorar la productivitat general i la recuperació de documents, incloent funcions bàsiques com email, calendari, contactes, o informació meteorològica. No obstant això, la demanda pública i la disponibilitat d'eines de desenvolupament, van portar a la seva ràpida extensió en altres categories com a jocs, GPS, compra d'entrades per esdeveniments, consulta de comptes d'estalvis, etc. La popularitat de les aplicacions mòbils ha seguit creixent a causa que el seu ús s'ha fet cada vegada més freqüent entre els usuaris de telèfons mòbil.
+
+
+== Evolució ==
+Els experts que investiguen sobre els orígens de les aplicacions mòbils consideren acordar que no existeix una data clau de sorgiment o evolució. No obstant això, sí estan d'acord en prendre com a primeres aproximacions aquelles aplicacions de calendari i agenda que apareixien als telèfons mòbils dels anys 90, així com els tons de cridada o els famosos jocs Tetris (al Hagenuk mt-2000) i Snake|Snake (video game genre) (Nokia, Arcade Blockade).
+Amb els anys i els avanços tecnològics, diversos canvis es produïren, com per exemple, a l'any 2000, quan va aparéixer el protocol d'aplicacions sense fil (anomenat en anglés WAP). A grans trets, aquest estàndard simplificava les webs a la màxima expressió per a facilitar la seua visualització als aparells mòbils de l'època, que tenien menys capacitat de disc dur i memòria RAM. Devem el protocol WAP a empreses com Sony, Nokia o Motorola, encara que després d'evolucionar amb els anys, en l'actualitat utilitzem l'HTTP, que domina el terreny virtual en aquests moments.
+
+Això pel que fa als aspectes tècnics de l'internet, però el vertader apogeu de les aplicacions el va produir Apple a partir de l'any 2008 amb el llançament de l'App Store, així com la publicació d'Android del primer kit de desenvolupament de software (anomenat en anglés SDK) i la seua primera botiga d'aplicacions mòbils, anomenada inicialment Android Market i posteriorment (en març de 2012) com Google Play, després de la fusió amb la companyia Google.
+Aleshores, a partir de l'any 2010, la concepció i arquitectura tecnològica dels dispositius mòbils (smartphones i tablets) ha modificat de manera radical l'accés i navegació a Internet. En aquests moments, l'ús d'un PC (ordinador de taula tradicional) resulta incompatible amb el concepte del binomi mobilitat-navegació, que suposa que la informació es troba disponible mentre es viatja amb metro o autobús. En conseqüència, els desenvolupadors Web han hagut de modificar els codis de programació tradicionals perquè la configuració de les pàgines i aplicacions mòbils s'adapte a la mida i la capacitat dels diferents dispositius tecnològics, independentment del sistema operatiu que utilitzen. És el que s'anomena disseny web adaptable o “disseny líquid”.És tanta l'evolució i popularitat que ha guanyat l'ús d'aplicacions mòbils, que, actualment, un gran nombre d'empreses es dediquen a la creació professional d'aplicacions. I no sols això, sinó que també han sorgit pàgines web, com per exemple Yeeply, que t’ajuda a trobar quina és l'empresa que millor desenvoluparà la teua app desitjada, o millor encara si cap, pàgines web, com és el cas de Mobincube, on l'usuari comú pot crear aplicacions de manera gratuïta i sense coneixements de programació.
+
+
+== Desenvolupament ==
+El desenvolupament de programaris d'aplicació per dispositius mòbils requereix considerar les característiques i limitacions dels dispositius destinataris d'aquestes, com per exemple les mides de pantalla, les dades específiques de software, etc. No obstant això, les capacitats virtuals en maquinari dels dispositius actuals faciliten cada vegada més i millor que les aplicacions mòbils puguen aprofitar el context en el qual executaran. Alguns exemples clars de millores en el disseny d'aplicacions són, per exemple, l'accés a la informació que conté l'aparell sobre l'usuari i la posició geogràfica, sobre orientació, pressió, llum, etc. o sobre la possibilitat de gravar imatges, vídeos i àudios. És el cas d'aplicacions basades en localització, com és el Waze, o d'aplicacions que reaccionen a la parla o a la realitat augmentada.
+Els passos que es segueixen per a dur a terme el desenvolupament d'una aplicació mòbil són:
+
+Identificar la necessitat que es vol cobrir en el món real d'un determinat sector de la població i realitzar una anàlisi prospectiva de la viabilitat del concepte o projecte que es vol crear.
+Determinar i definir el projecte mitjançant la concreció de les funcions i el tipus d'aplicació en consonància amb el perfil dels usuaris i les especificacions tècniques, amb l'objectiu d'establir els paràmetres d'accés al maquinari del dispositiu model.
+Dissenyar esquemàticament l'aplicació respecte a l'orientació del terminal, formes de navegació, accions, quadres de diàleg, notificacions, estil de la interfície, identitat visual, pantalla inicial i icones, retícula de maquetat, colors, tipografia, llenguatge i ortografia, animació de l'App, etc. Aquest disseny incial es comprovat per un grup d'usuaris control usant emuladors
+Desenvolupar el programari, generalment en versió beta, i dur a terme les correccions i proves necessàries.
+Publicar i distribuir l'aplicació en període de prova als mercats i botigues disponibles, com ara App Store, Google Play, etc. Durant tota la vida útil d'aquesta aplicació, serà necessari fer un seguiment analític i estadístic mitjançant la consulta dels comentaris dels usuaris amb l'objectiu de suggerir i realitzar millores actualitzacions.
+
+
+== Tipus d'aplicacions mòbils ==
+Segons Blanco P. (2009) existeixen diferents tipus d'aplicacions mòbils, d'acord amb el seu funcionament es classifiquen en:
+
+Aplicacions de sistemes: són Apps relacionades amb el funcionament dels dispositius, per exemple: gestió de missatges.
+Aplicacions ofimàtiques: que permeten treballar amb documents de text, fulls de càlcul i a més, ferramentes que s'utilitzen en un ambient d'oficina.
+Aplicacions d'organització: destinades a l'organització de dades, per exemple: calendaris i gestió de contactes.
+Aplicacions d'accessibilitat: són les apps pensades per a les persones que pateixen alguna discapacitat.Existeixen altres tipus d'aplicacions com les multimèdia, jocs i aplicacions educatives. Segons la forma en què es desenvolupen poden ser:
+
+Aplicacions natives: requerixen que els dissenys siguen específics i adaptats als dispositius a utilitzar, com per exemple, sistema IOS de Apple o Android. Aquesta condició implica un major grau de cost de disseny i desenvolupament, encara que alguns elements son comuns i reutilitzables. No obstant això, aquest tipus resulta ser el més òptim dels quatre pel que fa al fet d'aprofitar les funcionalitats dels dispositius al màxim, a més que requerixen ser aprovades primerament abans de ser publicades. Un exemple clar i sobredament conegut és l'aplicació WhatsApp.
+Aplicacions web: es caracteritzen per ser molt genèriques i poden ser utilitzades des de qualsevol dispositiu mòbil sense importar el sistema operatiu. Sovint són conegudes per utilitzar un disseny multiplataforma i es localitzen físicament al famós núvol (cloud computing). Pel que fa a la seua programació, és suficient una basada en HTML5 i algun component específic per a cada tipus de dispositius (per exemple, una finestra emergent nativa). A diferència de les anteriors, s'executen des del navegador del dispositiu, per exemple, des de Safari en el cas del sistema iOS. A més, no necessiten cap aprovació prèvia per a ser publicades i solen ser la solució més rendible econòmicament, però les funcionalitats estaran més limitades a determinats requeriments i no es podran aprofitar al màxim les específiques de cada dispositiu. Destaquen aplicacions web com Spotify, Netflix, correu electrònic (Gmail) o Google Maps.
+Aplicacions híbrides: reuneixen característiques dels dos models anteriors i estan pensades per a aconseguir el millor de cadascun dels dos tipus. Aleshores, es tracta del següent: el disseny està basat en tecnologies multiplataforma, com per exemple, HTML, Javascript i CSS, però alhora permet accedir a una gran part del sensors i funcionalitats de cadascun del dispositius: càmera, gps, etc. Es poden descarregar des dels “markets” (App Store o Google Play) i compta amb totes les característiques d'una aplicació nativa, però a la vegada també es pot utilitzar des de qualsevol navegador. Un exemple d'aquest tipus d'aplicació és el Facebook.
+
+
+== Distribució ==
+
+
+=== App Store ===
+
+La botiga d'Apple d'iOS va ser el primer servei de distribució d'aplicacions establint l'estàndard del servei (cosa que encara fa avui dia). Va ser llençada el 10 de juliol de 2008, i fins a gener de 2011, va registrar més de 10 mil milions descàrregues. Des del 6 de juny de 2011, hi ha 425,000 aplicacions disponibles, descarregades per més de 200 milions d'usuaris iOS. El 2012, durant la Conferència de desenvolupadors mundial d'Apple(Worlwide Developers Conference), el president Tim Cook va anunciar que la botiga d'Apple té 650,000 apps disponibles per descarregar així com " 30 mil milions d'aplicacions sorprenents " descarregades de la botiga d'Apple fins a aquella data El 16 de maig de 2013, Apple va comunicar que s'havia arribat a la històrica xifra de 50 mil milions de descàrregues.
+
+
+=== Blackberry World ===
+Va sorgir a l'abril de 2009 com Blackberry App World. El juliol de 2011, es van estimar tres milions de descàrregues per dia i un bilió de descàrregues totals.
+
+
+=== Google Play ===
+Google Play (anteriorment conegut com a Android Market) és una tenda de programari internacional en línia desenvolupada per Google per a dispositius d'Android. Va ser llençada a l'octubre de 2008. A l'octubre de 2012, hi havia aproximadament 700,000 aplicacions disponibles per Android,i el nombre d'aplicacions descarregades era de 25 mil milions.
+
+
+=== Nokia Store ===
+La botiga d'aplicacions per telèfons de Nokia va ser llançada internacionalment al maig de 2009. A l'abril de 2011 havien 50.000 aplicacions, i a l'agost de 2011, Nokia registrava nou milions de descàrregues per dia. Al febrer de 2011, Nokia va informar que començaria a usar Windows phone com el seu sistema operatiu primari.
+
+
+=== Windows Phone Store ===
+La Windows Phone Store és la plataforma de distribució de Microsoft per als dispositius que compten amb el sistema operatiu mòbil Windows Phone. Va ser llançada a l'octubre de 2010. Dos anys després, a octubre de 2012, comptava amb més de 120,000 aplicacions disponibles.
+
+
+=== Samsung Apps Store ===
+La botiga d'aplicacions per als mòbils de Samsung va ser fundada al setembre del 2009. A l'octubre de 2011 les aplicacions de Samsung havien aconseguit els deu milions de descàrregues. Actualment la tenda està disponible en 125 països i ofereix aplicacions per als mòbils de Windows, Android o plataformes Bada.
+
+
+== Administració d'aplicacions mòbils ==
+L'administració d'aplicacions mòbils (MAM) descriu el programari i serveis responsables d'aprovisionar i controlar l'accés a aplicacions internes d'un negoci, la qual cosa s'ha convertit necessària amb l'inici del fenomen Bring your own device (BYOD, en català Porta el teu propi dispositiu). Aquest fenomen, sorgit inicialment com una política d'empresa a la companyia Intel al 2009, es basa en el fet que l'empleat porta un dispositiu personal amb la finalitat de connectar-se a recursos empresarials, i, aleshores, l'administració d'aplicacions mòbils permet al personal informàtic transferir les aplicacions requerides, l'accés de control a dades de gestió, i esborrar informació del dispositiu si es perd, o en el cas que el propietari deixi de treballar a l'empresa. Aquest fenomen, també existent a l'àmbit educatiu, proposa que el dispositiu continga la configuració personalitzada a la identitat de l'alumne, a les seues aplicacions preferides, xarxes socials, etc., així s'elimina el problema de treballar amb aparells aïllats que no recullen el seguiment de la feina realitzada fora de l'aula. No obstant això, com que no existeixen estudis científics que recolzen aquest mètode, s'hauran de considerar tant els avantatges com els inconvenients abans d'incloure el BYOD com un mètode totalment satisfactori a l'hora d'ensenyar i aprendre, com és el cas del dret a la privacitat de la informació, l'ús obert de WIFI, o la possibilitat de propagar continguts malware o virus als dispositius dels companys.
+
+
+== Privadesa de les aplicacions mòbils ==
+Quan una persona es registra en una tenda de distribució d'aplicacions o quan descarrega aplicacions individuals, és comú que se li demani la seva autorització perquè permeti que s'accedeixi a la informació del seu dispositiu. Algunes aplicacions només poden accedir a les dades necessàries per al seu funcionament. En canvi, unes altres poden accedir a dades que no estan relacionades amb el propòsit de l'aplicació, com per exemple les següents:
+
+La llista de contactes de telèfon i email
+Registre de trucades
+Les dades transmeses per internet
+La informació del calendari
+Les dades de localització de l'aparell
+El codi d'identificació exclusiu del telèfonUn recent estudi reflecteix que només el 61% de les 150 aplicacions més descarregades compta amb una política de privadesa. Segons un estudi de GSMA, al 92% dels usuaris d'apps els agradaria que se'ls oferís l'opció de triar a quines funcions de la seva terminal pot accedir l'aplicació i a quins no.Degut a aquesta falta de control,al mes de març de 2013 les autoritats europees aproven un dictamen de privadesa a les aplicacions mòbils. El document detalla les obligacions dels desenvolupadors d'aplicacions. A més analitza la incidència i els riscos de les aplicacions mòbils per crear consciència al consumidor.
+
+
+== Dades i estadístiques ==
+Quasi el 89% d'aplicacions descarregades són gratuïtes
+Al maig de 2012 més usuaris de mòbils van usar aplicacions que van buscar a la web en els seus dispositius.
+L'ús de les aplicacions mòbils està directament relacionat amb el context en què són utilitzats per l'usuari i l'hora del dia.
+Els usuaris espanyols es van descarregar una mitjana de 2,7 milions d'aplicacions mòbils al dia durant 2012. Aquesta xifra suposa que es van aconseguir els 985 milions d'apps descarregades en el conjunt de l'exercici.
+D'acord amb l'informe “The App Effect” elaborat pel laboratori VINT, de l'autor Sogeti, d'aquí a 8 anys serem addictes a les aplicacions mòbils.
+La quantitat d'aplicacions mòbils descarregades al món durant 2012 es van duplicar sumant els 60 mil milions i el creixement continuarà fins a arribar als 108 mil milions el 2017
+L'estudi The bussiness of Apps, realitzat pel Wall Street Journal, estima que l'any 2013, el negoci global de les aplicacions generarà 25.000 milions de dòlars en ingressos.
+Segons aquest mateix estudi les aplicacions de productivitat només abasten un 2% del temps dels usuaris, mentre que 43% del temps es dedica a aplicacions de jocs.
+
+
+=== Aplicacions més populars a Espanya ===
+Segons l'Informe Zeitgeist de Google l'any 2012 aquestes van ser les 10 aplicacions més populars d'Espanya:
+
+Twitter
+Aworded
+Dropbox
+Angry Birds
+Instagram
+Evernote
+Logic master
+Bad piggies
+WhatsApp
+iDocs
+FlirtieSegons el blog oficial de google, l'any 2016 les millors 5 aplicaciones han estat: 
+
+Face Changer
+Lumyer - Foto & Selfie Editor
+Castbox - Podcast Radio Música
+Emojy Keyboard
+MSQRD.Aquí podem trobar l'explicació de les aplicacions i el perquè dels seus èxits
+
+
+== Algunes aplicacions desenvolupades per catalans ==
+21 Buttons
+
+
+== Referències ==
+
+
+== Vegeu també ==
+Aplicació portàtil
+Aplicació web
+Google Apps
+Mac App Store

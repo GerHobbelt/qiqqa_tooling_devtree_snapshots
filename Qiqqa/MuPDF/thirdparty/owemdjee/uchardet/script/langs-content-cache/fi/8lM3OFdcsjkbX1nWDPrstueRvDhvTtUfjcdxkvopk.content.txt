@@ -1,0 +1,102 @@
+revision: 21547893
+title: Vivaldi (selain)
+url: https://fi.wikipedia.org/wiki/Verkkoselain
+
+
+---
+
+Verkkoselain (puhekielessä usein pelkkä selain tai nettiselain) on tietokoneohjelma, joka antaa käyttäjänsä katsella ja lähettää tekstiä, kuvia ja muita verkkosivuilta löytyviä tietoja. Sivuilla olevat tekstit ja kuvat voivat sisältää hyperlinkkejä muille sivuille, jotka voivat kuulua samaan tai johonkin muuhun sivustoon. Selaimen avulla voi hyödyntää verkosta löytyviä tietoja näiden linkkien avulla.
+Käytetyin selain on ollut vuodesta 2012 lähtien Google Chrome. Muita suosittuja selaimia ovat muun muassa Mozilla Firefox, ja Safari.
+Selaimilla luetaan yleensä World Wide Webissä olevia tietoja, mutta niillä voi myös käyttää yksityisverkoissa olevia tai omalta tietokoneelta löytyviä sivuja.
+
+
+== Protokollat ja standardit ==
+Verkkoselaimet kommunikoivat palvelimien kanssa pääasiassa käyttämällä HTTP-protokollaa (Hyper-Text Transfer Protocol, hypertekstin siirtoprotokolla) verkkosivujen hakemiseen. HTTP:llä selaimet voivat sekä lähettää tietoja palvelimelle että hakea niiltä WWW-sivuja. Tällä hetkellä käytetyin HTTP on HTTP/1.1 (RFC 2616). Internet Exploreria lukuun ottamatta suurin osa tämän sukupolvenmilloin? selaimista tukee HTTP/1.1 -standardeja. HTTP/2.0 (RFC 7540) on julkaistu vuonna 2015.lähde?QUIC-protokollan suunnitellaan korvaavan HTTP:n jatkossa.Sivustojen paikallistamiseen käytetään URL-osoitetta (Uniform Resource Locator). HTTP-yhteyttä otettaessa osoite alkaa http:. Useat selaimet tukevat myös monen muun tyyppisiä URL:eja ja niitä vastaavia protokollia, kuten ftp: FTP:lle (File Transfer Protocol), rtsp: RTSP:lle (Real-Time Streaming Protocol), ja https: HTTPS:lle (SSL-salattu versio HTTP:stä).lähde?Verkkosivujen tiedostomuoto on useimmiten HTML (Hyper-Text Markup Language) ja se tunnistetaan HTTP-protokollassa MIME-tyypin avulla. Useimmat selaimet tukevat natiivisti HTML:n lisäksi muunkin tyyppisiä tiedostoja, kuten JPEG, PNG ja GIF kuvia, ja tukea voi laajentaa liitännäisten avulla. HTTP content type:n ja URL-spesifikaation yhdistelmällä web-suunnittelijat voivat lisätä sivuille kuvia, videota ja ääntä.lähde?Varhaiset verkkoselaimet tukivat vain erittäin erittäin yksinkertaista HTML:ää. Nopea kaupallisten verkkoselainten kehitys johti epästandardeihin HTML:n muunnoksiin, joka taas johti yhteensopivuusongelmiin. Nykyaikaiset selaimet tukevat standardeihin pohjautuvaa HTML:ää ja XHTML:ää, jonka pitäisi näkyä samanlaisena kaikilla selaimilla. Internet Explorer ei vielä täysin tue HTML 4.01:tä eikä XHTML:ää. Monet sivut suunnitellaan nykyäänmilloin? WYSIWYG-editoreilla, kuten Macromedia Dreamweaver ja Microsoft Frontpage. Näiden ohjelmien luoma HTML-koodi on usein oletuksena epästandardia, mikä haittaa W3C:n työtä standardien kehittämisessä varsinkin XHTML:n ja CSS:n (Cascading Style Sheets) kohdalla.lähde?Joillakin selaimilla saa liitännäisten avulla tuen myös Usenetille, IRC:lle, ja sähköpostille. Tuettuja protokollia voivat olla NNTP (Network News Transfer Protocol), IMAP (Internet Message Transfer Protocol) ja POP (Post Office Protocol). Esimerkiksi Mozilla Suite on sovellus, jossa on valmiina tuki useille näistä.lähde?
+
+
+== Historiaa ==
+Tim Berners-Lee, joka kehitti HTML-kielen tiedon jakelemiseen, teki myös ensimmäisen WWW-selaimen nimeltään WorldWideWeb vuonna 1990. Hän esitteli sen kollegoilleen CERN:ssä maaliskuussa 1991. Berners-Lee nimesi selaimen pian uudelleen Nexus jotta se ei sekaantuisi World Wide Webin konseptiin.Selaimen ajateltiin olevan avuksi CERN:in valtavan puhelinluettelon käsittelyyn. Sen avulla käyttäjät pääsivät selailemaan toisten kirjoittamia sivuja. Ratkaiseva tekijä Internetin läpilyönnissä oli kuitenkin graafisen tuen lisääminen selaimiin. Maailman ensimmäinen graafinen selain oli suomalainen Erwise. Erwiseä seurasi vuoden 1992 puolivälissä julkaistu ViolaWWW, josta tuli ensimmäinen suosittu www-selain.lähde?Valtavan WWW:n suosion kasvun laukaisi NCSA Mosaic, joka oli graafinen, alun perin Unixille luotu, mutta myöhemmin myös Macintosh ja Microsoft Windows versiot saanut WWW-selain. Versio 1.0 julkaistiin syyskuussa 1993. Marc Andreessen, joka oli Mosaic-ryhmän johtaja NCSA:lla, erosi perustaakseen yrityksen, joka tuli myöhemmin tunnetuksi nimellä Netscape Communications Corporation.lähde?Netscapen lippulaiva oli lokakuussa 1994 julkaistu Netscape Navigator. Microsoft lähti mukaan kilpaan Internet Explorer -selaimellaan, joka oli ostettu Spyglass Inc:lta. Tämä aloitti taistelun selainmarkkinoista Microsoftin ja Netscapen välillä.lähde?Tämä markkinataistelu toi WWW:n miljoonien tavallisten tietokoneenkäyttäjien ulottuville, mutta näytti myös kuinka verkon kaupallistuminen saattoi hankaloittaa standardeja. Sekä Microsoft että Netscape sisällyttivät vapaasti omia HTML:n jatkeitaan tuotteisiinsa. Kun W3C hyväksyi Microsoftin ehdottamat CSS-tyylisivut Netscapen JSSS-tyylisivujen sijaan, alettiin Netscapen selainta ajatella versio versiolta Microsoftin selainta kehnommaksi standardien mukaisuudeltaan ja ominaisuuksiltaan. Microsoft päätti sisällyttää 1998 selaimensa käyttöjärjestelmäänsä ja teki sopimuksia tietokonevalmistajien kanssa selaimensa jakamisesta, minkä takia se joutuikin syytteeseen kilpailulakien rikkomisesta.lähde?Netscape vastasi tekemällä selaimestaan avoimen lähdekoodin tuotteen, luoden Mozillan. Netscapen osti vuoden 1998 lopulla America Online. Mozillan täytyi aluksi ponnistella haaliakseen kehittäjiä, mutta vuoteen 2002 mennessä siitä oli jo tullut suhteellisen vakaa ja tehokas ohjelmisto. Sen merkiksi Mozillasta julkaistiin versio 1.0. Samana vuonna julkaistiin myös projekti, josta tulisi aikanaan suosittu Mozilla Firefox. Firefox 1.0 julkaistiin vuonna 2004 ja 1.5 joulukuussa 2005. Vuodesta 2005 Mozilla ja sen johdannaiset ovat muodostaneet noin 10 % verkon liikenteestä.lähde?Sekä työpöytäkäyttöön että mobiililaitteille suunnattulla vuonna 1996 julkaistulla Operalla -selain on pieni markkinaosuus. Opera oli maksullinen, mutta muuttui ilmaiseksi käytettäväksi, joka on lisännyt sen suosiota. Opera Softwaren perustajajäsen on myöhemmin perustanut Vivaldi-selain kehittävän yrityksen.lähde?
+
+Täysin tekstipohjainen Lynx -selain on vieläkin suosiossa joidenkin Unix-käyttäjien ja huononäköisten keskuudessa. On myös muita kehittyneillä ominaisuuksilla varustettuja tekstipohjaisia selaimia, kuten Links ja sen muunnelmat, kuten ELinks.lähde?Macintosh-koneilla on ollut sekä Internet Explorer ja Netscape -selaimet, jotka Safari on syrjäyttänyt. Safari on macOS:n oletusselain.lähde?Vuonna 2003 Microsoft ilmoitti, että sen Internet Explorer -selainta ei enää julkaista erillisenä tuotteena, eikä sitä julkaistaisi enää Macintoshille, vaan se jatkaisi kehitystään Windows-alustan mukana. Kuitenkin 2005 Microsoft ilmoitti, että selaimen versio 7 julkaistaan uuden Windows Vistan lisäksi vanhemmille Windows XP- ja Windows Server 2003 -käyttöjärjestelmille.lähde?Googlen Chrome on saavuttanut valtaosan selainten käytöstä ja ohitti Internet Explorerin vuonna 2012 suosituimpana selaimena. Google julkaisi Chromen vuonna 2008.Microsoft on julkaissut Edge-selaimen, joka on myös siirtynyt käyttämään Chromiumin selainmoottoria.Vuonna 2020 selaimien käyttöosuuksia seuraava NetMarketShare ilmoitti lopettavansa tilastojen julkaisun nykymuodossa seurannan vaikeutuessa.Suosituimmat selaimet lokakuussa 2020 NetMarketSharen ja Statcounterin mukaan:
+
+
+== Ominaisuuksia ==
+Eri selaimet eroavat toisistaan sen suhteen, mitä ominaisuuksia ne tukevat. Nykyajan WWW-selaimet ja -sivut hyödyntävät ominaisuuksia, joita ei ollut olemassa WWW:n alkuaikoina. Alla oleva lista luettelee joitakin merkittävimpiä ominaisuuksia:
+
+
+=== Protokollatuki ===
+Gopher (lähinnä varhaiset selaimet)
+FTP
+HTTP
+HTTPS
+WebDAV
+
+
+=== Standardituki ===
+HTTP ja HTTPS
+HTML, XML ja XHTML
+Kuvaformaatit mukaan lukien GIF, PNG, JPEG ja SVG
+CSS
+JavaScript
+Evästeet
+Digitaaliset varmenteet
+Sivustojen kuvakkeet
+RSS, Atom
+
+
+=== Perusominaisuudet ===
+Kirjanmerkkien ja sovelluskirjanmerkkien hallinta
+Sivujen välimuisti
+Tuki mediatyypeille lisäosien kautta
+
+
+=== Käytettävyysominaisuudet ===
+Osoitteiden ja lomakkeiden automaattinen täydennys
+Välilehdellinen selaaminen
+Ruudunlukija- tai äänisynteesituki
+
+
+== Selainytimet ==
+Monet verkkoselaimet käyttävät samoja ohjelmistokomponentteja. Selainmoottoreiksi kutsutut komponentit ovat monissa selaimissa samoja. Lisäksi selaimissa on muun muassa JavaScript-tulkki ja muuta ohjelmistoa, jotka nekin ovat usein samoja komponentteja.
+Selainmoottoreita:
+
+Gecko
+Mozilla Firefox
+Trident (MSHTML)
+Internet Explorer
+Microsoft Edge (vanhat versiot käyttäneet Tridentista forkattua EdgeHTML:ää)
+KHTML
+WebKit
+Safari
+Blink
+Chromium
+Brave Browser
+Chrome
+Epic Browser
+Microsoft Edge (uudet versiot)
+Opera (uudet versiot)
+Torch
+Vivaldi
+Yandex Browser
+Presto
+Opera (vanhat versiot)JavaScript-moottoreita:
+
+SpiderMonkey
+V8
+
+
+== Suodatusominaisuudet ==
+Ponnahdusikkunoiden esto
+Tietojen kalastuksen esto
+
+
+== Katso myös ==
+Luettelo verkkoselaimista
+
+
+== Lähteet ==
+
+
+== Aiheesta muualla ==
+
+Tilastoja eri selainten käytöstä Internetissä

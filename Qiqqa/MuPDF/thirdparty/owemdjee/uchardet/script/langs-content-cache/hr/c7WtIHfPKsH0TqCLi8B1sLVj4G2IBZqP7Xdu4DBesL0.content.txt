@@ -1,0 +1,119 @@
+revision: 6544798
+title: Rudarenje podataka
+url: https://hr.wikipedia.org/wiki/Rudarenje_podataka
+
+
+---
+
+Rudarenje podataka ili podatkovno rudarenje (eng. data mining) je sortiranje, organiziranje ili grupiranje velikog broja podataka i izvlačenje relevantnih informacija. Oblik je analitike podataka.Sam termin mogli bismo objasniti kao proces pronalaženja korisnog znanja ili informacija, odnosno otkrivanje znanja iz velike količine podataka.
+Rudarenjem se poboljšava proces donošenja odluka na strateško-poslovnoj razini pružajući uvid u «skrivene» podatke business intelligence (BI) metodologijom. Rudarenjem se također otkrivaju odnosi, logičnost, pravilnost te općenito bilo kakve strukture među podacima.
+Rudarenje podrazumijeva organiziranje baza čišćenjem podataka kako bi se pristupilo znanju i stjecanju istog na temelju postojećih podataka u bazama.
+Razvoj tehnologije, računala, interneta bitno doprinosi lakšem organiziranju podataka, no da bi oni postali korisni, potrebno je njihovo pretvaranje u informacije i znanje.
+Termin rudarenja često se poistovjećuje s 2 različita procesa: otkrivanje i predviđanje znanja.
+Proces otkrivanja znanja implicira korisnikovo razumijevanje eksplicitnih informacija za koje je bitno da su u čitljivom obliku.
+Predviđanje se odnosi na buduće događaje i u nekim pristupima moze biti čitljivo i prozirno dok u drugim neprovidno.
+
+
+== Korištenje ==
+Politika: rudarenje je metoda kojom je U.S. Army uspjela identificirati vođu napada na Twin Towers, 11.9.2001.;  a tom se metodom također koriste CIA i Canadian Security Intelligence Service
+Igre: već od 60-ih godina u nekim kombinatornim igrama poput šaha
+Poslovanje: znatno pomaže u bržem donošenju poslovnih odluka zbog kontaktiranja samo onih prospekata ili klijenata za koje postoji visoka vjerojatnost da će odgovoriti, odnosno vjerojatnost uspjeha.
+Još jedan primjer primjene rudarenja podataka jest analiza košarice kupaca odnosno otkrivanje proizvoda čija je potražnja veća.
+Kako bi bolje shvatili pojam rudarenja možemo ukratko reći da je rudarenje «prirodna evolucija tehnologije, a koja upotrebljava koncepte, metode i tehnike različitih disciplina kao što su baze podataka, statistika i umjetna inteligencija.» 
+Potreba da se podaci obrade i analiziraju kako bi se došlo do korisnih informacija i znanja rezultat je razvoja sustava baza podataka.
+Informacijska tehnologija kakvu je poznajemo danas, omogućuje nam bilježenje svake aktivnosti u digitalnom obliku, a količina tih podataka mjeri se u gigabajtima i terabajtima.
+Ogromne baze podataka bogate su podacima, ali i siromašne informacijama koje su skrivene u pohranjenim podacima. Upravo je rudarenje podataka to koje pomaže otkriti važne informacije i znanje utkano u podatke, uvelike pridonoseći donošenju odluka, poslovanju i znanosti.» 
+Proces rudarenja ne može izvršiti samo 1 osoba jer se on sastoji od više faza, točnije 3.1.	tzv. Problemska faza odnosno odabir i definiranje problema, procjena zadnjeg te primjena znanja. Te zadatke obavlja korisnik.2.	Podatkovna faza: sve vezano uz pripremu podataka za rudarenje; obavlja ju informatičar.3.	Metodološka faza : sve od analize, selekcije, prezentacije do interpretacije rezultata.Stručnjak za rudarenje podataka (eng.data miner) je osoba zadužena za zadatke koji obuhvaćaju treću i zadnju fazu procesa rudarenja.
+
+
+== Rudarenje podataka ==
+Rudarenje podataka je relativno novo polje računalne znanosti koje se bavi procesiranjem i izdvajanjem šablona (uzoraka) u velikim kompletima (setovima) podataka kombinirajući metode statistike, metode umjetne inteligencije i metode upravljanja bazama podataka. Što se samog naziva na engleskom tiče, data mining, postoji još nekoliko naziva, KDD (Knowledge Discovery in Databases), CRM (Customer Relationship Management) ili Database Intelligence. Međutim, svi ti nazivi opisuju jednu stvar – korištenje svih mogućih alata kako bi se informacije dovele do najviše točke i iskoristile na najbolji način. 
+Zahvaljujući nedavnim tehničkim napredcima u procesiranju podataka, povećanom kapacitetu memorija (više spremljenih podataka) i boljoj povezivosti računala, pretraživanje je podataka je postalo veoma važno.
+
+
+== Metode pretraživanja podataka ==
+Data mining je proces u kojem se koriste sljedeće metode kako bi se otkrili skriveni uzorci, šablone podataka: neuronske mreže(virtualne mreže uređene po uzoru na ljudski mozak, u kojima različiti dijelovi mreže istovremeno procesuiraju informacije, te „proučavaju i pamte“ prošle šablone, uzorke podataka), grupiranje podataka, genetski algoritmi (kombiniranje određenih podataka kako bi se pronašlo rješenje za neki problem)iz 1950-ih, stablo odluke (grafikoni koji prikazuju niz odluka i njihove moguće posljedice) iz 1960-ih te potporni vektorski stroj (svrštava unesene podatke u različite grupe, klase, onosno klasificira podatke) iz 1990-ih. Pretraživanje podataka bazirano na subjektu je metoda u kojoj se traže asocijacije između pojedinih podataka. 
+Pretraživanje podataka se osniva na poznavanju, odnosno predviđanju ponašanja varijabli koje čine svaki podatak u bazi podataka. Još točnije, osniva se na poznavanju parametara varijabli (statistički podaci kao što su minimum, maksimum, standardna devijacija, itd.), te na znanju što svaka varijabla predstavlja u stvarnom svijetu, koje su varijable potencijalno korisne i kako se varijable u bazi podataka odnose međusobno. Jednomjerne, dvomjerne, višemjerne tehnike – i tablice i grafikoni – su tehnike kojese prvenstveno koriste.
+
+
+== Modeliranje i segmentacija ==
+Ako su svi podaci jasni i razumljivi, i postoji stabilan i dovoljno velik broj varijabli, sljedeći korak bi trebalo biti modeliranje (logistička regresija ili neki drugi model), rangirajući podatke na osnovu sličnosti u kategoriji „odgovor“ ili pripisujući im doživotnu vrijednost ili „loyalty“ rezulat. Modeliranje može biti: model „odgovora“ (odaziva), model profit, loyalty model ili model doživotne vrijednosti. Segmentacija baze podataka (rastavljanje na dijelove) može biti veoma jednostavna, ali može biti o veoma kompleksna, bazirana na mnogo varijabli i optimizirana za pojedine segmente.
+
+
+== Pretraživanje uzoraka ==
+„Pretraživanje uzoraka“ je metoda pretrage podataka koja se koristi za pronalaženje uzoraka podatka. U ovome kontekstu riječ „uzorci“ često znači „pravila asocijacije“. Prvotni motivi za traženje pravila asocijacija su proizašli iz želje da se analiziraju podaci o ponašanju kupaca iz jednog supermarketa kada je riječ o kupovanju njihovih proizvoda. Na primjer, jedno pravilo asocijacije „pivo⇒ čips (80%)“ govori da su 4 od 5 kupaca koji su kupili pivo također kupili i čips. 
+Jedan od glavnih problema pri pretraživanju podataka jest što podaci koji se analiziraju ne moraju uvijek i predstavljati cijelu domenu, te stoga ne sadrže vezu s ostalim dijelovima domene. Zato se u pojedinim slučajevima veze između podataka kontroliraju ili uklanjaju.
+
+
+== Standardi za pretraživanje podataka ==
+Bilo je pokušaja da se definiraju standardi za pretraživanje podataka, kao na primjer 1999.godine – CRISP-DM 1.0 (Cross Industry Standard Process for Data Mining) i 2004.godine – JDM 1.0 (Java Data Mining standard), međutim ovi standardi su još uvijek u razvoju. Neovisno o ovim standardima, postoje još neki softveri kao R language, Weka, KNIME, RapidMiner, jHepWork i dr., koji su postali neformalni standardi za rad s procesima pretraživanja podataka. Naravno, svi ovi sustavi mogu unositi i iznositi modele u PMML-u (Predictive Model Markup Language), što omogućava standardan način predstavljanja modela pretraživanja podataka. PMML je jezik baziran na XML-u, a razvijen od strane DMG-a (Data Mining Group), neovisna grupa sastavljena od mnogo tvrtki koje se bave procesom pretraživanja podataka.
+
+
+== Konferencije o data mining-u ==
+SIGKDD (Special Interest Group on Knowledge discovery and Data Mining) su još od 1989.godine održavali internacionalne godišnje konferencije i objavljivali informacije o pretraživanju podataka. 1999.godine su objavili akademski dnevnik pod naslovom „SIGKDD Explorations“. Druge konferencije s temom pretraživanja podataka uključuju:
+DMIN – International Conference on Data Mining
+DMKD – problemi pri pretrazi na konferenciji Data Mining and Knowledge Discovery
+ECDM – European Conference on Data Mining
+ECML-PKDD – European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases
+EDM – International Conference on Educational Data Mining
+ICDM – IEEE International Conference on Data Mining
+MLDM – Machine Learning and Data Mining in Pattern Recognition
+PAKDD – The annual Pacific-Asia Conference on Knowledge Discovery and Data Mining
+PAW – Predictive Analytics World
+SDM – SIAM International Conference on Data Mining
+
+
+== Faze pretraživanja podataka ==
+CRISP-DM (Cross Industry Standard Process for Data Mining) je model procesa pretraživanja podataka koji opisuje često korištene pristupe koje stručnjaci koriste kako bi riješili probleme pri pretraživanju. Opisuje se šest faza: razumijevanje posla, razumijevanje podataka, priprema podataka,
+modeliranje, procjena i razvoj. Neki drugi modeli procesa pretraživanja podataka opisuju tri faze: (1) pred-procesiranje,(2) pretraga podataka i (3)potvrda rezultata.
+
+
+=== (1) ===
+Pred-procesiranje je nužno da bi se mogli analizirati različiti setovi (kompleti) podataka prije same pretrage. Prije nego što se algoritmi pretrage podataka mogu koristiti, mora se sastaviti set podataka koji će biti ciljani set. Budući da pretraživanje podataka može otkriti samo one uzorke, šablone koje već postoje, ciljani komplet podataka mora biti dovoljno velik da sadrži te šablone dok ostatak mora biti dovoljno sažet kako bi se mogao pronaći u odgovarajućem vremenu. Zajednički izvor podataka se naziva „skladište podataka“. Na kraju se brišu one šablone koje sadrže greške, koje ne dovode do traženog pojma ili dovode do podataka kojima nedostaju dijelovi. 
+Skladište podataka može biti bilo koje veličine i stupnja kompleksnosti, ali glavno svojstvo kojim se odlikuje dobra kvaliteta skladišta jest brzina pristupa podacima (brzo ali i precizno izdvajanje i prikaz podataka) i mogućnost jednostavnog rukovanja podacima. Dobrim dizajnom skladišta podataka se povećava vrijednost baze podataka.
+
+
+=== (2) ===
+Samo pretraživanje podataka uključuje četriri vrste zadataka: učenje pravila asocijacije, grupiranje, klasifikacija i regresija. Pojasnimo malo zadatke:
+Učenje pravila asocijacije- potraga za vezom između varijabli. Na primjer, supermarket može odrediti koji se proizvodi često kupuju zajedno te iskoristi tu informaciju za marketniške svrhe (analiza kupovne košarice). 
+Grupiranje- otkrivanje grupa i struktura u podacima koje su na neki način slične, bez da se koriste već poznate strukture u podacima.
+Klasifikacija- poopćavanje poznate strukture kako bi se ona mogla primijeniti na nove podatke. Na primjer, neki program elektroničke pošte može pokušati klasificirati neku elektroničku poštu kao legitimnu ili kao bezvrijednu elektroničku poštu.  Zajednički algoritmi uključuju: učenje drva spoznaje, najbližeg susjeda, naivnu klasifikaciju, neuralne mreže i potporni vektorski stroj.
+Regresija- pokušava se pronaći funkcija koja modelira podatke s najmanjom geškom.
+
+
+=== (3) ===
+Potvrda rezultata- konačni korak uključuje provjeru i potvrdu uzoraka proizašlih iz algoritama pretrage podataka u većem setu podataka. Nisu svi uzorci nađeni algoritmima pretrage podataka nužno dobri. Naime, često algoritmi pretrage podataka pronađu uzorke prisutne u probnom setu podataka, koji nisu prisutni u općem setu podataka. Kako bi se ovaj problem riješio, koristi se test kompleta (seta) podataka algoritmu nepoznatih od ranije pretrage podataka. Tako se naučeni uzorci primjenjuju u ovom testu a dobiveni rezultat se uspređuje sa željenim rezultatom. Na primjer, algoritam pretrage podataka koji pokušava prepoznati spam (neželjene sadržaje) od legitimne elektroničke pošte će se testirati na probnom setu elektroničke pošte. Naučeni uzorci će se primijeniti na testni set elektroničke pošte, koji nije algoritmu od ranije poznat. Preciznost tih uzoraka se tada može vidjeti po broju točno klasificirane elektroničke pošte. 
+Ako naučeni uzorci ne zadovoljavaju željene standarde, tada je nužno napraviti ponovnu procjenu i promijeniti pretproces te pretragu podataka. Ako naučeni uzorci zadovoljavaju željene standarde, tada je zadnji korak interpretacija naučenih uzoraka i njihova pretvorba u znanje.
+
+
+== Čišćenje podataka ==
+Kvaliteta baze podataka ima direktan utjecaj na pretraživanje podataka iz baze. Većinom se čak i nakon čišćenja baze podataka ona sastoji od 20%-50% zastarjelih podataka, podataka s greškama, neupotpunjenih podataka, duplikata ili iz drugih razloga nekorisnih podataka. Da bi baza podataka bila najbolja što može biti, može se koristiti stohastički model sudjelovanja, koji rangira svaki pojedini podatak prema stvarnoj održivosti podatka, te briše ili restaurira podatke ovisno o njihovoj održivosti.
+
+
+== Uporaba u dentalnoj medicini ==
+Pretraživanje podataka se koristi u bioinformatici, genetčkim znanostima, medicini i obrazovanju. Međutim, da bismo demonstrirali pretraživanje podataka u dentalnoj medicini, prikazat ćemo jedno istraživanje provedeno u SAD-u. Cilj je demonstrirati uporabu linearnih modela, grupiranja, neuralnih mreža i stabla odluke pri istraživanju velikog, kompleksnog kompleta podataka. Naime, istražuju se informacije iz jedne velike dentalne klinike koristeći SAS i ArcGIS softver kako bi se došlo do zaključaka o cijeni dentalne skrbi. Ispituje se odnos učestalosti posjete stomatologu, potrebnih tretmana i suradnje pacijenta. 
+Komplet podataka se sastoji od 30000 posjeta pacijenata. Istražuje se nedovoljna suradnja pacijenata. Jedna od poteškoća u određivanju pacijentove suradnje je definiranje (što spada pod suradnju?) i mjerenje (kako izmjeriti?) suradnje. Suradnja općemito podrazumijeva da se pacijnt pridržava date mu terapije, odnosno da redovito uzima propisane lijekove. Kad je riječ o dentalnoj medicini, suradnja pacijenta također podrazumijeva i redovite preventivne preglede, te naravno oralnu higijenu. Naglašeno je pacijentovo sudjelovanje u skrbi o vlastitom zdravlju;traženje stručne pomoći, redoviti pregledi, prihvaćanje preporuka o promjenama u životnom stilu i pravilno izvršavanje date terapije (da se ne propusti uzeti lijek na vrijeme, ne uzimati veću dozu lijeka od one koja je propisana...). 
+Prvo što se treba napraviti jest definirati suradnju na osnovu podataka kojima se raspolaže. Učestalost posjeta se može vidjeti po datumima pregleda. 
+Suradnja= β0+ β1*kod pacijent+ β2*klinika+ β3*kod tretman+ β4*kod raspored+ β5*demografija pacijenata+ β6*ulazna točka+ ε. 
+Može se koristiti više usporedbi kako bi se odredilo koji doktori imaju veću suradnju svojih pacijenata. Kada se to odredi, onda se raspored liječničkih pregleda doktora s većom suradnjom pacijenata uspoređuje s rasporedom doktora s manjom suradnjom pacijenata kako bi se odredila razlika. Također se uspoređuje suradnja pacijenata po demografiji, uključujući i socijalni i ekonomski status pacijenta, koji će se odrediti ispitivanjem obrazovanja i novčanih prihoda pacijenata. Mogućnosti GIS-a (Geographic Information Systems) se mogu kombinirati s alatima pretrage podataka iz SAS-a kako bi se odredio odnos prostorne udaljenosti i suradnje. 
+Prema podacima dobivenim iz istraživanja, treba se usporediti suradnja pacijenata s nižim i višim novčanim prihodima. Komplet podataka se sastoji od CPT (Current Procedure Terminology ) kodova za pacijente. Ovi kodovi su dio HIPAA-ove liste kodova koji se koriste za opisivanje zdravstvene skrbi. Ovi kodovi će nam omogućiti da grupiramo pacijente koristeći pretraživanje teksta tako da ispitamo asocijacije riječi koje postoje unutar CPT kodova. Ovaj postupak omogućuje smanjenje (redukciju) velikog broja podataka o pacijentima (tisuće) na mali konačni broj grupa (skupina) podataka o pacijentima, što konačno znači jednostavnije rukovanje velikim kompletom podataka.
+
+
+== Model predviđanja za proširenost karijesa ==
+Korištenjem modela predviđanja u pretraživanju podataka dobiveni su rezulatati koji govore da osobe s visokim MS razinama u slini imaju veće šanse za zubni karijes. Prisutnost S.mutans i S.sobrinus je mnogo više povezana s ranom pojavom karijesa nego prisutnost samo S.mutans. Prema tim rezultatima, MS i LB testovi bi trebali biti veoma korisni u predviđanju pojave karijesa. Prema ovom modelu predviđanja, pH sline i spol su predvidljivi indikatori pojave zubnog karijesa. Također, povećana konzumacija slatkih pića je rizični indikator za zubni karijes kod djece. 
+Metodologija pretraživanja podataka je općenito klasificirana u dvije skupine: nadzirane i nenadzirane metode. Za nenadzirane metode kao što je grupiranje i glavna analiza komponenti, cilj je otkriti poseban uzorak. Za nadzirane metode kao što je konvencionalna metoda regresije, neuralna mreža i stablo odluke, glavni cilj je predviđanje. 
+Isto tako, zaključeno je da je za predviđanje bolje korištenje modela neuralne mreže od korištenja modela logističke regresije ili stabla odluke.
+
+
+== Ciljevi i svrha ==
+Dental data mining, odnosno pretraga podataka u svrhe dentalne medicine, je stvorena radi uštede vremena i novca, ali i za optimizaciju stomatoloških pregleda i liječenja pomoću održavanja digitalnih podataka o zdravstvenom stanju pacijenta uvijek u toku. 
+U digitalnim podacima o zdravstvenom stanju pacijenta se koriste različiti kodovi kako bi se opisalo zdravstveno stanje. Zubni karijes i/ili plombe te liječenje navedenog se zabilježava, odnosno dokumentira različitim kodovima na razini površine zuba. Razvijeni program pretrage podataka „hvata“ određene ključne kodove iz statusa zabilježenog u podacima te proizvodi komplet podataka iz njih za daljnje analize. Te analize uključuju doživotno zdravlje svakog pojedinog zuba, vrijeme trajanja svake zubne restauracije (popravka) s obzirom na korištene materijale, tehnike...
+Analiza se može provoditi pojedinačno za svakog stomatologa. Sustav sadrži podatke za svako vrijeme trajanja svakog korištenog materijala kao i za vremena trajanja svih materijala bilo kojeg stomatologa koji koristi bilo koje digitalne podatke o zdravstvenom stanju svojih pacijenata. Kada se malene promjene u zdravlju zubi mogu rano dijagnosticirati i takozvani „rizični pacijenti“ se mogu brzo otkriti, tada se pažnja usmjerava na: preventivnu intervenciju, ponovno pozivanje pacijenata i objektivne mjere za analizu efikasnosti preventivne njege, te na kvalitetnu kontrolu tretmana. Kad je srednje i stvarno vrijeme trajanja nekog restauracijskog materijala određeno i nadzirano za svakog pojedninog stomatologa, tada je moguće provjeriti stvarnu kvalitetu dentalnih materijala na on-line način, odnosno putem interneta. Ovo također pomaže da se isprave pogreške koje su napravili neki stomatolozi koji su možda krivo upotrijebili neki materijal.
+
+
+== Izvori ==
+http://jos.dent.nihon-u.ac.jp/journal/1/61.pdf
+http://analytics.ncsu.edu/sesug/2006/ST16_06.PDF
+Han, J., Kamber, M. Data Mining: Concepts and Techniques. Morgan Kaufmann Publishers, San Francisco, 2001.
+Pyle, D. Business Modelling and Data Mining. Morgan Kaufmann Publishers, San Francisco, 2003.
+http://www.skladistenje.com/jedan.asp?ID=433  Inačica izvorne stranice arhivirana 22. listopada 2007.

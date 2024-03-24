@@ -1,0 +1,42 @@
+revision: 22471698
+title: "De Bruijn\u2013Erd\u0151s-t\xE9tel (illeszked\xE9si geometria)"
+url: https://hu.wikipedia.org/wiki/De_Bruijn%E2%80%93Erd%C5%91s-t%C3%A9tel_(illeszked%C3%A9si_geometria)
+
+
+---
+
+A matematika, azon belül az illeszkedési geometria területén a de Bruijn–Erdős-tétel, első publikációja Nicolaas Govert de Bruijn and Paul Erdős (1948), alsó korlátot határoz meg a projektív sík n pontja által meghatározott egyenesek számára. A dualitás miatt a tétel korlátot ad a projektív sík egyenesei által meghatározott metszéspontok számára is.
+Bár az Erdősék által megadott bizonyítás kombinatorikus, de Bruijn és Erdős feljegyezték, hogy az euklideszi geometria területén a tételükkel analóg eredmény a Sylvester–Gallai-tétel következménye, a pontok számán végzett egyszerű indukció segítségével bizonyítható.
+
+
+== A tétel kimondása ==
+
+Legyen P a projektív sík nem kollineáris n pontjának konfigurációja. Legyen t a P által meghatározott egyenesek száma. Ekkor
+
+t ≥ n, valamint
+ha t = n, bármely két egyenesnek pontosan egy P-beli közös pontja van. Ekkor P vagy egy projektív sík, vagy egy ún. near pencil, tehát éppen n − 1 pontja kollineáris.
+
+
+== Az euklideszi eset bizonyítása ==
+A tétel három, nem kollineáris pont esetében nyilvánvalóan igaz. Teljes indukcióval haladunk tovább.
+Tegyük fel, hogy n > 3 és a tétel igaz volt az n − 1 esetre.
+Legyen P a projektív sík nem kollineáris n pontjának konfigurációja.
+A Sylvester–Gallai-tétel szerint létezik olyan egyenes, amely pontosan két P-beli pontot tartalmaz. Az ilyenek a „közönséges egyenesek” (ordinary lines).
+Legyen a és b a P-be tartozó, egy közönséges egyenesen fekvő két pont.
+Ha az a pont eltávolításával kollineáris pontokat kapunk, akkor P egy n egyenesből álló near pencil-t határoz meg (n − 1, a-n átmenő közönséges egyenes, plusz a többi n − 1 ponton átmenő egyenes).
+A másik eset, hogy az a eltávolításával olyan P'  halmazt kapunk, ami n − 1 nem kollineáris pontból áll.
+Az indukciós feltevés alapján P'  legalább n − 1 egyenest határoz meg. Az a és b által meghatározott közönséges egyenes nincs ezek között, tehát P legalább n egyenest határoz meg.
+
+
+== J. H. Conway bizonyítása ==
+Conway megalkotott egy tisztán kombinatorikus bizonyítást, ami kombinatorikus volta miatt szintén működik a komplex számokon, kvaterniókon és októniókon értelmezett pontokon és egyeneseken is.
+
+
+== Fordítás ==
+Ez a szócikk részben vagy egészben a De Bruijn–Erdős theorem (incidence geometry) című angol Wikipédia-szócikk ezen változatának fordításán alapul.  Az eredeti cikk szerkesztőit annak laptörténete sorolja fel. Ez a jelzés csupán a megfogalmazás eredetét és a szerzői jogokat jelzi, nem szolgál a cikkben szereplő információk forrásmegjelöléseként.
+
+
+== Jegyzetek ==
+
+de Bruijn, N. G. & Erdős, P. (1948), "A combinatioral [sic] problem", Indagationes Mathematicae 10:  421–423, <http://www.renyi.hu/~p_erdos/1948-01.pdf>.
+Batten, Lynn Margaret (1997), "2.2 The de Bruijn–Erdős theorem", Combinatorics of finite geometries (2 ed.), Cambridge University Press, pp. 25–27, ISBN 0-521-59014-0

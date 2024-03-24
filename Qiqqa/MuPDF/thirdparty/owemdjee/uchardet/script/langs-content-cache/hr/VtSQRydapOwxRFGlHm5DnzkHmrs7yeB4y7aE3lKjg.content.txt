@@ -1,0 +1,11 @@
+revision: 6168245
+title: Ramdisk
+url: https://hr.wikipedia.org/wiki/Ramdisk
+
+
+---
+
+RAMdisk ili ramdisk ime je dio RAMa (radne memorije) koje operacijski sustav ili aplikacijski program pristupa kao da je neko masovno spremište podataka kao disketa ili tvrdi disk. RAMdisk koristi iste mehanizame pristupa kao s datotečnim sistemom koje postoji u operacijskom sustavu, i kao takav sadrži sve odlike neke jedinice za masovno spremanje podataka i rabi sve API-e za pristup datotekama: direktorij, format, čitanje, spremanje, brisanje podataka i datoteka. RAMdisk ima brzi pristup datotekama i mnogostruko i rabi sve prednosti radne memorije i brži neki sličan pristup podatcima recimo s krutog diska ili flash disk, jer se ova jedinica nalazi u radno. Nedostatak RAMdiska iste su kao kod radne memorije, kod gubitak napona gube se podatci na RAMdisku, a mala veličina radne memorije ograničava njegovu uporabu.
+
+
+== Vrela ==

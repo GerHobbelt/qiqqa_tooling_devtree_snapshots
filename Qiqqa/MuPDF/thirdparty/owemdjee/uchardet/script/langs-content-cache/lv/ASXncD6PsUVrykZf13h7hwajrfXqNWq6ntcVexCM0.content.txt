@@ -1,0 +1,20 @@
+revision: 3452573
+title: Galileo 25
+url: https://lv.wikipedia.org/wiki/Galileo_5
+
+
+---
+
+Galileo 5 jeb Galileo FOC FM1, European GNSS apzīmējums GSAT0201, ir Eiropas navigācijas sistēmas Galileo "pilnas darbības spēju" (angļu: Full Operational Capability) sērijas pirmais pavadonis. Tas palaists 2014. gada augustā, bet nesējraķetes kļūmes dēļ sākotnēji ievadīts nepiemērotā orbītā. 2014. gada novembrī tas pacelts piemērotā orbītā.
+Pavadonim dots arī nosaukums Doresa par godu bērnu konkursa uzvarētājai Vācijā Doresai Demajai (Doresa Demaj).Galileo 5 primārais kontraktors un platformas izgatavotājs bija uzņēmums OHB-System. Derīgo kravu izgatavoja Surrey Satellite Technology (SSTL).
+Pavadonī uzstādīti divi pasīvie ūdeņraža māzera atompulksteņi, divi rubīdija atompulksteņi; pulksteņu pārraudzīšanas un vadības iekārta, navigācijas signāla ģenerators, L-joslas antena navigācijas signāla raidīšanai, C-joslas antena augšupejošā signāla uztveršanai, divas S-joslas antenas telemetrijai un komandām, kā arī antena meklēšanas un glābšanas iekārtai MEO SAR.
+Galileo 5 tika palaists 22.08.2014. 12:27 UTC no Gviānas kosmiskā centra ar nesējraķeti Sojuz-STB/Fregat-MT (lidojums VS09) kopā ar tās pašas sērijas pavadoni Galileo 6. Dzinējblokam Fregat-MT bija jāveic divi manevri, bet otrais manevrs netika pienācīgi veikts, jo dzinējbloks nebija pareizi orientēts. Pavadoni vajadzēja ievadīt riņķveida orbītā ar slīpumu 55 grādi un lielo pusasi 29 900 km, bet pēc atdalīšanās no Fregat-MT tas atradās eliptiskā orbītā ar ekscentritāti 0,23, lielo pusasi 26 200 km un slīpumu 49,8°.Izmeklēšanas komisija secināja, ka dzinējblokā Fregat-MT viena no hidrazīna degvielas caurulēm konstruktīvi izvietota tuvu šķidrā hēlija cauruļvadam. Aukstais (−52 °C) hēlijs aizsaldējis hidrazīna cauruli.2014. gada novembrī ar manevru sēriju izdevās Galileo 5 orbītas perigeju pacelt pietiekami, lai tas riņķotu virs Zemes radiācijas joslām un orbīta būtu piemērota pavadoņa mērķa uzdevumiem. 29. novembrī veiksmīgi tika ieslēgta navigācijas derīgā krava. Līdzīga glābšanas operācija 2015. gada sākumā veikta pavadonim Galileo 6.
+2020. gada 30. novembrī pavadoņiem GSAT0201 un GSAT0202 tika izmainīti uzstādījumi, ļaujot tos izmantot Galileo sistēmas lietotājiem, lai ievāktu lietotāju atsauksmes par pozicionēšanas precizitāti, šiem pavadoņiem esot nestandarta eliptiskās orbītās. Kopumā šie pavadoņu signālu precizitāte bija līdzīga pārējiem, kas deva pozicionēšanas uzlabojumu, bet daži uztvērēji saskārās ar īslaicīgiem blakus efektiem. Lai atrastu problēmas risinājumu, 2021. gada 18. februārī abi pavadoņi tika izņemti no ekspluatācijas.
+
+
+== Atsauces ==
+
+
+== Ārējās saites ==
+VS 09 GALILEO SAT 5-6 Arianespace Launch kit
+Galileo constellation

@@ -1,0 +1,64 @@
+revision: 1148788028
+title: Shan alphabet
+url: https://en.wikipedia.org/wiki/Shan_alphabet
+
+
+---
+
+The Shan alphabet is a Brahmic abugida, used for writing the Shan language, which was derived from the Burmese alphabet. Due to its recent reforms, the Shan alphabet is more phonetic than other Burmese-derived alphabets.
+
+
+== History ==
+Around the 15th or 16th centuries, the Mon–Burmese script was borrowed and adapted to write a Tai language of northern Burma. This adaptation eventually resulted in the Shan alphabet, as well as the Tai Le script, Ahom script and Khamti script. This group of scripts has been called the "Lik Tai" scripts or "Lik" scripts, and are used by various Tai peoples in northeastern India, northern Myanmar, southwestern Yunnan, and northwestern Laos. According to the scholar Warthon, evidence suggests that the ancestral Lik-Tai script was borrowed from the Mon–Burmese script in the fifteenth century, most probably in the polity of Mong Mao. However, it is believed that the Ahom people had already adopted their script before migrating to the Brahmaputra Valley in the 13th century. Furthermore, The scholar Daniels describes a Lik Tai script featured on a 1407 Ming dynasty scroll, which shows greater similarity to the Ahom script than to the Lik Tho Ngok (Tai Le) script.Until the 1960s, Shan alphabet did not differentiate all vowels and diphthongs and had only one tone marker and a single form could represent up to 15 sounds. Only the well-trained were able to read Shan. The alphabet was reformed, making the modern alphabet easier to read with all tones indicated unambiguously.
+
+
+== Characteristics ==
+The Shan alphabet is characterised by the circular letter forms of the Mon-Burmese script. It is an abugida, all letters having an inherent vowel /a/. Vowels are represented in the form of diacritics placed around the consonants. It is written left to right 
+
+
+=== Vowels ===
+The representation of the vowels depends partly on whether the syllable has a final consonant. They are typically arranged in the manner below to show the logical relationships between the medial and the final forms and between the individual vowels and the vowel clusters they help form.
+
+
+=== Consonants ===
+The Shan alphabet is much less complex than those of related  Tai-Kadai languages like Thai. Having been reformed recently, Shan lacks many of the historical spelling remnants in Thai and Burmese. Compared to the Thai alphabet, it lacks the notions of high-class, mid-class and low-class consonants, distinctions which help the Thai script to number 44 consonants. Shan has only 19 consonants.
+The number of consonants in a textbook may vary: there are 19 universally accepted Shan consonants (ၵ ၶ င ၸ သ ၺ တ ထ ၼ ပ ၽ ၾ မ ယ ရ လ ဝ ႁ ဢ) and five more which represent sounds not found in Shan, g, z, b, d and th [θ].  These five (ၷ ၹ ၿ ၻ ႀ) are quite rare. In addition, most editors include a dummy consonant (ဢ) used in words with a vowel onset. A textbook may therefore present 18-24 consonants.
+
+4 consonants used primarily in loan words:
+
+Like other Brahmi scripts, Shan consonants are typically arranged in rows based on place of articulation with columns based on aspiration and voicing. This chart displays a 19 consonant version of the consonants in that style. The 4 loan consonants are typically arranged below this chart.
+
+
+=== Tones ===
+The tones are indicated by tone markers at the end of the syllable. Shan tonal markers are mostly unambiguous and phonetic. In the absence of any marker, the default is the rising tone.
+
+While the reformed script originally used only four diacritic tone markers, equivalent to the five tones spoken in the southern dialect, the Lashio-based Shan Literature and Culture Association now, for a number of words, promotes the use of the 'yak khuen' (Shan: ယၵ်းၶိုၼ်ႈ) to denote the sixth tone as pronounced in the north.
+
+
+== Numerals ==
+There are differences between the numerals used by the Shan script in China and Myanmar. The numerals used by Shan in China are similar to the numbers in Tham script and Tai Le script in China and the numbers in Burmese, while the Shan numerals in Myanmar form their own system, similar to the Burmese Tai Le numerals.
+
+
+== Punctuation ==
+There are three main punctuation marks in Shan script with an addition mark for letter reduplication, typically as shorthand.
+
+
+== Syllables ==
+Below are charts with syllables showcasing how of Shan script vowels and consonants are combined.
+Monophthongs
+
+Diphthongs
+
+Tones
+
+
+== Unicode ==
+The Shan script has been encoded as a part of the Myanmar block with the release version of Unicode 3.0.
+
+
+== Gallery ==
+
+		
+
+
+== References ==

@@ -1,0 +1,93 @@
+revision: 23570156
+title: computer
+url: https://no.wikipedia.org/wiki/Datamaskin
+
+
+---
+
+En datamaskin er en digital elektronisk maskin som kan programmerers til å utføre sekvenser av aritmetiske og logiske operasjoner. Tidlige datamaskiner fylte hele rom og måtte håndteres av eksperter, men i dag er datamaskiner blitt allemannseie. Eksempler på datamaskiner er PC-er, mobiltelefoner, og minibanker.
+En datamaskin henter fram én og én instruksjon fra et lager, utfører instruksjonen og lagrer resultatet i et minne. Hver instruksjon er svært enkel, og det kreves ofte mange instruksjoner for å utføre komplekse operasjoner. Samlingen med instruksjoner kalles et program. Instruksjonene et menneske skriver når det programmerer en datamaskin kalles kildekode. Kildekode er leselig for mennesker, men må oversettes til maskinkode for å bli instruksjoner datamaskinen forstår. Denne prosessen kalles enten kompilering eller tolking, avhengig av om det gjøres på forhånd eller mens programmet kjører.
+Det engelske ordet for datamaskin, computer, ble frem til oppfinnelsen av datamaskinen brukt om personer, vanligvis kvinner, som foretok matematiske utregninger, enten med kalkulator eller penn og papir, og som ble erstattet av datamaskinen da den gjorde sitt inntog.
+
+
+== Funksjonsmåte ==
+
+Tidlige datamaskiner hadde faste programmer. Noen veldig enkle datamaskiner er fremdeles bygget opp slik, som eksempel kan nevnes enkle kalkulatorer. Disse kan gjøre de vanligste regneoperasjonene og lagre noen tall, men kan ikke omprogrammeres. Omprogrammering av slike maskiner er en lang prosess som også krever manuelle inngrep i maskinvaren. Da den programmerbare datamaskinen kom på markedet, revolusjonerte den kostnadsnivået. Man behøvde ikke lenger spesialbygget maskinvare for hvert program man ville kjøre. Instruksjonene til maskinen var lagret i hukommelsen på lik linje med dataene.
+Andre måtte få lastet hele operativsystemet inn i memory fra tape for deretter å lese inn programmet og ev. data fra en kortleser – hver gang et program skulle kjøres. Den tids operativsystemer var meget enkle. EXEC CUR, TR F, IN F, TRI F, TOC er ett eksempel.
+Von Neumann-arkitektur er den vanligste oppbyggingen av programmerbare datamaskiner.
+
+
+== Brukergrupper ==
+
+Det finnes mange kategorier brukere av mikromaskiner, og etter hvert som tiden går er tilbudet av forskjellige programtyper betydelig. Typisk finnes spesielle programmer for områder som:
+
+Teknisk konstruksjon: Beregninger, tegning og modellering
+Grafikk: Produksjon av grafikk, trykksaker, behandling av bilder og relatert arbeid
+Media: Produksjon av film og musikk
+Kontor: Regnskap, databaser, regning, tekstbehandling og presentasjoner
+Kommunikasjon: Nettlesere, lyd og levende bilder
+Server: Levering av innhold til andre datamaskinerDe tre dominerende operativsystemene Windows, MacOS og GNU/Linux har dels overlappende muligheter og dels sine spesielle fortrinn. Integrering mellom systemene reduserer kompatibilitetsforskjeller som tidligere har vært som vegger mellom disse systemene.
+
+
+== Teknikk ==
+
+En datamaskin består av noen hoveddeler som en datamaskinbruker bør kjenne til. Den er en maskin som fungerer sammen med tilkoblet utstyr som monitor (dataskjerm), tastatur, diskettstasjon (nå CD-stasjon) og skriver. Tilkoblet utstyr kalles periferutstyr. For å utføre brukerens arbeid må den ha ett eller flere dataprogrammer installert. Dette er de primære funksjonene som etter hvert er supplert med nye muligheter som mus (som var standard opprinnelig til Apple Finder), scannere og internett.
+Hoveddelene i datamaskinen (maskinvare, engelsk: hardware) er en eller flere prosessorer og hukommelse (ROM, RAM og HD) i tillegg til at informasjonen overføres i et maskinnettverk internt og eksternt til maskinutstyret.
+Apple brukte opprinnelig Motorola-prosessorer i sine maskiner, og startskuddet ved introduksjon av Macintosh 128 rundt 1983 var basert på en Motorola-prosessor 68000. Denne maskinen hadde ikke harddisk (HD) og både brukerprogram og dokumenter måtte plasseres på en diskett (eller to) i maskinens system. De fleste andre produsenter av mikromaskiner baserte systemet på kombinasjonen MS-DOS og en Intel prosessor, i tidlig fase en Intel 8086.
+I Apples maskiner var det et fast minne (ROM: Read only memory) som er en fast uforanderlig installert hukommelse. Denne inneholdt maskinens operativsystem og gjorde maskinen immun mot inkompetent bruk og sabotasje. Maskinens elektriske minne (RAM: random-access memory oversatt til norsk: tilfeldig adgangs hukommelse, som opprinnelig var 128 kB på disse maskinene) ga som på alle maskiner ellers et foranderlig minne som inneholder det maskinen på ethvert tidspunkt arbeider med. Dette er det vanlig å sikre (dokumentinformasjon) med kopiering til harddisk med korte intervaller (eks. 10 min.) for å eliminere tap av siste dokumentversjon under arbeid. MS-DOS-maskinene arbeidet med operativsystem og brukerprogrammer som var lagret på maskinens HD (harddisk).
+Tidlige versjoner av mikromaskinene hadde ikke harddisk, og både programmer og dokumenter (brukerinformasjon, datafiler) ble lagret på eksterne media, typisk floppydisker eller tape (magnetisk bånd). Floppydisker ble etter hvert erstattet av mindre disketter og så på et senere tidspunkt av CD-plater. Diskettene var magnetiske lagringsmedia som kunne tilføres nye data, overskrives og brukes på ny, mens de nye CD-platene bare kan brennes en gang, unntatt for CD-RW, som kan. Harddisker som etter kort tid (allerede rundt 1985) ble vanlige som et internt datalager i mikromaskiner mottar data fra maskinens RAM eller diskettstasjon (CD-stasjon) under bruk.
+Maskinens arbeidskapasitet bestemmes av disse komponentenes ytelser. Parallelt med utviklingen i kapasitet på mikromaskiner utvikles også dataprogrammer med avanserte funksjoner for å gjøre bruk av kapasiteten og effektivisere arbeidet. Denne utviklingen har vært betydelig siden maskiner med 128 eller 256 kB RAM ble solgt rundt 1985 frem til året 2009 når tilsvarende maskiner yter 256 MB RAM (internhukommelse) eller mer. Også prosessorer og harddisker har hatt en motsvarende utvikling i kapasitet og ytelse.
+
+
+=== Moderne programmerbare datamaskiner ===
+
+En moderne datamaskin består i hovedsak av tre hoveddeler: en prosessor (CPU), hukommelse (minne) og permanent lager (Harddisk, SSD, diskett, CD osv). Dessuten finnes det som regel diverse ytre enheter, slik som skjerm, tastatur, mus, skriver og andre inn/ut-enheter.
+Prosessoren utfører instruksjoner som hentes fra hukommelsen. Hukommelsen er oppdelt i celler med fast størrelse. Slike celler kalles gjerne maskinord. Lengden av et maskinord måles i antall bit, som er den minste måleenhet for informasjon. Et bit kan enten være på eller av (dvs. ha verdien 0 eller 1). Et maskinord består ofte av et helt antall byte, som består av 8 bit.
+Maskinordene har hver sin adresse i hukommelsen, dvs. de er nummerert fra null og oppover. Et maskinord inneholder data som kan fortolkes på ulike måter. Det kan alltid fortolkes som et heltall. Det kan også fortolkes som en instruksjon til prosessoren (eller en del av en slik instruksjon). En annen fortolkningsmulighet er bokstaver eller andre tegn. Alle data i hukommelsen forsvinner når maskinen slås av. Det permanente lageret brukes for å ta vare på informasjon over tid.
+Prosessoren styres ved hjelp av maskinprogrammer. Et maskinprogram (eller binærprogram) er en samling instruksjoner som legges inn i hukommelsen. Prosessoren henter inn og utfører en og en instruksjon fra binærprogrammet. En slik instruksjon kan for eksempel gå ut på å hente to tall fra angitte adresser i hukommelsen, addere tallene og til slutt legge resultatet tilbake på en tredje adresse i hukommelsen. Etter at en instruksjon er utført vil Prosessoren normalt hente neste instruksjon fra binærprogrammet og utføre denne. Denne syklusen kan brytes ved hjelp av såkalte hoppinstruksjoner. En hoppinstruksjon vil gi prosessoren beskjed om at neste instruksjon skal hentes fra et annet sted i hukommelsen. På denne måten vil deler av et binærprogram kunne utføres flere ganger ved at prosessoren hopper tilbake i programmet. Hoppinstruksjoner kan være ubetingede og betingede. Betingede hoppinstruksjoner vil bare resultere i et hopp dersom en bestemt betingelse er oppfylt. Betingede hoppinstruksjoner gjør det mulig å lage kompliserte programmer der ulike deler av programmene aktiviseres etter hvert som oppgavene fullføres.
+Hastigheten på prosessoren reguleres av en klokke, som sender ut en elektronisk puls i faste intervaller. En slik puls starter en ny runde med utførelse av en instruksjon som ligger klar i prosessoren. Hastigheten på en slik klokke måles i hertz (antall pr. sekund). De fleste av dagens prosessorer (i 2008) kjøres på en hastighet i størrelsesorden mellom 2-3 000 000 000 hertz = 2-3000 MHz = 2–3 GHz.
+I praksis finnes det mange binærprogrammer i hukommelsen samtidig. Mange av dem utgjør en del av operativsystemet som styrer inn/ut-enheter osv. Andre programmer er nytteprogrammer som er startet av en bruker. Særlig programmer knyttet til operativsystemet har behov for å kunne utføres i korte aktive faser, for deretter å gå inn i en dvaletilstand i påvente av at bestemte begivenheter inntreffer. Det finnes derfor mekanismer i en datamaskin som tillater at et maskinprogram plutselig avbrytes, slik at et annet program (med viktige, presserende oppgaver) kan overta. Når det viktige programmet har gjort sitt, vil det opprinnelige programmet fortsette der det slapp, uten at dette får konsekvenser for den oppgaven programmet utfører (annet enn en liten tidsforsinkelse). Begivenheter som fører til et slikt «avbrudd», er for eksempel et tastetrykk. Et tastetrykk fører til at en kode for hvilken tast som ble tastet, sendes til prosessoren, sammen med et signal som angir at et tastetrykk har funnet sted. Når prosessoren mottar et slikt avbruddssignal, vil den avbryte sin normale arbeidsmåte. Prosessorens tilstand (blant annet adressen til den neste instruksjonen den skal utføre) tas vare på i hukommelsen, og et annet maskinprogram (som behandler tastetrykket) aktiviseres.
+
+
+== Historie ==
+
+
+=== Tidlig historie ===
+
+Selv om diverse hjelpemidler for å utføre beregninger ble konstruert langt tilbake i historien, er det først etter 1940 at utviklingen av moderne elektroniske datamaskiner har funnet sted. Et tidlig forsøk på å utvikle noe som ligner på moderne datamaskiner fant sted i 1835, da Charles Babbage beskrev sin analytiske maskin. Dette var en mekanisk, dampdrevet innretning som brukte hullkort som innlesningsmedium. Beskrivelsen av denne maskinen foregrep mange idéer som moderne databehandling fortsatt bygger på. Blant annet kunne maskinen programmeres, og Ada Byron Lovelace innså at den i prinsippet ville bli i stand til å utføre alle beregningsoppgaver som en moderne datamaskin kan utføre (men det ville rimeligvis tatt tid). Maskinen kom imidlertid aldri lenger enn til tegnebrettet i hans egen tid – først i 2002 ble det konstruert en maskin i London etter Babbages tegninger. Maskinen fungerte slik den skulle.
+Før 1940 ble det også konstruert en del analoge datamaskiner som brukte elektriske signaler eller mekaniske parametre til å representere tall. I 1940-årene ble det konstruert en rekke digitale datamaskiner basert på elektroniske komponenter. I Tyskland konstruerte Konrad Zuse flere forløpere for den moderne datamaskinen, slik som modellene Z1 fra 1938 og Z2 fra 1939, som var tildels mekaniske, tildels reléstyrt og i 1941 endelig historiens første programmerbare maskin, (Z3) som også var basert på reléteknologi.
+
+
+=== Krigstid og nød ===
+
+I England utviklet en gruppe rundt matematikeren Max Newman og elektronikkingeniøren Tommy Flowers verdens første elektronisk programmerbare datamaskin. Den skulle knekke de tyske Lorenz-krypterte kodene som ble brukt mellom de tyske hovedkvarterene. Colossus ble tatt i operativ bruk ved Bletchley Park januar 1944, etter kun 10 måneders utvikling. Denne maskinen reduserte tiden for å dechiffrere Lorenz-meldinger fra uker til timer og den kom i tide til D-dagen, slik at den kunne hjelpe til i planleggingen. Colossus ble utviklet videre og gjort mer programmerbar. Det ble også bygget flere, slik at man hadde 10 Colossus programmerbare datamaskiner på slutten av krigen, sensommeren 1945. Colossus-maskinene og deres 550 ansatte dekodet totalt rundt 63 millioner tegn fra hemmelige meldinger – en formidabel mengde sett i forhold til tidligere kapasitet.I 2008 ble det sendt ut en radiomelding kodet med en Lorenz SZ42 maskin, og den ble dekodet av en gjenoppbygd Colossus Mark II på 3 timer og 15 minutter. Den tyske radioamatøren Joachim Schueth dekodet den samme meldingen på 46 sekunder ved hjelp av en bærbar datamaskin med en 1,4GHz prosessor.Winston Churchill omtalte Bletchley Park som «the goose that laid the golden egg, but didn't cackle». Dette refererer til at Bletchley Park og alt de klarte å få til ble holdt hemmelig ikke bare under den andre verdenskrig, men også under den kalde krigen, slik at Sovjetsamveldet ikke fikk innsyn i hva Vest-Europa kunne klare når det gjaldt overvåking og innsyn i motpartens interne meldinger. Colossus og alt annet som ble utviklet ved Bletchley ble destruert. Eksistensen av disse maskinene ble ikke allment kjent før i 1976, etter at 30 års tidsfristen for hemmeligholdelse hadde utløpt.
+Det er et tankekors at mesteparten av den kunnskap vi i dag har om aktiviteten ved Bletchley Park og Colossus er hentet fra arkivmateriale som ble tatt med over til USA for arkivering der av de amerikanerne som arbeidet ved Bletchley.
+I USA startet det amerikanske forsvaret byggingen av ENIAC i 1943. Dette var en meget stor maskin, både i fysisk omfang og regnekapasitet. Den bestod blant annet av 17 468 radiorør og beslagla et areal på 167 kvadratmeter. Maskinen ble fullført i 1946 og var i operativ drift til 1955. Hver av maskinens 20 regneregistre kunne utføre 5000 addisjoner i sekundet. ENIAC ble bare bygget i ett eksemplar. Denne maskinen var utgangspunktet for utvikling av diverse kommersielle maskiner i USA, med UNIVAC som den viktigste.
+
+
+=== Etterkrigstiden og elektroniske revolusjoner ===
+
+Den videre utvikling av datamaskinen har forenklet sett funnet sted i tre store «bølger». Disse bølgene var hovedsakelig forårsaket av teknologiske nyvinninger. Den første store bølgen hadde som utgangspunkt de eksperimentelle maskinene som ble bygget i 1940- og 1950-årene. Markedet var finansinstitusjoner og store nasjonale institusjoner innen forskning og statistikk. Innen dette markedet var rene hullkortmaskiner allerede i bruk for å holde styr på store registre. Datamaskinen var den naturlige arvtakeren. Da den neste teknologiske bølgen kom, ble det vanlig å kalle disse maskinene stormaskiner. De var meget kostbare, krevde stor fysisk plass, og tilsyn av mange operatører. Det var vanlig at flere aktører samarbeidet om å drifte slike maskiner, slik at utgiftene og kompetanse kunne deles på flere. I Norge hadde vi for eksempel flere kommunale datasentraler som delte landet mellom seg i regioner. Stormaskinmarkedet ble dominert av IBM og noen få andre aktører. En av de første datamaskinene i Norge var Norsk Universell Siffermaskin Selvstyrt Elektronisk (NUSSE).
+Den neste store bølgen kom med minimaskinen. Utgangspunktet for denne bølgen var utviklingen innen transistor-teknologi og halvlederteknikk. Det ble etter hvert mulig å masseprodusere integrerte kretser med flere hundre transistorer preget inn på en liten flate. Dette ga rom for å produsere mindre datamaskiner meget rimelig i forhold til de etablerte stormaskinene. Nye datamaskinprodusenter, slik som Digital Equipment Corporation (DEC) og Norsk Data så mulighetene mye raskere enn de etablerte stormaskinprodusentene. Det ble derfor skapt et marked for mindre og billigere maskiner, og omsetningen innen dette markedet vokste raskt og ble etter hvert jevnbyrdig med stormaskinmarkedet. Minimaskiner begynte så vidt å gjøre seg gjeldende fra midten av 1960-årene. DEC kom med PDP-8 i 1964. Det var en 12-bits maskin med bare 4096 maskinord i hukommelsen som ble solgt for ca. 16 000 dollar. Norsk Data leverte sin første Nord-1-maskin i 1967.
+
+Den tredje store bølgen kom med mikroprosessoren. Halvlederteknologien var nå kommet så langt at det var mulig å konstruere en fullstendig CPU på en liten silisiumbrikke. Den første mikroprosessoren, Intel 4004 med maskinord på 4 bit, så dagens lys i 1971. Senere kom Intels 8080-prosessor (8 bit) og ikke minst 8086-prosessoren (16 bit) som ble benyttet i IBMs Personal Computer. Andre halvlederprodusenter hadde også stor betydning: Zilogs Z80 (8 bit) som kom på markedet i 1976 og Motorolas 68000 (16 bit) som kom i 1979.
+Mikrodatamaskiner er fullstendige datamaskiner bygget opp rundt en mikroprosessor. De første mikromaskinene var små, rimelige maskiner beregnet på hobbymarkedet. Disse ble kalt hjemmedatamaskiner og kom i en rekke utførelser i 1980-årene. Med tekstbehandlingsprogrammer og regneark fikk disse maskinene også innpass i det mer profesjonelle markedet, og utkonkurrerte for en stor del minimaskinene. Etter hvert utviklet det seg en industristandard basert på IBMs PC som de fleste av dagens mikromaskiner bygger på.
+
+
+== Se også ==
+Programvareutvikling
+Kildekode
+Harddisk
+Mikroprosessor
+Programvare
+Operativsystem
+
+
+== Referanser ==
+
+
+== Eksterne lenker ==
+(en) Computers – kategori av bilder, video eller lyd på Commons 
+(en) Computer – galleri av bilder, video eller lyd på Commons 
+Computer History Museum (engelsk)
+Hardware.no – norsk kjøpeguide, forum og artikler om datamaskiner

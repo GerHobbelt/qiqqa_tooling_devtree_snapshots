@@ -1,0 +1,72 @@
+revision: 21357933
+title: Materials Testing Reactor
+url: https://fi.wikipedia.org/wiki/Metanoli
+
+
+---
+
+Metanoli eli metyylialkoholi on myrkyllinen alkoholi. Metanoli on normaaliolosuhteissa olomuodoltaan väritön neste. Se palaa melkein värittömällä liekillä muodostaen hiilidioksidia ja vettä:
+
+2 CH3OH + 3 O2 → 2 CO2 + 4 H2OMetanoli on tärkeä lähtöaine kemianteollisuudessa. Lisäksi sitä käytetään muun muassa liuottimena, jäätymisenestoaineena ja polttoaineena.
+Yhdistettä esiintyy myös kukkien tuoksuissa ja semiokemikaalina eliöiden viestinnässä.
+
+
+== Valmistus ==
+Metanolin valmistus on tunnettu kauan eikä ensimmäisten valmistusmenetelmien alkuperää tarkkaan tiedetä. Metanolia voidaan valmistaa useilla eri menetelmillä kuten maakaasusta syntetisoimalla, mutta helpointa on antaa vedyn reagoida hiilimonoksidin (häkä) kanssa, vesikaasusta hydraamalla. Reaktio tapahtuu tällöin seuraavasti:
+
+CO + 2 H2 → CH3OH.
+Reaktiota voidaan kiihdyttää katalyyteillä, kuten kupari-, sinkki tai kromioksideilla. Myös lyijyn ja talliumin käytöstä katalyytteinä on saatu rohkaisevia tuloksia. Myös auringonvaloa voidaan käyttää tuotannossa tarvittavan vedyn valmistuksen energialähteenä. Metanolin valmistus maakaasusta on edullista, sillä kaasu on valmiiksi puhdasta ja muunnoksen hyötysuhde on tyypillisesti korkea, noin 60–70 prosenttia, mutta yli 80 prosentin hyötysuhteeseenkin on päästy. Jos huomioidaan valmistusprosessin hukkalämmön hyödyntäminen sähköntuotantoon, yli 90 prosentin hyötysuhteeseen voidaan päästä.Metanolia syntyy myös puun kuiva­tislauksessa, minkä vuoksi siitä käytetään myös nimitystä puu­sprii.. Sen valmistus puusta tai muusta biomassasta onnistuukin vain hiukan huonommalla hyötysuhteella kuin vedystä ja hiili­monoksidista. Tällöin muunnoksen hyötysuhde jää noin 42–66 prosenttiin.Ilmakehän hiilitasapaino ei häiriinny, jos metanolin massatuotannossa tarvittavan hiilimonoksidin tuotantoon käytetään energiakasveja esimerkiksi puuhakkeen tai vaikkapa jätepaperin muodossa. Vaikka niiden sijaan hiilimonoksidin tuottamiseen käytettäisiinkin kivihiilivaroja tai öljyä, olisi kasvihuonekaasupäästöjen vähennys dramaattinen verrattuna perinteisten fossiilisten polttoaineiden käyttöön. Puusta valmistetun metanolin EROEI on noin 5,5.
+
+
+== Käyttö ==
+Metanoli on tärkeä teollisuuskemikaali, jota käytetään lähtöaineena muiden kemikaalien, muun muassa formaldehydin sekä useiden väri- ja lääkeaineiden valmistuksessa. Muita metanolin käyttökohteita ovat mm. käyttö liuottimena ja jäätymisenestoaineena sekä aiemmin lasinpesunesteenä. EU:n kemikaaliasetuksen mukaan 9. toukokuuta 2019 jälkeen metanolia ei enää saa saattaa markkinoille yleiseen kulutukseen tuulilasin pesu- ja jäänpoistonesteissä pitoisuutena, joka on 0,6 painoprosenttia tai suurempi.  Myrkyllisten ominaisuuksiensa vuoksi metanolia käytetään myös teollisuusetanolin denaturointiin.
+
+
+=== Metanoli polttoaineena ===
+Metanoli on eräs vaihtoehto tulevaisuuden synteettiseksi polttoaineeksi. Sähköenergian varastointi ajoneuvoihin, laivoihin ja lentokoneisiin on hankalaa ja epätaloudellista, samoin vedyn. Sen sijaan metanolin käyttö, käsittely ja jakelu muistuttaa läheisesti bensiinin vastaavia prosesseja. Metanolia voidaan käyttää polttoaineena myös ottomoottorissa. Sen oktaaniluku on moottoribensiiniä suurempi, mutta energiatiheys pienempi. Metanolin energiatiheys on 19,7 MJ/kg bensiinin 40 MJ/kg. Pelkän metanolin käyttö polttoaineena mahdollistaa korkean puristussuhteen ottomoottorissa ja sen ansiosta myös korkean hyötysuhteen. Ottomoottorin hyötysuhdetta voidaan kohottaa myös pakokaasun takaisinkierrätyksen avulla, kun takaisinkierrätystä käytetään ottomoottorissa osittain tai kokonaan tavanomaisen virtauksen rajoituksen sijasta. Metanolipolttoaineella pakokaasun takaisinkierrätys onnistuu paremmin kuin bensiinillä.Polttoainejärjestelmän syöpymisriskin vuoksi metanoli ei sovellu useimpien nykyisten moottoriajoneuvojen polttoaineeksi suoraan ilman muutoksia. Toisaalta, kun polttoainejärjestelmän syöpymiselle herkät komponentit on vaihdettu metanolia kestäviin, syöpymisongelmia ei sen jälkeen ole. Ajoneuvon moottorin ja polttoainejärjestelmän muuttaminen metanolille sopivaksi on suhteellisen helppo tehtävä siinä mielessä, että kaikki tarvittavat tekniset ratkaisut ovat tiedossa.  Metanoli aiheuttaa haasteita myös moottorin öljyvoitelulle, sillä voiteluöljyn saastuminen metanolista aiheuttaa syöpymistä tavanomaisten moottoreiden laakereissa, sylintereissä ja tiivisteissä.Metanolia käytetään perinteisesti polttoaineena raketeissa, rata-autoissa (kuten Champ Car), speedway-pyörissä ja kiihdytysautoissa (drag racing). Metanoli on suosituin polttomoottorein varusteltujen pienoismallien polttoaine. Metanolilla toimivia polttokennoja kehitetään kannettavien tietokoneiden, matkapuhelinten sähköenergian lähteeksi, mutta toistaiseksi sen käyttöä pidetään palo-, räjähdys-, sekä myrkytysvaarojen tuottamien vastuiden takia ongelmallisena. Kiina on panostanut huomattavasti metanolin käyttöön liikennepolttoaineena. Metanolipolttokennoa pidetään yhtenä tulevaisuuden ratkaisuna sähköautoille.Liikenneonnettomuuksissa metanolin ongelmana on sen palaminen värittömällä liekillä. Ratkaisuna tähän ongelmaan voisi olla valkoista tai punaista savua tuottavan kemikaalin lisääminen metanolipolttoaineen sekaan. Bensiiniin verrattuna metanoli ei ole yhtä leimahdusherkkä ja tulipalon sytyttyäkin metanoli on pienempi ongelma. Metanolin hyvän liukenemisen ansiosta metanolipalo on helppo sammuttaa vedellä. Juuri paremman paloturvallisuuden vuoksi Indianapolis 500 -autokilpailuissa siirryttiin metanolipolttoaineen käyttöön vuonna 1965.
+
+
+== Vaikutukset elimistössä ==
+Metanoli hapettuu elimistössä myrkyllisiksi formaldehydiksi ja muurahaishapoksi:
+2 CH3OH + O2 → 2 CH2O + 2 H2O (formaldehydiksi)
+2 CH2O + O2 → 2 HCOOH (muurahaishapoksi)
+2 HCOOH + O2 → 2 CO2 + 2 H2O (hiilidioksidiksi)Metanolin nauttiminen jo pieninä määrinä voi aiheuttaa sokeutumisen, ja paljon ihmisiä kuolee metanolin nauttimiseen päihteenä. Metanolin myyminen nautittavana alkoholina on rikollinen teko, josta voidaan tuomita sakko- tai vankeusrangaistukseen. Pontikan valmistuksessa on perinteisesti heitetty ensimmäiset tisleet pois, koska metanolin etanolia alhaisemman höyrystymislämpötilan vuoksi ensimmäisten tisleitten metanolipitoisuus on myöhempiä korkeampi. Laimentamattoman metanolin haju ja maku on pistävämpi kuin etanolin, jota ei erota laimennettuna.Ei ole tarkkaa tietoa siitä, kuinka suuri annos metanolia on pitkällä aikavälillä myrkyllistä. Yhdysvaltain ympäristönsuojeluvirasto EPA on asettanut suosituksensa suurimmasta sallitusta suun kautta nautitusta metanolista arvoon 0,5 mg/kg/vrk.Makeutusaineena käytettävästä aspartaamin hajoamistuotteena syntyy metanolia, mutta ei ole osoitettu syntyykö sitä elimistössä ja imeytyykö se verenkiertoon.Akuutti metanolimyrkytys jaetaan kolmeen vaiheeseen: 1) humala, 2) asidoosi ja 3) keskushermoston, näköhermon ja silmän verkkokalvon vaurioitumiseen. Ensimmäinen vaihe eli humalatila alkaa yleensä nopeasti. Asidoosi ja silmien ja keskushermoston vaurioiden kehittyminen vie enemmän aikaa, se voi viedä jopa 1–1,5 vuorokautta. Metanolimyrkytyksen oireita ovat humala, pyörrytys, heikkous, vapina, päänsärky, pahoinvointi, raju oksentelu, vatsan ja lantion alueen kovat kivut sekä erilaiset näköhäiriöt. Metanoli voi aiheuttaa pienenäkin annoksena (4–15 ml) pysyvän sokeuden. Verkkokalvovaurioita esiintyy vain ihmisillä ja apinoilla.Metanoli imeytyy hyvin ruoansulatuskanavasta ja höyrynä keuhkoista jakautuen elimistön vesitilaan. Sen pitoisuus on suuri silmän lasiaisessa sekä näköhermossa. 5–10 prosenttia metanolista erittyy muuttumattomana virtsaan ja hengitysilmaan ja 90–95 prosenttia metaboloituu maksassa formaldehydiksi ja edelleen muurahaishapoksi. Metanolin poistumisnopeus elimistöstä on viidesosa etanolin vastaavasta. Tämän takia pienetkin toistuvat metanoliannokset aiheuttavat aineen kumulatiivisen kertymisen elimistöön.Metanoli imeytyy ihon läpi ja suurista määristä aiheutuu myrkytys.Metanolin hapettumistuotteista muurahaishappo aiheuttaa vaikean metabolisen asidoosin ja formaldehydi estää solujen entsyymitoimintaa. Verkkokalvon vaurioiden arvellaan syntyvän joko formaldehydin suorana toksisena vaikutuksena tai koska metanoli sitoutuu hemoglobiiniin ja solujen hengitysentsyymien rautaan, jolloin runsaasti happea käyttävä verkkokalvo kärsii hapenpuutteesta.
+
+
+=== Hoito ===
+Akuuttia metanolimyrkytystä hoidetaan estämällä myrkyllisten metaboliittien muodostumista. Tämä voidaan tehdä antamalla etanolia infuusiolla siten, että sen pitoisuus veressä on 1,0–1,5 ‰ 2–5 vrk:n ajan, jolloin se kilpailee metanolin kanssa hapettavasta entsyymistä, alkoholidehydrogenaasista. Alkoholidehydrogenaasin estäjällä (4-metyylipyratsolilla eli fomepitsolilla) voidaan estää metanolin metaboliaa. Metanolin erittymistä diureesiin voidaan tehostaa antamalla furosemidia tai mannitolia. Myös suuret foolihappoannokset nopeuttavat sen erittymistä. Tärkeimpänä hoitotoimenpiteenä pidetään hemodialyysiä metanolin ja sen metaboliittien poistamiseksi elimistöstä, se korjaa samalla myös asidoosia.
+
+
+== Metanolimyrkytykset Suomessa ==
+Ennen vuotta 1989 metanolipohjaisia aineita ei saanut ostaa kuin poliisin myöntämällä luvalla, mikä käytännössä lopetti aineen kaupan miltei kokonaan. 1980-luvulla metanolin aiheuttamia myrkytyskuolemia sattui Suomessa pari-kolme vuodessa, mutta vuoden 1989 jälkeen 30–40 vuodessa. EU:iin liittymisen jälkeen vuoteen 2011 mennessä Suomessa metanoli oli tappanut viranomaisten mukaan 431 ihmistä. Sen jälkeen metanolia sisältävät tuotteet siirrettiin lukkojen taakse ja vuosittain on kuollut kymmenkunta ihmistä.
+
+
+== Lähteet ==
+Lampinen, Ari: Uusiutuvan liikenne-energian tiekartta (PDF)  Elokuu 2009. Joensuu:  Pohjois-Karjalan ammattikorkeakoulu.   Viitattu 4.4.2014. 
+Cassady, Philip E.: The use of methanol as a motor vehicle fuel.  Unusual Fuels Production: Symposium of the Division of Fuel Chemistry at the 169th National Meeting of the American Chemical Society, April 1975, s. 59–70.  Philadelphia:  American Chemical Society, Division of Fuel Chemistry. Artikkelin verkkoversio (PDF). Viitattu 4.4.2014.  (englanniksi)
+Inst Francais Du Petrole: VII International Symposium on Alcohol Fuels.   Pariisi: Éditions Technip, 1986.  ISBN 2-7108-0517-0.    
+EPA: Methanol www.epa.gov.  January 2000. United States Environmental Protection Agency.   Viitattu 13.4.2014. (englanniksi)
+EPA: Clean Alternative Fuels: Methanol (PDF) www.epa.gov.  March 2002. United States Environmental Protection Agency.   Viitattu 4.4.2014. (englanniksi)
+Methanol In Racing www.methanicom.com. Methanicom.   Viitattu 4.4.2014. (englanniksi)
+Sileghem, Louis; Van De Ginste, Maarten: Methanol as a Fuel for Modern Spark-Ignition Engines: Efficiency Study (PDF) (arkistoitu versio)  21.10.2011. Ghent, Belgia:  Ghent University.   Viitattu 7.4.2017. (englanniksi) Dokumentti on saatavissa myös osoitteessa http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.725.9991&rep=rep1&type=pdf
+
+
+=== Viitteet ===
+
+
+== Aiheesta muualla ==
+
+Viranomaiskeinot tehoavat: metanolikuolemat kääntyivät laskuun 2010-luvulla Tukesinfo.
+Metanolin kansainvälinen kemikaalikortti
+OVA-ohje
+Kemian työsuojeluneuvottelukunta (KETSU): Metanoli
+Terveysportti, metatesaurus: Metanoli
+PubChem: Methanol (englanniksi)
+Human Metabolome Database: Methanol (englanniksi)
+KEGG: Methanol (englanniksi)
+ChemBlink: Methanol (englanniksi)
+Toxin and Toxin Target Database (T3DB): Methanol (englanniksi)
+Dr. Duke's Phytochemical and Ethnobotanical Databases: Methanol (englanniksi)
+Pherobase: Floral Compound – methanol (englanniksi)
+Pherobase: Semiochemical – methanol (englanniksi)
+The Methanol Institute (englanniksi)

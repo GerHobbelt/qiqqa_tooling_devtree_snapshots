@@ -1,0 +1,79 @@
+revision: 7387975
+title: "zinko-uhl\xEDkov\xFD \u010Dl\xE1nok"
+url: https://sk.wikipedia.org/wiki/Zinko-uhl%C3%ADkov%C3%BD_%C4%8Dl%C3%A1nok
+
+
+---
+
+Zinko(vo)-uhlíkový článok (iné názvy: suchý zinko(vo)-uhlíkový článok, (suchá) zinko(vo)-uhlíková batéria, (suchý) uhlíko(vo)-zinkový článok, (suchá) uhlíko(vo)-zinková batéria, zinko(vo)-burelový článok, burelový článok, burelová batéria, (suchý) Leclanchého článok, suchý článok, suchá batéria, batéria, hovorovo baterka) je základný druh galvanického článku (resp. batérie) dostupného (-nej) v obchodoch pre bežných spotrebiteľov. Pojem často zahŕňa aj variant nazývaný zinko(vo)-chloridový článok (zinko(vo)-chloridová batéria - pozri nižšie) a občas aj variant nazývaný alkalická batéria (pozri v samostatnom článku).
+Bol vynájdený na základe historického Leclanchého článku, s ktorým má rovnaké chemické zloženie (a aj sa podľa neho často dodnes nazýva).
+Názov je odvodený od zinku tvoriaceho elektródu a uhlíkovej tyčinky tvoriacej kladný kontakt článku.
+
+
+== Zloženie ==
+Katódu tvorí zinkový kalíšok, ktorý zároveň tvorí vonkajší obal článku.
+Anódu tvorí práškový oxid manganičitý (MnO2, burel), ktorý je pre lepšiu vodivosť zmiešaný s práškovým uhlíkom. Do tejto zmesi je vložená uhlíková tyčinka umiestnená v osi článku.
+Elektrolyt tvorí vodný roztok chloridu amónneho (NH4Cl, salmiak).
+Elektrolyt sa v článku nenachádza voľne v kvapalnom stave, ale je nasiaknutý do kladnej elektródy (práškovej zmesi uhlíka a burelu) - odtiaľ pochádza staré označenie "suchý článok".
+Medzi kladnou elektródou (práškom) a zinkovým obalom sa nachádza separátor zo savého papiera kvôli zabráneniu priamemu kontaktu medzi elektródami a pritom umožňuje priechod elektrolytu medzi elektródami.
+
+
+== Konštrukcia ==
+
+Článok je najčastejšie konštruovaný tak, že zinkový kalíšok tvorí zároveň vonkajší obal článku. Toto riešenie síce znižuje cenu, ale ak nie je prítomný žiadny ďalší nepriepustný obal, môže dôjsť k vytečeniu článku. V súčasnosti býva prítomná plastiková fólia a/alebo kovový plášť.
+
+
+== Vytečenie článku ==
+
+V priebehu vybíjania je spotrebovávaný zinok a vytvorí sa voda (pozri chemické rovnice nižšie). Pri "poddimenzovaní" hrúbky zinkového obalu výrobcom môže nastať situácia, kedy sa zinok prederaví a elektrolyt obsahujúci teraz veľa vody začne vytekať von a spôsobovať koróziu vnútri napájaného prístroja.
+
+
+== Elektrochemická reakcia ==
+Celková reakcia:
+
+Zn + 2NH4Cl + 2MnO2 → [Zn (NH3)2] Cl2 + 2MnO (OH)Na zápornej elektróde:
+
+Zn → Zn2+ + 2e-Vzniknuté zinočnaté ióny následne reagujú s amónnymi iónmi NH4+ = [H (NH3)]+:
+
+Zn2+ + 2 [H (NH3)]+ → [Zn (NH3)2]2+ + 2H+Na kladnej elektróde:
+
+2MnO2 + 2H+ + 2e- → 2MnO (OH)Táto reakcia je trochu zjednodušená, pretože ión H+ sa v skutočnosti vo vodnom roztoku nevyskytuje voľne, ale je viazaný koordinačne-kovalentnou väzbou na vodu, čím vznikne hydroxonium H3O+.
+
+
+== Vlastnosti ==
+Menovité napätie článku je 1,5 V. Býva vyrábaný najčastejšie vo veľkostiach AAA (mikroceruzková batéria), AA (ceruzková batéria), C (malý monočlánok) a D (veľký monočlánok). Okrem toho sa vyrábajú aj batérie (v zmysle: spojenie viacerých kusov) týchto článkov: 3 články - "plochá batéria" a 6 článkov - "deväťvoltová batéria".
+V porovnaní s inými druhmi batérií (zinkovo-chloridové, alkalické) nemajú takú kapacitu a schopnosť dodávať väčší prúd. Naopak ich výhodou je nízka cena. Z týchto dôvodov sú vhodné predovšetkým pre menej náročné použitie napr. do hodín a budíkov, rádií alebo niektorých svietidiel.
+Kapacita ceruzkovej batérie sa pohybuje okolo 600-800 mAh pri vybíjaní prúdom 100 mA do konečného napätia 0,9 V.
+
+
+== Zinko(vo)-chloridový článok ==
+Zinko-chloridový článok je vylepšená verzia zinko-uhlíkového článku.
+Hlavným rozdielom medzi zinko-chloridovým a zinko-uhlíkovým článkom je náhrada elektrolytu z chloridu amónneho z väčšej časti za chlorid zinočnatý (ZnCl2).
+Pri výrobe sú tiež použité kvalitnejšie chemikálie, čo sa pozitívne prejavuje na vyššej životnosti.
+Tieto články bývajú v angličtine označované ako "heavy duty" (vysoký výkon). Stále však ani zďaleka nedosahujú vlastnosti alkalických batérií.
+
+
+=== Elektrochemická reakcia ===
+Reakcia katódy je preto odlišná
+
+MnO2(s) + H2O (l) + e- → MnO (OH) (s) + OH-(aq)Celková reakcia:
+
+Zn (s) + 2 MnO2(s) + ZnCl2(aq) + 2 H2O (l) → 2 MnO (OH) (s) + 2 Zn (OH) Cl (aq)
+
+
+=== Vytečenie článku ===
+Zámena elektrolytu sa prejaví na tvorbe vody v článku. Zatiaľ čo v prípade klasického zinko-uhlíkového voda vznikala a bolo riziko vytečeniu do prístroja, v tomto prípade sa voda pri vybíjaní spotrebúva, tým pádom je článok na konci svojej životnosti naozaj suchý.
+V súčasnosti je už väčšina vyrábaných článkov zinko-chloridová. Nájdu sa však aj výrobcovia používajúci staré zloženie - je totiž o niečo lacnejšie.
+
+
+== Iné projekty ==
+
+ Commons ponúka multimediálne súbory na tému Zinko-uhlíkový článok
+
+
+== Externé odkazy ==
+Heslo batérie uhlík-zinok na Abecede batérií a akumulátorov
+
+
+== Zdroj ==
+Tento článok je čiastočný alebo úplný preklad článku Zinko-uhlíkový článek na českej Wikipédii.

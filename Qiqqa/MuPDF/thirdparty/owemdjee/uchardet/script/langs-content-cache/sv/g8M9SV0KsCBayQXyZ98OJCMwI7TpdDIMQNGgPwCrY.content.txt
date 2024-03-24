@@ -1,0 +1,384 @@
+revision: 53128690
+title: Morse Code
+url: https://sv.wikipedia.org/wiki/Morsealfabetet
+
+
+---
+
+Morsealfabetet, eller morsekod vardagligt tal, är ett kodsystem för överföring av textmeddelanden med telegrafi. Det är – till skillnad från dagens maskintelegrafi och datorkommunikationsutrustning – avsett att hanteras av människor, och ger en betydligt långsammare överföringshastighet än vad man i en ostörd miljö idag kan uppnå med maskiners hjälp.
+Under mycket svåra förhållanden är en god morsetelegrafist med den mänskliga hjärnans filtreringsförmåga dock alltjämt ovärderlig, exempelvis vid katastrofsituationer där tekniska anordningar i samhället slagits ut. Här är överföringshastigheten inte det viktigaste, utan att budskapet oförvanskat över huvud taget kommer fram.
+Detta har man insett i USA, där flygvapnet varje år utbildar tio telegrafister i morsetelegrafering som beredskap för eventuella krascher i sårbara kommunikationssystem.I Sverige har utbildningen av militära telegrafister upphört inom alla vapenslag sedan flera år. Utbildningen till telegrafist upphörde i Sverige 1993.
+
+
+== Uppfinnare ==
+Morsealfabetet har fått sitt namn efter amerikanen Samuel Morse (1791–1872). Han var egentligen en konstnär som gjorde oljemålningar. (Se biografin Samuel Morse.) Han hade under en resa 1832 mellan Europa och Amerika sett några elektromagnetiska experiment, och började som ren amatör fundera över hur detta på något sätt kunde användas för att överföra budskap. Sådana konstruktioner fanns i och för sig tidigare, t.ex. Webers nåltelegraf. Ingen av dessa konstruktioner fungerade emellertid särskilt bra.
+Morse experimenterade flitigt tillsammans med Alfred Vail (1807–1859), en duktig mekaniker. Den första, mycket primitiva mottagningsapparaten demonstrerades 1835 i New York på en 500 m försöksträcka. I början var det många misslyckanden.  Ansträngningarna resulterade till slut i tre olika patenterade alfabet, alla i Morses namn, men kanske är Vail den egentlige uppfinnaren. Det var nämligen han som  kom på att koda med kombinationer av långa och korta streck.
+
+
+== Morses alfabet nr 1 ==
+Morse ansökte 1838–04–07 om patent för uppfinningen  Improvement in the mode of communication information by signals by the application of electro-magnetism och fick det efter två år beviljat av U. S. Patent Office den 20 juni 1840 med nummer 1647.Det som Morse patenterade var inte enbart utformningen av själva alfabetet, som ofta tros, utan hela systemet:
+
+Apparater i sändänden
+Apparater i mottagningsänden
+Linjen mellan sändare och mottagare
+Sättet att överföra information, d.v.s. alfabetet. Intressant är att Morse förutseende försåg sändapparaten med en särskild anordning benämnd cypher  (se ritningsida 1 i slutet av patenthandlingen, "Fig. 2") för att indikera att sändningen innehöll krypterad information. D.v.s. morsesystemet innehöll ingen egen krypteringsfunktion, utan det var bara en signal att de obegripligheter som följde, inte innebar något tekniskt fel i utrustningen eller störningar på linjen, utan skulle accepteras i den form som mottogs.Patenthandlingen börjar med en beskrivning på fem och en halv sida som följs av tre ritningar. Där beskrivs dels ett siffersystem i två varianter (Exempel 1 och Exempel 2), samt även en bokstavsvariant (Exempel 3). Detta var alltså roten till det sedermera åtskilligt modifierade alfabet, som vi idag benämner morsealfabetet.
+Själva patentanspråket i 9 punkter rymdes på den sista halva sidan i patenthandlingen. Intressant är att Morse i anspråket inbegriper även ljudöverföring, trots att telefonen vid denna tid ännu inte var uppfunnen. Det Morse avsåg med ljud var i själva verket en mekanisk anordning i mottagningsändens teckenskrivare, som påverkade en  kläpp som slog mot en liten klang i takt med telegrafitecknen. Meningen med detta var att väcka uppmärksamhet i mottagningsänden, att telegramsändning pågick. I patentanspråket ingick även ett moment att det gick att stänga av klockpinglandet under telegramsändningen, om man tyckte att ljudet var störande. Det gäller vid patentanspråk, att täppa till alla tänkbara kryphål för konkurrenter! T. ex. att ta patent på en avstängningsanordning.
+
+Olika budskap kunde på det här viset sändas som ett numeriskt ord, och med hjälp av en översättningstabell med numrerade ord och standardfraser gick det att förmedla ett budskap. Möjligheterna begränsades givetvis av vilka fraser man hade i översättningstabellen, och avsändare och mottagare måste ha tillgång till samma tabell.
+I patentet visade Morse även genom Exempel 3 hur man kunde beskriva hela alfabetet. Därvid tycks han ha tagit fasta på att bokstäverna G och J uttalas ungefär lika i många engelska ord så därför fick dessa samsas på samma kod. På analogt sätt behandlades paren I Y och S Z. Särskilda kännetecken är att vissa koder är uppdelade i två grupper, samt den extralånga signalen för bokstaven L, dubbelt så lång som "vanlig" lång. Det är svårt att se någon systematik i hans val av kombinationer, särskilt för varför L skulle särbehandlas. Hur långa de olika signaldelarna bör vara ger patenthandlingen ingen annan information om än det föga upplysande att "lång signal ska vara lika med avståndet mellan två korta" och "avståndet mellan två tecken skall var större än avståndet mellan två korta".
+I stället för att med en komplex kodbok överbringa ett begränsat antal numrerade budskap, kunde man med hjälp av en helt kort lista förmedla vilket budskap som helst på i princip vilket språk som helst, som skrivs med samma sorts alfabet.
+
+
+== Morses tilläggspatent ==
+Erfarenheter vunna under den första tidens praktiska användning av "Exempel 3" ledde till först ett andra alfabet som sen blev ytterligare förfinat till det tredje alfabetet. Båda dessa modifierade alfabeten patenterades.
+
+
+=== Morses andra alfabet ===
+I det andra alfabetet behöll Morse kombinationerna G/J och I/Y samt den extralånga L. Däremot släppte han kombinationen S/Z, så att S och Z fick individuella signaler.
+Ytterligare en svårbegriplig egenhet var att 0 (noll) tilldelades en extra-extra lång signal, längre än "långa L". Motiv för detta är f n oklart, men går möjligen att få fram, när man hittat patenthandlingarna för andra och tredje alfabetet, som med all säkerhet finns arkiverade hos amerikanska patentverket.
+
+
+=== Morses tredje alfabet ===
+Det tredje patenterade alfabetet innehöll stora förbättringar. Morses medhjälpare, Alfred Vail, som förfinade Morses från början ganska primitiva apparater, tog aktiv del i utvecklingen av de olika teckenkombinationerna. Han tog fasta på fördelningen av olika bokstävers frekvens i språket, och tilldelade de vanligaste tecknen de kortaste kombinationerna. Därmed kunde sändningstiden nedbringas. Till sin hjälp tog Vail den kunskap som redan fanns inom tryckerinäringen. Vid denna tid typsattes allt tryck, och man behövde därför större antal typer av de vanligaste bokstäverna än för mindre vanliga bokstäver. Statistiken fanns alltså redan klar. Engelska språkets frekvenslista börjar E A N T... och följaktligen tilldelades dessa tecken korta sekvenser:
+
+━,     ━   ━━,      ━━   ━,       ━━  och så vidare.Vail publicerade sina tankar i en skrift 1835 och kom med det slutliga förslaget 1838., samma år som Morse lämnade in sin första anhållan om patent för kommunikation med "electro-magnetism". Vem som ska anses vara den verkliga upphovsmannen till den geniala idén med korta och långa signaler kan alltså diskuteras, men det var Morse som fick patentet.__________________
+
+Av dessa kombinationer av "långa" och "korta" har bara E, K, M och N överlevt från det andra alfabetet till dagens internationella morsealfabet. Från tredje alfabetet känner vi idag igen A, B, D,  H, I, S, T, U, V och W.
+
+
+== Tolkningsproblem ==
+Skillnaden mellan lång och kort teckendel visade sig emellertid för liten, och vid ojämnheter i sändningen blev signalen ibland något mellanting mellan en kort puls och en lång. Det visade sig också vara svårt att skilja mellan "kort paus" inuti ett tecken, och "lång paus" mellan bokstäver. Detta gjorde att Morse i början inte var särskilt framgångsrik vid sina demonstrationer. Det blev mycket feltolkning vid mottagandet. Tabellerna 1 … 3 avbildar tecknen i Morses tidsskala, och den nutida läsaren kan konstatera att skillnaden mellan lång teckendel och kort teckendel inte är särskilt pregnant. Samma gäller för skillnaden mellan kort och lång paus inuti ett tecken samt avstånden mellan tecken (längre än lång paus inuti ett uppdelat tecken) och mellan ord (längre än pausen mellan tecken). Morse tycks inte ha lämnat någon klar definition för pausernas tidsskala.
+Telegrafisten måste alltså lära sig att känna igen hela åtta olika tidsintervall:
+
+Kort signal
+Lång signal
+Extralång signal (tecknet L)
+Extra extralång signal (siffran 0)
+Kort paus (mellan teckendelar)
+Lång paus (inom ett uppdelat tecken)
+Extralång paus (mellan tecken)
+Extra extralång paus (mellan ord)Det är lätt att förstå att det på Morses tid lätt blev fel redan vid sändningen. Vid de första försöken var det alltid fråga om skrivande apparater för mottagningen. Några bra metoder för överföring av toner fanns nämligen inte vid denna tid. Till de principiella otydligheterna i själva koden kom sålunda ofullkomligheter i apparaturen. Det var alltså på många sätt bäddat för feltolkningar vid mottagningen.
+
+
+== Reviderade alfabet av morsetyp ==
+
+Morses kod såg inte alls ut som det vi i dag menar med morsealfabetet. I USA användes den amerikanska koden ända till mitten av 1900-talet vid de amerikanska järnvägarna – kallas därför ibland järnvägskoden – men är numera helt övergiven.
+Friedrich Clemens Gerke (1801–1888) gjorde en europeisk justering av morsekoden redan 1848. Den viktigaste förändringen var att han eliminerade de pauser som förekom inom somliga tecken i den amerikanska versionen. Han införde därvid också de i engelska språket okända, men för tyska språket viktiga tecknen Ü, Ä och Ö. Detta system användes på en telegraflinje Hamburg–Cuxhaven, den första i Europa baserat på elektriska signaler. Tidigare fanns endast optiska telegraflinjer. Till minne därav har teletornet i Cuxhaven döpts till Friedrich-Clemens-Gerke-Turm.
+
+Efter en del ytterligare justeringar antogs ett nytt alfabet vid den internationella telegrafkongressen i Paris 1865. Det var där koden för vårt svenska Å föddes.Vid pariskongressen bestämdes att teckendelarna skulle ha följande inbördes proportioner:
+
+Varaktigheten av 1 kort teckendel är referens (enhetsintervallet),
+avstånd mellan teckendelar = 1 enhetsintervall,
+längden av en lång teckendel = 3 enhetsintervall,
+avståndet mellan enskilda bokstäver inom ett ord = 1 lång teckendel, det vill säga 3 enhetsintervall,
+pausen mellan ord = 5 enhetsintervall.Detta blev definitionen för det så kallade internationella telegrafalfabetet. I USA benämndes det ofta Continental Morse på grund av att det skulle gälla vid interkontinental trafik. I USA användes länge Morses ursprungliga alfabet ("Exempel 3" ovan) parallellt med den internationella koden, och kallades American Morse, ibland Railway Morse för samma sak. Skickliga telegrafister behärskade bägge systemen, vilket är en imponerande prestation.
+Det internationella telegrafalfabetet har under tidernas lopp reviderats flera gånger. Alfabetet omfattade inte bara bokstäver utan även siffror och många skiljetecken samt ett antal så kallade procedurtecken. Procedurtecken är funktioner, såsom "lystring", "repetitionstecken", "slut på meddelandet", "slut på sändningen", och många fler.
+Det ursprungliga alfabetet omfattade bara bokstäver som användes i engelska språket. Bokstäver Å, Ä, Ö fanns inte med, men de har senare fått sina speciella kombinationer. Liknande gäller för andra språk, tyskarna behöver Ü, spanjorerna Ñ, fransmännen À och É etc. Vissa dubbeltydigheter finns dock. Franska À har exempelvis samma kombination som Å, men eftersom Å inte förekommer i franska språket är det inte någon risk för missförstånd härvidlag. Andra språk har sina specialbokstäver med egna kombinationer av korta och långa teckendelar. Exempel på detta finns vid uppslagsordet Specialtecken i morsealfabetet.
+Det visade sig med tiden att skillnaden mellan bokstavsmellanrum inuti ord (3 enhetsintervall) och ordmellanrum (5 enhetsintervall) inte var tillräcklig för att man i alla lägen skulle hålla isär dessa vid mottagning. Av misstag hände det alltför ofta att ett och samma ord blev uppdelat i två, och att närliggande ord blev ihopskrivna så att det såg ut som ett ord istället för två. En person som behärskar det aktuella språket kan ofta ändå klara ut hur det ska tolkas, men i vissa lägen kan det bli missförstånd om en mening inte får den rätta indelningen av ord.
+På en internationell konferens strax efter andra världskriget bestämdes att ordmellanrummet skulle ökas från 5 enhetsintervall till 6. Därigenom skulle ojämnheter i teckengivningen vid handsändning få mindre betydelse; tecknen skulle ändå bli rätt tolkade av mottagaren. Tabell 4 nedan återger tecknen med de föreskrivna proportionerna mellan långa och korta teckendelar samt med rätt avstånd mellan teckendelar. Detta är alltså något annat än de representationer med "prickar och streck" man ofta ser i litteraturen. Jämfört med intervallen i tabell 2 och tabell 3 ser man alltså här hur tydligheten ökat betydligt.
+Vid den här tiden hade man konstruerat maskinell utrustning, så kallade transmittrar, som sände telegrammen med hjälp av pappersremsor där ett antal hål i olika placeringar gav upphov till långa och korta signaler motsvarande de olika tecknen. Systemet med hålremsor togs fram efter ett förslag av Wheatstone. Wheatstone-remsor förekommer med hålplaceringar enligt två principiellt olika system. Det ena systemet användes för landtelegraf, medan det andra användes på oceankablar. Det är tekniska skäl till att man hade olika system på land och ocean. Den som vill veta mer om hålremsor hänvisas till separat artikel om detta.
+Emellertid var det vid den förhärskande transmitterkonstruktionen av mekaniska skäl svårt att åstadkomma annat än pauser med ett udda antal enhetsintervall. Det var svårt att bygga om dem för det jämna talet 6. Maskinerna sände emellertid så pass jämnt att man ansåg att fem enheter kunde behållas som ordmellanrum vid maskinsändning. En klassisk tillverkning var system Creed, där avläsningen av hålremsans kombinationer gjordes på mekanisk väg. Vid tiden för andra världskriget konstruerade den amerikanska firman McElroy Manufacturing Corporation en transmitter, där tecknen alstrades genom fotocellavläsning av svarta streck i morseteckenkombinationer på en löpande pappersremsa. 
+Så småningom kom man till insikt om att det inte var så lämpligt att ha en standard för manuell sändning och en annan för maskinsändning. Eftersom det inte var alltför svårt att bygga transmittrar med pauser omfattande ett udda antal enhetsintervall bestämde man sig alltså till slut för att all sändning, såväl manuell som maskinell, skulle utföras med sju enheters ordmellanrum. Det är vad som gäller nu (2016).
+19 februari 2004 gjordes den första ändringen av Morsealfabetet sedan andra världskriget, man införde en kod för snabel-a. Koden för snabel-a blev densamma som koden för AC fast utan paus mellan tecknen. Här bör dock påpekas en dubbeltydighet beträffande snabel-a. Utan att det varit internationellt fastställt har man i Sverige och många andra länder länge använt tecknet @, (alltså "snabel-a") när man haft anledning fästa procedurtecknet "slut på sändningen" på papper. Detta tillämpas även i nedanstående tabell över nu gällande teckenstandard. Innan det nya snabel-a-tecknet                    kom fanns det ändå behov att per telegrafi meddela e-postadresser, där tecknet @ ingår. I brist på bättre metod förekom då att man använde                  i en e-postadress, vilket kunde ge viss förvirring, om det tolkades som "slut på sändningen" i stället för deltecken (separator) i en e-postadress. I och med det nu fastställda tecknet för @ har man eliminerat bekymret vid telegrafering av e-postadresser, men man har i stället skapat ett nytt problem, när man i text på papper på något sätt ska nedteckna procedurtecken. I praktiken torde man dock av sammanhanget utan större problem förstå vad som menas i det ena eller andra fallet.
+
+
+== Internationella telegrafalfabetet ==
+Här nedan visas de vanligaste tecknen i det nu (2016) gällande morsealfabetet enligt rekommendationen från Internationella teleunionen (ITU). Det finns även en rad ytterligare tecken, som förr var vanliga, men som numera är mer eller mindre bortglömda eller har blivit upphävda. Se Föråldrade tecken. Några tecken i tabellen är "icke officiella", varmed menas att de inte ingår i den av ITU fastställda listan i Radioreglementet.
+För nationella tillägg se specialtecken i morsealfabetet
+
+ 
+
+––––––––––––––––––––
+
+––––––––––––––––––––
+
+Benämningarna skillnadstecken och åtskillnadstecken påminner om varandra, varför det ibland leder till förväxlingar, men de låter/ser ut helt olika:                respektive               . Man måste vara noga med att skilja på dem eftersom de har helt olika innebörd.Åtskillnadstecknet (symbol =) markerade ursprungligen gräns mellan telegramhuvudet, bestående av signaladress, tidsnummer, gruppantal etc (engelska preamble) och själva budskapet (engelska message). Senare har det fått en mer allmän innebörd som separator mellan stycken, vilka som helst, och ersätter det föråldrade alinea                  (betecknas med symbolen ¶).I nyhetsbulletinerna som från svenska kustradiostationen SAG tidigare sändes med telegrafi till alla svenska fartyg, det så kallade SAX-presset markerade man på senare tid i stället nytt stycke genom att i klartext sända ordet item = nytt ämne. När kuststationerna så småningom slutade med telegrafi helt och hållet övergick man till att sända SAX-presset med maritex i stället. Maritex i sin tur lades ner år 2000.
+
+
+== Föråldrade tecken ==
+Ännu i mitten på 1950-talet förekom för skiljetecknen andra kombinationer än vad som numera är internationell standard eller som helt tagits ur bruk:
+
+Av dessa är det väl bara de fem första som har en självklar tolkning.
+"Undersökningstecken" (i skrift tecknat som US), använde man vid kontroll av att utrustningen fungerade. Militärt användes tecknet även vid provringning vid varje kabelskarv vid trådlinjebygge. För signaleringen användes summern i fälttelefonen (modell 37, senare modell 37/43).
+För de övriga tecknen tycks kunskapen om den exakta innebörden ha gått förlorad. Efterforskningar har hittills inte lett till någon instruktionsbok eller annan handling med definition.
+Samma sak gäller signalen med 4 utropstecken i en följd, som skulle tolkas som "Varning för hög sändareffekt". Varför man måste varna, och vad som menades med hög, är idag oklart.
+I en bok tryckt 1922  förekommer bl a följande avvikande procedurtecken:
+
+Här kommer åter varningen för hög effekt. I boken nämns inget om varför det skulle varnas, och ej heller ges någon definition på vad som menas med hög effekt.
+
+
+== Olika sätt att beräkna sändningshastighet ==
+
+Den hastighet varmed ett telegram överbringas har traditionellt angivits som antal ord per minut (wpm = words per minute). För att det ska bli meningsfullt måste man fastställa vad som menas med ett ord. Genom tiderna har det varit olika meningar härom. Det finns korta ord och långa ord. Det statistiska medelvärdet av ordlängden i ett längre textavsnitt varierar allt efter textens språk, och inom ett visst språk även i viss mån av textens karaktär och författarens favoritord.
+En väsentlig faktor att komma ihåg är att frekvensen av olika bokstäver i en text varierar med språket, och att morsekoden uppvisar "långa tecken" och "korta tecken", allt efter tecknets konstruktion med olika kombinationer av korta och långa teckendelar.
+Vid beräkning av hastigheten måste man komma ihåg att i ett ord ingår även tidsavståndet till nästa ord, vilket ibland glöms.
+
+
+== Hastighetsrekord vid telegrafimottagning ==
+
+
+== Principer för transmitter-remsor ==
+Creed-remsa för landtrafik, konstruerad av Frederick George Creed
+Wheatstone-remsa för oceankablar, uppfunnen av Charles Wheatstone
+Remsa för fotocelltransmitter
+
+
+== Mottagningsanordningar ==
+
+
+=== Morses ursprungliga teckenskrivare ===
+
+Morses första teckenskrivare (se bild till vänster) var konstruerad med en pappersremsa, som med konstant hastighet drogs av ett loddrivet urverk. Enligt uppgift bestod urverket k av delar från en klocka, som Morse "slaktat". Ankaret B på en elektromagnet hade ett stift, som trycktes mot pappersremsan, när det gick ström genom elektromagnetens spole K, och lyftes från remsan av en fjäder, när strömmen till spolen upphörde. På detta sätt blev det små streckformade märken (gropar) i pappersremsan som avbildade strömväxlingarna i signaleringen.
+I bilden till vänster visas nedtill även principen för en anordning för "maskinsändning" med "typsatta" morsetecken. Figur 1 överst visar typ för tecknet 1 jämte mellanrum till nästa tecken, och figur 3 typ för tecknet 3 jämte mellanrum till nästa tecken. (Morses första alfabet utan långa teckendelar.) Strömmen från batteriet P styrdes av en på hävarmen L fäst U-formad metalltråd, som doppade ned i två små kvicksilverfyllda skålar V  i den takt varmed vagnen A med styrstiften vevades fram. En tyngd N höll hävarmen tryckt mot teckenvagnen.
+
+
+=== Världens första morsetelegram ===
+1843 fick Morse ett anslag på 30 000 US dollar från USA:s Kongress för byggande av en 61 km lång experimentförbindelse från Washington, DC till  Baltimore. Gissningsvis var dragningen längs järnvägen, vilket stöds av ändpunkten enligt nedan. Rimligen verkställdes inte  detta av enbart Morse och Vail personligen, utan man hade nog städslat andra för det praktiska arbetet, som var klart redan efter ungefär ett år. Föga är känt om detaljerna, t.ex. anskaffningen av material såsom tråd, isolatorer, tusentals stolpar etc. Möjligen var det fråga om en enkeltrådförbindelse med jord som återgång, varvid järnvägrälsen kunde vara till stor hjälp för att få låg elektrisk resistans. Men ingenting sägs om jordtag. Mer troligt är att det rörde sig om två trådar, även om det kallats enkeltrådförbindelse, till skillnad från andra samtida system, som  i början var mångtrådiga och krävde en tråd för varje tecken samt återgångsledare. Senare kom förbättringar, där antalet trådar hade reducerats, t.ex. Gauss och Webers nåltelegraf.Vid invigningen 1844–05–24 sände Samuel Morse kl 0845 meddelandet  "What hath God wrought.?", ett citat på ålderdomlig engelska från Bibeln (Fjärde Moseboken, kapitel 23, vers 23); fritt tolkat till modern svenska ungefär: Är icke detta ett Guds under? Sändningen ägde rum från Supreme Court Chamber (Högsta Domstolen) i kongressbyggnaden på Capitol Hill i Washington, och togs emot av Alfred Vail i Baltimore and Ohio Railroad (B & O) outer depot, Baltimore, Maryland. Detta har kommit att betecknas som världens första morsetelegram.
+
+I efterhand har tolkningen av skrivarmärkena på remsan skrivits med bläck, och Samuel Morse har med egen hand bekräftat äktheten med följande ord i remsans överkant:
+
+This sentence was written from Washington by me at the Baltimore Terminal at 8h 45 min A.M. on Friday May 24.th 1844, being the first ever transmitted from Washington to Baltimore by Telegraph and was indited by my much loved friend Annie G. Ellsworth. Sam. F. B. Morse. Superintendent of Elec. Mag. Telegraph.–
+(Detta tänkespråk sändes från Washington av mig till Baltimore-stationen kl 8:45 f m fredag den 24 maj 1844, det första som någonsin sänts från Washington till Baltimore med telegraf och föreslogs av min mycket kära vän Annie G. Ellsworth. Sam. F B. Morse. Chefredaktör för Elektr. Tidskr. Telegraph.–)Remsan är bevarad och förvaras i USA:s kongressbibliotek.
+
+
+=== Soundern ===
+Vid de första telegrafanläggningarna skedde detekteringen av de mottagna signalerna genom att korta och långa markeringar på ett eller annat sätt gjordes på en pappersremsa, som av ett lod- eller fjäderdrivet verk drogs med jämn hastighet. För att spara tid vid utskriften av telegrammet var det en person som "läste högt" från remsan, och en annan person skrev på diktamen. Det krävdes alltså två personer för mottagning, där åtminstone den ene måste vara telegrafikunnig.
+Markeringen gjordes med en reläanordning, morseskrivaren, som slamrade. Därvid lät det lite olika när reläet smällde till och när det föll tillbaka mot viloläget. Det lät "klick" åt ena hållet och "klack" åt andra hållet. Exempelvis låter ett A (━  ━━━) klick-klack klick … … … klack, medan ett N (━━━  ━) låter klick … … … klack klick-klack. (Symbolen … … … betyder här en paus lika lång som en lång teckendel.) Det blir alltså en alldeles bestämd rytm, karakteristisk för varje tecken. Med lite träning lär sig telegrafisten avgöra när en teckendel börjar och när den slutar, trots att det är tyst däremellan. Duktiga telegrafister kunde höra rytmen och ensamma och utan mellanhänder skriva ner telegrammet alldeles rätt i samma ögonblick signalen hade anlänt. Vissa bolag förbjöd mottagning med klick-klack-metoden, då man trodde att den inte var lika säker som den konventionella metoden med två personer engagerade vid mottagningen. Prov visade emellertid att klick-klack-metoden var minst lika säker, och då var bolagen inte sena att acceptera, eftersom man ju kunde minska personalstyrkan och lönekostnaderna till hälften.
+Ett problem var större stationer, där man hade mer än en linje. Då kunde det bli ett förskräckligt slamrande när flera telegram skulle tas emot samtidigt, och det blev ljudstörningar mellan olika telegraflinjer. (Alla telegrafister satt i samma rum.) Och det önskade ljudet var ändå inte särskilt starkt, och tågen som körde förbi alldeles utanför telegramrummet slamrade än värre.
+Man ska komma ihåg, att vid denna tid var radioröret ännu inte uppfunnet, så det fanns inga tongeneratorer som kunde ge ljud till hörtelefoner, som ännu inte var uppfunna de heller. Ringklockor fanns i och för sig, men de var alltför långsamma för att kunna användas vid snabb telegrafering.
+Man prövade en rad olika sätt att genom olika mekaniska utföranden av skrivreläet göra skillnaden i ljudupplevelse av klick resp klack större. Vidare monterade man hela anordningen i olika sorters lådor eller kammare med bestämda dimensioner som gav resonans för klick- och klack-ljuden, som då hördes tydligare. Resonanslådan kunde sen monteras alldeles i närheten av telegrafistens öra, varvid de akustiska störningarna från telegrafistkollegans linje inte blev så påtagliga.
+Anordningen med stor klangskillnad mellan klick och klack, samt en resonanslåda som förstärker ljudet, kallas sounder, ljudare. 
+En liknande teknik med akustisk hålrumsresonator har man exempelvis i musikinstrument såsom marimba och bongotrummor. (Se vidare Kundts rör)
+
+
+=== Undulatorn ===
+Undulatorn är en speciell morseteckenskrivare, särskilt väl lämpad för höga hastigheter. Med denna maskin ritas ett kontinuerligt bläckstreck på en löpande pappersremsa. Telegrafisignalen påverkar en elektromagnet, som drar pennan – ett bläckfyllt, mycket klent metallrör – ett stycke åt sidan. När signalen upphör släpper magneten, och pennan återförs av en fjäder eller på magnetisk väg till ett noll-läge. På detta sätt ritas en sick-sack-linje på remsan, där taggarna avspeglar signalens korta och långa teckendelar, som telegrafisten avläser genom att titta på remsan, som löper strax över tangentbordet på en skrivmaskin. Telegrafisten skriver ner meddelande i samma takt som remsan löper. Med övning går det att läsa flera tecken på en gång med ett enda ögonkast på samma sätt som en van läskunnig person läser tidningen eller en bok, när ögonen sveper över textraderna. Hjärnan uppfattar inte de enskilda bokstäverna, utan tolkar en hel ordbild bestående inte bara av ett ord utan av flera i en följd. Undulatorns tagg-mönster uppfattas som glyfer. Telegrafisten lär sig känna igen mönstret för hela ord eller flera ord i en vanlig kombination och skriver ner ord snarare än bokstavssekvenser. Normalprestationen för en yrkestelegrafist ligger med denna metod vid flera hundra tecken per minut.
+
+
+== Olika utbildningsmetoder ==
+
+
+=== NL-metoden ===
+NL-metoden är den metod som under senare delen av 1900-talet tillämpades vid utbildningen av svenska militärtelegrafister. Alla tecken övades parvis, varvid man för att hjälpa eleven att uppfatta skillnaderna i varje par kombinerade två tecken med tydligt olika ljudbild.
+I den ursprungliga versionen började man med alla skiljetecken och alla procedurtecken. Motiveringen var att man skulle ordentligt nöta in sådana morsetecken som i verklig trafik förekommer sparsamt. Därefter övergick man till de första bokstäverna parvis. Därvid började man med paret N och L (därav namnet NL-metoden). Sedan följde paret E och O och så vidare. 
+Av pedagogiska skäl övergick man efter en tid till en reviderad version, där man tog fasta på att det skulle vara roligare för eleverna att så snart som möjligt i övningstexterna få några enkla meningar på svenska i stället för nonsens i säkerhetsträningen.
+I lektion 1 inlärs procedurtecknen = och + som förekommer i alla lektionsavsnitt. Därefter går man direkt in på bokstavspar som efter hand interfolieras med flera skiljetecken och siffror, också parvis.
+I den versionen drivs utbildningen i steg enligt tabellen till höger.
+
+
+=== US Signal Corps metod ===
+Vid denna utbildningsmetod inlärs morsetecknen i en följd som är anpassad till utseendet på en skrivmaskins eller dators tangentbord av QWERTY-typ. Det speciella med denna metod är att morsetecknen och rätt fingersättning vid maskinskrivning inlärs samtidigt på i stort sett hälften av den tid det skulle ta att lära sig telegrafera och skriva på maskin i separata kurser. Problemet med dålig och svårtolkad handstil är samtidigt eliminerat.
+Redan från första början ges morsetecknen i 80- à 100-takt (20…25 WPM). I början övas inte ordmellanrum, utan alla tecken ges i en enda lång följd med förlängda mellanrum motsvarande 40 enhetsintervall. (Med enhetsintervall menas längden av 1 kort teckendel, en "prick".)
+I lektioner längre fram sker sändningen med korrekta tecken- och ordmellanrum. Därvid tränas den eftersläpning, som är så viktig vid mottagning i högre hastigheter. Med eftersläpning menas att man lyssnar på två eller fler tecken utan att skriva något, och sedan snabbt skriver ned det i minne behållna avlyssnade, samtidigt som man lyssnar och memorerar de närmast följande tecknen. Ju skickligare telegrafisten är, desto längre eftersläpning klaras, varvid mottagning av mycket snabba sändningar blir möjlig.
+En skicklig telegrafist lyssnar inte efter enskilda tecken ett och ett, utan uppfattar ett helt, inte alltför långt ord, som en enda rytmisk melodi.
+Att för hand skriva entydigt och lättläst även för andra än telegrafisten själv, är svårt i hastigheter från ca 130-takt och uppåt. Att med skrivmaskin skriva i samma takt är en enkel uppgift för den som behärskar tangentbordet med rätt fingersättning.
+Som jämförelse kan nämnas att vid kontorsutbildning brukar kravet för godkänt vara minst 450 nedslag på 3 minuter, varvid även blanksteg räknas som nedslag. Detta motsvarar ungefär 150-takt vid telegrafering. Jämförelsen haltar något, eftersom vid telegrafering ordmellanrummen inte räknas, utan i stället blir en kort paus, där telegrafisten kan "hinna i kapp". En god maskinskrivare klarar ca 900 nedslag på 3 minuter (motsvarande ca 300-takt telegrafering). Segraren i maskinskrivningstävlingar brukar ha ett resultat en god bit över 900 nedslag på 3 minuter.
+I första lektionen tränas enbart pekfingrarna med början på tangenterna F och G och enbart på referensraden på skrivmaskinen. Viloläget är med vänster pekfinger lätt vilande på tangent F (utan att den trycks ned), och höger pekfinger på samma sätt över tangent J. Därvid ligger tangenterna G och H tomma mellan pekfingrarna.
+
+På de flesta tangentbord finns en liten upphöjning på F och J, så att man kan känna att pekfingrarna ligger rätt i viloläget. Detta är särskilt viktigt för den som ser dåligt. Efter träning kan t o m en helt blind lära sig skriva bra efter muntlig diktamen, direkt eller via en bandinspelning (dikteringsmaskin), eller som här, vid mottagning av morsesignaler.
+I samma lektion inlärs hela fem ytterligare tecken, nämligen H J M R U. varvid R F G skrivs med vänster pekfinger och H J U M med höger pekfinger. Därvid börjar även träningen att skriva på andra rader än referensraden, nämligen U på raden närmast ovanför, och M på raden närmast under referensraden.
+Lektion 1 innehåller alltså hela 7 tecken på samma gång. Erfarenheten visar att de flesta elever klarar att lära sig alla dessa 7 tecken på ett 2-timmarspass uppdelat i korta avsnitt om ca 20 minuter med korta 5-minutersraster mellan avsnitten.
+Som exempel på hur en lektion enligt denna metod kan gå till visas här lektion 1 i sin helhet.
+Vid start skall vänster pekfinger lätt vila på referenstangenten F och höger pekfinger på referenstangenten J.
+Inledningsvis sänds lång sekvens av F F F … under någon minut, varvid eleverna varje gång tecknet hörts trycker ner motsvarande tangent på skrivmaskinen. Förfarandet upprepas på samma sätt med bokstäverna G, H, M, J, R och U. Efter varje nedskrivet tecken skall fingret återgå till viloläget F resp J. 
+Därefter vidtar träningen med följande text, där varje blanksteg utgörs av 40 enhetsintervall:
+
+F F F F F   G G G G G   H H H H H   M M M M M   J J J J J   R R R R R   U U U U U   F F F F F   G G G G G   H H H H H   M M M M M   J J J J J   R R R R R   U U U U U    F H U R G H M J R U F G M J H H F G M H M J H R U F J R J G U F H R U U F M G H M R H F R R J U G U J H F M J R M F R U G M H F H G R U J J H U F J M R R J F M U M H G J J G H F U R F M H U G J R J F H R G U M H G F U J F H U M R J H R M G F F J H H R U M U H F J R M F U J M G H H F U U J R H H M G M F R F U H R M H G J R F J M U G H U M F G J G F G H M R U M R J F H M J H G R U J F U F H M G R M J H R M F R G J H J U F U F U H M J R H G R H G R F H M J U F U J F U H M H J H U G R J G R F U J M R F F M U J G J R U M M H F J H U F R G R F U H M J R G U J F U M H R J M R F M F H G H U M F U G U H J M J R J R G F F H M H R U M H R U F R R U G U F M H J J F G J H M G F H U J G U J M H M G R U H F M F R J U F G J F M H J G M G H J M F U R H F R U M G F J H F G J M U R G M H U F H F U R J M H G F R J U J M G M G J H U F F H R J H R G H U M F J G M H M J F G U F R U J G H R U H U J G M F M H M F R J G U F H G J U R H G J M F H M R F M U F J G U G F U H G H R J H R M F J M U J F G U M G F G H U H H R M F J M F R J M G U F U F F F F F G G G G G H H H H H M M M M M J J J J J R R R R R U U U U U F F F F F G G G G G H H H H H M M M M M J J J J J R R R R R U U U U U F F F F F G G G G G H H H H H M M M M M J J J J J R R R R R U U U U U F U R R G J J H G H H H J J M M G F M J J J H G G G F M R J H M R H M M M G R F H F G G M H G G F F M M F J R R G M M G J H J G U R R J F H R H J U G H G R F J M J R R R J R U G U U F J G G R U H H M H U M F G R G U M H H U J U F J M H F H U R G U F J M G U H F H J M J G U M F H R G H F R U H H H H H H R M M R J F R R H R G M U J R J J G J M U G H H U R H H H G H U F J R H R H M M U M G J U F J J J R R U F F G U H U J F M G J F H J G H M M J J G M H M G F R H J M R J M H F R G J R R U M G U M G M F R FI lektion 2 övas alla tecknen från lektion 1 med tillägg av B och D. 
+
+Efter hand utökas lektionerna med 2 nya tecken i taget och med några fingrar i taget, som är så valda att händernas olika fingrar tränas på ett systematiskt sätt för att ge korrekt fingersättning på tangentbordet.
+
+Efter de inledande lektionerna med en enda lång sekvens utan ordmellanrum övas tecknen i korta sekvenser som bildar grupper om 5 tecken och med korrekta ord(grupp)mellanrum. Varje grupp ges en ny sekvens. 
+För blankstegstangenten (den långa, nederst på tangentbordet) används enbart tummarna med växling mellan vänster och höger. Därvid gör man så, att om ett ords sista tecken görs med höger hand använder man vänster tumme för blanksteget, och vice versa. I medeltal belastas då de båda tummarna någorlunda lika. (I viss mån är detta språkberoende alltefter frekvensen på de vanligaste ordens sista bokstav i respektive språk.)
+Det är viktigt, att eleven hela tiden har blicken på papperet så att korrekt eller felaktigt tangentnedslag syns. Eleven kan då genast se resultatet och kan korrigera fingersättningen, när samma tecken kommer nästa gång (självkontroll, ingen tid behöver spillas på rättningsarbete).
+Vid träning kan man montera en skärm över händerna, så att eleven inte kan fusktitta på tangentbordet. Det finns f ö speciella övningsskrivmaskiner med helt blanka tangenter utan påskrift.
+Om träningen sker med en gammal mekanisk skrivmaskin måste man när radslutet närmar sig snabbt med vänsterhanden göra vagnretur och ny rad följt av snabb förflyttning av vänster pekfinger till viloläget på F-tangenten.
+Bekvämare blir det med en halvmekanisk s.k. elskrivmaskin, där man med ett enkelt tryck på en specialtangent åstadkommer vagnretur och ny rad. Allra bekvämast blir det med ett ordbehandlingsprogram i en dator, som automatiskt byter rad, när skriften närmar sig högermarginalen.
+Eftersom metoden utarbetades av US Signal Corps omfattas därför bara de bokstäver som förekommer i engelska språket. Följaktligen saknas de svenska bokstäverna Å, Ä och Ö. För att avhjälpa detta har Frivilliga Radioorganisationen (FRO) vid internutbildning enligt denna metod dessutom utarbetat några inofficiella lektioner, där Å, Ä och Ö ingår.
+
+
+=== Farnsworth-metoden ===
+Grundprincipen för Farnsworthmetoden, så kallad efter dess skapare Philo Taylor Farnsworth, är att enskilda tecken sänds så snabbt att det är omöjligt att "räkna prickar och streck": tecknet måste memoreras som en rytm utan att synminnet tas i anspråk. Detta innebär 80-takt som minimum, kan gärna vara 100-takt eller mer. Som kompensation för den ovane nybörjaren förlängs i stället mellanrummen mellan tecknen, så att hastigheten sammanlagt motsvarar ungefär 25-takt. Efterhand som eleven går framåt minskas teckenmellanrummen samtidigt som teckenhastigheten också minskas något, så att proportioner helt enligt den fastställda standarden inträffar i trakten av 60-takt. Vid den fortsatta utbildningen drar man upp takten med det rätta tidsförhållandena för alla komponenter i ett meddelande.
+En missuppfattning. Metoden med förlängda mellanrum har ibland felaktigt benämnts spärrad sändning, vilket emellertid är något helt annat. Spärrad stil är en sändningsstil, där de korta teckendelarna ("prickarna") blivit för korta i förhållande till avståndet mellan teckendelar (tyst intervall). Med en musikterm skulle detta kunna kallas staccato. Motsatsen, att ljudande teckendelar blivit för långa på bekostnad av avståndet mellan teckendelar, kallas klistrad stil eller släpande stil. Om den spärrade eller klistrade stilen blir alltför markerad klassas det som ett sändningsfel, eftersom det, särskilt i störd miljö, lätt leder till tolkningsfel vid mottagningen.
+
+
+=== Koch-metoden ===
+Ludwig Koch genomförde på 1930-talet ett antal undersökningar om effektiviteten i olika metoder att lära ut morsealfabetet. Han kom fram till att följande metod var den bästa och ledde snabbt fram till goda resultat.
+
+Börja med två bokstäver och kör dem direkt i 75-takt à 100-takt om och om till dess eleven vid ett 5 minuters-prov skriver ner tecknen med minst 90 % rätt.
+Lägg sedan till ett nytt tecken men inte mer, och kör på samma sätt tills nedskriften är minst 90 % rätt. Fortsätt så tills alla tecknen är inlärda.Koch prövade olika ordningsföljder på nyinlagda tecken. En variant var följande grupper:
+
+E I S H
+T M O
+A D G K
+N R U W
+B C F J
+L P O V
+X Y Z
+1 2 3 4 5 6 7 8 9 0
+. , ? ; / (
+√― + = @ (den äldre tolkningen, det vill säga SK) samt HH (ferlsändningstecken).En annan indelningsföljd är:
+
+K M R S U A P T L O
+W I . N J E F 0 Y ,
+V G 5 / Q 9 Z H 3 8
+B ? 4 2 7 C 1 D 6 X
+= @ +Det är t v oklart huruvida dessa listor föreslagits av Koch själv, eller om det är skapelser av hans lärjungar, som praktiserat Kochs idéer.
+Koch rapporterar att han med sin metod lyckades driva en elevgrupp till 100-takt på 13 timmar.
+Not. Ovan gäller den äldre betydelsen av @ "Slut på sändningen" med koden: 
+ ▬ ▬ ▬ ▬▬▬ ▬ ▬▬▬, ej den nya betydelsen av @ som separator i e-postadresser:
+ ▬ ▬▬▬ ▬▬▬ ▬ ▬▬▬ ▬, som ju inte fanns på Koch:s tid.
+
+
+=== EIS-metoden ===
+EIS-metoden går ut på att man systematiserar inlärningsföljden i något slags "morsealfabetisk ordning". Metoden har fått sitt namn efter de tre första tecknen i inlärningsföljden.
+Flera varianter har praktiserats, exempelvis enligt nedanstående tabell (jämför Kochs försök ovan):
+
+Exempel på inlärningsföljden i en variant av EIS-metoden1. Alla tecken med enbart korta teckendelar:
+
+2. Alla tecken som börjar med 1 kort teckendel följt av långa teckendelar:
+
+3. Alla tecken som börjar med 2 korta teckendelar följt av långa teckendelar:
+
+… och så vidare …
+I andra varianter kan man systematisera grupperna enligt någon annan princip.
+Detta sätt att systematisera morsealfabetet har rönt åtskillig kritik. Elevernas tankar leds av EIS-metoden till en visuell minnesbild i stället för en ljudbild, minnet för en viss rytm. Det är rytmen som är det viktiga vid hörmottagningen, inte minnet för en viss bild för ögat – man skulle kunna säga att rytmen motsvarar det skrivna språkets ordbilder.
+Synminnet och hörselminnet är lokaliserade på helt olika ställen i hjärnan. Skall man bli skicklig på någon specialitet, vad det vara må, är det viktigt att man "gymnastiserar" rätt del av hjärnan. Detta gäller även hörmottagning av morsesignaler. Vid sändning tillkommer handens motorik, men den ska i hjärnans associationsvägar inte riktas mot att åstadkomma en viss kombination av långa och korta streck för "det inre ögat", utan i stället för att återskapa den rytm, som finns lagrad i hjärnan som ett ljudminne. Det är precis som vid annan sport: vill man slå olympiarekord i löpning 100 meter, är det till föga nytta att öva sig i pistolskytte.
+EIS-metoden kan i och för sig vara ett medel att lära eleverna att memorera morsealfabetet på kortast möjliga tid, men när det gäller förmåga att ta emot morsesignaler i hög takt är EIS-metoden en hämmande faktor.
+
+
+== Lär morse på Internet ==
+På Icwo.net  finns träningsprogram för morse.
+
+
+== På Internet hämtbara morseträningsprogram ==
+Det finns numera ett stort antal program såväl för nedladdning som för direktträning över internet. De flesta programmen är avsedda för Microsofts operativsystem – allt ifrån DOS till senaste Windows-version – men det finns en del även för Mac OS Classic, Mac OS och Linux.
+En del av programmen är avsedda för nybörjares grundstudier, men somliga är lämpliga även för hastighetsträning för avancerade telegrafister. Här följer ett urval.
+Följande är så kallad freeware, det vill säga helt gratis.
+
+Just Learn Morse Code
+CW Player
+Morsecat av DK5CI
+MOSH av SM6KFY
+RufzXP-Tancred av DL4MM och IV3XYM. Höghastighetsträning med inriktning på anropsignaler.
+The Mill av Jim Farrior (W4FOK)
+QRQ för Linux/Unix av DJ1YFKFöljande är så kallad shareware, vilket innebär frivillig betalning av ett mindre belopp.
+
+NuMorse av Tony Lacy (G4AUD)Följande ger engelsk klartext gratis direkt över Internet för den som redan har grundkunskaper.
+
+American Radio Relay League (W1AW). Takter kan väljas mellan 25-takt och 200-takt. Samma program kan även mottagas på radio kortvåg vilket ger träning i rätt miljö med olika slags naturliga radiostörningar. Detta är idealiskt för fortbildning av den som redan kan grunderna. För nybörjare är den störningsfria mottagningen via Internet bättre.Följande program omvandlar en text till en mp3-fil:
+
+ebook2cw av DJ1YFK
+
+
+== Föråldrade koder ==
+
+
+=== Ü-koden ===
+Under tidigt 1900-tal användes vid svensk militär radiosignalering en tvåställig kod, där första tecknet hela tiden var Ü. Tillämpliga delar fick inom armén användas även vid blinksignalering och på tråd med hjälp av den summer som finns på fälttelefonapparat m/1937. Summersignalering kan nämligen fungera på linjer som har alltför hög dämpning för att medge tal. Koder tillåtna för summersignalering är utmärkta med * i nedanstående tabell.
+
+
+=== USA ===
+En märklig kod, som helt avviker från allt annat, tillämpades av USA:s flotta i början av 1900-talet var följande:
+
+Det mest egendomliga med detta alfabet är att vissa siffror – men inte alla – saknar egen kod. I stället delar de kod med vissa bokstäver enligt ovanstående tabell. Det förutsattes att man skulle förstå av sammanhanget om tecknet skulle tolkas som bokstav eller siffra. Skiljetecken användes inte alls.
+Varför man gjorde så är idag svårbegripligt. Feltolkningar, i värsta fall ledande till katastrofala missförstånd, är så att säga inbyggt i systemet. Följande är en hypotes för möjligt motiv:
+Man ville begränsa koden till högst 4 teckendelar. Detta blir till förmån för kort överföringstid, 5 teckendelar tar ju mera tid i anspråk att sända. Men med en begränsning till endast max 4 teckendelar räcker antalet kombinationer inte till mer än 30 tecken. Det är för lite för 25 bokstäver + 10 siffror. Därför blev det dubbelbeläggningar för 5 överskjutande tecken. Man kan konstatera att de bokstäver som blivit valda för samläggning med siffror är B F G M V. Dessa förekommer sällan i engelska språket, vilket då innebär att tolkningsproblem inte inträffar så ofta, åtminstone i klartext. I krypterade meddelanden, som man får förutsätta användes i US Navy, gäller emellertid inte detta, då frekvensfördelningen ändras radikalt vid kryptering. Å andra sidan förekommer vanligen inte siffror i själva kryptotexten, och i tidsnummer och liknande angivelser vet man i förväg att tolkningen skall göras för siffror och inte bokstäver. 
+Motivet till valet av de siffror som skulle dela plats med bokstäver har numera förlorats i historiskt dunkel. I brist på dokumentation kunde man kanske tänka sig följande, som om inte annat, åtminstone kan duga som minnesregel:
+
+0 = Blank
+4 = Four
+6 och G ser ganska lika ut vid handskrift
+7 = seVen
+9 = MaximumSystemet övergavs ganska snart.
+
+NotI somliga källor tycks man ha blandat ihop 0 (noll) med O (Olov) samt 3 med 8. Det vore tacknämligt, om någon kunde leta fram en originalhandling i något arkiv för verifiering och ytterligare historisk belysning av detta system.
+
+
+== Inofficiella tecken ==
+1. På den tiden det i den maritima tjänsten fortfarande var obligatoriskt med telegrafi för kommunikationen mellan land och fartyg, hade det bland många kuststationer kring Medelhavet utbildats en praxis att använda tecknet O (Olov) 
+(━━━ ━━━ ━━━)
+som substitut för 0 (noll) 
+(━━━ ━━━ ━━━ ━━━ ━━━).
+Detta kallades i yrkesjargongen telegrafister emellan för medelhavsnolla. Veterligt finns ingen myndighetssanktion för detta påhitt. Varför man inte tog steget fullt ut och använde den förkortade nollan  ━  förvånar; någon förklaring är inte känd.
+2. Inom amatörradiotjänsten gäller att tecknet K  ━━━ ━ ━━━  
+innebär att vem som helst kan hoppa in i diskussionen. Om man i stället vill ha svar bara från den motstation som framgår av den använda anropsignalen använder man tecknet  ━━━ ━ ━━━ ━━━ ━  som egentligen är vänsterparentes (. Detta tecken skall dock tolkas som en sammansättning av tecknen för K och N, KN. N:et står för engelskans "nobody" (underförstått "nobody else"), alltså en markering att ingen annan än motstationen skall svara.
+
+
+== Förkortade siffror ==
+Koden för siffror innehåller många teckendelar, som det tar lång tid att sända. Vissa typer av meddelanden innehåller (nästan) enbart siffergrupper, till exempel meteorologiska telegram, så kallade OBS-ar. För att korta överföringstiden har man infört följande alternativa tecken för siffror:
+
+Eftersom dessa koder normalt betyder bokstäver, och det inte är uteslutet att bokstavstext också förekommer i telegrammet, måste man på något sätt markera, när en viss kod ska tolkas som siffra respektive som bokstav. Det gör man genom att sekvenser som ska tolkas som siffror inleds och avslutas med skillnadstecken, ▬   ▬▬▬   ▬   ▬   ▬▬▬ . (Lägg märke till de olika betydelserna av skillnadstecken och åtskillnadstecken!) Inom amatörradiotjänsten, som numera är den enda radiotjänst där morsetelegrafi fortfarande används, använder man ej skillnadstecknet. De fall då man förkortar siffror är uteslutande två: vid rapportgivning enligt RST-systemet, till exempel 5NN för 599, samt när man anger löpnummer för kontakten i tävlingar, till exempel 599 001, som skall uttolkas "signalrapport 599 löpnummer 001". Det finns därför ingen risk för missförstånd i amatörradiotrafik.
+Enligt Telegrafverkets instruktion 1950 fick förkortade siffror användas endast i följande fall:
+
+I inledningen, före den egentliga texten
+I telegram med beteckningen siffertext
+Vid telegrafistens kollationering av sifferuttryck och namn enligt fastställd trafikmetod. Sådan taxerad kollationering, som var begärd av avsändaren skulle sändas med oförkortade siffror.
+
+
+== Skiljetecken och speciella trafikförkortningar i American Morse ==
+
+
+== Phillipskoden ==
+För presstelegram i USA användes den s k Phillipskoden, som innehåller en mängd förkortningar för vanliga ord berörande näringslivet. Sändningstiden för långa telegram kan därmed nedbringas åtskilligt.
+Exempel på förkortningar finns i artikeln Komprimeringsmetoder vid morsetelegrafering.
+I affärstelegram förekommer ofta diverse tal, och för detta fanns speciella regler. Om ett tal bestod av mer än 3 siffror sköts ett kommatecken in mellan var tredje siffra, räknat från höger. Detta är enligt gängse anglosaxisk praxis. Men om det var, vilket ofta händer, en rad av nollor i slutet av talet fanns det vissa förkortningar, som i förekommande fall inkluderade kommatecken. Några exempel: 
+
+Men det krävdes att mottagaren skulle skriva ut alla nollorna jämte eventuella kommatecken i stället för bokstavsförkortningarna! Detta innebar att telegrafisten måste ligga med stor så kallad eftersläpning – i praktiken alltså hålla fyra eller fler tecken i huvudet, – innan han började skriva. Medan han fortfarande höll på att skriva nollor och eventuella kommatecken (i rätt antal!) måste han i huvudet börja memorera nästa teckenföljd. Det krävs mycket övning för att klara av detta!
+
+
+== Visselspråket ==
+På La Gomera, en av Kanarieöarna, används ett språk med visslingar, Silbo Gomero, som har vissa likheter med morsealfabetet i det att visslingar av olika karaktär motsvaras av morsealfabetets långa och korta teckendelar. Det är inte fråga om någon parallellkod till morsealfabetet, utan det är en helt unik kod för bokstäver, stavelser och t o m vissa ljud.
+
+
+== Marin telegrafering ==
+
+
+=== Navigeringsinformation ===
+En sorts telegrafering görs med ljudsignaler på större motordrivna fartyg, när man vill informera om omedelbar navigering i syfte att varna andra fartyg om sina avsikter, så att ombordläggning (kollision) undvikes. Det är en sorts motsvarighet till körriktningsvisare och bromsljus i biltrafik. Här följer några exempel på sådana ljudsignaler:
+
+
+=== Isbrytarverksamhet ===
+Vid isbrytarverksamhet används en speciell kod fastställd av  International Maritime Organization, (IMO). Dessa signaler kan avges med såväl ljud som ljus. Sambandet inleds med att isbrytaren avger signalen  • — —    — —  (WM) med innebörden
+
+"Isbrytarhjälpen börjar. Använd de speciella isbrytningssignalerna och passa kontinuerligt på ljud-, ljus- och radiotelefonisignaler."──────────(Källa: Översättning från International Code of Signals, IMO, London 1985)
+
+
+=== Landningshjälp för nödställda bemannade mindre båtar ===
+Vid en konferens i London 1985 fastställde International Maritime Organization (IMO) i International Code of Signals, Appendix 3 nedanstående signaler att användas från land för att leda nödställda bemannade småbåtar till bästa landningsplats. Signalerna kan ges med antingen ljud eller ljus. Eftersom man inte kan förutsätta att de ombordvarande alltid kan rätt tolka styrbord och babord används för formulering av betydelsen i stället termerna höger och vänster för att förebygga missförstånd.
+
+
+=== Fyrväsendet ===
+En annan marin tillämpning är så kallade morsefyrar. Sådana blinkar oupphörligt ett morsetecken enligt en särskild tilldelning för att man vid navigeringen ska kunna skilja närliggande fyrar från varandra, som annars lätt skulle kunna förväxlas.
+Rundstrålande radiofyrar på frekvenser i närheten av 500 kHz (i Radioreglementet kallade omnidirectional) har identifieringssignaler bestående av några få morsetecken enligt en särskild fördelning. Man kan då med pejlutrustning avgöra i vilken riktning från fartyget sett fyren ligger. Genom krysspejling på minst två eller helst tre fyrar kan man på sjökortet pricka in var fartyget befinner sig.
+Morsetecken kan även på ett annat sätt användas för att visa ett fartygs läge i förhållande till en farled. I ett system framtaget av AGA sänder en radiofyr oupphörligt bokstaven A (▬ ▬▬▬) i en smal stråle längs ena sidan av farleden. En annan sändare sänder oupphörligt bokstaven N (▬▬▬ ▬) i en smal stråle längs farledens andra sida. De bägge sändningarna är så synkroniserade med varandra att den korta teckendelen i A fyller i gapet på N och vice versa. Ligger fartyget fel hörs den ena signalen starkare än den andra, t.ex. N starkt och A svagt eller tvärt om. Rorsmannen hör då antingen
+
+▃▃▃▁▃▁▁▁▃▃▃▁▃▁▁▁▃▃▃▁▃▁▁▁N-signalen stark, A-signalen svag
+
+eller
+
+▁▁▁▃▁▃▃▃▁▁▁▃▁▃▃▃▁▁▁▃▁▃▃▃N-signalen svag, A-signalen stark
+
+och kan då vid dålig sikt avgöra om han bör hålla mer åt babord eller mer åt styrbord. När fartyget ligger rätt blir bägge signalerna lika starka, och rorsmannen hör då bara en enda lång sammanhängande signal:
+
+▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂A-signalen lika stark som N-signalen
+
+Ett motsvarande system kan skapas genom kombination av bokstäverna F (▬ ▬ ▬▬▬ ▬) och L (▬ ▬▬▬ ▬ ▬).
+För en detaljerad teknisk beskrivning och den matematiska bakgrunden se Kursradiofyrar för sjöfarten.
+
+
+== Se även ==
+Komprimeringsmetoder vid morsetelegrafering
+Q-förkortningar
+Telegrafi
+Biografi för Samuel Morse
+
+
+== Referenser ==
+
+
+== Externa länkar ==
+Just Learn Morse Code (engelska)
+Superaldis, Morse med ljussignalsimulator
+UltraMorse, Morse trenings program
+Morsealfabetet på svenska med tillhörande ljudklipp för varje morsekod
+ Wikimedia Commons har media som rör Morsealfabetet.

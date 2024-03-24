@@ -1,0 +1,13 @@
+revision: 5920975
+title: Quarter Video Graphics Array
+url: https://sk.wikipedia.org/wiki/Quarter_Video_Graphics_Array
+
+
+---
+
+Quarter Video Graphics Array (tiež známe ako Quarter VGA alebo QVGA) je termín používaný pre počítačovú obrazovku s rozlíšením 320 x 240. QVGA obrazovky sú najčastejšie obsiahnuté v mobilných telefónoch, PDA a vo vreckových herných konzolách. Najčastejšie sú v prevedeniach na výšku a ich rozlíšenie je potom často označované ako 240 x 320, pretože takéto displeje majú väčšiu výšku než šírku.
+Meno je odvodené od faktu, že displej QVGA ponúka štvrtinový počet obrazových bodov oproti originálnym grafickým kartám IBM VGA (ktoré sa na konci 80. rokov stali de facto štandardom) s maximálnym rozlíšením 640 x 480. Implementácie QVGA nie sú nijako kompatibilné so štandardnými chipsetmi a rozhraniami VGA, termín je odvodený čisto z podobnosti rozlíšenia.
+
+
+== Zdroj ==
+Tento článok je čiastočný alebo úplný preklad článku Quarter Video Graphics Array na českej Wikipédii.

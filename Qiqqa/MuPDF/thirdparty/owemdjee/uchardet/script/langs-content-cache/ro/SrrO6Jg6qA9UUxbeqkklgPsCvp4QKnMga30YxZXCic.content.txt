@@ -1,0 +1,40 @@
+revision: 15428082
+title: Scholar
+url: https://ro.wikipedia.org/wiki/Google_Scholar
+
+
+---
+
+Academic Google sau Google Scholar este un motor de căutare disponibil gratuit, care oferă căutare de tip text-integral de publicații științifice în toate formatele și disciplinele. Sistemul funcționează din noiembrie 2004, inițial în starea beta. Indexul Google Scholar include cele mai multe reviste on-line din Europa și America a celor mai mari publicații științifice. Este asemănător în funcționare cu Elsevier, CiteSeerX și cu getCITEDun. De asemenea, el este asemănător cu alte instrumente, bazate pe un abonament plătit, cum ar fi în Elsevier Scopus și Thomson ISI de Web of Science. Sloganul  - „Stați pe umeri de giganți” („Stand on the shoulders of giants”) - este luat dintr-un citat enunțat de către fizicianul Isaac Newton și este un semn pentru oamenii de știință care au activat de-a lungul secolelor, oferind o bază pentru noi realizări intelectuale.
+
+
+== Istoric ==
+Google Scholar a apărut în urma unei discuții dintre Alex Verstak și Anurag Acharya, amândoi lucrând  apoi la crearea indexului principal Google.În 2006, ca răspuns la lansarea Windows Live Academic Search de către Microsoft, un potențial concurent pentru Academic Google, a fost pusă în aplicare funcția import utilizând manageri de citări bibliografice (cum ar fi RefWorks, EndNote, și BibTeX). Caracteristici similare sunt, de asemenea, puse în aplicare în alte motoare de căutare, cum ar fi CiteSeer și Scirus.
+În 2007, Acharya a anunțat că Google Scholar a început un program de digitalizare și găzduire de articole de ziar, în acord cu editorii, în afară de Google Books, ale căror scanări de reviste vechi nu includ metadatele necesare pentru a căuta articole specifice în domenii specifice.În 2011, Google Scholar elimină trimiterea la panoul superior al noului site Google.com, făcând mai grea accesarea.În 2012, a fost adăugată o pagină caracteristică individuală Google Scholar. Persoanele, conectate (logate) pe un cont Google cu o adresă de bună credință, de obicei, legate de o instituție academică, pot crea acum propria lor pagină dând domeniile lor de interes și citare. Google Scholar calculează și afișează automat numărul total individual de citări, h-indexul, și i10-indexul. Sunt date exemple aici și aici , în limba engleză. Unele reviste academice au propria lor pagină Google Scholar, se poate vedea  International Journal of Internet Science. Pot fi accesate citări de top într-un domeniu de interes, de exemplu, aici.O particularitate introdusă în noiembrie 2013 permite utilizatorilor autentificați salvarea rezultatelor căutărilor în „biblioteca Google Scholar”, o colecție personală, în care utilizatorul poate căuta separat și organizara de tag-uri.
+
+
+== Despre funcționare ==
+Google Scholar permite utilizatorilor să caute copii digitale sau fizice de articole, fie online fie în biblioteci. Rezultatele căutărilor „științifice” sunt generate, folosind link-urile de la articole de ziar integral-text, rapoarte tehnice, preprinturi, teze, cărți și alte documente, inclusiv paginile web selectate sunt considerate „științifice”. Deoarece cele mai multe dintre rezultatele de căutări științifice Google au link-uri către articole de ziar comerciale, cei mai mulți utilizatori vor avea posibilitatea de a avea acces la articolul rezumat, cu o cantitate mică de informații importante despre articol. Pentru a accesa articolul complet, utilizatorul trebuie să plătească. Cele mai semnificative rezultate ale căutării prin cuvinte cheie vor fi listate în ordine de rang a autorului, numărul de link-uri care sunt asociate cu ea, și relația lor cu altă literatură de specialitate, precum și clasamentul publicațiilor revistei în care este publicat.Datorită funcției „cited by”, Google Scholar oferă acces la rezumate de articole, care au fost menținate în articolul văzut. Această funcție oferă, în special,  un indice de citare, disponibile numai în Scopus și Web of Knowledge. Datorită funcției „Related articles”, Google Scholar oferă o listă de articole asemănătoare clasate după modul de asemănare între aceste articole cu privire la rezultatele inițiale, dar, ținând cont de importanța fiecărui articol. Din martie 2011, Google Scholar nu mai este disponibil în Google AJAX API.
+Punctul de greutate la literatura reportată de Google îl constituie revistele de specialitate. Totuși sunt prezente și texte integrale din alte lucrări științifice sau măcar date bibliografice corespunzătoare.
+
+
+== Algoritmul de clasare ==
+Deși majoritatea bazelor de date academice și motoarele de căutare permit utilizatorilor să selecteze unul dintre factori (de exemplu, relevanța, numărul de citări sau data de publicare) la rang de rezultate, Google Scholar clasează rezultatele folosind algoritmul de clasament combinat, care acționează „având în vedere textul integral al fiecărui articol, autorul, publicația în care articolul apare și cât de des a fost citat acesta în literatura academică”. Studiile au arătat că Google Scholar oferă un număr deosebit de mare de citări grele  și cuvintele incluse în titlul documentului. Ca urmare, primele rezultate de căutare conțin articole extrem de citate.
+
+
+== Note ==
+
+
+== Bibliografie suplimentară: ==
+Popa, Cristian Ioan. Cronica unui eșec academic anunțat: între Google Scholar și indicele Hirsch. În: Revista Transilvania, no. 5 (2021): 76-87.   https://revistatransilvania.ro/wp-content/uploads/2021/06/Transilvania-5.2021-Popa.pdf
+Bar-Ilan, Judit. Which h-index? - A comparison of WoS, Scopus and Google Scholar. Scientometrics, no. 74 (2007): 257-271.
+Beel, Joeran, Gipp, Bela. Academic Search Engine Spam and Google Scholar’s Resilience Against it. The Journal of Electronic Publishing, no. 13, tome 3 (2010).
+Clipa, Cristian, Dragă, mi-a crescut hirsch-ul!. Banatul azi, April 22, 2020.
+Dobrescu, Emilian M., Dumitrescu, George, and Dobre, Edith-Mihaela. About Hirsch Index (H-Index). Business & Leadership, no. 2, tome 10 (2012): 7-14.
+Frangopol, Petre T. Indexul Hirsch – un nou indicator scientometric pentru evaluarea rezultatelor unui cercetător științific” [The HirschIndex - A New Scientometric Indicator for the Evaluation of a Scientist]. Revista de Politica Știintei și Scientometrie, s.n., no. (2012): 75-78.
+Meho, Lokman I., Yang, Kiduk, “A New Era in Citation and Bibliometric Analyses: Web of Science, Scopus, and Google Scholar.” Journal of the American Society for Information Science and Technology, no. 58, tome 13 (2007): 1-49.
+
+
+== Legături externe ==
+Site Google Scholar
+Blog Google Scholar

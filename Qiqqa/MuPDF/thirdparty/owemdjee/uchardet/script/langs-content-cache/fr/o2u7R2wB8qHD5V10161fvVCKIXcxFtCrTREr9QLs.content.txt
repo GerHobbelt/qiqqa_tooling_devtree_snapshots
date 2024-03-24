@@ -1,0 +1,33 @@
+revision: 204475225
+title: Dissociation (neuropsychologie)
+url: https://fr.wikipedia.org/wiki/Dissociation_(neuropsychologie)
+
+
+---
+
+En neuropsychologie, la dissociation vise à identifier le substrat neuronal d'une fonction cérébrale particulière au travers d'études de cas, de neuroimagerie, ou d'évaluations neuropsychologiques.
+
+
+== Types de dissociation ==
+
+
+=== Dissociation simple ===
+En étudiant des tâches mentales complexes en leurs sous-composantes, un chercheur peut établir une dissociation simple entre ces dernières. Ceci se fait en démontrant qu'une lésion en une structure cérébrale, notée A, impacte la fonction X, mais pas la fonction Y. Une telle démonstration permet alors d'inférer que la fonction X et la fonction Y sont en quelques sortes indépendantes l'une de l'autre.[citation nécessaire]Le Dr. Oliver Sacks a décrit plusieurs cas célèbres de dissociation dans ses livres. Le patient D.F., par exemple, était incapable de placer une carte dans un emplacement, mais pouvait le faire si on lui demandait de la placer "comme pour poster une lettre". Il en a été conclut que juger l'orientation est une capacité (que D.F. avait ici perdue) et que le contrôle visuel de l'action en est une autre (que D.F. pouvait toujours accomplir).
+
+
+=== Double dissociation ===
+Pour renforcer une simple dissociation, un chercheur peut établir une double dissociation. Ce terme a été introduit par Hans-Lukas Teuber en1955. C'est une démonstration que deux manipulations expérimentales ont chacune des effets différents sur deux variables dépendantes. Si une manipulation affecte la première variable mais pas la deuxième et que l'autre manipulation affecte la deuxième variable mais pas la première, alors on pourra parler de double dissociation. Si l'on peut démontrer qu'une lésion en une structure cérébrale, notée A, impacte la fonction X mais pas la fonction Y, et que l'on démontre également qu'une lésion en une structure cérébrale B impacte la fonction Y mais épargne la fonction X, alors on peut réaliser des inférences plus spécifiques sur ces fonctions cérébrales et leur localisation.
+En neurosciences cognitives, la double dissociation est une technique expérimentale par laquelle deux aires du néocortex sont fonctionnellement dissociées par deux tests comportementaux, chaque test étant affecté par une lésion en une zone mais pas en l'autre. Dans une série de patients avec des trauma crâniens, on peut trouver deux patients, A et B. Le patient A a des difficultés pour accomplir les tests cognitifs par exemple en mémoire auditive, mais n'a pas de problèmes en mémoire visuelle. Le patient B a le problème opposé. En utilisant la neuroimagerie (ou l'anatomopathologie post-mortem) pour identifier le chevauchement et la dissociation entre les aires lésées, on peut inférer quelque chose sur la localisation des fonctions visuelles et auditives du cerveau.
+Établir une dissociation simple entre deux fonctions fournit des informations limitées et potentiellement trompeuses, tandis qu'une double dissociation peut démontrer que deux fonctions sont localisées dans différentes aires cérébrales. 
+
+Pour faire la différence entre une dissociation simple et une dissociation double, Parkin donne l'exemple suivant :Si votre télévision perd soudainement la couleur, vous pouvez en conclure que la transmission de l'image et l'information sur la couleur doivent être des processus distincts (dissociation simple : ils ne peuvent pas être indépendants car vous ne pouvez pas perdre l'image en continuant d'avoir la couleur). Si, par contre, vous avez deux téléviseurs, l'un sans son et l'autre sans image, vous pouvez en conclure qu'il doit s'agir de deux fonctions indépendantes (double dissociations). 
+
+
+=== Exemples de double dissociations ===
+Paul Broca et Carl Wernicke étaient deux médecins¨des années 1800 dont les patients affichaient une double dissociation entre la génération du langage (la parole) et la compréhension du langage. Le patient de Broca ne pouvait plus parler mais pouvait toujours comprendre le langage (aphasie considérée comme non-fluente) tandis que le patient de Wernicke ne pouvait plus comprendre le langage mais pouvait toujours produire un discours confus (aphasie fluente). Les analyses post-mortem ont alors révélé des lésions dans des parties distinctes du cerveau dans ces deux cas (ces aires sont maintenant appelées aires de Broca et aire de Wernicke, respectivement). Bien que la neuropsychologie du langage est aujourd'hui connue pour être plus compliquée que celle décrite par Broca ou Wernicke, cette double dissociation classique a joué un rôle d'amorceur pour l'investigation neuropsychologique moderne du langage.
+Les trouble du syndrome de Capgras et la prosopagnosie ont aussi été proposées comme représentant un exemple de double dissociation. Dans le syndrome de Capgras, le patient est capable de reconnaître une personne mais n'a pas le sentiment de la connaître tandis que dans la prosopagnosie, le patient ne peut reconnaître une personne qui lui est pourtant familière, mais a parfois un sentiment de familiarité envers celle-ci.
+
+
+== Notes et références ==
+
+ Portail de la psychologie   Portail de la médecine   Portail des neurosciences

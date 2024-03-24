@@ -1,0 +1,25 @@
+revision: 133974585
+title: RE Engine
+url: https://it.wikipedia.org/wiki/RE_Engine
+
+
+---
+
+Il RE Engine è un motore grafico proprietario sviluppato dalla software house giapponese Capcom. Inizialmente creato per il videogioco survival horror Resident Evil 7: Biohazard, è stato usato da allora per altri videogiochi della Capcom come Devil May Cry 5, Monster Hunter Rise, e Resident Evil Village. Il motore grafico è il successore del MT Framework, il precedente engine di proprietà Capcom.
+
+
+== Storia ==
+
+
+== Caratteristiche ==
+Rispetto al MT Framework, il RE Engine integra nuove funzioni di antialiasing e luce volumetrica; il motore grafico inoltre permette agli sviluppatori di usare la fotogrammetria per creare modelli di qualità elevata. Grazie al supporto per VR migliorato rispetto al predecessore, si riescono a raggiungere framerate elevati, necessari per evitare il motion sickness; sono inoltre inclusi strumenti per una più rapida creazione di animazioni quali: modular rigging, motion matching, procedural animation e motion retargeting. Il RE Engine dispone inoltre di diverse opzioni per nuove simulazioni fisiche che permettono di ottenere detriti più realistici.
+
+
+== Videogiochi ==
+
+
+== Note ==
+
+
+== Collegamenti esterni ==
+(EN) Gruppo di videogiochi: Giochi che utilizzano il RE Engine, su MobyGames, Blue Flame Labs.

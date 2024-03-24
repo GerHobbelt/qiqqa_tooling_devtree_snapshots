@@ -1,0 +1,48 @@
+revision: 21519553
+title: Communication
+url: https://cs.wikipedia.org/wiki/Powerline_Communication
+
+
+---
+
+PowerLine Communication (PLC) je obecná zkratka označující úzkopásmový a širokopásmový přenos zpráv po elektrické síti. Pro širokopásmové přenosy se užívá též zkratky BPL (Broadband over Powerline).
+Technologií PLC se v současné době (březen 2007) zabývají 4 hlavní sdružení:
+
+PLC Forum
+PowerLine Communications Association
+United Power Line Council
+PLC Utilities AllianceDíky jejich vzájemné spolupráci vznikl projekt OPERA, jehož cílem je dosáhnout unifikace a standardizace proprietárních řešení různých výrobců týkajících se technologie PLC. Spolu s vysokými přenosovými rychlostmi (10 - 200 Mbit/s) by mohla PLC konkurovat jak DSL, tak CATV službám.
+Standardizace spadá pod skupinu IEEE P1901.
+
+
+== Powerline adaptér ==
+Jedná se o zařízení, které je schopné zajistit předání datového signálu v počítačové síti mezi dvěma body po vodičích běžné elektrické sítě pomocí vysokofrekvenčního přenosu. 
+
+
+=== Výhody ===
+Bez nutnosti natahovat kabely zvlášť pro datovou síť.
+Možná levnější realizace sítě.
+
+
+=== Nevýhody ===
+Pomalejší rychlosti datového přenosu než v běžné datové síti.
+
+
+=== Funkčnost ===
+Powerline adaptér tvoří konstantní přenosovou frekvenci, na kterou moduluje data. Tento signál se šíří po elektrických rozvodech. Druhý powerline adaptér zapojený v libovolné elektrické zásuvce signál rozpozná a dekóduje jej.
+
+
+=== Specifikace pro powerline přenosy ===
+HomePlug 1.0 (2001) - Rychlosti až 14 Mbit/s
+HomePlug AV (2005) - Rychlosti až 200 Mbit/s
+HomePlug AV2 (2012) - Rychlosti až 500 Mbit/s
+
+
+== Odkazy ==
+
+
+=== Reference ===
+
+
+=== Externí odkazy ===
+ Obrázky, zvuky či videa k tématu Powerline Communication na Wikimedia Commons

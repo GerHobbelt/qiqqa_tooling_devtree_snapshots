@@ -1,0 +1,37 @@
+revision: 68138179
+title: Deep Blue
+url: https://pl.wikipedia.org/wiki/Deep_Blue
+
+
+---
+
+Deep Blue – komputer grający w szachy, stworzony przez IBM.
+Deep Blue był pierwszym systemem komputerowym, który wygrał partię szachów ze światowym mistrzem Garri Kasparowem z regularną kontrolą czasu. Pierwsza wygrana partia odbyła się 10 lutego 1996 roku. Partia ta stała się znana, mimo że Kasparow wygrał trzy kolejne partie i dwie zremisował, ostatecznie wygrywając z Deep Blue wynikiem 4:2.
+Deep Blue został mocno ulepszony i nieoficjalnie nazwany Deeper Blue. Zagrał ponownie z Kasparowem w maju 1997 roku. Mecz skończył się 11 maja wynikiem 3½ : 2½ dla komputera. W ten sposób Deep Blue stał się pierwszym systemem komputerowym, który wygrał z aktualnym mistrzem świata w meczu ze standardową kontrolą czasu.
+
+
+== Historia ==
+Projekt został rozpoczęty pod nazwą ChipTest w Carnegie Mellon University przez Feng-hsiung Hsu. Wyprodukowany system komputerowy został nazwany Deep Thought - nazwa pochodzi od fikcyjnego komputera z książki Autostopem przez Galaktykę. Hsu został zatrudniony przez firmę IBM w 1989 roku i pracował z Murrayem Campbellem nad problemami obliczeń rozproszonych. W wyniku tych badań powstał Deep Blue.
+System swoją siłę czerpie głównie z siłowych metod przeszukiwania. Używa on 32-węzłowego klastra IBM RS/6000 SP, po 8 wyspecjalizowanych procesorów szachowych na każdym węźle. Program grający w szachy napisany został w języku C i pracuje w systemie operacyjnym AIX. Umożliwia to ewaluację około 200 milionów pozycji na sekundę. W czerwcu 1997, Deep Blue miał 259. miejsce wg listy TOP500 (11.38 GFLOPS na teście LINPACK).
+Funkcja oceny była pierwotnie napisana w uogólnionej formie, z wieloma parametrami do ustalenia (np. jak ważna jest bezpieczna pozycja króla w stosunku do przewagi w centrum planszy itp.). Optymalne wartości tych parametrów zostały następnie wyliczone przez sam system, analizując tysiące partii arcymistrzów. Przed drugim meczem baza danych stanowiąca podstawę skuteczności systemu została dopracowana przez arcymistrza Joela Benjamina. Arcymistrzowie Miguel Illescas Cordoba, John Fedorowicz i Nick De Firmian dostarczyli bibliotekę otwarć dla systemu.
+Po przegranym meczu Kasparow powiedział, że czasami zauważał głęboką inteligencję i kreatywność w ruchach maszyny, których to ruchów on sam nie rozumiał. Zasugerował także, że ludzie mogli pomagać komputerowi podczas meczu. Szachista zażądał rewanżu, jednak IBM odmówił i nie rozwijał już Deep Blue.
+Po części zarzuty te były prawdziwe. Pomiędzy partiami program Deep Blue był modyfikowany, uwzględniając informacje z poprzednich partii. Kod był modyfikowany, aby program lepiej rozumiał styl gry Kasparowa. Umożliwiło to uniknięcie pułapki w ostatniej partii, na której sztuczna inteligencja poległa wcześniej dwukrotnie.
+W 2013 r. powstał spektakl teatralny na podstawie drugiego meczu Kasparowa z Deep Blue.
+
+
+== Zobacz też ==
+Szachy komputerowe
+Watson (superkomputer)
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+Garri Kasparow, Ostatni bastion umysłu, Wydawnictwo Insignis, 2021, ISBN 978-83-66575-78-3
+
+
+== Linki zewnętrzne ==
+Deep Blue – wybrane partie szachowe (ang.)
+Mecz Garri Kasparow – Deep Blue (ang.)
+Kasparov Vs Deep Blue (ang.)

@@ -1,0 +1,108 @@
+revision: 134150891
+title: Fattore di impatto
+url: https://it.wikipedia.org/wiki/Fattore_di_impatto
+
+
+---
+
+Nell'editoria accademica il fattore di impatto (impact factor o IF in inglese, come generalmente nella normativa e nelle procedure italiane) è un indice sintetico che misura il numero medio di citazioni ricevute in un particolare anno da articoli pubblicati su una rivista scientifica (Journal) nei due anni precedenti.
+Il 5-year Journal Impact Factor è un indicatore basato invece sulle citazioni degli articoli pubblicati nei cinque anni precedenti. L'impact factor viene utilizzato per categorizzare, valutare e comparare le riviste scientifiche indicizzate nel Journal of Citation Reports (JCR), database in abbonamento precedentemente di proprietà della Thomson Reuters, oggi del Web of Science Group, settore dell'azienda Clarivate Analytics.
+
+
+== Storia ==
+Il fattore di impatto è stato elaborato nel 1955 da Eugene Garfield, un chimico statunitense. L'Institute for Scientific Information (ISI) è stato fondato da Eugene Garfield nel 1960. Nel 1992 è stato acquisito dalla Thomson Scientific & Healthcare, divenendo noto come Thomson ISI. A seguito dell'acquisizione di Reuters da parte di Thomson e la conseguente nascita del gruppo Thomson Reuters l'Impact Factor diventó un "prodotto" della Thomson Reuters Corporation, divisione Healthcare & Science. Nel 2016 Reuters ha avviato la trasformazione della divisione, successivamente denominata Clarivate Analytics, in un soggetto indipendente in seguito ceduto alle società di private equity Onex Corporation e Baring Private Equity Asia.
+
+
+== Caratteristiche ==
+In generale l'IF fa parte dei cosiddetti indici scientometrici oggetto di un crescente numero di studi e ricerche i cui limiti e le cui potenzialità sono oggetto della scientometria, una disciplina scientifica – con alcune riviste dedicate – che ha lo scopo di elaborare indici per valutare la ricerca. Attualmente non esiste un metodo matematico generalmente condiviso e valido per la valutazione della ricerca. Fu creato – in origine – ad uso delle biblioteche (indice bibliometrico) che dovevano scegliere le riviste più influenti per attivare gli abbonamenti e non per la valutazione della bontà dei contenuti pubblicati dalle differenti riviste. Il suo uso per una supposta valutazione delle riviste è la più recente delle sue applicazioni.La selezione delle riviste è svolta a discrezione del Web of Science Group; le caratteristiche principali che consentono ad una rivista scientifica di essere presa in considerazione per la misura dell'IF sono:
+
+la puntualità nella pubblicazione dei fascicoli;
+l'applicazione di un processo di valutazione editoriale degli articoli basato sulla peer review;
+la presenza di un abstract e di informazioni bibliografiche in inglese (sebbene la maggior parte delle riviste censite siano pubblicate interamente in lingua inglese) oltre che di liste di referenze negli articoli in caratteri latini e riportate secondo le convenzioni editoriali internazionali;
+l'internazionalità degli autori;
+l'interesse per il contenuto scientifico in relazione anche all'attuale copertura della specifica categoria tematica o alla trattazione di argomenti emergenti;
+la presenza di dati citazionali nel database citazionale Web of Science.Come notato, ad esempio, da Alessandro Figà Talamanca, non tutti questi criteri sono correlati al supposto valore scientifico della rivista; in particolare, il primo e l'ultimo criterio hanno ben poco a vedere con l'autorevolezza scientifica. La copertura viene rivista frequentemente, determinando continuamente l'ingresso di nuove riviste e la fuoriuscita di riviste già censite. In generale, comunque, il numero di riviste complessivo ed il grado di copertura tendono a crescere.
+Clarivate Analytics fornisce nel JCR il calcolo dell'IF e il ranking di una determinata rivista in un insieme di riviste omogeneo per categoria tematica, per un ampio ventaglio di differenti settori di ricerca.La normativa italiana (DM del 28 luglio 2009, art. 3 comma 4) considera l'impact factor come un parametro addizionale per la valutazione dei titoli presentati nei concorsi, limitatamente ai settori scientifico-disciplinari in cui ne è riconosciuto l'uso a livello internazionale; fanno riferimento all'IF alcuni istituti di ricerca a carattere nazionale (IRCCS ed enti vigilati dal Ministero della Salute, come ad esempio IEO), e progetti nazionali e regionali di ricerca finalizzata.Tuttavia il metodo e, soprattutto, la sua applicazione non sono esenti da critiche.Va evidenziato che lo stesso Web of Science Group ritiene un abuso l'applicazione dell'IF per la valutazione del singolo ricercatore o dell'impatto generato sulla comunità scientifica da un singolo articolo. Sconsiglia anche l'uso di tale indice per stimare il "valore assoluto" di una rivista e per effettuare confronti fra campi scientifici diversi.
+L'unico uso valido dell'IF è, secondo i suoi creatori, la classificazione delle riviste nell'ambito della loro categoria tematica di riferimento, che comunque non dovrebbe essere basata solo sull'IF ma anche su altri indici quali Immediacy Index, Total Cites, Total Articles and Citation Half-Life, che dovrebbero essere utilizzati insieme per una valutazione multidimensionale delle riviste catalogate.
+
+
+== Calcolo ==
+Esempio di calcolo del fattore di impatto di una rivista per il 2008
+Citazioni nel 2008, presso qualsiasi rivista censita, di articoli pubblicati sulla rivista presa in considerazione nel:
+
+	2007 =		 32
+	2006 =		 43
+	Totale biennio:	 75
+
+Numero di articoli pubblicati sulla rivista presa in considerazione nel:
+
+	2007 =		 86
+	2006 =		 69
+	Totale biennio:	155
+
+Calcolo dell'IF 2008 per la rivista presa in considerazione:
+
+	Citazioni 2008 di articoli pubblicati nel biennio 2006-07   75
+	--------------------------------------------------------- = --- = 0,484
+	 Totale articoli pubblicati nel biennio 2006-07		    155
+
+Nel confronto fra due riviste della stessa categoria tematica, un più alto fattore di impatto per una rivista indica che nel biennio precedente la rivista contiene articoli che nell'anno di calcolo dell'IF sono stati in media più citati dell'altra.
+Un IF pari a 1 indica che in media c'è stata una citazione nell'anno di riferimento per ogni articolo del biennio precedente. Ovviamente, trattandosi di una media, questo non implica che tutti gli articoli siano stati citati almeno una volta.
+Alcuni valori correlati sono:
+
+immediacy index: la media del numero delle citazioni di articoli pubblicati nella rivista nello stesso anno di riferimento del JCR (si noti che tali articoli non entrano nel computo dell'IF);
+journal cited half-life: l'età mediana di tutti gli articoli pubblicati nella rivista citati in Journal Citation Reports nell'anno di riferimento;
+aggregate impact factor per una data categoria tematica, consiste nel calcolo dell'IF con le stesse modalità di quello calcolato per le riviste, ma prendendo in considerazione nel loro complesso tutte le riviste della categoria tematica; costituisce un termine di riferimento importante per valutare l'IF di una rivista rispetto alla categoria tematica di appartenenza.
+
+
+== Utilizzo proprio e improprio ==
+A causa del fatto che per calcolare l'IF occorre un minimo di tre anni e che passa un tempo imprecisato (di solito qualche anno) prima che una rivista sia inserita nelle banche dati Thomson Reuters, le riviste più recenti – anche se pubblicate da prestigiose associazioni scientifiche – possono non avere l'IF per molti anni.
+Secondo l'opinione di Eugene Garfield e di Thomson Reuters stessa, quindi, questa misura deve essere usata in modo prudente per la valutazione di singoli ricercatori in quanto, almeno in parte, discutibile, controversa e soggetta ad abuso.
+Eugene Garfield e Thomson Reuters mettono in guardia nel valutare mediante impact factor i singoli ricercatori anche perché esiste una ampia variazione della qualità degli articoli in un singolo giornale. Inoltre l'IF non tiene conto del numero di autori di un singolo articolo, della complessità della ricerca; per cui a tutti gli autori si può calcolare lo stesso IF in articoli che spesso hanno un numero di autori molto elevato, non giustificato e i cui ruoli nella ricerca pubblicata non sono chiariti almeno in nota.
+Un'altra incongruenza è relativa all'ampia variazione dell'IF fra le discipline e fra riviste mainstream o focalizzate su argomenti più circoscritti. L'uso dell'IF per paragonare due ricercatori che si occupano di argomenti simili ma non identici – entrambi pur con pubblicazioni internazionali su riviste peer-reviewed – premia di solito il ricercatore che pubblica su argomenti che seguono il mainstream e, quindi, con una elevata probabilità di citazione.
+La rincorsa all'impact factor può quindi vincolare la ricerca a fini differenti da quelli che le sono propri e premiare sempre gli stessi ricercatori o le stesse tradizioni di ricerca a scapito dell'originalità, dell'innovatività e della ricerca su argomenti oggetto di comunità scientifiche meno numerose e con un numero di riviste poco numeroso. 
+Sia Eugene Garfield che Thomson Reuters declinano ogni responsabilità nell'abuso dell'IF e richiamano l'attenzione sul fatto che per la valutazione di una buona ricerca occorre sempre una attenta peer review.
+
+
+== Controversie e non riproducibilità ==
+Una critica molto puntuale all'IF è stata elaborata dal matematico italiano Alessandro Figà Talamanca.
+La validità oggettiva dell'impact factor è stata messa in dubbio a causa della sua mancata riproducibilità in studi indipendenti: secondo Rossner, Van Epps e Hill "nessuno ha mai certificato l'attendibilità dei dati".
+
+
+== La presa di posizione della Fondazione Nobel ==
+Nel giugno 2017 la Fondazione Nobel ha inserito alcuni video nei propri canali Twitter e YouTube in cui si riportano le opinioni di alcuni vincitori di Premi Nobel, secondo cui è la ricerca, non la rivista su cui viene pubblicata, che è importante, cioè uno studioso dovrebbe essere valutato sulla base della qualità della sua ricerca, non sulla base della rivista su cui pubblica i suoi lavori o in base ad indici. Secondo questi interventi, gli sforzi attuati da alcuni studiosi per riuscire a pubblicare su riviste ad alto impact factor possono essere a volte una semplice perdita di tempo, o addirittura controproducenti, perché il processo editoriale può essere così protratto nel tempo e richiedere così tanti requisiti che un articolo finisce per essere completamente illeggibile. Il risultato viene paragonato dai Premi Nobel ad un porridge, una pappa d'avena.
+
+
+== Dati statistici ==
+L'IF è pubblicato a cadenza annuale nel Journal Citation Reports (JCR) e viene calcolato per migliaia di riviste scientifiche inserite nelle banche dati citazionali di Thomson Reuters, riguardanti sia le scienze naturali e la tecnologia (Science Citation Index – SCI), sia quelle sociali ed umanistiche (Social Sciences Citation Index – SSCI), che coprono un'ampia gamma di aree disciplinari. Tuttavia, la copertura è volutamente selettiva ed incompleta, partendo dal presupposto (non dimostrato scientificamente) che la maggior parte della letteratura scientifica rilevante si concentra in un numero piuttosto limitato di riviste importanti.
+Thomson Reuters fornisce sulla piattaforma Journal Citation Reports (JCR) il calcolo globale dell'IF e altri parametri di valutazione per una specifica pubblicazione. Le riviste scientifiche coperte dall'IF e da tutte le banche dati Thomson Reuters fanno parte della Master Journal List, comprendente tutte le riviste per le quali si calcola correntemente l'IF o per le quali tale calcolo è in corso.
+
+
+== L'impatto di Internet ==
+Internet ha reso gratuitamente disponibile un gran numero di working papers senza riviste, o intere nuove riviste. Tale accessibilità, unita allo straordinario potere dei motori di ricerca, rende sempre più citati gli articoli raggiungibili in internet, che tendono a sfuggire all'universo tradizionale (riviste accademico scientifiche peer-review) indicizzato nel Journal of Citation Reports, ai fini del fattore d'impatto.
+
+
+== Note ==
+
+
+== Bibliografia ==
+ Eugene Garfield, Citation Indexes for Science: A New Dimension in Documentation through Association of Ideas, in Science, vol. 122, n. 3159, 1955,  pp. 108-111, ISSN 0036-8075.
+
+
+== Voci correlate ==
+Bibliometria
+Indice H
+Indice Kardashian
+Letteratura scientifica
+Scientometria
+Valutazione della ricerca
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su fattore di impatto
+
+
+== Collegamenti esterni ==
+ Thomson ISI, su isinet.com.
+ Sciencegateway, su sciencegateway.org.

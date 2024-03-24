@@ -1,0 +1,85 @@
+revision: 64101237
+title: "Alfabeto latino b\xE1sico ISO"
+url: https://pt.wikipedia.org/wiki/Alfabeto_latino_b%C3%A1sico_ISO
+
+
+---
+
+O alfabeto latino básico ISO é um alfabeto latino e consiste de dois conjuntos de 26 letras (maiúsculas e minúsculas), codificado em vários padrões nacionais e internacionais e de uso amplo na comunicação international.
+
+Os dois conjuntos contém a seguir 26 letras cada:
+
+
+== História ==
+Na década de 1960 tornou-se evidente para as indústrias da computação e telecomunicações do primeiro mundo que era necessário um método não-proprietário de caracteres de codificação. A Organização Internacional para Padronização (ISO) encapsulou o alfabeto latino no padrão (ISO 646) em codificação de caracteres de 7-bit deles. Para alcançar ampla aceitação, este encapsulamento foi baseado no uso popular. O padrão foi baseado na já publicada American Standard Code for Information Interchange, mais conhecida como ASCII, no qual inclui no conjunto de caracteres, as 26 × 2 letras do alfabeto do inglês. Normas posteriores emitidas pela ISO, por exemplo ISO/IEC 8859 (codificação de caracteres 8-bit) e ISO/IEC 10646 (Escrita latina em Unicode), continuaram a definir 26 × 2 letras do alfabeto da língua inglesa como a escrita básica latina com extensões para lidar com outras letras em outras línguas.
+
+
+== Terminologia ==
+
+
+=== Nome para o bloco Unicode que contém todas as letras ===
+O Bloco Unicode que contém o alfabeto é chamado "C0 Controls and Basic Latin".
+
+
+=== Nomes para dois subconjuntos ===
+Em Unicode 7.0 dois subtítulos existem:
+"Uppercase Latin alphabet" (Alfabeto latino maiúsculo), letras individuais que contém a cadeia de caracteres LATIN CAPITAL LETTER (i.e., "letra latina de caixa-baixa") nas descrições deles
+"Lowercase Latin alphabet" (Alfabeto latino minúsculo), letras individuais que contém a cadeia de caracteres LATIN SMALL LETTER (i e., "letra latina de caixa-baixa") nas descrições correspondentes da organização.
+
+
+=== Nomes para as letras ===
+As letras também estão contidas em "Halfwidth and Fullwidth Forms" (Formas Semi-larga e Larga) FF00 para FFEF
+FF21 Ａ FULLWIDTH LATIN CAPITAL LETTER A
+FF41 ａ FULLWIDTH LATIN SMALL LETTER A
+
+
+== Cronologia para padrões de codificação ==
+1865: O Código Morse Internacional foi padronizado no Congresso International Telegráfico em Paris, e foi posteriormente feito o padrão pela União International de Telecomunicações (UIT)l
+Década de 1950: Alfabeto ortográfico de Radiotelefonia pela ICAO [1]
+
+
+=== Cronologia para códigos de computador amplamente utilizados com suporte à alfabetos ===
+1963: ASCII (padrão codificação de caracteres de 7-bit da American Standards Association, que se tornou ANSI em 1969)
+1963/1964: EBCDIC (desenvolvida pela IBM e suportando o mesmo caracteres alfabéticos como ASCII, mas com diferentes valores de código)
+1972: ISO 646 (padrão codificação de caracteres de 7-bit ISO, usa o mesmo códigos alfabético valendo como ASCII, revisado na segunda edição ISO 646:1983 e na terceira edição ISO/IEC 646:1991 como um padrão ISO/IEC comum)
+1983: ITU-T Rec. T.51 | ISO/IEC 6937 (uma extensão multi-byte do ASCII)
+1987: ISO/IEC 8859-1:1987 (codificação de caracteres de 8-bit)
+Subsequentemente outras versões e partes do ISO/IEC 8859 publicadas.
+Meio-para-o-final da década de 1980: Windows-1250, Windows-1252, e outras codificações são usadas no Microsoft Windows (alguns realmente semelhantes à ISO/IEC 8859-1)
+1990: Unicode 1.0 (desenvelvida pela Unicode Consortium), continha no bloco "C0 Controls and Basic Latin" utilizando os mesmos valores de código alfabéticos como ASCII e ISO/IEC 646
+Subsequentemente outras versões de Unicode foram publicadas subsequentemente, e mais tarde vieram um padrão ISO/IEC comum assim, tal como identificado abaixo.
+1993: ISO/IEC 10646-1:1993, padrão ISO/IEC para caracteres em Unicode 1.1
+Subsequentemente outras versões de ISO/IEC 10646-1 e um de ISO/IEC 10646-2 foram publicadas. Desde 2003, os padrões foram publicados sob o nome de "ISO/IEC 10646" sem a separação em duas partes.
+
+
+== Representação ==
+Algarismos indo-arábicos e letras do alfabeto básico latino ISO em um 16-segment display
+Em ASCII as letras pertencem aos caracteres imprimíveis e em Unicode, desde a versão 1.0 eles pertencem ao bloco "C0 Controls and Basic Latin". Em ambos casos, assim como em ISO/IEC 646, ISO/IEC 8859 e ISO/IEC 10646 ele estão ocupando as posições em notação hexadecimal 41 à 5A para caixa-alta e 61 à 7A para caixa-baixa.
+Exceto as maiúsculas e minúsculas, todas as letras tem palavras-código no alfabeto fonético da OTAN e podem ser representados com código Morse.
+
+
+== Uso ==
+Todas as letras minúsculas são utilizados no Alfabeto fonético internacional (IPA). Em X-SAMPA e SAMPA aquelas letras tem o mesmo valor de som como no IPA. Em Kirshenbaum eles tem o mesmo valor exceto para a letra r.
+
+
+== Alfabetos que contém o mesmo conjunto de letras ==
+A próxima lista apenas contém alfabetos em que não há:
+
+letras com sinais diacríticos que constituem letras distintas.
+multígrafos que constituem letras distintas.O inglês é a única língua europeia moderna principal que não requer diacríticos para palavras nativas (embora um trema é usado por algumas editoras em palavras como em "coöperation").Nota para Português:
+
+k, w e y foram parte do alfabeto até várias reformas ortográficas durante o século XX, cujo objetivo era mudar a ortografia etimológica do português numa ortografia fonética mais fácil. Estas letras foram substituídas por outras letras que contenham o mesmo som: assim psychologia torna-se psicologia, kioske torna-se quiosque, martyr torna-se mártir, etc. Hoje em dia k, w, e y são apenas encontradas em palavras estrangeiras e seus termos derivados e em abreviaturas científicas (p. ex. km, byronismo). Estas letras foram consideradas novamente como parte do alfabeto a partir do Acordo Ortográfico de 1990, que entrou em vigor em 1 de janeiro de 2009 no Brasil.
+
+
+== Veja também ==
+Alfabeto hebraico
+Alfabeto grego
+Alfabeto latino, Lista de alfabetos derivados do latino
+Alfabeto cirílico arcaico, Lista de alfabetos derivados do cirílico
+Windows code pages
+
+
+== Notas ==
+
+
+== Referências ==

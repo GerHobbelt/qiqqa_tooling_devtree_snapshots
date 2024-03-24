@@ -1,0 +1,22 @@
+revision: 29860380
+title: Crystallographic Information File
+url: https://ca.wikipedia.org/wiki/Crystallographic_Information_File
+
+
+---
+
+L'Arxiu de Informació Cristal·logràfica (CIF) és un format estàndard d'arxiu de text per representar la informació cristal·logràfica, promulgat per la Unió Internacional de Cristal·lografia (IUCr). El format CIF va ser desenvolupat pel Grup de Treball d'Informació IUCr cristal·logràfica sota el patrocini de la Comissió IUCr de Cristal·lografia de dades i la Comissió IUCr de Revistes. El format d'arxiu va ser inicialment publicat per Hall, Allen, i Brown  i des de llavors ha estat revisat, sent la versió més recent la 1.1. Les especificacions completes del format estan disponibles al lloc web IUCr. Molts programes d'ordinador per a la visió molecular són compatibles amb aquest format, incloent Jmol.
+
+format mmCIF
+Extensió de nom de fitxer .mcif
+Internet tipus de mitjà químic / x-mmcif
+Tipus de format de format d'arxiu química
+Hi està estretament relacionat el mmCIF, CIF macromolecular, que pretén ser una alternativa al format Data Bank de Proteïnes (PDB). També estretament relacionat és el Marc d'Informació Cristal·logràfica (Crystallographic Information Framework), un sistema més ampli de protocols d'intercanvi basats en diccionaris de dades i regles relacionals que es poden expressar en diferents formats, incloent, però no limitat a l'Arxiu de Informació
+Cristal·logràfica i XML.
+
+
+== Referències ==
+
+
+== Enllaços externs ==
+International Crystallographic Union

@@ -1,0 +1,67 @@
+revision: 67295771
+title: akumulator litowo-polimerowy
+url: https://pl.wikipedia.org/wiki/Akumulator_litowo-jonowy
+
+
+---
+
+Akumulator litowo-jonowy (Li-Ion) – akumulator elektryczny, w którym jedna z elektrod jest wykonana z porowatego węgla, a druga z tlenków metali, zaś rolę elektrolitu stanowi ciecz zawierająca sole litowe rozpuszczone w mieszaninie organicznych rozpuszczalników lub ciało stałe. Akumulatory tego typu mają napięcie ok. 3,6 V na ogniwo. Technologia ta pozwala na skumulowanie dwa razy więcej energii niż w akumulatorach NiMH o tym samym ciężarze i rozmiarach. Efekt pamięci oraz efekt leniwej baterii nie występuje.
+
+
+== Zastosowanie akumulatorów litowo-jonowych ==
+Z racji tego, że akumulatory litowo-jonowe są jednymi z najlżejszych, są one stosowane przede wszystkim we wszelkiego rodzaju sprzęcie elektronicznym. Obecnie najczęściej wykorzystuje się je w laptopach, telefonach komórkowych oraz innych urządzeniach przenośnych.
+Od pewnego czasu rośnie także zainteresowanie użyciem dużych pakietów akumulatorów litowo-jonowych (zazwyczaj od 20 do 100 kWh) w pojazdach elektrycznych. Wprowadzenie do produkcji samochodów i ciężarówek elektrycznych na skalę masową może w niedalekiej przyszłości wielokrotnie zwiększyć produkcję ogniw litowo-jonowych. Także producenci pojazdów z napędem hybrydowym coraz częściej zaczynają stosować ogniwa litowo-jonowe zamiast NiMH.
+Ogniwa litowo-jonowe stosowane w pojazdach elektrycznych znacznie różnią się od tych stosowanych w sprzęcie elektronicznym. Różnice wynikają przede wszystkim z większych wymagań związanych z warunkami pracy oraz większą wymaganą trwałością, sięgającą 10 lat. Ponadto pakiety wyposażone są w specjalne układy chłodzenia i ogrzewania, zapewniające optymalną temperaturę pracy. Ogniwa litowo-jonowe używane w pojazdach mogą być także szybko ładowane, zazwyczaj od 0 do 80% w 15–30 minut bez znaczącego wpływu na ich żywotność.
+Przykładem wykorzystania ogniw litowo-jonowych typu 18650 (o najwyższej jakości oraz z dodatkowymi zabezpieczeniami) jest sportowy samochód elektryczny Tesla Roadster, w którym zastosowano 6831 takich ogniw. Wielu producentów samochodów planuje jednak w swoich pojazdach użyć ogniw wielkoformatowych, o dużych pojemnościach np. Nissan Leaf. Prawdopodobnie największe pakiety akumulatorów litowo-jonowych (280 kWh) są stosowane w ciężarówkach i ciągnikach siodłowych firmy Balqon Corporation.
+Akumulatory litowo-jonowe są ostatnio stosowane także jako stacjonarne magazyny energii przy odnawialnych źródłach energii, które charakteryzują się znaczną niestabilnością pracy.
+Innym, wciąż eksperymentalnym zastosowaniem akumulatorów litowo-jonowych jest lotnictwo.
+
+
+== Wskazówki przedłużające życie akumulatorów Li-ion ==
+
+Akumulatory Li-ion, w przeciwieństwie do akumulatorów NiCd czy NiMH, powinny być ładowane często i jak najszybciej po rozładowaniu. Jeśli jednak nie będą używane przez dłuższy czas, powinny zostać rozładowane do około 40%. W takim stanie akumulator ma znacznie wyższą żywotność. Jeżeli akumulator będzie przechowywany w stanie całkowitego rozładowania, może ulec uszkodzeniu.
+Akumulatorów tego typu nie trzeba koniecznie formować, w przeciwieństwie do akumulatorów starszego typu.
+Należy ograniczyć lub w ogóle nie używać funkcji, które powodują pełne rozładowanie baterii (spotykanych w laptopach i telefonach komórkowych pracujących z bateriami niklowymi).
+Akumulator powinien być przechowywany w chłodnym miejscu. Nie powinien być jednak poddawany działaniu ujemnych temperatur. Przechowywanie w wysokich temperaturach (np. w nagrzanym samochodzie lub w pobliżu grzejnika) przyspiesza proces starzenia.
+Akumulatory litowo-jonowe najlepiej znoszą temperaturę od 10 °C do 25 °C. Ładowanie baterii w temperaturach ekstremalnych, tj. poniżej 5 °C lub powyżej 30 °C grozi uszkodzeniem ogniw, utratą gwarancji, a nawet pożarem.
+
+
+== Uwaga ==
+Akumulatory Li-ion mogą zapalić się, wybuchnąć lub rozszczelnić się (wyciek elektrolitu), jeśli zostaną nagrzane do zbyt wysokiej temperatury. Nie należy ich przechowywać w samochodzie podczas upalnych i słonecznych dni. Zwarcie akumulatora może spowodować zapłon lub eksplozję. Nie należy również otwierać akumulatora. Akumulatory Li-ion zawierają urządzenia zabezpieczające, które, jeśli zostaną uszkodzone, również mogą spowodować, że akumulator zapali się lub wybuchnie. Ładowanie takiego akumulatora jest niebezpieczne. Podczas ładowania ogniwo (akumulator) rozgrzewa się co może doprowadzić do wybuchu.
+
+
+== Ładowanie ==
+Akumulatory litowo-jonowe nie akceptują przeładowania, nadmiernego rozładowania oraz przegrzania, co narzuca na ładowarki akumulatorów duże wymagania. Akumulatory, których katoda jest wykonana z kobaltu, niklu, manganu i glinu, zazwyczaj ładuje się do 4,20 V/ogniwo. Tolerancja wynosi +/− 50 mV/ogniwo. Niektóre odmiany niklu ładuje się do 4,10 V/ogniwo; producenci niektórych ogniw dopuszczają 4,30 V/ogniwo i więcej. By nie przekroczyć maksymalnego napięcia i nie przegrzać ogniwa standardowo ładuje się dwuetapowo:
+
+(CC constant current) ładowanie prądem o wartości odpowiedniej dla danego ogniwa, aż ogniwo osiągnie zalecane napięcie, zazwyczaj 4,20 V. Zalecany prąd ładowania ogniwa energetycznego określa się względem jej pojemności i wynosi od 0,5 C do 1 C; całkowity czas ładowania wynosi wówczas około 2–3 godzin. Producenci tych ogniw zalecają ograniczenie ładowania do 0,8 C i niższej w celu przedłużenia żywotności baterii. Większość ogniw energetycznych może być ładowana większym natężeniem prądu przy niewielkim stresie.
+(CV constant voltage) utrzymanie stałego napięcia 4,20 V, aż prąd spadnie poniżej określonego (3–5% C) zazwyczaj 50 mA lub 55 mA (dla pewnych typów ogniw Li-ion o napięciu znamionowym 3,70 V napięcie ładowania wynosi 4,10 V na ogniwo), lub do założonego ułamka wartości (np. 2 do 10%) prądu płynącego w pierwszym etapie.Nie należy rozładowywać ogniw Li-ion do napięcia niższego niż 2,75 V do 3 V na ogniwo.
+
+
+== Sprawność ==
+Akumulatory Li-ion cechują się wysoką sprawnością ładowania, czyli stosunkiem energii oddanej podczas pracy do energii włożonej do akumulatora w procesie ładowania. Wczesne wersje ogniw posiadały sprawność ok. 80–90%, nowsze osiągają sprawność ok. 94% przy prądzie ładowania i rozładowania równym 0,5 C, a dane pomiarowe wskazują na możliwość osiągnięcia sprawności przekraczającej 99% przy niższych wartościach prądu, gdy ogniwo pozostaje chłodne podczas ładowania i rozładowania.
+
+
+== Elektrolit ==
+W roli elektrolitu ciekłego zastosowanie znajdują siarczan litu Li2SO4, heksafluorofosforan litu LiPF6 lub nadchloran litu LiClO4 rozpuszczone w mieszaninie węglanu etylenu (EC), węglanu dimetylu (DMC), węglanu dietylu (DEC), węglanu propylenu (PC) lub węglanu etylu metylu (EMC) w różnych proporcjach. W 2004 r. zaproponowano stosowanie złożonego fosforanu Li1+xAxM2−x(PO4)3 (A = Al, Sc, Y, M = Ti, Ge) jako elektrolitu stałego, co jest możliwe ze względu na odporność tego związku na działanie wody w warunkach pracy ogniwa.
+
+
+== Elektrody stosowane komercyjnie ==
+Rosnące zapotrzebowanie na akumulatory doprowadziło sprzedawców oraz pracowników naukowych do zwiększenia uwagi nad poprawą gęstości energii, temperatury pracy, bezpieczeństwa, trwałości, czasu ładowania, mocy wyjściowej oraz nad kosztami stosowania litu w bateriach typu Li-ion. Następujące materiały były stosowane w handlowo dostępnych ogniwach:
+
+
+=== Elektroda dodatnia ===
+
+
+=== Elektroda ujemna ===
+
+
+== Koszty akumulatorów i ich fluktuacje ==
+W momencie wprowadzenia do komercyjnego zastosowania (połowa lat 90. XX wieku) akumulatory litowo-jonowe kosztowały około $3000 za kWh. W 2015 roku było to ok. $190 za kWh. Koszt litu stanowi mniej niż 1% kosztu wytworzenia akumulatora.
+
+
+== Recykling ==
+Ze względu na fakt, że do produkcji akumulatorów litowo-jonowych wykorzystuje się wiele cennych surowców takich jak kobalt czy nikiel, zostały opracowane różne metody ich odzysku. Przykładowy proces recyklingu akumulatorów litowo-jonowych rozpoczyna się od ich demontażu na pojedyncze ogniwa, a następnie ich rozdrobnieniu. Dodatkowo tak przygotowany materiał można poddać separacji magnetycznej lub oczyszczaniu ultradźwiękami. Następnie przechodzi się do obróbki chemicznej. Jej pierwszym etapem jest proces pirometalurgiczny, w którego wyniku powstaje stop oraz odpad w postaci żużla. Na koniec przechodzi się do procesu hydrometalurgicznego, który obejmuje ługowanie kwasem lub rzadziej stosowane bioługowanie.
+W Hoboken na terenie Belgii znajduje się jedna z największych instalacji zajmujących się recyklingiem akumulatorów litowo-jonowych. Może ona przerobić, aż 7000 ton akumulatorów rocznie, co daje znaczącą ilość surowca, która jest ponownie wprowadzana na rynek.
+
+
+== Przypisy ==

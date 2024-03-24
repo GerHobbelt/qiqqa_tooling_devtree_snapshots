@@ -1,0 +1,128 @@
+revision: 20970034
+title: Virus
+url: https://fi.wikipedia.org/wiki/Virukset
+
+
+---
+
+Virus on hyvin pieni biologinen järjestelmä, joka tarvitsee isäntäsolun lisääntyäkseen. Viruksella ei ole omaa solurakennetta tai aineenvaihduntaa. Sitä ei useimpien määritelmien mukaan voida pitää varsinaisena elävänä organismina. Sillä on kuitenkin omaa perintöinformaatiota – samankaltaista kuin eliöillä – sekä omia proteiineja.
+Virukset tunkeutuvat soluihin ja saavat ne valmistamaan uusia viruksia, jotka jatkavat uusiin soluihin. Vahingoittuneet solut usein kuolevat, ja virukset aiheuttavat isäntäeliössään usein jonkin sairauden. Lääketieteessä viruksia käytetään myös hyödyksi esimerkiksi bakteereja vastaan tai hoitavien geenien kuljettajina kohdesoluihin.
+Virusten alkuperää ei tiedetä varmasti. Joidenkin teorioiden mukaan virukset ovat syntyneet soluista, mutta on myös esitetty, että ne ovat syntyneet jo ennen ensimmäistä solua.
+Viruksia tutkiva mikrobiologian haara on nimeltään virologia (virusoppi). Virukset löydettiin 1800-luvun lopulla.
+
+
+== Etymologia ==
+Virus on latinankielinen myrkkyä tarkoittava sana. Lääketieteessä viruksiksi kutsuttiin alun perin kaikkia taudinaiheuttajia.
+
+
+== Alkuperä ==
+Virusten alkuperää ei vieläkään tunneta. Siitä on esitetty useita teorioita, mutta konsensusta ei ole saavutettu. On mahdollista, että yksi teoria on enemmän oikeassa yhdelle virustyypille ja toinen teoria toiselle virustyypille.Yhden teorian mukaan virukset ovat soluista karkuun lähteneitä irrallisia geenipaketteja.Toisen teorian mukaan virukset ovat kehittyneet soluista niin, että suuri osa solujen alkuperäisistä ominaisuuksista on karsiutunut pois. Tämä teoria saa vahvistusta sellaisten virusten olemassaolosta, jotka ovat keskimääräistä virusta huomattavasti suurempia. Niiden on esitetty voineen kehittyä itsenäisesti elävistä soluista. On kuitenkin myös mahdollista, että ne olisivat paisuttaneet genomiaan kaappaamalla geenejä isäntäeliöiltään.Kolmannen teorian mukaan virukset olivat olemassa jo ennen soluja. Teoria esittää, että nykyiset yksijuosteista RNA:ta sisältävät virukset voisivat olla varhaisten RNA-molekyylien jälkeläisiä. On myös esitetty, että DNA-virukset voisivat olla aitotumallisten solujen tumien esiasteita. Esiaitotumalliset solut olisivat antaneet pysyvän sijan DNA-viruksille, joista sittemmin olisi kehittynyt nykyisen kaltainen tuma.
+
+
+== Löytyminen ==
+Virusten löytymisen edellytys oli ranskalaisen mikrobiologi Charles Chamberlandin vuonna 1884 kehittämä suodatin. Se oli niin pienireikäinen, että bakteerit eivät päässeet sen läpi, mutta niitä pienemmät virukset pääsivät. Suodatinta käyttäen venäläinen biologi Dmitri Ivanovski havaitsi, että tupakanlehdistä puristettu ja suodattimen läpi pakotettu mehu kykeni edelleen saastuttamaan terveitä lehtiä. Ivanovski esitti vuonna 1892 Pietarin tiedeakatemialle, että suodattimen läpäisi ja tautia aiheutti jokin bakteerien tuottama liukoinen myrkky. Kuusi vuotta myöhemmin samanlaisia kokeita tehnyt hollantilainen Martinus Beijerinck julkaisi Ivanovskista riippumattoman johtopäätöksensä, että suodos sisälsi uudentyyppistä taudinaiheuttajaa, joka lisääntyi vain elävissä ja aktiivisesti jakautuvissa soluissa. Beijerinck piti taudinaiheuttajaa nestemäisenä, mikä säilyi yleisenä käsityksenä jonkin aikaa. Beijerinck oli myös ensimmäinen tai ainakin ensimmäisiä, joka käytti tekijästä nimitystä virus.Saksalaiset tutkijat Friedrich Loeffler ja Paul Frosch tutkivat suu- ja sorkkatautia, ja päätyivät vuonna 1898 tulokseen, että vasikoita tartuttaa tartunnan saaneen eläimen rakkulasta valmistettu suodos. He siirsivät tautia ensimmäisestä suodoksen sairastuttamasta eläimestä seuraavaan ja siitä taas seuraavaan. Koska vielä sarjan viimeinenkin eläin sairastui, tutkijat päättelivät, että alkuperäisessä suodoksessa ollut toksiini olisi ollut jo liian laimeaa sitä sairastuttamaan, eli kyseessä täytyi olla pienikokoinen, lisääntymään kykenevä tekijä. Tutkijat havaitsivat myös, että sairastunut eläin sai pysyvän immuniteetin, ja he olivat ensimmäiset lisääntymiskyvyttömiä viruksia sisältävän rokotteen käyttäjät.Ensimmäisenä ihmisen tautina suodattuvan tekijän aiheuttamaksi havaittiin keltakuume vuonna 1902. Vuosisadan alkuvuosikymmeninä suodattuvaa taudinaiheuttajaa epäiltiin vielä jonkinlaiseksi molekyyliksi. Yhdysvaltalainen kemisti Wendell Stanley onnistui vuonna 1935 kiteyttämään tupakan mosaiikkiviruksen. Hän uskoi aluksi, että kiteet olivat proteiinia, mutta englantilaiset tutkijat Frederick Bawden ja Norman Pirie saivat selville, että ne sisälsivät proteiinin lisäksi nukleiinihappoa. Vuonna 1939 saksalaiset tutkijat Gustav Kausche, Edgar Pfankuch ja Helmut Ruska julkaisivat ensimmäiset viruksista saadut elektronimikroskooppikuvat. Wendell Stanley ja hänen käyttämiään menetelmiä kehittäneet James Sumner ja John Northrop saivat vuonna 1946 kemian Nobel-palkinnon tutkimuksistaan.
+
+
+== Rakenne ==
+
+Yksittäinen virus eli viruspartikkeli eli virioni (virion) sisältää joko DNA- tai RNA-rihman, eli perinnöllistä informaatiota sisältävän nukleiinihappomolekyylin, joka voi olla joko yksi- tai kaksijuosteinen. Nukleiinihappomolekyyliä ympäröi proteiinivaippa, kapsidi. Kapsidi voi olla rakenteeltaan joko sauvamainen tai monitahokas, kahdestakymmenestä säännöllisestä kolmiosta muodostuva ikosaedri. Joillakin viruksilla on kapsidin ympärillä vielä lipidivaippa, joka on peräisin isäntäsolun kalvorakenteista. On tosin olemassa viruksia, joilla lipidivaippa on proteiinivaipan sisällä. Vaippaan voi olla myös kiinnittyneenä hiilihydraatteja. Vaipalliset virukset ovat alttiimpia erilaisille ympäristön vaikutuksille, kuten kuivumiselle, happamille olosuhteille esimerkiksi suolistossa ja sappinesteelle.
+
+
+== Koko ==
+Kooltaan virukset ovat yleensä muutamasta kymmenestä nanometristä satoihin nanometreihin. Virukset ovat yleensä pienempiä kuin bakteerit, mutta pienimmät bakteerit ovat pienempiä kuin suuret virukset. Yksittäisiä viruksia ei voi pääsääntöisesti havaita valomikroskoopilla, vaan niiden tarkasteluun tarvitaan voimakkaasti suurentavaa ja kallista elektronimikroskooppia.Fyysiseltä kooltaan suurin tunnettu virus on Siperian maaperästä routarajan alapuolelta esiin kaivettu pithovirus, joka on pituudeltaan puolitoista mikrometriä (1 500 nanometriä) ja leveydeltään puoli mikrometriä (500 nanometriä). Suurin genomi, 2,5 miljoonaa emästä, on löydetty meressä elävältä Pandoravirus salinusilta.
+
+
+== Luokittelu ==
+Virukset voidaan luokitella esimerkiksi niiden isäntäeliöiden mukaan. Tällöin luokittelu saattaa käsittää erikseen vaikkapa eläinten, kasvien, sienten ja bakteerien virukset. Tämäntyyppinen luokittelu johtuu virusten yksipuolisuudesta: bakteriofagit eli bakteerivirukset tunkeutuvat ainoastaan bakteereihin, bakulovirukset ainoastaan niveljalkaisiin, rabies ainoastaan nisäkkäisiin ja niin edelleen. Jotkut virukset ovat hyvin yksipuolisia: esimerkiksi HIVin isäntäsoluiksi käyvät vain tietyt veren valkosolut.
+Toinen yleinen luokitteluperusta on viruksen sisältämät nukleiinihapot ja niiden juosteet.lähde? Tällöin muodostuu kaksi pääryhmää, DNA-virukset ja RNA-virukset.
+Luokittelua voidaan tehdä myös viruksen muodon, koon, lipidivaipan sekä lääketieteessä usein myös potilaassa ilmenevien oireiden perusteella.lähde?Baltimoren luokittelujärjestelmässä virukset jaetaan genomin rakenteen ja replikaatiomenetelmien perusteella seitsemään luokkaan:
+
+  dsDNA
+  ssDNA
+  dsRNA
+  (+)ssRNA
+  (−)ssRNA
+  ssRNA-RT
+  dsDNA-RT
+Kansainvälinen virusluokituskomitea (ICTV) on luokitellut virukset kahdeksaan nimettyyn lahkoon (-virales) sekä yhteen lahkoihin määräämättömien heimojen ryhmään. Lahkot jakautuvat edelleen heimoihin (-viridae), sukuihin (-virus) ja lajeihin (-virus).
+Bunyavirales
+Caudovirales
+Herpesvirales
+Ligamenvirales
+Mononegavirales
+Nidovirales
+Picornavirales
+Tymovirales
+määräämättömät
+
+
+== Lisääntyminen ==
+
+Virus voi tunkeutua soluun esimerkiksi tarttumalla yhteensopivalla pintaproteiinillaan solukalvon reseptoriin, mikä johtaa endosytoosiin. Virustyypeistä bakteriofagi taas tarttuu bakteerin pintaan ja ruiskuttaa perimäaineksen solun sisään.
+Yleensä viruksen pääsy solun sisälle estyy. Mikäli virus kuitenkin pääsee soluun, sen sisältämä nukleiinihappo vapautuu. Jos viruksen nukleiinihappo on DNA:ta, sen täytyy päästä tumaan asti, koska DNA:n lukukoneisto on siellä. Jos viruksen nukleiinihappo on puolestaan RNA:ta, se toimii joko solun lähetti-RNA:na tai retroviruksen tapauksessa se saa isäntäsolun muodostamaan RNA:sta viruksen sisältämän käänteiskopioijaentsyymin avulla vastin-DNA:ta (cDNA). Retroviruksen muodostama DNA tunkeutuu DNA-viruksen tapaan isäntäsolun tumaan.
+Isäntäsolun aineenvaihdunta muuttuu muuntuneen DNA:n tai lähetti-RNA:n vuoksi niin, että se alkaa valmistaa viruksen nukleiinihappojen kopioita sekä viruksen kuoren rakenneosia ja entsyymejä. Virusten valmistamisen kannalta tarpeettomat geenit deaktivoituvat. Uudet virukset syntyvät lopulta isäntäsolun sisällä. Mikäli viruksella on lipidivaippa, se muodostuu virukseen proteiinivaipan päälle isäntäsolun solukalvosta viruksen poistuessa solusta. Virusten valmistaminen vahingoittaa usein lopulta niin paljon isäntäsolun omaa aineenvaihduntaa, että solu kuolee.
+Joskus isäntäsoluun päässyt virus voi olla pitkään harmiton osa solun DNA:ta. Se voi kopioitua solunjakautumisen kautta isäntäsolun muodostamiin tytärsoluihin. Vasta tietyissä olosuhteissa virus muuttuu laajassa solujoukossa nopeasti vahingolliseksi, virulentiksi. Tällöin uusia viruksia muodostuu suuria määriä, mikä tarkoittaa usein jonkin sairauden puhkeamista isäntäeliössä.
+Ihmisen ja kaikkien muidenkin selkärankaisten perimässä on runsaasti siihen fuusioituneiden retrovirusten jäänteitä. Ihmisen DNA:sta noin yhdeksän prosenttia muodostuu retrovirusten jäänteistä, ja kun mukaan lasketaan myös pienet pirstaleet, luku nousee 45 prosenttiin. Selviä virusjäänteitä ihmisen perimässä on huomattavasti enemmän kuin varsinaisia ihmisen geenejä. Virusjäänteiden säätelyalueet eivät enää muodosta viruksia, mutta ne vaikuttavat edelleen ihmisten geenien ilmentymiseen.
+
+
+== Virukset taudinaiheuttajina ==
+
+Monille viruksille, kuten poliovirukselle, on tyypillistä, että vain osa virustartunnan saaneista sairastuu. Jos puolustusjärjestelmän solut toimivat riittävän tehokkaasti, viruksen monistuminen estyy, eikä tartunnan saanut sairastu.Viruksen infektoiman solun solukalvo muuttuu yleensä niin, että se alkaa toimia antigeenina. Tällöin T-lymfosyytit voivat tappaa sen. B-lymfosyytit vastaavasti alkavat tuottaa virukselle vasta-aineita isäntäeliön immuunisuojaa varten. Myös infektoitunut solu itse pyrkii toimimaan virusta vastaan estämällä sen lisääntymistä tuottamillaan interferoneilla. Interferonit voivat levitä myös infektoituneen solun ympärillä olevien solujen reseptorimolekyyleihin ja saada muutkin solut tuottamaan interferoneja.
+Virukset voivat saada toisinaan potilaan elimistön immuunipuolustuksen riehaantumaan ylikierroksille, jolloin se tuottaa liikaa  tulehdusta välittäviä sytokiineja, joiden tehtävänä on auttaa elimistöä tuhoamaan omia viruksen infektoimia solujaan. Kun tulehdussytokiinejä on liikaa, soluja tuhoutuu haitallisessa määrin.
+Virus saattaa myös jäädä ihmisen elimistöön ja aktivoitua uudestaan senkin jälkeen kun hän on jo parantunut sen aiheuttamasta sairaudesta.lähde?
+
+
+=== Virustautien historiaa ===
+Virukset eivät aiheuttaneet vielä muinaisissa metsästäjä-keräilijöissä vakavia epidemioita. Keräilijäyhteisöt olivat niin pieniä, ettei vaarallisilla viruksilla ollut mahdollista selviytyä niissä pitkään. Vasta kun ihmiset asettuivat aloilleen maanviljelyn myötä noin 10 000 vuotta sitten, virustaudeista tuli pysyvämpiä, ja ne alkoivat verottaa suuriksi kasvaneita ihmisyhteisöjä.Useat virussairaudet, kuten isorokko ja tuhkarokko, ovat vaivanneet ihmiskuntaa tuhansien vuosien ajan. Jotkut virussairaudet ovat kuitenkin varsin uusia. Esimerkiksi HI-viruksen aiheuttama AIDS on vasta muutaman vuosikymmenen ikäinen ilmiö. Toisaalta ihmisen pitkäikäinen vitsaus isorokko on onnistuttu kitkemään maapallolta Maailman terveysjärjestö WHO:n järjestämän maailmanlaajuisen rokotuskampanjan ansiosta. Sitä aiheuttaneesta Variola-viruksesta on virallisesti jäljellä enää näytteet kahdessa tarkoin vartioidussa laboratoriossa Yhdysvalloissa ja Venäjällä. Isorokkoon kehitettiin myös maailman ensimmäiset rokotteet Englannissa 1700-luvulla.
+
+
+=== Virusten aiheuttamia tauteja ===
+AIDS
+COVID-19
+denguekuume
+ebolakuume eli ebola
+flunssa (yleisin aiheuttaja rinovirus ja yli 200 muuta virusta, joista osa voi aiheuttaa samalla myös muita merkittäviä tauteja ja oireita)
+herpes
+influenssa
+isorokko
+keltakuume
+Marburgin tauti
+myyräkuume
+polio
+SARS
+
+
+=== Rokotteet ===
+Virusrokotteen kehittämiseen tarvitaan yleensä 10–15 vuotta. Jotkut virukset, kuten HI-virus ja influenssavirus, kykenevät muuntautumaan hyvin nopeasti perimänsä suuren mutaatiofrekvenssin ansiosta, jolloin virusta vastaan toimivaa rokotetta on käytännössä mahdoton kehittää; kun jonkinlainen rokote saadaan kehitettyä, tunnistamisessa käytettävät viruksen pinnan proteiinit ovatkin jo ehtineet muuntua uudenlaisiksi.Yleisimmässä virusrokotteen tyypissä käytetään elävää virusta, jota on heikennetty, jotta se ei aiheuttaisi tautia. Heikennettyjä viruksia voidaan valmistaa useilla menetelmillä. Erityisen paljon käytetään menetelmää, jossa ihmisen viruksen annetaan siirtyä sukupolvesta toiseen jonkin eläimen, kuten kanan, viljellyissä soluissa tai alkioissa. Tarpeeksi kauan lisäännyttyään virukset ovat muuntuneet niin, että ne kykenevät lisääntymään ihmisessä vain heikosti, eivätkä aiheuta tautia. Ne kykenevät kuitenkin aktivoimaan ihmisen immuunijärjestelmän ja aiheuttamaan immuniteetin. Toinen tapa on käyttää rokotteessa kuolleita eli inaktivoituja viruksia. Virukset inaktivoidaan esimerkiksi kuumentamalla tai kemikaalien avulla. Näin käsitelty virus ei kykene lisääntymään elimistössä, mutta immuunijärjestelmä tunnistaa sen silti. Tällä tavalla saatu immuniteetti on melko lyhytkestoinen, joten rokotus joudutaan aika ajoin uusimaan. Rokote voi sisältää myös pilkottuja taudinaiheuttajia tai niiden pintaproteiineja tai pintasokereita. Pintaproteiinin osia voidaan valmistaa myös synteettisesti, jolloin puhutaan peptidirokotteista. Geeniteknologian avulla valmistettuja proteiineja käyttävät rokotteet ovat rekombinanttirokotteita. Kolmas tyyppi ovat DNA-rokotteet, jotka ovat yhä kokeiluvaiheessa. DNA-rokotuksessa viruksen geenejä ruiskutetaan elimistöön puhtaan DNA:n muodossa.
+
+
+=== Lääkkeet ===
+Useimpia viruksia vastaan ei ole varsinaisia lääkkeitä. Antibiootit tepsivät vain bakteereihin, eivät viruksiin. Viruslääkkeet eivät kykene tuhoamaan virusta, vaan ne ainoastaan estävät sen toimintaa. Tavallisia flunssaviruksia vastaan ei ole kannattanut kehittää viruslääkettä, sillä niiden aiheuttamat oireet ovat pääsääntöisesti lieviä. Influenssavirusta vastaan on lääkeaineita, joita käytetään vakavimmissa tapauksissa. Myös esimerkiksi HI-virusta ja herpesvirusta vastaan on kehitetty lääkkeitä. Tietty viruslääke vaikuttaa yleensä vain yhteen virustyyppiin, mutta jotkin lääkkeet vaikuttavat useampaankin.
+
+
+== Virusdiagnostiikka ==
+Virusdiagnostiikka tarkoittaa menetelmiä, joiden avulla virus osoitetaan ja tunnistetaan. Menetelmiä on useita, ja niiden käyttö riippuu esimerkiksi käytettävissä olevan näytteen määrästä ja laadusta sekä viruksen todennäköisestä määrästä näytteessä. Etsittävä kohde voi olla viruspartikkeli, viruksen proteiini, nukleiinihappo tai elimistöön viruksen käynnistä jäänyt jälki. Virusviljely on menetelmä, jossa näyte suodatetaan bakteerisuodattimen läpi ja lisätään maljoilla kasvatettujen solujen joukkoon. Soluissa lisääntyvä virus aiheuttaa mikroskoopilla havaittavia muutoksia, jotka voivat kertoa viruksen laadusta. Elektronimikroskoopin avulla voidaan havaita viruksia, jos niitä on näytteessä runsaasti, kuten ripulitaudeissa. Viruksia voidaan tunnistaa myös näytteessä syntyvien vasta-aineiden perusteella.
+
+
+== Virusten käyttö lääketieteessä ==
+Faagiterapiassa bakteereja vastaan käytetään niitä tappavia viruksia eli bakteriofageja. Niitä käytetään ulkoisesti ihoinfektioissa, leikkaushaavoissa ja palovammoissa sekä sisäisesti suolistotulehduksissa. Myös suonensisäistä käyttöä on kokeiltu, vaikka se onkin vaikeaa. Ennen bakteereja tappavien antibioottien keksimistä 1920-luvulla faagiterapiaa käytettiin monessa maassa. Nykyisin sitä käytetään vielä esimerkiksi Venäjällä, Georgiassa, Puolassa ja Intiassa. Kiinnostus faagiterapiaan on virinnyt uudelleen länsimaissa 2000-luvulla kun antibiooteille vastustuskykyisiä bakteerikantoja on löytynyt.Geeniterapiassa viruksia käytetään kuljettamaan hoitavia geenejä kohdesoluihin. Virusten genomiin ympätään lisägeenejä, jotka virus kuljettaa mukanaan soluihin, missä ne koodaavat haluttua proteiinia.Viruksia voidaan hyödyntää syöpäsolujen tuhoamisessa, sillä jotkin virukset infektoivat luonnostaan syöpäsoluja ja tappavat niitä. Viruksista johdettujen geeninkuljettimien eli vektorien avulla voidaan syöpäsoluihin myös viedä aineita, jotka aiheuttavat solun tuhoutumisen.Biotekniikassa virusvektorien avulla on selvitetty esimerkiksi sitä, mitä jokin proteiini saa aikaan soluissa. Proteiinia vastaava geeni lähetetään soluihin virusvektorin mukana. Jos halutaan valmistaa jotain proteiinia, sitä vastaava geeni siirretään virusvektoriin, jonka avulla solut muunnetaan haluttua proteiinia tuottaviksi tehtaiksi. Faagiseulonnan avulla voidaan tuottaa spesifejä ja erityisen hyvin toimivia bakteerien vasta-aineita.
+
+
+== Lähteet ==
+Jalasvuori, Matti: Virus: Elämän synnyttäjä, kuoleman kylväjä, ajatusten tartuttaja.    Docendo, 2015. ISBN 978-952-291-166-7.     
+Tast, Johan et al.: Lukio 4, Koulun biologia: Solubiologia ja biotekniikka, s. 66–77.    Otava, 1999. ISBN 951-1-15670-5.     
+Valste, Juha et al.: Biologia Elämä: Perinnöllisyys ja evoluutio, s. 30.    WSOY, 2002. ISBN 951-02737-3-2.     
+Vuento, Matti: Virukset: Näkymättömät viholliset.    Gaudeamus, 2016. ISBN 978-952-495-392-4.     
+
+
+=== Viitteet ===
+
+
+== Aiheesta muualla ==
+
+Opetus.tv -sivuston videoita viruksista
+International Committee on Taxonomy of Viruses (ICTV) talk.ictvonline.org.   Viitattu 12.10.2018 (englanniksi). 
+Mandal, Ananya: What is a Virus? The Medical News.  23.8.2018.   Viitattu 12.10.2018 (englanniksi). 
+Krug, Robert M. & Wagner, Robert R.: Virus Encyclopædia Britannica.   Viitattu 12.10.2018 (englanniksi). 
+Lodish, H & Berk, A & Zipursky, SL, et al.: ”Section 6.3Viruses: Structure, Function, and Uses”, Molecular Cell Biology. 4th edition.  New York: Freeman, 2000.  ISBN 0-7167-3136-3. Teoksen verkkoversio.    (englanniksi)
+Introduction to the Viruses UCMP - University of California Museum of Paleontology.   Viitattu 12.10.2018 (englanniksi).

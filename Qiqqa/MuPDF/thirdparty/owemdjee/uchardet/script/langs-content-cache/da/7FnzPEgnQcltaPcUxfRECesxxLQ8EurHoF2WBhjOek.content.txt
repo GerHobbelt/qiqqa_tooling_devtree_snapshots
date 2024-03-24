@@ -1,0 +1,648 @@
+revision: 11389649
+title: Brint
+url: https://da.wikipedia.org/wiki/Brint
+
+
+---
+
+Brint eller hydrogen (græsk hydōr "vand" og genes "skaber") er et grundstof med atomnummer 1 i det periodiske system.
+Brint er luftformigt ved atmosfærisk tryk. Fri brint optræder som brintmolekyler, H2. Brint er brændbart. Brint kan også bruges som brændstof for f.eks. biler.
+Brint H har tre kendte isotoper:
+
+Det stabile protium ("almindelig hydrogen") (1H) med én nukleon; en proton.
+Det stabile deuterium D (2H) med to nukleoner; en proton og en neutron. Kaldes også tung brint.
+Det radioaktive tritium T (3H) med tre nukleoner; én proton og to neutroner. Kaldes supertung brint.Brint er et af de få brændstoffer, der har højere brændværdi end olie og benzin, og det bruges derfor som raketbrændstof i bl.a. de amerikanske rumfærgers interne hovedmotorer. Brint indgår også som væsentlig bestanddel i de molekyler, som olie og benzin består af. Ved forbrænding af brint dannes vand.
+Det er blevet anslået, at brint udgør omkring 3/4 af den kendte del af universets masse. På Jorden findes brint primært bundet til andre grundstoffer som i vand og organisk materiale. Der findes en lille smule fri brint i Jordens atmosfære (ca. 1 ppm efter volumen). Fri brint fremstilles bl.a. ved elektrolyse af vand.
+Det danske navn brint er dannet i 1814 af H.C. Ørsted af ordet brænde, ældre og dial. også brinne (sammenlign ilt). Tidligere blev det kaldt vandstof, der ligesom tysk Wasserstoff er en direkte oversættelse af det græsk-latinske hydrogenium.
+
+
+== Brintatomet ==
+Brintatomet er det simpleste af alle atomer og har derfor spillet en nøglerolle i atomfysikkens udvikling.
+Brintatomet består af en proton og en elektron. Brintatomets kappe rummer altså kun én eneste elektron – større atomer indeholder flere elektroner, hvilket komplicerer den fysiske beskrivelse betydeligt. Brintatomets kerne kan udover protonen indeholde op til to neutroner, men deres eventuelle tilstedeværelse ændrer kun brintatomets egenskaber marginalt.
+
+Brintatomet holdes sammen af den elektriske tiltrækning mellem den positivt ladede proton og den negativt ladede elektron. Størrelsen af den tiltrækkende kraft er givet ved Coulombs lov: 
+  
+    
+      
+        F
+        =
+        
+          
+            1
+            
+              4
+              π
+              
+                ε
+                
+                  0
+                
+              
+            
+          
+        
+        
+          
+            
+              e
+              
+                2
+              
+            
+            
+              r
+              
+                2
+              
+            
+          
+        
+      
+    
+     
+  , hvor 
+  
+    
+      
+        e
+      
+    
+     
+   er elementarladningen, 
+  
+    
+      
+        r
+      
+    
+     
+   er afstanden mellem elektron og proton, og 
+  
+    
+      
+        ε
+      
+    
+     
+   er vakuumpermittiviteten. Da elektronen er næsten 2000 gange lettere end protonen, kan man med god tilnærmelse antage, at protonen ligger stille, eller rettere at elektronen følger protonen i den bevægelse, som brintatomet som helhed måtte udføre. Problemet er altså at bestemme, hvordan elektronen bevæger sig i forhold til kernen. Brintatomets stabilitet er imidlertid uforklarlig, hvis man holder sig inden for rammerne af den klassiske elektromagnetisme. I planetmodellen for brintatomet antages elektronen at udføre en jævn cirkelbevægelse om kernen, men da accelerationen i en sådan bevægelse er forskellig fra nul, ville elektronen udsende elektromagnetisk stråling og gradvis spiralere ind i kernen.
+
+
+=== Bohrs model for brintatomet ===
+
+Niels Bohr løste problemet i 1913 ved at gøre nogle kvantiseringsantagelser. Ifølge hans model kan brintatomet kun befinde sig i såkaldte stationære tilstande svarende til et diskret sæt af energiniveauer. Man kan beregne energien i den 
+  
+    
+      
+        n
+      
+    
+     
+  'te stationære tilstand vha. formlen 
+  
+    
+      
+        
+          E
+          
+            n
+          
+        
+        =
+        −
+        
+          
+            
+              E
+              
+                0
+              
+            
+            
+              n
+              
+                2
+              
+            
+          
+        
+      
+    
+     
+  ,
+hvor 
+  
+    
+      
+        
+          E
+          
+            0
+          
+        
+      
+    
+     
+   er lig 13,6 elektronvolt (eV), og 
+  
+    
+      
+        n
+      
+    
+     
+   er et naturligt tal. Heraf følger bl.a. at brintatomets energi i grundtilstanden svarende til 
+  
+    
+      
+        n
+        =
+        1
+      
+    
+     
+   er 
+  
+    
+      
+        −
+        13
+        ,
+        6
+      
+    
+     
+   eV. Man skal altså tilføre brintatomet 13,6 eV for at ionisere det.
+I hver af de stationære tilstande antager den gennemsnitlige afstand fra elektronen til kernen en bestemt værdi. Man kan beregne brintatomets radius i den '
+  
+    
+      
+        n
+      
+    
+     
+  'te tilstand vha. formlen 
+  
+    
+      
+        
+          r
+          
+            n
+          
+        
+        =
+        
+          n
+          
+            2
+          
+        
+        
+          a
+          
+            0
+          
+        
+      
+    
+     
+  , hvor 
+  
+    
+      
+        
+          a
+          
+            0
+          
+        
+      
+    
+     
+   er lig 0,529 ångstrøm (Å). I grundtilstanden er den gennemsnitlige afstand fra elektronen til kernen altså 0,529 Å.
+Ikke alene er energien kvantiseret, men elektronens impulsmoment er det også. Det viser sig, at der i den 
+  
+    
+      
+        n
+      
+    
+     
+  'te stationære tilstand er 
+  
+    
+      
+        n
+      
+    
+     
+   mulige værdier af impulsmomentet, nemlig 
+  
+    
+      
+        L
+        =
+        
+          
+            
+              l
+              h
+            
+            
+              2
+              π
+            
+          
+        
+      
+    
+     
+  , hvor 
+  
+    
+      
+        h
+      
+    
+     
+   er Plancks konstant, og 
+  
+    
+      
+        l
+        =
+        0
+        ,
+        …
+        ,
+        n
+        −
+        1
+      
+    
+     
+  . I større atomer svarer forskellige værdier af 
+  
+    
+      
+        l
+      
+    
+     
+   til forskellige energiniveauer, men i brintatomet afgøres energien alene af hovedkvantetallet 
+  
+    
+      
+        n
+      
+    
+     
+  . Impulsmomentet har imidlertid betydning for, hvor man kan forvente at antræffe elektronen, hvis man foretager en måling af dens position. 
+  
+    
+      
+        l
+        =
+        0
+      
+    
+     
+   svarer til sfærisk symmetri. I denne tilstand er der endda en vis sandsynlighed for at elektronen befinder sig inde i kernen.
+
+
+=== Brintatomets linjespektrum ===
+Bohrs atommodel forudsiger korrekt bølgelængderne af det lys, som findes i brintatomets linjespektrum. Brintatomet kan overgå fra en stationær tilstand (
+  
+    
+      
+        n
+      
+    
+     
+  ) til en anden (
+  
+    
+      
+        m
+      
+    
+     
+  ) ved absorption af stråling eller spontan emission af elektromagnetisk stråling, hvis fotonenergi er lig forskellen mellem atomets energi i hver af de to stationære tilstande: 
+  
+    
+      
+        ε
+        =
+        
+          E
+          
+            n
+          
+        
+        −
+        
+          E
+          
+            m
+          
+        
+      
+    
+     
+  . Ifølge Plancks kvantehypotese er fotonenergien lig 
+  
+    
+      
+        h
+        ν
+      
+    
+     
+   hvor 
+  
+    
+      
+        ν
+      
+    
+     
+   er strålingens frekvens. Det følger heraf at strålingens bølgelængde er givet ved
+
+  
+    
+      
+        
+          
+            1
+            λ
+          
+        
+        =
+        
+          
+            ν
+            c
+          
+        
+        =
+        
+          
+            
+              
+                E
+                
+                  n
+                
+              
+              −
+              
+                E
+                
+                  m
+                
+              
+            
+            
+              h
+              c
+            
+          
+        
+        =
+        
+          
+            
+              −
+              
+                
+                  
+                    E
+                    
+                      0
+                    
+                  
+                  
+                    n
+                    
+                      2
+                    
+                  
+                
+              
+              −
+              
+                (
+                
+                  −
+                  
+                    
+                      
+                        E
+                        
+                          0
+                        
+                      
+                      
+                        m
+                        
+                          2
+                        
+                      
+                    
+                  
+                
+                )
+              
+            
+            
+              h
+              c
+            
+          
+        
+        =
+        
+          
+            
+              
+                E
+                
+                  0
+                
+              
+              
+                (
+                
+                  
+                    
+                      1
+                      
+                        m
+                        
+                          2
+                        
+                      
+                    
+                  
+                  −
+                  
+                    
+                      1
+                      
+                        n
+                        
+                          2
+                        
+                      
+                    
+                  
+                
+                )
+              
+            
+            
+              h
+              c
+            
+          
+        
+        =
+        R
+        
+          (
+          
+            
+              
+                1
+                
+                  m
+                  
+                    2
+                  
+                
+              
+            
+            −
+            
+              
+                1
+                
+                  n
+                  
+                    2
+                  
+                
+              
+            
+          
+          )
+        
+      
+    
+     
+  med 
+  
+    
+      
+        m
+        <
+        n
+      
+    
+     
+   hvor 
+  
+    
+      
+        c
+      
+    
+     
+   er lysets hastighed i vakuum, og 
+  
+    
+      
+        R
+        =
+        
+          
+            
+              E
+              
+                0
+              
+            
+            
+              h
+              c
+            
+          
+        
+      
+    
+     
+   er Rydbergs konstant. Til hver værdi af 
+  
+    
+      
+        m
+      
+    
+     
+   svarer en serie af spektrallinjer opkaldt efter fysikere som har ydet bidrag til spektralanalysen:
+
+
+== Brint-ioner ==
+Den vigtigste ion af hydrogen er den positive hydrogenion 
+  
+    
+      
+        
+          
+            H
+            
+              +
+            
+          
+        
+      
+    
+     
+  , der typisk er en proton, men som i syre-basereaktioner kaldes for en hydron. Dertil kommer ionen af hydrogen-molekylet dihydrogen-kationen 
+  
+    
+      
+        
+          
+            H
+            
+              2
+            
+            
+              +
+            
+          
+        
+      
+    
+     
+  , der dog mest er af teoretisk interesse.
+
+
+== Se også ==
+Brintbombe
+Brintpille
+Brændselscelle
+Kernefusion
+Metallisk hydrogen
+
+
+== Eksterne henvisninger ==
+Danske forskere er i front med brint-energi. Videnskab.dk 2011
+Hvad er brændselsceller? Partnerskabet for brint og brændselsceller
+Brint. Den langsigtede planlægning. NOAH's klimasider
+Brint i bryggerset giver dronningebesøg. Folket på den flade ø Arkiveret 14. september 2013 hos  Wayback Machine
+Brint - Brændselsceller. Verdens første brintlandsby. Lolland Kommune (Webside ikke længere tilgængelig)
+Science Daily, 2003-06-30, New Catalyst Paves Way For Cheap, Renewable Hydrogen
+Number 611 #1, October 29, 2002, Physics News Update: The Internal States of Anti-Hydrogen Arkiveret 20. december 2003 hos  Wayback Machine
+10 April 2002, PhysicsWeb: Hydrogen metal on the horizon Citat: "...Now an experimental study of solid hydrogen at pressures up to 320 GPa predicts that it will become metallic at a pressure of 450 GPa – over four million times atmospheric pressure...."

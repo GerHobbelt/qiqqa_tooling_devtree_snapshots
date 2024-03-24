@@ -1,0 +1,220 @@
+revision: 22866536
+title: Robot
+url: https://cs.wikipedia.org/wiki/Robot
+
+
+---
+
+Robot je stroj pracující s určitou mírou samostatnosti, vykonávající určené úkoly, a to předepsaným způsobem a při různých mírách potřeby interakce s okolním světem a se zadavatelem: Robot je schopen své okolí vnímat pomocí senzorů, reagovat na něj, zasahovat do něj, případně si o něm vytvářet vlastní představu, model. Vnímáním světa nejenže může poznávat svět samotný, ale může také vyhodnocovat svůj vliv na něj a využívat tak zpětnou vazbu. Robot je fyzickou realizací obecnějšího pojmu agent.
+Pro humanoidní roboty podobající se ženě se v češtině též používá výraz robotka.
+
+
+== Etymologie ==
+Slovo robota bylo známo již v 17. století, ve významu otrocká práce poddaných. Mírně pozměněné je roku 1921 poprvé ve významu stroj použil český spisovatel Karel Čapek v dramatu R.U.R. Slovo mu poradil jeho bratr Josef Čapek, když se s ním Karel bavil o tom, jak umělou bytost pojmenovat. Původně zamýšlený labor zněl autorovi příliš „papírově“. Josef Čapek podle bratrova svědectví navrhl slovo robot „se štětcem v ústech a maloval dál“. Tak vzniklo jedno ze světově nejznámějších slov českého původu, všeobecně rozšířené zejména díky proniknutí do angličtiny.
+V Čapkově díle je slovo robot skloňováno jako životné podle vzoru pán. Zkratka R.U.R. je označuje velkými písmeny a nazývá v množném čísle Rossumovi Universální Roboti. V češtině se posléze vyvinuly dva způsoby skloňování podle charakteru robota: Pro inteligentní nebo humanoidní roboty se (obvykle ve vědeckofantastické literatuře) zpravidla používá životné skloňování vzoru pán (4. pád robota, 1. pád plurálu roboti). Pro průmyslové a jiné člověku nepodobné roboty (např. „kuchyňský robot“) se používá spíše neživotné skloňování podle vzoru hrad (případně podvzoru les: 2. pád robota i robotu, 4. pád robot, 1. pád plurálu roboty).
+
+
+== Dělení robotů ==
+Podle generace na:
+
+roboty 1. generace – pracují na základě pevného programu
+roboty 2. generace – vybavené senzory a čidly, díky nimž reagují na okolní podmínkyPodle jejich schopnosti přemisťovat se na:
+
+stacionární – nemohou se pohybovat z místa na místo (například průmyslové manipulátory)
+mobilní – mohou se přemisťovat (například vesmírné sondy a vozítka na Marsu)Dále také podle:
+
+pohybových možností,
+autonomie,
+účelu (boj, výroba, tiskárny a plotry, přeprava, průzkum),
+způsobu programování, a i jinak.Podle účelu, vzhledu, způsobu vzniku, schopností a dalších aspektů rozlišujeme tyto roboty:
+
+Manipulátor – stroj nemající vlastní inteligenci. Je ovládán na dálku.
+Kuchyňský robot – kombinace mixéru, hnětače a dalších kuchyňských strojů, obvykle provedený jako motorová jednotka s nástavci
+Android – robot podobný člověku – obvykle se očekává biologické složení. Roboti v R.U.R. byli podle tohoto dělení androidi.
+Droid – jakýkoliv inteligentní a samočinný robot, jeho typem je i dron, tedy droid pracující jako dělník.
+Humanoid – robot podobný člověku principiální stavbou těla a zejména způsobem pohybu.
+Anthropomorfní – stroj, který se člověku přibližuje (napodobuje ho) buď fyzicky, způsobem pohybu, nebo naopak mentálně (např. HAL 9000).
+Kyborg (kybernetický organismus) – umělá bytost či mysl, biologické, přírodní tělo plně pod vládou stroje, skrze nějaké bio-kybernetické propojení. Naproti tomu opačný pól je živá, přírodní bytost či mysl s uměle upraveným tělem, např. obohaceným o mechanické či elektronické součástky, ze kterého v extrémním případě mohl zůstat i jen mozek (viz bionika), ale stále považovaná za člověka.
+Termín robot se používá též pro počítačové programy, který za svého majitele provádí opakované činnosti (viz robot (počítačový program)).
+
+
+== Možnosti pohybu ==
+Zásadním problémem pohybu robota je nespočetné množství možností umístění chapadla do prostoru, například kvůli následné možnosti interakce/kolize se sebou samým. Zde má vliv konstrukce pohyblivých částí:
+
+kloubové úhlové, nebo otočné (např. chapadlo),
+teleskopické, posuvné (např. vozík na mostku).Jde o rozhodování o poloze nejen koncového (funkčního) bodu chapadla, např. klepeta, ale i určení polohy všech mezilehlých kloubů až zpět k základně. Tento problém nutnosti určování polohy při velkých počtech stupňů volnosti řeší tzv. inverzní kinematická úloha.
+S tím souvisí i komplexnost řízení jednotlivých pohonů, zda se ovládají sekvenčně (jeden po druhém), nebo zda se v modelovém prostoru stavů pohybuje robot přímo, tedy všemi pohony najednou (pohyb po kolmé síti vs. úhlopříčně): pak už je totiž potřeba nejen schopnost mít pohon zapnutý/vypnutý, ale také i měnit a udržovat/regulovat rychlost každého pohonu zvlášť, např.: přímkový pohyb rotačně-kloubového chapadla nebo naopak oblý pohyb můstkového vozíku. Proto se od samosvorných krokových motorků dá postoupit dále k volným pohonům sice s možností analogově plynulého pohybu, ale zase vyžadujících přesnou regulaci.
+S podrobnějším povědomím o dynamice systému pak lze pohyb zefektivnit a ušetřit nejen čas, ale i energii: Např. pro pohyb dolů musí samosvorný pohon začít dodávat energii, kdežto dynamický jí naopak bude dodávat méně nebo dokonce rekuperovat.
+Zmiňovaná dynamika se může dále komplikovat s cílem plynulejších pohybů: Od řízení polohy konstantní rychlostí, přes ovládání rychlosti konstantním zrychlením a dále přes regulaci zrychlování na max. povolenou hodnotou až po obecný Taylorův rozvoj diferenciálu polohy.
+Se zvýšením dynamiky se však také zvyšuje potřeba interakce s okolím: Zatímco primitivnímu výtahu s konstantní pojezdovou rychlostí stačí k zastavení jen signální kontakt na konci, když jinak celou cestu jede naslepo, dynamické stroje kvůli bezpečnosti a přesnosti potřebují interagovat neustále, např. CNC stroje, a to buď přímo s okolím, anebo alespoň se svým vnitřním modelem okolí.
+Pro zaručení přesnosti se od dynamiky dokonce úmyslně upouští, a to jak v hloubce derivací řízené veličiny, tak i zpřísněním hodnot provozních limitů. Příkladem může být pomalý dojezd výtahu přesně na úroveň podlaží, kdy se po přiblížení skokově přepne do méně dynamického režimu: Sice pomalejšího, ale bezpečnějšího.
+
+
+== Autonomie ==
+Jak už bylo předvedeno výše, míra vlastní interakce stroje s okolím je dána mírou dynamiky stroje: Čím dynamičtější stroj je, tím přesnější povědomí o svém okolí potřebuje. A také potřebuje / dovolí o to méně zásahů lidské obsluhy. Z tohoto pohledu lze mluvit o různé autonomii stroje na člověku:
+
+Řízený stroj, přímé vedení, bez rozhodovací schopnosti, kromě člověka nepotřebuje interakci s okolím (např. výtah jede pouze při stisknutém tlačítku).
+Ovládaný stroj, vykonává činnost podle zadaného pokynu, logická rozhodovací schopnost, konečný automat (např. výtah zastaví až v požadovaném patře, inteligence s pamětí jednoho bitu, přídržné tlačítko).
+Regulovaný stroj, dosahuje cíle předem určeným způsobem, dosahuje cíle za různých podmínek různými cestami, analogové rozlišení míry intenzity jevu (např. výtah, při náhlé volbě nové cílové stanice těsně před ní, tuto raději přejede a vrátí se, nezastaví hned, takže cestující nepodklesnou v kolenou ani neposkočí s žaludkem v krku).
+Autonomní stroj, dosahuje cíle způsobem, který si zvolí (metodologie volby je však stále předepsána). Sice se stále může držet nejpřímější předpokládané cesty, ale nijak jí nepředpokládá, vždy si jí znovu ověřuje, a v případě překážek i sám hledá cestu k dosažení cíle, bez limitu vzdálenosti od původního přímého směru (např. algoritmus A*).
+Inteligentní stroj, sám si volí cíle, člověka nepotřebuje, utopie: Hraniční výsledek oboru umělé inteligence.
+
+
+== Účely ==
+Za vůbec prvního robota lze označit soustavu radar-počítač-kanóny, kdy bojové užití počítačů bylo prvotní myšlenkou. Příkladem je ENIAC a další systémy řízení palby na palubách válečných lodí, například Gun Fire Control System (GFCS) na těch amerických.
+První průmyslový robot Unimate od firmy Unimation byl zprovozněn na výrobní lince General Motors v New Jersey v roce 1961. V roce 1989 převzala kontrolu nad americkou společností Unimation švýcarská firma Stäubli, která i nadále pokračuje s vývojem a prodejem průmyslových robotů.
+Vládu na poli robotiky brzy převzalo Japonsko, které neuznávalo patenty Unimate registrované v USA. Dodnes je Japonsko na čele oboru, jak na poli průmyslových manipulátorů, tak humanoidní konstrukce. Za jednoho z nejdokonalejších robotů humanoidní konstrukce lze považovat robota týmu SCHAFT, který v roce 2014 vyhrál soutěž DARPA Robotics Challenge.Těžko si představit obor lidské činnosti, kde by se roboti nemohli uplatnit. Už dnes působí např. v těchto oblastech:
+
+průmyslová výroba: manipulátory, dopravníková soustavy, lakovny, svařovny.
+průzkumy a manipulace v nebezpečí: Záchranářské práce, vojenský průzkum, pyrotechnika, potrubí, Hubbleův teleskop.
+lékařství: operace na dálku, protetika.
+osobní výpomoc: domácí vysavač, robotický administrativní asistent v nemocnicích.
+kybersport: robofotbal.
+doprava: letecký autopilot (robotem je pak celé letadlo), kolejové vozy bez řidiče, vývoj samořízeného automobilu.
+na okraj pole působení robotů lze zařadit i značně distribuované systémy: Městské semafory, systém řízení dopravy např. v pražských tunelech na Smíchově (včetně závor a poloautonomních informačních tabulí).
+
+
+== Způsoby programování a učení ==
+přímé programování
+vedením robotova ramena (teach-in)
+zadáváním povelů z ovládacího panelu
+nepřímé programování (off-line) – zadáváme prostorové křivky (získané např. podle výkresů)
+plánování (on-line) – obdobně jako předchozí, ale robot se přizpůsobuje měnícím se vnějším podmínkám (pomocí čidel)Zadávání pozice ramena může principiálně probíhat 2 způsoby:
+
+spojitá trasa (continuos path) – zadání přesné pozice ramena ve všech okamžicích činností robota (vedení ramena, nepřímé programování, přímé plánování)
+od bodu k bodu (point-to-point, way-point) – zadání konkrétních pozic, v nichž se rameno musí v konkrétních časech činnosti nacházet (zadávání z ovládacího panelu), předpokládají se bezproblémové přímé přechody mezi elementárními pozicemi.
+
+
+== Vnímání ==
+
+Pro získání informací o okolí využívají roboty různé senzory.
+
+dotykové
+pružinová tykadla s mikrospínači na detekci jejich ohnutídistanční
+sonarovou echolokaci
+laserové dálkoměry
+vizuální
+prosté kamery
+stereo vidění
+panoramatické kamery
+hyperbolická zrcadla
+radionavigaci s triangulací
+GPS
+
+
+== Stacionární roboti ==
+
+I když vázány na jediné místo (anebo bez možnosti svou polohu ovlivnit), i stacionární roboti stále mají možnost interakce s okolím a své okolí ovlivňovat.
+
+
+=== Stacionární roboty podle konfigurace ===
+tři stupně volnosti:
+Descartes – všechna uložení posuvná
+PUMA uložení – všechna uložení na otočných kloubech
+válcové – dvě posuvná uložení na otočné základně
+SCARA – posuvné chapadlo na dvou otočných kloubech
+…i další uložení, i složitější
+
+
+=== Stacionární roboty podle účelu použití ===
+Podle využití ve výrobě:
+
+bodové sváření /spot welding/ – svařování karoserie automobilu
+ARC welding /ARC welding/ – souvislé sváření
+montáž /assembly/ – instalace a kompletace
+aplikace /application/ – nanášení lepidel, těsniv, tlumiv
+lakování /painting/ – stříkání tekutých a práškových barev, laků
+manipulace /handling/ – překládání,nakládání a vykládání pro dopravníky nebo např. : pro simulace pohybu modelu v aerodynamickém tunelu.
+paletizace /palletizing/ – skládání nebo vykládání výrobků na paletách
+kontrola /checking/ – měření pomocí kamer, laseru a čidel
+
+
+==== Manipulátory ====
+Průmyslové manipulátory jsou dnes hojně využívány v mnoha odvětvích. V dnešní době je lze aplikovat do většiny výrobních procesů. Pro pohyb svého těla využívají většinou 6 os, ale i více. 7. osa může být např. použita pro přesun po koleji kdy robot popojíždí vedle výrobku, synchronizován s dopravníkem a po vykonání úlohy se vrací zpět nebo pro sevření kleští při bodovém sváření.
+
+
+==== mostové s vozíkem, posuvné ====
+tiskárny, plottery a rýsovače
+laserové nebo plazmové vypalování z plechu
+jeřáby
+
+
+== Mobilní roboti ==
+
+autonomní
+dálkově ovládané – pracuje podle průběžných pokynů operátora, který získává zpětnou vazbu například pomocí virtuální reality
+
+
+=== Důvody použití ===
+nebezpečnost (pro člověka) místa působení – jaderné elektrárny
+nedostupnost místa působení – sopky, potrubí, jiná planeta, mořské dno
+odstranění monotónních prací
+
+
+=== Podvozky mobilních robotů ===
+Dělíme podle hlediska vzoru vzniku na dvě skupiny: biologické soustavy (kráčející, plazivé, šplhající, létající roboty) a umělé soustavy (kolové, pásové, polštářové roboty).
+
+diferenciální podvozek – dvě hnaná kola, rovnováha udržována opěrnými body, nebo pasivním kolem (koly)
+synchronní podvozek – často 3 kola, každé se 2 stupni volnosti (může se otáčet i natáčet)
+trojkolový podvozek s řízeným předním kolem – 2 hnaná kola a jedno motoricky natáčené
+Ackermanův podvozek – 4 kola, z toho 2 pevná a 2 natáčená kola (každé mírně jinak – vnitřní více a vnější méně – protože každé při zatáčení opisuje jinou dráhu); tyto podvozky mají běžné automobily
+trojúhelníkový podvozek s třemi nezávisle poháněnými koly, jejichž osy procházejí těžištěm a jejichž povrch (složený obvykle z malých koleček) umožňuje volný skluz ve směru osy
+podvozky se všesměrovými koly
+pásové podvozky
+kráčející podvozkyNejen pro pohon se mobilní robotice využívají různé druhy elektromotorů. Patří mezi ně:
+
+stejnosměrný motor (DC motor) – nejjednodušší použití
+komutátorové
+bezkomutátorové
+krokové – umožňuje přesné natáčení s definovaným rozlišením
+střídavý motor (AC motor) – oproti DC motorům mají menší rozměry při dosažení stejného výkonu
+synchronní
+asynchronní
+servomotor – integrovaná převodovka a inkrementální enkodér
+
+
+=== Zdroje energie mobilních robotů ===
+Zdrojem energie pro mobilního robota bývá nejčastěji baterie elektrických článků (primární zdroj, nelze jej nabít a znovu použít) nebo akumulátor (sekundární zdroj, lze jej nabít a opětovně využít).
+
+
+=== Způsoby navigace mobilních robotů ===
+Dead reckoning – matematická procedura pro určování současné pozice vozidla pomocí postupného přičítání díky známému kurzu a rychlosti v průběhu času (nejjednodušší implementací této metody je odometrie)
+Sledování vodicí čáry (guidepath following) – robot opticky či pomocí magnetometrů (či Hallových sond) sleduje vodicí čáry; pro svou spolehlivost je to v průmyslu nejpoužívanější metoda
+Inerciální navigace – využívá gyroskopů a akcelerometrů pro měření zrychlení a následně tak určuje výslednou pozici
+inerciální snímače otočení
+primárně snímající úhlovou rychlost
+primárně snímající úhlovou polohu
+mechanické gyroskopy
+snímající jeden stupeň volnosti (single-degree-of-freedom gyroscopes, SDFG)
+snímající dva stupně volnosti (two axis, free gyros – dvouosé, volné gyroskopy, 2DFG)
+optické gyroskopy – využívají Sagnacův efekt (rozdílná doba letu 2 paprsků světla v důsledku pohybujícího se senzoru)
+akcelerometry – využívají setrvačnosti hmoty
+GPS
+navigace pomocí taktilních (dotykových) a proximitních (bezdotykových) senzorů
+
+
+== Odkazy ==
+
+
+=== Reference ===
+
+
+=== Literatura ===
+Šolc F., Žalud L.: Robotika. VUT Brno 2002
+BAUER, Zdeněk. Jak vytvořit atraktivní obchodní název firmy, služby, produktu, značky. Praha: Zdeněk Bauer, 2014. 340 s. ISBN 978-80-904272-7-3. 
+
+
+=== Související články ===
+Zákony robotiky vytvořené Isaacem Asimovem
+Robot Emil – první televizní robot v bývalém Československu
+kuchyňský robot – domácí elektrospotřebič, pomocník v kuchyni
+
+
+=== Externí odkazy ===
+ Obrázky, zvuky či videa k tématu konfigurace robota na Wikimedia Commons 
+ Obrázky, zvuky či videa k tématu robot na Wikimedia Commons 
+ Slovníkové heslo robot ve Wikislovníku
+Robotika.cz
+Katedra robototechniky, Fakulta strojní na VŠB-TU Ostrava
+O původu slova robot
+VOJTÍŠEK, Zdeněk: O robotech, lidech a náboženství : Dingir, 30. 10. 2021

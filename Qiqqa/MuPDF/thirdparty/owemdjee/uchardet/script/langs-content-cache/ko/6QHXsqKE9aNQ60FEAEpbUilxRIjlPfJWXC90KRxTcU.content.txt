@@ -1,0 +1,36 @@
+revision: 35132487
+title: IBM DeveloperWorks
+url: https://ko.wikipedia.org/wiki/IBM_i
+
+
+---
+
+IBM i는 IBM 파워 시스템과 IBM 퓨어시스템즈에서 구동되는 운영 체제이다. 1988년 AS/400 계열의 컴퓨터 시스템과 함께 도입되었을 때 이름은 OS/400로 명기되었다가, 나중에 i5/OS로 바뀌었다가, 2008년 IBM 파워 시스템즈가 선보이게 되면서 IBM i로 변경되었다.
+AIX와 리눅스와 함께 IBM 파워 시스템즈에서 지원되며, AIX, 리눅스, 윈도우와 함께 IBM 퓨어시스템즈에서 지원되는 운영 체제이다.
+
+
+== 버전 ==
+
+
+== 같이 보기 ==
+멀틱스
+
+
+== 사용자 그룹 ==
+사용자 그룹은 IBM i의 발전에 주된 역할을 담당해왔다. 이 중 최대 그룹은 COMMON이다. 주요 기업들이 회원으로 소속된 LUG(The Large User Group),는 IBM i의 현재 및 미래 개발에 상당한 영향을 미치고 있다. YIPS(Young i Professionals)는 IBM i의 방향에 상당한 영향을 주는 또다른 그룹의 하나이다.
+
+
+== 각주 ==
+
+
+== 외부 링크 ==
+IBM i site
+IBM i Software lifecycle
+IBM i Technology Updates
+IBM i Upgrade planning:Releases
+IBM Systems IBM i Magazine
+IBM developerWorks: Articles, tutorials, and technical resources for IBM i users
+IBM i Wiki: A collaborative environment for the sharing of technical information related to IBM i
+IBM developerWorks Article: New to IBM i
+OS/400 commands
+OS/400 CL (Control Language)

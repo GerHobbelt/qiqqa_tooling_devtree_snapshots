@@ -1,0 +1,192 @@
+revision: 134152632
+title: Google Earth
+url: https://it.wikipedia.org/wiki/Google_Earth
+
+
+---
+
+Google Earth è un software che genera immagini virtuali della Terra utilizzando immagini satellitari ottenute dal telerilevamento terrestre, fotografie aeree e dati topografici memorizzati in una piattaforma GIS. Il programma è distribuito gratuitamente dalla società Google LLC.
+
+
+== Storia ==
+Dopo essere stato copiato da un programma chiamato Terravision, il programma si chiamava Keyhole ed era sviluppato dalla Keyhole, inc. ma nel 2004 la società venne acquisita da Google e il software rinominato di conseguenza. Esistono diverse versioni, sia per personal computer con sistema operativo Microsoft Windows, macOS o Linux, sia per dispositivi mobili basati su piattaforma Android e iOS per iPhone.
+
+
+== Descrizione ==
+Google Earth è un'applicazione grafica tridimensionale che permette di visualizzare fotografie aeree e satellitari della Terra con un dettaglio molto elevato. Nelle principali città del pianeta il programma è in grado di mostrare immagini con una risoluzione spaziale inferiore al metro quadrato.Il programma non consente solamente di visualizzare le informazioni, ma consente anche al singolo utente di immettere delle informazioni aggiuntive che vengono visualizzate dal programma e che possono essere condivise con gli altri utilizzatori del programma sparsi per il pianeta.
+Google Earth mostra una rappresentazione tridimensionale del terreno all'utilizzo dei dati DEM (Digital Elevation Model) collezionati durante la missione NASA Shuttle Radar Topography Mission. Da novembre 2006 sono stati integrati ulteriori dati DEM per migliorare la rappresentazione tridimensionale.Il linguaggio KML è utilizzato all'interno del programma per gestire dati geospaziali in tre dimensioni.
+Google Earth può essere utilizzato fornendogli coordinate geografiche, indirizzi o semplicemente navigando sul pianeta con il mouse.
+La maggior parte delle grandi città sono disponibili in alta risoluzione in modo da potere vedere gli edifici, le strade e le macchine presenti.
+Il 19 aprile 2017 Google Earth ha rilasciato una nuova funzione: è possibile vedere i luoghi in 3D, come se si stesse volando sopra il pianeta.
+
+
+=== Voyager ===
+Google Earth da la possibilità di esplorare il pianeta tramite delle "visite" guidate cliccando sull'icona di  Voyager (timone). Ogni visita è accompagnata da foto, video, documentari o livelli. Con Voyager si possono fare anche dei quiz. 
+
+
+=== Edifici tridimensionali ===
+Una caratteristica implementata da Google nel programma dopo l'acquisizione di Keyhole è stata la possibilità di vedere la rappresentazione tridimensionale di molti edifici di 39 città statunitensi.
+Il database proviene da Sanborn.
+L'opzione si limitava a sovrapporre alle immagini dei poligoni grigi che rappresentavano la topologia degli edifici.
+Nelle ultime versioni è possibile vedere edifici tridimensionali anche nelle città del resto del mondo: alcuni utenti, hanno infatti creato degli edifici in 3D e li hanno sovrapposti nei luoghi originali. In particolare le principali città del mondo presentano queste sovrapposizioni, dove gli edifici del centro sono stati tutti ampiamente ricostruiti in minuziosi modelli 3D, siano essi monumenti o comuni abitazioni.
+I poligoni grigi delle precedenti versioni sono stati coperti da texture atte a rendere più realistici i modelli 3D.
+Per aumentare il numero di edifici 3D, è stato messo a disposizione il "Modellatore edifici 3D" attraverso il quale è possibile creare modelli 3D con texture, posizionando gli enti geometrici sopra le immagini aeree dell'edificio scelto e salvarlo accedendo con il proprio account Gmail. È possibile fare questo solo con limitate zone di alcune città del mondo.Un altro tool molto utilizzato per la generazione dei modelli 3D è SketchUp di Trimble, che permette la generazione di edifici offline.
+
+Nel giugno 2012 Google ha annunciato che gli edifici tridimensionali saranno generati automaticamente attraverso l'impiego di stereofotogrammetria da foto aeree.
+Inizialmente disponibili solo nella versione mobile (Android e iOS), i nuovi edifici tridimensionali sono stati inclusi anche nelle versioni Desktop a partire dalla versione 7 del programma disponibile per Windows, Mac e Linux.
+
+
+=== Google Earth Community ===
+Questa community si occupa di aggiungere informazioni a Google Earth. Il link al sito è accessibile dalla pagina principale del programma o dall'help incluso nel programma. Una volta registrati si possono aggiungere dei punti sensibili che poi verranno condivisi con gli altri utilizzatori del programma.
+
+
+== Versioni ==
+
+
+=== Cronologia delle versioni ===
+Keyhole Earthviewer 1.0 - 11 giugno 2001
+Keyhole Earthviewer 1.3 - 1º gennaio 2002
+Keyhole Earthviewer 1.7 - febbraio 2002
+Keyhole LT 1.7.1 - 26 agosto 2003
+Keyhole NV 1.7.2 - 16 ottobre 2003
+Keyhole 2.2 - 19 agosto 2004
+Google Earth 3.0 - 28 giugno 2005
+Google Earth 4.0 - 11 giugno 2006
+Google Earth 4.1 - 29 maggio 2007
+Google Earth 4.2 - 23 agosto 2007
+Google Earth 4.3 - 15 aprile 2008
+Google Earth 5.0 - 5 maggio 2009
+Google Earth 5.1 - 18 novembre 2009
+Google Earth 5.2 - 1º luglio 2010
+Google Earth 6.0 - 29 marzo 2011
+Google Earth 6.1 - 21 ottobre 2011
+Google Earth 6.2 - 11 aprile 2012
+Google Earth 7.0 - 27 giugno 2012 per Android, 27 luglio 2012 per iOS, 29 ottobre 2012 per Desktop
+Google Earth 7.1 - 6 giugno 2013 per Android, 26 giugno 2013 per iOS e Desktop
+Google Earth 8.0 - 24 ottobre 2014)
+
+
+=== Mac ===
+La versione per Mac OS X è stata pubblicata il 10 gennaio 2006.
+
+
+=== Linux ===
+Google Earth è disponibile per il sistema operativo Linux a partire dalla versione 4.
+
+
+=== Android ===
+Google Earth per Android è stato pubblicato il 22 febbraio 2010.
+
+
+=== iOS ===
+Google Earth è stato pubblicato gratuitamente per iOS il 27 ottobre 2008.
+Utilizza l'interfaccia multitouch per la navigazione e permette la localizzazione attraverso l'Assisted GPS disponibile su iPhone.
+Inizialmente il supporto dei layer era limitato a Wikipedia e Panoramio
+
+
+=== Google Earth Pro ===
+Google Earth Pro è la versione del programma orientata ad un utilizzo commerciale, ha molte caratteristiche aggiuntive rispetto alla versione base e permette l'esecuzione di software aggiuntivo. Dal 2015 tale versione è stata resa gratuita.
+Rispetto al programma base questa versione offre in più
+
+Stampe ad alta risoluzione;
+Importazioni di dati GIS;
+Importazioni di immagini GIS automaticamente geolocalizzate;
+Accesso a layer contenenti dati demografici e di traffico;
+Creazione di video;
+Misurazione di aree poligonali o circolari;
+Supporto via e-mail;
+Annotazioni, aggiunta della possibilità di inserire disegni e annotazioni;
+Importazioni di dati, lettura di database esterni tramite il formato CSV.
+
+
+=== Google Earth Plus ===
+Google Earth Plus era una versione a pagamento del programma base (non più disponibile dal 3 dicembre 2008). Rispetto al programma base questa versione offriva in più
+
+Supporto di un ricevitore GPS, individuazione del percorso e generazione dei tragitti tramite GPS. Programmatori di terze parti hanno realizzato dei programmi che interfacciano il programma base con i ricevitori GPS, ma la versione plus aveva una gestione diretta dei ricevitori Magellan e Garmin che rappresentano la maggior parte del mercato.
+Stampe ad alta risoluzione;
+Supporto via e-mail;
+Annotazioni, aggiunta della possibilità di inserire disegni e annotazioni;
+Importazioni di dati, lettura di database esterni tramite il formato CSV.
+
+
+== Software alternativi ==
+Dalla versione 4.0 dell'ambiente desktop KDE per il sistema operativo Linux ed altre piattaforme, è disponibile Marble, un programma open source che utilizza la cartografia della NASA.
+Sempre in ambito di software libero (Open Source Software) è disponibile l'applicazione OssimPlanet, basata sulla libreria per l'elaborazione di immagini geo-riferite: Open Source Software Image Mapping (OSSIM), attualmente utilizzato in ambito governativo e disponibile sotto licenza LGPL. OssimPlanet è un software all'avanguardia per la visualizzazione tridimensionale di dati geo-riferiti, supporta collegamenti wms (web mapping service) sincronizzazione remota, modelli 3D (KML, KMZ), effemeridi, connessione GPS. OssimPlanet a differenza di Google Earth è basato su un differente motore di rendering che permette di visualizzare file locali per la rappresentazione tridimensionale del territorio garantendo una precisione centimetrica.La NASA ha sviluppato NASA World Wind, un globo virtuale open source multipiattaforma.
+
+
+== Giochi basati su Google Earth ==
+
+
+=== Simulatore di volo ===
+Il simulatore di volo fu inserito inizialmente come easter egg dalla versione 4.2 di Google Earth (attivabile premendo ctrl+alt+a). Dalla versione 4.3 è stato reso pubblico e accessibile anche dal menù del programma.
+Si possono scegliere 2 aerei con caratteristiche diverse:
+
+il Jet F16
+l'SR22, un velivolo a 4 posti a 310 cavalli che è relativamente più lento.Per avere le istruzioni del simulatore di volo, basta entrare nel simulatore premendo ctrl+alt+a (o accedendo dal menù per le versioni 4.3 e successive) e poi premere ctrl+h.
+
+
+=== Altri giochi ===
+GEWar - Gioco gratuito di guerra online. L'obiettivo è conquistare più città possibili, per far questo si utilizza come valuta di scambio i geos che si ricavano dalle miniere, dalle piantagioni o dalle estrazioni petrolifere. I geos possono essere utilizzati anche per costruire un esercito che può essere utilizzato per attaccare le altre città o difendere la propria.
+Sul sito PlanetInAction.com sono disponibili vari giochi gratuiti basati su Google Earth.
+
+Moon Lander - Simulazione il cui scopo è l'atterraggio del modulo lunare il più vicino possibile alla zona di atterraggio designato.
+Ships - Simulatore di pilotaggio navi.
+Helicopters - Simulatore di pilotaggio di elicotteri.
+Drive the A-Team Van - Simulatore di guida.
+Geoguessr- è un videogioco principalmente per PC in cui ti fa partire da un luogo casuale e devi indovinate precisamente dove ti trovi.
+
+
+== Critiche ==
+
+
+=== Nomi controversi ===
+Google Earth e Google Maps mostrano delle etichette con indicati i luoghi osservati, ma alcuni luoghi nel pianeta sono contesi tra due Stati, come per esempio la Corea peninsulare, che il Giappone indica con dei nomi propri. Il programma per le etichette utilizza i nomi giapponesi e questo ha prodotto dei commenti molto critici da parte dei coreani.
+Sebbene nell'ultima versione la maggior parte dei nomi sia stata opportunamente corretta, il software è stato criticato anche dagli utenti di Taiwan, dato che l'isola era indicata come provincia della Cina. La rimozione dell'etichetta associata a Taiwan ha invece prodotto delle rimostranze da parte dei cinesi.
+
+
+=== Sicurezza ===
+Il presidente indiano A. P. J. Abdul Kalam si è dichiarato molto preoccupato del fatto che immagini ad alta risoluzione di luoghi sensibili siano disponibili a chiunque abbia una connessione Internet.. Ad esempio zone militari nel quale vige il divieto di sorvolo e di riprese di qualsiasi tipo potrebbero essere "spiate" mediante le immagini provenienti dai satelliti civili.
+Il governo della Corea del Sud ha espresso preoccupazioni in quanto il software offrirebbe immagini del palazzo presidenziale e altre installazioni militari che potrebbero essere usate dalla ostile Corea del Nord.
+Nel 2006 sono apparse immagini dettagliate di aree segrete di Israele. Le immagini mostravano varie installazioni delle Forze di Difesa Israeliane e del presunto quartier generale del Mossad, i servizi segreti israeliani il cui luogo è altamente segreto.
+Hamas e le Brigata dei Martiri di al-Aqsa riferiscono di aver usato Google Earth per pianificare gli attacchi con razzi Qassam su Israele da Gaza.
+L'unico sopravvissuto tra gli esecutori degli attentati del 26 novembre 2008 a Mumbai ammise di aver usato Google Earth per familiarizzare con i luoghi e gli edifici attaccati.
+
+
+=== Rimedi ===
+Quanti gestiscono servizi di questo tipo pongono delle restrizioni quali: immagini registrate, non in diretta; un'altezza massima dal suolo al di sotto della quale non vengono inviate le immagini satellitari, tipicamente soprastante i centri abitati; l'impossibilità di ingrandire le immagini per certe zone, come quelle sensibili per la sicurezza nazionale.
+
+
+=== Controversie legali ===
+Nel 1993 la società tedesca Art+Com sviluppò Terravision, un programma di mappatura 3D nato come "rappresentazione virtuale in rete della terra basata su immagini satellitari, riprese aeree, dati di altitudine e dati architettonici", successivamente brevettato nel 1995.
+Nel 2001 fu commercializzato Google Earth e, nel 2006, Art+Com contattò Google. Il CTO di Google Michael Jones visitò lo studio di Berlino per discutere di un'eventuale licenza e Michelle Lee, avvocato di Google, mostrò interesse per il brevetto, tuttavia Art+Com non accettò l'offerta, rinnovò il proprio brevetto nel 2010 e chiese a Google di ottenere una licenza di utilizzo per il loro brevetto. Ciò non si verificò e nel febbraio 2014 Art+Com intentò una causa per violazione di brevetto contro Google, chiedendo 100 milioni di dollari USA.Nel maggio 2016 la giuria del tribunale distrettuale del Delaware scoprì che un sistema di visualizzazione geografica dello Stanford Research Institute (SRI) noto come "SRI TerraVision" era già in uso prima di Terravision. Nell'ottobre 2017 la Corte d'Appello del Circuito Federale confermò tale decisione e invalidò il brevetto di Art+Com.La controversia legale è protagonista, in una trasposizione romanzata dei fatti reali, della miniserie tedesca del 2021 Il codice da un miliardo di dollari.
+
+
+== Note ==
+
+
+== Bibliografia ==
+Andreucci Giacomo, Creare applicazioni con Google Earth e Google Maps, Edizioni FAG, Milano, 2011, pp. 348.
+
+
+== Voci correlate ==
+Crisis mapping
+Google Maps
+Google Street View
+Google Arts & Culture
+Panoramio
+NASA World Wind
+Ushahidi
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su Google Earth
+
+
+== Collegamenti esterni ==
+
+(MUL) Sito ufficiale, su earth.google.com. 
+(EN) Blog ufficiale, su blog.google. 
+ Google Earth (canale), su YouTube. 
+(EN) Google Earth, su Enciclopedia Britannica, Encyclopædia Britannica, Inc. 
+(EN) Opere riguardanti Google Earth, su Open Library, Internet Archive.

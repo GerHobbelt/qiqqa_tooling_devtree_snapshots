@@ -1,0 +1,69 @@
+revision: 1159209542
+title: Neos Flow
+url: https://en.wikipedia.org/wiki/Neos_Flow
+
+
+---
+
+Flow (formerly known as TYPO3 Flow or FLOW3) is a free and open source web application framework written in PHP. The first final version was released on October 20, 2011. It was primarily designed as a basis for the content management system Neos, but can also be used independently. It is generally suitable for PHP development of mid- or large-scaled web applications.
+
+
+== History ==
+In 2006, the developers of the content management system TYPO3 decided to rewrite the system from scratch. The architecture and underlying technology of the 4.x branch were state of the art after the turn of the millennium. Though the system has been further developed since its release in April 2006, the developers agreed on the demand for a complete code redesign to meet modern standards. Flow evolves from this decision as a discrete and stand-alone Framework that can be used independently from TYPO3.
+On August, 29th 2011 the developers announced the first beta release after "8 months of hard work."At the keynote of the international TYPO3 Conference 2011 (T3CON11) in Hanau, Germany, Robert Lemke, Chief Developer of the coming "next generation" Version of TYPO3, announced the release of the final version of Flow to be on October 20.At the international TYPO3 Conference 2012 (T3CON12) TYPO3 was announced as a family brand. Subsequently all product names from the TYPO3 project now start with TYPO3, and as "TYPO3 Flow3" is neither easy to pronounce nor would match the name of the other products it was renamed to "TYPO3 Flow".
+Later on, as NEOS and TYPO3 projects went different ways, "TYPO3 Flow" was renamed to "Flow" as part of the NEOS project.
+
+
+== Usage ==
+Neos Flow provides the base of the Neos Content Application Platform, but can also be used independently, i.e. establishing own applications such as a blogsystem, e-commerce and/or similar tasks. In the context of Flows's documentation a blogsystem is used to visualize the various paradigms of Flow like MVC (Model-View-Controller), AOP (Aspect-Oriented-Programming) or DDD (Domain-Driven-Design). The system uses namespaces and therefore depends on PHP 5.3+. It uses Doctrine 2 as a database abstraction layer, and can interface with e.g. MySQL and PostgreSQL.
+
+
+== Paradigms ==
+The developers of TYPO3 Flow focused on a series of paradigms and design patterns, some of which are considered as innovative within the PHP community. These conventions assist the developers to effectively create clean, structured code and to prevent errors  Some important aspects are:
+
+MVC
+Aspect Oriented Programming
+Domain-Driven Design
+Dependency Injection
+Test Driven Development
+Signals and slots conceptWhen designing TYPO3 Flow the developers paid attention that their custom code has minimal dependencies on the TYPO3 Flow API. This allows users to import and use modules that were originally written for other systems (such as Symfony) to be used in TYPO3 Flow with very little modifications.TYPO3 Flow is based on basic, transparent concepts to make working with it as simple as possible. Thus, the user can, for example, display customer information by writing only three or four lines of PHP source code a Fluid template with HTML code. When the conventions are followed exactly, the framework automatically applies its features to the code (for example, the security baselines).
+On a side note, the Java WCMS community has also been paying attention to the development of TYPO3 Neos and TYPO3 Flow, for its modern architecture and transparent code basis
+
+
+== Development ==
+On 2 June 2009 the first Build was released as FLOW3 1.0.0 Alpha 1 In the following period about 14 alpha versions were released, until FLOW3 was ready for the beta phase in August 2011. In this early development stage, the API has not changed, to guarantee backward compatibility. The TYPO3 Flow core team currently consists of eleven developers actively working on the framework.
+
+
+=== Version history ===
+
+
+== Relations to TYPO3 CMS ==
+
+
+=== Maintenance ===
+TYPO3 Flow was initiated by the TYPO3 community and is mainly developed by the TYPO3 core team. The primary goal is to create a basis for the upcoming CMS TYPO3 Neos. The development and publication is - like all TYPO3 subprojects - funded by the TYPO3 Association.
+
+
+=== Approximation ===
+Most of the new features of TYPO3 Flow have been backported for use with older TYPO3 versions (4.3 and higher) to provide a smooth transition to or from TYPO3 CMS. These functions have been integrated into the system extension Extbase and the related Fluid templating engine. Therefore, Domain-Driven Design and MVC concepts can be used within TYPO3 CMS and subsequently ported to systems running TYPO3 Neos.
+These conventions were agreed on during Transition Days 2008 in Berlin. Another outcome of this is the renaming from FLOW3 to TYPO3 Flow, which was decided by the TYPO3 association in 2012. The association wanted to clarify that there is a strong relationship between the CMS and the application framework.
+
+
+== Fluid template engine ==
+TYPO3 Flow has its own template engine called Fluid. Though there already were numerous templating engines, none of them did satisfy the requirements of the developers. Designing Fluid, they focussed on the following features:
+
+Support of logical structures (such as conditions, loops, or iterating over arrays)
+No PHP code in the template file
+Easy to expand
+Simple syntax
+Provide an XML structure for automated template validationExample:
+
+blogPosts is a PHP array, which is passed to fluid from external PHP code (the ViewHelper). The template iterates over this array and prints the title of each post object.
+The tags used in the template are called ViewHelper. The ability to develop custom ViewHelpers makes Fluid a flexible and extendible templating system.
+
+
+== References ==
+
+
+== External links ==
+https://flow.neos.io/

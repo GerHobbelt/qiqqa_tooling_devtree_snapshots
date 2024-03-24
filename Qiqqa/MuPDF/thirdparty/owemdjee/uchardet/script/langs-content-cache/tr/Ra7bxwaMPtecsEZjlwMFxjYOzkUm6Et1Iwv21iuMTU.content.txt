@@ -1,0 +1,37 @@
+revision: 27425412
+title: Language
+url: https://tr.wikipedia.org/wiki/Language_Integrated_Query
+
+
+---
+
+Language Integrated Query (LINQ, "dil ile bütünleşik sorgu") .NET dillerine SQL benzeri sorgulama becerisi ekleyen bir Microsoft .NET Framework bileşenidir. "Link" diye okunur.
+
+
+== Koleksiyonlar için LINQ ==
+Bir C# sayı dizisi içerisindeki "tek sayı" şartına uyanlar LINQ standart deyimleri ile şöyle elde edilebilir:
+
+   int[] sayilar = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0, 8 };
+    var tekSayilar =
+       from sayi in sayilar
+       where sayi % 2 == 1
+       select sayi;
+
+Özel amaçlı nesnelerden oluşan bir koleksiyon da aynı yapı ile sorgulanabilir:
+
+   List urunler = UrunListesiOlustur(); // faraza bir Urun koleksiyonu olusturur
+    var satilmisUrunler =
+       from urun in urunler
+       where urun.StoktaKalan == 0
+       select urun;
+
+
+== Kaynakça ==
+
+
+== Dış bağlantılar ==
+C# dilinde 101 LINQ Örneği 13 Aralık 2007 tarihinde Wayback Machine sitesinde arşivlendi. (İngilizce)
+Introduction to LINQ to SQL 13 Aralık 2007 tarihinde Wayback Machine sitesinde arşivlendi. - Scott Guthrie (İngilizce)
+LINQ ile Koleksiyonları Sorgulamak - Muhammed Tahiroğlu (Türkçe)
+The LINQ Project 14 Aralık 2007 tarihinde Wayback Machine sitesinde arşivlendi. - LINQ Projesi (İngilizce)
+VB.NET dilinde 101 LINQ Örneği 3 Ocak 2008 tarihinde Wayback Machine sitesinde arşivlendi. (İngilizce)

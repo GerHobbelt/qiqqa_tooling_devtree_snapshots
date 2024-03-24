@@ -1,0 +1,23 @@
+revision: 14692327
+title: "BMP (format fi\u0219ier)"
+url: https://ro.wikipedia.org/wiki/BMP_(format_fi%C8%99ier)
+
+
+---
+
+Formatul de fișier BMP (en. Bitmap - hartă de biți), cunoscut de asemenea și ca fișier imagine Bitmap sau formatul de fișier DIB (en. Device Independent Bitmap - „bitmap” independent de dispozitiv) sau pur și simplu Bitmap, este un format de fișier imagine de tip rastru folosit pentru a stoca imagini digitale independent de dispozitivul de afișare (cum ar fi un adaptor grafic) în special pe sistemele de operare Microsoft Windows și OS/2.
+Formatul de fișier BMP este capabil de a stoca imagini digitale bidimensionale de lățime, înălțime și rezoluție arbitrare, monocrome sau color, de variate profunzimi ale culorii iar opțional cu comprimare de date, canale alfa și profile de culoare.
+
+
+== Antet ==
+Secvențele posibile ce identifică formatul BMP sunt:
+
+
+== Declararea unei matrice de date tip BMP în C++ ==
+
+
+== Referințe ==
+
+
+== Vezi și ==
+Grafică vectorială

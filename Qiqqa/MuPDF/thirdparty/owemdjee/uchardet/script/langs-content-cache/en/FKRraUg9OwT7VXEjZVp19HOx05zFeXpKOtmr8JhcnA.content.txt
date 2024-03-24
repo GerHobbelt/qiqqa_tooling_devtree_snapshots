@@ -1,0 +1,91 @@
+revision: 1161448950
+title: Hypochlorite
+url: https://en.wikipedia.org/wiki/Hypochlorite
+
+
+---
+
+In chemistry, hypochlorite is an anion with the chemical formula ClO−. It combines with a number of cations to form hypochlorite salts. Common examples include sodium hypochlorite (household bleach) and calcium hypochlorite (a component of bleaching powder, swimming pool "chlorine").  The Cl-O distance in ClO− is 1.69 Å.The name can also refer to esters of hypochlorous acid, namely organic compounds with a ClO– group covalently bound to the rest of the molecule.  The principal example is tert-butyl hypochlorite, which is a useful chlorinating agent.Most hypochlorite salts are handled as aqueous solutions. Their primary applications are as bleaching, disinfection, and water treatment agents.  They are also used in chemistry for chlorination and oxidation reactions.
+
+
+== Reactions ==
+
+
+=== Acid reaction ===
+Acidification of hypochlorites generates hypochlorous acid, which exists in an equilibrium with chlorine. A lowered pH (ie. towards acid) drives the following reaction to the right, liberating chlorine gas, which can be dangerous:
+
+2 H+ + ClO− + Cl− ⇌ Cl2 + H2O
+
+
+=== Stability ===
+Hypochlorites are generally unstable and many compounds exist only in solution. Lithium hypochlorite LiOCl, calcium hypochlorite Ca(OCl)2 and barium hypochlorite Ba(ClO)2 have been isolated as pure anhydrous compounds. All are solids. A few more can be produced as aqueous solutions.  In general the greater the dilution the greater their stability. It is not possible to determine trends for the alkaline earth metal salts, as many of them cannot be formed. Beryllium hypochlorite is unheard of. Pure magnesium hypochlorite cannot be prepared; however, solid Mg(OH)OCl is known.  Calcium hypochlorite is produced on an industrial scale and has good stability. Strontium hypochlorite, Sr(OCl)2, is not well characterised and its stability has not yet been determined.Upon heating, hypochlorite degrades to a mixture of chloride, oxygen, and chlorates:
+
+2 ClO− → 2 Cl− + O2
+3 ClO− → 2 Cl− + ClO−3This reaction is exothermic and in the case of concentrated hypochlorites, such as LiOCl and Ca(OCl)2, can lead to a dangerous thermal runaway and potentially explosions.The alkali metal hypochlorites decrease in stability down the group. Anhydrous lithium hypochlorite is stable at room temperature; however, sodium hypochlorite is explosive as an anhydrous solid. The pentahydrate (NaOCl·(H2O)5) is unstable above 0 °C; although the more dilute solutions encountered as household bleach possess better stability. Potassium hypochlorite (KOCl) is known only in solution.Lanthanide hypochlorites are also unstable; however, they have been reported as being more stable in their anhydrous forms than in the presence of water. Hypochlorite has been used to oxidise cerium from its +3 to +4 oxidation state.Hypochlorous acid itself is not stable in isolation as it decomposes to form chlorine.  Its decomposition also results in some form of oxygen.
+
+
+=== Reactions with ammonia ===
+Hypochlorites react with ammonia first giving monochloramine (NH2Cl), then dichloramine (NHCl2), and finally nitrogen trichloride (NCl3).
+NH3 + ClO− → HO− + NH2ClNH2Cl + ClO− → HO− + NHCl2NHCl2 + ClO− → HO− + NCl3
+
+
+== Preparation ==
+
+
+=== Hypochlorite salts ===
+Hypochlorite salts  formed by the reaction between chlorine and alkali and alkaline earth metal hydroxides. The reaction is performed at close to room temperature to suppress the formation of chlorates. This process is widely used for the industrial production of sodium hypochlorite (NaClO) and calcium hypochlorite (Ca(ClO)2).
+
+Cl2 + 2 NaOH  → NaCl + NaClO + H2O2 Cl2 + 2 Ca(OH)2 →  CaCl2 + Ca(ClO)2 + 2 H2OLarge amounts of  sodium hypochlorite are also produced electrochemically via an un-separated chloralkali process. In this process brine is electrolyzed to form Cl2 which dissociates in water to form hypochlorite. This reaction must be conducted in non-acidic conditions to prevent release of chlorine:
+
+2 Cl− → Cl2 + 2 e−Cl2 + H2O ⇌ HClO + Cl− + H+Some hypochlorites may also be obtained by a salt metathesis reaction between calcium hypochlorite and various metal sulfates. This reaction is performed in water and relies on the formation of insoluble calcium sulfate, which will precipitate out of solution, driving the reaction to completion.
+
+Ca(ClO)2 + MSO4 → M(ClO)2 + CaSO4
+
+
+=== Organic hypochlorites ===
+
+Hypochlorite esters are in general formed from the corresponding alcohols, by treatment with any of a number of reagents (e.g. chlorine, hypochlorous acid, dichlorine monoxide and various acidified hypochlorite salts).
+
+
+== Biochemistry ==
+
+
+=== Biosynthesis of organochlorine compounds ===
+Chloroperoxidases are enzymes that catalyzes the chlorination of organic compounds.  This enzyme combines the inorganic substrates chloride and hydrogen peroxide to produce the equivalent of Cl+, which replaces a proton in hydrocarbon substrate:
+
+R-H  +  Cl−  +  H2O2  +  H+  →   R-Cl  +  2 H2OThe source of "Cl+" is hypochlorous acid (HOCl). Many organochlorine compounds are biosynthesized in this way.
+
+
+=== Immune response ===
+In response to infection, the human immune system generates minute quantities of hypochlorite within special white blood cells, called neutrophil granulocytes.   These granulocytes engulf viruses and bacteria in an intracellular vacuole called the phagosome, where they are digested.
+Part of the digestion mechanism involves an enzyme-mediated respiratory burst, which produces reactive oxygen-derived compounds, including superoxide (which is produced by NADPH oxidase). Superoxide decays to oxygen and hydrogen peroxide, which is used in a myeloperoxidase-catalysed reaction to convert chloride to hypochlorite.Low concentrations of hypochlorite were also found to interact with a microbe's heat shock proteins, stimulating their role as intra-cellular chaperone and causing the bacteria to form into clumps (much like an egg that has been boiled) that will eventually die off.  The same study found that low (micromolar) hypochlorite levels induce E. coli and Vibrio cholerae to activate a protective mechanism, although its implications were not clear.In some cases, the base acidity of hypochlorite compromises a bacterium's lipid membrane, a reaction similar to popping a balloon.
+
+
+== Industrial and domestic uses ==
+Hypochlorites, especially of sodium ("liquid bleach", "Javel water") and calcium ("bleaching powder") are widely used, industrially and domestically, to whiten clothes, lighten hair color and remove stains.  They were the first commercial bleaching products, developed soon after that property was discovered in 1785 by French chemist Claude Berthollet.
+Hypochlorites are also widely used as broad spectrum disinfectants and deodorizers.  That application started soon after French chemist Labarraque discovered those properties, around 1820 (still before Pasteur formulated his germ theory of disease).
+
+
+== Laboratory uses ==
+
+
+=== As oxidizing agents ===
+Hypochlorite is the strongest oxidizing agent of the chlorine oxyanions. This can be seen by comparing the standard half cell potentials across the series; the data also shows that the chlorine oxyanions are stronger oxidizers in acidic conditions.
+Hypochlorite is a sufficiently strong oxidiser to convert Mn(III) to Mn(V) during the Jacobsen epoxidation reaction and to convert Ce3+ to Ce4+.
+This oxidising power is what makes them effective bleaching agents and disinfectants.
+In organic chemistry, hypochlorites can be used to oxidise primary alcohols to carboxylic acids.
+
+
+=== As chlorinating agents ===
+Hypochlorite salts can also serve as chlorinating agents.  For example, they convert phenols to chlorophenols.  Calcium hypochlorite converts piperidine to N-chloropiperidine.
+
+
+== Related oxyanions ==
+Chlorine can be the nucleus of oxyanions with oxidation states of −1, +1, +3, +5, or +7. (The element can also assume oxidation state of +4 is seen in the neutral compound chlorine dioxide ClO2).
+
+
+== See also ==
+Chlorine oxide
+
+
+== References ==

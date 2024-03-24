@@ -1,0 +1,82 @@
+revision: 15733540
+title: Antivirus
+url: https://ro.wikipedia.org/wiki/Antivirus
+
+
+---
+
+Software-ul antivirus este folosit în general pentru prevenirea și eliminarea virușilor de computer, viermilor și cailor troieni. De asemenea, poate detecta și elimina adware, spyware și malware.
+
+
+== Istorie ==
+Dr. Solomon's Anti-Virus Toolkit, AIDSTEST și AntiVir au fost lansate în 1978. G DATA Software a dezvoltat primul program antivirus comercial din lume în 1987. La sfârșitul lui 1990 erau disponibile 19 produse antivirus, inclusiv Norton AntiVirus și McAfee VirusScan.
+Înainte de apariția Internetului, virușii s-au răspândit prin dischete, software-ul antivirus fiind actualizat relativ rar.
+
+
+== Antivirus fals ==
+În perioada 2005-2012 , a început distribuirea activă a programelor pseudo-antivirus - software care nu este un software antivirus (adică nu are nici o funcție reală de a contracara malware-ul), dar se impersonalizează. De fapt, programele pseudo-antivirus pot fi atât programe de înșelătoare a utilizatorilor, cât și realizarea unui profit sub formă de plăți pentru "tratarea sistemului împotriva virușilor", precum și a unui program rău intenționat.
+
+
+== Antivirus special ==
+În noiembrie 2014, organizația internațională pentru drepturile omului, Amnesty International, a lansat programul Anti-Virus Detect, un program destinat detectării software-ului rău intenționat, distribuit de agențiile guvernamentale, pentru a spiona activiștii societății civile și oponenții politici. Antivirus, în opinia creatorilor, efectuează o scanare mai profundă a hard diskului decât antivirusul obișnuit .
+
+
+== Produse de securitate ==
+O parte din aceste produse conțin pe lângă protecția antivirus și alte module precum antispam, firewall, control parental și lista poate continua.
+
+Ad-Aware Free Antivirus+/Ad-Aware Personal Security/Ad-Aware Pro Security/Ad-Aware Total Security, dezvoltate de Lavasoft (Germania)
+AhnLab V3 Internet Security, dezvoltat de AhnLab (Coreea de Sud)
+Avast Antivirus/Avast Internet Security/Avast Premier/Avast Pro Antivirus, dezvoltate de Avast (Cehia)
+Avetix Pro, dezvoltat de Avetix (Italia)
+AVG Antivirus/AVG PC TuneUp/AVG Internet Security, dezvoltate de AVG Tehnologies (Cehia)
+Avira Antivirus/Avira Internet Security, dezvoltate de Avira (Germania)
+BitDefender Antivirus Plus/BitDefender Internet Security/BitDefender Total Security, dezvoltate de Bitdefender (Ro)
+BullGuard Antivirus/BullGuard Internet Security, dezvoltate de BullGuard (UK)
+CA Anti-Virus, dezvoltat de CA Technologies (SUA)
+ClamWin, dezvoltat de ClamWin (Australia)
+Comodo Antivirus/Comodo Antivirus Advanced/Comodo Internet Security, dezvoltate de Comodo Group (SUA)
+Dr.Web Antivirus/Dr.Web Security Space, dezvoltate de Dr. Web (Rusia)
+ESET NOD 32 Antivirus/ESET Smart Security, dezvoltate de ESET (Slovacia)
+FortiClient PC, dezvoltat de FortiClient
+F-Prot Antivirus, dezvoltat de FRISK Software International (Islanda)
+F-Secure Antivirus/F-Secure Internet Security, dezvoltate de F-Secure (Finlanda)
+G Data Antivirus/G Data Internet Security/G Data Total Security, dezvoltat de G DATA Software (Germania)
+Immunet, dezvoltat de Cisco Sistems (SUA)
+Kaspersky Anti-Virus/Kaspersky Internet Security, dezvoltate de Kaspersky Lab (Rusia)
+McAfee Antivirus/McAfee Internet Security, dezvoltate de McAfee [Intel Security] (SUA)
+Microsoft Security Essentials, dezvoltat de Microsoft (SUA)
+Norman Antivirus, dezvoltat de Norman Safeground
+Norton AntiVirus/Norton Antivirus Security, dezvoltate de Symantec (SUA)
+nProtect Antivirus, dezvoltat de INCA Internet
+OutPost AntiVirus Pro/OutPost Security Suite, dezvoltate de Agnitum (Rusia)
+Panda Antivirus Pro/Panda Internet Antivirus, dezvoltate de Panda Security (Spania)
+PC Tools Internet Security, dezvoltat de PC Tools
+PSafe Total, dezvoltat de PSafe, (Brazilia)
+Qihoo 360 Total Security, dezvoltat de Qihoo 360 (China)
+Rising Antivirus, dezvoltat de Rising AntiVirus (China)
+SecureAnywhere AntiVirus/ SecureAnywhere Internet Security Plus, dezvoltate de Webroot (SUA)
+Sophos Antivirus/Sophos EndUser Protection, dezvoltate de Sophos (UK)
+Trend Micro Antivirus+ Security, Trend Micro Internet Security, Trend Micro Maximum Security, Trend Micro Premium Security, Trend Micro Antivirus for Mac, dezvoltate de Trend Micro (Japonia)
+UnThreat Internet Security, dezvoltat de Scandium Security (Cipru)
+Vba32 Antivirus, dezvoltat de VirusBlokAda (Belarus)
+Vipre Antivirus/Vipre Internet Security, dezvoltate de Sunbelt Software (SUA)
+VirusBarrier, dezvoltat de Intego (Franța)
+VirusBuster, dezvoltat de VirusBuster
+Windows Live OneCare, dezvoltat de Microsoft (SUA)
+Zemana Antilogger and Antimalware, dezvoltat de Zemana (Turcia)
+
+
+== Vezi și ==
+Listă de companii dezvoltatoare de produse software antivirus comerciale
+
+
+== Note ==
+
+
+== Bibliografie ==
+
+
+== Legături externe ==
+Antivirus software pe Curlie
+Facebook poate fi utilizat pentru transmiterea virușilor
+AntiVirus tool video

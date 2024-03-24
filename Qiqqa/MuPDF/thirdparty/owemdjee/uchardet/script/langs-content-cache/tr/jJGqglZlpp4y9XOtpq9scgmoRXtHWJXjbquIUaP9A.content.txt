@@ -1,0 +1,63 @@
+revision: 29325214
+title: Doppler (bina)
+url: https://tr.wikipedia.org/wiki/Hareket_detekt%C3%B6r%C3%BC
+
+
+---
+
+"Hareket dedektörü" yakındaki hareketi algılamak için bir sensör kullanan elektrikli bir cihazdır. Böyle bir cihaz genellikle bir görevi otomatik olarak gerçekleştiren veya bir alandaki bir kullanıcıyı hareket konusunda uyaran bir sistemin bileşeni olarak kullanılır. Güvenlik, otomatik aydınlatma kontrolü, ev kontrolü, enerji verimliliği ve diğer yararlı sistemlerin hayati bir bileşenini oluştururlar.
+
+
+== Genel bakış ==
+Aktif  elektronik hareket dedektörü bir vericinin yanı sıra bir optik, mikrodalga veya akustik sensör içerir. Ancak, bir pasif yalnızca bir sensör içerir ve yalnızca emisyon veya yansıma yoluyla hareket eden nesneden gelen bir işareti algılar. Cihazın yakınlığındaki optik, mikrodalga veya akustik alandaki değişiklikler birkaç teknolojiden birine dayalı olarak elektronik devre tarafından yorumlanır. Az maliyetli hareket dedektörlerinin çoğu yaklaşık 15 fit (4,6 m) mesafelerde hareketi algılayabilir. Özel sistemler daha pahalıdır ancak daha yüksek hassasiyete veya daha uzun menzillere sahiptir. Tomografik hareket algılama sistemleri çok daha geniş alanları kapsayabilir çünkü algıladığı radyo dalgaları çoğu duvar ve engele giren frekanslardadır ve birden çok yerde algılanır.
+Hareket dedektörleri ticari uygulamalarda geniş kullanım alanı bulmuştur. Yaygın bir uygulama işletmelerde ve kamu binalarında otomatik kapı açıcıları etkinleştirmektir. Hareket sensörleri ayrıca lobiler ve merdivenler gibi yürüyüş yollarında sokak ışıklarının veya iç mekan ışıklarının etkinleştirilmesinde gerçek bir doluluk sensörü yerine yaygın olarak kullanılmaktadır. Bu tür akıllı aydınlatma sistemlerinde enerji yalnızca bir zamanlayıcı süresince ışıklara güç verilerek korunur ardından kişi muhtemelen bölgeyi terk eder. Hareket dedektörü olası bir saldırganın hareketini algıladığında ev sahibini veya güvenlik hizmetini uyarmak için kullanılan hırsız alarmı sensörlerinden biri olabilir. Böyle bir detektör ayrıca olası izinsiz girişi kaydetmek için bir güvenlik kamerasını tetikleyebilir.
+
+
+== Sensör teknolojisi ==
+
+Çeşitli hareket algılama türleri yaygın olarak kullanılmaktadır:
+
+
+=== Pasif kızılötesi (PIR) ===
+Pasif kızılötesi (PIR) sensörler orta- kızılötesi dalga boylarında yayılan siyah cisim radyasyonu aracılığıyla bir kişinin cilt sıcaklığına duyarlıdır bunun aksine oda sıcaklığında arka plan nesnelerini algılamazlar. 
+Sensörden enerji yayılmaz dolayısıyla "pasif kızılötesi" adı verilir. Bu onu örneğin bir kişinin veya aracın geçişinin görünür veya kızılötesi bir ışını kesintiye uğrattığı elektrik gözünden (genellikle bir "hareket dedektörü" olarak kabul edilmez) ayırır. Bu cihazlar kişinin kızılötesi radyasyonunu alarak nesneleri, insanları veya hayvanları algılayabilir.
+
+
+=== Mikrodalga ===
+Bunlar hareketi Doppler radar prensibiyle algılar ve radar hız tabancası ile benzerdir. Mikrodalga radyasyonun sürekli dalgası yayılır ve bir nesnenin alıcıya doğru (veya alıcıdan uzağa) hareketine bağlı olarak yansıyan mikrodalgalardaki faz kaymaları düşük bir ses frekansında bir heterodin sinyaliyle sonuçlanır.
+
+
+=== Ultrasonik ===
+Ultrasonik dönüştürücü bir ultrasonik dalga yayar (insan kulağının duyabileceğinden daha yüksek bir frekansta ses) ve yakındaki nesnelerden gelen yansımaları alır. Tam olarak Doppler radarda olduğu gibi alınan alanın heterodin tespiti hareketi gösterir. Algılanan doppler kayması aynı zamanda düşük ses frekanslarındadır (yürüme hızları için) çünkü bir santimetre civarındaki ultrasonik dalga boyu mikrodalga hareket detektörlerinde kullanılan dalga boylarına benzer. Ultrasonik sensörlerin olası bir kötü yanı sensörün örneğin köşelerdeki ses dalgalarının yansımaları nedeniyle kapsamanın istenmeyen alanlarda harekete duyarlı olabilmesidir. Bu tür bir genişletilmiş kapsama alanı hedefin bir alandaki herhangi bir doluluğun saptanması olduğu aydınlatma kontrolü için istenebilir. Ancak örneğin otomatik bir kapıyı açmak için kapıya giden yolda trafiğe seçici olan bir sensör daha üstündür.
+
+
+=== Tomografik hareket dedektörü ===
+Bu sistemler bir örgü ağın düğümünden düğümüne geçerken radyo dalgalarında oluşan bozuklukları algılar. Duvarları ve diğer engelleri algılayabildikleri için geniş alanları tamamen algılama yeteneğine sahiptirler. 
+RF tomografik hareket algılama sistemleri özel donanımı, diğer kablosuz özellikli cihazları veya bu ikisinin bir bileşenini kullanabilirler. Diğer kablosuz özellikli cihazlar bir yazılım güncellemesi aldıktan sonra ağ üzerinde düğüm görevi yapabilirler.
+
+
+=== Video kamera yazılımı ===
+Az maliyetli dijital kameraların video çekebilme yeteneğinin yaygınlaşmasıyla böyle bir kameranın çıkışını yazılım kullanarak kendi görüş alanındaki hareketi algılamak için kullanmak mümkündür. Bu çözüm özellikle hareket algılama tarafından tetiklenen videoyu kaydetmek olduğunda kamera ve bilgisayarın dışında hiçbir donanıma ihtiyaç duyulmadığından özellikle caziptir. Gözlemlenen alan normal olarak aydınlatılabileceğinden bu başka bir "pasif" teknoloji olarak kabul edilebilir. Ancak "karanlıkta" yani insan gözü tarafından algılanamayan bir dalga boyundaki aydınlatma ile hareketi algılamak için yakın-kızılötesi aydınlatma ile birlikte de kullanılabilir.
+
+
+=== Hareket algılayıcı ===
+Fotodetektörler ve kızılötesi aydınlatma elemanları makine öğrenimi algoritmalarının yardımıyla dijital ekranları el hareketlerini ve hareketleri algılamak için destekleyebilir.
+
+
+== Çift teknolojili hareket dedektörleri ==
+Birçok modern hareket dedektörü farklı teknolojilerin kombinasyonlarını kullanır. Birden fazla algılama teknolojisini tek bir algılayıcıda birleştirmek yanlış tetiklemeyi azaltmaya yardımcı olabilirken, bunu daha az algılama olasılıkları ve artan güvenlik açığı pahasına yapar. Örneğin birçok çift teknolojili sensör, PIR sensörü ve mikrodalga sensörü tek bir ünitede birleştirir. Hareketin algılanması için her iki sensörün birlikte açması gerekir. Bu yanlış alarm olasılığını azaltır çünkü sıcaklık ve ışık değişiklikleri PIR'ı tetikleyebilir ancak mikrodalgayı tetikleyemez veya hareketli ağaç dalları Mikrodalgayı tetikler ancak PIR'ı tetiklemez. Bir davetsiz misafir PIR'ı veya mikrodalgayı kandırabilirse sensör onu algılamaz.
+Çoğu zaman PIR teknolojisi doğruluğu en üst düzeye çıkarmak ve enerji kullanımını azaltmak için başka bir modelle eşleştirilir. PIR, emisif mikrodalga algılamasından daha az enerji çeker ve çok sayıda sensör kalibre edilir böylece PIR sensörü çalıştığında bir mikrodalga sensörünü etkinleştirir. İkincisi de bir davetsiz misafir bulursa alarm çalar.
+
+
+== Ayrıca bakınız ==
+Alacakaranlık anahtarı
+Isı Dedektörü
+Hareket yakalama
+Video oyun konsolu için Hareket kontrolörü
+Pickup (müzik teknolojisi)
+Yakınlık sensörü
+Uzaktan kamera
+Duman dedektörü
+
+
+=== Kaynakça ===

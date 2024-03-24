@@ -1,0 +1,147 @@
+revision: 205043476
+title: transistor
+url: https://fr.wikipedia.org/wiki/Transistor
+
+
+---
+
+Le transistor est un composant électronique à semi-conducteur permettant de contrôler ou d'amplifier des tensions et des courants électriques. C'est le composant actif le plus important des circuits électroniques aussi bien en basse qu'en haute tension : circuits logiques (il permet, assemblé avec d'autres, d'effectuer des opérations logiques pour des programmes informatiques), amplificateur, stabilisateur de tension, modulation de signal, etc. Les transistors revêtent une importance particulière — le plus souvent en tant qu'interrupteurs marche/arrêt — dans les circuits intégrés, ce qui rend possible la microélectronique. 
+Ce dispositif comporte trois électrodes actives permettant de contrôler un courant ou une tension sur l'électrode de sortie (le collecteur pour le transistor bipolaire et le drain sur un transistor à effet de champ) grâce à une électrode d'entrée (la base sur un transistor bipolaire et la grille pour un transistor à effet de champ). Le transistor est isolant sans tension sur la borne base, et conducteur avec une tension sur la borne base.
+
+
+== Étymologie ==
+Le terme transistor provient de l'anglais transfer resistor (résistance de transfert). Il a été sélectionné par un comité directeur de vingt-six personnes[source insuffisante] des Bell Labs le 28 mai 1948, parmi les noms proposés suivants : semiconductor triode, surface states triode, crystal triode, solid triode, iotatron, transistor. Pour des raisons commerciales, il fallait un nom court, sans équivoque avec la technologie des tubes électroniques, et le mot Transistor fut retenu[source insuffisante],.
+Ce nom correspond dans la fonction de résistance électrique pouvant être commandée par une tension ou un courant électrique.
+Par métonymie, le terme transistor désigne souvent les récepteurs radio équipés de transistors (originellement appelés poste à transistors).
+
+
+== Historique ==
+
+À la suite des travaux sur les semi-conducteurs, le transistor bipolaire a été réalisé pour la première fois le 23 décembre 1947 par les américains John Bardeen, William Shockley et Walter Brattain, chercheurs des Laboratoires Bell. Ces chercheurs ont reçu pour cette invention le prix Nobel de physique en 1956.
+Herbert Mataré et Heinrich Welker, deux physiciens allemands, ont aussi développé parallèlement et indépendamment le « transistor français » en juin 1948 alors qu'ils travaillaient à la Compagnie des Freins et Signaux à Paris. Ils déposent leur première demande de brevets pour un transistor le 13 août 1948. Les études menées par les commissaires montrent qu'ils ne se sont pas appuyés sur l'annonce du transistor du laboratoire américain mais qu'ils ont bien eu l'idée en même temps. Le 18 mai 1949, cette invention européenne est présentée par la presse au public sous le nom de « Transistron »,. L'objectif est alors de conquérir le marché mondial en premier. A l'époque, la presse technique donne l'avantage au transistron considéré plus résistant et plus stable. Néanmoins le gouvernement français étant focalisé sur la technologie nucléaire, le transistron est mis à l'écart et perd son avantage face au transistor. En 1952, Herbert Mataré crée l'entreprise Intermetall qui est la première à produire des transistors et qui atteindra son apogée un an plus tard avec la présentation de la première radio à transistor un an avant celle de Texas Instrument. En 1954, Texas Instrument met au point son prototype de poste radio à transistor qui sera industrialisé par la société IDEA (Industrial Development Engineering Associates).
+Avant cela, Herbert Mataré avait déjà approché l'effet transistor alors qu'il travaillait pour l'armée allemande durant la seconde guerre mondiale dans le but d'améliorer les radars. L'urgence de la guerre l'empêcha de se pencher davantage sur le sujet et il qualifia ce phénomène d'« interférences ». Lorsque la Russie reprit le village où il travaillait en Pologne, Herbert Mataré dut brûler toutes ses notes de peur qu'elles ne tombent entre les mains de l’ennemi[réf. nécessaire].
+Le transistor est considéré comme un énorme progrès face au tube électronique : beaucoup plus petit, plus léger et plus robuste, fonctionnant avec des tensions faibles, autorisant une alimentation par piles, il fonctionne presque instantanément une fois mis sous tension, contrairement aux tubes électroniques qui demandaient une dizaine de secondes de chauffage, généraient une consommation importante et nécessitaient une source de tension élevée (plusieurs centaines de volts).
+Une fois le transistor découvert, l'ouverture au grand public ne fut pas immédiate. La première application du transistor fut, pour la radio, en 1954, soit 7 ans après la découverte du transistor. Mais à partir de ce moment son influence sur la société augmenta de façon exponentielle, en particulier chez les scientifiques et les industriels. En effet, à partir du milieu des années 1950, on commence à utiliser le transistor dans les ordinateurs, les rendant assez fiables et relativement petits pour leur commercialisation. À partir de 1957, IBM construisait tous les nouveaux ordinateurs avec des transistors au lieu des tubes à vide.
+Après l'invention du circuit intégré en 1958, groupant en un petit volume plusieurs transistors et composants, en 1969 est inventé le microprocesseur, permettant à des milliers de transistors de fonctionner en harmonie sur un support, ce qui est encore une fois une révolution pour l'informatique moderne. L'Intel 4004, sorti en mars 1971 et commandité par Busicom, intègre 2 250 transistors et exécute 60 000 opérations par seconde.
+De nos jours, le transistor est omniprésent dans la plupart des appareils de notre quotidien. Le nombre de transistors dans un microprocesseur a considérablement augmenté pendant que sa taille diminuait, suivant en cela la loi de Moore prédisant durant plusieurs décennies un doublement du nombre de transistors des microprocesseurs, donc un doublement de la puissance de calcul de ces derniers, tous les 18-24 mois. Au 24 mars 2023, date du décès de Gordon Moore, la plus grande intégration pour une puce commerciale combinant CPU, GPU et moteur neuronaux est de 114 milliards de transistors pour environ 864 mm2. Elle est de 2 600 milliards de transistors pour une super-puce de type "wafer-scale intégration" (interconnexion de toutes les puces d'une même galette). Le transistor a contribué au développement d'une grande variété de domaines. Il est présent dans tout ce qui contient un tant soit peu d'électronique, de notre cafetière à nos voitures en passant par nos smartphones ou les feux de signalisation. Dès qu'il y a un choix plus complexe que ouvert/fermé dans un appareil électronique, un transistor entre en jeu.
+
+
+== Classification ==
+
+
+=== Transistor bipolaire ===
+
+Un transistor bipolaire est un dispositif électronique à base de semi-conducteur dont le principe de fonctionnement est basé sur deux jonctions PN, l'une en direct et l'autre en inverse.
+
+
+=== Transistor à effet de champ ===
+
+Contrairement au transistor bipolaire, la grille agit par « effet de champ » (d'où son nom) et non par passage d'un courant électrique.
+Parmi les transistors à effet de champ (ou FET, pour Field Effect Transistor), on peut distinguer les familles suivantes :
+
+transistors MOSFET : ils utilisent les propriétés des structures Métal/Oxyde/Semi-conducteur ;
+transistors JFET : ils utilisent les propriétés des jonctions PN.
+
+
+=== Transistor à unijonction ===
+
+Le transistor dit à unijonction n'est quasiment plus utilisé, mais servait à créer des oscillateurs à relaxation.
+
+
+=== Technologie hybride ===
+
+L'IGBT est un composant hybride bipolaire et de MOSFET, principalement utilisé en électronique de puissance.
+
+
+=== Applications ===
+Les deux principaux types de transistors permettent de répondre aux besoins de l'électronique analogique et numérique mais aussi à ceux de l'électronique de puissance et haute tension.
+
+La technologie bipolaire est plutôt utilisée en analogique et en électronique de puissance.
+Les technologies FET et CMOS sont principalement utilisées en électronique numérique (réalisation d'opérations logiques). Ils peuvent être utilisés pour faire des blocs analogiques dans des circuits numériques (régulateur de tension par exemple). Ils sont aussi utilisés pour faire des commandes de puissance (moteurs) et pour l'électronique haute tension (automobile). Leurs caractéristiques s'apparentent plus à celles des tubes électroniques. Ils offrent une meilleure linéarité dans le cadre d'amplificateurs Hi-Fi, donc moins de distorsion.Un mélange des deux technologies est utilisé chez les IGBT.
+
+
+== Constitution ==
+Les substrats utilisés sont le germanium (série AC, aujourd'hui obsolète), le silicium, l'arséniure de gallium, le silicium-germanium et plus récemment le carbure de silicium, le nitrure de gallium, l'antimoniure d'indium. Le 10 mai 1954, Texas Instruments sort le premier transistor au silicium.
+Pour la grande majorité des applications, on utilise le silicium alors que les matériaux plus exotiques tels que l'arséniure de gallium et le nitrure de gallium sont plutôt utilisés pour réaliser les transistors hyperfréquences.
+
+Un transistor bipolaire se compose de deux parties de substrat semiconducteur dopées identiquement (P ou N) séparées par une mince tranche de semiconducteur dopée inversement ; on a ainsi deux types : N-P-N et P-N-P.
+Le transistor à effet de champ classiquement se compose d'un barreau de semiconducteur dopé N (ou P), et entouré en son milieu d'un anneau de semiconducteur dopé inversement P (ou N). On parle de FET à canal N ou P suivant le dopage du barreau.
+Le transistor MOS se compose d'un barreau de semiconducteur P ou N sur lequel on fait croître par épitaxie une mince couche d'isolant (dioxyde de silicium par exemple), laquelle est surmontée d'une électrode métallique.
+
+
+== Description schématique ==
+
+Les trois connexions sont appelées :
+
+Dans les deux types de transistors bipolaires, l'électrode traversée par l'ensemble du courant s'appelle l'émetteur. Le courant dans l'émetteur est égal à la somme des courants du collecteur et de la base.
+La flèche identifie l'émetteur et suit le sens du courant ; elle pointe vers l'extérieur dans le cas d'un NPN, vers l'intérieur dans le cas d'un PNP. L'électrode reliée au milieu de la barre centrale figure la base et la troisième électrode figure le collecteur.
+Dans le cas de l'effet de champ, la flèche disparaît, car le dispositif est symétrique (drain et source sont échangeables). Les traits obliques sont habituellement remplacés par des traits droits.
+Pour le transistor MOS, la grille se détache des autres électrodes, pour indiquer l'isolation due à la présence de l'oxyde.
+En réalité, il existe une quatrième connexion pour les transistors à effet de champ, le substrat (parfois appelé bulk), qui est habituellement relié à la source (c'est la connexion entre S et les deux traits verticaux sur le schéma).
+
+
+== Évolution, prospective ==
+Les premiers transistors utilisaient le germanium comme semi-conducteur. Ce matériau, de nouveau utilisé pour certaines applications, a vite été remplacé par le silicium plus résistant, plus souple d'emploi, moins sensible à la température. Il existe aussi des transistors à l'arséniure de gallium utilisés en particulier dans le domaine des hyperfréquences.
+Les transistors à effet de champ sont principalement utilisés en amplification grand gain de signal de faible amplitude, très basse tension. Ils sont très sensibles aux décharges électrostatiques.
+Les évolutions technologiques ont donné les transistors ou commutateurs MOS de puissance, ils sont de plus en plus utilisés dans toutes les applications de commutation de forte puissance (classe D), basse tension, vu qu'ils n'ont presque plus de résistance de drain contrairement aux transistors, ils ne s'échauffent pas et n'ont donc pas besoin de refroidissement (radiateurs).
+Le graphène, nouveau matériau très prometteur et performant, pourrait remplacer le silicium dans les transistors de future génération et permettre de prolonger la loi de Moore en termes de miniaturisation des transistors pour la microélectronique et la nanoélectronique de nouvelle génération,,.
+
+Vers des transistors ultra-fins (bidimensionnels) ?On a réussi à produire des transistors au bisulfure de molybdène (MoS2) atomiquement minces, mais la miniaturisation restait difficile. Récemment (en 2022) des transistors MoS2 à paroi latérale à canal atomiquement mince et dotés d'une longueur de grille physique de moins de 1 nm ont été produits sur le bord d'une couche de graphène utilisée comme électrode de grille, grâce à de films de graphène et de MoS2 développés par dépôt chimique en phase vapeur pour la fabrication de transistors à paroi latérale sur une tranche de 2 pouces.
+
+
+== Principe de fonctionnement ==
+
+Les transistors MOS et bipolaires fonctionnent de façons très différentes :
+
+Le transistor bipolaire
+Amplificateur de courant, on injecte un courant dans l'espace base/émetteur afin de créer un courant multiplié par le gain du transistor entre l'émetteur et le collecteur. Les transistors bipolaires NPN (négatif-positif-négatif) qui laissent circuler un courant de la base (+) vers l'émetteur (–), sont plus rapides et ont une meilleure tenue en tension que les transistors PNP base (–) émetteur (+), mais peuvent être produits avec des caractéristiques complémentaires par les fabricants pour les applications le nécessitant.
+Le transistor à effet de champ
+Son organe de commande est la grille (gate en anglais). Celle-ci n'a besoin que d'une tension (ou un potentiel) entre la grille et la source pour contrôler le courant entre la source et le drain. Le courant de grille est nul (ou négligeable) en régime statique, puisque la grille se comporte vis-à-vis du circuit de commande comme un condensateur de faible capacité. Il existe plusieurs types de transistors à effet de champ : transistors à appauvrissement, à enrichissement (de loin les plus nombreux) et à jonction (JFET). Dans chaque famille, on peut utiliser soit un canal de type N soit de type P, ce qui fait donc en tout six types différents.- Pour les transistors à appauvrissement ainsi que les JFET, le canal drain–source est conducteur si le potentiel de grille est nul. Pour le bloquer, il faut rendre ce potentiel négatif (pour les canaux N) ou positif (pour les canaux P).- Inversement, les transistors à enrichissement sont bloqués lorsque la grille a un potentiel nul. Si on polarise la grille d'un transistor N par une tension positive ou celle d'un transistor P par une tension négative, l'espace source–drain du transistor devient passant.Chacun de ces transistors est caractérisé par une tension de seuil, correspondant à la tension de grille qui fait la transition entre le comportement bloqué du transistor et son comportement conducteur. Contrairement aux transistors bipolaires, dont la tension de seuil ne dépend que du semi-conducteur utilisé (silicium, germanium ou As-Ga), la tension de seuil des transistors à effet de champ dépend étroitement de la technologie, et peut varier notablement même au sein d'un même lot. Le transistor à effet de champ à déplétion à canal N est le semi-conducteur dont les caractéristiques se rapprochent le plus des anciens tubes à vide (triodes). À puissance égale, les transistors N sont plus petits que les P. À géométrie égale, les transistors N sont également plus rapides que les P. En effet, les porteurs majoritaires dans un canal N sont les électrons, qui se déplacent mieux que les trous, majoritaires dans un canal P. La conductivité d'un canal N est ainsi supérieure à celle d'un canal P de même dimension.
+La plupart des circuits intégrés numériques (en particulier les microprocesseurs) utilisent la technologie CMOS qui permet d'intégrer à grande échelle (plusieurs millions) des transistors à effet de champ (à enrichissement) complémentaires (c'est-à-dire qu'on retrouve des N et des P). Pour une même fonction, l'intégration de transistors bipolaires consommerait beaucoup plus de courant. En effet, un circuit CMOS ne consomme du courant que lors des basculements. La consommation d'une porte CMOS correspond uniquement à la charge électrique nécessaire pour charger sa capacité de sortie. Leur dissipation est donc quasiment nulle si la fréquence d'horloge est modérée ; cela permet le développement de circuits à piles ou batteries (téléphones ou ordinateurs portables, appareils photo…).
+
+Autres transistors
+IGBT (Insulated Gate Bipolar Transistor) : hybride qui a les caractéristiques d'un transistor à effet de champ en entrée et les caractéristiques d'un transistor bipolaire en sortie. Uniquement utilisé dans l'électronique de puissance.
+Transistor unijonction : ce transistor est utilisé pour ses caractéristiques de résistance dynamique négative, ce qui permet de réaliser simplement un oscillateur. N'est plus utilisé de nos jours.
+Phototransistor : c'est un transistor bipolaire, dont la jonction base–collecteur est sensible à la lumière. Par rapport à une photodiode, il est plus sensible, car il bénéficie de l'effet amplificateur propre au transistor.
+L'opto-isolateur : le phototransistor est monté dans le même boîtier qu'une diode électroluminescente. C'est la lumière qui assure la transmission des signaux entre le phototransistor et la diode électroluminescente. Le pouvoir d'isolation très élevé (de l'ordre de 5 kV) en fait le composant idéal pour isoler galvaniquement un circuit de commande, d'un circuit de puissance. Il existe aussi des opto-isolateurs utilisant d'autres composants en sortie tels le thyristor, le triac.
+
+
+== Emploi ==
+Sauf dans le domaine des fortes puissances, il est devenu rare de n'avoir qu'un seul transistor dans un boîtier (pour les fortes puissances, on optera pour un montage Darlington, permettant d'obtenir un gain en courant plus important).
+Les circuits intégrés ont permis d'en interconnecter d'abord des milliers, puis des millions. L'intégration de plus d'un milliard de transistors sur un seul composant a été atteinte en juin 2008 par Nvidia avec la puce GT200. Cette puce, utilisée comme processeur graphique (GPU), atteint 1,4 milliard de composants électriques gravés en 65 nanomètres, sur une surface d'environ 600 mm2.
+Ces circuits intégrés servent à réaliser des microprocesseurs, des mémoires et la plupart des composants actifs.
+
+
+== Notes et références ==
+
+
+=== Notes ===
+
+
+=== Références ===
+
+
+== Annexes ==
+
+
+=== Articles connexes ===
+Transistor Darlington
+IGBT
+Transistor JFET
+Transistor bipolaire
+MOSFET
+EOSFET
+Loi de Moore
+TRADIC, premier ordinateur à transistors
+Microprocesseur
+
+
+=== Liens externes ===
+Transistor bipolaire
+Transistor à effet de champ (FET)
+Transistor à effet de champ à grille isolée -Transistor M.O.S.
+[PDF] Transistor unijonction
+Armand Van Dormael « The French Transistor »  (lire en ligne) [PDF]— « (ibid.) », dans Proceedings of the 2004 IEEE Conference on the History of Electronics, Bletchley Park, June 2004 
+(en) Michael Riordan, « How Europe Missed the Transistor », IEEE Spectrum, vol. 42, no 11,‎ novembre 2005, p. 52–57 (ISSN 0018-9235)
+(en) ON Semiconductor Application Notes 1628 : Understanding Power Transistors Breakdown Parameters [PDF]
+ Portail de l’électricité et de l’électronique   Portail des micro et nanotechnologies   Portail des technologies

@@ -1,0 +1,80 @@
+revision: 29862759
+title: +1 km NEO
+url: https://tr.wikipedia.org/wiki/Airbus_A320_ailesi
+
+
+---
+
+Airbus A320 ailesi Almanya, Fransa, İspanya, Birleşik Krallık ve Hollanda ortaklığından oluşan Airbus S.A.S. ailesinin kısa ve orta menzilli uçağıdır. Airbus A320 serisi A318, A319, A320, A321 ve ACJ özel jet versiyonlarından oluşur. İlk uçuşunu 1987 yılında gerçekleştiren A320 serisi fly by wire Flight control sistemini kullanan ilk yolcu uçaklarıdır. Yolcu uçakları arasında bu güne kadar 4658 adetten fazla üretilerek en büyük rakibi Boeing 737'in arkasından ikinci sıradadır. 1965 yılında üretime başlayan Boeing 737 şu ana kadar 8000'i geçmiştir.
+
+
+== Tasarımı ==
+Airbus A320 serisi tek koridorlu, alçak kanatlı, tek kuyruklu yapıya sahiptir. Bir burun iki adet kanatın gövdeye yakın kısımlarına yerleştirilmiş iniş takımına sahiptir. Kanadın direnci yüksek ve yüzeyi geniş gövdeye yakın kısmına yerleştirilmiş 2 adet çift akılı turbofan motora sahiptir.
+Uçuş güvertesinde elektronik uçuş bilgi sistemini ve kontrol yüzeylerini yönetmek için klasik yoke (W şeklindeki uçağın direksiyonu diyelim) sistemi yerine savaş uçaklarında kullanılan joystik sistemi kullanılmaktadır. Airbus uçaklarının hemen hemen tamamında bu sistem kullanılır. Joystik ve bilgisayarlar tarafından kontrol edilen fly by wire sistemi Uçuş Dinamiği hesaplayarak (hız, yükseklik, hava durumu, dizayn ve uçağın döneleri) pilota en güvenli kontrolü sağlamaktadır. Bu sistem günümüzde pilotlar tarafından giderek vazgeçilmez bir unsur olmaya başlamıştır.
+A320 serisinde kullanılan motorlar CFM 56 ve IAE V2500 model turbofan jet motorlarıdır.
+
+
+=== Teknolojik yenilikleri ===
+İlk tamamı dijital fly by wire kontrol sistemine sahip ilk sivil yolcu uçağı
+Tamamı LCD ekranlardan oluşan kokpit (Glass Cockpit)
+Komposit malzeme ile yapılmış ilk dar gövdeli yolcu uçağı
+ECAM (Elektronik merkezi Uçak bilgi ekranı. İki adet lcd ekran üzerinden uçağın yakıt, uyarı, sistem hataları ve uçak hakkında pek çok bilgiyi verebilen uçuş bilgi bilgisayarı)
+Tüplü ekranlar yerine ilk Lcd uçuş ekranlarının kullandığı kokpite sahiptir. Bu şekilde 50 kilo tasarruf edilmiştir.
+Fly Bye Wire sistemi için kullanılan bilgisayarlarda İntel firmasının İntel 8086 işlemcisini kullanmıştır.
+
+
+=== A320NEO ===
+Airbus üretimi A320 NEO (New Engine Option/Yeni Motor Opsiyonu)
+A320neo'da Pratt&Whitney'in PW1100G veya CFMI şirketinin Leap-X motorları kullanılabilecek.
+Uçağın maliyetleri klasik A320'lere göre yüzde 30 daha düşük olacak.
+Kıvrık kanat uçları ‘sharklet= köpekbalığı yüzgeci" ile aerodinamik mükemmellik sağlanacak.
+Kompozit hafif malzemeler ve yeni motorlarla uçak 2 ton (4,400 lb) daha fazla yük taşıyabilecek.
+A320neo 6300km kilometre menzil sunuyor.
+Yeni uçak üç ayrı model olarak tasarlandı. Yolcu kapasitesi 150-220 arasında değişiyor. Yani Neo, A319, A320 ve A321'in yerini alacak. A320 Neo'ların yüzde 15 yakıt tasarrufu sağlaması havayolları şirketlerinin her yıl uçak başına 1 milyon dolar tasarruf etmesini sağlıyor. Her uçak için yılda 3.600 ton daha az karbondioksit salımına imkân verecek ve karbon emisyonounda’da çift haneli azaltma sağlayacak ve motor sesini de azaltacak.
+Airbus A320neo'ya ilk siparişlerini Ocak 2011'de Hindistanlı havayolu şirketi IndiGo verdi. İlk teslimatı 2016 yılı itibarıyla yapıldı.
+
+
+=== PRATT&WHITNEY PW1100G ===
+Yeni dişli kutusu, önde yer alan fanın daha yavaş dönmesini sağlıyor. Özel tasarım, dönüş gücünü artırarak motorun içine veriyor. Böylece malzeme yorgunluğu azaltılarak parçaların hizmet ömrü uzatılıyor.
+P&W yüzde 16 yakıt tasarrufunu garanti ediyor.
+Çevre kirliliği yüzde 50 düşük olan motor çok sessiz.
+Hâlen Boeing 737 test uçağında denemeler sürüyor. Yeni motor ailesi, A320neo, Bombardier C Serisi ve Rus MC-21 uçaklarında kullanılacak.
+
+
+=== CFMI Leap-X ===
+LEAP-X adı verilen motor, çalışma prensibi olarak klasik jet motorlarıyla aynı teknolojiye sahip.
+En önemli özelliği, çok hafif, motorun hizmet süresi boyunca bakıma gerek duymayan kompozit paller.
+16 bin iniş-kalkış sonrasında büyük bakıma giren motor, rakiplerine göre yüzde 30 daha uzun ömre sahip.
+CFMI'ın hedefi, yüzde 16 yakıt tasarrufu.
+CFM Leap motor seçeneğine sahip ilk Airbus 320Neo, 2016 yılında Pegasus Havayolları'na teslim edildi.
+
+
+== Sipariş ve teslim edilenler ==
+Bilgiler, Aralık 2011 sonu değerleridir. 17 Ocak 2012 tarihinde güncellenmiştir.
+
+
+== Teknik özelikler ==
+
+
+== Kıyaslanabilir uçaklar ==
+Boeing 737-900/Boeing 737-800/Boeing 737-700/737-600
+Boeing 717
+Bombardier C Series
+Dassault Mercure
+Embraer 195
+McDonnell Douglas DC-9
+McDonnell Douglas MD-80/MD-90
+İrkut MC-21
+Tupolev Tu-154M
+Tupolev Tu-204
+Yakovlev Yak-42D
+
+
+== Motor tipleri ==
+
+
+== Dış bağlantılar ==
+Airbus.com3 Mart 2013 tarihinde Wayback Machine sitesinde arşivlendi.
+
+
+== Kaynakça ==

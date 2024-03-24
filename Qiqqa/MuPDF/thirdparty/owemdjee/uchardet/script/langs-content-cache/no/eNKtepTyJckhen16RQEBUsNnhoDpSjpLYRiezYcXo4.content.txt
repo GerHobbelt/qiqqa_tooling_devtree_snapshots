@@ -1,0 +1,72 @@
+revision: 23110347
+title: Datanett
+url: https://no.wikipedia.org/wiki/Datanett
+
+
+---
+
+Et datanett, datanettverk eller bare nettverk er et system for kommunikasjon mellom to eller flere datamaskiner.
+
+
+== Definisjoner ==
+I tradisjonell forstand består et datanettverk av datamaskiner knyttet sammen ved hjelp av kabel eller ved hjelp av trådløs teknologi. I de senere år har teknologien gjort at det er kommet flere ting på markedet som kan knyttes opp til et nettverk i tillegg til tradisjonelle datamaskiner. Dette er alt fra nettverksskrivere og mobiltelefoner til toaletter og kjøleskap.
+Opprinnelig ble nettverk satt sammen innad i bedrifter, forskningsinstitusjoner og i det militæret. Tanken var at sammenkoblinger av datamaskiner skulle gjøre utvekslingen av forskningsdata og annen informasjon lettere. Etterhvert har bruken av datanettverk blitt mer og mer utbredt.
+
+
+== Typer nettverk ==
+Datanettverk kan klassifiseres ut fra flere faktorer, som utstrekning, teknologi og bruksområde.
+
+
+=== Fysisk utstrekning ===
+
+
+==== Personlig datanettverk ====
+Det er derfor blitt vanlig at maskiner knyttes sammen i mindre nettverk som har rekkevidde på et par meter. Denne typen nettverk kalles personlig datanettverk (Personal Area Network, PAN) og kobles vanligvis sammen ved hjelp av Bluetooth.
+
+
+==== Lokalt datanettverk ====
+
+Et lokalt datanettverk (Local Area Network, LAN) brukes for å koble sammen flere datamaskiner innenfor et begrenset geografisk område, som på et kontor eller i et hjem. Ethernet er den mest brukte teknologien for lokale datanettverk.
+
+
+==== Bydatanettverk ====
+Et bydatanettverk (MAN) er et datanettverk som kobler sammen mindre datanettverk i en by. De dekker et området med en diameter på typisk 5 til 50 km.
+
+
+==== WAN ====
+Wide Area Network (WAN) er nettverk som spenner over store avstander. Hvis en bedrift, skole eller lignende har kontorer flere steder er det vanlig å koble disse lokale nettverkene sammen til et WAN. Hele internett er et WAN-datanettverk, fordi det er flere LAN koblet sammen til et stort nettverk.
+
+
+=== Terminalutstyrets samspill ===
+Klient–tjener
+Flerlagsarkitektur
+Peer-to-peer
+
+
+== Nettverksstandarder ==
+Det er utviklet en rekke standarder som definerer hvordan trafikkflyten på et datanettverk skal være. Dette for at ting skal gå for seg mest mulig sømløst og i ordnede former. Mange av disse standardene er fra de dager da internett var i sin barndom, men har siden blitt revidert flere ganger. 
+For at de forskjellige delene av et nettverk skal kunne snakke sammen og vite hvem de snakker med er det innført flere standarder eller protokoller. Det er flere forskjellige protokoller som brukes i nettverk men når det gjelder kommunikasjon heter denne protokollen Internet Protocol (IP). Denne protokollen sørger for at hver maskin har en unikt nummer (IP-adresse) på samme måte som hver husstand har et telefonnummer. Når data sendes over et nettverk er kommunikasjonen delt opp i forskjellige mindre datapakker. I tillegg til selve dataen inneholder datapakkene blant annet informasjon om avsender og mottager. Når for eksempel en switch mottar en datapakke ser den på hvem som skal motta pakken og sender den direkte til den maskinen. Ip-protokollen brukes ofte sammen med en annen protokoll som heter Transmission Control Protocol (TCP). Denne protokollen sørger for trafikkflyten og integriteten på dataene. Hvis det er noen datapakker som ikke kommer frem til mottageren eller er skadet sørger denne protokollen for å be om en ny datapakke slik at all informasjon kommer frem. Sammen kalles disse TCP/IP og er på mange måter kjernen i et nettverk. Disse protokollene (eller stack med protokoller som det også heter) brukes i tilfeller hvor det er viktig å sørge for at all kommunikasjon kommer frem.
+I andre tilfeller hvor det ikke er så viktig å sjekke om alle datapakkene kommer frem brukes en protokoll som heter User Datagram Protocol (UDP). Når denne brukes sammen med IP-protokollen heter stakken UDP/IP.
+
+
+== Vanlige protokoller ==
+Hvilken av de forskjellige internett-standardene, eller -protokollene, som tas i bruk, avhenger av hvilke tjenester eller oppgaver som skal utføres.
+
+Den kanskje aller mest brukte per i dag er HyperText Markup Language (HTML).  HTTP-protokollen ble utviklet for å publisere informasjon på internett med et grafisk brukergrensesnitt integrert i filen. Etter hvert som internett ble mer vanlig, har teknologien som laget det grafiske brukergrensesnittet endret seg dramatisk. HTTP ble laget for å vise informasjon, men er ikke like velegnet for å publisere informasjon, altså overføre data fra en terminal til en internett-server. Til dette ble protokollen File Transfer Protocol (FTP) utviklet. Trivial File Transfer Protocol (TFTP) er en forenklet utgave av FTP, og benyttes i mindre utstrekning enn FTP.
+For å formidle e-post brukes Simple Mail Transfer Protocol (SMTP) for å sende meldinger, og POP (Post Office Protocol) eller IMAP (Internet Message Access Protocol) for å motta meldinger.
+
+
+== OSI-modellen ==
+Man kan ikke snakke om datanettverk uten å ta opp OSI-modellen. Dette er på mange måter hjertet i informasjonsflyten som definerer hvordan datapakkene som sendes over et nettverk skal settes sammen eller bygges i den ene enden for så å pakkes opp igjen i motsatt rekkefølge hos mottageren. 
+
+
+== Hvordan nettverk er satt sammen ==
+Som tidligere nevnt består et nettverk av flere datamaskiner som er koblet sammen. I et kablet nettverk er maskinene knyttet sammen ved hjelp av én eller flere kabler. Disse kablene kan enten koble datamaskinene direkte til hverandre eller til en hub. Alternativt kan man koble datamaskinene, eller grupper av datamaskiner, til en switch. Oppgaven til switcher er å dirigere trafikk mellom de forskjellige datamaskinene i et nettverk.
+For å koble sammen flere nettverk trenger man en ruter. Rutere er den delen som binder sammen nettverk og sender datapakker til andre rutere før de kommer frem til mottagernettverket og til slutt maskinen som skal ha informasjonen. Både rutere og switcher bruker den tidligere nevnte IP-protokollen for å finne ut hvor datapakkene skal. 
+I mange hjem finnes det rutere og switcher som er innebygget i samme enhet. Disse kalles noe feilaktig kun for rutere. Det er router-delen som kobler hjemmenettverket til internett, mens det er switch-delen som kobler sammen maskiner i huset til et eget nettverk. Dette er gjort for å gjøre det enklere for vanlige hjemmebrukere å sette opp og bruke nettverk.
+
+
+== Se også ==
+DMZ (datanettverk)
+https://web.archive.org/web/20130605111004/http://kunnskapsnett.no/innhold/Soneprinsippet%20for%20DMZ.htm
+https://web.archive.org/web/20130605144014/http://kunnskapsnett.no/innhold/Grunnleggende%20kunnskap%20i%20nettverk.pdf

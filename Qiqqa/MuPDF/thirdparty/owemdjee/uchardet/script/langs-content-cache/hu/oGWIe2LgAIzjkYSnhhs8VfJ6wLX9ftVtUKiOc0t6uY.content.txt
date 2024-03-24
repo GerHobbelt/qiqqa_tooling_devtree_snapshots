@@ -1,0 +1,99 @@
+revision: 26253399
+title: computer
+url: https://hu.wikipedia.org/wiki/Sz%C3%A1m%C3%ADt%C3%B3g%C3%A9p
+
+
+---
+
+Számítógép minden olyan berendezés, amely képes bemenő adatok (input) fogadására, ezeken különféle, előre beprogramozott műveletek (programok) végrehajtására, továbbá az eredményül kapott adatok kijelzésére, kivitelére (output), amelyek vagy közvetlenül értelmezhetőek a felhasználók részére vagy más berendezések vezérlésére használhatóak. Fontos kritérium az, hogy ugyanazon bemenő adatok alapján mindig ugyanazon kimenő adatokat állítsa elő, azaz, hogy a gép determinisztikusan működjön, erre utal a „gép” szó. Az alapvető különbség a számítógép és számológép vagy számoláskönnyítő egyszerű eszköz között abban rejlik, hogy a számítógép képes előre elkészített program emberi felügyelet nélküli önálló végrehajtására, míg a másik gép csak egy  – lehet, hogy bonyolult – műveletet (például szorzás)  képes emberi beavatkozás nélkül önállóan végrehajtani.
+Azaz: számítógépnek nevezhetjük a determinisztikus információfeldolgozó gépeket. Eszerint (tágabb értelemben) a mai számítógépek őseinek a különböző számolást elősegítő eszközöket lehet nevezni – ilyen eszköz az ókori eredetű abakusz, amely a keleti régió országaiban ma is jelentős szerepet tölt be).  Sőt e tág értelemben végül is az élőlények is tekinthetőek „számítógépeknek”, amennyiben determinisztikusak – s ha belegondolunk, hogy folynak kísérletek biomechanikus számítógépek építésére, akkor ez az értelmezés sem tűnik olyan furának.
+Szűkebb értelemben a számítógép olyan elektronikus információfeldolgozó gép, amely információk (adatok és programok) tárolására alkalmas memóriával rendelkezik, az adatok feldolgozásához programra van szüksége és saját tevékenységét, működését vezérli, azaz programozott működésű.
+A számítógép fizikai megjelenésének elnevezése, elfogadott angol szóval a hardver (hardware). Ide tartozik a ház, a tápegység, az alaplap, a processzor, a merevlemez, a monitor, a billentyűzet stb. Az előírt feladatok végrehajtását a szoftver (software) teszi lehetővé, ez a számítógép nem megfogható, utasításokban, programokban, operációs rendszerben, eszközmeghajtókban és egyéb utasítás-csomagokban megjelenő „lágy” része.
+
+
+== Típusok ==
+Ha a „számítógép” kifejezést tágabb értelemben tekintjük, akkor beszélhetünk belső, illetve külső vezérlésű információfeldolgozó automatákról. A külső vezérlésű automaták esetében az inputnak része a tevékenységet irányító program. Ez például úgy valósulhat meg, hogy folyamatos emberi beavatkozással irányítjuk a gépet (például egy abakuszt, egy elektronikus zongorát stb.), vagy pedig a feldolgozandó adatokkal egyetemben adjuk meg a feldolgozás módját megadó tevékenység leírását (így működtek régen egyes lyukkártyavezérlésű gépek). Így programot minden munkafázisban újra meg újra le kell írni és a gépnek beadni.
+A belső vezérlésű automaták viszont saját maguk tárolni képesek a tevékenységüket irányító programot, így minden munkafázisban csak az adatok leírására és a megfelelő program kiválasztására van szükség. A belső program lehet „fix”, azaz rezidens: ez nem változtatható az automata fizikai integritásának megváltoztatása nélkül (például fix programok a PC-k BIOS programjai, melyek hardveresen „bele vannak égetve” a PC alaplapjába, vagy a programozható mosógépek programjai), vagy lehet változtatható; a legtöbb mai számítógép mindkét fajta programot tartalmaz. Mindennek a teteje pedig az, amikor a gép már maga is képes lényegesen változtatni a működését vezérlő programon.
+Szűkebb értelemben a számítógépek két fő típusa az analóg és a digitális számítógép. Az analóg számítógépek fizikai jelenségek matematikai leírásával szimulálják a folyamatokat, be- és kimenetük is valamilyen fizikai jellemző (például elektromos feszültség, hőmérséklet, nyomás). Előnyösen használhatóak többek között biológiai, áramlástani stb. feladatok megoldására. Pontosságuk és sebességük korlátozott. A digitális számítógépek diszkrét értékekre (számjegyek, digit) bontják, fordítják a feladatot, és ezeken hajtják végre az előírt műveleteket. A számítások alapegysége a bit, aminek neve az angol Binary Digit (bináris, vagyis kettes alapú számrendszerbeli számjegy) kifejezésből származik. Létezik egy átmeneti típus is, az úgynevezett analogikai számítógépek, amelyek egyesítik a két típus előnyeit. Ezeket elsősorban biológiai, áramlástani feladatok modellezésére, megoldására használják.
+
+
+=== Működési elvük szerint ===
+Mechanikus;
+elektronikus;
+optikai;a jövő számítógépei a szerves számítógépek és a kvantumszámítógépek.
+
+
+=== Felhasználásuk szerint ===
+nagyszámítógép
+szerver
+személyi számítógép
+munkaállomás
+hordozható számítógép
+célszámítógép
+beágyazott számítógép
+nettop
+
+
+== Történelem ==
+A számítástechnika története során az egyszerű mechanikus gépektől az igen összetett elektronikus, digitális vezérlésű automatákig haladt. Egyrészt szembetűnő a mai gépek egyre nagyobb fokú programozhatósága (egyre önállóbban tudnak komplex feladatokat is megoldani), az ennek következményeképp kialakuló nagyobb mértékű automatizmus, önirányítottság; másrészt ettől nem függetlenül a feladatkörök kibővülése, amely az egyszerűbb, konkrétabb feladatok (szövés, összeadás, ajtónyitás) ellátására épített célgépektől a komplex és sokféle tevékenységre képes általános célú univerzális gépek megvalósításáig terjedt.
+
+
+=== A számítógépek alkalmazásának kezdetei ===
+1847-54 George Boole áramkörelméletben is alkalmazható logikai algebrája a későbbi digitális működésű gépek tervezésének alapjait jelentette.
+1887 Herman Hollerith (1860–1929) nagy tömegű adat statisztikai feldolgozására alkalmas gépet épít.  A kifejlesztését az tette szükségszerűvé, hogy az USA-ban a népszámlálás (1890) feldolgozása hagyományos módszerekkel mintegy 3 évet (mások szerint 10 évet) vett (volna) igénybe, a végül szükségesnek bizonyult 6 hét helyett. A gép lyukkártyákat tudott rendezni és szétválogatni, mechanikus módon, tűk segítségével. A (papír) lyukkártyák egydolláros nagyságúak voltak. Hollerith 1924-ben alapított cégéből fejlődik ki a későbbi IBM lyukkártya (1 lyuk – 1 szám, 2 lyuk – 1 betű);
+1937–1942: John Vincent Atanasoff és asszisztense, Clifford Berry megterveznek egy csak elektronikus egységekből álló gépet, ez volt az első elektronikus digitális számítógép, az Atanasoff–Berry Computer (ABC). Jelenleg ezt tartjuk az első mai értelemben vett (elektronikus) számítógépnek – érdekes, hogy ennek a ténynek 1973-ban Amerikában bírósági tárgyalás útján kellett eldőlnie, különféle elsőbbségi jogviták miatt.
+1938–1941: Konrad Zuse megépíti az első szabadon programozható gépet, a Z3-at. Felépítése hasonló a mai gépekhez: processzort (ALU), vezérlőegységet (CU), memóriát, bemeneti egységet (szalag) és kimeneti egységet tartalmaz. Az egytonnás gép néhány ezer elektromágneses reléből állt, repülők és rakéták tervezéséhez használták. Egy összeadást átlag 0,7 mp, szorzást 3 mp alatt végzett el, a tízes számrendszerbeli számokat már lebegőpontos bináris ábrázolás útján kezelte. A gép 1944-ben egy bombázás során elpusztult, de Zuse a 60-as években újra megépítette. Rekonstruált változata a müncheni Deutsches Museum-ban látható. Bár a gépet aritmetikai műveletek végzésére tervezték, Raul Rojas később bebizonyította, hogy alkalmas általános célú számítógépnek is (képes tetszőleges Turing-gép emulálására).
+1943-ban az angol titkosszolgálat megépítteti a Colossust, ez szintén relés és elektronikus alapon épült meg Alan Turing matematikus elmélete, illetve Max Newman matematikus és Tommy Flowers mérnök tervei alapján, és a második világháborús német katonai rejtjelezőkód megfejtését segíti. A kódfejtés egyébként különböző matematikai, katonai, titkosszolgálati módszerek ötvözésével sikerült is.
+1944 Howard H. Aiken ballisztikai számítógépe, a Harvard Mark I lövedékpálya-táblázatokat számol. E gép fél futballpálya méretű volt, 800 km kábelt, vezetéket és relét tartalmazott, egy műveletet 3-5 másodperc alatt végzett el, képes volt az összes alapművelet és komplex (változós?) egyenletek megoldására.
+
+
+=== Általános célú számítógépek és elterjedésük ===
+Az ENIAC
+
+1946  megépül John Presper Eckert és John W. Mauchly tervei alapján az első digitális elektronikus gép, az ENIAC, 18 000 vákuumcsőből, 70 000 ellenállásból, 5 millió forrasztással.Súlya 30 tonna, 160 kW-ot fogyaszt, 5000 összeadást, 357 szorzást, vagy 38 osztást tud végezni másodpercenként, 10 jegyig számol, 20 regisztere van, 1000-szer gyorsabb, mint a Mark I MTBF: 40 másodperc. Külső programvezérlése huzalozással működik.1949-ben elkészül a hasonló EDVAC gép Neumann János (1903–1957) vezetésével. Ez már központi vezérlő egységet tartalmaz, van benne lehetőség feltételes vezérlésátadásra, memória tárolja a programokat és az adatokat is.
+1951 Megjelenik az első kereskedelemben kapható számítógép, az UNIVAC I..
+1953 A Szovjetunióban megjelenik az első műszaki és tudományos számítások végzésére alkalmas számítógép a BESZM 1.
+1964 megjelenik az első általános célú kereskedelmi gép, az IBM 360.Neumann János (1903–1957) matematikai szemszögből közelíti meg a kérdést és általános irányelveket fogalmaz meg (Neumann-elvek):
+
+a programot és az adatokat nem kell megkülönböztetni, a gép szempontjából mindkettő bemenő adat
+belső programvezérlés;
+folyamatábra, mint formalizmus bevezetése;
+gépi kódú programozás.Az 1949-ben épített EDSAC és az 1952-ben épített EDVAC már a Neumann-elveket követi.
+1951-ben építették meg az első sorozatgyártásra szánt számítógépet, az UNIVAC1-et.
+Az elektroncsöveket tartalmazó, épp ezért költséges üzemű, ún. első generációs gépek kb. 1958-ig voltak forgalomban.
+A diszkrét félvezető-elemeket (diódát, tranzisztort) tartalmazó, nagyobb tárolókapacitású második generációs gépek az 1960-as évek első feléig uralták a piacot.
+Az 1960-as években indítja útjára az IBM a 360-as sorozatot (1964: 360/40, az első integrált áramköri elemeket tartalmazó ún. harmadik generációs gép).
+A harmadik generációs gépek kora 1971-ig tartott, ekkor jelent meg ugyanis az első mikroprocesszor, s néhány év múlva piacra kerültek az első (ún. negyedik generációs) számítógépek. A mikroprocesszorok fejlesztésében nagy szerepet játszottak az Intel (Intel 8080 processzor), a Motorola (Motorola 6800 processzor), a Zilog (Z80 processzor) cégek.
+A ma használt IBM PC (az első PC megjelenésének éve: 1981) kompatibilis számítógépek többsége Intel processzorokkal működik, bár jelentős szerep jut az AMD és a Cyrix processzorgyártó cégek termékeinek is.
+
+
+== A Neumann-elvű gépek felépítése ==
+
+Az ilyen gépek tartalmazzák a számítógép önvezérlését végző CPU-t, azaz központi feldolgozó egységet (processzort), az adatokat és programokat a műveletek végzésének idejére tároló operatív memóriát, az egységek közti adatforgalmat lebonyolító vezetékek rendszerét (adatsín-rendszer), a felhasználókkal történő kommunikációt végző I/O rendszert (ide soroljuk a hosszútávú adattárolást végző tárakat is), és tartalmazhatnak egyéb járulékos egységeket, melyek a működés fizikai feltételeit biztosítják (hűtőrendszer, energiaellátás stb.).
+
+
+== Kapcsolódó szócikkek ==
+TOP500
+Számítástechnika
+Számítógép-hálózat
+Internet
+A számítógép története
+Személyi számítógép
+IBM-kompatibilis PC
+Alkatrészek: CPU, ALU, regiszterek, tárak, memóriaegység, háttértár, perifériák, buszrendszer, MMU
+
+
+== Források ==
+The ENIAC I Computer – J Presper Eckert and John Mauchly, Inventors of the modern computer
+
+
+== További információk ==
+
+Megfejtették az ősszámítógép titkát (Index.hu, 2006. december 1.)
+Notebook.lap.hu - linkgyűjtemény
+PC-szerviz.lap.hu - linkgyűjtemény
+PC.lap.hu - linkgyűjtemény
+Számítógép.lap.hu - linkgyűjtemény
+
+
+== Jegyzetek ==

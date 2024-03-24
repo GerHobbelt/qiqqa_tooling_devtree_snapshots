@@ -1,0 +1,35 @@
+revision: 20707643
+title: Google Cloud Platform
+url: https://hu.wikipedia.org/wiki/Platform_szolg%C3%A1ltat%C3%A1s
+
+
+---
+
+A platform szolgáltatás (angolul Platform as a Service vagy PaaS) a felhő alapú számítástechnika egy szolgáltatási modellje, amely egy platformot és egymásra épülő szolgáltatásokat kínál felhasználásra. A szolgáltatás felhasználói a szolgáltató eszközeivel hoz létre egy alkalmazást. A felhasználó ellenőrzése alatt áll a szoftver telepítése és konfigurációja. A szolgáltató a hálózatot, a szervereket, tárhelyet és az egyéb szolgáltatásokat biztosítja.
+
+
+== Főbb tulajdonságok ==
+Általában egy platform szolgáltatásnak képesnek kell lennie nagy számú és különböző üzemeltetők különböző felhasználóit kiszolgáló alkalmazás futtatására, ehhez pedig szükség van azok megfelelő izolációjára. Egy platform szolgáltatásnak tartalmaznia kell valamilyen adatbázis szolgáltatást is, valamint mivel főleg web alkalmazások futtatására használják, tartalmaznia kell webszervert is.
+
+
+== Típusok ==
+A Platform szolgáltatásokat további típusokra lehet bontani:
+
+
+=== Nyílt platform szolgáltatás ===
+Egy nyílt platform szolgáltatás (Open platform as a service) nem feltétlenül köthető egy szolgáltatóhoz. Ez a típus nyílt forráskódú szoftverrel teszi lehetővé, hogy más szolgáltató is képes legyen a platformot szolgáltatni. Például az Google App Engine rendszerre írt alkalmazást az AppScale rendszerén is lehet telepíteni.
+
+
+=== Alkalmazás szolgáltató környezetek ===
+Az alkalmazás szolgáltató környezetek nem tartalmaznak fejlesztői környezetet vagy hibakövetést. Ezek a szolgáltatások inkább a biztonságra és skálázhatóságra koncentrálnak.
+
+
+== Ismert példák ==
+OpenShift
+Cloud Foundry
+Heroku
+Google App Engine
+Windows Azure
+
+
+== Jegyzetek ==

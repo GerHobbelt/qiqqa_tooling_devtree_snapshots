@@ -1,0 +1,171 @@
+revision: 32154243
+title: Robot
+url: https://ca.wikipedia.org/wiki/Robot
+
+
+---
+
+Un robot és un dispositiu o mecanisme articulat que desenvolupa moviments o funcions automàtiques seguint instruccions externes o unes regles que li han estat incorporades. Les instruccions i regles li poden ser donades per supervisió humana directa, mitjançant un programa informàtic predefinit o seguint un conjunt de regles generals, utilitzant tècniques d'intel·ligència artificial. Generalment aquestes tasques substitueixen, imiten o estenen el treball humà, com l'assemblatge en línies de manufactura, la manipulació d'objectes pesants o perillosos, la feina a l'espai, etc.
+La microrobòtica s'ocupa de robots en miniatura, d'una mida més petita que un mil·límetre, mentre que l'emergent camp de la nanorobòtica utilitza components de l'ordre del nanòmetre (10-9 metres).
+Un robot també es pot definir com una entitat feta per l'home amb un cos i una connexió de retroalimentació intel·ligent entre el sentit i l'acció, sense que sigui sota l'acció directa del control humà. Usualment, la intel·ligència és un ordinador o un microcontrolador executant un programa. Les accions d'aquest tipus de robots són generalment portades a terme per motors o actuadors que mouen extremitats o impulsen el robot. Els robots humanoides només tenen utilitat pràctica com a eines de recerca.   A la pràctica, Un robot és en general un sistema electromecànic que, per la sevaaparença o els seus moviments, ofereix la sensació de tenir un propòsit d’una màquina automàtica programable capaç de realitzar determinades operacions de manera autònoma i substituir els éssers humans en algunes tasques (en alguns casos). Un robot és una entitat virtual o mecànica artificial.Des de fa dècades, els robots s'han inserit en diferents àmbits de la nostra cultura i societat. Es fan servir molts robots al dia dia de tothom des de robots de cuina fins a robots industrials.A l'imaginari comú identifiquem els robots com a màquines de maquinari també equipades amb un component de programari, però en realitat avui dia el terme també es refereix a la branca d'agents virtuals i sistemes de programari com els chatbots, que més comunament s'anomenen bots, o RPA – Sistemes robòtics d'automatització de processos (essencialment màquines programables que no tenen el component de maquinari).L'origen del terme està relacionat amb l'escriptor txec Karel Čapek que va fer servir lla paraula robot (per suggeriment del seu germà Josef) per primera vegada el 1920 a l'obra titulada RUR (Rossumovi Univerzální Roboti – Robots universals de Rossum) on apareixia un humanoide imaginari, identificat com un robot per recordar la paraula txeca robota, que literalment significa “treball esclau” (era una feina que els servents havien d'oferir als seus amos durant un període. No es referia a “treball forçós”, en el sentit de treball pesat).Un robot pot ser autònom o semiautònom depenent de les seves capacitats i funcionalitat, pot actuar i/o moure's de forma independent i estar equipat amb un “sistema de control” intern, pot suportar altres sistemes i humans, pot ser semiautònom amb un sistema de control remot.
+
+
+== Etimologia ==
+La paraula "robot" ve del vocable txec robota, "servitud", "treball forçat" o "esclavitud", especialment els anomenats "treballadors llogats" que van viure en l'Imperi Austrohongarès fins a 1848.
+El terme va ser utilitzat per primer cop amb el sentit actual per Karel Čapek a la seva obra teatral Robots Universals de Rossum escrita en col·laboració amb el seu germà Josef el 1920 i interpretada per primer cop el 1921. A l'obra denominava d'aquesta manera uns androides. Encara que els robots de Čapek eren humans artificials orgànics, avui dia el mot "robot" es fa servir per a tota mena de mecanisme automatitzat, no necessàriament amb forma humana.
+A la primeria dels anys 1920 la seva obra R.U.R. (Rossum's Universal Robots) va arribar als escenaris londinencs i ajudà a popularitzar el terme. Čapek de bon primer havia pensat en algun derivat del llatí 'labora', però un germà seu el va convèncer perquè usés el txec 'robota' (treball forçat) a l'hora de designar les seves màquines.
+Un robot pot tenir característiques físiques o funcionals similars a les dels humans, en aquest cas tècnicament es parla de robots humanoides mentre que a la ciència-ficció és més comú el terme androide. Un cyborg (organisme cibernètic) és una persona amb parts electròniques integrades al seu cos, a la ficció de vegades es parla de persones o parts del cos "biòniques".
+
+
+== Història ==
+A Albert el Gran se li atribueix la construcció d'un home de ferro. durant el segle xiii, una mena d'androide fet de fusta, metall, cera i cuir. Un dels primers autòmats documentats és el gall del rellotge astronòmic de la catedral d'Estrasburg, instal·lat el 1352, que a migdia movia les ales, obria el bec i cantava. Els segles següents els autòmats van esdevenir un complement popular dels rellotges de moltes esglésies arreu d'Europa. Als anys 50 del segle xx es van descobrir unes notes i dibuixos que Leonardo da Vinci va fer l'any 1495 i que correspondrien a una mena d'autòmat d'aparença humana cobert amb armadura de guerrer.Entre el 1738 i el 1739, Jacques de Vaucanson va exhibir diversos autòmats de mida natural: un flautista que tocava la flauta i el tambor, un timbaler i un ànec. L'ànec mecànic podia batre les seves ales, moure el coll, beure aigua, empassar gra de la mà de l'expositor, donar la sensació de pair el gra i defeca una substància emmagatzemada en una compartiment ocult. Possiblement els autòmats més populars i coneguts del segle xviii van ser els fabricats per la família suïssa Jaquet-Droz entre 1768 i 1774. Pierre Jaquet-Droz, el seu fill Henri-Louis i Jean-Frédéric Leschot van crear tres obres mestres, La Pianista, El Dibuixant i L'Escriptor que van causar sorpresa i admiració a l'època i que avui dia encara funcionen al Museu d'Art i Història de Neuchâtel.Durant la Revolució Industrial es va avançar en l'automatització d'algunes màquines utilitzades a les fàbriques tèxtils, el 1779 Samuel Crompton va crear la mule-jenny, una filadora mecànica de 120 fusos, el 1785 la versió millorada del teler mecànic d'Edmund Cartwright (que havia estat presentat l'anya anterior) i el 1801 el teler de Jacquard inventat per Joseph Marie Jacquard. Aquest teler utilitzava targetes perforades per determinar els patrons a seguir pel teler durant el teixit de la roba, el que permetia que fins i tot els usuaris més inexperts poguessin elaborar complexos dissenys.
+El 1898 Nikola Tesla va fer una demostració pública al Madison Square Garden d'un model de submarí controlat remotament. durant la dècada del 1920 els enginyers van avançar en l'automatització de les màquines amb l'objectiu de construir ginys capaços de funcionar eficientment durant llargs períodes i amb la capacitat d'autocorregir algunes irregularitats con la velocitat, força, posició, etc.El 1926, l'enginyer Roy James Wensley que treballava per la companyia Westinghouse Electric Corporation va crear el Televox, el primer robot capaç de fer un treball útil. Al Televox li van seguir una sèrie d'altres robots senzills, com el Rastus, fet a imatge d'un home negre. A la dècada del 1930 la Westinghouse va crear un robot humanoide anomenat Elektro que va exhibir a la Fira Internacional de Nova York i a la del 1940 a San Francisco. Cap a 1942, Isaac Asimov dona una versió humanitzada a través de la seva coneguda sèrie de relats, en els quals introdueix per primera vegada el terme robòtica amb el sentit de disciplina científica encarregada de construir i programar robots. A més, aquest autor planteja que les accions que desenvolupa un robot han de ser dirigides per una sèrie de regles morals, anomenades les Tres lleis de la robòtica.
+
+
+=== Robòtica moderna ===
+El primer robot autònom electrònic va ser creat el 1948 al Burden Neurological Institute at Bristol d'Anglaterra per William Grey Walter, que havia estudiat les xarxes neuronals del cervell i va construir la primera xarxa neuronal artificial (de dues neurones) amb dues vàlvules electròniques i dos sensors, un fotoresistor sensible a la llum i un bump switch (interruptor de pressió) per detectar el contacte amb altres objectes. El robot es podia moure en funció dels estímuls rebuts dels sensors gràcies al seu motor alimentat a bateries i les seves tres rodes. Es tracta del modern robot que no era dirigit per un operador, com l'Elektro, ni seguia un programa predeterminat sinó en funció dels estímuls rebuts a través dels seus sensors.
+El primer robot modern, digital i programable, va ser inventat per George Devol el 1954, va ser anomenat Unimate i es tractava d'un robot industrial. La primera unitat de l'Unimate va ser venut a la General Motors el 1960 i va ser instal·lat l'any següent en una planta a Trenton (Nova Jersey per aixecar peces calentes de metall d'una màquina de colada a pressió i apilar-les.El 1961 Heinrich A. Ernst va desenvolupar al MIT el MH-1 (Mechanical Hand 1, mà mecànica 1) una mena de mà mecànica motoritzada i amb sensors tàctils operada per un ordinador que està programat per tal de realitzar algunes funcions que correspondrien a una persona humana tenint en consideració els senyals aportats pels sensors.Avui dia els robots comercials i industrials s'utilitzen de manera generalitzada per a realitzar feines de manera més barata o amb major precisió i fiabilitat que les fetes pels éssers humans. També s'empren per a les feines que són massa brutes, perilloses o repetitives per a ser convenients per als humans. Els robots s'usen àmpliament en la fabricació, el muntatge, l'embalatge, el transport, l'exploració espacial i terrestre, la cirurgia, l'armament, la recerca dels laboratoris o la producció massiva de béns de consum i industrials. A Catalunya els primers robots industrials es van instal·lar el 1974 a la planta de la Zona Franca de la SEAT.
+
+
+=== Taula cronològica ===
+
+
+== Tipus de robot ==
+
+
+=== Robots mòbils ===
+Els robots mòbils no es troben fixats a un punt físic i tenen la capacitat de moure's. Un exemple comú avui en dia d'aquest tipus de robot són els vehicles guiats automàticament, que són un tipus de robots mòbils que segueix marques o cables posats a terra o utilitzen altres sistemes com el làser per a seguir un camí determinat.
+Els robots mòbils són presents a la indústria, en aplicacions militars i a d'altres relacionades amb la seguretat. També apareixen com a productes de consum, per a l'entreteniment o per a fer certes tasques com la neteja (robots aspiradora). Els robots mòbils són l'objecte d'una gran quantitat d'investigacions en curs i gairebé totes les universitats importants compten amb laboratoris dedicats a la recerca en el camps dels robots mòbils.
+Els robots moderns acostumen a ser utilitzats en ambients ben controlats, com per exemple a les cadenes de muntatge per tal d'evitar els problemes de resposta davant de la presència d'interferències inesperades. Per això els robots són poc coneguts per a la majoria dels éssers humans. Tanmateix els robot domèstics com els de neteja són cada cop més habituals a les cases dels països desenvolupats.
+
+
+=== Robots industrials ===
+
+El robot més rellevant en els nostres temps és l'anomenat robot industrial. És una màquina proveïda de mecanismes i dispositius que la capaciten per realitzar automàticament determinades operacions industrials que intervenen en el procés de fabricació. Segons l'organització francesa de normalització un robot industrial és un manipulador automàtic, amb servosistemes de posició, reprogramable, polivalent, capaç de posicionar i orientar materials, peces, aines o dispositius especials al llarg de moviments variables i programables per a l'execució de tasques variades”
+Neix de la unió d'un braç poli-articulat (estructura mecànica articulada) i un sistema electrònic de control que s'integra a l'ordinador; la qual cosa permet el control dels moviments que ha d'efectuar el robot.
+Segons el grau de complexitat de les operacions que realitzen i de la seva potencialitat, es classifiquen en: 
+
+Robots industrials manipuladors.
+Robots d'aprenentatge.
+Robots de control numèric.
+Robots intel·ligents (que funcionen d'acord amb el concepte d'intel·ligència artificial).
+
+
+=== Classificació dels robots segons el seu ús ===
+Els robots es poden classificar de moltes maneres, per exemple, segons l'ús al qual són destinats podem diferenciar entre robots de propòsit general i robots dedicats a tasques específiques.
+Els robots poden ser dissenyats per a realitzar una determinada tasca o per a la realització de diverses funcions. Tots poden ser reprogramats per a comportar-se de manera diferent, però alguns estan limitats per la seva forma física. Per exemple, un braç robotitzat d'una fàbrica pot dur a terme treballs com el tall o la soldadura, mentre que un robot de tipus pick-and-place (agafar i posar) només es pot dedicar a tasques com la de posar els components dels circuits impresos o omplir un palet amb peces.
+
+
+==== Robots domèstics i comercials ====
+Els robots de propòsit general poden realitzar una gran varietat de funcions de manera autònoma, es poden moure dins dels espais coneguts, gestionar les seves pròpies necessitats de recàrrega, interaccionar amb portes i ascensors electrònics i dur a terme altres tasques bàsiques. Igual que els ordinadors, els robots de propòsit general poden enllaçar-se amb xarxes, programari i d'altres accessoris que augmenten la seva utilitat. Poden reconèixer persones o objectes, parlar, proporcionar companyia, controlar la qualitat del medi ambient, respondre a les alarmes, recollir subministraments o realitzar d'altres tasques útils. Poden realitzar diferents funcions al mateix temps o poden assumir diferents rols en diferents moments del dia. Alguns d'aquests robots intenten imitar els éssers humans i fins i tot poden tenir una aparença humana, aquest tipus de robot reben el nom d'humanoides.
+
+
+==== Robots a la indústria ====
+
+
+===== Automobilística =====
+Durant les darreres dues dècades del segle xx i la primera del XXI les fàbriques d'automòbils han adoptat de manera generalitzada la utilització dels robots. Una fàbrica típica conté centenars de robots industrials que treballen en cadenes de producció totalment automatitzades, amb un robot per cada deu treballadors humans. En una cadena de producció automatitzada, un xassís d'un vehicle posat a una cinta transportadora és soldat, enganxat, pintat i finalment assemblat passant per una sèrie seqüencial de robots.
+
+
+===== Embalatge =====
+En el camp de l'embalatge els robots industrials s'utilitzen àmpliament en les tasques de paletització i envasat dels productes manufacturats, per exemple, per agafar envasos de begudes al final d'una cinta transportadora i posar-los dins de caixes, o per a les operacions de càrrega i descàrrega en centres mecanitzats.
+
+
+===== Electrònica =====
+La producció en massa dels circuits impresos electrònics són gairebé fabricats en exclusiva per robots de tipus pick-and-place (agafar i posar), generalment amb manipuladors de tipus SCARA (Selective Compliant Assembly Robot Arm), que prenen els petits components electrònics de tires o safates, i els situen a la seva posició sobre el circuit imprès amb gran precisió. Aquests robots poden posar centenars de milers de components per hora, lluny del que podria fer una persona quant a velocitat, precisió i fiabilitat.
+
+
+==== Vehicles automàtics ====
+Els vehicles guiats automàticament són un tipus de robots mòbils que segueix marques o cables posats a terra o utilitzen altres sistemes com el làser per a seguir un camí determinat. S'utilitzen per al transport de mercaderies a grans instal·lacions, com per exemple als magatzems, ports de contenidors o en els hospitals.
+
+
+==== Altres ====
+Hi ha tasques repetitives, com la neteja de la casa, o perilloses, com l'exploració a dins d'un volcà, que de vegades poden ser fetes per robots. També alguns poden fer altres tasques físicament inaccessibles per les persones, com per exemple l'exploració d'un altre planeta, la neteja de l'interior d'una canonada llarga i estreta, o la realització d'una operació de cirurgia per laparoscòpia.
+
+
+== Robot humanoide ==
+En general, un robot és qualsevol mecanisme automatitzat. Pot tenir qualsevol forma, no necessàriament humana.Un robot humanoide és un robot dissenyat de manera que tingui característiques físiques o funcions similars a les des éssers humans. Per exemple els robots catalans Tibi i Dabo, creats per l'Institut de Robòtica i Informàtica Industrial, IRII, a Barcelona; el coreà Asimo de la companyia Honda; o el Robonaut 2, un tors humanoide anomenat R2 pels seus creadors del Dextrous Robotics Laboratory de la NASA.Molts robots tenen forma de braç articulat. En principi no és necessari que un robot tingui aparença similar a la humana i de fet per a la majoria d'usos són més pràctics amb altres formes, per exemple ameboide, en forma de vehicle, de vis, etc. Els primers robots humanoides es van crear com a eina de publicitat. Així, les empreses del sector podien atraure molt més l'atenció amb aquesta mena de robots en demostracions lúdiques i espectacles.Posteriorment, durant les darreres dècades, alguns robots humanoides es desenvolupen segons especificacions industrials, a missions aeroespacials (com és el cas del R2), atenció als ciutadans (Tibi i Dabo, i també el REEM que fa de guia i monitor a visitants de museus), aplicacions mèdiques i seguretat.Alguns robots humanoides, com el REEM, tenen un aspecte força similar a l'humà. Actualment de vegades també es fa servir el terme androide per a parlar de robots humanoides.
+
+
+== Androides i ginoides ==
+
+Els androides i les ginoides són robots que tenen aparença externa i unes funcions que recorden el cos humà, en particular i respectivament, d'home i de dona. Segons Masahiro Mori, Sigmund Freud (Allò sinistre, 1919) i altres autors, les persones tendeixen a empatitzar més amb criatures i màquines a mesura que s'assemblen més a figures humanes, com per exemple pel fet de tenir "cara" i "ulls", però hi ha un punt, l'anomenada "vall inquietant" a la qual pertanyen les màscares de teatre Noh, els zombis i les mans protèsiques de plàstic i "color carn", a més de robots que s'assemblen molt a humans però no prou, que aquesta similitud fa èmfasi a la diferència, la distorsió o la mancança, donant un aspecte sinistre o inquietant. Després, gairebé igual que un humà, aleshores psicològicament torna a ser una figura apercebuda com a amable o agradable. És per això que els androides i ginoides se solen fer de talla més petita que la humana estàndard, o bé agafen figures pretesament diferents, o que recordin animals domèstics (especialment gats, i també gossos). En el passat, la forma de les ginoides, així com la veu femenina en màquines de servei, s'associava a aquesta necessitat que la màquina o robot al servei de l'home sigui un ésser no superior ni igual a ell, sent un exemple de micromasclisme si no de masclisme.El concepte, tal com l'entenem actualment, va néixer a la literatura de ciència-ficció del segle xix i s'ha continuat utilitzant a diverses obres durant els segles XX i XXI. Alguns dels més coneguts són el C3PO de Star Wars i els anomenats "replicants" a Somien els androides amb ovelles elèctriques?.
+Sembla que el mot androide ja podria existir al segle xii, però fins al segle xix no hauria estat popularitzada en la seva actual interpretació. Malgrat que fins ara es tractava d'un terme estrictament de ficció usat a la literatura, còmics, pel·lícules, etc. però no a l'ambit científic i tecnològic; sembla que actualment comença a aparèixer com a sinònim de "robot humanoide".
+
+
+== Ciborg ==
+
+Un ciborg és una persona a la qual li ha estat implantat o incorporat un aparell electrònic com a extensió d'algun dels seus sentits o com a part del seu cos.El terme ciborg va néixer combinant les paraules en anglès cybernetic (cibernètic) i organism (organisme).Des del segle xix els éssers humans han fantasejat amb la idea del reemplaçament d'algunes part del cos humà per substituts mecànics que funcionarien com a robots. Un exemple és la sèrie de televisió La dona biònica, emesa en català a Tv3, a la qual una dona que havia patit un accident, va sotmetre a diverses operacions quirúrgiques per a reemplaçar-li cames, braços i alguna funció biològica per mecanismes dirigits directament pel cervell.
+Al segle xxi, al Japó s'ha creat una cama robòtica que pot substituir una cama biològica en un cos humà, amb sensors que poden llegir els senyals emesos pel cervell. Quan els sensors detecten que el cervell envia l'ordre de moviment a la cama, els petits motors instal·lats a l'extremitat artificial mouen de forma automàtica els mecanismes del genoll i el turmell. Aquesta "cama", que de moment el 2010 té més aviat l'aspecte d'armadura, es podria instal·lar com un pantaló o armadura a les cames de gent gran amb poca mobilitat, podria substituir un bastó o unes crosses o fer moure les cames d'un disminuït físic. La cama estaria al comerç cap al 2014 i també hi haurà braços amb el mateix funcionament. D'altra banda, a Austràlia, el 2010, es va presentar un prototip d'ull biònic, que disposa d'una minicàmera, col·locada sobre una lent, que captura imatges i les envia a un processador que pot guardar-se a la butxaca. Aquest ull s'implanta parcialment al globus ocular. El dispositiu transmet un senyal a la unitat dins la retina que estimula les neurones vives al seu interior, que al seu torn envien les imatges al cervell.El febrer de 2013 es va presentar a Londres el robot humanoide Rex, de l'empresa Shadow, sent així la primera vegada que públicament una única màquina integra diverses funcions biòniques. Rex inclou dispositius per al 60% de les funcions fisiològiques humanes.
+
+
+== Principis aplicables i legislació vigent ==
+
+
+=== Principis aplicables ===
+L'any 2010, el SERC va reunir experts dels àmbits de les tecnologies, indústria, arts, lleis i ciències socials per parlar sobre robots. La normativa que van proposar ve donada per diferents raonaments. En termes generals, defensen que el fet que els ciutadans no tinguin més coneixements sobre robots que els que s'adquireixen a través d'obres de ciència-ficció i el fet que les tres lleis d'Asimov no podrien ésser aplicades estrictament degut a les contradiccions existents entre elles i a les limitacions actuals dels robots i la intel·ligència artificial, és necessari considerar que la responsabilitat ètica de fabricar robots i incorporar-los a la nostra societat no només recaigui sobre les màquines sinó també sobre qui s'encarrega de posar-les al mercat.
+
+Els cinc principis acordats per SERC són els següents:
+
+Els robots són eines multiús. No han de ser dissenyats únicament o estrictament per matar o fer mal als humans, excepte per interessos de seguretat nacional.
+Els humans, no els robots, són agents responsables. Els robots haurien d'ésser dissenyats i utilitzats per complir amb la legislació existent i amb els drets i llibertats fonamentals, incloent la privadesa.
+Els robots són productes. Haurien d'ésser dissenyats utilitzant processos que assegurin la seva seguretat i integritat.
+Els robots són artefactes manufacturats. No han d'ésser dissenyats de forma negligent per abusar i aprofitar-se de persones vulnerables. La seva naturalesa de màquina hauria de ser transparent.
+La persona amb responsabilitat legal sobre un robot hauria de fer-se’n responsable.
+A més a més, afegeixen set missatges redactats per a fomentar la responsabilitat en investigació i en el disseny de robots:
+
+Creiem que els robots tenen prou potencial com per a proporcionar un enorme impacte positiu a la societat. Volem fomentar la investigació responsable en robòtica.
+Males pràctiques ens fan mal a tots.
+Abordar les preocupacions del públic ens ajudarà a tots a progressar.
+És important demostrar que nosaltres, com especialistes en robots, estem compromesos amb els millors estàndards pel que fa a bones pràctiques.
+Per a entendre el context i conseqüències de les nostres investigacions, hauríem de treballar amb experts d'altres disciplines tals com les ciències socials, les lleis, la filosofia i les arts.
+Hauríem de considerar ser transparents: hi ha límits pel que fa a què hauria d'estar obertament disponible?
+Quan veiem publicacions errònies a la premsa, ens comprometem a contactar al més aviat possible amb els periodistes.
+A nivell europeu hi ha el CORDIS (Servei d'Informació Comunitari sobre Investigació i Desenvolupament), un organisme associat a la Comissió Europea que es defineix com el principal portal i repositori públic de la Comissió Europea per a difondre informació sobre tots els projectes d'investigació finançats per la Unió Europea i els seus resultats de tota mena. Expressen el següent:
+Durant l'època dels anys 80, la doctrina jurídica duia a terme estudis sobre com regular tecnologies d'agents en sistemes de software, però no es va arribar a desenvolupar cap marc regulatori quant a la fabricació de robots. Aquest tema pertanyia més a la ciència-ficció que a la realitat. La primera investigació que es va encarregar d'aquestes qüestions va ser el projecte finançat amb fons comunitaris “Regulating emerging robotic technologies in Europe: Robotics facing law and ethics (ROBOLAW)” . Un dels objectius principals d'aquest projecte era plantejar diverses qüestions jurídiques i ètiques que les noves tecnologies en robòtica plantegen, i a com afectaran els diferents avenços en robòtica al sistema imperant a l'actual Europa.
+
+
+=== Legislació vigent ===
+Dins l'estat espanyol, l'AENOR ha redactat normes aplicables a robots industrials i robots no industrials.
+Norma UNE-EN ISO 10218-1:2012. Robots i dispositius robòtics. Requisits de seguretat per a robots industrials. S'especifiquen els requisits i directrius per a un disseny segur, les mesures de protecció i la informació per a l'ús de robots industrials. Aquesta norma descriu els riscs bàsics associats als robots i proporciona els requisits per eliminar o reduir els perills associats.Norma UNE-EN ISO 13482:2014. Requisits de seguretat per a robots no industrials. Robots d'assistència personal no mèdics. S'especifiquen els requisits i directius per a un disseny segur, les mesures de protecció i la informació per a l'ús de robots d'assistència personal, en particular per als següents tipus de robot.
+
+
+== Qüestions ètiques ==
+Hi ha la preocupació que els robots puguin desplaçar o competir amb els humans. Les lleis o regles que poguessin o haurien de ser aplicades als robots o altres "ens autònoms" en cooperació o competència amb humans si algun dia s'aconsegueix assolir la tecnologia suficient com per fer-los intel·ligents i conscients de si mateixos, han estimulat les investigacions macroeconòmiques d'aquest tipus de competència, notablement construït per Alessandro Acquisti basant-se en un treball anterior de John von Neumann.
+Actualment, no és possible aplicar les Tres lleis de la robòtica, ja que els robots no tenen capacitat per comprendre el seu significat, avaluar les situacions de risc tant per als humans com per a ells mateixos o resoldre els conflictes que es podrien donar entre aquestes lleis.
+Entendre i aplicar tot això requeriria veritable intel·ligència i consciència del medi circumdant, així com de si mateix, per part del robot, una cosa que malgrat els grans avenços tecnològics de l'era moderna no s'ha arribat
+
+
+== L'impacte dels robots en l'àmbit laboral ==
+Moltes grans empreses com Intel, Sony, General Motors o Dell, han implementat en les seves línies de producció unitats robòtiques per realitzar tasques que en general haguessin ocupat treballadors humans en èpoques anteriors.
+Això ha causat una agilització en els processos realitzats, així com un major estalvi de recursos, en disposar de màquines que poden efectuar les funcions de certa quantitat d'empleats a un cost relativament menor i amb un grau major d'eficiència, millorant notablement el rendiment general i els guanys de l'empresa, així com la qualitat dels productes oferts. Però, d'altra banda, ha suscitat i mantingut inquietuds entre diversos grups pel seu impacte en la taxa d'ocupacions disponibles, així com la seva repercussió directa sobre les persones desplaçades. Un exemple recent de la substitució de treballadors per robots és el de la companyia taiwanesa Foxconn que, el juliol de 2011, va anunciar un pla de tres anys per substituir treballadors amb més robots. En l'actualitat l'empresa utilitza deu mil robots i vol incrementar el seu nombre fins a un milió en un període de tres anys.La controvèrsia també s'ha centrat en aspectes relacionats amb la seguretat, hi ha de casos com l'ocorregut a Flat Rock, Michigan, el 25 de gener de 1979 quan un braç robotitzat va colpejar un treballador d'una foneria, aquesta va ser aparentment la primera mort relacionada amb un robot als EUA. A causa d'això s'ha cridat l'atenció sobre l'ètica en el disseny i construcció dels robots, així com la necessitat d'adoptar mesures de seguretat clares i que garanteixin una correcta interacció entre humans i màquines.
+A Catalunya la robotització es va iniciar a la SEAT, amb el projecte Lanza el 1972. Fora del sector de l'automoció, una de les primeres aplicacions d'un robot a Catalunya va ser, en la segona mitat de la dècada dels anys 80, la de descarregar el forn on es soldava la pantalla al tub d'imatge de TV a MINIWATT (PHILIPS). Era una tasca que, a part de ser molt feixuga pel pès i la temperatura del tub, comportava rik d'implosió pel buit del tub. Un equip d'enginyers del Laboratori d'Automàtica de la Escola d'Enginyers Industrials de Barcelona (avui UPC) va dissenyar i dirigir la introducció d'aquest primer robot a la fàbrica de tubs d'imatge. L'experiència va ser tant exitosa que va marcar un començament de la robotització de la fàbrica, on després es van arribar a introduir uns cinquanta robots per a automatitzar les tasques més feixugues i repetitives. Un altre avantatge va ser la major flexibilitat del procés de fabricació de la fàbrica, ja que va reduir sensiblement el temps necessari per a canviar de tipus, i va permetre a MINIWATT continuar fabricant tubs d'imatge bastants anys a pesar de ser una planta industrial que competia amb costos amb les que hi havia en altres passos que eren molt més grans.
+
+
+== Els robots a la cultura popular ==
+Els robots són personatges freqüents en la ciència-ficció, tant al cinema i teatre, com a la literatura i els còmics. De fet el mateix terme "robot" va néixer a una obra teatral de Karel Čapek el 1920, i a la literatura romàntica ja es troben precedents, com Frankenstein o monstres antics i ginys mecànics que es poden considerar robots sense els mecanismes electrònics actuals.
+Probablement l'autor que més atenció ha prestat als robots és Isaac Asimov, que fins i tot va formular unes "lleis de la robòtica" o manaments de conducta per a robots a les seves publicacions als anys 40. Una altra novel·la destacada és Somien els androides amb ovelles elèctriques?, adaptada a la pantalla gran amb el títol de Blade Runner.
+Al cinema, Metropolis és una aposta pionera per les qüestions d'identitat que suscita el robot Maria, hereu de la protagonista. D'altres pel·lícules destacades són la sèrie de La Guerra de les Galàxies o les animacions Robots (Chris Wedge, 2005) o WALL·E (2008). Alguns exemples dins del món de l'animació televisiva són Dr. Slump i Futurama; i als còmics per exemple Mazinger Z o Transformers, aquest darrer inspirat en una joguina consistent en un vehicle que es podia transformar en robot més o menys humanoide. Posteriorment han inspirat videojocs.
+Els robots adopten diferents rols, des d'ajudants dels humans fins a màquines perverses que volen assumir el control de la humanitat o bé exterminar-la (com a la saga Terminator). Poden aparèixer al mateix nivell que altres éssers vivents, amb qualitats i defectes, esborrant els límits de la identitat, com a les obres de Iain M. Banks.
+
+
+== Els robots durant la Covid-19 ==
+L'empresa Hanson Robotics i els seus investigadors han afegit noves habilitats a Sophia, el robot humanoide amb la intel·ligència artificial més avançada del món. Inicialment, Sophia va ser creada per emular emocions humanes i promoure l'empatia i la compassió humà-màquina, no obstant això, al 2021 es començarà a utilitzar per ajudar el personal sanitari amb els malalts de Covid-19. A partir d'ara, Sophia tindrà l'habilitat de prendre la temperatura a persones afectades per la Covid i inclús animar-los a fer exercicis aeròbics per millorar la seva capacitat pulmonar.D'altra banda, la mateixa empresa té intenció de llançar un nou robot dissenyat exclusivament pel camp de la salut, el seu nom és Grace i serà de gran utilitat pel tractament de la Covid els propers mesos.Mesos enrere, l'empresa SoftBank Robotics va posar en marxa un robot anomenat Pepper que detectava quines persones utilitzaven la mascareta i quines no.A més a més, l'empresa CloudMinds va ser de gran ajuda per consrtruir un dels hospitals de campanya de Wuhan en menys de 10. En aquesta mateixa ciutat de Wuhan també es van utilitzar robots per avisar a la societat sobre la necessitat de complir amb les restriccions i mesures sanitàries de la Covid, no obstant aquest cop eren gossos robòtics. Aquests gossos portaven unes tauletes que servien de canal per a que els metges es poguessin comunicar amb els pacients malalts a través de videotrucades.A l'alta probabilitat de contagi, la pandèmia de la Covid-19 ha accelerat la "robolució" o revolució dels robots, ja que aquestes màquines proporcionen la seguretat d'un contacte sense risc de contagi, a diferència del contacte amb altres persones.
+
+
+== Vegeu també ==
+Microbòtica
+Air-Cobot
+
+
+== Referències ==
+
+
+== Bibliografia ==
+Klein, Artur. Atlas de Informática.  Barcelona: Mistral, 1989. ISBN 8478600434. 
+Grassani, Enrico, Automi. Passato, presente e futuro di una nuova "specie", Editoriale Delfino, Milano 2017, ISBN 978-88-97323-66-2.
+
+
+== Enllaços externs ==
+Ecorobotik. Primer Concurs de Robots reciclats
+Viccionari

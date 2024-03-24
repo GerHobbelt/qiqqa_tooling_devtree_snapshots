@@ -1,0 +1,1574 @@
+revision: 69295507
+title: Wektor normalny
+url: https://pl.wikipedia.org/wiki/Wektor_normalny
+
+
+---
+
+Wektor normalny jest to wektor prostopadły do płaszczyzny, lub w wypadku innych powierzchni prostopadły do płaszczyzny stycznej do powierzchni w danym punkcie. Pojęcie to używane jest w matematyce, fizyce, biologii molekularnej, grafice 3D.
+
+
+== W grafice komputerowej ==
+Wektor normalny oznacza wektor prostopadły do powierzchni obiektu trójwymiarowego w danym punkcie. Niekoniecznie musi on być równoległy do normalnej do uśrednionej (wygładzonej) powierzchni (zobacz: mapowanie wypukłości).
+Każdy wektor wyznacza kierunek, dlatego w grafice komputerowej wektor normalny określa stronę powierzchni. Rozróżnia się „przód” (ang. face) i „tył” (ang. back). To rozróżnienie stosuje się m.in. do ukrywania powierzchni niewidocznych – w j. ang. metoda ta nazywa się backface culling i polega na niewyświetlaniu tych powierzchni, które są zwrócone „tyłem” do obserwatora, co pozwala w statystycznej scenie wyeliminować spory odsetek niewidocznych powierzchni.
+Jeśli obiekty są reprezentowane jako siatka wielokątów, stosuje się technikę wygładzania przy użyciu wektorów normalnych. Dla każdego wierzchołka wyznacza się wektor normalny, który jest geometryczną sumą wektorów normalnych wielokątów, do których należy dany wierzchołek. Następnie przy oświetleniu wielokątów nie bierze się ich własnych wektorów normalnych, ale wyznacza wektor normalny poprzez interpolację wektorów z wierzchołków. Powoduje to powstanie złudzenia gładkości powierzchni.
+Jeśli dana płaszczyzna opisana jest w postaci parametrycznej przy pomocy dwóch niezależnych od siebie rzeczywistych parametrów 
+  
+    
+      
+        
+          t
+          
+            1
+          
+        
+      
+    
+     
+   i 
+  
+    
+      
+        
+          t
+          
+            2
+          
+        
+        
+          :
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          
+            {
+            
+              
+                
+                  
+                    
+                      
+                        
+                          x
+                          =
+                          x
+                          (
+                          
+                            t
+                            
+                              1
+                            
+                          
+                          ,
+                          
+                            t
+                            
+                              2
+                            
+                          
+                          )
+                        
+                      
+                      
+                        
+                          y
+                          =
+                          y
+                          (
+                          
+                            t
+                            
+                              1
+                            
+                          
+                          ,
+                          
+                            t
+                            
+                              2
+                            
+                          
+                          )
+                        
+                      
+                      
+                        
+                          z
+                          =
+                          z
+                          (
+                          
+                            t
+                            
+                              1
+                            
+                          
+                          ,
+                          
+                            t
+                            
+                              2
+                            
+                          
+                          )
+                        
+                      
+                    
+                  
+                
+              
+            
+            
+          
+        
+        ,
+      
+    
+     
+  wówczas wektory styczne do tej powierzchni, różniczkując kolejno po 
+  
+    
+      
+        
+          t
+          
+            1
+          
+        
+      
+    
+     
+   i 
+  
+    
+      
+        
+          t
+          
+            2
+          
+        
+        ,
+      
+    
+     
+   wyrażają się odpowiednio:
+
+  
+    
+      
+        
+          
+            
+              v
+              
+                1
+              
+            
+            →
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  
+                    
+                      
+                        δ
+                        x
+                      
+                      
+                        δ
+                        
+                          t
+                          
+                            1
+                          
+                        
+                      
+                    
+                  
+                  ,
+                
+                
+                  
+                    
+                      
+                        δ
+                        y
+                      
+                      
+                        δ
+                        
+                          t
+                          
+                            1
+                          
+                        
+                      
+                    
+                  
+                  ,
+                
+                
+                  
+                    
+                      
+                        δ
+                        z
+                      
+                      
+                        δ
+                        
+                          t
+                          
+                            1
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          
+            
+              v
+              
+                2
+              
+            
+            →
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  
+                    
+                      
+                        δ
+                        x
+                      
+                      
+                        δ
+                        
+                          t
+                          
+                            2
+                          
+                        
+                      
+                    
+                  
+                  ,
+                
+                
+                  
+                    
+                      
+                        δ
+                        y
+                      
+                      
+                        δ
+                        
+                          t
+                          
+                            2
+                          
+                        
+                      
+                    
+                  
+                  ,
+                
+                
+                  
+                    
+                      
+                        δ
+                        z
+                      
+                      
+                        δ
+                        
+                          t
+                          
+                            2
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+      
+    
+     
+  Następnie wyznaczamy iloczyn wektorowy powyższych dwóch wektorów, który jest jednocześnie szukanym wektorem normalnym:
+
+  
+    
+      
+        
+          
+            
+              v
+              
+                1
+              
+            
+            →
+          
+        
+        ×
+        
+          
+            
+              v
+              
+                2
+              
+            
+            →
+          
+        
+        =
+        
+          |
+          
+            
+              
+                
+                  
+                    
+                      i
+                      →
+                    
+                  
+                
+                
+                  
+                    
+                      j
+                      →
+                    
+                  
+                
+                
+                  
+                    
+                      k
+                      →
+                    
+                  
+                
+              
+              
+                
+                  
+                    
+                      
+                        δ
+                        x
+                      
+                      
+                        δ
+                        
+                          t
+                          
+                            1
+                          
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        δ
+                        y
+                      
+                      
+                        δ
+                        
+                          t
+                          
+                            1
+                          
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        δ
+                        z
+                      
+                      
+                        δ
+                        
+                          t
+                          
+                            1
+                          
+                        
+                      
+                    
+                  
+                
+              
+              
+                
+                  
+                    
+                      
+                        δ
+                        x
+                      
+                      
+                        δ
+                        
+                          t
+                          
+                            2
+                          
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        δ
+                        y
+                      
+                      
+                        δ
+                        
+                          t
+                          
+                            2
+                          
+                        
+                      
+                    
+                  
+                
+                
+                  
+                    
+                      
+                        δ
+                        z
+                      
+                      
+                        δ
+                        
+                          t
+                          
+                            2
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+          |
+        
+      
+    
+     
+  Ostatecznie więc wektor normalny do naszej powierzchni dla danych parametrów 
+  
+    
+      
+        
+          t
+          
+            1
+          
+        
+      
+    
+     
+   i 
+  
+    
+      
+        
+          t
+          
+            2
+          
+        
+        ,
+      
+    
+     
+   czyli w punkcie 
+  
+    
+      
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        ,
+      
+    
+     
+   wyraża się wzorem:
+
+  
+    
+      
+        
+          
+            n
+            →
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  λ
+                  
+                    |
+                    
+                      
+                        
+                          
+                            
+                              
+                                
+                                  δ
+                                  y
+                                
+                                
+                                  δ
+                                  
+                                    t
+                                    
+                                      1
+                                    
+                                  
+                                
+                              
+                            
+                          
+                          
+                            
+                              
+                                
+                                  δ
+                                  z
+                                
+                                
+                                  δ
+                                  
+                                    t
+                                    
+                                      1
+                                    
+                                  
+                                
+                              
+                            
+                          
+                        
+                        
+                          
+                            
+                              
+                                
+                                  δ
+                                  y
+                                
+                                
+                                  δ
+                                  
+                                    t
+                                    
+                                      2
+                                    
+                                  
+                                
+                              
+                            
+                          
+                          
+                            
+                              
+                                
+                                  δ
+                                  z
+                                
+                                
+                                  δ
+                                  
+                                    t
+                                    
+                                      2
+                                    
+                                  
+                                
+                              
+                            
+                          
+                        
+                      
+                    
+                    |
+                  
+                  ,
+                
+                
+                  −
+                  λ
+                  
+                    |
+                    
+                      
+                        
+                          
+                            
+                              
+                                
+                                  δ
+                                  x
+                                
+                                
+                                  δ
+                                  
+                                    t
+                                    
+                                      1
+                                    
+                                  
+                                
+                              
+                            
+                          
+                          
+                            
+                              
+                                
+                                  δ
+                                  z
+                                
+                                
+                                  δ
+                                  
+                                    t
+                                    
+                                      1
+                                    
+                                  
+                                
+                              
+                            
+                          
+                        
+                        
+                          
+                            
+                              
+                                
+                                  δ
+                                  x
+                                
+                                
+                                  δ
+                                  
+                                    t
+                                    
+                                      2
+                                    
+                                  
+                                
+                              
+                            
+                          
+                          
+                            
+                              
+                                
+                                  δ
+                                  z
+                                
+                                
+                                  δ
+                                  
+                                    t
+                                    
+                                      2
+                                    
+                                  
+                                
+                              
+                            
+                          
+                        
+                      
+                    
+                    |
+                  
+                  ,
+                
+                
+                  λ
+                  
+                    |
+                    
+                      
+                        
+                          
+                            
+                              
+                                
+                                  δ
+                                  x
+                                
+                                
+                                  δ
+                                  
+                                    t
+                                    
+                                      1
+                                    
+                                  
+                                
+                              
+                            
+                          
+                          
+                            
+                              
+                                
+                                  δ
+                                  y
+                                
+                                
+                                  δ
+                                  
+                                    t
+                                    
+                                      1
+                                    
+                                  
+                                
+                              
+                            
+                          
+                        
+                        
+                          
+                            
+                              
+                                
+                                  δ
+                                  x
+                                
+                                
+                                  δ
+                                  
+                                    t
+                                    
+                                      2
+                                    
+                                  
+                                
+                              
+                            
+                          
+                          
+                            
+                              
+                                
+                                  δ
+                                  y
+                                
+                                
+                                  δ
+                                  
+                                    t
+                                    
+                                      2
+                                    
+                                  
+                                
+                              
+                            
+                          
+                        
+                      
+                    
+                    |
+                  
+                
+              
+            
+            ]
+          
+        
+        ;
+        
+        λ
+        ∈
+        
+          R
+        
+        ∖
+        {
+        0
+        }
+      
+    
+     
+  Jeżeli powierzchnia opisana jest funkcją 
+  
+    
+      
+        y
+        =
+        f
+        (
+        x
+        ,
+        z
+        )
+        ,
+      
+    
+     
+   to wtedy zmienne 
+  
+    
+      
+        x
+      
+    
+     
+   i 
+  
+    
+      
+        z
+      
+    
+     
+   traktujemy jako parametry, odpowiednio 
+  
+    
+      
+        
+          t
+          
+            1
+          
+        
+      
+    
+     
+   i 
+  
+    
+      
+        
+          t
+          
+            2
+          
+        
+        
+          :
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          {
+          
+            
+              
+                
+                  x
+                  =
+                  
+                    t
+                    
+                      1
+                    
+                  
+                
+              
+              
+                
+                  y
+                  =
+                  y
+                  (
+                  
+                    t
+                    
+                      1
+                    
+                  
+                  ,
+                  
+                    t
+                    
+                      2
+                    
+                  
+                  )
+                  =
+                  f
+                  (
+                  x
+                  ,
+                  z
+                  )
+                
+              
+              
+                
+                  z
+                  =
+                  
+                    t
+                    
+                      2
+                    
+                  
+                
+              
+            
+          
+          
+        
+      
+    
+     
+  Po odpowiednich podstawieniach otrzymujemy szukany wektor normalny:
+
+  
+    
+      
+        
+          
+            n
+            →
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  λ
+                  ⋅
+                  
+                    
+                      
+                        δ
+                        y
+                      
+                      
+                        δ
+                        x
+                      
+                    
+                  
+                  ,
+                
+                
+                  −
+                  λ
+                  ,
+                
+                
+                  λ
+                  ⋅
+                  
+                    
+                      
+                        δ
+                        y
+                      
+                      
+                        δ
+                        z
+                      
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+        ;
+        
+        λ
+        ∈
+        
+          R
+        
+        ∖
+        {
+        0
+        }
+      
+    
+     
+  
+
+
+== Wektory normalne niektórych powierzchni ==
+Płaszczyzna 
+  
+    
+      
+        Π
+      
+    
+     
+   o równaniu ogólnym 
+  
+    
+      
+        a
+        x
+        +
+        b
+        y
+        +
+        c
+        z
+        +
+        d
+        =
+        0
+      
+    
+     
+   w dowolnym punkcie 
+  
+    
+      
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        ∈
+        Π
+        
+          :
+        
+      
+    
+     
+  
+  
+    
+      
+        
+          
+            n
+            →
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  λ
+                  a
+                  ,
+                
+                
+                  λ
+                  b
+                  ,
+                
+                
+                  λ
+                  c
+                
+              
+            
+            ]
+          
+        
+        =
+        c
+        o
+        n
+        s
+        t
+        ;
+        
+        λ
+        ∈
+        
+          R
+        
+        ∖
+        {
+        0
+        }
+      
+    
+     
+  Sfera kuli 
+  
+    
+      
+        Π
+      
+    
+     
+   o równaniu ogólnym 
+  
+    
+      
+        (
+        x
+        −
+        
+          x
+          
+            0
+          
+        
+        
+          )
+          
+            2
+          
+        
+        +
+        (
+        y
+        −
+        
+          y
+          
+            0
+          
+        
+        
+          )
+          
+            2
+          
+        
+        +
+        (
+        z
+        −
+        
+          z
+          
+            0
+          
+        
+        
+          )
+          
+            2
+          
+        
+        =
+        
+          R
+          
+            2
+          
+        
+      
+    
+     
+   w punkcie 
+  
+    
+      
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        ∈
+        Π
+        
+          :
+        
+      
+    
+     
+  
+  
+    
+      
+        
+          
+            n
+            →
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  λ
+                  (
+                  x
+                  −
+                  
+                    x
+                    
+                      0
+                    
+                  
+                  )
+                  ,
+                
+                
+                  λ
+                  (
+                  y
+                  −
+                  
+                    y
+                    
+                      0
+                    
+                  
+                  )
+                  ,
+                
+                
+                  λ
+                  (
+                  z
+                  −
+                  
+                    z
+                    
+                      0
+                    
+                  
+                  )
+                
+              
+            
+            ]
+          
+        
+        ;
+        
+        λ
+        ∈
+        
+          R
+        
+        ∖
+        {
+        0
+        }
+      
+    
+     
+  Powierzchnia elipsoidy 
+  
+    
+      
+        Π
+      
+    
+     
+   o równaniu ogólnym 
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  x
+                  −
+                  
+                    x
+                    
+                      0
+                    
+                  
+                
+                a
+              
+            
+            )
+          
+          
+            2
+          
+        
+        +
+        
+          
+            (
+            
+              
+                
+                  y
+                  −
+                  
+                    y
+                    
+                      0
+                    
+                  
+                
+                b
+              
+            
+            )
+          
+          
+            2
+          
+        
+        +
+        
+          
+            (
+            
+              
+                
+                  z
+                  −
+                  
+                    z
+                    
+                      0
+                    
+                  
+                
+                c
+              
+            
+            )
+          
+          
+            2
+          
+        
+        =
+        1
+      
+    
+     
+   w punkcie 
+  
+    
+      
+        (
+        x
+        ,
+        y
+        ,
+        z
+        )
+        ∈
+        Π
+        
+          :
+        
+      
+    
+     
+  
+  
+    
+      
+        
+          
+            n
+            →
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  λ
+                  ⋅
+                  
+                    
+                      
+                        x
+                        −
+                        
+                          x
+                          
+                            0
+                          
+                        
+                      
+                      
+                        a
+                        
+                          2
+                        
+                      
+                    
+                  
+                  ,
+                
+                
+                  λ
+                  ⋅
+                  
+                    
+                      
+                        y
+                        −
+                        
+                          y
+                          
+                            0
+                          
+                        
+                      
+                      
+                        b
+                        
+                          2
+                        
+                      
+                    
+                  
+                  ,
+                
+                
+                  λ
+                  ⋅
+                  
+                    
+                      
+                        z
+                        −
+                        
+                          z
+                          
+                            0
+                          
+                        
+                      
+                      
+                        c
+                        
+                          2
+                        
+                      
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+        ;
+        
+        λ
+        ∈
+        
+          R
+        
+        ∖
+        {
+        0
+        }
+      
+    
+     
+  
+
+
+== Zobacz też ==
+normalna

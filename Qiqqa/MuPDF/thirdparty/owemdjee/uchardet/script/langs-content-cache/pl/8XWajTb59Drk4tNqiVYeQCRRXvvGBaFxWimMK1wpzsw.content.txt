@@ -1,0 +1,83 @@
+revision: 69780351
+title: "Olimpiada Informatyczna Junior\xF3w"
+url: https://pl.wikipedia.org/wiki/Olimpiada_Informatyczna_Junior%C3%B3w
+
+
+---
+
+Olimpiada Informatyczna Juniorów (OIJ) (do 2019 Olimpiada Informatyczna Gimnazjalistów) – przedmiotowa olimpiada szkolna z zakresu informatyki skierowana do uczniów szkół podstawowych. Olimpiada organizowana jest corocznie od 2006. Odpowiednikiem Olimpiady Informatycznej Juniorów dla szkół ponadpodstawowych jest Olimpiada Informatyczna.
+
+
+== Historia ==
+Pierwsza edycja Olimpiady, pod nazwą Olimpiady Informatycznej Gimnazjalistów, odbyła się w roku szkolnym 2006/2007. Głównym adresatem Olimpiady byli ówcześni uczniowie gimnazjów. Olimpiada została powołana przez Komitet Główny Olimpiady Informatycznej w roku 2006, z inicjatywy Stowarzyszenia "Talent" i przy współudziale Zespołu Koordynatorów Edukacji Informatycznej oraz Ośrodka Edukacji Informatycznej i Zastosowań Komputerów. W latach 2010 - 2014 Olimpiada była organizowana przez Ośrodek Rozwoju Edukacji, a w latach 2014 - 2019 przez Stowarzyszenie “Talent”. W roku szkolnym 2017/2018 nazwa Olimpiady została zmieniona na Młodzieżową Olimpiadę Informatyczną ze względu na wygaszanie gimnazjów. Od roku szkolnego 2019/2020 Olimpiadę organizuje Fundacja Rozwoju Informatyki, a nazwa Olimpiady została zmieniona na Olimpiadę Informatyczną Juniorów.
+
+
+== Przebieg zawodów ==
+Olimpiada jest trójstopniowa. Na wszystkich stopniach zawodów (poza turą testową I stopnia) zawodnicy muszą rozwiązać zadania programistyczne i przedstawić rozwiązanie w postaci kodu źródłowego w jednym z dozwolonych języków programowania (C++ lub Pythonie). Rozwiązanie jest testowane automatycznie na zbiorze testów przygotowanych przez organizatorów zadań przy użyciu specjalistycznego systemu zwanego sprawdzarką (online judge). Sprawdzane jest czy program wykonał się poprawnie, zmieścił się w limicie czasowym i pamięciowym oraz czy wypisał poprawną odpowiedź.
+
+
+=== Zawody I stopnia ===
+Zawody I stopnia rozwiązywane są samodzielnie przez uczniów poprzez Internet. Zawodnicy rozwiązują zadania poprzez specjalny System Informatyczny Olimpiady (SIO). Zawody I stopnia podzielone są na trzy tury:
+
+Tura testowa polega na rozwiązaniu testu z zakresu wiedzy algorytmicznej oraz znajomości jednego z dwóch języków programowania: C++ lub Pythona. Test składa się z 30 wylosowanych pytań z ogólnodostępnej puli. Pytania są zarówno zamknięte (wielokrotnego wyboru) oraz otwarte. Każde pytanie warte jest 10 punktów. Zawodnicy mogą podejść do testu dwukrotnie, a punktowany jest wynik z lepszego podejścia.
+Tura otwarta polega na rozwiązaniu od 4 do 6 zadań. Rozwiązania zadań są sprawdzane automatycznie i zawodnicy mogą zobaczyć wynik swojego zgłoszenia w SIO.
+Tura ukryta polega na rozwiązaniu od 4 do 6 zadań. Tutaj rozwiązania także są sprawdzane automatycznie, ale zawodnicy mają jedynie dostęp do wyników na przykładowych, niepunktowanych testach. Wyniki punktowe zostają ogłoszone po zakończeniu tury ukrytej.
+
+
+=== Zawody II stopnia ===
+Zawody II stopnia odbywają się w warunkach kontrolowanej samodzielności w wyznaczonych Centrach Lokalnych. Zawody składają się z jednej sesji trwającej 4 godziny. Zawodnicy mają do rozwiązania od dwóch do czterech zadań, których format jest identyczny do zadań z tury ukrytej zawodów I stopnia.
+
+
+=== Zawody III stopnia ===
+Do zawodów III stopnia kwalifikowanych jest ok. 80 zawodników, najwyżej sklasyfikowanych podczas zawodów II stopnia. Wszyscy uczestnicy zawodów III stopnia zostają finalistami Olimpiady. Zawody formatem przypominają zawody II stopnia. Po zawodach Komitet Główny ogłasza listę rankingową, gdzie wyróżniający się finaliści otrzymają tytuł laureata Olimpiady Informatycznej Juniorów. Istnieją trzy stopnie laureatów: I stopnia (którzy zwyczajowo otrzymują złote medale), II stopnia (srebrne medale) oraz III stopnia (brązowe medale). Inaczej niż w sporcie, w olimpiadach naukowych nie tylko trzy pierwsze osoby są nagradzane medalami. Dodatkowo Komitet może wyróżnić niektóre finalistki i finalistów, którzy otrzymują tytuł finalistki/y z wyróżnieniem.
+
+
+== Nagrody i uprawnienia ==
+Laureatom i finalistom Olimpiady Informatycznej Juniorów przysługuje wolny wstęp do szkół ponadpodstawowych i ocena celująca z informatyki. Uczniowie nie są zwolnieni z żadnej części egzaminu ośmioklasisty (jak np. w przypadku Olimpiady Matematycznej Juniorów), jako że podczas egzaminu nie jest sprawdzana wiedza informatyczna. Najlepsi olimpijczycy reprezentują Polskę na międzynarodowych zawodach informatycznych i mają zapewniony udział w olimpijskich obozach treningowych, które odbywają się podczas wakacji.
+
+
+== Zwycięzcy zawodów ==
+
+
+=== Zawody indywidualne ===
+Poniższa tabela przedstawia zwycięzców zawodów indywidualnych kolejnych edycji olimpiady.
+
+
+=== Zawody drużynowe ===
+W latach 2011 - 2019 odbywały się także zawody drużynowe, w których brały udział drużyny złożone z co najwyżej czterech uczniów.
+
+
+== Starty w olimpiadach międzynarodowych ==
+Najlepsi zawodnicy Olimpiady Informatycznej Juniorów zostają wybrani do reprezentacji Polski na Europejską Olimpiadę Informatyczną Juniorów (European Junior Olympiad in Informatics, EJOI). Do tej pory Polacy zdobyli 3 złote medale, 4 srebrne medale i 11 brązowych medali.
+
+
+== Komitet Główny Olimpiady ==
+Poniższa lista przedstawia obecnych członków Komitetu Głównego Olimpiady Informatycznej Juniorów.
+Maciej Borowiecki
+dr Piotr Chrząstowski-Wachtel
+Paweł Dietrich (Komitet Techniczny)
+prof. dr hab. Krzysztof Diks (w-ce przewodniczący Komitetu Głównego)
+dr Lech Duraj (przewodniczący Komitetu Głównego)
+Karol Farbiś (przewodniczący Jury)
+Bartosz Kostka (w-ce przewodniczący Komitetu Głównego)
+Mirosław Mortka
+Mirosław Pietrzycki
+Karol Pokorski (sekretarz naukowy)
+Joanna Śmigielska (koordynatorka Olimpiady)
+
+
+== Zobacz też ==
+Olimpiada Informatyczna
+Olimpiada Matematyczna Juniorów
+
+
+== Przypisy ==
+
+
+== Uwagi ==
+
+
+== Linki zewnętrzne ==
+Witryna Olimpiady Informatycznej Juniorów
+System Informatyczny Olimpiady
+Archiwum zadań olimpijskich

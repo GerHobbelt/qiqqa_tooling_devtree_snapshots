@@ -1,0 +1,158 @@
+revision: 52918929
+title: computer
+url: https://sv.wikipedia.org/wiki/Dator
+
+
+---
+
+En dator (tidigare datamaskin eller matematikmaskin) är en maskin som kan bearbeta data och utföra beräkningar automatiskt, effektivare än vad som kan göras manuellt. Datorn kan bestå av mekaniska, elektroniska, optiska eller andra komponenter och styrs med hjälp av instruktioner (datorprogram) som lagras i dess primärminne. Från början var datorn huvudsakligen ett hjälpmedel för att utföra aritmetiska och andra matematiska beräkningar, men den har senare blivit ett viktigt redskap vid bland annat automatisering av administrativa rutiner, kommunikation, informationslagring och styrning av allehanda industriella och andra slags processer.
+I och med elektronikens miniatyrisering har de grundläggande datorkomponenterna (styrenhet, räkneenhet och minne tillsammans med kretsar för kommunikation med omvärlden) kunnat läggas på allt färre kiselplattor. I sin extrema form kan en dator (låt vara med viss begränsad kapacitet) rymmas på en enda kiselplatta, och kallas då enchipsdator. 
+För gemene man syftar ordet dator oftast på en persondator, men det finns många andra typer av datorer.
+
+
+== Etymologi ==
+Dator är till formen nomen agentis eller ”agentform” av det latinska ordet dare som betyder ”giva”.[källa behövs] Ordet är en svensk nybildning som inte förekommer i grannspråken eller i latinet, och det skulle alltså betyda ”givare” om det funnits i latinet. På latin finns dock det motsvarande donator, skapat efter sidoformen dono som i sin tur har donum (’gåva’) som ursprung.År 1948, strax efter andra världskriget, inrättades Matematikmaskinnämnden för att koordinera svensk forskning inom området. Vid den tiden kallades datorer för matematikmaskiner i facktext och elektronhjärnor i populärpress. Under 1950-talet användes även beteckningen siffermaskin. Nämnden sökte en mer hanterlig term än dessa. På förslag 1969 av Börje Langefors, som grundade Institutionen för ADB vid Stockholms universitet, rekommenderade nämnden ordet dator som en nybildning som till formen efterliknar ord som traktor och doktor. 
+Länge kallades datorn även för datamaskin, eller vardagligt det kortare och förvirrande flertydiga data (lanserat i början av 1960-talet). På 1970-talet ersattes dock denna benämning av ordet dator och slog från 1980-talet igenom. Benämningen ”data” finner man i marknadsföring för datorspel, datorer och komponenter till sådana, samt även i pressen. Den svenska branschorganisationen för producenter och distributörer av dator- och TV-spel har valt att kalla sig för Dataspelsbranschen.
+Svenskans grannspråk har olika ord för begreppet. På bokmål och nynorska heter det datamaskin, medan danskan och tyskan valt engelskans computer. Isländskans tölva och färöiskans teldur/telda är egenskapade ord baserade på ord för räkna. På tyska används motsvarande ord Rechner tidigare för stordatorer. I svenskan kom liknande ord att användas för rena räknemaskiner, som i miniräknare.
+Polskans komputer och litauiskans kompjūteris är två andra lån från engelskan. I lettiskan konkurrerade dators (efter svenskans dator, föreslaget 1972 av den i Lund verksamme Lettlandsfödde språkvetaren Kārlis Draviņš, 1901–91) med det engelska lånet kompjūters samt det tidigare utbredda ESM (Elektroniska skaitļojamā mašīna, elektronisk räknemaskin); under 2000-talet har det förstnämnda blivit standardbenämning. Estniskans arvuti är ett nyord baserat på arvama (’tänka’; d.v.s. ’tankemaskin’). Finskans tietokone är skapat av orden för ’kunskap’ och ’maskin’.
+
+
+== Historik ==
+
+Räknemaskiner har funnits i flera hundra år, men det var först på 1900-talet som de blev elektriska. 
+
+
+=== Föregångare och stickspår ===
+
+Blaise Pascal uppfann 1642 den första mekaniska räknemaskinen, vilken kunde addera och subtrahera och kan ses som en föregångare till datorn. Tre decennier senare konstruerade Gottfried Wilhelm von Leibniz en maskin som dessutom klarade multiplikation och division. 
+
+Därefter stagnerade utvecklingen fram till 1820-talet, då Charles Babbage presenterade ritningarna till differensmaskinen, i princip en mekanisk dator vars program var förutbestämt av själva utformningen. Babbage uppfann därefter den analytiska maskinen 1834, en fullt programmerbar mekanisk dator med arbetsminne, processor, hålkortsläsare för inmatning samt utdataenheter för skrift och stansning av hålkort. Ada Lovelace skrev de första datorprogrammen för den analytiska maskinen. Dock led konstruktionen av mekaniska problem och färdigställdes aldrig. 
+År 1936 konstruerade den tyske ingenjörsstudenten Konrad Zuse den första elektromekaniska datorn, Z1, samt en rad andra datorer baserade på elektromagnetiska reläer. Apparaterna förstördes 1944, när de allierade bombade Berlin och hans verk påverkade därför inte utformningen av senare datorer nämnvärt. 
+Den första elektroniska datorn, ABC-computer från 1941, utvecklades av John Vincent Atanasoff.  
+Den brittiska regeringen lät under stor sekretess bygga Colossus för att avkoda Tysklands enigmakrypterade meddelanden, ett arbete som Alan Turing deltog i. Maskinen var i bruk 1943, men påverkade inte heller den övriga utvecklingen, eftersom den var sekretessbelagd i tre decennier. 
+År 1944 konstruerade Howard Aiken vid Harvarduniversitet i USA den decimala datorn Harvard Mark I, inspirerad av Babbages verk.
+
+
+=== Eniac ===
+
+John Mauchly, en fysikprofessor vid University of Pennsylvania konstruerade tillsammans med doktoranden Presper Eckert den decimala datorn Eniac på uppdrag av den amerikanska armén för beräkning av projektilbanor. Eniac, som börjat byggas 1943, stod färdig först 1946, när kriget som den var byggd för var över. Datorn, som var baserad på tusentals vakuumrör och reläer, skapade dock stort intresse inom forskarvärlden och utgjorde början på en explosionsartad utveckling. Eniac bestod av cirka 18 000 elektronrör och vägde ungefär 27 ton.
+
+
+=== BARK och BESK ===
+
+Sverige låg långt framme under datorns tidiga utveckling. År 1950 var datorn BARK, byggd med telefonreläer, färdig. Efterföljaren BESK, byggd med elektronrör, togs i bruk 1953 och under några veckor var BESK världens snabbaste dator.  BARK och BESK konstruerades av Matematikmaskinnämnden.
+
+
+=== von Neumann-arkitekturen ===
+John von Neumann, som varit inblandad i eniacprojektet, insåg att i stället för att programmeras genom inställningar av reläer och kabeldragningar skulle datorprogram kunna lagras i datorns minne tillsammans med data. Baserat på detta skapade han designen för IAS-maskinen, som byggdes 1952, och principen användes även i Maurice Wilkes dator Edsac 1949. Sedan dess har von Neumann-arkitekturen varit den rådande principen för utformning av datorer.
+
+
+=== Transistorbaserade datorer ===
+Den första generationens datorer var baserade på vakuumrör. När John Bardeen, Walter Brattain och William Shockley vid Bell Labs uppfann transistorn 1948, utgjorde detta grunden för den andra generationens datorer. 
+Den första transistorbaserade datorn var TX-0, som utvecklades vid MITs Lincolnlaboratorium med inspiration från det tidigare MIT-projektet Whirlwind I från 1952. En av ingenjörerna vid laboratoriet, Kenneth Olsen, grundade DEC som 1961 började sälja PDP-1, en kommersiell minidator som liknade TX-0. PDP-1 konkurrerade främst med IBM 7090, en transistorbaserad dator från företaget IBM, som börjat intressera sig för datorer allt mer efter att tidigare ha finansierat Aikens Mark I. PDP-1 hade visserligen bara hälften av prestandan jämfört med IBM 7090, men den kostade också mindre än en tiondel så mycket. Den blev en stor succé och såldes i 50 exemplar. Efterföljaren PDP-8 blev än mer framgångsrik och såldes i 50 000 exemplar.
+
+
+=== Integrerade kretsar ===
+Nästa stora framsteg kom 1958, då Robert Noyce uppfann den integrerade kretsen, vilken medförde ännu effektivare miniatyrisering. Denna era, som pågick fram till 1980-talets början dominerades av IBM System 360, den första standardiserade datorserien med maskiner i olika prestandaklasser. Även DEC:s konkurrerande serie PDP-11 hade stora framgångar, återigen genom att många gånger vara något mindre kraftfull och betydligt billigare än motsvarande IBM-modell. 
+
+
+=== VLSI, IBM PC och hemdatorerna ===
+
+Integreringstrenden fortsatte och vid 1980-talets början hade man nått vad som brukar kallas VLSI (Very Large Scale Integration, "mycket storskalig integrering") med miljontals transistorer på ett integrerat kretskort. Detta gjorde att datorerna började bli tillräckligt små för att användas privat och detta gav upphov till hemdatortrenden. År 1977 släppte Commodore en 8-bitars dator (PET) och ungefär samtidigt släppte Apple sin Apple II. 1981 släppte IBM persondatorn IBM PC med en öppen standard för instickskort och andra komponenter. Några veckor innan släpptes dock en annan PC vid namn Sirius I och som var skapad av Chuck Peddle. IBM PC är dock den dator som blev känd och inom kort växte det fram en industri för tillverkning av vad man kallade IBM PC-kompatibla persondatorer. År 1984 fick denna en konkurrent från Apple (Macintosh 128k) som hade ett för den tiden väldigt lättanvänt grafiskt gränssnitt som ännu har många likheter med moderna operativsystem.
+
+
+=== PC ===
+Uttrycket PC kommer från engelskans personal computer, "persondator". Uttrycket har använts i oförkortad form sedan 1960-talet, men förkortningen blev känd när IBM registrerade och marknadsförde varumärket IBM PC. Specifikationen för denna tidiga hemdator publicerades öppet, och IBM pc-kompatibla datorer blev vanliga. Dessa kom ofta att kallas för enbart PC, så att begreppet idag ofta syftar på en sorts dator vars delar är kompatibla med andra persondatorer. En konkurrerande grupp är den så kallade Mac-familjen, som marknadsförs av företaget Apple. Samtidigt har den mer generella betydelsen persondator bibehållits parallellt.
+
+
+== Datorns uppbyggnad ==
+
+Även om tekniken i datorerna har förändrats dramatiskt sedan de första på 1940-talet, så används i de allra flesta fall fortfarande den grundläggande struktur som först föreslogs av John von Neumann på 1940-talet.
+von Neumann-arkitekturen delar in datorn i fyra huvuddelar: den aritmetiska enheten, styrenheten, minnet och diverse in- och utenheter (I/O-enheter). Aritmetikenheten och styrenheten är numera oftast integrerad i ett chip och kallas processor som förkortas CPU efter engelska Central Processing Unit.
+
+
+=== Typer av datorer ===
+Det finns flera typer av utformning av persondatorer, till exempel tower, skrivbordsdator, bärbar dator och handdator. Tower-modellen är uppbyggd för att datorn ska stå upprätt. Den traditionella skrivbordsdatorn är oftast något mindre i storlek och avsedd att ligga ner med bildskärmen placerad ovanpå. Laptop-modellen, den bärbara datorn, är uppbyggd av en platta med bland annat processorn, hårddisken, arbetsminnet och tangentbord och en annan platta med en skärm – dessa plattor viks ihop mot varann vid transport. Den är avsedd att kunna hållas i knät när man sitter ner. Palmtop var en form av handdator – ofta integrerad i en mobiltelefon.
+Stordatorer finns i flera utformningar, från de enskilda datorerna som kan likna ett litet halvhöjds kylskåp till de riktigt stora som kan fylla ett eller flera rum. En server kan sägas vara ett mellanting mellan en stordator och en persondator utan skärm, mus och tangentbord. Ofta kommer en server i ett standardformat som tillåter att många tillsammans monteras i ett stativ (ibland inrymt i ett skåp).
+
+
+==== Inbäddade datorer ====
+Inbäddade datorer är datorer som är inbyggda i produkter och används för att styra funktioner i produkterna. Produkterna kan vara små hushållsmaskiner, radio- och TV-apparater, telefoner, bilar, tåg, skogsmaskiner, flygplan, medicinska instrument mm. Till skillnad mot vanliga datorer så använder de inbäddade oftast sensorer (mäter fysikaliska variabler) som in-organ och aktuerare (åstadkommer rörelser mm) som ut-organ och arbetar i sann realtid med ”Real Time Operating Systems”. De levereras ofta med inbrända program som ej kan rättas i efterhand och används ibland i livskritiska applikationer t.ex. roderhantering i flygplan. Mindre inbäddade system kan bygga på 8-bitars processorer medan större kan vara kraftfullare än persondatorer. Antalet inbäddade datorer övertiger antalet av alla andra datorer tillsammans. De kallas ofta styrenheter eller databoxar. Artikeln Styrenhet (fordon) ger en bild av hur inbäddade datorer kan användas.
+
+
+=== Minnet ===
+ 
+Minnet består av en sekvens av celler som var och en rymmer en liten bit information. Informationen kan antingen vara de data som datorn bearbetar eller instruktioner, delar av programmet, som talar om vad datorn skall göra. Denna suddiga gräns mellan data och program är en viktig del i von Neuman-arkitekturen.
+Storleken på varje minnescell och antalet sådana celler varierar naturligtvis från dator till dator. Minnets storlek mäts vanligtvis i enheten byte. Storleken av minne i en persondator mäts i dag i hur mycket arbetsminne den innehåller. År 2006 är en normal mängd minne mellan 256 och 4096 megabyte (MB). År 2013 är en normal mängd minne mellan 4096 och 16384 megabyte (MB). 
+Det är viktigt att skilja på arbetsminne och lagringsminne. Arbetsminnet är snabbast, men töms om strömmen stängs av. Lagringsminnet är det minne där program och data långtidslagras. Nuförtiden är hårddiskar, flashminnen och cd-rom/dvd-skivor de vanligaste lagringsminnena.
+
+
+=== Aritmetikenheten ===
+
+Denna del av datorn utför aritmetiska och logiska operationer. Som att addera två tal, eller invertera ett tal.
+
+
+=== Styrenheten ===
+
+Styrenhet är i datorsammanhang en styrande enhet; särskilt om den del av ett datorsystem som styr tolkning av instruktioner och överföring av data från primärminne till olika enheter och tvärtom. Det finns styrenhet för bland annat USB, hårddisk, diskettstation och grafik.
+
+
+=== I/O-enheterna ===
+I/O står för engelska Input/Output. Inenheter möjliggör att data hämtas från omvärlden, och utenheter gör att resultaten presenteras på lämpligt sätt. Det finns en stor mängd olika typer av I/O-enheter, allt från tangentbord, skärmar, skrivare och disketter till webbkameror.
+
+
+=== Kylning ===
+
+
+==== Kylning av stordatorer ====
+Servrar och stordatorer har utöver egen kylning ibland även kylning i rummet där de finns placerade.
+
+
+==== Kylning av persondatorer ====
+De allra första persondatorerna saknade fläkt eller hade det endast i nätaggregaten. När processorkraften ökade så ökade även temperaturen, vilket gjorde att man behövde kylflänsar och senare även fläktar på processorerna. Detta skedde ungefär samtidigt som de första uppgraderingskitten (OverDrive) kom till Intel 386 och 486 i början av 1990-talet. Senare under 1990-talet blev även grafikkorten och chassin i behov av extra kylning och idag har de flesta nya (stationära) datorer minst fyra fläktar, en i nätaggregatet, en på processorn, en på grafikkortet och en i chassit som vanligtvis är monterad bak eller på sidan och leder varm luft ur datorn, alternativt framtill och suger då in luft i chassit. Moderna bärbara datorer har oftast bara en fläkt som med hjälp av kopparrör kyler flera delar samtidigt.
+För att göra värmeöverföringen mellan processorn och kylflänsen så effektiv som möjligt behövs i regel kylpasta, detta gäller i synnerhet bärbara datorer där det finns en vätska inne i kopparrören som värms upp av processorn. Om kylpastan blir gammal eller är felaktigt applicerad så gör den försämrade värmeöverföringen oftast att vätskan inte värms upp på rätt sätt med avsevärt försämrad kylning som följd, vilket kan resultera i till exempel plötsliga avstängningar eller permanenta skador på hårdvaran.
+Vissa kraftfulla spel- eller proffsdatorer kan även ha vätskekylning, det har även förekommit experiment med oljekylning.
+Det förekommer även kylning till chipset, hårddiskar, nätverkskort, ljudkort och RAM-minne.
+
+
+===== Fläkttyper =====
+Fläktarna i nätaggregaten och i chassin är stora och går med ett ganska lågt varvtal runt 1000–1500 rpm medan fläktarna på grafikkorten och processorerna oftast är mindre och roterar snabbare med 1500–2000 rpm eller mer, dessa slits också ner betydligt snabbare än de övriga fläktarna och kan behöva bytas med jämna mellanrum. Vissa datorer har en kombinerad chassi- och processorfläkt vanligtvis med en kåpa från chassifläkten till processorns kylfläns, dessa håller längre men kyler inte lika bra. Damm är en vanlig orsak till överhettning, vid långvarig användning lagras det damm under fläktarna vid processorerna och grafikkorten som oftast blåser neråt på kylflänsen som med tiden fylls och sätts igen. Det är då bra att rengöra dessa delar med jämna mellanrum för att förlänga datorns livslängd. Chassifläkten är vanligen av typen utblåsningsfläkt, som avlägsnar den varma luften från chassit, eller mer sällan och vanligtvis hos äldre datorer, av typen insugsfläkt, som drar in kall luft från utsidan och riktar den mot de varmare komponenterna. Fördelen med utblåsningsfläktar är att de inte drar in lika mycket damm i chassit och fördelen med insugsfläktar är att de kyler effektivare. Genom att kombinera dessa fläkttyper kan man skapa en jämn och effektiv cirkulation av luftgenomströmning i chassit, vilket kan vara en fördel hos speldatorer eller andra kraftfulla datorer, den största nackdelen med denna konfiguration är att den drar mer ström från datorn och bidrar till mer buller. Utblåsningsfläktar är vanligen placerade bak- och upptill i chassit och insugsfläktarna vanligen fram- och nertill.
+I bärbara datorer är det oftast en liten fläkt med reglerbart varvtal.
+Till bärbara datorer förekommer även externa kylplattor som ett komplement till datorns egna interna kylsystem. Dessa placeras under datorn och skapar där ett kylande luftflöde med hjälp av en eller flera fläktar.
+
+
+== Datorprogram ==
+
+Datorns program är en lång lista med instruktioner som datorn utför i tur och ordning. Vissa instruktioner, så kallade programhopp, beordrar datorn att fortsätta processen med en annan instruktion än den omedelbart efterföljande. Dessa kan vara villkorliga så att programhopp bara förekommer om ett visst villkor är uppfyllt. Detta gör det möjligt för datorn att ta beslut samt att utföra olika åtgärder beroende på resultatet av en beräkning eller beroende på något annat villkor. Många program innehåller miljontals instruktioner och vanligtvis utförs instruktionerna upprepade gånger. En typisk modern PC (år 2003) kan utföra mellan två och tre miljarder sådana instruktioner per sekund. Program kan vara skrivna i olika så kallade programspråk, till exempel C++, Java och Pascal. För att datorn ska förstå instruktionerna översätts programmet vanligtvis till så kallad maskinkod med en kompilator. 
+En dator kan tyckas köra flera program samtidigt. Detta brukar med ett engelskt ord kallas multitasking. I själva verket hoppar kontrollenheten med korta tidsintervaller mellan program i olika delar av minnet på ett sådant sätt att det ger intrycket av att det sker samtidigt. Det finns ett undantag till den regeln och det är när dator har flera Processorkärnor. Varje processorkärna kan utföra en uppgift i taget. Vilket innebär att om du har 4 kärnor kan processorn göra 4 saker samtidigt. Datorns operativsystem är det program som ser till att allt detta sker som det är avsett. I operativsystemet ingår också mycket programkod som utnyttjas av de vanliga programmen, till exempel drivrutiner som hjälper till med detaljerna för hur man styr och kommunicerar med alla I/O-enheter. Ett annat exempel på inbyggda hjälpprogram är den matematikprocessor, som är specialkonstruerad för att snabbt utföra matematiska beräkningar, till exempel trigonometriska funktioner, logaritmer och så vidare. 
+När man köper en dator följer det också oftast med en rad nyttoprogram tillsammans med operativsystemet. Exempelvis är det webbläsare, ordbehandlare, miniräknare samt mycket annat. Även nöjesprogram som exempelvis film- och musikspelare eller datorspel kan följa med.
+
+
+== Speciella typer av datorer ==
+Ordet dator syftar i dagligt tal på persondator, men det finns många andra typer av datorer som används i vardagslivet. 
+
+Cykeldator
+Färddator
+Radionavigering
+Miniräknare
+SpelkonsolAllt fler hushållsapparater innehåller någon form av processor och vi kan se en tendens att gränserna mellan olika apparater suddas ut. Idag är den trenden tydlig främst vad gäller mobiltelefoner.
+
+
+== Se även ==
+Persondator
+Digital
+Datorhistoria
+Datorprogram
+Datorspel
+Styrenhet (fordon)
+Programmering
+Programvarutestning
+Turingmaskin / turingkomplett maskin
+
+
+== Kommentarer ==
+
+
+== Källhänvisningar ==
+
+Wahlgren, Bengt; Ollfors Anders (1976) (på latin). Latinskt morfemlexikon: med uppgifter om de internationella ordens ursprung och uppbyggnad (1. uppl.). Stockholm: Almqvist & Wiksell. ISBN 91-21-02746-3

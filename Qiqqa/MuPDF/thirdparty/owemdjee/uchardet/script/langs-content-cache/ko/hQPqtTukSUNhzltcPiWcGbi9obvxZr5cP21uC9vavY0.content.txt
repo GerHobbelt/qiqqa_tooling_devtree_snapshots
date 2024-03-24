@@ -1,0 +1,32 @@
+revision: 35001038
+title: "\uCF54\uB4DC \uD398\uC774\uC9C0 152"
+url: https://ko.wikipedia.org/wiki/%EC%9E%90%EC%B9%B4%EB%A5%B4%ED%83%80_%EC%84%9C%EB%B2%84_%ED%8E%98%EC%9D%B4%EC%A7%80
+
+
+---
+
+자카르타 서버 페이지(Jakarta Server Pages, JSP, 이전 명칭: 자바서버 페이지(영어: JavaServer Pages)는 HTML내에 자바 코드를 삽입하여 웹 서버에서 동적으로 웹 페이지를 생성하여 웹 브라우저에 돌려주는 서버 사이드 스크립트 언어이다. Java EE 스펙 중 일부로 웹 애플리케이션 서버에서 동작한다.
+자카르타 서버 페이지는 실행시에는 자바 서블릿으로 변환된 후 실행되므로 서블릿과 거의 유사하다고 볼 수 있다. 하지만, 서블릿과는 달리 HTML 표준에 따라 작성되므로 웹 디자인하기에 편리하다. 1999년 썬 마이크로시스템즈에 의해 배포되었으며 이와 비슷한 구조로 PHP, ASP, ASP.NET 등이 있다.
+아파치 스트럿츠나 자카르타 프로젝트의 JSTL 등의 JSP 태그 라이브러리를 사용하는 경우에는 자바 코딩없이 태그만으로 간략히 기술이 가능하므로 생산성을 높일 수 있다.
+
+
+== 동작구조 ==
+
+클라이언트에서 서비스가 요청되면, JSP의 실행을 요구하고, JSP는 웹 애플리케이션 서버의 서블릿 컨테이너에서 서블릿 원시코드로 변환된다. 그 후에 서블릿 원시코드는 바로 컴파일된 후 실행되어 결과를 HTML 형태로 클라이언트에 돌려준다.
+
+
+== 버전의 역사 ==
+
+
+== 각주 ==
+
+
+== 외부 링크 ==
+Official tutorial: The Java EE 5 Tutorial, Chapter 5, JavaServer Pages Technology
+JSP v2.0 Syntax Reference
+set up the JSP environment Archived 2017년 3월 28일 - 웨이백 머신 JSP Latest
+JavaServer Pages v2.0 Syntax Card (html)
+Servlet History
+web-mode.el, emacs major mode for editing jsp templates
+JavaServer Pages (JSP) and JSTL Archived 2017년 6월 23일 - 웨이백 머신
+JavaServer Pages Archived 2017년 7월 4일 - 웨이백 머신

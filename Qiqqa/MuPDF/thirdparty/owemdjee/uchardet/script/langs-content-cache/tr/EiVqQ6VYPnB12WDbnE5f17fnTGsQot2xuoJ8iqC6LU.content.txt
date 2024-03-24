@@ -1,0 +1,98 @@
+revision: 29303506
+title: "S\xF6zdizim"
+url: https://tr.wikipedia.org/wiki/S%C3%B6zdizim
+
+
+---
+
+Sözdizim, söz dizimi ya da Fransızcadan ödünçleme biçimiyle sentaks, doğal dillerdeki cümle kurma ilke ve kurallarını inceleyen ve bu dildeki cümlelerin esnekliğini inceleyen dilbilim dalıdır.Eski Yunanca  "birlikte düzenleme, dizme" anlamına gelen sentaks terimi dilbilimde, doğal dillerde nasıl cümle oluşturulacağına dair bir kurallar ve prensipler çalışmasıdır. Bir bilim dalına ait olmasına ek olarak “Modern İrlandacanın Sözdizimi"nde olduğu gibi, sözdizim terimi herhangi bireysel bir dilin cümle yapısına hâkim olan kurallara ve prensiplere de doğrudan ilgili olarak da kullanılır. Sözdizim, dilin yatay, yani satır şeklinde dizilen bir sistem olduğunu gösterir. Bu diziliş, sesten, morfemlere, morfemlerden daha büyük öbeklere dilin her seviyesinde mevcuttur. Sözdizimin yalnız cümle seviyesini gösteren bir terim olarak kullanılması doğru ama eksik bir kullanımdır.
+Sözdizimle ilgili olarak modern araştırmalar dilleri bu tür kurallara göre tanımlamaya çalışırlar. Bu bilimin çatısı altındaki çoğu uzman bütün doğal dillere uygulanacak genel bir kural bulmaya çalışmaktadırlar. Sözdizim terimi ayrıca mantık gibi matematiksel sistemlere, yapay biçimli dillere ve bilgisayar programlama dillerinin yapısına hâkim olan kuralları tanımlamada da kullanılır.
+
+
+== Kökeni ==
+Türkçe "sözdizim" sözcüğü dildeki sözlerin dizilimini inceleyen bilim dalı olduğundan gelir. Türkçeye "sentaks" sözcüğü Fransızca "syntaxe" sözcüğünden geçmiştir. syntact- sözdizim demektir. Ayrıca Fransızcaya bu sözcük aynı anlamdaki Eski Yunanca syntáksis (συντάξις) sözcüğünden geçmiştir. Bu sözcük "syn+" öneki ile  tássō eyleminin birleşiminden oluşmuştur. tag- τάσσω, ταγ- Grekçe düzenlemek, dizmek anlamına gelir.
+
+
+== Tarihi dönemler ==
+Dilbilgisi üzerine yapılan çalışmalar modern sözdizim ortaya çıkmadan çok önceleri yazılmıştı, Pānini’nin Aṣṭādhyāyī’sinden modern sözdizimsel kuramların kapsamlılığına yaklaşımda bulunan modern öncesi çalışmalara bir örnek olarak sıklıkla bahsedilmektedir. Batıda sonraları geleneksel dilbilim olarak bilinen düşünce okulu Dionysius Thrax’in çalışmalarıyla başlar.
+Yüzyıllar boyunca sözdizim üzerindeki çalışmalara ilk olarak 1660 yılında Antoine Arnauld tarafından aynı başlık altındaki bir kitapta yayınlanan grammaire générale olarak bilinen bir sistem egemen olmuştur. Bu sistem temel öncülünü dilin düşünce sürecinin doğrudan bir yansıması ve bundan dolayı bir düşünceyi en doğal şekilde tek bir yoldan ifade etme varsayımından almaktaydı. Bu yol tesadüfen tam olarak Fransızcada ifade edilen yoldu.
+Bununla birlikte 19. yüzyılda tarihi-kıyaslamalı dilbilimin gelişmesiyle birlikte dilbilimciler insanların dillerinin büsbütün ayrıldığını fark ettiler ve dil ile mantık arasındaki ilişkiler hakkındaki önemli varsayımları sorguladılar. Düşünceyi en doğal haliyle ifade etmek için böyle bir şeyin olmadığı ortaya çıktı ve mantık dilin yapısı üzerindeki çalışmalarda artık güvenilir bir temel olmaktan çıktı.
+Port-Royal dilbilgisi mantık üzerine yapılan sözdizim çalışmasını şekillendirdi (dahası Port-Royal Mantığı’nın temel bölümleri Grammaire générale’den kopyalandı ya da alındı). Sözdizimsel sınıflamalar mantıksal olanlarla tanımlandı ve bütün cümleler “Özne – Bağlaç – Yüklem” yapısına göre analiz edildi. Başlangıçta bu yöntem Franz Bopp gibi bazı ilk karşılaştırmacı dilbilimciler tarafından benimsendi.
+Kuramsal dilbilim içinde sözdizimin ana rolü dilbilimcilerin düşündükleri kadarıyla “söz dizimsel kuramlar çağı” olarak adlandırılabilecek olan ancak 20. yüzyılda açığa kavuşmuştur. Son iki yüzyıldaki sözdizimin tarihinin önemli ve ayrıntılı bir araştırması için Graffi (2001)’nin çalışmasına bakınız.
+
+
+== Çağdaş kuramlar ==
+Sözdizim konusunda birçok kuramsal yaklaşım vardır. Çoğu dilbilimci (örn. Noam Chomsky) sözdizimi insan aklında şekillenen bir dilbilim çalışması olarak kabul ettiklerinden, sözdizimi biyolojinin bir dalı olarak görürler. Diğerleri (örn. Gerald Gazdar) sözdizimi soyut bir biçimsel sistem çalışması olarak düşündüklerinden sözdizimi daha Platonist bir açıdan ele alırlar. Ama diğerleri (örn. Joseph Greenberg) diller üzerine daha geniş genellemelere ulaşmak için dilbilgisini taksonomal bir araç olarak kabul etmektedirler. Bu bilime olan ana yaklaşımların bazıları aşağıda listelenmiştir.
+
+
+== Üretici dilbilgisi ==
+Üretici dilbilgisi kuramına göre dil, insan aklının yapısıdır. Üretici dilgisinin amacı bu iç dilin tam bir şeklini oluşturmaktır (i-language (iç dil) olarak da bilinir). Bu model insanlığın bütün dillerini tanımlamak için ve verilen herhangi bir telaffuzun dilbilgisel olarak öngörülmesi için kullanılabilmekteydi (bu şu demektir; telaffuzun, bir dili anadili olarak konuşan bir konuşmacının kulağına doğru tınıyı verip veremeyeceğini öngörmek). Dile olan bu yaklaşıma Noam Chomsky öncülük etmiştir. Çoğu genelleyici kuramlar (hepsi olmamasına rağmen) sözdizimi cümlelerin öğe yapısına temellendiği varsayımında bulunurlar. Üretici Dilbilgisi, iletişimci işlevlerinden çok öncelikle cümle biçimine odaklanan kuramlar arasındadır.
+Dilbilimin çoğu genelleyici kuramları arasında, Chomsky kuramları:
+
+Dönüşümcü Dilbilgisi (Transformational Grammar) (TG) (Üretici sözdizimin özgün kuramı,1957 yılında Söz Dizimsel Yapılar’da Chomsky tarafından düzenlenmiştir)
+Yönetim ve Bağlama Kuramı (Government and Binding Theory) (GB) (çoğu 1970’lerde ve 1980’lerde Chomsky tarafından geliştirilen TG geleneğinde gözden geçirilmiştir)
+Yetinmeci Çizgi (The Minimalist Program) (MP) (Chomsky tarafından 1995’te yayınlanan GB’nin gözden geçirilmiş sürümüdür.)Çıkış noktalarını genelleyici paradigmada bulan diğer kuramlar:
+
+Üretici anlambilim (Generative Semantics)
+Bağıntı dilbilgisi (Relational Grammar) (RG)
+Genelleştirilmiş öbek yapı dilbilgisi (Generalized Phrase Structure Grammar) (GPSG; şimdilerde neredeyse çağdışı)
+Baş yönelimli öbek yapı dilbilgisi (Head-driven Phrase Structure Grammar) (HPSG)
+Sözlüksel-işlevsel dilbilgisi (Lexical-functional grammar) (LFG)
+
+
+== Ulamsal dilbilgisi ==
+Kategorik dilbilgisi sözdizimsel yapıyı dilbilgisi kurallara göre tamamlamayıp kendi içlerindeki söz dizimsel kategori özelliklerine göre tamamlayan bir yaklaşımdır. Örneğin cümleleri bir isim dizisi (Noun Phrase(NP)) ve bir fiil dizisinin (Verb Phrase(VP)) oluşturduğu bir kural tarafından meydana getirilmiş olarak değerlendirmekten ziyade, kategorik dilbilgisinde, bu tür prensipler ana kelimenin kendi kategorisi içine sokulmaktadır. Bundan dolayı geçişsiz bir fiil için sözdizimi kategorisi; fiilin giriş olarak bir isim dizisine (İD) gereksinim duyan ve çıkış olarak cümle seviyesinde bir yapı ortaya çıkaran bir işlevci olarak hareket ettiği gerçeğini ortaya koyan karmaşık bir formüldür. Bu karmaşık kategori F yerine (İD/Ö) olarak gösterilmektedir. İD/Ö; “bir İD (soldaki element) için sol tarafı araştıran ve sonuç olarak bir cümle ortaya çıkaran (sağdaki element) bir kategori” olarak okunur. Geçişli bir fiilin kategorisi bir cümle oluşturmak için iki İD (bir özne bir nesne olmak üzere)’ye gereksinim duyan bir element olarak tanımlanır. Bu (İD/(İD/Ö)) olarak gösterilir ve “bir İD (nesne) için sağ tarafı araştıran ve (İD/Ö) olan (FD’ye eşit olarak) bir fonksiyon oluşturan sonuçta İD için sol tarafı araştıran ve bir cümle oluşturan bir kategori” anlamına gelir. 
+Üçlü olarak yan yana bitişen dilbilgisi (Tree-adjoining grammar) üç yapıyı bölüm bölüm kategoriye ekleyen kategorik bir dilbilgisidir.
+
+
+== Bağımlı dilbilgisi ==
+Bağlayıcı dilbilgisi, içerisinde yapının biçimleyici bir yapıya temelleniyor olmaktan ziyade bir kelime (ana kelime) ve onun alt kolları arasındaki ilişkiler (dilbilgisel ilişkiler gibi) tarafından belirlendiği farklı bir yaklaşım tipidir. Örneğin, sözdizimsel yapı dizilere göre ilişkileri tanımlamaktan öte belli bir ismin özne ya da fiilin bir uzantısı olup olmamasına göre tanımlanır. 
+Bağlayıcı – temellere göre bazı sözdizimi kuramları:
+
+Cebirsel sözdizimi
+Kelime dilbilgisi (grameri)
+Uygulayıcı dilbilgisi
+
+
+== Stokastik/varsayımcı dilbilgileri/ağ kuramları ==
+Sözdizimine olan kuramsal yaklaşımlar Stokastik dilbilgileri olarak bilinen varsayımcı kuramlar üzerine temellenmektedir. Böyle bir yaklaşımın yaygın bir uygulaması sinirsel ağ (neural network) ya da iletişimsellik (connectionism) anlamına gelir. Bu yaklaşım nezdinde temellenen bazı kuramlar:
+
+Optimum kuramı
+Stokastik metin-dışı dilbilgisi
+
+
+== İşlevsel dilbilgisi ==
+İşlevselci bakış açıları, biçime odaklanmalarına rağmen, tümcenin işlevine temellenen açıklamalar tarafından kullanılırlar (örn. iletişimsel işlevi). Bazı tipik işlevselci kuramlara aşağıdakiler de dahildir:
+
+İşlevsel dilbilgisi
+Prag dilbilim çevresi
+Sistematik işlevsel dilbilgisi
+Bilişsel dilbilgisi
+Oluşturucu dilbilgisi (CxC)
+Rol ve kaynak dilbilgisi (RRG)
+Aniden ortaya çıkan (İstemsiz) dilbilgisi
+
+
+== Notlar ==
+1. Fortson IV, Benjamin W. (2004). Indo-European Language and Culture: An Introduction, Blackwell. p. 186. ISBN 1-4051-0315-9 (hb); 1-4051-0316-7 (pb). "[The Aṣṭādhyāyī] is a highly precise and thorough description of the structure of Sanskrit somewhat resembling modern generative grammar…[it] remained the most advanced linguistic analysis of any kind until the twentieth century.".
+2. Arnauld, Antoine (1683). La logique 28 Ocak 2012 tarihinde Wayback Machine sitesinde arşivlendi. (5th ed. ed.). Paris: G. Desprez. pp. 137,  "Nous avons emprunté…ce que nous avons dit…d'un petit Livre…sous le titre de Grammaire générale.".
+3. Ted Briscoe, 2 May 2001, Interview with Gerald Gazdar. Retrieved 2008-06-04.
+4. Chomsky, Noam. 1957. Syntactic Structures. The Hague/Paris: Mouton, p. 15.
+5. Chomsky, Noam (1981/1993). Lectures on Government and Binding: The Pisa Lectures. Mouton de Gruyter. 29 Ekim 2014 tarihinde Wayback Machine sitesinde arşivlendi.
+6. Chomsky, Noam (1995). The Minimalist Program. MIT Press. 6 Kasım 2014 tarihinde Wayback Machine sitesinde arşivlendi.
+
+
+== Kaynakça ==
+Brown, Keith; Jim Miller (eds.) (1996). Concise Encyclopedia of Syntactic Theories. New York: Elsevier Science. ISBN 0-08-042711-1.
+Chung, Sandra  (1994), "Günümüz Sözdiziminde Üretimsel Yaklaşımlar" (Çeviren: Ahmet Kocaman), Dilbilim Araştırmaları, s.145-150.
+Carnie, Andrew (2006). Syntax: A Generative Introduction. Oxford: Wiley-Blackwell. ISBN 1-4051-3384-8.
+Freidin, Robert; Howard Lasnik (eds.) (2006). Syntax. Critical Concepts in Linguistics. New York: Routledge. ISBN 0-415-24672-5.
+Graffi, Giorgio (2001). 200 Years of Syntax. A Critical Survey. Studies in the History of the Language Sciences 98. Amsterdam: Benjamins. ISBN 90-272-4587-8.
+Pesetsky, David (1994), "Yönetme ve Bağlama Kuramı", (Çeviren: Ahmet Kocaman), Dilbilim Araştırmaları, s.141-144.
+
+
+== Dipnotlar ==
+
+
+== Dış bağlantılar ==
+İnternet Ortamında Sözdizim Araştırmaları Kaynakları 29 Ağustos 2014 tarihinde Wayback Machine sitesinde arşivlendi.

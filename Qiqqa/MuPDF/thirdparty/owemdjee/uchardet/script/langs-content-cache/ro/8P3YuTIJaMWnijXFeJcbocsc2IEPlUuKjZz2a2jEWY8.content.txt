@@ -1,0 +1,70 @@
+revision: 15313366
+title: Ip Man
+url: https://ro.wikipedia.org/wiki/Compresor_(scufundare)
+
+
+---
+
+Compresoarele folosite în activitățile de scufundare sunt de mai multe tipuri: 
+
+Compresoare pentru aer de înaltă și joasă presiune,
+Compresoare pentru oxigen și gaze pure.
+
+
+== Compresoare de înaltă presiune ==
+
+Compresorul folosit pentru încărcarea cu aer comprimat a buteliilor de scufundare este o mașină pneumatică cu 3 sau 4 cilindrii prevăzută să ridice presiunea aerului în 3 ... 4 trepte de compresie, până la 200 bar (sc. man.) sau chiar 300 bar (sc. man.). Se mai numește și compresor de înaltă presiune (IP). Compresoarele IP sunt dotate cu sisteme de răcire a aerului comprimat și cu supape de siguranță care se deschid atunci când presiunea aerului depășește o anumită limită. 
+Compresoarele IP pot fi portabile, antrenate de motoare cu ardere internă sau fixe, antrenate de motoare electrice. 
+Compresorul IP trebuie să aibă mai multe tipuri de filtre și anume:
+
+filtru de aspirație pentru praf, confecționat din fetru
+filtru intermediar (între etaje) care este un filtru decantor alcătuit din silicagel
+separator centrifugal pentru particulele de ulei
+filtru final de carbon activ sau site moleculare
+Ungerea compresoarelor IP se face folosind numai uleiuri speciale, de obicei uleiuri siliconice. Folosirea altor tipuri de uleiuri poate duce la intoxicații pulmonare grave, cauzate de existența în aerul respirator a uleiurilor interzise. 
+Pentru aerul comprimat produs de compresoarele IP pentru încarcarea buteliilor de scufundare, sunt prevăzute următoarele cantități maxime de impurități:
+ulei: 0.5 mg/m3
+CO2: 500 ml/m3
+CO: 5 ml/m3
+vapori de apă: 50 mg/m3 (40...200 bar) /35 mg/m3 ( >200 bar)
+Fără gust și fără miros.Compresoarele IP pentru încărcarea buteliilor de scufundare mai sunt prevăzute și cu racord de conectare a buteliei, vană de închidere/deschidere, precum și un manometru de control.
+Există și tipuri de compresoare IP seci, fără lubrifiere, din materiale de antifricțiune cu autoungere cu element din teflon - PTFE. Compresoarele fără ungere au dezavantajul că sunt mai scumpe, produc mai mult zgomot și au o durată de viață mai scurtă față de cele cu ungere, însă au avantajul producerii aerului de o calitate superioară.
+Buteliile de scufundare se pot încărca și de la butelii de stocaj sau de la o baterie de butelii de stocaj (rack). Buteliile de stocaj sunt butelii de mare capacitate, de 40 litri sau mai mult, care pot fi încărcate cu aer la presiune înaltă de până la 200...300 bar (sc. man.).
+
+
+== Compresoare de joasă presiune ==
+
+Compresoarele de joasă presiune sunt folosite pentru alimentarea cu aer respirabil a scafandrilor profesioniști în scufundarea cu alimentare de la suprafață, barocamele sistemelor de scufundare etc, la o presiune de 7...10 bar și debit mare. Sunt asemănătoare compresoarelor de aer industriale, dar sunt prevăzute cu instalație de filtrare a aerului în circuit pentru furnizarea de aer curat. Puritatea aerului este reglementată prin același standard ca la compresoarele de înaltă presiune (SR EN 12021:2003). Compresoarele de joasă presiune pot fi și fără ungere, fără ulei.
+
+
+== Compresoare pentru oxigen și gaze pure ==
+Compresoarele pentru oxigen sau gaze pure (heliu, hidrogen) se utilizează la fabricarea amestecurilor respiratorii (Nitrox, Trimix) și în sistemele de recuperare a gazelor pure din amestecurile respiratorii folosite în scufundarea de mare adâncime. Pot fi angrenate de pistoane sau de o membrană specială, acestea numindu-se compresoare cu membrană. Pentru realizarea de amestecuri respiratorii sunt necesare la obținerea de aer comprimat sec, fără urme de ulei. Aceste compresoare se mai numesc și surpresoare și au numai un etaj doi de comprimare ce aspiră gazul de la presiunea de minim 20...25 bar. 
+Compresoarele pentru gaze pure sunt prevăzute numai cu două etaje, unul foarte mare care comprimă gazul de la 0 la 25 bar și altul mai mic care-l comprimă de la 25 la 200 bar în butelii speciale.
+
+
+== Note ==
+
+
+== Vezi și ==
+Aer
+
+
+== Legături externe ==
+Scuba Compressor Review Arhivat în 26 decembrie 2008, la Wayback Machine. en
+Review Compressor Parts and Accessories en
+
+
+== Firme producătoare ==
+Bauer
+Coltri Sub
+Comp Air
+Eagle Compressors
+Hypress Arhivat în 21 august 2008, la Wayback Machine.
+SMP Arhivat în 17 septembrie 2008, la Wayback Machine.
+RIX seci, fără ungere
+ABAC CO.UK. Arhivat în 3 aprilie 2009, la Wayback Machine. compresoare electrice
+
+
+== Bibliografie ==
+Mircea Degeratu, Aron Petru, Sergiu Ioniță: Manualul Scafandrului. Editura Per Omnes Artes, București, 1999, ISBN 973-97916-5-4
+Dinu Dumitru, Vlad Constantin : Scafandri și vehicule subacvatice. Ed. Științifică și Enciclopedică, București, 1986

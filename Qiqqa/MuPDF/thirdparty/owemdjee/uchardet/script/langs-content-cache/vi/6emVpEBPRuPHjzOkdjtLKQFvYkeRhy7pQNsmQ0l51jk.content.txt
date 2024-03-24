@@ -1,0 +1,67 @@
+revision: 69683428
+title: Google Analytics
+url: https://vi.wikipedia.org/wiki/Google_Analytics
+
+
+---
+
+Google Analytics (viết tắt là GA) là một dịch vụ miễn phí của Google cho phép tạo ra các bảng thống kê chi tiết về khách đã ghé thăm một trang web. Nó là sản phẩm được các nhà Marketing trong giới Internet dùng để đối chọi lại với giới webmaster và giới kỹ thuật trong khi nền công nghiệp phân tích web đang ngày càng phát triển.
+Để sử dụng được dịch vụ dịch vụ Google Analytics, người dùng phải đăng ký một tài khoản Gmail (hay còn gọi là Google Mail).
+
+
+== Tính năng ==
+Được tích hợp với AdWords, người dùng có thể xem lại chiến dịch trực tuyến bằng cách theo dõi chất lượng và chuyển đổi trang đích đến (mục tiêu). Mục tiêu có thể bao gồm bán hàng, tạo khách hàng tiềm năng, đăng kí email, xem một trang cụ thể hoặc tải xuống một tệp tin cụ thể.
+Cách tiếp cận của Google Analytics là hiển thị dữ liệu cấp cao, dữ liệu bảng điều khiển cho người dùng thông thường và nhiều dữ liệu chuyên sâu hơn trong báo cáo. Phân tích Google Analytics có thể xác định các trang có hiệu suất kém bằng các kỹ thuật như hình dung kênh, nơi khách truy cập đến từ (vd: mạng xã hội, website, quảng cáo,..), họ ở lại bao lâu, vị trí địa lý và vô vàn tính năng khác. Nó cũng cung cấp nhiều tính năng nâng cao, bao gồm phân khúc khách truy cập tùy chỉnh.
+Hơn hết, Google Analytics e-commerce có thể theo dõi được số lượng đơn hàng ở trên website, hoạt động diễn ra ở web dựa trên mục tiêu mình đặt ra. Bản báo cáo này có thể cho thấy các giao dịch, doanh thu của trang web, các mục tiêu hoàn thành và nhiều chỉ số thương mại khác.
+Một người có thể giới hạn tối đa theo dõi 100 trang web trên một tài khoản. Giới hạn với từng website được theo dõi là 5 triệu lần truy cập trên tháng (khoảng 2 lượt xem mỗi giây) trừ khi trang web được liên kết với lại Google Adwords.
+
+
+== Lịch sử ==
+Google mua lại Urchin Software Corp. vào tháng 4 năm 2005. Dịch vụ của Google được phát triển từ Urchin on Demand. Hệ thống này cũng đưa ra những ý tưởng từ Adaptive Path, sản phẩm, Measure Map, được mua lại và sử dụng trong việc thiết kế lại Google Analytics vào năm 2006. Google vẫn tiếp tục bán phần mềm Web Analytics Urchin độc lập, có thể cài đặt thông qua mạng lưới các nhà bán lại giá trị gia tăng cho tới khi ngừng hoạt động vào ngày 28 tháng 3 năm 2012.
+Phiên bản được thương hiệu của Google được tung ra vào tháng 11 năm 2005 cho bất cứ ai muốn đăng ký. Tuy nhiên, do nhu cầu rất cao đối với dịch vụ, các đăng ký mới đã bị đình chỉ chỉ một tuần sau đó. Khi khả năng được bổ sung vào hệ thống, Google đã bắt đầu sử dụng mô hình mã lời mời kiểu xổ số. Trước tháng 8 năm 2006, Google đã gửi nhiều mã lời mời vì tính sẵn có của máy chủ; kể từ giữa tháng 8 năm 2006, dịch vụ đã được cung cấp đầy đủ cho tất cả người dùng - cho dù họ sử dụng Google để quảng cáo hay không.
+Phiên bản mã theo dõi Google Analytics mới hơn được biết đến là mã theo dõi không đồng bộ, mà Google tuyên bố là đáng tin cậy hơn nhiều và chính xác hơn và có thể theo dõi ngay cả những hoạt động rất ngắn trên trang web. Phiên bản trước đã trì hoãn việc tải trang và do đó, vì lý do hiệu suất, nó thường được đặt ngay trước khi thẻ <body body </ body> đóng HTML. Đoạn mã mới có thể được đặt giữa đầu <head>...</ head> các thẻ HTML head bởi vì, một khi được kích hoạt, nó chạy song song với việc tải trang.
+Vào tháng 4 năm 2011, Google đã công bố sự có sẵn của một phiên bản mới của Google Analytics với nhiều bảng điều khiển, nhiều tùy chọn báo cáo tùy chỉnh hơn và thiết kế giao diện mới. Phiên bản này sau đó đã được cập nhật với một số tính năng khác như phân tích thời gian thực và các biểu đồ lưu lượng đích.
+Vào tháng 10 năm 2012, phiên bản mới nhất của Google Analytics đã được công bố, gọi là 'Universal Analytics'. Sự khác biệt chính từ các phiên bản trước đó là theo dõi nền tảng chéo, mã theo dõi linh hoạt để thu thập dữ liệu từ bất kỳ thiết bị nào và giới thiệu thứ nguyên và chỉ số tùy chỉnh.
+
+
+== Công nghệ ==
+Google Analytics được thực hiện với " thẻ trang ", trong trường hợp này, được gọi là Mã theo dõi Google Analytics, là một đoạn mã JavaScript mà chủ sở hữu trang web thêm vào mọi trang của trang web. Mã theo dõi chạy trong trình duyệt của khách hàng khi khách hàng duyệt trang (nếu JavaScript được bật trong trình duyệt) và thu thập dữ liệu của khách truy cập và gửi nó tới máy chủ thu thập dữ liệu của Google như một phần yêu cầu cho một đèn hiệu web. 
+Mã theo dõi tải tệp JavaScript lớn hơn từ máy chủ web của Google và sau đó đặt các biến với số tài khoản của người dùng. Tệp lớn hơn (hiện tại được gọi là ga.js) thường là 18 KB. Thường không phải tải tệp, do bộ nhớ đệm của trình duyệt. Giả sử bộ nhớ đệm được kích hoạt trong trình duyệt, nó chỉ tải về ga.js một lần vào lúc bắt đầu chuyến viếng thăm. Hơn nữa, vì tất cả các trang web triển khai Google Analytics bằng mã ga.js đều sử dụng cùng một tệp tin chính từ Google, trình duyệt đã truy cập vào bất kỳ trang web nào khác đang chạy Google Analytics sẽ có tệp lưu trữ trên máy của họ.
+Ngoài việc truyền tải thông tin đến máy chủ của Google, mã theo dõi đặt một cookie của bên thứ nhất (nếu cookie được bật trong trình duyệt) trên máy tính của mỗi khách truy cập. Cookie này lưu trữ thông tin ẩn danh, được gọi là ClientId.  Trước khi phát hành Universal Analytics, có một số cookie lưu trữ thông tin như liệu khách truy cập đã truy cập vào trang web trước đó (khách truy cập mới hay khách truy cập quay lại), dấu thời gian của lượt truy cập hiện tại và trang web giới thiệu hoặc chiến dịch giới thiệu Khách truy cập trang (ví dụ: công cụ tìm kiếm, từ khóa, biểu ngữ hoặc email).
+Nếu khách truy cập đến trang web bằng cách nhấp vào liên kết được gắn thẻ Mã Urchin Traffic Monitor (UTM) như:
+
+http://toWebsite.comSau đó các giá trị thẻ được chuyển đến cơ sở dữ liệu quá. 
+
+
+==== Hạn Chế ====
+Thêm vào đó, Gói Google Analytics cho Điện thoại Di động cho phép Google Analytics được áp dụng cho các trang web trên điện thoại di động. Gói Điện thoại Di động chứa mã theo dõi phía máy chủ sử dụng PHP, JavaServer Pages, ASP.NET hoặc Perl cho ngôn ngữ phía máy chủ của nó. [25]
+Tuy nhiên, nhiều chương trình và tiện ích lọc quảng cáo (chẳng hạn như Adblock của Firefox và NoScript) và ứng dụng Điện thoại di động Disconnect Mobile có thể chặn Mã Theo dõi Google Analytics. Điều này ngăn cản một số lưu lượng truy cập và người dùng được theo dõi và dẫn đến lỗ hổng trong dữ liệu được thu thập. Ngoài ra, các mạng riêng tư như Tor sẽ che đậy vị trí thực tế của người dùng và đưa ra dữ liệu địa lý không chính xác. Một số người dùng không có trình duyệt có hỗ trợ / bật JavaScript hoặc tắt tính năng này. Tuy nhiên, những hạn chế này được coi là nhỏ - chỉ ảnh hưởng đến một tỷ lệ nhỏ các lần truy cập. [26]
+Tác động tiềm ẩn lớn nhất đến tính chính xác của dữ liệu đến từ người dùng xóa hoặc chặn cookie của Google Analytics. [27] Không có cookie được đặt, Google Analytics không thể thu thập dữ liệu. Bất kỳ người dùng web cá nhân nào cũng có thể chặn hoặc xóa các cookie dẫn đến mất dữ liệu của những lần truy cập đó cho người dùng Google Analytics. Chủ sở hữu trang web có thể khuyến khích người dùng không tắt cookie, ví dụ như bằng cách tạo cho du khách thoải mái hơn bằng cách sử dụng trang web thông qua việc đăng một chính sách bảo mật.
+Những hạn chế này ảnh hưởng đến phần lớn các công cụ phân tích web sử dụng thẻ trang (thường là các chương trình JavaScript) được nhúng trong các trang web để thu thập dữ liệu của khách truy cập, lưu trữ trong các cookie trên máy tính của khách truy cập và chuyển nó tới một cơ sở dữ liệu từ xa bằng cách giả vờ nạp một đồ họa nhỏ "Đèn hiệu".
+Một hạn chế khác của Google Analytics cho các trang web lớn là sử dụng mẫu trong quá trình tạo ra nhiều báo cáo của nó. Để giảm tải trên các máy chủ của họ và để cung cấp cho người dùng phản hồi tương đối nhanh cho truy vấn của họ, Google Analytics hạn chế báo cáo tới 500.000 phiên tự chọn ngẫu nhiên ở cấp tiểu sử để tính toán. Mặc dù tỷ lệ lỗi được chỉ định cho số liệu về số lần truy cập, lợi nhuận của lỗi không được cung cấp cho bất kỳ số liệu khác trong báo cáo Google Analytics. Đối với các phân đoạn nhỏ, dữ liệu có thể là rất lớn
+
+
+== Bảo mật ==
+Do tính phổ biến của nó, Google Analytics dẫn tới một số mối quan ngại về vấn đề bảo mật. Mỗi khi có ai đó truy cập trang web sử dụng Google Analytics, nếu JavaScript được bật trong trình duyệt, thì Google sẽ theo dõi lượt truy cập đó qua địa chỉ IP của người dùng để xác định vị trí địa lý tương đối của người dùng. Để tuân thủ các yêu cầu pháp lý của Đức, Google Analytics có thể làm ẩn danh địa chỉ IP. 
+Có các phương thức giúp cho Google có thể theo dõi ngay cả khi người dùng sử dụng các phần mềm chặn quảng cáo để chặn Google Analytics hay tắt chức năng JavaScript của trình duyệt. Google cũng phát triển các Plugin có tác dụng chặn các thông tin về hành vi sử dụng web của người dùng đến Google. Vì plugin này được sản xuất và phân phối bởi chính Google, nên nó đã vấp phải những tranh luận và chỉ trích. Hơn nữa, việc thực hiện các tập lệnh của Google theo dõi hành vi người dùng đã tạo ra nhiều plugin, thường là mã nguồn mở để từ chối theo dõi cookies. Các trình cắm này cung cấp cho người dùng sự lựa chọn, liệu có cho phép Google Analytics theo dõi các hoạt động của họ hay không. Tuy nhiên, một phần vì luật bảo mật riêng tư của châu Âu, hầu hết các trình duyệt hiện đại cho phép người dùng từ chối cookie theo dõi, mặc dù cookie Flash có thể là một vấn đề khác nữa.
+Điều này đã được báo cáo trước rằng phía sau các máy chủ proxy và nhiều tường lửa, có thể gây ra lỗi thay đổi tem thời gian và đăng ký các tìm kiếm không hợp lệ. 
+Các quản trị viên web tìm cách giảm thiểu các vấn đề bảo mật riêng tư của Google Analytics có thể sử dụng các phương án thay thế có backends của họ được lưu trữ trên máy của chính họ. Cho đến khi ngừng hoạt động, một ví dụ về sản phẩm như vậy là Phần mềm WebAnalytics Urchin từ chính Google. 
+Vào ngày 20 tháng 1 năm 2015, Associated Press báo cáo rằng HealthCare.gov cung cấp quyền truy cập dữ liệu cá nhân của người đăng ký cho các công ty tư nhân chuyên quảng cáo. Google Analytics đã được đề cập trong bài viết đó.
+
+
+== Hỗ trợ và đào tạo ==
+Google cung cấp miễn phí các bài học IQ của Google Analytics, bài kiểm tra chứng nhận Google Analytics, Trung tâm trợ giúp miễn phí Diễn đàn FAQ và Google Groups dành cho hỗ trợ sản phẩm chính thức của Google Analytics.
+Các tính năng mới của sản phẩm được công bố trên Blog của Google Analytics. Hỗ trợ doanh nghiệp được cung cấp thông qua Đối tác được chứng nhận của Google Analytics.
+
+
+== Sự thông dụng ==
+Hiện nay, Google Analytics là dịch vụ thống kê trang web được sử dụng rộng rãi nhất, với lượng sử dụng trên khoảng 55% trong 10.000 trang web phổ biến nhất. Một phân tích chia sẻ thị trường khác cho rằng Google Analytics được sử dụng ở khoảng 49,95% trong số 1.000.000 trang web hàng đầu (hiện tại được xếp hạng bởi Alexa).
+Vào tháng 8 năm 2013, Google Analytics đã được 66,2% sử dụng trên 10.000 trang web phổ biến nhất được sắp xếp theo mức độ phổ biến, như được tường thuật bởi BuiltWith. vào tháng 5 năm 2008, Pingdom phát hành một cuộc khảo sát cho thấy 161 trong số 500 trang web lớn nhất (32%) theo thứ hạng Alexa của họ đang sử dụng Google Analytics.
+
+
+== Tham khảo ==
+
+
+== Liên kết ngoài ==
+Google Analytics web site
+Oficial Blog

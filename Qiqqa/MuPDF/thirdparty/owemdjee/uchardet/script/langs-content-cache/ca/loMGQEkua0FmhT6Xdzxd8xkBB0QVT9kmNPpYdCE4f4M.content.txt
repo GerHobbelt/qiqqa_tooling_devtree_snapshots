@@ -1,0 +1,38 @@
+revision: 31519671
+title: Soil Moisture and Ocean Salinity satellite
+url: https://ca.wikipedia.org/wiki/Soil_Moisture_and_Ocean_Salinity_satellite
+
+
+---
+
+La missió SMOS, acrònim en (anglès) de Soil Moisture and Ocean Salinity satellite, en (català) "Satèl·lit d'humitat terrestre i salinitat en els oceans" es va crear per proveir, des de l'espai, dades més precises sobre la humitat del sòl i la salinitat en els oceans terrestres. El Soil Moisture and Ocean Salinity Satellite (SMOS) és una part del Living Planet Programme de la ESA. A més, un altre dels objectius del satèl·lit és facilitar una millor  predicció de condicions climàtiques extremes, registrant dades sobre l'acumulació de gel i neu. El projecte compta amb instruments més moderns amb l'esperança de recopilar informació més precisa. El satèl·lit es va llançar amb èxit el 2 de novembre de 2009.Mesures de caràcter de la humitat del sòl i de la salinitat dels oceans són importants per entendre millor el clima i els cicles hidrològics de la Terra. Encara no existia un registre complet sobre la humitat terrestre i la salinitat dels oceans. Els satèl·lits en òrbita de la NASA han proporcionat informació per als projectes de models computacionals, com ara el GEWEX. La humitat terrestre s'usa de forma regular en els models utilitzats per  pronosticar el temps. A més, l'exactitud de la humitat terrestre pot ajudar a entendre millor el resultat de les collites en regions geogràfiques més àmplies Gràcies a projectes d'aquest tipus s'ha arribat a la conclusiónd i que la humitat terrestre va ser un dels prerequisits de la Gran Inundació de 1993 (Alt Mississipí, Baix Missuouri, i Alt dels Rius Vermells).El projecte va ser proposat per CESBIO a la Earth Explore Opportunity Missions el novembre de 1998. El 2004 el projecte va superar la fase "C/D" de l'ESA. Després de diversos retards, es va anunciar que el llançament definitiu seria el 2 de novembre de 2009 a les 01:50 UTC des del Cosmòdrom de Plesetsk en una llançadora Rockot.
+
+
+== Importància i desenvolupament ==
+La humitat terrestre és un important aspecte climàtic i per tant de rellevància per al pronòstic del temps. Algunes plantes, com els arbres, transpiren aigua des profunditats superiors a un metre. Un satèl·lit com el SMOS només pot esbrinar el contingut d'aigua a pocs centímetres de profunditat, però, servint-se de mesuraments repetitives al llarg del dia, es pot extrapolar el contingut d'aigua a la Terra. Aquests càlculs es basen en les diferències d'humitat des de l'alba fins a la posta de sol. Els investigadors del projecte SMOS de l'ESA esperen treballar amb agricultors repartits per tot el món, incloent també científics de la USDA en el Mig Oest nord-americà amb el propòsit d'usar aquesta regió per calibrar les estimacions d'humitat terrestre. L'objectiu de la missió SMOS és controlar la humitat de la superfície de la Terra amb una exactitud del 4% (at 35-50 km resolució òptica). Aquest aspecte és responsabilitat del projecte Hydros. El projecte Aquarius tractarà de controlar la salinitat de la superfície del mar amb una exactitud de 0.1  psu (a una mitjana d'entre 10 i 30 dies i una resolució òptica de 200 km x 200 km).
+
+
+== Instruments ==
+La unitat SMOS comptarà amb un instrument capaç de mesurar tant la humitat terrestre com la salinitat dels mars. Un nou instrument, denominat MIRAS s'ha desenvolupat per a aquest satèl·lit. Aquest instrument crea imatges de radiació emeses en la banda Banda L de microones (1.4 GHz). MIRAS és un radiòmetre interferomètric en forma de Y en 2-D. En primer lloc mesurarà els camps de temperatura de brillantor a partir d'entre 3 i 5 cm d'humitat terrestres i la salinitat superficial de la mar s'establiran com level 2 products.
+Aquest dispositiu proporciona informació sobre salinitat oceànica i humitat terrestre amb una precisió capaç de detectar 0,1 grams de sal en un litre d'aigua i fins a una cullerada d'aigua barrejada amb un grapat de terra. És el primer artefacte d'aquest tipus enviat a l'espai i ha estat liderat pel consorci espanyol que dirigeix EADS/CASA. El MIRAS compta amb 69 petites antenes receptores repartides per tres braços que es desplegaran una vegada que el satèl·lit estigui en òrbita, abastant un diàmetre de vuit metres.
+
+
+== Plataforma i llançament ==
+El satèl·lit SMOS, fou transportant per Proteus (fabricat per CNES-Alcatel Space), una petita plataforma (1 m³). El Proteus s'ha consolidat com un "bus espacial" en moltes missions. El satèl·lit serà llançat a una òrbita a una distància de 763 km sobre la terra mitjançant el "Rockot", un míssil balístic intercontinental (ICBM)  rus del tipus SS-19 des de la llançadora del Cosmòdrom de Plesetsk, al nord de Rússia. SMOS va ser posat en òrbita juntament amb el satèl·lit Proba-2, de caràcter tecnològic.
+
+
+== Operacions i activitat a la Terra ==
+El Satellite Operations Ground Segment del CNES (Tolosa, França) operarà l'aeronau amb telecomunicacions de la base de banda S de la ESA (Kiruna, Suècia). El processament de dades realitzat a la Terra, concretament des de l'estació de seguiment de satèl·lits ESAC de Villanueva de la Cañada, Espanya processà les dades SMOS (banda X). El processament a alt de nivell de la informació recopilada és realitzat per científics de forma global.
+
+
+== Vegeu també ==
+Soil Moisture Active Passive
+
+
+== Referències ==
+
+
+== Enllaços externs ==
+ESA - Pàgina de SMOS (anglès)
+SMOS arriba al centre de llançament a Rússia article de l'ESA (castellà)
+SMOS Barcelona Expert Centre Arxivat 2013-08-21 a Wayback Machine. (anglès)

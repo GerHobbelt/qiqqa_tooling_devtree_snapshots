@@ -1,0 +1,33 @@
+revision: 68270290
+title: Akumulator niklowo-metalowo-wodorkowy
+url: https://pl.wikipedia.org/wiki/Akumulator_niklowo-metalowo-wodorkowy
+
+
+---
+
+Akumulator niklowo-metalowo-wodorkowy (NiMH lub Ni-MH, ang. nickel metal hydride) – akumulator, w którym katodę stanowi płytka niklowa, a anodę stop metali, z którym reaguje wydzielający się podczas ładowania wodór, tworząc wodorek metalu.
+Akumulatory tego typu nie zawierają toksycznych związków kadmu jak akumulator NiCd. Posiadają jedną z najwyższych gęstości energii (360 MJ/m³).
+Ogniwa NiMH długo nie wchodziły do produkcji masowej – mimo że elektroda wodorowa bardzo dobrze nadaje się na anodę, konstrukcja wykorzystująca to ogniwo wymaga absolutnej szczelności, porowatej elektrody oraz wysokiego ciśnienia. Jedynym rozwiązaniem jest związanie wodoru w związek chemiczny powstający podczas ładowania, a rozpadający się podczas rozładowywania ogniwa. Związki takie odkryto pod koniec lat 60. XX wieku, a prace nad praktycznym zastosowaniem trwały do końca XX w. W nowoczesnych akumulatorkach NiMH anody zbudowane są z porowatego stopu wielu metali, takich jak np. wanad, tytan, cyrkon, nikiel, chrom, kobalt i żelazo. Przyczyna lepszej wydajności (możliwości wiązania i uwalniania wodoru) takich egzotycznych stopów nie jest do końca jasna – ich składy ustalane są eksperymentalnie.
+Poza anodą, konstrukcja akumulatorków NiMH nie różni się w zasadzie od konstrukcji wypartych przez nie akumulatorów NiCd. Siła elektromotoryczna obu ogniw wynosi ok. 1,2 V, co sprawia, że w wielu zastosowaniach akumulatory te można stosować zamiennie.
+Płytka niklowa stanowi elektrodę dodatnią, a elektrodą ujemną jest stop niklu, manganu, magnezu, kobaltu i aluminium. Klucz elektrolityczny wykonany jest z poliamidu lub polietylenu, zaś elektrolit jest zasadowy. Akumulatory NiMH mają od dwóch do trzech razy większą pojemność, niż odpowiadające im akumulatory NiCd, a także mają o wiele mniejszy efekt pamięci (jednak nadal wymagają procesu formowania). W akumulatorach tych istnieje za to tzw. efekt leniwej baterii; powstaje on wskutek niecałkowitego rozładowania, co powoduje nieznaczny spadek napięcia znamionowego; efekt ten można usunąć za pomocą ładowarki z funkcją rozładowania.
+Akumulatory NiMH są droższe od akumulatorów NiCd. Charakteryzują się szybszym czasem samorozładowania i krótszą żywotnością. Osiągają pojemność większą o około 30%, charakteryzują się także większą gęstością energii (teoretycznie 50%, praktycznie – około 25%). Nowością wśród akumulatorów są produkty łączące w sobie zalety akumulatorów NiMH i baterii, np. firmy GP Batteries ReCyko+ lub Sanyo Eneloop (sprzedawane zazwyczaj w pełni naładowane).
+Akumulatory NiMH znalazły szerokie zastosowanie w samochodach hybrydowych. Do końca 2013 roku wyprodukowano ich ponad 6 mln. Toyota stosuje je w większości swoich modeli, m.in. w pierwszym modelu hybrydowym, Priusie.
+
+Anoda: stop metali ziem rzadkich lub niklu z wieloma innymi metalami
+Katoda: tlenowodorotlenek niklu
+Elektrolit: wodorotlenek potasu
+
+
+== Reakcje chemiczne ==
+elektroda (katoda)NiO(OH) + H2O + e− → Ni(OH)2 + OH−elektroda (anoda)MH + OH− → M + H2O + e−reakcja całkowitaMH + NiO(OH) → M + Ni(OH)2
+
+
+== Przykładowe parametry ==
+* – Dane szacunkowe na podstawie www.batteryspace.com
+
+
+== Przypisy ==
+
+
+== Linki zewnętrzne ==
+Inside the Nickel Metal Hydride Battery. cobasys.com. [zarchiwizowane z tego adresu (2016-05-27)].

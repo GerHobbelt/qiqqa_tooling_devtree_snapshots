@@ -1,0 +1,97 @@
+revision: 27853090
+title: Robot
+url: https://tr.wikipedia.org/wiki/Robot
+
+
+---
+
+Robot, otonom veya önceden programlanmış görevleri yerine getirebilen elektro-mekanik bir cihazdır. Güncel tanımı ile robotlar, elektronik ve mekanik birimlerden oluşan, algılama yeteneğine sahip olan ve programlanabilen cihazlardır. Başka bir tanımla robotlar, canlıların işlevlerini ve davranışlarını taklit edebilen, fiziksel yeteneklere ve yapay zekâya sahip, disiplinler arası öğeler içeren mühendislik ürünleridir.Robotlar doğrudan bir operatörün kontrolünde çalışabildikleri gibi bağımsız olarak bir bilgisayar programının kontrolünde de çalışabilir. Robot deyince insan benzeri makineler akla gelse de robotların çok azı insana benzer.
+Günümüzde robotların en büyük kullanım alanı endüstriyel üretimdir. Özellikle otomotiv endüstrisinde çok sayıda robot kullanılır. Bunların çoğu kol şeklindeki robotlardır. Bunlar parçaları monte eden, birleştiren, kaynak ve boya yapan robotlardır.
+Evlerde robot kullanımı giderek artmaktadır. Evlere giren ilk robotlar Furby, AIBO gibi oyuncaklardır. Başta ABD'de olmak üzere ev işlerine yardımcı olan robotların kullanımı da giderek yaygınlaşmaktadır. Yerleri kendi kendine süpüren robot elektrik süpürgeleri büyük talep görmektedir.
+
+
+== Etimoloji ==
+Robot kelimesi, ilk defa Karel Čapek'in 1920 yılında yazdığı  R.U.R. - Rossum's Universal Robots adlı (ve Türkçeye Halid Fahri tarafından R.U.R. - Alemşumul Suni Adamlar Fabrikası adıyla çevrilip, Osmanlıca olarak 1927 yılında Devlet Matbaası tarafından da yayınlanan) eserinde yer almış ve daha sonra tüm dünyada kullanılmaya başlanmıştır. Karel Čapek'in R.U.R. adlı oyununda mekanik ve otonom, ama insanca duygulardan yoksun yaratıklar olarak kullanılan robot, daha sonra birçok bilimkurgu romanına konu olmuştur. Isaac Asimov ünlü robot serisiyle teknolojik açıdan tutarlı bir robot kavramı yaratır ve robotların amacının insana hizmet olduğunu, bir robotun kendi amaçlarını insanların amaçlarına hiçbir zaman tercih edemeyeceğini koyduğu 3 Robot Yasası'yla belirler. Bu robot yasaları şu anda insanla robot arasındaki ahlaksal ve hukuksal ilişkinin temelini oluşturmaktadır.
+
+
+== Asimov'un robot yasaları ==
+0. Yasa: Bir robot, insanlığa zarar veremez veya hareketsiz kalarak insanlığın zarar görmesine izin veremez. (Bu yasa, sonradan "Sıfırıncı Yasa" olarak eklenmiştir.)
+1. Yasa: Bir robot, 0. yasa ile çelişmediği sürece, hiçbir şekilde insan türüne zarar veremez veya hareketsiz kalarak zarar görmesine izin veremez.
+2. Yasa: Bir robot, 0. ve 1. yasaları ile çelişmediği sürece, kendisine insanlar tarafından verilen komutlara itaat etmek zorundadır.
+3. Yasa: Bir robot, 0., 1. ve 2. yasalar çelişmediği sürece, kendi varlığını korumak zorundadır.
+
+
+== Robotik ==
+
+Bazı görevler için insanın yerini tamamen alabilecek, bazı görevler için ise insanlara yardım edebilecek sistemlerin hazırlanmasıyla ilgili çalışmaları kapsayan bilim dalıdır. Bu bilim dalında çalışan kişiler genel olarak yazılımcılar, elektriksel donanım tasarımcıları, mekanik donanım tasarımcıları ve bunların üreticileridir.
+
+
+== Robotik Tarihi ==
+Batı yazınında MÖ 300 yıllarında Yunan matematikçi Archytas tarafından buharla çalışan bir güvercin yapılmış olduğu belirtilse de, robotikle ilgili bilinen en eski yazılı kayıt, Cezeri'ye aittir. Robotik ile ilgili tarihteki ilk önemli çalışmalara imza atan Cezeri; otomatik saatler, abdest alma ya da ikram hizmetinde bulunan makineler gibi icatlar ortaya çıkartmıştır. El-Cezeri'nin yaptığı bu otomatların enerji kaynağı ise yer çekimi kuvvetiydi. Bu kuvvet de ya düşürülen bir ağırlık, ya boşalan bir kaptaki şamandıra ya da batan bir cisim sayesinde enerji üretiyordu. 
+
+
+== Robot nedir? ==
+Robot duyargaları (sensör) ile çevresini algılayan, algıladıklarını yorumlayan, bunun sonucunda karar alan (yapay zeka), karar sonucuna göre davranan, eylem olarak hareket organlarını çalıştıran veya durduran bir aygıttır. Bu tanıma göre bilgisayara paralel port ile bağlı ve klavyeden kontrol edilen bir araba robot değildir. Çünkü kendisi tek başına karar vermemekte, bizim klavyeden verdiğimiz talimatları uygulamaktadır. Ancak aynı araba duyargaları ile algıladıklarını yorumlamak üzere bilgisayarın mikroişlemcisini kullanıp, yorumlatıyor ve kendi karar alabiliyor, algılamalarına göre bizden bağımsız davranabiliyorsa o artık bir robottur.
+
+
+== Sinemalardaki robotlar ==
+Sinemada, robotik konvansiyonel bir görsel efekt tekniği olarak yer bulmuştur. Sanatsal görüş, malzeme bilgisi ve teknik birleştiğinde çok gerçek efektler elde edilebilmektedir. Genellikle bu konuda bilgi azdır, çünkü efekt şirketleri tekniklerini gizli tutmaktadır. Ancak genel olarak Mekatronik konusunda bilgili kişilerin ilgilendiği bir alandır. Sinemada robotikin nasıl gerçekleştirildiğini görmek için korku ve yaratık filmleri:
+
+Homunculus, 1916
+Der Golem, 1920
+Frankenstein, James Whale, 1931
+Metropolis, Fritz Lang, 1927
+Gibel Sensatsii, Aleksandr Andrievski, 1935
+Doctor Satan's Robot, William Witney-John English, 1940
+The Day the Earth Stood Still, Robert Wise, 1951
+The Invaders from Mars, William Cameron Menzies, 1953
+Robot Monster, Phil Tucker, 1953
+Tobor the Great, Lee Sholem, 1954
+Gog, Herbert L. Strock, 1954
+Devil Girl from Mars, David MacDonald, 1954
+Forbidden Planet, 1956
+The Mysterians, Iroshiro Honda, 1957
+Cylons, Battlestar Galactica, 1970, 2004
+The Invisible Boy, Hermann Hoffman, 1957
+Alphaville, Jean Luc Godard, 1965
+Dr. Who and the Daleks, Gordon Flemyng, 1965
+Docteur Goldfoot and the Bikini Machine, Norman Taurog, 1965
+Human Duplicators, Hugo Grimaldi, 1965
+2001:A Space Odyssey, Stanley Kubrick, 1968
+THX 1138, George Lucas, 1971
+Silent Running, Douglas Trumbull, 1972
+Westworld, Michael Crichton, 1973
+Sleeper, Woody Allen, 1973
+Futureworld, Richard T. Helffron, 1977
+Demon Seed, Donald Cammel, 1977
+Star Wars, George Lucas, 1977
+Alien, Ridley Scott, 1979
+Galaxina, William Sachs, 1980
+Saturn 3, Stanley Donen, 1980
+Blade Runner, Ridley Scott, 1982
+Androide, Aaron Lipstadt, 1983
+Runaway, Michel Crichton, 1984
+Terminatör, James Cameron, 1984
+Daryl, Simon Wincer, 1985
+Deadly Friend, Wes Craven, 1986
+Short Circuit, John Bedham, 1986
+Star Trek, The Next Generation, Gene Roddenberry, 1987
+Robocop, Paul Verhoeven, 1987
+Bunker Palace Hotel, Enki Bilal, 1989
+Roboforce, David Chung, 1989
+Cyborg, Albert Pyun, 1989
+Screamers, Christian Duguay, 1995
+Bicentennial Man, Chris Columbus, 1999
+Lost in Space, Stephen Hopkins, 1998
+The Iron Giant, Brad Bird, 1999
+A.I. Artificial Intelligence, Steven Spielberg, 2001
+i Robot, Alex Proyas, 2004
+Robots, Chris Wedge, 2005
+Transformers, Michael Bay, 2007
+Wall-E, Andrew Stanton, 2008
+Transformers: Revenge of the Fallen, Michael Bay, 2010
+Suretler, Jonathan Mostow, 2009
+Chappie 2015
+
+
+== Kaynakça ==

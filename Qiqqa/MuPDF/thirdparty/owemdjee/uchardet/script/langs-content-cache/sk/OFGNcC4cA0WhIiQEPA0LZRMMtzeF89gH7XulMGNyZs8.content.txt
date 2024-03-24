@@ -1,0 +1,21 @@
+revision: 7257242
+title: Bolometer
+url: https://sk.wikipedia.org/wiki/Bolometer
+
+
+---
+
+Bolometer je citlivý prístroj na meranie slabého žiarenia, založený na rezistore s vysokým teplotným súčiniteľom.Zhotovuje sa ako vhodne tvarovaný tenký pásik čistého kovu (platina) s vývodmi na galvanometer. Od vedľajších rušivých vplyvov (straty konvekciou) sa bolometer izoluje vákuovým puzdrom. Pohlcovaním dopadnutého žiarenia sa mení odpor bolometra, na základe čoho sa vypočíta množstvo pohltenej energie. Bolometer je vhodný aj na veľmi presné meranie teploty. V spojení s ďalekohľadom sa ním meria žiarenie hviezd a tepelné žiarenie Mesiaca a planét. Moderné konštrukcie majú namiesto kovového pásika termistor. Na premeriavanie rozloženia intenzity v spektre (najmä Slnka) sa používa spektrobolometer.
+
+
+== Referencie ==
+
+
+== Pozri aj ==
+bolometrická magnitúda
+bolometrická korekcia
+
+
+== Iné projekty ==
+
+ Commons ponúka multimediálne súbory na tému Bolometer

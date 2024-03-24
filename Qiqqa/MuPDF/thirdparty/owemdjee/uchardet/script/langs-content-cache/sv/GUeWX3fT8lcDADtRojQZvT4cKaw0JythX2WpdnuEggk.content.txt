@@ -1,0 +1,92 @@
+revision: 51560526
+title: Virus
+url: https://sv.wikipedia.org/wiki/Virus
+
+
+---
+
+Virus är de minsta biologiska enheterna som kan infektera levande organismer. Virus är parasiter i celler. Ett virus som infekterar en värdcell omprogrammerar cellen så att cellen skapar och utsöndrar fler viruspartiklar. Viruspartiklar består av nukleinsyra (arvsmassa i form av antingen RNA eller DNA), omgivet av ett proteinskal (ikosaeder) och ibland ett membran. Utanför värdcellen är viruspartiklarna en inaktiv transportform. Studiet av virus kallas virologi och är en gren av mikrobiologin.
+Olika biologer har olika syn på om virus kan betraktas som levande organismer eller icke-levande organiskt material, eftersom virus saknar egen cellstruktur och egen ämnesomsättning, och eftersom virus inte kan reproducera sig utanför värdcellen och inte använder celldelning för att reproducera sig, utan reproduceras genom att ett stort antal viruspartiklar spontant sammanfogas i värdcellen. Virus betraktas av vissa biologer ändå som en egen livsform eftersom de har gener och reproducerar sig och utvecklas genom arv av mutationer och naturligt urval. Virus har beskrivits som "organismer i livets utkant", och som "ett mellanting mellan levande och död materia" eller som obligata intracellulära parasiter eller agenter som interagerar med levande organismer. Virus har jämförts med spontan ordning vid själv-organiserande/själv-replikerande tillväxt av kristaller, vilka dock inte vidareutvecklas genom evolution.Virus kan infektera alla levande organismer. Ett specifikt virus kan bara infektera en viss typ av celler. Sjukdomar orsakade av virus kallas virussjukdomar eller mer vetenskapligt viroser. Det finns minst 600 virus som kan infektera människor. Virus som infekterar bakterier kallas bakteriofager.
+Virus sprids ofta via kroppsvätskor, luften, fysisk kontakt och avföring, direkt kontakt med smittokälla eller via luften i aerosoler. Då viruspartiklar inte är levande är många av dem mycket motståndskraftiga mot krävande miljöer både utanför och inne i kroppen. Kroppen bekämpar virusinfektioner genom att upptäcka och eliminera virusinfekterade celler. Särskilt det adaptiva immunförsvaret bestående av lymfocyter (T- och B-celler) är viktigt i skyddet mot virusinfektioner. Ett framgångsrikt virus har därför utvecklat mekanismer för att dölja sin existens för immunförsvaret. Det går att vaccinera mot en lång rad virussjukdomar och därmed öka kroppens beredskap för att bekämpa det aktuella viruset. 
+Människor har många virus som ligger latenta i kroppen (exempelvis Epstein-Barr-virus), och hålls i schack av immunförsvaret. När immunförsvaret antingen är upptaget med annat eller nedsatt, som vid andra sjukdomar eller vid behandling med immunhämmande (immunosuppressiva) mediciner, kan sådana virus orsaka symptom. Eftersom virus har lätt för att mutera och därigenom skapa sätt att undgå medicinens verkningar, måste man ofta behandla med flera antivirala medel samtidigt. Eftersom många virus stimulerar de infekterade cellerna att dela sig, ökar vissa virus risken för cancer.
+I genterapi används virus som vektorer, det vill säga för att bära den relevanta genen in i cellen. 
+
+
+== Historia ==
+
+Virussjukdomen polio finns dokumenterad från faraonernas Egypten tack vare hieroglyfer. År 1796 upptäckte Edward Jenner att en mjölkerska som tidigare hade haft kokoppor var immun mot smittkoppor. Denna insikt ledde till att man lyckades ta fram ett vaccin mot smittkoppor. I slutet av 1800-talet utvecklades mikrobteorin av John Snow, Louis Pasteur och Robert Koch som säger att mikroorganismer kan orsaka sjukdomar. Dessförinnan hade miasmateorin för sjukdomar dominerat.
+År 1892 tillverkade den ryske botanisten Ivanovsky ett extrakt från tobaksplantor som var infekterade av växtsjukdomen tobaksmosaik. Därefter lät han extrakt passera genom ett filter för att kunna få fram den mikrob som låg bakom sjukdomen. När han studerade sitt filtrerade extrakt genom mikroskop märkte han att det inte fanns några bakterier – dock kunde extraktet ändå överföra sjukdomen tobaksmosaik till friska tobaksplantor. Ivanovsky drog då slutsatsen att något mindre än bakterier måste orsaka sjukdomen. År 1889 blev den holländske vetenskapsmannen Beijernick först med att mynta ordet virus (latin för gift), för att tydligt beskriva detta starka infektiösa ämne. Walter Reed kom 1900 fram till att gula febern som vållade stora problem vid byggandet av Panamakanalen orsakades av en mygga och därmed enkelt gick att skydda sig mot.
+Ernst Ruskas och Max Knolls uppfinning av elektronmikroskopet 1931 banade vägen för ökad förståelse av virus, eftersom de i allmänhet är för små för att kunna studeras med ljusmikroskop. År 1935 studerade den amerikanske biokemisten och virologen Wendell Stanley tobaksmosaiksviruset och kom fram till att det till stor del bestod av protein. Senare separerades detta virus i sina protein- respektive RNA-delar. Tobaksmosaikviruset var också det första virus som kristalliserades och vars struktur därför kunde studeras i detalj med röntgendiffraktion. De första bilderna av detta slag togs fram av Bernal och Fankuchen 1941. Rosalind Franklin lyckades 1955 kartlägga hela detta virus struktur.
+
+
+== Struktur ==
+
+Virus förekommer i olika storlekar och former, morfologier. Ett typiskt virus är ungefär 100 gånger mindre än en bakterie. De flesta studerade virus har en diameter mellan 10 och 300 nanometer.
+En fullständig viruspartikel (virion) består dels av genetiskt material i form av en nukleinsyra, RNA eller DNA, som antingen är dubbelsträngat (ds) eller enkelsträngat (ss) samt linjärt eller cirkulärt. Nukleinsyran omges av ett skyddande proteinskal (kapsid). Skalet består av ett antal identiska proteinenheter som var och en kallas kapsomer. Koden för detta protein finns i virusets genetiska material (nukleinsyran), och tillverkas i värdcellen efter att den infekterats av ett virus. Vissa viruspartiklar har också ett yttre lipidhölje uppbyggt av lipider som kommer från värdcellens cellmembran. Virus med lipidhölje kallas höljevirus, virus utan hölje kallas nakna virus. Vissa virus har även utskott på höljet som taggar bestående av glykoproteiner. Dessa används bland annat för att fästa till receptorer på värdcellen. De flesta virus som sprids fekalt-oralt saknar hölje.
+Kapsidens form används för att karaktärisera olika virus. Vanliga virusmorfologier är helix-form (spiralform) och ikosaeder-form (20-sidig polyeder). Utöver dessa finns komplexa former som består av flera sammansatta delar. Till exempel den binala formen hos bakteriofagerna (virus som infekterar bakterier). Den kan liknas vid en mekanisk spindel med ett polyedriskt huvud av kapsomerer (kapsiden) som nukleinsyran är inkapslad i och därefter en skida (stav) med svansar av fibrer som fyller funktionen att fästa vid bakteriens hölje. Bakteriofagerna lämnar nästan alltid sin struktur utanför och skjuter enbart in sin nukleinsyra i bakterien.
+
+
+== Arvsmassa ==
+Virusets egna gener kodar för ett fåtal proteiner. Till de proteinerna hör de som ingår i virusets skal, proteiner som hjälper viruset att infektera celler och proteiner som ställer om cellen från dess normala funktion till att bli en virusfabrik. 
+DNA-virus bär på färdiga DNA-molekyler som tar sig in i cellkärnan och använder cellens mekanismer för att föröka sig. Undantag är bland annat poxvirus (så som smittkoppsvirus) som helt replikerar sig i cytoplasman, och hepatit B-virus som translateras i cytoplasman från en RNA-intermediär (som har transkriberats i cellkärnan utifrån hepatit B-virusets DNA). DNA-virus är antingen dubbelsträngade (dsDNA) eller enkelsträngade (ssDNA). De sistnämnda bildar efterhand dsDNA. Allmänt sett är DNA-virus stabilare än RNA-virus och ger därmed högre risk för smitta. Risken att smittas av RNA-viruset HIV vid samlag är till exempel betydligt mindre än att smittas av DNA-viruset hepatit B.
+Nästan alla RNA-virus replikeras i cytoplasman. +RNA (mRNA) kan direkt translateras av fria ribosomer och producera proteiner som viruset behöver. Ett -RNA-virus (komplementär till mRNA) har med sig polymeras när det tränger in i cellen för att kunna skapa +RNA (mRNA).
+
+
+== Förökning ==
+För varje virus ingår följande steg i dess livscykel:
+Adsorption till cellytan
+Passage genom cellmembranet
+Avkapsling av kapsiden
+Replikation av virionens nukleinsyra
+Syntes av virusprotein
+Sammansättning av virionens komponenter till nya viruspartiklar
+Frisläppande av nya viruspartiklarAdsorption betyder att virionen fäster vid värdcellens yta. Olika virus använder olika metoder för att komma in i en värdcell. Växtvirus kommer alltid in i cellen via skador på cellväggen. Animala virus fäster vid specifika ytreceptorer på värdcellen, som medför att virus är artspecifika. Fager (liknar en spindel till formen) fäster med benen till ytreceptorer och skjuter samtidigt in sin nukleinsyra i värdcellen, varvid kapsiden lämnar ytan.Passagen för animala virus med hölje sker genom endocytos, en process där viruspartikeln tas in i cellen i en vesikel. Den membranförsedda vesikeln sammansmälter med en lysosom vilket innebär att viruset blir av med sitt hölje och endast den kapsidinneslutna nukleinsyran blir kvar. För membranförsedda virus sker passagen genom direkt fusion, då virusets membran smälter samman med värdcellens membran så att hela nukleokapsiden tar sig in. För bakteriofagen gäller i allmänhet att endast nukleinsyran från huvudet skjuts in i cytoplasman genom svansen. Nakna animala virus (utan hölje) kan genom en process släppa sin nukleinsyra direkt in i cytoplasman.I avkapslingen bryts virusets proteinkapsel ner och virusets arvsmassa släpps fri. Det är förmodligen värdcellens egna proteaser som är ansvariga för denna nedbrytning, och förekommer endast hos de som kommer in i cellen som hela virioner, det vill säga växtvirus samt de flesta animala virus.Replikationen av nukleinsyran kan ske på olika sätt och beror på nukleinsyran. En del virus har ett eget nukleinsyrapolymeras fasthakat vid nukleinsyran som sköter den första replikeringen av arvsmassan, därefter tar värdcellens syntesmaskineri över. Andra virus (de flesta) är helt beroende av cellens syntesmaskineri. För ssDNA görs först en komplementär DNA-sträng. Det dubbelsträngade DNA:t cirkuleras sedan och replikeras genom det som kallas rullande cirkel-mekanismen. Innan viruspartiklarna sätts samman förstörs då den ena DNA-strängen. dsDNA replikeras också via rullande cirkel-mekanism, och dsRNA replikeras på ungefär samma sätt som dsDNA-virus. För ssRNA kan replikationen antingen ske genom att den ursprungliga RNA-strängen kopieras så att det bildas dsRNA, som sedan replikeras som dsRNA-virus. Eller (som hos retrovirus) översätts RNA-strängen till DNA med hjälp av enzymet omvänt transkriptas. Den bildade DNA-strängen bildar mall för ytterligare en komplementär DNA-sträng. Det nybildade dsDNA:t kan därefter integreras i värdcellens genom, då kallas det provirus.All information för syntes av nya virus finns i virusets nukleinsyra som kodar för detta, men utnyttjar värdcellens ribosomer för processen. Först sker transkription av nukleinsyran till mRNA. Sedan translateras mRNA vid ribosomen till protein som i sin tur bildar den nya proteinkapseln.Hos många fager sker sammansättningen av viruspartikeln helt spontant, genom att proteinkapsomererna bildar en kapsid som nukleinsyran packas in i. De flesta virus med hölje får detta genom att en bit av värdcellens cellmembran omsluter nukleokapsiden i samband med att viruset lämnar cellen. DNA-virus får sitt hölje från det inre kärnmembranet i värdcellen.Frisläppandet av nya viruspartiklar sker på olika sätt beroende på om viruset är naket eller höljeförsett. Nakna virus släpps ut ur värdcellen när den dör (lyserar) då cellmembranet brister, och viruspartiklarna frigörs. När däremot ett virus med hölje ska lämna cellen måste viruspartiklarna kläs i ett membranhölje. Det får viruspartikeln när den knoppas av cellmembranet genom exocytos, detta
+frisläppande sker gradvis.
+
+
+== Klassificering ==
+Klassificering av virus sker på ett par olika sätt.
+
+
+=== ICTV-klassificeringen ===
+International Committee on Taxonomy of Viruses (ICTV) har utvecklat ett system för klassificering av virus. Systemet är uppbyggt av hierarkier. ICTV:s klassificering år 2020 innefattar 6 realmer, 10 riken, 17 fyla, 2 subfyla, 39 klasser, 59 ordningar, 8 underordningar, 189 familjer, 136 underfamiljer, 2224 släkten, 70 undersläkten och 9110 arter.Den taxonomiska strukturen visas nedan med taxonomisk rang och dess suffix i efterföljande parentes. ICTV:s uppdatering år 2020 av klassificeringen lämnar underrealm, underrike och underklass oanvända, medan de övriga taxonomiska rang används.
+Realm (domän) (-viria)
+Underrealm (-vira)
+Rike (-virae)
+Underrike (-virites)
+Fylum (-viricota)
+Underfylum (-viricotina)
+Klass (-viricetes)
+Underklass (-viricetidae)
+Ordning (-virales)
+Underordning (-virineae)
+Familj (-viridae)
+Underfamilj (-virinae)
+Släkte (genus) (-virus)
+Undersläkte (-virus)
+Art
+
+
+=== Baltimore-klassificeringen ===
+
+Ett annat system uppfanns av nobelpristagaren David Baltimore och döptes efter honom till Baltimore-klassificeringen där sju olika grupper används beroende på hur viruset replikerar sig.Systemet för Baltimore-klassificeringen baseras på vilken mekanism viruset använder för att skapa mRNA som krävs för att virus ska kunna replikera och föröka sig. Virusets genom kan bestå av nukleinsyrorna RNA eller DNA, de kan vara enkelsträngade (ss) eller dubbelsträngade (ds), och vissa virus använder omvänt transkriptas. ssRNA-virus kan vara sense (+), vilket betyder att virusets nukleinsyra (RNA) har en nukleotidsekvens som direkt kan användas för translation till virusprotein, eller antisense (-), vilket betyder att virusets RNA har en nukleotidsekvens som är komplement till den mRNA-sekvens som kan användas för translation till virusprotein.
+I: dsDNA-virus
+II: ssDNA-virus
+III: dsRNA-virus
+IV: (+)ssRNA-virus
+V: (-)ssRNA-virus
+VI:ssRNA-RT-virus
+VII: dsDNA-RT-virus
+
+
+== Läkemedel ==
+Det finns flera typer av läkemedel mot virus, antivirala medel. Generellt sett ligger området långt efter medel mot bakterier – det första antivirala medlet godkändes först 1983. Området har satt fart tack vare den intensiva forskningen på HIV. Antivirala medel kan till exempel hindra virus från att sätta sig fast och tränga in i cellerna, eller hämma virusets förökning (replikation). De kan också gå ut på att stimulera kroppens immunförsvar. Många medel mot HIV, så kallade proteashämmare, blockerar virusets enzymer (proteaser).
+
+
+== Se även ==
+Lista över virus
+Bakterier
+Zoonos
+
+
+== Källor ==

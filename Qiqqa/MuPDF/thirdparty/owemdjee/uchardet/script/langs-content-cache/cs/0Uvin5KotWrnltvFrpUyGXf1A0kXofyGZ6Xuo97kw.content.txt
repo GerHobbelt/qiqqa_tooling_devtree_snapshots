@@ -1,0 +1,249 @@
+revision: 22898655
+title: Phasmophobia
+url: https://cs.wikipedia.org/wiki/Phasmophobia
+
+
+---
+
+Phasmophobia je hororová hra o přežití vyvinutá a publikovaná společností Kinetic Games. Hra byla vydána 18. září 2020 a následně zaznamenala velký příliv popularity kvůli mnoha známým Twitch streamerům a YouTuberům, kteří ji hráli hlavně v období Halloweenu. Ke dni 15. října 2020 byla tato hra šestou nejpopulárnější hrou na Twitchi.
+
+
+== Hratelnost ==
+Hru může hrát 1 až 4 lidé v rolích lovců duchů, kteří mají smlouvu na jednání s duchy obývajícími různá opuštěná zařízení, včetně domů, škol, věznice, kempů a psychiatrické léčebny. Hra obsahuje 21 druhů duchů, z nichž každý se chová odlišně. Aby hráči zjistili, jaký typ ducha se v budově nachází, musí o něm shromáždit důkazy. Konečným cílem hry je získat o něm dostatek informací, přičemž na konci každé mise dostanou hráči zaplaceno. Komunikace probíhá prostřednictvím hlasového chatu, který sám duch také slyší a reaguje na něj. Hráči k plnění svých úkolů používají různé vybavení, například baterky, teploměry, či kamery. Tyto nástroje využívají ke komunikaci, vyšetřování, shromažďování stop apod.
+
+
+== Mapy ==
+Na výběr je ze 12 map. Každá mapa má svůj počet místností a pater, kde duch může mít svou oblíbenou místnost. Mapy se postupně odemknou po dosažení dostatečného levelu. Mapy se rozdělují na 3 druhy: Malé, střední a velké. V závislosti na velikosti mapy pak hráč na konci každé mise dostane, při správném uhádnutí ducha a sebrání kosti, peníze a levely.
+
+
+=== Malé mapy ===
+Správná identifikace ducha na malé mapě dává 10$ a sebrání kosti dává také 10$.Mezi malé mapy patří:
+
+6 Tanglewood Drive
+10 Ridgeview Court
+13 Willow Street
+42 Edgefield Road
+Bleasdale Farmhouse
+Camp Woodwind
+Grafton Farmhouse
+Sunny Meadows Mental Institution ( Restricted )
+
+
+=== Střední mapy ===
+Správná identifikace ducha na střední mapě dává 35$ a po sebrání kosti dostanete 20$.Mezi střední mapy patří:
+
+Brownstone High School
+Maple Lodge Campsite
+Prison
+
+
+=== Velké mapy ===
+Velké mapy dávají nejvíce jak za správnou identifikaci ducha, za kterou dostanete 50$, tak za sebrání kosti, což vám dá 30$.Mezi velké mapy patří:
+
+Sunny Meadows Mental Institution
+
+
+== Duchové ==
+Ke dni 16.6.2023 můžeme ve Phasmophobii najít 24 typů duchů. Každý z nich se vyznačuje určitou rychlostí, schopnostmi a procentem psychiky, při níž může začít lov. Duchy lze poznat také podle jejich tajných schopností, které však v deníku nejsou poznamenané.
+
+
+=== Spirit ===
+Popis v deníku: "Spiriti jsou velmi obyčejní duchové. Jsou velmi silní avšak pasivní. Útočí pouze, pokud opravdu musí. Brání si své místo smrti a zabijí kohokoliv, koho přistihnou se na tomto místě zdržovat."
+Podle deníku je jeho slabá stránka: " Spirit může být dočasně zastaven použitím vykuřovadla poblíž něj."
+Jeho důkazy jsou EMF úroveň 5, Spirit Box a Psaní ducha
+Kvůlu jeho schopnosti nemůže začít lovit 3 minuty po tom, co v jeho blízkosti zapálíte vykuřovadlo. Toto pravidlo neplatí, pokud lov začne kvůli použití prokletého předmětu.
+
+
+=== Wraith ===
+Popis v deníku: "Wraith je jedním z nejnebezpečnějších duchů, kterého najdete. Je to také jediný známý duch, který má schopnost létání a říká se, že občas prochází skrze zdi."
+Deník jako jeho silnou stránku udává: "Wraith se skoro nikdy nedotkne země, což znamená, že nezanechává stopy."
+Podle deníku je jeho slabou stránkou: "Wraith má toxickou reakci na sůl."
+Důkazy jsou: EMF úroveň 5, Spirit Box, D.O.T.S Projektor
+Schopností wraith je, že nedokáže dělat stopy v soli a má šanci na teleportaci, k náhodnému hráči, což na místě teleportace zanechá EMF úroveň 2 .
+
+
+=== Fantom ===
+Popis deníku: "Fantom je duch, který múže posednout živé a zasévá strach do těch, kteří jsou v jeho blízkosti. Nejčastěji je vyvolaný Ouija deskou."
+Deník jako jeho silnou stránku udává: "Pohled na Fantoma výrazně sníží vaši příčetnost."
+Podle deníku je jeho slabou stránkou: "Po vyfocení Fantoma dočasně zmizí."
+Důkazy jsou: Spirit Box, Otisky Prstů, D.O.T.S. Projektor
+Po vyfocení Fantoma při jeho zjevení zmizí a nebude vidět na fotce. Fotka se v tomto případě bude počítat, jako kdyby na ní duch byl vidět. To samé platí při lovu, avšak duch bude v lovu pokračovat i při jeho vyfocení. Dále má šanci na teleportaci k náhodnému hráči, přičemž zanechá EMF úroveň 2. Pokud se duch zjeví a vidí na hráče, snižuje mu psychiku o 0.5%/s. Při lovu Fantom je při každém bliknutí neviditelný náhodně od 1s do 2s.
+
+
+=== Poltergeist ===
+Popis deníku: "Jeden z nejslavnějších duchů- Poltergeist. Dokáže manipulovat s objekty kolem sebe, aby šířil strach do svých obětí."
+Deník jako jeho silnou stránku udává: "Poltergeist může házet vícero předmětů najednou."
+Podle deníku je jeho slabou stránkou: "Poltergeist je bezmocný, pokud nemá čím házet."
+Důkazy jsou: Spirit Box, Otisky Prstů, Psaní ducha
+Oproti ostatním duchům má Poltergeist 100% šanci každých 0.5s hodit s předmětem a zároveň má šanci předměty házet až 2x větší silou než jakýkoliv jiný duch.
+
+
+=== Banshee ===
+Popis deníku: "Zpívající siréna, která láká své oběti pomocí písně. Jsou známí tím, že si vybírají své oběti dopředu před svým útokem."
+Deník jako jeho silnou stránku udává: "Banshee oslabí svou oběť před útokem."
+Podle deníku je jeho slabou stránkou: "Použitím parabolického mikrofonu lze občasně slyšet křik Banshee."
+Důkazy jsou: Otisky Prstů, Orb ducha, D.O.T.S Projektor
+Pokaždé, co je její oběť v oblasti vyšetřování a Banshee se rozhodne cestovat ze své místnosti, má 67% šanci na to, vybrat si jako cíl právě místo, kde se oběť nachází, pokud není v jiném patře. Při použití parabolického mikrofonu je při každém paranormálním zvuku 33 % šance, že to bude výkřik Banshee.
+
+
+=== Jinn ===
+Popis deníku: "Jinn je teritoriální duch, který zaútočí, pokud se cítí ohrožen. Známý je i svou schopností pohybovat se vysokou rychlostí."
+Deník jako jeho silnou stránku udává: "Jinn se pohybuje vyšší rychlostí, pokud je jeho oběť daleko."
+Podle deníku je jeho slabou stránkou: "Vypnutí místního zdroje energie zabrání Jinnovi ve využívání jeho schopnosti"
+Důkazy jsou: EMF úroveň 5, Otisky Prstů, Teploty pod bodem mrazu
+Pokud jsou při lovu zapnuté pojistky, duch je od své oběti dále než 3m, a vidí na svou oběť, zrychlí na 2.5m/s. Další schopností Jinn je, že nemůže vypnout pojistky. Pokud použije svoji schopnost, sníží psychiku všech hráčů v místnosti o 25% a vytvoří EMF úroveň 2 na pozici pojistek.
+
+
+=== Mare ===
+Popis deníku: "Mare je zdrojem všech nočních můr, díky čemuž je nejmocnější ve tmě."
+Deník jako jeho silnou stránku udává: "Mare má větší šanci na útok ve tmě."
+Podle deníku je jeho slabou stránkou: "Rozsvícení světel kolem Mare sníží šanci na útok."
+Důkazy jsou: Spirit Box, Orb ducha, Psaní ducha
+Pokud je Mare 4 metry od světla, které bylo právě zapnuto, má malou šanci na okamžité vypnutí tohoto světla. Tuto schopnost může použít každých 10s, pokud nikdo v okolí Mare nezapne světlo. V tomoto případě bude čekat dalších 10s. Mare také nemůže zapnout žádné světlo (platí i pro počítače na mapách, kde se nacházejí a pro stolní lampy).
+
+
+=== Revenant ===
+Popis deníku: "Revenant je násilný duch, kteý dvakrát nepřemýšlí o útoku. Jejich rychlost může klamat, jelikož se v klidovém stavu pohybují pomalu, avšak jakmile zaútočí, pohybují se neuvěřitelné rychle."
+Deník jako jeho silnou stránku udává: "Revenant se pohybuje výrazně rychle při lovení své oběti."
+Podle deníku je jeho slabou stránkou: "Revenant se bude pohybovat pomalu, pokud se před ním schováte."
+Důkazy jsou: Orb ducha, Psaní ducha, Teploty pod bodem mrazu
+Jedinou schopností Revenanta je, že při lovu se pohybuje rychlostí 1m/s pokud neví, kde je jeho oběť. Pokud ví kde jeho oběť je, běží za ní rychlostí 3m/s.
+
+
+=== Shade ===
+Popis deníku: "O Shadovi je známo, že je to stydlivý duch. Existují důkazy, že Shade zastaví veškerou paranormální aktivitu, pokud je v okolí více lidí."
+Deník jako jeho silnou stránku udává: "Najít tohoto ducha je velice obtížné."
+Podle deníku je jeho slabou stránkou: "Duch nezačne lovit, pokud je poblíž více lidí"
+Důkazy jsou: EMF úroveň , Psaní ducha, Teploty pod bodem mrazu
+Pokud je jeden nebo více lidí v jeho oblíbené místnosti, Shade nemůže pohybovat s věcmi nebo začít lov.
+
+
+=== Démon ===
+Popis deníku: "Démoni jsou nejagresivnějšími duchy, se kterými jsme se kdy setkali. Jsou známí tím, že útočí bezdůvodně. Vypadá to, že si užívají vzrušení z lovu."
+Deník jako jeho silnou stránku udává: "Démoni loví častěji, než ostatní typy duchů."
+Podle deníku je jeho slabou stránkou: "Démoni se bojí Krucifixu a budou v jeho okolí méně agresivní."
+Důkazy jsou: Otisky Prstů, Psaní ducha, Teploty pod bodem mrazu
+Démon může pohybovat nebo používat věci 5m od něho (normální okruh je 3m). Při použití jeho schopnosti začne lov bez ohledu na psychiku hráčů. Lovit může lovit každých 20s (normální hodnota je 25s) a při použití vykuřovadla nemůže lovit pouze po dobu 60s.
+
+
+=== Yurei ===
+Popis deníku: "Yurei je duch, který se vrátil do fyzického světa, obvykle za účelem pomsty nebo nenávisti."
+Deník jako jeho silnou stránku udává: "Je známo, že Yurei má silnější vliv na příčetnost lidí."
+Podle deníku je jeho slabou stránkou: "Použití vykuřovadla v jeho místě smrti ducha dočasně uvězní."
+Důkazy jsou: Orb ducha, Teploty pod bodem mrazu, D.O.T.S Projektor
+Po použití vykuřovadla v jeho blízkosti se vrátí zpět do své místnosti a nemůže ji opustit dalších 60s. Při použití své speciální schopnosti všichni hráči v okruhu 7,5m přijdou o 15% psychiky, vybere si jedny ze dveří a plně je zavře. Tuto schopnost Yurei nemůže použít, pokud místnost žádné dveře nemá.
+
+
+=== Oni ===
+Popis deníku: "Oni se vyžívají ve strašení svých obětí před útokem. Nejčastěji je lze spatřit ve své fyzické podobě, když brání míto svého úmrtí."
+Deník jako jeho silnou stránku udává: "Duchové Oni jsou aktivnější, pokud jsou poblíž lidé. Dovedou pohybovat předměty vysokými rychlostmi."
+Podle deníku je jeho slabou stránkou: "Duchové Oni jsou velmi aktivní, díky čemuž je jednodušší je najít."
+Důkazy jsou: EMF úroveň 5, Teploty pod bodem mrazu, D.O.T.S Projektor
+Oni se zjevuje velice často a snižuje psychiku 2x více při zjevování se. Při lovu je Oni více viditelný než ostatní duchové.
+
+
+=== Yokai ===
+Popis deníku: "Yokai je běžný typ ducha, který je přitahován lidským hlasem. Běžně straší v rodinných domech"
+Deník jako jeho silnou stránku udává: "Mluvení v blízkosti Yokae ho naštve a zvýší šanci na útok."
+Podle deníku je jeho slabou stránkou: "Při útoku Yokai slyší hlasy jen v jeho blízkosti."
+Důkazy jsou: Spirit Box, Orb ducha, D.O.T.S Projektor
+Yokai je aktivnější pokud poblíž mluví hráči a při mluvení v jeho blízkosti je dočasně zvýšena hranice psychiky, kdy může lovit. Pokud hráč použije hrací skříňku, musí být duch blíže než ostatní k tomu, aby měla efekt. Při lovu Yokai slyší hlasy a cítí elektronické předměty držené hráčem pouze na vzdálenost 2,5m.
+
+
+=== Hantu ===
+Popis deníku: "Hantu je vzácný duch, kterému se daří ve velmi studených podmínkách. Vypadá to, že chlad mu dodává agresivitu a sílu."
+Deník jako jeho silnou stránku udává: "Nižší teploty umožní Hantu pohybovat se rychleji."
+Podle deníku je jeho slabou stránkou: "Hantu se pohybuje pomaleji v teplých oblastech."
+Důkazy jsou: Otisky Prstů, Orb ducha, Teploty pod bodem mrazu
+Čím tepleji je v mítnosti, tím pomalejší je. Při 0 °C má rychlost 2,7m/s a nejpomalejší je v teplotách 15 °C a méně, kdy chodí rychlostí 1,4m/s přičemž za žádné teploty nezrychluje, pokud vidí hráče. Hantu nemůže zapnout pojistky a má 2x větší šanci na jejich vypnutí. Při vypnutých pojistkách a lovu je možné vidět páru u hlavy ducha.
+
+
+=== Goryo ===
+Popis deníku: "Jediný způsob, jak vidět přes D.O.T.S Projektor ducha Goryo, je pomocí videokamery."
+Deník jako jeho silnou stránku udává: "Goryo se ukáže na kameře pouze pokud nejsou v okolí lidi."
+Podle deníku je jeho slabou stránkou: "Jsou zřídka vidět daleko od místa, kde umřeli."
+Důkazy jsou: EMF úroveň 5, Otisky Prstů, D.O.T.S Projektor
+Goryo nikdy nechodí daleko od své místnosti. Goryo je také jediný duch, který nemůže sám od sebe změnit oblíbenou místnost a lze jeho D.O.T.S model vidět pouze přes videokameru a to jen pokud nikdo není ve stejné místnosti.
+
+
+=== Myling ===
+Popis deníku: "Myling je velmi vokální a aktivní duch. Říká se o nich, že jsou při lovu potichu."
+Deník jako jeho silnou stránku udává: "Je známo, že Myling je při lovu tišší."
+Podle deníku je jeho slabou stránkou: "Mylingocé častěji vydávají paranormální zvuky."
+Důkazy jsou: EMF úroveň 5, Otisky Prstů, Psaní ducha
+Myling vytváří paranormální zvuky častěji než ostatní duchové. Při lovu je slyšet pouze z 12m (normální vzdálenost je 20m).
+
+
+=== Onryo ===
+Popis deníku: "Onryo je označován jako "Duch hněvu". Krade duše umírajícím obětem pro hledání pomsty. Tento duch je znám tím, že se bojí ohně, a bude dělat vše, aby se od něj držel dál."
+Deník jako jeho silnou stránku udává: "Uhašení ohně může způsobit útok."
+Podle deníku je jeho slabou stránkou: "Pokud se cítí ohrožen, duch pravděpodobně nezaútočí."
+Důkazy jsou: Spirit Box, Orb ducha, Teploty pod bodem mrazu
+čím více hráčů zemře, tím rychleji sfoukává svíčky. Když se Onryo pokouší lovit a je v okruhu 4m od něj svíčka, sfoukne místo toho svíčku. Když se snaží lovit a je v dosahu svíčka i Krucifix, preferuje svíčku před Krucifixem. Po každé 3. sfouknuté svíčce se pokusí o lov (tento lov může nastat hned, nebo až 6 vteřin). tento lov jde zastavit jakoukoliv metodou, například další svíčkou.
+
+
+=== Dvojčata ===
+Popis deníku: "Bylo nahlášeno, že tito duchové se napodobují. Střídají své útoky, aby zmátli svou oběť."
+Deník jako jeho silnou stránku udává: "Jakékoliv dvojče se může rozzlobit a zahájit útok."
+Podle deníku je jeho slabou stránkou: "Dvojčata často interagují v prostředí najednou."
+Důkazy jsou: EMF úroveň 5, SPirit Box, Teploty pod bodem mrazu
+Schopnost dvojčat je, že udělají 2 interakce. Jedna bude 3m od ducha a ta druhá bude kdekoliv v okruhu 16m od ducha. Při lovu je 50% šance, že začne lovit druhé dvojče, z okolí posledního místa, kde hodil druhý předmět pomocí své schopnosti. Dvojče, lovící ze jeho normální pozice, má rychlost 1,5m/s a při lovu z pozice hození druhého předmětu při poslední interakci, má rychlost nastavenou na 1,9m/s.
+
+
+=== Raiju ===
+Popis deníku: "Raiju je démon, který se živí elektrickým proudem. I když jsou obecně klidní, mohou být rozzuření, když jsou přemoženi elektřinou."
+Deník jako jeho silnou stránku udává: "Raiju může sát energii z blízkých elektrických zařízení, díky čemuž se pohybují rychleji."
+Podle deníku je jeho slabou stránkou: "Raiju neustále narušují elektronicá zařízení, což usnadňuje jejich sledování při útoku."
+Důkazy jsou: EMF úroveň 5, Orb ducha, D.O.T.S Projektor
+Pokud je Raiju v blízkosti elektronického vybavení , zrychlí na 2,5m/s (na malých mapách je tato vzdálenost 6m, středních 8m a na velkých je tato vzdálenost 10m). Dále Raiju ovlivňuje elektronické vybavení ze vzdálenosti 15m ( normální vzdálenost je 10m ).
+
+
+=== Obake ===
+Popis deníku: "Obake jsou děsiví měňáci, kteří na sebe berou mnoho podob. Byli vidět, jak získávají humanoidní tvary, aby přilákali svou kořist."
+Deník jako jeho silnou stránku udává: "Při interakci s prostředím Obake jen zřídka zanechá stopu."
+Podle deníku je jeho slabou stránkou: "Někdy se tento duch změní a zanechá za sebou jedinečný důkaz."
+Důkazy jsou: EMF úroveň 5, Otisky Prstů, Orb ducha
+Pokaždé co se Obake dotkne předmětu na kterém může zanechat otisky, má na to pouze 75% šanci ( normální šance pro zanechání otisků je 100% ) a má 16,7% šanci na zanechání speciálního šestiprstého otisku ruky. Na vypínačích můžeme najít jako tento speciální otisk 2 otisky a 5 otisků prstů na klávesnicích a dveřích od cel. Může také zkrátit čas, po který jsou otisky viditelné, o polovinu. Při lovu má po každém bliknutí 6,67% šanci na změnu modelu ducha a poté se vrátí do své původní podoby.
+
+
+=== Mimik ===
+Popis deníku: "Mimik je nepolapitelný, záhadný, napodobující duch, který zrcadlí vlastnosti a chování ostatních, včetně jiných typů duchů."
+Deník jako jeho silnou stránku udává: "Nejsme si jistí, co tento duch dokáže. Buďte opatrní."
+Podle deníku je jeho slabou stránkou: "Máme několik záznamů o pozorování Orbů v jejich blízkosti."
+Důkazy jsou: Spirit Box, Otisky Prstů, Teploty pod bodem mrazu
+Mimik je schopen napodobovat všechny schopnosti ostatních duchů. Každých 30s až 2 minuty změní ducha, kterého napodobuje. Mimik bude mít falešnou evidenci Orb ducha pokaždé, i pokud si nastavíte hru bez důkazů.
+
+
+=== Moroi ===
+Popis deníku: "Moroiové vstali z hrobu, aby vysávali energii z živých. Je známo, že na své oběti uvalují kletby, které se dají vyléčit pouze protilátkami nebo odchodem do velké vzdálenosti."
+Deník jako jeho silnou stránku udává: "Čím slabší jsou jejich oběti, tím silnější je Moroi."
+Podle deníku je jeho slabou stránkou: "Moroi trpí hyperosmií, která je oslabuje na delší dobu."
+Důkazy jsou: Spirit Box, Psaní ducha, Teploty pod bodem mrazu
+Čím menší je průměrná psychika týmu, tím rychlejší je. Při více než 45% psychiky se pohybuje rychlostí 1,5m/s a pokud klesne na 5% a méně, rychlost je 2,25m/s. Při použití vykuřovadla při lovu bude duch dezorientován 12s místo normálních 6s pro ostatní duchy. Schopnost Moroi je, že pokud vám dá odpověď skrz Spirit Box nebo v parabolickém mikrofonu dostanete zvuk šeptání, hráč, co to slyšel, bude proklet což způsobí, že tomuto hráči se bude psychika snižovat rychleji a bytí ve světle již nebude zastavovat klesání psychiky. Tohoto prokletí se jde zbavit pouze použitím léků na psychiku.
+
+
+=== Deogen ===
+Popis deníku: "Deogen, někdy obklopený nekonečnou mlhou, už léta uniká lovcům duchů. Tito duchové dokážou najít i tu nejskrytější kořist a pak jí pronásledují až do vyčerpání."
+Deník jako jeho silnou stránku udává: "Deogen nepřetržitě vnímá živé. Můžete utéct, ale nemůžete se schovat."
+Podle deníku je jeho slabou stránkou: "Deogen potřebuje ke svému vzniku množství energie a k oběti se přibližuje velmi pomalu."
+Důkazy jsou: Spirit Box, Psaní ducha, D.O.T.S Projektor
+Pokud jste od ducha méně než 1m a zeptáte se na otázku ve Spirit Boxu, máte 33%, že vám místo odpovědi začne pouze těžce dýchat do Spirit Boxu. Když při lovu blikne do viditelnosti je v průměru vidět déle než zase blikne do neviditelnosti oproti ostatním duchům. Pokaždé ví, kde je jeho oběť, a pokud je jeho oběť dále než 6m, pohybuje se k ní rychlostí 3m/s. Při přiblížení postupně zpomalí až na 0,4m/s pokud je od oběti 2,5m. Tento duch postupně nezrychluje, pokud vidí svoji oběť.
+
+
+=== Thaye ===
+Popis deníku: "Je známo, že Thaye v průběhu času rychle stárne, a to i v posmrtném životě. Podle toho, co jsme se dozvěděli se zdá, že v přítomnosti živých chátrají rychleji."
+Deník jako jeho silnou stránku udává: "Po vstupu do lokace bude Thaye aktivní, obranný a pohyblivý."
+Podle deníku je jeho slabou stránkou: "Thaye časem zeslábne, stává se slabší, pomalejší a méně agresivní."
+Důkazy jsou: Orb ducha, Psaní ducha, D.O.T.S Projektor
+Po vstoupení do mapy je Thaye ve své nejmladší fázi, kdy je nejrychlejší ( 2,75m/s ) a loví velmi brzo. Každou minutu až 2 minuty zestárne ( dohromady může zestárnut až 10krát ) a při každém stárnutí  se snižuje jak moc může lovit, rychlost ducha pokaždé o 0,175m/s, i aktivita. Při lovu postupně nezrychluje, pokud vidí svou oběť.
+
+
+== Odkazy ==
+
+
+=== Reference ===
+V tomto článku byl použit překlad textu z článku Phasmophobia (video game) na anglické Wikipedii.
+
+
+=== Externí odkazy ===
+Oficiální stránky

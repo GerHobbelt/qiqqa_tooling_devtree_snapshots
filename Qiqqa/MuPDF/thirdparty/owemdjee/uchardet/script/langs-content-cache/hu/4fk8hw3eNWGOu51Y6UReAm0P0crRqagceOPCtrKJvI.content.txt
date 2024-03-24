@@ -1,0 +1,33 @@
+revision: 25896569
+title: Amazon S3
+url: https://hu.wikipedia.org/wiki/Amazon_S3
+
+
+---
+
+Az Amazon S3 az Amazon Web Services online tárhely szolgáltatása, amely REST vagy SOAP-alapú szolgáltatásként vagy BitTorrent protokollon keresztül érhető el. A szolgáltatás az első publikus szolgáltatás volt az Amazon Web Services tagjai közül, az Egyesült Államokban 2006 márciusában indult, majd Európában novemberben.
+
+
+== Felépítése ==
+Bár az Amazon nem tett nyilvánossá dokumentumokat a belső felépítésről, az S3 nyilvánvalóan objektum tároló elképzeléseken alapszik. Az Amazon nyilatkozatai alapján az S3 célja egy skálázható, magas rendelkezésre állású és alacsony késleltetésű szolgáltatás széles közönség számára elfogadható árakkal.
+Az S3-at egy évre nézve 99,999999999% tartósságra és 99,99% hozzáférhetőségre tervezték, ugyanakkor nincs SLA a tartósságra.
+Az S3 maximum 5 terabájtos fájlokat tárol, mindegyiket maximum 2 kilobájt mennyiségű metainformációval lehet ellátni. A fájlokat vödrökbe (bucket) rendezi, amelyek egy-egy Amazon Web Services felhasználóhoz tartoznak. Ezeket a vödröket egyedi azonosítóval látja el, amelyet a felhasználó ad meg. Az Amazon Machine Image-k (AMI-k) exportálhatóak az S3-ra.
+
+
+== Közismert felhasználók ==
+a Minecraft használja játék frissítések és felhasználói avatarok tárolására.
+Az Alfresco nyílt forráskódú tartalom kezelő szoftver felhő alapú szolgáltatása használja fájlok tárolására.
+A Dropbox és az Ubuntu One biztonsági mentés és adatszinkronizációs szolgáltatások
+
+
+== Az S3 API és konkurens szolgáltatások ==
+Az S3 széles körű elterjedése miatt számos, az Amazon S3-mal versenyző szolgáltatás épített az S3 fejlesztői felületére. Bár ezek a szolgáltatások és szoftverek megegyeznek a fejlesztői felületben, eltérnek a technológiai megvalósításban és az üzleti modellükben.
+Néhány ismert S3-kompatibilis szolgáltatás és szoftver:
+
+Apache CloudStack
+Eucalyptus
+Nimbula
+A Riak Cloud Storage is ad S3 kompatibilis felületet
+
+
+== Jegyzetek ==

@@ -1,0 +1,101 @@
+revision: 6037319
+title: Odprti standard
+url: https://sl.wikipedia.org/wiki/Odprti_standard
+
+
+---
+
+Odprti standard (angleško Open standard) je standard, ki je javno dostopen in ima različne pravice za uporabo in tudi različne možnosti razvoja standarda. 
+Termina »odprti« in »standard« imata širok razpon pojmovanja. Termin »odprti«  je  povezan s pojmom royalty-free, kar pomeni, da je na voljo v prosti uporabi, torej je uporaba zastonj.  Medtem ko termin »standard« pomeni, da je tehnologija sprejeta s strani odbora, ki je odprt za prispevke vseh sodelujočih na konsenzualni ravni. 
+"Odprti standard« kot se uporablja v akademskih krogih, Evropski uniji in Danskem, Franciji in Španiji že vključuje najemnino potrebno za uporabo. Organizacija W3C zagotavlja, da so specifikacije standarda grajene na osnovi royalty – free. 
+Mnoge definicije »standarda« dovoljujejo nosilcem patenta,da vsiljujejo »razumljive in nediskriminatorne« najemnine in druge licenčne pogoje za izvajalce in/ali uporabnike standarda. Na primer, pravila standardov objavljenih z glavnih mednarodno priznanih organizacij, kot so IETF, ISO, IEC in ITU-T dovoljujejo, da ti standardi vsebujejo specifikacije za katere bodo morali izvajalci in uporabniki plačati najemnino za patent. Znotraj teh organizacij se samo IETF in ITU-T eksplicitno zavzemajo, da so njihovi standardi »odprti standardi«, medtem ko drugi proizvajajo samo standarde. ITU-T in IETF se uporabljajo definicije »odprtih standardov«, ki dovoljujejo »razumljive in nediskriminatorna« plačila za licenčne patente.
+Termin odprti standard je včasih uporabljen vzajemno z odprta koda z idejo, da standard ni popolnoma odprt, če ne vsebuje proste odprte kode.Odprti standardi, ki so specifični za formate, se imenujejo odprti formati. 
+Mnoge specifikacije, ki jih običajno povezujejo s standardom so lastninjene in dosptopne samo pod strogimi pogoji licenčne pogodbe (če sloh so dostopne) z organizacijo, ki ima v lasti avtorske pravice. Tako te specifikacije niso razumljene kot »odprte«.
+
+
+== Specifične definicije odprtega standarda ==
+
+
+=== ITU-T definicija ===
+ITU-T je organizacija za razvoj standardov (ORS), ki je del treh sektorjev mednarodne telekomunikacijske unije (posebna agencija Združenih narodov). ITU-T ima direktorsko »Ad Hoc« skupino v telekomunikacijskem standardizacijskem biroju, ki je marca leta 2005 proizvedla naslednjo definicijo, ki jo je novembra 2005 v celoti sprejela ITU-T za svojo:
+
+ITU-T ima dolgo zgodovino razvoja odprtih standardov. Vendar so pred kratkim različni zunanji viri poskušali definirati »odprti standard« na različne načine. Da bi se izognili zmedi, je uporabil ITU-T svojo definicijo za termin odprti standard:
+"Odprti standardi« so standardi dostopni splošni javnosti in so razviti (ali odobreni) in vzdrževani preko procesov sodelovanja in skupnega konsenza. »Odprti standardi« proizvajajo interoperabilnost in izmenjavo podatkov med različnimi produkti ali storitvami in so namenjeni v uporabo splošno razširjeni javnosti.
+Drugi elementi »odprtega standarda« vsebujejo, ampak niso omejeni na:
+Proces sodelovanja – razvoj (ali odobritev), ki temelji na prostovoljstvu in trgu, kateremu sledi transparenten konsenz, ki je odprt za vse prisotne stranke.
+Razumno uravnoteženo – zagotavlja, da v procesu razvoja ni nobena interesna skupina dominatna.
+Za proces – vsebuje upoštevanje in odziv na komentarje vseh vključenih strank.
+Lastništvo intelektualnih pravic (IPR) – skrbi za to, da je standard vključen v licencno vseh kandidatov po vsem svetu, na nediskriminatorni ravni, ali zastonj in pod drugimi razumnimi pogoji ali pod razumnimi pogoji, ki zahtevajo plačilo. Pogajanja so prepuščena vsem strankam zunaj ORS.
+Kvaliteta in stopnja podrobnosti – mora biti zadostna, da dovoljuje razvoj raznovrstnih implikacij interoperativnih produktov ali storitev. Standardizirani vmesniki niso skriti ali kontorlirani drugače kot s strani SDO, ko odobri standard.
+Dostopnost javnosti – mora biti lahko dostopen za izvedbo in uporabo, po razumni ceni. Publikacija s tekstom standarda je dosegljiva samo po preventivni odobritvi ORS.
+Tekoča podpora – podpora mora biti vzdrževana skozi daljše časovno obdobje.ITU-T, ITU-R, ISO in IEC so vzajemno sklenile skupno patentno politiko  pod taktirko WSC. Kakorkoli definicija ITU-T odprtega standarda ni nujno veljavna tudi za ITU-R, ISO in IEC, ker splošna skupna patentna politika  ne omenja »odprtega standarda« ampak samo »standard«. 
+
+
+=== IETF definicjia ===
+V 7. poglavju RFC 2026 IETF klasificira specifikacije svojega razvoja kot »odprti standard« in kot primer navaja standarde ANSI, ISO, IEEE in ITU-T. Ker je standardizacijski proces IETF in politika lastništva intelektualnih pravic (IPR) enaka, kot je navedena zgoraj pri ITU-T je tudi definicija »odpretega standarda« enkaka kot  pri ITU-T. 
+
+
+=== definicija EU ===
+Evropska unija je posvojila naslednjo definicijo v Evropskem Interoperabilnem okviru:Da bi dosegli interoperabilnost v smislu storitev panevropske elektronske javne uprave se je potrebno fokusirati na odprte standarde.
+Beseda »odprti« more v tem smislu zadovoljevati naslednje točke:
+
+cena uporabe standarda more biti nizka in ne sme biti ovira pri dosegljivosti stanndarda;
+standard je objavljen;
+standard je nastal oziroma bil sprejet v odprtem postopku sprejemanja odločitev (konsenza oziroma načela večine);
+lastništvo intelektualnih pravic standarda je v lasti neprofitne organizacije, ki ima popolnoma svobodno politiko dostopa;
+ni omejitev pri uporabi standarda;
+
+
+=== definicija danske vlade ===
+Danska vlada je sklenila svojo definicijo odprtega standarda, ki se prav tako uporablja v panevropskih razvojnih projektih programske orpeme. Definicija se glasi:
+
+Odprti standard je dostopen vsakomur brezplačno (ni diskriminacije med uporabniki in plačilo ni pogoj za uporabo standarda)
+Odprti standard nujnih razsežnosti mora ostati brezplačen in dostopen vsem (npr. lastniki se odločijo, če je to mogoče, da kasneje omejijo standard z obljubo odprtosti in pripisanim opominom, da je patent vezan na čas)
+Odprti standard je dostopen brezplačno in dokumentiran do vseh podrobnosti (npr. vsi vidiki standarda so transparentni in dokumentirani in dostop ter uporaba dokumentacije je zastonj)
+
+
+=== definicija francoske vlade ===
+Francoski parlament je sprejel definicijo odprtega standarda v »Law for Confidence in the Digital Economy«. Definicija se glasi:
+
+Pod pojmom odprti standard si razlagajo kakršnokoli komunikacijo, povezanost ali protokol izmenjave podatkov in vsakršni format podatkov, ki se uporablja za javno rabo brez restrikcij glede dostopa in uporabe.
+
+
+=== definicija španske vlade ===
+Zakon sprejet v španskem parlamentu  zahteva, da so vse elektronske storitve španske javne uprave na osnovi odprtega standarda. Definira ga kot brezplačnega pod naslednjimi pogoji:
+* je javen in uporaba je brezplačna ali po ceni, ki ni previsoka za uporabnika.
+njegova uporaba ni plačljiva in tudi intelektualne pravice ali industrijski patenti in znamke niso plačljivi.
+
+
+=== definicija venezuelske vlade ===
+Venezuelska vlada je sprejela »zakon o odprtem standardu in brezplačni programski opremi«. Vključuje tudi zahtevo, da venezuelski javni sketor uporablja brezplačno programsko opremo , ki temlji na odprtem standardu. Zakon vključuje tudi definicijo odprtega standarda:
+2. članek: za ta odlok naj bo razumljiv kot
+
+k) Odprti standard: tehične specifikacije, objavljene in kontrolirane preko organizacije, ki je odgovorna za njihov razvoj. Te specifikacije so sprejete s strani industrije in dosegljive vsem za uporabo v brezplačni programski opremi ali drugi, promovirajo kompetitivnost, interoperabilnost in fleksibilnost.
+
+
+=== Novo zelandska uradna definicija interoperabilnosti ===
+E – vladni interoperabilni okvir navaja odprti standard kot brezplačen v naslednjem tekstu:
+
+Ker univerzalna skupna definicija odprtega standarda očitno še ne bo kmalu sklenjena, je e – GIF prepričan, da mora definicija odprtega standarda prepoznati zvezo, ki variira od odprtega k zaprtim, in obsega neko stopnjo odprtosti. Zato mora po e – GIF odprti standard imeti naslednje lastnosti: 
+
+dostopen mora biti vsakomur in to brezplačno, brez diskriminacije med uporabniki in brez plačila ali kakšnih drugih pogojev za uporabo standarda.
+ostati mora dostopen vsakomur brezplačno: lastniki morajo objaviti, če imajo namene kdaj omejiti dostop do standarda.
+dokumentiran mora biti do vsake podrobnosti: vsi aspekti standarada morajo biti transparentni in dokumentirani in dostop ter uporaba dokumentacije mora biti uporabnikom brezplačna.
+
+
+== Viri ==
+
+
+== Zunanje povezave ==
+Berkman Center for Internet & Society at Harvard Law School, Open ePolicy Group, Roadmap for Open ICT Ecosystems
+Bruce Perens: Open Standards: Principles and Practice Arhivirano 2004-08-04 na Wayback Machine.
+Ken Krechmer: The Principles of Open Standards
+Bob Sutor: Open Standards vs. Open Source: How to think about software, standards, and Service Oriented Architecture at the beginning of the 21st century Arhivirano 2006-06-02 na Wayback Machine.
+European Commission: Valoris report on Open Document Formats
+The New York Times: Steve Lohr: 'Plan by 13 Nations Urges Open Technology Standards'
+UNDP-APDIP International Open Source Network: Free/Open Source Software: Open Standards Primer Arhivirano 2006-07-20 na Wayback Machine.
+OpenStandards.net: An Open Standards Portal
+Is OpenDocument an Open Standard? Yes! develops a unified definition of »open standard« from multiple sources, then applies it to a particular standard
+Open Source Initiative: Open Standard Requirement for Software
+Open Standards: Definitions of »Open Standards« from the Cover Pages
+Standard Categories and Definitions: Categories and definitions of the different types of standards - by FFII Open Standards Work Group Arhivirano 2007-08-20 na Wayback Machine.

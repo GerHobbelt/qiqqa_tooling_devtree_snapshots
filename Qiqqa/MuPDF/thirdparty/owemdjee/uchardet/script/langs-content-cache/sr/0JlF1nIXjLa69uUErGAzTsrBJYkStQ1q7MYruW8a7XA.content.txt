@@ -1,0 +1,176 @@
+revision: 24779622
+title: "Me\u0111unarodni kodeks zoolo\u0161ke nomenklature"
+url: https://sr.wikipedia.org/wiki/Me%C4%91unarodni_kodeks_zoolo%C5%A1ke_nomenklature
+
+
+---
+
+Međunarodni kodeks zoološke nomenklature (International Code of Zoological Nomenclature: ICZN ili ICZN kod) je široko prihvaćena konvencija u zoologiji koja propisuje formalno naučno imenovanje organizama koji se tretiraju kao životinje.Pravila prvenstveno uređuju: 
+
+Kako se imena pravilno određuju u okviru binomijalne nomenklature;
+Koja se verzija mora koristiti u slučaju sukoba imena;
+Kako se imena moraju navoditi u naučnoj literaturi.Zoološka nomenklatura je nezavisna od drugih sistema nomenklature, na primer botaničke. To znači da životinje mogu imati ista generička imena kao i biljke.
+Pravila i preporuke imaju jedan osnovni cilj: pružiti maksimum univerzalnosti i kontinuitet u imenovanja svih životinja, osim u slučaju kada taksonomske odredbe nalažu drugačije. Kodeks je trebalo da vodi samo nomenklaturu životinja, ostavljajući slobodu zoolozima u klasifikaciji novih vrsta.
+Drugim rečima, bez obzira da li je sama po sebi vrsta ili nije priznat entitet, subjektivna je odluka, ali ono što se naziva treba primeniti i oznaku šta nije. Kodeks se odnosi samo na ovo drugo, ne na bivšu oznaku. Novo ime životinja objavljeno bez poštovanja kodeksa može se smatrati jednostavno "nedostupan", ako ne ispuni određene kriterije ili ispasti u potpunosti iz oblasti nauke (npr. "naučni naziv" za čudovište iz Loh Nesa, zvano Nesi), za kojeg se pretpostavljalo da živi u tom jezeru u Irskoj.
+Pravila u Kodeksu određuju koja imena vrede za bilo koji takson u grupama porodica, rodova i vrsta. Ona ima dodatne (ali još ograničene) odredbe o imenima u višim redovima. Kodeks ne priznaje nikakvu sudsku praksu. Svaki spor se prvo odlučuje direktnom primenom Kodeksa, a ne pozivanjem na presedan.
+Kodeks je takođe retroaktivnan ili retrospektivnan, što znači da je njegova dosadašnja izdanja ili prethodna druga pravila i konvencije danas više nemaju snagu, a nomenklaturni akti objavljeni 'nekada u starim vremenima' moraju se ocenjivati samo po sadašnjem izdanju Kodeksa. U slučaju sporova u vezi sa tumačenjem, uobičajeni postupak je da se konsultira Zakon, a na kraju slučaj može biti doveden na Komisiju koja ima pravo da objavi konačne odluke.
+
+
+== Načela ==
+Određeno je šest centralnih principa po kojima se uređuje imenovanje životinja, koji su prvi put navedeni (kao principi) u trećem izdanju Kodeksa (1985).
+
+
+=== Princip binomijalne nomenklature ===
+Ovo je princip da se naučni naziv vrste, ali ne i taksona bilo kog drugog ranka, određuje kao kombinacija dva imena; upotreba trinomena za imena podvrsta i uninomnih imena za taksone iznad vrste je u skladu s ovim principom.
+To znači da se u sistemu nomenklature za životinje, ime jedne vrste sastoji od kombinacija naziva roda i specifičnog imena; zajedno čine „dvodelno ime“. Naziv niti jednog drugog ranga ne može biti sastavljen od dva imena.
+Primeri:
+
+Vrsta Giraffa camelopardalisPodvrsta ima naziv koji se sastoji od tri imena, tj. "trinomni": generičko ime, specifično ime, potspecifično ime:Podvrsta: Giraffa camelopardalis rothschildiTaksoni u rangu iznad vrste imaju samo jedno „uninomno ime“.Rod Giraffa, porodica GiraffidaeU botaničkoj nomenklaturi, postoji ekvivalentna binomijalna nomenklatura.
+Za razliku od rodova i nižih taksona (vrsta, podvrsta), koji se pišu iskošeno, porodice i viši taksoni se ne pišu iskošeno. Izuzetak od ovog pravila su virusi, bakterije i gljive, kod kojih se i porodice pišu iskošeno.
+
+
+=== Princip prioriteta ===
+
+Ovo je princip da je korektno formalno naučno ime za životinjske taksone, važeće ime, ispravnije je da se koristi najstarije dostupno ime koji se na to odnosi. To je najvažniji princip i osnovna vodilja za pravilno održavanje stabilnosti zoološke nomenklature. Prvi put je formulisano u 1842, kada je Komisija koju imenuje Britansko udruženje razmtrala pravila zoološkog nomenklature. Izvještaj komisije je napisao Hju Edvin Strikland.
+Primer:
+
+Nuneli je 1837. opisao Limax maculatus (Gastropoda), a Viktor je 2001. svrstao tu vrstu kao mlađi sinonim vrste Limax maximus koju je definisao Linnæus 1758, u južnoj i zapadnoj Europi. Prvo je opisan Limax maximus, tako da ako Viktorova klasifikacija iz 2001. bude prihvaćena, Limax maximus ima prednost nad Limax maculatus i mora se koristiti za tu vrstu.Postoji oko 2-3 miliona slučajeva ovog tipa za koje se primenjuje ovaj princip u zoologiji.
+
+
+=== Princip koordinacije ===
+Princip koordinacije se odnosi na odredbu da je unutar grupa: porodica, rodova i vrsta, naziv uspostavljen za takson bilo kojeg ranga u grupama istovremeno osnova sa istim autorom i datumom i za širu kategoriju, na osnovu istog tipa zasnivanja imena za druge rangove u odgovarajućoj grupi. Drugim rečima, automatski i istovremeno sa objavljivanjem novih zooloških imena, uspostavljaju se sva odgovarajuća imena u relevantnim drugim rangovima istog tipa.
+U grupi vrsta, objavljivanje imena Giraffa camelopardalis Linnaeus, 1758, uspostavlja ime vrste (dvoimeno) Giraffa camelopardalis, kao i (trinomeno) ime podvrste Giraffa camelopardalis camelopardalis Linnaeus, 1758. Isto se odnosi i na ime podvrste; kojim se uspostavlja ime odgovarajuće vrste.
+Slično tome, u grupi rodova, objavljivanje imena roda uspostavlja odgovarajuće ime podroda (ili obrnuto), e.g. rod Giraffa Linnaeus, 1758 i podroda Giraffa (Giraffa) Linnaeus, 1758.
+U grupi porodica, objavljivanje imena porodice, potporodice, natporodice (ili bilo koji drugi takav rang, bez obzira na prefiks ranga porodica) takođe uspostavlja imena u svim drugim redovima u porodičnoj grupi (familija Giraffidae, natporodice Giraffoidea, potporodica Giraffinae).
+Citati autorstva za takva imena (na primer podroda) su isti kao i za ime koje je upravo objavljeno (na primer roda). Nebitno je ako postoji stvarni takson na koji se automatski uspostavljeno ime odnosi; ako ikada takav takson bude priznat, dato ime stoji na raspolaganju.
+
+
+=== Princip prvog revizora ===
+Ovo je načelo određuje da u slučaju sukoba između istovremeno objavljenih divergentnih akata, prvi naredni autor može odlučiti koji od njih ima prednost. Ovi se dopunjava princip prioriteta, u kojem se navodi da prvi put objavljeno ime ima prednost. Načelo prvog revizora se bavi situacijama koje se ne mogu rešiti po prioritetu. Ovi predmeti mogu biti dva ili više različita imena za isti takson, dva ili više imena sa istim slovima koji se koristi za različite rangove, dva ili više različitih načina pisanja određenog naziva, itd. U takvim slučajevima, prvi naredni autor koji se bavi tim pitanjem i bira i objavljuje odluku na propisani način je Prvi Revizor, koji treba slediti.Primer:
+Carolus Linnæeus je 1758. prvi ustanovio ime Strix scandiaca i Strix noctua (Aves), za koje je dao različite opise i referirao kao različite vrste, ali su oba naziva kasnije spojena u isti (sova|snežna sova). Tako su dva imena postala sujektivni sinonimi. Lönnberg je 1931. kao prvi revizor, citirao oba imena i dao prednost imenu Strix scandiaca.
+Problem se javlja kada je ponekad prvi revizor nepoznat. Za jednu vrstu kitova, Linnæus je 1758. ustanovio tri subjektivna imena: Physeter macrocephalus, Physeter catodon i Physeter microps. Prvi revizor je ostao nepoznat; te se koriste dva naziva: Ph. macrocephalus i Ph. catodon.
+
+
+=== Princip homonimije ===
+Ovo je princip da ime svakog taksona mora biti jedinstveno. Shodno tome, ako se postoji mlađi homonim, po ovom pravilu se ne sme se koristiti kao važeće ime.
+To znači da se bilo koje ime jedne životinje, u jednom konkretnom pravopisu, može koristiti samo jednom (u svojoj grupi). To je obično prvoobjavljeno ime; bilo koje kasnije ime istog pravopisa je zabranjeno koristi. Princip prioriteta i Princip Prvog Revizora se i ovde primenjuju. Za imena grupe granične kategorije se ne uzimaju u obzir.
+Rodovi su homonimi samo ako identični – razlika u ispisu jednog slova je dovoljna da se razlikuju.
+Primeri:
+
+Argus Bohadsch, 1761 (Gastropoda), rod koji je bio dostupan za homonimiju po ICZN u mišljenju 429 (Bohadsch 1761) je nebinomijalan. Ovo je imalo za posledicu da se ni jedan drugi naziv iz sledećeg niza Argus imena ne može se koristiti kao naziv taksona:
+Argus Scopoli, 1763 (Lepidoptera: Lycaenidae: Polyommatinae)
+Argus Scopoli, 1777 (Lepidoptera: Nymphalidae: Satyrinae)
+Argus Poli, 1791 (Bivalvia)
+Argus Temminck, 1807 (Aves)
+Argus Lamarck, 1817 (Lepidoptera: Hesperiidae)
+Argus Walckenaer, 1836 (Araneae)
+Argus Gerhard, 1850 (Lepidoptera: Lycaenidae: Theclinae)Homonimi roda Argus nisu:
+Argua Walker, 1863 (Lepidoptera), Argusa Kelham, 1888 (Aves), Argusina Hebard, 1927 (Dermaptera), Arcus Hong, 1983 (Diptera), Argas Latreille, 1795 (Araneae), Argulus Müller, 1785 (Crustacea).Homonimi nisu: Isomya Cutler & Cutler, 1985 (Sipunculida), Isomyia Walker, 1859 (Diptera).Homonimi nisu: Adelomya Mulsant & Verreaux, 1866 (Aves), Adelomyia Bonaparte, 1854 (Aves), Adelomys Gervais, 1853 (Mammalia), Adolomys Shevyreva, 1989 (Mammalia), Adulomya Kuroda, 1931 (Bivalvia).Kod vrsta, postoji razlika između primarnih i sekundarnih homonima. Postoje i dvostruki homonimi (isti rod i vrsta). Male razlike u pravopisu se tolerišu, ako se primeni član 58.
+Primarni homonimi su oni sa istim nazivom roda i vrste u svojoj originalnoj kombinaciji. Razlika između primarnog mlađeg homonima i naknadnog korišćenja imena je neodređena, ali je uobičajeno prihvaćeno da ako se ime odnosi na drugu vrstu ili oblik. Ako ne postoji, pored odsustva dokaza da je autor znao da se ime prethodno koristilo, smatra se kao mlađi homonim.
+Primeri: 
+
+Drury (1773) je ustanovio Cerambyx maculatus (Coleoptera) za vrstu sa Jamajke. Fueßlin (1775) je opisao Cerambyx maculatus vrstu iz Švajcarske i nije citirao Drurija. Fueßlinovo ime je mlađi primarni homonim.
+Scopoli (1763) je opisao Curculio fasciatus (Coleoptera) za vrstu iz Slovenije. Strøm (1768) je ustanovio ime Curculio fasciatus za vrstu iz Norveške. De Geer (1775) je opisao Curculio fasciatus za treću vrstu iz Švedske. S Müller (1776) je opisao Curculio fasciatus za četvrtu vrstu iz Danske. Fourcroy (1785) je ustanovio Curculio fasciatus za 5. vrstu iz Francuske. Olivier (1790) je prikazao Curculio fasciatus i kao 6. vrstu, iz Francuske. Marsham (1802) opisuje Curculio fasciatus (čak) za 7. Vrstu iz Britanije. Sva ova imena su imala opise koji su pojasnili da su trebale biti različite vrste, a da njihovi autori nisu znali da su prethodni autori dali takvo ime.Sekundarni homonimi se mogu proizvesti ako je isto ime vrste ranije bilo smešteno u okviru drugog roda, a kasnije je ustanovljeno da pripadaju ujedinjenom rodu (Član 57.3, 59).
+Sekundarni sinonim je samo privremeno stanje, efektivan samo u datoj klasifikaciji. Ako se primenjuje druga klasifikacija, ne može se proizvoditi sekundarna homonimija, a uključeno ime se može ponovo koristiti (Član 59.1). Ime ne postaje nedostupno ili neupotrebljivo, ako je nekada u toku historije postavljeno u takav rod, gde je izazvalo sekundarnu homonimiju sa drugim imenom.
+Ovo je jedan od retkih slučajeva u kojima zoološka vrsta nema stabilno određeno ime i jedinstvenu kombinaciju vrsta-autor-godina, pa može imati dva imena u isto vreme.
+Primer:
+
+Nuneli (1837) je prvi opisao Limax maculatus (Gastropoda), koju je Viktor (2001) klasifikovao kao mlađi sinonim za Limax (Limax) maximus Linnæus, 1758, iz južne i zapadne Europe. Kaleniczenko, 1851 daje ime Krynickillus maculatus za različitu vrstu iz Ukrajine. Wiktor, 2001 obe klasifikuje u Limax maximus Linnæus, 1758 i Krynickillus maculatus Kaleniczenko, 1851 u rodu Limax. Budući da su L. maculatus Nunneley, 1837 i K. maculatus Kaleniczenko, 1851 svrstane u isti rod, oba imena su postala sekundarni homonimi u rodu Limax, a mlađe ime (iz 1851) se ne može upotrebljavati za ukrajinsku vrstu. Zato je bilo potrebno pogledati raspoloživo sledeće mlađe ime koje bi bilo na nju primenjivo. To je bilo Limax ecarinatus Boettger, 1881, mlađi sinonim K. maculatus Kaleniczenko, 1851.
+Za Wiktor (2001) i takve autore koji su sledili njegov sistem, ime ukrajinske vrste mora biti Limax ecarinatus Boettger, 1881. Za ostale, koji su klasifikovali Limacus kao odvojen rod, ime ukrajinske vrste mora biri Limacus maculatus (Kaleniczenko, 1851).
+Tako ukrajinska vrsta može imati dva imena. Što zavisi od generičke klasifikacije. Limax ecarinatus, Limacus maculatus su iste vrste.Član 59.3 navodi da u izuzetnim slučajevima, mlađi sekundarni homonim zamenjen pre 1961. godine zamenom imena može postati nevažeći, "... osim ako zamensko ime nije u upotrebi" je izuzetak izuzetka. Međutim, ICZN kod ne daje primer za takav slučaj. Čini se da se ovaj odlomak u ICZN kodu široko ignorira. Takođe ne definiše šta bi trbalo da znači izraz „nije u upotrebi“.
+Primer:
+
+Glischrus caelata Studer, 1820 (Gastropoda) je nekad klasifikovan u rod Helix, a ovo ime je postalo mlađi sekundarni homonim Helix caelata Vallot, 1801. Locard (1880) je opisao zamensko ime Helix glypta, koje se veoma retko upotrebljava. Ova vrsta je sada poznata kao Trochulus caelatus (Studer, 1820), a Član 59.3 je obično ignoriran.Dvostruka homonimija (rod i vrsta nije homonimija: ako je rod homoniman i pripada različitim grupama životinja, isto ime vrste se može upotrebljavati u obe grupe.
+Primeri: 
+
+Ime Noctua Linnæus, 1758 je dato jednom rodu leptira u podredu lepidoptera (insekti reda Lepidoptera). U 1764. On je ustanovio rod Noctua Linné, 1764. za ptice, ignorišući da je to ime, nekoliko godina, ranije već dao jednom leptiru. Noctua Linné, 1764 (Aves) je mlađi homonim roda Noctua Linnæus, 1758 (Lepidoptera).
+Garsault (1764) upotrebio je naziv Noctua za pticu i opisao vrstu Noctua caprimulgus Garsault, 1764 (Aves). Fabricius (1775) je uspostavio ime Noctua caprimulgus Fabricius, 1775 (Lepidoptera), stvorivši tako dvostruki homonim. Ovakvi homonimi nisu homonimija i oba imena su upotrebljiva.
+Isto se desilo i sa Noctua variegata Jung, 1792 (Lepidoptera) i Noctua variegata Quoy & Gaimard, 1830 (Aves).Razdvajanje imena jedne rodovske grupe od njenog homonima, podrazumeva citiranje autora i godine; citiranje samo autora nije dovoljno.
+Primeri:
+
+Echidna Forster, 1777 (Actinopterygii), nije Echidna Cuvier, 1797 (Mammalia)
+Ansa Walker, 1858 moljac (Lepidoptera), nije Ansa Walker, 1868 (Hemiptera)
+Helix balcanica Kobelt, 1876, nije Helix balcanica Kobelt, 1903 (obe Gastropoda)
+Conus catenatus Sowerby, 1850, nije Conus catenatus Sowerby, 1875 (obe Gastropoda)Ime Ansa može se upotrebiti samo za takson leptira. Ako se ne može koristiti to ime (na primer, jer je starije ime, zasnovano pre 1858, ima prednost), to ne znači da se ono iz 1868. ne može koristiti za rod hemiptera. Naime, postoji jedina mogućnost korištenja imena iz 1868. za takson iz reda Hemiptera iz 1858, ako je ime službeno istisnula ICZN komisija.
+U nekim slučajevima, imena nekih rodovskih ili specijskih grupa su objavljena iste godine od istog autora. Ili u ovim slučajevima je preporučljivo citiranje stranice na kojoj je ime navedeno.
+Primeri:
+
+Amydona Walker, 1855 (Lepidoptera: Limacodidae) (p. 1110), nije Amydona Walker, 1855 (Lepidoptera: Lasiocampidae) (p. 1413)
+Betousa Walker, 1865 (Lepidoptera: Thyridae) (p. 1111), nije Betousa Walker, 1865 (Lepidoptera: Noctuidae) (p. 1208).
+Cicada variegata Fabricius, 1775 (p. 684), nije Cicada variegata Fabricius, 1775 (p. 686) (oba Auchenorrhyncha).
+Noctua marginata Fabricius, 1775 (p. 597), nije Noctua marginata Fabricius, 1775 (p. 610) (obe Lepidoptera: Noctuidae).
+Clausilia (Albinaria) oertzeni Boettger, 1889 (p. 42), nije Clausilia (Albinaria) schuchi var. oertzeni Boettger, 1889 (p. 52) (obe Gastropoda: Clausiliidae).Postoje slučajevi gde je homonim uspostavio isti autor, iste godine, na istoj stranici:
+
+Zonites verticillus var. graeca Kobelt, 1876 (Gastropoda) (p. 48), nije Zonites albanicus var. graeca Kobelt, 1876 (p. 48).Nomenklature životinja, biljaka i gljiva su međusobno nezavisne. Najočigledniji nedostatak ove situacije (za njihovo korištenje u informatici bioraznolikosti) je da se isti generički nazivi mogu koristiti istovremeno za životinje i biljke. Za ovu vrstu homonima postoji naziv „hemihomonimi“. Odavno je poznato više od 1000 takvih imena.Primeri:
+
+Rodovsko ime Dryas L. (1753) predstavlja rod Magnoliophyta, porodica Rosaceae, a u isto vreme Dryas Hübner, 1807 je rod insekata (red Lepidoptera, porodica Nymphalidae.
+Rod Tandonia je uspostavljen kod životinja (Gastropoda: Tandonia), biljaka (Euphorbiaceae) i gljiva (Ascomycota).
+Ostali primeri za ponekad dobro poznatih biljnih imena i njihovih zooloških ekvivalenata su Aotus (Fabaceae i Mammalia), Arenaria (Caryophyllaeceae i Aves), Betula (Betulaceae i Hymenoptera), Chloris (Cactaceae i Aves), Dugesia (Asteraceae i Plathelminthes), Erica (Ericaceae i Araneae), Hystrix (Poaceae i Mammalia), Iris (Asparagales i Orthoptera), Liparis (Orchidaceae i Actinopterygii), Phalaenopsis (Asparagales i Aves), Pinus (Pinaceae i Mollusca), Prunella (Lamiaceae i Aves), Ricinus (Fabaceae i Acarina), Taxus (Taxaceae i Mammalia), Typha (Typhaceae i Porifera), Ulva (Ulvophyceae i Lepidoptera), Viola (Violaceae i Lepidoptera).Za gornja imena, na nivou porodica, ne primenjuje se princip homonimije.
+Primeri:
+
+Pulmonata se obično upotrebljava za vrlo istaknutu grupu Gastropoda, ali takođe retko za grupu Arachnida.
+Reticulata se upotrebljava za jedan red Foraminifera, kao i za nedefinisanu višu grupu Ephemeroptera.Homonimi se javljaju relativno retko u porodici (samo ako su generička imena identična ili vrlo slična, a dodavanje sufiksa –idae daje identične rezultate). Otkrivanje takve homonimije obično pravi iste probleme kao da nije bilo pravila: sukobe terminologije između potpuno nezavisnih i nepovezanih grupa, taksonomi prave u različitim grupama životinja. Vrlo često se od Komisije zahteva da donese konačnu odluku.
+Primeri:
+
+Bulimina (Foraminifera) i Buliminus (Gastropoda) čine Buliminidae, a imena obe porodice se upotrebljavaju od 1880-ih. Kada je homonimija otkrivena 110 godina kasnije, 1990-ih, mlađi takson (mehkušaca) je dobio novo ime porodice, a Komisija je morala tražiti rešenje (Mišljenje 2018).
+Claria (Rotifera) i Clarias (Actinopterygii) skupa su Clariidae, ali samo ime riba Actinopterygia je upotrebljavano od 1845. Nedugo nakon što su Clariidae predložene za ime u grupi Rotifera, u 1990, otkrivena je homonimija i Komisija je odlučila da rotiferska porodicaTrebala da deimenuje (menja) naziv Clariaidae (Mišljenje 2032).
+
+
+=== Princip tipifikacije ===
+Ovo je princip da svaki nominalni takson u grupi porodica, rodova ili vrsta, ima stvarano ili potencijalno fiksirani tip imena, koji pruža objektivni referentni standard za određivanje onog na što se ime odnosi.
+To znači da bilo koji imenovani takson ima tip obeležavanja imena, koji omogućava primenu i prepoznavanje ranga tog imena. Bilo koji porodična grupa mora imati oznaku tipskog roda, ime tipa grupe rodova, tipsku vrstu i tipsku grupu vrsta, koja može (ne mora) imati jedan ili više vrsta uzoraka (označeni holotip, lektotip, neotip, sintipovi ili drugi). Takvi uzorci su obično deponovani u muzejskim zbirkama.
+Tipski rod za porodični-grupno ime se jednostavno izvodi iz tipskog roda koji daje koren za dodavanje sufiksa – idae (za porodice), npr.
+
+Primer:Ime porodice Spheniscidae je izvedeno iz tipskog roda Spheniscus Brisson, 1760.Tipska vrsta za rodno-grupno ime je mnogo komplikovanija i egzaktno sledi odredbe Članova 67-69. Tipska vrsta je vrlo značajna, mada nema opšte zoološke baze podataka koja bileži tipske vrste za sve rodove. Osim za ribe i neke manje grupe, tipske vrste su retko pouzdano zabežene u onlajn bazama zooloških podataka. U 60% slučajeva tipske vrste se mogu odrediti u originalnoj publikaciji. Tipska vrsta je uvek originalno ime taksona (a ne trenutno korištena kombinacija).
+
+Primer:Korektno navedena tipska vrsta roda Locusta Linnæus, 1758 (Caelifera) je Gryllus migratorius Linnæus, 1758, a ne Locusta migratoria (Linnæus, 1758).Označavanje i fiksiranje ima različita značenja. Oznaka je predlog tipa vrste. Nije potrebno da uvek ude ispravno napisano ime roda ili vrste sa ispravnim navodom autora (Članovi 67.2.1, 67.6, 67.7). Ako je oznaka je važeća, tipska vrsta je fiksirana.
+Označavanje može takođe biti neispravno i neefektivno; na primer ako rod ima prethodno ustaljeno ime tipske vrste ili ako je tipska vrsta predložena bez uključivanja originalne, ili kontradiktorna opisu slike roda u koji je bila originalno uključena.
+Postoje različiti mogući načini oznake tipske vrste. Ovo je njihov poredak pravne važnosti, s približnim proporcijama zastupljenosti. Prikazane proporcije se odnose na 366 potvrđenih europskih nemorskih rodova mehkušaca; pretpostavlja se da predstavljaju više-manje ili predstavnike ili primere životinjskih grupa.
+
+Superiorna fiksacija tipa:Označavanje prema ICZN plenarnum kapacitetom (3%)
+Primer:
+Galba Schrank, 1803 (Gastropoda) su opisane sa jednom uključenom vrstom, Galba pusilla Schrank, 1803. Ona može biti tipska vrsta uz monotipiju. U Mišljenju 1896 (objavljenom 1998) ova fiksacija tipa izdvojila je i Buccinum truncatulum Müller. Godine 1774 je fiksna kao tip vrste pod plenarnom snagom (e) (sada je Galba truncatula).
+Oznaka iz čl. 70.3: pogrešno identifikovana tipska vrsta (1%).Primeri:
+Bollingeria Forcart, 1940 (Gastropoda) je ustanovljena sa tipskom vrstom Chondrus pupoides Krynicki, 1833, prema originalnom opisu. Ali Forcart 1940. je pogrešno identifikovao tipsku vrstu kao Bulimus lamelliferus Rossmässler, 1858. Bilo bi dobro da se odredi da li je Bulimus lamelliferus tipska vrsta iz Člana 70.3.
+Helisoma Swainson 1840 (Gastropoda) je označena s uključenom jednom vrstom, kako navodi Swainson, „H. bicarinata Sow. Gen. F. 4“. Iz toga sledi da je tipska vrsta pogrešno identifikovana, i da je to Planorbis campanulatus Say 1821, a ne Planorbis bicarinatus Say, 1819. Ali pošto je pogrešna tipska vrsta Planorbis bicarinatus smatrana tipom, to ne bi bilo podesno da se popravi kao tip prema Članu 70.3.Fiksiranje tipa u originalnom radu:Originalno označavanje (31%)Primeri:
+Montfort 1810 je uspostavio rod Theodoxus (Gastropoda) i označio Theodoxus lutetianus Montfort 1810 kao tipsku vrstu (sada Theodoxus fluviatilis).
+Vest 1867 ustanovljuje podrod Clausilia (Isabellaria) (Gastropoda) i označava Clausilia isabellina Pfeiffer, 1842 kao tipsku vrstu (sada Isabellaria isabellina).
+Riedel 1987 zasniva rod Turcozonites (Gastropoda) i označava Zonites wandae Riedel, 1982 kao tipsku vrsru (sada Turcozonites wandae).
+Monotipija (28%)
+Primeri:
+Anodonta Lamarck, 1799 (Bivalvia) je prvobitno opisana sa jednom originalno nominalnom svrstom, Mytilus cygneus Linnæus, 1758. Ova tipska vrsta je ustaljena kao monotipska (sada Anodonta cygnea).
+Microcondylaea Vest 1866 (Bivalvia) je prvobitno opisana sa dve uključene nominalne vrste, Unio bonellii Férussac, 1827 i sumnjivom Anodonta lata Rafinesque, 1820. Dvojnost uključene vrste nije uračunata pa je kao tipska vrsta bila Unio bonellii koja je fiksirana kao monotipska (sada Microcondylaea bonellii).Apsolutna tautonimija (2%)
+Primeri:
+Kobelt 1871 je uspostavio gastropoda ime rodovske grupe sa uključene 23 vrste: Candidula. Među njima je bio Glischrus candidula Studer 1820. Glischrus candidula je tipska vrsta sa fiksno apsolutnom tautonimijom (sada Candidula unifasciata).
+Draparnaud 1801 uspostavio gastropdni rod Succinea sa uključene dvije vrste, Succinea vodozemaca Draparnaud 1801 i Succinea oblonga Draparnaud 1801. Među sinonima S. amphibia, Draparnaud navodi naziv Helix succinea Müller 1774. Sinonimi se ne računaju, tako da Helix succinea tipska vrsta sa apsolutnom tautonimijom (sada Succinea putris).Kobelt 1904 je uspostavio podrod mekušaca Iberus (Balearica) i uključio 10 vrsta. Među njima je bila i Helix balearica Rossmässler 1838, koji je Kobelt naveo kao Iberus (Balearica) balearicus. Završetak us je ovde beznačajan; Helix balearica je tiposka vrsta po apsolutnoj tautonimiji (sada Iberellus balearicus ili Iberellus hispanicus).
+Euxinolauria Lindholm, 1924 (Gastropoda: Lauriidae) je opisana kao novo zamjensko ime za Caucasica Caziot & Margier, 1909 (ne Caucasica Boettger, 1877 (Gastropoda: Clausiliidae). Caucasica Caziot & Margier, 1909 izvorno sadrži četiri vrste, među kojima je bila Pupa caucasica Pfeiffer, 1857. Ovo je tipska vrsta za rod Caucasica Caziot & Margier, 1909 koji je fiksiran po apsolutnoj tautonimiji, kao i za Euxinolauria (sda Euxinolauria caucasica).Sledeći primeri ne predstavljaju apsolutnu tautonimiju: Scomber scombrus Linnæus, 1758 (Actinopterygii), Babyrousa babyrussa (Linnæus, 1758) (Mammalia), Suricata suricatta (Schreber, 1776) (Mammalia), Merlangius merlangus (Linnæus, 1758) (Actinopterygii), Isabellaria isabellina (Pfeiffer, 1842) (Gastropoda), Rupestrella rupestris (Philippi, 1836) (Gastropoda).
+Lineovska tautonimija (0.3%)Primer:
+Lineus 1758 je uspostavio rod Castor (Mammalia) uključivši dve, Castor fiber i Castor moschatus. Među sinonimima Castor fiber pomenut je jednoimeni Castor sa referiranjem na šest prelineovskih radova (Gesner 1598, Rondelet 1554, Jonston 1650, Dodart 1676, Ray 1693 and Aldrovandi 1649). Castor fiber Linnæus 1758 je tipska vrsta koja je ustaljena po Lineovskoj tautonimiji (sada Castor fiber).Naknadni metodi fiksacije tipa:
+
+Naknadna monotipija (2%)
+Primeri:
+Valvata Müller, 1773 (Gastropoda) je ustanovio kratkim opisom, bez naznake vrste. Müller 1774. je uključio jednu vrstu, Valvata cristata Müller 1774. Valvata cristata je tipska vrsta po naknadnoj monotipiji (sada Valvata cristata).Omphiscola Rafinesque, 1819 (Gastropoda) je uspostavljena bez uključenih vrsta. Beck 1837 [1838] je uključio jednu vrstu: Buccinum glabrum Müller, 1774. Buccinum glabrum je tipska vrsta, po naknadnoj monotipiji (sada Omphiscola glabra).Subsekventna apsolutna tautonimija (samo nekoliko slučajeva), pri čemu naknadna tautonimija nije upotrebljena kao termin u 4. Izdanju Kodeksa, ali su logične posljedice upotrebe nametnule termin naknadna monotipija.
+Primeri:
+Alosa Garsault, 1764 (Actinopterygii) je ustanovio bez uključene vrste. Kao prvo autor, Cuvier, 1829 uključuje dve vrste Clupea alosa i Clupea fincta. Tpska vrsta je Clupea alosa Linnæus 1758 , prema naknadnoj apsolutnoj tautonimiji (sada Alosa alosa).
+Rupicapra Garsault, 1764 (Mammalia) je opisana bez uključene vrste. Kao prvi autor, Blainville, 1816 je uključio tri vrste: Capra rupicapra Linnæus, 1758, Capra pudu i Capra americana. Tipska vrsta Capra rupicapra, prema naknadnoj apsolutnoj tautonimiji (sada Rupicapra rupicapra).Naknadna Lineovska tautonimija (samo teorijski, jer još nema takvih slučajeva)
+Naknadno označavanje (32%)Primeri:
+Aplexa Fleming, 1820 (Gastropoda) je opisana sa dve vrste: Bulla hypnorum Linnæus, 1758 i Bulla rivalis Turton, 1807. Herrmannsen 1846 , ustaljena Bulla hypnorum kao tipska vrsta po naknadnom označavanju (sada Aplexa hypnorum).
+Pseudanodonta Bourguignat 1877 (Bivalvia) je opisana sa sedam vrsta: Anodonta complanata Rossmässler 1835 i šest drugih. Westerlund 1902 ispravno označava Anodonta complanata kao tipsku vrstu as (sada Pseudanodonta complanata).Ime grupe vrsta može imati ime prema tipu primerka, ali ne mora. U mnogim slučajevima imena grupe vrsta nemaju tipski primerak ili je izgubljen. U takvim slučajevima, obočno počiva na općem prihvatanju. Ako ga nema, prema preporuci Koda, ustaljuje se ime po primerku koji je povezan sa korisnikom tog imena. Fiksiranje takvog tipa imena se čini samo onda kada je taksonomski neophodno (Članovi 74.7.3, 75.2, 75.3).
+
+Primeri:Aptenodytes patagonica Miller, 1778 je svali zasnovan na tipskom primerku, možda deponiranom u Natural History Museum, London ili negde drugde ili je tip izgubljen. Ovo je sada beznačajno jer upotreba imena (kao Aptenodytes patagonicus) za kraljevskog pingvina je nedvosmisleno prihvaćeno.
+Izvorno ime tipa za vrstu Homo sapiens Linnæus, 1758 je deponovano u Upsali (kosti Karla fon Linea). Ovaj letotip je označio Stearn 1959, korektno ali nepotrebno, jer je upotreba imena bila nedvojbena, kao što je i danas.
+
+
+== Vidi još ==
+Taksonomija
+Biološka klasifikacija
+
+
+== Reference ==
+
+
+== Spoljašnje veze ==
+ICZN website
+Text of the code
+ZooBank: The World Register of Animal Names
+Proposed amendment of the International Code of Zoological Nomenclature to expand and refine methods of publication

@@ -1,0 +1,91 @@
+revision: 15658283
+title: Acid ribonucleic
+url: https://ro.wikipedia.org/wiki/Acid_ribonucleic
+
+
+---
+
+Acidul ribonucleic (ARN) este, ca și ADN-ul, un polinucleotid format prin copolimerizarea ribonucleotidelor. Un ribonucleotid este format dintr-o bază azotată (adenină A, guanină G, uracil U și citozină C), o pentoză (riboză) și un fosfat. În molecula de ARN uracilul înlocuiește timina.
+
+
+== Structura ARN-ului ==
+
+Molecula de ARN este monocatenară (este alcătuită dintr-un singur lanț polinucleotidic). Este un complex macromolecular similar, structural și funcțional, în multe privințe ADN-ului. ARN-ul rezultă din copolimerizarea ribonucleotidelor, care determină formarea unor lanțuri lungi, monocatenare.
+Un ribonucleotid este format dintr-o bază azotată (adenină A, guanină G, uracil U și citozină C), o pentoză (riboză) și un fosfat. În molecula de ARN uracilul înlocuiește timina. Polimerizarea ribonucleotidelor se realizează prin legături fosfodiesterice în pozițiile 3’- 5’. 
+
+Compoziția nucleotidică (sau secvența, ordinea nucleotidelor în moleculă) definește structura primară a moleculei de ARN. Datorită complementarității bazelor în unele regiuni mai mari sau mai mici ale moleculei de ARN, în soluție și în funcție de temperatură, prin pliere și aparierea regiunilor complementare, molecula poate capăta, formând o buclă, o structură parțial bicatenară. Această structură” secundară este deosebit de importantă în funcția unor tipuri de ARN, ca, de exemplu, ARN-ul de transfer. Molecula de ARN poate adopta o structură tridimensională numită structură terțiară ce rezultă din aparieri între bazele azotate diferite de aparierile clasice A-T și C-G.
+
+
+== Sinteza ARN ==
+ARN-ul este sintetizat prin procesul numit transcripție. În acest proces, ADN-ul are rol de matriță. Molecula dublu catenară de ADN este desfăcută, pe intervalul care urmează a fi transcris, de anumite complexe proteice prin ruperea punților de hidrogen între bazele azotate complementare. Un complex proteic cu funcție enzimatică numit ARN polimerază copiază una din catenele de ADN pentru a produce un ARN complementar. Catena de ADN care funcționează ca matriță pentru sinteza ARN-ului se numește catenă sens.
+Sinteza ARN-ului (transcripția) se realizează pe baza complementarității bazelor azotate ca și în cazul replicării moleculei de ADN cu o singură excepție: în dreptul adeninei de pe catena matriță a ADN-ului se va atașa uracilul în catena nou sintetizată de ARN. Polimerizarea ribonucleotidelor în transcripție se desfășoară în același sens ca reacția de polimerizare a dezoxiribonucleotidelor din cadrul replicării ADN-ului și anume de la 5' spre 3'.
+
+
+== Funcțiile celulare ale ARN ==
+
+
+=== Suport temporar al informației genetice ===
+Acest rol este realizat de ARN-ul mesager ce transportă informația genetică necesară sintezei de proteine de la ADN-ul localizat nuclear la ribozomii localizați în citoplasmă.
+
+
+=== Catalizator enzimatic ===
+Unele molecule de ARN au capacitatea de a cataliza reacții chimice modificând atât aminoacizi sau proteine cât și acizi nucleici.
+
+
+=== Ghid pentru enzime ===
+Unele molecule de ARN sunt componente ale unor complexe ribonucleoproteice ce participă la ghidarea lor spre secvențele specifice. În această categorie pot fi încadrate moleculele mici de ARN nucleolar (snoARN – small nucleolar ARN în engleză) ce participă la clivarea ARN-ului ribozomal sau ARN telomeric ce reprezintă matrița folosită de complexul ribonucleoproteic numit telomerază pentru sinteza extremităților moleculelor de ADN (numite telomere). 
+
+
+=== Reglarea expresiei genelor ===
+Unele molecule de ARN (ARN antisens, spre exemplu) sunt implicate în represia uneia sau mai multor gene.
+
+
+=== Rol în translație ===
+ARN-ul de transfer transportă aminoacizii și îi poziționează în cursul sintezei proteice.
+
+
+=== Suport al informației genetice ===
+Genomul unor virusuri este constituit din ARN. În această categorie intră virusul gripei, virusul hepatitei C sau virusul Imunodeficientei umane dobandite. Replicarea acestor virusuri se face cu o fidelitate mult mai redusă, deoarece în cazul ARN-ului nu există un proces de corijare a erorilor, frecvența mare a erorilor ducând la o mare variabilitate genetică.
+
+
+== Tipuri de ARN ==
+În celule se găsesc diferite tipuri de ARN. Proporția lor este diferită: o mare cantitate este reprezentată de ARNr (80-90% din ARN-ul celular), ARNt în proporție de 10-15% și doar o cantitate mică de ARNm (mai puțin de 5%).
+
+
+=== ARN mesager - ARNm ===
+
+ARN-ul mesager este ARN-ul ce va servi ca tipar pentru sinteza proteinelor. Complexul enzimatic ARN polimerază sintetizează inițial un ARN mesager precursor ce conține secvențele corespunzătoare exonilor și intronilor genei. Prin procesul ulterior de maturare ARN-ul premesager este modificat pentru a duce la formarea ARN-ului mesager matur:
+
+la capătul 5’ se adaugă un „cap” (o moleculă de 7-metil-guanozină);
+la capătul 3’ se adaugă o serie de 100-200 de ribonucleotide conținând adenină ce formează coada poli-A;
+sunt eliminate secvențele corespunzătoare intronilor prin procesul numit matisare (splicing în engleză) fiind păstrate doar secvențele corespunzătoare exonilor, secvențe ce conțin informația necesară sintezei de proteine prin procesul numit translație.ARN-ul mesager matur este format din trei regiuni : regiunea 5’ netranscrisă (5’UTR – 5' untranslated region – în engleză), regiunea 3’ netranscrisă (3’UTR – 3' untranslated region –în engleză) și regiunea codantă.
+
+
+=== ARN de transport - ARNt ===
+ARN-ul de transport (notat ARNt) este un ARN scurt, de 75-100 nucleotide, cu o structură terțiară „în treflă” (cu patru regiuni scurte dublu catenare și trei bucle) ce fixează un anumit aminoacid la capătul 3’ și care are o regiune specifică de trei nucleotide numită anticodon în bucla opusă capătului 3’. Acest ARN fixează un aminoacid pe care îl transportă și îl poziționează în dreptul unui codon (prin complementaritatea codon (de pe molecula de ARNm) – anticodon (de pe molecula de ARNt) în cursul procesului de translație.
+
+
+=== ARN ribozomal - ARNr ===
+ARN-ul ribozomal este un constituent principal al ribozomilor, structuri celulare la nivelul cărora se realizează sinteza proteinelor. ARN-ul ribozomal este sintetizat prin transcripția genelor corespunzătoare situate în anumite regiuni ale cromozomilor numite organizatori nucleolari (sau NOR în engleză). Prin transcripție sunt sintetizați precursori de talie mare ce vor fi ulterior scindați în patru tipuri de ARNr: ARNr 28S, ARNr 5.8S, ARNr 5S (ce intră în compoziția subunității mari, 60S, a ribozomului) și ARNr 18S (ce intră în compoziția subunității mici, 40S, a ribozomului).
+
+
+=== ARN regulatori ===
+Unele molecule de ARN au ca rol regularea expresiei genelor:
+
+ARN antisens, ARN ce conține regiuni complementare ARN-ului mesager și care, prin apariere, poate determina formarea de regiuni dublu catenare ARN-ARN, regiuni ce pot fie modifica capacitatea ARNm de a fi translat , fie pot duce la degradarea moleculei de ARNm. Acest proces de degradare este numit interferență ARN și a fost descoperit de Andrew Z. Fire și Craig C. Mello (premiul Nobel de Fiziologie și Medicină în 2006).
+ARN regulator de talie mare ce determină modificări epigenetice (condensare a cromatinei și oprirea expresiei genelor localizate în regiunea respectivă). Un exemplu îl reprezintă ARN-ul Xist la mamifere ce intervine în procesul de inactivare a unui cromozomul X la organismele de sex feminin.
+
+
+=== ARN catalitic (ribozime) ===
+Unele molecule de ARN (numite și ribozime, prin contracția cuvintelor ribonucleotid și enzime) au capacitatea de a cataliza reacții chimice de clivare sau de transesterificare în absența proteinelor enzimatice. Un exemplu îl reprezintă siturile active (peptidil și aminoacil) ale ribozomilor care sunt formate exclusiv din segmente de ARN ribozomal. Ribozimele pot cataliza și reacții de modificare ale acizilor nucleici, spre exemplu spliceozomii, complexe ribonucleoproteice implicate în procesul de matisare al ARN-ului premesager. Pentru identificarea ribozimelor Thomas Cech și Sidney Altman au primit premiul Nobel pentru Chimie în 1989.
+
+
+=== ARN viral ===
+Este prezent numai la ribovirusuri, alcătuind de fapt genomul viral.
+
+
+== Bibliografie ==
+Covic, M., Ștefănescu D., Sandovici I. (2004), Genetică Medicală, Ed. Polirom, București, ISBN 973-681-334-7 
+Brown TA. (2002), Genomes, 2nd edition, Oxford: Wiley-Liss, ISBN 0-471-25046-5 
+Cooper GM. (2000), The Cell, A Molecular Approach 2nd edition., Sunderland (MA): Sinauer Associates, ISBN 0-87893-106-6 
+Strachan T, Read AP. (1999), Human Molecular Genetics. 2nd edition., Wiley-Liss, New York, ISBN 1-85996-202-5

@@ -1,0 +1,96 @@
+revision: 1156949844
+title: Ada Lovelace (microarchitecture)
+url: https://en.wikipedia.org/wiki/Ada_Lovelace_(microarchitecture)
+
+
+---
+
+Ada Lovelace, also referred to simply as Lovelace, is the codename for a graphics processing unit (GPU) microarchitecture developed by Nvidia as the successor to the Ampere architecture, officially announced on September 20, 2022. It is named after English mathematician Ada Lovelace who is often regarded as the first computer programmer and is the first architecture to include both a first and last name. Nvidia announced the architecture along with the new GeForce 40 series consumer GPUs and the RTX 6000 Ada Generation pro workstation graphics card. The new GPUs were revealed to use TSMC's new 5 nm "4N" process which offers increased efficiency over the previous Samsung 8 nm and TSMC N7 processes used by Nvidia for its last generation Ampere architecture.
+
+
+== Background ==
+The Ada Lovelace architecture follows on from the Ampere architecture that was released in 2020. The Ada Lovelace architecture was announced by Nvidia CEO Jensen Huang during a GTC 2022 keynote on September 20, 2022 with the architecture powering Nvidia's GPUs for gaming, workstations and datacenters.
+
+
+== Architectural details ==
+Architectural improvements of the Ada Lovelace architecture include the following:
+CUDA Compute Capability 8.9
+TSMC 4N process (custom designed for NVIDIA) - not to be confused with TSMC's regular N4 node
+4th-generation Tensor Cores with FP8, FP16, bfloat16, TensorFloat-32 (TF32) and sparsity acceleration
+3rd-generation Ray Tracing Cores, plus concurrent ray tracing and shading and compute
+Shader Execution Reordering (SER)
+Nvidia video encoder/decoder (NVENC/NVDEC) with 8K 10-bit 60FPS AV1 fixed function hardware encoding
+No NVLink support
+
+
+=== Streaming multiprocessors (SMs) ===
+
+
+==== CUDA cores ====
+128 CUDA cores are included in each SM.
+
+
+==== RT cores ====
+Ada Lovelace features third-generation RT cores
+The RTX 4090 features 128 RT cores compared to the 84 in the previous generation RTX 3090 Ti. These 128 RT cores can provide up to 191 TFLOPS of compute with 1.49 TFLOPS per RT core.
+A new stage in the ray tracing pipeline called Shader Execution Reordering (SER) is added in the Lovelace architecture which Nvidia claims provides a 2x performance improvement in ray tracing workloads.
+
+
+==== Tensor cores ====
+Lovelace's new fourth-generation Tensor cores enable the AI technology used in DLSS 3's frame generation techniques. Much like Ampere, each SM contains 4 Tensor cores but Lovelace contains a greater number of Tensor cores overall given its increased number of SMs.
+
+
+=== Clock speeds ===
+There is a significant increase in clock speeds with the Ada Lovelace architecture with the RTX 4090's base clock speed being higher than the boost clock speed of the RTX 3090 Ti.
+
+
+=== Cache and memory subsystem ===
+The fully enabled AD102 Lovelace die features 96 MB of L2 cache, a 16x increase from the 6 MB in the Ampere-based GA102 die. The GPU having quick access to a high amount of L2 cache benefits complex operations like ray tracing compared to the GPU seeking data from the GDDR video memory which is slower. Relying less on accessing memory for storing important and frequently accessed data means that a narrower memory bus width can be used in tandem with a large L2 cache.
+Each memory controller uses a 32-bit connection with up to 12 present for a combined memory bus width of 384-bit. The Lovelace architecture can use either GDDR6 or GDDR6X memory. GDDR6X memory features on the desktop GeForce RTX 40 series while the more energy-efficient GDDR6 memory is used on its corresponding mobile versions and on RTX A6000 workstation GPUs.
+
+
+=== Power efficiency and process node ===
+The Ada Lovelace architecture is able to use lower voltages compared to its predecessor. Nvidia claims a 2x performance increase for the RTX 4090 at the same 450W used by the previous generation flagship RTX 3090 Ti.Increased power effiency can be attributed in part to the smaller fabrication node used by the Lovelace architecture. The Ada Lovelace architecture is fabricated on TSMC's cutting-edge 4N process, a custom designed process node for Nvidia. The previous generation Ampere architecture used Samsung's 8nm-based 8N process node from 2018, which was two years old by the time of Ampere's launch. The AD102 die with its 76.3 billion transistors has a transistor density of 125.5 million per mm2, a 178% increase in density from GA102's 45.1 million per mm2.
+
+
+=== Media engine ===
+The Lovelace architecture utilizes the new 8th generation Nvidia NVENC video encoder and the 7th generation NVDEC video decoder introduced by Ampere returns.NVENC AV1 hardware encoding with support for up to 8K resolution at 60FPS in 10-bit color is added, enabling higher video fidelity at lower bit rates compared to the H.264 and H.265 codecs. Nvidia claims that its NVENC AV1 encoder featured in the Lovelace architecture is 40% more efficient than the H.264 encoder in the Ampere architecture.The Lovelace architecture received criticism for not supporting the DisplayPort 2.0 connection that supports higher display data bandwidth and instead uses the older DislayPort 1.4a which is limited to a peak bandwidth of 32Gbps. As a result, Lovelace GPUs would be limited by DisplayPort 1.4a's supported refresh rates despite the GPU's performance being able to reach higher frame rates. Intel's Arc GPUs that also released in October 2022 included DisplayPort 2.0. AMD's competing RDNA 3 architecture released just two months after Lovelace included DisplayPort 2.1.
+
+
+== Ada Lovelace dies ==
+
+
+== Ada Lovelace-based products ==
+
+
+=== Gaming ===
+GeForce 40 series
+GeForce RTX 4050 (mobile) (AD107)
+GeForce RTX 4060 (mobile) (AD107)
+GeForce RTX 4060 Ti (AD106)
+GeForce RTX 4070 (mobile) (AD106)
+GeForce RTX 4070 (AD104)
+GeForce RTX 4070 Ti (AD104)
+GeForce RTX 4080 (mobile) (AD104)
+GeForce RTX 4080 (AD103)
+GeForce RTX 4090 (mobile) (AD103)
+GeForce RTX 4090 (AD102)
+
+
+=== Professional ===
+
+
+==== Desktop Workstation ====
+
+
+==== Mobile Workstation ====
+
+
+=== Datacenter ===
+
+
+== See also ==
+List of eponyms of Nvidia GPU microarchitectures
+
+
+== References ==

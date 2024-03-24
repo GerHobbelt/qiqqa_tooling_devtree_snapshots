@@ -1,0 +1,41 @@
+revision: 6400879
+title: Keeletoimetamine
+url: https://et.wikipedia.org/wiki/Keeletoimetamine
+
+
+---
+
+Keeletoimetamine on teksti toimetamise osa, mis seisneb autori kirjutatud valmisteksti muutmises ja korrigeerimises selleks, et saavutada teksti õigekeelsus, ühemõttelisus, hõlbus arusaadavus, stiililine sobivus, loogilisus ning selles esinevate terminite ja andmete õigsus. 
+
+
+== Keeletoimetaja isikuomadused ==
+Keeletoimetaja amet nõuab laia silmaringi, teravat silma, keelereeglite tundmist, head keeletaju, täpsust, tähelepanelikkust, head keskendumisvõimet, uudishimulikkust ning sageli ka kiirust ja rutiinitaluvust. Kuna tänapäeval toimub töö enamasti arvutiga ja kasutusel võivad olla kümned arvutiprogrammid (nt tõlkebüroos töötades), tuleb kasuks ka hea tehniline taiplikkus, sest iga programm nõuab eraldi väljaõpet ning iga päev võib tuua uusi tehnilisi katsumusi. Samas on keeletoimetaja töö väga silmaringi avardav, sobides seega hästi uudishimulikule ja õpihimulisele inimesele.
+
+
+== Haridus ja töövõimalused ==
+Keeletoimetamisega tegelevad enamasti kutselised keeletoimetajad, kes saavad vastava hariduse näiteks Tartu või Tallinna ülikoolist.
+Keeletoimetajaid vajavad näiteks ajalehe- ja ajakirjatoimetused ja raamatukirjastused, tõlkebürood, ministeeriumid ja muud riigiasutused, aga ka teised ettevõtted ja asutused, kes loovad palju tekste. Ettevõtted, kel oma keeletoimetajat pole, aga kes mõistavad korrektse keelekasutuse olulisust firma kuvandi loojana, ostavad teenust sisse iseseisvalt tegutsevatelt keeletoimetajatelt või keeletoimetusbüroodelt.
+
+
+== Keeletoimetamise piirid ==
+Piirid keeletoimetamise, sisutoimetamise ja tõlketoimetamise vahel on üsna hägusad. Siiski mõistetakse korrektuuri all peamiselt kirjavigade ja kirjavahemärkide ning pisivigade parandamist juba keeleliselt toimetatud tekstis (sageli ka juba küljendatud PDF-failis või paberil).
+Sisuline toimetamine tähendab tihti ka sõnastuse muutmist ja lausete ümberstruktureerimist ning vajadusel isegi lõikude või peatükkide ümbertõstmist.
+Ilukirjandustekstide sisuline toimetamine eeldab tihedat koostööd autoriga ja muudatused viiakse sisse vaid autori nõusolekul. Seejuures ei pruugi autor üldse soovidagi kõikide vigade parandamist, sest need võivad olla osa tema stiilist. Näiteks Wimbergi "Maaraamatus" ei lennanud mitte "kärbsed", nagu õige oleks, vaid "kärpsed" (taotluslikult häälduspäraselt kirjutatuna).
+Tõlke keeleline toimetamine sisaldab enamasti nii korrektuuri kui sisutoimetamist. Tõlgete toimetamisel kasutatakse palju erinevaid tõlkeabiprogramme (CAT Tools), kus tekst on jaotatud lauseteks või väiksemateks osadeks – stringideks või segmentideks. Korraga on näha nii lähtetekst kui ka sihtkeelde tõlgitud tekst, mida toimetaja omavahel võrdleb ja kuhu parandusi teeb. Tõlkeabiprogrammide suurim kasu seisneb tõlkemälus ja terminibaasides, mida programmid iga kliendi kohta eraldi talletavad, aga nad aitavad tuvastada ka erinevusi lähte- ja sihtkeele tühikukasutuses, kirjavahemärgistuses (punktuatsioonis), arvudes jm masinale arusaadavates üksustes.
+
+
+== Keeletoimetamise astmed ==
+Üldiselt eristatakse keeletoimetamise puhul kolme tugevusastet, milles lepitakse töö tellijaga eelnevalt kokku ning sellest sõltub ka tulemuse kvaliteet ja hind.
+
+Kerge toimetamine – parandatakse kirjavahemärgistus, õigekiri, eksitav asesõnade kasutus ja täiesti ebaselged või vale arusaamist soosivad mõtteväljendused. Märgitakse ära ilmselged sisulised ebatäpsused, loogikavead, kordused ja kahtlased faktid. Faktikontrolli ei tehta. Tähelepanuta jäetakse kõnekeelsed terminid ja väljendid, mis ei ole küll ideaalsed, kuid mis mõistmist otseselt ei sega. Juhitakse autori tähelepanu tehnilistele ja vormilistele puudustele.
+Keskmine toimetamine – sisaldab kerget toimetamist ja lisaks parandatakse silmatorkavad sisulised ebatäpsused ja loogikavead, kohendatakse sõnastust, lausestust ja stiili. Kontrollitakse ja parandatakse kahtlased faktid, kasutades käepäraseid allikaid. Osutatakse ebasobivatele väljenditele, kahtlastele terminitele, kordustele ja liigsõnalisusele või parandatakse need. Juhitakse autori tähelepanu tehnilistele ja vormilistele puudustele või parandatakse need.
+Tugev toimetamine – sisaldab kõike eelnevat ja lisaks tehakse fakti-, termini-, lingi- ja viiteallikate kontroll, milleks kasutatakse autoriteetseid allikaid ja vajadusel kaasatakse eksperte. Likvideeritakse kõik loogika- ja sisuvead ning tehakse korrektne vormistus. Tulemuseks on kõrgeima kvaliteediga ladus, loogiline ja kontrollitud andmetega tekst.Üldjuhul saab tellija keeletoimetajaga iga eraldi töö puhul ka teisiti kokku leppida. Näiteks et soovitakse kerget toimetamist koos terminite ja viiteallikate kontrolliga.
+
+
+== Vaata ka ==
+Eesti Keeletoimetajate Liit
+Keeletoimetamistalgud
+
+
+== Kirjandus ==
+Triinu Tamm. Keeletoimetaja kui üliinimene. Sirp. 02.10.2015.

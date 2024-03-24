@@ -1,0 +1,25 @@
+revision: 29308662
+title: Scholar
+url: https://tr.wikipedia.org/wiki/Semantic_Scholar
+
+
+---
+
+Semantic Scholar, Allen Yapay Zeka Enstitüsü'nde geliştirilen ve Kasım 2015'te halka açık olarak yayınlanan bilimsel literatür için yapay zekâ destekli bir araştırma aracıdır. Bilimsel makaleler için özetler sağlamak üzere doğal dil işlemedeki gelişmeleri kullanır. Semantic Scholar ekibi, yapay zekanın doğal dil işleme, makine öğrenimi, İnsan-bilgisayar etkileşimi ve bilgi çekme alanlarında kullanımını aktif olarak araştırmaktadır.Semantic Scholar bilgisayar bilimi, yer bilimleri ve nörobilim konularını çevreleyen bir veri tabanı olarak başladı. Ancak 2017'de sistem, biyomedikal literatürü külliyatına dahil etmeye başladı. Eylül 2022 itibarıyla, artık bilimin her alanından 200 milyonun üzerinde yayını içermektedir.
+
+
+== Teknoloji ==
+Semantic Scholar, bilimsel literatürün tek cümlelik bir özetini sunar. Amaçlarından biri, mobil cihazlarda çok sayıda başlığı ve uzun özetleri okumanın zorluğunu ele almaktı. Ayrıca her yıl yayınlanan üç milyon bilimsel makalenin okuyucuya ulaşmasını sağlamayı amaçlamaktadır, çünkü bu literatürün sadece yarısının okunduğu tahmin edilmektedir.Yapay zeka, bir kağıdın özünü yakalamak için kullanılır ve onu "soyutlayıcı" bir teknikle oluşturur. Proje, geleneksel alıntı analizi yöntemlerine bir anlamsal analiz katmanı eklemek ve makalelerden ilgili şekilleri, tabloları, varlıkları ve mekanları çıkarmak için makine öğrenimi, doğal dil işleme ve makine görüşünün bir kombinasyonunu kullanır.Google Scholar ve PubMed'in aksine Semantic Scholar, bir makalenin en önemli ve etkili unsurlarını vurgulamak için tasarlanmıştır. Yapay zeka teknolojisi, araştırma konuları arasındaki gizli bağlantıları ve bağlantıları belirlemek için tasarlanmıştır. Daha önce atıfta bulunulan arama motorları gibi Semantic Scholar da Microsoft Academic Knowledge Graph, Springer Nature's SciGraph ve Semantic Scholar Corpus gibi grafik yapılarından yararlanır.Semantic Scholar tarafından barındırılan her makaleye Semantic Scholar Corpus ID (kısaltılmış S2CID) adı verilen benzersiz bir tanımlayıcı atanır. Aşağıdaki giriş bir örnektir:
+
+Liu, Ying; Gayle, Albert A; Wilder-Smith, Annelies; Rocklöv, Joacim (Mart 2020). "The reproductive number of COVID-19 is higher compared to SARS coronavirus". Journal of Travel Medicine. 27 (2). doi:10.1093/jtm/taaa021. PMID 32052846. S2CID 211099356. Semantic Scholar'ın kullanımı ücretsizdir ve benzer arama motorlarının aksine (örn. Google Scholar) bir ödeme duvarının arkasındaki materyali aramaz.Bir çalışma Semantic Scholar'ın arama yeteneklerini sistematik bir yaklaşımla karşılaştırdı ve arama motorunun verileri ortaya çıkarmaya çalışırken %98,88 oranında doğru olduğunu buldu. Aynı çalışma, çeşitli alıntı araçlarının yanı sıra meta verileri araştırmak için araçlar da dahil olmak üzere diğer Semantic Scholar işlevlerini inceledi.
+
+
+== Kullanıcı ve yayın sayısı ==
+Ocak 2018 itibarıyla, biyomedikal makaleler ve konu özetleri ekleyen bir 2017 projesinin ardından, Semantic Scholar külliyatında bilgisayar bilimi ve biyomedikalden 40 milyondan fazla makale yer aldı. Mart 2018'de, Amazon Alexa platformu için makine öğrenimi girişimleri geliştiren Doug Raymond, Semantic Scholar projesini yönetmesi için işe alındı. Ağustos 2019 itibarıyla, Microsoft Academic Graph kayıtlarının eklenmesinin ardından dahil edilen makalelerin meta verilerinin (gerçek PDF'ler değil) sayısı 173 milyondur. 2020'de Semantic Scholar ve University of Chicago Press Journals arasındaki bir ortaklık, University of Chicago Press altında yayınlanan tüm makalelerin Semantic Scholar külliyatında bulunmasını sağladı. 2020'nin sonunda Semantic Scholar 190 milyon makaleyi indeksledi.2020'de Semantic Scholar kullanıcıları ayda yedi milyona ulaştı.
+
+
+== Kaynakça ==
+
+
+== Dış bağlantılar ==
+Resmî site

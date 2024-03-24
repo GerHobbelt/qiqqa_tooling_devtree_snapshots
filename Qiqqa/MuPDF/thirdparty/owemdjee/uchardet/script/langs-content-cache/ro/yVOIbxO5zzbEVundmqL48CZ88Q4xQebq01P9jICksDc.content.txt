@@ -1,0 +1,86 @@
+revision: 15385245
+title: "imagine digital\u0103"
+url: https://ro.wikipedia.org/wiki/Imagine_digital%C4%83
+
+
+---
+
+O imagine digitală este o reprezentare a unei imagini reale bidimensionale (imagine în "2D" sau două dimensiuni), ca o mulțime finită de valori digitale (numerice), codificate după un anumit sistem. Dacă a fost produsă printr-un procedeu fotografic se mai numește și fotografie digitală.
+
+
+== Digitalizare ==
+Imaginile digitale pot fi produse și plecând de la imagini tradiționale, analogice, prin digitalizare. Acestea imagini analogice se împart mai întâi în numeroase elemente infime ca suprafață numite pixeli, și anume sub formă de raster grafic sau hartă de tip raster, fiecare pixel  primind (având) două coordonate plane. Apoi caracteristicile de luminozitate și culoare ale fiecărui pixel, eventual împreună cu coordonatele sale (dacă acestea nu sunt implicite), sunt codificate conform mai multor sisteme, rezultatul final al acestei digitalizări fiind un șir de numere care sunt memorate cu ajutorul calculatoarelor. În mod obișnuit, imaginile digitale și pixelii lor sunt stocate în memorii de computere, sau și pe benzi magnetice video digitale. Luate ca atare, imaginile digitale și pixelii nu se pot vedea, deoarece ele sunt doar înșiruiri de numere. În mod teoretic memorarea lor ar putea fi realizată și prin simpla notare a șirului de numere pe hârtie, ceeace însă este împiedicat în practică de lungimea uriașă a șirului. Pentru a ocupa / consuma mai puțin loc în memorie, imaginile digitale pot fi stocate, sau și transmise sub forme comprimate, urmând să fie decomprimate la destinație după necesități.
+Imaginile digitale pot fi create cu ajutorul unei multitudini de dispozitive tehnice, așa cum ar fi aparate de fotografiat digitale, aparate de filmat digitale, scanere de imagine, mașini de măsurat coordonate, radare aeriene și multe altele. Imaginile digitale mai pot fi de asemenea obținute și/sau sintetizate (create) din diferite alte date ne-imagistice, eventual "artificiale", așa cum ar fi funcții matematice, modele bidimensionale și tridimensionale, grafică computerizată, șamd.
+
+
+== Afișare ==
+Deși pixelii și imaginile digitale nu pot fi văzute în mod nemijlocit, până la urmă scopul folosirii lor este tot obținerea unor imagini reale, care să poată fi deci văzute de către om. Acestea se realizează cu ajutorul unor altor dispozitive tehnice, consacrate acestui scop, cum ar fi imprimantele (normale sau stereolitografice), ecranele (display-urile) de calculator, proiectoarele de imagini, ș.a. Aceste imagini reale, de fapt analogice (deoarece rareori pixelii sunt reprezentați foarte acurat și fără încălecări), sunt denumite tot „imagini digitale,” dacă provin din imaginile digitale din memoria calculatorului, chiar dacă nu sunt integral digitale.
+Domeniul cunoscut sub numele de procesare a imaginilor digitale studiază algoritmii transformărilor numerice ale acestora în vederea obținerii efectelor dorite.
+
+
+== Formate de imagini ==
+Există desigur o infinitate de forme și mărimi de imagini, aceasta fiind valabil atât pentru imaginile tradiționale, analogice, cât și pentru cele digitale. Cel mai des folosite sunt însă formele dreptunghiulare, care se reflectă și la formele ecranelor de cinema, TV, calculatoare și altele. Forma imaginilor digitale dreptunghiulare se exprimă în pixeli, și anume prin numărul de pixeli pe orizontală și verticală, sau pe lățime și lungime (înălțime). Raportul dintre lățime și lungime (înălțime) se numește de obicei „formatul” imaginii digitale; unele formate des întâlnite sunt reprezentate în imaginea din dreapta.
+
+
+== Tipuri de imagini ==
+Fiecare pixel al unei imagini în 2D este asociat pe de-o parte cu poziția sa relativă pe imagine, și deține pe de altă parte un număr (relativ mic) de valori caracteristice ale semnalului de lumină emis de pixelul respectiv. Semnalele digitale pot fi clasificate conform numărului și naturii valorilor semnalului în:
+
+binare (di- sau bi-nivel)
+scală gri
+color
+fals color
+multi spectrale
+tematicăTermenul de imagine digitală se aplică de asemenea și datelor asociate cu punctele unei regiuni din spațiu, tridimensionale, așa cum ar fi aceea produsă de un echipament tomografic, sau și de camere de luat vederi / aparate fotografice speciale pentru 3 dimensiuni. În acest caz, fiecare element al imaginii în "3D" (în spațiu) are 3 coordonate (în loc de 2) și poartă numele de voxel (acronim provenit de la "volumetric pixel").
+
+
+== Vizualizarea imaginilor digitale ==
+Există numeroase programe care pot face ca o imagine digitală din computerul unde a fost ea stocată să devină vizibilă și pentru om. Astfel, imginile de tipul GIF, JPEG și PNG pot fi prezentate pe un display în mod foarte simplu, prin utilizarea unui browser web, pentru că acestea sunt formatele de codificare a imaginilor cele mai răspândite ("standard") în Internet. Și formatul SVG este utilizat din ce în ce mai frecvent, fiind format standard al organizației W3C. De obicei programele speciale de vizualizare a imaginilor, numite viewers, oferă și posibilitatea prezentării mai multor imagini într-o anumită ordine și cu o anumită viteză, această funcție constituind așa-numita "slideshow utility".
+Pe de altă parte, imaginile digitale stocate pe benzi video, care reprezintă de obicei imagini în mișcare, pot fi vizualizate prin intermediul aparatelor sau programelor de calculator numite "video player", care le transformă în semnale pentru monitorul de TV sau cel al calculatorului.
+În sfârșit, fotografiile digitale (statice) pot fi transformate de către calculator în fotografii vizibile, dar și de către aparate speciale numite "digital picture frame" (rame de tablou electronice, digitale), precum și de alte aparate.
+
+
+== Exif ==
+Exif este un standard pentru suplimentarea datelor fotografiei propriu-zise cu date despre fotografie (metadate), ca de ex. marca aparatului de fotografiat, timpul de expunere și altele. 
+
+
+== Prelucrarea imaginilor digitale ==
+
+
+=== Calibrarea imaginilor ===
+Folosirea corectă a unei imagini digitale presupune cunoștințe ținând de mai multe domenii, dar în special de domeniul programelor și subprogramelor care o pot modifica și optimiza. Astfel, calibrarea geometrică, fotometrică și senzorială sunt elemente importante ale corecției și prelucrării digitale a imaginilor digitale. Aici este de fapt vorba de meseria/specialitatea de grafician. Utilizatorii trebuie să fie conștienți de erorile de cuantificare inevitabile, carese datorează în special rezoluției limitate a imaginii (numărului fint de pixeli). Ca atare, se recomandă ca fiecărei imagini în parte să fie întotdeauna corectată și calibrată în mod profesionist.
+
+
+=== Alte posibilități de prelucrare ===
+Există o multitudine de programe de calculator care prelucrează imaginile digitale după dorință. Exemple de operații foarte uzuale: optimizarea culorii, contrastului și luminozității; decupare; întregire sau plasare într-o "ramă", tot digitală; mărire / micșorare; comprimare (de ex. pentru a accelera transmisia); mărirea sau micșorarea clarității (sharpness, Schärfe); compunerea unor imagini din alte imagini; precum și o mulțime întreagă de modificări, prelucrări și efecte artistice. Pentru detalii v. Editarea fotografiilor.
+
+
+=== O galerie de imagini digitale, având la origine o singură imagine digitală, prelucrată digital ===
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+== Vezi și ==
+Imprimantă
+Prelucrare digitală a imaginilor
+Comprimarea fotografiilor digitale
+Formate pentru fotografiile digitale
+Scaner
+Layer
+OCR - Recunoașterea automată a caracterelor (literelor) dintr-o imagine
+Rezoluție digitală
+Grafică digitală
+Editarea fotografiilor
+
+
+== Legături externe ==
+ro  Fotografii gratuite Arhivat în 28 aprilie 2010, la Wayback Machine.

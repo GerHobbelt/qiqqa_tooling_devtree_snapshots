@@ -1,0 +1,44 @@
+revision: 69208513
+title: "Quy t\u1EAFc"
+url: https://vi.wikipedia.org/wiki/Quy_t%E1%BA%AFc_b%C3%A0n_tay_ph%E1%BA%A3i
+
+
+---
+
+Quy tắc bàn tay phải (tiếng Anh: right-hand rule) cũng được gọi là quy tắc nắm tay phải, là một quy tắc phổ biến được dùng trong toán học và vật lý cho việc nhận biết các quy ước ký hiệu vectơ trong 3 chiều. Có một vài nguyên tắc nắm tay phải khác nhau để dễ hình dung các vật chất, được ứng dụng trong từng trường hợp, mục đính khác nhau.
+- Quy tắc nắm tay phải xác định chiều dòng điện cảm ứng trong một dây dẫn chuyển động trong một từ trường: Nắm bàn tay phải rồi đặt sao cho ngón cái dọc theo dây dẫn mang dòng điện và chỉ theo chiều của dòng điện.Khum 4 ngón tay còn lại và chiều khum của 4 ngón là chiều của đường sức từ 
+- Quy tắc bàn tay trái (còn gọi là quy tắc Fleming) là quy tắc định hướng của lực do một từ trường tác động lên một đoạn mạch có dòng điện chạy qua và đặt trong từ trường. Đặt bàn tay trái sao cho các đường cảm ứng từ hướng vào lòng bàn tay, chiều từ cổ tay đến ngón tay giữa hướng theo chiều dòng điện thì ngón tay cái choãi ra 90° chỉ chiều của lực điện từ
+
+
+== Sử dụng ==
+
+
+=== Trong vật lý ===
+Trong vật lý, quy tắc nắm tay phải để xác định chiều của dòng điện khi biết chiều của cảm ứng từ hoặc xác định chiều của cảm ứng từ khi biết chiều của dòng điện.
+
+
+=== Ứng dụng điện từ ===
+Quy tắc nắm tay phải được sử dụng trong điện từ học.
+
+
+=== Quy tắc xác định chiều dòng điện cảm ứng trong một dây dẫn chuyển động trong một từ trường ===
+Nắm bàn tay phải, rồi đặt sao cho bốn ngón tay hướng theo chiều dòng điện chạy qua các vòng dây thì ngón tay cái choãi ra chỉ chiều của đường sức từ trong lòng ống dây.
+
+
+=== Trong toán học ===
+Quy tắc nắm tay phải được sử dụng để xác định hướng cảm sinh của đường cong biên khi áp dụng định lý Stokes. Nắm bàn tay phải rồi đặt sao cho ngón cái choãi ra chỉ theo chiều của véc-tơ pháp tuyến. Thế thì bốn ngón tay còn lại sẽ cho ta định hướng cảm sinh của đường cong biên.
+
+
+== Xem thêm ==
+Quy tắc bàn tay trái: Đặt bàn tay trái sao cho các đường sức từ hướng vào lòng bàn tay, chiều từ cổ tay đến ngón tay giữa hướng theo chiều dòng điện thì ngón tay cái choãi ra 90° chỉ chiều của lực điện từ
+
+
+== Chú thích ==
+
+
+== Liên kết ngoài ==
+Right and Left Hand Rules - Interactive Java Tutorial Lưu trữ 2010-12-30 tại Wayback Machine National High Magnetic Field Laboratory
+A demonstration of the right-hand rule at physics.syr.edu Lưu trữ 2004-11-14 tại Wayback Machine
+Weisstein, Eric W., "Right-hand rule" từ MathWorld.
+Dr. Johannes Heidenhain: Right Hand Rule - Heidenhain TNC Training: heidenhain.de Lưu trữ 2014-05-25 tại Wayback Machine
+Christian Moser: right-hand-rule: wpftutorial.net

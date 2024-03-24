@@ -1,0 +1,1250 @@
+revision: 68747150
+title: Algebra von Neumanna
+url: https://pl.wikipedia.org/wiki/Algebra_von_Neumanna
+
+
+---
+
+Algebra von Neumanna (albo W*-algebra) – *-podalgebra C*-algebry operatorów ograniczonych 
+  
+    
+      
+        
+          
+            B
+          
+        
+        (
+        H
+        )
+      
+    
+     
+   na pewnej przestrzeni Hilberta 
+  
+    
+      
+        H
+        ,
+      
+    
+     
+   która jest domknięta w słabej topologii operatorowej. Domkniętość w słabej topologii operatorowej gwarantuje również domkniętość względem normy w 
+  
+    
+      
+        
+          
+            B
+          
+        
+        (
+        H
+        )
+        ,
+      
+    
+     
+   a więc każda algebra von Neumanna jest, w szczególności, C*-algebrą.
+Teoria algebr von Neumanna zapoczątkowana została z końcem lat dwudziestych XX wieku przez Johna von Neumanna i Francisa Murraya (używali oni nazwy pierścienie operatorowe) i motywowana była potrzebą formalizacji języka mechaniki kwantowej. Nazwa algebra von Neumanna pojawia się po raz pierwszy w książce Dixmiera jednak on sam przypisuje ją Dieudonnému. W literaturze nazwa ta była używana wymiennie z nazwą W*-algebra (od ang. weakly closed *-algebra). Niektórzy autorzy (np. Takesaki) dokonują następującego rozróżnienia nazywając W*-algebrą C*-algebrę 
+  
+    
+      
+        A
+        ,
+      
+    
+     
+   która maja wierną (różnowartościową) reprezentację 
+  
+    
+      
+        (
+        π
+        ,
+        H
+        )
+      
+    
+     
+   na przestrzeni Hilberta 
+  
+    
+      
+        H
+      
+    
+     
+   o tej własności, iż obraz 
+  
+    
+      
+        π
+        (
+        A
+        )
+        ⊆
+        
+          
+            B
+          
+        
+        (
+        H
+        )
+      
+    
+     
+   jest algebrą von Neumanna (w zdefiniowanym wyżej sensie).
+
+
+== Podstawowe własności ==
+Każda algebra von Neumanna ma jedynkę.
+Domknięta kula jednostkowa algebry von Neumanna jest zwarta w słabej topologii operatorowej.
+Algebra von Neumanna jest ośrodkowa względem normy wtedy i tylko wtedy, gdy jest skończenie wymiarowa.
+Każda nieskończenie wymiarowa algebra von Neumanna zawiera nieskończenie wymiarową podalgebrę przemienną, która jest również algebrą von Neumanna.
+
+
+== Twierdzenie von Neumanna o drugim komutancie ==
+Mimo iż definicja algebry von Neumanna używa pojęcia słabej topologii operatorowej, jest ona równoważna definicji czysto algebraicznej. Niech 
+  
+    
+      
+        H
+      
+    
+     
+   będzie przestrzenią Hilberta. Dla danego podzbioru 
+  
+    
+      
+        A
+        ⊆
+        
+          
+            B
+          
+        
+        (
+        H
+        )
+      
+    
+     
+   symbol 
+  
+    
+      
+        
+          A
+          ′
+        
+      
+    
+     
+   oznacza komutant zbioru 
+  
+    
+      
+        A
+        ,
+      
+    
+     
+   tj. zbiór 
+  
+    
+      
+        {
+        x
+        ∈
+        
+          
+            B
+          
+        
+        (
+        H
+        )
+        :
+        ∀
+        a
+        ∈
+        A
+        (
+        x
+        a
+        =
+        a
+        x
+        )
+        }
+        .
+      
+    
+     
+   Analogicznie, 
+  
+    
+      
+        
+          A
+          ″
+        
+      
+    
+     
+   oznacza drugi komutant zbioru 
+  
+    
+      
+        A
+        ,
+      
+    
+     
+   tj. komutant komutanta 
+  
+    
+      
+        
+          A
+          ′
+        
+        .
+      
+    
+     
+  
+Niech 
+  
+    
+      
+        M
+      
+    
+     
+   będzie pod-*-algebrą 
+  
+    
+      
+        
+          
+            B
+          
+        
+        (
+        H
+        )
+      
+    
+     
+   zawierającą operator identyczności 
+  
+    
+      
+        I
+        .
+      
+    
+     
+   Wówczas następujące warunki są równoważne:
+
+  
+    
+      
+        M
+        =
+        
+          M
+          ″
+        
+        ;
+      
+    
+     
+  
+
+  
+    
+      
+        M
+      
+    
+     
+   jest domknięta w słabej topologii operatorowej (tj. 
+  
+    
+      
+        M
+      
+    
+     
+   jest algebrą von Neumanna);
+
+  
+    
+      
+        M
+      
+    
+     
+   jest domknięta w mocnej topologii operatorowej;
+
+  
+    
+      
+        M
+      
+    
+     
+   jest domknięta w topologii ultrasłabej,przy czym topologia ultrasłaba to topologia *-słaba pochodząca z dualności 
+  
+    
+      
+        
+          N
+        
+        (
+        H
+        )
+        
+          *
+        
+        =
+        
+          
+            B
+          
+        
+        (
+        H
+        )
+        ,
+      
+    
+     
+   gdzie 
+  
+    
+      
+        
+          N
+        
+        (
+        H
+        )
+      
+    
+     
+   oznacza przestrzeń Banacha operatorów nuklearnych (śladowych) na 
+  
+    
+      
+        H
+        .
+      
+    
+     
+  
+Różni autorzy używają wymiennie wymienionych wyżej warunków do zdefiniowania pojęcia algebry von Neumanna.
+
+
+== Przykłady ==
+Każda skończenie wymiarowa C*-algebra oraz algebra operatorów 
+  
+    
+      
+        
+          
+            B
+          
+        
+        (
+        H
+        )
+      
+    
+     
+   na dowolnej przestrzeni Hilberta 
+  
+    
+      
+        H
+      
+    
+     
+   są naturalnymi przykładami algebr von Neumanna.
+Niech 
+  
+    
+      
+        μ
+      
+    
+     
+   będzie miarą lokalizowalną (a więc, na przykład, miarą 
+  
+    
+      
+        σ
+      
+    
+     
+  -skończoną) na przestrzeni mierzalnej 
+  
+    
+      
+        X
+        .
+      
+    
+     
+   Wówczas przestrzeń H = L2(μ) jest przestrzenią Hilberta. Na przestrzeni tej działają w naturalny sposób operatory mnożenia przez funkcje z 
+  
+    
+      
+        
+          L
+          
+            ∞
+          
+        
+        (
+        μ
+        )
+        ,
+      
+    
+     
+   tj. każdej funkcji 
+  
+    
+      
+        f
+        ∈
+        
+          L
+          
+            ∞
+          
+        
+        (
+        μ
+        )
+      
+    
+     
+   odpowiada operator (ograniczony) 
+  
+    
+      
+        
+          T
+          
+            f
+          
+        
+        ∈
+        
+          
+            B
+          
+        
+        (
+        
+          L
+          
+            2
+          
+        
+        (
+        μ
+        )
+        )
+      
+    
+     
+   dany wzorem 
+  
+    
+      
+        
+          T
+          
+            f
+          
+        
+        g
+        =
+        f
+        g
+        .
+      
+    
+     
+   Rodzina wszystkich operatorów mnożenia 
+  
+    
+      
+        
+          T
+          
+            f
+          
+        
+      
+    
+     
+   jest przemienną podalgebrą 
+  
+    
+      
+        
+          
+            B
+          
+        
+        (
+        
+          L
+          
+            2
+          
+        
+        (
+        μ
+        )
+        )
+        ,
+      
+    
+     
+   która jest algebrą von Neumanna (w ten sposób utożsamia się algebrę 
+  
+    
+      
+        
+          L
+          
+            ∞
+          
+        
+        (
+        μ
+        )
+      
+    
+     
+   z algebrą operatorów). Można udowodnić, że każda przemienna algebra von Neumanna jest postaci 
+  
+    
+      
+        
+          L
+          
+            ∞
+          
+        
+        (
+        μ
+        )
+      
+    
+     
+   dla pewnej miary lokalizowalnej 
+  
+    
+      
+        μ
+        .
+      
+    
+     
+  
+Dla dowolnej C*-algebry 
+  
+    
+      
+        A
+        ⊆
+        
+          
+            B
+          
+        
+        (
+        H
+        )
+      
+    
+     
+   jej drugi komutant 
+  
+    
+      
+        
+          A
+          ″
+        
+      
+    
+     
+   jest algebrą von Neumanna.
+Jeżeli 
+  
+    
+      
+        A
+      
+    
+     
+   jest (być może abstrakcyjną) C*-algebrą, to jej druga przestrzeń sprzężona 
+  
+    
+      
+        A
+        
+          **
+        
+      
+    
+     
+   (wyposażona w iloczyn Arensa; C*-algebry są regularne w sensie Arensa) jest *-izomorficzna z algebrą von Neumanna. Algebra 
+  
+    
+      
+        A
+        
+          **
+        
+      
+    
+     
+   jest uniwersalną algebrą von Neumanna dla 
+  
+    
+      
+        A
+      
+    
+     
+   w następującym sensie: Niech 
+  
+    
+      
+        (
+        π
+        ,
+        H
+        )
+      
+    
+     
+   będzie reprezentacją 
+  
+    
+      
+        A
+      
+    
+     
+   na przestrzeni Hilberta 
+  
+    
+      
+        H
+      
+    
+     
+   oraz niech 
+  
+    
+      
+        M
+        (
+        π
+        )
+      
+    
+     
+   oznacza algebrę von Neumanna 
+  
+    
+      
+        π
+        (
+        A
+        
+          )
+          ″
+        
+        .
+      
+    
+     
+   Wówczas istnieje dokładnie jedno przekształcenie liniowe 
+  
+    
+      
+        Π
+        
+          :
+        
+      
+    
+     
+   
+  
+    
+      
+        A
+        
+          **
+        
+        →
+        M
+        (
+        π
+        )
+      
+    
+     
+   o następujących własnościach: 
+  
+    
+      
+        π
+        =
+        Π
+        κ
+        ,
+      
+    
+     
+   gdzie 
+  
+    
+      
+        κ
+        
+          :
+        
+      
+    
+     
+   
+  
+    
+      
+        A
+        →
+        A
+        
+          **
+        
+      
+    
+     
+   jest kanonicznym zanurzeniem 
+  
+    
+      
+        A
+      
+    
+     
+   w 
+  
+    
+      
+        A
+        
+          **
+        
+        ;
+      
+    
+     
+   
+  
+    
+      
+        Π
+      
+    
+     
+   jest 
+  
+    
+      
+        σ
+        (
+        A
+        
+          **
+        
+        ,
+        A
+        
+          *
+        
+        )
+      
+    
+     
+   / 
+  
+    
+      
+        σ
+      
+    
+     
+  -weak ciągłe; 
+  
+    
+      
+        Π
+        (
+        
+          B
+          
+            A
+            
+              **
+            
+          
+        
+        )
+        =
+        
+          B
+          
+            M
+            (
+            π
+            )
+          
+        
+        .
+      
+    
+     
+   W szczególności, jeżeli 
+  
+    
+      
+        (
+        π
+        ,
+        H
+        )
+      
+    
+     
+   jest uniwersalną reprezentacją algebry 
+  
+    
+      
+        A
+      
+    
+     
+   (tj. sumą prostą po wszystkich GNS-reprezentacjach pochodzących od stanów na 
+  
+    
+      
+        A
+      
+    
+     
+  ), to 
+  
+    
+      
+        A
+        
+          **
+        
+      
+    
+     
+   jest *-izomorficzna z 
+  
+    
+      
+        π
+        (
+        A
+        
+          )
+          ″
+        
+        .
+      
+    
+     
+  
+Hiperskończony faktor typu II1 
+  
+    
+      
+        R
+        .
+      
+    
+     
+  
+
+
+== Typy ==
+Algebry von Neumanna dzielą się na trzy zasadnicze typy.
+
+Typ I: 
+  
+    
+      
+        M
+      
+    
+     
+   jest typu I, gdy jest izomorficzna z algebrą postaci
+  
+    
+      
+        
+          
+            ∏
+            
+              j
+              ∈
+              J
+            
+          
+          
+            A
+            
+              j
+            
+          
+          
+          
+            
+              ⊗
+              ¯
+            
+          
+          
+          
+            
+              B
+            
+          
+          (
+          
+            H
+            
+              j
+            
+          
+          )
+          ,
+        
+      
+    
+     
+  
+gdzie dla każdego 
+  
+    
+      
+        j
+      
+    
+     
+   algebra 
+  
+    
+      
+        
+          A
+          
+            j
+          
+        
+      
+    
+     
+   jest przemienną algebrą von Neumanna oraz 
+  
+    
+      
+        
+          H
+          
+            j
+          
+        
+      
+    
+     
+   jest pewną przestrzenią Hilberta 
+  
+    
+      
+        (
+        j
+        ∈
+        J
+        )
+        .
+      
+    
+     
+  Typ II1: 
+  
+    
+      
+        M
+      
+    
+     
+   jest typu II1, gdy nie da się jej rozłożyć na sumę algebr spośród których co najmniej jedna jest typu I oraz dla każdego 
+  
+    
+      
+        0
+        <
+        x
+        ∈
+        M
+      
+    
+     
+   istnieje taki normalny śladowy stan 
+  
+    
+      
+        ϕ
+        ∈
+        M
+        
+          *
+        
+        ,
+      
+    
+     
+   że 
+  
+    
+      
+        ϕ
+        (
+        x
+        )
+        >
+        0.
+      
+    
+     
+  
+Typ 
+  
+    
+      
+        
+          
+            II
+          
+          
+            ∞
+          
+        
+        
+          :
+        
+      
+    
+     
+   
+  
+    
+      
+        M
+      
+    
+     
+   jest typu 
+  
+    
+      
+        
+          
+            II
+          
+          
+            ∞
+          
+        
+        ,
+      
+    
+     
+   gdy nie da się jej rozłożyć na sumę algebr spośród których co najmniej jedna jest typu I bądź II1 oraz istnieje rosnąca sieć rzutów 
+  
+    
+      
+        (
+        
+          p
+          
+            i
+          
+        
+        )
+        ⊂
+        M
+        ,
+      
+    
+     
+   zbieżna do 
+  
+    
+      
+        
+          1
+          
+            M
+          
+        
+      
+    
+     
+   w mocnej topologii operatorowej, o tej własności, że dla każdego 
+  
+    
+      
+        i
+      
+    
+     
+   algebra 
+  
+    
+      
+        
+          p
+          
+            i
+          
+        
+        M
+        
+          p
+          
+            i
+          
+        
+      
+    
+     
+   jest typu II1.
+Typ III: 
+  
+    
+      
+        M
+      
+    
+     
+   jest typu III, gdy nie jest typu I, II1 ani typ 
+  
+    
+      
+        
+          
+            II
+          
+          
+            ∞
+          
+        
+        .
+      
+    
+     
+  Każda algebra von Neumanna 
+  
+    
+      
+        M
+      
+    
+     
+   rozkłada się na sumę
+
+  
+    
+      
+        M
+        =
+        
+          M
+          
+            
+              I
+            
+          
+        
+        ⊕
+        
+          M
+          
+            
+              
+                I
+                I
+              
+              
+                1
+              
+            
+          
+        
+        ⊕
+        
+          M
+          
+            
+              
+                I
+                I
+              
+              
+                ∞
+              
+            
+          
+        
+        ⊕
+        
+          M
+          
+            
+              I
+              I
+              I
+            
+          
+        
+        ,
+      
+    
+     
+  gdzie każdy z (być może zerowych) jest takiego typu, jaki wskazany jest w indeksie dolnym.
+
+
+== Przypisy ==

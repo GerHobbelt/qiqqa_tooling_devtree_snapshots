@@ -1,0 +1,18 @@
+revision: 25729930
+title: Google Cloud Storage
+url: https://hu.wikipedia.org/wiki/Google_Cloud_Storage
+
+
+---
+
+A Google Cloud Storage egy tárhely szolgáltatás, egy REST-alapú webalkalmazás, amely lehetővé teszi hogy a felhasználói adatot tároljanak a Google szerver infrastruktúráján.
+
+
+== Képességei ==
+A Google Cloud Storage kompatibilis az Amazon S3 és az Eucalyptus Systems szolgáltatásaival, így az azokon működő alkalmazások könnyen portolhatóak.
+A tárhelyre való feltöltések atomi műveletekként működnek
+A jogosultságok kezelésére ACL-eket használ.
+Az esetleg megszakadt feltöltések folytathatóak.
+
+
+== Jegyzetek ==

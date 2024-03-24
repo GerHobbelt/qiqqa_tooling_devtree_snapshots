@@ -1,0 +1,95 @@
+revision: 31730062
+title: Glass
+url: https://ca.wikipedia.org/wiki/Google_Glass
+
+
+---
+
+Glass ("GLΛSS") és un dispositiu de visualització de tipus ulleres de realitat augmentada desenvolupat per Google i presentat en el congrés I/O del juny de 2012. Glass Explorer Edition es va posar a la venda per desenvolupadors qualificats el 15 d'abril de 2013 per 1500 USD mentre que la versió per consumidors va estar disponible el 15 de maig de 2014 als Estats Units.
+El 23 de juny de 2014, Google va anunciar el llançament de Glass fora dels Estats Units i va arribar als consumidors de Regne Unit per un preu de 1000 € amb la possibilitat d'adquirir el dispositiu en diferents colors: vermell, negre, carbó, blanc i blau. Durant la conferència Google I/O 2014, un dels absents va ser Glass, malgrat tot, dies després es va donar a conèixer que el dispositiu hauria rebut una millor quant al seu hardware, canviant de 1 GB de memòria RAM a 2 GB, juntament amb la incorporació de noves aplicacions. Actualment les ulleres venudes ja inclouen 2 GB de memòria RAM, però els propietaris d'un model anterior no podran realitzar una actualització.Ha tornat a sortir a la venda el 23 de juny de 2017, però col·laborant amb 11 empreses, les quals vendran les Google Glasses per ells.
+El propòsit de Glass era mostrar informació disponible pels usuaris de telèfons intel·ligents sense utilitzar les mans, permetent també l'accés a Internet mitjançant ordres de veu, de manera comparable al que Google Now ofereix a dispositius Android. El sistema operatiu serà Android. El projecte Glass és part de la secció Google X de la companyia que ha treballat en altres tecnologies futuristes, com un vehicle autònom. El projecte va ser anunciat a Google+ per Babak Parviz, un enginyer elèctric que va treballar posant les pantalles a les lents; Steve Lee, gerent del projecte i especialista en geolocalització; i Sebastian Thrun, qui va desenvolupar la universitat en línia Udacity i va treballar en el projecte pilot automàtic per cotxes Google Car. Google ja ha patentat les ulleres.
+El 15 de gener de 2015 la companyia va anunciar que deixaria de produir el prototip de Glass.
+
+
+== Hardware ==
+
+
+=== Càmera ===
+Google Glass té la capacitat de fer fotos a una resolució de 5 Mpx i gravar vídeos en 720 píxels.
+
+
+=== Touchpad ===
+La patilla dreta del dispositiu Google Glass té una superfície tàctil que permet als usuaris controlar el mateix mitjançant gestos com desplaçar i tocar el dit pel panell tàctil.
+
+
+=== Lents addicionals ===
+Aquestes lents inclouen 2 cristalls (poden variar de negre o transparent) de la marca Ray-Ban.
+
+
+=== Montures ===
+Google va ampliar el públic objectiu de Google Glass en fer possible que persones portessin ulleres per prescripció mèdica poguessin ajustar montures de cristalls graduats al dispositiu de realitat augmentada. El preu inicial de les montures de Google per Google Glass és de 225 dòlars i hi ha disponibles set models: Classic, Bold, Edge, Active, Curve, Thin, Split.Tanmateix, altres empreses com Rochester Optical també han llançat la seva línia de lents graduades per Google Glass.
+
+
+=== Especificacions tècniques ===
+No hi ha informació oficial sobre la resolució de la pantalla. S'ha proposat la de 640 x 360, ja que es recomana pels desenvolupadors d'aplicacions.
+Càmera de 5 Mpx, capaç de gravar vídeo 720p.
+Wi-fi 802.11b/g.
+Bluetooth.
+Bateria: Un dia sencer, encara que indiquen que utilitzar-les amb Hangouts o per gravar vídeo redueix la bateria.
+Emmagatzemament de 16 GB sincronitzats amb el núvol (12 GB disponibles).
+Texas Instruments OMAP 4430 SoC 1.2GHz Dual (ARMv7).
+682 MB RAM.
+Giroscopi de 3 eixos.
+Acceleròmetre de 3 eixos.
+Sensor geomagnètic (brúixola)
+Sensors de llum ambiental i sensor de proximitat interna.
+Sistema d'inducció per la transmissió del so. A partir de la versió 2.0 es permet l'ús d'auriculars específics.
+La muntura és ajustable.
+Actualment es basa en Android 4.0.4 modificat i adaptat al dispositiu.
+
+
+=== Característiques físiques ===
+Quant a les seves característiques físiques respecte al disseny ergonòmic i materials de construcció:
+
+El marc és de titani amb materials duradors i s'ajusta a qualsevol mida de cap.
+Els coixinets del nas són ajustables, per la qual cosa s'adapten a qualsevol mida de cara i nas.
+Pes de 50 g.
+
+
+== Software ==
+
+
+=== Aplicacions ===
+Les aplicacions de Glass són aplicacions gratuïtes creades per desenvolupadors de tercers. Glass també utilitza moltes aplicacions existents de Google, com Maps, Google + i Gmail.
+El 15 d'abril de 2013, Google llançà l'API nomenada Mirror per permetre als desenvolupadors començar a fer aplicacions per Glass. En els termes del servei, s'afirma que els desenvolupadors no poden posar anuncis a les seves aplicacions o exigir taxes; un representant de Google digué a The Verge que això podria canviar en el futur.
+Molts desenvolupadors i empreses han creat aplicacions per Glass, incloent-hi aplicacions de notícies, edició de fotografies, aplicacions mèdiques i xarxes socials com Facebook i Twitter.
+
+
+=== Comandos de veu ===
+Una de les atraccions d'aquest producte és que pot ser controlat mitjançant comandos de veu.
+Per activar Glass, els usuaris poden inclinar el cap enrere amb un angle anteriorment configurat i dir "Ok, Glass".
+Un cop Glass està activada, els usuaris poden donar un comando, com "fes una foto", "grava un vídeo", així com "Google" per iniciar una cerca, "guia'm cap a", "envia un missatge a", "fes una (vídeo) trucada a". Molts d'aquests comandos es poden veure en un vídeo de producte publicat el fevrer de 2013.[1]
+
+
+== Prototips ==
+Encara que les ulleres de realitat augmentada no són una idea nova, el projecte va aconseguir l'atenció de la premsa per tenir un disseny més fi i lleuger que altres prototips i per estar desenvolupat per Google. El primer prototip del projecte Glass s'assemblava a un parell d'ulleres normal on s'havia substituït les lents per pantalles. En el futur, es podria permetre la integració de la pantalla amb les ulleres corrents.The New York Times publicà que les ulleres estarien disponibles al públic "més o menys al preu d'un telèfon intel·ligent normal" a finals de 2012, però altres publicacions afirmaren que les ulleres trigarien més a estar a la venda.El producte va començar a ser provat l'abril de 2012. Sergey Brin va portar un prototip d'aquests lents el 5 d'abril de 2012 en un esdeveniment a San Francisco. El 23 de maig de 2012, Sergey Brin va fer una demostració de les ulleres a The Gavin Newsom Show i va deixar que el vicegovernador de Califòrnia Gavin Newsom s'emportés les ulleres. El 27 de juny d'aquest any, Sergey Brin va fer una demostració de les ulleres al Google I/O, on paracaigudistes, gent fent ràpel i ciclistes de muntanya emetien un hangout des de les Glass.El 21 de juny de 2013, el doctor espanyol Pedro Guillén, cap del Servicio de Traumatología de la Clínica CEMTRO de Madrid, juntament amb els desenvolupadors espanyols de Droiders, foren els primers a escala mundial en retransmetre una intervenció quirúrgica utilitzant Google Glass. L'implant de condròcits realitzat al genoll d'una persona va poder ser seguit en línia, el que va fer possible que el doctor Homero Rivas, expert en telemedicina i Director de Cirurgia Innovadora de l'Escola de Medicina de la Universitat de Stanford, col·laborés en la cirurgia.La tecnologia dels desenvolupadors de Droiders també feu possible que el 26 d'octubre de 2013, tres dentistes espanyols (Peña, Piqueras y López) realitzaren les primeres intervencions maxil·lofacials del món transmeses amb Google Glass i que el 10 de desembre es realitzés la primera operació amb Google Glass a Portugal.
+
+El 16 de novembre de 2013 a Santiago de Xile l'equip de cirurgians maxil·lofacials a càrrec del Dr. Antonio Marino, Dres. Juan Argandoña, María Antonieta Inostroza i Axel Camousseight, efectuaren la primera cirurgia ortognàtica a Amèrica Llatina, retransmeten el procediment per hangout de Google a un cercle ampliat. El procediment quirúrgic va durar 4 hores i l'autonomia de Glass va ser d'una hora de transmissió continua. El dispositiu també va ser utilitzat per mostrar imatges 3D de simplant oms, sistema de navegació virtual en cirurgia ortognàtica. Diversos mitjans periodístics retransmeteren la informació.
+Tanmteix, el 5 de març de 2014 a Matacán, Aeroport de Salamanca, l'escola de pilots espanyola Adventia, European College of Aeronautics, successora de l'Escola Nacional d'Aeronàutica i centre adscrit a la Universitat de Salamanca, fou la primera del món a realitzar un vol amb aquest dispositiu, utilitzant-lo durant les diferents fases de vol, especialment en les diverses llistes de verificació que els pilots han de desenvolupar durant el mateix.
+
+
+== Recepció ==
+La recepció per part dels usuaris va ser tan bona i va tenir molta repercussió a Internet i les xarxes socials. Malgrat la recepció positiva general del prototip, va haver-hi nombroses paròdies i crítiques del projecte, les quals van ser des del potencial de Google per inserir publicitat (la seva principal font d'ingressos) fins als resultats més distòpics.
+
+
+== Recés ==
+Encara que les Google Glass són una realitat i van tenir tan bona acollida en molts usuaris, tot i limitar el seu enfocament a programadors, la companyia va decidir no llançar el projecte final l'any 2015, cancel·lant per ara la venda massiva al públic comercial o donar més informació. No obstant això, encara es pot esperar que en un futur Google doni a conèixer altres prototips de lents.
+
+
+== Reinici del Projecte ==
+El 18 de juliol de 2017, la gran G que depèn d'Alphabet va treure al mercat la nova edició de les Google Glass. La nova edició és la denominada Google Glass Enterprise Edition. Des de l'any 2015, el projecte es va aturar, continuà el suport als milers d'unitats actives. En aquell moment, ja se'ns indicava que continuarien més endavant. Continuaren amb la feina les empreses associades. Empreses relacionades amb logística, Internationals couriers, telemedicina, serveis mèdics especialitzats en rescats i disseny i suport d'alta complexitat com manteniment de les línies aèries. L'any 2016 va aparèixer una filtració d'un model, aparentment era un prototip, amb molt bon desplegament del disseny, amb frontisses i unes primes una mica més llargues. En aquell instant, va aparèixer a eBay una venda d'alt valor. Al cap de poques hores van donar de baixa el remat i l'usuari va desaparèixer. Ara que podem veure el disseny definitiu, està clar que efectivament era una unitat de Google Glass Enterprise.
+Aquesta nova edició té un nou concepte. Està enfocada a l'usuari específic. Les aplicacions carregades depenen exclusivament dels servidors externs, serveis dirigits i desenvolupats per tercers. Possiblement, les aplicacions enfocades a xarxes socials siguin limitades i poc relacionades a la gran G.
+Es manté la càmera, ara amb un led que indica la seva activitat. El Bluetooth millorat a 4.1. Incorpora nous sensors. El sistema de càrrega és magnètic, el marc posseeix una curvatura i es poden flectar les varetes, permetent així guardar-les en un estoig similar al d'unes ulleres convencional.
+
+
+== Referències ==

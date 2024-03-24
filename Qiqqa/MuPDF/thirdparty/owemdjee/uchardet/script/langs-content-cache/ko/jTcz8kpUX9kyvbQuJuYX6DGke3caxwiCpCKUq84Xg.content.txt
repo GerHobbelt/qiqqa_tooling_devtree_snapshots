@@ -1,0 +1,18 @@
+revision: 31796647
+title: ISO/IEC 8859-11
+url: https://ko.wikipedia.org/wiki/ISO/IEC_8859-11
+
+
+---
+
+ISO/IEC 8859-11:2001(Information technology — 8-bit single-byte coded graphic character sets — Part 11: Latin/Thai alphabet)은 ASCII 기반 표준 문자 인코딩의 ISO/IEC 8859 시르즈의 일부로서 2001년 첫 에디션이 출판되었다. 비공식적으로 Latin/Thai로 호칭된다. 태국의 표준 TIS-620(1990년)과 거의 흡사하다. 유일한 차이점은 ISO/IEC 8859-11은 줄 바꿈 없는 공백을 코드 0xA0에 할당하는 반면 TIS-620은 이 문자를 미정의 문자로 둔다. (현실적으로 이 작은 차이는 보통 무시된다.)
+다른 모든 ISO/IEC 8859 종류처럼 하위 128개 코드는 ASCII와 동일하다. 줄 바꿈 없는 공백 외의 추가 문자들이 같은 순서로 유니코드에 존재하며 0xA1에서 U+0E01로 자리를 바꾼 것 등 정도만 차이가 있을 뿐이다.
+마이크로소프트 윈도우 코드 페이지 874 및 태국 버전의 애플 매킨토시에 사용되는 코드 페이지 맥타이는 TIS-620의변종으로 상호 비호환이다.
+
+
+== 외부 링크 ==
+ISO/IEC 8859-11:2001
+ISO/IEC 8859-11:1999 - 8-bit single-byte coded graphic character sets, Part 11: Latin/Thai character set (draft dated June 22, 1999; superseded by ISO/IEC 8859-11:2001, published December 15, 2001)
+Windows code page 874
+ISO-IR 166 Thai character set (July 13, 1992, from Thai Standard TIS 620-2533 (1990))
+Standardization and Implementations of Thai Language PDF 175k

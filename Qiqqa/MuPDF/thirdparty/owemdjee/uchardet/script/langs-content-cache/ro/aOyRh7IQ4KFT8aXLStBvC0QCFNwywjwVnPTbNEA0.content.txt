@@ -1,0 +1,79 @@
+revision: 15509102
+title: diode
+url: https://ro.wikipedia.org/wiki/Diod%C4%83
+
+
+---
+
+Dioda (grec.: di doi, dublu; hodos drum) este o componentă electronică cu două terminale având conductanță asimetrică. Dioda are rezistență mică (ideal zero) la trecerea curentului într-o direcție și rezistență mare (ideal infinită) la trecerea în cealaltă direcție. Dioda semiconductoare, cea mai des utilizată diodă, este o bucată cristalină de material semiconductor având la bază o joncțiune p-n conectată la două terminale electrice. O diodă de tip tub vidat are doi electrozi, un anod și un catod încălzit. Diodele semiconductoare au fost primele dispozitive electronice confecționate din semiconductori. Descoperirea proprietăților de conducție asimetrică (redresare) la contactul dintre o suprafață metalică și un cristal a fost făcută de către fizicianul german Ferdinand Braun în anul 1874. Astăzi majoritatea diodelor sunt fabricate din siliciu, însă există și alți semiconductori precum seleniul sau germaniul care sunt utilizați la construcția acestor componente.
+
+
+== Funcții principale ==
+Cea mai utilizată funcție a diodei este de a permite trecerea unui curent electric într-o direcție (numit și curent direct al diodei), blocând totodată trecerea curentului în direcția opusă (numit și curent invers al diodei). Acest comportament unidirecțional este numit redresare și este utilizat la convertirea curentului alternativ în curent continuu.
+În orice caz, diodele pot avea comportamente mult mai complicate decât această acțiune de tip deschis-închis, datorită neliniarității caracteristicii curent-tensiune. Diodele semiconductoare încep să conducă doar dacă un anumit prag al tensiunii electrice este trecut în direcția curentului direct. Căderea de tensiune la bornele diodei în curent direct variază foarte puțin cu curentul și este o funcție de temperatură; acest efect poate fi folosit în cazul senzorilor de temperatură sau al potențialelor de referință.
+
+Caracteristica curent-tensiune a diodelor semiconductoare poate fi modificată prin variația materialelor semiconductoare utilizate și prin dopaj, introducând impurități în materiale. Aceste tehnici sunt utilizate pentru crearea diodelor cu scop special care pot performa diverse funcții. De exemplu diodele pot fi folosite pentru a stabiliza tensiunea (diodă Zener), pentru a proteja circuitul de valuri de tensiuni mari (diodă avalanșă), pentru a acorda  radioul sau receptoarele TV (diodă cu capacitate variabilă), pentru a genera oscilații de radio-frecvență (diodă tunel, diodă Gunn) sau pentru a produce lumină (diodă electro-luminiscentă).
+
+
+== Clasificare ==
+
+
+=== Diodă cu gaz ===
+Tub electronic cu gaz, cu descărcare în arc, având doi electrozi: un anod și un catod. Poate fi:
+cu catod cald (gazotron);
+cu catod rece. Dioda cu gaz cu catod rece are în balon un gaz inert (de regulă neon), la o presiune de 0,1 mm col. Hg.
+Nu conține niciun dispozitiv pentru comanda arcului. Ca electrod, pentru producerea arcului, se utilizează o sondă de aprindere, iar la creșterea tensiunii și a curentului, descărcarea se propagă de la sondă, până acoperă întregul anod.
+Utilizare:
+- stabilizator de tensiune
+- sursă stroboscopică de lumină
+- generator de relaxare
+- dispozitiv de protecție la supratensiune
+- tub de semnalizare
+
+
+=== Diodă cu vid ===
+
+Tub electronic cu vid, având doi electrozi: un anod și un catod.
+Catodul încălzit până la incandescență (direct sau indirect), emite electroni care formează în jurul lui o sarcină spațială. Aplicând pe anod o tensiune pozitivă (în raport cu catodul), electronii concentrați în zona catodului încep să se deplaseze către anod, constituind curentul anodic al diodei cu vid, care circulă și prin circuitul extern aferent.
+Dacă încălzirea catodului este constantă, curentul anodic variază în funcție de tensiunea anodică după Legea lui Boguslavski - Langmuir ( legea exponentului 3/2 ), valabilă pentru tensiuni anodice mici. La tensiuni anodice mai mari curentul nu crește nelimitat, ci se limitează la valoarea de saturație (egală cu valoarea curentului de emisie a catodului).
+Dioda cu vid este un element neliniar. O tensiune alternativă aplicată între catod și anod determină circulația unui curent deformat, doar în cursul întregii alternanțe pozitive (sau într-o porțiune a acesteia).Utilizare:
+- detector
+- redresor.
+
+
+=== Diodă semiconductoare ===
+
+
+== Galerie foto ==
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+== Note ==
+
+
+== Bibliografie ==
+Dispozitive și circuite electronice, D. Dascălu, M. Profirescu,  A. Rusu, I. Costea , 1982, Editura Didactică și Pedagogică
+Diode cu siliciu - Catalog; Petru Alexandru Dan, Dan Mihai Luca, Adrian Albu, Tudor Dunca, George Primejdie, tiparită la editura Tehnică, 1986
+Catalog IPRS Băneasa-Tranzistoare, Diode, 1970-1971; tiparită la editura Tehnică în anul 1970
+Full Line Condensed Catalog 1995–1996; I.P.R.S. Băneasa, 1995
+
+
+== Vezi și ==
+
+
+== Legături externe ==
+ro Dioda semiconductoare Tipuri de diode, principiul de functionare si caracteristici.
+ro Dioda stabilizatoare de tensiune (diodă Zener)

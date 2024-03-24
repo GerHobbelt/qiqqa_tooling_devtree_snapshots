@@ -1,0 +1,26 @@
+revision: 21482809
+title: SCADA
+url: https://cs.wikipedia.org/wiki/SCADA
+
+
+---
+
+SCADA je zkratka z anglického sousloví Supervisory Control And Data Acquisition, tedy „dispečerské řízení a sběr dat“. Obvykle se tento pojem používá pro software, který z centrálního pracoviště monitoruje průmyslová a jiná technická zařízení a procesy a umožňuje jejich ovládání. Jde o:
+
+průmyslové procesy ve strojní nebo procesní výrobě (kontinuální nebo dávkové),
+technické procesy v distribučních sítích (voda, plyn, elektřina apod.), dopravních sítích (např. řízení dopravní signalizace, protipožárních systémů a větrání v tunelech) a komunikačních sítích,
+procesy při řízení technických zařízení budov (HVAC, zabezpečení),
+sledování spotřeby elektřiny v zařízeních jako jsou průmyslové závody, nákupní centra, městské aglomerace, zaoceánské lodě apod.SCADA software obecně nezastává funkci plnohodnotného řídicího systému dané technologie, ale zaměřuje se spíše na dispečerský dohled, monitorování a případnou parametrizaci technologických procesů. Software typu SCADA je tedy provozován na vyšší úrovni nad prostředky procesní automatizace (např. PLC automaty, I/O moduly, dataloggery, senzory, čítače, měřiče ..), které zodpovídají za řízení, konektivitu a sběr dat ze sledovaných technologických procesů.
+
+
+== Odkazy ==
+
+
+=== Reference ===
+V tomto článku byl použit překlad textu z článku SCADA na anglické Wikipedii.
+
+
+=== Externí odkazy ===
+ Obrázky, zvuky či videa k tématu SCADA na Wikimedia Commons 
+Přehled systémů SCADA na českém trhu (2011): https://web.archive.org/web/20140714175844/http://automa.cz/res/pdf/43729.pdf
+PROMOTIC SCADA software - český SCADA software (od roku 1991): https://www.promotic.eu

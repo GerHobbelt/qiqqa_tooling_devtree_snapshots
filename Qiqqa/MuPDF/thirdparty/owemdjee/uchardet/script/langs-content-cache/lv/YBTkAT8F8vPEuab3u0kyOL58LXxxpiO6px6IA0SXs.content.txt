@@ -1,0 +1,46 @@
+revision: 3496461
+title: Yang Wang-1
+url: https://lv.wikipedia.org/wiki/Alum%C4%ABnija_nitr%C4%ABds
+
+
+---
+
+Alumīnija nitrīds ir viela ar ķīmisko formulu AlN un molmasu 40,988 g/mol. Tā pastāv baltu, gaiši dzeltenu kristālu veidā. Neizreaģējušā alumīnija klātbūtnes dēļ AlN mēdz būt arī vāji pelēkā krāsā. Istabas temperatūrā tam ir raksturīga aptuveni 6,2 elektronvoltus (eV) plata aizliegtā zona, kas padara to par pievilcīgu materiālu luminoforu izstrādē.
+
+
+== Iegūšana ==
+Tas rūpnieciski var tikt iegūts vairākos veidos:
+
+Tieši nitridējot Al pulveri 830 °C temperatūrā. Reakcijā izmanto smalku alumīnija pulveri un slāpekli. Šī reakcija ir eksotermiska. Tādēļ reakcijas uzsākšanai jāuzkarsē tikai nelielu vielas daudzumu, pēc kā šī reakcija turpinās un norisinās visā maisījumā. Šo metodi sauc par pašvirzošo sintēzi augstās temperatūrās (angļu: self-propagating high-temperature synthesis (SHS)). Ar šo metodi ir grūti iegūt sīkgraudainu alumīnija nitrīdu, jo augstajā temperatūrā radušies graudi salīp kopā.2Al + N2 → 2AlNTermiski nitridējot un vienlaikus endotermiski reducējot alumīnija oksīdu. Šī metode ir visvieglāk realizējama, jo neprasa izejvielu sasmalcināšanu. Šajā metodē arī nav novērojama lielu graudu (kristālu) augšana. Lai uzlabotu produkta tīrību, pēc reakcijas no maisījuma ir jāaizvāc liekais ogleklis. To dara ar vāji oksidējošu gāzu palīdzību (piemēram, CO2, H2O tvaiks) Al2O3 + N2 + 3C → 2AlN + 3COMazāk izplatīts sintēzes veids ir alumīnija halogenīdu vai alumīnija organisko savienojumu reakcijas ar amonjaku vai slāpekļa un ūdeņraža maisījumu. Šo metodi plaši izmanto ķīmiskā tvaika nogulsnēšanā (angļu: chemical vapor deposition  (CVD)), ko, savukārt, izmanto augstas kvalitātes plāno kārtiņu uznešanā uz materiāliem R3Al + NH3 → AlN + 3RH	Alumīnija nitrīda nanopulveri mēdz arī iegūt sintēzē ar plazmas ķīmisko metodi. Tajā alumīnija makropulveri (graudu izmēri 20 – 40 µm) injicē reaktorā un iztvaicē augstfrekvences plazmā, N2 atmosfērā. Sekojoši, lai katalizētu AlN veidošanos un samazinātu galaprodukta graudu izmērus, reaktorā ievada arī amonjaku. 
+Amonjaks šajā reakcijā nepieciešams, jo Al reaģēt ar NH3 ir termodinamiski izdevīgāk. AlN veidojas Al reakcijā ar augsti reaģētspējīgo N radikāli. Lai tas veidotos no N2, nepieciešama vismaz 6750 °C temperatūra. Kontrastā NH3, sadalās par N radikāli un 3 H atomiem jau virs 3750 °C. Ūdeņradis, iespējams, var sekojoši reaģēt ar N2, veidojot amonjaku, vai tikt aizvadīts prom. Zemu amonjaka koncentrāciju gadījumā, tiek iegūtas smalkākas daļiņas. Ar šādas sintēzes palīdzību, cik zināms, var iegūt daļiņas ar izmēriem no dažiem līdz pat 100 nm.
+
+
+== Īpašības ==
+
+Alumīnija nitrīdam ir raksturīga ZnFeS2 jeb vircīta kristālrežģa struktūra. Tā kristāli pieder pie heksagonālās singonijas. Tā režģa konstantes a un c ir attiecīgi 3,112 Å un 4,982 Å .
+Alumīnija nitrīds lēnām reaģē ar ūdeni un karstām neorganiskajām skābēm. Tas ir salīdzinoši inerts gaisa un skābekļa atmosfērās līdz pat 730 °C. Gaisa atmosfērā tam ir raksturīga Al2O3 aizsargkārtiņas izveidošanās. Tā spēj pasargāt AlN no oksidēšanās līdz pat 1500 °C temperatūrai. Jāpiebilst, ka skābekļa klātbūtne var veicināt Al–O–N reģionu veidošanos kristālu iekšienē.
+Atmosfēras spiedienā alumīnija nitrīds izkūst pie 2200 °C. Tam ir raksturīga augsta siltumvadāmība (321 W/(m·K)), augsta elektriskā pretestība (1 – 100 GΩ) un silīcijam līdzīgi termālās izplešanās koeficienti . AlN ir izotropisks materiāls, kuru neslapina izkausēti metāli 
+
+
+== Izmantošana ==
+Alumīnija nitrīdam piemīt lieliskas īpašības tā izmantošanai elektronikas siltumnovades sistēmās. To jau tagad izmanto transformatoru un dažu elektronisko sistēmu (piemēram, mikroshēmu) dzesēšanai, pusvadītāju ražošanā un lāzera diožu ražošanā. Augstais elastības modulis (parāda sistēmas spēju pretoties elastīgai deformācijai) un zemais blīvums padara to par lielisku kandidātu bruņu vestu izstrādei 
+
+
+== Ietekme uz veselību ==
+Tas ieelpojot var izraisīt plaušu bojājumus. Alumīnija nitrīds 0,1% vai lielākā daudzumā nesatur sastāvdaļas, kuras uzskata par noturīgām, bioakumulatīvām un toksiskām (PBT), vai par ļoti noturīgām un ļoti bioakumulatīvām (vPvB). Neskatoties uz to, tas ir ļoti toksisks ūdens organismiem ar ilgstošām sekām.
+
+
+== Alumīnija nitrīda luminiscence ==
+Pašvielas defekti un aktivatoru joni izmaina materiāla lokālo elektronisko struktūru. Tas mēdz novest pie jaunu materiāla luminiscences joslu rašanās. Alumīnija nitrīds ir pievilcīgs materiāls jaunu aktivētu luminoforu izstrādē, jo tā platās aizliegtās zonas dēļ tajā var panākt luminiscences joslu veidošanos plašā spektrālajā diapazonā (> 200 nm). Zemāk ir aprakstītas izplatītākās AlN luminiscences joslas un par tām atbildīgie defekti/piemasījumi. 
+
+
+=== Pašvielas defekti un piemaisījumi ===
+Alumīnija nitrīdam vispamatīgāk pētīti un visbiežāk sastopami ir pašu kristālrežģi veidojošo atomu izraisītie punktveida defekti – vakances un starpmezglu iestarpinājumi, īpaši, slāpekļa (anjona) vakances jeb F-centri. Bez tiem sastopami ir arī dažādi piemaisījumu izraisīti defekti. Aplūkojot ražošanas metodes un ķīmiskās īpašības var viegli secināt, ka visbiežāk sastopamie AlN piemaisījumi būs skābeklis un ogleklis. Mazos daudzumos tajā mēdz būt sastopams arī magnijs, cinks, mangāns un silīcijs.
+
+
+=== Aktivatori ===
+Literatūrā ir aprakstītas ar dažādiem metāliem aktivētu AlN materiālu īpašības. Tā piemēram, jau 1943. gadā tika patentēts ar mangānu aktivēts alumīnija nitrīda (AlN:Mn) materiāls. Šim materiālam ir raksturīgs luminiscences josla ar maksimumu pie 600 nm (2,07eV), par kuru ir atbildīgas tieši Mn2+ jonu 3d līmeņa elektronu pārejas, kā arī joslas pie 670 nm (1,85 eV) un 695 nm (1,78 eV), par kurām ir atbildīgi mangāna un skābekļa jonu kopīgi veidotie punktveida defekti. Relatīvi lielu Mn jonu koncentrāciju gadījumos, materiālam ir raksturīga arī luminiscences josla ap 685 nm (1,81 eV), ko varētu attiecināt uz mangāna jonu klasteriem.  Makroskopiskie Mn jonu apvienojumi var arī veicināt ierosinātu stāvokļu neradiatīvo relaksēšanos, kuras rezultātā samazinās oranži-sarkanās spīdēšanas intensitāte.Ar eiropiju aktivētam alumīnija nitrīdam ir novērojamas vairākas no Eu oksidēšanās pakāpes atkarīgas luminiscences joslas. Platu luminiscences joslu ar maksimumu starp 520 nm (2,38 eV) un 540 nm (2,30 eV)  parasti attiecina uz Eu2+ jonus saturošiem defektiem. Ir arī aprakstīts gadījums, kad arī Eu2+ saturoši defekti luminiscencēja pie 480 nm (2,58 eV) .
+Šauras joslas ar maksimumiem starp 610 nm (2,07 eV) un 630 nm (1,97 eV)  un ap 700 nm (1,77 eV)  parasti attiecina uz Eu3+ joniem. Ir novērots, ka eiropija jonu veidotie defekti, to lielo izmēru dēļ, pārsvarā atrodas graudu virspusē un ka, palielinot skābekļa saturu paraugā, pieaug Eu2+ jonu īpatsvars.Literatūrā ir aprakstītas arī AlN:Fe optiskās īpašības – tam ir raksturīgas luminiscences joslas pie 950 nm (1,3 eV), kā arī pie 592 nm (2,09 eV) un 598 nm (2,07 eV). Ar hromu aktivētam AlN ir raksturīgas trīs šauras luminiscences joslas ar maksimumiem pie 683,9 nm (1,813 eV), 685,8 nm (1,808 eV)  un 701 nm (1,77 eV). Luminiscences josla pie 420 nm (2,95 eV) ir novērojama AlN:Cu. Šī materiāla izstarotās gaismas maksimumu ir iespējams nobīdīt līdz pat 530 nm (2,34 eV) vērtībai, materiālam papildus pievienojot Mn un Tb. Ar niobiju aktivētam alumīnija nitrīdam luminiscences maksimuma vērtība atrodas pie 510 nm (2,43 eV). Savukārt, AlN:Er ir raksturīgi divi luminiscences reģioni, kas sastāv no vairākām šaurām joslām – pie 540 nm (2,30 eV) un 560 nm (2,21 eV).
+
+
+== Atsauces ==

@@ -1,0 +1,52 @@
+revision: 125486385
+title: Mozilla Calendar
+url: https://it.wikipedia.org/wiki/Mozilla_Calendar
+
+
+---
+
+Mozilla Calendar è un calendario e gestore di informazioni personali open source basato sullo standard aperto iCalendar. Viene sviluppato come parte del progetto Mozilla.
+Come gli altri progetti Mozilla, Mozilla Calendar è multipiattaforma ed usa il linguaggio di interfaccia utente XUL. Il programma gira su Microsoft Windows, GNU/Linux e macOS.
+
+
+== Mozilla Calendar ==
+Il progetto Mozilla Calendar venne annunciato nell'ottobre 2001 dalla Mozilla Organization (ora la Mozilla Foundation). Il codice di Mozilla Calendar fu contribuito da OEone (ora Axentra), che lo aveva sviluppato per usarlo nel loro sistema, basato su Mozilla, HomeBase DESKTOP. Il progetto venne inizialmente guidato dall'impiegato di 0Eone Mike Potter.
+Il piano iniziale prevedeva che Mozilla Calendar venisse alla fine integrato in
+Mozilla Suite a fianco agli altri componenti. In ogni modo, questo piano venne abbandonato quando la Mozilla Organization decise di focalizzarlo su una nascente applicazione stand-alone piuttosto che integrarlo nella suite.
+Il progetto ha sofferto di un colpo quando, nel marzo 2003, OEone decise di recedere con lo sviluppo. Pochi mesi più tardi, nel luglio 2003, Mike Potter pensionatosi come il capo del progetto consegnò le redini al collega Mostafa Hosseini, impiegato di OEone. Venne anche annunciato il futuro lavoro di sviluppo che si focalizzava sulla creazione di una versione stand-alone di Mozilla Calendar.
+Oggi Mozilla Calendar può essere installato come un componente nella Mozilla Application Suite, o come un'estensione o di Mozilla Firefox (browser) o di Mozilla Thunderbird (client di email e newsgroup).
+
+
+== Mozilla Sunbird ==
+
+Mozilla Sunbird è la versione stand-alone di Mozilla Calendar, annunciata nel luglio 2003. L'ultima versione stabile è la 0.9, pubblicata il 23 settembre, 2008. Viene rilasciata contemporaneamente a Ligthning, col quale ne condivide parte del codice. 
+Il 15 luglio, 2004, gli sviluppatori di Sunbird hanno chiesto alla comunità di Mozilla di presentare i possibili nuovi temi grafici di default e i loghi per Sunbird. Il tema derivante venne sviluppato da Mark Carson e Chris Cook, basato sul tema di default di Firefox. Vennero presentati i tre loghi proposti per Sunbird alla comunità per essere votati; il 12 agosto, 2004, la presentazione di Mark Carson venne dichiarata vincitrice.
+
+
+== Lightning ==
+Annunciato il 22 dicembre, 2004, il progetto Lightning ha lo scopo di creare un'estensione che aggiunge funzionalità di calendario e di scheduling al client mail e newsgroup Thunderbird. Esso è separato sia dal progetto Mozilla Calendar sia dal progetto Sunbird, anche se il loro codice sarà scambiato fra loro. A differenza dell'estensione Mozilla Calendar o della versione stand-alone Sunbird, Lightning ha lo scopo di integrarsi strettamente con Thunderbird.
+Il progetto Lightning è diretto da molto tempo dal volontario e attuale dipendente tecnico di Oracle Mike Shaver. Il progetto è attualmente in uno stato molto primitivo e la prima release generale per l'utente è stata pianificata per metà del 2005.
+Le ultime versioni sono rilasciate contemporaneamente a Sunbird, con la quale condividono parte del codice.
+
+
+== Voci correlate ==
+Mozilla Foundation
+Mozilla Firefox
+Mozilla Thunderbird
+
+
+== Collegamenti esterni ==
+
+
+=== Pagine dei progetti ===
+(EN) Mozilla Calendar, su mozilla.org.
+(EN) Sunbird, su mozilla.org.
+(EN) Lightning, su wiki.mozilla.org.
+
+
+=== Notizie ===
+(EN) MozillaZine: mozilla.org Annuncia il Progetto Calendar, su mozillazine.org.
+(EN) MozillaZine: OEone Ritorna Indietro sul Sviluppo di Calendar, su mozillazine.org.
+(EN) MozillaZine: Mozilla Calendar Project Lead Mike Potter Retires, Mostafa Hosseini Named as New Head, su mozillazine.org.
+(EN) MozillaZine: Mozilla Sunbird Standalone Calendar Project Launches, su mozillazine.org.
+(EN) MozillaZine: Lancio del Progetto Lightning per Fornire le Funzioni di Calendar per Mozilla Thunderbird, su mozillazine.org.

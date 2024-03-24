@@ -1,0 +1,52 @@
+revision: 31469648
+title: .ph
+url: https://ca.wikipedia.org/wiki/.ph
+
+
+---
+
+.ph és el domini de primer nivell territorial (ccTLD) de les Filipines
+
+
+== Introducció ==
+El domini .ph el gestiona dotPH Domains Inc. Per ser exactes, dotPH manté la base de dades dels dominis .ph, .com.ph, .net.ph, i .org.ph. El registre està obert a tot el món.L'administrador del domini és José Emmanuel "Joel" Disini, que també és el director general de dotPH. Jon Postel li va assignar personalment el domini l'any 1990, ja que el coneixia de quan Disini havia estudiat i treballat als Estats Units. El domini està patrocinat per la PH Domain Foundation, una filial de dotPH que també fou fundada per Disini, juntament amb altres professionals de TIC l'agost de 1999.El 1994, va delegar l'administració del domini .gov.ph al govern de les Filipines. També es va delegar el subdomini .edu.ph a Philippine Network Foundation, Inc (PHNET).A part de la feina de registre, dotPH també ofereix serveis diversos de web i email. Tenia també un servei gratuït de blogs amb els dominis .i.ph domains, que ara està tancat.
+
+
+== Dominis de segon nivell ==
+No hi ha restriccions per als següents dominis:
+
+.ph
+.com.ph
+.net.ph
+.org.phReservat per a l'Exèrcit filipí:
+
+.mil.phReservat per a les agències del Govern filipí:
+
+.gov.phReservat per a institucions educatives filipines:
+
+.edu.ph
+
+
+== Història ==
+
+
+=== Naixement del registre .ph ===
+El 1989, Joel Disini va fundar EMC, the Email Company, un dels primers ISPs de les Filipines. La xarxa de Disini tenia una connexió UUCP amb UUNET. Aquesta connexió, juntament amb el fet que Joel Disini era graduat de Caltech i havia treballat desenvolupant programari de comunicacions per al Macintosh, van fer Jon Postel li delegués el domini .ph. La delegació es va fer oficial el 14 de setembre de 1990. Des de llavors, s'han pogut registrar dominis .ph.El 1994 el Departament de Ciència i Tecnologia del govern filipí va posar en marxa la xarxa PHNET, per connectar les Filipines amb la resta del món mitjançant línies punt a punt de 64 Kbps amb els Estats Units.En aquest moment, la Fundació PHNET va voler assumir l'administració del registre .ph. Després de llargues negociacions, només es van delegar els dominis .edu.ph i .gov.ph a la Fundació PHNET i al Departament de Ciència i Tecnologia, respectivament.En aquell moment, registrar un domini costava des de Php 450 a Php 1,350, i no s'havien de renovar anualment, pel que s'anomenaven dominis de per vida'. Sí que es carregava una tarifa per fer-hi modificacions. Els dominis de per vida no eren transferibles, i només eren vàlids durant la vida de qui l'havia registrat originalment. Hi havia un requeriment que tinguessin un servei de correu actiu.
+
+
+=== La PH Domain Foundation i dotPH ===
+L'agost de 1999 Disini i els tècnics d'EMC van fundar la PH Domain Foundation. El seu objectiu era promocionar Internet i donar serveis gratuïts il·limitats en àrees rurals. També va fer-se càrrec del negoci de venda de dominis i la gestió del registre del domini .ph.L'1 d'octubre de 1999, la PH Domain Foundation va posar en marxa un sistema automatitzat per al registre de dominis, i va permetre de registrar directament sobre el domini .ph. Es van aturar els registres de per vida, i a partir de llavors, els nous dominis tenien data de caducitat i es van haver d'anar renovant periòdicament.En aquell moment, la part de negoci i tècnica de la Fundació es va identificar com a dotPH. Ara mateix, dotPH és el registrador oficial del domini de les Filipines.
+
+
+== Polèmiques ==
+L'organització PhilDAC (Philippine Domain-Name Authority Convenors) ha criticat durament la manera com es gestiona el domini .ph. Hi ha hagut cinc intents diferents de forçar-ne la redelegació i prendre el control del domini .ph, invocant la necessitat de més transparència en la manera d'elaborar les polítiques del domini.
+
+
+== Enllaços externs ==
+Informació del whois de .ph a IANA
+L'administrador actual del domini .ph
+
+
+== Referències ==
+
+Viccionari

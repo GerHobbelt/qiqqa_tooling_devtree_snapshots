@@ -1,0 +1,41 @@
+revision: 6423064
+title: "Elektroonikat\xF6\xF6stus"
+url: https://et.wikipedia.org/wiki/Elektroonikat%C3%B6%C3%B6stus
+
+
+---
+
+Elektroonikatööstus on elektroonikaseadmete tootmisega tegelev tööstusharu.
+See tekkis 20. sajandil ja on tänapäevaks kasvanud globaalseks tööstusharuks, mille väärtus on palju miljardeid dollareid. Näiteks ainuüksi tarbeelektroonika valdkonna käibeks hinnati 2018. aastal ligi 300 miljardit USA dollarit.Näiteks Ericsson Eesti AS toodab aastas mobiilside tugijaamu ja muud kuni 1,3 miljardi euro mahus ja annab kuni 15% Eesti ekspordist. Eesti tööjõust on seal hõivatud vaid umbes 0,25%. Selle juures aga impordib elektroonikatööstus peaaegu kõik kasutatavad elektroonikakomponendid ja muud kasutatavad tooted. Kohaliku tulu moodustab peamiselt vaid töötajate palgatulu ja maksud, mis hinnanguliselt ei ületa mõnd protsenti tootmismahust.
+
+
+== Elektroonsete seadmete tootmine ==
+Tänapäeva ühiskond kasutab kõige erinevamaid elektroonikaseadmeid. Kõige enam toodetakse elektroonikaseadmeid, mis leiavad kasutamist olmes ja sides. Suur on ka tööstuselektroonika ja meditsiinielektroonika tootmismaht, lisaks veel telekommunikatsiooni seadmestiku ja muu tootmine.
+Elektroonseid seadmeid toodetakse tööstuslikult kas automaatsetes või poolautomaatsetes tehastes. Tänapäeval kasutatavad elektroonikakomponendid, nii passiivsed kui ka aktiivsed, on väga väikesed ning need paigaldatakse pindmontaaži trükkplaatidele ladumismasinate abil. Masinatega ladumise efektiivsus on nii väikeste komponentide puhul käsitsi paigaldamisest mõõtmatult efektiivsem (võib rääkida umbes tuhat korda efektiivsemast ladumisest). See ei välista siiski käsitsitööd täielikult, sest osa komponente ja juhtmestik pole masinladumise teel paigaldatavad. Kuid käsitsitööd vajatakse sageli ikka veel reguleerimisel ehk seadistamisel ja toodangu kontrollimisel.
+
+
+== Elektroonikakomponentide tootmine ==
+Elektroonikatööstuse üks osa on elektroonikakomponentide tootmine. Tänapäeva elektroonikas on enamik komponente pindmontaažikomponendid, mis on mõeldud trükkplaatidele paigaldamiseks pindmontaaži teel ja on väga väikeste mõõtmetega.
+Tänapäeva elektroonika põhiliste komponentide – integraalskeemide (mikroskeemide, kiipide) ja pooljuhtseadiste tootmine toimub puhasruumides.
+
+
+== Elektroonikatööstus Eestis ==
+Elektroonikatööstus tekkis Eestis 1920. aastatel. Suurimateks ettevõteteks olid RET ja ARE, kelle põhiliseks toodanguks olid raadiovastuvõtjad. Toodeti ka mõningaid komponente (peamiselt trafosid ja poole) nende jaoks.
+Teise maailmasõja järel sai RETist ainus elektroonseid seadmeid tootev ettevõte Eestis. Nüüd olid selle toodanguks põhiliselt elektroonsed mõõteriistad – voltmeetrid ja oommeetrid. Ainsaks laiatarbetooteks sai 1950. aastatel raadiovastuvõtja Estonia, 1970. aastatel lisandus sellele elektronorel Retakord. Eesti taasiseseisvumise järel tehas suleti majanduslikel põhjustel. Suleti ka tootmiskoondisesse RET kuulunud Jõhvi tehas ja projekteerimis- ja eksperimentaaltootmisasutus TREKB.
+1950. aastate lõpul alustas tööd fototakisteid tootev Tallinna Pooljuhttakistite Tehas, millest peagi sai pooljuhtseadiste tehas ja seejärel analoogmikroskeeme – peamiselt operatsioonvõimendeid tootev tehas. Tehas hakkas 1970. aastate lõpus valmistama ka kuuldeaparaate ja avas selleks filiaali Sillamäel. Nende tootmist on jätkatud ka sajandivahetuse järel. Muu tootmine lõpetati taasiseseisvumise järel majanduslikel põhjustel.
+Narva rajati elektroonikaettevõte, mille toodang läks põhiliselt Nõukogude Liidu sõjaväe kasutusse. Pärast Eesti taasiseseisvumist suleti ka see tehas.
+Jõuelektronseadiseid hakati Eestis tootma 1950. aastastel. Alguses oli tegemist elavhõbedaauralalditega, seejärel aga jõupooljuhtseadistega, mille väljatöötamiseks moodustati ka vastav uurimisasutus (TUPTI). Ka see tootmine lõppes Eesti taasiseseisvumise järel, kuigi katseid jõupooljuhtseadiseid toota tehti veel 2010. aastail (Silvaco).
+Väiksemas mahus tootsid elektroonikaseadmeid veel mitmed ettevõtted (NSV Liidu ajal Eesti TA Spetsiaalne Konstrueerimisbüroo, Harju Elekter, Estron jt, hiljem Cybernetica AS, Arvutustehnika Erikonstrueerimisbüroo Ekta ning selle baasil tekkinud trükkplaatide tootmise ja montaažiga tegelenud ettevõte, millele hiljem lisandus veel üks ettevõte, jt). Elektroonikal põhinesid suuresti ka tootmiskoondise Tööstusaparaat tooted ja Tartu Aparaaditehase tooted.
+Taasiseseisvunud Eestis avasid oma tehased Elcoteq OY (Elcoteq Tallinn AS) ja Ericsson AB (Ericsson Eesti AS). Kuressaares töötab elektroonikaettevõte Incap ja valgusdioodlampe tootva Tepcomp OY filiaal Eestis.
+
+
+== Probleemid jäätmetega ==
+Selle tööstusharu tootmismahud, seal kasutatavate toksiliste materjalide kogus ning toodete ja tootmisjääkide ümbertöötamisraskused on toonud kaasa suure hulga elektroonikajäätmete tekke. Need jäätmed sisaldavad ka ohtlikke aineid (nt arseeni jm pooljuhtseadistes ja mikroskeemides lisanditena kasutatavaid aineid). Kuigi kogused üksikus seadises on üliväikesed, on tekkivad probleemid suure jäätmete mahu tõttu siiski väga tõsised.
+Sellega seotud probleemide lahendamiseks on välja töötatud rahvusvahelisi eeskirju ja keskkonnaalaseid õigusakte.
+
+
+== Vaata ka ==
+IPC
+
+
+== Viited ==

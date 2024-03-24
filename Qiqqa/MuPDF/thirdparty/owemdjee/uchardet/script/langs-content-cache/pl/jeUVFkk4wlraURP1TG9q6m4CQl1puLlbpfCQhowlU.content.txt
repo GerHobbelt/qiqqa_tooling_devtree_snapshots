@@ -1,0 +1,553 @@
+revision: 69532547
+title: "Twierdzenie Fermata o zerowaniu si\u0119 pochodnej"
+url: https://pl.wikipedia.org/wiki/Twierdzenie_Fermata_o_zerowaniu_si%C4%99_pochodnej
+
+
+---
+
+Twierdzenie Fermata o zerowaniu się pochodnej – twierdzenie klasycznej analizy matematycznej mówiące o zerowaniu się pochodnej funkcji różniczkowalnej osiągającej maksimum lub minimum w punkcie wewnętrznym przedziału.
+
+
+== Definicja ==
+Ustalmy 
+  
+    
+      
+        f
+        :
+        (
+        a
+        ,
+        b
+        )
+        →
+        
+          R
+        
+        .
+      
+    
+     
+  
+Jeśli funkcja jest różniczkowalna w punkcie 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+        ∈
+        (
+        a
+        ,
+        b
+        )
+      
+    
+     
+   oraz 
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        max
+        {
+        f
+        (
+        x
+        )
+        :
+        x
+        ∈
+        (
+        a
+        ,
+        b
+        )
+        }
+      
+    
+     
+   lub 
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        min
+        {
+        f
+        (
+        x
+        )
+        :
+        x
+        ∈
+        (
+        a
+        ,
+        b
+        )
+        }
+        ,
+      
+    
+     
+   to
+
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        0.
+      
+    
+     
+  
+
+
+== Dowód ==
+Aby udowodnić to twierdzenie należy rozpatrzeć wartość granicy prawostronnej i lewostronnej ilorazu różnicowego. Funkcja z założenia jest różniczkowalna w punkcie 
+  
+    
+      
+        
+          x
+          
+            0
+          
+        
+        ,
+      
+    
+     
+   więc granice jednostronne są sobie równe.
+Dowód w przypadku, gdy 
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+      
+    
+     
+   = max 
+  
+    
+      
+        f
+        (
+        x
+        )
+        .
+      
+    
+     
+  
+Ponieważ
+
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        ⩾
+        f
+        (
+        x
+        )
+        ,
+      
+    
+     
+  więc
+
+  
+    
+      
+        
+          
+            
+              f
+              (
+              x
+              )
+              −
+              f
+              (
+              
+                x
+                
+                  0
+                
+              
+              )
+            
+            
+              x
+              −
+              
+                x
+                
+                  0
+                
+              
+            
+          
+        
+        ⩽
+        0
+      
+    
+     
+  i korzystając z twierdzenia o zachowaniu słabej nierówności dla funkcji
+
+  
+    
+      
+        
+          f
+          
+            +
+          
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        
+          lim
+          
+            x
+            →
+            
+              x
+              
+                0
+              
+              
+                +
+              
+            
+          
+        
+         
+        
+          
+            
+              f
+              (
+              x
+              )
+              −
+              f
+              (
+              
+                x
+                
+                  0
+                
+              
+              )
+            
+            
+              x
+              −
+              
+                x
+                
+                  0
+                
+              
+            
+          
+        
+      
+    
+     
+   
+  
+    
+      
+        ⩽
+        0.
+      
+    
+     
+  Podobnie wykazujemy
+
+  
+    
+      
+        
+          f
+          
+            −
+          
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        
+          lim
+          
+            x
+            →
+            
+              x
+              
+                0
+              
+              
+                −
+              
+            
+          
+        
+         
+        
+          
+            
+              f
+              (
+              x
+              )
+              −
+              f
+              (
+              
+                x
+                
+                  0
+                
+              
+              )
+            
+            
+              x
+              −
+              
+                x
+                
+                  0
+                
+              
+            
+          
+        
+      
+    
+     
+   
+  
+    
+      
+        ⩾
+        0.
+      
+    
+     
+  Pochodne jednostronne są sobie równe. Ponieważ 
+  
+    
+      
+        
+          f
+          
+            +
+          
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        ⩽
+        0
+        ∧
+        
+          f
+          
+            −
+          
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        ⩾
+        0
+        ,
+      
+    
+     
+   więc
+
+  
+    
+      
+        
+          f
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        
+          f
+          
+            +
+          
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        
+          f
+          
+            −
+          
+          ′
+        
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+        =
+        0.
+      
+    
+     
+  Przypadku, gdy 
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            0
+          
+        
+        )
+      
+    
+     
+   = min 
+  
+    
+      
+        f
+        (
+        x
+        )
+        ,
+      
+    
+     
+   dowodzi się analogicznie.
+
+
+== Zastosowanie ==
+Twierdzenie o zerowaniu się pochodnej jest używane między innymi przy dowodzie twierdzenia Rolle’a.
+
+
+== Zobacz też ==
+twierdzenie Cauchy’ego
+twierdzenie Lagrange’a
+
+
+== Bibliografia ==
+Jakub Wyrostek: Uzupełnienie rachunku różniczkowego funkcji jednej zmiennej. [dostęp 2016-01-07]. [zarchiwizowane z tego adresu (2016-01-07)]. (pol.).
+Grigorij Michajłowicz Fichtenholz: Rachunek różniczkowy i całkowy. Ryszard Bittner, Bolesław Gleichgewicht, Tadeusz Huskowski (tłum.). Wyd. XII. T. 1. Warszawa: Wydawnictwo Naukowe PWN, 2002, s. 549. ISBN 978-83-01-02175-7. OCLC 749565830.
+Marian Gewert, Zbigniew Skoczylas: Analiza matematyczna 1: definicje, twierdzenia, wzory. Wyd. XXIV zmienione. Wrocław: Oficyna Wydawnicza GiS, 2015, s. 166, seria: Matematyka dla Studentów Politechnik. ISBN 978-83-62780-30-3. OCLC 932191224.
+
+
+== Linki zewnętrzne ==
+ Fermat theorem (ang.), Encyclopedia of Mathematics, encyclopediaofmath.org [dostęp 2023-02-07].

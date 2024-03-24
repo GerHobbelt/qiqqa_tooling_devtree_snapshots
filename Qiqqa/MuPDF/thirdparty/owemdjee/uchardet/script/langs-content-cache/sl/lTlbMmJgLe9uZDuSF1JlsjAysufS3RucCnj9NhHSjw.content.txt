@@ -1,0 +1,862 @@
+revision: 5963036
+title: Fotodioda
+url: https://sl.wikipedia.org/wiki/Fotodioda
+
+
+---
+
+Fótodióda je polprevodniški element, na katerem se ob osvetlitvi z vidno, v nekaterih izvedbah pa tudi infrardečo, ultravijolično ali rentgensko svetlobo, pojavi električna napetost (oz. steče električni tok), ki je odvisen od moči vpadne svetlobe. Za delovanje fotodiode je (za razliko od običajne polprevodniške diode) bistven notranji fotoelektrični pojav.
+
+
+== Splošne značilnosti in uporaba ==
+Fotodiode so lahko bodisi neposredno izpostavljene svetlobi (denimo pri zaznavanju X-žarkov ali UV-sevanja) bodisi sklopljene z optičnim vlaknom, ki svetlobi omogoča dostop do svetlobno občutljivega dela naprave. Kot zaznavala gostote svetlobnega toka fotodiode omogočajo zaznavanje zelo majhnih vrednosti, njihov odzivni čas pa je kratek. Uporabljajo se na številnih različnih področjih, denimo v spektroskopiji, fotografiji, analizni kemiji, optičnih komunikacijah, na primer pri optičnih pozicijskih zaznavalih in poravnavi laserskih žarkov.
+Fotodiode so različnih velikosti in lahko vključujejo dodatne optične elemente, kot so optični filtri in vgrajene leče. Zgled fotodiode z veliko površino je sončna celica, ki sončno energijo pretvarja v električno.
+
+
+== Delovanje ==
+Fotodioda temelji na notranjem fotoelektričnem pojavu. Ko foton vpadne svetlobe zadane fotodiodo, ustvari par prostih nosilcev naboja: elektron in vrzel. Pri tem ima elektron negativni in vrzel pozitivni naboj velikosti osnovnega naboja. Za to mora imeti foton dovolj veliko energijo, ki je večja od širine energijske reže med valenčnim in prevodnim pasom polprevodnika. Pri siliciju, na primer, znaša reža 1,1 eV, pri germaniju pa 0,67 eV. Če pride do absorpcije fotona v osiromašeni plasti polprevodniške diode ali v njeni bližini, električno polje v plasti povzroči tok elektronov proti katodi in tok vrzeli proti anodi. Če ne pride do rekombinacije, se med priključkoma fotodiode pojavi električna napetost. Med sklenjenima elektrodama tako steče električni tok od katode proti anodi - fototok, ki je sorazmeren vpadni gostoti svetlobnega toka. 
+Celoten tok skozi fotodiodo je vsota fototoka in temnega toka, ki - kot v vsaki polprevodniški diodi - pri neničelni zunanji napetosti teče tudi ob odsotnosti vpadne svetlobe. Pri zasnovi svetlobno čim občutljivejše naprave mora biti temni tok čim manjši, saj fototok ustreza odzivu na vpadno svetlobo, medtem ko je temni tok pogojen z značilnostmi snovi, iz katere je narejena fotodioda. Ker je temni tok eksponentno odvisen od temperature, ga lahko zmanjšamo s hlajenjem.
+Hlajenje je nepogrešljivo na primer pri fotodiodah na osnovi kadmijevega telurida, ki delujejo v infrardečem področju, saj že pri sobni temperaturi termična energija nosilcev naboja zadošča za vzbuditev iz valenčnega v prevodni pas. Temni tok je v odsotnosti hlajenja zato tako velik, da popolnoma prekrije signal.
+Odziv fotodiode (enote A/W) podaja spektralna občutljivost, ki je definirana kot razmerje med generiranim fototokom in močjo vpadne svetlobe, ko fotodioda deluje v fotoprevodnem načinu. Odvisnost odziva od valovne dolžine je lahko izražena tudi s kvantnim izkoristkom oziroma razmerjem med številom fotogeneriranih nosilcev naboja in številom vpadnih fotonov. Kvantni izkoristek je brezenotska količina. 
+
+
+=== Karakteristika fotodiode ===
+ 
+Odvisnost električnega toka 
+  
+    
+      
+        I
+      
+    
+     
+   skozi fotodiodo od električne napetosti 
+  
+    
+      
+        U
+      
+    
+     
+   na fotodiodi podaja enačba
+
+  
+    
+      
+        I
+        =
+        
+          I
+          
+            s
+          
+        
+        
+          [
+          
+            exp
+            ⁡
+            
+              (
+              
+                
+                  
+                    
+                      e
+                      
+                        0
+                      
+                    
+                    U
+                  
+                  
+                    
+                      k
+                      
+                        B
+                      
+                    
+                    T
+                  
+                
+              
+              )
+            
+            −
+            1
+          
+          ]
+        
+        −
+        
+          I
+          
+            γ
+          
+        
+        
+        ,
+      
+    
+     
+  pri čemer je 
+  
+    
+      
+        
+          I
+          
+            s
+          
+        
+      
+    
+     
+   saturacijski tok, 
+  
+    
+      
+        
+          e
+          
+            0
+          
+        
+      
+    
+     
+   osnovni naboj, 
+  
+    
+      
+        
+          k
+          
+            B
+          
+        
+      
+    
+     
+   Boltzmannova konstanta, 
+  
+    
+      
+        T
+      
+    
+     
+   absolutna temperatura (merjena v kelvinih) in 
+  
+    
+      
+        
+          I
+          
+            γ
+          
+        
+      
+    
+     
+   fototok. Po dogovoru je napetost 
+  
+    
+      
+        U
+      
+    
+     
+   na fotodiodi pozitivna, ko je potencial na strani anode večji od potenciala na strani katode (ko puščica elektronskega simbola kaže v smeri padca potenciala), tok 
+  
+    
+      
+        I
+      
+    
+     
+   skozi fotodiodo pa je pozitiven, ko teče od anode proti katodi (v smeri puščice elektronskega simbola). Saturacijski tok 
+  
+    
+      
+        
+          I
+          
+            s
+          
+        
+      
+    
+     
+   je odvisen od s snovjo pogojene širine energijske reže med valenčnim in prevodnim pasom polprevodnika 
+  
+    
+      
+        
+          E
+          
+            g
+          
+        
+        =
+        
+          ϵ
+          
+            c
+          
+        
+        −
+        
+          ϵ
+          
+            v
+          
+        
+        >
+        0
+      
+    
+     
+  , ki je po predpostavki mnogo večja od 
+  
+    
+      
+        
+          e
+          
+            0
+          
+        
+        U
+      
+    
+     
+  ,  in temperature 
+  
+    
+      
+        T
+      
+    
+     
+   kot
+
+  
+    
+      
+        
+          I
+          
+            s
+          
+        
+        ∝
+        exp
+        ⁡
+        
+          (
+          
+            −
+            
+              
+                
+                  E
+                  
+                    g
+                  
+                
+                
+                  
+                    k
+                    
+                      B
+                    
+                  
+                  T
+                
+              
+            
+          
+          )
+        
+        
+        .
+      
+    
+     
+  Fototok 
+  
+    
+      
+        
+          I
+          
+            γ
+          
+        
+      
+    
+     
+   je odvisen od moči 
+  
+    
+      
+        
+          P
+          
+            γ
+          
+        
+      
+    
+     
+   in valovne dolžine 
+  
+    
+      
+        λ
+      
+    
+     
+   vpadne svetlobe ter kvantnega izkoristka 
+  
+    
+      
+        η
+      
+    
+     
+   fotodiode kot
+
+  
+    
+      
+        
+          I
+          
+            γ
+          
+        
+        =
+        η
+        
+        
+          
+            
+              P
+              
+                γ
+              
+            
+            
+              ℏ
+              ω
+            
+          
+        
+        
+        
+          e
+          
+            0
+          
+        
+        
+        ,
+      
+    
+     
+  pri čemer je 
+  
+    
+      
+        ℏ
+        ω
+      
+    
+     
+   (
+  
+    
+      
+        ℏ
+        =
+        h
+        
+          /
+        
+        2
+        π
+      
+    
+     
+  , 
+  
+    
+      
+        h
+      
+    
+     
+   - Planckova konstanta; 
+  
+    
+      
+        ω
+        =
+        c
+        k
+        =
+        c
+        
+        2
+        π
+        
+          /
+        
+        λ
+      
+    
+     
+  , 
+  
+    
+      
+        c
+      
+    
+     
+   - hitrost svetlobe) energija fotona z valovno dolžino 
+  
+    
+      
+        λ
+      
+    
+     
+  . Kvantni izkoristek 
+  
+    
+      
+        η
+      
+    
+     
+   predstavlja delež absorbiranih fotonov (ki v polprevodniku ustvarijo par elektron-vrzel) ter je odvisen od snovi in valovne dolžine vpadne svetlobe 
+  
+    
+      
+        λ
+      
+    
+     
+  . Fototok teče v negativni smeri, vendar je po dogovoru pozitivna količina - od tod negativni predznak v karakteristiki 
+  
+    
+      
+        I
+        (
+        U
+        )
+      
+    
+     
+  .
+Če je fotodioda kratko sklenjena (
+  
+    
+      
+        U
+        ≡
+        0
+      
+    
+     
+  , na grafu presečišče karakteristike z ordinatno osjo), po vezju teče tok 
+  
+    
+      
+        I
+        =
+        −
+        
+          I
+          
+            γ
+          
+        
+        
+        .
+      
+    
+     
+   V fotovoltaičnem načinu tokokrog ni sklenjen (
+  
+    
+      
+        I
+        ≡
+        0
+      
+    
+     
+  , na grafu presečišče karakteristike z abscisno osjo) in napetost na fotodiodi znaša
+
+  
+    
+      
+        U
+        =
+        
+          
+            
+              
+                k
+                
+                  B
+                
+              
+              T
+            
+            
+              e
+              
+                0
+              
+            
+          
+        
+        ln
+        ⁡
+        
+          (
+          
+            
+              
+                
+                  I
+                  
+                    γ
+                  
+                
+                
+                  I
+                  
+                    s
+                  
+                
+              
+            
+            +
+            1
+          
+          )
+        
+        
+        .
+      
+    
+     
+  Če je fotodioda vezana zaporedno z upornikom z upornostjo 
+  
+    
+      
+        R
+      
+    
+     
+  , napetost na fotodiodi znaša 
+  
+    
+      
+        U
+        =
+        −
+        R
+        I
+      
+    
+     
+  . Reševanje transcendentne enačbe
+
+  
+    
+      
+        I
+        =
+        
+          I
+          
+            s
+          
+        
+        
+          [
+          
+            exp
+            ⁡
+            
+              (
+              
+                
+                  
+                    −
+                    
+                      e
+                      
+                        0
+                      
+                    
+                    R
+                    I
+                  
+                  
+                    
+                      k
+                      
+                        B
+                      
+                    
+                    T
+                  
+                
+              
+              )
+            
+            −
+            1
+          
+          ]
+        
+        −
+        
+          I
+          
+            γ
+          
+        
+      
+    
+     
+  grafično pomeni iskanje presečišča karakteristike in premice 
+  
+    
+      
+        I
+        =
+        −
+        U
+        
+          /
+        
+        R
+        
+        ,
+      
+    
+     
+   ki se nahaja v četrtem kvadrantu.
+Običajno je fotodioda vezana zaporedno z virom napetosti 
+  
+    
+      
+        
+          U
+          
+            g
+          
+        
+      
+    
+     
+  , ki je priklopljen v zaporni smeri (torej tako, da povzroča negativno napetost na fotodiodi). Napetost na fotodiodi znaša 
+  
+    
+      
+        U
+        =
+        −
+        
+          U
+          
+            g
+          
+        
+      
+    
+     
+  , ustrezajoč tok 
+  
+    
+      
+        I
+      
+    
+     
+   je negativen (na grafu tretji kvadrant). Če fotodiodo vežemo zaporedno z virom napetosti 
+  
+    
+      
+        
+          U
+          
+            g
+          
+        
+      
+    
+     
+  , ki ga priklopimo v zaporni smeri, in upornikom z uporom 
+  
+    
+      
+        R
+      
+    
+     
+  , napetost na fotodiodi znaša 
+  
+    
+      
+        U
+        =
+        −
+        
+          U
+          
+            g
+          
+        
+        −
+        R
+        I
+      
+    
+     
+  . Reševanje transcendentne enačbe
+
+  
+    
+      
+        I
+        =
+        
+          I
+          
+            s
+          
+        
+        
+          [
+          
+            exp
+            ⁡
+            
+              (
+              
+                
+                  
+                    −
+                    
+                      e
+                      
+                        0
+                      
+                    
+                    (
+                    
+                      U
+                      
+                        g
+                      
+                    
+                    +
+                    R
+                    I
+                    )
+                  
+                  
+                    
+                      k
+                      
+                        B
+                      
+                    
+                    T
+                  
+                
+              
+              )
+            
+            −
+            1
+          
+          ]
+        
+        −
+        
+          I
+          
+            γ
+          
+        
+      
+    
+     
+  grafično pomeni iskanje presečišča karakteristike in premice 
+  
+    
+      
+        I
+        =
+        −
+        U
+        
+          /
+        
+        R
+        −
+        
+          U
+          
+            g
+          
+        
+        
+          /
+        
+        R
+        
+        ,
+      
+    
+     
+   ki se nahaja v tretjem ali četrtem kvadrantu.
+
+
+== Materiali ==
+Značilnosti fotodiode v veliki meri določa širina energijske reže polprevodnika, iz katerega je narejena. Samo fotoni z dovolj majhno valovno dolžino lahko namreč nosilcem naboja dovedejo dovolj energije za prehod iz valenčnega v prevodni pas. V tabeli so podani nekateri pogosto uporabljani materiali za izdelavo fotodiod in ustrezajoča področja optične občutljivosti, torej intervali valovnih dolžin, na katerih fotodiode iz danega materiala delujejo. 
+Spekter vidne svetlobe je, za primerjavo, v območju valovnih dolžin med 380 nm in 780 nm.  
+Fotodiode na osnovi silicija imajo zaradi večje energijske reže praviloma boljše razmerje signala proti šumu kot fotodiode na osnovi germanija, saj pri fotodiodah na osnovi silicija v prevodni pas preide manj termično vzbujenih elektronov.   
+
+
+=== Nezaželeno fotodiodno obnašanje ===
+Zasnova različnih polprevodniških naprav, denimo diod, tranzistorjev in integriranih vezij, temelji na p-n stiku. Ker se vsak p-n stik ob osvetlitvi s svetlobo ustrezne valovne dolžine obnaša kot fotodioda, bodo omenjene naprave ob neželeni osvetlitvi z elektromagnetnim valovanjem ustrezne valovne dolžine zaradi inducirane napetosti ali generiranega fototoka delovale nepravilno ali se celo pokvarile. V izogib tovrstnim nevšečnostim so naprave vgrajene v za svetlobo neprepustna ohišja.  
+Nasprotno je v nekaterih primerih opisano obnašanje zaželeno, denimo pri uporabi LED diod kot svetlobno občutljivih naprav.  
+
+
+== Sklici ==
+Predloga:FS1037C
+
+
+== Viri ==
+
+
+== Zunanje povezave ==
+
+Hamamatsu Application Note (angleško)
+Using the Photodiode to convert the PC to a Light Intensity Logger (angleško)
+Design Fundamentals for Phototransistor Circuits (angleško)
+Working principles of photodiodes Arhivirano 2009-02-12 na Wayback Machine. (angleško)
+Excelitas Application Notes on Pacer Website Arhivirano 2014-11-13 na Wayback Machine. (angleško)Predloga:Electronic components
+Predloga:Sensors

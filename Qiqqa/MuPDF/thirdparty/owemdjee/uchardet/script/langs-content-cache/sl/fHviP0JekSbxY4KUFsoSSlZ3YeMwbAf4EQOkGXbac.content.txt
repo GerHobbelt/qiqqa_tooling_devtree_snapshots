@@ -1,0 +1,11 @@
+revision: 5299738
+title: "Enosmerni elektri\u010Dni tok"
+url: https://sl.wikipedia.org/wiki/Enosmerni_elektri%C4%8Dni_tok
+
+
+---
+
+Enosmerni električni tok je energija, ki poteka od pozitivnega pola do negativnega pola. V atomu se elektroni ločijo, ter nastane elektrina. Tako se ločeni elektroni hočejo združiti po najlažji poti. 
+
+Električna napetost nam pove, kako močno se ločene elektrine želijo združiti. Enota za električno napetost je 1V (1 volt).Električni tok nam pove, koliko elektrine preteče skozi prerez vodnika. Enota za električni tok je 1A (1 amper).Električna upornost je lastnost snovi, da se upira pretoku električnega toka. Enota za električno upornost je 1Ω (1 Ohm).Električna kapacitivnost je lastnost snovi, da pod el. napetostjo sprejme elektrino. Enota za kapacitivnost je 1F (1 farad)V elektrotehniki se Enosmerni električni tok uporablja v vezjih z elementi kot so kondenzatorji, upori, tranzistorji, diode,...
+Za Enosmerni električni tok velja tudi Ohmov zakon, ki se glasi :               U=RxI

@@ -1,0 +1,23 @@
+revision: 3393236
+title: UVSQ-SAT
+url: https://lv.wikipedia.org/wiki/Charlie_(pavadonis)
+
+
+---
+
+Charlie ir ASV uzņēmuma Aurora Insight radiofrekvenču spektra izpētes pavadonis. To izgatavoja un apkalpo Lietuvas uzņēmums NanoAvionics. Pavadonis orbītā tika palaists 2021. gada 24. janvārī.
+Aurora Insight izmanto uz pavadoņiem balstītu sensoru tehnoloģiju, lai noteiktu radio spektra izmantošanu un traucējumus visā pasaulē. Izmantojot savu pielāgoto apstrādi, Aurora rada precīzu informāciju par radiofrekvenču spektra un bezvadu infrastruktūras veselību un pieejamību, mērot 5G, LTE, IoT, 3G/2G, Wi-Fi un TV signālus. Šī informācija ļauj mobilo tīklu operatoriem, mobilo pakalpojumu operatoriem, torņu uzņēmumiem un radiofrekvenču spektra lietotājiem ieviest jauninājumus un veikt ieguldījumus bezvadu tīklos, tādējādi nodrošinot spēcīgākus savienojumus kopienām un viedām nozarēm.Charlie pamatā ir NanoAvionics izgatavota pavadoņu platforma M6P, kas veidota CubeSat 3U formā.
+
+
+== Lidojuma gaita ==
+Charlie tika palaists 2021. gada 24. janvārī 15:00 UTC ar nesējraķeti Falcon 9 Block 5 (Transporter-1 misija) no Kanaveralas zemesraga Gaisa spēku stacijas starta laukuma SLC-40. Tas startēja kopā ar 142 pavadoņiem, kas bija rekords ar vienu raķeti palaisto kosmisko aparātu skaitam. Charlie tika ievadīts solārsinhronā orbītā.
+
+
+== Atsauces ==
+
+
+== Ārējās saites ==
+Charlie Satellite Launch
+NanoAvionics
+AII-Bravo, AII-Charlie Gunter Dirk Krebs
+AII-CHARLIE N2YO.com (pavadoņa orbītas parametri)

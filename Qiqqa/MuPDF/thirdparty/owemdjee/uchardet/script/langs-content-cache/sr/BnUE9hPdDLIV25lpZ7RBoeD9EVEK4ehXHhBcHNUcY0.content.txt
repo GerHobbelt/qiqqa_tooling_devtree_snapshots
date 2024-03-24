@@ -1,0 +1,54 @@
+revision: 25863455
+title: Delapril
+url: https://sr.wikipedia.org/wiki/Delapril
+
+
+---
+
+{{Drugbox-lat
+| verifiedrevid = 444593478
+| IUPAC_name = 2-[(2S)-N-(2,3-dihidro-1H-inden-2-il)-2-{[(2S)-1-etoksi-1-okso-4-fenilbutan-2-il]amino}propanamido]sirćetna kiselina
+| image = Delapril.png
+| tradename =  
+| Drugs.com = Internacionalno ime leka
+| pregnancy_AU = 
+| pregnancy_US = 
+| pregnancy_category =  
+| legal_AU = 
+| legal_CA = 
+| legal_UK = 
+| legal_US = 
+| legal_status =  
+| routes_of_administration =  
+| bioavailability =  
+| protein_bound =  
+| metabolism =  
+| elimination_half-life =  
+| excretion =  
+| CAS_number_Ref =  Y
+| CAS_number = 83435-66-9
+| ATC_prefix = C09
+| ATC_suffix = AA12
+| ATC_supplemental =  
+| PubChem = 5362116
+| DrugBank_Ref =  Y
+| DrugBank =  
+| UNII_Ref =  Y
+| UNII = W77UAL9THI
+| KEGG_Ref =  Y
+| KEGG = D07781
+| ChemSpiderID      = 4514931
+| smiles            = O=C(OCC)[C@@H](N[C@H](C(=O)N(CC(=O)O)C2Cc1ccccc1C2)C)CCc3ccccc3
+| StdInChI          = 1S/C26H32N2O5/c1-3-33-26(32)23(14-13-19-9-5-4-6-10-19)27-18(2)25(31)28(17-24(29)30)22-15-20-11-7-8-12-21(20)16-22/h4-12,18,22-23,27H,3,13-17H2,1-2H3,(H,29,30)/t18-,23-/m0/s1
+| StdInChIKey       = WOUOLAUOZXOLJQ-MBSDFSHPSA-N
+| chemical_formula =  
+| C=26 | H=32 | N=2 | O=5 
+| molecular_weight = 452,542 g/mol
+}}
+Delapril (alindapril) je ACE inhibitor koji se koristi kao antihipertenzivni lek u više zemalja u Evropi i Aziji.
+
+
+== Reference ==
+
+
+== Spoljašnje veze ==

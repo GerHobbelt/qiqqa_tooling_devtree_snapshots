@@ -1,0 +1,172 @@
+revision: 70576402
+title: Mapy Google
+url: https://pl.wikipedia.org/wiki/Mapy_Google
+
+
+---
+
+Mapy Google, Google Maps – internetowa platforma mapowa i aplikacja konsumencka oferowana przez Google umożliwiająca między innymi oglądanie zdjęć satelitarnych, zdjęć lotniczych,  planów i interaktywnych, panoramicznych widoków ulic (Street View). Platforma oferuje także informacje o ruchu drogowym w czasie rzeczywistym oraz umożliwia planowanie tras pieszych, samochodowych, rowerowych, lotniczych (w wersji beta) i transportem publicznym. Od 2020 roku z Map Google korzysta miesięcznie ponad miliard ludzi na całym świecie.
+
+
+== Funkcje ==
+
+
+=== Kierunki i tranzyt ===
+Mapy Google udostępniają narzędzie do planowania tras, które umożliwia użytkownikom znajdowanie dostępnych tras samochodem, transportem publicznym, pieszo lub na rowerze. Firma Google nawiązała globalną współpracę z ponad 800 dostawcami usług transportu publicznego w celu przyjęcia GTFS (General Transit Feed Specification). Usługa ta może użytkownikowi wskazać trasę pieszą, rowerową, samochodową, samolotową, kolejową lub przy użyciu innych środków komunikacji wybranych przez użytkownika.
+
+
+=== Natężenie ruchu ===
+W 2007 roku Google zaczął oferować dane o ruchu drogowym w postaci kolorowych nakładek na drogi i autostrady, które przedstawiają prędkość pojazdów na określonych drogach. Funkcjonuje na podstawie uzyskiwania przez GPS lokalizacji dużej ilości telefonów (Crowdsourcingu), i na ich podstawie tworzenia map ruchu drogowego na żywo.
+
+
+=== Street View ===
+25 maja 2007 r. Firma Google udostępniła Google Street View, funkcję Map Google zapewniającą 360-stopniowe panoramiczne widoki różnych lokalizacji z poziomu ulicy. W dniu premiery funkcja obejmowała tylko pięć miast w USA. Od tego czasu rozszerzyła się na tysiące lokalizacji na całym świecie.
+
+Street View wzbudził wiele kontrowersji po jego wydaniu z powodu obaw o prywatność związanych z nieocenzurowanym charakterem zdjęć panoramicznych, chociaż są one robione tylko na ulicach publicznych. Od tego czasu Google zamazuje twarze i tablice rejestracyjne za pomocą automatycznego rozpoznawania twarzy.
+W 2017 roku, zarówno w Mapach Google, jak i Google Earth, stała się dostępna nawigacja Street View po wnętrzach Międzynarodowej Stacji Kosmicznej.
+
+
+=== Moje mapy ===
+Moje mapy to funkcja Map Google wprowadzona w kwietniu 2007 r., która umożliwia użytkownikom tworzenie niestandardowych map do użytku osobistego. Mogą oni dodawać punkty, linie, kształty, notatki i obrazy na Mapach Google za pomocą edytora WYSIWYG. Aplikacja Moje Mapy na Androida, pierwotnie wydana w marcu 2013 r. pod nazwą Google Maps Engine Lite, była dostępna do czasu jej usunięcia ze sklepu Google Play w 2021 r.
+
+
+=== Mapy wewnątrz ===
+W marcu 2011 r. Mapy obiektów zostały dodane do Map Google, dając użytkownikom możliwość poruszania się po budynkach, takich jak lotniska, muzea, centra handlowe, uniwersytety, stacje tranzytowe i inne przestrzenie publiczne (w tym obiekty podziemne). Google zachęca właścicieli obiektów użyteczności publicznej do przesyłania planów pięter swoich budynków w celu dodania ich do swojej usługi. Użytkownicy mapy mogą przeglądać różne piętra budynku lub budowli.
+
+
+=== Immersive View ===
+Podczas wydarzenia Google I/O 2022 ogłoszono, że obrazy 3D będą tworzone za pomocą Street View. Miał być początkowo w pięciu miastach na całym świecie, z planami dodania go później do innych.
+Funkcja Immersive View była początkowo dostępna tylko w następujących lokalizacjach :
+
+
+=== Lokalni przewodnicy Google ===
+
+Lokalni przewodnicy Google to program wolontariatu uruchomiony przez Mapy Google, aby umożliwić użytkownikom wniesienie wkładu w tę platformę po zarejestrowaniu swojego konta Google. Program jest częściowo następcą Kreatora map Google, ponieważ funkcje poprzedniego programu zostały zintegrowane z witryną i aplikacją.
+Program polega na dodawaniu recenzji, zdjęć, podstawowych informacji i filmów; oraz poprawianie informacji, takich jak dostępność dla wózków inwalidzkich. Dodawanie recenzji, zdjęć, filmów, nowych miejsc, nowych dróg czy dostarczanie przydatnych informacji daje użytkownikom punkty. Poziom użytkowników jest podwyższany, gdy zdobędą określoną liczbę punktów. Począwszy od poziomu 4, w pobliżu awatara użytkownika wyświetlana jest gwiazdka.
+Użytkownicy mogą osiągnąć poziom od 1 do 10 i otrzymać odznaki.
+
+
+=== Profil Firmy w Google ===
+Profil Firmy (ang.Google Business) to bezpłatna usługa Google umożliwiająca właścicielom firm wyświetlanie nazwy i adresu przedsiębiorstwa w Mapach Google oraz wyszukiwarce. Obecność firmy w Mapach Google poprzedzona jest zazwyczaj założeniem profilu na platformie Profil Firmy w Google, uzupełnieniem: kategorii działalności, fizycznej lokalizacji firmy, informacji o tym czy firma obsługuje klientów również poza ww. lokalizacją fizyczną, obszaru działalności firmy, danych kontaktowych oraz informacji dodatkowych.
+
+
+=== Mapy Google na telefony komórkowe ===
+Mapy Google na telefony komórkowe (ang. Google Maps for mobile) to darmowa usługa bazująca na serwisie Google Maps i oferująca nawigację satelitarną oraz możliwość oglądania map i zdjęć satelitarnych na telefonach komórkowych i innych urządzeniach mobilnych (przenośnych). Możliwe jest także zgłaszanie przez użytkowników korków, dzięki czemu łatwiej można dostosować swoją trasę. Polskim głosem Map Google jest dziennikarz i właściciel studia lektorskiego Polish Voices Jarosław Juszkiewicz, 22 maja 2020 roku Google podjęło decyzję o zastąpieniu go automatycznie generowanym głosem, po protestach użytkowników przywrócono jednak głos Juszkiewicza.
+
+
+== Historia ==
+
+
+=== Przejęcia ===
+Mapy Google powstały jako program C++ zaprojektowany przez dwóch braci z Danii, Larsa i Jensa Eilstrupa Rasmussenów oraz Noela Gordona i Stephena Ma z firmy Where 2 Technologies z siedzibą w Sydney. Początkowo został zaprojektowany do oddzielnego pobierania przez użytkowników, ale później firma przedstawiła pomysł produktu wyłącznie internetowego kierownictwu Google, zmieniając metodę dystrybucji. W październiku 2004 r. firma została przejęta przez Google Inc., gdzie przekształcił się w aplikację internetową Google Maps.
+
+W tym samym miesiącu Google przejął Keyhole, firmę zajmującą się wizualizacją danych geoprzestrzennych (przy inwestycji CIA), który przeksztalcił się w Google Earth w 2005 r., podczas gdy inne aspekty jej podstawowej technologii zostały zintegrowane z Mapami Google. We wrześniu 2004 r. Google przejął ZipDash, firmę dostarczającą analizy ruchu w czasie rzeczywistym.
+
+
+=== 2005-2010 ===
+Uruchomienie Map Google zostało po raz pierwszy ogłoszone na blogu Google 8 lutego 2005 r.We wrześniu 2005 r., w następstwie huraganu Katrina, Mapy Google szybko zaktualizowały zdjęcia satelitarne Nowego Orleanu, aby umożliwić użytkownikom przeglądanie zasięgu powodzi w różnych częściach tego miasta.
+Od 2007 roku Mapy Google są wyposażone w miniaturowy widok z przeciąganym prostokątem, który oznacza obszar pokazany w głównym widoku, oraz „okna informacyjne” do podglądu szczegółowych informacji o lokalizacjach na mapach.
+28 listopada 2007 r. wydano Google Maps for Mobile 2.0, pierwszą wersję Google Maps przeznaczoną na urządzenia mobilne. Zawierał wersję beta funkcji „Moja lokalizacja”, która wykorzystuje lokalizację GPS urządzenia mobilnego, jeśli jest dostępna, uzupełnioną o określenie najbliższych sieci bezprzewodowych i lokalizacji komórkowych. Poprzez triangulację różnych mocy sygnału z nadajników komórkowych, a następnie wykorzystanie ich właściwości lokalizacji (pobranej z bazy danych), funkcja Moja lokalizacja określa aktualną i dokładną lokalizację użytkownika.
+23 września 2008 r., zbiegając się z ogłoszeniem pierwszego komercyjnego urządzenia z systemem Android, firma Google ogłosiła, że została wydana aplikacja Google Maps dla systemu operacyjnego Android.
+
+W październiku 2009 roku firma Google zastąpiła firmę Tele Atlas jako głównego dostawcę danych geoprzestrzennych w amerykańskiej wersji map i wykorzystała własne dane.
+
+
+=== 2011-2015 ===
+19 kwietnia 2011 r. Kreator map został dodany do amerykańskiej wersji Map Google, umożliwiając każdemu przeglądającemu edytowanie i dodawanie zmian w Mapach Google. Dzięki temu Google otrzymywał lokalne aktualizacje map niemal w czasie rzeczywistym.
+31 stycznia 2012 r. Google, w związku z udostępnianiem swoich map za darmo, został uznany za winnego nadużywania dominującej pozycji swojej aplikacji Google Maps na rynku i sąd nakazał zapłacenie grzywny i odszkodowania firmie Bottin Cartographer, francuskiej firmie zajmującej się tworzeniem map. Orzeczenie nakazanie zostało uchylone w wyniku odwołania.
+W czerwcu 2012 r. Google we współpracy z Canal and River Trust rozpoczęło tworzenie map rzek i kanałów w Wielkiej Brytanii. Firma oświadczyła, że „zaktualizuje program w ciągu roku, aby umożliwić użytkownikom planowanie wycieczek, które obejmują śluzy, mosty i ścieżki holownicze wzdłuż 2000 mil ścieżek rzecznych w Wielkiej Brytanii”.
+W grudniu 2012 roku aplikacja Google Maps została udostępniona oddzielnie w App Store, po tym jak Apple usunął ją z domyślnej instalacji mobilnego systemu operacyjnego w wersji iOS 6 we wrześniu 2012 roku.
+29 stycznia 2013 r. Mapy Google zaktualizowały mapę Korei Północnej. Od 3 maja 2013 r. Mapy Google rozpoznają Palestynę jako kraj, zamiast przekierowywać do terytoriów palestyńskich.
+W sierpniu 2013 r. Mapy Google usunęły warstwę Wikipedii, która zawierała linki do treści dotyczących lokalizacji pokazywanych w Mapach Google przy użyciu geokodów Wikipedii.
+12 kwietnia 2014 r. platforma została zaktualizowana w celu odzwierciedlenia aneksji Krymu przez Rosję. Krym jest pokazany jako Republika Krymu w Rosji i jako Autonomiczna Republika Krymu na Ukrainie. Wszystkie inne wersje pokazują przerywaną sporną granicę.
+29 kwietnia 2015 r. użytkownicy klasycznych Map Google zostali przekierowani do nowych Map Google z opcją usunięcia z interfejsu.
+14 lipca 2015 r. Chińska nazwa Scarborough Shoal została usunięta po opublikowaniu petycji z Filipin na Change.org.
+
+
+=== 2016-2018 ===
+
+27 czerwca 2016 r. firma Google udostępniła na całym świecie nowe zdjęcia satelitarne pochodzące z satelity Landsat 8, zawierające ponad 700 bilionów pikseli nowych danych. We wrześniu 2016 r. Mapy Google przejęły startup Urban Engines zajmujący się analizą map.
+W 2016 r. rząd Korei Południowej zaoferował Google warunkowy dostęp do geograficznej bazy danych tego kraju – dostęp, który już umożliwia rdzennym koreańskim dostawcom map bardzo szczegółowe dane. Google odrzucił ofertę, ponieważ nie chciał zaakceptować ograniczeń dotyczących obniżania jakości (Pikselizacji) wokół lokalizacji, które zdaniem rządu Korei Południowej były wrażliwe.
+16 października 2017 r. Mapy Google zostały zaktualizowane o dostępne zdjęcia kilku planet i księżyców, takich jak Tytan, Merkury i Wenus, a także bezpośredni dostęp do zdjęć Księżyca i Marsa.
+W sierpniu 2018 r. Mapy Google zaprojektowały swój ogólny domyślny widok na trójwymiarową kulę ziemską, porzucając projekcję Mercatora, która rzutowała planetę na płaską powierzchnię.
+
+
+=== 2019 – obecnie ===
+W styczniu 2019 r. Mapy Google dodały ostrzeżenia o fotoradarach zgłoszonych przez użytkowników.
+W grudniu 2019 roku dodano tryb incognito, który umożliwia użytkownikom wprowadzanie miejsc docelowych bez zapisywania wpisów na kontach Google.
+W lutym 2020 r. Mapy otrzymały nowy wygląd z okazji 15. rocznicy. W szczególności dodał zupełnie nową ikonę aplikacji, która teraz przypomina oryginalną ikonę z 2005 roku.
+23 września 2020 r. firma Google ogłosiła aktualizację map dotyczącą COVID-19, która ma oferować średnie siedmiodniowe dane dotyczące całkowitej liczby przypadków COVID-19 na 100 000 osób na obszarze wybranym na mapie. Zawiera również etykietę wskazującą wzrost i spadek liczby przypadków.
+W styczniu 2021 roku Google ogłosił aktualizacje narzędzia do planowania tras. Wyznaczanie trasy uwzględniałoby typ pojazdu, status pojazdu, oraz lokalizacje stacji ładowania pojazdów elektrycznych.
+W czerwcu 2022 r. Mapy Google, w niektórych krajach, dodały warstwę wyświetlającą jakość powietrza.
+We wrześniu 2022 r. Google usunął warstwę COVID-19 z Map Google ze względu na niewielkie wykorzystywanie tej funkcji.
+W czerwcu 2023 r. Google ogłosił, że po raz pierwszy od 2010 r., samochody Google StreetView wyjadą na niemieckie drogi.
+
+
+== Działania techniczne ==
+Gdy użytkownik przeciąga mapę, kwadraty siatki są pobierane z serwera i wstawiane na stronę. Gdy użytkownik szuka firmy, wyniki są pobierane w tle w celu wstawienia do panelu bocznego i mapy; strona nie jest ponownie ładowana. Używana jest ukryta ramka iframe z przesyłaniem formularza, ponieważ zachowuje ona historię przeglądarki. Podobnie jak wiele innych aplikacji internetowych Google, Mapy Google w dużym stopniu wykorzystują JavaScript. Witryna używa również buforów protokołów do przesyłania danych, a nie JSON, ze względu na wydajność.
+Wersja Google Street View dla klasycznych Map Google wymagała Adobe Flash. W październiku 2011 r. Google ogłosił MapsGL, wersję Map WebGL z lepszym renderowaniem. Mapy wnętrz używają plików .JPG, .PNG, .PDF, .BMP lub .GIF jako plany pięter pięter.
+Użytkownicy zalogowani na konto Google mogą zapisywać lokalizacje w taki sposób, aby były one nakładane na mapę za pomocą różnokolorowych „pinezek” za każdym razem, gdy przeglądają aplikację. Te „zapisane miejsca” można organizować w grupy domyślne lub grupy nazwane przez użytkowników i udostępniać je innym. „Miejsca oznaczone gwiazdką” to przykład grupy domyślnej. Wcześniej automatycznie tworzył spis w wycofanym już produkcie Google Bookmarks.
+
+
+=== Dane map i obrazy ===
+Warunki korzystania z Map Google określają, że korzystanie z materiałów platformy podlega warunkom korzystania z usługi Google oraz pewnym dodatkowym ograniczeniom. Firma Google albo kupiła lokalne dane map od firm o ugruntowanej pozycji, albo zawarła umowy dzierżawy dotyczące korzystania z danych map chronionych prawami autorskimi. Właściciel praw autorskich jest wymieniony na dole powiększonych map. Na przykład mapy ulic w Japonii są dzierżawione od firmy Zenrin. Mapy ulic w Chinach są dzierżawione od AutoNavi. Rosyjskie mapy ulic są dzierżawione od Geocentre Consulting i Tele Atlas.
+Nakładki map ulic w niektórych obszarach mogą nie pasować dokładnie do odpowiednich zdjęć satelitarnych. Dane ulic mogą być całkowicie błędne lub po prostu nieaktualne:
+„Największym wyzwaniem jest aktualność danych i ich autentyczność” – powiedział przedstawiciel Google Earth, Brian McClendon. W rezultacie w marcu 2008 roku Google dodał funkcję edycji lokalizacji domów i firm.
+W Mapach Google nałożono ograniczenia poprzez pozorną cenzurę lokalizacji uznanych za potencjalne zagrożenia bezpieczeństwa. W niektórych przypadkach obszar redagowania dotyczy określonych budynków, które są cenzurowane poprzez pikselizacje, ale w innych przypadkach, takich jak Waszyngton, gdzie ograniczeniem jest użycie nieaktualnych zdjęć.
+
+
+=== Mapy Google API ===
+Google stworzyło interfejs API Map Google, obecnie nazywany Google Maps Platform, umożliwiające wstawienie własnej mapy na dowolną stronę internetową. Dostęp do API odbywa się z poziomu języka JavaScript, ActionScript 3 (Google Maps API for Flash®) lub w postaci obrazu (Google Static Maps API). Do korzystania z Google Maps Platform wymagany jest bezpłatny klucz, który może uzyskać każdy użytkownik konta Google. Klucz pozwala na dostęp z jednej domeny lub katalogu domeny. Google Maps API umożliwia zintegrowanie ze stroną internetową w pełni funkcjonalnej mapy, z własnymi danymi i funkcjami do obsługi zdarzeń. Usługa jest darmowa, jednak zawiera reklamy.
+Pierwsze wersje API nie oferowały zaawansowanych funkcji, dostępnych w witrynie Mapy Google. Nowsza wersja 2.8 udostępnia niemal całą funkcjonalność oryginalnego serwisu, wliczając w to:
+
+możliwość geokodowania adresów
+rysowanie polilinii
+wyznaczanie tras przejazdu wraz z listą kroków
+pełna kontrola widoku ulic (Street View)
+wsparcie dla języka KML/GeoRSSInterfejs API Map Google był bezpłatny do użytku komercyjnego, pod warunkiem, że witryna, w której jest używany, jest publicznie dostępna i nie pobiera opłat za dostęp oraz nie generuje więcej niż 25 000 wejść na mapę dziennie. Witryny, które nie spełniały tych wymagań, mogły kupić Google Maps API for Business.
+Od 21 czerwca 2018 r. Google podniósł ceny interfejsu API Map Google i wymaga profilu rozliczeniowego.
+
+
+=== Wyszukiwanie ===
+Geokoder Google Maps może analizować adresy wpisane w języku naturalnym. Usługa ta działa m.in. dla Stanów Zjednoczonych, Kanady i większości państw europejskich (w tym Polski), gdzie w największych miastach możliwe jest wyszukiwanie pojedynczych domów. Serwis wskazuje również połączenia drogowe między znalezionymi miejscami z przybliżonym czasem podróży i w rozbiciu na etapy, przebieg trasy może zostać dowolnie zmodyfikowany poprzez przeciąganie jej punktów składowych kursorem myszy.
+Możliwe jest także wyszukiwanie miejsc za pomocą współrzędnych geograficznych (stopni, opcjonalnie minut oraz sekund).
+
+
+== Kontrowersje ==
+
+
+=== Nieprawidłowe nazewnictwo lokalizacji ===
+Zdarzają się przypadki, w których Mapy Google dodały nieaktualne nazwy sąsiedztwa. Ponieważ wiele firm korzysta z danych Map Google, niejasne lub nieprawidłowe nazwy są często używane przez pośredników w handlu nieruchomościami, hotele, strony z dostawami jedzenia i organizacje informacyjne.
+Google wytłumaczył, że stworzył swoje mapy na podstawie danych stron trzecich, źródeł publicznych, satelitów i użytkowników, ale wiele użytych nazw nie zostało powiązanych z żadnym oficjalnym zapisem. Według byłego pracownika Map Google, użytkownicy mogą zgłaszać zmiany w Mapach Google, ale niektóre zgłoszenia są rozpatrywane przez osoby o niewielkiej wiedzy na temat danego miejsca. Niektóre nazwy używane przez Google zostały przypisane nieprofesjonalnym mapom z błędami typograficznymi, które przetrwały w Mapach Google.
+
+
+=== Potencjalne nadużycia ===
+W 2005 roku Australijska Organizacja Nauki i Technologii Jądrowej (ANSTO) skarżyła się na możliwość wykorzystania przez terrorystów zdjęć satelitarnych do planowania ataków, ze szczególnym odniesieniem do reaktora jądrowego Lucas Heights; jednak australijski rząd federalny nie poparł obaw organizacji.
+W październiku 2010 r. dowódca wojskowy Nikaragui Edén Pastora stacjonował wojska nikaraguańskie na Isla Calero (w delcie rzeki San Juan), uzasadniając swoje działania wytyczeniem granicy podanym przez Google Maps. Od tego czasu Google zaktualizował swoje dane, które uznał za nieprawidłowe.
+27 stycznia 2014 r. Dokumenty ujawnione przez Edwarda Snowdena ujawniły, że NSA i GCHQ przechwyciły zapytania Google Maps dokonywane na smartfonach i wykorzystały je do zlokalizowania użytkowników dokonujących tych zapytań. W jednym z ujawnionych dokumentów, datowanym na 2008 r., stwierdzono, że „to oznacza, że każdy, kto korzysta z Map Google na smartfonie, pracuje na rzecz wsparcia systemu GCHQ”.
+W maju 2015 r. Wyszukiwania w Mapach Google obraźliwych epitetów rasowych dla Afroamerykanów, takich jak „czarnuch”, „król czarnuchów” i „dom czarnuchów”, wskazywały użytkownikowi Biały Dom; Google przeprosił za incydent.
+W lutym 2020 r. użytkownik Map Google użył 99 telefonów komórkowych do sfałszowania korka w Mapach Google.
+
+
+== Zastosowania artystyczne i literackie ==
+Niemiecka „geopowieść” Senghor on the Rocks (2008) opowiedziała historię jako serię rozkładówek pokazujących lokalizację na mapie Google po lewej stronie i tekst opowiadający historię po prawej. Annika Richterich wyjaśnia, że „zdjęcia satelitarne w Senghor on the Rocks ilustrują podróż głównego bohatera przez zachodnioafrykański kraj Senegal”.
+Artyści korzystali z Google StreetView na wiele sposobów. Trylogia Google Emilio Vavarelli zawiera wadliwe zdjęcia i niezamierzone portrety kierowców samochodów Street View. Japoński zespół Inou wykorzystał tła Google StreetView do stworzenia teledysku do swojej piosenki EYE. Kanadyjski zespół Arcade Fire nakręcił spersonalizowany teledysk, w którym wykorzystał StreetView, aby pokazać widzowi ich własne domy z dzieciństwa.
+
+
+== Zobacz też ==
+My Location
+Bing Maps
+Google Earth
+GeoGuessr
+Google Moon
+Google Mars
+Yandex.Maps
+
+
+== Przypisy ==
+
+
+== Linki zewnętrzne ==
+Google Sightseeing (ang.) – serwis zajmujący się zbieraniem odnośników do zasugerowanych przez użytkowników znanych bądź interesujących miejsc na Google Maps
+Poznaj Google Maps API (pol.) – baza przykładów i zastosowań Google Maps API

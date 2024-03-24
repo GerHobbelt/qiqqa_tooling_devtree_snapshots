@@ -1,0 +1,126 @@
+revision: 53245417
+title: .localhost
+url: https://sv.wikipedia.org/wiki/Toppdom%C3%A4n
+
+
+---
+
+Toppdomän (engelska: Top-level domain), förkortat TLD, är den högsta nivån i internets domännamnssystem (DNS). Till exempel har domännamnet sv.wikipedia.org toppdomänen "org". En toppdomän är alltså den del som avslutar domännamnet, det som står efter den sista punkten i ett domännamn, till exempel .se, .dk eller .no. Varje land ansvarar för var sin toppdomän och det finns även toppdomäner som inte är kopplade till ett visst land, som till exempel .com, .org och .net. Vem som ansvarar för respektive toppdomän styrs av organisationen ICANN (Internet Corporation for Assigned Names and Numbers).Internetmyndigheten IANA klassificerar toppdomäner i följande kategorier:
+
+Nationella toppdomäner (country code top-level domain, ccTLD) är de domännamn på internet som reserverats för enskilda länder, och som slutar med landsändelse, till exempel .se för Sverige. Domännamnet består antingen av två latinska bokstäver (a–z) enligt ISO 3166 (med tillägg för .uk och .eu), eller också består det av en punycode-kodad beteckning med andra skriftsystem (IDN). I ASCII-form inleds dessa senare med "xn--".
+Generiska toppdomäner (generic top-level domain, gTLD) används (åtminstone i teorin) av särskilda klasser av organisationer. Huvudgruppen av generiska toppdomäner är com, net, och org. Till exempel är com avsedd att användas av kommersiella organisationer. Domännamnet består av tre eller fler bokstäver. De flesta generiska toppdomäner är tillgängliga för hela världen, men av historiska skäl är mil (military, militär) och gov (governmental, statlig) begränsade till myndigheter i USA. Från 2012 har skapandet av nya generiska toppdomäner förenklats betydligt och de räknas nu i tusental.
+Infrastrukturella toppdomäner. Dessa har spelat ut sin roll. En som fortfarande finns kvar är arpa.Toppdomäner infördes 1985 för att decentralisera tilldelandet av domänadresser, så att till exempel varje land kunde själva tilldela domänadresser till sina organisationer och medborgare. Innan dess fanns en enda lista domäner, och till exempel e-postadresser kunde se ut som smith@berkeley det vill säga Smith på Berkeley-universitetet.
+Regelverket för olika länders toppdomäner varierar. I länder där man haft en liberal hållning när det kommer till registrering, som till exempel i Nederländerna, har man generellt sett också ett högt antal domäner per capita. Nederländernas .nl är till exempel en av de största toppdomänerna för länder i hela världen.Fram till år 2003 fungerade DNS bara med bokstäverna a till z, siffrorna 0 till 9 och bindestreck, men numera går det att använda fler tecken i domänerna. Strängt taget har namnet samma begränsningar, men dessa tecken används för att koda andra tecken, som sedan visas av webbläsare och andra användargränssnitt (se IDN).
+Exakt vilka tecken som får användas bestämmer varje toppdomän. För .se gäller till exempel att domännamn även kan innehålla å, ä, ö, ü och é samt de nordiska språkens bokstäver. Dessutom går det även att använda alla bokstäver i de officiella svenska minoritetsspråken, alltså finska, tornedalsfinska, samiska, romani och jiddisch.År 2013 började ICANN tillåta vem som helst att ansöka om en egen toppdomän. Det ledde till att vissa storföretag och städer registrerade sina egna toppdomäner.
+
+
+== Lista över toppdomäner ==
+
+
+=== Nationella toppdomäner ===
+
+
+==== A ====
+
+
+==== B ====
+
+
+==== C ====
+
+
+==== D ====
+
+
+==== E ====
+
+
+==== F ====
+
+
+==== G ====
+
+
+==== H ====
+
+
+==== I ====
+
+
+==== J ====
+
+
+==== K ====
+
+
+==== L ====
+
+
+==== M ====
+
+
+==== N ====
+
+
+==== O ====
+
+
+==== P ====
+
+
+==== Q ====
+
+
+==== R ====
+
+
+==== S ====
+
+
+==== T ====
+
+
+==== U ====
+
+
+==== V ====
+
+
+==== W ====
+
+
+==== Y ====
+
+
+==== Z ====
+
+
+==== Ickelatinska tecken ====
+Webbadresser med arabiska och hebreiska tecken i toppdomänen skrivs med toppdomänen längst till vänster.
+
+
+=== Generiska toppdomäner ===
+Denna lista är ofullständig; det fanns i slutet av 2016 över 1500 godkända generiska toppdomäner (alla dock inte aktiva), och det bedömdes bli fler. Åtta stycken bildades 1985–1988, ett tiotal 2000–2011, och resten efter 2012.
+Se en:List of Internet top-level domains#ICANN-era generic top-level domains på engelska Wikipedia.
+
+
+==== Städer, regioner ====
+
+
+==== Företag, varumärken ====
+Det fanns i slutet av 2016 flera hundra godkända toppdomäner som innehöll namn på ett företag eller varumärke. Några är svenska.
+
+Den 26 juni 2008 beslutade Icann att på sikt tillåta bildandet av betydligt fler generiska toppdomäner . Den 12 januari 2012 blev det möjligt att ansöka om en egen generisk toppdomän Den 13 juni 2012 publicerades en lista på 1 930 nya toppdomäner för vilka ansökningar inkommit. Svenska organisationer har bland annat sökt .Stockholm, .ericsson, .sandvik och .volvo.
+Enligt RFC2606 finns det fyra "reserverade" toppdomäner: .test, .example, .invalid och .localhost. Det finns också tre reserverade andranivåsdomäner: example.com, example.net och example.org.
+
+
+== Se även ==
+Internets historia i Sverige
+
+
+== Referenser ==
+
+
+== Externa länkar ==
+http://www.norid.no/domenenavnbaser/domreg.html
+https://web.archive.org/web/20060803222723/http://dotmobi.org/

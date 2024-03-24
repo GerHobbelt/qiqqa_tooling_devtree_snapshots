@@ -1,0 +1,33 @@
+revision: 5793989
+title: "Klorof\xFCll"
+url: https://et.wikipedia.org/wiki/Klorof%C3%BCll
+
+
+---
+
+Klorofüll (ka leheroheline) on taimedes, vetikates ja tsüanobakterites sisalduv pigment, mis annab neile rohelise värvuse. See nimi on tuletatud kreekakeelsetest sõnadest χλωρος kloros (roheline) and φύλλον füllon (leht). Klorofülli molekulid osalevad fotosünteesis ja võimaldavad taimedel muundada valgusenergiat keemiliseks energiaks. Klorofüll neelab valgust kõige tugevamini elektromagnetilise spektri sinises ja punases piirkonnas. Kuna nähtava valguse rohelise piirkonna kiirgust neelab klorofüll vähem, paistavad klorofülli ohtralt sisaldavad koed inimsilmale rohelised. Klorofüll on liitvalk, täpsemalt kromoproteiin. 
+
+
+== Struktuur ==
+
+Klorofüll on kloriini pigment, mille struktuur sarnaneb porfüriini pigmentide omaga. Klorofülli kloriiniringi keskel on magneesiumiioon. Siin artiklis kujutatud struktuuridel on selguse mõttes kujutatud mõned Mg2+ tsentriga seondunud ligandid. Kloriiniringil võib olla mitmeid kõrvalahelaid, tavaliselt on nende hulgas ka fütooli ahel. Looduses esineb mitut tüüpi klorofülli, kõige levinum on tüüp a. Klorofüll a üldise struktuuri selgitas 1940. aastal välja Hans Fischer ja aastal 1960, kui oli teada suurem osa molekuli stereokeemiast, avaldas Robert Burns Woodward selle täieliku sünteesi. Aastal 1967 andis Ian Fleming vastused viimastele klorofüll a stereokeemiat puudutavatele küsimustele. 2010. aastal kuulutati välja, et tsüanobakterid ja teised oksügeensed stromatoliite moodustavad mikroorganismid sisaldavad kolorfüll f-i.
+Klorofülli tüüpide erinevused on välja toodud allpool.
+
+Taime vananedes kaotavad selle lehed rohelise värvi – klorofüll muundub erinevateks värvituteks tetrapürroolideks, mida tuntakse mittekiirgavate klorofülli kataboliitide nime all. Nende üldine struktuur on järgmine: 
+
+Neid ühendeid on leitud ka mitmetest küpsevatest viljadest.
+
+
+== Klorofüll ja fotosüntees ==
+Taimed muundavad valgusenergiat keemiliseks energiaks fotosünteesi kaudu ja just klorofüllil on fotosünteesis äärmiselt oluline roll, kuna see on esimeseks, algatavaks lüliks valgusenergia muutmise, transformeerimise ahelas. Klorofülli molekulid on paigutunud kloroplastide tülakoidide rakumembraanides asetsevate fotosüsteemide sisse ja ümber. Nende komplekside kahte peamist funktsiooni täidab klorofüll. Suurema osa klorofülli molekulide ülesandeks on valguse neelamine ja selle valgusenergia edasikandmine footoni energia neelanud ergastunud elektroni näol fotosüsteemi reaktsioonitsentri spetsiaalsele klorofüllide paarile resonantse energiaülekande meetodil.
+Eristatakse kahte fotosüsteemi, milleks on fotosüsteem II ja fotosüsteem I. Neile kummalegi on iseloomulikud erinevad reaktsioonitsentri klorofüllid, mida nimetatakse vastavalt P680-ks ja P700-ks. Need pigmendid on nimetatud nende punase valguse neeldumise maksimumi lainepikkuse (nanomeetrites) järgi. Klorofüllide tüüp, ülesanne ja spektraalsed omadused fotosüsteemides on erinevad ja sõltuvad klorofüllidest enestest ja neid ümbritsevast valgumaatriksist. Pärast valkudest eraldamist ja lahustamist näiteks atsetoonis või metanoolis saab neid pigmente lihtsalt paberkromatograafia abil eraldada. Pigmendid eralduvad vastavalt sellele, kui palju on molekulidel polaarseid rühmi.
+Reaktsioonitsentri klorofülli ülesandeks on läbida laengute eraldumise protsess teistelt klorofüllidelt saadud energia varal. Tegu on spetsiifilise redoksreaktsiooniga, kus klorofüll annab ära footoni energia omastanud elektroni elektrontransportahelale. Laetud reaktsioonitsentri klorofüll (P680+) redutseeritakse seejärel tagasi esialgsesse seisundisse (klorofüll võtab vastu elektroni). Fotosüsteem II-s pärineb see elektron mitmeetapilisest vee oksüdeerimisest O2-ks ja H+-ks. See elektronidoonoriks olev vesi asub tülakoidi sisemises ruumis, luumenis. Sellise fotolüüsi, vee lagundamisprotsessi kaudu eritavad fotosünteesivad organismid O2 gaasi, mis on üks reaktsiooni jääkprodukt; vee oksüdeerimist fotosüsteem II-s võib pidada praktiliselt kogu Maa atmosfääri hapniku allikaks. Fotosüsteem I reaktsioonid järgnevad tavaliselt fotosüsteem II reaktsioonidele ja fotosüsteem I P700+ redutseeritakse tavaliselt fotosüsteem II-st pärit elektronidega. Elektronülekannete süsteemid tülakoidide membraanides on aga keerulised, nii et P700+-i redutseerivate elektronide allikas võib varieeruda.
+Reaktsioonitsentri klorofüllipigmentide poolt tekitatud elektronide suunatud liikumist kasutatakse H+ ioonide, prootonite viimiseks läbi tülakoidi membraani, mis tekitab elektrokeemilise potentsiaali, gradiendi tülakoidi sees, luumenis. Seda kasutatakse peamiselt ATP keemilise energia tootmiseks. Kõne all olnud elektronid redutseerivad läbi mitme reaktsiooni NADP+-i NADPH-ks, mis on universaalne redutseerija ja mis leiab kasutust CO2 suhkruteks redutseerimisel ning ka teistel biosünteetilistel redutseerimistel.
+Reaktsioonitsentri klorofülli ja valgu kompleksid on võimelised otse valgust neelama ja läbi viima laengute eraldamist ka ilma teiste klorofüllipigmentideta, kuid neelamise ristlõike pindala (tõenäosus neelata footon teatud valguse intensiivsuse korral) on väike. Seetõttu on fotosüsteemides palju klorofülli molekule ja fotosüsteemidega seotud antennipigmentide ja valkude komplekse, mis kõik neelavad footoneid ja transpordivad energia reaktsioonitsentrisse. Peale klorofüll a esineb valgust neelavates antennikompleksides ka teisi, kaaspigmente.
+
+
+== Vaata ka ==
+Kaaspigmendid
+
+
+== Viited ==

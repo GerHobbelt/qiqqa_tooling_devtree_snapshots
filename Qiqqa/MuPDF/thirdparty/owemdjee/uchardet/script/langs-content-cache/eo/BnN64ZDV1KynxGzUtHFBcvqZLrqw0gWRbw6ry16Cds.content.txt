@@ -1,0 +1,136 @@
+revision: 8148427
+title: Elo-nombro
+url: https://eo.wikipedia.org/wiki/Elo-nombro
+
+
+---
+
+La Elo-sistemo estas objektiva taksadsistemo, kiu ebligas la taksadon de la ludkapabloj de ŝakistoj kaj goistoj. La rezulto de la taksado estas nombro, la tiel nomata Elo-nombro. Por ŝako ekzistas 9 klasoj, kiuj diferencas je po 200 poentoj. Diferenco je unu klaso signifas, ke la pli bona ŝakisto povas atendi 0,75 poentojn kiel rezulton de la partio. Hungardevena Árpád Élő disvolvis la sistemon en la 1960-aj jaroj kaj la FIDE enkondukis ĝin dum la FIDE-kongreso 1970 en Siegen (Germanio).
+
+
+== Kalkulado ==
+Iu, kiu ekzemple aliĝas ŝakoklubon, ankoraŭ ne havas Elo-nombron. Post kelkaj partioj kontraŭ diversaj ŝakistoj lia Elo-nombro estas unue taksita. Poste per tiu Elo-nombro kaj per la rezultoj de lia partioj lia nova Elo-nombro estas kalkulata.
+Por la kalkulado de la nova Elo-nombro gravas la atendeblaj poentoj EA, kiujn ludisto A kontraŭ ludisto B laŭ probableco atingos.
+
+  
+    
+      
+        
+          E
+          
+            A
+          
+        
+        =
+        
+          
+            n
+            
+              1
+              +
+              
+                10
+                
+                  (
+                  
+                    R
+                    
+                      B
+                    
+                  
+                  −
+                  
+                    R
+                    
+                      A
+                    
+                  
+                  )
+                  
+                    /
+                  
+                  400
+                
+              
+            
+          
+        
+      
+    
+     
+  n: nombro de la partioj
+EA: atendotaj poentoj por ludisto A
+RA: ĝisnuna Elo-nombro de ludisto A
+RB: ĝisnuna Elo-nombro de ludisto BLa atendata valoro por A nun estas EA · 100 %. La nova Elo-nombro de ludisto A estas:
+
+  
+    
+      
+        
+          R
+          
+            A
+          
+          
+            ′
+          
+        
+        =
+        
+          R
+          
+            A
+          
+        
+        +
+        k
+        ⋅
+        (
+        
+          S
+          
+            A
+          
+        
+        −
+        
+          E
+          
+            A
+          
+        
+        )
+      
+    
+     
+  SA: gajnitaj poentoj (1 por venko, 0,5 por remiso, 0 por malvenko)Rimarko 1: La nombro 400 en tiu formulo kaj la origina k-faktoro estis tiel elektitaj de Arpad Elo, ke la Elo-nombroj kiel eble plej bone kongruu kun la antaŭa sistemo de Kenneth Harkness. Fakte oni povas kompreni la Harkness-sistemon kiel pece linearan aproksimaĵon de la Elo-sistemo.
+Rimarko 2:
+Estas facile pruvi ke validas:
+
+  
+    
+      
+        
+          E
+          
+            A
+          
+        
+        +
+        
+          E
+          
+            B
+          
+        
+        =
+        1
+      
+    
+     
+  
+
+
+== Ligiloj ==
+La unuaj 100 ŝakistoj
+EGF-ranglisto de eŭropaj goistoj

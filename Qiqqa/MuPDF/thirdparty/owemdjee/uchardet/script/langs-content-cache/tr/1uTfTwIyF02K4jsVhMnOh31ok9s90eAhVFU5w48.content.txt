@@ -1,0 +1,153 @@
+revision: 29759115
+title: "Organik yar\u0131 iletken"
+url: https://tr.wikipedia.org/wiki/Yar%C4%B1_iletken
+
+
+---
+
+Yarı iletken üzerine yapılan mekanik işin etkisiyle iletken özelliği kazanabilen, normal şartlar altında yalıtkan olan maddelerdir.
+Normal durumda yalıtkan olan bu maddeler ısı, ışık, manyetik etki veya elektriksel gerilim gibi dış etkiler uygulandığında bir miktar değerlik elektronlarını serbest hale geçirerek iletken duruma gelirler. Uygulanan bu dış etki veya etkiler ortadan kaldırıldığında ise yalıtkan duruma geri dönerler. Bu özellik elektronik alanında yoğun olarak kullanılmalarını sağlamıştır.
+Dünya üzre en büyük yarı iletken ve entegre devre üreticileri Intel, Samsung, Huawei, TSMC, SK Hynix, Micron Technology, Qualcomm, Broadcom, Nvidia, Texas Instruments, Infineon Technologies, SK Hynix, Renesas Electronics, MediaTek, NXP Semiconductors, VIA Technologies, STMicroelectronics, Freescale Semiconductor, Kioxia, Analog Devices, ARM Holding, Advanced Micro Devices, GlobalFoundries, ON Semiconductor, United Microelectronics Corporation, IBM, Imagination Technologies, Graphcore, Xilinx, SMIC gibi şirketlerdir.
+
+
+== Yarı İletkenler ==
+Yarı iletkenler belirgin elektriksel özellikleri olan kristal veya amorf katılardır. Tipik direnç materyallerinden yüksek bir direnç göstermelerine rağmen, dirençleri yalıtkanlar kadar yüksek değildir. Metallerin tam tersine; dirençleri, sıcaklık arttıkça azalır. Son olarak; istenirse, iletkenlik özellikleri saflıkları “doping” adı verilen yöntem ile bozularak kolaylıkla değiştirilebilir. Doping yöntemi yarı-iletkenin direncini düşürürken aynı zamanda katkılı yarı-iletkenin farklı düzeyde katkı yapılmış noktaları arasında da yarı iletken birleşme noktaları oluşmasına da olanak sağlar. Elektronlar, iyonlar ve elektron oyukları gibi yük taşıyıcıların bu birleşme noktalarındaki davranışları diyotların, transistörlerin ve diğer tüm modern elektronik parçaların temellerini oluşturur.
+Yarı iletken cihazlar; akımın bir yönde daha kolay ilerlemesi, değiştirilebilir direnç ve ışığa-sıcaklığa duyarlılık gibi kullanışlı özelliklere sahiptir. Yarı iletken materyallerin elektriksel özellikleri; doping yöntemi kullanılarak, elektrik alan veya ışık uygulanarak değiştirilebildiğinden ötürü yarı iletkenlerden üretilen aletler devrede yükseltici, anahtar veya enerji dönüşüm elemanları olarak kullanılabilir.
+Yarı iletkenlerin özellikleri ile ilgili modern bilgi birikimi ve yük taşıyıcılarının kristal kafes yapısındaki hareketlerinin açıklanması temelde kuantum fiziğine dayanır. Doping, kristal içindeki yük taşıyıcılarının sayısını etkili bir biçimde artırır. Katkılı bir kristal, eğer çoğunlukla serbest oyuklar içeriyorsa p-tipi kristal olarak adlandırılırken eğer çoğunlukla serbest elektronlar içeriyorsa n-tipi kristal olarak adlandırılır. Elektronik cihazlarda kullanılan yarı iletken malzemeler, p ve n tipi katkı maddelerinin yoğunluğunun dikkatlice kontrol edilebilmesi için kesin koşullar altında doping işlemine tabi tutulurlar. Bir tek yarı iletken kristali birden fazla n veya p tipi alana sahip olabilir ve bu alanlar arasında oluşan p-n bağlantıları yarı iletkenlerin kullanışlı elektronik özelliklerinin oluşmasını sağlar.
+Birçok bileşik ve saf element de yarı-iletken özellikleri göstermesine karşın silikon, germanyum veya galyumun bileşikleri elektronik cihazlarda en yaygın olarak kullanılanlardır. Periyodik cetvelin yarı-metaller merdiveni de denilen bölgesinde yer alan elementler de genelde yarı iletkenler olarak kullanılırlar.
+Yarı iletkenlerin birçok özelliği 19. yüzyılın ortalarında ve 20. yüzyılın başlarında keşfedilmiştir. Yarı iletkenlerin ilk pratik uygulaması 1904 yılında geliştirilen ve radyo alıcılarında yaygın olarak kullanılan Cat’s Whisker detektörüdür. Kuantum fiziğindeki gelişmeler sırayla 1947 yılında transistörün ve 1958 yılında da entegre devrelerin geliştirilmesini sağlamıştır.
+Küresel yarı iletken pazarı uzunca bir süreden beri hareketlidir. Çip üretimi için kullanılacak endüstri tesisleri milyar dolarları bulan yatırımlar gerektirmektedir. Arz ve talepteki periyodik dalgalanmalar, fiyatlarda ve kâr payında önemli oynamalara sebep olmaktadır.
+Yarı iletkenler germanyum, silisyum, selenyum gibi elementler olabildiği gibi; bakır oksit, galyum arsenid, indiyum fosfür, kurşun sülfür gibi bileşikler de olabilir.
+Yarı iletken devre elemanları şu şekildedir:
+
+Diyot
+Zener Diyot
+Tünel Diyot
+Varikap diyot
+Şotki (Schottky) Diyot
+Led Diyot
+İnfraruj Led
+Foto Diyot
+Optokuplörler
+Transistör
+IGBT
+
+
+== Özellikleri ==
+
+
+=== Değişken İletkenlik ===
+Yarı iletkenler değerlik elektronları dolu olduğu için yeni elektronların girişini engeller ve akımın gerektirdiği elektron akışını sağlayamazlar. Bu nedenle doğal halleriyle iletkenlikleri kötüdür. Yarı iletkenlerin iletkenler gibi davranmalarını sağlamak için doping veya gating gibi birkaç yöntem geliştirilmiştir. Bu modifikasyonlar ile iki sonuca ulaşılmıştır: n-tipi ve p-tipi. Bunlar sırayla elektron fazlalığına ve eksikliği anlamına gelmektedir. Dengelenmemiş bir elektron sayısı da materyal boyunca ilerleyen bir elektrik akımına sebebiyet vermektedir.
+
+
+=== Heterojen Birleşme Noktaları ===
+Heterojen birleşme noktaları farklı katkı yapılmış iki bölge birbirine katıldığında oluşur. Örneğin, bir karışım p-katkılı ve n-katkılı germanyum içerebilir. Bu; elektronların ve oyukların farklı katkılanmış bölgeler arasında değişmesi ile sonuçlanır. n-katkılı germanyum elektron fazlalığına, p-katkılı germanyum da oyuk fazlalığına sahip olacaktır. Alışveriş, rekombinasyonun gerçekleşmesiyle dengenin sağlandığı ana kadar devam eder. Rekombinasyon elektronların n-tipi bölgeden p-tipi bölgeye göç ederken zıt yönde hareket eden oyuklar ile karşılaşması sonucu iyonlar oluşmasıdır. Oluşan bu iyonlar, elektrik alan oluşmasına sebep olur.
+
+
+=== Uyarılmış Elektronlar ===
+Yarı iletken malzemenin üzerindeki bir potansiyel farkı maddenin ısı dengesinin bozulmasına ve bir termal eşitsizlik durumu ortaya çıkmasına sebep olacaktır. Bu; elektronların ve oyukların, iki kutuplu difüzyon ismi verilen bir etkileşim sayesinde sisteme dahil olmasını sağlar. Yarı iletken maddenin sahip olduğu ısı dengesi bozulduğunda da oyukların ve elektronların sayıları değişir. Isı dengesi, sıcaklık değişimi veya sistemdeki oyuk-elektron sayısını değiştirebilen fotonlar yüzünden bozulabilir. Elektron ve oyukların oluşmasına ve yok olmasına sebep olan bu işlem yük oluşumu ve rekombinasyonu olarak adlandırılır. 
+
+
+=== Işın Yayımlanması ===
+Yalnızca bazı yarı iletkenlerde, uyarılmış elektronlar ısı üretmek yerine ışın yayımlayarak da serbest hale dönebilirler. Bu tip yarı iletkenler “LED” ve “floresan kuantum noktacıkları” üretiminde kullanılırlar.
+
+
+=== Termal Enerji Dönüşümü ===
+Yarı iletkenler yüksek termoelektrik güç faktörlerine sahip olduklarından dolayı termoelektrik üreteç yapımı için elverişlidirler. Aynı zamanda yüksek termoelektrik performans katsayısına sahip oldukları için termoelektrik soğutucu yapımında da kullanılırlar.
+
+
+== Maddeler ==
+Çok fazla sayıda element ve bileşik yarı iletkenlik özelliklerine sahiptir. Bunlar: 
+
+Periyodik cetvelin 14.grubunda bulunan belli elementler. Bu elementlerin ticari olarak en önemli olanları ve efektif olarak kullanılanları silisyum ve germanyumdur. Çünkü silikon ve germanyumun değerlik elektron sayısı 4’tür ve bu da aynı anda hem elektron alıp hem de vermelerine olanak sağlar.
+Özellikle 13. ve 15. gruplar, 12. ve 16. gruplar, 14 ve 16 gruplar ve 14.grubun farklı elementlerinin kendi aralarında oluşturduğu ikili bileşikler. 12-16 bileşiği örneği olarak Galyum- Arsenik, 14-14 bileşiği örneği olarak da Silikon-Karpit verilebilir.
+Bazı üçlü bileşikler, oksitler ve alaşımlar.
+Organik bileşiklerden oluşan organik yarı iletkenler.En yaygın yarı iletkenler kristal katılardır fakat bunun yanı sıra amorf veya sıvı yarı iletkenler de bilinmektedir. Selenyum ve tellürün farklı oranları, hidrojenli amorf silikon ve arsenik karışımları bunlardan birkaçıdır. Bahsedilen bileşiklerin ara seviye iletkenlik, sıcaklıkla birlikte hızlı iletkenlik değişimi ve nadir olarak negatif dirence sahip olma gibi özellikleri, bilinen diğer yarı iletkenler ile ortaktır. Bu tarz düzensiz malzemeler, silikonun sahip olduğu gibi sıradan kristal yarı iletken yapısından yoksundurlar. Safsızlığa veya radyasyon hasarına karşı nispeten daha duyarsız oldukları için genellikle yüksek elektronik kalite veya hassasiyet gerektirmeyen ince film yapılarında kullanılırlar.
+
+
+== Yarı İletken Malzemelerin Üretimi ==
+Yarı iletkenler entegre devrelerin en önemli yapıtaşları olduğu için bugünkü teknolojik aletlerin neredeyse tamamı yarı iletkenlerden faydalanıyor. Entegre devre içeren cihazlara; dizüstü bilgisayarlar, tarayıcılar, cep telefonları gibi yaygın örnekler verilebilir. Entegreler için yarı iletkenler seri üretimle üretilir. İdeal bir yarı iletken üretebilmek için kimyasal saflık öncelikli şarttır. Kullanılan malzemelerin boyutları da düşünüldüğünde, en ufak bir kusur dahi materyalin nasıl davrandığına oldukça yıkıcı bir etki yapabilir. 
+Kristal yapısındaki kusurlar (çizgisel, düzlemsel kusurlar ve ikiz kristaller) malzemenin yarı iletkenlik özelliklerine etki edebileceğinden dolayı yüksek düzeyde bir kristal mükemmeliyet de önemlidir. Kristal kusurları, yarı iletken malzemenin kusurlarının temel sebeplerindendir. Kristalin büyüdükçe aranan kusursuzluğa ulaşmak da o zorlaşır. Günümüzde seri üretim tekniklerinde ise ince diskler halinde dilimlenmiş 100-300 nm çaplı silindir külçeleri kullanılır.
+Entegrelerde kullanılacak yarı iletkenlerin üretimi için mevcut yarı iletken üretim işlemlerinin karması olan bir yöntem kullanılır. Bu yöntemlerden ilki termal oksidasyon yöntemidir. Termal oksidasyon yöntemi ile silikonun yüzeyinde bir silikon dioksit tabakası oluşturulur ve alınan ürün “Gate Insulator” veya “Field Oxide” olarak kullanılır. Sıra, “Photomask” ve “Photolithography” olarak adlandırılan ve devrenin şeklinin malzeme üzerinde oluşturulmasını sağlayan işlemler gelir. Materyalin üzerinde şeklin oluşmasını sağlayan ışığa duyarlı maddenin yüzeyine ultraviyole ışık kullanılarak devrenin çizimi yansıtılır ve ışığa duyarlı maddede kimyasal değişimler olduktan sonra sonuç alınır.
+Sıradaki işlem aşındırma. Bir önceki basamakta silikonun ışığa duyarlı malzeme ile kaplanmamış olan yüzeyi bu aşamada asit kullanılarak kazınabilir. Günümüzde ağırlıklı olarak plazma ile kazıma yöntemi tercih edilir. Plazma kazıma yönteminde düşük basınç altında aşındırıcı bir plazma gazı kullanılır. Freon veya kloroflorokarbonlar kullanılan aşındırıcı plazma gazlarına örnek olarak verilebilir. Katot ve anot arasında oluşturulan yüksek frekanslı radyo voltajı gazın ortamda plazma haline geçmesini sağlar. Silikon ince disk (wafer) katot üzerinde yer alır ve plazma haline geçen gazdan saçılan pozitif yüklü iyonlar diske çarparlar. Sonuç olarak silikon madde an-izotrofik olarak aşındırılmış olur.
+Son aşama difüzyon olarak adlandırılır ve yarı iletken malzemeye arzu edilen özelliklerin kazandırıldığı aşama bu aşamadır. Difüzyon aynı zamanda “doping” olarak da bilinir. Bu basamakta, p-n birleşme noktalarının oluşmalarını sağlayan saf olmayan atomlar eklenir. Bu saf olmayan atomları silikon ince disklerle bütünleştirmek için işlem 1100 C sıcaklığında bir ortamda gerçekleştirilir. Bu basamak da tamamlanıp yarı iletken oda sıcaklığına geri döndüğünde üretim süreci tamamlanmış olur. Artık yarı iletken malzeme entegre devredeki yerini almaya hazırdır. 
+
+
+== Yarı İletkenlerin Fiziği ==
+
+
+=== Enerji Boşlukları ve İletkenlik ===
+Yarı iletkenler metal ve yalıtkan arasında yer alan benzersiz iletkenlik özellikleri ile tanımlanırlar. Bu maddeler arasındaki farklar elektronların yörüngedeki kuantum halleriyle anlaşılabilir. Bu kuantum halleri maddenin elektron kuşağı yapısıyla bağlantılıdır. Elektrik iletkenliği ortaklaşa kullanılmış elektronların (madde boyunca var olan) sayısı ile artar. Fakat elektronların hareket edebilmesi için ilgili yörüngeler, sadece belli bir zaman boyunca bir elektron bulunduracak şekilde yarı dolu olmalıdır. Eğer yörünge sürekli olarak bir elektron ile doluysa, başka bir ifadeyle inertse,  diğer elektronların bu alanı kullanarak ilerlemeleri engellenmiş olur. Bir kuantum bölgesi ancak ve ancak enerjisi Fermi seviyesinde ise kısmi dolu olabileceği için bu kuantum bölgelerinin enerji seviyeleri kritiktir. (Bkz: Fermi-Dirac İstatistiği)
+Bir maddenin iyi bir iletken olması fazla sayıda kısmi dolu ve ortaklaşa kullanılmış orbitaller içermesinden ileri gelir. Metaller fazla sayıda enerjisi Fermi seviyesine yakın olan kısmi dolu yörüngelere sahip oldukları için elektriği iyi iletirler. Tersine, yalıtkanlar az sayıda kısmi dolu yörüngeye sahiptirler ve yalıtkanların Fermi seviyeleri elektron kuşaklarının enerji seviyeleri arasında yer almaktadır. Önemli olarak, bir yalıtkan ısıtılarak bir iletken haline getirilebilir. Çünkü ısıtma bazı elektronların enerji boşluğunu aşmaları için gereken enerjiyi sağlayabilir. Bunu değerlik kuşağının altındaki kısmi dolu yörüngeleri değerlik kuşağına, üstündekileri de iletken kuşağa taşıyarak yapar. Yapısal bir yarı iletken, oda sıcaklığında, bir yalıtkana göre daha küçük bir enerji boşluğu taşır ve bu de önemli sayıda elektronun boşluğu aşabilecek şekilde uyarılmasına olanak tanır.
+Fakat arı bir yarı iletken ne iyi bir iletken ne de iyi bir yalıtkan olduğu için kullanışsızdır. Ancak yarı iletkenlerin (ve bazı yarı yalıtkan olarak da bilinen bazı yalıtkanların) önemli özelliklerinden biri iletkenliklerinin “doping” (saf olmayan katkılar ilave edilmesi) veya “gating”(elektrik alan uygulanması) ile kontrol edilebilmesidir. Doping ve gating ya değerlik kuşağını ya da iletim kuşağını Fermi seviyesine yaklaştırarak kısmi dolu state lerin önemli bir oranda artmasını sağlar.
+Enerji boşlukları nispeten daha geniş olan yarı iletkenler, yarı yalıtkanlar olarak da anılırlar. Katkısız olduklarında yalıtkanlara yakın bir iletkenliğe sahipken doping ile yarı iletken haline getirilebilirler. Yarı yalıtkanların mikro elektronikte HEMT substratı gibi uygun kullanım alanları vardır. Galyum arsenit yaygın bir yarı yalıtkan örneğidir. Titanyum dioksit gibi bazı maddeler geniş enerji boşluklu yarı iletken olarak sınıflandırılmalarına karşın bazı alanlarda yalıtkan olarak da kullanılabilirler.
+
+
+=== Yük Taşıyıcıları (elektronlar ve oyuklar) ===
+State in iletken kuşağın alt enerji bölgelerinde kısmi dolu oluşu bu kuşağa yeni bir elektron eklenerek anlaşılabilir. Elektronlar; termal rekombinasyondan dolayı hareketsiz durmazlar ve bir süre boyunca da belirsiz olarak gezinebilirler. Elektronların gerçekteki yoğunluğu da genellikle oldukça seyrektir. Bu sebeple iletim bandında yer alan elektronları tıpkı Pauli Dışarlama İlkesinden etkilenmeyen bir soy gaz elektronu gibi düşünmek mümkündür. Birçok yarı iletkenlerin iletim bandında parabolik saçılma etkileşimleri yer aldığından bu bölgedeki elektronlar baskın olarak elektrik ve manyetik kuvvetin etkisindedirler. Bundan ötürü farklı etkin kütleleri olmasına rağmen sanki vakumdaymış gibi davranırlar. Elektronların ideal bir gaz gibi davranması, iletimi Drude modelinde olduğu gibi çok basit terimlerle veya elektron hareketi konsepti ile açıklanmasının mümkün olduğunu düşündürebilir.
+Değerlik kuşağının üst enerji düzeyindeki kısmi dolu bölgeler oyuk kavramının açıklanmasına yardımcı olur. Değerlik bandındaki elektronlar sürekli hareketli olmalarına rağmen tam dolu bir değerlik bandı akımı iletmeyeceğinden dolayı inert olacaktır. Değerlik bandından bir elektron çıkarılırsa elektronun koparıldığı yörünge yükünü kaybedecektir. Elektrik akımının amacına göre; bir elektronu eksilmiş değerlik bandı, sanki artı yüklü tamamen boş bir yörüngeymiş gibi algılanacaktır. Değerlik bandın tepesinde yer alan elektronların negatif etkin kütlelerini de düşündüğümüzde; artı yüklü parçacığın elektrik ve manyetik alanlara normalde vakum altındaki tepkilerinin aynını vereceği bir modele ulaşacağız. Bu parçacık bir oyuk olarak adlandırılır ve değerlik bandındaki oyuklar bilinen temel terimlerle de anlaşılabilir.
+
+
+=== Taşıyıcı Oluşumu ve Rekombinasyonu ===
+İyonlaştırıcı bir radyasyon yarı iletkene etki ettiğinde, bir elektronun uyarılıp kendi enerji seviyesini aşmasına ve bir oyuk oluşturmasına sebep olabilir. Bu işlem elektron-oyuk çifti oluşumu olarak bilinir. Elektron-oyuk çiftleri sabit olarak ısı enerjisinden üretildiği gibi herhangi bir dış enerji kaynağının yokluğunda da oluşabilir.
+Elektron-oyuk çiftleri aynı zamanda rekombine olmaya da yatkındırlar. Enerjinin korunumu gereği, bir elektron enerji aralığından daha büyük bir enerji kaybederse rekombinasyonu ısı (fonon halinde) veya radyasyon (foton halinde) yayılması takip eder.
+Bazı durumlarda, elektron-oyuk çiftlerinin oluşum ve rekombinasyonu dengelidir. Kararlı durumdaki elektron-oyuk çiftlerinin sayısı kuantum istatistik mekaniği tarafından belirlenir. Oluşum ve rekombinasyonun kesin kuantum mekaniği mekanizması enerjinin ve momentumun korunumuyla belirlenir.
+Elektronların ve oyukların karşılaşma olasılığı çarpımlarıyla orantılı olduğundan, bu olasılık verilen bir sıcaklıktaki kararlı durumda sabittir. (herhangi bir elektrik alan olmadığını varsayarsak. Çünkü elektrik alan artı ve eksi yüklere etki edeceğinden dolayı karşılaşma olasılığına da etki edebilir.) Sıcaklık arttıkça çift oluşturmak için yeterli enerjiye ulaşma olasılığı da arttığından çarpım sıcaklığın (–EG/kT) gibi bir üstel fonksiyonu olacaktır. Burada k Boltzmann sabitini, T mutlak sıcaklığı ve EG bant genişliğini sembolize etmektedir.
+Karşılaşma olasılığı; taşıyıcı tuzakları (safsızlık) veya çift oluşana kadar elektronu hapseden çizgisel kristal kusurlar tarafından artırılır. Bunlar gibi tuzaklar bazen kararlı hale geçmek için geçen süreyi azaltmak adına kasti olarak da eklenir.
+
+
+=== Doping ===
+Yarı iletkenlerin iletkenlikleri kristal kafes yapılarına arı olmayan maddeler eklenerek kolaylıkla değiştirilebilir. Yarı iletkene kontrollü olarak arı olmayan madde ilave edilmesi işlemi doping olarak adlandırılır. Saf yarı iletkene eklenecek safsızlık miktarı (dopant) maddenin iletkenliği ile değişir. Katkılı yarı iletkenler “extrinsic” olarak da adlandırılır. Saf bir yarı iletkene saf olmayan maddeler eklenerek malzemenin iletkenliği binlerce veya milyonlarca kat değiştirilebilir.
+1 cm³’lük bir metal veya yarı iletken örneği 1022’nin katları seviyesinde atom içerir. Metallerde her atom iletkenlik için en az bir elektron verdiğinden dolayı 1 cm³ metal 1022’nin katlarında serbest elektron içerir. 20 C sıcaklıktaki germanyum ise 4.2 x 1022 atom içerirken 2.5 x 1013 serbest elektrona ve 2.5 x 1013 oyuğa sahiptir. %0.001 arsenik ilavesi germanyuma 1017 serbest elektron kazandırır ve bu da aynı hacimdeki germanyumun elektrik iletkenliğini 10000 katına çıkarır.
+Katkı maddesi olarak seçilecek maddeler hem kendi özelliklerine hem de eklenecekleri yarı iletkenin özelliklerine bakılarak belirlenir. Genelde katkılar yaptıkları etkiye göre elektron verici veya alıcı olarak sınıflandırılır. Elektron vericiler ile katkılanmış yarı iletkenler n-tipi olarak adlandırılırken alıcılar ile katkılandırılmış yarı iletkenler p-tipi olarak bilinir. n ve p tipleri maddenin ana yük taşıyıcısının ne olduğunu belirtir. Zıt yüklü taşıyıcı da azınlık olarak isimlendirilir. Isı uyarımı dolayısıyla ortamda bulunmasına rağmen ana yük taşıyıcıya göre oldukça az sayıdadır.
+Örneğin, arı silikon komşularıyla kolaylıkla bağ kurabilen 4 değerlik elektronuna sahiptir. Silikonda en yaygın katkı maddeleri grup III ve grup V elementleridir. Bütün grup III elementleri 3 değerlik elektronu taşıdığından silikona elektron alıcı olarak eklenirler. Bir elektron alıcı; kristalde bir silikon atomunun yerini aldığında, kristal boyunca hareket edebilen ve yük taşıyıcı gibi davranabilen bir oyuk oluşturur. Grup V elementleri 5 değerlik elektronu taşırlar ve elektron verici olarak kullanılırlar. Kristalde bir silikon atomunun yerine bir grup V atomu yerleştirildiğinde bu atom silikona bir serbest elektron vermiş olur. Sonuç olarak, bor ilave edilmiş silikon p-tipi yarı iletken olurken fosfor ilave edilmiş silikon n-tipi yarı iletken olur.
+Üretim sırasında, istenilen katkı maddesi gaz halde iken yarı iletkenle temas ettirilerek difüze edilebilir. Katkıyı yüksek isabetli bir biçimde yapmak için de iyon yerleştirme tekniği uygulanabilir.
+
+
+== Tarihi ==
+Yarı iletkenler ile ilgili ilk çalışmalar maddelerin elektriksel özellikleri ile ilgili deneyler ile başlar. Yarı iletkenlerin akımı doğrultabilme, negatif sıcaklık-direnç değişim katsayısı ve ışığa duyarlılık gibi özellikleri 19. Yüzyılın başlarında keşfedilmiştir.
+1883’te Michael Faraday Gümüş Sülfitin direncinin ısıtıldığında direncinin düştüğünü rapor etmiştir. Bu diğer metalik maddelerin davranışının tam tersi bir durumdur. 1839’da A.E. Becquerel ışığa tutulduğunda bir katı ve sıvı elektrolit arasında voltaj oluştuğunu gözlemlemiştir (foto-elektrik olay). 1873’te Willioughby Smith selenyumdan üretilen dirençlerin üzerlerine ışık düşürüldüğünde dirençlerinin azaldığını keşfetmiştir. 1874’te Karl Ferdinand Braun metal sülfitlerin akım doğrultma ve iletkenlik özelliklerini gözlemlemiştir. Bunlar, M.A. Rosenschold tarafından daha önceden keşfedilmiş ve “Annalen der Physik un Chemie in 1835” kitabında da yazılmıştır. Arthur Schuster, kabloların yüzeyinde yer alan bakır oksit tabakasının doğrultma etkisi gösterdiğini ve bu etkinin kablolar temizlenince kaybolduğunu görmüştür. Adams ve Day 1876’da selenyumda foto elektrik etkiyi gözlemlemiştir.
+Tam olarak anlaşılamayan bu olayların bütüncül bir açıklaması 20. Yüzyılın ilk yarısında katı hal fiziğinin gelişmesi ile mümkün olmuştur. 1878’de Edwin Herbert Hall, kendi adıyla da anılan Hall Etkisini, yani hareketli yüklerin manyetik alan uygulandığında saptığını detaylıca açıklamıştır. J.J. Thomson’un 1897’de elektronu keşfetmesi, katılarda elektron temelli iletim teorilerinin ortaya atılmasına ön ayak olmuştur. Karl Baedeker, Hall etkisini ters işaretli olarak gözlemleyerek, Bakır iyoditin artı işaretli yük taşıyıcılarına sahip olduğunu teoriye dökmüştür. Johan Koenigberger 1914’te katı maddeleri metaller, yalıtkanlar ve değişken dirençliler olarak sınıflandırmıştır. Hâlbuki Koenigberger’in öğrencisi olan Josef Weiss yarı iletken terimini 1910 yılında yayımladığı doktora tezinde modern anlamıyla tanımlamıştı. 1928’de Felix Bloch elektronların atomik kafes örgülerinde nasıl hareket ettiği ile ilgili bir teori yayımlamıştır. 1930’da B. Gudden yarı iletkenlerdeki iletkenliğin az miktardaki safsızlıktan kaynaklandığını ileri sürmüştür. 1931 yılıyla birlikte, “Elektriksel İletimin Kuşak Teorisi” (“the band theory of conduction”) Alan Herries Wilson tarafından öne sürülmüş ve kuşaklar arasındaki boşluk konsepti geliştirilmiştir. Walter H. Schottky ve Nevill Francis Mott potansiyel bariyerinin ve metal-yarı iletken birleşiminin modelini oluşturmuştur. 1938’de Boris Davydov, p-n bağlantılarını tanımlayan ve azınlık halindeki yük taşıyıcılarının ya da yüzey hallerinin önemini açıklayan Bakır-Oksit akım doğrultucular teorisini bilim dünyasına kazandırmıştır.
+Tüm çabalara rağmen bazı durumlarda deneyler, teorik öngörülerden oldukça alakasız sonuçlar veriyordu. Bu garip sonuçların sebebi daha sonra yarı iletkenlerin yapısal olarak aşırı hassas olduğunun ve en küçük bir safsızlıktan dahi büyük ölçüde etkilendiğinin John Bardeen tarafından açıklanması ile anlaşılabilmiştir. 1920’lerde saf olarak adlandırılan ancak eser miktarlarda da olsa saf olmayan içeriğe sahip materyaller değişken deneysel sonuçlar vermiştir. Bu da geliştirilmiş madde arılaştırma tekniklerinin geliştirilmesi için önemli bir kıvılcım olmuştur. Günümüzde modern metotların geldiği nokta ile trilyonda birden fazla safsızlık içermeyen yarı iletkenler üretilebilmektedir.
+Önceleri yarı iletken içeren cihazlar deneysel veriler referans alınarak üretilmekteydi. Yarı iletken teorisi geliştirildikten sonra daha kullanışlı ve güvenilir cihazlar üretilmeye başlandı.
+1880 yılında Alexander Graham Bell selenyumun ışığa duyarlılık özelliğini sesi bir huzme ile iletebilmek için kullandı. 1883’te Charles Fritts selenyum ve ince bir katman altın ile kaplanmış bir metal plaka kullanarak düşük verimle çalışan bir güneş hücresi üretti. 1930’larda bu güneş hücresi fotografik ışıkölçer olarak ticari anlamda kullanıldı. Nokta temaslı mikrodalga doğrultucuları 1904’te kurşun sülfitten Jagadish Chandra Bose tarafından üretildi. Doğal galen veya başka maddelerden üretilen “Cat-Whisker Detektörleri” radyonun gelişiminde yaygın olarak kullanıldı. Ama yine de, bir takım şeyler hala daha kesin olarak öngörülemiyor ve bir takım ayarlamalar gerektiriyordu. 1906’da H.J.Round, -LED’in de temeline oluşturan- silikon karpit kristallerinden akım geçtiğinde ışık yaydıklarını keşfetti. Oleg Losev de benzer ışık yayımlanmasını 1922’de gözlemledi fakat o tarihte bunun pratik uygulaması söz konusu değildi. Bakır oksit ve selenyum içeren akım doğrultucular 1920’lerde üretildi ve ticari olarak vakum tüpünden üretilen akım doğrultuculara alternatif oldular.
+2. Dünya Savaşı’ndan önceki yıllarda, kızıl ötesi tanıma ve haberleşme teknolojileri araştırmaların kurşun sülfit ve kurşun selenit maddeleri üzerinde yoğunlaşmasına sebep oldu. Bu cihazlar gemi ve uçakların yerlerini tespit etmek ve sesli haberleşmek için kullanıldı. Noktasal temaslı kristal detektörler mikrodalga radyo sistemleri için hayati önem taşımaya başladılar. Çünkü mevcut vakum tüplü cihazlar 4000 MHz seviyesinde detektör olarak iş göremiyorlardı. Bu nedenle gelişmiş radar sistemler yüksek hızlı tepkiler veren kristal detektörler kullanılarak üretildi. Önemli bir araştırma ve geliştirme süreci de istikrarlı ve kaliteli detektörler üretmenin önemi sebebiyle savaş sırasında yaşandı.
+Detektörler ve akım doğrultucular sinyalin yükseltilmesi amacıyla kullanılamıyordu. Yarı iletkenler hakkındaki teorik bilgi oldukça sınırlı olduğu için katı hal sinyal yükseltici geliştirmek amacıyla yapılan birçok çalışma ve araştırma sonuçsuz kalmıştı. 1922’de Oleg Losev, iki uçlu ve negatif dirençli bir radyo yükselteci üretmeyi başardı (kendisi ne yazık ki 1942’de Leningrad Kuşatması sırasında donarak can vermiş). 1926’de Julius Edgar Lilienfeld, pratik olarak kullanılamasa da, alan etkili transistörü andıran bir cihazın patentini aldı. R. Hilsch ve R. W. Pohl 1938’de vakum tüplerinin kontrol yapısını andıran bir katı hal yükselticisi ürettiler. Her ne kadar bu cihaz güç kazancı sağlıyormuş gibi görünse de bir sınır frekansına sahipti ve pratik uygulaması oldukça sınırlı idi. Fakat yine de mevcut teorinin efektif bir uygulaması olması açısından önemli idi.  Bell Laboratuvarlarında 1938 yılında William Shockley ve A. Holden katı hal yükselteçleri üzerinde çalışmaya başladılar. İlk silikon p-n birleşimi 1941 yılında ışığa duyarlılık açısından p ve n bölgeleri arasında keskin farklar olan bir örneğin bulunması ile gözlendi. Örnekten alınan ince bir dilim p-n birleşiminde ışık etkisiyle potansiyel farkı oluşturuyordu.
+Fransa’da, savaş sırasında Herbert Matare germanyum bazlı bir maddenin komşu temas noktalarının yükselteç işlevi gördüğünü gözlemledi. Savaşın ardından, Matare’nin araştırma grubu “Transistorn” yükselticilerini Bell Laboratuvarları transistörü duyurduktan hemen sonra ilan etti.
+
+
+== Ayrıca bakınız ==
+İletken
+Yalıtkan
+İletkenlik
+Yarı iletken endüstrisi
+Yarı iletken karakterizasyon teknikleri
+
+
+== Kaynakça ==
+Mehta, V. K. (2008-01-01). Principles of Electronics. S. Chand. p. 56. ISBN 9788121924504. Retrieved 6 December 2015.
+Feynman, Richard (1963). Feynman Lectures on Physics. Basic Books.
+Shockley, William (1950). Electrons and holes in semiconductors : with applications to transistor electronics. R. E. Krieger Pub. Co. ISBN 0882753827.
+Global Semiconductor Retrieved 24-05-2016
+Neamen, Donald. "Semiconductor Physics and Devices" (PDF). Elizabeth A. Jones.
+By Abdul Al-Azzawi. “Light and Optics: Principles and Practices.” 2007. March 4, 2016.
+"How do thermoelectric coolers (TECs) work?". marlow.com. Retrieved 2016-05-07.
+B.G. Yacobi, Semiconductor Materials: An Introduction to Basic Principles, Springer 2003 ISBN 0306473615, pp. 1–3
+Yu, Peter (2010). Fundamentals of Semiconductors. Berlin: Springer-Verlag. ISBN 978-3-642-00709-5.
+As in the Mott formula for conductivity, see Cutler, M.; Mott, N. (1969). "Observation of Anderson Localization in an Electron Gas". Physical Review 181 (3): 1336. Bibcode:1969PhRv..181.1336C. doi:10.1103/PhysRev.181.1336.
+Charles Kittel (1995) Introduction to Solid State Physics, 7th ed. Wiley, ISBN 0471111813.
+J. W. Allen (1960). "Gallium Arsenide as a semi-insulator". Nature 187 (4735): 403–405. Bibcode:1960Natur.187..403A. doi:10.1038/187403b0.
+Louis Nashelsky, Robert L.Boylestad. Electronic Devices and Circuit Theory (9th ed.). India: Prentice-Hall of India Private Limited. pp. 7–10. ISBN 978-81-203-2967-6.
+https://books.google.co.uk/books?id=rslXJmYPjGIC&pg=PA24&dq=Semiconductor+Rectifier+Rosenschold&hl=en&sa=X&ved=0ahUKEwi9653MmonKAhVG6RQKHZHADQUQ6AEIJDAA#v=onepage&q=Semiconductor%20Rectifier%20Rosenschold&f=false 11 Ağustos 2016 tarihinde Wayback Machine sitesinde arşivlendi.
+Lidia Łukasiak and Andrzej Jakubowski (January 2010). "History of Semiconductors" (PDF). Journal of Telecommunication and Information Technology: 16.Busch, G (1989). "Early history of the physics and chemistry of semiconductors-from doubts to fact in a hundred years". European Journal of Physics 10 (4): 254–264. Bibcode:1989EJPh...10..254B. doi:10.1088/0143-0807/10/4/002.
+https://books.google.com/books/about/Experimentelle_Beitr%C3%A4ge_zur_Elektronent.html?id=oVBNQwAACAAJ&redir_esc=y 3 Haziran 2016 tarihinde Wayback Machine sitesinde arşivlendi.
+Peter Robin Morris (1990) A History of the World Semiconductor Industry, IET, ISBN 0863412270, pp. 11–25 further reading
+A. A. Balandin and K. L. Wang (2006). Handbook of Semiconductor Nanostructures and Nanodevices (5-Volume Set). American Scientific Publishers. ISBN 1-58883-073-X.
+Sze, Simon M. (1981). Physics of Semiconductor Devices (2nd e
+
+
+== Ayrıca bakınız ==
+Yarı iletken cihaz
+Yarı iletken cihaz imalatı
+Yarı iletken sanayii
+Monokristalin silikon

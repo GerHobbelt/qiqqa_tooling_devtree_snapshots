@@ -1,0 +1,1297 @@
+revision: 67441903
+title: Twierdzenie o ideale pierwszym
+url: https://pl.wikipedia.org/wiki/Twierdzenie_o_ideale_pierwszym
+
+
+---
+
+Twierdzenie o ideale pierwszym – twierdzenie teorii krat rozdzielnych.
+
+
+== Twierdzenie ==
+Twierdzenie o ideale pierwszym najczęściej używane jest w kontekście związanym z algebrami Boole’a jednak jego najogólniejsza wersja odnosi się do krat rozdzielnych:
+
+Niech 
+  
+    
+      
+        
+          
+            K
+          
+        
+        =
+        (
+        K
+        ,
+        +
+        ,
+        ⋅
+        )
+      
+    
+     
+   będzie kratą rozdzielną. Jeśli 
+  
+    
+      
+        F
+        ⊆
+        K
+      
+    
+     
+   jest filtrem i 
+  
+    
+      
+        a
+        ∈
+        K
+        ∖
+        F
+        ,
+      
+    
+     
+   to istnieje ideał pierwszy 
+  
+    
+      
+        C
+      
+    
+     
+   rozłączny z 
+  
+    
+      
+        F
+      
+    
+     
+   i zawierający 
+  
+    
+      
+        a
+        .
+      
+    
+     
+  
+Założenie rozdzielności kraty jest istotne, na przykład w kracie 
+  
+    
+      
+        
+          M
+          
+            3
+          
+        
+        ,
+      
+    
+     
+   potocznie zwanej diamentem, żaden ideał nie jest pierwszy.
+Bardziej rozpowszechnioną wersją tego twierdzenia jest tzw. BPI (od ang. Boolean prime ideal theorem), które brzmi następująco:
+
+W każdej algebrze Boole’a istnieje ideał pierwszy.Ponieważ dualizacja algebry Boole’a jest algebrą Boole’a, a ideały i filtry są pojęciami dualnymi, to można sformułować inne, równoważne, wersje BPI:
+
+W każdej algebrze Boole’a istnieje ideał/filtr maksymalny (w algebrach Boole’a pojęcia ideału/filtru pierwszego i maksymalnego pokrywają się).
+W algebrze Boole’a każdy filtr właściwy zawarty jest w pewnym ultrafiltrze (ultrafiltr – inna nazwa filtru maksymalnego).
+
+
+== Dowód (z wykorzystaniem lematu Kuratowskiego-Zorna) ==
+Niech 
+  
+    
+      
+        
+          
+            K
+          
+        
+        ,
+        F
+        
+          
+             i 
+          
+        
+        a
+      
+    
+     
+   będą takie, jak w twierdzeniu. Niech dalej
+
+  
+    
+      
+        
+          
+            F
+          
+        
+        =
+        {
+        C
+        ⊆
+        K
+        :
+        
+        a
+        ∈
+        C
+        ,
+        
+        C
+        ∩
+        F
+        =
+        ∅
+        ,
+        
+        C
+        
+          
+             – ideał
+          
+        
+        
+        }
+      
+    
+     
+  Jak łatwo sprawdzić, 
+  
+    
+      
+        
+          
+            F
+          
+        
+      
+    
+     
+   domknięta jest na sumy łańcuchów. Wobec tego, na mocy lematu Kuratowskiego-Zorna, istnieje w niej element maksymalny 
+  
+    
+      
+        C
+        .
+      
+    
+     
+   Jest on ideałem rozłącznym z 
+  
+    
+      
+        F
+      
+    
+     
+   zawierającym 
+  
+    
+      
+        a
+        .
+      
+    
+     
+   Pokażemy, że jest on pierwszy. Przypuśćmy zatem, że dla pewnych 
+  
+    
+      
+        c
+        ,
+        d
+        ∈
+        K
+      
+    
+     
+   zachodzi 
+  
+    
+      
+        c
+        ⋅
+        d
+        ∈
+        C
+        ,
+        
+        c
+        ,
+        d
+        ∉
+        C
+        .
+      
+    
+     
+   Niech teraz 
+  
+    
+      
+        
+          C
+          
+            c
+          
+        
+        
+          
+             i 
+          
+        
+        
+          C
+          
+            d
+          
+        
+      
+    
+     
+   będą minimalnymi ideałami zawierającymi 
+  
+    
+      
+        C
+        ∪
+        {
+        c
+        }
+      
+    
+     
+   i 
+  
+    
+      
+        C
+        ∪
+        {
+        d
+        }
+        ,
+      
+    
+     
+   odpowiednio. Wówczas, 
+  
+    
+      
+        
+          C
+          
+            c
+          
+        
+        ,
+        
+        
+          C
+          
+            d
+          
+        
+        
+        ∉
+        
+          
+            F
+          
+        
+        ,
+      
+    
+     
+   skąd 
+  
+    
+      
+        F
+        ∩
+        
+          C
+          
+            c
+          
+        
+        ,
+        
+        F
+        ∩
+        
+          C
+          
+            d
+          
+        
+        ≠
+        ∅
+        .
+      
+    
+     
+   Niech zatem 
+  
+    
+      
+        
+          f
+          
+            c
+          
+        
+        ,
+        
+          f
+          
+            d
+          
+        
+        ∈
+        F
+      
+    
+     
+   będą takie, że 
+  
+    
+      
+        
+          f
+          
+            c
+          
+        
+        ∈
+        F
+        ∩
+        
+          C
+          
+            c
+          
+        
+      
+    
+     
+   i 
+  
+    
+      
+        
+          f
+          
+            d
+          
+        
+        ∈
+        F
+        ∩
+        
+          C
+          
+            d
+          
+        
+        .
+      
+    
+     
+   Istnieją wówczas takie 
+  
+    
+      
+        
+          x
+          
+            c
+          
+        
+        ,
+        
+          x
+          
+            d
+          
+        
+        ∈
+        C
+        ,
+      
+    
+     
+   że 
+  
+    
+      
+        
+          f
+          
+            c
+          
+        
+        ⩽
+        
+          x
+          
+            c
+          
+        
+        +
+        c
+      
+    
+     
+   i 
+  
+    
+      
+        
+          f
+          
+            d
+          
+        
+        ⩽
+        
+          x
+          
+            d
+          
+        
+        +
+        d
+        .
+      
+    
+     
+   Wówczas jednak 
+  
+    
+      
+        f
+        =
+        
+          f
+          
+            c
+          
+        
+        ⋅
+        
+          f
+          
+            d
+          
+        
+        ⩽
+        
+          x
+          
+            c
+          
+        
+        +
+        c
+        ,
+        
+        
+          x
+          
+            d
+          
+        
+        +
+        d
+        ⩽
+        (
+        
+          x
+          
+            c
+          
+        
+        +
+        
+          x
+          
+            d
+          
+        
+        )
+        +
+        c
+        ,
+        
+        (
+        
+          x
+          
+            c
+          
+        
+        +
+        
+          x
+          
+            d
+          
+        
+        )
+        +
+        d
+        ,
+      
+    
+     
+   skąd
+
+  
+    
+      
+        f
+        ⩽
+        [
+        (
+        
+          x
+          
+            c
+          
+        
+        +
+        
+          x
+          
+            d
+          
+        
+        )
+        +
+        c
+        ]
+        ⋅
+        [
+        (
+        
+          x
+          
+            c
+          
+        
+        +
+        
+          x
+          
+            d
+          
+        
+        )
+        +
+        d
+        ]
+        =
+        [
+        (
+        
+          x
+          
+            c
+          
+        
+        +
+        
+          x
+          
+            d
+          
+        
+        )
+        +
+        c
+        ⋅
+        d
+        ]
+        ∈
+        C
+        ,
+      
+    
+     
+  co oznacza, iż 
+  
+    
+      
+        f
+        ∈
+        C
+        ∩
+        F
+      
+    
+     
+   przecząc wyborowi 
+  
+    
+      
+        C
+        .
+      
+    
+     
+   Uzyskana sprzeczność dowodzi tezy twierdzenia.
+
+
+== Dowód (z wykorzystaniem twierdzenia o zwartości) ==
+Dla krat skończonych łatwo to udowodnić za pomocą indukcji matematycznej.
+Niech zatem 
+  
+    
+      
+        
+          
+            K
+          
+        
+      
+    
+     
+   będzie kratą nieskończoną i niech 
+  
+    
+      
+        
+          
+            
+              L
+            
+          
+          
+            
+              K
+            
+          
+        
+      
+    
+     
+   będzie językiem klasycznego rachunku zdań ze zbiorem 
+  
+    
+      
+        {
+        
+          
+            p
+          
+          
+            x
+          
+        
+        :
+        x
+        ∈
+        K
+        }
+      
+    
+     
+   jako zbiorem zmiennych zdaniowych.
+Rozważmy następujący zbiór 
+  
+    
+      
+        X
+      
+    
+     
+   formuł zdaniowych w tym języku:
+
+  
+    
+      
+        
+          C
+        
+        
+          
+            p
+          
+          
+            x
+          
+        
+        
+          
+            p
+          
+          
+            y
+          
+        
+        ,
+        
+        x
+        ⩾
+        y
+      
+    
+     
+  
+
+  
+    
+      
+        
+          C
+          K
+        
+        
+          
+            p
+          
+          
+            x
+          
+        
+        
+          
+            p
+          
+          
+            y
+          
+        
+        
+          
+            p
+          
+          
+            x
+            +
+            y
+          
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          C
+        
+        
+          
+            p
+          
+          
+            x
+            ⋅
+            y
+          
+        
+        
+          A
+        
+        
+          
+            p
+          
+          
+            x
+          
+        
+        
+          
+            p
+          
+          
+            y
+          
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          N
+        
+        
+          
+            p
+          
+          
+            x
+          
+        
+        ,
+        
+        x
+        ∈
+        F
+      
+    
+     
+  
+
+  
+    
+      
+        
+          
+            p
+          
+          
+            a
+          
+        
+      
+    
+     
+  gdzie 
+  
+    
+      
+        x
+        ,
+        y
+        ∈
+        K
+        .
+      
+    
+     
+  
+Niech teraz 
+  
+    
+      
+        
+          X
+          
+            0
+          
+        
+      
+    
+     
+   będzie skończonym podzbiorem zbioru 
+  
+    
+      
+        X
+        .
+      
+    
+     
+   Możemy założyć, że 
+  
+    
+      
+        
+          
+            p
+          
+          
+            a
+          
+        
+        ∈
+        
+          X
+          
+            0
+          
+        
+        .
+      
+    
+     
+   Niech dalej 
+  
+    
+      
+        
+          K
+          
+            0
+          
+        
+      
+    
+     
+   będzie zbiorem tych elementów 
+  
+    
+      
+        x
+      
+    
+     
+   zbioru 
+  
+    
+      
+        K
+        ,
+      
+    
+     
+   dla których 
+  
+    
+      
+        
+          
+            p
+          
+          
+            x
+          
+        
+      
+    
+     
+   występuje w 
+  
+    
+      
+        
+          X
+          
+            0
+          
+        
+        .
+      
+    
+     
+   Wówczas podkrata 
+  
+    
+      
+        
+          
+            
+              K
+            
+          
+          
+            0
+          
+        
+      
+    
+     
+   wyznaczona przez zbiór 
+  
+    
+      
+        
+          K
+          
+            0
+          
+        
+        ,
+      
+    
+     
+   będąc skończenie generowaną kratą rozdzielną, jest skończona. Niech dalej 
+  
+    
+      
+        
+          F
+          
+            0
+          
+        
+      
+    
+     
+   będzie filtrem wyznaczonym przez 
+  
+    
+      
+        F
+        ∩
+        
+          K
+          
+            0
+          
+        
+      
+    
+     
+   w kracie 
+  
+    
+      
+        
+          
+            
+              K
+            
+          
+          
+            0
+          
+        
+        .
+      
+    
+     
+   
+  
+    
+      
+        a
+        ∉
+        
+          F
+          
+            0
+          
+        
+        .
+      
+    
+     
+   Istnieje więc ideał pierwszy 
+  
+    
+      
+        
+          C
+          
+            0
+          
+        
+      
+    
+     
+   kraty 
+  
+    
+      
+        
+          
+            
+              K
+            
+          
+          
+            0
+          
+        
+        ,
+      
+    
+     
+   który jest rozłączny z 
+  
+    
+      
+        
+          F
+          
+            0
+          
+        
+      
+    
+     
+   i zawiera 
+  
+    
+      
+        a
+        .
+      
+    
+     
+   Niech teraz 
+  
+    
+      
+        
+          v
+          
+            0
+          
+        
+        (
+        
+          
+            p
+          
+          
+            x
+          
+        
+        )
+        =
+        1
+        
+        ⇔
+        
+        x
+        ∈
+        
+          C
+          
+            0
+          
+        
+        .
+      
+    
+     
+   Nietrudno wykazać, że 
+  
+    
+      
+        
+          v
+          
+            0
+          
+        
+      
+    
+     
+   spełnia wszystkie formuły ze zbioru 
+  
+    
+      
+        
+          X
+          
+            0
+          
+        
+        .
+      
+    
+     
+   Wobec dowolności zbioru 
+  
+    
+      
+        
+          X
+          
+            0
+          
+        
+        ,
+      
+    
+     
+   oznacza to, że każdy skończony podzbiór zbioru 
+  
+    
+      
+        X
+      
+    
+     
+   jest spełnialny. Niech zatem 
+  
+    
+      
+        v
+      
+    
+     
+   spełnia wszystkie formuły zbioru 
+  
+    
+      
+        X
+        .
+      
+    
+     
+   Wówczas 
+  
+    
+      
+        C
+        =
+        {
+        a
+        :
+        v
+        (
+        
+          
+            p
+          
+          
+            a
+          
+        
+        )
+        =
+        1
+        
+        }
+      
+    
+     
+   jest szukanym ideałem pierwszym kraty 
+  
+    
+      
+        
+          
+            K
+          
+        
+        .
+      
+    
+     
+  
+
+
+== Uwagi i wnioski ==
+Dowód twierdzenia o ideale pierwszym zaliczany jest do tzw. dowodów niekonstruktywnych, czyli, w uproszczeniu, wykorzystujących pewne formy aksjomatu wyboru (AC). W tym wypadku, w dowodzie najczęściej korzysta się z lematu Kuratowskiego-Zorna. Chociaż na gruncie teorii mnogości Zermela-Fraenkla BPI jest słabsze od pewnika wyboru (tzn. w ZFC można udowodnić więcej twierdzeń niż na gruncie teorii ZF+BPI), wystarcza on do udowodnienia dużej części twierdzeń z algebry, topologii czy analizy funkcjonalnej.
+Na gruncie ZF+BPI można na przykład udowodnić:
+
+twierdzenie Stone’a o reprezentacji algebr Boole’a
+twierdzenie Tichonowa dla zwartych przestrzeni Hausdorffa (równoważne z BPI w klasie zwartych przestrzeni Hausdorffa)
+aksjomat wyboru dla rodzin zbiorów skończonych
+twierdzenie Arzeli-Ascolego (równoważne z BPI)
+twierdzenie Hahna-Banacha, a to pociąga
+istnienie niemierzalnego w sensie Lebesgue’a podzbioru prostej
+paradoks Banacha-Tarskiego
+twierdzenie o zwartości dla klasycznego rachunku zdań (równoważne z BPI)
+istnienie ultrafiltru w kracie wszystkich zbiorów otwartych niepustej przestrzeni topologicznej (równoważne z BPI).Zakładając na gruncie ZF, BPI + twierdzenie Krejna-Milmana można udowodnić AC, to znaczy aksjomat wyboru jest równoważny „BPI + twierdzenie Krejna-Milmana”.
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+Paul Howard, Jean E. Rubin: Consequences of the axiom of choice. Providence, R.I.: American Mathematical Society, 1998.

@@ -1,0 +1,26 @@
+revision: 52054245
+title: ^
+url: https://sv.wikipedia.org/wiki/Ins%C3%A4ttningstecken
+
+
+---
+
+Insättningstecken (‸ eller i fristående form ofta ^) är ett korrekturtecken för att visa var ett skiljetecken, ord eller fras skulle sättas in i ett dokument. Det användes ursprungligen i sin handskrivna form. I datorsammanhang har tecknet fått andra funktioner.
+Tecknet påminner om cirkumflex accent och i ASCII och några andra teckenuppsättningar används tecknet för båda ändamålen. I sammanhang där tecknet används fristående kallas det ofta "hatt" eller "tak".
+
+
+== Användning och historia ==
+Insättningstecknet användes ursprungligen i sin handskrivna form, som ett korrekturtecken för att visa var ett skiljetecken, ord eller fras skulle sättas in i ett dokument. Insättningssymbolen skrivs in nedan om meningen för insättning av ett skiljetecken, såsom ett kommatecken, och ovanför meningen ifall ett upphöjt tecken, såsom en apostrof saknas; det tecken som skall insättas kan placeras inne i insättningstecknet, i marginalen eller ovanför meningen.
+Insättningstecknet kan även hittas på vissa skrivmaskiner där den används för att skriva ut en circumflex accent i språk som kräver detta (till exempel franska).
+I senare tid har insättningstecknet funnit sin väg in i programspråk. Detta kan härledas tillbaka till ALGOL 60, som uttryckte exponenten som en uppåtriktad pil, vilket skulle framkalla de upphöjda funktionerna som används inom matematiken. Uppilen gavs koden 5E i den ursprungliga ASCII-standarden från år 1963; detta var dock bara en kortlivad placering. 1965-års ECMA-6-standard ersatte uppilen med det insättningstecken som används idag (liksom den även ersatte vänsterpilen med understreck); två år senare, vid den andra revideringen av ASCII, följde man efter på grund av påtryckningar från internationella standardkommittéer som krävde att tecknet skulle vara ett diakritiskt tecken (circumflextecknet).
+
+
+== Nuvarande användning ==
+I moderna datorsystem har ASCII delvis ersatts av Unicode som kan visa ett större antal accentuerade tecken och kombinationstecken. Insättningstecknets funktion som en circumflex är inte längre nödvändig. Dess huvudsakliga roll är numera inom programspråk, där tecknet används för att visa att någonting är exponerat (till exempel Applescript) eller en pekare (i Pascal), eller logisk disjunktion (till exempel i C, Java). I Smalltalk används ännu uppilen och visar ett värde som skall returneras från en metod.
+Inom matematik och fysik används cirkumflex för att notera att en variabel är en vektor.
+Tecknet har även funnit sin väg till vanliga uttryckssymboler såsom "(^_^)".
+
+
+== Externa länkar ==
+"ASCII: American Standard Code for Information Infiltration by Tom Jennings (engelska)
+"Caret", from MathWorld (engelska)

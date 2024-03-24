@@ -1,0 +1,118 @@
+revision: 22930387
+title: Google Glass
+url: https://cs.wikipedia.org/wiki/Google_Glass
+
+
+---
+
+Google Glass (stylizováno jako „GLΛSS“) je nositelný počítač s náhlavním displejem, head-up displejem (HMD, HUD), který je vyvíjen společností Google v Projektu Glass v oblasti výzkumu a vývoje, jehož posláním je produkovat masově všudypřítomné počítače. Google Glass zobrazuje informace podobné hands-free formátu u smartphonů, které mohou komunikovat s internetem prostřednictvím hlasových příkazů v přirozeném jazyce. I když rámy v současné době nejsou opatřeny čočkami, Google zvažuje partnerství s prodejci slunečních brýlí, jako jsou Ray-Ban nebo Warby Parker, a může také otevřít maloobchodní prodejny, aby si je zákazníci mohli vyzkoušet na zařízení. Edici Explorer nemohou použít lidé, kteří nosí dioptrické brýle, ale Google potvrdil, že Glass bude nakonec pracovat s rámy a čočkami, které se shodují s nositelovým lékařským předpisem; brýle budou modulární, a tudíž případně připojitelné k běžným brýlím.
+Glass vyvíjí Google x, který pracoval na dalších futuristických technologiích, jako jsou automobily bez řidiče. Projekt byl oznámen Projektem Glass na Google+. V jeho vedení jsou Babak Parviz, elektrotechnik, který se rovněž podílel na vložení displejů do kontaktních čoček, Steve Lee, produktový manažer a „geolokační specialista“, a Sebastian Thrun, který vyvinul Udacity a rovněž pracoval na projektu samostatně řízeného auta. Google si návrh Projektu Glass nechal patentovat. Technickým vedoucím/manažerem projektu je Thad Starner, expert na rozšířenou realitu.
+
+
+== Vývoj ==
+Ačkoliv náhlavní displeje pro rozšířenou realitu nejsou novým nápadem, projekt přitáhl pozornost médií především kvůli jeho podpoře ze strany Google, stejně jako kvůli konstrukci prototypu, která je menší a štíhlejší než předchozí návrhy pro náhlavní displeje. První ukázkové Glass se podobají páru běžných brýlí, kde jsou čočky nahrazeny head-up displejem (HUD). Kolem srpna 2011 prototyp Glass vážil 8 liber; nyní je přístroj lehčí než běžné sluneční brýle. V budoucnu nové návrhy mohou umožnit integraci displeje do normálních brýlí.
+Podle několika zaměstnanců společnosti Google, byl Glass původně plánován k dispozici pro veřejnost „za cenu okolo běžných smartphonů“ do konce roku 2012, ale jiné zprávy uvedly, že není očekáváno, že by Glass byl v té době dostupný ke koupi.
+Edice Explorer je k dispozici pro testery a Google I/O vývojáře ve Spojených státech za 1500 dolarů, k doručení začátkem roku 2013, zatímco spotřebitelská verze bude k dispozici do konce roku 2013 za „výrazně nižší“ cenu než Edice Explorer. Nicméně v rozhovoru pro The World at One rádia BBC Radio 4, Eric Schmidt řekl, že Google Glass jsou otázkou pár brzkých let.
+Produkt začal být testován v dubnu 2012. Sergey Brin na sobě nosil Glass prototyp 5. 4. 2012 v San Francisku na události Nadace pro boj se slepotou. V květnu 2012 byl Glass ukázán v prvním krátkém videotestu s brýlemi, demonstrující schopnosti nahrávání přístroje při kvalitě 720p HD v pohledu první osoby. Sergey Brin ukázal Glass na The Gavin Newsom Show, kde kalifornský guvernér nadporučík Gavin Newsom také nosil Glass. Též demonstroval 27. června 2012 Glass na Google I/O, kde parašutisté, slaňovači, a horští cyklisté nosili Glass a živě vysílali svůj úhel pohledu do Google+ Hangout, který byl také v přímém přenosu na Google I/O prezentaci. V únoru 2013 Google vydalo demonstrační video představující hlasově rozšířený display zařízení Glass natáčející různé zkušenosti v pohledu první osoby.
+Google v současné době pracuje na modelech, které lze použít s běžnými dioptrickými čočkami. #ifihadglass. V příspěvku Google+, Google uvedl, že nebude připraven na vydání Explorer edice Glass, ale spotřebitelé ho mohou očekávat později v roce 2013.
+
+
+=== Program Glass Explorer ===
+Program pro první uživatele, nazván Glass Explorer program, je dostupný pro vývojáře a spotřebitele k testování Google Glass a pro odhadnutí, jak budou lidé chtít Glass využívat. Vstup do programu Explorer byl veřejnosti zpřístupněn 20. února 2013 a skončil 27. února 2013. Program uvádí, že hledá „odvážné, kreativní jedince“, kteří chtěli zařízení testovat. Ti, kteří se chtěli zúčastnit, museli poslat zprávu na Google+ nebo Twitter, skládající se z 50 slov nebo méně, uvádějící hashtagy #ifihadglass. Ti, kteří byli vybráni byli povinni zúčastnit se jedné z událostí Google Glass v New Yorku, San Francisku, Los Angeles nebo vyzvednout vývojářskou verzi za 1500 dolarů. Edice Explorer přijímá data pomocí WiFi připojení, nebo je to možné za použití bluetooth do zařízení s Androidem nebo iPhone a využít 3G nebo 4G data; Glass má také GPS čip. Explorer edice je dostupná v barvě uhlí, mandarinky, břidlice, bavlny a barev oblohy. Uživatelské hlasové příkazy jsou vyvolány prvně vyřčením fráze „ok glass“, pak následuje příkaz nebo lze listovat prstem po straně přístroje v možnostech použití. Explorer edice má vyměnitelné příslušenství pro sluneční brýle. Po spuštění programu jsou pro Glass plánovány měsíční aktualizace. 16. dubna 2013 Google oznámil, že počáteční jednotky Glass Explorer edice byly již vyrobeny a začne jejich přeprava. Ve stejný den Google také vydal webové stránky pro nastavení Google Glass, stejně jako doprovodná aplikace MyGlass. Vývojářům byl také poskytnut první přístup k Mirror API pro Glass.
+
+
+== Hardware ==
+
+
+=== Kamera ===
+Google Glass má schopnost pořizovat fotografie a nahrávat 720p HD video. Během toho co je video nahráváno, je nad okem rozsvícena kontrolní dioda nahrávání, která je nepozorovatelná pro nositele.
+
+
+=== Touchpad ===
+Na straně Google Glass je touchpad, který umožňuje uživatelům ovládat zařízení přejetím po časové ose rozhraní zobrazeného na obrazovce.
+
+
+==== Pohyby ====
+Přejetí prstem po straně- tzv. swipe – posun v časové ose Timeline Glass (zobrazuje historii akcí, aplikace)
+Poklepání, klepnutí- tzv. tap – potvrzení, probuzení Glass ze stand-by režimu
+přejetí prstem dolů- funguje jako tlačítko zpět na smartphonech s OS Android
+
+
+=== Technická specifikace ===
+Pro vývojářské jednotky Explorer:
+
+Android 4.0.4 a vyšší
+Žádné oficiální informace o rozlišení displeje, předpokládáno 640×360, tak jak je doporučeno pro vývojáře aplikací
+5megapixelová kamera, schopná 720p video nahrávání
+WiFi 802.11 b/g
+Bluetooth
+úložiště 16 GB (12 GB dostupných)
+Texas Instruments OMAP 4430 SoC 1.2 GHz Dual (ARMv7)
+682 MB RAM
+3osý gyroskop
+3osý akcelerometr
+3osý magnetometr (kompas)
+snímání okolního světla a senzor přiblížení
+
+
+== Software ==
+
+
+=== Aplikace (Glassware) ===
+Google Glass aplikace (Glassware) jsou bezplatné aplikace vytvořené třetí stranou vývojářů. Glass také používá mnoho existujících Google aplikací, jako například Google Now, Google Mapy, Google+ a Gmail. Dále mají Glass aplikaci „Ice Breaker“, která má sloužit pro seznámení vlastníků Glass.
+Aplikace třetích stran oznámených na South by Southwest (SXSW) zahrnují Evernote, Skitch, The New York Times a Path.
+15. dubna 2013 Google vydal Mirror API umožňující vývojářům začít dělat aplikace pro Glass. Ve smluvních podmínkách je uvedeno, že vývojáři nesmějí dát do svých aplikací reklamy nebo účtovat za ně poplatky; zástupce Google řekl, že to by se mohlo v budoucnu změnit.
+Mnoho vývojářů a firem vytvořilo aplikace pro Glass, včetně zpravodajských aplikací, rozpoznávání obličeje, úpravy fotek a sdílení na sociálních sítích, jako je Facebook a Twitter.
+V květnu 2013 Google oznámil vydání sedmi nových aplikací, včetně upomínek pro Evernote, módní novinky z Elle a zpravodajské upozornění od CNN.
+
+
+=== Hlasové akce ===
+Kromě touchpadu může být Google Glass ovládán „hlasovými akcemi“. Pro probuzení Glass ze stand-by nositelé nakloní hlavu vzhůru pod určitým úhlem, a dále může Glass začít používat- například nabídku „O.K., Glass.“ Jakmile jsou Glass aktivována, probuzena, nositel může říci akci, jako „Udělej fotku“ (take a picture), „Nahraj video“, „Setkání s [osoba/Google+ kruh]”, “Google ‘V jakém roce byla založena Wikipedie?’, „Naveď mě k Eiffelově věži”, a „Pošli zprávu Johnovi“. Mnohé z těchto příkazů mohlo být viděno ve videu produktu, které bylo vydáno v únoru 2013.
+
+
+==== Nabídka „O.K., Glass.“ ====
+Zahrnuje mj.:
+
+Google (pro vyhledávání na Google)
+Get Directons to (pro navigaci)
+Take a picture (pořizování fotografií)
+Record a video (nahrávání videa)
+kombinace jako např. „Ok Glass, Google, I am hungry.“ – a Glass najdou nejbližší restauraci.
+
+
+== Přijetí ==
+Byly vytvořeny parodie a kritiky zaměřeny na šíři pojmu brýle rozšířené reality, od potenciálu vkládání reklam od Google (jeho hlavní zdroj příjmů) na více dystopických výsledků. Google však uvedl, že nemá žádné plány pro zařazení reklamy.
+V listopadu 2012 Glass získal uznání časopisem Time jako jeden z „nejlepších vynálezů roku 2012“, spolu s vynálezy jako Curiosity Rover.
+Po návštěvě Univerzity v Cambridgi předsedou Google Ericem Schmidtem v únoru 2013, profesor koleje Wolfson John Naughton chválil Glass a přirovnal ho k úspěchům průkopníka hardwaru a sítě Douglase Engelbarta. Naughton napsal, že Engelbart věřil, že stroje „by měly dělat to, co umí nejlépe stroje, což by uvolnilo lidi dělat to, co umí oni nejlépe“.
+
+
+=== Obavy o ochranu soukromí ===
+Funkcionalita brýlí a minimalistický vzhled byly přirovnány k zařízení EyeTap Stevena Manna, také známe jako „Glass“ nebo „Digital Eye Glass“, i když Google Glass je „Generation-1 Glass“ ve srovnání s EyeTapem, což je „Generation-4 Glass“. Podle Manna, obě zařízení ovlivňují soukromí a utajení zavedením oboustranného sledování a dozoru.
+Panují obavy z různých zdrojů ohledně narušení soukromí, etikety a etiky používání zařízení na veřejnosti a nahrávání lidí bez jejich svolení. Diskutuje se, že Google Glass by porušoval právo na soukromí v důsledku bezpečnostních problémů a další. Obhájci soukromí se obávají, že lidé nosící takovéto brýle by mohli být schopní identifikovat cizince na veřejnosti za pomoci rozpoznání obličeje, nebo tajně nahrávat a vysílat soukromé rozhovory. Některé společnosti v USA vystavily petice proti Google Glass ve svých podnicích.
+V řadě zemí byly ohledně legality zařízení Glass vzneseny další obavy, zejména v Rusku, na Ukrajině a dalších zemích bývalého SSSR. V únoru 2013 si uživatel Google+ všiml právní otázky týkající se zařízení Glass a publikoval ji v komunitě Glass Explorers, šlo o problém možnosti toho, že zařízení je nelegální používat v Rusku a na Ukrajině. (Podle předpisů tam platných.)
+
+
+=== Bezpečnostní obavy ===
+Obavy rovněž vyvolala otázka nošení zařízení při řízení motorových vozidel. Státní zástupce Západní Virginie Gary G. Howell představil novelu zákona o státním zákonu proti posílání zpráv SMS během řízení, která měla zahrnovat zákazy proti „používání nositelného počítače s náhlavním displejem.“ V rozhovoru Howell uvedl: „Primární věcí jsou bezpečnostní obavy o to, že (Glass headset) může promítat text nebo video do vašeho zorného pole. Myslím, že v tom je velký potenciál pro rozptýlení.“- v praxi je toto tvrzení velice diskutabilní, jelikož projektor nezasahuje přímo do zorného pole vlastníka, nýbrž obraz vykresluje lehce nad zorným polem, pro dívání se na projektor je nutno lehce zvednou oči. Na druhou stranu může být pozornost rozptýlena i pohybem na hraně zorného pole. 
+
+
+=== Smluvní podmínky pro používání ===
+Smluvní podmínky Google Glass pro předzveřejněný program Glass Explorer konkrétně uvádějí „Nesmíte prodávat, půjčovat, převádět, nebo dávat zařízení žádné jiné osobě. Pokud prodáte, půjčíte, převedete, nebo dáte zařízení jiné osobě bez oprávnění od společnosti Google, Google si vyhrazuje právo deaktivovat zařízení a vy, ani neoprávněná osoba využívající zařízení, nebudete mít nárok na vrácení peněz, poskytnutí podpory nebo záruky na výrobek.“ Wired News komentovalo tuto politiku společnosti prohlašující vlastnictví svých výrobků poté, co byly prodány, a řeklo: „Vítejte do nového světa, ve kterém společnosti udržují kontrolu nad svými produkty i poté, co si je spotřebitelé koupili.“
+
+
+== Konkurence ==
+Již dnes existuje dost podobných zařízení, např. Recon Jet, META, Atheer, Vuzix M100, Shadow Creator nebo třeba Microsoft HoloLens.
+
+
+== Odkazy ==
+
+
+=== Reference ===
+V tomto článku byl použit překlad textu z článku Google Glass na anglické Wikipedii.
+
+
+=== Externí odkazy ===
+ Obrázky, zvuky či videa k tématu Google Glass na Wikimedia Commons 
+Oficiální stránky
+Google+
+Článek o oficiální konkurenci Glass- Recon Jet

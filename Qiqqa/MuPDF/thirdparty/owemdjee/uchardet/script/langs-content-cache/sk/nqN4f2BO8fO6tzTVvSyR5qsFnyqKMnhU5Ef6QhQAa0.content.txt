@@ -1,0 +1,82 @@
+revision: 6256717
+title: Fobos 2
+url: https://sk.wikipedia.org/wiki/Fobos_2
+
+
+---
+
+Fobos 2  (po rusky Фобос-2, v západných jazykoch prepisované ako Phobos 2) bola planetárna sonda, určená na prieskum planéty Mars a jej mesiaca Fobosu. Plánované pristátie na Fobose sa neuskutočnilo a misia bola viac-menej neúspešná. Zároveň bola poslednou sondou Ruska/bývalého Sovietskeho zväzu, ktorá doletela k Marsu. 
+Postavilo a prevádzkovalo ju NPO im. S. A. Lavočkina (НПО им. С. А. Лавочкина), Chimki, Moskovskaja obl., RSFSR (ZSSR). Vedeckú náplň projektu koordinoval výskumný ústav Institut kosmičeskich issledovanij Akadémie vied ZSSR (Институт космических исследований АН СССР), Moskva (SSSR) a Rada programu INTERKOSMOS. 
+
+
+== Popis sondy ==
+Trojosovo stabilizovaná planetárna sonda typu 1F (výr. č. 102) s priemerov 1,6 m a výškou 2,5 m sa skladala z hlavnej pretlakovej sekcie toroidného tvaru obsahujúcej elektronické vybavenie rozmiestnené okolo modulárnej experimentálnej časti valcovitého tvaru. Elektrické systémy boli napájané z dvoch panelov slnečných batérií s rozpätím 10 m situovaných symetricky k hlavnému telesu sondy. K spodnej časti sondy boli pripevnené štyri guľové nádrže obsahujúce pohonné látky (hydrazín) motorov riadenia orientácie a korekčného motora pre úpravy obežnej dráhy. Hlavný motor pre navedenie na dráhu okolo Marsu bol po skončení činnosti odhodený. Celkom 24 motorčekov s ťahom 50 N a 4 motorčeky s ťahom 10 N boli pripojené čiastočne ku guľovým nádržiam, na teleso sondy a k panelom slnečných batérií. Stabilizačný systém používal orientáciu na Slnko a hviezdu Canopus a mal za úlohu zaistiť smerovú odchýlku menšiu ako ±1° a stabilitu orientácie lepšiu ako ±0,005°/s. Stabilizácia na Slnko nemala byť horšia ako 0,5° pri maximálnej uhlovej rotácii 0,3°/s. 
+Hlavnými úlohami sondy boli:
+
+skúmať medziplanetárne prostredie;
+pozorovať Slnko;
+študovať chovanie plazmy v okolí planéty Mars;
+skúmať povrch a atmosféru planéty Mars;
+skúmať chemické, mechanické a magnetické vlastnosti povrchu mesiaca Fobos.
+
+
+== Vedecké prístroje ==
+Prístrojové vybavenie bolo výsledkom širokej medzinárodnej spolupráce a tvorilo ho: 
+
+súbor prístrojov pre slnečný výskum:
+röntgenový fotometer RF-15 na pozorovanie slnečnej aktivity v röntgenovom obore 2-4 a 4-8 keV (6 kg) (ČSSR, ZSSR);
+detektory na sledovanie slnečného ultrafialového žiarenia v štyroch oblastiach 0,3-130 nm SURF (3,60 kg) (ZSSR);
+detektory VGS (2,30 kg) a LILAS (5,90 kg) na štúdium kozmických a slnečných zábleskov gama žiarenia 0,1-10 MeV a 3 keV-1 MeV (Francúzsko, ZSSR);
+fotometer IPHIR na pozorovanie štruktúry a dynamiky vonkajších vrstiev slnečnej atmosféry (6,30 kg) (ESA, Francúzsko, Švajčiarsko, ZSSR);
+súbor prístrojov na výskum častíc, polí a vĺn v kozmickom priestore:
+spektrometer na štúdium magnetosféry Marsu ASPERA (Automatic Space Plasma Experiment with Rotating Analyzer) (8,70 kg) (Fínsko, Švédsko, ZSSR);
+elektrostatické analyzátory na meranie charakteristík slnečného vetra v ionizovanom prostredí pri Marse SOVIKOMS (8 kg) (Rakúsko, Nemecko, Maďarsko, ZSSR);
+spektrometer na štúdium slnečného vetra TAUS (8 kg) (Rakúsko, Nemecko, Maďarsko, ZSSR);
+spektrometer na štúdium energií a hustoty nízkoenergetických iónov a elektrónov v medziplanetárnom priestore a pri Marse AEG-F (ZSSR, Maďarsko);
+spektrometer na výskum slnečného kozmického žiarenia s vysokou energiou LET (ZSSR, Nemecko, ESA);
+spektrometer na výskum slnečného kozmického žiarenia s nízkou energiou SLED (5,40 kg) (ZSSR, Nemecko, ESA);
+magnetometer a sondy na štúdium plazmových vĺn, elektrických a magnetických polí APV-F (ČSSR, Poľsko, ZSSR, ESA);
+magnetometre na štúdium magnetických charakteristík Marsu a Fobosu MAGMA (Magnetic Fields near Mars) (4,50 kg) a FGMM (Flux Gate Magnetometer Mars) (5,10 kg, 4.30 W) (Rakúsko, ZSSR, NDR);
+komplex pre planetárny výskum:
+aktívne aparatúry:
+hmotnostný spektrometer vybavený aktívnym laserom na určenie zloženia povrchovej vrstvy Fobosu pomocou impulzného odparovania povrchu LIMA-D (Lasernyj Impulznyj Mass Analizator - Distancionnyj) (81,50 kg) (Rakúsko, Bulharsko, NDR, ZSSR, Nemecko, Fínsko, ČSSR);
+iónové delo s hmotnostným analyzátorom slúžiace na výskum zloženia tenkej povrchovej vrstvy Fobosu DION (23,90 kg) (ZSSR, Francúzsko, Fínsko);
+rádiolokátor RLK (40,90 kg) na štúdium dielektrických vlastností povrchu Marsu (experiment GRUNT) a pre sondáž Marsovej ionosféry (experiment PLASMA);
+pasivne aparatúry:
+spoločne pracujúci komplex, ktorý tvoria:
+infračervený rádiometer TERMOSKAN (ZSSR);
+rádiometer, rádiospektrofotometer a spektrometer KRFM-ISM (Francúzsko, ZSSR);
+gama spektrometer GS-14 na meranie prirodzenej emisie regolitu Marsu a Fobosu (ZSSR);
+neutrónový detektor IPNM (12 kg) zisťujúci prítomnosť vody viazanej v mineráloch (ZSSR);
+videospektrometrický komplex VSK (51,70 kg) v experimente FREGAT; je tvorený troma televiznými kamerami, spektrometrom a pamäťovým zariadením. Každá kamera pracuje v inom spektrálnom obore. Predpokladané rozlíšení je až 0,05 m vo vzdialenosti 50 m pri zornom poli 25×19 m (NDR, Bulharsko, ZSSR);
+spektrofotometer/interferometer AUGUST (18,10 kg) na chemickú analýzu atmosféry Marsu (Francúzsko, ZSSR);
+kontaktné zariadenia:
+autonómna stanica DAS (Dolgoživujuščaja Avtonomnaja Stancija) alias LAL (Long-term Automated Lander) (30 kg) tvaru trojbokého hranola. Po priblížení k Fobosu sa mala oddeliť a dopadnúť na mesiac, na ktorý sa mala ukotviť tyčou penetrátora. Stanica bola napájaná zo slnečných batérií a mala vysielať na Zem počas 1 roka vedecké a telemetrické informácie. Rádiových signálov na frekvencii 1672 MHz sa malo využiť na presné meranie vzdialenosti stanice od Zeme a uhlovej polohy vzhľadom ku kvazarom. Výsledky sa mali použiť k čo najpresnejšiemu určeniu dráhy Fobosu a k overeniu všeobecnej teórie relativity. Na stanici bola nasledujúca aparatúra:
+spektrometer na analýzu povrchovej vrstvy Fobosu (ZSSR, NSR);
+seizmometer na registráciu otrasov Fobosu (ZSSR);
+televízna kamera na pozorovanie mikroštruktúry povrchu (ZSSR, Francúzsko);
+penetrometer RAZREZ na zistenie fyzikálnych a mechanických vlastností povrchovej vrstvy (ZSSR);
+tepelné senzory na kotve pentrátoru (ZSSR);
+optický detektor merania slnečného uhla, palubný mikroprocesor (ZSSR, Maďarsko) a rádiový systém (ZSSR, Francúzsko) na meranie libracií Fobosu a zmien elementov jeho dráhy;
+poskakujúci modul HOOPER (ZSSR) sa mal oddeliť od sondy a voľným pádom pristáť na povrchu Fobosu. Po oddelení amortizátora sa modul mal prevrátiť do pracovnej polohy a vysielať namerané údaje. Po ukončení vysielania sa mal pomocou pružinového mechanizmu premiestniť na vzdialenosť asi 20 m, kde mal merania zopakovať. Tento cyklus sa mal opakovať až desaťkrát. Modul bol napájaný z chemických batérií. Niesol nasledujúce prístroje:
+gravimeter;
+dynamograf;
+röntgenový fluorescenčný spektrometer;
+penetrometer;
+magnetometer.
+
+
+== Priebeh letu ==
+Sonda bola vypustená 12. júla 1988 o 17:01:43,185 UTC nosnou raketou typu Proton-K/D-2 z kozmodrómu Bajkonur. Počas preletu medziplanetárnym priestorom od Zeme k Marsu boli skúmané vlastnosti prostredia, kozmické žiarenie a žiarenie Slnka.
+Na dráhu okolo Marsu bola úspešne navedená 29. januára 1989 o 12:55 UTC. Zo začiatku sa pohybovala po veľmi pretiahnutej eliptickej dráhe vo výške 819 až 81 214 km, so sklonom 1,5° k rovníku planéty a s dobou obehu 77 hodín. 
+Počas letu po obežnej dráhe bol skúmaný povrch a atmosféra planéty Mars a zhotovené snímky mesiaca Fobos. Korekčnými manévrami bolo znižované apoareum a zvyšované periareum obežnej dráhy a sonda sa tak približovala k mesiacu Fobos. Eliptická dráha sa tak zmenila postupne na takmer kruhovú vo výške 6 145 až 6 409 km, so sklonom 1,26°. Doba obehu sa pritom skrátila na 480,78 minúty. 
+Posledné rádiové spojenie so Zemou sa uskutočnilo 25. marca 1989. Ďalšie plánované spojenie o dva dni neskôr sa však z neznámych príčin nepodarilo a tiež ďalšie pokusy o obnovenie spojenia boli neúspešné. Preto nedošlo ani k pokusu o pristátie na povrchu mesiaca Fobos, ktoré bolo naplánované na 4. apríla 1989.
+
+
+== Pozri aj ==
+Program Fobos
+Fobos 1
+
+
+== Externé odkazy ==
+1988-059A Fobos 2. - SPACE-40 (po česky)

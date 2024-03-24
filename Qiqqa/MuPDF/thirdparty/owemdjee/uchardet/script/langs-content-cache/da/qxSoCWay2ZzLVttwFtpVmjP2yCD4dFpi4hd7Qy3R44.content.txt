@@ -1,0 +1,15 @@
+revision: 10012484
+title: Validation
+url: https://da.wikipedia.org/wiki/Markup_Validation_Service
+
+
+---
+
+Markup Validation Service, er et gratis net-hjælpeværktøj fra World Wide Web Consortium  (W3C), hvis formål er kvalitetssikring af hjemmesider, som foretages ved en validering (kontrol) på udførte projekter. Dette  i henhold til anbefalede regler fra W3C.
+De fleste sider på World Wide Web (www), er skrevet i programmeringssproget HTML og deraf afledte sprog, eksempelvis XHTML, SMIL, MathMl etc.
+Validerings-processen kan sammenlignes med retskrivning af en tekst.
+Validatoren faslægger hvilken dokumenttype som er valgt og kontrollerer herefter at syntaksen stemmer overens med reglerne der er fastlagt for denne type. Ved fejl vises en advarsel og i nogle tilfælde angives en  anvisning for tilret. 
+
+
+== Ekstern henvisning ==
+W3C, Markup Validation Service, startside (engelsk)

@@ -1,0 +1,17 @@
+revision: 24888919
+title: Kaplin
+url: https://tr.wikipedia.org/wiki/Kaplin
+
+
+---
+
+Kaplin bir hareketi diğer bir ekipmana iletmek için kullanılan makina parçası. Bu hareketi iletme esnasında mekanik titreşimleri ortadan kaldırmak için kaplin lastiği denilen titreşim sönümleyici bir malzeme kullanılmak zorundadır. Kullanılmadığı takdirde ortaya çıkacak mekanik titreşimler makinaya zarar verebilir ve kulağa hoş gelmeyen sesler üretebilir. Kaplinler iki parçalı veya üç parçalı, üreten firmaya göre çok parçalı da olabilirler (örneğin şaftlar gibi).
+
+
+== Kullanımı ==
+Makinalarda emniyetli hareket iletiminde önemli bir görevi olan; sistem içerisinden belki en basit, takıldığı makinaya göre de en ucuz eleman gibi görünen kaplinler; seçiminde, montajında dikkatli davranılmadığında üretimin en pahalı elemanı haline gelir. Monte edildiği makinanın sık durmasına sebep olur. Tüm makinalı çalışmalarda (özellikle endüstriyel) üretim zincirindeki bir halkanın aksaması tüm sistemi durduracağından, kaplinlerin seçimi montajı ve kontrolleri son derece önemlidir. Burada yapılan hatalar nedeniyle işletmelerde üretim kesintileri olur, kayıplar artar. Genel anlamda irtibat elemanlarının görevi, güç kaynağı olan motor veya döndüren eleman ile döndürülen eleman arasında irtibat sağlamak ve bu şekilde hareketi iletmektir. Mekanik irtibat elemanları olarak pratikte kaplinler ve kavramalar kullanılmaktadır. Kaplinlerde bağlantı, mekanik bağ ile gerçekleştirilir. Bu nedenle iki mil arasındaki irtibatı sağlamak veya kesmek, mekanik bağlantı elemanının takılıp sökülmesi ile yapılır; bu da ancak döndüren mil dururken mümkündür. Kavramalarda ise irtibat, mekanik veya fiziksel bir olaya (genellikle sürtünme olayına) dayanmaktadır; şöyle ki döndüren mil döndüğü halde istenildiği zaman irtibat sağlanabilir veya kesilebilir. Kaplinlere çözülemeyen kavramalar ve kavramalara çözülebilen kaplinler de denir.
+
+
+== Çeşitleri ==
+Herhangi bir düzgünsüzlüğü karşılamayan kaplinlere rijit, karşılayanlara ise esnek kaplinler denir. Esneklik kinematik bir irtibat vasıtası ile sağlandığı durumda kaplinlere, kinematik bağlı veya mafsallı, elastik bir eleman vasıtasıyla sağlandığı takdirde elastik, sıvı ile elde edildiği takdirde hidrolik, manyetik alanla elde edildiği takdirde manyetik kaplin denir.
+Kaplin çeşitleri, sistem ihtiyaçları doğrultusunda çok farklı tiplerde imal edilmektedirler.  Bizim başlıca bildiğimiz ve piyasada yaygın olarak kullanılan kaplinler; tam flex dişli, yarım flex dişli, rijit, tambur, elastik, yaprak yaylı, spindle ve tork sınırlayıcı kaplinlerdir.

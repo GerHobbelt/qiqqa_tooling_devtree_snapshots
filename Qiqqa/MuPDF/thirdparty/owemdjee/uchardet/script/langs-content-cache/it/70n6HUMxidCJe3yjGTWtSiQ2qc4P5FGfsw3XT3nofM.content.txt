@@ -1,0 +1,64 @@
+revision: 133403424
+title: Fluoruro di argento(II)
+url: https://it.wikipedia.org/wiki/Fluoruro_di_argento(II)
+
+
+---
+
+Il fluoruro d'argento(II) o difluoruro d'argento è il composto binario di formula AgF2. È un raro caso di composto dove l'argento ha numero di ossidazione +2, anziché l'usuale +1. AgF è stabile a temperatura ambiente e trova utilizzo nei laboratori chimici come agente fluorurante, specie per gli idrocarburi.
+
+
+== Proprietà ==
+AgF2 puro è un solido bianco; eventuali colorazioni più o meno grigio/brune sono dovute a impurezze. Nella maggior parte dei campioni il rapporto F/Ag è minore di due, in genere vicino a 1,75 a causa di contaminazioni di argento, ossigeno e carbonio. Il composto è antiferromagnetico (Tc= 163 K), con un momento magnetico più basso di quello prevedibile per un elettrone spaiato. Nel solido la coordinazione di Ag è ottaedrica, ma dato che Ag(II) ha configurazione elettronica d9 l'ottaedro risulta distorto per effetto Jahn-Teller, con distanze Ag–F di 207 e 259 pm.In passato si era dubitato che lo stato di ossidazione dell'argento fosse +2, pensando ad una situazione tipo AgI[AgIIIF4], simile a quella nota per l'ossido di argento(I,III). Studi di diffrazione neutronica hanno però confermato la descrizione come argento(II). Si è trovato che AgI[AgIIIF4] si forma ad alta temperatura, ma è instabile rispetto a AgF2.
+
+
+== Sintesi ==
+AgF2 venne sintetizzato per la prima volta nel 1934 da Otto Ruff. Si può preparare facendo reagire fluoro gassoso con argento in polvere. La reazione è fortemente esotermica. Alternativamente si ottiene facendo passare fluoro gassoso su AgCl a 250 °C.
+Ag + F2 → AgF2
+2AgCl + F2 → 2AgF2 + Cl2
+
+
+== Reattività ==
+AgF2 è termicamente stabile fino a 700 °C. Il composto ha forti capacità fluoruranti e ossidanti. Deve essere conservato in recipienti di Teflon o in contenitori metallici passivati. È sensibile alla luce. A contatto con acqua viene istantaneamente idrolizzato.Con anioni fluoruro forma complessi AgF3–, AgF42– e AgF64–.La reazione di AgF2 con monossido di carbonio porta a fluorofosgene:
+2AgF2 + CO → 2AgF + COF2AgF2 catalizza in modo esplosivo la reazione tra xeno e fluoro.
+
+
+== Usi ==
+AgF2 è un agente fluorurante più semplice da utilizzare del fluoro gassoso. È stato usato nella sintesi di composti organici perfluorurati. Questo tipo di reazione può avvenire in tre modi differenti (Z simboleggia qualsiasi elemento o gruppo legato al carbonio, X è un alogeno):
+
+CZ3H  +  2AgF2  →  CZ3F + HF  +  2AgF
+CZ3X  +  2AgF2  → CZ3F + X2  +  2AgF
+Z2C=CZ2  +  2AgF2  →  Z2CFCFZ2  +  2AgFAnche altri fluoruri di metalli in alto stato di ossidazione come CoF3, MnF3, CeF4 e PbF4 reagiscono in modo analogo.
+AgF2 è usato anche per fluorurare composti aromatici, anche se è difficile effettuare monofluorurazioni:
+C6H6  +  2AgF2  →  C6H5F  +  2AgF  +  HFTuttavia è possibile fluorurare selettivamente la piridina in posizione orto in condizioni blande.
+
+
+== Tossicità / Indicazioni di sicurezza ==
+AgF2 è disponibile in commercio. Il composto è tossico per ingestione, inalazione o contatto cutaneo. Provoca gravi ustioni alla pelle e agli occhi. Non ci sono dati che indichino proprietà cancerogene.
+
+
+== Note ==
+
+
+== Bibliografia ==
+(EN) G. Brauer, Handbook of preparative inorganic chemistry, vol. 1, 2ª ed., New York, Academic Press, 1963, ISBN 0323161278.
+(EN) M. W. Farlow, E. H. Man e C. W. Tullock, Carbonyl fluoride, in Inorg. Synth., vol. 6, 1960,  pp. 155-158, DOI:10.1002/9780470132371.ch48.
+(EN) P. S. Fier e J. F. Hartwig, Selective C-H Fluorination of Pyridines and Diazines Inspired by a Classic Amination Reaction, in Science, vol. 342, n. 6161, 2013,  pp. 956-960, DOI:10.1126/science.1243759.
+(EN) N. N. Greenwood e A. Earnshaw, Chemistry of the elements, 2ª ed., Oxford, Butterworth-Heinemann, 1997, ISBN 0-7506-3365-4.
+(DE) A. F. Holleman e N. Wiberg, Lehrbuch der Anorganischen Chemie, Berlino, Walter de Gruyter, 2007, ISBN 978-3-11-017770-1.
+(EN) C. E. Housecroft e A. G. Sharpe, Inorganic chemistry, 3ª ed., Harlow (England), Pearson Education Limited, 2008, ISBN 978-0-13-175553-6.
+(EN) J. Levec, J. Slivnik e B. Žemva, On the Reaction Between Xenon and Fluorine, in J. Inorg. Nucl. Chem., vol. 36, n. 5, 1974,  pp. 997-1001, DOI:10.1016/0022-1902(74)80203-4.
+ D. R. Lide (Editor), CRC Handbook of Chemistry and Physics, Internet Version 2005, su hbcpnetbase.com, CRC Press, Boca Raton, 2005. URL consultato il 7 ottobre 2014 (archiviato dall'url originale il 24 luglio 2017).
+(EN) T. C. W. Mak e X.-L. Zhao, Silver: Inorganic & Coordination Chemistry, in Encyclopedia of Inorganic Chemistry, 2ª ed., John Wiley & Sons, 2006, DOI:10.1002/0470862106.ia221, ISBN 9780470862100.
+(EN) H.-C. Miller, A. Schultz e M. Hargittai, Structure and Bonding in Silver Halides. A Quantum Chemical Study of the Monomers: Ag2X, AgX, AgX2, and AgX3(X = F, Cl, Br, I), in J. Am. Chem. Soc., vol. 127, n. 22, 2005,  pp. 8133–45, DOI:10.1021/ja051442j.
+(EN) H. F. Priest, Anhydrous Metal Fluorides, in Inorg. Synth., vol. 3, 1950,  pp. 171-183, DOI:10.1002/9780470132340.ch47.
+(EN) D. A. Rausch, R. A. Davis e D. W. Osborne, The Addition of Fluorine to Halogenated Olefins by Means of Metal Fluorides, in J. Org. Chem., vol. 28, n. 2, 1963,  pp. 494–497, DOI:10.1021/jo01037a055.
+(DE) O. Ruff e M. Giese, Die Fluorierung des Silbers und Kupfers, in Z. anorg. allg. Chem., vol. 219, n. 2, 1934,  pp. 143-148, DOI:10.1002/zaac.19342190206.
+ Sigma-Aldrich, Scheda di dati di sicurezza del fluoruro di argento(II), su sigmaaldrich.com, 2015. URL consultato il 6 marzo 2016.
+(EN) J.T. Wolan e G.B. Hoflund, Surface Characterization Study of AgF and AgF2 Powders Using XPS and ISS, in Applied Surface Science, vol. 125, n. 3-4, 1998,  pp. 251-258, DOI:10.1016/S0169-4332(97)00498-4.
+(EN) A. Zweig, R. G. Fischer e J. E. Lancaster, New method for selective monofluorination of aromatics using silver difluoride, in J. Org. Chem., vol. 45, n. 18, 1980,  pp. 3597-3603, DOI:10.1021/jo01306a011.
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su Fluoruro di argento

@@ -1,0 +1,121 @@
+revision: 7487672
+title: General Atomics MQ-1 Predator
+url: https://sk.wikipedia.org/wiki/General_Atomics_MQ-1_Predator
+
+
+---
+
+MQ-1 Predator je viacúčelové bezposádkové lietadlo s dlhou výdržou vo vzduchu, operujúce v stredných výškach. Primárne bolo využívané na spravodajstvo, sledovanie a prieskum, ale po integrácii rakiet vzduch-zem získal Predator aj spôsobilosti na ničenie mobilných pozemných cieľov.
+
+
+== Vznik a vývoj ==
+V polovici 80. rokov 20. storočia začala spoločnosť Leading Systems Inc vyvíjať pre americké ministerstvo obrany bezposádkový prostriedok, nazvaný Amber. Hoci sa projekt lietadla Amber javil byť veľmi sľubný, vývojári si čoskoro uvedomili, že je príliš malé, aby mohlo niesť dostatok paliva, senzorov, a aby mohlo poskytnúť potrebnú stabilitu pre vyhotovenie vysoko kvalitných video snímok. V dôsledku toho začala spoločnosť v roku 1988 vyvíjať zväčšenú verziu lietadla Amber, ktorá mala byť určená hlavne na export. Nový stroj vzlietol prvýkrát v lete 1989, ale v tej dobe sa firma Leading Systems Inc. ocitla vo vážnych finančných problémoch. V dôsledku toho bola spoločnosť v roku 1990 predaná firme General Atomics. Nový majiteľ sa rozhodol pokračovať vo vývoji lietadla, pričom stroj bol premenovaný na GNAT-750. Tieto drony začala CIA od februára 1994 používať na vzdušné hliadkovanie nad územím bývalej Juhoslávie.V januári 1994 začala spoločnosť General Atomics pracovať na vývoji nového bezposádkového lietadla v rámci projektu „Advanced Concept Technology Demonstration“. Pozitívne skúsenosti so sériou lietadiel GNAT-750 viedli k tomu, že nový stroj konštrukčne nadväzoval práve na tento úspešný projekt. Prvý prototyp vzlietol v júli 1994 a už o rok neskôr bolo lietadlo nasadené v Bosne. Tu zhromažďovalo spravodajské informácie, ktoré slúžili analytikom NATO, OSN a amerických ozbrojených síl. Vývoj bol úplne ukončený v júni 1996 a počiatočná sériová výroba lietadiel RQ-1 Predator začala v auguste 1997.V roku 2001 bola do týchto strojov integrovaná výzbroj v podobe dvoch riadených striel AGM-114 Hellfire. Z pôvodne prieskumných prostriedkov sa tak stali viacúčelové lietadlá, ktoré boli schopné ničiť pozemné ciele. V roku 2002 boli oficiálne premenované z RQ-1 na MQ-1, kde písmeno "M" bolo skratkou slova "multi-role", t. j. viacúčelový.
+
+
+== Konštrukcia ==
+
+Každý systém Predator pozostáva zo štyroch bezposádkových lietadiel, pozemnej riadiacej stanice, satelitného komunikačného terminálu a 55-členného personálu. Riadenie lietadla zabezpečuje dvojčlenná posádka z pozemnej riadiacej stanice, pričom jeden člen posádky stroj pilotuje a druhý ovláda činnosť senzorov. Celý systém je možné prepravovať v lietadle C-130 Hercules alebo v dopravných lietadlách väčších rozmerov.
+MQ-1 Predator má dĺžku 8,22 m a rozpätie krídel 16,8 m. Hmotnosť prázdneho stroja je 512 kg a jeho maximálna vzletová hmotnosť dosahuje 1 020 kg. Pod krídlami môže niesť dve riadené protitankové strely AGM-114 Hellfire alebo štyri protilietadlové strely krátkeho dosahu AIM-92 Stinger.
+MQ-1 je vybavený rádiolokátorom TESAR od spoločnosti Northrop Grumman. Ide o radar typu SAR (synthetic aperture radar) s maximálnym rozlíšením 0,3 m, ktorý môže byť použitý za každého počasia. Snímky sú spracovávané na palube lietadla, skomprimované a posielané pozemnej riadiacej stanici, kde sú zobrazované na displeji počítača, resp. uložené na neskoršie použitie. Ďalšou dôležitou senzorovou výbavou lietadla je AN/AAS-52, ktorý pozostáva z infračervenej kamery, televíznej kamery, laserového diaľkomera a laserového značkovača. Okrem zberu informácií pre spravodajské účely dokáže systém pracovať v móde automatického sledovania cieľa alebo pomocou laseru označovať ciele pre laserom navádzané zbrane, ako sú rakety Hellfire.Pohon lietadla zabezpečuje jeden prepĺňaný štvorvalcový motor Rotax 914F s maximálnym výkonom 86 kW (116 koní). Motor poháňa vrtuľu, ktorá sa nachádza vzadu na chvoste lietadla. Maximálna rýchlosť Predatora je 217 km/h. Počas misie letí stroj obvykle rýchlosťou 113 – 135 km/h vo výške 7 600 m. Na vzlet a pristátie potrebuje lietadlo dráhu s dĺžkou 1 524 m a šírkou 23 m.
+
+
+== Operačné nasadenie ==
+
+
+=== Vojny v Juhoslávii ===
+K prvému nasadeniu lietadiel RQ-1 v bojovej zóne došlo v lete 1995 počas vojny v bývalej Juhoslávii. Predatory vykonávali prieskum nad Bosnou a na základe zozbieraných informácií potvrdili, že srbská armáda sa napriek sľubom nestiahla zo svojich pozícií v okolí obkľúčeného Sarajeva. Do konca roka 1996 uskutočnili tieto bezposádkové lietadlá viac ako 1575 misií na podporu operácií OSN a NATO.
+V auguste 1995 sa srbským vojakom podarilo zostreliť prvý Predator. Krátko predtým bolo iné lietadlo tohto typu zámerne zničené, keďže piloti nad ním stratili kontrolu a hrozilo, že sa táto utajovaná technológia dostane do rúk nepriateľa. Počas vojen v Juhoslávii bolo zostrelených viacero lietadiel RQ-1 Predator. Jedným z nich bol aj stroj, zasiahnutý nad obcou Biba srbským protilietadlovým raketovým kompletom Strela-1M.
+
+
+=== Boj proti teroristickej sieti Al-Káida ===
+V auguste 1998 sa uskutočnili dva koordinované samovražedné útoky na americké veľvyslanectvá v Keni a Tanzánii. Podľa zistení FBI boli tieto útoky sponzorované Usámom bin Ládinom a jeho zástupcom Ajmánom Zavahrím. Na vyhľadanie Usámu bin Ládina bol nasadený systém Predator, ktorého prvé lietadlo začalo lietať nad územím Afganistanu dňa 7. septembra 2000. Po útokoch z 11. septembra 2001 na Svetové obchodné centrum v New Yorku boli tieto lietadlá vyzbrojené strelami Hellfire. Predator s touto výzbrojou bol prvýkrát vyslaný na misiu v Afganistane 7. októbra 2001.
+Dňa 3. novembra 2002 sledoval Predator auto, idúce cez púšť v blízkosti mesta Saná v Jemene. V tomto SUV sa nachádzal Qaed Salim Sinan al-Harethi, zástupca jemenskej odnože Al-Káida, ktorý bol zapojený do útoku na torpédoborec USS Cole z októbra 2000. Predator vystrelil na vozidlo raketu Hellfire, ktorá al-Harethiho spolu s ďalšími piatimi spoločníkmi zabila.
+V máji 2005 zneškodnil Predator na afgansko-pakistanskej hranici Haitham al-Yemeniho, člena irackej vetvy Al-Káida.
+Do začiatku roku 2006 bolo pomocou strojov Predator a ich striel Hellfire zabitých 19 členov Al-Káidy.
+V júni 2006 usmrtil Predator šéfa irackej odnože Al-Káida Abu Musab al-Zarqawiho.
+V auguste 2008 bol zničený tábor bojovníkov Al-Káidy, ktorý sa nachádzal v pakistanských horách. Pri útoku štyrmi strelami typu vzduch-zem zahynulo 9 členov tejto islamskej teroristickej organizácie.Dňa 30. septembra 2011 bol strelou z Predatora zabitý vodca jemenskej odnože Al-Káida Anwar al-Awlaki.
+
+
+=== Vojna v Iraku ===
+Intervencii USA a ich spojencov do Iraku v roku 2003 predchádzalo udržiavanie bezletovej zóny, ktoré trvalo od leta 1992 až do jari 2003. V súvislosti s hliadkovacími letmi nad územím Iraku došlo 23. decembra 2002 ku kurióznej situácii, keď sa jeden z Predatorov dostal do vzdušného súboja s irackou stíhačkou. Lietadlá Predator, vyzbrojené strelami Stinger, boli používané ako návnada pre iracké stíhačky, pričom po prilákaní nepriateľského stroja sa mali rýchlo stiahnuť. Pri jednom z takýchto incidentov, sa MQ-1 Predator nesnažil utiecť. Na prilietajúci MiG-25, ktorý na dron zaútočil dvomi raketami, vypálil Predator jednu zo striel Stinger. Infračervený senzor zrejme naviedol Stinger na jednu z rakiet, vystrelených nepriateľskou stíhačkou a strela tak MiG-25 nezasiahla. Útok sa tak skončil neúspešne, keďže Predator bol následne jednou z rakiet zostrelený. Bolo to prvýkrát v histórii, keď sa bezposádkový prostriedok zapojil do súboja s konvenčným lietadlom.Po začatí vojny v Iraku boli Predatory nasadené na ničenie pozemných cieľov, ako boli batérie protivzdušnej obrany, radary alebo iracká televízna satelitná komunikačná anténa.
+
+
+=== Intervencia Severoatlantickej aliancie v Líbyi ===
+Dňa 23. marca 2011 začala operácia Spoločný ochranca (Unified Protector), ktorej cieľom bolo zabezpečenie bezletovej zóny nad Líbyou a ochrana civilistov. Na operácii sa okrem bojových lodí podieľali aj vzdušné sily viacerých krajín NATO. Dňa 21. apríla 2011 začali nad územím Líbye lietať popri amerických stíhačkách F-16 a F-15 aj drony MQ-1 Predator. Predatory začali ničiť ruské raketomety BM-21 Grad, ktorými kaddáfiho jednotky ostreľovali povstalcov v mestách Misráta a Alzintan. 
+Do 20. októbra 2011 vystrelili lietadlá Predator na pozemné ciele 145 rakiet Hellfire. Tieto bezposádkové stroje boli údajne zapojené aj do útoku na konvoj Muammara Kaddafího, keď sa snažil uniknúť zo svojho rodného mesta Syrta.
+
+
+=== Boj proti ISIL v Iraku a Sýrii ===
+V júni 2014 spustili Spojené štáty v Iraku vojenské operácie proti sunitskej teroristickej organizácii Islamský štát (ISIL). Dňa 8. augusta sa začali vzdušné operácie, ktoré pozostávajú z humanitárnych misií a obmedzených leteckých úderov, aby ochránili civilistov a spriatelené sily vnútri Iraku. Významnú časť úloh amerických vzdušných síl tvorí spravodajstvo, sledovanie a prieskum, pričom väčšinu z týchto misií vykonávajú bezposádkové lietadlá MQ-1 Predator a MQ-9 Reaper.Minimálne štyri stroje MQ-1 Predator vzlietajú z leteckej základne Incirlik v Turecku, odkiaľ útočia na pozície ISIL v severnej Sýrii.Dňa 17. marca 2015 bol jeden z amerických dronov MQ-1 Predator zostrelený sýrskym protivzdušným systémom S-125 Pečora. Lietadlo sa zrútilo v provincii Latákia, čo jasne dokazuje, že Predator vykonáva spravodajské operácie aj mimo regiónov, ktoré sú pod kontrolou bojovníkov ISIL.Dňa 20. júla 2015 došlo k strate v poradí už druhého lietadla Predator, ktoré havarovalo v južnom Iraku. Centrálne velenie amerického letectva poprelo, že by dôvodom havárie bola nepriateľská paľba, pričom žiadne ďalšie vysvetlenie neposkytlo.
+
+
+== Varianty ==
+
+RQ-1
+Počiatočná výrobná verzia, ktorá bola určená výhradne na prieskumné misie (R – reconnaissance).MQ-1
+Verzia, ktorá má integrované strely typu vzduch-zem a dokáže tak ničiť pozemné ciele (M – multi-role). K zmene označenia z "RQ-1" na "MQ-1" došlo v roku 2002 integráciou striel AGM-114 Hellfire. To umožnilo využívať lietadlo nielen na prieskum, ale aj na blízku palebnú podporu.Predator XP
+Exportná verzia s letovou výdržou 35 hodín a maximálnou rýchlosťou 222 km/h. Tento variant nemôže niesť žiadnu výzbroj.MQ-1C Gray Eagle
+Verzia vybavená výkonnejším motorom, ktorý umožňuje dosiahnuť lietadlu maximálnu rýchlosť 309 km/h. Gray Eagle má maximálny dostup 8 840 m a unesie 2-krát viac výzbroje ako MQ-1.
+
+
+== Používatelia ==
+
+
+=== Súčasní používatelia ===
+
+  Maroko
+
+Marocké kráľovské vzdušné sily  Spojené arabské emiráty
+
+Vzdušné sily Spojených arabských emirátov – v roku 2013 podpísali zmluvu v hodnote 197 mil. USD na nákup bližšie nešpecifikovaného množstva lietadiel Predator XP.  Taliansko
+
+Talianske vzdušné sily – k 23. decembru 2015 mali 7 lietadiel verzie RQ-1.  Turecko
+
+Turecké vzdušné sily  USA
+
+Americká pohraničná stráž
+Central Intelligence Agency (CIA)
+
+
+=== Bývalí používatelia ===
+  USA
+
+United States Air Force – vyradené 9. marca 2018.
+
+
+== Špecifikácie ==
+
+
+=== Hlavné charakteristiky ===
+Posádka: 0 (ovládané na diaľku 2 osobami)
+Dĺžka: 8,22 m
+Rozpätie krídel: 16,8 m
+Výška: 2,1 m
+Prázdna hmotnosť: 512 kg
+Maximálna vzletová hmotnosť: 1 020 kg
+Zásoba paliva: 284 kg
+Užitočné zaťaženie:
+interne: 204 kg
+externe: 136 kg
+Pohonná jednotka: 1 × prepĺňaný štvorvalcový motor Rotax 914F s výkonom 86 kW
+
+
+=== Výkony ===
+Maximálna rýchlosť: 217 km/h
+Cestovná rýchlosť: 130 km/h
+Dolet: 1 427 km
+Dostup: 7 620 m
+Výdrž: 40 hodín
+
+
+=== Výzbroj ===
+Rakety vzduch-zem:
+2x AGM-114 Hellfire
+4× AIM-92 Stinger
+
+
+== Pozri aj ==
+General Atomics MQ-9 Reaper
+
+
+== Referencie ==

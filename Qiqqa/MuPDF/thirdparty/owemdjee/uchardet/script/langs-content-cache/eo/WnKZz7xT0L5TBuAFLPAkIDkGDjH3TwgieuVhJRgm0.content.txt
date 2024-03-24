@@ -1,0 +1,235 @@
+revision: 8170882
+title: Telavivo
+url: https://eo.wikipedia.org/wiki/Televido
+
+
+---
+
+Televido (mallongigo: TV) estas telekomunika sistemo, per kiu eblas sendi moviĝantajn bildojn kaj sonojn trans distanco. Etimologie, ĝi estas hibrida vorto, devenante el la greka bazvorto tele (signifanta "malproksime") kaj la latina video (signifanta "mi vidas"). La aparato, kiu ricevas kaj montras la sendatajn signalojn, nomiĝas televidilo. Al televido rilatas verboj spekti kaj zapi.
+
+
+== Historio ==
+La disvolviĝo de la televido okazis laŭ du ideoj: la elektron-meĥanika televido kaj la posta pure elektronika televido. El la posta venas ĉiuj modernaj televidoj, tamen ili disvolviĝis el la meĥanika metodo.
+
+
+=== Tra la jaroj: mallonga resumo ===
+
+1860: Unua transsendo de ne-movaj bildoj per telegrafo. La maŝinon, nomita "pantélégraphe" aŭ "pantelegrafo", inventis franca abato Giovanni Caselli [kasELi], sed ĝi ne estas vere televido, plue pra-telekopiilo. Ĝi uzis elektrokemian metodon por skanado de la bildo, kaj du grandaj pendoloj por la sinkronigo de la sendilo kaj la ricevilo.
+1884: Germano Paul Gottlieb Nipkow [NIPkov] inventis la Nipkovan Diskon. Vidu malsupren.
+1897: Germano Ferdinand Braun inventis la katodradian tubon, kiu montras bildojn per la balaado de radio de elektronoj sur fosforeskan surfacon.
+1905: Usonano Lee De Forest [de FORist] inventis la vakutuban triodon, kiun li nomis Aŭdion-on, kaj kiu iĝis baza ero de iu tiutempa elektronika cirkvito.
+1923: Ruso Vladimir Zvorikin (ruse: Зворыкин, Владимир Кузьмич) inventis sian "ikonoskopon". Tiu estis praulo de la nuntempa televida kamerao, ĝis la nun preskaŭ universala uzo de CCD teknologio.
+1926: Skoto John Logie Baird [berd] faris la unuan publikan pruvadon de televido, en Londona vendejo, uzante Nipkovan diskon. Lia aparato havis rezolucion de 30 lineoj, kaj mezuris 3,8 x 5,0 cm. Takayanagi Kenjiro unue sukcesis transsendi elektronikan bildon sur katodoradian tubon.
+1927: Usonano Philo Taylor Farnsworth [FARnzŭort] unue montris sian tutelektronikan televidsistemon.
+1927: La unua longa distanca publika televida elsendo okazis de Vaŝingtono al Nov-Jorko, montrante bildon de Herbert C. Hoover, tiame Usona Sekretario pri Komerco.
+1928: John Logie Baird faris la unuajn provojn de kolora televido.
+1929: La unuaj regulaj dissendoj de la BBC (Britio).
+1930: Usonano Charles Jenkins [ĜENkinz] elsendis la unuan televidan reklamon.
+1933: La ikonoskopo estis la unua praktika televida kamerao, inventita de Vladimir Zvorikin kaj publike prezentita en 1933.
+
+
+=== Elektromeĥanika televido ===
+
+Paul Gottlieb Nipkow proponis kaj patentis la unuan elektromeĥanikan televidilon en 1884. Ĝi funkciis per skanado de du-dimensia bildo helpe de turniĝanta disko kun truetoj, kiuj tralasis ĉiumomente lumradion de precize unu cirkleta parto de la bildo. Tiel la du-dimensia bildo estas transformata al unu-dimensia signalo, transsendeble tra (analoga) elektra lineo.
+
+
+=== Elektronika meĥanika televido ===
+Ekde 1907 ĝis 1910, Boris Rosing kaj sia studento Vladimir Zvorikin montris televid-sistemon kiu uzis meĥanikan spegul-tamburan skanilon en la dissendilo kaj katodradian tubon en la ricevilo. Rosing malaperis dum la Rusia revolucio de 1917, sed Zworykin poste laboris kun RCA por krei tute elektronikan televidon, tamen la desegno de tiu televido ricevis patentojn de Philo Taylor Farnsworth.
+
+
+=== Elektronika televido ===
+
+
+==== Analoga ====
+Elektronika televido funkcias pli-malpli kiel meĥanika televido, sed sen moviĝantaj partoj. La skanado okazas ekzemple per lum-sensiva tavolo skanata de elektron-radio.
+Grava antaŭlaboro por la evoluo de la elektronika televido estis la katodradia tubo, kiun en la jaro 1897 evoluigis Ferdinand Braun kune kun Jonathan Zenneck.
+La unuan elektronikan televidan bildon transsendis en 1926 Takayanagi Kenjiro (Japanio) kiu tiucele alikonstruis la katodradian tubon.
+Tutelektronikan sistemon unue prezentis Philo Taylor Farnsworth en la aŭtuno de 1927. Li estis mormona filo de farmisto el Rigby (Idaho) kiu komencis elpensi sian sistemon je aĝo de 14 jaroj. Li diskutis sian ideon kun sia altlerneja kemi-instruisto, kiu ne povis pensi iun kialon, ke ĝi ne estas ĝusta. Li daŭre klopodis pri la ideo ĉe Brigham Young Akademio (nun Brigham Young Universitato). Kiam li estis 21-jaraĝa, li montris funkciantan sistemon en sia laboratorio en Sanfrancisko. Lia sistemo liberigis la televidon el sia dependo je turniĝantaj diskoj kaj aliaj meĥanikaj partoj. Ĉiuj modernaj katodradiaj tuboj rekte devenas el tia ellaboraĵo.
+Ankaŭ Vladimir Zvorikin oni iufoje nomas patro de la elektrona televido, pro lia invento de la kamerao-sistemoj ikonoskopo en 1923 kaj de la kineskopo en 1929. Liaj desegnoj estis inter la unuaj kiuj montris televidan sistemon kun la trajtoj de modernaj katodradiaj tuboj. Lia antaŭa laboro kun Rosing por elektronmeĥanika televido transigas profundan komprenon kiel produkti elektronikan sistemon. Tamen, lia patenta pretendo estis malvalidigita pro tri faktoj: 1) La 1923-a patento de Zvorykin montris nekompletan desegnon, kaj ne funkciis ĝis 1933; 2) La 1923-a patento estis ne donita ĝis 1938, post ĝi estis serioze refarita; 3) Zvorykin vizitis la laborotorion de Farnsworth dum li ellaboris siajn desegnojn por RCA
+Ĝis hodiaŭ regas polemika debato, ĉu Farnsworth aŭ Zvorykin unue inventis la modernan televidon.
+La unuan tute elektronikan televidan tubon de Eŭropo  publike prezentis Manfred von Ardenne en la jaro 1931.
+
+
+==== Cifereca ====
+
+Ĉe cifereca televido la skanado de la du-dimensia bildo okazas ne kontinue, sed la lum-sensiva faco konsistas el punktoformaj eroj, kiuj unuope donas signalojn pri la ricevata lumo. La signaloj ne estas kombinataj al analoga signalo, sed al bitstrio. Tiun oni enkodigas laŭ la necesoj de la dissenda medio kaj la disponebla bendlarĝo. Kiel ĝenerale ĉe cifereca informo tia dissendpreta signalo povas inkludi redundancon, kiu ebligas la korekton de informperdo dum la transsendo.
+
+
+==== Saĝtelevido ====
+La alveno de ciferecaj televidoj permesis novigojn kiel saĝtelevidojn (angle, smart television). Saĝtelevidilo foje referitas kiel konektita televidilo aŭ hibrida televidilo, estas televidilo aŭ televidilo kun TV-malkodilo (angle set-up box, STB), kiu enhavas integritajn interretajn kaj TTT-aj (2.0) ecojn, kaj estas ekzemplo de teĥnologia konverĝo inter komputilaj kaj televidaj aroj, fare de malkodilaj skatoloj (la STB-j). Krom la tradiciaj ricevaj funkcioj de televido provizitaj tra tradiciaj dissendaj amaskomunikiloj, tiaj televidiloj kaj TV-malkodiloj povas ankaŭ provizi Interretan televidon, rekte interagan komunikilon, preter-servon (angle over-the-top content, OTT, la enhavo estas provizita preter la provizanto de retkonekto), same kiel laŭ peto elsendfluan amaskomunikilon, kaj hejme interkonektitan reton. Tiuj televidiloj estas liveritaj kun antaŭŝargita operaciumo.
+Saĝtelevido ne devas esti konfuzita kun Interreta televido, Interret-protokolo televido (IPTV) aŭ per TTT televido (angle Web TV). Interreta televido rilatas al la ricevo de televida enhavo super interreto anstataŭ per tradiciaj sistemoj - dissende, kable kaj satelite (kvankam interreto mem estas ricevita per tiuj metodoj). IPTV estas unu el la emerĝantaj normoj pri Interret-televida teĥnologio por uzo de televidaj dissendantoj. TTT televido (WebTV) estas termino uzata por programoj kreitaj de ampleksa nombro da diversaj entreprenoj kaj individuoj por elsendo al sur Interreta televido.
+Unua patento estis arkivita en 1994  (kaj etendiĝis la sekvan jaron)  por iu "inteligenta" sistemo de televido, ligita kun datentraktadaj sistemoj, per cifereca aŭ analoga reto. Krom estanta ligita al retoj de datenoj, unu ŝlosila punkto estas ĝia kapablo aŭtomate elŝuti necesajn programarajn procedurojn, laŭ petoj de uzantoj kaj prilabori iliajn bezonojn.
+Gravaj TV fabrikantoj anoncis produktadon de "inteligentaj" televidiloj, el meza gamo kaj alta gamo de televidiloj en 2015. Saĝtelevido antaŭvideble fariĝis ĉefa speco de televido ekde la malfruaj 2010-aj jaroj.
+
+
+== Teknikoj ==
+La iluzioj aŭ vidotrukoj uzitaj en kino, televido, teatro, videoludoj, kaj similaj industrioj simulilaj de imagitaj okazaĵoj en rakonto aŭ virtuala mondo estas tradicie nomitaj specialaj efektoj.
+
+
+== Sociaj aspektoj kiel amaskomunikilo ==
+
+Televido ludis ŝlosilan rolon en la sociigo de la 20-a kaj 21-a jarcentoj. Estas multaj aspektoj de televido kiuj povas esti konsiderataj, kiel negativaj aferoj kiel perforto en amaskomunikiloj. Nuntempa esplorado estas malkovrante, ke individuoj kiuj suferas pro socia izolado povas uzi televidon por krei tion kion oni terminigis kiel "anstataŭsocia interagado" aŭ "falsa rilatado", uzante rolulojn el preferataj televidprgramoj kaj filmoj kiel vojo devojigi sentojn de soleco kaj socia seniĝo. Kelkaj studoj trovis, ke eduktelevido havas multajn avantaĝojn. La artikolo "The Good Things about Television" (bonaj aferoj pri televido) argumentas, ke televido povas esti tre pova kaj efika lernilo por infanoj se saĝe uzata. Rilate al religio, multaj kristanaj organizaĵoj uzas televidon por religia propagando.
+
+
+=== Religia interveno ===
+Metodistaj organizaĵoj en la konservativa "holiness" movado, kiel la Allegheny Wesleyan Methodist Connection kaj la Evangeliisma Wesleyan Eklezio, evitas la uzadon de televido. Ankaŭ kelkaj baptostoj, kiel tiuj aliĝintaj al la Pensacola Christian College, evitas televidon. Multaj tradiciaj katolikaj organizoj kiel la Sacerdota Fratio de Sankta Pio la 10-a (SSPX), same kiel Lestadianaj Luteranoj, kaj Konservativaj Anabaptistoj, kiel ekzemple la Dunkard-Brethren Eklezio, opozicias eĉ la dispono de televido en la hejmo, instruante, ke ĝi estas instigo al peko.
+
+
+=== Televidaj serioj ===
+
+Televida serio estas sinsekvo de filmaj verkoj, kiuj estas elsenditaj kutime samhore je la sama tago de la semajno (aŭ ĉiutage) per televido. Kutime ĝi havas kelkajn rolulojn, kiuj revenas en ĉiu epizodo kaj pri kiuj temas la ĉefaj okazaĵoj. Tipe estas, ke la daŭro de la epizodoj ĉiam samas. Se la serio daŭras plurajn jarojn, oni parolas pri sezonoj de la televida serio. Ekz., dua sezono, tria epizodo. Tiuokaze oni parolas foje pri televida seriego.
+Fakte la sistemo de la televida serio estas sinsekvo de simila sistemo en radio en la unua duono de la 20-a jarcento, kaj siavice de iom simila sistemo por publikigo de rakontoj en gazeto po unu epizodo en ĉiu numero, tre populara dum la dua duono de la 19-a jarcento.
+
+
+=== Ekzemploj de televidaj serioj ===
+
+Esta multaj tipoj de televidserioj, ekzemple jenaj:
+
+Situacia komedio, ekzemple M*A*S*H, Seinfeld, Friends.
+Pri familioj, ekzemple Little House on the Prairie, Cuéntame cómo pasó, Dallas, Dynasty, Falcon Crest.
+Dramkomedioj, ekzemple Rescue Me, Weeds.
+Politikaj aŭ sociaj dramoj, ekzemple House of Cards, Occupied, The Good Wife, The West Wing.
+Pri krimoj (eble plej popularaj kaj oftaj), ekzemple Columbo, Kojak, Hill Street Blues, Law & Order: Special Victims Unit, Twin Peaks
+Trileroj, ekzemple Mission: Impossible, La casa de papel
+Vakeraj, ekzemple Bonanza
+Pri superherooj
+Pri historiaj epokoj
+Sciencfikciaj, ekzemple Star Trek
+Fantaziaj
+Teroraj, ekzemple Historias para no dormir
+Pri medicino, ekzemple Grey's Anatomy, Doctor Who
+Animaciaj
+Porjunularaj
+Dokumentfilmaj
+
+
+=== Aliaj ===
+
+
+== Enhavo ==
+
+
+=== Programado ===
+Elsendadon de televidaj programoj al la publiko oni povas fari diversmaniere. Post la produktorado, sekva paŝo estas merkatigi kaj publikigi la produkton al iu ajn merkato kiu estas malferma al ties uzado. Tio tipe okazas ĉefe je du niveloj:
+
+Origina elsendo aŭ Unua elsendo: produktoro kreas programon de unu, pluraj aŭ multaj epizodoj kaj elsendas ĝin pere de televida stacio, kanalo aŭ reto, kiu jam pagis por la produktorado mem aŭ kiu havas permesilon garantiitan de la televidproduktoroj por same fari.
+Broadcast syndication (eble televidreta elsendado, kolektiva elsendado): tiu estas la termino plej amplekse uzata por priskribi duarangan programadajn uzadojn (krom la origina elsendo). Ĝi inkludas duarangajn elsendadojn en la lando de la origina elsendo, sed ankaŭ internacian uzadon kiu povas esti ne administrita de la origina produktoro. Tre ofte ankaŭ aliaj kompanioj, televidaj stacioj, aŭ unuopuloj estas engaĝigitaj por la kolektiva laboro, en aliaj vortoj, por vendi la produkton en la merkatoj, al kiuj oni rajtas vendi ĝin per kontrakto el rajtposendantoj, en plej granda parto la produktoroj.Originelsendita programado estas pliiĝanta je abonaj servoj ekster Usono, sed kelkaj malmultaj enlandaj produktitaj programoj estas kolektivigitaj en enlanda liberelsenda free-to-air (FTA) aliloke. Tiun praktikon oni estas pliiganta, tamen, ĝenerale per nur ciferecaj FTA kanaloj aŭ al nur abonantoj, tiel ke originelsendita materialo aperas en FTA. Malkiel ĉe Usono, ripetita surekranigo per FTA de retmaterialo de FTA kutime okazas nur en tiu reto. Krome, retanoj rare aĉetas aŭ produktas neretan programadon kiu ne estas fokusita al la loka programado.
+
+
+=== Ĝenroj ===
+Televidaj ĝenroj inkludas ampleksan gamon de programtupoj kiuj distras, informas, kaj edukas la spektantojn. La plej kostasj distraj ĝenroj produktataj estas kutime dramoj kaj dramaj serietoj. Tamen, ankaŭ aliaj ĝenroj, kiel historiaj vakeraj ĝenroj, povas postuli altajn produktadkostojn.
+Popkulturaj distroĝenroj estas agad-enhavaj programoj kiel policaj, krimaj, detektivdramaj, hororaj, aŭ trileraj prhgramoj. Krome, estas ankaŭ aliaj variaĵoj de la drama ĝenro, kiel tiuj specializitaj en medicino (precize ĉe hospitaloj) kaj dumtage elsendeblaj televidserioj pri ĉiutagaĵaj familioj. Scienc-fikciaj serioj povas fali ĉu en la drama aŭ agada kategorioj, depende ĉu ili emfazas al filozofiaj demandoj aŭ al stresaventuro. Komedio estas populara ĝenro kiu inkludas situacikomedion (sitcom) kaj animaciajn seriojn por plenkreskuloj kiel South Park de la kanalo Comedy Central.
+
+La malplej kostaj formoj de distroprogramaj ĝenroj estas ludprogramoj, babilprogramoj, varieteaj programoj, kaj realectelevido. Ludprogramoj prezentas konkurencantojn kiuj devas respondi demandojn aŭ solvi defiojn por ricevi premiojn. Tiaj programoj iĝas tiom popularaj, ke en diversaj landoj oni kopias la formatojn de aliaj. Foje eĉ tiu formato iĝis la bazo por kina filmo, kiel ĉe Kiu volas esti milionulo?, kiu iĝis bazo por la brita filmo Slumdog Millionaire. Babilprogramoj enhavas intervjuojn kun kinaj, televidaj, muzikaj kaj sportaj famuloj kaj aliaj publikaj figuroj. Varieteaj programoj prezentas gamon de muzikistoj kaj aliaj distristoj, kiel komikuloj kaj magiistoj, enkondukitaj de gastiganto aŭ ceremoniestro. Estas ioma koincido inter kelkaj babilprogramoj kaj kelkaj varieteaj programoj ĉae ĉefaj babilprogramoj ofte montras ludojn faritajn de bandoj, kantistoj, komediistoj, kaj aliaj distristoj interne de la intervjuaj segmentoj. Realectelevidaj serioj pri "normaluloj" (t.e., ne aktoroj) frontantaj nekutimajn defiojn aŭ spertojn game el aresto fare de policanoj (COPS) ĝis grava pezoperdo (The Biggest Loser). Derivita versio de realecprogramoj montras famulojn farantajn ĉiutagaĵojn kiel trafari sian veran ĉiutagan vivon (The Osbournes, Snoop Dogg's Father Hood) aŭ plenumi regulajn labortaskojn (The Simple Life).
+Fikciaj televidprogramoj konsideritaj de kelkaj televidfakuloj kaj de elsendogrupoj kiel "bonkvalita televido", inkludas seriojn kiel Twin Peaks kaj The Sopranos. Kristin Thompson argumentas, ke kelkaj el tiuj televidserioj montras trajtojn troveblajn ankaŭ en vere bonkvalitaj artaj filmoj, kiel psikologia realismo, rakonta komplekseco, kaj ambigaj intrigoj. Nefikciaj televidprogramoj konsideritaj de kelkaj televidfakuloj kaj de elsendogrupoj kiel "bonkvalita televido", inkludas gamon de serioza, nekomerca, programado cele al niĉa publiko, kiel dokumentfilmaj kaj publikaferaj programoj.
+
+
+=== Diversaĵoj ===
+Matenmanĝa televido aŭ simple Matena televido estas la nomo de programformato de televidaj programoj, kiu, laŭ la tago kaj televida kanalo, estas ĉefe elsendita en tempointervalo antaŭ la 10-a horoj matene, daŭras tri ĝis kvar horojn kaj ne havas fiksan temon, sed kombinas malpezajn raportaĵojn kun babiladoj kaj foje same malpezajn muzikaĵojn, tiel ke eblas senpene kiel informa konsumanto sekvi la programon duonkoncentrite, dum oni faras tian matenan rutinon, vestiĝas, preparas kaj senhaste manĝas sian matenmanĝon.
+
+
+=== Kelkaj televidprogramoj ===
+
+Inside the Actors Studio
+MasterChef en Usono kaj alilandaj samnomaj versioj
+Mickey Mouse Club
+The Ellen DeGeneres Show
+The Oprah Winfrey Show
+The Phil Donahue Show
+
+
+== Negativaj efikoj ==
+Infanoj, speciale tiuj kiuj estas 5-jaraĝaj aŭ eĉ pli junaj, estas je risko de vundo prm falo de televidiloj. Televidilo de CRT-stilo kiu falas sur infano, pro sia pezo, povus frapi per forto samegala al falo el multaj etaĝoj de konstruaĵo. Pli novaj ebenekranaj televidiloj estas tre pezaj supre kaj havas mallarĝajn bazojn, kio rezultas en fakto ke infaneto povas facile altiri ĝin al si. Je 2015, televidiloj okazigis pli ol 10 000 vundojn jare al infanoj en Usono je kosto de pli ol 8 milionoj da usonaj dolaroj jare pro urĝeca zorgado.Studo de 2017 en la gazeto The Journal of Human Resources, trovis, ke ekspono al kabla televido reduktas kognokapablon kaj altajn lernejgradigajn nivelojn ĉe junuloj. Tiu efiko estas pli forta ĉe junuloj el pli kleraj familioj. La artikolo sugestas mekanismon per kiu banala televida distrado reduktas pli kognostimulajn agadojn.Pro alta plumbenhavo en la katodradiaj tuboj kaj pro la rapida disvastigo de novaj maldikekranaj teknologioj, kelkaj el kiuj (LCD-oj) uzas lampojn kiuj enhavas hidrargon, estas kreskiĝanta priokupiĝo pro la elektronika rubo el forĵetitaj televidiloj. Ekzistas rilataj priokupoj pro labor-sano kaj -sekureco, ekzemple ĉe malmuntistoj kiuj kolektas kuprajn kablojn kaj aliajn materialojn el katodradiaj tuboj. Aliaj mediaj probelmoj temas pri la desegnado kaj uzado de televidiloj pro la pliiĝantaj postuloj de la aparatoj por elektra energio.
+
+
+== Diversaj televidkanaloj ==
+
+Al-Ĝazira - Sendependa arablingva satelita televida stacio.
+ABC - grava televidkanalo en Usono.
+Antena 3 - privata televidkanalo de Hispanio.
+ARTE - Franca-germana kunlabora arta televida stacio.
+BBC - Brita duon-sendependa nacia televida kaj radia reto.
+BBC News
+BBC World News
+Belsat - televidkanalo de satelita televido en la belorusa lingvo financata kadre de Telewizja Polska
+La C - regiona televidkanalo en Kalabrio, Italio.
+Canal+ - franca duon-ĝenerala privata televidkanalo.
+CBS - grava televidkanalo en Usono.
+Deutsche Welle - germana televidkanalo por eksterlando.
+Discovery Channel - kabla televido, kiu okupiĝas preskaŭ senescepte pri dokumentadoj.
+Euronews
+Fox - grava televidkanalo en Usono.
+France Télévisions - Franca nacia televida reto.
+Fuji Television - televidkanalo en Japanio.
+Independent Television - en Britio.
+Televido Kastilio-Manĉo - regiona televidkanalo en Hispanio.
+NBC - unua grava televidkanalo en Usono.
+Telewizja Polska - sola publika televido en Pollando.
+laSexta - privata televidkanalo de Hispanio.
+TV Brasil - Canal Integración - Brazila internacia televida stacio.
+TVE - ŝtata televidkanalo de Hispanio.
+Televido Trwam - katolika televidkanalo de Pollando.
+Telesur - latinamerika plurŝtata televidkanalo kreita en Venezuelo.
+Canal+
+TF1
+
+
+== Referencoj ==
+
+
+== Literaturo ==
+Albert Abramson, The History of Television (La historio de televido), 1942 to 2000, Jefferson, NC, and London, McFarland, 2003, ISBN 0-7864-1220-8.
+Pierre Bourdieu, On Television (Pri televido), The New Press, 2001.
+Tim Brooks kaj Earle March, The Complete Guide to Prime Time Network and Cable TV Shows, 8th ed., Ballantine, 2002.
+Jacques Derrida kaj Bernard Stiegler, Echographies of Television, Polity Press, 2002.
+David E. Fisher kaj Marshall J. Fisher, Tube: the Invention of Television (Vakutubo: la invento de televido), Counterpoint, Washington, DC, 1996, ISBN 1-887178-17-1.
+Steven Johnson, Everything Bad is Good for You: How Today's Popular Culture Is Actually Making Us Smarter, New York, Riverhead (Penguin), 2005, 2006, ISBN 1-59448-194-6.
+Leggett, Julian (Aprilo 1941). "Television in Color" (Kolora televido). Popular Mechanics (Chicago). [1] Konsultita en 2014-12-07.
+Jerry Mander, Four Arguments for the Elimination of Television, Perennial, 1978.
+Jerry Mander, In the Absence of the Sacred, Sierra Club Books, 1992, ISBN 0-87156-509-9.
+Neil Postman, Amusing Ourselves to Death: Public Discourse in the Age of Show Business, New York, Penguin US, 1985, ISBN 0-670-80454-1.
+Evan I. Schwartz, The Last Lone Inventor: A Tale of Genius, Deceit, and the Birth of Television, New York, Harper Paperbacks, 2003, ISBN 0-06-093559-6.
+Beretta E. Smith-Shomade, Shaded Lives: African-American Women and Television, Rutgers University Press, 2002.
+Alan Taylor, We, the Media: Pedagogic Intrusions into US Mainstream Film and Television News Broadcasting Rhetoric, Peter Lang, 2005, ISBN 3-631-51852-8.
+Amanda D. Lotz, The Television Will Be Revolutionized, New York University Press, ISBN 978-0-8147-5220-3
+
+
+== Vidu ankaŭ ==
+Internacia Televido - Interreta televidkanalo en Esperanto
+Dissenda televido
+Kabla televido
+Magnetoskopo
+Monda Tago de Televido
+Satelita televido
+Siliciskopo
+Televida turo de Berlino
+Televida serio
+Televidkanalo
+
+
+== Eksteraj ligiloj ==
+
+
+=== Esperantaj ===
+La evoluo de la televizio de Christian BERTIN
+Farbskatol' (esperantlingvaj filmetoj)
+Dara Greenwood, "Kion niaj plej ŝatataj televidprogramoj diras pri ni" en Unesko Kuriero, numero 3 de Julio-Septembro 2021, eldonita de El Popola Ĉinio, "Restarigo de viv-diverseco, revivigi vivon", 58 pp. pp. 43–45.
+
+
+=== Anglaj ===
+Caselli-a pantelegrafo (el Retarkivo 2006)
+Nipkova disko
+La Aŭdion de Lee de FOREST
+
+
+=== Francaj ===
+Caselli-a pantelegrafo netrovebla
+Nipkova disko (ankaŭ germane)
+La Aŭdion de Lee de FOREST
+
+
+=== Germanaj ===
+La aparataro prezentita de ARDENNE en 1931
+Artikolo pri 120 jaroj da televido kun multaj originalaj skizoj (el Retarkivo 2007)
+
+En tiu ĉi artikolo estas uzita traduko de teksto el la artikolo Television en la angla Vikipedio.

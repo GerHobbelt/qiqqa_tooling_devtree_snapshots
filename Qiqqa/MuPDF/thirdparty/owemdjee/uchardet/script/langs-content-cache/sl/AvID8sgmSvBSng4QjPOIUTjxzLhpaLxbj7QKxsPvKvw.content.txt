@@ -1,0 +1,321 @@
+revision: 5968696
+title: '1.'
+url: https://sl.wikipedia.org/wiki/1_%2B_1_%2B_1_%2B_1_%2B_%C2%B7%C2%B7%C2%B7
+
+
+---
+
+1 + 1 + 1 + 1 + ··· je v matematiki divergentna geometrična vrsta, kar pomeni, da nima vsote v običajnem smislu. Njene delne vsote naraščajo brez meja in ne konvergirajo k realni limiti. Enake so naravnim številom (OEIS A000027): 
+
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, ...Z znakom za vsoto se lahko vrsto zapiše kot:
+
+  
+    
+      
+        
+          ∑
+          
+            n
+            =
+            1
+          
+          
+            ∞
+          
+        
+        
+          1
+          
+            n
+          
+        
+        =
+        
+          ∑
+          
+            n
+            =
+            1
+          
+          
+            ∞
+          
+        
+        
+          n
+          
+            0
+          
+        
+        =
+        
+          ∑
+          
+            n
+            =
+            1
+          
+          
+            ∞
+          
+        
+        
+          
+            1
+            
+              n
+              
+                0
+              
+            
+          
+        
+        
+        
+      
+    
+     
+  ali preprosto:
+
+  
+    
+      
+        
+          ∑
+          
+            n
+            =
+            1
+          
+          
+            ∞
+          
+        
+        1
+        
+        
+      
+    
+     
+  Na zaporedje 
+  
+    
+      
+        
+          1
+          
+            n
+          
+        
+        
+      
+    
+     
+   se lahko gleda kot na geometrično vrsto s količnikom 1. Za razliko od drugih geometričnih vrst z racionalnim količnikom (razen -1) ne konvergira v realnih številih in tudi ne v p-adičnih številih za poljuben p. V smislu razširjene realne premice je vsota enaka:
+
+  
+    
+      
+        
+          ∑
+          
+            n
+            =
+            1
+          
+          
+            ∞
+          
+        
+        1
+        =
+        +
+        ∞
+        
+        
+        ,
+      
+    
+     
+  ker njeno zaporedje delnih vsot narašča monotono brez meja.
+Če se vrsta 1 + 1 + 1 + 1 + ··· pojavi pri fizikalnih problemih, se jo lahko včasih predstavi s pomočjo regularizacije s funkcijo ζ. Njena vrednost je enaka vrednosti v točki s = 0 Riemannove funkcije ζ:
+
+  
+    
+      
+        ζ
+        (
+        s
+        )
+        =
+        
+          ∑
+          
+            n
+            =
+            1
+          
+          
+            ∞
+          
+        
+        
+          
+            1
+            
+              n
+              
+                s
+              
+            
+          
+        
+        =
+        
+          
+            1
+            
+              1
+              −
+              
+                2
+                
+                  1
+                  −
+                  s
+                
+              
+            
+          
+        
+        
+          ∑
+          
+            n
+            =
+            1
+          
+          
+            ∞
+          
+        
+        
+          
+            
+              (
+              −
+              1
+              
+                )
+                
+                  n
+                  +
+                  1
+                
+              
+            
+            
+              n
+              
+                s
+              
+            
+          
+        
+        
+        
+        ,
+      
+    
+     
+  kjer sta dve neskončni vsoti enaki znotraj območja, v katerem obe konvergirata (kompleksna števila z realnim delom večjim od 1). Druga vsota zagotavlja analitično nadaljevanje funkcije ζ na kompleksna števila s pozitivnim realnim delom, limita druge vsote, ko gre s proti 0, pa je enaka -1/2. V tem smislu je tako:
+
+  
+    
+      
+        1
+        +
+        1
+        +
+        1
+        +
+        1
+        +
+        ⋯
+        =
+        ζ
+        (
+        0
+        )
+        =
+        −
+        
+          
+            1
+            2
+          
+        
+        
+        
+        .
+      
+    
+     
+  Elizalde je podal naslednjo anekdoto o odnosih do vrste:
+
+»V kratkem obdobju manj kot enega leta sta imela dva priznana fizika, A. Slavnov in F. Yndurain, seminarja v Barceloni o dveh različnih temah. Nenavadno pri tem je bilo to, da sta oba predavatelja v nekem trenutku rekla poslušalcem: 'Kot vsakdo ve, velja: 1 + 1 + 1 + ··· = −1⁄2'. S tem sta morda hotela reči: Če tega ne veste, potem nima smisla da poslušate naprej.Tudi njena ustrezna alternirajoča vrsta:
+
+  
+    
+      
+        
+          ∑
+          
+            n
+            =
+            0
+          
+          
+            ∞
+          
+        
+        (
+        −
+        1
+        
+          )
+          
+            n
+          
+        
+        =
+        1
+        −
+        1
+        +
+        1
+        −
+        1
+        +
+        ⋯
+        
+        
+        ,
+      
+    
+     
+  včasih imenovana Grandijeva vrsta, je divergentna.
+
+
+== Glej tudi ==
+1 + 2 + 3 + 4 + ···
+1 + 2 + 4 + 8 + ···
+1 − 1 + 2 − 6 + 24 − 120 + ···
+
+
+== Sklici ==
+
+
+== Viri ==
+Elizalde, Emilio (2004). »Cosmology: Techniques and Applications«. Proceedings of the II International Conference on Fundamental Interactions.
+Tao, Terence (10. april 2010), The Euler-Maclaurin formula, Bernoulli numbers, the zeta function, and real-variable analytic continuation (v angleščini), pridobljeno 30. januarja 2014

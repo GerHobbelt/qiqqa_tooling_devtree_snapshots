@@ -1,0 +1,502 @@
+revision: 233209093
+title: Virus
+url: https://de.wikipedia.org/wiki/Viren
+
+
+---
+
+Viren (Singular: das Virus, außerhalb der Fachsprache auch der Virus, von lateinisch virus  ‚natürliche zähe Feuchtigkeit, Schleim, Saft, [speziell:] Gift‘) sind infektiöse organische Strukturen, die sich als Virionen außerhalb von Zellen (extrazellulär) durch Übertragung verbreiten, aber als Viren in der Natur nur innerhalb einer geeigneten Wirtszelle (intrazellulär) vermehren können. Sie bestehen nur aus Desoxyribonukleinsäure (englisch abgekürzt DNA) oder Ribonukleinsäure (englisch abgekürzt RNA) sowie aus Proteinen, die es ihnen ermöglichen, in eine Zelle einzudringen. Alle Viren enthalten mit diesen Nukleinsäuren das „Programm“ zu ihrer Vermehrung und Ausbreitung (einige Viren auch weitere Hilfskomponenten), besitzen aber weder eine eigenständige Replikation noch einen eigenen Stoffwechsel und sind deshalb in der Natur auf den Stoffwechsel einer Wirtszelle angewiesen. Daher sind sich Virologen weitgehend darin einig, Viren nicht zu den Lebewesen zu rechnen. Man kann sie aber zumindest als „dem Leben nahestehend“ betrachten, denn sie besitzen allgemein die Fähigkeit, ihre Replikation zu steuern, und die Fähigkeit zur Evolution.2011 waren etwa 1,8 Millionen verschiedene rezente Arten von Lebewesen bekannt, die als Wirte für Viren fungieren, mit Stand Ende Juni 2022 gab es jedoch offiziell anerkannt lediglich 11.273 Virenarten. Modellrechnungen zeigen jedoch, dass die Anzahl von Virenarten wahrscheinlich noch viel größer ist. So wurde 2013 berichtet, dass die Säugetiere alleine mindestens 320.000 noch unentdeckte Virenarten beherbergen. Da die Anzahl der Säugetierarten im Vergleich zu anderen Taxa winzig klein ist (lediglich rund 6500 Säugerarten, aber eine Million bekannte Arten von Insekten), kann von einer noch viel größeren Anzahl Virenarten ausgegangen werden (siehe Virale Dunkle Materie). Da das Augenmerk der Virologie auf den Arten liegt, welche für die Humanmedizin, die Nutztiermedizin sowie für die Landwirtschaft bedeutsam sind, macht die offizielle Beschreibung und Benennung neuer Virenarten allerdings nur langsam Fortschritte.
+Viren befallen Zellen von Eukaryoten (Pflanzen, Pilze und Tiere einschließlich des Menschen) sowie von Prokaryoten (Bakterien und Archaeen). Viren, die Bakterien oder Archaeen als Wirte nutzen, wurden früher in Gesamtheit als „Bakteriophagen“ bezeichnet, historisch bedingt durch die alte Bezeichnung „Archaebakterien“ für die Archaeen. Im modernen Sprachgebrauch werden Viren, die Archaeen befallen, als „Archaeenviren“ oder „Archaeen-Viren“ (englisch archaeal viruses) bezeichnet, nur sehr selten findet sich noch die Bezeichnung „Archaeophagen“. Der Begriff „Bakteriophagen“ bleibt dann ausschließlich für Viren reserviert, die Bakterien befallen; allerdings setzt sich auch hier der Begriff „Bakterienviren“ (engl. bacterial viruses) immer mehr durch: Die offizielle Taxonomie des International Committee on Taxonomy of Viruses (ICTV) verwendet die Bezeichnung „-phage“ in Gattungs- oder Artnamen grundsätzlich nicht mehr, so dass dieser Suffix nur noch für Stämme (engl. strains) von Bakterienviren oder provisorische Bezeichnungen für Gruppen der Bakterienviren anzutreffen ist, solange sie noch nicht durch das ICTV bestätigt sind.
+Die Wissenschaft, die sich mit Viren und Virusinfektionen beschäftigt, wird als Virologie bezeichnet.
+
+
+== Erforschungsgeschichte ==
+Noch zur Mitte des 19. Jahrhunderts verwendete man die Bezeichnung Virus lediglich synonym für „Gift“ bzw. „Miasma“. Erst seit dem späten 19. Jahrhundert sind Viren als eigene biologische Einheit bekannt. Die Beschreibungen von Viruskrankheiten sind aber sehr viel älter, ebenso die ersten Behandlungsmethoden. Aus Mesopotamien ist ein Gesetzestext aus der Zeit um 1780 v. Chr. überliefert, der von der Bestrafung eines Mannes handelt, dessen wahrscheinlich von Tollwut befallener Hund einen Menschen beißt und dadurch tötet (Codex Eschnunna §§ 56 und 57). Aus ägyptischen Hieroglyphen sind Darstellungen bekannt, die vermutlich die Folgen einer Polio-Infektion zeigen.
+Die Bezeichnung „Virus“ wurde zum ersten Mal von Cornelius Aulus Celsus im ersten Jahrhundert v. Chr. verwendet. Er bezeichnete den Speichel, durch den Tollwut übertragen wurde, als „giftig“. Im Jahr 1882 führte Adolf Mayer bei Experimenten mit der Tabakmosaikkrankheit erstmals unwissentlich eine virale Erregerübertragung (Transmission) durch, indem er den Pflanzensaft infizierter Pflanzen auf gesunde Pflanzen übertrug und bei diesen so ebenfalls die Krankheit auslöste.
+Diese Übertragung war bereits im 18. Jahrhundert mit dem Wort Virus assoziiert. So beschreibt die Londoner Times in einem Nachruf auf einen Arzt dessen Virusinfektion: Beim Zunähen einer sezierten Leiche hatte er sich in die Hand gestochen, „which introduced some of the virus matter, or, in other words, inoculated him with putridity“ (wobei ein wenig Virussubstanz übertragen wurde, oder anders gesagt, ihm wurde Fäulnis eingeimpft).Dimitri Iwanowski wies unabhängig von Mayer im Jahr 1892 in einem Experiment nach, dass die Mosaikkrankheit bei Tabakpflanzen durch einen Stoff ausgelöst werden kann, der durch Filtration mittels bakteriendichter Filter (Chamberland-Filter) nicht entfernt werden konnte und dessen Partikel deshalb deutlich kleiner als Bakterien sein mussten. Iwanowski vermutete ein Gift als Auslöser der Krankheit. Dem widersprach Martinus Willem Beijerinck, nachdem er beobachtet hatte, dass besonders die noch im Wachstum befindlichen Blätter von der Krankheit befallen wurden: „Während ein Gift ebenso in die bereits bestehenden Zellen eindringen würde, brauchen die Viren offensichtlich die Zellteilung, um sich zu entfalten.“In den 1910er Jahren vermuteten Wissenschaftler noch, Viren könnten auf sterilen Nährmedien gezüchtet werden und bräuchten nicht notwendigerweise lebende Zellen, um sich zu vermehren. Die erfolglosen Arbeiten von Frederick Twort auf diesem Gebiet führten jedoch zur Entdeckung der Bakterienviren, traditionell auch Bakteriophagen genannt.
+Der erste Nachweis eines tierischen Virus gelang 1898 Friedrich Loeffler und Paul Frosch, die das Maul-und-Klauenseuche-Virus entdeckten (siehe auch virologische Diagnostik). Die Größe vieler Viren wurde in den 1930er Jahren durch William Joseph Elford mit Methoden der Ultrafiltration bestimmt.
+Der bislang älteste – indirekte – Beleg für eine durch Viren verursachte Erkrankung wurde aus den deformierten Knochen eines 150 Millionen Jahre alten, kleinen zweibeinigen Dinosauriers (Dysalotosaurus lettowvorbecki) abgeleitet, der im Berliner Museum für Naturkunde verwahrt wird und Symptome von Osteodystrophia deformans aufweist, die auf eine Infektion mit Paramyxoviren zurückgeführt werden.
+
+
+== Eigenschaften ==
+Viren haben DNA oder RNA, die genetische Information tragen. Doch sie haben keinen Stoffwechsel, können keine Energie umwandeln und vermögen auch nicht Proteine aufzubauen. Die Bildung dieser Strukturen und deren Vermehrung ist aber mit dem funktionsfähigen Stoffwechsel in der Zelle eines Lebewesens unter Umständen möglich. Die hierfür notwendige Information, insbesondere für die Proteinsynthese, trägt das Virus auf seiner Nukleinsäure (DNA oder RNA). Im Wesentlichen ist ein Virus eine Nukleinsäure, deren Information den Stoffwechsel einer Wirtszelle so steuern kann, dass wieder Viren entstehen. Die Replikation der Virus-Nukleinsäure erfolgt innerhalb der Wirtszelle, ebenso der Aufbau von Virusproteinen durch Ribosomen im Zytoplasma der Zelle zur weiteren Ausstattung der Viruspartikel (Virionen). Auch die Lipide einer etwaigen Virushülle des Virions stammen von der Wirtszelle.
+Viren kommen in zwei Erscheinungsformen vor:
+
+Erstens als Nukleinsäure in den Zellen des Wirts. Die Nukleinsäure enthält die Informationen zu ihrer Replikation und zur Reproduktion der zweiten Virusform. In dieser Erscheinungsform wird zwischen DNA-Viren und RNA-Viren unterschieden, je nachdem, ob ihr genetisches Material als DNA oder als RNA gespeichert ist.
+Zweitens als Virion, das aus den Wirtszellen ausgeschleust wird und eine Verbreitung auf andere Wirte ermöglicht.Hinsichtlich der Ausbreitung und Wirkung bei ihrem jeweiligen Reservoirwirt und gegebenenfalls auch Zwischenwirt unterscheiden sich die Virenarten in den Ausprägungen der Merkmale Kontagiosität, Infektiosität und Pathogenität beziehungsweise Virulenz oft sehr deutlich voneinander.
+Allgemein sind RNA-Viren aufgrund der höheren Fehlerrate der RNA-Polymerasen wesentlich variabler als DNA-Viren, da ihre RNA-Polymerase meist keine proof-reading-Exonuklease-Funktion aufweist. Eine Ausnahme bilden die Nidovirales, die eine Proof-reading-Funktion mit der Exoribonuklease ExoN besitzen, wodurch die Genomgröße etwas weniger begrenzt wird. Durch die hohe Mutationsrate produzieren RNA-Viren zwar mehr defekte, nicht-infektiöse virale Partikel, was aufgrund der Funktionsminderung als Fitnesskosten bezeichnet wird. Sie können sich jedoch im Zuge einer Immunevasion auch schneller an neue Wirte oder Zwischenwirte anpassen sowie durch Fluchtmutation der Immunantwort entgehen.
+
+
+=== Merkmale von Virionen ===
+
+Ein Viruspartikel außerhalb von Zellen bezeichnet man als Virion (Plural Viria, Virionen). Virionen sind Partikel, die Nukleinsäuren – entweder Desoxyribonukleinsäuren (DNA) oder Ribonukleinsäuren (RNA) – enthalten und meist eine umschließende Protein-Kapsel (Kapsid) haben. Eine Kapsel fehlt jedoch z. B. beim Influenzavirus, das stattdessen ein Ribonukleoprotein aufweist. Einige Virionen besitzen zusätzlich eine Umhüllung durch eine Biomembran, deren Lipiddoppelschicht mit viralen Membranproteinen durchsetzt ist. Diese wird als Virushülle bezeichnet. Viren, die vorübergehend bis zum Beginn der Replikationsphase zusätzlich zum Kapsid eine Virushülle aufweisen, werden als behüllt bezeichnet, Viren ohne derartige Hülle als unbehüllt. Einige Virionen besitzen noch andere zusätzliche Bestandteile.
+Der Durchmesser von Virionen beträgt etwa 15 nm (beispielsweise Circoviridae) bis 440 nm (Megavirus chilensis). Virionen sind deutlich kleiner als Bakterien, jedoch etwas größer als Viroide, welche weder ein Kapsid noch eine Virushülle besitzen.
+Das Proteinkapsid kann unterschiedliche Formen haben, zum Beispiel ikosaederförmig, isometrisch, helikal oder geschossförmig.
+Serologisch unterscheidbare Variationen eines Virus nennt man Serotypen.
+Virionen dienen der Verbreitung der Viren. Sie dringen ganz oder teilweise (mindestens ihre Nukleinsäure) in die Wirtszellen ein (infizieren sie). Danach startet durch den Stoffwechsel des Wirts die Vermehrung der Virus-Nukleinsäure und die Produktion der anderen Virionen-Bestandteile.
+
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+=== Systematische Stellung ===
+Viren sind im Wesentlichen bloße stoffliche Programme zu ihrer eigenen Reproduktion in Form einer Nukleinsäure. Sie besitzen zwar spezifische genetische Informationen, aber nicht den für ihre Replikation notwendigen Synthese-Apparat. Ob Viren als Lebewesen bezeichnet werden können, ist abhängig von der Definition von Leben. Eine allgemein anerkannte, unwidersprochene Definition gibt es bislang nicht. Die meisten Wissenschaftler stufen Viren nicht als Lebewesen ein – wobei die wissenschaftliche Diskussion noch nicht abgeschlossen ist, da beispielsweise bei der Genomgröße des Cafeteria-roenbergensis-Virus eine Abgrenzung anhand der Größe des Genoms zu verwischen beginnt.Viren werden normalerweise auch nicht zu den Parasiten gerechnet, weil Parasiten Lebewesen sind. Einige Wissenschaftler betrachten Viren dennoch als Parasiten, weil sie einen Wirtsorganismus infizieren und seinen Stoffwechsel für ihre eigene Vermehrung benutzen. Diese Forscher definieren Viren als „obligat intrazelluläre Parasiten“ (Lebensformen, die immer Parasiten innerhalb einer Zelle sind), die mindestens aus einem Genom bestehen und zur Replikation eine Wirtszelle benötigen. Man kann sich – unabhängig von der Klassifizierung als Lebewesen oder Nicht-Lebewesen – darauf einigen, dass das Verhalten von Viren dem von gewöhnlichen Parasiten sehr ähnlich ist. Viren können wie Prionen, funktionslose DNA-Sequenzen und Transposons in diesem Sinne als „parasitär“ bezeichnet werden.
+
+
+== Vermehrung und Verbreitung ==
+
+Ein Virus selbst ist zu keinen Stoffwechselvorgängen fähig, daher braucht es in der Natur Wirtszellen zur Fortpflanzung. Der Replikationszyklus eines Virus beginnt im Allgemeinen, wenn sich ein Virion an ein Oberflächenprotein auf einer Wirtszelle anheftet (Adsorption), das vom Virus als Rezeptor verwendet wird. Bei Bakterien- uns Archaeen-Wirten erfolgt dies durch Injektion seines Erbmaterials in eine Zelle, bei Eukaryoten werden die Virionen durch Endozytose eingestülpt und durchdringen dann die Endosomenmembran, z. B. durch ein fusogenes Protein. Nach der Aufnahme muss ein Virion vor der Replikation erst von seinen Hüllen befreit werden (uncoating). Das Erbmaterial des Virus, seine Nukleinsäure, wird anschließend in der Wirtszelle vervielfältigt und die Hüllproteine sowie gegebenenfalls weitere Bestandteile der Virionen werden anhand der Gene des Virusgenoms ebenfalls von der Wirtszelle synthetisiert (Proteinbiosynthese/Genexpression). So können in der Zelle neue Viren gebildet werden (Morphogenese), die als Virionen freigesetzt werden, indem entweder die Zellmembran aufgelöst wird (Zell-Lyse, lytische Virusvermehrung), oder indem sie ausgeschleust (sezerniert) werden (Virusknospung, budding), wobei Teile der Zellmembran als Bestandteil der Virushülle mitgenommen werden. Mit Hilfe von Immunoevasinen wird die Immunabwehr des Wirtes unterdrückt. Die Anzahl an neugebildeten Virionen einer infizierten Wirtszelle wird als burst size (engl. für ‚Berstgröße‘) bezeichnet.
+Eine weitere Möglichkeit ist der Einbau des Virus-Genoms in das des Wirtes (Provirus). Dies ist der Fall bei temperenten Viren, wie zum Beispiel dem Bakteriophagen Lambda.
+Die Auswirkung der Virusvermehrung auf die Wirtszelle nennt man zytopathischen Effekt (CPE), die Auswirkungen auf den gesamten Wirtsorganismus bezeichnet man als Viruserkrankung oder Virose. Es gibt verschiedene Arten des zytopathischen Effekts: Zell-Lyse, Pyknose (Polioviren), Zellfusion (Masernvirus, Herpes-simplex-Viren, Parainfluenzavirus), intranucleäre Einschlüsse (Adenoviren, Masernvirus), intraplasmatische Einschlüsse (Tollwutvirus, Pockenviren).
+Die Verbreitungswege von Viren sind vielfältig. So können humanpathogene Viren zum Beispiel über die Luft mittels Tröpfcheninfektion (z. B. Grippeviren) oder über kontaminierte Oberflächen durch Schmierinfektion (z. B. Herpes simplex) übertragen werden. Bei Pflanzenviren erfolgt die Übertragung häufig durch Insekten oder auch durch mechanische Übertragung zwischen zwei Pflanzen, bzw. über kontaminierte Werkzeuge in der Landwirtschaft. Eine abstrakte Sicht auf die epidemiologische Kinetik von Viren und anderen Krankheitserregern wird in der Theoretischen Biologie erarbeitet.
+
+
+== Evolution ==
+
+
+=== Ursprung ===
+Der Ursprung der Viren ist nicht bekannt. Die meisten Forscher nehmen heute an, dass es sich bei Viren nicht um Vorläufer des zellulären Lebens handelt, sondern um Gene von Lebewesen, die sich aus Lebewesen lösten. Es werden noch immer mehrere Möglichkeiten diskutiert, wobei es im Prinzip zwei verschiedene Ansätze gibt:
+
+Viren sind sehr ursprünglich; sie entstanden noch vor der ersten Zelle und schon in jener chemischen „Ursuppe“, die auch primitivste Lebensformen hervorbrachte; sie sind mit RNA-Genomen ein Überbleibsel der prä-DNA-Welt. Dieser Ansatz wurde beispielsweise von Félix Hubert d’Hérelle (1924)  und Salvador Edward Luria (1960) vertreten.
+Viren sind eine Art Schwundstufe von schon bei ihrer Entstehung existierenden vollständigen Organismen.Daraus abgeleitet sind drei Theorien formuliert worden.
+
+Abstammung von selbstreplizierenden Molekülen (Coevolution). Diese Theorie nimmt an, dass Entstehung und Evolution der Viren von den einfachsten Molekülen ausgingen, die überhaupt zur Selbstverdoppelung in der Lage waren. Anschließend hätten sich dann manche derartige Moleküle schließlich zu Organisationseinheiten zusammengefunden, die man als Zellen ansehen kann. Parallel dazu gelang es anderen Molekülen, sich in Viruspartikel zu verpacken, die sich parallel zu den Zellen weiterentwickelten und zu ihren Parasiten wurden.
+Virusentstehung durch Degeneration (Parasit). Diese Theorie basiert auf dem schon oben dargestellten zweiten Möglichkeitsansatz, wonach die ersten Viren ursprünglich aus freilebenden Organismen wie beispielsweise Bakterien (oder hypothetischen Ribozyten) hervorgegangen sind, die langsam und kontinuierlich immer mehr von ihrer genetischen Information verloren haben, bis sie schließlich zu Zellparasiten wurden, die darauf angewiesen sind, dass eine Wirtszelle ihnen die verloren gegangenen Funktionen zur Verfügung stellt. Ein Konzept, das in diesem Zusammenhang zunehmend Beachtung findet, ist das der Virozelle (englisch virocell): Der eigentliche Phänotyp eines Virus ist die infizierte Zelle, das Virion (Viruspartikel) ist dagegen lediglich ein Stadium der Fortpflanzung oder Verbreitung, ähnlich wie Pollen oder Sporen.
+Virusentstehung aus wirtszelleigenen RNA- oder DNA-Molekülen. Diese dritte und für die Forschung als am wahrscheinlichsten erscheinende Theorie besagt, dass Viren unmittelbar aus RNA- oder DNA-Molekülen der Wirtszelle entstanden sind. Diese selbständig gewordenen Nukleinsäuren haben zwar als das genetische Material der Viren die Fähigkeit erworben, sich unabhängig vom Genom der Wirtszelle oder ihrer RNA zu vermehren, sind aber letztlich doch Parasiten geblieben (S. Luria, 1960). Beispiele von möglichen Übergangsformen sind Transposons und Retrotransposons.Ein gemeinsamer monophyletischer Ursprung aller Viren ist dabei angesichts derer hoher Diversität unwahrscheinlich und kann allenfalls für die als Realms abgegrenzten Bereiche angenommen werden. Daher ist es auch möglich, dass für diese maximalen Virusgruppen (Kladen) unterschiedliche Entstehungszenarien zutreffen.
+
+
+=== Variabilität ===
+Für eine Evolution eines Virus (bzw. irgendeines Gens) ist seine Variabilität und Selektion von Bedeutung. Die Variabilität ist (wie bei allen Organismen) durch Kopierfehler bei der Replikation des Erbgutes gegeben und dient unter anderem der Immunevasion und der Änderung des Wirtsspektrums, während die Selektion oft durch die (Immun)-Antwort des Wirtes durchgeführt wird.
+Höher organisierte Lebewesen haben per Rekombination und Crossing-over bei der geschlechtlichen Fortpflanzung eine sehr effektive Möglichkeit der genetischen Variabilität besonders in Richtung einer Umweltanpassung und damit Weiterentwicklung ihrer jeweiligen Art entwickelt. Virionen beziehungsweise Viren zeigen als überdauerungsfähige Strukturen, die für ihre Vermehrung und damit auch Ausbreitung auf lebende Wirte angewiesen sind, ohne geschlechtliche Fortpflanzung allein mit ihrer Mutationsfähigkeit eine mindestens ebenbürtige Möglichkeit für eine genetische Variabilität.
+Dabei ist es dann letztlich unerheblich, dass diese Mutationen im Genom der Viren im Grunde zuerst auf Kopierfehlern während der Replikation innerhalb der Wirtszellen beruhen. Was zählt, ist allein der daraus für die Arterhaltung resultierende positive Effekt der extremen Steigerung der Anpassungsfähigkeit. Während Fehler dieser Art zum Beispiel bei einer hochentwickelten Säugetierzelle zum Zelltod führen können, beinhalten sie für Viren sogar einen großen Selektionsvorteil.
+Kopierfehler bei der Replikation drücken sich in Punktmutationen, also im Einbau von falschen Basen an zufälligen Genorten, aus. Da Viren im Gegensatz zu den höherentwickelten Zellen nur über wenige oder keine Reparaturmechanismen verfügen, werden diese Fehler nicht korrigiert.
+Sonderformen der genetischen Veränderung bei Viren werden beispielsweise bei den Influenza-Viren mit den Begriffen Antigendrift und Antigenshift (genetische Reassortierung) dort genau beschrieben.
+
+
+== Wirtsreaktionen ==
+Eine Infektion mit Viren erzeugt in ihren Wirten verschiedene Formen der Abwehrreaktion. Viren vermehren sich ausschließlich innerhalb von Zellen, denn sie verwenden zu ihrer Vermehrung die dafür notwendigen Bausteine und Enzyme einer Wirtszelle. Daher sind verschiedene intrazelluläre Abwehrmechanismen entstanden, die als Restriktions- oder Resistenzfaktoren bezeichnet werden. Während Bakterien und Archaeen unter anderem das CRISPR und Restriktionsenzyme zur Abwehr von Viren innerhalb einer Zelle verwenden, gibt es in Eukaryoten z. B. den Myxovirus-Resistenzfaktor Mx1, die PAMP-Rezeptoren, den dsRNA-aktivierten Inhibitor der Translation DAI, das Melanom-Differenzierungs-Antigen 5 (MDA-5), die Oligoadenylatsynthase OAS1, das Langerin, das Tetherin, das SAM domain and HD domain 1-Protein (SAMHD1), das RIG-I, das APOBEC3, das TRIM5alpha, die Proteinkinase R und die RNA-Interferenz.
+In Tieren, besonders Wirbeltieren, hat sich zusätzlich eine Immunantwort herausgebildet. Sie ist teils angeboren, teils erworben. Im Zuge der erworbenen bzw. adaptiven Immunantwort entstehen Antikörper und zytotoxische T-Zellen, die einzelne Bestandteile des Virus (Antigene) binden können. Dadurch können sie Viren und Virus-infizierte Zellen erkennen und beseitigen.
+
+
+== Koevolution ==
+Eine Beobachtung bei der Pathogenese in natürlichen Wirten ist, dass an den Wirt angepasste Krankheitserreger ihm meist nicht sehr schaden, da sie ihn für ihre eigene Entwicklung benötigen und das Immunsystem durch Zellschäden und Apoptose aktiviert wird. Die Vermeidung einer Immunreaktion erleichtert die Replikation und die Übertragung (synonym Transmission) an weitere Wirte. Manche Viren verbleiben lebenslang im Körper. Es kann von Zeit zu Zeit zu einer Reaktivierung kommen, auch ohne Symptome. (Siehe hierzu auch: Erregerpersistenz.) So erreichen beispielsweise Herpes-simplex-Viren Infektionsquoten (synonym Durchseuchung) von über 90 % der deutschen Bevölkerung mit wenig ausgeprägten Symptomen. Das simiane Immundefizienz-Virus erzeugt in seinen natürlichen Wirten kein AIDS, im Gegensatz zu HIV im Menschen. Dagegen löschen sich Infektionen mit Ebolavirus im Menschen, nicht aber in ihren natürlichen Wirten, gelegentlich durch ihre hohe Virulenz selbst aus, bevor eine effiziente Transmission erfolgt, da der Wirt stark geschwächt ist und bald verstirbt, folglich ist sein Bewegungsradius und somit die Verbreitung des Virus begrenzt. Ein schwerer Infektionsverlauf mit hoher Sterblichkeit (siehe Letalität und Mortalität) ist zumeist ein Anzeichen dafür, dass der verursachende Erreger noch nicht an den betreffenden Organismus als seinen Reservoirwirt angepasst ist. Jedoch ist der Übergang von Pathogenen mit einer hohen Replikation (und erzeugten Schäden) zu einer dauerhaften Infektionsquote (Infect and persist, unter Vermeidung von Schäden) fließend. Anders ausgedrückt, neigen angepasste infektiöse Objekte zur Persistenz und einer regulierten Reproduktionsrate, während weniger angepasste Pathogene tendenziell zur vorzeitigen Beendigung der Infektionskette führen. Ausnahmen sind z. B. H5N1-Viren in Vögeln und humane Pockenviren im Menschen. Die Anpassung erfolgt jedoch meistens seitens des Wirts, da die Pathogene mit ihren Artgenossen in Konkurrenz stehen und ein weniger reproduktives Pathogen schneller untergehen würde. Daher tritt eine Minderung der Pathogenität bei Pathogenen vor allem in Verbindung mit einer erhöhten Reproduktionsrate auf.Die Anpassung des Wirts an das Pathogen wird als Wirtsrestriktion oder -resistenz bezeichnet. Zu den bekannten antiviralen und antibakteriellen Mechanismen gehören also, wie schon unter Wirtsreaktionen bei Eukaryoten ausgeführt, beim Menschen beispielsweise der Myxovirus-Resistenzfaktor Mx1, die PAMP-Rezeptoren, der dsRNA-aktivierte Inhibitor der Translation DAI, das MDA5, die Oligoadenylatsynthase OAS1, das Langerin, das Tetherin, das APOBEC3, das TRIM5alpha und die Proteinkinase R. Darüber hinaus erfolgt die Immunantwort.
+
+
+== Einteilung ==
+
+
+=== Herkömmliche Virusklassifikation ===
+Im Jahre 1962 wurde von André Lwoff, Robert W. Horne und Paul Tournier entsprechend der von Carl von Linné begründeten binären Klassifikation der Lebewesen eine Taxonomie der Viren („LHT-System“) eingeführt, die folgende Stufen umfasst (Muster für Namensendungen der Taxa in Klammern):
+
+Virosphäre (Phylum: Vira)
+Subphylum (…vira)
+Klasse (Biologie) (…ica)
+Ordnung (…virales)
+Familie (…viridae)
+Unterfamilie (…virinae)
+Gattung oder Genus (…virus)
+Art oder Species (nach der hervorgerufenen <Krankheit> …virus)Damit einher geht eine Zuordnung in (nicht-taxonomische) Gruppen, die sich an den Wirten orientieren
+
+Prokaryoten (Befall durch Phagen)
+Bakterien (Befall durch Bakterienviren alias Bakteriophagen)
+Archaeen (Befall durch Archaeenviren alias „Archaeophagen“)
+Algen, Pilze (Befall durch Mykoviren) und Protozoen
+Pflanzen (Befall durch Phytoviren, auch durch Viroide)
+Tiere, mit drei Untergruppen:
+wirbellose Tiere (Invertebraten)
+Wirbeltiere (Vertebraten)
+Vertreter beider GruppenDie meisten Viren gehören nur zu einer der obigen vier Gruppen, doch in den Familien Rhabdoviridae und Bunyaviridae gibt es jeweils Virusarten, die sowohl Pflanzen als auch Tiere infizieren. Einige Viren vermehren sich nur in Vertebraten, werden jedoch auch von Invertebraten mechanisch übertragen (siehe Vektor), vor allem von Insekten. Viren, die auf die Nutzung von Genen anderer Viren (Mamaviren) während der gemeinsamen Infektion einer Wirtszelle angewiesen sind, werden Satellitenviren oder Virophagen genannt.
+
+
+=== Virustaxonomie nach ICTV ===
+
+Das International Committee on Taxonomy of Viruses (ICTV) hat ein System entwickelt, um eine einheitliche Taxonomie der Viren zu gewährleisten. Der neunte ICTV-Report definiert ein Konzept mit der Virus-Art als unterstem Taxon in einem hierarchischen System sich verzweigender Viren-Taxa.Die taxonomische Struktur war bis 2017 im Prinzip wie bei der herkömmlichen Virusklassifikation ab Rangstufe Ordnung und darunter (siehe oben) und wurde 2018 durch weitere Stufen wie folgt ergänzt (mit vom LHC-System abweichenden Namensendungen):
+Realm (en. realm) (…viria)
+Subrealm (en. subrealm) (…vira) (Endung wie bei Subphylum im LHC-System, als zweiteoberste Stufe)
+Reich (en. kingdom) (…virae)
+Unterreich (en. subkingdom) (…virites)
+Stamm oder Phylum (…viricota) (in Analogie zu …archaeota – abweichend vom LHC-System sind mehrere Virusphyla möglich)
+Subphylum (…viricotina)
+Klasse (…viricetes)
+Unterklasse (…viricetidae)
+Ordnung (…virales)
+Unterordnung (…virineae)
+Familie (…viridae)
+Unterfamilie (…virinae)
+Gattung oder Genus (…virus)
+Untergattung oder Subgenus (…virus)
+Art oder Spezies/Species (…virus)Es gibt in diesen Richtlinien keine Definition von Unterarten (Subspecies), Stämmen (im Sinn von Varietäten, wie „Bakterienstamm“, englisch: strain) oder Isolaten. Die Namensendungen aller Rangstufen haben also „vir“ als Bestandteil (aber nicht in der Form „viroid“); die Abkürzungen enden auf „V“, ggf. gefolgt von einer Nummer (nicht römisch, sondern arabisch). Für Viroide, Viriforme und Satelliten als subvirale Partikel kann eine analoge Taxonomie mit jeweils eigenen Namensendungen mit charakterisierendem Bestandteil verwendet werden.
+Die aktuellen Top-Level-Taxa der Viren finden sich im Artikel Virus-Taxonomie $Top-Level Taxa. Innerhalb der Taxe des höchsten Rangs Realm wird jeweils eine gemeinsame Abstammung angenommen (Klade), die derzeitigen Top-Level-Taxa niedrigerer Rangstufen sind eventuell noch nicht zugeordnet oder bilden (einzeln oder mit anderen) eigene Realms. Im Gegensatz zu den zellulären Organismen (Lebewesen) wird bei den Viren in ihrer Gesamtheit kein gemeinsamer Urvorfahr angenommen.
+
+
+=== Die Baltimore-Klassifikation ===
+
+Die vom Nobelpreisträger und Biologen David Baltimore vorgeschlagene Klassifizierung basiert darauf, in welcher Form genau das Virusgenom vorliegt und wie daraus die Boten-RNA (mRNA) erzeugt wird. Das Virus-Genom kann in der Form von DNA oder RNA vorliegen, Einzelstrang (englisch: single-stranded, ss) oder Doppelstrang (englisch double-stranded, ds). Ein Einzelstrang kann als Original (englisch: sense, +) oder in komplementärer Form (englisch: antisense, −) vorliegen. Unter Umständen wird zur Vervielfältigung ein RNA-Genom übergangsweise in DNA umgesetzt (Retroviren) oder umgekehrt ein DNA-Genom übergangsweise in RNA transkribiert (Pararetroviren); in beiden Fällen wird die RNA mit einer Reversen Transkriptase (RT) in DNA zurückgeschrieben.
+Die gesamte Virosphäre wird durch folgende sieben Gruppen definiert:
+
+I:   dsDNA-Viren (dazu Adenoviren, Herpesviren, Riesenviren, Pockenviren)
+II:       ssDNA-Viren (+ Strang) DNA (dazu Parvoviren)
+III:            dsRNA-Viren (dazu Reoviren)
+IV:            (+)ssRNA-Viren (+ Strang) RNA (dazu Picornaviren, Togaviren)
+V:   (−)ssRNA-Viren (− Strang) RNA (dazu Orthomyxoviren, Rhabdoviren)
+VI:       ssRNA-RT-Viren (+ Strang) – RNA mit DNA-Zwischenstadium (Retroviren)
+VII:           dsDNA-RT-Viren – DNA mit RNA-Zwischenstadium (Pararetroviren, dazu Hepadnaviren)Moderne Virusklassifikationen benutzen eine Kombination von ICTV und Baltimore.
+
+
+== Schreibweise der Virusartnamen ==
+Der offizielle internationale, wissenschaftliche Name eines Virus ist die englischsprachige Bezeichnung, nach der sich stets auch die international gebräuchliche Abkürzung richtet, wie bei Lagos bat virus (LBV). Diese Abkürzung wird unverändert auch im Deutschen verwendet. Folgerichtig lautet die Abkürzung für die deutsche Virusbezeichnung Lagos-Fledermaus-Virus ebenfalls LBV.
+In den englischen Virusnamen wie zum Beispiel bei West Nile virus werden normalerweise keine Bindestriche benutzt und virus wird kleingeschrieben. Der Bindestrich taucht im Englischen nur bei Adjektiven auf, also bei Tick-borne encephalitis virus oder Avian encephalomyelitis-like virus.
+Im Deutschen werden die Virusnamen teilweise mit Bindestrichen geschrieben, also West-Nil-Virus, Hepatitis-C-Virus, Humanes Herpes-Virus, Lagos-Fledermaus-Virus, Europäisches Fledermaus-Lyssa-Virus, teilweise auch zusammen. Vor den Nummern von Subtypen steht (wie im Englischen) ein Leerzeichen, bei den Abkürzungen ein Bindestrich, z. B. Europäisches Fledermaus-Lyssa-Virus 1 (EBLV-1), Herpes-simplex-Virus 1 (HSV-1) und Humanes Herpes-Virus 1 (HHV-1).Seit 2021 favorisiert das  International Committee on Taxonomy of Viruses (ICTV) für Virusspezies eine binäre Namenskonvention frei nach Carl von Linné ähnlich wie bei den Lebewesen. Neue Virusarten erhalten als wissenschaftliche Bezeichnung einen binären Namen, die alten Bezeichnungen werden nach und nach angepasst. Da das ICTV keine Regeln für Trivialnamen in den einzelnen Weltsprachen vorgibt, sind diese davon nicht betroffen.
+Im Gegensatz zur belebten Welt werden nach den Regeln des ICTV auch die Namen der höheren Taxa (wie Familie, Ordnung, Klasse, Phylum (Abteilung) etc. kursiv geschrieben. Sie werden gewöhnlich nicht übersetzt. Im Gegensatz dazu werden Bezeichnungen für Subtypen (Stämme – im Sinn von englisch strains) – und Isolate) nie kursiv gesetzt (auch nicht evtl. darin enthaltene Gattungs- und/oder Artnamen ihrer Wirte).Werden häufig gebrauchte Namen einmal doch übersetzt (wie Coronaviren für Coronaviridae), dann werden diese Bezeichnungen nicht kursiv gesetzt. Da sich oft Taxa in aufsteigender Rangfolge nur durch die Endung unterscheiden (wie Herpesviridae und Herpesvirales), entstehen allerdings bei der Verwendung eingedeutschter Namen (hier: Herpesviren) oft Mehrdeutigkeiten. Das gilt auch für die Verwendung solcher Namen (z. B. Coronaviren für die prominentesten Vertreter wie SARS-CoV-2).
+
+
+== Humanpathogene Viren und ausgelöste Erkrankungen ==
+
+Beim Menschen können eine Vielzahl von Krankheiten durch Viren verursacht werden. Allein diese humanpathogenen Viren sind hier nach Baltimore hinsichtlich Genom und Behüllung klassifiziert und erst nachrangig gemäß der Taxonomie des International Committee on Taxonomy of Viruses (ICTV) aufgelistet.
+
+
+=== Behüllte Viren ===
+
+
+==== Doppelsträngige DNA-Viren (dsDNA) ====
+Familie Poxviridae
+Unterfamilie Chordopoxvirinae
+Gattung Orthopoxvirus
+Orthopoxvirus variola = Variolavirus – Pocken, Echte Pocken
+Orthopoxvirus variola var. alastrim = Kaffernpockenvirus – Pocken, Weiße Pocken
+Monkeypoxvirus (MPV) = Orthopoxvirus simiae – Affenpocken; auch auf den Menschen übertragbar, Symptome wie bei Menschenpocken, aber deutlich milder
+Gattung Parapoxvirus
+Parapoxvirus ovis = Orf-Virus – Orf
+Gattung Molluscipoxvirus
+Molluscum-Contagiosum-Virus – Dellwarze (Molluscum contagiosum)
+Familie Herpesviridae
+Unterfamilie Alphaherpesvirinae
+Gattung Simplexvirus
+Herpes-simplex-Virus 1 (HSV-1) = Humanes Herpes-Virus 1 (HHV-1) – Herpes simplex, Herpes labialis, Stomatitis aphtosa
+Herpes-simplex-Virus 2 (HSV-2) = Humanes Herpes-Virus 2 (HHV-2) – Herpes simplex, Herpes genitalis
+Herpes-B-Virus = (Herpesvirus simiae)
+Gattung Varicellovirus
+Varizella-Zoster-Virus (VZV) = Humanes Herpes-Virus 3 (HHV-3) – Windpocken = Varizellen (Herpes zoster), Gürtelrose
+suid Herpesvirus Typ 1 (SHV-1) = Pseudowut-Virus, Aujeszky-Virus u. a. – Aujeszkysche Krankheit = Pseudowut, Juckseuche, Tollkrätze u. a. (bei Tieren, mit geringer Pathogenität auch auf den Menschen übertragbar)
+Unterfamilie Betaherpesvirinae
+Gattung Cytomegalovirus
+Humanes Cytomegalievirus (HCMV) = Humanes Zytomegalievirus (HZMV) = Humanes Herpes-Virus 5 (HHV-5) – Zytomegalie
+Gattung Reseolovirus
+Humanes Herpesvirus 6 (HHV-6) – Drei-Tage-Fieber
+Humanes Herpesvirus 7 (HHV-7) – Drei-Tage-Fieber
+Unterfamilie Gammaherpesvirinae
+Gattung Lymphocryptovirus
+Epstein-Barr-Virus (EBV) = Humanes Herpes-Virus 4 (HHV-4) – Pfeiffer-Drüsenfieber, Burkitt-Lymphom
+Gattung Rhadinovirus
+Humanes Herpes-Virus 8 (HHV-8) – Kaposi-Sarkom
+Familie Hepadnaviridae
+Gattung Orthohepadnavirus
+Hepatitis-B-Virus (HBV) – Hepatitis B
+
+
+==== Einzel(+)-Strang-RNA-Viren (ss(+)RNA) ====
+Familie Togaviridae
+Gattung Alphavirus – Erreger von Arbovirosen
+Barmah-Forest-Virus – Barmah-Forest-Fieber mit grippeähnlichen Symptomen, epidemische Polyarthritis
+Chikungunya-Virus (CHIKV) – Chikungunya-Fieber
+Eastern-Equine-Encephalitis-Virus (EEEV) = Östliches-Pferdeenzephalitis-Virus – Übertragung durch Stechmücken auch auf den Menschen möglich (selten!) → Östliche Pferdeenzephalomyelitis (Enzephalitis/ Enzephalomyelitis)
+Western-Equine-Encephalitis-Virus (WEEV) = Westliches-Pferdeenzephalitis-Virus – Übertragung durch Stechmücken auch auf den Menschen möglich (selten!) → Westliche Pferdeenzephalomyelitis (Enzephalitis/ Enzephalomyelitis)
+Everglades-Virus – Everglades-Fieber
+O'nyong-nyong-Virus (ONNV) – O’nyong-nyong-Fieber
+Mayaro-Fieber-Virus (MAYV) – Mayaro-Fieber
+Semliki-Forest-Virus (SFV) – Semliki-Forest-Fieber
+Mucambo-Virus – Mucambo-Fieber
+Ross-River-Virus (RRV) – Ross-River-Fieber
+Sindbis-Virus (SINV) – Sindbis-Fieber (Gelenkentzündung [„epidemische Polyarthritis“], zum Teil mit Hautausschlägen und selten mit Enzephalitis)
+Gattung Rubiviren
+Rubivirus = Rötelnvirus = Rubellavirus (RUBV) – Röteln
+Familie Flaviviridae
+Gattung Hepacivirus
+Hepatitis-C-Virus (HCV) – Hepatitis C
+GB-Virus-C (ohne Krankheitswert)
+Gattung Flavivirus
+West-Nil-Virus (WNV) – West-Nil-Fieber
+Dengue-Virus (DENV) – Dengue-Fieber
+Gelbfieber-Virus (YFV) – Gelbfieber
+Louping-ill-Virus (LIV) – Louping-ill-Enzephalitis
+St.-Louis-Enzephalitis-Virus (SLEV) – St.-Louis-Enzephalitis
+Japan-Enzephalitis-Virus (JEV) – Japanische Enzephalitis
+Usutu-Virus (USUV) – unspezifische Symptome wie Fieber und/oder Hautausschläge
+Kyasanur-Forest-Disease-Virus (KFDV) – Kyasanur-Wald-Fieber
+Powassan-Virus (POWV) – Powassan-Enzephalitis
+FSME-Virus [englisch: tick-borne encephalitic virus (TBEV)] – FSME (Frühsommer-Meningoenzephalitis)
+Subtyp European / Western tick-borne encephalitis virus (WTBEV)
+Subtyp Siberian tick-borne encephalitis virus (STBEV)
+Subtyp Far-Eastern tick-borne encephalitis virus (Far-Eastern TBEV); ehemals Russian-Spring-Summer-Enzephalitis-Virus (RSSEV) – RSSE, auch RFSE (Russian-Spring-Summer-Enzephalitis, Russische Frühsommerenzephalitis)
+Zika-Virus (ZIKV) (2 Hauptgruppen; diverse Subtypen) – meist nur Hautausschlag, Fieber, Gelenkschmerzen, Konjunktivitis
+Gattung Jingmenvirus (Vorschlag) nach NCBISpezies Jingmen tick virus (JMTV) - bislang entdeckte Krankheitsanzeichen: Juckreiz oder schmerzhafter Schorf an der Stelle des Zeckenbisses, gelegentlich Kopfschmerzen, Asthenie, Lymphadenopathie
+Spezies Alongshan virus (ALSV) - bislang entdeckte Krankheitsanzeichen: Meningoenzephalitis (ähnlich FSME)Familie Coronaviridae
+Unterfamilie Orthocoronavirinae
+Gattung Alphacoronavirus
+Untergattung Duvinacovirus
+Humanes Coronavirus 229E (HCoV-229E) – Erkältung
+Untergattung Setracovirus
+Humanes Coronavirus NL63 (HCoV-NL63) – Erkältung
+Gattung Betacoronavirus
+Untergattung Embecovirus
+Spezies Betacoronavirus 1
+Subspezies Humanes Coronavirus OC43 (HCoV-OC43) – Erkältung; gelegentlich auch schwere Infektion der Atemwege, Pneumonie
+Spezies Humanes Coronavirus HKU1 (HCoV-HKU1) – Erkältung
+Untergattung Merbecovirus
+Middle East respiratory syndrome coronavirus (MERS-CoV) – grippeähnliche Symptome, schwere Infektion der Atemwege, Pneumonie und ggf. Nierenversagen
+Untergattung Sarbecovirus
+SARS-assoziiertes Coronavirus (SARS-CoV) – SARS (atypische Lungenentzündung Pneumonie), mit Subtyp
+Subtyp SARS-CoV-2 (eng. 2019-novel Coronavirus, 2019-nCoV, bzw. Wuhan seafood market pneumonia virus) – COVID-19: Infektion der unteren Atemwege bis zur Lungenentzündung
+Unterfamilie Torovirinae
+Gattung Torovirus
+diverse Arten – Gastroenteritis
+Familie Retroviridae – Einzel(+)-Strang-RNA-Viren mit dsDNA-Zwischenstufe
+Unterfamilie Orthoretrovirinae
+Gattung Deltaretrovirus
+Humanes T-lymphotropes Virus 1 (HTLV-1) – Adulte T-Zell-Leukämie, Tropische Spastische Paraparese
+Humanes T-lymphotropes Virus 2 (HTLV-2) – Leukämie (?)
+Humanes T-lymphotropes Virus 3 (HTLV-3) – unbekannt
+Humanes T-lymphotropes Virus 4 (HTLV-4) – unbekannt
+Gattung Lentivirus
+Humanes Immundefizienz-Virus Typ 1 (HIV-1) – AIDS
+Humanes Immundefizienz-Virus Typ 2 (HIV-2) – AIDS
+
+
+==== Einzel(−)-Strang-RNA-Viren (ss(−)RNA) ====
+Familie Arenaviridae
+Gattung Mammarenavirus
+Untergattung LCMV/Lassa-Komplex (Altwelt-Arenaviren)
+Lassa-Virus (Lassa mammarenavirus / LASV) – Lassa-Fieber
+lymphozytäre-Chorio-Meningitis-Virus (Lymphocytic choriomeningitis Virus / Lymphocytic choriomeningitis mammarenavirus / LCMV) – Lymphozytäre Choriomeningitis
+Mopeia-Virus (MOPV) - Mopeia-Fieber (hämorrhagisches Fieber mit teilweise sehr schwerem bis tödlichem Verlauf.)
+Lujo-Virus (Lujo mammarenavirus / LUJV) - Lujo-Fieber (hämorrhagisches Fieber)
+Untergattung Tacaribe-Komplex: (Neuwelt-Arenaviren)
+Chapare-Virus (Chapare mammarenavirus / CHAV) – Hämorrhagisches Fieber
+Tacaribe-Virus (Tacaribe mammarenavirus / TCRV) – Hämorrhagisches Fieber
+Junin-Virus (Argentinian mammarenavirus / JUNV) – Junin-Fieber (argentinisches hämorrhagisches Fieber / AHF)
+Machupo-Virus (Machupo mammarenavirus / MACV) – Machupo-Fieber (bolivianisches hämorrhagisches Fieber / BHF mit hoher Letalität.)
+Guanarito-Virus (Guanarito mammarenavirus / GTOV) - Guanarito-Fieber (venezolanisches hämorrhagisches Fieber / VHF)
+Sabia-Virus  (SPH 114202 virus / Brazilian mammarenavirus / Sabiá mammarenavirus / SABV) - Sabia-Fieber (brasilianisches hämorrhagisches Fieber / BzHF)
+Familie Bornaviridae
+Gattung Orthobornavirus (früher Bornavirus)
+Spezies Mammalian 1 orthobornavirus
+Virus der Bornaschen Krankheit (engl. Borna disease virus 1 = BoDV-1) – Erreger der Borna-Krankheit bei Pferden, Schafen und anderen Säugetieren, in seltenen Fällen auch auf den Menschen übertragbar – schwere (Enzephalitiden)
+Spezies Mammalian 2 orthobornavirus
+Bunthörnchen-Bornavirus 1 (engl. variegated squirrel Bornavirus 1 = VSBV-1) bei Bunthörnchen (Sciurus variegatoides) nachgewiesen, auch auf den Menschen übertragbar – potenziell tödlich verlaufende Encephalitis
+Familie Bunyaviridae – Erreger von Arbovirosen
+Gattung Orthobunyavirus
+Bunyamwera-Virus (Serogruppe)
+Batai-Virus (BATV) – grippeähnliche Symptome und Hautausschläge
+California-Encephalitis-Virus (Serogruppe) – Encephalitis
+Gattung Phlebovirus
+Rift-Valley-Fieber-Virus (3 Subtypen) – Rift-Tal-Fieber
+Sandmückenfieber-Virus (SFNV) – Sandfly fever = Sandmückenfieber
+Subtyp Karimabad-Virus (KARV)
+Subtyp Sandmückenfieber-Virus Sabin (SFNV-Sabin)
+Subtyp Teheran-Virus (THEV)
+Subtyp Toscana-Virus (TOSV) – Pappataci-Fieber
+Serotypen: Toskana (T), Sizilien (S) und Neapel (N)
+Gattung Nairovirus
+Krim-Kongo-Fieber-Virus (Serogruppe):
+Subtyp Krim-Kongo-Hämorrhagisches-Fieber-Virus (CCHFV) – Krim-Kongo-Fieber
+Subtyp Hazara-Virus (HAZV) – Krim-Kongo-Fieber
+Subtyp Khasan-Virus (KHAV) – Krim-Kongo-Fieber
+Gattung Hantavirus
+Hantaan-Virus (4 Subtypen) – hämorrhagisches Fieber, Nephritis
+Seoul-Virus (Serogruppe) – hämorrhagisches Fieber
+Prospect-Hill-Virus (2 Subtypen) – hämorrhagisches Fieber
+Puumala-Virus (Serogruppe) – hämorrhagisches Fieber, Pneumonie, Nephritis
+Dobrava-Belgrad-Virus – hämorrhagisches Fieber
+Tula-Virus – hämorrhagisches Fieber
+Sin-Nombre-Virus (Serogruppe) – hämorrhagisches Fieber mit schwerem Lungenödem
+Familie Filoviridae
+Gattung Marburg-Virus
+Lake-Victoria-Marburgvirus (Serogruppe) – Marburg-Fieber (hämorrhagisches Fieber)
+Gattung Ebolavirus
+Zaire-Ebolavirus (ZEBOV) Serogruppe – Ebolafieber (hämorrhagisches Fieber)
+Sudan-Ebolavirus (SEBOV) Serogruppe – Ebolafieber (hämorrhagisches Fieber)
+Reston-Ebolavirus (REBOV) Serogruppe – nicht humanpathogen, nur bei Makaken und Schweinen hämorrhagisches Fieber
+Côte d'Ivoire-Ebolavirus (CIEBOV) Serogruppe – Ebolafieber (hämorrhagisches Fieber)
+Bundibugyo-Ebolavirus (BEBOV) Serogruppe – Ebolafieber (hämorrhagisches Fieber)
+Familie Orthomyxoviridae
+Gattung Influenzavirus A – Influenza (Grippe)
+Influenzavirus A-Variante H1N1 – Influenza (Grippe)
+Influenzavirus A-Variante H3N2 – Influenza (Grippe)
+(aviäres) Influenzavirus-A-Variante H5N1, hoch pathogenes aviäres Influenzavirus (HPAIV) – „Vogelgrippe“, bei Tieren, auch auf den Menschen übertragbar, aber kaum von Mensch zu Mensch.
+Gattung Influenzavirus B – Influenza (Grippe)
+Influenzavirus B/Victoria-Linie – Influenza (Grippe)
+Influenzavirus B/Yamagata-Linie – Influenza (Grippe)
+Gattung Influenzavirus C – Influenza (Grippe)
+Gattung Influenzavirus D – Influenza (Grippe)
+Familie Paramyxoviridae
+Gattung Avulavirus
+Humanes Parainfluenzavirus (Typ 1, 3) – Erkältung, Parainfluenza
+Gattung Morbillivirus
+Masernvirus – Masern
+Gattung Henipavirus 
+Hendra-Virus, (früher Equines Morbillivirus) – Pneumonie; Enzephalitis
+Nipah-Virus – Pneumonie; Enzephalitis
+Gattung Rubulaviren
+Humanes Parainfluenzavirus (Typ 2, 4) – Erkältung, Parainfluenza
+Mumpsvirus – Mumps
+Familie Pneumoviridae
+Gattung Orthopneumovirus (früher: Pneumovirus)
+Humanes Respiratorisches Synzytial-Virus (HRSV) (Typ A, B) – Atemwegsinfektion, Erkältung
+Gattung Metapneumovirus
+Humanes Metapneumovirus (HMPV) (Typ A1 bis 2, B1 bis 2) – Atemwegsinfektion, Erkältung
+Familie Rhabdoviridae
+Gattung Vesiculovirus
+Vesicular-Stomatitis-Indiana-Virus (VSV) – Stomatitis vesicularis (Mundschleimhautentzündung mit Bläschenbildung) bei Tieren, auch auf den Menschen übertragbar
+Gattung Lyssavirus
+Rabiesvirus (RABV) (ehemals Genotyp 1) = Tollwutvirus – Tollwut, bei Tieren, auch auf den Menschen übertragbar
+Mokola-Virus (MOKV) (ehemals Genotyp 3) – Tollwut, bei Tieren, auch auf den Menschen übertragbar
+Duvenhage-Virus (DUVV) (ehemals Genotyp 4) – Tollwut, bei Tieren, auch auf den Menschen übertragbar
+Europäisches Fledermaus-Lyssa-Virus 1 + 2 (EBLV-1, -2) (ehemals Genotypen 5 und 6) – Tollwut, bei Tieren, auch auf den Menschen übertragbar
+Australisches Fledermaus-Lyssa-Virus (ABLV) (ehemals Genotyp 7) – Tollwut, bei Tieren, auch auf den Menschen übertragbar
+
+
+=== Unbehüllte Viren ===
+
+
+==== Doppelsträngige DNA-Viren (dsDNA) ====
+Familie Adenoviridae
+Gattung Mastadenovirus
+Humane Adenoviren A-F (51 Subtypen) – Schnupfen, Erkältungen, Durchfall
+Familie Polyomaviridae
+Gattung Polyomavirus
+BK Polyomavirus (BKPyV) = BK-Virus (BKV) = Polyomavirus hominis Typ 1 – führt bei immunsuppressiver Behandlung nach Transplantation ev. zum Verlust des Transplantates
+JC Polyomavirus (JCPyV) = JC-Virus (JCV) = Polyomavirus hominis Typ 2 – bei zellulär Immunsupprimierten (AIDS) zu Progressiver multifokalen Leukoenzephalopathie (PML)
+Familie Papillomaviridae
+Gattung Papillomavirus
+Untergattung Humane Papillomviren
+diverse Humane Papillomviren (HPV) – Warzen;
+Kondyloma-Virus 6 (HPV-6) – Feigwarzen; sehr selten: Rezidivierende respiratorische Papillomatose (multiples, rezidivierendes Auftreten von meist gutartigen Plattenepithelpapillomen im Kehlkopf bis in Luftröhre (Trachea) und Lunge.
+Kondyloma-Virus 11 (HPV-11) – Feigwarzen; sehr selten: Rezidivierende respiratorische Papillomatose (multiples, rezidivierendes Auftreten von meist gutartigen Plattenepithelpapillomen im Kehlkopf bis in Luftröhre (Trachea) und Lunge).
+Humanes Papillomvirus 16 /18 /30 … (HPV-16 /-18 /-30 …) – Zervixkarzinom (Gebärmutterhalskrebs)
+
+
+==== Einzelsträngige DNA-Viren (ssDNA) ====
+Familie ParvoviridaeUnterfamilie ParvovirinaeGattung Dependoparvovirus (alias Dependovirus)Spezies Adenoassoziiertes Virus A (AAV-A)Adenoassoziiertes Virus 1 bis 4 (AAV-1 bis AAV-4)Spezies Adenoassoziiertes Virus B (AAV-B)Adenoassoziiertes Virus 5 (AAV-5)Gattung Erythroparvovirus (alias Erythrovirus)Spezies Primate erythroparvovirus 1Parvovirus B19 – Ringelröteln
+
+
+==== Doppelsträngige RNA-Viren (dsRNA) ====
+Familie Reoviridae
+Gattung Rotavirus
+diverse Arten – Gastroenteritis mit Durchfall
+Gattung Coltivirus
+Colorado-Tick-Fever-Virus – Colorado-Zeckenfieber
+
+
+==== Einzel(+)-Strang-RNA-Viren (ss(+)RNA) ====
+Familie Caliciviridae
+Gattung Norovirus
+Norovirus (NV) = Norwalk-Like-Virus (NLV)
+Humane Noroviren der Gruppen GGI, GGII und GGIV – Brechdurchfall = Gastroenteritis
+Gattung Sapovirus
+Sapovirus (SV) – Gastroenteritis
+Familie Hepeviridae
+Gattung Hepevirus
+Hepatitis-E-Virus (HEV) – Hepatitis E
+Familie Picornaviridae
+Gattung Enterovirus
+Poliovirus Typ 1–3 – Kinderlähmung
+Coxsackievirus A/B – von Erkältung bis Meningitis, Pankreatitis oder Myocarditis, selten auch Lähmungen
+Coxsackievirus B1 (CVB-1) bis B 6 – Erkältung
+Echovirus – Exantheme Enantheme, Infektionen des oberen Respirationstrakts (Erkältung), Herpangina, Myoperikarditis, verstreute (disseminierte) Infektion bei Neugeborenen, chronische Meningoenzephalitis bei immunsupprimierten Patienten, Meningitis, Enzephalitis selten Paralyse
+Enterovirus
+Humane Enteroviren – Erkältung
+Humanes Enterovirus 70 (EV-70) – akute hämorrhagische Konjunktivitis
+Humanes Enterovirus 71 (EV-71) – Meningoenzephalitis, Hautausschlag und Poliomyelitis ähnliches Syndrom = Hand-Fuß-Mund-Krankheit
+Gattung Hepatovirus
+Hepatitis-A-Virus – Hepatitis A
+Gattung Rhinovirus
+Rhinovirus
+Humane Rhinoviren-1 A (HRV-1 A) oder 1 B bis 100 – Erkältung
+
+
+=== Onkoviren ===
+Die Gruppe der „Onkoviren“, der wichtigsten beim Menschen krebserzeugenden (karzinogenen) Viren, ist weltweit für 10 bis 15 Prozent aller Krebserkrankungen des Menschen verantwortlich, nach Schätzung der amerikanischen Krebsgesellschaft sogar für etwa 17 % der Krebsfälle.
+Epstein-Barr-Virus (EBV)
+Hepatitis-B-Virus (HBV)
+Hepatitis-C-Virus (HCV)
+Humanes Papillomvirus (HPV)
+Humanes T-lymphotropes Virus 1 (HTLV-1)
+Humanes Herpesvirus 8 (HHV-8, auch Kaposi-Sarkom-Herpesvirus, KSHV)
+
+
+== Riesenviren ==
+
+
+== Antivirale Medikamente ==
+Da Viren beziehungsweise Virionen im Gegensatz zu Bakterien keine Zellen sind, können sie auch nicht wie solche abgetötet werden. Es ist lediglich möglich, eine virale Infektion und die Virusvermehrung durch Virostatika zu be- oder zu verhindern. Besonders die biochemischen Vermehrungsabläufe können von Virusart zu Virusart sehr unterschiedlich sein, was die Findung eines hemmenden oder unterbindenden Wirkstoffes erschwert.
+Da die Vermehrung der Viren im Inneren von normalen Zellen stattfindet und sich dort sehr eng an die zentralen biochemischen Zellmechanismen ankoppelt, müssen die in Frage kommenden antiviralen Wirkstoffe
+
+das Eindringen der Virionen in die Wirtszellen verhindern,
+in den Zellstoffwechsel zum Nachteil der Virusvermehrung eingreifen oder
+nach einer möglichen Virusvermehrung in den Zellen das Austreten der neuen Viren aus den Zellen unterbinden.Andererseits müssen diese gesuchten Wirkstoffe jedoch auch für den Körperstoffwechsel, den Zellverband und/oder den internen Zellstoffwechsel insgesamt verträglich sein, da sonst nicht nur beispielsweise die Virusvermehrung in den Zellen zum Erliegen kommt, sondern schlimmstenfalls auch das (Zell-)Leben des gesamten behandelten Organismus.
+Da sich diese Bedingungen sehr schwer vereinbaren lassen, bergen die bisher entwickelten antiviralen Medikamente oft das Risiko schwerer Nebenwirkungen. Diese Gratwanderung stellt die Medizin vor schwierige Aufgaben, die bislang meist ungelöst blieben.
+Verschärft wird die Entwicklung von effektiven antiviralen Medikamenten außerdem durch die Entwicklung von Resistenzen der zu bekämpfenden Viren gegenüber einem einmal gefundenen, brauchbaren Wirkstoff, zu der sie auf Grund ihres extrem schnell ablaufenden Vermehrungszyklus und der biochemischen Eigenart dieser Replikation gut in der Lage sind.
+
+
+== Therapie mit Viren ==
+Aktuell wird verstärkt an Therapien geforscht, bei denen Viren zur Heilung von Krankheiten eingesetzt werden. Diese Forschungen umfassen den Einsatz viraler Vektoren unter anderem als onkolytische Viren zur Bekämpfung von Tumoren, als Phagentherapie zur gezielten Infektion und Lyse von zum Teil antibiotikaresistenten Bakterien, als Impfstoff zur Prophylaxe und Therapie von Infektionskrankheiten, zur Erzeugung von induzierten pluripotenten Stammzellen oder zur Gentherapie von Gendefekten.
+
+
+== Virenvermehrung im Labor ==
+Im Jahr 2022 ist es in München erstmals gelungen, Bakterienviren in einer zellfreien Nährlösung aus einem Extrakt aus molekularen Bausteinen und Enzymen von Kolibakterien zu vermehren, d. h. nach Zugabe der Phagen-DNA entstanden funktionsfähige Viruspartikel (Virionen). Man erhofft sich davon die reproduzierbare und maßgeschneiderte Herstellung von Phagen für die Therapie bakterieller Infektionen durch antibiotikaresistente Keime.
+
+
+== Siehe auch ==
+Endogenes Retrovirus
+Extremophile
+Kategorie:Virologe
+
+
+== Literatur ==
+Ältere Literatur
+Feodor Lynen: Das Virusproblem. In: Angewandte Chemie. Band 51. Nr. 13, 1938, ISSN 0044-8249, S. 181–185.Aktuelle Literatur
+Hans W. Doerr, Wolfram H. Gerlich (Hrsg.): Medizinische Virologie – Grundlagen, Diagnostik und Therapie virologischer Krankheitsbilder. Thieme, Stuttgart/ New York 2002, ISBN 3-13-113961-7.
+Walter Doerfler: Viren. Fischer Taschenbuch Verlag, Frankfurt am Main 2002, ISBN 3-596-15369-7.
+Dietrich Falke, Jürgen Bohl u. a.: Virologie am Krankenbett: Klinik, Diagnostik, Therapie. Springer, Heidelberg u. a. 1998, ISBN 3-540-64261-7 (mit Literaturangaben).
+Matthias Eckoldt Virus: Partikel, Paranoia, Pandemien. Ecowin, Salzburg/ München 2021, ISBN 978-3-7110-0275-4.
+Dietrich Falke, Jürgen Podlech: Viren. In: Peter Reuter: Springer Lexikon Medizin. Springer, Berlin u. a. 2004, ISBN 3-540-20412-1, S. 2273–2282.
+S. J. Flint, L. W. Enquist, V. R. Racaniello (Hrsg.): Principles of Virology. 2. Auflage, ASM Press, Washington DC 2003, ISBN 1-55581-259-7.
+Alfred Grafe: Viren – Parasiten unseres Lebensraumes. Springer, Berlin/ Heidelberg/ New York 1977, ISBN 3-540-08482-7.
+David M. Knipe, Peter M. Howley et al. (Hrsg.): Fields’ Virology. 2 Bände, 5. Auflage, Lippincott Williams & Wilkins, Philadelphia 2007, ISBN 978-0-7817-6060-7 (Standardwerk der Virologie).
+Arnold J. Levine: Viren: Diebe, Mörder und Piraten. Spektrum Akademischer Verlag, Heidelberg 1992, ISBN 3-86025-073-6.
+Susanne Modrow, Dietrich Falke, Uwe Truyen: Molekulare Virologie. Eine Einführung für Biologen und Mediziner (= Spektrum-Lehrbuch). 2. Auflage, Spektrum Akademischer Verlag, Heidelberg 2002, ISBN 3-8274-1086-X.
+Stephen S. Morse: The Evolutionary Biology of Viruses. Raven Press, New York 1994, ISBN 0-7817-0119-8.
+Sven P. Thoms: Ursprung des Lebens: wie und wann entstand Leben auf der Erde? … (= Fischer-Taschenbücher; Fischer kompakt.). Fischer Taschenbuch Verlag, Frankfurt a. M. 2005, ISBN 3-596-16128-2.
+Luis P. Villarreal: Viruses and the Evolution of Life. ASM Press, Washington 2005, ISBN 1-55581-309-7.
+Ernst-Ludwig Winnacker: Viren: Die heimlichen Herrscher. Wie Grippe, Aids und Hepatitis unsere Welt bedrohen. Eichborn, Frankfurt am Main 1999, ISBN 3-8218-1598-1.
+Gottfried Schuster: Viren in der Umwelt. Teubner, Stuttgart 1998, ISBN 3-519-00209-4.
+Dorothy H. Crawford: The invisible enemy: a natural history of viruses. Oxford University Press, Oxford 2002, ISBN 0-19-856481-3.
+Brian W. Mahy: The dictionary of virology. Elsevier, Amsterdam 2008, ISBN 0-12-373732-X.
+Susanne Modrow: Viren: Grundlagen, Krankheiten, Therapien. [Eine allgemeinverständliche Einführung für medizinische Laien]. Beck, München 2001. ISBN 3-406-44777-5.
+Hartwig Klinker: Infektionen durch Viren. In: Marianne Abele-Horn (Hrsg.): Antimikrobielle Therapie. Entscheidungshilfen zur Behandlung und Prophylaxe von Infektionskrankheiten. (Unter Mitarbeit von Werner Heinz, Hartwig Klinker, Johann Schurz und August Stich) 2., überarbeitete und erweiterte Auflage, Peter Wiehl, Marburg 2009, ISBN 978-3-927219-14-4, S. 297–307.
+Marilyn J. Roossinck: Viren! Helfer, Feinde, Lebenskünstler – in 101 Porträts. Springer, Berlin 2018, ISBN 978-3-662-57543-7.
+Sunit K. Singh (Hrsg.): Viral Infections and Global Change. [Über den Einfluss der Globalisierung und des Klimawandels auf die Verbreitung und Übertragung von Viren, speziell tropischen Viren]. Wiley-Blackwell, Hoboken NJ 2014, ISBN 978-1-118-29787-2 (Print); ISBN 978-1-118-29809-1 (eBook).
+Eugene V. Koonin, Tatiana G. Senkevich, Valerian V. Dolja: The ancient Virus World and evolution of cells. In: Biology Direct. 19. September 2006, Band 1, Artikel 29, doi:10.1186/1745-6150-1-29, PMID 16984643, PMC 1594570 (freier Volltext) (englisch).
+
+
+== Film ==
+Wie Viren unseren Körper angreifen – Abwehrkampf im Inneren der Zelle. Dokumentation von Mike Davies, Wide-Eyed Entertainment für BBC, 2012, 46 min, deutsch (Englisches Original: Battlefield Cell in der Internet Movie Database (englisch))
+
+
+== Weblinks ==
+
+Viren: Aufbau, Spezifische Merkmale, Entwicklung, Zellbiologie, Unterscheidung zu Bakterien Auf: zytologie-online.net; zuletzt abgerufen am 31. März 2023.
+International Committee on Taxonomy of Viruses: ICTV. Auf: talk.ictvonline.org; zuletzt abgerufen am 31. März 2023.
+Craig Freudenrich, Patrick J. Kiger: How viruses work. Auf: science.howstuffworks.com vom 3. April 2020; zuletzt abgerufen am 31. März 2023.
+Virusworld. (aus Röntgenstrukturanalysen abgeleitete 3-D-Darstellungen von Viren)  Auf: virology.wisc.edu über archive.org vom 24. April 2011.
+Henning Engeln: Wie Viren die Evolution des Menschen beflügelten. Auf: riffreporter.de vom 8. April 2020; zuletzt abgerufen am 31. März 2023.
+Nadja Podbregar: Viren – Erfolgsmodell der Evolution. Dossier auf scinexx.de vom 3. April 2020; zuletzt abgerufen am 31. März 2023.
+
+
+== Einzelnachweise ==

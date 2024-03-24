@@ -1,0 +1,40 @@
+revision: 5785561
+title: Phonetics
+url: https://sl.wikipedia.org/wiki/Praat
+
+
+---
+
+Praat je prosti računalniški program za fonetične analize govora. Ustvarila sta ga Paul Boersma in David Weenink iz Univerze v Amsterdamu. Program razvijata in nadgrajujeta še naprej. Praat deluje na številnih operacijskih sistemih, vključno z več verzijami Unixa, Linuxa, Maca in Microsoft Windowsa (2000, XP, Vista, 7, 8, 10). Program podpira jezikovno sintezo.
+
+
+== Uporabnost ==
+Glede na namen se za jezikoslovno transkribiranje uporabljata predvsem dva računalniška programa – Transcriber in Praat. Oba imata svoje prednosti in slabosti. Poleg njiju obstaja še vrsta drugih jezikoslovnih računalniških orodij za transkribiranje, ki v slovenskem jezikoslovju niso v široki uporabi. 
+Prednosti Praata:
+
+Poleg transkribiranja ponuja tudi možnost akustične oz. fonetične analize govora (raziskovanje besedilnofonetičnih parametrov),
+možnost zapisa hkratnega govora več kot dveh govorcev,
+preprosto predvajanje zvočnega posnetka in segmentiranje signala na manjše enote,
+preprost prenos transkribiranega besedila v poljubni urejevalnik besedil,
+je prostodostopen,
+je pogosto uporabljan v slovenskem jezikoslovju; raziskovalne izkušnje z njegovo uporabo so javno objavljene na več mestih.Pomanjkljivosti Praata:
+
+Ne podpira slikovnih in prevelikih datotek,
+zaradi številnih funkcij akustične analize govora ni najbolj uporabniško prijazen za transkribiranje,
+ne omogoča vnosa podatkov o govorcih in diskurzih,
+ne omogoča vnosa metaoznak,
+izhodna datoteka ni v XML-formatu, ampak v posebni Praatovi obliki.
+
+
+== Zgodovina programskih verzij ==
+
+
+== Sklici ==
+
+
+== Viri ==
+Huber, Damjan (2017). »Raziskovalna izhodišča besedilnofonetične analize slovenskega medijskega govora (na primeru besednovrstne predvidljivosti poudarkov)«. Slavistična revija. Zv. 65, št. 2. str. 826–838. Dokument v dLib.Sever, Miha (2020). "Vpliv hitrosti govora na dolžino premorov v spikerskem govoru na primeru televizijskih informativnih oddaj 24ur in Dnevnik." Diplomsko delo. Ljubljana: Filozofska fakulteta. Dostopno na: https://repozitorij.uni-lj.si/IzpisGradiva.php?id=120497&lang=slv
+
+
+== Zunanje povezave ==
+Praat: doing Phonetics by Computer — Uradna spletna stran

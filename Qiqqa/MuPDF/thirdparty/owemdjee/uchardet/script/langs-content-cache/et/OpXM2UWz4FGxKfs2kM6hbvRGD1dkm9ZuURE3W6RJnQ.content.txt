@@ -1,0 +1,27 @@
+revision: 5801944
+title: Ip Man
+url: https://et.wikipedia.org/wiki/IP-kood
+
+
+---
+
+IP-kood või IP-kaitseaste (inglise Ingress Protection) on standardiga IEC 60529 määratud kaitseastme numbriline näit, mis iseloomustab elektriseadme kaitstust välismõjude, sealhulgas tolmu ja vee vastu. Standardi eesmärk on pakkuda täpset infot elektriseadmete vee- ja tolmukindluse kohta.
+Kood koosneb tähtedest "IP" ja kahest numbrist, mis kannavad infot seadme tugevuse kohta. Näiteks kaitseastmele IP22 (lugeda "kaks–kaks", mitte "kakskümmend kaks") vastavasse elektrivõrgu-pistikupessa ei saa toppida sõrmi ja seda ei kahjusta  vertikaalselt langevad piisad.
+
+
+== Koodi osad ==
+
+
+=== Kaitse tahkete osade eest ===
+IP-koodi esimene number väljendab kaitset tahkete osade sisestamise vastu.
+
+
+=== Veekindlus ===
+Teine number näitab korpuse veekindlust.
+
+
+== Viited ==
+
+
+== Välislingid ==
+Equipment for explosive atmospheres / Construction of electrical apparatus (general), IEV ref 426-04-02, degree of protection of enclosure IP (abbreviation) numerical classification according to IEC 60529 preceded by the symbol IP applied to the enclosure of electrical apparatus.

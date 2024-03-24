@@ -1,0 +1,74 @@
+revision: 1156147196
+title: Java class file
+url: https://en.wikipedia.org/wiki/Java_class_file
+
+
+---
+
+A Java class file is a file (with the .class filename extension) containing Java bytecode that can be executed on the Java Virtual Machine (JVM). A Java class file is usually produced by a Java compiler from Java programming language source files (.java files) containing Java classes (alternatively, other JVM languages can also be used to create class files). If a source file has more than one class, each class is compiled into a separate class file.
+JVMs are available for many platforms, and a class file compiled on one platform will execute on a JVM of another platform. This makes Java applications platform-independent.
+
+
+== History ==
+On 11 December 2006, the class file format was modified under Java Specification Request (JSR) 202.
+
+
+== File layout and structure ==
+
+
+=== Sections ===
+There are 10 basic sections to the Java class file structure:
+
+Magic Number: 0xCAFEBABE
+Version of Class File Format: the minor and major versions of the class file
+Constant Pool: Pool of constants for the class
+Access Flags: for example whether the class is abstract, static, etc.
+This Class: The name of the current class
+Super Class: The name of the super class
+Interfaces: Any interfaces in the class
+Fields: Any fields in the class
+Methods: Any methods in the class
+Attributes: Any attributes of the class (for example the name of the sourcefile, etc.)
+
+
+=== Magic Number ===
+Class files are identified by the following 4 byte header (in hexadecimal): CA FE BA BE (the first 4 entries in the table below). The history of this magic number was explained by James Gosling referring to a restaurant in Palo Alto:
+
+"We used to go to lunch at a place called St Michael's Alley.  According to local legend, in the deep dark past, the Grateful Dead used to perform there before they made it big.  It was a pretty funky place that was definitely a Grateful Dead Kinda Place.  When Jerry died, they even put up a little Buddhist-esque shrine.  When we used to go there, we referred to the place as Cafe Dead.  Somewhere along the line it was noticed that this was a HEX number.  I was re-vamping some file format code and needed a couple of magic numbers: one for the persistent object file, and one for classes.  I used CAFEDEAD for the object file format, and in grepping for 4 character hex words that fit after "CAFE" (it seemed to be a good theme) I hit on BABE and decided to use it.
+At that time, it didn't seem terribly important or destined to go anywhere but the trash-can of history. So CAFEBABE became the class file format, and CAFEDEAD was the persistent object format. But the persistent object facility went away, and along with it went the use of CAFEDEAD - it was eventually replaced by RMI."
+
+
+=== General layout ===
+Because the class file contains variable-sized items and does not also contain embedded file offsets (or pointers), it is typically parsed sequentially, from the first byte toward the end.  At the lowest level the file format is described in terms of a few fundamental data types:
+
+u1: an unsigned 8-bit integer
+u2: an unsigned 16-bit integer in big-endian byte order
+u4: an unsigned 32-bit integer in big-endian byte order
+table: an array of variable-length items of some type.  The number of items in the table is identified by a preceding count number (the count is a u2), but the size in bytes of the table can only be determined by examining each of its items.Some of these fundamental types are then re-interpreted as higher-level values (such as strings or floating-point numbers), depending on context.
+There is no enforcement of word alignment, and so no padding bytes are ever used.
+The overall layout of the class file is as shown in the following table.
+
+
+=== Representation in a C-like programming language ===
+Since C doesn't support multiple variable length arrays within a struct, the code below won't compile and only serves as a demonstration.
+
+
+=== The constant pool ===
+The constant pool table is where most of the literal constant values are stored.  This includes values such as numbers of all sorts, strings, identifier names, references to classes and methods, and type descriptors.  All indexes, or references, to specific constants in the constant pool table are given by 16-bit (type u2) numbers, where index value 1 refers to the first constant in the table (index value 0 is invalid).
+Due to historic choices made during the file format development, the number of constants in the constant pool table is not actually the same as the constant pool count which precedes the table.  First, the table is indexed starting at 1 (rather than 0), but the count should actually be interpreted as the maximum index plus one.  Additionally, two types of constants (longs and doubles) take up two consecutive slots in the table, although the second such slot is a phantom index that is never directly used.
+The type of each item (constant) in the constant pool is identified by an initial byte tag.  The number of bytes following this tag and their interpretation are then dependent upon the tag value.  The valid constant types and their tag values are:
+
+There are only two integral constant types, integer and long.  Other integral types appearing in the high-level language, such as boolean, byte, and short must be represented as an integer constant.
+Class names in Java, when fully qualified, are traditionally dot-separated, such as "java.lang.Object".  However within the low-level Class reference constants, an internal form appears which uses slashes instead, such as "java/lang/Object".
+The Unicode strings, despite the moniker "UTF-8 string", are not actually encoded according to the Unicode standard, although it is similar.  There are two differences (see UTF-8 for a complete discussion).  The first is that the code point U+0000 is encoded as the two-byte sequence C0 80 (in hex) instead of the standard single-byte encoding 00.  The second difference is that supplementary characters (those outside the BMP at U+10000 and above) are encoded using a surrogate-pair construction similar to UTF-16 rather than being directly encoded using UTF-8.  In this case each of the two surrogates is encoded separately in UTF-8.  For example, U+1D11E is encoded as the 6-byte sequence ED A0 B4 ED B4 9E, rather than the correct 4-byte UTF-8 encoding of F0 9D 84 9E.
+
+
+== See also ==
+Java bytecode
+
+
+== References ==
+
+
+== Further reading ==
+Tim Lindholm, Frank Yellin (1999). The Java Virtual Machine Specification (Second ed.). Prentice Hall. ISBN 0-201-43294-3. Retrieved 2008-10-13. The official defining document of the Java Virtual Machine, which includes the class file format. Both the first and second editions of the book are freely available online for viewing and/or download.

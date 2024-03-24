@@ -1,0 +1,75 @@
+revision: 67895829
+title: "Charakterystyka \u015Bwiat\u0142a nawigacyjnego"
+url: https://pl.wikipedia.org/wiki/Charakterystyka_%C5%9Bwiat%C5%82a_nawigacyjnego
+
+
+---
+
+Charakterystyka światła nawigacyjnego – zespół łatwych do zaobserwowania cech pozwalający na odróżnienie jednego światła nawigacyjnego od innych (na jego identyfikację).
+Najważniejszymi cechami światła są:
+
+Rodzaj – sposób, w jaki ono świeci,
+Okres – czas (podawany w sekundach, w którym światło przechodzi przez wszystkie różniące się fazy. Po zakończeniu jednego okresu (zwanego też cyklem) rozpoczyna się kolejny z identycznymi fazami,
+Barwa – kolor, jaki światło emituje.
+
+
+== Rodzaje świateł ==
+Najogólniej można wyróżnić następujące rodzaje świateł:
+
+stałe (ang.: Fixed) - światło nie zmieniające się w czasie (przy tym rodzaju światła trudno mówić o okresie, a faza jest tylko jedna).
+rytmiczne (ang.: Rythmic) - fazy świecenia i fazy zaciemnienia następują po sobie. Wśród tego rodzaju wyróżnić można trzy podrodzaje:
+światła przerywane (ang.: Occulting) - informację niesie zaciemnienie, pojedyncze lub w grupach o równym czasie zaciemnienia, przy czym ogólny czas świecenia w cyklu jest dłuższy od ogólnego czasu zaciemnienia,
+izofazowe (ang.: Izophase) - obie fazy (świecenia i zaciemnienia) są równej długości.
+światła w których czas świecenia jest krótszy od czasu zaciemnienia (informację niesie faza świecenia):
+błyskowe (ang.: Flashing) - blaski w ilości mniejszej niż 50 na minutę
+migające (ang.: Quick) - błyski powtarzają się z częstotliwością 50-80 na minutę
+szybko migające (ang.: Very quick) - błyski z częstotliwością 80-160 na minutę
+ultraszybko migające (ang.: Ultra quick) - błyski częściej niż 160 razy na minutę
+kodowe Morse'a (ang.: Morse Code) - światło emituje znak(i) alfabetu Morse'a
+rozbłyskowe (ang.: Fixed and flashing) - światło stałe wzmacniane rozbłyskami o większym natężeniu
+zmienne lub zmiennobarwne (ang.: Alternating) - poszczególne fazy różnią się barwą emitowanego światła.W poszczególnych rodzajach świateł fazy zaciemnienia lub światła mogą być zestawiane w proste grupy (ang.: Group) lub grupy złożone (ang.: Composite group), czy też podstawowa charakterystyka może być przerywana (ang.: Interrupted. W efekcie stosowane są następujące rodzaje świateł:
+
+Istnieje jeszcze światło wyłamujące się z tych podziałów. Jest ono szeroko stosowane w systemie IALA, jako światło południowego znaku kardynalnego (i zarezerwowane wyłącznie dla niego). Okres tego światła składa się z sześciu mignięć i jednego długiego błysku (lub sześciu szybkich mignięć i długiego błysku): Q(6) LFl W  lub VQ(6) LFl W.
+
+
+== Barwa ==
+białe (ang. white) oznaczone skrótowo: "W", polskie: "b" lub oznaczenie pominięte)
+czerwone (ang. red, oznaczenie skrótowe "R", polskie: "c")
+zielone (ang. green), oznaczenie skrótowe "G", polskie: "z")
+żółte (ang. yellow), oznaczenie skrótowe "Y", polskie: "ż")
+pomarańczowe (ang. orange), oznaczenie skrótowe "Or", polskie: "pm")Najczęściej stosuje się światła białe, ponieważ światło tej barwy ma największy zasięg widoczności przy określonej mocy źródła światła.
+
+
+== Zasięg ==
+Światło nawigacyjne dostrzeżone może być z pewnej odległości. Odległość umożliwiająca zobaczenie (w nawigacji: zaoczenie) światła nosi miano zasięgu. Zasięg zależy od:
+
+natężenia światła (światłości) i aktualnej przejrzystości powietrza - zasięg optyczny
+wysokości posadowienia źródła światła i wysokości oczu obserwatora (ograniczeniem jest krzywizna wynikająca z kulistości Ziemi - zasięg geometryczny.Dla każdego światła określa się (i podaje w jego charakterystyce) jego zasięg nominalny. Jest to zasięg optyczny dla określonej przejrzystości powietrza - równej 10 Mm. Dlatego dla określenia zasięgu optycznego w innych warunkach przejrzystości powietrza stosować należy poprawki.
+W spisie świateł znaleźć można wysokość źródła światła - co umożliwia wyliczenie zasięgu geometrycznego.
+
+
+== Oznaczenia ==
+Na mapach światła opisywane są jednoznacznymi skrótami, natomiast w spisach świateł prócz tego charakterystyka podana jest szczegółowo (z czasami trwania każdej fazy). Skrót składa się z:
+
+opisu rodzaju,
+barwy (przy czym jego brak wskazuje na barwę białą),
+długości okresu (podawanego w sekundach),
+wysokości źródła światła (ponad zero mapy),
+zasięgu nominalnego (podawanego w milach morskich).Jednak nie zawsze zamieszczony jest komplet informacji, informacje nieistotne lub oczywiste pomija się:
+
+
+== Identyfikacja ==
+Zaleca się by przy identyfikowaniu światła najpierw ustalić jego charakterystykę przez obserwację i pomiar (stoperem lub innym przyrządem), a dopiero potem odnajdywać światło w pomocach nawigacyjnych (na mapie, w spisach świateł lub innych). Postępowanie odwrotne może prowadzić do pomyłek (nawigator "widzi" to co właśnie przeczytał z mapy, a nie to co świeci w rzeczywistości).
+
+
+== Przypisy ==
+
+
+== Bibliografia ==
+Z. Dąbrowski, J. W. Dziewulski, M. Berkowski,  Vademecum żeglarstwa morskiego, Alma-Press, Warszawa, ISBN 83-7020-245-4
+Biuro Hydrograficzne Marynarki Wojennej RP, 551. Znaki skróty i terminologia stosowane na polskich mapach morskich.
+Biuro Hydrograficzne Marynarki Wojennej RP, Oznakowanie morskie - System IALA.
+
+
+== Linki zewnętrzne ==
+Strona z programem do ćwiczeń w rozpoznawaniu charakterystyk świateł (on-line)

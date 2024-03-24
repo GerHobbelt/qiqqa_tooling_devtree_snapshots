@@ -1,0 +1,124 @@
+revision: 22902063
+title: Virus
+url: https://cs.wikipedia.org/wiki/Virus
+
+
+---
+
+Virus (z lat. „virus“ – jed) je drobný vnitrobuněčný cizopasník nacházející se na pomezí mezi živým a neživým. Patří mezi tzv. nebuněčné organismy a svou stavbou se od buněk dramaticky liší. „Tělo“ virů je tvořeno tzv. virovou částicí, která je složena především z bílkovin a nukleových kyselin. Pro viry je charakteristické, že nerostou, nedělí se a ani nejsou schopné vyrábět (bez cizí pomoci) energii či vytvářet vlastní bílkoviny. Obvykle jsou také mnohem menší než třeba bakteriální buňky (nemluvě o lidských buňkách), ale existují výjimky: největším známým virem je Pithovirus veliký 1,5 mikrometru.
+Ty nejprimitivnější viry obsahují pouze svoji genetickou informaci ve formě DNA nebo RNA, které jsou uloženy v kapsidě. Ty složitější mohou navíc na povrchu obsahovat obalovou membránu pocházející z napadené buňky. V kapsidě mnohých virů mohou také být různé enzymy (s různou funkcí).
+Je oficiálně popsáno a klasifikováno přes 11 200 druhů virů. Dosud neznámých virů může být řádově více — podle odhadů jen savci hostí statisíce druhů virů. V oceánech bylo v r. 2019 molekulární analýzou viromů identifikováno téměř 200 tisíc různých populací virů. Viry hrají důležitou roli v přírodních systémech. Jako parazité napadají buňky organismů všech domén, od prokaryotních archeí a bakterií, přes jednobuněčné protisty až po mnohobuněčné organismy – živočichy (člověka nevyjímaje), rostliny i houby. Některé viry nesou přízvisko -fág, připojené ke slovnímu základu podle organismu, který napadají. Napadají-li bakterie, nazývají se bakteriofágy, viry napadající sinice se nazývají cyanofágy a nedávno byly objeveny i viry parazitující na velkých virech, tzv. virofágy. K nejznámějším virům patří HIV, HPV, virus Marburg, ebola či koronavirus SARS-CoV-2.
+Mnohé viry parazitující v buňkách svého hostitele (člověka, ale i jiného živočicha, houby či rostliny) mu mohou způsobovat různě závažná onemocnění, tzv. virózy. Léčivými přípravky účinkujícími proti virům jsou antivirotika. Žádné virové onemocnění nelze léčit antibiotiky. Důvodem podávání antibiotik u těchto onemocnění je předcházení následných takzvaných „superinfekcí“, tedy infekcí způsobených bakteriemi, které s odstupem několika dní napadnou organismus oslabený předchozím virovým onemocněním.
+
+
+== Historie výzkumu ==
+
+Slovo „virus“ původně znamenalo „jed“, nicméně v pozdní fázi 19. století se stalo synonymem pro termín „mikrob“. Postupně se ukazovalo, že některé mikroorganismy jsou poněkud zvláštní v tom, že se nezachytí na mikrobiologickém sítu tak, jako to dělají bakterie. Naopak, tyto mikroby procházely sítem a filtrát byl stále infekční. Postupně se objevovaly další a další příklady takových mikroorganismů a v roce 1928 vyšlo kompendium všech známých virů, nazvané Filterable Viruses, tedy „filtrovatelné viry“. Až postupně byl přívlastek „filtrovatelné“ vypuštěn a slovo virus získalo jednoznačný význam – takový, jak ho chápeme dnes.Až do konce devatenáctého století byly infekce přisuzovány vesměs bakteriím a o existenci něčeho menšího se nevědělo. Skutečný průlom nastal až v roce 1892, kdy ruský botanik Dmitrij Ivanovskij provedl slavný pokus s extrakty z tabáku napadeného tzv. tabákovou mozaikou. Když tento extrakt přecedil přes síto, jímž žádné bakterie neprojdou, filtrát byl stále infekční. Sám Ivanovskij příčinu tohoto jevu neodhalil a stále hledal původce tabákové mozaiky mezi bakteriemi. Roku 1898 pokus zopakoval Martinus Willem Beijerinck. Ten popsal infekční částice jako tzv. contagium vivum fluidum (z lat.,„nakažlivá živoucí tekutina“). Brzy byla objevena celá řada virů zodpovědných za různá onemocnění. Prvním objeveným virem napadajícím živočichy byl virus slintavky a kulhavky (1898), prvním objeveným lidským virem byl v roce 1900 virus žluté zimnice. V roce 1911 objevil Peyton Rous první virus způsobující nádorové bujení (tzv. Rousův sarkom). V prvních etapách dvacátého století však stále nebylo jasno, co vlastně jsou viry zač – tyto dohady vyřešil až d'Herelleho plakový test (1917) a především první elektronmikroskopický snímek virů (1939). V první polovině dvacátého století také bylo prokázáno, že se viry skládají z proteinů a nukleových kyselin. Od 60. let 20. století vědci začali používat viry jako modelové organismy ke studiu obecných procesů, které následně bylo možno zobecnit na všechen pozemský život – zejména v souvislosti s rozvojem genového inženýrství. Dochází k rozvoji poznatků o roli virů ve vzniku rakoviny či třeba k vývoji nových vakcín proti virovým onemocněním. Velkou výzvou pro virology byl, a stále je, virus HIV.
+
+
+== Na pomezí života ==
+Viry jsou někdy označovány za struktury „na pomezí života“. Některé vlastnosti virů nápadně připomínají rysy živých organismů: předně obsahují genetickou informaci uloženou v sekvenci nukleových kyselin a jsou schopné se vyvíjet a přizpůsobovat podmínkám prostředí. Přesto však nemohou vykonávat celou řadu biologických procesů a musí k tomu využívat služby hostitelských buněk. Nejsou schopny samy růst, dělit se či množit, ani si metabolicky opatřovat a ukládat energii nebo vyrábět vlastní bílkoviny. Mezi jednotlivými viry existují nicméně značné rozdíly a některé (např. Mimivirus) dokonce nesou geny pro výrobu svých bílkovin. Ani takto komplexní viry však nejsou schopné replikace (rozmnožování) bez hostitelské buňky. Viry je proto možné metaforicky označit za „jmelí na stromu života“.
+
+
+== Stavba ==
+Virová částice (virion) je komplex bílkovin a nukleových kyselin, který virům umožňuje šířit se mezi hostitelskými buňkami a mezi jedinci. Je poměrně obtížné charakterizovat stavbu virové částice obecně. Viry se vzájemně velmi odlišují už svou velikostí: průměr virové částice jen u klinicky významných virů sahá od pouhých 16-18 nm (parvoviry, circoviry) až po 300 nm u poxvirů. V poslední době jsou popisovány ještě větší virové částice: první z těchto obřích virů Mimivirus dosahuje velikosti až 750 nm. V roce 2013 a 2014 byly objeveny ještě větší viry – pandoraviry a pithoviry – s kapsidou o délce 1000 a 1500 nm.
+To znamená, že zatímco nejmenší viriony připomínají svou velikostí ribozom, obří viry jsou větší než nejmenší bakterie.
+Virová částice se skládá z bílkovinného pouzdra (tzv. kapsidy) a nukleové kyseliny (virového genomu). Některé virové částice navíc obsahují ještě vnější membránový obal.
+
+
+=== Kapsida ===
+
+Kapsida je bílkovinný plášť, který obklopuje virovou nukleovou kyselinu (DNA nebo RNA). Je složena z jednotlivých molekul proteinů, které se (často samy, bez pomoci jiných proteinů) spojují do trojrozměrného dutého útvaru. Takový útvar chrání nukleovou kyselinu (či případně i některé enzymy) nacházející se uvnitř kapsidy. Mimoto často zprostředkovává vazbu na povrchové receptory buněk hostitele a plní i celou řadu dalších doplňkových rolí.Kapsida má nejčastěji tzv. ikosaedrální nebo helikální tvar:
+
+Ikosaedrální kapsida – má ji např. virus dětské obrny nebo herpetické viry. Ikosaedr je česky dvacetistěn, což poměrně přesně vystihuje základní strukturu virů s tímto typem kapsid. Z hlediska geometrie je dvacetistěn trojrozměrné těleso v prostoru, jehož stěny tvoří dvacet stejných rovnostranných trojúhelníků. Virus musí celý tento útvar vystavět z proteinů. Bude-li umístěn jeden virový protein do každého rohu všech trojúhelníků, vychází minimální požadavek na 60 kapsidových proteinů. Jsou možné i násobky čísla 60, ty jsou pro každý druh viru charakteristické a udává je tzv. triangulační číslo.
+Helikální kapsida – má ji např. virus chřipky nebo virus tabákové mozaiky. Má zpravidla válcovitý až vláknitý tvar a je tedy zorientována podél jediné, podélné osy. Vzniká šroubovicovitým kladením kapsidových proteinů kolem dokola s pozvolným stoupáním. Pro helikální kapsidy je typické, že se na ně nukleová kyselina zevnitř váže a stáčí, čímž poměrně věrně kopíruje jejich šroubovicovité uspořádání.
+
+
+=== Genetický materiál ===
+Všechny virové částice však musí obsahovat dědičnou výbavu viru – virový genom. Ten obsahuje od pouhých několika genů (virus tabákové mozaiky má pouhé 3 geny) až po několik tisíc (genom mimiviru obsahuje asi 1262 genů, tj. dvakrát více než nejjednodušší bakterie). Virové geny a jimi kódované proteiny většinou rozdělujeme na strukturální, tj. takové, které tvoří součást infekční virové částice (virionu) a nestrukturální – tj. většinou enzymy zodpovědné za replikaci viru a za přeprogramování hostitelské buňky pro potřeby viru. Jindy jsou rovněž geny rozdělovány na rané (early) a pozdní (late) podle toho, jak dlouho po infekci hostitelské buňky začne jejich exprese.
+
+
+=== Obal ===
+
+Některé viry jsou kromě kapsidy ještě obaleny polopropustnou membránou – např. viry chřipky nebo HIV.
+
+
+== Klasifikace ==
+Klasifikace a názvosloví virů je – s ohledem na obrovskou rozmanitost a proměnlivost virů – poněkud kontroverzní a složité téma. Je však velmi důležité, aby byly vypracovány nějaké klasifikační systémy. Virů bylo popsáno značné množství a bez nějaké promyšlené klasifikace se velmi těžko zpracovávají např. internetové virové databáze. Důležitým orgánem činným v tomto procesu je Mezinárodní výbor pro klasifikaci virů (ICTV), který se tomuto úkolu věnuje již od roku 1966 a pravidelně aktualizuje klasifikaci virů.
+
+
+=== Systém ICTV ===
+
+ICTV prosazuje systém založený na virových druzích, rodech, čeledích, řádech, třídách, kmenech, říších a realmech. Ve aktualizaci z roku 2022 (ratifikované v březnu 2023) uvádí ICTV 11 273 druhů virů ve 2 818 rodech, 264 čeledích, 72 řádech, 40 třídách, 17 kmenech, 10 říších a 6 realmech.Klasifikace virů dle ICTV zahrnuje také viroidy (nezařazené čeledi Avsunviroidae a Pospiviroidae), vybrané virofágy (nezařazená čeleď Lavidaviridae) a jiné satelitní viry (např. v čeledi Parvoviridae realmu  Monodnaviria, čeledích Tombusviridae a Virgaviridae a nezařazených rodech Albetovirus, Aumaivirus, Papanivirus, Virtovirus realmu Riboviria, nebo čeledi Kolmioviridae realmu Ribozyviria), retrotranspozony (čeledi Metaviridae a Pseudoviridae z řádu Ortervirales), viriformy (nezařazené čeledi Bartogtaviriformidae, Brachygtaviriformidae, Polydnaviriformidae, Rhodogtaviriformidae) a satelitní nukleové kyseliny (nezařazené čeledi Alphasatellitidae a Tolecusatellitidae).
+
+
+=== Baltimorova klasifikace ===
+V praxi se často používá tzv. Baltimorova klasifikace, která dělí viry do sedmi skupin (někdy nazývaných třídy):
+Skupina I – viry s dvouvláknovou DNA (mRNA je tvořena asymetrickou transkripcí)
+Skupina II – viry s jednovláknovou DNA (nejdříve je vytvořena dvouvláknová DNA, která slouží jako templát pro syntézu mRNA)
+Skupina III – viry s dvouvláknovou RNA (mRNA je tvořena asymetrickou transkripcí)
+Skupina IV – viry s jednovláknovou RNA s pozitivní polaritou (tvořená mRNA je identická s genomem, může být tedy přímo použita pro syntézu virových proteinů)
+Skupina V – viry s jednovláknovou RNA s negativní polaritou (tvořená mRNA je komplementární s genomem, před syntézou proteinů tedy musí být genom nejdříve replikován)
+Skupina VI – retroviry, viry s jednovláknovou RNA, ale v jejich rozmnožovacím cyklu je i stadium DNA
+Skupina VII – viry s dvouvláknovou DNA, která je v průběhu cyklu přepisována do RNA a pak následně zpět do DNAGenom virů může být lineární či cirkulární a segmentovaný či celistvý. ssRNA viry můžou mít zápornou nebo kladnou polaritu.
+Jedná se o jednoduché a běžně používané třídění, které lze zpravidla nadřadit systému ICTV. To ale neznamená, že se jedná o fylogeneticky přirozené taxony; ani jejich vymezení podle genomu nemusí být úplně přesné vzhledem k podřazeným taxonům ICTV.
+
+
+== Rozmnožování ==
+Rozmnožování virů probíhá tzv. replikací. Ta má obecně 4 fáze, rostlinné viry však zpravidla první a druhou fázi vynechávají kvůli buněčné stěně rostlinných buněk, šíří se prostřednictvím plasmodesmat
+
+Adsorpce – navázání viru na buňku; Jde o specifický proces, je nutná přítomnost receptoru na povrchu buňky a ligandu na povrchu viru
+Penetrace – proniknutí viru do buňky
+Endocytóza – využívá se vezikulární transport buňky, ta vir přenese do časného endozomu a odtud vir pokračuje do jiných částí buňky
+Fúze – obalený virus nese protein, který mu dovolí sfúzovat s membránou hostitelské buňky; tyto proteiny lze využít v manipulaci s buňkami; kdysi gen pro tento protein od virů, pravděpodobně retrovirů, získal prasavec, což umožnilo vznik placenty a evoluci naším směrem
+Eklipsa – vlastní replikace
+Uvolnění nukleové kyseliny z kapsidy
+Replikace virové nukleové kyseliny
+Syntéza virových bílkovin
+Maturace – dokončení replikace
+Autoagregace (někdy jsou potřeba enzymy) kapsomer v kapsidě
+U obalených virů dochází k obalení membránou
+Uvolnění viru z buňkyPokud není žádná fáze přerušena, nazývá se rozmnožovací cyklus jako lytický.
+Pokud není žádná fáze přerušena, ale virus místo zabití buňky uvolňuje virové partikule v malém množství, nazývá se virová infekce jako latentní.
+Pokud je během fáze eklipsy virový genom začleněn do hostitelského genomu, mluví se o perzistenci. Z viru se stává provirus a čeká na podnět k opětovné aktivaci.
+Pokud je během fáze eklipsy virový genom začleněn do hostitelského genom a ten tak získá novou vlastnost (nádorové bujení,...), mluví se o virogenii. Toho se využívá v genetickém inženýrství.
+Schopnost virem napadených buněk uskutečňovat genetický program nukleové kyseliny viru se nazývá permisivita.
+Každý vir je víceméně unikátní a popis detailních rozmnožovacích strategií je nad rámec této stránky.
+
+
+== Virová onemocnění ==
+
+Viry jsou tzv. obligátní cizopasníci, žádný virus není schopen žít bez svého hostitele. Hostitelem může být v podstatě jakýkoliv organismus: např. bakterie (příslušné viry se nazývají bakteriofágy, příp. u sinic cyanofágy), rostlinné buňky (tzv. fytoviry), buňky hub (mykoviry) a samozřejmě také živočišné buňky (zooviry). Ne každá infekce virem musí způsobit onemocnění, mnohdy je průběh bez jakýchkoliv pozorovatelných příznaků. Celá řada virů však způsobuje vážná onemocnění: virová onemocnění dolních cest dýchacích (chřipka), AIDS, virem způsobené průjmy, ale i spalničky jsou na čelních místech ve statistikách úmrtnosti lidí na infekční onemocnění. Mnohé způsobují obrovské ekonomické ztráty v zemědělství (namátkou virus Tungro zničí za jeden rok úrodu rýže za 1,5 mld. dolarů, dle Hull and Davies (1992)). Konkrétní projevy nemocí se silně odvíjí od typu virů a jejich hostitelů.
+
+
+=== Lidské virózy ===
+K vzniku a propuknutí virózy nemoci přispívá celá řada faktorů, které se společně podílí na tzv. patogenezi. Ke vzniku onemocnění může dojít na místě infekce (tzv. lokální infekce), nebo v jiné tkáni, kam virus doputoval krví, mízou nebo nervovou tkání (tzv. generalizovaná infekce). Následně dochází k poškozování tkáně, a to buď přímým patogenním působením množícího se viru, nebo kvůli imunitní obraně, která útočí na virem napadenou tkáň.Imunitní reakce je přirozená obrana těla před cizorodými částicemi, v tomto případě viry. Vyvinulo se množství mechanismů, jimiž se lidské tělo brání virové infekci, a to jak v oblasti tzv. vrozené imunity, tak i v imunitě adaptivní. Na druhou stranu, viry si často vyvíjí způsoby, jak imunitní obranu přelstít či oklamat. Schopnost těla odolat virové infekci je dána právě tím, kdo pomyslný „souboj“ vyhraje.Proti některým virózám je k dispozici účinná vakcína, proti některým virům byla vyvinuta léčiva specificky blokující některý virový enzym, tzv. virostatika. Množství léků však pouze potlačuje symptomy, ale samotnou příčinu onemocnění nevyřeší, hlavní boje totiž svádí imunitní systém hostitele. Na virová onemocnění však nemá žádný vliv léčba antibiotiky, přestože jsou někdy u virových onemocnění chybně nasazována.
+
+
+== Odkazy ==
+
+
+=== Poznámky ===
+
+
+=== Reference ===
+
+
+=== Literatura ===
+LHOTSKÝ, Josef. Úvod do studia symbiotických interakcí mikroorganismů. Nový pohled na viry a bakterie. Praha, Academia, 2015, 208 s.
+ROSYPAL, Stanislav. Bakteriologie a virologie. 1. vyd. Praha: [s.n.], 1994. ISBN 80-85827-16-6. 
+BEDNÁŘ, Marek. Lékařská mikrobiologie : bakteriologie, virologie, parazitologie. 1. vyd. Praha: Marvil, 1996. ISBN 80-85827-16-6. 
+KONVALINKA, Jan. Viry pro 21. století. 2. vyd. Praha: Academia, 2013. ISBN 978-80-200-2271-4. 
+KNIPE, David M.; HOWLEY, Peter M. Fields Virology. 5. vyd. [s.l.]: Lippincott Williams & Wilkins, 2007. (anglicky) 
+
+
+=== Externí odkazy ===
+ Obrázky, zvuky či videa k tématu virus na Wikimedia Commons 
+ Téma Vir ve Wikicitátech
+ Slovníkové heslo virus ve Wikislovníku
+ Encyklopedické heslo Virus v Ottově slovníku naučném ve Wikizdrojích
+(anglicky) Přehled všech známých virů uznaných ICTV a jejich aktuálního taxonomického zařazení
+(anglicky) Atlas virových struktur VIPER
+(anglicky) Rozcestník All the virology on the net
+(anglicky) Databáze všech popsaných virů, ICTV
+(anglicky) ViralZone – Databáze virů a jejich charakteristika Archivováno 11. 5. 2011 na Wayback Machine.

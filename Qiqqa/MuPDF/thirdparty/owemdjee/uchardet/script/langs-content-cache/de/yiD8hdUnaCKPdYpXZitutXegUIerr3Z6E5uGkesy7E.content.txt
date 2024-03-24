@@ -1,0 +1,185 @@
+revision: 233918442
+title: Cyanobakterien
+url: https://de.wikipedia.org/wiki/Cyanobakterien
+
+
+---
+
+Die Cyanobakterien (wissenschaftlich Cyanobacteria, von altgriechisch κυανός kyanós, deutsch ‚blau‘, daher auch Blaugrünbakterien) bilden eine Abteilung (Phylum) der Domäne Bacteria.
+Sie zeichnen sich vor allen anderen Bakterien durch ihre  Fähigkeit zur oxygenen Photosynthese aus.
+Früher wurden sie zu den Phycophyta (Algen) gerechnet und als Klasse Cyanophyceae („Blaualgen“) geführt.
+Der Name Cyanophyceae für eine einzige Klasse der Abteilung Cyanobacteria wird auch heute noch teilweise verwendet, etwa von AlgaeBase, während andere Quellen innerhalb der Cyanobakterien verschiedene Teilklassen (wie Gloeobacteria und Oscillatoriophycideae) identifizieren.Einige Cyanobakterien enthalten neben anderen Photosynthese-Farbstoffen blaues Phycocyanin und ihre Farbe ist deshalb blaugrün – ein Umstand, dem die ganze Klade ihre verschiedenen Namen (Cyanobakterien, Blaugrünbakterien und Blaualgen) verdankt, darunter auch Mitglieder, die kein Phycocyanin enthalten und daher nicht blaugrün gefärbt sind.
+Der Begriff „Algen“ bezieht sich im weiteren Sinn auf alle Wasserorganismen, die zur Photosynthese fähig sind, das trifft für die echten Cyanobakterien (Oxyphotobacteria, s. u.) wie auch für die eukaryotischen Grünalgen zu, worin die Bezeichnung „Blaualgen“ begründet ist. 
+Cyanobakterien besitzen aber im Gegensatz zu Algen keinen echten Zellkern und sind somit als Prokaryoten nicht mit den im üblichen Sprachgebrauch als „Algen“ bezeichneten eukaryotischen Lebewesen (Grünalgen etc.) verwandt, sondern gehören zu den Bakterien – aus diesem Grund findet sich für das Taxon gelegentlich auch die etwas ungenaue Bezeichnung Cyanoprokaryoten (englisch cyanoprokaryotes).Cyanobakterien  besiedeln vermutlich seit mehr als 3,5 Mrd. Jahren (Archaikum) die Erde und zählen zu den ältesten Lebensformen überhaupt.
+Sie können die Richtung des Lichteinfalls wahrnehmen.
+Nach der Endosymbiontentheorie sind die Cyanobakterien die Vorläufer der Chloroplasten: Chlorophyllfreie Vorläufer („Protozoen“) nahmen einst Cyanobakterien auf, die zu Endosymbionten und dann zu Chloroplasten wurden. Erst die Cyanobakterien machten also die Grünalgen grün (ein Umstand, der dann doch eine gewisse Gemeinsamkeit bedeutet).
+Manchmal wird abweichend die Bezeichnung Cyanobakterien bzw. Cyanobacteria sensu lato (im weiteren Sinne) verwendet, indem einige verwandte Gruppen (wie die Melainabacteria und die Sericytochromatia) mit einbezogen werden, die keine Photosynthese betreiben.
+Die eigentlichen, photosynthetisch aktiven Cyanobakterien werden dann als Oxyphotobacteria bezeichnet.
+Wegen ihrer hohen Diversität hat es auch Vorschläge gegeben, den Cyanobakterien (sensu lato) den Rang eines Superphylums (Überabteilung) zu verleihen (Cavalier-Smith 2006).Das National Center for Biotechnology Information (NCBI) verwendet jedoch den Terminus Cyanobacteria (Cyanobakterien) sensu stricto (im engeren Sinne) synonym zu Oxyphotobacteria, und für die größere Verwandtschaftsgruppe die Bezeichnung Cyanobacteria/Melainabacteria group (Cyanobacteria/Melainabacteria-Gruppe). Wo nicht anders vermerkt, wird im weiteren Verlauf dieser Sprachgebrauch übernommen.
+Mehr als 2000 Arten von Cyanobakterien sind benannt, die in etliche Ordnungen eingeteilt werden;
+die Identifizierung von Klassen ist derzeit (Oktober 2021) noch nicht abgeschlossen (s. o.).
+
+
+== Merkmale und Vorkommen ==
+Cyanobakterien sind gramnegativ und ein- bis vielzellig. Bei mehrzelligen Cyanobakterien ist die Anordnung der Zellen entweder hintereinander in langen Fäden (Trichome genannt, zum Beispiel Anabaena und Oscillatoria), flächig (zum Beispiel Merismopedia) oder räumlich (zum Beispiel Pleurocapsa und Microcystis).
+Cyanobakterien kommen als Kosmopoliten ubiquitär überwiegend in Süßwasser und Feuchtböden vor, aber auch in Meereswasser, auf Baumrinde und auf Gesteinsoberflächen.
+
+
+== Photosynthese bei Oxyphotobacteria ==
+
+Die Photosynthese der Cyanobakterien findet an bzw. in deren Thylakoidmembranen statt und läuft dort ähnlich wie in den Thylakoiden der Chloroplasten der eukaryotischen Algen, Moose, Farne und Samenpflanzen ab. Die Cyanobakterien nutzen für ihre Photosynthese nicht nur den Teil des Lichtspektrums, den auch die grünen Pflanzen verwenden, sondern sie haben neben Chlorophyll a einen zusätzlichen Antennenkomplex in Form von Phycobilisomen, in denen Phycobiline, nämlich Phycocyanin (blau) oder Phycoerythrin (rot), enthalten sind. Phycocyanin verleiht vielen Cyanobakterien ihre bläuliche Färbung, manchen (z. B. Planktothrix rubescens) verleiht Phycoerythrin eine rote Färbung. Da das Verhältnis der einzelnen Pigmente zueinander stark schwanken kann, erscheinen Cyanobakterien mitunter auch grün oder sogar schwarz (‚Tintenstriche‘). Phycobiline ermöglichen die Nutzung eines größeren Bereichs des Lichtspektrums (in der Grünlücke der Pflanzen, dem Wellenlängenbereich von ca. 500 bis 600 nm). Die Effizienz der Lichtverwertung ist bei Phycoerythrin sogar größer als beim Chlorophyll. Cyanobakterien können auf diese Weise ausgesprochene Schwachlichtbereiche erfolgreich besiedeln, wie z. B. die Unterseite von Flussgeröll oder tiefe Schichten in Seen.
+Einige Cyanobakterien können auch eine anoxygene Photosynthese mit Schwefelwasserstoff (H2S) als Reduktionsmittel betreiben, sie bilden dabei also keinen Sauerstoff (O2). Vor kurzem wurde ein Cyanobakterium entdeckt (UCYN-A, engl. unicellular N2-fixing cyanobacteria in „group A“), bei dem das Photosystem II fehlt. Photosystem II enthält den wasserspaltenden Komplex, so dass dieses Cyanobakterium keine oxygene Photosynthese betreiben kann. Im Gegensatz zu oxygenen photoautotrophen Lebewesen fixiert dieser Stamm nicht Kohlenstoffdioxid (CO2) im Calvin-Benson-Basham-Zyklus und ist photoheterotroph. UCYN-A assimiliert aber elementaren Stickstoff (Distickstoff, N2), indem er ihn reduziert.
+
+
+== Nichtphotosynthetische Cyanobakterien ==
+Durch Genomanalysen ribosomaler 16S-rRNA wurden Verwandte der Cyanobakterien identifiziert, die keine Photosynthese betreiben. Sie werden u. a. als Melainabacteria und Sericytochromatia in der Literatur geführt. Weitere Genomanalysen haben ergeben, dass in beiden Stämmen die Gene für die Photosynthese fehlen. Infolgedessen haben sie sich stammesgeschichtlich von den Vorläufern der jetzigen Oxyphotobacteria (d. h. der echten Cyanobakterien) abgespalten, bevor diese über horizontalen Gentransfer zur Photosynthese befähigt wurden. Dies deutet auch darauf hin, dass der gemeinsame Vorläufer aller Cyanobakterien selbst nicht photosynthetisch aktiv war (s. u.).
+Cyanobakterien, Melainabakteria, Sericytochromatia bilden zusammen mit einigen weiteren kleineren Gruppen eine als Cyanobacteria/Melainabacteria-Gruppe bezeichnete Klade (Verwandtschaftsgruppe) innerhalb der postulierten Terrabacteria.Ähnlich wie bei einigen Melainabakterien die Geißeln wieder verloren gingen, haben auch einige der echten Cyanobakterien (alias Oxyphotobacteria) die Fähigkeit zur Photosynthese verloren. Spirulina albida ([en]) ist ein chlorophyllfreies, heterotrophes und saprotrophes Süßwasser-Cyanobakterium aus der Gattung Spirulina (nicht zu verwechseln mit Arthrospira, informell Spirulina genannt).Spirulina albida kommt in Oberflächenfilmen vor.
+
+
+== Stoffwechsel ==
+
+Viele Cyanobakterien können Stickstofffixierung betreiben: In Heterozysten wandeln sie molekularen Stickstoff (N2), abhängig vom pH-Wert, in Ammonium (NH4+) oder Ammoniak (NH3) um.
+Cyanobakterien produzieren sehr unterschiedliche Toxine. Am bekanntesten sind die Microcystine bei Vertretern der Gattung Microcystis sowie Cylindrospermopsin. Darüber hinaus konnte selbst in nicht näher verwandten Arten ein Neurotoxin, die giftige Aminosäure β-Methylamino-alanin (BMAA) nachgewiesen werden. Ausgehend von einem oft vermehrten Auftreten von Cyanobakterien bei sogenannten „Algenblüten“ können beim Verzehr von Fischen oder Muscheln solche Toxine und auch BMAA über die Nahrungskette in den menschlichen Organismus gelangen und gelegentlich zu tödlichen Vergiftungen führen.
+Cyanobakterien sind in der Naturstoffchemie sehr intensiv untersucht worden. Die identifizierten Sekundärmetaboliten zeigen sehr unterschiedliche pharmakologische Wirkungen.Forscher der Carnegie Institution fanden Anfang 2006, dass im Yellowstone-Nationalpark lebende Cyanobakterien einen im Tag-Nacht-Rhythmus wechselnden Stoffwechsel betreiben: tagsüber Photosynthese und nachts Stickstofffixierung. Dies ist nach heutigem Wissensstand einmalig.
+
+
+== Systematik ==
+
+Zur Taxonomie der Cyanobakterien existieren mehrere Systeme.
+
+
+=== Taxonomie nach NCBI ===
+Die Taxonomie-Datenbank des US-amerikanischen National Center for Biotechnology Information (NCBI) weist nur einem Teil der Cyanobakterien-Ordnungen eine der beiden Klassen zu. Bergey’s Manual of Systematic Bacteriology verwendet anstelle von Ordnung und Familie die selbst erfundenen Ränge Subsection und Subgroup, welche statt mit Namen mit römischen Ziffern bezeichnet werden, da nicht alle gebräuchlichen Ordnungen und Familien nach dem Bacteriological Code gültig beschrieben wurden.
+Taxonomie nach NCBI (Stand 12. Oktober 2021):Abteilung (Phylum) Cyanobacteria (alias Oxyphotobacteria, Cyanophyceae, …)
+
+Klasse Gloeobacteria Cavalier-Smith, 2002
+Ordnung Gloeobacterales: ca. 3 Gattungen, z. B. Gloeobacter
+Klasse Oscillatoriophycideae Hoffmann, Komarek & Kastovsky, 2005
+Ordnung Chroococcales: ca. 33 Gattungen, z. B. Chroococcus, Crocosphaera, Gloeocapsa und Microcystis
+Ordnung Oscillatoriales: ca. 68 Gattungen, z. B. Lyngbya, Oscillatoria, Arthrospira (de. Bez. Spirulina), Cyanothece mit der Hochmoor-Blaualge, Planktothrix mit der Burgunderblutalge, Phormidium, Trichodesmium, Tychonema, Oxynema, Moorea, Coleofasciculus, Microcoleus
+ohne Klassenzuweisung
+Ordnung Chroococcidiopsidales J.Komarek et al., 2014 mit Chroococcidiopsis
+Ordnung Gloeoemargaritales Moreira et al. 2017
+Ordnung Nostocales (mit früherer Ordnung Stigonematales)
+Familie Aphanizomenonaceae mit Gattungen Aphanizomenon, Nodularia
+Familie Calotrichaceae
+Familie Capsosiraceae
+Familie Chlorogloeopsidaceae
+Familie Cyanomargaritaceae mit Gattung Cyanomargarita
+Familie Dapisostemonaceae
+Familie Fortieaceae
+Familie Geitleriaceae
+Familie Gloeotrichiaceae mit Gattung Gloeotrichia
+Familie Godleyaceae
+Familie Hapalosiphonaceae
+Familie Heteroscytonemataceae
+Familie Nostocaceae: ca. 13 Gattungen, z. B. Anabaena, Cylindrospermum, Halotia, Nostoc, Nodularia, Richelia, Trichormus
+Familie Rhizonemataceae
+Familie Rivulariaceae: ca. 3 Gattungen, z. B. Rivularia
+Familie Scytonemataceae: ca. 3 Gattungen
+Familie Stigonemataceae: ca. 12 Gattungen, z. B. Stigonema
+Familie Symphyonemataceae
+Familie Tolypothrichaceae (mit früherer Familie Microchaetaceae)
+Ordnung Pleurocapsales: ca. 7 Gattungen, z. B. Pleurocapsa
+Ordnung Spirulinales mit Gattung Spirulina (wiss. Name)
+Ordnung Synechococcales (mit früherer Ordnung Prochlorales)
+Familie Acaryochloridaceae mit Gattung Acaryochloris
+Familie Chamaesiphonaceae
+Familie Coelosphaeriaceae
+Familie Merismopediaceae mit Gattung Merismopedia
+Familie Prochloraceae (en. prochlorophytes): 1 Gattung, Prochloron
+Familie Prochlorococcaceae mit Gattungen Prochlorococcus, Parasynechococcus, Cyanobium
+Familie Prochlorotrichaceae mit Gattung Prochlorothrix
+Familie Synechococcaceae mit Gattung Synechococcacus
+die Familie Sinocapsaceae und die Gattung Lusitaniella werden vom NCBI ohne weitere Zuordnung geführt.Eine Klade von Cyanobakterien mit α-Carb­oxy­somen wird nach den in ihr enthaltenen (wichtigsten) Vertretern Synecho­coccus/Pro­chloro­coccus/Cyano­bium-Klade oder Alpha-Cyano­bakterien (α-Cyano­bacteria) genannt.
+Eine weitere Klade von Cyanobakterien mit β-Carb­oxy­somen, die u. a. Synecho­coccus enthält wird Beta-Cyano­bakterien (β-Cyano­bacteria) genannt.
+
+
+=== Taxonomie nach WoRMS ===
+Die Taxonomie der World of Marine Species (WoRMS) kennt nur Salz-, Brack- und Süßwasserorganismen (rezent oder fossil). Es gibt nur die eine herkömmlich Klasse Cyanophyceae, die aber in Unterklassen unterteilt ist.
+Taxonomie nach WoRMS (Stand 12. Oktober 2021):Abteilung (Phylum) Cyanobacteria mit der einzigen Klasse Cyanophyceae (alias Myxophyceae)
+
+Unterklasse Nostocophycideae
+Ordnung Nostocales
+Unterklasse Oscillatoriophycideae
+Ordnung Chroococcales (mit Familie Gloeobacteraceae)
+Ordnung Oscillatoriales
+Ordnung Spirulinales
+Unterklasse Synechococcophycideae
+Ordnung Pseudanabaenales
+Ordnung Synechococcales (Fam. Synechococcaceae inkl. Prochlorococcaceae)
+ohne Ordnungszuweisung: Acaryochloridaceae
+ohne Unterklassenzuweisung
+Ordnung Pleurocapsales
+Ordnung Stigonematales
+etliche Gattungen ohne jegliche weitere Zuordnung
+
+
+=== Taxonomie nach Cavalier-Smith ===
+Thomas Cavalier-Smith nennt 6 Ordnungen, von denen er die Gloeobacterales (mit der einzigen Gattung Gloeobacter) in eine eigene Unterabteilung Gloeobacteria stellt und die andere Unterabteilung, die Phycobacteria, in die Klassen Chroobacteria (Ordnungen Chroococcales, Pleurocapsales, Oscillatoriales) und Hormogoneae (Nostocales, Stigonematales) aufteilt.
+
+
+== Fossile Cyanobakterien ==
+Die taxonomische Zugehörigkeit der Fossilien von Cyanobakterien wurde lange Zeit aufgrund des Fehlens besonders diagnostischer morphologischer Merkmale wiederholt in Frage gestellt.
+Seit einiger Zeit stehen jedoch besser erhaltene Fossilien von Cyanobakterien bis zurück zum Proterozoikum zur Verfügung, darunter die folgenden Gattungen:
+Eoentophysalis aus der Belcher Supergroup (Entophysalidaceae, Alter ca. 2 Ga, d. h. 2 Milliarden Jahre; vgl. auch Eoentophysalis hutuoensis, Hebiancun-Formation, Paleoproterozoikum)
+Obruchevella ([en], Gaoyuzhuang-Formation in China und Burgess Shale u. a., 1,5 Ga über Kambrium bis Devon)
+Eohyella (Fossilien endolithischer Cyanobakterien, ca. 0,8 Ga, aus verkieselten Ooiden der Eleonore Bay Group; vgl. Eohyella dichotoma.).Aufgrund der guten Erhaltung dieser Fossilien gibt es diagnostische morphologische Merkmale für die Kalibrierung der molekularen Uhr der Cyanobakterien.Neben diesen gibt es auch erhaltene Strukturen von Plastiden fossiler (eukaryontischer) Algen, die mit ihren Wirtszellen eine Koevolution durchliefen.Zwei eng-spiralige (en. tightly coiled) Cyanobakterien aus marinen mikrobiellen Matten (BPC1_4624, BPC2_4625) wurden in eine Gruppe mit der zuvor sequenzierten fest gewickelten Spirulina und nicht mit den beiden lose gewickelten sequenzierten Arthrospira-Vertretern in Verbindung gebracht. Das Fehlen der gewundenen Gestalt bei anderen, eng verwandten Cyanobakteriengruppen deutet auf eine unabhängige Entwicklung dieses Merkmals innerhalb dieser beiden Gruppen hin.Die ältesten indirekten Hinweise auf die Existenz von Cyanobakterien könnten Einschlüsse von 12C (C-12) in 2,5 Milliarden Jahre altem grönländischem Rubin sein, die 2021 entdeckt wurden. Im Gegensatz zum Isotop 14C, das in der Atmosphäre auf abiotische Weise entsteht, liegt bei dieser Ansammlung von 12C eine biologische Entstehung, vorzugsweise durch Cyanobakterien, nahe.
+
+
+== Phylogenese ==
+
+Neuere molekulare Analysen haben etwa die folgenden äußere Verwandtschaftsbeziehungen ergeben:
+
+Anm.: [★] CgC = Crown group Cyanobacteria (bzw. Oxyphotobacteria)
+Die sauerstofferzeugende (oxygene) Photosynthese ist ein abgeleitetes Merkmal der Cyanobakterien, die diese Fähigkeit neben vier weiteren Bakteriengruppen entwickelt haben – diese anderen sind Purpurbakterien, Grüne Nichtschwefelbakterien, Heliobakterien, Grüne Schwefelbakterien und die Acidobakterien
+Sie nutzen das Sonnenlicht zur Photosynthese und setzten als Abfallprodukt Sauerstoff (O2) frei.
+Für ein ausführliches Chronogramm siehe Chronogramm der Cyanobakterien nach Fournier et al. (2021).Die Trennung der Linien von Melainabacteria und Cyanobacteria erfolgte vermutlich vor ca. 3,5 Milliarden Jahren.
+Während dann offenbar die Melainabakterien Geißeln erwarben,
+entwickelten die Cyanobakterien die Fähigkeit zur Photosynthese weiter.
+
+
+== Bedeutung für die Atmosphäre ==
+Vor etwa 2,4 bis 2,5 Milliarden Jahren veränderten die sich im Wasser massenhaft verbreitenden Vorläufer der heutigen Cyanobakterien dann entscheidend die Lebensbedingungen auf der Erde. Die massenhafte Produktion von Sauerstoff (durch Vertreter der Crown group der Cyanobakterien) bewirkte eine entscheidende Veränderung der bisher sauerstofflosen Atmosphäre in eine sauerstoffhaltige Atmosphäre (Große Sauerstoffkatastrophe, englisch Great Oxygenation Event, GOE).
+Die Anfänge der sauerstoffproduzierenden Cyanobakterien liegen demnach gut 300 Millionen Jahre vor dem GOE (Nachlauf-Theorie).
+Für diese Verzögerung wird der Impakt von Material durch auf die frühe Erde einschlagende Asteroiden in der Zeit vor 4 bis 2,5 Milliarden Jahren verantwortlich gemacht, das damals den Sauerstoff gebunden und aus der Atmosphäre entfernt hat.
+In der Zeit vor dem eigentlichen GOE kam es zu so genannten „Whiffs“ – dem kurzzeitigen Anstieg des Sauerstoffgehalts in der Atmosphäre, so dass der Sauerstoffgehalt der Atmosphäre über einen gewissen Zeitraum wie ein Jo-Jo auf und abging.
+Offenbar wurden diese Anstiege anfangs noch durch die Einschläge immer wieder unterbrochen (eine alternative Erklärung sieht jedoch eher einen durch Vulkanausbrüche Populationsanstieg mariner Mikroorganismen als Ursache der Whiffs).
+Als das kosmische Bombardement nachließ, reicherte sich die Atmosphäre mit Sauerstoff an und es kam zum GOE.Nach der Endosymbiontentheorie waren Vorfahren der heutigen Cyanobakterien die Vorläufer der Chloroplasten in grünen Pflanzen. Dafür spricht sowohl die übereinstimmende Zellanatomie als auch ein Satz übereinstimmender biochemischer Merkmale, welche die Cyanobakterien gleich wie die Chloroplasten von den Eigenschaften der Eukaryontenzellen unterscheiden.
+
+
+== Gewässerbelastung und Bedeutung für die Tierwelt ==
+
+Eine Massenentwicklung von Cyanobakterien kann die Wasserqualität stark vermindern und die Gewässernutzung deutlich einschränken. Sie produzieren eine Vielzahl von Sekundär­meta­boliten, die als Allelochemikalien, Ant­ibiotika, Hormone und Toxine wirken und z. B. Fische und Zooplankton schädigen können. Einige der Toxine gehören zu den stärksten natürlichen Giften und können auch für Menschen gesundheitsgefährdend sein. So können bei Badenden etwa allergische Hautreaktionen entstehen und auch Entzündungen. Schluckt man cyanobakterienhaltiges Wasser, kann es zudem Magen- und Darminfektionen geben.Im Jahr 2017 war im Tegeler See in Berlin, 2019 im Mandichosee bei Augsburg die Konzentration des Cyanobakteriengifts Anatoxin A so hoch, dass Tiere daran starben. Es handelte sich um Cyanobakterien der Gattung Tychonema, die auch mikroskopisch in den Seen nachgewiesen wurden. Im Sommer 2020 starben 6 Hunde nach einem Bad im Neuenburgersee infolge vermuteter erhöhter 'Blaualgenkonzentration', sodass ein Badeverbot erlassen wurde.In Afrika verendeten innerhalb weniger Monate im Jahr 2020 mehrere hundert Elefanten an Cyanobakterien.In den Vereinigten Staaten erkranken seit den 1990er Jahren gehäuft Vögel, Fische und Reptilien im Südosten der Vereinigten Staaten an einer tödlich verlaufenden neurologischen Erkrankung namens aviäre vakuoläre Myelinopathie. Dafür verantwortlich ist das Toxin Aetokthonotoxin. Für die Biosynthese dieses Toxins sind erhöhte Bromid-Konzentrationen in den Gewässern notwendig. Mit Bromid allein synthetisieren die Cyanobakterien allerdings noch keine großen Mengen des Nervengifts, sondern erst unter Stressfaktoren, wie einem Abfall der Wassertemperatur.Nach dem Absterben der Cyanobakterienmassen wird bei deren mikrobiellem Abbau Sauerstoff verbraucht. Dadurch wird die Sauerstoffkonzentration im Gewässer oft stark verringert, was zu einem Fischsterben führen kann.
+Die Bedingungen für starke Vermehrung von Cyanobakterien sind vielfältig und nicht immer eindeutig zu klären. Hoher Phosphat- und evtl. Stickstoffgehalt im Wasser – verursacht beispielsweise durch ungeklärte Abwässer mit Waschmittelrückständen oder durch Tierausscheidungen – können in Verbindung mit höheren Wassertemperaturen die Entwicklung der Bakterien begünstigen. Als Gegenmaßnahme wird z. B. in der Schweiz der Greifensee seit 2009 künstlich belüftet.
+
+
+== Siehe auch ==
+Algenfarngewächse zur Symbiose mit stickstofffixierenden Cyanobacteria
+Stromatolithen – von Cyanobakterien gebildete Sedimentgesteine
+
+
+== Literatur ==
+Thomas Börner: Die Toxine der Cyanobakterien: Neue bioaktive Verbindungen. In: Biologie in unserer Zeit. Band 31, Nummer 2, 2001, S. 108–115.
+Toxinbildende Cyanobakterien (Blaualgen) in bayerischen Gewässern – Massenentwicklungen, Gefährdungspotential, wasserwirtschaftlicher Bezug. Materialienband 125, Bayerisches Landesamt für Umwelt, Augsburg Dezember 2006, ISBN 3-940009-08-3.
+
+
+== Weblinks ==
+
+Cyanobakterien: Problematik der Cyanobakterien aufgrund der Cyanotoxine, wikibooks
+Introduction to the Cyanobacteria (Einführung in die Cyanobakterien), University of California, Museum of Paleontology (UCMP), Berkeley  (englisch)
+Empfehlungen des Umweltbundesamtes zum Schutz von Badenden, in: Bundesgesundheitsbl., Band 58, S. 908–920, 8. Juli 2015, doi:10.1007/s00103-015-2192-8 (PDF, 13 Seiten)
+Alger, Schwedisches Meteorologisches und Hydrografisches Institut (SMHI): aktuelle Daten und Satellitenbilder zur Algenblüte in der Ostsee (schwedisch), abgerufen am 12. Oktober 2021
+Joe Dramiga: Die oxygene Fotosynthese der Cyanobakterien ist ein abgeleitetes Merkmal, in: Die Sankore Schriften, auf: Spektrum.de SciLogs vom 7. Juni 2017
+Carly Casella: We Just Got Closer to Pinpointing a Major Moment in Earth's Evolutionary History, auf: sciencealert vom 4. Oktober 2021 (englisch)
+Oxygenic Photosynthesis and Living Lineages of Cyanobacteria Evolved in Archean Eon, Study Suggests, auf: sci-news vom 30. September 2021 (englisch)
+Elena Bernard: Ursprünge der Photosynthese datiert, auf: wissenschaft.de vom 29. September 2021
+What Are Cyanobacteria And What Are Its Types?, auf: TheBigger.com
+Overview of cyanobacteria, Biologie Uni Hamburg (Memento im WebArchiv vom 28. Januar 2020)
+Webserver for Cyanobacteria Research (Memento im WebArchiv vom 16. September 2019)
+CyanoBase, Kazusa DNA Research Institute (Memento im Webarchiv vom 21. Dezember 2012)
+SIB: Bacteria: Trichormus: two membranes (Gram-): Morphology typical of Trichormus variabilis – Zellen von Trichormus variabilis mit Spore, Interaktive Graphik von SwissBioPics
+Anna Manz: Cyanobakterien als Seefahrer – Phytoplankton-Vorfahren besiedelten das offene Meer mittels Chitin-Flößen. Auf: scinexx.de vom 17. Mai 2023. Quelle: doi:10.1073/pnas.2213271120.
+
+
+== Einzelnachweise ==

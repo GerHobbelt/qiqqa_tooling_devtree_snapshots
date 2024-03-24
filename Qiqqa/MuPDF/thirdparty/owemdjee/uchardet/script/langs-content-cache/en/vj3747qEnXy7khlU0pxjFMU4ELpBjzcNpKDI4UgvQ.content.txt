@@ -1,0 +1,45 @@
+revision: 1087744115
+title: South African Computer Olympiad
+url: https://en.wikipedia.org/wiki/South_African_Computer_Olympiad
+
+
+---
+
+The South African Computing Olympiad (SACO) is an annual computer programming competition for secondary school students (although at least one primary school student has participated) in South Africa. The South African team for the International Olympiad in Informatics is selected through it.
+
+
+== Competition rounds ==
+The competition consists of three rounds. The first is a pen-and-paper aptitude examination at the entrant's school, testing a combination of general knowledge, computer knowledge, problem-solving and basic programming. (Entrants are often required to program an imaginary robot in a fictional Logo-like language.) Although the first round is not compulsory, it is accessible to those who do not have access to, or knowledge of, computers. 31,926 students entered it in 2006.In the second round, actual programs must be written and executed. There are five questions, each requiring a different program to be written. Most entrants answer only a single question. The tasks usually include one basic shape-drawing program—for example, the 2004 question "TriSquare" required output such as:
+
+  *
+ * *
+*   *
+*****
+*   *
+*   *
+*   *
+*****
+
+The top performers—those who have answered four or five questions in the second round—are invited to the final round. In prior years, between 10 and 15 students were chosen; but the introduction of a new language, and increased funding from the Shuttleworth Foundation in 2005, has increased it to between 20 and 30 students. The final round is held at the University of Cape Town, where finalists stay over a weekend. It consists of two five-hour rounds, the first on Saturday and second on Sunday. The problems are similar to those in the USACO, though somewhat easier. A prize ceremony is held that Monday.
+
+
+== Prizes ==
+The top six entrants are awarded medals (one gold, two silver and three bronze). There are cash prizes, both for the winners and their schools. There were bonus prizes totalling R100,000 for using Python, due to Shuttleworth's sponsorship. The sponsorship ended in 2013 and no additional prizes are given for using Python presently.
+The top performers are invited to a squad which will be given additional training from the Olympiad coaches and the USACO training programme. Four programmers are then selected from the squad to represent South Africa at the International Olympiad in Informatics.
+
+
+== Languages ==
+In the first round, it is not necessary to know a programming language. In the second round, contestants may use a language of their choice (within reason - Brainfuck is presumably excluded). In the third round, however, the set of languages is restricted to:
+
+Pascal - the language taught in high schools in some South African provinces (including Gauteng)
+Delphi - the language taught in high schools in some South African provinces (including Free State)
+Java - taught in other provinces (including the Western Cape)
+Python - sponsored by Mark Shuttleworth
+C/C++Python programs are given a 10x time bonus.
+
+
+== South African IOI Medalists ==
+The following table lists all South African IOI medalists ordered by colour and number of medals (or ranking if gold), then by last year a medal was received. B represents a Bronze medal, S a Silver and G a Gold.
+
+
+== References ==

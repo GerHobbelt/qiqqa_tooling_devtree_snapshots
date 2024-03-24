@@ -1,0 +1,478 @@
+revision: 29644714
+title: "Doppler kaymas\u0131"
+url: https://tr.wikipedia.org/wiki/Doppler_etkisi
+
+
+---
+
+Doppler etkisi (veya Doppler kayması), adını ünlü bilim insanı ve matematikçi Christian Andreas Doppler'den almakta olup, kısaca dalga özelliği gösteren herhangi bir fiziksel varlığın frekans ve dalga boyunun hareketli (yakınlaşan veya uzaklaşan) bir gözlemci tarafından farklı zaman veya konumlarda farklı algılanması olayıdır. Herhangi bir A konumundan B konumuna gitmek için fiziksel bir dalga ortamı'na ihtiyaç duyan dalgalar (örn. ses dalgaları veya su dalgaları) için Doppler Etkisi hesaplamaları yapılırken, dalga kaynağı ve gözlemcinin birbirine göre konum, yön ve hızlarının yanında dalganın içinde veya üzerinde hareket ettiği dalga orta yapısı (yoğunluk, hacim, iletkenlik katsayısı, kimyasal özellikleri, vb.) dikkate alınmak zorundadır. Eğer söz konusu dalga herhangi bir A konumundan B konumuna gitmek için fiziksel bir dalga ortamına ihtiyaç duymuyor ise (örn. ışık, radyo dalgaları veya radyasyon), Doppler Etkisi hesaplamalarında sadece dalga kaynağının ve gözlemcinin birbirine göre birim zamandaki konumlarının değerlendirilmesi yeterlidir.
+
+
+== Tarihçe ==
+Doppler etkisi ilk olarak 1842 yılında Avusturyalı bilim insanı Christian Andreas Doppler tarafından (Über das farbige Licht der Doppelsterne und einige andere Gestirne des Himmels söylemi ile) matematiksel bir hipotez olarak ortaya atılmıştır. 1845 yılında Hollandalı fizikçi Christophorus Ballot tarafından ses dalgaları kullanılarak test edilmiş ve "ses kaynağı kendisine yakınlaşırken duyduğu frekansın yükseldiğini, uzaklaşırken ise düştüğünü ispatladığını" söylemesi ile resmen onaylanmıştır. Aynı etki Ballot veya Doppler'dan bağımsız olarak 1848 yılında Fransız fizikçi Hippolyte Fizeau tarafından elektromanyetik dalgalar üzerinde de keşfedilmiştir. Bu yüzden nadiren de olsa bazı bilim çevrelerince Doppler-Fizeau etkisi olarak da bilinir.
+
+
+== Matematiksel çözümleme ==
+Doppler etkisi konusunda bilinmesi gereken en önemli husus, her ne kadar gözlemci dalga frekansının kendi hareketi ya da dalga kaynağının hareketi yüzünden değiştiğini görse de, aslında kaynağın yaydığı dalganın frekansının sabit kaldığı gerçeğidir. Tam olarak ne olduğunu daha iyi anlamak icin şöyle bir örnek üzerinde düşünelim: Siz yerinizde ve hareketsizsiniz. Bir arkadaşınız sizden 10 metre uzakta duruyor ve size her saniyede bir elindeki tenis toplarından birini fırlatıyor. Burada arkadaşınızın topları her seferinde aynı doğru boyunca ve aynı hızda attığını varsayalım. Eğer arkadaşınız da hareketsiz ise her saniyede bir 10 metre yol kateden tenis toplarından biri size ulaşacaktır. Şimdi arkadaşınızın yine her saniyede bir top fırlattığını (yani aslında top fırlatma frekansı değişmiyor), ancak bu sefer size doğru yürümeye başladığını öngörelim. Bu durumda size ulaşan iki top arasındaki süre 1 saniyeden daha kısa olacaktır, çünkü toplar her seferinde 10 metre, 9 metre, 8 metre şeklinde daha az mesafe katettikten sonra size ulaşacaktır. Elbette aynı etkinin zıddı arkadaşınız sizden uzaklaşırken de geçerli olacaktır. Bir başka deyişle, toplar arkadaşınızın elinden her zaman saniyede bir çıktığı halde, sizin ya da arkadaşınızın hareketi yüzünden size azalan ya da artan zamanlarda ulaşacaktır. Bu da doğal olarak arkadaşınızın size topu farklı zamanlarda fırlattığını düşünmenize sebep olur. Yani aslında Doppler Etkisi'nde "etkilenen" asıl fiziksel değişken dalga boyu'dur. Elbette dalga boyu ile frekans ters orantılı olduğundan gözlemciye göre dalga kaynağının frekansı da değişiyor gibi görünür.
+Eğer (f0) frekansında dalga yayan hareketli bir kaynak bu yayılımı sadece kendinin ve bir gözlemcinin bulunduğu sabit bir dalga ortamında yapıyorsa, o zaman bu dalga ortamına göre hareketsiz olan bir gözlemcinin göreceği frekansı (f) bulmak için:
+
+  
+    
+      
+        f
+        =
+        
+          f
+          
+            0
+          
+        
+        
+          (
+          
+            
+              v
+              
+                v
+                +
+                
+                  v
+                  
+                    s
+                    ,
+                    r
+                  
+                
+              
+            
+          
+          )
+        
+      
+    
+     
+  formülü kullanılır. Burada (v) dalga ortamındaki dalgaların hızı, (vs, r) ise kaynağın sabit olan dalga ortamına göre (eğer gözlemciye doğru hareket ediyorsa (-) eksi bir değer, gözlemciden uzaklaşacak şekilde hareket ediyorsa (+) arti bir değer) hızıdır. Benzer bir analiz sabit bir dalga kaynağı ile hareketli bir gözlemci için asağıdaki gibidir. (vo) = Gözlemcinin dalga ortamına göre hızı.
+
+  
+    
+      
+        f
+        =
+        
+          f
+          
+            0
+          
+        
+        
+          (
+          
+            1
+            −
+            
+              
+                
+                  v
+                  
+                    0
+                  
+                
+                v
+              
+            
+          
+          )
+        
+      
+    
+     
+  Yukarıdaki örnekte de gördüğümüze benzer şekilde, bu sefer gözlemcinin dalga kaynağından uzaklaşması durumunda (vo) değeri (+) arti, yakinlaşması durumunda ise (-) eksi olur.
+Matematiksel olarak bu iki formül elbette tek bir vektörel eşitlik olarak genelleştirilebilir. Koordinat sisteminin dalga ortamı üzerindeki herhangi bir noktanın konumunu verdiğini, ve bu ortamda ses hızı'nin (
+  
+    
+      
+        c
+      
+    
+     
+  ) olduğunu varsayalım ve söz konusu ortamda (
+  
+    
+      
+        s
+      
+    
+     
+  ) kaynağının (
+  
+    
+      
+        
+          
+            v
+          
+          
+            s
+          
+        
+      
+    
+     
+  ) hızıyla hareket edip çevresine (
+  
+    
+      
+        
+          f
+          
+            s
+          
+        
+      
+    
+     
+  ) frekansında dalgalar yaydığını öngörelim. Bu dalga ortamında bir de (
+  
+    
+      
+        
+          
+            v
+          
+          
+            r
+          
+        
+      
+    
+     
+  ) hızıyla hareket eden bir (
+  
+    
+      
+        r
+      
+    
+     
+  ) gözlemcisi olsun. Dalga kaynağı (
+  
+    
+      
+        s
+      
+    
+     
+  ) ile gözlemci (
+  
+    
+      
+        r
+      
+    
+     
+  ) arasındaki matematik vektörün ise (
+  
+    
+      
+        
+          n
+        
+      
+    
+     
+  ) olduğunu öngörelim. (Yani 
+  
+    
+      
+        
+          
+            r
+          
+          
+            r
+          
+        
+        −
+        
+          
+            r
+          
+          
+            s
+          
+        
+        =
+        
+          n
+        
+        
+          |
+        
+        
+          
+            r
+          
+          
+            r
+          
+        
+        −
+        
+          
+            r
+          
+          
+            s
+          
+        
+        
+          |
+        
+      
+    
+     
+  )
+Bu durumda gözlemcinin algılayacağı frekans (
+  
+    
+      
+        
+          f
+          
+            r
+          
+        
+      
+    
+     
+  ):
+
+  
+    
+      
+        
+          
+            
+              f
+              
+                r
+              
+            
+            
+              f
+              
+                s
+              
+            
+          
+        
+        =
+        
+          
+            
+              1
+              −
+              
+                n
+              
+              ⋅
+              
+                
+                  v
+                
+                
+                  r
+                
+              
+              
+                /
+              
+              c
+            
+            
+              1
+              −
+              
+                n
+              
+              ⋅
+              
+                
+                  v
+                
+                
+                  s
+                
+              
+              
+                /
+              
+              c
+            
+          
+        
+      
+    
+     
+  eşitliğinden bulunabilir. Eğer 
+  
+    
+      
+        
+          v
+          
+            s
+          
+        
+        ≪
+        c
+      
+    
+     
+   ise, o zaman algılanan frekanstaki değişim daha çok dalga kaynağı ve gözlemcinin birbirine göre hızlarına bağlı olur:
+
+  
+    
+      
+        
+          
+            
+              f
+              
+                r
+              
+            
+            
+              f
+              
+                s
+              
+            
+          
+        
+        ≈
+        1
+        −
+        
+          n
+        
+        ⋅
+        (
+        
+          
+            v
+          
+          
+            r
+          
+        
+        −
+        
+          
+            v
+          
+          
+            s
+          
+        
+        )
+        
+          /
+        
+        c
+      
+    
+     
+  Veya alternatif olarak:
+
+  
+    
+      
+        
+          
+            
+              
+                f
+                
+                  r
+                
+              
+              −
+              
+                f
+                
+                  s
+                
+              
+            
+            
+              f
+              
+                s
+              
+            
+          
+        
+        =
+        
+          
+            
+              Δ
+              f
+            
+            
+              f
+              
+                s
+              
+            
+          
+        
+        ≈
+        −
+        
+          n
+        
+        ⋅
+        (
+        
+          
+            v
+          
+          
+            r
+          
+        
+        −
+        
+          
+            v
+          
+          
+            s
+          
+        
+        )
+        
+          /
+        
+        c
+      
+    
+     
+  Doppler'in bu analizinin ışık ışınları için de geçerli olabilmesi için yapılan ilk çalışma Hippolyte Fizeau tarafından yürütülmüştür. Ancak ışık A noktasından B noktasına gidebilmek için belli bir dalga ortamına gerek duymaz (örneğin sonsuz boşluk olan uzayda kolayca yol alır) ve Doppler Etkisi'nin ışık ışınlarına nasıl doğru bir şekilde uygulanabileceğinin anlaşılabilmesi için Einstein'in Özel Görelilik (izafiyet) teorisinin kullanımına ihtiyaç vardır.
+
+
+== Kozmolojik alanda kullanımı ==
+Doppler kayması ve kozmolojik gelişimde yıldız ışımalarının önemli katkıları olmuştur. Yıldızların hızları doppler kayması sayesinde saptanmaktadır. Spektrum Atomların ya da moleküllerin yayınladığı ışınımdır. Bunlar ışınımların çok dar frekans bandı aralıklarıdır. Edwin Hubble doppler kaymasının uygulamasını yapmıştır. Birçok yıldızın spektrumunu incelemiş, Dünya'ya uzaklıkları hakkında yıldızların parlaklıklarını kullanarak tahminde bulunmuş, yıldızların çoğunun spektrumunun kırmızıya kaydığını ve bu sonuçla yıldızların olduğu galaksilerin bizden uzaklaştığını söylemiştir. Bunun yanında uzaklaşma hızlarının Dünya'ya olan uzaklıklara orantılı olduğunu da söylemiştir. 
+Hubble kanunu sayesinde doppler kaymasının ölçümleri ile birlikte galaksilerde olan uzaklıkların hesaplanması olanağı sağlamıştır. Astronomlar kırmızıya kaymaların olduğu radyasyon kaynakları (örnek olarak yıldız benzeri cisimler sayılabilir). Bu kaynakların çok fazla enerji yaydığını söylemişler. Bu enerjinin maddelerin aşırı ivme kazanmasından dolayı böyle bir büyüklükte bir ışınıma neden olduğu belirtilmiştir.
+
+
+== Kaynakça ==
+
+
+== Dış bağlantılar ==
+https://web.archive.org/web/20090512192731/http://archive.ncsa.uiuc.edu/Cyberia/Bima/doppler.html
+Doppler Effect 27 Nisan 2006 tarihinde Wayback Machine sitesinde arşivlendi., ScienceWorld (İngilizce)
+Doppler etkisi Java simülasyonu
+Doppler Etkisi - genbilim.com

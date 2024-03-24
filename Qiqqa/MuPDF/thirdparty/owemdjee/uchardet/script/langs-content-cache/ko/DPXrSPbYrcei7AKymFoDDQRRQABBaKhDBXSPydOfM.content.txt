@@ -1,0 +1,302 @@
+revision: 31698385
+title: "\uB137\uC6E8\uC5B4 \uD30C\uC77C \uC2DC\uC2A4\uD15C"
+url: https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%BC_%EC%8B%9C%EC%8A%A4%ED%85%9C_%EB%AA%A9%EB%A1%9D
+
+
+---
+
+아래는 컴퓨터 파일 시스템의 목록이다.
+
+
+== 디스크 파일 시스템 ==
+디스크 파일 시스템은 일반적으로 블록 지향이다. 블록 지향 파일 시스템의 파일들은 연속된 블록으로 이루어져 있고, 완전한 임의 접근 읽기, 쓰기, 수정 기능을 지원하는 것이 보통이다.
+
+ADFS
+AdvFS
+AFS
+AFS
+AosFS
+AthFS
+BFS
+BFS
+Btrfs
+CBMFS
+CFS
+CMDFS
+CP/M
+DDFS
+DTFS
+도스 3.x
+EAFS
+익스텐트 파일 시스템
+ext
+ext2
+ext3
+ext4
+ext3cow
+FAT
+VFAT
+FATX
+FFS (아미가)
+FFS
+Fossil
+Files-11
+플렉스 머신
+HFS
+HFS
+HFS+
+HPFS
+HTFS
+IceFS
+ISO 9660
+JFS
+JXFS
+LisaFS
+LFS
+MFS
+Next3
+MFS
+미닉스 파일 시스템
+NILFS
+NTFS
+넷웨어 파일 시스템
+NSS
+OneFS
+OFS
+OS-9
+PFS
+ProDOS
+Qnx4fs
+Qnx6fs
+ReFS
+ReiserFS
+Reiser4
+Reliance
+Reliance Nitro
+RFS
+S51K
+SkyFS
+SFS
+스프
+SpadFS
+STL
+TRFS
+Tux3
+UDF
+UFS
+UFS2
+VxFS
+VLIR
+WAFL
+XFS
+zFS
+ZFS
+
+
+=== 고장 방지 능력을 내장한 파일 시스템 ===
+Btrfs
+HAMMER
+ReFS
+Reliance
+Reliance Nitro
+ZFS
+
+
+=== 플래시 메모리, 솔리드 스테이트 미디어에 최적화된 파일 시스템 ===
+
+CASL
+ETFS
+exFAT
+익스트림FFS
+F2FS
+FFS2
+JFFS
+JFFS2
+LogFS
+비휘발성 파일 시스템
+OneFS
+RFS
+Segger Microcontroller Systems
+세이프플래시(SafeFLASH)
+TFAT
+TrueFFS
+UBIFS
+UFFS
+Unison RTOS
+Write Anywhere File Layout
+XCFiles
+YAFFS
+ZFS
+OTFS
+
+
+=== 레코드 지향 파일 시스템 ===
+Files-11
+미시간 터미널 시스템
+OS4000
+A FAT12
+순차 접근 방식: Basic sequential access method
+픽 운영 체제
+RSD
+Structured File Server
+VSAM
+
+
+=== 공유 디스크 파일 시스템 ===
+CXFS
+델 플루이드 파일 시스템
+EMC Celerra HighRoad
+Files-11
+GFS2
+IBM 제너럴 패러럴 파일 시스템
+HP 클러스터 파일 시스템
+Melio FS
+Nasan
+오라클 ACFS
+OCFS2
+폴리서브 파일 시스템
+pNFS
+StorNext 파일 시스템
+Blue Whale Clustered 파일 시스템
+QFS
+베리타스 스토리지 파운데이션
+Xsan
+VMFS
+
+
+== 분산 파일 시스템 ==
+9P
+아마존 S3
+앤드루 파일 시스템
+애플 파일링 프로토콜
+DCE 분산 파일 시스템
+파일 액세스 리스너
+마이크로소프트 오피스 그루브
+넷웨어 코어 프로토콜
+네트워크 파일 시스템
+OS4000
+시큐어 파일 시스템
+Self-certifying File System
+서버 메시지 블록
+
+
+=== 분산형 고장 방지 파일 시스템 ===
+코다
+분산 파일 시스템
+InterMezzo
+무스 파일 시스템
+Tahoe-LAFS
+A FAT12
+
+
+=== 분산 병렬 파일 시스템 ===
+패러럴 버추얼 파일 시스템
+스타피시
+
+
+=== 분산형 병렬 고장 방지 파일 시스템 ===
+개발 중:
+
+PlasmaFS
+WebDFS
+zFS
+HAMMER
+OASIS
+GLORY-FS
+Parallax
+PNFS
+CRFS
+POHMELFS
+National Center for Data Mining 부문
+StarFS
+Unilium
+
+
+=== P2P 파일 시스템 ===
+Cooperative 파일 시스템
+Cleversafe
+Infinit
+Ivy
+Pastis
+NimbusFS
+
+
+== 특수 목적 파일 시스템 ==
+*FS
+archfs
+aufs
+AXFS
+바라쿠다 WebDAV 플러그인.
+부트 파일 시스템
+캐스케이드(Cascade) 파일 시스템
+cdfs
+clicfs
+콤팩트 디스크 파일 시스템
+cfs
+cvsfs
+Dokan LGPL FUSE (윈도 아날로그)
+compFUSEd
+FuseCompress
+Cramfs
+Cromfs
+Davfs2
+Freenet
+FTPFS
+GmailFS
+lnfs
+LTFS
+mhddfs
+mini fo
+MVFS
+MTFS
+nntpfs
+ParFiSys
+pramfs
+RAIF
+romfs
+SODA
+SquashFS
+SysmanFS (FUSE 기반)
+UMSDOS
+UnionFS
+Venti
+wikifs
+WDK.VFS
+Datalight Reliance
+ERTFS ProPlus64
+WBFS
+whefs
+
+
+=== 가상 파일 시스템 ===
+devfs
+debugfs
+procfs
+tmpfs
+specfs
+sysfs
+WinFS
+
+
+=== 암호화된 파일 시스템 ===
+eCryptfs
+SSHFS
+EncFS
+Rubberhose 파일 시스템
+폰북FS
+솔리드 파일 시스템
+EFS
+FSFS
+ZFS
+TeaSafe
+
+
+=== 파일 시스템 인터페이스 ===
+FUSE
+LUFS (리눅스 유저랜드 파일 시스템
+VFS 가상 파일시스템
+콜백 파일 시스템
+
+
+== 외부 링크 ==
+파일 시스템

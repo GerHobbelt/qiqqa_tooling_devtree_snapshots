@@ -1,0 +1,382 @@
+revision: 25619111
+title: "Bravejeva re\u0161etka"
+url: https://sr.wikipedia.org/wiki/Braveova_re%C5%A1etka
+
+
+---
+
+Braveova rešetka u fizici čvrstog stanja, je periodični beskonačni skup čvorova u ravni koji imaju isti raspored i orijentaciju, nezavisno iz koje se tačke se posmatra. Braveova rešetka se može definisati i kao skup svih čvorova određenih vektorom:
+
+  
+    
+      
+        R
+        =
+        
+          n
+          
+            1
+          
+        
+        
+          
+            
+              
+                a
+                →
+              
+            
+          
+          
+            1
+          
+        
+        +
+        
+          n
+          
+            2
+          
+        
+        
+          
+            
+              
+                a
+                →
+              
+            
+          
+          
+            2
+          
+        
+        +
+        
+          n
+          
+            3
+          
+        
+        
+          
+            
+              
+                a
+                →
+              
+            
+          
+          
+            3
+          
+        
+        ,
+      
+    
+     
+  gde su 
+  
+    
+      
+        
+          
+            
+              
+                a
+                →
+              
+            
+          
+          
+            1
+          
+        
+        ,
+        
+          
+            
+              
+                a
+                →
+              
+            
+          
+          
+            2
+          
+        
+        ,
+        
+          
+            
+              
+                a
+                →
+              
+            
+          
+          
+            3
+          
+        
+      
+    
+     
+   primitivni vektori Braveove rešetke, a 
+  
+    
+      
+        
+          n
+          
+            1
+          
+        
+        ,
+        
+          n
+          
+            2
+          
+        
+        ,
+        
+          n
+          
+            3
+          
+        
+        ∈
+        
+          Z
+        
+      
+    
+     
+  .Primitvna ćelija je najmanji deo Braveove rešetke kojim se može generisati cela rešetka. Jedna Braveova rešetka može imati više različitih primitivnih ćelija. Vigner-Zajcova ćelija je jedna mogućnost izbora za primitivnu ćeliju. Vigner-Zajcova ćelija obuhvata čvor i svu oblast koja je bliže ovom čvoru nego bilo kom drugom čvoru. Vigner-Zajcova ćelija je pogodan izbor za primitivnu ćeliju zato što ta ćelija ima sve simetrije koje poseduje i cela rešetka.
+
+
+== Podela ==
+Francuski kristalograf Ogist Brave je 1849. godine ustanovio da se u prostoru mogu konstruisati samo 14 različitih prostornih rešetki i da se svi kristalni materijali mogu uklopiti u jedan od ovih rasporeda. Materijali koji se ne uklapaju u ovu podelu su amorfne supstance ili kvazikristali (imaju petu osu simetrije koja ne postoji kod kristala).
+Postoje četiri podgrupe Braveovih rešetki:
+
+Prosta rešetka (engl. Simple cube - (SC))
+Prostorno centrirana rešetka (engl. Body centered cube - (BCC))
+Površinski centrirana rečetka (engl. Face centered cube - (FCC))
+Bazno centrirana rešetka (engl. single face A, B or C centering)
+
+
+=== Spisak Brajevih rešetki ===
+"a", "b" i "c" su ivice rešetke, a "α", "β", "γ" su uglovi
+
+Prosta kubna rešetka
+a=b=c
+α=β=γ=90°
+Površinski centrirana kubna rešetka - POVCK
+a=b=c
+α=β=γ=90°
+Prostorno centrirana kubna rešetka - PROSTCK
+a=b=c
+α=β=γ=90°
+Prosta tetragonalna rešetka
+a=b≠c
+α=β=γ=90°
+Prostorno centrirana tetragonalna rešetka
+a=b≠c
+α=β=γ=90°
+Heksagonalna rešetka
+a≠c
+α=γ=90° β=120°
+Ortorombična rešetka
+a≠b≠c
+α=β=γ=90°
+Prostorno centrirana ortorombična rešetka
+a≠b≠c
+α=β=γ=90°
+Bazno centrirana ortorombična rešetka
+a≠b≠c
+α=β=γ=90°
+Površinski centrirana ortorombična rešetka
+a≠b≠c
+α=β=γ=90°
+Romboedarska rešetka
+a=b=c
+α≠β≠γ≠90°
+Prosta monoklinična rešetka
+a≠b≠c
+α=γ=90°≠β
+Bazno centrirana monoklinična rešetka
+a≠b≠c
+α=γ=90°≠β
+Triklinična rešetka
+a≠b≠c
+α≠β≠γ≠90°
+
+
+== Braveova rešetka sa bazisom ==
+
+Rešetka sa bazisom je Braveova rešetka u kojoj se na mestu svakog čvora nalazi grupa atoma. Ta grupa atoma čini bazis rešetke.
+Primeri Braveovih rešetki sa bazisom:
+
+Struktura saća je primer heksagonalne rešetke sa bazisom od 2 atoma. Struktura saća nije Braveova rešetka, jer se pogled na ravan iz dva susedna čvora razlikuje po orijentaciji. Međutim, ako se za bazis uzme skup od dva susedna atoma, navedena rešetka će predstavljati Braveovu rešetku sa bazisom.
+Kristalna rešetka NaCl se može predstaviti kao skup od 2 kubne površinski centrirane rešetke (FCC), jedna od atoma Na i druga od atoma Cl. Kristalna rešetka NaCl se može predstaviti i kao kovršinski centrirana rečetka sa bazisom od dva atoma.
+Prostorno centrirana rešetka (BCC) može da se vidi i kao kubna rešetka sa bazisom od 2 identična atoma.
+Površinski centrirana rečetka (FCC) može da se posmatra i kao kubna rešetka sa bazisom od 4 ista atoma.
+
+
+== Recipročna rešetka Braveove rešetke ==
+Recipročna rešetka Braveove rešetke je skup vektora 
+  
+    
+      
+        
+          
+            
+              k
+              →
+            
+          
+        
+      
+    
+     
+   u prostoru takvih da ravni talasi određeni vektorima 
+  
+    
+      
+        
+          
+            
+              k
+              →
+            
+          
+        
+      
+    
+     
+   budu periodični sa periodom 
+  
+    
+      
+        
+          
+            
+              R
+              →
+            
+          
+        
+      
+    
+     
+   koji određuje početnu Braveovu rešetku:
+
+  
+    
+      
+        
+          e
+          
+            i
+            
+              
+                
+                  k
+                  →
+                
+              
+            
+            (
+            
+              
+                
+                  r
+                  →
+                
+              
+            
+            +
+            
+              
+                
+                  R
+                  →
+                
+              
+            
+            )
+          
+        
+        =
+        
+          e
+          
+            i
+            
+              
+                
+                  k
+                  →
+                
+              
+            
+            
+              
+                
+                  R
+                  →
+                
+              
+            
+          
+        
+        .
+      
+    
+     
+  Odavde se dobija uslov koji određuje recipročnu rešetku Braveove rešetke:
+
+  
+    
+      
+        
+          e
+          
+            i
+            
+              
+                
+                  k
+                  →
+                
+              
+            
+            
+              
+                
+                  R
+                  →
+                
+              
+            
+          
+        
+        =
+        1.
+      
+    
+     
+  Recipročna rešetka je Braveova rešetka u inverznom prostoru. Takođe, recipročna rešetka recipročne rešetke je početna Braveova rešetka. Recipročna rešetka se ne može definisati za rešetku sa bazisom.
+
+
+== Reference ==
+
+
+== Literatura ==
+
+
+== Spoljašnje veze ==
+Vrsta rešetka i Milerovi indeksi
+Tutorijal za određivanje Milerovih indeksa

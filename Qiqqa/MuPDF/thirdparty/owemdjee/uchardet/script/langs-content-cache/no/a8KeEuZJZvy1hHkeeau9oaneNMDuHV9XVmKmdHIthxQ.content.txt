@@ -1,0 +1,3077 @@
+revision: 23393650
+title: Magnetfelt
+url: https://no.wikipedia.org/wiki/Magnetfelt
+
+
+---
+
+Et magnetisk felt er et vektorfelt som er skapt av elektriske strømmer eller magneter som karakteriseres ved en magnetisering. Feltene benyttes til å beskrive magnetiske krefter og andre elektromagnetiske fenomen.
+Det er vanlig å skille mellom to magnetiske felt som betegnes med henholdsvis B og H, der  B kalles for magnetisk fluksfelt og H for magnetiske feltstyrke.  I vakum eller i det tomme rom er disse to feltene de samme bortsett fra måleenheter. Men i et materiale med en magnetisering M er de forbundet ved definisjonen
+
+  
+    
+      
+        
+          B
+        
+        =
+        
+          μ
+          
+            0
+          
+        
+        (
+        
+          H
+        
+        +
+        
+          M
+        
+        )
+      
+    
+     
+  hvor μ0  er den den magnetiske konstanten. Magnetisering måles derfor i samme enheter som magnetfeltet H. I SI-systemet er dette A/m, mens B måles i tesla (T).
+Man kan beregne magnetiske felt fra Biot-Savarts lov eller Ampères sirkulasjonslov. Kreftene som feltene skaper, kan finnes fra Ampères kraftlov eller fra den mer fundamentale Lorentz-kraften. Denne kan benyttes til å gi en entydig definisjon av det magnetiske feltet B basert på kraften som det utøver på en elektrisk ladet partikkel som beveger seg med en viss hastighet. 
+Magnetiseringen M er definert som en gjennomsnittsverdi over bidragene fra flere atomer, noe som dermed også gjelder for H-feltet. På den måten skyldes det mer makroskopiske forhold i materialer og er derfor et sekundært eller mindre fundamentalt magnetfelt enn B. 
+Sammen med det elektriske feltet er det styrt av Maxwells ligninger og opptrer derfor i all elektromagnetisk stråling og elektronisk kommunikasjon. I hverdagen kan det merkes som krefter mellom magneter eller som utslaget av en kompassnål i det jordmagnetiske feltet. Slike felt er av avgjørende betydning i alle elektriske motorer og generatorer som er baserte på elektromagnetisk induksjon. Også i medisinsk behandling benyttes magnetfelt ved MR-undersøkelser og annen, moderne diagnostisering.
+
+
+== Historisk bakgrunn ==
+Kort tid etter at Ørsted i 1820 oppdaget et en elektrisk strøm kunne påvirke en kompassnål, gikk Ampère i gang med å utforske denne nye kraften mer nøyaktig. Hans første resultat kan summeres opp i Ampères sirkulasjonslov som forbinder det magnetiske feltet med strømmen som skaper det. Parallelt med dette arbeidet kom Biot og Savart frem til en alternativ formel for magnetfeltet. Denne Biot-Savarts lov er ekvivalent med Ampères, men mer anvendelig for praktisk beregninger.
+
+Mens Biot og Savart forklarte sine observasjoner ved å anta at strømmen i en elektrisk leder gjorde denne magnetisk og dermed påvirket kompassnålen, foreslo Ampère at all magnetisme må forklares som vekselvirkninger mellom elektriske strømmer. Han kunne demonstrere dette ved å vikle en strømførende ledning rundt en spole med det resultat at spolen virket på akkurat samme måte som en stavmagnet. Jordens magnetfelt forklarte han med strømmer som går i lukkete baner i dens indre, mens alle permanente magneter inneholder mikroskopiske strømsløyfer, såkalte 
+«ampèrske strømmer». Magnetiske krefter kunne i dette bildet da reduseres til krefter som virker på avstand mellom strømførende ledninger. I de følgende årene konsentrerte Ampère seg om å finne en formel for denne basale kraften.Samtidig med disse undersøkelsene til Ampère, ga Poisson en teoretisk beskrivelse av magnetisme som skyldes magnetiseringen i det indre av magneter. Han forklarte denne med eksistensen av mikroskopiske, magnetiske dipoler. Denne antagelsen avhenger ikke av om disse består av ampèrske strømsløyfer eller eventuelle,  magnetiske ladninger. Derfor er denne beskrivelsen fremdeles gyldig i dag og danner grunnlaget for moderne magnetostatikk.
+Mens idéen om å forklare magnetisme ved ampèrske strømsløyfer i stor grad viste seg å være riktig ved etableringen av atomfysikken hundre år senere hvor de kunne forklares med elektronenes rundgang i atomene, ble Ampères fjernvirkningsteori for magnetiske krefter etter hvert erstattet med en feltteori hvor en av strømmene skaper et magnetfelt som lokalt virker på den andre strømmen. Denne beskrivelsen var også kompatibel med Biot-Savarts lov. Med bidrag fra Grassmann ble Ampères kraftlov reformulert til den endelige formen den har idag.Det var de eksperimentelle arbeidene til Faraday som satte det magnetiske feltet i fokus for å forklare all aspekt ved magnetismen. Han kunne visualisere feltet ved dets feltlinjer som fikk en konkret betydning som formidler av magnetiske krefter. En konsistent, matematisk beskrivelse av hans idéer ble funnet av Maxwell som viste at det magnetiske feltet ikke bare er direkte forbundet med elektriske strømmer, men også til det elektriske feltet. Begge feltene er komponenter av et enhetlig, elektromagnetisk felt som oppfyller Maxwells ligninger. Disse gir opphav til bølgeligningen for elektromagnetisk stråling som lys er et eksempel på.
+
+
+== Beregning av magnetfelt ==
+Mens man i elektrostatikken kan beregne det elektriske feltet fra en vilkårlig fordeling av elektriske ladninger ved bruk av den generelle formuleringen av Coulombs lov, kan man beregne det magnetiske feltet fra en vilkårlig strømfordeling ved hjelp av Biot-Savarts lov. Hvis den konstante strømmen I  går i en tynn ledning, er feltet i punktet r da gitt ved  linjeintegralet
+
+  
+    
+      
+        
+          B
+        
+        (
+        
+          r
+        
+        )
+        =
+        
+          
+            
+              
+                μ
+                
+                  0
+                
+              
+              I
+            
+            
+              4
+              π
+            
+          
+        
+        ∮
+        
+        
+          
+            
+              d
+              
+                
+                  s
+                  ′
+                
+              
+              ×
+              (
+              
+                r
+              
+              −
+              
+                
+                  r
+                  ′
+                
+              
+              )
+            
+            
+              
+                |
+              
+              
+                r
+              
+              −
+              
+                
+                  r
+                  ′
+                
+              
+              
+                
+                  |
+                
+                
+                  3
+                
+              
+            
+          
+        
+      
+    
+     
+  hvor d s'  er et differensielt element av ledningen i et punkt r'  på den. Strømmen går i en lukket krets og integralet går rundt hele kretsen. Bidragene fra forskjellige deler av kretsen avtar omvendt proporsjonalt med kvadratet av avstanden til dem. Derfor får feltet i et punkt de viktigste bidragene fra de delene av strømkretsen som ligger nærmest feltpunktet r.
+
+
+=== Rett strømledning ===
+
+En uendelig rett strømledning langs z-aksen kan betraktes som en lukket krets hvor returstrømmen skjer uendelig langt borte. Er feltpunktet r på y-aksen i avstand a fra ledningen,  vil r - r'  = a ey - z ez  for et kildepunkt på z-aksen i  r'  = z ez. Da er også d s'  = dz ez  slik at 
+
+  
+    
+      
+        d
+        
+          
+            s
+            ′
+          
+        
+        ×
+        (
+        
+          r
+        
+        −
+        
+          
+            r
+            ′
+          
+        
+        )
+        =
+        −
+        d
+        z
+        a
+        
+          
+            e
+          
+          
+            x
+          
+        
+      
+    
+     
+  Magnetfeltet vil derfor i dette punktet være rette motsatt  x-aksen. Det er en manifestasjon av høyrehåndsregelen for vektorproduktet.
+Integralet kan nå lett utføres ved å la vinkelen θ  som vektoren r - r'  danner med y-aksen, bli ny integrasjonsvariabel i stedet for z. Da er z = a tanθ som betyr at dz = adθ/cos2θ. Da man i tillegg  nå har at  avstanden |r - r' | = a/cos θ, blir integralet for magnetfeltet i dette punktet
+
+  
+    
+      
+        
+          B
+        
+        (
+        
+          r
+        
+        )
+        =
+        −
+        
+          
+            
+              
+                μ
+                
+                  0
+                
+              
+              I
+            
+            
+              4
+              π
+              a
+            
+          
+        
+        
+          
+            e
+          
+          
+            x
+          
+        
+        
+          ∫
+          
+            −
+            π
+            
+              /
+            
+            2
+          
+          
+            π
+            
+              /
+            
+            2
+          
+        
+        d
+        θ
+        cos
+        ⁡
+        θ
+        =
+        −
+        
+          
+            
+              
+                μ
+                
+                  0
+                
+              
+              I
+            
+            
+              2
+              π
+              a
+            
+          
+        
+        
+          
+            e
+          
+          
+            x
+          
+        
+      
+    
+     
+  Det står normalt på strømledningen og på korteste forbindelseslinje til denne. Da det bare avhenger av avstanden til ledningen, danner magnetfeltet sirkler om ledningen med sentrum i denne. Dette resultatet kan også utledes fra Ampères sirkulasjonslov.
+
+
+=== Sirkulær strømsløyfe ===
+
+Magnetfeltet som skapes av en sirkulær strømsløyfe, kan ikke regnes analytisk ut i vilkårlige feltpunkt. Men for punkt  som ligger på symmetriaksen, lar det seg gjøre på en tilsvarende måte. Har sløyfen radius a og ligger i xy-planet, er da feltpunktet i r = z ez, mens kildepunktet er r'  = a (cosφ ex + sinφ ey). Det betyr at d s'  = adφ (- sinφ ex + cosφ ey). Ved å benytte at nå er
+
+  
+    
+      
+        
+          |
+        
+        
+          r
+        
+        −
+        
+          
+            r
+            ′
+          
+        
+        
+          |
+        
+        =
+        (
+        
+          a
+          
+            2
+          
+        
+        +
+        
+          z
+          
+            2
+          
+        
+        
+          )
+          
+            1
+            
+              /
+            
+            2
+          
+        
+        ,
+      
+    
+     
+  er det totale magnetfeltet i et punkt på z-aksen gitt ved integralet
+
+  
+    
+      
+        
+          B
+        
+        (
+        z
+        )
+        =
+        
+          
+            
+              
+                μ
+                
+                  0
+                
+              
+              I
+            
+            
+              4
+              π
+            
+          
+        
+        
+          ∫
+          
+            0
+          
+          
+            2
+            π
+          
+        
+        
+        d
+        ϕ
+        
+          
+            
+              a
+              z
+              cos
+              ⁡
+              ϕ
+              
+              
+                
+                  e
+                
+                
+                  x
+                
+              
+              +
+              a
+              z
+              sin
+              ⁡
+              ϕ
+              
+              
+                
+                  e
+                
+                
+                  y
+                
+              
+              +
+              
+                a
+                
+                  2
+                
+              
+              
+              
+                
+                  e
+                
+                
+                  z
+                
+              
+            
+            
+              (
+              
+                a
+                
+                  2
+                
+              
+              +
+              
+                z
+                
+                  2
+                
+              
+              
+                )
+                
+                  3
+                  
+                    /
+                  
+                  2
+                
+              
+            
+          
+        
+      
+    
+     
+  De to første delintegralene gir null som også er forventet av symmetrigrunner. Feltet resulterer derfor fra den siste termen som betyr at det er rettet langs z-aksen
+og er gitt som
+
+  
+    
+      
+        
+          B
+        
+        (
+        z
+        )
+        =
+        
+          
+            
+              
+                μ
+                
+                  0
+                
+              
+              I
+            
+            2
+          
+        
+        
+          
+            
+              
+                a
+                
+                  2
+                
+              
+              
+              
+                
+                  e
+                
+                
+                  z
+                
+              
+            
+            
+              (
+              
+                a
+                
+                  2
+                
+              
+              +
+              
+                z
+                
+                  2
+                
+              
+              
+                )
+                
+                  3
+                  
+                    /
+                  
+                  2
+                
+              
+            
+          
+        
+      
+    
+     
+  Ved store avstander z >> a fra sløyfen avtar magnetfeltet som B = μ0m/2π z3  hvor m = I π a2  er det magnetiske moment til strømsløyfen. Den virker da som en magnetisk dipol som i et vilkårlig punkt r langt fra sløyfen er omgitt med et magnetfelt
+
+  
+    
+      
+        
+          B
+        
+        (
+        
+          r
+        
+        )
+        =
+        
+          
+            
+              μ
+              
+                0
+              
+            
+            
+              4
+              π
+              
+                r
+                
+                  3
+                
+              
+            
+          
+        
+        
+          
+            (
+          
+        
+        3
+        (
+        
+          m
+        
+        ⋅
+        
+          
+            
+              
+                r
+              
+              ^
+            
+          
+        
+        )
+        
+          
+            
+              
+                r
+              
+              ^
+            
+          
+        
+        −
+        
+          m
+        
+        
+          
+            )
+          
+        
+      
+    
+     
+  hvor 
+  
+    
+      
+        
+          
+            
+              
+                r
+              
+              ^
+            
+          
+        
+      
+    
+     
+   = r/|r|  er en enhetsvektor retning r. Når dipolmomentet m er rettet langs z-aksen slik at m = m ez, gir denne formelen for magnetfeltet et resultat i overensstemmelse med hva man ville få fra Biot-Savarts lov anvendt mer generelt enn for punkt på z-aksen.
+
+
+=== Ideell spole ===
+
+Hvis en strømførende ledning blir viklet som en spole som består av mange sløyfer med sammenfallende akse, vil det resulterende magnetfeltet langs aksen bli proporsjonalt med antall slike viklinger. Det kan derfor gjøres mye kraftigere. Størrelsen kan finnes ved å summere eller integrere bidragene fra hver enkelt sløyfe.I grensen hvor spolen blir lang og smal, vil feltet inni spolen bli approksimativt konstant. Man har da en «ideell spole». Bortsett fra ved endene til denne spolen, blir magnetfeltet utenfor den tilsvarende svakt eller neglisjerbart da her bidragene fra de to sidene av spolen vil tilnærmelsesvis kansellere hverandre.Med denne geometrien kan størrelsen på magnetfeltet inni spolen alternativt bli beregnet mer direkte ved bruk av Ampères sirkulasjonslov. Man benytter da en lukket integrasjonsvei som er et rektangel med en side av lengde b parallell med aksen og inni spolen, mens den andre ligger utenfor hvor feltet antas å være null. De to andre sidene i rektangelet bidrar ikke til integralet
+
+  
+    
+      
+        ∮
+        
+          H
+        
+        ⋅
+        d
+        
+          s
+        
+        =
+        
+          I
+          
+            t
+            o
+            t
+          
+        
+      
+    
+     
+  hvor Itot  er den totale strømmen som går gjennom integrasjonsveien. Denne er gitt som NI hvis den  omslutter N viklinger. Sirkulasjonsloven fører da til at magnetfeltet inni spolen er gitt ved sammenhengen bH = NI eller ganske enkelt som H = nI  hvor n = N/b er antall vindinger per lengdeenhet langs spolens akse. Ofte skrives dette som n = N/L hvor nå N er det totale antall vindinger i spolen som har lengde L. Det magnetiske fluksfeltet inni i spolen er da gitt som
+
+  
+    
+      
+        B
+        =
+        
+          μ
+          
+            0
+          
+        
+        I
+        
+          
+            N
+            L
+          
+        
+      
+    
+     
+  da spolens indre antas å være tom slik at man der kan skrive  B = μ0H . Dette resultatet benyttes ofte i beregning av magnetiske kretser.
+
+
+== Magnetiske material ==
+Alle material består av atomer som er magnetiske dipoler. Skyldes denne egenskapen primært bevegelsen til elektronene, vil et ytre magnetfelt H indusere en forandring i denne bevegelsen slik at effekten av det ytre feltet blir redusert ved å gi opphav til en magnetisering M. I et «lineært materiale» kan man skrive at M = χ H  hvor χ er  susceptibiliteten til materialet. Denne er derfor negativ i et slikt diamagnetisk materiale. Dette er innholdet av Lenz' lov. Man kan derfor skrive det resulterende magnetfeltet som B = μ0(H + M)  som dermed blir litt mindre enn det ytre feltet. 
+Men det finnes også paramagnetiske material med  χ > 0 hvor denne effekten blir overvunnet av  at de magnetiske momentene til atomene retter seg inn i samme retning som det ytre feltet. Denne effekten blir større desto lavere temperaturen til materialet blir slik at termiske fluktuasjoner påvirker den i mindre grad. Tilsvarende vil den forsvinne ved tilstrekkelig høye temperaturer hvor disse fullstendig dominerer atomenes bevegelser.
+
+
+=== Ferromagneter ===
+
+En ferromagnet kan ha en magnetiseringsom ikke forsvinner når det ytre feltet forsvinner. Dette benyttes i permanente magneter.  For disse er sammenhengen mellom  M og H mer komplisert og kan fremstilles ved en funksjonssammenheng M = f(H)  som ikke er lineær. Først ved meget sterke, ytre felt går magnetiseringen mot en konstant verdi Msat. Denne tilsvarer en effektiv susceptibilitet som kan bli meget stor, ofte av størrelsesorden 103 - 105. 
+
+Ved å øke det ytre feltet ytterligere, vil det resulterende B-feltet øke linært med H. Derimot ved å la det ytre feltet avta mot null, vil magnetiseringen M ikke gå mot null, men mot en remanent magnetisering. Dette er eksempel på magnetisk hysterese og forsvinner først ved oppvarming av magneten til meget høye temperaturer.
+Det er denne magnetiske hysteresen som blir brukt ved magnetisering av et ferromagnetisk materiale som i utgangspunktet har M = 0. Bringes dette inni i et magnetfelt  B = μ0H, blir det magnetisert med M ≠ 0. Tas det så igjen ut av dette ytre feltet, forsvinner ikke denne magnetiseringen, men tar den remanente verdien. Man sier at det er blitt magnetisert, og det kan brukes som en permanent magnet.Inneholder en ideell spole magnetisk materiale, vil det resulterende fluksfeltet inni spolen bli
+
+  
+    
+      
+        B
+        =
+        μ
+        I
+        
+          
+            N
+            L
+          
+        
+      
+    
+     
+  hvis den fører strømmen I og har lengde L. Her er nå μ = μ0(1 + χ) den magnetiske permeabiliteten til materialet. For et ferromagnetisk materiale med χ >> 1, blir denne μ = μ0χ og derfor meget stor. Det er denne effekten som blant annet blir utnyttet i elektromagneter.
+
+
+=== Grensebetingelser ===
+
+Når et materiale bringes inn i et magnetfelt, vil dets feltlinjer generelt forandre retning i grenseflaten mellom materialet og omgivelsene. Det samme skjer i alle grenseflater mellom to forskjellige materialer. Det følger fra Maxwells ligninger. Ved å benytte  loven ∇ ⋅ B = 0  i divergensteoremet med et integrasjonsvolum som er en liten boks med topp- og grunnflate like utenfor og innenfor grenseflaten, følger da at
+
+  
+    
+      
+        
+          n
+        
+        ⋅
+        (
+        
+          
+            B
+          
+          
+            1
+          
+        
+        −
+        
+          
+            B
+          
+          
+            2
+          
+        
+        )
+        =
+        0
+      
+    
+     
+  hvor n er normalen til denne flaten og B1 og B2  er fluksfeltene på begge sider av denne. Dette resultatet betyr at normalkomponenten av B-feltet er kontinuerlig ved en slik grenseflate.På samme måte kan man benytte sirkulasjonsteoremet ∇ × H = 0  kombinert med Stokes' integrasjonsteorem for et smalt rektangel med de to langsidene like utenfor og innenfor grenseflaten, Det gir da 
+
+  
+    
+      
+        
+          n
+        
+        ×
+        (
+        
+          
+            H
+          
+          
+            1
+          
+        
+        −
+        
+          
+            H
+          
+          
+            2
+          
+        
+        )
+        =
+        0
+      
+    
+     
+  som sier at tangentialkomponentene til H-feltet er de samme på begge sidene av grenseflaten. Gir man disse komponentene indeksen t, vil da dette kunne skrives som H1t  =  H2t . Ved å skrive B = μ H, følger så resultatet
+
+  
+    
+      
+        
+          
+            
+              B
+              
+                1
+                t
+              
+            
+            
+              μ
+              
+                1
+              
+            
+          
+        
+        =
+        
+          
+            
+              B
+              
+                2
+                t
+              
+            
+            
+              μ
+              
+                2
+              
+            
+          
+        
+      
+    
+     
+  Det er spesielt viktig under situasjoner hvor μ2 >> μ1 eller omvendt. Da blir B 2t >> B 1t   som betyr at feltlinjene for det magnetiske fluksfeltet B blir trukket inn i det materialet med størst permeabilitet. Det har spesielt viktige konsekvenser for ferromagnetiske material hvor μ kan bli veldig stor. I en hesteskomagnet, for eksempel, vil feltlinjene hovedsakelig gå gjennom det magnetiserte jernet og ikke lekke ut til omgivelsene. Men ved alle magnetostatiske situasjoner er disse grensebetingelsene av avgjørende viktighet.
+
+
+== Vektorpotensialet ==
+Det  magnetiske  feltet oppfyller alltid  Maxwell-ligningen ∇ ⋅ B = 0.  Det har derfor ikke noen kilder,  og dets feltlinjer danner derfor lukkede kurver. Dette er ekvivalent med å si at det ikke finnes noen magnetiske monopoler. 
+Nå kan denne loven brukes til å uttrykke feltet ved et magnetisk potensial på tilsvarende måte som at i elektrostatikken kan man skrive det elektriske feltet som  E = - ∇Φ   når det elektriske potensialet Φ innføres. Da divergensen av en  curl er identisk lik null, så kan magnetfeltet alltid kunne skrives som 
+
+  
+    
+      
+        
+          B
+        
+        =
+        
+          ∇
+        
+        ×
+        
+          A
+        
+      
+    
+     
+  hvor A = A(r,t)  er det magnetiske vektorpotensialet. På samme måte som det elektriske potensialet, kan det forenkle mange betraktninger hvor det magnetiske feltet inngår. Dette gjelder spesielt for tidsvariable problem som for elektromagnetisk stråling hvor det har den avgjørende rolle i alle beregninger.Av måten vektorpotensialet er definert, ser vi at det ikke er entydig bestemt. Vi kan alltid addere en gradient av en skalar funksjon til det uten at magnetfeltet  selv forandrer verdi. Og det er dette feltet som har fysisk innhold. Denne invariansen av feltet skyldes identiteten ∇ × ∇ = 0  for nabla-operatoren som er sentral i vektoranalysen.  Det betyr at man kan benytte et alternativt vektorfelt
+
+  
+    
+      
+        
+          
+            A
+          
+          ′
+        
+        =
+        
+          A
+        
+        +
+        
+          ∇
+        
+        χ
+        ,
+      
+    
+     
+  uten at det fysiske innhold forandres for en vilkårlig funksjon χ = χ(r,t) . En slik forandring kalles en gaugetransformasjon og alle fysiske anvendelser av vektorpotensialet må være slik at denne «gaugeinvariansen» er bevart.
+For en generell strømtetthet J = J(r,t) kan vektorpotensialet beregnes fra den inhomogene bølgeligningen
+
+  
+    
+      
+        
+          
+            ∇
+          
+          
+            2
+          
+        
+        
+          A
+        
+        −
+        
+          
+            1
+            
+              c
+              
+                2
+              
+            
+          
+        
+        
+          
+            
+              
+                ∂
+                
+                  2
+                
+              
+              
+                A
+              
+            
+            
+              ∂
+              
+                t
+                
+                  2
+                
+              
+            
+          
+        
+        =
+        −
+        
+          μ
+          
+            0
+          
+        
+        
+          J
+        
+      
+    
+     
+  ved bruk av Lorenz-gaugen. Den generelle løsningen kan skrives som
+
+  
+    
+      
+        
+          A
+        
+        (
+        
+          r
+        
+        ,
+        t
+        )
+        =
+        
+          
+            
+              μ
+              
+                0
+              
+            
+            
+              4
+              π
+            
+          
+        
+        ∫
+        
+        
+          d
+          
+            3
+          
+        
+        
+          x
+          ′
+        
+        
+          
+            
+              
+                J
+              
+              (
+              
+                
+                  r
+                  ′
+                
+              
+              ,
+              
+                t
+                ′
+              
+              )
+            
+            
+              
+                |
+              
+              
+                r
+              
+              −
+              
+                
+                  r
+                  ′
+                
+              
+              
+                |
+              
+            
+          
+        
+      
+    
+     
+  ved bruk av den retarderte tiden t'  = t - Δt. Her er  tidsforsinkelsen Δt = |r - r'|/c  hvor c er lyshastigheten, den tiden en forandring i feltet ved punktet r' bruker for å nå frem til feltpunktet r. Ved statiske forhold er det ingen avhengighet av tiden slik at man alltid har t'  = t. 
+En  kvantemekanisk beskrivelse av elektromagnetiske fenomen er umulig uten å gjøre bruk av det magnetiske vektorpotensialet. Det magnetiske feltet B er her vanligvis et sekundært felt, mens A er det primære. I enda større grad er dette tilfelle i kvanteelektrodynamikken som kun kan formuleres ved bruk av vektorpotensialet.  Det er derfor denne er en gaugeteori som de andre teoriene i standardmodellen også er.
+
+
+=== Rett ledning ===
+For en ledning som fører en konstant strøm I  bestående av ladninger med tetthet ρ som beveger seg med hastigheten v, kan man skrive
+
+  
+    
+      
+        
+          J
+        
+        
+        
+          d
+          
+            3
+          
+        
+        x
+        =
+        ρ
+        
+          v
+        
+        
+        
+          d
+          
+            3
+          
+        
+        x
+        =
+        
+          v
+        
+        
+        d
+        q
+        =
+        I
+        d
+        
+          s
+        
+      
+    
+     
+  Vektorpotensialet skapt av en slik strømsløyfe er derfor
+
+  
+    
+      
+        
+          A
+        
+        (
+        
+          r
+        
+        )
+        =
+        
+          
+            
+              
+                μ
+                
+                  0
+                
+              
+              I
+            
+            
+              4
+              π
+            
+          
+        
+        ∮
+        
+        
+          
+            
+              d
+              
+                
+                  s
+                  ′
+                
+              
+            
+            
+              
+                |
+              
+              
+                r
+              
+              −
+              
+                
+                  r
+                  ′
+                
+              
+              
+                |
+              
+            
+          
+        
+      
+    
+     
+  Dette er også en direkte konsekvens av Biot-Savarts lov når man benytter at
+
+  
+    
+      
+        
+          ∇
+        
+        
+          
+            1
+            
+              
+                |
+              
+              
+                r
+              
+              −
+              
+                
+                  r
+                  ′
+                
+              
+              
+                |
+              
+            
+          
+        
+        =
+        −
+        
+          
+            
+              
+                r
+              
+              −
+              
+                
+                  r
+                  ′
+                
+              
+            
+            
+              
+                |
+              
+              
+                r
+              
+              −
+              
+                
+                  r
+                  ′
+                
+              
+              
+                
+                  |
+                
+                
+                  3
+                
+              
+            
+          
+        
+        ,
+      
+    
+     
+  For en uendelig lang og rett edning som ligger langs z-aksen, vil da linjeelementet d s'  = ez dz  slik at vektorfeltet A blir parallelt med z-aksen. I en avstand r  fra denne har det en verdi gitt ved integralet
+
+  
+    
+      
+        
+          A
+          
+            z
+          
+        
+        (
+        r
+        )
+        =
+        
+          
+            
+              
+                μ
+                
+                  0
+                
+              
+              I
+            
+            
+              4
+              π
+            
+          
+        
+        
+          ∫
+          
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        
+          
+            
+              d
+              z
+            
+            
+              
+                
+                  z
+                  
+                    2
+                  
+                
+                +
+                
+                  r
+                  
+                    2
+                  
+                
+              
+            
+          
+        
+      
+    
+     
+  som gir et uendelig stort resultat. Det kan man unngå på samme måte som ved beregning av det elektriske potensialet utenfor et rett, ladet linjestykke med  lengde 2L som man etterpå lar bli vilkårlig stor.  På den måten kan svaret skrives som
+
+  
+    
+      
+        
+          A
+        
+        (
+        r
+        )
+        =
+        −
+        
+          
+            
+              
+                μ
+                
+                  0
+                
+              
+              I
+            
+            
+              2
+              π
+            
+          
+        
+        
+          
+            e
+          
+          
+            z
+          
+        
+        ln
+        ⁡
+        
+          
+            r
+            
+              2
+              L
+            
+          
+        
+      
+    
+     
+  så lenge som L >> r. Selve magnetfeltet er da gitt  som curl av dette vektorpotensialet som etter utregning gir
+
+  
+    
+      
+        
+          B
+        
+        (
+        r
+        )
+        =
+        
+          
+            
+              
+                μ
+                
+                  0
+                
+              
+              I
+            
+            
+              2
+              π
+              
+                r
+                
+                  2
+                
+              
+            
+          
+        
+        (
+        x
+        
+          
+            e
+          
+          
+            y
+          
+        
+        −
+        y
+        
+          
+            e
+          
+          
+            x
+          
+        
+        )
+      
+    
+     
+  uavhengig av størrelsen L. De tilsvarende feltlinjene er sirkler om ledningen med radius r  hvor feltet har verdien B = μ0I/2π r. Det tilsvarer Maxwells ligning ∇ × B = μ0J hvor J er strømtettheten i ledningen.  Antas at denne har et sirkulært tverrsnitt med radius a,  er størrelsen av strømtettheten gitt ved I =  Jπ a2.
+
+
+=== Flukstube ===
+I en flukstube er magnetfeltet forskjellig fra null bare innenfor tuben. Et eksempel er feltet i en uendelig lang spole. Fører den strømmen I  og har n vindinger per lengdeenhet, er feltet inni den B = μ0In og null utenfor. Man kan nå lett finne vektorpotensialet A som gir et slikt magnetfelt. Da dette skal oppfylle definisjonen ∇ × A = B, ser man at dette problemet er matematisk identisk med det forangående eksemplet. Ligger flukstuben langs z-aksen, er derfor vektorpotensialet i en avstand r utenfor denne gitt som
+
+  
+    
+      
+        
+          A
+        
+        (
+        r
+        )
+        =
+        
+          
+            Φ
+            
+              2
+              π
+              
+                r
+                
+                  2
+                
+              
+            
+          
+        
+        (
+        x
+        
+          
+            e
+          
+          
+            y
+          
+        
+        −
+        y
+        
+          
+            e
+          
+          
+            x
+          
+        
+        )
+      
+    
+     
+  hvor Φ = Bπ a2 er den magnetiske fluksen i tuben når den antas å ta radius a. Selv om magnetfeltet B utenfor er null, eksisterer det likevel et vektorpotensial der. Dette avtar omvendt proporsjonalt med avstanden til flukstuben.
+Vektorpotensialet A utenfor spolen eller flukstuben kan påvises ved å la magnetfeltet langs den variere med tiden. Da vil det oppstå et elektrisk felt E = - ∂A/∂t som kan påvirke en elektrisk ladning. Er for eksempel en ladet partikkel plassert utenfor en spole som fører en konstant strøm, vil partikkelen begynne å bevege seg så snart strømmen slåes av slik at magnetfeltet i spolen blir null. Utenfor spolen forblir magnetfeltet lik null.
+
+
+== Magnetiske krefter ==
+
+Basert på Ampères kraftlov kunne Grassmann utlede en enklere lov som gir kraften på en strømleder i et ytre magnetfelt B.  Fører den strømmen I og man betrakter en differensiell lengde d s av lederen, er kraften på dette strømelementet gitt som
+
+  
+    
+      
+        d
+        
+          F
+        
+        =
+        I
+        d
+        
+          s
+        
+        ×
+        
+          B
+        
+      
+    
+     
+  Vektorproduktet her betyr at når strømelementet Id s er parallelt med magnetfelt, er kraften lik med null. I det andre, spesielle tilfellet at de står vinkelrett på hverandre, har den differensielle kraften størrelse IdsB. Kraften på hele lederen finnes herav ved å integrere over den lukkete kretsen som den er en del av.
+
+
+=== Parallelle ledninger ===
+Den magnetiske kraften mellom to parallelle ledninger med avstand a og som  fører henholdsvis strømmene I og  I'  kan nå enkelt regnes ut. Feltet fra den siste er B = μ0I' /2π r  i avstand r og vinkelrett til lederen. Betrakter man så et stykke med lengde b av den andre lederen i dette feltet, vil kraften F  på dette ledningsstykket kunne skrives som
+
+  
+    
+      
+        
+          
+            F
+            b
+          
+        
+        =
+        
+          
+            
+              
+                μ
+                
+                  0
+                
+              
+              I
+              
+                I
+                ′
+              
+            
+            
+              2
+              π
+              a
+            
+          
+        
+      
+    
+     
+  Siden retningen til magnetfeltet avhenger av retningen til strømmen som produserer det, vil denne kraften være attraktiv når de to parallelle strømmene har samme retning og frastøtende når de har motsatt retning. Denne formelen var et av de aller første resultatene til Ampère og gir i dag måleenheten ampere for strømstyrke.
+
+
+=== Ampère-kraften ===
+Mer generelt kan man beregne kraften mellom to kretser er C og C'  som fører henholdsvis strømmene  I og I' . Den totale kraften som virker på den første er
+
+  
+    
+      
+        
+          F
+        
+        =
+        I
+        
+          ∮
+          
+            C
+          
+        
+        
+        d
+        
+          s
+        
+        ×
+        
+          B
+        
+        (
+        
+          r
+        
+        )
+      
+    
+     
+  hvor B(r) er magnetfeltet som den befinner seg i. Det er skapt av strømmen i den andre kretsen slik at kraften blir gitt ved dobbeltintegralet
+
+  
+    
+      
+        
+          F
+        
+        =
+        
+          
+            
+              μ
+              
+                0
+              
+            
+            
+              4
+              π
+            
+          
+        
+        I
+        
+          I
+          ′
+        
+        
+          ∮
+          
+            C
+          
+        
+        
+        
+          ∮
+          
+            
+              C
+              ′
+            
+          
+        
+        
+        
+          
+            
+              d
+              
+                s
+              
+              ×
+              [
+              d
+              
+                
+                  s
+                  ′
+                
+              
+              ×
+              (
+              
+                r
+              
+              −
+              
+                
+                  r
+                  ′
+                
+              
+              )
+              ]
+            
+            
+              
+                |
+              
+              
+                r
+              
+              −
+              
+                
+                  r
+                  ′
+                
+              
+              
+                
+                  |
+                
+                
+                  3
+                
+              
+            
+          
+        
+      
+    
+     
+  Da begge kretsene er lukkete strømsløyfer, kan det doble vektorproduktet i nevneren forenkles til å gi resultatet
+
+  
+    
+      
+        
+          F
+        
+        =
+        −
+        
+          
+            
+              μ
+              
+                0
+              
+            
+            
+              4
+              π
+            
+          
+        
+        I
+        
+          I
+          ′
+        
+        
+          ∮
+          
+            C
+          
+        
+        
+        
+          ∮
+          
+            
+              C
+              ′
+            
+          
+        
+        
+        (
+        d
+        
+          s
+        
+        ⋅
+        d
+        
+          
+            s
+            ′
+          
+        
+        )
+        
+          
+            
+              
+                r
+              
+              −
+              
+                
+                  r
+                  ′
+                
+              
+            
+            
+              
+                |
+              
+              
+                r
+              
+              −
+              
+                
+                  r
+                  ′
+                
+              
+              
+                
+                  |
+                
+                
+                  3
+                
+              
+            
+          
+        
+      
+    
+     
+  Hadde man i stedet regnet ut kraften F'  som virker på den andre kretsen i feltet fra den første, ville man ha fått F'  = - F. Newtons tredje lov om kraft og motkraft er derfor oppfylt.
+Opprinnelig kommer dette uttrykket for kraften mellom to lukkete strømkretser fra kraftloven til Ampère. Han mente at alle magnetiske krefter kunne sammenfattes i en  fundamental kraftlov mellom elektriske strømmer.  Dette var en fjernvirkningsteori hvor disse kreftene virket direkte mellom strømmene og ikke ble formidlet av et mellomliggende, magnetisk felt.
+
+
+=== Magnetisk dipol ===
+En rett, strømførende ledning kan betraktes som en del av en lukket krets eller sløyfe der resten av ledningen ligger langt borte der magnetfeltet er neglisjerbart. I det motsatte tilfelle kan man betrakte kraften på en liten, lukket strømsløyfe i et magnetfelt. Den virker som en magnetisk dipol.
+I det enkleste tilfellet kan man betrakte en krets ABCD med form som et rektangel der sidene AB og CD har lengde a, mens de to andre sidene har lengde b. Kretsen fører strømmen I og befinner seg i et konstant magnetfelt B rettet langs z-aksen. Den ligger først i ro i xy-planet med siden AB parallell med x-aksen. Kreftene som virker på linjestykkene AB og CD blir da  IaB, men motsatt rettet slik at de opphever hverandre. Det samme gjelder for kreftene IbB som virker på de to andre sidene i rektangelet. Alt i alt er derfor totalkraften på strømsløyfen lik med null.
+Hvis man i stedet betrakter denne kretsen vridd en vinkel θ om y-aksen, vil fremdeles kreftene  IbB  på sidene BC og DA oppheve hverandre. Det gjelder også kreftene  IaB som virker på AB og CD. Derfor er totalkraften fremdels like med null og kretsen vil ikke prøve å flytte seg. Men nå i dette tilfellet er avstandene mellom angrepspunktene for de to siste kreftene forskjellig med null og lik med b sinθ. Dette kraftparet skaper derfor et dreiemoment med størrelse N = IaB⋅b sinθ. På vektorform kan det skrives som
+
+  
+    
+      
+        
+          T
+        
+        =
+        
+          m
+        
+        ×
+        
+          B
+        
+      
+    
+     
+  etter å ha innført det magnetiske momentet m = Iab⋅n for strømsløyfen som har enhetsvektoren vinkelrett på seg. Her er S = ab arealet av rektangelet. 
+Dette resultatet viser seg å være uavhengig av den geometriske formen til strømsløyfen som generelt har et magnetisk moment m = IS⋅n kun avhengig av dens areal S og orientering i rommet. Dreiemomentet T vil prøve å vri strømsløyfen tilbake i en slik retning av dens magnetiske moment har samme retning som magnetfeltet B. Det er ekvivalent med at dens potensielle energi  
+
+  
+    
+      
+        
+          V
+          
+            m
+          
+        
+        =
+        −
+        
+          m
+        
+        ⋅
+        
+          B
+        
+      
+    
+     
+  er minimal for denne retningen. Indeksen m skal minne om at Vm  er en mekanisk energi som er avhengig av orienteringen til dipolen.
+Hvis magnetfeltet B ikke er helt konstant, vil ikke kreftene som virker på motsatte sider i strømsløyfen oppheve hverandre. Den vil da være utsatt for en nettokraft som prøver å flytte den i tillegg til at dreiemomentet virker. Det er denne kraften som får en magnet til å bevege seg i et ytre magnetfelt som nesten alltid vil variere i rommet.
+
+
+=== Lorentz-kraften ===
+ 
+Den magnetiske kraften på en strømførende ledning har sitt opphav i at magnetfeltet virker direkte på de ladete partiklene som utgjør strømmen. Har de hastighet v og ladning q, finnes kraften på hver enkelt av dem ved å erstatte strømelementet Id s med faktoren  q v.  Det gir opphav til den magnetiske  Lorentz-kraften
+
+  
+    
+      
+        
+          F
+        
+        =
+        q
+        
+          v
+        
+        ×
+        
+          B
+        
+      
+    
+     
+  Retningen til kraften følger igjen fra høyrehåndsregelen. Hvis det magnetiske feltet følger tommelen på høyre hånd, vil negativ ladning avbøyes i de krummede fingrenes retning, og positiv ladning avbøyes mot fingrenes retning.
+Hvis det i tillegg til det magnetiske feltet også finnes et elektrisk felt E som virker på partikkelen, er den utsatt for en totalkraft F = q(E + v × B) som også blir kalt for Lorentz-kraften. På denne formen er den i overensstemmelse med Einsteins relativitetsteori og er av like fundamental betydning som Maxwells ligninger.
+For en kontinuerlig fordeling av partikler med ladningstetthet ρ = ρ(x,t) og beskrevet ved  hastighetsfeltet v = v(x,t), kan man nå regne ut den magnetiske kraften på alle partiklene i dette systemet. Et differensielt volumelement dV har ladningen ρdV og er derfor utsatt for kraften d F = ρ v × B dV. Men her er J = ρ v  den elektriske strømtettheten  slik at det er naturlig å innføre den magnetiske volumkraften
+
+  
+    
+      
+        
+          f
+        
+        =
+        
+          J
+        
+        ×
+        
+          B
+        
+      
+    
+     
+  som virker på hvert volumelement av systemet. Totalkraften finnes så ved integrasjon.
+
+
+== Maxwell-spenninger ==
+For den magnetiske totalkraften på et system av elektriske strømmer vil magnetfeltet B avhenge av disse strømmene via Maxwells ligninger og må bestemmes i hele volumet under betraktning. Det gjør en slik beregning i praksis meget vanskelig. Men de samme ligningene kan benyttes til å finne denne kraften kun fra kjennskap til magnetfeltet på overflaten eller utenfor systemet. Og det kan ofte være en stor forenkling som vist av Maxwell selv.Når strømfordelingen J, er stasjonær er den koblet til magnetfeltet via Ampères ligning  ∇ × H = J. Den magnetiske volumkraften kan derfor skrives som
+
+  
+    
+      
+        
+          f
+        
+        =
+        (
+        
+          ∇
+        
+        ×
+        
+          H
+        
+        )
+        ×
+        
+          B
+        
+      
+    
+     
+  Skriver man nå at B = μ H hvor permeabilteten μ antas å være konstant og samtidig benytter identiteten 
+
+  
+    
+      
+        
+          B
+        
+        ×
+        (
+        
+          ∇
+        
+        ×
+        
+          B
+        
+        )
+        +
+        (
+        
+          B
+        
+        ⋅
+        
+          ∇
+        
+        )
+        
+          B
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          ∇
+        
+        (
+        
+          B
+        
+        ⋅
+        
+          B
+        
+        )
+      
+    
+     
+  fra vektoranalysen, forenkles volumkraften til 
+
+  
+    
+      
+        
+          f
+        
+        =
+        (
+        
+          H
+        
+        ⋅
+        
+          ∇
+        
+        )
+        
+          B
+        
+        −
+        
+          
+            1
+            2
+          
+        
+        
+          ∇
+        
+        (
+        
+          B
+        
+        ⋅
+        
+          H
+        
+        )
+      
+    
+     
+  Dette resultatet kan skrives som gradienten av Maxwells spenningstensor 
+
+  
+    
+      
+        
+          σ
+          
+            i
+            j
+          
+        
+        =
+        
+          B
+          
+            i
+          
+        
+        
+          H
+          
+            j
+          
+        
+        −
+        
+          
+            1
+            2
+          
+        
+        
+          δ
+          
+            i
+            j
+          
+        
+        
+          B
+        
+        ⋅
+        
+          H
+        
+      
+    
+     
+  når man benytter at ∇ ⋅ B = 0.  Det betyr at f = ∇⋅σ eller på komponentform som fi = ∂jσij hvor spenningstensoren er symmetrisk ved ombytte av sine to indekser.
+Den magnetiske totalkraften finnes ved å integrere volumkraften over hele systemet.  Ved bruk av det generaliserte divergensteoremet kan resultatet skrives som
+
+  
+    
+      
+        
+          F
+        
+        =
+        ∫
+        
+        d
+        V
+        
+          J
+        
+        ×
+        
+          B
+        
+        =
+        ∫
+        
+        d
+        V
+        
+          ∇
+        
+        ⋅
+        
+          σ
+        
+        =
+        
+          ∫
+          
+            ∂
+            V
+          
+        
+        d
+        
+          S
+        
+        ⋅
+        
+          σ
+        
+      
+    
+     
+  hvor d S er et differensielt areal på overflaten S = ∂V som dekker hele volumet til systemet.  Det er kun her at feltene nå må være kjent for finne kraften. Denne overflaten kan velges fritt så lenge den omslutter hele systemet under betraktning. Men noen valg kan gi enklere beregning enn andre.Maxwell-tensoren opptrer også under ikke-stasjonære forhold og har da samme form som her. Dette er innholdet av Poyntings teorem. Da må man inkludere kreftene som det elektriske feltet lager samt den elektromagnetiske energien som stråles ut fra ladningene i bevegelse. 
+
+
+=== Eksempel ===
+Betrakter man et lite flateelement ΔSj = ΔS nj med enhetsvektoren n stående normalt på seg, er den magnetiske kraften på elementet i retning i gitt ved ΔFi = σij ΔSj  = σij nj ΔS når man bruker Einsteins summekonvensjon og summerer over to like indekser. Komponentene til spenningstensoren angir derfor en kraft per flateenhet som virker ut fra denne og derfor tilsvarer et negativt trykk.
+Som et enkelt eksempel kan man betrakte et magnetisk felt B i vakum som er rettet langs-z-aksen. Tensoren er da diagonal med komponentene
+
+  
+    
+      
+        (
+        
+          σ
+          
+            i
+            j
+          
+        
+        )
+        =
+        
+          
+            
+              B
+              
+                2
+              
+            
+            
+              2
+              
+                μ
+                
+                  0
+                
+              
+            
+          
+        
+        
+          
+            [
+            
+              
+                
+                  1
+                
+                
+                  0
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  −
+                  1
+                
+                
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  0
+                
+                
+                  −
+                  1
+                
+              
+            
+            ]
+          
+        
+      
+    
+     
+  Dette resultatet kan anvendes på forskjellige situasjoner. For eksempel, hvis man har en stavmagnet  langs z-aksen som man deler i to, adskilt med en tynn luftspalte, vil de to delene hver være en ny stavmagnet. Komponenten σzz  gir da kraften per flateenhet som virker over luftspalten og prøver å trekke de to sammen igjen.  Dette er derfor en «tensil» eller tiltrekkende kraft som tilsvarer et negativt trykk  - P = σzz = B 2/2μ0. Magnetfeltet B er bestemt ved magnetisering til den opprinnelige magneten. Dette er i overenstemnmelse med hva man kan finne ved å betrakte de magnetiske ladningene på snittflaten. 
+De to andre komponentene kan benyttes i en spole med akse langs z-aksen. Da er det inni den tilnærmet et konstant magnetfelt  B i samme retning. Dette gir nå en frastøtende kraft σxx = σyy =  - B 2/2μ0 som virker på vindingene til spolen slik at de presses utover. Denne effekten kan ha stor, praktisk betydning i spoler som skaper spesielt sterke magnetfelt.
+Med sin spenningstensor ga Maxwell en matematisk forklaring på hva Faraday hadde skapt av forståelse ved å innføre magnetiske feltlinjer. Ved sine eksperiment hadde han vist at disse prøver å trekke seg sammen i lengderetningen samtidig som de er frastøtende på tvers av seg. Disse egenskapene var viktige for å gi begrepet magnetisk felt et fysisk innhold.
+
+
+== Magnetisk energi ==
+Selv om Lorentz-kraften ikke kan utføre arbeid, inneholder likevel magnetfeltet energi. Dette kommer tydelig frem i kreftene som virker mellom magneter og Maxwell-spenningene som feltet gir opphav til. Selv om disse kreftene også opptrer under statiske forhold, har denne energien sitt opphav i at et foranderlig magnetfelt lager et elektrisk felt som kan skape et arbeid på vanlig måte.
+Det kommer tydelig frem ved å se på en lukket krets som det blir ført en strøm I  igjennom. Da vil det skapes et magnetfelt med en fluks Φ som går gjennom kretsen. Når strømmen økes litt i et kort tidsrom dt, vil fluksen øke med d Φ. Men for å få dette til, må den påtrykte spenningen fra et eksternt batteri eller generator overvinne den induserte spenningen V = d Φ/dt. Det utførte arbeidet til denne eksterne spenningskilden er derfor dWe = VIdt  eller
+
+  
+    
+      
+        d
+        
+          W
+          
+            e
+          
+        
+        =
+        I
+        d
+        Φ
+      
+    
+     
+  Dette arbeidet går over til å bli lagret som energi  UB  i det magnetiske feltet som har oppstått. Fluksen kan uttrykkes ved strømmen I  gjennom kretsen som Φ = LI hvor L er dens induktans. Feltenergien som skapes ved dette arbeidet som utføres på kretsen under oppladning fra null strøm, finnes da ved integrasjon å være
+
+  
+    
+      
+        
+          U
+          
+            B
+          
+        
+        =
+        L
+        
+          ∫
+          
+            0
+          
+          
+            I
+          
+        
+        
+        d
+        I
+        I
+        =
+        
+          
+            1
+            2
+          
+        
+        L
+        
+          I
+          
+            2
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        I
+        Φ
+      
+    
+     
+  Ved sammenligning ser man at dette er i overensstemmelse med energien til en stømførende spole.  Resultatet tilsvarer den  elektriske feltenergien   UE = (1/2)QV  for en kondensator som er ladet opp til et potensial V slik at den har en ladning Q = CV hvor C er dens kapasitans. 
+Mer generelt kan man betrakte et system som består av mange kretser. Fører de strømmene I1,   I2 , ... samtidig som de omslutter fluksene Φ1,  Φ2, ..., vil en differensiell økning av disse medføre det eksterne arbeidet
+
+  
+    
+      
+        d
+        
+          W
+          
+            e
+          
+        
+        =
+        
+          I
+          
+            1
+          
+        
+        d
+        
+          Φ
+          
+            1
+          
+        
+        +
+        
+          I
+          
+            2
+          
+        
+        d
+        
+          Φ
+          
+            2
+          
+        
+        +
+        …
+      
+    
+     
+  Dette blir lagret som magnetisk energi forutsatt at systemet ikke selv utfører noe arbeid eller blir tilført annen energi. Den resulterende energi til systemet blir da
+
+  
+    
+      
+        
+          U
+          
+            B
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          I
+          
+            1
+          
+        
+        
+          Φ
+          
+            1
+          
+        
+        +
+        
+          
+            1
+            2
+          
+        
+        
+          I
+          
+            2
+          
+        
+        
+          Φ
+          
+            2
+          
+        
+        +
+        …
+      
+    
+     
+  i det generelle tilfellet når systemet består av flere lukkete strømkretser.
+
+
+=== Feltenergitetthet ===
+Ved bruk av det magnetiske vektorpotensialet A og Stokes' teorem kan fluksen gjennom en lukket krets C som spenner ut flaten S, skrives som 
+
+  
+    
+      
+        Φ
+        =
+        ∫
+        
+        d
+        
+          S
+        
+        ⋅
+        (
+        
+          ∇
+        
+        ×
+        
+          A
+        
+        )
+        =
+        
+          ∮
+          
+            C
+          
+        
+        
+        d
+        
+          s
+        
+        ⋅
+        
+          A
+        
+      
+    
+     
+  Når denne fluksen skyldes strømmen I  gjennom kretsen, kan derfor den magnetiske feltenergien alternativt skrives som 
+
+  
+    
+      
+        
+          U
+          
+            B
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          ∮
+          
+            C
+          
+        
+        
+        I
+        d
+        
+          s
+        
+        ⋅
+        
+          A
+        
+      
+    
+     
+  På denne formen kan man nå finne den samme energien for en mer generell strømfordeling gitt ved strømtettheten J = J(r). Denne kan betraktes som bestående av tynne strømfilament som tilsvarer utvidelsen Ids → Jd 3x. Slik kommer man frem til det viktige resultatet
+
+  
+    
+      
+        
+          U
+          
+            B
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        ∫
+        
+        
+          d
+          
+            3
+          
+        
+        x
+        
+        
+          J
+        
+        ⋅
+        
+          A
+        
+      
+    
+     
+  Ved å bruk Ampères sirkulasjonslov J = ∇ × H kan dette uttrykkes ved det magnetiske feltet alene. Dette oppnås ved å bruke den vektoranalytiske identiteten 
+
+  
+    
+      
+        
+          A
+        
+        ⋅
+        (
+        
+          ∇
+        
+        ×
+        
+          H
+        
+        )
+        =
+        
+          ∇
+        
+        ⋅
+        (
+        
+          H
+        
+        ×
+        
+          A
+        
+        )
+        +
+        
+          H
+        
+        ⋅
+        (
+        
+          ∇
+        
+        ×
+        
+          A
+        
+        )
+      
+    
+     
+  Fra divergensteoremet følger at det første leddet her gir null når overflaten til integrasjonsvolumet legges uendelig langt i det fjerne hvor feltet fra strømfordelingen forsvinner. Da det siste leddet er lik med B⋅H, betyr det at denne energien kan uttrykkes ved en magnetisk feltenergitetthet
+
+  
+    
+      
+        
+          u
+          
+            B
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          B
+        
+        ⋅
+        
+          H
+        
+      
+    
+     
+  I et lineært medium er B = μ H slik at uB = (1/2)μH 2 = B 2/2μ. Dette er i overensstemmelse med energitettheten i en ideell spole hvor magnetfeltet befinner seg inni spolen med en konstant verdi.
+
+
+=== Vekselvirkningsenergi ===
+Hvis en eller flere av de elektriske strømkretsene som utgjør systemet, kan bevege seg under oppladningen, vil systemet kunne utføre et mekanisk arbeid Wm. Den tilførte, eksterne energien går da med til dette arbeidet pluss en økning av den magnetiske energien. Energibalansen tilsier derfor at
+
+  
+    
+      
+        d
+        
+          W
+          
+            e
+          
+        
+        =
+        d
+        
+          W
+          
+            m
+          
+        
+        +
+        d
+        
+          U
+          
+            B
+          
+        
+      
+    
+     
+  Når en eller flere strømsløyfer flytter seg under denne forandringen, vil det generelt induseres strømmer i kretsene.  Ved å regulere den eksterne strømtilførselen slik at disse strømmene forblir konstant, er forandringen i den magnetiske enrgien
+
+  
+    
+      
+        d
+        
+          U
+          
+            B
+          
+        
+        =
+        
+          
+            1
+            2
+          
+        
+        
+          I
+          
+            1
+          
+        
+        d
+        
+          Φ
+          
+            1
+          
+        
+        +
+        
+          
+            1
+            2
+          
+        
+        
+          I
+          
+            2
+          
+        
+        d
+        
+          Φ
+          
+            2
+          
+        
+        +
+        …
+      
+    
+     
+  som er like med (1/2)dWe. Fra energibalansen følger det derfor at  dWm = dUB  i dette tilfellet.Hvis en del av dette systemet flytter seg en liten distance d x under denne forandringen, kan det mekaniske arbeidet som systemet utfører, skrives som 
+dWm = F⋅d x hvor den magnetiske kraften F er skapt av systemet. Dette arbeidet tilsvarer en reduksjon dUm = - dWm  i den mekaniske vekselvirkningsenergien mellom deler av strømsystemet. Ved direkte integrasjon av sammenhengen dUm = - dUB  har man derfor for denne
+
+  
+    
+      
+        
+          U
+          
+            m
+          
+        
+        =
+        −
+        
+          
+            1
+            2
+          
+        
+        ∫
+        
+        
+          d
+          
+            3
+          
+        
+        x
+        
+        
+          J
+        
+        ⋅
+        
+          A
+        
+      
+    
+     
+  Denne potensielle energien for konstante strømmer er derfor ganske enkelt den negative av totalenergien til hele systemet. De magnetiske kreftene den gir opphav til, kan nå finnes på vanlig måte fra F = - ∇ Um.
+Hvis systemet består av to strømtettheter J(r) og J'(r), vil begge disse to bidra til vektorpotensialet. Kalles disse to bidragene på samme måte A og A', kan den mekaniske energien skrives på formen
+
+  
+    
+      
+        
+          U
+          
+            m
+          
+        
+        (
+        
+          J
+        
+        ,
+        
+          
+            J
+            ′
+          
+        
+        )
+        =
+        
+          U
+          
+            m
+          
+        
+        (
+        
+          J
+        
+        )
+        +
+        
+          U
+          
+            m
+          
+        
+        (
+        
+          
+            J
+            ′
+          
+        
+        )
+        +
+        
+          V
+          
+            m
+          
+        
+        (
+        
+          J
+        
+        ,
+        
+          
+            J
+            ′
+          
+        
+        )
+      
+    
+     
+  hvor de to første termene er mekaniske selvenergier. Selve vekselvirkningsenergien mellom de to strømmene er inneholdt i den siste termen
+
+  
+    
+      
+        
+          V
+          
+            m
+          
+        
+        (
+        
+          J
+        
+        ,
+        
+          
+            J
+            ′
+          
+        
+        )
+        =
+        −
+        ∫
+        
+        
+          d
+          
+            3
+          
+        
+        x
+        
+        
+          J
+        
+        ⋅
+        
+          
+            A
+            ′
+          
+        
+        =
+        −
+        ∫
+        
+        
+          d
+          
+            3
+          
+        
+        x
+        
+        
+          
+            J
+            ′
+          
+        
+        ⋅
+        
+          A
+        
+      
+    
+     
+  Dette er det generelle resultatet for vekselvirkningsenergien til en strøm i feltet fra en annen strøm. Ved å sette inn formelen for vektorpotensialet fra den andre  strømtettheten, kan energien i dette tilfellet skrives som
+
+  
+    
+      
+        
+          V
+          
+            m
+          
+        
+        (
+        
+          J
+        
+        ,
+        
+          
+            J
+            ′
+          
+        
+        )
+        =
+        −
+        
+          
+            
+              μ
+              
+                0
+              
+            
+            
+              4
+              π
+            
+          
+        
+        ∫
+        
+        
+          d
+          
+            3
+          
+        
+        x
+        ∫
+        
+        
+          d
+          
+            3
+          
+        
+        
+          x
+          ′
+        
+        
+          
+            
+              
+                J
+              
+              (
+              
+                r
+              
+              )
+              ⋅
+              
+                
+                  J
+                  ′
+                
+              
+              (
+              
+                
+                  r
+                  ′
+                
+              
+              )
+            
+            
+              
+                |
+              
+              
+                r
+              
+              −
+              
+                
+                  r
+                  ′
+                
+              
+              
+                |
+              
+            
+          
+        
+      
+    
+     
+  Fra denne potensielle energien følger nå Ampère-kraften ved derivasjon, noe som tilsvarer at man flytter den ene kretsen litt i forhold til den andre uten at noen av dem forandrer sin form.
+
+
+=== Magnetisk dipol ===
+En tilstrekkelig liten strømsløyfe C utgjør en magnetisk dipol. Befinner den seg i et ytre magnetfelt B = ∇ × A, vil den ha vekselvirkningsenergien
+
+  
+    
+      
+        
+          V
+          
+            m
+          
+        
+        =
+        −
+        I
+        
+          ∮
+          
+            C
+          
+        
+        
+        d
+        
+          s
+        
+        ⋅
+        
+          A
+        
+        =
+        −
+        I
+        Φ
+      
+    
+     
+  da strømmen I  i den er konstant. Nå strømsløyfen er så liten at feltet som går gjennom den også er konstant, kan man skrive fluksen som Φ = S⋅B hvor S er sløyfens areal med retning vinkelrett på sløyfen. Men nå er m = I S dens magnetiske moment slik at den har en potensiell energi 
+
+  
+    
+      
+        
+          V
+          
+            m
+          
+        
+        =
+        −
+        
+          m
+        
+        ⋅
+        
+          B
+        
+      
+    
+     
+  i overensstemmelse med hva som finnes ved å se på de magnetiske kreftene som virker på den. Hvis θ er vinkelen mellom dipolen og B-feltet, er denne energien Vm = - mB cosθ. Den konjugerte kraften som virker på dipolen, er dermed dreiemomentet
+
+  
+    
+      
+        T
+        =
+        −
+        
+          
+            
+              ∂
+              
+                V
+                
+                  m
+                
+              
+            
+            
+              ∂
+              θ
+            
+          
+        
+        =
+        −
+        m
+        B
+        sin
+        ⁡
+        θ
+      
+    
+     
+  som på vektorform er T = m × B. Det prøver å vri dipolen slik at den retter seg inn etter det ytre feltet slik at vekselvirkningsenergien blir minst mulig.
+Uttrykket for den potensielle energien er også gyldig når dipolen befinner seg i et magnetfelt B = B(r)  som varierer langsomt i rommet.  I tillegg til dreiemomentet vil derfor også en kraft F = - ∇Vm  virke på den. Den kan skrives som
+
+  
+    
+      
+        
+          F
+        
+        =
+        (
+        
+          m
+        
+        ⋅
+        
+          ∇
+        
+        )
+        
+          B
+        
+      
+    
+     
+  når man benytter at for det ytre feltet gjelder ∇ × B = 0. Hvis man for eksempel beskriver en stavmagnet som en magnetisk dipol, vil denne formelen forklare hvordan en slik magnet beveger seg i feltet fra en annen magnet.
+
+
+== Se også ==
+Magnet
+Magnetisme
+Lorentz-kraft
+Elektromagnetisme
+Magnetisk fluks
+Elektromagnetisk felt
+
+
+== Referanser ==
+
+
+== Eksterne lenker ==
+R.P. Feynman, The Feynman Lectures on Physics, Vol II, Caltech, Pasadena.
+J. Skaar, Elektromagnetisme, forelesninger ved Universitetet i Oslo, 2017.
+D. K. Ghosh, Magnetic fields, elektromagnetiske forelesninger, Nptel, Bombay.

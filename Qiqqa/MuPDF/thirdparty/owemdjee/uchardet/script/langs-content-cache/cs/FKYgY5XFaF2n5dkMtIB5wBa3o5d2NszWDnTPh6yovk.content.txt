@@ -1,0 +1,17 @@
+revision: 21747168
+title: "Rank pam\u011Bti"
+url: https://cs.wikipedia.org/wiki/Rank_pam%C4%9Bti
+
+
+---
+
+Rank paměti je u počítačové paměti způsob zapojení DRAM čipů na DIMM modulu za účelem zvýšení jeho kapacity. Paměťové čipy mají společnou datovou sběrnici, ale oddělený signál chip select, takže je možné k nim přistupovat odděleně. Termín rank byl vytvořen a definován organizací JEDEC, která standardizuje i řadu pamětí DDR SDRAM (DDR2, DDR3, DDR4 a nejnověji DDR5), které se používají jako operační paměť například ve stolních počítačích, noteboocích a grafických kartách.
+
+
+== Charakteristika ==
+Podle toho, jak je paměťový DIMM modul vyroben, může mít jeden, dva nebo čtyři bloky 64 bitů široké datové oblasti, což je pak označováno jako single-rank, dual-rank a quad-rank. Všechny DRAM čipy na DIMM modulu sdílejí společné příkazové a řídící signály, ale jenom řídící chip select pin je pro každý rank zvlášť. To znamená, že datové piny jsou sdíleny přes všechny ranky. U DIMM modulů pamětí DDR, DDR2, DDR3 i DDR4 má každý rank 64bitovou datovou sběrnici, avšak u DIMM modulů podporujících ECC je datová sběrnice 72bitová (další datové linky jsou pro přenášení ECC kódů příslušných k danému řádku paměti).
+Před vznikem termínu rank bylo používáno označení jednostranné nebo dvoustranné moduly (anglicky single-sided, double-sided), speciálně u modulů SIMM. Přestože obvykle počet stran DIMM modulu s osazenými RAM čipy koresponduje s rankem, někdy to tak není, což může způsobit nedorozumění.Ve výsledku mohou mít díky vyššímu ranku DIMM moduly vyšší kapacitu a také jsou mírně rychlejší (3 až 5 %), protože při přístupech do paměti se jednotlivé ranky mohou střídat. Vyšší rychlost i kapacita je činí žádoucími pro servery a výkonné herní sestavy (a také je činí mírně dražšími). Vyšší vliv na výkon však má frekvence pamětí a CAS latence.V počítači lze zjistit, jaký rank paměti mají, například pomocí nástroje CPU-Z (karta SPD, položka Ranks).
+
+
+== Reference ==
+V tomto článku byl použit překlad textu z článku Memory rank na anglické Wikipedii.

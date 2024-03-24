@@ -1,0 +1,34 @@
+revision: 52530548
+title: Auktoritetsdata
+url: https://sv.wikipedia.org/wiki/Auktoritetsdata
+
+
+---
+
+Auktoritetsdata är strukturerade och kontrollerade bibliografiska uppgifter (katalogdata) om personer, platser, föremål eller begrepp som presenteras bland annat via bibliotekskataloger. Begreppet auktoritetsdata används som förtydligande av det särskilda syftet med uppgifterna, nämligen att säkerställda identiteten och basinformationen omkring de katalogiserade ämnena.
+
+
+== Ord och funktioner ==
+De enskilda katalogiseringarna av personer och föremål benämns ibland auktoritetsposter, med hänvisning till det särskiljande sorterings-ID som varje sådan post motsvarar. Dessa poster innehåller olika uppgifter och referenser till det som katalogiseras, uppgifter som beroende på inriktning kan användas för att hantera bokbestånd på bibliotek eller ge merinformation om personer och verk för uppslagsverk och andra faktabaserade publikationer.
+
+Genom att använda en unik och distinkt stavning eller nummer identifierar man via auktoritetsdata varje enskilt ämne. Auktoritet i orden kommer från att katalogerna har ett unikt namn för de olika katalogobjekten och att katalogproducenterna ofta har nationellt mandat (de är ofta kopplade till nationella referensbibliotek). Begreppet auktoritetsdata kan jämföras med engelska authority control, som tydligare syftar på själva registerföringen och de kvalitetskriterier som den är underkastad. Denna engelska formulering har även spridits vidare till tyska som Normdatei och franska som [notice d']autorité.
+Varje kontrollerad katalogpost beskrivs i en auktoritetsreferens, som förtydligar dess innebörd och användning. Det här organiserandet underlättar för bibliotekspersonalen att kunna vidmakthålla kvaliteten på databasen och göra den användarvänlig för forskare och andra användare.
+
+I teorin kan många olika uppgifter bli föremål för registerhållning som auktoritetsdata. I praktiken katalogiserar dock de flesta dylika databaser oftast författarnamn, födelse- och dödsår samt boktitlar. De olika posterna är dessutom ofta formaterade enligt den maskinläsbara och internationellt använda  MARC-standarden.
+
+
+== Internationella samarbeten ==
+Fenomenet och betydelsen av auktoritetsdata har utvecklats parallellt med framväxten av digitala och internationellt spridda bibliotekskataloger via Internet och andra datorbaserade nätverk. Några av de största sådana bibliotekskatalogerna är Worldcat (för böcker) och VIAF (olika typer av katalogiseringar). Den sistnämnda fungerar också som samordnare och sammankopplare av de olika nationella bibliotekskatalogerna i ett gemensamt register.
+Wikimedia Foundations projekt Wikidata organiserar bland annat auktoritetsdata som länkas till i många Wikipedia-artiklar. MusicBrainz producerar auktoritetsdata inom musikområdet.
+Det internationella samarbetet samordnas även via en arbetsgrupp kopplad till IFLA, Internationella förbundet för biblioteksorganisationer och -institutioner.
+
+
+== Se även ==
+{{Auktoritetsdata}} (mall för presentation av auktoritetsdata i Wikipediaartiklar)
+
+
+== Referenser ==
+Den här artikeln är helt eller delvis baserad på material från engelskspråkiga Wikipedia, 8 augusti 2017.
+
+
+=== Noter ===

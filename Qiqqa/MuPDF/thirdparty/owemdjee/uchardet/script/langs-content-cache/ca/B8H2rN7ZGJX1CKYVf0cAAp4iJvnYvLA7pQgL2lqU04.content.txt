@@ -1,0 +1,34 @@
+revision: 31290164
+title: "Percepci\xF3 de qu\xF2rum"
+url: https://ca.wikipedia.org/wiki/Percepci%C3%B3_de_qu%C3%B2rum
+
+
+---
+
+La percepció de quòrum (Quorum sensing en anglès) és un sistema d'estímuls i respostes correlacionats amb la densitat de població. Moltes espècies de bacteris l'usen per coordinar l'expressió gènica d'acord amb la densitat de la seva població local. De manera similar, alguns insectes socials fan servir la percepció de quòrum per determinar on faran el niu o l'eixam. També la percepció de quòrum té aplicacions útils en els ordinadors i la robòtica.
+La percepció de quòrum pot funcionar com un procés de prendre decisions en qualsevol sistema descentralitzat.
+
+
+== Bacteris ==
+Els bacteris fan servir la percepció de quòrum per coordinar certs comportaments basant-se en la densitat local de la població bacteriana. Es pot fer servir una gran varietat de molècules com a senyals cel·lulars. Les classes més comunes de molècules senyalitzants són els oligopèptids en els bacteris gram positius, el N-Acil Homoserina Lactona (AHL) en els bacteris gram negatius i una família d'autoinductors (AI-2) en ambdós tipus de bacteris.
+
+
+=== Tractaments mèdics antiquòrum ===
+S'investiguen especialment els pèptids per a usos en immunologia i oncologia.
+
+
+== Referències ==
+
+
+== Enllaços externs ==
+The Quorum Sensing Website
+Cell-to-Cell Communication in Bacteria
+The SECOAS project—Development of a Self-Organising, Wireless Sensor Network for Environmental Monitoring Arxivat 2008-12-16 a Wayback Machine.
+Measurement of Space: From Ants to Robots Arxivat 2008-09-07 a Wayback Machine.
+Instant insight into quorum sensing from the Royal Society of Chemistry
+Bonnie Bassler: Discovering bacteria's amazing communication system Arxivat 2011-12-05 a Wayback Machine.
+"Cell-Cell Communication in Bacteria" (Quorum sensing) Arxivat 2013-07-18 a Wayback Machine. by Bonnie Bassler (Princeton)
+
+
+== Bibliografia ==
+Dedicated issue of Philosophical Transactions B on Quorum Sensing. Some articles are freely available.

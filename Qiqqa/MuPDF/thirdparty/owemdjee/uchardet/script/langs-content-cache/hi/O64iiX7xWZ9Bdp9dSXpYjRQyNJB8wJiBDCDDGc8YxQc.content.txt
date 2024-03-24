@@ -1,0 +1,204 @@
+revision: 5423859
+title: Nitrokey
+url: https://hi.wikipedia.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%95%E0%A5%8D%E0%A4%A4-%E0%A4%B8%E0%A5%8D%E0%A4%B0%E0%A5%8B%E0%A4%A4_%E0%A4%B9%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%A1%E0%A4%B5%E0%A5%87%E0%A4%AF%E0%A4%B0_%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%9C%E0%A4%A8%E0%A4%BE%E0%A4%93%E0%A4%82_%E0%A4%95%E0%A5%80_%E0%A4%B8%E0%A5%82%E0%A4%9A%E0%A5%80
+
+
+---
+
+यह मुक्तस्रोत हार्डवेयर परियोजनाओं की एक सूची है, जिसमें कंप्यूटर प्रणाली और उसके घटकों, कैमरा, रेडियो, टेलीफोनी, विज्ञान शिक्षा, मशीन और उपकरण, रोबोटिकी, नवीकरणीय ऊर्जा, गृह स्वचालन, चिकित्सा और बायोटेक, स्वचालित वाहन, प्रोटोटाइप, परीक्षण उपकरण, और संगीत वाद्ययंत्र आदि सम्मिलित हैं।
+
+
+== संचार ==
+
+
+=== गैरपेशेवर रेडियो ===
+होमब्रियु डी-स्टार रेडियो
+हैक-आरएफ-ओन (HackRF_One)
+
+
+=== श्रव्य इलेक्ट्रॉनिकी ===
+Monome 40h – reconfigurable grid of 64 backlit buttons, used via USB; a limited batch of 500 was produced; all design process, specifications, firmware, and PCB schematics are available online
+Neuros Digital Audio Computer – portable digital audio player
+Arduinome
+MIDIbox – modular DIY hardware–software platform for MIDI devices including controllers, synthesizers, sequencers
+
+
+=== दूरध्वानिकी ===
+इन्हें भी देखें: मुक्त-स्रोत मोबाइल फोनों की सूचीOpenmoko – phone framework (first use case: First International Computer (FIC) Neo FreeRunner, released as of mid-2008
+OpenBTS and OsmoBTS – software-based GSM base stations
+Project Ara – modular design, hot swapping pluggable mobile phone; due to enter trial production in 2015, but was suspended in 2016
+PiPhone and ZeroPhone
+Telecom Infra Project – collaborative Open Compute Project focusing on optical broadband networks and open cellular networks to create global access
+PinePhone – developed by computer manufacturer Pine64, intended for allowing the user to have full hardware and software control over the device, released as of end-2019
+
+
+=== विडियो इलेक्ट्रॉनिकी ===
+Milkymist One – video synthesizer for interactive and dance-directed VJing
+Neuros OSD – digital video recorder
+
+
+=== नेटवर्किंग ===
+NetFPGA – hardware platform, software, community, and education material to enable research and education effort in a line-rate network environment
+
+
+==== बेतार नेटवर्किंग ====
+OpenPicus – platform for smart sensors and Internet of things
+Sun SPOT – hardware–software platform for sensor networks and battery powered, wireless, embedded development
+USRP – universal software radio peripheral is a mainboard with snap in modules providing software defined radio at different frequencies, has USB 2.0 link to a host computer
+PowWow Power Optimized Hardware and Software FrameWork for Wireless Motes – hardware–software platform for wireless sensor networks
+Twibright RONJA – free-space optic system, DIY in a garage and maker culture, 10 Mbit/s full duplex/1.4 km
+SatNOGS – software-hardware project of a global low Earth orbit satellite ground station, including for data and Internet
+
+
+== इलेक्ट्रॉनिकी ==
+
+
+=== कैमरे ===
+AXIOM – digital cinema camera built by apertus° community
+Elphel, Inc. – cameras based on free hardware–software designs
+PineCube – camera kit developed by Pine64, that targets developers and DIY makers
+
+
+=== संगणन प्रणाली ===
+
+अर्दुइनो – मुक्त-स्रोत माइक्रोकंट्रोलर बोर्ड
+Chumby – information ambient device
+CUBIT – multitouch surface-interaction system
+Libre Computer Project – open-source, open-hardware single board computers
+Netduino – microcontroller board, .NET Micro Framework based
+NodeMCU – Wi-Fi microcontroller board
+Novena – an ARM based computer built by Andrew Huang and associates
+OpenPOWER – Power ISA, an open-source hardware instruction set architecture (ISA) initiated by IBM
+OpenSPARC – Sun's, later Oracle's high-performance processor
+Parallax Propeller – a multi-core microcontroller with eight 32-bit RISC cores
+Parallella – single board computer with a manycore coprocessor and field-programmable gate array (FPGA)
+रास्पबेरी पाई – a series of small single-board computers developed in the United Kingdom by the Raspberry Pi Foundation in association with Broadcom
+SparkFun Electronics – microcontroller development boards, breakout boards
+The Bus Pirate – universal bus interface and programmer
+Turris Omnia – open-source SOHO network router
+RISC-V – an open-source hardware instruction set architecture (ISA)
+MIPS – a reduced instruction set computer (RISC) instruction set architecture
+Color Maximite – open-source single-board computer running the BASIC language as its operating system and compatible with Arduino Uno micro-controller peripherals
+Humane Reader and Humane PC
+
+
+=== पेरिफेरल युक्तियाँ ===
+Nitrokey – USB key for data and email encryption and strong authentication
+
+
+=== रोबोटिकी ===
+
+ArduCopter – Arduino-based drone
+e-puck mobile robot – mobile robot designed for education
+ICub – 1 metre high humanoid robot
+IOIO – a board that allows Android applications to interface with external electronics
+Orb swarm – art spherical robots
+OpenRAVE
+RobotCub – predecessor of ICub
+Spykee
+multiplo
+OpenROV – telerobotic submarine
+Thymio – robot for education
+Tinkerforge – a platform comprising stackable microcontrollers for interfacing with sensors and other I/O devices
+
+
+== पर्यावरणीय ==
+Open Source Ecology
+
+
+=== नवीकरणीय ऊर्जा ===
+Wind turbines
+
+
+=== प्रकाशन एवं LED ===
+LED Throwies – nondestructive graffiti and light displays
+
+
+== -अ-वैद्युत एवं अ-यांत्रिक ==
+
+
+=== आर्किटेक्चर और डिजाइन ===
+विकिहाउस – project to design and build houses
+Opendesk – furniture project
+OpenStructures – design from furniture to house
+
+
+=== डोमोटिक्स ===
+
+
+== मशीनें और उत्पादन के औजार ==
+
+
+=== स्वचालित ===
+
+
+==== पूर्ण वाहन ====
+
+
+===== भूमि पर चलने वाले =====
+
+Rally Fighter – made by Local Motors
+Riversimple Urban Car
+OpenXC
+OScar
+Wikispeed
+OSVehicle Tabby
+
+
+===== वायुयान =====
+मार्करयान (MakerPlane)
+Venus Aircraft – open source light sport aircraft
+
+
+==== इंजन नियंत्रण इकाई ====
+SECU-3 – gasoline engine control unit
+
+
+==== विद्युत वाहन के चार्जर ====
+OpenEVSE – charger for electric cars
+
+
+=== 3D प्रिन्टर और स्कैनर ===
+RepRap project – 3D printer-fabber; recyclebots, like the Lyman filament extruder, provide the filament for RepRaps
+LulzBot – 3D printer design by Aleph Objects; is Respects Your Freedom certified by the Free Software Foundation
+
+
+=== अन्य हार्डवेयर ===
+Multimachine – machine tool project
+Open Source Ecology's Global Village Construction Set (GVCS) – 50 industrial machines needed to build a small civilization with modern comforts
+Precious Plastic's – plastic recycling tools – Shredder, Extruder, Injector, Compressor, and supplemental resources
+Defense Distributed/Liberator (gun)Charon (gun)
+
+
+== विज्ञान ==
+
+
+=== चिक्त्सा युक्तियाँ ===
+इन्हें भी देखें: List of open-source health softwareOpen Prosthetics Project – design of open-source prosthetics
+Open-source ventilator
+
+
+=== वैज्ञानिक हार्डवेयर ===
+Open-Source Lab – documents dozens of scientific tools, but is closed-source itself
+OpenBCI – EEG amplifier
+
+
+== उपग्रह ==
+UPSat
+
+
+== विविध ==
+ओपेन-पिटाया (OpenPitaya)
+
+
+== इन्हें भी देखें ==
+Open-Source Lab: How to Build Your Own Hardware and Reduce Research Costs (2014)
+Thingiverse, open-source designs of objects, many of which are 3D-printable
+
+
+== सन्दर्भ ==
+
+
+== बाहरी कड़ियाँ ==
+साँचा:Curlie
+Open modular hardware

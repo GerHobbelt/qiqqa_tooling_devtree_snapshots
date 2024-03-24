@@ -1,0 +1,154 @@
+revision: 29745605
+title: "306 ve 639 b\xF6lge kodlar\u0131"
+url: https://tr.wikipedia.org/wiki/Telefon_numaraland%C4%B1rma_plan%C4%B1
+
+
+---
+
+Telefon numaralandırma planı, telekomünikasyonda abone telefonlarına veya diğer telefon uç noktalarına telefon numaraları atamak için kullanılan bir numaralandırma şemasıdır. Telefon numaraları, bir telefon şebekesindeki katılımcıların alan kodu yönlendirme sistemi ile erişilebilen adresleridir. Telefon numaralandırma planları, kamu telefon şebekesinin (PSTN) idari bölgelerinin her birinde tanımlanmaktadır ve ayrıca özel telefon ağlarında da bulunmaktadır. Halka açık numara sistemleri için, coğrafî konum her bir telefon abonesine atanan numara katarında rol oynamaktadır.
+Birçok numaralandırma planı, hizmet alanlarını, bir telefon abonesine ulaşmak için arama sırasının en önemli bölümünü oluşturan bir numara dizisi olan, bölge kodu veya şehir kodu olarak adlandırılan önekle belirlenen coğrafî bölgelere ayırmaktadır.
+Numaralandırma planları, genellikle bireysel telefon ağlarının tarihsel gelişimi ve yerel gereksinimlerden kaynaklanan çeşitli tasarım stratejilerini izleyebilmektedir. Kuzey Amerika'da da olduğu gibi sabit uzunluklu bölge kodları ve yerel numaralar içeren kapalı numaralandırma planları arasında geniş bir ayrım yapılırken, açık numaralandırma planları ise değişken bölge kodu ile yerel numara uzunluğu veya bir abone hattına atanan telefon numarasının her ikisini birden içerebilmektedir.
+Uluslararası Telekomünikasyon Birliği (ITU), üye devletin veya bölgesel yönetimlerin ağlarının intizamlı bir şekilde birlikte işlerliği için E.164 olarak adlandırılan kapsamlı bir numaralandırma planı oluşturmuştur. Söz konusu plan açık bir numaralandırma planıdır, ancak telefon numaraları maksimum 15 basamak uzunluğundadır. Standart, her bir devlet veya bölgeye uluslararası varış yönlendirmesi için her bir ulusal numaralandırma planı telefon numarasının önüne bir arama kodu (ülke kodu) tanımlar.
+Bir işletme veya kuruluş kampüsünde özel olarak işletilen telefon ağlarında özel numaralandırma planları bulunur. Bu tür sistemler, PSTN'ye merkezî erişim noktası sağlayan ve aynı zamanda telefon uzatmaları arasındaki iç aramaları kontrol eden özel telefon santrali (PBX) tarafından desteklenebilmektedir.
+Abone istasyonlarına atanan telefon numaralarını belirleyen numaralandırma planlarının aksine, çevirme planları müşteri arama prosedürlerini, yani bir hedefe ulaşmak için çevrilecek basamakların veya simgelerin sırasını belirler. Numaralandırma planı bu yolla kullanılmaktadır. Kapalı numaralandırma planlarında bile, bir numaranın tüm rakamlarını çevirmek her zaman gerekli değildir. Örneğin, hedef çağrı istasyonu ile aynı alanda olduğunda bölge kodu sıklıkla atlanabilmektedir.
+
+
+== Sayı yapısı ==
+Çoğu ulusal telefon idaresi, uluslararası E.164 standardına uyan numaralandırma planlarını yürürlüğe koymuştur. E.164'e uygun telefon numaraları bir ülke arama kodu ve bir ulusal telefon numarasından oluşmaktadır. Ulusal telefon numaraları, Avrupa Telefon Numaralandırma Alanı, Kuzey Amerika Numaralandırma Planı (NANP) veya İngiltere numara planı gibi ulusal veya bölgesel numaralandırma planlarıyla tanımlanmaktadır.
+Ulusal numaralandırma planı içinde, hedef telefon numarasının bütünü bir bölge kodu ve bir abone telefon numarasından oluşmaktadır. Abone numarası, müşteri ekipmanına bağlı bir hatta atanan numaradır. Abone numarasının ilk birkaç hanesi daha küçük coğrafî alanları veya bireysel telefon santrallerini gösterebilir. Mobil ağlarda ise ağ sağlayıcısını gösterebilir. Belirli bir bölgedeki veya ülkedeki arayanların bazen aynı alandan arama yaparken belirli alan öneklerini dahil etmeleri gerekmez. Telefon numaralarını otomatik olarak arayan cihazlar bölge ve erişim kodlarını da, yani numaranın tümünü içerebilir.
+
+
+== Ülke kodu ==
+Ülke kodları, yalnızca kaynak telefonun olduğundan başka ülkelerdeki telefon numaralarını çevirirken gereklidir. Bunlar ulusal telefon numarasından önce çevrilir. Kural olarak, uluslararası telefon numaraları listelerde ülke kodunun önüne artı işareti (+) eklenerek gösterilir. Bu, aboneye, aramanın yapıldığı ülkedeki uluslararası öneki çevirmesini hatırlatır. Çoğu Avrupa ülkesinde 00 iken, örneğin Kuzey Amerika Numaralandırma Planı ülkelerinde uluslararası öneki veya erişim kodu 011'dir. Bazı GSM şebekelerinde uluslararası erişim kodu yerine şebeke operatörü tarafından otomatik olarak tanınabilecek +  işaretini çevirmek mümkün olabilir.
+
+
+== Bölge kodu ==
+Birçok telefon numaralandırma planı, hizmet bölgesinin coğrafi bölgelere bölümlendirilmesi temel alınarak yapılandırılmıştır. Planda tanımlanan her alana bir sayısal yönlendirme kodu atanır. Bu kavram ilk olarak 1940'ların başlarında 1947 Kuzey Amerika Numaralandırma Planı'ndan önce, Bell Sistemi'nin Operatör Ücretli Arama'sı için geliştirilmiştir. Kuzey Amerika Numaralandırma Planı ile Kuzey Amerika hizmet bölgeleri numaralandırma planı bölgelerine bölündü ve her numaralandırma planı bölgesine kısaca bölge kodu olarak bilinen benzersiz bir sayısal önek, numaralandırma planı bölge kodu verildi. Bölge kodu, hizmet bölgesinde verilen her telefon numarasının önüne eklenir.
+Ulusal telekomünikasyon otoriteleri bölge kodları için çeşitli formatlar ve çevirme kuralları kullanır. Bölge kodu öneklerinin boyutu sabit veya değişken olabilir. Kuzey Amerika Numaralandırma Planı bölge kodlarında üç basamak bulunurken, Brezilya'da iki basamak, Avustralya ve Yeni Zelanda'da bir basamak kullanılır. Değişken uzunluklu formatlar, Arjantin, Avusturya (1 ila 4), Almanya (2 ila 5 basamak), Japonya (1 ila 5), Meksika (2 veya 3 basamak), Peru (1 veya 2), Suriye (1 veya 2) ve Birleşik Krallık dahil olmak üzere birçok ülkede mevcuttur. Rakam sayısına ek olarak, biçim belirli rakam desenleriyle sınırlandırılabilir. Örneğin, Kuzey Amerika Numaralandırma Sistemi zaman zaman üç konum için basamak aralığı üzerinde belirli kısıtlamalara sahipti ve karışıklık ile yanlış yönlendirmeyi önlemek için benzer bölge kodları olan yakın bölgelerden kaçınarak tahsis edilmesi gerekiyordu.
+Uruguay gibi bazı ülkeler, değişken uzunluklu bölge kodlarını ve telefon numaralarını, her zaman konumdan bağımsız olarak çevrilmesi gereken sabit uzunluklu numaralarla birleştirmiştir. Bu tür idarelerde, bölge kodu telefon numarasında resmî olarak ayırt edilmemektedir.
+İngiltere'de bölge kodları ilk olarak abone trank çevirme kodları olarak biliniyordu. Yerel arama planlarına bağlı olarak, genellikle yalnızca kod alanının dışından veya cep telefonlarından çevrildiğinde gereklidirler. Kuzey Amerika'da, çakışık planları olan alanlarda on haneli çevirme gerekir.
+Bir telefonun bir coğrafî bölgeyle sıkı bir şekilde ilişkilendirilmesi yerel numara taşınabilirliği ve IP Üzerinden Ses hizmeti gibi teknik ilerlemeler nedeniyle bozulmuştur.Bir telefon numarasını çevirirken, bölge kodundan önce gövde kodu (ulusal erişim kodu), uluslararası erişim kodu ve ülke kodu gelebilir.
+Alan kodları genellikle ulusal erişim kodu dahil edilerek belirtilir. Örneğin, Londra'daki bir numara 020 7946 0321 olarak listelenebilir. Kullanıcılar 020'yi Londra'nın kodu olarak doğru şekilde yorumlamalıdır. Londra'daki başka bir istasyondan ararlarsa, sadece 7946 0321'i çevirebilirler. Başka bir ülkeden arama yapıyorlarsa, ilk 0 ülke kodu çevrildikten sonra atlanmalıdır.
+
+
+== Abone çevirme prosedürleri ==
+Çevirme planı, abonenin telefonlar, özel santral (PBX) sistemleri veya diğer telefon anahtarları gibi sabit cihazlarında çevrilen rakamların beklenen sırasını; telefon aramalarının yönlendirilmesi ile telefon şebekelerine erişimi gerçekleştirmek veya yerel telefon şirketi tarafından 311 veya 411 hizmeti benzeri belirli hizmet özelliklerini etkinleştirmek veya etkilemek için belirler.
+Bir numaralandırma planı içinde çeşitli arama planları bulunabilir ve bu planlar genellikle yerel telefon işleten şirketinin ağ mimarisine bağlıdır.
+
+
+=== Değişken uzunlukta arama ===
+Kuzey Amerika Numaralandırma Planı (NANP) içinde yönetim, bölge kodu içinde yerel aramalar için aranacak zorunlu basamakların sayısını ve telefon numarasından önce 1 ön ekini ekleme gibi alternatif, isteğe bağlı dizileri belirleyerek standart ve izin verilen arama planlarını tanımlamaktadır.
+Kuzey Amerika Numaralandırma Planı'ndaki kapalı numaralandırma planına rağmen, yerel ve şehirlerarası telefon görüşmeleri için birçok bölgede farklı arama prosedürleri bulunmaktadır. Bu farklılık aynı şehirdeki veya bölgedeki başka bir numarayı aramak için arayanların tam telefon numarasının yalnızca bir alt kümesini çevirmeleri gerektiği anlamına gelmektedir. Örneğin, Kuzey Amerika Numaralandırma Planı'nda yalnızca yedi haneli numaranın çevrilmesi gerekebilir, ancak yerel numaralandırma planı alanının dışındaki çağrılar için bölge kodunu içeren tam numara gereklidir. ITU-T Recommendation E.123, bazı durumlarda bölge kodunun isteğe bağlı olduğunu veya gerekmeyebileceğini belirtmek için parantez içinde listelenmesini önerir.
+Uluslararası olarak, bir bölge kodu, bir ülkenin içinden arama yaparken genellikle bir yerel gövde erişim kodu (genellikle 0) ile başlar. Ancak, yerel gövde erişim kodu diğer ülkelerden arama yaparken gerekli değildir; İtalyan kara hatları gibi istisnalar vardır.
+Örneğin, Sidney, Avustralya'da bir numarayı aramak için:
+
+xxxx xxxx (Sidney içinde ve Yeni Güney Galler ve Avustralya Başkent Bölgesi içindeki diğer konumlar dahilinde - bölge kodu gerekmez)
+(02) xxxx xxxx (Yeni Güney Galler ve Avustralya Başkent Bölgesi dışında, ancak yine de Avustralya dahilinde - bölge kodu gereklidir)
++61 2 xxxx xxxx (Avustralya dışında)İşaretlemedeki artı işareti (+), artıdan sonraki rakamların ülke kodu olduğunu belirtir. Bazı telefonlar, özellikle cep telefonları, + işaretinin doğrudan girilmesine izin verir. Diğer cihazlar için kullanıcı + işaretini geçerli konumundaki uluslararası erişim koduyla değiştirmelidir. Amerika Birleşik Devletleri'nde, çoğu operatör arayan kişinin hedef ülke kodundan önce 011'i aramasını gerektirir.Yeni Zelanda'nın kendine has bir çevirme planı vardır. Çoğu ülke bölge kodunun yalnızca farklıysa çevrilmesini gerektirirken, Yeni Zelanda'da, telefon yerel çağrı alanının dışındaysa bölge kodunu çevirmek gerekir. Örneğin, Waikouaiti kasabası Dunedin Kent Konseyi yetki alanında olup telefon numaraları (03)   465   7xxx şeklindedir. Dunedin merkezindeki belediye meclisini (03) 477 4000 ile aramak için, Waikouaiti sakinleri bölge kodu aynı olsa bile bölge kodu ile birlikte numaranın hepsini çevirmek zorundadır, çünkü Waikouaiti ve Dunedin farklı yerel arama alanlarında (sırasıyla Palmerston ve Dunedin) yer almaktadır.Kuzey Amerika Numaralandırma Planı'nın birçok bölgesinde, aynı numaralandırma planı alanında bile uzun mesafeli aramalar için yerel gövde kodu (uzun mesafe erişim kodu) ile birlikte bölge kodu da çevrilmelidir. Örneğin, Regina'da 306 bölge kodunda bir numarayı aramak için (Regina ve Saskatchewan eyaletinin geri kalanına 639 çakışım kodu ile de hizmet verilir):
+
+306 xxx xxxx - Regina, Lumsden ve diğer yerel alanlarda
+1 306 xxx xxxx - Saskatchewan'da, ancak Regina yerel arama alanında değil. Örneğin, Saskatoon
+1 306 xxx xxxx - Saskatchewan'ın dışındaki Kuzey Amerika Numaralandırma Planı içinde herhangi bir yerKuzey Amerika'nın pek çok bölgesinde, özellikle bölge kodu çakışım planlarında, bölge kodu veya 1 ve bölge kodunu çevirmek yerel aramalar için bile gereklidir. Cep telefonlarından gövde kodunu çevirmek, ABD'de gerekmemektedir, ancak Kanada'daki bir cep telefonundan tüm uzun mesafe numaralarını çevirmek için hâlâ gereklidir. Birçok mobil el cihazı, kullanıcı tarafından çevrilmezse, giden aramalar için telefon numarası setine bölge kodunu otomatik olarak eklemektedir.
+Amerika Birleşik Devletleri'nin bazı bölgelerinde, özellikle Verizon Communications tarafından hizmet verilen Pennsylvania gibi kuzeydoğu eyaletlerinde, on haneli numara aranmalıdır. Arama yerel değilse, aranan numaradan önce 1 rakamı gelmedikçe arama başarısız olur. Böylece:
+
+610 xxx xxxx - 610 bölgesi ve onun çakışımındaki (484) yerel çağrılarda, ayrıca komşu 215 bölge kodu ve onun çakışımı 267'den gelen ve giden çağrılarda. Bölge kodu gereklidir; ABD'deki cep telefonları için iki tamamlama seçeneğinden biri kullanılır.
+1 610 xxx xxxx - 610/484 ve 215/267 alan kodlarının dışındaki numaralardan aramalar; ABD'deki cep telefonları için iki tamamlama seçeneğinin ikincisi kullanılır.California ve New York'ta, hem çakışık bölge kodlarının (yani her çağrı için bir bölge kodunun çevrilmesi gereken yerler) hem de çakışık olmayan bölge kodlarının (bölge kodunun yalnızca abonenin bulunduğu bölge kodu dışındaki aramalar için çevrildiği) mevcudiyetinden dolayı, "izin verilen ana bölge kodunu çevirmeye" +1 bölge kodu gerekli olmasa bile, aynı bölge kodu içinde yer alan bölge koduna 2000'lerin ortalarından beri izin verilmiştir. Örneğin, 559 bölge kodunda (çakışık olmayan bölge kodu) aramalar 7 basamaklı (XXX-XXXX) veya 1-559 + 7 basamaklı olarak çevrilebilir. Bir çağrının çevrilme şekli, çağrının faturalandırılmasını etkilemez. Bu "izin verilen ana bölge kodu çevirme", California'yı ülkenin en "bölge kodu" yoğun eyaleti yapan farklı bölge kodu koruması göz önüne alındığında, tekdüzeliğin korunmasına yardımcı olur ve karışıklığı ortadan kaldırır. Çakışık bölge kodlarına sahip diğer eyaletlerden farklı olarak (Teksas, Maryland, Florida ve Pennsylvania ve diğerleri), California Kamu Tesisleri Komisyonu ve New York Eyalet Kamu Hizmeti Komisyonu iki farklı arama planı bulundurur; sabit hatlar bir bölge kodu çevrilen rakamların bir parçası olduğunda 1+ bölge kodunu çevirmelidir, cep telefonu kullanıcıları ise "1"i atlayabilir ve sadece 10 rakamı çevirebilir.
+Birçok kuruluş, dış hat (genellikle 9 veya 8), bir "1" ve son olarak yerel bölge kodu ve çakışık numaralandırma olmayan alanlarda xxx xxxx için erişim basamaklarını aramaya izin veren özel telefon santrali sistemlerine sahiptir. Bu husus, bir bölge kodunda bulunan ve bir, iki veya üç bitişik bölge kodunda çalışan çalışanlar için istemeden de olsa yararlıdır. Bir çalışan tarafından herhangi bir bölge kodu ile 1+ çevrilmesi, özel şube santrali tarafından işlenen ve kamuya telefon şebekesine aktarılan tüm istisnalar dışında hızlı bir şekilde yapılabilir.
+
+
+=== Tam numara çevirme ===
+Küçük ülkelerde veya bölgelerde, telefon numarasının tüm haneleri aynı alanda bile tüm aramalar için kullanılır. Geleneksel olarak alan kodlarının gerekmediği küçük ülkelerde ve bölgelerde bu durum söz konusudur. Bununla birlikte, birçok ülkede tüm sayıları standart bir uzunluk haline getirme ve bölge kodunu abonenin numarasına ekleme eğilimi vardır. Bu eğilim genellikle bir gövde kodu kullanımını geçersiz kılmaktadır. Örneğin, 1992'den önce Norveç'te Oslo'da birisini aramak için şöyle çevirmek gerekmekte idi:
+
+xxx xxx (Oslo içinde - bölge kodu gerekmez)
+(02) xxx xxx (Norveç içinde - Oslo dışında)
++47 2 xxx xxx (Norveç dışında)1992'den sonra, bu sekiz haneli kapalı bir numaralandırma planına dönüşmüştür. Örneğin:
+
+22xx xxxx (Norveç içinde - Oslo dahil)
++47 22xx xxxx (Norveç dışında)Bununla birlikte, Fransa, Belçika, Japonya, İsviçre, Güney Afrika ve Kuzey Amerika'nın bazı bölgeleri gibi diğer ülkelerde, yerel veya ulusal farkı olmaksızın dahili aramalar için gövde öneki korunmuştur. Örneğin,
+
+Paris 01 xx xx xx xx (Fransa dışında +33 1 xxxx xxxx)
+Brüksel 02 xxx xxxx (Belçika dışında +32 2 xxx xxxx)
+Cenevre 022 xxx xxxx (İsviçre dışında +41 22 xxx xxxx)
+Cape Town 021 xxx xxxx (Güney Afrika dışında +27 21 xxx xxxx)
+New York 1112 xxx xxxx (Kuzey Amerika Numaralandırma Planı dışında +1 212 xxx xxxx)
+Fukuoka 092 xxx xxxx (Japon Numaralandırma Planı dışında +81 92 xxx xxxx)
+Hindistan "0-10 Haneli Numara" (Hindistan dışında +91 XXXODX'tur) Hindistan'da birden fazla operatör bulunması nedeniyle metro kentinin 2 ilâ 8 haneli kısa kodu vardır.İtalya gibi bazıları, ülke dışından gelen aramalar için bile ilk sıfırın çevrilmesini gerektirmektedir. Örneğin,
+
+Roma 06 xxxxxxxx (İtalya dışında +39 06 xxxxxxxx)Ulusal numaraların tümünün çevrilmesi, bölge kodu çevrilmeyen yerel bir numaradan daha uzun sürerken, sayıları saklayabilen telefonların artan kullanımı bunun öneminin azaldığı anlamına gelmektedir. Ayrıca, hiçbir gövde öneki gerekmediğinden sayıları uluslararası formatta görüntülemeyi kolaylaştırır. Bu nedenle Prag, Çek Cumhuriyeti'ndeki telefon numaraları şu şekildedir:
+
+2xx xxx xxx (Çek Cumhuriyeti içinde)
++420 2xx xxx xxx (Çek Cumhuriyeti dışında)21 Eylül 2002'den önce is şu şekildeydi:
+02 / xx xx xx xx (Çek Cumhuriyeti içinde)
++420 2 / xx xx xx xx (Çek Cumhuriyeti dışında)Bazı ülkelerde değişim sonrasında gövde öneki kapalı arama planı ile yeniden eklenmiştir. Örneğin 1997'den önce Bangkok, Tayland'da:
+
+xxx-xxxx (Bangkok içinde)
+02-xxx-xxxx (Tayland içinde)
++66 2-xxx-xxxx (Tayland dışında)1997'de değişen şekli ile:
+
+2-xxx-xxxx (Tayland içinde)
++66 2-xxx-xxxx (Tayland dışında)gövde önekinin 2001'de yeniden eklenmesiyle:
+
+02-xxx-xxxx (Tayland içinde)
++66 2-xxx-xxxx (Tayland dışında)
+
+
+== Uluslararası numaralandırma planı ==
+Uluslararası Telekomünikasyon Birliği'nin E.164 standardı uluslararası bir numaralandırma planıdır ve her üye kuruluş için bir ülke arama kodu (ülke kodu) oluşturur. Ülke kodları, bir alt numara planı yönetiminin, tipik olarak bir ülke veya Kuzey Amerika Numaralandırma Planı gibi tek tip numaralandırma planına sahip bir grup ülke ağına çağrı yönlendirmeyi gösteren ulusal telefon numaralarının ön ekleridir. E.164, ülke kodu, ulusal yönlendirme kodu (bölge kodu) ve abone numarasından oluşan uluslararası telefon numarasının tamamı için maksimum 15 haneli bir uzunluğa izin verir. E.164 bölgesel numaralandırma planlarını tanımlamaz, ancak yeni uygulamalar ve tüm telefon numaralarının aynı şekilde temsil edilmesi için önerilerde bulunur.
+Ülke kodları sistemi dahilinde, ITU özel hizmetler için belirli önekler tanımlamıştır ve bunun gibi kodları, bölgesel otoritelerin kapsamının ötesine geçen, uydu sistemleri gibi bağımsız uluslararası ağlar için atamaktadır.
+
+
+=== Uydu telefonu sistemleri ===
+Uydu telefonları genellikle özel ülke kodu içeren numaralarla verilir. Örneğin Inmarsat uydu telefonları +870 koduyla verilirken, Iridium gibi Küresel Mobil Uydu Sistemi sağlayıcıları +881 ("Küresel Mobil Uydu Sistemi") veya +882 ("Uluslararası Ağlar") ülke kodunu verir. Bazı uydu telefonlarına, örneğin Kuzey Amerika Numaralandırma Planı numaraları veren Globalstar'da olduğu gibi normal telefon numaraları verilir.
+
+Inmarsat: +870: SNAC (Tek Ağ Erişim Kodu)
+ICO Global : +881 0, +881 1
+Elips: +881 2, +881 3
+Iridium : +881 6, +881 7
+Globalstar : +881 8, +881 9
+Emsat: +882 13
+Thuraya : +882 16
+ACeS : +882 20+ 88184
+
+
+=== Özel servis ===
+Bazı ülke arama kodları özel hizmetler veya uluslararası/bölgelerarası alanlar için verilmektedir.
+
++388 5 - ulus grupları için paylaşılan kod
++388 3 - Avrupa Telefon Numaralandırma Alanı - Avrupa çapında hizmetler (artık kullanılmıyor)
++800 - Uluslararası Ücretsiz Telefon (UIFN)
++808 - Maliyet Paylaşımlı Hizmetleri için ayrılmıştır
++878 - Evrensel Kişisel Telekomünikasyon hizmetleri
++881 - Küresel Mobil Uydu Sistemi
++882 ve +883 - Uluslararası Ağlar
++888 - uluslararası afet yardım operasyonları
++979 - Uluslararası Özel Tarifeli Hizmet
++991 - Uluslararası Telekomünikasyon Kamu Yazışma Servisi denemesi (ITPCS)
++999 - gelecekteki küresel hizmetler için ayrıldı
+
+
+== Numaralandırma planı göstergesi ==
+Numaralandırma planı göstergesi (NPI), ITU standardı Q.713, paragraf 3.4.2.3.3'te, bağlı telefon numarasının numaralandırma planını gösteren bir numaradır. NPI'lar İşaretleşme Bağlantı Denetim Kısmı (SCCP) ve kısa mesaj servisi (SMS) mesajlarında bulunabilir. (2004 (2004) itibarıyla) aşağıdaki numaralandırma planları ve ilgili numaralandırma planı gösterge değerleri tanımlanmıştır: 
+
+
+== Özel numaralandırma planı ==
+Bir kamu telekomünikasyon ağı gibi, bir kuruluştaki veya bir organizasyon kampüsü içindeki özel bir telefon ağı, dahili iletişim için kurulu telefon tabanı için özel bir numaralandırma planı uygulayabilir. Bu tür ağlar, ağ içinde özel bir anahtarlama sistemi veya özel telefon santralini (PBX) işletir. Dahilî numaralandırma planı, tüm ağ için resmî olarak yayınlanan bir ana erişim numarasını genişletir. Atanan dahili numaralara genellikle dahili numaralar denir. Şebekenin içinden arayan yalnızca başka bir dahilî hedef telefona atanan dahili numarayı arar.
+Özel numaralandırma planı, istasyon telefon numaralarının bir kuruluştaki yaygın olarak kullanılan diğer numaralandırma şemalarıyla eşlenmesini kolaylaştırır. Örneğin, istasyon numaraları bir otel veya hastanenin oda numarası olarak atanabilmektedir. İstasyon numaraları, telefon kadranındaki harflerden oluşan belirli anahtar kelimelerle stratejik olarak eşlenebilir. Örneğin bir yardım masasına ulaşmak için İngilizcede yardım anlamına gelen help sözcüğü 4357 ile eşlenebilir.
+Dahilî numara atamaları, dış telekomünikasyon sağlayıcıları tarafından sağlanan herhangi bir doğrudan dahilî arama (DID) hizmetinden bağımsız olabilir. DID erişimi olmayan numaralar için iç anahtar, dış kaynaklı çağrıları bir operatör, otomatik görevli veya elektronik sesli yanıt sistemi üzerinden aktarır. Bu tür sistemlerdeki kullanıcılar için telefon numaraları genellikle resmî telefon numarasının dahilî numaraya eklenmesi ile belirtilir, örneğin 1-800-555-0001 x2055.
+Bazı sistemler otomatik olarak büyük bir DID numarası bloğunu (yalnızca arka sıradaki rakamlardan farklı olarak) tek tek dahilî istasyonların ilgili bloğuna otomatik olarak eşler ve her birine doğrudan genel telefon şebekesinden ulaşılmasını sağlar. Bazı durumlarda genel bilgilere ihtiyaç duyulabilecek bir operatöre ulaşmak için, örneğin dahili numaralara bakmak veya dahili numaralara bağlanmak gibi, özel bir kısa numara kullanılabilir. Örneğin, Saarland Üniversitesi'ndeki tekil uzantılar, dört basamaklı dahili uzantılar (+ 49-681-302-xxxx) aracılığıyla doğrudan dışarıdan çevrilebilirken, üniversitenin resmi ana numarası + 49-681-302-0 şekllindedir (49 Almanya ülke kodu, 681 Saarbrücken bölge kodu, 302 üniversite öneki).
+Özel numaralandırma planı içindeki arayanlar, ulusal veya uluslararası bir varış noktasına (dış hat) veya aynı işletme içindeki başka bir konumdaki özel hatta (veya bağlantı hattına) erişmek için genellikle bir gövde öneki çevirir. Birden fazla şehirde fabrikaları ve ofisleri olan büyük bir üretici, bir şehir veya konum belirtmek için dahilî yönlendirme kodunun ardından bir önek ('8' gibi) ve ardından hedef bölgede tek bir dört veya beş haneli dahili numara kullanabilir. Kuzey Amerika sistemlerinde ortak dış hat gövde öneki, 9 rakamı ve ardından dış hedef numarasıdır.
+PBX sahibinin takdirine bağlı olarak, otelin resepsiyonuna tek haneli erişim veya odadan oda servisi gibi ek arama planı özelleştirmeleri mevcuttur.
+
+
+== Ayrıca bakınız ==
+Kategori: Ülkelere göre telefon numaraları
+Telefon numarası yazma ile ilgili ulusal sözleşmeler
+Ülke kodlarının listesi
+
+
+== Kaynakça ==
+
+
+== Dış bağlantılar ==
+List of ITU-T Recommendation E.164 assigned country codes as of 15 Dec 201621 Aralık 2016 tarihinde Wayback Machine sitesinde arşivlendi.
+List of ITU-T Recommendation E.164 Dialling Procedures as of 15 DEC 201118 Ağustos 2013 tarihinde Wayback Machine sitesinde arşivlendi.
+Uluslararası telefon numarası arama 8 Mayıs 2021 tarihinde Wayback Machine sitesinde arşivlendi.

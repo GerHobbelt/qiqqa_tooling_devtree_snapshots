@@ -1,0 +1,27 @@
+revision: 66981781
+title: Scholar
+url: https://pl.wikipedia.org/wiki/Google_Scholar
+
+
+---
+
+Google Scholar (GS) – darmowa, specjalistyczna wyszukiwarka internetowa amerykańskiej spółki Google Inc. służąca do przeszukiwania bazy danych zawierających publikacje naukowe z różnych dziedzin.
+
+
+== Historia ==
+Serwis został uruchomiony w wersji beta w listopadzie 2004 roku. Google Scholar zawiera w swej bazie danych głównie dostępne online artykuły naukowe udostępniane przez największe na świecie wydawnictwa. GS spełnia rolę podobną do innych darmowych serwisów tego typu: Scirus (wydawnictwa Elsevier), CiteSeer i getCITED, a także dostępnych za opłatą Scopus (Elsevier) i Web of Science (Thomson ISI). Jednak Google Scholar twierdzi, że w jego bazie danych jest więcej czasopism naukowych w większej liczbie języków.
+
+
+== Algorytm rankingowy ==
+Większość akademickich baz danych i wyszukiwarek pozwala użytkownikom na szukanie według jednego czynnika (np. licznik cytatów, istotność, data publikacji), aby ocenić rezultat. Google scholar ocenia rezultat według złożonego algorytmu rankingowego, w którym pod uwagę brany jest każdy z wyżej wymienionych czynników. Najbardziej znaczącym czynnikiem jest licznik cytatów i słowa w tytule dokumentu. Konsekwencją tego jest to, że często pierwszym wynikiem wyszukiwania jest często cytowany artykuł. Jedną z wad takiego podejścia jest tzw. efekt św. Mateusza – cechuje się on tym, że nowe artykuły, mimo tego że są bardziej aktualne, nie mogą wystąpić na wysokich pozycjach w wyszukiwarce, ponieważ z racji tego, że ich data publikacji jest „świeża”, liczba cytowań tego artykułu jest mała.
+
+
+== Zobacz też ==
+Produkty i usługi Google Inc.
+
+
+== Przypisy ==
+
+
+== Linki zewnętrzne ==
+Strona główna Google Scholar

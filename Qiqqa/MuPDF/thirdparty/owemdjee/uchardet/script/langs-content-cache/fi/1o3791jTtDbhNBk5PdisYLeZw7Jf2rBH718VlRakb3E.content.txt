@@ -1,0 +1,59 @@
+revision: 21569526
+title: Ruiskuvalukone
+url: https://fi.wikipedia.org/wiki/Ruiskuvalukone
+
+
+---
+
+Ruiskuvalu on muoviesineiden valmistustekniikka. Konetta, jolla tehdään ruiskuvalua, sanotaan ruiskuvalukoneeksi ja joskus myös ruiskupuristuskoneeksi. Tässä koneessa sulaa kestomuovia puristetaan paineella muottiin, jossa esine jäähtyessään jähmettyy muotin muotoiseksi. Jäähtymisen nopeuttamiseksi muotti on useimmiten vesijäähdytetty. Valmistussyklin nopeus vaihtelee kappaleen koon mukaan ollen muutamasta kymmenestä sekunnista joihinkin minuutteihin. Paksuseinämäisiä kappaleita joudutaan jäähdyttämään pidempään. Ruiskuvaletun muovikappaleen paino voi olla alle gramman painoisesta useisiin kiloihin. Muotti on usein suunniteltu siten, että kappale irtoaa muotin auetessa. Valmis kappale voi pudota muotin alla olevaan laatikkoon tai kuljettimelle tai nykyään yhä useammin teollisuusrobotti poimii kappaleen muotista ja asettaa sen oikeassa asennossa tarjottimelle, josta seuraavassa työvaiheessa kappale voidaan edelleen käsitellä automaattisesti. Ruiskuvalettua muovikappaletta katsottaessa on usein nähtävissä muotin sauma, ruiskutuskohta ja seinämien pieni päästö siihen suuntaan, johon kappale poistuu.  
+
+
+== Historia ==
+John Wesley Hyatt teki ensimmäisen ruiskutusvalun muottiin vuonna 1868 valmistaessaan biljardipalloja selluloidista. Hän ja hänen veljensä Isaiah patentoivat ruiskuvalukoneen, joka toimi mäntäperiaatteella vuonna 1872. Ruiskuvaluprosessi säilyi suunnilleen samana vuoteen 1946, jolloin James Hendry rakensi ensimmäisen pyörivää ruuvia käyttävän ruiskuvalukoneen. Ruuvikierre, joka pyöriessään ulkopuolelta kuumennetussa putkessa sulattaa muovimateriaalin, sekoittaa ja pumppaa sitä sekä tekee ruiskutusiskun, aiheutti vallankumouksen muovituotteiden valmistuksessa. Noin 95 prosenttia muovien valukoneista hyödyntää ruuvia.
+
+
+== Muovilajit ==
+Ruiskuvalukoneessa valmistetaan kestomuoveista, siis uudelleen sulatettavista muoveista, esineitä. Yleisempiä ruiskuvalettuja muovilajeja ovat:
+
+polystyreeni kirkkaat, läpinäkyvät, mutta ei kovin lujat kappaleet, esimerkiksi kertakäyttömukit
+ABS (muovi), yleensä suurempia esineitä, koteloita, kännykänkuoria, leluja, jopa pieniä veneitä
+polyamidi, joka tunnetaan myös nailonina, kestävämpiä teknisiä osia, kuten hammaspyöriä
+polypropeeni, astioita, leluja, laboratoriotarvikkeita, juomakoreja, putkiston osia
+polyeteeni, kuljetuslaatikoita, ämpäreitä, leluja ja kertakäyttöesineitä
+
+
+== Tekniikka ==
+
+Ruiskuvalukoneen pääosat ovat koneen runko, muotinsulkumekaniikka, muotti, ruiskutusruuvi ja materiaalinsyöttöjärjestelmä sekä ohjausjärjestelmä. Ruiskuvalukoneita tyypitetään sen mukaan, kuinka suuri on muotin sulkuvoima eli kiinnipitovoima. Se voi vaihdella alle 5 tonnista 6 000 tonniin. Useimmiten kone rakennetaan niin, että muotti sulkeutuu vaakatasossa. Joihinkin erikoistarkoituksiin tehdään koneita, joissa muotti aukeaa pystysuunnassa. Tällöin halutaan hyödyntää painovoimaa valussa ja kyse on yleensä sellaisista koneista, joihin lisätään jokin metalliesine yhdistettäväksi valettavaan muoviin, kuten ruuvimeisselin valmistuksessa.
+Muottia vaihdetaan tuotteen mukaan. Muotti kiinnitetään ruuvattavilla kiinnittimillä tai jos koneessa on käytössä nopean muotinvaihtotekniikka, niin sitten muotti kiinnittyy hydraulisesti tai magneettisesti. Muotti kiinnitetään koneen muottivälin molempiin seinämiin. Yleensä se seinämä, josta ruuvi painuu ruiskutettaessa muottia vasten, on kiinteä ja toinen seinämä liikkuu.
+Käyttövoiman suhteen koneita on kahta tyyppiä, hydraulisia, sähköisiä tai näiden yhdistelmiä. Sulkuvoimaa voidaan lisätä polvimekanismin avulla. Ensimmäisen täysin sähköisen ruiskuvalukoneen esitteli Nissei vuonna 1983, mutta tämä tekniikka ei ole syrjäyttänyt hydraulitekniikkaa muualla kuin Japanissa.
+
+
+== Muotti ==
+Muotti tai työkalu on tietenkin kappaleen muodon kannalta tärkeä, ja jokaisella erilaisella kappaleella on oma muottinsa. Liiketoimintalogiikka muottien suhteen on usein järjestynyt niin, että muovituotteen suunnittelija- ja myyjäyritys (esimerkiksi kännykänkuoria tehtäessä kännykän valmistaja) omistaa muotin. Ruiskuvaluun erikoistunut yritys kuitenkin hallinnoi näitä muotteja ja asentaa niitä ruiskuvalukoneisiin sitä mukaa kuin muoviosia tilataan. Muotit voi valmistaa jokin kolmas yritys, joka on erikoistunut työkalutekniikkaan ja muottien valmistukseen. Muottirungot ovat standardisoituneet ja niilläkin on omat toimittajansa. Vähänkin monimutkaisempi ruiskuvalukoneen muotti maksaa henkilöauton verran ja jopa enemmän.
+Pienissä valmistussarjoissa muotin hinta on määräävä. Useimmiten muoteissa tehdään satojentuhansien tai miljoonien kappaleiden sarjoja, jolloin muottikustannukset kappaletta kohden ovat pienet ja määrääviksi tulevat raaka-ainekustannukset sekä energian kulutus. Tilavuuteensa nähden muovit ovat edullisia, niiden sulamislämpötilat ovat alhaisia (150–300 °C), ja koska ruiskuvalettu kappale tulee usein muotista valmiina ulos, niin valmistuskustannukset kappaletta kohden jäävät pieniksi. Nämä ovat tärkeitä syitä muoviesineiden menestykseen.
+Muottien korkean hinnan syy on se, että ne tehdään yleensä yksittäiskappaleina kovaksi karkaistusta teräksestä. Muitakin materiaaleja käytetään, esimerkiksi alumiinia pienten sarjojen muotteihin. Karkaistua terästä työstetään kipinätyöstöllä, lastuavalla työstöllä ja hiomalla. 
+Muottien suunnittelussa on tärkeää, että kappale ei jää jumiin muottiin ja että muotti täyttyy kokonaan ennen kappaleen jähmettymistä. Ruiskuvalukoneet ovat automaattisia, ja kappaleen irtoaminen tai täydellisyys joudutaan joskus varmistamaan vaa’alla, kameralla tai muulla tunnistimella. Sulkeutuvan muotin väliin jäänyt kappale saattaa vaurioittaa muottia. Muotia suunniteltaessa on huomioitava myös valukappaleen kutistuminen ja pyrittävä minimoimaan valuvirheiden mahdollisuus.
+
+
+=== Muotin suunnittelu ===
+Muotti jakautuu vähintään kahteen osaan. Usein käytetään kolmiosaisia muotteja, joista keskimmäinen levy on niin sanottu irrotuslevy. Tämä voi toimia esimerkiksi siten, että kuppimainen kappale jää sydämen (karan) päälle ensimmäisen osan auetessa ja aukeamisliikkeen edetessä irrotuslevy vetää kappaleen pois karan päältä kunnes kappale putoaa muotin alle. Muoteissa on usein käytössä myös ulostyöntäjätappeja. Monimutkaisissa muoteissa on useaan suuntaa liikkuvia karoja tai keernoja (esimerkiksi Y-tyyppiset putkiyhdekappaleet).
+Kun tehdään pieniä kappaleita, yhdessä muotissa tehdään usein kerralla useita samanlaisia kappaleita, mikä tehostaa edelleen tuotantonopeutta. Pullonkorkkien muotissa saattaa syntyä jopa 128 pullonkorkkia yhdellä puristuksella. Yhdessä muotissa voidaan tehdä myös erilaisia osia samalla kertaa, jolloin nämä kuuluvat tyypillisesti samaan tuotteeseen.
+Muotissa voi olla vaihdettavia osia, inserttejä tai vaihtopaloja, joilla voidaan tarvittaessa muuttaa valmistettavan kappaleen geometriaa tai esimerkiksi merkintöjä.
+
+
+== Ruiskuvaluprosessi ==
+
+
+=== Ruiskuvalukoneen työkierto ===
+Perustyökierto alkaa muotin sulkeutumisesta, seuraavaksi kuuma ruuvi ja ruiskutussuutin painuu muottia vasten. Tämän jälkeen ruuvi tekee iskun eteenpäin ruiskuttaen sulan muovin muottiin. Sitten ruuvi ruuvautuu taakse täyttäen sulamattomilla granulaateilla ruuvin alkupään. Seuraavaksi ruiskutusyksikkö vetäytyy ja jäähdytysajan jälkeen muotti avautuu ja kappale poistuu tai poistetaan. 
+Ruuvia kuumennetaan putken ulkopuolelta vastuksilla ja tarvittaessa jäähdytetään ilmalla tai ympäröivään sylinteriin rakennetulla vesikierrolla. Muovi kuumenee ja sulaa myös ruuvin aiheuttaman kitkan vuoksi. Muottia jäähdytetään yleensä sen kanavissa kiertävällä vedellä. Hyvän ja tasaisen laadun saavuttamiseksi tahtiajan ja muotin lämmön pitäisi pysyä vakiona. Häiriön tullessa muotti ehtii jäähtyä ja muovimassa kuumeta, jolloin häiriöiden jälkeen ensimmäisissä kappaleissa on usein joko valuvirheitä tai mittavirheitä. 
+Koko työkierto on logiikkaohjattu. Kaikki ajat, lämpötilat, iskunpituudet ym säädetään tuotteen mukaan.
+Kestomuovisista kappaleista ylijäävät valukanavat (jöötit) ja hylätyt tuotteet voidaan usein jauhaa ja käyttää uudelleen vastaavien tuotteiden valmistukseen.
+
+
+== Lähteet ==
+
+
+== Aiheesta muualla ==
+(englanniksi) plastic injection molding Kuvia tai muita tiedostoja aiheesta Ruiskuvalukone Wikimedia Commonsissa

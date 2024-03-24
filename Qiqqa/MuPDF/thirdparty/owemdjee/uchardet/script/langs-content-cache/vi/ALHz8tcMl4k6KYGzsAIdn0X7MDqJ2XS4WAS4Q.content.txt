@@ -1,0 +1,90 @@
+revision: 69383509
+title: diode
+url: https://vi.wikipedia.org/wiki/Diode
+
+
+---
+
+Diode bán dẫn (gọi tắt là diode) là một loại linh kiện bán dẫn chỉ cho phép dòng điện đi qua nó theo một chiều mà không theo chiều ngược lại.Có nhiều loại diode bán dẫn, như diode chỉnh lưu thông thường, diode Zener, LED. Chúng đều có nguyên lý cấu tạo chung là một khối bán dẫn loại P ghép với một khối bán dẫn loại N và được nối với 2 chân ra là anode và cathode.
+Diode là linh kiện bán dẫn đầu tiên. Khả năng chỉnh lưu của tinh thể được nhà vật lý người Đức Ferdinand Braun phát hiện năm 1874. Diode bán dẫn đầu tiên được phát triển vào khoảng năm 1906 được làm từ các tinh thể khoáng vật như galena. Ngày nay hầu hết các diode được làm từ silic, nhưng các chất bán dẫn khác như selen hoặc germani thỉnh thoảng cũng được sử dụng.Diode bán dẫn, loại sử dụng phổ biến nhất hiện nay, là các mẫu vật liệu bán dẫn kết tinh với cấu trúc p-n được nối với hai chân ra là anode và cathode.
+
+
+== Hoạt động ==
+Khối bán dẫn loại P chứa nhiều lỗ trống tự do mang điện tích dương nên khi ghép với khối bán dẫn N (chứa các điện tử tự do) thì các lỗ trống này có xu hướng chuyển động khuếch tán sang khối N. Cùng lúc khối P lại nhận thêm các điện tử (điện tích âm) từ khối N chuyển sang. Kết quả là khối P tích điện âm (thiếu hụt lỗ trống và dư thừa điện tử) trong khi khối N tích điện dương (thiếu hụt điện tử và dư thừa lỗ trống).
+Ở biên giới hai bên mặt tiếp giáp, một số điện tử bị lỗ trống thu hút và khi chúng tiến lại gần nhau, chúng có xu hướng kết hợp với nhau tạo thành các nguyên tử trung hòa. Quá trình này có thể giải phóng năng lượng dưới dạng ánh sáng (hay các bức xạ điện từ có bước sóng gần đó).
+
+Sự tích điện âm bên khối P và dương bên khối N hình thành một điện áp gọi là điện áp tiếp xúc (UTX). Điện trường sinh ra bởi điện áp có hướng từ khối n đến khối p nên cản trở chuyển động khuếch tán và như vậy sau một thời gian kể từ lúc ghép 2 khối bán dẫn với nhau thì quá trình chuyển động khuếch tán chấm dứt và tồn tại điện áp tiếp xúc. Lúc này ta nói tiếp xúc P-N ở trạng thái cân bằng. Điện áp tiếp xúc ở trạng thái cân bằng khoảng 0.7V đối với diode làm bằng bán dẫn Si và khoảng 0.3V đối với diode làm bằng bán dẫn Ge.
+
+Hai bên mặt tiếp giáp là vùng các điện tử và lỗ trống dễ gặp nhau nhất nên quá trình tái hợp thường xảy ra ở vùng này hình thành các nguyên tử trung hòa. Vì vậy vùng biên giới ở hai bên mặt tiếp giáp rất hiếm các hạt dẫn điện tự do nên được gọi là vùng nghèo (depletion region). Vùng này không dẫn điện tốt, trừ phi điện áp tiếp xúc được cân bằng bởi điện áp bên ngoài. Đây là cốt lõi hoạt động của diode.
+Nếu đặt điện áp bên ngoài ngược với điện áp tiếp xúc, sự khuếch tán của các điện tử và lỗ trống không bị ngăn trở bởi điện áp tiếp xúc nữa và vùng tiếp giáp dẫn điện tốt. Nếu đặt điện áp bên ngoài cùng chiều với điện áp tiếp xúc, sự khuếch tán của các điện tử và lỗ trống càng bị ngăn lại và vùng nghèo càng trở nên nghèo hạt điện tự do. Nói cách khác diode chỉ cho phép dòng điện qua nó khi đặt điện áp theo một hướng nhất định.Diode chỉ dẫn điện theo một chiều từ anode sang cathode. Theo nguyên lý dòng điện chảy từ nơi có điện thế cao đến nơi có điện thế thấp, muốn có dòng điện qua diode theo chiều từ nơi có điện thế cao đến nơi có điện thế thấp, cần phải đặt ở anode một điện thế cao hơn ở cathode. Khi đó ta có UAK > 0 và ngược chiều với điện áp tiếp xúc (Utiếp xúc). Như vậy muốn có dòng điện qua diode thì điện trường do UAK sinh ra phải mạnh hơn điện trường tiếp xúc, tức là: UAK >UTX. Khi đó một phần của điện áp UAK dùng để cân bằng với điện áp tiếp xúc (khoảng 0.6V), phần còn lại dùng để tạo dòng điện thuận qua diode.
+Khi UAK > 0, ta nói diode phân cực thuận và dòng điện qua diode lúc đó gọi là dòng điện thuận (thường được ký hiệu là IF tức I-FORWARD hoặc ID tức I-diodeE). Dòng điện thuận có chiều từ anode sang cathode.
+Khi UAK đã đủ cân bằng với điện áp tiếp xúc thì diode trở nên dẫn điện rất tốt, tức là điện trở của diode lúc đó rất thấp (tầm khoảng vài chục Ohm). Do vậy phần điện áp để tạo ra dòng điện thuận thường nhỏ hơn nhiều so với phần điện áp dùng để cân bằng với Utiếp xúc. Thông thường phần điện áp dùng để cân bằng với Utiếp xúc cần khoảng 0.6V và phần điện áp tạo dòng thuận khoảng 0.1V đến 0.5V tùy theo dòng thuận vài chục mA hay lớn đến vài Ampere. Như vậy giá trị của UAK đủ để có dòng qua diode khoảng 0.6V đến 1.1V. Ngưỡng 0.6V là ngưỡng diode bắt đầu dẫn và khi UAK = 0.7V thì dòng qua diode khoảng vài chục mA.
+Nếu diode còn tốt thì nó không dẫn điện theo chiều ngược cathode sang anode. Thực tế là vẫn tồn tại dòng ngược nếu diode bị phân cực ngược với hiệu điện thế lớn. Tuy nhiên dòng điện ngược rất nhỏ (cỡ μA) và thường không cần quan tâm trong các ứng dụng công nghiệp. Mọi diode chỉnh lưu đều không dẫn điện theo chiều ngược nhưng nếu điện áp ngược quá lớn (VBR là ngưỡng chịu đựng của diode) thì diode bị đánh thủng, dòng điện qua diode tăng nhanh và đốt cháy diode. Vì vậy khi sử dụng cần tuân thủ hai điều kiện sau đây:
+
+Dòng điện thuận qua diode không được lớn hơn giá trị tối đa cho phép (do nhà sản xuất cung cấp, có thể tra cứu trong các tài liệu của hãng sản xuất để xác định).
+Điện áp phân cực ngược (tức UKA) không được lớn hơn VBR (ngưỡng đánh thủng của diode, cũng do nhà sản xuất cung cấp).Ví dụ diode 1N4007 có thông số kỹ thuật do hãng sản xuất cung cấp như sau: VBR=1000V, IFmax = 1A, VF¬ = 1.1V khi IF = IFmax. Những thông số trên cho biết:
+
+Dòng điện thuận qua diode không được lớn hơn 1A.
+Điện áp ngược cực đại đặt lên diode không được lớn hơn 1000V.
+Điện áp thuận (tức UAK) có thể tăng đến 1.1V nếu dòng điện thuận bằng 1A. Cũng cần lưu ý rằng đối với các diode chỉnh lưu nói chung thì khi UAK = 0.6V thì diode đã bắt đầu dẫn điện và khi UAK = 0.7V thì dòng qua diode đã đạt đến vài chục mA.
+
+
+=== Đặc tuyến Volt-Ampere ===
+Đặc tuyến Volt-Ampere của diode là đồ thị mô tả quan hệ giữa dòng điện qua diode theo điện áp UAK đặt vào nó. Có thể chia đặc tuyến này thành hai giai đoạn:
+
+Giai đoạn ứng với UAK = 0.7V > 0 mô tả quan hệ dòng áp khi diode phân cực thuận.
+Giai đoạn ứng với UAK = 0.7V < 0 mô tả quan hệ dòng áp khi diode phân cực nghịch.(UAK lấy giá trị 0,7V chỉ đúng với các diode Si, với diode Ge thông số này khác)
+Khi diode được phân cực thuận và dẫn điện thì dòng điện chủ yếu phụ thuộc vào điện trở của mạch ngoài (được mắc nối tiếp với diode). Dòng điện phụ thuộc rất ít vào điện trở thuận của diode vì điện trở thuận rất nhỏ, thường không đáng kể so với điện trở của mạch điện.
+
+
+== Ứng dụng ==
+Vì diode có đặc tính chỉ dẫn điện theo một chiều từ anode đến cathode khi phân cực thuận nên diode được dùng để chỉnh lưu dòng điện xoay chiều thành dòng điện một chiều.
+Ngoài ra diode có nội trở thay đổi rất lớn, nếu phân cực thuận RD 0 (nối tắt), phân cực nghịch RD (hở mạch), nên diode được dùng làm các công tắc điện tử, đóng ngắt bằng điều khiển mức điện áp. Diode chỉnh lưu dòng điện, giúp chuyển dòng điện xoay chiều thành dòng điện một chiều, điều đó có ý nghĩa rất lớn trong kĩ thuật điện tử. Vì vậy diode được ứng dụng rộng rãi trong kỹ thuật điện và điện tử.
+
+
+== Ký hiệu điện tử ==
+Ký hiệu điện tử dùng để chỉ diode trong sơ đồ mạch để chỉ các loại diode khác nhau.
+
+			
+			
+		
+		
+			
+			
+		
+		
+			
+			
+		
+		
+			
+			
+		
+		
+			
+			
+		
+		
+			
+			
+		
+		
+			
+			
+		
+		
+			
+			
+		
+
+
+== Xem thêm ==
+Một số loại diode
+Linh kiện điện tử
+Ký hiệu điện tử
+
+
+== Chú thích ==
+
+
+== Liên kết ngoài ==

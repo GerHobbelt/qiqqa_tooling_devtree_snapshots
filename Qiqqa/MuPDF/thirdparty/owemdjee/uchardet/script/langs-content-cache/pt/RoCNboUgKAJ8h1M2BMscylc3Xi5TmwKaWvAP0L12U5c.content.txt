@@ -1,0 +1,119 @@
+revision: 64989839
+title: Sistema auditivo
+url: https://pt.wikipedia.org/wiki/Sistema_auditivo
+
+
+---
+
+O sistema auditivo é o sistema sensorial para o sentido da audição. Inclui tanto os órgãos sensoriais (os ouvidos) quanto as partes auditivas do sistema sensorial.
+
+
+== Visão geral do sistema ==
+A orelha externa atua como um funil vibrações sonoras para o tímpano, aumentando a pressão sonora na gama de frequências do meio. Os ossículos da orelha média amplificam ainda mais a pressão de vibração aproximadamente 20 vezes. A base do estribo acopla as vibrações na cóclea através da janela oval, que vibra o líquido perilinfa (presente em todo a orelha interna) e faz com que a janela redonda se recolha conforme a janela oval se projeta.
+Os ductos vestibular e timpânico são preenchidos com perilinfa, e o ducto coclear entre eles é preenchido com endolinfa, um líquido com uma concentração de íons e tensão muito diferentes. As vibrações do perilinfa do ducto vestibular dobram as células externas de Corti (4 fileiras), fazendo com que a proteína prestina seja liberada nas pontas das células. Isso faz com que as células sejam alongadas quimicamente e encolhidas (motor somático), e os feixes das células ciliadas se desloquem, o que, por sua vez, afeta eletricamente o movimento da membrana basilar (motor do feixe das células ciliadas). Esses motores (células ciliadas externas) amplificam as amplitudes das ondas viajantes em mais de 40 vezes. As células ciliadas externas (CCE) são minimamente inervadas pelo gânglio espiral em feixes comunicativos recíprocos lentos (não mielinizados) (mais de 30 fios por fibra nervosa); isso contrasta as células ciliadas internas (CCI) que possuem apenas inervação aferente (+30 fibras nervosas por célula ciliada), mas estão fortemente conectadas. Existem três a quatro vezes mais CCEs que CCIs. A membrana basilar (MB) é uma barreira entre as escalas, ao longo da borda da qual as CCIs e CCEs se encontram. A largura e a rigidez da membrana basilar variam para controlar as frequências mais bem detectadas pelas CCIs. Na base da cóclea, a MB é mais estreita e mais rígida (altas frequências), enquanto no ápice coclear é mais larga e menos rígida (baixa frequência). A membrana tectória (MT) ajuda a facilitar a amplificação coclear, estimulando a CCE (direta) e CCI (via vibrações endolinfa). A largura e a rigidez da MT são paralelas às da MB e, da mesma forma, ajudam na diferenciação de frequência.O complexo olivar superior (COS), na ponte, é a primeira convergência dos pulsos cocleares esquerdo e direito. COS tem 14 núcleos descritos; sua abreviação é usada aqui (veja complexo olivar superior para seus nomes completos). O MOS determina o ângulo do som, medindo as diferenças de tempo nas informações à esquerda e à direita. LOS normaliza os níveis de som entre as orelhas; ele usa as intensidades de som para ajudar a determinar o ângulo do som. LOS inerva a CCI. NMCT inerva a CCE. O NMCT inibe LOS via glicina. Os LNCT são imunes à glicina, usados para sinalização rápida. Os NPD são de alta frequência e tonotópicos. Os NPDLs são de baixa frequência e tonotópicos. O NPVL tem a mesma função que o NPD, mas age em uma área diferente. Existem diferentes núcleos de sinalização e inibição do COS, inibidos pela glicina.O corpo trapezoide é a estrutura onde a maioria das fibras do núcleo coclear (NC) decussam (cruzam da esquerda para a direita e vice-versa), o que ajuda na localização de som. O NC entra nas regiões ventral (NCV) e dorsal (NCD). O NCV possui três núcleos. Células espessas transmitem informações de tempo, calculando a média de tempo de disparo. Células estreladas codificam espectros de som (picos e vales) por taxas de disparo neural espacial com base na força da entrada auditiva (em vez da frequência). As células polvo têm quase a melhor precisão temporal durante o disparo, decodificando o código de tempo auditivo. O NCD possui 2 núcleos e também recebe informações do NCV. As células fusiformes integram informações para determinar pistas espectrais para locais (por exemplo, se um som se originou a frente ou atrás). Cada uma das fibras do nervo coclear (mais de 30.000) possui uma frequência mais sensível e responde em uma ampla gama de níveis.Simplificando, os sinais das fibras nervosas são transportados pelas células espessas para as áreas binaurais do complexo olivar, enquanto os picos e vales dos sinais são observados pelas células estreladas, e o tempo do sinal é extraído pelas células polvo. O lemnisco lateral possui três núcleos: os núcleos dorsais respondem melhor à entrada bilateral e têm respostas sintonizadas com complexidade; os núcleos intermediários têm amplas respostas de sintonia; e núcleos ventrais têm curvas de sintonia amplas e moderadamente complexas. Os núcleos ventrais do lemnisco lateral ajudam o colículo inferior (CI) a decodificar sons modulados em amplitude, fornecendo respostas fásicas e tônicas (notas curtas e longas, respectivamente). O CI recebe entradas não mostradas, incluindo as áreas visuais (movimentação dos olhos para o som; orientação e comportamento em relação aos objetos, bem como os movimentos dos olhos (sacada)), ponte (pedúnculo cerebelar superior: conexão tálamo / cerebelo: ouvir sons e aprender a resposta comportamental), medula espinhal (cinza periaquedutal: ouvir o som e se mover instintivamente) e tálamo. Os itens acima são de implicação do CI na "resposta de sobressalto" e nos reflexos oculares. Além da integração multissensorial, o CI responde a frequências de modulação de amplitude específicas, permitindo a detecção de afinação. O CI também determina diferenças de tempo na audição binaural. O núcleo geniculado medial divide-se em ventral (retransmissão e células inibidoras de retransmissão: frequência, intensidade e informação binaural retransmitida topograficamente), dorsal (núcleo sintonizado amplo e complexo: conexão com informação somatossensorial) e medial (amplo, complexo e estreito sintonizado núcleos: intensidade da retransmissão e duração do som). O córtex auditivo (CA) traz som à consciência / percepção. Ele identifica sons (reconhecimento de nome de som) e também identifica a localização de origem do som. O CA é um mapa topográfico de frequência com feixes reagindo a diferentes harmonias, tempo e tom. O CA do lado direito é mais sensível à tonalidade e do lado esquerdo é mais sensível a pequenas diferenças sequenciais no som. Os córtex pré-frontal rostromedial e ventrolateral estão envolvidos na ativação durante o espaço tonal e no armazenamento de memórias de curto prazo, respectivamente. O giro do Heschl / giro temporal transversal que inclui a área e a funcionalidade de Wernicke, está fortemente envolvido nos processos de emoção-som, emoção-expressão facial e memória sonora. O córtex entorrinal é a parte do 'sistema hipocampo' que ajuda e armazena memórias visuais e auditivas. O giro supra-marginal (GSM) auxilia na compreensão da linguagem e é responsável por respostas compassivas. Ele vincula os sons às palavras com o giro angular e ajuda na escolha das palavras, além de integrar informações táteis, visuais e auditivas.
+
+
+== Estrutura ==
+
+
+=== Orelha externa ===
+As dobras da cartilagem ao redor do meato acústico são chamadas de pavilhão auricular. As ondas sonoras são refletidas e atenuadas quando atingem o pavilhão auricular e essas mudanças fornecem informações adicionais que ajudarão o cérebro a determinar a direção do som.
+As ondas sonoras entram no meato acústico, um tubo extremamente simples. Ele amplifica sons que estão entre 3 e 12 kHz. A membrana timpânica, na extremidade do meato acústico, marca o início da orelha média.
+
+
+=== Orelha média ===
+
+As ondas sonoras viajam por meio do meato acústico e atingem a membrana timpânica, ou tímpano. Essa informação de onda viaja pela cavidade da orelha média cheia de ar através de uma série de ossos delicados: martelo (martelo), bigorna (bigorna) e estribo (estribo). Esses ossículos agem como uma alavanca, convertendo as vibrações sonoras do tímpano de baixa pressão em vibrações sonoras de alta pressão em outra membrana menor chamada janela oval ou janela vestibular. O cabo do martelo articula-se com a membrana timpânica, enquanto a base do estribo se articula com a janela oval. Uma pressão mais alta é necessária na janela oval do que na membrana timpânica, porque a orelha interna além da janela oval contém líquido e não ar. O reflexo acústico do músculo estapédio da orelha média ajuda a proteger a orelha interna contra danos, reduzindo a transmissão de energia sonora quando o músculo do estapédio é ativado em resposta ao som de forte intensidade. A orelha média ainda contém as informações sonoras em forma de onda; é convertido em impulsos nervosos na cóclea.
+
+
+=== Orelha interna ===
+
+A orelha interna consiste na cóclea e em várias estruturas não auditivas. A cóclea possui três seções cheias de líquido (isto é, a escala média, escala timpânica e escala vestibular) e suporta uma onda de fluido impulsionada por pressão através da membrana basilar que separa duas das seções. Surpreendentemente, uma seção, chamada ducto coclear ou escala média, contém endolinfa. A endolinfa é um fluido de composição semelhante ao fluido intracelular encontrado no interior das células. O órgão de Corti está localizado nesse ducto na membrana basilar e transforma ondas mecânicas em sinais elétricos nos neurônios. As outras duas seções são conhecidas como escala timpânica e escala vestibular. Elas estão localizadas no labirinto ósseo, que é preenchido com líquido chamado perilinfa, de composição semelhante ao líquido cefalorraquidiano. A diferença química entre os líquidos endolinfa e perilinfa é importante para a função da orelha interna devido às diferenças de potencial elétrico entre os íons potássio e cálcio.
+Uma visão da cóclea humana (típica de todos os mamíferos e a maioria dos vertebrados) mostra onde as frequências específicas ocorrem ao longo de seu comprimento. A frequência é uma função aproximadamente exponencial do comprimento da cóclea no órgão de Corti. Em algumas espécies, como morcegos e golfinhos, o relacionamento é expandido em áreas específicas para apoiar sua capacidade ativa de sonar.
+
+
+==== Órgão de Corti ====
+
+O órgão de Corti forma uma fila do epitélio sensorial que percorre longitudinalmente toda a escala média da cóclea. Suas células ciliadas transformam as ondas de fluido em sinais nervosos. A jornada de incontáveis nervos começa com este primeiro passo; a partir daqui, o processamento adicional leva a uma panóplia de reações e sensações auditivas.
+
+
+==== Célula ciliada ====
+As células ciliadas são células colunares, cada uma com um feixe de 100 a 200 cílios especializados no topo, para os quais são nomeados. Existem dois tipos de células ciliadas; células ciliadas internas e externas. As células ciliadas internas são os mecanorreceptores da audição: eles transformam a vibração do som em atividade elétrica nas fibras nervosas, que são transmitidas ao cérebro. As células ciliadas externas são uma estrutura motora. A energia sonora causa mudanças no formato dessas células, o que serve para amplificar as vibrações sonoras de uma maneira específica da frequência. Descansando levemente no topo dos cílios mais longos das células ciliadas internas está a membrana tectorial, que se move para frente e para trás a cada ciclo de som, inclinando os cílios, gerando as respostas elétricas das células ciliadas.
+As células ciliadas internas, como as células fotorreceptoras do olho, apresentam uma resposta gradual, em vez dos picos típicos de outros neurônios. Esses potenciais classificados não estão vinculados pelas propriedades "tudo ou nenhum" de um potencial de ação.
+Nesse ponto, pode-se perguntar como esse movimento de um feixe de cílios desencadeia uma diferença no potencial da membrana. O modelo atual é que os cílios são ligados uns aos outros por " links de ponta", estruturas que ligam as pontas de um cílio a outro. Alongando e comprimindo, os links das pontas podem abrir um canal iônico e produzir o potencial receptor na célula ciliada. Recentemente, foi demonstrado que a caderina-23 CDH23 e a protocaderina-15 PCDH15 são as moléculas de adesão associadas a esses links de ponta. Pensa-se que um motor acionado por cálcio provoque um encurtamento desses elos para regenerar tensões. Essa regeneração da tensão permite apreensão da estimulação auditiva prolongada.
+
+
+==== Neurônios ====
+Os neurônios aferentes inervam as células ciliadas internas da cóclea, nas sinapses onde o neurotransmissor glutamato comunica sinais das células ciliadas aos dendritos dos neurônios auditivos primários.
+Há muito menos células ciliadas internas na cóclea do que fibras nervosas aferentes - muitas fibras nervosas auditivas inervam cada célula ciliada. Os dendritos neurais pertencem aos neurônios do nervo auditivo, que por sua vez une o nervo vestibular para formar o nervo vestibulococlear, ou nervo craniano número VIII. A região da membrana basilar que fornece as entradas para uma fibra nervosa aferente específica pode ser considerada como seu campo receptivo.
+Projeções eferentes do cérebro para a cóclea também desempenham um papel na percepção do som, embora isso não seja bem compreendido. Sinapses eferentes ocorrem nas células ciliadas externas e nos dendritos aferentes (em direção ao cérebro) sob as células ciliadas internas.
+
+
+== Estrutura neuronal ==
+
+
+=== Núcleo coclear ===
+O núcleo coclear é o primeiro local do processamento neuronal dos dados "digitais" recém-convertidos da orelha interna (ver também fusão binaural). Nos mamíferos, essa região é anatômica e fisiologicamente dividida em duas regiões, o núcleo coclear dorsal (NCD) e o núcleo coclear ventral (NCV). O NCV é ainda dividido pela raiz do nervo no núcleo coclear posteroventral (NCPV) e no núcleo coclear anteroventral (NCAV).
+
+
+=== Corpo trapezoide ===
+O corpo trapezoide é um feixe de fibras de cruzamento (decussação) na ponte ventral que carrega informações usadas para cálculos binaurais no tronco encefálico. Alguns desses axônios vêm do núcleo coclear e cruzam para o outro lado antes de viajar para o núcleo olivar superior. Acredita-se que isso ajude na localização do som.
+
+
+=== Complexo olivar superior ===
+O complexo olivar superior (COS) está localizado na ponte e recebe projeções predominantemente do núcleo coclear ventral, embora o núcleo coclear dorsal também se projete nele, via estrias acústicas ventrais. Dentro do COS encontra-se o complexo olivar lateral superior (OLS) e o complexo olivar medial superior (OMS). O primeiro é importante na detecção de diferenças de nível interaural, enquanto o último é importante na distinção de diferença de tempo interaural.
+
+
+=== Lemnisco lateral ===
+O lemnisco lateral é um trato de axônios no tronco encefálico que transporta informações sobre o som do núcleo coclear para vários núcleos do tronco encefálico e, finalmente, o colículo inferior contralateral do mesencéfalo.
+
+
+=== Colículos inferiores ===
+Os colículos inferiores (CI) estão localizados logo abaixo dos centros de processamento visual conhecidos como colículos superiores. O núcleo central do CI é um centro de retransmissão quase obrigatório no sistema auditivo ascendente e provavelmente atua para integrar informações (especificamente em relação à localização da fonte sonora do complexo olivar superior  e do núcleo coclear dorsal) antes de enviá-lo ao tálamo e córtex.
+
+
+=== Núcleo geniculado medial ===
+O núcleo geniculado medial faz parte do sistema de retransmissão talâmico.
+
+
+=== Córtex auditivo primário ===
+O córtex auditivo primário é a primeira região do córtex cerebral que recebe estímulos auditivos.
+A percepção sonora está associada ao giro temporal superior posterior esquerdo (GTS). O giro temporal superior contém várias estruturas importantes do cérebro, incluindo as áreas de Brodmann 41 e 42, marcando a localização do córtex auditivo primário, a região cortical responsável pela sensação de características básicas do som, como tom e ritmo. Sabe-se por meio de pesquisas em primatas não humanos que o córtex auditivo primário provavelmente pode ser dividido ainda mais em sub-regiões funcionalmente diferenciáveis.. Os neurônios do córtex auditivo primário podem ser considerados como tendo campos receptivos que cobrem uma gama de frequências auditivas e têm respostas seletivas a sons harmônicos  Os neurônios que integram informações das duas orelhas têm campos receptivos que cobrem uma região específica do espaço auditivo.
+O córtex auditivo primário é cercado por córtex auditivo secundário e se interconecta com ele. Essas áreas secundárias se interconectam com outras áreas de processamento no giro temporal superior, no banco dorsal do sulco temporal superior e no lobo frontal. Nos seres humanos, as conexões dessas regiões com o giro temporal médio são provavelmente importantes para a percepção da fala. O sistema frontotemporal subjacente à percepção auditiva permite distinguir sons como fala, música ou ruído.
+
+
+=== Os fluxos auditivos ventral e dorsal ===
+
+Do córtex auditivo primário emergem duas vias separadas: a corrente ventral auditiva e a corrente dorsal auditiva. O fluxo ventral auditivo inclui o giro temporal anterior superior, o sulco temporal superior anterior, o giro temporal médio e o pólo temporal. Os neurônios nessas áreas são responsáveis pelo reconhecimento sonoro e pela extração de significado das frases. A corrente dorsal auditiva inclui o giro temporal superior posterior e o sulco, o lóbulo parietal inferior e o sulco intra-parietal. Ambas as vias projetam-se em humanos para o giro frontal inferior. O papel mais estabelecido da corrente dorsal auditiva em primatas é a localização correta. Nos seres humanos, o fluxo dorsal auditivo no hemisfério esquerdo também é responsável pela repetição e articulação da fala, codificação fonológica a longo prazo dos nomes das palavras e memória de trabalho verbal.
+
+
+== Significado clínico ==
+O funcionamento adequado do sistema auditivo é necessário para detectar, processar e entender o som do ambiente. A dificuldade em detectar, processar e entender a entrada de som tem o potencial de afetar adversamente a capacidade de um indivíduo de se comunicar, aprender e efetivamente concluir tarefas rotineiras diariamente.Em crianças, o diagnóstico e o tratamento precoces da função prejudicada do sistema auditivo são fatores importantes para garantir o cumprimento dos principais marcos sociais, acadêmicos e de desenvolvimento da fala / linguagem.O comprometimento do sistema auditivo pode incluir qualquer um dos seguintes:
+
+Resposta auditiva do tronco encefálico e teste audiométrico ABR para audição de recém-nascidos
+Transtorno do processamento auditivo
+Efeitos na saúde devido ao ruído
+Zumbido
+Fenômenos endaurais
+
+
+== Ver também ==
+Processamento de linguagem no cérebro
+Neurociência da música
+Atenção auditiva seletiva
+
+
+== Referências ==
+
+
+== 30em ==
+
+
+== Leitura adicional ==
+Kandel, Eric R. (2012). Principles of Neural Science. [S.l.: s.n.] ISBN 978-0-07-139011-8. OCLC 795553723 
+
+
+== Ligações externas ==
+Passeio em volta da cóclea
+Sistema auditivo - Tutorial em Neurociência da Universidade de Washington
+Lincoln Gray. «Chapter 13: Auditory System: Pathways and Reflexes». Neuroscience Online, the Open-Access Neuroscience Electronic Textbook. [S.l.: s.n.] [ligação inativa]

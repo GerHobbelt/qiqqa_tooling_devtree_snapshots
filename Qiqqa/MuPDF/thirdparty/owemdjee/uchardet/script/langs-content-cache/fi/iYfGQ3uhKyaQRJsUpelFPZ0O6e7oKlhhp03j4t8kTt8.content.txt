@@ -1,0 +1,31 @@
+revision: 21643783
+title: List of freeware
+url: https://fi.wikipedia.org/wiki/NoScript
+
+
+---
+
+NoScript on avoimen lähdekoodin lisäosa Mozilla-pohjaisille selaimille, joka estää muun muassa JavaScript, Java,  Flash, Silverlight sekä muita liitännäisiä toimimasta verkkosivuilla, ellei niitä ole asetettu sallituiksi (whitelist). Se osaa myös pakottaa sivustot turvallisempaan HTTPS yhteyteen vanhan HTTP:n sijasta.
+NoScriptin on kehittänyt InformAction ja Giorgio Maone. Se on saatavilla 45 eri kielellä, myös suomeksi.
+
+
+== Menestyminen ==
+Nostettiin PC Worldin parhaiden ohjelmien listalla vuonna 2006.
+About.com palkitsi sen parhaana tietoturvalisäosana vuonna 2008.
+About.comin lukijoiden nimeämä paras tietoturvalisäosa vuonna 2010 ja 2011.
+Ensimmäinen sija Dragon Research Groupin järjestämässä Security Innovation Grant -testissä 2011.
+Gizmo’s Freeware nosti NoScriptin Firefoxin tärkeimmäksi tietoturvalisäosaksi vuonna 2013.
+
+
+== Yhteensopivuusongelmat ==
+Vuonna 2009 NoScript ja Adblock Plus eivät toimineet keskenään. Saman vuoden loppupuolella NoScript ja Ghostery olivat epäyhteensopivia.
+
+
+== Lähteet ==
+
+
+== Aiheesta muualla ==
+
+Kotisivu (englanniksi)
+Giorgio Maone NoScriptin kehittäjän kotisivu (englanniksi)
+NoScript Security Suite Firefox lisäosat (englanniksi, suomeksi)

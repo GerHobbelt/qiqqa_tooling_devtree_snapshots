@@ -1,0 +1,65 @@
+revision: 29772070
+title: "H\xFCcre d\xF6ng\xFCs\xFC"
+url: https://tr.wikipedia.org/wiki/H%C3%BCcre_d%C3%B6ng%C3%BCs%C3%BC
+
+
+---
+
+Hücre döngüsü, bir hücrenin ömrü boyunca meydana gelen olayların sırasını ifade eder.
+Ökaryotik hücrelerde, hücre döngüsünün iki ana aşaması vardır: İnterfaz ve mitotik faz. İnterfaz, yeniden bölünmek için geçiş evresidir. İnterfaz sırasında hücre büyüyerek temel metabolik işlevlerini yerine getirmekte, DNA'sını kopyalamakta ve mitotik hücre bölünmesi için hazırlanmaktadır. Mitoz faz iki aşamadan oluşur: mitoz ve sitokinez. Mitoz ve ardından gelen sitokinez sırasında hücre sitoplazmasını ve diğer bileşenlerini bölmektedir. Bu işlemler sonrasında ana hücreye ait iki yavru hücre oluşur.Ökaryotik hücre döngüsünde üç ana kontrol noktası vardır. Bunlar G1,G2 ve S evreleridir. En önemli evre ise S evresidir. Kontrol noktaları hücre döngüsünde önceki evrede tamamlanmamış bir olay tamamlanmadan yeni bir aşamaya geçilmesini engellemektedir. Kontrol noktaları eşlenmemiş DNA'lara ve hasarlı DNA'lara duyarlıdır. Aynı şekilde kromozomların doğru bir şekilde  kopyalanması ve organellerin sentezi de bu noktalarda kontrol edilmektedir. Eğer aşamalarda bir hasar saptanırsa kontrol noktasındaki duraksama hasar tespiti için zaman sağlamaktadır.
+Prokaryot (bakteri ve arke) hücrelerde, hücre döngüsü B, C ve D dönemlerinde bölünmektedir. B dönemi, hücre bölünmesinin sonundan DNA eşlenmesinin başlangıcına kadar oluşan kısımdır. DNA eşlenmesi C döneminde olmaktadır. D dönemi DNA eşlenmesinin sonu ile bakteri hücresinin iki yavru hücreye bölünmesi arasındaki aşamayı ifade etmektedir.
+
+
+== Aşamalar ==
+
+Ökaryotik hücre döngüsü G1 fazı, S fazı (sentez),  G2 fazı ve M fazı (mitoz ve sitokinez) olmak üzere 4 aşamaya ayrılmıştır. M fazı iki aşamadan oluşmaktadır. Bunlar hücre çekirdeğinin bölünmesi (mitoz) ve sitoplazma bölünmesi (sitokinez)'dir.   
+
+
+=== G0 fazı (dinlenme) ===
+Aktif olarak çoğalmayan hücrelerin hareketsiz olduğu ve G0 fazında olduğu söylenmektedir. Hücre döngüsü bu aşama ile başlamaktadır. Çok hücreli ökaryotlarda hücre G1 aşamasından G0 aşamasına geçerek uzun süreler boyunca hareketsiz kalabilmektedir (genellikle nöronlarda olduğu gibi). Tamamen farklılaşmış hücreler için bu durum çok yaygındır. Birçok memeli hücresi işlevsel olarak farklılaşmıştır ve daha fazla bölünememektedir. Bu hücreler G0 aşamasında bulunurlar. Bu aşamada hücreler protein sentezi ve salgılaması yapabilir. Epitel hücresi gibi bazı hücreler bu aşamaya hiç girmemektedir ve yaşamı boyunca bölünmeye devam etmektedir.
+
+
+=== İnterfaz ===
+İnterfaz, yeni oluşan bir hücrede ve onun çekirdeğinde tekrar bölünmeden önce gerçekleşen olayları kapsayan evredir. Hazırlık aşaması olarak da adlandırılmaktadır. Bölünme evresi değildir. Bu evrede bölünme için gerekli maddeler sentezlenmektedir. İnterfaz ökaryot hücrelerde döngünün yaklaşık %90'lık kısmını kapsamaktadır. Örneğin; insanın deri hücresinde döngü 24 saat sürmektedir. bu döngünün 22 saatlik kısmını interfaz kapsamaktadır.İnterfaz G1, S ve G2 olmak üzere üç aşamadan oluşmaktadır.  Bunları mitoz ve sitokinez izlemektedir. S aşamasından önceki G1 ve G2 aşamaları boşluk aşamaları olarak da adlandırılmaktadır. Başarılı bir çoğalmayı yöneten bilgi işleminin çoğunun bu aşamalarda gerçekleştiği anlaşılmaktadır.
+
+
+==== G1 aşaması (İlk büyüme aşamasıdır) ====
+İnterfazın ilk ve en uzun aşamasıdır. Toplam dögüsü 24 saat olan bir insan hücresi için 11 saat civarı sürmektedir. Hücre bu aşamada büyüyerek normal işlevlerine devam etmektedir. Hücrede protein sentezi ve organel sayısı artmaktadır. Hücre DNA sentezi için hazırlanmaktadır. DNA eşlenmesinden önce hücre döngüsüne başlamanın uygunluğu burada değerlendirilmektedir. Buna karar vermek için hücre boyutu, besin bulunabilirliği ve büyümeyi destekleyen veya büyümeyi baskılayan sinyaller gibi faktörler kullanılmaktadır. Bu aşamadan sonra hücre ya S evresine devam edip bölünme yoluna gider ya da G0 evresine girer.
+
+
+==== S aşaması (DNA eşlenmesi) ====
+S aşaması hücre döngüsünde G1 ve G2 aşamaları arasında meydana gelmektedir. Bu aşamada çekirdekteki genomik DNA kopyalanır. Hücrenin genomik bilgisinin doğru bir şekilde kopyalanması 3 adım içermektedir: Bunlar G1'den S fazına geçişin sinyalini vermek, her iki DNA ipliğini kopyalamak ve G2 fazından önce DNA hasarını onarmaktır.  Toplam döngüsü 24 saat olan bir insan hücresi için yaklaşık 8 saat sürmektedir.
+
+
+==== G 2 aşaması (büyüme) ====
+İnterfazın son aşamasıdır. Toplam döngüsü 24 saat olan bir insan hücresi için 4 saat civarı sürmektedir. DNA eşlenmesinden sonraki aşamadır. Hücrenin hücre bölünmesi için hazırlandığı aşamadır. Hücrenin hızlı büyüme evresidir. Mitoz için önemli enzimler ve protein sentezlenmektedir. Buradaki kontrol noktasında DNA eşlemesi sırasında sorun olup olmadığı ve DNA hasarı olup olmadığı kontrol edilmektedir.
+
+
+=== Mitotik aşama (Kromozom ayrımı) ===
+Asıl konu: Mitoz
+Hücre döngüsünün diğer aşamalara göre kısa bir evresidir. Toplam döngüsü 24 saat olan bir insan hücresi için yaklaşık 1 saat sürmektedir. Mitoz bu evrede gerçekleşmektedir. Bu evrede kromozom ayrılım ve hücre bölünmesi gerçekleşmektedir. Mitoz kendi içerisinde aşamalara ayrılmıştır. Bu aşamalar şu şekildedir:
+
+Profaz
+Prometafaz
+Metafaz
+Anafaz
+TelofazMitoz yalnızca ökaryotik hücrelerde meydana gelmektedir ancak farklı türlerde farklı şekillerde ortaya çıkabilmektedir.
+
+
+=== Sitokinez (Tüm hücre bileşenlerinin ayrılması) ===
+Asıl konu: Sitokinez
+Mitoz sırasında kromozom ayrışmasının ardından hücre; sitoplazma ve diğer organeller, sitokinez süreci boyunca iki yavru hücreye bölünmektedir. Mitoz ve sitokinez ile ana hücre ile aynı olan iki yavru hücre oluşmaktadır. Sitokinezin hatalı gerçekleşmesi kanser dahil birçok hastalığa sebep olmaktadır.Sitokinez bitki ve hayvan hücrelerinde hücre çeperi varlığına bağlı olarak farklı gerçekleşmektedir. Hayvan hücrelerinde sitokinez boğumlanarak gerçekleşmektedir. Bitki hücresinde hücre çeperi varlığı sebebiyle ara plak oluşumu ile gerçekleşmektedir.
+
+
+== Kontrol noktaları ==
+Doğru hücre bölünmesi iki temel gereksinimi karşılamalıdır: Genomik bütünlük korunmalıdır ve hücre çekirdeği sitoplazmik oranının hücre yaşamıyla uyumlu sınırlar içinde olmalıdır. Bu, DNA eşlenmesi, kromozom ayrılması, hücre bölünmesi, hücre kütlesinin ikiye katlanması ve organel sayısının iki katına çıkması gibi birtakım olaylar dizisi içermesi anlamına gelmektedir. Hücreler, hücre döngüsünün her bir aşamasını yöneten molekül kümelerinin doğru sıralı aktivasyonunu ve inaktivasyonunu sağlamak için bir moleküler kontrol sistemi geliştirmiştir. Hücrenin hem dışından hem de içinden gelen sinyallere uyum sağlamıştır. "Hücre döngüsü kontrol noktaları" olarak bilinen kontrol mekanizmaları, hücre döngüsü boyunca ilerlemeyi izlemektedir. DNA eşlenmesi ve kromozom ayrışmasının önemli aşamalarını etkileyen olası kusurları algılayarak, tüm kusurlar onarılıncaya kadar hücre döngüsünün ilerlemesini durdurmaktadır. Bir sonraki aşamaya geçiş yalnızca tüm süreçlerin uygun şekilde tamamlanması durumunda gerçekleşmektedir. Ayrıca, hasarların çok şiddetli olması ve tam olarak tamir edilememesi durumunda, aynı kontrol mekanizmaları kalıcı bir hücre döngüsü durdurulmasını (hücre yaşlanması) veya programlanmış hücre ölümünü (apoptozis) tetiklemektedir. G1 noktasındaki duraklama, hasarlı DNA'nın S evresine girmeden onarılabilmesine olanak sağlamaktadır. Burada DNA'nın hasarlı kopyalanması engellenmektedir. S noktası kontrol noktası, DNA'nın bütünlüğünü sürekli denetleyerek hasarlı DNA'nın onarılmadan kopyalanmasını engellemektedir. Aynı zamanda kalite kontrol işleviyle DNA eşlenmesi sırasında ortaya çıkabilen, yanlış bazların eklenmesi veya DNA bölümlerinin eksik kopyalanması gibi hataların tamir edilmesini sağlamaktadır. G2 kontrol noktasının işletilmesiyle genom tamamıyla kopyalanmadan veya hasara uğramış DNA tamir edilmeden M evresine geçiş engellenmektedir. Ancak bundan sonra G2'deki engelleme ortadan kalkar ve hücre mitoza geçerek, tümüyle kopyalanmış kromozomları yavru hücrelere dağıtır.  Diğer bir kontrol noktası mitoz sonuna doğru ortaya çıkan M kontrol noktasıdır. M kontrol noktası kromozomların mitotik iğcik üzerinde düzenli bir şekilde yer almalarını kontrol etmektedir. Bölünen kromozom yavru hücrelere tam bir kromozom seti halinde geçmektedirler. Mitotik iğcik üzerinde yer alan kromozomların biri veya birkaçı eksilirse kontrol noktası mitozun metafaz evresinde kalmasını sağlamaktadır. Böylece kromozomların eksik olarak yavru hücrelere geçmelerini önlemektedir.
+
+
+== Ayrıca bakınız ==
+Hücre
+DNA replikasyonu
+Tümör oluşumu
+Mitoz
+
+
+== Kaynakça ==

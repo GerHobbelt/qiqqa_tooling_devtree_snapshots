@@ -1,0 +1,82 @@
+revision: 32081915
+title: Technology
+url: https://ca.wikipedia.org/wiki/MOS_Technology
+
+
+---
+
+MOS Technology, Inc., també coneguda com a Commodore Semiconductor Group (en ser adquirida per CBM), va ser un fabricant de calculadores i microprocessadors, fent-se famosa pel seu microprocessador MOS Technology 6502. Tot i la semblança, no té res a veure amb Mostek.
+
+
+== Història ==
+MOS va començar sent una segona font de les calculadores i xips interns dissenyats per Texas Instruments. També va fabricar per curt temps el custom xip utilitzat per Atari per a les seves consoles PONG. Mentre que el mercat de la calculadora va créixer MOS es va convertir eventualment en el major proveïdor de Commodore Business Machines, de manera que pràcticament el seu negoci es basava a subministrar components per a la seva línia de calculadores.Les coses van canviar dramàticament en 1975. Alguns dels dissenyadors del Motorola 6800 van deixar la companyia poc després del seu llançament, segons sembla amb disgust. Com llavors no existien companyies de només disseny (les avui conegudes com a fabless), van haver d'unir-se a una companyia fabricant de xips per poder produir els seus dissenys. MOS era una signatura petita amb bones credencials a l'àrea adequada, la Costa Est dels Estats Units.
+L'equip de quatre dissenyadors estava dirigit per Chuck Peddle i incloïa Bill Mensch. A MOS es van fixar com a objectiu el disseny d'una nova CPU que superés el 6800 mentre que seguia sent similar a propòsit. El disseny resultant va ser el MOS Technology 6501, bastant similar al 6800, però que usant diverses simplificacions en el disseny, fins a quatre vegades més ràpid.
+
+
+=== Família 6502 ===
+Quan es va anunciar el 6501, Motorola va interposar una demanda immediatament. Tot i que el 6501 no era compatible amb el 6800, es podia connectar sense problemes a qualsevol placa mare per al 6800 pel fet que utilitzava el mateix patillatge. Això va ser suficient perquè Motorola pogués interposar la demanda. Les vendes del 6501 bàsicament es van aturar, i la demanda podia eternitzar-se durant anys fins que MOS es veiés forçada a pagar una multa de 200.000 dòlars.
+Mentrestant les vendes del MOS Technology 6502 a 1 MHz van començar el setembre de 1975 amb un preu de 25 dòlars. Era essencialment idèntic al 6501, excepte en el patillatge. A causa de la seva velocitat superava àmpliament al més complex i car 6800, i respecte al Intel 8080 costava menys i era més fàcil de programar. Encara que no tenia l'avantatge de poder usar el maquinari existent per al Motorola com el 6501, era tan barat que ràpidament va superar el 6800 en popularitat, deixant el pin-to-pin com un punt discutible.
+
+Els 6502 eren tan barats, que molta gent va creure que era un engany quan MOS els va mostrar per primera vegada en una fira comercial el 1975. Desconeixien les tècniques de les màscares de MOS i calculaven el preu per xip als preus de cost normals, els números no els quadraven. Però qualsevol dubte en la seva compra es va evaporar quan Intel i Motorola van baixar els preus dels seus propis dissenys de $ 179 a $ 69 en la mateixa fira per poder competir. La seva maniobra va legitimar al 6502. En finalitzar la fira el barril de fusta ple a vessar de mostres del 6502 estava buit.
+El 6502 es va convertir ràpidament en un dels xips més populars dels seus temps. Moltes companyies van llicenciar la línia 650x de MOS, entre elles Rockwell, GTE, Synertek, i Western Design Center (WDC).
+Nombroses versions de la CPU bàsica, conegudes com els 6503-6507, eren a encapsulat DIL de 28 pins per a un cost menor. En cada un d'ells s'eliminaven senyals o pins d'adreces. El més popular de tots va ser el 6507, utilitzat en la videoconsola Atari 2600 (i la seva legió de clòniques) i en les unitats de disquet Atari per la seva Família Atari de 8 bits. El 6504 es va utilitzar en diverses impressores. MOS va llançar també una sèrie de CPU similars utilitzant rellotges externs, que s'identificaven per un 1 com a tercer dígit, designats 6512-6515. Eren molt útils en sistemes on el suport de rellotge ja era proporcionat per un altre xip a la placa base. L'afegit final va ser el 6510 utilitzat en el Commodore 64, amb ports addicionals d'Entrada/Sortida.
+
+
+=== Commodore Semiconductor Group ===
+Malgrat l'èxit dels 6502, la companyia tenia problemes. Aproximadament al mateix temps que llançaven la CPU el mercat de calculadores es va ensorrar, i tots els altres productes de MOS van deixar d'enviar. Aviat estaven en seriosos problemes financers. El rescat va venir de la mà de Commodore, que va comprar la companyia sencera amb la condició que Chuck Peddle s'unís a Commodore com a Cap d'Enginyers. L'acord va arribar aviat i mentre que la signatura es va convertir en la divisió de fabricació de Commodore, van continuar utilitzant el nom MOS perquè els manuals no haguessin de reimprimir. Poc després MOS passava a ser Commodore Semiconductor Group (CSG). Malgrat les nova sigles (CSG), tots els xips seguir utilitzant el vell logotip de MOS fins a 1989.
+MOS havia dissenyat prèviament un senzill kit d'ordinador anomenat KIM-1, principalment com un mitjà per mostrar el que podia fer el 6502. En Commodore, Peddle convèncer el nou propietari, Jack Tramiel, que les calculadores eren un carreró sense sortida, i que el mercat dels ordinadors personals aviat seria enorme. Un KIM reempaquetat amb una pantalla i teclats nous va esdevenir el Commodore PET.
+No obstant això, el grup original de disseny semblava estar fins i tot menys interessat a treballar per Jack Tramiel que per a Motorola, i l'equip va començar ràpidament a desintegrar-se. Un resultat d'això va ser que el recentment acabat xip 6522 (VIA) va romandre indocumentat durant anys.
+Bill Mensch va deixar MOS poc després de la compra per Commodore, i es va traslladar de Taula, Arizona a Norristown, Pennsilvània. Després d'un curt ocupació com a consultor en una companyia local anomenada ICE, es va unir al Western Design Center (WDC) el 1978. Com llicenciatari de la línia 6502, els seus primers productes van ser versions CMOS (molt més eficients en consum) amb errors corregits del 6502 (el 65C02, tant com xip individual com encastat en un microcontrolador anomenat 65C150). Però llavors van ampliar molt la línia amb la introducció de la CPU W65C816, un xip de 16 bits millora directa de l'65C02 que també podia funcionar en mode 8 bits per compatibilitat. El disseny de la CPU de 32 bits 65832, similar en concepte, es va acabar però no va ser posada en producció. Com WDC havia canviat molt el disseny original de MOS a CMOS, els 6502 segueixen sent avui una CPU popular a sistemes integrats com a equip mèdic i controladors de tauler en automòbiles.
+
+
+=== GMT Microelectronics ===
+Després de la fallida de Commodore el 1994, l'equip gerent de Commodore Semiconductor Group crea  GMT Microelectronics (G reat M ixed-signal T echnologies) amb Dennis Peasenell com CEO per intentar comprar la companyia. El desembre de 1994, arriben amb la Environmental Protection Agency (EPA) a un Prospective Purchase Agreement (un acord de compra que limitava la responsabilitat de la companyia a canvi de participar en els costos de neteja), per un import d'uns 4,3 milions de dòlars, més 1 milió de dòlars addicionals per cobrir diversos despeses incloent embargaments de l'EPA. Estableixen la seva seu a Valley Forge, Pennsilvània.
+El 1995 reobre la Fab original de MOS Technology (construïda a la dècada de 1970) a Norristown, Pennsilvània que feia servir tècniques d'un micròmetre, i que Commodore va tancar a 1992. Van obrint oficines de venda a Tampa (Florida), Dallas (Texas, Laguna Hills (Califòrnia, San José (Califòrnia), Europa i Àsia i accepten també comandes pel seu domini web (www.gmtme.com avui en dia no operatiu). S'especialitzen en la fabricació de xips analògics, de senyal mixta (d'aquí el seu nom) i de maneig d'alimentació elèctrica, a més d'oferir a tercers serveis de fosa.
+El 18 de març de 1999 anuncia a la premsa el seu acord amb Telcom Semiconductor per proporcionar serveis de fosa basats en els processos Bipolar i Sicre Thin Film Resistor de Telcom Semiconductor i actuar com a font alternativa llicenciada de productes basats en la tecnologia Bipolar. La Fab produïa 10000 wafers (hòsties de silici de mida 5) per mes, i fabricava xips CMOS, BiCMOS, NMOS, BIPOLAR i SOI.
+La planta havia estat en la llista de Prioritats Nacionals de l'EPA de productors de residus perillosos des de 1989. Abans de 1999 va tenir 21 milions de dòlars en rèdits i 183 empleats, durant 3 anys. Tanmateix, en 2001 l'EPA va tancar la planta. GMT va cessar en les seves operacions i va ser liquidada.
+
+
+== Productes ==
+MOS KIM-1 - kit d'ordinador en una sola targeta/targeta d'avaluació de CPU, basada en 6502
+MOS Technology 4510 - CPU (CSG 65CE02) amb dos cies en el xip; 3.45 MHz
+MOS Technology 6501 - CPU pin-compatible amb el Motorola 6800
+MOS Technology 6502 - CPU idèntica al 6501 excepte en la compatibilitat de pins amb el 6800
+MOS Technology 6507 - CPU amb 13 pins d'adreces
+MOS Technology 6508 - CPU amb 256 B RAM i 8 pins de I/O
+MOS Technology 6509 - CPU amb 20 pins d'adreces
+MOS Technology 6510 - CPU amb pins de rellotge i de R/O
+MOS Technology 6520 - PIA Peripheral Interface Adapter
+MOS Technology 6522 - VIA Versatile Interface Adapter
+MOS Technology TPI - TPI Tri-Port Interface, també anomenada 6523/6525
+MOS Technology CIA - CIA Complex Interface Adapter, també anomenada 6526/8520/8521
+MOS Technology SPI - spia Single Port Interface Adapter
+MOS Technology RRIOT - RRIOT ROM-RAM-I/O Timer
+MOS Technology 6532 - RIOT RAM-I/O Timer
+MOS Technology 6545 - CRTC Controlador de tub de raigs catòdics (CRT Controller)
+MOS Technology 6551 - ACIA Asynchronous Communications Interface Adapter
+MOS Technology VIC - VIC Video Interface Chip, també conegut com a 6560 (NTSC) i 6561 (PAL)
+MOS Technology VIC-II - també conegut com a 6567/8562/8564 (NTSC) i 6569/8565/8566 (PAL)
+MOS Technology SID - SID Sound Interface Device, també conegut com a 6581/6582/8580
+MOS Technology TED - TED Text Editing Device, també conegut com a 7360/8360 (HMOS-I/II)
+MOS Technology 8500 - CPU Version HMOS-II del 6510
+MOS Technology 8501 - CPU 6502 HMOS-II amb port I/O de 7 bits
+MOS Technology 8502 - CPU compatible amb el 6510 però capaç de córrer a 2 MHz
+MOS Technology 8551 - ACIA Asynchronous Communications Interface Adapter, variant HMOS-II del 6551
+MOS Technology VDC - VDC Video Display Controller
+MOS Technology 8568 - VDC amb HSYNC compost, VSYNC, i interrupció RDY
+MOS Technology 8722 - MMU Memory Management Unit
+MOS Technology 8726 - REC RAM Expansion Controller
+MOS Technology Agnus - Address Generator United
+MOS Technology 8362 - DENIS Display Encoder
+MOS Technology 8373 - ECS DENIS Display Encoder
+MOS Technology 8364 - PAULA Port Àudio UART and Logic
+MOS Technology 5719 - GARY Gate Array
+
+
+== Referències ==
+
+
+== Enllaços externs ==
+On the Edge: The Spectacular Rise and Fall of Commodore (2005) Variant Press, ISBN 0-9738649-0-7. - Un llibre que documenta els orígens de MOS Technology i Commodore.
+Informació sobre els xips MOS i el seu ús en els ordinadors CBM - de Ronald van Dijk
+Pàgina de l'EPA sobre l'acord amb MOS/CSG/GMT - enllaç validat el 4 febrer 2006

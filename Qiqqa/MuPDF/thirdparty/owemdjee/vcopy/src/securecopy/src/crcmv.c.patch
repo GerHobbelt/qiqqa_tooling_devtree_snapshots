@@ -1,0 +1,173 @@
+--- /home/ijntema/programming/securecopy/core-utils-based/V9.3.0-beta/coreutils-9.3/src/mv.c	2023-04-10 12:14:08.000000000 +0200
++++ /home/ijntema/programming/securecopy/core-utils-based/V9.3.0-beta/coreutils-9.3/src/crcmv.c	2023-04-29 19:43:02.116990278 +0200
+@@ -30,27 +30,32 @@
+ #include "cp-hash.h"
+ #include "die.h"
+ #include "error.h"
+ #include "filenamecat.h"
+ #include "remove.h"
+ #include "renameatu.h"
+ #include "root-dev-ino.h"
+ #include "targetdir.h"
+ #include "priv-set.h"
+ 
++/* HIJN */
++#include "crcsum.h"
++
+ /* The official name of this program (e.g., no 'g' prefix).  */
+-#define PROGRAM_NAME "mv"
++/* HIJN */
++#define PROGRAM_NAME "crcmv"
+ 
+ #define AUTHORS \
+   proper_name ("Mike Parker"), \
+   proper_name ("David MacKenzie"), \
+-  proper_name ("Jim Meyering")
++  proper_name ("Jim Meyering"), \
++  proper_name ("Checksum functionality only: Hans IJntema")
+ 
+ /* For long options that have no equivalent short option, use a
+    non-character as a pseudo short option, starting with CHAR_MAX + 1.  */
+ enum
+ {
+   DEBUG_OPTION = CHAR_MAX + 1,
+   NO_COPY_OPTION,
+   STRIP_TRAILING_SLASHES_OPTION
+ };
+ 
+@@ -60,20 +65,22 @@
+ };
+ static enum Update_type const update_type[] =
+ {
+   UPDATE_ALL, UPDATE_NONE, UPDATE_OLDER,
+ };
+ ARGMATCH_VERIFY (update_type_string, update_type);
+ 
+ static struct option const long_options[] =
+ {
+   {"backup", optional_argument, NULL, 'b'},
++  /* HIJN */
++  {"crc", optional_argument, NULL, 'c'},
+   {"context", no_argument, NULL, 'Z'},
+   {"debug", no_argument, NULL, DEBUG_OPTION},
+   {"force", no_argument, NULL, 'f'},
+   {"interactive", no_argument, NULL, 'i'},
+   {"no-clobber", no_argument, NULL, 'n'},
+   {"no-copy", no_argument, NULL, NO_COPY_OPTION},
+   {"no-target-directory", no_argument, NULL, 'T'},
+   {"strip-trailing-slashes", no_argument, NULL, STRIP_TRAILING_SLASHES_OPTION},
+   {"suffix", required_argument, NULL, 'S'},
+   {"target-directory", required_argument, NULL, 't'},
+@@ -116,20 +123,24 @@
+   x->preserve_all_root = false;
+ }
+ 
+ static void
+ cp_option_init (struct cp_options *x)
+ {
+   bool selinux_enabled = (0 < is_selinux_enabled ());
+ 
+   cp_options_default (x);
+   x->copy_as_regular = false;  /* FIXME: maybe make this an option */
++  /* HIJN */
++  x->crc = false;
++  x->crc_with_xattr = false;
++  /* END HIJN */
+   x->reflink_mode = REFLINK_AUTO;
+   x->dereference = DEREF_NEVER;
+   x->unlink_dest_before_opening = false;
+   x->unlink_dest_after_failed_open = false;
+   x->hard_link = false;
+   x->interactive = I_UNSPECIFIED;
+   x->move_mode = true;
+   x->install_mode = false;
+   x->one_file_system = false;
+   x->preserve_ownership = true;
+@@ -262,20 +273,25 @@
+       fputs (_("\
+ Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.\n\
+ "), stdout);
+ 
+       emit_mandatory_arg_note ();
+ 
+       fputs (_("\
+       --backup[=CONTROL]       make a backup of each existing destination file\
+ \n\
+   -b                           like --backup but does not accept an argument\n\
++  -c --crc[=x]                 check whether copy was successfull with checksum comparison\n\
++                               x: use (fresh) checksum stored in xattr or if not present,\n\
++                               store checksum in xattr of src and des\n\
++                               See also tool <crcsum> in same secure copy package\n\
++                               implies --preserve=xattr\n\
+ "), stdout);
+       fputs (_("\
+       --debug                  explain how a file is copied.  Implies -v\n\
+ "), stdout);
+       fputs (_("\
+   -f, --force                  do not prompt before overwriting\n\
+   -i, --interactive            prompt before overwrite\n\
+   -n, --no-clobber             do not overwrite an existing file\n\
+ If you specify more than one of -i, -f, -n, only the final one takes effect.\n\
+ "), stdout);
+@@ -330,30 +346,60 @@
+   bindtextdomain (PACKAGE, LOCALEDIR);
+   textdomain (PACKAGE);
+ 
+   atexit (close_stdin);
+ 
+   cp_option_init (&x);
+ 
+   /* Try to disable the ability to unlink a directory.  */
+   priv_set_remove_linkdir ();
+ 
+-  while ((c = getopt_long (argc, argv, "bfint:uvS:TZ", long_options, NULL))
++  /* HIJN */
++  while ((c = getopt_long (argc, argv, "bc::fint:uvS:TZ", long_options, NULL))
+          != -1)
+     {
+       switch (c)
+         {
+         case 'b':
+           make_backups = true;
+           if (optarg)
+             version_control_string = optarg;
+           break;
++
++        /* HIJN */
++        case 'c':
++          if (optarg)
++          {
++            if ( strcmp( optarg, "x") == 0 )
++            {
++              x.crc_with_xattr = true;
++              x.crc = false;
++
++              // will this stick if --no-preserve=xattr?
++              x.preserve_mode = true;
++              x.preserve_timestamps = true;
++              x.preserve_ownership = true;
++              x.preserve_links = true;
++              x.explicit_no_preserve_mode = false;
++              if (selinux_enabled)
++                x.preserve_security_context = true;
++              x.preserve_xattr = true;
++            }
++          }
++          else
++          {
++            x.crc = true;
++            x.crc_with_xattr = false;
++          }
++          break;
++        /* END HIJN */
++
+         case 'f':
+           x.interactive = I_ALWAYS_YES;
+           break;
+         case 'i':
+           x.interactive = I_ASK_USER;
+           break;
+         case 'n':
+           x.interactive = I_ALWAYS_NO;
+           break;
+         case DEBUG_OPTION:

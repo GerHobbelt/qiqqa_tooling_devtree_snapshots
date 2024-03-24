@@ -1,0 +1,305 @@
+revision: 7397028
+title: Fotarto
+url: https://eo.wikipedia.org/wiki/Forto
+
+
+---
+
+En fiziko, forto estas io kio kaŭzas akcelon de libera korpo kun maso. La neta (aŭ rezulta) forto estas la vektora sumo de ĉiuj fortoj agantaj sur la korpon.
+Forto estas vektora grando difinita kiel la rejto (infinitezima tempa proporcio) da ŝanĝo de movokvanto induktita en libera korpo kaŭze de kampo aŭ interago kun alia korpo, kaj tiel havas asociitan direkton. La SI unito por forto estas neŭtono.
+
+
+== Historio ==
+
+Forto estis unue priskribita de Arkimedo.
+Galileo GALILEI uzis ruliĝantajn pilkojn por kontraŭpruvi la teorion de Aristotelo pri movado (1602 - 1607).
+Isaac NEWTON kreditiĝas por farado de la unua matematika difino de forto.
+Henry Cavendish helpe de tordopesilo mezuris la forton de gravito inter du masoj (1798).Antikvaj verkistoj, tiel kiel Aristotelo, mistaksis ke plejmultaj ordinaraj objektoj ne moviĝas pro tio ke ili estas stringitaj de kontraŭaj sed egalaj fortoj. Aristotelo kaj aliaj kredis ke estas la natura stato de objektoj sur tero esti senmovaj, kaj ke ili tendencas al tiu ĉi stato (fine kvietiĝi al seninterago), se lasitaj solaj. Tiu ĉi estis la kutima sperto de homoj kun ordinaraj kondiĉoj kie froto implikiĝis; do la ideo de NEWTON ke nekontraŭitaj fortoj nature produktis konstantan pliiĝon de rapido, ne estis memklara. Frotaj fortoj, agantaj kontraŭe inter si, historie tendencis kaŝi la ĝustan matematikan rilaton inter simplaj nekontraŭitaj fortoj kaj movado.
+La ĝusta konduto por nekontraŭita forto unue estis malkovrita de Galilejo dum laborado kun gravito, kvankam ne estis ĝis NEWTON ke gravito vidiĝis simple kiel produktado de unu speco de nekontraŭita "forto". NEWTON ĝeneraligis la konduto de konstanta akcelado aŭ konstanta pliiĝo de movokvanto, al fortoj aliaj ol gravito. Li asertis en lia dua leĝo de movado ke tiu ĉi konduto ke tiu ĉi konduto de konstanta pliiĝo de movokvanto estas karakteriza de ĉiuj fortoj -- inkludantaj la "fortoj" de ordinara sperto, tiel kiel tensio au streso produktita de premado de fingro kontraŭ objekto.
+
+
+== Ekzemploj ==
+Peza objekto sur tablo estas tirata supren al la planko de la interago de ĝia maso kaj la maso de la tero per la forto de gravito. Samtempe, la tablo forpuŝas la malsupran forton kun egala forto, rezulte en nula neta forto, kaj nenia movado.
+Peza objekto sur tablo estas milde puŝita laŭ flanka direkto per fingro. Tamen, ĝi ne movas flanken, ĉar la forto de la fingro sur la objekto nun estas kontraŭita de la nova (statika) forto, generita inter la objekto kaj la tabla surfaco. Tiu ĉi nove generita forto ekzakte egalas la forton produktitan sur la objekto de la fingro, kaj refoje nenia movado okazas. La nova forto pliiĝas aŭ malpliiĝas aŭtomate. Se la forto de la fingro pliiĝas (ĝis valoro), la kontraŭa alflanka forto de statika froto PLIIĜAS ekzakte al valoro de perfekta kontraŭeco kaj ĉesigas ĉian movadon.
+Peza objekto sur tablo estas puŝita de fingro sufiĉe intense ke la froto rompiĝas, kaj la objekto komencas gliti trans la surfaco je konstanta rejto (tempa proporcio). Ŝajnas al naiva observanto ke aplikado de konstanta forto produktas konstanan rapidon. Tamen tiu ĉi konduto efektive estas produktita de variaj kaj kontraŭaj fortoj de froto aŭ rezisto.
+Peza objekto atingas la randon de la tablo kaj falas. Nun la objekto, elmetita al la konstanta forto de sia pezo, sed liberita de reaga forto de la tablo, akiras rapidon proporcie al la kvadrato del la tempo de falo, kaj tiel sia rejto de akiro de movokvanto kaj rapido estas konstanta. Tiuj ĉi faktoj unue estis malkovrita de Galilejo.
+
+
+== Kvanta difino ==
+Newton estis la unua matematike difini forton kiel la rejto de ŝanĝo de movokvanto: 
+  
+    
+      
+        
+          F
+        
+        =
+        d
+        p
+        
+          /
+        
+        d
+        t
+      
+    
+     
+  . Tie ĉi NEWTON provizis pli utilan difinon de forto kaj plu asertis ke la fortoj de ordinara sperto produktas movadojn de speco kiu kutime ne vidiĝas en ordinaraj spertoj. (Tiuj spertoj kutime estas malpurigitaj de kaŝitaj kaj ŝanĝantaj frotaj fortoj, kiel en la supraj ekzemploj.) La ĝusta kaj simpla rilata leĝo inter forto kaj movado estas historie vidita kiel la "dua leĝo de NEWTON":
+
+  
+    
+      
+        
+          F
+        
+        =
+        
+          
+            
+              d
+              
+                p
+              
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        
+          
+            
+              d
+              (
+              m
+              
+                v
+              
+              )
+            
+            
+              d
+              t
+            
+          
+        
+      
+    
+     
+  .La kvanto mv nomiĝas movokvanto. Tiel, la neta forto sur partiklo estas egala al la rejto de ŝanĝo de movokvanto de la partiklo dum tempo. Tipe la maso m estas konstanta dum tempo , kaj la leĝo de NEWTON povas esti skribita en pli simpla formo
+
+  
+    
+      
+        
+          F
+        
+        =
+        
+          
+            
+              d
+              
+                p
+              
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        
+          
+            
+              d
+              (
+              m
+              
+                v
+              
+              )
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        m
+        
+          
+            
+              d
+              (
+              
+                v
+              
+              )
+            
+            
+              d
+              t
+            
+          
+        
+        =
+        m
+        
+          a
+        
+      
+    
+     
+  kie 
+  
+    
+      
+        
+          a
+        
+        =
+        
+          d
+          
+            v
+          
+        
+        
+          /
+        
+        
+          d
+          t
+        
+      
+    
+     
+   estas la akcelo. Ne estas ĉiam la kazo ke m estas sendependa de t. Ekzemple la maso de raketo malpliiĝas dum ĝia propulsenzo estas elĵetita. Sub tia cirkonstanco, al supra ekvacio (
+  
+    
+      
+        
+          F
+        
+        =
+        m
+        
+          a
+        
+      
+    
+     
+  ) estas malĝusta, kaj la plena formo de la dua leĝo de NEWTON devas esti uzata.
+La rilato 
+  
+    
+      
+        
+          F
+        
+        =
+        m
+        
+          a
+        
+      
+    
+     
+   ankaŭ malsukcesas dum rapido alproksimiĝas al la rapido de lumo, laŭ la Speciala Teorio de Relativeco, kvankam la difino 
+  
+    
+      
+        
+          F
+        
+        =
+        d
+        p
+        
+          /
+        
+        d
+        t
+      
+    
+     
+   ankoraŭ validas.
+Ĉar movokvanto estas vektoro, forto, kiu estas ĝia tempa derivaĵo, estas ankaŭ vektoro -- ĝi havas longon kaj direkton. Vektoroj (kaj tiel fortoj) adiciiĝas per komponantoj. Kiam du fortoj agas sur objekto, la rezulta forto, la "rezultanto" estas la vektora sumo de la originalaj fortoj. Tio ĉi nomiĝas la principo de supermetado. La longo de la rezultanto varias de la diferenco de la longoj al la sumo de longoj, depende de la angulo inter iliaj linioj de ago. Kiel kun ĉia vektora adicio, tiu ĉi rezultas en paralelograma regulo: la adicio de du vektoroj reprezentitaj de la lateroj de la paralelogramo donas ekvivalentan rezultanto, kiu havas egalan longon kaj direkton al la transverso de la paralelogramo. Se la du fortoj estas egalaj je longo sed kontraŭaj je direkto, la rezultanto estas nulo. Tiu ĉi kondiĉo nomiĝas statika ekvilibro, kun la rezulto ke la objekto restas senmova aŭ moviĝas kun konstanta rapido. Statika ekvilibro estas matematike ekvivalenta al la movado anticipata kun egalaj sed kontraŭe direktitaj akceloj (nature ĝi estas la sama movado kun egalaj sed kontraŭe direktitaj akceladoj (nature ĝi estas la sama movado kiel kun nenia akcelo).
+Krom adiciado, fortoj povas esti partigitaj (aŭ rezoluciitaj). Ekzemple, horizonta forto almontranta nordorienten povas esti partigitaj en du fortojn, unu almontranta norden kaj unu almontranta orienten. Sumado de tiujn komponantaj fortoj uzante vektoran adicon donas la originalan forton. Fort-vektoroj povas ankaŭ esti tri-dimensiaj, kun la tria (vertikala) komponanto orta al la du horizontaj komponantoj.
+En plejmultaj klarigoj de meĥaniko, forto estas kutime difinita nur implicite, en termoj de la ekvacioj, kiuj priskribas ĝian konduton. Kelkaj fizikistoj, filozofoj, kaj matematikistoj, tiel kiel Ernst Mach, Clifford Truesdell, kaj Walter Noll, trovis tion ĉi problema kaj serĉis por pli eksplicita difino de forto.
+
+
+== Forto kaj potenciala energio ==
+Anstataŭ forto, matematike ekvivalenta koncepto, kampo de potenciala energio, povas esti uzata laŭvole. Ekzemple, la gravita forto aganta sur korpo povas vidiĝi kiel la ago de la gravita kampo kiu ĉeestas ĉe la loko de la korpo. Redirante la matematika difino de energio (tra la difino de laboro), potencialo U(r) difiniĝas kiel la kampo kies gradiento estas egala kaj kontraŭa al la forto ĉe ĉiu punkto:
+
+  
+    
+      
+        
+          
+            F
+          
+        
+        =
+        −
+        ∇
+        U
+      
+    
+     
+  Fortoj povas esti klasita kiel konservativaj aŭ nekonservativaj. Konservativaj fortoj estas ekvivalentaj al la negativa gradiento de potencialo, kaj inkludas graviton, elektromagnetan forton, kaj risortan forton. Nekonservativaj fortoj inkludas froton, kaj la fortoj de plastika deformiĝo. Tamen, por iu ajn sufiĉe detalita priskribo, ĉiuj fortoj estas konservativaj.
+
+
+== Specoj de fortoj ==
+Multaj fortoj ekzistas: kulomba forto (la forto inter elektra ŝargo), gravito (la forto inter masoj), magneta forto - lorenca forto, ampera forto (la forto inter movantaj elektraj ŝargoj), frotaj fortoj, centrifugaj fortoj, ekfrapaj fortoj, risortaj fortoj, streĉaj fortoj, kemiaj fortoj, kaj kontaktaj fortoj por nomi kelkaj.
+Nur kvar fundamentaj fortoj estas sciataj ekzisti en naturo: forta nuklea forto, elektromagneta forto, malforta nuklea forto, kaj gravita forto. Ĉiuj aliaj fortoj povas esti reduktiaj al tiuj ĉi fundamentaj interagoj.
+La moderna kvantummekanika vidaĵo de la unuaj tri fundamentaj fortoj (ĉiuj aliaj ol gravito) estas ke partikloj de materio (fermionoj) ne rekte interagas inter si mem sed anstataŭe per interŝanĝo de virtualaj partikloj (bosonoj) (kiel, ekzemple, virtualaj fotonoj kaze de interagoj de elektraj ŝargoj). Laŭ ĝenerala relativeco, gravito rezultas de la kurbeco de spactempo.
+Laŭ Francisko Azorín Forto estas Ĉiu kaŭzo kapabla ŝanĝi la movan staton de korpo. Li indikas etimologion el latina fortia (forto), kaj li listigas fortotipojn kaj aldonas teknikajn terminojn kiaj inerta forto, molekula forto, alcentra forto, decentra forto, konstanta forto, variema forto, komponanta forto, rezultanta forto, premforto, tiradoforto, poligono de fortoj, kampo de fortoj, momanto de fortoj, fortolinio, fortoparo, kaj en arkitekturo kontraŭforto por forto kontraŭstaranta alian; pilastro, masonaĵo starigita kontraŭ puŝon de alia konstruelemento.
+
+
+== Unuoj de mezurado ==
+La SI unitoj uzitaj por mezuri forto estas la neŭtono (simbolo N), kiu estas ekvivalenta al kg·m·s−2.
+La rilato
+
+F=m·akie F estas la forto, (mezurita laŭ neŭtonoj en SI)
+
+m estas la maso, (mezurita laŭ kilogramoj en SI)
+a estas la akcelo, (mezurita laŭ metro je kvadrata sekundo en SI)povas uziĝi kun iuj ajn konsekvencaj unitoj (SI aŭ CGS). Se tiuj ĉi unitoj ne estas konsekvencaj, pli ĝenerala formo, F=k·m·a, estas bezonata, kie la konstanto k estas konverta faktoro dependa de la unitoj uzitaj.
+Ekzemple, en brit-imperiaj inĝenieraj unitoj, F mezuriĝas en fort-funtoj aŭ lbf, m en mas-funtoj aŭ lb, kaj a en futoj je kvadrataj sekundoj. En tiu ĉi aparta sistemo, oni bezonas uzi la pli ĝenerala formo supren, kutime skribita F=m·a/gc kun la konstano kutime uzita por tiu ĉi celo gc = 32.174 lb·ft/(lbf·s2) egala al la inverso de la k supren.
+Samkiel la kilogramo, la funto estas familiare uzita kaj kiel unito de maso kaj kiel unito de forto. 1 lbf estas la forto postulita por akceli unu 1 lb ĉe 32.174 futoj per kvadrata sekundo, de tio ke 32.174 futoj per kvadrata sekundo estas la norma akcelo pro tera gravito.
+Ankoraŭ unu mezurunuo de forto estas forto de Planck.
+
+
+== Vidu ankaŭ ==
+Forto (virto)
+Inercia forto
+Konserveca forto
+Laboro de forto
+
+
+== Notoj ==
+
+
+== Bibliografio ==
+Corben, H.C.; Philip Stehle (1994). Classical Mechanics. New York: Dover publications. pp. 28–31. ISBN 0-486-68063-0.
+Cutnell, John D.; Johnson, Kenneth W. (2003). Physics, Sixth Edition. Hoboken, New Jersey: John Wiley & Sons Inc. ISBN 0-471-15183-1.
+Feynman, Richard P.; Leighton; Sands, Matthew (2010). The Feynman lectures on physics. Vol. I: Mainly mechanics, radiation and heat (New millennium ed.). New York: BasicBooks. ISBN 978-0-465-02493-3.
+Feynman, Richard P.; Leighton, Robert B.; Sands, Matthew (2010). The Feynman lectures on physics. Vol. II: Mainly electromagnetism and matter (New millennium ed.). New York: BasicBooks. ISBN 978-0-465-02494-0.
+Halliday, David; Resnick, Robert; Krane, Kenneth S. (2001). Physics v. 1. New York: John Wiley & Sons. ISBN 0-471-32057-9.
+Kleppner, Daniel; Kolenkow, Robert J. (2010). An introduction to mechanics (3. print ed.). Cambridge: Cambridge University Press. ISBN 0-521-19821-6.
+Parker, Sybil (1993). "force". Encyclopedia of Physics. Ohio: McGraw-Hill. p. 107,. ISBN 0-07-051400-3.
+Sears F., Zemansky M. & Young H. (1982). University Physics. Reading, Massachusetts: Addison-Wesley. ISBN 0-201-07199-1.
+Serway, Raymond A. (2003). Physics for Scientists and Engineers. Philadelphia: Saunders College Publishing. ISBN 0-534-40842-7.
+Tipler, Paul (2004). Physics for Scientists and Engineers: Mechanics, Oscillations and Waves, Thermodynamics (5th ed.). W. H. Freeman. ISBN 0-7167-0809-4.
+Verma, H.C. (2004). Concepts of Physics Vol 1. (2004 Reprint ed.). Bharti Bhavan. ISBN 81-7709-187-5.
+
+
+== Eksteraj ligiloj ==
+Filemto pri la tri leĝoj de Newton Arkivigite je 2008-04-11 per la retarkivo Wayback Machine fare de Walter Lewin el MIT OpenCourseWare
+Java simulaĵo pri vektora aldono de fortoj
+Forto kiel influo sur io kiu ŝanĝas formon aŭ movon

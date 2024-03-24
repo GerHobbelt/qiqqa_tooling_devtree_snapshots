@@ -1,0 +1,60 @@
+revision: 21654058
+title: Saavutettavuus
+url: https://fi.wikipedia.org/wiki/Saavutettavuus
+
+
+---
+
+Saavutettavuus on esteettömyyttä digitaalisessa ympäristössä. Puhekielessä käsitteitä saavutettavuus ja esteettömyys saatetaan käyttää toistensa synonyymeina, vaikka ne joidenkin mielestä tarkoittavat eri asioita.Saavutettavuuteen liittyy Euroopan unionin saavutettavuusdirektiivi (Euroopan parlamentin ja neuvoston direktiivi (2016/2102) julkisen sektorin elinten verkkosivustojen ja mobiilisovellusten saavutettavuudesta), jossa viitataan useita kertoja eurooppalaiseen standardiin EN 301 549, jossa puolestaan viitataan kansainvälisen WCAG-ohjeistuksen kriteeristöön.Saavutettavuus liittyy osallistumiseen useisiin aktiviteetteihin kuten työhön ja palveluiden, tuotteiden ja informaation käyttöön. Teknologian ominaisuuksilla voi olla käyttöä laajemminkin kuten tietokoneen käyttö liikenteessä puheohjatusti.Saavutettavuus lyhennetään toisinaan A11y ("a", 11 kirjainta ja "y", englannin kielen sanasta accessibility) web-sivujen kehityksessä.
+
+
+== EU:n saavutettavuusdirektiivi ==
+
+
+=== Voimaantulo ===
+23.9.2018 ja sen jälkeen julkaistujen julkisen sektorin elinten verkkosivustojen pitää olla direktiivin vaatimusten mukaisia 23.9.2019 mennessä.
+Ennen 23.9.2018 julkaistujen verkkosivustojen pitää olla direktiivin mukaisia 23.9.2020 mennessä.
+Julkisen sektorin elinten mobiilisovellusten osalta määräpäivä on 23.6.2021.
+Suomessa viranomaisten ja julkisoikeudellisten laitosten intranet-sivustojen pitää täyttää nämä vaatimukset, jos sivusto julkaistaan 23.9.2019 tai sen jälkeen tai vanhoja uudistetaan perusteellisesti tuon jälkeen.
+
+
+== Saavutettavuus käytännössä ==
+Verkkosivujen saavutettavuuden suunnitteluun on olemassa ohjeita ja muistilistoja, joista tärkeimpinä voitaneen pitää W3C:n (World Wide Web Consortium) WAI-aloitteen (Web Accessibility Initiative) ja WCAG:n (Web Content Accessibility Guidelines) suosituksia. 
+Verkkosivujen saavutettavuuden kannalta on tärkeää, että sivu noudattaa HTML-suosituksia (Hypertext Markup Language -suositusta): kun sivusto on tehty teknisesti hyvin ja sen sisällön rakenne on merkattu oikein, sivustoa voi käyttää erilaisilla päätelaitteilla ja apuvälineillä. Kaikki verkkosivujen käyttäjät hyötyvät saavutettavuudesta, mutta joillekin se on käytön edellytys, kun toisille se on enempi mukavuustekijä. Saavutettavuuteen liittyy läheisesti Design for All -periaate. 
+WCAG-ohjeet voidaan jakaa neljään periaatteeseen:
+havainnoitavuus: sisältö on voitava havainnoida jollakin tavalla käyttäen yhtä tai useampaa aistia
+käytettävyys: käyttäjän on voitava ohjata käyttöliittymän elementtejä (esimerkiksi nappeja on voitava valita jollakin tavalla, hiirellä, näppäimistöllä, äänikomennolla tai vastaavalla)
+ymmärrettävyys: sisällön on oltava ymmärrettävää käyttäjille
+vankkuus: sisällössä on käytettävä standardeja, jotka toimivat useilla eri selaimilla nyt ja tulevaisuudessa
+
+
+=== Esimerkkejä saavutettavuudesta ===
+Sokeat voivat käyttää tietokonetta esimerkiksi ruudunlukuohjelman avulla tai erityisellä laitteella (pistenäyttö), joka muuttaa tekstin pistekirjoitukseksi. Jos esimerkiksi verkkosivun rakennetta ei ole merkattu oikein, ruudunlukuohjelman käyttäjällä voi olla hankalaa tai mahdotonta tulkita sisältöä oikein. Esimerkiksi kuvilla pitäisi aina olla tarjolla tekstivastine , eli vaihtoehtoinen esitystapa (ns. alt-attribuutti), jonka voi kuunnella ruudunlukuohjelmalla tai lukea pistekirjoituksella: Tarkoitus on että kuvan oleellinen tietosisältö välittyy tekstin kautta niille, jotka eivät näe kuvaa. Verkkosivujen tekijöiden tulisikin aina määritellä lisäämilleen kuville tekstivastine. 
+Heikkonäköiset ihmiset saattavat käyttää tietokonetta suurella tekstikoolla tai ruudunsuurennusohjelmaa käyttäen. Myös verkkosivujen on toimittava näissä tilanteissa. Jos teksti ei rivity uudelleen käyttäjän näytön asettamiin rajoihin, sen lukeminen ja oikealla rivillä pysyminen voi olla hankalaa, kun sivua on vieritettävä paitsi ylös ja alas, myös vasemmalta oikealle. 
+Joillakin liikuntavammaisilla saattaa olla vaikeaa käyttää tavallista näppäimistöä ja hiirtä. Sivujen täytyy toimia myös erilaisilla ohjauslaitteilla ja vaikkapa puheohjauksella. 
+Esimerkiksi hiiren käyttö edellyttää paitsi näkemistä, myös hienomotoriikkaa. Verkkosivujen on siis oltava käytettävissä myös pelkällä näppäimistöllä. Myös tilanteessa, jossa hiiri lakkaa toimimasta tai hiirikäsi vaivaa, olisi hyvä voida käyttää konetta pelkästään näppäimistön kautta. 
+Niille käyttäjille, jotka eivät kuule (tai eivät voi tietyssä tilanteessa kuunnella) pitäisi esimerkiksi tarjota tekstitys videoissa  ja tekstimuotoinen käsikirjoitus äänitallenteille. 
+Kognitiivisista (ajatteluun ja ymmärtämiseen liittyvistä) ongelmista kärsivät (esim. oppimisvaikeudet) tai vierasta kieltä vasta opettelevat tarvitsevat selkokielisiä sivuja. Ymmärtämistä voi myös helpottaa tarjoamalla asiaa selventäviä kuvia, kuvaajia ja luetteloita. 
+
+
+== Videopelit ==
+Jotkin videopelit sisältävät saavutettavuusasetuksia ohjaukseen, näyttöön ja ääniin liittyen.Lisäksi on kehitetty adaptiivisia ohjaimia pelikonsoleihin.
+
+
+== Katso myös ==
+Design for all
+Käytettävyys
+Saatavuus
+Vammaisuuden sosiaalinen malli
+
+
+== Lähteet ==
+
+
+== Aiheesta muualla ==
+
+Web Acessibility Initiative
+Web Content Accessibility Guidelines (WCAG)
+Saavutettavuudesta suomeksi
+Saavutettavuusvaatimukset.fi - Tietoa digipalvelulain asettamien saavutettavuusvaatimusten täyttämiseksi
+WWW-sivujen käytettävyys ja esteettömyys – Luento 10 (mit.jyu.fi)

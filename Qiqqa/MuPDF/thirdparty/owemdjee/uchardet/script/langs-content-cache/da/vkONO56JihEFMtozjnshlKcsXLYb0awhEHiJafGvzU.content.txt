@@ -1,0 +1,81 @@
+revision: 11383533
+title: computer
+url: https://da.wikipedia.org/wiki/Computer
+
+
+---
+
+En computer er en maskine, der kan programmeres til automatisk at udføre nogle talmæssige eller logiske beregninger.
+
+
+== Ordet computer ==
+Professor Peter Naur, der blev tilbudt stillingen som den første danske professor i Datalogi, spurgte på et møde, om der var nogen, der havde et forslag til et godt dansk ord for det engelske computer. Per Brinch Hansen kom frem til datamat på basis af laundromat/vascomat i et nærliggende møntvaskeri.
+Et andet ældre ord er arbejdsstation, som er en computer, som løser en eller flere specialiserede arbejdsopgaver. I dag er udtrykket forældet, men det anvendes dog stadig om fritstående kraftige pc'er.
+På dansk benyttes også betegnelsen "edb-maskine", der står for elektronisk databehandling. Selve udtrykket er dog på vej ud til fordel for computer eller pc, men termen "edb" benyttes fortsat bredt f.eks. på skoler som "edb-lokale" eller i tilbud om undervisning i "edb".
+Frem til opfindelsen af datamaskinen blev ordet computer på engelsk benyttet om personer, som regel kvinder, der foretog matematiske beregninger, enten med mekanisk regnemaskine eller pen og papir, indtil de blev overflødige, da datamaskinen gjorde sit indtog.
+
+
+== Computerens historie ==
+Tanken om programstyrede regnemaskiner har rødder tilbage til det industrielle gennembrud i England omkring 1800. Den fremgår f.eks. af Jacquards mønstervæv og Charles Babbages udviklingsarbejde. Hulkortmaskinerne var også programmerbare. Herman Hollerith/IBM's maskiner blev programmeret med koblingstavler, mens Powers benyttede connectionboxe.
+I slutningen af 1920'erne dukkede de første naturvidenskabelige hulkortanvendelser op. De spillede ikke den store mængdemæssige rolle, men var vigtige for den fortsatte tekniske udvikling. Der var tale om analytisk statistik og udarbejdelse af astronomiske tabeller. Siden fulgte en lang række andre opgaver. Disse stillede krav om maskiner med stadig større programmer. Connectionbox'enes manglende fleksibilitet gjorde dem meget uegnede til dette formål, og alle naturvidenskabelige beregninger blev derfor udført på koblingstavleprogrammerede maskiner.
+
+
+== De tidlige computere (maskiner) 1949-1959 ==
+
+De første computere blev bygget i Tyskland, England og USA mellem 1940 og 1950 (f.eks. Z3, ENIAC, Colossus), men deres forhistorie går tilbage til regnemaskineprojekter, der i 1930'erne blev udviklet i forskellige forskningsmiljøer. Under anden verdenskrig blev en række regnemaskineprojekter i England, Rusland og USA anset for krigsvigtige og derfor statsfinansierede. Efter krigen fortsatte den offentlige finansiering af videnskabelige forsknings- og udviklingsprojekter, og indledningen af den kolde krig satte yderligere fokus på udvikling af computere til militære formål, f.eks. SAGE til overvågning af USAs luftrum, en udvikling der blev yderligere forstærket efter udbrudet af koreakrigen. 
+Sideløbende med den militære forskning indledtes fra starten af 1950'erne i Tyskland, England og især USA udvikling af computere på kommerciel basis, både med henblik på salg til forskning (Z4, UNIVAC I, IBM 701, Ferranti Mark I) og med henblik på anvendelse i private virksomheder (IBM 650, IBM 704). Mod slutningen af 1950'erne lancerede en lang række virksomheder computere, og industrien kom gradvis til at dominere udviklingen af maskinerne, mens forskningen koncentreredes om anvendelser og software.
+I denne periode blev batch-kørsel den helt dominerende måde at anvende computere på, og den udbredte holdning var, at det var mest effektivt med få, meget store computere, som anvendtes til afvikling af programmer ét ad gangen. Interaktiv anvendelse af computere fandtes kun i nogle få, specialiserede militære anvendelser og i ganske få forskningsmiljøer (f.eks. Lincoln Lab, hvor TX-0 og TX-2 udvikledes til interaktivt brug).
+
+
+== Om computeren ==
+
+En computer er en (normalt elektronisk) maskine som bearbejder data, informationer, som den modtager fra brugeren eller programmer. Hvis man går helt ned og kigger i cpu'en, består den kun af 0- og 1-taller (Bit). Den består grundlæggende af: Input-enhed, på dansk en indtastningsenhed eller forskellige indlæsningsenheder, en bearbejdningsenhed, processoren (CPU) med hukommelse (ram) til at gemme oplysningerne midlertidigt under bearbejdelsen af dem, en harddisk til opbevaring af styresystem, computerprogrammer og data f.eks. dokumenter efter at computeren er slukket samt en enhed til visning af resultatet (kan f.eks. være en skærm eller en printer).
+Computere kan deles op i 2 hovedområder:
+
+Personlige computere (som regel kun en enkelt skærm med kabinet, der indeholder CPU – regneenheden, hukommelse, harddisk og input (modtage info udefra) og output (sende info til f.eks. skærm, printer, harddisk, brænde cd etc.).
+Store computersystemer (for håndtering af store mængder data i firmaer/organisationer). Herunder hører også server og mainframe).
+
+
+=== Store computersystemer ===
+De store computersystemer har stor hukommelse og hurtige regneenheder, processorer. Her bearbejdes informationer som ville tage lang tid på en personlig computer.
+En anden vigtig forskel er, at servere og især mainframes er designede til at være tilgængelige hele tiden. Det betyder blandt andet at hardware og software kan opgraderes, mens systemet kører. Der vil også ofte være redundante komponenter som f.eks. 2 strømforsyninger i maskinen.
+Navne der bliver brugt om disse store computere, er:
+
+Mainframe
+Server
+SupercomputerDisse computere bruges f.eks. til bearbejdning af store datamængder:
+
+Banksystemer
+Cad-tegning
+grafiske processer med tekst og billeder (desktoppublishing, dtp)
+musikkomponering
+Statistik
+videoredigering
+
+
+== Se også ==
+Panini - fra 5. århundrede f.Kr. - hans grammatiske regler kan opfattes som verdens første (skriftdrevne) computer.
+Internet
+klyngecomputer
+indlejret system
+PC
+datanet
+datalogi
+Førstegenerationsdatamat
+Andengenerationsdatamat
+Tredjegenerationsdatamat
+Fjerdegenerationsdatamat
+Linux
+Microsoft
+mikrocontroller
+Casemodding
+Antikythera-mekanismen – en skotøjsæske-stor, kompleks, bærbar analog astronomi-computer fra antikken.
+
+
+== Kilder og eksterne henvisninger ==
+
+IBM
+"Chaos in computer performance", Hugues Berry fra det franske forskningsinstitut for information og automation, INRIA. (pdf)
+Terminologiudvalget
+Kap.3, s.42: Learning from the masters 1963-66 i: A Programmer's Story : The Life of a Computer Pioneer. – 2004 / Per Brinch Hansen. 2004 (tilgængelig i åben digital udgave på Brinch Hansens hjemmeside)
+Dansk Datahistorisk Forening

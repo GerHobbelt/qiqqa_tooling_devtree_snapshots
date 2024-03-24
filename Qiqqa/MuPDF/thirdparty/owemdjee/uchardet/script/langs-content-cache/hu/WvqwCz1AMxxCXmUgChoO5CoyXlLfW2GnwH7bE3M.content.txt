@@ -1,0 +1,80 @@
+revision: 26256506
+title: "Tijdeman-t\xE9tel"
+url: https://hu.wikipedia.org/wiki/Tijdeman-t%C3%A9tel
+
+
+---
+
+A számelméletben a Tijdeman-tétel azt állítja, hogy véges sok egymás után következő hatványszám van, vagyis az 
+  
+    
+      
+        
+          y
+          
+            m
+          
+        
+        =
+        
+          x
+          
+            n
+          
+        
+        +
+        1
+      
+    
+     
+   exponenciális egyenlet megoldásszáma véges, ha n és m is nagyobb, mint 1.A tételt a holland Robert Tijdeman látta be 1976-ban a transzcendenciaelmélet Baker módszerével, ami minden x, y, m és n-re az exp exp exp exp 730 korlátot adta.A Tijdeman-tétel bizonyítása nyomán Preda Mihăilescu nekiállt belátni a Catalan-sejtést, amiből következik, hogy a Tijdeman-tétel egyenletének egyetlen megoldása van, a 9=8+1.A tételben fontos, hogy egymást követő hatványszámokról van szó. Az 
+  
+    
+      
+        
+          y
+          
+            m
+          
+        
+        =
+        
+          x
+          
+            n
+          
+        
+        +
+        k
+         
+      
+    
+     
+   egyenlet máig nyitott probléma; ez az általánosított Tijdeman-sejtés. Ez következne a Pillai-sejtésből (1931), ami azt állítja, hogy az 
+  
+    
+      
+        A
+        
+          y
+          
+            m
+          
+        
+        =
+        B
+        
+          x
+          
+            n
+          
+        
+        +
+        k
+      
+    
+     
+   egyenlet megoldásainak száma véges. A Pillai-sejtés pedig következne az abc-sejtésből.
+
+
+== Jegyzetek ==

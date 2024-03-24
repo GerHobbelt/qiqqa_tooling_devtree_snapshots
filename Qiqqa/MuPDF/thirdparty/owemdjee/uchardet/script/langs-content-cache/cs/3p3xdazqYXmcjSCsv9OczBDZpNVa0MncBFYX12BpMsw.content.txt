@@ -1,0 +1,60 @@
+revision: 21903381
+title: Avro Blue Steel
+url: https://cs.wikipedia.org/wiki/Avro_Blue_Steel
+
+
+---
+
+Blue Steel byla britská střela vzduch-země s jadernou hlavicí, poháněná raketovým motorem na kapalné pohonné hmoty. Byla vyvinuta v 50. letech 20. století jako zbraň pro britské bombardéry třídy V (Vickers Valiant, Avro Vulcan a Handley Page Victor).
+
+
+== Vývoj ==
+Střela Blue Steel byla vyvíjena na základě memoranda britského ministerstva obrany z 5. listopadu 1954. Podle memoranda měla protivzdušná obrana SSSR do roku 1960 dosáhnout takové účinnosti, že pravděpodobně dokáže britským bombardérům třídy V znemožnit útok na sovětské území pomocí jaderných pum svrhovaných volným pádem. Odpovědí byla střela poháněná raketovým motorem a schopná proniknout nad cíl vysokou rychlostí s účinnou jadernou (nebo vyvíjenou termojadernou) hlavicí při doletu alespoň 90 km. Tato vzdálenost měla umožnit bombardérům zůstat při útoku mimo dosah sovětské pozemní protivzdušné obrany.
+Vývoj zbraně (oficiálně nazývané „puma shazovaná s odstupem“) probíhal převážně v továrně Avro, za úzké spolupráce s předním britským výrobcem elektroniky, firmou Elliott. Vývoj se díky mnoha změnám v zadání táhl nepřiměřeně dlouho. Další potíže způsobil nedostatkem informací o skutečné velikosti a hmotnosti vyvíjené jaderné hlavice Green Bamboo a jejích uvažovaných termojaderných následovníků (série pum Granite), předaných konstruktérům firmy Avro. Neobvykle velký průměr trupu střely Blue Steel (122 cm) byl dán velikostí nálože Green Bamboo, kdy sama hlavice měla přibližně tvar koule o průměru 114 cm.
+
+Ve skutečnosti ale žádná hlavice Green Bamboo nebyla na střely Blue Steel nainstalována. Ve výzbroji je nahradily termojaderné hlavice Red Snow, v Británii produkovaná varianta původně americké pumy W-28, ráže 1,1 Mt TNT. Red Snow byla podstatně menší a lehčí, než s jakými rozměry se původně uvažovalo při návrhu rakety Blue Steel.
+Operační střely byly vybaveny pokročilým inerciálním navigačním systémem, který zaručoval zásah vybraného cíle s odchylkou nejvýše do 100 m. Protože jeho kvality vysoce převyšovaly možnosti standardního navigačního vybavení bombardérů Avro Vulcan a Handley Page Victor, osádky během letu využívaly inerciální systém střely pro kontrolu okamžité polohy vlastního letounu.
+Střela Blue Steel vypadala jako malé okřídlené bezpilotní letadlo. Předlohou byla vyvíjená stíhačka Saunders-Roe SR.53, zmenšená ve vhodném měřítku. Střela disponovala delta-křídlem s „useknutými“ konci a nevelkými kachními plochami na přídi. Pohon zajišťoval dvoukomorový raketový motor Armstrong Siddeley Stentor Mk. 101, využívající jako palivo kerosin (letecký petrolej) a okysličovadlo peroxid vodíku. Tato kombinace přinášela v operační službě závažný problém, když plnění střely palivem a okysličovadlem trvalo bezmála půl hodiny a představovalo značně riskantní činnost.
+Střela Blue Steel měla být odpalována z letounů pohybujících se vysokou rychlostí ve výšce cca 14 000 m. Po vypuštění tah první spalovací komory raketového motoru zajišťoval udržení střely na zvoleném kurzu a tzv. „polobalistické křivce“ při rychlosti Mach 1,5 ve stoupání do výšky 20 000 m a Mach 2,3 během klesání. Poblíž cíle se zažehla i druhá spalovací komora, která urychlila střelu na Mach 3. Nad cílem přestal raketový motor pracovat a střela pokračovala v letu prakticky kolmo dolů, až do exploze hlavice v předem zvolené výšce nad zemí (vzdušná exploze).
+První střela Blue Steel byla zařazena do služby až v roce 1963, tedy v době, kdy její koncepce již beznadějně zastarala. Nedostatečný dolet znamenal, že bombardéry třídy V byly na cestě k cíli velmi zranitelné sovětskými protiletadlovými raketami. Připravovala se nová verze, označovaná Blue Steel Mk.2, s náporovým motorem a podstatně zvětšeným doletem, ale její vývoj byl v roce 1960 zastaven a uvolněná kapacita věnována urychlenému dokončení programu zařazení první varianty střely Blue Steel do služby.
+Velká Británie zvažovala náhradu svých Blue Steel americkými AGM-48 Skybolt, střelami vzduch – země s plochou dráhou letu a mnohem vyšším doletem, připravovanými původně pro letouny USAF. I jejich vývoj ale byl, k velkému zklamání Britů, na konci roku 1962 zastaven.
+Střely Blue Steel zůstávaly v operační službě, navzdory svému nedostatečnému doletu a problematické využitelnosti v případném jaderném konfliktu. Neúspěchem skončil pokus modifikovat Blue Steel tak, aby je bylo možné vypouštět z výšky 300 m nad terénem. S nejvyšší prioritou běžela výroba pum WE.177B, které měly udržet letouny třídy V v roli strategických bombardérů, dokud nebudou do služby zařazeny mezikontinentální balistické rakety Polaris amerického původu, odpalované z ponorek. Bombardéry s pumami WE.177 měly pronikat do vzdušného prostoru nepřítele těsně nad zemí a svůj náklad odhazovat v prudkém stoupání po dosažení výšky 300 m. Pumy by pak letěly po balistické křivce na cíl, zatímco letouny by získaly čas uniknout z napadené oblasti. Takto krkolomným způsobem se nouzově hledala náhrada za modifikované střely Blue Steel, umožňující vypuštění v malé výšce nad zemí.
+Celkem bylo vyrobeno 48 plně operačních raket Blue Steel, k tomu ještě 5 „ostrých“ střel jako operační záloha. Navíc vznikly čtyři kusy Blue Steel bez jaderných hlavic, určené k nejrůznějším experimentům, a 16 nespecifikovaných cvičných střel. Avro Blue Steel byly oficiálně vyřazeny ze služby k 31. prosinci 1970. Od tohoto data Velká Británie využívá jako nosiče svých jaderných zbraní výhradně raketové střely odpalované z ponorek.
+
+
+== Specifikace Avro Blue Steel ==
+Délka: 10,7 m
+Rozpětí křídla: 4 m
+Průměr těla střely: 1,22 m
+Hmotnost při odpálení: 7270 kg
+Rychlost letu: Mach 1,5 – Mach 3
+Dostup: 21 500 m
+Maximální dolet : 240 km
+Navigační systém: inerciální
+Střední odchylka při zásahu cíle: do 100 m
+Bojová hlavice: termojaderná puma Red Snow o tritolovém ekvivalentu 1,1 Mt
+
+
+== Odkazy ==
+
+
+=== Reference ===
+V tomto článku byl použit překlad textu z článku Blue Steel (missile) na anglické Wikipedii.
+
+
+=== Literatura ===
+Official history:RAF Nuclear Deterrent Forces: Author: Wynne. pps 201. 456. ISBN 0-11-772833-0. Publisher: HMSO, 1994.
+
+
+=== Související články ===
+AGM-28 Hound Dog
+Raduga KS-1 Komet
+
+
+=== Externí odkazy ===
+ Obrázky, zvuky či videa k tématu Avro Blue Steel na Wikimedia Commons 
+Video of Blue Steel in operation[nedostupný zdroj]
+http://www.spaceuk.org/bsteel/bsteel.htm Archivováno 16. 11. 2012 na Wayback Machine.
+www.skomer.u-net.com/
+www.globalsecurity.org
+www.vectorsite.net

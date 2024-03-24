@@ -1,0 +1,50 @@
+revision: 21983458
+title: Robot
+url: https://no.wikipedia.org/wiki/Robot
+
+
+---
+
+En robot (fra tsjekkisk robota, «arbeid») er en mekanisk og programmert enhet som utfører oppgaver for å hjelpe mennesker. I likhet med interaktive dataprogrammer bygger funksjonen på tilbakekoplingsprinsippet: man får meldinger underveis som styrer hva som blir utført videre. De første robotene kunne gjøre små operasjoner, og helt fra starten var presisjon i gjentatte bevegelser viktig. Roboter i dag brukes i mange ulike sammenhenger. De kan løfte, flytte, sveise, fylle/tømme, kutte, dele, mate, laste og losse alt fra ørsmå ting til store, tunge deler som mennesker ikke kan flytte på.
+
+
+== Opprinnelse ==
+Ordet Robot i ble brukt første gang i sin moderne form av forfatteren Karel Čapek i 1920 i hans teaterstykke R.U.R : Rossum's Universal Robots og har sitt utspring i det tsjekkiske ordet robota som betyr arbeid. I praksis har det funnes roboter etter ordets moderne mening i flere hundre år.
+Den første kommersielle industriroboten, Unimate #001, ble brukt til metallstøpning fra 1959 i General Motors' fabrikker i New Jersey, USA, utviklet av oppfinneren George Devol i samarbeid med forretningsmannen Joseph Engelberger. To år senere ble den første masseproduserte robotarmen, Univate 1900-serien, introdusert, og i løpet av få ble flere hundre eksemplarer installert. I Norden var finske Nokia tidlig ute med å produsere roboter fra midten av 1960-årene.
+
+
+== Roboter i litteraturen ==
+Isaac Asimov definerte i 1942 robotikkens tre regler:
+
+En robot tillates ikke å skade et menneske eller passivt la et menneske komme til skade.
+En robot må følge ordre gitt av mennesker bortsett fra når slike ordre kommer i konflikt med første lov.
+En robot må verne om sin egen eksistens så fremt slikt vern ikke kommer i konflikt med første og andre lov.Disse reglene ble senere brukt i boka «I, Robot» (novellesamling) fra 1950, og danner grunnlaget for mye av de moderne robot-historiene innenfor science fiction. Reglene var også en inspirasjon til utformingen av den første industriroboten, Unimate #001.
+I science fiction har man flere undergrupper roboter. Androider brukes mest om menneskeliknende roboter, mens cyborg er en kombinasjon mellom et menneske og en mekanisk robot. I norsk litteratur og tv-film kjenner vi også til Biomaten fra Jon Bing og Tor Åge Bringsværds serie Blindpassasjer fra 1978. Biomaten er en rent organisk men programmerbar robot.
+
+
+== Roboter i industrien ==
+Industriroboter brukes idag i utstrakt grad i produksjonsprosesser som er rutinemessige og/eller farlige for mennesker. Utvikling av slike industriroboter startet parallelt med utviklinga av datamaskiner og i 1960-årene var de første tatt i bruk i produksjonslinjer. En pionerbedrift innen utvikling av roboter for overflatebehandling av produkter var det norske firmaet Trallfa som opprinnelig produserte bla. trillebårer.  Utviklingen innen kunstig intelligens gjør at roboter kan virke mer og mer menneskelige med hendhold til oppførsel, men at disse robotene etterlikner elementer av menneskelig oppførsel, og ikke de prosessene som ligger bak denne oppførselen. KUKA Roboter er en verdensledende produsent av industriroboter.
+En bomberobot er en fjernstyrt og førerløs robot som brukes til å undersøke, fjerne og uskadeliggjøre gjenstander som mistenkes for å kunne være bomber eller andre farlige emner.
+
+
+== Intelligente roboter ==
+De nyeste robotprogrammene er blitt svært strømlinjeformede. Vi har fått plenklippere og støvsugere som rygger for hindringer, snur og går i en ny retning og går til energipåfylling ved behov – og faktisk kommer over hele arealet innen rimelig tid. Leketøysindustriens nye myke «kjæledyr» som krever kos, klapp og stell er en annen tillempning, men til nå har man vært forsiktig med å lage helt menneskelignende roboter.
+Moderne programmeringsteknikker fra kunstig intelligens og særlig maskinlæring brukes i dag til å utvikle roboter som kan operere stadig mer uavhengig og løse oppgaver som ellers ville forutsatt menneskelig intelligens.
+I teorien – og spesielt i sciencefictionlitteraturen- kan roboter til og med utvikle sin egen vilje, men en slik utvikling er så langt ikke observert. Sentralt i problemet med vilje og roboter er at intelligent oppførsel ikke henger sammen med egen fri vilje, en kan si at oppførselen – selv om den er intelligent – er deterministisk og mangler de tilfeldige eller kaotisk pregede valgene fra menneskelig oppførsel.
+
+
+== Nanoboter ==
+Nanoboter er svært små roboter som opererer basert på nanoteknologi.
+
+
+== Virtuelle roboter ==
+Virtuelle roboter er roboter som kun eksisterer som programmer kjørende i en datamaskin. Intelligente virtuelle roboter brukes f eks til å hel- eller halvautomatisere utvalgte steg i en arbeidsflyt, som rutinemessig innvilgelse av en byggetillatelse eller godkjenning av et mindre lån. Enkle virtuelle roboter kalles gjerne boter.
+
+
+== Referanser ==
+
+
+== Eksterne lenker ==
+(en) Robots – kategori av bilder, video eller lyd på Commons 
+(en) Robot – galleri av bilder, video eller lyd på Commons 
+ROBOTNOR - Norsk senter for avansert robotikk

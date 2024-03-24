@@ -1,0 +1,459 @@
+revision: 25818035
+title: "Jacobi-szimb\xF3lum"
+url: https://hu.wikipedia.org/wiki/Jacobi-szimb%C3%B3lum
+
+
+---
+
+A számelméletben a Jacobi-szimbólum a Legendre-szimbólum általánosítása.
+
+
+== Definíciója ==
+Ha P>2 páratlan szám, a hozzá relatív prím egész, akkor
+
+  
+    
+      
+        
+          (
+          
+            
+              a
+              P
+            
+          
+          )
+        
+        =
+        
+          
+            (
+            
+              
+                a
+                
+                  p
+                  
+                    1
+                  
+                
+              
+            
+            )
+          
+          
+            
+              α
+              
+                1
+              
+            
+          
+        
+        
+          
+            (
+            
+              
+                a
+                
+                  p
+                  
+                    2
+                  
+                
+              
+            
+            )
+          
+          
+            
+              α
+              
+                2
+              
+            
+          
+        
+        ⋯
+        
+          
+            (
+            
+              
+                a
+                
+                  p
+                  
+                    k
+                  
+                
+              
+            
+            )
+          
+          
+            
+              α
+              
+                k
+              
+            
+          
+        
+      
+    
+     
+  ahol 
+  
+    
+      
+        P
+        =
+        
+          p
+          
+            1
+          
+          
+            
+              α
+              
+                1
+              
+            
+          
+        
+        ⋯
+        
+          p
+          
+            k
+          
+          
+            
+              α
+              
+                k
+              
+            
+          
+        
+      
+    
+     
+   a prímhatványfelbontás.
+Ha a-nak és P-nek van 1-nél nagyobb közös osztója, akkor 
+  
+    
+      
+        
+          (
+          
+            
+              a
+              P
+            
+          
+          )
+        
+        =
+        0
+      
+    
+     
+  .
+
+
+== Tulajdonságai ==
+Ha 
+  
+    
+      
+        a
+        ≡
+        b
+        
+          
+          (
+          mod
+          
+          P
+          )
+        
+      
+    
+     
+  , akkor 
+  
+    
+      
+        
+          
+            (
+          
+        
+        
+          
+            a
+            P
+          
+        
+        
+          
+            )
+          
+        
+        =
+        
+          
+            (
+          
+        
+        
+          
+            b
+            P
+          
+        
+        
+          
+            )
+          
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          (
+          
+            
+              1
+              P
+            
+          
+          )
+        
+        =
+        1
+      
+    
+     
+  
+
+  
+    
+      
+        
+          
+            (
+          
+        
+        
+          
+            
+              a
+              b
+            
+            P
+          
+        
+        
+          
+            )
+          
+        
+        =
+        
+          
+            (
+          
+        
+        
+          
+            a
+            P
+          
+        
+        
+          
+            )
+          
+        
+        
+          
+            (
+          
+        
+        
+          
+            b
+            P
+          
+        
+        
+          
+            )
+          
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          
+            (
+          
+        
+        
+          
+            
+              −
+              1
+            
+            P
+          
+        
+        
+          
+            )
+          
+        
+        =
+        (
+        −
+        1
+        
+          )
+          
+            
+              
+                P
+                −
+                1
+              
+              2
+            
+          
+        
+      
+    
+     
+  
+
+  
+    
+      
+        
+          (
+          
+            
+              2
+              P
+            
+          
+          )
+        
+        =
+        (
+        −
+        1
+        
+          )
+          
+            
+              
+                
+                  P
+                  
+                    2
+                  
+                
+                −
+                1
+              
+              8
+            
+          
+        
+      
+    
+     
+  
+Ha P,Q relatív prím páratlan számok, akkor 
+  
+    
+      
+        
+          
+            (
+          
+        
+        
+          
+            P
+            Q
+          
+        
+        
+          
+            )
+          
+        
+        =
+        
+          
+            (
+          
+        
+        
+          
+            Q
+            P
+          
+        
+        
+          
+            )
+          
+        
+        (
+        −
+        1
+        
+          )
+          
+            
+              
+                (
+                P
+                −
+                1
+                )
+                (
+                Q
+                −
+                1
+                )
+              
+              4
+            
+          
+        
+      
+    
+     
+  
+
+
+== Források ==
+Algoritmusok - Márton Gyöngyvér (ms.sapientia.ro)

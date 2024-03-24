@@ -1,0 +1,62 @@
+revision: 21568425
+title: Kolibakteeri
+url: https://fi.wikipedia.org/wiki/Kolibakteeri
+
+
+---
+
+Kolibakteeri (Escherichia coli) on yksi niistä bakteerilajeista, jotka elävät tasalämpöisten eläinten (muun muassa nisäkkäiden ja lintujen) ruoansulatuskanavan alaosassa. 
+Escherichia coli on myös ihmisellä yleinen suolistobakteeri. Ihmisen päivittäisessä ulostemäärässä on tavallisesti 1011–1013 kolibakteeria. Jos pohjavedessä on kolibakteeria, se kertoo yleensä ulostesaastumisesta. Bakteeri on saanut tieteellisen nimensä löytäjänsä Theodor Escherichin mukaan. Se kuuluu enterobakteereihin.
+
+
+== Rakenne ==
+Kolibakteeri on sauvamainen noin kahden mikrometrin pituinen ja puolen mikrometrin levyinen. Sen soluseinä koostuu peptidoglykaaneista. Sen kaksinkertaisen solukalvon ulompi kerros on peptidoglykaanikerroksen ulkopuolella eli se on gram-negatiivinen bakteeri. Lisäksi se on fakultatiivisesti anaerobinen organismi ja luokitellaan ei-sisäitiöitä-ryhmään. Kolibakteerilla on noin 15 000 ribosomia, tuhat erilaista entsyymiä, noin kahden millimetrin mittainen rengasmainen DNA-molekyyli ja mahdollisesti plasmideja.
+
+
+== Genomi ==
+
+Kolibakteerin proteiineja koodaava haploidinen genomi on 4 639 221 eli noin 4,64 miljoonaa emästä pitkä, ja se koodaa 4 377 proteiinia. Ihmisessä oleva kolibakteerin versio O157:H7 sisältää noin 5,44 miljoonaa emästä, jotka koodaavat 5 416 proteiinia. Jos genomin pituudeksi oletetaan 4 miljoonaa emäsparia, genomi painaa 4,4×10−18 kg (4,4 attogrammaa), ja genomin pituus oikaistuna on 1,36 mm. Kromosomi on pitkä (noin 500 kertaa solun pituus) ja siksi voimakkaasti kiertynyt ja laskostunut.
+Kolibakteeri jakautuu suotuisissa lämpötilaoloissa kerran 20 minuutissa, ja hieman keskimääräisemmissä oloissa kerran 30 minuutiss. Näin kolibakteereja syntyisi jakautumisen kautta kaksi potenssiin 48 eli yli 280 biljoonaa kappaletta vuorokaudessa, mikäli ympäristö ei tätä rajoittaisi. Monesti jakautuminen on hitaampaa, esimerkiksi kerran 108 minuutissa.Joidenkin aiempien arvioiden mukaan olisi 4,64 miljoonan emäksen kolibakteerissa 4 300 geeniä, joista 180 liittyisi solun rakenteeseen, 650 liittyisi aineenvaihduntaan, 240 energia-aineenvaihduntaan, 530 geeniä toimisi DNA-jakautumisen ohjaajina, ja kuljettajaproteiinien geenejä olisi noin 240.
+
+
+== Bakteerin hyötykäyttö ==
+Talousveden puhdistamisen tarkkailussa ja jätteidenkäsittelyssä kolibakteeri on jo hyvin varhain valittu veden saastuneisuusasteen mittariksi. Pääasialliset syyt sen käyttöön ovat se, että ihmisulosteessa on paljon enemmän koliformisia bakteereita kuin patogeeneja (kuten lavantautia aiheuttava Salmonella typhii), koliformisia bakteereita on nopea ja edullinen analysoida sekä se, että kolibakteeri on tavallisesti vaaraton eli se ei voi ”karata käsistä” laboratoriossa ja tuottaa vahinkoa.
+Kolibakteeri on hyvin yleisesti käytetty bakteeri geenitekniikassa ja synteettisessä biologiassa. Bakteeriin voidaan helposti siirtää geenejä. Geenejä voidaan esimerkiksi monistaa liittämällä niitä kolibakteerin DNA:han, jolloin geeni monistuu samalla kun se jakautuu. Kolibakteereja voidaan käyttää myös proteiinin tuottamiseen: bakteeriin liitetään halutun proteiinin geeni, jolloin bakteeri alkaa tuottaa proteiinia.
+
+
+== Haitat ==
+Vaarattomuudestaan huolimatta kolibakteeri voi aiheuttaa tulehduksen, jos se pääsee leviämään ruoansulatuskanavasta muualle elimistöön. Tartunta tapahtuu usein saastuneiden käsien tai käytettyjen välineiden kautta. Yleisimmin kolibakteeri aiheuttaa infektion virtsaputkeen tai vatsaonteloon, mutta sairaalaoloissa se voi levitä esimerkiksi keuhkoihin. Infektio todennetaan laboratoriokokeissa bakteeriviljelyllä, joka tehdään infektioalueelta otetusta näytteestä (esimerkiksi virtsanäyte tai keuhkoista yskös- tai imulimanäyte). Kolibakteeri on kuitenkin hyvin herkkä antibiooteille, joten tulehdukset ovat helppohoitoisia.
+Suomessa on kuollut tästä huolimatta lapsia kolibakteeriin, ja moni on joutunut dialyysihoitoon tai munuaisten siirtoon.
+
+
+== EHEC ==
+Jotkin muunnokset bakteerista tuottavat myös toksiineja, kuten Shiga-toksiineja ja saattavat aiheuttaa ruokamyrkytyksen. Yksi suolistotulehduksia aiheuttavista kolibakteeri-ryhmistä on Enterohemorraaginen Escherichia coli -bakteeri eli EHEC-bakteeri, ja niistä on 2000-luvulla tullut yleinen ruokamyrkytysten aiheuttaja. EHEC on esimerkki rinnakkaisesta evoluutiosta, sillä eri Escherichia coli -kannat voivat itsenäisesti kehittyä EHEC-bakteeriksi.Pahimmillaan EHEC voi aiheuttaa voimakasta veriripulia, ja noin 10 prosentilla sairastuneista saattaa tulla vakava munuaisten toimintahäiriö, ureeminen oireyhtymä HUS (yleensä lapsilla). Se voi johtaa myös tromboottiseen trombosytopeeniseen purppuraan TTP (TTP tarkoittaa ihoverenvuotoa eli purppurana ilmenevää verenvuototaipumusta) (yleensä vanhuksilla). Tauti saattaa johtaa kuolemaan. EHEC leviää varsinkin jauhelihan ja pastöroimattoman maidon välityksellä, jolloin taudin alkuperä on yleensä nautakarjan suolisto. Tämä on yleistä länsimaissa muun muassa Pohjois-Amerikassa, jossa bakteeri on levinnyt huonosti kuumennettujen hampurilaisten tai muun pikaruoan välityksellä. Tätä vakavampaa tautityyppiä on tavattu silloin tällöin Suomestakin. Ensimmäinen EHEC-epidemia (kanta 0157:H7) ja myös ensimmäiset kuolemantapaukset diagnosoitiin Suomessa vuonna 1997. Suomessa vuosittain todettujen EHEC-tartuntojen määrä on kasvanut viime vuosien aikana. Kasvua selittää laboratoriodiagnostiikassa tapahtuneet muutokset. Vuonna 2019 todettuja tapauksia oli 311.Ruotsissa myrkyllistä 0157:H7-muunnosta on kymmenessä prosentissa maitotiloista, Hollannissa jopa joka neljännellä tilalla. Verosytotoksiinia muodostavista muunnoksista käytetään lyhennettä VTEC (verosytotoksiinia muodostavat E. kolibakteerit. Ryhmän uudet muunnokset, bakteerit O21 ja O103, ovat levinneet Ruotsissa yhtä laajalle kuin 0157:H7, ja joissakin naapurimaissa aiheuttaneet kuolemantapauksia.EHEC-tartunta voi olla hengenvaarallinen ja tämänhetkiset hoidot perustuvat pääosin oireiden lievittämiseen. EHEC-bakteerin tuottamien toksiinien takia antibioottien käyttöä ei suositella taudin hoitomenetelmänä. Antibioottien vaikutuksesta kuolevat bakteerisolut voivat erittää toksiineja ympäristöönsä ja näin pahentaa taudin oireita.Kesäkuussa 2011 ilmeni Saksassa 1 700 EHEC-tapausta, joista kuoli ainakin 30. Suomessa tapauksia ilmeni yksi, joka oli todennäköisesti peräisin Saksasta, sillä se muistutti saksalaista kantaa. Tartunnan lähteenä ovat olleet Saksassa kasvatetut idut.
+
+
+== Mutaatiotutkimus ==
+
+Richard Lenski aloitti Michigan State Universityssä Yhdysvalloissa 12. helmikuuta 1988 Escherichia colin evoluutiotutkimuksen jolloin 12 koeputkeen kylvettiin lähes identtiset E. coli -populaatiot. Koetta kutsutaan nimellä LTEE eli E. coli long-term evolution experiment.
+Bakteereille annettiin minimiravinto, jolloin 500 bakteerisukupolvea syntyi 75 päivässä. Yksistään tämä tuottaisi valtavan määrän bakteereita, jos bakteerit saisivat lisääntyä rajatta. Mutta bakteerien rajallinen ravintomäärä aiheuttaa sen, että ne bakteerit, jotka pystyvät lisääntymään nopeiten, yleistyvät. Tarkoitus oli tutkia, tapahtuuko bakteereissa hyödyllisiä mutaatioita, jotka edistävät bakteerien kykyä selviytyä hengissä ja tuottaa jälkeläisiä.
+Parinkymmenen vuoden kuluttua, vuonna 2008, oli tapahtunut 40 000 solunjakautumista. Tähän mennessä oli näkynyt joitain muutoksia bakteereissa. Kun noin 20 000 bakteerisukupolvea oli käyty läpi, monia geneettisiä muutoksia oli tapahtunut kaikissa maljoissa, ja bakteerien kasvu oli nopeutunut 70 %:lla. Kaikista bakteereista oli kehittynyt suurempia ja harvemmassa eläviä, ja ne erikoistuivat elämään glukoosissa. Suurin osa koon kasvusta tapahtui 2 000 ensimmäisen sukupolven aikana. Neljällä populaatiolla heikkeni DNA:n korjausmekanismi, mikä kasvatti mutaatioiden määrää. Vaikka bakteerit läpikävivät maljaa kohden miljoonia mutaatioita 20 000 ensimmäisen solunjakautumisen aikana, Lenskin mukaan vain 10–20 mutaatioista oli hyödyllisiä, ja vain 100 kaikista hyödyllisistä ja selviämisen kannalta yhdentekevistä mutaatioista jäi geeneihin. Kokoa kasvattaneista populaatioista Ara-1 ja Ara+1 kaikki koon määränneet samat 59 geeniä olivat muuttuneet samaan suuntaan toisistaan riippumatta.33 127 jakautumisen jälkeen eräs populaatio, joka on ristitty Ara-3:ksi pystyi hyödyntämään kasvuaineen sitraattia, mihin normaali kolibakteeri ei pysty. Tämä kasvatti bakteerien määrää ja näytti selvästi, että hyödyllinen mutaatio oli tapahtunut laboratoriossa. Sitraattikyky vaati bakteerilta ainakin kaksi peräkkäistä mutaatiota, ja siksi sitä ei ilmestynyt kaikkiin maljoihin mutaatioiden suhteellisen harvinaisuuden takia.
+
+
+== Kolibakteerin virotyyppejä ==
+Epidemioiden yhteydessä on tavallisesti puhe virotyypeistä, joiden aiheuttama taudinkuva on tyypillisesti toisesta poikkeava. Kyseessä ei ole eri mikrobilaji. Ihmisillä esiintyviä ovat
+
+EHEC (enterohemorraaginen E. coli)
+EPEC (enteropatogeeninen E. coli)
+ETEC (enterotoksinen E. coli)
+EIEC (enteroinvasiivinen E. coli)
+EAEC (enteroaggregatiivinen E. coli)
+
+
+== Lähteet ==
+
+
+== Aiheesta muualla ==
+Laji.fi: Escherichia coli
+National Center for Biotechnology Information (NCBI): Escherichia coli, taxonomy (englanniksi)
+UniProt, taxonomy: Escherichia coli (englanniksi)
+Bacteria make major evolutionary shift in the lab Bob Holmes New Scientist 09 June 2008
+E. coli Long-term Experimental Evolution Project Site (Arkistoitu – Internet Archive)
+List of publications on the experiment (Arkistoitu – Internet Archive)

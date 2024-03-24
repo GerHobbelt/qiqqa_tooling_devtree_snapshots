@@ -1,0 +1,32 @@
+revision: 7200436
+title: UTC
+url: https://eo.wikipedia.org/wiki/Universala_Tempo_Kunordigita
+
+
+---
+
+Universala Tempo Kunordigita (UTK, konata kiel UTC ekster Esperantujo) estas la tempo ĉe la nula longitudo de 0° (UTC+0) kaj estis antaŭe nomita GMT. UTC estas kunordigita kun GMT per la iafoja aldono de supersekundo tiel, ke: 
+
+UTC - GMT < 0.9 s
+
+La supersekundo estas necesa ĉar la rotacio de la Tero estas ĉiam malplirapidiĝanta. 
+La internacia mallongigo "UTC" venas el kompromiso inter CUT, el anglalingva Coordinated Universal Time kaj TUC, el francalingva Temps universel coordonné kaj estas neŭtrala por ambaŭ.
+GMT ankaŭ estas la tempo de la nula longitudo, sed estas malsamo inter GMT kaj UTC: GMT sekvas la movadon de la Suno (aŭ, alivorte, la rotacion de la tero), dum UTC sekvas la Tempon Atoman Internacian (TAI -- la mezan tempon de 200 precizaj atomaj horloĝoj tra la mondo). 
+UTC kiel referenca nulo por la longitudo, estas ankaŭ kelkfoje nomita Zulua tempo (Z). La UTC de +1 al +12 oriente de Grenviĉo ricevas la literojn A, B, C, D, E, F, G, H, I, K, L, M. Same, Okcidente de Grenviĉo en UTC de -1 al -12 la horzonoj ricevas la literojn de N ĝis Y. Do ekz. UTC+2 ricevas la literon B (Bravo) kaj korespondas al la Orienteŭropa Tempo (EET); same UTC-7 ricevas la literon T (Tango) kaj korespondas al la Usona kaj Kanada Montara Norma Tempo (MST). 
+Ofte oni ne diras UTC sed mallonge UT, universala tempo. En normala praktiko ne  gravas la supersekundo, aŭ ono de ĝi.
+
+
+== Vidu ankaŭ ==
+La nuna tempo de UTC laŭ la Buroo Internacia pri Pezoj kaj Mezuroj
+sekundo
+SI
+BIPM
+horzono
+somera tempo
+Horzonoj en Eŭropo
+Horzonoj en Eŭropo dum Somero
+
+
+== Eksteraj ligiloj ==
+Tempozonoj de UTC de A ĝis Z
+Formo de dato kaj tempo de W3C.

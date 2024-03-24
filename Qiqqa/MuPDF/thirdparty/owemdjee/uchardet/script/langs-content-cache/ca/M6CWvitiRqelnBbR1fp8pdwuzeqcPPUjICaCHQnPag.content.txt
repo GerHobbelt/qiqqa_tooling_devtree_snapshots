@@ -1,0 +1,139 @@
+revision: 30164174
+title: Amazon Mechanical Turk
+url: https://ca.wikipedia.org/wiki/Amazon_Mechanical_Turk
+
+
+---
+
+Amazon Mechanical Turk (MTurk) és un mercat que consisteix en una plataforma de crowdsourcing que requereix intel·ligència humana. Aquesta plataforma serveix per a treballs simples i de baix preu unitari que requereixen un cert nivell d'intel·ligència que una màquina no pot fer. La plataforma permet que els sol·licitants ingressin al sistema unitats de treballs (HIT, "Human Intelligence Tasks" o "Tasques d'Intel·ligència Humana") i els treballadors ("Turkers") poden consultar aquests treballs i finalitzar-los. Aquests, a canvi, reben una recompensa econòmica imposada pel sol·licitant.
+
+
+== Informació general ==
+Amazon Mechanical Turk és un portal de propietat d'Amazon (i que utilitza la seva infraestructura tecnològica).
+Aquest permet: definir els seus HIT (inclosa la sortida desitjada, el format de la sortida, la forma en què es mostren els seus elements de treball i quant pagarà per la seva realització), carregar milions de HIT al mercat perquè es duguin a terme, qualificar el personal, pagar només pel treball de qualitat i recuperar els resultats mitjançant les API.
+La plataforma té com a objectiu que l'accés a la intel·ligència humana sigui senzill, escalable i rendible.
+
+
+== Història ==
+El nom "Mechanical Turk" prové de 1769. El noble hongarès Wolfgang von Kempelen va deixar atònits als europeus en crear un mecànic autòmat que jugava als escacs i podia vèncer a pràcticament qualsevol oponent. L'autòmat de Kempelen, conegut com a "Turk", era un maniquí de fusta de mida real. S'asseia darrere d'un petit armari i va recórrer Europa guanyant a Benjamin Franklin i Napoleó Bonaparte. Per convèncer els escèptics, Kempelen obria les portes de l'armari i mostrava l'entramat de mecanismes: rodes dentades i molls que feien funcionar el seu invent. Els convencia que havia construït una màquina que prenia decisions a través de la intel·ligència artificial. El que el públic no sabia era que darrere de Mechanical Turk s'amagava un secret: un expert en escacs ben ocult en el seu interior. Per aquest motiu Mechanical Turk té un nom molt apropiat, ja que encara que aparentment s'obtenen resultats de màquines, en realitat s'obtenen resultats de centenars de milers d'humans que fan la feina en paral·lel i de vegades en minuts.
+
+
+== Treballadors i interfícies de sol·licitant ==
+Els usuaris que visiten la web de Mechanical Turk tenen l'opció de convertir-se o bé en treballador o bé en sol·licitant.
+Els treballadors tenen accés a un panell de control que mostra tres pestanyes diferents : guanys totals, l'estat de les HIT i les HIT totals.
+
+Guanys totals: mostra els guanys totals que un treballador ha rebut de la realització de tasques humanes d'intel·ligència, els guanys aconseguits de bonus i la suma d'aquestes dues.
+Estat de la seva HIT: mostra una llista de les activitats diàries i els ingressos diaris, juntament amb el nombre de visites que van ser presentats, aprovats, rebutjats o en espera durant aquest dia.
+HIT totals: mostra informació sobre les HIT que han estat admeses o estan en tràmit (inclouen els percentatges d'èxits que es van presentar, retornats o abandonats i el percentatge d'èxits que van ser aprovats, rebutjats o en espera dels que es van presentar).Els sol·licitants (empreses o desenvolupadors independents) que necessiten que es realitzin les HIT poden utilitzar les API d'Amazon Mechanical Turk per accedir a milers d'empleats sota demanda, d'alta qualitat, a baix cost i de tot el món i, a continuació, integrar mitjançant programació els resultats d'aquest treball directament en els seus processos i sistemes empresarials. Mechanical Turk permet als sol·licitants aconseguir els seus objectius més ràpidament i a un cost més baix del que abans era possible.
+Quan els sol·licitants envien el seu HIT, aquests han d'especificar quant de temps tenen els treballadors per completar el treball, quantes persones vol que desenvolupin cada tasca, quant pagarà pel treball i detalls específics sobre el treball que desitja que es completi.
+
+
+== Aspectes destacats del servei ==
+
+
+=== Personal sota demanda ===
+Amazon Mechanical Turk proporciona accés a un mercat de treballadors que poden ajudar a completar el seu treball sempre que els necessiti i allà on els necessiti i, sempre que la seva empresa els necessiti.
+
+
+=== Eines de gestió de qualitat ===
+Amazon Mechanical Turk permet a més d'un usuari enviar una resposta al mateix HIT. Quan un nombre específic d'usuaris donen la mateixa resposta, la HIT s'aprova automàticament. El pagament només es fa als que es consideren bons resultats. Si el resultat no és l'adequat, el treball és rebutjat i no cal pagar l'usuari.
+
+
+=== Estructura de cost més baixa ===
+Els costos fixos i addicionals associats amb la contractació i gestió de personal temporal sovint poden ser considerables. Amazon Mechanical Turk ajuda a reduir els costos de manera significativa, ja que els empleats són sota demanda.
+
+
+=== Determinació del preu ===
+Els empleats són lliures de treballar en les tasques que trobin més interessants, les que els agradi completar o les que millor es paguin.
+Les empreses són lliures a l'hora de definir els pagaments. Quan la finalitat és atraure un alt nombre d'empleats i augmentar el rendiment, les tarifes són més altes. Si en canvi es disposa de més flexibilitat en la finalització de la tasca, les tarifes són més baixes.
+Els pagaments en Mechanical Turk es fan en cooperació amb Amazon Payments.
+
+
+=== Qualificació del personal ===
+Amazon Mechanical Turk permet qualificar als usuaris abans que puguin treballar en les seves tasques mitjançant proves ràpides. Les qualificacions poden ser una sèrie de preguntes, la realització de tasques d'exemple o bé es pot demanar que els usuaris hagin respost històricament a un percentatge mínim dels seus HIT enviades de manera correcta.
+
+
+== Aplicacions ==
+
+
+=== Cerca de persones desaparegudes ===
+El 2007, el servei va començar a ser utilitzat per buscar persones desaparegudes. La primera vegada que es va intentar fer servir va ser per a la recerca de James Kim, però abans de progressar en el desenvolupament del servei es va trobar.
+Aquell estiu també va desaparèixer l'informàtic Jim Gray en el seu iot. El seu amic Werner Vogels va fer modificacions per DigitalGlobe, proporcionant així dades de satèl·lit de Google Maps i Google Earth, posant fotografies recents de les illes Farallon a Mechanical Turk. Gràcies a un article publicat a la primera pàgina del Digg va atreure 12.000 investigadors que van treballar al seu costat. Tot i això, la recerca no va tenir èxit.
+Al setembre de 2007, es va repetir una tasca similar amb la recerca de l'aviador Steve Fossett. Se'ls va demanar als usuaris de Mechanical Turk que localitzessin imatges amb "objectes estranys". Però aquesta recerca tampoc va tenir èxit.
+
+
+=== Experiments en ciències socials ===
+A partir del 2010, nombrosos investigadors han explorat la viabilitat de Mechanical Turk per reclutar els subjectes en experiments sobre ciències socials. Els investigadors van trobar que la mostra d'enquestats obtinguts a través de Mechanical Turk no coincidia amb les característiques de la població dels EUA. Es va determinar que el servei funciona millor per al mostreig aleatori de la població, en canvi té menys èxit amb els estudis que requereixen definir amb més precisió les poblacions.
+
+
+=== Recerca artística i educativa ===
+L'artista Aaron Koblin va utilitzar la plataforma per crear dos projectes: "Ten Thousand Cents", una obra d'art digital que combinant milers de dibuixos individuals es representa un bitllet de 100 dòlars i "The Sheep Market", una altra obra d'art digital que consistia a dibuixar una ovella mirant a l'esquerra.
+Scott McMaster també va utilitzar aquesta eina per a la investigació educativa. Va dur a terme dues proves pilot. Els participants havien de visualitzar conjunts de paraules en dibuixos i omplir després una enquesta demogràfica.
+
+
+== Programació a tercers ==
+Els programadors han desenvolupat diverses extensions del navegador i scripts dissenyats per simplificar el procés de completar HIT. No obstant això, Amazon desaprova treure l'element humà, el que comporta a prohibir comptes que utilitzen bots automatitzats.
+
+
+=== API ===
+Amazon Mechanical Turk ofereix una Interfície de Programació d'Aplicacions (API) de serveis web perquè els ordinadors integren la intel·ligència artificial directament en el seu processament en realitzar sol·licituds a humans.
+Els desenvolupadors utilitzen l'API de serveis web d'Amazon Mechanical Turk per enviar tasques al lloc web d'Amazon Mechanical Turk, aprovar les tasques completades i incorporar les respostes a les seves aplicacions de programari. Per a l'aplicació, la transacció té una aparença similar a la de qualsevol crida a procediment remot: l'aplicació envia la sol·licitud i el servei proporciona els resultats.
+
+
+== Casos d'usos ==
+
+
+=== Processament de fotos / vídeos ===
+Amazon Mechanical Turk és ideal per processar imatges. Encara que és difícil per als ordinadors, es tracta d'una tasca increïblement fàcil de fer per a les persones, com:
+
+Etiquetar els objectes trobats en una imatge per facilitar la recerca
+Seleccionar la millor imatge d'un grup d'imatges (la que millor representa el producte)
+Auditar imatges carregades pels usuaris a la recerca de contingut inadequat
+Classificar objectes trobats en imatges per satèl·lit
+
+
+=== Verificació / Neteja de dades ===
+Les empreses amb grans catàlegs online utilitzen Mechanical Turk per identificar entrades duplicades i verificar detalls d'elements. Aquests són alguns exemples:
+
+Des-duplicació de llistats de directoris de pàgines grogues
+Identificar productes duplicats en catàlegs online
+Verificació de detalls d'un restaurant (número de telèfon, horaris, etc.)
+
+
+=== Recopilació d'informació ===
+La diversificació i l'escala del personal de Mechanical Turk permeten recopilar molta informació que seria gairebé impossible d'una altra manera, per exemple:
+
+Permet als usuaris realitzar preguntes, ja sigui des d'un ordinador o des d'un dispositiu mòbil, sobre qualsevol tema, perquè els empleats puguin donar resultats sobre aquestes preguntes
+Omplir dades d'enquestes sobre diversos temes
+Escriure comentaris, descripcions i entrades de bloc per a llocs web
+Cerca elements de dades o camps específics en grans documents governamentals i legals
+
+
+=== Processament de dades ===
+Les empreses fan servir el potencial de la plantilla de Mechanical Turk per entendre i respondre de manera intel·ligent a diferents tipus de dades:
+
+Edició i transcripció de podcasts
+Servei de traduccions humanes
+Classificació de l'exactitud dels resultats d'un motor de cerca
+
+
+== Referències ==
+
+
+== Bibliografia ==
+http://aws.amazon.com/es/mturk/
+http://www.mundovirtual.biz/ingresos-online-con-amazon-mechanical-turk/
+http://www.enriquedans.com/2013/07/la-economia-del-turco-mecanico.html
+http://centrodeartigo.com/articulos-utiles/article_107691.html Arxivat 2014-12-05 a Wayback Machine.
+http://www.crowdsourcingblog.de/wp-content/uploads/2011/05/amazon-mechanical-turk-executive-review.pdf Arxivat 2014-12-04 a Wayback Machine.
+http://mturkpublic.s3.amazonaws.com/docs/MTURK_BP.pdf
+http://www.eliax.com/?post_id=5210
+http://www.csc.kth.se/utbildning/kandidatexjobb/datateknik/2010/rapport/lundin_forssen_william_OCH_renberg_adam_K10066.pdf
+http://webdiis.unizar.es/asignaturas/DCU/wp-content/uploads/2014/02/4.DCU_Usabilidad_UX_Def_Extra.pdf Arxivat 2014-12-06 a Wayback Machine.
+http://www.technologyreview.es/blog/post.aspx?bid=359&bpid=29672 Arxivat 2014-12-05 a Wayback Machine.
+http://jeuazarru.com/wp-content/uploads/2014/10/Crowdsourcing.pdf
+http://laboralcentrodearte.uoc.edu/?p=4265
+
+
+== Enllaços externs ==
+MTurk Arxivat 2014-11-26 a Wayback Machine. .

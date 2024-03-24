@@ -1,0 +1,47 @@
+revision: 5889414
+title: Google Japanese Input
+url: https://hi.wikipedia.org/wiki/%E0%A4%87%E0%A4%A8%E0%A4%AA%E0%A5%81%E0%A4%9F_%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BF
+
+
+---
+
+इनपुट विधि को इनपुट मेथड या इनपुट मेथड ऍडीटर (आइऍमई) भी कहा जाता है। कम्प्यूटर एवं अन्य डिजिटल युक्तियों के सन्दर्भ में इनपुट विधि या निवेश विधि वह प्रोग्राम है जो प्रचालन तंत्र का एक भाग होता है तथा उन वर्णों एवं संकेतों को भी लिखने में मदद करता है जो कम्प्यूटर के कुंजीपटल पर उपलब्ध नहीं होतीं। उदाहरण के लिये हिन्दी या चीनी भाषा में कम्प्यूटर पर कुछ लिखने में यह सहायक होता है।
+
+
+== इतिहास ==
+मूलतः 'आई एम ई' शब्द का प्रयोग चीनी-जापानी-कोरियाई भाषाओं को कम्प्यूटर पर लिखने वाले प्रोग्रामों के लिए किया गया था। किन्तु अब इसका अर्थ अधिक व्यापक हो गया है। उदाहरण के लिए, देवनागरी आई एम ई, हिब्रू आई एम ई, ग्रीक आई एम ई, थाई आई एम ई आदि। 
+
+
+== देवनागरी के लिए उपलब्ध प्रमुख आईएमई और उनकी तुलना ==
+
+
+== यूनिक्स प्लेफॉर्मों के लिए इनपुट विधियाँ ==
+
+
+== इन्हें भी देखें ==
+इण्डिक आइऍमई- विभिन्न भारतीय भाषाओं हेतु ध्वन्यात्मक, इनस्क्रिप्ट तथा रेमिंगटन आइऍमई
+बरह आइऍमई - विभिन्न भारतीय भाषाओं हेतु ध्वन्यात्मक आइऍमई
+गूगल आइऍमई
+आइऍसऍम (सी-डैक का उत्पाद)
+आई-बस (इंटेलिजेंट इन्पुट बस / Intelligent Input Bus)
+एससीआईएम (स्मार्ट कॉमन इन्पुट मेथड)
+वर्चुअल कीबोर्ड
+माइक्रोसॉफ्ट कीबोर्ड लेआउट क्रियेटर
+
+
+== बाहरी कड़ियाँ ==
+कम्प्यूटर को हिन्दी-सक्षम बनाने हेतु उपलब्ध आई एम ई
+Microsoft Global Input Method Editors (IMEs)
+BhashaIndia, the Microsoft portal for Indic languages, which has Indic IME for download.
+Sarasvati: A Sanskrit IMEby stefanwebb
+leaf?id=0B4uo7Dp5rwXSNTcyNWZkMGEtZjU3My00NThlLWI1NTMtOGUxNzNkYjU4MTQ1&hl=en_US Bhasha_IME (IME for typing Devanagari, e-Grantha (including Vedic accents for both), Kannada, Malayalam, Tamil, Telugu and roman/IAST scripts. The IME is phonetic.)ट्यूटोरियलमाइक्रोसॉफ़्ट इण्डिक इनपुट २.० क्या है, इसे कैसे प्रयोग करे?, माइक्रोसॉफ़्ट इण्डिक एडिटर २.० स्थापित करने की जानकारी.
+माइक्रोसॉफ़्ट इण्डिक इनपुट ३.० क्या है, इसे कैसे प्रयोग करे?, माइक्रोसॉफ़्ट इण्डिक एडिटर २.० स्थापित करने की जानकारी.
+What is an Input Method Editor and how do I use it?, a Microsoft article about Windows XP Input Method Editor.
+Google Transliteration IME
+Enabling International Support in Windows XP/Server 2003 Family, a Microsoft tutorial on how to install input methods on Windows XP.
+IME Tutorial, a tutorial on how to use Microsoft Global IME for pre-Windows 2000 systems.
+A Dynamic Text Input scheme for phonetic scripts like Devanagari
+स्मार्ट कॉमन इन्पुट मेथड (SCIM)
+Microsoft Keyboard Layout Creator
+Type Hindi in Linux Mint using IBUS and Hindi Itrans (m17n): my experience
+How To Type In Indian Languages On Ubuntu Linux

@@ -1,0 +1,53 @@
+revision: 6713266
+title: Bayerov vzor
+url: https://sk.wikipedia.org/wiki/Bayerov_vzor
+
+
+---
+
+Bayerov filter (iné názvy: Bayerov vzor, Bayerova maska, Bayerova mriežka) je mozaika farebných filtrov pre RGB farebný model na jednotlivých políčkach obrazového snímača. 
+Toto usporiadanie farebných filtrov je použité vo väčšine dnes vyrábaných digitálnych fotoaparátov, kamier, a scannerov na účely plnofarebného záznamu snímaného obrazu.
+Názov dostal podľa svojho vynálezcu, Bryce Bayera zo spoločnosti Eastman Kodak, ktorý tento vzor prvýkrát predstavil už v roku 1976.Vynález znamenal revolúciu a prudký rozvoj farebnej digitálnej fotografie, pretože veľmi jednoduchým a lacným spôsobom transformoval jednofarebný snímací senzor na plnofarebný.
+
+
+== Základný opis ==
+Polovodičová svetlocitlivá bunka na obrazovom snímači zachytáva kompletné spektrum viditeľného svetla. Aby bol snímač schopný rozlíšiť farebnú informáciu, musela by sa zásadne zmeniť celková konštrukcia každej bunky. Takáto zmena by bola neúmerne náročná, drahá, alebo prakticky nemožná. Riešením je práve Bayerov filter. Nad každú svetlocitlivú bunku sa umiestni farebný filter, ktorý prepustí len určitú časť farebného spektra. Tým, že farebný obraz je možné zložiť z troch základných farieb (červená, zelená a modrá, tzv. RGB farebný model), je vytvorená pred obrazovým snímačom striedavá mozaika z filtrov práve pre tieto tri farby a z monochromatického obrazového snímača vytvorí farebný.
+
+
+== Výhody tohto riešenia ==
+Základnou výhodou je jeho jednoduchosť, pretože jednoduchým pridaním mozaiky filtrov odstraňuje základný nedostatok monochromatického obrazového snímača – neschopnosť rozlíšiť farebnú zložku obrazu, ktorý na neho dopadne.
+Pridanie filtra vo výrobe je veľmi jednoduché a lacné, snímače sa vyrábajú v obrovských množstvách (miliónových sériách).
+Tento vzor filtra navyše obsahuje 50% zelenej, 25% červenej a 25% modrej zložky v usporiadaní RGBG, čím zároveň simuluje farebnú citlivosť ľudského oka. Niekedy sú použité aj vzory GRGB, alebo RGGB.
+
+
+== Nevýhody ==
+Toto riešenie je veľmi praktické, ale s postupom vývoja digitálnej techniky, zobrazovania a nárokov na vernosť reprodukovaného obrazu má aj niekoľko vážnych nedostatkov. Najhlavnejším, a vplývajúcim z príncípu fungovania filtra, je strata až 66% svetla a farebnej informácie dopadajúcej na snímač.
+Každá svetlocitlivá bunka je prekrytá filtrom, ktorý prepustí len určitú farebnú časť spektra. Zvyšná informácia sa pohltí vo filtri. Celkový plnofarebný obraz pre jednu bunku je tvorený z 1/3 modrou, 1/3 červenou a 1/>3 zelenou farbou. Po aplikácii filtra na bunku dopadne len jedna (príslušná) tretina farebnej zložky a zvyšné 2/3 sa stratia (pozri obr. „Prierez jednotlivými políčkami...“)
+Toto kvalitatívne obmedzenie výrazne sťažuje vernú reprodukciu scény a používanie digitálnych snímačov s Bayerovou maskou pri zhoršených svetelných podmienkach.
+Ďalšou nevýhodou, opäť vyplývajúcou z konštrukcie, je vysoká kvantitatívna stratovosť informácií pri rekonštrukcii obrazu snímanej scény. 
+Keďže po aplikácii filtrov každá svetlocitlivá bunka sníma len jednu tretinu z celkovej informácie, je nutné mať minimálne tri bunky pre zosnímanie jediného obrazového bodu. V praxi sú to dokonca štyri bunky, pretože zelená časť spektra je kvôli zjednodušeniu konštrukcie a priblíženiu sa k funkcii ľudského oka zdvojená. Výsledný plnofarebný bod obrazu je teda kombináciou 4 políčok (každé so samostatnou farbou), ktoré sa navyše pre každý bod navzájom prekrývajú. Využíva sa fakt, že susedné obrazové body majú v praxi len minimálne rozdiely. Prísne vzaté, skutočné rozlíšenie obrazového snímača, ktorý pozostáva zo 4 miliónov obrazových bodov (buniek) prekrytých filtrami Bayerovej masky, je len 1 Mpix. Zvyšok je len dopočítanie, tzv. interpolácia.
+V dôsledku pravidelnosti rozloženia mozaiky Bayerovho vzoru vzniká pri snímaní pravidelných vzorov (štruktúra textilu alebo vzdialenejší plot a pod.) tzv. moaré. V praxi sa to rieši rozostrením – antialiasingom či rôznymi interpolačnými algoritmami, tým ale dochádza k ďalšiemu zhoršeniu ostrosti nasnímaného obrazu (zníženiu rozlíšenia).
+Konštrukcia svetlocitlivých buniek obrazových snímačov je špecifická tým, že svetlocitlivá plocha zaberá iba časť plochy každej bunky, časť je použitá na obvody a spoje. Dopadnuté svetlo na túto necitlivú časť je stratené. To taktiež prispieva k zníženiu efektívnej plochy snímača. Riešením je použitie mikrošošoviek nad každou bunkou.
+
+
+=== Riešenia nevýhod ===
+Časom sa objavili rôzne modifikácie základného Bayerovho vzoru, ktoré ale nezriedka riešili len určitý druh nedostatku, často za cenu podstatného zvýšenia komplikovanosti. 
+
+najjednoduchšími boli iné usporiadania RGB filtrov (RGGB, GRGB)
+EXR alebo X-Trans filter (od spoločnosti Fujifilm), použité vo fotoaparátoch Fujifilm X, XS, XW alebo X-Pro.
+použitím ďalších farieb:
+CYGM (Cyan-Yellow-Green-Magenta), použité v niektorých modeloch fotoaparátov Canon PowerShot a Nikon Coolpix.
+RGBE (Red-Green-Blue-Emerald), použité iba v CCD snímači ICX456 a fotoaparáte Sony Cybershot DSC-F828.
+„Panchromatické bunky“ RGBW (Red-Green-Blue-White) od spoločnosti Kodak.
+použitím troch snímačov zvlášť, pričom každý sníma jednu z troch farieb celou svojou plochou, tzv. 3CCD riešenie. Nevýhodou je podstatne vyššia zložitosť, nároky na presnosť konštrukcie a priestoru.
+použitím úplne iného princípu rozlišovania jednotlivých farieb (navrstvením farebných "filtrov" na seba) v rámci jediného čipu – Foveon X3, používané zväčša len vo fotoaparátoch značky Sigma. Nie je nutný rozostrovací (antialiasing) filter, ani interpolačné algoritmy. Pri rovnakom počte snímacích buniek a rozmere snímača má obraz podstatne vyššiu ostrosť, trpí však farebnou nestálosťou, najmä červenej zložky.
+Svetlo, ktorého časť by dopadla na necitlivú časť snímača a bolo by teda stratené, sústredí nad filter pridaná mikrošošovka iba na tú časť, ktorá je citlivá. Tým sa dosiahne zvýšenie svetelnej účinosti snímača až o 5 – 25% (podľa typu snímača).
+použitím špeciálnych difrakčných mikrošošoviek, ktoré sa umiestnia nad filtre každej bunky. Dopadajúce svetlo na každú bunku sa rozdelí na jednotlivé farebné časti spektra a odkloní na príslušné susedné bunky. Tým sa približne strojnásobí dopadnuté svetlo na každú bunku (takmer nulové straty). Nevýhodou je náročnosť výroby a fakt, že na jednu bunku dopadá obraz z dvoch susedných (výsledné zníženie skutočného rozlíšenia snímača).Každý výrobca elektroniky, ktorá obsahuje obrazový snímač, uplatňuje rôzne metódy eliminácie nedostatkov základného Bayerovho vzoru. V praxi sa najviac osvedčili len rôzne preusporiadania základného vzoru kvôli jeho jednoduchosti, prípadne vyššie zmienený snímač Foveon X3 (len vo fotoaparátoch značky Sigma).
+
+
+== Referencie ==
+
+
+== Iné projekty ==
+
+ Commons ponúka multimediálne súbory na tému Bayerov vzor

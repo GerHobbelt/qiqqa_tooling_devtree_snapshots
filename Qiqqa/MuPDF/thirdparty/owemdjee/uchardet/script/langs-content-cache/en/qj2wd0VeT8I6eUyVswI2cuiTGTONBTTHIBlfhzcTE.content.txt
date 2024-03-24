@@ -1,0 +1,87 @@
+revision: 1134530096
+title: WASP (cricket calculation tool)
+url: https://en.wikipedia.org/wiki/WASP_(cricket_calculation_tool)
+
+
+---
+
+Winning and Score Predictor (WASP) is a calculation tool used in cricket to predict scores and possible results of a limited overs match, e.g. One Day and Twenty 20 matches.
+The prediction is based upon factors like the ease of scoring on the day according to the pitch, weather and boundary size. For the team batting first, it gives the prediction of the final total.  For the team batting second, it gives the probability of the chasing team winning, although it does not just take the match situation into equation. Predictions are based on the average team playing against the average team in those conditions.The models are based on a database of all non-shortened One Day International (ODI) matches and Twenty20 games played between top-eight countries since late 2006 (slightly further back for Twenty20 games). The batting-first model estimates the additional runs likely to be scored as a function of the number of balls and wickets remaining. The batting-second model estimates the probability of winning as a function of balls and wickets remaining, runs scored to date, and the target score. Projected score or required run-rate will not qualitatively show the real picture as they fail to take into the account the quality of the batting team and the quality of the bowling attack. WASP is a very good quantitative parameter.
+
+
+== History ==
+The WASP technique is a product of some extensive research from PhD graduate Dr Scott Brooker and his supervisor Dr Seamus Hogan at the University of Canterbury (UC) in Christchurch, New Zealand.  They worked on this project for four years and started after they received a phone call from the university's economics department asking them to investigate alternatives to the Duckworth–Lewis method.WASP was first introduced to the public by Sky Sport New Zealand in November 2012 during Auckland's HRV Cup Twenty20 game against Wellington.SInce 2018, the underlying WASP system has been owned by NV Play, a global cricket technology company based in New Zealand.  NV Play have subsequently extended the WASP tool (in partnership with Dr Scott Brooker, one of the original WASP creators) to include the concept of pressure, and have developed a range of enhanced player contribution metrics to support high performance programmes.
+WASP is now deeply embedded in NV Play Cricket, NV's flagship cricket technology platform, and is available to all high end recreational & professional cricketers.
+
+
+== Theory ==
+The WASP system is grounded in the theory of dynamic programming. It looks at data from past matches and estimates the probability of runs and wickets in each game situation, and works backwards to calculate the total runs or probability of winning in any situation.
+This is how Dr Seamus Hogan – one of the creators of WASP – described the system:
+Let V(b,w) be the expected additional runs for the rest of the innings when b (legitimate) balls have been bowled and w wickets have been lost, and let r(b,w) and p(b,w) be, respectively, the estimated expected runs and the probability of a wicket on the next ball in that situation.
+We can then write,
+
+  
+    
+      
+        V
+        (
+        b
+        ,
+        w
+        )
+        =
+        r
+        (
+        b
+        ,
+        w
+        )
+        +
+        p
+        (
+        b
+        ,
+        w
+        )
+        V
+        (
+        b
+        +
+        1
+        ,
+        w
+        +
+        1
+        )
+        +
+        (
+        1
+        −
+        p
+        (
+        b
+        ,
+        w
+        )
+        )
+        V
+        (
+        b
+        +
+        1
+        ,
+        w
+        )
+      
+    
+     
+  Since V(b*,w)=0 where b* equals the maximum number of legitimate deliveries allowed in the innings (300 in a 50 over game), we can solve the model backwards.
+This means that the estimates for V(b,w) in rare situations depends only slightly on the estimated runs and probability of a wicket on that ball, and mostly on the values of V(b + 1,w) and V(b + 1,w + 1), which will be mostly determined by thick data points.
+The batting second model is a bit more complicated, but uses essentially the same logic.
+
+
+== Drawbacks ==
+If a batsman gets retired hurt, the model will not work well as it does not know the position in which the retired hurt batsman will come to bat again. This happened in a match between England and New Zealand, as injured Martin Guptill came to the crease again in the ninth position and gave a staggering performance which is unusual for a ninth position batsman and helped his team to win the match.
+
+
+== References ==

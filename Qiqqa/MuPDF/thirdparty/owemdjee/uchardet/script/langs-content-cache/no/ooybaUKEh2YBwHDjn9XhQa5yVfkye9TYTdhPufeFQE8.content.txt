@@ -1,0 +1,94 @@
+revision: 23622895
+title: Ip Man
+url: https://no.wikipedia.org/wiki/IP-adresse
+
+
+---
+
+En IP-adresse, (av engelsk: Internet Protocol address) er en unik identifikator eller adresse som tildeles en enhet, for eksempel en PC eller en skriver i et TCP/IP-basert datanettverk. To enheter i et nettverk kan ikke ha samme adresse. Det mest kjente datanettverket som bruker IP-adresser er Internett.
+En IP-adresse er et tall som grovt kan sammenlignes med et telefonnummer. Alle enheter (PC, nettbrett, mobiltelefon og lignende) må ha en IP-adresse for å kunne kommunisere med andre enheter på internett, tilsvarende at alle telefoner må ha et telefonnummer for å kunne ringe hverandre. Enhetens IP-adresse brukes som identifikasjon overfor andre maskiner på nettet, og for å entydig adressere til korrekt mottaker.IP-adressen skrives i dagliglivet som fire heltall atskilt med punktum, for eksempel 192.0.43.10 (example.com). Hvert av de 4 heltallene kan ha verdier fra 0 til 255.Det fins ikke noen offentlig tilgjengelig IP-adressekatalog («telefonkatalog» for IP-adresser), hvor man kan slå opp et navn og finne IP-adressen. Derimot har internett en slags innebygd katalog: Man kan skrive for eksempel «example.com» i nettleseren, så blir det automatisk oversatt til den tilhørende IP-adressen 192.0.43.10. Dette gjøres av noe som kalles DNS-servere.  E-postadresser oversettes til korrekt IP-adresse via lignende mekanismer.
+
+
+== Fast (statisk) eller dynamisk IP-adresse ==
+IP-adresser kan være faste (statiske) eller dynamiske. Forskjellen er at en fast IP-adresse vil være den samme hver gang datamaskinen kobles til internett (kan sammenlignes med et telefonnummer), mens en dynamisk IP-adresse kan være ulik ved hver oppkobling.Brukere som har behov for kontinuerlig nett-tilgang, for eksempel bedrifter, vil gjerne ha en fast linje, hvilket innebærer at de stort sett benytter den samme IP-adressen gjennom abonnementsforholdet. På internett fins databaser som gir en viss oversikt over hvem som disponerer faste IP-adresser(whois). En slik database kan sammenlignes med en telefonkatalog.Abonnenter med dynamiske IP-adresser kan i prinsippet få tildelt en ny IP-adresse fra internettleverandøren hver gang de kobler seg til nettet. Hvor ofte en maskin med dynamisk IP-adresse faktisk bytter adresse, vil variere fra internettleverandør til internettleverandør. Systemet vil kunne innebære at samme IP-adresse benyttes av forskjellige abonnenter over et tidsrom.Ved dynamisk IP-adresse loggfører internettleverandører hvem som har hvilken adresse når. Loggen er i praksis en «telefonkatalog» for dynamiske IP-adresser. Men den er ikke allment tilgjengelig.
+
+
+== Spor etter bruk av internett ==
+
+
+=== Analogi: Telefonnummeret legges igjen når en ringer ===
+Når man blir oppringt på telefon, kan man se nummeret til den som ringer. (Så sant de ikke har hemmelig nummer.) Etter anropet/samtalen blir både nummeret og tidspunktet liggende igjen i telefonen. Hvis man vil vite hvem som har ringt, kan man slå opp nummeret i en telefonkatalog. Dersom nummeret ikke står i katalogen, kan man for fasttelefonnummer likevel se cirka hvor i landet samtalen kom fra.
+Teleselskapet har uansett lagret nummer og tidspunkt fram til fakturering. Dette kan eventuelt brukes i en kriminalsak.
+
+
+=== IP-adressen legges igjen ved internettbruk ===
+Når man bruker internett, legges IP-adressen igjen på motpartens datamaskin, litt som med telefonnummer og telefonapparat. For eksempel kan Wikipedia se IP-adressen til de som går inn på nettstedet. IP-adressen forteller Wikipedia hvilken mottaker nettsidene skal sendes til.Nettsteder kan samtidig registrere når den enkelte IP-adresse går inn på hvilken av deres nettsider. Men de har ikke tilgang til teleselskapets (ISPs) katalog over hvem som innehar den enkelte IP-adresse. Siden IP-adresser følger nummerserier, litt som fasttelefonnummer, kan de likevel i noen grad geoposisjonere eller geolokalisere brukerne.Nettsteder benytter brukernes IP-adresser til å forbedre nettsidene, tilpasse hva som vises og ved uautorisert bruk eller angrep mot siden. For eksempel kan NRK.no eller SVT.se utestenge utenlandske IP-adresser fra å se rettighetsbegrenset materiale.Men teleselskapet lagrer ikke data om besøkte internettsider i lengre tid, slik de gjør for telefonsamtaler. Norges DLD påbyr heller ikke lagring  av det. Hvis Politiet ønsker å vite hvem som har besøkt en bestemt nettside, må de derfor ta utgangspunkt i den gjenlagte IP-adressen på nettsidens datamaskin. De kan så spørre teleselskapet hvems IP-adresse dette er.  Hvis teleselskapet skal kunne svare, må de ha en «IP-adresse-katalog», en «telefonkatalog» for IP-adresser. Ikke bare nåværende katalog, men også de katalogene som har gjeldt tidligere.
+
+
+=== Offentlig og privat IP-adresse ===
+IP-en som vises offentlig ved å surfe på internett kalles for offentlig IP-adresse. Hvis man er tilkoblet internett via et privat nettverk, altså et bedrifts- eller hjemmenettverk, for eksempel et trådløst nett, har man i tillegg en IP-adresse i dette lokalnettverket. Den kalles den private IP-adressen, lokalnett- eller LAN- adressen.
+Nettsteder som Wikipedia kan ikke se lokalnettadressen. Men på grunn av såkalt adressekonvertering kommer likevel riktig Wikipedia-side fram til riktig enhet i lokalnettverket.
+
+
+=== En IP-adresse angir ikke sikkert en person ===
+Et telefonnummer kan ikke fortelle helt sikkert hvem som faktisk har ringt. Alle anrop fra Per Hansens mobil trenger ikke være gjort av Per Hansen selv. Noen kan ha lånt/tyvlånt telefonen, eller stjålet mobilen eller SIM-kortet.
+For IP-adresser er dette enda mindre sikkert. I tillegg til lån og tyvlån av PC, er det også mulig at naboen har «lånt» Hansens trådløse nett, hvis det er dårlig sikret. Det kan også en tilfeldig forbipasserende ha gjort. Det fins også et system hvor en stor gruppe mennesker systematisk byttelåner IP-adresser for å være mest mulig anonyme.Selv når man kjenner innehaveren av en IP-adresse, kan man altså ikke uten videre fastslå hvem som har brukt den.
+
+
+== Personvern ==
+En IP-adresse er definert som en personopplysning i henhold til Personopplysningsloven. Det innebærer at behandling (bl. a. registrering, lagring, sammenstilling og utlevering) av IP-adresser må følge denne lovens bestemmelser.Teleoperatørers behandling av IP-adresser er i tillegg underlagt Ekomlovens krav, §2-9 om taushetsplikt og §2-7 om sletting av data som ikke lenger trengs.
+
+
+== Aktuelle saker ==
+
+
+=== Datalagringsdirektivet ===
+
+
+==== Politiets behov for å koble en IP-adresse til en abonnent ====
+Ved bruk av internett etterlater man seg IP-adresse-spor. Politiet bruker slike spor i etterforskning av kriminalitet. Da ønsker de å vite abonnenten bak IP-adressen.Koblingen IP-adresse – abonnent er en type abonnements- eller brukerdata. Et annet eksempel er koblingen telefonnummer – abonnent, det som listes i en telefonkatalog. På internett finnes databaser som gir en viss oversikt over hvem som disponerer faste IP-adresser. For dynamiske IP-adresser viser slike databaser bare hvilken internettleverandør adressen tilhører. Selve «IP-adresse-katalogen» hos internettleverandøren er ikke allment tilgjengelig.For dynamiske IP-adresser endres «katalogen» når en får tildelt ny IP-adresse. Dersom Politiet etterforsker gamle IP-adressespor, trenger de den «katalogen» som gjaldt den gang sporet ble laget.Datatilsynet har bestemt at disse dataene av personvernhensyn skal oppbevares i maksimum 3 uker. Det betyr at «IP-adresse-kataloger» eldre enn 3 uker skal slettes. Gamle spor etter dynamiske IP-adresser kan altså ikke bidra til å identifisere en kriminell, kun til geolokalisering. Politiet ønsker derfor at koblingen IP-adresse - abonnent skal lagres lenger enn 3 uker.
+
+
+==== Debatt: Hvor lenge skal «IP-adresse-katalogen» oppbevares ====
+Sammenhengen abonnent - dynamisk IP-adresse kan oppbevares på ulike format. Det kan skje i logger som viser noen flere data, bl.a. MAC-adresse (unik ID for selve PC-en) og når abonnenten logget på og logget av internett. Under debatten om datalagringsdirektivet (DLD) foreslo Datatilsynet at koblingen IP-adresse - abonnent lagres betydelig lenger enn 3 uker. Det ble ikke utdypet om eventuelt flere data skulle lagres samtidig.
+DLD påbyr at sammenhengen abonnent - IP-adresse skal lagres i 6 måneder. Det skal samtidig lagres hvorfra og når abonnenten har logget på og av internett. Men besøkte internettsider skal ikke lagres.
+
+
+== Begrunnelse for dynamiske IP-adresser ==
+Systemet med dynamiske IP-adresser har oppstått fordi IPv4 ikke har tilstrekkelig antall tallkoder å dele ut til alle verdens datamaskiner. Det er altså ikke bevisst designet med tanke på anonymitet eller personvern, det er en praktisk måte å dele på begrensede ressurser. Med IPv6 skulle derimot alle kunne få sin faste IP-adresse, slik man har med telefonnummer, hvis det er ønskelig.Datatilsynet  har uttrykt at dynamiske IP-adresser gir fordeler som kanskje bør videreføres, også når IPv4-begrunnelsen etter hvert bortfaller. Argumentet er todelt: Sammenhengen mellom bruker og IP-adresse bør være dynamisk, og historiske data for den dynamiske sammenhengen bør oppbevares i begrenset tid. Særtrekk ved internettkommunikasjon og IP-adresser brukes i begrunnelsen:- Angrep på en bestemt IP-adresse (for eksempel virusangrep) kan forårsake mye skade.
+- Man legger ofte igjen sin IP-adresse når man leter etter informasjon. Hvis en IP-adresse benyttes av samme person over lang tid, kan sporing av adressen brukes til å kartlegge meninger og preferanser.
+- IP-adresser lagres lenge hos kommunikasjonspartneren, kanskje i årevis – «en digital skygge som aldri forsvinner».
+
+
+== Forvaltning av IP-adresser ==
+Ulike teleoperatører (ISP) får tildelt hver sine nummerserier fra en organisasjon som forvalter samtlige mulige IP-adresser. Operatøren tildeler så en konkret IP-adresse til den enkelte abonnent.  Det fins flere nettsteder hvor man kan søke på en IP-adresse og få oppgitt hvilken nummerserie den tilhører, samt hvilken operatør som innehar denne serien.Telefonnummer forvaltes gjennom en nummerplan underlagt det enkelte lands nasjonale telemyndighet, i Norge Nasjonal kommunikasjonsmyndighet. IP-adresser forvaltes derimot ikke av det enkelte land, men av den ikke-kommersielle organisasjonen ICANN/IANA og de fem Regionale Internett-Registre, kalt RIR. Det RIR som dekker Norge er Amsterdam-baserte RIPE NCC.
+
+
+== IP versjoner ==
+Internettprotokollen har to hovedversjoner i bruk, versjon 4 og versjon 6, forkortet IPv4 og IPv6. Disse to versjonene forventes å eksistere side om side i flere år. De har ulike definisjoner av en IP-adresse. Pr 2011 bruker fremdeles nesten alle IPv4. Derfor betyr som regel «IP-adresse» en IPv4-adresse.
+Norske internett-tilbydere oppgir ulik tidplan for overgangen fra IPv4 til IPv6. Ventelo oppgir å ligge langt fremme på IPv6. Telenor oppgir i mai 2011 at IPv6-forbindelse skal være tilgjengelig i deres nett for alle som ønsker det innen 2013. Post- og teletilsynet har i mars 2011 laget en oversikt over situasjonen. IKT-Norge opprettet i desember 2010 et norsk IPv6-forum for å sette fokus på overgangen.Et system som kan håndtere IPv4 og IPv6 samtidig kalles dual-stack (dobbel protokollstakk).
+
+
+=== IP versjon 4 ===
+Se hovedartikkel om adresseringIPv4 bruker 32-bits (4 byte) adresser, som begrenser adresseområdet til 4 294 967 296 (232) mulige unike adresser. Av disse er mange reservert for spesiell bruk, slikt som private nettverk (~18 millioner adresser) eller multicast adresser (~1 million adresser), noe som spiser av antallet tilgjengelige adresser for bruk på Internett. Ettersom antallet ledige adresser blir mindre og mindre ser det ut til at IP-adresseområdet vil bli brukt opp innen kort tid. Denne utfordringen har hjulpet til med overgangen til IPv6, som er nå er i en tidlig implementasjonsfase og er det eneste gode alternativet til å erstatte IPv4.
+Adressen skrives vanligvis i fire grupper på 8 bits hver, i noen sammenhenger på heksadesimal form. I dagliglivets versjon er hver 8-bit-gruppe konvertert fra binært tallsystem til et desimalt tall (mellom 0 og 255) og skrives med punktum imellom, “dotted decimal notation”. Eksempelvis adressen 127.0.0.1, som er reservert for den lokale verten. Man kan også skrive hele adressen som ett desimalt tall, i dette eksempelet blir tallet 2130706433.
+
+
+=== IP versjon 5 ===
+Det som kan anses som IPv5 eksisterte kun som en eksperimentell sanntids streamingprotokoll (ikke IP) med navnet ST2 og er beskrevet i RFC 1819. I tråd med standard UNIX utgivelsesprotkoll, så er alle oddetallsversjoner ansett som eksperimentelle og denne versjonen var aldri ment for implementasjon og ble derfor forlatt. RSVP har erstattet denne protokollen til en viss grad.
+
+
+=== IP versjon 6 ===
+I den nye (men ikke vidt utbredte) standardprotokollen for Internett, IPv6, er adressene 128 bits lange. De skrives da vanligvis som åtte grupper à fire heksadesimale sifre, adskilt med kolon. Et eksempel er 2001:0500:0088:0200:0000:0000:0000:0010. Denne notasjonen kalles ”colon hexadecimal notation”. Hvis man skulle skrevet IPv6-adresser med samme grupperte desimalnotasjon som i IPv4, “dotted decimal notation”, ville det blitt 16 grupper av (maksimum) 3-sifrede tall i stedet for IPv4s 4 grupper.
+128-bits adresser skal, selv med en generøs tildeling av nettblokker, mer enn holde for den overskuelige framtiden. I teorien gir dette formatet 2128, eller mer enn 3,4 × 1038 unike hostadresser. Det eksakte antallet er 2128 = 340 282 366 920 938 463 463 374 607 431 768 211 456. Dette enorme adressområdet vil bli lite brukt, noe som gjør det mulig å legge inn mer rutinginformasjon i selve adressene.
+
+
+=== IP versjon 6 private adresser ===
+På lik linje med private eller interne nettverk i IPv4 (for eksempel 192.168.0.1 – 192.168.0.254 området), finnes det adresseblokker i IPv6 som er satt av for private adresser. Adresser som begynner med FE:80 til FE:FF (eller «1111 1110 1» som de første ni bitene) er for bruk i private nettverk og skal ikke rutes ut på Internett.
+
+
+== Se også ==
+Network Address Translation (NAT)
+
+
+== Referanser ==

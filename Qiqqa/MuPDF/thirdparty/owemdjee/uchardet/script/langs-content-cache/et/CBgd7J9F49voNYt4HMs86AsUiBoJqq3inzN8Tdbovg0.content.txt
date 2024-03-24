@@ -1,0 +1,38 @@
+revision: 6349397
+title: Plokiahel
+url: https://et.wikipedia.org/wiki/Plokiahel
+
+
+---
+
+Plokiahel (ingl blockchain) on hajusandmebaas, mille andmete uuendamine toimub läbi matemaatilise konsensuse saavutamise algoritmi. Sisuliselt on see kasvav loend kirjetest ehk plokkidest, mis on krüptograafiat kasutades omavahel seotud. Iga plokk sisaldab eelmise krüptograafilist räsi, ajatemplit ning tehingu andmeid.Plokiahel on konstrueeritud tõkestama andmete muutmist. See on "avatud hajusraamat (ingl distributed ledger), mis võimaldab kahe osapoole vahelisi tehinguid tõhusalt, kontrollitavalt ja püsivalt salvestada". Hajusraamatuna haldab plokiahelat üldiselt partnervõrk, mis järgib kollektiivselt sõlmedevahelise kommunikatsiooni protokolli ja valideerib uusi plokke. Ühegi salvestatud ploki andmeid ei saa tagasiulatuvalt muuta ilma kõiki järgnevaid plokke muutmata ja võrgu enamuse konsensust saavutamata.Plokiahela leiutas Satoshi Nakamoto 2008. aastal avaliku arvestusraamatuna krüptorahale bitcoin. Plokiahela loomine bitcoin'ile tegi sellest esimese digitaalse valuuta, mis lahendas nn kordusmakse (ingl double-spending) probleemi selleks usaldusväärset autoriteeti või keskserverit vajamata.Eestis on plokiahelaalased väljatöötused ajalooliselt järgnenud ajatempliteenuse kasutuselevõtule ning sellealase tegevusega on seotud AS Guardtime.
+
+
+== Struktuur ==
+Plokiahel on detsentraliseeritud, hajutatud ja avalik digitaalne arvestusraamat, mida kasutatakse tehingute dokumenteerimiseks läbi paljude arvutite nii, et kirjeid ei ole võimalik tagantjärele muuta ilma kõiki järgnevaid plokke muutmata ja võrgu konsensust saavutamata. See võimaldab osapooltel tehinguid efektiivselt kontrollida ja kinnitada.
+
+
+=== Plokid ===
+Plokid sisaldavad korrektseid tehinguid, mis räsitakse ja kodeeritakse Merkle'i puusse. Igas plokis on krüptograafiline räsi eelmisest plokist, sidudes need omavahel ja moodustades ahela. See iteratiivne protsess tagab iga eelneva ploki terviklikkuse kuni juurplokini välja.
+
+
+==== Plokiaeg ====
+Plokiaeg on keskmine aeg, mis kulub võrgul plokiahelasse uue ploki genereerimiseks. Ploki valmimise ajaks muutuvad selles sisalduvad andmed verifitseeritavaks. Kuna krüptoraha puhul on see ühtlasi tehingu toimumise hetkeks, tähendab lühem plokiaeg kiiremaid tehinguid. Ethereumi plokiajaks on määratud 14–15 sekundit, bitcoin genereerib uue ploki iga 10 minuti tagant.
+
+
+=== Detsentralisatsioon ===
+Salvestades andmeid partnervõrgu kaudu, kõrvaldab plokiahel mitmed andmete keskse säilitamisega seotud ohud. Sellisel plokiahela süsteemil puuduvad tsentraliseeritud haavatavad punktid, mida kräkkerid saaksid ära kasutada. Sarnaselt puudub süsteemis keskne rikkepunkt.
+
+
+== Plokiahelate tüübid ==
+Plokiahela seni parim eestikeelne kirjeldus koos seni puudunud terminoloogiaga on esitatud Riigi Infosüsteemi Ameti tellitud ning AS Cybernetica koostatud järjekordses uuringus sarjast "Krüptograafiliste algoritmide elutsükli uuring". Selles uurimuses jaotatakse plokiahelasüsteemid kolme põhikategooriasse:
+tsentraalsed süsteemid, kus arvestusraamatut haldab keskse teenusena üks juriidiline isik (nt Guardtime'i süsteem);
+loalised hajusraamatud (ingl permissioned ledgers), kus lepingu või muu õigusakti alusel võib teenust osutata mitu fikseeritud osapoolt (nt Ripple, Sovrin);
+loatud hajusraamatud (ingl permissionless ledgers), kus teenuse halduriks võib üldiselt hakata igaüks (nt bitcoin, Ethereum).
+
+
+== Viited ==
+
+
+== Välislingid ==
+Eesti e-teenusega tehti ajalugu: arendajad leidsid viisi ID-kaardi kasutamiseks plokiahelas, Geenius, 25. september 2018

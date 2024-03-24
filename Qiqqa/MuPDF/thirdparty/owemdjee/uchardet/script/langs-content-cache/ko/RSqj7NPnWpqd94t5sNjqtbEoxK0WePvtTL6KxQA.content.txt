@@ -1,0 +1,23 @@
+revision: 32166783
+title: ISO/IEC 8859-8
+url: https://ko.wikipedia.org/wiki/ISO/IEC_8859-8
+
+
+---
+
+ISO/IEC 8859-8(Information technology — 8-bit single-byte coded graphic character sets — Part 8: Latin/Hebrew alphabet)은 ASCII 기반 표준 문자 인코딩의 ISO/IEC 8859 시리즈의 일부이다. 1999년의 ISO/IEC 8859-8:1999가 제2차 버전이자 현재의 판이며, 1988년에 나온 첫 번째 에디션 ISO/IEC 8859-8:1988를 대체한다. 비공식적으로 Latin/Hebrew으로 부른다. ISO/IEC 8859-8는 모든 히브리 문자를 지원하지만 니쿠드(Niqqud)가 존재하지 않는다. IBM은 코드 페이지 916(CCSIDs 916 및 5012)를 여기에 할당하였다. 또, 이 문자 집합은 일부 확장과 함께 이스라엘 표준 SI1311:2002에 채택되었다.
+
+
+== 각주 ==
+
+
+== 외부 링크 ==
+ISO/IEC 8859-8:1999
+Revisions of the ECMA standard:
+《Standard ECMA-121 - 8-Bit Single-Byte Coded Graphics Character Sets - Latin/Hebrew Alphabet》 (PDF) 1판. European Computer Manufacturers Association (ECMA). July 1987. 2017년 2월 15일에 원본 문서 (PDF)에서 보존된 문서. 2016년 2월 15일에 확인함. 
+《Standard ECMA-121 - 8-Bit Single-Byte Coded Graphics Character Sets - Latin/Hebrew Alphabet》 (PDF) 2판. European Computer Manufacturers Association (ECMA). December 2000. 2017년 2월 15일에 원본 문서 (PDF)에서 보존된 문서. 2016년 2월 15일에 확인함.  ([1])
+Israeli Standard SI1311:2002 Archived 2005년 11월 24일 - 웨이백 머신 (Hebrew)
+ISO-IR registrations:
+From ECMA-121:1987 and following ISO/IEC 8859-8:1988: European Computer Manufacturers Association (1987년 7월 31일). 《ISO-IR 138 - Latin/Hebrew Alphabet》 (PDF). Information Technology Standards Commission of Japan (ITSCJ/IPSJ). 2017년 2월 15일에 원본 문서 (PDF)에서 보존된 문서. 2019년 8월 17일에 확인함. 
+Following ISO/IEC 8859-8:1999 and ECMA-121:2000: Standards Institution of Israel (1998년 5월 1일). 《ISO-IR 198 - Latin/Hebrew Alphabet》 (PDF). Information Technology Standards Commission of Japan (ITSCJ/IPSJ). 2017년 2월 15일에 원본 문서 (PDF)에서 보존된 문서. 2017년 2월 15일에 확인함. 
+From SI 1311:2002: Standards Institution of Israel (2004년 7월 20일). 《ISO-IR 234 - Latin/Hebrew character set for 8-bit codes》 (PDF). Information Technology Standards Commission of Japan (ITSCJ/IPSJ). 2017년 2월 15일에 원본 문서 (PDF)에서 보존된 문서. 2017년 2월 15일에 확인함.
