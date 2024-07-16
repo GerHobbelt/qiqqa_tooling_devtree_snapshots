@@ -62,6 +62,7 @@ platform/win32/DebugJava-32
 /Qiqqa/thirdparty/DirScanner/NTFS Find hardlinks or regular files/Release-64/
 /Qiqqa/thirdparty/DirScanner/NTFS ADS Viewer/Debug-64/
 /Qiqqa/thirdparty/DirScanner/NTFS ADS Viewer/Release-64/
+/Qiqqa/MuPDF/platform/win32/lept/demo-data/
 **/x64/Debug/
 **/x64/Release/
 **/x86/Debug/
@@ -131,3 +132,4 @@ Qiqqa/MuPDF/thirdparty/tessdata_best/script/Latin.traineddata
 Qiqqa/MuPDF/thirdparty/tessdata_fast/script/Latin.traineddata
 Qiqqa/MuPDF/thirdparty/tessdata/chi_sim.traineddata
 /Qiqqa/MuPDF/platform/win32/filelist.lst
+
