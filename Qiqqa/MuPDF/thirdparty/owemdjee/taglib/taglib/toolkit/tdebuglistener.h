@@ -56,13 +56,14 @@ namespace TagLib
 
   private:
     class DebugListenerPrivate;
+    TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
     std::unique_ptr<DebugListenerPrivate> d;
   };
 
   /*!
    * Sets the listener that decides how the debug messages are redirected.
    * If the parameter \a listener is null, the previous listener is released
-   * and default stderr listener is restored.
+   * and the default stderr listener is restored.
    *
    * \note The caller is responsible for deleting the previous listener
    * as needed after it is released.

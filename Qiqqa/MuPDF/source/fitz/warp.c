@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -22,10 +22,79 @@
 
 #include "mupdf/fitz.h"
 
+#if FZ_ENABLE_RENDER_CORE 
+
+#include "pixmap-imp.h"
+
 #include <string.h>
 #include <math.h>
 
-#if FZ_ENABLE_RENDER_CORE 
+/* Define TIMINGS to get timing information dumped to stdout. */
+#undef TIMINGS
+
+/* Define WARP_DEBUG to get debugging output (and PNGs saved). Note
+ * that this will affect timings! */
+#define WARP_DEBUG
+
+/* Define WARP_SPEW_DEBUG to get even more debug output (and PNGs). */
+#define WARP_SPEW_DEBUG
+
+/* One reference suggested doing histogram equalisation. */
+#define DO_HISTEQ
+
+/* Define DETECT_DOCUMENT_RGB, and edge detection on RGB documents will
+ * look for edges in just the R,G,B planes as well as the grey plane. */
+#define DETECT_DOCUMENT_RGB
+
+#undef SLOW_INTERPOLATION
+#undef SLOW_WARPING
+
+#ifdef WARP_DEBUG
+#define debug_printf(CTX, FMT, ...) fz_info(CTX, FMT, __VA_ARGS__)
+#else
+#define debug_printf(CTX, FMT, ...) do {} while (0)
+#endif
+
+#if defined(TIMINGS) && defined(_WIN32)
+
+#include "windows.h"
+
+#define MAX_TIMERS 256
+static struct {
+	int started;
+	int stackptr;
+	int stack[MAX_TIMERS];
+	const char *name[MAX_TIMERS];
+	LARGE_INTEGER time[MAX_TIMERS];
+} timer;
+#define START_TIME() \
+	do {\
+		int i = timer.stack[timer.stackptr++] = timer.started++;\
+		QueryPerformanceCounter(&timer.time[i]);\
+	} while (0)
+#define END_TIME(NAME) \
+	do {\
+		LARGE_INTEGER end;\
+		int i;\
+		QueryPerformanceCounter(&end);\
+		i = timer.stack[--timer.stackptr];\
+		timer.time[i].QuadPart = end.QuadPart - timer.time[i].QuadPart;\
+		timer.name[i] = NAME;\
+	} while (0)
+#define DUMP_TIMES() \
+	do {\
+		int i;\
+		LARGE_INTEGER freq;\
+		QueryPerformanceFrequency(&freq);\
+		float f = freq.QuadPart;\
+		for (i = 0; i < timer.started; i++)\
+			debug_printf(ctx, "%s: %g\n", timer.name[i], (int)1000*timer.time[i].QuadPart/f);\
+	} while (0)
+#else
+#define START_TIME() do {} while(0)
+#define END_TIME(NAME) do {} while(0)
+#define DUMP_TIMES() do {} while(0)
+#endif
 
 typedef struct
 {
@@ -69,8 +138,10 @@ init_bresenham_core(int start, int end, int n)
 	fz_bresenham_core b;
 	int delta = end-start;
 
-	b.di = n == 0 ? 0 : delta/(n-1);
-	b.df = delta - (n-1)*b.di; /* 0 <= b.df < n */
+	b.di = n == 0 ? 0 : delta/n;
+	b.df = delta - n*b.di; /* 0 <= b.df < n */
+	if (b.df < 0)
+		b.di--, b.df += n;
 	/* Starts with bi.i = start, bi.f = n, and then does a half
 	 * step. */
 	b.i = start + (b.di>>1);
@@ -130,12 +201,12 @@ step_ip(fz_ipoint_bresenham *b)
 }
 
 static inline fz_ipoint
-current_ip(const fz_ipoint_bresenham b)
+current_ip(const fz_ipoint_bresenham *b)
 {
 	fz_ipoint ip;
 
-	ip.x = b.x.i;
-	ip.y = b.y.i;
+	ip.x = b->x.i;
+	ip.y = b->y.i;
 
 	return ip;
 }
@@ -237,6 +308,28 @@ copy_pixel(unsigned char *d, const fz_pixmap *src, fz_ipoint p)
 		v = src->h-1, fv = 0;
 
 	s = &src->samples[u * n + v * stride];
+
+#ifdef SLOW_INTERPOLATION
+	{
+		int i;
+
+		for (i = 0; i < n; i++)
+		{
+			int v0 = s[0];
+			int v1 = s[n];
+			int v2 = s[stride];
+			int v3 = s[stride+n];
+			int v01, v23, v;
+			v01 = (v0<<8) + (v1-v0)*fu;
+			v23 = (v2<<8) + (v3-v2)*fu;
+			v   = (v01<<8) + (v23-v01)*fv;
+			assert(v >= 0 && v < (1<<24)-32768);
+			*d++ = (v + 32768)>>16;
+			s++;
+		}
+		return;
+	}
+#else
 	if (fu == 0)
 	{
 		if (fv == 0)
@@ -259,13 +352,14 @@ copy_pixel(unsigned char *d, const fz_pixmap *src, fz_ipoint p)
 	if (fu <= fv)
 	{
 		/* Top half of the trapezoid. */
-		interp2_n(d, s, s+n, s+stride, fu, fv, n);
+		interp2_n(d, s, s+stride, s+stride+n, fv, fu, n);
 	}
 	else
 	{
 		/* Bottom half of the trapezoid. */
-		interp2_n(d, s+n, s+stride, s+stride+n, fv, fu, n);
+		interp2_n(d, s, s+n, s+stride+n, fu, fv, n);
 	}
+#endif
 }
 
 static void
@@ -277,22 +371,43 @@ warp_core(unsigned char *d, int n, int width, int height, int stride,
 
 	/* We have a bresenham pair for how to move the start
 	 * and end of the row each y step. */
-	row_bres = init_ip2_bresenham(corner[0], corner[2],
-					corner[1], corner[3], height);
+	row_bres = init_ip2_bresenham(corner[0], corner[3],
+					corner[1], corner[2], height);
 	stride -= width * n;
 
+#ifdef SLOW_WARPING
+	{
+		int h;
+		for (h = 0 ; h < height ; h++)
+		{
+			int sx = corner[0].x + (corner[3].x - corner[0].x)*h/height;
+			int sy = corner[0].y + (corner[3].y - corner[0].y)*h/height;
+			int ex = corner[1].x + (corner[2].x - corner[1].x)*h/height;
+			int ey = corner[1].y + (corner[2].y - corner[1].y)*h/height;
+			for (x = 0; x < width; x++)
+			{
+				fz_ipoint p;
+				p.x = sx + (ex-sx)*x/width;
+				p.y = sy + (ey-sy)*x/width;
+				copy_pixel(d, src, p);
+				d += n;
+			}
+			d += stride;
+		}
+	}
+#else
 	for (; height > 0; height--)
 	{
 		/* We have a bresenham for how to move the
 		 * current pixel across the row. */
 		fz_ipoint_bresenham pix_bres;
-			pix_bres = init_ip_bresenham(start_ip(&row_bres),
+		pix_bres = init_ip_bresenham(start_ip(&row_bres),
 					end_ip(&row_bres),
 					width);
 		for (x = width; x > 0; x--)
 		{
 			/* Copy pixel */
-			copy_pixel(d, src, current_ip(pix_bres));
+			copy_pixel(d, src, current_ip(&pix_bres));
 			d += n;
 			step_ip(&pix_bres);
 		}
@@ -301,6 +416,7 @@ warp_core(unsigned char *d, int n, int width, int height, int stride,
 		step_ip2(&row_bres);
 		d += stride;
 	}
+#endif
 }
 
 /*
@@ -335,10 +451,10 @@ fz_warp_pixmap(fz_context *ctx, fz_pixmap *src, const fz_point points[4], int wi
 		corner[0].y = (int)(points[0].y * 256 + 128);
 		corner[1].x = (int)(points[1].x * 256 + 128);
 		corner[1].y = (int)(points[1].y * 256 + 128);
-		corner[2].x = (int)(points[3].x * 256 + 128);
-		corner[2].y = (int)(points[3].y * 256 + 128);
-		corner[3].x = (int)(points[2].x * 256 + 128);
-		corner[3].y = (int)(points[2].y * 256 + 128);
+		corner[2].x = (int)(points[2].x * 256 + 128);
+		corner[2].y = (int)(points[2].y * 256 + 128);
+		corner[3].x = (int)(points[3].x * 256 + 128);
+		corner[3].y = (int)(points[3].y * 256 + 128);
 
 		warp_core(d, n, width, height, width * n, corner, src);
 	}
@@ -447,8 +563,11 @@ fz_autowarp_pixmap(fz_context *ctx, fz_pixmap *src, const fz_point points[4])
 	* * Edge tracking by Hysteresis
 	* Hough Transform to fix possible edges
 	* Computing intersections and scoring quads
+
+	We modify the gradient calculation with a simple scale to ensure we fill the range.
 */
 
+#ifdef DO_HISTEQ
 static void
 histeq(fz_pixmap *im)
 {
@@ -481,6 +600,7 @@ histeq(fz_pixmap *im)
 	for (i = n; i > 0; i--)
 		*s = tbl[*s], s++;
 }
+#endif
 
 /* The first functions apply a 5x5 gauss filter to blur the greyscale
  * image and remove noise. The gauss filter is a convolution with
@@ -571,12 +691,14 @@ gauss5x5(fz_context *ctx, fz_pixmap *src)
 {
 	int w = src->w;
 	int h = src->h;
-	uint16_t *buf = fz_malloc(ctx, w*3*5 * sizeof(uint16_t));
+	uint16_t *buf;
 	unsigned char *s = src->samples;
 	int y;
 
 	if (w < 5 || h < 5)
 		fz_throw(ctx, FZ_ERROR_GENERIC, "Pixmap too small");
+
+	buf = fz_malloc(ctx, w*3*5 * sizeof(uint16_t));
 
 	gauss5row(&buf[0*3*w], &s[0*w], w);
 	gauss5row(&buf[1*3*w], &s[1*w], w);
@@ -584,7 +706,7 @@ gauss5x5(fz_context *ctx, fz_pixmap *src)
 	memcpy(&buf[4*3*w], buf, w*3 * sizeof(uint16_t)); /* row -1 */
 	for (y = 2; y < h; y++)
 	{
-		gauss5row(&buf[((y*3)%15)*w], &s[2*w], w);
+		gauss5row(&buf[(y%5)*3*w], &s[2*w], w);
 
 		gauss5col(s, buf, y-2, w);
 		s += w;
@@ -599,6 +721,7 @@ gauss5x5(fz_context *ctx, fz_pixmap *src)
 	fz_free(ctx, buf);
 }
 
+#ifdef DETECT_DOCUMENT_RGB
 /* Variant of the above that works on a single plane from rgb data */
 static void
 gauss5row3(uint16_t *d, const unsigned char *s, int w)
@@ -647,13 +770,15 @@ gauss5x5_3(fz_context *ctx, fz_pixmap *dst, const fz_pixmap *src, int comp)
 {
 	int w = src->w;
 	int h = src->h;
-	uint16_t *buf = fz_malloc(ctx, w*3*5 * sizeof(uint16_t));
+	uint16_t *buf;
 	unsigned char *s = src->samples + comp;
 	unsigned char *d = dst->samples;
 	int y;
 
 	if (w < 5 || h < 5)
 		fz_throw(ctx, FZ_ERROR_GENERIC, "Pixmap too small");
+
+	buf = fz_malloc(ctx, w*3*5 * sizeof(uint16_t));
 
 	gauss5row3(&buf[0*3*w], s, w);
 	s += w*3;
@@ -678,6 +803,7 @@ gauss5x5_3(fz_context *ctx, fz_pixmap *dst, const fz_pixmap *src, int comp)
 
 	fz_free(ctx, buf);
 }
+#endif  // DETECT_DOCUMENT_RGB
 
 /* The next set of functions perform the gradient calculation.
  * We convolve with Sobel kernels Kx and Ky respectively:
@@ -698,6 +824,117 @@ gauss5x5_3(fz_context *ctx, fz_pixmap *dst, const fz_pixmap *src, int comp)
  * encoded back into the original image storage using the 2 bottom bits
  * for direction, and the top 6 bits for magnitude.
  */
+
+static void
+pregradrow(int16_t *d, const unsigned char *s, int w)
+{
+	int i;
+	unsigned char s0 = *s++;
+	unsigned char s1 = *s++;
+
+	d[w] = 3*s0 + s1;
+	*d++ = s1 - s0;
+	for (i = w-2; i > 0; i--)
+	{
+		int s2 = *s++;
+		d[w] = s0 + 2*s1 + s2;
+		*d++ = s2 - s0;
+		s0 = s1;
+		s1 = s2;
+	}
+	d[w] = s0 + 3*s1;
+	*d   = s1 - s0;
+}
+
+static void
+pregradcol(unsigned char *d, const int16_t *buf, int y, int w, uint32_t *max)
+{
+	const int16_t *s0 = &buf[((y+2)%3)*w*2];
+	const int16_t *s1 = &buf[((y  )%3)*w*2];
+	const int16_t *s2 = &buf[((y+1)%3)*w*2];
+	int i;
+
+	for (i = w; i > 0; i--)
+	{
+		int y = s0[w] - s2[w];
+		int x = *s0++ + 2 * *s1++ + *s2++;
+		uint32_t ax = x >= 0 ? x : -x;
+		uint32_t ay = y >= 0 ? y : -y;
+		uint32_t mag;
+		/* x and y are now both in the range -1020..1020 */
+		/* Now we calculate slope and gradient.
+		 *   angle = atan2(y, x);
+		 *   intensity = hypot(x, y);
+		 * But wait, we don't need that accuracy. We only need
+		 * to distinguish 4 directions...
+		 *
+		 * -22.5 < angle <=  22.5 = 0
+		 *  22.5 < angle <=  67.5 = 1
+		 *  67.5 < angle <= 112.5 = 2
+		 * 115.5 < angle <= 157.5 = 3
+		 * (and the reflections)
+		 *
+		 * 7 0 1   (x positive right, y positive downwards)
+		 * 6 * 2
+		 * 5 4 3
+		 *
+		 * tan(22.5)*65536 = 27146.
+		 * And for magnitude, we consider the magnitude just
+		 * along the 8 directions we've picked. So
+		 * 65536/SQR(2) = 46341.
+		 * We want magnitude in the 0...63 range.
+		 */
+		if (ax<<16 < 27146*ay)
+		{
+			/* angle = 0 */
+			mag = ay<<16; /* 0 to 1020<<16 */
+		}
+		else if (ay<<16 < ax*27146)
+		{
+			/* angle = 2 */
+			mag = ax<<16; /* 0 to 1020<<16 */
+		}
+		else
+		{
+			/* angle = 1 or 3 */
+			mag = (46341*(ax+ay));
+		}
+		if (mag > *max)
+			*max = mag;
+	}
+}
+
+static uint32_t
+pregrad(fz_context *ctx, fz_pixmap *src)
+{
+	int w = src->w;
+	int h = src->h;
+	unsigned char *s = src->samples;
+	int16_t *buf = fz_malloc(ctx, w*2*3*sizeof(int16_t));
+	int y;
+	uint32_t max = 0;
+
+	pregradrow(buf, s, w); /* Line 0 */
+	memcpy(&buf[w*2*2], buf, w*2*sizeof(int16_t)); /* Line 1 */
+	s += w;
+	for (y = 1; y < h-1; y++)
+	{
+		pregradrow(&buf[(y%3)*w*2], s, w);
+		pregradcol(s-w, buf, y-1, w, &max);
+		s += w;
+	}
+	memcpy(&buf[((y+1)%3)*w*2], &buf[(y%3)*w*2], w*2*sizeof(int16_t)); /* Line h */
+	pregradcol(s-w, buf, h-2, w, &max);
+	pregradcol(s, buf, h-1, w, &max);
+
+	fz_free(ctx, buf);
+
+	if (max == 0)
+		return 1;
+	else
+		return 0x7FFFFFFFU/max;
+}
+
 
 static void
 gradrow(int16_t *d, const unsigned char *s, int w)
@@ -721,7 +958,7 @@ gradrow(int16_t *d, const unsigned char *s, int w)
 }
 
 static void
-gradcol(unsigned char *d, const int16_t *buf, int y, int w)
+gradcol(unsigned char *d, const int16_t *buf, int y, int w, int scale)
 {
 	const int16_t *s0 = &buf[((y+2)%3)*w*2];
 	const int16_t *s1 = &buf[((y  )%3)*w*2];
@@ -732,9 +969,10 @@ gradcol(unsigned char *d, const int16_t *buf, int y, int w)
 	{
 		int y = s0[w] - s2[w];
 		int x = *s0++ + 2 * *s1++ + *s2++;
-		int ax = x >= 0 ? x : -x;
-		int ay = y >= 0 ? y : -y;
-		int angle, mag;
+		uint32_t ax = x >= 0 ? x : -x;
+		uint32_t ay = y >= 0 ? y : -y;
+		int angle;
+		uint32_t mag, scaled;
 		/* x and y are now both in the range -1020..1020 */
 		/* Now we calculate slope and gradient.
 		 *   angle = atan2(y, x);
@@ -761,25 +999,27 @@ gradcol(unsigned char *d, const int16_t *buf, int y, int w)
 		if (ax<<16 < 27146*ay)
 		{
 			angle = 0;
-			mag = ay>>4; /* 0 to 63 */
+			mag = ay<<16; /* 0 to 1020<<16 */
 		}
 		else if (ay<<16 < ax*27146)
 		{
 			angle = 2;
-			mag = ax>>4; /* 0 to 63 */
+			mag = ax<<16; /* 0 to 1020<<16 */
 		}
 		else
 		{
 			/* 1 or 3 */
-			angle = y >= 0 ? 3 : 1;
-			mag = (46341*(ax+ay)) >> 20;
+			angle = (x^y) >= 0 ? 3 : 1;
+			mag = (46341*(ax+ay));
 		}
-		*d++ = (mag<<2) | angle;
+		scaled = (mag * scale)>>25;
+		assert(scaled >= 0 && scaled <= 63);
+		*d++ = (scaled<<2) | angle;
 	}
 }
 
 static void
-grad(fz_context *ctx, fz_pixmap *src)
+grad(fz_context *ctx, fz_pixmap *src, uint32_t scale)
 {
 	int w = src->w;
 	int h = src->h;
@@ -793,15 +1033,17 @@ grad(fz_context *ctx, fz_pixmap *src)
 	for (y = 1; y < h-1; y++)
 	{
 		gradrow(&buf[(y%3)*w*2], s, w);
-		gradcol(s, buf, y-1, w);
+		gradcol(s-w, buf, y-1, w, scale);
 		s += w;
 	}
 	memcpy(&buf[((y+1)%3)*w*2], &buf[(y%3)*w*2], w*2*sizeof(int16_t)); /* Line h */
-	gradcol(s, buf, y-1, w);
+	gradcol(s-w, buf, h-2, w, scale);
+	gradcol(s, buf, h-1, w, scale);
 
 	fz_free(ctx, buf);
 }
 
+#ifdef DETECT_DOCUMENT_RGB
 static void
 combine_grad(fz_pixmap *grey, const fz_pixmap *r, const fz_pixmap *g, const fz_pixmap *b)
 {
@@ -825,6 +1067,7 @@ combine_grad(fz_pixmap *grey, const fz_pixmap *r, const fz_pixmap *g, const fz_p
 			sd[-1] = vg;
 	}
 }
+#endif
 
 /* Next, we perform Non-Maximum Suppression and Double Thresholding,
  * both in the same phase.
@@ -835,19 +1078,27 @@ combine_grad(fz_pixmap *grey, const fz_pixmap *r, const fz_pixmap *g, const fz_p
  * then this pixel is discarded. If not, we classify ourself as either
  * 'strong' or 'weak'.
  */
-#define WEAK_THRESHOLD ((int)(0.05 * 63 + 0.5))
-#define STRONG_THRESHOLD ((int)(0.09 * 63 + 0.5))
 #define WEAK_EDGE 64
 #define STRONG_EDGE 128
 static void
-nonmax(fz_context *ctx, fz_pixmap *src)
+nonmax(fz_context *ctx, fz_pixmap *dst, const fz_pixmap *src, int pass)
 {
 	int w = src->w;
 	int h = src->h;
-	unsigned char *s0 = src->samples;
-	unsigned char *s1 = s0;
-	unsigned char *s2 = s0+w;
+	const unsigned char *s0 = src->samples;
+	const unsigned char *s1 = s0;
+	const unsigned char *s2 = s0+w;
+	unsigned char *d = dst->samples;
 	int x, y;
+	/* thresholds are in the 0 to 63 range.
+	 * WEAK is typically 0.1ish, STRONG 0.3ish
+	 */
+	int weak = 6 - pass;
+	int strong = 12 - pass*2;
+
+	/* On entry, pixels have the angle in the bottom 2 bits and the magnitude in the rest. */
+	/* On exit, strong pixels have bit 7 set, weak pixels have bit 6, others are 0.
+	 * strong and weak pixels have the angle in bits 4 and 5. */
 
 	for (y = h-1; y >= 0;)
 	{
@@ -857,10 +1108,10 @@ nonmax(fz_context *ctx, fz_pixmap *src)
 		int q, r;
 
 		/* Pixel 0 */
-		if (mag <= WEAK_THRESHOLD)
+		if (mag <= weak)
 		{
 			/* Not even a weak edge. We'll never keep it. */
-			s1[-1] = 0;
+			*d++ = 0;
 			s0++;
 			s2++;
 		}
@@ -895,17 +1146,17 @@ nonmax(fz_context *ctx, fz_pixmap *src)
 			{
 				/* Neighouring edges are stronger.
 				 * Lose this one. */
-				s1[-1] = 0;
+				*d++ = 0;
 			}
-			else if (mag < STRONG_THRESHOLD)
+			else if (mag < strong)
 			{
 				/* Weak edge. */
-				s1[-1] = WEAK_EDGE | (ang<<4);
+				*d++ = WEAK_EDGE | (ang<<4);
 			}
 			else
 			{
 				/* Strong edge */
-				s1[-1] = STRONG_EDGE | (ang<<4);
+				*d++ = STRONG_EDGE | (ang<<4);
 			}
 		}
 		lastmag = mag;
@@ -914,10 +1165,10 @@ nonmax(fz_context *ctx, fz_pixmap *src)
 			int ang = *s1++;
 			int mag = ang>>2;
 			int q, r;
-			if (mag <= WEAK_THRESHOLD)
+			if (mag <= weak)
 			{
 				/* Not even a weak edge. We'll never keep it. */
-				s1[-1] = 0;
+				*d++ = 0;
 				s0++;
 				s2++;
 			}
@@ -950,17 +1201,17 @@ nonmax(fz_context *ctx, fz_pixmap *src)
 				{
 					/* Neighouring edges are stronger.
 					 * Lose this one. */
-					s1[-1] = 0;
+					*d++ = 0;
 				}
-				else if (mag < STRONG_THRESHOLD)
+				else if (mag < strong)
 				{
 					/* Weak edge. */
-					s1[-1] = WEAK_EDGE | (ang<<4);
+					*d++ = WEAK_EDGE | (ang<<4);
 				}
 				else
 				{
 					/* Strong edge */
-					s1[-1] = STRONG_EDGE | (ang<<4);
+					*d++ = STRONG_EDGE | (ang<<4);
 				}
 			}
 			lastmag = mag;
@@ -968,10 +1219,10 @@ nonmax(fz_context *ctx, fz_pixmap *src)
 		/* Pixel w-1 */
 		ang = *s1++;
 		mag = ang>>2;
-		if (mag <= WEAK_THRESHOLD)
+		if (mag <= weak)
 		{
 			/* Not even a weak edge. We'll never keep it. */
-			s1[-1] = 0;
+			*d++ = 0;
 			s0++;
 			s2++;
 			lastmag = 0;
@@ -1007,17 +1258,17 @@ nonmax(fz_context *ctx, fz_pixmap *src)
 			{
 				/* Neighouring edges are stronger.
 				 * Lose this one. */
-				s1[-1] = 0;
+				*d++ = 0;
 			}
-			else if (mag < STRONG_THRESHOLD)
+			else if (mag < strong)
 			{
 				/* Weak edge. */
-				s1[-1] = WEAK_EDGE | (ang<<4);
+				*d++ = WEAK_EDGE | (ang<<4);
 			}
 			else
 			{
 				/* Strong edge */
-				s1[-1] = STRONG_EDGE | (ang<<4);
+				*d++ = STRONG_EDGE | (ang<<4);
 			}
 		}
 		s0 = s1-w;
@@ -1034,7 +1285,7 @@ nonmax(fz_context *ctx, fz_pixmap *src)
  * the angle is in bits 4 and 5, everything else is 0.
  *
  * We walk the rows of the image, and for each pixel we set bit 0 to be
- * the logical OR of all bit 7's of itself, and it's horizontally
+ * the logical OR of all bit 7's of itself, and its horizontally
  * neighbouring pixels.
  *
  * Once we have done the first 2 rows like that, we can combine the
@@ -1058,6 +1309,9 @@ hysteresis(fz_context *ctx, fz_pixmap *src)
 	unsigned char v0, v1, v2, r0, r1, r2;
 	int x, y;
 
+	/* On entry, strong pixels have bit 7 set, weak pixels have bit 6, others are 0.
+	 * strong and weak pixels have the angle in bits 4 and 5. */
+
 	/* We make the bottom bit in every pixel be 1 iff the pixel
 	 * or the ones to either side of it are 'strong'. */
 
@@ -1076,6 +1330,7 @@ hysteresis(fz_context *ctx, fz_pixmap *src)
 	}
 	/* Pixel w-1 */
 	s0[-1] = v1 | ((v0 | v1)>>7);
+	assert(s0 == src->samples + w);
 
 	/* Second row - do the "bottom bit" for the second row, and
 	 * perform hysteresis on the top row. */
@@ -1105,6 +1360,7 @@ hysteresis(fz_context *ctx, fz_pixmap *src)
 	r1 = *s1++;
 	if ((r1>>6) & (r0 | r1))
 		s1[-1] |= 128;
+	assert(s0 == s1 + w);
 
 	/* Now we get into the swing of things. We do the "bottom bit"
 	 * for row n+1, and do the actual processing for row n. */
@@ -1139,6 +1395,8 @@ hysteresis(fz_context *ctx, fz_pixmap *src)
 		r2 = *s2++;
 		if ((r1>>6) & (r0 | r1 | r2))
 			s1[-1] |= 128;
+		assert(s0 == s1 + w);
+		assert(s1 == s2 + w);
 	}
 
 	/* Final 2 rows together */
@@ -1176,6 +1434,7 @@ hysteresis(fz_context *ctx, fz_pixmap *src)
 		s0[-1] |= 128;
 }
 
+#ifdef WARP_DEBUG
 /* A simple function to keep just bit 7 of the image. This 'cleans' the
  * pixmap so that a grey version can be saved out for visual checking. */
 static void
@@ -1188,10 +1447,77 @@ clean(fz_context *ctx, fz_pixmap *src)
 	for (w = w*h; w > 0; w--)
 		*s = *s & 128, s++;
 }
+#endif
+
+#define SINTABLE_SHIFT 14
+static int16_t sintable[270];
+#define costable (&sintable[90])
 
 #ifndef M_PI
 #define M_PI    3.14159265358979323846264338327950
 #endif
+
+/* We have collected an array of edge data.
+ * For each pixel, we know whether there is a 'strong' edge
+ * there, and if so, in which of 4 directions it runs.
+ *
+ * We want to convert this into hough space.
+ *
+ * The literature describes points in Hough space as having the
+ * form (r, theta). The value of any given point point in hough
+ * space is the "strength" of the line described by:
+ *   x.cos(theta) + y.sin(theta) = r
+ *
+ *  |     \
+ *  |     /\
+ *  |    /\/\
+ *  |  r/    \
+ *  |  /      \
+ *  | /        \
+ *  |/theta     \
+ * -+--------------
+ *
+ * i.e. r is the shortest distance from the origin to the line,
+ * and theta gives us the angle of that shortest line.
+ *
+ * But, we are using angles of theta from the vertical, so we need
+ * a different formulation:
+ *
+ *  |     \
+ *  |     /\
+ *  |    /\/\
+ *  |  r/    \  t = theta
+ *  |  /      \
+ *  |t/        \
+ *  |/          \
+ * -+--------------
+ *
+ * So we're using 90-theta. cos(90-theta) = sin(theta),
+ * and sin(90-theta) = cos(theta).
+ *
+ * So: x.sin(theta) + y.cos(theta) = r (for theta measured
+ * clockwise from the y axis).
+ *
+ * We've been collecting angles according to their position in one
+ * of 4 octants:
+ *
+ * Ang 0 = close to a horizontal edge (-22.5 to 22.5 degrees)
+ * Ang 1 = close to diagonal edge (top left to bottom right) (22.5 to 67.5 degrees)
+ * Ang 2 = close to a vertical edge (67.5 to 112.5 degrees)
+ * Ang 3 = close to diagonal edge (bottom left to top right) (112.5 to 157.5 degrees)
+ *
+ * The other 4 octants mirror onto these.
+ *
+ * So, for each point in our (x,y) pixmap we whether we have a strong
+ * pixel or not. If we have such a pixel, then we know that an edge
+ * passes through that point, and which of those 4 octants it is in.
+ *
+ * We therefore consider all the possible angles within that octant,
+ * and add a 'vote' for each of those lines into our hough transformed
+ * space.
+ */
+
+
 static void
 mark_hough(uint32_t *d, int x, int y, int maxlen, int reduce, int ang)
 {
@@ -1201,24 +1527,27 @@ mark_hough(uint32_t *d, int x, int y, int maxlen, int reduce, int ang)
 
 	switch (ang)
 	{
+		/* The angles are really 22.5, 67.5 etc, but we are working in ints
+		 * and specifying maxang as the first one greater than the one we
+		 * want to mark. */
 		default:
 		case 0:
 			/* Vertical boundary. Lines through this boundary
 			 * go horizontally. So the perpendicular to them
 			 * is vertical. */
-			minang = 0; maxang = 22;
+			minang = 0; maxang = 23;
 			break;
 		case 1:
 			/* NE boundary */
-			minang = 22; maxang = 67;
+			minang = 23; maxang = 68;
 			break;
 		case 2:
 			/* Horizontal boundary. */
-			minang = 67; maxang = 112;
+			minang = 68; maxang = 113;
 			break;
 		case 3:
 			/* SE boundary */
-			minang = 112; maxang = 157;
+			minang = 113; maxang = 158;
 			break;
 		case 4:
 			/* For debugging: */
@@ -1231,9 +1560,8 @@ mark_hough(uint32_t *d, int x, int y, int maxlen, int reduce, int ang)
 	{
 		for (theta = minang; theta < maxang; theta++)
 		{
-			float thetarad = (theta-90)*M_PI/180.0f;
-			float p = x*cosf(thetarad) + y*sinf(thetarad);
-			int v = (int)(maxlen + p + 0.5f)>>reduce;
+			int p = (x*sintable[theta] + y*costable[theta])>>SINTABLE_SHIFT;
+			int v = (maxlen + p)>>reduce;
 
 			d[v]++;
 			d += stride;
@@ -1241,10 +1569,69 @@ mark_hough(uint32_t *d, int x, int y, int maxlen, int reduce, int ang)
 		if (ang != 0)
 			break;
 		ang = 4;
-		minang = 157;
+		minang = 158;
 		d += (minang - maxang) * stride;
 		maxang = 180;
 	}
+}
+
+#ifdef WARP_DEBUG
+static void
+save_hough_debug(fz_context *ctx, uint32_t *hough, int stride)
+{
+	uint32_t scale;
+	uint32_t maxval;
+	uint32_t *p;
+	int y;
+	fz_pixmap *dst = fz_new_pixmap(ctx, NULL, stride, 180, NULL, 0);
+	unsigned char *d = dst->samples;
+	/* Make the image of the hough space (for debugging) */
+	maxval = 1; /* Avoid possible division by zero */
+	p = hough;
+	for (y = 180*stride; y > 0; y--)
+	{
+		uint32_t v = *p++;
+		if (v > maxval)
+			maxval = v;
+	}
+
+	scale = 0xFFFFFFFFU/maxval;
+	p = hough;
+	for (y = 180*stride; y > 0; y--)
+	{
+		*d++ = (scale * *p++)>>24;
+	}
+	fz_save_pixmap_as_png(ctx, dst, "hough.png");
+	fz_drop_pixmap(ctx, dst);
+}
+#endif
+
+static uint32_t *do_hough(fz_context *ctx, const fz_pixmap *src, int stride, int maxlen, int reduce)
+{
+	int w = src->w;
+	int h = src->h;
+	int x, y;
+	const unsigned char *s = src->samples;
+	uint32_t *hough = fz_calloc(ctx, sizeof(uint32_t), 180*stride);
+
+	START_TIME();
+	/* Construct the hough space representation. */
+	for (y = 0; y < h; y++)
+	{
+		for (x = 0; x < w; x++)
+		{
+			unsigned char v = *s++;
+			if (v & 128)
+				mark_hough(hough, x, y, maxlen, reduce, (v>>4)&3);
+		}
+	}
+	END_TIME("Building hough");
+
+#ifdef WARP_DEBUG
+	save_hough_debug(ctx, hough, stride);
+#endif
+
+	return hough;
 }
 
 typedef struct
@@ -1263,8 +1650,8 @@ typedef struct
 	int e0;
 	int e1;
 	int score;
-	int x;
-	int y;
+	float x;
+	float y;
 } hough_point_t;
 
 static int
@@ -1337,7 +1724,8 @@ typedef struct
 static void
 score_corner(hough_point_t *points, hough_route_t *route, int p0, int *score, int *sign)
 {
-	int x0, x1, x2, y0, y1, y2, ux, uy, vx, vy, dot, s, len;
+	float x0, x1, x2, y0, y1, y2, ux, uy, vx, vy, dot;
+	int s, len;
 	float costheta;
 
 	/* If we've already decided this is duff, then bale. */
@@ -1376,6 +1764,11 @@ score_corner(hough_point_t *points, hough_route_t *route, int p0, int *score, in
 	costheta = dot / (float)len;
 	if (costheta < 0)
 		costheta = -costheta;
+	if (costheta < 0.7)
+	{
+		*score = -1;
+		return;
+	}
 	costheta *= costheta;
 
 	*score += points[route->point[(p0+1)%3]].score * costheta;
@@ -1402,38 +1795,27 @@ score_route(hough_point_t *points, hough_route_t *route)
 static float
 score_by_area(const hough_point_t *points, const hough_route_t *route)
 {
-	int minx = points[route->point[0]].x;
-	int miny = points[route->point[0]].y;
-	int maxx = minx;
-	int maxy = miny;
+	float double_area_of_quad =
+		points[route->point[0]].x * points[route->point[1]].y +
+		points[route->point[1]].x * points[route->point[2]].y +
+		points[route->point[2]].x * points[route->point[3]].y +
+		points[route->point[3]].x * points[route->point[0]].y -
+		points[route->point[1]].x * points[route->point[0]].y -
+		points[route->point[2]].x * points[route->point[1]].y -
+		points[route->point[3]].x * points[route->point[2]].y -
+		points[route->point[0]].x * points[route->point[3]].y;
+	float double_area = route->w * (float)route->h * 2;
+	if (double_area_of_quad < 0)
+		double_area_of_quad = -double_area_of_quad;
+	/* Anything larger than a quarter of the screen is acceptable. */
+	if (double_area_of_quad*4 > double_area)
+		return 1;
+	/* Anything smaller than a 16th of the screen is unacceptable in all circumstances. */
+	if (double_area_of_quad*16 < double_area)
+		return 0;
 
-	if (minx > points[route->point[1]].x)
-		minx = points[route->point[1]].x;
-	else if (maxx < points[route->point[1]].x)
-		maxx = points[route->point[1]].x;
-	if (minx > points[route->point[2]].x)
-		minx = points[route->point[2]].x;
-	else if (maxx < points[route->point[2]].x)
-		maxx = points[route->point[2]].x;
-	if (minx > points[route->point[3]].x)
-		minx = points[route->point[3]].x;
-	else if (maxx < points[route->point[3]].x)
-		maxx = points[route->point[3]].x;
-	if (miny > points[route->point[1]].y)
-		miny = points[route->point[1]].y;
-	else if (maxy < points[route->point[1]].y)
-		maxy = points[route->point[1]].y;
-	if (miny > points[route->point[2]].y)
-		miny = points[route->point[2]].y;
-	else if (maxy < points[route->point[2]].y)
-		maxy = points[route->point[2]].y;
-	if (miny > points[route->point[3]].y)
-		miny = points[route->point[3]].y;
-	else if (maxy < points[route->point[3]].y)
-		maxy = points[route->point[3]].y;
-
-
-	return (maxx-minx)*(maxy-miny)/(float)route->w/route->h;
+	/* Otherwise, scale the score down by how much it's less than a quarter of the screen. */
+	return (double_area_of_quad*4)/double_area;
 }
 
 /* The first n+1 edges of the route are filled in, as are rhe first n
@@ -1442,7 +1824,7 @@ score_by_area(const hough_point_t *points, const hough_route_t *route)
  * 2*i+1 = point number
  */
 static void
-find_route(fz_context* ctx, hough_point_t *points, int num_points, hough_route_t *route, int n)
+find_route(fz_context *ctx, hough_point_t *points, int num_points, hough_route_t *route, int n)
 {
 	int i;
 
@@ -1479,7 +1861,7 @@ find_route(fz_context* ctx, hough_point_t *points, int num_points, hough_route_t
 			if (score > 0)
 				score *= score_by_area(points, route);
 
-			fz_info(ctx, "Found route: (point=%d %d %d %d) (edge %d %d %d %d) score=%d\n",
+			debug_printf(ctx, "Found route: (point=%d %d %d %d) (edge %d %d %d %d) score=%d\n",
 				route->point[0], route->point[1], route->point[2], route->point[3],
 				route->edge[0], route->edge[1], route->edge[2], route->edge[3],
 				score);
@@ -1516,20 +1898,14 @@ find_route(fz_context* ctx, hough_point_t *points, int num_points, hough_route_t
 #define MAX_EDGES 32
 #define BLOT_ANG 10
 #define BLOT_DIS 10
-static fz_pixmap *
-make_hough(fz_context *ctx, fz_pixmap *src)
+static int
+make_hough(fz_context *ctx, const fz_pixmap *src, fz_point *corners)
 {
 	int w = src->w;
 	int h = src->h;
 	int maxlen = (int)(sqrtf(w*w + h*h) + 0.5);
 	uint32_t *hough;
-	fz_pixmap *dst;
-	const unsigned char *s = src->samples;
-	unsigned char *d;
 	int x, y;
-	uint32_t maxval;
-	uint32_t *p;
-	uint32_t scale;
 	int reduce;
 	int stride;
 	hough_edge_t edge[MAX_EDGES];
@@ -1537,43 +1913,23 @@ make_hough(fz_context *ctx, fz_pixmap *src)
 	hough_route_t route;
 	int num_edges, num_points;
 
+	/* costable could (should) be statically inited. */
+	{
+		int i;
+		for (i = 0; i < 270; i++)
+		{
+			float theta = i*M_PI/180;
+			sintable[i] = (int16_t)((1<<SINTABLE_SHIFT)*sinf(theta) + 0.5f);
+		}
+	}
+
 	/* Figure out a suitable scale for the data. */
 	reduce = 0;
 	while ((maxlen*2>>reduce) > 720 && reduce < 16)
 		reduce++;
 
 	stride = (maxlen*2)>>reduce;
-	hough = fz_calloc(ctx, sizeof(uint32_t), 180*stride);
-	dst = fz_new_pixmap(ctx, NULL, stride, 180, NULL, 0);
-	d = dst->samples;
-
-	/* Construct the hough space representation. */
-	for (y = 0; y < h; y++)
-	{
-		for (x = 0; x < w; x++)
-		{
-			unsigned char v = *s++;
-			if (v & 128)
-				mark_hough(hough, x, y, maxlen, reduce, (v>>4)&3);
-		}
-	}
-
-	/* Make the image of the hough space (for debugging) */
-	maxval = 1; /* Avoid possible division by zero */
-	p = hough;
-	for (y = 180*stride; y > 0; y--)
-	{
-		uint32_t v = *p++;
-		if (v > maxval)
-			maxval = v;
-	}
-
-	scale = 0xFFFFFFFFU/maxval;
-	p = hough;
-	for (y = 180*stride; y > 0; y--)
-	{
-		*d++ = (scale * *p++)>>24;
-	}
+	hough = do_hough(ctx, src, stride, maxlen, reduce);
 
 	/* We want to find the top n edges that aren't too close to
 	 * one another. */
@@ -1583,13 +1939,15 @@ make_hough(fz_context *ctx, fz_pixmap *src)
 		int minang, maxang, mindis, maxdis;
 		int where = 0;
 		uint32_t *p = hough;
-		maxval = 0;
+		uint32_t maxval = 0;
 		for (y = 180*stride; y > 0; y--)
 		{
 			uint32_t v = *p++;
 			if (v > maxval)
 				maxval = v, where = y;
 		}
+		if (where == 0)
+			break;
 		where = 180*stride - where;
 		ang = edge[x].ang = where/stride;
 		dis = edge[x].dis = where - edge[x].ang*stride;
@@ -1597,7 +1955,7 @@ make_hough(fz_context *ctx, fz_pixmap *src)
 		/* We don't want to find any other maxima that are too
 		 * close to this one, so we 'blot out' stuff around this
 		 * maxima. */
-		fz_info(ctx, "Maxima %d: dist=%d ang=%d strength=%d\n",
+		debug_printf(ctx, "Maxima %d: dist=%d ang=%d strength=%d\n",
 			x, (dis<<reduce)-maxlen, ang-90, edge[x].strength);
 		minang = ang - BLOT_ANG;
 		if (minang < 0)
@@ -1618,31 +1976,35 @@ make_hough(fz_context *ctx, fz_pixmap *src)
 			memset(p, 0, maxdis);
 			p += stride;
 		}
+#ifdef WARP_DEBUG
+		//save_hough_debug(ctx, hough, stride);
+#endif
 	}
 	num_edges = x;
+	if (num_edges == 0)
+		return 0;
 
 	/* Find edges in terms of lines. */
 	for (x = 0; x < num_edges; x++)
 	{
 		int ang = edge[x].ang;
 		int dis = edge[x].dis;
-		float thetarad = (ang-90)*M_PI/180;
-		float p = (dis<<reduce) - maxlen;
+		int p = (dis<<reduce) - maxlen;
 		if (ang < 45 || ang > 135)
 		{
 			/* Mostly horizontal line */
 			edge[x].x0 = 0;
 			edge[x].x1 = w;
-			edge[x].y0 = (p - edge[x].x0*cosf(thetarad))/sinf(thetarad);
-			edge[x].y1 = (p - edge[x].x1*cosf(thetarad))/sinf(thetarad);
+			edge[x].y0 = ((p<<SINTABLE_SHIFT) - edge[x].x0*sintable[ang])/costable[ang];
+			edge[x].y1 = ((p<<SINTABLE_SHIFT) - edge[x].x1*sintable[ang])/costable[ang];
 		}
 		else
 		{
 			/* Mostly vertical line */
 			edge[x].y0 = 0;
 			edge[x].y1 = h;
-			edge[x].x0 = (p - edge[x].y0*sinf(thetarad))/cosf(thetarad);
-			edge[x].x1 = (p - edge[x].y1*sinf(thetarad))/cosf(thetarad);
+			edge[x].x0 = ((p<<SINTABLE_SHIFT) - edge[x].y0*costable[ang])/sintable[ang];
+			edge[x].x1 = ((p<<SINTABLE_SHIFT) - edge[x].y1*costable[ang])/sintable[ang];
 		}
 	}
 
@@ -1653,18 +2015,24 @@ make_hough(fz_context *ctx, fz_pixmap *src)
 			num_points += intersect(&points[num_points],
 						edge, x, y);
 
-	fz_info(ctx, "%d edges, %d points\n", num_edges, num_points);
-	for (x = 0; x < num_points; x++)
-		fz_info(ctx, "%d %d (score %d, %d+%d)\n",
-			points[x].x, points[x].y, points[x].score,
-			points[x].e0, points[x].e1);
+#ifdef WARP_DEBUG
+	{
+		debug_printf(ctx, "%d edges, %d points\n", num_edges, num_points);
+		for (x = 0; x < num_points; x++)
+		{
+			debug_printf(ctx, "p%d: %d %d (score %d, %d+%d)\n", x,
+				(int)points[x].x, (int)points[x].y, points[x].score,
+				points[x].e0, points[x].e1);
+		}
+	}
+#endif
 
 	/* Now, go looking for 'routes' A->B->C->D->A */
 	{
 		int i;
 		route.w = src->w;
 		route.h = src->h;
-		route.best_score = 0;
+		route.best_score = -1;
 		for (i = 0; i < num_points; i++)
 		{
 			route.edge[0] = points[i].e0;
@@ -1673,9 +2041,10 @@ make_hough(fz_context *ctx, fz_pixmap *src)
 			find_route(ctx, points, num_points, &route, 1);
 		}
 
-		if (route.best_score)
+#ifdef WARP_DEBUG
+		if (route.best_score >= 0)
 		{
-			fz_info(ctx, "Score: %d, Edges=%d->%d->%d->%d, Points=%d->%d->%d->%d\n",
+			debug_printf(ctx, "Score: %d, Edges=%d->%d->%d->%d, Points=%d->%d->%d->%d\n",
 				route.best_score,
 				route.best_edge[0],
 				route.best_edge[1],
@@ -1685,24 +2054,28 @@ make_hough(fz_context *ctx, fz_pixmap *src)
 				route.best_point[1],
 				route.best_point[2],
 				route.best_point[3]);
-			fz_info(ctx, "(%d,%d)->(%d,%d)->(%d,%d)->(%d,%d)\n",
-				points[route.best_point[0]].x,
-				points[route.best_point[0]].y,
-				points[route.best_point[1]].x,
-				points[route.best_point[1]].y,
-				points[route.best_point[2]].x,
-				points[route.best_point[2]].y,
-				points[route.best_point[3]].x,
-				points[route.best_point[3]].y);
+			debug_printf(ctx, "(%d,%d)->(%d,%d)->(%d,%d)->(%d,%d)\n",
+				(int)points[route.best_point[0]].x,
+				(int)points[route.best_point[0]].y,
+				(int)points[route.best_point[1]].x,
+				(int)points[route.best_point[1]].y,
+				(int)points[route.best_point[2]].x,
+				(int)points[route.best_point[2]].y,
+				(int)points[route.best_point[3]].x,
+				(int)points[route.best_point[3]].y);
 		}
+#endif
 	}
 
+#ifdef WARP_DEBUG
 	/* Mark up the src (again, for debugging) */
 	{
-		fz_device *dev = fz_new_draw_device(ctx, fz_identity, src);
+		fz_pixmap* marksrc = fz_clone_pixmap(ctx, src);
+		fz_device *dev = fz_new_draw_device(ctx, fz_identity, marksrc);
 		fz_stroke_state *stroke = fz_new_stroke_state(ctx);
 		float col = 1;
 		fz_color_params params = { FZ_RI_PERCEPTUAL };
+#ifdef WARP_SPEW_DEBUG
 		for (x = 0; x < num_edges; x++)
 		{
 			char text[64];
@@ -1711,13 +2084,14 @@ make_hough(fz_context *ctx, fz_pixmap *src)
 			fz_lineto(ctx, path, edge[x].x1, edge[x].y1);
 			fz_stroke_path(ctx, dev, path, stroke, fz_identity, fz_device_gray(ctx), &col, 1, params);
 			fz_drop_path(ctx, path);
-			//fz_info(ctx, "%d %d -> %d %d\n", edge[x].x0, edge[x].y0, edge[x].x1, edge[x].y1);
+			debug_printf(ctx, "%d %d -> %d %d\n", edge[x].x0, edge[x].y0, edge[x].x1, edge[x].y1);
 			sprintf(text, "line%d.png", x);
 			fz_save_pixmap_as_png(ctx, src, text);
 		}
+#endif
 
 		stroke->linewidth *= 4;
-		if (route.best_score)
+		if (route.best_score >= 0)
 		{
 			fz_path *path = fz_new_path(ctx);
 			fz_moveto(ctx, path, points[route.best_point[0]].x, points[route.best_point[0]].y);
@@ -1732,58 +2106,175 @@ make_hough(fz_context *ctx, fz_pixmap *src)
 		fz_drop_stroke_state(ctx, stroke);
 		fz_close_device(ctx, dev);
 		fz_drop_device(ctx, dev);
+		fz_drop_pixmap(ctx, marksrc);
 	}
+#endif
 
 	fz_free(ctx, hough);
 
-	return dst;
+	if (route.best_score == -1)
+		return 0;
+
+	corners[0].x = points[route.best_point[0]].x;
+	corners[0].y = points[route.best_point[0]].y;
+	corners[1].x = points[route.best_point[1]].x;
+	corners[1].y = points[route.best_point[1]].y;
+	corners[2].x = points[route.best_point[2]].x;
+	corners[2].y = points[route.best_point[2]].y;
+	corners[3].x = points[route.best_point[3]].x;
+	corners[3].y = points[route.best_point[3]].y;
+
+	/* Discard any possible matches that aren't at least 1/8 of the pixmap. */
+	{
+		fz_rect r = fz_empty_rect;
+		r = fz_include_point_in_rect(r, corners[0]);
+		r = fz_include_point_in_rect(r, corners[1]);
+		r = fz_include_point_in_rect(r, corners[2]);
+		r = fz_include_point_in_rect(r, corners[3]);
+		if ((r.x1 - r.x0) * (r.y1 - r.y0) * 8 < (src->w * src->h))
+			return 0;
+	}
+
+	return 1;
 }
 
-void
-fz_detect_document(fz_context *ctx, fz_point *points, const fz_pixmap *src)
+#define DOC_DETECT_MAXDIM 500
+int
+fz_detect_document(fz_context *ctx, fz_point *points, fz_pixmap *orig_src)
 {
 	fz_color_params p = {FZ_RI_PERCEPTUAL };
 	fz_pixmap *grey = NULL;
+	fz_pixmap *src = NULL;
+#ifdef DETECT_DOCUMENT_RGB
 	fz_pixmap *r = NULL;
 	fz_pixmap *g = NULL;
 	fz_pixmap *b = NULL;
-	fz_pixmap *hough = NULL;
+#endif
+	fz_pixmap *processed = NULL;
+	int i;
+	int found = 0;
 
+	/* Gauss function has std deviation of ~sqr(2), so a variance of
+	 * 2. Apply it twice and we get twice that. So:
+	 *	n	stddev	variance
+	 *	1	1.4	2
+	 *	2	2	4
+	 *	3	2.8	8
+	 *	4	4	16
+	 *	5	5.6	32
+	 *	6	8	64
+	 *	7	11.3	128
+	 *	8	16	256
+	 *	9	22.6	512
+	 *	10	32	1024
+	 *	11	45	2048
+	 *
+	 * The stddev is also known as the "width" by some sources.
+	 *
+	 * Our testing indicates that a width of 30ish works well for a
+	 * image with it's major axis being ~3k pixels. So figure on a
+	 * width of about 1% of the major axis dimension.
+	 *
+	 * By subsampling the incoming image, we can reduce the work we
+	 * do in the gauss phase, as we get to use a smaller width.
+	 */
+	int n = 10; /* Based on DOC_DETECT_MAXDIM */
+	int l2factor = 0;
+
+	fz_var(src);
 	fz_var(grey);
+#ifdef DETECT_DOCUMENT_RGB
 	fz_var(r);
 	fz_var(g);
 	fz_var(b);
+#endif
+	fz_var(processed);
+	fz_var(found);
 
 	fz_try(ctx)
 	{
+		START_TIME();
+		{
+			int maxdim = orig_src->w > orig_src->h ? orig_src->w : orig_src->h;
+			while (maxdim > DOC_DETECT_MAXDIM)
+				maxdim >>= 1, l2factor++;
+			START_TIME();
+			if (l2factor == 0)
+				src = fz_keep_pixmap(ctx, orig_src);
+			else
+			{
+				src = fz_clone_pixmap(ctx, orig_src);
+				fz_subsample_pixmap(ctx, src, l2factor);
+			}
+			END_TIME("subsample");
+		}
+		START_TIME();
 		if (src->n == 1 && src->alpha == 0)
 		{
-			grey = fz_clone_pixmap(ctx, src);
+			if (src == orig_src)
+				grey = fz_clone_pixmap(ctx, src);
+			else
+				grey = fz_keep_pixmap(ctx, src);
 		}
 		else
 		{
 			grey = fz_convert_pixmap(ctx, src,
 				fz_default_gray(ctx, NULL), NULL, NULL, p, 0);
 		}
-		gauss5x5(ctx, grey);
+		END_TIME("clone");
+		START_TIME();
+		for (i = 0; i < n; i++)
+			gauss5x5(ctx, grey);
+		END_TIME("gauss grey");
+#ifdef WARP_DEBUG
+		fz_save_pixmap_as_png(ctx, grey, "gauss.png");
+#endif
+#ifdef DO_HISTEQ
+		START_TIME();
 		histeq(grey);
-		grad(ctx, grey);
+		END_TIME("histeq grey");
+#ifdef WARP_DEBUG
+		fz_save_pixmap_as_png(ctx, grey, "hist.png");
+#endif
+#endif
+		START_TIME();
+		grad(ctx, grey, pregrad(ctx, grey));
+		END_TIME("grad grey");
+#ifdef WARP_DEBUG
+		fz_save_pixmap_as_png(ctx, grey, "grad.png");
+#endif
 
+#ifdef DETECT_DOCUMENT_RGB
 		if (src->n == 3 && src->alpha == 0)
 		{
+			START_TIME();
 			r = fz_new_pixmap(ctx, NULL, src->w, src->h, NULL, 0);
 			g = fz_new_pixmap(ctx, NULL, src->w, src->h, NULL, 0);
 			b = fz_new_pixmap(ctx, NULL, src->w, src->h, NULL, 0);
 			gauss5x5_3(ctx, r, src, 0);
+			for (i = 1; i < n; i++)
+				gauss5x5(ctx, r);
 			gauss5x5_3(ctx, g, src, 1);
+			for (i = 1; i < n; i++)
+				gauss5x5(ctx, g);
 			gauss5x5_3(ctx, b, src, 2);
+			for (i = 1; i < n; i++)
+				gauss5x5(ctx, b);
+#ifdef DO_HISTEQ
 			histeq(r);
 			histeq(g);
 			histeq(b);
-			grad(ctx, r);
-			grad(ctx, g);
-			grad(ctx, b);
+#endif
+			grad(ctx, r, pregrad(ctx, r));
+			grad(ctx, g, pregrad(ctx, g));
+			grad(ctx, b, pregrad(ctx, b));
+#ifdef WARP_DEBUG
+			fz_save_pixmap_as_png(ctx, r, "r.png");
+			fz_save_pixmap_as_png(ctx, g, "g.png");
+			fz_save_pixmap_as_png(ctx, b, "b.png");
+#endif
 			combine_grad(grey, r, g, b);
+			END_TIME("rgb");
 			fz_drop_pixmap(ctx, r);
 			fz_drop_pixmap(ctx, g);
 			fz_drop_pixmap(ctx, b);
@@ -1791,27 +2282,69 @@ fz_detect_document(fz_context *ctx, fz_point *points, const fz_pixmap *src)
 			g = NULL;
 			b = NULL;
 		}
-		fz_save_pixmap_as_png(ctx, grey, "grey.png");
-		nonmax(ctx, grey);
-		hysteresis(ctx, grey);
-		//clean(ctx, grey);
-		hough = make_hough(ctx, grey);
+#ifdef WARP_DEBUG
+		fz_save_pixmap_as_png(ctx, grey, "combined.png");
+#endif
+#endif
+		processed = fz_new_pixmap(ctx, fz_device_gray(ctx), grey->w, grey->h, NULL, 0);
 
-		fz_save_pixmap_as_png(ctx, hough, "hough.png");
-		fz_save_pixmap_as_png(ctx, grey, "out.png");
+		/* Do multiple passes if required, dropping the thresholds for
+		 * strong/weak pixels each time until we find a suitable result. */
+		for (i = 0; i < 6; i++)
+		{
+			START_TIME();
+			nonmax(ctx, processed, grey, i);
+			END_TIME("nonmax");
+#ifdef WARP_DEBUG
+			fz_save_pixmap_as_png(ctx, processed, "nonmax.png");
+#endif
+			START_TIME();
+			hysteresis(ctx, processed);
+			END_TIME("hysteresis");
+#ifdef WARP_DEBUG
+			fz_save_pixmap_as_png(ctx, processed, "hysteresis.png");
+#endif
+			START_TIME();
+			found = make_hough(ctx, processed, points);
+			END_TIME("total hough");
+			END_TIME("Total time");
+			DUMP_TIMES();
+#ifdef WARP_DEBUG
+			clean(ctx, processed);
+			fz_save_pixmap_as_png(ctx, processed, "out.png");
+#endif
+			if (found)
+				break;
+		}
 	}
 	fz_always(ctx)
 	{
+		fz_drop_pixmap(ctx, src);
+#ifdef DETECT_DOCUMENT_RGB
 		fz_drop_pixmap(ctx, r);
 		fz_drop_pixmap(ctx, g);
 		fz_drop_pixmap(ctx, b);
+#endif
 		fz_drop_pixmap(ctx, grey);
-		fz_drop_pixmap(ctx, hough);
+		fz_drop_pixmap(ctx, processed);
 	}
 	fz_catch(ctx)
 	{
 		fz_rethrow(ctx);
 	}
+
+	if (found)
+	{
+		float f = (1<<l2factor);
+		float r = f/2;
+		for (i = 0; i < 4; i++)
+		{
+			points[i].x = points[i].x * f + r;
+			points[i].y = points[i].y * f + r;
+		}
+	}
+
+	return found;
 }
 
 #endif

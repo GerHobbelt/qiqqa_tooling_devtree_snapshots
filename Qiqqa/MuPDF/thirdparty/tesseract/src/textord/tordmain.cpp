@@ -16,11 +16,7 @@
  *
  **********************************************************************/
 
-#define _USE_MATH_DEFINES // for M_PI
-
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include "tordmain.h"
 
@@ -35,7 +31,7 @@
 #include "makerow.h"     // for textord_test_x, textord_test_y, texto...
 #include "ocrblock.h"    // for BLOCK_IT, BLOCK, BLOCK_LIST (ptr only)
 #include "ocrrow.h"      // for ROW, ROW_IT, ROW_LIST, tweak_row_base...
-#include "params.h"      // for DoubleParam, BoolParam, IntParam
+#include <tesseract/params.h>      // for DoubleParam, BoolParam, IntParam
 #include "pdblock.h"     // for PDBLK
 #include "points.h"      // for FCOORD, ICOORD
 #include "polyblk.h"     // for POLY_BLOCK
@@ -46,7 +42,7 @@
 #include "statistc.h"    // for STATS
 #include "stepblob.h"    // for C_BLOB_IT, C_BLOB, C_BLOB_LIST
 #include "textord.h"     // for Textord, WordWithBox, WordGrid, WordS...
-#include "tprintf.h"     // for tprintf
+#include <tesseract/tprintf.h>     // for tprintf
 #include "werd.h"        // for WERD_IT, WERD, WERD_LIST, W_DONT_CHOP
 #include "diagnostics_io.h"
 #include "tesseractclass.h"
@@ -533,16 +529,17 @@ bool Textord::clean_noise_from_row( // remove empties
       }
     }
   }
+  // TODO: check whether `&& super_norm_count < textord_noise_sncount`should always be added here.
+  bool rejected = dot_count > norm_count * textord_noise_normratio &&
+                  dot_count > 2;
   if (textord_noise_debug) {
     tprintDebug("Row ending at ({},{}):", blob_box.right(), row->base_line(blob_box.right()));
     tprintDebug(" R={}, dc={}, nc={}, {}\n",
             norm_count > 0 ? static_cast<float>(dot_count) / norm_count : 9999, dot_count,
             norm_count,
-            dot_count > norm_count * textord_noise_normratio && dot_count > 2 ? "REJECTED"
-                                                                              : "ACCEPTED");
+            rejected? "REJECTED": "ACCEPTED");
   }
-  return super_norm_count < textord_noise_sncount &&
-         dot_count > norm_count * textord_noise_rowratio && dot_count > 2;
+  return super_norm_count < textord_noise_sncount && rejected;
 }
 
 /**********************************************************************

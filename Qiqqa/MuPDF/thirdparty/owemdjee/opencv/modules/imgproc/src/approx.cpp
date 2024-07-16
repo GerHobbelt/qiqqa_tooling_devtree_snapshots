@@ -39,6 +39,7 @@
 //
 //M*/
 #include "precomp.hpp"
+#include <queue>
 
 /****************************************************************************************\
 *                                  Chain Approximation                                   *
@@ -103,9 +104,9 @@ CvSeq* icvApproximateChainTC89( CvChain* chain, int header_size,
         /* calc 1-curvature */
         s = abs_diff[reader.code - prev_code + 7];
 
-        if( method <= CV_CHAIN_APPROX_SIMPLE )
+        if( method <= cv::CHAIN_APPROX_SIMPLE )
         {
-            if( method == CV_CHAIN_APPROX_NONE || s != 0 )
+            if( method == cv::CHAIN_APPROX_NONE || s != 0 )
             {
                 CV_WRITE_SEQ_ELEM( pt, writer );
             }
@@ -121,7 +122,7 @@ CvSeq* icvApproximateChainTC89( CvChain* chain, int header_size,
 
     //CV_Assert( pt.x == chain->origin.x && pt.y == chain->origin.y );
 
-    if( method <= CV_CHAIN_APPROX_SIMPLE )
+    if( method <= cv::CHAIN_APPROX_SIMPLE )
         return cvEndWriteSeq( &writer );
 
     current->next = 0;
@@ -176,7 +177,7 @@ CvSeq* icvApproximateChainTC89( CvChain* chain, int header_size,
         current->k = --k;
 
         /* determine cosine curvature if it should be used */
-        if( method == CV_CHAIN_APPROX_TC89_KCOS )
+        if( method == cv::CHAIN_APPROX_TC89_KCOS )
         {
             /* calc k-cosine curvature */
             for( j = k, s = 0; j > 0; j-- )
@@ -288,7 +289,7 @@ CvSeq* icvApproximateChainTC89( CvChain* chain, int header_size,
     }
     while( current != 0 );
 
-    if( method == CV_CHAIN_APPROX_TC89_KCOS )
+    if( method == cv::CHAIN_APPROX_TC89_KCOS )
         goto copy_vect;
 
     /* Pass 4.
@@ -389,9 +390,9 @@ cvApproxChains( CvSeq*              src_seq,
     CvSeq *dst_seq = 0;
 
     if( !src_seq || !storage )
-        CV_Error( CV_StsNullPtr, "" );
-    if( method > CV_CHAIN_APPROX_TC89_KCOS || method <= 0 || minimal_perimeter < 0 )
-        CV_Error( CV_StsOutOfRange, "" );
+        CV_Error( cv::Error::StsNullPtr, "" );
+    if( method > cv::CHAIN_APPROX_TC89_KCOS || method <= 0 || minimal_perimeter < 0 )
+        CV_Error( cv::Error::StsOutOfRange, "" );
 
     while( src_seq != 0 )
     {
@@ -403,14 +404,14 @@ cvApproxChains( CvSeq*              src_seq,
 
             switch( method )
             {
-            case CV_CHAIN_APPROX_NONE:
-            case CV_CHAIN_APPROX_SIMPLE:
-            case CV_CHAIN_APPROX_TC89_L1:
-            case CV_CHAIN_APPROX_TC89_KCOS:
+            case cv::CHAIN_APPROX_NONE:
+            case cv::CHAIN_APPROX_SIMPLE:
+            case cv::CHAIN_APPROX_TC89_L1:
+            case cv::CHAIN_APPROX_TC89_KCOS:
                 contour = icvApproximateChainTC89( (CvChain *) src_seq, sizeof( CvContour ), storage, method );
                 break;
             default:
-                CV_Error( CV_StsOutOfRange, "" );
+                CV_Error( cv::Error::StsOutOfRange, "" );
             }
 
             if( contour->total > 0 )
@@ -681,7 +682,7 @@ void cv::approxPolyDP( InputArray _curve, OutputArray _approxCurve,
     //from being used.
     if (epsilon < 0.0 || !(epsilon < 1e30))
     {
-        CV_Error(CV_StsOutOfRange, "Epsilon not valid.");
+        CV_Error(cv::Error::StsOutOfRange, "Epsilon not valid.");
     }
 
     Mat curve = _curve.getMat();
@@ -704,7 +705,7 @@ void cv::approxPolyDP( InputArray _curve, OutputArray _approxCurve,
     else if( depth == CV_32F )
         nout = approxPolyDP_(curve.ptr<Point2f>(), npoints, (Point2f*)buf, closed, epsilon, _stack);
     else
-        CV_Error( CV_StsUnsupportedFormat, "" );
+        CV_Error( cv::Error::StsUnsupportedFormat, "" );
 
     Mat(nout, 1, CV_MAKETYPE(depth, 2), buf).copyTo(_approxCurve);
 }
@@ -728,7 +729,7 @@ cvApproxPoly( const void* array, int header_size,
     {
         src_seq = (CvSeq*)array;
         if( !CV_IS_SEQ_POLYLINE( src_seq ))
-            CV_Error( CV_StsBadArg, "Unsupported sequence type" );
+            CV_Error( cv::Error::StsBadArg, "Unsupported sequence type" );
 
         recursive = parameter2;
 
@@ -743,10 +744,10 @@ cvApproxPoly( const void* array, int header_size,
     }
 
     if( !storage )
-        CV_Error( CV_StsNullPtr, "NULL storage pointer " );
+        CV_Error( cv::Error::StsNullPtr, "NULL storage pointer " );
 
     if( header_size < 0 )
-        CV_Error( CV_StsOutOfRange, "header_size is negative. "
+        CV_Error( cv::Error::StsOutOfRange, "header_size is negative. "
                  "Pass 0 to make the destination header_size == input header_size" );
 
     if( header_size == 0 )
@@ -756,12 +757,12 @@ cvApproxPoly( const void* array, int header_size,
     {
         if( CV_IS_SEQ_CHAIN( src_seq ))
         {
-            CV_Error( CV_StsBadArg, "Input curves are not polygonal. "
+            CV_Error( cv::Error::StsBadArg, "Input curves are not polygonal. "
                      "Use cvApproxChains first" );
         }
         else
         {
-            CV_Error( CV_StsBadArg, "Input curves have unknown type" );
+            CV_Error( cv::Error::StsBadArg, "Input curves have unknown type" );
         }
     }
 
@@ -769,10 +770,10 @@ cvApproxPoly( const void* array, int header_size,
         header_size = src_seq->header_size;
 
     if( header_size < (int)sizeof(CvContour) )
-        CV_Error( CV_StsBadSize, "New header size must be non-less than sizeof(CvContour)" );
+        CV_Error( cv::Error::StsBadSize, "New header size must be non-less than sizeof(CvContour)" );
 
     if( method != CV_POLY_APPROX_DP )
-        CV_Error( CV_StsOutOfRange, "Unknown approximation method" );
+        CV_Error( cv::Error::StsOutOfRange, "Unknown approximation method" );
 
     while( src_seq != 0 )
     {
@@ -782,7 +783,7 @@ cvApproxPoly( const void* array, int header_size,
         {
         case CV_POLY_APPROX_DP:
             if( parameter < 0 )
-                CV_Error( CV_StsOutOfRange, "Accuracy must be non-negative" );
+                CV_Error( cv::Error::StsOutOfRange, "Accuracy must be non-negative" );
 
             CV_Assert( CV_SEQ_ELTYPE(src_seq) == CV_32SC2 ||
                       CV_SEQ_ELTYPE(src_seq) == CV_32FC2 );
@@ -804,7 +805,7 @@ cvApproxPoly( const void* array, int header_size,
                 nout = cv::approxPolyDP_((cv::Point2f*)src, npoints,
                                          (cv::Point2f*)dst, closed, parameter, stack);
             else
-                CV_Error( CV_StsUnsupportedFormat, "" );
+                CV_Error( cv::Error::StsUnsupportedFormat, "" );
 
             contour = cvCreateSeq( src_seq->flags, header_size,
                                   src_seq->elem_size, storage );
@@ -812,7 +813,7 @@ cvApproxPoly( const void* array, int header_size,
             }
             break;
         default:
-            CV_Error( CV_StsBadArg, "Invalid approximation method" );
+            CV_Error( cv::Error::StsBadArg, "Invalid approximation method" );
         }
 
         CV_Assert( contour );
@@ -858,6 +859,238 @@ cvApproxPoly( const void* array, int header_size,
     }
 
     return dst_seq;
+}
+
+struct neighbours
+{
+    /*
+        if relevant = -1, point has been removed
+        if relevant = 0,  the intersection in the heap must be recalculated
+        if relevant = 1,  intersection has been calculated
+    */
+    short relevant;
+    cv::Point2f point;
+    int next;
+    int prev;
+
+    neighbours(int next_ = -1, int prev_ = -1, cv::Point2f point_ = { -1, -1 })
+    {
+        next = next_;
+        prev = prev_;
+        point = point_;
+        relevant = 1;
+    }
+};
+
+struct changes
+{
+    float area;
+    int vertex;
+    cv::Point2f intersection;
+
+    changes(float area_, int vertex_, cv::Point2f intersection_)
+    {
+        area = area_;
+        vertex = vertex_;
+        intersection = intersection_;
+    }
+
+    bool operator < (const changes& elem) const
+    {
+        return (area < elem.area) || ((area == elem.area) && (vertex < elem.vertex));
+    }
+    bool operator > (const changes& elem) const
+    {
+        return (area > elem.area) || ((area == elem.area) && (vertex > elem.vertex));
+    }
+};
+
+/*
+  returns intersection point and extra area
+*/
+static int recalculation(std::vector<neighbours>& hull, int vertex_id, float& area_, float& x, float& y)
+{
+    cv::Point2f vertex = hull[vertex_id].point,
+        next_vertex = hull[hull[vertex_id].next].point,
+        extra_vertex_1 = hull[hull[vertex_id].prev].point,
+        extra_vertex_2 = hull[hull[hull[vertex_id].next].next].point;
+
+    cv::Point2f curr_edge = next_vertex - vertex,
+        prev_edge = vertex - extra_vertex_1,
+        next_edge = extra_vertex_2 - next_vertex;
+
+    float cross = prev_edge.x * next_edge.y - prev_edge.y * next_edge.x;
+    if (abs(cross) < 1e-8)
+        return -1;
+
+    float t = (curr_edge.x * next_edge.y - curr_edge.y * next_edge.x) / cross;
+    cv::Point2f intersection = vertex + cv::Point2f(prev_edge.x * t, prev_edge.y * t);
+
+    float area = 0.5f * abs((next_vertex.x - vertex.x) * (intersection.y - vertex.y) - (intersection.x - vertex.x) * (next_vertex.y - vertex.y));
+
+    area_ = area;
+    x = intersection.x;
+    y = intersection.y;
+    return 0;
+}
+
+static void update(std::vector<neighbours>& hull, int vertex_id)
+{
+    neighbours& v1 = hull[vertex_id], & removed = hull[v1.next], & v2 = hull[removed.next];
+
+    removed.relevant = -1;
+    v1.relevant = 0;
+    v2.relevant = 0;
+    hull[v1.prev].relevant = 0;
+    v1.next = removed.next;
+    v2.prev = removed.prev;
+}
+
+/*
+    A greedy algorithm based on contraction of vertices for approximating a convex contour by a bounding polygon
+*/
+void cv::approxBoundingPoly(InputArray _curve, OutputArray _approxCurve,
+    int side, float epsilon_percentage, bool make_hull)
+{
+    CV_Assert(epsilon_percentage > 0 || epsilon_percentage == -1);
+    CV_Assert(side > 2);
+    CV_Assert(_approxCurve.type() == CV_32FC2
+        || _approxCurve.type() == CV_32SC2
+        || _approxCurve.type() == 0);
+
+    Mat curve;
+    int depth = _curve.depth();
+
+    CV_Assert(depth == CV_32F || depth == CV_32S);
+
+    if (make_hull)
+    {
+
+        cv::convexHull(_curve, curve);
+    }
+    else
+    {
+        CV_Assert(isContourConvex(_curve));
+        curve = _curve.getMat();
+    }
+
+    CV_Assert((curve.cols == 1 && curve.rows >= side)
+        || (curve.rows == 1 && curve.cols >= side));
+
+    curve = curve.t();
+    if (curve.rows == 1)
+    {
+        curve = curve.t();
+    }
+
+    std::vector<neighbours> hull(curve.rows);
+    int size = curve.rows;
+    std::priority_queue<changes, std::vector<changes>, std::greater<changes>> areas;
+    float extra_area = 0, max_extra_area = epsilon_percentage * contourArea(_curve);
+
+    if (curve.depth() == CV_32S)
+    {
+        for (int i = 0; i < size; ++i)
+        {
+            Point t = curve.at<cv::Point>(i, 0);
+            hull[i] = neighbours(i + 1, i - 1, Point2f(t.x, t.y));
+        }
+    }
+    else
+    {
+        for (int i = 0; i < size; ++i)
+        {
+            Point2f t = curve.at<cv::Point2f>(i, 0);
+            hull[i] = neighbours(i + 1, i - 1, t);
+        }
+    }
+    hull[0].prev = size - 1;
+    hull[size - 1].next = 0;
+
+    if (size > side)
+    {
+        for (int vertex_id = 0; vertex_id < size; ++vertex_id)
+        {
+            float area, new_x, new_y;
+
+            if (recalculation(hull, vertex_id, area, new_x, new_y) == -1)
+            {
+                area = 1e+38f;
+                new_x = -1; new_y = -1;
+            }
+
+            areas.push(changes(area, vertex_id, Point2f(new_x, new_y)));
+        }
+    }
+
+    while (size > side)
+    {
+        changes base = areas.top();
+        int vertex_id = base.vertex;
+
+        if (hull[vertex_id].relevant == -1)
+        {
+            areas.pop();
+        }
+        else if (hull[vertex_id].relevant == 0)
+        {
+            float area, new_x, new_y;
+            areas.pop();
+
+            if (recalculation(hull, vertex_id, area, new_x, new_y) == -1)
+            {
+                area = 1e+38f;
+                new_x = -1; new_y = -1;
+            }
+
+            areas.push(changes(area, vertex_id, Point2f(new_x, new_y)));
+            hull[vertex_id].relevant = 1;
+        }
+        else
+        {
+            if (epsilon_percentage != -1)
+            {
+                extra_area += base.area;
+                if (extra_area > max_extra_area)
+                {
+                    break;
+                }
+            }
+
+            size--;
+            hull[vertex_id].point = base.intersection;
+            update(hull, vertex_id);
+        }
+    }
+    if (_approxCurve.type() != 0) depth = _approxCurve.depth();
+    Mat buf(1, size, CV_MAKETYPE(depth, 2));
+    int last_free = 0;
+
+    if (depth == CV_32S)
+    {
+        for (int i = 0; i < curve.rows; ++i)
+        {
+            if (hull[i].relevant != -1)
+            {
+                Point t = Point(round(hull[i].point.x), round(hull[i].point.y));
+                buf.at<Point>(0, last_free) = t;
+                last_free++;
+            }
+        }
+    }
+    else
+    {
+        for (int i = 0; i < curve.rows; ++i)
+        {
+            if (hull[i].relevant != -1)
+            {
+                buf.at<Point2f>(0, last_free) = hull[i].point;
+                last_free++;
+            }
+        }
+    }
+
+    buf.copyTo(_approxCurve);
 }
 
 /* End of file. */

@@ -6,6 +6,9 @@
 #include <opencv2/dnn/shape_utils.hpp>
 #include "./cpu_kernels/fast_norm.hpp"
 
+// CANN backend
+#include "../op_cann.hpp"
+
 // OpenVINO backend
 #include "../op_inf_engine.hpp"
 #include "../ie_ngraph.hpp"
@@ -41,6 +44,7 @@ public:
 #endif
         return backendId == DNN_BACKEND_OPENCV ||
                backendId == DNN_BACKEND_CUDA;
+            //    backendId == DNN_BACKEND_CANN; // not supported due to 1d mat shape issue
     }
 
     bool getMemoryShapes(const std::vector<MatShape> &inputs,
@@ -69,7 +73,7 @@ public:
         CV_OCL_RUN(IS_DNN_OPENCL_TARGET(preferableTarget),
                    forward_ocl(inputs_arr, outputs_arr, internals_arr))
 
-        if (inputs_arr.depth() == CV_16S)
+        if (inputs_arr.depth() == CV_16F)
         {
             forward_fallback(inputs_arr, outputs_arr, internals_arr);
             return;
@@ -103,7 +107,7 @@ public:
         float inv_norm_size = 1.f / norm_size;
 
         // no fp16 support
-        if (input.depth() == CV_16S) {
+        if (input.depth() == CV_16F) {
             return false;
         }
 
@@ -169,6 +173,51 @@ public:
     }
 #endif
 
+#ifdef HAVE_CANN
+    virtual Ptr<BackendNode> initCann(const std::vector<Ptr<BackendWrapper> > &inputs,
+                                      const std::vector<Ptr<BackendWrapper> > &outputs,
+                                      const std::vector<Ptr<BackendNode> >& nodes) CV_OVERRIDE {
+        auto input_tensor_wrapper = inputs[0].dynamicCast<CannBackendWrapper>();
+        auto input_tensor_desc = input_tensor_wrapper->getTensorDesc();
+
+        auto scale_tensor_wrapper = inputs[1].dynamicCast<CannBackendWrapper>();
+        auto scale_tensor_desc = scale_tensor_wrapper->getTensorDesc();
+
+        auto bias_tensor_wrapper = inputs[2].dynamicCast<CannBackendWrapper>();
+        auto bias_tensor_desc = bias_tensor_wrapper->getTensorDesc();
+
+        auto last_node = nodes[0].dynamicCast<CannBackendNode>()->getOp();
+        auto scale_node = nodes[1].dynamicCast<CannBackendNode>()->getOp();
+        auto bias_node = nodes[2].dynamicCast<CannBackendNode>()->getOp();
+
+        auto op = std::make_shared<ge::op::InstanceNorm>(name);
+
+        // set attrs
+        op->set_attr_epsilon(epsilon);
+
+        // set inputs
+        // set inputs : x
+        op->set_input_x_by_name(*last_node, input_tensor_wrapper->name.c_str());
+        op->update_input_desc_x(*input_tensor_desc);
+        // set inputs : gamma
+        op->set_input_gamma_by_name((*scale_node), scale_tensor_wrapper->name.c_str());
+        op->update_input_desc_gamma(*scale_tensor_desc);
+        // set inputs : beta
+        op->set_input_beta_by_name(*bias_node, bias_tensor_wrapper->name.c_str());
+        op->update_input_desc_beta(*bias_tensor_desc);
+
+        // set outputs
+        auto output_desc_y = std::make_shared<ge::TensorDesc>(ge::Shape(), ge::FORMAT_NCHW, ge::DT_FLOAT);
+        op->update_output_desc_y(*output_desc_y);
+        auto output_desc_mean = std::make_shared<ge::TensorDesc>(ge::Shape(), ge::FORMAT_NCHW, ge::DT_FLOAT);
+        op->update_output_desc_mean(*output_desc_mean);
+        auto output_desc_var = std::make_shared<ge::TensorDesc>(ge::Shape(), ge::FORMAT_NCHW, ge::DT_FLOAT);
+        op->update_output_desc_variance(*output_desc_var);
+
+        return Ptr<BackendNode>(new CannBackendNode(op));
+    }
+#endif // HAVE_CANN
+
 #ifdef HAVE_DNN_NGRAPH
     virtual Ptr<BackendNode> initNgraph(const std::vector<Ptr<BackendWrapper> >& inputs,
                                         const std::vector<Ptr<BackendNode> >& nodes) CV_OVERRIDE {
@@ -176,33 +225,26 @@ public:
 
         auto ieInpNode = nodes[0].dynamicCast<InfEngineNgraphNode>()->node;
         const auto &input_shape = ieInpNode.get_shape();
-        std::shared_ptr<ngraph::Node> mvn, result;
+        std::shared_ptr<ov::Node> mvn, result;
 
         // mvn
-#if INF_ENGINE_VER_MAJOR_LE(INF_ENGINE_RELEASE_2021_2)
-        // https://docs.openvino.ai/2021.4/api/ngraph_python_api/_autosummary/ngraph.opset3.mvn.html?highlight=mvn#ngraph.opset3.mvn
-        bool across_channels = false;
-        bool normalize_variance = true;
-        mvn = std::make_shared<ngraph::op::MVN>(ieInpNode, across_channels, normalize_variance, epsilon);
-#else
         // https://docs.openvino.ai/2023.1/openvino_docs_ops_normalization_MVN_6.html
         std::vector<int64_t> axes_v(input_shape.size() - 2);
         std::iota(axes_v.begin(), axes_v.end(), 2); // {2, 3, ...} for nd input tensor, n>=3
-        auto axes = std::make_shared<ngraph::op::Constant>(ngraph::element::i64, ngraph::Shape{axes_v.size()}, axes_v.data());
+        auto axes = std::make_shared<ov::op::v0::Constant>(ov::element::i64, ov::Shape{axes_v.size()}, axes_v.data());
         bool normalize_variance = true;
-        mvn = std::make_shared<ngraph::op::v6::MVN>(ieInpNode, axes, normalize_variance, epsilon, ngraph::op::MVNEpsMode::INSIDE_SQRT);
-#endif
+        mvn = std::make_shared<ov::op::v6::MVN>(ieInpNode, axes, normalize_variance, epsilon, ov::op::MVNEpsMode::INSIDE_SQRT);
 
         // instance norm = scale * mvn + bias
         auto scale = nodes[1].dynamicCast<InfEngineNgraphNode>()->node;
         std::vector<int64_t> shared_shape_v(input_shape.size(), 1);
         shared_shape_v[1] = -1;
-        auto shared_shape = std::make_shared<ngraph::op::Constant>(ngraph::element::i64, ngraph::Shape{shared_shape_v.size()}, shared_shape_v.data());
-        scale  = std::make_shared<ngraph::op::v1::Reshape>(scale, shared_shape, true);
-        result = std::make_shared<ngraph::op::v1::Multiply>(mvn, scale);
+        auto shared_shape = std::make_shared<ov::op::v0::Constant>(ov::element::i64, ov::Shape{shared_shape_v.size()}, shared_shape_v.data());
+        scale  = std::make_shared<ov::op::v1::Reshape>(scale, shared_shape, true);
+        result = std::make_shared<ov::op::v1::Multiply>(mvn, scale);
         auto bias = nodes[2].dynamicCast<InfEngineNgraphNode>()->node;
-        bias  = std::make_shared<ngraph::op::v1::Reshape>(bias, shared_shape, true);
-        result = std::make_shared<ngraph::op::v1::Add>(result, bias);
+        bias  = std::make_shared<ov::op::v1::Reshape>(bias, shared_shape, true);
+        result = std::make_shared<ov::op::v1::Add>(result, bias);
 
         return Ptr<BackendNode>(new InfEngineNgraphNode(result));
     }

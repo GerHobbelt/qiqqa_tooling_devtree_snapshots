@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -135,10 +135,56 @@ static void fmtfloat_e(struct fmtbuf *out, double f, int w, int p, char fmt)
 		fmtputc(out, *s++);
 }
 
-static void fmtuint32(struct fmtbuf *out, unsigned int a, int s, int z, int w, int base)
+static void fmtuint32(struct fmtbuf *out, unsigned int a, int s, int z, int w, int base, int q)
 {
 	char buf[100];
-	int i;
+	int i, qw;
+	const char* hex_digits = fz_hex_digits;
+
+	if (base < 0)
+	{
+		base = -base;
+		hex_digits = fz_hex_digits_UC;
+	}
+
+	i = 0;
+	if (a == 0)
+		buf[i++] = '0';
+	while (a) {
+		buf[i++] = hex_digits[a % base];
+		a /= base;
+	}
+	if (s) {
+		if (z == '0')
+			while (i < w - 1)
+				buf[i++] = z;
+		buf[i++] = s;
+	}
+	while (i < w)
+		buf[i++] = z;
+	if (!q) {
+		qw = 0;
+	}
+	else {
+		if (base != 10) {
+			qw = 4;		// one separator per 4 (hex) nibbles or 4 binary bits
+		}
+		else {
+			qw = 3;
+		}
+	}
+	while (i > 0)
+	{
+		fmtputc(out, buf[--i]);
+		if (q && i != 0 && i % qw == 0)
+			fmtputc(out, q);
+	}
+}
+
+static void fmtuint64(struct fmtbuf *out, uint64_t a, int s, int z, int w, int base, int q)
+{
+	char buf[100];
+	int i, qw;
 	const char *hex_digits = fz_hex_digits;
 
 	if (base < 0)
@@ -162,42 +208,26 @@ static void fmtuint32(struct fmtbuf *out, unsigned int a, int s, int z, int w, i
 	}
 	while (i < w)
 		buf[i++] = z;
+	if (!q) {
+		qw = 0;
+	}
+	else {
+		if (base != 10) {
+			qw = 4;		// one separator per 4 (hex) nibbles or 4 binary bits
+		}
+		else {
+			qw = 3;
+		}
+	}
 	while (i > 0)
-		fmtputc(out, buf[--i]);
-}
-
-static void fmtuint64(struct fmtbuf *out, uint64_t a, int s, int z, int w, int base)
-{
-	char buf[100];
-	int i;
-	const char *hex_digits = fz_hex_digits;
-
-	if (base < 0)
 	{
-		base = -base;
-		hex_digits = fz_hex_digits_UC;
-	}
-
-	i = 0;
-	if (a == 0)
-		buf[i++] = '0';
-	while (a) {
-		buf[i++] = hex_digits[a % base];
-		a /= base;
-	}
-	if (s) {
-		if (z == '0')
-			while (i < w - 1)
-				buf[i++] = z;
-		buf[i++] = s;
-	}
-	while (i < w)
-		buf[i++] = z;
-	while (i > 0)
 		fmtputc(out, buf[--i]);
+		if (q && i != 0 && i % qw == 0)
+			fmtputc(out, q);
+	}
 }
 
-static void fmtint32(struct fmtbuf *out, int value, int s, int z, int w, int base)
+static void fmtint32(struct fmtbuf *out, int value, int s, int z, int w, int base, int q)
 {
 	unsigned int a;
 
@@ -216,10 +246,10 @@ static void fmtint32(struct fmtbuf *out, int value, int s, int z, int w, int bas
 		s = 0;
 		a = value;
 	}
-	fmtuint32(out, a, s, z, w, base);
+	fmtuint32(out, a, s, z, w, base, q);
 }
 
-static void fmtint64(struct fmtbuf *out, int64_t value, int s, int z, int w, int base)
+static void fmtint64(struct fmtbuf *out, int64_t value, int s, int z, int w, int base, int q)
 {
 	uint64_t a;
 
@@ -238,7 +268,7 @@ static void fmtint64(struct fmtbuf *out, int64_t value, int s, int z, int w, int
 		s = 0;
 		a = value;
 	}
-	fmtuint64(out, a, s, z, w, base);
+	fmtuint64(out, a, s, z, w, base, q);
 }
 
 static void fmtquote(struct fmtbuf *out, const char *s, size_t slen, int sq, int eq, int verbatim, int no_hex_unicode_only)
@@ -879,7 +909,7 @@ void
 fz_format_string(fz_context *ctx, void *user, void (*emit)(fz_context *ctx, void *user, int c), const char *fmt, va_list args)
 {
 	struct fmtbuf out;
-	int c, s, z, p, w, l, j, hexprefix;
+	int c, s, z, p, w, l, j, q, hexprefix;
 	const char *comma;
 	size_t bits;
 
@@ -892,7 +922,7 @@ fz_format_string(fz_context *ctx, void *user, void (*emit)(fz_context *ctx, void
 		if (c == '%')
 		{
 			const char* start = fmt;
-
+			q = 0;
 			s = 0;
 			l = 0;
 			z = ' ';
@@ -909,6 +939,13 @@ fz_format_string(fz_context *ctx, void *user, void (*emit)(fz_context *ctx, void
 				/* zero padding */
 				else if (c == '0')
 					z = '0';
+				/* comma separators */
+				else if (c == '\'')
+					q = '\'';
+				else if (c == ',')
+					q = ',';
+				else if (c == '_')
+					q = '_';
 				/* '-' to left justify */
 				else if (c == '-')
 					l = 1;
@@ -1186,6 +1223,7 @@ fz_format_string(fz_context *ctx, void *user, void (*emit)(fz_context *ctx, void
 			case 'p':
 				bits = 8 * sizeof(void *);
 				z = '0';
+				// q = 0;
 				hexprefix = 1;
 				/* fallthrough */
 			case 'x':
@@ -1200,7 +1238,7 @@ fz_format_string(fz_context *ctx, void *user, void (*emit)(fz_context *ctx, void
 				if (bits == 64)
 				{
 					uint64_t i64 = va_arg(args, uint64_t);
-					fmtuint64(&out, i64, 0, z, w, c == 'X' ? -16 : 16);
+					fmtuint64(&out, i64, 0, z, w, c == 'X' ? -16 : 16, q);
 				}
 				else
 				{
@@ -1216,7 +1254,7 @@ fz_format_string(fz_context *ctx, void *user, void (*emit)(fz_context *ctx, void
 						iv = va_arg(args, unsigned int);
 					}
 
-					fmtuint32(&out, iv, 0, z, w, c == 'X' ? -16 : 16);
+					fmtuint32(&out, iv, 0, z, w, c == 'X' ? -16 : 16, q);
 				}
 				if (j)
 					fmtputc(&out, '"');
@@ -1229,7 +1267,7 @@ fz_format_string(fz_context *ctx, void *user, void (*emit)(fz_context *ctx, void
 				if (bits == 64)
 				{
 					int64_t i64 = va_arg(args, int64_t);
-					fmtint64(&out, i64, s, z, w, 10);
+					fmtint64(&out, i64, s, z, w, 10, q);
 				}
 				else
 				{
@@ -1245,7 +1283,7 @@ fz_format_string(fz_context *ctx, void *user, void (*emit)(fz_context *ctx, void
 						iv = va_arg(args, int);
 					}
 
-					fmtint32(&out, iv, s, z, w, 10);
+					fmtint32(&out, iv, s, z, w, 10, q);
 				}
 				if (j)
 					fmtputc(&out, '"');
@@ -1257,7 +1295,7 @@ fz_format_string(fz_context *ctx, void *user, void (*emit)(fz_context *ctx, void
 				if (bits == 64)
 				{
 					uint64_t u64 = va_arg(args, uint64_t);
-					fmtuint64(&out, u64, 0, z, w, 10);
+					fmtuint64(&out, u64, 0, z, w, 10, q);
 				}
 				else
 				{
@@ -1273,7 +1311,7 @@ fz_format_string(fz_context *ctx, void *user, void (*emit)(fz_context *ctx, void
 						iv = va_arg(args, unsigned int);
 					}
 
-					fmtuint32(&out, iv, 0, z, w, 10);
+					fmtuint32(&out, iv, 0, z, w, 10, q);
 				}
 				if (j)
 					fmtputc(&out, '"');
@@ -1285,7 +1323,7 @@ fz_format_string(fz_context *ctx, void *user, void (*emit)(fz_context *ctx, void
 				if (bits == 64)
 				{
 					uint64_t u64 = va_arg(args, uint64_t);
-					fmtuint64(&out, u64, 0, z, w, 2);
+					fmtuint64(&out, u64, 0, z, w, 2, q);
 				}
 				else
 				{
@@ -1301,7 +1339,7 @@ fz_format_string(fz_context *ctx, void *user, void (*emit)(fz_context *ctx, void
 						iv = va_arg(args, unsigned int);
 					}
 
-					fmtuint32(&out, iv, 0, z, w, 2);
+					fmtuint32(&out, iv, 0, z, w, 2, q);
 				}
 				if (j)
 					fmtputc(&out, '"');

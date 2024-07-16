@@ -13,7 +13,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "hwy/base.h"
+#include <stddef.h>
+#include <stdint.h>
+
 #undef HWY_TARGET_INCLUDE
 #define HWY_TARGET_INCLUDE "tests/arithmetic_test.cc"
 #include "hwy/foreach_target.h"  // IWYU pragma: keep
@@ -28,21 +30,21 @@ namespace HWY_NAMESPACE {
 struct TestPlusMinus {
   template <class T, class D>
   HWY_NOINLINE void operator()(T /*unused*/, D d) {
-    const auto v2 = Iota(d, T{2});
-    const auto v3 = Iota(d, T{3});
-    const auto v4 = Iota(d, T{4});
+    const auto v2 = Iota(d, 2);
+    const auto v3 = Iota(d, 3);
+    const auto v4 = Iota(d, 4);
 
     const size_t N = Lanes(d);
     auto lanes = AllocateAligned<T>(N);
     HWY_ASSERT(lanes);
     for (size_t i = 0; i < N; ++i) {
-      lanes[i] = static_cast<T>((2 + i) + (3 + i));
+      lanes[i] = ConvertScalarTo<T>((2 + i) + (3 + i));
     }
     HWY_ASSERT_VEC_EQ(d, lanes.get(), Add(v2, v3));
-    HWY_ASSERT_VEC_EQ(d, Set(d, T{2}), Sub(v4, v2));
+    HWY_ASSERT_VEC_EQ(d, Set(d, ConvertScalarTo<T>(2)), Sub(v4, v2));
 
     for (size_t i = 0; i < N; ++i) {
-      lanes[i] = static_cast<T>((2 + i) + (4 + i));
+      lanes[i] = ConvertScalarTo<T>((2 + i) + (4 + i));
     }
     auto sum = v2;
     sum = Add(sum, v4);  // sum == 6,8..
@@ -56,7 +58,7 @@ struct TestPlusMinus {
 struct TestPlusMinusOverflow {
   template <class T, class D>
   HWY_NOINLINE void operator()(T /*unused*/, D d) {
-    const auto v1 = Iota(d, T(1));
+    const auto v1 = Iota(d, 1);
     const auto vMax = Iota(d, LimitsMax<T>());
     const auto vMin = Iota(d, LimitsMin<T>());
 
@@ -74,11 +76,38 @@ HWY_NOINLINE void TestAllPlusMinus() {
   ForIntegerTypes(ForPartialVectors<TestPlusMinusOverflow>());
 }
 
+struct TestAddSub {
+  template <class T, class D>
+  HWY_NOINLINE void operator()(T /*unused*/, D d) {
+    const auto v2 = Iota(d, 2);
+    const auto v4 = Iota(d, 4);
+
+    const size_t N = Lanes(d);
+    auto lanes = AllocateAligned<T>(N);
+    HWY_ASSERT(lanes);
+    for (size_t i = 0; i < N; ++i) {
+      lanes[i] = ConvertScalarTo<T>(((i & 1) == 0) ? 2 : ((4 + i) + (2 + i)));
+    }
+    HWY_ASSERT_VEC_EQ(d, lanes.get(), AddSub(v4, v2));
+
+    for (size_t i = 0; i < N; ++i) {
+      if ((i & 1) == 0) {
+        lanes[i] = ConvertScalarTo<T>(-2);
+      }
+    }
+    HWY_ASSERT_VEC_EQ(d, lanes.get(), AddSub(v2, v4));
+  }
+};
+
+HWY_NOINLINE void TestAllAddSub() {
+  ForAllTypes(ForPartialVectors<TestAddSub>());
+}
+
 struct TestUnsignedSaturatingArithmetic {
   template <typename T, class D>
   HWY_NOINLINE void operator()(T /*unused*/, D d) {
     const auto v0 = Zero(d);
-    const auto vi = Iota(d, T{1});
+    const auto vi = Iota(d, 1);
     const auto vm = Set(d, LimitsMax<T>());
 
     HWY_ASSERT_VEC_EQ(d, Add(v0, v0), SaturatedAdd(v0, v0));
@@ -98,12 +127,11 @@ struct TestUnsignedSaturatingArithmetic {
 struct TestSignedSaturatingArithmetic {
   template <typename T, class D>
   HWY_NOINLINE void operator()(T /*unused*/, D d) {
-    const auto v0 = Zero(d);
-    const auto vpm = Set(d, LimitsMax<T>());
-    // Ensure all lanes are positive, even if Iota wraps around
-    const auto vi = Or(And(Iota(d, 0), vpm), Set(d, T{1}));
-    const auto vn = Sub(v0, vi);
-    const auto vnm = Set(d, LimitsMin<T>());
+    const Vec<D> v0 = Zero(d);
+    const Vec<D> vpm = Set(d, LimitsMax<T>());
+    const Vec<D> vi = PositiveIota(d);
+    const Vec<D> vn = Sub(v0, vi);
+    const Vec<D> vnm = Set(d, LimitsMin<T>());
     HWY_ASSERT_MASK_EQ(d, MaskTrue(d), Gt(vi, v0));
     HWY_ASSERT_MASK_EQ(d, MaskTrue(d), Lt(vn, v0));
 
@@ -124,7 +152,7 @@ struct TestSignedSaturatingArithmetic {
 struct TestSaturatingArithmeticOverflow {
   template <class T, class D>
   HWY_NOINLINE void operator()(T /*unused*/, D d) {
-    const auto v1 = Iota(d, T(1));
+    const auto v1 = Iota(d, 1);
     const auto vMax = Iota(d, LimitsMax<T>());
     const auto vMin = Iota(d, LimitsMin<T>());
 
@@ -150,9 +178,9 @@ HWY_NOINLINE void TestAllSaturatingArithmetic() {
 struct TestAverage {
   template <typename T, class D>
   HWY_NOINLINE void operator()(T /*unused*/, D d) {
-    const auto v0 = Zero(d);
-    const auto v1 = Set(d, T{1});
-    const auto v2 = Set(d, T{2});
+    const Vec<D> v0 = Zero(d);
+    const Vec<D> v1 = Set(d, static_cast<T>(1));
+    const Vec<D> v2 = Set(d, static_cast<T>(2));
 
     HWY_ASSERT_VEC_EQ(d, v0, AverageRound(v0, v0));
     HWY_ASSERT_VEC_EQ(d, v1, AverageRound(v0, v1));
@@ -171,11 +199,11 @@ HWY_NOINLINE void TestAllAverage() {
 struct TestAbs {
   template <typename T, class D>
   HWY_NOINLINE void operator()(T /*unused*/, D d) {
-    const auto v0 = Zero(d);
-    const auto vp1 = Set(d, T{1});
-    const auto vn1 = Set(d, T{-1});
-    const auto vpm = Set(d, LimitsMax<T>());
-    const auto vnm = Set(d, LimitsMin<T>());
+    const Vec<D> v0 = Zero(d);
+    const Vec<D> vp1 = Set(d, static_cast<T>(1));
+    const Vec<D> vn1 = Set(d, static_cast<T>(-1));
+    const Vec<D> vpm = Set(d, LimitsMax<T>());
+    const Vec<D> vnm = Set(d, LimitsMin<T>());
 
     HWY_ASSERT_VEC_EQ(d, v0, Abs(v0));
     HWY_ASSERT_VEC_EQ(d, vp1, Abs(vp1));
@@ -188,11 +216,11 @@ struct TestAbs {
 struct TestFloatAbs {
   template <typename T, class D>
   HWY_NOINLINE void operator()(T /*unused*/, D d) {
-    const auto v0 = Zero(d);
-    const auto vp1 = Set(d, T{1});
-    const auto vn1 = Set(d, T{-1});
-    const auto vp2 = Set(d, static_cast<T>(0.01));
-    const auto vn2 = Set(d, static_cast<T>(-0.01));
+    const Vec<D> v0 = Zero(d);
+    const Vec<D> vp1 = Set(d, ConvertScalarTo<T>(1));
+    const Vec<D> vn1 = Set(d, ConvertScalarTo<T>(-1));
+    const Vec<D> vp2 = Set(d, ConvertScalarTo<T>(0.01));
+    const Vec<D> vn2 = Set(d, ConvertScalarTo<T>(-0.01));
 
     HWY_ASSERT_VEC_EQ(d, v0, Abs(v0));
     HWY_ASSERT_VEC_EQ(d, vp1, Abs(vp1));
@@ -205,6 +233,27 @@ struct TestFloatAbs {
 HWY_NOINLINE void TestAllAbs() {
   ForSignedTypes(ForPartialVectors<TestAbs>());
   ForFloatTypes(ForPartialVectors<TestFloatAbs>());
+}
+
+struct TestSaturatedAbs {
+  template <typename T, class D>
+  HWY_NOINLINE void operator()(T /*unused*/, D d) {
+    const Vec<D> v0 = Zero(d);
+    const Vec<D> vp1 = Set(d, static_cast<T>(1));
+    const Vec<D> vn1 = Set(d, static_cast<T>(-1));
+    const Vec<D> vpm = Set(d, LimitsMax<T>());
+    const Vec<D> vnm = Set(d, LimitsMin<T>());
+
+    HWY_ASSERT_VEC_EQ(d, v0, SaturatedAbs(v0));
+    HWY_ASSERT_VEC_EQ(d, vp1, SaturatedAbs(vp1));
+    HWY_ASSERT_VEC_EQ(d, vp1, SaturatedAbs(vn1));
+    HWY_ASSERT_VEC_EQ(d, vpm, SaturatedAbs(vpm));
+    HWY_ASSERT_VEC_EQ(d, vpm, SaturatedAbs(vnm));
+  }
+};
+
+HWY_NOINLINE void TestAllSaturatedAbs() {
+  ForSignedTypes(ForPartialVectors<TestSaturatedAbs>());
 }
 
 struct TestIntegerNeg {
@@ -259,6 +308,34 @@ HWY_NOINLINE void TestAllNeg() {
   ForSignedTypes(ForPartialVectors<TestNegOverflow>());
 }
 
+struct TestSaturatedNeg {
+  template <class D>
+  static HWY_NOINLINE void VerifySatNegOverflow(D d) {
+    using T = TFromD<D>;
+    HWY_ASSERT_VEC_EQ(d, Set(d, LimitsMax<T>()),
+                      SaturatedNeg(Set(d, LimitsMin<T>())));
+  }
+
+  template <typename T, class D>
+  HWY_NOINLINE void operator()(T /*unused*/, D d) {
+    VerifySatNegOverflow(d);
+
+    const RebindToUnsigned<D> du;
+    using TU = TFromD<decltype(du)>;
+    const Vec<D> v0 = Zero(d);
+    const Vec<D> v1 = BitCast(d, Set(du, TU{1}));
+    const Vec<D> vp = BitCast(d, Set(du, TU{3}));
+    const Vec<D> vn = Add(Not(vp), v1);  // 2's complement
+    HWY_ASSERT_VEC_EQ(d, v0, SaturatedNeg(v0));
+    HWY_ASSERT_VEC_EQ(d, vp, SaturatedNeg(vn));
+    HWY_ASSERT_VEC_EQ(d, vn, SaturatedNeg(vp));
+  }
+};
+
+HWY_NOINLINE void TestAllSaturatedNeg() {
+  ForSignedTypes(ForPartialVectors<TestSaturatedNeg>());
+}
+
 struct TestIntegerAbsDiff {
   template <typename T, HWY_IF_T_SIZE_ONE_OF(T, (1 << 1) | (1 << 2) | (1 << 4))>
   static inline T ScalarAbsDiff(T a, T b) {
@@ -283,6 +360,7 @@ struct TestIntegerAbsDiff {
     auto in_lanes_a = AllocateAligned<T>(N);
     auto in_lanes_b = AllocateAligned<T>(N);
     auto out_lanes = AllocateAligned<T>(N);
+    HWY_ASSERT(in_lanes_a && in_lanes_b && out_lanes);
     constexpr size_t shift_amt_mask = sizeof(T) * 8 - 1;
     for (size_t i = 0; i < N; ++i) {
       // Need to mask out shift_amt as i can be greater than or equal to
@@ -314,6 +392,234 @@ HWY_NOINLINE void TestAllIntegerAbsDiff() {
 #endif
 }
 
+struct TestIntegerDiv {
+  template <class D, typename T = TFromD<D>>
+  static HWY_NOINLINE void DoDiv(D d, const T* HWY_RESTRICT a_lanes,
+                                 const T* HWY_RESTRICT b_lanes, bool neg_a,
+                                 bool neg_b) {
+    const RebindToSigned<decltype(d)> di;
+    using TI = TFromD<decltype(di)>;
+    const size_t N = Lanes(d);
+    using V = VFromD<D>;
+    auto expected = AllocateAligned<T>(N);
+    auto expected_even = AllocateAligned<T>(N);
+    auto expected_odd = AllocateAligned<T>(N);
+    HWY_ASSERT(expected && expected_even && expected_odd);
+
+    V a = Load(d, a_lanes);
+    V b = Load(d, b_lanes);
+    if (neg_a) a = BitCast(d, Neg(BitCast(di, a)));
+    if (neg_b) b = BitCast(d, Neg(BitCast(di, b)));
+
+    for (size_t i = 0; i < N; i++) {
+      const T a1 =
+          neg_a ? static_cast<T>(-static_cast<TI>(a_lanes[i])) : a_lanes[i];
+      const T b1 =
+          neg_b ? static_cast<T>(-static_cast<TI>(b_lanes[i])) : b_lanes[i];
+      HWY_ASSERT(b1 != 0);
+      expected[i] = static_cast<T>(a1 / b1);
+      if ((i & 1) == 0) {
+        expected_even[i] = expected[i];
+        expected_odd[i] = static_cast<T>(0);
+      } else {
+        expected_even[i] = static_cast<T>(0);
+        expected_odd[i] = expected[i];
+      }
+    }
+
+    HWY_ASSERT_VEC_EQ(d, expected.get(), Div(a, b));
+
+    const V vmin = Set(d, LimitsMin<T>());
+    const V zero = Zero(d);
+    const V all_ones = Set(d, static_cast<T>(-1));
+
+    HWY_ASSERT_VEC_EQ(d, expected_even.get(),
+                      OddEven(zero, Div(a, OddEven(zero, b))));
+    HWY_ASSERT_VEC_EQ(d, expected_odd.get(),
+                      OddEven(Div(a, OddEven(b, zero)), zero));
+
+    HWY_ASSERT_VEC_EQ(
+        d, expected_even.get(),
+        OddEven(zero, Div(OddEven(vmin, a), OddEven(all_ones, b))));
+    HWY_ASSERT_VEC_EQ(
+        d, expected_odd.get(),
+        OddEven(Div(OddEven(a, vmin), OddEven(b, all_ones)), zero));
+  }
+
+  template <typename T, class D>
+  HWY_NOINLINE void operator()(T /*unused*/, D d) {
+    using TU = MakeUnsigned<T>;
+    using TI = MakeSigned<T>;
+    using V = VFromD<D>;
+
+    const size_t N = Lanes(d);
+
+#if HWY_TARGET <= HWY_AVX3 && HWY_IS_MSAN
+    // Workaround for MSAN bug on AVX3
+    if (sizeof(T) <= 2 && N >= 16) return;
+#endif
+
+#if HWY_COMPILER_CLANG && HWY_ARCH_RISCV && HWY_TARGET == HWY_EMU128
+    // Workaround for incorrect codegen. The implementation splits vectors
+    // into halves and then combines them; the top half is incorrect.
+    if (sizeof(T) == 4 && N == 4) return;
+#endif
+
+    const T k1 = static_cast<T>(Unpredictable1());
+    const T kMin = static_cast<T>(LimitsMin<T>() * k1);
+    const T kMax = static_cast<T>(LimitsMax<T>() * k1);
+    const V vmin = Set(d, kMin);
+    const V vmax = Set(d, kMax);
+    const V v1 = Set(d, static_cast<T>(k1));
+    const V v2 = Set(d, static_cast<T>(k1 + 1));
+    const V v3 = Set(d, static_cast<T>(k1 + 2));
+
+    HWY_ASSERT_VEC_EQ(d, vmin, Div(vmin, v1));
+    HWY_ASSERT_VEC_EQ(d, vmax, Div(vmax, v1));
+    HWY_ASSERT_VEC_EQ(d, Set(d, static_cast<T>(kMin / 2)), Div(vmin, v2));
+    HWY_ASSERT_VEC_EQ(d, Set(d, static_cast<T>(kMin / 3)), Div(vmin, v3));
+    HWY_ASSERT_VEC_EQ(d, Set(d, static_cast<T>(kMax / 2)), Div(vmax, v2));
+    HWY_ASSERT_VEC_EQ(d, Set(d, static_cast<T>(kMax / 3)), Div(vmax, v3));
+
+    auto in1 = AllocateAligned<T>(N);
+    auto in2 = AllocateAligned<T>(N);
+    HWY_ASSERT(in1 && in2);
+
+    // Random inputs in each lane
+    RandomState rng;
+    for (size_t rep = 0; rep < AdjustedReps(1000); ++rep) {
+      for (size_t i = 0; i < N; ++i) {
+        const T rnd_a0 = static_cast<T>(Random64(&rng) &
+                                        static_cast<uint64_t>(LimitsMax<TU>()));
+        const T rnd_b0 = static_cast<T>(Random64(&rng) &
+                                        static_cast<uint64_t>(LimitsMax<TI>()));
+
+        const T rnd_b = static_cast<T>(rnd_b0 | static_cast<T>(rnd_b0 == 0));
+        const T rnd_a = static_cast<T>(
+            rnd_a0 + static_cast<T>(IsSigned<T>() && rnd_a0 == LimitsMin<T>() &&
+                                    ScalarAbs(rnd_b) == static_cast<T>(1)));
+
+        in1[i] = rnd_a;
+        in2[i] = rnd_b;
+      }
+
+      const bool neg_a = true;
+      const bool neg_b = true;
+      DoDiv(d, in1.get(), in2.get(), false, false);
+      DoDiv(d, in1.get(), in2.get(), false, neg_b);
+      DoDiv(d, in1.get(), in2.get(), neg_a, false);
+      DoDiv(d, in1.get(), in2.get(), neg_a, neg_b);
+    }
+  }
+};
+
+HWY_NOINLINE void TestAllIntegerDiv() {
+  ForIntegerTypes(ForPartialVectors<TestIntegerDiv>());
+}
+
+struct TestIntegerMod {
+  template <class D>
+  static HWY_NOINLINE void DoTestIntegerMod(D d, const VecArg<VFromD<D>> a,
+                                            const VecArg<VFromD<D>> b) {
+    using T = TFromD<D>;
+
+    const size_t N = Lanes(d);
+
+#if HWY_TARGET <= HWY_AVX3 && HWY_IS_MSAN
+    // Workaround for MSAN bug on AVX3
+    if (sizeof(T) <= 2 && N >= 16) {
+      return;
+    }
+#endif
+
+    auto a_lanes = AllocateAligned<T>(N);
+    auto b_lanes = AllocateAligned<T>(N);
+    auto expected = AllocateAligned<T>(N);
+    auto expected_even = AllocateAligned<T>(N);
+    auto expected_odd = AllocateAligned<T>(N);
+    HWY_ASSERT(a_lanes && b_lanes && expected && expected_even && expected_odd);
+
+    Store(a, d, a_lanes.get());
+    Store(b, d, b_lanes.get());
+
+    for (size_t i = 0; i < N; i++) {
+      expected[i] = static_cast<T>(a_lanes[i] % b_lanes[i]);
+      if ((i & 1) == 0) {
+        expected_even[i] = expected[i];
+        expected_odd[i] = static_cast<T>(0);
+      } else {
+        expected_even[i] = static_cast<T>(0);
+        expected_odd[i] = expected[i];
+      }
+    }
+
+    HWY_ASSERT_VEC_EQ(d, expected.get(), Mod(a, b));
+
+    const auto vmin = Set(d, LimitsMin<T>());
+    const auto zero = Zero(d);
+    const auto all_ones = Set(d, static_cast<T>(-1));
+
+    HWY_ASSERT_VEC_EQ(d, expected_even.get(),
+                      OddEven(zero, Mod(a, OddEven(zero, b))));
+    HWY_ASSERT_VEC_EQ(d, expected_odd.get(),
+                      OddEven(Mod(a, OddEven(b, zero)), zero));
+
+    HWY_ASSERT_VEC_EQ(
+        d, expected_even.get(),
+        OddEven(zero, Mod(OddEven(vmin, a), OddEven(all_ones, b))));
+    HWY_ASSERT_VEC_EQ(
+        d, expected_odd.get(),
+        OddEven(Mod(OddEven(a, vmin), OddEven(b, all_ones)), zero));
+  }
+
+  template <typename T, class D>
+  HWY_NOINLINE void operator()(T /*unused*/, D d) {
+    using TU = MakeUnsigned<T>;
+    using TI = MakeSigned<T>;
+
+    const size_t N = Lanes(d);
+    auto in1 = AllocateAligned<T>(N);
+    auto in2 = AllocateAligned<T>(N);
+    HWY_ASSERT(in1 && in2);
+
+    const RebindToSigned<decltype(d)> di;
+
+    // Random inputs in each lane
+    RandomState rng;
+    for (size_t rep = 0; rep < AdjustedReps(1000); ++rep) {
+      for (size_t i = 0; i < N; ++i) {
+        const T rnd_a0 = static_cast<T>(Random64(&rng) &
+                                        static_cast<uint64_t>(LimitsMax<TU>()));
+        const T rnd_b0 = static_cast<T>(Random64(&rng) &
+                                        static_cast<uint64_t>(LimitsMax<TI>()));
+
+        const T rnd_b = static_cast<T>(rnd_b0 | static_cast<T>(rnd_b0 == 0));
+        const T rnd_a = static_cast<T>(
+            rnd_a0 + static_cast<T>(IsSigned<T>() && rnd_a0 == LimitsMin<T>() &&
+                                    ScalarAbs(rnd_b) == static_cast<T>(1)));
+
+        in1[i] = rnd_a;
+        in2[i] = rnd_b;
+      }
+
+      const auto a = Load(d, in1.get());
+      const auto b = Load(d, in2.get());
+
+      const auto neg_a = BitCast(d, Neg(BitCast(di, a)));
+      const auto neg_b = BitCast(d, Neg(BitCast(di, b)));
+
+      DoTestIntegerMod(d, a, b);
+      DoTestIntegerMod(d, a, neg_b);
+      DoTestIntegerMod(d, neg_a, b);
+      DoTestIntegerMod(d, neg_a, neg_b);
+    }
+  }
+};
+
+HWY_NOINLINE void TestAllIntegerMod() {
+  ForIntegerTypes(ForPartialVectors<TestIntegerMod>());
+}
+
 // NOLINTNEXTLINE(google-readability-namespace-comments)
 }  // namespace HWY_NAMESPACE
 }  // namespace hwy
@@ -324,11 +630,17 @@ HWY_AFTER_NAMESPACE();
 namespace hwy {
 HWY_BEFORE_TEST(HwyArithmeticTest);
 HWY_EXPORT_AND_TEST_P(HwyArithmeticTest, TestAllPlusMinus);
+HWY_EXPORT_AND_TEST_P(HwyArithmeticTest, TestAllAddSub);
 HWY_EXPORT_AND_TEST_P(HwyArithmeticTest, TestAllSaturatingArithmetic);
 HWY_EXPORT_AND_TEST_P(HwyArithmeticTest, TestAllAverage);
 HWY_EXPORT_AND_TEST_P(HwyArithmeticTest, TestAllAbs);
+HWY_EXPORT_AND_TEST_P(HwyArithmeticTest, TestAllSaturatedAbs);
 HWY_EXPORT_AND_TEST_P(HwyArithmeticTest, TestAllNeg);
+HWY_EXPORT_AND_TEST_P(HwyArithmeticTest, TestAllSaturatedNeg);
 HWY_EXPORT_AND_TEST_P(HwyArithmeticTest, TestAllIntegerAbsDiff);
+HWY_EXPORT_AND_TEST_P(HwyArithmeticTest, TestAllIntegerDiv);
+HWY_EXPORT_AND_TEST_P(HwyArithmeticTest, TestAllIntegerMod);
+HWY_AFTER_TEST();
 }  // namespace hwy
 
 #endif

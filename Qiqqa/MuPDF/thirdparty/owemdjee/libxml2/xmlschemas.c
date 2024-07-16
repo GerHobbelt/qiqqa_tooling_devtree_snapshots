@@ -628,6 +628,9 @@ struct _xmlSchemaParserCtxt {
     xmlSchemaRedefPtr redef; /* Used for redefinitions. */
     int redefCounter; /* Used for redefinitions. */
     xmlSchemaItemListPtr attrProhibs;
+
+    xmlResourceLoader resourceLoader;
+    void *resourceCtxt;
 };
 
 /**
@@ -5898,8 +5901,8 @@ xmlSchemaPValAttrNodeID(xmlSchemaParserCtxtPtr ctxt, xmlAttrPtr attr)
 	* NOTE: the IDness might have already be declared in the DTD
 	*/
 	if (attr->atype != XML_ATTRIBUTE_ID) {
-	    xmlIDPtr res;
 	    xmlChar *strip;
+            int res;
 
 	    /*
 	    * TODO: Use xmlSchemaStrip here; it's not exported at this
@@ -5910,8 +5913,10 @@ xmlSchemaPValAttrNodeID(xmlSchemaParserCtxtPtr ctxt, xmlAttrPtr attr)
 		xmlFree((xmlChar *) value);
 		value = strip;
 	    }
-	    res = xmlAddID(NULL, attr->doc, value, attr);
-	    if (res == NULL) {
+	    res = xmlAddIDSafe(attr, value);
+            if (res < 0) {
+                xmlSchemaPErrMemory(ctxt);
+	    } else if (res == 0) {
 		ret = XML_SCHEMAP_S4S_ATTR_INVALID_VALUE;
 		xmlSchemaPSimpleTypeErr(ctxt,
 		    XML_SCHEMAP_S4S_ATTR_INVALID_VALUE,
@@ -5919,8 +5924,7 @@ xmlSchemaPValAttrNodeID(xmlSchemaParserCtxtPtr ctxt, xmlAttrPtr attr)
 		    xmlSchemaGetBuiltInType(XML_SCHEMAS_ID),
 		    NULL, NULL, "Duplicate value '%s' of simple "
 		    "type 'xs:ID'", value, NULL);
-	    } else
-		attr->atype = XML_ATTRIBUTE_ID;
+	    }
 	}
     } else if (ret > 0) {
 	ret = XML_SCHEMAP_S4S_ATTR_INVALID_VALUE;
@@ -8062,7 +8066,7 @@ xmlSchemaCheckCSelectorXPath(xmlSchemaParserCtxtPtr ctxt,
 	return (annot);         \
     }                           \
     cur = item->annot;          \
-    if (cur->next != NULL) {    \
+    while (cur->next != NULL) { \
 	cur = cur->next;	\
     }                           \
     cur->next = annot;
@@ -10505,6 +10509,9 @@ doc_load:
 
         if (pctxt->serror != NULL)
             xmlCtxtSetErrorHandler(parserCtxt, pctxt->serror, pctxt->errCtxt);
+        if (pctxt->resourceLoader != NULL)
+            xmlCtxtSetResourceLoader(parserCtxt, pctxt->resourceLoader,
+                                     pctxt->resourceCtxt);
 
 	if ((pctxt->dict != NULL) && (parserCtxt->dict != NULL)) {
 	    /*
@@ -21413,6 +21420,26 @@ xmlSchemaGetParserErrors(xmlSchemaParserCtxtPtr ctxt,
 }
 
 /**
+ * xmlSchemaSetResourceLoader:
+ * @ctxt:  schema parser
+ * @loader:  resource loader
+ * @data:  user data which will be passed to the loader
+ *
+ * Register a callback function that will be called to load documents
+ * or external entities.
+ *
+ * Available since 2.14.0.
+ */
+void
+xmlSchemaSetResourceLoader(xmlSchemaParserCtxtPtr ctxt,
+                           xmlResourceLoader loader, void *data) {
+    if (ctxt == NULL)
+        return;
+    ctxt->resourceLoader = loader;
+    ctxt->resourceCtxt = data;
+}
+
+/**
  * xmlSchemaFacetTypeToString:
  * @type:  the facet type
  *
@@ -27316,7 +27343,6 @@ exit:
 internal_error:
     vctxt->err = -1;
     xmlStopParser(vctxt->parserCtxt);
-    return;
 }
 
 static void
@@ -27360,7 +27386,6 @@ exit:
 internal_error:
     vctxt->err = -1;
     xmlStopParser(vctxt->parserCtxt);
-    return;
 }
 
 /************************************************************************

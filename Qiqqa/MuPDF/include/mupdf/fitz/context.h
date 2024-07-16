@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -152,6 +152,7 @@ void fz_morph_error(fz_context *ctx, int fromcode, int tocode);
 */
 void fz_verror(fz_context* ctx, const char* fmt, va_list ap);
 void fz_error(fz_context* ctx, const char* fmt, ...);
+void fz_write_error_line(fz_context* ctx, const char* line);
 
 /**
 	Log a warning.
@@ -161,6 +162,7 @@ void fz_error(fz_context* ctx, const char* fmt, ...);
 */
 void fz_vwarn(fz_context *ctx, const char *fmt, va_list ap);
 void fz_warn(fz_context *ctx, const char *fmt, ...);
+void fz_write_warn_line(fz_context* ctx, const char* line);
 
 /**
 	Log an informational notice.
@@ -170,12 +172,25 @@ void fz_warn(fz_context *ctx, const char *fmt, ...);
 */
 void fz_vinfo(fz_context* ctx, const char* fmt, va_list ap);
 void fz_info(fz_context* ctx, const char* fmt, ...);
+void fz_write_info_line(fz_context* ctx, const char* line);
+
+/**
+	Log a debug message.
+
+	This goes to the registered debug stream (stderr by
+	default).
+*/
+void fz_vdebug(fz_context* ctx, const char* fmt, va_list ap);
+void fz_debug(fz_context* ctx, const char* fmt, ...);
+void fz_write_debug_line(fz_context* ctx, const char* line);
 
 /**
 	Within an fz_catch() block, retrieve the formatted message
 	string for the current exception.
 
 	This assumes no intervening use of fz_try/fz_catch.
+
+	See also fz_report_error() and fz_convert_error().
 */
 const char *fz_caught_message(fz_context *ctx);
 
@@ -186,6 +201,14 @@ const char *fz_caught_message(fz_context *ctx);
 	This assumes no intervening use of fz_try/fz_catch.
 */
 int fz_caught(fz_context *ctx);
+
+/*
+	Within an fz_catch() block, retrieve the errno code for
+	the current SYSTEM exception.
+
+	Is undefined for non-SYSTEM errors.
+*/
+int fz_caught_errno(fz_context *ctx);
 
 /**
 	Within an fz_catch() block, rethrow the current exception
@@ -244,6 +267,25 @@ void fz_vlog_error_printfFL(fz_context *ctx, const char *file, int line, const c
 void fz_log_errorFL(fz_context *ctx, const char *file, int line, const char *str);
 int fz_do_catchFL(fz_context *ctx, const char *file, int line);
 #endif
+
+/*
+* IMPORTANT NOTE:
+* 
+* The following calls do reset the error/exception error code and, as such, serve as
+* 'handlers' of any fitz/pdf exception:
+* 
+* - fz_report_error()
+* - fz_ignore_error()
+* - fz_convert_error()
+*
+* After an exception is caught using `fz_catch()` you MUST call any one of the above.
+* If you don't, the exception will remain marked as 'pending' and will be reported
+* as UNHANDLED by the time the context `ctx` is dropped by way of `fz_drop_context()`.
+*
+* Also note that these calls DO NOT erase the last exception/error message, which can
+* be accessed any time before or after by calling `fz_caught_message()` without
+* changing the 'pending/handled' state of the current exception/error.
+*/
 
 /* Report an error to the registered error callback. */
 void fz_report_error(fz_context *ctx);
@@ -943,6 +985,21 @@ void *fz_realloc_no_throw(fz_context *ctx, void *p, size_t size   FZDBG_DECL_ARG
 #endif
 
 /**
+	fz_malloc equivalent, except that the block is guaranteed aligned.
+	Block must be freed later using fz_free_aligned.
+*/
+void *fz_malloc_aligned(fz_context *ctx, size_t size, int align   FZDBG_DECL_ARGS);
+#if defined(FZDBG_HAS_TRACING)
+#define fz_malloc_aligned(ctx, size, align)					\
+    fz_malloc_aligned(ctx, size, align, __FILE__, __LINE__)
+#endif
+
+/**
+	fz_free equivalent, for blocks allocated via fz_malloc_aligned.
+*/
+void fz_free_aligned(fz_context *ctx, void *p);
+
+/**
     Portable strdup implementation, using fz allocators.
 */
 char *fz_strdup(fz_context *ctx, const char *s   FZDBG_DECL_ARGS);
@@ -956,6 +1013,34 @@ char *fz_strdup(fz_context *ctx, const char *s   FZDBG_DECL_ARGS);
 */
 void fz_memrnd(fz_context *ctx, uint8_t *block, int len);
 
+/*
+	Reference counted malloced C strings.
+*/
+typedef struct
+{
+	int refs;
+	char str[1];
+} fz_string;
+
+/*
+	Allocate a new string to hold a copy of str.
+
+	Returns with a refcount of 1.
+*/
+fz_string *fz_new_string(fz_context *ctx, const char *str   FZDBG_DECL_ARGS);
+
+/*
+	Take another reference to a string.
+*/
+fz_string *fz_keep_string(fz_context *ctx, fz_string *str);
+
+/*
+	Drop a reference to a string, freeing if the refcount
+	reaches 0.
+*/
+void fz_drop_string(fz_context *ctx, fz_string *str);
+
+#define fz_cstring_from_string(A) ((A) == NULL ? NULL : (A)->str)
 
 /* Implementation details: subject to change. */
 
@@ -1061,6 +1146,8 @@ struct fz_context
     fz_colorspace_context *colorspace;
     fz_store *store;
     fz_glyph_cache *glyph_cache;
+	
+	const void *jbig2encoder;
 
 	fz_cookie* cookie;
 };

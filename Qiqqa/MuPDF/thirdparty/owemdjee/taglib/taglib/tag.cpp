@@ -42,27 +42,27 @@ Tag::~Tag() = default;
 
 bool Tag::isEmpty() const
 {
-  return (title().isEmpty() &&
-          artist().isEmpty() &&
-          album().isEmpty() &&
-          comment().isEmpty() &&
-          genre().isEmpty() &&
-          year() == 0 &&
-          track() == 0);
+  return title().isEmpty() &&
+         artist().isEmpty() &&
+         album().isEmpty() &&
+         comment().isEmpty() &&
+         genre().isEmpty() &&
+         year() == 0 &&
+         track() == 0;
 }
 
 PropertyMap Tag::properties() const
 {
   PropertyMap map;
-  if(!(title().isEmpty()))
+  if(!title().isEmpty())
     map["TITLE"].append(title());
-  if(!(artist().isEmpty()))
+  if(!artist().isEmpty())
     map["ARTIST"].append(artist());
-  if(!(album().isEmpty()))
+  if(!album().isEmpty())
     map["ALBUM"].append(album());
-  if(!(comment().isEmpty()))
+  if(!comment().isEmpty())
     map["COMMENT"].append(comment());
-  if(!(genre().isEmpty()))
+  if(!genre().isEmpty())
     map["GENRE"].append(genre());
   if(year() != 0)
     map["DATE"].append(String::number(year()));
@@ -77,43 +77,43 @@ void Tag::removeUnsupportedProperties(const StringList&)
 
 PropertyMap Tag::setProperties(const PropertyMap &origProps)
 {
-  PropertyMap properties(origProps);
-  properties.removeEmpty();
+  PropertyMap props(origProps);
+  props.removeEmpty();
   StringList oneValueSet;
   // can this be simplified by using some preprocessor defines / function pointers?
-  if(properties.contains("TITLE")) {
-    setTitle(properties["TITLE"].front());
+  if(props.contains("TITLE")) {
+    setTitle(props["TITLE"].front());
     oneValueSet.append("TITLE");
   } else
     setTitle(String());
 
-  if(properties.contains("ARTIST")) {
-    setArtist(properties["ARTIST"].front());
+  if(props.contains("ARTIST")) {
+    setArtist(props["ARTIST"].front());
     oneValueSet.append("ARTIST");
   } else
     setArtist(String());
 
-  if(properties.contains("ALBUM")) {
-    setAlbum(properties["ALBUM"].front());
+  if(props.contains("ALBUM")) {
+    setAlbum(props["ALBUM"].front());
     oneValueSet.append("ALBUM");
   } else
     setAlbum(String());
 
-  if(properties.contains("COMMENT")) {
-    setComment(properties["COMMENT"].front());
+  if(props.contains("COMMENT")) {
+    setComment(props["COMMENT"].front());
     oneValueSet.append("COMMENT");
   } else
     setComment(String());
 
-  if(properties.contains("GENRE")) {
-    setGenre(properties["GENRE"].front());
+  if(props.contains("GENRE")) {
+    setGenre(props["GENRE"].front());
     oneValueSet.append("GENRE");
   } else
     setGenre(String());
 
-  if(properties.contains("DATE")) {
+  if(props.contains("DATE")) {
     bool ok;
-    int date = properties["DATE"].front().toInt(&ok);
+    int date = props["DATE"].front().toInt(&ok);
     if(ok) {
       setYear(date);
       oneValueSet.append("DATE");
@@ -123,11 +123,11 @@ PropertyMap Tag::setProperties(const PropertyMap &origProps)
   else
     setYear(0);
 
-  if(properties.contains("TRACKNUMBER")) {
+  if(props.contains("TRACKNUMBER")) {
     bool ok;
-    int track = properties["TRACKNUMBER"].front().toInt(&ok);
+    int trackNumber = props["TRACKNUMBER"].front().toInt(&ok);
     if(ok) {
-      setTrack(track);
+      setTrack(trackNumber);
       oneValueSet.append("TRACKNUMBER");
     } else
       setTrack(0);
@@ -138,12 +138,12 @@ PropertyMap Tag::setProperties(const PropertyMap &origProps)
   // for each tag that has been set above, remove the first entry in the corresponding
   // value list. The others will be returned as unsupported by this format.
   for(const auto &entry : std::as_const(oneValueSet)) {
-    if(properties[entry].size() == 1)
-      properties.erase(entry);
+    if(props[entry].size() == 1)
+      props.erase(entry);
     else
-      properties[entry].erase(properties[entry].begin());
+      props[entry].erase(props[entry].begin());
   }
-  return properties;
+  return props;
 }
 
 StringList Tag::complexPropertyKeys() const
@@ -183,9 +183,14 @@ void Tag::duplicate(const Tag *source, Tag *target, bool overwrite) // static
       target->setComment(source->comment());
     if(target->genre().isEmpty())
       target->setGenre(source->genre());
-    if(target->year() <= 0)
+    if(target->year() == 0)
       target->setYear(source->year());
-    if(target->track() <= 0)
+    if(target->track() == 0)
       target->setTrack(source->track());
   }
+}
+
+String Tag::joinTagValues(const StringList &values)
+{
+  return values.toString(" / ");
 }

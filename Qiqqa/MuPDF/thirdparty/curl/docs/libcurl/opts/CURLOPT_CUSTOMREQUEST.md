@@ -9,6 +9,12 @@ See-also:
   - CURLOPT_HTTPHEADER (3)
   - CURLOPT_NOBODY (3)
   - CURLOPT_REQUEST_TARGET (3)
+Protocol:
+  - HTTP
+  - FTP
+  - IMAP
+  - POP3
+  - SMTP
 ---
 
 # NAME
@@ -89,16 +95,9 @@ with CURLOPT_MAIL_RCPT(3), to specify an EXPN request. If the
 CURLOPT_NOBODY(3) option is specified then the request can be used to
 issue **NOOP** and **RSET** commands.
 
-The application does not have to keep the string around after setting this
-option.
-
 # DEFAULT
 
 NULL
-
-# PROTOCOLS
-
-HTTP, FTP, IMAP, POP3 and SMTP
 
 # EXAMPLE
 

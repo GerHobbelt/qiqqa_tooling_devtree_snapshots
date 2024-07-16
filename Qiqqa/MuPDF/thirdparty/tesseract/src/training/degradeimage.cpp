@@ -17,6 +17,8 @@
  *
  **********************************************************************/
 
+#include <tesseract/preparation.h> // compiler config, etc.
+
 #include "degradeimage.h"
 
 #include <leptonica/allheaders.h> // from leptonica
@@ -52,7 +54,7 @@ enum FactorNames {
 };
 
 // Rotation is +/- kRotationRange radians.
-const float kRotationRange = 0.05f;
+const float kRotationRange = 0.02f;
 // Number of grey levels to shift by for each exposure step.
 const int kExposureFactor = 16;
 // Salt and pepper noise is +/- kSaltnPepper.
@@ -88,7 +90,7 @@ const int kMinRampSize = 1000;
 // Finally a greyscale ramp provides a continuum of effects between exposure
 // levels.
 Image DegradeImage(Image input, int exposure, TRand *randomizer, float *rotation) {
-  printf("degrade image:");
+  tprintDebug("Degrade image:\n");
   Image pix = pixConvertTo8(input, false);
   input.destroy();
   input = pix;
@@ -110,17 +112,12 @@ Image DegradeImage(Image input, int exposure, TRand *randomizer, float *rotation
   // A small random rotation helps to make the edges jaggy in a realistic way.
   if (rotation != nullptr) {
     float radians_clockwise = 0.0f;
-    //float my_rotation;
-    //printf("define a rotation:");
-    //std::cout << "define a rotation:";
-    //std::cin >> my_rotation;
     if (*rotation) {
       radians_clockwise = *rotation;
     } else if (randomizer != nullptr) {
       radians_clockwise = randomizer->SignedRand(kRotationRange);
     }
-    //radians_clockwise = my_rotation;
-    
+
     input = pixRotate(pix, radians_clockwise, L_ROTATE_AREA_MAP, L_BRING_IN_WHITE, 0, 0);
     // Rotate the boxes to match.
     *rotation = radians_clockwise;
@@ -191,22 +188,22 @@ Image PrepareDistortedPix(const Image pix, bool perspective, bool invert, bool w
   if ((white_noise || smooth_noise) /*&& randomizer->SignedRand(1.0) > 0.0*/) {
     // TODO(rays) Cook noise in a more thread-safe manner than rand().
     // Attempt to make the sequences reproducible.
-    printf("add noise");
+    tprintDebug("add noise\n");
     srand(randomizer->IntRand());
-    Image pixn = pixAddGaussianNoise(distorted, my_noise);
+    Image pixn = pixAddGaussianNoise(distorted, my_noise);   // 8.0
     distorted.destroy();
     if (smooth_noise) {
-      distorted = pixBlockconv(pixn, my_smooth, my_smooth);
+      distorted = pixBlockconv(pixn, my_smooth, my_smooth);   // 1
       pixn.destroy();
-      printf("smoothen");
+      tprintDebug("smoothen\n");
     } else {
-      printf("noise added");
+      tprintDebug("noise added\n");
       distorted = pixn;
     }
   }
   if (blur /*&& randomizer->SignedRand(1.0) > 0.0*/) {
-    printf("blur");
-    Image blurred = pixBlockconv(distorted, my_blur, my_blur);
+    tprintDebug("blur\n");
+    Image blurred = pixBlockconv(distorted, my_blur, my_blur);  // 1
     distorted.destroy();
     distorted = blurred;
   }

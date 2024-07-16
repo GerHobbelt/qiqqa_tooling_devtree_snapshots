@@ -17,9 +17,7 @@
 //
 ///////////////////////////////////////////////////////////////////////
 
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include "colpartition.h"
 #include "colpartitiongrid.h"
@@ -99,7 +97,7 @@ ColPartition::ColPartition(Tesseract* tess, BlobRegionType blob_type, const ICOO
       median_right_(-INT32_MAX),
       blob_type_(blob_type),
       vertical_(vertical) {
-  assert(tess != nullptr);
+  ASSERT0(tess != nullptr);
   memset(special_blobs_densities_, 0, sizeof(special_blobs_densities_));
 }
 
@@ -367,7 +365,7 @@ void ColPartition::ReflectInYAxis() {
 bool ColPartition::IsLegal() {
   if (bounding_box_.left() > bounding_box_.right()) {
     if (textord_debug_bugs) {
-      tprintError("Bounding box invalid\n");
+      tprintError("textord_debug_bugs: Bounding box invalid\n");
       Print();
     }
     return false; // Bounding box invalid.
@@ -375,14 +373,14 @@ bool ColPartition::IsLegal() {
   if (left_margin_ > bounding_box_.left() ||
       right_margin_ < bounding_box_.right()) {
     if (textord_debug_bugs) {
-      tprintError("Margins invalid\n");
+      tprintError("textord_debug_bugs: Margins invalid\n");
       Print();
     }
     return false; // Margins invalid.
   }
   if (left_key_ > BoxLeftKey() || right_key_ < BoxRightKey()) {
     if (textord_debug_bugs) {
-      tprintDebug("Key inside box: {} v {} or {} v {}\n", left_key_, BoxLeftKey(),
+      tprintDebug("textord_debug_bugs: Key inside box: {} v {} or {} v {}\n", left_key_, BoxLeftKey(),
               right_key_, BoxRightKey());
       Print();
     }
@@ -458,44 +456,6 @@ bool ColPartition::ConfirmNoTabViolation(const ColPartition &other) const {
   }
   return true;
 }
-
-// Added for Scribe build.
-// Returns false if this partition includes 1+ medium blob but the partition being compared to does not.
-// This avoids cases where partitions that include likely text are smoothed to match the type of partitions including only noise.
-bool ColPartition::ConfirmNoSizeViolation(const ColPartition &other) const {
-  if (boxes_.empty() || other.boxes_.empty()) {
-    return true;
-  }
-
-  bool medium_this = false;
-  bool medium_other = false;
-
-  BLOBNBOX_C_IT box_it(const_cast<BLOBNBOX_CLIST *>(&boxes_));
-  BLOBNBOX_C_IT other_it(const_cast<BLOBNBOX_CLIST *>(&other.boxes_));
-
-  for (box_it.mark_cycle_pt(); !box_it.cycled_list(); box_it.forward()) {
-    BLOBNBOX *blob = box_it.data();
-    if (blob->medium()) {
-      medium_this = true;
-      break;
-    }
-  }
-  for (other_it.mark_cycle_pt(); !other_it.cycled_list(); other_it.forward()) {
-    BLOBNBOX *blob = other_it.data();
-    if (blob->medium()) {
-      medium_other = true;
-      break;
-    }
-  }
-
-  if (medium_this && !medium_other) {
-    return false;
-  } 
-
-  return true;
-
-}
-
 
 // Returns true if other has a similar stroke width to this.
 bool ColPartition::MatchingStrokeWidth(const ColPartition &other,
@@ -970,14 +930,14 @@ void ColPartition::ComputeLimits() {
   if (left_key_ > BoxLeftKey() && textord_debug_bugs) {
     // TODO(rays) investigate the causes of these error messages, to find
     // out if they are genuinely harmful, or just indicative of junk input.
-    tprintDebug("Computed left-illegal partition\n");
+    tprintDebug("textord_debug_bugs: Computed left-illegal partition\n");
     Print();
   }
   if (!right_key_tab_) {
     right_key_ = BoxRightKey();
   }
   if (right_key_ < BoxRightKey() && textord_debug_bugs) {
-    tprintDebug("Computed right-illegal partition\n");
+    tprintDebug("textord_debug_bugs: Computed right-illegal partition\n");
     Print();
   }
   if (it.empty()) {
@@ -1020,12 +980,12 @@ void ColPartition::ComputeLimits() {
   }
 
   if (right_margin_ < bounding_box_.right() && textord_debug_bugs) {
-    tprintWarn("Made partition with bad right coords, {} < {}\n", right_margin_,
+    tprintWarn("textord_debug_bugs: Made partition with bad right coords, {} < {}\n", right_margin_,
             bounding_box_.right());
     Print();
   }
   if (left_margin_ > bounding_box_.left() && textord_debug_bugs) {
-    tprintWarn("Made partition with bad left coords, {} > {}\n", left_margin_,
+    tprintWarn("textord_debug_bugs: Made partition with bad left coords, {} > {}\n", left_margin_,
             bounding_box_.left());
     Print();
   }
@@ -1468,7 +1428,7 @@ void ColPartition::AddToWorkingSet(const ICOORD &bleft, const ICOORD &tright,
     return;
   }
   if (partner != nullptr && textord_debug_bugs) {
-    tprintDebug("Partition with partner has no working set!:");
+    tprintDebug("textord_debug_bugs: Partition with partner has no working set!:");
     Print();
     partner->Print();
   }
@@ -1485,7 +1445,7 @@ void ColPartition::AddToWorkingSet(const ICOORD &bleft, const ICOORD &tright,
     Print();
   }
   if (it.cycled_list() && textord_debug_bugs) {
-    tprintDebug("Target column={}, only had {}\n", first_column_, col_index);
+    tprintDebug("textord_debug_bugs: Target column={}, only had {}\n", first_column_, col_index);
   }
   ASSERT_HOST(!it.cycled_list());
   work_set = it.data();
@@ -2371,8 +2331,7 @@ void ColPartition::SmoothSpacings(int resolution, int page_height,
     // The last time, everything is shifted up 1, so we present OKSpacingBlip
     // with neighbourhood-1 and check that PN_LOWER matches the median.
     if (neighbourhood[PN_LOWER] == nullptr ||
-        (!neighbourhood[PN_UPPER]->SpacingsEqual(*neighbourhood[PN_LOWER],
-                                                 resolution) &&
+        (!neighbourhood[PN_UPPER]->SpacingsEqual(*neighbourhood[PN_LOWER], resolution) &&
          (neighbourhood[PN_UPPER] == nullptr ||
           neighbourhood[PN_LOWER] == nullptr ||
           !OKSpacingBlip(resolution, median_space, neighbourhood, 0)) &&
@@ -2405,7 +2364,8 @@ void ColPartition::SmoothSpacings(int resolution, int page_height,
         int top_spacing = static_cast<int>(total_top / total_count + 0.5);
         int bottom_spacing = static_cast<int>(total_bottom / total_count + 0.5);
         if (textord_debug_tabfind > 0) {
-          tprintDebug("Spacing run ended. Cause:");
+          TPrintGroupLinesTillEndOfScope push;
+          tprintDebug("Spacing run ended. Cause: ");
           if (neighbourhood[PN_LOWER] == nullptr) {
             tprintDebug("No more lines\n");
           } else {
@@ -2439,7 +2399,7 @@ void ColPartition::SmoothSpacings(int resolution, int page_height,
           upper->set_top_spacing(top_spacing);
           upper->set_bottom_spacing(bottom_spacing);
           if (textord_debug_tabfind > 0) {
-            tprintDebug("Setting mean on:");
+            tprintDebug("Setting mean on: ");
             upper->Print();
           }
           sum_it.forward();

@@ -90,14 +90,14 @@ end of file, and no further data is read, so this character should be avoided
 unless you really want that action.
 </P>
 <P>
-The input is processed using using C's string functions, so must not
-contain binary zeros, even though in Unix-like environments, <b>fgets()</b>
-treats any bytes other than newline as data characters. An error is generated
-if a binary zero is encountered. By default subject lines are processed for
-backslash escapes, which makes it possible to include any data value in strings
-that are passed to the library for matching. For patterns, there is a facility
-for specifying some or all of the 8-bit input characters as hexadecimal pairs,
-which makes it possible to include binary zeros.
+The input is processed using C's string functions, so must not contain binary
+zeros, even though in Unix-like environments, <b>fgets()</b> treats any bytes
+other than newline as data characters. An error is generated if a binary zero
+is encountered. By default subject lines are processed for backslash escapes,
+which makes it possible to include any data value in strings that are passed to
+the library for matching. For patterns, there is a facility for specifying some
+or all of the 8-bit input characters as hexadecimal pairs, which makes it
+possible to include binary zeros.
 </P>
 <br><b>
 Input for the 16-bit and 32-bit libraries
@@ -696,7 +696,9 @@ heavily used in the test files.
       jitfast                   use JIT fast path
       jitverify                 verify JIT use
       locale=&#60;name&#62;             use this locale
-      max_pattern_length=&#60;n&#62;    set maximum pattern length
+      max_pattern_compiled      ) set maximum compiled pattern
+                 _length=&#60;n&#62;    )   length (bytes)
+      max_pattern_length=&#60;n&#62;    set maximum pattern length (code units)
       max_varlookbehind=&#60;n&#62;     set maximum variable lookbehind length
       memory                    show memory used
       newline=&#60;type&#62;            set newline type
@@ -1019,6 +1021,15 @@ The <b>max_pattern_length</b> modifier sets a limit, in code units, to the
 length of pattern that <b>pcre2_compile()</b> will accept. Breaching the limit
 causes a compilation error. The default is the largest number a PCRE2_SIZE
 variable can hold (essentially unlimited).
+</P>
+<br><b>
+Limiting the size of a compiled pattern
+</b><br>
+<P>
+The <b>max_pattern_compiled_length</b> modifier sets a limit, in bytes, to the
+amount of memory used by a compiled pattern. Breaching the limit causes a
+compilation error. The default is the largest number a PCRE2_SIZE variable can
+hold (essentially unlimited).
 <a name="posixwrapper"></a></P>
 <br><b>
 Using the POSIX wrapper API
@@ -1209,18 +1220,19 @@ The following modifiers set options for <b>pcre2_match()</b> or
 <a href="pcreapi.html"><b>pcreapi</b></a>
 for a description of their effects.
 <pre>
-      anchored                  set PCRE2_ANCHORED
-      endanchored               set PCRE2_ENDANCHORED
-      dfa_restart               set PCRE2_DFA_RESTART
-      dfa_shortest              set PCRE2_DFA_SHORTEST
-      no_jit                    set PCRE2_NO_JIT
-      no_utf_check              set PCRE2_NO_UTF_CHECK
-      notbol                    set PCRE2_NOTBOL
-      notempty                  set PCRE2_NOTEMPTY
-      notempty_atstart          set PCRE2_NOTEMPTY_ATSTART
-      noteol                    set PCRE2_NOTEOL
-      partial_hard (or ph)      set PCRE2_PARTIAL_HARD
-      partial_soft (or ps)      set PCRE2_PARTIAL_SOFT
+      anchored                   set PCRE2_ANCHORED
+      endanchored                set PCRE2_ENDANCHORED
+      dfa_restart                set PCRE2_DFA_RESTART
+      dfa_shortest               set PCRE2_DFA_SHORTEST
+      disable_recurseloop_check  set PCRE2_DISABLE_RECURSELOOP_CHECK
+      no_jit                     set PCRE2_NO_JIT
+      no_utf_check               set PCRE2_NO_UTF_CHECK
+      notbol                     set PCRE2_NOTBOL
+      notempty                   set PCRE2_NOTEMPTY
+      notempty_atstart           set PCRE2_NOTEMPTY_ATSTART
+      noteol                     set PCRE2_NOTEOL
+      partial_hard (or ph)       set PCRE2_PARTIAL_HARD
+      partial_soft (or ps)       set PCRE2_PARTIAL_SOFT
 </pre>
 The partial matching modifiers are provided with abbreviations because they
 appear frequently in tests.
@@ -1543,7 +1555,7 @@ Testing substitute callouts
 If the <b>substitute_callout</b> modifier is set, a substitution callout
 function is set up. The <b>null_context</b> modifier must not be set, because
 the address of the callout function is passed in a match context. When the
-callout function is called (after each substitution), details of the the input
+callout function is called (after each substitution), details of the input
 and output strings are output. For example:
 <pre>
   /abc/g,replace=&#60;$0&#62;,substitute_callout
@@ -1814,9 +1826,8 @@ unset substring is shown as "&#60;unset&#62;", as for the second data line.
 If the strings contain any non-printing characters, they are output as \xhh
 escapes if the value is less than 256 and UTF mode is not set. Otherwise they
 are output as \x{hh...} escapes. See below for the definition of non-printing
-characters. If the <b>aftertext</b> modifier is set, the output for substring
-0 is followed by the the rest of the subject string, identified by "0+" like
-this:
+characters. If the <b>aftertext</b> modifier is set, the output for substring 0
+is followed by the rest of the subject string, identified by "0+" like this:
 <pre>
     re&#62; /cat/aftertext
   data&#62; cataract
@@ -2193,9 +2204,9 @@ Cambridge, England.
 </P>
 <br><a name="SEC21" href="#TOC1">REVISION</a><br>
 <P>
-Last updated: 11 August 2023
+Last updated: 24 April 2024
 <br>
-Copyright &copy; 1997-2023 University of Cambridge.
+Copyright &copy; 1997-2024 University of Cambridge.
 <br>
 <p>
 Return to the <a href="index.html">PCRE2 index page</a>.

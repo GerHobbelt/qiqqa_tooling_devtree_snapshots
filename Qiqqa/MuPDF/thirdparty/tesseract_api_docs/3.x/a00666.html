@@ -168,7 +168,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac7ff7b4b07fa3252347f949395238aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a2d228e15200b7535fac2144109b677"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00666.html#a5a2d228e15200b7535fac2144109b677">print</a> ()</td></tr>
 <tr class="separator:a5a2d228e15200b7535fac2144109b677"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae88f52597b2b6fffa9ca2f8be53908c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00666.html#ae88f52597b2b6fffa9ca2f8be53908c4">plot</a> (<a class="el" href="a00551.html">ScrollView</a> *window, <a class="el" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a> colour)</td></tr>
+<tr class="memitem:ae88f52597b2b6fffa9ca2f8be53908c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00666.html#ae88f52597b2b6fffa9ca2f8be53908c4">plot</a> (<a class="el" href="a00551.html">ScrollView</a> *window, <a class="el" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a> colour)</td></tr>
 <tr class="separator:ae88f52597b2b6fffa9ca2f8be53908c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6f328d2ebd8c59f38ac1c15f53073d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00666.html#ac6f328d2ebd8c59f38ac1c15f53073d4">plot</a> (<a class="el" href="a00551.html">ScrollView</a> *window)</td></tr>
 <tr class="separator:ac6f328d2ebd8c59f38ac1c15f53073d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,7 +190,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a05865f2b7c0365adaf4c76dd06dd0626"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00666.html#a05865f2b7c0365adaf4c76dd06dd0626">NextColor</a> (<a class="el" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a> colour)</td></tr>
+<tr class="memitem:a05865f2b7c0365adaf4c76dd06dd0626"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00666.html#a05865f2b7c0365adaf4c76dd06dd0626">NextColor</a> (<a class="el" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a> colour)</td></tr>
 <tr class="separator:a05865f2b7c0365adaf4c76dd06dd0626"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -980,9 +980,9 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a> WERD::NextColor </td>
+          <td class="memname"><a class="el" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a> WERD::NextColor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a>&#160;</td>
           <td class="paramname"><em>colour</em></td><td>)</td>
           <td></td>
         </tr>
@@ -996,12 +996,12 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="a00825_source.html#l00306">306</a> of file <a class="el" href="a00825_source.html">werd.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                                                      {</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <a class="code" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a> next = <span class="keyword">static_cast&lt;</span><a class="code" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a><span class="keyword">&gt;</span>(colour + 1);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <a class="code" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a> next = <span class="keyword">static_cast&lt;</span><a class="code" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a><span class="keyword">&gt;</span>(colour + 1);</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  <span class="keywordflow">if</span> (next &gt;= <a class="code" href="a00825.html#aaa8f711f73dfdf579c53b00dbc721966">LAST_COLOUR</a> || next &lt; <a class="code" href="a00825.html#a70083999d911cb1aa3ed0580bc66fd22">FIRST_COLOUR</a>)</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    next = <a class="code" href="a00825.html#a70083999d911cb1aa3ed0580bc66fd22">FIRST_COLOUR</a>;</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  <span class="keywordflow">return</span> next;</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;}</div>
-<div class="ttc" id="a00551_html_a100504544a5423a94222149ee9ed0fe8"><div class="ttname"><a href="a00551.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a></div><div class="ttdeci">Color</div><div class="ttdef"><b>Definition:</b> <a href="a01219_source.html#l00105">scrollview.h:105</a></div></div>
+<div class="ttc" id="a00551_html_a100504544a5423a94222149ee9ed0fe8"><div class="ttname"><a href="a00551.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a></div><div class="ttdeci">Color</div><div class="ttdef"><b>Definition:</b> <a href="a01219_source.html#l00105">scrollview.h:105</a></div></div>
 <div class="ttc" id="a00825_html_a70083999d911cb1aa3ed0580bc66fd22"><div class="ttname"><a href="a00825.html#a70083999d911cb1aa3ed0580bc66fd22">FIRST_COLOUR</a></div><div class="ttdeci">#define FIRST_COLOUR</div><div class="ttdef"><b>Definition:</b> <a href="a00825_source.html#l00030">werd.cpp:30</a></div></div>
 <div class="ttc" id="a00825_html_aaa8f711f73dfdf579c53b00dbc721966"><div class="ttname"><a href="a00825.html#aaa8f711f73dfdf579c53b00dbc721966">LAST_COLOUR</a></div><div class="ttdeci">#define LAST_COLOUR</div><div class="ttdef"><b>Definition:</b> <a href="a00825_source.html#l00031">werd.cpp:31</a></div></div>
 </div><!-- fragment -->
@@ -1058,7 +1058,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a>&#160;</td>
           <td class="paramname"><em>colour</em>&#160;</td>
         </tr>
         <tr>
@@ -1101,7 +1101,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="a00825_source.html#l00319">319</a> of file <a class="el" href="a00825_source.html">werd.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                                  {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <a class="code" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a> colour = <a class="code" href="a00825.html#a70083999d911cb1aa3ed0580bc66fd22">FIRST_COLOUR</a>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <a class="code" href="a00551.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a> colour = <a class="code" href="a00825.html#a70083999d911cb1aa3ed0580bc66fd22">FIRST_COLOUR</a>;</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  C_BLOB_IT it = &amp;cblobs;</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  <span class="keywordflow">for</span> (it.mark_cycle_pt(); !it.cycled_list(); it.forward()) {</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    it.data()-&gt;plot(window, colour, <a class="code" href="a00825.html#a7c40159b1166c369b1307ac9257f1405">CHILD_COLOUR</a>);</div>
@@ -1109,10 +1109,10 @@ Static Public Member Functions</h2></td></tr>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  }</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  <a class="code" href="a00666.html#adc9c85b2475c4165e3d9ea984be5a0f2">plot_rej_blobs</a>(window);</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;}</div>
-<div class="ttc" id="a00551_html_a100504544a5423a94222149ee9ed0fe8"><div class="ttname"><a href="a00551.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a></div><div class="ttdeci">Color</div><div class="ttdef"><b>Definition:</b> <a href="a01219_source.html#l00105">scrollview.h:105</a></div></div>
+<div class="ttc" id="a00551_html_a100504544a5423a94222149ee9ed0fe8"><div class="ttname"><a href="a00551.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a></div><div class="ttdeci">Color</div><div class="ttdef"><b>Definition:</b> <a href="a01219_source.html#l00105">scrollview.h:105</a></div></div>
 <div class="ttc" id="a00825_html_a7c40159b1166c369b1307ac9257f1405"><div class="ttname"><a href="a00825.html#a7c40159b1166c369b1307ac9257f1405">CHILD_COLOUR</a></div><div class="ttdeci">#define CHILD_COLOUR</div><div class="ttdef"><b>Definition:</b> <a href="a00825_source.html#l00032">werd.cpp:32</a></div></div>
 <div class="ttc" id="a00825_html_a70083999d911cb1aa3ed0580bc66fd22"><div class="ttname"><a href="a00825.html#a70083999d911cb1aa3ed0580bc66fd22">FIRST_COLOUR</a></div><div class="ttdeci">#define FIRST_COLOUR</div><div class="ttdef"><b>Definition:</b> <a href="a00825_source.html#l00030">werd.cpp:30</a></div></div>
-<div class="ttc" id="a00666_html_a05865f2b7c0365adaf4c76dd06dd0626"><div class="ttname"><a href="a00666.html#a05865f2b7c0365adaf4c76dd06dd0626">WERD::NextColor</a></div><div class="ttdeci">static DebugView::Color NextColor(DebugView::Color colour)</div><div class="ttdef"><b>Definition:</b> <a href="a00825_source.html#l00306">werd.cpp:306</a></div></div>
+<div class="ttc" id="a00666_html_a05865f2b7c0365adaf4c76dd06dd0626"><div class="ttname"><a href="a00666.html#a05865f2b7c0365adaf4c76dd06dd0626">WERD::NextColor</a></div><div class="ttdeci">static ScrollView::Color NextColor(ScrollView::Color colour)</div><div class="ttdef"><b>Definition:</b> <a href="a00825_source.html#l00306">werd.cpp:306</a></div></div>
 <div class="ttc" id="a00666_html_adc9c85b2475c4165e3d9ea984be5a0f2"><div class="ttname"><a href="a00666.html#adc9c85b2475c4165e3d9ea984be5a0f2">WERD::plot_rej_blobs</a></div><div class="ttdeci">void plot_rej_blobs(ScrollView *window)</div><div class="ttdef"><b>Definition:</b> <a href="a00825_source.html#l00337">werd.cpp:337</a></div></div>
 </div><!-- fragment -->
 </div>

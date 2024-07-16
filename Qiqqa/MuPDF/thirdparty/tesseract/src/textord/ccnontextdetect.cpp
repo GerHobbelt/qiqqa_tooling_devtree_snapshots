@@ -16,9 +16,7 @@
 //
 ///////////////////////////////////////////////////////////////////////
 
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #if defined(HAVE_MUPDF)
 #include "mupdf/helpers/dir.h"
@@ -140,7 +138,9 @@ Image CCNonTextDetect::ComputeNonTextMask(bool debug, Image photo_map, TO_BLOCK 
       win->UpdateWindow();
     }
 #endif // !GRAPHICS_DISABLED
-    tesseract_->AddPixDebugPage(pix, "nontext.junk.ComputeNonTextMask.photomask");
+
+    tesseract_->AddPixDebugPage(pix, "ComputeNonTextMask : nontext.junk.ComputeNonTextMask.photomask - a mask with the same resolution as the original in which '1'(=black) pixels represent likely non-text (photo, line drawing) areas of the page.");
+
 #if !GRAPHICS_DISABLED
     if (win && win->HasInteractiveFeature()) {
       win->AwaitEvent(SVET_DESTROY);
@@ -192,19 +192,6 @@ IntGrid *CCNonTextDetect::ComputeNoiseDensity(bool debug, Image photo_map, BlobG
       }
     }
   }
-
-  for (int y = 0; y < gridheight(); ++y) {
-    for (int x = 0; x < gridwidth(); ++x) {
-      int noise = noise_density->GridCellValue(x, y);
-      int noisePrev = noise_density->GridCellValue(x-1, y);
-      int noiseNext = noise_density->GridCellValue(x+1, y);
-
-      if (noise > max_noise_count_ && noisePrev <= max_noise_count_ && noiseNext <= max_noise_count_) {
-        noise_density->SetGridCell(x, y, 0);
-      }
-    }
-  }
-  
   delete noise_counts;
   delete good_counts;
   return noise_density;

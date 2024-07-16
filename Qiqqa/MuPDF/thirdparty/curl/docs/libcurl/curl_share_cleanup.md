@@ -7,11 +7,13 @@ Source: libcurl
 See-also:
   - curl_share_init (3)
   - curl_share_setopt (3)
+Protocol:
+  - All
 ---
 
 # NAME
 
-curl_share_cleanup - Clean up a shared object
+curl_share_cleanup - close a shared object
 
 # SYNOPSIS
 

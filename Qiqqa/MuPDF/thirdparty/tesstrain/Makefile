@@ -11,8 +11,8 @@ SHELL := /bin/bash
 LOCAL := $(PWD)/usr
 PATH := $(LOCAL)/bin:$(PATH)
 
-# Path to the .traineddata directory with traineddata suitable for training 
-# (for example from tesseract-ocr/tessdata_best). Default: $(TESSDATA)
+# Path to the .traineddata directory with traineddata suitable for training
+# (for example from tesseract-ocr/tessdata_best). Default: $(LOCAL)/share/tessdata
 TESSDATA =  $(LOCAL)/share/tessdata
 
 # Name of the model to be built. Default: $(MODEL_NAME)
@@ -71,6 +71,13 @@ endif
 # Network specification. Default: $(NET_SPEC)
 NET_SPEC := [1,36,0,1 Ct3,3,16 Mp3,3 Lfys48 Lfx96 Lrx96 Lfx192 O1c\#\#\#]
 
+TESSERACT_SCRIPTS := Arabic Armenian Bengali Bopomofo Canadian_Aboriginal Cherokee Cyrillic
+TESSERACT_SCRIPTS += Devanagari Ethiopic Georgian Greek Gujarati Gurmukhi
+TESSERACT_SCRIPTS += Hangul Han Hebrew Hiragana Kannada Katakana Khmer Lao Latin
+TESSERACT_SCRIPTS += Malayalam Myanmar Ogham Oriya Runic Sinhala Syriac Tamil Telugu Thai
+
+TESSERACT_LANGDATA = $(LANGDATA_DIR)/radical-stroke.txt $(TESSERACT_SCRIPTS:%=$(LANGDATA_DIR)/%.unicharset)
+
 # Language Type - Indic, RTL or blank. Default: '$(LANG_TYPE)'
 LANG_TYPE ?=
 
@@ -103,26 +110,30 @@ RATIO_TRAIN := 0.90
 # Default Target Error Rate. Default: $(TARGET_ERROR_RATE)
 TARGET_ERROR_RATE := 0.01
 
-#Use corrent python program name on Windows
+# Use current Python program name on Windows
 ifeq ($(OS),Windows_NT)
     PY_CMD := python
 else
     PY_CMD := python3
 endif
 
+LOG_FILE = $(OUTPUT_DIR)/training.log
+
 # BEGIN-EVAL makefile-parser --make-help Makefile
 
-help: default
+help:
 	@echo ""
 	@echo "  Targets"
 	@echo ""
 	@echo "    unicharset       Create unicharset"
 	@echo "    charfreq         Show character histogram"
 	@echo "    lists            Create lists of lstmf filenames for training and eval"
-	@echo "    training         Start training"
+	@echo "    training         Start training (i.e. create .checkpoint files)"
 	@echo "    traineddata      Create best and fast .traineddata files from each .checkpoint file"
 	@echo "    proto-model      Build the proto model"
 	@echo "    tesseract-langdata  Download stock unicharsets"
+	@echo "    evaluation       Evaluate .checkpoint models on eval dataset via lstmeval"
+	@echo "    plot             Generate train/eval error rate charts from training log"
 	@echo "    clean-box        Clean generated .box files"
 	@echo "    clean-lstmf      Clean generated .lstmf files"
 	@echo "    clean-output     Clean generated output files"
@@ -130,8 +141,8 @@ help: default
 	@echo ""
 	@echo "  Variables"
 	@echo ""
-	@echo "    TESSDATA           Path to the .traineddata directory with traineddata suitable for training "
-	@echo "                       (for example from tesseract-ocr/tessdata_best). Default: $(TESSDATA)"
+	@echo "    TESSDATA           Path to the directory containing START_MODEL.traineddata"
+	@echo "                       (for example tesseract-ocr/tessdata_best). Default: $(TESSDATA)"
 	@echo "    MODEL_NAME         Name of the model to be built. Default: $(MODEL_NAME)"
 	@echo "    DATA_DIR           Data directory for output files, proto model, start model, etc. Default: $(DATA_DIR)"
 	@echo "    LANGDATA_DIR       Data directory for langdata (downloaded from Tesseract langdata repo). Default: $(LANGDATA_DIR)"
@@ -140,33 +151,33 @@ help: default
 	@echo "    WORDLIST_FILE      Optional Wordlist file for Dictionary dawg. Default: $(WORDLIST_FILE)"
 	@echo "    NUMBERS_FILE       Optional Numbers file for number patterns dawg. Default: $(NUMBERS_FILE)"
 	@echo "    PUNC_FILE          Optional Punc file for Punctuation dawg. Default: $(PUNC_FILE)"
-	@echo "    START_MODEL        Name of the model to continue from. Default: '$(START_MODEL)'"
-	@echo "    PROTO_MODEL        Name of the proto model. Default: '$(PROTO_MODEL)'"
+	@echo "    START_MODEL        Name of the model to continue from (i.e. fine-tune). Default: $(START_MODEL)"
+	@echo "    PROTO_MODEL        Name of the prototype model. Default: $(PROTO_MODEL)"
 	@echo "    TESSDATA_REPO      Tesseract model repo to use (_fast or _best). Default: $(TESSDATA_REPO)"
 	@echo "    MAX_ITERATIONS     Max iterations. Default: $(MAX_ITERATIONS)"
 	@echo "    EPOCHS             Set max iterations based on the number of lines for the training. Default: none"
 	@echo "    DEBUG_INTERVAL     Debug Interval. Default:  $(DEBUG_INTERVAL)"
 	@echo "    LEARNING_RATE      Learning rate. Default: $(LEARNING_RATE)"
-	@echo "    NET_SPEC           Network specification. Default: $(NET_SPEC)"
+	@echo "    NET_SPEC           Network specification (in VGSL) for new model from scratch. Default: $(NET_SPEC)"
 	@echo "    LANG_TYPE          Language Type - Indic, RTL or blank. Default: '$(LANG_TYPE)'"
 	@echo "    PSM                Page segmentation mode. Default: $(PSM)"
 	@echo "    RANDOM_SEED        Random seed for shuffling of the training data. Default: $(RANDOM_SEED)"
 	@echo "    RATIO_TRAIN        Ratio of train / eval training data. Default: $(RATIO_TRAIN)"
 	@echo "    TARGET_ERROR_RATE  Default Target Error Rate. Default: $(TARGET_ERROR_RATE)"
+	@echo "    LOG_FILE           File to copy training output to and read plot figures from. Default: $(LOG_FILE)"
 
 # END-EVAL
 
-default:
 ifeq (4.2, $(firstword $(sort $(MAKE_VERSION) 4.2)))
-   # stuff that requires make-3.81 or higher
-	@echo "    You are using make version: $(MAKE_VERSION)"
+# stuff that requires make-3.81 or higher
+$(info You are using make version: $(MAKE_VERSION))
 else
-	$(error This version of GNU Make is too low ($(MAKE_VERSION)). Check your path, or upgrade to 4.2 or newer.)
+$(error This version of GNU Make is too low ($(MAKE_VERSION)). Check your path, or upgrade to 4.2 or newer.)
 endif
 
 .PRECIOUS: $(LAST_CHECKPOINT)
 
-.PHONY: default clean help lists proto-model tesseract-langdata training unicharset charfreq
+.PHONY: clean help lists proto-model tesseract-langdata training unicharset charfreq
 
 ALL_FILES = $(and $(wildcard $(GROUND_TRUTH_DIR)),$(shell find -L $(GROUND_TRUTH_DIR) -name '*.gt.txt'))
 unexport ALL_FILES # prevent adding this to envp in recipes (which can cause E2BIG if too long; cf. make #44853)
@@ -174,11 +185,11 @@ ALL_GT = $(OUTPUT_DIR)/all-gt
 ALL_LSTMF = $(OUTPUT_DIR)/all-lstmf
 
 # Create unicharset
-unicharset: default $(OUTPUT_DIR)/unicharset
+unicharset: $(OUTPUT_DIR)/unicharset
 
 # Show character histogram
-charfreq: default $(ALL_GT)
-	LC_ALL=C.UTF-8 grep -o . $< | sort | uniq -c | sort -rn
+charfreq: $(ALL_GT)
+	LC_ALL=C.UTF-8 grep -P -o "\X" $< | sort | uniq -c | sort -rn
 
 # Create lists of lstmf filenames for training and eval
 lists: $(OUTPUT_DIR)/list.train $(OUTPUT_DIR)/list.eval
@@ -188,21 +199,7 @@ $(OUTPUT_DIR):
 
 $(OUTPUT_DIR)/list.eval \
 $(OUTPUT_DIR)/list.train: $(ALL_LSTMF) | $(OUTPUT_DIR)
-	@total=$$(wc -l < $(ALL_LSTMF)); \
-	  train=$$(echo "$$total * $(RATIO_TRAIN) / 1" | bc); \
-	  test "$$train" = "0" && \
-	    echo "Error: missing ground truth for training" && exit 1; \
-	  eval=$$(echo "$$total - $$train" | bc); \
-	  test "$$eval" = "0" && \
-	    echo "Error: missing ground truth for evaluation" && exit 1; \
-	  set -x; \
-	  head -n "$$train" $(ALL_LSTMF) > "$(OUTPUT_DIR)/list.train"; \
-	  tail -n "$$eval" $(ALL_LSTMF) > "$(OUTPUT_DIR)/list.eval"; \
-	if [ "$(OS)" = "Windows_NT" ]; then \
-		dos2unix "$(ALL_LSTMF)"; \
-		dos2unix "$(OUTPUT_DIR)/list.train"; \
-		dos2unix "$(OUTPUT_DIR)/list.eval"; \
-	fi
+	$(PY_CMD) generate_eval_train.py $(ALL_LSTMF) $(RATIO_TRAIN)
 
 ifdef START_MODEL
 $(DATA_DIR)/$(START_MODEL)/$(MODEL_NAME).lstm-unicharset:
@@ -218,7 +215,7 @@ $(OUTPUT_DIR)/unicharset: $(ALL_GT) | $(OUTPUT_DIR)
 endif
 
 # Start training
-training: default $(OUTPUT_DIR).traineddata
+training: $(OUTPUT_DIR).traineddata
 
 $(ALL_GT): $(ALL_FILES) | $(OUTPUT_DIR)
 	$(if $^,,$(error found no $(GROUND_TRUTH_DIR)/*.gt.txt for $@))
@@ -262,15 +259,14 @@ $(ALL_LSTMF): $(ALL_FILES:%.gt.txt=%.lstmf)
 %.lstmf: %.tif %.box
 	tesseract "$<" $* --psm $(PSM) lstm.train
 
-CHECKPOINT_FILES := $(wildcard $(OUTPUT_DIR)/checkpoints/$(MODEL_NAME)*.checkpoint)
 .PHONY: traineddata
-
+CHECKPOINT_FILES = $(wildcard $(OUTPUT_DIR)/checkpoints/$(MODEL_NAME)*.checkpoint)
+BESTMODEL_FILES = $(subst checkpoints,tessdata_best,$(CHECKPOINT_FILES:%.checkpoint=%.traineddata))
+FASTMODEL_FILES = $(subst checkpoints,tessdata_fast,$(CHECKPOINT_FILES:%.checkpoint=%.traineddata))
 # Create best and fast .traineddata files from each .checkpoint file
-traineddata: $(OUTPUT_DIR)/tessdata_best $(OUTPUT_DIR)/tessdata_fast
-
-traineddata: $(subst checkpoints,tessdata_best,$(patsubst %.checkpoint,%.traineddata,$(CHECKPOINT_FILES)))
-traineddata: $(subst checkpoints,tessdata_fast,$(patsubst %.checkpoint,%.traineddata,$(CHECKPOINT_FILES)))
-$(OUTPUT_DIR)/tessdata_best $(OUTPUT_DIR)/tessdata_fast:
+traineddata: $(BESTMODEL_FILES)
+traineddata: $(FASTMODEL_FILES)
+$(OUTPUT_DIR)/tessdata_best $(OUTPUT_DIR)/tessdata_fast $(OUTPUT_DIR)/eval:
 	@mkdir -p $@
 $(OUTPUT_DIR)/tessdata_best/%.traineddata: $(OUTPUT_DIR)/checkpoints/%.checkpoint | $(OUTPUT_DIR)/tessdata_best
 	lstmtraining \
@@ -290,12 +286,14 @@ $(OUTPUT_DIR)/tessdata_fast/%.traineddata: $(OUTPUT_DIR)/checkpoints/%.checkpoin
 proto-model: $(PROTO_MODEL)
 
 $(PROTO_MODEL): $(OUTPUT_DIR)/unicharset $(TESSERACT_LANGDATA)
-	if [ "$(OS)" = "Windows_NT" ]; then \
-		dos2unix "$(NUMBERS_FILE)"; \
-		dos2unix "$(PUNC_FILE)"; \
-		dos2unix "$(WORDLIST_FILE)"; \
-		dos2unix "$(LANGDATA_DIR)/$(MODEL_NAME)/$(MODEL_NAME).config"; \
-	fi
+ifeq (Windows_NT, $(OS))
+	- dos2unix "$(NUMBERS_FILE)"
+	- dos2unix "$(PUNC_FILE)"
+	- dos2unix "$(WORDLIST_FILE)"
+	- dos2unix "$(LANGDATA_DIR)/$(MODEL_NAME)/$(MODEL_NAME).config"
+endif
+	$(if $(filter-out $(abspath $@),$(abspath $(DATA_DIR)/$(MODEL_NAME)/$(MODEL_NAME).traineddata)),\
+	$(error $@!=$(DATA_DIR)/$(MODEL_NAME)/$(MODEL_NAME).traineddata -- consider setting different values for DATA_DIR, OUTPUT_DIR, or PROTO_MODEL))
 	combine_lang_model \
 	  --input_unicharset $(OUTPUT_DIR)/unicharset \
 	  --script_dir $(LANGDATA_DIR) \
@@ -309,6 +307,7 @@ $(PROTO_MODEL): $(OUTPUT_DIR)/unicharset $(TESSERACT_LANGDATA)
 ifdef START_MODEL
 $(LAST_CHECKPOINT): unicharset lists $(PROTO_MODEL)
 	@mkdir -p $(OUTPUT_DIR)/checkpoints
+	@echo
 	lstmtraining \
 	  --debug_interval $(DEBUG_INTERVAL) \
 	  --traineddata $(PROTO_MODEL) \
@@ -319,8 +318,10 @@ $(LAST_CHECKPOINT): unicharset lists $(PROTO_MODEL)
 	  --train_listfile $(OUTPUT_DIR)/list.train \
 	  --eval_listfile $(OUTPUT_DIR)/list.eval \
 	  --max_iterations $(MAX_ITERATIONS) \
-	  --target_error_rate $(TARGET_ERROR_RATE)
+	  --target_error_rate $(TARGET_ERROR_RATE) \
+	2>&1 | tee -a $(LOG_FILE)
 $(OUTPUT_DIR).traineddata: $(LAST_CHECKPOINT)
+	@echo
 	lstmtraining \
 	--stop_training \
 	--continue_from $(LAST_CHECKPOINT) \
@@ -329,17 +330,20 @@ $(OUTPUT_DIR).traineddata: $(LAST_CHECKPOINT)
 else
 $(LAST_CHECKPOINT): unicharset lists $(PROTO_MODEL)
 	@mkdir -p $(OUTPUT_DIR)/checkpoints
+	@echo
 	lstmtraining \
 	  --debug_interval $(DEBUG_INTERVAL) \
 	  --traineddata $(PROTO_MODEL) \
 	  --learning_rate $(LEARNING_RATE) \
-	  --net_spec "$(subst c###,c`head -n1 $(OUTPUT_DIR)/unicharset`,$(NET_SPEC))" \
+	  --net_spec "$(subst c###,c$(firstword $(file <$(OUTPUT_DIR)/unicharset)),$(NET_SPEC))" \
 	  --model_output $(OUTPUT_DIR)/checkpoints/$(MODEL_NAME) \
 	  --train_listfile $(OUTPUT_DIR)/list.train \
 	  --eval_listfile $(OUTPUT_DIR)/list.eval \
 	  --max_iterations $(MAX_ITERATIONS) \
-	  --target_error_rate $(TARGET_ERROR_RATE)
+	  --target_error_rate $(TARGET_ERROR_RATE) \
+	2>&1 | tee -a $(LOG_FILE)
 $(OUTPUT_DIR).traineddata: $(LAST_CHECKPOINT)
+	@echo
 	lstmtraining \
 	--stop_training \
 	--continue_from $(LAST_CHECKPOINT) \
@@ -347,12 +351,72 @@ $(OUTPUT_DIR).traineddata: $(LAST_CHECKPOINT)
 	--model_output $@
 endif
 
-TESSERACT_SCRIPTS := Arabic Armenian Bengali Bopomofo Canadian_Aboriginal Cherokee Cyrillic
-TESSERACT_SCRIPTS += Devanagari Ethiopic Georgian Greek Gujarati Gurmukhi
-TESSERACT_SCRIPTS += Hangul Han Hebrew Hiragana Kannada Katakana Khmer Lao Latin
-TESSERACT_SCRIPTS += Malayalam Myanmar Ogham Oriya Runic Sinhala Syriac Tamil Telugu Thai
+# plotting
 
-TESSERACT_LANGDATA = $(LANGDATA_DIR)/radical-stroke.txt $(TESSERACT_SCRIPTS:%=$(LANGDATA_DIR)/%.unicharset)
+# Build lstmeval files list based on respective best traineddata models
+BEST_LSTMEVAL_FILES = $(subst tessdata_best,eval,$(BESTMODEL_FILES:%.traineddata=%.eval.log))
+$(BEST_LSTMEVAL_FILES): $(OUTPUT_DIR)/eval/%.eval.log: $(OUTPUT_DIR)/tessdata_best/%.traineddata | $(OUTPUT_DIR)/eval
+	time -p lstmeval  \
+		--verbosity=0 \
+		--model $< \
+		--eval_listfile $(OUTPUT_DIR)/list.eval 2>&1 | grep "^BCER eval" > $@
+# Make TSV with lstmeval CER and checkpoint filename parts
+TSV_LSTMEVAL = $(OUTPUT_DIR)/lstmeval.tsv
+.INTERMEDIATE: $(TSV_LSTMEVAL)
+$(TSV_LSTMEVAL): $(BEST_LSTMEVAL_FILES)
+	@echo "Name	CheckpointCER	LearningIteration	TrainingIteration	EvalCER	IterationCER	SubtrainerCER" > "$@"
+	@{ $(foreach F,$^,echo -n "$F "; grep BCER $F;) } | sort -rn | \
+	sed -e 's|^$(OUTPUT_DIR)/eval/$(MODEL_NAME)_\([0-9.]*\)_\([0-9]*\)_\([0-9]*\).eval.log BCER eval=\([0-9.]*\).*$$|\t\1\t\2\t\3\t\4\t\t|' >>  "$@"
+# Make TSV with CER at every 100 iterations.
+TSV_100_ITERATIONS = $(OUTPUT_DIR)/iteration.tsv
+.INTERMEDIATE: $(TSV_100_ITERATIONS)
+$(TSV_100_ITERATIONS): $(LOG_FILE)
+	@echo "Name	CheckpointCER	LearningIteration	TrainingIteration	EvalCER	IterationCER	SubtrainerCER" > "$@"
+	@grep 'At iteration' $< \
+		| sed -e '/^Sub/d' \
+		| sed -e '/^Update/d' \
+		| sed -e '/^ New worst BCER/d' \
+		| sed -e 's|At iteration \([0-9]*\)/\([0-9]*\)/.*BCER train=|\t\t\1\t\2\t\t|' \
+		| sed -e 's/%, BWER.*/\t/' >>  "$@"
+# Make TSV with Checkpoint CER.
+TSV_CHECKPOINT = $(OUTPUT_DIR)/checkpoint.tsv
+.INTERMEDIATE: $(TSV_CHECKPOINT)
+$(TSV_CHECKPOINT): $(LOG_FILE)
+	@echo "Name	CheckpointCER	LearningIteration	TrainingIteration	EvalCER	IterationCER	SubtrainerCER" > "$@"
+	@grep 'best model' $< \
+		| sed -e 's/^.*\///' \
+		| sed -e 's/\.checkpoint.*$$/\t\t\t/' \
+		| sed -e 's/_/\t/g' >>  "$@"
+# Make TSV with Eval CER.
+TSV_EVAL = $(OUTPUT_DIR)/eval.tsv
+.INTERMEDIATE: $(TSV_EVAL)
+$(TSV_EVAL): $(LOG_FILE)
+	@echo "Name	CheckpointCER	LearningIteration	TrainingIteration	EvalCER	IterationCER	SubtrainerCER" > "$@"
+	@grep 'BCER eval' $< \
+		| sed -e 's/^.*[0-9]At iteration //' \
+		| sed -e 's/,.* BCER eval=/\t\t/'  \
+		| sed -e 's/, BWER.*$$/\t\t/' \
+		| sed -e 's/^/\t\t/' >>  "$@"
+# Make TSV with Subtrainer CER.
+TSV_SUB = $(OUTPUT_DIR)/sub.tsv
+.INTERMEDIATE: $(TSV_SUB)
+$(TSV_SUB): $(LOG_FILE)
+	@echo "Name	CheckpointCER	LearningIteration	TrainingIteration	EvalCER	IterationCER	SubtrainerCER" > "$@"
+	@grep '^UpdateSubtrainer' $< \
+		| sed -e 's/^.*At iteration \([0-9]*\)\/\([0-9]*\)\/.*BCER train=/\t\t\1\t\2\t\t\t/' \
+		| sed -e 's/%, BWER.*//' >>  "$@"
+
+$(OUTPUT_DIR)/$(MODEL_NAME).plot_log.png: $(TSV_100_ITERATIONS) $(TSV_CHECKPOINT) $(TSV_EVAL) $(TSV_SUB)
+	$(PY_CMD) plot_log.py $@ $(MODEL_NAME) $^
+$(OUTPUT_DIR)/$(MODEL_NAME).plot_cer.png: $(TSV_100_ITERATIONS) $(TSV_CHECKPOINT) $(TSV_EVAL) $(TSV_SUB) $(TSV_LSTMEVAL)
+	$(PY_CMD) plot_cer.py $@ $(MODEL_NAME) $^
+
+.PHONY: evaluation plot
+# run lstmeval on list.eval data for each checkpoint model
+evaluation: $(BEST_LSTMEVAL_FILES)
+# combine TSV files with all required CER values, generated from training log and validation logs, then plot
+plot: $(OUTPUT_DIR)/$(MODEL_NAME).plot_cer.png $(OUTPUT_DIR)/$(MODEL_NAME).plot_log.png
+
 
 tesseract-langdata: $(TESSERACT_LANGDATA)
 
@@ -379,4 +443,4 @@ clean-output:
 	rm -rf $(OUTPUT_DIR)
 
 # Clean all generated files
-clean: default clean-box clean-lstmf clean-output
+clean: clean-box clean-lstmf clean-output

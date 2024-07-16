@@ -30,7 +30,6 @@
 # include "config.h"
 #endif
 #include "tstringlist.h"
-#include "tbytevectorlist.h"
 #include "tbytevectorstream.h"
 #include "tiostream.h"
 #include "tfile.h"
@@ -46,6 +45,16 @@
 #include "speexfile.h"
 #include "trueaudiofile.h"
 #include "mp4file.h"
+#include "aifffile.h"
+#include "wavfile.h"
+#include "apefile.h"
+#include "itfile.h"
+#include "modfile.h"
+#include "s3mfile.h"
+#include "xmfile.h"
+#include "opusfile.h"
+#include "dsffile.h"
+#include "dsdifffile.h"
 #include "tag.h"
 #include "id3v2framefactory.h"
 
@@ -151,6 +160,36 @@ TagLib_File *taglib_file_new_type(const char *filename, TagLib_File_Type type)
   case TagLib_File_ASF:
     file = new ASF::File(filename);
     break;
+  case TagLib_File_AIFF:
+    file = new RIFF::AIFF::File(filename);
+    break;
+  case TagLib_File_WAV:
+    file = new RIFF::WAV::File(filename);
+    break;
+  case TagLib_File_APE:
+    file = new APE::File(filename);
+    break;
+  case TagLib_File_IT:
+    file = new IT::File(filename);
+    break;
+  case TagLib_File_Mod:
+    file = new Mod::File(filename);
+    break;
+  case TagLib_File_S3M:
+    file = new S3M::File(filename);
+    break;
+  case TagLib_File_XM:
+    file = new XM::File(filename);
+    break;
+  case TagLib_File_Opus:
+    file = new Ogg::Opus::File(filename);
+    break;
+  case TagLib_File_DSF:
+    file = new DSF::File(filename);
+    break;
+  case TagLib_File_DSDIFF:
+    file = new DSDIFF::File(filename);
+    break;
   default:
     break;
   }
@@ -196,7 +235,7 @@ BOOL taglib_file_save(TagLib_File *file)
 
 char *taglib_tag_title(const TagLib_Tag *tag)
 {
-  const Tag *t = reinterpret_cast<const Tag *>(tag);
+  auto t = reinterpret_cast<const Tag *>(tag);
   char *s = stringToCharArray(t->title());
   if(stringManagementEnabled)
     strings.append(s);
@@ -205,7 +244,7 @@ char *taglib_tag_title(const TagLib_Tag *tag)
 
 char *taglib_tag_artist(const TagLib_Tag *tag)
 {
-  const Tag *t = reinterpret_cast<const Tag *>(tag);
+  auto t = reinterpret_cast<const Tag *>(tag);
   char *s = stringToCharArray(t->artist());
   if(stringManagementEnabled)
     strings.append(s);
@@ -214,7 +253,7 @@ char *taglib_tag_artist(const TagLib_Tag *tag)
 
 char *taglib_tag_album(const TagLib_Tag *tag)
 {
-  const Tag *t = reinterpret_cast<const Tag *>(tag);
+  auto t = reinterpret_cast<const Tag *>(tag);
   char *s = stringToCharArray(t->album());
   if(stringManagementEnabled)
     strings.append(s);
@@ -223,7 +262,7 @@ char *taglib_tag_album(const TagLib_Tag *tag)
 
 char *taglib_tag_comment(const TagLib_Tag *tag)
 {
-  const Tag *t = reinterpret_cast<const Tag *>(tag);
+  auto t = reinterpret_cast<const Tag *>(tag);
   char *s = stringToCharArray(t->comment());
   if(stringManagementEnabled)
     strings.append(s);
@@ -232,7 +271,7 @@ char *taglib_tag_comment(const TagLib_Tag *tag)
 
 char *taglib_tag_genre(const TagLib_Tag *tag)
 {
-  const Tag *t = reinterpret_cast<const Tag *>(tag);
+  auto t = reinterpret_cast<const Tag *>(tag);
   char *s = stringToCharArray(t->genre());
   if(stringManagementEnabled)
     strings.append(s);
@@ -241,55 +280,55 @@ char *taglib_tag_genre(const TagLib_Tag *tag)
 
 unsigned int taglib_tag_year(const TagLib_Tag *tag)
 {
-  const Tag *t = reinterpret_cast<const Tag *>(tag);
+  auto t = reinterpret_cast<const Tag *>(tag);
   return t->year();
 }
 
 unsigned int taglib_tag_track(const TagLib_Tag *tag)
 {
-  const Tag *t = reinterpret_cast<const Tag *>(tag);
+  auto t = reinterpret_cast<const Tag *>(tag);
   return t->track();
 }
 
 void taglib_tag_set_title(TagLib_Tag *tag, const char *title)
 {
-  Tag *t = reinterpret_cast<Tag *>(tag);
+  auto t = reinterpret_cast<Tag *>(tag);
   t->setTitle(charArrayToString(title));
 }
 
 void taglib_tag_set_artist(TagLib_Tag *tag, const char *artist)
 {
-  Tag *t = reinterpret_cast<Tag *>(tag);
+  auto t = reinterpret_cast<Tag *>(tag);
   t->setArtist(charArrayToString(artist));
 }
 
 void taglib_tag_set_album(TagLib_Tag *tag, const char *album)
 {
-  Tag *t = reinterpret_cast<Tag *>(tag);
+  auto t = reinterpret_cast<Tag *>(tag);
   t->setAlbum(charArrayToString(album));
 }
 
 void taglib_tag_set_comment(TagLib_Tag *tag, const char *comment)
 {
-  Tag *t = reinterpret_cast<Tag *>(tag);
+  auto t = reinterpret_cast<Tag *>(tag);
   t->setComment(charArrayToString(comment));
 }
 
 void taglib_tag_set_genre(TagLib_Tag *tag, const char *genre)
 {
-  Tag *t = reinterpret_cast<Tag *>(tag);
+  auto t = reinterpret_cast<Tag *>(tag);
   t->setGenre(charArrayToString(genre));
 }
 
 void taglib_tag_set_year(TagLib_Tag *tag, unsigned int year)
 {
-  Tag *t = reinterpret_cast<Tag *>(tag);
+  auto t = reinterpret_cast<Tag *>(tag);
   t->setYear(year);
 }
 
 void taglib_tag_set_track(TagLib_Tag *tag, unsigned int track)
 {
-  Tag *t = reinterpret_cast<Tag *>(tag);
+  auto t = reinterpret_cast<Tag *>(tag);
   t->setTrack(track);
 }
 
@@ -371,14 +410,14 @@ void _taglib_property_set(TagLib_File *file, const char* prop, const char* value
   if(value) {
     auto property = map.find(prop);
     if(property == map.end()) {
-      map.insert(prop, StringList(value));
+      map.insert(prop, StringList(charArrayToString(value)));
     }
     else {
       if(append) {
-        property->second.append(value);
+        property->second.append(charArrayToString(value));
       }
       else {
-        property->second = StringList(value);
+        property->second = StringList(charArrayToString(value));
       }
     }
   }
@@ -391,17 +430,17 @@ void _taglib_property_set(TagLib_File *file, const char* prop, const char* value
 
 }  // namespace
 
-void taglib_property_set(TagLib_File *f, const char *prop, const char *value)
+void taglib_property_set(TagLib_File *file, const char *prop, const char *value)
 {
-  _taglib_property_set(f, prop, value, false);
+  _taglib_property_set(file, prop, value, false);
 }
 
-void taglib_property_set_append(TagLib_File *f, const char *prop, const char *value)
+void taglib_property_set_append(TagLib_File *file, const char *prop, const char *value)
 {
-  _taglib_property_set(f, prop, value, true);
+  _taglib_property_set(file, prop, value, true);
 }
 
-char** taglib_property_keys(TagLib_File *file)
+char** taglib_property_keys(const TagLib_File *file)
 {
   if(file == NULL)
     return NULL;
@@ -421,7 +460,7 @@ char** taglib_property_keys(TagLib_File *file)
   return props;
 }
 
-char **taglib_property_get(TagLib_File *file, const char *prop)
+char **taglib_property_get(const TagLib_File *file, const char *prop)
 {
   if(file == NULL || prop == NULL)
     return NULL;
@@ -480,8 +519,7 @@ bool _taglib_complex_property_set(
   while(*attrPtr) {
     const TagLib_Complex_Property_Attribute *attr = *attrPtr;
     String attrKey(attr->key);
-    TagLib_Variant_Type type = attr->value.type;
-    switch(type) {
+    switch(attr->value.type) {
     case TagLib_Variant_Void:
       map.insert(attrKey, Variant());
       break;
@@ -504,14 +542,14 @@ bool _taglib_complex_property_set(
       map.insert(attrKey, attr->value.value.doubleValue);
       break;
     case TagLib_Variant_String:
-      map.insert(attrKey, attr->value.value.stringValue);
+      map.insert(attrKey, charArrayToString(attr->value.value.stringValue));
       break;
     case TagLib_Variant_StringList: {
       StringList strs;
       if(attr->value.value.stringListValue) {
         char **s = attr->value.value.stringListValue;;
         while(*s) {
-          strs.append(*s++);
+          strs.append(charArrayToString(*s++));
         }
       }
       map.insert(attrKey, strs);
@@ -545,7 +583,7 @@ BOOL taglib_complex_property_set_append(
   return _taglib_complex_property_set(file, key, value, true);
 }
 
-char** taglib_complex_property_keys(TagLib_File *file)
+char** taglib_complex_property_keys(const TagLib_File *file)
 {
   if(file == NULL) {
     return NULL;
@@ -568,7 +606,7 @@ char** taglib_complex_property_keys(TagLib_File *file)
 }
 
 TagLib_Complex_Property_Attribute*** taglib_complex_property_get(
-  TagLib_File *file, const char *key)
+  const TagLib_File *file, const char *key)
 {
   if(file == NULL || key == NULL) {
     return NULL;
@@ -579,90 +617,96 @@ TagLib_Complex_Property_Attribute*** taglib_complex_property_get(
     return NULL;
   }
 
-  TagLib_Complex_Property_Attribute ***props = static_cast<TagLib_Complex_Property_Attribute ***>(
+  auto props = static_cast<TagLib_Complex_Property_Attribute ***>(
     malloc(sizeof(TagLib_Complex_Property_Attribute **) * (variantMaps.size() + 1)));
   TagLib_Complex_Property_Attribute ***propPtr = props;
 
   for(const auto &variantMap : variantMaps) {
-    TagLib_Complex_Property_Attribute **attrs = static_cast<TagLib_Complex_Property_Attribute **>(
-      malloc(sizeof(TagLib_Complex_Property_Attribute *) * (variantMap.size() + 1)));
-    TagLib_Complex_Property_Attribute *attr = static_cast<TagLib_Complex_Property_Attribute *>(
-      malloc(sizeof(TagLib_Complex_Property_Attribute) * variantMap.size()));
-    TagLib_Complex_Property_Attribute **attrPtr = attrs;
-    for (const auto &[k, v] : variantMap) {
-      attr->key = stringToCharArray(k);
-      attr->value.size = 0;
-      switch(v.type()) {
-      case Variant::Void:
-        attr->value.type = TagLib_Variant_Void;
-        attr->value.value.stringValue = NULL;
-        break;
-      case Variant::Bool:
-        attr->value.type = TagLib_Variant_Bool;
-        attr->value.value.boolValue = v.value<bool>();
-        break;
-      case Variant::Int:
-        attr->value.type = TagLib_Variant_Int;
-        attr->value.value.intValue = v.value<int>();
-        break;
-      case Variant::UInt:
-        attr->value.type = TagLib_Variant_UInt;
-        attr->value.value.uIntValue = v.value<unsigned int>();
-        break;
-      case Variant::LongLong:
-        attr->value.type = TagLib_Variant_LongLong;
-        attr->value.value.longLongValue = v.value<long long>();
-        break;
-      case Variant::ULongLong:
-        attr->value.type = TagLib_Variant_ULongLong;
-        attr->value.value.uLongLongValue = v.value<unsigned long long>();
-        break;
-      case Variant::Double:
-        attr->value.type = TagLib_Variant_Double;
-        attr->value.value.doubleValue = v.value<double>();
-        break;
-      case Variant::String: {
-        attr->value.type = TagLib_Variant_String;
-        auto str = v.value<String>();
-        attr->value.value.stringValue = stringToCharArray(str);
-        attr->value.size = str.size();
-        break;
-      }
-      case Variant::StringList: {
-        attr->value.type = TagLib_Variant_StringList;
-        StringList strs = v.value<StringList>();
-        auto strPtr = static_cast<char **>(malloc(sizeof(char *) * (strs.size() + 1)));
-        attr->value.value.stringListValue = strPtr;
-        attr->value.size = strs.size();
-        for(const auto &str : strs) {
-          *strPtr++ = stringToCharArray(str);
+    if(!variantMap.isEmpty()) {
+      auto attrs = static_cast<TagLib_Complex_Property_Attribute **>(
+        malloc(sizeof(TagLib_Complex_Property_Attribute *) * (variantMap.size() + 1)));
+      auto attr = static_cast<TagLib_Complex_Property_Attribute *>(
+        malloc(sizeof(TagLib_Complex_Property_Attribute) * variantMap.size()));
+      TagLib_Complex_Property_Attribute **attrPtr = attrs;
+      // The next assignment is redundant to silence the clang analyzer,
+      // it is done at the end of the loop, which must be entered because
+      // variantMap is not empty.
+      *attrPtr = attr;
+      for(const auto &[k, v] : variantMap) {
+        attr->key = stringToCharArray(k);
+        attr->value.size = 0;
+        switch(v.type()) {
+        case Variant::Void:
+          attr->value.type = TagLib_Variant_Void;
+          attr->value.value.stringValue = NULL;
+          break;
+        case Variant::Bool:
+          attr->value.type = TagLib_Variant_Bool;
+          attr->value.value.boolValue = v.value<bool>();
+          break;
+        case Variant::Int:
+          attr->value.type = TagLib_Variant_Int;
+          attr->value.value.intValue = v.value<int>();
+          break;
+        case Variant::UInt:
+          attr->value.type = TagLib_Variant_UInt;
+          attr->value.value.uIntValue = v.value<unsigned int>();
+          break;
+        case Variant::LongLong:
+          attr->value.type = TagLib_Variant_LongLong;
+          attr->value.value.longLongValue = v.value<long long>();
+          break;
+        case Variant::ULongLong:
+          attr->value.type = TagLib_Variant_ULongLong;
+          attr->value.value.uLongLongValue = v.value<unsigned long long>();
+          break;
+        case Variant::Double:
+          attr->value.type = TagLib_Variant_Double;
+          attr->value.value.doubleValue = v.value<double>();
+          break;
+        case Variant::String: {
+          attr->value.type = TagLib_Variant_String;
+          auto str = v.value<String>();
+          attr->value.value.stringValue = stringToCharArray(str);
+          attr->value.size = str.size();
+          break;
         }
-        *strPtr = NULL;
-        break;
+        case Variant::StringList: {
+          attr->value.type = TagLib_Variant_StringList;
+          auto strs = v.value<StringList>();
+          auto strPtr = static_cast<char **>(malloc(sizeof(char *) * (strs.size() + 1)));
+          attr->value.value.stringListValue = strPtr;
+          attr->value.size = strs.size();
+          for(const auto &str : strs) {
+            *strPtr++ = stringToCharArray(str);
+          }
+          *strPtr = NULL;
+          break;
+        }
+        case Variant::ByteVector: {
+          attr->value.type = TagLib_Variant_ByteVector;
+          const ByteVector data = v.value<ByteVector>();
+          auto bytePtr = static_cast<char *>(malloc(data.size()));
+          attr->value.value.byteVectorValue = bytePtr;
+          attr->value.size = data.size();
+          ::memcpy(bytePtr, data.data(), data.size());
+          break;
+        }
+        case Variant::ByteVectorList:
+        case Variant::VariantList:
+        case Variant::VariantMap: {
+          attr->value.type = TagLib_Variant_String;
+          std::stringstream ss;
+          ss << v;
+          attr->value.value.stringValue = stringToCharArray(ss.str());
+          break;
+        }
+        }
+        *attrPtr++ = attr++;
       }
-      case Variant::ByteVector: {
-        attr->value.type = TagLib_Variant_ByteVector;
-        const ByteVector data = v.value<ByteVector>();
-        auto bytePtr = static_cast<char *>(malloc(data.size()));
-        attr->value.value.byteVectorValue = bytePtr;
-        attr->value.size = data.size();
-        ::memcpy(bytePtr, data.data(), data.size());
-        break;
-      }
-      case Variant::ByteVectorList:
-      case Variant::VariantList:
-      case Variant::VariantMap: {
-        attr->value.type = TagLib_Variant_String;
-        std::stringstream ss;
-        ss << v;
-        attr->value.value.stringValue = stringToCharArray(ss.str());
-        break;
-      }
-      }
-      *attrPtr++ = attr++;
+      *attrPtr = NULL;
+      *propPtr++ = attrs;
     }
-    *attrPtr++ = NULL;
-    *propPtr++ = attrs;
   }
   *propPtr = NULL;
   return props;
@@ -681,8 +725,7 @@ void taglib_picture_from_complex_property(
     TagLib_Complex_Property_Attribute** attrPtr = *propPtr;
     while(*attrPtr) {
       TagLib_Complex_Property_Attribute *attr = *attrPtr;
-      TagLib_Variant_Type type = attr->value.type;
-      switch(type) {
+      switch(attr->value.type) {
       case TagLib_Variant_String:
         if(strcmp("mimeType", attr->key) == 0) {
           picture->mimeType = attr->value.value.stringValue;
@@ -733,8 +776,7 @@ void taglib_complex_property_free(
     TagLib_Complex_Property_Attribute** attrPtr = *propPtr;
     while(*attrPtr) {
       TagLib_Complex_Property_Attribute *attr = *attrPtr;
-      TagLib_Variant_Type type = attr->value.type;
-      switch(type) {
+      switch(attr->value.type) {
       case TagLib_Variant_String:
         free(attr->value.value.stringValue);
         break;

@@ -51,10 +51,10 @@ enum upgrade101 {
 
 
 /*
- * Request specific data in the easy handle (Curl_easy).  Previously,
+ * Request specific data in the easy handle (Curl_easy). Previously,
  * these members were on the connectdata struct but since a conn struct may
  * now be shared between different Curl_easys, we store connection-specific
- * data here. This struct only keeps stuff that's interesting for *this*
+ * data here. This struct only keeps stuff that is interesting for *this*
  * request, as it will be cleared between multiple ones
  */
 struct SingleRequest {
@@ -68,7 +68,7 @@ struct SingleRequest {
   unsigned int headerbytecount;  /* received server headers (not CONNECT
                                     headers) */
   unsigned int allheadercount;   /* all received headers (server + CONNECT) */
-  unsigned int deductheadercount; /* this amount of bytes doesn't count when
+  unsigned int deductheadercount; /* this amount of bytes does not count when
                                      we check if anything has been transferred
                                      at the end of a connection. We use this
                                      counter to make only a 100 reply (without
@@ -78,11 +78,10 @@ struct SingleRequest {
                                    first one */
   curl_off_t offset;            /* possible resume offset read from the
                                    Content-Range: header */
+  int httpversion;              /* Version in response (09, 10, 11, etc.) */
   int httpcode;                 /* error code from the 'HTTP/1.? XXX' or
                                    'RTSP/1.? XXX' line */
   int keepon;
-  struct curltime start100;      /* time stamp to wait for the 100 code from */
-  enum expect100 exp100;        /* expect 100 continue state */
   enum upgrade101 upgr101;      /* 101 upgrade state */
 
   /* Client Writer stack, handles transfer- and content-encodings, protocol
@@ -94,7 +93,6 @@ struct SingleRequest {
   struct bufq sendbuf; /* data which needs to be send to the server */
   size_t sendbuf_hds_len; /* amount of header bytes in sendbuf */
   time_t timeofdoc;
-  long bodywrites;
   char *location;   /* This points to an allocated version of the Location:
                        header data */
   char *newurl;     /* Set to the new URL to use when a redirect or a retry is
@@ -105,7 +103,6 @@ struct SingleRequest {
   union {
     struct FILEPROTO *file;
     struct FTP *ftp;
-    struct HTTP *http;
     struct IMAP *imap;
     struct ldapreqinfo *ldap;
     struct MQTT *mqtt;
@@ -119,16 +116,18 @@ struct SingleRequest {
 #ifndef CURL_DISABLE_DOH
   struct dohdata *doh; /* DoH specific data for this request */
 #endif
-  char fread_eof[2]; /* the body read callback (index 0) returned EOF or
-                        the trailer read callback (index 1) returned EOF */
 #ifndef CURL_DISABLE_COOKIES
   unsigned char setcookies;
 #endif
   BIT(header);        /* incoming data has HTTP header */
+  BIT(done);          /* request is done, e.g. no more send/recv should
+                       * happen. This can be TRUE before `upload_done` or
+                       * `download_done` is TRUE. */
   BIT(content_range); /* set TRUE if Content-Range: was found */
   BIT(download_done); /* set to TRUE when download is complete */
   BIT(eos_written);   /* iff EOS has been written to client */
   BIT(eos_read);      /* iff EOS has been read from the client */
+  BIT(rewind_read);   /* iff reader needs rewind at next start */
   BIT(upload_done);   /* set to TRUE when all request data has been sent */
   BIT(upload_aborted); /* set to TRUE when upload was aborted. Will also
                         * show `upload_done` as TRUE. */
@@ -140,27 +139,35 @@ struct SingleRequest {
   BIT(upload_chunky); /* set TRUE if we are doing chunked transfer-encoding
                          on upload */
   BIT(getheader);    /* TRUE if header parsing is wanted */
-  BIT(forbidchunk);  /* used only to explicitly forbid chunk-upload for
-                        specific upload buffers. See readmoredata() in http.c
-                        for details. */
   BIT(no_body);      /* the response has no body */
   BIT(authneg);      /* TRUE when the auth phase has started, which means
                         that we are creating a request with an auth header,
                         but it is not the final request in the auth
                         negotiation. */
   BIT(sendbuf_init); /* sendbuf is initialized */
+  BIT(shutdown);     /* request end will shutdown connection */
+#ifdef USE_HYPER
+  BIT(bodywritten);
+#endif
 };
 
 /**
  * Initialize the state of the request for first use.
  */
-CURLcode Curl_req_init(struct SingleRequest *req);
+void Curl_req_init(struct SingleRequest *req);
 
 /**
- * The request is about to start.
+ * The request is about to start. Record time and do a soft reset.
  */
 CURLcode Curl_req_start(struct SingleRequest *req,
                         struct Curl_easy *data);
+
+/**
+ * The request may continue with a follow up. Reset
+ * members, but keep start time for overall duration calc.
+ */
+CURLcode Curl_req_soft_reset(struct SingleRequest *req,
+                             struct Curl_easy *data);
 
 /**
  * The request is done. If not aborted, make sure that buffers are
@@ -178,10 +185,10 @@ CURLcode Curl_req_done(struct SingleRequest *req,
 void Curl_req_free(struct SingleRequest *req, struct Curl_easy *data);
 
 /**
- * Reset the state of the request for new use, given the
- * settings.
+ * Hard reset the state of the request to virgin state base on
+ * transfer settings.
  */
-void Curl_req_reset(struct SingleRequest *req, struct Curl_easy *data);
+void Curl_req_hard_reset(struct SingleRequest *req, struct Curl_easy *data);
 
 #ifndef USE_HYPER
 /**

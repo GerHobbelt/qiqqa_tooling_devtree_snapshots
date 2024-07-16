@@ -20,7 +20,6 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{00112979-815B-4F64-BC9D-2190780C0A35}</ProjectGuid>
-    <RootNamespace>zstd_demos</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,7 +69,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -106,7 +105,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -337,6 +336,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/zstd/tests/external_matchfinder.c" />
     <ClCompile Include="../../thirdparty/owemdjee/zstd/tests/fullbench.c" />
     <ClCompile Include="../../thirdparty/owemdjee/zstd/tests/invalidDictionaries.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/zstd/tests/largeDictionary.c" />
     <ClCompile Include="../../thirdparty/owemdjee/zstd/tests/legacy.c" />
     <ClCompile Include="../../thirdparty/owemdjee/zstd/tests/longmatch.c" />
     <ClCompile Include="../../thirdparty/owemdjee/zstd/tests/loremOut.c" />
@@ -571,8 +571,8 @@
     <Text Include="../../thirdparty/owemdjee/zstd/contrib/seqBench/Makefile" />
     <Text Include="../../thirdparty/owemdjee/zstd/contrib/snap/snapcraft.yaml" />
     <Text Include="../../thirdparty/owemdjee/zstd/doc/README.md" />
-    <Text Include="../../thirdparty/owemdjee/zstd/doc/decompressor_accepted_invalid_data.md" />
     <Text Include="../../thirdparty/owemdjee/zstd/doc/decompressor_errata.md" />
+    <Text Include="../../thirdparty/owemdjee/zstd/doc/decompressor_permissive.md" />
     <Text Include="../../thirdparty/owemdjee/zstd/doc/educational_decoder/Makefile" />
     <Text Include="../../thirdparty/owemdjee/zstd/doc/educational_decoder/README.md" />
     <Text Include="../../thirdparty/owemdjee/zstd/doc/zstd_compression_format.md" />
@@ -635,6 +635,7 @@
     <Text Include="../../thirdparty/owemdjee/zstd/tests/cli-tests/dict-builder/no-inputs.sh" />
     <Text Include="../../thirdparty/owemdjee/zstd/tests/cli-tests/dictionaries/dictionary-mismatch.sh" />
     <Text Include="../../thirdparty/owemdjee/zstd/tests/cli-tests/dictionaries/golden.sh" />
+    <Text Include="../../thirdparty/owemdjee/zstd/tests/cli-tests/file-handling/directory-mirror.sh" />
     <Text Include="../../thirdparty/owemdjee/zstd/tests/cli-tests/file-stat/compress-file-to-dir-without-write-perm.sh" />
     <Text Include="../../thirdparty/owemdjee/zstd/tests/cli-tests/file-stat/compress-file-to-file.sh" />
     <Text Include="../../thirdparty/owemdjee/zstd/tests/cli-tests/file-stat/compress-file-to-stdout.sh" />

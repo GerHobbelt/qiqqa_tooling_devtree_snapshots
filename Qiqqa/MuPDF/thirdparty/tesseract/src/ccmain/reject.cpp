@@ -17,9 +17,7 @@
  **********************************************************************/
 
 // Include automatically generated configuration file if running autoconf.
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include "reject.h"
 
@@ -159,8 +157,7 @@ void Tesseract::make_reject_map(WERD_RES *word, ROW *row, int16_t pass) {
       /* Ambig word rejection was here once !!*/
     }
   } else {
-    tprintError("BAD tessedit_reject_mode\n");
-    ASSERT_HOST(!"Fatal error encountered!");
+    ASSERT_HOST_MSG(false, "BAD tessedit_reject_mode. Fatal error encountered!\n");
   }
 
   if (tessedit_image_border > -1) {
@@ -293,8 +290,6 @@ bool Tesseract::one_ell_conflict(WERD_RES *word_res, bool update_map) {
   int16_t i;
   int16_t offset;
   bool non_conflict_set_char; // non conf set a/n?
-  bool conflict = false;
-  bool allow_1s;
   ACCEPTABLE_WERD_TYPE word_type;
   bool dict_perm_type;
   bool dict_word_ok;
@@ -411,11 +406,11 @@ bool Tesseract::one_ell_conflict(WERD_RES *word_res, bool update_map) {
     Else reject all conflict chs
 */
   if (word_contains_non_1_digit(word, lengths)) {
-    allow_1s =
+    bool allow_1s =
         (alpha_count(word, lengths) == 0) || (word_res->best_choice->permuter() == NUMBER_PERM);
 
     int16_t offset;
-    conflict = false;
+    bool conflict = false;
     for (i = 0, offset = 0; word[offset] != '\0';
          offset += word_res->best_choice->unichar_lengths()[i++]) {
       if ((!allow_1s || (word[offset] != '1')) &&

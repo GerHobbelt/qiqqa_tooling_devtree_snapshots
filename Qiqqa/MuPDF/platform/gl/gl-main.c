@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2023 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -90,7 +90,13 @@ static void open_browser(const char *uri)
 		}
 	}
 
-	if (strncmp(uri, "file://", 7) && strncmp(uri, "http://", 7) && strncmp(uri, "https://", 8) && strncmp(uri, "mailto:", 7))
+	if (strncmp(uri, "file://", 7) &&
+		strncmp(uri, "http://", 7) &&
+		strncmp(uri, "https://", 8) &&
+		strncmp(uri, "obsidian://", 11) &&
+		strncmp(uri, "zotero://", 9) &&
+		strncmp(uri, "lib:", 4) &&
+		strncmp(uri, "mailto:", 7))
 	{
 		fz_warn(ctx, "refusing to open unknown link (%s)", uri);
 		return;
@@ -490,8 +496,9 @@ static void save_history(void)
 	}
 	fz_always(ctx)
 		fz_drop_output(ctx, out);
-	fz_catch(ctx)
-		fz_warn(ctx, "Can't write history file. %s", fz_caught_message(ctx));
+	fz_catch(ctx) {
+		fz_warn(ctx, "Can't write history file. %s", fz_convert_error(ctx, NULL));
+	}
 
 	js_freestate(J);
 }
@@ -1001,7 +1008,7 @@ void load_page(void)
 					trace_action("  throw new RegressionError(widgetstr, 'is read-only:', tmp, 'expected:', %d);\n", is_readonly);
 					trace_action("tmp = widget.checkCertificate();\n");
 					trace_action("if (tmp != '%s')\n", cert_error);
-					trace_action("  throw new RegressionError(widgetstr, 'is read-only:', tmp, 'expected:', %d);\n", cert_error);
+					trace_action("  throw new RegressionError(widgetstr, 'certificate error:', tmp, 'expected:', %d);\n", cert_error);
 					trace_action("tmp = widget.checkDigest();\n");
 					trace_action("if (tmp != %q)\n", digest_error);
 					trace_action("  throw new RegressionError(widgetstr, 'digest error:', tmp, 'expected:', %q);\n", digest_error);
@@ -2546,7 +2553,7 @@ process_sigs(fz_context *ctx_, pdf_obj *field, void *arg, pdf_obj **ft)
 
 	if (!pdf_name_eq(ctx, pdf_dict_get(ctx, field, PDF_NAME(Type)), PDF_NAME(Annot)) ||
 		!pdf_name_eq(ctx, pdf_dict_get(ctx, field, PDF_NAME(Subtype)), PDF_NAME(Widget)) ||
-		!pdf_name_eq(ctx, pdf_dict_get(ctx, field, ft[0]), PDF_NAME(Sig)))
+		!pdf_name_eq(ctx, *ft, PDF_NAME(Sig)))
 		return;
 
 	if (sigs->len == sigs->max)
@@ -2761,6 +2768,9 @@ static fz_buffer *format_info_text()
 	}
 	fz_append_printf(ctx, out, "ICC rendering: %s.\n", currenticc ? "on" : "off");
 	fz_append_printf(ctx, out, "Spot rendering: %s.\n", currentseparations ? "on" : "off");
+
+	if (fz_is_document_reflowable(ctx, doc))
+		fz_append_printf(ctx, out, "Em size: %g\n", layout_em);
 
 	return out;
 }
@@ -3056,23 +3066,23 @@ static void usage(const char *argv0)
 	fz_info(ctx,
 		"mupdf-gl version %s\n"
 		"usage: %s [options] document [page]\n"
-		"\t-p -\tpassword\n"
-		"\t-r -\tresolution\n"
-	    "\t-c -\tdisplay ICC profile\n"
-	    "\t-b -\tuse named page box (MediaBox, CropBox, BleedBox, TrimBox, or ArtBox)\n"
-		"\t-I\tinvert colors\n"
-		"\t-W -\tpage width for EPUB layout\n"
-		"\t-H -\tpage height for EPUB layout\n"
-		"\t-S -\tfont size for EPUB layout\n"
-		"\t-U -\tuser style sheet for EPUB layout\n"
-		"\t-X\tdisable document styles for EPUB layout\n"
-		"\t-J\tdisable javascript in PDF forms\n"
-		"\t-A -\tset anti-aliasing level (0-8,9,10)\n"
-		"\t-B -\tset black tint color (default: 303030)\n"
-		"\t-C -\tset white tint color (default: FFFFF0)\n"
-	    "\t-Y -\tset the UI scaling factor\n"
-	    "\t-R -\tenable reflow and set the text extraction options\n"
-	    "\t\t\texample: -R dehyphenate,preserve-images\n",
+		"  -p -  password\n"
+		"  -r -  resolution\n"
+	    "  -c -  display ICC profile\n"
+	    "  -b -  use named page box (MediaBox, CropBox, BleedBox, TrimBox, or ArtBox)\n"
+		"  -I    invert colors\n"
+		"  -W -  page width for EPUB layout\n"
+		"  -H -  page height for EPUB layout\n"
+		"  -S -  font size for EPUB layout\n"
+		"  -U -  user style sheet for EPUB layout\n"
+		"  -X    disable document styles for EPUB layout\n"
+		"  -J    disable javascript in PDF forms\n"
+		"  -A -  set anti-aliasing level (0-8,9,10)\n"
+		"  -B -  set black tint color (default: 303030)\n"
+		"  -C -  set white tint color (default: FFFFF0)\n"
+	    "  -Y -  set the UI scaling factor\n"
+	    "  -R -  enable reflow and set the text extraction options\n"
+	    "        example: -R dehyphenate,preserve-images\n",
 		FZ_VERSION, argv0);
 }
 

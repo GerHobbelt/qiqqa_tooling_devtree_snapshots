@@ -36,7 +36,7 @@ namespace TagLib {
 
     class File;
 
-    static const unsigned int HeaderSize = 8 * 7;
+    static constexpr unsigned int HeaderSize = 8 * 7;
 
     //! An implementation of audio property reading for MPC
 
@@ -50,7 +50,7 @@ namespace TagLib {
     public:
       /*!
        * Create an instance of MPC::Properties with the data read directly
-       * from a MPC::File.
+       * from an MPC::File.
        */
       Properties(File *file, offset_t streamLength, ReadStyle style = Average);
 
@@ -90,7 +90,7 @@ namespace TagLib {
       int mpcVersion() const;
 
       unsigned int totalFrames() const;
-      unsigned int sampleFrames() const;
+      unsigned long sampleFrames() const;
 
       /*!
       * Returns the track gain as an integer value,
@@ -123,6 +123,7 @@ namespace TagLib {
       void readSV8(File *file, offset_t streamLength);
 
       class PropertiesPrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<PropertiesPrivate> d;
     };
   }  // namespace MPC

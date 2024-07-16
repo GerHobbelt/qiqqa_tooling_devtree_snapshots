@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -222,87 +222,87 @@ const char *fz_rendering_intent_name(int ri)
 
 /* Colorspace feature tests */
 
-const char *fz_colorspace_name(fz_context *ctx, fz_colorspace *cs)
+const char *fz_colorspace_name(fz_context *ctx, const fz_colorspace *cs)
 {
 	return cs ? cs->name : "None";
 }
 
-enum fz_colorspace_type fz_colorspace_type(fz_context *ctx, fz_colorspace *cs)
+enum fz_colorspace_type fz_colorspace_type(fz_context *ctx, const fz_colorspace *cs)
 {
 	return cs ? cs->type : FZ_COLORSPACE_NONE;
 }
 
-int fz_colorspace_n(fz_context *ctx, fz_colorspace *cs)
+int fz_colorspace_n(fz_context *ctx, const fz_colorspace *cs)
 {
 	return cs ? cs->n : 0;
 }
 
-int fz_colorspace_is_gray(fz_context *ctx, fz_colorspace *cs)
+int fz_colorspace_is_gray(fz_context *ctx, const fz_colorspace *cs)
 {
 	return cs && cs->type == FZ_COLORSPACE_GRAY;
 }
 
-int fz_colorspace_is_rgb(fz_context *ctx, fz_colorspace *cs)
+int fz_colorspace_is_rgb(fz_context *ctx, const fz_colorspace *cs)
 {
 	return cs && cs->type == FZ_COLORSPACE_RGB;
 }
 
-int fz_colorspace_is_cmyk(fz_context *ctx, fz_colorspace *cs)
+int fz_colorspace_is_cmyk(fz_context *ctx, const fz_colorspace *cs)
 {
 	return cs && cs->type == FZ_COLORSPACE_CMYK;
 }
 
-int fz_colorspace_is_lab(fz_context *ctx, fz_colorspace *cs)
+int fz_colorspace_is_lab(fz_context *ctx, const fz_colorspace *cs)
 {
 	return cs && cs->type == FZ_COLORSPACE_LAB;
 }
 
-int fz_colorspace_is_indexed(fz_context *ctx, fz_colorspace *cs)
+int fz_colorspace_is_indexed(fz_context *ctx, const fz_colorspace *cs)
 {
 	return cs && (cs->type == FZ_COLORSPACE_INDEXED);
 }
 
-int fz_colorspace_is_device_n(fz_context *ctx, fz_colorspace *cs)
+int fz_colorspace_is_device_n(fz_context *ctx, const fz_colorspace *cs)
 {
 	return cs && (cs->type == FZ_COLORSPACE_SEPARATION);
 }
 
-int fz_colorspace_is_subtractive(fz_context *ctx, fz_colorspace *cs)
+int fz_colorspace_is_subtractive(fz_context *ctx, const fz_colorspace *cs)
 {
 	return cs && (cs->type == FZ_COLORSPACE_CMYK || cs->type == FZ_COLORSPACE_SEPARATION);
 }
 
-int fz_colorspace_is_device(fz_context *ctx, fz_colorspace *cs)
+int fz_colorspace_is_device(fz_context *ctx, const fz_colorspace *cs)
 {
 	return cs && (cs->flags & FZ_COLORSPACE_IS_DEVICE);
 }
 
-int fz_colorspace_is_lab_icc(fz_context *ctx, fz_colorspace *cs)
+int fz_colorspace_is_lab_icc(fz_context *ctx, const fz_colorspace *cs)
 {
 	return cs && (cs->type == FZ_COLORSPACE_LAB) && (cs->flags & FZ_COLORSPACE_IS_ICC);
 }
 
-int fz_colorspace_is_device_gray(fz_context *ctx, fz_colorspace *cs)
+int fz_colorspace_is_device_gray(fz_context *ctx, const fz_colorspace *cs)
 {
 	return fz_colorspace_is_device(ctx, cs) && fz_colorspace_is_gray(ctx, cs);
 }
 
-int fz_colorspace_is_device_cmyk(fz_context *ctx, fz_colorspace *cs)
+int fz_colorspace_is_device_cmyk(fz_context *ctx, const fz_colorspace *cs)
 {
 	return fz_colorspace_is_device(ctx, cs) && fz_colorspace_is_cmyk(ctx, cs);
 }
 
-int fz_colorspace_device_n_has_only_cmyk(fz_context *ctx, fz_colorspace *cs)
+int fz_colorspace_device_n_has_only_cmyk(fz_context *ctx, const fz_colorspace *cs)
 {
 	return cs && ((cs->flags & FZ_COLORSPACE_HAS_CMYK_AND_SPOTS) == FZ_COLORSPACE_HAS_CMYK);
 }
 
-int fz_colorspace_device_n_has_cmyk(fz_context *ctx, fz_colorspace *cs)
+int fz_colorspace_device_n_has_cmyk(fz_context *ctx, const fz_colorspace *cs)
 {
 	return cs && (cs->flags & FZ_COLORSPACE_HAS_CMYK);
 }
 
-int fz_is_valid_blend_colorspace(fz_context *ctx, fz_colorspace *cs)
+int fz_is_valid_blend_colorspace(fz_context *ctx, const fz_colorspace *cs)
 {
 	return cs == NULL ||
 		cs->type == FZ_COLORSPACE_GRAY ||
@@ -531,7 +531,7 @@ fz_colorspace *fz_new_cal_gray_colorspace(fz_context *ctx, float wp[3], float bp
 {
 #if FZ_ENABLE_ICC
 	fz_buffer *buf = fz_new_icc_data_from_cal(ctx, wp, bp, &gamma, NULL, 1);
-	fz_colorspace *cs;
+	fz_colorspace *cs = NULL;
 	fz_try(ctx)
 		cs = fz_new_icc_colorspace(ctx, FZ_COLORSPACE_GRAY, 0, "CalGray", buf);
 	fz_always(ctx)
@@ -548,7 +548,7 @@ fz_colorspace *fz_new_cal_rgb_colorspace(fz_context *ctx, float wp[3], float bp[
 {
 #if FZ_ENABLE_ICC
 	fz_buffer *buf = fz_new_icc_data_from_cal(ctx, wp, bp, gamma, matrix, 3);
-	fz_colorspace *cs;
+	fz_colorspace *cs = NULL;
 	fz_try(ctx)
 		cs = fz_new_icc_colorspace(ctx, FZ_COLORSPACE_RGB, 0, "CalRGB", buf);
 	fz_always(ctx)
@@ -988,9 +988,12 @@ fz_init_process_color_converter(fz_context *ctx, fz_color_converter *cc, fz_colo
 	if (ss->type == FZ_COLORSPACE_SEPARATION)
 		fz_throw(ctx, FZ_ERROR_ARGUMENT, "base colorspace must not be separation");
 
+
 #if FZ_ENABLE_ICC
 	if (ctx->icc_enabled)
 	{
+		cc->convert = NULL;
+
 		/* Handle identity case. */
 		if (ss == ds || (!memcmp(ss->u.icc.md5, ds->u.icc.md5, 16)))
 		{
@@ -1020,6 +1023,7 @@ fz_init_process_color_converter(fz_context *ctx, fz_color_converter *cc, fz_colo
 			fz_warn(ctx, "cannot create ICC link, falling back to fast color conversion");
 			cc->convert = fz_lookup_fast_color_converter(ctx, ss, ds);
 		}
+		assert(cc->convert != NULL);
 	}
 	else
 	{
@@ -1519,7 +1523,8 @@ memoize_nospots(fz_context *ctx, const fz_pixmap *src, fz_pixmap *dst, fz_colors
 	unsigned char *color;
 	unsigned char dummy = s[0] ^ 255;
 	unsigned char *sold = &dummy;
-	unsigned char *dold;
+	unsigned char *dold = NULL;
+	int firsttime = 1;
 	fz_color_converter cc;
 	int alpha = 255;
 
@@ -1533,13 +1538,14 @@ memoize_nospots(fz_context *ctx, const fz_pixmap *src, fz_pixmap *dst, fz_colors
 			size_t ww = w;
 			while (ww--)
 			{
-				if (*s == *sold && memcmp(sold, s, src_n) == 0)
+				if (!firsttime && *s == *sold && memcmp(sold, s, src_n) == 0)
 				{
 					sold = s;
 					memcpy(d, dold, dst_n);
 				}
 				else
 				{
+					firsttime = 0;
 					sold = s;
 					dold = d;
 					color = fz_hash_find(ctx, lookup, s);
@@ -1865,6 +1871,10 @@ fz_convert_pixmap_samples(fz_context *ctx, const fz_pixmap *src, fz_pixmap *dst,
 
 	fz_try(ctx)
 	{
+		/* Treat any alpha-only pixmap as being device gray here. */
+		if (!ss)
+			ss = fz_device_gray(ctx);
+
 		/* Convert indexed into base colorspace. */
 		if (ss->type == FZ_COLORSPACE_INDEXED)
 		{

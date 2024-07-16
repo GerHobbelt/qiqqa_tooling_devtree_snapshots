@@ -16,9 +16,7 @@
 ///////////////////////////////////////////////////////////////////////
 
 // Include automatically generated configuration file if running autoconf.
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include "network.h"
 
@@ -41,7 +39,7 @@
 #ifdef INCLUDE_TENSORFLOW
 #  include "tfnetwork.h"
 #endif
-#include "tprintf.h"
+#include <tesseract/tprintf.h>
 
 #undef min
 #undef max
@@ -88,12 +86,9 @@ Network::Network()
     , ni_(0)
     , no_(0)
     , num_weights_(0)
-#if !GRAPHICS_DISABLED
     , forward_win_(nullptr)
     , backward_win_(nullptr)
-    , randomizer_(nullptr)
-#endif
-{}
+    , randomizer_(nullptr) {}
 Network::Network(NetworkType type, const std::string &name, int ni, int no)
     : type_(type)
     , training_(TS_ENABLED)
@@ -103,12 +98,9 @@ Network::Network(NetworkType type, const std::string &name, int ni, int no)
     , no_(no)
     , num_weights_(0)
     , name_(name)
-#if !GRAPHICS_DISABLED
     , forward_win_(nullptr)
     , backward_win_(nullptr)
-#endif
-    , randomizer_(nullptr)
-{}
+    , randomizer_(nullptr) {}
 
 // Suspends/Enables/Permanently disables training by setting the training_
 // flag. Serialize and DeSerialize only operate on the run-time data if state
@@ -385,7 +377,7 @@ void Network::ClearWindow(bool tess_coords, const char *window_name, int width, 
 // The pix is pixDestroyed.
 int Network::DisplayImage(Image pix, const char *title, ScrollViewReference &window) {
   int height = pixGetHeight(pix);
-  window->Draw(pix, 0, window->TranslateYCoordinate(0), title);
+  window->Draw(pix, 0, 0 /* window->TranslateYCoordinate(0) -- window::Draw() implementations perform the TranslateYCoordinate() internally */, title);
   pix.destroy();
   return height;
 }

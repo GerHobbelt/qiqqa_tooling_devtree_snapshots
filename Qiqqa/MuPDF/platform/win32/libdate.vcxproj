@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libdate</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF480CEC}</ProjectGuid>
-    <RootNamespace>libdate</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -126,14 +124,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/date/include/date;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/date/include;../../thirdparty/owemdjee/date/include/date;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATE;DATE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATE;DATE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/date/include/date;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/date/include;../../thirdparty/owemdjee/date/include/date;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -152,7 +150,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/date/include/date;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/date/include;../../thirdparty/owemdjee/date/include/date;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATE;DATE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -160,7 +158,7 @@
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATE;DATE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/date/include/date;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/date/include;../../thirdparty/owemdjee/date/include/date;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -181,14 +179,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/date/include/date;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/date/include;../../thirdparty/owemdjee/date/include/date;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATE;DATE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATE;DATE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/date/include/date;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/date/include;../../thirdparty/owemdjee/date/include/date;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -207,7 +205,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/date/include/date;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/date/include;../../thirdparty/owemdjee/date/include/date;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATE;DATE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -215,7 +213,7 @@
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBDATE;DATE_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/date/include/date;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/date/include;../../thirdparty/owemdjee/date/include/date;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -235,13 +233,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/date/test/clock_cast_test/local_t.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/clock_cast_test/noncastable.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/clock_cast_test/normal_clocks.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/clock_cast_test/to_sys_return_int.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/clock_cast_test/to_sys_return_reference.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/clock_cast_test/to_sys_return_utc_time.fail.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/day.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/daypday.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/daysmday.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/daysmweekday.fail.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/detail/decimal_format_seconds.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/detail/static_pow10.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/detail/width.pass.cpp" />
@@ -258,34 +250,17 @@
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/month_day_last.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/month_weekday.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/month_weekday_last.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/month_weekday_last_less.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/month_weekday_less.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/monthpmonth.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/months_m_year_month.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/months_m_year_month_day.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/monthsmmonth.fail.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/multi_year_duration_addition.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_day_day.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_int_month.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_int_year.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_last_last.fail.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_month_day.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_month_day_last.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_month_day_month_day.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_month_month.fail.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_month_weekday.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_month_weekday_last.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_month_year.fail.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_survey.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_weekday_indexed_weekday_indexed.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_weekday_last_weekday_last.fail.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_year_month.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_year_month_day.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_year_month_day_last.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_year_month_weekday.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_year_month_weekday_last.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_year_month_year_month.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_year_year.fail.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/parse.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/sizeof.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/time_of_day_hours.pass.cpp" />
@@ -297,41 +272,27 @@
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/weekday.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/weekday_indexed.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/weekday_last.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/weekday_lessthan.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/weekday_sum.fail.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year_month.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year_month_day.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year_month_day_last.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year_month_day_m_year_month_day.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year_month_day_p_year_month_day.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year_month_p_year_month.fail.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year_month_weekday.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year_month_weekday_last.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year_p_year.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/years_m_year.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/years_m_year_month.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/years_m_year_month_day.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/last.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/lastweek_weekday.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/op_div_survey.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/weekday.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/weekday_lessthan.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/weekday_sum.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/weeknum.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/weeknum_p_weeknum.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/weeknum_weekday.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/year.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/year_lastweek.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/year_lastweek_weekday.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/year_p_year.fail.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/year_weeknum.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/year_weeknum_weekday.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/years_m_year.fail.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.last.pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.lastweek_weekday.pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.op_div_survey.pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.weekday.pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.weeknum.pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.weeknum_weekday.pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.year.pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.year_lastweek.pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.year_lastweek_weekday.pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.year_weeknum.pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.year_weeknum_weekday.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/just.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/posix/ptz.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/solar_hijri_test/parse.pass.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/solar_hijri_test/year_month_day.pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/solar_hijri_test/hijri.parse.pass.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/solar_hijri_test/hijri.year_month_day.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/tz_test/OffsetZone.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/tz_test/tzdb_list.pass.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/date/test/tz_test/validate.cpp" />
@@ -354,6 +315,7 @@
     <Text Include="../../thirdparty/owemdjee/date/README.md" />
     <Text Include="../../thirdparty/owemdjee/date/ci/install_cmake.sh" />
     <Text Include="../../thirdparty/owemdjee/date/cmake/dateConfig.cmake" />
+    <Text Include="../../thirdparty/owemdjee/date/cmake/pkg.cmake" />
     <Text Include="../../thirdparty/owemdjee/date/compile_fail.sh" />
     <Text Include="../../thirdparty/owemdjee/date/test/tz_test/README.md" />
     <Text Include="../../thirdparty/owemdjee/date/test_fail.sh" />

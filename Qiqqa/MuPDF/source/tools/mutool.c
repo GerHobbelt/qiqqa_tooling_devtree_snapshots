@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2023 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -61,14 +61,24 @@
 #include "../../thirdparty/owemdjee/nanosvg/example/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/libgif/gif_lib.h"
 #include "../../thirdparty/jbig2dec/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/jbig2enc/src/monolithic_examples.h"
 #include "../../thirdparty/lcms2/include/monolithic_examples.h"
 #include "../../thirdparty/leptonica/prog/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/filesystem/examples/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/glob/standalone/source/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/xsimd/examples/monolithic_examples.h"
 #include "../../thirdparty/owemdjee/dirent/examples/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/edit-distance/src/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/spdlog/include/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/libchaos/include/chaos/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/gumbo-query/example/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/linenoise/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/replxx/examples/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/fph-table/tests/monolithic_examples.h"
+#include "../../thirdparty/owemdjee/cpptoml/examples/monolithic_examples.h"
 #include "../../source/fitz/tessocr.h"
 #include "../../thirdparty/gumbo-parser/src/gumbo.h"
+#include "../../thirdparty/owemdjee/gumbo-libxml/gumbo_libxml.h"
 #undef BUILD_MONOLITHIC
 
 #include "../../scripts/MuPDFLib/versions-api.h"
@@ -119,6 +129,7 @@ static struct tool_spec {
 	{ {.fa = pdftrim_main }, "trim", "trim PDF page contents" },
 	{ {.fa = pdfbake_main }, "bake", "bake PDF form into static content" },
 	{ {.fa = pdftagged_main }, "tagged", "extract Tagged PDF content" },
+	{ {.fa = pdftag_main }, "tag", "perform operations on PDF tags" },
 	{ {.fa = mutextextract_main }, "extextract", "Generates a .docx file from mudraw XML output" },
 #endif
 #endif
@@ -129,17 +140,17 @@ static struct tool_spec {
 #endif
 #if FZ_ENABLE_PDF
 	{ {.fa = pdfshow_main }, "show", "show internal pdf objects" },
-#ifndef NDEBUG
 #if defined(MUTOOL_EX)
 	{ {.fa = cmapdump_main }, "cmapdump", "dump CMap resource as C source file" },
 #endif
-#endif
+	{ {.fa = pdfaudit_main }, "audit", "Produce usage stats from PDF files" },
 #endif
 #if defined(MUTOOL_EX)
 	{ {.fa = mupdf_base64_test_main }, "base64_test", "muPDF base64 fringe case tests" },
 	{ {.fa = mupdf_example_main }, "example", "muPDF docs::example: render a single page and print the result as a PPM to stdout" },
 	{ {.fa = mupdf_multithreaded_example_main }, "multithreaded_example", "muPDF multi-threaded rendering of all pages in a document to PNG images" },
 	{ {.fa = mupdf_storytest_main }, "story_test", "muPDF fz_story showcase for converting HTML input to a PDF file" },
+	{ {.fa = mupdf_cffdump_main }, "cffdump", "muPDF cffdump font info dump tool" },
 #endif
 
 #if defined(MUTOOL_EX)
@@ -215,7 +226,7 @@ static struct tool_spec {
 	{ {.fa = qiqqa_ingest_main }, "ingest", "qiqqa::ingest tool" },
 	{ {.fa = qiqqa_meta_exporter_main }, "meta_exporter", "qiqqa::meta_exporter tool" },
 	{ {.fa = qiqqa_meta_importer_main }, "meta_import", "qiqqa::meta_import tool" },
-	{ {.fa = qiqqa_ocr_bezoar_main }, "ocr_bezoar", "qiqqa::ocr_bezoar tool" },
+	{ {.fa = qiqqa_ocr_bezoar_main }, "bezoar", "qiqqa::ocr_bezoar tool" },
 	{ {.fa = qiqqa_pdf_hound_main }, "pdf_hound", "qiqqa::pdf_hound tool" },
 	{ {.fa = qiqqa_safe_file_copier_main }, "safe_file_copier", "qiqqa::safe_file_copier tool" },
 	{ {.fa = qiqqa_snarfl_main }, "snarfl", "qiqqa::snarfl tool" },
@@ -385,7 +396,8 @@ static struct tool_spec {
 	{ {.fa = lept_findpattern1_main }, "lept_findpattern1", "leptonica findpattern1 test/tool" },
 	{ {.fa = lept_findpattern2_main }, "lept_findpattern2", "leptonica findpattern2 test/tool" },
 	{ {.fa = lept_findpattern3_main }, "lept_findpattern3", "leptonica findpattern3 test/tool" },
-	{ {.fa = lept_findpattern_reg_main }, "lept_findpattern", "leptonica findpattern_reg test/tool" },
+	{ {.fa = lept_findpattern1_reg_main }, "lept_findpattern1R", "leptonica findpattern1_reg test/tool" },
+	{ {.fa = lept_findpattern2_reg_main }, "lept_findpattern2R", "leptonica findpattern2_reg test/tool" },
 	{ {.fa = lept_flipdetect_reg_main }, "lept_flipdetect", "leptonica flipdetect_reg test/tool" },
 	{ {.fa = lept_fmorphauto_reg_main }, "lept_fmorphauto", "leptonica fmorphauto_reg test/tool" },
 	{ {.fa = lept_fmorphautogen_main }, "lept_fmorphautogen", "leptonica fmorphautogen test/tool" },
@@ -438,7 +450,7 @@ static struct tool_spec {
 	{ {.fa = lept_maketile_main }, "lept_maketile", "leptonica maketile test/tool" },
 	{ {.fa = lept_maptest_main }, "lept_maptest", "leptonica maptest test/tool" },
 	{ {.fa = lept_maze_reg_main }, "lept_maze", "leptonica maze_reg test/tool" },
-	{ {.fa = lept_misctest1_main }, "lept_misctest1", "leptonica misctest1 test/tool" },
+	{ {.fa = lept_misctest1_main }, "lept_misc1", "leptonica misc1 test/tool" },
 	{ {.fa = lept_modifyhuesat_main }, "lept_modifyhuesat", "leptonica modifyhuesat test/tool" },
 	{ {.fa = lept_morphseq_reg_main }, "lept_morphseq", "leptonica morphseq_reg test/tool" },
 	{ {.fa = lept_morphtest1_main }, "lept_morphtest1", "leptonica morphtest1 test/tool" },
@@ -567,6 +579,8 @@ static struct tool_spec {
 	{ {.fa = lept_xformbox_reg_main }, "lept_xformbox", "leptonica xformbox_reg test/tool" },
 	{ {.fa = lept_yuvtest_main }, "lept_yuvtest", "leptonica yuvtest test/tool" },
 	{ {.fa = lept_issue675_check_main }, "lept_issue675", "leptonica BMP test for leptonica issue #675" },
+	{ {.f = lept_message_test_main }, "lept_messagetest", "leptonica message test/tool" },
+	{ {.fa = lept_misctest2_main }, "lept_misc2", "leptonica misc2 test/tool" },
 #endif
 
 #if defined(MUTOOL_EX)
@@ -588,6 +602,10 @@ static struct tool_spec {
 	{ {.fa = jbig2dec_arith_test_main }, "jbig2_arith_test", "jbig2dec test" },
 	{ {.fa = jbig2dec_huffman_test_main }, "jbig2_huffman_test", "jbig2dec test" },
 	{ {.fa = jbig2dec_pbm2png_main }, "jbig2dec_pbm2png", "jbig2dec_pbm2png tool" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.fa = jbig2enc_main }, "jbig2enc", "jbig2enc tool" },
 #endif
 
 #if defined(MUTOOL_EX)
@@ -702,6 +720,10 @@ static struct tool_spec {
 #endif
 
 #if defined(MUTOOL_EX)
+	{ {.f = editdist_test_main }, "editdist_test", "edit-distance test tool" },
+#endif
+
+#if defined(MUTOOL_EX)
 	{ {.fa = xsimd_benchmark_main }, "xsimd_benchmark", "xsimd benchmark tool" },
 	{ {.f = xsimd_sample_mandelbrot_main }, "xsimd_sample_mandelbrot", "xsimd xsimd mandelbrot example" },
 #endif
@@ -780,6 +802,21 @@ static struct tool_spec {
 #endif
 
 #if defined(MUTOOL_EX)
+	{ {.f = chaos_benchmark_graph_main }, "chaos_benchmark_graph", "chaos benchmark_graph tool" },
+	{ {.fa = chaos_file_checksum_main }, "chaos_file_checksum", "chaos file_checksum tool" },
+	{ {.f = chaos_machine_interface_main }, "chaos_machine_interface", "chaos machine_interface tool" },
+	{ {.f = chaos_interface_main }, "chaos_interface", "chaos interface tool" },
+	{ {.f = chaos_long_period_urandom_main }, "chaos_long_period_urandom", "chaos long_period_urandom tool" },
+	{ {.f = chaos_normal_dist_diagram_main }, "chaos_normal_dist_diagram", "chaos normal_dist_diagram tool" },
+	{ {.f = chaos_tests_library_main }, "chaos_tests_library", "chaos tests_library tool" },
+//	{ {.f = chaos_tests_testU01_main }, "chaos_tests_testU01", "chaos tests_testU01 tool" },
+	{ {.f = chaos_truely_random_main }, "chaos_truely_random", "chaos truely_random tool" },
+	{ {.fa = chaos_deep_main }, "chaos_deep", "chaos deep tool" },
+	{ {.f = chaos_sandbox_main }, "chaos_sandbox", "chaos sandbox tool" },
+//	{ {.f = chaos_testu01_main }, "chaos_testu01", "chaos testu01 tool" },
+#endif
+
+#if defined(MUTOOL_EX)
 	{ {.fa = arch_bsdcat_main }, "bsdcat", "bsdcat tool" },
 #if 0   // TODO: properly port the shar example (when we feel the need) to Win32/64 and then remove this condition right here...
 	{ {.fa = arch_shar_main }, "shar", "shar tool" },
@@ -814,7 +851,17 @@ static struct tool_spec {
 	{ {.fa = gumbo_positions_of_class_main }, "gumbo_positions_of_class", "gumbo positions_of_class demo/test/tool" },
 	{ {.fa = gumbo_prettyprint_main }, "gumbo_prettyprint", "gumbo prettyprint demo/test/tool" },
 	{ {.fa = gumbo_serialize_main }, "gumbo_serialize", "gumbo serialize demo/test/tool" },
+	{ {.fa = gumbo_eval_xpath_main }, "gumbo_eval_xpath", "gumbo eval_xpath demo/test/tool" },
 	{ {.fa = gumbo_print_main }, "gumbo_print", "gumbo print demo/test/tool" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.f = gumboquery_example_main }, "gumboquery_example", "gumbo-query example" },
+	{ {.f = gumboquery_test_main }, "gumboquery_test", "gumbo-query test" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.fa = gumbo_libxml_example_main }, "gumbo_libxml_example", "gumbo-libxml example" },
 #endif
 
 #if 0 
@@ -846,6 +893,19 @@ static struct tool_spec {
 	{ {.fa = libbf_bench_main }, "bf_bench", "libbf benchmark tool" },
 	{ {.fa = libbf_test_main }, "bf_test", "libbf test tool" },
 	{ {.fa = libbf_tinypi_main }, "bf_tinypi", "libbf tiny PI demo" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.f = fph_bits_array_test_main }, "fph_bits_array_test", "fph bits array test" },
+	{ {.f = fph_sample_test_main }, "fph_sample_test", "fph sample test" },
+	{ {.f = fph_tests_main }, "fph_tests", "fph tests" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.fa = cpptoml_build_toml_example_main }, "cpptoml_build_toml_example", "cpptoml build_toml example" },
+	{ {.fa = cpptoml_parse_example_main }, "cpptoml_parse_example", "cpptoml parse example" },
+	{ {.f = cpptoml_conversions_example_main }, "cpptoml_conversions_example", "cpptoml conversions example" },
+	{ {.f = cpptoml_parse_stdin_example_main }, "cpptoml_parse_stdin_example", "cpptoml parse_stdin example" },
 #endif
 
 #if defined(MUTOOL_EX)
@@ -905,6 +965,24 @@ static struct tool_spec {
 #endif
 
 #if defined(MUTOOL_EX)
+	{ {.f = linenoise_example_main }, "linenoise_example", "linenoise example" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.fa = replxx_c_api_main }, "replxx_c_api", "replxx C API demo" },
+	{ {.fa = replxx_cpp_api_main }, "replxx_cpp_api", "replxx C++ API demo" },
+#endif
+
+#if defined(MUTOOL_EX)
+	{ {.fa = spdlog_async_bench_main }, "spdlog_async_bench", "spdlog async benchmark tool" },
+	{ {.fa = spdlog_bench_main }, "spdlog_bench", "spdlog main benchmark tool" },
+	{ {.fa = spdlog_formatter_bench_main }, "spdlog_formatter_bench", "spdlog formatter benchmark tool" },
+	{ {.fa = spdlog_latency_bench_main }, "spdlog_latency_bench", "spdlog latency benchmark tool" },
+	{ {.fa = spdlog_example_main }, "spdlog_example", "spdlog example/demo" },
+	{ {.fa = spdlog_example2_main }, "spdlog_ex2", "spdlog example/demo #2" },
+#endif
+
+#if defined(MUTOOL_EX)
 	{ {.f = lcms2_demo_cmyk_main }, "lcms2_demo_cmyk", "lcms2 demo_cmyk demo/tool" },
 	{ {.f = lcms2_fast_float_testbed_main }, "lcms2_fast_float_testbed", "lcms2 fast_float_testbed demo/tool" },
 	{ {.f = lcms2_threaded_testbed_main }, "lcms2_threaded_testbed", "lcms2 threaded_testbed demo/tool" },
@@ -927,7 +1005,6 @@ static struct tool_spec {
 
 #if defined(MUTOOL_EX)
 	{ {.fa = xml_gio_bread_example_main }, "xml_gio_bread_example", "libxml gio_bread_example demo/tool" },
-	{ {.fa = xml_nanoftp_main }, "xml_nanoftp", "libxml nanoftp demo/tool" },
 	{ {.fa = xml_nanohttp_main }, "xml_nanohttp", "libxml nanohttp demo/tool" },
 	{ {.fa = xml_runsuite_tests_main }, "xml_runsuite_tests", "libxml runsuite_tests demo/tool" },
 	{ {.fa = xml_runtest_main }, "xml_runtest", "libxml runtest demo/tool" },
@@ -950,9 +1027,6 @@ static struct tool_spec {
 	{ {.fa = xml_xmlcatalog_main }, "xmlcatalog", "libxml xmlcatalog demo/tool" },
 	{ {.fa = xml_xmllint_main }, "xmllint", "libxml xmllint demo/tool" },
 	{ {.fa = xml_test_xmlreader_main }, "xml_test_xmlreader", "libxml test_xmlreader demo/tool" },
-
-	{ {.f = xml_testthreads_main }, "xml_testthreads", "libxml testthreads demo/tool" },
-	// { {.f = xml_trionan_main }, "xml_trionan", "libxml trionan demo/tool" },
 	{ {.f = xml_testchar_main }, "xml_testchar", "libxml testchar demo/tool" },
 #endif
 
@@ -1277,6 +1351,60 @@ mutool-options:\n\
 \n");
 }
 
+static uint16_t namehash(const char* name)
+{
+	uint32_t h = 1;
+	for (; *name; name++) {
+		h *= 4211;			// prime
+		uint8_t c = *name;
+		h += c + 1;
+		h ^= h >> 17;
+	}
+
+	// fold:
+	uint32_t h2 = h >> 11;     // 2048
+	h ^= h2;
+	h2 >>= 11;
+	h ^= h2;
+	h2 >>= 11;
+	h ^= h2;
+	h &= 2048 - 1;
+
+	return h;
+}
+
+// check to make sure the registered tool names are all unique!
+static int sanitycheck_tools_table(void)
+{
+	uint16_t checklist[2048] = { 0 };
+	for (int i = 0; i < (int)nelem(tools); i++) {
+		const char* name = tools[i].name;
+		uint16_t h = namehash(name);
+		if (!checklist[h]) {
+			checklist[h] = i + 1;
+		}
+		else {
+			// potential collision!
+			for (int j = 1; j < 2048; j++) {
+				int idx = (i + j);
+				idx &= 2048 - 1;
+				if (!checklist[idx]) {
+					// empty slot, no duplicate: plug it in.
+					checklist[idx] = i + 1;
+					break;
+				}
+				else if (!strcmp(tools[checklist[idx] - 1].name, name))
+				{
+					// collision!
+					fz_error(ctx, "mutool_ex sanity check: tools name collision for name '%s'.\n", name);
+					return 0;
+				}
+			}
+		}
+	}
+	return 1;
+}
+
 /* Print usage */
 static void usage(void)
 {
@@ -1385,7 +1513,7 @@ static struct found_t find_and_exec_tool(const char *start, const char *end, int
 
 	for (int i = 0; i < (int)nelem(tools); i++)
 	{
-		// test for variants: mupdf<NAME>, pdf<NAME>, mu<NAME> and <NAME>:
+		// test for variants: mupdf<NAME>, mu<NAME> and <NAME>:
 		strcpy(buf, "mupdf");
 		strcat(buf, tools[i].name);
 		assert(strlen(buf) < sizeof(buf));
@@ -1559,6 +1687,10 @@ int mutool_main(int argc, const char** argv)
         fz_error(ctx, "No command name found!");
         return EXIT_FAILURE;
     }
+		if (!sanitycheck_tools_table())
+		{
+			return EXIT_FAILURE;
+		}
 
 	int argstart = 1;
 	int time_the_run = 0;

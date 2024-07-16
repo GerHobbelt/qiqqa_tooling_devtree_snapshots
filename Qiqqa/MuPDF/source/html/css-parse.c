@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -55,31 +55,37 @@ FZ_NORETURN static void fz_css_error(struct lexbuf *buf, const char *msg)
 	unsigned char text[PRE_POST_SIZE * 2 + 4];
 	unsigned char *d = text;
 	const unsigned char *s = buf->start;
-	int n = sizeof(text)-1;
+	int n;
 
 	/* We want to make a helpful fragment for the error message.
 	 * We want err_pos to be the point at which we just tripped
 	 * the error. err_pos needs to be at least 1 byte behind
 	 * our read pointer, as we've read that char. */
-	const unsigned char *err_pos = buf->s-1;
+	const unsigned char *err_pos = buf->s;
+	n = 1;
 
 	/* And if we're using lookahead, it's further behind. */
 	if (buf->lookahead >= CSS_KEYWORD)
-		err_pos -= strlen(buf->string);
+		n += buf->string_len;
 	else if (buf->lookahead != EOF)
-		err_pos--;
+		n += 1;
+
+	/* But it can't be before the start of the buffer */
+	n = fz_mini(n, err_pos - buf->start);
+	err_pos -= n;
 
 	/* We're going to try to output:
 	 * <section prior to the error> ">" <the char that tripped> "<" <section after the error>
 	 */
 	/* Is the section prior to the error too long? If so, truncate it with an elipsis. */
-	if (err_pos - s > n-PRE_POST_SIZE)
+	n = sizeof(text)-1;
+	if (err_pos - s > n-PRE_POST_SIZE - 3)
 	{
 		*d++ = '.';
 		*d++ = '.';
 		*d++ = '.';
 		n -= 3;
-		s = err_pos - (n-PRE_POST_SIZE);
+		s = err_pos - (n-PRE_POST_SIZE - 3);
 	}
 
 	/* Copy the prefix (if there is one) */
@@ -97,7 +103,7 @@ FZ_NORETURN static void fz_css_error(struct lexbuf *buf, const char *msg)
 	/* Marker, char, end marker */
 	*d++ = '>', n--;
 	if (*err_pos)
-		*d++ = *err_pos, n--;
+		*d++ = *err_pos++, n--;
 	*d++ = '<', n--;
 
 	/* Postfix */
@@ -116,7 +122,7 @@ FZ_NORETURN static void fz_css_error(struct lexbuf *buf, const char *msg)
 		for (n = PRE_POST_SIZE-3; n > 0; n--)
 		{
 			unsigned char c = *err_pos++;
-			*d =  (c < 32 || c > 127) ? ' ' : c;
+			*d++ =  (c < 32 || c > 127) ? ' ' : c;
 		}
 
 		*d++ = '.';
@@ -166,6 +172,7 @@ static fz_css_rule *fz_new_css_rule(fz_context *ctx, fz_pool *pool, fz_css_selec
 static fz_css_selector *fz_new_css_selector(fz_context *ctx, fz_pool *pool, const char *name)
 {
 	fz_css_selector *sel = fz_pool_alloc(ctx, pool, sizeof *sel);
+	// TODO: tolower for non-element?
 	sel->name = name ? fz_pool_strdup(ctx, pool, name) : NULL;
 	sel->combine = 0;
 	sel->cond = NULL;
@@ -179,6 +186,7 @@ static fz_css_condition *fz_new_css_condition(fz_context *ctx, fz_pool *pool, in
 {
 	fz_css_condition *cond = fz_pool_alloc(ctx, pool, sizeof *cond);
 	cond->type = type;
+	// TODO: tolower
 	cond->key = key ? fz_pool_strdup(ctx, pool, key) : NULL;
 	cond->val = val ? fz_pool_strdup(ctx, pool, val) : NULL;
 	cond->next = NULL;
@@ -223,6 +231,8 @@ static fz_css_value *fz_new_css_value(fz_context *ctx, fz_pool *pool, int type, 
 
 static void css_lex_next(struct lexbuf *buf)
 {
+	if (buf->c == 0)
+		return;
 	buf->s += fz_chartorune(&buf->c, (const char *)buf->s, (buf->s - buf->start) + buf->string_len);
 	if (buf->c == '\n')
 		++buf->line;
@@ -236,7 +246,7 @@ static void css_lex_init(fz_context *ctx, struct lexbuf *buf, fz_pool *pool, con
 	buf->s = (const unsigned char *)s;
 	buf->lookahead = EOF;
 	buf->start = buf->s;
-	buf->c = 0;
+	buf->c = -1;
 	buf->file = file;
 	buf->line = 1;
 	css_lex_next(buf);
@@ -684,6 +694,9 @@ static fz_css_property *parse_declaration(struct lexbuf *buf)
 
 	if (buf->lookahead != CSS_KEYWORD)
 		fz_css_error(buf, "expected keyword in property");
+
+	// TODO: lowercase buf->string
+
 	p = fz_new_css_property(buf->ctx, buf->pool, buf->string, NULL, 0);
 	next(buf);
 
@@ -700,7 +713,7 @@ static fz_css_property *parse_declaration(struct lexbuf *buf)
 	if (accept(buf, '!'))
 	{
 		white(buf);
-		if (buf->lookahead != CSS_KEYWORD || strcmp(buf->string, "important"))
+		if (buf->lookahead != CSS_KEYWORD || fz_strcasecmp(buf->string, "important"))
 			fz_css_error(buf, "expected keyword 'important' after '!'");
 		if (p)
 			p->important = 1;
@@ -748,6 +761,8 @@ static fz_css_property *parse_declaration_list(struct lexbuf *buf)
 static char *parse_attrib_value(struct lexbuf *buf)
 {
 	char *s;
+
+	// TODO: lowercase buf->string if KEYWORD
 
 	if (buf->lookahead == CSS_KEYWORD || buf->lookahead == CSS_STRING)
 	{
@@ -894,6 +909,7 @@ static fz_css_selector *parse_selector(struct lexbuf *buf)
 	{
 		if (accept(buf, ' '))
 		{
+			white(buf);
 			if (accept(buf, '+'))
 				sel = parse_combinator(buf, '+', sel);
 			else if (accept(buf, '>'))
@@ -1047,13 +1063,13 @@ static fz_css_rule *parse_stylesheet(struct lexbuf *buf, fz_css_rule *chain)
 	{
 		if (accept(buf, '@'))
 		{
-			if (buf->lookahead == CSS_KEYWORD && !strcmp(buf->string, "page"))
+			if (buf->lookahead == CSS_KEYWORD && !fz_strcasecmp(buf->string, "page"))
 			{
 				next(buf);
 				rule = *nextp = parse_at_page(buf);
 				nextp = &rule->next;
 			}
-			else if (buf->lookahead == CSS_KEYWORD && !strcmp(buf->string, "font-face"))
+			else if (buf->lookahead == CSS_KEYWORD && !fz_strcasecmp(buf->string, "font-face"))
 			{
 				next(buf);
 				rule = *nextp = parse_at_font_face(buf);

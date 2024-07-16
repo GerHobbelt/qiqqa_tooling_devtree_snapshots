@@ -17,25 +17,23 @@
 ///////////////////////////////////////////////////////////////////////
 
 // Include automatically generated configuration file if running autoconf.
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include "imagedata.h"
 
 #include "boxread.h"    // for ReadMemBoxes
 #include "rect.h"       // for TBOX
 #include "scrollview.h" // for ScrollView, Diagnostics::CYAN, Diagnostics::NONE
-#include "tprintf.h"    // for tprintf
+#include <tesseract/tprintf.h>    // for tprintf
 
 #include "helpers.h"  // for IntCastRounded, TRand, ClipToRange, Modulo
 #include "serialis.h" // for TFile
 
 #include <leptonica/allheaders.h> // for pixDestroy, pixGetHeight, pixGetWidth, lept_...
 
-#include <algorithm> // for max, min
-#include <fstream>   // for std::ifstream
-#include <cinttypes> // for PRId64
+#include <algorithm>    // for max, min
+#include <cinttypes>    // for PRId64
+#include <fstream>      // for std::ifstream
 
 #undef min
 #undef max
@@ -532,7 +530,7 @@ void DocumentData::Shuffle() {
   TRand random;
   // Different documents get shuffled differently, but the same for the same
   // name.
-  random.set_seed(document_name_);
+  random.set_seed(document_name_.c_str());
   int num_pages = pages_.size();
   // Execute one random swap for each page in the document.
   for (int i = 0; i < num_pages; ++i) {
@@ -542,7 +540,7 @@ void DocumentData::Shuffle() {
   }
 }
 
-// Locks the pages_mutex_ and loads as many pages can fit in max_memory_
+// Locks the pages_mutex_ and loads as many pages as will fit into max_memory_
 // starting at index pages_offset_.
 bool DocumentData::ReCachePages() {
   std::lock_guard<std::mutex> lock(pages_mutex_);
@@ -555,9 +553,10 @@ bool DocumentData::ReCachePages() {
   }
   pages_.clear();
 #if !defined(TESSERACT_IMAGEDATA_AS_PIX)
-  if (document_name_.ends_with("png")) {
-    // PDF image given instead of LSTMF file.
-    std::string gt_name = document_name_.substr(0, document_name_.length() - 3) + "gt.txt";
+  auto name_size = document_name_.size();
+  if (name_size > 4 && document_name_.substr(name_size - 4) == ".png") {
+    // PNG image given instead of LSTMF file.
+    std::string gt_name = document_name_.substr(0, name_size - 3) + "gt.txt";
     std::ifstream t(gt_name);
     std::string line;
     std::getline(t, line);
@@ -570,11 +569,11 @@ bool DocumentData::ReCachePages() {
     pages_offset_ %= loaded_pages;
     set_total_pages(loaded_pages);
     set_memory_used(memory_used() + image_data->MemoryUsed());
-    if (true) {
-      tprintf("Loaded %zu/%d lines (%d-%zu) of document %s\n", pages_.size(),
-              loaded_pages, pages_offset_ + 1, pages_offset_ + pages_.size(),
-              document_name_.c_str());
-    }
+#if 01
+      tprintDebug("Loaded {}/{} lines ({}-{}) of document {}\n", pages_.size(),
+            loaded_pages, pages_offset_ + 1, pages_offset_ + pages_.size(),
+            document_name_.c_str());
+#endif
     return !pages_.empty();
   }
 #endif

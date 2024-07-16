@@ -49,6 +49,7 @@
 #else
 
 #include <crtdbg.h>
+#include <stddef.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -57,12 +58,15 @@ extern "C" {
 /* Note that _WIN32 is defined for both 32 and 64 bit applications,
    whereas _WIN64 is defined only for the latter */
 
+#if 0
+// V677 Custom declaration of a standard 'intptr_t' type. The system header file should be used: #include <STDDEF.H>.
 #ifdef _WIN64
 typedef __int64 intptr_t;
 typedef unsigned __int64 uintptr_t;
 #else
 typedef int intptr_t;
 typedef unsigned int uintptr_t;
+#endif
 #endif
 
 /* VC++6 doesn't seem to have powf, expf. */
@@ -109,12 +113,15 @@ typedef int l_atomic;
 #endif /* __APPLE__ */
 
 #if defined(HAVE_MUPDF)
+#include "mupdf/assertions.h"
 #include "mupdf/fitz/context.h"
+#include "mupdf/helpers/dir.h"
 #endif
 
 #ifdef __cplusplus
 extern "C" {
 #endif
+
 typedef intptr_t l_intptr_t;
 typedef uintptr_t l_uintptr_t;
 
@@ -158,7 +165,7 @@ typedef uintptr_t l_uintptr_t;
   #define  HAVE_LIBWEBP       1
   #endif
   #if !defined(HAVE_LIBWEBP_ANIM)
-  #define  HAVE_LIBWEBP_ANIM  0
+  #define  HAVE_LIBWEBP_ANIM  1
   #endif
   #if !defined(HAVE_LIBJP2K)
   #define  HAVE_LIBJP2K       1
@@ -166,8 +173,8 @@ typedef uintptr_t l_uintptr_t;
 
 
   /*-----------------------------------------------------------------------*
-   * Leptonica supports OpenJPEG 2.0+.  If you have a version of openjpeg  *
-   * (HAVE_LIBJP2K == 1) that is >= 2.0, set the path to the openjpeg.h    *
+   * Leptonica supports OpenJPEG 2.1+.  If you have a version of openjpeg  *
+   * (HAVE_LIBJP2K == 1) that is >= 2.1, set the path to the openjpeg.h    *
    * header in angle brackets here.                                        *
    *-----------------------------------------------------------------------*/
   #undef  LIBJP2K_HEADER

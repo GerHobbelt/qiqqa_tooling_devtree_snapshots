@@ -9,6 +9,11 @@ See-also:
   - CURLOPT_PROXY_TLSAUTH_USERNAME (3)
   - CURLOPT_TLSAUTH_PASSWORD (3)
   - CURLOPT_TLSAUTH_USERNAME (3)
+Protocol:
+  - TLS
+TLS-backend:
+  - OpenSSL
+  - GnuTLS
 ---
 
 # NAME
@@ -35,19 +40,12 @@ method is "SRP".
 TLS-SRP authentication. Secure Remote Password authentication for TLS is
 defined in RFC 5054 and provides mutual authentication if both sides have a
 shared secret. To use TLS-SRP, you must also set the
-CURLOPT_PROXY_TLSAUTH_USERNAME(3) and
-CURLOPT_PROXY_TLSAUTH_PASSWORD(3) options.
-
-The application does not have to keep the string around after setting this
-option.
+CURLOPT_PROXY_TLSAUTH_USERNAME(3) and CURLOPT_PROXY_TLSAUTH_PASSWORD(3)
+options.
 
 # DEFAULT
 
 blank
-
-# PROTOCOLS
-
-All
 
 # EXAMPLE
 

@@ -119,8 +119,7 @@ namespace
 #endif
 
     String ext;
-    const int pos = s.rfind(".");
-    if(pos != -1)
+    if(const int pos = s.rfind("."); pos != -1)
       ext = s.substr(pos + 1).upper();
 
     // If this list is updated, the method defaultFileExtensions() should also be
@@ -134,8 +133,8 @@ namespace
 
     File *file = nullptr;
 
-    if(ext == "MP3")
-      file = new MPEG::File(stream, ID3v2::FrameFactory::instance(), readAudioProperties, audioPropertiesStyle);
+    if(ext == "MP3" || ext == "MP2" || ext == "AAC")
+      file = new MPEG::File(stream, readAudioProperties, audioPropertiesStyle);
     else if(ext == "OGG")
       file = new Ogg::Vorbis::File(stream, readAudioProperties, audioPropertiesStyle);
     else if(ext == "OGA") {
@@ -147,7 +146,7 @@ namespace
       }
     }
     else if(ext == "FLAC")
-      file = new FLAC::File(stream, ID3v2::FrameFactory::instance(), readAudioProperties, audioPropertiesStyle);
+      file = new FLAC::File(stream, readAudioProperties, audioPropertiesStyle);
     else if(ext == "MPC")
       file = new MPC::File(stream, readAudioProperties, audioPropertiesStyle);
     else if(ext == "WV")
@@ -201,13 +200,13 @@ namespace
     File *file = nullptr;
 
     if(MPEG::File::isSupported(stream))
-      file = new MPEG::File(stream, ID3v2::FrameFactory::instance(), readAudioProperties, audioPropertiesStyle);
+      file = new MPEG::File(stream, readAudioProperties, audioPropertiesStyle);
     else if(Ogg::Vorbis::File::isSupported(stream))
       file = new Ogg::Vorbis::File(stream, readAudioProperties, audioPropertiesStyle);
     else if(Ogg::FLAC::File::isSupported(stream))
       file = new Ogg::FLAC::File(stream, readAudioProperties, audioPropertiesStyle);
     else if(FLAC::File::isSupported(stream))
-      file = new FLAC::File(stream, ID3v2::FrameFactory::instance(), readAudioProperties, audioPropertiesStyle);
+      file = new FLAC::File(stream, readAudioProperties, audioPropertiesStyle);
     else if(MPC::File::isSupported(stream))
       file = new MPC::File(stream, readAudioProperties, audioPropertiesStyle);
     else if(WavPack::File::isSupported(stream))
@@ -406,10 +405,12 @@ StringList FileRef::defaultFileExtensions()
   l.append("oga");
   l.append("opus");
   l.append("mp3");
+  l.append("mp2");
   l.append("mpc");
   l.append("wv");
   l.append("spx");
   l.append("tta");
+  l.append("aac");
   l.append("m4a");
   l.append("m4r");
   l.append("m4b");
@@ -446,7 +447,7 @@ bool FileRef::isNull() const
 
 FileRef &FileRef::operator=(const FileRef &) = default;
 
-void FileRef::swap(FileRef &ref)
+void FileRef::swap(FileRef &ref) noexcept
 {
   using std::swap;
 
@@ -455,12 +456,12 @@ void FileRef::swap(FileRef &ref)
 
 bool FileRef::operator==(const FileRef &ref) const
 {
-  return (ref.d->file == d->file);
+  return ref.d->file == d->file;
 }
 
 bool FileRef::operator!=(const FileRef &ref) const
 {
-  return (ref.d->file != d->file);
+  return ref.d->file != d->file;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

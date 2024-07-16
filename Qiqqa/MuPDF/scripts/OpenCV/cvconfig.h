@@ -2,7 +2,7 @@
 #define OPENCV_CVCONFIG_H_INCLUDED
 
 /* OpenCV compiled as static or dynamic libs */
-#define BUILD_SHARED_LIBS
+#undef BUILD_SHARED_LIBS
 
 /* OpenCV intrinsics optimized code */
 #define CV_ENABLE_INTRINSICS
@@ -41,14 +41,14 @@
 /* #undef HAVE_CUFFT */
 
 /* DirectX */
-//#define HAVE_DIRECTX
-//#define HAVE_DIRECTX_NV12
-//#define HAVE_D3D11
-//#define HAVE_D3D10
-//#define HAVE_D3D9
+#define HAVE_DIRECTX
+#define HAVE_DIRECTX_NV12
+#define HAVE_D3D11
+#define HAVE_D3D10
+#define HAVE_D3D9
 
 /* Eigen Matrix & Linear Algebra Library */
-/* #undef HAVE_EIGEN */
+#define HAVE_EIGEN
 
 /* Geospatial Data Abstraction Library */
 /* #undef HAVE_GDAL */
@@ -81,7 +81,7 @@
 #define HAVE_JPEG
 
 /* libpng/png.h needs to be included */
-/* #undef HAVE_LIBPNG_PNG_H */
+#define HAVE_LIBPNG_PNG_H
 
 /* GDCM DICOM codec */
 /* #undef HAVE_GDCM */
@@ -95,7 +95,7 @@
 /* #undef HAVE_NVCUVENC */
 
 /* OpenCL Support */
-#define HAVE_OPENCL
+//#define HAVE_OPENCL
 /* #undef HAVE_OPENCL_STATIC */
 /* #undef HAVE_OPENCL_SVM */
 
@@ -114,8 +114,11 @@
 /* PNG codec */
 /* #undef HAVE_SPNG */
 
+/* WEBP codec */
+#define HAVE_WEBP
+
 /* Posix threads (pthreads) */
-/* #undef HAVE_PTHREAD */
+#define HAVE_PTHREAD
 
 /* parallel_for with pthreads */
 /* #undef HAVE_PTHREADS_PF */

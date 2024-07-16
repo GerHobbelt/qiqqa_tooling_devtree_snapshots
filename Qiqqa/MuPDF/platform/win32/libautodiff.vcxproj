@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libautodiff</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF4913D4}</ProjectGuid>
-    <RootNamespace>libautodiff</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -265,6 +263,11 @@
     <ClCompile Include="../../thirdparty/owemdjee/autodiff/python/bindings/ArrayXreal2nd.py.cxx" />
     <ClCompile Include="../../thirdparty/owemdjee/autodiff/python/bindings/ArrayXreal3rd.py.cxx" />
     <ClCompile Include="../../thirdparty/owemdjee/autodiff/python/bindings/ArrayXreal4th.py.cxx" />
+    <ClCompile Include="../../thirdparty/owemdjee/autodiff/python/bindings/MatrixXreal0th.py.cxx" />
+    <ClCompile Include="../../thirdparty/owemdjee/autodiff/python/bindings/MatrixXreal1st.py.cxx" />
+    <ClCompile Include="../../thirdparty/owemdjee/autodiff/python/bindings/MatrixXreal2nd.py.cxx" />
+    <ClCompile Include="../../thirdparty/owemdjee/autodiff/python/bindings/MatrixXreal3rd.py.cxx" />
+    <ClCompile Include="../../thirdparty/owemdjee/autodiff/python/bindings/MatrixXreal4th.py.cxx" />
     <ClCompile Include="../../thirdparty/owemdjee/autodiff/python/bindings/VectorXdual0th.py.cxx" />
     <ClCompile Include="../../thirdparty/owemdjee/autodiff/python/bindings/VectorXdual1st.py.cxx" />
     <ClCompile Include="../../thirdparty/owemdjee/autodiff/python/bindings/VectorXdual2nd.py.cxx" />
@@ -353,7 +356,7 @@
     <Text Include="../../thirdparty/owemdjee/autodiff/python/bindings/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/autodiff/python/package/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/autodiff/python/package/autodiff/__init__.py" />
-    <Text Include="../../thirdparty/owemdjee/autodiff/python/package/autodiff/_extensions/__init__.py" />
+    <Text Include="../../thirdparty/owemdjee/autodiff/python/package/autodiff/extensions/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/autodiff/python/package/setup.py.in" />
     <Text Include="../../thirdparty/owemdjee/autodiff/tests/CMakeLists.txt" />
   </ItemGroup>

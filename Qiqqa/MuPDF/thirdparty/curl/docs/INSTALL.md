@@ -1,3 +1,9 @@
+<!--
+Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+
+SPDX-License-Identifier: curl
+-->
+
 # how to install curl and libcurl
 
 ## Installing Binary Packages
@@ -24,8 +30,8 @@ or pull request](https://github.com/Microsoft/vcpkg) on the vcpkg repository.
 ## Building from git
 
 If you get your code off a git repository instead of a release tarball, see
-the `GIT-INFO` file in the root directory for specific instructions on how to
-proceed.
+the `GIT-INFO.md` file in the root directory for specific instructions on how
+to proceed.
 
 # Unix
 

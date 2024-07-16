@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libusb</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FFF6B46B}</ProjectGuid>
-    <RootNamespace>libusb</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -265,6 +263,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libusb/msvc/getopt/getopt.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libusb/msvc/getopt/getopt1.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libusb/tests/init_context.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libusb/tests/macos.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libusb/tests/set_option.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libusb/tests/stress.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libusb/tests/stress_mt.c" />
@@ -334,6 +333,9 @@
     <Text Include="../../thirdparty/owemdjee/libusb/msvc/ProjectConfigurations.Base.props" />
     <Text Include="../../thirdparty/owemdjee/libusb/msvc/build_all.ps1" />
     <Text Include="../../thirdparty/owemdjee/libusb/tests/Makefile.am" />
+    <Text Include="../../thirdparty/owemdjee/libusb/tests/webusb-test-shim/index.js" />
+    <Text Include="../../thirdparty/owemdjee/libusb/tests/webusb-test-shim/package-lock.json" />
+    <Text Include="../../thirdparty/owemdjee/libusb/tests/webusb-test-shim/package.json" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

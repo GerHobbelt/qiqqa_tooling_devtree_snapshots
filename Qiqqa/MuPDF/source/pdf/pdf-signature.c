@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2023 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -48,6 +48,12 @@ static void
 end_annot_op(fz_context *ctx, pdf_annot *annot)
 {
 	pdf_end_operation(ctx, annot->page->doc);
+}
+
+static void
+abandon_annot_op(fz_context *ctx, pdf_annot *annot)
+{
+	pdf_abandon_operation(ctx, annot->page->doc);
 }
 
 void pdf_write_digest(fz_context *ctx, fz_output *out, pdf_obj *byte_range, pdf_obj *field, size_t hexdigest_offset, size_t hexdigest_length, pdf_pkcs7_signer *signer)
@@ -153,7 +159,7 @@ check_field_locking(fz_context *ctx, pdf_obj *obj, void *data_, pdf_obj **ff)
 		pdf_obj *t;
 
 		t = pdf_dict_get(ctx, obj, PDF_NAME(T));
-		if (t != NULL)
+		if (pdf_is_string(ctx, t))
 		{
 			name = pdf_to_text_string(ctx, t, NULL);
 			n += strlen(name);
@@ -233,14 +239,15 @@ static void enact_sig_locking(fz_context *ctx, pdf_document *doc, pdf_obj *sig)
 void
 pdf_sign_signature_with_appearance(fz_context *ctx, pdf_annot *widget, pdf_pkcs7_signer *signer, int64_t t, fz_display_list *disp_list)
 {
-	pdf_document *doc = widget->page->doc;
+	pdf_document *doc;
 
 	if (pdf_dict_get(ctx, widget->obj, PDF_NAME(FT)) != PDF_NAME(Sig))
 		fz_throw(ctx, FZ_ERROR_GENERIC, "annotation is not a signature widget");
 	if (pdf_annot_is_readonly(ctx, widget))
 		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Signature is read only, it cannot be signed.");
 
-	pdf_begin_operation(ctx, doc, "Sign signature");
+	begin_annot_op(ctx, widget, "Sign signature");
+	doc = widget->page->doc;
 
 	fz_try(ctx)
 	{
@@ -259,22 +266,25 @@ pdf_sign_signature_with_appearance(fz_context *ctx, pdf_annot *widget, pdf_pkcs7
 
 		/* Update the SigFlags for the document if required */
 		form = pdf_dict_getp(ctx, pdf_trailer(ctx, doc), "Root/AcroForm");
-		if (!form)
+		if (!pdf_is_dict(ctx, form))
 		{
 			pdf_obj *root = pdf_dict_get(ctx, pdf_trailer(ctx, doc), PDF_NAME(Root));
 			form = pdf_dict_put_dict(ctx, root, PDF_NAME(AcroForm), 1);
 		}
 
-		sf = pdf_to_int(ctx, pdf_dict_get(ctx, form, PDF_NAME(SigFlags)));
+		sf = pdf_dict_get_int(ctx, form, PDF_NAME(SigFlags));
 		if ((sf & (PDF_SIGFLAGS_SIGSEXIST | PDF_SIGFLAGS_APPENDONLY)) != (PDF_SIGFLAGS_SIGSEXIST | PDF_SIGFLAGS_APPENDONLY))
 			pdf_dict_put_int(ctx, form, PDF_NAME(SigFlags), sf | PDF_SIGFLAGS_SIGSEXIST | PDF_SIGFLAGS_APPENDONLY);
 
 		pdf_signature_set_value(ctx, doc, wobj, signer, t);
-		pdf_end_operation(ctx, doc);
+	}
+	fz_always(ctx)
+	{
+		end_annot_op(ctx, widget);
 	}
 	fz_catch(ctx)
 	{
-		pdf_abandon_operation(ctx, doc);
+		abandon_annot_op(ctx, widget);
 		fz_rethrow(ctx);
 	}
 }
@@ -291,7 +301,7 @@ static char *
 pdf_format_signature_info(fz_context *ctx, pdf_pkcs7_signer *signer, int flags, const char *reason, const char *location, int64_t now, char **name)
 {
 	pdf_pkcs7_distinguished_name *dn = NULL;
-	char *info;
+	char *info = NULL;
 	fz_var(dn);
 	fz_try(ctx)
 	{
@@ -415,7 +425,7 @@ fz_pixmap *pdf_preview_signature_as_pixmap(fz_context *ctx,
 	const char *reason,
 	const char *location)
 {
-	fz_pixmap *pix;
+	fz_pixmap *pix = NULL;
 	fz_display_list *dlist = pdf_preview_signature_as_display_list(ctx,
 		w, h, lang,
 		signer, flags, graphic, reason, location);
@@ -436,7 +446,7 @@ void pdf_clear_signature(fz_context *ctx, pdf_annot *widget)
 	if (pdf_dict_get(ctx, widget->obj, PDF_NAME(FT)) != PDF_NAME(Sig))
 		fz_throw(ctx, FZ_ERROR_GENERIC, "annotation is not a signature widget");
 	if (pdf_annot_is_readonly(ctx, widget))
-		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Signature read only, it cannot be cleared.");
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "read only signature cannot be cleared.");
 
 	begin_annot_op(ctx, widget, "Clear Signature");
 
@@ -461,15 +471,15 @@ void pdf_clear_signature(fz_context *ctx, pdf_annot *widget)
 
 		dlist = pdf_signature_appearance_unsigned(ctx, rect, lang);
 		pdf_set_annot_appearance_from_display_list(ctx, widget, "N", NULL, fz_identity, dlist);
-		end_annot_op(ctx, widget);
 	}
 	fz_always(ctx)
 	{
 		fz_drop_display_list(ctx, dlist);
+		end_annot_op(ctx, widget);
 	}
 	fz_catch(ctx)
 	{
-		pdf_abandon_operation(ctx, widget->page->doc);
+		abandon_annot_op(ctx, widget);
 		fz_rethrow(ctx);
 	}
 }
@@ -569,7 +579,7 @@ pdf_pkcs7_distinguished_name *pdf_signature_get_signatory(fz_context *ctx, pdf_p
 {
 	char *contents = NULL;
 	size_t contents_len;
-	pdf_pkcs7_distinguished_name *dn;
+	pdf_pkcs7_distinguished_name *dn = NULL;
 
 	if (pdf_dict_get(ctx, signature, PDF_NAME(FT)) != PDF_NAME(Sig))
 		fz_throw(ctx, FZ_ERROR_GENERIC, "annotation is not a signature widget");

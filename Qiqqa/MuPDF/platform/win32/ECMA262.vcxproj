@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>ECMA262</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF8BDA8C}</ProjectGuid>
-    <RootNamespace>ECMA262</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,15 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -229,8 +235,6 @@
   </ImportGroup>
   <ItemGroup>
     <Image Include="../../thirdparty/owemdjee/ECMA262/img/favicon.ico" />
-    <Image Include="../../thirdparty/owemdjee/ECMA262/img/figure-1.png" />
-    <Image Include="../../thirdparty/owemdjee/ECMA262/img/figure-2.png" />
     <Text Include="../../thirdparty/owemdjee/ECMA262/CODE_OF_CONDUCT.md" />
     <Text Include="../../thirdparty/owemdjee/ECMA262/CONTRIBUTING.md" />
     <Text Include="../../thirdparty/owemdjee/ECMA262/FAQ.md" />
@@ -239,9 +243,9 @@
     <Text Include="../../thirdparty/owemdjee/ECMA262/biblio/README.md" />
     <Text Include="../../thirdparty/owemdjee/ECMA262/biblio/package.json" />
     <Text Include="../../thirdparty/owemdjee/ECMA262/esmeta-ignore.json" />
-    <Text Include="../../thirdparty/owemdjee/ECMA262/figure-2.uxf" />
     <Text Include="../../thirdparty/owemdjee/ECMA262/img/ecma-logo.svg" />
     <Text Include="../../thirdparty/owemdjee/ECMA262/img/figure-1.svg" />
+    <Text Include="../../thirdparty/owemdjee/ECMA262/img/figure-2.svg" />
     <Text Include="../../thirdparty/owemdjee/ECMA262/img/module-graph-cycle-async.svg" />
     <Text Include="../../thirdparty/owemdjee/ECMA262/img/module-graph-cycle.svg" />
     <Text Include="../../thirdparty/owemdjee/ECMA262/img/module-graph-missing.svg" />

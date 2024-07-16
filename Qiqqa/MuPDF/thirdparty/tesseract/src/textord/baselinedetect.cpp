@@ -16,11 +16,7 @@
 //
 ///////////////////////////////////////////////////////////////////////
 
-#define _USE_MATH_DEFINES // for M_PI
-
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include "baselinedetect.h"
 
@@ -35,8 +31,9 @@
 #include "linlsq.h"
 #include "makerow.h"
 #include "textord.h"
-#include "tprintf.h"
+#include <tesseract/tprintf.h>
 #include "underlin.h"
+#include "global_params.h"
 
 namespace tesseract {
 

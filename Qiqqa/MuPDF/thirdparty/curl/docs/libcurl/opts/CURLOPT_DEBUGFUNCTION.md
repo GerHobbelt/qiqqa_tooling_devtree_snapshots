@@ -10,6 +10,8 @@ See-also:
   - CURLOPT_DEBUGDATA (3)
   - CURLOPT_VERBOSE (3)
   - curl_global_trace (3)
+Protocol:
+  - All
 ---
 
 # NAME
@@ -89,19 +91,17 @@ The data is SSL/TLS (binary) data sent to the peer.
 
 The data is SSL/TLS (binary) data received from the peer.
 
-WARNING: This callback may be called with the curl *handle* set to an
-internal handle. (Added in 8.4.0)
+##
 
-If you need to distinguish your curl *handle* from internal handles then
-set CURLOPT_PRIVATE(3) on your handle.
+WARNING: This callback may be called with the curl *handle* set to an internal
+handle. (Added in 8.4.0)
+
+If you need to distinguish your curl *handle* from internal handles then set
+CURLOPT_PRIVATE(3) on your handle.
 
 # DEFAULT
 
 NULL
-
-# PROTOCOLS
-
-All
 
 # EXAMPLE
 

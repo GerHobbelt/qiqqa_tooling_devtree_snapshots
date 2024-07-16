@@ -27,6 +27,7 @@
 
 #include <cerrno>
 #include <climits>
+#include <iostream>
 #include <utf8.h>
 
 #include "tdebug.h"
@@ -38,11 +39,10 @@ namespace
   using namespace TagLib;
 
   // Returns the native format of std::wstring.
-  String::Type wcharByteOrder()
+  constexpr String::Type wcharByteOrder()
   {
-    if(Utils::systemByteOrder() == Utils::LittleEndian)
-      return String::UTF16LE;
-    return String::UTF16BE;
+    return Utils::systemByteOrder() == Utils::LittleEndian ? String::UTF16LE
+                                                           : String::UTF16BE;
   }
 
   // Converts a Latin-1 string into UTF-16(without BOM/CPU byte order)
@@ -106,8 +106,7 @@ namespace
         return;
       }
 
-      const unsigned short bom = nextUTF16(&s);
-      if(bom == 0xfeff)
+      if(const unsigned short bom = nextUTF16(&s); bom == 0xfeff)
         swap = false; // Same as CPU endian. No need to swap bytes.
       else if(bom == 0xfffe)
         swap = true;  // Not same as CPU endian. Need to swap bytes.
@@ -119,7 +118,7 @@ namespace
       length--;
     }
     else {
-      swap = (t != wcharByteOrder());
+      swap = t != wcharByteOrder();
     }
 
     data.resize(length);
@@ -141,7 +140,7 @@ namespace TagLib {
     /*!
      * Stores string in UTF-16. The byte order depends on the CPU endian.
      */
-    TagLib::wstring data;
+    std::wstring data;
 
     /*!
      * This is only used to hold the most recent value of toCString().
@@ -172,35 +171,31 @@ String::String(const std::string &s, Type t) :
   }
 }
 
-String::String(const wstring &s, Type t) :
+String::String(const std::wstring &s) :
+ String(s, wcharByteOrder())
+{
+}
+
+String::String(const std::wstring &s, Type t) :
   d(std::make_shared<StringPrivate>())
 {
   if(t == UTF16 || t == UTF16BE || t == UTF16LE) {
-    // This looks ugly but needed for the compatibility with TagLib1.8.
-    // Should be removed in TabLib2.0.
-    if (t == UTF16BE)
-      t = wcharByteOrder();
-    else if (t == UTF16LE)
-      t = (wcharByteOrder() == UTF16LE ? UTF16BE : UTF16LE);
-
     copyFromUTF16(d->data, s.c_str(), s.length(), t);
   }
   else {
-    debug("String::String() -- TagLib::wstring should not contain Latin1 or UTF-8.");
+    debug("String::String() -- std::wstring should not contain Latin1 or UTF-8.");
   }
+}
+
+String::String(const wchar_t *s) :
+  String(s, wcharByteOrder())
+{
 }
 
 String::String(const wchar_t *s, Type t) :
   d(std::make_shared<StringPrivate>())
 {
   if(t == UTF16 || t == UTF16BE || t == UTF16LE) {
-    // This looks ugly but needed for the compatibility with TagLib1.8.
-    // Should be removed in TabLib2.0.
-    if (t == UTF16BE)
-      t = wcharByteOrder();
-    else if (t == UTF16LE)
-      t = (wcharByteOrder() == UTF16LE ? UTF16BE : UTF16LE);
-
     copyFromUTF16(d->data, s, ::wcslen(s), t);
   }
   else {
@@ -269,7 +264,7 @@ std::string String::to8Bit(bool unicode) const
   return std::string(v.data(), v.size());
 }
 
-TagLib::wstring String::toWString() const
+std::wstring String::toWString() const
 {
   return d->data;
 }
@@ -482,15 +477,15 @@ ByteVector String::data(Type t) const
 
 int String::toInt(bool *ok) const
 {
-  const wchar_t *begin = d->data.c_str();
-  wchar_t *end;
+  const wchar_t *beginPtr = d->data.c_str();
+  wchar_t *endPtr;
   errno = 0;
-  const long value = ::wcstol(begin, &end, 10);
+  const long value = ::wcstol(beginPtr, &endPtr, 10);
 
   // Has wcstol() consumed the entire string and not overflowed?
   if(ok) {
-    *ok = (errno == 0 && end > begin && *end == L'\0');
-    *ok = (*ok && value > INT_MIN && value < INT_MAX);
+    *ok = errno == 0 && endPtr > beginPtr && *endPtr == L'\0';
+    *ok = *ok && value > INT_MIN && value < INT_MAX;
   }
 
   return static_cast<int>(value);
@@ -520,7 +515,12 @@ bool String::isAscii() const
 
 String String::number(int n) // static
 {
-  return Utils::formatString("%d", n);
+  return std::to_string(n);
+}
+
+String String::fromLongLong(long long n) // static
+{
+  return std::to_string(n);
 }
 
 wchar_t &String::operator[](int i)
@@ -536,7 +536,7 @@ const wchar_t &String::operator[](int i) const
 
 bool String::operator==(const String &s) const
 {
-  return (d == s.d || d->data == s.d->data);
+  return d == s.d || d->data == s.d->data;
 }
 
 bool String::operator!=(const String &s) const
@@ -562,7 +562,7 @@ bool String::operator!=(const char *s) const
 
 bool String::operator==(const wchar_t *s) const
 {
-  return (d->data == s);
+  return d->data == s;
 }
 
 bool String::operator!=(const wchar_t *s) const
@@ -619,7 +619,7 @@ String &String::operator=(const std::string &s)
   return *this;
 }
 
-String &String::operator=(const wstring &s)
+String &String::operator=(const std::wstring &s)
 {
   String(s).swap(*this);
   return *this;
@@ -655,7 +655,7 @@ String &String::operator=(const ByteVector &v)
   return *this;
 }
 
-void String::swap(String &s)
+void String::swap(String &s) noexcept
 {
   using std::swap;
 
@@ -664,7 +664,7 @@ void String::swap(String &s)
 
 bool String::operator<(const String &s) const
 {
-  return (d->data < s.d->data);
+  return d->data < s.d->data;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -499,10 +499,10 @@ xmlStrncatNew(const xmlChar *str1, const xmlChar *str2, int len) {
         if (len < 0)
             return(NULL);
     }
-    if ((str2 == NULL) || (len == 0))
-        return(xmlStrdup(str1));
     if (str1 == NULL)
         return(xmlStrndup(str2, len));
+    if ((str2 == NULL) || (len == 0))
+        return(xmlStrdup(str1));
 
     size = xmlStrlen(str1);
     if ((size < 0) || (size > INT_MAX - len))
@@ -597,7 +597,7 @@ xmlStrVPrintf(xmlChar *buf, int len, const char *msg, va_list ap) {
  * xmlStrVASPrintf:
  * @out:  pointer to the resulting string
  * @maxSize:  maximum size of the output buffer
- * @fmt:  printf format string
+ * @msg:  printf format string
  * @ap:  arguments for format string
  *
  * Creates a newly allocated string according to format.
@@ -715,8 +715,8 @@ xmlStrVASPrintf(xmlChar **out, int maxSize, const char *msg, va_list ap) {
  * xmlStrASPrintf:
  * @out:  pointer to the resulting string
  * @maxSize:  maximum size of the output buffer
- * @fmt:  printf format string
- * @ap:  arguments for format string
+ * @msg:  printf format string
+ * @...:  arguments for format string
  *
  * See xmlStrVASPrintf.
  *
@@ -994,7 +994,8 @@ xmlUTF8Strsize(const xmlChar *utf, int len) {
     while ( len-- > 0) {
         if ( !*ptr )
             break;
-        if ( (ch = *ptr++) & 0x80)
+        ch = *ptr++;
+        if ((ch & 0x80))
             while ((ch<<=1) & 0x80 ) {
 		if (*ptr == 0) break;
                 ptr++;
@@ -1048,7 +1049,9 @@ xmlUTF8Strpos(const xmlChar *utf, int pos) {
     if (pos < 0)
         return(NULL);
     while (pos--) {
-        if ((ch=*utf++) == 0) return(NULL);
+        ch = *utf++;
+        if (ch == 0)
+            return(NULL);
         if ( ch & 0x80 ) {
             /* if not simple ascii, verify proper format */
             if ( (ch & 0xc0) != 0xc0 )
@@ -1106,8 +1109,9 @@ xmlUTF8Strloc(const xmlChar *utf, const xmlChar *utfchar) {
  * Create a substring from a given UTF-8 string
  * Note:  positions are given in units of UTF-8 chars
  *
- * Returns a pointer to a newly created string
- * or NULL if any problem
+ * Returns a pointer to a newly created string or NULL if the
+ * start index is out of bounds or a memory allocation failed.
+ * If len is too large, the result is truncated.
  */
 
 xmlChar *
@@ -1122,16 +1126,18 @@ xmlUTF8Strsub(const xmlChar *utf, int start, int len) {
     /*
      * Skip over any leading chars
      */
-    for (i = 0;i < start;i++) {
-        if ((ch=*utf++) == 0) return(NULL);
-        if ( ch & 0x80 ) {
-            /* if not simple ascii, verify proper format */
-            if ( (ch & 0xc0) != 0xc0 )
-                return(NULL);
-            /* then skip over remaining bytes for this char */
-            while ( (ch <<= 1) & 0x80 )
-                if ( (*utf++ & 0xc0) != 0x80 )
+    for (i = 0; i < start; i++) {
+        ch = *utf++;
+        if (ch == 0)
+            return(NULL);
+        /* skip over remaining bytes for this char */
+        if (ch & 0x80) {
+            ch <<= 1;
+            while (ch & 0x80) {
+                if (*utf++ == 0)
                     return(NULL);
+                ch <<= 1;
+            }
         }
     }
 

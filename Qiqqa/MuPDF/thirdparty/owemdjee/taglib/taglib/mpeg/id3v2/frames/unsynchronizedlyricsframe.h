@@ -50,7 +50,7 @@ namespace TagLib {
       explicit UnsynchronizedLyricsFrame(String::Type encoding = String::Latin1);
 
       /*!
-       * Construct a unsynchronized lyrics frame based on the data in \a data.
+       * Construct an unsynchronized lyrics frame based on the data in \a data.
        */
       explicit UnsynchronizedLyricsFrame(const ByteVector &data);
 
@@ -153,7 +153,7 @@ namespace TagLib {
       /*!
        * LyricsFrames each have a unique description.  This searches for a lyrics
        * frame with the description \a d and returns a pointer to it.  If no
-       * frame is found that matches the given description null is returned.
+       * frame is found that matches the given description, null is returned.
        *
        * \see description()
        */
@@ -172,6 +172,7 @@ namespace TagLib {
       UnsynchronizedLyricsFrame(const ByteVector &data, Header *h);
 
       class UnsynchronizedLyricsFramePrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<UnsynchronizedLyricsFramePrivate> d;
     };
 

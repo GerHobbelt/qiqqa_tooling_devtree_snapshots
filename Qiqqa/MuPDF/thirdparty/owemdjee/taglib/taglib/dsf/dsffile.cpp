@@ -31,12 +31,10 @@
 
 using namespace TagLib;
 
-// The DSF specification is located at http://dsd-guide.com/sites/default/files/white-papers/DSFFileFormatSpec_E.pdf
-
 class DSF::File::FilePrivate
 {
 public:
-  FilePrivate(ID3v2::FrameFactory *frameFactory)
+  FilePrivate(const ID3v2::FrameFactory *frameFactory)
         : ID3v2FrameFactory(frameFactory ? frameFactory
                                          : ID3v2::FrameFactory::instance())
   {
@@ -225,7 +223,7 @@ void DSF::File::read(AudioProperties::ReadStyle propertiesStyle)
 
   // A metadata offset of 0 indicates the absence of an ID3v2 tag
   if(d->metadataOffset == 0)
-    d->tag = std::make_unique<ID3v2::Tag>();
+    d->tag = std::make_unique<ID3v2::Tag>(nullptr, 0, d->ID3v2FrameFactory);
   else
     d->tag = std::make_unique<ID3v2::Tag>(this, d->metadataOffset,
                                           d->ID3v2FrameFactory);

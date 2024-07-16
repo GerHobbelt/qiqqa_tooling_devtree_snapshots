@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libnsis-nscurl</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF00B628}</ProjectGuid>
-    <RootNamespace>libnsis-nscurl</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -242,14 +240,16 @@
     <ClInclude Include="../../thirdparty/owemdjee/nsis-nscurl/queue.h" />
     <ClInclude Include="../../thirdparty/owemdjee/nsis-nscurl/resource.h" />
     <ClInclude Include="../../thirdparty/owemdjee/nsis-nscurl/utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/nsis-nscurl/vmemo.h" />
     <ResourceCompile Include="../../thirdparty/owemdjee/nsis-nscurl/resource.rc" />
     <Text Include="../../thirdparty/owemdjee/nsis-nscurl/LICENSE.md" />
     <Text Include="../../thirdparty/owemdjee/nsis-nscurl/Makefile.mingw" />
-    <Text Include="../../thirdparty/owemdjee/nsis-nscurl/NScurl.Readme.htm" />
+    <Text Include="../../thirdparty/owemdjee/nsis-nscurl/NScurl.readme.md" />
     <Text Include="../../thirdparty/owemdjee/nsis-nscurl/NScurl.vcxproj.filters" />
     <Text Include="../../thirdparty/owemdjee/nsis-nscurl/NScurl.vcxproj.user" />
     <Text Include="../../thirdparty/owemdjee/nsis-nscurl/README.md" />
     <Text Include="../../thirdparty/owemdjee/nsis-nscurl/SConscript" />
+    <Text Include="../../thirdparty/owemdjee/nsis-nscurl/TODO.md" />
     <Text Include="../../thirdparty/owemdjee/nsis-nscurl/Test/NScurl-Test-build.bat" />
     <Text Include="../../thirdparty/owemdjee/nsis-nscurl/Test/NScurl-Test.nsi" />
     <Text Include="../../thirdparty/owemdjee/nsis-nscurl/Test/build64.bat" />

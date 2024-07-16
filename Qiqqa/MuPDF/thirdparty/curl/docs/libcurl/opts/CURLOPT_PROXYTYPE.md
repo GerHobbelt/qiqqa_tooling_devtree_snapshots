@@ -7,6 +7,8 @@ Source: libcurl
 See-also:
   - CURLOPT_PROXY (3)
   - CURLOPT_PROXYPORT (3)
+Protocol:
+  - All
 ---
 
 # NAME
@@ -61,16 +63,14 @@ SOCKS5 Proxy.
 
 SOCKS5 Proxy. Proxy resolves URL hostname.
 
+##
+
 Often it is more convenient to specify the proxy type with the scheme part of
 the CURLOPT_PROXY(3) string.
 
 # DEFAULT
 
 CURLPROXY_HTTP
-
-# PROTOCOLS
-
-Most
 
 # EXAMPLE
 

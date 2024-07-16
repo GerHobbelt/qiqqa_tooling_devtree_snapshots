@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libvmaf</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF5B60A8}</ProjectGuid>
-    <RootNamespace>libvmaf</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -126,14 +124,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/vmaf/libvmaf/src;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/vmaf/libvmaf/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVMAF;VMAF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVMAF;VMAF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/vmaf/libvmaf/src;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/vmaf/libvmaf/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -152,7 +150,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/vmaf/libvmaf/src;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/vmaf/libvmaf/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVMAF;VMAF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -160,7 +158,7 @@
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVMAF;VMAF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/vmaf/libvmaf/src;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/vmaf/libvmaf/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -181,14 +179,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/vmaf/libvmaf/src;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/vmaf/libvmaf/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVMAF;VMAF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVMAF;VMAF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/vmaf/libvmaf/src;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/vmaf/libvmaf/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -207,7 +205,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/vmaf/libvmaf/src;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/vmaf/libvmaf/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVMAF;VMAF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -215,7 +213,7 @@
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBVMAF;VMAF_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/vmaf/libvmaf/src;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/vmaf/libvmaf/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -228,11 +226,7 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/arm/cpu.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/cpu.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/cuda/common.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/cuda/picture_cuda.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/cuda/ring_buffer.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/dict.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/adm.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/adm_tools.c" />
@@ -240,17 +234,12 @@
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/all.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/ansnr.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/ansnr_tools.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/arm64/adm_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/arm64/vif_neon.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/cambi.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/ciede.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/common/alignment.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/common/blur_array.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/common/convolution.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/common/convolution_avx.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/cuda/integer_adm_cuda.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/cuda/integer_motion_cuda.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/cuda/integer_vif_cuda.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/feature_collector.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/feature_extractor.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/feature_name.c" />
@@ -291,6 +280,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/x86/vif_avx2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/x86/vif_avx512.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/fex_ctx_vector.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/framesync.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/libvmaf.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/log.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/mem.c" />
@@ -304,10 +294,11 @@
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/svm.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/thread_pool.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/x86/cpu.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/x86/x86_cpu.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_cambi.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_ciede.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_cli_parse.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_context.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_cpu.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_cuda_pic_preallocation.c" />
@@ -315,11 +306,13 @@
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_feature.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_feature_collector.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_feature_extractor.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_framesync.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_log.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_luminance_tools.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_model.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_picture.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_predict.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_psnr.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_ref.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_ring_buffer.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/test/test_thread_pool.c" />
@@ -328,30 +321,14 @@
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/tools/vmaf.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/tools/y4m_input.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vmaf/libvmaf/tools/yuv_input.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/matlab/STMAD_2011_MatlabCode/ical_stat.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/matlab/STMAD_2011_MatlabCode/ical_std.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/convolve.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/corrDn.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/edges-orig.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/edges.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/histo.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/innerProd.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/pointOp.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/range2.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/upConv.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/wrap.c" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/include/libvmaf/feature.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/include/libvmaf/libvmaf.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/include/libvmaf/libvmaf_cuda.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/include/libvmaf/model.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/include/libvmaf/picture.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/arm/cpu.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/compat/gcc/stdatomic.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/compat/msvc/stdatomic.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/cpu.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/cuda/common.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/cuda/picture_cuda.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/cuda/ring_buffer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/dict.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/adm.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/adm_options.h" />
@@ -360,16 +337,11 @@
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/ansnr.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/ansnr_options.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/ansnr_tools.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/arm64/adm_neon.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/arm64/vif_neon.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/common/alignment.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/common/blur_array.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/common/convolution.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/common/convolution_internal.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/common/macros.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/cuda/integer_adm_cuda.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/cuda/integer_motion_cuda.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/cuda/integer_vif_cuda.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/feature_collector.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/feature_extractor.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/feature_name.h" />
@@ -407,6 +379,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/x86/vif_avx2.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/feature/x86/vif_avx512.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/fex_ctx_vector.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/framesync.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/log.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/mem.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/src/model.h" />
@@ -424,7 +397,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/tools/cli_parse.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/tools/spinner.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vmaf/libvmaf/tools/vidinput.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/convolve.h" />
     <Image Include="../../thirdparty/owemdjee/vmaf/resource/images/CI.png" />
     <Image Include="../../thirdparty/owemdjee/vmaf/resource/images/phone_model.png" />
     <Image Include="../../thirdparty/owemdjee/vmaf/resource/images/scatter_testing.png" />
@@ -446,61 +418,6 @@
     <Text Include="../../thirdparty/owemdjee/vmaf/libvmaf/meson_options.txt" />
     <Text Include="../../thirdparty/owemdjee/vmaf/libvmaf/tools/README.md" />
     <Text Include="../../thirdparty/owemdjee/vmaf/libvmaf/tools/test/test_vmaf_cuda_gpumask.sh" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/STMAD_2011_MatlabCode/ical_stat.mexa64" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/STMAD_2011_MatlabCode/ical_stat.mexmaci64" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/STMAD_2011_MatlabCode/ical_stat.mexw64" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/STMAD_2011_MatlabCode/ical_std.mexa64" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/STMAD_2011_MatlabCode/ical_std.mexmaci64" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/STMAD_2011_MatlabCode/ical_std.mexw64" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/cid_icid/iCID/iCID_Metric/README.txt" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/README" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/ChangeLog" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/-MacReadMe" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/Copy_of_corrDn.mexmac" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/corrDn.dll" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/corrDn.mex" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/corrDn.mex4" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/corrDn.mexa64" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/corrDn.mexglx" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/corrDn.mexlx" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/corrDn.mexmac" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/corrDn.mexsol" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/corrDn.mexw32" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/histo.dll" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/histo.mex" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/histo.mex4" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/histo.mexglx" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/histo.mexlx" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/histo.mexmac" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/histo.mexsol" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/innerProd.dll" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/innerProd.mexglx" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/innerProd.mexlx" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/innerProd.mexmac" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/innerProd.mexsol" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/pointOp.dll" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/pointOp.mex" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/pointOp.mex4" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/pointOp.mexglx" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/pointOp.mexlx" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/pointOp.mexmac" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/pointOp.mexsol" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/range2.dll" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/range2.mex" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/range2.mex4" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/range2.mexglx" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/range2.mexlx" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/range2.mexmac" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/range2.mexsol" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/upConv.dll" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/upConv.mex" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/upConv.mex4" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/upConv.mexglx" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/upConv.mexlx" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/upConv.mexmac" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/MEX/upConv.mexsol" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/README" />
-    <Text Include="../../thirdparty/owemdjee/vmaf/matlab/strred/matlabPyrTools/TUTORIALS/README" />
     <Text Include="../../thirdparty/owemdjee/vmaf/model/other_models/model_V8a.model" />
     <Text Include="../../thirdparty/owemdjee/vmaf/model/other_models/nflx_v1.json" />
     <Text Include="../../thirdparty/owemdjee/vmaf/model/other_models/nflx_v1.pkl" />
@@ -726,6 +643,7 @@
     <Text Include="../../thirdparty/owemdjee/vmaf/model/vmaf_v0.6.1neg.json" />
     <Text Include="../../thirdparty/owemdjee/vmaf/python/DEVELOP.md" />
     <Text Include="../../thirdparty/owemdjee/vmaf/python/README.rst" />
+    <Text Include="../../thirdparty/owemdjee/vmaf/python/pyproject.toml" />
     <Text Include="../../thirdparty/owemdjee/vmaf/python/requirements.txt" />
     <Text Include="../../thirdparty/owemdjee/vmaf/python/setup.py" />
     <Text Include="../../thirdparty/owemdjee/vmaf/python/test/__init__.py" />

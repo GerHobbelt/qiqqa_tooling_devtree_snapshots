@@ -39,6 +39,7 @@ EXPORTS
 	pdfshow_main
 	pdfsign_main
 	pdftagged_main
+	pdftag_main
 	pdftrim_main
 	qiqqa_chop_shop_main
 	qiqqa_content_importer_main
@@ -1144,7 +1145,6 @@ EXPORTS
 	fz_open_buffer
 	fz_open_file
 	fz_open_file_ptr_no_close
-	fz_open_file_w
 	fz_open_leecher
 	fz_open_memory
 	fz_read
@@ -1576,7 +1576,6 @@ EXPORTS
 	pdf_delete_link
 	pdf_dirty_annot
 	pdf_drop_annot
-	pdf_embedded_file_stream
 	pdf_first_annot
 	pdf_first_raw_annot
 	pdf_first_widget
@@ -4059,7 +4058,6 @@ EXPORTS
 	xmlThrDefTreeIndentString
 
 	xml_gio_bread_example_main
-	xml_nanoftp_main
 	xml_nanohttp_main
 	xml_runsuite_tests_main
 	xml_runtest_main
@@ -4080,7 +4078,6 @@ EXPORTS
 	xml_testregexp_main
 	xml_testrelax_main
 	xml_testschemas_main
-	xml_testthreads_main
 	xml_xmlcatalog_main
 	xml_xmllint_main
 

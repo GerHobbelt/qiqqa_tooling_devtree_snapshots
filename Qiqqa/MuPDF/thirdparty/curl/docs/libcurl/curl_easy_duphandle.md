@@ -9,11 +9,13 @@ See-also:
   - curl_easy_init (3)
   - curl_easy_reset (3)
   - curl_global_init (3)
+Protocol:
+  - All
 ---
 
 # NAME
 
-curl_easy_duphandle - Clone a libcurl session handle
+curl_easy_duphandle - clone an easy handle
 
 # SYNOPSIS
 

@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libzip</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FFDB5F60}</ProjectGuid>
-    <RootNamespace>libzip</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -230,6 +228,7 @@
   <ItemGroup>
     <ClCompile Include="../../thirdparty/owemdjee/libzip/examples/add-compressed-data.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libzip/examples/autoclose-archive.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libzip/examples/cmake-project/cmake-example.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libzip/examples/in-memory.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libzip/examples/windows-open.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libzip/lib/zip_add.c" />
@@ -328,6 +327,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libzip/lib/zip_source_file_win32_utf8.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libzip/lib/zip_source_free.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libzip/lib/zip_source_function.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libzip/lib/zip_source_get_dostime.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libzip/lib/zip_source_get_file_attributes.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libzip/lib/zip_source_is_deleted.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libzip/lib/zip_source_layered.c" />
@@ -423,6 +423,7 @@
     <Text Include="../../thirdparty/owemdjee/libzip/cmake/Findzstd.cmake" />
     <Text Include="../../thirdparty/owemdjee/libzip/cmake/GenerateZipErrorStrings.cmake" />
     <Text Include="../../thirdparty/owemdjee/libzip/examples/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libzip/examples/cmake-project/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libzip/lib/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libzip/libzip-config.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/libzip/libzip.pc.in" />
@@ -750,9 +751,9 @@
     <Text Include="../../thirdparty/owemdjee/libzip/regress/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libzip/regress/cleanup.cmake" />
     <Text Include="../../thirdparty/owemdjee/libzip/regress/nihtest.conf.in" />
-    <Text Include="../../thirdparty/owemdjee/libzip/regress/runtest.in" />
     <Text Include="../../thirdparty/owemdjee/libzip/regress/testfile.txt" />
     <Text Include="../../thirdparty/owemdjee/libzip/src/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libzip/vcpkg.json" />
     <Text Include="../../thirdparty/owemdjee/libzip/vstudio/readme.txt" />
     <Text Include="../../thirdparty/owemdjee/libzip/vstudio/vsbuild.cmd" />
     <Text Include="../../thirdparty/owemdjee/libzip/vstudio/zlib/unpack_zlib_here.txt" />

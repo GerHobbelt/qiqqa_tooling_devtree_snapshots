@@ -23,7 +23,7 @@
 #include "matrix.h"
 #include "network.h"
 #include "networkscratch.h"
-#include "params.h"
+#include <tesseract/params.h>
 #include "recodebeam.h"
 #include "series.h"
 #include "unicharcompress.h"
@@ -51,7 +51,9 @@ enum TrainingFlags {
 // Note that a sub-class, LSTMTrainer is used for training.
 class TESS_API LSTMRecognizer {
 public:
-  LSTMRecognizer();
+  // Takes an OPTIONAL instance reference for internal diagnostics use.
+  LSTMRecognizer(Tesseract *tess);
+  LSTMRecognizer() = delete;
   //LSTMRecognizer(const std::string &language_data_path_prefix);
   ~LSTMRecognizer();
 
@@ -222,8 +224,8 @@ public:
     return null_char_;
   }
 
-  // Loads a model from mgr, including the dictionary only if lang is not empty.
-  bool Load(const ParamsVectorSet &params, const std::string &lang, TessdataManager *mgr);
+  // Loads a model from mgr, including the dictionary only if lang is not null.
+  bool Load(const ParamsVectors *params, const std::string &lang, TessdataManager *mgr);
 
   // Writes to the given file. Returns false in case of error.
   // If mgr contains a unicharset and recoder, then they are not encoded to fp.
@@ -245,10 +247,7 @@ public:
   // on the unicharset matching. This enables training to deserialize a model
   // from checkpoint or restore without having to go back and reload the
   // dictionary.
-  //
-  // The dictionary will be reconfigured (reset) from the source_params
-  // config set.
-  bool LoadDictionary(const ParamsVectorSet &source_params, const std::string &lang, TessdataManager *mgr);
+  bool LoadDictionary(const ParamsVectors *params, const std::string &lang, TessdataManager *mgr);
 
   // Recognizes the line image, contained within image_data, returning the
   // recognized tesseract WERD_RES for the words.
@@ -338,6 +337,9 @@ protected:
   const char *DecodeSingleLabel(int label);
 
 protected:
+  // OPTIONAL reference to the active Tesseract instance where LSTM/Input
+  // internal diagnostics should be sent to.
+  Tesseract *tesseract_;
   // The network hierarchy.
   Network *network_;
   // The unicharset. Only the unicharset element is serialized.
@@ -381,15 +383,17 @@ public:
   void SetDebug(int v) {
 	debug_ = std::max(0, v);
   }
-  int HasDebug() const {
-	  return debug_;
+  // because both the name and several spots where this is used suggest boolean behaviour.  warning C4800: Implicit conversion from 'int' to bool. Possible information loss
+  bool HasDebug(int threshold = 0) const {
+	  return debug_ > threshold;
+  }
+  int GetDebugLevel() const {
+    return debug_;
   }
 
 protected:
-#if !GRAPHICS_DISABLED
   // Recognition debug display window.
   ScrollViewReference debug_win_;
-#endif
 };
 
 } // namespace tesseract.

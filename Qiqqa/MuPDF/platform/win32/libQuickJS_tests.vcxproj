@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libQuickJS_tests</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF0E57B2}</ProjectGuid>
-    <RootNamespace>libQuickJS_tests</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -122,7 +120,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -307,6 +305,10 @@
     <Text Include="../../thirdparty/owemdjee/QuickJS/readme.md" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/release.sh" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/repl.js" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/src/libunicode/downloaded/PropertyValueAliases.txt" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/src/libunicode/downloaded/emoji-data.txt" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/src/libunicode/downloaded/unicode_download.sh" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/src/run-test262/test262_errors.txt" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/test.js" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/test2.js" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/tests/CMakeLists.txt" />
@@ -325,6 +327,7 @@
     <Text Include="../../thirdparty/owemdjee/QuickJS/tests/bench-v8/run_harness.js" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/tests/bench-v8/splay.js" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/tests/microbench.js" />
+    <Text Include="../../thirdparty/owemdjee/QuickJS/tests/test_bigfloat.js" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/tests/test_bignum.js" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/tests/test_bjson.js" />
     <Text Include="../../thirdparty/owemdjee/QuickJS/tests/test_builtin.js" />

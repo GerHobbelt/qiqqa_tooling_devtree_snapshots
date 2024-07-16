@@ -188,12 +188,14 @@ void buffered_file::close() {
 }
 
 int buffered_file::descriptor() const {
-#if !defined(fileno)
+#ifdef FMT_HAS_SYSTEM
+  // fileno is a macro on OpenBSD.
+#  ifdef fileno
+#    undef fileno
+#  endif
   int fd = FMT_POSIX_CALL(fileno(file_));
-#elif defined(FMT_HAS_SYSTEM)
-  // fileno is a macro on OpenBSD so we cannot use FMT_POSIX_CALL.
-#  define FMT_DISABLE_MACRO
-  int fd = FMT_SYSTEM(fileno FMT_DISABLE_MACRO(file_));
+#elif defined(_WIN32)
+  int fd = _fileno(file_);
 #else
   int fd = fileno(file_);
 #endif
@@ -385,7 +387,7 @@ file_buffer::file_buffer(cstring_view path, const ostream_params& params)
   set(new char[params.buffer_size], params.buffer_size);
 }
 
-file_buffer::file_buffer(file_buffer&& other)
+file_buffer::file_buffer(file_buffer&& other) noexcept
     : buffer<char>(grow, other.data(), other.size(), other.capacity()),
       file_(std::move(other.file_)) {
   other.clear();

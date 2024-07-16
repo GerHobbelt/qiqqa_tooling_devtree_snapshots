@@ -20,6 +20,11 @@ ifeq ($(tesseract),yes)
   USE_TESSERACT := yes
 endif
 
+ifeq ($(jbig2enc),yes)
+  build_suffix := $(build_suffix)-jbig2enc
+  USE_JBIG2ENC := yes
+endif
+
 ifeq ($(tofu),yes)
   build_suffix := $(build_suffix)-tofu
   XCFLAGS += -DTOFU
@@ -49,6 +54,12 @@ ifeq ($(archive),yes)
   build_suffix := $(build_suffix)-archive
   XCFLAGS += -DHAVE_LIBARCHIVE
   HAVE_LIBARCHIVE := yes
+endif
+
+ifeq ($(commercial),yes)
+  build_suffix := $(build_suffix)-commercial
+  XCFLAGS += -DHAVE_SMARTOFFICE
+  HAVE_SMARTOFFICE := yes
 endif
 
 # System specific features
@@ -356,6 +367,17 @@ ifeq "$(OS)" "wasm"
     # Need to use $CC, not emcc.
     CC := $(CC) --enable-bulk-memory
   endif
+  AR = emar
+  HAVE_GLUT=no
+  HAVE_X11=no
+  HAVE_OBJCOPY=no
+  HAVE_LIBCRYPTO=no
+endif
+
+ifeq "$(OS)" "wasm2"
+  build_prefix += wasm2/
+  CC = emcc
+  CXX = em++
   AR = emar
   HAVE_GLUT=no
   HAVE_X11=no

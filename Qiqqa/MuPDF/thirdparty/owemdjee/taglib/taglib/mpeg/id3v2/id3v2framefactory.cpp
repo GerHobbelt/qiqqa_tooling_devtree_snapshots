@@ -72,7 +72,7 @@ namespace
         bool ok;
         int number = genreCode.toInt(&ok);
         if((ok && number >= 0 && number <= 255 &&
-            !(ID3v1::genre(number) == s)) ||
+            ID3v1::genre(number) != s) ||
            genreCode == "RX" || genreCode == "CR")
           newfields.append(genreCode);
       }
@@ -122,7 +122,7 @@ std::pair<Frame::Header *, bool> FrameFactory::prepareFrameHeader(
   // A quick sanity check -- make sure that the frameID is 4 uppercase Latin1
   // characters.  Also make sure that there is data in the frame.
 
-  if(frameID.size() != (version < 3 ? 3 : 4) ||
+  if(frameID.size() != (version < 3U ? 3U : 4U) ||
      header->frameSize() <= static_cast<unsigned int>(header->dataLengthIndicator() ? 4 : 0) ||
      header->frameSize() > data.size())
   {
@@ -131,7 +131,7 @@ std::pair<Frame::Header *, bool> FrameFactory::prepareFrameHeader(
   }
 
 #ifndef NO_ITUNES_HACKS
-  if(version == 3 && frameID.size() == 4 && frameID[3] == '\0') {
+  if(version == 3 && frameID[3] == '\0') {
     // iTunes v2.3 tags store v2.2 frames - convert now
     frameID = frameID.mid(0, 3);
     header->setFrameID(frameID);
@@ -332,9 +332,9 @@ void FrameFactory::rebuildAggregateFrames(ID3v2::Tag *tag) const
      tag->frameList("TDRC").size() == 1 &&
      tag->frameList("TDAT").size() == 1)
   {
-    TextIdentificationFrame *tdrc =
+    auto tdrc =
       dynamic_cast<TextIdentificationFrame *>(tag->frameList("TDRC").front());
-    UnknownFrame *tdat = dynamic_cast<UnknownFrame *>(tag->frameList("TDAT").front());
+    auto tdat = dynamic_cast<UnknownFrame *>(tag->frameList("TDAT").front());
 
     if(tdrc &&
        tdrc->fieldList().size() == 1 &&
@@ -346,7 +346,7 @@ void FrameFactory::rebuildAggregateFrames(ID3v2::Tag *tag) const
       if(date.length() == 4) {
         tdrc->setText(tdrc->toString() + '-' + date.substr(2, 2) + '-' + date.substr(0, 2));
         if(tag->frameList("TIME").size() == 1) {
-          UnknownFrame *timeframe = dynamic_cast<UnknownFrame *>(tag->frameList("TIME").front());
+          auto timeframe = dynamic_cast<UnknownFrame *>(tag->frameList("TIME").front());
           if(timeframe && timeframe->data().size() >= 5) {
             String time(timeframe->data().mid(1), static_cast<String::Type>(timeframe->data()[0]));
             if(time.length() == 4) {
@@ -368,6 +368,11 @@ void FrameFactory::setDefaultTextEncoding(String::Type encoding)
 {
   d->useDefaultEncoding = true;
   d->defaultEncoding = encoding;
+}
+
+bool FrameFactory::isUsingDefaultTextEncoding() const
+{
+  return d->useDefaultEncoding;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -537,4 +542,54 @@ bool FrameFactory::updateFrame(Frame::Header *header) const
   }
 
   return true;
+}
+
+Frame *FrameFactory::createFrameForProperty(const String &key, const StringList &values) const
+{
+  // check if the key is contained in the key<=>frameID mapping
+  if(ByteVector frameID = Frame::keyToFrameID(key); !frameID.isEmpty()) {
+    // Apple proprietary WFED (Podcast URL), MVNM (Movement Name), MVIN (Movement Number), GRP1 (Grouping) are in fact text frames.
+    if(frameID[0] == 'T' || frameID == "WFED" || frameID == "MVNM" || frameID == "MVIN" || frameID == "GRP1"){ // text frame
+      auto frame = new TextIdentificationFrame(frameID, String::UTF8);
+      frame->setText(values);
+      return frame;
+    } if(frameID[0] == 'W' && values.size() == 1){  // URL frame (not WXXX); support only one value
+        auto frame = new UrlLinkFrame(frameID);
+        frame->setUrl(values.front());
+        return frame;
+    } if(frameID == "PCST") {
+      return new PodcastFrame();
+    }
+  }
+  if(key == "MUSICBRAINZ_TRACKID" && values.size() == 1) {
+    auto frame = new UniqueFileIdentifierFrame("http://musicbrainz.org", values.front().data(String::UTF8));
+    return frame;
+  }
+  // now we check if it's one of the "special" cases:
+  // -LYRICS: depending on the number of values, use USLT or TXXX (with description=LYRICS)
+  if((key == "LYRICS" || key.startsWith(Frame::lyricsPrefix)) && values.size() == 1){
+    auto frame = new UnsynchronizedLyricsFrame(String::UTF8);
+    frame->setDescription(key == "LYRICS" ? key : key.substr(Frame::lyricsPrefix.size()));
+    frame->setText(values.front());
+    return frame;
+  }
+  // -URL: depending on the number of values, use WXXX or TXXX (with description=URL)
+  if((key == "URL" || key.startsWith(Frame::urlPrefix)) && values.size() == 1){
+    auto frame = new UserUrlLinkFrame(String::UTF8);
+    frame->setDescription(key == "URL" ? key : key.substr(Frame::urlPrefix.size()));
+    frame->setUrl(values.front());
+    return frame;
+  }
+  // -COMMENT: depending on the number of values, use COMM or TXXX (with description=COMMENT)
+  if((key == "COMMENT" || key.startsWith(Frame::commentPrefix)) && values.size() == 1){
+    auto frame = new CommentsFrame(String::UTF8);
+    if (key != "COMMENT"){
+      frame->setDescription(key.substr(Frame::commentPrefix.size()));
+    }
+    frame->setText(values.front());
+    return frame;
+  }
+  // if none of the above cases apply, we use a TXXX frame with the key as description
+  return new UserTextIdentificationFrame(
+    UserTextIdentificationFrame::keyToTXXX(key), values, String::UTF8);
 }

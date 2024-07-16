@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libnativefiledialog-extended</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FFCE58B1}</ProjectGuid>
-    <RootNamespace>libnativefiledialog-extended</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -233,12 +231,17 @@
     <ClCompile Include="../../thirdparty/owemdjee/nativefiledialog-extended/src/nfd_win.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/nativefiledialog-extended/test/test_opendialog.c" />
     <ClCompile Include="../../thirdparty/owemdjee/nativefiledialog-extended/test/test_opendialog_cpp.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nativefiledialog-extended/test/test_opendialog_native.c" />
     <ClCompile Include="../../thirdparty/owemdjee/nativefiledialog-extended/test/test_opendialogmultiple.c" />
     <ClCompile Include="../../thirdparty/owemdjee/nativefiledialog-extended/test/test_opendialogmultiple_cpp.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/nativefiledialog-extended/test/test_opendialogmultiple_enum.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/nativefiledialog-extended/test/test_opendialogmultiple_enum_native.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/nativefiledialog-extended/test/test_opendialogmultiple_native.c" />
     <ClCompile Include="../../thirdparty/owemdjee/nativefiledialog-extended/test/test_pickfolder.c" />
     <ClCompile Include="../../thirdparty/owemdjee/nativefiledialog-extended/test/test_pickfolder_cpp.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/nativefiledialog-extended/test/test_pickfolder_native.c" />
     <ClCompile Include="../../thirdparty/owemdjee/nativefiledialog-extended/test/test_savedialog.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/nativefiledialog-extended/test/test_savedialog_native.c" />
     <ClInclude Include="../../thirdparty/owemdjee/nativefiledialog-extended/src/include/nfd.h" />
     <ClInclude Include="../../thirdparty/owemdjee/nativefiledialog-extended/src/include/nfd.hpp" />
     <Image Include="../../thirdparty/owemdjee/nativefiledialog-extended/screens/open_gtk3.png" />

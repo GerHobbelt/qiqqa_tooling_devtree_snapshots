@@ -7,11 +7,13 @@ Source: libcurl
 See-also:
   - curl_global_init (3)
   - libcurl (3)
+Protocol:
+  - All
 ---
 
 # NAME
 
-curl_global_sslset - Select SSL backend to use with libcurl
+curl_global_sslset - select SSL backend to use
 
 # SYNOPSIS
 

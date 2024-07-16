@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libcbor_tests</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF7B476F}</ProjectGuid>
-    <RootNamespace>libcbor_tests</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -337,13 +335,13 @@
     <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/item_types.rst" />
     <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/streaming_decoding.rst" />
     <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/streaming_encoding.rst" />
-    <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/type_0_1.rst" />
-    <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/type_2.rst" />
-    <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/type_3.rst" />
-    <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/type_4.rst" />
-    <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/type_5.rst" />
-    <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/type_6.rst" />
-    <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/type_7.rst" />
+    <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/type_0_1_integers.rst" />
+    <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/type_2_byte_strings.rst" />
+    <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/type_3_strings.rst" />
+    <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/type_4_arrays.rst" />
+    <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/type_5_maps.rst" />
+    <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/type_6_tags.rst" />
+    <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/api/type_7_floats_ctrls.rst" />
     <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/changelog.rst" />
     <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/conf.py" />
     <Text Include="../../thirdparty/owemdjee/libcbor/doc/source/development.rst" />
@@ -369,6 +367,7 @@
     <Text Include="../../thirdparty/owemdjee/libcbor/src/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libcbor/src/cbor/configuration.h.in" />
     <Text Include="../../thirdparty/owemdjee/libcbor/src/libcbor.pc.in" />
+    <Text Include="../../thirdparty/owemdjee/libcbor/src/libcborConfig.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/libcbor/test/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/libcbor/test/data/callbacks.cbor" />
     <Text Include="../../thirdparty/owemdjee/libcbor/test/data/pretty.cbor" />

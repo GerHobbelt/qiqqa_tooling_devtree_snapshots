@@ -6,6 +6,7 @@
 
 package org.brotli.dec;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
@@ -67,16 +68,21 @@ final class Utils {
     System.arraycopy(bytes, start, bytes, target, end - start);
   }
 
-  static int readInput(InputStream src, byte[] dst, int offset, int length) {
+  static int readInput(State s, byte[] dst, int offset, int length) {
     try {
-      return src.read(dst, offset, length);
+      return s.input.read(dst, offset, length);
     } catch (IOException e) {
       throw new BrotliRuntimeException("Failed to read input", e);
     }
   }
 
-  static void closeInput(InputStream src) throws IOException {
-    src.close();
+  static InputStream makeEmptyInput() {
+    return new ByteArrayInputStream(new byte[0]);
+  }
+
+  static void closeInput(State s) throws IOException {
+    s.input.close();
+    s.input = makeEmptyInput();
   }
 
   static byte[] toUsAsciiBytes(String src) {

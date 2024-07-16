@@ -58,6 +58,24 @@ public class HelloWorld
             throw new System.Exception("rect ToString() is broken: '" + rect + "' != '" + rect.to_string() + "'");
         }
 
+        // Check we can load a document with utf filename. This will have been
+        // set up by scripts/wrap/__main__.py.
+        //byte[] infix_utf8 = {0xef, 0xbf, 0xbd, 0xef, 0xbf, 0xbd, 0xef, 0xbf, 0xbd, 0xef, 0xbf, 0xbd, 0xef, 0xbf, 0xbd};
+        byte[] infix_utf8 = {0xc3, 0xaa, 0xc3, 0x9f, 0xc3, 0xb6, 0xc3, 0xa4, 0xc3, 0xbc};
+
+        string infix = System.Text.Encoding.UTF8.GetString(infix_utf8);
+        string path = "zlib.3." + infix + ".pdf";
+
+        System.Console.OutputEncoding = System.Text.Encoding.UTF8;
+        System.Console.WriteLine("Opening non-ascii path: " + path);
+
+        //byte[] path3 = System.Text.Encoding.UTF8.GetBytes(path);
+        //System.Console.WriteLine("Opening with utf8 bytes: " + path3);
+        //mupdf.FzDocument document3 = new mupdf.FzDocument(path3);
+
+        System.Console.WriteLine("Opening with c# string: " + path);
+        mupdf.FzDocument document2 = new mupdf.FzDocument(path);
+
         // Test conversion to html using docx device.
         var buffer = page.fz_new_buffer_from_page_with_format(
                 "docx",
@@ -98,6 +116,63 @@ public class HelloWorld
                 + " " + w2 + " " + h2 + " " + n2 + " " + stride);
         if (w2 != w || h2 != h) {
             throw new System.Exception("Unexpected tuple values from bitmap.fz_bitmap_details().");
+        }
+
+        // Check we get exception from MuPDF. As of 2024-06-14 this exception
+        // does not contain the original MuPDF exception text, it just says
+        // "External component has thrown an exception."
+        //
+        // We only do this test if not running on Mono - Mono fails
+        // with:
+        //
+        // > terminate called after throwing an instance of
+        // > 'mupdf::FzErrorSystem'
+        //
+        if (System.Type.GetType("Mono.Runtime") == null)
+        {
+            int received_exception = 0;
+            try
+            {
+                mupdf.FzDocument document2 = new mupdf.FzDocument("does not exist");
+                System.Console.WriteLine("*** Error, did not get expected exception.");
+            }
+            catch (System.Exception e)
+            {
+                received_exception = 1;
+                System.Console.WriteLine("Received exception: " + e.Message);
+            }
+            if (received_exception != 1)
+            {
+                throw new System.Exception("Did not receive expected exception");
+            }
+        }
+        else
+        {
+            System.Console.WriteLine("Not checking handling of exceptions because running on Mono.");
+        }
+
+        // Check we can make MuPDF open filename containing 4-byte unicode
+        // character.
+        byte[] text_utf8 =
+        {
+                0xf0,
+                0x90,
+                0x90,
+                0xb7,
+        };
+        string testfile2 = "zlib.3.pdf"
+                + System.Text.Encoding.UTF8.GetString(text_utf8)
+                + ".pdf";
+        System.Console.WriteLine("Opening testfile2: " + testfile2);
+        try
+        {
+            mupdf.FzDocument document2 = new mupdf.FzDocument(testfile2);
+            System.Console.WriteLine("new mupdf.FzDocument succeeded");
+        }
+        catch (System.Exception e)
+        {
+            System.Console.WriteLine("Exception: " + e.Message);
+            throw new System.Exception("Failed to open filename containing 4-byte unicode character");
         }
 
         System.Console.WriteLine("MuPDF C# test finished.");

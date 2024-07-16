@@ -89,6 +89,15 @@ exp:
 expm1:
 	$(GCEM_MAKE_CALL)
 
+fabs:
+	$(GCEM_MAKE_CALL)
+
+fabsf:
+	$(GCEM_MAKE_CALL)
+
+fabsl:
+	$(GCEM_MAKE_CALL)
+
 factorial:
 	$(GCEM_MAKE_CALL)
 

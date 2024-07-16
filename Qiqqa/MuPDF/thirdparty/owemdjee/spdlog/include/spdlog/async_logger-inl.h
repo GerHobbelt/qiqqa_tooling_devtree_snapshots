@@ -82,7 +82,7 @@ SPDLOG_INLINE void spdlog::async_logger::block_on_flush(bool value) noexcept
 }
 
 // send the log message to the thread pool
-SPDLOG_INLINE void spdlog::async_logger::sink_it_(const details::log_msg &msg){
+SPDLOG_INLINE void spdlog::async_logger::sink_it_(const details::log_msg &msg) {
 SPDLOG_TRY
 {
     if (auto pool_ptr = thread_pool_.lock())
@@ -106,9 +106,13 @@ SPDLOG_TRY
     if (auto pool_ptr = thread_pool_.lock())
     {
         on_log_dispatch_();
-        pool_ptr->post_flush(shared_from_this(), overflow_policy_);
 
-        /// this is to provide blocking functionality through logger(not async_logger) interface 
+				std::future<void> future = pool_ptr->post_flush(shared_from_this(), overflow_policy_);
+				// Wait for the flush operation to complete.
+				// This might throw exception if the flush message gets dropped because of overflow.
+				future.get();
+
+        // this is to provide blocking functionality through logger(not async_logger) interface 
         if (block_on_flush_)
         {
             wait();

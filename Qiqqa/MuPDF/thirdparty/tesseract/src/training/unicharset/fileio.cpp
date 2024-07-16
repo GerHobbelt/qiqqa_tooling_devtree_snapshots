@@ -14,6 +14,8 @@
  *
  **********************************************************************/
 
+#include <tesseract/preparation.h> // compiler config, etc.
+
 #if defined(WIN32) || defined(_WIN32) || defined(_WIN64)
 #  ifndef unlink
 #    include <io.h>
@@ -31,7 +33,7 @@
 #include "errcode.h"
 #include "fileio.h"
 #include "host.h" // includes windows.h for BOOL, ...
-#include "tprintf.h"
+#include <tesseract/tprintf.h>
 
 namespace tesseract {
 
@@ -71,7 +73,7 @@ bool File::Readable(const std::string &filename) {
 }
 
 bool File::ReadFileToString(const std::string &filename, std::string *out) {
-  FILE *stream = File::Open(filename.c_str(), "rb");
+  FILE *stream = File::Open(filename, "rb");
   if (stream == nullptr) {
     return false;
   }

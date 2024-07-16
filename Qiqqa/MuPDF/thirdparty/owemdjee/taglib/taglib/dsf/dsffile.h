@@ -36,7 +36,27 @@
 #include "id3v2tag.h"
 
 namespace TagLib {
+
+  //! An implementation of DSF metadata
+
+  /*!
+   * This is an implementation of DSF metadata using an ID3v2 tag inside the
+   * metadata chunk.
+   * The DSF specification is located at
+   * http://dsd-guide.com/sites/default/files/white-papers/DSFFileFormatSpec_E.pdf
+   */
+
   namespace DSF {
+
+    //! An implementation of TagLib::File with DSF specific methods
+
+    /*!
+     * This implements and provides an interface for DSF files to the
+     * TagLib::Tag and TagLib::AudioProperties interfaces by way of implementing
+     * the abstract TagLib::File API as well as providing some additional
+     * information specific to DSF files.
+     */
+
     class TAGLIB_EXPORT File : public TagLib::File {
       public:
         /*!
@@ -46,7 +66,7 @@ namespace TagLib {
          * \a propertiesStyle are ignored.  The audio properties are always
          * read.
          *
-         * If this file contains and ID3v2 tag the frames will be created using
+         * If this file contains an ID3v2 tag, the frames will be created using
          * \a frameFactory (default if null).
          */
         File(FileName file, bool readProperties = true,
@@ -61,7 +81,7 @@ namespace TagLib {
          * \a propertiesStyle are ignored.  The audio properties are always
          * read.
          *
-         * If this file contains and ID3v2 tag the frames will be created using
+         * If this file contains an ID3v2 tag, the frames will be created using
          * \a frameFactory (default if null).
          *
          * \note TagLib will *not* take ownership of the stream, the caller is
@@ -103,7 +123,7 @@ namespace TagLib {
         /*!
          * Save the file.
          *
-         * This returns true if the save was successful.
+         * This returns \c true if the save was successful.
          */
         bool save() override;
 
@@ -127,6 +147,7 @@ namespace TagLib {
         void read(AudioProperties::ReadStyle propertiesStyle);
 
         class FilePrivate;
+        TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
         std::unique_ptr<FilePrivate> d;
     };
   }  // namespace DSF

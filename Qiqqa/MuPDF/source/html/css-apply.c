@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2023 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -94,6 +94,59 @@ static const char *list_style_position_kw[] = {
 	"outside",
 };
 
+static const char *font_style_kw[] = {
+	"italic",
+	"oblique",
+};
+
+static const char *font_variant_kw[] = {
+	"small-caps",
+};
+
+static const char *font_weight_kw[] = {
+	"bold",
+	"bolder",
+	"lighter",
+};
+
+static const char *font_size_kw[] = {
+	"large",
+	"larger",
+	"medium",
+	"small",
+	"smaller",
+	"x-large",
+	"x-small",
+	"xx-large",
+	"xx-small",
+};
+
+/* Properties to ignore when scanning through font-family. We set font-family
+ * to the full font shorthand value list because Adobe generates DS strings
+ * where the font-family comes before the font-size (and not at the end as it's
+ * supposed to). This lets us scan the font shorthand list without trying to
+ * look up fonts named "bold", etc.
+ */
+static const char *font_family_ignore[] = {
+	",",
+	"/",
+	"bold",
+	"bolder",
+	"italic",
+	"large",
+	"larger",
+	"lighter",
+	"medium",
+	"oblique",
+	"small",
+	"small-caps",
+	"smaller",
+	"x-large",
+	"x-small",
+	"xx-large",
+	"xx-small",
+};
+
 static int
 keyword_in_list(const char *name, const char **list, int n)
 {
@@ -102,7 +155,7 @@ keyword_in_list(const char *name, const char **list, int n)
 	while (l <= r)
 	{
 		int m = (l + r) >> 1;
-		int c = strcmp(name, list[m]);
+		int c = fz_strcasecmp(name, list[m]);
 		if (c < 0)
 			r = m - 1;
 		else if (c > 0)
@@ -116,13 +169,13 @@ keyword_in_list(const char *name, const char **list, int n)
 static int
 is_bold_from_font_weight(const char *weight)
 {
-	return !strcmp(weight, "bold") || !strcmp(weight, "bolder") || atoi(weight) > 400;
+	return !fz_strcasecmp(weight, "bold") || !fz_strcasecmp(weight, "bolder") || atoi(weight) > 400;
 }
 
 static int
 is_italic_from_font_style(const char *style)
 {
-	return !strcmp(style, "italic") || !strcmp(style, "oblique");
+	return !fz_strcasecmp(style, "italic") || !fz_strcasecmp(style, "oblique");
 }
 
 /*
@@ -231,20 +284,23 @@ match_att_exists_condition(fz_xml *node, const char *key)
 }
 
 static int
-match_att_is_condition(fz_xml *node, const char *key, const char *val)
+match_att_is_condition(fz_xml *node, const char *key, const char *val, int case_sensitive)
 {
 	const char *att = fz_xml_att(node, key);
-	return att && !strcmp(val, att);
+	return att && (case_sensitive ? (!strcmp(val, att)) : (!fz_strcasecmp(val, att)));
 }
 
 static int
-match_att_has_condition(fz_xml *node, const char *att, const char *needle)
+match_att_has_condition(fz_xml *node, const char *att, const char *needle, int case_sensitive)
 {
 	const char *haystack = fz_xml_att(node, att);
 	const char *ss;
 	size_t n;
 	if (haystack) {
-		ss = strstr(haystack, needle);
+		if (case_sensitive)
+			ss = strstr(haystack, needle);
+		else
+			ss = fz_strcasestr((char *)haystack, needle);
 		if (ss)
 		{
 			n = strlen(needle);
@@ -266,12 +322,12 @@ match_condition(fz_css_condition *cond, fz_xml *node)
 	switch (cond->type) {
 	default: return 0;
 	case ':': return 0; /* don't support pseudo-classes */
-	case '#': if (!match_att_is_condition(node, "id", cond->val)) return 0; break;
-	case '.': if (!match_att_has_condition(node, "class", cond->val)) return 0; break;
+	case '#': if (!match_att_is_condition(node, "id", cond->val,1)) return 0; break;
+	case '.': if (!match_att_has_condition(node, "class", cond->val,1)) return 0; break;
 	case '[': if (!match_att_exists_condition(node, cond->key)) return 0; break;
-	case '=': if (!match_att_is_condition(node, cond->key, cond->val)) return 0; break;
-	case '~': if (!match_att_has_condition(node, cond->key, cond->val)) return 0; break;
-	case '|': if (!match_att_is_condition(node, cond->key, cond->val)) return 0; break;
+	case '=': if (!match_att_is_condition(node, cond->key, cond->val, 0)) return 0; break;
+	case '~': if (!match_att_has_condition(node, cond->key, cond->val, 0)) return 0; break;
+	case '|': if (!match_att_is_condition(node, cond->key, cond->val, 0)) return 0; break;
 	}
 
 	return match_condition(cond->next, node);
@@ -531,6 +587,72 @@ add_shorthand_list_style(fz_css_match *match, fz_css_value *value, int spec)
 	}
 }
 
+static fz_css_value static_value_normal = { CSS_KEYWORD, "normal", NULL, NULL };
+
+static fz_css_value *
+add_shorthand_font_size(fz_css_match *match, fz_css_value *value, int spec)
+{
+	/* font-size */
+	add_property(match, PRO_FONT_SIZE, value, spec);
+
+	/* / line-height */
+	if (value->next && value->next->next && !strcmp(value->next->data, "/"))
+	{
+		value = value->next->next;
+		add_property(match, PRO_LINE_HEIGHT, value, spec);
+	}
+
+	return value;
+}
+
+static void
+add_shorthand_font(fz_css_match *match, fz_css_value *value, int spec)
+{
+	fz_css_value *font_style = NULL;
+	fz_css_value *font_variant = NULL;
+	fz_css_value *font_weight = NULL;
+
+	/* add the start as font-family for most robust scanning of matching font names */
+	add_property(match, PRO_FONT_FAMILY, value, spec);
+
+	/* then look for known style/variant/weight keywords and font-size/line-height */
+	for (; value; value = value->next)
+	{
+		/* style/variant/weight/size */
+		if (value->type == CSS_KEYWORD)
+		{
+			if (keyword_in_list(value->data, font_style_kw, nelem(font_style_kw)))
+				font_style = value;
+			else if (keyword_in_list(value->data, font_variant_kw, nelem(font_variant_kw)))
+				font_variant = value;
+			else if (keyword_in_list(value->data, font_weight_kw, nelem(font_weight_kw)))
+				font_weight = value;
+			else if (keyword_in_list(value->data, font_size_kw, nelem(font_size_kw)))
+				value = add_shorthand_font_size(match, value, spec);
+		}
+		else if (value->type == CSS_NUMBER)
+			font_weight = value;
+		else if (value->type == CSS_LENGTH || value->type == CSS_PERCENT)
+			value = add_shorthand_font_size(match, value, spec);
+	}
+
+	/* set all properties to their initial values if not specified! */
+	if (font_style)
+		add_property(match, PRO_FONT_STYLE, font_style, spec);
+	else
+		add_property(match, PRO_FONT_STYLE, &static_value_normal, spec);
+
+	if (font_variant)
+		add_property(match, PRO_FONT_VARIANT, font_variant, spec);
+	else
+		add_property(match, PRO_FONT_VARIANT, &static_value_normal, spec);
+
+	if (font_weight)
+		add_property(match, PRO_FONT_WEIGHT, font_weight, spec);
+	else
+		add_property(match, PRO_FONT_WEIGHT, &static_value_normal, spec);
+}
+
 static void
 add_property(fz_css_match *match, int name, fz_css_value *value, int spec)
 {
@@ -570,7 +692,9 @@ add_property(fz_css_match *match, int name, fz_css_value *value, int spec)
 	case PRO_LIST_STYLE:
 		add_shorthand_list_style(match, value, spec);
 		return;
-	/* TODO: font */
+	case PRO_FONT:
+		add_shorthand_font(match, value, spec);
+		return;
 	/* TODO: background */
 	}
 
@@ -657,7 +781,7 @@ fz_match_css_at_page(fz_context *ctx, fz_css_match *match, fz_css *css)
 		sel = rule->selector;
 		while (sel)
 		{
-			if (sel->name && !strcmp(sel->name, "@page"))
+			if (sel->name && !fz_strcasecmp(sel->name, "@page"))
 			{
 				for (prop = rule->declaration; prop; prop = prop->next)
 					add_property(match, prop->name, prop->value, selector_specificity(sel, prop->important));
@@ -675,6 +799,7 @@ fz_add_css_font_face(fz_context *ctx, fz_html_font_set *set, fz_archive *zip, co
 	fz_css_property *prop;
 	fz_font *font = NULL;
 	fz_buffer *buf = NULL;
+	fz_stream *stm = NULL;
 	int is_bold, is_italic, is_small_caps;
 	char path[2048];
 
@@ -698,7 +823,7 @@ fz_add_css_font_face(fz_context *ctx, fz_html_font_set *set, fz_archive *zip, co
 
 	is_bold = is_bold_from_font_weight(weight);
 	is_italic = is_italic_from_font_style(style);
-	is_small_caps = !strcmp(variant, "small-caps");
+	is_small_caps = !fz_strcasecmp(variant, "small-caps");
 
 	fz_strncpy_s(ctx, path, base_uri, sizeof path);
 	fz_strlcat(path, "/", sizeof path);
@@ -714,19 +839,26 @@ fz_add_css_font_face(fz_context *ctx, fz_html_font_set *set, fz_archive *zip, co
 
 	fz_var(buf);
 	fz_var(font);
+	fz_var(stm);
 
 	fz_try(ctx)
 	{
 		if (zip && fz_has_archive_entry(ctx, zip, path))
 			buf = fz_read_archive_entry(ctx, zip, path);
 		else
-			buf = fz_read_file(ctx, src);
+		{
+			stm = fz_try_open_file(ctx, src);
+			if (stm == NULL)
+				fz_throw(ctx, FZ_ERROR_FORMAT, "cannot locate font '%s' specified by css", src);
+			buf = fz_read_all(ctx, stm, 0);
+		}
 		font = fz_new_font_from_buffer(ctx, NULL, buf, 0, 0);
 		fz_add_html_font_face(ctx, set, family, is_bold, is_italic, is_small_caps, path, font);
 	}
 	fz_always(ctx)
 	{
 		fz_drop_buffer(ctx, buf);
+		fz_drop_stream(ctx, stm);
 		fz_drop_font(ctx, font);
 	}
 	fz_catch(ctx)
@@ -752,7 +884,7 @@ fz_add_css_font_faces(fz_context *ctx, fz_html_font_set *set, fz_archive *zip, c
 			sel = rule->selector;
 			while (sel)
 			{
-				if (sel->name && !strcmp(sel->name, "@font-face"))
+				if (sel->name && !fz_strcasecmp(sel->name, "@font-face"))
 				{
 					fz_add_css_font_face(ctx, set, zip, base_uri, rule->declaration);
 					break;
@@ -801,7 +933,7 @@ value_from_inheritable_property(fz_css_match *match, int name)
 	fz_css_value *value = match->value[name];
 	if (match->up)
 	{
-		if (value && !strcmp(value->data, "inherit"))
+		if (value && !fz_strcasecmp(value->data, "inherit"))
 			return value_from_inheritable_property(match->up, name);
 		if (!value)
 			return value_from_inheritable_property(match->up, name);
@@ -815,7 +947,7 @@ value_from_property(fz_css_match *match, int name)
 	fz_css_value *value = match->value[name];
 	if (match->up)
 	{
-		if (value && !strcmp(value->data, "inherit"))
+		if (value && !fz_strcasecmp(value->data, "inherit"))
 			if (name != PRO_FONT_SIZE) /* never inherit 'font-size' textually */
 				return value_from_property(match->up, name);
 		if (!value && is_inheritable_property(name))
@@ -940,7 +1072,7 @@ number_from_value(fz_css_value *value, float initial, int initial_unit)
 
 	if (value->type == CSS_KEYWORD)
 	{
-		if (!strcmp(value->data, "auto"))
+		if (!fz_strcasecmp(value->data, "auto"))
 			return make_number(0, N_AUTO);
 	}
 
@@ -959,11 +1091,11 @@ border_width_from_property(fz_css_match *match, int property)
 	fz_css_value *value = value_from_property(match, property);
 	if (value)
 	{
-		if (!strcmp(value->data, "thin"))
+		if (!fz_strcasecmp(value->data, "thin"))
 			return make_number(1, N_LENGTH);
-		if (!strcmp(value->data, "medium"))
+		if (!fz_strcasecmp(value->data, "medium"))
 			return make_number(2, N_LENGTH);
-		if (!strcmp(value->data, "thick"))
+		if (!fz_strcasecmp(value->data, "thick"))
 			return make_number(4, N_LENGTH);
 		return number_from_value(value, 0, N_LENGTH);
 	}
@@ -976,9 +1108,9 @@ border_style_from_property(fz_css_match *match, int property)
 	fz_css_value *value = value_from_property(match, property);
 	if (value)
 	{
-		if (!strcmp(value->data, "none")) return BS_NONE;
-		else if (!strcmp(value->data, "hidden")) return BS_NONE;
-		else if (!strcmp(value->data, "solid")) return BS_SOLID;
+		if (!fz_strcasecmp(value->data, "none")) return BS_NONE;
+		else if (!fz_strcasecmp(value->data, "hidden")) return BS_NONE;
+		else if (!fz_strcasecmp(value->data, "solid")) return BS_SOLID;
 	}
 	return BS_NONE;
 }
@@ -1080,7 +1212,7 @@ hex_color:
 		return make_color(r, g, b, a);
 	}
 
-	if (value->type == '(' && !strcmp(value->data, "rgb"))
+	if (value->type == '(' && !fz_strcasecmp(value->data, "rgb"))
 	{
 		fz_css_value *vr, *vg, *vb;
 		int r, g, b;
@@ -1093,7 +1225,7 @@ hex_color:
 		return make_color(r, g, b, 255);
 	}
 
-	if (value->type == '(' && !strcmp(value->data, "rgba"))
+	if (value->type == '(' && !fz_strcasecmp(value->data, "rgba"))
 	{
 		fz_css_value *vr, *vg, *vb, *va;
 		int r, g, b, a;
@@ -1110,41 +1242,41 @@ hex_color:
 
 	if (value->type == CSS_KEYWORD)
 	{
-		if (!strcmp(value->data, "transparent"))
+		if (!fz_strcasecmp(value->data, "transparent"))
 			return make_color(0, 0, 0, 0);
-		if (!strcmp(value->data, "maroon"))
+		if (!fz_strcasecmp(value->data, "maroon"))
 			return make_color(0x80, 0x00, 0x00, 255);
-		if (!strcmp(value->data, "red"))
+		if (!fz_strcasecmp(value->data, "red"))
 			return make_color(0xFF, 0x00, 0x00, 255);
-		if (!strcmp(value->data, "orange"))
+		if (!fz_strcasecmp(value->data, "orange"))
 			return make_color(0xFF, 0xA5, 0x00, 255);
-		if (!strcmp(value->data, "yellow"))
+		if (!fz_strcasecmp(value->data, "yellow"))
 			return make_color(0xFF, 0xFF, 0x00, 255);
-		if (!strcmp(value->data, "olive"))
+		if (!fz_strcasecmp(value->data, "olive"))
 			return make_color(0x80, 0x80, 0x00, 255);
-		if (!strcmp(value->data, "purple"))
+		if (!fz_strcasecmp(value->data, "purple"))
 			return make_color(0x80, 0x00, 0x80, 255);
-		if (!strcmp(value->data, "fuchsia"))
+		if (!fz_strcasecmp(value->data, "fuchsia"))
 			return make_color(0xFF, 0x00, 0xFF, 255);
-		if (!strcmp(value->data, "white"))
+		if (!fz_strcasecmp(value->data, "white"))
 			return make_color(0xFF, 0xFF, 0xFF, 255);
-		if (!strcmp(value->data, "lime"))
+		if (!fz_strcasecmp(value->data, "lime"))
 			return make_color(0x00, 0xFF, 0x00, 255);
-		if (!strcmp(value->data, "green"))
+		if (!fz_strcasecmp(value->data, "green"))
 			return make_color(0x00, 0x80, 0x00, 255);
-		if (!strcmp(value->data, "navy"))
+		if (!fz_strcasecmp(value->data, "navy"))
 			return make_color(0x00, 0x00, 0x80, 255);
-		if (!strcmp(value->data, "blue"))
+		if (!fz_strcasecmp(value->data, "blue"))
 			return make_color(0x00, 0x00, 0xFF, 255);
-		if (!strcmp(value->data, "aqua"))
+		if (!fz_strcasecmp(value->data, "aqua"))
 			return make_color(0x00, 0xFF, 0xFF, 255);
-		if (!strcmp(value->data, "teal"))
+		if (!fz_strcasecmp(value->data, "teal"))
 			return make_color(0x00, 0x80, 0x80, 255);
-		if (!strcmp(value->data, "black"))
+		if (!fz_strcasecmp(value->data, "black"))
 			return make_color(0x00, 0x00, 0x00, 255);
-		if (!strcmp(value->data, "silver"))
+		if (!fz_strcasecmp(value->data, "silver"))
 			return make_color(0xC0, 0xC0, 0xC0, 255);
-		if (!strcmp(value->data, "gray"))
+		if (!fz_strcasecmp(value->data, "gray"))
 			return make_color(0x80, 0x80, 0x80, 255);
 		goto hex_color; /* last ditch attempt: maybe it's a #XXXXXX color without the # */
 	}
@@ -1163,31 +1295,31 @@ fz_get_css_match_display(fz_css_match *match)
 	fz_css_value *value = value_from_property(match, PRO_DISPLAY);
 	if (value)
 	{
-		if (!strcmp(value->data, "none"))
+		if (!fz_strcasecmp(value->data, "none"))
 			return DIS_NONE;
-		if (!strcmp(value->data, "inline"))
+		if (!fz_strcasecmp(value->data, "inline"))
 			return DIS_INLINE;
-		if (!strcmp(value->data, "block"))
+		if (!fz_strcasecmp(value->data, "block"))
 			return DIS_BLOCK;
-		if (!strcmp(value->data, "list-item"))
+		if (!fz_strcasecmp(value->data, "list-item"))
 			return DIS_LIST_ITEM;
-		if (!strcmp(value->data, "inline-block"))
+		if (!fz_strcasecmp(value->data, "inline-block"))
 			return DIS_INLINE_BLOCK;
-		if (!strcmp(value->data, "table"))
+		if (!fz_strcasecmp(value->data, "table"))
 			return DIS_TABLE;
-		if (!strcmp(value->data, "table-row"))
+		if (!fz_strcasecmp(value->data, "table-row"))
 			return DIS_TABLE_ROW;
-		if (!strcmp(value->data, "table-cell"))
+		if (!fz_strcasecmp(value->data, "table-cell"))
 			return DIS_TABLE_CELL;
-		if (!strcmp(value->data, "table-row-group"))
+		if (!fz_strcasecmp(value->data, "table-row-group"))
 			return DIS_TABLE_GROUP;
-		if (!strcmp(value->data, "table-header-group"))
+		if (!fz_strcasecmp(value->data, "table-header-group"))
 			return DIS_TABLE_GROUP;
-		if (!strcmp(value->data, "table-footer-group"))
+		if (!fz_strcasecmp(value->data, "table-footer-group"))
 			return DIS_TABLE_GROUP;
-		if (!strcmp(value->data, "table-column-group"))
+		if (!fz_strcasecmp(value->data, "table-column-group"))
 			return DIS_NONE;
-		if (!strcmp(value->data, "table-column"))
+		if (!fz_strcasecmp(value->data, "table-column"))
 			return DIS_NONE;
 	}
 	return DIS_INLINE;
@@ -1199,11 +1331,11 @@ white_space_from_property(fz_css_match *match)
 	fz_css_value *value = value_from_property(match, PRO_WHITE_SPACE);
 	if (value)
 	{
-		if (!strcmp(value->data, "normal")) return WS_NORMAL;
-		else if (!strcmp(value->data, "pre")) return WS_PRE;
-		else if (!strcmp(value->data, "nowrap")) return WS_NOWRAP;
-		else if (!strcmp(value->data, "pre-wrap")) return WS_PRE_WRAP;
-		else if (!strcmp(value->data, "pre-line")) return WS_PRE_LINE;
+		if (!fz_strcasecmp(value->data, "normal")) return WS_NORMAL;
+		else if (!fz_strcasecmp(value->data, "pre")) return WS_PRE;
+		else if (!fz_strcasecmp(value->data, "nowrap")) return WS_NOWRAP;
+		else if (!fz_strcasecmp(value->data, "pre-wrap")) return WS_PRE_WRAP;
+		else if (!fz_strcasecmp(value->data, "pre-line")) return WS_PRE_LINE;
 	}
 	return WS_NORMAL;
 }
@@ -1214,8 +1346,8 @@ text_decoration_from_property(fz_css_match *match)
 	fz_css_value *value = value_from_property(match, PRO_TEXT_DECORATION);
 	if (value)
 	{
-		if (!strcmp(value->data, "underline")) return TD_UNDERLINE;
-		if (!strcmp(value->data, "line-through")) return TD_LINE_THROUGH;
+		if (!fz_strcasecmp(value->data, "underline")) return TD_UNDERLINE;
+		if (!fz_strcasecmp(value->data, "line-through")) return TD_LINE_THROUGH;
 	}
 	return TD_NONE;
 }
@@ -1226,9 +1358,9 @@ visibility_from_property(fz_css_match *match)
 	fz_css_value *value = value_from_property(match, PRO_VISIBILITY);
 	if (value)
 	{
-		if (!strcmp(value->data, "visible")) return V_VISIBLE;
-		else if (!strcmp(value->data, "hidden")) return V_HIDDEN;
-		else if (!strcmp(value->data, "collapse")) return V_COLLAPSE;
+		if (!fz_strcasecmp(value->data, "visible")) return V_VISIBLE;
+		else if (!fz_strcasecmp(value->data, "hidden")) return V_HIDDEN;
+		else if (!fz_strcasecmp(value->data, "collapse")) return V_COLLAPSE;
 	}
 	return V_VISIBLE;
 }
@@ -1239,11 +1371,11 @@ page_break_from_property(fz_css_match *match, int prop)
 	fz_css_value *value = value_from_property(match, prop);
 	if (value)
 	{
-		if (!strcmp(value->data, "auto")) return PB_AUTO;
-		else if (!strcmp(value->data, "always")) return PB_ALWAYS;
-		else if (!strcmp(value->data, "avoid")) return PB_AVOID;
-		else if (!strcmp(value->data, "left")) return PB_LEFT;
-		else if (!strcmp(value->data, "right")) return PB_RIGHT;
+		if (!fz_strcasecmp(value->data, "auto")) return PB_AUTO;
+		else if (!fz_strcasecmp(value->data, "always")) return PB_ALWAYS;
+		else if (!fz_strcasecmp(value->data, "avoid")) return PB_AVOID;
+		else if (!fz_strcasecmp(value->data, "left")) return PB_LEFT;
+		else if (!fz_strcasecmp(value->data, "right")) return PB_RIGHT;
 	}
 	return PB_AUTO;
 }
@@ -1282,37 +1414,44 @@ fz_apply_css_style(fz_context *ctx, fz_html_font_set *set, fz_css_style *style, 
 	value = value_from_property(match, PRO_TEXT_ALIGN);
 	if (value)
 	{
-		if (!strcmp(value->data, "left")) style->text_align = TA_LEFT;
-		else if (!strcmp(value->data, "right")) style->text_align = TA_RIGHT;
-		else if (!strcmp(value->data, "center")) style->text_align = TA_CENTER;
-		else if (!strcmp(value->data, "justify")) style->text_align = TA_JUSTIFY;
+		if (!fz_strcasecmp(value->data, "left")) style->text_align = TA_LEFT;
+		else if (!fz_strcasecmp(value->data, "right")) style->text_align = TA_RIGHT;
+		else if (!fz_strcasecmp(value->data, "center")) style->text_align = TA_CENTER;
+		else if (!fz_strcasecmp(value->data, "justify")) style->text_align = TA_JUSTIFY;
 	}
 
 	value = value_from_property(match, PRO_VERTICAL_ALIGN);
 	if (value)
 	{
-		if (!strcmp(value->data, "baseline")) style->vertical_align = VA_BASELINE;
-		else if (!strcmp(value->data, "sub")) style->vertical_align = VA_SUB;
-		else if (!strcmp(value->data, "super")) style->vertical_align = VA_SUPER;
-		else if (!strcmp(value->data, "top")) style->vertical_align = VA_TOP;
-		else if (!strcmp(value->data, "bottom")) style->vertical_align = VA_BOTTOM;
-		else if (!strcmp(value->data, "text-top")) style->vertical_align = VA_TEXT_TOP;
-		else if (!strcmp(value->data, "text-bottom")) style->vertical_align = VA_TEXT_BOTTOM;
+		if (!fz_strcasecmp(value->data, "baseline")) style->vertical_align = VA_BASELINE;
+		else if (!fz_strcasecmp(value->data, "sub")) style->vertical_align = VA_SUB;
+		else if (!fz_strcasecmp(value->data, "super")) style->vertical_align = VA_SUPER;
+		else if (!fz_strcasecmp(value->data, "top")) style->vertical_align = VA_TOP;
+		else if (!fz_strcasecmp(value->data, "bottom")) style->vertical_align = VA_BOTTOM;
+		else if (!fz_strcasecmp(value->data, "text-top")) style->vertical_align = VA_TEXT_TOP;
+		else if (!fz_strcasecmp(value->data, "text-bottom")) style->vertical_align = VA_TEXT_BOTTOM;
 	}
 
 	value = value_from_property(match, PRO_FONT_SIZE);
 	if (value)
 	{
-		if (!strcmp(value->data, "xx-large")) style->font_size = make_number(1.73f, N_SCALE);
-		else if (!strcmp(value->data, "x-large")) style->font_size = make_number(1.44f, N_SCALE);
-		else if (!strcmp(value->data, "large")) style->font_size = make_number(1.2f, N_SCALE);
-		else if (!strcmp(value->data, "medium")) style->font_size = make_number(1.0f, N_SCALE);
-		else if (!strcmp(value->data, "small")) style->font_size = make_number(0.83f, N_SCALE);
-		else if (!strcmp(value->data, "x-small")) style->font_size = make_number(0.69f, N_SCALE);
-		else if (!strcmp(value->data, "xx-small")) style->font_size = make_number(0.69f, N_SCALE);
-		else if (!strcmp(value->data, "larger")) style->font_size = make_number(1.2f, N_SCALE);
-		else if (!strcmp(value->data, "smaller")) style->font_size = make_number(1/1.2f, N_SCALE);
-		else style->font_size = number_from_value(value, 12, N_LENGTH);
+		/* absolute-size */
+		if (!fz_strcasecmp(value->data, "xx-large")) style->font_size = make_number(1.73f, N_SCALE);
+		else if (!fz_strcasecmp(value->data, "x-large")) style->font_size = make_number(1.44f, N_SCALE);
+		else if (!fz_strcasecmp(value->data, "large")) style->font_size = make_number(1.2f, N_SCALE);
+		else if (!fz_strcasecmp(value->data, "medium")) style->font_size = make_number(1.0f, N_SCALE);
+		else if (!fz_strcasecmp(value->data, "small")) style->font_size = make_number(0.83f, N_SCALE);
+		else if (!fz_strcasecmp(value->data, "x-small")) style->font_size = make_number(0.69f, N_SCALE);
+		else if (!fz_strcasecmp(value->data, "xx-small")) style->font_size = make_number(0.69f, N_SCALE);
+		/* relative-size */
+		else if (!fz_strcasecmp(value->data, "larger")) style->font_size = make_number(1.2f, N_SCALE);
+		else if (!fz_strcasecmp(value->data, "smaller")) style->font_size = make_number(1/1.2f, N_SCALE);
+		/* percentage */
+		else if (value->type == CSS_PERCENT) style->font_size = number_from_value(value, 12, N_LENGTH);
+		/* length */
+		else if (value->type == CSS_LENGTH) style->font_size = number_from_value(value, 12, N_LENGTH);
+		/* default to 1em */
+		else style->font_size = make_number(1, N_SCALE);
 	}
 	else
 	{
@@ -1322,28 +1461,28 @@ fz_apply_css_style(fz_context *ctx, fz_html_font_set *set, fz_css_style *style, 
 	value = value_from_property(match, PRO_LIST_STYLE_TYPE);
 	if (value)
 	{
-		if (!strcmp(value->data, "none")) style->list_style_type = LST_NONE;
-		else if (!strcmp(value->data, "disc")) style->list_style_type = LST_DISC;
-		else if (!strcmp(value->data, "circle")) style->list_style_type = LST_CIRCLE;
-		else if (!strcmp(value->data, "square")) style->list_style_type = LST_SQUARE;
-		else if (!strcmp(value->data, "decimal")) style->list_style_type = LST_DECIMAL;
-		else if (!strcmp(value->data, "decimal-leading-zero")) style->list_style_type = LST_DECIMAL_ZERO;
-		else if (!strcmp(value->data, "lower-roman")) style->list_style_type = LST_LC_ROMAN;
-		else if (!strcmp(value->data, "upper-roman")) style->list_style_type = LST_UC_ROMAN;
-		else if (!strcmp(value->data, "lower-greek")) style->list_style_type = LST_LC_GREEK;
-		else if (!strcmp(value->data, "upper-greek")) style->list_style_type = LST_UC_GREEK;
-		else if (!strcmp(value->data, "lower-latin")) style->list_style_type = LST_LC_LATIN;
-		else if (!strcmp(value->data, "upper-latin")) style->list_style_type = LST_UC_LATIN;
-		else if (!strcmp(value->data, "lower-alpha")) style->list_style_type = LST_LC_ALPHA;
-		else if (!strcmp(value->data, "upper-alpha")) style->list_style_type = LST_UC_ALPHA;
-		else if (!strcmp(value->data, "armenian")) style->list_style_type = LST_ARMENIAN;
-		else if (!strcmp(value->data, "georgian")) style->list_style_type = LST_GEORGIAN;
+		if (!fz_strcasecmp(value->data, "none")) style->list_style_type = LST_NONE;
+		else if (!fz_strcasecmp(value->data, "disc")) style->list_style_type = LST_DISC;
+		else if (!fz_strcasecmp(value->data, "circle")) style->list_style_type = LST_CIRCLE;
+		else if (!fz_strcasecmp(value->data, "square")) style->list_style_type = LST_SQUARE;
+		else if (!fz_strcasecmp(value->data, "decimal")) style->list_style_type = LST_DECIMAL;
+		else if (!fz_strcasecmp(value->data, "decimal-leading-zero")) style->list_style_type = LST_DECIMAL_ZERO;
+		else if (!fz_strcasecmp(value->data, "lower-roman")) style->list_style_type = LST_LC_ROMAN;
+		else if (!fz_strcasecmp(value->data, "upper-roman")) style->list_style_type = LST_UC_ROMAN;
+		else if (!fz_strcasecmp(value->data, "lower-greek")) style->list_style_type = LST_LC_GREEK;
+		else if (!fz_strcasecmp(value->data, "upper-greek")) style->list_style_type = LST_UC_GREEK;
+		else if (!fz_strcasecmp(value->data, "lower-latin")) style->list_style_type = LST_LC_LATIN;
+		else if (!fz_strcasecmp(value->data, "upper-latin")) style->list_style_type = LST_UC_LATIN;
+		else if (!fz_strcasecmp(value->data, "lower-alpha")) style->list_style_type = LST_LC_ALPHA;
+		else if (!fz_strcasecmp(value->data, "upper-alpha")) style->list_style_type = LST_UC_ALPHA;
+		else if (!fz_strcasecmp(value->data, "armenian")) style->list_style_type = LST_ARMENIAN;
+		else if (!fz_strcasecmp(value->data, "georgian")) style->list_style_type = LST_GEORGIAN;
 	}
 
 	value = value_from_property(match, PRO_OVERFLOW_WRAP);
 	if (value)
 	{
-		if (!strcmp(value->data, "break-word")) style->overflow_wrap = OVERFLOW_WRAP_BREAK_WORD;
+		if (!fz_strcasecmp(value->data, "break-word")) style->overflow_wrap = OVERFLOW_WRAP_BREAK_WORD;
 		else style->overflow_wrap = OVERFLOW_WRAP_NORMAL;
 	}
 
@@ -1391,17 +1530,17 @@ fz_apply_css_style(fz_context *ctx, fz_html_font_set *set, fz_css_style *style, 
 		const char *font_variant = string_from_property(match, PRO_FONT_VARIANT, "normal");
 		int is_bold = is_bold_from_font_weight(font_weight);
 		int is_italic = is_italic_from_font_style(font_style);
-		style->small_caps = !strcmp(font_variant, "small-caps");
+		style->small_caps = !fz_strcasecmp(font_variant, "small-caps");
 		value = value_from_property(match, PRO_FONT_FAMILY);
-		while (value)
+		for (; value; value = value->next)
 		{
-			if (strcmp(value->data, ",") != 0)
+			/* ignore numbers and keywords used in font short-hand syntax */
+			if (value->type == CSS_STRING || (value->type == CSS_KEYWORD && !keyword_in_list(value->data, font_family_ignore, nelem(font_family_ignore))))
 			{
 				style->font = fz_load_html_font(ctx, set, value->data, is_bold, is_italic, style->small_caps);
 				if (style->font)
 					break;
 			}
-			value = value->next;
 		}
 		if (!style->font)
 			style->font = fz_load_html_font(ctx, set, "serif", is_bold, is_italic, style->small_caps);
@@ -1638,6 +1777,7 @@ fz_css_enlist(fz_context *ctx, const fz_css_style *style, fz_css_style_splay **t
 
 	return &x->style;
 }
+
 /*
  * Pretty printing
  */

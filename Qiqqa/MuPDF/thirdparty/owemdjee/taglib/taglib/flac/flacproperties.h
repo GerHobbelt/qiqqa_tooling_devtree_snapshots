@@ -37,7 +37,7 @@ namespace TagLib {
     //! An implementation of audio property reading for FLAC
 
     /*!
-     * This reads the data from an FLAC stream found in the AudioProperties
+     * This reads the data from a FLAC stream found in the AudioProperties
      * API.
      */
 
@@ -101,6 +101,7 @@ namespace TagLib {
       void read(const ByteVector &data, offset_t streamLength);
 
       class PropertiesPrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<PropertiesPrivate> d;
     };
   }  // namespace FLAC

@@ -20,9 +20,7 @@
 // normalizes the text according to command-line options and generates
 // a unicharset.
 
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h" // HAS_LIBICU
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include <cstdlib>
 #include <filesystem>
@@ -41,8 +39,8 @@
 
 using namespace tesseract;
 
-STRING_PARAM_FLAG(output_unicharset, "unicharset", "Output file path");
-INT_PARAM_FLAG(norm_mode, 1,
+STRING_VAR(extractor_output_unicharset, "unicharset", "Output file path");
+INT_VAR(extractor_norm_mode, 1,
                       "Normalization mode: 1=Combine graphemes, "
                       "2=Split graphemes, 3=Pure unicode");
 
@@ -94,14 +92,14 @@ static int Main(int argc, const char** argv) {
       texts.clear();
       texts = split(file_data, '\n');
     }
-    AddStringsToUnicharset(texts, FLAGS_norm_mode, &unicharset);
+    AddStringsToUnicharset(texts, extractor_norm_mode, &unicharset);
   }
   SetupBasicProperties(/*report_errors*/ true, /*decompose*/ false, &unicharset);
   // Write unicharset file.
-  if (unicharset.save_to_file(FLAGS_output_unicharset.c_str())) {
-    tprintDebug("Wrote unicharset file {}\n", FLAGS_output_unicharset.value());
+  if (unicharset.save_to_file(extractor_output_unicharset.c_str())) {
+    tprintDebug("Wrote unicharset file {}\n", extractor_output_unicharset.value());
   } else {
-    tprintError("Cannot save unicharset file {}\n", FLAGS_output_unicharset.value());
+    tprintError("Cannot save unicharset file {}\n", extractor_output_unicharset.value());
     return EXIT_FAILURE;
   }
   return EXIT_SUCCESS;
@@ -118,17 +116,21 @@ extern "C" TESS_API int tesseract_unicharset_extractor_main(int argc, const char
   tesseract::CheckSharedLibraryVersion();
   (void)tesseract::SetConsoleModeToUTF8();
 
-  int rv = tesseract::ParseCommandLineFlags(
-    "[--output_unicharset filename] [--norm_mode mode] box_or_text_file [...]\n"
-    "\n"
-    "Where mode means:\n"
-    " 1=combine graphemes (use for Latin and other simple scripts)\n"
-    " 2=split graphemes (use for Indic/Khmer/Myanmar)\n"
-    " 3=pure unicode (use for Arabic/Hebrew/Thai/Tibetan)\n"
-    "Reads box or plain text files to extract the unicharset.\n",
-    &argc, &argv);
-	if (rv >= 0)
-		return rv;
+  if (argc > 1) {
+    tesseract::ParseCommandLineFlags(argv[0], &argc, &argv, true);
+  }
+  if (argc < 2) {
+    tprintDebug(
+        "Usage: {} [--output_unicharset filename] [--norm_mode mode]"
+        " box_or_text_file [...]\n",
+        argv[0]);
+    tprintDebug("Where mode means:\n");
+    tprintDebug(" 1=combine graphemes (use for Latin and other simple scripts)\n");
+    tprintDebug(" 2=split graphemes (use for Indic/Khmer/Myanmar)\n");
+    tprintDebug(" 3=pure unicode (use for Arabic/Hebrew/Thai/Tibetan)\n");
+    tprintDebug("Reads box or plain text files to extract the unicharset.\n");
+    return EXIT_FAILURE;
+  }
   return tesseract::Main(argc, argv);
 }
 

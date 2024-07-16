@@ -16,9 +16,7 @@
 //
 ///////////////////////////////////////////////////////////////////////
 
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include <tesseract/debugheap.h>
 
@@ -172,7 +170,7 @@ bool AlignedBlob::WithinTestRegion(int detail_level, int x, int y) {
 void AlignedBlob::DisplayTabs(ScrollViewReference &tab_win) {
   ASSERT0(tab_win);
   // For every tab in the grid, display it.
-  GridSearch<BLOBNBOX, BLOBNBOX_CLIST, BLOBNBOX_C_IT> gsearch(this);
+  BlobGridSearch gsearch(this);
   gsearch.StartFullSearch();
   BLOBNBOX *bbox;
   while ((bbox = gsearch.NextFullSearch()) != nullptr) {
@@ -413,7 +411,7 @@ BLOBNBOX *AlignedBlob::FindAlignedBlob(const AlignedBlobParams &p, bool top_to_b
     xmin -= p.min_gutter;
   }
   // Setup a vertical search for an aligned blob.
-  GridSearch<BLOBNBOX, BLOBNBOX_CLIST, BLOBNBOX_C_IT> vsearch(this);
+  BlobGridSearch vsearch(this);
   if (WithinTestRegion(2, x_start, start_y)) {
     tprintDebug("Starting {} {} search at {}-{},{}, search_size={}, gutter={}\n",
             p.ragged ? "Ragged" : "Aligned", p.right_tab ? "Right" : "Left", xmin, xmax, start_y,
@@ -477,7 +475,7 @@ BLOBNBOX *AlignedBlob::FindAlignedBlob(const AlignedBlobParams &p, bool top_to_b
       if (bbox->right_tab_type() >= TT_MAYBE_ALIGNED) {
         bbox->set_right_tab_type(TT_DELETED);
       }
-      // *end_y = top_to_bottom ? nbox.top() : nbox.bottom();
+      *end_y = top_to_bottom ? nbox.top() : nbox.bottom();
       if (WithinTestRegion(2, x_start, start_y)) {
         tprintDebug("gutter\n");
       }
@@ -490,7 +488,7 @@ BLOBNBOX *AlignedBlob::FindAlignedBlob(const AlignedBlobParams &p, bool top_to_b
       if (bbox->left_tab_type() >= TT_MAYBE_ALIGNED) {
         bbox->set_left_tab_type(TT_DELETED);
       }
-      // *end_y = top_to_bottom ? nbox.top() : nbox.bottom();
+      *end_y = top_to_bottom ? nbox.top() : nbox.bottom();
       if (WithinTestRegion(2, x_start, start_y)) {
         tprintDebug("gutter\n");
       }
@@ -504,8 +502,8 @@ BLOBNBOX *AlignedBlob::FindAlignedBlob(const AlignedBlobParams &p, bool top_to_b
       // Aligned so keep it. If it is a marked tab save it as result,
       // otherwise keep it as backup_result to return in case of later failure.
       if (WithinTestRegion(2, x_start, start_y)) {
-        tprintDebug("aligned, seeking{}, l={}, r={}\n", p.right_tab, 
-                neighbour->left_tab_type(), neighbour->right_tab_type());
+        tprintDebug("aligned, seeking{}, l={}, r={}\n", p.right_tab, neighbour->left_tab_type(),
+                neighbour->right_tab_type());
       }
       TabType n_type = p.right_tab ? neighbour->right_tab_type() : neighbour->left_tab_type();
       if (n_type != TT_NONE && (p.ragged || n_type != TT_MAYBE_RAGGED)) {

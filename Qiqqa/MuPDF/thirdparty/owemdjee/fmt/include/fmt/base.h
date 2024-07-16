@@ -12,9 +12,13 @@
 #include <stdio.h>   // FILE
 #include <string.h>  // strlen
 
+#ifndef FMT_IMPORT_STD
 // <cstddef> is also included transitively from <type_traits>.
-#include <cstddef>      // std::byte
-#include <type_traits>  // std::enable_if
+#  include <cstddef>      // std::byte
+#  include <type_traits>  // std::enable_if
+#else
+import std;
+#endif
 
 // macros defined by Microsoft which throw a spanner in the (chrono) works around here.
 #undef max
@@ -148,7 +152,7 @@
 #elif defined(__NVCOMPILER)
 #  define FMT_USE_NONTYPE_TEMPLATE_ARGS 0
 #elif FMT_GCC_VERSION >= 903 && FMT_CPLUSPLUS >= 201709L
-#  define FMT_USE_NONTYPE_TEMPLATE_ARGS 0
+#  define FMT_USE_NONTYPE_TEMPLATE_ARGS 1
 #elif defined(__cpp_nontype_template_args) && \
     __cpp_nontype_template_args >= 201911L
 #  define FMT_USE_NONTYPE_TEMPLATE_ARGS 1
@@ -186,8 +190,7 @@
 #endif
 
 // Disable [[noreturn]] on MSVC/NVCC because of bogus unreachable code warnings.
-#if FMT_HAS_CPP_ATTRIBUTE(noreturn) && FMT_EXCEPTIONS && !FMT_MSC_VERSION && \
-    !defined(__NVCC__)
+#if FMT_HAS_CPP_ATTRIBUTE(noreturn) && !FMT_MSC_VERSION && !defined(__NVCC__)
 #  define FMT_NORETURN [[noreturn]]
 #else
 #  define FMT_NORETURN
@@ -294,7 +297,18 @@
 #endif
 
 #ifndef FMT_UNICODE
-#  define FMT_UNICODE !FMT_MSC_VERSION
+#  define FMT_UNICODE 1
+#endif
+
+// Check if rtti is available.
+#ifndef FMT_USE_RTTI
+// __RTTI is for EDG compilers. _CPPRTTI is for MSVC.
+#  if defined(__GXX_RTTI) || FMT_HAS_FEATURE(cxx_rtti) || defined(_CPPRTTI) || \
+      defined(__INTEL_RTTI__) || defined(__RTTI)
+#    define FMT_USE_RTTI 1
+#  else
+#    define FMT_USE_RTTI 0
+#  endif
 #endif
 
 #define FMT_FWD(...) static_cast<decltype(__VA_ARGS__)&&>(__VA_ARGS__)
@@ -389,17 +403,17 @@ template <typename T> constexpr auto const_check(T value) -> T { return value; }
 FMT_NORETURN FMT_API void assert_fail(const char* file, int line,
                                       const char* message);
 
-#ifndef FMT_ASSERT
-#  ifdef NDEBUG
+#if defined(FMT_ASSERT)
+// Use the provided definition.
+#elif defined(NDEBUG)
 // FMT_ASSERT is not empty to avoid -Wempty-body.
-#    define FMT_ASSERT(condition, message) \
-      fmt::detail::ignore_unused((condition), (message))
-#  else
-#    define FMT_ASSERT(condition, message)                                    \
-      ((condition) /* void() fails with -Winvalid-constexpr on clang 4.0.1 */ \
-           ? (void)0                                                          \
-           : fmt::detail::assert_fail(__FILE__, __LINE__, (message)))
-#  endif
+#  define FMT_ASSERT(condition, message) \
+    fmt::detail::ignore_unused((condition), (message))
+#else
+#  define FMT_ASSERT(condition, message)                                    \
+    ((condition) /* void() fails with -Winvalid-constexpr on clang 4.0.1 */ \
+         ? (void)0                                                          \
+         : fmt::detail::assert_fail(__FILE__, __LINE__, (message)))
 #endif
 
 #ifdef FMT_USE_INT128
@@ -438,13 +452,19 @@ struct is_std_string_like<T, void_t<decltype(std::declval<T>().find_first_of(
                                  typename T::value_type(), 0))>>
     : std::true_type {};
 
-FMT_CONSTEXPR inline auto is_utf8() -> bool {
-  FMT_MSC_WARNING(suppress : 4566) constexpr unsigned char section[] = "\u00A7";
+// Returns true iff the literal encoding is UTF-8.
+constexpr auto is_utf8_enabled() -> bool {
   // Avoid an MSVC sign extension bug: https://github.com/fmtlib/fmt/pull/2297.
   using uchar = unsigned char;
-  return FMT_UNICODE || (sizeof(section) == 3 && uchar(section[0]) == 0xC2 &&
-                         uchar(section[1]) == 0xA7);
+  return sizeof("\u00A7") == 3 && uchar("\u00A7"[0]) == 0xC2 &&
+         uchar("\u00A7"[1]) == 0xA7;
 }
+constexpr auto use_utf8() -> bool {
+  return !FMT_MSC_VERSION || is_utf8_enabled();
+}
+
+static_assert(!FMT_UNICODE || use_utf8(),
+              "Unicode support requires compiling with /utf-8");
 
 template <typename Char> FMT_CONSTEXPR auto length(const Char* s) -> size_t {
   size_t len = 0;
@@ -1528,12 +1548,14 @@ template <typename Context> struct arg_mapper {
     return {};
   }
 
+  // is_fundamental is used to allow formatters for extended FP types.
   template <typename T, typename U = remove_const_t<T>,
-            FMT_ENABLE_IF((std::is_class<U>::value || std::is_enum<U>::value ||
-                           std::is_union<U>::value) &&
-                          !has_to_string_view<U>::value && !is_char<U>::value &&
-                          !is_named_arg<U>::value &&
-                          !std::is_arithmetic<format_as_t<U>>::value)>
+            FMT_ENABLE_IF(
+                (std::is_class<U>::value || std::is_enum<U>::value ||
+                 std::is_union<U>::value || std::is_fundamental<U>::value) &&
+                !has_to_string_view<U>::value && !is_char<U>::value &&
+                !is_named_arg<U>::value && !std::is_integral<U>::value &&
+                !std::is_arithmetic<format_as_t<U>>::value)>
   FMT_MAP_API auto map(T& val) -> decltype(FMT_DECLTYPE_THIS do_map(val)) {
     return do_map(val);
   }
@@ -1917,7 +1939,7 @@ template <typename Context> class basic_format_args {
       if (id < max_size()) arg = args_[id];
       return arg;
     }
-    if (id >= detail::max_packed_args) return arg;
+    if (static_cast<unsigned>(id) >= detail::max_packed_args) return arg;
     arg.type_ = type(id);
     if (arg.type_ == detail::type::none_type) return arg;
     arg.value_ = values_[id];
@@ -2780,7 +2802,9 @@ template <typename Char, typename... Args> class format_string_checker {
     return id >= 0 && id < num_args ? parse_funcs_[id](context_) : begin;
   }
 
-  FMT_CONSTEXPR void on_error(const char* message) { report_error(message); }
+  FMT_NORETURN FMT_CONSTEXPR void on_error(const char* message) {
+    report_error(message);
+  }
 };
 
 // A base class for compile-time strings.
@@ -2825,6 +2849,33 @@ FMT_API void vprint_mojibake(FILE*, string_view, format_args, bool = false);
 #ifndef _WIN32
 inline void vprint_mojibake(FILE*, string_view, format_args, bool) {}
 #endif
+
+template <typename T, typename Char, type TYPE> struct native_formatter {
+ private:
+  dynamic_format_specs<Char> specs_;
+
+ public:
+  using nonlocking = void;
+
+  template <typename ParseContext>
+  FMT_CONSTEXPR auto parse(ParseContext& ctx) -> const Char* {
+    if (ctx.begin() == ctx.end() || *ctx.begin() == '}') return ctx.begin();
+    auto end = parse_format_specs(ctx.begin(), ctx.end(), specs_, ctx, TYPE);
+    if (const_check(TYPE == type::char_type)) check_char_specs(specs_);
+    return end;
+  }
+
+  template <type U = TYPE,
+            FMT_ENABLE_IF(U == type::string_type || U == type::cstring_type ||
+                          U == type::char_type)>
+  FMT_CONSTEXPR void set_debug_format(bool set = true) {
+    specs_.type = set ? presentation_type::debug : presentation_type::none;
+  }
+
+  template <typename FormatContext>
+  FMT_CONSTEXPR auto format(const T& val, FormatContext& ctx) const
+      -> decltype(ctx.out());
+};
 }  // namespace detail
 
 FMT_BEGIN_EXPORT
@@ -2833,34 +2884,8 @@ FMT_BEGIN_EXPORT
 template <typename T, typename Char>
 struct formatter<T, Char,
                  enable_if_t<detail::type_constant<T, Char>::value !=
-                             detail::type::custom_type>> {
- private:
-  detail::dynamic_format_specs<Char> specs_;
-
- public:
-  using nonlocking = void;
-
-  template <typename ParseContext>
-  FMT_CONSTEXPR auto parse(ParseContext& ctx) -> const Char* {
-    if (ctx.begin() == ctx.end() || *ctx.begin() == '}') return ctx.begin();
-    auto type = detail::type_constant<T, Char>::value;
-    auto end =
-        detail::parse_format_specs(ctx.begin(), ctx.end(), specs_, ctx, type);
-    if (type == detail::type::char_type) detail::check_char_specs(specs_);
-    return end;
-  }
-
-  template <detail::type U = detail::type_constant<T, Char>::value,
-            FMT_ENABLE_IF(U == detail::type::string_type ||
-                          U == detail::type::cstring_type ||
-                          U == detail::type::char_type)>
-  FMT_CONSTEXPR void set_debug_format(bool set = true) {
-    specs_.type = set ? presentation_type::debug : presentation_type::none;
-  }
-
-  template <typename FormatContext>
-  FMT_CONSTEXPR auto format(const T& val, FormatContext& ctx) const
-      -> decltype(ctx.out());
+                             detail::type::custom_type>>
+    : detail::native_formatter<T, Char, detail::type_constant<T, Char>::value> {
 };
 
 template <typename Char = char> struct runtime_format_string {
@@ -3024,7 +3049,7 @@ FMT_NODISCARD FMT_INLINE auto formatted_size(format_string<T...> fmt,
 
 FMT_API void vprint(string_view fmt, format_args args);
 FMT_API void vprint(FILE* f, string_view fmt, format_args args);
-FMT_API void vprint_locked(FILE* f, string_view fmt, format_args args);
+FMT_API void vprint_buffered(FILE* f, string_view fmt, format_args args);
 FMT_API void vprintln(FILE* f, string_view fmt, format_args args);
 
 /**
@@ -3040,9 +3065,9 @@ FMT_API void vprintln(FILE* f, string_view fmt, format_args args);
 template <typename... T>
 FMT_INLINE void print(format_string<T...> fmt, T&&... args) {
   const auto& vargs = fmt::make_format_args(args...);
-  if (!detail::is_utf8()) return detail::vprint_mojibake(stdout, fmt, vargs);
-  return detail::is_locking<T...>() ? vprint(fmt, vargs)
-                                    : vprint_locked(stdout, fmt, vargs);
+  if (!detail::use_utf8()) return detail::vprint_mojibake(stdout, fmt, vargs);
+  return detail::is_locking<T...>() ? vprint_buffered(stdout, fmt, vargs)
+                                    : vprint(fmt, vargs);
 }
 
 /**
@@ -3058,9 +3083,9 @@ FMT_INLINE void print(format_string<T...> fmt, T&&... args) {
 template <typename... T>
 FMT_INLINE void print(FILE* f, format_string<T...> fmt, T&&... args) {
   const auto& vargs = fmt::make_format_args(args...);
-  if (!detail::is_utf8()) return detail::vprint_mojibake(f, fmt, vargs);
-  return detail::is_locking<T...>() ? vprint(f, fmt, vargs)
-                                    : vprint_locked(f, fmt, vargs);
+  if (!detail::use_utf8()) return detail::vprint_mojibake(f, fmt, vargs);
+  return detail::is_locking<T...>() ? vprint_buffered(f, fmt, vargs)
+                                    : vprint(f, fmt, vargs);
 }
 
 /**
@@ -3070,8 +3095,8 @@ FMT_INLINE void print(FILE* f, format_string<T...> fmt, T&&... args) {
 template <typename... T>
 FMT_INLINE void println(FILE* f, format_string<T...> fmt, T&&... args) {
   const auto& vargs = fmt::make_format_args(args...);
-  return detail::is_utf8() ? vprintln(f, fmt, vargs)
-                           : detail::vprint_mojibake(f, fmt, vargs, true);
+  return detail::use_utf8() ? vprintln(f, fmt, vargs)
+                            : detail::vprint_mojibake(f, fmt, vargs, true);
 }
 
 /**

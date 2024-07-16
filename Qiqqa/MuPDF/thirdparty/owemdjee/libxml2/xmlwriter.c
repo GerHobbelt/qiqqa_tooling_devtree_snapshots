@@ -355,8 +355,6 @@ xmlNewTextWriterDoc(xmlDocPtr * doc, int compression)
     memset(&saxHandler, '\0', sizeof(saxHandler));
     xmlSAX2InitDefaultSAXHandler(&saxHandler, 1);
     saxHandler.startDocument = xmlTextWriterStartDocumentCallback;
-    saxHandler.startElement = xmlSAX2StartElement;
-    saxHandler.endElement = xmlSAX2EndElement;
 
     ctxt = xmlCreatePushParserCtxt(&saxHandler, NULL, NULL, 0, NULL);
     if (ctxt == NULL) {
@@ -424,8 +422,6 @@ xmlNewTextWriterTree(xmlDocPtr doc, xmlNodePtr node, int compression)
     memset(&saxHandler, '\0', sizeof(saxHandler));
     xmlSAX2InitDefaultSAXHandler(&saxHandler, 1);
     saxHandler.startDocument = xmlTextWriterStartDocumentCallback;
-    saxHandler.startElement = xmlSAX2StartElement;
-    saxHandler.endElement = xmlSAX2EndElement;
 
     ctxt = xmlCreatePushParserCtxt(&saxHandler, NULL, NULL, 0, NULL);
     if (ctxt == NULL) {
@@ -4443,7 +4439,8 @@ xmlTextWriterWriteDocCallback(void *context, const char *str, int len)
     xmlParserCtxtPtr ctxt = (xmlParserCtxtPtr) context;
     int rc;
 
-    if ((rc = xmlParseChunk(ctxt, str, len, 0)) != 0) {
+    rc = xmlParseChunk(ctxt, str, len, 0);
+    if (rc != 0) {
         xmlWriterErrMsgInt(NULL, XML_ERR_INTERNAL_ERROR,
                         "xmlTextWriterWriteDocCallback : XML error %d !\n",
                         rc);
@@ -4467,7 +4464,8 @@ xmlTextWriterCloseDocCallback(void *context)
     xmlParserCtxtPtr ctxt = (xmlParserCtxtPtr) context;
     int rc;
 
-    if ((rc = xmlParseChunk(ctxt, NULL, 0, 1)) != 0) {
+    rc = xmlParseChunk(ctxt, NULL, 0, 1);
+    if (rc != 0) {
         xmlWriterErrMsgInt(NULL, XML_ERR_INTERNAL_ERROR,
                         "xmlTextWriterCloseDocCallback : XML error %d !\n",
                         rc);

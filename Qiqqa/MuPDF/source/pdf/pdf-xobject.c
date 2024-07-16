@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -46,7 +46,7 @@ pdf_xobject_matrix(fz_context *ctx, pdf_obj *xobj)
 int pdf_xobject_isolated(fz_context *ctx, pdf_obj *xobj)
 {
 	pdf_obj *group = pdf_dict_get(ctx, xobj, PDF_NAME(Group));
-	if (group)
+	if (pdf_is_dict(ctx, group))
 		return pdf_dict_get_bool(ctx, group, PDF_NAME(I));
 	return 0;
 }
@@ -54,7 +54,7 @@ int pdf_xobject_isolated(fz_context *ctx, pdf_obj *xobj)
 int pdf_xobject_knockout(fz_context *ctx, pdf_obj *xobj)
 {
 	pdf_obj *group = pdf_dict_get(ctx, xobj, PDF_NAME(Group));
-	if (group)
+	if (pdf_is_dict(ctx, group))
 		return pdf_dict_get_bool(ctx, group, PDF_NAME(K));
 	return 0;
 }
@@ -62,7 +62,7 @@ int pdf_xobject_knockout(fz_context *ctx, pdf_obj *xobj)
 int pdf_xobject_transparency(fz_context *ctx, pdf_obj *xobj)
 {
 	pdf_obj *group = pdf_dict_get(ctx, xobj, PDF_NAME(Group));
-	if (group)
+	if (pdf_is_dict(ctx, group))
 		if (pdf_name_eq(ctx, pdf_dict_get(ctx, group, PDF_NAME(S)), PDF_NAME(Transparency)))
 			return 1;
 	return 0;
@@ -72,10 +72,10 @@ fz_colorspace *
 pdf_xobject_colorspace(fz_context *ctx, pdf_obj *xobj)
 {
 	pdf_obj *group = pdf_dict_get(ctx, xobj, PDF_NAME(Group));
-	if (group)
+	if (pdf_is_dict(ctx, group))
 	{
 		pdf_obj *cs = pdf_dict_get(ctx, group, PDF_NAME(CS));
-		if (cs)
+		if (pdf_is_name(ctx, cs) || pdf_is_array(ctx, cs) || pdf_is_dict(ctx, cs))
 		{
 			fz_colorspace *colorspace = NULL;
 			fz_try(ctx)
@@ -87,9 +87,10 @@ pdf_xobject_colorspace(fz_context *ctx, pdf_obj *xobj)
 				fz_report_error(ctx);
 				fz_warn(ctx, "Ignoring XObject blending colorspace.");
 			}
+			assert(colorspace != NULL);
 			if (!fz_is_valid_blend_colorspace(ctx, colorspace))
 			{
-				fz_warn(ctx, "Ignoring invalid XObject blending colorspace: %s.", colorspace->name);
+				fz_warn(ctx, "Ignoring invalid XObject blending colorspace: %s.", fz_colorspace_name(ctx, colorspace));
 				fz_drop_colorspace(ctx, colorspace);
 				return NULL;
 			}

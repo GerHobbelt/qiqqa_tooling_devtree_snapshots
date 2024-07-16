@@ -59,7 +59,7 @@ namespace TagLib {
      *   <li><b>TDTG</b> Tagging time</li>
      *   <li><b>TENC</b> Encoded by</li>
      *   <li><b>TEXT</b> Lyricist/Text writer</li>
-     *   <li><b>TFLT</b> File type</li>
+     *   <li><b>TFLT</b> %File type</li>
      *   <li><b>TIPL</b> Involved people list</li>
      *   <li><b>TIT1</b> Content group description</li>
      *   <li><b>TIT2</b> Title/songname/content description</li>
@@ -74,7 +74,7 @@ namespace TagLib {
      *   <li><b>TOFN</b> Original filename</li>
      *   <li><b>TOLY</b> Original lyricist(s)/text writer(s)</li>
      *   <li><b>TOPE</b> Original artist(s)/performer(s)</li>
-     *   <li><b>TOWN</b> File owner/licensee</li>
+     *   <li><b>TOWN</b> %File owner/licensee</li>
      *   <li><b>TPE1</b> Lead performer(s)/Soloist(s)</li>
      *   <li><b>TPE2</b> Band/orchestra/accompaniment</li>
      *   <li><b>TPE3</b> Conductor/performer refinement</li>
@@ -162,6 +162,7 @@ namespace TagLib {
 
       void setText(const String &s) override;
       String toString() const override;
+      StringList toStringList() const override;
 
       /*!
        * Returns the text encoding that will be used in rendering this frame.
@@ -222,6 +223,7 @@ namespace TagLib {
        */
       PropertyMap makeTMCLProperties() const;
       class TextIdentificationFramePrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<TextIdentificationFramePrivate> d;
     };
 
@@ -276,7 +278,6 @@ namespace TagLib {
        */
       void setDescription(const String &s);
 
-      StringList fieldList() const;
       void setText(const String &text) override;
       void setText(const StringList &fields);
 
@@ -299,15 +300,25 @@ namespace TagLib {
        * Searches for the user defined text frame with the description \a description
        * in \a tag.  This returns null if no matching frames were found.
        */
-      static UserTextIdentificationFrame *find(Tag *tag, const String &description);
+      static UserTextIdentificationFrame *find(const Tag *tag, const String &description);
+
+      /*!
+       * Returns an appropriate TXXX frame description for the given free-form tag key.
+       */
+      static String keyToTXXX(const String &);
+
+      /*!
+       * Returns a free-form tag name for the given ID3 frame description.
+       */
+      static String txxxToKey(const String &);
 
     private:
       UserTextIdentificationFrame(const ByteVector &data, Header *h);
-      UserTextIdentificationFrame(const TextIdentificationFrame &);
 
       void checkFields();
 
       class UserTextIdentificationFramePrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<UserTextIdentificationFramePrivate> d;
     };
 

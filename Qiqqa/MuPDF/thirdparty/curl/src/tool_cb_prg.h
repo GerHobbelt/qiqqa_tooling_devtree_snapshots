@@ -41,6 +41,8 @@ struct ProgressData {
   int barmove;
 };
 
+struct OperationConfig;
+
 void progressbarinit(struct ProgressData *bar,
                      struct OperationConfig *config);
 

@@ -60,6 +60,11 @@ typedef struct fz_stream fz_stream;
 fz_stream *fz_open_file(fz_context *ctx, const char *filename);
 
 /**
+	Do the same as fz_open_file, but delete the file upon close.
+*/
+fz_stream *fz_open_file_autodelete(fz_context *ctx, const char *filename);
+
+/**
 	Open the named file and wrap it in a stream.
 
 	Does the same as fz_open_file, but in the event the file
@@ -68,17 +73,13 @@ fz_stream *fz_open_file(fz_context *ctx, const char *filename);
 */
 fz_stream *fz_try_open_file(fz_context *ctx, const char *name);
 
-#if defined(_WIN32) || defined(_WIN64)
 /**
-	Open the named file and wrap it in a stream.
+	Return the filename (UTF-8 encoded) from which a stream was opened.
 
-	This function is only available when compiling for Win32.
-
-	filename: Wide character path to the file as it would be given
-	to _wfopen().
+	Returns NULL if the filename is not available (or the stream was
+	opened from a source other than a file).
 */
-fz_stream *fz_open_file_w(fz_context *ctx, const wchar_t *filename);
-#endif /* _WIN32 || _WIN64 */
+const char *fz_stream_filename(fz_context *ctx, fz_stream *stm);
 
 /**
 	Open a block of memory as a stream.
@@ -533,12 +534,16 @@ static inline int fz_is_eof(fz_context *ctx, fz_stream *stm)
 
 	n: The number of bits to read, between 1 and 8*sizeof(int)
 	inclusive.
+	TODO: IS THIS REALLY CORRECT, CAN WE READ 32 BITS WITHOUT
+	SHIFTING OUT OF BOUNDS?
 
 	Returns -1 for EOF, or the required number of bits.
 */
 static inline unsigned int fz_read_bits(fz_context *ctx, fz_stream *stm, int n)
 {
 	int x;
+
+	assert(n > 1 && n < 8 * (int) sizeof(int));
 
 	if (n <= stm->avail)
 	{
@@ -653,7 +658,7 @@ extern "C" {
 	Create a stream from a FILE * that will not be closed
 	when the stream is dropped.
 */
-fz_stream *fz_open_file_ptr_no_close(fz_context *ctx, FILE *file);
+fz_stream *fz_open_file_ptr_no_close(fz_context *ctx, FILE *file, const char *name, int del_on_drop);
 
 #ifdef __cplusplus
 }

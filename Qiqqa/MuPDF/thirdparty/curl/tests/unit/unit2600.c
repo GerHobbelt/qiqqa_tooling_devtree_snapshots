@@ -72,8 +72,6 @@ static void unit_stop(void)
   curl_global_cleanup();
 }
 
-#ifdef DEBUGBUILD
-
 struct test_case {
   int id;
   const char *url;
@@ -161,6 +159,7 @@ static struct Curl_cftype cft_test = {
   cf_test_destroy,
   cf_test_connect,
   Curl_cf_def_close,
+  Curl_cf_def_shutdown,
   Curl_cf_def_get_host,
   Curl_cf_def_adjust_pollset,
   Curl_cf_def_data_pending,
@@ -193,7 +192,7 @@ static CURLcode cf_test_create(struct Curl_cfilter **pcf,
   ctx->ai_family = ai->ai_family;
   ctx->transport = transport;
   ctx->started = Curl_now();
-#ifdef ENABLE_IPV6
+#ifdef USE_IPV6
   if(ctx->ai_family == AF_INET6) {
     ctx->stats = &current_tr->cf6;
     ctx->fail_delay_ms = current_tc->cf6_fail_delay_ms;
@@ -329,8 +328,6 @@ static void test_connect(struct test_case *tc)
   check_result(tc, &tr);
 }
 
-#endif /* DEBUGBUILD */
-
 /*
  * How these test cases work:
  * - replace the creation of the TCP socket filter with our test filter
@@ -360,7 +357,7 @@ static struct test_case TEST_CASES[] = {
   { 2, TURL, "test.com:123:192.0.2.1,192.0.2.2", CURL_IPRESOLVE_WHATEVER,
     CNCT_TMOT, 150, 200,  200,    2,  0,      400,  TC_TMOT,  R_FAIL, NULL },
   /* 2 ipv4, fails after ~400ms, reports COULDNT_CONNECT   */
-#ifdef ENABLE_IPV6
+#ifdef USE_IPV6
   { 3, TURL, "test.com:123:::1", CURL_IPRESOLVE_WHATEVER,
     CNCT_TMOT, 150, 200,  200,    0,  1,      200,  TC_TMOT,  R_FAIL, NULL },
   /* 1 ipv6, fails after ~200ms, reports COULDNT_CONNECT   */
@@ -389,12 +386,10 @@ static struct test_case TEST_CASES[] = {
 
 UNITTEST_START
 
-#if defined(DEBUGBUILD)
   size_t i;
 
   for(i = 0; i < sizeof(TEST_CASES)/sizeof(TEST_CASES[0]); ++i) {
     test_connect(&TEST_CASES[i]);
   }
-#endif
 
 UNITTEST_STOP

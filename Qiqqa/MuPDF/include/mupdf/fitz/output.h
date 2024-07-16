@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -114,7 +114,8 @@ typedef int64_t (fz_output_tell_fn)(fz_context *ctx, fz_output *out);
 	fz_catch(ctx)
 	{
 		// report the unexpected b0rk:
-		report_our_failure_to_deliver(fz_caught_message(ctx));
+		//report_our_failure_to_deliver(fz_caught_message(ctx));
+		fz_report_error(ctx);
 	}
 	```
 
@@ -134,6 +135,14 @@ typedef int64_t (fz_output_tell_fn)(fz_context *ctx, fz_output *out);
 	out: a reference to the output stream.
 */
 typedef void (fz_output_close_fn)(fz_context *ctx, fz_output *out);
+
+/**
+	A function type for use when implementing
+	fz_outputs. The supplied function of this type is called
+	when the output stream is reset, and resets the state
+	to that when it was first initialised.
+*/
+typedef void (fz_output_reset_fn)(fz_context *ctx, void *state);
 
 /**
 	A function type for use when implementing
@@ -217,8 +226,10 @@ struct fz_output
 	fz_output_tell_fn *tell;
 	fz_output_close_fn *close;
 	fz_output_drop_fn *drop;
+	fz_output_reset_fn *reset;
 	fz_stream_from_output_fn *as_stream;
 	fz_truncate_fn *truncate;
+	int closed;
 	char *bp, *wp, *ep;
 	char *filepath;
 #if !defined(DISABLE_MUTHREADS)
@@ -257,6 +268,15 @@ fz_output *fz_new_output(fz_context *ctx, int bufsiz, void *state, fz_output_wri
 	overwriting it.
 */
 fz_output *fz_new_output_with_path(fz_context *, const char *filename, int append);
+
+/**
+	Open an output stream that writes to a
+	given FILE *.
+
+	file: The file pointers to write to. NULL is interpreted as effectively
+	meaning /dev/null or similar.
+*/
+fz_output *fz_new_output_with_file_ptr(fz_context *ctx, FILE *file, const char *filename);
 
 /**
 	Open an output stream that appends
@@ -411,6 +431,14 @@ void fz_flush_output_no_lock(fz_context *ctx, fz_output *out);
 	Flush pending output and close an output stream.
 */
 void fz_close_output(fz_context *, fz_output *);
+
+/**
+	Reset a closed output stream. Returns state to
+	(broadly) that which it was in when opened. Not
+	all outputs can be reset, so this may throw an
+	exception.
+*/
+void fz_reset_output(fz_context *, fz_output *);
 
 /**
 	Free an output stream. Don't forget to close it first!
@@ -576,6 +604,11 @@ void fz_write_bits(fz_context *ctx, fz_output *out, unsigned int data, int num_b
 void fz_write_bits_sync(fz_context *ctx, fz_output *out);
 
 /**
+	Copy the stream contents to the output.
+*/
+void fz_write_stream(fz_context *ctx, fz_output *out, fz_stream *in);
+
+/**
 	HEX nibble conversion lookup table. Used internally by fz_printf() et al.
 */
 extern const char* fz_hex_digits;
@@ -592,6 +625,16 @@ extern const char* fz_hex_digits;
 	left justification (e.g. `%-5s`, `%-8d`) and
 	width, both static width (e.g. `%5d`) and dynamic width (e.g. `%*d`).
 	The `*` modifier expects an extra `int` type argument, as usual.
+
+    Next to that, these POSIX thousands separator modifiers are recognized:
+	- `'` indicates that `'` should be inserted into integers as thousands separators.
+	- `,` indicates that `,` should be inserted into integers as thousands separators.
+	- `_` indicates that `_` should be inserted into integers as thousands separators.
+	Note however that POSIX chooses the thousand separator in a locale specific way -- we do not. 
+	We always apply it every 3 characters for the positive part of integers, so other styles, 
+	such as Indian (123,456,78) are not	supported. The other exception is when printing hexadecimal
+	or binary values (including pointer values): in that case a separator is printed
+	once every 4 nibbles/bits, e.g. `"%_p"` --> `"0x1234_5678_abcd_ef48"`.
 
 	The 'precision' modifier is also supported, both static precision
 	(e.g. `%.2f`) and dynamic precision (e.g. `%.*f`), where the latter

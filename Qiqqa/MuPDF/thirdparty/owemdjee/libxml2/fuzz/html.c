@@ -18,7 +18,6 @@ LLVMFuzzerInitialize(int *argc ATTRIBUTE_UNUSED,
     xmlInitializeCatalog();
     xmlCatalogSetDefaults(XML_CATA_ALLOW_NONE);
 #endif
-    xmlSetGenericErrorFunc(NULL, xmlFuzzErrorFunc);
 
     return 0;
 }
@@ -46,6 +45,7 @@ LLVMFuzzerTestOneInput(const char *data, size_t size) {
     xmlFuzzMemSetLimit(maxAlloc);
     ctxt = htmlNewParserCtxt();
     if (ctxt != NULL) {
+        xmlCtxtSetErrorHandler(ctxt, xmlFuzzSErrorFunc, NULL);
         doc = htmlCtxtReadMemory(ctxt, docBuffer, docSize, NULL, NULL, opts);
         xmlFuzzCheckMallocFailure("htmlCtxtReadMemory",
                                   ctxt->errNo == XML_ERR_NO_MEMORY);
@@ -62,16 +62,14 @@ LLVMFuzzerTestOneInput(const char *data, size_t size) {
              * own buffer to avoid encoding the output. The HTML encoding is
              * excruciatingly slow (see htmlEntityValueLookup).
              */
-            xmlFuzzResetMallocFailed();
             out = xmlAllocOutputBuffer(NULL);
             htmlDocContentDumpOutput(out, doc, NULL);
             content = xmlOutputBufferGetContent(out);
+            xmlOutputBufferClose(out);
             xmlFuzzCheckMallocFailure("htmlDocContentDumpOutput",
                                       content == NULL);
-            xmlOutputBufferClose(out);
 #endif
 
-            xmlFuzzResetMallocFailed();
             copy = xmlCopyDoc(doc, 1);
             xmlFuzzCheckMallocFailure("xmlCopyNode", copy == NULL);
             xmlFreeDoc(copy);
@@ -95,6 +93,7 @@ LLVMFuzzerTestOneInput(const char *data, size_t size) {
                                         XML_CHAR_ENCODING_NONE);
 
         if (ctxt != NULL) {
+            xmlCtxtSetErrorHandler(ctxt, xmlFuzzSErrorFunc, NULL);
             htmlCtxtUseOptions(ctxt, opts);
 
             for (consumed = 0; consumed < docSize; consumed += chunkSize) {

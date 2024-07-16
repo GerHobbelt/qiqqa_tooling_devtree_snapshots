@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2023 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -140,7 +140,7 @@ pdf_outline_iterator_next(fz_context *ctx, fz_outline_iterator *iter_)
 	if (iter->modifier != MOD_NONE || iter->current == NULL)
 		return -1;
 	next = pdf_dict_get(ctx, iter->current, PDF_NAME(Next));
-	if (next == NULL)
+	if (!pdf_is_dict(ctx, next))
 	{
 		iter->modifier = MOD_AFTER;
 		return 1;
@@ -165,7 +165,7 @@ pdf_outline_iterator_prev(fz_context *ctx, fz_outline_iterator *iter_)
 		return 0;
 	}
 	prev = pdf_dict_get(ctx, iter->current, PDF_NAME(Prev));
-	if (prev == NULL)
+	if (!pdf_is_dict(ctx, prev))
 		return -1;
 
 	iter->modifier = MOD_NONE;
@@ -191,11 +191,11 @@ pdf_outline_iterator_up(fz_context *ctx, fz_outline_iterator *iter_)
 	 * that points to the outlines object. We never want to
 	 * allow us to move 'up' onto the outlines object. */
 	up = pdf_dict_get(ctx, iter->current, PDF_NAME(Parent));
-	if (up == NULL)
+	if (!pdf_is_dict(ctx, up))
 		/* This should never happen! */
 		return -1;
 	grandparent = pdf_dict_get(ctx, up, PDF_NAME(Parent));
-	if (grandparent == NULL)
+	if (!pdf_is_dict(ctx, grandparent))
 		return -1;
 
 	iter->modifier = MOD_NONE;
@@ -212,7 +212,7 @@ pdf_outline_iterator_down(fz_context *ctx, fz_outline_iterator *iter_)
 	if (iter->modifier != MOD_NONE || iter->current == NULL)
 		return -1;
 	down = pdf_dict_get(ctx, iter->current, PDF_NAME(First));
-	if (down == NULL)
+	if (!pdf_is_dict(ctx, down))
 	{
 		iter->modifier = MOD_BELOW;
 		return 1;
@@ -241,11 +241,11 @@ do_outline_update(fz_context *ctx, pdf_obj *obj, fz_outline_item *item, int is_n
 		open_delta = 1;
 
 	parent = pdf_dict_get(ctx, obj, PDF_NAME(Parent));
-	while (parent)
+	while (pdf_is_dict(ctx, parent))
 	{
 		pdf_obj *cobj = pdf_dict_get(ctx, parent, PDF_NAME(Count));
 		count = pdf_to_int(ctx, cobj);
-		if (open_delta || cobj == NULL)
+		if (open_delta || !pdf_is_int(ctx, cobj))
 			pdf_dict_put_int(ctx, parent, PDF_NAME(Count), count >= 0 ? count + open_delta : count - open_delta);
 		if (count < 0)
 			break;
@@ -284,10 +284,11 @@ pdf_outline_iterator_insert(fz_context *ctx, fz_outline_iterator *iter_, fz_outl
 	pdf_obj *prev;
 	pdf_obj *parent;
 	pdf_obj *outlines = NULL;
+	pdf_obj *newoutlines = NULL;
 	int result = 0;
 
 	fz_var(obj);
-	fz_var(outlines);
+	fz_var(newoutlines);
 
 	pdf_begin_operation(ctx, doc, "Insert outline item");
 
@@ -301,10 +302,10 @@ pdf_outline_iterator_insert(fz_context *ctx, fz_outline_iterator *iter_, fz_outl
 		{
 			pdf_obj *root = pdf_dict_get(ctx, pdf_trailer(ctx, doc), PDF_NAME(Root));
 			outlines = pdf_dict_get(ctx, root, PDF_NAME(Outlines));
-			if (outlines == NULL)
+			if (!pdf_is_dict(ctx, outlines))
 			{
 				/* No outlines entry, better make one. */
-				outlines = pdf_add_new_dict(ctx, doc, 4);
+				newoutlines = outlines = pdf_add_new_dict(ctx, doc, 4);
 				pdf_dict_put(ctx, root, PDF_NAME(Outlines), outlines);
 				pdf_dict_put(ctx, outlines, PDF_NAME(Type), PDF_NAME(Outlines));
 			}
@@ -337,7 +338,7 @@ pdf_outline_iterator_insert(fz_context *ctx, fz_outline_iterator *iter_, fz_outl
 			break;
 		default:
 			prev = pdf_dict_get(ctx, iter->current, PDF_NAME(Prev));
-			if (prev)
+			if (pdf_is_dict(ctx, prev))
 			{
 				pdf_dict_put(ctx, prev, PDF_NAME(Next), obj);
 				pdf_dict_put(ctx, obj, PDF_NAME(Prev), prev);
@@ -354,7 +355,7 @@ pdf_outline_iterator_insert(fz_context *ctx, fz_outline_iterator *iter_, fz_outl
 	fz_always(ctx)
 	{
 		pdf_drop_obj(ctx, obj);
-		pdf_drop_obj(ctx, outlines);
+		pdf_drop_obj(ctx, newoutlines);
 	}
 	fz_catch(ctx)
 	{
@@ -424,16 +425,16 @@ pdf_outline_iterator_del(fz_context *ctx, fz_outline_iterator *iter_)
 			up = pdf_dict_get(ctx, up, PDF_NAME(Parent));
 		}
 
-		if (prev)
+		if (pdf_is_dict(ctx, prev))
 		{
-			if (next)
+			if (pdf_is_dict(ctx, next))
 				pdf_dict_put(ctx, prev, PDF_NAME(Next), next);
 			else
 				pdf_dict_del(ctx, prev, PDF_NAME(Next));
 		}
-		if (next)
+		if (pdf_is_dict(ctx, next))
 		{
-			if (prev)
+			if (pdf_is_dict(ctx, prev))
 				pdf_dict_put(ctx, next, PDF_NAME(Prev), prev);
 			else
 			{
@@ -442,7 +443,7 @@ pdf_outline_iterator_del(fz_context *ctx, fz_outline_iterator *iter_)
 			}
 			iter->current = next;
 		}
-		else if (prev)
+		else if (pdf_is_dict(ctx, prev))
 		{
 			iter->current = prev;
 			pdf_dict_put(ctx, parent, PDF_NAME(Last), prev);
@@ -487,10 +488,10 @@ pdf_outline_iterator_item(fz_context *ctx, fz_outline_iterator *iter_)
 	iter->item.uri = NULL;
 
 	obj = pdf_dict_get(ctx, iter->current, PDF_NAME(Title));
-	if (obj)
+	if (pdf_is_string(ctx, obj))
 		iter->item.title = Memento_label(fz_strdup(ctx, pdf_to_text_string(ctx, obj, NULL)), "outline_title");
 	obj = pdf_dict_get(ctx, iter->current, PDF_NAME(Dest));
-	if (obj)
+	if (pdf_is_array(ctx, obj) || pdf_is_name(ctx, obj) || pdf_is_string(ctx, obj))
 		iter->item.uri = Memento_label(pdf_parse_link_dest(ctx, doc, obj), "outline_uri");
 	else
 	{
@@ -518,7 +519,7 @@ pdf_outline_iterator_drop(fz_context *ctx, fz_outline_iterator *iter_)
 
 fz_outline_iterator *pdf_new_outline_iterator(fz_context *ctx, pdf_document *doc)
 {
-	pdf_obj *root, *obj, *first;
+	pdf_obj *root, *obj, *first = NULL;
 	pdf_mark_bits *marks;
 	pdf_outline_iterator *iter = NULL;
 	int fixed = 0;
@@ -532,7 +533,7 @@ fz_outline_iterator *pdf_new_outline_iterator(fz_context *ctx, pdf_document *doc
 		root = pdf_dict_get(ctx, pdf_trailer(ctx, doc), PDF_NAME(Root));
 		obj = pdf_dict_get(ctx, root, PDF_NAME(Outlines));
 		first = pdf_dict_get(ctx, obj, PDF_NAME(First));
-		if (first)
+		if (pdf_is_dict(ctx, first))
 		{
 			/* cache page tree for fast link destination lookups. This
 			 * will be dropped 'just in time' on writes to the doc. */

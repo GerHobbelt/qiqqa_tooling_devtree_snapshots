@@ -517,7 +517,7 @@ bool tool_create_output_file(struct OutStruct *outs,
 
     do {
       fd = open(fname, O_CREAT | O_WRONLY | O_EXCL | O_BINARY, OPENMODE);
-      /* Keep retrying in the hope that it isn't interrupted sometime */
+      /* Keep retrying in the hope that it is not interrupted sometime */
     } while(fd == -1 && errno == EINTR);
     if (fd == -1) {
       int next_num = 1;
@@ -535,10 +535,10 @@ bool tool_create_output_file(struct OutStruct *outs,
 
       bool has_risky_filename = hidden;
 
-      while(fd == -1 && /* haven't successfully opened a file */
+      while(fd == -1 && /* have not successfully opened a file */
             (errno == EEXIST || errno == EISDIR) &&
             /* because we keep having files that already exist */
-            next_num < 100 /* and we haven't reached the retry limit */ ) {
+            next_num < 100 /* and we have not reached the retry limit */ ) {
         free(newname);
         newname = aprintf("%.*s%s.%02d%s", fn_ext_pos, fname, (has_risky_filename ? "__hidden__" : ""), next_num, fn_ext);
         if (!newname) {
@@ -550,7 +550,7 @@ bool tool_create_output_file(struct OutStruct *outs,
         next_num++;
         do {
           fd = open(newname, O_CREAT | O_WRONLY | O_EXCL | O_BINARY, OPENMODE);
-          /* Keep retrying in the hope that it isn't interrupted sometime */
+          /* Keep retrying in the hope that it is not interrupted sometime */
         } while(fd == -1 && errno == EINTR);
       }
 
@@ -625,7 +625,7 @@ size_t tool_write_cb(char *buffer, size_t sz, size_t nmemb, void *userdata)
 
 #ifdef DEBUGBUILD
   {
-    char *tty = tool_getenv("CURL_ISATTY");
+    char *tty = curl_getenv("CURL_ISATTY");
     if(tty) {
       is_tty = TRUE;
       curl_free(tty);
@@ -799,7 +799,8 @@ size_t tool_write_cb(char *buffer, size_t sz, size_t nmemb, void *userdata)
 
     if(rlen) {
       /* calculate buffer size for wide characters */
-      wc_len = MultiByteToWideChar(CP_UTF8, 0, (LPCSTR)rbuf, rlen, NULL, 0);
+      wc_len = (DWORD)MultiByteToWideChar(CP_UTF8, 0, (LPCSTR)rbuf, (int)rlen,
+                                          NULL, 0);
       if(!wc_len)
         return CURL_WRITEFUNC_ERROR;
 
@@ -807,8 +808,8 @@ size_t tool_write_cb(char *buffer, size_t sz, size_t nmemb, void *userdata)
       if(!wc_buf)
         return CURL_WRITEFUNC_ERROR;
 
-      wc_len = MultiByteToWideChar(CP_UTF8, 0, (LPCSTR)rbuf, rlen, wc_buf,
-                                   wc_len);
+      wc_len = (DWORD)MultiByteToWideChar(CP_UTF8, 0, (LPCSTR)rbuf, (int)rlen,
+                                          wc_buf, (int)wc_len);
       if(!wc_len) {
         free(wc_buf);
         return CURL_WRITEFUNC_ERROR;

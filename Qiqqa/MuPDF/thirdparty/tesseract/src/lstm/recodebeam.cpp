@@ -17,11 +17,14 @@
 //
 ///////////////////////////////////////////////////////////////////////
 
+#include <tesseract/preparation.h> // compiler config, etc.
+
 #include "recodebeam.h"
 
 #include "networkio.h"
 #include "pageres.h"
 #include "unicharcompress.h"
+#include "global_params.h"
 
 #include <algorithm> // for std::reverse
 
@@ -113,7 +116,7 @@ void RecodeBeamSearch::Decode(const GENERIC_2D_ARRAY<float> &output,
 
 void RecodeBeamSearch::DecodeSecondaryBeams(
     const NetworkIO &output, double dict_ratio, double cert_offset,
-    double worst_dict_cert, const UNICHARSET *charset) {
+    double worst_dict_cert, const UNICHARSET *charset, int lstm_choice_mode) {
   for (auto data : secondary_beam_) {
     delete data;
   }
@@ -240,7 +243,8 @@ void RecodeBeamSearch::ExtractBestPathAsUnicharIds(
 void RecodeBeamSearch::ExtractBestPathAsWords(const TBOX &line_box,
                                               float scale_factor,
                                               const UNICHARSET *unicharset,
-                                              PointerVector<WERD_RES> *words) {
+                                              PointerVector<WERD_RES> *words,
+                                              int lstm_choice_mode) {
   words->truncate(0);
   std::vector<int> unichar_ids;
   std::vector<float> certs;
@@ -511,7 +515,8 @@ void RecodeBeamSearch::DebugBeams(const UNICHARSET *unicharset) const {
     for (int d = 0; d < 2; ++d) {
       for (int c = 0; c < NC_COUNT; ++c) {
         auto cont = static_cast<NodeContinuation>(c);
-        int index = BeamIndex(d, cont, 0);
+        // warning C4800: Implicit conversion from 'int' to bool. Possible information loss
+        int index = BeamIndex(d != 0, cont, 0);
         if (beam_[p]->beams_[index].empty()) {
           continue;
         }
@@ -826,6 +831,7 @@ void RecodeBeamSearch::DecodeSecondaryStep(
   } else {
     RecodeBeam *prev = secondary_beam_[t - 1];
     if (HasDebug()) {
+      TPrintGroupLinesTillEndOfScope push;
       int beam_index = BeamIndex(true, NC_ANYTHING, 0);
       for (int i = prev->beams_[beam_index].size() - 1; i >= 0; --i) {
         std::vector<const RecodeNode *> path;
@@ -891,15 +897,13 @@ void RecodeBeamSearch::ContinueContext(
   int length = LengthFromBeamsIndex(index);
   bool use_dawgs = IsDawgFromBeamsIndex(index);
   NodeContinuation prev_cont = ContinuationFromBeamsIndex(index);
-  for (int p = length - 1; p >= 0; --p, previous = previous->prev) {
-    while (previous != nullptr &&
-           (previous->duplicate || previous->code == null_char_)) {
+  for (int p = length - 1; p >= 0 && previous != nullptr; --p) {
+    while (previous->duplicate || previous->code == null_char_) {
       previous = previous->prev;
     }
-    if (previous != nullptr) {
-      prefix.Set(p, previous->code);
-      full_code.Set(p, previous->code);
-    }
+    prefix.Set(p, previous->code);
+    full_code.Set(p, previous->code);
+    previous = previous->prev;
   }
   if (prev != nullptr && !is_simple_text_) {
     if (top_n_flags_[prev->code] == top_n_flag) {
@@ -945,10 +949,12 @@ void RecodeBeamSearch::ContinueContext(
       }
       float cert = NetworkIO::ProbToCertainty(outputs[code]) + cert_offset;
       if (cert < kMinCertainty && code != null_char_) {
-		full_code.Set(length, code);
-		int unichar_id = recoder_.DecodeUnichar(full_code);
-		const char *wrdstr = (charset != nullptr ? charset->id_to_unichar(unichar_id) : nullptr);
-		tprintDebug("ignoring non-dictionary word char code {} ({}) at certainty {}\n", code, wrdstr, cert);
+        if (verbose_process || debug_misc || HasDebug()) {
+			full_code.Set(length, code);
+			int unichar_id = recoder_.DecodeUnichar(full_code);
+			const char *wrdstr = (charset != nullptr ? charset->id_to_unichar(unichar_id) : nullptr);
+			tprintDebug("ignoring non-dictionary word char code {} ({}) at certainty {}\n", code, wrdstr, cert);
+		}
   	    continue;
       }
       full_code.Set(length, code);
@@ -1180,7 +1186,7 @@ void RecodeBeamSearch::PushDupOrNoDawgIfBetter(
                        prev ? prev->permuter : TOP_CHOICE_PERM, false, false,
                        false, dup, cert, prev, nullptr, &step->beams_[index]);
     }
-	else if (verbose_process || debug_misc) {
+	else if (verbose_process || debug_misc || HasDebug()) {
       const char *wrdstr = (charset != nullptr ? charset->id_to_unichar(unichar_id) : nullptr);
 	  tprintDebug("ignoring non-dictionary word char code {} ({}) at certainty {}\n", code, wrdstr, cert);
 	}
@@ -1293,7 +1299,8 @@ void RecodeBeamSearch::ExtractBestPaths(
     }
     auto cont = static_cast<NodeContinuation>(c);
     for (int is_dawg = 0; is_dawg < 2; ++is_dawg) {
-      int beam_index = BeamIndex(is_dawg, cont, 0);
+      // warning C4800: Implicit conversion from 'int' to bool. Possible information loss
+      int beam_index = BeamIndex(is_dawg != 0, cont, 0);
       int heap_size = last_beam->beams_[beam_index].size();
       for (int h = 0; h < heap_size; ++h) {
         const RecodeNode *node = &last_beam->beams_[beam_index].get(h).data();

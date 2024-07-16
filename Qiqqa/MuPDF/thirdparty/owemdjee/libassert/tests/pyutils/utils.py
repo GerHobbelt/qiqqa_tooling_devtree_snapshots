@@ -41,8 +41,6 @@ def parse_output(output: str):
             # read until blank line
             while i < len(output_lines) and output_lines[i] != "":
                 line = output_lines[i]
-                if re.match(r"^\w+ failed at .+\.cpp:\d+: .+$", line):
-                    line = re.sub(r"(?<= failed at ).+\.cpp(?=:\d+: .+$)", "integration/integration.cpp", line)
                 e["lines"].append(line)
                 i += 1
             # read until non blank line
@@ -139,7 +137,7 @@ def icdiff(a: Union[str, tuple], b: Union[str, tuple]):
         launch_ic("icdiff")
     except FileNotFoundError:
         try:
-            launch_ic("python3", "./icdiff")
+            launch_ic("python3", "-m", "icdiff")
         except FileNotFoundError:
             print("FileNotFoundError while spawning subprocess")
     print("{x}============={x}".format(x = "=" * 40))

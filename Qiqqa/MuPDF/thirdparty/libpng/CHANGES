@@ -3279,7 +3279,7 @@ Version 1.5.2beta03 [March 3, 2011]
   Define PNG_ALLOCATED to blank when _MSC_VER<1300.
 
 Version 1.5.2rc01 [March 19, 2011]
-  Define remaining attributes to blank when MSC_VER<1300.
+  Define remaining attributes to blank when _MSC_VER<1300.
   ifdef out mask arrays in pngread.c when interlacing is not supported.
 
 Version 1.5.2rc02 [March 22, 2011]
@@ -3515,7 +3515,7 @@ Version 1.5.4beta08 [June 23, 2011]
   Updated scripts/pnglibconf.h.prebuilt.
 
 Version 1.5.4rc01 [June 30, 2011]
-  Define PNG_ALLOCATED to "restrict" only if MSC_VER >= 1400.
+  Define PNG_ALLOCATED to "restrict" only if _MSC_VER >= 1400.
 
 Version 1.5.4 [July 7, 2011]
   No changes.
@@ -3775,7 +3775,7 @@ Version 1.5.7rc01 [December 1, 2011]
 Version 1.5.7rc02 [December 5, 2011]
   Revised project files and contrib/pngvalid/pngvalid.c to account for
     the relocation of pngvalid into contrib/libtests.
-  Revised pngconf.h to use " __declspec(restrict)" only when MSC_VER >= 1400,
+  Revised pngconf.h to use " __declspec(restrict)" only when _MSC_VER >= 1400,
     as in libpng-1.5.4.
   Put CRLF line endings in the owatcom project files.
 

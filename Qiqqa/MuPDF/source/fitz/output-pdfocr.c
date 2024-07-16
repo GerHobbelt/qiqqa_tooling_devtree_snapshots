@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -47,6 +47,8 @@ const char *fz_pdfocr_write_options_usage =
 	"  strip-height=N: Strip height (default 0=fullpage)\n"
 	"  ocr-language=<lang>: OCR language (default=eng)\n"
 	"  ocr-datadir=<datadir>: OCR data path (default=rely on TESSDATA_PREFIX)\n"
+	"  skew=none,auto,<angle>: Whether to skew correct (default=none).\n"
+	"  skew-border=increase,maintain,decrease: Size change for border pixels (default=increase).\n"
 	"\n";
 
 static const char funky_font[] =
@@ -187,6 +189,27 @@ fz_parse_pdfocr_options(fz_context *ctx, fz_pdfocr_options *opts, const char *ar
 	{
 		fz_copy_option(ctx, val, opts->datadir, nelem(opts->datadir));
 	}
+	if (fz_has_option(ctx, args, "skew", &val))
+	{
+		if (fz_option_eq(val, "auto"))
+			opts->skew_correct = 1;
+		else
+		{
+			opts->skew_correct = 2;
+			opts->skew_angle = fz_atof(val);
+		}
+	}
+	if (fz_has_option(ctx, args, "skew-border", &val))
+	{
+		if (fz_option_eq(val, "increase"))
+			opts->skew_border = 0;
+		else if (fz_option_eq(val, "maintain"))
+			opts->skew_border = 1;
+		else if (fz_option_eq(val, "decrease"))
+			opts->skew_border = 2;
+		else
+			fz_throw(ctx, FZ_ERROR_ARGUMENT, "Unsupported skew-border option");
+	}
 
 	return opts;
 #endif
@@ -225,6 +248,10 @@ typedef struct pdfocr_band_writer_s
 	fz_band_writer super;
 	fz_pdfocr_options options;
 
+	/* The actual output size */
+	int deskewed_w;
+	int deskewed_h;
+
 	int obj_num;
 	int xref_max;
 	int64_t *xref;
@@ -234,6 +261,8 @@ typedef struct pdfocr_band_writer_s
 	unsigned char *stripbuf;
 	unsigned char *compbuf;
 	size_t complen;
+
+	fz_pixmap *skew_bitmap;
 
 	void *tessapi;
 	fz_pixmap *ocrbitmap;
@@ -262,6 +291,41 @@ new_obj(fz_context *ctx, pdfocr_band_writer *writer)
 }
 
 static void
+post_skew_write_header(fz_context *ctx, pdfocr_band_writer *writer, int w, int h)
+{
+	fz_output *out = writer->super.out;
+	int xres = writer->super.xres;
+	int yres = writer->super.yres;
+	int sh = writer->options.strip_height;
+	int n = writer->super.n;
+	int strips;
+	int i;
+
+	if (sh == 0)
+		sh = h;
+	assert(sh != 0 && "pdfocr_write_header() should not be given zero height input.");
+	strips = (h + sh - 1) / sh;
+
+	writer->deskewed_w = w;
+	writer->deskewed_h = h;
+
+	writer->stripbuf = Memento_label(fz_malloc(ctx, (size_t)w * sh * n), "pdfocr_stripbuf");
+	writer->complen = zng_compressBound((size_t)w * sh * n);
+	writer->compbuf = Memento_label(fz_malloc(ctx, writer->complen), "pdfocr_compbuf");
+
+	/* Always round the width of ocrbitmap up to a multiple of 4. */
+	writer->ocrbitmap = fz_new_pixmap(ctx, NULL, (w + 3) & ~3, h, NULL, 0);
+	fz_set_pixmap_resolution(ctx, writer->ocrbitmap, xres, yres);
+
+	/* Send the Page Object */
+	fz_write_printf(ctx, out, "%d 0 obj\n<<\n/Type /Page\n/Parent 2 0 R\n/Resources <<\n/XObject <<\n", new_obj(ctx, writer));
+	for (i = 0; i < strips; i++)
+		fz_write_printf(ctx, out, "/Image%d %d 0 R\n", i, writer->obj_num + 1 + i);
+	fz_write_printf(ctx, out, ">>\n/Font<</F0 3 0 R>>\n>>\n/MediaBox[ 0 0 %g %g ]\n/Contents [ %d 0 R ]\n>>\nendobj\n",
+		w * 72.0f / xres, h * 72.0f / yres, writer->obj_num + strips);
+}
+
+static void
 pdfocr_write_header(fz_context *ctx, fz_band_writer *writer_, fz_colorspace *cs)
 {
 	pdfocr_band_writer *writer = (pdfocr_band_writer *)writer_;
@@ -271,16 +335,13 @@ pdfocr_write_header(fz_context *ctx, fz_band_writer *writer_, fz_colorspace *cs)
 	int n = writer->super.n;
 	int s = writer->super.s;
 	int a = writer->super.alpha;
-	int xres = writer->super.xres;
-	int yres = writer->super.yres;
 	int sh = writer->options.strip_height;
 	int strips;
-	int i;
 
 	if (sh == 0)
 		sh = h;
 	assert(sh != 0 && "pdfocr_write_header() should not be given zero height input.");
-	strips = (h + sh-1)/sh;
+	strips = (h + sh - 1) / sh;
 
 	if (a != 0)
 		fz_throw(ctx, FZ_ERROR_ARGUMENT, "PDFOCR cannot write alpha channel");
@@ -295,12 +356,6 @@ pdfocr_write_header(fz_context *ctx, fz_band_writer *writer_, fz_colorspace *cs)
 	writer->compbuf = NULL;
 	fz_drop_pixmap(ctx, writer->ocrbitmap);
 	writer->ocrbitmap = NULL;
-	writer->stripbuf = Memento_label(fz_malloc(ctx, (size_t)w * sh * n), "pdfocr_stripbuf");
-	writer->complen = zng_compressBound((size_t)w * sh * n);
-	writer->compbuf = Memento_label(fz_malloc(ctx, writer->complen), "pdfocr_compbuf");
-	/* Always round the width of ocrbitmap up to a multiple of 4. */
-	writer->ocrbitmap = fz_new_pixmap(ctx, NULL, (w+3)&~3, h, NULL, 0);
-	fz_set_pixmap_resolution(ctx, writer->ocrbitmap, xres, yres);
 
 	/* Send the file header on the first page */
 	if (writer->pages == 0)
@@ -338,12 +393,10 @@ pdfocr_write_header(fz_context *ctx, fz_band_writer *writer_, fz_colorspace *cs)
 	writer->page_obj[writer->pages] = writer->obj_num;
 	writer->pages++;
 
-	/* Send the Page Object */
-	fz_write_printf(ctx, out, "%d 0 obj\n<</Type/Page/Parent 2 0 R/Resources<</XObject<<", new_obj(ctx, writer));
-	for (i = 0; i < strips; i++)
-		fz_write_printf(ctx, out, "/I%d %d 0 R", i, writer->obj_num + i);
-	fz_write_printf(ctx, out, ">>/Font<</F0 3 0 R>>>>/MediaBox[0 0 %g %g]/Contents %d 0 R>>\nendobj\n",
-		w * 72.0f / xres, h * 72.0f / yres, writer->obj_num + strips);
+	if (writer->options.skew_correct)
+		writer->skew_bitmap = fz_new_pixmap(ctx, n == 3 ? fz_device_rgb(ctx) : fz_device_gray(ctx), w, h, NULL, 0);
+	else
+		post_skew_write_header(ctx, writer, w, h);
 }
 
 static void
@@ -351,36 +404,39 @@ flush_strip(fz_context *ctx, pdfocr_band_writer *writer, int fill)
 {
 	unsigned char *data = writer->stripbuf;
 	fz_output *out = writer->super.out;
-	int w = writer->super.w;
+	int w = writer->deskewed_w;
 	int n = writer->super.n;
 	size_t len = (size_t)w*n*fill;
+	int result;
 
 	/* Buffer is full, compress it and write it. */
 	if (writer->options.compress)
 	{
 		size_t destLen = writer->complen;
-		zng_compress2(writer->compbuf, &destLen, data, len, Z_BEST_COMPRESSION);
+		result = zng_compress2(writer->compbuf, &destLen, data, len, Z_BEST_COMPRESSION);
+		if (result != Z_OK)
+			fz_throw(ctx, FZ_ERROR_GENERIC, "zlib error when compressing strip");
 		len = destLen;
 		data = writer->compbuf;
 	}
-	fz_write_printf(ctx, out, "%d 0 obj\n<</Width %d/ColorSpace/Device%s/Height %d%s/Subtype/Image",
-		new_obj(ctx, writer), w, n == 1 ? "Gray" : "RGB", fill, writer->options.compress ? "/Filter/FlateDecode" : "");
-	fz_write_printf(ctx, out, "/Length %zd/Type/XObject/BitsPerComponent 8>>\nstream\n", len);
+	fz_write_printf(ctx, out, "%d 0 obj\n<<\n/Width %d\n/ColorSpace /Device%s\n/Height %d\n%s/Subtype /Image\n",
+		new_obj(ctx, writer), w, n == 1 ? "Gray" : "RGB", fill, writer->options.compress ? "/Filter /FlateDecode\n" : "");
+	fz_write_printf(ctx, out, "/Length %zd\n/Type /XObject\n/BitsPerComponent 8\n>>\nstream\n", len);
 	fz_write_data(ctx, out, data, len);
 	fz_write_string(ctx, out, "\nendstream\nendobj\n");
 }
 
 static void
-pdfocr_write_band(fz_context *ctx, fz_band_writer *writer_, int stride, int band_start, int band_height, const unsigned char *sp)
+post_skew_write_band(fz_context *ctx, pdfocr_band_writer *writer, int stride, int band_start, int band_height, const unsigned char *sp)
 {
-	pdfocr_band_writer *writer = (pdfocr_band_writer *)writer_;
 	fz_output *out = writer->super.out;
-	int w = writer->super.w;
-	int h = writer->super.h;
+	int w = writer->deskewed_w;
+	int h = writer->deskewed_h;
 	int n = writer->super.n;
+	int x, y;
 	int sh = writer->options.strip_height;
 	int line;
-	unsigned char *d = writer->ocrbitmap->samples;
+	unsigned char *d;
 
 	if (!out)
 		return;
@@ -402,10 +458,10 @@ pdfocr_write_band(fz_context *ctx, fz_band_writer *writer_, int stride, int band
 		flush_strip(ctx, writer, h % sh);
 
 	/* Copy strip to ocrbitmap, converting if required. */
+	d = writer->ocrbitmap->samples;
 	d += band_start * w;
 	if (n == 1)
 	{
-		int y;
 		for (y = band_height; y > 0; y--)
 		{
 			memcpy(d, sp, w);
@@ -416,7 +472,6 @@ pdfocr_write_band(fz_context *ctx, fz_band_writer *writer_, int stride, int band
 	}
 	else
 	{
-		int x, y;
 		for (y = band_height; y > 0; y--)
 		{
 			for (x = w; x > 0; x--)
@@ -428,6 +483,30 @@ pdfocr_write_band(fz_context *ctx, fz_band_writer *writer_, int stride, int band
 				*d++ = 0;
 		}
 	}
+}
+
+static void
+pdfocr_write_band(fz_context *ctx, fz_band_writer *writer_, int stride, int band_start, int band_height, const unsigned char *sp)
+{
+	pdfocr_band_writer *writer = (pdfocr_band_writer *)writer_;
+	fz_output *out = writer->super.out;
+	int w = writer->super.w;
+	int h = writer->super.h;
+	int n = writer->super.n;
+	int sh = writer->options.strip_height;
+	unsigned char *d;
+
+	if (!out)
+		return;
+
+	if (writer->skew_bitmap)
+	{
+		d = writer->skew_bitmap->samples;
+		d += band_start*w*n;
+		memcpy(d, sp, w*n*band_height);
+	}
+	else
+		post_skew_write_band(ctx, writer, stride, band_start, band_height, sp);
 }
 
 enum
@@ -773,22 +852,46 @@ pdfocr_progress(fz_context *ctx, void *arg, int prog)
 }
 
 static void
+do_skew_correct(fz_context *ctx, pdfocr_band_writer *writer)
+{
+	fz_pixmap *deskewed;
+
+	if (writer->options.skew_correct == 1)
+		writer->options.skew_angle = fz_skew_detect(ctx, writer->skew_bitmap);
+
+	deskewed = fz_deskew_pixmap(ctx, writer->skew_bitmap, writer->options.skew_angle, writer->options.skew_border);
+
+	fz_try(ctx)
+	{
+		post_skew_write_header(ctx, writer, deskewed->w, deskewed->h);
+		post_skew_write_band(ctx, writer, deskewed->stride, 0, deskewed->h, deskewed->samples);
+	}
+	fz_always(ctx)
+		fz_drop_pixmap(ctx, deskewed);
+	fz_catch(ctx)
+		fz_rethrow(ctx);
+}
+
+static void
 pdfocr_write_trailer(fz_context *ctx, fz_band_writer *writer_)
 {
 	pdfocr_band_writer *writer = (pdfocr_band_writer *)writer_;
 	fz_output *out = writer->super.out;
-	int w = writer->super.w;
-	int h = writer->super.h;
 	int xres = writer->super.xres;
 	int yres = writer->super.yres;
 	int sh = writer->options.strip_height;
 	int strips;
-	int i;
+	int w, h, i;
 	size_t len;
 	unsigned char *data;
 	fz_buffer *buf = NULL;
 	char_callback_data_t cb = { NULL };
 
+	if (writer->options.skew_correct)
+		do_skew_correct(ctx, writer);
+
+	w = writer->deskewed_w;
+	h = writer->deskewed_h;
 	if (sh == 0)
 		sh = h;
 	strips = (h + sh-1)/sh;
@@ -814,7 +917,7 @@ pdfocr_write_trailer(fz_context *ctx, fz_band_writer *writer_)
 				this_sh += at;
 				at = 0;
 			}
-			fz_append_printf(ctx, buf, "/P <</MCID 0>> BDC\nq\n%d 0 0 %d 0 %d cm\n/I%d Do\nQ\n",
+			fz_append_printf(ctx, buf, "/P <</MCID 0>> BDC\nq\n%d 0 0 %d 0 %d cm\n/Image%d Do\nQ\n",
 				w, this_sh, at, i);
 		}
 
@@ -857,26 +960,22 @@ pdfocr_close_band_writer(fz_context *ctx, fz_band_writer *writer_)
 
 		/* Catalog */
 		writer->xref[1] = fz_tell_output(ctx, out);
-		fz_write_printf(ctx, out, "1 0 obj\n<</Type/Catalog/Pages 2 0 R>>\nendobj\n");
+		fz_write_printf(ctx, out, "1 0 obj\n<<\n/Type /Catalog\n/Pages 2 0 R\n>>\nendobj\n");
 
 		/* Page table */
 		writer->xref[2] = fz_tell_output(ctx, out);
-		fz_write_printf(ctx, out, "2 0 obj\n<</Count %d/Kids[", writer->pages);
+		fz_write_printf(ctx, out, "2 0 obj\n<<\n/Count %d\n/Kids [ ", writer->pages);
 
 		for (i = 0; i < writer->pages; i++)
-		{
-			if (i > 0)
-				fz_write_byte(ctx, out, ' ');
-			fz_write_printf(ctx, out, "%d 0 R", writer->page_obj[i]);
-		}
-		fz_write_string(ctx, out, "]/Type/Pages>>\nendobj\n");
+			fz_write_printf(ctx, out, "%d 0 R ", writer->page_obj[i]);
+		fz_write_string(ctx, out, "]\n/Type /Pages\n>>\nendobj\n");
 
 		/* Xref */
 		t_pos = fz_tell_output(ctx, out);
 		fz_write_printf(ctx, out, "xref\n0 %d\n0000000000 65535 f \n", writer->obj_num);
 		for (i = 1; i < writer->obj_num; i++)
-			fz_write_printf(ctx, out, "%010ld 00000 n \n", writer->xref[i]);
-		fz_write_printf(ctx, out, "trailer\n<</Size %d/Root 1 0 R>>\nstartxref\n%ld\n%%%%EOF\n", writer->obj_num, t_pos);
+			fz_write_printf(ctx, out, "%010zd 00000 n \n", writer->xref[i]);
+		fz_write_printf(ctx, out, "trailer\n<<\n/Size %d\n/Root 1 0 R\n>>\nstartxref\n%ld\n%%%%EOF\n", writer->obj_num, t_pos);
 	}
 }
 

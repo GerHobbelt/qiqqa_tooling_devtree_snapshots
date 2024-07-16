@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libOpenCL-Headers</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF2A21BA}</ProjectGuid>
-    <RootNamespace>libOpenCL-Headers</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -271,9 +269,13 @@
     <Text Include="../../thirdparty/owemdjee/OpenCL-Headers/OpenCL-Headers.pc.in" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-Headers/README.md" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-Headers/build.py" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-Headers/cmake/DebSourcePkg.cmake" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-Headers/cmake/JoinPaths.cmake" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-Headers/cmake/Package.cmake" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-Headers/cmake/PackageSetup.cmake" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-Headers/conanfile.py" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-Headers/scripts/README.md" />
+    <Text Include="../../thirdparty/owemdjee/OpenCL-Headers/scripts/check-format.sh" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-Headers/scripts/gen/__init__.py" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-Headers/scripts/gen_headers.py" />
     <Text Include="../../thirdparty/owemdjee/OpenCL-Headers/scripts/requirements.txt" />

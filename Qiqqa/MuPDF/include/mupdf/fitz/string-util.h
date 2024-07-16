@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -324,6 +324,11 @@ int fz_strcasecmp(const char *a, const char *b);
 int fz_strncasecmp(const char *a, const char *b, size_t n);
 
 /**
+	Case insensitive (ASCII only) string-in-string search.
+*/
+char *fz_strcasestr(char *str, const char *substr);
+
+/**
 	Return the length of the string until the last occurrence of any of the characters in the set.
 	Consequently, this API returns the length of the string when none of the characters in the set were found.
 
@@ -424,10 +429,11 @@ int fz_utflen(const char *s);
 */
 char *fz_utf8_from_wchar(fz_context *ctx, const wchar_t *s);
 
-/**
-	Convert an utf8 string into a new heap allocated wchar one.
+/*
+	Convert a utf8 string into a new heap allocated wchar one.
 */
 wchar_t *fz_wchar_from_utf8(fz_context *ctx, const char *s);
+
 
 /**
 	Locale-independent decimal to binary conversion. On overflow

@@ -82,13 +82,13 @@ void MatroskaContainer::reset()
  */
 void MatroskaContainer::validateIndex(Diagnostics &diag, AbortableProgressFeedback &progress)
 {
-    static const string context("validating Matroska file index (cues)");
-    bool cuesElementsFound = false;
+    static const auto context = std::string("validating Matroska file index (cues)");
+    auto cuesElementsFound = false;
     if (m_firstElement) {
-        unordered_set<EbmlElement::IdentifierType> ids;
-        bool cueTimeFound = false, cueTrackPositionsFound = false;
-        unique_ptr<EbmlElement> clusterElement;
-        std::uint64_t pos, prevClusterSize = 0, currentOffset = 0;
+        auto ids = std::unordered_set<EbmlElement::IdentifierType>();
+        auto cueTimeFound = false, cueTrackPositionsFound = false;
+        auto clusterElement = std::unique_ptr<EbmlElement>();
+        auto pos = std::uint64_t(), prevClusterSize = std::uint64_t(), currentOffset = std::uint64_t();
         // iterate through all segments
         for (EbmlElement *segmentElement = m_firstElement->siblingById(MatroskaIds::Segment, diag); segmentElement;
              segmentElement = segmentElement->siblingById(MatroskaIds::Segment, diag)) {
@@ -838,7 +838,7 @@ struct SegmentData {
     MatroskaCuePositionUpdater cuesUpdater;
     /// \brief size of the "SegmentInfo"-element
     std::uint64_t infoDataSize;
-    /// \brief cluster sizes
+    /// \brief cluster sizes, needed because cluster elements are not necessarily copied as-is so they're size might change
     std::vector<std::uint64_t> clusterSizes;
     /// \brief first "Cluster"-element (original file)
     EbmlElement *firstClusterElement;
@@ -1228,7 +1228,7 @@ void MatroskaContainer::internalMakeFile(Diagnostics &diag, AbortableProgressFee
                     progress.updateStep("Calculating cluster offsets ...");
                 }
 
-                // decided whether it is necessary to rewrite the entire file (if not already rewriting)
+                // decide whether it is necessary to rewrite the entire file (if not already rewriting)
                 if (!rewriteRequired) {
                     // find first "Cluster"-element
                     if ((level1Element = segment.firstClusterElement)) {
@@ -1366,7 +1366,7 @@ void MatroskaContainer::internalMakeFile(Diagnostics &diag, AbortableProgressFee
                         goto calculateSegmentData;
                     }
                 } else {
-                    // if rewrite is required, pretend writing the remaining elements to compute total segment size
+                    // if rewrite is required, pretend writing the remaining elements to compute total segment size and cluster sizes
 
                     // pretend writing "Void"-element (only if there is at least one "Cluster"-element in the segment)
                     if (!segmentIndex && rewriteRequired && (level1Element = level0Element->childById(MatroskaIds::Cluster, diag))) {

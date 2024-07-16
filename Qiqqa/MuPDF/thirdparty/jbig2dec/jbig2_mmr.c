@@ -1225,7 +1225,7 @@ jbig2_decode_generic_mmr(Jbig2Ctx *ctx, Jbig2Segment *segment, const Jbig2Generi
     }
 
     if (eofb && y < image->height) {
-        memset(dst, 0, rowstride * (image->height - y));
+        memset(dst, 0, (size_t) rowstride * (image->height - y));
     }
 
     return code;
@@ -1269,7 +1269,7 @@ jbig2_decode_halftone_mmr(Jbig2Ctx *ctx, const Jbig2GenericRegionParams *params,
     }
 
     if (eofb && y < image->height) {
-        memset(dst, 0, rowstride * (image->height - y));
+        memset(dst, 0, (size_t) rowstride * (image->height - y));
     }
 
     /* test for EOFB (see section 6.2.6) */

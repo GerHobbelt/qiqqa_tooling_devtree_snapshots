@@ -97,7 +97,7 @@ namespace TagLib {
       unsigned int sampleFrames() const;
 
       /*!
-       * Returns APE version.
+       * Returns the APE version.
        */
       int version() const;
 
@@ -108,6 +108,7 @@ namespace TagLib {
       void analyzeOld(File *file);
 
       class PropertiesPrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<PropertiesPrivate> d;
     };
   }  // namespace APE

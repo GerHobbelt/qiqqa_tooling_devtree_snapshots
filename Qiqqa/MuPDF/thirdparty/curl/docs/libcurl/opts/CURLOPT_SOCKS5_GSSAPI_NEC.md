@@ -6,7 +6,9 @@ Section: 3
 Source: libcurl
 See-also:
   - CURLOPT_PROXY (3)
-  - CURLOPT_SOCKS5_GSSAPI_SERVICE (3)
+  - CURLOPT_PROXY_SERVICE_NAME (3)
+Protocol:
+  - All
 ---
 
 # NAME
@@ -32,10 +34,6 @@ negotiation.
 # DEFAULT
 
 ?
-
-# PROTOCOLS
-
-Most
 
 # EXAMPLE
 

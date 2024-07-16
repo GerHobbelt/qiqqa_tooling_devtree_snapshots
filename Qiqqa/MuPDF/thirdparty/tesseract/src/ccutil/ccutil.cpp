@@ -11,11 +11,7 @@
 // limitations under the License.
 
 // Include automatically generated configuration file if running autoconf.
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
-
-#include <tesseract/debugheap.h>
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include "ccutil.h"
 #include "winutils.h"
@@ -25,14 +21,14 @@
 #endif
 
 #include <cstdlib>
-#include <cstring> // for std::strrchr
+#include <cstring>    // for std::strrchrA
+#include <filesystem> // for std::filesystem
 
 
 namespace tesseract {
 
 CCUtil::CCUtil()
-    : params_("tesseract")
-    , params_collective_({&params_, &GlobalParams()})
+    : params_()
       , INT_INIT_MEMBER(ambigs_debug_level, 0, "Debug level for unichar ambiguities", params())
       , BOOL_MEMBER(use_ambigs_for_adaption, false,
                   "Use ambigs for deciding"
@@ -62,6 +58,12 @@ void CCUtil::main_setup(const std::string &argv0, const std::string &output_imag
   datadir.clear();
 
   const char *tessdata_prefix = getenv("TESSDATA_PREFIX");
+
+  // Ignore TESSDATA_PREFIX if there is no matching filesystem entry.
+  if (tessdata_prefix != nullptr && !std::filesystem::exists(tessdata_prefix)) {
+    tprintWarn("Environment variable TESSDATA_PREFIX's value '{}' is not a directory that exists in your filesystem; tesseract will ignore it.\n", tessdata_prefix);
+    tessdata_prefix = nullptr;
+  }
 
   if (!argv0.empty()) {
     /* Use tessdata prefix from the command line. */
@@ -93,7 +95,10 @@ void CCUtil::main_setup(const std::string &argv0, const std::string &output_imag
   if (datadir.empty() || _access(datadir.c_str(), 0) != 0) {
 #if defined(TESSDATA_PREFIX)
     // Use tessdata prefix which was compiled in.
-    datadir = TESSDATA_PREFIX "/tessdata";
+    datadir = TESSDATA_PREFIX "/tessdata/";
+    // Note that some software (for example conda) patches TESSDATA_PREFIX
+    // in the binary, so it might be shorter. Recalculate its length.
+    datadir.resize(std::strlen(datadir.c_str()));
 #else
     datadir = "./";
     std::string subdir = datadir;
@@ -105,10 +110,9 @@ void CCUtil::main_setup(const std::string &argv0, const std::string &output_imag
   }
 
   // check for missing directory separator
-  const char *lastchar = datadir.c_str();
-  lastchar += datadir.length() - 1;
-  if ((strcmp(lastchar, "/") != 0) && (strcmp(lastchar, "\\") != 0)) {
-    datadir += "/";
+  const char lastchar = datadir.back();
+  if (lastchar != '/' && lastchar != '\\') {
+    datadir += '/';
   }
 }
 

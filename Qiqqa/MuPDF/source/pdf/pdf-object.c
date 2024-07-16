@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -29,6 +29,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 #if FZ_ENABLE_PDF
 
@@ -376,7 +377,7 @@ int pdf_to_int(fz_context *ctx, pdf_obj *obj)
 	if (obj->kind == PDF_INT)
 		return (int)NUM(obj)->u.i;
 	if (obj->kind == PDF_REAL)
-		return (int)(NUM(obj)->u.f + 0.5f); /* No roundf in MSVC */
+		return (int)floorf(NUM(obj)->u.f + 0.5);
 	return 0;
 }
 
@@ -388,7 +389,7 @@ int pdf_to_int_default(fz_context *ctx, pdf_obj *obj, int def)
 	if (obj->kind == PDF_INT)
 		return (int)NUM(obj)->u.i;
 	if (obj->kind == PDF_REAL)
-		return (int)(NUM(obj)->u.f + 0.5f); /* No roundf in MSVC */
+		return (int)floorf(NUM(obj)->u.f + 0.5);
 	return def;
 }
 
@@ -400,7 +401,7 @@ int64_t pdf_to_int64(fz_context *ctx, pdf_obj *obj)
 	if (obj->kind == PDF_INT)
 		return NUM(obj)->u.i;
 	if (obj->kind == PDF_REAL)
-		return (((double)NUM(obj)->u.f) + 0.5f); /* No roundf in MSVC */
+		return (int64_t)floorf(NUM(obj)->u.f + 0.5);
 	return 0;
 }
 
@@ -1609,10 +1610,10 @@ pdf_serialise_journal(fz_context *ctx, pdf_document *doc, fz_output *out)
 				continue;
 			}
 			fz_write_printf(ctx, out, "%d 0 obj\n", frag->obj_num);
-			pdf_print_encrypted_obj(ctx, out, frag->inactive, 1, 0, NULL, frag->obj_num, 0);
+			pdf_print_encrypted_obj(ctx, out, frag->inactive, 1, 0, NULL, frag->obj_num, 0, NULL);
 			if (frag->stream)
 			{
-				fz_write_printf(ctx, out, "stream\n");
+				fz_write_printf(ctx, out, "\nstream\n");
 				fz_write_data(ctx, out, frag->stream->data, frag->stream->len);
 				fz_write_string(ctx, out, "\nendstream");
 			}
@@ -1679,7 +1680,7 @@ void pdf_deserialise_journal(fz_context *ctx, pdf_document *doc, fz_stream *stm)
 	pdf_obj *obj = NULL, *fingerprint_obj;
 	fz_buffer *buffer;
 	unsigned char digest[16];
-	int64_t file_size = 0;
+	int64_t file_size = -1;
 	int digests_match = 0;
 	pdf_token tok;
 
@@ -1917,7 +1918,7 @@ static void prepare_object_for_alteration(fz_context *ctx, pdf_obj *obj, pdf_obj
 		discard_journal_entries(ctx, doc->journal->current ? &doc->journal->current->next : &doc->journal->head);
 
 		/* We should be collating into a pending block. */
-		entry = doc->journal->pending;
+		entry = doc->journal->pending_tail;
 		assert(entry);
 
 		/* If we've already stashed a value for this object in this fragment,
@@ -1951,6 +1952,10 @@ static void prepare_object_for_alteration(fz_context *ctx, pdf_obj *obj, pdf_obj
 	{
 		if (was_empty)
 		{
+			/* was_empty = 1 iff, the the entry in the incremental xref was empty,
+			 * and we copied any older value for that object forwards from an old xref.
+			 * When we undo, we just want to blank the one in the incremental section.
+			 * Effectively this is a "new object". */
 			copy = NULL;
 			copy_stream = NULL;
 		}
@@ -2518,7 +2523,7 @@ pdf_dict_getsa(fz_context *ctx, pdf_obj *obj, const char *key, const char *abbre
 {
 	pdf_obj *v;
 	v = pdf_dict_gets(ctx, obj, key);
-	if (v)
+	if (!pdf_is_null(ctx, v))
 		return v;
 	return pdf_dict_gets(ctx, obj, abbrev);
 }
@@ -2536,7 +2541,7 @@ pdf_dict_geta(fz_context *ctx, pdf_obj *obj, pdf_obj *key, pdf_obj *abbrev)
 	pdf_obj *v;
 	/* ISO 32000-2:2020 (PDF 2.0) - abbreviated names take precendence. */
 	v = pdf_dict_get(ctx, obj, abbrev);
-	if (v)
+	if (!pdf_is_null(ctx, v))
 		return v;
 	return pdf_dict_get(ctx, obj, key);
 }
@@ -2755,7 +2760,7 @@ pdf_dict_vputl(fz_context *ctx, pdf_obj *obj, pdf_obj *val, va_list keys)
 	while ((next_key = va_arg(keys, pdf_obj *)) != NULL)
 	{
 		next_obj = pdf_dict_get(ctx, obj, key);
-		if (next_obj == NULL)
+		if (pdf_is_null(ctx, next_obj))
 			goto new_obj;
 		obj = next_obj;
 		key = next_key;
@@ -3067,6 +3072,16 @@ pdf_mark_list_pop(fz_context *ctx, pdf_mark_list *marks)
 	--marks->len;
 }
 
+int
+pdf_mark_list_check(fz_context *ctx, pdf_mark_list *marks, pdf_obj *obj)
+{
+	if (pdf_mark_list_push(ctx, marks, obj))
+		return 1;
+	pdf_mark_list_pop(ctx, marks);
+
+	return 0;
+}
+
 void
 pdf_mark_list_init(fz_context *ctx, pdf_mark_list *marks)
 {
@@ -3324,7 +3339,7 @@ static inline int isdelim(int ch)
 
 static inline void fmt_putc(fz_context *ctx, struct fmt *fmt, int c)
 {
-	if (fmt->sep && !isdelim(fmt->last) && !isdelim(c)) {
+	if (fmt->sep && !isdelim(fmt->last) && !iswhite(fmt->last) && !isdelim(c) && !iswhite(c)) {
 		fmt->sep = 0;
 		fmt_putc(ctx, fmt, ' ');
 	}
@@ -3547,6 +3562,8 @@ static void fmt_name(fz_context *ctx, struct fmt *fmt, pdf_obj *obj)
 			fmt_putc(ctx, fmt, s[i]);
 		}
 	}
+
+	fmt->sep = 1;
 }
 
 static const pdf_obj* not_allowed_to_resolve_in_print[] = {
@@ -3576,7 +3593,6 @@ static void fmt_array(fz_context *ctx, struct fmt *fmt, pdf_obj *obj)
 		fmt_putc(ctx, fmt, '[');
 		for (i = 0; i < n; i++) {
 			fmt_obj(ctx, fmt, pdf_array_get(ctx, obj, i));
-			fmt_sep(ctx, fmt);
 		}
 		fmt_putc(ctx, fmt, ']');
 	}
@@ -3610,14 +3626,44 @@ static int is_signature(fz_context *ctx, pdf_obj *obj)
 static void fmt_dict(fz_context *ctx, struct fmt *fmt, pdf_obj *obj)
 {
 	int i, n;
+	int skip = 0;
+	pdf_obj *type = pdf_dict_get(ctx, obj, PDF_NAME(Type));
 
 	n = pdf_dict_len(ctx, obj);
+
+	/* Open the dictionary.
+	 * We spot /Type and /Subtype here so we can sent those first,
+	 * in order. The hope is this will improve compression, because
+	 * we'll be consistently sending those first. */
 	if (fmt->tight)
 	{
 		fmt_puts(ctx, fmt, "<<");
+		if (type)
+		{
+			pdf_obj *subtype = pdf_dict_get(ctx, obj, PDF_NAME(Subtype));
+			fmt_obj(ctx, fmt, PDF_NAME(Type));
+			fmt_obj(ctx, fmt, type);
+			if (subtype)
+			{
+				fmt_obj(ctx, fmt, PDF_NAME(Subtype));
+				fmt_obj(ctx, fmt, subtype);
+				skip |= 2; /* Skip Subtype */
+			}
+			skip |= 1; /* Skip Type */
+		}
+
+		/* Now send all the key/value pairs except the ones we have decided to
+		 * skip. */
 		for (i = 0; i < n; i++)
 		{
 			pdf_obj* key = pdf_dict_get_key(ctx, obj, i);
+			if (skip)
+			{
+				if ((skip & 1) != 0 && key == PDF_NAME(Type))
+					continue;
+				if ((skip & 2) != 0 && key == PDF_NAME(Subtype))
+					continue;
+			}
 			pdf_obj* val = pdf_dict_get_val(ctx, obj, i);
 			fmt_obj(ctx, fmt, key);
 			int old_flags = fmt->flags;
@@ -3638,7 +3684,6 @@ static void fmt_dict(fz_context *ctx, struct fmt *fmt, pdf_obj *obj)
 					fmt->flags |= PDF_PRINT_JSON_BINARY_DATA_AS_PURE_HEX | PDF_PRINT_JSON_STRING_OBJECTS_AS_BLOB;
 				}
 			}
-			fmt_sep(ctx, fmt);
 			if (key == PDF_NAME(Contents) && is_signature(ctx, obj))
 			{
 				pdf_crypt *crypt = fmt->crypt;
@@ -3660,11 +3705,11 @@ static void fmt_dict(fz_context *ctx, struct fmt *fmt, pdf_obj *obj)
 				fmt_obj(ctx, fmt, val);
 				fmt->flags = old_flags;
 			}
-			fmt_sep(ctx, fmt);
 		}
+
 		fmt_puts(ctx, fmt, ">>");
 	}
-	else
+	else /* Not tight, send it simply. */
 	{
 		fmt_puts(ctx, fmt, "<<\n");
 		fmt->indent ++;
@@ -3729,11 +3774,23 @@ static void fmt_dict(fz_context *ctx, struct fmt *fmt, pdf_obj *obj)
 static void fmt_obj(fz_context *ctx, struct fmt *fmt, pdf_obj *obj)
 {
 	if (obj == PDF_NULL)
+	{
 		fmt_puts(ctx, fmt, "null");
+		fmt->sep = 1;
+		return;
+	}
 	else if (obj == PDF_TRUE)
+	{
 		fmt_puts(ctx, fmt, "true");
+		fmt->sep = 1;
+		return;
+	}
 	else if (obj == PDF_FALSE)
+	{
 		fmt_puts(ctx, fmt, "false");
+		fmt->sep = 1;
+		return;
+	}
 	else if ((fmt->flags & PDF_PRINT_RESOLVE_ALL_INDIRECT) && pdf_is_embedded_file(ctx, obj))
 	{
 		fmt_puts(ctx, fmt, "( EmbeddedFile");
@@ -3792,6 +3849,7 @@ static void fmt_obj(fz_context *ctx, struct fmt *fmt, pdf_obj *obj)
 			fz_throw(ctx, FZ_ERROR_GENERIC, "cannot process embedded file. filename:%q type:%s length:%zu error: %s", fs_params.filename, fs_params.mimetype, (size_t)fs_params.size, errmsg);
 		}
 		fmt_putc(ctx, fmt, ')');
+		fmt->sep = 1;
 	}
 	else if ((fmt->flags & PDF_PRINT_RESOLVE_ALL_INDIRECT) && pdf_is_stream(ctx, obj))
 	{
@@ -3875,6 +3933,7 @@ static void fmt_obj(fz_context *ctx, struct fmt *fmt, pdf_obj *obj)
 			fmt_indent(ctx, fmt);
 		}
 		fmt_putc(ctx, fmt, ')');
+		fmt->sep = 1;
 	}
 	else if (pdf_is_indirect(ctx, obj))
 	{
@@ -3885,15 +3944,23 @@ static void fmt_obj(fz_context *ctx, struct fmt *fmt, pdf_obj *obj)
 		else
 		{
 			fmt_printf(ctx, fmt, "%d %d R", pdf_to_num(ctx, obj), pdf_to_gen(ctx, obj));
+			fmt->sep = 1;
 		}
 	}
 	else if (pdf_is_int(ctx, obj))
 	{
-		fmt_printf(ctx, fmt, "%d", pdf_to_int(ctx, obj));
+		fmt_printf(ctx, fmt, "%ld", pdf_to_int64(ctx, obj));
+		fmt->sep = 1;
 	}
 	else if (pdf_is_real(ctx, obj))
 	{
-		fmt_printf(ctx, fmt, "%g", pdf_to_real(ctx, obj));
+		float f = pdf_to_real(ctx, obj);
+		if (f == (int)f)
+			fmt_printf(ctx, fmt, "%d", (int)f);
+		else
+			fmt_printf(ctx, fmt, "%g", f);
+		fmt->sep = 1;
+		return;
 	}
 	else if (pdf_is_string(ctx, obj))
 	{
@@ -3998,13 +4065,13 @@ static void fmt_obj(fz_context *ctx, struct fmt *fmt, pdf_obj *obj)
 }
 
 static char*
-pdf_sprint_encrypted_obj(fz_context* ctx, char* buf, size_t cap, size_t* len, pdf_obj* obj, int tight, int flags, pdf_crypt* crypt, int num, int gen)
+pdf_sprint_encrypted_obj(fz_context *ctx, char *buf, size_t cap, size_t *len, pdf_obj *obj, int tight, int flags, pdf_crypt *crypt, int num, int gen, int *sep)
 {
 	struct fmt fmt;
 
 	fmt.indent = 0;
 	fmt.col = 0;
-	fmt.sep = 0;
+	fmt.sep = sep ? *sep : 0;
 	fmt.last = 0;
 
 	if (!buf || cap == 0)
@@ -4036,6 +4103,9 @@ pdf_sprint_encrypted_obj(fz_context* ctx, char* buf, size_t cap, size_t* len, pd
 	fz_try(ctx)
 	{
 		fmt_obj(ctx, &fmt, obj);
+		if (sep)
+			*sep = fmt.sep;
+		fmt.sep = 0;
 		fmt_putc(ctx, &fmt, 0);
 	}
 	fz_catch(ctx)
@@ -4050,16 +4120,16 @@ pdf_sprint_encrypted_obj(fz_context* ctx, char* buf, size_t cap, size_t* len, pd
 char *
 pdf_sprint_obj(fz_context *ctx, char *buf, size_t cap, size_t *len, pdf_obj *obj, int tight, int ascii)
 {
-	return pdf_sprint_encrypted_obj(ctx, buf, cap, len, obj, tight, ascii, NULL, 0, 0);
+	return pdf_sprint_encrypted_obj(ctx, buf, cap, len, obj, tight, ascii, NULL, 0, 0, NULL);
 }
 
-void pdf_print_encrypted_obj(fz_context *ctx, fz_output *out, pdf_obj *obj, int tight, int ascii, pdf_crypt *crypt, int num, int gen)
+void pdf_print_encrypted_obj(fz_context *ctx, fz_output *out, pdf_obj *obj, int tight, int ascii, pdf_crypt *crypt, int num, int gen, int *sep)
 {
 	char buf[1024];
 	char *ptr;
 	size_t n;
 
-	ptr = pdf_sprint_encrypted_obj(ctx, buf, sizeof buf, &n, obj, tight, ascii, crypt, num, gen);
+	ptr = pdf_sprint_encrypted_obj(ctx, buf, sizeof buf, &n, obj, tight, ascii, crypt, num, gen, sep);
 	fz_try(ctx)
 		fz_write_data(ctx, out, ptr, n);
 	fz_always(ctx)
@@ -4071,7 +4141,7 @@ void pdf_print_encrypted_obj(fz_context *ctx, fz_output *out, pdf_obj *obj, int 
 
 void pdf_print_obj(fz_context *ctx, fz_output *out, pdf_obj *obj, int tight, int ascii)
 {
-	pdf_print_encrypted_obj(ctx, out, obj, tight, ascii, NULL, 0, 0);
+	pdf_print_encrypted_obj(ctx, out, obj, tight, ascii, NULL, 0, 0, NULL);
 }
 
 static void pdf_debug_obj_internal_indent(fz_context *ctx, fz_output *out, int depth)
@@ -4337,7 +4407,8 @@ static void fmt_dict_to_json(fz_context* ctx, struct fmt* fmt, pdf_obj* obj)
 				fmt_printf(ctx, fmt, "%q: %d,\n", "EmbeddedFileIndex", pdf_to_int(ctx, ci_index));
 			}
 
-			pdf_obj* file = pdf_embedded_file_stream(ctx, obj);
+			pdf_obj* file = get_file_stream_and_name(ctx, obj, NULL);
+			assert(pdf_is_stream(ctx, file));
 			pdf_obj* elen = pdf_dict_get(ctx, file, PDF_NAME(Length));
 			if (elen) {
 				fmt_indent(ctx, fmt);
@@ -4660,6 +4731,7 @@ static void fmt_obj_to_json(fz_context* ctx, struct fmt* fmt, pdf_obj* obj)
 						{
 							char ex_msg[LONGLINE];
 							fz_strlcpy(ex_msg, fz_caught_message(ctx), sizeof(ex_msg));
+							fz_ignore_error(ctx);
 
 							fz_warn(ctx, "syntax error in XML stream data content: %s; retrying using HTML5 parser.", ex_msg);
 							fz_try(ctx)
@@ -4670,6 +4742,8 @@ static void fmt_obj_to_json(fz_context* ctx, struct fmt* fmt, pdf_obj* obj)
 							{
 								if (recover)
 								{
+									fz_ignore_error(ctx);
+
 									// dump the raw data into the error channel, then attempt recovery as best we can:
 									fz_error(ctx, "syntax error in XML stream data content: %s. Will attempt recovery. Raw data dump:\n", ex_msg);
 									fz_error(ctx, "%.*c\n", -80, '=');
@@ -4709,8 +4783,7 @@ static void fmt_obj_to_json(fz_context* ctx, struct fmt* fmt, pdf_obj* obj)
 									}
 									fz_catch(ctx)
 									{
-										i++;
-										i--;
+										fz_ignore_error(ctx);
 									}
 								}
 
@@ -4766,6 +4839,7 @@ static void fmt_obj_to_json(fz_context* ctx, struct fmt* fmt, pdf_obj* obj)
 			{
 				// ignore error
 				const char* errmsg = fz_caught_message(ctx);
+				fz_ignore_error(ctx);
 				if (value_ex)
 				{
 					fmt_puts(ctx, fmt, "\n  null,");
@@ -5236,6 +5310,14 @@ const char *pdf_dict_get_string(fz_context *ctx, pdf_obj *dict, pdf_obj *key, si
 const char *pdf_dict_get_text_string(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
 {
 	return pdf_to_text_string(ctx, pdf_dict_get(ctx, dict, key), NULL);
+}
+
+const char *pdf_dict_get_text_string_opt(fz_context *ctx, pdf_obj *dict, pdf_obj *key)
+{
+	pdf_obj *obj = pdf_dict_get(ctx, dict, key);
+	if (!pdf_is_string(ctx, obj))
+		return NULL;
+	return pdf_to_text_string(ctx, obj, NULL);
 }
 
 fz_rect pdf_dict_get_rect(fz_context *ctx, pdf_obj *dict, pdf_obj *key)

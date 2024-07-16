@@ -8,6 +8,8 @@ See-also:
   - CURLOPT_HEADERFUNCTION (3)
   - CURLOPT_READFUNCTION (3)
   - CURLOPT_WRITEDATA (3)
+Protocol:
+  - All
 ---
 
 # NAME
@@ -72,10 +74,6 @@ do that.
 
 libcurl uses 'fwrite' as a callback by default.
 
-# PROTOCOLS
-
-For all protocols
-
 # EXAMPLE
 
 ~~~c
@@ -87,7 +85,7 @@ struct memory {
   size_t size;
 };
 
-static size_t cb(void *data, size_t size, size_t nmemb, void *clientp)
+static size_t cb(char *data, size_t size, size_t nmemb, void *clientp)
 {
   size_t realsize = size * nmemb;
   struct memory *mem = (struct memory *)clientp;

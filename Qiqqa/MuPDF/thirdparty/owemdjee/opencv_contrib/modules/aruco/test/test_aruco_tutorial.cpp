@@ -10,7 +10,7 @@ namespace opencv_test { namespace {
 
 TEST(CV_ArucoTutorial, can_find_singlemarkersoriginal)
 {
-    string img_path = cvtest::findDataFile("singlemarkersoriginal.jpg", false);
+    string img_path = cvtest::findDataFile("singlemarkersoriginal.jpg");
     Mat image = imread(img_path);
     aruco::ArucoDetector detector(aruco::getPredefinedDictionary(aruco::DICT_6X6_250));
 
@@ -44,9 +44,9 @@ TEST(CV_ArucoTutorial, can_find_singlemarkersoriginal)
 
 TEST(CV_ArucoTutorial, can_find_gboriginal)
 {
-    string imgPath = cvtest::findDataFile("gboriginal.png", false);
+    string imgPath = cvtest::findDataFile("gboriginal.jpg");
     Mat image = imread(imgPath);
-    string dictPath = cvtest::findDataFile("tutorial_dict.yml", false);
+    string dictPath = cvtest::findDataFile("tutorial_dict.yml");
     aruco::Dictionary dictionary;
 
     FileStorage fs(dictPath, FileStorage::READ);
@@ -99,7 +99,7 @@ TEST(CV_ArucoTutorial, can_find_gboriginal)
 
 TEST(CV_ArucoTutorial, can_find_choriginal)
 {
-    string imgPath = cvtest::findDataFile("choriginal.jpg", false);
+    string imgPath = cvtest::findDataFile("choriginal.jpg");
     Mat image = imread(imgPath);
     aruco::ArucoDetector detector(aruco::getPredefinedDictionary(aruco::DICT_6X6_250));
 
@@ -138,7 +138,7 @@ TEST(CV_ArucoTutorial, can_find_choriginal)
 
 TEST(CV_ArucoTutorial, can_find_chocclusion)
 {
-    string imgPath = cvtest::findDataFile("chocclusion_original.jpg", false);
+    string imgPath = cvtest::findDataFile("chocclusion_original.jpg");
     Mat image = imread(imgPath);
     aruco::ArucoDetector detector(aruco::getPredefinedDictionary(aruco::DICT_6X6_250));
 
@@ -176,15 +176,85 @@ TEST(CV_ArucoTutorial, can_find_chocclusion)
 
 TEST(CV_ArucoTutorial, can_find_diamondmarkers)
 {
-    string imgPath = cvtest::findDataFile("diamondmarkers.png", false);
+    string imgPath = cvtest::findDataFile("diamondmarkers.png");
     Mat image = imread(imgPath);
 
-    string dictPath = cvtest::findDataFile("tutorial_dict.yml", false);
+    string dictPath = cvtest::findDataFile("tutorial_dict.yml");
     aruco::Dictionary dictionary;
     FileStorage fs(dictPath, FileStorage::READ);
     dictionary.aruco::Dictionary::readDictionary(fs.root()); // set marker from tutorial_dict.yml
 
-    string detectorPath = cvtest::findDataFile("detector_params.yml", false);
+    string detectorPath = cvtest::findDataFile("detector_params.yml");
+    fs = FileStorage(detectorPath, FileStorage::READ);
+    aruco::DetectorParameters detectorParams;
+    detectorParams.readDetectorParameters(fs.root());
+    detectorParams.cornerRefinementMethod = aruco::CORNER_REFINE_APRILTAG;
+
+    aruco::CharucoBoard charucoBoard(Size(3, 3), 0.4f, 0.25f, dictionary);
+    aruco::CharucoDetector detector(charucoBoard, aruco::CharucoParameters(), detectorParams);
+
+    vector<int> ids;
+    vector<vector<Point2f> > corners, diamondCorners;
+    vector<Vec4i> diamondIds;
+    const size_t N = 12ull;
+    // corner indices of ArUco markers
+    const int goldCornersIds[N] = { 4, 12, 11, 3, 12, 10, 12, 10, 10, 11, 2, 11 };
+    map<int, int> counterGoldCornersIds;
+    for (int i = 0; i < static_cast<int>(N); i++)
+        counterGoldCornersIds[goldCornersIds[i]]++;
+
+    const size_t diamondsN = 3;
+    // corners of diamonds with Vec4i indices
+    const float goldDiamondCorners[diamondsN][8] = {{195.6f,150.9f, 213.5f,201.2f, 136.4f,215.3f, 122.4f,163.5f},
+                                            {501.1f,171.3f, 501.9f,208.5f, 446.2f,199.8f, 447.8f,163.3f},
+                                            {343.4f,361.2f, 359.7f,328.7f, 400.8f,344.6f, 385.7f,378.4f}};
+    auto comp = [](const Vec4i& a, const Vec4i& b) {
+        if (a[0] < b[0]) return true;
+        if (a[1] < b[1]) return true;
+        if (a[2] < b[2]) return true;
+        return a[3] < b[3];
+    };
+    map<Vec4i, const float*, decltype(comp)> goldDiamonds(comp);
+    goldDiamonds[Vec4i(10, 4, 11, 12)] = goldDiamondCorners[0];
+    goldDiamonds[Vec4i(10, 3, 11, 12)] = goldDiamondCorners[1];
+    goldDiamonds[Vec4i(10, 2, 11, 12)] = goldDiamondCorners[2];
+
+    detector.detectDiamonds(image, diamondCorners, diamondIds, corners, ids);
+    map<int, int> counterRes;
+
+    ASSERT_EQ(N, ids.size());
+    for (size_t i = 0; i < N; i++)
+    {
+        int arucoId = ids[i];
+        counterRes[arucoId]++;
+    }
+
+    ASSERT_EQ(counterGoldCornersIds, counterRes); // check the number of ArUco markers
+    ASSERT_EQ(goldDiamonds.size(), diamondIds.size()); // check the number of diamonds
+
+    for (size_t i = 0; i < goldDiamonds.size(); i++)
+    {
+        Vec4i diamondId = diamondIds[i];
+        ASSERT_TRUE(goldDiamonds.find(diamondId) != goldDiamonds.end());
+        for (int j = 0; j < 4; j++)
+        {
+            EXPECT_NEAR(goldDiamonds[diamondId][j * 2], diamondCorners[i][j].x, 0.5f);
+            EXPECT_NEAR(goldDiamonds[diamondId][j * 2 + 1], diamondCorners[i][j].y, 0.5f);
+        }
+    }
+}
+
+TEST(CV_ArucoTutorial, can_refine_detected_markers)
+{
+    string imgPath = cvtest::findDataFile("diamondmarkers.png");
+    Mat image = imread(imgPath);
+
+    string dictPath = cvtest::findDataFile("tutorial_dict.yml");
+    aruco::Dictionary dictionary;
+    FileStorage fs(dictPath, FileStorage::READ);
+    dictionary.aruco::Dictionary::readDictionary(fs.root()); // set marker from tutorial_dict.yml
+
+    string detectorPath = cvtest::findDataFile("detector_params.yml");
     fs = FileStorage(detectorPath, FileStorage::READ);
     aruco::DetectorParameters detectorParams;
     detectorParams.readDetectorParameters(fs.root());
@@ -202,15 +272,33 @@ TEST(CV_ArucoTutorial, can_find_diamondmarkers)
         counterGoldCornersIds[goldCornersIds[i]]++;
 
     detector.detectMarkers(image, corners, ids, rejected);
-    map<int, int> counterRes;
-    for (size_t i = 0; i < N; i++)
-    {
-        int arucoId = ids[i];
-        counterRes[arucoId]++;
-    }
+#if 0
+    Mat camMatrix, distCoeffs;
+    // create charuco board object
+    Ptr<aruco::CharucoBoard> charucoboard = new aruco::CharucoBoard(Size(5, 5),
+      detectorParams.minSideLengthCanonicalImg, markerLength, dictionary);
+    Ptr<aruco::Board> board = charucoboard.staticCast<aruco::Board>();
 
-    ASSERT_EQ(N, ids.size());
-    EXPECT_EQ(counterGoldCornersIds, counterRes); // check the number of ArUco markers
+    // refine strategy CORNER_REFINE_APRILTAG to detect more markers
+    aruco::refineDetectedMarkers(image, board, corners, ids, rejected, camMatrix, distCoeffs);
+    //TODO TEST
+    ASSERT_TRUE(corners.size() > 20);
+
+    vector< int > markerIds, charucoIds;
+    vector< vector< Point2f > > charucoCorners;
+    Vec3d rvec, tvec;
+    // interpolate charuco corners
+    int interpolatedCorners =
+        aruco::interpolateCornersCharuco(corners, ids, image, charucoboard,
+                                         charucoCorners, charucoIds, camMatrix, distCoeffs);
+    //TODO TEST
+    ASSERT_TRUE(interpolatedCorners > 20);
+
+    // estimate charuco board pose
+    bool validPose = aruco::estimatePoseCharucoBoard(charucoCorners, charucoIds, charucoboard,
+                                                     camMatrix, distCoeffs, rvec, tvec);
+    ASSERT_TRUE(validPose);
+#endif
 }
 
 }} // namespace

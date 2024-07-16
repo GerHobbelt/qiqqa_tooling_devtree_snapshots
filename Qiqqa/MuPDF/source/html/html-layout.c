@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2023 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -210,7 +210,7 @@ static const hb_feature_t small_caps_feature[1] = {
 static int walk_string(string_walker *walker)
 {
 	fz_context *ctx = walker->ctx;
-	FT_Face face;
+	FT_Face face = NULL;
 	int fterr;
 	int quickshape;
 	char lang[8];
@@ -297,6 +297,7 @@ static int walk_string(string_walker *walker)
 	{
 		fz_rethrow(ctx);
 	}
+	assert(face != NULL);
 
 	if (quickshape)
 	{
@@ -2602,7 +2603,7 @@ static int enumerate_block_box(fz_context *ctx, fz_html_box *box, float page_top
 			/* We have a box worthy of a callback. */
 			char *text = NULL;
 			pos.text = NULL;
-			if (heading)
+			if (heading && box->down)
 				pos.text = text = gather_text(ctx, box->down);
 			pos.depth = depth;
 			pos.heading = heading;

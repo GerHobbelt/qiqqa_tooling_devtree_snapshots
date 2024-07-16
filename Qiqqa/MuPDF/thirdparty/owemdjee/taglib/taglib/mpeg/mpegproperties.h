@@ -100,7 +100,7 @@ namespace TagLib {
       int layer() const;
 
       /*!
-       * Returns true if the MPEG protection bit is enabled.
+       * Returns \c true if the MPEG protection bit is enabled.
        */
       bool protectionEnabled() const;
 
@@ -110,19 +110,30 @@ namespace TagLib {
       Header::ChannelMode channelMode() const;
 
       /*!
-       * Returns true if the copyrighted bit is set.
+       * Returns the MPEG-4 channel configuration.
+       */
+      Header::ChannelConfiguration channelConfiguration() const;
+
+      /*!
+       * Returns \c true for an Audio Data Transport Stream (ADTS), usually AAC.
+       */
+      bool isADTS() const;
+
+      /*!
+       * Returns \c true if the copyrighted bit is set.
        */
       bool isCopyrighted() const;
 
       /*!
-       * Returns true if the "original" bit is set.
+       * Returns \c true if the "original" bit is set.
        */
       bool isOriginal() const;
 
     private:
-      void read(File *file);
+      void read(File *file, ReadStyle readStyle);
 
       class PropertiesPrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<PropertiesPrivate> d;
     };
   }  // namespace MPEG

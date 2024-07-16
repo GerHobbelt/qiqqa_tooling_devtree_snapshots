@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -45,6 +45,10 @@
 #include "mupdf/helpers/dir.h"
 
 #include "../fitz/tessocr.h"
+
+#ifdef HAVE_SMARTOFFICE
+#include "sodochandler.h"
+#endif
 
 #include <string.h>
 #include <limits.h>
@@ -142,7 +146,9 @@ static const suffix_t suffix_table[] =
 	{ ".emptybox", OUT_EMPTY_BOX, 0 },
 
 	/* And the 'single extension' ones go last. */
+#if FZ_ENABLE_JPX
 	{ ".j2k", OUT_J2K, 0 },
+#endif
 	{ ".png", OUT_PNG, 0 },
 	{ ".tiff", OUT_TIFF, 0 },
 	{ ".muraw", OUT_MURAW, 0 },
@@ -244,7 +250,7 @@ static const format_cs_table_t format_cs_table[] =
 	{ OUT_OCR_TRACE, CS_GRAY, { CS_GRAY } },
 };
 
-static fz_stext_options stext_options;
+static fz_stext_options stext_options = { 0 };
 
 static fz_cookie master_cookie = { 0 };
 
@@ -361,6 +367,7 @@ static int make_hyperlinks = 0;
 static int no_icc = 0;
 static int ignore_errors = 0;
 static int uselist = 1;
+static int useprogressive = 0;
 static int alphabits_text = 8;
 static int alphabits_graphics = 8;
 static int subpix_preset = 0;
@@ -374,7 +381,7 @@ static const char *icc_filename = NULL;
 static int use_gamma = 0;
 static float gamma_value = 1;
 static int invert = 0;
-static int kill = 0;
+static int s_kill = 0; /* Using `kill` causes problems on Android. */
 static int band_height = 0;
 static int lowmemory = 0;
 
@@ -401,6 +408,10 @@ static int layer_on[1000];
 static int layer_off[1000];
 static int layer_on_len;
 static int layer_off_len;
+
+static int skew_correct;
+static float skew_angle;
+static int skew_border;
 
 static const char ocr_language_default[] = "eng";
 static const char *ocr_language = ocr_language_default;
@@ -476,7 +487,7 @@ static int usage(void)
 		"\n"
 		"  -o -  output file name (%%d or ### for page number, '-' for stdout)\n"
 		"  -F -  output format (default inferred from output file name)\n"
-		"        raster: png, pgm, ppm, pnm, pam, pbm, pkm, pwg, pcl, psd, ps, muraw\n"
+		"        raster: png, pgm, ppm, pnm, pam, pbm, pkm, pwg, pcl, psd, ps, muraw, pdf, j2k\n"
 #if FZ_ENABLE_OCR
 		"        vector: svg, pdf, trace, ocr.trace\n"
 #else
@@ -542,9 +553,9 @@ static int usage(void)
 		"  -e -  proof icc profile (filename of ICC profile)\n"
 		"  -G -  apply gamma correction\n"
 #if FZ_ENABLE_GAMMA
-		"  -g -  use gamma blending\n"
+		"  -Q -  use gamma blending\n"
 #else
-		"  -g -  use gamma blending (disabled in this build)\n"
+		"  -Q -  use gamma blending (disabled in this build)\n"
 #endif
 		"  -I    invert colors\n"
 		"\n"
@@ -558,6 +569,7 @@ static int usage(void)
 		"  -K    do not draw text\n"
 		"  -KK   only draw text\n"
 		"  -D    disable use of display list\n"
+		"  -g    force the use of progressive mode\n"
 		"  -j -  render only selected types of content. Use a comma-separated list\n"
 		"        to combine types (everything,content,annotations,Unknown,\n"
 		"        max_nodes=NNN,max_time=MS,"
@@ -580,9 +592,11 @@ static int usage(void)
 #if FZ_ENABLE_OCR
 		"  -t -  Specify language/script for OCR (default: eng)\n"
 		"  -d -  Specify path for OCR files (default: rely on TESSDATA_PREFIX environment variable)\n"
+		"  -k -{,-}  Skew correction options. auto or angle {0=increase size, 1=maintain size, 2=decrease size}\n"
 #else
 		"  -t -  OCR language    (the OCR feature is not available in this build)\n"
 		"  -d -  OCR datafiles   (the OCR feature is not available in this build)\n"
+		"  -k -{,-}  Skew correction options. auto or angle {0=increase size, 1=maintain size, 2=decrease size} (disabled)\n"
 #endif
 		"\n"
 		"  -y l  List the layer configs to stderr\n"
@@ -686,6 +700,9 @@ file_level_headers(fz_context *ctx, const char *filename)
 			fz_strlcat(options, ocr_datadir, sizeof (options));
 		}
 		fz_parse_pdfocr_options(ctx, &opts, options);
+		opts.skew_correct = skew_correct;
+		opts.skew_border = skew_border;
+		opts.skew_angle = skew_angle;
 		bander = fz_new_pdfocr_band_writer(ctx, out, &opts);
 	}
 #endif
@@ -721,14 +738,14 @@ file_level_trailers(fz_context *ctx)
 
 static void apply_kill_switch(fz_device *dev)
 {
-	if (kill == 1)
+	if (s_kill == 1)
 	{
 		/* kill all non-clipping text operators */
 		dev->fill_text = NULL;
 		dev->stroke_text = NULL;
 		dev->ignore_text = NULL;
 	}
-	else if (kill == 2)
+	else if (s_kill == 2)
 	{
 		/* kill all non-clipping path, image, and shading operators */
 		dev->fill_path = NULL;
@@ -1399,10 +1416,14 @@ static void dodrawpage(fz_context *ctx, fz_page *page, fz_display_list *list, in
 					ASSERT(drawheight <= pix->h);
 					fz_write_band(ctx, bander, bit ? bit->stride : pix->stride, drawheight, bit ? bit->samples : pix->samples);
 				}
+#if FZ_ENABLE_JPX
 				if (output_format->format == OUT_J2K)
 				{
 					fz_write_pixmap_as_jpx(ctx, out, pix, 80);
 				}
+#else
+					fz_throw(ctx, FZ_ERROR_GENERIC, "JPX support disabled");
+#endif
 				fz_drop_bitmap(ctx, bit);
 				bit = NULL;
 
@@ -2793,7 +2814,7 @@ int main(int argc, const char** argv)
 	band_height = 0;
 	lowmemory = 0;
 
-	kill = 0;
+	s_kill = 0;
 	verbosity = 1;
 	errored = 0;
 	colorspace = NULL;
@@ -2873,7 +2894,7 @@ int main(int argc, const char** argv)
 	atexit(mu_drop_context);
 
 	fz_getopt_reset();
-	while ((c = fz_getopt(argc, argv, "qp:o:F:R:r:w:h:fB:c:e:gG:Is:A:DiW:H:S:T:t:d:U:XLvVPl:y:Yz:Z:NO:am:x:Xhj:J:Kb")) != -1)
+	while ((c = fz_getopt(argc, argv, "qQp:o:F:R:r:w:h:fB:c:e:gG:Is:A:DiW:H:S:T:t:d:U:LvVPl:y:Yz:Z:NO:am:x:Xhj:J:Kb:k:")) != -1)
 	{
 		switch (c)
 		{
@@ -2905,7 +2926,7 @@ int main(int argc, const char** argv)
 		case 'c': out_cs = parse_colorspace(fz_optarg); break;
 		case 'e': proof_filename = fz_optarg; break;
 		case 'G': gamma_value = fz_atof(fz_optarg); break;
-		case 'g':
+		case 'Q':
 #if FZ_ENABLE_GAMMA
 			use_gamma = 1;
 #else
@@ -2922,7 +2943,7 @@ int main(int argc, const char** argv)
 		case 'U': layout_css = fz_optarg; break;
 		case 'X': layout_use_doc_css = 0; break;
 
-		case 'K': ++kill; break;
+		case 'K': ++s_kill; break;
 
 		case 'O': spots = fz_atof(fz_optarg);
 #ifndef FZ_ENABLE_SPOT_RENDERING
@@ -3018,9 +3039,23 @@ int main(int argc, const char** argv)
 		case 'z': layer_off[layer_off_len++] = !strcmp(fz_optarg, "all") ? -1 : fz_atoi(fz_optarg); break;
 		case 'Z': layer_on[layer_on_len++] = !strcmp(fz_optarg, "all") ? -1 : fz_atoi(fz_optarg); break;
 		case 'a': useaccel = 0; break;
+		case 'k':
+		{
+			const char *a;
+			if (fz_optarg[0] == 'a')
+				skew_correct = 1;
+			else
+				skew_correct = 2, skew_angle = fz_atof(fz_optarg);
+			a = strchr(fz_optarg, ',');
+			if (a != NULL)
+				skew_border = fz_atoi(fz_optarg+1);
+			break;
+		}
+
 		case 'x': txtdraw_options = fz_optarg; break;
 
 		case 'V': fz_info(ctx, "mudraw version %s", FZ_VERSION); return EXIT_FAILURE;
+		case 'g': useprogressive = 1; break;
 		}
 	}
 
@@ -3270,7 +3305,7 @@ int main(int argc, const char** argv)
 				fz_error(ctx, "Making hyperlinks only possible in HTML output\n");
 				make_hyperlinks = 0;
 			}
-			if (kill == 1 || kill == 2)
+			if (s_kill == 1 || s_kill == 2)
 			{
 				fz_error(ctx, "No sense in making hyperlinks if the switch -K or -KK is used\n");
 				make_hyperlinks = 0;
@@ -3489,7 +3524,8 @@ int main(int argc, const char** argv)
 			}
 			fz_catch(ctx)
 			{
-				fz_error(ctx, "warning: tesseract OCR engine could not be initialized. Falling back to the non-OCR-ed output format! %s", fz_caught_message(ctx));
+				fz_error(ctx, "warning: tesseract OCR engine could not be initialized. Falling back to the non-OCR-ed output format! %s", fz_convert_error(ctx, NULL));
+
 				switch (output_format->format)
 				{
 				case OUT_OCR_TRACE:
@@ -3552,6 +3588,12 @@ int main(int argc, const char** argv)
 			if (!output_file_per_page)
 				file_level_headers(ctx, fz_optind < argc ? argv[fz_optind] : "-");
 			fz_register_document_handlers(ctx);
+#ifdef HAVE_SMARTOFFICE
+			{
+				void *cfg = so_doc_handler_enable(ctx, "en-gb");
+				so_doc_handler_configure(ctx, cfg, SO_DOC_HANDLER_MODE, SO_DOC_HANDLER_MODE_HTML);
+			}
+#endif
 
 			while (fz_optind < argc)
 			{
@@ -3560,6 +3602,11 @@ int main(int argc, const char** argv)
 				time_t atime;
 				time_t dtime;
 				int layouttime;
+				fz_stream *filef = NULL;
+				fz_stream *accelf = NULL;
+
+				fz_var(filef);
+				fz_var(accelf);
 
 				fz_try(ctx)
 				{
@@ -3589,7 +3636,12 @@ int main(int argc, const char** argv)
 						}
 					}
 
-					doc = fz_open_accelerated_document(ctx, filename, accel);
+					filef = fz_open_file(ctx, filename);
+					if (useprogressive)
+						filef->progressive = 1;
+					if (accel)
+						accelf = fz_open_file(ctx, accel);
+					doc = fz_open_accelerated_document_with_stream(ctx, filename, filef, accelf);
 
 #ifdef CLUSTER
 					/* Load and then drop the outline if we're running under the cluster.
@@ -3681,6 +3733,8 @@ int main(int argc, const char** argv)
 				{
 					fz_drop_document(ctx, doc);
 					doc = NULL;
+					fz_drop_stream(ctx, filef);
+					fz_drop_stream(ctx, accelf);
 				}
 				fz_catch(ctx)
 				{

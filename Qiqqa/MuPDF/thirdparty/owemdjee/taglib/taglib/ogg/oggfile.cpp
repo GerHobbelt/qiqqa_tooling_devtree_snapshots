@@ -53,7 +53,6 @@ public:
     pages.setAutoDelete(true);
   }
 
-  unsigned int streamSerialNumber;
   List<Page *> pages;
   std::unique_ptr<PageHeader> firstPageHeader;
   std::unique_ptr<PageHeader> lastPageHeader;
@@ -148,8 +147,8 @@ bool Ogg::File::save()
     return false;
   }
 
-  for(const auto &[i, packet] : std::as_const(d->dirtyPackets))
-    writePacket(i, packet);
+  for(const auto &[i, pkt] : std::as_const(d->dirtyPackets))
+    writePacket(i, pkt);
 
   d->dirtyPackets.clear();
 
@@ -270,10 +269,9 @@ void Ogg::File::writePacket(unsigned int i, const ByteVector &packet)
 
   // Renumber the following pages if the pages have been split or merged.
 
-  const int numberOfNewPages
-    = pages.back()->pageSequenceNumber() - lastPage->pageSequenceNumber();
-
-  if(numberOfNewPages != 0) {
+  if(const int numberOfNewPages
+      = pages.back()->pageSequenceNumber() - lastPage->pageSequenceNumber();
+     numberOfNewPages != 0) {
     offset_t pageOffset = originalOffset + data.size();
 
     while(true) {
@@ -282,10 +280,10 @@ void Ogg::File::writePacket(unsigned int i, const ByteVector &packet)
         break;
 
       page.setPageSequenceNumber(page.pageSequenceNumber() + numberOfNewPages);
-      const ByteVector data = page.render();
+      const ByteVector pageData = page.render();
 
       seek(pageOffset + 18);
-      writeBlock(data.mid(18, 8));
+      writeBlock(pageData.mid(18, 8));
 
       if(page.header()->lastPageOfStream())
         break;

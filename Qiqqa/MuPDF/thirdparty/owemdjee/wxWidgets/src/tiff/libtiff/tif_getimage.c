@@ -636,6 +636,12 @@ gtTileContig(TIFFRGBAImage* img, uint32_t* raster, uint32_t w, uint32_t h)
         toskew = -(int32_t)(tw - w);
     }
      
+    if (tw == 0 || th == 0)
+    {
+        TIFFErrorExtR(tif, TIFFFileName(tif), "tile width or height is zero");
+        return (0);
+    }
+
     /*
      *	Leftmost tile is clipped on left side if col_offset > 0.
      */
@@ -777,6 +783,12 @@ gtTileSeparate(TIFFRGBAImage* img, uint32_t* raster, uint32_t w, uint32_t h)
             colorchannels = 3;
             break;
         }
+
+    if (tw == 0 || th == 0)
+    {
+        TIFFErrorExtR(tif, TIFFFileName(tif), "tile width or height is zero");
+        return (0);
+    }
 
 	/*
 	 *	Leftmost tile is clipped on left side if col_offset > 0.
@@ -941,6 +953,11 @@ gtStripContig(TIFFRGBAImage* img, uint32_t* raster, uint32_t w, uint32_t h)
 	}
 
 	TIFFGetFieldDefaulted(tif, TIFFTAG_ROWSPERSTRIP, &rowsperstrip);
+    if (rowsperstrip == 0)
+    {
+        TIFFErrorExtR(tif, TIFFFileName(tif), "rowsperstrip is zero");
+        return (0);
+    }
 
 	scanline = TIFFScanlineSize(tif);
 	fromskew = (w < imagewidth ? imagewidth - w : 0);
@@ -1056,6 +1073,12 @@ gtStripSeparate(TIFFRGBAImage* img, uint32_t* raster, uint32_t w, uint32_t h)
         }
 
 	TIFFGetFieldDefaulted(tif, TIFFTAG_ROWSPERSTRIP, &rowsperstrip);
+    if (rowsperstrip == 0)
+    {
+        TIFFErrorExtR(tif, TIFFFileName(tif), "rowsperstrip is zero");
+        return (0);
+    }
+
 	scanline = TIFFScanlineSize(tif);  
 	fromskew = (w < imagewidth ? imagewidth - w : 0);
 	for (row = 0; row < h; row += nrow)
@@ -2866,6 +2889,13 @@ TIFFReadRGBAStripExt(TIFF* tif, uint32_t row, uint32_t * raster, int stop_on_err
     }
     
     TIFFGetFieldDefaulted(tif, TIFFTAG_ROWSPERSTRIP, &rowsperstrip);
+
+    if (rowsperstrip == 0)
+    {
+        TIFFErrorExtR(tif, TIFFFileName(tif), "rowsperstrip is zero");
+        return (0);
+    }
+
     if( (row % rowsperstrip) != 0 )
     {
 		TIFFErrorExtR(tif, TIFFFileName(tif),
@@ -2874,6 +2904,13 @@ TIFFReadRGBAStripExt(TIFF* tif, uint32_t row, uint32_t * raster, int stop_on_err
     }
 
     if (TIFFRGBAImageOK(tif, emsg) && TIFFRGBAImageBegin(&img, tif, stop_on_error, emsg)) {
+        if (row >= img.height)
+        {
+            TIFFErrorExtR(tif, TIFFFileName(tif),
+                          "Invalid row passed to TIFFReadRGBAStrip().");
+            TIFFRGBAImageEnd(&img);
+            return (0);
+        }
 
         img.row_offset = row;
         img.col_offset = 0;
@@ -2932,6 +2969,13 @@ TIFFReadRGBATileExt(TIFF* tif, uint32_t col, uint32_t row, uint32_t * raster, in
     
     TIFFGetFieldDefaulted(tif, TIFFTAG_TILEWIDTH, &tile_xsize);
     TIFFGetFieldDefaulted(tif, TIFFTAG_TILELENGTH, &tile_ysize);
+    if (tile_xsize == 0 || tile_ysize == 0)
+    {
+        TIFFErrorExtR(tif, TIFFFileName(tif),
+                      "tile_xsize or tile_ysize is zero");
+        return (0);
+    }
+
     if( (col % tile_xsize) != 0 || (row % tile_ysize) != 0 )
     {
 		TIFFErrorExtR(tif, TIFFFileName(tif),
@@ -2948,6 +2992,14 @@ TIFFReadRGBATileExt(TIFF* tif, uint32_t col, uint32_t row, uint32_t * raster, in
 	|| !TIFFRGBAImageBegin(&img, tif, stop_on_error, emsg)) {
 	    TIFFErrorExtR(tif, TIFFFileName(tif), "%s", emsg);
 	    return( 0 );
+    }
+
+    if (col >= img.width || row >= img.height)
+    {
+        TIFFErrorExtR(tif, TIFFFileName(tif),
+                      "Invalid row/col passed to TIFFReadRGBATile().");
+        TIFFRGBAImageEnd(&img);
+        return (0);
     }
 
     /*

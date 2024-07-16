@@ -8,6 +8,7 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules")
 include(CTest)
 include(FeatureSummary)
 include(GNUInstallDirs)
+include(CMakePackageConfigHelpers)
 
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
 if(APPLE)
@@ -43,6 +44,9 @@ if(PLATFORM_WINRT)
   add_definitions(-DPLATFORM_WINRT)
 endif()
 
+set(TAGLIB_INSTALL_SUFFIX "" CACHE STRING
+  "Suffix added to installed files (include directory, libraries, .pc)")
+
 add_definitions(-DHAVE_CONFIG_H)
 set(TESTS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/tests/")
 
@@ -60,13 +64,6 @@ if(MSVC)
       string(REGEX REPLACE "/MD" "/MT" ${flag_var} "${${flag_var}}")
     endforeach(flag_var)
   endif()
-  # Disable warnings for internal invocations of API functions
-  # that have been marked with TAGLIB_DEPRECATED
-  # https://docs.microsoft.com/en-us/cpp/error-messages/compiler-warnings/compiler-warning-level-3-c4996
-  # Also disable C4910: '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation
-  # and C4251: needs to have dll-interface to be used by clients.
-  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /wd4996 /wd4910 /wd4251")
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd4996 /wd4910 /wd4251")
 endif()
 
 # Read version information from file taglib/toolkit/taglib.h into variables
@@ -96,7 +93,7 @@ endif()
 # Patch version: increase it for bug fix releases.
 set(TAGLIB_SOVERSION_MAJOR 2)
 set(TAGLIB_SOVERSION_MINOR 0)
-set(TAGLIB_SOVERSION_PATCH 0)
+set(TAGLIB_SOVERSION_PATCH 1)
 
 include(ConfigureChecks.cmake)
 
@@ -106,16 +103,25 @@ option(WITH_ZLIB "Build with ZLIB" ON)
 if(WITH_ZLIB)
   find_package("ZLIB")
   set(HAVE_ZLIB ${ZLIB_FOUND})
+  if(ZLIB_FOUND)
+    set(ZLIB_LIBRARIES_FLAGS -lz)
+    if(NOT BUILD_SHARED_LIBS)
+      # When linking TagLib statically, zlib has to be linked explicitly.
+      set(ZLIB_INTERFACE_LINK_LIBRARIES ZLIB::ZLIB)
+    endif()
+  endif()
 endif()
 
 if(NOT WIN32)
   configure_file("${CMAKE_CURRENT_SOURCE_DIR}/taglib-config.cmake" "${CMAKE_CURRENT_BINARY_DIR}/taglib-config" @ONLY)
-  install(PROGRAMS "${CMAKE_CURRENT_BINARY_DIR}/taglib-config" DESTINATION "${CMAKE_INSTALL_BINDIR}")
+  install(PROGRAMS "${CMAKE_CURRENT_BINARY_DIR}/taglib-config" DESTINATION "${CMAKE_INSTALL_BINDIR}"
+          RENAME "taglib${TAGLIB_INSTALL_SUFFIX}-config")
 endif()
 
 if(WIN32)
   configure_file("${CMAKE_CURRENT_SOURCE_DIR}/taglib-config.cmd.cmake" "${CMAKE_CURRENT_BINARY_DIR}/taglib-config.cmd")
-  install(PROGRAMS "${CMAKE_CURRENT_BINARY_DIR}/taglib-config.cmd" DESTINATION "${CMAKE_INSTALL_BINDIR}")
+  install(PROGRAMS "${CMAKE_CURRENT_BINARY_DIR}/taglib-config.cmd" DESTINATION "${CMAKE_INSTALL_BINDIR}"
+          RENAME "taglib${TAGLIB_INSTALL_SUFFIX}-config.cmd")
 endif()
 
 if(NOT BUILD_FRAMEWORK)
@@ -130,7 +136,8 @@ if(NOT BUILD_FRAMEWORK)
     set(CMAKE_PC_LIBDIR "\${prefix}/${CMAKE_INSTALL_LIBDIR}")
   endif()
   configure_file("${CMAKE_CURRENT_SOURCE_DIR}/taglib.pc.cmake" "${CMAKE_CURRENT_BINARY_DIR}/taglib.pc" @ONLY)
-  install(FILES "${CMAKE_CURRENT_BINARY_DIR}/taglib.pc" DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig")
+  install(FILES "${CMAKE_CURRENT_BINARY_DIR}/taglib.pc" DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig"
+          RENAME "taglib${TAGLIB_INSTALL_SUFFIX}.pc")
 endif()
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
@@ -141,21 +148,34 @@ if(TRACE_IN_RELEASE)
   set(TRACE_IN_RELEASE TRUE)
 endif()
 
-configure_file(taglib/taglib_config.h.cmake "${CMAKE_CURRENT_BINARY_DIR}/taglib_config.h")
-
 find_package(utf8cpp QUIET)
-if(NOT utf8cpp_FOUND)
-  if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/utfcpp/CMakeLists.txt)
-    add_subdirectory("3rdparty/utfcpp")
-    message(STATUS "Using utfcpp from ${utf8cpp_SOURCE_DIR}")
-  else()
-    message(FATAL_ERROR
-      "utfcpp not found. Either install package (probably utfcpp, utf8cpp, or libutfcpp-dev) "
-      "or fetch the git submodule using\n"
-      "git submodule update --init")
-  endif()
-else()
+if(utf8cpp_FOUND)
   message(STATUS "Using utfcpp ${utf8cpp_VERSION} from ${utf8cpp_CONFIG}")
+else()
+  find_path(utf8cpp_INCLUDE_DIR NAMES utf8.h PATH_SUFFIXES utf8cpp
+            DOC "utf8cpp include directory")
+  mark_as_advanced(utf8cpp_INCLUDE_DIR)
+  include(FindPackageHandleStandardArgs)
+  find_package_handle_standard_args(utf8cpp REQUIRED_VARS utf8cpp_INCLUDE_DIR)
+  if(utf8cpp_FOUND)
+    set(utf8cpp_INCLUDE_DIRS "${utf8cpp_INCLUDE_DIR}")
+    if(NOT TARGET utf8::cpp)
+      add_library(utf8::cpp INTERFACE IMPORTED)
+      set_target_properties(utf8::cpp PROPERTIES
+        INTERFACE_INCLUDE_DIRECTORIES "${utf8cpp_INCLUDE_DIR}")
+    endif()
+    message(STATUS "Using utfcpp from ${utf8cpp_INCLUDE_DIR}")
+  else()
+    if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/utfcpp/CMakeLists.txt)
+      add_subdirectory("3rdparty/utfcpp")
+      message(STATUS "Using utfcpp from ${utf8cpp_SOURCE_DIR}")
+    else()
+      message(FATAL_ERROR
+        "utfcpp not found. Either install package (probably utfcpp, utf8cpp, or libutfcpp-dev) "
+        "or fetch the git submodule using\n"
+        "git submodule update --init")
+    endif()
+  endif()
 endif()
 
 add_subdirectory(taglib)

@@ -9,11 +9,13 @@ See-also:
   - printf (3)
   - sprintf (3)
   - vprintf (3)
+Protocol:
+  - All
 ---
 
 # NAME
 
-curl_maprintf, curl_mfprintf, curl_mprintf, curl_msnprintf, curl_msprintf
+curl_maprintf, curl_mfprintf, curl_mprintf, curl_msnprintf, curl_msprintf,
 curl_mvaprintf, curl_mvfprintf, curl_mvprintf, curl_mvsnprintf,
 curl_mvsprintf - formatted output conversion
 

@@ -32,7 +32,7 @@
 #include "file.h"
 
 #ifndef	lint
-FILE_RCSID("@(#)$File: apprentice.c,v 1.345 2024/01/30 21:59:41 christos Exp $")
+FILE_RCSID("@(#)$File: apprentice.c,v 1.348 2024/04/07 16:00:28 christos Exp $")
 #endif	/* lint */
 
 #include "magic.h"
@@ -499,7 +499,7 @@ apprentice_1(struct magic_set *ms, const char *fn, int action)
 	map = apprentice_map(ms, fn);
 	if (map == NULL) {
 		if (ms->flags & MAGIC_CHECK)
-			file_magwarn(NULL, "using regular magic file `%s'", fn);
+			file_magwarn(ms, "using regular magic file `%s'", fn);
 		map = apprentice_load(ms, fn, action);
 		if (map == NULL)
 			return -1;
@@ -945,7 +945,7 @@ apprentice_magic_strength_1(const struct magic *m)
 	switch (m->type) {
 	case FILE_DEFAULT:	/* make sure this sorts last */
 		if (m->factor_op != FILE_FACTOR_OP_NONE) {
-			file_magwarn(NULL, "Usupported factor_op in default %d",
+			file_magwarn1("Unsupported factor_op in default %d",
 			    m->factor_op);
 		}
 		return 0;
@@ -1140,8 +1140,15 @@ apprentice_sort(const void *a, const void *b)
 	const struct magic_entry *mb = CAST(const struct magic_entry *, b);
 	size_t sa = file_magic_strength(ma->mp, ma->cont_count);
 	size_t sb = file_magic_strength(mb->mp, mb->cont_count);
-	if (sa == sb)
-		return 0;
+	if (sa == sb) {
+		int x = memcmp(ma->mp, mb->mp, sizeof(*ma->mp));
+		if (x == 0) {
+			file_magwarn1("Duplicate magic entry `%s'",
+			    ma->mp->desc);
+			return 0;
+		}
+		return x > 0 ? -1 : 1;
+	}
 	else if (sa > sb)
 		return -1;
 	else
@@ -1335,6 +1342,8 @@ load_1(struct magic_set *ms, int action, const char *fn, int *errs,
 	/* read and parse this file */
 	for (ms->line = 1; (len = getline(&line, &llen, f)) != -1;
 	    ms->line++) {
+		if (ms->magwarn >= ms->magwarn_max)
+			break;
 		if (len == 0) /* null line, garbage, etc */
 			continue;
 		if (line[len - 1] == '\n') {

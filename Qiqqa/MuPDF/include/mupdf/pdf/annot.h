@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2023 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -113,6 +113,32 @@ enum
 	PDF_ANNOT_Q_CENTER = 1,
 	PDF_ANNOT_Q_RIGHT = 2
 };
+
+enum
+{
+	PDF_ANNOT_RT_R = 0,
+	PDF_ANNOT_RT_GROUP = 1,
+};
+
+enum pdf_intent
+{
+	PDF_ANNOT_IT_DEFAULT = 0,
+	PDF_ANNOT_IT_FREETEXT_CALLOUT,
+	PDF_ANNOT_IT_FREETEXT_TYPEWRITER,
+	PDF_ANNOT_IT_LINE_ARROW,
+	PDF_ANNOT_IT_LINE_DIMENSION,
+	PDF_ANNOT_IT_POLYLINE_DIMENSION,
+	PDF_ANNOT_IT_POLYGON_CLOUD,
+	PDF_ANNOT_IT_POLYGON_DIMENSION,
+	PDF_ANNOT_IT_STAMP_IMAGE,
+	PDF_ANNOT_IT_STAMP_SNAPSHOT,
+	PDF_ANNOT_IT_UNKNOWN = 255,
+};
+
+const char *pdf_string_from_intent(fz_context *ctx, enum pdf_intent intent);
+pdf_obj *pdf_name_from_intent(fz_context *ctx, enum pdf_intent intent);
+enum pdf_intent pdf_intent_from_string(fz_context *ctx, const char *str);
+enum pdf_intent pdf_intent_from_name(fz_context *ctx, pdf_obj *obj);
 
 /*
 	Map from a PDF name specifying an annotation line ending
@@ -506,6 +532,11 @@ int pdf_annot_has_icon_name(fz_context *ctx, pdf_annot *annot);
 int pdf_annot_has_open(fz_context *ctx, pdf_annot *annot);
 
 /*
+	Check to see if an annotation has a popup annotation.
+*/
+int pdf_annot_has_popup(fz_context *ctx, pdf_annot *annot);
+
+/*
 	Check to see if an annotation has author data.
 */
 int pdf_annot_has_author(fz_context *ctx, pdf_annot *annot);
@@ -522,6 +553,7 @@ fz_rect pdf_annot_rect(fz_context *ctx, pdf_annot *annot);
 
 /*
 	Retrieve the annotation border line width in points.
+	DEPRECATED: Use pdf_annot_border_width instead.
 */
 float pdf_annot_border(fz_context *ctx, pdf_annot *annot);
 
@@ -567,6 +599,14 @@ float pdf_annot_opacity(fz_context *ctx, pdf_annot *annot);
 	n = 1 (grey), 3 (rgb) or 4 (cmyk).
 */
 void pdf_annot_color(fz_context *ctx, pdf_annot *annot, int *n, float color[4]);
+
+/*
+	Retrieve the annotation text color.
+
+	n components, each between 0 and 1.
+	n = 1 (grey), 3 (rgb) or 4 (cmyk).
+*/
+void pdf_annot_text_color(fz_context *ctx, pdf_annot *annot, int *n, float color[4]);
 
 /*
 	Retrieve the annotation interior color.
@@ -634,7 +674,8 @@ void pdf_set_annot_stamp_image(fz_context *ctx, pdf_annot *annot, fz_image *imag
 void pdf_set_annot_rect(fz_context *ctx, pdf_annot *annot, fz_rect rect);
 
 /*
-	Set the border width for an annotation, in points and remove any border effect.
+	Set the border width for an annotation, in points.
+	DEPRECATED: Use pdf_set_annot_border_width instead.
 */
 void pdf_set_annot_border(fz_context *ctx, pdf_annot *annot, float width);
 
@@ -786,8 +827,18 @@ void pdf_set_annot_modification_date(fz_context *ctx, pdf_annot *annot, int64_t 
 int64_t pdf_annot_creation_date(fz_context *ctx, pdf_annot *annot);
 void pdf_set_annot_creation_date(fz_context *ctx, pdf_annot *annot, int64_t time);
 
+int pdf_annot_has_reply_type(fz_context *ctx, pdf_annot *annot);
+int pdf_annot_reply_type(fz_context *ctx, pdf_annot *annot);
+void pdf_set_annot_reply_type(fz_context *ctx, pdf_annot *annot, int rt);
+
+int pdf_annot_has_intent(fz_context *ctx, pdf_annot *annot);
+enum pdf_intent pdf_annot_intent(fz_context *ctx, pdf_annot *annot);
+void pdf_set_annot_intent(fz_context *ctx, pdf_annot *annot, enum pdf_intent it);
+
+void pdf_parse_default_appearance_unmapped(fz_context *ctx, const char *da, char *font_name, int font_name_len, float *size, int *n, float color[4]);
 void pdf_parse_default_appearance(fz_context *ctx, const char *da, const char **font, float *size, int *n, float color[4]);
 void pdf_print_default_appearance(fz_context *ctx, char *buf, int nbuf, const char *font, float size, int n, const float *color);
+void pdf_annot_default_appearance_unmapped(fz_context *ctx, pdf_annot *annot, char *font_name, int font_name_len, float *size, int *n, float color[4]);
 void pdf_annot_default_appearance(fz_context *ctx, pdf_annot *annot, const char **font, float *size, int *n, float color[4]);
 void pdf_set_annot_default_appearance(fz_context *ctx, pdf_annot *annot, const char *font, float size, int n, const float *color);
 
@@ -893,23 +944,32 @@ fz_stext_page *pdf_new_stext_page_from_annot(fz_context *ctx, pdf_annot *annot, 
 
 fz_layout_block *pdf_layout_text_widget(fz_context *ctx, pdf_annot *annot);
 
-typedef struct pdf_embedded_file_params pdf_embedded_file_params;
+/*
+	Historical alias for pdf_filespec_params;
+*/
+typedef struct pdf_filespec_params pdf_embedded_file_params;
 
 /*
 	Parameters for and embedded file. Obtained through
 	pdf_get_embedded_file_params(). The creation and
 	modification date fields are < 0 if unknown.
 */
-struct pdf_embedded_file_params {
+typedef struct pdf_filespec_params {
 	const char *filename;
 	const char *mimetype;
 	int size;
 	int64_t created;
 	int64_t modified;
-};
+} pdf_filespec_params;
 
 /*
 	Check if pdf object is a file specification.
+*/
+int pdf_is_filespec(fz_context *ctx, pdf_obj *fs);
+
+/*
+	Check if pdf object is a file specification where the data
+	is embedded within the file.
 */
 int pdf_is_embedded_file(fz_context *ctx, pdf_obj *fs);
 
@@ -923,8 +983,13 @@ int pdf_is_embedded_file(fz_context *ctx, pdf_obj *fs);
 pdf_obj *pdf_add_embedded_file(fz_context *ctx, pdf_document *doc, const char *filename, const char *mimetype, fz_buffer *contents, int64_t created, int64_t modifed, int add_checksum);
 
 /*
-	Obtain parameters for embedded file: name, size,
+	Obtain parameters for a filespec: name, size,
 	creation and modification dates cnad MIME type.
+*/
+void pdf_get_filespec_params(fz_context *ctx, pdf_obj *fs, pdf_filespec_params *out);
+
+/*
+	Historical alias for pdf_get_filespec_params.
 */
 void pdf_get_embedded_file_params(fz_context *ctx, pdf_obj *fs, pdf_embedded_file_params *out);
 
@@ -941,7 +1006,7 @@ fz_buffer *pdf_load_embedded_file_contents(fz_context *ctx, pdf_obj *fs);
 */
 int pdf_verify_embedded_file_checksum(fz_context *ctx, pdf_obj *fs);
 
-pdf_obj* pdf_embedded_file_stream(fz_context* ctx, pdf_obj* fs);
+pdf_obj *get_file_stream_and_name(fz_context *ctx, pdf_obj *fs, pdf_obj **namep);
 
 pdf_obj *pdf_lookup_dest(fz_context *ctx, pdf_document *doc, pdf_obj *needle);
 fz_link *pdf_load_link_annots(fz_context *ctx, pdf_document *, pdf_page *, pdf_obj *annots, int pagenum, fz_matrix page_ctm);

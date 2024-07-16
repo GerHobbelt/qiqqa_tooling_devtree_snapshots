@@ -115,7 +115,7 @@ size_t CNode::endPos()
 	switch(mpNode->type)
 	{
 	  case GUMBO_NODE_ELEMENT:
-		  return mpNode->v.element.end_pos.offset;
+          return mpNode->v.element.original_end_tag.length == 0 ? startPos() : mpNode->v.element.end_pos.offset;
 	  case GUMBO_NODE_TEXT:
 		  return mpNode->v.text.original_text.length + startPos();
 	  default:
@@ -141,7 +141,7 @@ size_t CNode::endPosOuter()
 	switch(mpNode->type)
 	{
 	case GUMBO_NODE_ELEMENT:
-		return mpNode->v.element.end_pos.offset + mpNode->v.element.original_end_tag.length;
+        return mpNode->v.element.original_end_tag.length == 0 ? startPos() : (mpNode->v.element.end_pos.offset + mpNode->v.element.original_end_tag.length);
 	case GUMBO_NODE_TEXT:
 		return mpNode->v.text.original_text.length + startPos();
 	default:
@@ -157,6 +157,11 @@ std::string CNode::tag()
 	}
 
 	return gumbo_normalized_tagname(mpNode->v.element.tag);
+}
+
+GumboNodeType CNode::type()
+{
+    return mpNode->type;
 }
 
 CSelection CNode::find(std::string aSelector)

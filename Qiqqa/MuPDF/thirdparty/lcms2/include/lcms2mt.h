@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2023 Marti Maria Saguer
+//  Copyright (c) 1998-2024 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -23,7 +23,7 @@
 //
 //---------------------------------------------------------------------------------
 //
-// Version 2.16 alpha 
+// Version 2.17alpha0
 //
 
 #ifndef _lcms2mt_H
@@ -89,7 +89,7 @@ extern "C" {
 // use OUR numbers with a mainline LCMS to fail, so
 // we have to go under 2000-2100. Let's subtract
 // 2000 from the mainline release.
-#define LCMS_VERSION              (2160 - 2000)
+#define LCMS_VERSION              (2170 - 2000)
 
 // We expect any LCMS2MT release to fall within the
 // following range.
@@ -258,7 +258,7 @@ typedef int                  cmsBool;
 #     define CMSAPI
 #  endif
 #else  // not Windows
-#  ifdef HAVE_FUNC_ATTRIBUTE_VISIBILITY
+#  if defined(HAVE_FUNC_ATTRIBUTE_VISIBILITY) && !defined(CMS_NO_VISIBILITY)
 #     define CMSEXPORT
 #     define CMSAPI    __attribute__((visibility("default")))
 #  else
@@ -1341,8 +1341,11 @@ CMSAPI cmsBool           CMSEXPORT cmsSliceSpaceFloat(cmsContext ContextID, cmsU
 
 typedef struct _cms_MLU_struct cmsMLU;
 
-#define  cmsNoLanguage "\0\0"
-#define  cmsNoCountry  "\0\0"
+#define  cmsNoLanguage    "\0\0"
+#define  cmsNoCountry     "\0\0"
+
+// Special language/country to retrieve unicode field for description in V2 profiles. Use with care.
+#define  cmsV2Unicode     "\xff\xff"
 
 CMSAPI cmsMLU*           CMSEXPORT cmsMLUalloc(cmsContext ContextID, cmsUInt32Number nItems);
 CMSAPI void              CMSEXPORT cmsMLUfree(cmsContext ContextID, cmsMLU* mlu);
@@ -1354,6 +1357,9 @@ CMSAPI cmsBool           CMSEXPORT cmsMLUsetASCII(cmsContext ContextID, cmsMLU* 
 CMSAPI cmsBool           CMSEXPORT cmsMLUsetWide(cmsContext ContextID, cmsMLU* mlu,
                                                   const char LanguageCode[3], const char CountryCode[3],
                                                   const wchar_t* WideString);
+CMSAPI cmsBool           CMSEXPORT cmsMLUsetUTF8(cmsContext ContextID, cmsMLU* mlu,
+                                                  const char LanguageCode[3], const char CountryCode[3],
+                                                  const char* UTF8String);
 
 CMSAPI cmsUInt32Number   CMSEXPORT cmsMLUgetASCII(cmsContext ContextID, const cmsMLU* mlu,
                                                   const char LanguageCode[3], const char CountryCode[3],
@@ -1362,6 +1368,10 @@ CMSAPI cmsUInt32Number   CMSEXPORT cmsMLUgetASCII(cmsContext ContextID, const cm
 CMSAPI cmsUInt32Number   CMSEXPORT cmsMLUgetWide(cmsContext ContextID, const cmsMLU* mlu,
                                                  const char LanguageCode[3], const char CountryCode[3],
                                                  wchar_t* Buffer, cmsUInt32Number BufferSize);
+CMSAPI cmsUInt32Number   CMSEXPORT cmsMLUgetUTF8(cmsContext ContextID, const cmsMLU* mlu,
+                                                 const char LanguageCode[3], const char CountryCode[3],
+                                                 char* Buffer, cmsUInt32Number BufferSize);
+
 
 CMSAPI cmsBool           CMSEXPORT cmsMLUgetTranslation(cmsContext ContextID, const cmsMLU* mlu,
                                                          const char LanguageCode[3], const char CountryCode[3],
@@ -1585,6 +1595,10 @@ CMSAPI cmsUInt32Number   CMSEXPORT cmsGetProfileInfoASCII(cmsContext ContextID, 
                                                             const char LanguageCode[3], const char CountryCode[3],
                                                             char* Buffer, cmsUInt32Number BufferSize);
 
+CMSAPI cmsUInt32Number  CMSEXPORT cmsGetProfileInfoUTF8(cmsContext ContextID, cmsHPROFILE hProfile, cmsInfoType Info,
+                                                            const char LanguageCode[3], const char CountryCode[3],
+                                                            char* Buffer, cmsUInt32Number BufferSize);
+
 // IO handlers ----------------------------------------------------------------------------------------------------------
 
 typedef struct _cms_io_handler cmsIOHANDLER;
@@ -1632,6 +1646,8 @@ CMSAPI cmsHPROFILE      CMSEXPORT cmsCreateLinearizationDeviceLink(cmsContext Co
 CMSAPI cmsHPROFILE      CMSEXPORT cmsCreateInkLimitingDeviceLink(cmsContext ContextID,
                                                                  cmsColorSpaceSignature ColorSpace,
                                                                  cmsFloat64Number Limit);
+
+CMSAPI cmsHPROFILE      CMSEXPORT cmsCreateDeviceLinkFromCubeFile(cmsContext ContextID, const char* cFileName);
 
 CMSAPI cmsHPROFILE      CMSEXPORT cmsCreateLab2Profile(cmsContext ContextID,
                                                  const cmsCIExyY* WhitePoint);

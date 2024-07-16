@@ -644,13 +644,47 @@ void GaussianBlur(InputArray _src, OutputArray _dst, Size ksize,
     CV_UNUSED(useOpenCL);
 
     int sdepth = CV_MAT_DEPTH(type), cn = CV_MAT_CN(type);
+    bool OpenCL_applicable = sdepth == CV_8U &&
+            ((ksize.width == 3 && ksize.height == 3) ||
+            (ksize.width == 5 && ksize.height == 5));
+
+    static bool param_check_gaussian_blur_bitexact_kernels = utils::getConfigurationParameterBool("OPENCV_GAUSSIANBLUR_CHECK_BITEXACT_KERNELS", false);
+
+    if (!(useOpenCL && OpenCL_applicable) || !param_check_gaussian_blur_bitexact_kernels)
+    {
+        Mat src = _src.getMat();
+        Mat dst = _dst.getMat();
+
+        Point ofs;
+        Size wsz(src.cols, src.rows);
+        if(!(borderType & BORDER_ISOLATED))
+            src.locateROI( wsz, ofs );
+
+        CALL_HAL(gaussianBlur, cv_hal_gaussianBlur, src.ptr(), src.step, dst.ptr(), dst.step, src.cols, src.rows, sdepth, cn,
+                ofs.x, ofs.y, wsz.width - src.cols - ofs.x, wsz.height - src.rows - ofs.y, ksize.width, ksize.height,
+                sigma1, sigma2, borderType&~BORDER_ISOLATED);
+    }
+
+    if (!useOpenCL && (sigma1 == 0.0) && (sigma2 == 0.0) && (ksize.height == ksize.width) && (borderType & BORDER_ISOLATED))
+    {
+        Mat src = _src.getMat();
+        Mat dst = _dst.getMat();
+
+        if (src.data == dst.data)
+                src = src.clone();
+
+        Point ofs;
+        Size wsz(src.cols, src.rows);
+        //src.locateROI(wsz, ofs);
+
+        CALL_HAL(gaussianBlurBinomial, cv_hal_gaussianBlurBinomial, src.ptr(), src.step, dst.ptr(),
+                dst.step, src.cols, src.rows, sdepth, cn, ofs.x, ofs.y, wsz.width - src.cols - ofs.x, wsz.height - src.rows - ofs.y, ksize.width, borderType & ~BORDER_ISOLATED);
+    }
 
     Mat kx, ky;
     createGaussianKernels(kx, ky, type, ksize, sigma1, sigma2);
 
-    CV_OCL_RUN(useOpenCL && sdepth == CV_8U &&
-            ((ksize.width == 3 && ksize.height == 3) ||
-            (ksize.width == 5 && ksize.height == 5)),
+    CV_OCL_RUN(useOpenCL && OpenCL_applicable,
             ocl_GaussianBlur_8UC1(_src, _dst, ksize, CV_MAT_DEPTH(type), kx, ky, borderType)
     );
 
@@ -659,7 +693,6 @@ void GaussianBlur(InputArray _src, OutputArray _dst, Size ksize,
         std::vector<ufixedpoint16> fkx, fky;
         createGaussianKernels(fkx, fky, type, ksize, sigma1, sigma2);
 
-        static bool param_check_gaussian_blur_bitexact_kernels = utils::getConfigurationParameterBool("OPENCV_GAUSSIANBLUR_CHECK_BITEXACT_KERNELS", false);
         if (param_check_gaussian_blur_bitexact_kernels && !validateGaussianBlurKernel(fkx))
         {
             CV_LOG_INFO(NULL, "GaussianBlur: bit-exact fx kernel can't be applied: ksize=" << ksize << " sigma=" << Size2d(sigma1, sigma2));
@@ -683,8 +716,22 @@ void GaussianBlur(InputArray _src, OutputArray _dst, Size ksize,
 
             if (src.data == dst.data)
                 src = src.clone();
+
+            if ((sigma1 == 0.0) && (sigma2 == 0.0) && (ksize.height == ksize.width))
+            {
+                Point ofs;
+                Size wsz(src.cols, src.rows);
+                Mat src2 = src;
+                if(!(borderType & BORDER_ISOLATED))
+                    src2.locateROI( wsz, ofs );
+
+                CALL_HAL(gaussianBlurBinomial, cv_hal_gaussianBlurBinomial, src2.ptr(), src2.step, dst.ptr(), dst.step, src2.cols, src2.rows, sdepth, cn,
+                         ofs.x, ofs.y, wsz.width - src2.cols - ofs.x,  wsz.height - src2.rows - ofs.y, ksize.width, borderType&~BORDER_ISOLATED);
+            }
+
             CV_CPU_DISPATCH(GaussianBlurFixedPoint, (src, dst, (const uint16_t*)&fkx[0], (int)fkx.size(), (const uint16_t*)&fky[0], (int)fky.size(), borderType),
                 CV_CPU_DISPATCH_MODES_ALL);
+
             return;
         }
     }
@@ -695,7 +742,6 @@ void GaussianBlur(InputArray _src, OutputArray _dst, Size ksize,
         std::vector<ufixedpoint32> fkx, fky;
         createGaussianKernels(fkx, fky, type, ksize, sigma1, sigma2);
 
-        static bool param_check_gaussian_blur_bitexact_kernels = utils::getConfigurationParameterBool("OPENCV_GAUSSIANBLUR_CHECK_BITEXACT_KERNELS", false);
         if (param_check_gaussian_blur_bitexact_kernels && !validateGaussianBlurKernel(fkx))
         {
             CV_LOG_INFO(NULL, "GaussianBlur: bit-exact fx kernel can't be applied: ksize=" << ksize << " sigma=" << Size2d(sigma1, sigma2));
@@ -720,8 +766,22 @@ void GaussianBlur(InputArray _src, OutputArray _dst, Size ksize,
 
             if (src.data == dst.data)
                 src = src.clone();
+
+            if ((sigma1 == 0.0) && (sigma2 == 0.0) && (ksize.height == ksize.width))
+            {
+                Point ofs;
+                Size wsz(src.cols, src.rows);
+                Mat src2 = src;
+                if(!(borderType & BORDER_ISOLATED))
+                    src2.locateROI( wsz, ofs );
+
+                CALL_HAL(gaussianBlurBinomial, cv_hal_gaussianBlurBinomial, src2.ptr(), src2.step, dst.ptr(), dst.step, src2.cols, src2.rows, sdepth, cn,
+                         ofs.x, ofs.y, wsz.width - src2.cols - ofs.x,  wsz.height - src2.rows - ofs.y, ksize.width, borderType&~BORDER_ISOLATED);
+            }
+
             CV_CPU_DISPATCH(GaussianBlurFixedPoint, (src, dst, (const uint32_t*)&fkx[0], (int)fkx.size(), (const uint32_t*)&fky[0], (int)fky.size(), borderType),
                 CV_CPU_DISPATCH_MODES_ALL);
+
             return;
         }
     }
@@ -784,7 +844,7 @@ cvSmooth( const void* srcarr, void* dstarr, int smooth_type,
         cv::bilateralFilter( src, dst, param1, param3, param4, cv::BORDER_REPLICATE );
 
     if( dst.data != dst0.data )
-        CV_Error( CV_StsUnmatchedFormats, "The destination image does not have the proper type" );
+        CV_Error( cv::Error::StsUnmatchedFormats, "The destination image does not have the proper type" );
 }
 
 /* End of file. */

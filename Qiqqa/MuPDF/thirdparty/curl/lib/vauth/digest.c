@@ -103,7 +103,7 @@ bool Curl_auth_digest_get_pair(const char *str, char *value, char *content,
 
       case ',':
         if(!starts_with_quote) {
-          /* This signals the end of the content if we didn't get a starting
+          /* This signals the end of the content if we did not get a starting
              quote and then we do "sloppy" parsing */
           c = 0; /* the end */
           continue;
@@ -288,7 +288,7 @@ static CURLcode auth_decode_digest_md5_message(const struct bufref *chlgref,
   /* Retrieve realm string from the challenge */
   if(!auth_digest_get_key_value(chlg, "realm=\"", realm, rlen, '\"')) {
     /* Challenge does not have a realm, set empty string [RFC2831] page 6 */
-    strcpy(realm, "");
+    *realm = '\0';
   }
 
   /* Retrieve algorithm string from the challenge */
@@ -326,7 +326,7 @@ bool Curl_auth_is_digest_supported(void)
  *
  * data    [in]     - The session handle.
  * chlg    [in]     - The challenge message.
- * userp   [in]     - The user name.
+ * userp   [in]     - The username.
  * passwdp [in]     - The user's password.
  * service [in]     - The service type such as http, smtp, pop or imap.
  * out     [out]    - The result storage.
@@ -629,7 +629,7 @@ CURLcode Curl_auth_decode_digest_http_message(const char *chlg,
       }
     }
     else
-      break; /* We're done here */
+      break; /* We are done here */
 
     /* Pass all additional spaces here */
     while(*chlg && ISBLANK(*chlg))
@@ -646,7 +646,7 @@ CURLcode Curl_auth_decode_digest_http_message(const char *chlg,
   if(before && !digest->stale)
     return CURLE_BAD_CONTENT_ENCODING;
 
-  /* We got this header without a nonce, that's a bad Digest line! */
+  /* We got this header without a nonce, that is a bad Digest line! */
   if(!digest->nonce)
     return CURLE_BAD_CONTENT_ENCODING;
 
@@ -666,7 +666,7 @@ CURLcode Curl_auth_decode_digest_http_message(const char *chlg,
  * Parameters:
  *
  * data    [in]     - The session handle.
- * userp   [in]     - The user name.
+ * userp   [in]     - The username.
  * passwdp [in]     - The user's password.
  * request [in]     - The HTTP request.
  * uripath [in]     - The path of the HTTP uri.
@@ -728,8 +728,10 @@ static CURLcode auth_create_digest_http_message(
     if(!hashthis)
       return CURLE_OUT_OF_MEMORY;
 
-    hash(hashbuf, (unsigned char *) hashthis, strlen(hashthis));
+    result = hash(hashbuf, (unsigned char *) hashthis, strlen(hashthis));
     free(hashthis);
+    if(result)
+      return result;
     convert_to_ascii(hashbuf, (unsigned char *)userh);
   }
 
@@ -749,8 +751,10 @@ static CURLcode auth_create_digest_http_message(
   if(!hashthis)
     return CURLE_OUT_OF_MEMORY;
 
-  hash(hashbuf, (unsigned char *) hashthis, strlen(hashthis));
+  result = hash(hashbuf, (unsigned char *) hashthis, strlen(hashthis));
   free(hashthis);
+  if(result)
+    return result;
   convert_to_ascii(hashbuf, ha1);
 
   if(digest->algo & SESSION_ALGO) {
@@ -759,8 +763,10 @@ static CURLcode auth_create_digest_http_message(
     if(!tmp)
       return CURLE_OUT_OF_MEMORY;
 
-    hash(hashbuf, (unsigned char *) tmp, strlen(tmp));
+    result = hash(hashbuf, (unsigned char *) tmp, strlen(tmp));
     free(tmp);
+    if(result)
+      return result;
     convert_to_ascii(hashbuf, ha1);
   }
 
@@ -782,11 +788,15 @@ static CURLcode auth_create_digest_http_message(
     return CURLE_OUT_OF_MEMORY;
 
   if(digest->qop && strcasecompare(digest->qop, "auth-int")) {
-    /* We don't support auth-int for PUT or POST */
+    /* We do not support auth-int for PUT or POST */
     char hashed[65];
     char *hashthis2;
 
-    hash(hashbuf, (const unsigned char *)"", 0);
+    result = hash(hashbuf, (const unsigned char *)"", 0);
+    if(result) {
+      free(hashthis);
+      return result;
+    }
     convert_to_ascii(hashbuf, (unsigned char *)hashed);
 
     hashthis2 = aprintf("%s:%s", hashthis, hashed);
@@ -797,8 +807,10 @@ static CURLcode auth_create_digest_http_message(
   if(!hashthis)
     return CURLE_OUT_OF_MEMORY;
 
-  hash(hashbuf, (unsigned char *) hashthis, strlen(hashthis));
+  result = hash(hashbuf, (unsigned char *) hashthis, strlen(hashthis));
   free(hashthis);
+  if(result)
+    return result;
   convert_to_ascii(hashbuf, ha2);
 
   if(digest->qop) {
@@ -812,8 +824,10 @@ static CURLcode auth_create_digest_http_message(
   if(!hashthis)
     return CURLE_OUT_OF_MEMORY;
 
-  hash(hashbuf, (unsigned char *) hashthis, strlen(hashthis));
+  result = hash(hashbuf, (unsigned char *) hashthis, strlen(hashthis));
   free(hashthis);
+  if(result)
+    return result;
   convert_to_ascii(hashbuf, request_digest);
 
   /* For test case 64 (snooped from a Mozilla 1.3a request)
@@ -821,12 +835,12 @@ static CURLcode auth_create_digest_http_message(
      Authorization: Digest username="testuser", realm="testrealm", \
      nonce="1053604145", uri="/64", response="c55f7f30d83d774a3d2dcacf725abaca"
 
-     Digest parameters are all quoted strings.  Username which is provided by
+     Digest parameters are all quoted strings. Username which is provided by
      the user will need double quotes and backslashes within it escaped.
      realm, nonce, and opaque will need backslashes as well as they were
-     de-escaped when copied from request header.  cnonce is generated with
-     web-safe characters.  uri is already percent encoded.  nc is 8 hex
-     characters.  algorithm and qop with standard values only contain web-safe
+     de-escaped when copied from request header. cnonce is generated with
+     web-safe characters. uri is already percent encoded. nc is 8 hex
+     characters. algorithm and qop with standard values only contain web-safe
      characters.
   */
   userp_quoted = auth_digest_string_quoted(digest->userhash ? userh : userp);
@@ -943,7 +957,7 @@ static CURLcode auth_create_digest_http_message(
  * Parameters:
  *
  * data    [in]     - The session handle.
- * userp   [in]     - The user name.
+ * userp   [in]     - The username.
  * passwdp [in]     - The user's password.
  * request [in]     - The HTTP request.
  * uripath [in]     - The path of the HTTP uri.

@@ -4,7 +4,7 @@
  * This file was part of the Independent JPEG Group's software:
  * Copyright (C) 1995-2019, Thomas G. Lane, Guido Vollbeding.
  * libjpeg-turbo Modifications:
- * Copyright (C) 2010, 2014, 2017, 2019-2022, D. R. Commander.
+ * Copyright (C) 2010, 2014, 2017, 2019-2022, 2024, D. R. Commander.
  * For conditions of distribution and use, see the accompanying README.ijg
  * file.
  *
@@ -260,7 +260,7 @@ parse_switches(j_compress_ptr cinfo, int argc, const char** argv,
 			if (!printed_version) {
 				fprintf(stderr, "%s version %s (build %s)\n",
 					PACKAGE_NAME, VERSION, BUILD);
-				fprintf(stderr, "%s\n\n", JCOPYRIGHT);
+				fprintf(stderr, "%s", JCOPYRIGHT);
 				fprintf(stderr, "Emulating The Independent JPEG Group's software, version %s\n\n",
 					JVERSION);
 				printed_version = TRUE;

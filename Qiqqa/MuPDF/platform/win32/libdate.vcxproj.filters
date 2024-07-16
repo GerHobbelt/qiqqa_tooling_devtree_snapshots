@@ -89,25 +89,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/date/test/clock_cast_test/normal_clocks.pass.cpp">
       <Filter>Source Files\test\clock_cast_test</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/clock_cast_test/to_sys_return_int.fail.cpp">
-      <Filter>Source Files\test\clock_cast_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/clock_cast_test/to_sys_return_reference.fail.cpp">
-      <Filter>Source Files\test\clock_cast_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/clock_cast_test/to_sys_return_utc_time.fail.cpp">
-      <Filter>Source Files\test\clock_cast_test</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/day.pass.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/daypday.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/daysmday.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/daysmweekday.fail.cpp">
       <Filter>Source Files\test\date_test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/detail/decimal_format_seconds.pass.cpp">
@@ -158,37 +140,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/month_weekday_last.pass.cpp">
       <Filter>Source Files\test\date_test</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/month_weekday_last_less.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/month_weekday_less.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/monthpmonth.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/months_m_year_month.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/months_m_year_month_day.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/monthsmmonth.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/multi_year_duration_addition.pass.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_day_day.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_int_month.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_int_year.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_last_last.fail.cpp">
       <Filter>Source Files\test\date_test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_month_day.pass.cpp">
@@ -197,28 +149,13 @@
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_month_day_last.pass.cpp">
       <Filter>Source Files\test\date_test</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_month_day_month_day.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_month_month.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_month_weekday.pass.cpp">
       <Filter>Source Files\test\date_test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_month_weekday_last.pass.cpp">
       <Filter>Source Files\test\date_test</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_month_year.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_survey.pass.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_weekday_indexed_weekday_indexed.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_weekday_last_weekday_last.fail.cpp">
       <Filter>Source Files\test\date_test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_year_month.pass.cpp">
@@ -234,12 +171,6 @@
       <Filter>Source Files\test\date_test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_year_month_weekday_last.pass.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_year_month_year_month.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/op_div_year_year.fail.cpp">
       <Filter>Source Files\test\date_test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/parse.pass.cpp">
@@ -275,12 +206,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/weekday_last.pass.cpp">
       <Filter>Source Files\test\date_test</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/weekday_lessthan.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/weekday_sum.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year.pass.cpp">
       <Filter>Source Files\test\date_test</Filter>
     </ClCompile>
@@ -293,79 +218,43 @@
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year_month_day_last.pass.cpp">
       <Filter>Source Files\test\date_test</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year_month_day_m_year_month_day.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year_month_day_p_year_month_day.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year_month_p_year_month.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year_month_weekday.pass.cpp">
       <Filter>Source Files\test\date_test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year_month_weekday_last.pass.cpp">
       <Filter>Source Files\test\date_test</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/year_p_year.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/years_m_year.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/years_m_year_month.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/date_test/years_m_year_month_day.fail.cpp">
-      <Filter>Source Files\test\date_test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/last.pass.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.last.pass.cpp">
       <Filter>Source Files\test\iso_week</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/lastweek_weekday.pass.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.lastweek_weekday.pass.cpp">
       <Filter>Source Files\test\iso_week</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/op_div_survey.pass.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.op_div_survey.pass.cpp">
       <Filter>Source Files\test\iso_week</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/weekday.pass.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.weekday.pass.cpp">
       <Filter>Source Files\test\iso_week</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/weekday_lessthan.fail.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.weeknum.pass.cpp">
       <Filter>Source Files\test\iso_week</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/weekday_sum.fail.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.weeknum_weekday.pass.cpp">
       <Filter>Source Files\test\iso_week</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/weeknum.pass.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.year.pass.cpp">
       <Filter>Source Files\test\iso_week</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/weeknum_p_weeknum.fail.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.year_lastweek.pass.cpp">
       <Filter>Source Files\test\iso_week</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/weeknum_weekday.pass.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.year_lastweek_weekday.pass.cpp">
       <Filter>Source Files\test\iso_week</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/year.pass.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.year_weeknum.pass.cpp">
       <Filter>Source Files\test\iso_week</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/year_lastweek.pass.cpp">
-      <Filter>Source Files\test\iso_week</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/year_lastweek_weekday.pass.cpp">
-      <Filter>Source Files\test\iso_week</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/year_p_year.fail.cpp">
-      <Filter>Source Files\test\iso_week</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/year_weeknum.pass.cpp">
-      <Filter>Source Files\test\iso_week</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/year_weeknum_weekday.pass.cpp">
-      <Filter>Source Files\test\iso_week</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/years_m_year.fail.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/iso_week/iso.year_weeknum_weekday.pass.cpp">
       <Filter>Source Files\test\iso_week</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/date/test/just.pass.cpp">
@@ -374,10 +263,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/date/test/posix/ptz.pass.cpp">
       <Filter>Source Files\test\posix</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/solar_hijri_test/parse.pass.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/solar_hijri_test/hijri.parse.pass.cpp">
       <Filter>Source Files\test\solar_hijri_test</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/date/test/solar_hijri_test/year_month_day.pass.cpp">
+    <ClCompile Include="../../thirdparty/owemdjee/date/test/solar_hijri_test/hijri.year_month_day.pass.cpp">
       <Filter>Source Files\test\solar_hijri_test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/date/test/tz_test/OffsetZone.pass.cpp">
@@ -444,6 +333,9 @@
       <Filter>Misc Files\ci</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/date/cmake/dateConfig.cmake">
+      <Filter>Misc Files\cmake</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/date/cmake/pkg.cmake">
       <Filter>Misc Files\cmake</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/date/compile_fail.sh">

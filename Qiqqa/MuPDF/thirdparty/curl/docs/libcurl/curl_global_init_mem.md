@@ -7,11 +7,13 @@ Source: libcurl
 See-also:
   - curl_global_cleanup (3)
   - curl_global_init (3)
+Protocol:
+  - All
 ---
 
 # NAME
 
-curl_global_init_mem - Global libcurl initialization with memory callbacks
+curl_global_init_mem - global libcurl initialization with memory callbacks
 
 # SYNOPSIS
 

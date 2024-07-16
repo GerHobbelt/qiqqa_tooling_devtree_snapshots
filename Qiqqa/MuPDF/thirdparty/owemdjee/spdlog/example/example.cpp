@@ -4,6 +4,10 @@
 
 // spdlog usage example
 
+// Uncomment to enable source location support.
+// This will add filename/line/column info to the log (and in to the resulting binary so take care).
+//#define SPDLOG_NO_SOURCE_LOC
+
 #include <spdlog/common.h>
 
 #include <cstdio>
@@ -36,6 +40,7 @@ static void syslog_example();
 #if defined(__ANDROID__)
 static void android_example();
 #endif
+static void mdc_example();
 
 #include "spdlog/spdlog.h"
 #include "spdlog/json_formatter.h"
@@ -56,8 +61,7 @@ int main(int argc, const char **argv) {
 
     spdlog::default_logger()->log(spdlog::process_info(6789, 44), spdlog::level::critical, "Spoofed pid and thread message");
 
-    spdlog::info("Welcome to spdlog version {}.{}.{}  !", SPDLOG_VER_MAJOR, SPDLOG_VER_MINOR,
-                 SPDLOG_VER_PATCH);
+    spdlog::info("Welcome to spdlog version {}.{}.{}  !", SPDLOG_VER_MAJOR, SPDLOG_VER_MINOR, SPDLOG_VER_PATCH);
 
     spdlog::warn("Easy padding in numbers like {:08d}", 12);
     spdlog::critical("Support for int: {0:d};  hex: {0:x};  oct: {0:o}; bin: {0:b}", 42);
@@ -115,11 +119,12 @@ int main(int argc, const char **argv) {
         hierarchical_logger_example();
         extended_stlying();
 #if !defined(_WIN32)
-		syslog_example();
+        syslog_example();
 #endif
 #if defined(__ANDROID__)
-		static void android_example();
+        android_example();
 #endif
+        mdc_example();
 
         // Flush all *registered* loggers using a worker thread every 3 seconds.
         // note: registered loggers *must* be thread safe for this to work correctly!
@@ -133,7 +138,6 @@ int main(int argc, const char **argv) {
         spdlog::shutdown();
 		return 0;
     }
-
     // Exceptions will only be thrown upon failed logger or sink construction (not during logging).
     catch (const spdlog::spdlog_ex &ex) {
         std::printf("Log initialization failed: %s\n", ex.what());
@@ -462,8 +466,8 @@ static void hierarchical_logger_example()
 
 static void extended_stlying()
 {
-#if !defined(_WIN32) && defined(SPDLOG_EXTENDED_STLYING)
-    // with extended styling you may use the mutliple color
+#if defined(SPDLOG_EXTENDED_STYLING)
+    // with extended styling you may use the multiple color
     // area formatter "%^" in more than one spot in your pattern.
     // in addition there are syntax extensions to the color formatter
     // they are defined by squirley braces { } after the '%' but before
@@ -472,7 +476,7 @@ static void extended_stlying()
     // mutliple stylings can apply to a single area by delimiting the key
     // words with a ';'. (example: "%{bold;fg_blue}^")
     //
-    // styling key words come in three flavors font style, font foreground
+    // styling key words come in three flavors: font style, font foreground
     // color, and font background color
     //
     // font styles:
@@ -515,3 +519,18 @@ static void extended_stlying()
     spdlog::set_pattern("%+"); // back to default format
 #endif
 }
+
+// Mapped Diagnostic Context (MDC) is a map that stores key-value pairs (string values) in thread local storage.
+// Each thread maintains its own MDC, which loggers use to append diagnostic information to log outputs.
+// Note: it is not supported in asynchronous mode due to its reliance on thread-local storage.
+
+#include "spdlog/mdc.h"
+static void mdc_example()
+{
+    spdlog::mdc::put("key1", "value1");
+    spdlog::mdc::put("key2", "value2");
+    // if not using the default format, you can use the %& formatter to print mdc data as well
+    spdlog::set_pattern("[%H:%M:%S %z] [%^%L%$] [%&] %v");
+    spdlog::info("Some log message with context");
+}
+

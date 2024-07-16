@@ -14935,10 +14935,10 @@ Failed: error -60: match with end before start or start moved backwards is not s
     ab
 Failed: error -60: match with end before start or start moved backwards is not supported
 
-/(?'abcdefghijklmnopqrstuvwxyzABCDEFG'toolong)/
-Failed: error 148 at offset 36: subpattern name is too long (maximum 32 code units)
+/(?'abcdefghijklmnopqrstuvwxyzABCDEFGabcdefghijklmnopqrstuvwxyzABCDEabcdefghijklmnopqrstuvwxyzABCDEabcdefghijklmnopqrstuvwxyzABCDEFGH'toolong)/
+Failed: error 148 at offset 132: subpattern name is too long (maximum 128 code units)
 
-/(?'abcdefghijklmnopqrstuvwxyzABCDEF'justright)/
+/(?'abcdefghijklmnopqrstuvwxyzABCDEFGabcdefghijklmnopqrstuvwxyzABCDEabcdefghijklmnopqrstuvwxyzABCDEabcdefghijklmnopqrstuvwxyzABCDEFG'justright)/
 
 # These two use zero-termination
 /abcd/max_pattern_length=3
@@ -14951,6 +14951,10 @@ Failed: error 188 at offset 0: pattern string is longer than the limit set by th
 Failed: error 188 at offset 0: pattern string is longer than the limit set by the application
 
 /abcdef/hex,max_pattern_length=3
+
+# Test compiled length limit
+/(abcdefg){10}/max_pattern_compiled_length=100
+Failed: error 201 at offset 13: compiled pattern would be longer than the limit set by the application
 
 # These patterns used to take a long time to compile
 
@@ -15549,7 +15553,7 @@ Failed: error 157 at offset 6: \g is not followed by a braced, angle-bracketed, 
 /{„Í„ÍÍ„Í{'{22{2{{2{'{22{{22{2{'{22{2{{2{{222{{2{'{22{2{22{2{'{22{2{{2{'{22{2{22{2{'{'{22{2{22{2{'{22{2{{2{'{22{2{22{2{'{222{2Ä„Í„ÍÍ„Í{'{22{2{{2{'{22{{11{2{'{22{2{{2{{'{22{2{{2{'{22{{22{1{'{22{2{{2{{222{{2{'{22{2{22{2{'{/auto_callout
 
 //
-\=get=i00000000000000000000000000000000
+\=get=i00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 ** Group name in 'get' is too long
 \=get=i2345678901234567890123456789012,get=i1245678901234567890123456789012
 ** Too many characters in named 'get' modifiers
@@ -17964,6 +17968,95 @@ No match
  0: d
  1: ccc
  2: d
+
+/|(?0)./endanchored
+    abcd
+ 0: abcd
+
+/|a(?0)/endanchored
+    aaaa
+ 0: aaaa
+
+/(?:|(?0).)(?(R)|\z)/
+    abcd
+ 0: abcd
+
+/a?(?=b(*COMMIT)c|)d/I
+Capture group count = 0
+Starting code units: a d 
+Last code unit = 'd'
+Subject length lower bound = 1
+    bd
+ 0: d
+
+/(?=b(*COMMIT)c|)d/I
+Capture group count = 0
+First code unit = 'd'
+Subject length lower bound = 1
+    bd
+ 0: d
+
+/a?(?=b(*COMMIT)c|)d/I,no_start_optimize
+Capture group count = 0
+Options: no_start_optimize
+    bd
+No match
+
+/(?=b(*COMMIT)c|)d/I,no_start_optimize
+Capture group count = 0
+Options: no_start_optimize
+    bd
+No match
+
+/a?(?=bc|)d/I,auto_callout
+Capture group count = 0
+Options: auto_callout
+Starting code units: a d 
+Last code unit = 'd'
+Subject length lower bound = 1
+    bd
+--->bd
+ +0  ^     a?
+ +2  ^     (?=
+ +5  ^     b
+ +8  ^     )
+ +9  ^     d
++10  ^^    End of pattern
+ 0: d
+    
+/a?(?=bc|)\bd/I 
+Capture group count = 0
+Max lookbehind = 1
+Starting code units: a d 
+Last code unit = 'd'
+Subject length lower bound = 1
+    bd
+No match
+
+/(?0)/
+    abc\=disable_recurseloop_check,match_limit=100
+Failed: error -47: match limit exceeded
+
+/(a(?1)z||(?1)++)$/
+    abcd\=disable_recurseloop_check
+ 0: 
+ 1: 
+
+/(((?<=123?456456|ABC)))(?<=\2)../
+    ABCDEFG
+ 0: DE
+ 1: 
+ 2: 
+    12345645678910 
+ 0: 78
+ 1: 
+ 2: 
+    
+# This test is crashing Perl 5.38.2.
+
+/[^\S\W]{6}/
+    .abc def..
+No match
 
 # End of testinput2
 Error -70: PCRE2_ERROR_BADDATA (unknown error number)

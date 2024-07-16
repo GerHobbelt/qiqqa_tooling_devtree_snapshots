@@ -27,6 +27,7 @@
 #define TAGLIB_ID3V1TAG_H
 
 #include "tbytevector.h"
+#include "taglib.h"
 #include "taglib_export.h"
 #include "tag.h"
 
@@ -38,7 +39,7 @@ namespace TagLib {
 
   namespace ID3v1 {
 
-    //! A abstraction for the string to data encoding in ID3v1 tags.
+    //! An abstraction for the string to data encoding in ID3v1 tags.
 
     /*!
      * ID3v1 should in theory always contain ISO-8859-1 (Latin1) data.  In
@@ -86,6 +87,7 @@ namespace TagLib {
 
     private:
       class StringHandlerPrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<StringHandlerPrivate> d;
     };
 
@@ -195,12 +197,13 @@ namespace TagLib {
        */
       void read();
       /*!
-       * Pareses the body of the tag in \a data.
+       * Parses the body of the tag in \a data.
        */
       void parse(const ByteVector &data);
 
     private:
       class TagPrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<TagPrivate> d;
     };
   }  // namespace ID3v1

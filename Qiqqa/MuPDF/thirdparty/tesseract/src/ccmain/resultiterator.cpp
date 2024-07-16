@@ -18,10 +18,13 @@
 //
 ///////////////////////////////////////////////////////////////////////
 
+#include <tesseract/preparation.h> // compiler config, etc.
+
 #include <tesseract/resultiterator.h>
 #include <tesseract/unichar.h>  // for U8 macro
 
 
+#include "helpers.h"  // for copy_string
 #include "pageres.h"
 #include "tesseractclass.h"
 #include "unicharset.h"
@@ -41,9 +44,10 @@ ResultIterator::ResultIterator(const LTRResultIterator &resit) : LTRResultIterat
   at_beginning_of_minor_run_ = false;
   preserve_interword_spaces_ = false;
 
-  BoolParam *p = ParamUtils::FindParam<BoolParam>("preserve_interword_spaces", tesseract_->params_collective());
+  auto *p = ParamUtils::FindParam<BoolParam>(
+      "preserve_interword_spaces", GlobalParams()->bool_params_c(), tesseract_->params()->bool_params_c());
   if (p != nullptr) {
-    preserve_interword_spaces_ = static_cast<bool>(*p);
+    preserve_interword_spaces_ = (bool)(*p);
   }
 
   current_paragraph_is_ltr_ = CurrentParagraphIsLtr();
@@ -515,6 +519,7 @@ bool ResultIterator::Next(PageIteratorLevel level) {
       }
     }
       // Fall through.
+      [[fallthrough]];
     case RIL_WORD: // explicit fall-through.
     {
       if (it_->word() == nullptr) {
@@ -558,7 +563,7 @@ bool ResultIterator::Next(PageIteratorLevel level) {
       return Next(RIL_TEXTLINE);
     }
   }
-  ASSERT_HOST(false); // shouldn't happen.
+  ASSERT_HOST_MSG(false, "Should never happen.\n");
   return false;
 }
 
@@ -602,7 +607,7 @@ bool ResultIterator::IsAtBeginningOf(PageIteratorLevel level) const {
     return at_para_start;
   }
 
-  ASSERT_HOST(false); // shouldn't happen.
+  ASSERT_HOST_MSG(false, "Should never happen.\n");
   return false;
 }
 
@@ -681,10 +686,7 @@ char *ResultIterator::GetUTF8Text(PageIteratorLevel level) const {
       }
     } break;
   }
-  int length = text.length() + 1;
-  char *result = new char[length];
-  strncpy(result, text.c_str(), length);
-  return result;
+  return copy_string(text);
 }
 std::vector<std::vector<std::vector<std::pair<const char *, float>>>>
     *ResultIterator::GetRawLSTMTimesteps() const {

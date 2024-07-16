@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2023 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -77,6 +77,16 @@ public class PDFWidget extends PDFAnnotation
 	public static final int SIGNATURE_SHOW_GRAPHIC_NAME = 16;
 	public static final int SIGNATURE_SHOW_LOGO = 32;
 	public static final int SIGNATURE_DEFAULT_APPEARANCE = 63;
+
+	public static final int SIGNATURE_ERROR_OKAY = 0;
+	public static final int SIGNATURE_ERROR_NO_SIGNATURES = 1;
+	public static final int SIGNATURE_ERROR_NO_CERTIFICATE = 2;
+	public static final int SIGNATURE_ERROR_DIGEST_FAILURE = 3;
+	public static final int SIGNATURE_ERROR_SELF_SIGNED = 4;
+	public static final int SIGNATURE_ERROR_SELF_SIGNED_IN_CHAIN = 5;
+	public static final int SIGNATURE_ERROR_NOT_TRUSTED = 6;
+	public static final int SIGNATURE_ERROR_NOT_SIGNED = 7;
+	public static final int SIGNATURE_ERROR_UNKNOWN = 8;
 
 	public static final int SIGNATURE_ERROR_OKAY = 0;
 	public static final int SIGNATURE_ERROR_NO_SIGNATURES = 1;
@@ -242,13 +252,16 @@ public class PDFWidget extends PDFAnnotation
 	}
 	public native int checkCertificate(PKCS7Verifier verifier);
 	public native int checkDigest(PKCS7Verifier verifier);
-	public native boolean incrementalChangeAfterSigning();
+	public native boolean incrementalChangeSinceSigning();
+	public boolean incrementalChangeAfterSigning() {
+		return incrementalChangeSinceSigning();
+	}
 	public boolean verify(PKCS7Verifier verifier) {
 		if (checkDigest(verifier) != PKCS7Verifier.PKCS7VerifierOK)
 			return false;
 		if (checkCertificate(verifier) != PKCS7Verifier.PKCS7VerifierOK)
 			return false;
-		return !incrementalChangeAfterSigning();
+		return !incrementalChangeSinceSigning();
 	}
 	public native PKCS7DistinguishedName getDistinguishedName(PKCS7Verifier verifier);
 	public native boolean incrementalChangesSinceSigning();

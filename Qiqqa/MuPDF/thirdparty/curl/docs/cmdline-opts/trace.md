@@ -20,9 +20,9 @@ Example:
 
 # `--trace`
 
-Enables a full trace dump of all incoming and outgoing data, including
-descriptive information, to the given output file. Use "-" as filename to have
-the output sent to stdout. Use "%" as filename to have the output sent to
+Save a full trace dump of all incoming and outgoing data, including
+descriptive information, in the given output file. Use `-` as filename to have
+the output sent to stdout. Use `%` as filename to have the output sent to
 stderr.
 
 Note that verbose output of curl activities and network traffic might contain

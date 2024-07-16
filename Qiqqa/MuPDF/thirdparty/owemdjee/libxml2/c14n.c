@@ -644,7 +644,7 @@ xmlC14NProcessNamespacesAxis(xmlC14NCtxPtr ctx, xmlNodePtr cur, int visible)
      *     have non-empty values in XPath)
      */
     if(visible && !has_empty_ns) {
-        static xmlNs ns_default;
+        xmlNs ns_default;
 
         memset(&ns_default, 0, sizeof(ns_default));
         if(!xmlC14NVisibleNsStackFind(ctx->ns_rendered, &ns_default)) {
@@ -821,7 +821,7 @@ xmlExcC14NProcessNamespacesAxis(xmlC14NCtxPtr ctx, xmlNodePtr cur, int visible)
      */
     if(visible && has_visibly_utilized_empty_ns &&
 	    !has_empty_ns && !has_empty_ns_in_inclusive_list) {
-        static xmlNs ns_default;
+        xmlNs ns_default;
 
         memset(&ns_default, 0, sizeof(ns_default));
 
@@ -830,7 +830,7 @@ xmlExcC14NProcessNamespacesAxis(xmlC14NCtxPtr ctx, xmlNodePtr cur, int visible)
 	    xmlC14NPrintNamespaces(&ns_default, ctx);
 	}
     } else if(visible && !has_empty_ns && has_empty_ns_in_inclusive_list) {
-        static xmlNs ns_default;
+        xmlNs ns_default;
 
         memset(&ns_default, 0, sizeof(ns_default));
         if(!xmlC14NVisibleNsStackFind(ctx->ns_rendered, &ns_default)) {
@@ -2105,19 +2105,6 @@ xmlC14NDocSave(xmlDocPtr doc, xmlNodeSetPtr nodes,
     return (ret);
 }
 
-
-
-/*
- * Macro used to grow the current buffer.
- */
-#define growBufferReentrant() {						\
-    buffer_size *= 2;							\
-    buffer = (xmlChar *)						\
-		xmlRealloc(buffer, buffer_size);			\
-    if (buffer == NULL)							\
-	return(NULL);							\
-}
-
 /**
  * xmlC11NNormalizeString:
  * @input:		the input string
@@ -2153,9 +2140,16 @@ xmlC11NNormalizeString(const xmlChar * input,
 
     while (*cur != '\0') {
         if ((out - buffer) > (buffer_size - 10)) {
+            xmlChar *tmp;
             int indx = out - buffer;
 
-            growBufferReentrant();
+            buffer_size *= 2;
+            tmp = xmlRealloc(buffer, buffer_size);
+            if (tmp == NULL) {
+                xmlFree(buffer);
+                return(NULL);
+            }
+            buffer = tmp;
             out = &buffer[indx];
         }
 

@@ -18,20 +18,11 @@
     <Filter Include="Header Files\examples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\test">
+    <Filter Include="Misc Files\examples">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\examples">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\examples">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -74,27 +65,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/dtl-diff-template-library/examples/unistrdiff.cpp">
       <Filter>Source Files\examples</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/dtl-diff-template-library/test/Intdifftest.cpp">
-      <Filter>Source Files\test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/dtl-diff-template-library/test/Objdifftest.cpp">
-      <Filter>Source Files\test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/dtl-diff-template-library/test/Patchtest.cpp">
-      <Filter>Source Files\test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/dtl-diff-template-library/test/Strdiff3test.cpp">
-      <Filter>Source Files\test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/dtl-diff-template-library/test/Strdifftest.cpp">
-      <Filter>Source Files\test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/dtl-diff-template-library/test/dtl_test.cpp">
-      <Filter>Source Files\test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/dtl-diff-template-library/test/dtl_test_common.cpp">
-      <Filter>Source Files\test</Filter>
-    </ClCompile>
+    <ClInclude Include="../../thirdparty/owemdjee/dtl-diff-template-library/dtl/Conflict.hpp">
+      <Filter>Header Files\dtl</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/dtl-diff-template-library/dtl/Diff.hpp">
       <Filter>Header Files\dtl</Filter>
     </ClInclude>
@@ -128,12 +101,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/dtl-diff-template-library/examples/storage.hpp">
       <Filter>Header Files\examples</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/dtl-diff-template-library/test/comparators.hpp">
-      <Filter>Header Files\test</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/dtl-diff-template-library/test/dtl_test_common.hpp">
-      <Filter>Header Files\test</Filter>
-    </ClInclude>
     <Text Include="../../thirdparty/owemdjee/dtl-diff-template-library/CONTRIBUTORS">
       <Filter>Misc Files</Filter>
     </Text>
@@ -148,9 +115,6 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/dtl-diff-template-library/examples/SConstruct">
       <Filter>Misc Files\examples</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/dtl-diff-template-library/test/SConstruct">
-      <Filter>Misc Files\test</Filter>
     </Text>
   </ItemGroup>
 </Project>

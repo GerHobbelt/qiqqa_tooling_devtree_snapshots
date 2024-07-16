@@ -25,6 +25,7 @@
 
 #include "mupdf/fitz/system.h"
 
+#include <math.h>
 #include "mupdf/assertions.h"
 
 /**
@@ -237,6 +238,11 @@ static inline fz_point fz_make_point(float x, float y)
 */
 #define FZ_MIN_INF_RECT ((int)0x80000000)
 #define FZ_MAX_INF_RECT ((int)0x7fffff80)
+
+
+/* biggest and smallest integers that a float can represent perfectly (i.e. 24 bits) */
+#define FZ_MAX_SAFE_INT ((int)16777216)
+#define FZ_MIN_SAFE_INT ((int)-16777216)
 
 
 #ifdef __cplusplus
@@ -871,6 +877,23 @@ static inline fz_quad fz_make_quad(
 extern "C" {
 #endif
 
+FZ_DATA extern const fz_quad fz_invalid_quad;
+FZ_DATA extern const fz_quad fz_infinite_quad;
+
+/**
+	Is a quad valid?
+*/
+int fz_is_valid_quad(fz_quad q);
+
+/**
+	Is a quad empty?
+*/
+int fz_is_empty_quad(fz_quad q);
+
+/**
+	Is a quad infinite?
+*/
+int fz_is_infinite_quad(fz_quad q);
 
 /**
 	Convert a rect to a quad (losslessly).

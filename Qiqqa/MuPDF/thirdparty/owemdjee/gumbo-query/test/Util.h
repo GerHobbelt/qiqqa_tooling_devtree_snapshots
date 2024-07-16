@@ -19,7 +19,7 @@ std::string file_str(const std::string & path)
     if (!ifs)
         throw std::invalid_argument("File: " + path + " not found!");
     // Enable exceptions
-    ifs.exceptions();
+    (void)ifs.exceptions();
 
     // Init string buffer to hold file data.
     std::string buffer;

@@ -35,7 +35,7 @@ namespace TagLib {
 
   namespace RIFF {
 
-    //! An RIFF file class with some useful methods specific to RIFF
+    //! A RIFF file class with some useful methods specific to RIFF
 
     /*!
      * This implements the generic TagLib::File API and additionally provides
@@ -119,7 +119,7 @@ namespace TagLib {
        * given name already exists it will be overwritten, otherwise it will be
        * created after the existing chunks.
        *
-       * \note If \a alwaysCreate is true, a new chunk is created regardless of
+       * \note If \a alwaysCreate is \c true, a new chunk is created regardless of
        * whether or not the chunk \a name exists. It should only be used for
        * "LIST" chunks.
        *
@@ -153,6 +153,7 @@ namespace TagLib {
       void updateGlobalSize();
 
       class FilePrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<FilePrivate> d;
     };
   }  // namespace RIFF

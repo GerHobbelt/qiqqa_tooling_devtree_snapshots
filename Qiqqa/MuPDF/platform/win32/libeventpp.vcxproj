@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libeventpp</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF973E76}</ProjectGuid>
-    <RootNamespace>libeventpp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -228,50 +226,7 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/b1_callbacklist_invoking_vs_cpp.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/b2_map_vs_unordered_map.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/b3_b5_eventqueue.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/b6_callbacklist_add_remove_callbacks.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/b7_callbacklist_vs_function_list.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/b8_eventqueue_anydata.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/benchmark_testmain.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/testmain.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/cmake-pkg-demo/main.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/tutorial_anydata.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/tutorial_argumentadapter.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/tutorial_callbacklist.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/tutorial_eventdispatcher.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/tutorial_eventqueue.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/tutorial_hetercallbacklist.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/tutorial_hetereventdispatcher.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/tutorialmain.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_anydata.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_anyid.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_argumentadapter.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_callbacklist_basic.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_callbacklist_ctors.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_callbacklist_multithread.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_conditionalfunctor.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_conditionalremover.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_counterremover.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_dispatcher_basic.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_dispatcher_ctors.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_dispatcher_multithread.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_eventmaker.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_eventutil.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_hetercallbacklist_basic.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_hetercallbacklist_ctors.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_heterdispatcher_basic.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_heterdispatcher_ctors.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_heterdispatcher_multithread.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_heterqueue_basic.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_no_extra_copy_move.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_queue_basic.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_queue_ctors.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_queue_multithread.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_queue_ordered_list.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_scopedremover.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/eventpp/tests/unittest/testmain.cpp" />
     <ClInclude Include="../../thirdparty/owemdjee/eventpp/include/eventpp/callbacklist.h" />
     <ClInclude Include="../../thirdparty/owemdjee/eventpp/include/eventpp/eventdispatcher.h" />
     <ClInclude Include="../../thirdparty/owemdjee/eventpp/include/eventpp/eventpolicies.h" />
@@ -295,11 +250,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/eventpp/include/eventpp/utilities/eventutil.h" />
     <ClInclude Include="../../thirdparty/owemdjee/eventpp/include/eventpp/utilities/orderedqueuelist.h" />
     <ClInclude Include="../../thirdparty/owemdjee/eventpp/include/eventpp/utilities/scopedremover.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/test.h" />
     <ClInclude Include="../../thirdparty/owemdjee/eventpp/tests/catch.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/tutorial.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/eventpp/tests/unittest/test_callbacklist_util.h" />
     <Text Include="../../thirdparty/owemdjee/eventpp/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/eventpp/cmake/eventppConfig.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/eventpp/doc/anydata.md" />
@@ -329,6 +280,7 @@
     <Text Include="../../thirdparty/owemdjee/eventpp/doc/hetereventdispatcher.md" />
     <Text Include="../../thirdparty/owemdjee/eventpp/doc/hetereventqueue.md" />
     <Text Include="../../thirdparty/owemdjee/eventpp/doc/heterogeneous.md" />
+    <Text Include="../../thirdparty/owemdjee/eventpp/doc/install.md" />
     <Text Include="../../thirdparty/owemdjee/eventpp/doc/introduction.md" />
     <Text Include="../../thirdparty/owemdjee/eventpp/doc/mixins.md" />
     <Text Include="../../thirdparty/owemdjee/eventpp/doc/orderedqueuelist.md" />
@@ -340,12 +292,9 @@
     <Text Include="../../thirdparty/owemdjee/eventpp/license" />
     <Text Include="../../thirdparty/owemdjee/eventpp/readme.md" />
     <Text Include="../../thirdparty/owemdjee/eventpp/tests/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/eventpp/tests/benchmark/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/eventpp/tests/build/makefile" />
     <Text Include="../../thirdparty/owemdjee/eventpp/tests/cmake-pkg-demo/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/eventpp/tests/cmake-pkg-demo/readme.md" />
-    <Text Include="../../thirdparty/owemdjee/eventpp/tests/tutorial/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/eventpp/tests/unittest/CMakeLists.txt" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

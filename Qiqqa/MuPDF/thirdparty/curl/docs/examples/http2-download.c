@@ -33,14 +33,6 @@
 #include <string.h>
 #include <errno.h>
 
-/* somewhat unix-specific */
-#if !defined(_WIN32) && !defined(CURL_AVOID_SYS_TIME_H)
-#  include <sys/time.h>
-#endif
-#if !defined(_WIN32)
-#include <unistd.h>
-#endif
-
 /* curl stuff */
 #include <curl/mprintf.h>
 

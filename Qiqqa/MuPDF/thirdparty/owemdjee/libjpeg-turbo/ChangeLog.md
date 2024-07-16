@@ -1,13 +1,35 @@
 3.1 pre-beta
 ============
 
-### Significant changes relative to 3.0.2:
+### Significant changes relative to 3.0.4:
 
 1. The libjpeg-turbo source tree has been reorganized to make it easier to find
 the README files, license information, and build instructions.  The
 documentation for the libjpeg API library and associated programs has been
 moved into the **doc/** subdirectory, and all C source code and headers have
 been moved into a new **src/** subdirectory.
+
+
+3.0.4
+=====
+
+### Significant changes relative to 3.0.3:
+
+1. Fixed an issue whereby the CPU usage of the default marker processor in the
+decompressor grew exponentially with the number of markers.  This caused an
+unreasonable slow-down in `jpeg_read_header()` if an application called
+`jpeg_save_markers()` to save markers of a particular type and then attempted
+to decompress a JPEG image containing an excessive number of markers of that
+type.
+
+2. Hardened the default marker processor in the decompressor to guard against
+an issue (exposed by 3.0 beta2[6]) whereby attempting to decompress a
+specially-crafted malformed JPEG image (specifically an image with a complete
+12-bit-per-component Start Of Frame segment followed by an incomplete
+8-bit-per-component Start Of Frame segment) using buffered-image mode and input
+prefetching caused a segfault if the `fill_input_buffer()` method in the
+calling application's custom source manager incorrectly returned `FALSE` in
+response to a prematurely-terminated JPEG data stream.
 
 
 3.0.3
@@ -19,6 +41,19 @@ been moved into a new **src/** subdirectory.
 libjpeg-turbo components to depend on the Visual C++ run-time DLL when built
 with Visual C++ and CMake 3.15 or later, regardless of value of the
 `WITH_CRT_DLL` CMake variable.
+
+2. The x86-64 SIMD extensions now include support for Intel Control-flow
+Enforcement Technology (CET), which is enabled automatically if CET is enabled
+in the C compiler.
+
+3. Fixed a regression introduced by 3.0 beta2[6] that made it impossible for
+calling applications to supply custom Huffman tables when generating
+12-bit-per-component lossy JPEG images using the libjpeg API.
+
+4. Fixed a segfault that occurred when attempting to use the jpegtran `-drop`
+option with a specially-crafted malformed input image or drop image
+(specifically an image in which all of the scans contain fewer components than
+the number of components specified in the Start Of Frame segment.)
 
 
 3.0.2

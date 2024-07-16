@@ -15,9 +15,7 @@
  ** limitations under the License.
  ******************************************************************************/
 
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h" // DISABLED_LEGACY_ENGINE
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include <cctype>
 #include <cmath>
@@ -34,7 +32,7 @@
 #include "helpers.h"
 #include "matchdefs.h"
 #include "pageres.h"
-#include "params.h"
+#include <tesseract/params.h>
 #include "ratngs.h"
 
 /*----------------------------------------------------------------------------
@@ -58,6 +56,7 @@ bool Dict::AcceptableChoice(const WERD_CHOICE &best_choice,
 
   bool no_dang_ambigs = !best_choice.dangerous_ambig_found();
   bool is_valid_word = valid_word_permuter(best_choice.permuter(), false);
+  // warning C4800: Implicit conversion from 'int' to bool. Possible information loss
   bool is_case_ok = case_ok(best_choice);
 
   if (stopper_debug_level >= 1) {
@@ -73,7 +72,8 @@ bool Dict::AcceptableChoice(const WERD_CHOICE &best_choice,
         xht = "INCONSISTENT";
         break;
       default:
-        ;
+        xht = "UNKNOWN";
+		break;
     }
     tprintDebug("\nStopper:  {} (word={}, case={}, xht_ok={}=[{},{}])\n",
             best_choice.unichar_string().c_str(), (is_valid_word ? "y" : "n"),
@@ -112,42 +112,39 @@ bool Dict::AcceptableChoice(const WERD_CHOICE &best_choice,
   }
 }
 
-bool Dict::AcceptableResult(const WERD_RES &word) const {
-  if (word.best_choice == nullptr) {
+bool Dict::AcceptableResult(WERD_RES *word) const {
+  if (word->best_choice == nullptr) {
     return false;
   }
-  if (stopper_no_acceptable_choices) {
-    return false;
-  }
-
   float CertaintyThreshold = stopper_nondict_certainty_base - reject_offset_;
   int WordSize;
 
   if (stopper_debug_level >= 1) {
     tprintDebug("\nRejecter: {} (word={}, case={}, unambig={}, multiple={})\n",
-            word.best_choice->debug_string(), (valid_word(*word.best_choice) ? "y" : "n"),
-            (case_ok(*word.best_choice) ? "y" : "n"),
-            word.best_choice->dangerous_ambig_found() ? "n" : "y",
-            word.best_choices.singleton() ? "n" : "y");
+            word->best_choice->debug_string().c_str(), (valid_word(*word->best_choice) ? "y" : "n"),
+            (case_ok(*word->best_choice) ? "y" : "n"),
+            word->best_choice->dangerous_ambig_found() ? "n" : "y",
+            word->best_choices.singleton() ? "n" : "y");
   }
 
-  if (word.best_choice->empty() || !word.best_choices.singleton()) {
+  if (word->best_choice->empty() || !word->best_choices.singleton()) {
     return false;
   }
-  if (valid_word(*word.best_choice) && case_ok(*word.best_choice)) {
-    WordSize = LengthOfShortestAlphaRun(*word.best_choice);
+  if (valid_word(*word->best_choice) && case_ok(*word->best_choice)) {
+    WordSize = LengthOfShortestAlphaRun(*word->best_choice);
     WordSize -= stopper_smallword_size;
-    if (WordSize > 0) {
-      CertaintyThreshold += WordSize * stopper_certainty_per_char;
+    if (WordSize < 0) {
+      WordSize = 0;
     }
+    CertaintyThreshold += WordSize * stopper_certainty_per_char;
   }
 
   if (stopper_debug_level >= 1) {
-    tprintDebug("Rejecter: Certainty = {}, Threshold = {}   ", word.best_choice->certainty(),
+    tprintDebug("Rejecter: Certainty = {}, Threshold = {}   ", word->best_choice->certainty(),
             CertaintyThreshold);
   }
 
-  if (word.best_choice->certainty() > CertaintyThreshold) {
+  if (word->best_choice->certainty() > CertaintyThreshold && !stopper_no_acceptable_choices) {
     if (stopper_debug_level >= 1) {
       tprintDebug("ACCEPTED\n");
     }
@@ -227,6 +224,7 @@ bool Dict::NoDangerousAmbig(WERD_CHOICE *best_choice, DANGERR *fixpt, bool fix_r
         wrong_ngram[wrong_ngram_index + 1] = INVALID_UNICHAR_ID;
         int compare = UnicharIdArrayUtils::compare(wrong_ngram, ambig_spec->wrong_ngram);
         if (stopper_debug_level > 2) {
+          TPrintGroupLinesTillEndOfScope push;
           tprintDebug("Candidate ngram: ");
           UnicharIdArrayUtils::print(wrong_ngram, getUnicharset());
           tprintDebug("Current ngram from spec: ");
@@ -241,7 +239,7 @@ bool Dict::NoDangerousAmbig(WERD_CHOICE *best_choice, DANGERR *fixpt, bool fix_r
                                           getUnicharset().get_isngram(ambig_spec->correct_ngram_id),
                                           leftmost_id));
             if (stopper_debug_level > 1) {
-              tprintDebug("fixpt+=({} {} {} {} {})\n", blob_index, blob_index + num_wrong_blobs, replace,
+              tprintDebug("fixpt+=({} {} {} {} {})\n", blob_index, blob_index + num_wrong_blobs, false,
                       getUnicharset().get_isngram(ambig_spec->correct_ngram_id),
                       getUnicharset().id_to_unichar(leftmost_id));
             }
@@ -468,7 +466,7 @@ int Dict::LengthOfShortestAlphaRun(const WERD_CHOICE &WordChoice) const {
   return shortest;
 }
 
-bool Dict::UniformCertainties(const WERD_CHOICE &word) {
+int Dict::UniformCertainties(const WERD_CHOICE &word) {
   float Certainty;
   float WorstCertainty = FLT_MAX;
   float CertaintyThreshold;

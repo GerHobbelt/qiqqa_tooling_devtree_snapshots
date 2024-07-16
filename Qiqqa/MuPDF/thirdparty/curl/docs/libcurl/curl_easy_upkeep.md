@@ -7,11 +7,13 @@ Source: libcurl
 See-also:
   - CURLOPT_TCP_KEEPALIVE (3)
   - CURLOPT_TCP_KEEPIDLE (3)
+Protocol:
+  - All
 ---
 
 # NAME
 
-curl_easy_upkeep - Perform any connection upkeep checks.
+curl_easy_upkeep - keep existing connections alive
 
 # SYNOPSIS
 

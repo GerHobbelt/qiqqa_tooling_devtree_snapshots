@@ -18,11 +18,7 @@
 ///////////////////////////////////////////////////////////////////////
 
 // Include automatically generated configuration file if running autoconf.
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
-
-#include <tesseract/debugheap.h>
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include "colfind.h"
 
@@ -35,7 +31,7 @@
 #include "blobbox.h"
 #include "linefind.h"
 #include "normalis.h"
-#include "params.h"
+#include <tesseract/params.h>
 #include "scrollview.h"
 #include "strokewidth.h"
 #include "tablefind.h"
@@ -67,14 +63,13 @@ const double kMinGutterWidthGrid = 0.5;
 const double kMaxDistToPartSizeRatio = 1.5;
 
 #if !GRAPHICS_DISABLED
-static BOOL_VAR(textord_tabfind_show_initial_partitions, false, "Show partition bounds");
-static BOOL_VAR(textord_tabfind_show_reject_blobs, false, "Show blobs rejected as noise");
-static INT_VAR(textord_tabfind_show_partitions, 0,
-               "Show partition bounds, waiting if >1 (ScrollView)");
-static BOOL_VAR(textord_tabfind_show_columns, false, "Show column bounds (ScrollView)");
-static BOOL_VAR(textord_tabfind_show_blocks, false, "Show final block bounds (ScrollView)");
+BOOL_VAR(textord_tabfind_show_initial_partitions, false, "Show partition bounds");
+BOOL_VAR(textord_tabfind_show_reject_blobs, false, "Show blobs rejected as noise");
+INT_VAR(textord_tabfind_show_partitions, 0, "Show partition bounds, waiting if >1 (ScrollView)");
+BOOL_VAR(textord_tabfind_show_columns, false, "Show column bounds (ScrollView)");
+BOOL_VAR(textord_tabfind_show_blocks, false, "Show final block bounds (ScrollView)");
 #endif
-static BOOL_VAR(textord_tabfind_find_tables, true, "run table detection");
+BOOL_VAR(textord_tabfind_find_tables, true, "run table detection");
 
 FZ_HEAPDBG_TRACKER_SECTION_END_MARKER(_)
 
@@ -151,7 +146,7 @@ ColumnFinder::~ColumnFinder() {
 }
 
 // Performs initial processing on the blobs in the input_block:
-// Setup the part_grid, stroke_width_, nontext_map.
+// Setup the part_grid_, stroke_width_, nontext_map.
 // Obvious noise blobs are filtered out and used to mark the nontext_map_.
 // Initial stroke-width analysis is used to get local text alignment
 // direction, so the textline projection_ map can be setup.
@@ -177,8 +172,9 @@ void ColumnFinder::SetupAndFilterNoise(PageSegMode pageseg_mode, Image photo_mas
   stroke_width_->SetNeighboursOnMediumBlobs(input_block);
   CCNonTextDetect nontext_detect(tesseract_, gridsize(), bleft(), tright());
   // Remove obvious noise and make the initial non-text map.
+  // warning C4800: Implicit conversion from 'int32_t' to bool. Possible information loss
   nontext_map_ =
-      nontext_detect.ComputeNonTextMask(textord_debug_tabfind, photo_mask_pix, input_block);
+      nontext_detect.ComputeNonTextMask(textord_debug_tabfind > 0, photo_mask_pix, input_block);
   stroke_width_->FindTextlineDirectionAndFixBrokenCJK(pageseg_mode, cjk_script_, input_block);
   // Clear the strokewidth grid ready for rotation or leader finding.
   stroke_width_->Clear();
@@ -555,30 +551,6 @@ void ColumnFinder::DisplayColumnBounds(PartSetVector *sets) {
     }
 }
 
-void ColumnFinder::DisplayColumnBounds2(PartSetVector *sets) {
-  ScrollViewReference col_win(MakeWindow(tesseract_, 50, 300, "Columns"));
-  DisplayBoxes(col_win);
-  col_win->Pen(textord_debug_printable ? Diagnostics::BLUE : Diagnostics::GREEN);
-  for (int i = 0; i < sets->size(); ++i) {
-    ColPartitionSet *columns = sets->at(i);
-    if (columns != nullptr) {
-      columns->DisplayColumnEdges(0, gridheight_ * gridsize_, col_win);
-    }
-  }
-}
-
-void ColumnFinder::DisplayColumnBounds3(PartSetVector *sets) {
-  ScrollViewReference col_win(MakeWindow(tesseract_, 50, 300, "Columns"));
-  DisplayBoxes(col_win);
-  col_win->Pen(textord_debug_printable ? Diagnostics::BLUE : Diagnostics::GREEN);
-  for (int i = 0; i < gridheight_; ++i) {
-    ColPartitionSet *columns = sets->at(i);
-    if (columns != nullptr) {
-      columns->DisplayColumnEdges(i * gridsize_, (i + 1) * gridsize_, col_win);
-    }
-  }
-}
-
 #endif // !GRAPHICS_DISABLED
 
 // Sets up column_sets_ (the determined column layout at each horizontal
@@ -607,14 +579,6 @@ bool ColumnFinder::MakeColumns(bool single_column) {
       }
       good_only = !good_only;
     } while (column_sets_.empty() && !good_only);
-
-#ifndef GRAPHICS_DISABLED
-    if (textord_tabfind_show_columns) {
-      DisplayColumnBounds3(&part_sets);
-      DisplayColumnBounds2(&column_sets_);
-    }
-#endif
-
     if (textord_debug_tabfind > 0) {
       PrintColumnCandidates("Column candidates");
     }
@@ -875,7 +839,7 @@ void ColumnFinder::ShrinkRangeToLongestRun(int **column_set_costs, const int *as
   int best_range_size = 0;
   *best_start = orig_end;
   *best_end = orig_end;
-  int end;
+  int end = orig_end;
   for (int start = orig_start; start < orig_end; start = end) {
     // Find the first possible
     while (start < orig_end) {
@@ -1014,7 +978,7 @@ void ColumnFinder::ReleaseBlobsAndCleanupUnused(TO_BLOCK *block) {
 // Splits partitions that cross columns where they have nothing in the gap.
 void ColumnFinder::GridSplitPartitions() {
   // Iterate the ColPartitions in the grid.
-  GridSearch<ColPartition, ColPartition_CLIST, ColPartition_C_IT> gsearch(&part_grid_);
+  ColPartitionGridSearch gsearch(&part_grid_);
   gsearch.StartFullSearch();
   ColPartition *dont_repeat = nullptr;
   ColPartition *part;
@@ -1481,7 +1445,7 @@ void ColumnFinder::TransformToBlocks(BLOCK_LIST *blocks, TO_BLOCK_LIST *to_block
   // like horizontal lines going before the text lines above them.
   ColPartition_CLIST temp_part_list;
   // Iterate the ColPartitions in the grid. It starts at the top
-  GridSearch<ColPartition, ColPartition_CLIST, ColPartition_C_IT> gsearch(&part_grid_);
+  ColPartitionGridSearch gsearch(&part_grid_);
   gsearch.StartFullSearch();
   int prev_grid_y = -1;
   ColPartition *part;

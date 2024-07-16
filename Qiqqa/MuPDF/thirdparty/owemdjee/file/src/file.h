@@ -27,7 +27,7 @@
  */
 /*
  * file.h - definitions for file(1) program
- * @(#)$File: file.h,v 1.251 2023/12/29 18:04:48 christos Exp $
+ * @(#)$File: file.h,v 1.253 2024/04/07 21:27:35 christos Exp $
  */
 
 #ifndef __file_h__
@@ -603,7 +603,7 @@ struct magic_set {
 #define	FILE_ELF_SHNUM_MAX		32768
 #define	FILE_ELF_SHSIZE_MAX		(128 * 1024 * 1024)
 #define	FILE_INDIR_MAX			50
-#define	FILE_NAME_MAX			50
+#define	FILE_NAME_MAX			100
 #define	FILE_REGEX_MAX			8192
 #define	FILE_ENCODING_MAX		(64 * 1024)
 #define	FILE_MAGWARN_MAX		64
@@ -688,6 +688,8 @@ file_protected void file_magerror(struct magic_set *, const char *, ...)
     __attribute__((__format__(__printf__, 2, 3)));
 file_protected void file_magwarn(struct magic_set *, const char *, ...)
     __attribute__((__format__(__printf__, 2, 3)));
+file_protected void file_magwarn1(const char *, ...)
+    __attribute__((__format__(__printf__, 1, 2)));
 file_protected void file_mdump(struct magic *);
 file_protected void file_showstr(FILE *, const char *, size_t);
 file_protected size_t file_mbswidth(struct magic_set *, const char *);

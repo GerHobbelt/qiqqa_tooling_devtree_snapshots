@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -333,7 +333,7 @@ static int is_white(int c)
 void
 pdf_repair_xref(fz_context *ctx, pdf_document *doc)
 {
-	pdf_obj *dict, *obj = NULL;
+	pdf_obj *dict = NULL, *obj = NULL;
 	pdf_obj *length;
 
 	pdf_obj *encrypt = NULL;
@@ -350,7 +350,7 @@ pdf_repair_xref(fz_context *ctx, pdf_document *doc)
 	int gen = 0;
 	int64_t tmpofs, stm_ofs, numofs = 0, genofs = 0;
 	int64_t stm_len;
-	pdf_token tok;
+	pdf_token tok = PDF_TOK_EOF;
 	int next;
 	int i;
 	size_t j, n;
@@ -537,6 +537,7 @@ pdf_repair_xref(fz_context *ctx, pdf_document *doc)
 					fz_report_error(ctx);
 					continue;
 				}
+				assert(dict != NULL);
 
 				fz_try(ctx)
 				{
@@ -760,13 +761,14 @@ pdf_repair_obj_stms(fz_context *ctx, pdf_document *doc)
 				if (pdf_name_eq(ctx, pdf_dict_get(ctx, dict, PDF_NAME(Type)), PDF_NAME(ObjStm)))
 					pdf_repair_obj_stm(ctx, doc, i);
 			}
+			fz_always(ctx)
+				pdf_drop_obj(ctx, dict);
 			fz_catch(ctx)
 			{
 				fz_rethrow_if(ctx, FZ_ERROR_SYSTEM);
 				fz_report_error(ctx);
 				fz_warn(ctx, "ignoring broken object stream (%d 0 R)", i);
 			}
-			pdf_drop_obj(ctx, dict);
 		}
 	}
 

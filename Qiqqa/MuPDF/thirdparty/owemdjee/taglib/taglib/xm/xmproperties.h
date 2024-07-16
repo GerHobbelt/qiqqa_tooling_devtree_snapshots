@@ -27,11 +27,11 @@
 #define TAGLIB_XMPROPERTIES_H
 
 #include "tstring.h"
-#include "taglib.h"
 #include "audioproperties.h"
 
 namespace TagLib {
   namespace XM {
+    //! An implementation of audio property reading for XM
     class TAGLIB_EXPORT Properties : public AudioProperties {
     public:
       /*! Flag bits. */
@@ -71,6 +71,7 @@ namespace TagLib {
 
     private:
       class PropertiesPrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<PropertiesPrivate> d;
     };
   }  // namespace XM

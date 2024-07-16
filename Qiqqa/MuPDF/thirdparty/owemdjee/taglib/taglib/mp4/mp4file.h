@@ -36,6 +36,9 @@ namespace TagLib {
   //! An implementation of MP4 (AAC, ALAC, ...) metadata
   namespace MP4 {
     class Atoms;
+    class ItemFactory;
+
+    //! An implementation of TagLib::File with MP4 specific methods
 
     /*!
      * This implements and provides an interface for MP4 files to the
@@ -60,25 +63,31 @@ namespace TagLib {
       };
 
       /*!
-       * Constructs an MP4 file from \a file.  If \a readProperties is true the
+       * Constructs an MP4 file from \a file.  If \a readProperties is \c true the
        * file's audio properties will also be read.
        *
        * \note In the current implementation, \a propertiesStyle is ignored.
+       *
+       * The items will be created using \a itemFactory (default if null).
        */
       File(FileName file, bool readProperties = true,
-           Properties::ReadStyle audioPropertiesStyle = Properties::Average);
+           Properties::ReadStyle audioPropertiesStyle = Properties::Average,
+           ItemFactory *itemFactory = nullptr);
 
       /*!
-       * Constructs an MP4 file from \a stream.  If \a readProperties is true the
+       * Constructs an MP4 file from \a stream.  If \a readProperties is \c true the
        * file's audio properties will also be read.
        *
        * \note TagLib will *not* take ownership of the stream, the caller is
        * responsible for deleting it after the File object.
        *
        * \note In the current implementation, \a propertiesStyle is ignored.
+       *
+       * The items will be created using \a itemFactory (default if null).
        */
       File(IOStream *stream, bool readProperties = true,
-           Properties::ReadStyle audioPropertiesStyle = Properties::Average);
+           Properties::ReadStyle audioPropertiesStyle = Properties::Average,
+           ItemFactory *itemFactory = nullptr);
 
       /*!
        * Destroys this instance of the File.
@@ -124,13 +133,13 @@ namespace TagLib {
       /*!
        * Save the file.
        *
-       * This returns true if the save was successful.
+       * This returns \c true if the save was successful.
        */
       bool save() override;
 
       /*!
        * This will strip the tags that match the OR-ed together TagTypes from the
-       * file.  By default it strips all tags.  It returns true if the tags are
+       * file.  By default it strips all tags.  It returns \c true if the tags are
        * successfully stripped.
        *
        * \note This will update the file immediately.
@@ -156,6 +165,7 @@ namespace TagLib {
       void read(bool readProperties);
 
       class FilePrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<FilePrivate> d;
     };
   }  // namespace MP4

@@ -29,7 +29,7 @@ jobs:
       with:
         submodules: true
     - name: Setup NuGet.exe
-      uses: nuget/setup-nuget@v1
+      uses: nuget/setup-nuget@v2
     - name: "[Release_x86] Build & Install"
       env:
         CMAKE_GENERATOR: "Visual Studio 17 2022"
@@ -104,7 +104,7 @@ jobs:
         COMMIT_HASH: ${{ github.sha }}
       run: nuget pack ${{github.workspace}}\nuget\libcpr.nuspec -OutputDirectory ${{github.workspace}} -Properties "VERSION=$ENV:VERSION;COMMIT_HASH=$ENV:COMMIT_HASH"
     - name: "Upload artifact"
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: artifact-nuget
         path: ${{github.workspace}}\*.nupkg

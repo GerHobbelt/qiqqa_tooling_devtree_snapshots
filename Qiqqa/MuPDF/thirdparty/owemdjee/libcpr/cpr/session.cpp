@@ -1,24 +1,59 @@
 #include "cpr/session.h"
 
-#include <algorithm>
+#include <atomic>
 #include <cassert>
+#include <cstdint>
 #include <cstdlib>
 #include <cstring>
 #include <fstream>
-#include <functional>
 #include <iostream>
-#include <optional>
+#include <memory>
 #include <stdexcept>
 #include <string>
+#include <utility>
+#include <variant>
+#include <vector>
 
 #include <curl/curl.h>
-#include <variant>
+#include <curl/curlver.h>
+#include <curl/easy.h>
+#include <curl/system.h>
 
+#include "cpr/accept_encoding.h"
 #include "cpr/async.h"
+#include "cpr/auth.h"
+#include "cpr/bearer.h"
+#include "cpr/body.h"
+#include "cpr/callback.h"
+#include "cpr/connect_timeout.h"
+#include "cpr/cookies.h"
 #include "cpr/cprtypes.h"
+#include "cpr/curlholder.h"
+#include "cpr/error.h"
+#include "cpr/file.h"
+#include "cpr/http_version.h"
 #include "cpr/interceptor.h"
+#include "cpr/interface.h"
+#include "cpr/limit_rate.h"
+#include "cpr/local_port.h"
+#include "cpr/local_port_range.h"
+#include "cpr/low_speed.h"
 #include "cpr/multipart.h"
+#include "cpr/parameters.h"
+#include "cpr/payload.h"
+#include "cpr/proxies.h"
+#include "cpr/proxyauth.h"
+#include "cpr/range.h"
+#include "cpr/redirect.h"
+#include "cpr/reserve_size.h"
+#include "cpr/resolve.h"
+#include "cpr/response.h"
+#include "cpr/ssl_options.h"
+#include "cpr/timeout.h"
+#include "cpr/unix_socket.h"
+#include "cpr/user_agent.h"
 #include "cpr/util.h"
+#include "cpr/verbose.h"
 
 #if SUPPORT_CURLOPT_SSL_CTX_FUNCTION
 #include "cpr/ssl_ctx.h"
@@ -35,7 +70,7 @@ constexpr long OFF = 0L;
 
 CURLcode Session::DoEasyPerform() {
     if (isUsedInMultiPerform) {
-        std::cerr << "curl_easy_perform cannot be executed if the CURL handle is used in a MultiPerform." << std::endl;
+        std::cerr << "curl_easy_perform cannot be executed if the CURL handle is used in a MultiPerform.\n";
         return CURLcode::CURLE_FAILED_INIT;
     }
     return curl_easy_perform(curl_->handle);
@@ -116,15 +151,13 @@ Response Session::makeDownloadRequest() {
     return CompleteDownload(curl_error);
 }
 
-void Session::prepareCommon() {
+void Session::prepareCommonShared() {
     assert(curl_->handle);
-
-    // Set Content:
-    prepareBodyPayloadOrMultipart();
 
     // Set Header:
     prepareHeader();
 
+    // URL parameter:
     const std::string parametersContent = parameters_.GetContent(*curl_);
     if (!parametersContent.empty()) {
         const Url new_url{url_ + "?" + parametersContent};
@@ -163,8 +196,10 @@ void Session::prepareCommon() {
     const bool noRevoke = bitmask & CURLSSLOPT_NO_REVOKE;
 #endif
 
+#if LIBCURL_VERSION_NUM >= 0x074700 // 7.71.0
     // Fix loading certs from Windows cert store when using OpenSSL:
     curl_easy_setopt(curl_->handle, CURLOPT_SSL_OPTIONS, CURLSSLOPT_NATIVE_CA);
+#endif
 
 // Ensure SSL no revoke is still set
 #if SUPPORT_SSL_NO_REVOKE
@@ -176,48 +211,45 @@ void Session::prepareCommon() {
 
     curl_->error[0] = '\0';
 
+    // Clear the response
     response_string_.clear();
     if (response_string_reserve_size_ > 0) {
         response_string_.reserve(response_string_reserve_size_);
     }
-    header_string_.clear();
+
+    // Enable so we are able to retrieve certificate information:
+    curl_easy_setopt(curl_->handle, CURLOPT_CERTINFO, 1L);
+}
+
+void Session::prepareCommon() {
+    assert(curl_->handle);
+
+    // Everything else:
+    prepareCommonShared();
+
+    // Set Content:
+    prepareBodyPayloadOrMultipart();
+
     if (!cbs_->writecb_.callback) {
         curl_easy_setopt(curl_->handle, CURLOPT_WRITEFUNCTION, cpr::util::writeFunction);
         curl_easy_setopt(curl_->handle, CURLOPT_WRITEDATA, &response_string_);
     }
+
+    header_string_.clear();
     if (!cbs_->headercb_.callback) {
         curl_easy_setopt(curl_->handle, CURLOPT_HEADERFUNCTION, cpr::util::writeFunction);
         curl_easy_setopt(curl_->handle, CURLOPT_HEADERDATA, &header_string_);
     }
-
-    // Enable so we are able to retrive certificate information:
-    curl_easy_setopt(curl_->handle, CURLOPT_CERTINFO, 1L);
 }
 
 void Session::prepareCommonDownload() {
     assert(curl_->handle);
 
+    // Everything else:
+    prepareCommonShared();
+
     // Set Header:
     prepareHeader();
-
-    const std::string parametersContent = parameters_.GetContent(*curl_);
-    if (!parametersContent.empty()) {
-        const Url new_url{url_ + "?" + parametersContent};
-        curl_easy_setopt(curl_->handle, CURLOPT_URL, new_url.c_str());
-    } else {
-        curl_easy_setopt(curl_->handle, CURLOPT_URL, url_.c_str());
-    }
-
-    const std::string protocol = url_.str().substr(0, url_.str().find(':'));
-    if (proxies_.has(protocol)) {
-        curl_easy_setopt(curl_->handle, CURLOPT_PROXY, proxies_[protocol].c_str());
-        if (proxyAuth_.has(protocol)) {
-            curl_easy_setopt(curl_->handle, CURLOPT_PROXYUSERNAME, proxyAuth_.GetUsername(protocol));
-            curl_easy_setopt(curl_->handle, CURLOPT_PROXYPASSWORD, proxyAuth_.GetPassword(protocol));
-        }
-    }
-
-    curl_->error[0] = '\0';
 
     header_string_.clear();
     if (cbs_->headercb_.callback) {
@@ -970,7 +1002,7 @@ void Session::SetOption(const Range& range) { SetRange(range); }
 void Session::SetOption(const MultiRange& multi_range) { SetMultiRange(multi_range); }
 void Session::SetOption(const ReserveSize& reserve_size) { SetReserveSize(reserve_size.size); }
 void Session::SetOption(const AcceptEncoding& accept_encoding) { SetAcceptEncoding(accept_encoding); }
-void Session::SetOption(AcceptEncoding&& accept_encoding) { SetAcceptEncoding(accept_encoding); }
+void Session::SetOption(AcceptEncoding&& accept_encoding) { SetAcceptEncoding(std::move(accept_encoding)); }
 // clang-format on
 
 void Session::SetCancellationParam(std::shared_ptr<std::atomic_bool> param) {

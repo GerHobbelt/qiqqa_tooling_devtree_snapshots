@@ -37,6 +37,16 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////
+// Uncomment if thread name logging is not needed (i.e. no %q in the log pattern).
+// This will prevent spdlog from querying the thread name on each log call.
+//
+// WARNING: If the log pattern contains thread name (i.e, %q) while this flag is
+// on, empty string will be logged as thread name.
+//
+// #define SPDLOG_NO_THREAD_NAME
+///////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////
 // Uncomment to prevent spdlog from using thread local storage.
 //
 // WARNING: if your program forks, UNCOMMENT this flag to prevent undefined
@@ -78,7 +88,9 @@
 // In this case spdlog will try to include <fmt/format.h> so set your -I flag
 // accordingly.
 //
-// #define SPDLOG_FMT_EXTERNAL
+#ifndef SPDLOG_FMT_EXTERNAL
+#define SPDLOG_FMT_EXTERNAL
+#endif
 ///////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -138,4 +150,23 @@
 // #else
 // # define SPDLOG_FUNCTION __FUNCTION__
 // #endif
+///////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////
+// Uncomment to declare all output functionality in spdlog namespace and on spdlog::logger as
+// noexcept. This may allow the compiler to perform further optimizations when logging is performed.
+// Additionally, static analysis can assume that logging never throws, which may be useful
+// when logging is used in inherently exception-unsafe places such as destructors.
+//
+// Note that this will result in program termination if the registered error handler
+// throws. It might also interact badly with mechanisms that inject exceptions into running
+// code (such as the pthread_cancel implementation of NPTL).
+//
+//#define SPDLOG_LOGGER_NOEXCEPT
+///////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////
+// Uncomment to use the extended styling system and syntax.
+//
+#define SPDLOG_EXTENDED_STYLING
 ///////////////////////////////////////////////////////////////////////////////

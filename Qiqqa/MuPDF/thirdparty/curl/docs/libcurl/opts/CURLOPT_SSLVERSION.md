@@ -9,6 +9,10 @@ See-also:
   - CURLOPT_IPRESOLVE (3)
   - CURLOPT_PROXY_SSLVERSION (3)
   - CURLOPT_USE_SSL (3)
+Protocol:
+  - TLS
+TLS-backend:
+  - All
 ---
 
 # NAME
@@ -67,6 +71,8 @@ TLS v1.2 or later (Added in 7.34.0)
 
 TLS v1.3 or later (Added in 7.52.0)
 
+##
+
 The maximum TLS version can be set by using *one* of the
 CURL_SSLVERSION_MAX_ macros below. It is also possible to OR *one* of the
 CURL_SSLVERSION_ macros with *one* of the CURL_SSLVERSION_MAX_ macros.
@@ -99,6 +105,8 @@ The flag defines maximum supported TLS version as TLS v1.2.
 The flag defines maximum supported TLS version as TLS v1.3.
 (Added in 7.54.0)
 
+##
+
 In versions of curl prior to 7.54 the CURL_SSLVERSION_TLS options were
 documented to allow *only* the specified TLS version, but behavior was
 inconsistent depending on the TLS library.
@@ -106,10 +114,6 @@ inconsistent depending on the TLS library.
 # DEFAULT
 
 CURL_SSLVERSION_DEFAULT
-
-# PROTOCOLS
-
-All TLS based protocols: HTTPS, FTPS, IMAPS, POP3S, SMTPS etc.
 
 # EXAMPLE
 

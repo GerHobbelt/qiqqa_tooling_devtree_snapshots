@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libunibreak</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FFCFB2EB}</ProjectGuid>
-    <RootNamespace>libunibreak</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -228,10 +226,13 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/libunibreak/src/eastasianwidthdata.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libunibreak/src/eastasianwidthdef.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libunibreak/src/emojidata.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libunibreak/src/emojidef.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libunibreak/src/graphemebreak.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libunibreak/src/graphemebreakdata.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libunibreak/src/indicconjunctbreakdata.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libunibreak/src/linebreak.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libunibreak/src/linebreakdata.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libunibreak/src/linebreakdef.c" />
@@ -243,9 +244,11 @@
     <ClCompile Include="../../thirdparty/owemdjee/libunibreak/tools/graphemebreak_test.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libunibreak/tools/linebreak_test.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libunibreak/tools/wordbreak_test.c" />
+    <ClInclude Include="../../thirdparty/owemdjee/libunibreak/src/eastasianwidthdef.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libunibreak/src/emojidef.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libunibreak/src/graphemebreak.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libunibreak/src/graphemebreakdef.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libunibreak/src/indicconjunctbreakdef.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libunibreak/src/linebreak.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libunibreak/src/linebreakdef.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libunibreak/src/test_skips.h" />
@@ -267,15 +270,14 @@
     <Text Include="../../thirdparty/owemdjee/libunibreak/src/Makefile.gcc" />
     <Text Include="../../thirdparty/owemdjee/libunibreak/src/Makefile.msvc" />
     <Text Include="../../thirdparty/owemdjee/libunibreak/src/WordBreakTest.txt" />
-    <Text Include="../../thirdparty/owemdjee/libunibreak/src/emojidata1.tmpl" />
-    <Text Include="../../thirdparty/owemdjee/libunibreak/src/emojidata2.tmpl" />
+    <Text Include="../../thirdparty/owemdjee/libunibreak/src/generate_east_asian_width.py" />
+    <Text Include="../../thirdparty/owemdjee/libunibreak/src/generate_extended_pictographic.py" />
+    <Text Include="../../thirdparty/owemdjee/libunibreak/src/generate_grapheme_break.py" />
+    <Text Include="../../thirdparty/owemdjee/libunibreak/src/generate_indic_conjunct_break.py" />
     <Text Include="../../thirdparty/owemdjee/libunibreak/src/generate_linebreakdata.py" />
-    <Text Include="../../thirdparty/owemdjee/libunibreak/src/graphemebreakdata1.tmpl" />
-    <Text Include="../../thirdparty/owemdjee/libunibreak/src/graphemebreakdata2.tmpl" />
+    <Text Include="../../thirdparty/owemdjee/libunibreak/src/generate_word_break.py" />
     <Text Include="../../thirdparty/owemdjee/libunibreak/src/linebreakdata1.tmpl" />
-    <Text Include="../../thirdparty/owemdjee/libunibreak/src/sort_numeric_hex.py" />
-    <Text Include="../../thirdparty/owemdjee/libunibreak/src/wordbreakdata1.tmpl" />
-    <Text Include="../../thirdparty/owemdjee/libunibreak/src/wordbreakdata2.tmpl" />
+    <Text Include="../../thirdparty/owemdjee/libunibreak/src/unicode_data_property.py" />
     <Text Include="../../thirdparty/owemdjee/libunibreak/tools/test.txt" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

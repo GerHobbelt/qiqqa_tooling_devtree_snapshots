@@ -18,6 +18,7 @@
 
 #include <windows.h>
 #include <guiddef.h>
+#include <initguid.h>
 #include <mfidl.h>
 #include <mfapi.h>
 #include <mfplay.h>
@@ -38,6 +39,7 @@
 #include <string>
 #include <algorithm>
 #include <deque>
+#include <iterator>
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
@@ -158,6 +160,11 @@ private:
 #define _ComPtr ComPtr
 
 template <typename T> inline T absDiff(T a, T b) { return a >= b ? a - b : b - a; }
+
+// synonym for system MFVideoFormat_D16. D3DFMT_D16 = 80
+// added to fix builds with old MSVS and platform SDK
+// see https://learn.microsoft.com/en-us/windows/win32/medfound/video-subtype-guids#luminance-and-depth-formats
+DEFINE_MEDIATYPE_GUID( OCV_MFVideoFormat_D16, 80 );
 
 //==================================================================================================
 
@@ -350,9 +357,7 @@ struct MediaType
     }
     bool VideoIsAvailable() const
     {
-        return ((subType == MFVideoFormat_RGB32) ||
-            (subType == MFVideoFormat_RGB24) ||
-            (subType == MFVideoFormat_YUY2));
+        return (subType != OCV_MFVideoFormat_D16);
     }
 };
 
@@ -702,7 +707,7 @@ public:
         if (FAILED(MFCreateAttributes(&attr, 1)) ||
             FAILED(attr->SetGUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE, sourceType)))
         {
-            CV_Error(CV_StsError, "Failed to create attributes");
+            CV_Error(cv::Error::StsError, "Failed to create attributes");
         }
         if (FAILED(MFEnumDeviceSources(attr.Get(), &devices, &count)))
         {
@@ -742,6 +747,7 @@ public:
     bool configureHW(const cv::VideoCaptureParameters& params);
     virtual bool open(int, const cv::VideoCaptureParameters* params);
     virtual bool open(const cv::String&, const cv::VideoCaptureParameters* params);
+    virtual bool open(const std::vector<uchar>&, const cv::VideoCaptureParameters* params);
     virtual void close();
     virtual double getProperty(int) const CV_OVERRIDE;
     virtual bool setProperty(int, double) CV_OVERRIDE;
@@ -956,14 +962,14 @@ _ComPtr<IMFAttributes> CvCapture_MSMF::getDefaultSourceConfig(UINT32 num)
         FAILED(res->SetUINT32(MF_SOURCE_READER_ENABLE_ADVANCED_VIDEO_PROCESSING, true))
         )
     {
-        CV_Error(CV_StsError, "Failed to create attributes");
+        CV_Error(cv::Error::StsError, "Failed to create attributes");
     }
 #ifdef HAVE_MSMF_DXVA
     if (D3DMgr)
     {
         if (FAILED(res->SetUnknown(MF_SOURCE_READER_D3D_MANAGER, D3DMgr.Get())))
         {
-            CV_Error(CV_StsError, "Failed to create attributes");
+            CV_Error(cv::Error::StsError, "Failed to create attributes");
         }
     }
 #endif
@@ -1267,6 +1273,70 @@ bool CvCapture_MSMF::open(const cv::String& _filename, const cv::VideoCapturePar
         if (configureOutput())
         {
             filename = _filename;
+            frameStep = captureVideoFormat.getFrameStep();
+            PROPVARIANT var;
+            HRESULT hr;
+            if (SUCCEEDED(hr = videoFileSource->GetPresentationAttribute((DWORD)MF_SOURCE_READER_MEDIASOURCE, MF_PD_DURATION, &var)) &&
+                var.vt == VT_UI8)
+            {
+                duration = var.uhVal.QuadPart;
+                PropVariantClear(&var);
+            }
+            else
+                duration = 0;
+        }
+    }
+    if (isOpen && !openFinalize_(params))
+    {
+        close();
+        return false;
+    }
+    if (isOpen)
+    {
+        if (audioStream != -1)
+        {
+            if (!checkAudioProperties())
+                return false;
+            if (videoStream != -1)
+            {
+                isOpen = grabFrame();
+                if (isOpen)
+                    grabIsDone = true;
+            }
+        }
+    }
+    return isOpen;
+}
+
+bool CvCapture_MSMF::open(const std::vector<uchar>& buffer, const cv::VideoCaptureParameters* params)
+{
+    close();
+    if (buffer.empty())
+        return false;
+
+    if (params)
+    {
+        configureHW(*params);
+        if (!(configureStreams(*params) && setAudioProperties(*params)))
+            return false;
+    }
+
+    IStream* s = SHCreateMemStream(buffer.data(), buffer.size());
+    if (!s)
+        return false;
+    IMFByteStream *bs = nullptr;
+    MFCreateMFByteStreamOnStream(s, &bs);
+    if (!bs)
+        return false;
+
+    // Set source reader parameters
+    _ComPtr<IMFAttributes> attr = getDefaultSourceConfig();
+    if (SUCCEEDED(MFCreateSourceReaderFromByteStream(bs, attr.Get(), &videoFileSource)))
+    {
+        isOpen = true;
+        usedVideoSampleTime = 0;
+        if (configureOutput())
+        {
             frameStep = captureVideoFormat.getFrameStep();
             PROPVARIANT var;
             HRESULT hr;
@@ -2376,6 +2446,18 @@ cv::Ptr<cv::IVideoCapture> cv::cvCreateCapture_MSMF (const cv::String& filename,
     if (capture)
     {
         capture->open(filename, &params);
+        if (capture->isOpened())
+            return capture;
+    }
+    return cv::Ptr<cv::IVideoCapture>();
+}
+
+cv::Ptr<cv::IVideoCapture> cv::cvCreateCapture_MSMF (const std::vector<uchar>& buffer, const cv::VideoCaptureParameters& params)
+{
+    cv::Ptr<CvCapture_MSMF> capture = cv::makePtr<CvCapture_MSMF>();
+    if (capture)
+    {
+        capture->open(buffer, &params);
         if (capture->isOpened())
             return capture;
     }

@@ -2,6 +2,7 @@
 #
 # SPDX-License-Identifier: curl
 #
+AAAA
 ABI
 accessor
 ACK
@@ -10,6 +11,7 @@ AIA
 AIX
 al
 Alessandro
+aliasMode
 allocator
 alnum
 ALPN
@@ -41,6 +43,7 @@ autobuilds
 Autoconf
 autoconf
 Automake
+automake
 Autotools
 autotools
 AVR
@@ -108,6 +111,7 @@ CLA
 CLAs
 cleartext
 CLI
+ClientHello
 clientp
 cliget
 closesocket
@@ -116,6 +120,9 @@ cmake
 CMake's
 cmake's
 CMakeLists
+CNA
+CNAME
+CNAMEs
 CodeQL
 codeql
 CODESET
@@ -144,6 +151,7 @@ cURL
 CURLcode
 curldown
 CURLE
+CURLECH
 CURLH
 curlimages
 CURLINFO
@@ -162,9 +170,12 @@ dbg
 Debian
 DEBUGBUILD
 decrypt
+decrypting
 deepcode
 DELE
 DER
+dereference
+dereferences
 deselectable
 deserialization
 Deserialized
@@ -188,6 +199,7 @@ DNS
 dns
 dnsop
 DoH
+DoT
 doxygen
 drftpd
 dsa
@@ -199,8 +211,13 @@ EBCDIC
 ECC
 ECDHE
 ECH
+ECHConfig
+ECHConfigList
+ecl
 ECONNREFUSED
 eCOS
+ECT
+EF
 EFnet
 EGD
 EHLO
@@ -282,6 +299,8 @@ GOST
 GPG
 GPL
 GPLed
+GREASE
+GREASEing
 Greear
 groff
 gsasl
@@ -305,6 +324,7 @@ Hards
 Haxx
 haxx
 Heimdal
+HelloRetryRequest
 HELO
 HH
 HMAC
@@ -314,6 +334,7 @@ homebrew
 hostname
 hostnames
 Housley
+HRR
 Hruska
 HSTS
 hsts
@@ -341,6 +362,7 @@ ifdef
 ifdefed
 Ifdefs
 ifdefs
+ifhost
 IIS
 ILE
 Illumos
@@ -426,6 +448,7 @@ libssh
 libSSH
 libssh2
 Libtool
+libtool
 libuv
 libWebSocket
 libz
@@ -438,6 +461,8 @@ LOGDIR
 logfile
 lookups
 loopback
+LOWCOST
+LOWDELAY
 LPRT
 LSB
 lseek
@@ -451,11 +476,13 @@ makefiles
 malloc
 mallocs
 manpage
+manpages
 maprintf
 Marek
 Mavrogiannopoulos
 Mbed
 mbedTLS
+md
 Meglio
 memdebug
 MesaLink
@@ -466,6 +493,8 @@ Michal
 Micrium
 MicroBlaze
 MicroOS
+middlebox
+MINCOST
 mingw
 MinGW
 MINIX
@@ -482,6 +511,7 @@ MorphOS
 MPE
 MPL
 mprintf
+MPTCP
 MQTT
 mqtt
 mqtts
@@ -501,6 +531,7 @@ mTLS
 MUA
 multicwd
 multiparts
+multipath
 MultiSSL
 mumbo
 musedev
@@ -586,6 +617,7 @@ pkcs
 PKGBUILD
 PKI
 pluggable
+pn
 PolarSSL
 Polhem
 pollset
@@ -621,6 +653,7 @@ py
 pycurl
 pytest
 Pytest
+qname
 QNX
 QoS
 Qubes
@@ -664,6 +697,9 @@ Roadmap
 Rockbox
 roffit
 RPG
+RR
+RRs
+RRtype
 RSA
 RTMP
 rtmp
@@ -759,6 +795,7 @@ stdin
 stdout
 Steinar
 Stenberg
+STLS
 STOR
 strcat
 strcpy
@@ -780,6 +817,7 @@ SunSSH
 superset
 svc
 svcb
+SVCB
 Svyatoslav
 Swisscom
 sws
@@ -808,6 +846,7 @@ toolchain
 toolchains
 toolset
 toplevel
+TOS
 TPF
 TrackMemory
 transcode
@@ -871,6 +910,7 @@ VC
 vcpkg
 vexxhost
 Viktor
+VLAN
 VM
 VMS
 VMware
@@ -878,6 +918,7 @@ vnd
 VRF
 VRFY
 VSE
+vsftpd
 vsprintf
 vt
 vtls

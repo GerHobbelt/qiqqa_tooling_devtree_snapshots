@@ -10,12 +10,14 @@
  * daniel@veillard.com
  */
 
+#include "libxml.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
 #include <time.h>
 
+#include <libxml/catalog.h>
 #include <libxml/parser.h>
 #include <libxml/parserInternals.h>
 #include <libxml/tree.h>
@@ -372,30 +374,15 @@ crazyRead(void *context, char *buffer, int len)
 static int nb_tests = 0;
 static int nb_errors = 0;
 static int nb_leaks = 0;
-static int extraMemoryFromResolver = 0;
-
-/*
- * We need to trap calls to the resolver to not account memory for the catalog
- * which is shared to the current running test. We also don't want to have
- * network downloads modifying tests.
- */
-static xmlParserInputPtr
-testExternalEntityLoader(const char *URL, const char *ID,
-			 xmlParserCtxtPtr ctxt) {
-    xmlParserInputPtr ret;
-    int memused = xmlMemUsed();
-
-    ret = xmlNoNetExternalEntityLoader(URL, ID, ctxt);
-    extraMemoryFromResolver += xmlMemUsed() - memused;
-
-    return(ret);
-}
 
 static void
 initializeLibxml2(void) {
     xmlMemSetup(xmlMemFree, xmlMemMalloc, xmlMemRealloc, xmlMemoryStrdup);
     xmlInitParser();
-    xmlSetExternalEntityLoader(testExternalEntityLoader);
+#ifdef LIBXML_CATALOG_ENABLED
+    xmlInitializeCatalog();
+    xmlCatalogSetDefaults(XML_CATA_ALLOW_NONE);
+#endif
     /*
      * register the new I/O handlers
      */
@@ -477,7 +464,6 @@ internalSubsetCallback(void *ctx ATTRIBUTE_UNUSED,
                        const xmlChar * SystemID ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -493,7 +479,6 @@ externalSubsetCallback(void *ctx ATTRIBUTE_UNUSED,
                        const xmlChar * SystemID ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -574,7 +559,6 @@ entityDeclCallback(void *ctx ATTRIBUTE_UNUSED,
                    xmlChar * content ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -594,7 +578,6 @@ attributeDeclCallback(void *ctx ATTRIBUTE_UNUSED,
                       xmlEnumerationPtr tree ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -613,7 +596,6 @@ elementDeclCallback(void *ctx ATTRIBUTE_UNUSED,
                     xmlElementContentPtr content ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -632,7 +614,6 @@ notationDeclCallback(void *ctx ATTRIBUTE_UNUSED,
                      const xmlChar * systemId ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -653,7 +634,6 @@ unparsedEntityDeclCallback(void *ctx ATTRIBUTE_UNUSED,
                            const xmlChar * notationName ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -669,7 +649,6 @@ setDocumentLocatorCallback(void *ctx ATTRIBUTE_UNUSED,
                            xmlSAXLocatorPtr loc ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -682,7 +661,6 @@ static void
 startDocumentCallback(void *ctx ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -695,7 +673,6 @@ static void
 endDocumentCallback(void *ctx ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 #if 0
@@ -746,7 +723,6 @@ charactersCallback(void *ctx ATTRIBUTE_UNUSED,
                    int len ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -761,7 +737,6 @@ referenceCallback(void *ctx ATTRIBUTE_UNUSED,
                   const xmlChar * name ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -780,7 +755,6 @@ ignorableWhitespaceCallback(void *ctx ATTRIBUTE_UNUSED,
                             int len ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -798,7 +772,6 @@ processingInstructionCallback(void *ctx ATTRIBUTE_UNUSED,
                               const xmlChar * data ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -815,7 +788,6 @@ cdataBlockCallback(void *ctx ATTRIBUTE_UNUSED,
                    int len ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -830,7 +802,6 @@ commentCallback(void *ctx ATTRIBUTE_UNUSED,
                 const xmlChar * value ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -847,7 +818,6 @@ warningCallback(void *ctx ATTRIBUTE_UNUSED,
                 const char *msg ATTRIBUTE_UNUSED, ...)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -864,7 +834,6 @@ errorCallback(void *ctx ATTRIBUTE_UNUSED, const char *msg ATTRIBUTE_UNUSED,
               ...)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -880,7 +849,6 @@ static void
 fatalErrorCallback(void *ctx ATTRIBUTE_UNUSED,
                    const char *msg ATTRIBUTE_UNUSED, ...)
 {
-    return;
 }
 
 
@@ -907,7 +875,6 @@ startElementNsCallback(void *ctx ATTRIBUTE_UNUSED,
                        const xmlChar ** attributes ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 /**
@@ -924,7 +891,6 @@ endElementNsCallback(void *ctx ATTRIBUTE_UNUSED,
                      const xmlChar * URI ATTRIBUTE_UNUSED)
 {
     callbacks++;
-    return;
 }
 
 static xmlSAXHandler callbackSAX2HandlerStruct = {

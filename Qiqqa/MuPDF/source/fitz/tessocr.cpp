@@ -1,4 +1,4 @@
-// Copyright (C) 2020-2023 Artifex Software, Inc.
+// Copyright (C) 2020-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -140,12 +140,9 @@ void *ocr_init(fz_context *ctx, const char *language, const char *datadir)
 	// Initialize tesseract-ocr with English, without specifying tessdata path
 	std::vector<std::string> nil;
 
-	if (api->InitFullWithReader(datadir, 
+	if (api->InitOem(datadir,
 		language,
 		tesseract::OcrEngineMode::OEM_DEFAULT,
-		nil, /* configs, */
-		nil, nil, /* vars_vec */
-		false, /* set_only_non_debug_params */
 		&tess_file_reader))
 	{
 		delete api;

@@ -401,7 +401,7 @@ bool IntegrityCheckModule(const char *moduleFilename, const byte *expectedModule
 					}
 				}
 
-				// Visual Studio 2019 is MSC_VER == 1920
+				// Visual Studio 2019 is _MSC_VER == 1920
 				// https://dev.to/yumetodo/list-of-mscver-and-mscfullver-8nds
 #if (CRYPTOPP_MSC_VERSION >= 1400 && CRYPTOPP_MSC_VERSION < 1920) && (defined(_M_IX86) || defined(_M_X64))
 				// first byte of _CRT_DEBUGGER_HOOK gets modified in memory by the debugger invisibly, so read it from file

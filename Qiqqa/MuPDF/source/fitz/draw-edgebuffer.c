@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -1119,6 +1119,7 @@ static void do_mark_line_app(fz_context *ctx, fz_edgebuffer *eb, fixed sx, fixed
 				 * flush it before we move. */
 				cursor_step(eb, rev, phase1_y_steps, sx);
 				sy += phase1_y_steps;
+				(void) sy;
 				y_steps -= phase1_y_steps;
 				if (y_steps == 0)
 					goto end;
@@ -1156,6 +1157,7 @@ static void do_mark_line_app(fz_context *ctx, fz_edgebuffer *eb, fixed sx, fixed
 				x_steps -= phase1_x_steps;
 				cursor_step(eb, rev, phase1_y_steps, sx);
 				sy += phase1_y_steps;
+				(void) sy;
 				y_steps -= phase1_y_steps;
 				if (y_steps == 0)
 					goto end;
@@ -1217,6 +1219,7 @@ static void do_mark_line_app(fz_context *ctx, fz_edgebuffer *eb, fixed sx, fixed
 				cursor_left_merge(eb, rev, sx);
 				cursor_step(eb, rev, phase1_y_steps, sx);
 				sy += phase1_y_steps;
+				(void) sy;
 				y_steps -= phase1_y_steps;
 				if (y_steps == 0)
 					goto end;
@@ -1302,6 +1305,7 @@ static void do_mark_line_app(fz_context *ctx, fz_edgebuffer *eb, fixed sx, fixed
 				/* Phase 1 in a falling line never moves us into a new scanline. */
 				cursor_never_step_vertical(eb, rev, -phase1_y_steps, sx);
 				sy -= phase1_y_steps;
+				(void) sy;
 				y_steps -= phase1_y_steps;
 				if (y_steps == 0)
 					goto endFalling;
@@ -1343,6 +1347,7 @@ static void do_mark_line_app(fz_context *ctx, fz_edgebuffer *eb, fixed sx, fixed
 				/* Phase 1 in a falling line never moves us into a new scanline. */
 				cursor_never_step_right(eb, rev, -phase1_y_steps, sx);
 				sy -= phase1_y_steps;
+				(void) sy;
 				y_steps -= phase1_y_steps;
 				if (y_steps == 0)
 					goto endFalling;
@@ -1407,6 +1412,7 @@ static void do_mark_line_app(fz_context *ctx, fz_edgebuffer *eb, fixed sx, fixed
 				/* Phase 1 in a falling line never moves us into a new scanline. */
 				cursor_never_step_left(eb, rev, -phase1_y_steps, sx);
 				sy -= phase1_y_steps;
+				(void) sy;
 				y_steps -= phase1_y_steps;
 				if (y_steps == 0)
 					goto endFalling;
@@ -1775,7 +1781,7 @@ static void fz_convert_edgebuffer_app(fz_context *ctx, fz_rasterizer *ras, int e
 						rl = *row++;
 						rr = *row++;
 						w = -(rl&1) | 1;
-						rl &= ~1;
+						/* rl &= ~1; */
 						rowlen--;
 						if (rr > lr)
 							lr = rr;

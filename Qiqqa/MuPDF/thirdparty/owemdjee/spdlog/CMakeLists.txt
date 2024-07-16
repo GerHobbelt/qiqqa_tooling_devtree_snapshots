@@ -1,6 +1,6 @@
 # Copyright(c) 2019 spdlog authors Distributed under the MIT License (http://opensource.org/licenses/MIT)
 
-cmake_minimum_required(VERSION 3.11)
+cmake_minimum_required(VERSION 3.10...3.21)
 
 # ---------------------------------------------------------------------------------------
 # Start spdlog project
@@ -113,21 +113,24 @@ endif()
 if(WIN32)
     option(SPDLOG_WCHAR_SUPPORT "Support wchar api" OFF)
     option(SPDLOG_WCHAR_FILENAMES "Support wchar filenames" OFF)
+    option(SPDLOG_WCHAR_CONSOLE "Support wchar output to console" OFF)
 else()
     set(SPDLOG_WCHAR_SUPPORT OFF CACHE BOOL "non supported option" FORCE)
     set(SPDLOG_WCHAR_FILENAMES OFF CACHE BOOL "non supported option" FORCE)
+    set(SPDLOG_WCHAR_CONSOLE OFF CACHE BOOL "non supported option" FORCE)
 endif()
 
 if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
     option(SPDLOG_CLOCK_COARSE "Use CLOCK_REALTIME_COARSE instead of the regular clock," OFF)
-    option(SPDLOG_EXTENDED_STLYING "Use the extended styling system and syntax" OFF)
+    option(SPDLOG_EXTENDED_STYLING "Use the extended styling system and syntax" OFF)
 else()
     set(SPDLOG_CLOCK_COARSE OFF CACHE BOOL "non supported option" FORCE)
-    set(SPDLOG_EXTENDED_STLYING "non supported option" FORCE)
+    set(SPDLOG_EXTENDED_STYLING "non supported option" FORCE)
 endif()
 
 option(SPDLOG_PREVENT_CHILD_FD "Prevent from child processes to inherit log file descriptors" OFF)
 option(SPDLOG_NO_THREAD_ID "prevent spdlog from querying the thread id on each log call if thread id is not needed" OFF)
+option(SPDLOG_NO_THREAD_NAME "prevent spdlog from querying the thread name on each log call if thread name is not needed" OFF)
 option(SPDLOG_NO_TLS "prevent spdlog from using thread local storage" OFF)
 option(
     SPDLOG_NO_ATOMIC_LEVELS
@@ -245,15 +248,18 @@ endif()
 # Misc definitions according to tweak options
 # ---------------------------------------------------------------------------------------
 set(SPDLOG_WCHAR_TO_UTF8_SUPPORT ${SPDLOG_WCHAR_SUPPORT})
+set(SPDLOG_UTF8_TO_WCHAR_CONSOLE ${SPDLOG_WCHAR_CONSOLE})
 foreach(
     SPDLOG_OPTION
     SPDLOG_WCHAR_TO_UTF8_SUPPORT
+    SPDLOG_UTF8_TO_WCHAR_CONSOLE
     SPDLOG_WCHAR_FILENAMES
     SPDLOG_NO_EXCEPTIONS
     SPDLOG_CLOCK_COARSE
-    SPDLOG_EXTENDED_STLYING
+    SPDLOG_EXTENDED_STYLING
     SPDLOG_PREVENT_CHILD_FD
     SPDLOG_NO_THREAD_ID
+    SPDLOG_NO_THREAD_NAME
     SPDLOG_NO_TLS
     SPDLOG_NO_ATOMIC_LEVELS
     SPDLOG_NO_STRUCTURED_SPDLOG

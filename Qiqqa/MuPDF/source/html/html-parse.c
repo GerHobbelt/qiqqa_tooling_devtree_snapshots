@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2023 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -550,6 +550,7 @@ static fz_image *load_html_image(fz_context *ctx, fz_archive *zip, const char *b
 			fz_strlcat(path, "/", sizeof path);
 			fz_strlcat(path, src, sizeof path);
 			fz_urldecode(path);
+			fz_cleanname(path);
 			buf = fz_read_archive_entry(ctx, zip, path);
 		}
 #if FZ_ENABLE_SVG
@@ -564,7 +565,7 @@ static fz_image *load_html_image(fz_context *ctx, fz_archive *zip, const char *b
 	fz_catch(ctx)
 	{
 		fz_ignore_error(ctx);
-		fz_warn(ctx, "html: cannot load image src='%s'", src);
+		fz_warn(ctx, "html: cannot load image src='%s': %s", src, fz_convert_error(ctx, NULL));
 	}
 
 	return img;
@@ -580,7 +581,7 @@ static fz_image *load_svg_image(fz_context *ctx, fz_archive *zip, const char *ba
 	fz_catch(ctx)
 	{
 		fz_ignore_error(ctx);
-		fz_warn(ctx, "html: cannot load embedded svg document");
+		fz_warn(ctx, "html: cannot load embedded svg document: %s", fz_convert_error(ctx, NULL));
 	}
 #endif
 	return img;
@@ -779,7 +780,7 @@ static fz_html_box *find_table_row_context(fz_context *ctx, fz_html_box *box)
 	if (look)
 		return look;
 	fz_warn(ctx, "table-row not inside table element");
-	return box;
+	return NULL;
 }
 
 static fz_html_box *find_table_cell_context(fz_context *ctx, fz_html_box *box)
@@ -790,7 +791,7 @@ static fz_html_box *find_table_cell_context(fz_context *ctx, fz_html_box *box)
 	if (look)
 		return look;
 	fz_warn(ctx, "table-cell not inside table-row element");
-	return box;
+	return NULL;
 }
 
 static fz_html_box *find_inline_context(fz_context *ctx, struct genstate *g, fz_html_box *box)
@@ -920,19 +921,27 @@ static fz_html_box *gen2_table(fz_context *ctx, struct genstate *g, fz_html_box 
 
 static fz_html_box *gen2_table_row(fz_context *ctx, struct genstate *g, fz_html_box *root_box, fz_xml *node, fz_css_style *style)
 {
-	fz_html_box *this_box;
-	root_box = find_table_row_context(ctx, root_box);
+	fz_html_box *this_box, *table_box;
+
+	table_box = find_table_row_context(ctx, root_box);
+	if (!table_box)
+		return gen2_block(ctx, g, root_box, node, style);
+
 	this_box = new_box(ctx, g, node, BOX_TABLE_ROW, style);
-	append_box(ctx, root_box, this_box);
+	append_box(ctx, table_box, this_box);
 	return this_box;
 }
 
 static fz_html_box *gen2_table_cell(fz_context *ctx, struct genstate *g, fz_html_box *root_box, fz_xml *node, fz_css_style *style)
 {
-	fz_html_box *this_box;
-	root_box = find_table_cell_context(ctx, root_box);
+	fz_html_box *this_box, *row_box;
+
+	row_box = find_table_cell_context(ctx, root_box);
+	if (!row_box)
+		return gen2_block(ctx, g, root_box, node, style);
+
 	this_box = new_box(ctx, g, node, BOX_TABLE_CELL, style);
-	append_box(ctx, root_box, this_box);
+	append_box(ctx, row_box, this_box);
 	return this_box;
 }
 
@@ -1079,6 +1088,22 @@ static void gen2_tag(fz_context *ctx, struct genstate *g, fz_html_box *root_box,
 		this_box->list_item = ++g->list_counter;
 		break;
 
+	// TODO: https://www.w3.org/TR/CSS2/tables.html#anonymous-boxes
+	//
+	// The table generation code should insert and create anonymous boxes
+	// for any missing child/parent elements.
+	//
+	// MISSING CHILDREN:
+	// 1: Wrap consecutive BLOCK found in a TABLE in an anon TABLE_ROW.
+	// 2: Wrap consecutive BLOCK found in a TABLE_ROW in an anon TABLE_CELL.
+	//
+	// MISSING PARENTS:
+	// 1: Wrap consecutive TABLE_CELL found outside TABLE_ROW in an anon TABLE_ROW
+	// 2: Wrap consecutive TABLE_ROW found outside TABLE in an anon TABLE
+	//
+	// For now we ignore this and treat any such elements that are out of
+	// context as plain block elements.
+
 	case DIS_TABLE:
 		this_box = gen2_table(ctx, g, root_box, node, style);
 		break;
@@ -1099,14 +1124,14 @@ static void gen2_tag(fz_context *ctx, struct genstate *g, fz_html_box *root_box,
 		break;
 	}
 
-	if (!strcmp(tag, "ol"))
+	if (tag && !strcmp(tag, "ol"))
 	{
 		int save_list_counter = g->list_counter;
 		g->list_counter = 0;
 		gen2_children(ctx, g, this_box, node, match);
 		g->list_counter = save_list_counter;
 	}
-	else if (!strcmp(tag, "section"))
+	else if (tag && !strcmp(tag, "section"))
 	{
 		int save_section_depth = g->section_depth;
 		g->section_depth++;
@@ -1259,13 +1284,14 @@ html_load_css(fz_context *ctx, fz_html_font_set *set, fz_archive *zip, const cha
 				fz_parse_css(ctx, css, s, "<style>");
 				fz_add_css_font_faces(ctx, set, zip, base_uri, css);
 			}
+			fz_always(ctx)
+				fz_free(ctx, s);
 			fz_catch(ctx)
 			{
 				fz_rethrow_if(ctx, FZ_ERROR_SYSTEM);
 				fz_report_error(ctx);
 				fz_warn(ctx, "ignoring inline stylesheet");
 			}
-			fz_free(ctx, s);
 		}
 	}
 }
@@ -1509,7 +1535,7 @@ static void html_debug_emit(fz_context* ctx, void* user, int c)
 static fz_xml_doc *
 parse_to_xml(fz_context *ctx, fz_buffer *buf, int try_xml, int try_html5)
 {
-	fz_xml_doc *xml;
+	fz_xml_doc *xml = NULL;
 
 	if (try_xml && try_html5)
 	{
@@ -1657,10 +1683,14 @@ xml_to_boxes(fz_context *ctx, fz_html_font_set *set, fz_archive *zip, const char
 	}
 	fz_catch(ctx)
 	{
+		fz_drop_tree(ctx, g.images, (void(*)(fz_context*,void*))fz_drop_image);
+		fz_drop_css(ctx, g.css);
 		fz_rethrow_if(ctx, FZ_ERROR_TRYLATER);
 		fz_rethrow_if(ctx, FZ_ERROR_SYSTEM);
 		fz_report_error(ctx);
 		fz_warn(ctx, "ignoring styles");
+		g.css = fz_new_css(ctx);
+		g.images = NULL;
 	}
 
 #ifndef NDEBUG
@@ -1870,7 +1900,7 @@ static fz_html_tree *
 fz_new_html_tree_of_size(fz_context *ctx, size_t size, fz_store_drop_fn *drop)
 {
 	fz_pool *pool = fz_new_pool(ctx);
-	fz_html_tree *tree;
+	fz_html_tree *tree = NULL;
 
 	fz_try(ctx)
 	{

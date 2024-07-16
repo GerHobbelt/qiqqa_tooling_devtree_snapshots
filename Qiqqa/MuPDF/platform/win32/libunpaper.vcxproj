@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libunpaper</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FFEFCB20}</ProjectGuid>
-    <RootNamespace>libunpaper</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -52,20 +50,20 @@
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="PropertySheets" >
+  <ImportGroup Label="PropertySheets">
     <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props" Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props" Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props" Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
   </ImportGroup>
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -75,11 +73,11 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
-<ItemDefinitionGroup>
+  <ItemDefinitionGroup>
     <ClCompile>
       <Optimization>Custom</Optimization>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -111,10 +109,10 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-</ItemDefinitionGroup>
-<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUNPAPER;UNPAPER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
@@ -126,7 +124,7 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/FFmpeg;../../thirdparty/owemdjee/getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/getopt;../../thirdparty/owemdjee/unpaper;../../thirdparty/owemdjee/FFmpeg;../../scripts/FFmpeg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUNPAPER;UNPAPER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
@@ -152,7 +150,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/FFmpeg;../../thirdparty/owemdjee/getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/getopt;../../thirdparty/owemdjee/unpaper;../../thirdparty/owemdjee/FFmpeg;../../scripts/FFmpeg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUNPAPER;UNPAPER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -181,7 +179,7 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/FFmpeg;../../thirdparty/owemdjee/getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/getopt;../../thirdparty/owemdjee/unpaper;../../thirdparty/owemdjee/FFmpeg;../../scripts/FFmpeg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUNPAPER;UNPAPER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
@@ -207,7 +205,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/FFmpeg;../../thirdparty/owemdjee/getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/getopt;../../thirdparty/owemdjee/unpaper;../../thirdparty/owemdjee/FFmpeg;../../scripts/FFmpeg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBUNPAPER;UNPAPER_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -229,14 +227,35 @@
   </ImportGroup>
   <ItemGroup>
     <ClCompile Include="../../thirdparty/owemdjee/unpaper/file.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/unpaper/imageprocess.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/unpaper/imageprocess/blit.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/unpaper/imageprocess/deskew.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/unpaper/imageprocess/fill.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/unpaper/imageprocess/filters.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/unpaper/imageprocess/image.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/unpaper/imageprocess/interpolate.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/unpaper/imageprocess/masks.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/unpaper/imageprocess/pixel.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/unpaper/imageprocess/primitives.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/unpaper/lib/logging.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/unpaper/lib/options.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/unpaper/lib/physical.c" />
     <ClCompile Include="../../thirdparty/owemdjee/unpaper/parse.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/unpaper/tools.c" />
     <ClCompile Include="../../thirdparty/owemdjee/unpaper/unpaper.c" />
     <ClInclude Include="../../thirdparty/owemdjee/unpaper/constants.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/unpaper/imageprocess.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/unpaper/imageprocess/blit.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/unpaper/imageprocess/deskew.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/unpaper/imageprocess/fill.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/unpaper/imageprocess/filters.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/unpaper/imageprocess/image.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/unpaper/imageprocess/interpolate.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/unpaper/imageprocess/masks.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/unpaper/imageprocess/pixel.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/unpaper/imageprocess/primitives.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/unpaper/lib/logging.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/unpaper/lib/math_util.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/unpaper/lib/options.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/unpaper/lib/physical.h" />
     <ClInclude Include="../../thirdparty/owemdjee/unpaper/parse.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/unpaper/tools.h" />
     <ClInclude Include="../../thirdparty/owemdjee/unpaper/unpaper.h" />
     <Image Include="../../thirdparty/owemdjee/unpaper/doc/img/blackfilter-detail.png" />
     <Image Include="../../thirdparty/owemdjee/unpaper/doc/img/blackfilter.png" />
@@ -275,6 +294,9 @@
     <Text Include="../../thirdparty/owemdjee/unpaper/LICENSES/MIT.txt" />
     <Text Include="../../thirdparty/owemdjee/unpaper/NEWS" />
     <Text Include="../../thirdparty/owemdjee/unpaper/README.md" />
+    <Text Include="../../thirdparty/owemdjee/unpaper/build-scripts/build-all.sh" />
+    <Text Include="../../thirdparty/owemdjee/unpaper/build-scripts/setup-all.sh" />
+    <Text Include="../../thirdparty/owemdjee/unpaper/build-scripts/test-all.sh" />
     <Text Include="../../thirdparty/owemdjee/unpaper/doc/basic-concepts.md" />
     <Text Include="../../thirdparty/owemdjee/unpaper/doc/conf.py" />
     <Text Include="../../thirdparty/owemdjee/unpaper/doc/file-formats.md" />
@@ -304,7 +326,12 @@
     <Text Include="../../thirdparty/owemdjee/unpaper/doc/img/standard-deviation.png.license" />
     <Text Include="../../thirdparty/owemdjee/unpaper/doc/index.rst" />
     <Text Include="../../thirdparty/owemdjee/unpaper/doc/unpaper.1.rst" />
+    <Text Include="../../thirdparty/owemdjee/unpaper/meson-environments/clang-o2.ini" />
+    <Text Include="../../thirdparty/owemdjee/unpaper/meson-environments/gcc-o0.ini" />
+    <Text Include="../../thirdparty/owemdjee/unpaper/meson-environments/gcc-o2.ini" />
+    <Text Include="../../thirdparty/owemdjee/unpaper/requirements.txt" />
     <Text Include="../../thirdparty/owemdjee/unpaper/tests/golden_images/goldenA1.pbm.license" />
+    <Text Include="../../thirdparty/owemdjee/unpaper/tests/golden_images/goldenA2.pbm.license" />
     <Text Include="../../thirdparty/owemdjee/unpaper/tests/golden_images/goldenB1.ppm.license" />
     <Text Include="../../thirdparty/owemdjee/unpaper/tests/golden_images/goldenB2.ppm.license" />
     <Text Include="../../thirdparty/owemdjee/unpaper/tests/golden_images/goldenB3.ppm.license" />
@@ -332,8 +359,7 @@
     <Text Include="../../thirdparty/owemdjee/unpaper/tests/unpaper_tests.py" />
     <Text Include="../../thirdparty/owemdjee/unpaper/version.h.in" />
   </ItemGroup>
-  <ImportGroup Label="PropertySheets" >
+  <ImportGroup Label="PropertySheets">
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
   </ImportGroup>
 </Project>
-  

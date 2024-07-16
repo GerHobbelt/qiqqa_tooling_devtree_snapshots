@@ -299,7 +299,7 @@ static void* SafeMalloc(uint64_t nmemb, size_t size) {
   return malloc((size_t)total_size);
 }
 
-#define SAFE_ALLOC(W, H, T) ((T*)SafeMalloc((W) * (H), sizeof(T)))
+#define SAFE_ALLOC(W, H, T) ((T*)SafeMalloc((uint64_t)(W) * (H), sizeof(T)))
 
 static int DoSharpArgbToYuv(const uint8_t* r_ptr, const uint8_t* g_ptr,
                             const uint8_t* b_ptr, int rgb_step, int rgb_stride,
@@ -435,6 +435,7 @@ static int DoSharpArgbToYuv(const uint8_t* r_ptr, const uint8_t* g_ptr,
   free(tmp_buffer);
   return ok;
 }
+
 #undef SAFE_ALLOC
 
 #if defined(WEBP_USE_THREAD) && !defined(_WIN32)

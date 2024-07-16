@@ -534,7 +534,11 @@ static JSModuleDef *js_module_loader_so(JSContext *ctx,
 #if defined(_WIN32)
     init = (JSInitModuleFunc*)GetProcAddress(hd, "js_init_module");
 #else
+#ifdef STRICT_R_HEADERS
+    *(void **)(&init) = dlsym(hd, "js_init_module");
+#else
     init = dlsym(hd, "js_init_module");
+#endif
 #endif
     if (!init) {
         JS_ThrowReferenceError(ctx, "could not load module filename '%s': js_init_module not found",
@@ -1745,7 +1749,7 @@ static JSValue js_os_isatty(JSContext *ctx, JSValueConst this_val,
     int fd;
     if (JS_ToInt32(ctx, &fd, argv[0]))
         return JS_EXCEPTION;
-    return JS_NewBool(ctx, (isatty(fd) != 0));
+    return JS_NewBool(ctx, isatty(fd));
 }
 
 #if defined(_WIN32)
@@ -3032,7 +3036,6 @@ static JSValue js_os_exec(JSContext *ctx, JSValueConst this_val,
     }
     if (pid == 0) {
         /* child */
-        int fd_max = sysconf(_SC_OPEN_MAX);
 
         /* remap the stdin/stdout/stderr handles if necessary */
         for(i = 0; i < 3; i++) {
@@ -3042,9 +3045,28 @@ static JSValue js_os_exec(JSContext *ctx, JSValueConst this_val,
                     _exit(127);
             }
         }
+#if defined(HAVE_CLOSEFROM)
+        /* closefrom() is available on many recent unix systems:
+           Linux with glibc 2.34+, Solaris 9+, FreeBSD 7.3+,
+           NetBSD 3.0+, OpenBSD 3.5+.
+           Linux with the musl libc and macOS don't have it.
+         */
 
-        for(i = 3; i < fd_max; i++)
-            close(i);
+        closefrom(3);
+#else
+        {
+            /* Close the file handles manually, limit to 1024 to avoid
+               costly loop on linux Alpine where sysconf(_SC_OPEN_MAX)
+               returns a huge value 1048576.
+               Patch inspired by nicolas-duteil-nova. See also:
+               https://stackoverflow.com/questions/73229353/
+               https://stackoverflow.com/questions/899038/#918469
+             */
+            int fd_max = min_int(sysconf(_SC_OPEN_MAX), 1024);
+            for(i = 3; i < fd_max; i++)
+                close(i);
+        }
+#endif
         if (cwd) {
             if (chdir(cwd) < 0)
 				// TODO: do not exit, but fail/terminate the script and invoke userland/application exit hook (replaces the regular std::exit() behaviour)
@@ -3227,7 +3249,11 @@ typedef struct {
 
 typedef struct {
     int ref_count;
+#ifdef STRICT_R_HEADERS
+    uint64_t buf[];
+#else
     uint64_t buf[0];
+#endif
 } JSSABHeader;
 
 static JSClassID js_worker_class_id;

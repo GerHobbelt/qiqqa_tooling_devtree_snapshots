@@ -153,7 +153,7 @@ namespace TagLib {
       /*!
        * Comments each have a unique description.  This searches for a comment
        * frame with the description \a d and returns a pointer to it.  If no
-       * frame is found that matches the given description null is returned.
+       * frame is found that matches the given description, null is returned.
        *
        * \see description()
        */
@@ -172,6 +172,7 @@ namespace TagLib {
       CommentsFrame(const ByteVector &data, Header *h);
 
       class CommentsFramePrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<CommentsFramePrivate> d;
     };
 

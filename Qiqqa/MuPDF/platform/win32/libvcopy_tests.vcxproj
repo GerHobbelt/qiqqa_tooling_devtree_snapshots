@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libvcopy_tests</ProjectName>
     <ProjectGuid>{5A7C1B31-1EB5-4F0C-8873-355E5EE2FE16}</ProjectGuid>
-    <RootNamespace>libvcopy_tests</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -665,9 +663,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/vcopy/src/win2posix/sys/types.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vcopy/test/monolithic_examples.h" />
     <Text Include="../../thirdparty/owemdjee/vcopy/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/vcopy/DESIGN.md" />
     <Text Include="../../thirdparty/owemdjee/vcopy/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/vcopy/README.md" />
+    <Text Include="../../thirdparty/owemdjee/vcopy/docs/vcopy/Design Notes.md" />
+    <Text Include="../../thirdparty/owemdjee/vcopy/docs/vcopy/TODO - Features.md" />
     <Text Include="../../thirdparty/owemdjee/vcopy/src/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/vcopy/src/gnu-src/local.mk" />
     <Text Include="../../thirdparty/owemdjee/vcopy/src/realpath-osx/README.md" />

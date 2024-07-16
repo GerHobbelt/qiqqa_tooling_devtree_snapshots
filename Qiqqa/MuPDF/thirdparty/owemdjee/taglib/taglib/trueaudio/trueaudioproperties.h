@@ -37,12 +37,12 @@ namespace TagLib {
 
   namespace TrueAudio {
 
-    static const unsigned int HeaderSize = 18;
+    static constexpr unsigned int HeaderSize = 18;
 
     //! An implementation of audio property reading for TrueAudio
 
     /*!
-     * This reads the data from an TrueAudio stream found in the AudioProperties
+     * This reads the data from a TrueAudio stream found in the AudioProperties
      * API.
      */
 
@@ -112,6 +112,7 @@ namespace TagLib {
       void read(const ByteVector &data, offset_t streamLength);
 
       class PropertiesPrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<PropertiesPrivate> d;
     };
   }  // namespace TrueAudio

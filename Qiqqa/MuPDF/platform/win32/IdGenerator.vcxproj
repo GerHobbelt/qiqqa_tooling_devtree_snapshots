@@ -20,7 +20,6 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{00811970-815B-4F64-BC9D-21907828E825}</ProjectGuid>
-    <RootNamespace>IdGenerator</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,7 +69,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -106,7 +105,15 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -357,6 +364,7 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/IdGenerator/C++/source/main.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/IdGenerator/C/source/YitIdHelper.c" />
     <ClCompile Include="../../thirdparty/owemdjee/IdGenerator/C/source/idgen/IdGenOptions.c" />
     <ClCompile Include="../../thirdparty/owemdjee/IdGenerator/C/source/idgen/IdGenerator.c" />
@@ -368,6 +376,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/IdGenerator/PHP/src/snowflake/snowflake.c" />
     <ClCompile Include="../../thirdparty/owemdjee/IdGenerator/PHP/src/snowflake/spinlock.c" />
     <ClCompile Include="../../thirdparty/owemdjee/IdGenerator/PHP/src/test.c" />
+    <ClInclude Include="../../thirdparty/owemdjee/IdGenerator/C++/source/idgen/IdGenerator.h" />
     <ClInclude Include="../../thirdparty/owemdjee/IdGenerator/C/source/YitIdHelper.h" />
     <ClInclude Include="../../thirdparty/owemdjee/IdGenerator/C/source/idgen/IdGenOptions.h" />
     <ClInclude Include="../../thirdparty/owemdjee/IdGenerator/C/source/idgen/IdGenerator.h" />
@@ -385,20 +394,21 @@
     <Image Include="../../thirdparty/owemdjee/IdGenerator/Tools/Testing Data/csharp_call_rust.png" />
     <Image Include="../../thirdparty/owemdjee/IdGenerator/Tools/Testing Data/每次5W并发(循环).png" />
     <Image Include="../../thirdparty/owemdjee/IdGenerator/Tools/Testing Data/综合测试.png" />
-    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#.NET/README.md" />
-    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#.NET/source/Yitter.IdGenTest/GenTest.cs" />
-    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#.NET/source/Yitter.IdGenTest/Program.cs" />
-    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#.NET/source/Yitter.IdGenTest/Properties/launchSettings.json" />
-    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#.NET/source/Yitter.IdGenerator/" />
-    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#.NET/source/Yitter.IdGenerator/Contract/IIdGenerator.cs" />
-    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#.NET/source/Yitter.IdGenerator/Contract/ISnowWorker.cs" />
-    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#.NET/source/Yitter.IdGenerator/Contract/IdGeneratorOptions.cs" />
-    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#.NET/source/Yitter.IdGenerator/Contract/OverCostActionArg.cs" />
-    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#.NET/source/Yitter.IdGenerator/Core/SnowWorkerM1.cs" />
-    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#.NET/source/Yitter.IdGenerator/Core/SnowWorkerM2.cs" />
-    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#.NET/source/Yitter.IdGenerator/Core/SnowWorkerM3.cs" />
-    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#.NET/source/Yitter.IdGenerator/DefaultIdGenerator.cs" />
-    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#.NET/source/Yitter.IdGenerator/YitIdHelper.cs" />
+    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#/README.md" />
+    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#/source/Yitter.IdGenTest/GenTest.cs" />
+    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#/source/Yitter.IdGenTest/Program.cs" />
+    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#/source/Yitter.IdGenTest/Properties/launchSettings.json" />
+    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#/source/Yitter.IdGenerator/" />
+    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#/source/Yitter.IdGenerator/Contract/IIdGenerator.cs" />
+    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#/source/Yitter.IdGenerator/Contract/ISnowWorker.cs" />
+    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#/source/Yitter.IdGenerator/Contract/IdGeneratorOptions.cs" />
+    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#/source/Yitter.IdGenerator/Contract/OverCostActionArg.cs" />
+    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#/source/Yitter.IdGenerator/Core/SnowWorkerM1.cs" />
+    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#/source/Yitter.IdGenerator/Core/SnowWorkerM2.cs" />
+    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#/source/Yitter.IdGenerator/Core/SnowWorkerM3.cs" />
+    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#/source/Yitter.IdGenerator/DefaultIdGenerator.cs" />
+    <Text Include="../../thirdparty/owemdjee/IdGenerator/C#/source/Yitter.IdGenerator/YitIdHelper.cs" />
+    <Text Include="../../thirdparty/owemdjee/IdGenerator/C++/README.md" />
     <Text Include="../../thirdparty/owemdjee/IdGenerator/C/README.md" />
     <Text Include="../../thirdparty/owemdjee/IdGenerator/C/source/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/IdGenerator/C/source/idgen/CMakeLists.txt" />

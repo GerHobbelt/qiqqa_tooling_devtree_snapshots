@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libaom</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF8F864A}</ProjectGuid>
-    <RootNamespace>libaom</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,15 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -126,14 +132,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libaom;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libaom;../../scripts/libaom;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/vmaf/libvmaf/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBAOM;AOM_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBAOM;AOM_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libaom;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libaom;../../scripts/libaom;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/vmaf/libvmaf/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -152,7 +158,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libaom;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libaom;../../scripts/libaom;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/vmaf/libvmaf/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBAOM;AOM_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -160,7 +166,7 @@
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBAOM;AOM_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libaom;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libaom;../../scripts/libaom;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/vmaf/libvmaf/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -181,14 +187,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libaom;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libaom;../../scripts/libaom;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/vmaf/libvmaf/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBAOM;AOM_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBAOM;AOM_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libaom;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libaom;../../scripts/libaom;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/vmaf/libvmaf/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -207,7 +213,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libaom;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libaom;../../scripts/libaom;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/vmaf/libvmaf/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBAOM;AOM_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -215,7 +221,7 @@
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBAOM;AOM_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libaom;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libaom;../../scripts/libaom;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../thirdparty/owemdjee/vmaf/libvmaf/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -235,42 +241,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom/src/aom_integer.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/aom_convolve.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/aom_dsp_rtcd.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/aom_convolve8_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/aom_convolve8_neon_dotprod.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/aom_convolve8_neon_i8mm.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/aom_convolve_copy_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/avg_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/avg_pred_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/blend_a64_mask_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/blk_sse_sum_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/fwd_txfm_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/hadamard_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/highbd_avg_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/highbd_avg_pred_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/highbd_convolve8_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/highbd_hadamard_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/highbd_intrapred_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/highbd_loopfilter_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/highbd_masked_sad_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/highbd_obmc_sad_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/highbd_quantize_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/highbd_sad_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/highbd_sadxd_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/highbd_subpel_variance_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/highbd_variance_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/intrapred_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/loopfilter_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/masked_sad4d_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/masked_sad_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/obmc_sad_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/obmc_variance_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/sad_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/sadxd_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/sse_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/subpel_variance_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/subtract_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/sum_squares_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/variance_neon.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/avg.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/binary_codes_reader.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/binary_codes_writer.c" />
@@ -295,6 +265,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/flow_estimation/ransac.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/flow_estimation/x86/corner_match_avx2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/flow_estimation/x86/corner_match_sse4.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/flow_estimation/x86/disflow_avx2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/flow_estimation/x86/disflow_sse4.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/fwd_txfm.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/grain_table.c" />
@@ -317,12 +288,10 @@
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/vmaf.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/adaptive_quantize_avx2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/adaptive_quantize_sse2.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/aom_asm_stubs.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/aom_convolve_copy_avx2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/aom_convolve_copy_sse2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/aom_quantize_avx.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/aom_subpixel_8t_intrin_avx2.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/aom_subpixel_8t_intrin_sse2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/aom_subpixel_8t_intrin_ssse3.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/avg_intrin_avx2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/avg_intrin_sse2.c" />
@@ -383,7 +352,8 @@
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/variance_impl_ssse3.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/variance_sse2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_mem/aom_mem.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_ports/arm_cpudetect.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_ports/aarch32_cpudetect.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_ports/aarch64_cpudetect.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_ports/ppc_cpudetect.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_scale/aom_scale_rtcd.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/aom_scale/generic/aom_scale.c" />
@@ -398,23 +368,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/av1_cx_iface.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/av1_dx_iface.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/alloccommon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/av1_inv_txfm_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/av1_txfm_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/blend_a64_hmask_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/blend_a64_vmask_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/cdef_block_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/cfl_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/convolve_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/highbd_convolve_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/highbd_inv_txfm_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/highbd_warp_plane_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/jnt_convolve_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/reconinter_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/reconintra_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/resize_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/selfguided_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/warp_plane_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/arm/wiener_convolve_neon.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/av1_inv_txfm1d.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/av1_inv_txfm2d.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/av1_loopfilter.c" />
@@ -455,7 +408,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/x86/av1_inv_txfm_ssse3.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/x86/av1_txfm_sse4.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/x86/cdef_block_avx2.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/x86/cdef_block_sse2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/x86/cdef_block_sse4.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/x86/cdef_block_ssse3.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/x86/cfl_avx2.c" />
@@ -484,6 +436,8 @@
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/x86/reconinter_avx2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/x86/reconinter_sse4.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/x86/reconinter_ssse3.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/x86/resize_avx2.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/x86/resize_sse2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/x86/resize_ssse3.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/x86/selfguided_avx2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/common/x86/selfguided_sse4.c" />
@@ -504,22 +458,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/aq_complexity.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/aq_cyclicrefresh.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/aq_variance.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/arm/crc32/hash_crc32.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/arm/neon/av1_error_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/arm/neon/av1_fwd_txfm2d_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/arm/neon/av1_highbd_quantize_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/arm/neon/av1_k_means_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/arm/neon/av1_temporal_denoiser_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/arm/neon/encodetxb_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/arm/neon/highbd_fwd_txfm_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/arm/neon/hybrid_fwd_txfm_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/arm/neon/ml_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/arm/neon/pickrst_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/arm/neon/quantize_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/arm/neon/rdopt_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/arm/neon/reconinter_enc_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/arm/neon/temporal_filter_neon.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/arm/neon/wedge_utils_neon.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/av1_fwd_txfm1d.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/av1_fwd_txfm2d.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/av1_noise_estimate.c" />
@@ -606,8 +544,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/x86/encodetxb_sse4.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/x86/error_intrin_avx2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/x86/error_intrin_sse2.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/x86/frame_error_avx2.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/x86/frame_error_sse2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/x86/hash_sse42.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/x86/highbd_block_error_intrin_avx2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/av1/encoder/x86/highbd_block_error_intrin_sse2.c" />
@@ -657,7 +593,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/libaom/examples/lossless_encoder.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/examples/noise_model.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/examples/photon_noise_table.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/examples/resize_util.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/examples/scalable_decoder.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/examples/scalable_encoder.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/examples/set_maps.c" />
@@ -712,7 +647,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/coding_path_sync.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/comp_avg_pred_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/comp_mask_pred_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/test/convolve_round_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/convolve_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/corner_match_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/cpu_speed_test.cc" />
@@ -724,6 +658,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/decode_scalability_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/decode_test_driver.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/deltaq_mode_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/libaom/test/disflow_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/divu_small_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/dr_prediction_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/dropframe_encode_test.cc" />
@@ -748,8 +683,8 @@
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/firstpass_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/force_key_frame_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/forced_max_frame_width_height_test.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/test/frame_error_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/frame_parallel_enc_test.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/libaom/test/frame_resize_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/frame_size_tests.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/fwht4x4_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/gf_pyr_height_test.cc" />
@@ -801,11 +736,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/sharpness_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/simd_avx2_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/simd_cmp_avx2.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/test/simd_cmp_neon.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/simd_cmp_sse2.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/simd_cmp_sse4.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/simd_cmp_ssse3.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/libaom/test/simd_neon_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/simd_sse2_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/simd_sse4_test.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/libaom/test/simd_ssse3_test.cc" />
@@ -857,9 +790,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/aom_filter.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/aom_simd.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/aom_simd_inline.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/mem_neon.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/sum_neon.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/arm/transpose_neon.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/binary_codes_reader.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/binary_codes_writer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/bitreader.h" />
@@ -889,18 +819,14 @@
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/pyramid.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/quantize.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/recenter.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/rect.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/simd/v128_intrinsics.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/simd/v128_intrinsics_arm.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/simd/v128_intrinsics_c.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/simd/v128_intrinsics_x86.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/simd/v256_intrinsics.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/simd/v256_intrinsics_arm.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/simd/v256_intrinsics_c.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/simd/v256_intrinsics_v128.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/simd/v256_intrinsics_x86.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/simd/v64_intrinsics.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/simd/v64_intrinsics_arm.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/simd/v64_intrinsics_c.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/simd/v64_intrinsics_x86.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/ssim.h" />
@@ -935,22 +861,24 @@
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/transpose_sse2.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/txfm_common_avx2.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/txfm_common_sse2.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/variance_impl_ssse3.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_mem/aom_mem.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_mem/include/aom_mem_intrnl.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_ports/aom_once.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_ports/aom_timer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_ports/arm.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_ports/arm_cpudetect.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_ports/bitops.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_ports/emmintrin_compat.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_ports/mem.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_ports/mem_ops.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_ports/mem_ops_aligned.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_ports/msvc.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_ports/ppc.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_ports/sanitizer.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_ports/x86.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_scale/aom_scale.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_scale/yv12config.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_util/aom_pthread.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_util/aom_thread.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_util/debug_util.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/aom_util/endian_inl.h" />
@@ -959,9 +887,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/libaom/av1/av1_cx_iface.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/av1/av1_iface_common.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/av1/common/alloccommon.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libaom/av1/common/arm/av1_inv_txfm_neon.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libaom/av1/common/arm/convolve_neon.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/libaom/av1/common/arm/highbd_convolve_neon.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/av1/common/av1_common_int.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/av1/common/av1_inv_txfm1d.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/av1/common/av1_inv_txfm1d_cfg.h" />
@@ -975,6 +900,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/libaom/av1/common/common.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/av1/common/common_data.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/av1/common/convolve.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/libaom/av1/common/debugmodes.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/av1/common/entropy.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/av1/common/entropymode.h" />
     <ClInclude Include="../../thirdparty/owemdjee/libaom/av1/common/entropymv.h" />
@@ -1170,9 +1096,7 @@
     <Image Include="../../thirdparty/owemdjee/libaom/doc/dev_guide/tplgfgroupdiagram.png" />
     <NASM Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/aom_high_subpixel_8t_sse2.asm" />
     <NASM Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/aom_high_subpixel_bilinear_sse2.asm" />
-    <NASM Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/aom_subpixel_8t_sse2.asm" />
     <NASM Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/aom_subpixel_8t_ssse3.asm" />
-    <NASM Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/aom_subpixel_bilinear_sse2.asm" />
     <NASM Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/aom_subpixel_bilinear_ssse3.asm" />
     <NASM Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/fwd_txfm_ssse3_x86_64.asm" />
     <NASM Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/highbd_intrapred_asm_sse2.asm" />
@@ -1186,7 +1110,7 @@
     <NASM Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/sad4d_sse2.asm" />
     <NASM Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/sad_sse2.asm" />
     <NASM Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/ssim_sse2_x86_64.asm" />
-    <NASM Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/subpel_variance_sse2.asm" />
+    <NASM Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/subpel_variance_ssse3.asm" />
     <NASM Include="../../thirdparty/owemdjee/libaom/aom_dsp/x86/subtract_sse2.asm" />
     <NASM Include="../../thirdparty/owemdjee/libaom/aom_ports/float.asm" />
     <NASM Include="../../thirdparty/owemdjee/libaom/aom_ports/x86_abi_support.asm" />
@@ -1228,6 +1152,7 @@
     <Text Include="../../thirdparty/owemdjee/libaom/build/cmake/toolchains/android.cmake" />
     <Text Include="../../thirdparty/owemdjee/libaom/build/cmake/toolchains/arm-ios-common.cmake" />
     <Text Include="../../thirdparty/owemdjee/libaom/build/cmake/toolchains/arm64-ios.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libaom/build/cmake/toolchains/arm64-linux-clang.cmake" />
     <Text Include="../../thirdparty/owemdjee/libaom/build/cmake/toolchains/arm64-linux-gcc.cmake" />
     <Text Include="../../thirdparty/owemdjee/libaom/build/cmake/toolchains/arm64-macos.cmake" />
     <Text Include="../../thirdparty/owemdjee/libaom/build/cmake/toolchains/arm64-mingw-gcc.cmake" />
@@ -1235,6 +1160,7 @@
     <Text Include="../../thirdparty/owemdjee/libaom/build/cmake/toolchains/armv7-linux-gcc.cmake" />
     <Text Include="../../thirdparty/owemdjee/libaom/build/cmake/toolchains/armv7-mingw-gcc.cmake" />
     <Text Include="../../thirdparty/owemdjee/libaom/build/cmake/toolchains/armv7s-ios.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libaom/build/cmake/toolchains/i686-linux-gcc.cmake" />
     <Text Include="../../thirdparty/owemdjee/libaom/build/cmake/toolchains/ios-simulator-common.cmake" />
     <Text Include="../../thirdparty/owemdjee/libaom/build/cmake/toolchains/ppc-linux-gcc.cmake" />
     <Text Include="../../thirdparty/owemdjee/libaom/build/cmake/toolchains/riscv-linux-gcc.cmake" />
@@ -1290,6 +1216,7 @@
     <Text Include="../../thirdparty/owemdjee/libaom/test/aomcx_set_ref.sh" />
     <Text Include="../../thirdparty/owemdjee/libaom/test/aomdec.sh" />
     <Text Include="../../thirdparty/owemdjee/libaom/test/aomenc.sh" />
+    <Text Include="../../thirdparty/owemdjee/libaom/test/av1_c_vs_simd_encode.sh" />
     <Text Include="../../thirdparty/owemdjee/libaom/test/best_encode.sh" />
     <Text Include="../../thirdparty/owemdjee/libaom/test/decode_to_md5.sh" />
     <Text Include="../../thirdparty/owemdjee/libaom/test/decode_with_drops.sh" />

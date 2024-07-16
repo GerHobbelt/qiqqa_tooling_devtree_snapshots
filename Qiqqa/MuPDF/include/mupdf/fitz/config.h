@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -76,22 +76,35 @@
 #define FZ_ENABLE_CBZ 0
 #define FZ_ENABLE_IMG 0
 #define FZ_ENABLE_HTML 0		// (Cost: ~1MB)
+#define FZ_ENABLE_FB2 0
+#define FZ_ENABLE_MOBI 0
 #define FZ_ENABLE_EPUB 0
+#define FZ_ENABLE_OFFICE 0
+#define FZ_ENABLE_TXT 0
+
+/**
+	Some of those document agents rely on the HTML
+	engine. This will be enabled if required based upon
+	those engines, but can be enabled independently of
+	them so that other features (such as the fz_story
+	mechanism or PDF Annotation rich content) can work.
+*/
+/* #define FZ_ENABLE_HTML_ENGINE 1 */
 
 /**
 	Choose which document writers to include.
 	By default all are enabled. To avoid building unwanted
 	ones, define FZ_ENABLE_..._OUTPUT to 0.
 */
-#define FZ_ENABLE_OCR_OUTPUT 0
-#define FZ_ENABLE_DOCX_OUTPUT 0
-#define FZ_ENABLE_ODT_OUTPUT 0 
+#define FZ_ENABLE_OCR_OUTPUT 1
+#define FZ_ENABLE_DOCX_OUTPUT 1
+#define FZ_ENABLE_ODT_OUTPUT 1
 #define FZ_ENABLE_PS_OUTPUT 0 
 
 /**
 	Choose whether to enable ICC color profiles.
 */
-#define FZ_ENABLE_ICC 0
+#define FZ_ENABLE_ICC 1
 
 /**
 	Choose whether to enable JPEG2000 decoding.
@@ -175,7 +188,7 @@
 /**
 	Choose whether to make font rendering APIs available.
 */
-#if BUILDING_MUPDF_MINIMAL_CORE == 1
+#if BUILDING_MUPDF_MINIMAL_CORE <= 1
 #define FZ_ENABLE_RENDER_CORE 1       // (Cost: ~1MB)
 #else
 #define FZ_ENABLE_RENDER_CORE 0
@@ -248,13 +261,45 @@
 #define FZ_ENABLE_HTML 1
 #endif /* FZ_ENABLE_HTML */
 
-#ifndef FZ_ENABLE_EPUB
+#ifndef FZ_ENABLE_FB2 
+#define FZ_ENABLE_FB2 1
+#endif /* FZ_ENABLE_FB2 */
+
+#ifndef FZ_ENABLE_MOBI 
+#define FZ_ENABLE_MOBI 1
+#endif /* FZ_ENABLE_MOBI */
+
+#ifndef FZ_ENABLE_EPUB 
 #define FZ_ENABLE_EPUB 1
 #endif /* FZ_ENABLE_EPUB */
+
+#ifndef FZ_ENABLE_OFFICE 
+#define FZ_ENABLE_OFFICE 1
+#endif /* FZ_ENABLE_OFFICE */
+
+#ifndef FZ_ENABLE_TXT 
+#define FZ_ENABLE_TXT 1
+#endif /* FZ_ENABLE_TXT */
 
 #ifndef FZ_ENABLE_WEBP
 #define FZ_ENABLE_WEBP 1
 #endif /* FZ_ENABLE_WEBP */
+
+#ifndef FZ_ENABLE_FB2
+#define FZ_ENABLE_FB2 1
+#endif /* FZ_ENABLE_FB2 */
+
+#ifndef FZ_ENABLE_MOBI
+#define FZ_ENABLE_MOBI 1
+#endif /* FZ_ENABLE_MOBI */
+
+#ifndef FZ_ENABLE_TXT
+#define FZ_ENABLE_TXT 1
+#endif /* FZ_ENABLE_TXT */
+
+#ifndef FZ_ENABLE_OFFICE
+#define FZ_ENABLE_OFFICE 1
+#endif /* FZ_ENABLE_OFFICE */
 
 #ifndef FZ_ENABLE_OCR_OUTPUT
 #define FZ_ENABLE_OCR_OUTPUT 1
@@ -294,6 +339,35 @@
 
 #ifndef FZ_ENABLE_OCR
 #define FZ_ENABLE_OCR 1
+#endif
+
+#ifdef FZ_ENABLE_HTML_ENGINE
+#if FZ_ENABLE_HTML_ENGINE == 0
+#if FZ_ENABLE_HTML == 1
+#error FZ_ENABLE_HTML cannot work without FZ_ENABLE_HTML_ENGINE
+#endif
+#if FZ_ENABLE_EPUB == 1
+#error FZ_ENABLE_EPUB cannot work without FZ_ENABLE_HTML_ENGINE
+#endif
+#if FZ_ENABLE_MOBI == 1
+#error FZ_ENABLE_MOBI cannot work without FZ_ENABLE_HTML_ENGINE
+#endif
+#if FZ_ENABLE_FB2 == 1
+#error FZ_ENABLE_FB2 cannot work without FZ_ENABLE_HTML_ENGINE
+#endif
+#if FZ_ENABLE_TXT == 1
+#error FZ_ENABLE_TXT cannot work without FZ_ENABLE_HTML_ENGINE
+#endif
+#if FZ_ENABLE_OFFICE == 1
+#error FZ_ENABLE_OFFICE cannot work without FZ_ENABLE_HTML_ENGINE
+#endif
+#endif
+#else
+#if FZ_ENABLE_HTML || FZ_ENABLE_EPUB || FZ_ENABLE_MOBI || FZ_ENABLE_FB2 || FZ_ENABLE_TXT || FZ_ENABLE_OFFICE
+#define FZ_ENABLE_HTML_ENGINE 1
+#else
+#define FZ_ENABLE_HTML_ENGINE 0
+#endif
 #endif
 
 /* If Epub and HTML are both disabled, disable SIL fonts */

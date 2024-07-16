@@ -54,68 +54,17 @@ using namespace cv::cudacodec::detail;
 
 static std::string fourccToString(int fourcc)
 {
-    union {
-        int u32;
-        unsigned char c[4];
-    } i32_c;
-    i32_c.u32 = fourcc;
-    return cv::format("%c%c%c%c",
-        (i32_c.c[0] >= ' ' && i32_c.c[0] < 128) ? i32_c.c[0] : '?',
-        (i32_c.c[1] >= ' ' && i32_c.c[1] < 128) ? i32_c.c[1] : '?',
-        (i32_c.c[2] >= ' ' && i32_c.c[2] < 128) ? i32_c.c[2] : '?',
-        (i32_c.c[3] >= ' ' && i32_c.c[3] < 128) ? i32_c.c[3] : '?');
-}
-
-// handle old FFmpeg backend - remove when windows shared library is updated
-#ifdef _WIN32
-static
-Codec FourccToCodecWin32Old(int codec)
-{
-    switch (codec)
-    {
-    case CV_FOURCC_MACRO('m', 'p', 'e', 'g'): // fallthru
-    case CV_FOURCC_MACRO('m', 'p', 'g', '1'): // fallthru
-    case CV_FOURCC_MACRO('M', 'P', 'G', '1'): return MPEG1;
-    case CV_FOURCC_MACRO('m', 'p', 'g', '2'): // fallthru
-    case CV_FOURCC_MACRO('M', 'P', 'G', '2'): return MPEG2;
-    case CV_FOURCC_MACRO('X', 'V', 'I', 'D'): // fallthru
-    case CV_FOURCC_MACRO('m', 'p', '4', 'v'): // fallthru
-    case CV_FOURCC_MACRO('F', 'M', 'P', '4'): // fallthru
-    case CV_FOURCC_MACRO('D', 'I', 'V', 'X'): return MPEG4;
-    case CV_FOURCC_MACRO('W', 'V', 'C', '1'): return VC1;
-    case CV_FOURCC_MACRO('H', '2', '6', '4'): // fallthru
-    case CV_FOURCC_MACRO('h', '2', '6', '4'): // fallthru
-    case CV_FOURCC_MACRO('a', 'v', 'c', '1'): return H264;
-    case CV_FOURCC_MACRO('H', '2', '6', '5'): // fallthru
-    case CV_FOURCC_MACRO('h', '2', '6', '5'): // fallthru
-    case CV_FOURCC_MACRO('h', 'e', 'v', 'c'): return HEVC;
-    case CV_FOURCC_MACRO('M', 'J', 'P', 'G'): return JPEG;
-    case CV_FOURCC_MACRO('v', 'p', '8', '0'): // fallthru
-    case CV_FOURCC_MACRO('V', 'P', '8', '0'): // fallthru
-    case CV_FOURCC_MACRO('v', 'p', '0', '8'): // fallthru
-    case CV_FOURCC_MACRO('V', 'P', '0', '8'): return VP8;
-    case CV_FOURCC_MACRO('v', 'p', '9', '0'): // fallthru
-    case CV_FOURCC_MACRO('V', 'P', '9', '0'): // fallthru
-    case CV_FOURCC_MACRO('V', 'P', '0', '9'): // fallthru
-    case CV_FOURCC_MACRO('v', 'p', '0', '9'): return VP9;
-    case CV_FOURCC_MACRO('a', 'v', '1', '0'): // fallthru
-    case CV_FOURCC_MACRO('A', 'V', '1', '0'): // fallthru
-    case CV_FOURCC_MACRO('a', 'v', '0', '1'): // fallthru
-    case CV_FOURCC_MACRO('A', 'V', '0', '1'): return AV1;
-    default:
-        return NumCodecs;
+    char str[5] = {'\0', '\0', '\0', '\0'};
+    for (int i = 0; i < 4; i++) {
+        char c = (char)(fourcc >> i*8);
+        str[i] = ' ' <= c && c < 128 ? c : '?';
     }
+    return std::string(str);
 }
-#endif
 
 static
 Codec FourccToCodec(int codec)
 {
-#ifdef _WIN32 // handle old FFmpeg backend - remove when windows shared library is updated
-    Codec win32OldCodec = FourccToCodecWin32Old(codec);
-    if(win32OldCodec != NumCodecs)
-        return win32OldCodec;
-#endif
     switch (codec)
     {
     case CV_FOURCC_MACRO('m', 'p', 'g', '1'): return MPEG1;
@@ -170,19 +119,21 @@ bool ParamSetsExist(unsigned char* parameterSets, const int szParameterSets, uns
     return paramSetStartCodeLen != 0 && packetStartCodeLen != 0 && parameterSets[paramSetStartCodeLen] == data[packetStartCodeLen];
 }
 
-cv::cudacodec::detail::FFmpegVideoSource::FFmpegVideoSource(const String& fname, const std::vector<int>& _videoCaptureParams)
+cv::cudacodec::detail::FFmpegVideoSource::FFmpegVideoSource(const String& fname, const std::vector<int>& _videoCaptureParams, const int iMaxStartFrame)
     : videoCaptureParams(_videoCaptureParams)
 {
     if (!videoio_registry::hasBackend(CAP_FFMPEG))
         CV_Error(Error::StsNotImplemented, "FFmpeg backend not found");
 
-    cap.open(fname, CAP_FFMPEG, videoCaptureParams);
-    if (!cap.isOpened())
+    videoCaptureParams.push_back(CAP_PROP_FORMAT);
+    videoCaptureParams.push_back(-1);
+    if (!cap.open(fname, CAP_FFMPEG, videoCaptureParams))
         CV_Error(Error::StsUnsupportedFormat, "Unsupported video source");
-
-    if (!cap.set(CAP_PROP_FORMAT, -1))  // turn off video decoder (extract stream)
-        CV_Error(Error::StsUnsupportedFormat, "Fetching of RAW video streams is not supported");
     CV_Assert(cap.get(CAP_PROP_FORMAT) == -1);
+    if (iMaxStartFrame) {
+        CV_Assert(cap.set(CAP_PROP_POS_FRAMES, iMaxStartFrame));
+        firstFrameIdx = static_cast<int>(cap.get(CAP_PROP_POS_FRAMES));
+    }
 
     const int codecExtradataIndex = static_cast<int>(cap.get(CAP_PROP_CODEC_EXTRADATA_INDEX));
     Mat tmpExtraData;

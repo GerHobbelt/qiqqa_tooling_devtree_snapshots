@@ -23,7 +23,7 @@ namespace spdlog {
 // Async overflow policy - block by default.
 enum class async_overflow_policy {
     block,           // Block until message can be enqueued
-    overrun_oldest,  // Discard oldest message in the queue if full when trying to
+    overrun_oldest,  // Discard the oldest message in the queue if full when trying to
                      // add new item.
     discard_new      // Discard new message if the queue is full when trying to add new item.
 };
@@ -80,9 +80,9 @@ public:
     std::cv_status wait_until(const std::chrono::time_point<Clock, Duration>& timeout_time);
 
 protected:
-    void sink_it_(const details::log_msg &msg) override;
+    void sink_it_(const details::log_msg& msg) override;
     void flush_() override;
-    void backend_sink_it_(const details::log_msg &incoming_log_msg);
+    void backend_sink_it_(const details::log_msg& incoming_log_msg);
     void backend_flush_();
 
     void on_log_dispatch_();

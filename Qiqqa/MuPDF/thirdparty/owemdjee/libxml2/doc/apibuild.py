@@ -23,7 +23,6 @@ ignored_files = {
   "libxml.h": "internal only",
   "rngparser.c": "not yet integrated",
   "testModule.c": "test tool",
-  "testThreads.c": "test tool",
   "testapi.c": "generated regression tests",
   "runtest.c": "regression tests program",
   "runsuite.c": "regression tests program",
@@ -32,6 +31,8 @@ ignored_files = {
   "testdso.c": "test for dynamid shared libraries",
   "testrecurse.c": "test for entities recursions",
   "timsort.h": "Internal header only for xpath.c 2.9.0",
+  "nanoftp.h": "empty",
+  "SAX.h": "empty",
 }
 
 ignored_words = {
@@ -58,6 +59,7 @@ ignored_words = {
   "ATTRIBUTE_NO_SANITIZE": (3, "macro keyword"),
   "ATTRIBUTE_NO_SANITIZE_INTEGER": (0, "macro keyword"),
   "XML_DEPRECATED": (0, "macro keyword"),
+  "XML_DEPRECATED_MEMBER": (0, "macro keyword"),
   "XML_GLOBALS_ALLOC": (0, "macro keyword"),
   "XML_GLOBALS_ERROR": (0, "macro keyword"),
   "XML_GLOBALS_IO": (0, "macro keyword"),
@@ -905,7 +907,7 @@ class CParser:
                 i = i + 1
             if retdesc == "" and ret[0] != "void":
                 self.warning("Function comment for %s lacks description of return value" % (name))
-            if desc == "":
+            if desc == "" and retdesc == "":
                 self.warning("Function comment for %s lacks description of the function" % (name))
 
         return(((ret[0], retdesc), args, desc))
@@ -1161,10 +1163,8 @@ class CParser:
                     fname = token[1]
                     token = self.token()
                     if token[0] == "sep" and token[1] == ";":
-                        self.comment = None
                         token = self.token()
-                        fields.append((self.type, fname, self.comment))
-                        self.comment = None
+                        fields.append((self.type, fname))
                     else:
                         self.error("parseStruct: expecting ;", token)
                 elif token != None and token[0] == "sep" and token[1] == "{":
@@ -1714,12 +1714,7 @@ class docBuilder:
                 output.write(">\n");
                 try:
                     for field in self.idx.structs[name].info:
-                        desc = field[2]
-                        if desc == None:
-                            desc = ''
-                        else:
-                            desc = escape(desc)
-                        output.write("      <field name='%s' type='%s' info='%s'/>\n" % (field[1] , field[0], desc))
+                        output.write("      <field name='%s' type='%s'/>\n" % (field[1] , field[0]))
                 except:
                     print("Failed to serialize struct %s" % (name))
                 output.write("    </struct>\n")
@@ -1774,7 +1769,8 @@ class docBuilder:
         try:
             (ret, params, desc) = id.info
             if (desc == None or desc == '') and \
-               name[0:9] != "xmlThrDef" and name != "xmlDllMain":
+               name[0:9] != "xmlThrDef" and name != "xmlDllMain" and \
+               ret[1] == '':
                 print("%s %s from %s has no description" % (id.type, name,
                        self.modulename_file(id.module)))
 
@@ -1808,7 +1804,8 @@ class docBuilder:
                                  escape(dict.info[data]),
                                  data.lower()))
                 except:
-                    print("Header %s lacks a %s description" % (module, data))
+                    if data != 'Author':
+                        print("Header %s lacks a %s description" % (module, data))
             if 'Description' in dict.info:
                 desc = dict.info['Description']
                 if desc.find("DEPRECATED") != -1:

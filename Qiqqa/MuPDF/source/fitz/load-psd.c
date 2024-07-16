@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -185,6 +185,7 @@ psd_read_image(fz_context *ctx, struct info *info, const unsigned char *p, size_
 	memset(info, 0, sizeof(*info));
 
 	fz_var(image);
+	fz_var(seps);
 
 	fz_try(ctx)
 	{
@@ -334,6 +335,7 @@ psd_read_image(fz_context *ctx, struct info *info, const unsigned char *p, size_
 			/* Packbits */
 			source.packbits = 1;
 			source.packbits_n = 128;
+			source.packbits_rep = 0;
 
 			/* Skip over rows * channels * byte counts. */
 			m = ((size_t)info->height) * info->n * 2;
@@ -405,6 +407,7 @@ psd_read_image(fz_context *ctx, struct info *info, const unsigned char *p, size_
 						q += n;
 					}
 					q -= m*n - 1;
+					(void) q;
 				}
 			}
 		}
@@ -465,6 +468,7 @@ psd_read_image(fz_context *ctx, struct info *info, const unsigned char *p, size_
 						q += n;
 					}
 					q -= m*n - 1;
+					(void) q;
 				}
 
 				/* But alpha is not */

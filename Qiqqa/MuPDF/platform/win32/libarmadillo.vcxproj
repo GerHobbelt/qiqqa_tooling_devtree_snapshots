@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libarmadillo</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF7A1A29}</ProjectGuid>
-    <RootNamespace>libarmadillo</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -229,7 +227,6 @@
   </ImportGroup>
   <ItemGroup>
     <ClCompile Include="../../thirdparty/owemdjee/armadillo/examples/example1.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/armadillo/mex_interface/armaMex_demo.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/armadillo/src/wrapper1.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/armadillo/src/wrapper2.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/armadillo/tests1/smoke_test.cpp" />
@@ -926,7 +923,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/armadillo/include/armadillo_bits/xtrans_mat_meat.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/armadillo/include/armadillo_bits/xvec_htrans_bones.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/armadillo/include/armadillo_bits/xvec_htrans_meat.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/armadillo/mex_interface/armaMex.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/armadillo/tests2/catch.hpp" />
     <Image Include="../../thirdparty/owemdjee/armadillo/armadillo_icon.png" />
     <Text Include="../../thirdparty/owemdjee/armadillo/CHANGELOG.html" />
@@ -960,8 +956,6 @@
     <Text Include="../../thirdparty/owemdjee/armadillo/examples/lib_win64/libopenblas.dll" />
     <Text Include="../../thirdparty/owemdjee/armadillo/include/armadillo_bits/config.hpp.cmake" />
     <Text Include="../../thirdparty/owemdjee/armadillo/index.html" />
-    <Text Include="../../thirdparty/owemdjee/armadillo/mex_interface/README.txt" />
-    <Text Include="../../thirdparty/owemdjee/armadillo/mex_interface/armaMex_documentation.pdf" />
     <Text Include="../../thirdparty/owemdjee/armadillo/misc/armadillo.pc.in" />
     <Text Include="../../thirdparty/owemdjee/armadillo/misc/armadillo.spec" />
     <Text Include="../../thirdparty/owemdjee/armadillo/misc/blank_footer.html" />

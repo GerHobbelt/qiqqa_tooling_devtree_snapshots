@@ -157,7 +157,7 @@ int main(void)
 #define F_PROPERTY	0x200000
 
 struct regression_test_case {
-	int compile_options;
+	uint32_t compile_options;
 	int newline;
 	int match_options;
 	int start_offset;
@@ -285,6 +285,7 @@ static struct regression_test_case regression_test_cases[] = {
 	{ CM, A, 0, 0, "a1277|a1377|bX487", "bx487" },
 	{ CM, A, 0, 0, "a1277|a1377|bx487", "bX487" },
 	{ 0, A, 0, 0, "(a|)b*+a", "a" },
+	{ 0, A, 0, 0 | F_NOMATCH, "(.|.|.|.|.)(|.|.|.|.)(.||.|.|.)(.|.||.|.)(.|.|.||.)(.|.|.|.|)(A|.|.|.|.)(.|A|.|.|.)(.|.|A|.|.)(.|.|.|A|.)(.|.|.|.|A)(B|.|.|.|.)(.|B|.|.|.)(.|.|B|.|.)(.|.|.|B|.)(.|.|.|.|B)xa", "1234567890123456ax" },
 
 	/* Greedy and non-greedy ? operators. */
 	{ MU, A, 0, 0, "(?:a)?a", "laab" },
@@ -403,7 +404,8 @@ static struct regression_test_case regression_test_cases[] = {
 	{ MU, A, 0, 0, "[^\\x{801}-\\x{fffe}]+", "\xe0\xa0\x81#\xc3\xa9\xf0\x90\x90\x80\xe0\xa0\x80\xef\xbf\xbf\xef\xbf\xbe" },
 	{ MU, A, 0, 0, "[\\x{10001}-\\x{10fffe}]+", "#\xc3\xa9\xe2\xb1\xa5\xf0\x90\x80\x80\xf0\x90\x80\x81\xf4\x8f\xbf\xbe\xf4\x8f\xbf\xbf" },
 	{ MU, A, 0, 0, "[^\\x{10001}-\\x{10fffe}]+", "\xf0\x90\x80\x81#\xc3\xa9\xe2\xb1\xa5\xf0\x90\x80\x80\xf4\x8f\xbf\xbf\xf4\x8f\xbf\xbe" },
-	{ CMU, A, 0, 0 | F_NOMATCH, "^[\\x{0100}-\\x{017f}]", " " },
+	{ CMU, A, 0, 0 | F_NOMATCH | F_PROPERTY, "^[\\x{100}-\\x{17f}]", " " },
+	{ M, A, 0, 0 | F_NOMATCH, "[^\\S\\W]{6}", "abcdefghijk" },
 
 	/* Unicode properties. */
 	{ MUP, A, 0, 0, "[1-5\xc3\xa9\\w]", "\xc3\xa1_" },
@@ -426,10 +428,13 @@ static struct regression_test_case regression_test_cases[] = {
 	{ MUP, A, 0, 0 | F_PROPERTY, "[\xc3\xa2-\xc3\xa6\xc3\x81-\xc3\x84\xe2\x80\xa8-\xe2\x80\xa9\xe6\x92\xad\\p{Zs}]{2,}", "\xe2\x80\xa7\xe2\x80\xa9\xe6\x92\xad \xe6\x92\xae" },
 	{ MUP, A, 0, 0 | F_PROPERTY, "[\\P{L&}]{2}[^\xc2\x85-\xc2\x89\\p{Ll}\\p{Lu}]{2}", "\xc3\xa9\xe6\x92\xad.a\xe6\x92\xad|\xc2\x8a#" },
 	{ PCRE2_UCP, 0, 0, 0 | F_PROPERTY, "[a-b\\s]{2,5}[^a]", "AB  baaa" },
-	{ MUP, 0, 0, 0 | F_NOMATCH, "[^\\p{Hangul}\\p{Z}]", " " },
+	{ MUP, 0, 0, 0 | F_NOMATCH | F_PROPERTY, "[^\\p{Hangul}\\p{Z}]", " " },
 	{ MUP, 0, 0, 0, "[\\p{Lu}\\P{Latin}]+", "c\xEA\xA4\xAE,A,b" },
 	{ MUP, 0, 0, 0, "[\\x{a92e}\\p{Lu}\\P{Latin}]+", "c\xEA\xA4\xAE,A,b" },
 	{ CMUP, 0, 0, 0, "[^S]\\B", "\xe2\x80\x8a" },
+	{ MUP, 0, 0, 0 | F_NOMATCH, "[^[:print:]\\x{f6f6}]", "\xef\x9b\xb6" },
+	{ MUP, 0, 0, 0, "[[:xdigit:]\\x{6500}]#", "\xe6\x94\x80#" },
+	{ MUP, 0, 0, 0 | F_PROPERTY, "[\\pC\\PC]#", "A#" },
 
 	/* Possible empty brackets. */
 	{ MU, A, 0, 0, "(?:|ab||bc|a)+d", "abcxabcabd" },
@@ -525,6 +530,7 @@ static struct regression_test_case regression_test_cases[] = {
 	{ MU, A, 0, 0 | F_PROPERTY, "\\X{2,4}..", "#\xcc\x8d#\xcc\x8d##" },
 	{ MU, A, 0, 0, "(c(ab)?+ab)+", "cabcababcab" },
 	{ MU, A, 0, 0, "(?>(a+)b)+aabab", "aaaabaaabaabab" },
+	{ MU, A, 0, 0 | F_NOMATCH, "(?>a*|)a", "aaa" },
 
 	/* Possessive quantifiers. */
 	{ MU, A, 0, 0, "(?:a|b)++m", "mababbaaxababbaam" },
@@ -605,6 +611,7 @@ static struct regression_test_case regression_test_cases[] = {
 	{ CMU | PCRE2_DUPNAMES, A, 0, 0, "(?:(?<A>AA)|(?<A>BB))\\k<A>{0,3}?M", "aaaaaabbbbbbaabbbbbbbbbbm" },
 	{ CMU | PCRE2_DUPNAMES, A, 0, 0, "(?:(?<A>AA)|(?<A>BB))\\k<A>{2,3}?", "aaaabbbbaaaabbbbbbbbbb" },
 	{ MU | PCRE2_MATCH_UNSET_BACKREF, A, 0, 0, "(a)|\\1+c", "xxc" },
+	{ MU | PCRE2_MATCH_UNSET_BACKREF, A, 0, 0, "\\1+?()", "" },
 
 	/* Assertions. */
 	{ MU, A, 0, 0, "(?=xx|yy|zz)\\w{4}", "abczzdefg" },
@@ -664,6 +671,7 @@ static struct regression_test_case regression_test_cases[] = {
 	{ MU, A, 0, 0, "(?=(a(b(*ACCEPT)b)))a", "ab" },
 	{ MU, A, PCRE2_NOTEMPTY, 0, "(?=a*(*ACCEPT))c", "c" },
 	{ MU, A, PCRE2_NOTEMPTY, 0 | F_NOMATCH, "(?=A)", "AB" },
+	{ MU | PCRE2_ENDANCHORED, A, 0, 0, "aa(*ACCEPT)aa", "aaa" },
 
 	/* Conditional blocks. */
 	{ MU, A, 0, 0, "(?(?=(a))a|b)+k", "ababbalbbadabak" },
@@ -910,7 +918,7 @@ static struct regression_test_case regression_test_cases[] = {
 	{ MU, A, 0, 0, "!(*sr:\\w\\w|\\w\\w\\w)++#", "!abcdefghijklmno!abcdefghijklmno!abcdef#" },
 	{ MU, A, 0, 0, "!(*sr:\\w\\w|\\w\\w\\w)?#", "!ab!abc!ab!ab#" },
 	{ MU, A, 0, 0, "!(*sr:\\w\\w|\\w\\w\\w)??#", "!ab!abc!ab!ab#" },
-#endif
+#endif /* SUPPORT_UNICODE */
 
 	/* Deep recursion. */
 	{ MU, A, 0, 0, "((((?:(?:(?:\\w)+)?)*|(?>\\w)+?)+|(?>\\w)?\?)*)?\\s", "aaaaa+ " },
@@ -1175,7 +1183,7 @@ static int regression_tests(void)
 	int counter = 0;
 	int jit_compile_mode;
 	int utf = 0;
-	int disabled_options = 0;
+	uint32_t disabled_options = 0;
 	int i;
 #ifdef SUPPORT_PCRE2_8
 	pcre2_code_8 *re8;
@@ -1380,9 +1388,9 @@ static int regression_tests(void)
 			ovector8_1 = pcre2_get_ovector_pointer_8(mdata8_1);
 			ovector8_2 = pcre2_get_ovector_pointer_8(mdata8_2);
 			for (i = 0; i < OVECTOR_SIZE * 2; ++i)
-				ovector8_1[i] = -2;
+				ovector8_1[i] = (PCRE2_SIZE)(-2);
 			for (i = 0; i < OVECTOR_SIZE * 2; ++i)
-				ovector8_2[i] = -2;
+				ovector8_2[i] = (PCRE2_SIZE)(-2);
 			pcre2_set_match_limit_8(mcontext8, 10000000);
 		}
 		if (re8) {
@@ -1420,9 +1428,9 @@ static int regression_tests(void)
 			ovector16_1 = pcre2_get_ovector_pointer_16(mdata16_1);
 			ovector16_2 = pcre2_get_ovector_pointer_16(mdata16_2);
 			for (i = 0; i < OVECTOR_SIZE * 2; ++i)
-				ovector16_1[i] = -2;
+				ovector16_1[i] = (PCRE2_SIZE)(-2);
 			for (i = 0; i < OVECTOR_SIZE * 2; ++i)
-				ovector16_2[i] = -2;
+				ovector16_2[i] = (PCRE2_SIZE)(-2);
 			pcre2_set_match_limit_16(mcontext16, 10000000);
 		}
 		if (re16) {
@@ -1465,9 +1473,9 @@ static int regression_tests(void)
 			ovector32_1 = pcre2_get_ovector_pointer_32(mdata32_1);
 			ovector32_2 = pcre2_get_ovector_pointer_32(mdata32_2);
 			for (i = 0; i < OVECTOR_SIZE * 2; ++i)
-				ovector32_1[i] = -2;
+				ovector32_1[i] = (PCRE2_SIZE)(-2);
 			for (i = 0; i < OVECTOR_SIZE * 2; ++i)
-				ovector32_2[i] = -2;
+				ovector32_2[i] = (PCRE2_SIZE)(-2);
 			pcre2_set_match_limit_32(mcontext32, 10000000);
 		}
 		if (re32) {
@@ -1847,7 +1855,7 @@ static int check_invalid_utf_result(int pattern_index, const char *type, int res
 #define CPI (PCRE2_JIT_COMPLETE | PCRE2_JIT_PARTIAL_SOFT | PCRE2_JIT_INVALID_UTF)
 
 struct invalid_utf8_regression_test_case {
-	int compile_options;
+	uint32_t compile_options;
 	int jit_compile_options;
 	int start_offset;
 	int skip_left;
@@ -2138,7 +2146,7 @@ static int invalid_utf8_regression_tests(void)
 #define CPI (PCRE2_JIT_COMPLETE | PCRE2_JIT_PARTIAL_SOFT | PCRE2_JIT_INVALID_UTF)
 
 struct invalid_utf16_regression_test_case {
-	int compile_options;
+	uint32_t compile_options;
 	int jit_compile_options;
 	int start_offset;
 	int skip_left;
@@ -2346,7 +2354,7 @@ static int invalid_utf16_regression_tests(void)
 #define CPI (PCRE2_JIT_COMPLETE | PCRE2_JIT_PARTIAL_SOFT | PCRE2_JIT_INVALID_UTF)
 
 struct invalid_utf32_regression_test_case {
-	int compile_options;
+	uint32_t compile_options;
 	int jit_compile_options;
 	int start_offset;
 	int skip_left;

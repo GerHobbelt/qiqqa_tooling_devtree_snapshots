@@ -34,6 +34,15 @@ using namespace TagLib;
 class RIFF::AIFF::File::FilePrivate
 {
 public:
+  FilePrivate(const ID3v2::FrameFactory *frameFactory)
+        : ID3v2FrameFactory(frameFactory ? frameFactory
+                                         : ID3v2::FrameFactory::instance())
+  {
+  }
+
+  ~FilePrivate() = default;
+
+  const ID3v2::FrameFactory *ID3v2FrameFactory;
   std::unique_ptr<Properties> properties;
   std::unique_ptr<ID3v2::Tag> tag;
 
@@ -49,24 +58,26 @@ bool RIFF::AIFF::File::isSupported(IOStream *stream)
   // An AIFF file has to start with "FORM????AIFF" or "FORM????AIFC".
 
   const ByteVector id = Utils::readHeader(stream, 12, false);
-  return (id.startsWith("FORM") && (id.containsAt("AIFF", 8) || id.containsAt("AIFC", 8)));
+  return id.startsWith("FORM") && (id.containsAt("AIFF", 8) || id.containsAt("AIFC", 8));
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // public members
 ////////////////////////////////////////////////////////////////////////////////
 
-RIFF::AIFF::File::File(FileName file, bool readProperties, Properties::ReadStyle) :
+RIFF::AIFF::File::File(FileName file, bool readProperties, Properties::ReadStyle,
+                       ID3v2::FrameFactory *frameFactory) :
   RIFF::File(file, BigEndian),
-  d(std::make_unique<FilePrivate>())
+  d(std::make_unique<FilePrivate>(frameFactory))
 {
   if(isOpen())
     read(readProperties);
 }
 
-RIFF::AIFF::File::File(IOStream *stream, bool readProperties, Properties::ReadStyle) :
+RIFF::AIFF::File::File(IOStream *stream, bool readProperties, Properties::ReadStyle,
+                       ID3v2::FrameFactory *frameFactory) :
   RIFF::File(stream, BigEndian),
-  d(std::make_unique<FilePrivate>())
+  d(std::make_unique<FilePrivate>(frameFactory))
 {
   if(isOpen())
     read(readProperties);
@@ -142,10 +153,10 @@ bool RIFF::AIFF::File::hasID3v2Tag() const
 void RIFF::AIFF::File::read(bool readProperties)
 {
   for(unsigned int i = 0; i < chunkCount(); ++i) {
-    const ByteVector name = chunkName(i);
-    if(name == "ID3 " || name == "id3 ") {
+    if(const ByteVector name = chunkName(i); name == "ID3 " || name == "id3 ") {
       if(!d->tag) {
-        d->tag = std::make_unique<ID3v2::Tag>(this, chunkOffset(i));
+        d->tag = std::make_unique<ID3v2::Tag>(this, chunkOffset(i),
+                                              d->ID3v2FrameFactory);
         d->hasID3v2 = true;
       }
       else {
@@ -155,7 +166,7 @@ void RIFF::AIFF::File::read(bool readProperties)
   }
 
   if(!d->tag)
-    d->tag = std::make_unique<ID3v2::Tag>();
+    d->tag = std::make_unique<ID3v2::Tag>(nullptr, 0, d->ID3v2FrameFactory);
 
   if(readProperties)
     d->properties = std::make_unique<Properties>(this, Properties::Average);

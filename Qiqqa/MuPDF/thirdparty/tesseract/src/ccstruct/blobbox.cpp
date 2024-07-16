@@ -17,9 +17,7 @@
  **********************************************************************/
 
 // Include automatically generated configuration file if running autoconf.
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include "blobbox.h"
 #include "blobs.h"   // for TPOINT
@@ -482,7 +480,7 @@ Diagnostics::Color BLOBNBOX::TextlineColor(BlobRegionType region_type, BlobTextF
         return Diagnostics::LIGHT_BLUE;
       }
       if (flow_type == BTFT_CHAIN) {
-        return Diagnostics::AQUAMARINE;
+        return Diagnostics::MEDIUM_BLUE;
       }
       if (flow_type == BTFT_LEADER) {
         return Diagnostics::WHEAT;
@@ -1000,16 +998,12 @@ static void SizeFilterBlobs(int min_height, int max_height, BLOBNBOX_LIST *src_l
     int width = blob->bounding_box().width();
     int height = blob->bounding_box().height();
     if (height < min_height && (width < min_height || width > max_height)) {
-      blob->set_medium(false);
       noise_it.add_after_then_move(blob);
     } else if (height > max_height) {
-      blob->set_medium(false);
       large_it.add_after_then_move(blob);
     } else if (height < min_height) {
-      blob->set_medium(false);
       small_it.add_after_then_move(blob);
     } else {
-      blob->set_medium(true);
       medium_it.add_after_then_move(blob);
     }
   }

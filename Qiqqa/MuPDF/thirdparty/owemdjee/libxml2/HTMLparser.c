@@ -40,8 +40,6 @@
 
 static int htmlOmittedDefaultValue = 1;
 
-xmlChar * htmlDecodeEntities(htmlParserCtxtPtr ctxt, int len,
-			     xmlChar end, xmlChar  end2, xmlChar end3);
 static void htmlParseComment(htmlParserCtxtPtr ctxt);
 
 /************************************************************************
@@ -2011,6 +2009,14 @@ htmlEntityLookup(const xmlChar *name) {
     return(NULL);
 }
 
+static int
+htmlCompareEntityDesc(const void *vkey, const void *vdesc) {
+    const unsigned *key = vkey;
+    const htmlEntityDesc *desc = vdesc;
+
+    return((int) *key - (int) desc->value);
+}
+
 /**
  * htmlEntityValueLookup:
  * @value: the entity's unicode value
@@ -2023,17 +2029,14 @@ htmlEntityLookup(const xmlChar *name) {
  */
 const htmlEntityDesc *
 htmlEntityValueLookup(unsigned int value) {
-    unsigned int i;
+    const htmlEntityDesc *desc;
+    size_t nmemb;
 
-    for (i = 0;i < (sizeof(html40EntitiesTable)/
-                    sizeof(html40EntitiesTable[0]));i++) {
-        if (html40EntitiesTable[i].value >= value) {
-	    if (html40EntitiesTable[i].value > value)
-		break;
-            return((htmlEntityDescPtr) &html40EntitiesTable[i]);
-	}
-    }
-    return(NULL);
+    nmemb = sizeof(html40EntitiesTable) / sizeof(html40EntitiesTable[0]);
+    desc = bsearch(&value, html40EntitiesTable, nmemb, sizeof(htmlEntityDesc),
+                   htmlCompareEntityDesc);
+
+    return(desc);
 }
 
 /**
@@ -4748,12 +4751,9 @@ htmlParseDocument(htmlParserCtxtPtr ctxt) {
     if ((ctxt == NULL) || (ctxt->input == NULL))
 	return(-1);
 
-    /*
-     * Document locator is unused. Only for backward compatibility.
-     */
     if ((ctxt->sax) && (ctxt->sax->setDocumentLocator)) {
-        xmlSAXLocator copy = xmlDefaultSAXLocator;
-        ctxt->sax->setDocumentLocator(ctxt->userData, &copy);
+        ctxt->sax->setDocumentLocator(ctxt->userData,
+                (xmlSAXLocator *) &xmlDefaultSAXLocator);
     }
 
     xmlDetectEncoding(ctxt);
@@ -5292,8 +5292,8 @@ htmlParseTryOrFinish(htmlParserCtxtPtr ctxt, int terminate) {
                     avail = in->end - in->cur;
 		}
                 if ((ctxt->sax) && (ctxt->sax->setDocumentLocator)) {
-                    xmlSAXLocator copy = xmlDefaultSAXLocator;
-                    ctxt->sax->setDocumentLocator(ctxt->userData, &copy);
+                    ctxt->sax->setDocumentLocator(ctxt->userData,
+                            (xmlSAXLocator *) &xmlDefaultSAXLocator);
                 }
 		if ((ctxt->sax) && (ctxt->sax->startDocument) &&
 	            (!ctxt->disableSAX))
@@ -5812,12 +5812,16 @@ htmlCreatePushParserCtxt(htmlSAXHandlerPtr sax, void *user_data,
 	return(NULL);
 
     encoding = xmlGetCharEncodingName(enc);
-    input = xmlNewInputPush(ctxt, filename, chunk, size, encoding);
+    input = xmlInputCreatePush(filename, chunk, size);
     if (input == NULL) {
 	htmlFreeParserCtxt(ctxt);
 	return(NULL);
     }
+
     inputPush(ctxt, input);
+
+    if (encoding != NULL)
+        xmlSwitchEncodingName(ctxt, encoding);
 
     return(ctxt);
 }
@@ -5990,6 +5994,8 @@ htmlParseFile(const char *filename, const char *encoding) {
 /**
  * htmlHandleOmittedElem:
  * @val:  int 0 or 1
+ *
+ * DEPRECATED: Use HTML_PARSE_NOIMPLIED
  *
  * Set and return the previous value for handling HTML omitted tags.
  *
@@ -6298,8 +6304,11 @@ htmlCtxtUseOptions(htmlParserCtxtPtr ctxt, int options)
 /**
  * htmlCtxtParseDocument:
  * @ctxt:  an HTML parser context
+ * @input:  parser input
  *
  * Parse an HTML document and return the resulting document tree.
+ *
+ * Available since 2.13.0.
  *
  * Returns the resulting document tree or NULL
  */
@@ -6481,7 +6490,6 @@ htmlReadFd(int fd, const char *url, const char *encoding, int options)
     htmlCtxtUseOptions(ctxt, options);
 
     input = xmlNewInputFd(ctxt, url, fd, encoding, 0);
-    input->buf->closecallback = NULL;
 
     doc = htmlCtxtParseDocument(ctxt, input);
 
@@ -6653,7 +6661,6 @@ htmlCtxtReadFd(htmlParserCtxtPtr ctxt, int fd,
     htmlCtxtUseOptions(ctxt, options);
 
     input = xmlNewInputFd(ctxt, URL, fd, encoding, 0);
-    input->buf->closecallback = NULL;
 
     return(htmlCtxtParseDocument(ctxt, input));
 }

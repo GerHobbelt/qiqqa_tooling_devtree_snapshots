@@ -21,10 +21,6 @@
 #include <memory>
 #include <string>
 
-#if __cplusplus >= 201703L  // C++17
-    #include <string_view>
-#endif
-
 namespace spdlog {
 
 using default_factory = synchronous_factory;
@@ -36,7 +32,8 @@ using default_factory = synchronous_factory;
 // Example:
 //   spdlog::create<daily_file_sink_st>("logger_name", "dailylog_filename", 11, 59);
 template <typename Sink, typename... SinkArgs>
-inline std::shared_ptr<spdlog::logger> create(std::string logger_name, SinkArgs &&...sink_args) {
+inline std::shared_ptr<spdlog::logger> create(std::string logger_name, SinkArgs &&...sink_args)
+{
     return default_factory::create<Sink>(std::move(logger_name),
                                          std::forward<SinkArgs>(sink_args)...);
 }
@@ -54,53 +51,50 @@ SPDLOG_API void initialize_logger(std::shared_ptr<logger> logger);
 // Return an existing logger or nullptr if a logger with such name doesn't
 // exist.
 // example: spdlog::get("my_logger")->info("hello {}", "world");
-SPDLOG_API std::shared_ptr<logger> get(const std::string &name);
-#if __cplusplus >= 201703L  // C++17
-SPDLOG_API std::shared_ptr<logger> get(std::string_view name);
-SPDLOG_API std::shared_ptr<logger> get(const char *name);
-#endif
+SPDLOG_API std::shared_ptr<logger> get(const std::string &name) SPDLOG_COND_NOEXCEPT;
 
 // Set global formatter. Each sink in each logger will get a clone of this object
-SPDLOG_API void set_formatter(std::unique_ptr<spdlog::formatter> formatter);
+SPDLOG_API void set_formatter(std::unique_ptr<spdlog::formatter> formatter) SPDLOG_COND_NOEXCEPT;
 
 // Set global format string.
 // example: spdlog::set_pattern("%Y-%m-%d %H:%M:%S.%e %l : %v");
 SPDLOG_API void set_pattern(std::string pattern,
-                            pattern_time_type time_type = pattern_time_type::local);
+                            pattern_time_type time_type = pattern_time_type::local) SPDLOG_COND_NOEXCEPT;
 
 // enable global backtrace support
-SPDLOG_API void enable_backtrace(size_t n_messages);
+SPDLOG_API void enable_backtrace(size_t n_messages) SPDLOG_COND_NOEXCEPT;
 
 // disable global backtrace support
-SPDLOG_API void disable_backtrace();
+SPDLOG_API void disable_backtrace() SPDLOG_COND_NOEXCEPT;
 
 // call dump backtrace on default logger
 SPDLOG_API void dump_backtrace(bool with_message = true);
 
 // Get global logging level
-SPDLOG_API level::level_enum get_level();
+SPDLOG_API level::level_enum get_level() SPDLOG_COND_NOEXCEPT;
 
 // Set global logging level
-SPDLOG_API void set_level(level::level_enum log_level);
+SPDLOG_API void set_level(level::level_enum log_level) SPDLOG_COND_NOEXCEPT;
 
 // Determine whether the default logger should log messages with a certain level
-SPDLOG_API bool should_log(level::level_enum lvl);
+SPDLOG_API bool should_log(level::level_enum lvl) SPDLOG_COND_NOEXCEPT;
 
 // Set global flush level
-SPDLOG_API void flush_on(level::level_enum log_level);
+SPDLOG_API void flush_on(level::level_enum log_level) SPDLOG_COND_NOEXCEPT;
 
 // Start/Restart a periodic flusher thread
 // Warning: Use only if all your loggers are thread safe!
 template <typename Rep, typename Period>
-inline void flush_every(std::chrono::duration<Rep, Period> interval) {
+inline void flush_every(std::chrono::duration<Rep, Period> interval) SPDLOG_COND_NOEXCEPT
+{
     details::registry::instance().flush_every(interval);
 }
 
 // Set global error handler
-SPDLOG_API void set_error_handler(void (*handler)(const std::string &msg));
+SPDLOG_API void set_error_handler(void (*handler)(const std::string &msg)) SPDLOG_COND_NOEXCEPT;
 
 // Register the given logger with the given name
-SPDLOG_API void register_logger(std::shared_ptr<logger> logger);
+SPDLOG_API void register_logger(std::shared_ptr<logger> logger) SPDLOG_COND_NOEXCEPT;
 
 // Apply a user defined function on all registered loggers
 // Example:
@@ -117,7 +111,7 @@ SPDLOG_API void drop_all();
 SPDLOG_API void shutdown();
 
 // Automatic registration of loggers when using spdlog::create() or spdlog::create_async
-SPDLOG_API void set_automatic_registration(bool automatic_registration);
+SPDLOG_API void set_automatic_registration(bool automatic_registration) SPDLOG_COND_NOEXCEPT;
 
 // API for using default logger (stdout_color_mt),
 // e.g: spdlog::info("Message {}", 1);
@@ -134,9 +128,9 @@ SPDLOG_API void set_automatic_registration(bool automatic_registration);
 // set_default_logger() *should not* be used concurrently with the default API.
 // e.g do not call set_default_logger() from one thread while calling spdlog::info() from another.
 
-SPDLOG_API std::shared_ptr<spdlog::logger> default_logger();
+SPDLOG_API std::shared_ptr<spdlog::logger> default_logger() SPDLOG_COND_NOEXCEPT;
 
-SPDLOG_API spdlog::logger *default_logger_raw();
+SPDLOG_API spdlog::logger *default_logger_raw() SPDLOG_COND_NOEXCEPT;
 
 SPDLOG_API void set_default_logger(std::shared_ptr<spdlog::logger> default_logger);
 
@@ -147,13 +141,13 @@ SPDLOG_API void set_default_logger(std::shared_ptr<spdlog::logger> default_logge
 // Example:
 //   auto mylogger = std::make_shared<spdlog::logger>("mylogger", ...);
 //   spdlog::apply_logger_env_levels(mylogger);
-SPDLOG_API void apply_logger_env_levels(std::shared_ptr<logger> logger);
+SPDLOG_API void apply_logger_env_levels(std::shared_ptr<logger> logger) SPDLOG_COND_NOEXCEPT;
 
 template <typename... Args>
 inline void log(source_loc source,
                 level::level_enum lvl,
                 format_string_t<Args...> fmt,
-                Args &&...args) {
+                Args &&...args) SPDLOG_COND_NOEXCEPT {
     default_logger_raw()->log(source, lvl, fmt, std::forward<Args>(args)...);
 }
 
@@ -201,6 +195,8 @@ template <typename T>
 inline void log(level::level_enum lvl, const T &msg) {
     default_logger_raw()->log(lvl, msg);
 }
+
+
 
 #ifndef SPDLOG_NO_STRUCTURED_SPDLOG
 inline void trace(std::initializer_list<Field> fields, string_view_t msg)
@@ -281,6 +277,7 @@ inline void critical(wformat_string_t<Args...> fmt, Args &&...args) {
 }
 #endif
 
+// log functions with no format string, just string
 template <typename T>
 inline void trace(const T &msg) {
     default_logger_raw()->trace(msg);
@@ -311,6 +308,38 @@ inline void critical(const T &msg) {
     default_logger_raw()->critical(msg);
 }
 
+#ifndef SPDLOG_NO_SOURCE_LOC
+
+// log functions with no format string, just string
+inline void trace(string_view_t msg, source_loc loc = source_loc::current()) { log(loc, level::trace, msg); }
+
+inline void debug(string_view_t msg, source_loc loc = source_loc::current()) { log(loc, level::debug, msg); }
+
+inline void info(string_view_t msg, source_loc loc = source_loc::current()) { log(loc, level::info, msg); }
+
+inline void warn(string_view_t msg, source_loc loc = source_loc::current()) { log(loc, spdlog::level::warn, msg); }
+
+inline void error(string_view_t msg, source_loc loc = source_loc::current()) { log(loc, level::err, msg); }
+
+inline void critical(string_view_t msg, source_loc loc = source_loc::current()) { log(loc, level::critical, msg); }
+
+#else
+
+// log functions with no format string, just string
+inline void trace(string_view_t msg) { log(level::trace, msg); }
+
+inline void debug(string_view_t msg) { log(level::debug, msg); }
+
+inline void info(string_view_t msg) { log(level::info, msg); }
+
+inline void warn(string_view_t msg) { log(level::warn, msg); }
+
+inline void error(string_view_t msg) { log(level::err, msg); }
+
+inline void critical(string_view_t msg) { log(level::critical, msg); }
+
+#endif
+
 }  // namespace spdlog
 
 //
@@ -327,12 +356,15 @@ inline void critical(const T &msg) {
 //
 
 #ifndef SPDLOG_NO_SOURCE_LOC
-    #define SPDLOG_LOGGER_CALL(logger, level, ...) \
-        (logger)->log(spdlog::source_loc{__FILE__, __LINE__, SPDLOG_FUNCTION}, level, __VA_ARGS__)
+    #define SPDLOG_SOURCE_LOC \
+        spdlog::source_loc{__FILE__, __LINE__, SPDLOG_FUNCTION}
 #else
-    #define SPDLOG_LOGGER_CALL(logger, level, ...) \
-        (logger)->log(spdlog::source_loc{}, level, __VA_ARGS__)
+    #define SPDLOG_SOURCE_LOC \
+        spdlog::source_loc{}
 #endif
+
+#define SPDLOG_LOGGER_CALL(logger, level, ...) \
+    (logger)->log(SPDLOG_SOURCE_LOC, level, __VA_ARGS__)
 
 #if SPDLOG_ACTIVE_LEVEL <= SPDLOG_LEVEL_TRACE
     #define SPDLOG_LOGGER_TRACE(logger, ...) \

@@ -8,7 +8,6 @@
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 #include <libxml/xmlerror.h>
-#include <libxml/xmlreader.h>
 #include <libxml/xmlsave.h>
 #include "fuzz.h"
 
@@ -21,8 +20,6 @@ LLVMFuzzerInitialize(int *argc ATTRIBUTE_UNUSED,
     xmlInitializeCatalog();
     xmlCatalogSetDefaults(XML_CATA_ALLOW_NONE);
 #endif
-    xmlSetGenericErrorFunc(NULL, xmlFuzzErrorFunc);
-    xmlSetExternalEntityLoader(xmlFuzzEntityLoader);
 
     return 0;
 }
@@ -56,6 +53,8 @@ LLVMFuzzerTestOneInput(const char *data, size_t size) {
     xmlFuzzMemSetLimit(maxAlloc);
     ctxt = xmlNewParserCtxt();
     if (ctxt != NULL) {
+        xmlCtxtSetErrorHandler(ctxt, xmlFuzzSErrorFunc, NULL);
+        xmlCtxtSetResourceLoader(ctxt, xmlFuzzResourceLoader, NULL);
         doc = xmlCtxtReadMemory(ctxt, docBuffer, docSize, docUrl, NULL, opts);
         xmlFuzzCheckMallocFailure("xmlCtxtReadMemory",
                                   doc == NULL &&
@@ -95,6 +94,8 @@ LLVMFuzzerTestOneInput(const char *data, size_t size) {
         xmlFuzzMemSetLimit(maxAlloc);
         ctxt = xmlCreatePushParserCtxt(NULL, NULL, NULL, 0, docUrl);
         if (ctxt != NULL) {
+            xmlCtxtSetErrorHandler(ctxt, xmlFuzzSErrorFunc, NULL);
+            xmlCtxtSetResourceLoader(ctxt, xmlFuzzResourceLoader, NULL);
             xmlCtxtUseOptions(ctxt, opts);
 
             for (consumed = 0; consumed < docSize; consumed += chunkSize) {
@@ -109,36 +110,6 @@ LLVMFuzzerTestOneInput(const char *data, size_t size) {
                                       ctxt->errNo == XML_ERR_NO_MEMORY);
             xmlFreeDoc(ctxt->myDoc);
             xmlFreeParserCtxt(ctxt);
-        }
-    }
-#endif
-
-    /* Reader */
-
-#ifdef LIBXML_READER_ENABLED
-    {
-        xmlTextReaderPtr reader;
-        const xmlError *error;
-        int j;
-
-        xmlFuzzMemSetLimit(maxAlloc);
-        reader = xmlReaderForMemory(docBuffer, docSize, NULL, NULL, opts);
-        if (reader != NULL) {
-            while (xmlTextReaderRead(reader) == 1) {
-                if (xmlTextReaderNodeType(reader) == XML_ELEMENT_NODE) {
-                    int i, n = xmlTextReaderAttributeCount(reader);
-                    for (i=0; i<n; i++) {
-                        xmlTextReaderMoveToAttributeNo(reader, i);
-                        while (xmlTextReaderReadAttributeValue(reader) == 1);
-                    }
-                }
-            }
-            for (j = 0; j < 10; j++)
-                xmlTextReaderRead(reader);
-            error = xmlTextReaderGetLastError(reader);
-            xmlFuzzCheckMallocFailure("xmlTextReaderRead",
-                                      error->code == XML_ERR_NO_MEMORY);
-            xmlFreeTextReader(reader);
         }
     }
 #endif

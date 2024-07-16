@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -531,7 +531,7 @@ fz_recompress_image_as_flate(fz_context *ctx, fz_pixmap *pix, const char *qualit
 	fz_output *out = NULL;
 	fz_output *out2 = NULL;
 	int h = pix->h;
-	size_t n = pix->w * pix->n;
+	size_t n = (size_t) pix->w * pix->n;
 	const unsigned char *samp = pix->samples;
 	ptrdiff_t str = pix->stride;
 	int q = fz_atoi(quality);
@@ -656,6 +656,68 @@ fz_recompress_image_as_fax(fz_context *ctx, fz_pixmap *pix)
 	return cbuf;
 }
 
+static fz_compressed_buffer *
+fz_recompress_image_as_jbig2(fz_context *ctx, fz_pixmap *pix)
+{
+	/* FIXME: Should get default colorspaces from the doc! */
+	fz_default_colorspaces *defcs = fz_new_default_colorspaces(ctx);
+	fz_compressed_buffer *cbuf = NULL;
+	fz_halftone *ht = NULL;
+	fz_bitmap *bmp = NULL;
+	fz_jbig2e *jbig2e = NULL;
+	fz_buffer *globals = NULL;
+
+	fz_var(ht);
+	fz_var(bmp);
+	fz_var(cbuf);
+	fz_var(globals);
+	fz_var(jbig2e);
+
+	fz_keep_pixmap(ctx, pix);
+	fz_try(ctx)
+	{
+
+		/* Convert to alphaless grey */
+		if (pix->n != 1)
+		{
+			fz_pixmap *pix2 = fz_convert_pixmap(ctx, pix, fz_device_gray(ctx), NULL, defcs, fz_default_color_params, 0);
+
+			fz_drop_pixmap(ctx, pix);
+			pix = pix2;
+		}
+
+		/* Convert to a bitmap */
+		ht = fz_default_halftone(ctx, 1);
+
+		bmp = fz_new_bitmap_from_pixmap(ctx, pix, ht);
+
+		cbuf = fz_new_compressed_buffer(ctx);
+		jbig2e = fz_new_jbig2e(ctx);
+		fz_jbig2e_feed_bitmap(ctx, jbig2e, bmp);
+		globals = fz_jbig2e_pages_complete(ctx, jbig2e);
+		cbuf->params.u.jbig2.globals = fz_load_jbig2_globals(ctx, globals);
+		cbuf->buffer = fz_jbig2e_get_page(ctx, jbig2e);
+		cbuf->params.type = FZ_IMAGE_JBIG2;
+		cbuf->params.u.jbig2.embedded = 1;
+	}
+	fz_always(ctx)
+	{
+		fz_drop_bitmap(ctx, bmp);
+		fz_drop_halftone(ctx, ht);
+		fz_drop_pixmap(ctx, pix);
+		fz_drop_jbig2e(ctx, jbig2e);
+		fz_drop_buffer(ctx, globals);
+		fz_drop_default_colorspaces(ctx, defcs);
+	}
+	fz_catch(ctx)
+	{
+		fz_drop_compressed_buffer(ctx, cbuf);
+		fz_rethrow(ctx);
+	}
+
+	return cbuf;
+}
+
 static int method_from_fmt(int fmt)
 {
 	switch (fmt)
@@ -666,6 +728,8 @@ static int method_from_fmt(int fmt)
 		return FZ_RECOMPRESS_J2K;
 	case FZ_IMAGE_FAX:
 		return FZ_RECOMPRESS_FAX;
+	case FZ_IMAGE_JBIG2:
+		return FZ_RECOMPRESS_JBIG2;
 	}
 	return FZ_RECOMPRESS_LOSSLESS;
 }
@@ -688,6 +752,20 @@ recompress_image(fz_context *ctx, fz_pixmap *pix, int type, int fmt, int method,
 		cbuf = fz_recompress_image_as_j2k(ctx, pix, quality);
 	if (method == FZ_RECOMPRESS_JPEG)
 		cbuf = fz_recompress_image_as_jpeg(ctx, pix, quality, &cs);
+	if (method == FZ_RECOMPRESS_JBIG2)
+	{
+		if (fz_jbig2e_enabled(ctx))
+		{
+			cbuf = fz_recompress_image_as_jbig2(ctx, pix);
+			if (cbuf)
+			{
+				bpc = 1;
+				cs = fz_device_gray(ctx);
+			}
+		}
+		else
+			method = FZ_RECOMPRESS_FAX;
+	}
 	if (method == FZ_RECOMPRESS_FAX)
 	{
 		cbuf = fz_recompress_image_as_fax(ctx, pix);
@@ -720,6 +798,7 @@ do_image_rewrite(fz_context *ctx, void *opaque, fz_image **image, fz_matrix ctm,
 	image_type type;
 	int fmt = fz_compressed_image_type(ctx, *image);
 	int lossy = fmt_is_lossy(fmt);
+	size_t orig_len = pdf_dict_get_int64(ctx, im_obj, PDF_NAME(Length));
 
 	/* FIXME: We don't recompress im_obj->mask! */
 
@@ -834,8 +913,13 @@ do_image_rewrite(fz_context *ctx, void *opaque, fz_image **image, fz_matrix ctm,
 
 		if (newimg)
 		{
+			/* fz_image_size gives us the uncompressed size for losslessly compressed images
+			 * as the image holds the uncompressed buffer. But orig_len will be 0 for inline
+			 * images. So we have to combine the two. */
 			size_t oldsize = fz_image_size(ctx, *image);
 			size_t newsize = fz_image_size(ctx, newimg);
+			if (orig_len != 0)
+				oldsize = orig_len;
 			if (oldsize <= newsize)
 			{
 				/* Old one was smaller! Don't mess with it. */
@@ -935,7 +1019,12 @@ void pdf_rewrite_images(fz_context *ctx, pdf_document *doc, pdf_image_rewriter_o
 		opts->gray_lossless_image_subsample_threshold == 0 &&
 		opts->gray_lossy_image_subsample_threshold == 0 &&
 		opts->color_lossless_image_subsample_threshold == 0 &&
-		opts->color_lossy_image_subsample_threshold == 0)
+		opts->color_lossy_image_subsample_threshold == 0 &&
+		opts->bitonal_image_recompress_method == FZ_RECOMPRESS_NEVER &&
+		opts->color_lossy_image_recompress_method == FZ_RECOMPRESS_NEVER &&
+		opts->color_lossless_image_recompress_method == FZ_RECOMPRESS_NEVER &&
+		opts->gray_lossy_image_recompress_method == FZ_RECOMPRESS_NEVER &&
+		opts->gray_lossless_image_recompress_method == FZ_RECOMPRESS_NEVER)
 		return;
 
 	/* Pass 1: Gather information */

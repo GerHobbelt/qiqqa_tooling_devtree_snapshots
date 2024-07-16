@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -165,7 +165,7 @@ svg_open_document_with_buffer(fz_context *ctx, fz_buffer *buf, const char *base_
 }
 
 static fz_document *
-svg_open_document(fz_context *ctx, fz_stream *file, fz_stream *accel, fz_archive *zip)
+svg_open_document(fz_context *ctx, const fz_document_handler *handler, fz_stream *file, fz_stream *accel, fz_archive *zip)
 {
 	fz_buffer *buf = fz_read_all(ctx, file, 0);
 	fz_document *doc = NULL;
@@ -227,7 +227,7 @@ fz_new_image_from_svg(fz_context *ctx, fz_buffer *buf, const char *base_uri, fz_
 {
 	fz_display_list *list;
 	fz_image *image = NULL;
-	float w, h;
+	float w = 0, h = 0;
 
 	list = fz_new_display_list_from_svg(ctx, buf, base_uri, zip, &w, &h);
 	fz_try(ctx)
@@ -244,7 +244,7 @@ fz_new_image_from_svg_xml(fz_context *ctx, fz_xml_doc *xmldoc, fz_xml *xml, cons
 {
 	fz_display_list *list;
 	fz_image *image = NULL;
-	float w, h;
+	float w = 0, h = 0;
 
 	list = fz_new_display_list_from_svg_xml(ctx, xmldoc, xml, base_uri, zip, &w, &h);
 	fz_try(ctx)
@@ -269,7 +269,7 @@ static const char *svg_mimetypes[] =
 };
 
 static int
-svg_recognize_doc_content(fz_context *ctx, fz_stream *stm, fz_archive *dir)
+svg_recognize_doc_content(fz_context *ctx, const fz_document_handler *handler, fz_stream *stm, fz_archive *dir)
 {
 	// A standalone SVG document is an XML document with an <svg> root element.
 	//

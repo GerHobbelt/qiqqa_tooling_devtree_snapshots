@@ -10,9 +10,7 @@
 
 
 // Include automatically generated configuration file if running autoconf.
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include "winutils.h"
 
@@ -27,16 +25,14 @@ namespace winutils {
 // with CharT(), which is allowed by the C++ standard.
 
 std::wstring Utf8ToUtf16(const char* utf8Str) {
-  const auto sizeWithNull = MultiByteToWideChar(
-    CP_UTF8, 0, utf8Str, -1, nullptr, 0);
+  const auto sizeWithNull = MultiByteToWideChar(CP_UTF8, 0, utf8Str, -1, nullptr, 0);
   if (sizeWithNull <= 0) {
     return {};
   }
 
   std::wstring result(sizeWithNull - 1, 0);
 
-  if (!MultiByteToWideChar(
-      CP_UTF8, 0, utf8Str, -1, &result[0], sizeWithNull)) {
+  if (!MultiByteToWideChar(CP_UTF8, 0, utf8Str, -1, &result[0], sizeWithNull)) {
     return {};
   }
 
@@ -44,21 +40,28 @@ std::wstring Utf8ToUtf16(const char* utf8Str) {
 }
 
 std::string Utf16ToUtf8(const wchar_t* utf16Str) {
-  const auto sizeWithNull = WideCharToMultiByte(
-    CP_UTF8, 0, utf16Str, -1, nullptr, 0, nullptr, nullptr);
+  const auto sizeWithNull = WideCharToMultiByte(CP_UTF8, 0, utf16Str, -1, nullptr, 0, nullptr, nullptr);
   if (sizeWithNull <= 0) {
     return {};
   }
 
   std::string result(sizeWithNull - 1, 0);
 
-  if (!WideCharToMultiByte(
-      CP_UTF8, 0, utf16Str, -1, &result[0], sizeWithNull,
-      nullptr, nullptr)) {
+  if (!WideCharToMultiByte(CP_UTF8, 0, utf16Str, -1, &result[0], sizeWithNull, nullptr, nullptr)) {
     return {};
   }
 
   return result;
+}
+
+// convert input name from ANSI encoding to utf-8
+std::string AnsiToUtf8(const char *AnsiStr) {
+  auto str16_len = MultiByteToWideChar(CP_ACP, 0, AnsiStr, -1, nullptr, 0);
+  wchar_t *uni16_str = new WCHAR[str16_len];
+  str16_len = MultiByteToWideChar(CP_ACP, 0, AnsiStr, -1, uni16_str, str16_len);
+  std::string utf8_str = Utf16ToUtf8(uni16_str);
+  delete[] uni16_str;
+  return utf8_str;
 }
 
 } // namespace winutils

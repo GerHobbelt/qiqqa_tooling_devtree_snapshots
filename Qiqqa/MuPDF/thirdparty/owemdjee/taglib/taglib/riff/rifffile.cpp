@@ -49,7 +49,7 @@ public:
   {
   }
 
-  const Endianness endianness;
+  Endianness endianness;
 
   unsigned int size { 0 };
   offset_t sizeOffset { 0 };
@@ -281,7 +281,7 @@ void RIFF::File::removeChunk(const ByteVector &name)
 
 void RIFF::File::read()
 {
-  const bool bigEndian = (d->endianness == BigEndian);
+  const bool bigEndian = d->endianness == BigEndian;
 
   offset_t offset = tell();
 
@@ -297,21 +297,21 @@ void RIFF::File::read()
   while(offset + 8 <= length()) {
 
     seek(offset);
-    const ByteVector   chunkName = readBlock(4);
+    const ByteVector   chnkName = readBlock(4);
     const unsigned int chunkSize = readBlock(4).toUInt(bigEndian);
 
-    if(!isValidChunkName(chunkName)) {
-      debug("RIFF::File::read() -- Chunk '" + chunkName + "' has invalid ID");
+    if(!isValidChunkName(chnkName)) {
+      debug("RIFF::File::read() -- Chunk '" + chnkName + "' has invalid ID");
       break;
     }
 
     if(static_cast<long long>(offset) + 8 + chunkSize > length()) {
-      debug("RIFF::File::read() -- Chunk '" + chunkName + "' has invalid size (larger than the file size)");
+      debug("RIFF::File::read() -- Chunk '" + chnkName + "' has invalid size (larger than the file size)");
       break;
     }
 
     Chunk chunk;
-    chunk.name    = chunkName;
+    chunk.name    = chnkName;
     chunk.size    = chunkSize;
     chunk.offset  = offset + 8;
     chunk.padding = 0;
@@ -322,13 +322,12 @@ void RIFF::File::read()
 
     if(offset & 1) {
       seek(offset);
-      const ByteVector iByte = readBlock(1);
-      if(iByte.size() == 1) {
+      if(const ByteVector iByte = readBlock(1); iByte.size() == 1) {
         bool skipPadding = iByte[0] == '\0';
         if(!skipPadding) {
           // Padding byte is not zero, check if it is good to ignore it
-          const ByteVector fourCcAfterPadding = readBlock(4);
-          if(isValidChunkName(fourCcAfterPadding)) {
+          if(const ByteVector fourCcAfterPadding = readBlock(4);
+             isValidChunkName(fourCcAfterPadding)) {
             // Use the padding, it is followed by a valid chunk name.
             skipPadding = true;
           }
@@ -361,6 +360,9 @@ void RIFF::File::writeChunk(const ByteVector &name, const ByteVector &data,
 
 void RIFF::File::updateGlobalSize()
 {
+  if(d->chunks.empty())
+    return;
+
   const Chunk first = d->chunks.front();
   const Chunk last  = d->chunks.back();
   d->size = static_cast<unsigned int>(last.offset + last.size + last.padding - first.offset + 12);

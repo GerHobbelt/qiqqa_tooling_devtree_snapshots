@@ -1,4 +1,4 @@
-﻿// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -163,7 +163,8 @@ static void xml_print_xml(struct fmtbuf* out, fz_xml *item, int level)
 	/* Skip over the DOC object at the top. */
 	if (item->up == NULL)
 	{
-		xml_print_xml(out, item->down, level);
+		for (fz_xml *child = fz_xml_down(item); child; child = child->u.node.next)
+			xml_print_xml(out, child, level + 1);
 		return;
 	}
 
@@ -383,11 +384,14 @@ fz_xml *fz_xml_find_next_match(fz_xml *item, const char *tag, const char *att, c
 	if (item && FZ_DOCUMENT_ITEM(item))
 		item = item->down;
 
-	do
+	if (item != NULL)
 	{
-		item = tag ? fz_xml_find_next(item, tag) : item->u.node.next;
+		do
+		{
+			item = tag ? fz_xml_find_next(item, tag) : item->u.node.next;
+		}
+		while (item != NULL && !fz_xml_att_eq(item, att, match));
 	}
-	while (item != NULL && !fz_xml_att_eq(item, att, match));
 
 	return item;
 }
@@ -1288,6 +1292,15 @@ static void dealloc_gumbo(void *ctx, void *ptr)
 	/* nothing */
 }
 
+static void* realloc_gumbo(void* ctx, void *ptr, size_t new_num_bytes, size_t old_num_bytes)
+{
+	struct mem_gumbo* mem = ctx;
+	void *p = fz_pool_alloc(mem->ctx, mem->pool, new_num_bytes);
+	memcpy(p, ptr, old_num_bytes);
+	/* no free: see dealloc_jumbo() */
+	return p;
+}
+
 static void xml_from_gumbo(fz_context *ctx, struct parser *parser, GumboNode *node)
 {
 	unsigned int i;
@@ -1391,6 +1404,7 @@ fz_parse_xml_from_html5(fz_context *ctx, fz_buffer *buf, int dont_throw_on_error
 		memset(&opts, 0, sizeof opts);
 		opts.allocator = alloc_gumbo;
 		opts.deallocator = dealloc_gumbo;
+		opts.reallocator = realloc_gumbo;
 		opts.userdata = &mem;
 		opts.tab_stop = 8;
 		opts.stop_on_first_error = 0;

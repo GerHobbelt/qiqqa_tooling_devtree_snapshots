@@ -72,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -121,7 +121,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup>
@@ -151,14 +151,26 @@
     <ProjectReference Include="bin2coff.vcxproj">
       <Project>{bfe316b3-bd90-433a-a20d-c73975f1caa7}</Project>
     </ProjectReference>
+    <ProjectReference Include="bin2cpp.vcxproj">
+      <Project>{00811970-815b-4f64-bc9d-2190785a9321}</Project>
+    </ProjectReference>
     <ProjectReference Include="brotli.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ffb3b08f}</Project>
     </ProjectReference>
     <ProjectReference Include="bulktest.vcxproj">
       <Project>{8156c20c-dd56-4200-b4a6-40c056eb0a45}</Project>
     </ProjectReference>
+    <ProjectReference Include="cffdump.vcxproj">
+      <Project>{1091603e-8255-45e7-87ab-20b712785d85}</Project>
+    </ProjectReference>
     <ProjectReference Include="clipp_demos.vcxproj">
       <Project>{00112979-815b-4f64-bc9d-219078aad35a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="cmph-hasher.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff6b99fd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="cmph-hasher_tests.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518334b99fd}</Project>
     </ProjectReference>
     <ProjectReference Include="curl.vcxproj">
       <Project>{00111979-815b-4f64-bc9d-219078b1f3aa}</Project>
@@ -190,11 +202,11 @@
     <ProjectReference Include="libargparse.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ffaece6d}</Project>
     </ProjectReference>
+    <ProjectReference Include="libarmadillo.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff7a1a29}</Project>
+    </ProjectReference>
     <ProjectReference Include="libassert.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518fffea6c7}</Project>
-    </ProjectReference>
-    <ProjectReference Include="libassert_tests.vcxproj">
-      <Project>{a60d8644-5a1c-4d29-8970-7518ffab2cb1}</Project>
     </ProjectReference>
     <ProjectReference Include="libbase58x.vcxproj">
       <Project>{0501bedf-3191-46a9-9997-288466675b82}</Project>
@@ -225,9 +237,6 @@
     </ProjectReference>
     <ProjectReference Include="libdelegate.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff239b91}</Project>
-    </ProjectReference>
-    <ProjectReference Include="libdiagnostics.vcxproj">
-      <Project>{a60d8644-5a1c-4d29-8970-7518ffa3e936}</Project>
     </ProjectReference>
     <ProjectReference Include="libdlfcn-win32-test-dladdr.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff2ce62c}</Project>
@@ -295,6 +304,9 @@
     <ProjectReference Include="libjpeg_default_handlers.vcxproj">
       <Project>{5f615f91-dff8-4f05-bf48-1222b72071a8}</Project>
     </ProjectReference>
+    <ProjectReference Include="libmcmc.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffc2f503}</Project>
+    </ProjectReference>
     <ProjectReference Include="libmuhelpers.vcxproj">
       <Project>{fa8ade21-fc8a-47e0-87e4-dce88099485a}</Project>
     </ProjectReference>
@@ -307,11 +319,14 @@
     <ProjectReference Include="libmupdf_default_handlers.vcxproj">
       <Project>{5f615f91-dff8-4f05-bf48-1222b7d86519}</Project>
     </ProjectReference>
+    <ProjectReference Include="libmutool.vcxproj">
+      <Project>{fa8ade21-fc8a-47e0-87e4-dce8808bfc9b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libmutool_redux.vcxproj">
+      <Project>{4f61960e-4ac9-489a-8d60-5302dd82dcab}</Project>
+    </ProjectReference>
     <ProjectReference Include="libnanosvg.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-751bff971987}</Project>
-    </ProjectReference>
-    <ProjectReference Include="libparameters.vcxproj">
-      <Project>{a60d8644-5a1c-4d29-8970-7518ffba076f}</Project>
     </ProjectReference>
     <ProjectReference Include="libplf_nanotimer.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ffe7ea82}</Project>
@@ -436,6 +451,9 @@
     <ProjectReference Include="mutest_throw_without_try_catch.vcxproj">
       <Project>{8156c20c-dd56-4200-b4a6-40c0560223be}</Project>
     </ProjectReference>
+    <ProjectReference Include="mutool-redux.vcxproj">
+      <Project>{fa4cf35d-25c0-472e-aa2f-a28b4a60d302}</Project>
+    </ProjectReference>
     <ProjectReference Include="mutool.vcxproj">
       <Project>{00811970-815b-4f64-bc9d-219078b1f3aa}</Project>
     </ProjectReference>
@@ -531,6 +549,9 @@
     </ProjectReference>
     <ProjectReference Include="xtractprotos.vcxproj">
       <Project>{ca0bda38-89b9-4703-a77d-8049ac6afb0c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="__build_target_tesseract.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-101000000002}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

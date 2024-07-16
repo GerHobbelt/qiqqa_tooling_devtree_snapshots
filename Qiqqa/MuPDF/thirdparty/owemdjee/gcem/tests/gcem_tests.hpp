@@ -1,6 +1,6 @@
 /*################################################################################
   ##
-  ##   Copyright (C) 2016-2023 Keith O'Hara
+  ##   Copyright (C) 2016-2024 Keith O'Hara
   ##
   ##   This file is part of the GCE-Math C++ library.
   ##
@@ -24,6 +24,7 @@
 #include <iomanip>
 #include <string>
 #include <functional>
+#include <cstdint> // INT64_MIN and INT64_MAX
 
 #include "gcem.hpp"
 

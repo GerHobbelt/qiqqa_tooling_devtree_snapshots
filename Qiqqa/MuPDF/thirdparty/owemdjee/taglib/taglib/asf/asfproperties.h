@@ -38,7 +38,7 @@ namespace TagLib {
     public:
 
       /*!
-       * Audio codec types can be used in ASF file.
+       * Audio codec types which can be used in ASF files.
        */
       enum Codec
       {
@@ -154,6 +154,7 @@ namespace TagLib {
 
     private:
       class PropertiesPrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<PropertiesPrivate> d;
     };
   }  // namespace ASF

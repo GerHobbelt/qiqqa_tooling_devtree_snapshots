@@ -129,9 +129,11 @@ struct RecodeNode {
     ASSERT_HOST(src.dawgs == nullptr);
   }
   RecodeNode &operator=(const RecodeNode &src) {
-    delete dawgs;
-    memcpy(this, &src, sizeof(src));
-    src.dawgs = nullptr;
+    if (this != &src) {
+      delete dawgs;
+      memcpy(this, &src, sizeof(src));
+      src.dawgs = nullptr;
+    }
     return *this;
   }
   ~RecodeNode() {
@@ -193,7 +195,8 @@ public:
               double worst_dict_cert, const UNICHARSET *charset);
 
   void DecodeSecondaryBeams(const NetworkIO &output, double dict_ratio, double cert_offset,
-                            double worst_dict_cert, const UNICHARSET *charset);
+                            double worst_dict_cert, const UNICHARSET *charset,
+                            int lstm_choice_mode);
 
   // Returns the best path as labels/scores/xcoords similar to simple CTC.
   void ExtractBestPathAsLabels(std::vector<int> *labels, std::vector<int> *xcoords) const;
@@ -205,7 +208,8 @@ public:
 
   // Returns the best path as a set of WERD_RES.
   void ExtractBestPathAsWords(const TBOX &line_box, float scale_factor, 
-                              const UNICHARSET *unicharset, PointerVector<WERD_RES> *words);
+                              const UNICHARSET *unicharset, PointerVector<WERD_RES> *words,
+                              int lstm_choice_mode);
 
   // Generates debug output of the content of the beams after a Decode.
   void DebugBeams(const UNICHARSET *unicharset) const;
@@ -242,7 +246,7 @@ public:
   // of certainty that will be returned by ExtractBestPathAsUnicharIds.
   // Supposedly on a uniform scale that can be compared across languages and
   // engines.
-  static constexpr float kMinCertainty = -20.0f;   
+  static constexpr float kMinCertainty = -20.0f;
   // Number of different code lengths for which we have a separate beam.
   static const int kNumLengths = RecodedCharID::kMaxCodeLen + 1;
   // Total number of beams: dawg/nodawg * number of NodeContinuation * number

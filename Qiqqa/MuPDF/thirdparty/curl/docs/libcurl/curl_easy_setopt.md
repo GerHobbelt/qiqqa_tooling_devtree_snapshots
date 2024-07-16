@@ -13,6 +13,8 @@ See-also:
   - curl_easy_option_next (3)
   - curl_easy_reset (3)
   - curl_multi_setopt (3)
+Protocol:
+  - All
 ---
 
 # NAME
@@ -414,6 +416,10 @@ Idle time before sending keep-alive. See CURLOPT_TCP_KEEPIDLE(3)
 ## CURLOPT_TCP_KEEPINTVL
 
 Interval between keep-alive probes. See CURLOPT_TCP_KEEPINTVL(3)
+
+## CURLOPT_TCP_KEEPCNT
+
+Maximum number of keep-alive probes. See CURLOPT_TCP_KEEPCNT(3)
 
 ## CURLOPT_UNIX_SOCKET_PATH
 
@@ -1358,6 +1364,12 @@ int main(void)
   }
 }
 ~~~
+
+# ENCRYPTED CLIENT HELLO OPTIONS
+
+## CURLOPT_ECH
+
+Set the configuration for ECH. See CURLOPT_ECH(3)
 
 # AVAILABILITY
 

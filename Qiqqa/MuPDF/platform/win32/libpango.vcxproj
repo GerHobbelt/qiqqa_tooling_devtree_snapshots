@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libpango</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FFFE9919}</ProjectGuid>
-    <RootNamespace>libpango</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -290,6 +288,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/pango/pango/pangoft2-render.c" />
     <ClCompile Include="../../thirdparty/owemdjee/pango/pango/pangoft2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/pango/pango/pangowin32-dwrite-fontmap.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/pango/pango/pangowin32-dwrite-utils-legacy.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/pango/pango/pangowin32-fontcache.c" />
     <ClCompile Include="../../thirdparty/owemdjee/pango/pango/pangowin32-fontmap.c" />
     <ClCompile Include="../../thirdparty/owemdjee/pango/pango/pangowin32.c" />
@@ -411,6 +410,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/pango/pango/pangoft2-private.h" />
     <ClInclude Include="../../thirdparty/owemdjee/pango/pango/pangoft2.h" />
     <ClInclude Include="../../thirdparty/owemdjee/pango/pango/pangowin32-private.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/pango/pango/pangowin32-private.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/pango/pango/pangowin32.h" />
     <ClInclude Include="../../thirdparty/owemdjee/pango/pango/pangoxft-private.h" />
     <ClInclude Include="../../thirdparty/owemdjee/pango/pango/pangoxft-render.h" />
@@ -482,7 +482,7 @@
     <Text Include="../../thirdparty/owemdjee/pango/CODING_STYLE.md" />
     <Text Include="../../thirdparty/owemdjee/pango/NEWS" />
     <Text Include="../../thirdparty/owemdjee/pango/README.md" />
-    <Text Include="../../thirdparty/owemdjee/pango/README.win32" />
+    <Text Include="../../thirdparty/owemdjee/pango/README.win32.md" />
     <Text Include="../../thirdparty/owemdjee/pango/build-aux/meson/dist-docs.py" />
     <Text Include="../../thirdparty/owemdjee/pango/docs/baseline-shift.svg" />
     <Text Include="../../thirdparty/owemdjee/pango/docs/caret-metrics.svg" />
@@ -524,7 +524,6 @@
     <Text Include="../../thirdparty/owemdjee/pango/tests/fonts/README" />
     <Text Include="../../thirdparty/owemdjee/pango/tests/fonts/fonts.conf" />
     <Text Include="../../thirdparty/owemdjee/pango/tests/gen-all-unicode.py" />
-    <Text Include="../../thirdparty/owemdjee/pango/tests/gen-installed-test.py" />
     <Text Include="../../thirdparty/owemdjee/pango/tests/itemize/one.items" />
     <Text Include="../../thirdparty/owemdjee/pango/tests/itemize/three.items" />
     <Text Include="../../thirdparty/owemdjee/pango/tests/itemize/two.items" />

@@ -20,9 +20,7 @@
 #define TESSERACT_CLASSIFY_CLASSIFY_H_
 
 // Include automatically generated configuration file if running autoconf.
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #if DISABLED_LEGACY_ENGINE
 
@@ -245,8 +243,8 @@ public:
   void DisplayAdaptedChar(TBLOB *blob, INT_CLASS_STRUCT *int_class);
   bool AdaptableWord(WERD_RES *word);
   void EndAdaptiveClassifier();
-  void SettupPass1();
-  void SettupPass2();
+  void SetupPass1();
+  void SetupPass2();
   void AdaptiveClassifier(TBLOB *Blob, BLOB_CHOICE_LIST *Choices);
   void ClassifyAsNoise(ADAPT_RESULTS *Results);
   void ResetAdaptiveClassifierInternal();

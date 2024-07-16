@@ -4,6 +4,7 @@
 
 | **Name** | **Linux** | **Mac** | **Windows** | **License** | **Description** |
 |:---------|:----------|:--------|:------------|:------------|:----------------|
+| [Scribe OCR](https://github.com/scribeocr/scribeocr) | X         | X       | X           | AGPL-3.0 license      | Scribe OCR is a free and open-source web application for recognizing text, proofreading OCR data, and creating fully-digitized documents. Live site at [scribeocr.com](https://scribeocr.com/). |
 | [Rescribe](https://rescribe.xyz/rescribe) | X         | X       | X           | GPL v3      | Easy to use Tesseract frontend with no install needed, including PDF processing, and Google Book downloading, and extra pre- and post-processing capabilities. |
 | [normcap](https://github.com/dynobo/normcap) | X         | X       | X           | GPL v3      | OCR powered screen-capture tool to capture information instead of images. |
 | [gImageReader](https://github.com/manisandro/gImageReader) | X         |         | X           | GPL v3      | A graphical GTK frontend to tesseract-ocr |
@@ -115,7 +116,7 @@
   1. [The ISRI Analytic Tools](https://github.com/eddieantonio/isri-ocr-evaluation-tools) consist of 17 tools for measuring the performance of and experimenting with OCR output.
   1. [Indic Messenger](https://indic-ocr.github.io/indicmessenger) A Facebook chat bot which can OCR images containing Indian/English text and transliterate it to other Indian scripts. 
   1. [LibreOCR](https://indic-ocr.github.io/LibreOCR/) A [LibreOffice](http://www.libreoffice.org) extension which can convert an image to OCT and open in the Writer application. 
-  1. [hertzg/tesseract-server](https://github.com/hertzg/tesseract-server/) A lightweight, docker based, mutli-arch, stateless JSON HTTP API service for tesseract.
+  1. [hertzg/tesseract-server](https://github.com/hertzg/tesseract-server/) A lightweight, docker based, multi-arch, stateless JSON HTTP API service for tesseract.
 
 ### IMPACT related
 

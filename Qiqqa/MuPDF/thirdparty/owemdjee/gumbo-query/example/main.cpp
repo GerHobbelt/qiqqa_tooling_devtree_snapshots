@@ -2,7 +2,9 @@
 #include <Selection.h>
 #include <Node.h>
 
-void test_parser() {
+#include "monolithic_examples.h"
+
+static void test_parser() {
 	std::string page("<h1><a>wrong link</a><a class=\"special\"\\>some link</a></h1>");
 	CDocument doc;
 	doc.parse(page.c_str());
@@ -14,7 +16,7 @@ void test_parser() {
 	printf("Node: %s\n", content.c_str());
 }
 
-void test_html() {
+static void test_html() {
 	std::string page = "<html><div><span>1\n</span>2\n</div></html>";
 	CDocument doc;
 	doc.parse(page.c_str());
@@ -23,7 +25,7 @@ void test_html() {
 	printf("Node: #%s#\n", content.c_str());
 }
 
-void test_escape() {
+static void test_escape() {
     std::string page = "<html><div><span id=\"that's\">1\n</span>2\n</div></html>";
     CDocument doc;
     doc.parse(page.c_str());
@@ -33,10 +35,10 @@ void test_escape() {
 }
 
 #if defined(BUILD_MONOLITHIC)
-#define main      gumbo_query_test_main
+#define main		gumboquery_example_main
 #endif
 
-int main() {
+int main(void) {
 	test_parser();
 	test_html();
     test_escape();

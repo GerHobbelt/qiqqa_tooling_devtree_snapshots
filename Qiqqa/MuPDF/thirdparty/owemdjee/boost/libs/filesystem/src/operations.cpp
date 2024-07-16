@@ -20,15 +20,15 @@
 #include <boost/filesystem/exception.hpp>
 #include <boost/filesystem/directory.hpp>
 #include <boost/system/error_code.hpp>
-#include <boost/smart_ptr/scoped_ptr.hpp>
-#include <boost/smart_ptr/scoped_array.hpp>
 #include <boost/detail/workaround.hpp>
 #include <boost/core/bit.hpp>
 #include <boost/cstdint.hpp>
 #include <boost/assert.hpp>
 #include <new> // std::bad_alloc, std::nothrow
 #include <limits>
+#include <memory>
 #include <string>
+#include <utility>
 #include <cstddef>
 #include <cstdlib> // for malloc, free
 #include <cstring>
@@ -118,6 +118,8 @@
 
 #endif // defined(linux) || defined(__linux) || defined(__linux__)
 
+#include <boost/scope/unique_fd.hpp>
+
 #if defined(POSIX_FADV_SEQUENTIAL) && (!defined(__ANDROID__) || __ANDROID_API__ >= 21)
 #define BOOST_FILESYSTEM_HAS_POSIX_FADVISE
 #endif
@@ -181,6 +183,7 @@ using boost::system::system_category;
 // At least Mac OS X 10.6 and older doesn't support O_CLOEXEC
 #ifndef O_CLOEXEC
 #define O_CLOEXEC 0
+#define BOOST_FILESYSTEM_NO_O_CLOEXEC
 #endif
 
 #if defined(_POSIX_SYNCHRONIZED_IO) && _POSIX_SYNCHRONIZED_IO > 0
@@ -288,15 +291,6 @@ BOOST_CONSTEXPR_OR_CONST unsigned int symloop_max =
 
 //  general helpers  -----------------------------------------------------------------//
 
-bool is_empty_directory(path const& p, error_code* ec)
-{
-    fs::directory_iterator itr;
-    detail::directory_iterator_construct(itr, p, directory_options::none, nullptr, ec);
-    return itr == fs::directory_iterator();
-}
-
-bool not_found_error(int errval) noexcept; // forward declaration
-
 #ifdef BOOST_POSIX_API
 
 //--------------------------------------------------------------------------------------//
@@ -305,24 +299,43 @@ bool not_found_error(int errval) noexcept; // forward declaration
 //                                                                                      //
 //--------------------------------------------------------------------------------------//
 
-struct fd_wrapper
-{
-    int fd;
-
-    fd_wrapper() noexcept : fd(-1) {}
-    explicit fd_wrapper(int fd) noexcept : fd(fd) {}
-    ~fd_wrapper() noexcept
-    {
-        if (fd >= 0)
-            close_fd(fd);
-    }
-    fd_wrapper(fd_wrapper const&) = delete;
-    fd_wrapper& operator=(fd_wrapper const&) = delete;
-};
-
 inline bool not_found_error(int errval) noexcept
 {
     return errval == ENOENT || errval == ENOTDIR;
+}
+
+/*!
+ * Closes a file descriptor and returns the result, similar to close(2). Unlike close(2), guarantees that the file descriptor is closed even if EINTR error happens.
+ *
+ * Some systems don't close the file descriptor in case if the thread is interrupted by a signal and close(2) returns EINTR.
+ * Other (most) systems do close the file descriptor even when when close(2) returns EINTR, and attempting to close it
+ * again could close a different file descriptor that was opened by a different thread. This function hides this difference in behavior.
+ *
+ * Future POSIX standards will likely fix this by introducing posix_close (see https://www.austingroupbugs.net/view.php?id=529)
+ * and prohibiting returning EINTR from close(2), but we still have to support older systems where this new behavior is not available and close(2)
+ * behaves differently between systems.
+ */
+inline int close_fd(int fd)
+{
+#if defined(hpux) || defined(_hpux) || defined(__hpux)
+    int res;
+    while (true)
+    {
+        res = ::close(fd);
+        if (BOOST_UNLIKELY(res < 0))
+        {
+            int err = errno;
+            if (err == EINTR)
+                continue;
+        }
+
+        break;
+    }
+
+    return res;
+#else
+    return ::close(fd);
+#endif
 }
 
 #if defined(BOOST_FILESYSTEM_HAS_STATX)
@@ -477,13 +490,15 @@ inline std::size_t get_blksize(struct ::stat const& st) noexcept
 
 #endif // defined(BOOST_FILESYSTEM_USE_STATX)
 
+} // namespace
+
 //! status() implementation
 file_status status_impl
 (
     path const& p,
-    error_code* ec
+    system::error_code* ec
 #if defined(BOOST_FILESYSTEM_HAS_POSIX_AT_APIS) || defined(BOOST_FILESYSTEM_USE_STATX)
-    , int basedir_fd = AT_FDCWD
+    , int basedir_fd
 #endif
 )
 {
@@ -501,14 +516,14 @@ file_status status_impl
     if (err != 0)
     {
         err = errno;
-        if (ec)                                 // always report errno, even though some
-            ec->assign(err, system_category()); // errno values are not status_errors
+        if (ec)                                         // always report errno, even though some
+            ec->assign(err, system::system_category()); // errno values are not status_errors
 
         if (not_found_error(err))
             return fs::file_status(fs::file_not_found, fs::no_perms);
 
         if (!ec)
-            BOOST_FILESYSTEM_THROW(filesystem_error("boost::filesystem::status", p, error_code(err, system_category())));
+            BOOST_FILESYSTEM_THROW(filesystem_error("boost::filesystem::status", p, system::error_code(err, system::system_category())));
 
         return fs::file_status(fs::status_error);
     }
@@ -542,9 +557,9 @@ file_status status_impl
 file_status symlink_status_impl
 (
     path const& p,
-    error_code* ec
+    system::error_code* ec
 #if defined(BOOST_FILESYSTEM_HAS_POSIX_AT_APIS) || defined(BOOST_FILESYSTEM_USE_STATX)
-    , int basedir_fd = AT_FDCWD
+    , int basedir_fd
 #endif
 )
 {
@@ -562,14 +577,14 @@ file_status symlink_status_impl
     if (err != 0)
     {
         err = errno;
-        if (ec)                                 // always report errno, even though some
-            ec->assign(err, system_category()); // errno values are not status_errors
+        if (ec)                                         // always report errno, even though some
+            ec->assign(err, system::system_category()); // errno values are not status_errors
 
         if (not_found_error(err)) // these are not errors
             return fs::file_status(fs::file_not_found, fs::no_perms);
 
         if (!ec)
-            BOOST_FILESYSTEM_THROW(filesystem_error("boost::filesystem::symlink_status", p, error_code(err, system_category())));
+            BOOST_FILESYSTEM_THROW(filesystem_error("boost::filesystem::symlink_status", p, system::error_code(err, system::system_category())));
 
         return fs::file_status(fs::status_error);
     }
@@ -600,6 +615,8 @@ file_status symlink_status_impl
 
     return fs::file_status(fs::type_unknown);
 }
+
+namespace {
 
 //! Flushes buffered data and attributes written to the file to permanent storage
 inline int full_sync(int fd)
@@ -778,7 +795,7 @@ int copy_file_data_read_write(int infile, int outfile, uintmax_t size, std::size
         if (buf_sz > max_read_write_buf_size)
             buf_sz = max_read_write_buf_size;
         const std::size_t buf_size = static_cast< std::size_t >(boost::core::bit_ceil(static_cast< uint_least32_t >(buf_sz)));
-        boost::scoped_array< char > buf(new (std::nothrow) char[buf_size]);
+        std::unique_ptr< char[] > buf(new (std::nothrow) char[buf_size]);
         if (BOOST_LIKELY(!!buf.get()))
             return copy_file_data_read_write_impl(infile, outfile, buf.get(), buf_size);
     }
@@ -1099,14 +1116,18 @@ uintmax_t remove_all_impl
     path const& p,
     error_code* ec
 #if defined(BOOST_FILESYSTEM_HAS_FDOPENDIR_NOFOLLOW) && defined(BOOST_FILESYSTEM_HAS_POSIX_AT_APIS)
-    , int basedir_fd = AT_FDCWD
+    , int parentdir_fd = AT_FDCWD
 #endif
 )
 {
 #if defined(BOOST_FILESYSTEM_HAS_FDOPENDIR_NOFOLLOW) && defined(BOOST_FILESYSTEM_HAS_POSIX_AT_APIS)
-    fs::detail::directory_iterator_params params;
-    params.basedir_fd = basedir_fd;
-    params.iterator_fd = -1;
+    fs::path filename;
+    const fs::path* remove_path = &p;
+    if (parentdir_fd != AT_FDCWD)
+    {
+        filename = path_algorithms::filename_v4(p);
+        remove_path = &filename;
+    }
 #endif
 
     error_code dit_create_ec;
@@ -1115,14 +1136,11 @@ uintmax_t remove_all_impl
         fs::file_type type;
         {
             error_code local_ec;
-            type = fs::detail::symlink_status_impl
-            (
-                p,
-                &local_ec
 #if defined(BOOST_FILESYSTEM_HAS_FDOPENDIR_NOFOLLOW) && defined(BOOST_FILESYSTEM_HAS_POSIX_AT_APIS)
-                , basedir_fd
+            type = fs::detail::symlink_status_impl(*remove_path, &local_ec, parentdir_fd).type();
+#else
+            type = fs::detail::symlink_status_impl(p, &local_ec).type();
 #endif
-            ).type();
 
             if (type == fs::file_not_found)
                 return 0u;
@@ -1141,18 +1159,29 @@ uintmax_t remove_all_impl
         if (type == fs::directory_file) // but not a directory symlink
         {
             fs::directory_iterator itr;
+#if defined(BOOST_FILESYSTEM_HAS_FDOPENDIR_NOFOLLOW) && defined(BOOST_FILESYSTEM_HAS_POSIX_AT_APIS)
+            fs::detail::directory_iterator_params params{ fs::detail::openat_directory(parentdir_fd, *remove_path, directory_options::_detail_no_follow, dit_create_ec) };
+            int dir_fd = -1;
+            if (BOOST_LIKELY(!dit_create_ec))
+            {
+                // Save dir_fd as constructing the iterator will move the fd into the iterator context
+                dir_fd = params.dir_fd.get();
+                fs::detail::directory_iterator_construct(itr, *remove_path, directory_options::_detail_no_follow, &params, &dit_create_ec);
+            }
+#else
             fs::detail::directory_iterator_construct
             (
                 itr,
                 p,
+#if defined(BOOST_FILESYSTEM_HAS_FDOPENDIR_NOFOLLOW)
                 directory_options::_detail_no_follow,
-#if defined(BOOST_FILESYSTEM_HAS_FDOPENDIR_NOFOLLOW) && defined(BOOST_FILESYSTEM_HAS_POSIX_AT_APIS)
-                &params,
 #else
-                nullptr,
+                directory_options::none,
 #endif
+                nullptr,
                 &dit_create_ec
             );
+#endif
 
             if (BOOST_UNLIKELY(!!dit_create_ec))
             {
@@ -1180,14 +1209,10 @@ uintmax_t remove_all_impl
             {
                 count += fs::detail::remove_all_impl
                 (
-#if defined(BOOST_FILESYSTEM_HAS_FDOPENDIR_NOFOLLOW) && defined(BOOST_FILESYSTEM_HAS_POSIX_AT_APIS)
-                    path_algorithms::filename_v4(itr->path()),
-#else
                     itr->path(),
-#endif
                     ec
 #if defined(BOOST_FILESYSTEM_HAS_FDOPENDIR_NOFOLLOW) && defined(BOOST_FILESYSTEM_HAS_POSIX_AT_APIS)
-                    , params.iterator_fd
+                    , dir_fd
 #endif
                 );
                 if (ec && *ec)
@@ -1199,15 +1224,11 @@ uintmax_t remove_all_impl
             }
         }
 
-        count += fs::detail::remove_impl
-        (
-            p,
-            type,
-            ec
 #if defined(BOOST_FILESYSTEM_HAS_FDOPENDIR_NOFOLLOW) && defined(BOOST_FILESYSTEM_HAS_POSIX_AT_APIS)
-            , basedir_fd
+        count += fs::detail::remove_impl(*remove_path, type, ec, parentdir_fd);
+#else
+        count += fs::detail::remove_impl(p, type, ec);
 #endif
-        );
         if (ec && *ec)
             return static_cast< uintmax_t >(-1);
 
@@ -1462,7 +1483,7 @@ inline std::wstring wgetenv(const wchar_t* name)
     const DWORD size = ::GetEnvironmentVariableW(name, nullptr, 0);
     if (size > 0)
     {
-        boost::scoped_array< wchar_t > buf(new wchar_t[size]);
+        std::unique_ptr< wchar_t[] > buf(new wchar_t[size]);
         if (BOOST_LIKELY(::GetEnvironmentVariableW(name, buf.get(), size) > 0))
             return std::wstring(buf.get());
     }
@@ -1524,7 +1545,17 @@ inline DWORD to_FILETIME(std::time_t t, FILETIME& ft)
 static bool g_no_obj_dont_reparse = false;
 
 //! Creates a file handle for a file relative to a previously opened base directory. The file path must be relative and in preferred format.
-boost::winapi::NTSTATUS_ nt_create_file_handle_at(HANDLE& out, HANDLE basedir_handle, boost::filesystem::path const& p, ULONG FileAttributes, ACCESS_MASK DesiredAccess, ULONG ShareMode, ULONG CreateDisposition, ULONG CreateOptions)
+boost::winapi::NTSTATUS_ nt_create_file_handle_at
+(
+    unique_handle& out,
+    HANDLE basedir_handle,
+    boost::filesystem::path const& p,
+    ULONG FileAttributes,
+    ACCESS_MASK DesiredAccess,
+    ULONG ShareMode,
+    ULONG CreateDisposition,
+    ULONG CreateOptions
+)
 {
     NtCreateFile_t* nt_create_file = filesystem::detail::atomic_load_relaxed(nt_create_file_api);
     if (BOOST_UNLIKELY(!nt_create_file))
@@ -1544,9 +1575,10 @@ boost::winapi::NTSTATUS_ nt_create_file_handle_at(HANDLE& out, HANDLE basedir_ha
         obj_attrs.Attributes |= OBJ_DONT_REPARSE;
 
     io_status_block iosb;
+    HANDLE out_handle = INVALID_HANDLE_VALUE;
     boost::winapi::NTSTATUS_ status = nt_create_file
     (
-        &out,
+        &out_handle,
         DesiredAccess,
         &obj_attrs,
         &iosb,
@@ -1567,7 +1599,7 @@ boost::winapi::NTSTATUS_ nt_create_file_handle_at(HANDLE& out, HANDLE basedir_ha
 
         status = nt_create_file
         (
-            &out,
+            &out_handle,
             DesiredAccess,
             &obj_attrs,
             &iosb,
@@ -1581,12 +1613,14 @@ boost::winapi::NTSTATUS_ nt_create_file_handle_at(HANDLE& out, HANDLE basedir_ha
         );
     }
 
+    out.reset(out_handle);
+
     return status;
 }
 
 ULONG get_reparse_point_tag_ioctl(HANDLE h, path const& p, error_code* ec)
 {
-    boost::scoped_ptr< reparse_data_buffer_with_storage > buf(new (std::nothrow) reparse_data_buffer_with_storage);
+    std::unique_ptr< reparse_data_buffer_with_storage > buf(new (std::nothrow) reparse_data_buffer_with_storage);
     if (BOOST_UNLIKELY(!buf.get()))
     {
         if (!ec)
@@ -1643,6 +1677,8 @@ inline fs::file_status process_status_failure(path const& p, error_code* ec)
 {
     return process_status_failure(::GetLastError(), p, ec);
 }
+
+} // namespace
 
 //! (symlink_)status() by handle implementation
 fs::file_status status_by_handle(HANDLE h, path const& p, error_code* ec)
@@ -1713,6 +1749,8 @@ fs::file_status status_by_handle(HANDLE h, path const& p, error_code* ec)
     return fs::file_status(ftype, make_permissions(p, attrs));
 }
 
+namespace {
+
 //! symlink_status() implementation
 fs::file_status symlink_status_impl(path const& p, error_code* ec)
 {
@@ -1720,7 +1758,7 @@ fs::file_status symlink_status_impl(path const& p, error_code* ec)
     // file attributes in GetFileInformationByHandleEx in this case (e.g. it reports FILE_ATTRIBUTE_NORMAL
     // for a directory in a SMBv1 share), so we add FILE_READ_EA as a workaround.
     // https://github.com/boostorg/filesystem/issues/282
-    handle_wrapper h(create_file_handle(
+    unique_handle h(create_file_handle(
         p.c_str(),
         FILE_READ_ATTRIBUTES | FILE_READ_EA,
         FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE,
@@ -1728,7 +1766,7 @@ fs::file_status symlink_status_impl(path const& p, error_code* ec)
         OPEN_EXISTING,
         FILE_FLAG_BACKUP_SEMANTICS | FILE_FLAG_OPEN_REPARSE_POINT));
 
-    if (h.handle == INVALID_HANDLE_VALUE)
+    if (!h)
     {
         // For some system files and folders like "System Volume Information" CreateFileW fails
         // with ERROR_ACCESS_DENIED. GetFileAttributesW succeeds for such files, so try that.
@@ -1751,7 +1789,7 @@ fs::file_status symlink_status_impl(path const& p, error_code* ec)
         return process_status_failure(err, p, ec);
     }
 
-    return detail::status_by_handle(h.handle, p, ec);
+    return detail::status_by_handle(h.get(), p, ec);
 }
 
 //! status() implementation
@@ -1764,7 +1802,7 @@ fs::file_status status_impl(path const& p, error_code* ec)
     if (st.type() == symlink_file)
     {
         // Resolve the symlink
-        handle_wrapper h(create_file_handle(
+        unique_handle h(create_file_handle(
             p.c_str(),
             FILE_READ_ATTRIBUTES | FILE_READ_EA, // see the comment in symlink_status_impl re. access mode
             FILE_SHARE_DELETE | FILE_SHARE_READ | FILE_SHARE_WRITE,
@@ -1772,10 +1810,10 @@ fs::file_status status_impl(path const& p, error_code* ec)
             OPEN_EXISTING,
             FILE_FLAG_BACKUP_SEMANTICS));
 
-        if (h.handle == INVALID_HANDLE_VALUE)
+        if (!h)
             return process_status_failure(p, ec);
 
-        st = detail::status_by_handle(h.handle, p, ec);
+        st = detail::status_by_handle(h.get(), p, ec);
     }
 
     return st;
@@ -1978,7 +2016,7 @@ DWORD remove_nt6_by_handle(HANDLE handle, remove_impl_type impl)
 //! remove() implementation for Windows Vista and newer
 inline bool remove_nt6_impl(path const& p, remove_impl_type impl, error_code* ec)
 {
-    handle_wrapper h(create_file_handle(
+    unique_handle h(create_file_handle(
         p,
         DELETE | FILE_READ_ATTRIBUTES | FILE_READ_EA | FILE_WRITE_ATTRIBUTES | FILE_WRITE_EA,
         FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE,
@@ -1986,7 +2024,7 @@ inline bool remove_nt6_impl(path const& p, remove_impl_type impl, error_code* ec
         OPEN_EXISTING,
         FILE_FLAG_BACKUP_SEMANTICS | FILE_FLAG_OPEN_REPARSE_POINT));
     DWORD err = 0u;
-    if (BOOST_UNLIKELY(h.handle == INVALID_HANDLE_VALUE))
+    if (BOOST_UNLIKELY(!h))
     {
         err = ::GetLastError();
 
@@ -1997,7 +2035,7 @@ inline bool remove_nt6_impl(path const& p, remove_impl_type impl, error_code* ec
         return false;
     }
 
-    err = fs::detail::remove_nt6_by_handle(h.handle, impl);
+    err = fs::detail::remove_nt6_by_handle(h.get(), impl);
     if (BOOST_UNLIKELY(err != 0u))
         goto return_error;
 
@@ -2049,7 +2087,7 @@ uintmax_t remove_all_nt6_by_handle(HANDLE h, path const& p, error_code* ec)
 
         fs::directory_iterator itr;
         directory_iterator_params params;
-        params.use_handle = h;
+        params.dir_handle = h;
         params.close_handle = false; // the caller will close the handle
         fs::detail::directory_iterator_construct(itr, p, directory_options::_detail_no_follow, &params, &local_ec);
         if (BOOST_UNLIKELY(!!local_ec))
@@ -2066,14 +2104,14 @@ uintmax_t remove_all_nt6_by_handle(HANDLE h, path const& p, error_code* ec)
         while (itr != end_dit)
         {
             fs::path nested_path(itr->path());
-            handle_wrapper hh;
+            unique_handle hh;
             if (BOOST_LIKELY(nt_create_file != nullptr))
             {
                 // Note: WinAPI methods like CreateFileW implicitly request SYNCHRONIZE access but NtCreateFile doesn't.
                 // Without SYNCHRONIZE access querying file attributes via GetFileInformationByHandleEx fails with ERROR_ACCESS_DENIED.
                 boost::winapi::NTSTATUS_ status = nt_create_file_handle_at
                 (
-                    hh.handle,
+                    hh,
                     h,
                     path_algorithms::filename_v4(nested_path),
                     0u, // FileAttributes
@@ -2085,14 +2123,8 @@ uintmax_t remove_all_nt6_by_handle(HANDLE h, path const& p, error_code* ec)
 
                 if (!NT_SUCCESS(status))
                 {
-                    if (status == STATUS_NO_SUCH_FILE ||
-                        status == STATUS_OBJECT_NAME_NOT_FOUND ||
-                        status == STATUS_OBJECT_PATH_NOT_FOUND ||
-                        status == STATUS_BAD_NETWORK_PATH ||
-                        status == STATUS_BAD_NETWORK_NAME)
-                    {
+                    if (not_found_ntstatus(status))
                         goto next_entry;
-                    }
 
                     DWORD err = translate_ntstatus(status);
                     emit_error(err, nested_path, ec, "boost::filesystem::remove_all");
@@ -2101,7 +2133,7 @@ uintmax_t remove_all_nt6_by_handle(HANDLE h, path const& p, error_code* ec)
             }
             else
             {
-                hh.handle = create_file_handle(
+                hh = create_file_handle(
                     nested_path,
                     FILE_LIST_DIRECTORY | DELETE | FILE_READ_ATTRIBUTES | FILE_READ_EA | FILE_WRITE_ATTRIBUTES | FILE_WRITE_EA | SYNCHRONIZE,
                     FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE,
@@ -2109,7 +2141,7 @@ uintmax_t remove_all_nt6_by_handle(HANDLE h, path const& p, error_code* ec)
                     OPEN_EXISTING,
                     FILE_FLAG_BACKUP_SEMANTICS | FILE_FLAG_OPEN_REPARSE_POINT);
 
-                if (BOOST_UNLIKELY(hh.handle == INVALID_HANDLE_VALUE))
+                if (BOOST_UNLIKELY(!hh))
                 {
                     DWORD err = ::GetLastError();
                     if (not_found_error(err))
@@ -2120,7 +2152,7 @@ uintmax_t remove_all_nt6_by_handle(HANDLE h, path const& p, error_code* ec)
                 }
             }
 
-            count += fs::detail::remove_all_nt6_by_handle(hh.handle, nested_path, ec);
+            count += fs::detail::remove_all_nt6_by_handle(hh.get(), nested_path, ec);
             if (ec && *ec)
                 return static_cast< uintmax_t >(-1);
 
@@ -2215,7 +2247,7 @@ inline uintmax_t remove_all_impl(path const& p, error_code* ec)
     remove_impl_type impl = fs::detail::atomic_load_relaxed(g_remove_impl_type);
     if (BOOST_LIKELY(impl != remove_nt5))
     {
-        handle_wrapper h(create_file_handle(
+        unique_handle h(create_file_handle(
             p,
             FILE_LIST_DIRECTORY | DELETE | FILE_READ_ATTRIBUTES | FILE_READ_EA | FILE_WRITE_ATTRIBUTES | FILE_WRITE_EA | SYNCHRONIZE,
             FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE,
@@ -2223,7 +2255,7 @@ inline uintmax_t remove_all_impl(path const& p, error_code* ec)
             OPEN_EXISTING,
             FILE_FLAG_BACKUP_SEMANTICS | FILE_FLAG_OPEN_REPARSE_POINT));
 
-        if (BOOST_UNLIKELY(h.handle == INVALID_HANDLE_VALUE))
+        if (BOOST_UNLIKELY(!h))
         {
             DWORD err = ::GetLastError();
             if (not_found_error(err))
@@ -2233,7 +2265,7 @@ inline uintmax_t remove_all_impl(path const& p, error_code* ec)
             return static_cast< uintmax_t >(-1);
         }
 
-        return fs::detail::remove_all_nt6_by_handle(h.handle, p, ec);
+        return fs::detail::remove_all_nt6_by_handle(h.get(), p, ec);
     }
 
     return fs::detail::remove_all_nt5_impl(p, ec);
@@ -2241,10 +2273,10 @@ inline uintmax_t remove_all_impl(path const& p, error_code* ec)
 
 inline BOOL resize_file_impl(const wchar_t* p, uintmax_t size)
 {
-    handle_wrapper h(CreateFileW(p, GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE, nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr));
+    unique_handle h(CreateFileW(p, GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE, nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr));
     LARGE_INTEGER sz;
     sz.QuadPart = size;
-    return h.handle != INVALID_HANDLE_VALUE && ::SetFilePointerEx(h.handle, sz, 0, FILE_BEGIN) && ::SetEndOfFile(h.handle);
+    return !!h && ::SetFilePointerEx(h.get(), sz, 0, FILE_BEGIN) && ::SetEndOfFile(h.get());
 }
 
 //! Converts NT path to a Win32 path
@@ -2396,6 +2428,7 @@ done:
 #endif // defined(BOOST_POSIX_API)
 
 } // unnamed namespace
+
 } // namespace detail
 
 //--------------------------------------------------------------------------------------//
@@ -2535,18 +2568,11 @@ path absolute_v4(path const& p, path const& base, system::error_code* ec)
 BOOST_FILESYSTEM_DECL
 path canonical_v3(path const& p, path const& base, system::error_code* ec)
 {
-    if (ec)
-        ec->clear();
-
-    path source(p);
-    if (!p.is_absolute())
+    path source(detail::absolute_v3(p, base, ec));
+    if (ec && *ec)
     {
-        source = detail::absolute_v3(p, base, ec);
-        if (ec && *ec)
-        {
-        return_empty_path:
-            return path();
-        }
+    return_empty_path:
+        return path();
     }
 
     system::error_code local_ec;
@@ -2667,18 +2693,11 @@ path canonical_v3(path const& p, path const& base, system::error_code* ec)
 BOOST_FILESYSTEM_DECL
 path canonical_v4(path const& p, path const& base, system::error_code* ec)
 {
-    if (ec)
-        ec->clear();
-
-    path source(p);
-    if (!p.is_absolute())
+    path source(detail::absolute_v4(p, base, ec));
+    if (ec && *ec)
     {
-        source = detail::absolute_v4(p, base, ec);
-        if (ec && *ec)
-        {
-        return_empty_path:
-            return path();
-        }
+    return_empty_path:
+        return path();
     }
 
     system::error_code local_ec;
@@ -3002,13 +3021,13 @@ bool copy_file(path const& from, path const& to, copy_options options, error_cod
 
     int err = 0;
 
-    // Note: Declare fd_wrappers here so that errno is not clobbered by close() that may be called in fd_wrapper destructors
-    fd_wrapper infile, outfile;
+    // Note: Declare fd wrappers here so that errno is not clobbered by close() that may be called in fd wrapper destructors
+    boost::scope::unique_fd infile, outfile;
 
     while (true)
     {
-        infile.fd = ::open(from.c_str(), O_RDONLY | O_CLOEXEC);
-        if (BOOST_UNLIKELY(infile.fd < 0))
+        infile.reset(::open(from.c_str(), O_RDONLY | O_CLOEXEC));
+        if (BOOST_UNLIKELY(!infile))
         {
             err = errno;
             if (err == EINTR)
@@ -3028,7 +3047,7 @@ bool copy_file(path const& from, path const& to, copy_options options, error_cod
         statx_data_mask |= STATX_MTIME;
 
     struct ::statx from_stat;
-    if (BOOST_UNLIKELY(invoke_statx(infile.fd, "", AT_EMPTY_PATH | AT_NO_AUTOMOUNT, statx_data_mask, &from_stat) < 0))
+    if (BOOST_UNLIKELY(invoke_statx(infile.get(), "", AT_EMPTY_PATH | AT_NO_AUTOMOUNT, statx_data_mask, &from_stat) < 0))
     {
     fail_errno:
         err = errno;
@@ -3042,7 +3061,7 @@ bool copy_file(path const& from, path const& to, copy_options options, error_cod
     }
 #else
     struct ::stat from_stat;
-    if (BOOST_UNLIKELY(::fstat(infile.fd, &from_stat) != 0))
+    if (BOOST_UNLIKELY(::fstat(infile.get(), &from_stat) != 0))
     {
     fail_errno:
         err = errno;
@@ -3070,8 +3089,8 @@ bool copy_file(path const& from, path const& to, copy_options options, error_cod
         // Try opening the existing file without truncation to test the modification time later
         while (true)
         {
-            outfile.fd = ::open(to.c_str(), oflag, to_mode);
-            if (outfile.fd < 0)
+            outfile.reset(::open(to.c_str(), oflag, to_mode));
+            if (!outfile)
             {
                 err = errno;
                 if (err == EINTR)
@@ -3099,8 +3118,8 @@ bool copy_file(path const& from, path const& to, copy_options options, error_cod
 
         while (true)
         {
-            outfile.fd = ::open(to.c_str(), oflag, to_mode);
-            if (outfile.fd < 0)
+            outfile.reset(::open(to.c_str(), oflag, to_mode));
+            if (!outfile)
             {
                 err = errno;
                 if (err == EINTR)
@@ -3125,7 +3144,7 @@ bool copy_file(path const& from, path const& to, copy_options options, error_cod
     }
 
     struct ::statx to_stat;
-    if (BOOST_UNLIKELY(invoke_statx(outfile.fd, "", AT_EMPTY_PATH | AT_NO_AUTOMOUNT, statx_data_mask, &to_stat) < 0))
+    if (BOOST_UNLIKELY(invoke_statx(outfile.get(), "", AT_EMPTY_PATH | AT_NO_AUTOMOUNT, statx_data_mask, &to_stat) < 0))
         goto fail_errno;
 
     if (BOOST_UNLIKELY((to_stat.stx_mask & statx_data_mask) != statx_data_mask))
@@ -3135,7 +3154,7 @@ bool copy_file(path const& from, path const& to, copy_options options, error_cod
     }
 #else
     struct ::stat to_stat;
-    if (BOOST_UNLIKELY(::fstat(outfile.fd, &to_stat) != 0))
+    if (BOOST_UNLIKELY(::fstat(outfile.get(), &to_stat) != 0))
         goto fail_errno;
 #endif
 
@@ -3168,12 +3187,12 @@ bool copy_file(path const& from, path const& to, copy_options options, error_cod
             return false;
 #endif
 
-        if (BOOST_UNLIKELY(::ftruncate(outfile.fd, 0) != 0))
+        if (BOOST_UNLIKELY(::ftruncate(outfile.get(), 0) != 0))
             goto fail_errno;
     }
 
     // Note: Use block size of the target file since it is most important for writing performance.
-    err = filesystem::detail::atomic_load_relaxed(filesystem::detail::copy_file_data)(infile.fd, outfile.fd, get_size(from_stat), get_blksize(to_stat));
+    err = filesystem::detail::atomic_load_relaxed(filesystem::detail::copy_file_data)(infile.get(), outfile.get(), get_size(from_stat), get_blksize(to_stat));
     if (BOOST_UNLIKELY(err != 0))
         goto fail; // err already contains the error code
 
@@ -3182,7 +3201,7 @@ bool copy_file(path const& from, path const& to, copy_options options, error_cod
     // we may need to update its mode bits to match the source file.
     if ((to_mode & fs::perms_mask) != (from_mode & fs::perms_mask))
     {
-        if (BOOST_UNLIKELY(::fchmod(outfile.fd, (from_mode & fs::perms_mask)) != 0 &&
+        if (BOOST_UNLIKELY(::fchmod(outfile.get(), (from_mode & fs::perms_mask)) != 0 &&
             (options & copy_options::ignore_attribute_errors) == copy_options::none))
         {
             goto fail_errno;
@@ -3193,9 +3212,9 @@ bool copy_file(path const& from, path const& to, copy_options options, error_cod
     if ((options & (copy_options::synchronize_data | copy_options::synchronize)) != copy_options::none)
     {
         if ((options & copy_options::synchronize) != copy_options::none)
-            err = full_sync(outfile.fd);
+            err = full_sync(outfile.get());
         else
-            err = data_sync(outfile.fd);
+            err = data_sync(outfile.get());
 
         if (BOOST_UNLIKELY(err != 0))
             goto fail;
@@ -3203,8 +3222,8 @@ bool copy_file(path const& from, path const& to, copy_options options, error_cod
 
     // We have to explicitly close the output file descriptor in order to handle a possible error returned from it. The error may indicate
     // a failure of a prior write operation.
-    err = close_fd(outfile.fd);
-    outfile.fd = -1;
+    err = close_fd(outfile.get());
+    outfile.release();
     if (BOOST_UNLIKELY(err < 0))
     {
         err = errno;
@@ -3226,11 +3245,11 @@ bool copy_file(path const& from, path const& to, copy_options options, error_cod
 
     if ((options & copy_options::update_existing) != copy_options::none)
     {
-        // Create handle_wrappers here so that CloseHandle calls don't clobber error code returned by GetLastError
-        handle_wrapper hw_from, hw_to;
+        // Create unique_handle wrappers here so that CloseHandle calls don't clobber error code returned by GetLastError
+        unique_handle hw_from, hw_to;
 
         // See the comment in last_write_time regarding access rights used here for GetFileTime.
-        hw_from.handle = create_file_handle(
+        hw_from = create_file_handle(
             from.c_str(),
             FILE_READ_ATTRIBUTES | FILE_READ_EA,
             FILE_SHARE_DELETE | FILE_SHARE_READ | FILE_SHARE_WRITE,
@@ -3239,7 +3258,7 @@ bool copy_file(path const& from, path const& to, copy_options options, error_cod
             FILE_FLAG_BACKUP_SEMANTICS);
 
         FILETIME lwt_from;
-        if (hw_from.handle == INVALID_HANDLE_VALUE)
+        if (!hw_from)
         {
         fail_last_error:
             DWORD err = ::GetLastError();
@@ -3247,10 +3266,10 @@ bool copy_file(path const& from, path const& to, copy_options options, error_cod
             return false;
         }
 
-        if (!::GetFileTime(hw_from.handle, nullptr, nullptr, &lwt_from))
+        if (!::GetFileTime(hw_from.get(), nullptr, nullptr, &lwt_from))
             goto fail_last_error;
 
-        hw_to.handle = create_file_handle(
+        hw_to = create_file_handle(
             to.c_str(),
             FILE_READ_ATTRIBUTES | FILE_READ_EA,
             FILE_SHARE_DELETE | FILE_SHARE_READ | FILE_SHARE_WRITE,
@@ -3258,10 +3277,10 @@ bool copy_file(path const& from, path const& to, copy_options options, error_cod
             OPEN_EXISTING,
             FILE_FLAG_BACKUP_SEMANTICS);
 
-        if (hw_to.handle != INVALID_HANDLE_VALUE)
+        if (!!hw_to)
         {
             FILETIME lwt_to;
-            if (!::GetFileTime(hw_to.handle, nullptr, nullptr, &lwt_to))
+            if (!::GetFileTime(hw_to.get(), nullptr, nullptr, &lwt_to))
                 goto fail_last_error;
 
             ULONGLONG tfrom = (static_cast< ULONGLONG >(lwt_from.dwHighDateTime) << 32) | static_cast< ULONGLONG >(lwt_from.dwLowDateTime);
@@ -3622,7 +3641,7 @@ path current_path(error_code* ec)
                 break;
             }
 
-            boost::scoped_array< char > buf(new char[path_max]);
+            std::unique_ptr< char[] > buf(new char[path_max]);
             p = ::getcwd(buf.get(), path_max);
             if (BOOST_LIKELY(!!p))
             {
@@ -3643,7 +3662,7 @@ path current_path(error_code* ec)
     DWORD sz;
     if ((sz = ::GetCurrentDirectoryW(0, nullptr)) == 0)
         sz = 1;
-    boost::scoped_array< path::value_type > buf(new path::value_type[sz]);
+    std::unique_ptr< path::value_type[] > buf(new path::value_type[sz]);
     error(::GetCurrentDirectoryW(sz, buf.get()) == 0 ? BOOST_ERRNO : 0, ec, "boost::filesystem::current_path");
     return path(buf.get());
 #endif
@@ -3722,7 +3741,7 @@ bool equivalent_v3(path const& p1, path const& p2, system::error_code* ec)
     // been retrieved.
 
     // p2 is done first, so any error reported is for p1
-    handle_wrapper h2(create_file_handle(
+    unique_handle h2(create_file_handle(
         p2.c_str(),
         FILE_READ_ATTRIBUTES,
         FILE_SHARE_DELETE | FILE_SHARE_READ | FILE_SHARE_WRITE,
@@ -3730,7 +3749,7 @@ bool equivalent_v3(path const& p1, path const& p2, system::error_code* ec)
         OPEN_EXISTING,
         FILE_FLAG_BACKUP_SEMANTICS));
 
-    handle_wrapper h1(create_file_handle(
+    unique_handle h1(create_file_handle(
         p1.c_str(),
         FILE_READ_ATTRIBUTES,
         FILE_SHARE_DELETE | FILE_SHARE_READ | FILE_SHARE_WRITE,
@@ -3738,11 +3757,11 @@ bool equivalent_v3(path const& p1, path const& p2, system::error_code* ec)
         OPEN_EXISTING,
         FILE_FLAG_BACKUP_SEMANTICS));
 
-    if (BOOST_UNLIKELY(h1.handle == INVALID_HANDLE_VALUE || h2.handle == INVALID_HANDLE_VALUE))
+    if (BOOST_UNLIKELY(!h1 || !h2))
     {
         // if one is invalid and the other isn't, then they aren't equivalent,
         // but if both are invalid then it is an error
-        if (h1.handle == INVALID_HANDLE_VALUE && h2.handle == INVALID_HANDLE_VALUE)
+        if (!h1 && !h2)
             error(BOOST_ERRNO, p1, p2, ec, "boost::filesystem::equivalent");
         return false;
     }
@@ -3751,10 +3770,10 @@ bool equivalent_v3(path const& p1, path const& p2, system::error_code* ec)
 
     BY_HANDLE_FILE_INFORMATION info1, info2;
 
-    if (error(!::GetFileInformationByHandle(h1.handle, &info1) ? BOOST_ERRNO : 0, p1, p2, ec, "boost::filesystem::equivalent"))
+    if (error(!::GetFileInformationByHandle(h1.get(), &info1) ? BOOST_ERRNO : 0, p1, p2, ec, "boost::filesystem::equivalent"))
         return false;
 
-    if (error(!::GetFileInformationByHandle(h2.handle, &info2) ? BOOST_ERRNO : 0, p1, p2, ec, "boost::filesystem::equivalent"))
+    if (error(!::GetFileInformationByHandle(h2.get(), &info2) ? BOOST_ERRNO : 0, p1, p2, ec, "boost::filesystem::equivalent"))
         return false;
 
     // In theory, volume serial numbers are sufficient to distinguish between
@@ -3836,14 +3855,14 @@ bool equivalent_v4(path const& p1, path const& p2, system::error_code* ec)
     // must be held open until location information for both paths has
     // been retrieved.
 
-    handle_wrapper h1(create_file_handle(
+    unique_handle h1(create_file_handle(
         p1.c_str(),
         FILE_READ_ATTRIBUTES,
         FILE_SHARE_DELETE | FILE_SHARE_READ | FILE_SHARE_WRITE,
         nullptr,
         OPEN_EXISTING,
         FILE_FLAG_BACKUP_SEMANTICS));
-    if (BOOST_UNLIKELY(h1.handle == INVALID_HANDLE_VALUE))
+    if (BOOST_UNLIKELY(!h1))
     {
     fail_errno:
         err_t err = BOOST_ERRNO;
@@ -3851,22 +3870,22 @@ bool equivalent_v4(path const& p1, path const& p2, system::error_code* ec)
         return false;
     }
 
-    handle_wrapper h2(create_file_handle(
+    unique_handle h2(create_file_handle(
         p2.c_str(),
         FILE_READ_ATTRIBUTES,
         FILE_SHARE_DELETE | FILE_SHARE_READ | FILE_SHARE_WRITE,
         nullptr,
         OPEN_EXISTING,
         FILE_FLAG_BACKUP_SEMANTICS));
-    if (BOOST_UNLIKELY(h2.handle == INVALID_HANDLE_VALUE))
+    if (BOOST_UNLIKELY(!h2))
         goto fail_errno;
 
     BY_HANDLE_FILE_INFORMATION info1;
-    if (BOOST_UNLIKELY(!::GetFileInformationByHandle(h1.handle, &info1)))
+    if (BOOST_UNLIKELY(!::GetFileInformationByHandle(h1.get(), &info1)))
         goto fail_errno;
 
     BY_HANDLE_FILE_INFORMATION info2;
-    if (BOOST_UNLIKELY(!::GetFileInformationByHandle(h2.handle, &info2)))
+    if (BOOST_UNLIKELY(!::GetFileInformationByHandle(h2.get(), &info2)))
         goto fail_errno;
 
     // In theory, volume serial numbers are sufficient to distinguish between
@@ -3893,29 +3912,35 @@ uintmax_t file_size(path const& p, error_code* ec)
 
 #if defined(BOOST_FILESYSTEM_USE_STATX)
     struct ::statx path_stat;
+    int err;
     if (BOOST_UNLIKELY(invoke_statx(AT_FDCWD, p.c_str(), AT_NO_AUTOMOUNT, STATX_TYPE | STATX_SIZE, &path_stat) < 0))
     {
-        emit_error(errno, p, ec, "boost::filesystem::file_size");
+        err = errno;
+    fail:
+        emit_error(err, p, ec, "boost::filesystem::file_size");
         return static_cast< uintmax_t >(-1);
     }
 
     if (BOOST_UNLIKELY((path_stat.stx_mask & (STATX_TYPE | STATX_SIZE)) != (STATX_TYPE | STATX_SIZE) || !S_ISREG(path_stat.stx_mode)))
     {
-        emit_error(BOOST_ERROR_NOT_SUPPORTED, p, ec, "boost::filesystem::file_size");
-        return static_cast< uintmax_t >(-1);
+        err = BOOST_ERROR_NOT_SUPPORTED;
+        goto fail;
     }
 #else
     struct ::stat path_stat;
+    int err;
     if (BOOST_UNLIKELY(::stat(p.c_str(), &path_stat) < 0))
     {
-        emit_error(errno, p, ec, "boost::filesystem::file_size");
+        err = errno;
+    fail:
+        emit_error(err, p, ec, "boost::filesystem::file_size");
         return static_cast< uintmax_t >(-1);
     }
 
     if (BOOST_UNLIKELY(!S_ISREG(path_stat.st_mode)))
     {
-        emit_error(BOOST_ERROR_NOT_SUPPORTED, p, ec, "boost::filesystem::file_size");
-        return static_cast< uintmax_t >(-1);
+        err = BOOST_ERROR_NOT_SUPPORTED;
+        goto fail;
     }
 #endif
 
@@ -3925,23 +3950,35 @@ uintmax_t file_size(path const& p, error_code* ec)
 
     // assume uintmax_t is 64-bits on all Windows compilers
 
-    WIN32_FILE_ATTRIBUTE_DATA fad;
+    unique_handle h(create_file_handle(
+        p.c_str(),
+        FILE_READ_ATTRIBUTES,
+        FILE_SHARE_DELETE | FILE_SHARE_READ | FILE_SHARE_WRITE,
+        nullptr,
+        OPEN_EXISTING,
+        FILE_FLAG_BACKUP_SEMANTICS));
 
-    if (BOOST_UNLIKELY(!::GetFileAttributesExW(p.c_str(), ::GetFileExInfoStandard, &fad)))
+    DWORD err;
+    if (BOOST_UNLIKELY(!h))
     {
-        emit_error(BOOST_ERRNO, p, ec, "boost::filesystem::file_size");
+    fail_errno:
+        err = BOOST_ERRNO;
+    fail:
+        emit_error(err, p, ec, "boost::filesystem::file_size");
         return static_cast< uintmax_t >(-1);
     }
 
-    if (BOOST_UNLIKELY((fad.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != 0))
+    BY_HANDLE_FILE_INFORMATION info;
+    if (BOOST_UNLIKELY(!::GetFileInformationByHandle(h.get(), &info)))
+        goto fail_errno;
+
+    if (BOOST_UNLIKELY((info.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != 0u))
     {
-        emit_error(ERROR_NOT_SUPPORTED, p, ec, "boost::filesystem::file_size");
-        return static_cast< uintmax_t >(-1);
+        err = ERROR_NOT_SUPPORTED;
+        goto fail;
     }
 
-    return (static_cast< uintmax_t >(fad.nFileSizeHigh)
-            << (sizeof(fad.nFileSizeLow) * 8u)) |
-        fad.nFileSizeLow;
+    return (static_cast< uintmax_t >(info.nFileSizeHigh) << 32u) | info.nFileSizeLow;
 
 #endif // defined(BOOST_POSIX_API)
 }
@@ -3982,7 +4019,7 @@ uintmax_t hard_link_count(path const& p, system::error_code* ec)
 
 #else // defined(BOOST_POSIX_API)
 
-    handle_wrapper h(create_file_handle(
+    unique_handle h(create_file_handle(
         p.c_str(),
         FILE_READ_ATTRIBUTES,
         FILE_SHARE_DELETE | FILE_SHARE_READ | FILE_SHARE_WRITE,
@@ -3990,7 +4027,7 @@ uintmax_t hard_link_count(path const& p, system::error_code* ec)
         OPEN_EXISTING,
         FILE_FLAG_BACKUP_SEMANTICS));
 
-    if (BOOST_UNLIKELY(h.handle == INVALID_HANDLE_VALUE))
+    if (BOOST_UNLIKELY(!h))
     {
     fail_errno:
         emit_error(BOOST_ERRNO, p, ec, "boost::filesystem::hard_link_count");
@@ -3999,7 +4036,7 @@ uintmax_t hard_link_count(path const& p, system::error_code* ec)
 
     // Link count info is only available through GetFileInformationByHandle
     BY_HANDLE_FILE_INFORMATION info;
-    if (BOOST_UNLIKELY(!::GetFileInformationByHandle(h.handle, &info)))
+    if (BOOST_UNLIKELY(!::GetFileInformationByHandle(h.get(), &info)))
         goto fail_errno;
 
     return static_cast< uintmax_t >(info.nNumberOfLinks);
@@ -4018,6 +4055,18 @@ path initial_path(error_code* ec)
     return init_path;
 }
 
+//! Tests if the directory is empty. Implemented in directory.cpp.
+bool is_empty_directory
+(
+#if defined(BOOST_POSIX_API)
+    boost::scope::unique_fd&& fd,
+#else
+    unique_handle&& h,
+#endif
+    path const& p,
+    error_code* ec
+);
+
 BOOST_FILESYSTEM_DECL
 bool is_empty(path const& p, system::error_code* ec)
 {
@@ -4026,49 +4075,93 @@ bool is_empty(path const& p, system::error_code* ec)
 
 #if defined(BOOST_POSIX_API)
 
+    boost::scope::unique_fd file;
+    int err = 0;
+    while (true)
+    {
+        file.reset(::open(p.c_str(), O_RDONLY | O_CLOEXEC));
+        if (BOOST_UNLIKELY(!file))
+        {
+            err = errno;
+            if (err == EINTR)
+                continue;
+
+        fail:
+            emit_error(err, p, ec, "boost::filesystem::is_empty");
+            return false;
+        }
+
+        break;
+    }
+
+#if defined(BOOST_FILESYSTEM_NO_O_CLOEXEC) && defined(FD_CLOEXEC)
+    if (BOOST_UNLIKELY(::fcntl(file.get(), F_SETFD, FD_CLOEXEC) < 0))
+    {
+        err = errno;
+        goto fail;
+    }
+#endif
+
 #if defined(BOOST_FILESYSTEM_USE_STATX)
     struct ::statx path_stat;
-    if (BOOST_UNLIKELY(invoke_statx(AT_FDCWD, p.c_str(), AT_NO_AUTOMOUNT, STATX_TYPE | STATX_SIZE, &path_stat) < 0))
+    if (BOOST_UNLIKELY(invoke_statx(file.get(), "", AT_EMPTY_PATH | AT_NO_AUTOMOUNT, STATX_TYPE | STATX_SIZE, &path_stat) < 0))
     {
-        emit_error(errno, p, ec, "boost::filesystem::is_empty");
-        return false;
+        err = errno;
+        goto fail;
     }
 
-    if (BOOST_UNLIKELY((path_stat.stx_mask & STATX_TYPE) != STATX_TYPE))
+    if (BOOST_UNLIKELY((path_stat.stx_mask & (STATX_TYPE | STATX_SIZE)) != (STATX_TYPE | STATX_SIZE)))
     {
-    fail_unsupported:
-        emit_error(BOOST_ERROR_NOT_SUPPORTED, p, ec, "boost::filesystem::is_empty");
-        return false;
+        err = BOOST_ERROR_NOT_SUPPORTED;
+        goto fail;
     }
-
-    if (S_ISDIR(get_mode(path_stat)))
-        return is_empty_directory(p, ec);
-
-    if (BOOST_UNLIKELY((path_stat.stx_mask & STATX_SIZE) != STATX_SIZE))
-        goto fail_unsupported;
-
-    return get_size(path_stat) == 0u;
 #else
     struct ::stat path_stat;
-    if (BOOST_UNLIKELY(::stat(p.c_str(), &path_stat) < 0))
+    if (BOOST_UNLIKELY(::fstat(file.get(), &path_stat) < 0))
     {
-        emit_error(errno, p, ec, "boost::filesystem::is_empty");
-        return false;
+        err = errno;
+        goto fail;
+    }
+#endif
+
+    const mode_t mode = get_mode(path_stat);
+    if (S_ISDIR(mode))
+        return is_empty_directory(std::move(file), p, ec);
+
+    if (BOOST_UNLIKELY(!S_ISREG(mode)))
+    {
+        err = BOOST_ERROR_NOT_SUPPORTED;
+        goto fail;
     }
 
-    return S_ISDIR(get_mode(path_stat)) ? is_empty_directory(p, ec) : get_size(path_stat) == 0u;
-#endif
+    return get_size(path_stat) == 0u;
 
 #else // defined(BOOST_POSIX_API)
 
-    WIN32_FILE_ATTRIBUTE_DATA fad;
-    if (BOOST_UNLIKELY(!::GetFileAttributesExW(p.c_str(), ::GetFileExInfoStandard, &fad)))
+    unique_handle h(create_file_handle(
+        p.c_str(),
+        FILE_READ_ATTRIBUTES | FILE_LIST_DIRECTORY,
+        FILE_SHARE_DELETE | FILE_SHARE_READ | FILE_SHARE_WRITE,
+        nullptr,
+        OPEN_EXISTING,
+        FILE_FLAG_BACKUP_SEMANTICS));
+
+    if (BOOST_UNLIKELY(!h))
     {
-        emit_error(BOOST_ERRNO, p, ec, "boost::filesystem::is_empty");
+    fail_errno:
+        const DWORD err = BOOST_ERRNO;
+        emit_error(err, p, ec, "boost::filesystem::is_empty");
         return false;
     }
 
-    return (fad.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) ? is_empty_directory(p, ec) : (!fad.nFileSizeHigh && !fad.nFileSizeLow);
+    BY_HANDLE_FILE_INFORMATION info;
+    if (BOOST_UNLIKELY(!::GetFileInformationByHandle(h.get(), &info)))
+        goto fail_errno;
+
+    if ((info.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != 0u)
+        return is_empty_directory(std::move(h), p, ec);
+
+    return (info.nFileSizeHigh | info.nFileSizeLow) == 0u;
 
 #endif // defined(BOOST_POSIX_API)
 }
@@ -4110,7 +4203,7 @@ std::time_t creation_time(path const& p, system::error_code* ec)
 #else // defined(BOOST_POSIX_API)
 
     // See the comment in last_write_time regarding access rights used here for GetFileTime.
-    handle_wrapper hw(create_file_handle(
+    unique_handle hw(create_file_handle(
         p.c_str(),
         FILE_READ_ATTRIBUTES | FILE_READ_EA,
         FILE_SHARE_DELETE | FILE_SHARE_READ | FILE_SHARE_WRITE,
@@ -4119,7 +4212,7 @@ std::time_t creation_time(path const& p, system::error_code* ec)
         FILE_FLAG_BACKUP_SEMANTICS));
 
     DWORD err;
-    if (BOOST_UNLIKELY(hw.handle == INVALID_HANDLE_VALUE))
+    if (BOOST_UNLIKELY(!hw))
     {
     fail_errno:
         err = BOOST_ERRNO;
@@ -4129,7 +4222,7 @@ std::time_t creation_time(path const& p, system::error_code* ec)
     }
 
     FILETIME ct;
-    if (BOOST_UNLIKELY(!::GetFileTime(hw.handle, &ct, nullptr, nullptr)))
+    if (BOOST_UNLIKELY(!::GetFileTime(hw.get(), &ct, nullptr, nullptr)))
         goto fail_errno;
 
     std::time_t t;
@@ -4178,7 +4271,7 @@ std::time_t last_write_time(path const& p, system::error_code* ec)
     // GetFileTime is documented to require GENERIC_READ access right, but this causes problems if the file
     // is opened by another process without FILE_SHARE_READ. In practice, FILE_READ_ATTRIBUTES works, and
     // FILE_READ_EA is also added for good measure, in case if it matters for SMBv1.
-    handle_wrapper hw(create_file_handle(
+    unique_handle hw(create_file_handle(
         p.c_str(),
         FILE_READ_ATTRIBUTES | FILE_READ_EA,
         FILE_SHARE_DELETE | FILE_SHARE_READ | FILE_SHARE_WRITE,
@@ -4187,7 +4280,7 @@ std::time_t last_write_time(path const& p, system::error_code* ec)
         FILE_FLAG_BACKUP_SEMANTICS));
 
     DWORD err;
-    if (BOOST_UNLIKELY(hw.handle == INVALID_HANDLE_VALUE))
+    if (BOOST_UNLIKELY(!hw))
     {
     fail_errno:
         err = BOOST_ERRNO;
@@ -4197,7 +4290,7 @@ std::time_t last_write_time(path const& p, system::error_code* ec)
     }
 
     FILETIME lwt;
-    if (BOOST_UNLIKELY(!::GetFileTime(hw.handle, nullptr, nullptr, &lwt)))
+    if (BOOST_UNLIKELY(!::GetFileTime(hw.get(), nullptr, nullptr, &lwt)))
         goto fail_errno;
 
     std::time_t t;
@@ -4252,7 +4345,7 @@ void last_write_time(path const& p, const std::time_t new_time, system::error_co
 
 #else // defined(BOOST_POSIX_API)
 
-    handle_wrapper hw(create_file_handle(
+    unique_handle hw(create_file_handle(
         p.c_str(),
         FILE_WRITE_ATTRIBUTES,
         FILE_SHARE_DELETE | FILE_SHARE_READ | FILE_SHARE_WRITE,
@@ -4261,7 +4354,7 @@ void last_write_time(path const& p, const std::time_t new_time, system::error_co
         FILE_FLAG_BACKUP_SEMANTICS));
 
     DWORD err;
-    if (BOOST_UNLIKELY(hw.handle == INVALID_HANDLE_VALUE))
+    if (BOOST_UNLIKELY(!hw))
     {
     fail_errno:
         err = BOOST_ERRNO;
@@ -4275,7 +4368,7 @@ void last_write_time(path const& p, const std::time_t new_time, system::error_co
     if (BOOST_UNLIKELY(err != 0u))
         goto fail;
 
-    if (BOOST_UNLIKELY(!::SetFileTime(hw.handle, nullptr, nullptr, &lwt)))
+    if (BOOST_UNLIKELY(!::SetFileTime(hw.get(), nullptr, nullptr, &lwt)))
         goto fail_errno;
 
 #endif // defined(BOOST_POSIX_API)
@@ -4411,7 +4504,7 @@ path read_symlink(path const& p, system::error_code* ec)
                 break;
             }
 
-            boost::scoped_array< char > buf(new char[path_max]);
+            std::unique_ptr< char[] > buf(new char[path_max]);
             result = ::readlink(path_str, buf.get(), path_max);
             if (BOOST_UNLIKELY(result < 0))
             {
@@ -4427,7 +4520,7 @@ path read_symlink(path const& p, system::error_code* ec)
 
 #else
 
-    handle_wrapper h(create_file_handle(
+    unique_handle h(create_file_handle(
         p.c_str(),
         FILE_READ_ATTRIBUTES,
         FILE_SHARE_DELETE | FILE_SHARE_READ | FILE_SHARE_WRITE,
@@ -4436,7 +4529,7 @@ path read_symlink(path const& p, system::error_code* ec)
         FILE_FLAG_BACKUP_SEMANTICS | FILE_FLAG_OPEN_REPARSE_POINT));
 
     DWORD error;
-    if (BOOST_UNLIKELY(h.handle == INVALID_HANDLE_VALUE))
+    if (BOOST_UNLIKELY(!h))
     {
     return_last_error:
         error = ::GetLastError();
@@ -4444,9 +4537,9 @@ path read_symlink(path const& p, system::error_code* ec)
         return symlink_path;
     }
 
-    boost::scoped_ptr< reparse_data_buffer_with_storage > buf(new reparse_data_buffer_with_storage);
+    std::unique_ptr< reparse_data_buffer_with_storage > buf(new reparse_data_buffer_with_storage);
     DWORD sz = 0u;
-    if (BOOST_UNLIKELY(!::DeviceIoControl(h.handle, FSCTL_GET_REPARSE_POINT, nullptr, 0, buf.get(), sizeof(*buf), &sz, nullptr)))
+    if (BOOST_UNLIKELY(!::DeviceIoControl(h.get(), FSCTL_GET_REPARSE_POINT, nullptr, 0, buf.get(), sizeof(*buf), &sz, nullptr)))
         goto return_last_error;
 
     const wchar_t* buffer;
@@ -4720,7 +4813,7 @@ path temp_directory_path(system::error_code* ec)
             return path();
         }
 
-        boost::scoped_array< wchar_t > buf(new wchar_t[size]);
+        std::unique_ptr< wchar_t[] > buf(new wchar_t[size]);
         if (BOOST_UNLIKELY(::GetWindowsDirectoryW(buf.get(), size) == 0))
             goto getwindir_error;
 
@@ -4765,7 +4858,7 @@ path system_complete(path const& p, system::error_code* ec)
     if (len < buf_size) // len does not include null termination character
         return path(&buf[0]);
 
-    boost::scoped_array< wchar_t > big_buf(new wchar_t[len]);
+    std::unique_ptr< wchar_t[] > big_buf(new wchar_t[len]);
 
     return error(get_full_path_name(p, len, big_buf.get(), &pfn) == 0 ? BOOST_ERRNO : 0, p, ec, "boost::filesystem::system_complete") ? path() : path(big_buf.get());
 
@@ -4775,13 +4868,20 @@ path system_complete(path const& p, system::error_code* ec)
 BOOST_FILESYSTEM_DECL
 path weakly_canonical_v3(path const& p, path const& base, system::error_code* ec)
 {
+    path source(detail::absolute_v3(p, base, ec));
+    if (ec && *ec)
+    {
+    return_empty_path:
+        return path();
+    }
+
     system::error_code local_ec;
-    const path::iterator p_end(p.end());
+    const path::iterator source_end(source.end());
 
 #if defined(BOOST_POSIX_API)
 
-    path::iterator itr(p_end);
-    path head(p);
+    path::iterator itr(source_end);
+    path head(source);
     for (; !head.empty(); path_algorithms::decrement_v4(itr))
     {
         file_status head_status(detail::status_impl(head, &local_ec));
@@ -4791,7 +4891,7 @@ path weakly_canonical_v3(path const& p, path const& base, system::error_code* ec
                 BOOST_FILESYSTEM_THROW(filesystem_error("boost::filesystem::weakly_canonical", head, local_ec));
 
             *ec = local_ec;
-            return path();
+            goto return_empty_path;
         }
 
         if (head_status.type() != fs::file_not_found)
@@ -4818,18 +4918,18 @@ path weakly_canonical_v3(path const& p, path const& base, system::error_code* ec
     // Also, avoid querying status of the root name such as \\?\c: as CreateFileW returns ERROR_INVALID_FUNCTION for
     // such path. Querying the status of a root name such as c: is also not right as this path refers to the current
     // directory on drive C:, which is not what we want to test for existence anyway.
-    path::iterator itr(p.begin());
+    path::iterator itr(source.begin());
     path head;
-    if (p.has_root_name())
+    if (source.has_root_name())
     {
-        BOOST_ASSERT(itr != p_end);
+        BOOST_ASSERT(itr != source_end);
         head = *itr;
         path_algorithms::increment_v4(itr);
     }
 
-    if (p.has_root_directory())
+    if (source.has_root_directory())
     {
-        BOOST_ASSERT(itr != p_end);
+        BOOST_ASSERT(itr != source_end);
         // Convert generic separator returned by the iterator for the root directory to
         // the preferred separator.
         head += path::preferred_separator;
@@ -4845,28 +4945,28 @@ path weakly_canonical_v3(path const& p, path const& base, system::error_code* ec
                 BOOST_FILESYSTEM_THROW(filesystem_error("boost::filesystem::weakly_canonical", head, local_ec));
 
             *ec = local_ec;
-            return path();
+            goto return_empty_path;
         }
 
         if (head_status.type() == fs::file_not_found)
         {
             // If the root path does not exist then no path element exists
-            itr = p.begin();
+            itr = source.begin();
             head.clear();
             goto skip_head;
         }
     }
 
-    for (; itr != p_end; path_algorithms::increment_v4(itr))
+    for (; itr != source_end; path_algorithms::increment_v4(itr))
     {
-        path const& p_elem = *itr;
+        path const& source_elem = *itr;
 
         // Avoid querying status of paths containing dot and dot-dot elements, as this will break
         // if the root name starts with "\\?\".
-        if (path_algorithms::compare_v4(p_elem, dot_p) == 0)
+        if (path_algorithms::compare_v4(source_elem, dot_p) == 0)
             continue;
 
-        if (path_algorithms::compare_v4(p_elem, dot_dot_p) == 0)
+        if (path_algorithms::compare_v4(source_elem, dot_dot_p) == 0)
         {
             if (head.has_relative_path())
                 head.remove_filename_and_trailing_separators();
@@ -4874,7 +4974,7 @@ path weakly_canonical_v3(path const& p, path const& base, system::error_code* ec
             continue;
         }
 
-        path_algorithms::append_v4(head, p_elem);
+        path_algorithms::append_v4(head, source_elem);
 
         file_status head_status(detail::status_impl(head, &local_ec));
         if (BOOST_UNLIKELY(head_status.type() == fs::status_error))
@@ -4883,7 +4983,7 @@ path weakly_canonical_v3(path const& p, path const& base, system::error_code* ec
                 BOOST_FILESYSTEM_THROW(filesystem_error("boost::filesystem::weakly_canonical", head, local_ec));
 
             *ec = local_ec;
-            return path();
+            goto return_empty_path;
         }
 
         if (head_status.type() == fs::file_not_found)
@@ -4899,7 +4999,7 @@ skip_head:;
 
     path tail;
     bool tail_has_dots = false;
-    for (; itr != p_end; path_algorithms::increment_v4(itr))
+    for (; itr != source_end; path_algorithms::increment_v4(itr))
     {
         path const& tail_elem = *itr;
         path_algorithms::append_v4(tail, tail_elem);
@@ -4915,7 +5015,7 @@ skip_head:;
             BOOST_FILESYSTEM_THROW(filesystem_error("boost::filesystem::weakly_canonical", head, local_ec));
 
         *ec = local_ec;
-        return path();
+        goto return_empty_path;
     }
 
     if (BOOST_LIKELY(!tail.empty()))
@@ -4924,7 +5024,7 @@ skip_head:;
 
         // optimization: only normalize if tail had dot or dot-dot element
         if (tail_has_dots)
-            return path_algorithms::lexically_normal_v4(head);
+            head = path_algorithms::lexically_normal_v4(head);
     }
 
     return head;
@@ -4933,13 +5033,20 @@ skip_head:;
 BOOST_FILESYSTEM_DECL
 path weakly_canonical_v4(path const& p, path const& base, system::error_code* ec)
 {
+    path source(detail::absolute_v4(p, base, ec));
+    if (ec && *ec)
+    {
+    return_empty_path:
+        return path();
+    }
+
     system::error_code local_ec;
-    const path::iterator p_end(p.end());
+    const path::iterator source_end(source.end());
 
 #if defined(BOOST_POSIX_API)
 
-    path::iterator itr(p_end);
-    path head(p);
+    path::iterator itr(source_end);
+    path head(source);
     for (; !head.empty(); path_algorithms::decrement_v4(itr))
     {
         file_status head_status(detail::status_impl(head, &local_ec));
@@ -4949,7 +5056,7 @@ path weakly_canonical_v4(path const& p, path const& base, system::error_code* ec
                 BOOST_FILESYSTEM_THROW(filesystem_error("boost::filesystem::weakly_canonical", head, local_ec));
 
             *ec = local_ec;
-            return path();
+            goto return_empty_path;
         }
 
         if (head_status.type() != fs::file_not_found)
@@ -4976,18 +5083,18 @@ path weakly_canonical_v4(path const& p, path const& base, system::error_code* ec
     // Also, avoid querying status of the root name such as \\?\c: as CreateFileW returns ERROR_INVALID_FUNCTION for
     // such path. Querying the status of a root name such as c: is also not right as this path refers to the current
     // directory on drive C:, which is not what we want to test for existence anyway.
-    path::iterator itr(p.begin());
+    path::iterator itr(source.begin());
     path head;
-    if (p.has_root_name())
+    if (source.has_root_name())
     {
-        BOOST_ASSERT(itr != p_end);
+        BOOST_ASSERT(itr != source_end);
         head = *itr;
         path_algorithms::increment_v4(itr);
     }
 
-    if (p.has_root_directory())
+    if (source.has_root_directory())
     {
-        BOOST_ASSERT(itr != p_end);
+        BOOST_ASSERT(itr != source_end);
         // Convert generic separator returned by the iterator for the root directory to
         // the preferred separator.
         head += path::preferred_separator;
@@ -5003,28 +5110,28 @@ path weakly_canonical_v4(path const& p, path const& base, system::error_code* ec
                 BOOST_FILESYSTEM_THROW(filesystem_error("boost::filesystem::weakly_canonical", head, local_ec));
 
             *ec = local_ec;
-            return path();
+            goto return_empty_path;
         }
 
         if (head_status.type() == fs::file_not_found)
         {
             // If the root path does not exist then no path element exists
-            itr = p.begin();
+            itr = source.begin();
             head.clear();
             goto skip_head;
         }
     }
 
-    for (; itr != p_end; path_algorithms::increment_v4(itr))
+    for (; itr != source_end; path_algorithms::increment_v4(itr))
     {
-        path const& p_elem = *itr;
+        path const& source_elem = *itr;
 
         // Avoid querying status of paths containing dot and dot-dot elements, as this will break
         // if the root name starts with "\\?\".
-        if (path_algorithms::compare_v4(p_elem, dot_p) == 0)
+        if (path_algorithms::compare_v4(source_elem, dot_p) == 0)
             continue;
 
-        if (path_algorithms::compare_v4(p_elem, dot_dot_p) == 0)
+        if (path_algorithms::compare_v4(source_elem, dot_dot_p) == 0)
         {
             if (head.has_relative_path())
                 head.remove_filename_and_trailing_separators();
@@ -5032,7 +5139,7 @@ path weakly_canonical_v4(path const& p, path const& base, system::error_code* ec
             continue;
         }
 
-        path_algorithms::append_v4(head, p_elem);
+        path_algorithms::append_v4(head, source_elem);
 
         file_status head_status(detail::status_impl(head, &local_ec));
         if (BOOST_UNLIKELY(head_status.type() == fs::status_error))
@@ -5041,7 +5148,7 @@ path weakly_canonical_v4(path const& p, path const& base, system::error_code* ec
                 BOOST_FILESYSTEM_THROW(filesystem_error("boost::filesystem::weakly_canonical", head, local_ec));
 
             *ec = local_ec;
-            return path();
+            goto return_empty_path;
         }
 
         if (head_status.type() == fs::file_not_found)
@@ -5057,7 +5164,7 @@ skip_head:;
 
     path tail;
     bool tail_has_dots = false;
-    for (; itr != p_end; path_algorithms::increment_v4(itr))
+    for (; itr != source_end; path_algorithms::increment_v4(itr))
     {
         path const& tail_elem = *itr;
         path_algorithms::append_v4(tail, tail_elem);
@@ -5073,7 +5180,7 @@ skip_head:;
             BOOST_FILESYSTEM_THROW(filesystem_error("boost::filesystem::weakly_canonical", head, local_ec));
 
         *ec = local_ec;
-        return path();
+        goto return_empty_path;
     }
 
     if (BOOST_LIKELY(!tail.empty()))
@@ -5082,7 +5189,7 @@ skip_head:;
 
         // optimization: only normalize if tail had dot or dot-dot element
         if (tail_has_dots)
-            return path_algorithms::lexically_normal_v4(head);
+            head = path_algorithms::lexically_normal_v4(head);
     }
 
     return head;

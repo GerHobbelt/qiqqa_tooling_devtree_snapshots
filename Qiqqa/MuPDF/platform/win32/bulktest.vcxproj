@@ -20,7 +20,6 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8156C20C-DD56-4200-B4A6-40C056EB0A45}</ProjectGuid>
-    <RootNamespace>bulktest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,7 +69,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup>
@@ -109,7 +108,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -236,8 +235,14 @@
     <ProjectReference Include="libbrotli_tools.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7428ffd7760d}</Project>
     </ProjectReference>
+    <ProjectReference Include="libchaos.vcxproj">
+      <Project>{6769b987-26e9-4cb8-81fe-715d9e5ce4d9}</Project>
+    </ProjectReference>
     <ProjectReference Include="libcpp-terminal.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff2367fa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libcpptoml.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff904167}</Project>
     </ProjectReference>
     <ProjectReference Include="libcrow_examples.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-8518fff84e35}</Project>
@@ -248,6 +253,9 @@
     <ProjectReference Include="libdirent.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff47ce6b}</Project>
     </ProjectReference>
+    <ProjectReference Include="libedit-distance.vcxproj">
+      <Project>{6881e75c-9a4f-4bae-8bf8-44dc4e2dca8c}</Project>
+    </ProjectReference>
     <ProjectReference Include="libexpat.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff83ffca}</Project>
     </ProjectReference>
@@ -256,6 +264,12 @@
     </ProjectReference>
     <ProjectReference Include="libfontconfig.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff69837f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libfph-table.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffc3a9ef}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libgbenchmark.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff6fa4e9}</Project>
     </ProjectReference>
     <ProjectReference Include="libgetopt.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518110e57b1}</Project>
@@ -266,14 +280,23 @@
     <ProjectReference Include="libglob.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff518d62}</Project>
     </ProjectReference>
+    <ProjectReference Include="libgumbo-libxml.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff28ced2}</Project>
+    </ProjectReference>
     <ProjectReference Include="libgumbo-parser_examples.vcxproj">
       <Project>{f69bff26-21a8-4a22-bc20-888f1e3a1979}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libgumbo-query.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff51b60c}</Project>
     </ProjectReference>
     <ProjectReference Include="libhighway.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff021a57}</Project>
     </ProjectReference>
     <ProjectReference Include="libicu.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518fff6b65d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libjbig2enc.vcxproj">
+      <Project>{83ac0bda-89b9-4703-a77d-8049ac3a0d04}</Project>
     </ProjectReference>
     <ProjectReference Include="libjpeginfo.vcxproj">
       <Project>{e74f29fa-f143-4adc-b92c-6af1a8e4a403}</Project>
@@ -286,9 +309,6 @@
     </ProjectReference>
     <ProjectReference Include="libleptonica_tools.vcxproj">
       <Project>{ca0bda38-89b9-4703-a77d-8049acf23027}</Project>
-    </ProjectReference>
-    <ProjectReference Include="libmupdf.vcxproj">
-      <Project>{5f615f91-dff8-4f05-bf48-6222b7d86519}</Project>
     </ProjectReference>
     <ProjectReference Include="libnanosvg.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-751bff971987}</Project>
@@ -335,6 +355,18 @@
     <ProjectReference Include="libQuickJS_tests.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff0e57b2}</Project>
     </ProjectReference>
+    <ProjectReference Include="libreplxx.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518f0fe817a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libreplxx_examples.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518111e817a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libspdlog.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff35655c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libspdlog_benchmark.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff35633c}</Project>
+    </ProjectReference>
     <ProjectReference Include="libsqlite-amalgamation.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ffe3a7bc}</Project>
     </ProjectReference>
@@ -361,6 +393,9 @@
     </ProjectReference>
     <ProjectReference Include="lib_nas_lockfile.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ff0a15c6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="linenoise.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffac1208}</Project>
     </ProjectReference>
     <ProjectReference Include="MuPDFLib_static.vcxproj">
       <Project>{a60d8644-5815-4d29-8970-7518ff518d62}</Project>
@@ -397,6 +432,9 @@
     </ProjectReference>
     <ProjectReference Include="libmujs.vcxproj">
       <Project>{5edcf4fd-0291-4fb9-8d96-858957ca5e3c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libmupdf.vcxproj">
+      <Project>{5f615f91-dff8-4f05-bf48-6222b7d86519}</Project>
     </ProjectReference>
     <ProjectReference Include="libbrotli.vcxproj">
       <Project>{a60d8644-5a1c-4d29-8970-7518ffd7760d}</Project>

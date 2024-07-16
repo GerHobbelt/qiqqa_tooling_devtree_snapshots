@@ -1424,6 +1424,8 @@ enum
 	FZ_DONT_INTERPOLATE_IMAGES = 1,
 	FZ_MAINTAIN_CONTAINER_STACK = 2,
 	FZ_NO_CACHE = 4,
+	FZ_SKIP_INVISIBLE_TEXT = 8,
+	FZ_SKIP_TEXT = 16,
 };
 \end{lstlisting}
 
@@ -2832,7 +2834,7 @@ The exact function to call to create an output stream depends on the specific st
 	close: non-zero if we should close the file when the fz_output
 	is closed.
 */
-fz_output *fz_new_output_with_file_ptr(fz_context *ctx, FILE *file, int close);
+fz_output *fz_new_output_with_file_ptr(fz_context *ctx, FILE *file, const char *filename, int close);
 
 /*
 	fz_new_output_with_path: Open an output stream that writes to a
@@ -5286,7 +5288,11 @@ Support for the different document types supported by MuPDF is given by  a set o
 /* #define FZ_ENABLE_IMG 1 */
 /* #define FZ_ENABLE_TIFF 1 */
 /* #define FZ_ENABLE_HTML 1 */
+/* #define FZ_ENABLE_FB2 1 */
+/* #define FZ_ENABLE_MOBI 1 */
 /* #define FZ_ENABLE_EPUB 1 */
+/* #define FZ_ENABLE_OFFICE 1 */
+/* #define FZ_ENABLE_TXT 1 */
 \end{lstlisting}
 
 For instance to omit support for HTML, we would define \texttt{FZ\_ENABLE\_HTML} to be 0. Note that some document handlers share substantial parts of their code with other ones; for example the HTML and EPUB document ages share a large amount of code, so disabling just one of them will not make much difference to the overall code size.

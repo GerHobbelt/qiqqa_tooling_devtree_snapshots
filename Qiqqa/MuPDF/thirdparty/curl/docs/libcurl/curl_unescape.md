@@ -9,11 +9,13 @@ See-also:
   - curl_easy_escape (3)
   - curl_easy_unescape (3)
   - curl_free (3)
+Protocol:
+  - All
 ---
 
 # NAME
 
-curl_unescape - URL decodes the given string
+curl_unescape - URL decode a string
 
 # SYNOPSIS
 

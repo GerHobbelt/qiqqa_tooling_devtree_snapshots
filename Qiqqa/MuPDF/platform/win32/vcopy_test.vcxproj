@@ -20,7 +20,6 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C7BBAB70-0FA2-4660-B47C-35F31B559AEE}</ProjectGuid>
-    <RootNamespace>vcopy_test</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,7 +69,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -106,7 +105,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -207,14 +206,14 @@
       <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/vcopy/include;../../thirdparty/monolithic_tmplt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ProjectReference Include="libvcopy.vcxproj">
-      <Project>{a60d8644-5a1c-4d29-8970-7518ffcb1dcf}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ItemGroup>
+    <ProjectReference Include="libvcopy.vcxproj">
+      <Project>{5a7c1b31-1eb5-4f0c-8873-355e5e1e889c}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <ClCompile Include="../../thirdparty/owemdjee/vcopy/test/monolithic-main.c" />
     <ClCompile Include="../../thirdparty/owemdjee/vcopy/test/test.c" />
@@ -223,9 +222,10 @@
     <ClInclude Include="../../thirdparty/owemdjee/vcopy/include/vcopy/vcopy.h" />
     <ClInclude Include="../../thirdparty/owemdjee/vcopy/test/monolithic_examples.h" />
     <Text Include="../../thirdparty/owemdjee/vcopy/CMakeLists.txt" />
-    <Text Include="../../thirdparty/owemdjee/vcopy/DESIGN.md" />
     <Text Include="../../thirdparty/owemdjee/vcopy/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/vcopy/README.md" />
+    <Text Include="../../thirdparty/owemdjee/vcopy/docs/vcopy/Design Notes.md" />
+    <Text Include="../../thirdparty/owemdjee/vcopy/docs/vcopy/TODO - Features.md" />
     <Text Include="../../thirdparty/owemdjee/vcopy/test/CMakeLists.txt" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >

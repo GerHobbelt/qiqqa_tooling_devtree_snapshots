@@ -4,12 +4,10 @@ cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
 include(CTest)
 include(cmake/PreventInSourceBuilds.cmake)
 
-# Debug build.
 set(CMAKE_VERBOSE_MAKEFILE ON)
-set(CMAKE_BUILD_TYPE Debug)
 
 # Set our output directories.
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/lib)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
 
 # Create library directory if it does not exist.

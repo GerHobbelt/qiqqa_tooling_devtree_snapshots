@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libfort</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FFBB62BD}</ProjectGuid>
-    <RootNamespace>libfort</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -259,14 +257,14 @@
     <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/bb_tests/test_table_basic.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/bb_tests/test_table_border_style.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/bb_tests/test_table_properties.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/bb_tests_cpp/test_table_basic.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/bb_tests_cpp/test_table_properties.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/bb_tests_cpp/test_table_basic_cpp.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/bb_tests_cpp/test_table_properties_cpp.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/main_test.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/main_test_cpp.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/package_tests/pkg_foo-app.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/package_tests/pkg_foo-lib.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/test_utils.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/test_utils.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/test_utils_cpp.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/tests.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/wb_tests/test_string_buffer.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libfort/tests/wb_tests/test_table_geometry.c" />

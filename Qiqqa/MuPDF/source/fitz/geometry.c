@@ -373,9 +373,14 @@ fz_normalize_vector(fz_point p)
 
 /* Rectangles and bounding boxes */
 
+#if 0
+
 /* biggest and smallest integers that a float can represent perfectly (i.e. 24 bits) */
 #define MAX_SAFE_INT 16777216
 #define MIN_SAFE_INT -16777216
+
+#endif
+
 
 const fz_rect fz_infinite_rect = { FZ_MIN_INF_RECT, FZ_MIN_INF_RECT, FZ_MAX_INF_RECT, FZ_MAX_INF_RECT };
 const fz_rect fz_empty_rect = { FZ_MAX_INF_RECT, FZ_MAX_INF_RECT, FZ_MIN_INF_RECT, FZ_MIN_INF_RECT };
@@ -387,6 +392,9 @@ const fz_irect fz_empty_irect = { FZ_MAX_INF_RECT, FZ_MAX_INF_RECT, FZ_MIN_INF_R
 const fz_irect fz_invalid_irect = { 0, 0, -1, -1 };
 const fz_irect fz_unit_irect = { 0, 0, 1, 1 };
 
+const fz_quad fz_infinite_quad = { { -INFINITY, INFINITY}, {INFINITY, INFINITY}, {-INFINITY, -INFINITY}, {INFINITY, -INFINITY} };
+const fz_quad fz_invalid_quad = { {NAN, NAN}, {NAN, NAN}, {NAN, NAN}, {NAN, NAN} };
+
 fz_irect
 fz_irect_from_rect(fz_rect r)
 {
@@ -396,10 +404,10 @@ fz_irect_from_rect(fz_rect r)
 	if (!fz_is_valid_rect(r))
 		return fz_invalid_irect;
 
-	b.x0 = fz_clamp(floorf(r.x0), MIN_SAFE_INT, MAX_SAFE_INT);
-	b.y0 = fz_clamp(floorf(r.y0), MIN_SAFE_INT, MAX_SAFE_INT);
-	b.x1 = fz_clamp(ceilf(r.x1), MIN_SAFE_INT, MAX_SAFE_INT);
-	b.y1 = fz_clamp(ceilf(r.y1), MIN_SAFE_INT, MAX_SAFE_INT);
+	b.x0 = fz_clamp(floorf(r.x0), FZ_MIN_SAFE_INT, FZ_MAX_SAFE_INT);
+	b.y0 = fz_clamp(floorf(r.y0), FZ_MIN_SAFE_INT, FZ_MAX_SAFE_INT);
+	b.x1 = fz_clamp(ceilf(r.x1), FZ_MIN_SAFE_INT, FZ_MAX_SAFE_INT);
+	b.y1 = fz_clamp(ceilf(r.y1), FZ_MIN_SAFE_INT, FZ_MAX_SAFE_INT);
 
 	return b;
 }
@@ -426,13 +434,13 @@ fz_round_rect(fz_rect r)
 	float f;
 
 	f = floorf(r.x0 + 0.001f);
-	b.x0 = fz_clamp(f, MIN_SAFE_INT, MAX_SAFE_INT);
+	b.x0 = fz_clamp(f, FZ_MIN_SAFE_INT, FZ_MAX_SAFE_INT);
 	f = floorf(r.y0 + 0.001f);
-	b.y0 = fz_clamp(f, MIN_SAFE_INT, MAX_SAFE_INT);
+	b.y0 = fz_clamp(f, FZ_MIN_SAFE_INT, FZ_MAX_SAFE_INT);
 	f = ceilf(r.x1 - 0.001f);
-	b.x1 = fz_clamp(f, MIN_SAFE_INT, MAX_SAFE_INT);
+	b.x1 = fz_clamp(f, FZ_MIN_SAFE_INT, FZ_MAX_SAFE_INT);
 	f = ceilf(r.y1 - 0.001f);
-	b.y1 = fz_clamp(f, MIN_SAFE_INT, MAX_SAFE_INT);
+	b.y1 = fz_clamp(f, FZ_MIN_SAFE_INT, FZ_MAX_SAFE_INT);
 
 	return b;
 }
@@ -658,10 +666,86 @@ int fz_rects_overlap(fz_rect a, fz_rect b)
 	return 1;
 }
 
+int
+fz_is_valid_quad(fz_quad q)
+{
+	return (!isnan(q.ll.x) &&
+		!isnan(q.ll.y) &&
+		!isnan(q.ul.x) &&
+		!isnan(q.ul.y) &&
+		!isnan(q.lr.x) &&
+		!isnan(q.lr.y) &&
+		!isnan(q.ur.x) &&
+		!isnan(q.ur.y));
+}
+
+int
+fz_is_infinite_quad(fz_quad q)
+{
+	/* For a quad to be infinite, all the ordinates need to be infinite. */
+	if (!isinf(q.ll.x) ||
+		!isinf(q.ll.y) ||
+		!isinf(q.ul.x) ||
+		!isinf(q.ul.y) ||
+		!isinf(q.lr.x) ||
+		!isinf(q.lr.y) ||
+		!isinf(q.ur.x) ||
+		!isinf(q.ur.y))
+		return 0;
+
+	/* Just because all the ordinates are infinite, we don't necessarily have an infinite quad. */
+	/* The quad points in order are: ll, ul, ur, lr  OR  reversed:  ll, lr, ur, ul */
+	/* The required points are: (-inf, -inf) (-inf, inf) (inf, inf) (inf, -inf) */
+
+	/* Not the fastest way to code it, but easy to understand! */
+#define INF_QUAD_TEST(A,B,C,D) \
+	if (q.A.x < 0 && q.A.y < 0 && q.B.x < 0 && q.B.y > 0 && q.C.x > 0 && q.C.y > 0 && q.D.x > 0 && q.D.y < 0) return 1
+
+	INF_QUAD_TEST(ll, ul, ur, lr);
+	INF_QUAD_TEST(ul, ur, lr, ll);
+	INF_QUAD_TEST(ur, lr, ll, ul);
+	INF_QUAD_TEST(lr, ll, ul, ur);
+	INF_QUAD_TEST(ll, lr, ur, ul);
+	INF_QUAD_TEST(lr, ur, ul, ll);
+	INF_QUAD_TEST(ur, ul, ll, lr);
+	INF_QUAD_TEST(ul, ll, lr, ur);
+#undef INF_QUAD_TEST
+
+	return 0;
+}
+
+int fz_is_empty_quad(fz_quad q)
+{
+	/* Using "Shoelace" formula */
+	float area;
+
+	if (fz_is_infinite_quad(q))
+		return 0;
+	if (!fz_is_valid_quad(q))
+		return 1; /* All invalid quads are empty */
+
+	area = q.ll.x * q.lr.y +
+		q.lr.x * q.ur.y +
+		q.ur.x * q.ul.y +
+		q.ul.x * q.ll.y -
+		q.lr.x * q.ll.y -
+		q.ur.x * q.lr.y -
+		q.ul.x * q.ur.y -
+		q.ll.x * q.ul.y;
+
+	return area == 0;
+}
+
 fz_rect
 fz_rect_from_quad(fz_quad q)
 {
 	fz_rect r;
+
+	if (!fz_is_valid_quad(q))
+		return fz_invalid_rect;
+	if (fz_is_infinite_quad(q))
+		return fz_infinite_rect;
+
 	r.x0 = MIN4(q.ll.x, q.lr.x, q.ul.x, q.ur.x);
 	r.y0 = MIN4(q.ll.y, q.lr.y, q.ul.y, q.ur.y);
 	r.x1 = MAX4(q.ll.x, q.lr.x, q.ul.x, q.ur.x);
@@ -683,6 +767,11 @@ fz_quad_is_axis_oriented(fz_quad q)
 fz_quad
 fz_transform_quad(fz_quad q, fz_matrix m)
 {
+	if (!fz_is_valid_quad(q))
+		return q;
+	if (fz_is_infinite_quad(q))
+		return q;
+
 	q.ul = fz_transform_point(q.ul, m);
 	q.ur = fz_transform_point(q.ur, m);
 	q.ll = fz_transform_point(q.ll, m);
@@ -694,12 +783,19 @@ fz_quad
 fz_quad_from_rect(fz_rect r)
 {
 	fz_quad q;
+
+	if (!fz_is_valid_rect(r))
+		return fz_invalid_quad;
+	if (fz_is_infinite_rect(r))
+		return fz_infinite_quad;
+
 	q.ul = fz_make_point(r.x0, r.y0);
 	q.ur = fz_make_point(r.x1, r.y0);
 	q.ll = fz_make_point(r.x0, r.y1);
 	q.lr = fz_make_point(r.x1, r.y1);
 	return q;
 }
+
 
 int fz_is_point_inside_rect(fz_point p, fz_rect r)
 {
@@ -711,24 +807,69 @@ int fz_is_point_inside_irect(int x, int y, fz_irect r)
 	return (x >= r.x0 && x < r.x1 && y >= r.y0 && y < r.y1);
 }
 
+/* cross (b-a) with (p-a) */
+static float
+cross(fz_point a, fz_point b, fz_point p)
+{
+	b.x -= a.x;
+	b.y -= a.y;
+	p.x -= a.x;
+	p.y -= a.y;
+	return b.x * p.y - b.y * p.x;
+}
+
 static int fz_is_point_inside_triangle(fz_point p, fz_point a, fz_point b, fz_point c)
 {
-	float s, t, area;
-	s = a.y * c.x - a.x * c.y + (c.y - a.y) * p.x + (a.x - c.x) * p.y;
-	t = a.x * b.y - a.y * b.x + (a.y - b.y) * p.x + (b.x - a.x) * p.y;
+	/* Consider the following:
+	 *
+	 *       P
+	 *      /|
+	 *     / |
+	 *    /  |
+	 * A +---+-------+ B
+	 *       M
+	 *
+	 * The cross product of vector AB and vector AP is the distance PM.
+	 * The sign of this distance depends on what side of the line AB, P lies on.
+	 *
+	 * So, for a triangle ABC, if we take cross products of:
+	 *
+	 *  AB and AP
+	 *  BC and BP
+	 *  CA and CP
+	 *
+	 * P can only be inside the triangle if the signs are all identical.
+	 *
+	 * One of the cross products being 0 indicates that the point is on a line.
+	 * Two of the cross products being 0 indicates that the point is on a vertex.
+	 *
+	 * If 2 of the vertexes are the same, the algorithm still works.
+	 * Iff all 3 of the vertexes are the same, the cross products are all zero. The
+	 * value of p is irrelevant.
+	 */
+	float crossa = cross(a, b, p);
+	float crossb = cross(b, c, p);
+	float crossc = cross(c, a, p);
 
-	if ((s < 0) != (t < 0))
-		return 0;
+	/* Check for degenerate case. All vertexes the same. */
+	if (crossa == 0 && crossb == 0 && crossc == 0)
+		return a.x == p.x && a.y == p.y;
 
-	area = -b.y * c.x + a.y * (c.x - b.x) + a.x * (b.y - c.y) + b.x * c.y;
+	if (crossa >= 0 && crossb >= 0 && crossc >= 0)
+		return 1;
+	if (crossa <= 0 && crossb <= 0 && crossc <= 0)
+		return 1;
 
-	return area < 0 ?
-		(s <= 0 && s + t >= area) :
-		(s >= 0 && s + t <= area);
+	return 0;
 }
 
 int fz_is_point_inside_quad(fz_point p, fz_quad q)
 {
+	if (!fz_is_valid_quad(q))
+		return 0;
+	if (fz_is_infinite_quad(q))
+		return 1;
+
 	return
 		fz_is_point_inside_triangle(p, q.ul, q.ur, q.lr) ||
 		fz_is_point_inside_triangle(p, q.ul, q.lr, q.ll);
@@ -736,6 +877,11 @@ int fz_is_point_inside_quad(fz_point p, fz_quad q)
 
 int fz_is_quad_inside_quad(fz_quad needle, fz_quad haystack)
 {
+	if (!fz_is_valid_quad(needle) || !fz_is_valid_quad(haystack))
+		return 0;
+	if (fz_is_infinite_quad(haystack))
+		return 1;
+
 	return
 		fz_is_point_inside_quad(needle.ul, haystack) &&
 		fz_is_point_inside_quad(needle.ur, haystack) &&

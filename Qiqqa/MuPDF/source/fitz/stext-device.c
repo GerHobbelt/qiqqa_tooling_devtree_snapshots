@@ -1,4 +1,4 @@
-﻿// Copyright (C) 2004-2021 Artifex Software, Inc.
+﻿// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -41,7 +41,7 @@
 fz_layout_block *fz_new_layout(fz_context *ctx)
 {
 	fz_pool *pool = fz_new_pool(ctx);
-	fz_layout_block *block;
+	fz_layout_block *block = NULL;
 	fz_try(ctx)
 	{
 		block = fz_pool_alloc(ctx, pool, sizeof (fz_layout_block));
@@ -54,6 +54,7 @@ fz_layout_block *fz_new_layout(fz_context *ctx)
 		fz_drop_pool(ctx, pool);
 		fz_rethrow(ctx);
 	}
+	assert(block != NULL);
 	return block;
 }
 
@@ -260,6 +261,10 @@ add_block_to_page(fz_context *ctx, fz_stext_page *page)
 	fz_stext_block *block = fz_pool_alloc(ctx, page->pool, sizeof *page->first_block);
 	block->bbox = fz_empty_rect; /* Fixes bug 703267. */
 	block->prev = page->last_block;
+	assert(
+	(page->first_block == NULL && page->last_block == NULL) ||
+	(page->first_block != NULL && page->last_block != NULL)
+	);
 	if (!page->first_block)
 		page->first_block = page->last_block = block;
 	else
@@ -1239,7 +1244,7 @@ fz_stext_begin_metatext(fz_context *ctx, fz_device *dev, fz_metatext meta, const
 	mt->prev = tdev->metatext;
 	tdev->metatext = mt;
 	mt->type = meta;
-	mt->text = fz_strdup(ctx, text);
+	mt->text = text ? fz_strdup(ctx, text) : NULL;
 	mt->bounds = fz_empty_rect;
 }
 
@@ -1684,6 +1689,9 @@ fz_new_stext_device(fz_context *ctx, fz_stext_page *page, const fz_stext_options
 	dev->lastbidi = 0;
 	if (opts)
 		dev->opts = *opts;
+
+	if ((dev->super.flags & FZ_STEXT_PRESERVE_IMAGES) == 0)
+		dev->super.hints |= FZ_DONT_DECODE_IMAGES;
 
 	return (fz_device*)dev;
 }

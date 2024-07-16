@@ -94,7 +94,7 @@ namespace TagLib {
         unsigned int sampleFrames() const;
 
         /*!
-         * Returns true if the file is in AIFF-C format, false if AIFF format.
+         * Returns \c true if the file is in AIFF-C format, \c false if AIFF format.
          */
         bool isAiffC() const;
 
@@ -121,6 +121,7 @@ namespace TagLib {
         void read(File *file);
 
         class PropertiesPrivate;
+        TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
         std::unique_ptr<PropertiesPrivate> d;
       };
     }  // namespace AIFF

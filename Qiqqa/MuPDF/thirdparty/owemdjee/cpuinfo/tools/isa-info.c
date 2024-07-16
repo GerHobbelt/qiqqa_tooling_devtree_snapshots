@@ -76,6 +76,7 @@ int main(int argc, const char** argv) {
 		printf("\tAVX512VP2INTERSECT: %s\n", cpuinfo_has_x86_avx512vp2intersect() ? "yes" : "no");
 		printf("\tAVX512_4VNNIW: %s\n", cpuinfo_has_x86_avx512_4vnniw() ? "yes" : "no");
 		printf("\tAVX512_4FMAPS: %s\n", cpuinfo_has_x86_avx512_4fmaps() ? "yes" : "no");
+                printf("\tAVXVNNI: %s\n", cpuinfo_has_x86_avxvnni() ? "yes" : "no");
 
 
 	printf("Multi-threading extensions:\n");
@@ -180,6 +181,16 @@ int main(int argc, const char** argv) {
 		printf("\tSHA2: %s\n", cpuinfo_has_arm_sha2() ? "yes" : "no");
 		printf("\tPMULL: %s\n", cpuinfo_has_arm_pmull() ? "yes" : "no");
 		printf("\tCRC32: %s\n", cpuinfo_has_arm_crc32() ? "yes" : "no");
+#endif
+#if CPUINFO_ARCH_RISCV32 || CPUINFO_ARCH_RISCV64
+	printf("Instruction sets:\n");
+		printf("\tBase Integer: %s\n", cpuinfo_has_riscv_i() ? "yes" : "no");
+		printf("\tInteger Multiply/Divide: %s\n", cpuinfo_has_riscv_m() ? "yes" : "no");
+		printf("\tAtomics: %s\n", cpuinfo_has_riscv_a() ? "yes" : "no");
+		printf("\tSingle-Precision Floating-Point: %s\n", cpuinfo_has_riscv_f() ? "yes" : "no");
+		printf("\tDouble-Precision Floating-Point: %s\n", cpuinfo_has_riscv_d() ? "yes" : "no");
+		printf("\tCompressed: %s\n", cpuinfo_has_riscv_c() ? "yes" : "no");
+		printf("\tVector: %s\n", cpuinfo_has_riscv_v() ? "yes" : "no");
 #endif
 
 	return EXIT_SUCCESS;

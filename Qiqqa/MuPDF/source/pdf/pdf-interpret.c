@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2023 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -30,7 +30,7 @@
 #if FZ_ENABLE_PDF
 
 /* Maximum number of errors before aborting */
-#define MAX_SYNTAX_ERRORS 100    // TODO: get/check this setting via fz_cookie; some times you want the errors to stop quickly, other times you want to salvage what's left anyway
+#define MAX_SYNTAX_ERRORS 1000    // TODO: get/check this setting via fz_cookie; some times you want the errors to stop quickly, other times you want to salvage what's left anyway
 
 pdf_processor *
 pdf_new_processor(fz_context *ctx, int size)
@@ -51,14 +51,14 @@ pdf_close_processor(fz_context *ctx, pdf_processor *proc)
 {
 	void (*close_processor)(fz_context *ctx, pdf_processor *proc);
 
-	if (!proc)
+	if (!proc || proc->closed)
 		return;
 
+	proc->closed = 1;
 	close_processor = proc->close_processor;
 	if (!close_processor)
 		return;
 
-	proc->close_processor = NULL;
 	close_processor(ctx, proc); /* Tail recursion */
 }
 
@@ -67,12 +67,25 @@ pdf_drop_processor(fz_context *ctx, pdf_processor *proc)
 {
 	if (fz_drop_imp(ctx, proc, &proc->refs))
 	{
-		if (proc->close_processor)
+		if (!proc->closed)
 			fz_warn(ctx, "dropping unclosed PDF processor");
 		if (proc->drop_processor)
 			proc->drop_processor(ctx, proc);
 		fz_free(ctx, proc);
 	}
+}
+
+void pdf_reset_processor(fz_context *ctx, pdf_processor *proc)
+{
+	if (proc == NULL)
+		return;
+
+	proc->closed = 0;
+
+	if (proc->reset_processor == NULL)
+		fz_throw(ctx, FZ_ERROR_GENERIC, "Cannot reset PDF processor");
+
+	proc->reset_processor(ctx, proc);
 }
 
 static void
@@ -139,6 +152,7 @@ parse_inline_image(fz_context *ctx, pdf_csi *csi, fz_stream *stm, char *csname, 
 	fz_var(obj);
 	fz_var(img);
 
+	csname[0] = 0;
 	fz_try(ctx)
 	{
 		obj = pdf_parse_dict(ctx, doc, stm, &doc->lexbuf.base);
@@ -345,7 +359,7 @@ pdf_process_extgstate(fz_context *ctx, pdf_processor *proc, pdf_csi *csi, pdf_ob
 				luminosity = 0;
 
 			tr = pdf_dict_get(ctx, obj, PDF_NAME(TR));
-			if (tr && pdf_name_eq(ctx, tr, PDF_NAME(Identity)))
+			if (!pdf_is_null(ctx, tr) && !pdf_name_eq(ctx, tr, PDF_NAME(Identity)))
 				tr = NULL;
 
 			proc->op_gs_SMask(ctx, proc, xobj, softmask_bc, luminosity, tr);
@@ -364,13 +378,13 @@ pdf_process_Do(fz_context *ctx, pdf_processor *proc, pdf_csi *csi)
 
 	xres = pdf_dict_get(ctx, csi->rdb, PDF_NAME(XObject));
 	xobj = pdf_dict_gets(ctx, xres, csi->name);
-	if (!xobj)
+	if (!pdf_is_dict(ctx, xobj))
 		fz_throw(ctx, FZ_ERROR_SYNTAX, "cannot find XObject resource '%s'", csi->name);
 	subtype = pdf_dict_get(ctx, xobj, PDF_NAME(Subtype));
 	if (pdf_name_eq(ctx, subtype, PDF_NAME(Form)))
 	{
 		pdf_obj *st = pdf_dict_get(ctx, xobj, PDF_NAME(Subtype2));
-		if (st)
+		if (pdf_is_name(ctx, st))
 			subtype = st;
 	}
 	if (!pdf_is_name(ctx, subtype))
@@ -389,7 +403,10 @@ pdf_process_Do(fz_context *ctx, pdf_processor *proc, pdf_csi *csi)
 	{
 		if (proc->op_Do_image)
 		{
-			fz_image *image = pdf_load_image(ctx, csi->doc, xobj);
+			fz_image *image = NULL;
+
+			if (proc->requirements && PDF_PROCESSOR_REQUIRES_DECODED_IMAGES)
+				image = pdf_load_image(ctx, csi->doc, xobj);
 			fz_try(ctx)
 				proc->op_Do_image(ctx, proc, csi->name, image);
 			fz_always(ctx)
@@ -1123,7 +1140,7 @@ pdf_process_raw_contents(fz_context *ctx, pdf_processor *proc, pdf_document *doc
 	pdf_lexbuf buf;
 	fz_stream *stm = NULL;
 
-	if (!stmobj)
+	if (!pdf_is_stream(ctx, stmobj) && !pdf_is_array(ctx, stmobj))
 		return;
 
 	fz_var(stm);

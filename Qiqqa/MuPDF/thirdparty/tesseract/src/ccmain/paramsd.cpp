@@ -20,15 +20,11 @@
 // tesseract from the ui.
 
 // Include automatically generated configuration file if running autoconf.
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #if !GRAPHICS_DISABLED
 
-#include <tesseract/debugheap.h>
-
-#  include "params.h" // for ParamsVectorSet, StringParam, BoolParam
+#  include <tesseract/params.h> // for ParamsVectorSet, StringParam, BoolParam
 #  include "paramsd.h"
 #  include "scrollview.h"     // for SVEvent, ScrollView, SVET_POPUP
 #  include "svmnode.h"        // for SVMenuNode
@@ -62,11 +58,35 @@ static int writeCommands[2];
 FZ_HEAPDBG_TRACKER_SECTION_END_MARKER(_)
 
 // Constructors for the various ParamTypes.
-ParamContent::ParamContent(tesseract::Param *it) {
-  ASSERT0(it != nullptr);
+ParamContent::ParamContent(tesseract::StringParam *it) {
   my_id_ = nrParams;
   nrParams++;
-  it_ = it;
+  param_type_ = VT_STRING;
+  sIt = it;
+  vcMap[my_id_] = this;
+}
+// Constructors for the various ParamTypes.
+ParamContent::ParamContent(tesseract::IntParam *it) {
+  my_id_ = nrParams;
+  nrParams++;
+  param_type_ = VT_INTEGER;
+  iIt = it;
+  vcMap[my_id_] = this;
+}
+// Constructors for the various ParamTypes.
+ParamContent::ParamContent(tesseract::BoolParam *it) {
+  my_id_ = nrParams;
+  nrParams++;
+  param_type_ = VT_BOOLEAN;
+  bIt = it;
+  vcMap[my_id_] = this;
+}
+// Constructors for the various ParamTypes.
+ParamContent::ParamContent(tesseract::DoubleParam *it) {
+  my_id_ = nrParams;
+  nrParams++;
+  param_type_ = VT_DOUBLE;
+  dIt = it;
   vcMap[my_id_] = this;
 }
 
@@ -96,17 +116,47 @@ static void GetFirstWords(const char *s, // source string
 
 // Getter for the name.
 const char *ParamContent::GetName() const {
-  return it_->name_str();
+  if (param_type_ == VT_INTEGER) {
+    return iIt->name_str();
+  } else if (param_type_ == VT_BOOLEAN) {
+    return bIt->name_str();
+  } else if (param_type_ == VT_DOUBLE) {
+    return dIt->name_str();
+  } else if (param_type_ == VT_STRING) {
+    return sIt->name_str();
+  } else {
+    return "ERROR: ParamContent::GetName()";
+  }
 }
 
 // Getter for the description.
 const char *ParamContent::GetDescription() const {
-  return it_->info_str();
+  if (param_type_ == VT_INTEGER) {
+    return iIt->info_str();
+  } else if (param_type_ == VT_BOOLEAN) {
+    return bIt->info_str();
+  } else if (param_type_ == VT_DOUBLE) {
+    return dIt->info_str();
+  } else if (param_type_ == VT_STRING) {
+    return sIt->info_str();
+  } else {
+    return nullptr;
+  }
 }
 
 // Getter for the value.
 std::string ParamContent::GetValue() const {
-  return it_->raw_value_str();
+  std::string result;
+  if (param_type_ == VT_INTEGER) {
+    result += std::to_string(*iIt);
+  } else if (param_type_ == VT_BOOLEAN) {
+    result += std::to_string(*bIt);
+  } else if (param_type_ == VT_DOUBLE) {
+    result += std::to_string(*dIt);
+  } else if (param_type_ == VT_STRING) {
+    result = sIt->c_str();
+  }
+  return result;
 }
 
 // Setter for the value.
@@ -114,7 +164,20 @@ void ParamContent::SetValue(const char *val) {
   // TODO (wanke) Test if the values actually are properly converted.
   // (Quickly visible impacts?)
   changed_ = true;
-  it_->set_value(val);
+  if (param_type_ == VT_INTEGER) {
+    iIt->set_value(atoi(val));
+  } else if (param_type_ == VT_BOOLEAN) {
+    bIt->set_value(atoi(val) != 0);
+  } else if (param_type_ == VT_DOUBLE) {
+    std::stringstream stream(val);
+    // Use "C" locale for reading double value.
+    stream.imbue(std::locale::classic());
+    double d = 0;
+    stream >> d;
+    dIt->set_value(d);
+  } else if (param_type_ == VT_STRING) {
+    sIt->set_value(val);
+  }
 }
 
 // Gets the up to the first 3 prefixes from s (split by _).
@@ -147,9 +210,21 @@ SVMenuNode *ParamsEditor::BuildListOfAllLeaves(tesseract::Tesseract *tess) {
   std::map<const char *, int> amount;
 
   // Add all parameters to a list.
-  tesseract::ParamsVectorSet vec({ &GlobalParams(), &tess->params() });
-  for (auto &param : vec.as_list()) {
-    vc_it.add_after_then_move(new ParamContent(param));
+  int num_iterations = (tess->params() == nullptr) ? 1 : 2;
+  for (int v = 0; v < num_iterations; ++v) {
+    tesseract::ParamsVectors *vec = (v == 0) ? GlobalParams() : tess->params();
+    for (auto &param : vec->int_params()) {
+      vc_it.add_after_then_move(new ParamContent(param));
+    }
+    for (auto &param : vec->bool_params()) {
+      vc_it.add_after_then_move(new ParamContent(param));
+    }
+    for (auto &param : vec->string_params()) {
+      vc_it.add_after_then_move(new ParamContent(param));
+    }
+    for (auto &param : vec->double_params()) {
+      vc_it.add_after_then_move(new ParamContent(param));
+    }
   }
 
   // Count the # of entries starting with a specific prefix.

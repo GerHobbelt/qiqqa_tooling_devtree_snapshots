@@ -48,8 +48,10 @@
  *    The %lrclear and %tbclear parameters give the number of background
  *    pixels to be added to the foreground region.
  *
- *    The %edgeclean parameter is used to remove edge noise, going from
- *    0 (default, no removal) to 15 (maximally aggressive removal).
+ *    The %edgeclean parameter is used to remove edge noise:
+ *      -1: aggressively removes left and right side noise
+ *       0: default, no removal
+ *       1-15: removal of random noise, where 15 is maximally aggressive
  *
  *    The suggested value for %lradd and %tbadd is 50.  Laser printers do not
  *    print foreground pixels very close to the page edges, and using a
@@ -107,7 +109,7 @@ l_int32 main(int    argc,
 char       buf[256];
 const char      *basedir, *fname, *tail, *basename, *imagedir, *title, *fileout;
 l_int32    lrclear, tbclear, edgeclean, lradd, tbadd;
-l_int32    render_res, i, n, ret;
+l_int32    render_res, i, n;
 l_float32  maxwiden;
 SARRAY    *sa;
 
@@ -127,7 +129,9 @@ SARRAY    *sa;
     setLeptDebugOK(1);
 
         /* Set up a directory for temp images */
-    imagedir = stringJoin(basedir, "/image");
+    if ((imagedir = stringJoin(basedir, "/image")) == NULL)
+        return ERROR_INT_1("imagedir from basedir not found", basedir,
+                           __func__, 1);
 #ifndef _WIN32
     mkdir(imagedir, 0777);
 #else
@@ -164,7 +168,7 @@ SARRAY    *sa;
         lept_free(tail);
         lept_free(basename);
         lept_stderr("%s\n", buf);
-        ret = system(buf);
+        callSystemDebug(buf);
     }
     sarrayDestroy(&sa);
 
@@ -177,7 +181,7 @@ SARRAY    *sa;
     lept_stderr("cropping ...\n");
     cropFilesToPdf(sa, lrclear, tbclear, edgeclean, lradd, tbadd, maxwiden,
                    title, fileout);
-
+    sarrayDestroy(&sa);
     return 0;
 }
 

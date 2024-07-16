@@ -15,7 +15,8 @@
 ** limitations under the License.
 ******************************************************************************/
 
-#define _USE_MATH_DEFINES // for M_PI
+#include <tesseract/preparation.h> // compiler config, etc.
+
 #include <algorithm>
 #include <cfloat> // for FLT_MAX
 #include <cmath>  // for M_PI
@@ -29,7 +30,7 @@
 #include "mergenf.h"
 #include "ocrfeatures.h"
 #include "oldlist.h"
-#include "params.h"
+#include <tesseract/params.h>
 #include "protos.h"
 
 #undef min

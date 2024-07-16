@@ -20,7 +20,6 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{00811970-815B-4F64-BC9D-2190785A2EB5}</ProjectGuid>
-    <RootNamespace>pikchr</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,7 +69,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -106,7 +105,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -385,7 +384,9 @@
     <Text Include="../../thirdparty/owemdjee/pikchr/doc/circleobj.md" />
     <Text Include="../../thirdparty/owemdjee/pikchr/doc/colorexpr.md" />
     <Text Include="../../thirdparty/owemdjee/pikchr/doc/compassangle.md" />
+    <Text Include="../../thirdparty/owemdjee/pikchr/doc/copyright-release.html" />
     <Text Include="../../thirdparty/owemdjee/pikchr/doc/cylinderobj.md" />
+    <Text Include="../../thirdparty/owemdjee/pikchr/doc/diamondobj.md" />
     <Text Include="../../thirdparty/owemdjee/pikchr/doc/differences.md" />
     <Text Include="../../thirdparty/owemdjee/pikchr/doc/download.md" />
     <Text Include="../../thirdparty/owemdjee/pikchr/doc/ellipseobj.md" />
@@ -439,7 +440,9 @@
     <Text Include="../../thirdparty/owemdjee/pikchr/tests/autochop07.pikchr" />
     <Text Include="../../thirdparty/owemdjee/pikchr/tests/autochop08.pikchr" />
     <Text Include="../../thirdparty/owemdjee/pikchr/tests/autochop09.pikchr" />
+    <Text Include="../../thirdparty/owemdjee/pikchr/tests/autochop10.pikchr" />
     <Text Include="../../thirdparty/owemdjee/pikchr/tests/colortest1.pikchr" />
+    <Text Include="../../thirdparty/owemdjee/pikchr/tests/diamond01.pikchr" />
     <Text Include="../../thirdparty/owemdjee/pikchr/tests/empty.pikchr" />
     <Text Include="../../thirdparty/owemdjee/pikchr/tests/expr.pikchr" />
     <Text Include="../../thirdparty/owemdjee/pikchr/tests/expr.txt" />

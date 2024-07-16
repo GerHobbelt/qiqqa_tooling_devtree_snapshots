@@ -67,7 +67,7 @@ The library is aware of different text encodings and can convert between differe
 
 ### Further documentation
 For more examples check out the command line interface of [Tag Editor](https://github.com/Martchus/tageditor).
-API documentation can be generated using Doxygen with `make tagparser_apidoc`.
+API documentation can be generated using Doxygen with `cmake --build … --target tagparser_apidoc`.
 
 ## Bugs, stability
 Bugs can be reported on GitHub.
@@ -94,6 +94,6 @@ the ["Building this straight"](https://github.com/Martchus/tageditor#building-th
 More TODOs are tracked in the [issue section at GitHub](https://github.com/Martchus/tagparser/issues).
 
 ## Copyright notice and license
-Copyright © 2015-2023 Marius Kittler
+Copyright © 2015-2024 Marius Kittler
 
 All code is licensed under [GPL-2-or-later](LICENSE).

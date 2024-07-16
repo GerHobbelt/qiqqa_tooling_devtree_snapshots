@@ -16,9 +16,11 @@
 //
 ///////////////////////////////////////////////////////////////////////
 
+#include <tesseract/preparation.h> // compiler config, etc.
+
 #include "dict.h"
 
-#include "tprintf.h"
+#include <tesseract/tprintf.h>
 
 #include <cstdio>
 
@@ -425,7 +427,7 @@ void Dict::End() {
 // Returns true if in light of the current state unichar_id is allowed
 // according to at least one of the dawgs in the dawgs_ vector.
 // See more extensive comments in dict.h where this function is declared.
-int Dict::def_letter_is_okay(void *void_dawg_args, const UNICHARSET &unicharset,
+PermuterType Dict::def_letter_is_okay(void *void_dawg_args, const UNICHARSET &unicharset,
                              UNICHAR_ID unichar_id, bool word_end) const {
   auto *dawg_args = static_cast<DawgArgs *>(void_dawg_args);
 
@@ -721,7 +723,7 @@ void Dict::add_document_word(const WERD_CHOICE &best_choice) {
     FILE *doc_word_file = fopen(filename.c_str(), "a");
     if (doc_word_file == nullptr) {
       tprintError("Could not open file {}\n", filename);
-      ASSERT_HOST(doc_word_file);
+      ASSERT_HOST(doc_word_file != nullptr);
     }
     fprintf(doc_word_file, "%s\n", best_choice.debug_string().c_str());
     fclose(doc_word_file);
@@ -908,7 +910,7 @@ bool Dict::valid_punctuation(const WERD_CHOICE &word) {
   }
   WERD_CHOICE new_word(word.unicharset());
   auto last_index = word.length() - 1;
-  int new_len = 0;
+  int new_len;
   for (unsigned i = 0; i <= last_index; ++i) {
     UNICHAR_ID unichar_id = (word.unichar_id(i));
     if (getUnicharset().get_ispunctuation(unichar_id)) {

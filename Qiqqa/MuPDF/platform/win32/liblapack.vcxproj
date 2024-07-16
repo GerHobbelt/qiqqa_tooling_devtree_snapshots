@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>liblapack</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF339A48}</ProjectGuid>
-    <RootNamespace>liblapack</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -406,9 +404,13 @@
     <ClCompile Include="../../thirdparty/owemdjee/lapack/CBLAS/testing/c_zblas2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lapack/CBLAS/testing/c_zblas3.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lapack/LAPACKE/example/example_DGELS_colmajor.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/lapack/LAPACKE/example/example_DGELS_colmajor_64.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lapack/LAPACKE/example/example_DGELS_rowmajor.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/lapack/LAPACKE/example/example_DGELS_rowmajor_64.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lapack/LAPACKE/example/example_DGESV_colmajor.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/lapack/LAPACKE/example/example_DGESV_colmajor_64.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lapack/LAPACKE/example/example_DGESV_rowmajor.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/lapack/LAPACKE/example/example_DGESV_rowmajor_64.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lapack/LAPACKE/example/example_user.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lapack/LAPACKE/example/lapacke_example_aux.c" />
     <ClCompile Include="../../thirdparty/owemdjee/lapack/LAPACKE/mangling/Cintface.c" />
@@ -3097,8 +3099,11 @@
     <ClInclude Include="../../thirdparty/owemdjee/lapack/LAPACKE/example/lapacke_example_aux.h" />
     <ClInclude Include="../../thirdparty/owemdjee/lapack/LAPACKE/include/lapack.h" />
     <ClInclude Include="../../thirdparty/owemdjee/lapack/LAPACKE/include/lapacke.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/lapack/LAPACKE/include/lapacke_64.h" />
     <ClInclude Include="../../thirdparty/owemdjee/lapack/LAPACKE/include/lapacke_config.h" />
     <ClInclude Include="../../thirdparty/owemdjee/lapack/LAPACKE/include/lapacke_utils.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/lapack/SRC/lapack_64.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/lapack/TESTING/MATGEN/matgen_64.h" />
     <Image Include="../../thirdparty/owemdjee/lapack/DOCS/lapack.png" />
     <Text Include="../../thirdparty/owemdjee/lapack/BLAS/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/lapack/BLAS/Makefile" />
@@ -3526,6 +3531,7 @@
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/cgeql2.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/cgeqlf.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/cgeqp3.f" />
+    <Text Include="../../thirdparty/owemdjee/lapack/SRC/cgeqp3rk.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/cgeqr.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/cgeqr2.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/cgeqr2p.f" />
@@ -3745,6 +3751,8 @@
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/claqhe.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/claqhp.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/claqp2.f" />
+    <Text Include="../../thirdparty/owemdjee/lapack/SRC/claqp2rk.f" />
+    <Text Include="../../thirdparty/owemdjee/lapack/SRC/claqp3rk.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/claqps.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/claqr0.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/claqr1.f" />
@@ -4033,6 +4041,7 @@
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/dgeql2.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/dgeqlf.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/dgeqp3.f" />
+    <Text Include="../../thirdparty/owemdjee/lapack/SRC/dgeqp3rk.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/dgeqr.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/dgeqr2.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/dgeqr2p.f" />
@@ -4172,6 +4181,8 @@
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/dlaqgb.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/dlaqge.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/dlaqp2.f" />
+    <Text Include="../../thirdparty/owemdjee/lapack/SRC/dlaqp2rk.f" />
+    <Text Include="../../thirdparty/owemdjee/lapack/SRC/dlaqp3rk.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/dlaqps.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/dlaqr0.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/dlaqr1.f" />
@@ -4561,6 +4572,7 @@
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/sgeql2.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/sgeqlf.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/sgeqp3.f" />
+    <Text Include="../../thirdparty/owemdjee/lapack/SRC/sgeqp3rk.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/sgeqr.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/sgeqr2.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/sgeqr2p.f" />
@@ -4700,6 +4712,8 @@
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/slaqgb.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/slaqge.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/slaqp2.f" />
+    <Text Include="../../thirdparty/owemdjee/lapack/SRC/slaqp2rk.f" />
+    <Text Include="../../thirdparty/owemdjee/lapack/SRC/slaqp3rk.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/slaqps.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/slaqr0.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/slaqr1.f" />
@@ -5064,6 +5078,7 @@
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/zgeql2.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/zgeqlf.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/zgeqp3.f" />
+    <Text Include="../../thirdparty/owemdjee/lapack/SRC/zgeqp3rk.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/zgeqr.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/zgeqr2.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/zgeqr2p.f" />
@@ -5282,6 +5297,8 @@
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/zlaqhe.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/zlaqhp.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/zlaqp2.f" />
+    <Text Include="../../thirdparty/owemdjee/lapack/SRC/zlaqp2rk.f" />
+    <Text Include="../../thirdparty/owemdjee/lapack/SRC/zlaqp3rk.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/zlaqps.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/zlaqr0.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/SRC/zlaqr1.f" />
@@ -5919,6 +5936,7 @@
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/cchkpt.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/cchkq3.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/cchkql.f" />
+    <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/cchkqp3rk.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/cchkqr.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/cchkqrt.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/cchkqrtp.f" />
@@ -6117,6 +6135,7 @@
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/dchkpt.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/dchkq3.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/dchkql.f" />
+    <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/dchkqp3rk.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/dchkqr.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/dchkqrt.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/dchkqrtp.f" />
@@ -6298,6 +6317,7 @@
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/schkpt.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/schkq3.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/schkql.f" />
+    <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/schkqp3rk.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/schkqr.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/schkqrt.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/schkqrtp.f" />
@@ -6479,6 +6499,7 @@
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/zchkpt.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/zchkq3.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/zchkql.f" />
+    <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/zchkqp3rk.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/zchkqr.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/zchkqrt.f" />
     <Text Include="../../thirdparty/owemdjee/lapack/TESTING/LIN/zchkqrtp.f" />

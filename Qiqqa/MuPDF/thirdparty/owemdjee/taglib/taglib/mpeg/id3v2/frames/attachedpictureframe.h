@@ -29,7 +29,6 @@
 #include "taglib_export.h"
 #include "tpicturetype.h"
 #include "id3v2frame.h"
-#include "id3v2header.h"
 
 namespace TagLib {
 
@@ -50,7 +49,7 @@ namespace TagLib {
 
     public:
 
-      /*!
+      /*
        * This describes the function or content of the picture.
        */
       DECLARE_PICTURE_TYPE_ENUM(Type)
@@ -67,7 +66,7 @@ namespace TagLib {
       explicit AttachedPictureFrame(const ByteVector &data);
 
       /*!
-       * Destroys the AttahcedPictureFrame instance.
+       * Destroys the AttachedPictureFrame instance.
        */
       ~AttachedPictureFrame() override;
 
@@ -78,6 +77,11 @@ namespace TagLib {
        * Returns a string containing the description and mime-type
        */
       String toString() const override;
+
+      /*!
+       * Returns a string list containing the description and mime-type.
+       */
+      StringList toStringList() const override;
 
       /*!
        * Returns the text encoding used for the description.
@@ -145,7 +149,7 @@ namespace TagLib {
       /*!
        * Returns the image data as a ByteVector.
        *
-       * \note ByteVector has a data() method that returns a const char * which
+       * \note ByteVector has a data() method that returns a <tt>const char *</tt> which
        * should make it easy to export this data to external programs.
        *
        * \see setPicture()
@@ -167,6 +171,7 @@ namespace TagLib {
       void parseFields(const ByteVector &data) override;
       ByteVector renderFields() const override;
       class AttachedPictureFramePrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<AttachedPictureFramePrivate> d;
 
     private:

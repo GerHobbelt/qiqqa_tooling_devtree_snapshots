@@ -26,12 +26,12 @@
 #ifndef TAGLIB_FLACMETADATABLOCK_H
 #define TAGLIB_FLACMETADATABLOCK_H
 
-#include "tlist.h"
 #include "tbytevector.h"
 #include "taglib_export.h"
 
 namespace TagLib {
   namespace FLAC {
+    //! FLAC metadata block
     class TAGLIB_EXPORT MetadataBlock
     {
     public:
@@ -63,6 +63,7 @@ namespace TagLib {
 
     private:
       class MetadataBlockPrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<MetadataBlockPrivate> d;
     };
   }  // namespace FLAC

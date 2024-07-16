@@ -4,6 +4,9 @@
 #pragma once
 
 #include <spdlog/common.h>
+
+#if defined(_WIN32)
+
 #include <spdlog/details/console_globals.h>
 #include <spdlog/details/null_mutex.h>
 #include <spdlog/sinks/sink.h>
@@ -47,6 +50,9 @@ protected:
     bool should_do_colors_;
     std::unique_ptr<spdlog::formatter> formatter_;
     std::array<std::uint16_t, level::n_levels> colors_;
+
+    // return the current console attributes (for resetting later)
+    std::uint16_t get_foreground_color_();
 
     // set foreground color and return the orig console attributes (for resetting later)
     std::uint16_t set_foreground_color_(std::uint16_t attribs);
@@ -94,4 +100,6 @@ using wincolor_dual_sink_st = wincolor_dual_sink<details::console_nullmutex>;
 
 #ifdef SPDLOG_HEADER_ONLY
     #include "wincolor_sink-inl.h"
+#endif
+
 #endif

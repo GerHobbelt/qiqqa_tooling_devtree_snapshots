@@ -70,6 +70,8 @@ ByteVectorList::~ByteVectorList() = default;
 ByteVectorList::ByteVectorList(const ByteVectorList &l) :
   List<ByteVector>(l)
 {
+  // Uncomment if d is used, d.get() is nullptr and *d behavior undefined
+  // *d = *l.d;
 }
 
 ByteVectorList::ByteVectorList(std::initializer_list<ByteVector> init) :
@@ -83,6 +85,8 @@ ByteVectorList &ByteVectorList::operator=(const ByteVectorList &l)
     return *this;
 
   List<ByteVector>::operator=(l);
+  // Uncomment if d is used, d.get() is nullptr and *d behavior undefined
+  // *d = *l.d;
   return *this;
 }
 

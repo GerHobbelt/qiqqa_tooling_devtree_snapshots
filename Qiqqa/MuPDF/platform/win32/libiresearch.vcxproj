@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libiresearch</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FFA375B1}</ProjectGuid>
-    <RootNamespace>libiresearch</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -233,6 +231,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/core/analysis/collation_token_stream.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/core/analysis/delimited_token_stream.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/core/analysis/minhash_token_stream.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iresearch/core/analysis/multi_delimited_token_stream.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/core/analysis/nearest_neighbors_stream.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/core/analysis/ngram_token_stream.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/core/analysis/pipeline_token_stream.cpp" />
@@ -273,6 +272,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/core/search/bitset_doc_iterator.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/core/search/bm25.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/core/search/boolean_filter.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iresearch/core/search/boolean_query.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/core/search/boost_scorer.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/core/search/collectors.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/core/search/column_existence_filter.cpp" />
@@ -521,6 +521,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/tests/analysis/collation_token_stream_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/tests/analysis/delimited_token_stream_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/tests/analysis/minhash_token_stream_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/iresearch/tests/analysis/multi_delimited_token_stream_tests.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/tests/analysis/nearest_neighbors_stream_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/tests/analysis/ngram_token_stream_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/iresearch/tests/analysis/pipeline_stream_tests.cpp" />
@@ -641,6 +642,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/analysis/collation_token_stream_encoder.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/analysis/delimited_token_stream.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/analysis/minhash_token_stream.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/analysis/multi_delimited_token_stream.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/analysis/nearest_neighbors_stream.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/analysis/ngram_token_stream.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/analysis/pipeline_token_stream.hpp" />
@@ -696,6 +698,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/search/bitset_doc_iterator.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/search/bm25.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/search/boolean_filter.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/search/boolean_query.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/search/boost_scorer.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/search/collectors.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/search/column_existence_filter.hpp" />
@@ -835,6 +838,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/utils/version_defines.template.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/utils/version_utils.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/utils/vpack_utils.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/utils/wait_group.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/core/utils/wildcard_utils.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/external/fastText/src/args.h" />
     <ClInclude Include="../../thirdparty/owemdjee/iresearch/external/fastText/src/autotune.h" />

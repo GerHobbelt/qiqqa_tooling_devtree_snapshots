@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2023 Marti Maria Saguer
+//  Copyright (c) 1998-2024 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -3605,7 +3605,7 @@ cmsInt32Number CheckMLU(cmsContext ContextID)
     // Now for performance, allocate an empty struct
     mlu = cmsMLUalloc(ContextID, 0);
 
-    // Fill it with several thousands of different lenguages
+    // Fill it with several thousands of different languages
     for (i=0; i < 4096; i++) {
 
         char Lang[3];
@@ -3682,6 +3682,30 @@ Error:
 
     return rc;
 }
+
+
+// Check UTF8 encoding
+static
+cmsInt32Number CheckMLU_UTF8(cmsContext ContextID)
+{
+    cmsMLU* mlu;
+    char Buffer[256];
+    cmsInt32Number rc = 1;
+        
+    mlu = cmsMLUalloc(DbgThread(), 0);
+    
+    cmsMLUsetWide(ContextID, mlu, "en", "US", L"\x3b2\x14b");
+
+    cmsMLUgetUTF8(ContextID, mlu, "en", "US", Buffer, 256);
+    if (strcmp(Buffer, "\xce\xb2\xc5\x8b") != 0) rc = 0;
+
+    if (rc == 0)
+        Fail("Unexpected string '%s'", Buffer);
+
+    cmsMLUfree(ContextID, mlu);
+    return rc;
+}
+
 
 
 // A lightweight test of named color structures.
@@ -6533,7 +6557,7 @@ int CheckRGBPrimaries(cmsContext ContextID)
     cmsXYZ2xyY(ContextID, &tripxyY.Green, &tripXYZ.Green);
     cmsXYZ2xyY(ContextID, &tripxyY.Blue, &tripXYZ.Blue);
 
-    /* valus were taken from
+    /* values were taken from
     http://en.wikipedia.org/wiki/RGB_color_spaces#Specifications */
 
     if (!IsGoodFixed15_16("xRed", tripxyY.Red.x, 0.64) ||
@@ -7252,7 +7276,7 @@ cmsInt32Number CheckOutGray(cmsContext ContextID, cmsHTRANSFORM xform, double L,
 
     cmsDoTransform(ContextID, xform, &Lab, &g_out, 1);
 
-    return IsGoodVal("Gray value", g, (double) g_out, 0.01);
+    return IsGoodVal("Gray value", g, (double) g_out, 1);
 }
 
 static
@@ -8201,6 +8225,34 @@ int CheckPlanar8opt(cmsContext ContextID)
 }
 
 /**
+* Bug reported from float32 to uint16 planar
+*/
+#define TYPE_RGB_FLT_PLANAR   (FLOAT_SH(1)|COLORSPACE_SH(PT_RGB)|CHANNELS_SH(3)|BYTES_SH(4)|PLANAR_SH(1))
+
+static
+int CheckPlanarFloat2int(cmsContext ContextID)
+{    
+    cmsHPROFILE sRGB = cmsCreate_sRGBProfile(ContextID);
+
+    cmsHTRANSFORM transform = cmsCreateTransform(ContextID, sRGB, TYPE_RGB_FLT_PLANAR,
+        sRGB, TYPE_RGB_16_PLANAR,INTENT_PERCEPTUAL, 0);
+
+    const cmsFloat32Number input[] = { 0.0f, 0.4f, 0.8f,  0.1f, 0.5f, 0.9f,  0.2f, 0.6f, 1.0f,   0.3f, 0.7f, 1.0f };
+    cmsUInt16Number output[3*4] = { 0 };
+
+    cmsDoTransform(ContextID, transform, input, output, 4);
+
+    cmsDeleteTransform(ContextID, transform);
+    cmsCloseProfile(ContextID, sRGB);
+
+    return 1;
+}
+
+
+
+
+
+/**
 * Bug reported & fixed. Thanks to Kornel Lesinski for spotting this.
 */
 static
@@ -8492,9 +8544,9 @@ int Check_OkLab(cmsContext ContextID)
     cmsDoTransform(ContextID, xform, &xyz, &okLab, 1);
     cmsDoTransform(ContextID, xform2, &okLab, &xyz2, 1);
 
-	dist = cmsXYZDeltaE(ContextID, &xyz, &xyz2);
-	if (dist > Max) Max = dist;
-
+    xyz.X = 0.143046; xyz.Y = 0.060610; xyz.Z = 0.713913;
+    cmsDoTransform(ContextID, xform, &xyz, &okLab, 1);
+    cmsDoTransform(ContextID, xform2, &okLab, &xyz2, 1);
 
     cmsDeleteTransform(ContextID, xform);
     cmsDeleteTransform(ContextID, xform2);
@@ -8503,6 +8555,40 @@ int Check_OkLab(cmsContext ContextID)
 
 	return Max < 1E-12;
 }
+
+
+static
+int Check_OkLab2(cmsContext ContextID)
+{
+#define TYPE_LABA_F32 (FLOAT_SH(1)|COLORSPACE_SH(PT_MCH3)|EXTRA_SH(1)|CHANNELS_SH(3)|BYTES_SH(4))
+
+    cmsUInt16Number rgb[3];
+    cmsFloat32Number lab[4];
+
+    cmsHPROFILE labProfile = cmsCreate_OkLabProfile(ContextID);
+    cmsHPROFILE rgbProfile = cmsCreate_sRGBProfile(ContextID);
+
+    cmsHTRANSFORM hBack = cmsCreateTransform(ContextID, labProfile, TYPE_LABA_F32, rgbProfile, TYPE_RGB_16, INTENT_RELATIVE_COLORIMETRIC, 0);
+    cmsHTRANSFORM hForth = cmsCreateTransform(ContextID, rgbProfile, TYPE_RGB_16, labProfile, TYPE_LABA_F32, INTENT_RELATIVE_COLORIMETRIC, 0);
+
+    cmsCloseProfile(ContextID, labProfile);
+    cmsCloseProfile(ContextID, rgbProfile);
+
+    rgb[0] = 0;
+    rgb[1] = 0;
+    rgb[2] = 65535;
+
+    cmsDoTransform(ContextID, hForth, rgb, &lab, 1);
+    cmsDoTransform(ContextID, hBack, lab, &rgb, 1);
+
+    cmsDeleteTransform(ContextID, hBack);
+    cmsDeleteTransform(ContextID, hForth);
+
+    if (rgb[0] != 0 || rgb[1] != 0 || rgb[2] != 65535) return 0;
+
+    return 1;
+}
+
 
 static
 cmsHPROFILE createRgbGamma(cmsContext contextID, cmsFloat64Number g)
@@ -8728,7 +8814,7 @@ int CheckSaveLinearizationDevicelink(cmsContext ContextID)
     if (hDeviceLink == NULL)
     {
         remove("lin_rgb.icc");
-        Fail("Could't open devicelink");
+        Fail("Couldn't open devicelink");
 		rc = 0;
 	}
 
@@ -9494,8 +9580,6 @@ int main(int argc, const char** argv)
     cmsSetLogErrorHandler(NULL, FatalErrorQuit);
     printf("done.\n");
 
-    CheckMethodPackDoublesFromFloat(ctx);
-
     PrintSupportedIntents();
 
     Check(ctx, "Base types", CheckBaseTypes);
@@ -9623,6 +9707,7 @@ int main(int argc, const char** argv)
 
     // MLU
     Check(ctx, "Multilocalized Unicode", CheckMLU);
+    Check(ctx, "Multilocalized Unicode (II)", CheckMLU_UTF8);
 
     // Named color
     Check(ctx, "Named color lists", CheckNamedColorList);
@@ -9693,6 +9778,7 @@ int main(int argc, const char** argv)
     Check(ctx, "Set free a tag", CheckRemoveTag);
     Check(ctx, "Matrix simplification", CheckMatrixSimplify);
     Check(ctx, "Planar 8 optimization", CheckPlanar8opt);
+    Check(ctx, "Planar float to int16", CheckPlanarFloat2int);
     Check(ctx, "Swap endian feature", CheckSE);
     Check(ctx, "Transform line stride RGB", CheckTransformLineStride);
     Check(ctx, "Forged MPE profile", CheckForgedMPE);
@@ -9700,6 +9786,7 @@ int main(int argc, const char** argv)
     Check(ctx, "Empty MLUC", CheckEmptyMLUC);
     Check(ctx, "sRGB round-trips", Check_sRGB_Rountrips);
     Check(ctx, "OkLab color space", Check_OkLab);
+    Check(ctx, "OkLab color space (2)", Check_OkLab2);
     Check(ctx, "Gamma space detection", CheckGammaSpaceDetection);
     Check(ctx, "Unbounded mode w/ integer output", CheckIntToFloatTransform);
     Check(ctx, "Corrupted built-in by using cmsWriteRawTag", CheckInducedCorruption);

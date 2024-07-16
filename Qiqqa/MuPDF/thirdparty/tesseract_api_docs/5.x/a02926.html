@@ -162,7 +162,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac7ff7b4b07fa3252347f949395238aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a2d228e15200b7535fac2144109b677"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02926.html#a5a2d228e15200b7535fac2144109b677">print</a> ()</td></tr>
 <tr class="separator:a5a2d228e15200b7535fac2144109b677"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae88f52597b2b6fffa9ca2f8be53908c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02926.html#ae88f52597b2b6fffa9ca2f8be53908c4">plot</a> (<a class="el" href="a03978.html">ScrollView</a> *window, <a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a> colour)</td></tr>
+<tr class="memitem:ae88f52597b2b6fffa9ca2f8be53908c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02926.html#ae88f52597b2b6fffa9ca2f8be53908c4">plot</a> (<a class="el" href="a03978.html">ScrollView</a> *window, <a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a> colour)</td></tr>
 <tr class="separator:ae88f52597b2b6fffa9ca2f8be53908c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6f328d2ebd8c59f38ac1c15f53073d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02926.html#ac6f328d2ebd8c59f38ac1c15f53073d4">plot</a> (<a class="el" href="a03978.html">ScrollView</a> *window)</td></tr>
 <tr class="separator:ac6f328d2ebd8c59f38ac1c15f53073d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,7 +184,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a05865f2b7c0365adaf4c76dd06dd0626"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02926.html#a05865f2b7c0365adaf4c76dd06dd0626">NextColor</a> (<a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a> colour)</td></tr>
+<tr class="memitem:a05865f2b7c0365adaf4c76dd06dd0626"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02926.html#a05865f2b7c0365adaf4c76dd06dd0626">NextColor</a> (<a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a> colour)</td></tr>
 <tr class="separator:a05865f2b7c0365adaf4c76dd06dd0626"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -936,9 +936,9 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a> WERD::NextColor </td>
+          <td class="memname"><a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a> WERD::NextColor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a>&#160;</td>
           <td class="paramname"><em>colour</em></td><td>)</td>
           <td></td>
         </tr>
@@ -952,7 +952,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="a00464_source.html#l00291">291</a> of file <a class="el" href="a00464_source.html">werd.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                                                      {</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <span class="keyword">auto</span> next = static_cast&lt;DebugView::Color&gt;(colour + 1);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <span class="keyword">auto</span> next = static_cast&lt;ScrollView::Color&gt;(colour + 1);</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="keywordflow">if</span> (next &gt;= <a class="code" href="a00464.html#aaa8f711f73dfdf579c53b00dbc721966">LAST_COLOUR</a> || next &lt; <a class="code" href="a00464.html#a70083999d911cb1aa3ed0580bc66fd22">FIRST_COLOUR</a>) next = <a class="code" href="a00464.html#a70083999d911cb1aa3ed0580bc66fd22">FIRST_COLOUR</a>;</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <span class="keywordflow">return</span> next;</div>
 </div><!-- fragment -->
@@ -1012,7 +1012,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="a00464_source.html#l00303">303</a> of file <a class="el" href="a00464_source.html">werd.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                                  {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  <a class="code" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a> colour = <a class="code" href="a00464.html#a70083999d911cb1aa3ed0580bc66fd22">FIRST_COLOUR</a>;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  <a class="code" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a> colour = <a class="code" href="a00464.html#a70083999d911cb1aa3ed0580bc66fd22">FIRST_COLOUR</a>;</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  C_BLOB_IT it = &amp;cblobs;</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <span class="keywordflow">for</span> (it.mark_cycle_pt(); !it.cycled_list(); it.forward()) {</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    it.data()-&gt;plot(window, colour, <a class="code" href="a00464.html#a7c40159b1166c369b1307ac9257f1405">CHILD_COLOUR</a>);</div>
@@ -1037,7 +1037,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a>&#160;</td>
           <td class="paramname"><em>colour</em>&#160;</td>
         </tr>
         <tr>
@@ -1522,7 +1522,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="ttc" id="aa02922_html_ae510f3d0e7398fbb46608082429eac89"><div class="ttname"><a href="a02922.html#ae510f3d0e7398fbb46608082429eac89">C_BLOB::out_list</a></div><div class="ttdeci">C_OUTLINE_LIST * out_list()</div><div class="ttdef"><b>Definition:</b> <a href="a00461_source.html#l00069">stepblob.h:69</a></div></div>
 <div class="ttc" id="aa02942_html_ad25eb2ae51ce619d81e219814ffbccd2"><div class="ttname"><a href="a02942.html#ad25eb2ae51ce619d81e219814ffbccd2">BITS16::bit</a></div><div class="ttdeci">bool bit(uint8_t bit_num) const</div><div class="ttdef"><b>Definition:</b> <a href="a00476_source.html#l00065">bits16.h:65</a></div></div>
 <div class="ttc" id="aa00467_html_ad6968adbf8f2cc44adf333ec96efb0beaa20dcde8552519bb81c4206b0e57a8ce"><div class="ttname"><a href="a00467.html#ad6968adbf8f2cc44adf333ec96efb0beaa20dcde8552519bb81c4206b0e57a8ce">W_REP_CHAR</a></div><div class="ttdoc">repeated character</div><div class="ttdef"><b>Definition:</b> <a href="a00467_source.html#l00052">werd.h:52</a></div></div>
-<div class="ttc" id="aa02926_html_a05865f2b7c0365adaf4c76dd06dd0626"><div class="ttname"><a href="a02926.html#a05865f2b7c0365adaf4c76dd06dd0626">WERD::NextColor</a></div><div class="ttdeci">static DebugView::Color NextColor(DebugView::Color colour)</div><div class="ttdef"><b>Definition:</b> <a href="a00464_source.html#l00291">werd.cpp:291</a></div></div>
+<div class="ttc" id="aa02926_html_a05865f2b7c0365adaf4c76dd06dd0626"><div class="ttname"><a href="a02926.html#a05865f2b7c0365adaf4c76dd06dd0626">WERD::NextColor</a></div><div class="ttdeci">static ScrollView::Color NextColor(ScrollView::Color colour)</div><div class="ttdef"><b>Definition:</b> <a href="a00464_source.html#l00291">werd.cpp:291</a></div></div>
 <div class="ttc" id="aa00467_html_ad6968adbf8f2cc44adf333ec96efb0beac5f734536428e7e43dffe5c87d72d14e"><div class="ttname"><a href="a00467.html#ad6968adbf8f2cc44adf333ec96efb0beac5f734536428e7e43dffe5c87d72d14e">W_DONT_CHOP</a></div><div class="ttdoc">fixed pitch chopped</div><div class="ttdef"><b>Definition:</b> <a href="a00467_source.html#l00051">werd.h:51</a></div></div>
 <div class="ttc" id="aa02926_html_ad35a2fd78555195a3dedcdd01094d0d4"><div class="ttname"><a href="a02926.html#ad35a2fd78555195a3dedcdd01094d0d4">WERD::bounding_box</a></div><div class="ttdeci">TBOX bounding_box() const</div><div class="ttdef"><b>Definition:</b> <a href="a00464_source.html#l00147">werd.cpp:147</a></div></div>
 <div class="ttc" id="aa00464_html_aaa8f711f73dfdf579c53b00dbc721966"><div class="ttname"><a href="a00464.html#aaa8f711f73dfdf579c53b00dbc721966">LAST_COLOUR</a></div><div class="ttdeci">#define LAST_COLOUR</div><div class="ttdoc">last rainbow colour</div><div class="ttdef"><b>Definition:</b> <a href="a00464_source.html#l00028">werd.cpp:28</a></div></div>
@@ -1562,7 +1562,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="ttc" id="aa02898_html_a570986e3ad8c28906c83e9451aa1af17"><div class="ttname"><a href="a02898.html#a570986e3ad8c28906c83e9451aa1af17">TBOX::y_overlap_fraction</a></div><div class="ttdeci">double y_overlap_fraction(const TBOX &amp;box) const</div><div class="ttdef"><b>Definition:</b> <a href="a00431_source.html#l00466">rect.h:466</a></div></div>
 <div class="ttc" id="aa00581_html_a0c2bcd4462ec67ab0971b34a0f610f55"><div class="ttname"><a href="a00581.html#a0c2bcd4462ec67ab0971b34a0f610f55">tprintf</a></div><div class="ttdeci">DLLSYM void tprintf(const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="a00581_source.html#l00034">tprintf.cpp:34</a></div></div>
 <div class="ttc" id="aa02926_html_adc9c85b2475c4165e3d9ea984be5a0f2"><div class="ttname"><a href="a02926.html#adc9c85b2475c4165e3d9ea984be5a0f2">WERD::plot_rej_blobs</a></div><div class="ttdeci">void plot_rej_blobs(ScrollView *window)</div><div class="ttdef"><b>Definition:</b> <a href="a00464_source.html#l00319">werd.cpp:319</a></div></div>
-<div class="ttc" id="aa03978_html_a100504544a5423a94222149ee9ed0fe8"><div class="ttname"><a href="a03978.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a></div><div class="ttdeci">Color</div><div class="ttdef"><b>Definition:</b> <a href="a01469_source.html#l00100">scrollview.h:100</a></div></div>
+<div class="ttc" id="aa03978_html_a100504544a5423a94222149ee9ed0fe8"><div class="ttname"><a href="a03978.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a></div><div class="ttdeci">Color</div><div class="ttdef"><b>Definition:</b> <a href="a01469_source.html#l00100">scrollview.h:100</a></div></div>
 <div class="ttc" id="aa02434_html_a20cfad5c58c50cb85a9529d8ddbd96af"><div class="ttname"><a href="a02434.html#a20cfad5c58c50cb85a9529d8ddbd96af">GenericVector::size</a></div><div class="ttdeci">int size() const</div><div class="ttdef"><b>Definition:</b> <a href="a00011_source.html#l00071">genericvector.h:71</a></div></div>
 <div class="ttc" id="aa00467_html_ad6968adbf8f2cc44adf333ec96efb0bea8741ef3078614d5d00f0898b2dbd5bd7"><div class="ttname"><a href="a00467.html#ad6968adbf8f2cc44adf333ec96efb0bea8741ef3078614d5d00f0898b2dbd5bd7">W_SEGMENTED</a></div><div class="ttdoc">correctly segmented</div><div class="ttdef"><b>Definition:</b> <a href="a00467_source.html#l00043">werd.h:43</a></div></div>
 <div class="ttc" id="aa02926_html_a66170d19f0c764efc165e32a03be7d38"><div class="ttname"><a href="a02926.html#a66170d19f0c764efc165e32a03be7d38">WERD::WERD</a></div><div class="ttdeci">WERD()=default</div></div>

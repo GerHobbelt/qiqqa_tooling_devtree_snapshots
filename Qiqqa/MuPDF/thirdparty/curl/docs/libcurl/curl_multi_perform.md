@@ -12,11 +12,13 @@ See-also:
   - curl_multi_init (3)
   - curl_multi_wait (3)
   - libcurl-errors (3)
+Protocol:
+  - All
 ---
 
 # NAME
 
-curl_multi_perform - reads/writes available data from easy handles
+curl_multi_perform - run all transfers until it would block
 
 # SYNOPSIS
 

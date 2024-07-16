@@ -30,6 +30,10 @@
 #include "taglib_export.h"
 #include "taglib.h"
 
+#ifdef _WIN32
+#include <string>
+#endif
+
 namespace TagLib {
 
 #ifdef _WIN32
@@ -48,6 +52,7 @@ namespace TagLib {
     String toString() const;
 
   private:
+    TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
     const std::wstring m_wname;
   };
 #else
@@ -93,7 +98,7 @@ namespace TagLib {
 
     /*!
      * Attempts to write the block \a data at the current get pointer.  If the
-     * file is currently only opened read only -- i.e. readOnly() returns true --
+     * file is currently only opened read only -- i.e. readOnly() returns \c true --
      * this attempts to reopen the file in read/write mode.
      *
      * \note This should be used instead of using the streaming output operator
@@ -122,7 +127,7 @@ namespace TagLib {
     virtual void removeBlock(offset_t start = 0, size_t length = 0) = 0;
 
     /*!
-     * Returns true if the file is read only (or if the file can not be opened).
+     * Returns \c true if the file is read only (or if the file can not be opened).
      */
     virtual bool readOnly() const = 0;
 
@@ -162,6 +167,7 @@ namespace TagLib {
 
   private:
     class IOStreamPrivate;
+    TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
     std::unique_ptr<IOStreamPrivate> d;
   };
 

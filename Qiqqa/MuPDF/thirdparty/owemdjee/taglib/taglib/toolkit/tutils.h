@@ -39,9 +39,9 @@
 #endif
 
 #if defined(HAVE_MSC_BYTESWAP)
-# include "stdlib.h"
+# include <stdlib.h>
 #elif defined(HAVE_GLIBC_BYTESWAP)
-# include "byteswap.h"
+# include <byteswap.h>
 #elif defined(HAVE_MAC_BYTESWAP)
 # include <libkern/OSByteOrder.h>
 #elif defined(HAVE_OPENBSD_BYTESWAP)
@@ -58,7 +58,7 @@ namespace TagLib
     {
 
       /*!
-       * Reverses the order of bytes in an 16-bit integer.
+       * Reverses the order of bytes in a 16-bit integer.
        */
       inline unsigned short byteSwap(unsigned short x)
       {
@@ -90,7 +90,7 @@ namespace TagLib
       }
 
       /*!
-       * Reverses the order of bytes in an 32-bit integer.
+       * Reverses the order of bytes in a 32-bit integer.
        */
       inline unsigned int byteSwap(unsigned int x)
       {
@@ -125,7 +125,7 @@ namespace TagLib
       }
 
       /*!
-       * Reverses the order of bytes in an 64-bit integer.
+       * Reverses the order of bytes in a 64-bit integer.
        */
       inline unsigned long long byteSwap(unsigned long long x)
       {
@@ -203,14 +203,14 @@ namespace TagLib
       /*!
        * Returns the byte order of the system.
        */
-      inline ByteOrder systemByteOrder()
+      constexpr ByteOrder systemByteOrder()
       {
-        union {
+        constexpr union IntCharUnion {
           int  i;
           char c;
-        } u;
+          constexpr IntCharUnion(int j) : i(j) {}
+        } u{1};
 
-        u.i = 1;
         if(u.c == 1)
           return LittleEndian;
         return BigEndian;

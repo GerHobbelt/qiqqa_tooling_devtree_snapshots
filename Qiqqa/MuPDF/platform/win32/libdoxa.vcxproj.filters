@@ -15,145 +15,43 @@
     <Filter Include="Header Files\Doxa">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Doxa.Test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\Bindings">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\Bindings\Python">
+    <Filter Include="Misc Files\Demo">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\Bindings\Python\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\Bindings\WebAssembly">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\Bindings\WebAssembly\dist">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\Bindings\WebAssembly\spec">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\Bindings\WebAssembly\spec\support">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\Demo">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Misc Files\Demo\NodeJS">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\Demo\Python">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\Demo\WebJS">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0005}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\Doxa">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\Doxa.Test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0006}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\README">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Bindings">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Bindings\Python">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Bindings\WebAssembly">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Demo">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Demo\Cpp">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Doxa.Test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Bindings/Python/DoxaPy.cpp">
-      <Filter>Source Files\Bindings\Python</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Bindings/WebAssembly/DoxaWasm.cpp">
-      <Filter>Source Files\Bindings\WebAssembly</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/doxa/Demo/Cpp/demo.cpp">
       <Filter>Source Files\Demo\Cpp</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/doxa/Demo/Cpp/demoOpenCV.cpp">
       <Filter>Source Files\Demo\Cpp</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Demo/Cpp/demoQt.cpp">
-      <Filter>Source Files\Demo\Cpp</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Doxa.Test/AlgorithmTests.cpp">
-      <Filter>Source Files\Doxa.Test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Doxa.Test/BatainehTests.cpp">
-      <Filter>Source Files\Doxa.Test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Doxa.Test/BinarizationTests.cpp">
-      <Filter>Source Files\Doxa.Test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Doxa.Test/CalculatorTests.cpp">
-      <Filter>Source Files\Doxa.Test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Doxa.Test/ContrastImageTests.cpp">
-      <Filter>Source Files\Doxa.Test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Doxa.Test/GrayscaleTests.cpp">
-      <Filter>Source Files\Doxa.Test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Doxa.Test/ISauvolaTests.cpp">
-      <Filter>Source Files\Doxa.Test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Doxa.Test/ImageTests.cpp">
-      <Filter>Source Files\Doxa.Test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Doxa.Test/LocalWindowTests.cpp">
-      <Filter>Source Files\Doxa.Test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Doxa.Test/MorphologyTests.cpp">
-      <Filter>Source Files\Doxa.Test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Doxa.Test/PNMTests.cpp">
-      <Filter>Source Files\Doxa.Test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Doxa.Test/PaletteTests.cpp">
-      <Filter>Source Files\Doxa.Test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Doxa.Test/ParametersTests.cpp">
-      <Filter>Source Files\Doxa.Test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Doxa.Test/PerformanceTests.cpp">
-      <Filter>Source Files\Doxa.Test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Doxa.Test/RegionTests.cpp">
-      <Filter>Source Files\Doxa.Test</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/doxa/Doxa.Test/pch.cpp">
-      <Filter>Source Files\Doxa.Test</Filter>
-    </ClCompile>
-    <ClInclude Include="../../thirdparty/owemdjee/doxa/Doxa.Test/ImageFixture.hpp">
-      <Filter>Header Files\Doxa.Test</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/doxa/Doxa.Test/TestUtilities.hpp">
-      <Filter>Header Files\Doxa.Test</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/doxa/Doxa.Test/pch.h">
-      <Filter>Header Files\Doxa.Test</Filter>
+    <ClInclude Include="../../thirdparty/owemdjee/doxa/Doxa/AdOtsu.hpp">
+      <Filter>Header Files\Doxa</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/doxa/Doxa/Algorithm.hpp">
       <Filter>Header Files\Doxa</Filter>
@@ -201,6 +99,9 @@
       <Filter>Header Files\Doxa</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/doxa/Doxa/Morphology.hpp">
+      <Filter>Header Files\Doxa</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/doxa/Doxa/MultiScale.hpp">
       <Filter>Header Files\Doxa</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/doxa/Doxa/Niblack.hpp">
@@ -263,54 +164,6 @@
     <Image Include="../../thirdparty/owemdjee/doxa/README/2JohnC1V3.png">
       <Filter>Resource Files\README</Filter>
     </Image>
-    <Text Include="../../thirdparty/owemdjee/doxa/Bindings/Python/MANIFEST.in">
-      <Filter>Misc Files\Bindings\Python</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Bindings/Python/README.md">
-      <Filter>Misc Files\Bindings\Python</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Bindings/Python/copy-cpp-files.py">
-      <Filter>Misc Files\Bindings\Python</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Bindings/Python/pyproject.toml">
-      <Filter>Misc Files\Bindings\Python</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Bindings/Python/setup.py">
-      <Filter>Misc Files\Bindings\Python</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Bindings/Python/test/test_doxa.py">
-      <Filter>Misc Files\Bindings\Python\test</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Bindings/WebAssembly/README.md">
-      <Filter>Misc Files\Bindings\WebAssembly</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Bindings/WebAssembly/build.js">
-      <Filter>Misc Files\Bindings\WebAssembly</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Bindings/WebAssembly/dist/doxa.js">
-      <Filter>Misc Files\Bindings\WebAssembly\dist</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Bindings/WebAssembly/dist/doxaWasm.js">
-      <Filter>Misc Files\Bindings\WebAssembly\dist</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Bindings/WebAssembly/dist/doxaWasm.wasm">
-      <Filter>Misc Files\Bindings\WebAssembly\dist</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Bindings/WebAssembly/doxa.js">
-      <Filter>Misc Files\Bindings\WebAssembly</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Bindings/WebAssembly/package.json">
-      <Filter>Misc Files\Bindings\WebAssembly</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Bindings/WebAssembly/spec/binarization.spec.js">
-      <Filter>Misc Files\Bindings\WebAssembly\spec</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Bindings/WebAssembly/spec/image.spec.js">
-      <Filter>Misc Files\Bindings\WebAssembly\spec</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Bindings/WebAssembly/spec/support/jasmine.json">
-      <Filter>Misc Files\Bindings\WebAssembly\spec\support</Filter>
-    </Text>
     <Text Include="../../thirdparty/owemdjee/doxa/Demo/NodeJS/index.js">
       <Filter>Misc Files\Demo\NodeJS</Filter>
     </Text>
@@ -322,15 +175,6 @@
     </Text>
     <Text Include="../../thirdparty/owemdjee/doxa/Demo/WebJS/index.html">
       <Filter>Misc Files\Demo\WebJS</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Doxa.Test/CMakeLists.txt">
-      <Filter>Misc Files\Doxa.Test</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Doxa.Test/Doxa.Test.vcxproj.filters">
-      <Filter>Misc Files\Doxa.Test</Filter>
-    </Text>
-    <Text Include="../../thirdparty/owemdjee/doxa/Doxa.Test/packages.config">
-      <Filter>Misc Files\Doxa.Test</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/doxa/Doxa/Doxa.vcxitems">
       <Filter>Misc Files\Doxa</Filter>

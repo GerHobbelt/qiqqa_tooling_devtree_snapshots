@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libsnmalloc</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF4FF40A}</ProjectGuid>
-    <RootNamespace>libsnmalloc</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -262,6 +260,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/snmalloc/src/test/perf/low_memory/low-memory.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/snmalloc/src/test/perf/memcpy/memcpy.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/snmalloc/src/test/perf/singlethread/singlethread.cc" />
+    <ClCompile Include="../../thirdparty/owemdjee/snmalloc/src/test/perf/startup/startup.cc" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/aal/aal.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/aal/aal_arm.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/aal/aal_cheri.h" />
@@ -296,6 +295,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/backend_helpers/palrange.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/backend_helpers/range_helpers.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/backend_helpers/smallbuddyrange.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/backend_helpers/staticconditionalrange.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/backend_helpers/staticrange.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/backend_helpers/statsrange.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/backend_helpers/subrange.h" />
@@ -312,6 +312,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/ds_core/defines.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/ds_core/ds_core.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/ds_core/helpers.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/ds_core/mitigations.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/ds_core/ptrwrap.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/ds_core/redblacktree.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/ds_core/seqset.h" />
@@ -337,6 +338,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/mem/remotecache.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/mem/sizeclasstable.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/mem/ticker.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/override/libc.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/override/malloc-extensions.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/override/override.h" />
     <ClInclude Include="../../thirdparty/owemdjee/snmalloc/src/snmalloc/pal/pal.h" />

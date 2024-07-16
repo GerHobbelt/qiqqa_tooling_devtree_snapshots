@@ -10,11 +10,13 @@ See-also:
   - curl_multi_info_read (3)
   - curl_multi_init (3)
   - the hiperfifo.c example
+Protocol:
+  - All
 ---
 
 # NAME
 
-curl_multi_socket_action - reads/writes available data given an action
+curl_multi_socket_action - read/write available data given an action
 
 # SYNOPSIS
 

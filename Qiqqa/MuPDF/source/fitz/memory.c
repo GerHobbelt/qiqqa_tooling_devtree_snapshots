@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -193,6 +193,43 @@ fz_free(fz_context *ctx, const void *p)
 	}
 }
 
+#undef fz_malloc_aligned
+/* align is assumed to be a power of 2. */
+void *fz_malloc_aligned(fz_context *ctx, size_t size, int align   FZDBG_DECL_ARGS)
+{
+	uint8_t *block;
+	uint8_t *aligned;
+
+	if (size == 0)
+		return NULL;
+
+	if (align >= 256)
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Alignment too large");
+	if ((align & (align-1)) != 0)
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Alignment must be a power of 2");
+
+	block = fz_malloc(ctx, size + align   FZDBG_PASS);
+
+	aligned = (void *)((intptr_t)(block + align-1) & ~(align-1));
+	if (aligned == block)
+		aligned = block + align;
+	memset(block, aligned-block, aligned-block);
+
+	return aligned;
+}
+
+void fz_free_aligned(fz_context *ctx, void *ptr)
+{
+	uint8_t *block = ptr;
+
+	if (ptr == NULL)
+		return;
+
+	block -= block[-1];
+
+	fz_free(ctx, block);
+}
+
 #undef fz_strdup
 char *
 fz_strdup(fz_context *ctx, const char *s   FZDBG_DECL_ARGS)
@@ -206,6 +243,29 @@ fz_strdup(fz_context *ctx, const char *s   FZDBG_DECL_ARGS)
 	}
 	return ns;
 }
+
+fz_string *
+fz_new_string(fz_context *ctx, const char *s   FZDBG_DECL_ARGS)
+{
+	fz_string *str = fz_malloc(ctx, sizeof(int) + strlen(s) + 1   FZDBG_PASS);
+
+	str->refs = 1;
+	strcpy(str->str, s);
+
+	return str;
+}
+
+fz_string *fz_keep_string(fz_context *ctx, fz_string *str)
+{
+	return fz_keep_imp(ctx, str, &str->refs);
+}
+
+void fz_drop_string(fz_context *ctx, fz_string *str)
+{
+	if (fz_drop_imp(ctx, str, &str->refs))
+		fz_free(ctx, str);
+}
+
 
 static void *
 fz_malloc_default(void *opaque, size_t size   FZDBG_DECL_ARGS)

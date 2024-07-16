@@ -7,6 +7,8 @@ Source: libcurl
 See-also:
   - CURLOPT_TRAILERDATA (3)
   - CURLOPT_WRITEFUNCTION (3)
+Protocol:
+  - HTTP
 ---
 
 # NAME
@@ -57,10 +59,6 @@ without any interruptions.
 
 NULL
 
-# PROTOCOLS
-
-HTTP
-
 # EXAMPLE
 ~~~c
 static int trailer_cb(struct curl_slist **tr, void *data)
@@ -79,7 +77,7 @@ int main(void)
     /* Set the URL of the request */
     curl_easy_setopt(curl, CURLOPT_URL, "https://example.com/");
     /* Now set it as a put */
-    curl_easy_setopt(curl, CURLOPT_PUT, 1L);
+    curl_easy_setopt(curl, CURLOPT_UPLOAD, 1L);
 
     /* Assuming we have a function that returns the data to be pushed
        Let that function be read_cb */

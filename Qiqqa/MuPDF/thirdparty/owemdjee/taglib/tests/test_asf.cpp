@@ -317,6 +317,7 @@ public:
     tags["ARTIST"] = StringList("Artist");
     tags["ARTISTS"] = StringList("Artists");
     tags["ARTISTSORT"] = StringList("Artist Sort");
+    tags["ARTISTWEBPAGE"] = StringList("Artist Webpage");
     tags["ASIN"] = StringList("ASIN");
     tags["BARCODE"] = StringList("Barcode");
     tags["BPM"] = StringList("123");
@@ -329,8 +330,12 @@ public:
     tags["DISCNUMBER"] = StringList("3/5");
     tags["DISCSUBTITLE"] = StringList("Disc Subtitle");
     tags["ENCODEDBY"] = StringList("Encoded by");
+    tags["ENCODING"] = StringList("Encoding");
+    tags["ENCODINGTIME"] = StringList("2021-01-03 11:52:19");
+    tags["FILEWEBPAGE"] = StringList("File Webpage");
     tags["GENRE"] = StringList("Genre");
     tags["WORK"] = StringList("Grouping");
+    tags["INITIALKEY"] = StringList("Initial Key");
     tags["ISRC"] = StringList("UKAAA0500001");
     tags["LABEL"] = StringList("Label");
     tags["LANGUAGE"] = StringList("eng");
@@ -346,6 +351,10 @@ public:
     tags["MUSICBRAINZ_TRACKID"] = StringList("MusicBrainz_TrackID");
     tags["MUSICBRAINZ_WORKID"] = StringList("MusicBrainz_WorkID");
     tags["MUSICIP_PUID"] = StringList("MusicIP PUID");
+    tags["ORIGINALALBUM"] = StringList("Original Album");
+    tags["ORIGINALARTIST"] = StringList("Original Artist");
+    tags["ORIGINALFILENAME"] = StringList("Original Filename");
+    tags["ORIGINALLYRICIST"] = StringList("Original Lyricist");
     tags["ORIGINALDATE"] = StringList("2021-01-03 13:52:19");
     tags["PRODUCER"] = StringList("Producer");
     tags["RELEASECOUNTRY"] = StringList("Release Country");
@@ -386,16 +395,13 @@ public:
   void testRepeatedSave()
   {
     ScopedFileCopy copy("silence-1", ".wma");
-
-    {
-      ASF::File f(copy.fileName().c_str());
-      f.tag()->setTitle(longText(128 * 1024));
-      f.save();
-      CPPUNIT_ASSERT_EQUAL(static_cast<offset_t>(297578), f.length());
-      f.tag()->setTitle(longText(16 * 1024));
-      f.save();
-      CPPUNIT_ASSERT_EQUAL(static_cast<offset_t>(68202), f.length());
-    }
+    ASF::File f(copy.fileName().c_str());
+    f.tag()->setTitle(longText(128 * 1024));
+    f.save();
+    CPPUNIT_ASSERT_EQUAL(static_cast<offset_t>(297578), f.length());
+    f.tag()->setTitle(longText(16 * 1024));
+    f.save();
+    CPPUNIT_ASSERT_EQUAL(static_cast<offset_t>(68202), f.length());
   }
 
 };

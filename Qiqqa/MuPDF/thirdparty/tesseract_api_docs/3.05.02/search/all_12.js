@@ -265,7 +265,7 @@ var searchData=
   ['renderallfontstoimage',['RenderAllFontsToImage',['../a04905.html#a23456ad470cb146de032aa0b4f1aa646',1,'tesseract::StringRenderer']]],
   ['renderer_2ecpp',['renderer.cpp',['../a00020.html',1,'']]],
   ['renderer_2eh',['renderer.h',['../a00023.html',1,'']]],
-  ['renderintfeature',['RenderIntFeature',['../a00737.html#a83c43ef1a01f3be45cbf675da04c3930',1,'RenderIntFeature(ScrollView *window, const INT_FEATURE_STRUCT *Feature, DebugView::Color color):&#160;intproto.cpp'],['../a00740.html#a83c43ef1a01f3be45cbf675da04c3930',1,'RenderIntFeature(ScrollView *window, const INT_FEATURE_STRUCT *Feature, DebugView::Color color):&#160;intproto.cpp']]],
+  ['renderintfeature',['RenderIntFeature',['../a00737.html#a83c43ef1a01f3be45cbf675da04c3930',1,'RenderIntFeature(ScrollView *window, const INT_FEATURE_STRUCT *Feature, ScrollView::Color color):&#160;intproto.cpp'],['../a00740.html#a83c43ef1a01f3be45cbf675da04c3930',1,'RenderIntFeature(ScrollView *window, const INT_FEATURE_STRUCT *Feature, ScrollView::Color color):&#160;intproto.cpp']]],
   ['renderintproto',['RenderIntProto',['../a00737.html#a67948f52800e3964340ae96c2261c018',1,'intproto.cpp']]],
   ['renderspecialtext',['RenderSpecialText',['../a04761.html#a135d1cd23d326e3e8f64e7e3255e8e0d',1,'tesseract::EquationDetectBase']]],
   ['rendertobinaryimage',['RenderToBinaryImage',['../a04905.html#a94fbe5d24008e1e2b97136fe4a519544',1,'tesseract::StringRenderer']]],

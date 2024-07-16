@@ -69,6 +69,7 @@
 typedef struct
 {
 	pdf_obj *obj;
+	int n;
 	int state;
 } pdf_ocg_entry;
 
@@ -170,6 +171,39 @@ get_ocg_ui(fz_context *ctx, pdf_ocg_descriptor *desc, int fill)
 }
 
 static int
+ocgcmp(const void *a_, const void *b_)
+{
+	const pdf_ocg_entry *a = a_;
+	const pdf_ocg_entry *b = b_;
+
+	return (b->n - a->n);
+}
+
+static int
+find_ocg(fz_context *ctx, pdf_ocg_descriptor *desc, pdf_obj *obj)
+{
+	int n = pdf_to_num(ctx, obj);
+	int l = 0;
+	int r = desc->len-1;
+
+	if (n <= 0)
+		return -1;
+
+	while (l <= r)
+	{
+		int m = (l + r) >> 1;
+		int c = desc->ocgs[m].n - n;
+		if (c < 0)
+			r = m - 1;
+		else if (c > 0)
+			l = m + 1;
+		else
+			return c;
+	}
+	return -1;
+}
+
+static int
 populate_ui(fz_context *ctx, pdf_ocg_descriptor *desc, int fill, pdf_obj *order, int depth, pdf_obj *rbgroups, pdf_obj *locked,
 	pdf_cycle_list *cycle_up)
 {
@@ -203,12 +237,8 @@ populate_ui(fz_context *ctx, pdf_ocg_descriptor *desc, int fill, pdf_obj *order,
 			continue;
 		}
 
-		for (j = 0; j < desc->len; j++)
-		{
-			if (!pdf_objcmp_resolve(ctx, o, desc->ocgs[j].obj))
-				break;
-		}
-		if (j == desc->len)
+		j = find_ocg(ctx, desc, o);
+		if (j < 0)
 			continue; /* OCG not found in main list! Just ignore it */
 		ui = get_ocg_ui(ctx, desc, fill++);
 		ui->depth = depth;
@@ -240,11 +270,11 @@ load_ui(fz_context *ctx, pdf_ocg_descriptor *desc, pdf_obj *ocprops, pdf_obj *oc
 
 	/* Count the number of entries */
 	order = pdf_dict_get(ctx, occg, PDF_NAME(Order));
-	if (!order)
+	if (!pdf_is_array(ctx, order))
 		order = pdf_dict_getp(ctx, ocprops, "D/Order");
 	count = count_entries(ctx, order, NULL);
 	rbgroups = pdf_dict_get(ctx, occg, PDF_NAME(RBGroups));
-	if (!rbgroups)
+	if (!pdf_is_array(ctx, rbgroups))
 		rbgroups = pdf_dict_getp(ctx, ocprops, "D/RBGroups");
 	locked = pdf_dict_get(ctx, occg, PDF_NAME(Locked));
 
@@ -275,7 +305,7 @@ pdf_select_layer_config(fz_context *ctx, pdf_document *doc, int config)
 	desc = pdf_read_ocg(ctx, doc);
 
 	obj = pdf_dict_get(ctx, pdf_dict_get(ctx, pdf_trailer(ctx, doc), PDF_NAME(Root)), PDF_NAME(OCProperties));
-	if (!obj)
+	if (!pdf_is_dict(ctx, obj))
 	{
 		if (config == 0)
 			return;
@@ -284,12 +314,12 @@ pdf_select_layer_config(fz_context *ctx, pdf_document *doc, int config)
 	}
 
 	cobj = pdf_array_get(ctx, pdf_dict_get(ctx, obj, PDF_NAME(Configs)), config);
-	if (!cobj)
+	if (!pdf_is_dict(ctx, cobj))
 	{
 		if (config != 0)
 			fz_throw(ctx, FZ_ERROR_ARGUMENT, "Illegal Layer config");
 		cobj = pdf_dict_get(ctx, obj, PDF_NAME(D));
-		if (!cobj)
+		if (!pdf_is_dict(ctx, cobj))
 			fz_throw(ctx, FZ_ERROR_FORMAT, "No default Layer config");
 	}
 
@@ -372,7 +402,7 @@ pdf_layer_config_info(fz_context *ctx, pdf_document *doc, int config_num, pdf_la
 		fz_throw(ctx, FZ_ERROR_ARGUMENT, "Invalid layer config number");
 
 	ocprops = pdf_dict_getp(ctx, pdf_trailer(ctx, doc), "Root/OCProperties");
-	if (!ocprops)
+	if (!pdf_is_dict(ctx, ocprops))
 		return;
 
 	obj = pdf_dict_get(ctx, ocprops, PDF_NAME(Configs));
@@ -652,7 +682,7 @@ pdf_is_ocg_hidden_imp(fz_context *ctx, pdf_document *doc, pdf_obj *rdb, const ch
 		ocg = pdf_dict_get(ctx, pdf_dict_get(ctx, rdb, PDF_NAME(Properties)), ocg);
 	}
 	/* If we haven't been given an ocg at all, then we're visible */
-	if (!ocg)
+	if (!pdf_is_dict(ctx, ocg))
 		return 0;
 
 	/* Avoid infinite recursions */
@@ -835,8 +865,10 @@ pdf_read_ocg(fz_context *ctx, pdf_document *doc)
 		{
 			pdf_obj *o = pdf_array_get(ctx, ocgs, i);
 			doc->ocg->ocgs[i].obj = pdf_keep_obj(ctx, o);
+			doc->ocg->ocgs[i].n = pdf_to_num(ctx, o);
 			doc->ocg->ocgs[i].state = 1;
 		}
+		qsort(doc->ocg->ocgs, len, sizeof(doc->ocg->ocgs[0]), ocgcmp);
 
 		pdf_select_layer_config(ctx, doc, 0);
 	}
@@ -861,12 +893,12 @@ pdf_set_layer_config_as_default(fz_context *ctx, pdf_document *doc)
 	int k;
 
 	ocprops = pdf_dict_getp(ctx, pdf_trailer(ctx, doc), "Root/OCProperties");
-	if (!ocprops)
+	if (!pdf_is_dict(ctx, ocprops))
 		return;
 
 	/* All files with OCGs are required to have a D entry */
 	d = pdf_dict_get(ctx, ocprops, PDF_NAME(D));
-	if (d == NULL)
+	if (!pdf_is_dict(ctx, d))
 		return;
 
 	pdf_dict_put(ctx, d, PDF_NAME(BaseState), PDF_NAME(OFF));
@@ -878,16 +910,16 @@ pdf_set_layer_config_as_default(fz_context *ctx, pdf_document *doc)
 	order = pdf_dict_get(ctx, d, PDF_NAME(Order));
 	rbgroups = pdf_dict_get(ctx, d, PDF_NAME(RBGroups));
 	configs = pdf_dict_get(ctx, ocprops, PDF_NAME(Configs));
-	if (configs)
+	if (pdf_is_array(ctx, configs))
 	{
 		int len = pdf_array_len(ctx, configs);
 		for (k=0; k < len; k++)
 		{
 			pdf_obj *config = pdf_array_get(ctx, configs, k);
 
-			if (order && !pdf_dict_get(ctx, config, PDF_NAME(Order)))
+			if (pdf_is_array(ctx, order) && !pdf_dict_get(ctx, config, PDF_NAME(Order)))
 				pdf_dict_put(ctx, config, PDF_NAME(Order), order);
-			if (rbgroups && !pdf_dict_get(ctx, config, PDF_NAME(RBGroups)))
+			if (pdf_is_array(ctx, rbgroups) && !pdf_dict_get(ctx, config, PDF_NAME(RBGroups)))
 				pdf_dict_put(ctx, config, PDF_NAME(RBGroups), rbgroups);
 		}
 	}

@@ -152,11 +152,11 @@ POLY_BLOCK::reflect_in_y_axis</h2></td></tr>
 <tr class="separator:a7d8b03963fc8c54f78bac911234a147c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdff361301e7f7aab1e74fdfda4eac55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02870.html#afdff361301e7f7aab1e74fdfda4eac55">plot</a> (<a class="el" href="a03978.html">ScrollView</a> *window, int32_t num)</td></tr>
 <tr class="separator:afdff361301e7f7aab1e74fdfda4eac55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e13144f5375d8ac66b8e2991552cf0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02870.html#a8e13144f5375d8ac66b8e2991552cf0e">fill</a> (<a class="el" href="a03978.html">ScrollView</a> *window, <a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a> colour)</td></tr>
+<tr class="memitem:a8e13144f5375d8ac66b8e2991552cf0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02870.html#a8e13144f5375d8ac66b8e2991552cf0e">fill</a> (<a class="el" href="a03978.html">ScrollView</a> *window, <a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a> colour)</td></tr>
 <tr class="separator:a8e13144f5375d8ac66b8e2991552cf0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65581bb9b97bb576da4b2736467dcd94"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02870.html#a65581bb9b97bb576da4b2736467dcd94">overlap</a> (<a class="el" href="a02870.html">POLY_BLOCK</a> *other)</td></tr>
 <tr class="separator:a65581bb9b97bb576da4b2736467dcd94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa733d5e7c20fa495156049537574d5b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02870.html#aaa733d5e7c20fa495156049537574d5b">ColorForPolyBlockType</a> (<a class="el" href="a00032.html#a03566528a98c079dafeebf00502f2b60">PolyBlockType</a> type)</td></tr>
+<tr class="memitem:aaa733d5e7c20fa495156049537574d5b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02870.html#aaa733d5e7c20fa495156049537574d5b">ColorForPolyBlockType</a> (<a class="el" href="a00032.html#a03566528a98c079dafeebf00502f2b60">PolyBlockType</a> type)</td></tr>
 <tr class="memdesc:aaa733d5e7c20fa495156049537574d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a color to draw the given type.  <a href="a02870.html#aaa733d5e7c20fa495156049537574d5b">More...</a><br /></td></tr>
 <tr class="separator:aaa733d5e7c20fa495156049537574d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -332,7 +332,7 @@ POLY_BLOCK::reflect_in_y_axis</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a> POLY_BLOCK::ColorForPolyBlockType </td>
+          <td class="memname"><a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a> POLY_BLOCK::ColorForPolyBlockType </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="a00032.html#a03566528a98c079dafeebf00502f2b60">PolyBlockType</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
@@ -351,7 +351,7 @@ POLY_BLOCK::reflect_in_y_axis</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="a00401_source.html#l00392">392</a> of file <a class="el" href="a00401_source.html">polyblk.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                                                                    {</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  <span class="comment">// Keep kPBColors in sync with PolyBlockType.</span></div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  <span class="keyword">const</span> <a class="code" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a> kPBColors[<a class="code" href="a00008.html#a02cfd8369d5ad8c70a8b90c0f40d677fa1cfce41c30bf1aefe403aaa66d271da1">PT_COUNT</a>] = {</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  <span class="keyword">const</span> <a class="code" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a> kPBColors[<a class="code" href="a00008.html#a02cfd8369d5ad8c70a8b90c0f40d677fa1cfce41c30bf1aefe403aaa66d271da1">PT_COUNT</a>] = {</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <a class="code" href="a03978.html#a100504544a5423a94222149ee9ed0fe8a0eab2b208fc9a5e2774f92cf3e768982">ScrollView::WHITE</a>,        <span class="comment">// Type is not yet known. Keep as the 1st element.</span></div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <a class="code" href="a03978.html#a100504544a5423a94222149ee9ed0fe8a66e5117e4930fdd9a43bdb674d57a719">ScrollView::BLUE</a>,         <span class="comment">// Text that lives inside a column.</span></div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <a class="code" href="a03978.html#a100504544a5423a94222149ee9ed0fe8a6703ffaadb6c67affacbd0e7da63ef37">ScrollView::CYAN</a>,         <span class="comment">// Text that spans more than one column.</span></div>
@@ -492,7 +492,7 @@ POLY_BLOCK::reflect_in_y_axis</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="a03978.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a>&#160;</td>
           <td class="paramname"><em>colour</em>&#160;</td>
         </tr>
         <tr>
@@ -933,11 +933,11 @@ POLY_BLOCK::reflect_in_y_axis</h2></td></tr>
 <div class="ttc" id="aa02898_html_a8e9dce0d30d2213598cd4befe0028c99"><div class="ttname"><a href="a02898.html#a8e9dce0d30d2213598cd4befe0028c99">TBOX::left</a></div><div class="ttdeci">int16_t left() const</div><div class="ttdef"><b>Definition:</b> <a href="a00431_source.html#l00071">rect.h:71</a></div></div>
 <div class="ttc" id="aa03978_html_a100504544a5423a94222149ee9ed0fe8a9d8c87be486dead41d198d6b97a22174"><div class="ttname"><a href="a03978.html#a100504544a5423a94222149ee9ed0fe8a9d8c87be486dead41d198d6b97a22174">ScrollView::GREEN</a></div><div class="ttdef"><b>Definition:</b> <a href="a01469_source.html#l00106">scrollview.h:106</a></div></div>
 <div class="ttc" id="aa02898_html_af74fa3bf628c9426cd6f1141a87dc2e0"><div class="ttname"><a href="a02898.html#af74fa3bf628c9426cd6f1141a87dc2e0">TBOX::right</a></div><div class="ttdeci">int16_t right() const</div><div class="ttdef"><b>Definition:</b> <a href="a00431_source.html#l00078">rect.h:78</a></div></div>
-<div class="ttc" id="aa02870_html_aaa733d5e7c20fa495156049537574d5b"><div class="ttname"><a href="a02870.html#aaa733d5e7c20fa495156049537574d5b">POLY_BLOCK::ColorForPolyBlockType</a></div><div class="ttdeci">static DebugView::Color ColorForPolyBlockType(PolyBlockType type)</div><div class="ttdoc">Returns a color to draw the given type.</div><div class="ttdef"><b>Definition:</b> <a href="a00401_source.html#l00392">polyblk.cpp:392</a></div></div>
+<div class="ttc" id="aa02870_html_aaa733d5e7c20fa495156049537574d5b"><div class="ttname"><a href="a02870.html#aaa733d5e7c20fa495156049537574d5b">POLY_BLOCK::ColorForPolyBlockType</a></div><div class="ttdeci">static ScrollView::Color ColorForPolyBlockType(PolyBlockType type)</div><div class="ttdoc">Returns a color to draw the given type.</div><div class="ttdef"><b>Definition:</b> <a href="a00401_source.html#l00392">polyblk.cpp:392</a></div></div>
 <div class="ttc" id="aa03978_html_a730b182e350dfe37b0986d7f0591fee5"><div class="ttname"><a href="a03978.html#a730b182e350dfe37b0986d7f0591fee5">ScrollView::SetCursor</a></div><div class="ttdeci">void SetCursor(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="a01466_source.html#l00518">scrollview.cpp:518</a></div></div>
 <div class="ttc" id="aa02874_html_adcf9ec2608539671ae57db0ac1f8a6aa"><div class="ttname"><a href="a02874.html#adcf9ec2608539671ae57db0ac1f8a6aa">PB_LINE_IT::get_line</a></div><div class="ttdeci">ICOORDELT_LIST * get_line(int16_t y)</div><div class="ttdef"><b>Definition:</b> <a href="a00401_source.html#l00341">polyblk.cpp:341</a></div></div>
 <div class="ttc" id="aa03978_html_a4c5cb55d6eab9d7d996d25ed8922593d"><div class="ttname"><a href="a03978.html#a4c5cb55d6eab9d7d996d25ed8922593d">ScrollView::Text</a></div><div class="ttdeci">void Text(int x, int y, const char *mystring)</div><div class="ttdef"><b>Definition:</b> <a href="a01466_source.html#l00651">scrollview.cpp:651</a></div></div>
-<div class="ttc" id="aa03978_html_a100504544a5423a94222149ee9ed0fe8"><div class="ttname"><a href="a03978.html#a100504544a5423a94222149ee9ed0fe8">DebugView::Color</a></div><div class="ttdeci">Color</div><div class="ttdef"><b>Definition:</b> <a href="a01469_source.html#l00100">scrollview.h:100</a></div></div>
+<div class="ttc" id="aa03978_html_a100504544a5423a94222149ee9ed0fe8"><div class="ttname"><a href="a03978.html#a100504544a5423a94222149ee9ed0fe8">ScrollView::Color</a></div><div class="ttdeci">Color</div><div class="ttdef"><b>Definition:</b> <a href="a01469_source.html#l00100">scrollview.h:100</a></div></div>
 <div class="ttc" id="aa02862_html"><div class="ttname"><a href="a02862.html">ICOORDELT</a></div><div class="ttdef"><b>Definition:</b> <a href="a00392_source.html#l00160">points.h:160</a></div></div>
 <div class="ttc" id="aa02858_html_a27df9d66085dcf65ead7f620d68a91ac"><div class="ttname"><a href="a02858.html#a27df9d66085dcf65ead7f620d68a91ac">ICOORD::y</a></div><div class="ttdeci">int16_t y() const</div><div class="ttdoc">access_function</div><div class="ttdef"><b>Definition:</b> <a href="a00392_source.html#l00055">points.h:55</a></div></div>
 <!-- start footer part -->

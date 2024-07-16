@@ -9,15 +9,15 @@ dnl The PCRE2_PRERELEASE feature is for identifying release candidates. It might
 dnl be defined as -RC2, for example. For real releases, it should be empty.
 
 m4_define(pcre2_major, [10])
-m4_define(pcre2_minor, [43])
+m4_define(pcre2_minor, [44])
 m4_define(pcre2_prerelease, [-DEV])
-m4_define(pcre2_date, [2023-04-14])
+m4_define(pcre2_date, [2024-03-11])
 
 # Libtool shared library interface versions (current:revision:age)
-m4_define(libpcre2_8_version,     [11:2:11])
-m4_define(libpcre2_16_version,    [11:2:11])
-m4_define(libpcre2_32_version,    [11:2:11])
-m4_define(libpcre2_posix_version, [3:4:0])
+m4_define(libpcre2_8_version,     [12:0:12])
+m4_define(libpcre2_16_version,    [12:0:12])
+m4_define(libpcre2_32_version,    [12:0:12])
+m4_define(libpcre2_posix_version, [3:5:0])
 
 # NOTE: The CMakeLists.txt file searches for the above variables in the first
 # 50 lines of this file. Please update that if the variables above are moved.
@@ -191,7 +191,7 @@ if test "$enable_jit" = "auto"; then
   CPPFLAGS=-I$srcdir
   AC_COMPILE_IFELSE([AC_LANG_SOURCE([[
   #define SLJIT_CONFIG_AUTO 1
-  #include "src/sljit/sljitConfigInternal.h"
+  #include "src/sljit/sljitConfigCPU.h"
   #if (defined SLJIT_CONFIG_UNSUPPORTED && SLJIT_CONFIG_UNSUPPORTED)
   #error unsupported
   #endif]])], enable_jit=yes, enable_jit=no)
@@ -395,6 +395,12 @@ AC_ARG_ENABLE(fuzz_support,
                              [enable fuzzer support]),
               , enable_fuzz_support=no)
 
+# Handle --enable-diff-fuzz-support
+AC_ARG_ENABLE(diff_fuzz_support,
+              AS_HELP_STRING([--enable-diff-fuzz-support],
+                             [enable differential fuzzer support]),
+              , enable_diff_fuzz_support=no)
+
 # Handle --disable-stack-for-recursion
 # This option became obsolete at release 10.30.
 AC_ARG_ENABLE(stack-for-recursion,,
@@ -529,10 +535,24 @@ AM_CONDITIONAL(WITH_JIT, test "x$enable_jit" = "xyes")
 AM_CONDITIONAL(WITH_UNICODE, test "x$enable_unicode" = "xyes")
 AM_CONDITIONAL(WITH_VALGRIND, test "x$enable_valgrind" = "xyes")
 AM_CONDITIONAL(WITH_FUZZ_SUPPORT, test "x$enable_fuzz_support" = "xyes")
+AM_CONDITIONAL(WITH_DIFF_FUZZ_SUPPORT, test "x$enable_diff_fuzz_support" = "xyes")
 
 if test "$enable_fuzz_support" = "yes" -a "$enable_pcre2_8" = "no"; then
   echo "** ERROR: Fuzzer support requires the 8-bit library"
   exit 1
+fi
+
+if test "$enable_diff_fuzz_support" = "yes"; then
+  if test "$enable_fuzz_support" = "no"; then
+    echo "** ERROR: Differential fuzzing support requires fuzzing support"
+    exit 1
+  fi
+  if test "$enable_jit" = "no"; then
+    echo "** ERROR: Differential fuzzing support requires Just-in-Time compilation support"
+    exit 1
+  fi
+  AC_DEFINE([SUPPORT_DIFF_FUZZ], [], [
+    Define to any value to enable differential fuzzing support.])
 fi
 
 # Checks for typedefs, structures, and compiler characteristics.
@@ -863,7 +883,7 @@ AC_DEFINE_UNQUOTED([HEAP_LIMIT], [$with_heap_limit], [
   a pattern. It applies to both pcre2_match() and pcre2_dfa_match(). It does
   not apply to JIT matching. The value is in kibibytes (units of 1024 bytes).])
 
-AC_DEFINE([MAX_NAME_SIZE], [32], [
+AC_DEFINE([MAX_NAME_SIZE], [128], [
   This limit is parameterized just in case anybody ever wants to
   change it. Care must be taken if it is increased, because it guards
   against integer overflow caused by enormously large patterns.])
@@ -1162,6 +1182,7 @@ $PACKAGE-$VERSION configuration summary:
     Valgrind support ................... : ${enable_valgrind}
     Code coverage ...................... : ${enable_coverage}
     Fuzzer support ..................... : ${enable_fuzz_support}
+    Differential fuzzer support ........ : ${enable_diff_fuzz_support}
     Use %zu and %td .................... : ${enable_percent_zt}
 
 EOF

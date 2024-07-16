@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
-    <ProjectGuid>{3644E12D-D934-41FD-BF7E-83745AB3A2B4}</ProjectGuid>
+    <ProjectGuid>{3644E12D-D934-41FD-BF7E-83745ACBCC5D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -121,7 +121,15 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup>
@@ -158,7 +166,8 @@
     <Text Include="../../thirdparty/owemdjee/doxygen-awesome-css/doxygen-custom/custom.css" />
     <Text Include="../../thirdparty/owemdjee/doxygen-awesome-css/doxygen-custom/header.html" />
     <Text Include="../../thirdparty/owemdjee/doxygen-awesome-css/doxygen-custom/toggle-alternative-theme.js" />
-    <Text Include="../../thirdparty/owemdjee/doxygen-awesome-css/img/theme-variants.drawio.svg" />
+    <Text Include="../../thirdparty/owemdjee/doxygen-awesome-css/img/theme-variants-base.drawio.svg" />
+    <Text Include="../../thirdparty/owemdjee/doxygen-awesome-css/img/theme-variants-sidebar-only.drawio.svg" />
     <Text Include="../../thirdparty/owemdjee/doxygen-awesome-css/logo.drawio.svg" />
     <Text Include="../../thirdparty/owemdjee/doxygen-awesome-css/package.json" />
   </ItemGroup>

@@ -17,6 +17,9 @@
  *
  **********************************************************************/
 
+// Include automatically generated configuration file if running autoconf.
+#include <tesseract/preparation.h> // compiler config, etc.
+
 #include <cctype>
 #include <cstring>
 #include "control.h"
@@ -24,11 +27,6 @@
 #include "stopper.h"
 #include "tesseractclass.h"
 #include "tessvars.h"
-
-// Include automatically generated configuration file if running autoconf.
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
 
 namespace tesseract {
 bool Tesseract::word_adaptable( // should we adapt?
@@ -68,14 +66,14 @@ bool Tesseract::word_adaptable( // should we adapt?
   if (flags[ADAPTABLE_WERD]) {
     status |= word->tess_would_adapt; // result of Classify::AdaptableWord()
     if (tessedit_adaption_debug && !status) {
-      tprintDebug("tess_would_adapt bit is false\n");
+	  tprintDebug("tess_would_adapt bit is false\n");
     }
   }
 
   if (flags[ACCEPTABLE_WERD]) {
     status |= word->tess_accepted;
     if (tessedit_adaption_debug && !status) {
-      tprintDebug("tess_accepted bit is false\n");
+	  tprintDebug("tess_accepted bit is false\n");
     }
   }
 
@@ -88,7 +86,7 @@ bool Tesseract::word_adaptable( // should we adapt?
       (word->best_choice->permuter() != USER_DAWG_PERM) &&
       (word->best_choice->permuter() != NUMBER_PERM)) {
     if (tessedit_adaption_debug) {
-      tprintDebug("word not in dawgs\n");
+	  tprintDebug("word not in dawgs\n");
     }
     return false;
   }

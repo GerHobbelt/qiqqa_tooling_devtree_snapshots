@@ -20,7 +20,6 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{00111979-815B-4F64-BC9D-219078B1F3AA}</ProjectGuid>
-    <RootNamespace>curl</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,7 +69,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -106,7 +105,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -248,6 +247,7 @@
     <ClInclude Include="../../thirdparty/curl/projects/wolfssl_options.h" />
     <Text Include="../../thirdparty/curl/CHANGES" />
     <Text Include="../../thirdparty/curl/CMakeLists.txt" />
+    <Text Include="../../thirdparty/curl/GIT-INFO.md" />
     <Text Include="../../thirdparty/curl/LICENSES/BSD-3-Clause.txt" />
     <Text Include="../../thirdparty/curl/LICENSES/BSD-4-Clause-UC.txt" />
     <Text Include="../../thirdparty/curl/LICENSES/ISC.txt" />
@@ -304,30 +304,12 @@
     <Text Include="../../thirdparty/curl/projects/Windows/VC12/lib/libcurl.vcxproj.filters" />
     <Text Include="../../thirdparty/curl/projects/Windows/VC12/src/curl.tmpl" />
     <Text Include="../../thirdparty/curl/projects/Windows/VC12/src/curl.vcxproj.filters" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/lib/libcurl.tmpl" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/lib/libcurl.vcxproj.filters" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/src/curl.tmpl" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/src/curl.vcxproj.filters" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/lib/libcurl.tmpl" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/lib/libcurl.vcxproj.filters" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/src/curl.tmpl" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/src/curl.vcxproj.filters" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/lib/libcurl.tmpl" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/lib/libcurl.vcxproj.filters" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/src/curl.tmpl" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/src/curl.vcxproj.filters" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14/lib/libcurl.tmpl" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14/lib/libcurl.vcxproj.filters" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14/src/curl.tmpl" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14/src/curl.vcxproj.filters" />
     <Text Include="../../thirdparty/curl/projects/build-openssl.bat" />
     <Text Include="../../thirdparty/curl/projects/build-wolfssl.bat" />
     <Text Include="../../thirdparty/curl/projects/checksrc.bat" />
     <Text Include="../../thirdparty/curl/projects/generate.bat" />
     <Text Include="../../thirdparty/curl/projects/wolfssl_override.props" />
+    <Text Include="../../thirdparty/curl/renovate.json" />
     <Text Include="../../thirdparty/curl/vs/vc8/lib/vc8libcurl.vcxproj.filters" />
     <Text Include="../../thirdparty/curl/winbuild/Makefile.vc" />
     <Text Include="../../thirdparty/curl/winbuild/MakefileBuild.vc" />

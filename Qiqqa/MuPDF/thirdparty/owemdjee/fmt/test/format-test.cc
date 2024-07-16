@@ -15,6 +15,7 @@
 
 #include <stdint.h>  // uint32_t
 
+#include <cfenv>               // fegetexceptflag and FE_ALL_EXCEPT
 #include <climits>             // INT_MAX
 #include <cmath>               // std::signbit
 #include <condition_variable>  // std::condition_variable
@@ -22,6 +23,7 @@
 #include <iterator>            // std::back_inserter
 #include <list>                // std::list
 #include <mutex>               // std::mutex
+#include <string>              // std::string
 #include <thread>              // std::thread
 #include <type_traits>         // std::is_default_constructible
 
@@ -108,6 +110,14 @@ TEST(float_test, isfinite) {
 #endif
 }
 
+void check_no_fp_exception() {
+  fexcept_t fe;
+  fegetexceptflag(&fe, FE_ALL_EXCEPT);
+
+  // No exception flags should have been set
+  EXPECT_TRUE(fe == 0);
+}
+
 template <typename Float> void check_isnan() {
   using fmt::detail::isnan;
   EXPECT_FALSE(isnan(Float(0.0)));
@@ -120,6 +130,17 @@ template <typename Float> void check_isnan() {
   EXPECT_FALSE(isnan(Float(-limits::infinity())));
   EXPECT_TRUE(isnan(Float(limits::quiet_NaN())));
   EXPECT_TRUE(isnan(Float(-limits::quiet_NaN())));
+
+  // Sanity check: make sure no error has occurred before we start
+  check_no_fp_exception();
+
+  // Check that no exception is raised for the non-NaN case
+  isnan(Float(42.0));
+  check_no_fp_exception();
+
+  // Check that no exception is raised for the NaN case
+  isnan(Float(limits::quiet_NaN()));
+  check_no_fp_exception();
 }
 
 TEST(float_test, isnan) {
@@ -242,7 +263,8 @@ TEST(util_test, format_system_error) {
     throws_on_alloc = true;
   }
   if (!throws_on_alloc) {
-    fmt::print(stderr, "warning: std::allocator allocates {} chars\n", max_size);
+    fmt::print(stderr, "warning: std::allocator allocates {} chars\n",
+               max_size);
     return;
   }
 }
@@ -1763,24 +1785,24 @@ TEST(format_test, big_print) {
 TEST(format_test, line_buffering) {
   auto pipe = fmt::pipe();
 
+  int write_fd = pipe.write_end.descriptor();
   auto write_end = pipe.write_end.fdopen("w");
   setvbuf(write_end.get(), nullptr, _IOLBF, 4096);
   write_end.print("42\n");
+  close(write_fd);
+  try {
+    write_end.close();
+  } catch (const std::system_error&) {
+  }
 
-  std::mutex mutex;
-  std::condition_variable cv;
   auto read_end = pipe.read_end.fdopen("r");
   std::thread reader([&]() {
     int n = 0;
     int result = fscanf(read_end.get(), "%d", &n);
     (void)result;
     EXPECT_EQ(n, 42);
-    cv.notify_one();
   });
 
-  std::unique_lock<std::mutex> lock(mutex);
-  ASSERT_EQ(cv.wait_for(lock, std::chrono::seconds(1)),
-            std::cv_status::no_timeout);
   reader.join();
 }
 #endif
@@ -1792,15 +1814,14 @@ struct deadlockable {
 
 FMT_BEGIN_NAMESPACE
 template <> struct formatter<deadlockable> {
-  FMT_CONSTEXPR auto parse(fmt::format_parse_context& ctx)
-      -> decltype(ctx.begin()) {
+  FMT_CONSTEXPR auto parse(format_parse_context& ctx) -> decltype(ctx.begin()) {
     return ctx.begin();
   }
 
-  auto format(const deadlockable& d, fmt::format_context& ctx) const
+  auto format(const deadlockable& d, format_context& ctx) const
       -> decltype(ctx.out()) {
     std::lock_guard<std::mutex> lock(d.mutex);
-    return fmt::format_to(ctx.out(), "{}", d.value);
+    return format_to(ctx.out(), "{}", d.value);
   }
 };
 FMT_END_NAMESPACE
@@ -1837,6 +1858,9 @@ TEST(format_test, bytes) {
 TEST(format_test, group_digits_view) {
   EXPECT_EQ(fmt::format("{}", fmt::group_digits(10000000)), "10,000,000");
   EXPECT_EQ(fmt::format("{:8}", fmt::group_digits(1000)), "   1,000");
+  EXPECT_EQ(fmt::format("{}", fmt::group_digits(-10000000)), "-10,000,000");
+  EXPECT_EQ(fmt::format("{:8}", fmt::group_digits(-1000)), "  -1,000");
+  EXPECT_EQ(fmt::format("{:8}", fmt::group_digits(-100)), "    -100");
 }
 
 #ifdef __cpp_generic_lambdas
@@ -2219,16 +2243,21 @@ template <typename Char, typename... T> void check_enabled_formatters() {
 }
 
 TEST(format_test, test_formatters_enabled) {
+  using custom_string =
+      std::basic_string<char, std::char_traits<char>, mock_allocator<char>>;
+  using custom_wstring = std::basic_string<wchar_t, std::char_traits<wchar_t>,
+                                           mock_allocator<wchar_t>>;
+
   check_enabled_formatters<char, bool, char, signed char, unsigned char, short,
                            unsigned short, int, unsigned, long, unsigned long,
                            long long, unsigned long long, float, double,
                            long double, void*, const void*, char*, const char*,
-                           std::string, std::nullptr_t>();
-  check_enabled_formatters<wchar_t, bool, wchar_t, signed char, unsigned char,
-                           short, unsigned short, int, unsigned, long,
-                           unsigned long, long long, unsigned long long, float,
-                           double, long double, void*, const void*, wchar_t*,
-                           const wchar_t*, std::wstring, std::nullptr_t>();
+                           std::string, custom_string, std::nullptr_t>();
+  check_enabled_formatters<
+      wchar_t, bool, wchar_t, signed char, unsigned char, short, unsigned short,
+      int, unsigned, long, unsigned long, long long, unsigned long long, float,
+      double, long double, void*, const void*, wchar_t*, const wchar_t*,
+      std::wstring, custom_wstring, std::nullptr_t>();
 }
 
 TEST(format_int_test, data) {

@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libcrc32c</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF8C8A66}</ProjectGuid>
-    <RootNamespace>libcrc32c</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -126,14 +124,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRC32C;CRC32C_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crc32c/include;../../scripts/crc32c/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CRC32C_HAVE_CONFIG_H;GLOG_NO_ABBREVIATED_SEVERITIES;BUILD_MONOLITHIC;BUILDING_LIBCRC32C;CRC32C_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRC32C;CRC32C_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crc32c/include;../../scripts/crc32c/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -152,15 +150,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRC32C;CRC32C_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crc32c/include;../../scripts/crc32c/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CRC32C_HAVE_CONFIG_H;GLOG_NO_ABBREVIATED_SEVERITIES;BUILD_MONOLITHIC;BUILDING_LIBCRC32C;CRC32C_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRC32C;CRC32C_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crc32c/include;../../scripts/crc32c/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -181,14 +179,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRC32C;CRC32C_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crc32c/include;../../scripts/crc32c/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CRC32C_HAVE_CONFIG_H;GLOG_NO_ABBREVIATED_SEVERITIES;BUILD_MONOLITHIC;BUILDING_LIBCRC32C;CRC32C_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRC32C;CRC32C_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crc32c/include;../../scripts/crc32c/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -207,15 +205,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRC32C;CRC32C_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crc32c/include;../../scripts/crc32c/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CRC32C_HAVE_CONFIG_H;GLOG_NO_ABBREVIATED_SEVERITIES;BUILD_MONOLITHIC;BUILDING_LIBCRC32C;CRC32C_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBCRC32C;CRC32C_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/crc32c/include;../../scripts/crc32c/include;../../thirdparty/owemdjee/googletest/googletest/include;../../thirdparty/owemdjee/gbenchmark/include;../../scripts/gbenchmark/include;../../scripts/libglog;../../thirdparty/owemdjee/glog/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -230,23 +228,16 @@
   <ItemGroup>
     <ClCompile Include="../../thirdparty/owemdjee/crc32c/src/crc32c.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/crc32c/src/crc32c_arm64.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/crc32c/src/crc32c_arm64_unittest.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/crc32c/src/crc32c_benchmark.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/crc32c/src/crc32c_capi_unittest.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/crc32c/src/crc32c_loongarch.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/crc32c/src/crc32c_portable.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/crc32c/src/crc32c_portable_unittest.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/crc32c/src/crc32c_prefetch_unittest.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/crc32c/src/crc32c_read_le_unittest.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/crc32c/src/crc32c_round_up_unittest.cc" />
     <ClCompile Include="../../thirdparty/owemdjee/crc32c/src/crc32c_sse42.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/crc32c/src/crc32c_sse42_unittest.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/crc32c/src/crc32c_test_main.cc" />
-    <ClCompile Include="../../thirdparty/owemdjee/crc32c/src/crc32c_unittest.cc" />
     <ClInclude Include="../../thirdparty/owemdjee/crc32c/include/crc32c/crc32c.h" />
     <ClInclude Include="../../thirdparty/owemdjee/crc32c/src/crc32c_arm64.h" />
     <ClInclude Include="../../thirdparty/owemdjee/crc32c/src/crc32c_arm64_check.h" />
     <ClInclude Include="../../thirdparty/owemdjee/crc32c/src/crc32c_extend_unittests.h" />
     <ClInclude Include="../../thirdparty/owemdjee/crc32c/src/crc32c_internal.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/crc32c/src/crc32c_loongarch.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/crc32c/src/crc32c_loongarch_check.h" />
     <ClInclude Include="../../thirdparty/owemdjee/crc32c/src/crc32c_prefetch.h" />
     <ClInclude Include="../../thirdparty/owemdjee/crc32c/src/crc32c_read_le.h" />
     <ClInclude Include="../../thirdparty/owemdjee/crc32c/src/crc32c_round_up.h" />

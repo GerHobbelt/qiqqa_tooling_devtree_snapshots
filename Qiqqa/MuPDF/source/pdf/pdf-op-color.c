@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -211,7 +211,7 @@ make_resource_instance(fz_context *ctx, pdf_color_processor *p, pdf_obj *key, co
 
 	/* key gives us our category. Make sure we have such a category. */
 	pdf_obj *res = pdf_dict_get(ctx, p->rstack->new_rdb, key);
-	if (!res)
+	if (!pdf_is_dict(ctx, res))
 		res = pdf_dict_put_dict(ctx, p->rstack->new_rdb, key, 8);
 
 	/* Now check through the category for each possible prefixed name
@@ -222,7 +222,7 @@ make_resource_instance(fz_context *ctx, pdf_color_processor *p, pdf_obj *key, co
 		fz_snprintf(buf, len, "%s%d", prefix, i);
 
 		obj = pdf_dict_gets(ctx, res, buf);
-		if (!obj)
+		if (pdf_is_null(ctx, obj))
 		{
 			/* We've run out of names. At least that means we haven't
 			 * previously added one ourselves. So add it now. */
@@ -1147,7 +1147,7 @@ pdf_color_SC_shade(fz_context *ctx, pdf_processor *proc, const char *name, fz_sh
 		/* Must copy shading over to new resources dict. */
 		pdf_obj *old_obj = pdf_dict_gets(ctx, pdf_dict_get(ctx, p->rstack->old_rdb, PDF_NAME(Shading)), name);
 		pdf_obj *new_shading_dict = pdf_dict_get(ctx, p->rstack->new_rdb, PDF_NAME(Shading));
-		if (new_shading_dict == NULL)
+		if (!pdf_is_dict(ctx, new_shading_dict))
 			new_shading_dict = pdf_dict_put_dict(ctx, p->rstack->new_rdb, PDF_NAME(Shading), 4);
 		pdf_dict_puts(ctx, new_shading_dict, name, old_obj);
 
@@ -1165,7 +1165,7 @@ pdf_color_SC_shade(fz_context *ctx, pdf_processor *proc, const char *name, fz_sh
 		/* Must copy shading over to new resources dict. */
 		pdf_obj *old_obj = pdf_dict_gets(ctx, pdf_dict_get(ctx, p->rstack->old_rdb, PDF_NAME(Shading)), name);
 		pdf_obj *new_shading_dict = pdf_dict_get(ctx, p->rstack->new_rdb, PDF_NAME(Shading));
-		if (new_shading_dict == NULL)
+		if (!pdf_is_dict(ctx, new_shading_dict))
 			new_shading_dict = pdf_dict_put_dict(ctx, p->rstack->new_rdb, PDF_NAME(Shading), 4);
 		pdf_dict_puts(ctx, new_shading_dict, name, old_obj);
 
@@ -1390,7 +1390,7 @@ pdf_color_sh(fz_context *ctx, pdf_processor *proc, const char *name, fz_shade *s
 		/* Must copy shading over to new resources dict. */
 		pdf_obj *old_obj = pdf_dict_gets(ctx, pdf_dict_get(ctx, p->rstack->old_rdb, PDF_NAME(Shading)), name);
 		pdf_obj *new_shading_dict = pdf_dict_get(ctx, p->rstack->new_rdb, PDF_NAME(Shading));
-		if (new_shading_dict == NULL)
+		if (!pdf_is_dict(ctx, new_shading_dict))
 			new_shading_dict = pdf_dict_put_dict(ctx, p->rstack->new_rdb, PDF_NAME(Shading), 4);
 		pdf_dict_puts(ctx, new_shading_dict, name, old_obj);
 
@@ -1675,13 +1675,13 @@ pdf_color_push_resources(fz_context *ctx, pdf_processor *proc, pdf_obj *res)
 			stk->new_rdb = pdf_new_dict(ctx, p->doc, 1);
 
 		obj = pdf_dict_get(ctx, res, PDF_NAME(Properties));
-		if (obj)
+		if (pdf_is_dict(ctx, obj))
 			pdf_dict_put(ctx, stk->new_rdb, PDF_NAME(Properties), obj);
 		obj = pdf_dict_get(ctx, res, PDF_NAME(ExtGState));
-		if (obj)
+		if (pdf_is_dict(ctx, obj))
 			pdf_dict_put(ctx, stk->new_rdb, PDF_NAME(ExtGState), obj);
 		obj = pdf_dict_get(ctx, res, PDF_NAME(Font));
-		if (obj)
+		if (pdf_is_dict(ctx, obj))
 			pdf_dict_put(ctx, stk->new_rdb, PDF_NAME(Font), obj);
 
 		pdf_processor_push_resources(ctx, p->chain, stk->new_rdb);
@@ -1710,6 +1710,14 @@ pdf_color_pop_resources(fz_context *ctx, pdf_processor *proc)
 	return pdf_processor_pop_resources(ctx, p->chain);
 }
 
+static void
+pdf_reset_color_processor(fz_context *ctx, pdf_processor *proc)
+{
+	pdf_color_processor *p = (pdf_color_processor*)proc;
+
+	pdf_reset_processor(ctx, p->chain);
+}
+
 pdf_processor *
 pdf_new_color_filter(
 	fz_context *ctx,
@@ -1725,6 +1733,7 @@ pdf_new_color_filter(
 
 	proc->super.close_processor = pdf_close_color_processor;
 	proc->super.drop_processor = pdf_drop_color_processor;
+	proc->super.reset_processor = pdf_reset_color_processor;
 
 	proc->super.push_resources = pdf_color_push_resources;
 	proc->super.pop_resources = pdf_color_pop_resources;
@@ -1860,6 +1869,8 @@ pdf_new_color_filter(
 	proc->chain = chain;
 	proc->global_options = global_options;
 	proc->options = options;
+
+	proc->super.requirements = PDF_PROCESSOR_REQUIRES_DECODED_IMAGES | proc->chain->requirements;
 
 	return (pdf_processor*)proc;
 }

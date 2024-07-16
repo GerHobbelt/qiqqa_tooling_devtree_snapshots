@@ -32,14 +32,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-/* somewhat unix-specific */
-#if !defined(_WIN32) && !defined(CURL_AVOID_SYS_TIME_H)
-#include <sys/time.h>
-#endif
-#if !defined(_WIN32)
-#include <unistd.h>
-#endif
-
 /* curl stuff */
 
 #ifndef CURLPIPE_MULTIPLEX

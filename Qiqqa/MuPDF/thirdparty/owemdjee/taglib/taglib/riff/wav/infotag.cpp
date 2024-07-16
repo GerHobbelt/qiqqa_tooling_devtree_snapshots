@@ -27,6 +27,8 @@
 
 #include <utility>
 
+#include "tbytevector.h"
+#include "tpropertymap.h"
 #include "riffutils.h"
 
 using namespace TagLib;
@@ -164,6 +166,85 @@ bool RIFF::Info::Tag::isEmpty() const
   return d->fieldListMap.isEmpty();
 }
 
+namespace
+{
+  const Map<ByteVector, String> propertyKeyForId = {
+    {"IPRD", "ALBUM"},
+    {"IENG", "ARRANGER"},
+    {"IART", "ARTIST"},
+    {"IBSU", "ARTISTWEBPAGE"},
+    {"IBPM", "BPM"},
+    {"ICMT", "COMMENT"},
+    {"IMUS", "COMPOSER"},
+    {"ICOP", "COPYRIGHT"},
+    {"ICRD", "DATE"},
+    {"PRT1", "DISCSUBTITLE"},
+    {"ITCH", "ENCODEDBY"},
+    {"ISFT", "ENCODING"},
+    {"IDIT", "ENCODINGTIME"},
+    {"IGNR", "GENRE"},
+    {"ISRC", "ISRC"},
+    {"IPUB", "LABEL"},
+    {"ILNG", "LANGUAGE"},
+    {"IWRI", "LYRICIST"},
+    {"IMED", "MEDIA"},
+    {"ISTR", "PERFORMER"},
+    {"ICNT", "RELEASECOUNTRY"},
+    {"IEDT", "REMIXER"},
+    {"INAM", "TITLE"},
+    {"IPRT", "TRACKNUMBER"}
+  };
+}  // namespace
+
+PropertyMap RIFF::Info::Tag::properties() const
+{
+  PropertyMap props;
+  for(const auto &[id, val] : std::as_const(d->fieldListMap)) {
+    if(String key = propertyKeyForId.value(id); !key.isEmpty()) {
+      props[key].append(val);
+    }
+    else {
+      props.addUnsupportedData(key);
+    }
+  }
+  return props;
+}
+
+void RIFF::Info::Tag::removeUnsupportedProperties(const StringList &props)
+{
+  for(const auto &id : props)
+    d->fieldListMap.erase(id.data(String::Latin1));
+}
+
+PropertyMap RIFF::Info::Tag::setProperties(const PropertyMap &props)
+{
+  static Map<String, ByteVector> idForPropertyKey;
+  if(idForPropertyKey.isEmpty()) {
+    for(const auto &[id, key] : propertyKeyForId) {
+      idForPropertyKey[key] = id;
+    }
+  }
+
+  const PropertyMap origProps = properties();
+  for(const auto &[key, _] : origProps) {
+    if(!props.contains(key) || props.value(key).isEmpty()) {
+      d->fieldListMap.erase(idForPropertyKey.value(key));
+    }
+  }
+
+  PropertyMap ignoredProps;
+  for(const auto &[key, val] : props) {
+    if(ByteVector id = idForPropertyKey.value(key);
+       !id.isEmpty() && !val.isEmpty()) {
+      d->fieldListMap[id] = val.front();
+    }
+    else {
+      ignoredProps.insert(key, val);
+    }
+  }
+  return ignoredProps;
+}
+
 FieldListMap RIFF::Info::Tag::fieldListMap() const
 {
   return d->fieldListMap;
@@ -178,7 +259,7 @@ String RIFF::Info::Tag::fieldText(const ByteVector &id) const
 
 void RIFF::Info::Tag::setFieldText(const ByteVector &id, const String &s)
 {
-  // id must be four-byte long pure ascii string.
+  // id must be a four-byte long pure ascii string.
   if(!isValidChunkName(id))
     return;
 
@@ -237,8 +318,7 @@ void RIFF::Info::Tag::parse(const ByteVector &data)
     if(size > data.size() - p - 8)
       break;
 
-    const ByteVector id = data.mid(p, 4);
-    if(isValidChunkName(id)) {
+    if(const ByteVector id = data.mid(p, 4); isValidChunkName(id)) {
       const String text = stringHandler->parse(data.mid(p + 8, size));
       d->fieldListMap[id] = text;
     }

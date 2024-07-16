@@ -130,7 +130,8 @@ MONOLITHIC_CMD_TABLE_START()
 { "findpattern1", { .fa = lept_findpattern1_main } },
 { "findpattern2", { .fa = lept_findpattern2_main } },
 { "findpattern3", { .fa = lept_findpattern3_main } },
-{ "findpattern", { .fa = lept_findpattern_reg_main } },
+{ "findpattern1R", { .fa = lept_findpattern1_reg_main } },
+{ "findpattern2R", {.fa = lept_findpattern2_reg_main } },
 { "flipdetect", { .fa = lept_flipdetect_reg_main } },
 { "fmorphauto", { .fa = lept_fmorphauto_reg_main } },
 { "fmorphautogen", { .fa = lept_fmorphautogen_main } },
@@ -312,6 +313,8 @@ MONOLITHIC_CMD_TABLE_START()
 { "xformbox", { .fa = lept_xformbox_reg_main } },
 { "yuvtest", { .fa = lept_yuvtest_main } },
 { "issue675_check", { .fa = lept_issue675_check_main } },
+{ "misctest2", {.fa = lept_misctest2_main } },
+{ "message_test", {.f = lept_message_test_main } },
 { "demo_pix_apis", { .fa = lept_demo_pix_apis_main } },
 
 MONOLITHIC_CMD_TABLE_END();

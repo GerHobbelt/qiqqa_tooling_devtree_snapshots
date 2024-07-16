@@ -66,7 +66,7 @@ jbig2_image_write_pbm(Jbig2Image *image, FILE *out)
     /* pbm format pads to a byte boundary, so we can
        just write out the whole data buffer
        NB: this assumes minimal stride for the width */
-    fwrite(image->data, 1, image->height * image->stride, out);
+    fwrite(image->data, 1, (size_t) image->height * image->stride, out);
 
     /* success */
     return 0;
@@ -157,7 +157,7 @@ jbig2_image_read_pbm(Jbig2Ctx *ctx, FILE *in)
     }
     /* the pbm data is byte-aligned, so we can
        do a simple block read */
-    (void)fread(image->data, 1, image->height * image->stride, in);
+    (void)fread(image->data, 1, (size_t) image->height * image->stride, in);
     if (feof(in)) {
         fprintf(stderr, "unexpected end of pbm file.\n");
         VERIFY_AND_CONTINUE_EQ(jbig2_image_release(ctx, image), 1);

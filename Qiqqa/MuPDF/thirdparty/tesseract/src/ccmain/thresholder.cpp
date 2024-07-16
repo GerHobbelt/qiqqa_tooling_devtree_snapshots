@@ -17,18 +17,13 @@
 ///////////////////////////////////////////////////////////////////////
 
 // Include automatically generated configuration file
-#ifdef HAVE_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include "otsuthr.h"
 #include "thresholder.h"
 #include "tesseractclass.h"
-#include "tprintf.h" // for tprintf
-
-#if defined(USE_OPENCL)
-#  include "openclwrapper.h" // for OpenclDevice
-#endif
+#include "global_params.h"
+#include <tesseract/tprintf.h> // for tprintf
 
 #include <leptonica/allheaders.h>
 #include <tesseract/baseapi.h> // for api->GetIntVariable()
@@ -82,7 +77,7 @@ bool ImageThresholder::IsEmpty() const {
 // byte packed with the MSB of the first byte being the first pixel, and a
 // one pixel is WHITE. For binary images set bytes_per_pixel=0.
 void ImageThresholder::SetImage(const unsigned char *imagedata, int width, int height,
-                                int bytes_per_pixel, int bytes_per_line, int exif, const float angle) {
+                                int bytes_per_pixel, int bytes_per_line, const float angle) {
   int bpp = bytes_per_pixel * 8;
   if (bpp == 0) {
     bpp = 1;
@@ -138,7 +133,7 @@ void ImageThresholder::SetImage(const unsigned char *imagedata, int width, int h
       tprintError("Cannot convert RAW image to Pix with bpp = {}\n", bpp);
   }
 
-  SetImage(pix, exif, angle);
+  SetImage(pix, angle);
   pix.destroy();
 }
 
@@ -170,36 +165,12 @@ void ImageThresholder::GetImageSizes(int *left, int *top, int *width, int *heigh
 // SetImage for Pix clones its input, so the source pix may be pixDestroyed
 // immediately after, but may not go away until after the Thresholder has
 // finished with it.
-void ImageThresholder::SetImage(const Image pix, int exif, const float angle) {
+void ImageThresholder::SetImage(const Image pix, const float angle) {
   if (pix_ != nullptr) {
     pix_.destroy();
   }
-
-  // Rotate if specified by exif orientation value
-  Image src, temp1, temp2;
-  if (exif == 3 || exif == 4) {
-    temp1 = pixRotateOrth(pix, 2);
-  } else if (exif == 5 || exif == 6) {
-    temp1 = pixRotateOrth(pix, 1);
-  } else if (exif == 7 || exif == 8) {
-    temp1 = pixRotateOrth(pix, 3);
-  } else {
-    temp1 = pix.clone();
-  }
-
-  // Mirror if specified by exif orientation value
-  if (exif == 2 || exif == 4 || exif == 5 || exif == 7) {
-    temp2 = pixFlipLR(NULL, temp1);
-  } else {
-    temp2 = temp1.clone();
-  }
-
-  // Rotate if additional rotation angle is specified
-  src = pixRotate(temp2, angle, L_ROTATE_AREA_MAP, L_BRING_IN_WHITE, 0, 0);
-
-  temp1.destroy();
-  temp2.destroy();
-
+  Image src = pixRotate(pix, angle, L_ROTATE_AREA_MAP, L_BRING_IN_WHITE, 0, 0);
+  //Image src = pix;
   int depth;
   pixGetDimensions(src, &image_width_, &image_height_, &depth);
   // Convert the image as necessary so it is one of binary, plain RGB, or
@@ -384,7 +355,7 @@ ImageThresholder::pixNLNorm1(PIX *pixs, int *pthresh, int *pfgval,int *pbgval)
   if (fgval<0)
     fgval = 0;
   pixAddConstantGray(pixg, -1*fgval);
-  factor = 255/(bgval-fgval);
+  factor = 255.0 / l_float32(bgval-fgval);
   pixMultConstantGray(pixg, factor);
   pixd = pixGammaTRC(NULL, pixg, 1.0, 0, bgval-((bgval-thresh)*0.5));
   pixDestroy(&pixg);
@@ -463,6 +434,11 @@ std::tuple<bool, Image, Image, Image> ImageThresholder::Threshold(
   int r = 0;
   l_int32 threshold_val = 0;
 
+  // TODO: code/history review why we don't use pix_grey here; 
+  // initial check points the finger at myself when I merged in the NlBin threshold algo, 
+  // which likes to also do its own to-greyscale conversion, which should really be done before, 
+  // in a previous stage in tesseract proper, rather than *specifically for NlBin only*. 
+  // Code/flow review required.
   l_int32 pix_w, pix_h;
   pixGetDimensions(pix_ /* pix_grey */, &pix_w, &pix_h, nullptr);
 
@@ -495,8 +471,9 @@ std::tuple<bool, Image, Image, Image> ImageThresholder::Threshold(
     double kfactor = tesseract_->thresholding_kfactor;
     kfactor = std::max(0.0, kfactor);
 
+	// TODO: make sure every thresholding method reports a log line like this.
     if (tesseract_->thresholding_debug) {
-      tprintDebug("window size: {}  kfactor: {}  nx: {}  ny: {}\n", window_size, kfactor, nx, ny);
+      tprintDebug("Sauvola thresholding: window size: {}  kfactor: {}  nx: {}  ny: {}\n", window_size, kfactor, nx, ny);
     }
 
     r = pixSauvolaBinarizeTiled(pix_grey, half_window_size, kfactor, nx, ny,
@@ -669,6 +646,9 @@ Image ImageThresholder::GetPixRectGrey() {
   auto pix = GetPixRect(); // May have to be reduced to grey.
   int depth = pixGetDepth(pix);
   if (depth != 8 || pixGetColormap(pix)) {
+    if (verbose_process) {
+      tprintInfo("PROCESS: the source image is not a greyscale image, hence we apply a simple conversion to 8 bit greyscale now. The greyscale image is required by any of the binarization a.k.a. thresholding algorithms tesseract employs to produce an image content mask and to analyze the image content, to decide which parts of your input image will be extracted and sent to the OCR core engine after.\n");
+    }
     if (depth == 24) {
       auto tmp = pixConvert24To32(pix);
       pix.destroy();
@@ -699,19 +679,7 @@ void ImageThresholder::OtsuThresholdRectToPix(Image src_pix, Image *out_pix) con
 
   int num_channels = OtsuThreshold(src_pix, rect_left_, rect_top_, rect_width_, rect_height_,
                                    thresholds, hi_values);
-  // only use opencl if compiled w/ OpenCL and selected device is opencl
-#ifdef USE_OPENCL
-  OpenclDevice od;
-  if (num_channels == 4 && od.selectedDeviceIsOpenCL() && rect_top_ == 0 && rect_left_ == 0) {
-    od.ThresholdRectToPixOCL((unsigned char *)pixGetData(src_pix), num_channels,
-                             pixGetWpl(src_pix) * 4, &thresholds[0], &hi_values[0], out_pix /*pix_OCL*/,
-                             rect_height_, rect_width_, rect_top_, rect_left_);
-  } else {
-#endif
-    ThresholdRectToPix(src_pix, num_channels, thresholds, hi_values, out_pix);
-#ifdef USE_OPENCL
-  }
-#endif
+  ThresholdRectToPix(src_pix, num_channels, thresholds, hi_values, out_pix);
 }
 
 /// Threshold the rectangle, taking everything except the src_pix

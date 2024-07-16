@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -26,6 +26,7 @@
 #include "mupdf/fitz/system.h"
 #include "mupdf/fitz/context.h"
 #include "mupdf/fitz/geometry.h"
+#include "mupdf/fitz/color.h"
 #include "mupdf/fitz/store.h"
 #include "mupdf/fitz/separation.h"
 
@@ -470,6 +471,17 @@ fz_warp_pixmap(fz_context *ctx, fz_pixmap *src, const fz_point points[4], int wi
 fz_pixmap *
 fz_autowarp_pixmap(fz_context *ctx, fz_pixmap *src, const fz_point points[4]);
 
+/* Search for a "document" within a pixmap (greyscale or rgb, no alpha).
+ *
+ * points should point to an array of 4 fz_points.
+ *
+ * If the function return false, no document was found.
+ * If true, points has been updated to include the corner positions of
+ * the detected document within the src image.
+ */
+int
+fz_detect_document(fz_context *ctx, fz_point *points, fz_pixmap *src);
+
 /*
 	Convert between different separation results.
 */
@@ -507,9 +519,6 @@ void fz_subsample_pixmap(fz_context *ctx, fz_pixmap *tile, int factor);
  * Copies r (clipped to both src and dest) in src to dest.
  */
 void fz_copy_pixmap_rect(fz_context *ctx, fz_pixmap *dest, fz_pixmap *src, fz_irect r, const fz_default_colorspaces *default_cs);
-
-void
-fz_detect_document(fz_context* ctx, fz_point* points, const fz_pixmap* src);
 
 #ifdef __cplusplus
 }

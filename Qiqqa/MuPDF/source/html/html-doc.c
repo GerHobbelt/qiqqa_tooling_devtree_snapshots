@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -273,7 +273,7 @@ static int isws(int c)
 	return c == 32 || c == 9 || c == 10 || c == 13 || c == 12;
 }
 
-int htdoc_recognize_html_content(fz_context *ctx, fz_stream *stream, fz_archive *dir)
+int htdoc_recognize_html_content(fz_context *ctx, const fz_document_handler *handler, fz_stream *stream, fz_archive *dir)
 {
 	uint8_t buffer[4096];
 	size_t i, n, m;
@@ -440,7 +440,7 @@ static const fz_htdoc_format_t fz_htdoc_html5 =
 };
 
 static fz_document *
-htdoc_open_document(fz_context *ctx, fz_stream *file, fz_stream *accel, fz_archive *dir)
+htdoc_open_document(fz_context *ctx, const fz_document_handler *handler, fz_stream *file, fz_stream *accel, fz_archive *dir)
 {
 	return fz_htdoc_open_document_with_stream_and_dir(ctx, file, dir, &fz_htdoc_html5);
 }
@@ -464,7 +464,8 @@ fz_document_handler html_document_handler =
 	htdoc_open_document,
 	htdoc_extensions,
 	htdoc_mimetypes,
-	htdoc_recognize_html_content
+	htdoc_recognize_html_content,
+	1
 };
 
 /* XHTML document handler */
@@ -477,7 +478,7 @@ static const fz_htdoc_format_t fz_htdoc_xhtml =
 };
 
 static fz_document *
-xhtdoc_open_document(fz_context *ctx, fz_stream *file, fz_stream *accel, fz_archive *dir)
+xhtdoc_open_document(fz_context *ctx, const fz_document_handler *handler, fz_stream *file, fz_stream *accel, fz_archive *dir)
 {
 	return fz_htdoc_open_document_with_stream_and_dir(ctx, file, dir, &fz_htdoc_xhtml);
 }
@@ -499,7 +500,9 @@ fz_document_handler xhtml_document_handler =
 	NULL,
 	xhtdoc_open_document,
 	xhtdoc_extensions,
-	xhtdoc_mimetypes
+	xhtdoc_mimetypes,
+	NULL,
+	1
 };
 
 /* FB2 document handler */
@@ -512,7 +515,7 @@ static const fz_htdoc_format_t fz_htdoc_fb2 =
 };
 
 static fz_document *
-fb2doc_open_document(fz_context *ctx, fz_stream *file, fz_stream *accel, fz_archive *dir)
+fb2doc_open_document(fz_context *ctx, const fz_document_handler *handler, fz_stream *file, fz_stream *accel, fz_archive *dir)
 {
 	return fz_htdoc_open_document_with_stream_and_dir(ctx, file, dir, &fz_htdoc_fb2);
 }
@@ -554,26 +557,28 @@ mobi_open_document_with_buffer(fz_context *ctx, fz_buffer *mobi)
 {
 	fz_archive *dir = NULL;
 	fz_buffer *html;
+	fz_document *doc = NULL;
 	fz_var(dir);
 	fz_try(ctx)
 	{
 		dir = fz_extract_html_from_mobi(ctx, mobi);
 		html = fz_read_archive_entry(ctx, dir, "index.html");
+		doc = fz_htdoc_open_document_with_buffer(ctx, dir, html, &fz_htdoc_mobi);
 	}
 	fz_always(ctx)
 	{
 		fz_drop_buffer(ctx, mobi);
+		fz_drop_archive(ctx, dir);
 	}
 	fz_catch(ctx)
 	{
-		fz_drop_archive(ctx, dir);
 		fz_rethrow(ctx);
 	}
-	return fz_htdoc_open_document_with_buffer(ctx, dir, html, &fz_htdoc_mobi);
+	return doc;
 }
 
 static fz_document *
-mobi_open_document(fz_context *ctx, fz_stream *file, fz_stream *accel, fz_archive *dir)
+mobi_open_document(fz_context *ctx, const fz_document_handler *handler, fz_stream *file, fz_stream *accel, fz_archive *dir)
 {
 	return mobi_open_document_with_buffer(ctx, fz_read_all(ctx, file, 0));
 }

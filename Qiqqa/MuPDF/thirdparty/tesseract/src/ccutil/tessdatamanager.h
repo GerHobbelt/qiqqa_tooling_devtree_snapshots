@@ -131,6 +131,11 @@ public:
 
   ~TessdataManager() = default;
 
+  // warning C5267: definition of implicit assignment operator for 'tesseract::TessdataManager' is deprecated because it has a user-provided destructor
+  TessdataManager(const TessdataManager &src) = default;
+  TessdataManager(TessdataManager &&src) noexcept = default;
+  TessdataManager &operator=(const TessdataManager &src) = default;
+
   bool swap() const {
     return swap_;
   }
@@ -223,7 +228,6 @@ public:
 private:
   // Use libarchive.
   bool LoadArchiveFile(const char *filename);
-  bool SaveArchiveFile(const char *filename) const;
 
   /**
    * Fills type with TessdataType of the tessdata component represented by the
@@ -244,9 +248,9 @@ private:
   // Function to load the file when we need it.
   FileReader reader_;
   // True if the file has been loaded.
-  bool is_loaded_;
+  bool is_loaded_ = false;
   // True if the bytes need swapping.
-  bool swap_;
+  bool swap_ = false;
   // Contents of each element of the traineddata file.
   std::vector<char> entries_[TESSDATA_NUM_ENTRIES];
 };

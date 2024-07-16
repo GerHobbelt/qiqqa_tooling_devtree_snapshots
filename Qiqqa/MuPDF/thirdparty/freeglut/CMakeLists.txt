@@ -7,7 +7,7 @@ if (POLICY CMP0072)
     # GNU/Linux. This is not expected to cause an issue, even if the application
     # links with libGL, but keep an eye out for compatibility issues.
     # See discussion about it in pull request:
-    # https://github.com/FreeGLUTProject/freeglut/pull/147
+    # https://github.com/freeglut/freeglut/pull/147
     cmake_policy(SET CMP0072 NEW)
 endif()
 
@@ -28,7 +28,7 @@ SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
 # setup version numbers
 # XXX: Update these for each release!
 set(VERSION_MAJOR 3)
-set(VERSION_MINOR 4)
+set(VERSION_MINOR 6)
 set(VERSION_PATCH 0)
 set(VERSION ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH})
 
@@ -38,7 +38,7 @@ CONFIGURE_FILE(src/fg_version.h.in src/fg_version.h)
 # shared lib version numbers (XXX: change before release)
 set(SO_MAJOR 3)		# increment on backwards incompatible API/ABI changes
 set(SO_MINOR 12)	# increment on backwards compatible API additions
-set(SO_REV 0)		# increment if only internal changes happened between releases
+set(SO_REV 1)		# increment if only internal changes happened between releases
 
 # FREEGLUT_BUILD_SHARED_LIBS is already a standard CMake variable, but we need to
 # re-declare it here so it will show up in the GUI.
@@ -79,6 +79,11 @@ IF(NOT WIN32)
     OPTION(FREEGLUT_WAYLAND "Use Wayland (no X11)" OFF)
 ENDIF()
 
+IF(CMAKE_SYSTEM_NAME MATCHES "NintendoWii|NintendoGameCube")
+    SET(OGC ON)
+ELSE()
+    SET(OGC OFF)
+ENDIF()
 
 SET(FREEGLUT_HEADERS
     include/GL/freeglut.h
@@ -122,7 +127,7 @@ SET(FREEGLUT_SRCS
     src/fg_window.c
 )
 # TODO: OpenGL ES requires a compatible version of these files:
-IF(NOT FREEGLUT_GLES)
+IF(NOT FREEGLUT_GLES AND NOT OGC)
     LIST(APPEND FREEGLUT_SRCS
         src/fg_font.c
         src/fg_menu.c
@@ -197,6 +202,28 @@ ELSEIF(ANDROID OR BLACKBERRY)
         )
     ENDIF()
 
+ELSEIF(OGC)
+
+    LIST(APPEND FREEGLUT_SRCS
+        src/ogc/fg_common_ogc.h
+        src/ogc/fg_cursor_ogc.c
+        src/ogc/fg_display_ogc.c
+        src/ogc/fg_ext_ogc.c
+        src/ogc/fg_gamemode_ogc.c
+        src/ogc/fg_init_ogc.c
+        src/ogc/fg_internal_ogc.h
+        src/ogc/fg_input_devices_ogc.c
+        src/ogc/fg_joystick_ogc.c
+        src/ogc/fg_main_ogc.c
+        src/ogc/fg_state_ogc.c
+        src/ogc/fg_structure_ogc.c
+        src/ogc/fg_window_ogc.c
+    )
+    LIST(APPEND LIBS wiikeyboard fat)
+    SET(FREEGLUT_BUILD_SHARED_LIBS OFF)
+    # Only used in fg_window.c, to declare support for double buffering
+    ADD_DEFINITIONS(-DEGL_VERSION_1_0)
+
 ELSE()
     # UNIX (Wayland)
     IF(FREEGLUT_WAYLAND)
@@ -267,7 +294,7 @@ IF(FREEGLUT_GLES OR FREEGLUT_WAYLAND)
 ENDIF()
 
 INCLUDE(CheckIncludeFiles)
-IF(UNIX AND NOT(ANDROID OR BLACKBERRY OR FREEGLUT_WAYLAND))
+IF(UNIX AND NOT(ANDROID OR BLACKBERRY OR FREEGLUT_WAYLAND OR OGC))
     FIND_PACKAGE(X11 REQUIRED)
     INCLUDE_DIRECTORIES(${X11_X11_INCLUDE_PATH})
     LIST(APPEND LIBS ${X11_X11_LIB})
@@ -330,6 +357,7 @@ ELSE()
       get_filename_component(X11_LIB_PATH ${X11_Xi_LIB} DIRECTORY)
 
       find_library(OPENGL_gl_LIBRARY NAME GL HINTS ${X11_LIB_PATH})
+      find_path(OPENGL_GLU_INCLUDE_DIR NAMES GL/glu.h OpenGL/glu.h HINTS ${X11_Xi_INCLUDE_PATH})
       find_library(OPENGL_glu_LIBRARY NAME GLU HINTS ${X11_LIB_PATH})
     endif()
 
@@ -340,6 +368,17 @@ ELSE()
       FIND_PACKAGE(OpenGL REQUIRED)
       LIST(APPEND LIBS ${OPENGL_gl_LIBRARY})
       INCLUDE_DIRECTORIES(${OPENGL_INCLUDE_DIR})
+    endif()
+
+    if(NOT CMAKE_SYSTEM_NAME STREQUAL "Windows")
+      # CMake 3.29 properly locates the include directory for glu.h in the OPENGL_GLU_INCLUDE_DIR variable for us.
+      if(CMAKE_VERSION VERSION_LESS "3.29")
+        FIND_PATH(OPENGL_GLU_INCLUDE_DIR NAMES GL/glu.h OpenGL/glu.h HINTS ${OPENGL_INCLUDE_DIR})
+      endif()
+      if(NOT OPENGL_GLU_INCLUDE_DIR)
+        message(FATAL_ERROR "Failed to find the glu.h header file.")
+      endif()
+      INCLUDE_DIRECTORIES(${OPENGL_GLU_INCLUDE_DIR})
     endif()
 ENDIF()
 
@@ -621,7 +660,15 @@ INSTALL(FILES ${FREEGLUT_HEADERS} DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/GL COM
 # Optionally build demos, on by default.
 option( FREEGLUT_BUILD_DEMOS "Build FreeGLUT demos." ON )
 
-SET(DEMO_LIBS ${LIBS})
+set(DEMO_LIBS ${LIBS})
+if (FREEGLUT_BUILD_DEMOS)
+    if (OPENGL_GLU_FOUND)
+        list(APPEND DEMO_LIBS ${OPENGL_glu_LIBRARY})
+    else()
+        message(FATAL_ERROR "Failed to find the GLU library which is required to build the demos.")
+    endif()
+endif()
+
 # lib m for math, not needed on windows
 IF (NOT WIN32)
     LIST(APPEND DEMO_LIBS m)
@@ -696,6 +743,8 @@ ELSEIF(FREEGLUT_GLES)
 ELSE()
   IF(FREEGLUT_WAYLAND)
     SET(PC_LIBS_PRIVATE "-lwayland-client -lwayland-cursor -lwayland-egl -lGL -lxkbcommon -lm")
+  ELSEIF(OGC)
+    SET(PC_LIBS_PRIVATE "-lm")
   ELSE()
     SET(PC_LIBS_PRIVATE "-lX11 -lXxf86vm -lXrandr -lGL -lm")
   ENDIF()

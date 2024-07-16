@@ -59,6 +59,8 @@ class CNode
 
 		std::string tag();
 
+        GumboNodeType type();
+
 		CSelection find(std::string aSelector);
 
 	private:

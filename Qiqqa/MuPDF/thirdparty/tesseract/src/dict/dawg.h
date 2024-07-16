@@ -32,15 +32,15 @@
 #include <tesseract/fmt-support.h>
 
 #include "elst.h"
-#include "params.h"
+#include <tesseract/params.h>
 #include "ratngs.h"
 
 #ifndef __GNUC__
 #  if defined(WIN32) || defined(_WIN32) || defined(_WIN64)
-#    define NO_EDGE (int64_t)0xffffffffffffffffi64
+#    define NO_EDGE static_cast<int64_t>(0xffffffffffffffffi64)
 #  endif /*_WIN32*/
 #else
-#  define NO_EDGE (int64_t)0xffffffffffffffffll
+#  define NO_EDGE static_cast<int64_t>(0xffffffffffffffffll)
 #endif /*__GNUC__*/
 
 namespace tesseract {
@@ -74,20 +74,16 @@ enum DawgType {
 };
 DECL_FMT_FORMAT_TESSENUMTYPE(DawgType);
 
-static inline auto format_as(DawgType dt) {
-  return fmt::underlying(dt);
-}
-
 /*----------------------------------------------------------------------
               C o n s t a n t s
 ----------------------------------------------------------------------*/
 
-#define FORWARD_EDGE (int32_t)0
-#define BACKWARD_EDGE (int32_t)1
-#define MAX_NODE_EDGES_DISPLAY (int64_t)100
-#define MARKER_FLAG (int64_t)1
-#define DIRECTION_FLAG (int64_t)2
-#define WERD_END_FLAG (int64_t)4
+#define FORWARD_EDGE static_cast<int32_t>(0)
+#define BACKWARD_EDGE static_cast<int32_t>(1)
+#define MAX_NODE_EDGES_DISPLAY static_cast<int64_t>(100)
+#define MARKER_FLAG static_cast<int64_t>(1)
+#define DIRECTION_FLAG static_cast<int64_t>(2)
+#define WERD_END_FLAG static_cast<int64_t>(4)
 #define LETTER_START_BIT 0
 #define NUM_FLAG_BITS 3
 
@@ -117,7 +113,7 @@ static const char kWildcard[] = "*";
 class TESS_API Dawg {
 public:
   /// Magic number to determine endianness when reading the Dawg from file.
-  const int16_t kDawgMagicNumber = 42;
+  static const int16_t kDawgMagicNumber = 42;
   /// A special unichar id that indicates that any appropriate pattern
   /// (e.g.dictionary word, 0-9 digit, etc) can be inserted instead
   /// Used for expressing patterns in punctuation and number Dawgs.

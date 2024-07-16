@@ -358,8 +358,25 @@ typedef uint64_t JSValue;
 #define JS_VALUE_GET_BOOL(v) JS_VALUE_GET_INT(v)
 #define JS_VALUE_GET_PTR(v) ((void *)((int64_t)(((uint64_t)v) << 17) >> 16))
 
+// Using compound-literals in C++ mode gives warnings under -Wpedantic
+#ifdef STRICT_R_HEADERS
+static inline JSValue JS_MKVAL(int64_t tag, int32_t val) {
+    JSValue v;
+    v.u.int32 = val;
+    v.tag = tag;
+    return v;
+}
+
+static inline JSValue JS_MKPTR(int64_t tag, void* p) {
+    JSValue v;
+    v.u.ptr = p;
+    v.tag = tag;
+    return v;
+}
+#else
 #define JS_MKVAL(tag, val) (((uint64_t)(tag) << 47) | (uint32_t)(val))
 #define JS_MKPTR(tag, ptr) (((uint64_t)(tag) << 47) | (((uintptr_t)(ptr) >> 1) & (((uint64_t)1 << 47) - 1)))
+#endif
 
 #define JS_NAN JS_MKVAL(JS_TAG_FLOAT64, 0)
 
@@ -582,7 +599,13 @@ JSValue qjs_string_codePointRange(JSContext *ctx, JSValueConst this_val,
 
 void *qjs_malloc_rt(JSRuntime *rt, size_t size);
 void qjs_free_rt(JSRuntime *rt, void *ptr);
+// Clang-18 ubsan errors when js_realloc_rt assigned to DynBufReallocFunc type
+//  - expecting void* type for first argument
+#ifdef STRICT_R_HEADERS
+void *js_realloc_rt(void *rt, void *ptr, size_t size);
+#else
 void *qjs_realloc_rt(JSRuntime *rt, void *ptr, size_t size);
+#endif
 size_t qjs_malloc_usable_size_rt(JSRuntime *rt, const void *ptr);
 void *qjs_mallocz_rt(JSRuntime *rt, size_t size);
 
@@ -840,7 +863,9 @@ static inline BOOL JS_IsObject(JSValueConst v)
 
 JSValue JS_Throw(JSContext *ctx, JSValue obj);
 JSValue JS_GetException(JSContext *ctx);
+BOOL JS_HasException(JSContext *ctx);
 BOOL JS_IsError(JSContext *ctx, JSValueConst val);
+void JS_SetUncatchableError(JSContext *ctx, JSValueConst val, BOOL flag);
 void JS_ResetUncatchableError(JSContext *ctx);
 JSValue JS_NewError(JSContext *ctx);
 JSValue JS_NewUncatchableError(JSContext *ctx);
@@ -947,7 +972,10 @@ static inline JSValue JS_DupValueRT(JSRuntime *rt, JSValueConst v)
 #define QUICK_JS_HAS_SCRIPTX_PATCH
 JSValue JS_NewWeakRef(JSContext* ctx, JSValueConst v);
 JSValue JS_GetWeakRef(JSContext* ctx, JSValueConst w);
-int JS_StrictEqual(JSContext *ctx, JSValueConst op1, JSValueConst op2);
+
+BOOL JS_StrictEq(JSContext *ctx, JSValueConst op1, JSValueConst op2);
+BOOL JS_SameValue(JSContext *ctx, JSValueConst op1, JSValueConst op2);
+BOOL JS_SameValueZero(JSContext *ctx, JSValueConst op1, JSValueConst op2);
 
 JS_BOOL JS_ToBool(JSContext *ctx, JSValueConst val); /* return -1 for JS_EXCEPTION */
 int JS_ToInt32(JSContext *ctx, int32_t *pres, JSValueConst val);
@@ -996,6 +1024,9 @@ BOOL JS_SetConstructorBit(JSContext *ctx, JSValueConst func_obj, BOOL val);
 
 JSValue JS_NewArray(JSContext *ctx);
 BOOL JS_IsArray(JSContext *ctx, JSValueConst val);
+
+JSValue JS_NewDate(JSContext *ctx, double epoch_ms);
+int JS_ToDate(JSContext *ctx, double *pres, JSValueConst val);
 
 JSValue JS_GetPropertyInternal(JSContext *ctx, JSValueConst obj,
                                JSAtom prop, JSValueConst receiver,
@@ -1100,6 +1131,23 @@ JSValue JS_NewArrayBuffer(JSContext *ctx, uint8_t *buf, size_t len,
 JSValue JS_NewArrayBufferCopy(JSContext *ctx, const uint8_t *buf, size_t len);
 void JS_DetachArrayBuffer(JSContext *ctx, JSValueConst obj);
 uint8_t *JS_GetArrayBuffer(JSContext *ctx, size_t *psize, JSValueConst obj);
+
+typedef enum JSTypedArrayEnum {
+    JS_TYPED_ARRAY_UINT8C = 0,
+    JS_TYPED_ARRAY_INT8,
+    JS_TYPED_ARRAY_UINT8,
+    JS_TYPED_ARRAY_INT16,
+    JS_TYPED_ARRAY_UINT16,
+    JS_TYPED_ARRAY_INT32,
+    JS_TYPED_ARRAY_UINT32,
+    JS_TYPED_ARRAY_BIG_INT64,
+    JS_TYPED_ARRAY_BIG_UINT64,
+    JS_TYPED_ARRAY_FLOAT32,
+    JS_TYPED_ARRAY_FLOAT64,
+} JSTypedArrayEnum;
+
+JSValue JS_NewTypedArray(JSContext *ctx, int argc, JSValueConst *argv,
+                         JSTypedArrayEnum array_type);
 JSValue JS_GetTypedArrayBuffer(JSContext *ctx, JSValueConst obj,
                                size_t *pbyte_offset,
                                size_t *pbyte_length,

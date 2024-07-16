@@ -54,8 +54,8 @@ namespace
   const ID3v2::Latin1StringHandler defaultStringHandler;
   const ID3v2::Latin1StringHandler *stringHandler = &defaultStringHandler;
 
-  const long MinPaddingSize = 1024;
-  const long MaxPaddingSize = 1024 * 1024;
+  constexpr long MinPaddingSize = 1024;
+  constexpr long MaxPaddingSize = 1024 * 1024;
 }  // namespace
 
 class ID3v2::Tag::TagPrivate
@@ -121,21 +121,21 @@ ID3v2::Tag::~Tag() = default;
 String ID3v2::Tag::title() const
 {
   if(!d->frameListMap["TIT2"].isEmpty())
-    return d->frameListMap["TIT2"].front()->toString();
+    return joinTagValues(d->frameListMap["TIT2"].front()->toStringList());
   return String();
 }
 
 String ID3v2::Tag::artist() const
 {
   if(!d->frameListMap["TPE1"].isEmpty())
-    return d->frameListMap["TPE1"].front()->toString();
+    return joinTagValues(d->frameListMap["TPE1"].front()->toStringList());
   return String();
 }
 
 String ID3v2::Tag::album() const
 {
   if(!d->frameListMap["TALB"].isEmpty())
-    return d->frameListMap["TALB"].front()->toString();
+    return joinTagValues(d->frameListMap["TALB"].front()->toStringList());
   return String();
 }
 
@@ -146,10 +146,10 @@ String ID3v2::Tag::comment() const
   if(comments.isEmpty())
     return String();
 
-  for(const auto &comment : comments) {
-    auto frame = dynamic_cast<CommentsFrame *>(comment);
+  for(const auto &commFrame : comments) {
+    auto frame = dynamic_cast<CommentsFrame *>(commFrame);
     if(frame && frame->description().isEmpty())
-      return comment->toString();
+      return commFrame->toString();
   }
 
   return comments.front()->toString();
@@ -157,10 +157,6 @@ String ID3v2::Tag::comment() const
 
 String ID3v2::Tag::genre() const
 {
-  // TODO: In the next major version (TagLib 2.0) a list of multiple genres
-  // should be separated by " / " instead of " ".  For the moment to keep
-  // the behavior the same as released versions it is being left with " ".
-
   const FrameList &tconFrames = d->frameListMap["TCON"];
   if(tconFrames.isEmpty())
   {
@@ -196,7 +192,7 @@ String ID3v2::Tag::genre() const
       genres.append(field);
   }
 
-  return genres.toString();
+  return joinTagValues(genres);
 }
 
 unsigned int ID3v2::Tag::year() const
@@ -235,13 +231,11 @@ void ID3v2::Tag::setComment(const String &s)
     return;
   }
 
-  const FrameList &comments = d->frameListMap["COMM"];
-
-  if(!comments.isEmpty()) {
-    for(const auto &comment : comments) {
-      auto frame = dynamic_cast<CommentsFrame *>(comment);
+  if(const FrameList &comments = d->frameListMap["COMM"]; !comments.isEmpty()) {
+    for(const auto &commFrame : comments) {
+      auto frame = dynamic_cast<CommentsFrame *>(commFrame);
       if(frame && frame->description().isEmpty()) {
-        comment->setText(s);
+        commFrame->setText(s);
         return;
       }
     }
@@ -306,7 +300,7 @@ bool ID3v2::Tag::isEmpty() const
 
 Header *ID3v2::Tag::header() const
 {
-  return &(d->header);
+  return &d->header;
 }
 
 ExtendedHeader *ID3v2::Tag::extendedHeader() const
@@ -412,10 +406,10 @@ PropertyMap ID3v2::Tag::setProperties(const PropertyMap &origProps)
   FrameList framesToDelete;
   // we split up the PropertyMap into the "normal" keys and the "complicated" ones,
   // which are those according to TIPL or TMCL frames.
-  PropertyMap properties;
+  PropertyMap singleFrameProperties;
   PropertyMap tiplProperties;
   PropertyMap tmclProperties;
-  Frame::splitProperties(origProps, properties, tiplProperties, tmclProperties);
+  Frame::splitProperties(origProps, singleFrameProperties, tiplProperties, tmclProperties);
   for(const auto &[tag, frames] : std::as_const(frameListMap())) {
     for(const auto &frame : frames) {
       PropertyMap frameProperties = frame->asProperties();
@@ -431,10 +425,10 @@ PropertyMap ID3v2::Tag::setProperties(const PropertyMap &origProps)
         else
           tmclProperties.erase(frameProperties);
       }
-      else if(!properties.contains(frameProperties))
+      else if(!singleFrameProperties.contains(frameProperties))
         framesToDelete.append(frame);
       else
-        properties.erase(frameProperties);
+        singleFrameProperties.erase(frameProperties);
     }
   }
   for(const auto &frame : std::as_const(framesToDelete))
@@ -443,13 +437,13 @@ PropertyMap ID3v2::Tag::setProperties(const PropertyMap &origProps)
   // now create remaining frames:
   // start with the involved people list (TIPL)
   if(!tiplProperties.isEmpty())
-      addFrame(TextIdentificationFrame::createTIPLFrame(tiplProperties));
+    addFrame(TextIdentificationFrame::createTIPLFrame(tiplProperties));
   // proceed with the musician credit list (TMCL)
   if(!tmclProperties.isEmpty())
-      addFrame(TextIdentificationFrame::createTMCLFrame(tmclProperties));
+    addFrame(TextIdentificationFrame::createTMCLFrame(tmclProperties));
   // now create the "one key per frame" frames
-  for(const auto &[tag, frames] : std::as_const(properties))
-      addFrame(Frame::createTextualFrame(tag, frames));
+  for(const auto &[tag, frames] : std::as_const(singleFrameProperties))
+    addFrame(d->factory->createFrameForProperty(tag, frames));
   return PropertyMap(); // ID3 implements the complete PropertyMap interface, so an empty map is returned
 }
 
@@ -467,43 +461,43 @@ StringList ID3v2::Tag::complexPropertyKeys() const
 
 List<VariantMap> ID3v2::Tag::complexProperties(const String &key) const
 {
-  List<VariantMap> properties;
-  const String uppercaseKey = key.upper();
-  if(uppercaseKey == "PICTURE") {
+  List<VariantMap> props;
+  if(const String uppercaseKey = key.upper(); uppercaseKey == "PICTURE") {
     const FrameList pictures = d->frameListMap.value("APIC");
     for(const Frame *frame : pictures) {
-      auto picture = static_cast<const AttachedPictureFrame *>(frame);
-      VariantMap property;
-      property.insert("data", picture->picture());
-      property.insert("mimeType", picture->mimeType());
-      property.insert("description", picture->description());
-      property.insert("pictureType",
-        AttachedPictureFrame::typeToString(picture->type()));
-      properties.append(property);
+      if(auto picture = dynamic_cast<const AttachedPictureFrame *>(frame)) {
+        VariantMap property;
+        property.insert("data", picture->picture());
+        property.insert("mimeType", picture->mimeType());
+        property.insert("description", picture->description());
+        property.insert("pictureType",
+          AttachedPictureFrame::typeToString(picture->type()));
+        props.append(property);
+      }
     }
   }
   else if(uppercaseKey == "GENERALOBJECT") {
     const FrameList geobs = d->frameListMap.value("GEOB");
     for(const Frame *frame : geobs) {
-      auto geob = static_cast<const GeneralEncapsulatedObjectFrame *>(frame);
-      VariantMap property;
-      property.insert("data", geob->object());
-      property.insert("mimeType", geob->mimeType());
-      property.insert("description", geob->description());
-      property.insert("fileName", geob->fileName());
-      properties.append(property);
+      if(auto geob = dynamic_cast<const GeneralEncapsulatedObjectFrame *>(frame)) {
+        VariantMap property;
+        property.insert("data", geob->object());
+        property.insert("mimeType", geob->mimeType());
+        property.insert("description", geob->description());
+        property.insert("fileName", geob->fileName());
+        props.append(property);
+      }
     }
   }
-  return properties;
+  return props;
 }
 
 bool ID3v2::Tag::setComplexProperties(const String &key, const List<VariantMap> &value)
 {
-  const String uppercaseKey = key.upper();
-  if(uppercaseKey == "PICTURE") {
+  if(const String uppercaseKey = key.upper(); uppercaseKey == "PICTURE") {
     removeFrames("APIC");
 
-    for(auto property : value) {
+    for(const auto &property : value) {
       auto picture = new AttachedPictureFrame;
       picture->setPicture(property.value("data").value<ByteVector>());
       picture->setMimeType(property.value("mimeType").value<String>());
@@ -516,7 +510,7 @@ bool ID3v2::Tag::setComplexProperties(const String &key, const List<VariantMap> 
   else if(uppercaseKey == "GENERALOBJECT") {
     removeFrames("GEOB");
 
-    for(auto property : value) {
+    for(const auto &property : value) {
       auto geob = new GeneralEncapsulatedObjectFrame;
       geob->setObject(property.value("data").value<ByteVector>());
       geob->setMimeType(property.value("mimeType").value<String>());
@@ -592,8 +586,7 @@ void ID3v2::Tag::downgradeFrames(FrameList *frames, FrameList *newFrames) const
   }
 
   if(frameTDRC) {
-    String content = frameTDRC->toString();
-    if(content.size() >= 4) {
+    if(String content = frameTDRC->toString(); content.size() >= 4) {
       auto frameTYER = new ID3v2::TextIdentificationFrame("TYER", String::Latin1);
       frameTYER->setText(content.substr(0, 4));
       frames->append(frameTYER);
@@ -649,8 +642,8 @@ void ID3v2::Tag::downgradeFrames(FrameList *frames, FrameList *newFrames) const
     // genre number exists can be finally added as a refinement.
     for(const auto &genre : genres) {
       bool ok = false;
-      int number = genre.toInt(&ok);
-      if((ok && number >= 0 && number <= 255) || genre == "RX" || genre == "CR")
+      if(int number = genre.toInt(&ok);
+         (ok && number >= 0 && number <= 255) || genre == "RX" || genre == "CR")
         combined += '(' + genre + ')';
       else if(hasMultipleGenres && (number = ID3v1::genreIndex(genre)) != 255)
         combined += '(' + String::number(number) + ')';
@@ -681,12 +674,12 @@ ByteVector ID3v2::Tag::render(Version version) const
   FrameList newFrames;
   newFrames.setAutoDelete(true);
 
-  FrameList frameList;
+  FrameList frames;
   if(version == v4) {
-    frameList = d->frameList;
+    frames = d->frameList;
   }
   else {
-    downgradeFrames(&frameList, &newFrames);
+    downgradeFrames(&frames, &newFrames);
   }
 
   // Reserve a 10-byte blank space for an ID3v2 tag header.
@@ -695,7 +688,7 @@ ByteVector ID3v2::Tag::render(Version version) const
 
   // Loop through the frames rendering them and adding them to the tagData.
 
-  for(const auto &frame : std::as_const(frameList)) {
+  for(const auto &frame : std::as_const(frames)) {
     frame->header()->setVersion(version == v3 ? 3 : 4);
     if(frame->header()->frameID().size() != 4) {
       debug("An ID3v2 frame of unsupported or unknown type \'"
@@ -850,8 +843,10 @@ void ID3v2::Tag::parse(const ByteVector &origData)
       break;
     }
 
-    Frame *frame = d->factory->createFrame(data.mid(frameDataPosition),
-                                           &d->header);
+    const ByteVector origData = data.mid(frameDataPosition);
+    const Header *tagHeader = &d->header;
+    unsigned int headerVersion = tagHeader->majorVersion();
+    Frame *frame = d->factory->createFrame(origData, tagHeader);
 
     if(!frame)
       return;
@@ -863,7 +858,15 @@ void ID3v2::Tag::parse(const ByteVector &origData)
       return;
     }
 
-    frameDataPosition += frame->size() + frame->headerSize();
+    if(frame->header()->version() == headerVersion) {
+      frameDataPosition += frame->size() + frame->headerSize();
+    } else {
+      // The frame was converted to another version, e.g. from 2.2 to 2.4.
+      // We must advance the frame data position according to the original
+      // frame, not the converted frame because its header size might differ.
+      Frame::Header origHeader(origData, headerVersion);
+      frameDataPosition += origHeader.frameSize() + origHeader.size();
+    }
     addFrame(frame);
   }
 

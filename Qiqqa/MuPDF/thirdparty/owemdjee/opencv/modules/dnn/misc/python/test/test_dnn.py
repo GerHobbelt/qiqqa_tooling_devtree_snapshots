@@ -127,6 +127,34 @@ class dnn_test(NewOpenCVTests):
         targets = cv.dnn.getAvailableTargets(cv.dnn.DNN_BACKEND_OPENCV)
         self.assertTrue(cv.dnn.DNN_TARGET_CPU in targets)
 
+    def test_blobRectsToImageRects(self):
+        paramNet = cv.dnn.Image2BlobParams()
+        paramNet.size = (226, 226)
+        paramNet.ddepth = cv.CV_32F
+        paramNet.mean = [0.485, 0.456, 0.406]
+        paramNet.scalefactor = [0.229, 0.224, 0.225]
+        paramNet.swapRB = False
+        paramNet.datalayout = cv.dnn.DNN_LAYOUT_NCHW
+        paramNet.paddingmode = cv.dnn.DNN_PMODE_LETTERBOX
+        rBlob = np.zeros(shape=(20, 4), dtype=np.int32)
+        rImg = paramNet.blobRectsToImageRects(rBlob, (356, 356))
+        self.assertTrue(type(rImg[0, 0])==np.int32)
+        self.assertTrue(rImg.shape==(20, 4))
+
+    def test_blobRectToImageRect(self):
+        paramNet = cv.dnn.Image2BlobParams()
+        paramNet.size = (226, 226)
+        paramNet.ddepth = cv.CV_32F
+        paramNet.mean = [0.485, 0.456, 0.406]
+        paramNet.scalefactor = [0.229, 0.224, 0.225]
+        paramNet.swapRB = False
+        paramNet.datalayout = cv.dnn.DNN_LAYOUT_NCHW
+        paramNet.paddingmode = cv.dnn.DNN_PMODE_LETTERBOX
+        rBlob = np.zeros(shape=(20, 4), dtype=np.int32)
+        rImg = paramNet.blobRectToImageRect((0, 0, 0, 0), (356, 356))
+        self.assertTrue(type(rImg[0])==int)
+
+
     def test_blobFromImage(self):
         np.random.seed(324)
 
@@ -451,6 +479,22 @@ class dnn_test(NewOpenCVTests):
         self.assertEqual(params.scalefactor, (1.0, 1.0, 1.0, 1.0))
         params.scalefactor = 2.0
         self.assertEqual(params.scalefactor, (2.0, 0.0, 0.0, 0.0))
+
+    def test_net_builder(self):
+        net = cv.dnn.Net()
+        params = {
+            "kernel_w": 3,
+            "kernel_h": 3,
+            "stride_w": 3,
+            "stride_h": 3,
+            "pool": "max",
+        }
+        net.addLayerToPrev("pool", "Pooling", cv.CV_32F, params)
+
+        inp = np.random.standard_normal([1, 2, 9, 12]).astype(np.float32)
+        net.setInput(inp)
+        out = net.forward()
+        self.assertEqual(out.shape, (1, 2, 3, 4))
 
 if __name__ == '__main__':
     NewOpenCVTests.bootstrap()

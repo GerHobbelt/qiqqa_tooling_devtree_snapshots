@@ -17,9 +17,7 @@
 #ifndef TESSERACT_TESSTYPES_H
 #define TESSERACT_TESSTYPES_H
 
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h" // FAST_FLOAT
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include <cstdint> // for int16_t, int32_t
 
@@ -35,7 +33,7 @@ typedef int32_t TDimension;
 typedef int16_t TDimension;
 
 #define TDIMENSION_MAX   INT16_MAX
-#define TDIMENSION_MIN   INT16_MIN
+#define TDIMENSION_MIN   (-INT16_MAX)
 #endif
 
 // Floating point data type used for LSTM calculations.

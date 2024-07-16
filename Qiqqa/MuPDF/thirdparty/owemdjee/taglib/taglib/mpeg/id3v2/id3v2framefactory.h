@@ -50,13 +50,15 @@ namespace TagLib {
      * factory to be the default factory in ID3v2::Tag constructor you can
      * implement behavior that will allow for new ID3v2::Frame subclasses (also
      * provided by you) to be used.
+     * See <a href="https://github.com/taglib/taglib/blob/master/tests/test_id3v2framefactory.cpp">
+     * tests/test_id3v2framefactory.cpp</a> for an example.
      *
      * This implements both <i>abstract factory</i> and <i>singleton</i> patterns
      * of which more information is available on the web and in software design
-     * textbooks (Notably <i>Design Patters</i>).
+     * textbooks (notably <i>Design Patterns</i>).
      *
      * \note You do not need to use this factory to create new frames to add to
-     * an ID3v2::Tag.  You can instantiate frame subclasses directly (with new)
+     * an ID3v2::Tag.  You can instantiate frame subclasses directly (with \c new)
      * and add them to a tag using ID3v2::Tag::addFrame()
      *
      * \see ID3v2::Tag::addFrame()
@@ -71,10 +73,18 @@ namespace TagLib {
       static FrameFactory *instance();
 
       /*!
-       * Create a frame based on \a data.  \a tagHeader should be a valid
+       * Create a frame based on \a origData.  \a tagHeader should be a valid
        * ID3v2::Header instance.
        */
-      virtual Frame *createFrame(const ByteVector &data, const Header *tagHeader) const;
+      virtual Frame *createFrame(const ByteVector &origData, const Header *tagHeader) const;
+
+      /*!
+       * Creates a textual frame which corresponds to a single key in the
+       * PropertyMap interface.  TIPL and TMCL do not belong to this category
+       * and are thus handled explicitly in the Frame class.
+       */
+      virtual Frame *createFrameForProperty(
+        const String &key, const StringList &values) const;
 
       /*!
        * After a tag has been read, this tries to rebuild some of them
@@ -105,6 +115,18 @@ namespace TagLib {
        */
       void setDefaultTextEncoding(String::Type encoding);
 
+      /*!
+       * Returns \c true if defaultTextEncoding() is used.
+       * The default text encoding is used when setDefaultTextEncoding() has
+       * been called.  In this case, reimplementations of FrameFactory should
+       * use defaultTextEncoding() on the frames (having a text encoding field)
+       * they create.
+       *
+       * \see defaultTextEncoding()
+       * \see setDefaultTextEncoding()
+       */
+      bool isUsingDefaultTextEncoding() const;
+
     protected:
       /*!
        * Constructs a frame factory.  Because this is a singleton this method is
@@ -115,7 +137,7 @@ namespace TagLib {
       /*!
        * Destroys the frame factory.
        */
-      virtual ~FrameFactory();
+      ~FrameFactory();
 
       /*!
        * This method checks for compliance to the current ID3v2 standard (2.4)
@@ -123,8 +145,8 @@ namespace TagLib {
        * is not compatible with the current standard, this method either updates
        * the frame or indicates that it should be discarded.
        *
-       * This method with return true (with or without changes to the frame) if
-       * this frame should be kept or false if it should be discarded.
+       * This method with return \c true (with or without changes to the frame) if
+       * this frame should be kept or \c false if it should be discarded.
        *
        * See the id3v2.4.0-changes.txt document for further information.
        */
@@ -136,7 +158,7 @@ namespace TagLib {
        * \param data data of the frame (might be modified)
        * \param tagHeader the tag header
        * \return {header, ok}: header is a created frame header or nullptr
-       *         if the frame is invalid; ok is true if the frame is supported.
+       *         if the frame is invalid; ok is \c true if the frame is supported.
        */
       std::pair<Frame::Header *, bool> prepareFrameHeader(
           ByteVector &data, const Header *tagHeader) const;
@@ -157,6 +179,7 @@ namespace TagLib {
       static FrameFactory factory;
 
       class FrameFactoryPrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<FrameFactoryPrivate> d;
     };
 

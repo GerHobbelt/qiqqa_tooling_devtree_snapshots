@@ -1,0 +1,1401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A60D8644-5A1C-4D29-8970-75180059C610}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project.props" Label="SolutionWideSettings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win32.props')" Label="SolutionWideDebugWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win32.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win32.props')" Label="SolutionWideReleaseWin32Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(SolutionDir)\common-project-Debug-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Debug-Win64.props')" Label="SolutionWideDebugWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(SolutionDir)\common-project-Release-Win64.props"  Condition="exists('$(SolutionDir)\common-project-Release-Win64.props')" Label="SolutionWideReleaseWin64Settings" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableUnitySupport>true</EnableUnitySupport>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+</ItemDefinitionGroup>
+<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPRECOG;PRECOG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libprecog/src;../../thirdparty/owemdjee/libprecog/src/border_detection;../../thirdparty/owemdjee/libprecog/src/denoise;../../thirdparty/owemdjee/libprecog/src/deblur;../../thirdparty/owemdjee/libprecog/src/deskew;../../thirdparty/owemdjee/libprecog/src/binarizations;../../thirdparty/owemdjee/libprecog/src/balance;../../thirdparty/owemdjee/libprecog/wip;../../thirdparty/owemdjee/opencv/modules/core/include;../../scripts/OpenCV;../../thirdparty/owemdjee/opencv/modules/highgui/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../thirdparty/owemdjee/opencv/modules/videoio/include;../../scripts/leptonica/include;../../thirdparty/owemdjee/opencv/modules/features2d/include;../../thirdparty/owemdjee/opencv/modules/photo/include;../../thirdparty/owemdjee/opencv/modules/flann/include;../../scripts/OpenCV/modules/core;../../scripts/OpenCV/modules/stitching;../../thirdparty/owemdjee/opencv/include;../../thirdparty/owemdjee/opencv/modules/calib3d/include;../../thirdparty/owemdjee/opencv/modules/dnn;../../thirdparty/owemdjee/opencv/modules/dnn/include;../../thirdparty/owemdjee/opencv/modules/gapi/include;../../thirdparty/owemdjee/opencv/modules/gapi/src;../../thirdparty/owemdjee/opencv/modules/ml/include;../../thirdparty/owemdjee/opencv/modules/objdetect/include;../../thirdparty/owemdjee/opencv/modules/stitching/include;../../thirdparty/owemdjee/opencv/modules/ts/include;../../thirdparty/owemdjee/opencv/modules/ts/include/;../../thirdparty/owemdjee/opencv/modules/video/include;../../thirdparty/owemdjee/opencv/modules/world/include;../../thirdparty/owemdjee/opencv_contrib/modules/alphamat/include;../../thirdparty/owemdjee/opencv_contrib/modules/aruco/include;../../thirdparty/owemdjee/opencv_contrib/modules/bgsegm/include;../../thirdparty/owemdjee/opencv_contrib/modules/bioinspired/include;../../thirdparty/owemdjee/opencv_contrib/modules/ccalib/include;../../thirdparty/owemdjee/opencv_contrib/modules/cnn_3dobj/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaarithm/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudacodec/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudalegacy/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaoptflow/include;../../thirdparty/owemdjee/opencv_contrib/modules/cvv/include;../../thirdparty/owemdjee/opencv_contrib/modules/sfm/src/libmv_light;../../thirdparty/owemdjee/opencv_contrib/modules/viz/include;../../thirdparty/owemdjee/opencv_contrib/modules/xphoto/include;../../thirdparty/owemdjee/opencv_contrib/modules/xfeatures2d/include;../../thirdparty/owemdjee/opencv_contrib/modules/ximgproc/include;../../thirdparty/owemdjee/opencv_contrib/modules/intensity_transform/include;../../scripts/OpenCV/modules/imgproc;../../thirdparty/owemdjee/opencv_contrib/modules/optflow/include;../../thirdparty/owemdjee/opencv_contrib/modules/freetype/include;../../thirdparty/owemdjee/opencv_contrib/modules/hdf/include;../../thirdparty/owemdjee/opencv_contrib/modules/img_hash/include;../../thirdparty/owemdjee/opencv_contrib/modules/face/include;../../thirdparty/owemdjee/opencv/3rdparty/openvx/include;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/libeigen;../../thirdparty/owemdjee/opencv/modules/dnn/src/ocl4dnn/include;../../thirdparty/owemdjee/opencv/modules/dnn/src/vkcom/include;../../thirdparty/owemdjee/opencv_contrib/modules/cannops/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudabgsegm/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudafeatures2d/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudafilters/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaimgproc/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaobjdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudastereo/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudastructuredlight/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudawarping/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudev/include;../../thirdparty/owemdjee/opencv_contrib/modules/datasets/include;../../thirdparty/owemdjee/opencv_contrib/modules/dnn_objdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/dnn_superres/include;../../thirdparty/owemdjee/opencv_contrib/modules/dpm/include;../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/include;../../thirdparty/owemdjee/opencv_contrib/modules/hfs/include;../../thirdparty/owemdjee/opencv_contrib/modules/julia/include;../../thirdparty/owemdjee/opencv_contrib/modules/line_descriptor/include;../../thirdparty/owemdjee/opencv_contrib/modules/matlab/include;../../thirdparty/owemdjee/opencv_contrib/modules/mcc/include;../../thirdparty/owemdjee/opencv_contrib/modules/ml/include;../../thirdparty/owemdjee/opencv_contrib/modules/ovis/include;../../thirdparty/owemdjee/opencv_contrib/modules/phase_unwrapping/include;../../thirdparty/owemdjee/opencv_contrib/modules/plot/include;../../thirdparty/owemdjee/opencv_contrib/modules/quality/include;../../thirdparty/owemdjee/opencv_contrib/modules/rapid/include;../../thirdparty/owemdjee/opencv_contrib/modules/reg/include;../../thirdparty/owemdjee/opencv_contrib/modules/rgbd/include;../../thirdparty/owemdjee/opencv_contrib/modules/saliency/include;../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include;../../thirdparty/owemdjee/opencv_contrib/modules/shape/include;../../thirdparty/owemdjee/opencv_contrib/modules/signal/include;../../thirdparty/owemdjee/opencv_contrib/modules/structured_light/include;../../thirdparty/owemdjee/opencv_contrib/modules/superres/include;../../thirdparty/owemdjee/opencv_contrib/modules/surface_matching/include;../../thirdparty/owemdjee/opencv_contrib/modules/text/include;../../thirdparty/owemdjee/opencv_contrib/modules/tracking/include;../../thirdparty/owemdjee/opencv_contrib/modules/videostab/include;../../thirdparty/owemdjee/opencv_contrib/modules/wechat_qrcode/include;../../thirdparty/owemdjee/opencv_contrib/modules/xobjdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/xstereo/include;../../scripts/OpenCV/modules/objdetect;../../scripts/OpenCV/modules/photo;../../thirdparty/owemdjee/quirc/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPRECOG;PRECOG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPRECOG;PRECOG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libprecog/src;../../thirdparty/owemdjee/libprecog/src/border_detection;../../thirdparty/owemdjee/libprecog/src/denoise;../../thirdparty/owemdjee/libprecog/src/deblur;../../thirdparty/owemdjee/libprecog/src/deskew;../../thirdparty/owemdjee/libprecog/src/binarizations;../../thirdparty/owemdjee/libprecog/src/balance;../../thirdparty/owemdjee/libprecog/wip;../../thirdparty/owemdjee/opencv/modules/core/include;../../scripts/OpenCV;../../thirdparty/owemdjee/opencv/modules/highgui/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../thirdparty/owemdjee/opencv/modules/videoio/include;../../scripts/leptonica/include;../../thirdparty/owemdjee/opencv/modules/features2d/include;../../thirdparty/owemdjee/opencv/modules/photo/include;../../thirdparty/owemdjee/opencv/modules/flann/include;../../scripts/OpenCV/modules/core;../../scripts/OpenCV/modules/stitching;../../thirdparty/owemdjee/opencv/include;../../thirdparty/owemdjee/opencv/modules/calib3d/include;../../thirdparty/owemdjee/opencv/modules/dnn;../../thirdparty/owemdjee/opencv/modules/dnn/include;../../thirdparty/owemdjee/opencv/modules/gapi/include;../../thirdparty/owemdjee/opencv/modules/gapi/src;../../thirdparty/owemdjee/opencv/modules/ml/include;../../thirdparty/owemdjee/opencv/modules/objdetect/include;../../thirdparty/owemdjee/opencv/modules/stitching/include;../../thirdparty/owemdjee/opencv/modules/ts/include;../../thirdparty/owemdjee/opencv/modules/ts/include/;../../thirdparty/owemdjee/opencv/modules/video/include;../../thirdparty/owemdjee/opencv/modules/world/include;../../thirdparty/owemdjee/opencv_contrib/modules/alphamat/include;../../thirdparty/owemdjee/opencv_contrib/modules/aruco/include;../../thirdparty/owemdjee/opencv_contrib/modules/bgsegm/include;../../thirdparty/owemdjee/opencv_contrib/modules/bioinspired/include;../../thirdparty/owemdjee/opencv_contrib/modules/ccalib/include;../../thirdparty/owemdjee/opencv_contrib/modules/cnn_3dobj/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaarithm/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudacodec/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudalegacy/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaoptflow/include;../../thirdparty/owemdjee/opencv_contrib/modules/cvv/include;../../thirdparty/owemdjee/opencv_contrib/modules/sfm/src/libmv_light;../../thirdparty/owemdjee/opencv_contrib/modules/viz/include;../../thirdparty/owemdjee/opencv_contrib/modules/xphoto/include;../../thirdparty/owemdjee/opencv_contrib/modules/xfeatures2d/include;../../thirdparty/owemdjee/opencv_contrib/modules/ximgproc/include;../../thirdparty/owemdjee/opencv_contrib/modules/intensity_transform/include;../../scripts/OpenCV/modules/imgproc;../../thirdparty/owemdjee/opencv_contrib/modules/optflow/include;../../thirdparty/owemdjee/opencv_contrib/modules/freetype/include;../../thirdparty/owemdjee/opencv_contrib/modules/hdf/include;../../thirdparty/owemdjee/opencv_contrib/modules/img_hash/include;../../thirdparty/owemdjee/opencv_contrib/modules/face/include;../../thirdparty/owemdjee/opencv/3rdparty/openvx/include;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/libeigen;../../thirdparty/owemdjee/opencv/modules/dnn/src/ocl4dnn/include;../../thirdparty/owemdjee/opencv/modules/dnn/src/vkcom/include;../../thirdparty/owemdjee/opencv_contrib/modules/cannops/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudabgsegm/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudafeatures2d/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudafilters/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaimgproc/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaobjdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudastereo/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudastructuredlight/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudawarping/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudev/include;../../thirdparty/owemdjee/opencv_contrib/modules/datasets/include;../../thirdparty/owemdjee/opencv_contrib/modules/dnn_objdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/dnn_superres/include;../../thirdparty/owemdjee/opencv_contrib/modules/dpm/include;../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/include;../../thirdparty/owemdjee/opencv_contrib/modules/hfs/include;../../thirdparty/owemdjee/opencv_contrib/modules/julia/include;../../thirdparty/owemdjee/opencv_contrib/modules/line_descriptor/include;../../thirdparty/owemdjee/opencv_contrib/modules/matlab/include;../../thirdparty/owemdjee/opencv_contrib/modules/mcc/include;../../thirdparty/owemdjee/opencv_contrib/modules/ml/include;../../thirdparty/owemdjee/opencv_contrib/modules/ovis/include;../../thirdparty/owemdjee/opencv_contrib/modules/phase_unwrapping/include;../../thirdparty/owemdjee/opencv_contrib/modules/plot/include;../../thirdparty/owemdjee/opencv_contrib/modules/quality/include;../../thirdparty/owemdjee/opencv_contrib/modules/rapid/include;../../thirdparty/owemdjee/opencv_contrib/modules/reg/include;../../thirdparty/owemdjee/opencv_contrib/modules/rgbd/include;../../thirdparty/owemdjee/opencv_contrib/modules/saliency/include;../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include;../../thirdparty/owemdjee/opencv_contrib/modules/shape/include;../../thirdparty/owemdjee/opencv_contrib/modules/signal/include;../../thirdparty/owemdjee/opencv_contrib/modules/structured_light/include;../../thirdparty/owemdjee/opencv_contrib/modules/superres/include;../../thirdparty/owemdjee/opencv_contrib/modules/surface_matching/include;../../thirdparty/owemdjee/opencv_contrib/modules/text/include;../../thirdparty/owemdjee/opencv_contrib/modules/tracking/include;../../thirdparty/owemdjee/opencv_contrib/modules/videostab/include;../../thirdparty/owemdjee/opencv_contrib/modules/wechat_qrcode/include;../../thirdparty/owemdjee/opencv_contrib/modules/xobjdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/xstereo/include;../../scripts/OpenCV/modules/objdetect;../../scripts/OpenCV/modules/photo;../../thirdparty/owemdjee/quirc/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPRECOG;PRECOG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libprecog/src;../../thirdparty/owemdjee/libprecog/src/border_detection;../../thirdparty/owemdjee/libprecog/src/denoise;../../thirdparty/owemdjee/libprecog/src/deblur;../../thirdparty/owemdjee/libprecog/src/deskew;../../thirdparty/owemdjee/libprecog/src/binarizations;../../thirdparty/owemdjee/libprecog/src/balance;../../thirdparty/owemdjee/libprecog/wip;../../thirdparty/owemdjee/opencv/modules/core/include;../../scripts/OpenCV;../../thirdparty/owemdjee/opencv/modules/highgui/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../thirdparty/owemdjee/opencv/modules/videoio/include;../../scripts/leptonica/include;../../thirdparty/owemdjee/opencv/modules/features2d/include;../../thirdparty/owemdjee/opencv/modules/photo/include;../../thirdparty/owemdjee/opencv/modules/flann/include;../../scripts/OpenCV/modules/core;../../scripts/OpenCV/modules/stitching;../../thirdparty/owemdjee/opencv/include;../../thirdparty/owemdjee/opencv/modules/calib3d/include;../../thirdparty/owemdjee/opencv/modules/dnn;../../thirdparty/owemdjee/opencv/modules/dnn/include;../../thirdparty/owemdjee/opencv/modules/gapi/include;../../thirdparty/owemdjee/opencv/modules/gapi/src;../../thirdparty/owemdjee/opencv/modules/ml/include;../../thirdparty/owemdjee/opencv/modules/objdetect/include;../../thirdparty/owemdjee/opencv/modules/stitching/include;../../thirdparty/owemdjee/opencv/modules/ts/include;../../thirdparty/owemdjee/opencv/modules/ts/include/;../../thirdparty/owemdjee/opencv/modules/video/include;../../thirdparty/owemdjee/opencv/modules/world/include;../../thirdparty/owemdjee/opencv_contrib/modules/alphamat/include;../../thirdparty/owemdjee/opencv_contrib/modules/aruco/include;../../thirdparty/owemdjee/opencv_contrib/modules/bgsegm/include;../../thirdparty/owemdjee/opencv_contrib/modules/bioinspired/include;../../thirdparty/owemdjee/opencv_contrib/modules/ccalib/include;../../thirdparty/owemdjee/opencv_contrib/modules/cnn_3dobj/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaarithm/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudacodec/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudalegacy/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaoptflow/include;../../thirdparty/owemdjee/opencv_contrib/modules/cvv/include;../../thirdparty/owemdjee/opencv_contrib/modules/sfm/src/libmv_light;../../thirdparty/owemdjee/opencv_contrib/modules/viz/include;../../thirdparty/owemdjee/opencv_contrib/modules/xphoto/include;../../thirdparty/owemdjee/opencv_contrib/modules/xfeatures2d/include;../../thirdparty/owemdjee/opencv_contrib/modules/ximgproc/include;../../thirdparty/owemdjee/opencv_contrib/modules/intensity_transform/include;../../scripts/OpenCV/modules/imgproc;../../thirdparty/owemdjee/opencv_contrib/modules/optflow/include;../../thirdparty/owemdjee/opencv_contrib/modules/freetype/include;../../thirdparty/owemdjee/opencv_contrib/modules/hdf/include;../../thirdparty/owemdjee/opencv_contrib/modules/img_hash/include;../../thirdparty/owemdjee/opencv_contrib/modules/face/include;../../thirdparty/owemdjee/opencv/3rdparty/openvx/include;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/libeigen;../../thirdparty/owemdjee/opencv/modules/dnn/src/ocl4dnn/include;../../thirdparty/owemdjee/opencv/modules/dnn/src/vkcom/include;../../thirdparty/owemdjee/opencv_contrib/modules/cannops/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudabgsegm/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudafeatures2d/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudafilters/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaimgproc/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaobjdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudastereo/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudastructuredlight/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudawarping/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudev/include;../../thirdparty/owemdjee/opencv_contrib/modules/datasets/include;../../thirdparty/owemdjee/opencv_contrib/modules/dnn_objdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/dnn_superres/include;../../thirdparty/owemdjee/opencv_contrib/modules/dpm/include;../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/include;../../thirdparty/owemdjee/opencv_contrib/modules/hfs/include;../../thirdparty/owemdjee/opencv_contrib/modules/julia/include;../../thirdparty/owemdjee/opencv_contrib/modules/line_descriptor/include;../../thirdparty/owemdjee/opencv_contrib/modules/matlab/include;../../thirdparty/owemdjee/opencv_contrib/modules/mcc/include;../../thirdparty/owemdjee/opencv_contrib/modules/ml/include;../../thirdparty/owemdjee/opencv_contrib/modules/ovis/include;../../thirdparty/owemdjee/opencv_contrib/modules/phase_unwrapping/include;../../thirdparty/owemdjee/opencv_contrib/modules/plot/include;../../thirdparty/owemdjee/opencv_contrib/modules/quality/include;../../thirdparty/owemdjee/opencv_contrib/modules/rapid/include;../../thirdparty/owemdjee/opencv_contrib/modules/reg/include;../../thirdparty/owemdjee/opencv_contrib/modules/rgbd/include;../../thirdparty/owemdjee/opencv_contrib/modules/saliency/include;../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include;../../thirdparty/owemdjee/opencv_contrib/modules/shape/include;../../thirdparty/owemdjee/opencv_contrib/modules/signal/include;../../thirdparty/owemdjee/opencv_contrib/modules/structured_light/include;../../thirdparty/owemdjee/opencv_contrib/modules/superres/include;../../thirdparty/owemdjee/opencv_contrib/modules/surface_matching/include;../../thirdparty/owemdjee/opencv_contrib/modules/text/include;../../thirdparty/owemdjee/opencv_contrib/modules/tracking/include;../../thirdparty/owemdjee/opencv_contrib/modules/videostab/include;../../thirdparty/owemdjee/opencv_contrib/modules/wechat_qrcode/include;../../thirdparty/owemdjee/opencv_contrib/modules/xobjdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/xstereo/include;../../scripts/OpenCV/modules/objdetect;../../scripts/OpenCV/modules/photo;../../thirdparty/owemdjee/quirc/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPRECOG;PRECOG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPRECOG;PRECOG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libprecog/src;../../thirdparty/owemdjee/libprecog/src/border_detection;../../thirdparty/owemdjee/libprecog/src/denoise;../../thirdparty/owemdjee/libprecog/src/deblur;../../thirdparty/owemdjee/libprecog/src/deskew;../../thirdparty/owemdjee/libprecog/src/binarizations;../../thirdparty/owemdjee/libprecog/src/balance;../../thirdparty/owemdjee/libprecog/wip;../../thirdparty/owemdjee/opencv/modules/core/include;../../scripts/OpenCV;../../thirdparty/owemdjee/opencv/modules/highgui/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../thirdparty/owemdjee/opencv/modules/videoio/include;../../scripts/leptonica/include;../../thirdparty/owemdjee/opencv/modules/features2d/include;../../thirdparty/owemdjee/opencv/modules/photo/include;../../thirdparty/owemdjee/opencv/modules/flann/include;../../scripts/OpenCV/modules/core;../../scripts/OpenCV/modules/stitching;../../thirdparty/owemdjee/opencv/include;../../thirdparty/owemdjee/opencv/modules/calib3d/include;../../thirdparty/owemdjee/opencv/modules/dnn;../../thirdparty/owemdjee/opencv/modules/dnn/include;../../thirdparty/owemdjee/opencv/modules/gapi/include;../../thirdparty/owemdjee/opencv/modules/gapi/src;../../thirdparty/owemdjee/opencv/modules/ml/include;../../thirdparty/owemdjee/opencv/modules/objdetect/include;../../thirdparty/owemdjee/opencv/modules/stitching/include;../../thirdparty/owemdjee/opencv/modules/ts/include;../../thirdparty/owemdjee/opencv/modules/ts/include/;../../thirdparty/owemdjee/opencv/modules/video/include;../../thirdparty/owemdjee/opencv/modules/world/include;../../thirdparty/owemdjee/opencv_contrib/modules/alphamat/include;../../thirdparty/owemdjee/opencv_contrib/modules/aruco/include;../../thirdparty/owemdjee/opencv_contrib/modules/bgsegm/include;../../thirdparty/owemdjee/opencv_contrib/modules/bioinspired/include;../../thirdparty/owemdjee/opencv_contrib/modules/ccalib/include;../../thirdparty/owemdjee/opencv_contrib/modules/cnn_3dobj/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaarithm/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudacodec/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudalegacy/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaoptflow/include;../../thirdparty/owemdjee/opencv_contrib/modules/cvv/include;../../thirdparty/owemdjee/opencv_contrib/modules/sfm/src/libmv_light;../../thirdparty/owemdjee/opencv_contrib/modules/viz/include;../../thirdparty/owemdjee/opencv_contrib/modules/xphoto/include;../../thirdparty/owemdjee/opencv_contrib/modules/xfeatures2d/include;../../thirdparty/owemdjee/opencv_contrib/modules/ximgproc/include;../../thirdparty/owemdjee/opencv_contrib/modules/intensity_transform/include;../../scripts/OpenCV/modules/imgproc;../../thirdparty/owemdjee/opencv_contrib/modules/optflow/include;../../thirdparty/owemdjee/opencv_contrib/modules/freetype/include;../../thirdparty/owemdjee/opencv_contrib/modules/hdf/include;../../thirdparty/owemdjee/opencv_contrib/modules/img_hash/include;../../thirdparty/owemdjee/opencv_contrib/modules/face/include;../../thirdparty/owemdjee/opencv/3rdparty/openvx/include;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/libeigen;../../thirdparty/owemdjee/opencv/modules/dnn/src/ocl4dnn/include;../../thirdparty/owemdjee/opencv/modules/dnn/src/vkcom/include;../../thirdparty/owemdjee/opencv_contrib/modules/cannops/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudabgsegm/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudafeatures2d/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudafilters/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaimgproc/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaobjdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudastereo/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudastructuredlight/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudawarping/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudev/include;../../thirdparty/owemdjee/opencv_contrib/modules/datasets/include;../../thirdparty/owemdjee/opencv_contrib/modules/dnn_objdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/dnn_superres/include;../../thirdparty/owemdjee/opencv_contrib/modules/dpm/include;../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/include;../../thirdparty/owemdjee/opencv_contrib/modules/hfs/include;../../thirdparty/owemdjee/opencv_contrib/modules/julia/include;../../thirdparty/owemdjee/opencv_contrib/modules/line_descriptor/include;../../thirdparty/owemdjee/opencv_contrib/modules/matlab/include;../../thirdparty/owemdjee/opencv_contrib/modules/mcc/include;../../thirdparty/owemdjee/opencv_contrib/modules/ml/include;../../thirdparty/owemdjee/opencv_contrib/modules/ovis/include;../../thirdparty/owemdjee/opencv_contrib/modules/phase_unwrapping/include;../../thirdparty/owemdjee/opencv_contrib/modules/plot/include;../../thirdparty/owemdjee/opencv_contrib/modules/quality/include;../../thirdparty/owemdjee/opencv_contrib/modules/rapid/include;../../thirdparty/owemdjee/opencv_contrib/modules/reg/include;../../thirdparty/owemdjee/opencv_contrib/modules/rgbd/include;../../thirdparty/owemdjee/opencv_contrib/modules/saliency/include;../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include;../../thirdparty/owemdjee/opencv_contrib/modules/shape/include;../../thirdparty/owemdjee/opencv_contrib/modules/signal/include;../../thirdparty/owemdjee/opencv_contrib/modules/structured_light/include;../../thirdparty/owemdjee/opencv_contrib/modules/superres/include;../../thirdparty/owemdjee/opencv_contrib/modules/surface_matching/include;../../thirdparty/owemdjee/opencv_contrib/modules/text/include;../../thirdparty/owemdjee/opencv_contrib/modules/tracking/include;../../thirdparty/owemdjee/opencv_contrib/modules/videostab/include;../../thirdparty/owemdjee/opencv_contrib/modules/wechat_qrcode/include;../../thirdparty/owemdjee/opencv_contrib/modules/xobjdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/xstereo/include;../../scripts/OpenCV/modules/objdetect;../../scripts/OpenCV/modules/photo;../../thirdparty/owemdjee/quirc/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPRECOG;PRECOG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libprecog/src;../../thirdparty/owemdjee/libprecog/src/border_detection;../../thirdparty/owemdjee/libprecog/src/denoise;../../thirdparty/owemdjee/libprecog/src/deblur;../../thirdparty/owemdjee/libprecog/src/deskew;../../thirdparty/owemdjee/libprecog/src/binarizations;../../thirdparty/owemdjee/libprecog/src/balance;../../thirdparty/owemdjee/libprecog/wip;../../thirdparty/owemdjee/opencv/modules/core/include;../../scripts/OpenCV;../../thirdparty/owemdjee/opencv/modules/highgui/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../thirdparty/owemdjee/opencv/modules/videoio/include;../../scripts/leptonica/include;../../thirdparty/owemdjee/opencv/modules/features2d/include;../../thirdparty/owemdjee/opencv/modules/photo/include;../../thirdparty/owemdjee/opencv/modules/flann/include;../../scripts/OpenCV/modules/core;../../scripts/OpenCV/modules/stitching;../../thirdparty/owemdjee/opencv/include;../../thirdparty/owemdjee/opencv/modules/calib3d/include;../../thirdparty/owemdjee/opencv/modules/dnn;../../thirdparty/owemdjee/opencv/modules/dnn/include;../../thirdparty/owemdjee/opencv/modules/gapi/include;../../thirdparty/owemdjee/opencv/modules/gapi/src;../../thirdparty/owemdjee/opencv/modules/ml/include;../../thirdparty/owemdjee/opencv/modules/objdetect/include;../../thirdparty/owemdjee/opencv/modules/stitching/include;../../thirdparty/owemdjee/opencv/modules/ts/include;../../thirdparty/owemdjee/opencv/modules/ts/include/;../../thirdparty/owemdjee/opencv/modules/video/include;../../thirdparty/owemdjee/opencv/modules/world/include;../../thirdparty/owemdjee/opencv_contrib/modules/alphamat/include;../../thirdparty/owemdjee/opencv_contrib/modules/aruco/include;../../thirdparty/owemdjee/opencv_contrib/modules/bgsegm/include;../../thirdparty/owemdjee/opencv_contrib/modules/bioinspired/include;../../thirdparty/owemdjee/opencv_contrib/modules/ccalib/include;../../thirdparty/owemdjee/opencv_contrib/modules/cnn_3dobj/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaarithm/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudacodec/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudalegacy/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaoptflow/include;../../thirdparty/owemdjee/opencv_contrib/modules/cvv/include;../../thirdparty/owemdjee/opencv_contrib/modules/sfm/src/libmv_light;../../thirdparty/owemdjee/opencv_contrib/modules/viz/include;../../thirdparty/owemdjee/opencv_contrib/modules/xphoto/include;../../thirdparty/owemdjee/opencv_contrib/modules/xfeatures2d/include;../../thirdparty/owemdjee/opencv_contrib/modules/ximgproc/include;../../thirdparty/owemdjee/opencv_contrib/modules/intensity_transform/include;../../scripts/OpenCV/modules/imgproc;../../thirdparty/owemdjee/opencv_contrib/modules/optflow/include;../../thirdparty/owemdjee/opencv_contrib/modules/freetype/include;../../thirdparty/owemdjee/opencv_contrib/modules/hdf/include;../../thirdparty/owemdjee/opencv_contrib/modules/img_hash/include;../../thirdparty/owemdjee/opencv_contrib/modules/face/include;../../thirdparty/owemdjee/opencv/3rdparty/openvx/include;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/libeigen;../../thirdparty/owemdjee/opencv/modules/dnn/src/ocl4dnn/include;../../thirdparty/owemdjee/opencv/modules/dnn/src/vkcom/include;../../thirdparty/owemdjee/opencv_contrib/modules/cannops/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudabgsegm/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudafeatures2d/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudafilters/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaimgproc/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaobjdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudastereo/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudastructuredlight/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudawarping/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudev/include;../../thirdparty/owemdjee/opencv_contrib/modules/datasets/include;../../thirdparty/owemdjee/opencv_contrib/modules/dnn_objdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/dnn_superres/include;../../thirdparty/owemdjee/opencv_contrib/modules/dpm/include;../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/include;../../thirdparty/owemdjee/opencv_contrib/modules/hfs/include;../../thirdparty/owemdjee/opencv_contrib/modules/julia/include;../../thirdparty/owemdjee/opencv_contrib/modules/line_descriptor/include;../../thirdparty/owemdjee/opencv_contrib/modules/matlab/include;../../thirdparty/owemdjee/opencv_contrib/modules/mcc/include;../../thirdparty/owemdjee/opencv_contrib/modules/ml/include;../../thirdparty/owemdjee/opencv_contrib/modules/ovis/include;../../thirdparty/owemdjee/opencv_contrib/modules/phase_unwrapping/include;../../thirdparty/owemdjee/opencv_contrib/modules/plot/include;../../thirdparty/owemdjee/opencv_contrib/modules/quality/include;../../thirdparty/owemdjee/opencv_contrib/modules/rapid/include;../../thirdparty/owemdjee/opencv_contrib/modules/reg/include;../../thirdparty/owemdjee/opencv_contrib/modules/rgbd/include;../../thirdparty/owemdjee/opencv_contrib/modules/saliency/include;../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include;../../thirdparty/owemdjee/opencv_contrib/modules/shape/include;../../thirdparty/owemdjee/opencv_contrib/modules/signal/include;../../thirdparty/owemdjee/opencv_contrib/modules/structured_light/include;../../thirdparty/owemdjee/opencv_contrib/modules/superres/include;../../thirdparty/owemdjee/opencv_contrib/modules/surface_matching/include;../../thirdparty/owemdjee/opencv_contrib/modules/text/include;../../thirdparty/owemdjee/opencv_contrib/modules/tracking/include;../../thirdparty/owemdjee/opencv_contrib/modules/videostab/include;../../thirdparty/owemdjee/opencv_contrib/modules/wechat_qrcode/include;../../thirdparty/owemdjee/opencv_contrib/modules/xobjdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/xstereo/include;../../scripts/OpenCV/modules/objdetect;../../scripts/OpenCV/modules/photo;../../thirdparty/owemdjee/quirc/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPRECOG;PRECOG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPRECOG;PRECOG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libprecog/src;../../thirdparty/owemdjee/libprecog/src/border_detection;../../thirdparty/owemdjee/libprecog/src/denoise;../../thirdparty/owemdjee/libprecog/src/deblur;../../thirdparty/owemdjee/libprecog/src/deskew;../../thirdparty/owemdjee/libprecog/src/binarizations;../../thirdparty/owemdjee/libprecog/src/balance;../../thirdparty/owemdjee/libprecog/wip;../../thirdparty/owemdjee/opencv/modules/core/include;../../scripts/OpenCV;../../thirdparty/owemdjee/opencv/modules/highgui/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../thirdparty/owemdjee/opencv/modules/videoio/include;../../scripts/leptonica/include;../../thirdparty/owemdjee/opencv/modules/features2d/include;../../thirdparty/owemdjee/opencv/modules/photo/include;../../thirdparty/owemdjee/opencv/modules/flann/include;../../scripts/OpenCV/modules/core;../../scripts/OpenCV/modules/stitching;../../thirdparty/owemdjee/opencv/include;../../thirdparty/owemdjee/opencv/modules/calib3d/include;../../thirdparty/owemdjee/opencv/modules/dnn;../../thirdparty/owemdjee/opencv/modules/dnn/include;../../thirdparty/owemdjee/opencv/modules/gapi/include;../../thirdparty/owemdjee/opencv/modules/gapi/src;../../thirdparty/owemdjee/opencv/modules/ml/include;../../thirdparty/owemdjee/opencv/modules/objdetect/include;../../thirdparty/owemdjee/opencv/modules/stitching/include;../../thirdparty/owemdjee/opencv/modules/ts/include;../../thirdparty/owemdjee/opencv/modules/ts/include/;../../thirdparty/owemdjee/opencv/modules/video/include;../../thirdparty/owemdjee/opencv/modules/world/include;../../thirdparty/owemdjee/opencv_contrib/modules/alphamat/include;../../thirdparty/owemdjee/opencv_contrib/modules/aruco/include;../../thirdparty/owemdjee/opencv_contrib/modules/bgsegm/include;../../thirdparty/owemdjee/opencv_contrib/modules/bioinspired/include;../../thirdparty/owemdjee/opencv_contrib/modules/ccalib/include;../../thirdparty/owemdjee/opencv_contrib/modules/cnn_3dobj/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaarithm/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudacodec/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudalegacy/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaoptflow/include;../../thirdparty/owemdjee/opencv_contrib/modules/cvv/include;../../thirdparty/owemdjee/opencv_contrib/modules/sfm/src/libmv_light;../../thirdparty/owemdjee/opencv_contrib/modules/viz/include;../../thirdparty/owemdjee/opencv_contrib/modules/xphoto/include;../../thirdparty/owemdjee/opencv_contrib/modules/xfeatures2d/include;../../thirdparty/owemdjee/opencv_contrib/modules/ximgproc/include;../../thirdparty/owemdjee/opencv_contrib/modules/intensity_transform/include;../../scripts/OpenCV/modules/imgproc;../../thirdparty/owemdjee/opencv_contrib/modules/optflow/include;../../thirdparty/owemdjee/opencv_contrib/modules/freetype/include;../../thirdparty/owemdjee/opencv_contrib/modules/hdf/include;../../thirdparty/owemdjee/opencv_contrib/modules/img_hash/include;../../thirdparty/owemdjee/opencv_contrib/modules/face/include;../../thirdparty/owemdjee/opencv/3rdparty/openvx/include;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/libeigen;../../thirdparty/owemdjee/opencv/modules/dnn/src/ocl4dnn/include;../../thirdparty/owemdjee/opencv/modules/dnn/src/vkcom/include;../../thirdparty/owemdjee/opencv_contrib/modules/cannops/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudabgsegm/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudafeatures2d/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudafilters/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaimgproc/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaobjdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudastereo/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudastructuredlight/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudawarping/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudev/include;../../thirdparty/owemdjee/opencv_contrib/modules/datasets/include;../../thirdparty/owemdjee/opencv_contrib/modules/dnn_objdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/dnn_superres/include;../../thirdparty/owemdjee/opencv_contrib/modules/dpm/include;../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/include;../../thirdparty/owemdjee/opencv_contrib/modules/hfs/include;../../thirdparty/owemdjee/opencv_contrib/modules/julia/include;../../thirdparty/owemdjee/opencv_contrib/modules/line_descriptor/include;../../thirdparty/owemdjee/opencv_contrib/modules/matlab/include;../../thirdparty/owemdjee/opencv_contrib/modules/mcc/include;../../thirdparty/owemdjee/opencv_contrib/modules/ml/include;../../thirdparty/owemdjee/opencv_contrib/modules/ovis/include;../../thirdparty/owemdjee/opencv_contrib/modules/phase_unwrapping/include;../../thirdparty/owemdjee/opencv_contrib/modules/plot/include;../../thirdparty/owemdjee/opencv_contrib/modules/quality/include;../../thirdparty/owemdjee/opencv_contrib/modules/rapid/include;../../thirdparty/owemdjee/opencv_contrib/modules/reg/include;../../thirdparty/owemdjee/opencv_contrib/modules/rgbd/include;../../thirdparty/owemdjee/opencv_contrib/modules/saliency/include;../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include;../../thirdparty/owemdjee/opencv_contrib/modules/shape/include;../../thirdparty/owemdjee/opencv_contrib/modules/signal/include;../../thirdparty/owemdjee/opencv_contrib/modules/structured_light/include;../../thirdparty/owemdjee/opencv_contrib/modules/superres/include;../../thirdparty/owemdjee/opencv_contrib/modules/surface_matching/include;../../thirdparty/owemdjee/opencv_contrib/modules/text/include;../../thirdparty/owemdjee/opencv_contrib/modules/tracking/include;../../thirdparty/owemdjee/opencv_contrib/modules/videostab/include;../../thirdparty/owemdjee/opencv_contrib/modules/wechat_qrcode/include;../../thirdparty/owemdjee/opencv_contrib/modules/xobjdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/xstereo/include;../../scripts/OpenCV/modules/objdetect;../../scripts/OpenCV/modules/photo;../../thirdparty/owemdjee/quirc/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPRECOG;PRECOG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)$(TargetName).tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libprecog/src;../../thirdparty/owemdjee/libprecog/src/border_detection;../../thirdparty/owemdjee/libprecog/src/denoise;../../thirdparty/owemdjee/libprecog/src/deblur;../../thirdparty/owemdjee/libprecog/src/deskew;../../thirdparty/owemdjee/libprecog/src/binarizations;../../thirdparty/owemdjee/libprecog/src/balance;../../thirdparty/owemdjee/libprecog/wip;../../thirdparty/owemdjee/opencv/modules/core/include;../../scripts/OpenCV;../../thirdparty/owemdjee/opencv/modules/highgui/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../thirdparty/owemdjee/opencv/modules/videoio/include;../../scripts/leptonica/include;../../thirdparty/owemdjee/opencv/modules/features2d/include;../../thirdparty/owemdjee/opencv/modules/photo/include;../../thirdparty/owemdjee/opencv/modules/flann/include;../../scripts/OpenCV/modules/core;../../scripts/OpenCV/modules/stitching;../../thirdparty/owemdjee/opencv/include;../../thirdparty/owemdjee/opencv/modules/calib3d/include;../../thirdparty/owemdjee/opencv/modules/dnn;../../thirdparty/owemdjee/opencv/modules/dnn/include;../../thirdparty/owemdjee/opencv/modules/gapi/include;../../thirdparty/owemdjee/opencv/modules/gapi/src;../../thirdparty/owemdjee/opencv/modules/ml/include;../../thirdparty/owemdjee/opencv/modules/objdetect/include;../../thirdparty/owemdjee/opencv/modules/stitching/include;../../thirdparty/owemdjee/opencv/modules/ts/include;../../thirdparty/owemdjee/opencv/modules/ts/include/;../../thirdparty/owemdjee/opencv/modules/video/include;../../thirdparty/owemdjee/opencv/modules/world/include;../../thirdparty/owemdjee/opencv_contrib/modules/alphamat/include;../../thirdparty/owemdjee/opencv_contrib/modules/aruco/include;../../thirdparty/owemdjee/opencv_contrib/modules/bgsegm/include;../../thirdparty/owemdjee/opencv_contrib/modules/bioinspired/include;../../thirdparty/owemdjee/opencv_contrib/modules/ccalib/include;../../thirdparty/owemdjee/opencv_contrib/modules/cnn_3dobj/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaarithm/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudacodec/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudalegacy/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaoptflow/include;../../thirdparty/owemdjee/opencv_contrib/modules/cvv/include;../../thirdparty/owemdjee/opencv_contrib/modules/sfm/src/libmv_light;../../thirdparty/owemdjee/opencv_contrib/modules/viz/include;../../thirdparty/owemdjee/opencv_contrib/modules/xphoto/include;../../thirdparty/owemdjee/opencv_contrib/modules/xfeatures2d/include;../../thirdparty/owemdjee/opencv_contrib/modules/ximgproc/include;../../thirdparty/owemdjee/opencv_contrib/modules/intensity_transform/include;../../scripts/OpenCV/modules/imgproc;../../thirdparty/owemdjee/opencv_contrib/modules/optflow/include;../../thirdparty/owemdjee/opencv_contrib/modules/freetype/include;../../thirdparty/owemdjee/opencv_contrib/modules/hdf/include;../../thirdparty/owemdjee/opencv_contrib/modules/img_hash/include;../../thirdparty/owemdjee/opencv_contrib/modules/face/include;../../thirdparty/owemdjee/opencv/3rdparty/openvx/include;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/libeigen;../../thirdparty/owemdjee/opencv/modules/dnn/src/ocl4dnn/include;../../thirdparty/owemdjee/opencv/modules/dnn/src/vkcom/include;../../thirdparty/owemdjee/opencv_contrib/modules/cannops/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudabgsegm/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudafeatures2d/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudafilters/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaimgproc/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaobjdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudastereo/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudastructuredlight/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudawarping/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudev/include;../../thirdparty/owemdjee/opencv_contrib/modules/datasets/include;../../thirdparty/owemdjee/opencv_contrib/modules/dnn_objdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/dnn_superres/include;../../thirdparty/owemdjee/opencv_contrib/modules/dpm/include;../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/include;../../thirdparty/owemdjee/opencv_contrib/modules/hfs/include;../../thirdparty/owemdjee/opencv_contrib/modules/julia/include;../../thirdparty/owemdjee/opencv_contrib/modules/line_descriptor/include;../../thirdparty/owemdjee/opencv_contrib/modules/matlab/include;../../thirdparty/owemdjee/opencv_contrib/modules/mcc/include;../../thirdparty/owemdjee/opencv_contrib/modules/ml/include;../../thirdparty/owemdjee/opencv_contrib/modules/ovis/include;../../thirdparty/owemdjee/opencv_contrib/modules/phase_unwrapping/include;../../thirdparty/owemdjee/opencv_contrib/modules/plot/include;../../thirdparty/owemdjee/opencv_contrib/modules/quality/include;../../thirdparty/owemdjee/opencv_contrib/modules/rapid/include;../../thirdparty/owemdjee/opencv_contrib/modules/reg/include;../../thirdparty/owemdjee/opencv_contrib/modules/rgbd/include;../../thirdparty/owemdjee/opencv_contrib/modules/saliency/include;../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include;../../thirdparty/owemdjee/opencv_contrib/modules/shape/include;../../thirdparty/owemdjee/opencv_contrib/modules/signal/include;../../thirdparty/owemdjee/opencv_contrib/modules/structured_light/include;../../thirdparty/owemdjee/opencv_contrib/modules/superres/include;../../thirdparty/owemdjee/opencv_contrib/modules/surface_matching/include;../../thirdparty/owemdjee/opencv_contrib/modules/text/include;../../thirdparty/owemdjee/opencv_contrib/modules/tracking/include;../../thirdparty/owemdjee/opencv_contrib/modules/videostab/include;../../thirdparty/owemdjee/opencv_contrib/modules/wechat_qrcode/include;../../thirdparty/owemdjee/opencv_contrib/modules/xobjdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/xstereo/include;../../scripts/OpenCV/modules/objdetect;../../scripts/OpenCV/modules/photo;../../thirdparty/owemdjee/quirc/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPRECOG;PRECOG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBPRECOG;PRECOG_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/libprecog/src;../../thirdparty/owemdjee/libprecog/src/border_detection;../../thirdparty/owemdjee/libprecog/src/denoise;../../thirdparty/owemdjee/libprecog/src/deblur;../../thirdparty/owemdjee/libprecog/src/deskew;../../thirdparty/owemdjee/libprecog/src/binarizations;../../thirdparty/owemdjee/libprecog/src/balance;../../thirdparty/owemdjee/libprecog/wip;../../thirdparty/owemdjee/opencv/modules/core/include;../../scripts/OpenCV;../../thirdparty/owemdjee/opencv/modules/highgui/include;../../thirdparty/owemdjee/opencv/modules/imgproc/include;../../thirdparty/owemdjee/opencv/modules/imgcodecs/include;../../thirdparty/owemdjee/opencv/modules/videoio/include;../../scripts/leptonica/include;../../thirdparty/owemdjee/opencv/modules/features2d/include;../../thirdparty/owemdjee/opencv/modules/photo/include;../../thirdparty/owemdjee/opencv/modules/flann/include;../../scripts/OpenCV/modules/core;../../scripts/OpenCV/modules/stitching;../../thirdparty/owemdjee/opencv/include;../../thirdparty/owemdjee/opencv/modules/calib3d/include;../../thirdparty/owemdjee/opencv/modules/dnn;../../thirdparty/owemdjee/opencv/modules/dnn/include;../../thirdparty/owemdjee/opencv/modules/gapi/include;../../thirdparty/owemdjee/opencv/modules/gapi/src;../../thirdparty/owemdjee/opencv/modules/ml/include;../../thirdparty/owemdjee/opencv/modules/objdetect/include;../../thirdparty/owemdjee/opencv/modules/stitching/include;../../thirdparty/owemdjee/opencv/modules/ts/include;../../thirdparty/owemdjee/opencv/modules/ts/include/;../../thirdparty/owemdjee/opencv/modules/video/include;../../thirdparty/owemdjee/opencv/modules/world/include;../../thirdparty/owemdjee/opencv_contrib/modules/alphamat/include;../../thirdparty/owemdjee/opencv_contrib/modules/aruco/include;../../thirdparty/owemdjee/opencv_contrib/modules/bgsegm/include;../../thirdparty/owemdjee/opencv_contrib/modules/bioinspired/include;../../thirdparty/owemdjee/opencv_contrib/modules/ccalib/include;../../thirdparty/owemdjee/opencv_contrib/modules/cnn_3dobj/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaarithm/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudacodec/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudalegacy/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaoptflow/include;../../thirdparty/owemdjee/opencv_contrib/modules/cvv/include;../../thirdparty/owemdjee/opencv_contrib/modules/sfm/src/libmv_light;../../thirdparty/owemdjee/opencv_contrib/modules/viz/include;../../thirdparty/owemdjee/opencv_contrib/modules/xphoto/include;../../thirdparty/owemdjee/opencv_contrib/modules/xfeatures2d/include;../../thirdparty/owemdjee/opencv_contrib/modules/ximgproc/include;../../thirdparty/owemdjee/opencv_contrib/modules/intensity_transform/include;../../scripts/OpenCV/modules/imgproc;../../thirdparty/owemdjee/opencv_contrib/modules/optflow/include;../../thirdparty/owemdjee/opencv_contrib/modules/freetype/include;../../thirdparty/owemdjee/opencv_contrib/modules/hdf/include;../../thirdparty/owemdjee/opencv_contrib/modules/img_hash/include;../../thirdparty/owemdjee/opencv_contrib/modules/face/include;../../thirdparty/owemdjee/opencv/3rdparty/openvx/include;../../thirdparty/monolithic_tmplt;../../thirdparty/owemdjee/libeigen;../../thirdparty/owemdjee/opencv/modules/dnn/src/ocl4dnn/include;../../thirdparty/owemdjee/opencv/modules/dnn/src/vkcom/include;../../thirdparty/owemdjee/opencv_contrib/modules/cannops/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudabgsegm/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudafeatures2d/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudafilters/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaimgproc/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudaobjdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudastereo/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudastructuredlight/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudawarping/include;../../thirdparty/owemdjee/opencv_contrib/modules/cudev/include;../../thirdparty/owemdjee/opencv_contrib/modules/datasets/include;../../thirdparty/owemdjee/opencv_contrib/modules/dnn_objdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/dnn_superres/include;../../thirdparty/owemdjee/opencv_contrib/modules/dpm/include;../../thirdparty/owemdjee/opencv_contrib/modules/fuzzy/include;../../thirdparty/owemdjee/opencv_contrib/modules/hfs/include;../../thirdparty/owemdjee/opencv_contrib/modules/julia/include;../../thirdparty/owemdjee/opencv_contrib/modules/line_descriptor/include;../../thirdparty/owemdjee/opencv_contrib/modules/matlab/include;../../thirdparty/owemdjee/opencv_contrib/modules/mcc/include;../../thirdparty/owemdjee/opencv_contrib/modules/ml/include;../../thirdparty/owemdjee/opencv_contrib/modules/ovis/include;../../thirdparty/owemdjee/opencv_contrib/modules/phase_unwrapping/include;../../thirdparty/owemdjee/opencv_contrib/modules/plot/include;../../thirdparty/owemdjee/opencv_contrib/modules/quality/include;../../thirdparty/owemdjee/opencv_contrib/modules/rapid/include;../../thirdparty/owemdjee/opencv_contrib/modules/reg/include;../../thirdparty/owemdjee/opencv_contrib/modules/rgbd/include;../../thirdparty/owemdjee/opencv_contrib/modules/saliency/include;../../thirdparty/owemdjee/opencv_contrib/modules/sfm/include;../../thirdparty/owemdjee/opencv_contrib/modules/shape/include;../../thirdparty/owemdjee/opencv_contrib/modules/signal/include;../../thirdparty/owemdjee/opencv_contrib/modules/structured_light/include;../../thirdparty/owemdjee/opencv_contrib/modules/superres/include;../../thirdparty/owemdjee/opencv_contrib/modules/surface_matching/include;../../thirdparty/owemdjee/opencv_contrib/modules/text/include;../../thirdparty/owemdjee/opencv_contrib/modules/tracking/include;../../thirdparty/owemdjee/opencv_contrib/modules/videostab/include;../../thirdparty/owemdjee/opencv_contrib/modules/wechat_qrcode/include;../../thirdparty/owemdjee/opencv_contrib/modules/xobjdetect/include;../../thirdparty/owemdjee/opencv_contrib/modules/xstereo/include;../../scripts/OpenCV/modules/objdetect;../../scripts/OpenCV/modules/photo;../../thirdparty/owemdjee/quirc/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ProjectReference Include="libpthread-win32.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff8df2c2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libfreetype.vcxproj">
+      <Project>{5edcf4fd-0291-4fb9-8d96-a58957ca5e3c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libgif.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffddd6be}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libharfbuzz.vcxproj">
+      <Project>{5edcf4fd-0291-4fb9-8d96-258957ca5e3c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libjbig2dec.vcxproj">
+      <Project>{5edcf4fd-0291-4fb9-8d96-958957ca5e3c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libjpeg-turbo.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff92ba30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libbrotli.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffd7760d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libfreeglut.vcxproj">
+      <Project>{a1b75d29-9f5c-4a0f-b368-322a10477d0c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libjpeg-xl.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffa838c1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libjpeg.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff64a9f5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libleptonica.vcxproj">
+      <Project>{ca0bda38-89b9-4703-a77d-8049ac3a0d04}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libleptonica_tools.vcxproj">
+      <Project>{ca0bda38-89b9-4703-a77d-8049acf23027}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libmupdf_default_handlers.vcxproj">
+      <Project>{5f615f91-dff8-4f05-bf48-1222b7d86519}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libmupdf_minimal_core.vcxproj">
+      <Project>{6f1ee8ba-ccb7-4f76-b9da-337c41dd6fc0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libopenjpeg.vcxproj">
+      <Project>{5edcf4fd-0291-4fb9-8d96-758957ca5e3c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libopencv-core.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff8062fc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libopencv-features2d.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffebed2e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libopencv-imgcodecs.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffa6c777}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libopencv-imgproc.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff77fea3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libopencv-objdetect.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ffdace89}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libopencv-photo.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff96fbfd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libpng.vcxproj">
+      <Project>{5edcf4fd-0291-4fb9-8d96-658957ca5e3c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libprecog.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff59c610}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libsystem_override.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8318-7518ff7ef82f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libtiff.vcxproj">
+      <Project>{5edcf4fd-0291-4fb9-8d96-558957ca5e3c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libwebp.vcxproj">
+      <Project>{105f884a-c170-4c30-a810-c7da2103002f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libzlib.vcxproj">
+      <Project>{5edcf4fd-0291-4fb9-8d96-458957ca5e3c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libzopfli.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518ff03e6ca}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libzstd.vcxproj">
+      <Project>{a60d8644-5a1c-4d29-8970-7518fffeb6e4}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/libprecog/src/samples/monolithic-main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_utils_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_utils_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_utils_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/background_normalization_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/background_normalization_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/background_normalization_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_color_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_color_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_color_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_gray_world_white_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_gray_world_white_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_gray_world_white_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_simple_white_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_simple_white_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_simple_white_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/basic_deblur_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/basic_deblur_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/basic_deblur_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/bc_s.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/bdwn.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_g_t_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_g_t_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_g_t_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_t_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_t_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_t_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_c_o_c_o_c_l_u_s_t_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_c_o_c_o_c_l_u_s_t_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_c_o_c_o_c_l_u_s_t_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_f_b_c_i_t_b_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_f_b_c_i_t_b_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_f_b_c_i_t_b_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_feng_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_feng_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_feng_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_g_a_t_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_g_a_t_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_g_a_t_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_local_otsu_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_local_otsu_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_local_otsu_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_n_i_c_k_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_n_i_c_k_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_n_i_c_k_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_native_adaptive_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_native_adaptive_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_native_adaptive_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_niblack_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_niblack_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_niblack_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_gaussian_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_gaussian_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_gaussian_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_sauvola_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_sauvola_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_sauvola_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_wolf_jolion_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_wolf_jolion_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_wolf_jolion_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/blur_detection_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/blur_detection_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/blur_detection_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/closed.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/compatibility_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/compatibility_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/correct_n_u_i_l_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/correct_n_u_i_l_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/correct_n_u_i_l_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_n_l_m_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_n_l_m_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_n_l_m_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_salt_pepper_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_salt_pepper_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_salt_pepper_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/deskew_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/deskew_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/deskew_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_4dcae2469458b12f9f2e76b89da65fe5_dep.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_57de057a73d21ff37507efd261778998_dep.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_68267d1309a1af8e8297ef4c3efbcdba_dep.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_731082f5c625e8ce60227bdd5c3a6cfc_dep.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_733e32a7af871fbf7aec2371dccfdc9a_dep.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_d8215f47a5b0c3d0a678f29eb8552451_dep.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/doc.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/doxygen.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/folderclosed.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/folderopen.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/form_0.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/form_1.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/form_2.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/form_3.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/form_4.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/form_5.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/form_6.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/format_convert_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/format_convert_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/format_convert_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/gamma_correction_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/gamma_correction_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/gamma_correction_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/glare_detection_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/glare_detection_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/glare_detection_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/graph_legend.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/hough_line_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/hough_line_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/hough_line_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/image_lib_common_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/image_lib_common_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/image_lib_common_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/kuwahara_filter_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/kuwahara_filter_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/kuwahara_filter_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/nav_f.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/nav_g.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/nav_h.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/open.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_dots_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_dots_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_dots_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_hole_punch_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_hole_punch_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_hole_punch_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_lines_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_lines_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_lines_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/resize_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/resize_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/resize_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/rotate_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/rotate_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/rotate_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/search/close.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/search/mag_sel.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/search/search_l.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/search/search_m.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/search/search_r.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/smooth_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/smooth_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/smooth_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/split_page_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/split_page_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/split_page_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/splitbar.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/struct_b_i_t_m_a_p_i_n_f_o__coll__graph.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/sync_off.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/sync_on.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/tab_a.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/tab_b.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/tab_h.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/tab_s.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_guo_hall_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_guo_hall_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_guo_hall_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_zhang_suen_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_zhang_suen_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_zhang_suen_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/utils_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/utils_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/utils_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/warp_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/warp_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/warp_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/wiener_filter_8cpp__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/wiener_filter_8h__dep__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/docs/html/wiener_filter_8h__incl.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/HolePunch/doccleandemo.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/auto_crop/6.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/auto_crop/Blank_book_on_a_table.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/auto_crop/IMG_8135.JPG" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/auto_crop/Paper_450x450.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/auto_crop/Photography 001.JPG" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/auto_crop/YTD2K2g.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/auto_crop/paper-on-table1.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/auto_crop/photo_2017-10-03_20-29-18.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/auto_crop/photo_2017-10-03_23-31-11 (2).jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/auto_crop/photo_2017-10-03_23-31-11.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/auto_crop/photo_2017-10-03_23-31-12 (2).jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/auto_crop/photo_2017-10-03_23-31-12.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/auto_crop/photo_2017-10-03_23-31-13 (2).jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/auto_crop/photo_2017-10-03_23-31-13.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/auto_crop/photo_2017-10-03_23-31-14.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0000.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0001.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0002.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0003.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0004.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0005.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0006.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0007.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0008.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0009.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0010.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0011.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0012.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0013.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0014.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0015.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0016.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0017.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0018.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0019.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0020.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0021.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0022.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0023.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0024.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0025.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0026.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0027.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0028.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0029.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0030.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0031.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0032.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0033.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0034.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0035.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0036.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0037.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0038.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0039.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0040.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0041.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0042.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0043.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0044.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0045.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0046.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0047.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0048.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0049.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0050.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0051.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0052.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0053.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0054.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0055.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0056.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0057.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0058.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0059.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0060.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0061.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0062.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0063.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0064.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0065.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0066.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0067.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0068.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0069.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0070.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0071.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0072.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0073.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0074.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0075.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0076.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0077.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0078.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0079.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0080.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0081.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0082.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0083.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0084.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0085.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0086.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0087.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0088.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0089.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0090.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0091.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0092.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0093.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0094.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0095.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0096.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0097.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0098.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0099.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0100.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0101.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0102.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0103.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0104.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0105.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0106.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0107.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0108.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0109.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0110.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0111.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0112.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0113.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0114.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0115.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0116.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0117.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0118.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0119.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0120.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0121.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0122.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0123.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0124.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0125.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0126.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0127.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0128.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0129.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0130.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0131.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0132.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0133.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0134.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0135.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0136.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0137.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0138.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0139.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0140.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0141.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0142.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0143.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0144.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0145.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0146.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0147.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0148.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0149.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0150.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0151.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0152.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0153.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0154.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0155.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0156.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0157.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0158.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0159.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0160.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0161.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0162.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0163.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0164.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0165.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0166.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0167.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0168.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0169.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0170.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0171.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0172.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0173.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0174.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0175.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0176.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0177.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0178.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0179.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0180.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0181.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0182.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0183.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0184.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0185.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0186.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0187.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0188.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0189.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0190.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0191.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0192.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0193.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0194.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0195.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0196.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0197.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0198.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0199.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0200.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0201.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0202.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0203.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0204.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0205.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0206.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0207.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0208.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/binarize/0209.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/62.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/66.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/68.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/69.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/70.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/71.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/72.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/73.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/74.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/blur1.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/blur2.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/blur3.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/blur4.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/blur5.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/blur6.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/blur7.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/blurred.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/blurred/endless.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/denoise/salt_pepper/105053.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/denoise/salt_pepper/Figure-14_lightbox.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/denoise/salt_pepper/WithSaltAndPepper.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/denoise/salt_pepper/butterfly_sp.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/denoise/salt_pepper/lone-banana-noise.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/denoise/salt_pepper/zJRl7.png" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/deskew/IMG_20171020_122633.jpg" />
+    <Image Include="../../thirdparty/owemdjee/libprecog/test_data/dot_removal/1.png" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/LICENSE" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/README.md" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/cmake/FindLeptonica.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/annotated.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/annotated_dup.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_8cpp.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_utils_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_utils_8cpp.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_utils_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_utils_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_utils_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_utils_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_utils_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_utils_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/auto_crop_utils_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/background_normalization_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/background_normalization_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/background_normalization_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/background_normalization_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/background_normalization_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/background_normalization_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/background_normalization_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/background_normalization_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_color_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_color_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_color_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_color_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_color_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_color_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_color_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_color_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_gray_world_white_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_gray_world_white_8cpp.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_gray_world_white_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_gray_world_white_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_gray_world_white_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_gray_world_white_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_gray_world_white_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_gray_world_white_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_gray_world_white_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_simple_white_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_simple_white_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_simple_white_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_simple_white_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_simple_white_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_simple_white_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_simple_white_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/balance_simple_white_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/basic_deblur_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/basic_deblur_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/basic_deblur_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/basic_deblur_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/basic_deblur_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/basic_deblur_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/basic_deblur_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/basic_deblur_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_g_t_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_g_t_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_g_t_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_g_t_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_g_t_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_g_t_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_g_t_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_g_t_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_t_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_t_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_t_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_t_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_t_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_t_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_t_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_a_t_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_c_o_c_o_c_l_u_s_t_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_c_o_c_o_c_l_u_s_t_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_c_o_c_o_c_l_u_s_t_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_c_o_c_o_c_l_u_s_t_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_c_o_c_o_c_l_u_s_t_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_c_o_c_o_c_l_u_s_t_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_c_o_c_o_c_l_u_s_t_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_c_o_c_o_c_l_u_s_t_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_f_b_c_i_t_b_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_f_b_c_i_t_b_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_f_b_c_i_t_b_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_f_b_c_i_t_b_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_f_b_c_i_t_b_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_f_b_c_i_t_b_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_f_b_c_i_t_b_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_f_b_c_i_t_b_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_feng_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_feng_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_feng_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_feng_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_feng_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_feng_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_feng_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_feng_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_g_a_t_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_g_a_t_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_g_a_t_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_g_a_t_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_g_a_t_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_g_a_t_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_g_a_t_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_g_a_t_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_local_otsu_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_local_otsu_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_local_otsu_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_local_otsu_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_local_otsu_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_local_otsu_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_local_otsu_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_local_otsu_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_n_i_c_k_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_n_i_c_k_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_n_i_c_k_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_n_i_c_k_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_n_i_c_k_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_n_i_c_k_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_n_i_c_k_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_n_i_c_k_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_native_adaptive_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_native_adaptive_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_native_adaptive_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_native_adaptive_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_native_adaptive_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_native_adaptive_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_native_adaptive_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_native_adaptive_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_niblack_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_niblack_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_niblack_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_niblack_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_niblack_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_niblack_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_niblack_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_niblack_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_gaussian_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_gaussian_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_gaussian_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_gaussian_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_gaussian_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_gaussian_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_gaussian_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_pure_adaptive_gaussian_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_sauvola_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_sauvola_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_sauvola_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_sauvola_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_sauvola_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_sauvola_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_sauvola_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_sauvola_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_wolf_jolion_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_wolf_jolion_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_wolf_jolion_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_wolf_jolion_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_wolf_jolion_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_wolf_jolion_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_wolf_jolion_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/binarize_wolf_jolion_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/blur_detection_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/blur_detection_8cpp.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/blur_detection_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/blur_detection_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/blur_detection_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/blur_detection_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/blur_detection_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/blur_detection_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/blur_detection_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/classes.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/compatibility_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/compatibility_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/compatibility_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/compatibility_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/compatibility_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/correct_n_u_i_l_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/correct_n_u_i_l_8cpp.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/correct_n_u_i_l_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/correct_n_u_i_l_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/correct_n_u_i_l_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/correct_n_u_i_l_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/correct_n_u_i_l_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/correct_n_u_i_l_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/correct_n_u_i_l_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_n_l_m_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_n_l_m_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_n_l_m_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_n_l_m_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_n_l_m_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_n_l_m_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_n_l_m_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_n_l_m_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_salt_pepper_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_salt_pepper_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_salt_pepper_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_salt_pepper_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_salt_pepper_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_salt_pepper_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_salt_pepper_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/denoise_salt_pepper_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/deskew_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/deskew_8cpp.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/deskew_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/deskew_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/deskew_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/deskew_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/deskew_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/deskew_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/deskew_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_000003_000002.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_06d6b516144afd5935894bfd61114650.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_06d6b516144afd5935894bfd61114650.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_4dcae2469458b12f9f2e76b89da65fe5.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_4dcae2469458b12f9f2e76b89da65fe5.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_4dcae2469458b12f9f2e76b89da65fe5_dep.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_57de057a73d21ff37507efd261778998.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_57de057a73d21ff37507efd261778998.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_57de057a73d21ff37507efd261778998_dep.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_68267d1309a1af8e8297ef4c3efbcdba.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_68267d1309a1af8e8297ef4c3efbcdba.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_68267d1309a1af8e8297ef4c3efbcdba_dep.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_731082f5c625e8ce60227bdd5c3a6cfc.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_731082f5c625e8ce60227bdd5c3a6cfc.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_731082f5c625e8ce60227bdd5c3a6cfc_dep.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_733e32a7af871fbf7aec2371dccfdc9a.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_733e32a7af871fbf7aec2371dccfdc9a.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_733e32a7af871fbf7aec2371dccfdc9a_dep.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_d8215f47a5b0c3d0a678f29eb8552451.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_d8215f47a5b0c3d0a678f29eb8552451.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_d8215f47a5b0c3d0a678f29eb8552451_dep.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_ddc2c0a97e3bb2b9d4a4ef559296ecd7.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_ddc2c0a97e3bb2b9d4a4ef559296ecd7.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_ea4437cc75912db2a666a6da7f32e4cf.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dir_ea4437cc75912db2a666a6da7f32e4cf.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/doxygen.css" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/dynsections.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/files.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/files.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/format_convert_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/format_convert_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/format_convert_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/format_convert_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/format_convert_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/format_convert_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/format_convert_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/format_convert_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/formula.repository" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/functions.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/functions_vars.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/gamma_correction_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/gamma_correction_8cpp.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/gamma_correction_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/gamma_correction_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/gamma_correction_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/gamma_correction_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/gamma_correction_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/gamma_correction_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/gamma_correction_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/glare_detection_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/glare_detection_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/glare_detection_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/glare_detection_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/glare_detection_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/glare_detection_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/glare_detection_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/glare_detection_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/globals.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/globals_defs.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/globals_func.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/globals_type.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/globals_vars.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/graph_legend.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/graph_legend.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/hough_line_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/hough_line_8cpp.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/hough_line_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/hough_line_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/hough_line_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/hough_line_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/hough_line_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/hough_line_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/hough_line_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/image_lib_common_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/image_lib_common_8cpp.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/image_lib_common_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/image_lib_common_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/image_lib_common_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/image_lib_common_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/image_lib_common_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/image_lib_common_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/image_lib_common_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/index.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/jquery.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/kuwahara_filter_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/kuwahara_filter_8cpp.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/kuwahara_filter_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/kuwahara_filter_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/kuwahara_filter_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/kuwahara_filter_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/kuwahara_filter_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/kuwahara_filter_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/kuwahara_filter_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/mainpage_8dox.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/menu.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/menudata.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/namespacemembers.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/namespacemembers_enum.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/namespacemembers_func.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/namespacemembers_type.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/namespaceprl.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/namespaces.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/namespaces.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/navtree.css" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/navtree.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/navtreedata.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/navtreeindex0.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/navtreeindex1.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_dots_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_dots_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_dots_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_dots_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_dots_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_dots_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_dots_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_dots_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_hole_punch_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_hole_punch_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_hole_punch_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_hole_punch_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_hole_punch_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_hole_punch_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_hole_punch_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_hole_punch_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_lines_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_lines_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_lines_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_lines_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_lines_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_lines_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_lines_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/remove_lines_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/resize.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/resize_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/resize_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/resize_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/resize_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/resize_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/resize_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/resize_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/resize_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/rotate_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/rotate_8cpp.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/rotate_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/rotate_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/rotate_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/rotate_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/rotate_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/rotate_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/rotate_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_0.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_0.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_1.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_1.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_10.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_10.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_11.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_11.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_12.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_12.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_13.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_13.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_2.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_2.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_3.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_3.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_4.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_4.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_5.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_5.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_6.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_6.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_7.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_7.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_8.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_8.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_9.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_9.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_a.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_a.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_b.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_b.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_c.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_c.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_d.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_d.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_e.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_e.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_f.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/all_f.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/classes_0.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/classes_0.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/classes_1.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/classes_1.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/classes_2.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/classes_2.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/defines_0.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/defines_0.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/defines_1.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/defines_1.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/defines_2.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/defines_2.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/enums_0.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/enums_0.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/enums_1.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/enums_1.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/enumvalues_0.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/enumvalues_0.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/enumvalues_1.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/enumvalues_1.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/enumvalues_2.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/enumvalues_2.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/enumvalues_3.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/enumvalues_3.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_0.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_0.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_1.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_1.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_2.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_2.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_3.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_3.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_4.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_4.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_5.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_5.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_6.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_6.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_7.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_7.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_8.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_8.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_9.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_9.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_a.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_a.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_b.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_b.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_c.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_c.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_d.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_d.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_e.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/files_e.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_0.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_0.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_1.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_1.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_2.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_2.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_3.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_3.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_4.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_4.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_5.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_5.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_6.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_6.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_7.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_7.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_8.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_8.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_9.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_9.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_a.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_a.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_b.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_b.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_c.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_c.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_d.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_d.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_e.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/functions_e.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/namespaces_0.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/namespaces_0.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/nomatches.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/pages_0.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/pages_0.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/search.css" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/search.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/searchdata.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/typedefs_0.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/typedefs_0.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/typedefs_1.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/typedefs_1.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/typedefs_2.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/typedefs_2.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/typedefs_3.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/typedefs_3.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/typedefs_4.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/typedefs_4.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/typedefs_5.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/typedefs_5.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/variables_0.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/variables_0.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/variables_1.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/variables_1.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/variables_2.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/variables_2.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/variables_3.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/variables_3.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/variables_4.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/variables_4.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/variables_5.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/search/variables_5.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/smooth_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/smooth_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/smooth_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/smooth_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/smooth_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/smooth_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/smooth_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/split_page_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/split_page_8cpp.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/split_page_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/split_page_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/split_page_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/split_page_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/split_page_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/split_page_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/split_page_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/struct_b_i_t_m_a_p_f_i_l_e_h_e_a_d_e_r-members.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/struct_b_i_t_m_a_p_f_i_l_e_h_e_a_d_e_r.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/struct_b_i_t_m_a_p_f_i_l_e_h_e_a_d_e_r.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/struct_b_i_t_m_a_p_i_n_f_o-members.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/struct_b_i_t_m_a_p_i_n_f_o.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/struct_b_i_t_m_a_p_i_n_f_o.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/struct_b_i_t_m_a_p_i_n_f_o__coll__graph.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/struct_b_i_t_m_a_p_i_n_f_o_h_e_a_d_e_r-members.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/struct_b_i_t_m_a_p_i_n_f_o_h_e_a_d_e_r.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/struct_b_i_t_m_a_p_i_n_f_o_h_e_a_d_e_r.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/struct_r_g_b_q_u_a_d-members.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/struct_r_g_b_q_u_a_d.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/struct_r_g_b_q_u_a_d.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/structtag___marker_rectangle-members.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/structtag___marker_rectangle.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/structtag___marker_rectangle.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/tabs.css" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_guo_hall_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_guo_hall_8cpp.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_guo_hall_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_guo_hall_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_guo_hall_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_guo_hall_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_guo_hall_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_guo_hall_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_guo_hall_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_zhang_suen_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_zhang_suen_8cpp.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_zhang_suen_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_zhang_suen_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_zhang_suen_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_zhang_suen_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_zhang_suen_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_zhang_suen_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/thin_zhang_suen_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/utils_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/utils_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/utils_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/utils_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/utils_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/utils_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/utils_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/utils_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/warp_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/warp_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/warp_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/warp_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/warp_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/warp_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/warp_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/warp_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/wiener_filter_8cpp.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/wiener_filter_8cpp__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/wiener_filter_8cpp_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/wiener_filter_8h.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/wiener_filter_8h.js" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/wiener_filter_8h__dep__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/wiener_filter_8h__incl.md5" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/docs/html/wiener_filter_8h_source.html" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/mainpage.dox" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Binarization/A New Local Adaptive Thresholding Technique in Binarization.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Binarization/Adaptive Thresholding Based On Co-Occurence Matrix Edge Information.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Binarization/An Evaluation Technique for Binarization Algorithms.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Binarization/Comparison of Niblack inspired Binarization methods for ancient documents.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Binarization/Degraded Document Image Binarization Techniques.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Binarization/Dynamic thresholding methods.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Binarization/Image Binarization By Back Propagation Algorithm.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Binarization/Optimal_combination_of_document.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Deblurring/Basics of Image Deblurring.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Deblurring/Class-Specific Image Deblurring.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Deblurring/Image Deblurring (Seungyong Lee).pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Deblurring/Single image deblurring with adaptive dictionary learning.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Denoise/A Parallel Edge Preserving Algorithm for Salt and Pepper Image Denoising.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Denoise/A simple and efficient wavelet-based denosing algorithm.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Denoise/A study on Sparse Representation Model of Image Denoising Method.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Denoise/An Efficient Denoising Algorithm for Global Illumination.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Denoise/An Efficient IMage Restoration and Denoising approach using UBTMF.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Denoise/An Efficient Image Denoising Approach Based on Dictionary Learning.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Denoise/An Efficient Image Denoising Technique for Various Noisy Images.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Denoise/An Efficient Parameter Selection Criterion for Image Denoising.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Denoise/An Efficient Statistical Method for Image Noise Level Estimation.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Denoise/Comparative Study of Non-Local Means and Fast Non-Local Means Algorithm for Image Denoising.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Denoise/DCT Image Denoising.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Denoise/Efficient Image Denoising Algorithm for Gaussian and Impulse Noises.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Denoise/Image denoising by sparse 3D transform-domain collaborative filtering.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Denoise/Implementation of the Non-Local Bayes Image Denoising Algorithm.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Denoise/The SURE-LET Approach to Image Denoising.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Denoise/Разработка системы фильтрации изображений на основе адаптивных алгоритмов.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Hough transform/Probabilistic Hough Transform.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Other/An iterative method for non-uniform illumination correction based on gray-weighted.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Other/Automatic Glare Detection.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Other/ICDAR.2011/" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Other/ICDAR.2011/4520a011.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Other/ICDAR.2011/4520a022.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Other/ICDAR.2011/4520a435.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Other/ICDAR.2011/4520a440.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Other/ICDAR.2011/4520a548.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Other/ICDAR.2011/4520a563.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Other/ICDAR.2011/4520a579.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Other/ICDAR.2011/4520b135.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Recognition/Analysis of focus measure operators for shape-from-focus.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/Thinning/A comparative Study of Fingerprint Thinning Algorithms.pdf" />
+    <Text Include="../../thirdparty/owemdjee/libprecog/papers/UsefulLinks.txt" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets" >
+    <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />
+  </ImportGroup>
+</Project>
+  

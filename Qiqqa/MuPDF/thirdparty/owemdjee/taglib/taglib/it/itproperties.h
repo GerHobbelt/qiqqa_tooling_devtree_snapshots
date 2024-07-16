@@ -26,11 +26,11 @@
 #ifndef TAGLIB_ITPROPERTIES_H
 #define TAGLIB_ITPROPERTIES_H
 
-#include "taglib.h"
 #include "audioproperties.h"
 
 namespace TagLib {
   namespace IT {
+    //! An implementation of audio property reading for IT
     class TAGLIB_EXPORT Properties : public AudioProperties {
     public:
       /*! Flag bits. */
@@ -93,6 +93,7 @@ namespace TagLib {
 
     private:
       class PropertiesPrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<PropertiesPrivate> d;
     };
   }  // namespace IT

@@ -1871,7 +1871,8 @@ static void qrencodeStructured(const unsigned char *intext, int length, const ch
 int main(int argc, const char** argv)
 {
 	int opt, lindex = -1;
-	char *outfile = NULL, *infile = NULL;
+	const char* outfile = NULL;
+	const char* infile = NULL;
 	unsigned char *intext = NULL;
 	int length = 0;
 	FILE *fp;

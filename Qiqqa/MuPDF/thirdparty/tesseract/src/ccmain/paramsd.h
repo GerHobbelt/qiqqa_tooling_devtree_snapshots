@@ -25,7 +25,7 @@
 
 #  include "elst.h"       // for ELIST_ITERATOR, ELISTIZEH, ELIST_LINK
 #  include "scrollview.h" // for ScrollView (ptr only), SVEvent (ptr only)
-#  include "params.h"     // for ParamType
+#  include <tesseract/params.h>     // for ParamType
 
 namespace tesseract {
 
@@ -36,6 +36,9 @@ class DoubleParam;
 class IntParam;
 class StringParam;
 class Tesseract;
+
+// A list of all possible parameter types used.
+enum ParamType { VT_INTEGER, VT_BOOLEAN, VT_STRING, VT_DOUBLE };
 
 // A rather hackish helper structure which can take any kind of parameter input
 // (defined by ParamType) and do a couple of common operations on them, like
@@ -52,7 +55,10 @@ public:
 
   // Constructors for the various ParamTypes.
   ParamContent() = default;
-  ParamContent(tesseract::Param *it);
+  explicit ParamContent(tesseract::StringParam *it);
+  explicit ParamContent(tesseract::IntParam *it);
+  explicit ParamContent(tesseract::BoolParam *it);
+  explicit ParamContent(tesseract::DoubleParam *it);
 
   // Getters and Setters.
   void SetValue(const char *val);
@@ -72,8 +78,15 @@ private:
   int my_id_;
   // Whether the parameter was changed_ and thus needs to be rewritten.
   bool changed_ = false;
+  // The actual ParamType of this VC object.
+  ParamType param_type_;
 
-  tesseract::Param *it_;
+  union {
+    tesseract::StringParam *sIt;
+    tesseract::IntParam *iIt;
+    tesseract::BoolParam *bIt;
+    tesseract::DoubleParam *dIt;
+  };
 };
 
 ELISTIZEH(ParamContent);

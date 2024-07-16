@@ -20,7 +20,6 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6F1EE8BA-CCB7-4F76-B9DA-337C41DD6FC0}</ProjectGuid>
-    <RootNamespace>libmupdf_minimal_core</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,7 +69,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -106,13 +105,13 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/freetype;../../scripts/libjpeg-turbo;../../include;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/gumbo-parser/src;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/extract/include;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/zlib;../../thirdparty/freetype/include;../../thirdparty/mujs;../../thirdparty/harfbuzz/src;../../thirdparty/lcms2/include;../../thirdparty/tesseract/include;../../scripts/tesseract;../../scripts/leptonica/include;../../scripts/zlib;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../scripts/libwebp;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/fmt/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/freetype;../../scripts/libjpeg-turbo;../../include;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/gumbo-parser/src;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/extract/include;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/zlib;../../thirdparty/freetype/include;../../thirdparty/mujs;../../thirdparty/harfbuzz/src;../../thirdparty/lcms2/include;../../thirdparty/tesseract/include;../../scripts/tesseract;../../scripts/leptonica/include;../../scripts/zlib;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../scripts/libwebp;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/libarchive;../../thirdparty/owemdjee/libparameters/include;../../thirdparty/owemdjee/libdiagnostics/include;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILDING_MUPDF_MINIMAL_CORE=2;OPJ_STATIC;HAVE_LCMS2MT=1;HAVE_EXTRACT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -127,7 +126,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/freetype;../../scripts/libjpeg-turbo;../../include;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/gumbo-parser/src;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/extract/include;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/zlib;../../thirdparty/freetype/include;../../thirdparty/mujs;../../thirdparty/harfbuzz/src;../../thirdparty/lcms2/include;../../thirdparty/tesseract/include;../../scripts/tesseract;../../scripts/leptonica/include;../../scripts/zlib;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../scripts/libwebp;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/fmt/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/freetype;../../scripts/libjpeg-turbo;../../include;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/gumbo-parser/src;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/extract/include;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/zlib;../../thirdparty/freetype/include;../../thirdparty/mujs;../../thirdparty/harfbuzz/src;../../thirdparty/lcms2/include;../../thirdparty/tesseract/include;../../scripts/tesseract;../../scripts/leptonica/include;../../scripts/zlib;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../scripts/libwebp;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/libarchive;../../thirdparty/owemdjee/libparameters/include;../../thirdparty/owemdjee/libdiagnostics/include;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILDING_MUPDF_MINIMAL_CORE=2;OPJ_STATIC;HAVE_LCMS2MT=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -140,7 +139,7 @@
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/freetype;../../scripts/libjpeg-turbo;../../include;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/gumbo-parser/src;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/extract/include;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/zlib;../../thirdparty/freetype/include;../../thirdparty/mujs;../../thirdparty/harfbuzz/src;../../thirdparty/lcms2/include;../../thirdparty/tesseract/include;../../scripts/tesseract;../../scripts/leptonica/include;../../scripts/zlib;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../scripts/libwebp;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/fmt/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/freetype;../../scripts/libjpeg-turbo;../../include;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/gumbo-parser/src;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/extract/include;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/zlib;../../thirdparty/freetype/include;../../thirdparty/mujs;../../thirdparty/harfbuzz/src;../../thirdparty/lcms2/include;../../thirdparty/tesseract/include;../../scripts/tesseract;../../scripts/leptonica/include;../../scripts/zlib;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../scripts/libwebp;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/libarchive;../../thirdparty/owemdjee/libparameters/include;../../thirdparty/owemdjee/libdiagnostics/include;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILDING_MUPDF_MINIMAL_CORE=2;OPJ_STATIC;HAVE_LCMS2MT=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
@@ -155,7 +154,7 @@
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/freetype;../../scripts/libjpeg-turbo;../../include;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/gumbo-parser/src;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/extract/include;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/zlib;../../thirdparty/freetype/include;../../thirdparty/mujs;../../thirdparty/harfbuzz/src;../../thirdparty/lcms2/include;../../thirdparty/tesseract/include;../../scripts/tesseract;../../scripts/leptonica/include;../../scripts/zlib;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../scripts/libwebp;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/fmt/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../scripts/freetype;../../scripts/libjpeg-turbo;../../include;../../thirdparty/jbig2dec;../../thirdparty/owemdjee/libjpeg-turbo/src;../../thirdparty/gumbo-parser/src;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/extract/include;../../thirdparty/openjpeg/src/lib/openjp2;../../thirdparty/zlib;../../thirdparty/freetype/include;../../thirdparty/mujs;../../thirdparty/harfbuzz/src;../../thirdparty/lcms2/include;../../thirdparty/tesseract/include;../../scripts/tesseract;../../scripts/leptonica/include;../../scripts/zlib;../../scripts/libjpeg-xl;../../thirdparty/owemdjee/jpeg-xl/lib/include;../../scripts/libwebp;../../thirdparty/owemdjee/libwebp/src;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/libarchive;../../thirdparty/owemdjee/libparameters/include;../../thirdparty/owemdjee/libdiagnostics/include;../../thirdparty/owemdjee/libassert/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILDING_MUPDF_MINIMAL_CORE=2;OPJ_STATIC;HAVE_LCMS2MT=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
@@ -283,10 +282,12 @@
     <ClInclude Include="../../include/mupdf/fitz/config.h" />
     <ClInclude Include="../../include/mupdf/fitz/context.h" />
     <ClInclude Include="../../include/mupdf/fitz/crypt.h" />
+    <ClInclude Include="../../include/mupdf/fitz/deskew.h" />
     <ClInclude Include="../../include/mupdf/fitz/device.h" />
     <ClInclude Include="../../include/mupdf/fitz/display-list.h" />
     <ClInclude Include="../../include/mupdf/fitz/display-statistics.h" />
     <ClInclude Include="../../include/mupdf/fitz/document.h" />
+    <ClInclude Include="../../include/mupdf/fitz/encode-jbig2.h" />
     <ClInclude Include="../../include/mupdf/fitz/export.h" />
     <ClInclude Include="../../include/mupdf/fitz/filter.h" />
     <ClInclude Include="../../include/mupdf/fitz/font.h" />
@@ -354,6 +355,7 @@
     <ClInclude Include="../../include/mupdf/pdf/parse.h" />
     <ClInclude Include="../../include/mupdf/pdf/resource.h" />
     <ClInclude Include="../../include/mupdf/pdf/xref.h" />
+    <ClInclude Include="../../include/mupdf/pdf/zugferd.h" />
     <ClInclude Include="../../include/mupdf/ucdn.h" />
     <ClInclude Include="../../include/system-override/assert.h" />
     <ClInclude Include="../../include/system-override/cassert.h" />
@@ -374,6 +376,7 @@
     <ClCompile Include="../../source/fitz/bitmap.c" />
     <ClCompile Include="../../source/fitz/boxer.c" />
     <ClCompile Include="../../source/fitz/buffer.c" />
+    <ClCompile Include="../../source/fitz/cfi.c" />
     <ClCompile Include="../../source/fitz/color-fast.c" />
     <ClCompile Include="../../source/fitz/color-icc-create.c" />
     <ClCompile Include="../../source/fitz/color-lcms.c" />
@@ -385,6 +388,7 @@
     <ClCompile Include="../../source/fitz/crypt-arc4.c" />
     <ClCompile Include="../../source/fitz/crypt-md5.c" />
     <ClCompile Include="../../source/fitz/crypt-sha2.c" />
+    <ClCompile Include="../../source/fitz/deskew.c" />
     <ClCompile Include="../../source/fitz/device.c" />
     <ClCompile Include="../../source/fitz/directory.c" />
     <ClCompile Include="../../source/fitz/document-all.c" />
@@ -403,6 +407,7 @@
     <ClCompile Include="../../source/fitz/draw-unpack.c" />
     <ClCompile Include="../../source/fitz/encode-basic.c" />
     <ClCompile Include="../../source/fitz/encode-fax.c" />
+    <ClCompile Include="../../source/fitz/encode-jbig2.c" />
     <ClCompile Include="../../source/fitz/encode-jpx.c" />
     <ClCompile Include="../../source/fitz/encodings.c" />
     <ClCompile Include="../../source/fitz/error.c" />
@@ -428,6 +433,7 @@
     <ClCompile Include="../../source/fitz/hash.c" />
     <ClCompile Include="../../source/fitz/heap.c" />
     <ClCompile Include="../../source/fitz/image.c" />
+    <ClCompile Include="../../source/fitz/jbig2enc-wrap.cpp" />
     <ClCompile Include="../../source/fitz/jmemcust.c" />
     <ClCompile Include="../../source/fitz/leptonica-wrap.c" />
     <ClCompile Include="../../source/fitz/link.c" />
@@ -475,6 +481,7 @@
     <ClCompile Include="../../source/fitz/raw-device.c" />
     <ClCompile Include="../../source/fitz/separation.c" />
     <ClCompile Include="../../source/fitz/shade.c" />
+    <ClCompile Include="../../source/fitz/skew.c" />
     <ClCompile Include="../../source/fitz/statistics-device.c" />
     <ClCompile Include="../../source/fitz/stext-device.c" />
     <ClCompile Include="../../source/fitz/stext-output.c" />
@@ -484,6 +491,7 @@
     <ClCompile Include="../../source/fitz/stream-read.c" />
     <ClCompile Include="../../source/fitz/string.c" />
     <ClCompile Include="../../source/fitz/strtof.c" />
+    <ClCompile Include="../../source/fitz/subset-cff.c" />
     <ClCompile Include="../../source/fitz/subset-ttf.c" />
     <ClCompile Include="../../source/fitz/svg-device.c" />
     <ClCompile Include="../../source/fitz/tessocr.cpp" />
@@ -504,11 +512,13 @@
     <ClCompile Include="../../source/fitz/util.c" />
     <ClCompile Include="../../source/fitz/warp.c" />
     <ClCompile Include="../../source/fitz/writer.c" />
+    <ClCompile Include="../../source/fitz/xml-write.c" />
     <ClCompile Include="../../source/fitz/xml.c" />
     <ClCompile Include="../../source/fitz/xmltext-device.c" />
     <ClCompile Include="../../source/fitz/zip.c" />
     <ClCompile Include="../../source/helpers/cpu_core_count.cpp" />
     <ClCompile Include="../../source/helpers/dir.c" />
+    <ClCompile Include="../../source/helpers/dummy.c" />
     <ClCompile Include="../../source/helpers/fz_assert.c" />
     <ClCompile Include="../../source/helpers/heap_debugging.cpp" />
     <ClCompile Include="../../source/helpers/mu-threads/mu-threads.c" />
@@ -526,6 +536,7 @@
     <ClCompile Include="../../source/html/story-writer.c" />
     <ClCompile Include="../../source/html/txt.c" />
     <ClCompile Include="../../source/html/xml-dom.c" />
+    <ClCompile Include="../../source/pdf/pdf-af.c" />
     <ClCompile Include="../../source/pdf/pdf-annot.c" />
     <ClCompile Include="../../source/pdf/pdf-appearance.c" />
     <ClCompile Include="../../source/pdf/pdf-clean-file.c" />
@@ -577,6 +588,7 @@
     <ClCompile Include="../../source/pdf/pdf-write.c" />
     <ClCompile Include="../../source/pdf/pdf-xobject.c" />
     <ClCompile Include="../../source/pdf/pdf-xref.c" />
+    <ClCompile Include="../../source/pdf/pdf-zugferd.c" />
     <ClCompile Include="../../source/reflow/reflow-doc.c" />
     <ClCompile Include="../../source/svg/svg-color.c" />
     <ClCompile Include="../../source/svg/svg-doc.c" />
@@ -600,6 +612,9 @@
     <ClInclude Include="../../source/fitz/boxer.h" />
     <ClInclude Include="../../source/fitz/color-imp.h" />
     <ClInclude Include="../../source/fitz/context-imp.h" />
+    <ClInclude Include="../../source/fitz/deskew_c.h" />
+    <ClInclude Include="../../source/fitz/deskew_neon.h" />
+    <ClInclude Include="../../source/fitz/deskew_sse.h" />
     <ClInclude Include="../../source/fitz/draw-imp.h" />
     <ClInclude Include="../../source/fitz/encodings.h" />
     <ClInclude Include="../../source/fitz/font-table.h" />
@@ -698,6 +713,18 @@
     <ClInclude Include="../../source/pdf/cmaps/V.h" />
     <ClInclude Include="../../source/pdf/js/util.js.h" />
     <ClInclude Include="../../source/pdf/pdf-annot-imp.h" />
+    <ClInclude Include="../../source/pdf/to_unicode/FangSong.h" />
+    <ClInclude Include="../../source/pdf/to_unicode/KaiTi.h" />
+    <ClInclude Include="../../source/pdf/to_unicode/MS-Gothic.h" />
+    <ClInclude Include="../../source/pdf/to_unicode/MS-Mincho.h" />
+    <ClInclude Include="../../source/pdf/to_unicode/MS-PGothic.h" />
+    <ClInclude Include="../../source/pdf/to_unicode/MS-PMincho.h" />
+    <ClInclude Include="../../source/pdf/to_unicode/MS-UIGothic.h" />
+    <ClInclude Include="../../source/pdf/to_unicode/MingLiU.h" />
+    <ClInclude Include="../../source/pdf/to_unicode/NSimSun.h" />
+    <ClInclude Include="../../source/pdf/to_unicode/PMingLiU.h" />
+    <ClInclude Include="../../source/pdf/to_unicode/SimHei.h" />
+    <ClInclude Include="../../source/pdf/to_unicode/SimSun.h" />
     <ClInclude Include="../../source/svg/svg-imp.h" />
     <ClInclude Include="../../source/xps/xps-imp.h" />
     <Text Include="../../source/html/css-properties.gperf" />

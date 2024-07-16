@@ -93,8 +93,8 @@ ObjectInspector::ObjectInspector(wxWindow* parent, int id, int style) : wxPanel(
     m_nb->InsertPage(0, m_pg, _("Properties"), false);
     m_nb->InsertPage(1, m_eg, _("Events"), false);
 
-    m_nb->SetPageBitmap(0, AppBitmaps::GetBitmap(wxT("properties"), 16));
-    m_nb->SetPageBitmap(1, AppBitmaps::GetBitmap(wxT("events"), 16));
+    m_nb->SetPageBitmap(0, AppBitmaps::GetBitmap(wxT("properties"), AppBitmaps::Size::Icon_Medium));
+    m_nb->SetPageBitmap(1, AppBitmaps::GetBitmap(wxT("events"), AppBitmaps::Size::Icon_Medium));
 
     wxBoxSizer* topSizer = new wxBoxSizer(wxVERTICAL);
     topSizer->Add(m_nb, 1, wxALL | wxEXPAND, 0);
@@ -226,6 +226,8 @@ wxPGProperty* ObjectInspector::GetProperty(PProperty prop)
     } else if (type == PT_WXSTRING || type == PT_WXSTRING_I18N) {
         result = new wxLongStringProperty(name, wxPG_LABEL, prop->GetValueAsText());
     } else if (type == PT_TEXT) {
+        result = new wxStringProperty(name, wxPG_LABEL, prop->GetValueAsText());
+    } else if (type == PT_TEXT_ML) {
         result = new wxLongStringProperty(name, wxPG_LABEL, prop->GetValueAsText());
     } else if (type == PT_BOOL) {
         result = new wxBoolProperty(name, wxPG_LABEL, prop->GetValue() == wxT("1"));
@@ -607,7 +609,7 @@ void ObjectInspector::OnPropertyGridChanged(wxPropertyGridEvent& event)
                 ModifyProperty(prop, TypeConv::FloatToString(val));
                 break;
             }
-            case PT_TEXT: {
+            case PT_TEXT_ML: {
                 // The used wxPropertyGrid component does (undocumented?) escape certain control characters,
                 // especially \n, which is not desired for this type, its value should be preserved as is.
                 // TypeConv::TextToString() reverses exactly the same escape sequences.
@@ -615,6 +617,7 @@ void ObjectInspector::OnPropertyGridChanged(wxPropertyGridEvent& event)
                 ModifyProperty(prop, rawValue);
                 break;
             }
+            case PT_TEXT:
             case PT_MACRO:
             case PT_INT:
             case PT_UINT: {
@@ -855,6 +858,7 @@ void ObjectInspector::OnPropertyModified(wxFBPropertyEvent& event)
             break;
         }
         case PT_TEXT:
+        case PT_TEXT_ML:
             pgProp->SetValueFromString(prop->GetValueAsText(), 0);
             break;
         case PT_MACRO:
@@ -996,8 +1000,11 @@ void ObjectInspector::AutoGenerateId(PObjectBase objectChanged, PProperty propCh
         if (
           (propChanged->GetName() == wxT("name") && reason == wxT("PropChange")) ||
           (propChanged->GetName() == wxT("id") && reason == wxT("DblClk"))) {
-            // wxPGId pgid = m_pg->GetPropertyByLabel(wxT(""));
-            prop = AppData()->GetProjectData()->GetProperty(wxT("event_generation"));
+            // FIXME: This generic automatic ID changing depending on a C++ only property is extremely unexpected,
+            //        but turning this property into a generic property is also quite misleading because in fact
+            //        this event generation type is really only applicable to C++. Maybe this feature could be activated
+            //        by a separate property, but how can be ensured that this property must be enabled for table mode?
+            prop = AppData()->GetProjectData()->GetProperty("cpp_event_generation");
             if (prop) {
                 if (prop->GetValueAsString() == wxT("table")) {
                     prop = objectChanged->GetProperty(wxT("id"));

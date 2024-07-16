@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03fd328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42f0fc98-34f6-4567-b3cf-de13e74a89ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b1798409-2031-413d-9df7-70b0202ddd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\cybozu">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../../thirdparty/owemdjee/fmath/avx2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/fmath/bench.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/fmath/ck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/fmath/exp_v.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/fmath/fastexp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/fmath/limit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/fmath/log_v.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="../../thirdparty/owemdjee/fmath/fmath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/fmath/fmath.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/fmath/include/cybozu/benchmark.hpp">
+      <Filter>Header Files\include\cybozu</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/fmath/include/cybozu/inttype.hpp">
+      <Filter>Header Files\include\cybozu</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/fmath/include/cybozu/test.hpp">
+      <Filter>Header Files\include\cybozu</Filter>
+    </ClInclude>
+    <NASM Include="../../thirdparty/owemdjee/fmath/fmath.asm">
+      <Filter>Source Files</Filter>
+    </NASM>
+    <Text Include="../../thirdparty/owemdjee/fmath/Makefile">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fmath/algo-ja.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fmath/fmath.S">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fmath/gen_fmath.py">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fmath/readme.md">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/fmath/readme.txt">
+      <Filter>Misc Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

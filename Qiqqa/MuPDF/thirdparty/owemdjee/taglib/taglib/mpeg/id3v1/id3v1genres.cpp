@@ -247,10 +247,10 @@ ID3v1::GenreMap ID3v1::genreMap()
   return m;
 }
 
-String ID3v1::genre(int i)
+String ID3v1::genre(int index)
 {
-  if(i >= 0 && static_cast<size_t>(i) < genres.size())
-    return String(genres[i]); // always make a copy
+  if(index >= 0 && static_cast<size_t>(index) < genres.size())
+    return String(genres[index]); // always make a copy
   return String();
 }
 
@@ -272,8 +272,8 @@ int ID3v1::genreIndex(const String &name)
     std::pair(L"BritPop", 132),
     std::pair(L"Negerpunk", 133),
   };
-  for(const auto &[genre, code] : fixUpGenres) {
-    if(name == genre)
+  for(const auto &[genreName, code] : fixUpGenres) {
+    if(name == genreName)
       return code;
   }
 

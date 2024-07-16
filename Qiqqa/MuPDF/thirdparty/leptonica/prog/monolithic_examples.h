@@ -126,7 +126,8 @@ int lept_findcorners_reg_main(int argc, const char **argv);
 int lept_findpattern1_main(int argc, const char **argv);
 int lept_findpattern2_main(int argc, const char **argv);
 int lept_findpattern3_main(int argc, const char **argv);
-int lept_findpattern_reg_main(int argc, const char **argv);
+int lept_findpattern1_reg_main(int argc, const char **argv);
+int lept_findpattern2_reg_main(int argc, const char **argv);
 int lept_flipdetect_reg_main(int argc, const char **argv);
 int lept_fmorphauto_reg_main(int argc, const char **argv);
 int lept_fmorphautogen_main(int argc, const char **argv);
@@ -308,6 +309,8 @@ int lept_writetext_reg_main(int argc, const char **argv);
 int lept_xformbox_reg_main(int argc, const char **argv);
 int lept_yuvtest_main(int argc, const char **argv);
 int lept_issue675_check_main(int argc, const char **argv);
+int lept_message_test_main(void);
+int lept_misctest2_main(int argc, const char **argv);
 
 int lept_demo_pix_apis_main(int argc, const char **argv);
 

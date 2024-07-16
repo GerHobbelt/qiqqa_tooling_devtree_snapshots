@@ -90,7 +90,7 @@ unsigned int RIFF::AIFF::Properties::sampleFrames() const
 
 bool RIFF::AIFF::Properties::isAiffC() const
 {
-  return (!d->compressionType.isEmpty());
+  return !d->compressionType.isEmpty();
 }
 
 ByteVector RIFF::AIFF::Properties::compressionType() const
@@ -112,8 +112,7 @@ void RIFF::AIFF::Properties::read(File *file)
   ByteVector data;
   unsigned int streamLength = 0;
   for(unsigned int i = 0; i < file->chunkCount(); i++) {
-    const ByteVector name = file->chunkName(i);
-    if(name == "COMM") {
+    if(const ByteVector name = file->chunkName(i); name == "COMM") {
       if(data.isEmpty())
         data = file->chunkData(i);
       else
@@ -141,12 +140,12 @@ void RIFF::AIFF::Properties::read(File *file)
   d->sampleFrames  = data.toUInt(2U);
   d->bitsPerSample = data.toShort(6U);
 
-  const long double sampleRate = data.toFloat80BE(8);
-  if(sampleRate >= 1.0)
-    d->sampleRate = static_cast<int>(sampleRate + 0.5);
+  const long double smplRate = data.toFloat80BE(8);
+  if(smplRate >= 1.0)
+    d->sampleRate = static_cast<int>(smplRate + 0.5);
 
   if(d->sampleFrames > 0 && d->sampleRate > 0) {
-    const double length = d->sampleFrames * 1000.0 / sampleRate;
+    const auto length = static_cast<double>(d->sampleFrames) * 1000.0 / smplRate;
     d->length  = static_cast<int>(length + 0.5);
     d->bitrate = static_cast<int>(streamLength * 8.0 / length + 0.5);
   }

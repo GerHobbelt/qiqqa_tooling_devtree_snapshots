@@ -31,7 +31,6 @@
 
 #include "taglib_export.h"
 #include "id3v2frame.h"
-#include "id3v2header.h"
 
 namespace TagLib {
 
@@ -42,7 +41,7 @@ namespace TagLib {
     /*!
      * This is an implementation of ID3v2 general encapsulated objects.
      * Arbitrary binary data may be included in tags, stored in GEOB frames.
-     * There may be multiple GEOB frames in a single tag.  Each GEOB it
+     * There may be multiple GEOB frames in a single tag.  Each GEOB is
      * labelled with a content description (which may be blank), a required
      * mime-type, and a file name (may be blank).  The content description
      * uniquely identifies the GEOB frame in the tag.
@@ -81,6 +80,11 @@ namespace TagLib {
        * Returns a string containing the description, file name and mime-type
        */
       String toString() const override;
+
+      /*!
+       * Returns a string list containing the description, file name and mime-type.
+       */
+      StringList toStringList() const override;
 
       /*!
        * Returns the text encoding used for the description and file name.
@@ -146,7 +150,7 @@ namespace TagLib {
       /*!
        * Returns the object data as a ByteVector.
        *
-       * \note ByteVector has a data() method that returns a const char * which
+       * \note ByteVector has a data() method that returns a <tt>const char *</tt> which
        * should make it easy to export this data to external programs.
        *
        * \see setObject()
@@ -172,6 +176,7 @@ namespace TagLib {
       GeneralEncapsulatedObjectFrame(const ByteVector &data, Header *h);
 
       class GeneralEncapsulatedObjectFramePrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<GeneralEncapsulatedObjectFramePrivate> d;
     };
   }  // namespace ID3v2

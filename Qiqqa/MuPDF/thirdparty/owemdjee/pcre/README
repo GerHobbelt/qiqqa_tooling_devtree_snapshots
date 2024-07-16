@@ -24,7 +24,6 @@ contents of this README file are:
 
   The PCRE2 APIs
   Documentation for PCRE2
-  Contributions by users of PCRE2
   Building PCRE2 on non-Unix-like systems
   Building PCRE2 without using autotools
   Building PCRE2 using autotools
@@ -391,7 +390,7 @@ library. They are also documented in the pcre2build man page.
   avoided by linking with libedit (which has a BSD licence) instead.
 
   Enabling libreadline causes the -lreadline option to be added to the
-  pcre2test build. In many operating environments with a sytem-installed
+  pcre2test build. In many operating environments with a system-installed
   readline library this is sufficient. However, in some environments (e.g. if
   an unmodified distribution version of readline is in use), it may be
   necessary to specify something like LIBS="-lncurses" as well. This is
@@ -944,7 +943,14 @@ The distribution should contain the files listed below.
   src/config.h.generic    ) a version of config.h for use in non-"configure"
                           )   environments
 
+(F) Auxiliary files for building PCRE2 under OpenVMS
+
+  vms/configure.com       )
+  vms/openvms_readme.txt  ) These files were contributed by a PCRE2 user.
+  vms/pcre2.h_patch       )
+  vms/stdint.h            )
+
 Philip Hazel
 Email local part: Philip.Hazel
 Email domain: gmail.com
-Last updated: 24 November 2023
+Last updated: 15 April 2024

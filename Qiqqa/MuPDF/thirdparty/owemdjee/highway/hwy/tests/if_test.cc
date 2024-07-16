@@ -13,6 +13,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+#include <stddef.h>
+
 #undef HWY_TARGET_INCLUDE
 #define HWY_TARGET_INCLUDE "tests/if_test.cc"
 #include "hwy/foreach_target.h"  // IWYU pragma: keep
@@ -26,6 +28,11 @@ namespace HWY_NAMESPACE {
 struct TestIfThenElse {
   template <class T, class D>
   HWY_NOINLINE void operator()(T /*unused*/, D d) {
+    // TODO(janwas): file compiler bug report
+#if HWY_COMPILER_CLANG && (HWY_COMPILER_CLANG < 1800) && HWY_ARCH_ARM
+    if (IsSpecialFloat<T>()) return;
+#endif
+
     RandomState rng;
 
     using TI = MakeSigned<T>;  // For mask > 0 comparison
@@ -40,8 +47,8 @@ struct TestIfThenElse {
     // Each lane should have a chance of having mask=true.
     for (size_t rep = 0; rep < AdjustedReps(200); ++rep) {
       for (size_t i = 0; i < N; ++i) {
-        in1[i] = static_cast<T>(Random32(&rng));
-        in2[i] = static_cast<T>(Random32(&rng));
+        in1[i] = ConvertScalarTo<T>(Random32(&rng));
+        in2[i] = ConvertScalarTo<T>(Random32(&rng));
         bool_lanes[i] = (Random32(&rng) & 16) ? TI(1) : TI(0);
       }
 
@@ -55,12 +62,12 @@ struct TestIfThenElse {
       HWY_ASSERT_VEC_EQ(d, expected.get(), IfThenElse(mask, v1, v2));
 
       for (size_t i = 0; i < N; ++i) {
-        expected[i] = bool_lanes[i] ? in1[i] : T(0);
+        expected[i] = bool_lanes[i] ? in1[i] : ConvertScalarTo<T>(0);
       }
       HWY_ASSERT_VEC_EQ(d, expected.get(), IfThenElseZero(mask, v1));
 
       for (size_t i = 0; i < N; ++i) {
-        expected[i] = bool_lanes[i] ? T(0) : in2[i];
+        expected[i] = bool_lanes[i] ? ConvertScalarTo<T>(0) : in2[i];
       }
       HWY_ASSERT_VEC_EQ(d, expected.get(), IfThenZeroElse(mask, v2));
     }
@@ -68,7 +75,7 @@ struct TestIfThenElse {
 };
 
 HWY_NOINLINE void TestAllIfThenElse() {
-  ForAllTypes(ForPartialVectors<TestIfThenElse>());
+  ForAllTypesAndSpecial(ForPartialVectors<TestIfThenElse>());
 }
 
 struct TestIfVecThenElse {
@@ -88,8 +95,8 @@ struct TestIfVecThenElse {
     // Each lane should have a chance of having mask=true.
     for (size_t rep = 0; rep < AdjustedReps(200); ++rep) {
       for (size_t i = 0; i < N; ++i) {
-        in1[i] = static_cast<T>(Random32(&rng));
-        in2[i] = static_cast<T>(Random32(&rng));
+        in1[i] = ConvertScalarTo<T>(Random32(&rng));
+        in2[i] = ConvertScalarTo<T>(Random32(&rng));
         vec_lanes[i] = (Random32(&rng) & 16) ? static_cast<TU>(~TU(0)) : TU(0);
       }
 
@@ -113,8 +120,14 @@ struct TestZeroIfNegative {
   template <class T, class D>
   HWY_NOINLINE void operator()(T /*unused*/, D d) {
     const auto v0 = Zero(d);
-    const auto vp = Iota(d, 1);
-    const auto vn = Iota(d, T(-1E5));  // assumes N < 10^5
+    auto vp = Iota(d, 1);
+    auto vn = Iota(d, ConvertScalarTo<T>((sizeof(T) >= 2) ? -10000 : -100));
+
+    if (MaxLanes(d) > (sizeof(T) >= 2 ? 10000 : 100)) {
+      const auto vsignbit = SignBit(d);
+      vp = AndNot(vsignbit, vp);
+      vn = Or(vn, vsignbit);
+    }
 
     // Zero and positive remain unchanged
     HWY_ASSERT_VEC_EQ(d, v0, ZeroIfNegative(v0));
@@ -127,6 +140,7 @@ struct TestZeroIfNegative {
 
 HWY_NOINLINE void TestAllZeroIfNegative() {
   ForFloatTypes(ForPartialVectors<TestZeroIfNegative>());
+  ForSignedTypes(ForPartialVectors<TestZeroIfNegative>());
 }
 
 struct TestIfNegative {
@@ -166,6 +180,15 @@ struct TestIfNegative {
 
     HWY_ASSERT_VEC_EQ(d, expected_1, IfNegativeThenElse(m1, x1, x2));
     HWY_ASSERT_VEC_EQ(d, expected_2, IfNegativeThenElse(m2, x1, x2));
+
+    const auto expected_3 = And(m1_s, x1);
+    const auto expected_4 = AndNot(m1_s, x2);
+
+    HWY_ASSERT_VEC_EQ(d, expected_3, IfNegativeThenElseZero(m1, x1));
+    HWY_ASSERT_VEC_EQ(d, expected_3, IfNegativeThenZeroElse(m2, x1));
+
+    HWY_ASSERT_VEC_EQ(d, expected_4, IfNegativeThenZeroElse(m1, x2));
+    HWY_ASSERT_VEC_EQ(d, expected_4, IfNegativeThenElseZero(m2, x2));
   }
 };
 
@@ -175,22 +198,13 @@ HWY_NOINLINE void TestAllIfNegative() {
 }
 
 struct TestIfNegativeThenNegOrUndefIfZero {
-  template <class D, HWY_IF_FLOAT_D(D)>
-  static HWY_INLINE Vec<D> PositiveIota(D d) {
-    return Iota(d, TFromD<D>{1});
-  }
-  template <class D, HWY_IF_NOT_FLOAT_NOR_SPECIAL_D(D)>
-  static HWY_INLINE Vec<D> PositiveIota(D d) {
-    const auto vi = Iota(d, TFromD<D>{1});
-    return Max(And(vi, Set(d, LimitsMax<TFromD<D>>())), Set(d, TFromD<D>{1}));
-  }
-
   template <class D, HWY_IF_LANES_LE_D(D, 1)>
   static HWY_INLINE void TestMoreThan1LaneIfNegativeThenNegOrUndefIfZero(
       D /*d*/, Vec<D> /*v1*/, Vec<D> /*v2*/) {}
 #if HWY_TARGET != HWY_SCALAR
+  // NOINLINE works around a clang compiler bug for PPC9 partial vectors.
   template <class D, HWY_IF_LANES_GT_D(D, 1)>
-  static HWY_INLINE void TestMoreThan1LaneIfNegativeThenNegOrUndefIfZero(
+  static HWY_NOINLINE void TestMoreThan1LaneIfNegativeThenNegOrUndefIfZero(
       D d, Vec<D> v1, Vec<D> v2) {
 #if HWY_HAVE_SCALABLE
     if (Lanes(d) < 2) {
@@ -198,12 +212,12 @@ struct TestIfNegativeThenNegOrUndefIfZero {
     }
 #endif
 
-    const auto v3 = InterleaveLower(d, v1, v1);
-    const auto v4 = InterleaveUpper(d, v1, v1);
-    const auto v5 = InterleaveLower(d, v1, v2);
-    const auto v6 = InterleaveUpper(d, v1, v2);
-    const auto v7 = InterleaveLower(d, v2, v1);
-    const auto v8 = InterleaveUpper(d, v2, v1);
+    const Vec<D> v3 = InterleaveLower(d, v1, v1);
+    const Vec<D> v4 = InterleaveUpper(d, v1, v1);
+    const Vec<D> v5 = InterleaveLower(d, v1, v2);
+    const Vec<D> v6 = InterleaveUpper(d, v1, v2);
+    const Vec<D> v7 = InterleaveLower(d, v2, v1);
+    const Vec<D> v8 = InterleaveUpper(d, v2, v1);
 
     HWY_ASSERT_VEC_EQ(d, v3, IfNegativeThenNegOrUndefIfZero(v3, v3));
     HWY_ASSERT_VEC_EQ(d, v4, IfNegativeThenNegOrUndefIfZero(v4, v4));
@@ -217,7 +231,7 @@ struct TestIfNegativeThenNegOrUndefIfZero {
     HWY_ASSERT_VEC_EQ(d, v7, IfNegativeThenNegOrUndefIfZero(v3, v7));
     HWY_ASSERT_VEC_EQ(d, v8, IfNegativeThenNegOrUndefIfZero(v4, v8));
 
-    const auto zero = Zero(d);
+    const Vec<D> zero = Zero(d);
     HWY_ASSERT_VEC_EQ(d, zero, IfNegativeThenNegOrUndefIfZero(v3, zero));
     HWY_ASSERT_VEC_EQ(d, zero, IfNegativeThenNegOrUndefIfZero(v4, zero));
     HWY_ASSERT_VEC_EQ(d, zero, IfNegativeThenNegOrUndefIfZero(v5, zero));
@@ -273,6 +287,7 @@ HWY_EXPORT_AND_TEST_P(HwyIfTest, TestAllIfVecThenElse);
 HWY_EXPORT_AND_TEST_P(HwyIfTest, TestAllZeroIfNegative);
 HWY_EXPORT_AND_TEST_P(HwyIfTest, TestAllIfNegative);
 HWY_EXPORT_AND_TEST_P(HwyIfTest, TestAllIfNegativeThenNegOrUndefIfZero);
+HWY_AFTER_TEST();
 }  // namespace hwy
 
 #endif

@@ -20,7 +20,6 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{ABB45633-D66D-45EB-9E24-E8DB6562C621}</ProjectGuid>
-    <RootNamespace>tesseract-mf_training</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,7 +69,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -106,7 +105,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -285,15 +284,20 @@
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/capi_training_tools.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/debugheap.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/export.h" />
+    <ClInclude Include="../../thirdparty/tesseract/include/tesseract/filepath.h" />
+    <ClInclude Include="../../thirdparty/tesseract/include/tesseract/fileptr.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/fmt-support.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/ltrresultiterator.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/memcost_estimate.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/ocrclass.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/osdetect.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/pageiterator.h" />
+    <ClInclude Include="../../thirdparty/tesseract/include/tesseract/params.h" />
+    <ClInclude Include="../../thirdparty/tesseract/include/tesseract/preparation.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/publictypes.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/renderer.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/resultiterator.h" />
+    <ClInclude Include="../../thirdparty/tesseract/include/tesseract/tprintf.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/unichar.h" />
     <Font Include="../../thirdparty/tesseract/tessdata/pdf.ttf" />
     <Text Include="../../thirdparty/tesseract/AUTHORS" />

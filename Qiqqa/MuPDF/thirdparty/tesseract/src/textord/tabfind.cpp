@@ -16,9 +16,7 @@
 //
 ///////////////////////////////////////////////////////////////////////
 
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include "alignedblob.h"
 #include "colpartitiongrid.h"
@@ -525,12 +523,10 @@ ScrollViewReference TabFind::FindInitialTabVectors(BLOBNBOX_LIST *image_blobs, i
   InsertBlobsToGrid(true, false, &block->blobs, this);
   ScrollViewReference initial_win = FindTabBoxes(min_gutter_width, tabfind_aligned_gap_fraction);
   FindAllTabVectors(min_gutter_width);
-  SortVectors();
-  EvaluateTabs();
 
   TabVector::MergeSimilarTabVectors(vertical_skew_, &vectors_, this);
   SortVectors();
-  //EvaluateTabs();
+  EvaluateTabs();
 #if !GRAPHICS_DISABLED
   if (textord_tabfind_show_initialtabs && initial_win) {
     DisplayTabVectors(initial_win);
@@ -565,7 +561,7 @@ ScrollViewReference TabFind::FindTabBoxes(int min_gutter_width, double tabfind_a
   left_tab_boxes_.clear();
   right_tab_boxes_.clear();
   // For every bbox in the grid, determine whether it uses a tab on an edge.
-  GridSearch<BLOBNBOX, BLOBNBOX_CLIST, BLOBNBOX_C_IT> gsearch(this);
+  BlobGridSearch gsearch(this);
   gsearch.StartFullSearch();
   BLOBNBOX *bbox;
   while ((bbox = gsearch.NextFullSearch()) != nullptr) {
@@ -583,8 +579,8 @@ ScrollViewReference TabFind::FindTabBoxes(int min_gutter_width, double tabfind_a
   // on a ragged tab.
   std::sort(left_tab_boxes_.begin(), left_tab_boxes_.end(), StdSortByBoxLeft<BLOBNBOX>);
   std::sort(right_tab_boxes_.begin(), right_tab_boxes_.end(), StdSortRightToLeft<BLOBNBOX>);
-#if !GRAPHICS_DISABLED
   ScrollViewReference tab_win;
+#if !GRAPHICS_DISABLED
   if (textord_tabfind_show_initialtabs) {
     tab_win = MakeWindow(tesseract_, 0, 100, "InitialTabs");
     tab_win->Pen(Diagnostics::BLUE);
@@ -594,10 +590,8 @@ ScrollViewReference TabFind::FindTabBoxes(int min_gutter_width, double tabfind_a
     DisplayBoxVector(right_tab_boxes_, tab_win);
     DisplayTabs(tab_win);
   }
-  return tab_win;
-#else
-  return nullptr;
 #endif // !GRAPHICS_DISABLED
+  return tab_win;
 }
 
 bool TabFind::TestBoxForTabs(BLOBNBOX *bbox, int min_gutter_width,
@@ -1069,6 +1063,7 @@ void TabFind::MakeColumnWidths(int col_widths_size, STATS *col_widths) {
       col_count += new_count;
       col_widths->add(right, -new_count);
     }
+
     if (col_count > kMinLinesInColumn &&
         col_count > kMinFractionalLinesInColumn * total_col_count) {
       auto *w = new ICOORDELT(0, width);

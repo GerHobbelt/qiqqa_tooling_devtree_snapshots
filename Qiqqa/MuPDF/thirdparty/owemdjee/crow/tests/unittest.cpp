@@ -1,6 +1,13 @@
-#define CATCH_CONFIG_MAIN
 #define CROW_ENABLE_DEBUG
 #define CROW_LOG_LEVEL 0
+
+// fix: asio\detail\socket_types.hpp(24, 1):  error C1189 : #error : WinSock.h has already been included
+#if defined(_WIN32)
+#include <winsock2.h>
+#undef min
+#undef max
+#endif
+
 #include <sys/stat.h>
 
 #include <iostream>
@@ -10,7 +17,8 @@
 #include <type_traits>
 #include <regex>
 
-#include "catch.hpp"
+#include <catch2/catch_all.hpp>
+
 #include "crow.h"
 #include "crow/middlewares/cookie_parser.h"
 #include "crow/middlewares/cors.h"
@@ -18,6 +26,13 @@
 
 using namespace std;
 using namespace crow;
+
+#ifdef CROW_USE_BOOST
+namespace asio = boost::asio;
+using asio_error_code = boost::system::error_code;
+#else
+using asio_error_code = asio::error_code;
+#endif
 
 #define LOCALHOST_ADDRESS "127.0.0.1"
 
@@ -2941,7 +2956,7 @@ TEST_CASE("websocket_max_payload")
         }
     }
 
-    asio::error_code ec;
+    asio_error_code ec;
     c.lowest_layer().shutdown(asio::socket_base::shutdown_type::shutdown_both, ec);
 
     app.stop();
@@ -3526,7 +3541,7 @@ TEST_CASE("timeout")
               asio::ip::address::from_string(LOCALHOST_ADDRESS), 45451));
 
             auto receive_future = async(launch::async, [&]() {
-                asio::error_code ec;
+                asio_error_code ec;
                 c.receive(asio::buffer(buf, 2048), 0, ec);
                 return ec;
             });
@@ -3546,7 +3561,7 @@ TEST_CASE("timeout")
 
             size_t received;
             auto receive_future = async(launch::async, [&]() {
-                asio::error_code ec;
+                asio_error_code ec;
                 received = c.receive(asio::buffer(buf, 2048), 0, ec);
                 return ec;
             });

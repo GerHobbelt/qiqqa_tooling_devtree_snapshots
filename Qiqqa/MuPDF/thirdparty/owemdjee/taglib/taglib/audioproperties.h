@@ -37,7 +37,7 @@ namespace TagLib {
 
   /*!
    * The values here are common to most audio formats.  For more specific, codec
-   * dependent values, please see see the subclasses APIs.  This is meant to
+   * dependent values, please see the subclasses APIs.  This is meant to
    * compliment the TagLib::File and TagLib::Tag APIs in providing a simple
    * interface that is sufficient for most applications.
    */
@@ -126,6 +126,7 @@ namespace TagLib {
 
   private:
     class AudioPropertiesPrivate;
+    TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
     std::unique_ptr<AudioPropertiesPrivate> d;
   };
 

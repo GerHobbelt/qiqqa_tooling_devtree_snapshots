@@ -5,6 +5,8 @@ This page keeps the most up-to-date release notes.
 Table of Contents
 =================
 * [IN DEVELOPMENT](ReleaseNotes.md#in-development)
+* [V5.4.1](#v541) Jun 11 2024
+* [V5.4.0](#v540) Jun 06 2024
 * [V5.3.4](#v534) Jan 18 2024
 * [V5.3.3](#v533), Oct 05 2023
 * [V5.3.2](#v532), Jul 11 2023
@@ -50,10 +52,21 @@ Table of Contents
 * [Binary compatibility report for Tesseract: 4.1.3 vs 5.0.0](https://abi-laboratory.pro/index.php?view=objects_report&l=tesseract&v1=4.1.3&v2=5.0.0)
 * [Binary compatibility report for Tesseract: 3.05.02 vs 4.0.0](https://abi-laboratory.pro/index.php?view=objects_report&l=tesseract&v1=3.05.02&v2=4.0.0)
 
+# V5.4.1
+
+_Jun 11 2024_
+
+https://github.com/tesseract-ocr/tesseract/releases/tag/5.4.1
+
+# V5.4.0
+
+_Jun 06 2024_
+
+https://github.com/tesseract-ocr/tesseract/releases/tag/5.4.0
+
 # V5.3.4
 
 _Jan 18 2024_
-
 
 https://github.com/tesseract-ocr/tesseract/releases/tag/5.3.4
 
@@ -87,6 +100,10 @@ Improve the DebugDump output by slightly adjusting the format. By [\@GerHobbelt]
 * (MSVC debug) Fix wrong lib name in generated file `tesseract.pc`. By [\@autoantwort](https://github.com/autoantwort) in PR #4008.
 * Fix libdir in generated file `tesseract.pc`. By [\@ferdnyc](https://github.com/ferdnyc) in PR #4013.
 
+**Compiler support**
+
+We dropped support for GCC and libstdc++ 8.x.
+
 # V5.3.0
 
 _Dec 22 2022_
@@ -102,7 +119,7 @@ LSTM trainIng: Extend the function `BoxFileName` to handle another image name ex
 * Training tools: Replace call of `exit` function by return statement in `main` function. By [\@stweil](https://github.com/stweil) in PR [#3878](https://github.com/tesseract-ocr/tesseract/pull/3878).
 * Fix double free in function `vigorous_noise_removal` (issue [#3876](https://github.com/tesseract-ocr/tesseract/issues/3876)). By [\@stweil](https://github.com/stweil) in commit [`ee34b100bf`](https://github.com/tesseract-ocr/tesseract/commit/ee34b100bf9b54).
 * Create `to_win` if needed in `Textord::make_spline_rows` (fix issue [#3875](https://github.com/tesseract-ocr/tesseract/issues/3875)). By [\@stweil](https://github.com/stweil) in commit [`99d6717c10`](https://github.com/tesseract-ocr/tesseract/commit/99d6717c101308).
-* Fix memory issues in `ScrollView::MessageReceiver` (issue [#3869](https://github.com/tesseract-ocr/tesseract/issues/3869)). By [\@p12tic](https://github.com/p12tic) in PR [#3872](https://github.com/tesseract-ocr/tesseract/pull/3872).
+* Fix memory issues in `Diagnostics::MessageReceiver` (issue [#3869](https://github.com/tesseract-ocr/tesseract/issues/3869)). By [\@p12tic](https://github.com/p12tic) in PR [#3872](https://github.com/tesseract-ocr/tesseract/pull/3872).
 * Catch potential `nullptr` in `SVNetwork::SVNetwork`. By [\@stweil](https://github.com/stweil) in commit [`02e834000c`](https://github.com/tesseract-ocr/tesseract/commit/02e834000ce1d7).
 * Modernize function `ObjectCache::DeleteUnusedObjects` (fix issue with sanitizers). By [\@stweil](https://github.com/stweil) in PR [#3978](https://github.com/tesseract-ocr/tesseract/pull/3978).
 
@@ -483,7 +500,7 @@ _Oct 23 2012_
 
 _Oct 21 2011_
 
-  * Thread-safety! Moved all critical globals and statics to members of the appropriate class. Tesseract is now thread-safe (multiple instances can be used in parallel in multiple threads.) with the minor exception that some control parameters are still global and affect all threads.
+  * Thread-safety! Moved all critical global and static variables to members of the appropriate class. Tesseract is now thread-safe (multiple instances can be used in parallel in multiple threads.) with the minor exception that some control parameters are still global and affect all threads.
   * Added `Cube`, a new **experimental** recognizer for Arabic and Hindi. Cube can also be used in combination with normal Tesseract for a few other languages with an small improvement in accuracy at the cost of much lower speed. **There is no training module for Cube.**
   * `OcrEngineMode` in `Init` replaces `AccuracyVSpeed` to control cube.
   * Greatly improved segmentation search with consequent accuracy and speed improvements, especially for Chinese.

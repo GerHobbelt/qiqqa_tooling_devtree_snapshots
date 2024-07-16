@@ -19,13 +19,11 @@
 #ifndef TESSERACT_CCUTIL_CCUTIL_H_
 #define TESSERACT_CCUTIL_CCUTIL_H_
 
+#include <tesseract/preparation.h> // compiler config, etc.
+
 #if !(defined(WIN32) || defined(_WIN32) || defined(_WIN64))
 #  include <pthread.h>
 #  include <semaphore.h>
-#endif
-
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h" // DISABLED_LEGACY_ENGINE
 #endif
 
 #if !DISABLED_LEGACY_ENGINE
@@ -35,7 +33,7 @@
 #if defined(WIN32) || defined(_WIN32) || defined(_WIN64)
 #  include "host.h" // windows.h for HANDLE, ...
 #endif
-#include "params.h"
+#include <tesseract/params.h>
 #include "unicharset.h"
 
 namespace tesseract {
@@ -50,12 +48,8 @@ public:
   void main_setup(const std::string &argv0,                 // program name
                   const std::string & output_image_basename // name of output/debug image(s)
   );
-  ParamsVector &params() {
-    return params_;
-  }
-
-  ParamsVectorSet &params_collective() {
-    return params_collective_;
+  ParamsVectors *params() {
+    return &params_;
   }
 
   std::string input_file_path; // name of currently processed input file
@@ -71,8 +65,7 @@ public:
   std::string directory; // main directory
 
 private:
-  ParamsVector params_;
-  ParamsVectorSet params_collective_;
+  ParamsVectors params_;
 
 public:
   // Member parameters.

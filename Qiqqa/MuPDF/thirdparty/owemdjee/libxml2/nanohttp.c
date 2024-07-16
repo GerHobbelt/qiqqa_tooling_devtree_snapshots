@@ -40,6 +40,9 @@
 #ifdef HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
+#ifdef HAVE_IO_H
+#include <io.h>
+#endif
 #ifdef HAVE_SYS_TIME_H
 #include <sys/time.h>
 #endif
@@ -107,6 +110,8 @@
 #define XML_NANO_HTTP_WRITE	1
 #define XML_NANO_HTTP_READ	2
 #define XML_NANO_HTTP_NONE	4
+
+#define __xmlIOErr(domain, code, extra) ((void) 0)
 
 typedef struct xmlNanoHTTPCtxt {
     char *protocol;	/* the protocol name */
@@ -1224,8 +1229,10 @@ xmlNanoHTTPRead(void *ctx, void *dest, int len) {
     }
     if (ctxt->inptr - ctxt->inrptr < len)
         len = ctxt->inptr - ctxt->inrptr;
-    memcpy(dest, ctxt->inrptr, len);
-    ctxt->inrptr += len;
+    if (len > 0) {
+        memcpy(dest, ctxt->inrptr, len);
+        ctxt->inrptr += len;
+    }
     return(len);
 }
 

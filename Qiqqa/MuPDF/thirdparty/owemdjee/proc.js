@@ -10,7 +10,7 @@ let lines = src.split('\n').map((l) => l.trim()).filter((l) => l.length > 0);
 let repos = lines.map((l) => l.replace(/^DIR: \*\*([^*]+)\*\*.*$/, '$1'));
 
 
-console.log({lines, repos})
+//console.log({lines, repos})
 
 
 let content = lines.map((l, i) => {
@@ -23,7 +23,7 @@ let content = lines.map((l, i) => {
 		console.log("README found!", {l, repo_path, f})
 		return {l, repo_path, f};
 	}
-	const exts = [ 'md', 'rst', 'markdown', 'txt', 'html', null ];
+	const exts = [ 'md', 'rst', 'markdown', 'txt', 'html', 'asciidoc', null ];
 	for (let ext of exts) {
 		if (ext == null)
 			ext = '';
@@ -124,7 +124,9 @@ ${ rec.l }
 });
 
 		
-console.log({content})
+//console.log({content})
+
+console.log("**Done**    --> File 'undoc.out.md' has been updated.");
 
 fs.writeFileSync('undoc.out.md', output.join('\n'), 'utf8');
 

@@ -9,9 +9,15 @@
 #include "Document.h"
 #include "Node.h"
 
+#include "../example/monolithic_examples.h"
+
  using std::string;
 
-int main(int argc, char * argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main		gumboquery_test_main
+#endif
+
+int main(void)
 {
 	string page(file_str("test_page.html"));
 

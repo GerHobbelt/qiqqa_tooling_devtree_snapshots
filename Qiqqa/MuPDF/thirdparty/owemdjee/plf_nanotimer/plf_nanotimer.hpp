@@ -20,6 +20,11 @@
 #ifndef PLF_NANOTIMER_H
 #define PLF_NANOTIMER_H
 
+#if !defined(__cplusplus)
+
+#include "plf_nanotimer_c_api.h"
+
+#else
 
 // Compiler-specific defines:
 
@@ -65,12 +70,12 @@
 		clock_serv_t system_clock;
 		mach_timespec_t time1, time2;
 	public:
-		nanotimer()
+		nanotimer() PLF_NOEXCEPT
 		{
 			host_get_clock_service(mach_host_self(), SYSTEM_CLOCK, &system_clock);
 		}
 
-		~nanotimer()
+		~nanotimer() PLF_NOEXCEPT
 		{
 			mach_port_deallocate(mach_task_self(), system_clock);
 		}
@@ -80,20 +85,30 @@
 			clock_get_time(system_clock, &time1);
 		}
 
+		void stop() PLF_NOEXCEPT
+		{
+			time1 = {0};
+		}
+
 		double get_elapsed_ms() PLF_NOEXCEPT
 		{
-			return static_cast<double>(get_elapsed_ns()) / 1000000.0;
+			return get_elapsed_ns() / 1000000.0;
 		}
 
 		double get_elapsed_us() PLF_NOEXCEPT
 		{
-			return static_cast<double>(get_elapsed_ns()) / 1000.0;
+			return get_elapsed_ns() / 1000.0;
 		}
 
 		double get_elapsed_ns() PLF_NOEXCEPT
 		{
 			clock_get_time(system_clock, &time2);
 			return ((1000000000.0 * static_cast<double>(time2.tv_sec - time1.tv_sec)) + static_cast<double>(time2.tv_nsec - time1.tv_nsec));
+		}
+
+		double get_elapsed_sec() PLF_NOEXCEPT
+		{
+			return get_elapsed_ns() / 1000000000.0;
 		}
 	};
 
@@ -120,6 +135,11 @@
 			clock_gettime(CLOCK_MONOTONIC, &time1);
 		}
 
+		void stop() PLF_NOEXCEPT
+		{
+			time1 = {0};
+		}
+
 		double get_elapsed_ms() PLF_NOEXCEPT
 		{
 			return get_elapsed_ns() / 1000000.0;
@@ -134,6 +154,11 @@
 		{
 			clock_gettime(CLOCK_MONOTONIC, &time2);
 			return ((1000000000.0 * static_cast<double>(time2.tv_sec - time1.tv_sec)) + static_cast<double>(time2.tv_nsec - time1.tv_nsec));
+		}
+
+		double get_elapsed_sec() PLF_NOEXCEPT
+		{
+			return get_elapsed_ns() / 1000000000.0;
 		}
 	};
 
@@ -160,8 +185,8 @@
 	class nanotimer
 	{
 	private:
-		LARGE_INTEGER ticks1, ticks2;
-		double frequency;
+		LARGE_INTEGER ticks1{.QuadPart = 0}, ticks2{.QuadPart = 0};
+		double frequency{0.0};
 	public:
 		nanotimer() PLF_NOEXCEPT
 		{
@@ -173,6 +198,11 @@
 		void start() PLF_NOEXCEPT
 		{
 			QueryPerformanceCounter(&ticks1);
+		}
+
+		void stop() PLF_NOEXCEPT
+		{
+			ticks1 = { .QuadPart = 0 };
 		}
 
 		double get_elapsed_ms() PLF_NOEXCEPT
@@ -202,7 +232,7 @@
 
 
 #if defined(__MACH__) || (defined(linux) || defined(__linux__) || defined(__linux)) || (defined(__DragonFly__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)) || defined(_WIN32)
-inline void nanosecond_delay(const double delay_ns)
+inline void nanosecond_delay(const double delay_ns) PLF_NOEXCEPT
 {
 	nanotimer timer;
 	timer.start();
@@ -212,13 +242,13 @@ inline void nanosecond_delay(const double delay_ns)
 }
 
 
-inline void microsecond_delay(const double delay_us)
+inline void microsecond_delay(const double delay_us) PLF_NOEXCEPT
 {
 	nanosecond_delay(delay_us * 1000.0);
 }
 
 
-inline void millisecond_delay(const double delay_ms)
+inline void millisecond_delay(const double delay_ms) PLF_NOEXCEPT
 {
 	nanosecond_delay(delay_ms * 1000000.0);
 }
@@ -228,5 +258,7 @@ inline void millisecond_delay(const double delay_ms)
 #endif
 
 #undef PLF_NOEXCEPT
+
+#endif // defined(__cplusplus)
 
 #endif // PLF_NANOTIMER_H

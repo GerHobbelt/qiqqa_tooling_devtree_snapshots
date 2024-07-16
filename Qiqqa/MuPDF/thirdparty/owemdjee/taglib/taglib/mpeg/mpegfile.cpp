@@ -25,6 +25,7 @@
 
 #include "mpegfile.h"
 
+#include "id3v2framefactory.h"
 #include "tdebug.h"
 #include "tpropertymap.h"
 #include "apefooter.h"
@@ -106,8 +107,7 @@ bool MPEG::File::isSupported(IOStream *stream)
 
   for(unsigned int i = 0; i < buffer.size() - 1; ++i) {
     if(isFrameSync(buffer, i)) {
-      const Header header(&file, headerOffset + i, true);
-      if(header.isValid()) {
+      if(const Header header(&file, headerOffset + i, true); header.isValid()) {
         stream->seek(originalPosition);
         return true;
       }
@@ -122,9 +122,12 @@ bool MPEG::File::isSupported(IOStream *stream)
 // public members
 ////////////////////////////////////////////////////////////////////////////////
 
-MPEG::File::File(FileName file, bool readProperties, Properties::ReadStyle readStyle) :
+MPEG::File::File(FileName file, bool readProperties,
+                 Properties::ReadStyle readStyle,
+                 ID3v2::FrameFactory *frameFactory) :
   TagLib::File(file),
-  d(std::make_unique<FilePrivate>())
+  d(std::make_unique<FilePrivate>(
+    frameFactory ? frameFactory : ID3v2::FrameFactory::instance()))
 {
   if(isOpen())
     read(readProperties, readStyle);
@@ -134,6 +137,17 @@ MPEG::File::File(FileName file, ID3v2::FrameFactory *frameFactory,
                  bool readProperties, Properties::ReadStyle readStyle) :
   TagLib::File(file),
   d(std::make_unique<FilePrivate>(frameFactory))
+{
+  if(isOpen())
+    read(readProperties, readStyle);
+}
+
+MPEG::File::File(IOStream *stream, bool readProperties,
+                 Properties::ReadStyle readStyle,
+                 ID3v2::FrameFactory *frameFactory) :
+  TagLib::File(stream),
+  d(std::make_unique<FilePrivate>(
+    frameFactory ? frameFactory : ID3v2::FrameFactory::instance()))
 {
   if(isOpen())
     read(readProperties, readStyle);
@@ -224,10 +238,10 @@ bool MPEG::File::save(int tags, StripTags strip, ID3v2::Version version, Duplica
       insert(data, d->ID3v2Location, d->ID3v2OriginalSize);
 
       if(d->APELocation >= 0)
-        d->APELocation += (static_cast<long>(data.size()) - d->ID3v2OriginalSize);
+        d->APELocation += static_cast<long>(data.size()) - d->ID3v2OriginalSize;
 
       if(d->ID3v1Location >= 0)
-        d->ID3v1Location += (static_cast<long>(data.size()) - d->ID3v2OriginalSize);
+        d->ID3v1Location += static_cast<long>(data.size()) - d->ID3v2OriginalSize;
 
       d->ID3v2OriginalSize = data.size();
     }
@@ -280,7 +294,7 @@ bool MPEG::File::save(int tags, StripTags strip, ID3v2::Version version, Duplica
       insert(data, d->APELocation, d->APEOriginalSize);
 
       if(d->ID3v1Location >= 0)
-        d->ID3v1Location += (static_cast<long>(data.size()) - d->APEOriginalSize);
+        d->ID3v1Location += static_cast<long>(data.size()) - d->APEOriginalSize;
 
       d->APEOriginalSize = data.size();
     }
@@ -297,7 +311,7 @@ bool MPEG::File::save(int tags, StripTags strip, ID3v2::Version version, Duplica
 
 ID3v2::Tag *MPEG::File::ID3v2Tag(bool create)
 {
-  return d->tag.access<ID3v2::Tag>(ID3v2Index, create);
+  return d->tag.access<ID3v2::Tag>(ID3v2Index, create, d->ID3v2FrameFactory);
 }
 
 ID3v1::Tag *MPEG::File::ID3v1Tag(bool create)
@@ -372,8 +386,7 @@ offset_t MPEG::File::nextFrameOffset(offset_t position)
       frameSyncBytes[0] = frameSyncBytes[1];
       frameSyncBytes[1] = buffer[i];
       if(isFrameSync(frameSyncBytes)) {
-        const Header header(this, position + i - 1, true);
-        if(header.isValid())
+        if(const Header header(this, position + i - 1, true); header.isValid())
           return position + i - 1;
       }
     }
@@ -397,8 +410,7 @@ offset_t MPEG::File::previousFrameOffset(offset_t position)
       frameSyncBytes[1] = frameSyncBytes[0];
       frameSyncBytes[0] = buffer[i];
       if(isFrameSync(frameSyncBytes)) {
-        const Header header(this, position + i, true);
-        if(header.isValid())
+        if(const Header header(this, position + i, true); header.isValid())
           return position + i + header.frameLength();
       }
     }
@@ -433,17 +445,17 @@ offset_t MPEG::File::lastFrameOffset()
 
 bool MPEG::File::hasID3v1Tag() const
 {
-  return (d->ID3v1Location >= 0);
+  return d->ID3v1Location >= 0;
 }
 
 bool MPEG::File::hasID3v2Tag() const
 {
-  return (d->ID3v2Location >= 0);
+  return d->ID3v2Location >= 0;
 }
 
 bool MPEG::File::hasAPETag() const
 {
-  return (d->APELocation >= 0);
+  return d->APELocation >= 0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -479,7 +491,7 @@ void MPEG::File::read(bool readProperties, Properties::ReadStyle readStyle)
   }
 
   if(readProperties)
-    d->properties = std::make_unique<Properties>(this);
+    d->properties = std::make_unique<Properties>(this, readStyle);
 
   // Make sure that we have our default tag types available.
 
@@ -503,8 +515,7 @@ offset_t MPEG::File::findID3v2(Properties::ReadStyle readStyle)
   if(readStyle == Properties::Fast)
     return -1;
 
-  const Header firstHeader(this, 0, true);
-  if(firstHeader.isValid())
+  if(const Header firstHeader(this, 0, true); firstHeader.isValid())
     return -1;
 
   // Look for an ID3v2 tag until reaching the first valid MPEG frame.
@@ -523,8 +534,7 @@ offset_t MPEG::File::findID3v2(Properties::ReadStyle readStyle)
       frameSyncBytes[0] = frameSyncBytes[1];
       frameSyncBytes[1] = buffer[i];
       if(isFrameSync(frameSyncBytes)) {
-        const Header header(this, position + i - 1, true);
-        if(header.isValid())
+        if(const Header header(this, position + i - 1, true); header.isValid())
           return -1;
       }
 

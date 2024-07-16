@@ -10,12 +10,15 @@ See-also:
   - curl_multi_perform (3)
   - curl_multi_timeout (3)
   - curl_multi_wait (3)
+  - curl_multi_waitfds (3)
   - select (2)
+Protocol:
+  - All
 ---
 
 # NAME
 
-curl_multi_fdset - extracts file descriptor information from a multi handle
+curl_multi_fdset - extract file descriptor information from a multi handle
 
 # SYNOPSIS
 

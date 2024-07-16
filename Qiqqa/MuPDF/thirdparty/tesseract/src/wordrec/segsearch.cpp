@@ -17,9 +17,7 @@
 ///////////////////////////////////////////////////////////////////////
 
 // Include automatically generated configuration file if running autoconf.
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #if !DISABLED_LEGACY_ENGINE
 
@@ -30,9 +28,9 @@
 #include "lm_state.h"       // for BestChoiceBundle, ViterbiStateEntry
 #include "matrix.h"         // for MATRIX_COORD, MATRIX
 #include "pageres.h"        // for WERD_RES
-#include "params.h"         // for BoolParam, IntParam, DoubleParam
+#include <tesseract/params.h>         // for BoolParam, IntParam, DoubleParam
 #include "ratngs.h"         // for BLOB_CHOICE_LIST, BLOB_CHOICE_IT
-#include "tprintf.h"        // for tprintf
+#include <tesseract/tprintf.h>        // for tprintf
 #include "wordrec.h"        // for Wordrec, SegSearchPending (ptr only)
 
 namespace tesseract {
@@ -53,7 +51,7 @@ void Wordrec::SegSearch(WERD_RES *word_res, BestChoiceBundle *best_choice_bundle
                           &pain_points, &pending);
       InitialSegSearch(word_res, &pain_points, &pending, best_choice_bundle, blamer_bundle);
     }
-    if (chop_debug) {
+    if (chop_debug > 0) {
       SEAM::PrintSeams("Final seam list:", word_res->seam_array);
     }
 

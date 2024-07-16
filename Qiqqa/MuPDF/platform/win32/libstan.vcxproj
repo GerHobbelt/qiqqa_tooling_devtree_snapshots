@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libstan</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FFDFB5C5}</ProjectGuid>
-    <RootNamespace>libstan</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -239,6 +237,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/analyze/mcmc/compute_potential_scale_reduction_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/analyze/mcmc/split_chains_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/callbacks/interrupt_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/callbacks/json_writer_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/callbacks/logger_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/callbacks/stream_logger_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/callbacks/stream_writer_test.cpp" />
@@ -248,7 +247,6 @@
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/expressions/simple_udf_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/array_var_context_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/chained_var_context_test.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/cmd_line_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/deserializer_free_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/deserializer_stdvector_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/deserializer_test.cpp" />
@@ -263,14 +261,11 @@
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/json/json_ill_formed_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/json/json_parser_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/random_var_context_test.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/reader_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/serializer_stdvector_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/serializer_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/serializer_varmat_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/stan_csv_reader_test.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/util_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/validate_zero_buf_test.cpp" />
-    <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/io/writer_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/mcmc/base_adapter_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/mcmc/chains_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/mcmc/covar_adaptation_test.cpp" />
@@ -303,6 +298,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/mcmc/stepsize_adaptation_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/mcmc/var_adaptation_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/mcmc/windowed_adaptation_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/model/array_functions_roundtrip_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/model/finite_diff_grad_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/model/grad_hess_log_prob_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/model/grad_tr_mat_times_hessian_test.cpp" />
@@ -310,10 +306,12 @@
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/model/gradient_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/model/hessian_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/model/hessian_times_vector_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/model/indexing/assign_cl_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/model/indexing/assign_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/model/indexing/assign_varmat_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/model/indexing/deep_copy_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/model/indexing/index_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/model/indexing/rvalue_cl_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/model/indexing/rvalue_index_size_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/model/indexing/rvalue_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/model/indexing/rvalue_varmat_test.cpp" />
@@ -348,18 +346,23 @@
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/pathfinder/normal_glm_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/pathfinder/psis_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/defaults_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/fixed_param_parallel_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/fixed_param_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_nuts_dense_e_adapt_parallel_match_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_nuts_dense_e_adapt_parallel_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_nuts_dense_e_adapt_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_nuts_dense_e_parallel_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_nuts_dense_e_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_nuts_dense_inv_metric_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_nuts_diag_e_adapt_parallel_match_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_nuts_diag_e_adapt_parallel_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_nuts_diag_e_adapt_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_nuts_diag_e_parallel_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_nuts_diag_e_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_nuts_diag_inv_metric_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_nuts_unit_e_adapt_parallel_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_nuts_unit_e_adapt_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_nuts_unit_e_parallel_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_nuts_unit_e_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_static_dense_e_adapt_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/hmc_static_dense_e_test.cpp" />
@@ -371,6 +374,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/standalone_gqs_2390_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/standalone_gqs_bad_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/standalone_gqs_multidim_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/standalone_gqs_parallel_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/standalone_gqs_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/sample/standalone_gqs_zero_sized_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/stan/src/test/unit/services/util/create_rng_test.cpp" />
@@ -441,34 +445,31 @@
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/analyze/mcmc/compute_potential_scale_reduction.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/analyze/mcmc/split_chains.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/callbacks/interrupt.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/callbacks/json_writer.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/callbacks/logger.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/callbacks/stream_logger.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/callbacks/stream_writer.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/callbacks/structured_writer.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/callbacks/tee_writer.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/callbacks/unique_stream_writer.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/callbacks/writer.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/array_var_context.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/chained_var_context.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/cmd_line.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/deserializer.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/dump.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/empty_var_context.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/ends_with.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/is_whitespace.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/json/json_data.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/json/json_data_handler.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/json/json_error.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/json/json_handler.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/json/rapidjson_parser.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/random_var_context.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/reader.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/serializer.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/stan_csv_reader.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/util.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/validate_dims.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/validate_zero_buf.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/var_context.hpp" />
-    <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/io/writer.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/lang/rethrow_located.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/mcmc/base_adaptation.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/mcmc/base_adapter.hpp" />
@@ -551,11 +552,13 @@
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/model/indexing.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/model/indexing/access_helpers.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/model/indexing/assign.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/model/indexing/assign_cl.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/model/indexing/assign_varmat.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/model/indexing/deep_copy.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/model/indexing/index.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/model/indexing/rvalue.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/model/indexing/rvalue_at.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/model/indexing/rvalue_cl.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/model/indexing/rvalue_index_size.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/model/indexing/rvalue_varmat.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/model/log_prob_grad.hpp" />
@@ -604,6 +607,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/services/util/create_rng.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/services/util/create_unit_e_dense_inv_metric.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/services/util/create_unit_e_diag_inv_metric.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/services/util/duration_diff.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/services/util/experimental_message.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/services/util/generate_transitions.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/stan/services/util/gq_writer.hpp" />
@@ -625,6 +629,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/test/unit/io/json/util.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/test/unit/mcmc/hmc/mock_hmc.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/test/unit/model/indexing/util.hpp" />
+    <ClInclude Include="../../thirdparty/owemdjee/stan/src/test/unit/model/indexing/util_cl.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/test/unit/model/test_model.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/test/unit/services/check_adaptation.hpp" />
     <ClInclude Include="../../thirdparty/owemdjee/stan/src/test/unit/services/instrumented_callbacks.hpp" />
@@ -650,20 +655,21 @@
     <Text Include="../../thirdparty/owemdjee/stan/src/test/test-models/good-standalone-functions/integrate.stanfuncs" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/test-models/good-standalone-functions/lgamma.stanfuncs" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/test-models/good-standalone-functions/special_functions.stanfuncs" />
-    <Text Include="../../thirdparty/owemdjee/stan/src/test/test-models/good/services/bernoulli.data.R" />
+    <Text Include="../../thirdparty/owemdjee/stan/src/test/test-models/good/model/parameters.inits.json" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/test-models/good/services/bernoulli.data.json" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/test-models/good/services/bernoulli_fit.csv" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/test-models/good/services/bug_2390_fitted_params.csv" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/test-models/good/services/gq_test_multidim_fit.csv" />
-    <Text Include="../../thirdparty/owemdjee/stan/src/test/test-models/good/variational/gradient_warn.data.R" />
-    <Text Include="../../thirdparty/owemdjee/stan/src/test/test-models/good/variational/hier_logistic.data.R" />
-    <Text Include="../../thirdparty/owemdjee/stan/src/test/test-models/performance/logistic.data.R" />
+    <Text Include="../../thirdparty/owemdjee/stan/src/test/test-models/good/variational/gradient_warn.data.json" />
+    <Text Include="../../thirdparty/owemdjee/stan/src/test/test-models/good/variational/hier_logistic.data.json" />
+    <Text Include="../../thirdparty/owemdjee/stan/src/test/test-models/performance/logistic.data.json" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/unit/analyze/mcmc/ar1.csv" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/unit/io/test_csv_files/adaptation1.csv" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/unit/io/test_csv_files/blocker.0.csv" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/unit/io/test_csv_files/eight_schools.csv" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/unit/io/test_csv_files/header1.csv" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/unit/io/test_csv_files/header2.csv" />
+    <Text Include="../../thirdparty/owemdjee/stan/src/test/unit/io/test_csv_files/header3.csv" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/unit/io/test_csv_files/metadata1.csv" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/unit/io/test_csv_files/metadata3.csv" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/unit/io/test_csv_files/samples1.csv" />
@@ -692,7 +698,7 @@
     <Text Include="../../thirdparty/owemdjee/stan/src/test/unit/mcmc/test_csv_files/blocker.2.csv" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/unit/mcmc/test_csv_files/epil.1.csv" />
     <Text Include="../../thirdparty/owemdjee/stan/src/test/unit/mcmc/test_csv_files/epil.2.csv" />
-    <Text Include="../../thirdparty/owemdjee/stan/src/test/unit/services/pathfinder/glm_test.data.R" />
+    <Text Include="../../thirdparty/owemdjee/stan/src/test/unit/services/pathfinder/normal_glm_test.json" />
   </ItemGroup>
   <ImportGroup Label="PropertySheets" >
     <Import Project="$(SolutionDir)\common-project-ultimate-override.props" Label="SolutionWideSettingsOverride" />

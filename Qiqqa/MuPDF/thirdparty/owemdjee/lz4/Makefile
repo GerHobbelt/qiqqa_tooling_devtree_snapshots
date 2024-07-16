@@ -1,6 +1,6 @@
 # ################################################################
 # LZ4 - Makefile
-# Copyright (C) Yann Collet 2011-2020
+# Copyright (C) Yann Collet 2011-2023
 # All rights reserved.
 #
 # BSD license
@@ -61,7 +61,7 @@ lz4 : liblz4.a
 lz4-release : lib-release
 lz4 lz4-release :
 	$(MAKE) -C $(PRGDIR) $@
-	cp $(PRGDIR)/lz4$(EXT) .
+	$(LN_SF) $(PRGDIR)/lz4$(EXT) .
 
 .PHONY: examples
 examples: liblz4.a
@@ -181,9 +181,9 @@ cppcheck:
 platformTest: clean
 	@echo "\n ---- test lz4 with $(CC) compiler ----"
 	$(CC) -v
-	CFLAGS="-O3 -Werror"         $(MAKE) -C $(LZ4DIR) all
-	CFLAGS="-O3 -Werror -static" $(MAKE) -C $(PRGDIR) all
-	CFLAGS="-O3 -Werror -static" $(MAKE) -C $(TESTDIR) all
+	CFLAGS="$(CFLAGS) -O3 -Werror"         $(MAKE) -C $(LZ4DIR) all
+	CFLAGS="$(CFLAGS) -O3 -Werror -static" $(MAKE) -C $(PRGDIR) all
+	CFLAGS="$(CFLAGS) -O3 -Werror -static" $(MAKE) -C $(TESTDIR) all
 	$(MAKE) -C $(TESTDIR) test-platform
 
 .PHONY: versionsTest

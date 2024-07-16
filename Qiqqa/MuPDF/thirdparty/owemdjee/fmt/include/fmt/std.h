@@ -8,17 +8,20 @@
 #ifndef FMT_STD_H_
 #define FMT_STD_H_
 
-#include <atomic>
-#include <bitset>
-#include <cstdlib>
-#include <exception>
-#include <memory>
-#include <thread>
-#include <type_traits>
-#include <typeinfo>
-#include <utility>
-#include <vector>
-#include <filesystem>
+#ifndef FMT_IMPORT_STD
+#  include <atomic>
+#  include <bitset>
+#  include <complex>
+#  include <cstdlib>
+#  include <exception>
+#  include <memory>
+#  include <thread>
+#  include <type_traits>
+#  include <typeinfo>
+#  include <utility>
+#  include <vector>
+#  include <filesystem>
+#endif
 
 #include "format.h"
 #include "ostream.h"
@@ -26,25 +29,28 @@
 #if FMT_HAS_INCLUDE(<version>)
 #  include <version>
 #endif
+
+#ifndef FMT_IMPORT_STD
 // Checking FMT_CPLUSPLUS for warning suppression in MSVC.
-#if FMT_CPLUSPLUS >= 201703L
-#  if FMT_HAS_INCLUDE(<filesystem>)
-#    include <filesystem>
+#  if FMT_CPLUSPLUS >= 201703L
+#    if FMT_HAS_INCLUDE(<filesystem>)
+#      include <filesystem>
+#    endif
+#    if FMT_HAS_INCLUDE(<variant>)
+#      include <variant>
+#    endif
+#    if FMT_HAS_INCLUDE(<optional>)
+#      include <optional>
+#    endif
 #  endif
-#  if FMT_HAS_INCLUDE(<variant>)
-#    include <variant>
-#  endif
-#  if FMT_HAS_INCLUDE(<optional>)
-#    include <optional>
-#  endif
-#endif
 
-#if FMT_HAS_INCLUDE(<expected>) && FMT_CPLUSPLUS > 202002L
-#  include <expected>
-#endif
+#  if FMT_HAS_INCLUDE(<expected>) && FMT_CPLUSPLUS > 202002L
+#    include <expected>
+#  endif
 
-#if FMT_CPLUSPLUS > 201703L && FMT_HAS_INCLUDE(<source_location>)
-#  include <source_location>
+#  if FMT_CPLUSPLUS > 201703L && FMT_HAS_INCLUDE(<source_location>)
+#    include <source_location>
+#  endif
 #endif
 
 // GCC 4 does not support FMT_HAS_INCLUDE.
@@ -54,17 +60,6 @@
 // abi::__cxa_demangle().
 #  ifndef __GABIXX_CXXABI_H__
 #    define FMT_HAS_ABI_CXA_DEMANGLE
-#  endif
-#endif
-
-// Check if typeid is available.
-#ifndef FMT_USE_TYPEID
-// __RTTI is for EDG compilers. _CPPRTTI is for MSVC.
-#  if defined(__GXX_RTTI) || FMT_HAS_FEATURE(cxx_rtti) || defined(_CPPRTTI) || \
-      defined(__INTEL_RTTI__) || defined(__RTTI)
-#    define FMT_USE_TYPEID 1
-#  else
-#    define FMT_USE_TYPEID 0
 #  endif
 #endif
 
@@ -149,11 +144,9 @@ template <typename Char> struct formatter<std::filesystem::path, Char> {
   template <typename FormatContext>
   auto format(const std::filesystem::path& p, FormatContext& ctx) const {
     auto specs = specs_;
-#  ifdef _WIN32
-    auto path_string = !path_type_ ? p.native() : p.generic_wstring();
-#  else
-    auto path_string = !path_type_ ? p.native() : p.generic_string();
-#  endif
+    auto path_string =
+        !path_type_ ? p.native()
+                    : p.generic_string<std::filesystem::path::value_type>();
 
     detail::handle_dynamic_spec<detail::width_checker>(specs.width, width_ref_,
                                                        ctx);
@@ -440,7 +433,7 @@ struct formatter<
     if (it == end || *it == '}') return it;
     if (*it == 't') {
       ++it;
-      with_typename_ = FMT_USE_TYPEID != 0;
+      with_typename_ = FMT_USE_RTTI != 0;
     }
     return it;
   }
@@ -452,7 +445,7 @@ struct formatter<
     if (!with_typename_)
       return detail::write_bytes<Char>(out, string_view(ex.what()));
 
-#if FMT_USE_TYPEID
+#if FMT_USE_RTTI
     const std::type_info& ti = typeid(ex);
 #  ifdef FMT_HAS_ABI_CXA_DEMANGLE
     int status = 0;
@@ -585,6 +578,37 @@ struct formatter<std::atomic_flag, Char> : formatter<bool, Char> {
   }
 };
 #endif  // __cpp_lib_atomic_flag_test
+
+FMT_EXPORT
+template <typename F, typename Char>
+struct formatter<std::complex<F>, Char> : nested_formatter<F, Char> {
+ private:
+  // Functor because C++11 doesn't support generic lambdas.
+  struct writer {
+    const formatter<std::complex<F>, Char>* f;
+    const std::complex<F>& c;
+
+    template <typename OutputIt>
+    FMT_CONSTEXPR auto operator()(OutputIt out) -> OutputIt {
+      if (c.real() != 0) {
+        auto format_full = detail::string_literal<Char, '(', '{', '}', '+', '{',
+                                                  '}', 'i', ')'>{};
+        return fmt::format_to(out, basic_string_view<Char>(format_full),
+                              f->nested(c.real()), f->nested(c.imag()));
+      }
+      auto format_imag = detail::string_literal<Char, '{', '}', 'i'>{};
+      return fmt::format_to(out, basic_string_view<Char>(format_imag),
+                            f->nested(c.imag()));
+    }
+  };
+
+ public:
+  template <typename FormatContext>
+  auto format(const std::complex<F>& c, FormatContext& ctx) const
+      -> decltype(ctx.out()) {
+    return this->write_padded(ctx, writer{this, c});
+  }
+};
 
 FMT_END_NAMESPACE
 #endif  // FMT_STD_H_

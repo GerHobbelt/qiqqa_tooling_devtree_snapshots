@@ -1,4 +1,4 @@
-.. Copyright (c) 2016-2023 Keith O'Hara
+.. Copyright (c) 2016-2024 Keith O'Hara
 
    Distributed under the terms of the Apache License, Version 2.0.
 
@@ -9,6 +9,18 @@ Basic functions
 
 .. _abs-function-reference:
 .. doxygenfunction:: abs(const T)
+   :project: gcem
+
+.. _fabs-function-reference:
+.. doxygenfunction:: fabs(const T)
+   :project: gcem
+
+.. _fabsf-func-ref:
+.. doxygenfunction:: fabsf(const T)
+   :project: gcem
+
+.. _fabsl-func-ref:
+.. doxygenfunction:: fabsl(const T)
    :project: gcem
 
 .. _ceil-function-reference:

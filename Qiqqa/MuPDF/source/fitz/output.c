@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -611,7 +611,7 @@ file_as_stream(fz_context *ctx, fz_output* out)
 	FILE *file = out->state;
 	ASSERT(file);
 	fflush(file);
-	return fz_open_file_ptr_no_close(ctx, file);
+	return fz_open_file_ptr_no_close(ctx, file, out->filepath, 0 /* del_on_drop TODO? */);
 }
 
 static int file_truncate(fz_context* ctx, fz_output* out)
@@ -930,6 +930,17 @@ fz_new_output_with_path(fz_context *ctx, const char *filename, int append)
 	if (!file)
 		fz_throw(ctx, FZ_ERROR_SYSTEM, "cannot open file '%s': %s", filename, fz_ctx_pop_system_errormsg(ctx));
 
+	return fz_new_output_with_file_ptr(ctx, file, filename);
+}
+
+fz_output *
+fz_new_output_with_file_ptr(fz_context *ctx, FILE *file, const char* filename)
+{
+	fz_output *out;
+
+	if (!file)
+		return fz_new_output(ctx, 0, NULL, null_write, NULL, NULL);
+
 	setvbuf(file, NULL, _IONBF, 0); /* we do our own buffering */
 	out = fz_new_output(ctx, 8192, file, file_write, file_close, file_drop);
 	out->seek = file_seek;
@@ -970,12 +981,18 @@ buffer_drop(fz_context *ctx, fz_output* out)
 	fz_drop_buffer(ctx, buffer);
 }
 
+static void
+buffer_reset(fz_context *ctx, void *opaque)
+{
+}
+
 fz_output *
 fz_new_output_with_buffer(fz_context *ctx, fz_buffer *buf)
 {
 	fz_output *out = fz_new_output(ctx, 0, fz_keep_buffer(ctx, buf), buffer_write, NULL, buffer_drop);
 	out->seek = buffer_seek;
 	out->tell = buffer_tell;
+	out->reset = buffer_reset;
 	return out;
 }
 
@@ -985,9 +1002,9 @@ fz_close_output(fz_context *ctx, fz_output *out)
 	if (out == NULL)
 		return;
 	fz_flush_output(ctx, out);
-	if (out->close)
+	if (!out->closed && out->close)
 		out->close(ctx, out);
-	out->close = NULL;
+	out->closed = 1;
 }
 
 void
@@ -995,7 +1012,7 @@ fz_drop_output(fz_context *ctx, fz_output *out)
 {
 	if (out)
 	{
-		if (out->close)
+		if (!out->closed)
 			fz_warn(ctx, "dropping unclosed output");
 
 #ifndef DISABLE_MUTHREADS
@@ -1036,6 +1053,18 @@ fz_drop_output(fz_context *ctx, fz_output *out)
 			fz_free(ctx, out);
 		}
 	}
+}
+
+void
+fz_reset_output(fz_context *ctx, fz_output *out)
+{
+	if (!out)
+		return;
+	if (out->reset == NULL)
+		fz_throw(ctx, FZ_ERROR_GENERIC, "Cannot reset this output");
+
+	out->reset(ctx, out->state);
+	out->closed = 0;
 }
 
 void
@@ -1641,4 +1670,16 @@ void fz_write_bits_sync(fz_context *ctx, fz_output *out)
 	if (out->buffered == 0)
 		return;
 	fz_write_bits(ctx, out, 0, 8 - out->buffered);
+}
+
+void
+fz_write_stream(fz_context *ctx, fz_output *out, fz_stream *in)
+{
+	size_t z;
+
+	while ((z = fz_available(ctx, in, 4096)) != 0)
+	{
+		fz_write_data(ctx, out, in->rp, z);
+		in->rp += z;
+	}
 }

@@ -92,7 +92,6 @@ option(GRAPHICS_DISABLED "Disable graphics (ScrollView)" OFF)
 option(DISABLED_LEGACY_ENGINE "Disable the legacy OCR engine" OFF)
 option(ENABLE_LTO "Enable link-time optimization" OFF)
 option(FAST_FLOAT "Enable float for LSTM" ON)
-option(ENABLE_OPENCL "Enable unsupported experimental OpenCL support" OFF)
 option(ENABLE_NATIVE
        "Enable optimization for host CPU (could break HW compatibility)" OFF)
 # see
@@ -247,7 +246,7 @@ if(NOT DISABLE_OPTIMIZATION AND CMAKE_SYSTEM_PROCESSOR MATCHES "x86|x86_64|AMD64
     endif(OPENMP_SIMD)
   endif(MSVC)
 
-elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "arm64|aarch64.*|AARCH64.*")
+elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "arm64|aarch64.*|AARCH64.*|aarch64")
 
   set(HAVE_AVX FALSE)
   set(HAVE_AVX2 FALSE)
@@ -255,6 +254,7 @@ elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "arm64|aarch64.*|AARCH64.*")
   set(HAVE_FMA FALSE)
   set(HAVE_SSE4_1 FALSE)
   set(HAVE_NEON TRUE)
+  add_compile_definitions(__ARM_NEON=1)
 
 elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "arm.*")
 
@@ -465,18 +465,6 @@ else()
   endif(DISABLE_CURL)
 endif()
 
-if(ENABLE_OPENCL)
-  find_package(OpenCL)
-  if(OpenCL_FOUND)
-    include_directories(${OpenCL_INCLUDE_DIRS})
-    message(STATUS "OpenCL_INCLUDE_DIRS: ${OpenCL_INCLUDE_DIRS}")
-    message(STATUS "OpenCL_LIBRARY: ${OpenCL_LIBRARY}")
-    set(USE_OPENCL ON)
-  else()
-    set(USE_OPENCL OFF)
-  endif(OpenCL_FOUND)
-endif(ENABLE_OPENCL)
-
 # ##############################################################################
 #
 # configure
@@ -568,11 +556,6 @@ message(STATUS "Disable the legacy OCR engine [DISABLED_LEGACY_ENGINE]: "
 message(STATUS "Build training tools [BUILD_TRAINING_TOOLS]: "
                "${BUILD_TRAINING_TOOLS}")
 message(STATUS "Build tests [BUILD_TESTS]: ${BUILD_TESTS}")
-if(ENABLE_OPENCL)
-  message(
-    STATUS
-      "Enable unsupported experimental OpenCL [ENABLE_OPENCL]: ${USE_OPENCL}")
-endif(ENABLE_OPENCL)
 message(STATUS "Use system ICU Library [USE_SYSTEM_ICU]: ${USE_SYSTEM_ICU}")
 message(
   STATUS "Install tesseract configs [INSTALL_CONFIGS]: ${INSTALL_CONFIGS}")
@@ -611,7 +594,6 @@ file(
   src/cutil/*.cpp
   src/dict/*.cpp
   src/lstm/*.cpp
-  src/opencl/*.cpp
   src/textord/*.cpp
   src/viewer/*.cpp
   src/wordrec/*.cpp)
@@ -752,7 +734,6 @@ file(
   src/cutil/*.h
   src/dict/*.h
   src/lstm/*.h
-  src/opencl/*.h
   src/textord/*.h
   src/viewer/*.h
   src/wordrec/*.h)
@@ -763,6 +744,7 @@ set(TESSERACT_SRC
     src/api/capi.cpp
     src/api/renderer.cpp
     src/api/altorenderer.cpp
+    src/api/pagerenderer.cpp
     src/api/hocrrenderer.cpp
     src/api/lstmboxrenderer.cpp
     src/api/pdfrenderer.cpp
@@ -787,6 +769,8 @@ set(TESSERACT_CONFIGS
     tessdata/configs/lstmbox
     tessdata/configs/lstmdebug
     tessdata/configs/makebox
+    tessdata/configs/page
+    tessdata/configs/page_poly
     tessdata/configs/pdf
     tessdata/configs/quiet
     tessdata/configs/rebox
@@ -820,7 +804,6 @@ target_include_directories(
          $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/cutil>
          $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/dict>
          $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/lstm>
-         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/opencl>
          $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/textord>
          $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/viewer>
          $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/wordrec>
@@ -835,9 +818,6 @@ endif()
 target_link_libraries(libtesseract PRIVATE ${LIB_Ws2_32} ${LIB_pthread})
 if(OpenMP_CXX_FOUND)
   target_link_libraries(libtesseract PUBLIC OpenMP::OpenMP_CXX)
-endif()
-if(OpenCL_FOUND)
-  target_link_libraries(libtesseract PUBLIC OpenCL::OpenCL)
 endif()
 if(LibArchive_FOUND)
   target_link_libraries(libtesseract PUBLIC ${LibArchive_LIBRARIES})
@@ -960,12 +940,19 @@ install(
   DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig
   RENAME tesseract.pc)
 install(TARGETS tesseract DESTINATION bin)
+if (MSVC)
+  install(FILES $<TARGET_PDB_FILE:${PROJECT_NAME}> DESTINATION bin OPTIONAL)
+endif()
 install(
   TARGETS libtesseract
   EXPORT TesseractTargets
   RUNTIME DESTINATION bin
+  RUNTIME DESTINATION bin
   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
+if (MSVC AND BUILD_SHARED_LIBS)
+  install(FILES $<TARGET_PDB_FILE:libtesseract> DESTINATION bin OPTIONAL)
+endif()
 install(
   EXPORT TesseractTargets
   NAMESPACE Tesseract::

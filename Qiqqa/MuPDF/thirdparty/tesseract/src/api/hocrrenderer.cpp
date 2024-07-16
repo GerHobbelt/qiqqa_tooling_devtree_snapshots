@@ -17,13 +17,15 @@
  *
  **********************************************************************/
 
-#include <tesseract/debugheap.h>
+#include <tesseract/preparation.h> // compiler config, etc.
+
 #include <tesseract/baseapi.h> // for TessBaseAPI
 #include <locale>              // for std::locale::classic
 #include <memory>              // for std::unique_ptr
 #include <sstream>             // for std::stringstream
 
 #include <tesseract/renderer.h>
+#include "helpers.h"        // for copy_string
 #include "tesseractclass.h" // for Tesseract
 
 namespace tesseract {
@@ -192,8 +194,8 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
         res_it->Next(RIL_BLOCK);
         continue;
       case PT_NOISE:
-        tprintError("TODO: Please report image which triggers the noise case.\n");
-        ASSERT_HOST(false);
+        ASSERT_HOST_MSG(false, "TODO: Please report image which triggers the noise case.\n");
+        break;
       default:
         break;
     }
@@ -240,10 +242,9 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
         case PT_FLOWING_IMAGE:
         case PT_HEADING_IMAGE:
         case PT_PULLOUT_IMAGE:
-          if (tesseract_->hocr_images) {
-            hocr_str << "ocr_photo";
-          }
-          ASSERT_HOST(false);
+            if (tesseract_->hocr_images) {
+              hocr_str << "ocr_photo";
+            }
           break;
         default:
           hocr_str << "ocr_line";
@@ -466,10 +467,7 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
 word_end:
   hocr_str << "  </div>\n";
 
-  const std::string &text = hocr_str.str();
-  char* result = new char[text.length() + 1];
-  strcpy(result, text.c_str());
-  return result;
+  return copy_string(hocr_str.str());
 }
 
 /**********************************************************************

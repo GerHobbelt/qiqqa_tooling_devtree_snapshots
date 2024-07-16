@@ -7,6 +7,8 @@ Source: libcurl
 See-also:
   - CURLOPT_TIMECONDITION (3)
   - CURLOPT_TIMEVALUE_LARGE (3)
+Protocol:
+  - HTTP
 ---
 
 # NAME
@@ -27,17 +29,13 @@ Pass a long *val* as parameter. This should be the time counted as seconds
 since 1 Jan 1970, and the time is used in a condition as specified with
 CURLOPT_TIMECONDITION(3).
 
-On systems with 32 bit 'long' variables (such as Windows), this option cannot
+On systems with 32-bit 'long' variables (such as Windows), this option cannot
 set dates beyond the year 2038. Consider CURLOPT_TIMEVALUE_LARGE(3)
 instead.
 
 # DEFAULT
 
 0
-
-# PROTOCOLS
-
-HTTP, FTP, RTSP, and FILE
 
 # EXAMPLE
 

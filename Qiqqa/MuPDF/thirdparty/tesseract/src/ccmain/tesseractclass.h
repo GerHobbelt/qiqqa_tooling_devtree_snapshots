@@ -25,9 +25,7 @@
 #ifndef TESSERACT_CCMAIN_TESSERACTCLASS_H_
 #define TESSERACT_CCMAIN_TESSERACTCLASS_H_
 
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h" // DISABLED_LEGACY_ENGINE
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include "control.h"               // for ACCEPTABLE_WERD_TYPE
 #include "debugpixa.h"             // for DebugPixa
@@ -37,7 +35,7 @@
 #endif
 #include "genericvector.h"   // for PointerVector
 #include "pageres.h"         // for WERD_RES (ptr only), PAGE_RES (pt...
-#include "params.h"          // for BOOL_VAR_H, BoolParam, DoubleParam
+#include <tesseract/params.h>          // for BOOL_VAR_H, BoolParam, DoubleParam
 #include "points.h"          // for FCOORD
 #include "ratngs.h"          // for ScriptPos, WERD_CHOICE (ptr only)
 #include "tessdatamanager.h" // for TessdataManager
@@ -55,7 +53,6 @@
 
 #include <cstdint> // for int16_t, int32_t, uint16_t
 #include <cstdio>  // for FILE
-#include <map> 
 
 namespace tesseract {
 
@@ -195,19 +192,11 @@ using WordRecognizer = void (Tesseract::*)(const WordData &, WERD_RES **,
 
 class TESS_API Tesseract: public Wordrec {
 public:
-  Tesseract(Tesseract *parent = nullptr, AutoSupressDatum *LogReportingHoldoffMarkerRef = nullptr);
+  Tesseract(Tesseract *parent = nullptr);
   virtual ~Tesseract() override;
 
-protected:
-  AutoSupressDatum &reporting_holdoff_;
-
-public:
-  AutoSupressDatum &GetLogReportingHoldoffMarkerRef() {
-    return reporting_holdoff_;
-  };
-
   // Return appropriate dictionary
-  Dict &getDict() override;
+  virtual Dict &getDict() override;
 
   // Clear as much used memory as possible without resetting the adaptive
   // classifier or losing any other classifier data.
@@ -216,6 +205,33 @@ public:
   void ResetAdaptiveClassifier();
   // Clear the document dictionary for this and all subclassifiers.
   void ResetDocumentDictionary();
+
+  /**
+   * Clear and free up everything inside, returning the instance to a state
+   * equivalent to having just being freshly constructed, with one important
+   * distinction:
+   *
+   * - WipeSqueakyCleanForReUse() will *not* destroy any diagnostics/trace data
+   *   cached in the running instance: the goal is to thus be able to produce
+   *   diagnostics reports which span multiple rounds of OCR activity, executed
+   *   in the single lifespan of the Tesseract instance.
+   *
+   * Once WipeSqueakyCleanForReUse() has been used, proceed just as when a
+   * Tesseract instance has been constructed just now: the same restrictions and
+   * conditions exist, once again.
+   */
+  void WipeSqueakyCleanForReUse(bool invoked_by_destructor = false);
+
+  /**
+   * Returns `true` when the current Tesseract instance has been initialized with 
+   * language-specific data, which must be wiped if we want to re-use this instance
+   * for an independent subsequent run.
+   * 
+   * Companion function of WipeSqueakyCleanForReUse(): together these allow u
+   * keep a long-running Tesseract active and collect diagnostics spanning multiple
+   * OCR sessions executed within the lifetime of the Tesseract instance.
+   */
+  bool RequiresWipeBeforeIndependentReUse() const;
 
   void ResyncVariablesInternally();
 
@@ -234,61 +250,25 @@ public:
   }
 
   // Destroy any existing pix and return a pointer to the pointer.
-  void set_pix_binary(Image pix) {
-    pix_binary_.destroy();
-    pix_binary_ = pix;
-    // Clone to sublangs as well.
-    for (auto &lang_ref : sub_langs_) {
-      lang_ref->set_pix_binary(pix ? pix.clone() : nullptr);
-    }
-  }
-  Image pix_binary() const {
-    return pix_binary_;
-  }
-  Image pix_grey() const {
-    return pix_grey_;
-  }
-  void set_pix_grey(Image grey_pix) {
-    pix_grey_.destroy();
-    pix_grey_ = grey_pix;
-    // Clone to sublangs as well.
-    for (auto &lang_ref : sub_langs_) {
-      lang_ref->set_pix_grey(grey_pix ? grey_pix.clone() : nullptr);
-    }
-  }
-  Image pix_original() const {
-    return pix_original_;
-  }
+  void set_pix_binary(Image pix);
+  Image pix_binary() const;
+
+  Image pix_grey() const;
+  void set_pix_grey(Image grey_pix);
+
+  Image pix_original() const;
   // Takes ownership of the given original_pix.
-  void set_pix_original(Image original_pix) {
-    pix_original_.destroy();
-    pix_original_ = original_pix;
-    // Clone to sublangs as well.
-    for (auto &lang_ref : sub_langs_) {
-      lang_ref->set_pix_original(original_pix ? original_pix.clone() : nullptr);
-    }
-  }
+  void set_pix_original(Image original_pix);
 
-  Image GetPixForDebugView() {
-    if (pix_for_debug_view_ != nullptr)
-      return pix_for_debug_view_;
+  Image GetPixForDebugView();
 
-    pix_for_debug_view_ = pixConvertTo32(pix_binary_);
-    return pix_for_debug_view_;
-  }
-
-  void ClearPixForDebugView() {
-    if (pix_for_debug_view_ != nullptr) {
-      pix_for_debug_view_.destroy();
-      pix_for_debug_view_ = nullptr;
-    }
-  }
+  void ClearPixForDebugView();
 
   void ReportDebugInfo();
 
 #if !GRAPHICS_DISABLED
   bool SupportsInteractiveScrollView() const {
-    return (interactive_display_mode && !debug_do_not_use_scrollview_app);
+    return interactive_display_mode;
   }
 #else
   constexpr bool SupportsInteractiveScrollView() const {
@@ -316,85 +296,34 @@ public:
   // To tell the difference pixGetDepth() will return 32, 8 or 1.
   // In any case, the return value is a borrowed Pix, and should not be
   // deleted or pixDestroyed.
-  Image BestPix() const {
-    if (pix_original_ != nullptr && pixGetWidth(pix_original_) == ImageWidth()) {
-      return pix_original_;
-    } else if (pix_grey_ != nullptr) {
-      return pix_grey_;
-    } else {
-      return pix_binary_;
-    }
-  }
+  Image BestPix() const;
 
-  void set_pix_thresholds(Image thresholds) {
-    pix_thresholds_.destroy();
-    pix_thresholds_ = thresholds;
-  }
-  Image pix_thresholds() {
-	  return pix_thresholds_;
-  }
-  int source_resolution() const {
-    return source_resolution_;
-  }
-  void set_source_resolution(int ppi) {
-    source_resolution_ = ppi;
-  }
-  int ImageWidth() const {
-    return pixGetWidth(pix_binary_);
-  }
-  int ImageHeight() const {
-    return pixGetHeight(pix_binary_);
-  }
-  Image scaled_color() const {
-    return scaled_color_;
-  }
-  int scaled_factor() const {
-    return scaled_factor_;
-  }
-  void SetScaledColor(int factor, Image color) {
-    scaled_factor_ = factor;
-    scaled_color_ = color;
-  }
-  const Textord &textord() const {
-    return textord_;
-  }
-  Textord *mutable_textord() {
-    return &textord_;
-  }
+  void set_pix_thresholds(Image thresholds);
+  Image pix_thresholds();
 
-  bool right_to_left() const {
-    return right_to_left_;
-  }
-  int num_sub_langs() const {
-    return sub_langs_.size();
-  }
-  Tesseract *get_sub_lang(int index) const {
-    return sub_langs_[index];
-  }
+  int source_resolution() const;
+  void set_source_resolution(int ppi);
+
+  int ImageWidth() const;
+  int ImageHeight() const;
+
+  Image scaled_color() const;
+  int scaled_factor() const;
+
+  void SetScaledColor(int factor, Image color);
+
+  const Textord &textord() const;
+  Textord *mutable_textord();
+
+  bool right_to_left() const;
+
+  int num_sub_langs() const;
+  Tesseract *get_sub_lang(int index) const;
+
   // Returns true if any language uses Tesseract (as opposed to LSTM).
-  bool AnyTessLang() const {
-    if (tessedit_ocr_engine_mode != OEM_LSTM_ONLY) {
-      return true;
-    }
-    for (auto &lang_ref : sub_langs_) {
-      if (lang_ref->tessedit_ocr_engine_mode != OEM_LSTM_ONLY) {
-        return true;
-      }
-    }
-    return false;
-  }
+  bool AnyTessLang() const;
   // Returns true if any language uses the LSTM.
-  bool AnyLSTMLang() const {
-    if (tessedit_ocr_engine_mode != OEM_TESSERACT_ONLY) {
-      return true;
-    }
-    for (auto &lang_ref : sub_langs_) {
-      if (lang_ref->tessedit_ocr_engine_mode != OEM_TESSERACT_ONLY) {
-        return true;
-      }
-    }
-    return false;
-  }
+  bool AnyLSTMLang() const;
 
   void SetBlackAndWhitelist();
 
@@ -570,9 +499,7 @@ public:
   bool recog_interactive(PAGE_RES_IT *pr_it);
 
   // Set fonts of this word.
-  void set_word_fonts(WERD_RES *word, std::vector<int> font_choices = std::vector<int>());
-  std::vector<int> score_word_fonts(WERD_RES *word);
-  void score_word_fonts_by_letter(WERD_RES *word, std::map<int, std::map<int, std::map<int, int>>> & page_fonts_letter, int font_id);
+  void set_word_fonts(WERD_RES *word);
   void font_recognition_pass(PAGE_RES *page_res);
   void italic_recognition_pass(PAGE_RES *page_res);
   void dictionary_correction_pass(PAGE_RES *page_res);
@@ -605,62 +532,60 @@ public:
   int16_t count_alphanums(const WERD_CHOICE &word);
   int16_t count_alphas(const WERD_CHOICE &word);
 
-  void read_config_file(const char *filename);
-
+  void read_config_file(const char *filename, SetParamConstraint constraint);
   // Initialize for potentially a set of languages defined by the language
   // string and recursively any additional languages required by any language
   // traineddata file (via tessedit_load_sublangs in its config) that is loaded.
-  // 
   // See init_tesseract_internal for args.
   int init_tesseract(const std::string &arg0, const std::string &textbase,
-                     const std::string &language, OcrEngineMode oem, 
-				     const std::vector<std::string> &configs,
-				     const std::vector<std::string> &vars_vec,
-				     const std::vector<std::string> &vars_values,
-                     bool set_only_non_debug_params,
+                     const std::string &language, OcrEngineMode oem, const char **configs,
+                     int configs_size, const std::vector<std::string> *vars_vec,
+                     const std::vector<std::string> *vars_values, bool set_only_non_debug_params,
                      TessdataManager *mgr);
   int init_tesseract(const std::string &datapath, const std::string &language, OcrEngineMode oem) {
     TessdataManager mgr;
-	std::vector<std::string> nil;
-
-    return init_tesseract(datapath, {}, language, oem, nil, nil, nil, false, &mgr);
+    return init_tesseract(datapath, {}, language, oem, nullptr, 0, nullptr, nullptr, false, &mgr);
   }
+
   // Common initialization for a single language.
+  // 
   // arg0 is the datapath for the tessdata directory, which could be the
   // path of the tessdata directory with no trailing /, or (if tessdata
   // lives in the same directory as the executable, the path of the executable,
   // hence the name arg0.
+  // 
   // textbase is an optional output file basename (used only for training)
+  // 
   // language is the language code to load.
+  // 
   // oem controls which engine(s) will operate on the image
-  // configs is an optional vector of config filenames to load variables from.
-  // May be empty.
-  // vars_vec is an optional vector of variables to set. May be empty.
+  // 
+  // configs (argv) is an array of config filenames to load variables from.
+  // May be nullptr.
+  // configs_size (argc) is the number of elements in configs.
+  // vars_vec is an optional vector of variables to set.
+  // 
   // vars_values is an optional corresponding vector of values for the variables
   // in vars_vec.
   // If set_only_non_debug_params is true, only params that do not contain
   // "debug" in the name will be set.
   int init_tesseract_internal(const std::string &arg0, const std::string &textbase,
-                              const std::string &language, OcrEngineMode oem, 
-						      const std::vector<std::string> &configs,
-						      const std::vector<std::string> &vars_vec,
-						      const std::vector<std::string> &vars_values,
+                              const std::string &language, OcrEngineMode oem, const char **configs,
+                              int configs_size, const std::vector<std::string> *vars_vec,
+                              const std::vector<std::string> *vars_values,
                               bool set_only_non_debug_params, TessdataManager *mgr);
 
-#if !DISABLED_LEGACY_ENGINE
   // Set the universal_id member of each font to be unique among all
   // instances of the same font loaded.
   void SetupUniversalFontIds();
-#endif
 
   void recognize_page(std::string &image_name);
   void end_tesseract();
 
   bool init_tesseract_lang_data(const std::string &arg0,
-                                const std::string &language, OcrEngineMode oem, 
-							    const std::vector<std::string> &configs,
-							    const std::vector<std::string> &vars_vec,
-							    const std::vector<std::string> &vars_values,
+                                const std::string &language, OcrEngineMode oem, const char **configs,
+                                int configs_size, const std::vector<std::string> *vars_vec,
+                                const std::vector<std::string> *vars_values,
                                 bool set_only_non_debug_params, TessdataManager *mgr);
 
   void ParseLanguageString(const std::string &lang_str, std::vector<std::string> *to_load,
@@ -779,7 +704,7 @@ public:
       WERD_CHOICE *word_choice // after context
   );
   void tess_segment_pass_n(int pass_n, WERD_RES *word);
-  bool tess_acceptable_word(const WERD_RES &word);
+  bool tess_acceptable_word(WERD_RES *word);
 #endif
 
   //// applybox.cpp //////////////////////////////////////////////////////
@@ -891,7 +816,6 @@ public:
   INT_VAR_H(tessedit_pageseg_mode);
   INT_VAR_H(preprocess_graynorm_mode);
   INT_VAR_H(thresholding_method);
-  BOOL_VAR_H(showcase_threshold_methods);
   BOOL_VAR_H(thresholding_debug);
   DOUBLE_VAR_H(thresholding_window_size);
   DOUBLE_VAR_H(thresholding_kfactor);
@@ -1030,9 +954,9 @@ public:
   BOOL_VAR_H(tessedit_create_txt);
   BOOL_VAR_H(tessedit_create_hocr);
   BOOL_VAR_H(tessedit_create_alto);
-  BOOL_VAR_H(tessedit_create_page);
-  BOOL_VAR_H(tessedit_create_page_polygon);
-  BOOL_VAR_H(tessedit_create_page_wordlevel);
+  BOOL_VAR_H(tessedit_create_page_xml);
+  BOOL_VAR_H(page_xml_polygon);
+  INT_VAR_H(page_xml_level);
   BOOL_VAR_H(tessedit_create_lstmbox);
   BOOL_VAR_H(tessedit_create_tsv);
   BOOL_VAR_H(tessedit_create_wordstrbox);
@@ -1077,9 +1001,7 @@ public:
   STRING_VAR_H(file_type);
   BOOL_VAR_H(tessedit_override_permuter);
   STRING_VAR_H(tessedit_load_sublangs);
-#if DISABLED_LEGACY_ENGINE
   BOOL_VAR_H(tessedit_use_primary_params_model);
-#endif
   // Min acceptable orientation margin (difference in scores between top and 2nd
   // choice in OSResults::orientations) to believe the page orientation.
   DOUBLE_VAR_H(min_orientation_margin);
@@ -1102,19 +1024,17 @@ public:
   DOUBLE_VAR_H(lstm_rating_coefficient);
   BOOL_VAR_H(pageseg_apply_music_mask);
   DOUBLE_VAR_H(max_page_gradient_recognize);
-  BOOL_VAR_H(scribe_save_binary_rotated_image);
-  BOOL_VAR_H(scribe_save_grey_rotated_image);
-  BOOL_VAR_H(scribe_save_original_rotated_image);
   STRING_VAR_H(debug_output_path);
   INT_VAR_H(debug_baseline_fit);
   INT_VAR_H(debug_baseline_y_coord);
   BOOL_VAR_H(debug_write_unlv);
   BOOL_VAR_H(debug_line_finding);
   BOOL_VAR_H(debug_image_normalization);
-  BOOL_VAR_H(debug_do_not_use_scrollview_app);
   BOOL_VAR_H(debug_display_page);
   BOOL_VAR_H(debug_display_page_blocks);
   BOOL_VAR_H(debug_display_page_baselines);
+  BOOL_VAR_H(dump_segmented_word_images);
+  BOOL_VAR_H(dump_osdetect_process_images);
 
   //// ambigsrecog.cpp /////////////////////////////////////////////////////////
   FILE *init_recog_training(const char *filename);
@@ -1123,36 +1043,18 @@ public:
   void ambigs_classify_and_output(const char *label, PAGE_RES_IT *pr_it, FILE *output_file);
 
   // debug PDF output helper methods:
-  void AddPixDebugPage(const Image &pix, const char *title) {
-	  if (pix == nullptr)
-		  return;
+  void AddPixDebugPage(const Image &pix, const char *title);
+  void AddPixDebugPage(const Image &pix, const std::string &title);
 
-    pixa_debug_.AddPix(pix, title);
-  }
-  void AddPixDebugPage(const Image &pix, const std::string& title) {
-    AddPixDebugPage(pix, title.c_str());
-  }
+  void AddPixCompedOverOrigDebugPage(const Image &pix, const TBOX& bbox, const char *title);
+  void AddPixCompedOverOrigDebugPage(const Image &pix, const TBOX &bbox, const std::string &title);
+  void AddPixCompedOverOrigDebugPage(const Image &pix, const char *title);
+  void AddPixCompedOverOrigDebugPage(const Image &pix, const std::string &title);
 
-  void AddClippedPixDebugPage(const Image &pix, const TBOX& bbox, const char *title);
-  void AddClippedPixDebugPage(const Image& pix, const TBOX& bbox, const std::string& title) {
-    AddClippedPixDebugPage(pix, bbox, title.c_str());
-  }
-  void AddClippedPixDebugPage(const Image &pix, const char *title);
-  void AddClippedPixDebugPage(const Image &pix, const std::string &title) {
-    AddClippedPixDebugPage(pix, title.c_str());
-  }
-
-  int PushNextPixDebugSection(const std::string &title) { // sibling
-    return pixa_debug_.PushNextSection(title);
-  }
-  int PushSubordinatePixDebugSection(const std::string &title) { // child
-    return pixa_debug_.PushSubordinateSection(title);
-  }
-  void PopPixDebugSection(int handle = -1) { // pop active; return focus to parent
-    pixa_debug_.WriteSectionParamsUsageReport();
-
-    pixa_debug_.PopSection(handle);
-  }
+  int PushNextPixDebugSection(const std::string &title); // sibling
+  int PushSubordinatePixDebugSection(const std::string &title); // child
+  void PopPixDebugSection(int handle = -1); // pop active; return focus to parent
+  int GetPixDebugSectionLevel() const;
 
 public:
   // Find connected components in the page and process a subset until finished or
@@ -1219,7 +1121,7 @@ private:
   // have a temporary debug config file loaded, and backup_config_file_
   // will be loaded, and set to null when debug is complete.
   const char *backup_config_file_;
-  // The filename of a config file to read when processing a debug word via Tesseract::debug_word().
+  // The filename of a config file to read when processing a debug word.
   std::string word_config_;
   // Image used for input to layout analysis and tesseract recognition.
   // May be modified by the ShiroRekhaSplitter to eliminate the top-line.
@@ -1275,6 +1177,8 @@ private:
   LSTMRecognizer *lstm_recognizer_;
   // Output "page" number (actually line number) using TrainLineRecognizer.
   int train_line_page_num_;
+  /// internal use to help the (re)initialization process after a previous run.
+  bool instance_has_been_initialized_; 
 };
 
 } // namespace tesseract

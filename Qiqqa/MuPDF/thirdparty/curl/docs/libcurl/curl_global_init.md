@@ -11,11 +11,13 @@ See-also:
   - curl_global_sslset (3)
   - curl_global_trace (3)
   - libcurl (3)
+Protocol:
+  - All
 ---
 
 # NAME
 
-curl_global_init - Global libcurl initialization
+curl_global_init - global libcurl initialization
 
 # SYNOPSIS
 

@@ -28,7 +28,8 @@ CMAKE_DIST = CMakeLists.txt curl_config.h.cmake
 EXTRA_DIST = Makefile.mk config-win32.h config-win32ce.h config-plan9.h    \
  config-riscos.h config-mac.h curl_config.h.in config-dos.h                \
  libcurl.plist libcurl.rc config-amigaos.h config-win32ce.h                \
- $(CMAKE_DIST) firefox-db2pem.sh checksrc.pl setup-win32.h .checksrc        \
+ config-os400.h setup-os400.h                                              \
+ $(CMAKE_DIST) firefox-db2pem.sh checksrc.pl setup-win32.h .checksrc       \
  config-freertos.h config-micrium.h Makefile.soname
 
 lib_LTLIBRARIES = libcurl.la
@@ -127,7 +128,7 @@ checksrc:
 	-W$(srcdir)/curl_config.h $(srcdir)/*.[ch] $(srcdir)/vauth/*.[ch]   \
 	$(srcdir)/vtls/*.[ch] $(srcdir)/vquic/*.[ch] $(srcdir)/vssh/*.[ch])
 
-if CURLDEBUG
+if DEBUGBUILD
 # for debug builds, we scan the sources on all regular make invokes
 all-local: checksrc
 endif

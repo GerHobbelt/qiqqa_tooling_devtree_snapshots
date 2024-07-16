@@ -19,9 +19,7 @@
 #ifndef RATNGS_H
 #define RATNGS_H
 
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h" // DISABLED_LEGACY_ENGINE
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include "clst.h"
 #include "elst.h"       // for ELIST_ITERATOR, ELISTIZE, ELISTIZEH
@@ -54,10 +52,6 @@ enum BlobChoiceClassifier {
   BCC_FAKE,               // From some other process.
 };
 DECL_FMT_FORMAT_TESSENUMTYPE(BlobChoiceClassifier);
-
-static inline auto format_as(BlobChoiceClassifier c) {
-  return fmt::underlying(c);
-}
 
 class BLOB_CHOICE : public ELIST_LINK {
 public:
@@ -181,7 +175,7 @@ public:
             certainty_,
             min_xheight_,
             max_xheight_,
-            unichar_id_, (unicharset == nullptr) ? "" : unicharset->debug_str(unichar_id_));
+            unichar_id_, (unicharset == nullptr) ? "" : unicharset->debug_str(unichar_id_).c_str());
   }
 
   void print_full() const {
@@ -241,7 +235,7 @@ ELISTIZEH(BLOB_CHOICE);
 BLOB_CHOICE *FindMatchingChoice(UNICHAR_ID char_id, BLOB_CHOICE_LIST *bc_list);
 
 // Permuter codes used in WERD_CHOICEs.
-enum PermuterType {
+enum PermuterType : int {
   NO_PERM,           // 0
   PUNC_PERM,         // 1
   TOP_CHOICE_PERM,   // 2
@@ -259,10 +253,6 @@ enum PermuterType {
   NUM_PERMUTER_TYPES
 };
 DECL_FMT_FORMAT_TESSENUMTYPE(PermuterType);
-
-static inline auto format_as(PermuterType pt) {
-  return fmt::underlying(pt);
-}
 
 // ScriptPos tells whether a character is subscript, superscript or normal.
 enum ScriptPos { SP_NORMAL, SP_SUBSCRIPT, SP_SUPERSCRIPT, SP_DROPCAP };

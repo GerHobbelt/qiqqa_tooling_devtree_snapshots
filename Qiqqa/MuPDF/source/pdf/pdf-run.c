@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2023 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -99,7 +99,7 @@ pdf_run_annot_with_usage(fz_context *ctx, pdf_document *doc, pdf_page *page, pdf
 
 		ctm = fz_concat(page_ctm, ctm);
 
-		struct_parent = pdf_dict_getl(ctx, page->obj, PDF_NAME(StructParent));
+		struct_parent = pdf_dict_getl(ctx, page->obj, PDF_NAME(StructParent), NULL);
 		struct_parent_num = pdf_to_int_default(ctx, struct_parent, -1);
 
         assert(doc == page->doc); //[GHo]
@@ -178,10 +178,10 @@ pdf_run_page_contents_with_usage_imp(fz_context *ctx, pdf_document *doc, pdf_pag
 		{
 			pdf_obj *group = pdf_page_group(ctx, page);
 
-			if (group)
+			if (pdf_is_dict(ctx, group))
 			{
 				pdf_obj *cs = pdf_dict_get(ctx, group, PDF_NAME(CS));
-				if (cs)
+				if (pdf_is_name(ctx, cs) || pdf_is_array(ctx, cs) || pdf_is_dict(ctx, cs))
 				{
 					fz_try(ctx)
 						colorspace = pdf_load_colorspace(ctx, cs);
@@ -298,6 +298,16 @@ void pdf_run_annot(fz_context *ctx, pdf_annot *annot, fz_device *dev, fz_matrix 
 
 	if (!page)
 		fz_throw(ctx, FZ_ERROR_GENERIC, "annotation not bound to any page");
+
+	doc = page->doc;
+
+	if (!page)
+		fz_throw(ctx, FZ_ERROR_GENERIC, "annotation not bound to any page");
+
+	doc = page->doc;
+
+	if (!page)
+		fz_throw(ctx, FZ_ERROR_ARGUMENT, "annotation not bound to any page");
 
 	doc = page->doc;
 
@@ -517,7 +527,7 @@ pdf_structure_type(fz_context *ctx, pdf_obj *role_map, pdf_obj *tag)
 		return FZ_STRUCTURE_H6;
 
 	/* List elements (PDF 1.7 - Table 10.23) */
-	if (pdf_name_eq(ctx, tag, PDF_NAME(List)))
+	if (pdf_name_eq(ctx, tag, PDF_NAME(L)))
 		return FZ_STRUCTURE_LIST;
 	if (pdf_name_eq(ctx, tag, PDF_NAME(LI)))
 		return FZ_STRUCTURE_LISTITEM;
@@ -615,26 +625,37 @@ run_ds(fz_context *ctx, fz_device *dev, pdf_obj *role_map, pdf_obj *obj, int idx
 		cookie->d.progress++;
 	}
 
+	if (pdf_is_number(ctx, obj))
+	{
+		/* A marked-content identifier denoting a marked content sequence. WHAT? */
+		return;
+	}
+
 	if (pdf_mark_obj(ctx, obj))
 		return;
 
 	fz_try(ctx)
 	{
 		pdf_obj *tag = pdf_dict_get(ctx, obj, PDF_NAME(S));
+		if (!tag)
+			break;
+
 		fz_structure standard = pdf_structure_type(ctx, role_map, tag);
 		if (standard == FZ_STRUCTURE_INVALID)
 			break;
 		fz_begin_structure(ctx, dev, standard, pdf_to_name(ctx, tag), idx);
 		k = pdf_dict_get(ctx, obj, PDF_NAME(K));
-		n = pdf_array_len(ctx, k);
-		if (n == 0)
-			run_ds(ctx, dev, role_map, k, 0, cookie);
-		else
+		if (k)
 		{
-			for (i = 0; i < n; i++)
-				run_ds(ctx, dev, role_map, pdf_array_get(ctx, k, i), i, cookie);
+			n = pdf_array_len(ctx, k);
+			if (n == 0)
+				run_ds(ctx, dev, role_map, k, 0, cookie);
+			else
+			{
+				for (i = 0; i < n; i++)
+					run_ds(ctx, dev, role_map, pdf_array_get(ctx, k, i), i, cookie);
+			}
 		}
-
 		fz_end_structure(ctx, dev);
 	}
 	fz_always(ctx)
@@ -646,7 +667,10 @@ run_ds(fz_context *ctx, fz_device *dev, pdf_obj *role_map, pdf_obj *obj, int idx
 void pdf_run_document_structure(fz_context *ctx, pdf_document *doc, fz_device *dev, fz_cookie *cookie)
 {
 	int nocache;
-	pdf_obj *st, *rm;
+	int marked = 0;
+	pdf_obj *st, *rm, *k;
+
+	fz_var(marked);
 
 	nocache = !!(dev->hints & FZ_NO_CACHE);
 	if (nocache)
@@ -654,12 +678,31 @@ void pdf_run_document_structure(fz_context *ctx, pdf_document *doc, fz_device *d
 
 	fz_try(ctx)
 	{
-		st = pdf_dict_get(ctx, pdf_trailer(ctx, doc), PDF_NAME(StructTreeRoot));
+		st = pdf_dict_get(ctx, pdf_dict_get(ctx, pdf_trailer(ctx, doc), PDF_NAME(Root)), PDF_NAME(StructTreeRoot));
 		rm = pdf_dict_get(ctx, st, PDF_NAME(RoleMap));
-		run_ds(ctx, dev, rm, st, 0, cookie);
+
+		if (pdf_mark_obj(ctx, st))
+			break;
+		marked = 1;
+
+		k = pdf_dict_get(ctx, st, PDF_NAME(K));
+		if (k)
+		{
+			int n = pdf_array_len(ctx, k);
+			if (n == 0)
+				run_ds(ctx, dev, rm, k, 0, cookie);
+			else
+			{
+				int i;
+				for (i = 0; i < n; i++)
+					run_ds(ctx, dev, rm, pdf_array_get(ctx, k, i), i, cookie);
+			}
+		}
 	}
 	fz_always(ctx)
 	{
+		if (marked)
+			pdf_unmark_obj(ctx, st);
 		if (nocache)
 			pdf_clear_xref_to_mark(ctx, doc);
 	}

@@ -25,6 +25,7 @@
 
 #include "flacfile.h"
 
+#include <algorithm>
 #include <utility>
 
 #include "tdebug.h"
@@ -44,10 +45,10 @@ namespace
 {
   enum { FlacXiphIndex = 0, FlacID3v2Index = 1, FlacID3v1Index = 2 };
 
-  const long MinPaddingLength = 4096;
-  const long MaxPaddingLegnth = 1024 * 1024;
+  constexpr long MinPaddingLength = 4096;
+  constexpr long MaxPaddingLegnth = 1024 * 1024;
 
-  const char LastBlockFlag = '\x80';
+  constexpr char LastBlockFlag = '\x80';
 }  // namespace
 
 class FLAC::File::FilePrivate
@@ -85,16 +86,19 @@ bool FLAC::File::isSupported(IOStream *stream)
   // A FLAC file has an ID "fLaC" somewhere. An ID3v2 tag may precede.
 
   const ByteVector buffer = Utils::readHeader(stream, bufferSize(), true);
-  return (buffer.find("fLaC") >= 0);
+  return buffer.find("fLaC") >= 0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // public members
 ////////////////////////////////////////////////////////////////////////////////
 
-FLAC::File::File(FileName file, bool readProperties, Properties::ReadStyle) :
+FLAC::File::File(FileName file, bool readProperties,
+                 Properties::ReadStyle,
+                 ID3v2::FrameFactory *frameFactory) :
   TagLib::File(file),
-  d(std::make_unique<FilePrivate>())
+  d(std::make_unique<FilePrivate>(
+    frameFactory ? frameFactory : ID3v2::FrameFactory::instance()))
 {
   if(isOpen())
     read(readProperties);
@@ -104,6 +108,17 @@ FLAC::File::File(FileName file, ID3v2::FrameFactory *frameFactory,
                  bool readProperties, Properties::ReadStyle) :
   TagLib::File(file),
   d(std::make_unique<FilePrivate>(frameFactory))
+{
+  if(isOpen())
+    read(readProperties);
+}
+
+FLAC::File::File(IOStream *stream, bool readProperties,
+                 Properties::ReadStyle,
+                 ID3v2::FrameFactory *frameFactory) :
+  TagLib::File(stream),
+  d(std::make_unique<FilePrivate>(
+    frameFactory ? frameFactory : ID3v2::FrameFactory::instance()))
 {
   if(isOpen())
     read(readProperties);
@@ -144,11 +159,11 @@ StringList FLAC::File::complexPropertyKeys() const
 {
   StringList keys = TagLib::File::complexPropertyKeys();
   if(!keys.contains("PICTURE")) {
-    for(const auto &block : std::as_const(d->blocks)) {
-      if(dynamic_cast<Picture *>(block) != nullptr) {
-        keys.append("PICTURE");
-        break;
-      }
+    if(std::any_of(d->blocks.cbegin(), d->blocks.cend(),
+        [](MetadataBlock *block) {
+      return dynamic_cast<Picture *>(block) != nullptr;
+    })) {
+      keys.append("PICTURE");
     }
   }
   return keys;
@@ -156,9 +171,8 @@ StringList FLAC::File::complexPropertyKeys() const
 
 List<VariantMap> FLAC::File::complexProperties(const String &key) const
 {
-  const String uppercaseKey = key.upper();
-  if(uppercaseKey == "PICTURE") {
-    List<VariantMap> properties;
+  if(const String uppercaseKey = key.upper(); uppercaseKey == "PICTURE") {
+    List<VariantMap> props;
     for(const auto &block : std::as_const(d->blocks)) {
       if(auto picture = dynamic_cast<Picture *>(block)) {
         VariantMap property;
@@ -171,22 +185,21 @@ List<VariantMap> FLAC::File::complexProperties(const String &key) const
         property.insert("height", picture->height());
         property.insert("numColors", picture->numColors());
         property.insert("colorDepth", picture->colorDepth());
-        properties.append(property);
+        props.append(property);
       }
     }
-    return properties;
+    return props;
   }
   return TagLib::File::complexProperties(key);
 }
 
 bool FLAC::File::setComplexProperties(const String &key, const List<VariantMap> &value)
 {
-  const String uppercaseKey = key.upper();
-  if(uppercaseKey == "PICTURE") {
+  if(const String uppercaseKey = key.upper(); uppercaseKey == "PICTURE") {
     removePictures();
 
-    for(auto property : value) {
-      FLAC::Picture *picture = new FLAC::Picture;
+    for(const auto &property : value) {
+      auto picture = new FLAC::Picture;
       picture->setData(property.value("data").value<ByteVector>());
       picture->setMimeType(property.value("mimeType").value<String>());
       picture->setDescription(property.value("description").value<String>());
@@ -288,10 +301,10 @@ bool FLAC::File::save()
 
   insert(data, d->flacStart, originalLength);
 
-  d->streamStart += (static_cast<long>(data.size()) - originalLength);
+  d->streamStart += static_cast<long>(data.size()) - originalLength;
 
   if(d->ID3v1Location >= 0)
-    d->ID3v1Location += (static_cast<long>(data.size()) - originalLength);
+    d->ID3v1Location += static_cast<long>(data.size()) - originalLength;
 
   // Update ID3 tags
 
@@ -305,11 +318,11 @@ bool FLAC::File::save()
     data = ID3v2Tag()->render();
     insert(data, d->ID3v2Location, d->ID3v2OriginalSize);
 
-    d->flacStart   += (static_cast<long>(data.size()) - d->ID3v2OriginalSize);
-    d->streamStart += (static_cast<long>(data.size()) - d->ID3v2OriginalSize);
+    d->flacStart   += static_cast<long>(data.size()) - d->ID3v2OriginalSize;
+    d->streamStart += static_cast<long>(data.size()) - d->ID3v2OriginalSize;
 
     if(d->ID3v1Location >= 0)
-      d->ID3v1Location += (static_cast<long>(data.size()) - d->ID3v2OriginalSize);
+      d->ID3v1Location += static_cast<long>(data.size()) - d->ID3v2OriginalSize;
 
     d->ID3v2OriginalSize = data.size();
   }
@@ -360,7 +373,8 @@ bool FLAC::File::save()
 
 ID3v2::Tag *FLAC::File::ID3v2Tag(bool create)
 {
-  return d->tag.access<ID3v2::Tag>(FlacID3v2Index, create);
+  return d->tag.access<ID3v2::Tag>(FlacID3v2Index, create,
+                                   d->ID3v2FrameFactory);
 }
 
 ID3v1::Tag *FLAC::File::ID3v1Tag(bool create)
@@ -433,12 +447,12 @@ bool FLAC::File::hasXiphComment() const
 
 bool FLAC::File::hasID3v1Tag() const
 {
-  return (d->ID3v1Location >= 0);
+  return d->ID3v1Location >= 0;
 }
 
 bool FLAC::File::hasID3v2Tag() const
 {
-  return (d->ID3v2Location >= 0);
+  return d->ID3v2Location >= 0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

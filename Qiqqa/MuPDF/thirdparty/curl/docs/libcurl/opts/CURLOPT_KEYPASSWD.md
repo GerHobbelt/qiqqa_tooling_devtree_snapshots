@@ -7,6 +7,13 @@ Source: libcurl
 See-also:
   - CURLOPT_SSH_PRIVATE_KEYFILE (3)
   - CURLOPT_SSLKEY (3)
+Protocol:
+  - TLS
+TLS-backend:
+  - OpenSSL
+  - mbedTLS
+  - Schannel
+  - wolfSSL
 ---
 
 # NAME
@@ -25,7 +32,7 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_KEYPASSWD, char *pwd);
 
 Pass a pointer to a null-terminated string as parameter. It is used as the
 password required to use the CURLOPT_SSLKEY(3) or
-CURLOPT_SSH_PRIVATE_KEYFILE(3) private key. You never need a pass phrase to
+CURLOPT_SSH_PRIVATE_KEYFILE(3) private key. You never need a passphrase to
 load a certificate but you need one to load your private key.
 
 The application does not have to keep the string around after setting this
@@ -34,10 +41,6 @@ option.
 # DEFAULT
 
 NULL
-
-# PROTOCOLS
-
-All TLS based protocols: HTTPS, FTPS, IMAPS, POP3S, SMTPS etc.
 
 # EXAMPLE
 

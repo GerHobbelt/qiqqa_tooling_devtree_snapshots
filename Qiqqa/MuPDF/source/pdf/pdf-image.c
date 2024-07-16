@@ -114,13 +114,13 @@ pdf_load_image_imp(fz_context *ctx, pdf_document *doc, pdf_obj *rdb, pdf_obj *di
 	fz_try(ctx)
 	{
 		cs = pdf_dict_geta(ctx, dict, PDF_NAME(ColorSpace), PDF_NAME(CS));
-		if (cs && !imagemask && !forcemask)
+		if ((pdf_is_name(ctx, cs) || pdf_is_array(ctx, cs) || pdf_is_dict(ctx, cs)) && !imagemask && !forcemask)
 		{
 			/* colorspace resource lookup is only done for inline images */
 			if (pdf_is_name(ctx, cs))
 			{
 				res = pdf_dict_get(ctx, pdf_dict_get(ctx, rdb, PDF_NAME(ColorSpace)), cs);
-				if (res)
+				if (pdf_is_name(ctx, res) || pdf_is_array(ctx, res) || pdf_is_dict(ctx, res))
 					cs = res;
 			}
 
@@ -138,7 +138,7 @@ pdf_load_image_imp(fz_context *ctx, pdf_document *doc, pdf_obj *rdb, pdf_obj *di
 			fz_throw(ctx, FZ_ERROR_SYNTAX, "image is too large (max. single dimension for square image: %1.0lf px)", floor(sqrt((SIZE_MAX * 8.0) / (n * (bpc+7.0)))));
 
 		obj = pdf_dict_geta(ctx, dict, PDF_NAME(Decode), PDF_NAME(D));
-		if (obj)
+		if (pdf_is_array(ctx, obj))
 		{
 			for (i = 0; i < n * 2; i++)
 				decode[i] = pdf_array_get_real(ctx, obj, i);
@@ -284,7 +284,7 @@ pdf_load_jpx(fz_context *ctx, pdf_document *doc, pdf_obj *dict, int forcemask)
 		size_t len;
 
 		obj = pdf_dict_get(ctx, dict, PDF_NAME(ColorSpace));
-		if (obj)
+		if (pdf_is_name(ctx, obj) || pdf_is_array(ctx, obj) || pdf_is_dict(ctx, obj))
 			colorspace = pdf_load_colorspace(ctx, obj);
 
 		len = fz_buffer_storage(ctx, buf, &data);
@@ -300,7 +300,7 @@ pdf_load_jpx(fz_context *ctx, pdf_document *doc, pdf_obj *dict, int forcemask)
 		}
 
 		obj = pdf_dict_geta(ctx, dict, PDF_NAME(Decode), PDF_NAME(D));
-		if (obj && !fz_colorspace_is_indexed(ctx, colorspace))
+		if (pdf_is_array(ctx, obj) && !fz_colorspace_is_indexed(ctx, colorspace))
 		{
 			float decode[FZ_MAX_COLORS * 2];
 			int i;
@@ -348,13 +348,51 @@ struct jbig2_segment_header {
 	int flags;
 	/* referred-to-segment numbers */
 	int page;
-	int length;
+	uint32_t length;
 };
 
 /* coverity[-tainted_data_return] */
 static uint32_t getu32(const unsigned char *data)
 {
 	return (((uint32_t)data[0]<<24) | ((uint32_t)data[1]<<16) | ((uint32_t)data[2]<<8) | (uint32_t)data[3]) & 0xFFFFFFFF;
+}
+
+static uint32_t
+pdf_determine_jbig2_segment_length(fz_context *ctx,
+	const unsigned char *data, const unsigned char *end,
+	struct jbig2_segment_header *info)
+{
+	int is_mmr;
+	const unsigned char *p;
+	uint8_t mmr_marker[2] = { 0x00, 0x00 };
+	uint8_t arith_marker[2] = { 0xff, 0xac };
+	uint8_t *desired;
+
+	if (data + 18 > end) return 0xffffffff;
+
+	is_mmr = data[17] & 1;
+	desired = is_mmr ? mmr_marker : arith_marker;
+
+	p = data + 18;
+	if (p + 2 > end)
+		return 0xffffffff;
+
+	while (p[0] != desired[0] || p[1] != desired[1])
+	{
+		p++;
+		if (p + 2 > end)
+			return 0xffffffff;
+	}
+
+	/* marker found */
+	p += 2;
+
+	/* marker is followed by 4 byte row count */
+	if (p + 4 > end)
+		return 0xffffffff;
+	p += 4;
+
+	return p - data;
 }
 
 static size_t
@@ -420,8 +458,17 @@ pdf_copy_jbig2_segments(fz_context *ctx, fz_buffer *output, const unsigned char 
 		if (n == 0)
 			fz_throw(ctx, FZ_ERROR_FORMAT, "truncated jbig2 segment header");
 
-		/* omit end of page, end of file, and segments for other pages */
 		type = (info.flags & 63);
+
+		/* determine length for immediate generic region segments with unknown length */
+		if (type == 38 && info.length == 0xffffffff)
+		{
+			info.length = pdf_determine_jbig2_segment_length(ctx, data, end, &info);
+			if (info.length == 0xffffffff)
+				fz_throw(ctx, FZ_ERROR_FORMAT, "unable to determine jbig2 segment length");
+		}
+
+		/* omit end of page, end of file, and segments for other pages */
 		if (type == 49 || type == 51 || (info.page > 0 && info.page != page))
 		{
 			data += n;

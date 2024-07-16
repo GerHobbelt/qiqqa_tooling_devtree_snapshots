@@ -29,14 +29,12 @@ var verCvs;
 var useCvsVer = true;
 /* Libxml features. */
 var withThreads = "native";
-var withFtp = true;
 var withHttp = true;
 var withHtml = true;
 var withC14n = true;
 var withCatalog = true;
 var withXpath = true;
 var withXptr = true;
-var withXptrLocs = false;
 var withXinclude = true;
 var withIconv = true;
 var withIcu = false;
@@ -44,7 +42,6 @@ var withIso8859x = false;
 var withZlib = false;
 var withLzma = false;
 var withDebug = true;
-var withMemDebug = false;
 var withSchemas = true;
 var withSchematron = true;
 var withRegExps = true;
@@ -113,14 +110,12 @@ function usage()
 	txt += "either 'yes' or 'no', if not stated otherwise.\n\n";
 	txt += "\nXML processor options, default value given in parentheses:\n\n";
 	txt += "  threads:    Enable thread safety [no|ctls|native|posix] (" + (withThreads)  + ") \n";
-	txt += "  ftp:        Enable FTP client (" + (withFtp? "yes" : "no")  + ")\n";
 	txt += "  http:       Enable HTTP client (" + (withHttp? "yes" : "no")  + ")\n";
 	txt += "  html:       Enable HTML processor (" + (withHtml? "yes" : "no")  + ")\n";
 	txt += "  c14n:       Enable C14N support (" + (withC14n? "yes" : "no")  + ")\n";
 	txt += "  catalog:    Enable catalog support (" + (withCatalog? "yes" : "no")  + ")\n";
 	txt += "  xpath:      Enable XPath support (" + (withXpath? "yes" : "no")  + ")\n";
 	txt += "  xptr:       Enable XPointer support (" + (withXptr? "yes" : "no")  + ")\n";
-	txt += "  xptr_locs:  Enable XPointer locs support (" + (withXptrLocs? "yes" : "no")  + ")\n";
 	txt += "  xinclude:   Enable XInclude support (" + (withXinclude? "yes" : "no")  + ")\n";
 	txt += "  iconv:      Enable iconv support (" + (withIconv? "yes" : "no")  + ")\n";
 	txt += "  icu:        Enable icu support (" + (withIcu? "yes" : "no")  + ")\n";
@@ -128,7 +123,6 @@ function usage()
 	txt += "  zlib:       Enable zlib support (" + (withZlib? "yes" : "no")  + ")\n";
 	txt += "  lzma:       Enable lzma support (" + (withLzma? "yes" : "no")  + ")\n";
 	txt += "  xml_debug:  Enable XML debbugging module (" + (withDebug? "yes" : "no")  + ")\n";
-	txt += "  mem_debug:  Enable memory debugger (" + (withMemDebug? "yes" : "no")  + ")\n";
 	txt += "  regexps:    Enable regular expressions (" + (withRegExps? "yes" : "no") + ")\n";
 	txt += "  modules:    Enable module support (" + (withModules? "yes" : "no") + ")\n";
 	txt += "  tree:       Enable tree api (" + (withTree? "yes" : "no") + ")\n";
@@ -208,14 +202,12 @@ function discoverVersion()
 	vf.WriteLine("XML_SRCDIR=" + srcDirXml);
 	vf.WriteLine("UTILS_SRCDIR=" + srcDirUtils);
 	vf.WriteLine("WITH_THREADS=" + withThreads);
-	vf.WriteLine("WITH_FTP=" + (withFtp? "1" : "0"));
 	vf.WriteLine("WITH_HTTP=" + (withHttp? "1" : "0"));
 	vf.WriteLine("WITH_HTML=" + (withHtml? "1" : "0"));
 	vf.WriteLine("WITH_C14N=" + (withC14n? "1" : "0"));
 	vf.WriteLine("WITH_CATALOG=" + (withCatalog? "1" : "0"));
 	vf.WriteLine("WITH_XPATH=" + (withXpath? "1" : "0"));
 	vf.WriteLine("WITH_XPTR=" + (withXptr? "1" : "0"));
-	vf.WriteLine("WITH_XPTR_LOCS=" + (withXptrLocs? "1" : "0"));
 	vf.WriteLine("WITH_XINCLUDE=" + (withXinclude? "1" : "0"));
 	vf.WriteLine("WITH_ICONV=" + (withIconv? "1" : "0"));
 	vf.WriteLine("WITH_ICU=" + (withIcu? "1" : "0"));
@@ -223,7 +215,6 @@ function discoverVersion()
 	vf.WriteLine("WITH_ZLIB=" + (withZlib? "1" : "0"));
 	vf.WriteLine("WITH_LZMA=" + (withLzma? "1" : "0"));
 	vf.WriteLine("WITH_DEBUG=" + (withDebug? "1" : "0"));
-	vf.WriteLine("WITH_MEM_DEBUG=" + (withMemDebug? "1" : "0"));
 	vf.WriteLine("WITH_SCHEMAS=" + (withSchemas? "1" : "0"));
 	vf.WriteLine("WITH_SCHEMATRON=" + (withSchematron? "1" : "0"));
 	vf.WriteLine("WITH_REGEXPS=" + (withRegExps? "1" : "0"));
@@ -297,8 +288,6 @@ function configureLibxml()
 			of.WriteLine(s.replace(/\@WITH_THREADS\@/, withThreads == "no"? "0" : "1"));
 		} else if (s.search(/\@WITH_THREAD_ALLOC\@/) != -1) {
 			of.WriteLine(s.replace(/\@WITH_THREAD_ALLOC\@/, "0"));
-		} else if (s.search(/\@WITH_FTP\@/) != -1) {
-			of.WriteLine(s.replace(/\@WITH_FTP\@/, withFtp? "1" : "0"));
 		} else if (s.search(/\@WITH_HTTP\@/) != -1) {
 			of.WriteLine(s.replace(/\@WITH_HTTP\@/, withHttp? "1" : "0"));
 		} else if (s.search(/\@WITH_HTML\@/) != -1) {
@@ -311,8 +300,6 @@ function configureLibxml()
 			of.WriteLine(s.replace(/\@WITH_XPATH\@/, withXpath? "1" : "0"));
 		} else if (s.search(/\@WITH_XPTR\@/) != -1) {
 			of.WriteLine(s.replace(/\@WITH_XPTR\@/, withXptr? "1" : "0"));
-		} else if (s.search(/\@WITH_XPTR_LOCS\@/) != -1) {
-			of.WriteLine(s.replace(/\@WITH_XPTR_LOCS\@/, withXptrLocs? "1" : "0"));
 		} else if (s.search(/\@WITH_XINCLUDE\@/) != -1) {
 			of.WriteLine(s.replace(/\@WITH_XINCLUDE\@/, withXinclude? "1" : "0"));
 		} else if (s.search(/\@WITH_ICONV\@/) != -1) {
@@ -327,8 +314,6 @@ function configureLibxml()
 			of.WriteLine(s.replace(/\@WITH_LZMA\@/, withLzma? "1" : "0"));
 		} else if (s.search(/\@WITH_DEBUG\@/) != -1) {
 			of.WriteLine(s.replace(/\@WITH_DEBUG\@/, withDebug? "1" : "0"));
-		} else if (s.search(/\@WITH_MEM_DEBUG\@/) != -1) {
-			of.WriteLine(s.replace(/\@WITH_MEM_DEBUG\@/, withMemDebug? "1" : "0"));
 		} else if (s.search(/\@WITH_SCHEMAS\@/) != -1) {
 			of.WriteLine(s.replace(/\@WITH_SCHEMAS\@/, withSchemas? "1" : "0"));
 		} else if (s.search(/\@WITH_SCHEMATRON\@/) != -1) {
@@ -448,8 +433,6 @@ for (i = 0; (i < WScript.Arguments.length) && (error == 0); i++) {
 	if (opt.length > 0) {
 		if (opt == "threads")
 			withThreads = arg.substring(opt.length + 1, arg.length);
-		else if (opt == "ftp")
-			withFtp = strToBool(arg.substring(opt.length + 1, arg.length));
 		else if (opt == "http")
 			withHttp = strToBool(arg.substring(opt.length + 1, arg.length));
 		else if (opt == "html")
@@ -462,8 +445,6 @@ for (i = 0; (i < WScript.Arguments.length) && (error == 0); i++) {
 			withXpath = strToBool(arg.substring(opt.length + 1, arg.length));
 		else if (opt == "xptr")
 			withXptr = strToBool(arg.substring(opt.length + 1, arg.length));
-		else if (opt == "xptr_locs")
-			withXptrLocs = strToBool(arg.substring(opt.length + 1, arg.length));
 		else if (opt == "xinclude")
 			withXinclude = strToBool(arg.substring(opt.length + 1, arg.length));
 		else if (opt == "iconv")
@@ -478,8 +459,6 @@ for (i = 0; (i < WScript.Arguments.length) && (error == 0); i++) {
 			withLzma = strToBool(arg.substring(opt.length + 1, arg.length));
 		else if (opt == "xml_debug")
 			withDebug = strToBool(arg.substring(opt.length + 1, arg.length));
-		else if (opt == "mem_debug")
-			withMemDebug = strToBool(arg.substring(opt.length + 1, arg.length));
 		else if (opt == "schemas")
 			withSchemas = strToBool(arg.substring(opt.length + 1, arg.length));
 		else if (opt == "schematron")
@@ -641,14 +620,12 @@ WScript.Echo("Created config.h.");
 var txtOut = "\nXML processor configuration\n";
 txtOut += "---------------------------\n";
 txtOut += "     Thread safety: " + withThreads + "\n";
-txtOut += "        FTP client: " + boolToStr(withFtp) + "\n";
 txtOut += "       HTTP client: " + boolToStr(withHttp) + "\n";
 txtOut += "    HTML processor: " + boolToStr(withHtml) + "\n";
 txtOut += "      C14N support: " + boolToStr(withC14n) + "\n";
 txtOut += "   Catalog support: " + boolToStr(withCatalog) + "\n";
 txtOut += "     XPath support: " + boolToStr(withXpath) + "\n";
 txtOut += "  XPointer support: " + boolToStr(withXptr) + "\n";
-txtOut += "     XPointer locs: " + boolToStr(withXptrLocs) + "\n";
 txtOut += "  XInclude support: " + boolToStr(withXinclude) + "\n";
 txtOut += "     iconv support: " + boolToStr(withIconv) + "\n";
 txtOut += "     icu   support: " + boolToStr(withIcu) + "\n";
@@ -656,7 +633,6 @@ txtOut += "  iso8859x support: " + boolToStr(withIso8859x) + "\n";
 txtOut += "      zlib support: " + boolToStr(withZlib) + "\n";
 txtOut += "      lzma support: " + boolToStr(withLzma) + "\n";
 txtOut += "  Debugging module: " + boolToStr(withDebug) + "\n";
-txtOut += "  Memory debugging: " + boolToStr(withMemDebug) + "\n";
 txtOut += "    Regexp support: " + boolToStr(withRegExps) + "\n";
 txtOut += "    Module support: " + boolToStr(withModules) + "\n";
 txtOut += "      Tree support: " + boolToStr(withTree) + "\n";

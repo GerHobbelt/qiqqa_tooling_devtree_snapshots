@@ -47,6 +47,7 @@ SET(test_runner_SRCS
   test_fileref.cpp
   test_id3v1.cpp
   test_id3v2.cpp
+  test_id3v2framefactory.cpp
   test_xiphcomment.cpp
   test_aiff.cpp
   test_riff.cpp
@@ -75,13 +76,20 @@ SET(test_runner_SRCS
   test_dsdiff.cpp
   test_sizes.cpp
   test_versionnumber.cpp
-  test_tag_c.cpp
 )
+IF(BUILD_BINDINGS)
+  SET(test_runner_SRCS ${test_runner_SRCS}
+    test_tag_c.cpp
+  )
+ENDIF()
 
 INCLUDE_DIRECTORIES(${CPPUNIT_INCLUDE_DIR})
 
 ADD_EXECUTABLE(test_runner ${test_runner_SRCS})
-TARGET_LINK_LIBRARIES(test_runner tag tag_c ${CPPUNIT_LIBRARIES})
+TARGET_LINK_LIBRARIES(test_runner tag ${CPPUNIT_LIBRARIES})
+IF(BUILD_BINDINGS)
+  TARGET_LINK_LIBRARIES(test_runner tag_c)
+ENDIF()
 
 ADD_TEST(test_runner test_runner)
 ADD_CUSTOM_TARGET(check COMMAND ${CMAKE_CTEST_COMMAND} -V

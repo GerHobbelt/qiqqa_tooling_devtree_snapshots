@@ -4,7 +4,7 @@
 
 *Use the same tools for building tesseract as you used for [building leptonica](https://github.com/DanBloomberg/leptonica/issues/410).*
 
-There are several (known) toolchains that can help you build the tesseract: [GNU Autotools](https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html), [CMake](https://cmake.org/), [Software Network](https://software-network.org/) (a.k.a. sw) and [vcpkg](https://vcpkg.io/en/). Please have a look at the [tesseract Github Action Worklows](https://github.com/tesseract-ocr/tesseract/tree/main/.github/workflows) if the following instructions are not clear to you.
+[C++ compiler with good C++17 support](https://en.wikipedia.org/wiki/C%2B%2B17#Compiler_support) is required for building Tesseract from source.  Several (known) toolchains can help you build the tesseract: [GNU Autotools](https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html), [CMake](https://cmake.org/), [Software Network](https://software-network.org/) (a.k.a. sw) and [vcpkg](https://vcpkg.io/en/). Please have a look at the [tesseract Github Action Worklows](https://github.com/tesseract-ocr/tesseract/tree/main/.github/workflows) if the following instructions are not clear to you. 
 
 ## Table of contents
 
@@ -122,7 +122,7 @@ make
 make install
 ```
 
-In some system, you might also need to specify the path to the `pkg-config` before running the `configure` script:
+In some systems, you might also need to specify the path to the `pkg-config` before running the `configure` script:
 
 ```
 export PKG_CONFIG_PATH=$HOME/local/lib/pkgconfig
@@ -144,7 +144,7 @@ You can also use:
 ```
 export TESSDATA_PREFIX=/some/path/to/tessdata
 ```
-to point to your tessdata directory (example: if your tessdata path is '/usr/local/share/tessdata' you have to use 'export TESSDATA\_PREFIX='/usr/local/share/').
+to point to your tessdata directory (for example: if your tessdata path is '/usr/local/share/tessdata' you have to use 'export TESSDATA\_PREFIX='/usr/local/share/').
 
 
 # Windows
@@ -153,7 +153,7 @@ to point to your tessdata directory (example: if your tessdata path is '/usr/loc
 
 #### Using Tesseract
 
-**!!! IMPORTANT !!!** To use Tesseract in your application (to include tess or to link it into your app) see this very simple [example](User-App-Example.md).
+**!!! IMPORTANT !!!** To use Tesseract in your application (to include Tesseract or to link it into your app) see this very simple [example](User-App-Example.md).
 
 
 #### Build the latest library (using Software Network client)
@@ -163,7 +163,19 @@ to point to your tessdata directory (example: if your tessdata path is '/usr/loc
 3. Run `sw build org.sw.demo.google.tesseract.tesseract`.
 
 
-#### For visual studio project using tesseract
+#### Build training tools
+
+Today it is possible to build a full set of Tesseract training tools on Windows with Visual Studio.
+You need to have the latest VS compiler (VS2019/2022 or light VS 2019/2022 build tools distro installed.
+
+To do this:
+
+1. [Download](https://software-network.org/client/) the latest SW (Software Network `https://software-network.org/client/`) client from `https://software-network.org/client/`.
+2. Checkout tesseract sources `git clone https://github.com/tesseract-ocr/tesseract tesseract && cd tesseract`.
+3. Run `sw build`.
+4. Binaries will be available under .sw\out\some hash dir\...
+
+#### For Visual Studio project using Tesseract (vcpkg build)
 
 1. Setup [Vcpkg](https://github.com/Microsoft/vcpkg/blob/master/README.md) the Visual C++ Package Manager.
 2. Run `vcpkg install tesseract:x64-windows` for 64-bit. Use --head for the master branch.
@@ -178,19 +190,19 @@ To build a self-contained `tesseract.exe` executable (without any DLLs or runtim
 
 Use --head for the main branch. It may still require one DLL for the OpenMP runtime, `vcomp140.dll` (which you can find in the Visual C++ Redistributable 2015).
 
+#### CMake build with VS2017 without using Software Network client
 
-#### Build training tools
+1. Build and install Leptonica based as described on its [wiki](https://github.com/DanBloomberg/leptonica/wiki)
+2. Install [ICU library for Visual Studio](https://icu.unicode.org/download/64)
 
-Today it is possible to build a full set of tess training tools on Windows with Visual Studio.
-You need to have the latest VS compiler (VS2019/2022 or light VS 2019/2022 build tools distro installed.
+```sh
+chdir tesseract
+cmake -Bbuild -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=%INSTALL_DIR% -DCMAKE_INSTALL_PREFIX=%INSTALL_DIR% -DSW_BUILD=OFF -DBUILD_SHARED_LIBS=ON -DENABLE_LTO=ON -DBUILD_TRAINING_TOOLS=ON -DFAST_FLOAT=ON -DGRAPHICS_DISABLED=ON -DOPENMP_BUILD=OFF
+cmake --build build --config Release --target install
+```
 
-To do this:
-
-1. [Download](https://software-network.org/client/) the latest SW (Software Network `https://software-network.org/client/`) client from `https://software-network.org/client/`.
-2. Checkout tesseract sources `git clone https://github.com/tesseract-ocr/tesseract tesseract && cd tesseract`.
-3. Run `sw build`.
-4. Binaries will be available under .sw\out\some hash dir\...
-
+This will create most of the training tools (excluding text2image as its requirements Pango library is not easy to build&installed on Windows).
+For more details have a look at https://github.com/tesseract-ocr/tesseract/blob/main/.github/workflows/cmake-win64.yml
 
 #### Develop Tesseract
 
@@ -202,7 +214,7 @@ To do this:
 4. Run `sw setup` (may require administrator access)
 5. If you have a release archive, unpack it to `tesseract` dir.
 
-If you're using main branch run
+If you're using the main branch run
 
    ```
    git clone https://github.com/tesseract-ocr/tesseract tesseract
@@ -217,21 +229,21 @@ If you're using main branch run
     ```
 
 7. Build a solution (`tesseract.sln`) in your Visual Studio version.
-If you want to build and install from command line (e.g. Release build) you can use this command:
+If you want to build and install from the command line (e.g. Release build) you can use this command:
 ```
 cmake --build . --config Release --target install
 ```
-If you want to install to other directory that C:\Program Files (you will need admin right for this), you need to specify install path during configuration:
+If you want to install to another directory than `C:\Program Files` (you will need admin right for this), you need to specify the install path during configuration:
 ```
 cmake .. -G "Visual Studio 15 2017 Win64" -DCMAKE_INSTALL_PREFIX=inst
 ```
 
-**For development purposes** of training tools after cloning a repo from previous paragraph, run
+**For development purposes** of training tools after cloning a repo from the previous paragraph, run
 ```
 sw build
 ```
 
-You'll see a solution link appeared in the root directory of Tesseract.
+You'll see a solution link appearing in the root directory of Tesseract.
 
 
 ## Building for x64 platform

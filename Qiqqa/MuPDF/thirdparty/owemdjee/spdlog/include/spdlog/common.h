@@ -3,9 +3,22 @@
 
 #pragma once
 
+#include <spdlog/tweakme.h>
+
+#if !defined(SPDLOG_USE_STD_FORMAT) && defined(_WIN32) && defined(_UNICODE)
+//  #if !defined(SPDLOG_WCHAR_FILENAMES)
+//    #define SPDLOG_WCHAR_FILENAMES	1
+//	#endif
+	#if !defined(SPDLOG_WCHAR_TO_UTF8_SUPPORT)
+    #define SPDLOG_WCHAR_TO_UTF8_SUPPORT  1
+	#endif
+	#if !defined(SPDLOG_UTF8_TO_WCHAR_CONSOLE)
+		#define SPDLOG_UTF8_TO_WCHAR_CONSOLE  1
+	#endif
+#endif
+
 #include <spdlog/details/null_mutex.h>
 #include <spdlog/details/source_location.h>
-#include <spdlog/tweakme.h>
 
 #include <atomic>
 #include <chrono>
@@ -54,7 +67,7 @@
     FMT_VERSION >= 80000  // backward compatibility with fmt versions older than 8
     #define SPDLOG_FMT_RUNTIME(format_string) fmt::runtime(format_string)
     #define SPDLOG_FMT_STRING(format_string) FMT_STRING(format_string)
-    #if defined(SPDLOG_WCHAR_FILENAMES) || defined(SPDLOG_WCHAR_TO_UTF8_SUPPORT)
+    #if defined(SPDLOG_WCHAR_FILENAMES) || defined(SPDLOG_WCHAR_TO_UTF8_SUPPORT) || defined(SPDLOG_UTF8_TO_WCHAR_CONSOLE)
         #include <spdlog/fmt/xchar.h>
     #endif
 #else
@@ -71,6 +84,12 @@
     #define SPDLOG_CONSTEXPR constexpr
 #endif
 
+#ifdef SPDLOG_LOGGER_NOEXCEPT
+    #define SPDLOG_COND_NOEXCEPT SPDLOG_NOEXCEPT
+#else
+    #define SPDLOG_COND_NOEXCEPT
+#endif
+
 // If building with std::format, can just use constexpr, otherwise if building with fmt
 // SPDLOG_CONSTEXPR_FUNC needs to be set the same as FMT_CONSTEXPR to avoid situations where
 // a constexpr function in spdlog could end up calling a non-constexpr function in fmt
@@ -82,7 +101,7 @@
     #if FMT_USE_CONSTEXPR
         #define SPDLOG_CONSTEXPR_FUNC FMT_CONSTEXPR
     #else
-	#define SPDLOG_CONSTEXPR_FUNC inline
+        #define SPDLOG_CONSTEXPR_FUNC inline
     #endif
 #endif
 
@@ -142,6 +161,8 @@ using fmt_runtime_string = fmt::basic_runtime<Char>;
 #    endif
 #endif
 
+#ifndef SPDLOG_NO_SOURCE_LOC
+
 struct source_loc
 {
     SPDLOG_CONSTEXPR source_loc() = default;
@@ -162,7 +183,7 @@ struct source_loc
 
     SPDLOG_CONSTEXPR bool empty() const SPDLOG_NOEXCEPT
     {
-        return line == 0;
+        return line <= 0;
     }
     const char *filename{nullptr};
     unsigned line{0};
@@ -203,6 +224,35 @@ private:
     source_loc loc_;
 };
 
+#else
+
+struct source_loc {
+    SPDLOG_CONSTEXPR source_loc() = default;
+};
+
+template <typename T, typename Char>
+struct format_string_wrapper {
+    SPDLOG_CONSTEVAL format_string_wrapper(const Char *fmtstr)
+        : fmt_{fmtstr} {}
+    #if !defined(SPDLOG_USE_STD_FORMAT) && FMT_VERSION >= 80000
+    SPDLOG_CONSTEXPR format_string_wrapper(fmt_runtime_string<Char> fmtstr)
+        : fmt_{fmtstr} {}
+    #elif defined(SPDLOG_USE_STD_FORMAT) && SPDLOG_CPLUSPLUS >= 202002L
+    template <typename S>
+    requires std::is_convertible_v<S, T>
+        SPDLOG_CONSTEXPR format_string_wrapper(S fmtstr)
+        : fmt_{fmtstr} {}
+    #endif
+    T format_string() {
+        return fmt_;
+    }
+
+private:
+    T fmt_;
+};
+
+#endif  // SPDLOG_NO_SOURCE_LOC
+
 namespace sinks {
 class sink;
 }
@@ -238,7 +288,7 @@ template <class T, class Char = char>
 struct is_convertible_to_basic_format_string
     : std::integral_constant<bool, std::is_convertible<T, std::basic_string_view<Char>>::value> {};
 
-    #if defined(SPDLOG_WCHAR_FILENAMES) || defined(SPDLOG_WCHAR_TO_UTF8_SUPPORT)
+    #if defined(SPDLOG_WCHAR_FILENAMES) || defined(SPDLOG_WCHAR_TO_UTF8_SUPPORT) || defined(SPDLOG_UTF8_TO_WCHAR_CONSOLE)
 using wstring_view_t = std::wstring_view;
 using wmemory_buf_t = std::wstring;
 
@@ -279,7 +329,8 @@ struct is_convertible_to_basic_format_string
                                  std::is_same<remove_cvref_t<T>, fmt_runtime_string<Char>>::value> {
 };
 
-    #if defined(SPDLOG_WCHAR_FILENAMES) || defined(SPDLOG_WCHAR_TO_UTF8_SUPPORT)
+
+    #if defined(SPDLOG_WCHAR_FILENAMES) || defined(SPDLOG_WCHAR_TO_UTF8_SUPPORT) || defined(SPDLOG_UTF8_TO_WCHAR_CONSOLE)
 using wstring_view_t = fmt::basic_string_view<wchar_t>;
 using wmemory_buf_t = fmt::basic_memory_buffer<wchar_t, 250>;
 
@@ -409,11 +460,17 @@ struct process_info
     {}
     SPDLOG_CONSTEXPR process_info(int process_id, size_t thread_id)
         : process_id(process_id)
+			  , thread_id(thread_id)
+		{}
+    SPDLOG_CONSTEXPR process_info(int process_id, size_t thread_id, const std::string &thread_name)
+        : process_id(process_id)
         , thread_id(thread_id)
+        , thread_name(thread_name)
     {}
 
     int process_id{0};
     size_t thread_id{0};
+    std::string thread_name{};
 };
 
 struct file_event_handlers {
@@ -497,7 +554,7 @@ SPDLOG_CONSTEXPR_FUNC spdlog::string_view_t to_string_view(spdlog::string_view_t
     return str;
 }
 
-#if defined(SPDLOG_WCHAR_FILENAMES) || defined(SPDLOG_WCHAR_TO_UTF8_SUPPORT)
+#if defined(SPDLOG_WCHAR_FILENAMES) || defined(SPDLOG_WCHAR_TO_UTF8_SUPPORT) || defined(SPDLOG_UTF8_TO_WCHAR_CONSOLE)
 SPDLOG_CONSTEXPR_FUNC spdlog::wstring_view_t to_string_view(const wmemory_buf_t &buf)
     SPDLOG_NOEXCEPT {
     return spdlog::wstring_view_t{buf.data(), buf.size()};

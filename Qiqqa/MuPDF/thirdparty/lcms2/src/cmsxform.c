@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2023 Marti Maria Saguer
+//  Copyright (c) 1998-2024 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -261,7 +261,7 @@ void FloatXFORM(cmsContext ContextID, _cmsTRANSFORM* p,
     cmsUInt8Number* output;
     cmsFloat32Number fIn[cmsMAXCHANNELS], fOut[cmsMAXCHANNELS];
     cmsFloat32Number OutOfGamut;
-    cmsUInt32Number i, j, c, strideIn, strideOut;
+    size_t i, j, c, strideIn, strideOut;
     _cmsTRANSFORMCORE *core = p->core;
 
     _cmsHandleExtraChannels(ContextID, p, in, out, PixelsPerLine, LineCount, Stride);
@@ -328,7 +328,7 @@ void NullFloatXFORM(cmsContext ContextID, _cmsTRANSFORM* p,
     cmsUInt8Number* accum;
     cmsUInt8Number* output;
     cmsFloat32Number fIn[cmsMAXCHANNELS];
-    cmsUInt32Number i, j, strideIn, strideOut;
+    size_t i, j, strideIn, strideOut;
 
     _cmsHandleExtraChannels(ContextID, p, in, out, PixelsPerLine, LineCount, Stride);
 
@@ -383,7 +383,7 @@ void NullXFORM(cmsContext ContextID,
     cmsUInt8Number* accum;
     cmsUInt8Number* output;
     cmsUInt16Number wIn[cmsMAXCHANNELS];
-    cmsUInt32Number i, j, strideIn, strideOut;
+    size_t i, j, strideIn, strideOut;
 
     _cmsHandleExtraChannels(ContextID, p, in, out, PixelsPerLine, LineCount, Stride);
 
@@ -393,17 +393,17 @@ void NullXFORM(cmsContext ContextID,
 
     for (i = 0; i < LineCount; i++) {
 
-           accum = (cmsUInt8Number*)in + strideIn;
-           output = (cmsUInt8Number*)out + strideOut;
+        accum = (cmsUInt8Number*)in + strideIn;
+        output = (cmsUInt8Number*)out + strideOut;
 
-           for (j = 0; j < PixelsPerLine; j++) {
+        for (j = 0; j < PixelsPerLine; j++) {
 
                   accum = p->FromInput(ContextID, p, wIn, accum, Stride->BytesPerPlaneIn);
                   output = p->ToOutput(ContextID, p, wIn, output, Stride->BytesPerPlaneOut);
-    }
+        }
 
-           strideIn += Stride->BytesPerLineIn;
-           strideOut += Stride->BytesPerLineOut;
+        strideIn += Stride->BytesPerLineIn;
+        strideOut += Stride->BytesPerLineOut;
     }
 
 }
@@ -1839,7 +1839,7 @@ void _cmsTransform2toTransformAdaptor(cmsContext ContextID, struct _cmstransform
                                       const cmsStride* Stride)
 {
 
-       cmsUInt32Number i, strideIn, strideOut;
+       size_t i, strideIn, strideOut;
 
        _cmsHandleExtraChannels(ContextID, CMMcargo, InputBuffer, OutputBuffer, PixelsPerLine, LineCount, Stride);
 
@@ -2354,7 +2354,7 @@ _cmsTRANSFORM* AllocEmptyTransform(cmsContext ContextID, cmsPipeline* lut,
        }
 
     // Check whatever this is a true floating point transform
-    if (_cmsFormatterIsFloat(*OutputFormat)) {
+    if (_cmsFormatterIsFloat(*InputFormat) || _cmsFormatterIsFloat(*OutputFormat)) {
 
         // Get formatter function always return a valid union, but the contents of this union may be NULL.
         p ->FromInputFloat = _cmsGetFormatter(ContextID, *InputFormat,  cmsFormatterInput, CMS_PACK_FLAGS_FLOAT).FmtFloat;
@@ -2550,7 +2550,15 @@ cmsHTRANSFORM CMSEXPORT cmsCreateExtendedTransform(cmsContext ContextID,
     cmsColorSpaceSignature EntryColorSpace;
     cmsColorSpaceSignature ExitColorSpace;
     cmsPipeline* Lut;
-    cmsUInt32Number LastIntent = Intents[nProfiles-1];
+    cmsUInt32Number LastIntent;
+
+    // Safeguard
+    if (nProfiles <= 0 || nProfiles > 255) {
+        cmsSignalError(ContextID, cmsERROR_RANGE, "Wrong number of profiles. 1..255 expected, %d found.", nProfiles);
+        return NULL;
+    }
+
+    LastIntent = Intents[nProfiles - 1];
 
     // If it is a fake transform
     if (dwFlags & cmsFLAGS_NULLTRANSFORM)

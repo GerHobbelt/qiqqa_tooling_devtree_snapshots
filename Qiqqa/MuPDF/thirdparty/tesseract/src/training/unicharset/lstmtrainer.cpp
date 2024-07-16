@@ -15,12 +15,8 @@
 // limitations under the License.
 ///////////////////////////////////////////////////////////////////////
 
-#define _USE_MATH_DEFINES // needed to get definition of M_SQRT1_2
-
 // Include automatically generated configuration file if running autoconf.
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include <cmath>
 #include <iomanip>             // for std::setprecision
@@ -39,14 +35,14 @@
 #ifdef INCLUDE_TENSORFLOW
 #  include "tfnetwork.h"
 #endif
-#include "tprintf.h"
+#include <tesseract/tprintf.h>
 
 namespace tesseract {
 
 // Min actual error rate increase to constitute divergence.
 const double kMinDivergenceRate = 50.0;
 // Min iterations since last best before acting on a stall.
-const int kMinStallIterations = 999999;
+const int kMinStallIterations = 10000;
 // Fraction of current char error rate that sub_trainer_ has to be ahead
 // before we declare the sub_trainer_ a success and switch to it.
 const double kSubTrainerMarginFraction = 3.0 / 128;
@@ -75,16 +71,21 @@ const int kTargetYScale = 100;
 #endif // !GRAPHICS_DISABLED
 
 LSTMTrainer::LSTMTrainer()
-    : randomly_rotate_(false), training_data_(0), sub_trainer_(nullptr) {
+  : LSTMRecognizer(nullptr)
+  , randomly_rotate_(false)
+  , training_data_(0)
+  , sub_trainer_(nullptr) 
+{
   EmptyConstructor();
   debug_interval_ = 0;
 }
 
 LSTMTrainer::LSTMTrainer(const std::string &model_base, const std::string &checkpoint_name,
                          int debug_interval, int64_t max_memory)
-    : randomly_rotate_(false),
-      training_data_(max_memory),
-      sub_trainer_(nullptr) {
+  : LSTMRecognizer(nullptr)
+  , randomly_rotate_(false)
+  , training_data_(max_memory)
+  , sub_trainer_(nullptr) {
   EmptyConstructor();
   debug_interval_ = debug_interval;
   model_base_ = model_base;
@@ -825,8 +826,7 @@ bool LSTMTrainer::EncodeString(const std::string &str,
   if (unicharset.encode_string(cleaned.c_str(), true, &internal_labels, nullptr,
                                &err_index)) {
     bool success = true;
-	for (int i = 0, l = internal_labels.size(); i < l; i++) {
-	  auto internal_label = internal_labels[i];
+    for (auto internal_label : internal_labels) {
       if (recoder != nullptr) {
         // Re-encode labels via recoder.
         RecodedCharID code;
@@ -1118,7 +1118,7 @@ void LSTMTrainer::InitCharSet() {
   training_flags_ = TF_COMPRESS_UNICHARSET;
   // Initialize the unicharset and recoder.
   if (!LoadCharsets(&mgr_)) {
-    ASSERT_HOST(!"Must provide a traineddata containing lstm_unicharset and lstm_recoder!");
+    ASSERT_HOST_MSG(false, "Must provide a traineddata containing lstm_unicharset and lstm_recoder!");
   }
   SetNullChar();
 }

@@ -303,7 +303,7 @@ TEST(Objdetect_QRCode_points_position, rotate45) {
     Ptr<QRCodeEncoder> qrcode_enc = cv::QRCodeEncoder::create(params);
     Mat qrImage;
     qrcode_enc->encode(expect_msg, qrImage);
-    Mat image(800, 800, CV_8UC1);
+    Mat image(800, 800, CV_8UC1, Scalar(0));
     const int pixInBlob = 4;
     Size qrSize = Size((21+(params.version-1)*4)*pixInBlob,(21+(params.version-1)*4)*pixInBlob);
     Rect2f rec(static_cast<float>((image.cols - qrSize.width)/2),
@@ -321,7 +321,7 @@ TEST(Objdetect_QRCode_points_position, rotate45) {
     auto decoded_info1 = detector.detectAndDecode(image, points1);
     ASSERT_EQ(1ull, decoded_info1.size());
     ASSERT_EQ(expect_msg, decoded_info1[0]);
-    EXPECT_NEAR(0, cvtest::norm(Mat(goldCorners), points1[0].reshape(1, 8), NORM_INF), 8.);
+    EXPECT_NEAR(0, cvtest::norm(Mat(goldCorners).reshape(1, (int)goldCorners.size()), points1[0].reshape(1, 8), NORM_INF), 8.);
 
     const double angle = 45;
     Point2f pc(image.cols/2.f, image.rows/2.f);
@@ -338,7 +338,7 @@ TEST(Objdetect_QRCode_points_position, rotate45) {
     auto decoded_info2 = detector.detectAndDecode(image, points2);
     ASSERT_EQ(1ull, decoded_info2.size());
     ASSERT_EQ(expect_msg, decoded_info2[0]);
-    EXPECT_NEAR(0, cvtest::norm(Mat(rotateGoldCorners), points2[0].reshape(1, 8), NORM_INF), 11.);
+    EXPECT_NEAR(0, cvtest::norm(Mat(rotateGoldCorners).reshape(1, (int)rotateGoldCorners.size()), points2[0].reshape(1, 8), NORM_INF), 11.);
 }
 
 INSTANTIATE_TEST_CASE_P(/**/, Objdetect_QRCode, testing::ValuesIn(qrcode_images_name));
@@ -364,7 +364,7 @@ TEST(Objdetect_QRCode_Big, regression) {
     Ptr<QRCodeEncoder> qrcode_enc = cv::QRCodeEncoder::create(params);
     Mat qrImage;
     qrcode_enc->encode(expect_msg, qrImage);
-    Mat largeImage(4032, 3024, CV_8UC1);
+    Mat largeImage(4032, 3024, CV_8UC1, Scalar(0));
     const int pixInBlob = 4;
     Size qrSize = Size((21+(params.version-1)*4)*pixInBlob,(21+(params.version-1)*4)*pixInBlob);
     Mat roiImage = largeImage(Rect((largeImage.cols - qrSize.width)/2, (largeImage.rows - qrSize.height)/2,
@@ -395,7 +395,7 @@ TEST(Objdetect_QRCode_Tiny, regression) {
     Ptr<QRCodeEncoder> qrcode_enc = cv::QRCodeEncoder::create(params);
     Mat qrImage;
     qrcode_enc->encode(expect_msg, qrImage);
-    Mat tinyImage(80, 80, CV_8UC1);
+    Mat tinyImage(80, 80, CV_8UC1, Scalar(0));
     const int pixInBlob = 2;
     Size qrSize = Size((21+(params.version-1)*4)*pixInBlob,(21+(params.version-1)*4)*pixInBlob);
     Mat roiImage = tinyImage(Rect((tinyImage.cols - qrSize.width)/2, (tinyImage.rows - qrSize.height)/2,

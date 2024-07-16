@@ -17,9 +17,7 @@
  *****************************************************************************/
 
 // Include automatically generated configuration file if running autoconf.
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #if !DISABLED_LEGACY_ENGINE
 
@@ -31,14 +29,14 @@
 #include "matrix.h"         // for MATRIX
 #include "normalis.h"       // for DENORM
 #include "pageres.h"        // for WERD_RES
-#include "params.h"         // for IntParam, BoolParam
+#include <tesseract/params.h>         // for IntParam, BoolParam
 #include "ratngs.h"         // for BLOB_CHOICE (ptr only), BLOB_CHOICE_LIST (ptr ...
 #include "rect.h"           // for TBOX
 #include "render.h"         // for display_blob
 #include "seam.h"           // for SEAM
 #include "split.h"          // for remove_edgept
 #include "stopper.h"        // for DANGERR
-#include "tprintf.h"        // for tprintf
+#include <tesseract/tprintf.h>        // for tprintf
 #include "wordrec.h"        // for Wordrec, SegSearchPending (ptr only)
 
 namespace tesseract {
@@ -172,7 +170,7 @@ static int16_t total_containment(TBLOB *blob1, TBLOB *blob2) {
 
 // Helper runs all the checks on a seam to make sure it is valid.
 // Returns the seam if OK, otherwise deletes the seam and returns nullptr.
-static SEAM *CheckSeam(int debug_level, int32_t blob_number, TWERD *word, TBLOB *blob,
+static SEAM *CheckSeam(int chop_debug, int32_t blob_number, TWERD *word, TBLOB *blob,
                        TBLOB *other_blob, const std::vector<SEAM *> &seams, SEAM *seam) {
   if (seam == nullptr || blob->outlines == nullptr || other_blob->outlines == nullptr ||
       total_containment(blob, other_blob) || check_blob(other_blob) ||
@@ -185,8 +183,8 @@ static SEAM *CheckSeam(int debug_level, int32_t blob_number, TWERD *word, TBLOB 
       delete seam;
       seam = nullptr;
 #if !GRAPHICS_DISABLED
-      if (debug_level) {
-        if (debug_level > 2) {
+      if (chop_debug > 0) {
+        if (chop_debug > 2) {
           display_blob(blob, Diagnostics::RED);
         }
         tprintDebug("\n** seam being removed ** \n");
@@ -225,7 +223,7 @@ SEAM *Wordrec::attempt_blob_chop(TWERD *word, TBLOB *blob, int32_t blob_number, 
   if (seam == nullptr) {
     seam = pick_good_seam(blob);
   }
-  if (chop_debug) {
+  if (chop_debug > 0) {
     if (seam != nullptr) {
       seam->Print("Good seam picked=");
     } else {
@@ -326,7 +324,7 @@ SEAM *Wordrec::improve_one_blob(const std::vector<BLOB_CHOICE *> &blob_choices, 
   SEAM *seam = nullptr;
   do {
     auto blob = select_blob_to_split_from_fixpt(fixpt);
-    if (chop_debug) {
+    if (chop_debug > 0) {
       tprintDebug("blob_number from fixpt = {}\n", blob);
     }
     bool split_point_from_dict = (blob != -1);
@@ -335,7 +333,7 @@ SEAM *Wordrec::improve_one_blob(const std::vector<BLOB_CHOICE *> &blob_choices, 
     } else {
       blob = select_blob_to_split(blob_choices, rating_ceiling, split_next_to_fragment);
     }
-    if (chop_debug) {
+    if (chop_debug > 0) {
       tprintDebug("blob_number = {}\n", blob);
     }
     *blob_number = blob;
@@ -346,7 +344,7 @@ SEAM *Wordrec::improve_one_blob(const std::vector<BLOB_CHOICE *> &blob_choices, 
     // TODO(rays) it may eventually help to allow italic_blob to be true,
     seam = chop_numbered_blob(word->chopped_word, *blob_number, italic_blob, word->seam_array);
     if (seam != nullptr) {
-      return seam; // Success!
+      break; // Success!
     }
     if (blob_choices[*blob_number] == nullptr) {
       return nullptr;
@@ -529,7 +527,7 @@ int Wordrec::select_blob_to_split(const std::vector<BLOB_CHOICE *> &blob_choices
   int worst_index_near_fragment = -1;
   std::vector<const CHAR_FRAGMENT *> fragments;
 
-  if (chop_debug) {
+  if (chop_debug > 0) {
     if (rating_ceiling < FLT_MAX) {
       tprintDebug("rating_ceiling = {}\n", rating_ceiling);
     } else {
@@ -578,7 +576,7 @@ int Wordrec::select_blob_to_split(const std::vector<BLOB_CHOICE *> &blob_choices
               blob_choice->rating() > worst_near_fragment) {
             worst_index_near_fragment = x;
             worst_near_fragment = blob_choice->rating();
-            if (chop_debug) {
+            if (chop_debug > 0) {
               tprintDebug(
                   "worst_index_near_fragment={}"
                   " expand_following_fragment={}"

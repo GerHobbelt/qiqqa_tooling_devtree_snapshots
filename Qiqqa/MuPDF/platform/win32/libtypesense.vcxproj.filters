@@ -95,6 +95,12 @@
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/app_metrics.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/aq_model.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/aq_model_manager.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/array.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
@@ -122,6 +128,15 @@
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/collection_manager.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/conversation_manager.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/conversation_model.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/conversation_model_manager.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/core_api.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
@@ -131,7 +146,13 @@
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/cvt.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/embedder_manager.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/event_manager.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/facet_index.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/field.cpp">
@@ -140,7 +161,19 @@
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/file_utils.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/filter.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/filter_result_iterator.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/housekeeper.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/http_client.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/http_data.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/http_proxy.cpp">
@@ -153,6 +186,12 @@
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/ids_t.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/image_embedder.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/image_processor.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/index.cpp">
@@ -173,19 +212,22 @@
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/num_tree.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/numeric_range_trie.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/or_iterator.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/override.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/popular_queries.cpp">
-      <Filter>Source Files\src</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/posting.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/posting_list.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/query_analytics.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/raft_server.cpp">
@@ -195,6 +237,12 @@
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/sorted_array.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/stemmer_manager.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/stopwords_manager.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/string_utils.cpp">
@@ -207,9 +255,6 @@
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/text_embedder.cpp">
-      <Filter>Source Files\src</Filter>
-    </ClCompile>
-    <ClCompile Include="../../thirdparty/owemdjee/typesense/src/text_embedder_manager.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/src/text_embedder_remote.cpp">
@@ -287,6 +332,9 @@
     <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_operations_test.cpp">
       <Filter>Source Files\test</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_optimized_faceting_test.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_override_test.cpp">
       <Filter>Source Files\test</Filter>
     </ClCompile>
@@ -311,10 +359,28 @@
     <ClCompile Include="../../thirdparty/owemdjee/typesense/test/collection_vector_search_test.cpp">
       <Filter>Source Files\test</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/conversation_test.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/test/core_api_utils_test.cpp">
       <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/test/cvt_test.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/facet_index_test.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/filter_test.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/geo_filtering_old_test.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/geo_filtering_test.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/id_list_test.cpp">
       <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/test/index_test.cpp">
@@ -327,6 +393,9 @@
       <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/test/num_tree_test.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/numeric_range_trie_test.cpp">
       <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/test/or_iterator_test.cpp">
@@ -345,6 +414,9 @@
       <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/test/sorted_array_test.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/owemdjee/typesense/test/stopwords_manager_test.cpp">
       <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/owemdjee/typesense/test/store_test.cpp">
@@ -419,6 +491,15 @@
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/collection_manager.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/conversation_manager.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/conversation_model.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/conversation_model_manager.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/core_api.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
@@ -428,16 +509,34 @@
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/cvt.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/dr_wav.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/embedder_manager.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/event_manager.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/exectime.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/facet_index.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/field.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/file_utils.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/filter.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/filter_result_iterator.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/housekeeper.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/http_client.h">
@@ -456,6 +555,12 @@
       <Filter>Header Files\include</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/ids_t.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/image_embedder.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/image_processor.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/index.h">
@@ -482,6 +587,12 @@
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/number.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/numeric_range_trie.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/numeric_range_trie_test.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/option.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
@@ -494,19 +605,22 @@
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/parasort.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/popular_queries.h">
-      <Filter>Header Files\include</Filter>
-    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/posting.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/posting_list.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/query_analytics.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/raft_server.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/ratelimit_manager.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/sole.hpp">
       <Filter>Header Files\include</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/sorted_array.h">
@@ -519,6 +633,12 @@
       <Filter>Header Files\include</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/stackprinter.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/stemmer_manager.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/stopwords_manager.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/store.h">
@@ -534,9 +654,6 @@
       <Filter>Header Files\include</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/text_embedder.h">
-      <Filter>Header Files\include</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/text_embedder_manager.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/text_embedder_remote.h">
@@ -593,6 +710,12 @@
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/vector_query_ops.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/vq_model.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/owemdjee/typesense/include/vq_model_manager.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/typesense/include/wyhash_v5.h">
       <Filter>Header Files\include</Filter>
     </ClInclude>
@@ -645,6 +768,9 @@
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/typesense/ci_build.sh">
+      <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/typesense/ci_build_v2.sh">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/typesense/cmake/For.cmake">
@@ -702,6 +828,9 @@
       <Filter>Misc Files\cmake</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/typesense/debian-pkg/generate_deb_rpm.sh">
+      <Filter>Misc Files\debian-pkg</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/typesense/debian-pkg/gpu_generate_deb_rpm.sh">
       <Filter>Misc Files\debian-pkg</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/typesense/debian-pkg/typesense-server/etc/typesense/typesense-server.ini">

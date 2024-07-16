@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libfatal</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF813C07}</ProjectGuid>
-    <RootNamespace>libfatal</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -242,6 +240,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/fatal/fatal/container/test/variadic_union_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/fatal/fatal/container/test/variant_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/fatal/fatal/functional/test/functional_test.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/fatal/fatal/lesson/driver.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/fatal/fatal/math/test/compile_time_rng_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/fatal/fatal/math/test/hash_test.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/fatal/fatal/math/test/numerics_test.cpp" />
@@ -361,7 +360,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/fatal/fatal/container/circular_queue.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fatal/fatal/container/flag_set.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fatal/fatal/container/legacy_variant.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/fatal/fatal/container/normalized_wrapper.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fatal/fatal/container/optional.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fatal/fatal/container/random_access_iterator.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fatal/fatal/container/runtime_array.h" />
@@ -376,7 +374,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/fatal/fatal/functional/functional.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fatal/fatal/functional/identity.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fatal/fatal/functional/no_op.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/fatal/fatal/lesson/driver.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fatal/fatal/lesson/lesson.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fatal/fatal/log/log.h" />
     <ClInclude Include="../../thirdparty/owemdjee/fatal/fatal/math/compile_time_rng.h" />

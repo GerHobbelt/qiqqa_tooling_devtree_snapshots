@@ -141,6 +141,7 @@ function (libfind_process PREFIX)
           list(APPEND libraryopts ${i}_LIBRARY)
         endif()
       else()
+        message(${${i}_LIBRARIES})
         # Oh no, we don't know the option names
         message(FATAL_ERROR "We couldn't determine config variable names for ${i} includes and libs. Aieeh!")
       endif()

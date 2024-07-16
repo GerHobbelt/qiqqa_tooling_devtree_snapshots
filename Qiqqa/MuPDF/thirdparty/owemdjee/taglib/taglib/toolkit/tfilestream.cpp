@@ -28,6 +28,7 @@
 #ifdef _WIN32
 # include <windows.h>
 #else
+# include <climits>
 # include <cstdio>
 # include <unistd.h>
 #endif
@@ -55,7 +56,21 @@ namespace
 #if defined (PLATFORM_WINRT)
     return CreateFile2(path.wstr().c_str(), access, FILE_SHARE_READ, OPEN_EXISTING, nullptr);
 #else
-    return CreateFileW(path.wstr().c_str(), access, FILE_SHARE_READ, nullptr, OPEN_EXISTING, 0, nullptr);
+    constexpr wchar_t LongLocalPathPrefix[] = L"\\\\?\\";
+    constexpr wchar_t UNCPathPrefix[] = L"\\\\";
+    constexpr wchar_t LongUNCPathPrefix[] = L"\\\\?\\UNC\\";
+    std::wstring pathWStr = path.wstr();
+    if(pathWStr.length() > MAX_PATH &&
+       pathWStr.compare(0, std::size(LongLocalPathPrefix) - 1, LongLocalPathPrefix) != 0 &&
+       pathWStr.compare(0, std::size(LongUNCPathPrefix) - 1, LongUNCPathPrefix) != 0) {
+      if(pathWStr.compare(0, std::size(UNCPathPrefix) - 1, UNCPathPrefix) == 0) {
+        pathWStr = LongUNCPathPrefix + pathWStr.substr(2);
+      }
+      else {
+        pathWStr = LongLocalPathPrefix + pathWStr;
+      }
+    }
+    return CreateFileW(pathWStr.c_str(), access, FILE_SHARE_READ, nullptr, OPEN_EXISTING, 0, nullptr);
 #endif
   }
 
@@ -202,8 +217,8 @@ ByteVector FileStream::readBlock(size_t length)
     return ByteVector();
 
   if(length > bufferSize()) {
-    const auto streamLength = static_cast<size_t>(FileStream::length());
-    if(length > streamLength) {
+    if(const auto streamLength = static_cast<size_t>(FileStream::length());
+       length > streamLength) {
       length = streamLength;
     }
   }
@@ -326,7 +341,8 @@ void FileStream::removeBlock(offset_t start, size_t length)
 
   ByteVector buffer(bufferLength);
 
-  for(unsigned int bytesRead = -1; bytesRead != 0;) {
+  unsigned int bytesRead = UINT_MAX;
+  while(bytesRead != 0) {
     seek(readPosition);
     bytesRead = static_cast<unsigned int>(readFile(d->file, buffer));
     readPosition += bytesRead;
@@ -355,7 +371,7 @@ bool FileStream::readOnly() const
 
 bool FileStream::isOpen() const
 {
-  return (d->file != InvalidFileHandle);
+  return d->file != InvalidFileHandle;
 }
 
 void FileStream::seek(offset_t offset, Position p)
@@ -489,8 +505,7 @@ void FileStream::truncate(offset_t length)
 #else
 
   fflush(d->file);
-  const int error = ftruncate(fileno(d->file), length);
-  if(error != 0)
+  if(const int error = ftruncate(fileno(d->file), length); error != 0)
     debug("FileStream::truncate() -- Couldn't truncate the file.");
 
 #endif

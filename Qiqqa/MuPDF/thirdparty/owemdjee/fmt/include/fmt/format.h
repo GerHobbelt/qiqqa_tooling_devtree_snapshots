@@ -38,31 +38,36 @@
 #  define FMT_REMOVE_TRANSITIVE_INCLUDES
 #endif
 
-#include <cmath>             // std::signbit
-#include <cstdint>           // uint32_t
-#include <cstring>           // std::memcpy
-#include <initializer_list>  // std::initializer_list
-#include <limits>            // std::numeric_limits
-#if defined(__GLIBCXX__) && !defined(_GLIBCXX_USE_DUAL_ABI)
+#ifndef FMT_IMPORT_STD
+#  include <cmath>             // std::signbit
+#  include <cstdint>           // uint32_t
+#  include <cstring>           // std::memcpy
+#  include <initializer_list>  // std::initializer_list
+#  include <limits>            // std::numeric_limits
+#  if defined(__GLIBCXX__) && !defined(_GLIBCXX_USE_DUAL_ABI)
 // Workaround for pre gcc 5 libstdc++.
-#  include <memory>  // std::allocator_traits
+#    include <memory>  // std::allocator_traits
+#  endif
+#  include <stdexcept>     // std::runtime_error
+#  include <string>        // std::string
+#  include <system_error>  // std::system_error
+#  include <cfloat>            // DBL_DIG
 #endif
-#include <stdexcept>     // std::runtime_error
-#include <string>        // std::string
-#include <system_error>  // std::system_error
-#include <cfloat>            // DBL_DIG
 
 #include "base.h"
 
 // Checking FMT_CPLUSPLUS for warning suppression in MSVC.
-#if FMT_HAS_INCLUDE(<bit>) && FMT_CPLUSPLUS > 201703L
+#if FMT_HAS_INCLUDE(<bit>) && FMT_CPLUSPLUS > 201703L && \
+    !defined(FMT_IMPORT_STD)
 #  include <bit>  // std::bit_cast
 #endif
 
 // libc++ supports string_view in pre-c++17.
 #if FMT_HAS_INCLUDE(<string_view>) && \
     (FMT_CPLUSPLUS >= 201703L || defined(_LIBCPP_VERSION))
-#  include <string_view>
+#  ifndef FMT_IMPORT_STD
+#    include <string_view>
+#  endif
 #  define FMT_USE_STRING_VIEW
 #endif
 
@@ -769,28 +774,22 @@ using is_integer =
 #  define FMT_USE_LONG_DOUBLE 1
 #endif
 
-#ifndef FMT_USE_FLOAT128
-#  ifdef __clang__
-// Clang emulates GCC, so it has to appear early.
-#    if FMT_HAS_INCLUDE(<quadmath.h>)
-#      define FMT_USE_FLOAT128 1
-#    endif
-#  elif defined(__GNUC__)
-// GNU C++:
-#    if defined(_GLIBCXX_USE_FLOAT128) && !defined(__STRICT_ANSI__)
-#      define FMT_USE_FLOAT128 1
-#    endif
-#  endif
-#  ifndef FMT_USE_FLOAT128
-#    define FMT_USE_FLOAT128 0
-#  endif
+#if defined(FMT_USE_FLOAT128)
+// Use the provided definition.
+#elif FMT_CLANG_VERSION && FMT_HAS_INCLUDE(<quadmath.h>)
+#  define FMT_USE_FLOAT128 1
+#elif FMT_GCC_VERSION && defined(_GLIBCXX_USE_FLOAT128) && \
+    !defined(__STRICT_ANSI__)
+#  define FMT_USE_FLOAT128 1
+#else
+#  define FMT_USE_FLOAT128 0
 #endif
-
 #if FMT_USE_FLOAT128
 using float128 = __float128;
 #else
 using float128 = void;
 #endif
+
 template <typename T> using is_float128 = std::is_same<T, float128>;
 
 template <typename T>
@@ -1196,9 +1195,7 @@ inline auto do_count_digits(uint64_t n) -> int {
 // except for n == 0 in which case count_digits returns 1.
 FMT_CONSTEXPR20 inline auto count_digits(uint64_t n) -> int {
 #ifdef FMT_BUILTIN_CLZLL
-  if (!is_constant_evaluated()) {
-    return do_count_digits(n);
-  }
+  if (!is_constant_evaluated()) return do_count_digits(n);
 #endif
   return count_digits_fallback(n);
 }
@@ -1812,7 +1809,7 @@ auto find_escape(const Char* begin, const Char* end)
 
 inline auto find_escape(const char* begin, const char* end)
     -> find_escape_result<char> {
-  if (!is_utf8()) return find_escape<char>(begin, end);
+  if (!use_utf8()) return find_escape<char>(begin, end);
   auto result = find_escape_result<char>{end, nullptr, 0};
   for_each_codepoint(string_view(begin, to_unsigned(end - begin)),
                      [&](uint32_t cp, string_view sv) {
@@ -2707,7 +2704,7 @@ FMT_CONSTEXPR20 auto write_float(OutputIt out, const DecimalFP& f,
 }
 
 template <typename T> constexpr auto isnan(T value) -> bool {
-  return !(value >= value);  // std::isnan doesn't support __float128.
+  return value != value;  // std::isnan doesn't support __float128.
 }
 
 template <typename T, typename Enable = void>
@@ -3733,7 +3730,9 @@ FMT_CONSTEXPR auto write(OutputIt out, const T& value) -> enable_if_t<
 template <typename Char, typename OutputIt, typename T,
           typename Context = basic_format_context<OutputIt, Char>>
 FMT_CONSTEXPR auto write(OutputIt out, const T& value)
-    -> enable_if_t<mapped_type_constant<T, Context>::value == type::custom_type,
+    -> enable_if_t<mapped_type_constant<T, Context>::value ==
+                           type::custom_type &&
+                       !std::is_fundamental<T>::value,
                    OutputIt> {
   auto formatter = typename Context::template formatter_type<T>();
   auto parse_ctx = typename Context::parse_context_type({});
@@ -4012,7 +4011,8 @@ struct formatter<T, Char, enable_if_t<detail::has_format_as<T>::value>>
   template <typename FormatContext>
   auto format(const T& value, FormatContext& ctx) const -> decltype(ctx.out()) {
     using base = formatter<detail::format_as_t<T>, Char>;
-    return base::format(format_as(value), ctx);
+    auto&& val = format_as(value);  // Make an lvalue reference for format.
+    return base::format(val, ctx);
   }
 };
 
@@ -4027,10 +4027,13 @@ FMT_FORMAT_AS(unsigned short, unsigned);
 FMT_FORMAT_AS(long, detail::long_type);
 FMT_FORMAT_AS(unsigned long, detail::ulong_type);
 FMT_FORMAT_AS(Char*, const Char*);
-FMT_FORMAT_AS(std::basic_string<Char>, basic_string_view<Char>);
 FMT_FORMAT_AS(std::nullptr_t, const void*);
 FMT_FORMAT_AS(detail::std_string_view<Char>, basic_string_view<Char>);
 FMT_FORMAT_AS(void*, const void*);
+
+template <typename Char, typename Traits, typename Allocator>
+class formatter<std::basic_string<Char, Traits, Allocator>, Char>
+    : public formatter<basic_string_view<Char>, Char> {};
 
 template <typename Char, size_t N>
 struct formatter<Char[N], Char> : formatter<basic_string_view<Char>, Char> {};
@@ -4141,39 +4144,44 @@ template <typename T> struct formatter<group_digits_view<T>> : formatter<T> {
                                                        specs.width_ref, ctx);
     detail::handle_dynamic_spec<detail::precision_checker>(
         specs.precision, specs.precision_ref, ctx);
-    return detail::write_int(ctx.out(),
-                             static_cast<detail::uint64_or_128_t<T>>(t.value),
-                             0, specs, detail::digit_grouping<char>("\3", ","));
+    auto arg = detail::make_write_int_arg(t.value, specs.sign);
+    return detail::write_int(
+        ctx.out(), static_cast<detail::uint64_or_128_t<T>>(arg.abs_value),
+        arg.prefix, specs, detail::digit_grouping<char>("\3", ","));
   }
 };
 
-template <typename T> struct nested_view {
-  const formatter<T>* fmt;
+template <typename T, typename Char> struct nested_view {
+  const formatter<T, Char>* fmt;
   const T* value;
 };
 
-template <typename T> struct formatter<nested_view<T>> {
-  FMT_CONSTEXPR auto parse(format_parse_context& ctx) -> const char* {
+template <typename T, typename Char>
+struct formatter<nested_view<T, Char>, Char> {
+  template <typename ParseContext>
+  FMT_CONSTEXPR auto parse(ParseContext& ctx) -> decltype(ctx.begin()) {
     return ctx.begin();
   }
-  auto format(nested_view<T> view, format_context& ctx) const
+  template <typename FormatContext>
+  auto format(nested_view<T, Char> view, FormatContext& ctx) const
       -> decltype(ctx.out()) {
     return view.fmt->format(*view.value, ctx);
   }
 };
 
-template <typename T> struct nested_formatter {
+template <typename T, typename Char = char> struct nested_formatter {
  private:
   int width_;
   detail::fill_t fill_;
   align_t align_ : 4;
-  formatter<T> formatter_;
+  formatter<T, Char> formatter_;
 
  public:
   constexpr nested_formatter() : width_(0), align_(align_t::none) {}
 
-  FMT_CONSTEXPR auto parse(format_parse_context& ctx) -> const char* {
-    auto specs = detail::dynamic_format_specs<char>();
+  FMT_CONSTEXPR auto parse(basic_format_parse_context<Char>& ctx)
+      -> decltype(ctx.begin()) {
+    auto specs = detail::dynamic_format_specs<Char>();
     auto it = parse_format_specs(ctx.begin(), ctx.end(), specs, ctx,
                                  detail::type::none_type);
     width_ = specs.width;
@@ -4183,21 +4191,21 @@ template <typename T> struct nested_formatter {
     return formatter_.parse(ctx);
   }
 
-  template <typename F>
-  auto write_padded(format_context& ctx, F write) const -> decltype(ctx.out()) {
+  template <typename FormatContext, typename F>
+  auto write_padded(FormatContext& ctx, F write) const -> decltype(ctx.out()) {
     if (width_ == 0) return write(ctx.out());
-    auto buf = memory_buffer();
-    write(appender(buf));
+    auto buf = basic_memory_buffer<Char>();
+    write(basic_appender<Char>(buf));
     auto specs = format_specs();
     specs.width = width_;
     specs.fill = fill_;
     specs.align = align_;
-    return detail::write<char>(ctx.out(), string_view(buf.data(), buf.size()),
-                               specs);
+    return detail::write<Char>(
+        ctx.out(), basic_string_view<Char>(buf.data(), buf.size()), specs);
   }
 
-  auto nested(const T& value) const -> nested_view<T> {
-    return nested_view<T>{&formatter_, &value};
+  auto nested(const T& value) const -> nested_view<T, Char> {
+    return nested_view<T, Char>{&formatter_, &value};
   }
 };
 
@@ -4312,7 +4320,7 @@ void vformat_to(buffer<Char>& buf, basic_string_view<Char> fmt,
       return begin;
     }
 
-    void on_error(const char* message) { report_error(message); }
+    FMT_NORETURN void on_error(const char* message) { report_error(message); }
   };
   detail::parse_format_string<false>(fmt, format_handler(out, fmt, args, loc));
 }
@@ -4331,7 +4339,30 @@ extern template FMT_API auto decimal_point_impl(locale_ref) -> char;
 extern template FMT_API auto decimal_point_impl(locale_ref) -> wchar_t;
 #endif  // FMT_HEADER_ONLY
 
+template <typename T, typename Char, type TYPE>
+template <typename FormatContext>
+FMT_CONSTEXPR FMT_INLINE auto native_formatter<T, Char, TYPE>::format(
+    const T& val, FormatContext& ctx) const -> decltype(ctx.out()) {
+  if (specs_.width_ref.kind == arg_id_kind::none &&
+      specs_.precision_ref.kind == arg_id_kind::none) {
+    return write<Char>(ctx.out(), val, specs_, ctx.locale());
+  }
+  auto specs = specs_;
+  handle_dynamic_spec<width_checker>(specs.width, specs.width_ref, ctx);
+  handle_dynamic_spec<precision_checker>(specs.precision, specs.precision_ref,
+                                         ctx);
+  return write<Char>(ctx.out(), val, specs, ctx.locale());
+}
+
+FMT_END_EXPORT
 }  // namespace detail
+
+FMT_BEGIN_EXPORT
+
+template <typename Char>
+struct formatter<detail::float128, Char>
+    : detail::native_formatter<detail::float128, Char,
+                               detail::type::float_type> {};
 
 #if FMT_USE_USER_DEFINED_LITERALS
 inline namespace literals {
@@ -4421,26 +4452,6 @@ FMT_NODISCARD FMT_INLINE auto formatted_size(const Locale& loc,
 }
 
 FMT_END_EXPORT
-
-template <typename T, typename Char>
-template <typename FormatContext>
-FMT_CONSTEXPR FMT_INLINE auto
-formatter<T, Char,
-          enable_if_t<detail::type_constant<T, Char>::value !=
-                      detail::type::custom_type>>::format(const T& val,
-                                                          FormatContext& ctx)
-    const -> decltype(ctx.out()) {
-  if (specs_.width_ref.kind == detail::arg_id_kind::none &&
-      specs_.precision_ref.kind == detail::arg_id_kind::none) {
-    return detail::write<Char>(ctx.out(), val, specs_, ctx.locale());
-  }
-  auto specs = specs_;
-  detail::handle_dynamic_spec<detail::width_checker>(specs.width,
-                                                     specs.width_ref, ctx);
-  detail::handle_dynamic_spec<detail::precision_checker>(
-      specs.precision, specs.precision_ref, ctx);
-  return detail::write<Char>(ctx.out(), val, specs, ctx.locale());
-}
 
 FMT_END_NAMESPACE
 

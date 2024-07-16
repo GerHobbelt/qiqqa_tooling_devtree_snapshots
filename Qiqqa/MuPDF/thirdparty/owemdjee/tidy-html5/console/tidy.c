@@ -652,7 +652,7 @@ static void getSortedOption(TidyDoc tdoc,         /**< The Tidy document. */
     }
     tOption->topt[i] = NULL; /* sentinel */
 
-    qsort(tOption->topt,
+    qsort((void *)tOption->topt,
           i, /* there are i items, not including the sentinel */
           sizeof(tOption->topt[0]),
           cmpOpt);

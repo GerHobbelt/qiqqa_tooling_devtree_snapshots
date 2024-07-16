@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -72,7 +72,7 @@ static int usage(void)
 		"\t-A\tcreate appearance streams for annotations\n"
 		"\t-AA\trecreate appearance streams for annotations\n"
 		"\t-m\tpreserve metadata\n"
-		"\t-S\tsubset fonts if possible\n"
+		"\t-S\tsubset fonts if possible [EXPERIMENTAL!]\n"
 		"\t-Z\tuse objstms if possible for extra compression\n"
 		"\t--{color,gray,bitonal}-{,lossy-,lossless-}image-subsample-method -\n\t\taverage, bicubic\n"
 		"\t--{color,gray,bitonal}-{,lossy-,lossless-}image-subsample-dpi -[,-]\n\t\tDPI at which to subsample [+ target dpi]\n"
@@ -286,6 +286,10 @@ int pdfclean_main(int argc, const char** argv)
 	{
 		outfile = argv[fz_optind++];
 	}
+
+#ifdef HAVE_JBIG2ENC
+	fz_register_jbig2_encoder(ctx, fz_jbig2enc_encoder(ctx));
+#endif
 
 	fz_try(ctx)
 	{

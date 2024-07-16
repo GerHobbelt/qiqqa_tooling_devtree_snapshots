@@ -1,6 +1,6 @@
 
 #------------------------------------------------------------------------------
-# $File: images,v 1.249 2024/01/30 21:29:54 christos Exp $
+# $File: images,v 1.253 2024/05/12 18:37:21 christos Exp $
 # images:  file(1) magic for image formats (see also "iff", and "c-lang" for
 # XPM bitmaps)
 #
@@ -13,8 +13,10 @@
 # Targa - matches `povray', `ppmtotga' and `xv' outputs
 # by Philippe De Muyter <phdm@macqel.be>
 # URL: http://justsolve.archiveteam.org/wiki/TGA
+#      https://en.wikipedia.org/wiki/Truevision_TGA
 # Reference: http://www.dca.fee.unicamp.br/~martino/disciplinas/ea978/tgaffs.pdf
-# Update: Joerg Jenderek
+# Update: Joerg Jenderek February 2024
+# Note:		called by DROID "Truevision TGA Bitmap" version 1.0 via PUID x-fmt/367
 # at 2, byte ImgType must be 1, 2, 3, 9, 10 or 11
 #	,32 or 33 (both not observed)
 # at 1, byte CoMapType must be 1 if ImgType is 1 or 9, 0 otherwise
@@ -27,6 +29,8 @@
 # and Image Type 1 2 3 9 10 11 32 33
 # and Color Map Entry Size 0 15 16 24 32
 0	ubequad&0x00FeC400000000C0	0
+# Targa image data (strength=70=110-40) before some Commodore disc image (strength=70=70+0 ./c64) like Cabal+2-MarioSoft(1).d64
+# and some MMDF mailbox (strength=70=70+0 ./mmdf) like uupc.input.1
 # Conflict with MPEG sequences.
 !:strength -40
 # Prevent conflicts with CRI ADX.
@@ -42,7 +46,10 @@
 >>>>17	ubyte&0x0F		!11
 # skip arches.3200 , Finder.Root , Slp.1 by looking for low pixel depth 1 8 15 16 24 32
 >>>>>16	ubyte			1
->>>>>>0		use		tga-image
+# skip few Commodore D64 disc image like "The Great Gianna Sisters.d64" and 
+# few MMDF mailbox like uupc.input.1 with unlikely black&white, dimension 0101h x 0101h (257x257) and +0101h origin (+257 +257)
+>>>>>>8	quad			!0x0101010101010101
+>>>>>>>0	use		tga-image
 >>>>>16	ubyte			8
 >>>>>>0		use		tga-image
 >>>>>16	ubyte			15
@@ -57,9 +64,11 @@
 0	name				tga-image
 >2	ubyte		<34		Targa image data
 !:mime	image/x-tga
+# Apple Uniform Type Identifier:	com.truevision.tga-image
 !:apple	????TPIC
 # normal extension .tga but some Truevision products used others:
 # tpic (Apple),icb (Image Capture Board),vda (Video Display Adapter),vst (NuVista),win (UNSURE about that)
+# afi bpx
 !:ext	tga/tpic/icb/vda/vst
 # image type 1 2 3 9 10 11 32 33
 >2	ubyte&0xF7	1		- Map
@@ -110,6 +119,7 @@
 # positive length implies identification field
 >0	ubyte		>0
 >>18	string		x		"%s"
+# Note:		called by DROID "Truevision TGA Bitmap" version 2.0 via fmt/402
 # last 18 bytes of newer tga file footer signature
 >18	search/4261301/s	TRUEVISION-XFILE.\0
 # extension area offset if not 0
@@ -496,6 +506,12 @@
 !:ext   png
 !:strength +10
 >16	use		png-ihdr
+>33	string		\x00\x00\x00\x08acTL	\b, animated
+>>41	ubelong		1			(%d frame
+>>41	ubelong		>1			(%d frames
+>>45	ubelong		0			\b, infinite repetitions)
+>>45	ubelong		1			\b, %d repetition)
+>>45	ubelong		>1			\b, %d repetitions)
 
 # Apple CgBI PNG image.
 0	string		\x89PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x04CgBI
@@ -1313,20 +1329,75 @@
 
 # SGI image file format, from Daniel Quinlan (quinlan@yggdrasil.com)
 #
-# See
-#	http://reality.sgi.com/grafica/sgiimage.html
-#
-0	ubeshort		474		SGI image data
-#>2	ubyte		0		\b, verbatim
->2	ubyte		1		\b, RLE
-#>3	ubyte		1		\b, normal precision
->3	ubyte		2		\b, high precision
->4	ubeshort	x		\b, %d-D
->6	ubeshort	x		\b, %d x
->8	ubeshort	x		%d
->10	ubeshort	x		\b, %d channel
->10	ubeshort	!1		\bs
->80	string		>0		\b, "%s"
+# Update:	Joerg Jenderek
+# URL:		http://fileformats.archiveteam.org/wiki/SGI_(image_file_format)
+#		https://en.wikipedia.org/wiki/Silicon_Graphics_Image
+# Reference:	https://paulbourke.net/dataformats/sgirgb/sgiversion.html
+#		http://mark0.net/download/triddefs_xml.7z/defs/b/bitmap-sgi.trid.xml
+# Note:		called "Silicon Graphics bitmap (generic)" by TrID,
+#		"Silicon Graphics Image" by DROID via PUID x-fmt/140 and shared MIME-info database from freedesktop.org,
+#		verfied by ImageMagick `identify -verbose *.sgi` as SGI (Irix RGB image) and
+#		verfied by XnView `nconvert -in sgi -info *.sgi` as SGI RGB
+# look for magic number (integer 474=0x01DA) + storage format (0 or 1) + number of bytes per pixel channel (1 or 2) 
+# to skip few TeX font metric data (like pxmi.tfm pxmi1.tfm eksfi8a.tfm ./tex) with invalid "high" bytes/pixel (11 12)
+0	ubelong&0xFFffFEfc	0x01da0000
+# skip DROID x-fmt-140-signature-id-623.bw with invalid "low" dimensions "0 x 0"
+>6	long			!0		SGI image data
+#!:mime	image/sgi
+!:mime	image/x-sgi
+!:apple	????.SGI
+# STORAGE format; allowed values 0~VERBATIM 1~RLE 
+#>>2	ubyte		0		\b, verbatim
+>>2	ubyte		1		\b, RLE
+#>>2	ubyte		>1		STORAGE=%#x
+# BPC; number of bytes per pixel component; allowed values 1 2
+#>>3	ubyte		1		\b, normal precision
+>>3	ubyte		2		\b, high precision
+#>>3	ubyte		x		BPC=%#x
+# DIMENSION; allowed values are 1~scanline 2~XSIZExYSIZE 3~XSIZExYSIZExZSIZE
+>>4	ubeshort	x		\b, %d-D
+# XSIZE; width of image in pixels
+>>6	ubeshort	x		\b, %d x
+# YSIZE; height of image in pixels
+>>8	ubeshort	x		%d
+# ZSIZE; number of channels in image; 1~B/W (greyscale) 3~RGB 4~RGB+ALPHA channel
+>>10	ubeshort	x		\b, %d
+# GRR: avoid
+# Magdir\images, 1347: Warning: Current entry does not yet have a description for adding a EXTENSION type
+>>>10	ubeshort	1		channel
+# GRR: exception https://sembiance.com/fileFormatSamples/image/sgi/greytest.rgb
+!:ext	bw
+# no examples found with .int suffix
+#!:ext	bw/int
+# no examples found with .inta suffix for black/white+ALPHA channel
+# no examples found with 2 channels
+#>>>10	ubeshort	2		channels
+#!:ext	sgi
+>>>10	ubeshort	3		channels
+!:ext	rgb/sgi
+>>>10	ubeshort	4		channels
+!:ext	rgba/sgi
+>>>10	default		x		channels
+# no examples found with 5 and more channels
+!:ext	sgi
+# IMAGENAME; null terminated ascii string of up to 79 characters
+>>24	string		>\0		\b, "%0.80s"
+# PINMIN; minimum pixel value in the image; often 0
+>>12	ubelong		!0		\b, %u PINMIN
+# PINMAX; maximum pixel value in the image; often 255
+>>16	ubelong		!255		\b, %u PINMAX
+# DUMMY; 4 bytes of data should be set to 0
+>>20	ubelong		!0		\b, at 20 %#x
+# COLORMAP; 0~normal 1~DITHEREDobsolete 2~SCREENobsolete 3~COLORMAP
+>>104	ubelong		!0		\b, %u COLORMAP
+# DUMMY; 404 bytes should be set to 0 but not always true; makes header exactly 512 bytes
+>>111	ubyte		!0		\b, at 111 %#x
+>>113	ubyte		!0		\b, at 113 %#x
+>>118	ubeshort	!0		\b, at 118 %#4.4x
+>>121	ubyte		!0		\b, at 121 %#x
+>>132	ubelong		!0		\b, at 132 %#8.8x
+>>135	ubyte		!0		\b, at 135 %#x
+>>137	ubequad		!0		\b, at 137 %#16.16llx
 
 0	string		IT01		FIT image data
 >4	ubelong		x		\b, %d x
@@ -2195,43 +2266,41 @@
 
 # Hercules DASD image files
 # From Jan Jaeger <jj@septa.nl> and Jay Maynard <jaymaynard@gmail.com>
+
+# Common Hercules CKD image files
+0       name    HercCKD 
+>0      lelong  x               \b, %d heads per cylinder
+>4      lelong  x               \b, track size %d bytes
+>8      ubyte   >0x2F
+>>8     ubyte   0x45            \b, device type 9345
+>>8     ubyte   !0x45           \b, device type 33%2.2X
+>8      ubyte   <0x30           \b, device type 23%2.2X
+
 0       string  CKD_P370        Hercules CKD DASD image file
->8      lelong  x               \b, %d heads per cylinder
->12     lelong  x               \b, track size %d bytes
->16     byte    x               \b, device type 33%2.2X
+>8      use     HercCKD
 
 0       string  CKD_C370        Hercules compressed CKD DASD image file
->8      lelong  x               \b, %d heads per cylinder
->12     lelong  x               \b, track size %d bytes
->16     byte    x               \b, device type 33%2.2X
+>8      use     HercCKD
 >552    lelong  x               \b, %d total cylinders
 >>557   byte    0               \b, no compression
 >>557   byte    1               \b, ZLIB compression
 >>557   byte    2               \b, BZ2 compression
 
 0       string  CKD_S370        Hercules CKD DASD shadow file
->8      lelong  x               \b, %d heads per cylinder
->12     lelong  x               \b, track size %d bytes
->16     byte    x               \b, device type 33%2.2X
+>8      use     HercCKD
 
 0       string  CKD_P064        Hercules CKD64 DASD image file
->8      lelong  x               \b, %d heads per cylinder
->12     lelong  x               \b, track size %d bytes
->16     byte    x               \b, device type 33%2.2X
+>8      use     HercCKD
 
 0       string  CKD_C064        Hercules compressed CKD64 DASD image file
->8      lelong  x               \b, %d heads per cylinder
->12     lelong  x               \b, track size %d bytes
->16     byte    x               \b, device type 33%2.2X
+>8      use     HercCKD
 >524    lelong  x               \b, %d total cylinders
 >>585   byte    0               \b, no compression
 >>585   byte    1               \b, ZLIB compression
 >>585   byte    2               \b, BZ2 compression
 
 0       string  CKD_S064        Hercules CKD64 DASD shadow file
->8      lelong  x               \b, %d heads per cylinder
->12     lelong  x               \b, track size %d bytes
->16     byte    x               \b, device type 33%2.2X
+>8      use     HercCKD
 
 # Squeak images and programs - etoffi@softhome.net
 0	string		\146\031\0\0	Squeak image data

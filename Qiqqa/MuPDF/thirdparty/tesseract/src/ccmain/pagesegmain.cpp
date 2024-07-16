@@ -16,6 +16,8 @@
  *
  **********************************************************************/
 
+#include <tesseract/preparation.h>    // compiler config, etc.
+
 #if defined(WIN32) || defined(_WIN32) || defined(_WIN64)
 #  ifndef unlink
 #    include <io.h>
@@ -25,11 +27,6 @@
 #endif // _WIN32
 
 #include <cmath>
-
-// Include automatically generated configuration file if running autoconf.
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
 
 #include <leptonica/allheaders.h>
 #include "blobbox.h"
@@ -49,6 +46,7 @@
 #include "textord.h"
 #include "tordmain.h"
 #include "wordseg.h"
+#include "global_params.h"
 
 namespace tesseract {
 
@@ -178,16 +176,16 @@ int Tesseract::SegmentPage(const char *input_file, BLOCK_LIST *blocks, Tesseract
     }
     return 0; // AutoPageSeg found an empty page.
   }
-  bool splitting = pageseg_devanagari_split_strategy != ShiroRekhaSplitter::NO_SPLIT;
+  bool splitting = (pageseg_devanagari_split_strategy != ShiroRekhaSplitter::NO_SPLIT);
   bool cjk_mode = textord_use_cjk_fp_model;
 
   if (debug_write_unlv && !name.empty()) {
-    std::string file_path = mkUniqueOutputFilePath(debug_output_path.c_str(), tessedit_page_number, "pre-TextordPage", "uzn");
+    std::string file_path = mkUniqueOutputFilePath(debug_output_path.c_str(), 1 + tessedit_page_number, "pre-TextordPage", "uzn");
     write_unlv_file(file_path, width, height, blocks);
   }
 
   textord_.TextordPage(pageseg_mode, reskew_, width, height, pix_binary_, pix_thresholds_,
-                       pix_grey_, splitting || cjk_mode, &diacritic_blobs, blocks, &to_blocks, gradient_);
+                       pix_grey_, splitting || cjk_mode, &diacritic_blobs, blocks, &to_blocks, &gradient_);
   
   if (verbose_process) {
     tprintInfo("Page Gradient OSR estimate: {}\n", osr->gradient);
@@ -204,7 +202,7 @@ int Tesseract::SegmentPage(const char *input_file, BLOCK_LIST *blocks, Tesseract
   }
 
   if (debug_write_unlv && !name.empty()) {
-    std::string file_path = mkUniqueOutputFilePath(debug_output_path.c_str(), tessedit_page_number, "post-TextordPage", "uzn");
+    std::string file_path = mkUniqueOutputFilePath(debug_output_path.c_str(), 1 + tessedit_page_number, "post-TextordPage", "uzn");
     write_unlv_file(file_path, width, height, blocks);
   }
 
@@ -323,7 +321,7 @@ ColumnFinder *Tesseract::SetupPageSegAndDetectOrientation(PageSegMode pageseg_mo
 
   ASSERT_HOST(pix_binary_ != nullptr);
   if (tessedit_dump_pageseg_images) {
-    AddPixDebugPage(pix_binary_, "Setup Page Seg And Detect Orientation : PageSegInput");
+    AddPixDebugPage(pix_binary_, "Setup Page Seg And Detect Orientation : PageSegInput - the source image for this operation");
   }
   // Leptonica is used to find the rule/separator lines in the input.
   line_finder_.FindAndRemoveLines(source_resolution_, pix_binary_,
@@ -337,7 +335,8 @@ ColumnFinder *Tesseract::SetupPageSegAndDetectOrientation(PageSegMode pageseg_mo
     if (*photo_mask_pix != nullptr) {
       AddPixDebugPage(*photo_mask_pix, "Setup Page Seg And Detect Orientation : Photo Regions (to be removed)");
       Image pix_no_image_ = pixSubtract(nullptr, pix_binary_, *photo_mask_pix);
-      AddPixDebugPage(pix_no_image_, "Setup Page Seg And Detect Orientation : photo regions removed from the input");
+      AddPixDebugPage(pix_no_image_, "Setup Page Seg And Detect Orientation : input image with the detected photo regions removed; the black pixels what remain in this image will be treated as *text*.");
+      tprintInfo("PROCESS: The black pixels what remain in the above image will be treated as *text pixels* by tesseract (after some denoising, column finding, etc. that follows next). Each area of black pixels will be collected as *bounding boxes* for the original source image pixel areas which will be clipped and fed into the OCR engine core for text recognition. See the '*Recognize (OCR)' section further below in thhe session log report.\n");
       pix_no_image_.destroy();
     }
   }
@@ -361,12 +360,12 @@ ColumnFinder *Tesseract::SetupPageSegAndDetectOrientation(PageSegMode pageseg_mo
     int res = IntCastRounded(to_block->line_size * kResolutionEstimationFactor);
     if (res > estimated_resolution && res < kMaxCredibleResolution) {
       estimated_resolution = res;
-      tprintInfo("Estimating resolution as {}\n", estimated_resolution);
+      tprintInfo("Estimating resolution as {} dpi (pixels / inch)\n", estimated_resolution);
     }
   }
 
   if (to_block->line_size >= 2) {
-    finder = new ColumnFinder(this, static_cast<int>(to_block->line_size / 2), blkbox.botleft(),
+    finder = new ColumnFinder(this, static_cast<int>(to_block->line_size), blkbox.botleft(),
                               blkbox.topright(), estimated_resolution, textord_use_cjk_fp_model,
                               textord_tabfind_aligned_gap_fraction, &v_lines, &h_lines, vertical_x,
                               vertical_y);
@@ -385,7 +384,7 @@ ColumnFinder *Tesseract::SetupPageSegAndDetectOrientation(PageSegMode pageseg_mo
     // osd_orientation is the number of 90 degree rotations to make the
     // characters upright. (See tesseract/osdetect.h for precise definition.)
     // We want the text lines horizontal, (vertical text indicates vertical
-    // textlines) which may conflict (eg vertically written CJK).
+    // textlines) which may conflict (e.g. vertically written CJK).
     int osd_orientation = 0;
     bool vertical_text =
         textord_tabfind_force_vertical_text || pageseg_mode == PSM_SINGLE_BLOCK_VERT_TEXT;
@@ -434,15 +433,15 @@ ColumnFinder *Tesseract::SetupPageSegAndDetectOrientation(PageSegMode pageseg_mo
         if (!cjk && !vertical_text && osd_orientation == 2) {
           // upside down latin text is improbable with such a weak margin.
           tprintInfo(
-              "OSD: Weak margin ({}), horiz textlines, not CJK: "
+              "OSD: Weak margin ({} < {}), horiz textlines, not CJK: "
               "Don't rotate.\n",
-              osd_margin);
+              osd_margin, min_orientation_margin.value());
           osd_orientation = 0;
         } else {
           tprintInfo(
-              "OSD: Weak margin ({}) for {} blob text block, "
+              "OSD: Weak margin ({} < {}) for {} blob text blocks, "
               "but using orientation anyway: {}\n",
-              osd_margin, osd_blobs.length(), osd_orientation);
+              osd_margin, min_orientation_margin.value(), osd_blobs.length(), osd_orientation);
         }
       }
     }

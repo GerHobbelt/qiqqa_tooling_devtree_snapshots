@@ -15,18 +15,13 @@
  ** limitations under the License.
  ******************************************************************************/
 
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h" // DISABLED_LEGACY_ENGINE
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #if !DISABLED_LEGACY_ENGINE
 
  /*-----------------------------------------------------------------------------
           Include Files and Type Defines
 -----------------------------------------------------------------------------*/
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
 
 #include "adaptive.h"        // for ADAPT_CLASS
 #include "ambigs.h"          // for UnicharIdVector, UnicharAmbigs
@@ -49,7 +44,7 @@
 #include "oldlist.h"         // for push, delete_d
 #include "outfeat.h"         // for OutlineFeatDir, OutlineFeatLength
 #include "pageres.h"         // for WERD_RES
-#include "params.h"          // for IntParam, BoolParam, DoubleParam, Str...
+#include <tesseract/params.h>          // for IntParam, BoolParam, DoubleParam, Str...
 #include "picofeat.h"        // for PicoFeatDir, PicoFeatX, PicoFeatY
 #include "protos.h"          // for PROTO_STRUCT, FillABC
 #include "ratngs.h"          // for BLOB_CHOICE_IT, BLOB_CHOICE_LIST, BLO...
@@ -60,7 +55,7 @@
 #include "shapetable.h"      // for UnicharRating, ShapeTable, Shape, Uni...
 #include "tessclassifier.h"  // for TessClassifier
 #include "tessdatamanager.h" // for TessdataManager, TESSDATA_INTTEMP
-#include "tprintf.h"         // for tprintf
+#include <tesseract/tprintf.h>         // for tprintf
 #include "trainingsample.h"  // for TrainingSample
 #include "unicharset.h"      // for UNICHARSET, CHAR_FRAGMENT, UNICHAR_SPACE
 #include "unicity_table.h"   // for UnicityTable
@@ -78,10 +73,12 @@
 
 namespace tesseract {
 
+#if 0
 // TODO: The parameter classify_enable_adaptive_matcher can cause
 // a segmentation fault if it is set to false (issue #256),
 // so override it here.
 #define classify_enable_adaptive_matcher true
+#endif
 
 #define ADAPT_TEMPLATE_SUFFIX ".a"
 
@@ -348,7 +345,7 @@ void Classify::LearnWord(const char *fontname, WERD_RES *word) {
 
       // TODO(rays): re-enable this part of the code when we switch to the
       // new classifier that needs to see examples of garbage.
-#if 0
+      /*
 if (word->best_state[ch] > 1) {
   // If the next blob is good, make junk with the rightmost fragment.
   if (ch + 1 < word_len && word->correct_text[ch + 1].length() > 0) {
@@ -371,7 +368,7 @@ if (ch + 1 < word_len && word->correct_text[ch + 1].length() > 0) {
               word->best_state[ch] + word->best_state[ch + 1],
               threshold, CST_NGRAM, joined_text.c_str(), word);
 }
-#endif
+*/
     }
     start_blob += word->best_state[ch];
   }
@@ -469,18 +466,14 @@ void Classify::LearnPieces(const char *fontname, int start, int length, float th
  * - #classify_enable_adaptive_matcher true if adaptive matcher is enabled
  */
 void Classify::EndAdaptiveClassifier() {
-  std::string Filename;
-  FILE *File;
-
-  if (AdaptedTemplates != nullptr && classify_enable_adaptive_matcher &&
-      classify_save_adapted_templates) {
-    Filename = imagefile + ADAPT_TEMPLATE_SUFFIX;
-    File = fopen(Filename.c_str(), "wb");
+  if (AdaptedTemplates != nullptr && classify_enable_adaptive_matcher && classify_save_adapted_templates) {
+    std::string Filename = imagefile + ADAPT_TEMPLATE_SUFFIX;
+    FILE *File = fopen(Filename.c_str(), "wb");
     if (File == nullptr) {
       tprintError("Unable to save adapted templates to file {}!\n", Filename);
     } else {
       tprintDebug("\nSaving adapted templates to file {} ...", Filename);
-      fflush(stdout);
+      //fflush(stdout);
       WriteAdaptedTemplates(File, AdaptedTemplates);
       tprintDebug("\n");
       fclose(File);
@@ -535,6 +528,9 @@ void Classify::InitAdaptiveClassifier(TessdataManager *mgr) {
   if (!classify_enable_adaptive_matcher) {
     return;
   }
+
+  // TODO: make sure we don't initialize this one twice or more as the Tesseract instantiation order has subtly changed, depending on which APIs the userland code invokes first. [GHo]
+
   if (AllProtosOn != nullptr) {
     EndAdaptiveClassifier(); // Don't leak with multiple inits.
   }
@@ -651,12 +647,12 @@ void Classify::StartBackupAdaptiveClassifier() {
  * - #EnableLearning
  * set to true by this routine
  */
-void Classify::SettupPass1() {
+void Classify::SetupPass1() {
   EnableLearning = classify_enable_learning;
   UseLearning = false;
   getDict().SettupStopperPass1();
 
-} /* SettupPass1 */
+} /* SetupPass1 */
 
 /*---------------------------------------------------------------------------*/
 /**
@@ -667,12 +663,12 @@ void Classify::SettupPass1() {
  * Globals:
  * - #EnableLearning set to false by this routine
  */
-void Classify::SettupPass2() {
+void Classify::SetupPass2() {
   EnableLearning = false;
   UseLearning = true;
   getDict().SettupStopperPass2();
 
-} /* SettupPass2 */
+} /* SetupPass2 */
 
 /*---------------------------------------------------------------------------*/
 /**
@@ -1095,7 +1091,7 @@ void Classify::MasterMatcher(INT_TEMPLATES_STRUCT *templates, int16_t num_featur
     int_result.unichar_id = class_id;
     im_.Match(ClassForClassId(templates, class_id), protos, configs, num_features, features,
               &int_result, classify_adapt_feature_threshold, debug, matcher_debug_separate_windows);
-    bool is_debug = matcher_debug_level >= 2 || classify_debug_level > 1;
+    bool is_debug = (matcher_debug_level >= 2 || classify_debug_level > 1);
     ExpandShapesAndApplyCorrections(classes, is_debug, class_id, bottom, top, result.Rating,
                                     final_results->BlobLength, matcher_multiplier, norm_factors,
                                     &int_result, final_results);

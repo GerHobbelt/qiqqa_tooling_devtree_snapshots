@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libwget2</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF38BECA}</ProjectGuid>
-    <RootNamespace>libwget2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -265,6 +263,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/wget2/libwget/hsts.c" />
     <ClCompile Include="../../thirdparty/owemdjee/wget2/libwget/html_url.c" />
     <ClCompile Include="../../thirdparty/owemdjee/wget2/libwget/http.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/wget2/libwget/http2.c" />
     <ClCompile Include="../../thirdparty/owemdjee/wget2/libwget/http_highlevel.c" />
     <ClCompile Include="../../thirdparty/owemdjee/wget2/libwget/http_parse.c" />
     <ClCompile Include="../../thirdparty/owemdjee/wget2/libwget/init.c" />
@@ -463,6 +462,7 @@
     <Text Include="../../thirdparty/owemdjee/wget2/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/wget2/NEWS" />
     <Text Include="../../thirdparty/owemdjee/wget2/README.md" />
+    <Text Include="../../thirdparty/owemdjee/wget2/SECURITY.md" />
     <Text Include="../../thirdparty/owemdjee/wget2/benchmarks/README" />
     <Text Include="../../thirdparty/owemdjee/wget2/benchmarks/benches/http1.sh" />
     <Text Include="../../thirdparty/owemdjee/wget2/benchmarks/benches/http2.sh" />

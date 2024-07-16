@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libpybind11</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF275774}</ProjectGuid>
-    <RootNamespace>libpybind11</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -270,6 +268,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_opaque_types.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_operator_overloading.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_pickling.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_python_multiple_inheritance.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_pytypes.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_sequences_and_iterators.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/pybind11/tests/test_smart_ptr.cpp" />
@@ -366,6 +365,7 @@
     <Text Include="../../thirdparty/owemdjee/pybind11/docs/pybind11_vs_boost_python2.svg" />
     <Text Include="../../thirdparty/owemdjee/pybind11/docs/reference.rst" />
     <Text Include="../../thirdparty/owemdjee/pybind11/docs/release.rst" />
+    <Text Include="../../thirdparty/owemdjee/pybind11/docs/requirements.in" />
     <Text Include="../../thirdparty/owemdjee/pybind11/docs/requirements.txt" />
     <Text Include="../../thirdparty/owemdjee/pybind11/docs/upgrade.rst" />
     <Text Include="../../thirdparty/owemdjee/pybind11/noxfile.py" />
@@ -431,6 +431,7 @@
     <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_opaque_types.py" />
     <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_operator_overloading.py" />
     <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_pickling.py" />
+    <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_python_multiple_inheritance.py" />
     <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_pytypes.py" />
     <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_sequences_and_iterators.py" />
     <Text Include="../../thirdparty/owemdjee/pybind11/tests/test_smart_ptr.py" />

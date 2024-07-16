@@ -1,6 +1,7 @@
 
 #if !defined(BUILD_MONOLITHIC)
 
+#include "OT/Var/VARC/VARC.cc"
 #include "hb-aat-layout.cc"
 #include "hb-aat-map.cc"
 #include "hb-blob.cc"

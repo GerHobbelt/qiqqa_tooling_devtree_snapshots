@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2023 Marti Maria Saguer
+//  Copyright (c) 1998-2024 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -1015,4 +1015,14 @@ cmsUInt32Number  CMSEXPORT cmsGetProfileInfoASCII(cmsContext ContextID, cmsHPROF
     if (mlu == NULL) return 0;
 
     return cmsMLUgetASCII(ContextID, mlu, LanguageCode, CountryCode, Buffer, BufferSize);
+}
+
+cmsUInt32Number  CMSEXPORT cmsGetProfileInfoUTF8(cmsContext ContextID, cmsHPROFILE hProfile, cmsInfoType Info,
+                                                          const char LanguageCode[3], const char CountryCode[3],
+                                                          char* Buffer, cmsUInt32Number BufferSize)
+{
+    const cmsMLU* mlu = GetInfo(ContextID, hProfile, Info);
+    if (mlu == NULL) return 0;
+
+    return cmsMLUgetUTF8(ContextID, mlu, LanguageCode, CountryCode, Buffer, BufferSize);
 }

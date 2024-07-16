@@ -3,16 +3,17 @@ c: Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
 SPDX-License-Identifier: curl
 Long: remote-name
 Short: O
-Help: Write output to a file named as the remote file
+Help: Write output to file named as remote file
 Category: important output
 Added: 4.0
-Multi: append
+Multi: per-URL
 See-also:
   - remote-name-all
   - output-dir
   - remote-header-name
 Example:
   - -O https://example.com/filename
+  - -O https://example.com/filename -O https://example.com/file2
 ---
 
 # `--remote-name`

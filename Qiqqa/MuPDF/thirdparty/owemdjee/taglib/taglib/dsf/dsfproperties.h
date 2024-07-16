@@ -34,6 +34,7 @@
 
 namespace TagLib {
   namespace DSF {
+    //! An implementation of audio properties for DSF
     class TAGLIB_EXPORT Properties : public AudioProperties {
     public:
       Properties(const ByteVector &data, ReadStyle style);
@@ -63,6 +64,7 @@ namespace TagLib {
       void read(const ByteVector &data);
 
       class PropertiesPrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<PropertiesPrivate> d;
     };
   }  // namespace DSF

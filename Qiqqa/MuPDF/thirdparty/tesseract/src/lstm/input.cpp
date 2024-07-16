@@ -15,6 +15,8 @@
 // limitations under the License.
 ///////////////////////////////////////////////////////////////////////
 
+#include <tesseract/preparation.h> // compiler config, etc.
+
 #include "input.h"
 
 #include <leptonica/allheaders.h>
@@ -22,6 +24,7 @@
 #include "pageres.h"
 #include "scrollview.h"
 #include "tesseractclass.h"
+#include "global_params.h"
 
 namespace tesseract {
 
@@ -104,8 +107,8 @@ Image Input::PrepareLSTMInputs(const ImageData &image_data, const Network *netwo
 // height == 1. If height == 0 then no scaling.
 // NOTE: It isn't safe for multiple threads to call this on the same pix.
 /* static */
-void Input::PreparePixInput(const StaticShape& shape, const Image pix, TRand* randomizer,
-                            NetworkIO* input) {
+void Input::PreparePixInput(Tesseract *tess, const StaticShape &shape, const Image pix, TRand *randomizer,
+                            NetworkIO *input, const TBOX &line_box, float scale_factor) {
   bool color = shape.depth() == 3;
   Image var_pix = pix;
   int depth = pixGetDepth(var_pix);
@@ -116,17 +119,14 @@ void Input::PreparePixInput(const StaticShape& shape, const Image pix, TRand* ra
     // Force RGB.
     if (depth == 32) {
       normed_pix = var_pix.clone();
-    }
-    else {
+    } else {
       normed_pix = pixConvertTo32(var_pix);
     }
-  }
-  else {
+  } else {
     // Convert non-8-bit images to 8 bit.
     if (depth == 8) {
       normed_pix = var_pix.clone();
-    }
-    else {
+    } else {
       normed_pix = pixConvertTo8(var_pix, false);
     }
   }
@@ -142,11 +142,10 @@ void Input::PreparePixInput(const StaticShape& shape, const Image pix, TRand* ra
     normed_pix.destroy();
     normed_pix = scaled_pix;
   }
-#if 0
-  if (true /* debug */) {
-    tess->AddClippedPixDebugPage(normed_pix, fmt::format("LSTM: prepare to recognize one line of text. (height:{}, target_height:{})", height, target_height));
+  if (tess != nullptr && (verbose_process || tess->tessedit_dump_pageseg_images))
+  {
+      tess->AddPixCompedOverOrigDebugPage(normed_pix, fmt::format("LSTM normed input image: prepare to recognize one line of text. (height:{}, target_height:{}, scale_factor:{}, position box:{})", height, target_height, scale_factor, line_box.print_to_str()));
   }
-#endif
   input->FromPix(shape, normed_pix, randomizer);
   normed_pix.destroy();
 }

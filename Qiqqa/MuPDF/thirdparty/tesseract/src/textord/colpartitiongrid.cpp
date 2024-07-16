@@ -16,9 +16,7 @@
 //
 ///////////////////////////////////////////////////////////////////////
 
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #include "colpartitiongrid.h"
 #include "colpartitionset.h"
@@ -1097,7 +1095,7 @@ void ColPartitionGrid::FindFigureCaptions() {
           AlignedBlob::WithinTestRegion(2, part_box.left(), part_box.bottom());
       ColPartition *best_caption = nullptr;
       int best_dist = 0;  // Distance to best_caption.
-      int best_upper = 0; // Direction of best_caption.
+      bool best_upper = false; // Direction of best_caption.
       // Handle both lower and upper directions.
       for (int upper = 0; upper < 2; ++upper) {
         ColPartition_C_IT partner_it(upper ? part->upper_partners()
@@ -1133,7 +1131,7 @@ void ColPartitionGrid::FindFigureCaptions() {
             if (best_caption == nullptr || dist < best_dist) {
               best_dist = dist;
               best_caption = partner;
-              best_upper = upper;
+              best_upper = (upper != 0);
             }
           }
         }
@@ -1162,6 +1160,7 @@ void ColPartitionGrid::FindFigureCaptions() {
           }
           ++line_count;
           total_height += partner->bounding_box().height();
+          // warning C4800: Implicit conversion from 'int' to bool. Possible information loss
           next_partner = partner->SingletonPartner(best_upper);
           if (next_partner != nullptr) {
             int gap =
@@ -1203,6 +1202,7 @@ void ColPartitionGrid::FindFigureCaptions() {
               tprintDebug("Set caption type for partition:");
               partner->bounding_box().print();
             }
+            // warning C4800: Implicit conversion from 'int' to bool. Possible information loss
             next_partner = partner->SingletonPartner(best_upper);
           }
         }
@@ -1461,7 +1461,6 @@ bool ColPartitionGrid::SmoothRegionType(Image nontext_map, const TBOX &im_box,
   max_dist = std::max(max_dist * kMaxNeighbourDistFactor, gridsize() * 2);
   // Search with the pad truncated on each side of the box in turn.
   bool any_image = false;
-  bool mult_image = false;
   bool all_image = true;
   for (int d = 0; d < BND_COUNT; ++d) {
     int dist;
@@ -1476,9 +1475,6 @@ bool ColPartitionGrid::SmoothRegionType(Image nontext_map, const TBOX &im_box,
       best_type = type;
     }
     if (type == BRT_POLYIMAGE) {
-      if (any_image) {
-        mult_image = true;
-      }
       any_image = true;
     } else {
       all_image = false;
@@ -1499,10 +1495,8 @@ bool ColPartitionGrid::SmoothRegionType(Image nontext_map, const TBOX &im_box,
     new_flow = BTFT_STRONG_CHAIN;
     new_type = BRT_VERT_TEXT;
   } else if (best_type == BRT_POLYIMAGE) {
-    if (mult_image) {
-      new_flow = BTFT_NONTEXT;
-      new_type = BRT_UNKNOWN;
-    } 
+    new_flow = BTFT_NONTEXT;
+    new_type = BRT_UNKNOWN;
   }
   if (new_type != part->blob_type() || new_flow != part->flow()) {
     part->set_flow(new_flow);
@@ -1530,25 +1524,25 @@ static void ComputeSearchBoxAndScaling(BlobNeighbourDir direction,
   int padding = std::min(part_box.height(), part_box.width());
   padding = std::max(padding, min_padding);
   padding *= kMaxPadFactor;
-  
+  search_box->pad(padding, padding);
   // Truncate the box in the appropriate direction and make the distance
   // metric slightly biased in the truncated direction.
   switch (direction) {
     case BND_LEFT:
-      search_box->set_left(part_box.left() - padding);
-      *dist_scaling = ICOORD(1, 1);
+      search_box->set_left(part_box.left());
+      *dist_scaling = ICOORD(2, 1);
       break;
     case BND_BELOW:
-      search_box->set_bottom(part_box.bottom() - padding);
-      *dist_scaling = ICOORD(1, 1);
+      search_box->set_bottom(part_box.bottom());
+      *dist_scaling = ICOORD(1, 2);
       break;
     case BND_RIGHT:
-      search_box->set_right(part_box.right() + padding);
-      *dist_scaling = ICOORD(1, 1);
+      search_box->set_right(part_box.right());
+      *dist_scaling = ICOORD(2, 1);
       break;
     case BND_ABOVE:
-      search_box->set_top(part_box.top() + padding);
-      *dist_scaling = ICOORD(1, 1);
+      search_box->set_top(part_box.top());
+      *dist_scaling = ICOORD(1, 2);
       break;
     default:
       ASSERT_HOST(false);
@@ -1672,7 +1666,6 @@ void ColPartitionGrid::AccumulatePartDistances(
   while ((neighbour = rsearch.NextRectSearch()) != nullptr) {
     if (neighbour->IsUnMergeableType() ||
         !base_part.ConfirmNoTabViolation(*neighbour) ||
-        !base_part.ConfirmNoSizeViolation(*neighbour) ||
         neighbour == &base_part) {
       continue;
     }

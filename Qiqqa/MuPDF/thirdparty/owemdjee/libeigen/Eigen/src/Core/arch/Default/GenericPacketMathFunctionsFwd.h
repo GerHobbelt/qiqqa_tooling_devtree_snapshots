@@ -82,6 +82,14 @@ EIGEN_DEFINE_FUNCTION_ALLOWING_MULTIPLE_DEFINITIONS Packet psin_float(const Pack
 template <typename Packet>
 EIGEN_DEFINE_FUNCTION_ALLOWING_MULTIPLE_DEFINITIONS Packet pcos_float(const Packet& x);
 
+/** \internal \returns sin(x) for double precision float */
+template <typename Packet>
+EIGEN_DEFINE_FUNCTION_ALLOWING_MULTIPLE_DEFINITIONS Packet psin_double(const Packet& x);
+
+/** \internal \returns cos(x) for double precision float */
+template <typename Packet>
+EIGEN_DEFINE_FUNCTION_ALLOWING_MULTIPLE_DEFINITIONS Packet pcos_double(const Packet& x);
+
 /** \internal \returns asin(x) for single precision float */
 template <typename Packet>
 EIGEN_DEFINE_FUNCTION_ALLOWING_MULTIPLE_DEFINITIONS Packet pasin_float(const Packet& x);
@@ -125,6 +133,21 @@ EIGEN_DEFINE_FUNCTION_ALLOWING_MULTIPLE_DEFINITIONS Packet plog_complex(const Pa
 template <typename Packet>
 EIGEN_DEFINE_FUNCTION_ALLOWING_MULTIPLE_DEFINITIONS Packet pexp_complex(const Packet& x);
 
+template <typename Packet>
+EIGEN_DEVICE_FUNC EIGEN_STRONG_INLINE Packet generic_rint(const Packet& a);
+
+template <typename Packet>
+EIGEN_DEVICE_FUNC EIGEN_STRONG_INLINE Packet generic_floor(const Packet& a);
+
+template <typename Packet>
+EIGEN_DEVICE_FUNC EIGEN_STRONG_INLINE Packet generic_ceil(const Packet& a);
+
+template <typename Packet>
+EIGEN_DEVICE_FUNC EIGEN_STRONG_INLINE Packet generic_trunc(const Packet& a);
+
+template <typename Packet>
+EIGEN_DEVICE_FUNC EIGEN_STRONG_INLINE Packet generic_round(const Packet& a);
+
 // Macros for instantiating these generic functions for different backends.
 #define EIGEN_PACKET_FUNCTION(METHOD, SCALAR, PACKET)                                             \
   template <>                                                                                     \
@@ -158,6 +181,8 @@ EIGEN_DEFINE_FUNCTION_ALLOWING_MULTIPLE_DEFINITIONS Packet pexp_complex(const Pa
 #define EIGEN_INSTANTIATE_GENERIC_MATH_FUNCS_DOUBLE(PACKET) \
   EIGEN_DOUBLE_PACKET_FUNCTION(atan, PACKET)                \
   EIGEN_DOUBLE_PACKET_FUNCTION(log, PACKET)                 \
+  EIGEN_DOUBLE_PACKET_FUNCTION(sin, PACKET)                 \
+  EIGEN_DOUBLE_PACKET_FUNCTION(cos, PACKET)                 \
   EIGEN_DOUBLE_PACKET_FUNCTION(log2, PACKET)                \
   EIGEN_DOUBLE_PACKET_FUNCTION(exp, PACKET)
 

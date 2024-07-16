@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2023 Marti Maria Saguer
+//  Copyright (c) 1998-2024 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -727,7 +727,6 @@ static
 cmsBool is_cmyk_devicelink(cmsContext ContextID, cmsHPROFILE hProfile)
 {
     return cmsGetDeviceClass(ContextID, hProfile) == cmsSigLinkClass &&
-            cmsGetColorSpace(ContextID, hProfile) == cmsSigCmykData &&
             cmsGetColorSpace(ContextID, hProfile) == cmsSigCmykData;
 }
 
@@ -789,7 +788,7 @@ cmsPipeline*  BlackPreservingKOnlyIntents(cmsContext     ContextID,
 
     // Create a LUT holding normal ICC transform
     bp.cmyk2cmyk = DefaultICCintents(ContextID,
-                                     preservationProfilesCount,
+        preservationProfilesCount,
         ICCIntents,
         hProfiles,
         BPC,
@@ -801,7 +800,7 @@ cmsPipeline*  BlackPreservingKOnlyIntents(cmsContext     ContextID,
     // Now, compute the tone curve
     bp.KTone = _cmsBuildKToneCurve(ContextID,
         4096,
-                                    preservationProfilesCount,
+        preservationProfilesCount,
         ICCIntents,
         hProfiles,
         BPC,

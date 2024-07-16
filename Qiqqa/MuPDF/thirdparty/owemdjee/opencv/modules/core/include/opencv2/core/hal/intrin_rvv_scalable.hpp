@@ -8,9 +8,6 @@
 #ifndef OPENCV_HAL_INTRIN_RVV_SCALABLE_HPP
 #define OPENCV_HAL_INTRIN_RVV_SCALABLE_HPP
 
-#include <initializer_list>
-#include <assert.h>
-#include <vector>
 #include <opencv2/core/check.hpp>
 
 // RVV intrinsics have been renamed in version 0.11, so we need to include
@@ -418,11 +415,6 @@ inline void v_store_high(_Tp* ptr, const _Tpvec& a) \
 { \
     vse##width(ptr, vslidedown_vx_##suffix##m1(vmv(0, vl), a, hvl, vl), hvl); \
 } \
-inline _Tpvec v_load(std::initializer_list<_Tp> nScalars) \
-{ \
-    assert(nScalars.size() == vl); \
-    return vle##width##_v_##suffix##m1(nScalars.begin(), nScalars.size()); \
-} \
 template<typename... Targs> \
 _Tpvec v_load_##suffix(Targs... nScalars) \
 { \
@@ -448,29 +440,7 @@ OPENCV_HAL_IMPL_RVV_LOADSTORE_OP(v_float64, vfloat64m1_t, double, VTraits<v_floa
 #define OPENCV_HAL_IMPL_RVV_LUT(_Tpvec, _Tp, suffix) \
 inline _Tpvec v_lut(const _Tp* tab, const int* idx) \
 { \
-    vuint32##suffix##_t vidx = vmul(vreinterpret_u32##suffix(vle32_v_i32##suffix(idx, VTraits<_Tpvec>::vlanes())), sizeof(_Tp), VTraits<_Tpvec>::vlanes()); \
-    return vloxei32(tab, vidx, VTraits<_Tpvec>::vlanes()); \
-} \
-inline _Tpvec v_lut_pairs(const _Tp* tab, const int* idx) \
-{ \
-    std::vector<uint> idx_; \
-    for (int i = 0; i < VTraits<v_int16>::vlanes(); ++i) { \
-        idx_.push_back(idx[i]); \
-        idx_.push_back(idx[i]+1); \
-    } \
-    vuint32##suffix##_t vidx = vmul(vle32_v_u32##suffix(idx_.data(), VTraits<_Tpvec>::vlanes()), sizeof(_Tp), VTraits<_Tpvec>::vlanes()); \
-    return vloxei32(tab, vidx, VTraits<_Tpvec>::vlanes()); \
-} \
-inline _Tpvec v_lut_quads(const _Tp* tab, const int* idx) \
-{ \
-    std::vector<uint> idx_; \
-    for (int i = 0; i < VTraits<v_int32>::vlanes(); ++i) { \
-        idx_.push_back(idx[i]); \
-        idx_.push_back(idx[i]+1); \
-        idx_.push_back(idx[i]+2); \
-        idx_.push_back(idx[i]+3); \
-    } \
-    vuint32##suffix##_t vidx = vmul(vle32_v_u32##suffix(idx_.data(), VTraits<_Tpvec>::vlanes()), sizeof(_Tp), VTraits<_Tpvec>::vlanes()); \
+    auto vidx = vmul(vreinterpret_u32##suffix(vle32_v_i32##suffix(idx, VTraits<_Tpvec>::vlanes())), sizeof(_Tp), VTraits<_Tpvec>::vlanes()); \
     return vloxei32(tab, vidx, VTraits<_Tpvec>::vlanes()); \
 }
 OPENCV_HAL_IMPL_RVV_LUT(v_int8, schar, m4)
@@ -481,6 +451,55 @@ OPENCV_HAL_IMPL_RVV_LUT(v_float32, float, m1)
 #if CV_SIMD_SCALABLE_64F
 OPENCV_HAL_IMPL_RVV_LUT(v_float64, double, mf2)
 #endif
+
+#define OPENCV_HAL_IMPL_RVV_LUT_PAIRS(_Tpvec, _Tp, suffix1, suffix2, v_trunc) \
+inline _Tpvec v_lut_pairs(const _Tp* tab, const int* idx) \
+{ \
+    auto v0 = vle32_v_u32##suffix1((unsigned*)idx, VTraits<_Tpvec>::vlanes()/2); \
+    auto v1 = vadd(v0, 1, VTraits<_Tpvec>::vlanes()/2); \
+    auto w0 = vwcvtu_x(v0, VTraits<_Tpvec>::vlanes()/2); \
+    auto w1 = vwcvtu_x(v1, VTraits<_Tpvec>::vlanes()/2); \
+    auto sh1 = vslide1up(v_trunc(vreinterpret_u32##suffix2(w1)),0, VTraits<_Tpvec>::vlanes()); \
+    auto vid = vor(sh1, v_trunc(vreinterpret_u32##suffix2(w0)), VTraits<_Tpvec>::vlanes()); \
+    auto vidx = vmul(vid, sizeof(_Tp), VTraits<_Tpvec>::vlanes()); \
+    return vloxei32(tab, vidx, VTraits<_Tpvec>::vlanes()); \
+}
+OPENCV_HAL_IMPL_RVV_LUT_PAIRS(v_int8, schar, m2, m4, OPENCV_HAL_NOP)
+OPENCV_HAL_IMPL_RVV_LUT_PAIRS(v_int16, short, m1, m2, OPENCV_HAL_NOP)
+OPENCV_HAL_IMPL_RVV_LUT_PAIRS(v_int32, int, mf2, m1, OPENCV_HAL_NOP)
+OPENCV_HAL_IMPL_RVV_LUT_PAIRS(v_float32, float, mf2, m1, OPENCV_HAL_NOP)
+OPENCV_HAL_IMPL_RVV_LUT_PAIRS(v_int64, int64_t, mf2, m1, vlmul_trunc_u32mf2)
+#if CV_SIMD_SCALABLE_64F
+OPENCV_HAL_IMPL_RVV_LUT_PAIRS(v_float64, double, mf2, m1, vlmul_trunc_u32mf2)
+#endif
+
+
+#define OPENCV_HAL_IMPL_RVV_LUT_QUADS(_Tpvec, _Tp, suffix0, suffix1, suffix2, v_trunc) \
+inline _Tpvec v_lut_quads(const _Tp* tab, const int* idx) \
+{ \
+    auto v0 = vle32_v_u32##suffix0((unsigned*)idx, VTraits<_Tpvec>::vlanes()/4); \
+    auto v1 = vadd(v0, 1, VTraits<_Tpvec>::vlanes()/4); \
+    auto v2 = vadd(v0, 2, VTraits<_Tpvec>::vlanes()/4); \
+    auto v3 = vadd(v0, 3, VTraits<_Tpvec>::vlanes()/4); \
+    auto w0 = vwcvtu_x(v0, VTraits<_Tpvec>::vlanes()/4); \
+    auto w1 = vwcvtu_x(v1, VTraits<_Tpvec>::vlanes()/4); \
+    auto w2 = vwcvtu_x(v2, VTraits<_Tpvec>::vlanes()/4); \
+    auto w3 = vwcvtu_x(v3, VTraits<_Tpvec>::vlanes()/4); \
+    auto sh2 = vslide1up(vreinterpret_u32##suffix1(w2),0, VTraits<_Tpvec>::vlanes()/2); \
+    auto sh3 = vslide1up(vreinterpret_u32##suffix1(w3),0, VTraits<_Tpvec>::vlanes()/2); \
+    auto vid0 = vor(sh2, vreinterpret_u32##suffix1(w0), VTraits<_Tpvec>::vlanes()/2); \
+    auto vid1 = vor(sh3, vreinterpret_u32##suffix1(w1), VTraits<_Tpvec>::vlanes()/2); \
+    auto wid0 = vwcvtu_x(v_trunc(vid0), VTraits<_Tpvec>::vlanes()/2); \
+    auto wid1 = vwcvtu_x(v_trunc(vid1), VTraits<_Tpvec>::vlanes()/2); \
+    auto shwid1 = vslide1up(vreinterpret_u32##suffix2(wid1),0, VTraits<_Tpvec>::vlanes()); \
+    auto vid = vor(shwid1, vreinterpret_u32##suffix2(wid0), VTraits<_Tpvec>::vlanes()); \
+    auto vidx = vmul(vid, sizeof(_Tp), VTraits<_Tpvec>::vlanes()); \
+    return vloxei32(tab, vidx, VTraits<_Tpvec>::vlanes()); \
+}
+OPENCV_HAL_IMPL_RVV_LUT_QUADS(v_int8, schar, m1, m2, m4, OPENCV_HAL_NOP)
+OPENCV_HAL_IMPL_RVV_LUT_QUADS(v_int16, short, mf2 , m1, m2, OPENCV_HAL_NOP)
+OPENCV_HAL_IMPL_RVV_LUT_QUADS(v_int32, int, mf2, m1, m1, vlmul_trunc_u32mf2)
+OPENCV_HAL_IMPL_RVV_LUT_QUADS(v_float32, float, mf2, m1, m1, vlmul_trunc_u32mf2)
 
 #define OPENCV_HAL_IMPL_RVV_LUT_VEC(_Tpvec, _Tp) \
 inline _Tpvec v_lut(const _Tp* tab, const v_int32& vidx) \
@@ -512,7 +531,6 @@ inline v_uint32 v_lut_pairs(const unsigned* tab, const int* idx) { return v_rein
 inline v_uint32 v_lut_quads(const unsigned* tab, const int* idx) { return v_reinterpret_as_u32(v_lut_quads((int*)tab, idx)); }
 inline v_uint64 v_lut(const uint64* tab, const int* idx) { return v_reinterpret_as_u64(v_lut((const int64_t *)tab, idx)); }
 inline v_uint64 v_lut_pairs(const uint64* tab, const int* idx) { return v_reinterpret_as_u64(v_lut_pairs((const int64_t *)tab, idx)); }
-inline v_uint64 v_lut_quads(const uint64* tab, const int* idx) { return v_reinterpret_as_u64(v_lut_quads((const int64_t*)tab, idx)); }
 
 ////////////// Pack boolean ////////////////////
 inline v_uint8 v_pack_b(const v_uint16& a, const v_uint16& b)
@@ -749,56 +767,62 @@ OPENCV_HAL_IMPL_RVV_SIGNED_SHIFT_OP(v_int32, VTraits<v_int32>::vlanes())
 OPENCV_HAL_IMPL_RVV_SIGNED_SHIFT_OP(v_int64, VTraits<v_int64>::vlanes())
 
 ////////////// Comparison //////////////
-#define OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, op, intrin, suffix, vl) \
+#define OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, op, intrin, suffix) \
 inline _Tpvec v_##op(const _Tpvec& a, const _Tpvec& b) \
 { \
+    size_t VLEN = VTraits<_Tpvec>::vlanes(); \
     uint64_t ones = -1; \
-    return vmerge(intrin(a, b, vl), vmv_v_x_##suffix##m1(0, vl), ones, vl); \
+    return vmerge(intrin(a, b, VLEN), vmv_v_x_##suffix##m1(0, VLEN), ones, VLEN); \
 }
 
-#define OPENCV_HAL_IMPL_RVV_FLOAT_CMP_OP(_Tpvec, op, intrin, suffix, vl) \
+#define OPENCV_HAL_IMPL_RVV_FLOAT_CMP_OP(_Tpvec, op, intrin, suffix) \
 inline _Tpvec v_##op (const _Tpvec& a, const _Tpvec& b) \
 { \
-    union { uint64 u; double d; } ones; ones.u = -1; \
-    return _Tpvec(vfmerge(intrin(a, b, vl), vfmv_v_f_##suffix##m1(0, vl), ones.d, vl)); \
+    size_t VLEN = VTraits<_Tpvec>::vlanes(); \
+    union { uint64_t u; VTraits<_Tpvec>::lane_type d; } ones; \
+    ones.u = -1; \
+    auto diff = intrin(a, b, VLEN); \
+    auto z = vfmv_v_f_##suffix##m1(0, VLEN); \
+    auto res = vfmerge(diff, z, ones.d, VLEN); \
+    return _Tpvec(res); \
 } //TODO
 
-#define OPENCV_HAL_IMPL_RVV_UNSIGNED_CMP(_Tpvec, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, eq, vmseq, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, ne, vmsne, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, lt, vmsltu, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, gt, vmsgtu, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, le, vmsleu, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, ge, vmsgeu, suffix, vl)
+#define OPENCV_HAL_IMPL_RVV_UNSIGNED_CMP(_Tpvec, suffix) \
+OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, eq, vmseq, suffix) \
+OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, ne, vmsne, suffix) \
+OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, lt, vmsltu, suffix) \
+OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, gt, vmsgtu, suffix) \
+OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, le, vmsleu, suffix) \
+OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, ge, vmsgeu, suffix)
 
-#define OPENCV_HAL_IMPL_RVV_SIGNED_CMP(_Tpvec, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, eq, vmseq, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, ne, vmsne, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, lt, vmslt, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, gt, vmsgt, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, le, vmsle, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, ge, vmsge, suffix, vl)
+#define OPENCV_HAL_IMPL_RVV_SIGNED_CMP(_Tpvec, suffix) \
+OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, eq, vmseq, suffix) \
+OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, ne, vmsne, suffix) \
+OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, lt, vmslt, suffix) \
+OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, gt, vmsgt, suffix) \
+OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, le, vmsle, suffix) \
+OPENCV_HAL_IMPL_RVV_INT_CMP_OP(_Tpvec, ge, vmsge, suffix)
 
-#define OPENCV_HAL_IMPL_RVV_FLOAT_CMP(_Tpvec, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_FLOAT_CMP_OP(_Tpvec, eq, vmfeq, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_FLOAT_CMP_OP(_Tpvec, ne, vmfne, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_FLOAT_CMP_OP(_Tpvec, lt, vmflt, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_FLOAT_CMP_OP(_Tpvec, gt, vmfgt, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_FLOAT_CMP_OP(_Tpvec, le, vmfle, suffix, vl) \
-OPENCV_HAL_IMPL_RVV_FLOAT_CMP_OP(_Tpvec, ge, vmfge, suffix, vl)
+#define OPENCV_HAL_IMPL_RVV_FLOAT_CMP(_Tpvec, suffix) \
+OPENCV_HAL_IMPL_RVV_FLOAT_CMP_OP(_Tpvec, eq, vmfeq, suffix) \
+OPENCV_HAL_IMPL_RVV_FLOAT_CMP_OP(_Tpvec, ne, vmfne, suffix) \
+OPENCV_HAL_IMPL_RVV_FLOAT_CMP_OP(_Tpvec, lt, vmflt, suffix) \
+OPENCV_HAL_IMPL_RVV_FLOAT_CMP_OP(_Tpvec, gt, vmfgt, suffix) \
+OPENCV_HAL_IMPL_RVV_FLOAT_CMP_OP(_Tpvec, le, vmfle, suffix) \
+OPENCV_HAL_IMPL_RVV_FLOAT_CMP_OP(_Tpvec, ge, vmfge, suffix)
 
 
-OPENCV_HAL_IMPL_RVV_UNSIGNED_CMP(v_uint8, u8, VTraits<v_uint8>::vlanes())
-OPENCV_HAL_IMPL_RVV_UNSIGNED_CMP(v_uint16, u16, VTraits<v_uint16>::vlanes())
-OPENCV_HAL_IMPL_RVV_UNSIGNED_CMP(v_uint32, u32, VTraits<v_uint32>::vlanes())
-OPENCV_HAL_IMPL_RVV_UNSIGNED_CMP(v_uint64, u64, VTraits<v_uint64>::vlanes())
-OPENCV_HAL_IMPL_RVV_SIGNED_CMP(v_int8, i8, VTraits<v_int8>::vlanes())
-OPENCV_HAL_IMPL_RVV_SIGNED_CMP(v_int16, i16, VTraits<v_int16>::vlanes())
-OPENCV_HAL_IMPL_RVV_SIGNED_CMP(v_int32, i32, VTraits<v_int32>::vlanes())
-OPENCV_HAL_IMPL_RVV_SIGNED_CMP(v_int64, i64, VTraits<v_int64>::vlanes())
-OPENCV_HAL_IMPL_RVV_FLOAT_CMP(v_float32, f32, VTraits<v_float32>::vlanes())
+OPENCV_HAL_IMPL_RVV_UNSIGNED_CMP(v_uint8, u8)
+OPENCV_HAL_IMPL_RVV_UNSIGNED_CMP(v_uint16, u16)
+OPENCV_HAL_IMPL_RVV_UNSIGNED_CMP(v_uint32, u32)
+OPENCV_HAL_IMPL_RVV_UNSIGNED_CMP(v_uint64, u64)
+OPENCV_HAL_IMPL_RVV_SIGNED_CMP(v_int8, i8)
+OPENCV_HAL_IMPL_RVV_SIGNED_CMP(v_int16, i16)
+OPENCV_HAL_IMPL_RVV_SIGNED_CMP(v_int32, i32)
+OPENCV_HAL_IMPL_RVV_SIGNED_CMP(v_int64, i64)
+OPENCV_HAL_IMPL_RVV_FLOAT_CMP(v_float32, f32)
 #if CV_SIMD_SCALABLE_64F
-OPENCV_HAL_IMPL_RVV_FLOAT_CMP(v_float64, f64, VTraits<v_float64>::vlanes())
+OPENCV_HAL_IMPL_RVV_FLOAT_CMP(v_float64, f64)
 #endif
 
 inline v_float32 v_not_nan(const v_float32& a)
@@ -1504,6 +1528,26 @@ OPENCV_HAL_IMPL_RVV_ZIP(v_uint32, vuint32m2_t, u32, 32, 64, OPENCV_HAL_NOP, OPEN
 OPENCV_HAL_IMPL_RVV_ZIP(v_int32, vint32m2_t, i32, 32, 64, vreinterpret_u32m2, vreinterpret_u32m1)
 OPENCV_HAL_IMPL_RVV_ZIP(v_float32, vfloat32m2_t, f32, 32, 64, vreinterpret_u32m2, vreinterpret_u32m1)
 
+#if CV_SIMD_SCALABLE_64F
+inline void v_zip(const v_float64& a0, const v_float64& a1, v_float64& b0, v_float64& b1) { \
+    vuint16mf4_t idx0 = vid_v_u16mf4(VTraits<v_float64>::vlanes());
+    vuint16mf4_t idx1 = vadd(idx0, VTraits<v_float64>::vlanes(), VTraits<v_float64>::vlanes());
+    vuint16mf2_t idx = vreinterpret_u16mf2(( \
+        vor(vzext_vf2(idx0, VTraits<v_float64>::vlanes()), \
+            vreinterpret_u32mf2(vslide1up(vreinterpret_u16mf2(vzext_vf2(idx1, VTraits<v_float64>::vlanes())), 0, VTraits<v_uint32>::vlanes())), \
+            VTraits<v_uint32>::vlanes())));
+#if 0
+    vfloat64m2_t temp = __riscv_vcreate_v_f64m1_f64m2(a0, a1);
+#else // TODO: clean up when RVV Intrinsic is frozen.
+    vfloat64m2_t temp = vlmul_ext_f64m2(a0);
+    temp = vset(temp, 1, a1);
+#endif
+    temp = vrgatherei16(temp, idx, VTraits<v_float64>::vlanes()*2);
+    b0 = vget_f64m1(temp, 0); \
+    b1 = vget_f64m1(temp, 1); \
+}
+#endif
+
 #define OPENCV_HAL_IMPL_RVV_UNPACKS(_Tpvec, width) \
 inline _Tpvec v_combine_low(const _Tpvec& a, const _Tpvec& b) \
 { \
@@ -1786,28 +1830,28 @@ OPENCV_HAL_IMPL_RVV_PACK_TRIPLETS(v_float64, vlmul_trunc_u8mf8)
 ////// FP16 support ///////
 
 #if defined(__riscv_zfh) && __riscv_zfh
-inline v_float32 v_load_expand(const float16_t* ptr)
+inline v_float32 v_load_expand(const hfloat* ptr)
 {
     return vfwcvt_f(vle16_v_f16mf2((_Float16*)ptr, VTraits<v_float32>::vlanes()) ,VTraits<v_float32>::vlanes());;
 }
 
-inline void v_pack_store(float16_t* ptr, const v_float32& v)
+inline void v_pack_store(hfloat* ptr, const v_float32& v)
 {
     vse16_v_f16mf2((_Float16*)ptr, vfncvt_f_f_w_f16mf2(v, VTraits<v_float32>::vlanes()), VTraits<v_float32>::vlanes());
 }
 #else
-inline v_float32 v_load_expand(const float16_t* ptr)
+inline v_float32 v_load_expand(const hfloat* ptr)
 {
     float buf[32];
     for( int i = 0; i < VTraits<v_float32>::vlanes(); i++ ) buf[i] = (float)ptr[i];
     return v_load(buf);
 }
 
-inline void v_pack_store(float16_t* ptr, const v_float32& v)
+inline void v_pack_store(hfloat* ptr, const v_float32& v)
 {
     float buf[32];
     v_store(buf, v);
-    for( int i = 0; i < VTraits<v_float32>::vlanes(); i++ ) ptr[i] = float16_t(buf[i]);
+    for( int i = 0; i < VTraits<v_float32>::vlanes(); i++ ) ptr[i] = hfloat(buf[i]);
 }
 #endif
 ////////////// Rounding //////////////
@@ -1835,12 +1879,14 @@ inline v_int32 v_trunc(const v_float32& a)
 #if CV_SIMD_SCALABLE_64F
 inline v_int32 v_round(const v_float64& a)
 {
-    return vfncvt_x(vlmul_ext_f64m2(vfadd(a, 1e-6, VTraits<v_float64>::vlanes())), VTraits<v_float32>::vlanes());
+    return vfncvt_x(vlmul_ext_f64m2(a), VTraits<v_float32>::vlanes());
 }
 
 inline v_int32 v_round(const v_float64& a, const v_float64& b)
 {
-    return vfncvt_x(vset(vlmul_ext_f64m2(vfadd(a, 1e-6, VTraits<v_float64>::vlanes())), 1, b), VTraits<v_float32>::vlanes());
+    // return vfncvt_x(vset(vlmul_ext_f64m2(vfadd(a, 1e-6, VTraits<v_float64>::vlanes())), 1, b), VTraits<v_float32>::vlanes());
+    // Fix https://github.com/opencv/opencv/issues/24746
+    return vfncvt_x(vset(vlmul_ext_f64m2(a), 1, b), VTraits<v_float32>::vlanes());
 }
 
 inline v_int32 v_floor(const v_float64& a)

@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -1776,6 +1776,7 @@ fz_scale_pixmap_cached(fz_context *ctx, const fz_pixmap *src, float x, float y, 
 			fz_free(ctx, contrib_rows);
 		fz_rethrow(ctx);
 	}
+	assert(output != NULL);
 	output->x = dst_x_int;
 	output->y = dst_y_int;
 

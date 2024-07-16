@@ -16,16 +16,18 @@
  *
  **********************************************************************/
 
+#include <tesseract/preparation.h> // compiler config, etc.
+
 #include "polyaprx.h"
 
 #include "blobs.h"   // for EDGEPT, TPOINT, VECTOR, TESSLINE
 #include "coutln.h"  // for C_OUTLINE
 #include "errcode.h" // for ASSERT_HOST
 #include "mod128.h"  // for DIR128
-#include "params.h"  // for BoolParam, BOOL_VAR
+#include <tesseract/params.h>  // for BoolParam, BOOL_VAR
 #include "points.h"  // for ICOORD
 #include "rect.h"    // for TBOX
-#include "tprintf.h" // for tprintf
+#include <tesseract/tprintf.h> // for tprintf
 
 #include <cstdint> // for INT16_MAX, int8_t
 
@@ -33,9 +35,8 @@ namespace tesseract {
 
 #define FASTEDGELENGTH 256
 
-static BOOL_VAR(poly_debug, false, "Debug old poly");
-static BOOL_VAR(poly_wide_objects_better, true,
-                "More accurate approx on wide things");
+BOOL_VAR(poly_debug, false, "Debug old poly");
+BOOL_VAR(poly_wide_objects_better, true, "More accurate approx on wide things");
 
 #define fixed_dist 20  // really an int_variable
 #define approx_dist 15 // really an int_variable
@@ -108,7 +109,7 @@ static void cutline(       // recursive refine
     edge = edge->next;
   } while (edge != last); // test all line
 
-  perp = vecsum.length();
+  perp = vecsum.length2();
   ASSERT_HOST(perp != 0);
 
   if (maxperp < 256 * INT16_MAX) {
@@ -389,7 +390,7 @@ static void fix2(  // polygonal approx
       break; // already too few
     }
     d12vec.diff(edgefix1->pos, edgefix2->pos);
-    d12 = d12vec.length();
+    d12 = d12vec.length2();
     // TODO(rays) investigate this change:
     // Only unfix a point if it is part of a low-curvature section
     // of outline and the total angle change of the outlines is
@@ -397,9 +398,9 @@ static void fix2(  // polygonal approx
     // if (d12 <= gapmin && edgefix0->vec.dot(edgefix2->vec) > 0) {
     if (d12 <= gapmin) {
       d01vec.diff(edgefix0->pos, edgefix1->pos);
-      d01 = d01vec.length();
+      d01 = d01vec.length2();
       d23vec.diff(edgefix2->pos, edgefix3->pos);
-      d23 = d23vec.length();
+      d23 = d23vec.length2();
       if (d01 > d23) {
         edgefix2->fixed = false;
         fixed_count--;

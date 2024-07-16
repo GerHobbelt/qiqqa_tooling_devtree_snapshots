@@ -38,10 +38,10 @@ int main(int argc, const char **argv) {
 
   tesseract::TessBaseAPI *api = new tesseract::TessBaseAPI();
   if (argc == 4) {
-    api->InitSimple(NULL, argv[3]);
+    api->InitSimple(nullptr, argv[3]);
   }
   else {
-    api->InitSimple(NULL, "eng");
+    api->InitSimple(nullptr, "eng");
   }
   Pix *image0 = pixRead(input_filename.c_str());
   api->SetImage(image0);

@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libquill-logging</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF496049}</ProjectGuid>
-    <RootNamespace>libquill-logging</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -93,7 +91,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;4324;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <SupportJustMyCode>false</SupportJustMyCode>
@@ -111,9 +109,19 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
+<ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <Optimization>Custom</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBQUILL_LOGGING;QUILL_LOGGING_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -126,14 +134,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/quill-logging/quill/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/quill-logging/quill/include;../../thirdparty/owemdjee/quill-logging/examples/wrapper_lib_example/quill_wrapper/include;../../thirdparty/owemdjee/doctest;../../thirdparty/owemdjee/quill-logging/quill/test/misc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBQUILL_LOGGING;QUILL_LOGGING_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBQUILL_LOGGING;QUILL_LOGGING_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/quill-logging/quill/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/quill-logging/quill/include;../../thirdparty/owemdjee/quill-logging/examples/wrapper_lib_example/quill_wrapper/include;../../thirdparty/owemdjee/doctest;../../thirdparty/owemdjee/quill-logging/quill/test/misc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -152,7 +160,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/quill-logging/quill/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/quill-logging/quill/include;../../thirdparty/owemdjee/quill-logging/examples/wrapper_lib_example/quill_wrapper/include;../../thirdparty/owemdjee/doctest;../../thirdparty/owemdjee/quill-logging/quill/test/misc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBQUILL_LOGGING;QUILL_LOGGING_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -160,7 +168,7 @@
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBQUILL_LOGGING;QUILL_LOGGING_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/quill-logging/quill/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/quill-logging/quill/include;../../thirdparty/owemdjee/quill-logging/examples/wrapper_lib_example/quill_wrapper/include;../../thirdparty/owemdjee/doctest;../../thirdparty/owemdjee/quill-logging/quill/test/misc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -181,14 +189,14 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/quill-logging/quill/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/quill-logging/quill/include;../../thirdparty/owemdjee/quill-logging/examples/wrapper_lib_example/quill_wrapper/include;../../thirdparty/owemdjee/doctest;../../thirdparty/owemdjee/quill-logging/quill/test/misc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBQUILL_LOGGING;QUILL_LOGGING_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBQUILL_LOGGING;QUILL_LOGGING_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/quill-logging/quill/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/quill-logging/quill/include;../../thirdparty/owemdjee/quill-logging/examples/wrapper_lib_example/quill_wrapper/include;../../thirdparty/owemdjee/doctest;../../thirdparty/owemdjee/quill-logging/quill/test/misc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -207,7 +215,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/quill-logging/quill/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/quill-logging/quill/include;../../thirdparty/owemdjee/quill-logging/examples/wrapper_lib_example/quill_wrapper/include;../../thirdparty/owemdjee/doctest;../../thirdparty/owemdjee/quill-logging/quill/test/misc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBQUILL_LOGGING;QUILL_LOGGING_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -215,7 +223,7 @@
     <ResourceCompile>
       <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBQUILL_LOGGING;QUILL_LOGGING_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/quill-logging/quill/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/owemdjee/quill-logging/quill/include;../../thirdparty/owemdjee/quill-logging/examples/wrapper_lib_example/quill_wrapper/include;../../thirdparty/owemdjee/doctest;../../thirdparty/owemdjee/quill-logging/quill/test/misc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Lib>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -251,6 +259,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/examples/example_filters.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/examples/example_handler_log_levels.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/examples/example_json_structured_log.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/quill-logging/examples/example_json_structured_log_console.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/examples/example_logging_to_file.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/examples/example_multiple_handlers.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/examples/example_quick_start.cpp" />
@@ -261,6 +270,8 @@
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/examples/example_trivial_system_clock.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/examples/example_user_defined_types.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/examples/example_wake_up_logging_thread.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/quill-logging/examples/wrapper_lib_example/example_wrapper_lib.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/quill-logging/examples/wrapper_lib_example/quill_wrapper/include/quill_wrapper/quill_wrapper.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/src/LogLevel.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/src/PatternFormatter.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/src/Quill.cpp" />
@@ -284,6 +295,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/src/handlers/ConsoleHandler.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/src/handlers/FileHandler.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/src/handlers/Handler.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/src/handlers/JsonConsoleHandler.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/src/handlers/JsonFileHandler.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/src/handlers/RotatingFileHandler.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/src/handlers/StreamHandler.cpp" />
@@ -296,6 +308,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/test/LoggerTest.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/test/MacroMetadataTest.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/test/PatternFormatterTest.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/test/QuillBoundQueueLogTest.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/test/QuillLogNoTransitBufferTest.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/test/QuillLogTest.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/test/QuillLogWakeUpBackendTest.cpp" />
@@ -315,6 +328,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/quill-logging/quill/test/misc/TestUtilities.cpp" />
     <ClInclude Include="../../thirdparty/owemdjee/quill-logging/benchmarks/hot_path_latency/hot_path_bench.h" />
     <ClInclude Include="../../thirdparty/owemdjee/quill-logging/benchmarks/hot_path_latency/hot_path_bench_config.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/quill-logging/examples/wrapper_lib_example/quill_wrapper/include/quill_wrapper/quill_wrapper.h" />
     <ClInclude Include="../../thirdparty/owemdjee/quill-logging/quill/include/quill/Clock.h" />
     <ClInclude Include="../../thirdparty/owemdjee/quill-logging/quill/include/quill/Config.h" />
     <ClInclude Include="../../thirdparty/owemdjee/quill-logging/quill/include/quill/Fmt.h" />
@@ -369,6 +383,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/quill-logging/quill/include/quill/handlers/ConsoleHandler.h" />
     <ClInclude Include="../../thirdparty/owemdjee/quill-logging/quill/include/quill/handlers/FileHandler.h" />
     <ClInclude Include="../../thirdparty/owemdjee/quill-logging/quill/include/quill/handlers/Handler.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/quill-logging/quill/include/quill/handlers/JsonConsoleHandler.h" />
     <ClInclude Include="../../thirdparty/owemdjee/quill-logging/quill/include/quill/handlers/JsonFileHandler.h" />
     <ClInclude Include="../../thirdparty/owemdjee/quill-logging/quill/include/quill/handlers/NullHandler.h" />
     <ClInclude Include="../../thirdparty/owemdjee/quill-logging/quill/include/quill/handlers/RotatingFileHandler.h" />
@@ -400,6 +415,8 @@
     <Text Include="../../thirdparty/owemdjee/quill-logging/docs/usage.rst" />
     <Text Include="../../thirdparty/owemdjee/quill-logging/docs/users-api.rst" />
     <Text Include="../../thirdparty/owemdjee/quill-logging/examples/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/quill-logging/examples/wrapper_lib_example/CMakeLists.txt" />
+    <Text Include="../../thirdparty/owemdjee/quill-logging/examples/wrapper_lib_example/quill_wrapper/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/quill-logging/quill/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/quill-logging/quill/cmake/CodeCoverage.cmake" />
     <Text Include="../../thirdparty/owemdjee/quill-logging/quill/cmake/Utility.cmake" />

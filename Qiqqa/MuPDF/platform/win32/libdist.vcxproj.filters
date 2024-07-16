@@ -12,8 +12,17 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Resource Files">
+    <Filter Include="Misc Files\tmp">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tmp\stringmetric">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\tmp\stringmetric\project">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0004}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -50,12 +59,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/libdist/pylcs.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/libdist/sqlite3.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/owemdjee/libdist/sqlite3ext.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="../../thirdparty/owemdjee/libdist/utf8_unicode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -68,11 +71,20 @@
     <Text Include="../../thirdparty/owemdjee/libdist/README.md">
       <Filter>Misc Files</Filter>
     </Text>
-    <Text Include="../../thirdparty/owemdjee/libdist/distlib_64.dll">
-      <Filter>Misc Files</Filter>
-    </Text>
     <Text Include="../../thirdparty/owemdjee/libdist/linux_build_extensions.sh">
       <Filter>Misc Files</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libdist/tmp/stringmetric/project/build.properties">
+      <Filter>Misc Files\tmp\stringmetric\project</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libdist/tmp/stringmetric/project/build.sh">
+      <Filter>Misc Files\tmp\stringmetric\project</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libdist/tmp/stringmetric/project/scala.sh">
+      <Filter>Misc Files\tmp\stringmetric\project</Filter>
+    </Text>
+    <Text Include="../../thirdparty/owemdjee/libdist/tmp/stringmetric/readme.md">
+      <Filter>Misc Files\tmp\stringmetric</Filter>
     </Text>
     <Text Include="../../thirdparty/owemdjee/libdist/win64build_extensions_generic.bat">
       <Filter>Misc Files</Filter>

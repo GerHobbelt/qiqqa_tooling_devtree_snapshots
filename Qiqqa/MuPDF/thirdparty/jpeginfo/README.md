@@ -1,5 +1,5 @@
 
-Jpeginfo v1.7.1beta  Copyright (c) 1995-2023, Timo Kokkonen.
+Jpeginfo v1.7.1  Copyright (c) 1995-2023, Timo Kokkonen.
 
 SYNOPSIS
     Prints information and tests integrity of JPEG/JFIF files.
@@ -12,17 +12,19 @@ REQUIREMENTS
 TESTED PLATFORMS
 	Linux
 	MacOS
-	Solaris
-        IRIX
-	HP-UX
+	Solaris *
+        IRIX *
+	HP-UX *
+
+	*) No longer actively tested on these operating systems.
 
 INSTALLATION
 	Installation should be very straightforward, just unpack the
 	tar file, run configure script, and then compile the program.
 	You may want to do something like this:
 
-		gunzip -c jpeginfo-1.7.0.tar.gz | tar xf -
-		cd jpeginfo-1.7.0
+		gunzip -c jpeginfo-1.7.1.tar.gz | tar xf -
+		cd jpeginfo-1.7.1
 		./configure
 		make
 		make strip
@@ -34,8 +36,10 @@ INSTALLATION
 
 
 HISTORY
-	v1.7.1 - add --files-from and --files-stdin,
-	         minor fixed.
+	v1.7.1 - Add --files-from and --files-stdin options,
+	         fix -j option,
+		 lot of code cleanup by Kurt Schwehr,
+	         other minor fixes.
         v1.7.0 - support for CSV output (--csv),
 	         support for JSON output (--json),
 	         add support for reading input file from stdin (--stdin),
@@ -89,4 +93,4 @@ ACKNOWLEDGEMENT
 
 
 Timo <tjko@iki.fi>
-15-Jan-2023
+29-Oct-2023

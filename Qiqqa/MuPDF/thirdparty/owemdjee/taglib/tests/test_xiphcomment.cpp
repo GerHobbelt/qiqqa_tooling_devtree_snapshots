@@ -27,7 +27,6 @@
 #include <cstdio>
 
 #include "tpropertymap.h"
-#include "tdebug.h"
 #include "xiphcomment.h"
 #include "vorbisfile.h"
 #include <cppunit/extensions/HelperMacros.h>
@@ -144,15 +143,15 @@ public:
     f.tag()->addField("TITLE", "Title3", false);
     f.tag()->addField("artist", "Artist1");
     f.tag()->addField("ARTIST", "Artist2", false);
-    CPPUNIT_ASSERT_EQUAL(String("Title1 Title1 Title2 Title3"), f.tag()->title());
-    CPPUNIT_ASSERT_EQUAL(String("Artist1 Artist2"), f.tag()->artist());
+    CPPUNIT_ASSERT_EQUAL(String("Title1 / Title1 / Title2 / Title3"), f.tag()->title());
+    CPPUNIT_ASSERT_EQUAL(String("Artist1 / Artist2"), f.tag()->artist());
 
     f.tag()->removeFields("title", "Title1");
-    CPPUNIT_ASSERT_EQUAL(String("Title2 Title3"), f.tag()->title());
-    CPPUNIT_ASSERT_EQUAL(String("Artist1 Artist2"), f.tag()->artist());
+    CPPUNIT_ASSERT_EQUAL(String("Title2 / Title3"), f.tag()->title());
+    CPPUNIT_ASSERT_EQUAL(String("Artist1 / Artist2"), f.tag()->artist());
 
     f.tag()->removeFields("Artist");
-    CPPUNIT_ASSERT_EQUAL(String("Title2 Title3"), f.tag()->title());
+    CPPUNIT_ASSERT_EQUAL(String("Title2 / Title3"), f.tag()->title());
     CPPUNIT_ASSERT(f.tag()->artist().isEmpty());
 
     f.tag()->removeAllFields();
@@ -184,10 +183,10 @@ public:
       Vorbis::File f(newname.c_str());
       List<FLAC::Picture *> lst = f.tag()->pictureList();
       CPPUNIT_ASSERT_EQUAL(static_cast<unsigned int>(1), lst.size());
-      CPPUNIT_ASSERT_EQUAL(static_cast<int>(5), lst[0]->width());
-      CPPUNIT_ASSERT_EQUAL(static_cast<int>(6), lst[0]->height());
-      CPPUNIT_ASSERT_EQUAL(static_cast<int>(16), lst[0]->colorDepth());
-      CPPUNIT_ASSERT_EQUAL(static_cast<int>(7), lst[0]->numColors());
+      CPPUNIT_ASSERT_EQUAL(5, lst[0]->width());
+      CPPUNIT_ASSERT_EQUAL(6, lst[0]->height());
+      CPPUNIT_ASSERT_EQUAL(16, lst[0]->colorDepth());
+      CPPUNIT_ASSERT_EQUAL(7, lst[0]->numColors());
       CPPUNIT_ASSERT_EQUAL(String("image/jpeg"), lst[0]->mimeType());
       CPPUNIT_ASSERT_EQUAL(String("new image"), lst[0]->description());
       CPPUNIT_ASSERT_EQUAL(ByteVector("JPEG data"), lst[0]->data());

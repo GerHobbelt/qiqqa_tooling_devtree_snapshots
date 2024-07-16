@@ -618,16 +618,15 @@ class TensorBase<Derived, ReadOnlyAccessors>
     (isnan)() const {
       return unaryExpr(internal::scalar_isnan_op<Scalar, true>()).template cast<bool>();
     }
-
     EIGEN_DEVICE_FUNC
-    EIGEN_STRONG_INLINE const TensorCwiseUnaryOp<internal::scalar_isinf_op<Scalar>, const Derived>
+    EIGEN_STRONG_INLINE const TensorConversionOp<bool, const TensorCwiseUnaryOp<internal::scalar_isinf_op<Scalar, true>, const Derived>>
     (isinf)() const {
-      return unaryExpr(internal::scalar_isinf_op<Scalar>());
+      return unaryExpr(internal::scalar_isinf_op<Scalar, true>()).template cast<bool>();
     }
     EIGEN_DEVICE_FUNC
-    EIGEN_STRONG_INLINE const TensorCwiseUnaryOp<internal::scalar_isfinite_op<Scalar>, const Derived>
+    EIGEN_STRONG_INLINE const TensorConversionOp<bool, const TensorCwiseUnaryOp<internal::scalar_isfinite_op<Scalar, true>, const Derived>>
     (isfinite)() const {
-      return unaryExpr(internal::scalar_isfinite_op<Scalar>());
+      return unaryExpr(internal::scalar_isfinite_op<Scalar, true>()).template cast<bool>();
     }
 
     // Coefficient-wise ternary operators.
@@ -999,8 +998,9 @@ class TensorBase<Derived, ReadOnlyAccessors>
     }
 
     // Returns a formatted tensor ready for printing to a stream
-    inline const TensorWithFormat<Derived,DerivedTraits::Layout,DerivedTraits::NumDimensions> format(const TensorIOFormat& fmt) const {
-      return TensorWithFormat<Derived,DerivedTraits::Layout,DerivedTraits::NumDimensions>(derived(), fmt);
+    template<typename Format>
+    inline const TensorWithFormat<Derived,DerivedTraits::Layout,DerivedTraits::NumDimensions, Format> format(const Format& fmt) const {
+      return TensorWithFormat<Derived,DerivedTraits::Layout,DerivedTraits::NumDimensions, Format>(derived(), fmt);
     }
 
     #ifdef EIGEN_READONLY_TENSORBASE_PLUGIN

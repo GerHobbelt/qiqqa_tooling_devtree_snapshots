@@ -22,7 +22,6 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{ca0bda38-89b9-4703-a77d-8049acF23027}</ProjectGuid>
-    <RootNamespace>libleptonica_tools</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -73,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <LinkIncremental>false</LinkIncremental>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
   </PropertyGroup>
@@ -110,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -330,9 +329,10 @@
     <ClCompile Include="../../thirdparty/leptonica/prog/findbinding.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/findcorners_reg.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/findpattern1.c" />
+    <ClCompile Include="../../thirdparty/leptonica/prog/findpattern1_reg.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/findpattern2.c" />
+    <ClCompile Include="../../thirdparty/leptonica/prog/findpattern2_reg.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/findpattern3.c" />
-    <ClCompile Include="../../thirdparty/leptonica/prog/findpattern_reg.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/flipdetect_reg.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/fmorphauto_reg.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/fmorphautogen.c" />
@@ -388,6 +388,7 @@
     <ClCompile Include="../../thirdparty/leptonica/prog/maze_reg.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/messagetest.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/misctest1.c" />
+    <ClCompile Include="../../thirdparty/leptonica/prog/misctest2.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/modifyhuesat.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/morphseq_reg.c" />
     <ClCompile Include="../../thirdparty/leptonica/prog/morphtest1.c" />
@@ -539,6 +540,7 @@
     <Image Include="../../thirdparty/leptonica/prog/aneurisms8.jpg" />
     <Image Include="../../thirdparty/leptonica/prog/arabic.png" />
     <Image Include="../../thirdparty/leptonica/prog/arabic2.png" />
+    <Image Include="../../thirdparty/leptonica/prog/asterisk.png" />
     <Image Include="../../thirdparty/leptonica/prog/barcode-128-300.png" />
     <Image Include="../../thirdparty/leptonica/prog/barcode-2of5-300.png" />
     <Image Include="../../thirdparty/leptonica/prog/barcode-39-300.png" />
@@ -638,6 +640,7 @@
     <Image Include="../../thirdparty/leptonica/prog/msedge_bad_crop.png" />
     <Image Include="../../thirdparty/leptonica/prog/msedge_good_crop.png" />
     <Image Include="../../thirdparty/leptonica/prog/notes-rgba.png" />
+    <Image Include="../../thirdparty/leptonica/prog/one-asterisk.png" />
     <Image Include="../../thirdparty/leptonica/prog/pageseg2-mask.png" />
     <Image Include="../../thirdparty/leptonica/prog/pageseg2-seed.png" />
     <Image Include="../../thirdparty/leptonica/prog/pancrazi.15.jpg" />
@@ -744,6 +747,8 @@
     <Text Include="../../thirdparty/leptonica/prog/bois-3.tif" />
     <Text Include="../../thirdparty/leptonica/prog/bois-4.tif" />
     <Text Include="../../thirdparty/leptonica/prog/bois-5.tif" />
+    <Text Include="../../thirdparty/leptonica/prog/boismort.1.tif" />
+    <Text Include="../../thirdparty/leptonica/prog/boismort.15.tif" />
     <Text Include="../../thirdparty/leptonica/prog/char.tif" />
     <Text Include="../../thirdparty/leptonica/prog/chars-10.tif" />
     <Text Include="../../thirdparty/leptonica/prog/chars-12.tif" />

@@ -143,7 +143,7 @@
  *  -----------------------------------------
  *
  *  Memory management of the (image) data field in the pix is
- *  handled differently from that in the colormap or text fields.
+ *  handled differently from that in the colormap and text fields.
  *  For colormap and text, the functions pixSetColormap() and
  *  pixSetText() remove the existing heap data and insert the
  *  new data.  For the image data, pixSetData() just reassigns the
@@ -716,7 +716,7 @@ l_int32  bytes;
 
         /* If we're making a new pix ... */
     if (!pixd) {
-        if ((pixd = pixCreateTemplate(pixs)) == NULL)
+        if ((pixd = pixCreateTemplateNoInit(pixs)) == NULL)
             return (PIX *)ERROR_PTR("pixd not made", __func__, NULL);
         memcpy(pixd->data, pixs->data, bytes);
         return pixd;

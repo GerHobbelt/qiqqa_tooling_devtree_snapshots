@@ -591,8 +591,8 @@ PixarLogMakeTables(TIFF* tif, PixarLogState *sp)
     return 1;
 }
 
-#define DecoderState(tif)	((PixarLogState*) (tif)->tif_data)
-#define EncoderState(tif)	((PixarLogState*) (tif)->tif_data)
+#define PixarLogDecoderState(tif) ((PixarLogState *)(tif)->tif_data)
+#define PixarLogEncoderState(tif) ((PixarLogState *)(tif)->tif_data)
 
 static int PixarLogEncode(TIFF* tif, uint8_t* bp, tmsize_t cc, uint16_t s);
 static int PixarLogDecode(TIFF* tif, uint8_t* op, tmsize_t occ, uint16_t s);
@@ -665,7 +665,7 @@ PixarLogSetupDecode(TIFF* tif)
 {
 	static const char module[] = "PixarLogSetupDecode";
 	TIFFDirectory *td = &tif->tif_dir;
-	PixarLogState* sp = DecoderState(tif);
+    PixarLogState *sp = PixarLogDecoderState(tif);
 	tmsize_t tbuf_size;
         uint32_t strip_height;
 
@@ -730,7 +730,7 @@ static int
 PixarLogPreDecode(TIFF* tif, uint16_t s)
 {
 	static const char module[] = "PixarLogPreDecode";
-	PixarLogState* sp = DecoderState(tif);
+    PixarLogState *sp = PixarLogDecoderState(tif);
 
 	(void) s;
 	assert(sp != NULL);
@@ -753,7 +753,7 @@ PixarLogDecode(TIFF* tif, uint8_t* op, tmsize_t occ, uint16_t s)
 {
 	static const char module[] = "PixarLogDecode";
 	TIFFDirectory *td = &tif->tif_dir;
-	PixarLogState* sp = DecoderState(tif);
+    PixarLogState *sp = PixarLogDecoderState(tif);
 	tmsize_t i;
 	tmsize_t nsamples;
 	int llen;
@@ -776,6 +776,7 @@ PixarLogDecode(TIFF* tif, uint8_t* op, tmsize_t occ, uint16_t s)
 		TIFFErrorExtR(tif, module,
 			"%"PRIu16" bit input not supported in PixarLog",
 			td->td_bitspersample);
+            memset(op, 0, (size_t)occ);
 		return 0;
 	}
 
@@ -796,12 +797,14 @@ PixarLogDecode(TIFF* tif, uint8_t* op, tmsize_t occ, uint16_t s)
 	if (sp->stream.avail_out != nsamples * sizeof(uint16_t))
 	{
 		TIFFErrorExtR(tif, module, "ZLib cannot deal with buffers this size");
+        memset(op, 0, (size_t)occ);
 		return (0);
 	}
 	/* Check that we will not fill more than what was allocated */
 	if ((tmsize_t)sp->stream.avail_out > sp->tbuf_size)
 	{
 		TIFFErrorExtR(tif, module, "sp->stream.avail_out > sp->tbuf_size");
+        memset(op, 0, (size_t)occ);
 		return (0);
 	}
 	do {
@@ -813,11 +816,13 @@ PixarLogDecode(TIFF* tif, uint8_t* op, tmsize_t occ, uint16_t s)
 			TIFFErrorExtR(tif, module,
 			    "Decoding error at scanline %"PRIu32", %s",
 			    tif->tif_row, sp->stream.msg ? sp->stream.msg : "(null)");
+            memset(op, 0, (size_t)occ);
 			return (0);
 		}
 		if (state != Z_OK) {
 			TIFFErrorExtR(tif, module, "ZLib error: %s",
 			    sp->stream.msg ? sp->stream.msg : "(null)");
+            memset(op, 0, (size_t)occ);
 			return (0);
 		}
 	} while (sp->stream.avail_out > 0);
@@ -827,6 +832,7 @@ PixarLogDecode(TIFF* tif, uint8_t* op, tmsize_t occ, uint16_t s)
 		TIFFErrorExtR(tif, module,
 		    "Not enough data at scanline %"PRIu32" (short %u bytes)",
 		    tif->tif_row, sp->stream.avail_out);
+        memset(op, 0, (size_t)occ);
 		return (0);
 	}
 
@@ -886,6 +892,7 @@ PixarLogDecode(TIFF* tif, uint8_t* op, tmsize_t occ, uint16_t s)
 			TIFFErrorExtR(tif, module,
 				  "Unsupported bits/sample: %"PRIu16,
 				  td->td_bitspersample);
+                memset(op, 0, (size_t)occ);
 			return (0);
 		}
 	}
@@ -898,7 +905,7 @@ PixarLogSetupEncode(TIFF* tif)
 {
 	static const char module[] = "PixarLogSetupEncode";
 	TIFFDirectory *td = &tif->tif_dir;
-	PixarLogState* sp = EncoderState(tif);
+    PixarLogState *sp = PixarLogEncoderState(tif);
 	tmsize_t tbuf_size;
 
 	assert(sp != NULL);
@@ -937,7 +944,7 @@ static int
 PixarLogPreEncode(TIFF* tif, uint16_t s)
 {
 	static const char module[] = "PixarLogPreEncode";
-	PixarLogState *sp = EncoderState(tif);
+    PixarLogState *sp = PixarLogEncoderState(tif);
 
 	(void) s;
 	assert(sp != NULL);
@@ -1117,7 +1124,7 @@ PixarLogEncode(TIFF* tif, uint8_t* bp, tmsize_t cc, uint16_t s)
 {
 	static const char module[] = "PixarLogEncode";
 	TIFFDirectory *td = &tif->tif_dir;
-	PixarLogState *sp = EncoderState(tif);
+    PixarLogState *sp = PixarLogEncoderState(tif);
 	tmsize_t i;
 	tmsize_t n;
 	int llen;
@@ -1218,7 +1225,7 @@ static int
 PixarLogPostEncode(TIFF* tif)
 {
 	static const char module[] = "PixarLogPostEncode";
-	PixarLogState *sp = EncoderState(tif);
+    PixarLogState *sp = PixarLogEncoderState(tif);
 	int state;
 
 	sp->stream.avail_in = 0;

@@ -536,7 +536,7 @@ void FacemarkLBFImpl::prepareTrainingData(Mat img, std::vector<Point2f> facePoin
     std::vector<Mat> & cropped, std::vector<Mat> & shapes, std::vector<BBox> &boxes)
 {
     Mat shape;
-    Mat _shape = Mat(facePoints).reshape(1);
+    Mat _shape = Mat(facePoints).reshape(1, (int)facePoints.size());
     Rect box = getBBox(img, _shape);
 
     if(img.channels()>1){
@@ -667,7 +667,7 @@ Mat FacemarkLBFImpl::BBox::project(const Mat &shape) const {
         res(i, 0) = (shape_(i, 0) - x_center) / x_scale;
         res(i, 1) = (shape_(i, 1) - y_center) / y_scale;
     }
-    return std::move(res);
+    return res;
 }
 
 // Project relative shape to absolute shape binding to this bbox
@@ -678,7 +678,7 @@ Mat FacemarkLBFImpl::BBox::reproject(const Mat &shape) const {
         res(i, 0) = shape_(i, 0)*x_scale + x_center;
         res(i, 1) = shape_(i, 1)*y_scale + y_center;
     }
-    return std::move(res);
+    return res;
 }
 
 Mat FacemarkLBFImpl::getMeanShape(std::vector<Mat> &gt_shapes, std::vector<BBox> &bboxes) {
@@ -1039,7 +1039,7 @@ Mat FacemarkLBFImpl::RandomForest::generateLBF(Mat &img, Mat &current_shape, BBo
             lbf_feat(i*trees_n + j) = (i*trees_n + j)*base + code;
         }
     }
-    return std::move(lbf_feat);
+    return lbf_feat;
 }
 
 void FacemarkLBFImpl::RandomForest::write(FileStorage fs, int k) {
@@ -1359,7 +1359,7 @@ Mat FacemarkLBFImpl::Regressor::supportVectorRegression(
     if(verbose) printf("Objective value = %lf\n", v);
     if(verbose) printf("nSV = %d\n",nSV);
 
-    return Mat(Mat(w).t()).clone();
+    return Mat(w).reshape(2, 1).clone();
 
 }//end
 
@@ -1381,7 +1381,7 @@ Mat FacemarkLBFImpl::Regressor::globalRegressionPredict(const Mat &lbf, int stag
         for (int j = 0; j < lbf.cols; j++) y += w_ptr[lbf_ptr[j]];
         delta_shape(i, 1) = y;
     }
-    return std::move(delta_shape);
+    return delta_shape;
 } // Regressor::globalRegressionPredict
 
 Mat FacemarkLBFImpl::Regressor::predict(Mat &img, BBox &bbox) {

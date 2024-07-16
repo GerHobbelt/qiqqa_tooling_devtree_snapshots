@@ -11,11 +11,13 @@ See-also:
   - curl_url_get (3)
   - curl_url_set (3)
   - curl_url_strerror (3)
+Protocol:
+  - All
 ---
 
 # NAME
 
-curl_url - returns a new URL handle
+curl_url - create a URL handle
 
 # SYNOPSIS
 

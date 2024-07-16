@@ -4,7 +4,7 @@
  *
  *   The FreeType glyph rasterizer (body).
  *
- * Copyright (C) 1996-2023 by
+ * Copyright (C) 1996-2024 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -1343,7 +1343,7 @@
         ymax = y1;
       }
 
-      if ( y2 < ymin || y2 > ymax )
+      if ( y2 < FLOOR( ymin ) || y2 > CEILING( ymax ) )
       {
         /* this arc has no given direction, split it! */
         Split_Conic( arc );
@@ -1351,7 +1351,8 @@
       }
       else if ( y1 == y3 )
       {
-        /* this arc is flat, ignore it and pop it from the Bezier stack */
+        /* this arc is flat, advance position */
+        /* and pop it from the Bezier stack   */
         arc -= 2;
 
         ras.lastX = x3;
@@ -1489,7 +1490,7 @@
         ymax2 = y2;
       }
 
-      if ( ymin2 < ymin1 || ymax2 > ymax1 )
+      if ( ymin2 < FLOOR( ymin1 ) || ymax2 > CEILING( ymax1 ) )
       {
         /* this arc has no given direction, split it! */
         Split_Cubic( arc );
@@ -1497,7 +1498,8 @@
       }
       else if ( y1 == y4 )
       {
-        /* this arc is flat, ignore it and pop it from the Bezier stack */
+        /* this arc is flat, advance position */
+        /* and pop it from the Bezier stack   */
         arc -= 3;
 
         ras.lastX = x4;
@@ -1597,7 +1599,7 @@
     FT_Vector*  points;
     FT_Vector*  point;
     FT_Vector*  limit;
-    char*       tags;
+    FT_Byte*    tags;
 
     UInt        tag;       /* current point's state           */
 
@@ -2364,16 +2366,16 @@
 
             if ( dropOutControl & 1 )
             {
-              /* rightmost stub test */
-              if ( P_Left->next == P_Right            &&
-                   P_Left->height == 1                &&
+              /* upper stub test */
+              if ( P_Left->height == 1                &&
+                   P_Left->next == P_Right            &&
                    !( P_Left->flags & Overshoot_Top   &&
                       x2 - x1 >= ras.precision_half   ) )
                 goto Next_Pair;
 
-              /* leftmost stub test */
-              if ( P_Right->next == P_Left             &&
-                   P_Left->offset == 0                 &&
+              /* lower stub test */
+              if ( P_Left->offset == 0                 &&
+                   P_Right->next == P_Left             &&
                    !( P_Left->flags & Overshoot_Bottom &&
                       x2 - x1 >= ras.precision_half    ) )
                 goto Next_Pair;
@@ -2682,7 +2684,7 @@
       return FT_THROW( Invalid_Outline );
 
     /* return immediately if the outline is empty */
-    if ( outline->n_points == 0 || outline->n_contours <= 0 )
+    if ( outline->n_points == 0 || outline->n_contours == 0 )
       return Raster_Err_Ok;
 
     if ( !outline->contours || !outline->points )

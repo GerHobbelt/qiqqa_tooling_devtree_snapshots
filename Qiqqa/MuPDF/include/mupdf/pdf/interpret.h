@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2023 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -41,13 +41,21 @@ pdf_processor *pdf_keep_processor(fz_context *ctx, pdf_processor *proc);
 void pdf_close_processor(fz_context *ctx, pdf_processor *proc);
 void pdf_drop_processor(fz_context *ctx, pdf_processor *proc);
 
+typedef enum
+{
+	PDF_PROCESSOR_REQUIRES_DECODED_IMAGES = 1
+} pdf_processor_requirements;
+
 struct pdf_processor
 {
 	int refs;
 
+	int closed;
+
 	/* close the processor. Also closes any chained processors. */
 	void (*close_processor)(fz_context *ctx, pdf_processor *proc);
 	void (*drop_processor)(fz_context *ctx, pdf_processor *proc);
+	void (*reset_processor)(fz_context *ctx, pdf_processor *proc);
 
 	/* At any stage, we can have one set of resources in place.
 	 * This function gives us a set of resources to use. We remember
@@ -183,6 +191,8 @@ struct pdf_processor
 	/* interpreter state that persists across content streams */
 	const char *usage;
 	int hidden;
+
+	pdf_processor_requirements requirements;
 };
 
 typedef struct
@@ -206,6 +216,8 @@ typedef struct
 	int top;
 	float stack[32];
 } pdf_csi;
+
+void pdf_count_q_balance(fz_context *ctx, pdf_document *doc, pdf_obj *res, pdf_obj *stm, int *prepend, int *append);
 
 /* Functions to set up pdf_process structures */
 
@@ -242,8 +254,21 @@ pdf_processor *pdf_new_mcid_processor(fz_context *ctx, pdf_mcid_table *table);
 
 	ahxencode: If 0, then image streams will be send as binary,
 	otherwise they will be asciihexencoded.
+
+	newlines: If 0, then minimal spacing will be sent. If 1
+	then newlines will be sent after every operator.
 */
-pdf_processor *pdf_new_buffer_processor(fz_context *ctx, fz_buffer *buffer, int ahxencode);
+pdf_processor *pdf_new_buffer_processor(fz_context *ctx, fz_buffer *buffer, int ahxencode, int newlines);
+
+/*
+	Reopen a closed processor to be used again.
+
+	This brings a processor back to life after a close.
+	Not all processors may support this, so this may throw
+	an exception.
+*/
+void pdf_reset_processor(fz_context *ctx, pdf_processor *proc);
+
 
 /*
 	Create an output processor. This
@@ -253,8 +278,11 @@ pdf_processor *pdf_new_buffer_processor(fz_context *ctx, fz_buffer *buffer, int 
 
 	ahxencode: If 0, then image streams will be send as binary,
 	otherwise they will be asciihexencoded.
+
+	newlines: If 0, then minimal spacing will be sent. If 1
+	then newlines will be sent after every operator.
 */
-pdf_processor *pdf_new_output_processor(fz_context *ctx, fz_output *out, int ahxencode);
+pdf_processor *pdf_new_output_processor(fz_context *ctx, fz_output *out, int ahxencode, int newlines);
 
 typedef struct pdf_filter_options pdf_filter_options;
 
@@ -303,6 +331,9 @@ typedef struct
 	Operators will be fed into the filter generated from the first
 	factory function in the list, and from there go to the filter
 	generated from the second factory in the list etc.
+
+	newlines: If 0, then minimal whitespace will be produced. If 1,
+	then a newline will be sent after every operator.
 */
 struct pdf_filter_options
 {
@@ -315,6 +346,7 @@ struct pdf_filter_options
 	void (*complete)(fz_context *ctx, fz_buffer *buffer, void *opaque);
 
 	pdf_filter_factory *filters;
+	int newlines;
 };
 
 typedef enum
@@ -452,6 +484,7 @@ typedef struct
 	float scale;
 	float leading;
 	pdf_font_desc *font;
+	fz_string *fontname;
 	float size;
 	int render;
 	float rise;

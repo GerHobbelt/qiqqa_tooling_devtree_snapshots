@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -112,6 +112,34 @@ fz_strcasecmp(const char *a, const char *b)
 		b++;
 	}
 	return fz_tolower(*a) - fz_tolower(*b);
+}
+
+char *
+fz_strcasestr(char* str, const char* substr)
+{
+	if (substr == NULL || str == NULL)
+		return NULL;
+	if (!*substr)
+		return str;
+
+	while (*str)
+	{
+		int i;
+		int muster = fz_tolower(*substr);
+		while (*str && fz_tolower(*str) != muster)
+			str++;
+		if (!*str)
+			return NULL;
+		// right now: str[0] == substr[0]; check the tail to see if we have a full match:
+		i = 1;
+		while (str[i] && substr[i] && fz_tolower(str[i]) == fz_tolower(substr[i]))
+			i++;
+		if (!substr[i])
+			return str;
+		// not a full match: move str forward and continue the scan
+		str++;
+	}
+	return NULL;
 }
 
 char *
@@ -1191,6 +1219,7 @@ int fz_is_page_range(fz_context *ctx, const char *s)
 const char *fz_parse_page_range(fz_context *ctx, const char *s, int *a, int *b, int n)
 {
 	int rev = 0;
+	const char *orig = s;
 
 	if (!s || !s[0])
 		return NULL;
@@ -1233,6 +1262,12 @@ const char *fz_parse_page_range(fz_context *ctx, const char *s, int *a, int *b, 
 
 	*a = fz_clampi(*a, 1, n);
 	*b = fz_clampi(*b, 1, n);
+
+	if (s == orig)
+	{
+		fz_warn(ctx, "skipping invalid page range");
+		return NULL;
+	}
 
 	return s;
 }
@@ -1412,21 +1447,39 @@ fz_utf8_from_wchar(fz_context *ctx, const wchar_t *s)
 }
 
 wchar_t *
-fz_wchar_from_utf8(fz_context *ctx, const char *s)
+fz_wchar_from_utf8(fz_context *ctx, const char *path)
 {
-	wchar_t *d, *r;
-	int c;
-	r = d = fz_malloc(ctx, (strlen(s) + 1) * sizeof(wchar_t));
-	if (!r)
+	size_t z = 0;
+	const char *p = path;
+	wchar_t *wpath, *w;
+
+	if (!path)
 		return NULL;
-	while (*s) {
-		s += fz_chartorune_unsafe(&c, s);
-		/* Truncating c to a wchar_t can be problematic if c
-		 * is 0x10000. */
+
+	while (*p)
+	{
+		int c;
+		p += fz_chartorune_unsafe(&c, p);
+		z++;
 		if (c >= 0x10000)
-			c = FZ_REPLACEMENT_CHARACTER;
-		*d++ = c;
+			z++;
 	}
-	*d = 0;
-	return r;
+
+	w = wpath = fz_malloc(ctx, 2*(z+1));
+	while (*path)
+	{
+		int c;
+		path += fz_chartorune_unsafe(&c, path);
+		if (c >= 0x10000)
+		{
+			c -= 0x10000;
+			*w++ = 0xd800 + (c>>10);
+			*w++ = 0xdc00 + (c&1023);
+		}
+		else
+			*w++ = c;
+	}
+	*w = 0;
+
+	return wpath;
 }

@@ -37,13 +37,13 @@ else
 endif
 
 # SDL flags: use sdl-config if it exists
-SDL_CONFIG = $(shell sdl-config --version 2> /dev/null)
+SDL_CONFIG = $(shell sdl2-config --version 2> /dev/null)
 ifneq ($(SDL_CONFIG),)
-  SDL_LIBS = $(shell sdl-config --libs)
-  SDL_FLAGS = $(shell sdl-config --cflags)
+  SDL_LIBS = $(shell sdl2-config --libs)
+  SDL_FLAGS = $(shell sdl2-config --cflags)
 else
   # use best-guess
-  SDL_LIBS = -lSDL
+  SDL_LIBS = -lSDL2
   SDL_FLAGS =
 endif
 
@@ -291,6 +291,7 @@ UTILS_ENC_OBJS = \
 EXTRA_OBJS = \
     extras/extras.o \
     extras/quality_estimate.o \
+    extras/sharpyuv_risk_table.o \
 
 LIBWEBPDECODER_OBJS = $(DEC_OBJS) $(DSP_DEC_OBJS) $(UTILS_DEC_OBJS)
 LIBWEBP_OBJS = $(LIBWEBPDECODER_OBJS) $(ENC_OBJS) \

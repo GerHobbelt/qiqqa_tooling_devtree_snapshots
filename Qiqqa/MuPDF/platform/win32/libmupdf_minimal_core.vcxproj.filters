@@ -395,6 +395,9 @@
     <ClInclude Include="../../include/mupdf/fitz/crypt.h">
       <Filter>Header Files\mupdf\fitz</Filter>
     </ClInclude>
+    <ClInclude Include="../../include/mupdf/fitz/deskew.h">
+      <Filter>Header Files\mupdf\fitz</Filter>
+    </ClInclude>
     <ClInclude Include="../../include/mupdf/fitz/device.h">
       <Filter>Header Files\mupdf\fitz</Filter>
     </ClInclude>
@@ -405,6 +408,9 @@
       <Filter>Header Files\mupdf\fitz</Filter>
     </ClInclude>
     <ClInclude Include="../../include/mupdf/fitz/document.h">
+      <Filter>Header Files\mupdf\fitz</Filter>
+    </ClInclude>
+    <ClInclude Include="../../include/mupdf/fitz/encode-jbig2.h">
       <Filter>Header Files\mupdf\fitz</Filter>
     </ClInclude>
     <ClInclude Include="../../include/mupdf/fitz/export.h">
@@ -608,6 +614,9 @@
     <ClInclude Include="../../include/mupdf/pdf/xref.h">
       <Filter>Header Files\mupdf\pdf</Filter>
     </ClInclude>
+    <ClInclude Include="../../include/mupdf/pdf/zugferd.h">
+      <Filter>Header Files\mupdf\pdf</Filter>
+    </ClInclude>
     <ClInclude Include="../../include/mupdf/ucdn.h">
       <Filter>Header Files\mupdf</Filter>
     </ClInclude>
@@ -646,53 +655,56 @@
     <Filter Include="Header Files\pdf\js">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0007}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\svg">
+    <Filter Include="Header Files\pdf\to_unicode">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0008}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\xps">
+    <Filter Include="Header Files\svg">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0009}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\html">
+    <Filter Include="Header Files\xps">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0010}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\pdf">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\pdf\js">
+    <Filter Include="Misc Files\html">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0011}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\cbz">
+    <Filter Include="Misc Files\pdf">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\dll">
+    <Filter Include="Misc Files\pdf\js">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cbz">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\fitz">
+    <Filter Include="Source Files\dll">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\helpers">
+    <Filter Include="Source Files\fitz">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\helpers\mu-threads">
+    <Filter Include="Source Files\helpers">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\helpers\pkcs7">
+    <Filter Include="Source Files\helpers\mu-threads">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\html">
+    <Filter Include="Source Files\helpers\pkcs7">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\pdf">
+    <Filter Include="Source Files\html">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\reflow">
+    <Filter Include="Source Files\pdf">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\svg">
+    <Filter Include="Source Files\reflow">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\xps">
+    <Filter Include="Source Files\svg">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\xps">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -735,6 +747,9 @@
     <ClCompile Include="../../source/fitz/buffer.c">
       <Filter>Source Files\fitz</Filter>
     </ClCompile>
+    <ClCompile Include="../../source/fitz/cfi.c">
+      <Filter>Source Files\fitz</Filter>
+    </ClCompile>
     <ClCompile Include="../../source/fitz/color-fast.c">
       <Filter>Source Files\fitz</Filter>
     </ClCompile>
@@ -766,6 +781,9 @@
       <Filter>Source Files\fitz</Filter>
     </ClCompile>
     <ClCompile Include="../../source/fitz/crypt-sha2.c">
+      <Filter>Source Files\fitz</Filter>
+    </ClCompile>
+    <ClCompile Include="../../source/fitz/deskew.c">
       <Filter>Source Files\fitz</Filter>
     </ClCompile>
     <ClCompile Include="../../source/fitz/device.c">
@@ -820,6 +838,9 @@
       <Filter>Source Files\fitz</Filter>
     </ClCompile>
     <ClCompile Include="../../source/fitz/encode-fax.c">
+      <Filter>Source Files\fitz</Filter>
+    </ClCompile>
+    <ClCompile Include="../../source/fitz/encode-jbig2.c">
       <Filter>Source Files\fitz</Filter>
     </ClCompile>
     <ClCompile Include="../../source/fitz/encode-jpx.c">
@@ -895,6 +916,9 @@
       <Filter>Source Files\fitz</Filter>
     </ClCompile>
     <ClCompile Include="../../source/fitz/image.c">
+      <Filter>Source Files\fitz</Filter>
+    </ClCompile>
+    <ClCompile Include="../../source/fitz/jbig2enc-wrap.cpp">
       <Filter>Source Files\fitz</Filter>
     </ClCompile>
     <ClCompile Include="../../source/fitz/jmemcust.c">
@@ -1038,6 +1062,9 @@
     <ClCompile Include="../../source/fitz/shade.c">
       <Filter>Source Files\fitz</Filter>
     </ClCompile>
+    <ClCompile Include="../../source/fitz/skew.c">
+      <Filter>Source Files\fitz</Filter>
+    </ClCompile>
     <ClCompile Include="../../source/fitz/statistics-device.c">
       <Filter>Source Files\fitz</Filter>
     </ClCompile>
@@ -1063,6 +1090,9 @@
       <Filter>Source Files\fitz</Filter>
     </ClCompile>
     <ClCompile Include="../../source/fitz/strtof.c">
+      <Filter>Source Files\fitz</Filter>
+    </ClCompile>
+    <ClCompile Include="../../source/fitz/subset-cff.c">
       <Filter>Source Files\fitz</Filter>
     </ClCompile>
     <ClCompile Include="../../source/fitz/subset-ttf.c">
@@ -1125,6 +1155,9 @@
     <ClCompile Include="../../source/fitz/writer.c">
       <Filter>Source Files\fitz</Filter>
     </ClCompile>
+    <ClCompile Include="../../source/fitz/xml-write.c">
+      <Filter>Source Files\fitz</Filter>
+    </ClCompile>
     <ClCompile Include="../../source/fitz/xml.c">
       <Filter>Source Files\fitz</Filter>
     </ClCompile>
@@ -1138,6 +1171,9 @@
       <Filter>Source Files\helpers</Filter>
     </ClCompile>
     <ClCompile Include="../../source/helpers/dir.c">
+      <Filter>Source Files\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="../../source/helpers/dummy.c">
       <Filter>Source Files\helpers</Filter>
     </ClCompile>
     <ClCompile Include="../../source/helpers/fz_assert.c">
@@ -1190,6 +1226,9 @@
     </ClCompile>
     <ClCompile Include="../../source/html/xml-dom.c">
       <Filter>Source Files\html</Filter>
+    </ClCompile>
+    <ClCompile Include="../../source/pdf/pdf-af.c">
+      <Filter>Source Files\pdf</Filter>
     </ClCompile>
     <ClCompile Include="../../source/pdf/pdf-annot.c">
       <Filter>Source Files\pdf</Filter>
@@ -1344,6 +1383,9 @@
     <ClCompile Include="../../source/pdf/pdf-xref.c">
       <Filter>Source Files\pdf</Filter>
     </ClCompile>
+    <ClCompile Include="../../source/pdf/pdf-zugferd.c">
+      <Filter>Source Files\pdf</Filter>
+    </ClCompile>
     <ClCompile Include="../../source/reflow/reflow-doc.c">
       <Filter>Source Files\reflow</Filter>
     </ClCompile>
@@ -1411,6 +1453,15 @@
       <Filter>Header Files\fitz</Filter>
     </ClInclude>
     <ClInclude Include="../../source/fitz/context-imp.h">
+      <Filter>Header Files\fitz</Filter>
+    </ClInclude>
+    <ClInclude Include="../../source/fitz/deskew_c.h">
+      <Filter>Header Files\fitz</Filter>
+    </ClInclude>
+    <ClInclude Include="../../source/fitz/deskew_neon.h">
+      <Filter>Header Files\fitz</Filter>
+    </ClInclude>
+    <ClInclude Include="../../source/fitz/deskew_sse.h">
       <Filter>Header Files\fitz</Filter>
     </ClInclude>
     <ClInclude Include="../../source/fitz/draw-imp.h">
@@ -1706,6 +1757,42 @@
     </ClInclude>
     <ClInclude Include="../../source/pdf/pdf-annot-imp.h">
       <Filter>Header Files\pdf</Filter>
+    </ClInclude>
+    <ClInclude Include="../../source/pdf/to_unicode/FangSong.h">
+      <Filter>Header Files\pdf\to_unicode</Filter>
+    </ClInclude>
+    <ClInclude Include="../../source/pdf/to_unicode/KaiTi.h">
+      <Filter>Header Files\pdf\to_unicode</Filter>
+    </ClInclude>
+    <ClInclude Include="../../source/pdf/to_unicode/MS-Gothic.h">
+      <Filter>Header Files\pdf\to_unicode</Filter>
+    </ClInclude>
+    <ClInclude Include="../../source/pdf/to_unicode/MS-Mincho.h">
+      <Filter>Header Files\pdf\to_unicode</Filter>
+    </ClInclude>
+    <ClInclude Include="../../source/pdf/to_unicode/MS-PGothic.h">
+      <Filter>Header Files\pdf\to_unicode</Filter>
+    </ClInclude>
+    <ClInclude Include="../../source/pdf/to_unicode/MS-PMincho.h">
+      <Filter>Header Files\pdf\to_unicode</Filter>
+    </ClInclude>
+    <ClInclude Include="../../source/pdf/to_unicode/MS-UIGothic.h">
+      <Filter>Header Files\pdf\to_unicode</Filter>
+    </ClInclude>
+    <ClInclude Include="../../source/pdf/to_unicode/MingLiU.h">
+      <Filter>Header Files\pdf\to_unicode</Filter>
+    </ClInclude>
+    <ClInclude Include="../../source/pdf/to_unicode/NSimSun.h">
+      <Filter>Header Files\pdf\to_unicode</Filter>
+    </ClInclude>
+    <ClInclude Include="../../source/pdf/to_unicode/PMingLiU.h">
+      <Filter>Header Files\pdf\to_unicode</Filter>
+    </ClInclude>
+    <ClInclude Include="../../source/pdf/to_unicode/SimHei.h">
+      <Filter>Header Files\pdf\to_unicode</Filter>
+    </ClInclude>
+    <ClInclude Include="../../source/pdf/to_unicode/SimSun.h">
+      <Filter>Header Files\pdf\to_unicode</Filter>
     </ClInclude>
     <ClInclude Include="../../source/svg/svg-imp.h">
       <Filter>Header Files\svg</Filter>

@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libcurl_examples</ProjectName>
     <ProjectGuid>{87EE9DA4-DE1E-4448-8324-183C98DCA500}</ProjectGuid>
-    <RootNamespace>libcurl_examples</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -127,7 +125,7 @@
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/curl/src;../../scripts/curl/lib;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/libxml2/include;../../scripts/libxml2;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/curl/tests/libtest;../../thirdparty/owemdjee/htmlstreamparser/src;../../scripts/tidy-html5/include;../../scripts/zlib;../../thirdparty/zlib;../../thirdparty/owemdjee/getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_CONFIG_H;BUILD_MONOLITHIC;BUILDING_LIBCURL;CURL_STATICLIB;CURL_DISABLE_LDAP;_USRDLL;BUILDING_LIBCURL;CURL_STATICLIB;CURL_DISABLE_LDAP;USE_SCHANNEL;USE_WINDOWS_SSPI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;BUILD_MONOLITHIC;BUILDING_LIBCURL;CURL_STATICLIB;CURL_DISABLE_LDAP;_USRDLL;USE_SCHANNEL;USE_WINDOWS_SSPI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
@@ -153,7 +151,7 @@
     <ClCompile>
       <Optimization>Custom</Optimization>
       <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/curl/src;../../scripts/curl/lib;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/libxml2/include;../../scripts/libxml2;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/curl/tests/libtest;../../thirdparty/owemdjee/htmlstreamparser/src;../../scripts/tidy-html5/include;../../scripts/zlib;../../thirdparty/zlib;../../thirdparty/owemdjee/getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_CONFIG_H;BUILD_MONOLITHIC;BUILDING_LIBCURL;CURL_STATICLIB;CURL_DISABLE_LDAP;_USRDLL;BUILDING_LIBCURL;CURL_STATICLIB;CURL_DISABLE_LDAP;USE_SCHANNEL;USE_WINDOWS_SSPI;USE_SCHANNEL;USE_WINDOWS_SSPI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;BUILD_MONOLITHIC;BUILDING_LIBCURL;CURL_STATICLIB;CURL_DISABLE_LDAP;_USRDLL;USE_SCHANNEL;USE_WINDOWS_SSPI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -182,7 +180,7 @@
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/curl/src;../../scripts/curl/lib;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/libxml2/include;../../scripts/libxml2;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/curl/tests/libtest;../../thirdparty/owemdjee/htmlstreamparser/src;../../scripts/tidy-html5/include;../../scripts/zlib;../../thirdparty/zlib;../../thirdparty/owemdjee/getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_CONFIG_H;BUILD_MONOLITHIC;BUILDING_LIBCURL;CURL_STATICLIB;CURL_DISABLE_LDAP;_USRDLL;BUILDING_LIBCURL;CURL_STATICLIB;CURL_DISABLE_LDAP;USE_SCHANNEL;USE_WINDOWS_SSPI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;BUILD_MONOLITHIC;BUILDING_LIBCURL;CURL_STATICLIB;CURL_DISABLE_LDAP;_USRDLL;USE_SCHANNEL;USE_WINDOWS_SSPI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
@@ -208,7 +206,7 @@
     <ClCompile>
       <Optimization>Custom</Optimization>
       <AdditionalIncludeDirectories>../../include/system-override;.;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../thirdparty/curl/src;../../scripts/curl/lib;../../thirdparty/owemdjee/pthread-win32;../../thirdparty/owemdjee/libxml2/include;../../scripts/libxml2;../../thirdparty/owemdjee/libexpat/expat/lib;../../thirdparty/curl/tests/libtest;../../thirdparty/owemdjee/htmlstreamparser/src;../../scripts/tidy-html5/include;../../scripts/zlib;../../thirdparty/zlib;../../thirdparty/owemdjee/getopt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_CONFIG_H;BUILD_MONOLITHIC;BUILDING_LIBCURL;CURL_STATICLIB;CURL_DISABLE_LDAP;_USRDLL;BUILDING_LIBCURL;CURL_STATICLIB;CURL_DISABLE_LDAP;USE_SCHANNEL;USE_WINDOWS_SSPI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;BUILD_MONOLITHIC;BUILDING_LIBCURL;CURL_STATICLIB;CURL_DISABLE_LDAP;_USRDLL;USE_SCHANNEL;USE_WINDOWS_SSPI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -367,6 +365,7 @@
     <ClCompile Include="../../thirdparty/curl/docs/examples/xmlstream.c" />
     <ClCompile Include="../../thirdparty/curl/scripts/schemetable.c" />
     <ClCompile Include="../../thirdparty/curl/src/slist_wc.c" />
+    <ClCompile Include="../../thirdparty/curl/src/terminal.c" />
     <ClCompile Include="../../thirdparty/curl/src/tool_binmode.c" />
     <ClCompile Include="../../thirdparty/curl/src/tool_bname.c" />
     <ClCompile Include="../../thirdparty/curl/src/tool_cb_dbg.c" />
@@ -374,6 +373,7 @@
     <ClCompile Include="../../thirdparty/curl/src/tool_cb_prg.c" />
     <ClCompile Include="../../thirdparty/curl/src/tool_cb_rea.c" />
     <ClCompile Include="../../thirdparty/curl/src/tool_cb_see.c" />
+    <ClCompile Include="../../thirdparty/curl/src/tool_cb_soc.c" />
     <ClCompile Include="../../thirdparty/curl/src/tool_cb_wrt.c" />
     <ClCompile Include="../../thirdparty/curl/src/tool_cfgable.c" />
     <ClCompile Include="../../thirdparty/curl/src/tool_dirhie.c" />
@@ -413,6 +413,7 @@
     <ClCompile Include="../../thirdparty/curl/tests/http/clients/h2-serverpush.c" />
     <ClCompile Include="../../thirdparty/curl/tests/http/clients/h2-upgrade-extreme.c" />
     <ClCompile Include="../../thirdparty/curl/tests/http/clients/tls-session-reuse.c" />
+    <ClCompile Include="../../thirdparty/curl/tests/http/clients/upload-pausing.c" />
     <ClCompile Include="../../thirdparty/curl/tests/http/clients/ws-data.c" />
     <ClCompile Include="../../thirdparty/curl/tests/http/clients/ws-pingpong.c" />
     <ClCompile Include="../../thirdparty/curl/tests/http/testenv/mod_curltest/mod_curltest.c" />
@@ -420,6 +421,7 @@
     <ClCompile Include="../../thirdparty/curl/tests/libtest/first.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib1156.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib1301.c" />
+    <ClCompile Include="../../thirdparty/curl/tests/libtest/lib1485.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib1500.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib1501.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib1502.c" />
@@ -482,6 +484,7 @@
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib1662.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib1900.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib1900a.c" />
+    <ClCompile Include="../../thirdparty/curl/tests/libtest/lib1901.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib1903.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib1905.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib1906.c" />
@@ -524,8 +527,10 @@
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib2304.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib2305.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib2306.c" />
+    <ClCompile Include="../../thirdparty/curl/tests/libtest/lib2308.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib2402.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib2404.c" />
+    <ClCompile Include="../../thirdparty/curl/tests/libtest/lib2405.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib2502.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib3010.c" />
     <ClCompile Include="../../thirdparty/curl/tests/libtest/lib3025.c" />
@@ -675,6 +680,7 @@
     <ClCompile Include="../../thirdparty/curl/tests/unit/unit1612.c" />
     <ClCompile Include="../../thirdparty/curl/tests/unit/unit1614.c" />
     <ClCompile Include="../../thirdparty/curl/tests/unit/unit1615.c" />
+    <ClCompile Include="../../thirdparty/curl/tests/unit/unit1616.c" />
     <ClCompile Include="../../thirdparty/curl/tests/unit/unit1620.c" />
     <ClCompile Include="../../thirdparty/curl/tests/unit/unit1621.c" />
     <ClCompile Include="../../thirdparty/curl/tests/unit/unit1650.c" />
@@ -685,11 +691,14 @@
     <ClCompile Include="../../thirdparty/curl/tests/unit/unit1655.c" />
     <ClCompile Include="../../thirdparty/curl/tests/unit/unit1660.c" />
     <ClCompile Include="../../thirdparty/curl/tests/unit/unit1661.c" />
+    <ClCompile Include="../../thirdparty/curl/tests/unit/unit1663.c" />
     <ClCompile Include="../../thirdparty/curl/tests/unit/unit2600.c" />
     <ClCompile Include="../../thirdparty/curl/tests/unit/unit2601.c" />
     <ClCompile Include="../../thirdparty/curl/tests/unit/unit2602.c" />
     <ClCompile Include="../../thirdparty/curl/tests/unit/unit2603.c" />
+    <ClCompile Include="../../thirdparty/curl/tests/unit/unit2604.c" />
     <ClCompile Include="../../thirdparty/curl/tests/unit/unit3200.c" />
+    <ClCompile Include="../../thirdparty/curl/tests/unit/unit3205.c" />
     <ClInclude Include="../../thirdparty/curl/docs/cmdline-opts/Makefile.inc" />
     <ClInclude Include="../../thirdparty/curl/docs/examples/Makefile.inc" />
     <ClInclude Include="../../thirdparty/curl/docs/libcurl/Makefile.inc" />
@@ -712,6 +721,7 @@
     <ClInclude Include="../../thirdparty/curl/projects/wolfssl_options.h" />
     <ClInclude Include="../../thirdparty/curl/src/Makefile.inc" />
     <ClInclude Include="../../thirdparty/curl/src/slist_wc.h" />
+    <ClInclude Include="../../thirdparty/curl/src/terminal.h" />
     <ClInclude Include="../../thirdparty/curl/src/tool_binmode.h" />
     <ClInclude Include="../../thirdparty/curl/src/tool_bname.h" />
     <ClInclude Include="../../thirdparty/curl/src/tool_cb_dbg.h" />
@@ -719,6 +729,7 @@
     <ClInclude Include="../../thirdparty/curl/src/tool_cb_prg.h" />
     <ClInclude Include="../../thirdparty/curl/src/tool_cb_rea.h" />
     <ClInclude Include="../../thirdparty/curl/src/tool_cb_see.h" />
+    <ClInclude Include="../../thirdparty/curl/src/tool_cb_soc.h" />
     <ClInclude Include="../../thirdparty/curl/src/tool_cb_wrt.h" />
     <ClInclude Include="../../thirdparty/curl/src/tool_cfgable.h" />
     <ClInclude Include="../../thirdparty/curl/src/tool_dirhie.h" />
@@ -774,6 +785,7 @@
     <ResourceCompile Include="../../thirdparty/curl/src/curl.rc" />
     <Text Include="../../thirdparty/curl/CHANGES" />
     <Text Include="../../thirdparty/curl/CMakeLists.txt" />
+    <Text Include="../../thirdparty/curl/GIT-INFO.md" />
     <Text Include="../../thirdparty/curl/LICENSES/BSD-3-Clause.txt" />
     <Text Include="../../thirdparty/curl/LICENSES/BSD-4-Clause-UC.txt" />
     <Text Include="../../thirdparty/curl/LICENSES/ISC.txt" />
@@ -807,8 +819,10 @@
     <Text Include="../../thirdparty/curl/docs/CURL-DISABLE.md" />
     <Text Include="../../thirdparty/curl/docs/CURLDOWN.md" />
     <Text Include="../../thirdparty/curl/docs/DEPRECATE.md" />
+    <Text Include="../../thirdparty/curl/docs/DISTROS.md" />
     <Text Include="../../thirdparty/curl/docs/DYNBUF.md" />
     <Text Include="../../thirdparty/curl/docs/EARLY-RELEASE.md" />
+    <Text Include="../../thirdparty/curl/docs/ECH.md" />
     <Text Include="../../thirdparty/curl/docs/EXPERIMENTAL.md" />
     <Text Include="../../thirdparty/curl/docs/FEATURES.md" />
     <Text Include="../../thirdparty/curl/docs/GOVERNANCE.md" />
@@ -825,6 +839,7 @@
     <Text Include="../../thirdparty/curl/docs/INSTALL.md" />
     <Text Include="../../thirdparty/curl/docs/INTERNALS.md" />
     <Text Include="../../thirdparty/curl/docs/IPFS.md" />
+    <Text Include="../../thirdparty/curl/docs/MAIL-ETIQUETTE.md" />
     <Text Include="../../thirdparty/curl/docs/MANUAL.md" />
     <Text Include="../../thirdparty/curl/docs/MQTT.md" />
     <Text Include="../../thirdparty/curl/docs/Makefile.am" />
@@ -835,6 +850,7 @@
     <Text Include="../../thirdparty/curl/docs/ROADMAP.md" />
     <Text Include="../../thirdparty/curl/docs/RUSTLS.md" />
     <Text Include="../../thirdparty/curl/docs/SECURITY-ADVISORY.md" />
+    <Text Include="../../thirdparty/curl/docs/SPONSORS.md" />
     <Text Include="../../thirdparty/curl/docs/SSL-PROBLEMS.md" />
     <Text Include="../../thirdparty/curl/docs/SSLCERTS.md" />
     <Text Include="../../thirdparty/curl/docs/TINY-CURL.md" />
@@ -911,6 +927,7 @@
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/doh-insecure.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/doh-url.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/dump-header.md" />
+    <Text Include="../../thirdparty/curl/docs/cmdline-opts/ech.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/egd-file.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/engine.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/etag-compare.md" />
@@ -934,7 +951,6 @@
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/ftp-ssl-ccc-mode.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/ftp-ssl-ccc.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/ftp-ssl-control.md" />
-    <Text Include="../../thirdparty/curl/docs/cmdline-opts/gen.pl" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/get.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/globoff.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/happy-eyeballs-timeout-ms.md" />
@@ -957,6 +973,7 @@
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/include.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/insecure.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/interface.md" />
+    <Text Include="../../thirdparty/curl/docs/cmdline-opts/ip-tos.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/ipfs-gateway.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/ipv4.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/ipv6.md" />
@@ -983,6 +1000,7 @@
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/max-redirs.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/max-time.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/metalink.md" />
+    <Text Include="../../thirdparty/curl/docs/cmdline-opts/mptcp.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/negotiate.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/netrc-file.md" />
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/netrc-optional.md" />
@@ -1133,6 +1151,7 @@
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/xattr.md" />
     <Text Include="../../thirdparty/curl/docs/curl-config.md" />
     <Text Include="../../thirdparty/curl/docs/curl.1" />
+    <Text Include="../../thirdparty/curl/docs/examples/CMakeLists.txt" />
     <Text Include="../../thirdparty/curl/docs/examples/Makefile.am" />
     <Text Include="../../thirdparty/curl/docs/examples/Makefile.mk" />
     <Text Include="../../thirdparty/curl/docs/examples/README.md" />
@@ -1202,6 +1221,7 @@
     <Text Include="../../thirdparty/curl/docs/libcurl/curl_multi_strerror.md" />
     <Text Include="../../thirdparty/curl/docs/libcurl/curl_multi_timeout.md" />
     <Text Include="../../thirdparty/curl/docs/libcurl/curl_multi_wait.md" />
+    <Text Include="../../thirdparty/curl/docs/libcurl/curl_multi_waitfds.md" />
     <Text Include="../../thirdparty/curl/docs/libcurl/curl_multi_wakeup.md" />
     <Text Include="../../thirdparty/curl/docs/libcurl/curl_pushheader_byname.md" />
     <Text Include="../../thirdparty/curl/docs/libcurl/curl_pushheader_bynum.md" />
@@ -1383,6 +1403,7 @@
     <Text Include="../../thirdparty/curl/docs/libcurl/opts/CURLOPT_DOH_SSL_VERIFYPEER.md" />
     <Text Include="../../thirdparty/curl/docs/libcurl/opts/CURLOPT_DOH_SSL_VERIFYSTATUS.md" />
     <Text Include="../../thirdparty/curl/docs/libcurl/opts/CURLOPT_DOH_URL.md" />
+    <Text Include="../../thirdparty/curl/docs/libcurl/opts/CURLOPT_ECH.md" />
     <Text Include="../../thirdparty/curl/docs/libcurl/opts/CURLOPT_EGDSOCKET.md" />
     <Text Include="../../thirdparty/curl/docs/libcurl/opts/CURLOPT_ERRORBUFFER.md" />
     <Text Include="../../thirdparty/curl/docs/libcurl/opts/CURLOPT_EXPECT_100_TIMEOUT_MS.md" />
@@ -1690,30 +1711,12 @@
     <Text Include="../../thirdparty/curl/projects/Windows/VC12/lib/libcurl.vcxproj.filters" />
     <Text Include="../../thirdparty/curl/projects/Windows/VC12/src/curl.tmpl" />
     <Text Include="../../thirdparty/curl/projects/Windows/VC12/src/curl.vcxproj.filters" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/lib/libcurl.tmpl" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/lib/libcurl.vcxproj.filters" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/src/curl.tmpl" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/src/curl.vcxproj.filters" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/lib/libcurl.tmpl" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/lib/libcurl.vcxproj.filters" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/src/curl.tmpl" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/src/curl.vcxproj.filters" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/lib/libcurl.tmpl" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/lib/libcurl.vcxproj.filters" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/src/curl.tmpl" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/src/curl.vcxproj.filters" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14/lib/libcurl.tmpl" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14/lib/libcurl.vcxproj.filters" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14/src/curl.tmpl" />
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14/src/curl.vcxproj.filters" />
     <Text Include="../../thirdparty/curl/projects/build-openssl.bat" />
     <Text Include="../../thirdparty/curl/projects/build-wolfssl.bat" />
     <Text Include="../../thirdparty/curl/projects/checksrc.bat" />
     <Text Include="../../thirdparty/curl/projects/generate.bat" />
     <Text Include="../../thirdparty/curl/projects/wolfssl_override.props" />
+    <Text Include="../../thirdparty/curl/renovate.json" />
     <Text Include="../../thirdparty/curl/scripts/Makefile.am" />
     <Text Include="../../thirdparty/curl/scripts/checksrc.pl" />
     <Text Include="../../thirdparty/curl/scripts/ciconfig.pl" />
@@ -1729,6 +1732,7 @@
     <Text Include="../../thirdparty/curl/scripts/log2changes.pl" />
     <Text Include="../../thirdparty/curl/scripts/mk-ca-bundle.pl" />
     <Text Include="../../thirdparty/curl/scripts/release-notes.pl" />
+    <Text Include="../../thirdparty/curl/scripts/release-tools.sh" />
     <Text Include="../../thirdparty/curl/scripts/singleuse.pl" />
     <Text Include="../../thirdparty/curl/src/CMakeLists.txt" />
     <Text Include="../../thirdparty/curl/src/Makefile.am" />
@@ -1784,6 +1788,8 @@
     <Text Include="../../thirdparty/curl/tests/data/Makefile.am" />
     <Text Include="../../thirdparty/curl/tests/devtest.pl" />
     <Text Include="../../thirdparty/curl/tests/dictserver.py" />
+    <Text Include="../../thirdparty/curl/tests/ech_combos.py" />
+    <Text Include="../../thirdparty/curl/tests/ech_tests.sh" />
     <Text Include="../../thirdparty/curl/tests/ftpserver.pl" />
     <Text Include="../../thirdparty/curl/tests/http-server.pl" />
     <Text Include="../../thirdparty/curl/tests/http/Makefile.am" />
@@ -1808,7 +1814,12 @@
     <Text Include="../../thirdparty/curl/tests/http/test_13_proxy_auth.py" />
     <Text Include="../../thirdparty/curl/tests/http/test_14_auth.py" />
     <Text Include="../../thirdparty/curl/tests/http/test_15_tracing.py" />
+    <Text Include="../../thirdparty/curl/tests/http/test_16_info.py" />
+    <Text Include="../../thirdparty/curl/tests/http/test_17_ssl_use.py" />
+    <Text Include="../../thirdparty/curl/tests/http/test_18_methods.py" />
     <Text Include="../../thirdparty/curl/tests/http/test_20_websockets.py" />
+    <Text Include="../../thirdparty/curl/tests/http/test_30_vsftpd.py" />
+    <Text Include="../../thirdparty/curl/tests/http/test_31_vsftpds.py" />
     <Text Include="../../thirdparty/curl/tests/http/testenv/__init__.py" />
     <Text Include="../../thirdparty/curl/tests/http/testenv/caddy.py" />
     <Text Include="../../thirdparty/curl/tests/http/testenv/certs.py" />
@@ -1818,6 +1829,7 @@
     <Text Include="../../thirdparty/curl/tests/http/testenv/httpd.py" />
     <Text Include="../../thirdparty/curl/tests/http/testenv/nghttpx.py" />
     <Text Include="../../thirdparty/curl/tests/http/testenv/ports.py" />
+    <Text Include="../../thirdparty/curl/tests/http/testenv/vsftpd.py" />
     <Text Include="../../thirdparty/curl/tests/http/testenv/ws_echo_server.py" />
     <Text Include="../../thirdparty/curl/tests/http2-server.pl" />
     <Text Include="../../thirdparty/curl/tests/http3-server.pl" />

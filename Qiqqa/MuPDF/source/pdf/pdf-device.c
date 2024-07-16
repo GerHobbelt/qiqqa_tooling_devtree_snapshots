@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2021 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -1060,7 +1060,7 @@ pdf_dev_begin_mask(fz_context *ctx, fz_device *dev, fz_rect bbox, int luminosity
 	{
 		fz_snprintf(egsname, sizeof(egsname), "SM%d", pdev->num_smasks++);
 		egss = pdf_dict_get(ctx, pdev->resources, PDF_NAME(ExtGState));
-		if (!egss)
+		if (!pdf_is_dict(ctx, egss))
 			egss = pdf_dict_put_dict(ctx, pdev->resources, PDF_NAME(ExtGState), 10);
 		egs = pdf_dict_puts_dict(ctx, egss, egsname, 1);
 
@@ -1130,7 +1130,7 @@ pdf_dev_begin_group(fz_context *ctx, fz_device *dev, fz_rect bbox, fz_colorspace
 		pdf_obj *obj;
 		fz_snprintf(text, sizeof(text), "ExtGState/BlendMode%d", blendmode);
 		obj = pdf_dict_getp(ctx, pdev->resources, text);
-		if (obj == NULL)
+		if (!pdf_is_dict(ctx, obj))
 		{
 			/* No, better make one */
 			obj = pdf_dict_puts_dict(ctx, pdev->resources, text, 2);
@@ -1267,8 +1267,8 @@ fz_device *pdf_new_pdf_device(fz_context *ctx, pdf_document *doc, fz_matrix topc
 		dev->gstates[0].ctm = fz_identity; // XXX
 		dev->gstates[0].colorspace[0] = fz_device_gray(ctx);
 		dev->gstates[0].colorspace[1] = fz_device_gray(ctx);
-		dev->gstates[0].color[0][0] = 1;
-		dev->gstates[0].color[1][0] = 1;
+		dev->gstates[0].color[0][0] = 0;
+		dev->gstates[0].color[1][0] = 0;
 		dev->gstates[0].alpha[0] = 1.0f;
 		dev->gstates[0].alpha[1] = 1.0f;
 		dev->gstates[0].font = -1;
@@ -1290,8 +1290,10 @@ fz_device *pdf_new_pdf_device(fz_context *ctx, pdf_document *doc, fz_matrix topc
 fz_device *pdf_page_write(fz_context *ctx, pdf_document *doc, fz_rect mediabox, pdf_obj **presources, fz_buffer **pcontents)
 {
 	fz_matrix pagectm = { 1, 0, 0, -1, -mediabox.x0, mediabox.y1 };
-	*presources = pdf_new_dict(ctx, doc, 0);
-	*pcontents = fz_new_buffer(ctx, 0);
+	if (!*presources)
+		*presources = pdf_new_dict(ctx, doc, 0);
+	if (!*pcontents)
+		*pcontents = fz_new_buffer(ctx, 0);
 	return pdf_new_pdf_device(ctx, doc, pagectm, *presources, *pcontents);
 }
 

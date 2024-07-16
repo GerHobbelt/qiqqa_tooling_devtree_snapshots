@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2023 Marti Maria Saguer
+//  Copyright (c) 1998-2024 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -554,6 +554,28 @@ cmsBool WhitesAreEqual(cmsUInt32Number n, cmsUInt16Number White1[], cmsUInt16Num
     return TRUE;
 }
 
+static
+cmsBool AreWhitesMisaligned(cmsContext ContextID, cmsPipeline* Lut, cmsColorSpaceSignature EntryColorSpace, cmsColorSpaceSignature ExitColorSpace)
+{
+    cmsUInt16Number *WhitePointIn, *WhitePointOut;
+    cmsUInt16Number  ObtainedOut[cmsMAXCHANNELS];
+    cmsUInt32Number nOuts, nIns;
+    cmsStage *PreLin = NULL, *CLUT = NULL, *PostLin = NULL;
+
+    if (!_cmsEndPointsBySpace(EntryColorSpace,
+        &WhitePointIn, NULL, &nIns)) return FALSE;
+
+    if (!_cmsEndPointsBySpace(ExitColorSpace,
+        &WhitePointOut, NULL, &nOuts)) return FALSE;
+
+    // It needs to be fixed?
+    if (Lut ->InputChannels != nIns) return FALSE;
+    if (Lut ->OutputChannels != nOuts) return FALSE;
+
+    cmsPipelineEval16(ContextID, WhitePointIn, ObtainedOut, Lut);
+
+    return !WhitesAreEqual(nOuts, WhitePointOut, ObtainedOut);
+}
 
 // Locate the node for the white point and fix it to pure white in order to avoid scum dot.
 static
@@ -1672,6 +1694,7 @@ cmsBool OptimizeMatrixShaper(cmsContext ContextID, cmsPipeline** Lut, cmsUInt32N
        cmsBool IdentityMat;
        cmsPipeline* Dest, *Src;
        cmsFloat64Number* Offset;
+       cmsColorSpaceSignature ColorSpace, OutputColorSpace;
 
        // Only works on RGB to RGB
        if (T_CHANNELS(*InputFormat) != 3 || T_CHANNELS(*OutputFormat) != 3) return FALSE;
@@ -1732,6 +1755,8 @@ cmsBool OptimizeMatrixShaper(cmsContext ContextID, cmsPipeline** Lut, cmsUInt32N
 
                      _cmsStageMatrixData* Data = (_cmsStageMatrixData*)cmsStageData(ContextID, Matrix1);
 
+                     if (Matrix1->InputChannels != 3 || Matrix1->OutputChannels != 3) return FALSE;
+
                      // Copy the matrix to our result
                      memcpy(&res, Data->Double, sizeof(res));
 
@@ -1781,6 +1806,13 @@ cmsBool OptimizeMatrixShaper(cmsContext ContextID, cmsPipeline** Lut, cmsUInt32N
 
         // Setup the optimizarion routines
         SetMatShaper(ContextID, Dest, mpeC1 ->TheCurves, &res, (cmsVEC3*) Offset, mpeC2->TheCurves, OutputFormat);
+    }
+
+    ColorSpace       = _cmsICCcolorSpace(ContextID, (int) T_COLORSPACE(*InputFormat));
+    OutputColorSpace = _cmsICCcolorSpace(ContextID, (int) T_COLORSPACE(*OutputFormat));
+    if (AreWhitesMisaligned(ContextID, Dest, ColorSpace, OutputColorSpace))
+    {
+        goto Error;
     }
 
     cmsPipelineFree(ContextID, Src);

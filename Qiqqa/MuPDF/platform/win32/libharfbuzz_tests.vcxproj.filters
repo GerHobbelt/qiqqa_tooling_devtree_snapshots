@@ -51,286 +51,286 @@
     <Filter Include="Header Files\src\OT\Layout\GSUB">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0013}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\src\OT\glyf">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\src\OT\name">
+    <Filter Include="Header Files\src\OT\Var">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0015}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\src\graph">
+    <Filter Include="Header Files\src\OT\Var\VARC">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\OT\glyf">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0016}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\test\api">
+    <Filter Include="Header Files\src\OT\name">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0017}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\util">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
+    <Filter Include="Header Files\src\graph">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0018}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\docs">
+    <Filter Include="Header Files\test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0020}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\m4">
+    <Filter Include="Header Files\test\api">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\util">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0021}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\perf">
+    <Filter Include="Misc Files\docs">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0022}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\perf\texts">
+    <Filter Include="Misc Files\perf">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0023}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\src">
+    <Filter Include="Misc Files\perf\texts">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0024}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\src\ms-use">
+    <Filter Include="Misc Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0025}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\src\wasm">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\src\wasm\graphite">
+    <Filter Include="Misc Files\src\ms-use">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0026}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\src\wasm\rust">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\src\wasm\rust\harfbuzz-wasm">
+    <Filter Include="Misc Files\src\wasm">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\src\wasm\rust\harfbuzz-wasm\src">
+    <Filter Include="Misc Files\src\wasm\graphite">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\wasm\rust">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\src\wasm\sample">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
+    <Filter Include="Misc Files\src\wasm\rust\harfbuzz-wasm">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\src\wasm\sample\c">
+    <Filter Include="Misc Files\src\wasm\rust\harfbuzz-wasm\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\src\wasm\sample\rust">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\src\wasm\sample\rust\hello-wasm">
+    <Filter Include="Misc Files\src\wasm\sample">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0033}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\src\wasm\sample\rust\hello-wasm\src">
+    <Filter Include="Misc Files\src\wasm\sample\c">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\wasm\sample\rust">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0035}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test">
+    <Filter Include="Misc Files\src\wasm\sample\rust\hello-wasm">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0034}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\src\wasm\sample\rust\hello-wasm\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0036}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\api">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\test\api\fonts">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\test\api\results">
+    <Filter Include="Misc Files\test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\shape">
+    <Filter Include="Misc Files\test\api">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\api\fonts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\api\results">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\shape\data">
+    <Filter Include="Misc Files\test\shape">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\shape\data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\test\shape\data\aots">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\test\shape\data\aots\tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\test\shape\data\in-house">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\test\shape\data\in-house\tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\test\shape\data\text-rendering-tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\test\shape\data\text-rendering-tests\fonts">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\shape\data\text-rendering-tests\tests">
+    <Filter Include="Misc Files\test\shape\data\text-rendering-tests\fonts">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\subset">
+    <Filter Include="Misc Files\test\shape\data\text-rendering-tests\tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\subset\data">
+    <Filter Include="Misc Files\test\subset">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\test\subset\data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\test\subset\data\expected">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0051}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\test\subset\data\profiles">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\test\subset\data\repack_tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0053}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\subset\data\tests">
+    <Filter Include="Misc Files\test\subset\data\repack_tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0054}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\test\threads">
+    <Filter Include="Misc Files\test\subset\data\tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0055}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\util">
+    <Filter Include="Resource Files">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0056}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="Resource Files\docs">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0057}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\docs">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0058}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resource Files\perf">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0060}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\perf\fonts">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0059}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0064}</UniqueIdentifier>
+    <Filter Include="Resource Files\perf\fonts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0058}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\src\wasm">
+    <Filter Include="Resource Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0063}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\src\wasm\sample">
+    <Filter Include="Resource Files\src\wasm">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0062}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\src\wasm\sample\c">
+    <Filter Include="Resource Files\src\wasm\sample">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0061}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0067}</UniqueIdentifier>
+    <Filter Include="Resource Files\src\wasm\sample\c">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0060}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\api">
+    <Filter Include="Resource Files\test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0066}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\api\fonts">
+    <Filter Include="Resource Files\test\api">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0065}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\shape">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0071}</UniqueIdentifier>
+    <Filter Include="Resource Files\test\api\fonts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0064}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\shape\data">
+    <Filter Include="Resource Files\test\shape">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0070}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\shape\data\aots">
+    <Filter Include="Resource Files\test\shape\data">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0069}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\shape\data\aots\fonts">
+    <Filter Include="Resource Files\test\shape\data\aots">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0068}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\shape\data\in-house">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0073}</UniqueIdentifier>
+    <Filter Include="Resource Files\test\shape\data\aots\fonts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0067}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\shape\data\in-house\fonts">
+    <Filter Include="Resource Files\test\shape\data\in-house">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0072}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\shape\data\text-rendering-tests">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0075}</UniqueIdentifier>
+    <Filter Include="Resource Files\test\shape\data\in-house\fonts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0071}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\shape\data\text-rendering-tests\fonts">
+    <Filter Include="Resource Files\test\shape\data\text-rendering-tests">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0074}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0079}</UniqueIdentifier>
+    <Filter Include="Resource Files\test\shape\data\text-rendering-tests\fonts">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0073}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data">
+    <Filter Include="Resource Files\test\subset">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0078}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected">
+    <Filter Include="Resource Files\test\subset\data">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0077}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\32bit_var_store">
+    <Filter Include="Resource Files\test\subset\data\expected">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0076}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\32bit_var_store">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0075}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Resource Files\test\subset\data\expected\apply_cvar_delta">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0080}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0079}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\test\subset\data\expected\basics">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0081}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0080}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\test\subset\data\expected\cbdt">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0082}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0081}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\test\subset\data\expected\cff-full-font">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0083}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0082}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\test\subset\data\expected\cff-japanese">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0084}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0083}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\test\subset\data\expected\cff.notoserifmyanmar">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0085}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0084}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\test\subset\data\expected\cmap">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0086}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0085}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\test\subset\data\expected\cmap14">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0087}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0086}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\test\subset\data\expected\collect_name_ids">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0088}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0087}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\test\subset\data\expected\colr">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0089}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0088}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\test\subset\data\expected\colr_glyphs">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0090}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0089}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\test\subset\data\expected\colr_with_components">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0091}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0090}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\test\subset\data\expected\colrv1">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0091}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\test\subset\data\expected\colrv1_subset_varstore">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0092}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\colrv1_copy_varstore">
+    <Filter Include="Resource Files\test\subset\data\expected\empty_region_vardata">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0093}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\empty_region_vardata">
+    <Filter Include="Resource Files\test\subset\data\expected\feature_variation_instance_collect_lookups">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0094}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\feature_variation_instance_collect_lookups">
+    <Filter Include="Resource Files\test\subset\data\expected\feature_variations_partial_instance">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0095}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\feature_variations_partial_instance">
+    <Filter Include="Resource Files\test\subset\data\expected\full-font">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0096}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\full-font">
+    <Filter Include="Resource Files\test\subset\data\expected\full_instance">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0097}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\full_instance">
+    <Filter Include="Resource Files\test\subset\data\expected\gdef_partial_instance">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0098}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\gdef_partial_instance">
+    <Filter Include="Resource Files\test\subset\data\expected\glyf_bug_3131">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0099}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\glyf_bug_3131">
+    <Filter Include="Resource Files\test\subset\data\expected\glyf_partial_instancing">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0100}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\glyf_partial_instancing">
+    <Filter Include="Resource Files\test\subset\data\expected\glyph_map">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0101}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\glyph_map">
+    <Filter Include="Resource Files\test\subset\data\expected\glyph_names">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0102}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\glyph_names">
+    <Filter Include="Resource Files\test\subset\data\expected\iftb_requirements">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0103}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\iftb_requirements">
+    <Filter Include="Resource Files\test\subset\data\expected\instance_comp_glyph_empty_child">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0104}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\instance_comp_glyph_empty_child">
+    <Filter Include="Resource Files\test\subset\data\expected\instance_feature_variations">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0105}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\instance_feature_variations">
+    <Filter Include="Resource Files\test\subset\data\expected\instance_no_double_free">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0106}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\instance_no_double_free">
+    <Filter Include="Resource Files\test\subset\data\expected\instantiate_base">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0107}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\test\subset\data\expected\instantiate_cff2">
@@ -462,62 +462,74 @@
     <Filter Include="Resource Files\test\subset\data\expected\sbix">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0150}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\sync_vmetrics">
+    <Filter Include="Resource Files\test\subset\data\expected\subset_base">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0151}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\update_def_wght">
+    <Filter Include="Resource Files\test\subset\data\expected\sync_vmetrics">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0152}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\value_format_partial_instance">
+    <Filter Include="Resource Files\test\subset\data\expected\update_def_wght">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0153}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\expected\variable">
+    <Filter Include="Resource Files\test\subset\data\expected\value_format_partial_instance">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0154}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\test\subset\data\fonts">
+    <Filter Include="Resource Files\test\subset\data\expected\variable">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0155}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\perf">
+    <Filter Include="Resource Files\test\subset\data\fonts">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0156}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src">
+    <Filter Include="Source Files\perf">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0157}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src\graph">
+    <Filter Include="Source Files\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0158}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\src\wasm">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0160}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\src\wasm\graphite">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0159}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\src\wasm\sample">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0162}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\src\wasm\sample\c">
+    <Filter Include="Source Files\src\OT">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0161}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\test">
+    <Filter Include="Source Files\src\OT\Var">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0160}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\OT\Var\VARC">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0159}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\graph">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0162}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\wasm">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0164}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\test\api">
+    <Filter Include="Source Files\src\wasm\graphite">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0163}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\test\shape">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0167}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\test\shape\data">
+    <Filter Include="Source Files\src\wasm\sample">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0166}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\test\shape\data\aots">
+    <Filter Include="Source Files\src\wasm\sample\c">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0165}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\test\threads">
+    <Filter Include="Source Files\test">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0168}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\util">
+    <Filter Include="Source Files\test\api">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0167}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test\shape">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0171}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test\shape\data">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0170}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test\shape\data\aots">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0169}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test\threads">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0172}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0173}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -538,6 +550,9 @@
     </ClCompile>
     <ClCompile Include="../../thirdparty/harfbuzz/perf/benchmark-subset.cc">
       <Filter>Source Files\perf</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/harfbuzz/src/OT/Var/VARC/VARC.cc">
+      <Filter>Source Files\src\OT\Var\VARC</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/harfbuzz/src/failing-alloc.c">
       <Filter>Source Files\src</Filter>
@@ -749,6 +764,9 @@
     <ClCompile Include="../../thirdparty/harfbuzz/src/hb-subset-input.cc">
       <Filter>Source Files\src</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/harfbuzz/src/hb-subset-instancer-iup.cc">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/harfbuzz/src/hb-subset-instancer-solver.cc">
       <Filter>Source Files\src</Filter>
     </ClCompile>
@@ -789,6 +807,9 @@
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/harfbuzz/src/test-buffer-serialize.cc">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/harfbuzz/src/test-cff.cc">
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/harfbuzz/src/test-gpos-size-params.cc">
@@ -900,6 +921,9 @@
       <Filter>Source Files\test\api</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/harfbuzz/test/api/test-cplusplus.cc">
+      <Filter>Source Files\test\api</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/harfbuzz/test/api/test-draw-varc.c">
       <Filter>Source Files\test\api</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/harfbuzz/test/api/test-draw.c">
@@ -1286,6 +1310,12 @@
     <ClInclude Include="../../thirdparty/harfbuzz/src/OT/Layout/types.hh">
       <Filter>Header Files\src\OT\Layout</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/src/OT/Var/VARC/VARC.hh">
+      <Filter>Header Files\src\OT\Var\VARC</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/src/OT/Var/VARC/coord-setter.hh">
+      <Filter>Header Files\src\OT\Var\VARC</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/harfbuzz/src/OT/glyf/CompositeGlyph.hh">
       <Filter>Header Files\src\OT\glyf</Filter>
     </ClInclude>
@@ -1301,13 +1331,7 @@
     <ClInclude Include="../../thirdparty/harfbuzz/src/OT/glyf/SubsetGlyph.hh">
       <Filter>Header Files\src\OT\glyf</Filter>
     </ClInclude>
-    <ClInclude Include="../../thirdparty/harfbuzz/src/OT/glyf/VarCompositeGlyph.hh">
-      <Filter>Header Files\src\OT\glyf</Filter>
-    </ClInclude>
     <ClInclude Include="../../thirdparty/harfbuzz/src/OT/glyf/composite-iter.hh">
-      <Filter>Header Files\src\OT\glyf</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/harfbuzz/src/OT/glyf/coord-setter.hh">
       <Filter>Header Files\src\OT\glyf</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/harfbuzz/src/OT/glyf/glyf-helpers.hh">
@@ -1509,6 +1533,9 @@
       <Filter>Header Files\src</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/harfbuzz/src/hb-gdi.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/src/hb-geometry.hh">
       <Filter>Header Files\src</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/harfbuzz/src/hb-glib.h">
@@ -1787,6 +1814,9 @@
     <ClInclude Include="../../thirdparty/harfbuzz/src/hb-ot-var-mvar-table.hh">
       <Filter>Header Files\src</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/src/hb-ot-var-varc-table.hh">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/harfbuzz/src/hb-ot-var.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
@@ -1863,6 +1893,9 @@
       <Filter>Header Files\src</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/harfbuzz/src/hb-subset-input.hh">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/harfbuzz/src/hb-subset-instancer-iup.hh">
       <Filter>Header Files\src</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/harfbuzz/src/hb-subset-instancer-solver.hh">
@@ -2136,6 +2169,9 @@
       <Filter>Resource Files\test\api\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/api/fonts/NotoNastaliqUrdu-Regular.ttf">
+      <Filter>Resource Files\test\api\fonts</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/api/fonts/NotoSans-Bold.ttf">
       <Filter>Resource Files\test\api\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/api/fonts/NotoSansCJKkr-Regular-subset-colon.ttf">
@@ -2454,6 +2490,15 @@
       <Filter>Resource Files\test\api\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/api/fonts/test_glyphs-glyf_colr_1_variable.ttf">
+      <Filter>Resource Files\test\api\fonts</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/api/fonts/varc-6868.ttf">
+      <Filter>Resource Files\test\api\fonts</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/api/fonts/varc-ac00-ac01.ttf">
+      <Filter>Resource Files\test\api\fonts</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/api/fonts/varc-ac01-conditional.ttf">
       <Filter>Resource Files\test\api\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/shape/data/aots/fonts/classdef1_font1.otf">
@@ -3896,16 +3941,16 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/32bit_var_store/32bit_var_store.notdef-outline.64.otf">
       <Filter>Resource Files\test\subset\data\expected\32bit_var_store</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/apply_cvar_delta/Comfortaa-Regular-new.default.retain-all-codepoint.wght=300.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/apply_cvar_delta/Comfortaa-Regular-new.default.all.wght=300.ttf">
       <Filter>Resource Files\test\subset\data\expected\apply_cvar_delta</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/apply_cvar_delta/Comfortaa-Regular-new.default.retain-all-codepoint.wght=700.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/apply_cvar_delta/Comfortaa-Regular-new.default.all.wght=700.ttf">
       <Filter>Resource Files\test\subset\data\expected\apply_cvar_delta</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/apply_cvar_delta/Muli-ABC.default.retain-all-codepoint.wght=300.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/apply_cvar_delta/Muli-ABC.default.all.wght=300.ttf">
       <Filter>Resource Files\test\subset\data\expected\apply_cvar_delta</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/apply_cvar_delta/Muli-ABC.default.retain-all-codepoint.wght=700.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/apply_cvar_delta/Muli-ABC.default.all.wght=700.ttf">
       <Filter>Resource Files\test\subset\data\expected\apply_cvar_delta</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.default.61,62,63.ttf">
@@ -3923,7 +3968,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.default.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.default.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.default.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.drop-hints-retain-gids.61,62,63.ttf">
@@ -3941,7 +3986,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.drop-hints-retain-gids.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.drop-hints-retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.drop-hints-retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.drop-hints.61,62,63.ttf">
@@ -3959,7 +4004,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.drop-hints.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.drop-hints.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.drop-hints.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.gids.61,62,63.ttf">
@@ -3977,7 +4022,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.gids.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.glyph-names.61,62,63.ttf">
@@ -3995,7 +4040,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.glyph-names.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.glyph-names.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.glyph-names.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.keep-all-layout-features.61,62,63.ttf">
@@ -4013,7 +4058,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.keep-all-layout-features.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.keep-all-layout-features.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.keep-all-layout-features.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.layout-features.61,62,63.ttf">
@@ -4031,7 +4076,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.layout-features.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.layout-features.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.layout-features.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.name-ids.61,62,63.ttf">
@@ -4049,7 +4094,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.name-ids.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.name-ids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.name-ids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.name-languages.61,62,63.ttf">
@@ -4067,7 +4112,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.name-languages.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.name-languages.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.name-languages.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.name-legacy.61,62,63.ttf">
@@ -4085,7 +4130,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.name-legacy.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.name-legacy.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.name-legacy.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.no-prune-unicode-ranges.61,62,63.ttf">
@@ -4103,7 +4148,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.no-prune-unicode-ranges.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.no-prune-unicode-ranges.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.no-prune-unicode-ranges.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.notdef-outline.61,62,63.ttf">
@@ -4121,7 +4166,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.notdef-outline.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.notdef-outline.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.notdef-outline.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.retain-gids.61,62,63.ttf">
@@ -4139,7 +4184,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.retain-gids.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Comfortaa-Regular-new.retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.default.61,62,63.ttf">
@@ -4157,7 +4202,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.default.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.default.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.default.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.drop-hints-retain-gids.61,62,63.ttf">
@@ -4175,7 +4220,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.drop-hints-retain-gids.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.drop-hints-retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.drop-hints-retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.drop-hints.61,62,63.ttf">
@@ -4193,7 +4238,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.drop-hints.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.drop-hints.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.drop-hints.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.gids.61,62,63.ttf">
@@ -4211,7 +4256,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.gids.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.glyph-names.61,62,63.ttf">
@@ -4229,7 +4274,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.glyph-names.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.glyph-names.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.glyph-names.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.keep-all-layout-features.61,62,63.ttf">
@@ -4247,7 +4292,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.keep-all-layout-features.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.keep-all-layout-features.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.keep-all-layout-features.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.layout-features.61,62,63.ttf">
@@ -4265,7 +4310,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.layout-features.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.layout-features.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.layout-features.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.name-ids.61,62,63.ttf">
@@ -4283,7 +4328,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.name-ids.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.name-ids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.name-ids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.name-languages.61,62,63.ttf">
@@ -4301,7 +4346,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.name-languages.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.name-languages.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.name-languages.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.name-legacy.61,62,63.ttf">
@@ -4319,7 +4364,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.name-legacy.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.name-legacy.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.name-legacy.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.no-prune-unicode-ranges.61,62,63.ttf">
@@ -4337,7 +4382,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.no-prune-unicode-ranges.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.no-prune-unicode-ranges.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.no-prune-unicode-ranges.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.notdef-outline.61,62,63.ttf">
@@ -4355,7 +4400,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.notdef-outline.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.notdef-outline.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.notdef-outline.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.retain-gids.61,62,63.ttf">
@@ -4373,7 +4418,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.retain-gids.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/NanumMyeongjo-Regular-subset.retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.default.61,62,63.ttf">
@@ -4391,7 +4436,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.default.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.default.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.default.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.drop-hints-retain-gids.61,62,63.ttf">
@@ -4409,7 +4454,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.drop-hints-retain-gids.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.drop-hints-retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.drop-hints-retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.drop-hints.61,62,63.ttf">
@@ -4427,7 +4472,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.drop-hints.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.drop-hints.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.drop-hints.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.gids.61,62,63.ttf">
@@ -4445,7 +4490,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.gids.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.glyph-names.61,62,63.ttf">
@@ -4463,7 +4508,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.glyph-names.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.glyph-names.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.glyph-names.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.keep-all-layout-features.61,62,63.ttf">
@@ -4481,7 +4526,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.keep-all-layout-features.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.keep-all-layout-features.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.keep-all-layout-features.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.layout-features.61,62,63.ttf">
@@ -4499,7 +4544,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.layout-features.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.layout-features.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.layout-features.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.name-ids.61,62,63.ttf">
@@ -4517,7 +4562,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.name-ids.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.name-ids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.name-ids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.name-languages.61,62,63.ttf">
@@ -4535,7 +4580,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.name-languages.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.name-languages.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.name-languages.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.name-legacy.61,62,63.ttf">
@@ -4553,7 +4598,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.name-legacy.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.name-legacy.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.name-legacy.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.no-prune-unicode-ranges.61,62,63.ttf">
@@ -4571,7 +4616,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.no-prune-unicode-ranges.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.no-prune-unicode-ranges.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.no-prune-unicode-ranges.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.notdef-outline.61,62,63.ttf">
@@ -4589,7 +4634,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.notdef-outline.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.notdef-outline.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.notdef-outline.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.retain-gids.61,62,63.ttf">
@@ -4607,7 +4652,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.retain-gids.63.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/basics/Roboto-Regular.abc.retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\basics</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cbdt/NotoColorEmoji.subset.default.2049.ttf">
@@ -5243,7 +5288,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-drop-hints-retain-gids.4E08.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-drop-hints-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-drop-hints-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-drop-hints.4E00,4E02,4E03.otf">
@@ -5273,7 +5318,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-drop-hints.4E08.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-drop-hints.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-drop-hints.all.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-gids.4E00,4E02,4E03.otf">
@@ -5303,7 +5348,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-gids.4E08.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-name-ids.4E00,4E02,4E03.otf">
@@ -5333,7 +5378,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-name-ids.4E08.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-name-ids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-name-ids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-retain-gids.4E00,4E02,4E03.otf">
@@ -5363,7 +5408,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-retain-gids.4E08.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline.4E00,4E02,4E03.otf">
@@ -5393,7 +5438,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline.4E08.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font1.notdef-outline.all.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-drop-hints-retain-gids.4E00,4E02,4E03.otf">
@@ -5423,7 +5468,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-drop-hints-retain-gids.4E08.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-drop-hints-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-drop-hints-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-drop-hints.4E00,4E02,4E03.otf">
@@ -5453,7 +5498,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-drop-hints.4E08.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-drop-hints.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-drop-hints.all.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-gids.4E00,4E02,4E03.otf">
@@ -5483,7 +5528,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-gids.4E08.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-name-ids.4E00,4E02,4E03.otf">
@@ -5513,7 +5558,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-name-ids.4E08.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-name-ids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-name-ids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-retain-gids.4E00,4E02,4E03.otf">
@@ -5543,7 +5588,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-retain-gids.4E08.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline.4E00,4E02,4E03.otf">
@@ -5573,10 +5618,10 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline.4E08.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/cmap14/cmap14_font2.notdef-outline.all.otf">
       <Filter>Resource Files\test\subset\data\expected\cmap14</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/collect_name_ids/SourceSerif4Variable-Roman_subset.keep-all-layout-features.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/collect_name_ids/SourceSerif4Variable-Roman_subset.keep-all-layout-features.all.otf">
       <Filter>Resource Files\test\subset\data\expected\collect_name_ids</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colr/TwemojiMozilla.subset.default.32,3297,3299.ttf">
@@ -5723,7 +5768,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1/TestCOLRv1.default.E004.ttf">
       <Filter>Resource Files\test\subset\data\expected\colrv1</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1/TestCOLRv1.default.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1/TestCOLRv1.default.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\colrv1</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1/TestCOLRv1.drop-hints-retain-gids.E000,E001,E002,E003.ttf">
@@ -5762,7 +5807,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1/TestCOLRv1.drop-hints-retain-gids.E004.ttf">
       <Filter>Resource Files\test\subset\data\expected\colrv1</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1/TestCOLRv1.drop-hints-retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1/TestCOLRv1.drop-hints-retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\colrv1</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1/TestCOLRv1.drop-hints.E000,E001,E002,E003.ttf">
@@ -5801,7 +5846,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1/TestCOLRv1.drop-hints.E004.ttf">
       <Filter>Resource Files\test\subset\data\expected\colrv1</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1/TestCOLRv1.drop-hints.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1/TestCOLRv1.drop-hints.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\colrv1</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1/TestCOLRv1.retain-gids.E000,E001,E002,E003.ttf">
@@ -5840,58 +5885,73 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1/TestCOLRv1.retain-gids.E004.ttf">
       <Filter>Resource Files\test\subset\data\expected\colrv1</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1/TestCOLRv1.retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1/TestCOLRv1.retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\colrv1</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_copy_varstore/Foldit.default.41,42.ttf">
-      <Filter>Resource Files\test\subset\data\expected\colrv1_copy_varstore</Filter>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_subset_varstore/Foldit.default.41,42.ttf">
+      <Filter>Resource Files\test\subset\data\expected\colrv1_subset_varstore</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_copy_varstore/Foldit.default.41.ttf">
-      <Filter>Resource Files\test\subset\data\expected\colrv1_copy_varstore</Filter>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_subset_varstore/Foldit.default.41.ttf">
+      <Filter>Resource Files\test\subset\data\expected\colrv1_subset_varstore</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_copy_varstore/Foldit.default.retain-all-codepoint.ttf">
-      <Filter>Resource Files\test\subset\data\expected\colrv1_copy_varstore</Filter>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_subset_varstore/Foldit.default.all.ttf">
+      <Filter>Resource Files\test\subset\data\expected\colrv1_subset_varstore</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_copy_varstore/Foldit.drop-hints-retain-gids.41,42.ttf">
-      <Filter>Resource Files\test\subset\data\expected\colrv1_copy_varstore</Filter>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_subset_varstore/Foldit.drop-hints-retain-gids.41,42.ttf">
+      <Filter>Resource Files\test\subset\data\expected\colrv1_subset_varstore</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_copy_varstore/Foldit.drop-hints-retain-gids.41.ttf">
-      <Filter>Resource Files\test\subset\data\expected\colrv1_copy_varstore</Filter>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_subset_varstore/Foldit.drop-hints-retain-gids.41.ttf">
+      <Filter>Resource Files\test\subset\data\expected\colrv1_subset_varstore</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_copy_varstore/Foldit.drop-hints-retain-gids.retain-all-codepoint.ttf">
-      <Filter>Resource Files\test\subset\data\expected\colrv1_copy_varstore</Filter>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_subset_varstore/Foldit.drop-hints-retain-gids.all.ttf">
+      <Filter>Resource Files\test\subset\data\expected\colrv1_subset_varstore</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_copy_varstore/Foldit.drop-hints.41,42.ttf">
-      <Filter>Resource Files\test\subset\data\expected\colrv1_copy_varstore</Filter>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_subset_varstore/Foldit.drop-hints.41,42.ttf">
+      <Filter>Resource Files\test\subset\data\expected\colrv1_subset_varstore</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_copy_varstore/Foldit.drop-hints.41.ttf">
-      <Filter>Resource Files\test\subset\data\expected\colrv1_copy_varstore</Filter>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_subset_varstore/Foldit.drop-hints.41.ttf">
+      <Filter>Resource Files\test\subset\data\expected\colrv1_subset_varstore</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_copy_varstore/Foldit.drop-hints.retain-all-codepoint.ttf">
-      <Filter>Resource Files\test\subset\data\expected\colrv1_copy_varstore</Filter>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_subset_varstore/Foldit.drop-hints.all.ttf">
+      <Filter>Resource Files\test\subset\data\expected\colrv1_subset_varstore</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_copy_varstore/Foldit.retain-gids.41,42.ttf">
-      <Filter>Resource Files\test\subset\data\expected\colrv1_copy_varstore</Filter>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_subset_varstore/Foldit.retain-gids.41,42.ttf">
+      <Filter>Resource Files\test\subset\data\expected\colrv1_subset_varstore</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_copy_varstore/Foldit.retain-gids.41.ttf">
-      <Filter>Resource Files\test\subset\data\expected\colrv1_copy_varstore</Filter>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_subset_varstore/Foldit.retain-gids.41.ttf">
+      <Filter>Resource Files\test\subset\data\expected\colrv1_subset_varstore</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_copy_varstore/Foldit.retain-gids.retain-all-codepoint.ttf">
-      <Filter>Resource Files\test\subset\data\expected\colrv1_copy_varstore</Filter>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/colrv1_subset_varstore/Foldit.retain-gids.all.ttf">
+      <Filter>Resource Files\test\subset\data\expected\colrv1_subset_varstore</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/empty_region_vardata/RobotoFlex-Variable.ABC.default.retain-all-codepoint.wght=200-300,opsz=14.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/empty_region_vardata/RobotoFlex-Variable.ABC.default.all.wght=200-300,opsz=14.iup_optimize.ttf">
       <Filter>Resource Files\test\subset\data\expected\empty_region_vardata</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/empty_region_vardata/RobotoFlex-Variable.ABC.default.retain-all-codepoint.wght=400,wdth=100,opsz=14.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/empty_region_vardata/RobotoFlex-Variable.ABC.default.all.wght=200-300,opsz=14.ttf">
       <Filter>Resource Files\test\subset\data\expected\empty_region_vardata</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/feature_variation_instance_collect_lookups/AnekBangla-question-subset.default.retain-all-codepoint.wdth=112.5.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/empty_region_vardata/RobotoFlex-Variable.ABC.default.all.wght=400,wdth=100,opsz=14.iup_optimize.ttf">
+      <Filter>Resource Files\test\subset\data\expected\empty_region_vardata</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/empty_region_vardata/RobotoFlex-Variable.ABC.default.all.wght=400,wdth=100,opsz=14.ttf">
+      <Filter>Resource Files\test\subset\data\expected\empty_region_vardata</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/feature_variation_instance_collect_lookups/AnekBangla-question-subset.default.all.wdth=112.5.iup_optimize.ttf">
       <Filter>Resource Files\test\subset\data\expected\feature_variation_instance_collect_lookups</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/feature_variations_partial_instance/NotoSansOriya-subset.default.retain-all-codepoint.wdth=75.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/feature_variation_instance_collect_lookups/AnekBangla-question-subset.default.all.wdth=112.5.ttf">
+      <Filter>Resource Files\test\subset\data\expected\feature_variation_instance_collect_lookups</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/feature_variations_partial_instance/NotoSansOriya-subset.default.all.wdth=75.iup_optimize.ttf">
       <Filter>Resource Files\test\subset\data\expected\feature_variations_partial_instance</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/feature_variations_partial_instance/NotoSansOriya-subset.keep-all-layout-features.retain-all-codepoint.wdth=75.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/feature_variations_partial_instance/NotoSansOriya-subset.default.all.wdth=75.ttf">
+      <Filter>Resource Files\test\subset\data\expected\feature_variations_partial_instance</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/feature_variations_partial_instance/NotoSansOriya-subset.keep-all-layout-features.all.wdth=75.iup_optimize.ttf">
+      <Filter>Resource Files\test\subset\data\expected\feature_variations_partial_instance</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/feature_variations_partial_instance/NotoSansOriya-subset.keep-all-layout-features.all.wdth=75.ttf">
       <Filter>Resource Files\test\subset\data\expected\feature_variations_partial_instance</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/full-font/Roboto-Regular.default.1FC,21,41,20,62,63.ttf">
@@ -6038,43 +6098,58 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/full-font/SourceSerifVariable-Roman.no-scripts.D7,D8,D9,DA,DE.ttf">
       <Filter>Resource Files\test\subset\data\expected\full-font</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/full_instance/Roboto-Variable.default.retain-all-codepoint.wght=150,wdth=80.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/full_instance/Roboto-Variable.default.all.wght=150,wdth=80.ttf">
       <Filter>Resource Files\test\subset\data\expected\full_instance</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/full_instance/Roboto-Variable.default.retain-all-codepoint.wght=300,wdth=90.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/full_instance/Roboto-Variable.default.all.wght=300,wdth=90.ttf">
       <Filter>Resource Files\test\subset\data\expected\full_instance</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/full_instance/Roboto-Variable.no-prune-unicode-ranges.retain-all-codepoint.wght=150,wdth=80.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/full_instance/Roboto-Variable.no-prune-unicode-ranges.all.wght=150,wdth=80.ttf">
       <Filter>Resource Files\test\subset\data\expected\full_instance</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/full_instance/Roboto-Variable.no-prune-unicode-ranges.retain-all-codepoint.wght=300,wdth=90.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/full_instance/Roboto-Variable.no-prune-unicode-ranges.all.wght=300,wdth=90.ttf">
       <Filter>Resource Files\test\subset\data\expected\full_instance</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/gdef_partial_instance/AnekBangla-subset.default.retain-all-codepoint.wght=300.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/gdef_partial_instance/AnekBangla-subset.default.all.wght=300.iup_optimize.ttf">
+      <Filter>Resource Files\test\subset\data\expected\gdef_partial_instance</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/gdef_partial_instance/AnekBangla-subset.default.all.wght=300.ttf">
       <Filter>Resource Files\test\subset\data\expected\gdef_partial_instance</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_bug_3131/glyf_bug_3131.drop-hints-retain-gids.63,64,65,6F,70,71,72.ttf">
       <Filter>Resource Files\test\subset\data\expected\glyf_bug_3131</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_bug_3131/glyf_bug_3131.drop-hints-retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_bug_3131/glyf_bug_3131.drop-hints-retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\glyf_bug_3131</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_bug_3131/glyf_bug_3131.retain-gids.63,64,65,6F,70,71,72.ttf">
       <Filter>Resource Files\test\subset\data\expected\glyf_bug_3131</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_bug_3131/glyf_bug_3131.retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_bug_3131/glyf_bug_3131.retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\glyf_bug_3131</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_partial_instancing/Roboto-Variable.ABC.default.retain-all-codepoint.wght=200-300-500,wdth=80-90.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_partial_instancing/Roboto-Variable.ABC.default.all.wght=200-300-500,wdth=80-90.iup_optimize.ttf">
       <Filter>Resource Files\test\subset\data\expected\glyf_partial_instancing</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_partial_instancing/Roboto-Variable.ABC.default.retain-all-codepoint.wght=300-600,wdth=85.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_partial_instancing/Roboto-Variable.ABC.default.all.wght=200-300-500,wdth=80-90.ttf">
       <Filter>Resource Files\test\subset\data\expected\glyf_partial_instancing</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_partial_instancing/Roboto-Variable.composite.default.retain-all-codepoint.wght=200-300-500,wdth=80-90.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_partial_instancing/Roboto-Variable.ABC.default.all.wght=300-600,wdth=85.iup_optimize.ttf">
       <Filter>Resource Files\test\subset\data\expected\glyf_partial_instancing</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_partial_instancing/Roboto-Variable.composite.default.retain-all-codepoint.wght=300-600,wdth=85.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_partial_instancing/Roboto-Variable.ABC.default.all.wght=300-600,wdth=85.ttf">
+      <Filter>Resource Files\test\subset\data\expected\glyf_partial_instancing</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_partial_instancing/Roboto-Variable.composite.default.all.wght=200-300-500,wdth=80-90.iup_optimize.ttf">
+      <Filter>Resource Files\test\subset\data\expected\glyf_partial_instancing</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_partial_instancing/Roboto-Variable.composite.default.all.wght=200-300-500,wdth=80-90.ttf">
+      <Filter>Resource Files\test\subset\data\expected\glyf_partial_instancing</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_partial_instancing/Roboto-Variable.composite.default.all.wght=300-600,wdth=85.iup_optimize.ttf">
+      <Filter>Resource Files\test\subset\data\expected\glyf_partial_instancing</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyf_partial_instancing/Roboto-Variable.composite.default.all.wght=300-600,wdth=85.ttf">
       <Filter>Resource Files\test\subset\data\expected\glyf_partial_instancing</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyph_map/Roboto-Regular.glyph_map_roboto.41,43,61,66,69.ttf">
@@ -6083,7 +6158,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyph_names/Ubuntu-Regular.glyph-names.0x0,0x8,0x9,0x1d,0x20,0xb7.ttf">
       <Filter>Resource Files\test\subset\data\expected\glyph_names</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyph_names/Ubuntu-Regular.glyph-names.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/glyph_names/Ubuntu-Regular.glyph-names.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\glyph_names</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/iftb_requirements/AdobeVFPrototype.default.61,62,63.otf">
@@ -6104,7 +6179,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/iftb_requirements/SourceSansPro-Regular.iftb_requirements.61,62,63.otf">
       <Filter>Resource Files\test\subset\data\expected\iftb_requirements</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instance_comp_glyph_empty_child/RobotoMono.default.retain-all-codepoint.wght=700.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instance_comp_glyph_empty_child/RobotoMono.default.all.wght=700.ttf">
       <Filter>Resource Files\test\subset\data\expected\instance_comp_glyph_empty_child</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instance_feature_variations/MPLUS1-Variable.default.30DD.wght=100.ttf">
@@ -6113,34 +6188,61 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instance_feature_variations/MPLUS1-Variable.default.30DD.wght=400.ttf">
       <Filter>Resource Files\test\subset\data\expected\instance_feature_variations</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instance_no_double_free/Handjet.default.retain-all-codepoint.wght=100,ELGR=1,ELSH=2.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instance_no_double_free/Handjet.default.all.wght=100,ELGR=1,ELSH=2.ttf">
       <Filter>Resource Files\test\subset\data\expected\instance_no_double_free</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instance_no_double_free/Handjet.notdef-outline.retain-all-codepoint.wght=100,ELGR=1,ELSH=2.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instance_no_double_free/Handjet.notdef-outline.all.wght=100,ELGR=1,ELSH=2.ttf">
       <Filter>Resource Files\test\subset\data\expected\instance_no_double_free</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_cff2/AdobeVFPrototype.default.retain-all-codepoint.wght=650,CNTR=50.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_base/NotoSerifHK-subset.default.all.wght=400-600.ttf">
+      <Filter>Resource Files\test\subset\data\expected\instantiate_base</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_base/NotoSerifHK-subset.default.all.wght=500.ttf">
+      <Filter>Resource Files\test\subset\data\expected\instantiate_base</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_cff2/AdobeVFPrototype.default.all.wght=650,CNTR=50.otf">
       <Filter>Resource Files\test\subset\data\expected\instantiate_cff2</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_cff2_update_metrics/Cantarell-VF-ABC.default.retain-all-codepoint.wght=800.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_cff2_update_metrics/Cantarell-VF-ABC.default.all.wght=800.otf">
       <Filter>Resource Files\test\subset\data\expected\instantiate_cff2_update_metrics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_cff2_update_metrics/Cantarell-VF-ABC.retain-gids.retain-all-codepoint.wght=800.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_cff2_update_metrics/Cantarell-VF-ABC.retain-gids.all.wght=800.otf">
       <Filter>Resource Files\test\subset\data\expected\instantiate_cff2_update_metrics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_colrv1/Foldit.default.retain-all-codepoint.wght=900.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_colrv1/Foldit.default.41.wght=300-600.ttf">
       <Filter>Resource Files\test\subset\data\expected\instantiate_colrv1</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_glyf/Roboto-Variable.ABC.default.retain-all-codepoint.wght=200,wdth=90.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_colrv1/Foldit.default.41.wght=900.ttf">
+      <Filter>Resource Files\test\subset\data\expected\instantiate_colrv1</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_colrv1/Foldit.default.all.wght=300-600.ttf">
+      <Filter>Resource Files\test\subset\data\expected\instantiate_colrv1</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_colrv1/Foldit.default.all.wght=900.ttf">
+      <Filter>Resource Files\test\subset\data\expected\instantiate_colrv1</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_colrv1/KalniaGlaze.default.41.wght=300-600.ttf">
+      <Filter>Resource Files\test\subset\data\expected\instantiate_colrv1</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_colrv1/KalniaGlaze.default.41.wght=900.ttf">
+      <Filter>Resource Files\test\subset\data\expected\instantiate_colrv1</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_colrv1/KalniaGlaze.default.all.wght=300-600.ttf">
+      <Filter>Resource Files\test\subset\data\expected\instantiate_colrv1</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_colrv1/KalniaGlaze.default.all.wght=900.ttf">
+      <Filter>Resource Files\test\subset\data\expected\instantiate_colrv1</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_glyf/Roboto-Variable.ABC.default.all.wght=200,wdth=90.ttf">
       <Filter>Resource Files\test\subset\data\expected\instantiate_glyf</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_glyf/Roboto-Variable.ABC.default.retain-all-codepoint.wght=650,wdth=85.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_glyf/Roboto-Variable.ABC.default.all.wght=650,wdth=85.ttf">
       <Filter>Resource Files\test\subset\data\expected\instantiate_glyf</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_glyf/Roboto-Variable.composite.default.retain-all-codepoint.wght=200,wdth=90.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_glyf/Roboto-Variable.composite.default.all.wght=200,wdth=90.ttf">
       <Filter>Resource Files\test\subset\data\expected\instantiate_glyf</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_glyf/Roboto-Variable.composite.default.retain-all-codepoint.wght=650,wdth=85.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/instantiate_glyf/Roboto-Variable.composite.default.all.wght=650,wdth=85.ttf">
       <Filter>Resource Files\test\subset\data\expected\instantiate_glyf</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/japanese/Mplus1p-Regular.default.1D715,1D7D8,41,42.ttf">
@@ -6218,7 +6320,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context1_multiple_subrules_f1.layout-test-retain-gids.41.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.context</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context1_multiple_subrules_f1.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context1_multiple_subrules_f1.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.context</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context1_multiple_subrules_f1.layout-test.41,42,43.otf">
@@ -6233,7 +6335,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context1_multiple_subrules_f1.layout-test.41.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.context</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context1_multiple_subrules_f1.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context1_multiple_subrules_f1.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.context</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context2_multiple_subrules_f1.layout-test-retain-gids.41,42,43.otf">
@@ -6248,7 +6350,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context2_multiple_subrules_f1.layout-test-retain-gids.41.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.context</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context2_multiple_subrules_f1.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context2_multiple_subrules_f1.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.context</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context2_multiple_subrules_f1.layout-test.41,42,43.otf">
@@ -6263,7 +6365,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context2_multiple_subrules_f1.layout-test.41.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.context</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context2_multiple_subrules_f1.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context2_multiple_subrules_f1.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.context</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context3_simple_f1.layout-test-retain-gids.41,42,43.otf">
@@ -6278,7 +6380,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context3_simple_f1.layout-test-retain-gids.41.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.context</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context3_simple_f1.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context3_simple_f1.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.context</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context3_simple_f1.layout-test.41,42,43.otf">
@@ -6293,43 +6395,43 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context3_simple_f1.layout-test.41.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.context</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context3_simple_f1.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context/gpos_context3_simple_f1.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.context</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context_format2/NotoSansNewa-Regular.layout-test-retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context_format2/NotoSansNewa-Regular.layout-test-retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.context_format2</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context_format2/NotoSansNewa-Regular.layout-test.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.context_format2/NotoSansNewa-Regular.layout-test.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.context_format2</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.drop_feature/SpectralSC-ExtraLightItalic.default.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.drop_feature/SpectralSC-ExtraLightItalic.default.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.drop_feature</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.drop_feature/SpectralSC-ExtraLightItalic.glyph-names.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.drop_feature/SpectralSC-ExtraLightItalic.glyph-names.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.drop_feature</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.drop_feature/SpectralSC-ExtraLightItalic.notdef-outline.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.drop_feature/SpectralSC-ExtraLightItalic.notdef-outline.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.drop_feature</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.duplicate_features/AlegreyaSans-BlackItalic.default.20,2f,38,49,4c,51,53,66,67,6f,b4,2044.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.duplicate_features</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.duplicate_features/AlegreyaSans-BlackItalic.default.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.duplicate_features/AlegreyaSans-BlackItalic.default.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.duplicate_features</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.duplicate_features/AlegreyaSans-BlackItalic.glyph-names.20,2f,38,49,4c,51,53,66,67,6f,b4,2044.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.duplicate_features</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.duplicate_features/AlegreyaSans-BlackItalic.glyph-names.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.duplicate_features/AlegreyaSans-BlackItalic.glyph-names.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.duplicate_features</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.duplicate_features/AlegreyaSans-BlackItalic.notdef-outline.20,2f,38,49,4c,51,53,66,67,6f,b4,2044.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.duplicate_features</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.duplicate_features/AlegreyaSans-BlackItalic.notdef-outline.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.duplicate_features/AlegreyaSans-BlackItalic.notdef-outline.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.duplicate_features</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.empty_ligature_offset/AnekBangla-latin-subset.default.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.empty_ligature_offset/AnekBangla-latin-subset.default.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.empty_ligature_offset</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef-attachlist/IndicTestJalandhar-Regular.default.A01.ttf">
@@ -6341,7 +6443,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef-attachlist/IndicTestJalandhar-Regular.default.A07,A1B.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gdef-attachlist</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef-attachlist/IndicTestJalandhar-Regular.default.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef-attachlist/IndicTestJalandhar-Regular.default.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gdef-attachlist</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef-attachlist/IndicTestJalandhar-Regular.drop-hints.A01.ttf">
@@ -6353,7 +6455,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef-attachlist/IndicTestJalandhar-Regular.drop-hints.A07,A1B.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gdef-attachlist</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef-attachlist/IndicTestJalandhar-Regular.drop-hints.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef-attachlist/IndicTestJalandhar-Regular.drop-hints.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gdef-attachlist</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef-attachlist/IndicTestJalandhar-Regular.keep-gdef.A01.ttf">
@@ -6365,7 +6467,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef-attachlist/IndicTestJalandhar-Regular.keep-gdef.A07,A1B.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gdef-attachlist</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef-attachlist/IndicTestJalandhar-Regular.keep-gdef.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef-attachlist/IndicTestJalandhar-Regular.keep-gdef.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gdef-attachlist</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef-varstore/AdobeVFPrototype.layout-test-retain-gids.41,42,43,57.otf">
@@ -6407,19 +6509,19 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef.glyphset/IndicTestHowrah-Regular.default.9dd.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gdef.glyphset</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef.glyphset/IndicTestHowrah-Regular.default.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef.glyphset/IndicTestHowrah-Regular.default.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gdef.glyphset</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef.glyphset/IndicTestHowrah-Regular.drop-hints.9dd.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gdef.glyphset</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef.glyphset/IndicTestHowrah-Regular.drop-hints.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef.glyphset/IndicTestHowrah-Regular.drop-hints.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gdef.glyphset</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef.glyphset/IndicTestHowrah-Regular.retain-gids.9dd.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gdef.glyphset</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef.glyphset/IndicTestHowrah-Regular.retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef.glyphset/IndicTestHowrah-Regular.retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gdef.glyphset</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gdef/Roboto-Regular.default.1E00,303.ttf">
@@ -6482,7 +6584,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos/gpos1_2_font.layout-test-retain-gids.43,46.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos/gpos1_2_font.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos/gpos1_2_font.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos/gpos1_2_font.layout-test.41,43.otf">
@@ -6500,7 +6602,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos/gpos1_2_font.layout-test.43,46.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos/gpos1_2_font.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos/gpos1_2_font.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/gpos2_1_font7.layout-test-retain-gids.21,23,25.otf">
@@ -6515,7 +6617,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/gpos2_1_font7.layout-test-retain-gids.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos2</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/gpos2_1_font7.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/gpos2_1_font7.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos2</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/gpos2_1_font7.layout-test.21,23,25.otf">
@@ -6530,7 +6632,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/gpos2_1_font7.layout-test.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos2</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/gpos2_1_font7.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/gpos2_1_font7.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos2</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/gpos2_2_font5.layout-test-retain-gids.21,23,25.otf">
@@ -6545,7 +6647,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/gpos2_2_font5.layout-test-retain-gids.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos2</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/gpos2_2_font5.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/gpos2_2_font5.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos2</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/gpos2_2_font5.layout-test.21,23,25.otf">
@@ -6560,7 +6662,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/gpos2_2_font5.layout-test.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos2</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/gpos2_2_font5.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos2/gpos2_2_font5.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos2</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos3/gpos3_font3.layout-test-retain-gids.28,29.otf">
@@ -6575,7 +6677,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos3/gpos3_font3.layout-test-retain-gids.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos3</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos3/gpos3_font3.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos3/gpos3_font3.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos3</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos3/gpos3_font3.layout-test.28,29.otf">
@@ -6590,7 +6692,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos3/gpos3_font3.layout-test.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos3</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos3/gpos3_font3.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos3/gpos3_font3.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos3</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos4/gpos4_multiple_anchors_1.layout-test-retain-gids.41,42,43,44.otf">
@@ -6620,7 +6722,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos4/gpos4_multiple_anchors_1.layout-test-retain-gids.41.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos4</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos4/gpos4_multiple_anchors_1.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos4/gpos4_multiple_anchors_1.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos4</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos4/gpos4_multiple_anchors_1.layout-test.41,42,43,44.otf">
@@ -6650,7 +6752,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos4/gpos4_multiple_anchors_1.layout-test.41.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos4</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos4/gpos4_multiple_anchors_1.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos4/gpos4_multiple_anchors_1.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos4</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos5/gpos5_font1.layout-test-retain-gids.41,42,43,44.otf">
@@ -6680,7 +6782,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos5/gpos5_font1.layout-test-retain-gids.42.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos5</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos5/gpos5_font1.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos5/gpos5_font1.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos5</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos5/gpos5_font1.layout-test.41,42,43,44.otf">
@@ -6710,7 +6812,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos5/gpos5_font1.layout-test.42.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos5</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos5/gpos5_font1.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos5/gpos5_font1.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos5</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos6/gpos6_font1.layout-test-retain-gids.41,42,43,44.otf">
@@ -6740,7 +6842,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos6/gpos6_font1.layout-test-retain-gids.41.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos6</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos6/gpos6_font1.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos6/gpos6_font1.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos6</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos6/gpos6_font1.layout-test.41,42,43,44.otf">
@@ -6770,7 +6872,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos6/gpos6_font1.layout-test.41.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos6</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos6/gpos6_font1.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos6/gpos6_font1.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos6</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8.amiri/Amiri-Regular.default.627,644,623,62D,644,627,645,2E.ttf">
@@ -6809,7 +6911,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining1_multiple_subrules_f1.layout-test-retain-gids.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos8</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining1_multiple_subrules_f1.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining1_multiple_subrules_f1.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos8</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining1_multiple_subrules_f1.layout-test.30,31,32,33.otf">
@@ -6818,7 +6920,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining1_multiple_subrules_f1.layout-test.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos8</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining1_multiple_subrules_f1.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining1_multiple_subrules_f1.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos8</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining2_multiple_subrules_f1.layout-test-retain-gids.30,31,32,33.otf">
@@ -6827,7 +6929,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining2_multiple_subrules_f1.layout-test-retain-gids.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos8</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining2_multiple_subrules_f1.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining2_multiple_subrules_f1.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos8</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining2_multiple_subrules_f1.layout-test.30,31,32,33.otf">
@@ -6836,7 +6938,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining2_multiple_subrules_f1.layout-test.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos8</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining2_multiple_subrules_f1.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining2_multiple_subrules_f1.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos8</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining3_simple_f1.layout-test-retain-gids.30,31,32,33.otf">
@@ -6845,7 +6947,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining3_simple_f1.layout-test-retain-gids.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos8</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining3_simple_f1.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining3_simple_f1.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos8</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining3_simple_f1.layout-test.30,31,32,33.otf">
@@ -6854,7 +6956,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining3_simple_f1.layout-test.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos8</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining3_simple_f1.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos8/gpos_chaining3_simple_f1.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gpos8</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gpos9/BalooBhai2-Regular.keep-layout-retain-gids.A85,AAE,AA8,AC7.ttf">
@@ -6920,7 +7022,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub3/gsub_alternate_substitution.layout-test-retain-gids.53F1.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub3</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub3/gsub_alternate_substitution.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub3/gsub_alternate_substitution.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub3</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub3/gsub_alternate_substitution.layout-test.53A9,53F1.otf">
@@ -6932,7 +7034,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub3/gsub_alternate_substitution.layout-test.53F1.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub3</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub3/gsub_alternate_substitution.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub3/gsub_alternate_substitution.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub3</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context1_multiple_subrules_f2.layout-test-retain-gids.41,42,43.otf">
@@ -6947,7 +7049,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context1_multiple_subrules_f2.layout-test-retain-gids.41.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub5</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context1_multiple_subrules_f2.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context1_multiple_subrules_f2.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub5</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context1_multiple_subrules_f2.layout-test.41,42,43.otf">
@@ -6962,7 +7064,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context1_multiple_subrules_f2.layout-test.41.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub5</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context1_multiple_subrules_f2.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context1_multiple_subrules_f2.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub5</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context2_multiple_subrules_f2.layout-test-retain-gids.41,42,43.otf">
@@ -6977,7 +7079,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context2_multiple_subrules_f2.layout-test-retain-gids.41.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub5</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context2_multiple_subrules_f2.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context2_multiple_subrules_f2.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub5</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context2_multiple_subrules_f2.layout-test.41,42,43.otf">
@@ -6992,7 +7094,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context2_multiple_subrules_f2.layout-test.41.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub5</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context2_multiple_subrules_f2.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context2_multiple_subrules_f2.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub5</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context3_successive_f1.layout-test-retain-gids.41,42,43.otf">
@@ -7007,7 +7109,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context3_successive_f1.layout-test-retain-gids.41.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub5</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context3_successive_f1.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context3_successive_f1.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub5</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context3_successive_f1.layout-test.41,42,43.otf">
@@ -7022,19 +7124,19 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context3_successive_f1.layout-test.41.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub5</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context3_successive_f1.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5/gsub_context3_successive_f1.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub5</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5_format2/Molengo-Regular.layout-test-retain-gids.268,301,302,324.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub5_format2</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5_format2/Molengo-Regular.layout-test-retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5_format2/Molengo-Regular.layout-test-retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub5_format2</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5_format2/Molengo-Regular.layout-test.268,301,302,324.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub5_format2</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5_format2/Molengo-Regular.layout-test.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub5_format2/Molengo-Regular.layout-test.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub5_format2</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining1_multiple_subrules_f1.layout-test-retain-gids.30,31,32,33.otf">
@@ -7043,7 +7145,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining1_multiple_subrules_f1.layout-test-retain-gids.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub6</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining1_multiple_subrules_f1.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining1_multiple_subrules_f1.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub6</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining1_multiple_subrules_f1.layout-test.30,31,32,33.otf">
@@ -7052,7 +7154,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining1_multiple_subrules_f1.layout-test.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub6</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining1_multiple_subrules_f1.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining1_multiple_subrules_f1.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub6</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining2_multiple_subrules_f1.layout-test-retain-gids.30,31,32,33.otf">
@@ -7061,7 +7163,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining2_multiple_subrules_f1.layout-test-retain-gids.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub6</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining2_multiple_subrules_f1.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining2_multiple_subrules_f1.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub6</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining2_multiple_subrules_f1.layout-test.30,31,32,33.otf">
@@ -7070,7 +7172,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining2_multiple_subrules_f1.layout-test.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub6</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining2_multiple_subrules_f1.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining2_multiple_subrules_f1.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub6</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining3_simple_f2.layout-test-retain-gids.30,31,32,33.otf">
@@ -7079,7 +7181,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining3_simple_f2.layout-test-retain-gids.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub6</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining3_simple_f2.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining3_simple_f2.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub6</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining3_simple_f2.layout-test.30,31,32,33.otf">
@@ -7088,7 +7190,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining3_simple_f2.layout-test.41,42,43.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub6</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining3_simple_f2.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub6/gsub_chaining3_simple_f2.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub6</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub8/gsub8_manually_created.layout-test-retain-gids.41,42,43,44,45,46,47,48,49.otf">
@@ -7115,7 +7217,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub8/gsub8_manually_created.layout-test-retain-gids.61.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub8</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub8/gsub8_manually_created.layout-test-retain-gids.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub8/gsub8_manually_created.layout-test-retain-gids.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub8</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub8/gsub8_manually_created.layout-test.41,42,43,44,45,46,47,48,49.otf">
@@ -7142,7 +7244,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub8/gsub8_manually_created.layout-test.61.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub8</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub8/gsub8_manually_created.layout-test.retain-all-codepoint.otf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.gsub8/gsub8_manually_created.layout-test.all.otf">
       <Filter>Resource Files\test\subset\data\expected\layout.gsub8</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.khmer/Khmer.default.1780.ttf">
@@ -7181,7 +7283,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.notonastaliqurdu/NotoNastaliqUrdu-Bold.default.63A,64A,631.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.notonastaliqurdu</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.notonastaliqurdu/NotoNastaliqUrdu-Bold.default.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.notonastaliqurdu/NotoNastaliqUrdu-Bold.default.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.notonastaliqurdu</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.notonastaliqurdu/NotoNastaliqUrdu-Bold.retain-gids.627,644,623,62D,644,627,645,2E.ttf">
@@ -7202,7 +7304,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.notonastaliqurdu/NotoNastaliqUrdu-Bold.retain-gids.63A,64A,631.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.notonastaliqurdu</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.notonastaliqurdu/NotoNastaliqUrdu-Bold.retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.notonastaliqurdu/NotoNastaliqUrdu-Bold.retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.notonastaliqurdu</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.notonastaliqurdu/NotoNastaliqUrdu-Regular.default.627,644,623,62D,644,627,645,2E.ttf">
@@ -7223,7 +7325,7 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.notonastaliqurdu/NotoNastaliqUrdu-Regular.default.63A,64A,631.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.notonastaliqurdu</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.notonastaliqurdu/NotoNastaliqUrdu-Regular.default.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.notonastaliqurdu/NotoNastaliqUrdu-Regular.default.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.notonastaliqurdu</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.notonastaliqurdu/NotoNastaliqUrdu-Regular.retain-gids.627,644,623,62D,644,627,645,2E.ttf">
@@ -7244,49 +7346,49 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.notonastaliqurdu/NotoNastaliqUrdu-Regular.retain-gids.63A,64A,631.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.notonastaliqurdu</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.notonastaliqurdu/NotoNastaliqUrdu-Regular.retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.notonastaliqurdu/NotoNastaliqUrdu-Regular.retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.notonastaliqurdu</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.tinos/Tinos-Italic.default.5bf,5f0,5f1,5f2,fb21,fb22,fb23,fb24,fb25,fb26,fb27,fb28.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.tinos</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.tinos/Tinos-Italic.default.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.tinos/Tinos-Italic.default.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.tinos</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.tinos/Tinos-Italic.glyph-names.5bf,5f0,5f1,5f2,fb21,fb22,fb23,fb24,fb25,fb26,fb27,fb28.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.tinos</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.tinos/Tinos-Italic.glyph-names.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.tinos/Tinos-Italic.glyph-names.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.tinos</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.tinos/Tinos-Italic.notdef-outline.5bf,5f0,5f1,5f2,fb21,fb22,fb23,fb24,fb25,fb26,fb27,fb28.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.tinos</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.tinos/Tinos-Italic.notdef-outline.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.tinos/Tinos-Italic.notdef-outline.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.tinos</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.tinos/Tinos-Italic.retain-gids.5bf,5f0,5f1,5f2,fb21,fb22,fb23,fb24,fb25,fb26,fb27,fb28.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.tinos</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.tinos/Tinos-Italic.retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.tinos/Tinos-Italic.retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.tinos</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.unsorted_featurelist/NotoIKEAHebrewLatin-Regular.default.392,3a7,3b2,3c7.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.unsorted_featurelist</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.unsorted_featurelist/NotoIKEAHebrewLatin-Regular.default.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.unsorted_featurelist/NotoIKEAHebrewLatin-Regular.default.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.unsorted_featurelist</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.unsorted_featurelist/NotoIKEAHebrewLatin-Regular.layout-test.392,3a7,3b2,3c7.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.unsorted_featurelist</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.unsorted_featurelist/NotoIKEAHebrewLatin-Regular.layout-test.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.unsorted_featurelist/NotoIKEAHebrewLatin-Regular.layout-test.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.unsorted_featurelist</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.unsorted_featurelist/NotoIKEAHebrewLatin-Regular.retain-gids.392,3a7,3b2,3c7.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.unsorted_featurelist</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.unsorted_featurelist/NotoIKEAHebrewLatin-Regular.retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout.unsorted_featurelist/NotoIKEAHebrewLatin-Regular.retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\layout.unsorted_featurelist</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/layout/Roboto-Regular.smallcaps.default.41,42,43.ttf">
@@ -7322,55 +7424,64 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math/STIXTwoMath-Regular.default.2f,7c,305.ttf">
       <Filter>Resource Files\test\subset\data\expected\math</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math/STIXTwoMath-Regular.default.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math/STIXTwoMath-Regular.default.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\math</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math/STIXTwoMath-Regular.glyph-names.2f,7c,305.ttf">
       <Filter>Resource Files\test\subset\data\expected\math</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math/STIXTwoMath-Regular.glyph-names.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math/STIXTwoMath-Regular.glyph-names.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\math</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math/STIXTwoMath-Regular.notdef-outline.2f,7c,305.ttf">
       <Filter>Resource Files\test\subset\data\expected\math</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math/STIXTwoMath-Regular.notdef-outline.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math/STIXTwoMath-Regular.notdef-outline.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\math</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math/STIXTwoMath-Regular.retain-gids.2f,7c,305.ttf">
       <Filter>Resource Files\test\subset\data\expected\math</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math/STIXTwoMath-Regular.retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math/STIXTwoMath-Regular.retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\math</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math_coverage_offset/Caudex-Regular.default.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math_coverage_offset/Caudex-Regular.default.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\math_coverage_offset</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math_coverage_offset/Caudex-Regular.glyph-names.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math_coverage_offset/Caudex-Regular.glyph-names.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\math_coverage_offset</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math_coverage_offset/Caudex-Regular.keep-all-layout-features.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math_coverage_offset/Caudex-Regular.keep-all-layout-features.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\math_coverage_offset</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math_coverage_offset/Caudex-Regular.notdef-outline.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math_coverage_offset/Caudex-Regular.notdef-outline.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\math_coverage_offset</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math_coverage_offset/Caudex-Regular.retain-gids.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/math_coverage_offset/Caudex-Regular.retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\math_coverage_offset</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_full_instance/NotoSans-VF.abc.no-layout.retain-all-codepoint.wght=150,wdth=80,CTGR=0.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_full_instance/NotoSans-VF.abc.no-layout.all.wght=150,wdth=80,CTGR=0.ttf">
       <Filter>Resource Files\test\subset\data\expected\mvar_full_instance</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_full_instance/NotoSans-VF.abc.no-layout.retain-all-codepoint.wght=300,wdth=90,CTGR=0.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_full_instance/NotoSans-VF.abc.no-layout.all.wght=300,wdth=90,CTGR=0.ttf">
       <Filter>Resource Files\test\subset\data\expected\mvar_full_instance</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_partial_instance/NotoSans-VF.abc.default.retain-all-codepoint.wght=200-600,wdth=80-90,CTGR=20-60.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_partial_instance/NotoSans-VF.abc.default.all.wght=200-600,wdth=80-90,CTGR=20-60.iup_optimize.ttf">
       <Filter>Resource Files\test\subset\data\expected\mvar_partial_instance</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_partial_instance/NotoSans-VF.abc.default.retain-all-codepoint.wght=300-600.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_partial_instance/NotoSans-VF.abc.default.all.wght=200-600,wdth=80-90,CTGR=20-60.ttf">
       <Filter>Resource Files\test\subset\data\expected\mvar_partial_instance</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_partial_instance/NotoSans-VF.abc.default.retain-all-codepoint.wght=500-800.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_partial_instance/NotoSans-VF.abc.default.all.wght=300-600.iup_optimize.ttf">
+      <Filter>Resource Files\test\subset\data\expected\mvar_partial_instance</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_partial_instance/NotoSans-VF.abc.default.all.wght=300-600.ttf">
+      <Filter>Resource Files\test\subset\data\expected\mvar_partial_instance</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_partial_instance/NotoSans-VF.abc.default.all.wght=500-800.iup_optimize.ttf">
+      <Filter>Resource Files\test\subset\data\expected\mvar_partial_instance</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/mvar_partial_instance/NotoSans-VF.abc.default.all.wght=500-800.ttf">
       <Filter>Resource Files\test\subset\data\expected\mvar_partial_instance</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/no_layout_closure/Roboto-Regular.no-layout-closure-gids.no-unicodes.ttf">
@@ -7379,37 +7490,40 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/no_layout_closure/Roboto-Regular.no-layout-closure-gids2.no-unicodes.ttf">
       <Filter>Resource Files\test\subset\data\expected\no_layout_closure</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/pin_all_at_default/Roboto-Variable.ABC.default.retain-all-codepoint.wght=400,wdth=100.0.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/pin_all_at_default/Roboto-Variable.ABC.default.all.wght=400,wdth=100.0.ttf">
       <Filter>Resource Files\test\subset\data\expected\pin_all_at_default</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/pin_all_at_default/Roboto-Variable.ABC.default.retain-all-codepoint.wght=drop,wdth=100.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/pin_all_at_default/Roboto-Variable.ABC.default.all.wght=drop,wdth=100.ttf">
       <Filter>Resource Files\test\subset\data\expected\pin_all_at_default</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/post/SreeKrushnadevaraya-Regular.default.all.ttf">
+      <Filter>Resource Files\test\subset\data\expected\post</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/post/SreeKrushnadevaraya-Regular.default.c30,c36,c40,c4d.ttf">
       <Filter>Resource Files\test\subset\data\expected\post</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/post/SreeKrushnadevaraya-Regular.default.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/post/SreeKrushnadevaraya-Regular.glyph-names.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\post</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/post/SreeKrushnadevaraya-Regular.glyph-names.c30,c36,c40,c4d.ttf">
       <Filter>Resource Files\test\subset\data\expected\post</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/post/SreeKrushnadevaraya-Regular.glyph-names.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/post/SreeKrushnadevaraya-Regular.notdef-outline.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\post</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/post/SreeKrushnadevaraya-Regular.notdef-outline.c30,c36,c40,c4d.ttf">
       <Filter>Resource Files\test\subset\data\expected\post</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/post/SreeKrushnadevaraya-Regular.notdef-outline.retain-all-codepoint.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/post/SreeKrushnadevaraya-Regular.retain-gids.all.ttf">
       <Filter>Resource Files\test\subset\data\expected\post</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/post/SreeKrushnadevaraya-Regular.retain-gids.c30,c36,c40,c4d.ttf">
       <Filter>Resource Files\test\subset\data\expected\post</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/post/SreeKrushnadevaraya-Regular.retain-gids.retain-all-codepoint.ttf">
-      <Filter>Resource Files\test\subset\data\expected\post</Filter>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/post_apply_mvar_delta/Recursive-ABC.no-layout.all.wght=400,CASL=0,CRSV=0,MONO=0,slnt=0.ttf">
+      <Filter>Resource Files\test\subset\data\expected\post_apply_mvar_delta</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/post_apply_mvar_delta/Recursive-ABC.no-layout.retain-all-codepoint.wght=400,CASL=0,CRSV=0,MONO=0,slnt=0.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/post_apply_mvar_delta/Recursive-ABC.no-layout.all.wght=500,CASL=0,CRSV=0,MONO=0,slnt=0.ttf">
       <Filter>Resource Files\test\subset\data\expected\post_apply_mvar_delta</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/preprocess/Roboto-Regular.gids.61,62,63,30D9.ttf">
@@ -7451,19 +7565,40 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/sbix/sbix.retain-gids.59.ttf">
       <Filter>Resource Files\test\subset\data\expected\sbix</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/sync_vmetrics/playwrite_mm.subset.default.retain-all-codepoint.SPED=25,YEXT=520,wght=100-400,slnt=18.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/subset_base/SourceSansPro-Regular.retain-base-table-filter-scripts.61,62,63.otf">
+      <Filter>Resource Files\test\subset\data\expected\subset_base</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/subset_base/SourceSansPro-Regular.retain-base-table.61,62,63.otf">
+      <Filter>Resource Files\test\subset\data\expected\subset_base</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/sync_vmetrics/playwrite_mm.subset.default.all.SPED=25,YEXT=520,wght=100-400,slnt=18.iup_optimize.ttf">
       <Filter>Resource Files\test\subset\data\expected\sync_vmetrics</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/update_def_wght/SourceSerifVariable-Roman.default.retain-all-codepoint.wght=300-600.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/sync_vmetrics/playwrite_mm.subset.default.all.SPED=25,YEXT=520,wght=100-400,slnt=18.ttf">
+      <Filter>Resource Files\test\subset\data\expected\sync_vmetrics</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/update_def_wght/SourceSerifVariable-Roman.default.all.wght=300-600.iup_optimize.ttf">
       <Filter>Resource Files\test\subset\data\expected\update_def_wght</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/update_def_wght/SourceSerifVariable-Roman.default.retain-all-codepoint.wght=500-800.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/update_def_wght/SourceSerifVariable-Roman.default.all.wght=300-600.ttf">
       <Filter>Resource Files\test\subset\data\expected\update_def_wght</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/value_format_partial_instance/NotoSansOriya-valueformat-subset.default.retain-all-codepoint.wght=400.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/update_def_wght/SourceSerifVariable-Roman.default.all.wght=500-800.iup_optimize.ttf">
+      <Filter>Resource Files\test\subset\data\expected\update_def_wght</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/update_def_wght/SourceSerifVariable-Roman.default.all.wght=500-800.ttf">
+      <Filter>Resource Files\test\subset\data\expected\update_def_wght</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/value_format_partial_instance/NotoSansOriya-valueformat-subset.default.all.wght=400.iup_optimize.ttf">
       <Filter>Resource Files\test\subset\data\expected\value_format_partial_instance</Filter>
     </Font>
-    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/value_format_partial_instance/NotoSansOriya-valueformat-subset.drop-hints.retain-all-codepoint.wght=400.ttf">
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/value_format_partial_instance/NotoSansOriya-valueformat-subset.default.all.wght=400.ttf">
+      <Filter>Resource Files\test\subset\data\expected\value_format_partial_instance</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/value_format_partial_instance/NotoSansOriya-valueformat-subset.drop-hints.all.wght=400.iup_optimize.ttf">
+      <Filter>Resource Files\test\subset\data\expected\value_format_partial_instance</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/value_format_partial_instance/NotoSansOriya-valueformat-subset.drop-hints.all.wght=400.ttf">
       <Filter>Resource Files\test\subset\data\expected\value_format_partial_instance</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/expected/variable/Fraunces.default.26,66,69,124,125.ttf">
@@ -7535,6 +7670,9 @@
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/IndicTestJalandhar-Regular.ttf">
       <Filter>Resource Files\test\subset\data\fonts</Filter>
     </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/KalniaGlaze.ttf">
+      <Filter>Resource Files\test\subset\data\fonts</Filter>
+    </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/Khmer.ttf">
       <Filter>Resource Files\test\subset\data\fonts</Filter>
     </Font>
@@ -7590,6 +7728,9 @@
       <Filter>Resource Files\test\subset\data\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/NotoSansOriya-valueformat-subset.ttf">
+      <Filter>Resource Files\test\subset\data\fonts</Filter>
+    </Font>
+    <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/NotoSerifHK-subset.ttf">
       <Filter>Resource Files\test\subset\data\fonts</Filter>
     </Font>
     <Font Include="../../thirdparty/harfbuzz/test/subset/data/fonts/NotoSerifMyanmar-Regular.otf">
@@ -7760,16 +7901,10 @@
     <Text Include="../../thirdparty/harfbuzz/CONFIG.md">
       <Filter>Misc Files</Filter>
     </Text>
-    <Text Include="../../thirdparty/harfbuzz/Makefile.am">
-      <Filter>Misc Files</Filter>
-    </Text>
     <Text Include="../../thirdparty/harfbuzz/NEWS">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/README.md">
-      <Filter>Misc Files</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/README.mingw.md">
       <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/README.python.md">
@@ -7784,16 +7919,7 @@
     <Text Include="../../thirdparty/harfbuzz/TESTING.md">
       <Filter>Misc Files</Filter>
     </Text>
-    <Text Include="../../thirdparty/harfbuzz/autogen.sh">
-      <Filter>Misc Files</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/configure.ac">
-      <Filter>Misc Files</Filter>
-    </Text>
     <Text Include="../../thirdparty/harfbuzz/docs/HarfBuzz.svg">
-      <Filter>Misc Files\docs</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/docs/Makefile.am">
       <Filter>Misc Files\docs</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/docs/features.dot">
@@ -7820,29 +7946,8 @@
     <Text Include="../../thirdparty/harfbuzz/docs/wasm-shaper.md">
       <Filter>Misc Files\docs</Filter>
     </Text>
-    <Text Include="../../thirdparty/harfbuzz/git.mk">
-      <Filter>Misc Files</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/m4/ax_check_link_flag.m4">
-      <Filter>Misc Files\m4</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/m4/ax_code_coverage.m4">
-      <Filter>Misc Files\m4</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/m4/ax_cxx_compile_stdcxx.m4">
-      <Filter>Misc Files\m4</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/m4/ax_pthread.m4">
-      <Filter>Misc Files\m4</Filter>
-    </Text>
     <Text Include="../../thirdparty/harfbuzz/meson_options.txt">
       <Filter>Misc Files</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/mingw-configure.sh">
-      <Filter>Misc Files</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/perf/Makefile.am">
-      <Filter>Misc Files\perf</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/perf/README.md">
       <Filter>Misc Files\perf</Filter>
@@ -7872,12 +7977,6 @@
       <Filter>Misc Files\src</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/src/ArabicPUATraditional.txt">
-      <Filter>Misc Files\src</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/src/Makefile.am">
-      <Filter>Misc Files\src</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/src/Makefile.sources">
       <Filter>Misc Files\src</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/src/addTable.py">
@@ -8039,32 +8138,14 @@
     <Text Include="../../thirdparty/harfbuzz/src/wasm/sample/rust/hello-wasm/src/lib.rs">
       <Filter>Misc Files\src\wasm\sample\rust\hello-wasm\src</Filter>
     </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/Makefile.am">
-      <Filter>Misc Files\test</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/api/Makefile.am">
-      <Filter>Misc Files\test\api</Filter>
-    </Text>
     <Text Include="../../thirdparty/harfbuzz/test/api/fonts/README">
       <Filter>Misc Files\test\api\fonts</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/api/results/hand-10.2">
       <Filter>Misc Files\test\api\results</Filter>
     </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/shape/Makefile.am">
-      <Filter>Misc Files\test\shape</Filter>
-    </Text>
     <Text Include="../../thirdparty/harfbuzz/test/shape/README.md">
       <Filter>Misc Files\test\shape</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/shape/data/Makefile.am">
-      <Filter>Misc Files\test\shape\data</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/Makefile.am">
-      <Filter>Misc Files\test\shape\data\aots</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/Makefile.sources">
-      <Filter>Misc Files\test\shape\data\aots</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/tests/classdef1.tests">
       <Filter>Misc Files\test\shape\data\aots\tests</Filter>
@@ -8453,12 +8534,6 @@
     <Text Include="../../thirdparty/harfbuzz/test/shape/data/aots/update.py">
       <Filter>Misc Files\test\shape\data\aots</Filter>
     </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/Makefile.am">
-      <Filter>Misc Files\test\shape\data\in-house</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/Makefile.sources">
-      <Filter>Misc Files\test\shape\data\in-house</Filter>
-    </Text>
     <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/aat-morx.tests">
       <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
     </Text>
@@ -8692,12 +8767,6 @@
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/shape/data/in-house/tests/zero-width-marks.tests">
       <Filter>Misc Files\test\shape\data\in-house\tests</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/Makefile.am">
-      <Filter>Misc Files\test\shape\data\text-rendering-tests</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/Makefile.sources">
-      <Filter>Misc Files\test\shape\data\text-rendering-tests</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/shape/data/text-rendering-tests/README">
       <Filter>Misc Files\test\shape\data\text-rendering-tests</Filter>
@@ -8987,15 +9056,6 @@
     <Text Include="../../thirdparty/harfbuzz/test/shape/run-tests.py">
       <Filter>Misc Files\test\shape</Filter>
     </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/subset/Makefile.am">
-      <Filter>Misc Files\test\subset</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/subset/data/Makefile.am">
-      <Filter>Misc Files\test\subset\data</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/subset/data/Makefile.sources">
-      <Filter>Misc Files\test\subset\data</Filter>
-    </Text>
     <Text Include="../../thirdparty/harfbuzz/test/subset/data/expected/cff.notoserifmyanmar/">
       <Filter>Misc Files\test\subset\data\expected</Filter>
     </Text>
@@ -9170,14 +9230,14 @@
     <Text Include="../../thirdparty/harfbuzz/test/subset/data/profiles/notdef-outline.txt">
       <Filter>Misc Files\test\subset\data\profiles</Filter>
     </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/subset/data/profiles/retain-gids.txt">
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/profiles/retain-base-table-filter-scripts.txt">
       <Filter>Misc Files\test\subset\data\profiles</Filter>
     </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/subset/data/repack_tests/Makefile.am">
-      <Filter>Misc Files\test\subset\data\repack_tests</Filter>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/profiles/retain-base-table.txt">
+      <Filter>Misc Files\test\subset\data\profiles</Filter>
     </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/subset/data/repack_tests/Makefile.sources">
-      <Filter>Misc Files\test\subset\data\repack_tests</Filter>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/profiles/retain-gids.txt">
+      <Filter>Misc Files\test\subset\data\profiles</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/subset/data/repack_tests/advanced_prioritization.tests">
       <Filter>Misc Files\test\subset\data\repack_tests</Filter>
@@ -9242,7 +9302,7 @@
     <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/colrv1.tests">
       <Filter>Misc Files\test\subset\data\tests</Filter>
     </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/colrv1_copy_varstore.tests">
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/colrv1_subset_varstore.tests">
       <Filter>Misc Files\test\subset\data\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/empty_region_vardata.tests">
@@ -9285,6 +9345,9 @@
       <Filter>Misc Files\test\subset\data\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/instance_no_double_free.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/instantiate_base.tests">
       <Filter>Misc Files\test\subset\data\tests</Filter>
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/instantiate_cff2.tests">
@@ -9416,6 +9479,9 @@
     <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/sbix.tests">
       <Filter>Misc Files\test\subset\data\tests</Filter>
     </Text>
+    <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/subset_base.tests">
+      <Filter>Misc Files\test\subset\data\tests</Filter>
+    </Text>
     <Text Include="../../thirdparty/harfbuzz/test/subset/data/tests/sync_vmetrics.tests">
       <Filter>Misc Files\test\subset\data\tests</Filter>
     </Text>
@@ -9442,15 +9508,6 @@
     </Text>
     <Text Include="../../thirdparty/harfbuzz/test/subset/subset_test_suite.py">
       <Filter>Misc Files\test\subset</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/test/threads/Makefile.am">
-      <Filter>Misc Files\test\threads</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/util/Makefile.am">
-      <Filter>Misc Files\util</Filter>
-    </Text>
-    <Text Include="../../thirdparty/harfbuzz/util/Makefile.sources">
-      <Filter>Misc Files\util</Filter>
     </Text>
     <Xml Include="../../thirdparty/harfbuzz/docs/harfbuzz-docs.xml">
       <Filter>Misc Files\docs</Filter>

@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2023 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -288,7 +288,7 @@ pdf_lookup_page_loc_imp(fz_context *ctx, pdf_document *doc, pdf_obj *node, int *
 				}
 
 				pdf_obj *type = pdf_dict_get(ctx, kid, PDF_NAME(Type));
-				if (type ? pdf_name_eq(ctx, type, PDF_NAME(Pages)) : pdf_dict_get(ctx, kid, PDF_NAME(Kids)) && !pdf_dict_get(ctx, kid, PDF_NAME(MediaBox)))
+				if (pdf_is_name(ctx, type) ? pdf_name_eq(ctx, type, PDF_NAME(Pages)) : pdf_is_array(ctx, pdf_dict_get(ctx, kid, PDF_NAME(Kids))) && !pdf_is_array(ctx, pdf_dict_get(ctx, kid, PDF_NAME(MediaBox))))
 				{
 					int count = pdf_dict_get_int(ctx, kid, PDF_NAME(Count));
 					if (*skip < count)
@@ -303,7 +303,7 @@ pdf_lookup_page_loc_imp(fz_context *ctx, pdf_document *doc, pdf_obj *node, int *
 				}
 				else
 				{
-					if (type ? !pdf_name_eq(ctx, type, PDF_NAME(Page)) : !pdf_dict_get(ctx, kid, PDF_NAME(MediaBox)))
+					if (pdf_is_name(ctx, type) ? !pdf_name_eq(ctx, type, PDF_NAME(Page)) : !pdf_is_array(ctx, pdf_dict_get(ctx, kid, PDF_NAME(MediaBox))))
 						fz_warn(ctx, "non-page object in page tree (%s)", pdf_to_name_not_null(ctx, type));
 					if (*skip == 0)
 					{
@@ -347,7 +347,7 @@ pdf_lookup_page_loc(fz_context *ctx, pdf_document *doc, int needle, pdf_obj **pa
 	int skip = needle;
 	pdf_obj *hit;
 
-	if (!node)
+	if (!pdf_is_dict(ctx, node))
 		fz_throw(ctx, FZ_ERROR_FORMAT, "cannot find page tree");
 
 	hit = pdf_lookup_page_loc_imp(ctx, doc, node, &skip, parentp, indexp);
@@ -681,7 +681,7 @@ pdf_page_presentation(fz_context *ctx, pdf_page *page, fz_transition *transition
 	*duration = pdf_dict_get_real(ctx, page->obj, PDF_NAME(Dur));
 
 	transdict = pdf_dict_get(ctx, page->obj, PDF_NAME(Trans));
-	if (!transdict)
+	if (!pdf_is_dict(ctx, transdict))
 		return NULL;
 
 	obj = pdf_dict_get(ctx, transdict, PDF_NAME(D));
@@ -734,11 +734,6 @@ pdf_bound_page(fz_context *ctx, pdf_page *page, fz_box_type box)
 	return fz_transform_rect(rect, page_ctm);
 }
 
-/*
- * Modify the page boxes (using fitz space coordinates).
- * Note that changing the CropBox will change the fitz coordinate space mapping,
- * invalidating all bounding boxes previously acquired.
- */
 void
 pdf_set_page_box(fz_context *ctx, pdf_page *page, fz_box_type box, fz_rect rect)
 {
@@ -893,7 +888,7 @@ find_seps(fz_context *ctx, fz_separations **seps, pdf_obj *obj, pdf_mark_list *c
 	int i, n;
 	pdf_obj *nameobj, *cols;
 
-	if (!obj)
+	if (!pdf_is_array(ctx, obj))
 		return;
 
 	// Already seen this ColorSpace...
@@ -931,6 +926,7 @@ find_seps(fz_context *ctx, fz_separations **seps, pdf_obj *obj, pdf_mark_list *c
 			fz_report_error(ctx);
 			return; /* ignore broken colorspace */
 		}
+		assert(cs != NULL);
 		fz_try(ctx)
 		{
 			if (!*seps)
@@ -1008,6 +1004,7 @@ find_devn(fz_context *ctx, fz_separations **seps, pdf_obj *obj, pdf_mark_list *c
 				fz_report_error(ctx);
 				continue; /* ignore broken colorspace */
 			}
+			assert(cs != NULL);
 			fz_try(ctx)
 			{
 				if (!*seps)
@@ -1236,7 +1233,7 @@ pdf_load_default_colorspaces_imp(fz_context *ctx, fz_default_colorspaces *defaul
 	/* The spec says to ignore any colors we can't understand */
 
 	cs_obj = pdf_dict_get(ctx, obj, PDF_NAME(DefaultGray));
-	if (cs_obj)
+	if (pdf_is_name(ctx, cs_obj) || pdf_is_array(ctx, cs_obj) || pdf_is_dict(ctx, cs_obj))
 	{
 		fz_try(ctx)
 		{
@@ -1253,7 +1250,7 @@ pdf_load_default_colorspaces_imp(fz_context *ctx, fz_default_colorspaces *defaul
 	}
 
 	cs_obj = pdf_dict_get(ctx, obj, PDF_NAME(DefaultRGB));
-	if (cs_obj)
+	if (pdf_is_name(ctx, cs_obj) || pdf_is_array(ctx, cs_obj) || pdf_is_dict(ctx, cs_obj))
 	{
 		fz_try(ctx)
 		{
@@ -1270,7 +1267,7 @@ pdf_load_default_colorspaces_imp(fz_context *ctx, fz_default_colorspaces *defaul
 	}
 
 	cs_obj = pdf_dict_get(ctx, obj, PDF_NAME(DefaultCMYK));
-	if (cs_obj)
+	if (pdf_is_name(ctx, cs_obj) || pdf_is_array(ctx, cs_obj) || pdf_is_dict(ctx, cs_obj))
 	{
 		fz_try(ctx)
 		{
@@ -1301,7 +1298,7 @@ pdf_load_default_colorspaces(fz_context *ctx, pdf_document *doc, pdf_page *page)
 	{
 		res = pdf_page_resources(ctx, page);
 		obj = pdf_dict_get(ctx, res, PDF_NAME(ColorSpace));
-		if (obj)
+		if (pdf_is_dict(ctx, obj))
 			pdf_load_default_colorspaces_imp(ctx, default_cs, obj);
 
 		oi = pdf_document_output_intent(ctx, doc);
@@ -1329,7 +1326,7 @@ pdf_update_default_colorspaces(fz_context *ctx, fz_default_colorspaces *old_cs, 
 	fz_default_colorspaces *new_cs;
 
 	obj = pdf_dict_get(ctx, res, PDF_NAME(ColorSpace));
-	if (!obj)
+	if (!pdf_is_dict(ctx, obj))
 		return fz_keep_default_colorspaces(ctx, old_cs);
 
 	new_cs = fz_clone_default_colorspaces(ctx, old_cs);
@@ -1389,7 +1386,7 @@ pdf_load_page_imp(fz_context *ctx, fz_document *doc_, int chapter, int number)
 	fz_try(ctx)
 	{
 		obj = pdf_dict_get(ctx, pageobj, PDF_NAME(Annots));
-		if (obj)
+		if (pdf_is_array(ctx, obj))
 		{
 			fz_rect page_cropbox;
 			fz_matrix page_ctm;
@@ -1470,7 +1467,7 @@ pdf_delete_page(fz_context *ctx, pdf_document *doc, int at)
 		kids = pdf_dict_get(ctx, parent, PDF_NAME(Kids));
 		pdf_array_delete(ctx, kids, i);
 
-		while (parent)
+		while (pdf_is_dict(ctx, parent))
 		{
 			int count = pdf_dict_get_int(ctx, parent, PDF_NAME(Count));
 			pdf_dict_put_int(ctx, parent, PDF_NAME(Count), count - 1);
@@ -1591,10 +1588,10 @@ pdf_insert_page(fz_context *ctx, pdf_document *doc, int at, pdf_obj *page_ref)
 		{
 			pdf_obj *root = pdf_dict_get(ctx, pdf_trailer(ctx, doc), PDF_NAME(Root));
 			parent = pdf_dict_get(ctx, root, PDF_NAME(Pages));
-			if (!parent)
+			if (!pdf_is_dict(ctx, parent))
 				fz_throw(ctx, FZ_ERROR_FORMAT, "cannot find page tree");
 			kids = pdf_dict_get(ctx, parent, PDF_NAME(Kids));
-			if (!kids)
+			if (!pdf_is_array(ctx, kids))
 				fz_throw(ctx, FZ_ERROR_FORMAT, "malformed page tree");
 			pdf_array_insert(ctx, kids, page_ref, 0);
 		}
@@ -1616,7 +1613,7 @@ pdf_insert_page(fz_context *ctx, pdf_document *doc, int at, pdf_obj *page_ref)
 		pdf_dict_put(ctx, page_ref, PDF_NAME(Parent), parent);
 
 		/* Adjust page counts */
-		while (parent)
+		while (pdf_is_dict(ctx, parent))
 		{
 			count = pdf_dict_get_int(ctx, parent, PDF_NAME(Count));
 			pdf_dict_put_int(ctx, parent, PDF_NAME(Count), count + 1);
@@ -1745,7 +1742,7 @@ pdf_flatten_page_label_tree(fz_context *ctx, pdf_document *doc)
 	nums = pdf_new_array(ctx, doc, 8);
 	fz_try(ctx)
 	{
-		if (!labels)
+		if (!pdf_is_dict(ctx, labels))
 			labels = pdf_dict_put_dict(ctx, root, PDF_NAME(PageLabels), 1);
 
 		pdf_flatten_page_label_tree_imp(ctx, labels, nums);
@@ -1818,7 +1815,7 @@ pdf_adjust_page_labels(fz_context *ctx, pdf_document *doc, int index, int adjust
 	// Skip the adjustment step if there are no page labels.
 	// Exception: If we would adjust the label for page 0, we must create one!
 	// Exception: If the document only has one page!
-	if (labels || (adjust > 0 && index == 0 && pdf_count_pages(ctx, doc) > 1))
+	if (pdf_is_dict(ctx, labels) || (adjust > 0 && index == 0 && pdf_count_pages(ctx, doc) > 1))
 	{
 		struct page_label_range range;
 		int i;
@@ -2016,6 +2013,18 @@ void
 pdf_page_label_imp(fz_context *ctx, fz_document *doc, int chapter, int page, char *buf, size_t size)
 {
 	pdf_page_label(ctx, pdf_document_from_fz_document(ctx, doc), page, buf, size);
+}
+
+pdf_page *
+pdf_keep_page(fz_context *ctx, pdf_page *page)
+{
+	return (pdf_page *) fz_keep_page(ctx, &page->super);
+}
+
+void
+pdf_drop_page(fz_context *ctx, pdf_page *page)
+{
+	fz_drop_page(ctx, &page->super);
 }
 
 #endif

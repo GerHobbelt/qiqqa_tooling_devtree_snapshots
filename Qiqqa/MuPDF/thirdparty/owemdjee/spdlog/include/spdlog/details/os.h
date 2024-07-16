@@ -73,6 +73,11 @@ SPDLOG_API size_t _thread_id() SPDLOG_NOEXCEPT;
 // Return current thread id as size_t (from thread local storage)
 SPDLOG_API size_t thread_id() SPDLOG_NOEXCEPT;
 
+SPDLOG_INLINE void _thread_name(char *name, size_t length);
+
+// Return current thread name(from thread local storage)
+SPDLOG_INLINE std::string thread_name();
+
 // This is avoid msvc issue in sleep_for that happens if the clock changes.
 // See https://github.com/gabime/spdlog/issues/609
 SPDLOG_API void sleep_for_millis(unsigned int milliseconds) SPDLOG_NOEXCEPT;
@@ -91,7 +96,7 @@ SPDLOG_API bool is_color_terminal() SPDLOG_NOEXCEPT;
 // Source: https://github.com/agauniyal/rang/
 SPDLOG_API bool in_terminal(FILE *file) SPDLOG_NOEXCEPT;
 
-#if (defined(SPDLOG_WCHAR_TO_UTF8_SUPPORT) || defined(SPDLOG_WCHAR_FILENAMES)) && defined(_WIN32)
+#if (defined(SPDLOG_WCHAR_TO_UTF8_SUPPORT) || defined(SPDLOG_WCHAR_FILENAMES) || defined(SPDLOG_UTF8_TO_WCHAR_CONSOLE)) && defined(_WIN32)
 SPDLOG_API void wstr_to_utf8buf(wstring_view_t wstr, memory_buf_t &target);
 
 SPDLOG_API void utf8_to_wstrbuf(string_view_t str, wmemory_buf_t &target);

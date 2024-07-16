@@ -29,6 +29,9 @@
     <ClInclude Include="../x11/pdfapp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="../x11/warpapp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <Image Include="../x11/mupdf.ico">
       <Filter>Resource Files</Filter>
     </Image>

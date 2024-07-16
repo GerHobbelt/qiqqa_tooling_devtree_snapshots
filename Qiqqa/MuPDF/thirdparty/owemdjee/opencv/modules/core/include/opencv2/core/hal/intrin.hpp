@@ -246,12 +246,6 @@ using namespace CV_CPU_OPTIMIZATION_HAL_NAMESPACE;
 
 #include "opencv2/core/hal/intrin_lsx.hpp"
 
-#elif CV_LASX
-    #if !defined(CV_FORCE_SIMD128_CPP)
-    #define CV_FORCE_SIMD128_CPP 1
-    #endif
-#include "opencv2/core/hal/intrin_cpp.hpp"
-
 #else
 
 #include "opencv2/core/hal/intrin_cpp.hpp"
@@ -714,7 +708,7 @@ namespace CV__SIMD_NAMESPACE {
     inline v_int32 vx_load_expand(const short* ptr) { return VXPREFIX(_load_expand)(ptr); }
     inline v_int64 vx_load_expand(const int* ptr) { return VXPREFIX(_load_expand)(ptr); }
     inline v_uint64 vx_load_expand(const unsigned* ptr) { return VXPREFIX(_load_expand)(ptr); }
-    inline v_float32 vx_load_expand(const float16_t * ptr) { return VXPREFIX(_load_expand)(ptr); }
+    inline v_float32 vx_load_expand(const hfloat * ptr) { return VXPREFIX(_load_expand)(ptr); }
     //! @}
 
     //! @name Wide load with quad expansion

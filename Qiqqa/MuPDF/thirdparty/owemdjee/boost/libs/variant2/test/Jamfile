@@ -16,8 +16,6 @@ project
 
   : requirements
 
-    [ requires cxx11_variadic_templates cxx11_template_aliases cxx11_decltype cxx11_constexpr ]
-
     <toolset>msvc:<warnings-as-errors>on
     <toolset>gcc:<warnings-as-errors>on
     <toolset>clang:<warnings-as-errors>on
@@ -133,3 +131,5 @@ run variant_json_value_from.cpp : : : $(JSON) ;
 run variant_json_value_to.cpp : : : $(JSON) ;
 
 compile variant_uses_double_storage.cpp ;
+
+run variant_derived_construct2.cpp ;

@@ -25,6 +25,8 @@
 #include "fcarch.h"
 #include <stdio.h>
 
+struct FcPatternElt;
+
 FC_ASSERT_STATIC (1 == sizeof (char));
 FC_ASSERT_STATIC (2 == sizeof (FcChar16));
 FC_ASSERT_STATIC (4 == sizeof (int));

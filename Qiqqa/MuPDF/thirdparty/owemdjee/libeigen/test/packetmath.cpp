@@ -34,11 +34,11 @@ inline T REF_MSUB(const T& a, const T& b, const T& c) {
 }
 template <typename T>
 inline T REF_NMADD(const T& a, const T& b, const T& c) {
-  return (-a * b) + c;
+  return c - a * b;
 }
 template <typename T>
 inline T REF_NMSUB(const T& a, const T& b, const T& c) {
-  return (-a * b) - c;
+  return test::negate(a * b + c);
 }
 template <typename T>
 inline T REF_DIV(const T& a, const T& b) {
@@ -427,6 +427,32 @@ struct eigen_optimization_barrier_test<
   }
 };
 
+template <typename Scalar, typename Packet, bool HasNegate = internal::packet_traits<Scalar>::HasNegate>
+struct negate_test_impl {
+  static void run_negate(Scalar* data1, Scalar* data2, Scalar* ref, int PacketSize) {
+    CHECK_CWISE1_IF(HasNegate, test::negate, internal::pnegate);
+  }
+  static void run_nmsub(Scalar* data1, Scalar* data2, Scalar* ref, int PacketSize) {
+    CHECK_CWISE3_IF(HasNegate, REF_NMSUB, internal::pnmsub);
+  }
+};
+
+template <typename Scalar, typename Packet>
+struct negate_test_impl<Scalar, Packet, false> {
+  static void run_negate(Scalar*, Scalar*, Scalar*, int) {}
+  static void run_nmsub(Scalar*, Scalar*, Scalar*, int) {}
+};
+
+template <typename Scalar, typename Packet>
+void negate_test(Scalar* data1, Scalar* data2, Scalar* ref, int size) {
+  negate_test_impl<Scalar, Packet>::run_negate(data1, data2, ref, size);
+}
+
+template <typename Scalar, typename Packet>
+void nmsub_test(Scalar* data1, Scalar* data2, Scalar* ref, int size) {
+  negate_test_impl<Scalar, Packet>::run_negate(data1, data2, ref, size);
+}
+
 template <typename Scalar, typename Packet>
 void packetmath() {
   typedef internal::packet_traits<Scalar> PacketTraits;
@@ -533,7 +559,7 @@ void packetmath() {
   CHECK_CWISE2_IF(PacketTraits::HasMul, REF_MUL, internal::pmul);
   CHECK_CWISE2_IF(PacketTraits::HasDiv, REF_DIV, internal::pdiv);
 
-  CHECK_CWISE1_IF(PacketTraits::HasNegate, test::negate, internal::pnegate);
+  negate_test<Scalar, Packet>(data1, data2, ref, PacketSize);
   CHECK_CWISE1_IF(PacketTraits::HasReciprocal, REF_RECIPROCAL, internal::preciprocal);
   CHECK_CWISE1(numext::conj, internal::pconj);
   CHECK_CWISE1_IF(PacketTraits::HasSign, numext::sign, internal::psign);
@@ -597,6 +623,16 @@ void packetmath() {
     VERIFY(test::areApprox(ref, data2, HalfPacketSize) && "internal::predux_half_dowto4");
   }
 
+  // Avoid overflows.
+  if (NumTraits<Scalar>::IsInteger && NumTraits<Scalar>::IsSigned &&
+      Eigen::internal::unpacket_traits<Packet>::size > 1) {
+    Scalar limit =
+        static_cast<Scalar>(std::pow(static_cast<double>(numext::real(NumTraits<Scalar>::highest())),
+                                     1.0 / static_cast<double>(Eigen::internal::unpacket_traits<Packet>::size)));
+    for (int i = 0; i < PacketSize; ++i) {
+      data1[i] = internal::random<Scalar>(-limit, limit);
+    }
+  }
   ref[0] = Scalar(1);
   for (int i = 0; i < PacketSize; ++i) ref[0] = REF_MUL(ref[0], data1[i]);
   VERIFY(internal::isApprox(ref[0], internal::predux_mul(internal::pload<Packet>(data1))) && "internal::predux_mul");
@@ -689,7 +725,7 @@ void packetmath() {
   CHECK_CWISE1_IF(PacketTraits::HasRsqrt, numext::rsqrt, internal::prsqrt);
   CHECK_CWISE3_IF(true, REF_MADD, internal::pmadd);
   if (!std::is_same<Scalar, bool>::value && NumTraits<Scalar>::IsSigned) {
-    CHECK_CWISE3_IF(PacketTraits::HasNegate, REF_NMSUB, internal::pnmsub);
+    nmsub_test<Scalar, Packet>(data1, data2, ref, PacketSize);
   }
 
   // For pmsub, pnmadd, the values can cancel each other to become near zero,
@@ -698,11 +734,11 @@ void packetmath() {
   for (int i = 0; i < PacketSize; ++i) {
     data1[i] = numext::abs(internal::random<Scalar>());
     data1[i + PacketSize] = numext::abs(internal::random<Scalar>());
-    data1[i + 2 * PacketSize] = -numext::abs(internal::random<Scalar>());
+    data1[i + 2 * PacketSize] = Scalar(0) - numext::abs(internal::random<Scalar>());
   }
   if (!std::is_same<Scalar, bool>::value && NumTraits<Scalar>::IsSigned) {
     CHECK_CWISE3_IF(true, REF_MSUB, internal::pmsub);
-    CHECK_CWISE3_IF(PacketTraits::HasNegate, REF_NMADD, internal::pnmadd);
+    CHECK_CWISE3_IF(true, REF_NMADD, internal::pnmadd);
   }
 }
 
@@ -830,15 +866,16 @@ void packetmath_real() {
   CHECK_CWISE1_IF(PacketTraits::HasTan, std::tan, internal::ptan);
 
   CHECK_CWISE1_EXACT_IF(PacketTraits::HasRound, numext::round, internal::pround);
-  CHECK_CWISE1_EXACT_IF(PacketTraits::HasCeil, numext::ceil, internal::pceil);
-  CHECK_CWISE1_EXACT_IF(PacketTraits::HasFloor, numext::floor, internal::pfloor);
-  CHECK_CWISE1_EXACT_IF(PacketTraits::HasRint, numext::rint, internal::print);
+  CHECK_CWISE1_EXACT_IF(PacketTraits::HasRound, numext::ceil, internal::pceil);
+  CHECK_CWISE1_EXACT_IF(PacketTraits::HasRound, numext::floor, internal::pfloor);
+  CHECK_CWISE1_EXACT_IF(PacketTraits::HasRound, numext::rint, internal::print);
+  CHECK_CWISE1_EXACT_IF(PacketTraits::HasRound, numext::trunc, internal::ptrunc);
   CHECK_CWISE1_IF(PacketTraits::HasSign, numext::sign, internal::psign);
 
   packetmath_boolean_mask_ops_real<Scalar, Packet>();
 
   // Rounding edge cases.
-  if (PacketTraits::HasRound || PacketTraits::HasCeil || PacketTraits::HasFloor || PacketTraits::HasRint) {
+  if (PacketTraits::HasRound) {
     typedef typename internal::make_integer<Scalar>::type IntType;
     // Start with values that cannot fit inside an integer, work down to less than one.
     Scalar val =
@@ -872,9 +909,10 @@ void packetmath_real() {
     for (size_t k = 0; k < values.size(); ++k) {
       data1[0] = values[k];
       CHECK_CWISE1_EXACT_IF(PacketTraits::HasRound, numext::round, internal::pround);
-      CHECK_CWISE1_EXACT_IF(PacketTraits::HasCeil, numext::ceil, internal::pceil);
-      CHECK_CWISE1_EXACT_IF(PacketTraits::HasFloor, numext::floor, internal::pfloor);
-      CHECK_CWISE1_EXACT_IF(PacketTraits::HasRint, numext::rint, internal::print);
+      CHECK_CWISE1_EXACT_IF(PacketTraits::HasRound, numext::ceil, internal::pceil);
+      CHECK_CWISE1_EXACT_IF(PacketTraits::HasRound, numext::floor, internal::pfloor);
+      CHECK_CWISE1_EXACT_IF(PacketTraits::HasRound, numext::rint, internal::print);
+      CHECK_CWISE1_EXACT_IF(PacketTraits::HasRound, numext::trunc, internal::ptrunc);
     }
   }
 

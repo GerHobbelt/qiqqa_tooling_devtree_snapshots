@@ -1,3 +1,9 @@
+<!--
+Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+
+SPDX-License-Identifier: curl
+-->
+
 # curl vulnerability disclosure policy
 
 This document describes how security vulnerabilities are handled in the curl
@@ -59,7 +65,8 @@ announcement.
   [SECURITY-ADVISORY](https://curl.se/dev/advisory.html) for help on creating
   the advisory.
 
-- Request a CVE number from HackerOne
+- Request a CVE Id for the issue. curl is a CNA (CVE Numbering Authority) and
+  can request its own numbers.
 
 - Update the "security advisory" with the CVE number.
 
@@ -296,3 +303,18 @@ is curl working as designed and is not a curl security problem. Escape
 sequences, moving cursor, changing color etc, is also frequently used for
 good. To reduce the risk of getting fooled, save files and browse them after
 download using a display method that minimizes risks.
+
+## NULL dereferences and crashes
+
+If a malicious server can trigger a NULL dereference in curl or otherwise
+cause curl to crash (and nothing worse), chances are big that we do not
+consider that a security problem.
+
+Malicious servers can already cause considerable harm and denial of service
+like scenarios without having to trigger such code paths. For example by
+stalling, being terribly slow or by delivering enormous amounts of data.
+Additionally, applications are expected to handle "normal" crashes without
+that being the end of the world.
+
+There need to be more and special circumstances to treat such problems as
+security issues.

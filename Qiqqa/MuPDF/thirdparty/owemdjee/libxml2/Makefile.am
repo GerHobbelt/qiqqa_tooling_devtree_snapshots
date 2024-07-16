@@ -19,7 +19,6 @@ check_PROGRAMS = \
 	runtest \
 	runxmlconf \
 	testModule \
-	testThreads \
 	testapi \
 	testchar \
 	testdict \
@@ -36,8 +35,7 @@ libxml2_la_CFLAGS = $(AM_CFLAGS) $(XML_PRIVATE_CFLAGS)
 libxml2_la_LIBADD = $(XML_PRIVATE_LIBS)
 
 libxml2_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined \
-		     -version-info $(LIBXML_VERSION_INFO) \
-		     $(MODULE_PLATFORM_LIBS)
+		     -version-info $(LIBXML_VERSION_INFO)
 if USE_VERSION_SCRIPT
 libxml2_la_LDFLAGS += $(VERSION_SCRIPT_FLAGS)$(srcdir)/libxml2.syms
 endif
@@ -55,9 +53,6 @@ endif
 if WITH_DEBUG_SOURCES
 libxml2_la_SOURCES += debugXML.c
 endif
-if WITH_FTP_SOURCES
-libxml2_la_SOURCES += nanoftp.c
-endif
 if WITH_HTML_SOURCES
 libxml2_la_SOURCES += HTMLparser.c HTMLtree.c
 endif
@@ -66,9 +61,6 @@ libxml2_la_SOURCES += nanohttp.c
 endif
 if WITH_LEGACY_SOURCES
 libxml2_la_SOURCES += legacy.c
-if WITH_SAX1_SOURCES
-libxml2_la_SOURCES += SAX.c
-endif
 endif
 if WITH_LZMA_SOURCES
 libxml2_la_SOURCES += xzlib.c
@@ -113,14 +105,9 @@ endif
 DEPS = libxml2.la
 LDADDS = libxml2.la
 
-
-m4datadir = $(datadir)/aclocal
-dist_m4data_DATA = libxml.m4
-
 runtest_SOURCES=runtest.c
-runtest_CFLAGS = $(AM_CFLAGS) $(THREAD_CFLAGS)
 runtest_DEPENDENCIES = $(DEPS)
-runtest_LDADD= $(BASE_THREAD_LIBS) $(THREAD_LIBS) $(LDADDS)
+runtest_LDADD= $(THREAD_LIBS) $(LDADDS)
 
 testrecurse_SOURCES=testrecurse.c
 testrecurse_DEPENDENCIES = $(DEPS)
@@ -146,7 +133,7 @@ runsuite_SOURCES=runsuite.c
 runsuite_DEPENDENCIES = $(DEPS)
 runsuite_LDADD= $(LDADDS)
 
-xmllint_SOURCES=xmllint.c
+xmllint_SOURCES = xmllint.c shell.c
 xmllint_CFLAGS = $(AM_CFLAGS) $(RDL_CFLAGS) $(ICONV_CFLAGS)
 xmllint_DEPENDENCIES = $(DEPS)
 xmllint_LDADD=  $(RDL_LIBS) $(LDADDS)
@@ -155,11 +142,6 @@ xmlcatalog_SOURCES=xmlcatalog.c
 xmlcatalog_CFLAGS = $(AM_CFLAGS) $(RDL_CFLAGS) $(ICONV_CFLAGS)
 xmlcatalog_DEPENDENCIES = $(DEPS)
 xmlcatalog_LDADD = $(RDL_LIBS) $(LDADDS)
-
-testThreads_SOURCES = testThreads.c
-testThreads_CFLAGS = $(AM_CFLAGS) $(THREAD_CFLAGS)
-testThreads_DEPENDENCIES = $(DEPS)
-testThreads_LDADD= $(BASE_THREAD_LIBS) $(THREAD_LIBS) $(LDADDS)
 
 testModule_SOURCES=testModule.c
 testModule_DEPENDENCIES = $(DEPS)
@@ -193,7 +175,6 @@ check-local:
 	$(CHECKER) ./testdict$(EXEEXT)
 	$(CHECKER) ./testparser$(EXEEXT)
 	$(CHECKER) ./testModule$(EXEEXT)
-	$(CHECKER) ./testThreads$(EXEEXT)
 	$(CHECKER) ./runxmlconf$(EXEEXT)
 	$(CHECKER) ./runsuite$(EXEEXT)
 
@@ -381,7 +362,6 @@ EXTRA_DIST = xml2-config.in libxml.spec.in \
              libxml.m4 Copyright check-xml-test-suite.py gentest.py \
 	     check-relaxng-test-suite.py check-relaxng-test-suite2.py \
 	     check-xsddata-test-suite.py check-xinclude-test-suite.py \
-             example/Makefile.am example/gjobread.c example/gjobs.xml \
 	     libxml-2.0.pc.in libxml-2.0-uninstalled.pc.in \
 	     libxml2-config.cmake.in autogen.sh \
 	     libxml.h \
@@ -389,7 +369,8 @@ EXTRA_DIST = xml2-config.in libxml.spec.in \
 	     dbgen.pl dbgenattr.pl \
 	     libxml2.syms timsort.h \
 	     README.zOS README.md \
-	     CMakeLists.txt config.h.cmake.in libxml2-config.cmake.cmake.in
+	     CMakeLists.txt config.h.cmake.in libxml2-config.cmake.cmake.in \
+	     meson.build meson_options.txt
 
 
 pkgconfigdir = $(libdir)/pkgconfig
@@ -397,12 +378,6 @@ pkgconfig_DATA = libxml-2.0.pc
 
 cmakedir = $(libdir)/cmake/libxml2
 cmake_DATA = libxml2-config.cmake
-
-#
-# Install the tests program sources as examples 
-#
-examplesdir = $(docdir)/examples
-examples_DATA = xmllint.c
 
 tst: tst.c
 	$(CC) $(CFLAGS) -Iinclude -o tst tst.c .libs/libxml2.a -lpthread -lm -lz -llzma

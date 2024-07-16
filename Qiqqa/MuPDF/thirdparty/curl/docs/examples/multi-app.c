@@ -32,14 +32,6 @@
 #include <stdio.h>
 #include <string.h>
 
-/* somewhat unix-specific */
-#if !defined(_WIN32) && !defined(CURL_AVOID_SYS_TIME_H)
-#include <sys/time.h>
-#endif
-#if !defined(_WIN32)
-#include <unistd.h>
-#endif
-
 /* curl stuff */
 
 /*
@@ -94,7 +86,8 @@ int main(void)
       break;
   }
   /* See how the transfers went */
-  while((msg = curl_multi_info_read(multi_handle, &msgs_left))) {
+  /* !checksrc! disable EQUALSNULL 1 */
+  while((msg = curl_multi_info_read(multi_handle, &msgs_left)) != NULL) {
     if(msg->msg == CURLMSG_DONE) {
       int idx;
 

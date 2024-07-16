@@ -48,17 +48,14 @@
 #include "precomp.hpp"
 
 #ifdef HAVE_TIFF
+
 #include <opencv2/core/utils/logger.hpp>
 
 #include "grfmt_tiff.hpp"
 #include <limits>
 
-// TODO FIXIT Conflict declarations for common types like int64/uint64
-namespace tiff_dummy_namespace {
 #include "tiff.h"
 #include "tiffio.h"
-}
-using namespace tiff_dummy_namespace;
 
 namespace cv
 {
@@ -1219,7 +1216,7 @@ bool TiffEncoder::writeLibTiff( const std::vector<Mat>& img_vec, const std::vect
     int resUnit = -1, dpiX = -1, dpiY = -1;
 
     readParam(params, IMWRITE_TIFF_COMPRESSION, compression);
-    readParam(params, TIFFTAG_PREDICTOR, predictor);
+    readParam(params, IMWRITE_TIFF_PREDICTOR, predictor);
     readParam(params, IMWRITE_TIFF_RESUNIT, resUnit);
     readParam(params, IMWRITE_TIFF_XDPI, dpiX);
     readParam(params, IMWRITE_TIFF_YDPI, dpiY);
@@ -1308,7 +1305,7 @@ bool TiffEncoder::writeLibTiff( const std::vector<Mat>& img_vec, const std::vect
         CV_Assert(fileStep > 0);
 
         int rowsPerStrip = (int)((1 << 13) / fileStep);
-        readParam(params, TIFFTAG_ROWSPERSTRIP, rowsPerStrip);
+        readParam(params, IMWRITE_TIFF_ROWSPERSTRIP, rowsPerStrip);
         rowsPerStrip = std::max(1, std::min(height, rowsPerStrip));
 
         int colorspace = channels > 1 ? PHOTOMETRIC_RGB : PHOTOMETRIC_MINISBLACK;

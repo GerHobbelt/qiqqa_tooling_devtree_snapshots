@@ -17,9 +17,7 @@
 //
 ///////////////////////////////////////////////////////////////////////
 
-#ifdef HAVE_TESSERACT_CONFIG_H
-#  include "config_auto.h"
-#endif
+#include <tesseract/preparation.h> // compiler config, etc.
 
 #if !DISABLED_LEGACY_ENGINE
 
@@ -34,9 +32,9 @@
 #include "lm_state.h"                // for ViterbiStateEntry, ViterbiState...
 #include "matrix.h"                  // for MATRIX_COORD
 #include "pageres.h"                 // for WERD_RES
-#include "params.h"                  // for IntParam, BoolParam, DoubleParam
+#include <tesseract/params.h>                  // for IntParam, BoolParam, DoubleParam
 #include "params_training_featdef.h" // for ParamsTrainingHypothesis, PTRAI...
-#include "tprintf.h"                 // for tprintf
+#include <tesseract/tprintf.h>                 // for tprintf
 #include "unicharset.h"              // for UNICHARSET
 #include "unicity_table.h"           // for UnicityTable
 #include "fontinfo.h"                

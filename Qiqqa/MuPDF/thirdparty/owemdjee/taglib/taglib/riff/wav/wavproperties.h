@@ -26,7 +26,6 @@
 #ifndef TAGLIB_WAVPROPERTIES_H
 #define TAGLIB_WAVPROPERTIES_H
 
-#include "taglib.h"
 #include "audioproperties.h"
 
 namespace TagLib {
@@ -42,7 +41,7 @@ namespace TagLib {
       //! An implementation of audio property reading for WAV
 
       /*!
-       * This reads the data from an WAV stream found in the AudioProperties
+       * This reads the data from a WAV stream found in the AudioProperties
        * API.
        */
 
@@ -109,6 +108,7 @@ namespace TagLib {
         void read(File *file);
 
         class PropertiesPrivate;
+        TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
         std::unique_ptr<PropertiesPrivate> d;
       };
     }  // namespace WAV

@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2022 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -440,7 +440,7 @@ pdf_load_substitute_cjk_font(fz_context *ctx, pdf_font_desc *fontdesc, const cha
 }
 
 static struct { int ros, serif; const char *name; } known_cjk_fonts[] = {
-	{ FZ_ADOBE_GB, 0, "SimFang" },
+	{ FZ_ADOBE_GB, 1, "SimFang" },
 	{ FZ_ADOBE_GB, 0, "SimHei" },
 	{ FZ_ADOBE_GB, 1, "SimKai" },
 	{ FZ_ADOBE_GB, 1, "SimLi" },
@@ -557,8 +557,11 @@ pdf_load_embedded_font(fz_context *ctx, pdf_document *doc, pdf_font_desc *fontde
 	fz_buffer *buf;
 	unsigned char *data;
 	size_t size;
+	int try_cff_only;
 
 	fz_var(buf);
+
+	try_cff_only = 0;
 
 	buf = pdf_load_stream(ctx, stmref);
 
@@ -571,6 +574,8 @@ pdf_load_embedded_font(fz_context *ctx, pdf_document *doc, pdf_font_desc *fontde
 				fz_buffer *cff = pdf_extract_cff_subtable(ctx, data, size);
 				if (cff)
 				{
+					try_cff_only = 1;
+					// printf("Attempting to use CFF table only.\n");
 					fz_drop_buffer(ctx, buf);
 					buf = cff;
 				}
@@ -578,6 +583,27 @@ pdf_load_embedded_font(fz_context *ctx, pdf_document *doc, pdf_font_desc *fontde
 		}
 
 		fontdesc->font = fz_new_font_from_buffer(ctx, fontname, buf, 0, 1);
+
+
+		if (try_cff_only) {
+
+			FT_ULong ucs;
+			FT_UInt gid;
+
+			fz_lock(ctx, FZ_LOCK_FREETYPE);
+			ucs = FT_Get_First_Char(fontdesc->font->ft_face, &gid);
+			fz_unlock(ctx, FZ_LOCK_FREETYPE);
+
+			if (!ucs) {
+				// printf("CFF table only failed, embedding full font.\n");
+				fz_drop_font(ctx, fontdesc->font);
+				fz_drop_buffer(ctx, buf);
+				buf = pdf_load_stream(ctx, stmref);
+				fontdesc->font = fz_new_font_from_buffer(ctx, fontname, buf, 0, 1);
+			}
+		}
+
+
 	}
 	fz_always(ctx)
 		fz_drop_buffer(ctx, buf);
@@ -794,7 +820,7 @@ pdf_load_simple_font(fz_context *ctx, pdf_document *doc, pdf_obj *dict)
 		basefont = pdf_dict_get_name(ctx, dict, PDF_NAME(BaseFont));
 
 		descriptor = pdf_dict_get(ctx, dict, PDF_NAME(FontDescriptor));
-		if (descriptor)
+		if (pdf_is_dict(ctx, descriptor))
 			pdf_load_font_descriptor(ctx, doc, fontdesc, descriptor, NULL, basefont, 0);
 		else
 			pdf_load_builtin_font(ctx, fontdesc, basefont, 0);
@@ -1040,7 +1066,7 @@ pdf_load_simple_font(fz_context *ctx, pdf_document *doc, pdf_obj *dict)
 		pdf_set_default_hmtx(ctx, fontdesc, fontdesc->missing_width);
 
 		widths = pdf_dict_get(ctx, dict, PDF_NAME(Widths));
-		if (widths)
+		if (pdf_is_array(ctx, widths))
 		{
 			int first, last;
 
@@ -1179,7 +1205,7 @@ load_cid_font(fz_context *ctx, pdf_document *doc, pdf_obj *dict, pdf_obj *encodi
 			const char *reg, *ord;
 
 			cidinfo = pdf_dict_get(ctx, dict, PDF_NAME(CIDSystemInfo));
-			if (cidinfo)
+			if (pdf_is_dict(ctx, cidinfo))
 			{
 				reg = pdf_dict_get_string(ctx, cidinfo, PDF_NAME(Registry), NULL);
 				ord = pdf_dict_get_string(ctx, cidinfo, PDF_NAME(Ordering), NULL);
@@ -1217,7 +1243,7 @@ load_cid_font(fz_context *ctx, pdf_document *doc, pdf_obj *dict, pdf_obj *encodi
 		pdf_set_font_wmode(ctx, fontdesc, pdf_cmap_wmode(ctx, fontdesc->encoding));
 
 		descriptor = pdf_dict_get(ctx, dict, PDF_NAME(FontDescriptor));
-		if (!descriptor)
+		if (!pdf_is_dict(ctx, descriptor))
 			fz_throw(ctx, FZ_ERROR_SYNTAX, "missing font descriptor");
 		pdf_load_font_descriptor(ctx, doc, fontdesc, descriptor, collection, basefont, 1);
 
@@ -1240,7 +1266,7 @@ load_cid_font(fz_context *ctx, pdf_document *doc, pdf_obj *dict, pdf_obj *encodi
 			for (z = 0; z < fontdesc->cid_to_gid_len; z++)
 				fontdesc->cid_to_gid[z] = (data[z * 2] << 8) + data[z * 2 + 1];
 		}
-		else if (cidtogidmap && !pdf_name_eq(ctx, PDF_NAME(Identity), cidtogidmap))
+		else if (pdf_is_name(ctx, cidtogidmap) && !pdf_name_eq(ctx, PDF_NAME(Identity), cidtogidmap))
 		{
 			fz_warn(ctx, "ignoring unknown CIDToGIDMap entry");
 		}
@@ -1285,13 +1311,21 @@ load_cid_font(fz_context *ctx, pdf_document *doc, pdf_obj *dict, pdf_obj *encodi
 				}
 				else
 				{
+					// Attempt to find a font specific ToUnicode (for MS-Mincho, SimSun, etc)
+					fontdesc->to_ttf_cmap = pdf_load_to_unicode_cmap(ctx, basefont);
+
 					// Attempt a generic ToUnicode (default MacRoman ordering for TrueType)
-					fontdesc->to_ttf_cmap = pdf_load_builtin_cmap(ctx, "TrueType-UCS2");
+					if (!fontdesc->to_ttf_cmap)
+						fontdesc->to_ttf_cmap = pdf_load_builtin_cmap(ctx, "TrueType-UCS2");
 				}
 			}
 
 			if (fontdesc->to_ttf_cmap)
+			{
 				fz_warn(ctx, "non-embedded font using identity encoding: %s (mapping via %s)", basefont, fontdesc->to_ttf_cmap->cmap_name);
+				if (!fontdesc->to_unicode)
+					fontdesc->to_unicode = pdf_keep_cmap(ctx, fontdesc->to_ttf_cmap);
+			}
 			else
 				fz_warn(ctx, "non-embedded font using identity encoding: %s", basefont);
 		}
@@ -1302,7 +1336,7 @@ load_cid_font(fz_context *ctx, pdf_document *doc, pdf_obj *dict, pdf_obj *encodi
 		pdf_set_default_hmtx(ctx, fontdesc, dw);
 
 		widths = pdf_dict_get(ctx, dict, PDF_NAME(W));
-		if (widths)
+		if (pdf_is_array(ctx, widths))
 		{
 			int c0, c1, w, n, m;
 
@@ -1341,7 +1375,7 @@ load_cid_font(fz_context *ctx, pdf_document *doc, pdf_obj *dict, pdf_obj *encodi
 			int dw2w = -1000;
 
 			obj = pdf_dict_get(ctx, dict, PDF_NAME(DW2));
-			if (obj)
+			if (pdf_is_array(ctx, obj))
 			{
 				dw2y = pdf_array_get_int(ctx, obj, 0);
 				dw2w = pdf_array_get_int(ctx, obj, 1);
@@ -1350,7 +1384,7 @@ load_cid_font(fz_context *ctx, pdf_document *doc, pdf_obj *dict, pdf_obj *encodi
 			pdf_set_default_vmtx(ctx, fontdesc, dw2y, dw2w);
 
 			widths = pdf_dict_get(ctx, dict, PDF_NAME(W2));
-			if (widths)
+			if (pdf_is_array(ctx, widths))
 			{
 				int c0, c1, w, x, y, n;
 
@@ -1407,7 +1441,7 @@ pdf_load_type0_font(fz_context *ctx, pdf_document *doc, pdf_obj *dict)
 	pdf_obj *to_unicode;
 
 	dfonts = pdf_dict_get(ctx, dict, PDF_NAME(DescendantFonts));
-	if (!dfonts)
+	if (!pdf_is_array(ctx, dfonts))
 		fz_throw(ctx, FZ_ERROR_SYNTAX, "cid font is missing descendant fonts");
 
 	dfont = pdf_array_get(ctx, dfonts, 0);
@@ -1449,7 +1483,7 @@ pdf_load_font_descriptor(fz_context *ctx, pdf_document *doc, pdf_font_desc *font
 	obj1 = pdf_dict_get(ctx, dict, PDF_NAME(FontFile));
 	obj2 = pdf_dict_get(ctx, dict, PDF_NAME(FontFile2));
 	obj3 = pdf_dict_get(ctx, dict, PDF_NAME(FontFile3));
-	obj = obj1 ? obj1 : obj2 ? obj2 : obj3;
+	obj = pdf_is_stream(ctx, obj1) ? obj1 : pdf_is_stream(ctx, obj2) ? obj2 : pdf_is_stream(ctx, obj3) ? obj3 : NULL;
 
 	if (pdf_is_indirect(ctx, obj))
 	{
@@ -1468,6 +1502,7 @@ pdf_load_font_descriptor(fz_context *ctx, pdf_document *doc, pdf_font_desc *font
 			else
 				pdf_load_system_font(ctx, fontdesc, fontname, collection);
 		}
+		assert(fontdesc->font != NULL);
 	}
 	else
 	{
@@ -1475,6 +1510,7 @@ pdf_load_font_descriptor(fz_context *ctx, pdf_document *doc, pdf_font_desc *font
 			pdf_load_builtin_font(ctx, fontdesc, fontname, 1);
 		else
 			pdf_load_system_font(ctx, fontdesc, fontname, collection);
+		assert(fontdesc->font != NULL);
 	}
 
 	/* Check for DynaLab fonts that must use hinting */
@@ -1571,13 +1607,13 @@ pdf_load_font(fz_context *ctx, pdf_document *doc, pdf_obj *rdb, pdf_obj *dict)
 		fontdesc = pdf_load_type3_font(ctx, doc, rdb, dict);
 		type3 = 1;
 	}
-	else if (charprocs)
+	else if (pdf_is_dict(ctx, charprocs))
 	{
 		fz_warn(ctx, "unknown font format, guessing type3.");
 		fontdesc = pdf_load_type3_font(ctx, doc, rdb, dict);
 		type3 = 1;
 	}
-	else if (dfonts)
+	else if (pdf_is_array(ctx, dfonts))
 	{
 		fz_warn(ctx, "unknown font format, guessing type0.");
 		fontdesc = pdf_load_type0_font(ctx, doc, dict);

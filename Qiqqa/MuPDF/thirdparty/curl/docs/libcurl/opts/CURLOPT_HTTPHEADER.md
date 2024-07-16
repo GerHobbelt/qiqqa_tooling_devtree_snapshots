@@ -4,6 +4,10 @@ SPDX-License-Identifier: curl
 Title: CURLOPT_HTTPHEADER
 Section: 3
 Source: libcurl
+Protocol:
+  - HTTP
+  - SMTP
+  - IMAP
 See-also:
   - CURLOPT_CUSTOMREQUEST (3)
   - CURLOPT_HEADER (3)
@@ -110,9 +114,11 @@ MIME mail is only composed of alternative representations of the same data
 In all cases the value must be of the form "multipart/*" to respect the
 document structure and may not include the "boundary=" parameter.
 
+##
+
 Other specific headers that do not have a libcurl default value but are
 strongly desired by mail delivery and user agents should also be included.
-These are "From:", "To:", "Date:" and "Subject:" among others and their
+These are `From:`, `To:`, `Date:` and `Subject:` among others and their
 presence and value is generally checked by anti-spam utilities.
 
 # SECURITY CONCERNS
@@ -143,10 +149,6 @@ with the CURLOPT_UNRESTRICTED_AUTH(3) option.
 # DEFAULT
 
 NULL
-
-# PROTOCOLS
-
-HTTP, IMAP and SMTP
 
 # EXAMPLE
 

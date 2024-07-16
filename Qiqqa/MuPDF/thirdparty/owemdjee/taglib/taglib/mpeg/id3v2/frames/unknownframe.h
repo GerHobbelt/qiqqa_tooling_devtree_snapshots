@@ -37,7 +37,7 @@ namespace TagLib {
 
     /*!
      * This class represents a frame type not known (or more often simply
-     * unimplemented) in TagLib.  This is here provide a basic API for
+     * unimplemented) in TagLib.  This is here to provide a basic API for
      * manipulating the binary data of unknown frames and to provide a means
      * of rendering such \e unknown frames.
      *
@@ -72,6 +72,7 @@ namespace TagLib {
       UnknownFrame(const ByteVector &data, Header *h);
 
       class UnknownFramePrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<UnknownFramePrivate> d;
     };
 

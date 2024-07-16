@@ -1,4 +1,4 @@
-.. Copyright (c) 2016-2023 Keith O'Hara
+.. Copyright (c) 2016-2024 Keith O'Hara
 
    Distributed under the terms of the Apache License, Version 2.0.
 
@@ -46,6 +46,12 @@ Mathematical functions
 
 +---------------------------------------+----------------------------------------------------+
 | :ref:`abs <abs-function-reference>`   | absolute value                                     |
++---------------------------------------+----------------------------------------------------+
+| :ref:`fabs <fabs-function-reference>` | absolute value                                     |
++---------------------------------------+----------------------------------------------------+
+| :ref:`fabsf <fabsf-func-ref>`         | absolute value                                     |
++---------------------------------------+----------------------------------------------------+
+| :ref:`fabsl <fabsl-func-ref>`         | absolute value                                     |
 +---------------------------------------+----------------------------------------------------+
 | :ref:`ceil <ceil-function-reference>` | ceiling function                                   |
 +---------------------------------------+----------------------------------------------------+

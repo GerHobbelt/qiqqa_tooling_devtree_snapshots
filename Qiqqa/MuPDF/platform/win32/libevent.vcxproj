@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libevent</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF95448C}</ProjectGuid>
-    <RootNamespace>libevent</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -318,6 +316,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/libevent/test/test-eof.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libevent/test/test-fdleak.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libevent/test/test-init.c" />
+    <ClCompile Include="../../thirdparty/owemdjee/libevent/test/test-kq-collision.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libevent/test/test-ratelim.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libevent/test/test-time.c" />
     <ClCompile Include="../../thirdparty/owemdjee/libevent/test/test-weof.c" />
@@ -411,6 +410,7 @@
     <Text Include="../../thirdparty/owemdjee/libevent/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/libevent/Makefile.am" />
     <Text Include="../../thirdparty/owemdjee/libevent/PreLoad.cmake" />
+    <Text Include="../../thirdparty/owemdjee/libevent/PrivacyInfo.xcprivacy" />
     <Text Include="../../thirdparty/owemdjee/libevent/README.md" />
     <Text Include="../../thirdparty/owemdjee/libevent/SECURITY.md" />
     <Text Include="../../thirdparty/owemdjee/libevent/autogen.sh" />

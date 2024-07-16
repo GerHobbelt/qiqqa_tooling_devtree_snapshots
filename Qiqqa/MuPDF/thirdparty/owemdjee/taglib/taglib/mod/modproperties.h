@@ -26,11 +26,11 @@
 #ifndef TAGLIB_MODPROPERTIES_H
 #define TAGLIB_MODPROPERTIES_H
 
-#include "taglib.h"
 #include "audioproperties.h"
 
 namespace TagLib {
   namespace Mod {
+    //! An implementation of audio property reading for Mod
     class TAGLIB_EXPORT Properties : public AudioProperties
     {
     public:
@@ -54,6 +54,7 @@ namespace TagLib {
 
     private:
       class PropertiesPrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<PropertiesPrivate> d;
     };
   }  // namespace Mod

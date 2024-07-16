@@ -1,4 +1,4 @@
-// Copyright (C) 2004-2023 Artifex Software, Inc.
+// Copyright (C) 2004-2024 Artifex Software, Inc.
 //
 // This file is part of MuPDF.
 //
@@ -371,6 +371,10 @@ void pdf_annot_event_page_close(fz_context *ctx, pdf_annot *annot);
 void pdf_annot_event_page_visible(fz_context *ctx, pdf_annot *annot);
 void pdf_annot_event_page_invisible(fz_context *ctx, pdf_annot *annot);
 
+/*
+ * Bake appearances of annotations and/or widgets into static page content,
+ * and remove the corresponding interactive PDF objects.
+ */
 void pdf_bake_document(fz_context *ctx, pdf_document *doc, int bake_annots, int bake_widgets);
 
 #endif // FZ_ENABLE_PDF

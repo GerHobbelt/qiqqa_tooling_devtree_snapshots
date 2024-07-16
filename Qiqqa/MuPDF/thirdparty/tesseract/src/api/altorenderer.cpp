@@ -13,10 +13,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <tesseract/debugheap.h>
-#include "errcode.h" // for ASSERT_HOST
+#include <tesseract/preparation.h> // compiler config, etc.
 
-#include "tprintf.h" // for tprintf
+#include "errcode.h" // for ASSERT_HOST
+#include "helpers.h" // for copy_string
+
+#include <tesseract/tprintf.h> // for tprintf
 #include "tesseractclass.h"  // for Tesseract
 
 #include <tesseract/baseapi.h>
@@ -71,7 +73,6 @@ bool TessAltoRenderer::AddImageHandler(TessBaseAPI *api) {
     AppendString(
       "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
       "<alto xmlns=\"http://www.loc.gov/standards/alto/ns-v3#\" "
-      "xmlns:xlink=\"http://www.w3.org/1999/xlink\" "
       "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" "
       "xsi:schemaLocation=\"http://www.loc.gov/standards/alto/ns-v3# "
       "http://www.loc.gov/alto/v3/alto-3-0.xsd\">\n"
@@ -171,7 +172,7 @@ char *TessBaseAPI::GetAltoText(ETEXT_DESC *monitor, int page_number) {
       case PT_HEADING_IMAGE:
       case PT_PULLOUT_IMAGE: {
         // Handle all kinds of images.
-    //
+		//
         // TODO: optionally add TYPE, for example TYPE="photo".
         alto_str << "\t\t\t\t<Illustration ID=\"cblock_" << bcnt++ << "\"";
         AddBoxToAlto(res_it, RIL_BLOCK, alto_str);
@@ -188,8 +189,8 @@ char *TessBaseAPI::GetAltoText(ETEXT_DESC *monitor, int page_number) {
         res_it->Next(RIL_BLOCK);
         continue;
       case PT_NOISE:
-        tprintError("TODO: Please report image which triggers the noise case.\n");
-        ASSERT_HOST(false);
+        ASSERT_HOST_MSG(false, "TODO: Please report image which triggers the noise case.\n");
+        break;
       default:
         break;
     }
@@ -259,12 +260,9 @@ char *TessBaseAPI::GetAltoText(ETEXT_DESC *monitor, int page_number) {
 
   alto_str << "\t\t\t</PrintSpace>\n"
            << "\t\t</Page>\n";
-  const std::string &text = alto_str.str();
 
-  char *result = new char[text.length() + 1];
-  strcpy(result, text.c_str());
   delete res_it;
-  return result;
+  return copy_string(alto_str.str());
 }
 
 } // namespace tesseract

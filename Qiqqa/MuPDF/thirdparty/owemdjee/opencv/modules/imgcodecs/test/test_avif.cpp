@@ -95,7 +95,7 @@ class Imgcodecs_Avif_Image_RoundTripSuite
   // bit depth.
   static void SetUpTestCase() {
     const string root = cvtest::TS::ptr()->get_data_path();
-    const string filename = root + "../cv/shared/lena.png";
+    const string filename = root + "../cv/shared/baboon.bmp";
     const cv::Mat img_original = cv::imread(filename);
     cv::Mat img_resized;
     cv::resize(img_original, img_resized, cv::Size(kWidth, kHeight), 0, 0);
@@ -166,7 +166,7 @@ TEST_P(Imgcodecs_Avif_Image_EncodeDecodeSuite, imencode_imdecode) {
                  cv::Exception);
     return;
   }
-  bool result;
+  bool result = true;
   EXPECT_NO_THROW(
       result = cv::imencode(".avif", img_original, buf, encoding_params_););
   EXPECT_TRUE(result);
@@ -244,7 +244,7 @@ class Imgcodecs_Avif_Animation_RoundTripSuite
   // bit depth.
   static void SetUpTestCase() {
     const string root = cvtest::TS::ptr()->get_data_path();
-    const string filename = root + "../cv/shared/lena.png";
+    const string filename = root + "../cv/shared/baboon.bmp";
     const cv::Mat img_original = cv::imread(filename);
     cv::Mat img_resized;
     cv::resize(img_original, img_resized, cv::Size(kWidth, kHeight), 0, 0);

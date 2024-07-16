@@ -28,14 +28,12 @@
 
 #include "taglib.h"
 #include "tfile.h"
-#include "tstring.h"
 #include "tlist.h"
 #include "taglib_export.h"
 
-#include <algorithm>
-
 namespace TagLib {
   namespace Mod {
+    //! Base class for module files
     class TAGLIB_EXPORT FileBase : public TagLib::File
     {
     public:
@@ -63,6 +61,7 @@ namespace TagLib {
       bool readU32B(unsigned long &number);
     private:
       class FileBasePrivate;
+      TAGLIB_MSVC_SUPPRESS_WARNING_NEEDS_TO_HAVE_DLL_INTERFACE
       std::unique_ptr<FileBasePrivate> d;
     };
   }  // namespace Mod

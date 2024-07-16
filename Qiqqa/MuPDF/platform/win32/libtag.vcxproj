@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>libtag</ProjectName>
     <ProjectGuid>{A60D8644-5A1C-4D29-8970-7518FF2DAF08}</ProjectGuid>
-    <RootNamespace>libtag</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -75,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -111,7 +109,7 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -269,6 +267,7 @@
     <ClCompile Include="../../thirdparty/owemdjee/taglib/taglib/mp4/mp4coverart.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/taglib/taglib/mp4/mp4file.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/taglib/taglib/mp4/mp4item.cpp" />
+    <ClCompile Include="../../thirdparty/owemdjee/taglib/taglib/mp4/mp4itemfactory.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/taglib/taglib/mp4/mp4properties.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/taglib/taglib/mp4/mp4tag.cpp" />
     <ClCompile Include="../../thirdparty/owemdjee/taglib/taglib/mpc/mpcfile.cpp" />
@@ -381,6 +380,7 @@
     <ClInclude Include="../../thirdparty/owemdjee/taglib/taglib/mp4/mp4coverart.h" />
     <ClInclude Include="../../thirdparty/owemdjee/taglib/taglib/mp4/mp4file.h" />
     <ClInclude Include="../../thirdparty/owemdjee/taglib/taglib/mp4/mp4item.h" />
+    <ClInclude Include="../../thirdparty/owemdjee/taglib/taglib/mp4/mp4itemfactory.h" />
     <ClInclude Include="../../thirdparty/owemdjee/taglib/taglib/mp4/mp4properties.h" />
     <ClInclude Include="../../thirdparty/owemdjee/taglib/taglib/mp4/mp4tag.h" />
     <ClInclude Include="../../thirdparty/owemdjee/taglib/taglib/mpc/mpcfile.h" />
@@ -454,7 +454,6 @@
     <ClInclude Include="../../thirdparty/owemdjee/taglib/taglib/toolkit/tmap.h" />
     <ClInclude Include="../../thirdparty/owemdjee/taglib/taglib/toolkit/tpicturetype.h" />
     <ClInclude Include="../../thirdparty/owemdjee/taglib/taglib/toolkit/tpropertymap.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/taglib/taglib/toolkit/trefcounter.h" />
     <ClInclude Include="../../thirdparty/owemdjee/taglib/taglib/toolkit/tstring.h" />
     <ClInclude Include="../../thirdparty/owemdjee/taglib/taglib/toolkit/tstringlist.h" />
     <ClInclude Include="../../thirdparty/owemdjee/taglib/taglib/toolkit/tutils.h" />
@@ -468,13 +467,13 @@
     <ClInclude Include="../../thirdparty/owemdjee/taglib/taglib/xm/xmfile.h" />
     <ClInclude Include="../../thirdparty/owemdjee/taglib/taglib/xm/xmproperties.h" />
     <Text Include="../../thirdparty/owemdjee/taglib/AUTHORS" />
+    <Text Include="../../thirdparty/owemdjee/taglib/CHANGELOG.md" />
     <Text Include="../../thirdparty/owemdjee/taglib/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/taglib/COPYING.LGPL" />
     <Text Include="../../thirdparty/owemdjee/taglib/COPYING.MPL" />
     <Text Include="../../thirdparty/owemdjee/taglib/ConfigureChecks.cmake" />
     <Text Include="../../thirdparty/owemdjee/taglib/Doxyfile.cmake" />
     <Text Include="../../thirdparty/owemdjee/taglib/INSTALL.md" />
-    <Text Include="../../thirdparty/owemdjee/taglib/NEWS" />
     <Text Include="../../thirdparty/owemdjee/taglib/README.md" />
     <Text Include="../../thirdparty/owemdjee/taglib/bindings/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/taglib/bindings/README" />
@@ -488,6 +487,7 @@
     <Text Include="../../thirdparty/owemdjee/taglib/doc/taglib.svg" />
     <Text Include="../../thirdparty/owemdjee/taglib/examples/CMakeLists.txt" />
     <Text Include="../../thirdparty/owemdjee/taglib/taglib-config.cmake" />
+    <Text Include="../../thirdparty/owemdjee/taglib/taglib-config.cmake.in" />
     <Text Include="../../thirdparty/owemdjee/taglib/taglib-config.cmd.cmake" />
     <Text Include="../../thirdparty/owemdjee/taglib/taglib.pc.cmake" />
     <Text Include="../../thirdparty/owemdjee/taglib/taglib/CMakeLists.txt" />
@@ -496,7 +496,7 @@
     <Text Include="../../thirdparty/owemdjee/taglib/taglib/mpeg/id3v2/id3v2.3.0.txt" />
     <Text Include="../../thirdparty/owemdjee/taglib/taglib/mpeg/id3v2/id3v2.4.0-frames.txt" />
     <Text Include="../../thirdparty/owemdjee/taglib/taglib/mpeg/id3v2/id3v2.4.0-structure.txt" />
-    <Text Include="../../thirdparty/owemdjee/taglib/taglib/taglib_config.h.cmake" />
+    <Text Include="../../thirdparty/owemdjee/taglib/taglib/toolkit/propertymapping.dox" />
     <Text Include="../../thirdparty/owemdjee/taglib/taglib/toolkit/tlist.tcc" />
     <Text Include="../../thirdparty/owemdjee/taglib/taglib/toolkit/tmap.tcc" />
   </ItemGroup>

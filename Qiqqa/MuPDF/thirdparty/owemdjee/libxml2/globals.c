@@ -120,26 +120,6 @@ static XML_THREAD_LOCAL xmlGlobalState globalState;
 #ifdef HAVE_POSIX_THREADS
 
 /*
- * Weak symbol hack, see threads.c
- */
-#if defined(__GNUC__) && \
-    defined(__GLIBC__) && \
-    __GLIBC__ * 100 + __GLIBC_MINOR__ < 234
-
-#pragma weak pthread_getspecific
-#pragma weak pthread_setspecific
-#pragma weak pthread_key_create
-#pragma weak pthread_key_delete
-#pragma weak pthread_equal
-#pragma weak pthread_self
-
-#define XML_PTHREAD_WEAK
-
-static int libxml_is_threaded = -1;
-
-#endif
-
-/*
  * On POSIX, we need thread-specific data even with thread-local storage
  * to destroy indirect references from global state (xmlLastError) at
  * thread exit.
@@ -175,13 +155,6 @@ static unsigned xmlMainThreadRngState[2];
  * Memory allocation routines
  */
 
-#if defined(DEBUG_MEMORY_LOCATION)
-xmlFreeFunc xmlFree = (xmlFreeFunc) xmlMemFree;
-xmlMallocFunc xmlMalloc = (xmlMallocFunc) xmlMemMalloc;
-xmlMallocFunc xmlMallocAtomic = (xmlMallocFunc) xmlMemMalloc;
-xmlReallocFunc xmlRealloc = (xmlReallocFunc) xmlMemRealloc;
-xmlStrdupFunc xmlMemStrdup = (xmlStrdupFunc) xmlMemoryStrdup;
-#else
 /* [i_a] make sure MS and other platforms always do the linkage right, irrespective of whether you're using dynamic loadable of statically linked runtime libs */
 static void XMLCALL lcl_xmlFreeFunc(void *mem) { free(mem); }
 static void * LIBXML_ATTR_ALLOC_SIZE(1) XMLCALL lcl_xmlMallocFunc(size_t size) { return malloc(size); }
@@ -234,7 +207,6 @@ xmlReallocFunc xmlRealloc = lcl_xmlReallocFunc;
  * Returns the copy of the string or NULL in case of error
  */
 xmlStrdupFunc xmlMemStrdup = lcl_xmlStrdupFunc;
-#endif /* DEBUG_MEMORY_LOCATION */
 
 /**
  * xmlBufferAllocScheme:
@@ -572,22 +544,6 @@ void xmlInitGlobalsInternal(void) {
     xmlInitMutex(&xmlThrDefMutex);
 
 #ifdef HAVE_POSIX_THREADS
-#ifdef XML_PTHREAD_WEAK
-    if (libxml_is_threaded == -1)
-        libxml_is_threaded =
-            (pthread_getspecific != NULL) &&
-            (pthread_setspecific != NULL) &&
-            (pthread_key_create != NULL) &&
-            (pthread_key_delete != NULL) &&
-            /*
-             * pthread_equal can be inline, resuting in -Waddress warnings.
-             * Let's assume it's available if all the other functions are.
-             */
-            /* (pthread_equal != NULL) && */
-            (pthread_self != NULL);
-    if (libxml_is_threaded == 0)
-        return;
-#endif /* XML_PTHREAD_WEAK */
     pthread_key_create(&globalkey, xmlFreeGlobalState);
     mainthread = pthread_self();
 #elif defined(HAVE_WIN32_THREADS)
@@ -625,10 +581,6 @@ void xmlCleanupGlobalsInternal(void) {
     xmlCleanupMutex(&xmlThrDefMutex);
 
 #ifdef HAVE_POSIX_THREADS
-#ifdef XML_PTHREAD_WEAK
-    if (libxml_is_threaded == 0)
-        return;
-#endif /* XML_PTHREAD_WEAK */
     pthread_key_delete(globalkey);
 #elif defined(HAVE_WIN32_THREADS)
 #ifndef USE_TLS
@@ -674,10 +626,6 @@ xmlIsMainThreadInternal(void) {
     }
 
 #ifdef HAVE_POSIX_THREADS
-#ifdef XML_PTHREAD_WEAK
-    if (libxml_is_threaded == 0)
-        return (1);
-#endif
     return (pthread_equal(mainthread, pthread_self()));
 #elif defined HAVE_WIN32_THREADS
     return (mainthread == GetCurrentThreadId());
@@ -771,19 +719,11 @@ xmlInitGlobalState(xmlGlobalStatePtr gs) {
     gs->gs_xmlDoValidityCheckingDefaultValue =
          xmlDoValidityCheckingDefaultValueThrDef;
 #ifdef LIBXML_THREAD_ALLOC_ENABLED
-#ifdef DEBUG_MEMORY_LOCATION
-    gs->gs_xmlFree = xmlMemFree;
-    gs->gs_xmlMalloc = xmlMemMalloc;
-    gs->gs_xmlMallocAtomic = xmlMemMalloc;
-    gs->gs_xmlRealloc = xmlMemRealloc;
-    gs->gs_xmlMemStrdup = xmlMemoryStrdup;
-#else
     gs->gs_xmlFree = free;
     gs->gs_xmlMalloc = malloc;
     gs->gs_xmlMallocAtomic = malloc;
     gs->gs_xmlRealloc = realloc;
     gs->gs_xmlMemStrdup = xmlPosixStrdup;
-#endif
 #endif
     gs->gs_xmlGetWarningsDefaultValue = xmlGetWarningsDefaultValueThrDef;
 #ifdef LIBXML_OUTPUT_ENABLED
@@ -907,6 +847,11 @@ XML_GLOBALS_TREE
 #undef XML_OP
 
 #ifdef LIBXML_THREAD_ENABLED
+/**
+ * xmlGetLocalRngState:
+ *
+ * Returns the local RNG state.
+ */
 unsigned *
 xmlGetLocalRngState(void) {
     if (IS_MAIN_THREAD)
@@ -984,6 +929,8 @@ xmlCheckThreadLocalStorage(void) {
 #endif
     return(0);
 }
+
+/** DOC_DISABLE */
 
 /**
  * DllMain:
@@ -1236,4 +1183,6 @@ xmlThrDefOutputBufferCreateFilenameDefault(xmlOutputBufferCreateFilenameFunc fun
 
     return(old);
 }
+
+/** DOC_ENABLE */
 

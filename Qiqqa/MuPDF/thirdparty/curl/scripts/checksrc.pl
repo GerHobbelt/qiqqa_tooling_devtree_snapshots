@@ -720,7 +720,8 @@ sub scanfile {
                     strtok|
                     v?sprintf|
                     (str|_mbs|_tcs|_wcs)n?cat|
-                    LoadLibrary(Ex)?(A|W)?)
+                    LoadLibrary(Ex)?(A|W)?|
+                    _?w?access)
                    \s*\(
                  /x) {
             checkwarn("BANNEDFUNC",
@@ -756,7 +757,7 @@ sub scanfile {
         if($istoolsrc && $l =~ /^(.*\W)(curlx?_getenv)\s*\(/x) {
             checkwarn("BANNEDFUNC",
                       $line, length($1), $file, $ol,
-                      "use of $2 is banned in curl tool, use tool_getenv.h");
+                      "use of $2 is banned in curl tool, use curl_getenv.h");
         }
 
         # scan for use of snprintf for curl-internals reasons
@@ -931,7 +932,7 @@ sub scanfile {
         checkwarn("COPYRIGHT", 1, 0, $file, "", "Missing copyright statement", 1);
     }
 
-    # COPYRIGHTYEAR is a extended warning so we must first see if it has been
+    # COPYRIGHTYEAR is an extended warning so we must first see if it has been
     # enabled in .checksrc
     if(defined($warnings{"COPYRIGHTYEAR"})) {
         # The check for updated copyrightyear is overly complicated in order to

@@ -104,13 +104,13 @@
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0027}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\projects\Windows">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\projects\Windows\VC10">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0030}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\projects\Windows\VC10\lib">
+    <Filter Include="Misc Files\projects\Windows\VC10">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files\projects\Windows\VC10\lib">
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0028}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\projects\Windows\VC10\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0031}</UniqueIdentifier>
@@ -133,89 +133,53 @@
     <Filter Include="Misc Files\projects\Windows\VC12\src">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0037}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\projects\Windows\VC14">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\projects\Windows\VC14.10">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\projects\Windows\VC14.10\lib">
+    <Filter Include="Misc Files\scripts">
       <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0038}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Misc Files\projects\Windows\VC14.10\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\projects\Windows\VC14.20">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\projects\Windows\VC14.20\lib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\projects\Windows\VC14.20\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\projects\Windows\VC14.30">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\projects\Windows\VC14.30\lib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\projects\Windows\VC14.30\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\projects\Windows\VC14\lib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\projects\Windows\VC14\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Misc Files\scripts">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Misc Files\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0051}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0039}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\vs">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0054}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0042}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\vs\vc8">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0053}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0041}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\vs\vc8\lib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0040}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc Files\winbuild">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0055}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0043}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0056}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0044}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\lib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0057}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0045}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0058}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0046}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\lib">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0059}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0047}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\lib\vauth">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0060}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0048}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\lib\vquic">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0061}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0049}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\lib\vssh">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0062}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0050}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\lib\vtls">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0063}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0051}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\scripts">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0064}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0052}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\src">
-      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0065}</UniqueIdentifier>
+      <UniqueIdentifier>{d2a97047-4937-4f7a-ab2f-4485e03f0053}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -303,9 +267,6 @@
     <ClCompile Include="../../thirdparty/curl/lib/curl_ntlm_core.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="../../thirdparty/curl/lib/curl_ntlm_wb.c">
-      <Filter>Source Files\lib</Filter>
-    </ClCompile>
     <ClCompile Include="../../thirdparty/curl/lib/curl_path.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
@@ -334,6 +295,9 @@
       <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/curl/lib/dict.c">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/curl/lib/dllmain.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/curl/lib/doh.c">
@@ -684,6 +648,9 @@
     <ClCompile Include="../../thirdparty/curl/lib/vtls/bearssl.c">
       <Filter>Source Files\lib\vtls</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/curl/lib/vtls/cipher_suite.c">
+      <Filter>Source Files\lib\vtls</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/curl/lib/vtls/gtls.c">
       <Filter>Source Files\lib\vtls</Filter>
     </ClCompile>
@@ -735,6 +702,9 @@
     <ClCompile Include="../../thirdparty/curl/src/slist_wc.c">
       <Filter>Source Files\src</Filter>
     </ClCompile>
+    <ClCompile Include="../../thirdparty/curl/src/terminal.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
     <ClCompile Include="../../thirdparty/curl/src/tool_binmode.c">
       <Filter>Source Files\src</Filter>
     </ClCompile>
@@ -754,6 +724,9 @@
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/curl/src/tool_cb_see.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="../../thirdparty/curl/src/tool_cb_soc.c">
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="../../thirdparty/curl/src/tool_cb_wrt.c">
@@ -1045,9 +1018,6 @@
       <Filter>Header Files\lib</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/curl/lib/curl_ntlm_core.h">
-      <Filter>Header Files\lib</Filter>
-    </ClInclude>
-    <ClInclude Include="../../thirdparty/curl/lib/curl_ntlm_wb.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/curl/lib/curl_path.h">
@@ -1386,6 +1356,9 @@
     <ClInclude Include="../../thirdparty/curl/lib/vtls/bearssl.h">
       <Filter>Header Files\lib\vtls</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/lib/vtls/cipher_suite.h">
+      <Filter>Header Files\lib\vtls</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/curl/lib/vtls/gtls.h">
       <Filter>Header Files\lib\vtls</Filter>
     </ClInclude>
@@ -1449,6 +1422,9 @@
     <ClInclude Include="../../thirdparty/curl/src/slist_wc.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/terminal.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
     <ClInclude Include="../../thirdparty/curl/src/tool_binmode.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
@@ -1468,6 +1444,9 @@
       <Filter>Header Files\src</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/curl/src/tool_cb_see.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="../../thirdparty/curl/src/tool_cb_soc.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
     <ClInclude Include="../../thirdparty/curl/src/tool_cb_wrt.h">
@@ -1593,6 +1572,9 @@
     <Text Include="../../thirdparty/curl/CMakeLists.txt">
       <Filter>Misc Files</Filter>
     </Text>
+    <Text Include="../../thirdparty/curl/GIT-INFO.md">
+      <Filter>Misc Files</Filter>
+    </Text>
     <Text Include="../../thirdparty/curl/LICENSES/BSD-3-Clause.txt">
       <Filter>Misc Files\LICENSES</Filter>
     </Text>
@@ -1692,10 +1674,16 @@
     <Text Include="../../thirdparty/curl/docs/DEPRECATE.md">
       <Filter>Misc Files\docs</Filter>
     </Text>
+    <Text Include="../../thirdparty/curl/docs/DISTROS.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
     <Text Include="../../thirdparty/curl/docs/DYNBUF.md">
       <Filter>Misc Files\docs</Filter>
     </Text>
     <Text Include="../../thirdparty/curl/docs/EARLY-RELEASE.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/ECH.md">
       <Filter>Misc Files\docs</Filter>
     </Text>
     <Text Include="../../thirdparty/curl/docs/EXPERIMENTAL.md">
@@ -1746,6 +1734,9 @@
     <Text Include="../../thirdparty/curl/docs/IPFS.md">
       <Filter>Misc Files\docs</Filter>
     </Text>
+    <Text Include="../../thirdparty/curl/docs/MAIL-ETIQUETTE.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
     <Text Include="../../thirdparty/curl/docs/MANUAL.md">
       <Filter>Misc Files\docs</Filter>
     </Text>
@@ -1774,6 +1765,9 @@
       <Filter>Misc Files\docs</Filter>
     </Text>
     <Text Include="../../thirdparty/curl/docs/SECURITY-ADVISORY.md">
+      <Filter>Misc Files\docs</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/SPONSORS.md">
       <Filter>Misc Files\docs</Filter>
     </Text>
     <Text Include="../../thirdparty/curl/docs/SSL-PROBLEMS.md">
@@ -2004,6 +1998,9 @@
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/dump-header.md">
       <Filter>Misc Files\docs\cmdline-opts</Filter>
     </Text>
+    <Text Include="../../thirdparty/curl/docs/cmdline-opts/ech.md">
+      <Filter>Misc Files\docs\cmdline-opts</Filter>
+    </Text>
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/egd-file.md">
       <Filter>Misc Files\docs\cmdline-opts</Filter>
     </Text>
@@ -2073,9 +2070,6 @@
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/ftp-ssl-control.md">
       <Filter>Misc Files\docs\cmdline-opts</Filter>
     </Text>
-    <Text Include="../../thirdparty/curl/docs/cmdline-opts/gen.pl">
-      <Filter>Misc Files\docs\cmdline-opts</Filter>
-    </Text>
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/get.md">
       <Filter>Misc Files\docs\cmdline-opts</Filter>
     </Text>
@@ -2140,6 +2134,9 @@
       <Filter>Misc Files\docs\cmdline-opts</Filter>
     </Text>
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/interface.md">
+      <Filter>Misc Files\docs\cmdline-opts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/cmdline-opts/ip-tos.md">
       <Filter>Misc Files\docs\cmdline-opts</Filter>
     </Text>
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/ipfs-gateway.md">
@@ -2218,6 +2215,9 @@
       <Filter>Misc Files\docs\cmdline-opts</Filter>
     </Text>
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/metalink.md">
+      <Filter>Misc Files\docs\cmdline-opts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/cmdline-opts/mptcp.md">
       <Filter>Misc Files\docs\cmdline-opts</Filter>
     </Text>
     <Text Include="../../thirdparty/curl/docs/cmdline-opts/negotiate.md">
@@ -2862,6 +2862,9 @@
     <Text Include="../../thirdparty/curl/docs/libcurl/curl_multi_wait.md">
       <Filter>Misc Files\docs\libcurl</Filter>
     </Text>
+    <Text Include="../../thirdparty/curl/docs/libcurl/curl_multi_waitfds.md">
+      <Filter>Misc Files\docs\libcurl</Filter>
+    </Text>
     <Text Include="../../thirdparty/curl/docs/libcurl/curl_multi_wakeup.md">
       <Filter>Misc Files\docs\libcurl</Filter>
     </Text>
@@ -3403,6 +3406,9 @@
       <Filter>Misc Files\docs\libcurl\opts</Filter>
     </Text>
     <Text Include="../../thirdparty/curl/docs/libcurl/opts/CURLOPT_DOH_URL.md">
+      <Filter>Misc Files\docs\libcurl\opts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/docs/libcurl/opts/CURLOPT_ECH.md">
       <Filter>Misc Files\docs\libcurl\opts</Filter>
     </Text>
     <Text Include="../../thirdparty/curl/docs/libcurl/opts/CURLOPT_EGDSOCKET.md">
@@ -4221,9 +4227,6 @@
     <Text Include="../../thirdparty/curl/lib/curl_config.h.cmake">
       <Filter>Misc Files\lib</Filter>
     </Text>
-    <Text Include="../../thirdparty/curl/lib/libcurl.plist.in">
-      <Filter>Misc Files\lib</Filter>
-    </Text>
     <Text Include="../../thirdparty/curl/lib/libcurl.vers.in">
       <Filter>Misc Files\lib</Filter>
     </Text>
@@ -4347,63 +4350,6 @@
     <Text Include="../../thirdparty/curl/projects/Windows/VC12/src/curl.vcxproj.filters">
       <Filter>Misc Files\projects\Windows\VC12\src</Filter>
     </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/">
-      <Filter>Misc Files\projects\Windows</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/lib/libcurl.tmpl">
-      <Filter>Misc Files\projects\Windows\VC14.10\lib</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/lib/libcurl.vcxproj.filters">
-      <Filter>Misc Files\projects\Windows\VC14.10\lib</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/src/curl.tmpl">
-      <Filter>Misc Files\projects\Windows\VC14.10\src</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.10/src/curl.vcxproj.filters">
-      <Filter>Misc Files\projects\Windows\VC14.10\src</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/">
-      <Filter>Misc Files\projects\Windows</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/lib/libcurl.tmpl">
-      <Filter>Misc Files\projects\Windows\VC14.20\lib</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/lib/libcurl.vcxproj.filters">
-      <Filter>Misc Files\projects\Windows\VC14.20\lib</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/src/curl.tmpl">
-      <Filter>Misc Files\projects\Windows\VC14.20\src</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.20/src/curl.vcxproj.filters">
-      <Filter>Misc Files\projects\Windows\VC14.20\src</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/">
-      <Filter>Misc Files\projects\Windows</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/lib/libcurl.tmpl">
-      <Filter>Misc Files\projects\Windows\VC14.30\lib</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/lib/libcurl.vcxproj.filters">
-      <Filter>Misc Files\projects\Windows\VC14.30\lib</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/src/curl.tmpl">
-      <Filter>Misc Files\projects\Windows\VC14.30\src</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14.30/src/curl.vcxproj.filters">
-      <Filter>Misc Files\projects\Windows\VC14.30\src</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14/lib/libcurl.tmpl">
-      <Filter>Misc Files\projects\Windows\VC14\lib</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14/lib/libcurl.vcxproj.filters">
-      <Filter>Misc Files\projects\Windows\VC14\lib</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14/src/curl.tmpl">
-      <Filter>Misc Files\projects\Windows\VC14\src</Filter>
-    </Text>
-    <Text Include="../../thirdparty/curl/projects/Windows/VC14/src/curl.vcxproj.filters">
-      <Filter>Misc Files\projects\Windows\VC14\src</Filter>
-    </Text>
     <Text Include="../../thirdparty/curl/projects/build-openssl.bat">
       <Filter>Misc Files\projects</Filter>
     </Text>
@@ -4418,6 +4364,9 @@
     </Text>
     <Text Include="../../thirdparty/curl/projects/wolfssl_override.props">
       <Filter>Misc Files\projects</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/renovate.json">
+      <Filter>Misc Files</Filter>
     </Text>
     <Text Include="../../thirdparty/curl/scripts/Makefile.am">
       <Filter>Misc Files\scripts</Filter>
@@ -4462,6 +4411,9 @@
       <Filter>Misc Files\scripts</Filter>
     </Text>
     <Text Include="../../thirdparty/curl/scripts/release-notes.pl">
+      <Filter>Misc Files\scripts</Filter>
+    </Text>
+    <Text Include="../../thirdparty/curl/scripts/release-tools.sh">
       <Filter>Misc Files\scripts</Filter>
     </Text>
     <Text Include="../../thirdparty/curl/scripts/singleuse.pl">

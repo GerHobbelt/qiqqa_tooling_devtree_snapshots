@@ -22,7 +22,6 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{ac0bda38-89b9-4703-a77d-8049ac3a0d04}</ProjectGuid>
-    <RootNamespace>libtesseract</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -73,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
     <CustomBuildAfterTargets>
@@ -82,7 +81,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
     <CustomBuildAfterTargets>
     </CustomBuildAfterTargets>
@@ -90,7 +89,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
     <CustomBuildAfterTargets>
     </CustomBuildAfterTargets>
@@ -98,7 +97,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\</OutDir>
-    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(RootNamespace)-$(ConfigurationType)-$(ProjectName)\</IntDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)-$(CharacterSet)-$(PlatformArchitecture)bit-$(PlatformShortname)\$(ConfigurationType)-$(ProjectName)\</IntDir>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
     <CustomBuildAfterTargets>
     </CustomBuildAfterTargets>
@@ -117,7 +116,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4100;4127;4180;4206;4244;4267;4514;4623;4625;4626;4710;4711;4820;4946;5026;5027;5038;5045;5105;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <SupportJustMyCode>false</SupportJustMyCode>
@@ -135,16 +134,16 @@
       <EnableUnitySupport>true</EnableUnitySupport>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
 </ItemDefinitionGroup>
 <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Custom</Optimization>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTESSERACT;TESSERACT_STATICLIB;HAVE_TESSERACT_CONFIG_H;HAVE_MUPDF;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SPDLOG_FMT_EXTERNAL;BUILD_MONOLITHIC;BUILDING_LIBTESSERACT;TESSERACT_STATICLIB;HAVE_TESSERACT_CONFIG_H;HAVE_MUPDF;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/tesseract;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../thirdparty/tesseract/src/training/pango;../../thirdparty/tesseract/src/training/unicharset;../../thirdparty/libtiff/libtiff;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../scripts/libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pango;../../thirdparty/owemdjee/unicode-icu/icu4c/source/common;../../thirdparty/owemdjee/unicode-icu/icu4c/source/i18n;../../thirdparty/harfbuzz/src;../../thirdparty/owemdjee/fontconfig;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/tesseract;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../thirdparty/tesseract/src/training/pango;../../thirdparty/tesseract/src/training/unicharset;../../thirdparty/libtiff/libtiff;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../scripts/libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pango;../../thirdparty/owemdjee/unicode-icu/icu4c/source/common;../../thirdparty/owemdjee/unicode-icu/icu4c/source/i18n;../../thirdparty/harfbuzz/src;../../thirdparty/owemdjee/fontconfig;../../thirdparty/owemdjee/filesystem/include;../../thirdparty/owemdjee/spdlog/include;../../thirdparty/owemdjee/libdiagnostics/include;../../thirdparty/owemdjee/libassert/include;../../thirdparty/owemdjee/libparameters/include;../../scripts/result-cpp/include;../../thirdparty/tesseract/tessdata/html-styling;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -153,6 +152,15 @@
       <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
       <RemoveUnreferencedCodeData>true</RemoveUnreferencedCodeData>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <OpenMPSupport>false</OpenMPSupport>
+      <UseStandardPreprocessor>true</UseStandardPreprocessor>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+      <TreatAngleIncludeAsExternal>true</TreatAngleIncludeAsExternal>
+      <TreatSpecificWarningsAsErrors>4800</TreatSpecificWarningsAsErrors>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -162,7 +170,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/tesseract;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../thirdparty/tesseract/src/training/pango;../../thirdparty/tesseract/src/training/unicharset;../../thirdparty/libtiff/libtiff;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../scripts/libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pango;../../thirdparty/owemdjee/unicode-icu/icu4c/source/common;../../thirdparty/owemdjee/unicode-icu/icu4c/source/i18n;../../thirdparty/harfbuzz/src;../../thirdparty/owemdjee/fontconfig;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/tesseract;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../thirdparty/tesseract/src/training/pango;../../thirdparty/tesseract/src/training/unicharset;../../thirdparty/libtiff/libtiff;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../scripts/libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pango;../../thirdparty/owemdjee/unicode-icu/icu4c/source/common;../../thirdparty/owemdjee/unicode-icu/icu4c/source/i18n;../../thirdparty/harfbuzz/src;../../thirdparty/owemdjee/fontconfig;../../thirdparty/owemdjee/filesystem/include;../../thirdparty/owemdjee/spdlog/include;../../thirdparty/owemdjee/libdiagnostics/include;../../thirdparty/owemdjee/libassert/include;../../thirdparty/owemdjee/libparameters/include;../../scripts/result-cpp/include;../../thirdparty/tesseract/tessdata/html-styling;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <CustomBuildStep>
       <Command>
@@ -193,13 +201,22 @@
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTESSERACT;TESSERACT_STATICLIB;HAVE_TESSERACT_CONFIG_H;HAVE_MUPDF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SPDLOG_FMT_EXTERNAL;BUILD_MONOLITHIC;BUILDING_LIBTESSERACT;TESSERACT_STATICLIB;HAVE_TESSERACT_CONFIG_H;HAVE_MUPDF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/tesseract;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../thirdparty/tesseract/src/training/pango;../../thirdparty/tesseract/src/training/unicharset;../../thirdparty/libtiff/libtiff;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../scripts/libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pango;../../thirdparty/owemdjee/unicode-icu/icu4c/source/common;../../thirdparty/owemdjee/unicode-icu/icu4c/source/i18n;../../thirdparty/harfbuzz/src;../../thirdparty/owemdjee/fontconfig;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/tesseract;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../thirdparty/tesseract/src/training/pango;../../thirdparty/tesseract/src/training/unicharset;../../thirdparty/libtiff/libtiff;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../scripts/libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pango;../../thirdparty/owemdjee/unicode-icu/icu4c/source/common;../../thirdparty/owemdjee/unicode-icu/icu4c/source/i18n;../../thirdparty/harfbuzz/src;../../thirdparty/owemdjee/fontconfig;../../thirdparty/owemdjee/filesystem/include;../../thirdparty/owemdjee/spdlog/include;../../thirdparty/owemdjee/libdiagnostics/include;../../thirdparty/owemdjee/libassert/include;../../thirdparty/owemdjee/libparameters/include;../../scripts/result-cpp/include;../../thirdparty/tesseract/tessdata/html-styling;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <OpenMPSupport>false</OpenMPSupport>
+      <UseStandardPreprocessor>true</UseStandardPreprocessor>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+      <TreatAngleIncludeAsExternal>true</TreatAngleIncludeAsExternal>
+      <TreatSpecificWarningsAsErrors>4800</TreatSpecificWarningsAsErrors>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -209,7 +226,7 @@
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/tesseract;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../thirdparty/tesseract/src/training/pango;../../thirdparty/tesseract/src/training/unicharset;../../thirdparty/libtiff/libtiff;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../scripts/libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pango;../../thirdparty/owemdjee/unicode-icu/icu4c/source/common;../../thirdparty/owemdjee/unicode-icu/icu4c/source/i18n;../../thirdparty/harfbuzz/src;../../thirdparty/owemdjee/fontconfig;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/tesseract;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../thirdparty/tesseract/src/training/pango;../../thirdparty/tesseract/src/training/unicharset;../../thirdparty/libtiff/libtiff;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../scripts/libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pango;../../thirdparty/owemdjee/unicode-icu/icu4c/source/common;../../thirdparty/owemdjee/unicode-icu/icu4c/source/i18n;../../thirdparty/harfbuzz/src;../../thirdparty/owemdjee/fontconfig;../../thirdparty/owemdjee/filesystem/include;../../thirdparty/owemdjee/spdlog/include;../../thirdparty/owemdjee/libdiagnostics/include;../../thirdparty/owemdjee/libassert/include;../../thirdparty/owemdjee/libparameters/include;../../scripts/result-cpp/include;../../thirdparty/tesseract/tessdata/html-styling;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <CustomBuildStep>
       <Command>
@@ -240,13 +257,22 @@
     <ClCompile>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <Optimization>Custom</Optimization>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTESSERACT;TESSERACT_STATICLIB;HAVE_TESSERACT_CONFIG_H;HAVE_MUPDF;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SPDLOG_FMT_EXTERNAL;BUILD_MONOLITHIC;BUILDING_LIBTESSERACT;TESSERACT_STATICLIB;HAVE_TESSERACT_CONFIG_H;HAVE_MUPDF;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/tesseract;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../thirdparty/tesseract/src/training/pango;../../thirdparty/tesseract/src/training/unicharset;../../thirdparty/libtiff/libtiff;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../scripts/libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pango;../../thirdparty/owemdjee/unicode-icu/icu4c/source/common;../../thirdparty/owemdjee/unicode-icu/icu4c/source/i18n;../../thirdparty/harfbuzz/src;../../thirdparty/owemdjee/fontconfig;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/tesseract;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../thirdparty/tesseract/src/training/pango;../../thirdparty/tesseract/src/training/unicharset;../../thirdparty/libtiff/libtiff;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../scripts/libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pango;../../thirdparty/owemdjee/unicode-icu/icu4c/source/common;../../thirdparty/owemdjee/unicode-icu/icu4c/source/i18n;../../thirdparty/harfbuzz/src;../../thirdparty/owemdjee/fontconfig;../../thirdparty/owemdjee/filesystem/include;../../thirdparty/owemdjee/spdlog/include;../../thirdparty/owemdjee/libdiagnostics/include;../../thirdparty/owemdjee/libassert/include;../../thirdparty/owemdjee/libparameters/include;../../scripts/result-cpp/include;../../thirdparty/tesseract/tessdata/html-styling;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <OpenMPSupport>false</OpenMPSupport>
+      <UseStandardPreprocessor>true</UseStandardPreprocessor>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+      <TreatAngleIncludeAsExternal>true</TreatAngleIncludeAsExternal>
+      <TreatSpecificWarningsAsErrors>4800</TreatSpecificWarningsAsErrors>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -256,7 +282,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/tesseract;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../thirdparty/tesseract/src/training/pango;../../thirdparty/tesseract/src/training/unicharset;../../thirdparty/libtiff/libtiff;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../scripts/libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pango;../../thirdparty/owemdjee/unicode-icu/icu4c/source/common;../../thirdparty/owemdjee/unicode-icu/icu4c/source/i18n;../../thirdparty/harfbuzz/src;../../thirdparty/owemdjee/fontconfig;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/tesseract;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../thirdparty/tesseract/src/training/pango;../../thirdparty/tesseract/src/training/unicharset;../../thirdparty/libtiff/libtiff;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../scripts/libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pango;../../thirdparty/owemdjee/unicode-icu/icu4c/source/common;../../thirdparty/owemdjee/unicode-icu/icu4c/source/i18n;../../thirdparty/harfbuzz/src;../../thirdparty/owemdjee/fontconfig;../../thirdparty/owemdjee/filesystem/include;../../thirdparty/owemdjee/spdlog/include;../../thirdparty/owemdjee/libdiagnostics/include;../../thirdparty/owemdjee/libassert/include;../../thirdparty/owemdjee/libparameters/include;../../scripts/result-cpp/include;../../thirdparty/tesseract/tessdata/html-styling;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <CustomBuildStep>
       <Command>
@@ -287,13 +313,22 @@
     <ClCompile>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>BUILD_MONOLITHIC;BUILDING_LIBTESSERACT;TESSERACT_STATICLIB;HAVE_TESSERACT_CONFIG_H;HAVE_MUPDF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SPDLOG_FMT_EXTERNAL;BUILD_MONOLITHIC;BUILDING_LIBTESSERACT;TESSERACT_STATICLIB;HAVE_TESSERACT_CONFIG_H;HAVE_MUPDF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/tesseract;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../thirdparty/tesseract/src/training/pango;../../thirdparty/tesseract/src/training/unicharset;../../thirdparty/libtiff/libtiff;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../scripts/libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pango;../../thirdparty/owemdjee/unicode-icu/icu4c/source/common;../../thirdparty/owemdjee/unicode-icu/icu4c/source/i18n;../../thirdparty/harfbuzz/src;../../thirdparty/owemdjee/fontconfig;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/tesseract;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../thirdparty/tesseract/src/training/pango;../../thirdparty/tesseract/src/training/unicharset;../../thirdparty/libtiff/libtiff;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../scripts/libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pango;../../thirdparty/owemdjee/unicode-icu/icu4c/source/common;../../thirdparty/owemdjee/unicode-icu/icu4c/source/i18n;../../thirdparty/harfbuzz/src;../../thirdparty/owemdjee/fontconfig;../../thirdparty/owemdjee/filesystem/include;../../thirdparty/owemdjee/spdlog/include;../../thirdparty/owemdjee/libdiagnostics/include;../../thirdparty/owemdjee/libassert/include;../../thirdparty/owemdjee/libparameters/include;../../scripts/result-cpp/include;../../thirdparty/tesseract/tessdata/html-styling;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <OpenMPSupport>false</OpenMPSupport>
+      <UseStandardPreprocessor>true</UseStandardPreprocessor>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+      <TreatAngleIncludeAsExternal>true</TreatAngleIncludeAsExternal>
+      <TreatSpecificWarningsAsErrors>4800</TreatSpecificWarningsAsErrors>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -303,7 +338,7 @@
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/tesseract;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../thirdparty/tesseract/src/training/pango;../../thirdparty/tesseract/src/training/unicharset;../../thirdparty/libtiff/libtiff;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../scripts/libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pango;../../thirdparty/owemdjee/unicode-icu/icu4c/source/common;../../thirdparty/owemdjee/unicode-icu/icu4c/source/i18n;../../thirdparty/harfbuzz/src;../../thirdparty/owemdjee/fontconfig;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include/system-override;.;../../include;../../scripts/tesseract;../../scripts/leptonica/include;../../thirdparty/tesseract/include;../../thirdparty/tesseract/src/api;../../thirdparty/tesseract/src/arch;../../thirdparty/tesseract/src/ccmain;../../thirdparty/tesseract/src/ccstruct;../../thirdparty/tesseract/src/ccutil;../../thirdparty/tesseract/src/classify;../../thirdparty/tesseract/src/dict;../../thirdparty/tesseract/src/lstm;../../thirdparty/tesseract/src/textord;../../thirdparty/tesseract/src/viewer;../../thirdparty/tesseract/src/wordrec;../../thirdparty/tesseract/src/cutil;../../thirdparty/tesseract/src/training/pango;../../thirdparty/tesseract/src/training/unicharset;../../thirdparty/libtiff/libtiff;../../thirdparty/curl/include;../../thirdparty/curl/lib;../../scripts/libtiff;../../thirdparty/owemdjee/libarchive/libarchive;../../thirdparty/owemdjee/fmt/include;../../thirdparty/owemdjee/plf_nanotimer;../../thirdparty/owemdjee/pango;../../thirdparty/owemdjee/unicode-icu/icu4c/source/common;../../thirdparty/owemdjee/unicode-icu/icu4c/source/i18n;../../thirdparty/harfbuzz/src;../../thirdparty/owemdjee/fontconfig;../../thirdparty/owemdjee/filesystem/include;../../thirdparty/owemdjee/spdlog/include;../../thirdparty/owemdjee/libdiagnostics/include;../../thirdparty/owemdjee/libassert/include;../../thirdparty/owemdjee/libparameters/include;../../scripts/result-cpp/include;../../thirdparty/tesseract/tessdata/html-styling;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <CustomBuildStep>
       <Command>
@@ -432,13 +467,12 @@
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/elst.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/elst2.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/errcode.cpp" />
+    <ClCompile Include="../../thirdparty/tesseract/src/ccutil/filepath.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/fopenutf8.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/indexmapbidi.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/mainblk.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/memcost_estimate.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/params.cpp" />
-    <ClCompile Include="../../thirdparty/tesseract/src/ccutil/paramvector.cpp" />
-    <ClCompile Include="../../thirdparty/tesseract/src/ccutil/paramvectors.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/scanutils.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/serialis.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/ccutil/tessdatamanager.cpp" />
@@ -508,7 +542,6 @@
     <ClCompile Include="../../thirdparty/tesseract/src/lstm/stridemap.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/lstm/tfnetwork.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/lstm/weightmatrix.cpp" />
-    <ClCompile Include="../../thirdparty/tesseract/src/opencl/openclwrapper.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/svpaint.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/tesseract.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/textord/alignedblob.cpp" />
@@ -618,6 +651,10 @@
     <ClCompile Include="../../thirdparty/tesseract/src/wordrec/tface.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/wordrec/wordclass.cpp" />
     <ClCompile Include="../../thirdparty/tesseract/src/wordrec/wordrec.cpp" />
+    <ClCompile Include="../../thirdparty/tesseract/tessdata/html-styling/out/HtmlResourceFileManager.cpp" />
+    <ClCompile Include="../../thirdparty/tesseract/tessdata/html-styling/out/diag-report.cpp" />
+    <ClCompile Include="../../thirdparty/tesseract/tessdata/html-styling/out/modern-normalize.cpp" />
+    <ClCompile Include="../../thirdparty/tesseract/tessdata/html-styling/out/normalize.cpp" />
     <ClInclude Include="../../thirdparty/tesseract/include/glib-object.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/glib.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/pango/pango-features.h" />
@@ -628,15 +665,20 @@
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/capi_training_tools.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/debugheap.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/export.h" />
+    <ClInclude Include="../../thirdparty/tesseract/include/tesseract/filepath.h" />
+    <ClInclude Include="../../thirdparty/tesseract/include/tesseract/fileptr.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/fmt-support.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/ltrresultiterator.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/memcost_estimate.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/ocrclass.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/osdetect.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/pageiterator.h" />
+    <ClInclude Include="../../thirdparty/tesseract/include/tesseract/params.h" />
+    <ClInclude Include="../../thirdparty/tesseract/include/tesseract/preparation.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/publictypes.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/renderer.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/resultiterator.h" />
+    <ClInclude Include="../../thirdparty/tesseract/include/tesseract/tprintf.h" />
     <ClInclude Include="../../thirdparty/tesseract/include/tesseract/unichar.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/api/pdf_ttf.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/arch/dotproduct.h" />
@@ -711,6 +753,7 @@
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/fopenutf8.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/genericheap.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/genericvector.h" />
+    <ClInclude Include="../../thirdparty/tesseract/src/ccutil/global_params.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/helpers.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/host.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/indexmapbidi.h" />
@@ -719,6 +762,8 @@
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/lsterr.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/object_cache.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/params.h" />
+    <ClInclude Include="../../thirdparty/tesseract/src/ccutil/pathutils.h" />
+    <ClInclude Include="../../thirdparty/tesseract/src/ccutil/porting.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/qrsequence.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/scanutils.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/serialis.h" />
@@ -726,7 +771,6 @@
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/tessdatamanager.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/tesstypes.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/thread_pool.hpp" />
-    <ClInclude Include="../../thirdparty/tesseract/src/ccutil/tprintf.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/unicharcompress.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/unicharmap.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/ccutil/unicharset.h" />
@@ -788,8 +832,6 @@
     <ClInclude Include="../../thirdparty/tesseract/src/lstm/tfnetwork.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/lstm/tfnetwork.pb.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/lstm/weightmatrix.h" />
-    <ClInclude Include="../../thirdparty/tesseract/src/opencl/oclkernels.h" />
-    <ClInclude Include="../../thirdparty/tesseract/src/opencl/openclwrapper.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/textord/alignedblob.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/textord/baselinedetect.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/textord/bbgrid.h" />
@@ -878,6 +920,10 @@
     <ClInclude Include="../../thirdparty/tesseract/src/wordrec/plotedges.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/wordrec/render.h" />
     <ClInclude Include="../../thirdparty/tesseract/src/wordrec/wordrec.h" />
+    <ClInclude Include="../../thirdparty/tesseract/tessdata/html-styling/out/HtmlResourceFileManager.h" />
+    <ClInclude Include="../../thirdparty/tesseract/tessdata/html-styling/out/diag-report.h" />
+    <ClInclude Include="../../thirdparty/tesseract/tessdata/html-styling/out/modern-normalize.h" />
+    <ClInclude Include="../../thirdparty/tesseract/tessdata/html-styling/out/normalize.h" />
     <Font Include="../../thirdparty/tesseract/tessdata/pdf.ttf" />
     <Text Include="../../thirdparty/tesseract/AUTHORS" />
     <Text Include="../../thirdparty/tesseract/CMakeLists.txt" />
@@ -980,6 +1026,10 @@
     <Text Include="../../thirdparty/tesseract/tessdata/eng.traineddata" />
     <Text Include="../../thirdparty/tesseract/tessdata/eng.user-patterns" />
     <Text Include="../../thirdparty/tesseract/tessdata/eng.user-words" />
+    <Text Include="../../thirdparty/tesseract/tessdata/html-styling/regenerate.sh" />
+    <Text Include="../../thirdparty/tesseract/tessdata/html-styling/src/diag-report.css" />
+    <Text Include="../../thirdparty/tesseract/tessdata/html-styling/src/modern-normalize.css" />
+    <Text Include="../../thirdparty/tesseract/tessdata/html-styling/src/normalize.css" />
     <Text Include="../../thirdparty/tesseract/tessdata/osd.traineddata" />
     <Text Include="../../thirdparty/tesseract/tessdata/tessconfigs/Makefile.am" />
     <Text Include="../../thirdparty/tesseract/tessdata/tessconfigs/batch.nochop" />

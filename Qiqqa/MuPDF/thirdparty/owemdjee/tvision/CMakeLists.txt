@@ -6,7 +6,7 @@
 # * TV_USE_STATIC_RTL (default OFF) to link against the static version of the
 #   runtime library (MSVC only).
 # * TV_REDUCE_APP_SIZE (default OFF) to reduce executable size by asking the
-#   linker to strip out unused funcions and data. This affects the library's PUBLIC
+#   linker to strip out unused functions and data. This affects the library's PUBLIC
 #   linker flags.
 # * TV_OPTIMIZE_BUILD (default ON) to build with Precompiled Headers (CMake 3.16
 #   or newer).
@@ -89,7 +89,7 @@ function(tv_add_private_includes target)
             "${PROJECT_SOURCE_DIR}/include/tvision/compat/windows"
         )
     endif()
-    if (NOT WIN32 AND NOT (CMAKE_SYSTEM_NAME STREQUAL "Linux"))
+    if (NOT WIN32 AND NOT (CMAKE_SYSTEM_NAME STREQUAL "Linux" OR CMAKE_SYSTEM_NAME STREQUAL "Android"))
         target_include_directories(${target} PRIVATE
             "${PROJECT_SOURCE_DIR}/include/tvision/compat/malloc"
         )
@@ -109,9 +109,11 @@ function(tv_set_warnings target)
     else()
         target_compile_options(${target} PRIVATE
             -Wall
+            -Wextra
             -Wno-deprecated
             -Wno-unknown-pragmas
             -Wno-pragmas
+            -Wno-missing-field-initializers
         )
     endif()
 endfunction()
@@ -133,7 +135,7 @@ elseif (TV_USE_STATIC_RTL)
     set(TV_USE_STATIC_RTL OFF)
 endif()
 
-option(TV_REDUCE_APP_SIZE "Strip out unused funcions and data from executables" OFF)
+option(TV_REDUCE_APP_SIZE "Strip out unused functions and data from executables" OFF)
 if ((CMAKE_VERSION VERSION_LESS "3.13.0") AND TV_REDUCE_APP_SIZE)
     tv_message(WARNING "'TV_REDUCE_APP_SIZE' requested but only available in CMake 3.13.0 or newer.")
     set(TV_REDUCE_APP_SIZE OFF)
@@ -148,6 +150,8 @@ endif()
 option(TV_OPTIMIZE_BUILD "Use CMake's Precompiled Headers" ON)
 
 option(TV_BUILD_AVSCOLOR "Build AviSynth TermColor plugin" OFF)
+
+include(GNUInstallDirs)
 
 tv_message_mp(STATUS "Install path: ${CMAKE_INSTALL_PREFIX}")
 tv_message(STATUS "Build Examples: ${TV_BUILD_EXAMPLES}")

@@ -1,3 +1,25 @@
+// Copyright (C) 2023-2024 Artifex Software, Inc.
+//
+// This file is part of MuPDF.
+//
+// MuPDF is free software: you can redistribute it and/or modify it under the
+// terms of the GNU Affero General Public License as published by the Free
+// Software Foundation, either version 3 of the License, or (at your option)
+// any later version.
+//
+// MuPDF is distributed in the hope that it will be useful, but WITHOUT ANY
+// WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+// FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+// details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with MuPDF. If not, see <https://www.gnu.org/licenses/agpl-3.0.en.html>
+//
+// Alternative licensing terms are available from the licensor.
+// For commercial licensing, see <https://www.artifex.com/> or contact
+// Artifex Software, Inc., 39 Mesa Street, Suite 108A, San Francisco,
+// CA 94129, USA, for further information.
+
 #include "mupdf/fitz.h"
 #include "html-imp.h"
 
@@ -795,7 +817,7 @@ collate_t_content(fz_context *ctx, fz_xml *top)
 				val = fz_strdup(ctx, s);
 			else
 			{
-				char *val2;
+				char *val2 = NULL;
 				size_t z1 = strlen(val);
 				size_t z2 = strlen(s) + 1;
 				fz_try(ctx)
@@ -807,6 +829,7 @@ collate_t_content(fz_context *ctx, fz_xml *top)
 					fz_free(ctx, val);
 					fz_rethrow(ctx);
 				}
+				assert(val2 != NULL);
 				memcpy(val2, val, z1);
 				memcpy(val2 + z1, s, z2);
 				fz_free(ctx, val);
@@ -882,6 +905,7 @@ load_shared_strings(fz_context *ctx, fz_archive *arch, fz_xml *rels, doc_info *i
 
 	fz_var(xml);
 	fz_var(str);
+	fz_var(resolved);
 
 	fz_try(ctx)
 	{
@@ -931,6 +955,7 @@ load_footnotes(fz_context *ctx, fz_archive *arch, fz_xml *rels, doc_info *info, 
 
 	fz_var(xml);
 	fz_var(str);
+	fz_var(resolved);
 
 	fz_try(ctx)
 	{
@@ -1070,6 +1095,8 @@ process_office_document_properties(fz_context *ctx, fz_archive *arch, const char
 {
 	fz_xml *xml = NULL;
 	char *title;
+
+	fz_var(xml);
 
 	fz_try(ctx)
 	{
@@ -1225,7 +1252,7 @@ static const fz_htdoc_format_t fz_htdoc_office =
 };
 
 static fz_document *
-office_open_document(fz_context *ctx, fz_stream *file, fz_stream *accel, fz_archive *zip)
+office_open_document(fz_context *ctx, const fz_document_handler *handler, fz_stream *file, fz_stream *accel, fz_archive *zip)
 {
 	return fz_htdoc_open_document_with_stream_and_dir(ctx, file, zip, &fz_htdoc_office);
 }
@@ -1254,7 +1281,7 @@ static const char *office_mimetypes[] =
 };
 
 static int
-office_recognize_doc_content(fz_context *ctx, fz_stream *stream, fz_archive *zip)
+office_recognize_doc_content(fz_context *ctx, const fz_document_handler *handler, fz_stream *stream, fz_archive *zip)
 {
 	fz_archive *arch = NULL;
 	int ret = 0;

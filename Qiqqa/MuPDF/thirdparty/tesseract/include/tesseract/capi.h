@@ -169,6 +169,7 @@ TESS_API TessResultRenderer *TessHOcrRendererCreate(const char *outputbase);
 TESS_API TessResultRenderer *TessHOcrRendererCreate2(const char *outputbase,
                                                      BOOL font_info);
 TESS_API TessResultRenderer *TessAltoRendererCreate(const char *outputbase);
+TESS_API TessResultRenderer *TessPAGERendererCreate(const char *outputbase);
 TESS_API TessResultRenderer *TessTsvRendererCreate(const char *outputbase);
 TESS_API TessResultRenderer *TessPDFRendererCreate(const char *outputbase,
                                                    const char *datadir,
@@ -198,8 +199,6 @@ TESS_API int TessResultRendererImageNum(TessResultRenderer *renderer);
 
 TESS_API TessBaseAPI *TessBaseAPICreate();
 TESS_API void TessBaseAPIDelete(TessBaseAPI *handle);
-
-TESS_API size_t TessBaseAPIGetOpenCLDevice(TessBaseAPI *handle, void **device);
 
 TESS_API void TessBaseAPISetInputName(TessBaseAPI *handle, const char *name);
 TESS_API const char *TessBaseAPIGetInputName(TessBaseAPI *handle);
@@ -236,7 +235,7 @@ TESS_API BOOL TessBaseAPIDumpVariablesToFile(const TessBaseAPI *handle,
 
 TESS_API int TessBaseAPIInit1(TessBaseAPI *handle, const char *datapath,
                               const char *language, TessOcrEngineMode oem,
-                              const char **configs, size_t configs_size);
+                              const char **configs, int configs_size);
 TESS_API int TessBaseAPIInit2(TessBaseAPI *handle, const char *datapath,
                               const char *language, TessOcrEngineMode oem);
 TESS_API int TessBaseAPIInit3(TessBaseAPI *handle, const char *datapath,
@@ -244,14 +243,14 @@ TESS_API int TessBaseAPIInit3(TessBaseAPI *handle, const char *datapath,
 
 TESS_API int TessBaseAPIInit4(TessBaseAPI *handle, const char *datapath,
                               const char *language, TessOcrEngineMode mode,
-                              const char **configs, size_t configs_size, const char **vars_vec,
-                              const char **vars_values, size_t vars_vec_size,
+                              const char **configs, int configs_size, char **vars_vec,
+                              char **vars_values, size_t vars_vec_size,
                               BOOL set_only_non_debug_params);
 
 TESS_API int TessBaseAPIInit5(TessBaseAPI *handle, const char *data, int data_size,
                               const char *language, TessOcrEngineMode mode,
-                              const char **configs, size_t configs_size, const char **vars_vec,
-                              const char **vars_values, size_t vars_vec_size,
+                              const char **configs, int configs_size, char **vars_vec,
+                              char **vars_values, size_t vars_vec_size,
                               BOOL set_only_non_debug_params);
 
 TESS_API const char *TessBaseAPIGetInitLanguagesAsString(
@@ -342,6 +341,7 @@ TESS_API char *TessBaseAPIGetUTF8Text(TessBaseAPI *handle);
 TESS_API char *TessBaseAPIGetHOCRText(TessBaseAPI *handle, int page_number);
 
 TESS_API char *TessBaseAPIGetAltoText(TessBaseAPI *handle, int page_number);
+TESS_API char *TessBaseAPIGetPAGEText(TessBaseAPI *handle, int page_number);
 TESS_API char *TessBaseAPIGetTsvText(TessBaseAPI *handle, int page_number);
 
 TESS_API char *TessBaseAPIGetBoxText(TessBaseAPI *handle, int page_number);

@@ -100,6 +100,13 @@ struct TIFFOffsetAndDirNumber
 };
 typedef struct TIFFOffsetAndDirNumber TIFFOffsetAndDirNumber;
 
+typedef union
+{
+    TIFFHeaderCommon common;
+    TIFFHeaderClassic classic;
+    TIFFHeaderBig big;
+} TIFFHeaderUnion;
+
 struct tiff {
     char*                tif_name;         /* name of open file */
     int                  tif_fd;           /* open file descriptor */
@@ -140,19 +147,17 @@ struct tiff {
     int tif_setdirectory_force_absolute; /* switch between relative and absolute
                                             stepping in TIFFSetDirectory() */
     TIFFDirectory tif_dir;               /* internal rep of current directory */
-    TIFFDirectory        tif_customdir;    /* custom IFDs are separated from the main ones */
-    union {
-        TIFFHeaderCommon common;
-        TIFFHeaderClassic classic;
-        TIFFHeaderBig big;
-    } tif_header;
-    uint16_t             tif_header_size;  /* file's header block and its length */
-    uint32_t             tif_row;          /* current scanline */
-    tdir_t               tif_curdir;         /* current directory (index) */
-    uint32_t             tif_curstrip;     /* current strip for read/write */
-    uint64_t             tif_curoff;       /* current offset for read/write */
-    uint64_t             tif_lastvalidoff; /* last valid offset allowed for rewrite in place. Used only by TIFFAppendToStrip() */
-    uint64_t             tif_dataoff;      /* current offset for writing dir */
+    TIFFDirectory
+        tif_customdir; /* custom IFDs are separated from the main ones */
+    TIFFHeaderUnion tif_header; /* file's header block Classic/BigTIFF union */
+    uint16_t tif_header_size;   /* file's header block and its length */
+    uint32_t tif_row;           /* current scanline */
+    tdir_t tif_curdir;          /* current directory (index) */
+    uint32_t tif_curstrip;      /* current strip for read/write */
+    uint64_t tif_curoff;        /* current offset for read/write */
+    uint64_t tif_lastvalidoff;  /* last valid offset allowed for rewrite in
+                                   place. Used only by TIFFAppendToStrip() */
+    uint64_t tif_dataoff;       /* current offset for writing dir (IFD) */
     /* SubIFD support */
     uint16_t             tif_nsubifd;      /* remaining subifds to write */
     uint64_t             tif_subifdoff;    /* offset for patching SubIFD link */
@@ -225,6 +230,8 @@ struct tiff {
     TIFFErrorHandlerExtR  tif_warnhandler;
     void*                 tif_warnhandler_user_data;
     tmsize_t              tif_max_single_mem_alloc; /* in bytes. 0 for unlimited */
+    tmsize_t              tif_max_cumulated_mem_alloc; /* in bytes. 0 for unlimited */
+    tmsize_t              tif_cur_cumulated_mem_alloc; /* in bytes */
 };
 
 struct TIFFOpenOptions
@@ -234,6 +241,7 @@ struct TIFFOpenOptions
     TIFFErrorHandlerExtR warnhandler; /* may be NULL */
     void*                warnhandler_user_data; /* may be NULL */
     tmsize_t             max_single_mem_alloc; /* in bytes. 0 for unlimited */
+    tmsize_t             max_cumulated_mem_alloc;  /* in bytes. 0 for unlimited */
 };
 
 #define isPseudoTag(t) (t > 0xffff)            /* is tag value normal or pseudo */
@@ -317,8 +325,7 @@ struct TIFFOpenOptions
 #  define ftell(stream,offset,whence)  ftello(stream,offset,whence)
 #endif
 #endif
-#if defined(__WIN32__) && \
-        !(defined(_MSC_VER) && _MSC_VER < 1400) && \
+#if defined(_WIN32) &&                                                         \
         !(defined(__MSVCRT_VERSION__) && __MSVCRT_VERSION__ < 0x800)
 typedef unsigned int TIFFIOSize_t;
 #define _TIFF_lseek_f(fildes,offset,whence)  _lseeki64(fildes,/* __int64 */ offset,whence)
@@ -404,9 +411,6 @@ extern tmsize_t _TIFFMultiplySSize(TIFF*, tmsize_t, tmsize_t, const char*);
 extern tmsize_t _TIFFCastUInt64ToSSize(TIFF*, uint64_t, const char*);
 extern void* _TIFFCheckMalloc(TIFF*, tmsize_t, tmsize_t, const char*);
 extern void* _TIFFCheckRealloc(TIFF*, void*, tmsize_t, tmsize_t, const char*);
-
-extern double _TIFFUInt64ToDouble(uint64_t);
-extern float _TIFFUInt64ToFloat(uint64_t);
 
 extern float _TIFFClampDoubleToFloat(double);
 extern uint32_t _TIFFClampDoubleToUInt32(double);
