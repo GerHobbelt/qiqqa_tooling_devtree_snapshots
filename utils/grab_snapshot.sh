@@ -1735,6 +1735,7 @@ find       -name '.dirstamp'   -type f -delete
 # plus some last-minute compensations, filling up the potholes left by the bulk /XF & /XD rejections:
 for f in                                                                                                   \
     /z/lib/tooling/qiqqa/MuPDF/platform/win32/*fuzz*proj*                                                  \
+    /z/lib/tooling/qiqqa/MuPDF/platform/win32/*RapidFuzz*proj*                                             \
     /z/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/libeigen/Eigen/src/Core/Fuzzy*                          \
     /z/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/libeigen/Eigen/src/SparseCore/SparseFuzzy*              \
 ; do
