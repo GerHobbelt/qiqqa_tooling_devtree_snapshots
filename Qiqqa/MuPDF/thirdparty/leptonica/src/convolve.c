@@ -253,13 +253,13 @@ PIX       *pixd, *pixt;
         } else {
             L_WARNING("pixacc not 32 bpp; making new one\n", __func__);
 			if ((pixt = pixBlockconvAccum(pixs)) == NULL) {
-				pixDestroy(&pixs);
+		if (edge_fix) pixDestroy(&pixs);
 				return (PIX*)ERROR_PTR("pixt not made", __func__, NULL);
 			}
         }
     } else {
 		if ((pixt = pixBlockconvAccum(pixs)) == NULL) {
-			pixDestroy(&pixs);
+		if (edge_fix) pixDestroy(&pixs);
 			return (PIX*)ERROR_PTR("pixt not made", __func__, NULL);
 		}
     }
@@ -279,11 +279,13 @@ PIX       *pixd, *pixt;
 
     pixDestroy(&pixt);
 	if (edge_fix) {
+		pixDestroy(&pixs);
 		pixt = pixRemoveBorderGeneral(pixd, wc + 1, wc, hc + 1, hc);
 		if (pixt == NULL) {
 			pixDestroy(&pixd);
 			return (PIX*)ERROR_PTR("pix border removal not made", __func__, NULL);
 		}
+		pixDestroy(&pixd);
 		pixd = pixt;
 	}
     return pixd;

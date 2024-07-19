@@ -1,6 +1,6 @@
 #include <boost/config.hpp>
 
-#ifndef _MSC_VER
+#ifndef BOOST_MSVC
 
 int main()
 {

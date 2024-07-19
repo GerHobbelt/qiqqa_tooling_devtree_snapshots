@@ -549,12 +549,19 @@ static void ffi_pushdocument(js_State *J, fz_document *document)
 	fz_context *ctx = js_getcontext(J);
 	pdf_document *pdocument = pdf_document_from_fz_document(ctx, document);
 	if (pdocument) {
+		/* This relies on the fact that pdocument == document! */
 		js_getregistry(J, "pdf_document");
 		js_newuserdata(J, "pdf_document", document, ffi_gc_pdf_document);
 	} else {
 		js_getregistry(J, "fz_document");
 		js_newuserdata(J, "fz_document", document, ffi_gc_fz_document);
 	}
+}
+
+static void ffi_pushpdfdocument(js_State *J, pdf_document *document)
+{
+	js_getregistry(J, "pdf_document");
+	js_newuserdata(J, "pdf_document", document, ffi_gc_pdf_document);
 }
 
 static void ffi_pushsigner(js_State *J, pdf_pkcs7_signer *signer)
@@ -3639,6 +3646,23 @@ static void ffi_Document_isPDF(js_State *J)
 	js_pushboolean(J, js_isuserdata(J, 0, "pdf_document"));
 }
 
+static void ffi_Document_asPDF(js_State *J)
+{
+	fz_context *ctx = js_getcontext(J);
+	fz_document *doc = ffi_todocument(J, 0);
+	pdf_document *pdf;
+
+	fz_try(ctx)
+		pdf = fz_document_as_pdf(ctx, doc);
+	fz_catch(ctx)
+		rethrow(J);
+
+	if (pdf != NULL)
+		ffi_pushpdfdocument(J, pdf);
+	else
+		js_pushnull(J);
+}
+
 static void ffi_Document_formatLinkURI(js_State *J)
 {
 	fz_context *ctx = js_getcontext(J);
@@ -5958,17 +5982,17 @@ static void ffi_DisplayList_search(js_State *J)
 	ffi_pushsearch(J, marks, hits, n);
 }
 
-static void ffi_StructuredText_walk(js_State *J)
+static void
+stext_walk(js_State *J, fz_stext_block *block)
 {
-	fz_stext_page *page = js_touserdata(J, 0, "fz_stext_page");
-	fz_stext_block *block;
 	fz_stext_line *line;
 	fz_stext_char *ch;
 
-	for (block = page->first_block; block; block = block->next)
+	while (block)
 	{
-		if (block->type == FZ_STEXT_BLOCK_IMAGE)
+		switch (block->type)
 		{
+		case FZ_STEXT_BLOCK_IMAGE:
 			if (js_hasproperty(J, 1, "onImageBlock"))
 			{
 				js_pushnull(J);
@@ -5978,9 +6002,8 @@ static void ffi_StructuredText_walk(js_State *J)
 				js_call(J, 3);
 				js_pop(J, 1);
 			}
-		}
-		else if (block->type == FZ_STEXT_BLOCK_TEXT)
-		{
+			break;
+		case FZ_STEXT_BLOCK_TEXT:
 			if (js_hasproperty(J, 1, "beginTextBlock"))
 			{
 				js_pushnull(J);
@@ -6033,8 +6056,39 @@ static void ffi_StructuredText_walk(js_State *J)
 				js_call(J, 0);
 				js_pop(J, 1);
 			}
+			break;
+		case FZ_STEXT_BLOCK_STRUCT:
+			if (block->u.s.down)
+			{
+				if (js_hasproperty(J, 1, "beginStruct"))
+				{
+					js_pushnull(J);
+					js_pushstring(J, fz_structure_to_string(block->u.s.down->standard));
+					js_pushstring(J, block->u.s.down->raw);
+					js_pushnumber(J, block->u.s.index);
+					js_call(J, 3);
+					js_pop(J, 1);
+				}
+				if (block->u.s.down)
+					stext_walk(J, block->u.s.down->first_block);
+				if (js_hasproperty(J, 1, "endStruct"))
+				{
+					js_pushnull(J);
+					js_call(J, 0);
+					js_pop(J, 1);
+				}
+			}
+			break;
 		}
+		block = block->next;
 	}
+}
+
+static void ffi_StructuredText_walk(js_State *J)
+{
+	fz_stext_page *page = js_touserdata(J, 0, "fz_stext_page");
+
+	stext_walk(J, page->first_block);
 }
 
 static void ffi_StructuredText_search(js_State *J)
@@ -6898,7 +6952,11 @@ static void ffi_PDFDocument_addEmbeddedFile(js_State *J)
 	fz_always(ctx)
 		fz_drop_buffer(ctx, contents);
 	fz_catch(ctx)
+	{
+		pdf_drop_obj(ctx, ind);
 		rethrow(J);
+	}
+
 	ffi_pushobj(J, ind);
 }
 
@@ -9994,7 +10052,7 @@ static void ffi_PDFAnnotation_getFilespec(js_State *J)
 	fz_catch(ctx)
 		rethrow(J);
 
-	ffi_pushobj(J, fs);
+	ffi_pushobj(J, pdf_keep_obj(ctx, fs));
 }
 
 static void ffi_PDFAnnotation_setFilespec(js_State *J)
@@ -10633,7 +10691,7 @@ static void ffi_PDFWidget_previewSignature(js_State *J)
 		fz_rect rect = pdf_annot_rect(ctx, widget);
 		fz_text_language lang = pdf_annot_language(ctx, widget);
 
-		if (pdf_dict_get(ctx, pdf_annot_obj(ctx, widget), PDF_NAME(FT)) != PDF_NAME(Sig))
+		if (pdf_dict_get_inheritable(ctx, pdf_annot_obj(ctx, widget), PDF_NAME(FT)) != PDF_NAME(Sig))
 			fz_throw(ctx, FZ_ERROR_GENERIC, "annotation is not a signature widget");
 
 		pixmap = pdf_preview_signature_as_pixmap(ctx,
@@ -10979,6 +11037,7 @@ int murun_main(int argc, const char** argv)
 		jsB_propfun(J, "Document.loadPage", ffi_Document_loadPage, 1);
 		jsB_propfun(J, "Document.loadOutline", ffi_Document_loadOutline, 0);
 		jsB_propfun(J, "Document.outlineIterator", ffi_Document_outlineIterator, 0);
+		jsB_propfun(J, "Document.asPDF", ffi_Document_asPDF, 0);
 	}
 	js_setregistry(J, "fz_document");
 

@@ -109,18 +109,20 @@ void Tesseract::recog_word_recursive(WERD_RES *word) {
   if (word->best_choice->length() > word_length) {
     word->best_choice->make_bad(); // should never happen
     tprintDebug(
-        "recog_word: Discarded long string \"{}\""
+        "recog_word: Discarded long string {}"
         " ({} characters vs {} blobs)\n",
-        word->best_choice->unichar_string(), word->best_choice->length(), word_length);
+        mdqstr(word->best_choice->unichar_string()), word->best_choice->length(), word_length);
     tprintDebug("Word is at:");
     word->word->bounding_box().print();
   }
   if (word->best_choice->length() < word_length) {
-    UNICHAR_ID space_id = unicharset.unichar_to_id(" ");
+    UNICHAR_ID space_id = unicharset_.unichar_to_id(" ");
     while (word->best_choice->length() < word_length) {
       word->best_choice->append_unichar_id(space_id, 1, 0.0, word->best_choice->certainty());
     }
   }
+
+  (void)owner_.Monitor().bump_progress().exec_progress_func();
 }
 
 /**********************************************************************
@@ -154,6 +156,8 @@ void Tesseract::split_and_recog_word(WERD_RES *word) {
   recog_word_recursive(word2);
 
   join_words(word, word2, orig_bb);
+
+  (void)owner_.Monitor().bump_progress().exec_progress_func();
 }
 
 /**********************************************************************

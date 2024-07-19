@@ -115,7 +115,7 @@ LanguageModel::LanguageModel(const UnicityTable<FontInfo> *fontinfo_table, Dict 
                     dict->getCCUtil()->params())
     , DOUBLE_MEMBER(language_model_penalty_increment, 0.01, "Penalty increment",
                     dict->getCCUtil()->params())
-    , INT_MEMBER(wordrec_display_segmentations, 0, "Display Segmentations (ScrollView)",
+    , BOOL_MEMBER(wordrec_display_segmentations, false, "Display Segmentations (ScrollView)",
                  dict->getCCUtil()->params())
     , BOOL_INIT_MEMBER(language_model_use_sigmoidal_certainty, false,
                        "Use sigmoidal score for certainty", dict->getCCUtil()->params())
@@ -135,7 +135,6 @@ void LanguageModel::InitForWord(const WERD_CHOICE *prev_word, bool fixed_pitch,
   max_char_wh_ratio_ = max_char_wh_ratio;
   rating_cert_scale_ = rating_cert_scale;
   acceptable_choice_found_ = false;
-  correct_segmentation_explored_ = false;
 
   // Initialize vectors with beginning DawgInfos.
   very_beginning_active_dawgs_.clear();

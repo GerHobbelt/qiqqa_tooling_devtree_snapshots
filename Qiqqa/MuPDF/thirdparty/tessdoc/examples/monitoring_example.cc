@@ -31,7 +31,7 @@ static void ocrProcess(tesseract::TessBaseAPI *api, ETEXT_DESC *monitor) {
 int main() {
     tesseract::TessBaseAPI *api = new tesseract::TessBaseAPI();
     ETEXT_DESC *monitor = new ETEXT_DESC();
-    if (api->Init("/tesseract/tessdata_best", "eng")) {
+    if (api->InitSimple("/tesseract/tessdata_best", "eng")) {
         fprintf(stderr, "Could not initialize tesseract.\n");
         return 1;
     }

@@ -176,7 +176,7 @@ void Tesseract::write_results(PAGE_RES_IT &page_res_it,
   set_unlv_suspects(word);
   check_debug_pt(word, 120);
   if (tessedit_rejection_debug) {
-    tprintDebug("Dict word: \"{}\": {}\n", word->best_choice->debug_string(),
+    tprintDebug("Dict word: {}: {}\n", word->best_choice->debug_string(),
             dict_word(*(word->best_choice)));
   }
   if (!word->word->flag(W_REP_CHAR) || !tessedit_write_rep_codes) {
@@ -399,7 +399,7 @@ bool Tesseract::acceptable_number_string(const char *s, const char *lengths) {
   }
 
   for (; *s != '\0'; s += *(lengths++)) {
-    if (unicharset.get_isdigit(s, *lengths)) {
+    if (unicharset_.get_isdigit(s, *lengths)) {
       prev_digit = true;
     } else if (prev_digit && (*lengths == 1 && ((*s == '.') || (*s == ',') || (*s == '-')))) {
       prev_digit = false;

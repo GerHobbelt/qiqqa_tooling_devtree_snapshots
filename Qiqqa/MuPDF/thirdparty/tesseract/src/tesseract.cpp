@@ -38,8 +38,11 @@
 #include "simddetect.h"
 #include "tesseractclass.h" // for AnyTessLang
 #include <tesseract/tprintf.h> // for tprintf
+#include <tesseract/ocrclass.h> // for monitor
+
 #include "tlog.h"
 #include "global_params.h"
+#include "helpers.h"
 
 #ifdef _OPENMP
 #  include <omp.h>
@@ -199,18 +202,6 @@ static void PrintHelpForOEM() {
 }
 #endif // !DISABLED_LEGACY_ENGINE
 
-static const char* basename(const char* path)
-{
-	size_t i;
-	size_t len = strlen(path);
-	for (i = strcspn(path, ":/\\"); i < len; i = strcspn(path, ":/\\"))
-	{
-		path = path + i + 1;
-		len -= i + 1;
-}
-	return path;
-}
-
 static void PrintHelpExtra(const char *program) {
   program = basename(program);
   tprintInfo(
@@ -368,6 +359,47 @@ static void PrintLangsList(tesseract::TessBaseAPI &api) {
   }
 }
 
+// Demo advanced usage of the new monitor implementation, which
+// explains why we discarded quite a few fields from the original
+// ETEXT_DESC implementation: it's much easier and type-safe to
+// your own as you need them.
+class CLI_Monitor : public ETEXT_DESC {
+public:
+  CLI_Monitor()
+      : ETEXT_DESC(), app_start_time(std::chrono::steady_clock::now()), next_progress_log_opportunity(std::chrono::steady_clock::time_point::min())
+  {}
+
+protected:
+  std::chrono::steady_clock::time_point app_start_time;
+  std::chrono::steady_clock::time_point next_progress_log_opportunity;
+
+public:
+  void report_progress(int left, int right, int top, int bottom) {
+    // do not clutter the screen & logfiles with frequent progress updates: only log another one when it's more than 2 seconds later than the last one.
+    std::chrono::steady_clock::time_point now = std::chrono::steady_clock::now();
+    if (now >= next_progress_log_opportunity || progress >= 100.0) {
+      // estimate how long we'll take longer, based on the time we spent since the start of this application (the moment when this monitor was instantiated, rather, but alas).
+      std::chrono::duration elapsed = now - app_start_time;
+      std::chrono::duration total_duration = 100.0 / (progress > 0 ? progress : 5 /* arbitrary value */) * elapsed;
+      std::chrono::duration remaining = total_duration - elapsed;
+
+      tprintInfo("\nSession::progress: {}% @ {} secs; expected {} more secs until finished.\n", to_prec(progress, 3), to_prec(seconds(elapsed), 3), to_prec(seconds(remaining), 3));
+
+      next_progress_log_opportunity = now + std::chrono::seconds(2);
+
+      // See also the notes at PROGRESS_FUNC.
+      // We control the update rate limit using both the built-in 0.1% "significant update" check
+      // plus our own custom elapsed time check against `next_progress_log_opportunity` above.
+      previous_progress = progress;
+    }
+  }
+};
+
+static void cli_monitor_progress_f(ETEXT_DESC* self, int left, int right, int top, int bottom) {
+  CLI_Monitor *me = static_cast<CLI_Monitor *>(self);
+  me->report_progress(left, right, top, bottom);
+}
+
 /**
  * We have 2 possible sources of pagesegmode: a config file and
  * the command line. For backwards compatibility reasons, the
@@ -491,8 +523,7 @@ static bool ParseArgs(int argc, const char** argv, const char **lang, const char
                       bool *print_parameters, bool *print_fonts_table,
                       std::vector<std::string> *vars_vec, std::vector<std::string> *vars_values,
                       l_int32 *arg_i, tesseract::PageSegMode *pagesegmode,
-                      tesseract::OcrEngineMode *enginemode,
-                      bool *rectangle_mode, const char **rectangle_str
+                      tesseract::OcrEngineMode *enginemode
 ) {
   int i = 1;
   if (i < argc) {
@@ -592,10 +623,6 @@ static bool ParseArgs(int argc, const char** argv, const char **lang, const char
     } else if (strcmp(argv[i], "--list-langs") == 0) {
       noocr = true;
       *list_langs = true;
-    } else if (strcmp(argv[i], "--rectangle") == 0 && i + 1 < argc) {
-		*rectangle_mode = true;
-		*rectangle_str = argv[i + 1];
-		++i;
 	} else if (strcmp(argv[i], "--psm") == 0 && i + 1 < argc) {
       if (!checkArgValues(atoi(argv[i + 1]), "PSM", tesseract::PSM_COUNT)) {
         return false;
@@ -838,7 +865,7 @@ static bool PreloadRenderers(tesseract::TessBaseAPI &api,
 #if defined(TESSERACT_STANDALONE) && !defined(BUILD_MONOLITHIC)
 extern "C" int main(int argc, const char** argv)
 #else
-extern "C" int tesseract_main(int argc, const char** argv)
+extern "C" int tesseract_main(int argc, const char **argv)
 #endif
 {
 #if defined(__USE_GNU) && defined(HAVE_FEENABLEEXCEPT)
@@ -861,8 +888,6 @@ extern "C" int tesseract_main(int argc, const char** argv)
   const char *outputbase = nullptr;
   const char *datapath = nullptr;
   const char *visible_pdf_image_file = nullptr;
-  bool rectangle_mode = false;
-  const char* rectangle_str = NULL;
   bool list_langs = false;
   bool print_parameters = false;
   bool print_fonts_table = false;
@@ -883,7 +908,7 @@ extern "C" int tesseract_main(int argc, const char** argv)
     // Disable debugging and informational messages from Leptonica.
     setMsgSeverity(L_SEVERITY_ERROR);
 #else
-	// Allow Leptonica to yak in debug builds.
+    // Allow Leptonica to yak in debug builds.
     setMsgSeverity(DEFAULT_SEVERITY);
 #endif
   }
@@ -894,12 +919,16 @@ extern "C" int tesseract_main(int argc, const char** argv)
   TIFFSetWarningHandler(Win32WarningHandler);
 #endif // HAVE_TIFFIO_H && _WIN32
 
+  // collect commandline for display in the diagnostics output
+  std::vector<std::string> argv4diag;
+  for (int ac = 0; ac < argc; ac++) {
+    argv4diag.push_back(argv[ac]);
+  }
+
   if (!ParseArgs(argc, argv, &lang, &image, &outputbase, &datapath, &dpi, &list_langs,
                  &visible_pdf_image_file,
                  &print_parameters, &print_fonts_table, &vars_vec, &vars_values, &arg_i,
-                 &pagesegmode, &enginemode,
-                 &rectangle_mode, &rectangle_str
-  )) {
+                 &pagesegmode, &enginemode)) {
     return EXIT_FAILURE;
   }
 
@@ -922,188 +951,106 @@ extern "C" int tesseract_main(int argc, const char** argv)
 #endif
 
   {
-      TessBaseAPI api;
+    CLI_Monitor monitor;
+    TessBaseAPI api;
 
-      api.SetOutputName(outputbase);
+    monitor.progress_callback = cli_monitor_progress_f;
+    api.RegisterMonitor(&monitor);
 
-      if (!SetVariablesFromCLArgs(api, argc, argv)) {
-        return EXIT_FAILURE;
-      }
+    api.DebugAddCommandline(argv4diag);
 
-      int config_count = argc - arg_i;
-      const int init_failed = api.InitFull(datapath, lang, enginemode, (config_count > 0 ? &(argv[arg_i]) : nullptr), config_count, &vars_vec, &vars_values, false);
+    api.SetOutputName(outputbase);
 
-      // repeat the `-c var=val` load as debug_all MAY have overwritten some of these user-specified settings in the call above. 
-      if (!SetVariablesFromCLArgs(api, argc, argv)) {
-        return EXIT_FAILURE;
-      }
+    if (!SetVariablesFromCLArgs(api, argc, argv)) {
+      return EXIT_FAILURE;
+    }
 
-      // SIMD settings might be overridden by config variable.
-      tesseract::SIMDDetect::Update();
+    int config_count = argc - arg_i;
+    const int init_failed = api.InitFull(datapath, lang, enginemode, (config_count > 0 ? &(argv[arg_i]) : nullptr), config_count, &vars_vec, &vars_values, false);
 
-      if (list_langs) {
-        PrintLangsList(api);
-        api.End();
-        return EXIT_SUCCESS;
-      }
+    if (init_failed) {
+      tprintError("Could not initialize tesseract.\n");
+      return EXIT_FAILURE;
+    }
 
-      if (init_failed) {
-        tprintError("Could not initialize tesseract.\n");
-        return EXIT_FAILURE;
-      }
+  	// TODO: set during init phase and/or when this parameter is edited.
+    monitor.set_deadline_msecs(api.tesseract()->activity_timeout_millisec);
 
-      if (print_parameters) {
-        tprintInfo("Tesseract parameters:\n");
-        api.PrintVariables();
-        api.End();
-        return EXIT_SUCCESS;
-      }
+    // repeat the `-c var=val` load as debug_all MAY have overwritten some of these user-specified settings in the call above.
+    if (!SetVariablesFromCLArgs(api, argc, argv)) {
+      return EXIT_FAILURE;
+    }
 
-	if (rectangle_mode) {
-		Pix* pixs = pixRead(image);
-		if (!pixs) {
-			tprintError("Cannot open input file: {}\n", image);
-            return EXIT_FAILURE;
-		}
+    // SIMD settings might be overridden by config variable.
+    tesseract::SIMDDetect::Update();
 
-		api.SetImage(pixs);
+    if (list_langs) {
+      PrintLangsList(api);
+      api.End();
+      return EXIT_SUCCESS;
+    }
 
-		std::string outfile = std::string(outputbase) + std::string(".txt");
-		FILE* fout = NULL;
-		
-		if (strcmp(outputbase, "stdout") != 0) {
-			fout = fopen(outfile.c_str(), "wb");
-		}
-		else {
-			fout = stdout;
-		}
-
-		if (fout == NULL) {
-			tprintError("Cannot open output file: {}\n", outfile);
-			pixDestroy(&pixs);
-            return EXIT_FAILURE;
-		}
-
-		// for each rectangle
-		const char *delim = "+";
-		char *token;
-		char *specstr = strdup(rectangle_str);
-
-		token = strtok(specstr, delim);
-		
-		while (token != NULL) {
-			int left = 0;
-			int top = 0;
-			int width = 0;
-			int height = 0;
-			char *utf8 = NULL;
-
-			// syntax = x30y60w50h100
-			int params = sscanf(token, "l%dt%dw%dh%d", &left, &top, &width, &height);
-			if (params == 4) {
-				// clamp this rectangle
-				if (left < 0) {
-					left = 0;
-				}
-				
-				if (top < 0) {
-					top = 0;
-				}
-				
-				if (width <= 0) {
-					width = 1;
-				}
-				
-				if (height <= 0) {
-					height = 1;
-				}
-
-				if (left + width > pixs->w) {
-					width = pixs->w - left;
-				}
-
-				if (top + height > pixs->h) {
-					height = pixs->h - top;
-				}
-
-				api.SetRectangle(left, top, width, height);
-				utf8 = api.GetUTF8Text();
-				if (utf8) {
-					fwrite(utf8, 1, strlen(utf8), fout);
-					delete[] utf8;
-					utf8 = NULL;
-				}
-			}
-			else {
-				tprintError("incorrect rectangle syntax, expecting something akin to 'l30t60w50h100' instead of '{}'.\n", rectangle_str);
-				fclose(fout);
-				pixDestroy(&pixs);
-                return EXIT_FAILURE;
-			}
-			token = strtok(NULL, delim);
-		}
-
-		fclose(fout);
-		pixDestroy(&pixs);
-        free(specstr);
-        return EXIT_SUCCESS;
+    if (print_parameters) {
+      tprintInfo("Tesseract parameters:\n");
+      api.PrintVariables();
+      api.End();
+      return EXIT_SUCCESS;
     }
 
 #if !DISABLED_LEGACY_ENGINE
-      if (print_fonts_table) {
-        tprintDebug("Tesseract fonts table:\n");
-        api.PrintFontsTable();
-        api.End();
-        return EXIT_SUCCESS;
+    if (print_fonts_table) {
+      tprintDebug("Tesseract fonts table:\n");
+      api.PrintFontsTable();
+      api.End();
+      return EXIT_SUCCESS;
+    }
+#endif // !DISABLED_LEGACY_ENGINE
+
+    // record the currently active input image path as soon as possible:
+    // this path is also used to construct the destination path for
+    // various debug output files.
+    api.SetInputName(image);
+
+    FixPageSegMode(api, pagesegmode);
+
+    if (dpi) {
+      auto dpi_string = std::to_string(dpi);
+      api.SetVariable("user_defined_dpi", dpi_string.c_str());
+    }
+
+    if (visible_pdf_image_file) {
+      api.SetVisibleImageFilename(visible_pdf_image_file);
+    }
+
+    if (pagesegmode == tesseract::PSM_AUTO_ONLY) {
+      Pix *pixs = pixRead(image);
+      if (!pixs) {
+        tprintError("Leptonica can't process input file: {}\n", image);
+        return 2;
       }
-#endif  // !DISABLED_LEGACY_ENGINE
 
-      // record the currently active input image path as soon as possible:
-      // this path is also used to construct the destination path for 
-      // various debug output files.
-      api.SetInputName(image);
+      api.SetImage(pixs);
 
-      FixPageSegMode(api, pagesegmode);
+      tesseract::Orientation orientation;
+      tesseract::WritingDirection direction;
+      tesseract::TextlineOrder order;
+      float deskew_angle;
 
-      if (dpi) {
-        auto dpi_string = std::to_string(dpi);
-        api.SetVariable("user_defined_dpi", dpi_string.c_str());
+      const std::unique_ptr<const tesseract::PageIterator> it(api.AnalyseLayout());
+      if (it) {
+        // TODO: Implement output of page segmentation, see documentation
+        // ("Automatic page segmentation, but no OSD, or OCR").
+        it->Orientation(&orientation, &direction, &order, &deskew_angle);
+        tprintDebug(
+            "Orientation: {}\nWritingDirection: {}\nTextlineOrder: {}\n"
+            "Deskew angle: {}\n",
+            orientation, direction, order, deskew_angle);
+      } else {
+        ret_val = EXIT_FAILURE;
       }
 
-      if (visible_pdf_image_file) {
-        api.SetVisibleImageFilename(visible_pdf_image_file);
-      }
-
-      if (pagesegmode == tesseract::PSM_AUTO_ONLY) {
-        Pix *pixs = pixRead(image);
-        if (!pixs) {
-          tprintError("Leptonica can't process input file: {}\n", image);
-          return 2;
-        }
-
-        api.SetImage(pixs);
-
-        tesseract::Orientation orientation;
-        tesseract::WritingDirection direction;
-        tesseract::TextlineOrder order;
-        float deskew_angle;
-
-        const std::unique_ptr<const tesseract::PageIterator> it(api.AnalyseLayout());
-        if (it) {
-          // TODO: Implement output of page segmentation, see documentation
-          // ("Automatic page segmentation, but no OSD, or OCR").
-          it->Orientation(&orientation, &direction, &order, &deskew_angle);
-          tprintDebug(
-              "Orientation: {}\nWritingDirection: {}\nTextlineOrder: {}\n"
-              "Deskew angle: {}\n",
-              orientation, direction, order, deskew_angle);
-        } else {
-          ret_val = EXIT_FAILURE;
-        }
-
-        pixDestroy(&pixs);
-      }
-      else {
+      pixDestroy(&pixs);
+    } else {
       // Set in_training_mode to true when using one of these configs:
       // ambigs.train, box.train, box.train.stderr, linebox, rebox, lstm.train.
       // In this mode no other OCR result files are written.
@@ -1127,7 +1074,7 @@ extern "C" int tesseract_main(int argc, const char** argv)
         const char *disabled_osd_msg =
             "\nERROR: The page segmentation mode 0 (OSD Only) is currently "
             "disabled.\n\n";
-        tprintDebug("{}",  disabled_osd_msg);
+        tprintDebug("{}", disabled_osd_msg);
         return EXIT_FAILURE;
       } else if (cur_psm == tesseract::PSM_AUTO_OSD) {
         api.SetPageSegMode(tesseract::PSM_AUTO);
@@ -1177,7 +1124,9 @@ extern "C" int tesseract_main(int argc, const char** argv)
         }
 #endif
 
-        succeed &= api.ProcessPages(image, nullptr, 0, renderers[0].get());
+        succeed &= api.ProcessPages(image, renderers[0].get());
+
+        // TODO: retry on failure with alternative config set.
 
         if (!succeed) {
           tprintError("Error during page processing. File: {}\n", image);
@@ -1186,11 +1135,18 @@ extern "C" int tesseract_main(int argc, const char** argv)
       }
     }
 
+    if (ret_val == EXIT_SUCCESS && api.Monitor().progress < 90) {
+      api.Monitor().set_progress(90.0).exec_progress_func();
+    }
+
     if (ret_val == EXIT_SUCCESS && verbose_process) {
       api.ReportParamsUsageStatistics();
     }
 
     api.FinalizeAndWriteDiagnosticsReport();  // write/flush log output
+
+    api.Monitor().set_progress(100.0).exec_progress_func();
+
     api.Clear();
   }
   // ^^^ end of scope for the Tesseract `api` instance

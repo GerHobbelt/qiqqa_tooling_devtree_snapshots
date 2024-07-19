@@ -45,6 +45,7 @@
 #include "tessvars.h"
 #include "werdit.h"
 #include "global_params.h"
+#include "pixProcessing.h" 
 
 const char *const kBackUpConfigFile = "tempconfigdata.config";
 #if !DISABLED_LEGACY_ENGINE
@@ -168,7 +169,7 @@ void Tesseract::SetupAllWordsPassN(int pass_n, const TBOX *target_word_box, cons
 void Tesseract::SetupWordPassN(int pass_n, WordData *word) {
   if (pass_n == 1 || !word->word->done) {
     if (pass_n == 1) {
-      word->word->SetupForRecognition(unicharset, this, tessedit_ocr_engine_mode,
+      word->word->SetupForRecognition(unicharset_, this, tessedit_ocr_engine_mode,
                                       nullptr, classify_bln_numeric_mode, textord_use_cjk_fp_model,
                                       poly_allow_detailed_fx, word->row, word->block);
     } else if (pass_n == 2) {
@@ -188,7 +189,7 @@ void Tesseract::SetupWordPassN(int pass_n, WordData *word) {
       // LSTM doesn't get setup for pass2.
       if (pass_n == 1 || lang_t->tessedit_ocr_engine_mode != OEM_LSTM_ONLY) {
         word_res->SetupForRecognition(
-            lang_t->unicharset, lang_t, lang_t->tessedit_ocr_engine_mode, nullptr,
+            lang_t->unicharset_, lang_t, lang_t->tessedit_ocr_engine_mode, nullptr,
             lang_t->classify_bln_numeric_mode, lang_t->textord_use_cjk_fp_model,
             lang_t->poly_allow_detailed_fx, word->row, word->block);
       }
@@ -368,8 +369,7 @@ static void GatherWordsBBboxInfo4DebugDisplay(DebugWordSetBBoxCarrier &word_info
 
 
 // Runs word recognition on all the words.
-bool Tesseract::RecogAllWordsPassN(int pass_n, ETEXT_DESC *monitor, PAGE_RES_IT *pr_it,
-                                   std::vector<WordData> *words) {
+bool Tesseract::RecogAllWordsPassN(int pass_n, PAGE_RES_IT *pr_it, std::vector<WordData> *words) {
   // TODO(rays) Before this loop can be parallelized (it would yield a massive
   // speed-up) all remaining member globals need to be converted to local/heap
   // (e.g. set_pass1 and set_pass2) and an intermediate adaption pass needs to be
@@ -397,7 +397,6 @@ bool Tesseract::RecogAllWordsPassN(int pass_n, ETEXT_DESC *monitor, PAGE_RES_IT 
     // construct a base page image based on the greyscale image, bumped up by the binary for emphasis. Purely done for visual results.
     Image pix = pixConvertTo32(this->pix_grey());
     Image pix2 = pixBlend(pix, this->pix_binary(), 0, 0, 0.33);
-    pix.destroy();
 
     auto count = words->size();
     BOXA *boxa = boxaCreate(count);
@@ -446,21 +445,16 @@ bool Tesseract::RecogAllWordsPassN(int pass_n, ETEXT_DESC *monitor, PAGE_RES_IT 
     // Note that we don't use MixWithLightRedTintedBackground() here, but a tweaked version there-of.
     Image composite = pixMixWithTintedBackground(fg, pix_grey(), 0.9, 0.9, 0.9, 0.95, 0.5, nullptr);
 
-    fg.destroy();
-    pix2.destroy();
-
     // pixBlendBackgroundToColor();
     // pixSetBlackOrWhiteBoxa(mask, boxa, L_SET_BLACK);
     // pixBlendColorByChannel()
     // pixPaintBoxa(pix2, boxa, l_uint32 val);
 
-    this->AddPixDebugPage(composite, fmt::format("RecogAllWordsPassN: pass {}: {} word boxes, language to try: {}", pass_n, count, most_recently_used_->lang));
+    this->AddPixDebugPage(composite, fmt::format("RecogAllWordsPassN: pass {}: {} word boxes, language to try: {}", pass_n, count, most_recently_used_->lang_));
 
     tprintInfo("PROCESS: The composite image shows which bounding box areas in the original input image have been designated by tesseract as 'probably text words'. Anything obscured by the red overlay is *not considered for OCR*.\n\nThus this composite image is an important diagnostic tool, for it allows you to visually check the quality of tesseract's page analysis.\n\nRemedying any mistakes you observe is, unfortunately, a bit of an *art*, but suffice to say everything depends on a proper image preprocessing phase, where \"*proper*\" merely means: so you get the results that you want.");
 
     // TODO: mention links to further tips and approaches, including tesseract documentation pages.
-
-    composite.destroy();
 
     boxaClear(boxa);
     boxaDestroy(&boxa);
@@ -475,25 +469,14 @@ bool Tesseract::RecogAllWordsPassN(int pass_n, ETEXT_DESC *monitor, PAGE_RES_IT 
       tprintDebug("Pass{}: chunk #{}: now going to OCR content at bbox:{}\n",
           pass_n, w + 1, word->word->word->bounding_box().print_to_str());
     }
-    if (monitor != nullptr) {
-      monitor->ocr_alive = true;
-      if (pass_n == 1) {
-        monitor->progress = 70 * w / words->size();
-      } else {
-        monitor->progress = 70 + 30 * w / words->size();
-      }
-      if (monitor->progress_callback2 != nullptr) {
-        TBOX box = pr_it->word()->word->bounding_box();
-        (*monitor->progress_callback2)(monitor, box.left(), box.right(), box.top(), box.bottom());
-      }
-      if (monitor->deadline_exceeded() ||
-          (monitor->cancel != nullptr && (*monitor->cancel)(monitor->cancel_this, words->size()))) {
-        // Timeout. Fake out the rest of the words.
+    if (owner_.Monitor().bump_progress(w, words->size())
+      .exec_progress_func(pr_it->word()->word->bounding_box())
+      .kick_watchdog_and_check_for_cancel(words->size())) {
+        tprintWarn("Timeout/cancel: fake out the rest of the words. {}/{} words processed.\n", w, words->size());
         for (; w < words->size(); ++w) {
-          (*words)[w].word->SetupFake(unicharset);
+          (*words)[w].word->SetupFake(unicharset_);
         }
         return false;
-      }
     }
     if (word->word->tess_failed) {
       unsigned int s;
@@ -519,10 +502,10 @@ bool Tesseract::RecogAllWordsPassN(int pass_n, ETEXT_DESC *monitor, PAGE_RES_IT 
 
     classify_word_and_language(pass_n, pr_it, word);
     if (tessedit_dump_choices || debug_noise_removal) {
-      tprintDebug("Pass{}: word at {} --> best choice: \"{}\" [{}] (rating: {} / certainty: {})\n",
+      tprintDebug("Pass{}: word at {} --> best choice: {} {} (rating: {} / certainty: {})\n",
           pass_n, 
           word->word->word->bounding_box().print_to_str(),
-          word->word->best_choice->unichar_string(),
+          mdqstr(word->word->best_choice->unichar_string()),
           word->word->best_choice->debug_string(),
           word->word->best_choice->rating(),
           word->word->best_choice->certainty());
@@ -539,7 +522,6 @@ bool Tesseract::RecogAllWordsPassN(int pass_n, ETEXT_DESC *monitor, PAGE_RES_IT 
  * recog_all_words()
  *
  * Walk the page_res, recognizing all the words.
- * If monitor is not null, it is used as a progress monitor/timeout/cancel.
  * If dopasses is 0, all recognition passes are run,
  * 1 just pass 1, 2 passes2 and higher.
  * If target_word_box is not null, special things are done to words that
@@ -550,13 +532,12 @@ bool Tesseract::RecogAllWordsPassN(int pass_n, ETEXT_DESC *monitor, PAGE_RES_IT 
  * Returns false if we cancelled prematurely.
  *
  * @param page_res page structure
- * @param monitor progress monitor
  * @param word_config word_config file
  * @param target_word_box specifies just to extract a rectangle
  * @param dopasses 0 - all, 1 just pass 1, 2 passes 2 and higher
  */
 
-bool Tesseract::recog_all_words(PAGE_RES *page_res, ETEXT_DESC *monitor,
+bool Tesseract::recog_all_words(PAGE_RES *page_res, 
                                 const TBOX *target_word_box, const char *word_config,
                                 int dopasses) {
   PAGE_RES_IT page_res_it(page_res);
@@ -612,7 +593,7 @@ bool Tesseract::recog_all_words(PAGE_RES *page_res, ETEXT_DESC *monitor,
 
     most_recently_used_ = this;
     // Run pass 1 word recognition.
-    if (!RecogAllWordsPassN(1, monitor, &page_res_it, &words)) {
+    if (!RecogAllWordsPassN(1, &page_res_it, &words)) {
       return false;
     }
     // Pass 1 post-processing.
@@ -652,7 +633,7 @@ bool Tesseract::recog_all_words(PAGE_RES *page_res, ETEXT_DESC *monitor,
     }
     most_recently_used_ = this;
     // Run pass 2 word recognition.
-    if (!RecogAllWordsPassN(2, monitor, &page_res_it, &words)) {
+    if (!RecogAllWordsPassN(2, &page_res_it, &words)) {
       return false;
     }
   }
@@ -664,7 +645,7 @@ bool Tesseract::recog_all_words(PAGE_RES *page_res, ETEXT_DESC *monitor,
 
     if (!tessedit_test_adaption && tessedit_fix_fuzzy_spaces && !tessedit_word_for_word &&
         !right_to_left()) {
-      fix_fuzzy_spaces(monitor, stats_.word_count, page_res);
+      fix_fuzzy_spaces(stats_.word_count, page_res);
     }
 
     // ****************** Pass 4 *******************
@@ -676,7 +657,7 @@ bool Tesseract::recog_all_words(PAGE_RES *page_res, ETEXT_DESC *monitor,
     }
 
     // ****************** Pass 5,6 *******************
-    rejection_passes(page_res, monitor, target_word_box, word_config);
+    rejection_passes(page_res, target_word_box, word_config);
 
     // ****************** Pass 8 *******************
 #if 01
@@ -700,7 +681,11 @@ bool Tesseract::recog_all_words(PAGE_RES *page_res, ETEXT_DESC *monitor,
 #if !DISABLED_LEGACY_ENGINE
   // changed by jetsoft
   // needed for dll to output memory structure
-  if ((dopasses == 0 || dopasses == 2) && (monitor || tessedit_write_unlv)) {
+  if ((dopasses == 0 || dopasses == 2)
+#if 0
+    && (monitor /* always true */ || tessedit_write_unlv)
+#endif
+    ) {
     output_pass(page_res_it, target_word_box);
   }
 // end jetsoft
@@ -721,8 +706,9 @@ bool Tesseract::recog_all_words(PAGE_RES *page_res, ETEXT_DESC *monitor,
     }
   }
 
-  if (monitor != nullptr) {
-    monitor->progress = 100;
+  if (owner_.Monitor().bump_progress().exec_progress_func().kick_watchdog_and_check_for_cancel(stats_.word_count)) {
+      tprintWarn("Timeout/cancel: signaled but we're not doing anything as we're at the end of the session already anyway. {} words processed.\n", stats_.word_count);
+      //return false;
   }
   return true;
 }
@@ -773,13 +759,13 @@ void Tesseract::bigram_correction_pass(PAGE_RES *page_res) {
 
     if (w->tesseract->getDict().valid_bigram(prev_best, this_best)) {
       if (tessedit_bigram_debug) {
-        tprintDebug("Top choice \"{} {}\" verified by bigram model.\n", orig_w1_str,
-                orig_w2_str);
+        tprintDebug("Top choice ({} {}) verified by bigram model.\n", mdqstr(orig_w1_str),
+                mdqstr(orig_w2_str));
       }
       continue;
     }
     if (tessedit_bigram_debug > 2) {
-      tprintDebug("Examining alt choices for \"{} {}\".\n", orig_w1_str, orig_w2_str);
+      tprintDebug("Examining alt choices for ({} {}).\n", mdqstr(orig_w1_str), mdqstr(orig_w2_str));
     }
     if (tessedit_bigram_debug > 1) {
       if (!w_prev->best_choices.singleton()) {
@@ -825,9 +811,9 @@ void Tesseract::bigram_correction_pass(PAGE_RES *page_res) {
           EqualIgnoringCaseAndPunct(*w->best_choice, *overrides_word2[best_idx])) {
         if (tessedit_bigram_debug > 1) {
           tprintDebug(
-              "Top choice \"{} {}\" verified (sans case) by bigram "
+              "Top choice ({} {}) verified (sans case) by bigram "
               "model.\n",
-              orig_w1_str, orig_w2_str);
+              mdqstr(orig_w1_str), mdqstr(orig_w2_str));
         }
         continue;
       }
@@ -854,26 +840,24 @@ void Tesseract::bigram_correction_pass(PAGE_RES *page_res) {
               }
               WERD_CHOICE *p1 = overrides_word1[i];
               WERD_CHOICE *p2 = overrides_word2[i];
-              bigrams_list += p1->unichar_string() + " " + p2->unichar_string();
+              bigrams_list += mdqstr(p1->unichar_string()) + " " + mdqstr(p2->unichar_string());
             }
             choices_description = "There were many choices: {";
             choices_description += bigrams_list;
             choices_description += "}";
           } else {
-            choices_description += "There were " + std::to_string(num_bigram_choices);
-            choices_description += " compatible bigrams.";
+            choices_description += fmt::format("There were {} compatible bigrams.", num_bigram_choices);
           }
         }
-        tprintDebug("Replaced \"{} {}\" with \"{} {}\" with bigram model. {}\n", orig_w1_str,
-                orig_w2_str, new_w1_str, new_w2_str,
+        tprintDebug("Replaced ({} {}) with ({} {}) with bigram model. {}\n", mdqstr(orig_w1_str),
+                mdqstr(orig_w2_str), mdqstr(new_w1_str), mdqstr(new_w2_str),
                 choices_description);
       }
     }
   }
 }
 
-void Tesseract::rejection_passes(PAGE_RES *page_res, ETEXT_DESC *monitor,
-                                 const TBOX *target_word_box, const char *word_config) {
+void Tesseract::rejection_passes(PAGE_RES *page_res, const TBOX *target_word_box, const char *word_config) {
   PAGE_RES_IT page_res_it(page_res);
   // ****************** Pass 5 *******************
   // Gather statistics on rejects.
@@ -881,9 +865,12 @@ void Tesseract::rejection_passes(PAGE_RES *page_res, ETEXT_DESC *monitor,
   while (!tessedit_test_adaption && page_res_it.word() != nullptr) {
     WERD_RES *word = page_res_it.word();
     word_index++;
-    if (monitor != nullptr) {
-      monitor->ocr_alive = true;
-      monitor->progress = 95 + 5 * word_index / stats_.word_count;
+
+    if (owner_.Monitor().bump_progress(word_index, stats_.word_count)
+      .exec_progress_func(target_word_box != nullptr ? target_word_box : nullptr)
+      .kick_watchdog_and_check_for_cancel(stats_.word_count)) {
+        tprintWarn("Timeout/cancel: aborting the rejection pass. {}/{} words processed.\n", word_index / stats_.word_count);
+        return;
     }
     if (word->rebuild_word == nullptr) {
       // Word was not processed by tesseract.
@@ -1132,7 +1119,7 @@ int Tesseract::SelectBestWords(double rating_ratio, double certainty_margin,
 
       tprintDebug("The new {} *best* words produced: [", out_words.size());
       for (int ow = 0; ow < out_words.size(); ow++) {
-        tprintDebug("`{}` ", out_words[ow]->best_choice->unichar_string());
+        tprintDebug("{} ", mdqstr(out_words[ow]->best_choice->unichar_string()));
       }
       tprintDebug("]\n");
     }
@@ -1155,7 +1142,7 @@ int Tesseract::RetryWithLanguage(const WordData &word_data, WordRecognizer recog
                                  WERD_RES **in_word, PointerVector<WERD_RES> *best_words) {
   const bool debug = ((classify_debug_level > 0 || multilang_debug_level > 0));
   if (debug) {
-    tprintDebug("Trying word using lang {}, oem {}\n", lang,
+    tprintDebug("Trying word using lang {}, oem {}\n", lang_,
             tessedit_ocr_engine_mode.value());
   }
   // Run the recognizer on the word.
@@ -1603,7 +1590,7 @@ void Tesseract::classify_word_and_language(int pass_n, PAGE_RES_IT *pr_it, WordD
     TBOX bbox = word->word->bounding_box();
     tprintDebug("pass: {} :: {} word with lang {} at: {}\n", pass_n,
                 (word->done ? "Already done" : "Processing"),
-                most_recently_used_->lang, bbox.print_to_str());
+                most_recently_used_->lang_, bbox.print_to_str());
   }
   if (word->done) {
     // If done on pass1, leave it as-is.
@@ -1649,8 +1636,8 @@ void Tesseract::classify_word_and_language(int pass_n, PAGE_RES_IT *pr_it, WordD
     tprintWarn("no best words!!\n");
   }
   if (tessedit_timing_debug) {
-    tprintDebug("classify_word_and_language -> word best choice: \"{}\" (bbox: {}, OCR took {} sec)\n",
-            word_data->word->best_choice->unichar_string(),
+    tprintDebug("classify_word_and_language -> word best choice: {} (bbox: {}, OCR took {} sec)\n",
+            mdqstr(word_data->word->best_choice->unichar_string()),
         word_data->word->word->bounding_box().print_to_str(),
             clock.get_elapsed_sec());
   }
@@ -1688,7 +1675,7 @@ void Tesseract::classify_word_pass1(const WordData &word_data, WERD_RES **in_wor
 
 #if !DISABLED_LEGACY_ENGINE
     // Fall back to tesseract for failed words or odd words.
-    (*in_word)->SetupForRecognition(unicharset, this, OEM_TESSERACT_ONLY, nullptr,
+    (*in_word)->SetupForRecognition(unicharset_, this, OEM_TESSERACT_ONLY, nullptr,
                                     classify_bln_numeric_mode, textord_use_cjk_fp_model,
                                     poly_allow_detailed_fx, row, block);
 #endif // !DISABLED_LEGACY_ENGINE
@@ -1722,13 +1709,14 @@ void Tesseract::classify_word_pass1(const WordData &word_data, WERD_RES **in_wor
 // Helper to report the result of the xheight fix.
 void Tesseract::ReportXhtFixResult(bool accept_new_word, float new_x_ht, WERD_RES *word,
                                    WERD_RES *new_word) {
-  tprintDebug("New XHT Match:{} = {} ", word->best_choice->unichar_string(),
+  TPrintGroupLinesTillEndOfScope push;
+  tprintDebug("New XHT Match: {} = {}\n", mdqstr(word->best_choice->unichar_string()),
           word->best_choice->debug_string());
-  word->reject_map.print(debug_fp);
-  tprintDebug(" -> {} = {} ", new_word->best_choice->unichar_string(),
+  tprintDebug("  reject_map: {}\n", word->reject_map.print_to_string());
+  tprintDebug(" -> {} = {}\n", mdqstr(new_word->best_choice->unichar_string()),
           new_word->best_choice->debug_string());
-  new_word->reject_map.print(debug_fp);
-  tprintDebug(" {}->{} {} {}\n", word->guessed_x_ht ? "GUESS" : "CERT",
+  tprintDebug("  new.reject_map: {}\n", new_word->reject_map.print_to_string());
+  tprintDebug("  word: {}->{} {} {}\n", word->guessed_x_ht ? "GUESS" : "CERT",
           new_word->guessed_x_ht ? "GUESS" : "CERT", new_x_ht > 0.1 ? "STILL DOUBT" : "OK",
           accept_new_word ? "ACCEPTED" : "");
 }
@@ -1783,7 +1771,7 @@ bool Tesseract::TestNewNormalization(int original_misfits, float baseline_shift,
   new_x_ht_word.x_height = new_x_ht;
   new_x_ht_word.baseline_shift = baseline_shift;
   new_x_ht_word.caps_height = 0.0;
-  new_x_ht_word.SetupForRecognition(unicharset, this, tessedit_ocr_engine_mode, nullptr,
+  new_x_ht_word.SetupForRecognition(unicharset_, this, tessedit_ocr_engine_mode, nullptr,
                                     classify_bln_numeric_mode, textord_use_cjk_fp_model,
                                     poly_allow_detailed_fx, row, block);
   match_word_pass_n(2, &new_x_ht_word, row, block);
@@ -1845,7 +1833,7 @@ void Tesseract::classify_word_pass2(const WordData &word_data, WERD_RES **in_wor
   SubAndSuperscriptFix(word);
 
   if (!word->tess_failed && !word->word->flag(W_REP_CHAR)) {
-    if (unicharset.top_bottom_useful() && unicharset.script_has_xheight() &&
+    if (unicharset_.top_bottom_useful() && unicharset_.script_has_xheight() &&
         block->classify_rotation().y() == 0.0f) {
       // Use the tops and bottoms since they are available.
       TrainedXheightFix(word, block, row);
@@ -1889,7 +1877,7 @@ void Tesseract::match_word_pass_n(int pass_n, WERD_RES *word, ROW *row, BLOCK *b
       /* Don't trust fix_quotes! - though I think I've fixed the bug */
       if (static_cast<unsigned>(word->best_choice->length()) != word->box_word->length()) {
         tprintDebug(
-            "POST FIX_QUOTES FAIL String:\"{}\"; Strlen={};"
+            "POST FIX_QUOTES FAIL String:{}; Strlen={};"
             " #Blobs={}\n",
             word->best_choice->debug_string(), word->best_choice->length(),
             word->box_word->length());
@@ -2099,6 +2087,8 @@ bool Tesseract::check_debug_pt(WERD_RES *word, int location) {
     if (location < 0) {
       return true; // For breakpoint use
     }
+    TPrintGroupLinesTillEndOfScope push;
+
     bool show_map_detail = false;
     tessedit_rejection_debug.set_value(true);
     debug_x_ht_level.set_value(2);
@@ -2106,6 +2096,7 @@ bool Tesseract::check_debug_pt(WERD_RES *word, int location) {
     switch (location) {
       default:
         ASSERT_HOST_MSG(false, "Should never get here!");
+		break;
       case 0:
         tprintDebug("classify_word_pass1 start\n");
         word->word->print();
@@ -2150,14 +2141,17 @@ bool Tesseract::check_debug_pt(WERD_RES *word, int location) {
         break;
     }
     if (word->best_choice != nullptr) {
-      tprintDebug("\"{}\" ", word->best_choice->unichar_string());
-      word->reject_map.print(debug_fp);
-      tprintDebug("\n");
+      tprintDebug("{}\n", mdqstr(word->best_choice->unichar_string()));
+      tprintDebug("  reject_map: {}\n", word->reject_map.print_to_string());
       if (show_map_detail) {
-        tprintDebug("\"{}\"\n", word->best_choice->unichar_string());
-        for (unsigned i = 0; word->best_choice->unichar_string()[i] != '\0'; i++) {
-          tprintDebug("**** \"{}\" ****\n", word->best_choice->unichar_string()[i]);
-          word->reject_map[i].full_print(debug_fp);
+        tprintDebug("  details: {}\n", mdqstr(word->best_choice->unichar_string()));
+        const std::string &wstr = word->best_choice->unichar_string();
+        for (unsigned i = 0; wstr[i] != '\0'; i++) {
+          if (wstr[i] != '`')
+            tprintDebug("  char[{}]: **** `{}` ****\n", i, wstr[i]);
+          else
+            tprintDebug("  char[{}]: **** '`' ****\n", i);
+          tprintDebug("  char[{}]: reject_map: {}\n", i, word->reject_map[i].full_print_to_string());
         }
       }
     } else {
@@ -2361,12 +2355,6 @@ void Tesseract::italic_recognition_pass(PAGE_RES *page_res) {
   italic = (word != nullptr && word->fontinfo && word->fontinfo->is_italic());
   word_next = page_res_it.word();
 
-#if 0
-  // This line has some side effect that prevents "Segmentation fault (core dumped)" in certain cases. 
-  // Do not understand why that happens. 
-  (void)word->best_choice->debug_string().c_str();
-#endif
-
   while (word_next != nullptr) {
     page_res_it.forward();
     word_next = page_res_it.word();
@@ -2436,8 +2424,8 @@ void Tesseract::dictionary_correction_pass(PAGE_RES *page_res) {
       if (word->tesseract->getDict().valid_word(*alternate)) {
         // The alternate choice is in the dictionary.
         if (tessedit_bigram_debug) {
-          tprintDebug("Dictionary correction replaces best choice '{}' with '{}'\n",
-                  best->unichar_string(), alternate->unichar_string());
+          tprintDebug("Dictionary correction replaces best choice {} with {}\n",
+                  mdqstr(best->unichar_string()), mdqstr(alternate->unichar_string()));
         }
         // Replace the 'best' choice with a better choice.
         word->ReplaceBestChoice(alternate);

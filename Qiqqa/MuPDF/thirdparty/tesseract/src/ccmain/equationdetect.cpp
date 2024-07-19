@@ -99,10 +99,11 @@ inline bool IsRightIndented(const EquationDetect::IndentType type) {
   return type == EquationDetect::RIGHT_INDENT || type == EquationDetect::BOTH_INDENT;
 }
 
-EquationDetect::EquationDetect(const char *equ_datapath, const char *equ_name) {
-  const char *default_name = "equ";
+EquationDetect::EquationDetect(TessBaseAPI &owner, const char *equ_datapath, const char *equ_name)
+    : equ_tesseract_(owner)
+{
   if (equ_name == nullptr) {
-    equ_name = default_name;
+    equ_name = "equ";
   }
   lang_tesseract_ = nullptr;
   resolution_ = 0;
@@ -208,7 +209,7 @@ void EquationDetect::IdentifySpecialText(BLOBNBOX *blobnbox, const int height_th
     type = BSTT_MATH;
   } else if (lang_choice) {
     // For other cases: lang_score is similar or significantly higher.
-    type = EstimateTypeForUnichar(lang_tesseract_->unicharset, lang_choice->unichar_id());
+    type = EstimateTypeForUnichar(lang_tesseract_->unicharset_, lang_choice->unichar_id());
   }
 
   if (type == BSTT_NONE && lang_choice &&
@@ -598,7 +599,6 @@ float EquationDetect::ComputeForegroundDensity(const TBOX &tbox) {
   Image pix_sub = pixClipRectangle(pix_bi, box, nullptr);
   l_float32 fract;
   pixForegroundFraction(pix_sub, &fract);
-  pix_sub.destroy();
   boxDestroy(&box);
 
   return fract;
@@ -1401,12 +1401,12 @@ void EquationDetect::GetOutputTiffName(const char *name, std::string &image_name
   char page[50];
   snprintf(page, sizeof(page), "%04d", page_count_);
   // name: _spt, _bi, _seed, _merged
-  image_name = (lang_tesseract_->imagebasename) + page + name + ".tiff";
+  image_name = (lang_tesseract_->imagebasename_) + page + name + ".tiff";
 }
 
 void EquationDetect::PaintSpecialTexts(const std::string &outfile) const {
-  Image pix = nullptr, pixBi = lang_tesseract_->pix_binary();
-  pix = pixConvertTo32(pixBi);
+  Image pixBi = lang_tesseract_->pix_binary();
+  Image pix = pixConvertTo32(pixBi.ptr());
   ColPartitionGridSearch gsearch(part_grid_);
   ColPartition *part = nullptr;
   gsearch.StartFullSearch();
@@ -1418,7 +1418,6 @@ void EquationDetect::PaintSpecialTexts(const std::string &outfile) const {
   }
 
   pixWrite(outfile.c_str(), pix, IFF_TIFF_LZW);
-  pix.destroy();
 }
 
 void EquationDetect::PaintColParts(const std::string &outfile) const {

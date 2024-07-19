@@ -302,20 +302,11 @@ template<class NextLayer, bool deflateSupported>
 struct stream<NextLayer, deflateSupported>::
     run_close_op
 {
-    boost::shared_ptr<impl_type> const& self;
-
-    using executor_type = typename stream::executor_type;
-
-    executor_type
-    get_executor() const noexcept
-    {
-        return self->stream().get_executor();
-    }
-
     template<class CloseHandler>
     void
     operator()(
         CloseHandler&& h,
+        boost::shared_ptr<impl_type> const& sp,
         close_reason const& cr)
     {
         // If you get an error on the following line it means
@@ -330,7 +321,7 @@ struct stream<NextLayer, deflateSupported>::
         close_op<
             typename std::decay<CloseHandler>::type>(
                 std::forward<CloseHandler>(h),
-                self,
+                sp,
                 cr);
     }
 };
@@ -467,8 +458,9 @@ async_close(close_reason const& cr, CloseHandler&& handler)
     return net::async_initiate<
         CloseHandler,
         void(error_code)>(
-            run_close_op{impl_},
+            run_close_op{},
             handler,
+            impl_,
             cr);
 }
 

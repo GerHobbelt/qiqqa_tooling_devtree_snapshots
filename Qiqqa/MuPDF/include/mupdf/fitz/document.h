@@ -251,6 +251,13 @@ typedef void (fz_document_output_accelerator_fn)(fz_context *ctx, fz_document *d
 typedef void (fz_document_run_structure_fn)(fz_context *ctx, fz_document *doc, fz_device *dev, fz_cookie *cookie);
 
 /**
+	Get a handle to this document as PDF.
+
+	Returns a borrowed handle.
+*/
+typedef fz_document *(fz_document_as_pdf_fn)(fz_context *ctx, fz_document *doc);
+
+/**
 	Type for a function to make
 	a bookmark. See fz_make_bookmark for more information.
 */
@@ -337,9 +344,13 @@ typedef void (fz_page_delete_link_fn)(fz_context *ctx, fz_page *page, fz_link *l
 	associated content from (like images for an html stream
 	will be loaded from this). Maybe NULL. May be ignored.
 
+	recognize_state: NULL, or a state pointer passed back from the call
+	to recognise_content_fn. Ownership does not pass in. The
+	caller remains responsible for freeing state.
+
 	Pointer to opened document. Throws exception in case of error.
 */
-typedef fz_document *(fz_document_open_fn)(fz_context *ctx, const fz_document_handler *handler, fz_stream *stream, fz_stream *accel, fz_archive *dir);
+typedef fz_document *(fz_document_open_fn)(fz_context *ctx, const fz_document_handler *handler, fz_stream *stream, fz_stream *accel, fz_archive *dir, void *recognize_state);
 
 /**
 	Recognize a document type from
@@ -356,6 +367,8 @@ typedef fz_document *(fz_document_open_fn)(fz_context *ctx, const fz_document_ha
 */
 typedef int (fz_document_recognize_fn)(fz_context *ctx, const fz_document_handler *handler, const char *magic);
 
+typedef void (fz_document_recognize_state_free_fn)(fz_context *ctx, void *state);
+
 /**
 	Recognize a document type from stream contents.
 
@@ -366,11 +379,20 @@ typedef int (fz_document_recognize_fn)(fz_context *ctx, const fz_document_handle
 
 	dir: directory context from which stream is loaded.
 
+	recognize_state: pointer to retrieve opaque state that may be used
+	by the open routine, or NULL.
+
+	free_recognize_state: pointer to retrieve a function pointer to
+	free the opaque state, or NULL.
+
+	Note: state and free_state should either both be NULL or
+	both be non-NULL!
+
 	Returns a number between 0 (not recognized) and 100
 	(fully recognized) based on how certain the recognizer
 	is that this is of the required type.
 */
-typedef int (fz_document_recognize_content_fn)(fz_context *ctx, const fz_document_handler *handler, fz_stream *stream, fz_archive *dir);
+typedef int (fz_document_recognize_content_fn)(fz_context *ctx, const fz_document_handler *handler, fz_stream *stream, fz_archive *dir, void **recognize_state, fz_document_recognize_state_free_fn **free_recognize_state);
 
 /**
 	Finalise a document handler.
@@ -1102,6 +1124,7 @@ struct fz_document
 	fz_document_output_intent_fn *get_output_intent;
 	fz_document_output_accelerator_fn *output_accelerator;
 	fz_document_run_structure_fn *run_structure;
+	fz_document_as_pdf_fn *as_pdf;
 	int did_layout;
 	int is_reflowable;
 

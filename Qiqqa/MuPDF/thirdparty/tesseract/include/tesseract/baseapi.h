@@ -27,6 +27,8 @@
 
 #include <tesseract/version.h>
 #include <tesseract/memcost_estimate.h>  // for ImageCostEstimate
+#include <tesseract/ocrclass.h>
+#include <tesseract/image.h>
 #include <tesseract/params.h>
 
 #include <cstdio>
@@ -98,6 +100,20 @@ public:
   void SetInputName(const char *name);
 
   /**
+   * Register a user-defined monitor instance, whose lifetime will equal
+   * or surpass this TesseractAPI instance's lifetime, i.e.
+   * the referenced monitor instance MUST remain valid until
+   * we're done with it.
+   */
+  void RegisterMonitor(ETEXT_DESC *monitor);
+  ETEXT_DESC &Monitor();
+  const ETEXT_DESC &Monitor() const;
+
+  /// Note the given command (argv[] set as vector) for later reporting
+  /// in the diagnostics output as part of the HTML log heading.
+  void DebugAddCommandline(const std::vector<std::string> &argv);
+
+  /**
    * These functions are required for searchable PDF output.
    * We need our hands on the input file so that we can include
    * it in the PDF without transcoding. If that is not possible,
@@ -109,10 +125,15 @@ public:
 
   const char *GetInputName();
 
-  // Takes ownership of the input pix.
+  // DOES NOT takes ownership of the input pix, but COPIES it instead.
   void SetInputImage(Pix *pix);
+  // Takes ownership of the input pix.
+  void SetInputImage(Image &&pix);
+  // DOES NOT takes ownership of the input pix, but CLONES it instead.
+  void SetInputImage(const Image &pix);
 
-  Pix *GetInputImage();
+  Pix *GetInputImage() const;
+  Image GetInputImageClone();
 
   int GetSourceYResolution();
 
@@ -122,9 +143,15 @@ public:
 
   const char *GetVisibleImageFilename();
 
+  // DOES NOT takes ownership of the input pix, but COPIES it instead.
   void SetVisibleImage(Pix *pix);
+  // Takes ownership of the input pix.
+  void SetVisibleImage(Image &&pix);
+  // DOES NOT takes ownership of the input pix, but CLONES it instead.
+  void SetVisibleImage(const Image &pix);
 
   Pix* GetVisibleImage();
+  Image GetVisibleImageClone();
 
   /**
    * @}
@@ -363,9 +390,7 @@ public:
    * Note: only non-init params will be set (init params are set by Init()).
    */
   void ReadConfigFile(const char *filename);
-  /** Same as above, but only set debug params from the given config file. */
-  void ReadDebugConfigFile(const char *filename);
-
+  
   /**
    * Set the current page segmentation mode. Defaults to PSM_SINGLE_BLOCK.
    * The mode is stored as an IntParam so it can also be modified by
@@ -466,7 +491,8 @@ public:
    * May be called any time after SetImage, or after TesseractRect.
    */
   Pix *GetThresholdedImage();
-
+  Image GetThresholdedImageClone();
+  
   /**
    * Return average gradient of lines on page.
    */
@@ -579,7 +605,7 @@ public:
    * Optional. The Get*Text functions below will call Recognize if needed.
    * After Recognize, the output is kept internally until the next SetImage.
    */
-  int Recognize(ETEXT_DESC *monitor);
+  int Recognize();
 
   /**
    * Methods to retrieve information after SetAndThresholdImage(),
@@ -594,13 +620,6 @@ public:
    * filename can point to a single image, a multi-page TIFF,
    * or a plain text list of image filenames.
    *
-   * retry_config is useful for debugging. If not nullptr, you can fall
-   * back to an alternate configuration if a page fails for some
-   * reason.
-   *
-   * timeout_millisec terminates processing if any single page
-   * takes too long. Set to 0 for unlimited time.
-   *
    * renderer is responsible for creating the output. For example,
    * use the TessTextRenderer if you want plaintext output, or
    * the TessPDFRender to produce searchable PDF.
@@ -610,13 +629,13 @@ public:
    *
    * Returns true if successful, false on error.
    */
-  bool ProcessPages(const char *filename, const char *retry_config,
-                    int timeout_millisec, TessResultRenderer *renderer);
+  bool ProcessPages(const char *filename, 
+                    TessResultRenderer *renderer);
 
 protected:
   // Does the real work of ProcessPages.
-  bool ProcessPagesInternal(const char *filename, const char *retry_config,
-                            int timeout_millisec, TessResultRenderer *renderer);
+  bool ProcessPagesInternal(const char *filename, 
+                            TessResultRenderer *renderer);
 
 public:
   /**
@@ -629,7 +648,6 @@ public:
    * See ProcessPages for descriptions of other parameters.
    */
   bool ProcessPage(Pix *pix, const char *filename,
-                   const char *retry_config, int timeout_millisec,
                    TessResultRenderer *renderer);
 
   /**
@@ -685,17 +703,8 @@ public:
    * data structures.
    * page_number is 0-based but will appear in the output as 1-based.
    * monitor can be used to
-   *  cancel the recognition
-   *  receive progress callbacks
-   *
-   * Returned string must be freed with the delete [] operator.
-   */
-  char *GetHOCRText(ETEXT_DESC *monitor, int page_number);
-
-  /**
-   * Make a HTML-formatted string with hOCR markup from the internal
-   * data structures.
-   * page_number is 0-based but will appear in the output as 1-based.
+   * - cancel the recognition
+   * - receive progress callbacks
    *
    * Returned string must be freed with the delete [] operator.
    */
@@ -707,25 +716,9 @@ public:
    *
    * Returned string must be freed with the delete [] operator.
    */
-  char *GetAltoText(ETEXT_DESC *monitor, int page_number);
-
-  /**
-   * Make an XML-formatted string with Alto markup from the internal
-   * data structures.
-   *
-   * Returned string must be freed with the delete [] operator.
-   */
   char *GetAltoText(int page_number);
 
    /**
-   * Make an XML-formatted string with PAGE markup from the internal
-   * data structures.
-   *
-   * Returned string must be freed with the delete [] operator.
-   */
-  char *GetPAGEText(ETEXT_DESC *monitor, int page_number);
-
-  /**
    * Make an XML-formatted string with PAGE markup from the internal
    * data structures.
    *
@@ -933,6 +926,9 @@ public:
   }
 
   void set_min_orientation_margin(double margin);
+
+  void ReportDebugInfo();
+
   /* @} */
 
 protected:
@@ -984,13 +980,15 @@ protected:
   Tesseract *osd_tesseract_;         ///< For orientation & script detection.
   EquationDetect *equ_detect_;       ///< The equation detector.
 #endif
+  ETEXT_DESC *monitor_ = nullptr;
+  ETEXT_DESC default_minimal_monitor_;
   FileReader reader_;                ///< Reads files from any filesystem.
   ImageThresholder *thresholder_;    ///< Image thresholding module.
   std::vector<ParagraphModel *> *paragraph_models_;
   BLOCK_LIST *block_list_;           ///< The page layout.
   PAGE_RES *page_res_;               ///< The page-level data.
   std::string visible_image_file_;
-  Pix* pix_visible_image_;           ///< Image used in output PDF
+  Image pix_visible_image_;          ///< Image used in output PDF
   std::string output_file_;          ///< Name used by debug code.
   std::string datapath_;             ///< Current location of tessdata.
   std::string language_;             ///< Last initialized language.
@@ -1016,15 +1014,13 @@ private:
   // If global parameter `tessedit_page_number` is non-negative, will only process that
   // single page. Works for multi-page tiff file, or filelist.
   bool ProcessPagesFileList(FILE *fp, std::string *buf,
-                            const char *retry_config, int timeout_millisec,
                             TessResultRenderer *renderer);
   // TIFF supports multipage so gets special consideration.
   //
   // If global parameter `tessedit_page_number` is non-negative, will only process that
   // single page. Works for multi-page tiff file, or filelist.
   bool ProcessPagesMultipageTiff(const unsigned char *data, size_t size,
-                                 const char *filename, const char *retry_config,
-                                 int timeout_millisec,
+                                 const char *filename, 
                                  TessResultRenderer *renderer);
 }; // class TessBaseAPI.
 

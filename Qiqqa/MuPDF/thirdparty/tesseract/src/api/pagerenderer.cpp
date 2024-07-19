@@ -703,22 +703,14 @@ TessPAGERenderer::TessPAGERenderer(const char *outputbase)
 /// data structures.
 ///
 char *TessBaseAPI::GetPAGEText(int page_number) {
-  return GetPAGEText(nullptr, page_number);
-}
-
-///
-/// Make an XML-formatted string with PAGE markup from the internal
-/// data structures.
-///
-char *TessBaseAPI::GetPAGEText(ETEXT_DESC *monitor, int page_number) {
   if (tesseract_ == nullptr ||
-      (page_res_ == nullptr && Recognize(monitor) < 0)) {
+      (page_res_ == nullptr && Recognize() < 0)) {
     return nullptr;
   }
 
   int rcnt = 0, lcnt = 0, wcnt = 0;
 
-  if (tesseract_->input_file_path.empty()) {
+  if (tesseract_->input_file_path_.empty()) {
     SetInputName(nullptr);
   }
 

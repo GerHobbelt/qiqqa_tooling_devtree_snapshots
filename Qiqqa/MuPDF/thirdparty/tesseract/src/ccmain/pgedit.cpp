@@ -488,7 +488,6 @@ void Tesseract::do_re_display(PAGE_RES *page_res, bool (tesseract::Tesseract::*w
     word_dumper(&pr_it);
   }
 
-
   image_win->Brush(Diagnostics::NONE);
   PAGE_RES_IT pr_it(page_res);
   for (WERD_RES *word = pr_it.word(); word != nullptr; word = pr_it.forward()) {
@@ -582,7 +581,7 @@ bool Tesseract::process_cmd_win_event( // UI command semantics
     case SHOW_SMALLCAPS_CMD_EVENT:
     case SHOW_DROPCAPS_CMD_EVENT:
       if (!recog_done) {
-        recog_all_words(current_page_res, nullptr, nullptr, nullptr, 0);
+        (void)recog_all_words(current_page_res, nullptr, nullptr, 0);
         recog_done = true;
       }
       break;
@@ -806,11 +805,11 @@ void Tesseract::process_image_event( // action in image win
  *
  * Process the whole image, but load word_config_ for the selected word(s).
  */
-void Tesseract::debug_word(PAGE_RES *page_res, const TBOX &selection_box) {
+bool Tesseract::debug_word(PAGE_RES *page_res, const TBOX &selection_box) {
 #  if !DISABLED_LEGACY_ENGINE
   ResetAdaptiveClassifier();
 #  endif
-  recog_all_words(page_res, nullptr, &selection_box, word_config_.c_str(), 0);
+  return recog_all_words(page_res, &selection_box, word_config_.c_str(), 0);
 }
 
 /**********************************************************************
@@ -847,7 +846,7 @@ bool Tesseract::word_bln_display(PAGE_RES_IT *pr_it) {
   WERD_RES *word_res = pr_it->word();
   if (word_res->chopped_word == nullptr) {
     // Setup word normalization parameters.
-    word_res->SetupForRecognition(unicharset, this, tessedit_ocr_engine_mode, nullptr,
+    word_res->SetupForRecognition(unicharset_, this, tessedit_ocr_engine_mode, nullptr,
                                   classify_bln_numeric_mode, textord_use_cjk_fp_model,
                                   poly_allow_detailed_fx, pr_it->row()->row, pr_it->block()->block);
   }
@@ -1101,7 +1100,7 @@ void Tesseract::blob_feature_display(PAGE_RES *page_res, const TBOX &selection_b
   if (it != nullptr) {
     WERD_RES *word_res = it->word();
     word_res->x_height = it->row()->row->x_height();
-    word_res->SetupForRecognition(unicharset, this, tessedit_ocr_engine_mode, nullptr,
+    word_res->SetupForRecognition(unicharset_, this, tessedit_ocr_engine_mode, nullptr,
                                   classify_bln_numeric_mode, textord_use_cjk_fp_model,
                                   poly_allow_detailed_fx, it->row()->row, it->block()->block);
     TWERD *bln_word = word_res->chopped_word;

@@ -121,21 +121,8 @@ static void AddBoxTohOCR(const ResultIterator *it, PageIteratorLevel level,
  * Returned string must be freed with the delete [] operator.
  */
 char *TessBaseAPI::GetHOCRText(int page_number) {
-  return GetHOCRText(nullptr, page_number);
-}
-
-/**
- * Make a HTML-formatted string with hOCR markup from the internal
- * data structures.
- * page_number is 0-based but will appear in the output as 1-based.
- * Image name/input_file_ can be set by SetInputName before calling
- * GetHOCRText
- * STL removed from original patch submission and refactored by rays.
- * Returned string must be freed with the delete [] operator.
- */
-char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
   if (tesseract_ == nullptr ||
-      (page_res_ == nullptr && Recognize(monitor) < 0)) {
+      (page_res_ == nullptr && Recognize() < 0)) {
     return nullptr;
   }
 
@@ -144,7 +131,7 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
   bool para_is_ltr = true;       // Default direction is LTR
   const char *paragraph_lang = nullptr;
 
-  if (tesseract_->input_file_path.empty()) {
+  if (tesseract_->input_file_path_.empty()) {
     SetInputName(nullptr);
   }
 
@@ -157,8 +144,8 @@ char *TessBaseAPI::GetHOCRText(ETEXT_DESC *monitor, int page_number) {
            << " id='"
            << "page_" << page_id << "'"
            << " title='image \"";
-  if (!tesseract_->input_file_path.empty()) {
-    hocr_str << HOcrEscape(tesseract_->input_file_path.c_str());
+  if (!tesseract_->input_file_path_.empty()) {
+    hocr_str << HOcrEscape(tesseract_->input_file_path_.c_str());
   } else {
     hocr_str << "unknown";
   }

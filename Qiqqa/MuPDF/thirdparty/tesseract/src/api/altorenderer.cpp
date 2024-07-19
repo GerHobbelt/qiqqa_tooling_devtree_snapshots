@@ -129,21 +129,13 @@ TessAltoRenderer::TessAltoRenderer(const char *outputbase)
 /// data structures.
 ///
 char *TessBaseAPI::GetAltoText(int page_number) {
-  return GetAltoText(nullptr, page_number);
-}
-
-///
-/// Make an XML-formatted string with ALTO markup from the internal
-/// data structures.
-///
-char *TessBaseAPI::GetAltoText(ETEXT_DESC *monitor, int page_number) {
-  if (tesseract_ == nullptr || (page_res_ == nullptr && Recognize(monitor) < 0)) {
+  if (tesseract_ == nullptr || (page_res_ == nullptr && Recognize() < 0)) {
     return nullptr;
   }
 
   int lcnt = 0, tcnt = 0, bcnt = 0, wcnt = 0;
 
-  if (tesseract_->input_file_path.empty()) {
+  if (tesseract_->input_file_path_.empty()) {
     SetInputName(nullptr);
   }
 

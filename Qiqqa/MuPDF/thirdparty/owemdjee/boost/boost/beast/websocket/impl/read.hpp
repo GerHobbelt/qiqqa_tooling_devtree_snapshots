@@ -819,22 +819,13 @@ template<class NextLayer, bool deflateSupported>
 struct stream<NextLayer, deflateSupported>::
     run_read_some_op
 {
-    boost::shared_ptr<impl_type> const& self;
-
-    using executor_type = typename stream::executor_type;
-
-    executor_type
-    get_executor() const noexcept
-    {
-        return self->stream().get_executor();
-    }
-
     template<
         class ReadHandler,
         class MutableBufferSequence>
     void
     operator()(
         ReadHandler&& h,
+        boost::shared_ptr<impl_type> const& sp,
         MutableBufferSequence const& b)
     {
         // If you get an error on the following line it means
@@ -850,7 +841,7 @@ struct stream<NextLayer, deflateSupported>::
             typename std::decay<ReadHandler>::type,
             MutableBufferSequence>(
                 std::forward<ReadHandler>(h),
-                self,
+                sp,
                 b);
     }
 };
@@ -859,22 +850,13 @@ template<class NextLayer, bool deflateSupported>
 struct stream<NextLayer, deflateSupported>::
     run_read_op
 {
-    boost::shared_ptr<impl_type> const& self;
-
-    using executor_type = typename stream::executor_type;
-
-    executor_type
-    get_executor() const noexcept
-    {
-        return self->stream().get_executor();
-    }
-
     template<
         class ReadHandler,
         class DynamicBuffer>
     void
     operator()(
         ReadHandler&& h,
+        boost::shared_ptr<impl_type> const& sp,
         DynamicBuffer* b,
         std::size_t limit,
         bool some)
@@ -892,7 +874,7 @@ struct stream<NextLayer, deflateSupported>::
             typename std::decay<ReadHandler>::type,
             DynamicBuffer>(
                 std::forward<ReadHandler>(h),
-                self,
+                sp,
                 *b,
                 limit,
                 some);
@@ -955,8 +937,9 @@ async_read(DynamicBuffer& buffer, ReadHandler&& handler)
     return net::async_initiate<
         ReadHandler,
         void(error_code, std::size_t)>(
-            run_read_op{impl_},
+            run_read_op{},
             handler,
+            impl_,
             &buffer,
             0,
             false);
@@ -1031,8 +1014,9 @@ async_read_some(
     return net::async_initiate<
         ReadHandler,
         void(error_code, std::size_t)>(
-            run_read_op{impl_},
+            run_read_op{},
             handler,
+            impl_,
             &buffer,
             limit,
             true);
@@ -1411,8 +1395,9 @@ async_read_some(
     return net::async_initiate<
         ReadHandler,
         void(error_code, std::size_t)>(
-            run_read_some_op{impl_},
+            run_read_some_op{},
             handler,
+            impl_,
             buffers);
 }
 

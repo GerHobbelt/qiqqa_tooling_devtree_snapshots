@@ -348,7 +348,6 @@ class detect_ssl_op;
 // authors of composed operations need to write it this way to get the
 // very best performance, for example when using Coroutines TS (`co_await`).
 
-template <typename AsyncReadStream>
 struct run_detect_ssl_op
 {
     // The implementation of `net::async_initiate` captures the
@@ -362,29 +361,20 @@ struct run_detect_ssl_op
     // token into the "real handler" which must have the correct
     // signature, in this case `void(error_code, boost::tri_bool)`.
 
-    AsyncReadStream* stream;
-
-    using executor_type = typename AsyncReadStream::executor_type;
-
-    executor_type
-    get_executor() const noexcept
-    {
-        return stream->get_executor();
-    }
-
     template<
         class DetectHandler,
+        class AsyncReadStream,
         class DynamicBuffer>
-    void
-    operator()(
+    void operator()(
         DetectHandler&& h,
+        AsyncReadStream* s, // references are passed as pointers
         DynamicBuffer* b)
     {
         detect_ssl_op<
             typename std::decay<DetectHandler>::type,
             AsyncReadStream,
             DynamicBuffer>(
-                std::forward<DetectHandler>(h), *stream, *b);
+                std::forward<DetectHandler>(h), *s, *b);
     }
 };
 
@@ -433,8 +423,9 @@ async_detect_ssl(
     return net::async_initiate<
         CompletionToken,
         void(error_code, bool)>(
-            detail::run_detect_ssl_op<AsyncReadStream>{&stream},
+            detail::run_detect_ssl_op{},
             token,
+            &stream, // pass the reference by pointer
             &buffer);
 }
 

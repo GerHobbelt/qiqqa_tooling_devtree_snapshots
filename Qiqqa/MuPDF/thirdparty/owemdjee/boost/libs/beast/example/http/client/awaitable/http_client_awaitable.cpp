@@ -13,30 +13,44 @@
 //
 //------------------------------------------------------------------------------
 
-#include <boost/asio/awaitable.hpp>
-#include <boost/asio/co_spawn.hpp>
-#include <boost/asio/io_context.hpp>
+
+
 #include <boost/beast/core.hpp>
 #include <boost/beast/http.hpp>
 #include <boost/beast/version.hpp>
-
-#include <cstdlib>
-#include <iostream>
-#include <string>
+#include <boost/asio/awaitable.hpp>
+#include <boost/asio/co_spawn.hpp>
+#include <boost/asio/detached.hpp>
+#include <boost/asio/use_awaitable.hpp>
 
 #if defined(BOOST_ASIO_HAS_CO_AWAIT)
 
-namespace beast = boost::beast;
-namespace http  = beast::http;
-namespace net   = boost::asio;
+#include <cstdlib>
+#include <functional>
+#include <iostream>
+#include <string>
+
+namespace beast = boost::beast;         // from <boost/beast.hpp>
+namespace http = beast::http;           // from <boost/beast/http.hpp>
+namespace net = boost::asio;            // from <boost/asio.hpp>
+using tcp = boost::asio::ip::tcp;       // from <boost/asio/ip/tcp.hpp>
+
+//------------------------------------------------------------------------------
 
 // Performs an HTTP GET and prints the response
 net::awaitable<void>
-do_session(std::string host, std::string port, std::string target, int version)
+do_session(
+    std::string host,
+    std::string port,
+    std::string target,
+    int version)
 {
-    auto executor = co_await net::this_coro::executor;
-    auto resolver = net::ip::tcp::resolver{ executor };
-    auto stream   = beast::tcp_stream{ executor };
+    // These objects perform our I/O
+    // They use an executor with a default completion token of use_awaitable
+    // This makes our code easy, but will use exceptions as the default error handling,
+    // i.e. if the connection drops, we might see an exception.
+    auto resolver = net::use_awaitable.as_default_on(tcp::resolver(co_await net::this_coro::executor));
+    auto stream = net::use_awaitable.as_default_on(beast::tcp_stream(co_await net::this_coro::executor));
 
     // Look up the domain name
     auto const results = co_await resolver.async_resolve(host, port);
@@ -48,7 +62,7 @@ do_session(std::string host, std::string port, std::string target, int version)
     co_await stream.async_connect(results);
 
     // Set up an HTTP GET request message
-    http::request<http::string_body> req{ http::verb::get, target, version };
+    http::request<http::string_body> req{http::verb::get, target, version};
     req.set(http::field::host, host);
     req.set(http::field::user_agent, BOOST_BEAST_VERSION_STRING);
 
@@ -59,20 +73,20 @@ do_session(std::string host, std::string port, std::string target, int version)
     co_await http::async_write(stream, req);
 
     // This buffer is used for reading and must be persisted
-    beast::flat_buffer buffer;
+    beast::flat_buffer b;
 
     // Declare a container to hold the response
     http::response<http::dynamic_body> res;
 
     // Receive the HTTP response
-    co_await http::async_read(stream, buffer, res);
+    co_await http::async_read(stream, b, res);
 
     // Write the message to standard out
     std::cout << res << std::endl;
 
     // Gracefully close the socket
     beast::error_code ec;
-    stream.socket().shutdown(net::ip::tcp::socket::shutdown_both, ec);
+    stream.socket().shutdown(tcp::socket::shutdown_both, ec);
 
     // not_connected happens sometimes
     // so don't bother reporting it.
@@ -85,61 +99,58 @@ do_session(std::string host, std::string port, std::string target, int version)
 
 //------------------------------------------------------------------------------
 
-int
-main(int argc, char** argv)
+int main(int argc, char** argv)
 {
-    try
+    // Check command line arguments.
+    if(argc != 4 && argc != 5)
     {
-        // Check command line arguments.
-        if(argc != 4 && argc != 5)
-        {
-            std::cerr << "Usage: http-client-awaitable <host> <port> <target> [<HTTP version: 1.0 or 1.1(default)>]\n"
-                      << "Example:\n"
-                      << "    http-client-awaitable www.example.com 80 /\n"
-                      << "    http-client-awaitable www.example.com 80 / 1.0\n";
-            return EXIT_FAILURE;
-        }
-        auto const host   = argv[1];
-        auto const port   = argv[2];
-        auto const target = argv[3];
-        auto const version =
-            argc == 5 && !std::strcmp("1.0", argv[4]) ? 10 : 11;
-
-        // The io_context is required for all I/O
-        net::io_context ioc;
-
-        // Launch the asynchronous operation
-        net::co_spawn(
-            ioc,
-            do_session(host, port, target, version),
-            // If the awaitable exists with an exception, it gets delivered here
-            // as `e`. This can happen for regular errors, such as connection
-            // drops.
-            [](std::exception_ptr e)
-            {
-                if(e)
-                    std::rethrow_exception(e);
-            });
-
-        // Run the I/O service. The call will return when
-        // the get operation is complete.
-        ioc.run();
-    }
-    catch(std::exception const& e)
-    {
-        std::cerr << "Error: " << e.what() << std::endl;
+        std::cerr <<
+            "Usage: http-client-awaitable <host> <port> <target> [<HTTP version: 1.0 or 1.1(default)>]\n" <<
+            "Example:\n" <<
+            "    http-client-awaitable www.example.com 80 /\n" <<
+            "    http-client-awaitable www.example.com 80 / 1.0\n";
         return EXIT_FAILURE;
     }
+    auto const host = argv[1];
+    auto const port = argv[2];
+    auto const target = argv[3];
+    int version = argc == 5 && !std::strcmp("1.0", argv[4]) ? 10 : 11;
+
+    // The io_context is required for all I/O
+    net::io_context ioc;
+
+    // Launch the asynchronous operation
+    net::co_spawn(
+        ioc,
+        do_session(host, port, target, version),
+        // If the awaitable exists with an exception, it gets delivered here as `e`.
+        // This can happen for regular errors, such as connection drops.
+        [](std::exception_ptr e)
+        {
+          if (e)
+          try
+          {
+              std::rethrow_exception(e);
+          }
+          catch(std::exception & ex)
+          {
+              std::cerr << "Error: " << ex.what() << "\n";
+          }
+        });
+
+    // Run the I/O service. The call will return when
+    // the get operation is complete.
+    ioc.run();
+
     return EXIT_SUCCESS;
 }
 
 #else
 
-int
-main(int, char*[])
+int main(int, char * [])
 {
     std::printf("awaitables require C++20\n");
-    return EXIT_FAILURE;
+    return 1;
 }
 
 #endif

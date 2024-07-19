@@ -104,26 +104,17 @@ public:
 
 //------------------------------------------------------------------------------
 
-template <typename AsyncReadStream>
 struct run_read_op
 {
-    AsyncReadStream* stream;
-
-    using executor_type = typename AsyncReadStream::executor_type;
-
-    executor_type
-    get_executor() const noexcept
-    {
-        return stream->get_executor();
-    }
-
     template<
+        class AsyncReadStream,
         class DynamicBuffer,
         class Condition,
         class ReadHandler>
     void
     operator()(
         ReadHandler&& h,
+        AsyncReadStream* s,
         DynamicBuffer* b,
         Condition&& c)
     {
@@ -142,7 +133,7 @@ struct run_read_op
             typename std::decay<Condition>::type,
             typename std::decay<ReadHandler>::type>(
                 std::forward<ReadHandler>(h),
-                *stream,
+                *s,
                 *b,
                 std::forward<Condition>(c));
     }
@@ -243,8 +234,9 @@ async_read(
     return net::async_initiate<
         ReadHandler,
         void(error_code, std::size_t)>(
-            typename dynamic_read_ops::run_read_op<AsyncReadStream>{&stream},
+            typename dynamic_read_ops::run_read_op{},
             handler,
+            &stream,
             &buffer,
             std::forward<CompletionCondition>(cond));
 }

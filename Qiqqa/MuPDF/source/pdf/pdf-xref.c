@@ -3155,6 +3155,13 @@ char *pdf_format_link_uri_imp(fz_context *ctx, fz_document *doc, fz_link_dest de
 	return pdf_new_uri_from_explicit_dest(ctx, dest);
 }
 
+static fz_document *
+as_pdf(fz_context *ctx, fz_document *doc)
+{
+	return doc;
+}
+
+
 
 /*
 	Wrappers used to silence the C compilers due to type conversions
@@ -3230,6 +3237,7 @@ pdf_new_document(fz_context *ctx, fz_stream *file)
 	doc->super.lookup_metadata = __pdf_lookup_metadata;
 	doc->super.set_metadata = __pdf_document_set_metadata;
 	doc->super.run_structure = __pdf_run_document_structure;
+	doc->super.as_pdf = (fz_document_as_pdf_fn *)as_pdf;
 
 	pdf_lexbuf_init(ctx, &doc->lexbuf.base, PDF_LEXBUF_LARGE);
 	doc->file = fz_keep_stream(ctx, file);
@@ -3655,6 +3663,13 @@ pdf_obj *pdf_progressive_advance(fz_context *ctx, pdf_document *doc, int pagenum
 	return doc->linear_page_refs[pagenum];
 }
 
+pdf_document *fz_document_as_pdf(fz_context *ctx, fz_document *ptr)
+{
+	if (!ptr || !ptr->as_pdf)
+		return NULL;
+	return (pdf_document *)fz_keep_document(ctx, ptr->as_pdf(ctx, ptr));
+}
+
 pdf_document *pdf_document_from_fz_document(fz_context *ctx, fz_document *ptr)
 {
 	return (pdf_document *)((ptr && ptr->count_pages == pdf_count_pages_imp) ? ptr : NULL);
@@ -3799,13 +3814,18 @@ static const char *pdf_mimetypes[] =
 };
 
 static int
-pdf_recognize_doc_content(fz_context *ctx, const fz_document_handler *handler, fz_stream *stream, fz_archive *dir)
+pdf_recognize_doc_content(fz_context *ctx, const fz_document_handler *handler, fz_stream *stream, fz_archive *dir, void **state, fz_document_recognize_state_free_fn **free_state)
 {
 	const char *match = "%PDF-";
 	const char *match2 = "%FDF-";
 	int pos = 0;
 	int n = 4096+5;
 	int c;
+
+	if (state)
+		*state = NULL;
+	if (free_state)
+		*free_state = NULL;
 
 	if (stream == NULL)
 		return 0;
@@ -3833,7 +3853,7 @@ pdf_recognize_doc_content(fz_context *ctx, const fz_document_handler *handler, f
 }
 
 static fz_document *
-open_document(fz_context *ctx, const fz_document_handler *handler, fz_stream *file, fz_stream *accel, fz_archive *zip)
+open_document(fz_context *ctx, const fz_document_handler *handler, fz_stream *file, fz_stream *accel, fz_archive *zip, void *state)
 {
 	if (file == NULL)
 		return NULL;
