@@ -67,8 +67,8 @@ You need to install the *NASM for Visual Studio add-on*:
 - Then you can install the required Visual Studio 2022 add-on (VSNASM), which can be found at: https://github.com/ShiftMediaProject/VSNASM -- for install instruction, see the README there.
   + it is ADVISED to grab the patched version here: https://github.com/GerHobbelt/VSNASM instead, at least until pullreq https://github.com/ShiftMediaProject/VSNASM/pull/21 has been incorporated into the original.
   
-    > + you MAY want to edit the install `.bat` script first, changing the listed NASM version from 2.16 to 2.16.01 (*iff* t hasn't been updated at the repo already)
-    > + you MAY want to edit the install `.bat` script first, adding a check for an already present `nasm` -- which you previously installed. (*iff* t hasn't been updated at the repo already) 
+    > + you MAY want to edit the install `.bat` script first, changing the listed NASM version from 2.16 to 2.16.01 (*iff* it hasn't been updated at the repo already)
+    > + you MAY want to edit the install `.bat` script first, adding a check for an already present `nasm` -- which you previously installed. (*iff* it hasn't been updated at the repo already) 
     > 
     >   Be sure point the `%NASMPATH%` system environment variable to your installed `nasm.exe`.
        
