@@ -1011,7 +1011,9 @@ class iterator_buffer : public Traits, public buffer<T> {
 
  public:
   explicit iterator_buffer(OutputIt out, size_t n = buffer_size)
-      : Traits(n), buffer<T>(grow, data_, 0, buffer_size), out_(out) {}
+      : Traits(n),
+		buffer<T>(grow, data_, 0, buffer_size),
+		out_(out) {}
   iterator_buffer(iterator_buffer&& other) noexcept
       : Traits(other),
         buffer<T>(grow, data_, 0, buffer_size),

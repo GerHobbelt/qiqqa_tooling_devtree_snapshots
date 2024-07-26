@@ -647,9 +647,9 @@ public:
       WERD_RES *word, uint16_t mode);
 
   //// tfacepp.cpp ///////////////////////////////////////////////////////
-  void recog_word_recursive(WERD_RES *word);
-  void recog_word(WERD_RES *word);
-  void split_and_recog_word(WERD_RES *word);
+  void recog_word_recursive(WERD_RES *word, int call_depth);
+  void recog_word(WERD_RES *word, int call_depth);
+  void split_and_recog_word(WERD_RES *word, int call_depth);
   void split_word(WERD_RES *word, unsigned split_pt, WERD_RES **right_piece,
                   BlamerBundle **orig_blamer_bundle) const;
   void join_words(WERD_RES *word, WERD_RES *word2, BlamerBundle *orig_bb) const;
@@ -1038,6 +1038,10 @@ public:
   BOOL_VAR_H(dump_segmented_word_images);
   BOOL_VAR_H(dump_osdetect_process_images);
   INT_VAR_H(activity_timeout_millisec);
+  BOOL_VAR_H(debug_recog_word_recursion_depth);
+  INT_VAR_H(recog_word_recursion_depth_limit);
+  BOOL_VAR_H(debug_output_diagnostics_HTML);
+  INT_VAR_H(debug_output_diagnostics_images_format);
 
   //// ambigsrecog.cpp /////////////////////////////////////////////////////////
   FILE *init_recog_training(const char *filename);
