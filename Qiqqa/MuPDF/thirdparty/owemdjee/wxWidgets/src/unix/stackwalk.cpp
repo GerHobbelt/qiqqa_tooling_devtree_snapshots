@@ -2,7 +2,6 @@
 // Name:        src/unix/stackwalk.cpp
 // Purpose:     wxStackWalker implementation for Unix/glibc
 // Author:      Vadim Zeitlin
-// Modified by:
 // Created:     2005-01-18
 // Copyright:   (c) 2005 Vadim Zeitlin <vadim@wxwidgets.org>
 // Licence:     wxWindows licence
@@ -308,7 +307,7 @@ struct ModuleInfo
     {
     }
 
-    // Name of the file containing this address, may be nullptr.
+    // Name of the file containing this address, may be null.
     const char* name;
 
     // Difference between the address in the file and in memory.

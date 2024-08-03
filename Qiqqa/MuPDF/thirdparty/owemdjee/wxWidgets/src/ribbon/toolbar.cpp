@@ -2,7 +2,6 @@
 // Name:        src/ribbon/toolbar.cpp
 // Purpose:     Ribbon-style tool bar
 // Author:      Peter Cawley
-// Modified by:
 // Created:     2009-07-06
 // Copyright:   (C) Peter Cawley
 // Licence:     wxWindows licence
@@ -386,6 +385,7 @@ bool wxRibbonToolBar::DeleteToolByPos(size_t pos)
             }
             return true;
         }
+        pos -= tool_count+1;
     }
     return false;
 }
@@ -426,6 +426,7 @@ wxRibbonToolBarToolBase* wxRibbonToolBar::GetToolByPos(size_t pos)const
         {
             return nullptr;
         }
+        pos -= tool_count+1;
     }
     return nullptr;
 }

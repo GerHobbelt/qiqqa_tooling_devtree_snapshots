@@ -3,7 +3,6 @@
 // Name:        src/aui/auibar.cpp
 // Purpose:     wxaui: wx advanced user interface - docking window manager
 // Author:      Benjamin I. Williams
-// Modified by:
 // Created:     2005-05-17
 // Copyright:   (C) Copyright 2005-2006, Kirix Corporation, All Rights Reserved
 // Licence:     wxWindows Library Licence, Version 3.1
@@ -35,10 +34,6 @@
 #ifdef __WXMAC__
 #include "wx/osx/private.h"
 #endif
-
-#include "wx/arrimpl.cpp"
-WX_DEFINE_OBJARRAY(wxAuiToolBarItemArray)
-
 
 wxDEFINE_EVENT( wxEVT_AUITOOLBAR_TOOL_DROPDOWN, wxAuiToolBarEvent );
 wxDEFINE_EVENT( wxEVT_AUITOOLBAR_OVERFLOW_CLICK, wxAuiToolBarEvent );
@@ -1258,7 +1253,7 @@ wxAuiToolBarItem* wxAuiToolBar::FindToolByIndex(int idx) const
     if (idx >= (int)m_items.size())
         return nullptr;
 
-    return &(m_items[idx]);
+    return const_cast<wxAuiToolBarItem*>(&(m_items[idx]));
 }
 
 void wxAuiToolBar::SetToolClientData (int tool_id, wxObject *client_data)

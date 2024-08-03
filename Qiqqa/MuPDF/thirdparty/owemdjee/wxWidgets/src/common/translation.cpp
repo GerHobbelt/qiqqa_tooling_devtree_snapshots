@@ -29,7 +29,6 @@
     #include "wx/intl.h"
     #include "wx/log.h"
     #include "wx/utils.h"
-    #include "wx/hashmap.h"
     #include "wx/module.h"
 #endif // WX_PRECOMP
 
@@ -47,7 +46,6 @@
 #include "wx/fontmap.h"
 #include "wx/stdpaths.h"
 #include "wx/version.h"
-#include "wx/private/threadinfo.h"
 #include "wx/uilocale.h"
 
 #ifdef __WINDOWS__
@@ -58,6 +56,7 @@
 #endif
 
 #include <memory>
+#include <unordered_set>
 
 // ----------------------------------------------------------------------------
 // simple types
@@ -871,7 +870,7 @@ public:
                   wxPluralFormsCalculatorPtr& rPluralFormsCalculator);
 
     // fills the hash with string-translation pairs
-    bool FillHash(wxStringToStringHashMap& hash, const wxString& domain) const;
+    bool FillHash(wxTranslationsHashMap& hash, const wxString& domain) const;
 
     // return the charset of the strings in this catalog or empty string if
     // none/unknown
@@ -950,7 +949,7 @@ wxMsgCatalogFile::~wxMsgCatalogFile()
 {
 }
 
-// open disk file and read in it's contents
+// open disk file and read in its contents
 bool wxMsgCatalogFile::LoadFile(const wxString& filename,
                                 wxPluralFormsCalculatorPtr& rPluralFormsCalculator)
 {
@@ -1079,7 +1078,7 @@ bool wxMsgCatalogFile::LoadData(const DataBuffer& data,
     return true;
 }
 
-bool wxMsgCatalogFile::FillHash(wxStringToStringHashMap& hash,
+bool wxMsgCatalogFile::FillHash(wxTranslationsHashMap& hash,
                                 const wxString& domain) const
 {
     wxUnusedVar(domain); // silence warning in Unicode build
@@ -1197,7 +1196,7 @@ const wxString *wxMsgCatalog::GetString(const wxString& str, unsigned n, const w
     {
         index = m_pluralFormsCalculator->evaluate(n);
     }
-    wxStringToStringHashMap::const_iterator i;
+    wxTranslationsHashMap::const_iterator i;
     if (index != 0)
     {
         if (context.IsEmpty())
@@ -1319,7 +1318,7 @@ bool wxTranslations::AddStdCatalog()
     // the name without the version if it's not found, as message catalogs
     // typically won't have the version in their names under non-Unix platforms
     // (i.e. where they're not installed by our own "make install").
-    if ( AddCatalog("wxstd-" wxSTRINGIZE(wxMAJOR_VERSION) "." wxSTRINGIZE(wxMINOR_VERSION)) )
+    if ( AddAvailableCatalog("wxstd-" wxSTRINGIZE(wxMAJOR_VERSION) "." wxSTRINGIZE(wxMINOR_VERSION)) )
         return true;
 
     if ( AddCatalog(wxS("wxstd")) )
@@ -1328,12 +1327,9 @@ bool wxTranslations::AddStdCatalog()
     return false;
 }
 
-bool wxTranslations::AddCatalog(const wxString& domain,
-                                wxLanguage msgIdLanguage)
+bool wxTranslations::AddAvailableCatalog(const wxString& domain)
 {
-    const wxString msgIdLang = wxUILocale::GetLanguageCanonicalName(msgIdLanguage);
-    const wxString domain_lang = GetBestTranslation(domain, msgIdLang);
-
+    const wxString domain_lang = GetBestAvailableTranslation(domain);
     if ( domain_lang.empty() )
     {
         wxLogTrace(TRACE_I18N,
@@ -1342,15 +1338,49 @@ bool wxTranslations::AddCatalog(const wxString& domain,
         return false;
     }
 
-    wxLogTrace(TRACE_I18N,
-                wxS("adding '%s' translation for domain '%s' (msgid language '%s')"),
-                domain_lang, domain, msgIdLang);
+    return LoadCatalog(domain, domain_lang);
+}
 
-    return LoadCatalog(domain, domain_lang, msgIdLang);
+bool wxTranslations::AddCatalog(const wxString& domain,
+                                wxLanguage msgIdLanguage)
+{
+    if ( AddAvailableCatalog(domain) )
+        return true;
+
+    const wxString msgIdLang = wxUILocale::GetLanguageCanonicalName(msgIdLanguage);
+
+    // Check if the original strings can be used directly.
+    bool canUseUntranslated = false;
+    if ( m_lang.empty() )
+    {
+        // If we are using the default language, check if the message ID
+        // language is acceptable for this system.
+        const wxString domain_lang = GetBestTranslation(domain, msgIdLang);
+
+        if ( msgIdLang == domain_lang )
+            canUseUntranslated = true;
+    }
+    else // But if we have a fixed language, we should just check it instead.
+    {
+        // Consider message IDs for another region using the same language
+        // acceptable.
+        if ( msgIdLang.BeforeFirst('_') == m_lang.BeforeFirst('_') )
+            canUseUntranslated = true;
+    }
+
+    if ( canUseUntranslated )
+    {
+        wxLogTrace(TRACE_I18N,
+                    wxS("not using translations for domain '%s' with msgid language '%s'"),
+                    domain, msgIdLang);
+        return true;
+    }
+
+    return false;
 }
 
 
-bool wxTranslations::LoadCatalog(const wxString& domain, const wxString& lang, const wxString& msgIdLang)
+bool wxTranslations::LoadCatalog(const wxString& domain, const wxString& lang)
 {
     wxCHECK_MSG( m_loader, false, "loader can't be null" );
 
@@ -1385,15 +1415,6 @@ bool wxTranslations::LoadCatalog(const wxString& domain, const wxString& lang, c
         wxString baselang = lang.BeforeFirst('_');
         if ( lang != baselang )
             cat = m_loader->LoadCatalog(domain, baselang);
-    }
-
-    if ( !cat )
-    {
-        // It is OK to not load catalog if the msgid language and m_language match,
-        // in which case we can directly display the texts embedded in program's
-        // source code:
-        if ( msgIdLang == lang )
-            return true;
     }
 
     if ( cat )
@@ -1433,14 +1454,56 @@ wxString wxTranslations::GetBestTranslation(const wxString& domain,
 wxString wxTranslations::GetBestTranslation(const wxString& domain,
                                             const wxString& msgIdLanguage)
 {
-    // explicitly set language should always be respected
-    if ( !m_lang.empty() )
-        return m_lang;
+    wxString lang = GetBestAvailableTranslation(domain);
+    if ( lang.empty() )
+    {
+        wxArrayString available;
+        available.push_back(msgIdLanguage);
+        available.push_back(msgIdLanguage.BeforeFirst('_'));
+        lang = GetPreferredUILanguage(available);
+        if ( lang.empty() )
+        {
+            wxLogTrace(TRACE_I18N,
+                       "no available language for domain '%s'", domain);
+        }
+        else
+        {
+            wxLogTrace(TRACE_I18N,
+                       "using message ID language '%s' for domain '%s'", lang);
+        }
+    }
 
-    wxArrayString available(GetAvailableTranslations(domain));
-    // it's OK to have duplicates, so just add msgid language
-    available.push_back(msgIdLanguage);
-    available.push_back(msgIdLanguage.BeforeFirst('_'));
+    return lang;
+}
+
+wxString wxTranslations::GetBestAvailableTranslation(const wxString& domain)
+{
+    const wxArrayString available(GetAvailableTranslations(domain));
+    if ( !m_lang.empty() )
+    {
+        wxLogTrace(TRACE_I18N,
+                   "searching for best translation to %s for domain '%s'",
+                   m_lang, domain);
+
+        wxString lang;
+        if ( available.Index(m_lang) != wxNOT_FOUND )
+        {
+            lang = m_lang;
+        }
+        else
+        {
+            const wxString baselang = m_lang.BeforeFirst('_');
+            if ( baselang != m_lang && available.Index(baselang) != wxNOT_FOUND )
+                lang = baselang;
+        }
+
+        if ( lang.empty() )
+            wxLogTrace(TRACE_I18N, " => no available translations found");
+        else
+            wxLogTrace(TRACE_I18N, " => found '%s'", lang);
+
+        return lang;
+    }
 
     wxLogTrace(TRACE_I18N, "choosing best language for domain '%s'", domain);
     LogTraceArray(" - available translations", available);
@@ -1453,13 +1516,8 @@ wxString wxTranslations::GetBestTranslation(const wxString& domain,
 /* static */
 const wxString& wxTranslations::GetUntranslatedString(const wxString& str)
 {
-    wxLocaleUntranslatedStrings& strings = wxThreadInfo.untranslatedStrings;
-
-    wxLocaleUntranslatedStrings::iterator i = strings.find(str);
-    if ( i == strings.end() )
-        return *strings.insert(str).first;
-
-    return *i;
+    thread_local std::unordered_set<wxString> wxPerThreadStrings;
+    return *wxPerThreadStrings.insert(str).first;
 }
 
 

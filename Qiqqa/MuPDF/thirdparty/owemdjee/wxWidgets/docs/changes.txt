@@ -100,6 +100,19 @@ Changes in behaviour which may result in build errors
 - wxMotif and wxGTK1 ports have been removed, please use wxWidgets 3.2 if you
   still need them.
 
+- Several private container classes that never made part of wxWidgets public
+  API have been removed. If you used any of them (e.g. wxSimpleDataObjectList)
+  in your code, please switch to using std::vector<> or std::list<> instead.
+  Some other legacy "object array" classes (e.g. wxImageArray) still exist, but
+  are now similar to std::vector<> containing the objects -- they remain mostly
+  compatible with the previous wxWidgets versions, but now compare values, and
+  not pointers, in their Index() member function.
+
+- Due to the possibility to construct wxString from std::string_view some
+  previously valid code, such as "wxstr = {"Hello", 2}", is now ambiguous.
+  Please use explicit class name, e.g. "wxstr = wxString{"Hello", 2}" to
+  preserve the previous behaviour.
+
 - Generic wxSearchCtrl doesn't provide methods that make sense only for
   multiline text controls any longer, for consistency with the other ports.
 
@@ -117,6 +130,10 @@ Changes in behaviour which may result in build errors
 
 - wxTEST_DIALOG() macro now must be followed by semicolon, whereas previously
   it was only supposed to, but it wasn't mandatory to use one after it.
+
+- wxWindow::GetDefaultBorderForControl() is not virtual any longer and will
+  be completely removed in the future. If you overrode this function, don't
+  do it any longer. If you call it, replace it with wxBORDER_THEME constant.
 
 
 3.3.0: (released 2022-??-??)

@@ -34,10 +34,6 @@
 #include "wx/osx/private.h"
 #endif
 
-#include "wx/arrimpl.cpp"
-WX_DEFINE_OBJARRAY(wxAuiNotebookPageArray)
-WX_DEFINE_OBJARRAY(wxAuiTabContainerButtonArray)
-
 wxDEFINE_EVENT(wxEVT_AUINOTEBOOK_PAGE_CLOSE, wxAuiNotebookEvent);
 wxDEFINE_EVENT(wxEVT_AUINOTEBOOK_PAGE_CLOSED, wxAuiNotebookEvent);
 wxDEFINE_EVENT(wxEVT_AUINOTEBOOK_PAGE_CHANGING, wxAuiNotebookEvent);
@@ -868,8 +864,11 @@ bool wxAuiTabContainer::TabHitTest(int x, int y, wxWindow** hit) const
     wxAuiTabContainerButton* btn = nullptr;
     if (ButtonHitTest(x, y, &btn) && !(btn->curState & wxAUI_BUTTON_STATE_DISABLED))
     {
-        if (m_buttons.Index(*btn) != wxNOT_FOUND)
-            return false;
+        for ( const auto& button : m_buttons )
+        {
+            if ( btn == &button )
+                return false;
+        }
     }
 
     size_t i, page_count = m_pages.GetCount();
@@ -1016,15 +1015,17 @@ wxAuiTabCtrl::wxAuiTabCtrl(wxWindow* parent,
                            long style) : wxControl(parent, id, pos, size, style)
 {
     SetName(wxT("wxAuiTabCtrl"));
-    m_clickPt = wxDefaultPosition;
-    m_isDragging = false;
-	m_iRightDownIdx = 0;
-    m_hoverButton = nullptr;
-    m_pressedButton = nullptr;
 }
 
 wxAuiTabCtrl::~wxAuiTabCtrl()
 {
+}
+
+void wxAuiTabCtrl::DoEndDragging()
+{
+    m_clickPt = wxDefaultPosition;
+    m_isDragging = false;
+    m_clickTab = nullptr;
 }
 
 void wxAuiTabCtrl::OnPaint(wxPaintEvent&)
@@ -1061,9 +1062,9 @@ void wxAuiTabCtrl::OnSize(wxSizeEvent& evt)
 void wxAuiTabCtrl::OnLeftDown(wxMouseEvent& evt)
 {
     CaptureMouse();
-    m_clickPt = wxDefaultPosition;
-    m_isDragging = false;
-    m_clickTab = nullptr;
+
+    // Reset any previous values first.
+    DoEndDragging();
     m_pressedButton = nullptr;
 
 
@@ -1103,10 +1104,12 @@ void wxAuiTabCtrl::OnCaptureLost(wxMouseCaptureLostEvent& WXUNUSED(event))
 {
     if (m_isDragging)
     {
-        m_isDragging = false;
+        const auto clickTab = m_clickTab;
+
+        DoEndDragging();
 
         wxAuiNotebookEvent evt(wxEVT_AUINOTEBOOK_CANCEL_DRAG, m_windowId);
-        evt.SetSelection(GetIdxFromWindow(m_clickTab));
+        evt.SetSelection(GetIdxFromWindow(clickTab));
         evt.SetOldSelection(evt.GetSelection());
         evt.SetEventObject(this);
         GetEventHandler()->ProcessEvent(evt);
@@ -1122,10 +1125,12 @@ void wxAuiTabCtrl::OnLeftUp(wxMouseEvent& evt)
 
     if (m_isDragging)
     {
-        m_isDragging = false;
+        const auto clickTab = m_clickTab;
+
+        DoEndDragging();
 
         wxAuiNotebookEvent e(wxEVT_AUINOTEBOOK_END_DRAG, m_windowId);
-        e.SetSelection(GetIdxFromWindow(m_clickTab));
+        e.SetSelection(GetIdxFromWindow(clickTab));
         e.SetOldSelection(e.GetSelection());
         e.SetEventObject(this);
         GetEventHandler()->ProcessEvent(e);
@@ -1162,9 +1167,7 @@ void wxAuiTabCtrl::OnLeftUp(wxMouseEvent& evt)
         m_pressedButton = nullptr;
     }
 
-    m_clickPt = wxDefaultPosition;
-    m_isDragging = false;
-    m_clickTab = nullptr;
+    DoEndDragging();
 }
 
 void wxAuiTabCtrl::OnMiddleUp(wxMouseEvent& evt)
@@ -2638,6 +2641,8 @@ void wxAuiNotebook::OnTabDragMotion(wxAuiNotebookEvent& evt)
         if (dest_tabs->TabHitTest(pt.x, pt.y, &dest_location_tab))
         {
             int src_idx = evt.GetSelection();
+            wxCHECK_RET( src_idx != -1, "Invalid source tab?" );
+
             int dest_idx = dest_tabs->GetIdxFromWindow(dest_location_tab);
 
             // prevent jumpy drag

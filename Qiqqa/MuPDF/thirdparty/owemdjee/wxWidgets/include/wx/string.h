@@ -2,7 +2,6 @@
 // Name:        wx/string.h
 // Purpose:     wxString class
 // Author:      Vadim Zeitlin
-// Modified by:
 // Created:     29/01/98
 // Copyright:   (c) 1998 Vadim Zeitlin <zeitlin@dptmaths.ens-cachan.fr>
 // Licence:     wxWindows licence
@@ -45,6 +44,15 @@
 #include "wx/beforestd.h"
 #include <string>
 #include <utility>
+
+// Check if C++17 <string_view> is available
+#if wxHAS_CXX17_INCLUDE(<string_view>)
+    #include <string_view>
+    #ifdef __cpp_lib_string_view
+        #define wxHAS_STD_STRING_VIEW
+    #endif
+#endif
+
 #include "wx/afterstd.h"
 
 // by default we cache the mapping of the positions in UTF-8 string to the byte
@@ -98,7 +106,21 @@ class WXDLLIMPEXP_FWD_BASE wxString;
 #error wxNO_IMPLICIT_WXSTRING_ENCODING cannot be used in UTF-8 only builds
 #endif
 
-#endif
+#endif // wxNO_IMPLICIT_WXSTRING_ENCODING
+
+#if !wxUSE_UNSAFE_WXSTRING_CONV
+    #ifndef wxNO_UNSAFE_WXSTRING_CONV
+        #define wxNO_UNSAFE_WXSTRING_CONV
+    #endif
+#endif // wxUSE_UNSAFE_WXSTRING_CONV
+
+// enabling implicit conversions to std::[w]string is incompatible with having
+// implicit conversions to char*/wchar_t*.
+#if wxUSE_STD_STRING_CONV_IN_WXSTRING
+    #ifndef wxNO_IMPLICIT_WXSTRING_CONV_TO_PTR
+        #define wxNO_IMPLICIT_WXSTRING_CONV_TO_PTR
+    #endif
+#endif // wxUSE_STD_STRING_CONV_IN_WXSTRING
 
 namespace wxPrivate
 {
@@ -1279,9 +1301,19 @@ public:
         { assign(str.c_str(), str.length()); }
   #endif
 
+#ifdef wxHAS_STD_STRING_VIEW
+    explicit wxString(std::wstring_view view)
+        { assign(view.data(), view.length()); }
+#endif  // wxHAS_STD_STRING_VIEW
+
 #ifndef wxNO_IMPLICIT_WXSTRING_ENCODING
   wxString(const std::string& str)
       { assign(str.c_str(), str.length()); }
+
+    #ifdef wxHAS_STD_STRING_VIEW
+        explicit wxString(std::string_view view)
+            { assign(view.data(), view.length()); }
+    #endif  // wxHAS_STD_STRING_VIEW
 #endif // wxNO_IMPLICIT_WXSTRING_ENCODING
 
   // Also always provide explicit conversions to std::[w]string in any case,
@@ -1291,6 +1323,7 @@ public:
   #if wxUSE_UNICODE_WCHAR
     #define wxStringToStdWstringRetType const std::wstring&
     const std::wstring& ToStdWstring() const { return m_impl; }
+    const std::wstring& wc_string() const { return m_impl; }
   #else // wxUSE_UNICODE_UTF8
     // wxStringImpl is either not std::string or needs conversion
     #define wxStringToStdWstringRetType std::wstring
@@ -1298,6 +1331,10 @@ public:
     {
         wxScopedWCharBuffer buf(wc_str());
         return std::wstring(buf.data(), buf.length());
+    }
+    std::wstring wc_string() const
+    {
+        return ToStdWstring();
     }
   #endif
 
@@ -1327,9 +1364,9 @@ public:
     // they conflict with the implicit conversions to "const char/wchar_t *"
     // which we use for backwards compatibility but do provide them if
     // explicitly requested.
-#if wxUSE_UNSAFE_WXSTRING_CONV && !defined(wxNO_UNSAFE_WXSTRING_CONV)
+#if !defined(wxNO_UNSAFE_WXSTRING_CONV)
   operator wxStringToStdStringRetType() const { return ToStdString(); }
-#endif // wxUSE_UNSAFE_WXSTRING_CONV
+#endif // !wxNO_UNSAFE_WXSTRING_CONV
   operator wxStringToStdWstringRetType() const { return ToStdWstring(); }
 #endif // wxUSE_STD_STRING_CONV_IN_WXSTRING
 
@@ -1338,8 +1375,6 @@ public:
 
   wxString Clone() const
   {
-      // make a deep copy of the string, i.e. the returned string will have
-      // ref count = 1 with refcounted implementation
       return wxString::FromImpl(wxStringImpl(m_impl.c_str(), m_impl.length()));
   }
 
@@ -1576,18 +1611,18 @@ public:
     // implicit conversion to wxCStrData
     operator wxCStrData() const { return c_str(); }
 
-#if wxUSE_CHAR_CONV_IN_WXSTRING
+#if !defined(wxNO_IMPLICIT_WXSTRING_CONV_TO_PTR)
     operator const wchar_t*() const { return c_str(); }
 
-#if wxUSE_UNSAFE_WXSTRING_CONV && !defined(wxNO_UNSAFE_WXSTRING_CONV)
+#if !defined(wxNO_UNSAFE_WXSTRING_CONV)
     operator const char*() const { return c_str(); }
     // implicit conversion to untyped pointer for compatibility with previous
     // wxWidgets versions: this is the same as conversion to const char * so it
     // may fail!
     operator const void*() const { return c_str(); }
-#endif // wxUSE_UNSAFE_WXSTRING_CONV && !defined(wxNO_UNSAFE_WXSTRING_CONV)
+#endif // !defined(wxNO_UNSAFE_WXSTRING_CONV)
 
-#endif // wxUSE_CHAR_CONV_IN_WXSTRING
+#endif // !defined(wxNO_IMPLICIT_WXSTRING_CONV_TO_PTR)
 
     // identical to c_str(), for MFC compatibility
     const wxCStrData GetData() const { return c_str(); }
@@ -1722,6 +1757,14 @@ public:
     std::string utf8_string() const { return ToStdString(wxMBConvUTF8()); }
     const wxScopedCharBuffer utf8_str() const { return mb_str(wxMBConvUTF8()); }
 #endif // wxUSE_UNICODE_UTF8/wxUSE_UNICODE_WCHAR
+
+// Conversion from std::string_view is the same for both of the two cases above
+#ifdef wxHAS_STD_STRING_VIEW
+    static wxString FromUTF8Unchecked(std::string_view view)
+      { return FromUTF8Unchecked(view.data(), view.length()); }
+    static wxString FromUTF8(std::string_view view)
+      { return FromUTF8(view.data(), view.length()); }
+#endif // wxHAS_STD_STRING_VIEW
 
     const wxScopedCharBuffer ToUTF8() const { return utf8_str(); }
 
@@ -1877,6 +1920,29 @@ public:
     // from wxScopedCharBuffer
   wxString& operator=(const wxScopedCharBuffer& s)
     { return assign(s); }
+#endif // wxNO_IMPLICIT_WXSTRING_ENCODING
+
+#if wxUSE_UNICODE_WCHAR
+  wxString& operator=(const std::wstring& str) { m_impl = str; return *this; }
+  wxString& operator=(std::wstring&& str) noexcept { m_impl = std::move(str); return *this; }
+#else // wxUSE_UNICODE_UTF8
+  wxString& operator=(const std::wstring& str)
+    { return assign(str.c_str(), str.length()); }
+#endif
+
+#ifdef wxHAS_STD_STRING_VIEW
+  wxString& operator=(std::wstring_view view)
+    { return assign(view.data(), view.length()); }
+#endif  // wxHAS_STD_STRING_VIEW
+
+#ifndef wxNO_IMPLICIT_WXSTRING_ENCODING
+  wxString& operator=(const std::string& str)
+    { return assign(str.c_str(), str.length()); }
+
+    #ifdef wxHAS_STD_STRING_VIEW
+      wxString& operator=(std::string_view view)
+        { return assign(view.data(), view.length()); }
+    #endif  // wxHAS_STD_STRING_VIEW
 #endif // wxNO_IMPLICIT_WXSTRING_ENCODING
 
   // string concatenation
@@ -4147,18 +4213,18 @@ namespace std
 
 #include "wx/iosfwrap.h"
 
-WXDLLIMPEXP_BASE wxSTD ostream& operator<<(wxSTD ostream&, const wxString&);
-WXDLLIMPEXP_BASE wxSTD ostream& operator<<(wxSTD ostream&, const wxCStrData&);
+WXDLLIMPEXP_BASE std::ostream& operator<<(std::ostream&, const wxString&);
+WXDLLIMPEXP_BASE std::ostream& operator<<(std::ostream&, const wxCStrData&);
 #ifndef wxNO_IMPLICIT_WXSTRING_ENCODING
-WXDLLIMPEXP_BASE wxSTD ostream& operator<<(wxSTD ostream&, const wxScopedCharBuffer&);
+WXDLLIMPEXP_BASE std::ostream& operator<<(std::ostream&, const wxScopedCharBuffer&);
 #endif // wxNO_IMPLICIT_WXSTRING_ENCODING
-WXDLLIMPEXP_BASE wxSTD ostream& operator<<(wxSTD ostream&, const wxScopedWCharBuffer&);
+WXDLLIMPEXP_BASE std::ostream& operator<<(std::ostream&, const wxScopedWCharBuffer&);
 
 #if defined(HAVE_WOSTREAM)
 
-WXDLLIMPEXP_BASE wxSTD wostream& operator<<(wxSTD wostream&, const wxString&);
-WXDLLIMPEXP_BASE wxSTD wostream& operator<<(wxSTD wostream&, const wxCStrData&);
-WXDLLIMPEXP_BASE wxSTD wostream& operator<<(wxSTD wostream&, const wxScopedWCharBuffer&);
+WXDLLIMPEXP_BASE std::wostream& operator<<(std::wostream&, const wxString&);
+WXDLLIMPEXP_BASE std::wostream& operator<<(std::wostream&, const wxCStrData&);
+WXDLLIMPEXP_BASE std::wostream& operator<<(std::wostream&, const wxScopedWCharBuffer&);
 
 #endif  // defined(HAVE_WOSTREAM)
 

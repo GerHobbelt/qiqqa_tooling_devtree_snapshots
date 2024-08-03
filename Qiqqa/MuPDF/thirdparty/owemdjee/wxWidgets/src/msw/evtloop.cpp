@@ -2,7 +2,6 @@
 // Name:        src/msw/evtloop.cpp
 // Purpose:     implements wxEventLoop for wxMSW port
 // Author:      Vadim Zeitlin
-// Modified by:
 // Created:     01.06.01
 // Copyright:   (c) 2001 Vadim Zeitlin <zeitlin@dptmaths.ens-cachan.fr>
 // Licence:     wxWindows licence
@@ -39,16 +38,8 @@
 
 #if wxUSE_THREADS
 
-    // define the list of MSG structures
-    WX_DECLARE_LIST(MSG, wxMsgList);
-
-    #include "wx/listimpl.cpp"
-
-    FZ_HEAPDBG_TRACKER_SECTION_START_MARKER(_13)
-
-    WX_DEFINE_LIST(wxMsgList)
-
-	FZ_HEAPDBG_TRACKER_SECTION_END_MARKER(_13)
+    #include <list>
+    using wxMsgList = std::list<MSG>;
 
 #endif // wxUSE_THREADS
 
@@ -77,32 +68,10 @@ bool wxGUIEventLoop::PreProcessMessage(WXMSG *msg)
     wxWindow *wndThis = wxGetWindowFromHWND((WXHWND)hwnd);
     wxWindow *wnd;
 
-    // this might happen if we're in a modeless dialog, or if a wx control has
-    // children which themselves were not created by wx (i.e. wxActiveX control children)
+    // this might happen a wx control has children which themselves were not
+    // created by wx (i.e. wxActiveX control children)
     if ( !wndThis )
-    {
-        while ( hwnd && (::GetWindowLong(hwnd, GWL_STYLE) & WS_CHILD ))
-        {
-            hwnd = ::GetParent(hwnd);
-
-            // If the control has a wx parent, break and give the parent a chance
-            // to process the window message
-            wndThis = wxGetWindowFromHWND((WXHWND)hwnd);
-            if (wndThis != nullptr)
-                break;
-        }
-
-        if ( !wndThis )
-        {
-            // this may happen if the event occurred in a standard modeless dialog (the
-            // only example of which I know of is the find/replace dialog) - then call
-            // IsDialogMessage() to make TAB navigation in it work
-
-            // NOTE: IsDialogMessage() just eats all the messages (i.e. returns true for
-            // them) if we call it for the control itself
-            return hwnd && ::IsDialogMessage(hwnd, msg) != 0;
-        }
-    }
+        return false;
 
     if ( !AllowProcessing(wndThis) )
     {
@@ -199,8 +168,7 @@ bool wxGUIEventLoop::Dispatch()
         // the message will be processed twice
         if ( !wxIsWaitingForThread() || msg.message != WM_COMMAND )
         {
-            MSG* pMsg = new MSG(msg);
-            s_aSavedMessages.Append(pMsg);
+            s_aSavedMessages.push_back(msg);
         }
 
         return true;
@@ -216,16 +184,9 @@ bool wxGUIEventLoop::Dispatch()
         {
             s_hadGuiLock = true;
 
-            wxMsgList::compatibility_iterator node = s_aSavedMessages.GetFirst();
-            while (node)
+            for ( ; !s_aSavedMessages.empty(); s_aSavedMessages.pop_front() )
             {
-                MSG* pMsg = node->GetData();
-                s_aSavedMessages.Erase(node);
-
-                ProcessMessage(pMsg);
-                delete pMsg;
-
-                node = s_aSavedMessages.GetFirst();
+                ProcessMessage(&s_aSavedMessages.front());
             }
         }
     }
@@ -260,11 +221,10 @@ void wxGUIEventLoop::OnNextIteration()
 // Yield to incoming messages
 // ----------------------------------------------------------------------------
 
-#include <wx/arrimpl.cpp>
-WX_DEFINE_OBJARRAY(wxMSGArray);
-
 void wxGUIEventLoop::DoYieldFor(long eventsToProcess)
 {
+    std::vector<MSG> msgsToProcess;
+
     // we don't want to process WM_QUIT from here - it should be processed in
     // the main event loop in order to stop it
     MSG msg;
@@ -406,7 +366,7 @@ void wxGUIEventLoop::DoYieldFor(long eventsToProcess)
         {
             // remove the message and store it
             ::GetMessage(&msg, nullptr, 0, 0);
-            m_arrMSG.Add(msg);
+            msgsToProcess.push_back(msg);
         }
     }
 
@@ -414,13 +374,10 @@ void wxGUIEventLoop::DoYieldFor(long eventsToProcess)
 
     // put back unprocessed events in the queue
     DWORD id = GetCurrentThreadId();
-    for (size_t i=0; i<m_arrMSG.GetCount(); i++)
+    for ( const auto& m : msgsToProcess )
     {
-        PostThreadMessage(id, m_arrMSG[i].message,
-                          m_arrMSG[i].wParam, m_arrMSG[i].lParam);
+        PostThreadMessage(id, m.message, m.wParam, m.lParam);
     }
-
-    m_arrMSG.Clear();
 }
 
 #endif

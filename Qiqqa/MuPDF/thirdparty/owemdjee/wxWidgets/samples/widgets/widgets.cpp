@@ -293,9 +293,6 @@ private:
 };
 #endif // USE_LOG
 
-// array of pages
-WX_DEFINE_ARRAY_PTR(WidgetsPage *, ArrayWidgetsPage);
-
 // ----------------------------------------------------------------------------
 // misc macros
 // ----------------------------------------------------------------------------
@@ -517,11 +514,10 @@ WidgetsFrame::WidgetsFrame(const wxString& title)
 
     // the lower one only has the log listbox and a button to clear it
 #if USE_LOG
-    wxSizer *sizerDown = new wxStaticBoxSizer(
-        new wxStaticBox( m_panel, wxID_ANY, "&Log window" ),
-        wxVERTICAL);
+    wxStaticBoxSizer *sizerDown = new wxStaticBoxSizer(wxVERTICAL, m_panel, "&Log window");
+    wxStaticBox* const sizerDownBox = sizerDown->GetStaticBox();
 
-    m_lboxLog = new wxListBox(m_panel, wxID_ANY);
+    m_lboxLog = new wxListBox(sizerDownBox, wxID_ANY);
     sizerDown->Add(m_lboxLog, wxSizerFlags(1).Expand().Border());
     sizerDown->SetMinSize(100, 150);
 #else
@@ -531,11 +527,11 @@ WidgetsFrame::WidgetsFrame(const wxString& title)
     wxBoxSizer *sizerBtns = new wxBoxSizer(wxHORIZONTAL);
     wxButton *btn;
 #if USE_LOG
-    btn = new wxButton(m_panel, Widgets_ClearLog, "Clear &log");
+    btn = new wxButton(sizerDownBox, Widgets_ClearLog, "Clear &log");
     sizerBtns->Add(btn);
     sizerBtns->AddSpacer(10);
 #endif // USE_LOG
-    btn = new wxButton(m_panel, Widgets_Quit, "E&xit");
+    btn = new wxButton(sizerDownBox, Widgets_Quit, "E&xit");
     sizerBtns->Add(btn);
     sizerDown->Add(sizerBtns, wxSizerFlags().Border().Right());
 
@@ -572,6 +568,7 @@ void WidgetsFrame::InitBook()
     WidgetsBookCtrl *books[MAX_PAGES];
 #endif
 
+    using ArrayWidgetsPage = std::vector<WidgetsPage*>;
     ArrayWidgetsPage pages[MAX_PAGES];
     wxArrayString labels[MAX_PAGES];
 
@@ -609,7 +606,7 @@ void WidgetsFrame::InitBook()
                                  books[cat]
 #endif
                                  , imageList);
-            pages[cat].Add(page);
+            pages[cat].push_back(page);
 
             labels[cat].Add(info->GetLabel());
             if ( cat == ALL_PAGE )
@@ -645,7 +642,7 @@ void WidgetsFrame::InitBook()
 #endif
 
         // now do add them
-        size_t count = pages[cat].GetCount();
+        size_t count = pages[cat].size();
         for ( size_t n = 0; n < count; n++ )
         {
 #if USE_TREEBOOK
@@ -1393,7 +1390,7 @@ wxSizer *WidgetsPage::CreateSizerWithText(wxControl *control,
                                           wxTextCtrl **ppText)
 {
     wxSizer *sizerRow = new wxBoxSizer(wxHORIZONTAL);
-    wxTextCtrl *text = new wxTextCtrl(this, id, wxEmptyString,
+    wxTextCtrl *text = new wxTextCtrl(control->GetParent(), id, wxEmptyString,
         wxDefaultPosition, wxDefaultSize, wxTE_PROCESS_ENTER);
 
     sizerRow->Add(control, wxSizerFlags(0).Border(wxRIGHT).CentreVertical());
@@ -1408,9 +1405,10 @@ wxSizer *WidgetsPage::CreateSizerWithText(wxControl *control,
 // create a sizer containing a label and a text ctrl
 wxSizer *WidgetsPage::CreateSizerWithTextAndLabel(const wxString& label,
                                                   wxWindowID id,
-                                                  wxTextCtrl **ppText)
+                                                  wxTextCtrl **ppText,
+                                                  wxWindow* statBoxParent)
 {
-    return CreateSizerWithText(new wxStaticText(this, wxID_ANY, label),
+    return CreateSizerWithText(new wxStaticText(statBoxParent ? statBoxParent: this, wxID_ANY, label),
         id, ppText);
 }
 
@@ -1418,16 +1416,18 @@ wxSizer *WidgetsPage::CreateSizerWithTextAndLabel(const wxString& label,
 wxSizer *WidgetsPage::CreateSizerWithTextAndButton(wxWindowID idBtn,
                                                    const wxString& label,
                                                    wxWindowID id,
-                                                   wxTextCtrl **ppText)
+                                                   wxTextCtrl **ppText,
+                                                   wxWindow* statBoxParent)
 {
-    return CreateSizerWithText(new wxButton(this, idBtn, label), id, ppText);
+    return CreateSizerWithText(new wxButton(statBoxParent ? statBoxParent: this, idBtn, label), id, ppText);
 }
 
 wxCheckBox *WidgetsPage::CreateCheckBoxAndAddToSizer(wxSizer *sizer,
                                                      const wxString& label,
-                                                     wxWindowID id)
+                                                     wxWindowID id,
+                                                     wxWindow* statBoxParent)
 {
-    wxCheckBox *checkbox = new wxCheckBox(this, id, label);
+    wxCheckBox *checkbox = new wxCheckBox(statBoxParent ? statBoxParent: this, id, label);
     sizer->Add(checkbox, wxSizerFlags().HorzBorder());
     sizer->AddSpacer(2);
 

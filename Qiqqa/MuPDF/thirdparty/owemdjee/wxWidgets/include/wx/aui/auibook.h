@@ -77,7 +77,7 @@ private:
 
 #ifndef SWIG
 private:
-    wxDECLARE_DYNAMIC_CLASS_NO_ASSIGN(wxAuiNotebookEvent);
+    wxDECLARE_DYNAMIC_CLASS_NO_ASSIGN_DEF_COPY(wxAuiNotebookEvent);
 #endif
 };
 
@@ -107,10 +107,19 @@ public:
 };
 
 
-#ifndef SWIG
-WX_DECLARE_USER_EXPORTED_OBJARRAY(wxAuiNotebookPage, wxAuiNotebookPageArray, WXDLLIMPEXP_AUI);
-WX_DECLARE_USER_EXPORTED_OBJARRAY(wxAuiTabContainerButton, wxAuiTabContainerButtonArray, WXDLLIMPEXP_AUI);
-#endif
+// These legacy classes can't be just typedefs as they can be (and are)
+// forward-declared in the existing code.
+class wxAuiNotebookPageArray : public wxBaseArray<wxAuiNotebookPage>
+{
+public:
+    using wxBaseArray<wxAuiNotebookPage>::wxBaseArray;
+};
+
+class wxAuiTabContainerButtonArray : public wxBaseArray<wxAuiTabContainerButton>
+{
+public:
+    using wxBaseArray<wxAuiTabContainerButton>::wxBaseArray;
+};
 
 
 class WXDLLIMPEXP_AUI wxAuiTabContainer
@@ -225,15 +234,19 @@ protected:
 
 protected:
 
-    wxPoint m_clickPt;
-    wxWindow* m_clickTab;
-    bool m_isDragging;
-	int m_iRightDownIdx;
+    wxPoint m_clickPt = wxDefaultPosition;
+    wxWindow* m_clickTab = nullptr;
+    bool m_isDragging = false;
+	int m_iRightDownIdx = 0;
 
-    wxAuiTabContainerButton* m_hoverButton;
-    wxAuiTabContainerButton* m_pressedButton;
+    wxAuiTabContainerButton* m_hoverButton = nullptr;
+    wxAuiTabContainerButton* m_pressedButton = nullptr;
 
     void SetHoverTab(wxWindow* wnd);
+
+private:
+    // Reset dragging-related fields above to their initial values.
+    void DoEndDragging();
 
 #ifndef SWIG
     wxDECLARE_CLASS(wxAuiTabCtrl);

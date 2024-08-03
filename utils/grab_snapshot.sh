@@ -11,7 +11,6 @@ mkdir -p Qiqqa/MuPDF
 
 cat > utils/tmp.lst  <<EOF
 
-
 # 1D-RGB-color-gradient
 # 2D-color-gradient-or-Procedural-texture
 # A-MNS_TemplateMatching
@@ -1127,7 +1126,9 @@ QuickJS-C++-Wrapper2
 
 # quickjs-ffi
 # quill-logging
-# quirc
+
+quirc
+
 # r8brain-free-src
 # radamsa
 # radon-tf
@@ -1588,14 +1589,21 @@ zstd
 # zvec
 # zxing-cpp
 
+EOF
+
+
+cat > utils/tmp2.lst  <<EOF
 
 __docs
 __docs_src
 
-jpeg-xl\third_party\lodepng
-jpeg-xl\third_party\highway
+jpeg-xl/third_party/lodepng
+# jpeg-xl/third_party/highway
 
-taglib\3rdparty\utf8-cpp
+taglib/3rdparty/utf8-cpp
+
+../../thirdparty/owemdjee/opencv/modules/features2d/3rdparty/mscr
+# ../../thirdparty/owemdjee/opencv/3rdparty/quirc
 
 ../../../thirdparty/DirScanner
 
@@ -1603,12 +1611,13 @@ taglib\3rdparty\utf8-cpp
 
 EOF
 
-cat > utils/tmp.bat  <<EOF
+# https://mywiki.wooledge.org/BashGuide/InputAndOutput?#Here_Strings
+cat > utils/tmp.bat  <<'EOF'
 @echo on
 
-robocopy Z:\lib\tooling\qiqqa\MuPDF Qiqqa/MuPDF * /LOG:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj bin b tmp research node_modules packages owemdjee downloads ~ .circleci  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* *.dump *-files .git .gitmodules
+robocopy Z:/lib/tooling/qiqqa/MuPDF Qiqqa/MuPDF * /LOG:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj bin b tmp research node_modules packages owemdjee downloads ~ .circleci  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* *.dump *-files .git .gitmodules
 
-robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee Qiqqa/MuPDF/thirdparty/owemdjee * /LOG+:snapshot.log /LEV:1    /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE    /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules
+robocopy Z:/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee Qiqqa/MuPDF/thirdparty/owemdjee * /LOG+:snapshot.log /LEV:1    /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE    /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules
 
 EOF
 
@@ -1618,42 +1627,53 @@ for f in   langdata_LSTM tessconfigs tessdata tessdata_best tessdata_contrib tes
 ; do
 
     echo "$f..."
-    echo "set F=$f" >> utils/tmp.bat
+    #echo "set F=$f" >> utils/tmp.bat
     cat >> utils/tmp.bat  <<EOF
 
-robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\%F%  Qiqqa/MuPDF\thirdparty\%F%  * /LOG+:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF  *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules
+robocopy Z:/lib/tooling/qiqqa/MuPDF/thirdparty/$f  Qiqqa/MuPDF/thirdparty/$f  * /LOG+:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF  *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules
 
 EOF
 done
 
-cat >> utils/tmp.bat  <<EOF
+cat >> utils/tmp.bat  <<'EOF'
 
-robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee\boost Qiqqa/MuPDF\thirdparty\owemdjee\boost * /LOG+:snapshot.log /LEV:20 /S /COPY:DAT /DCOPY:DAT /IM      /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages owemdjee downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules
+robocopy Z:/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/boost Qiqqa/MuPDF/thirdparty/owemdjee/boost * /LOG+:snapshot.log /LEV:20 /S /COPY:DAT /DCOPY:DAT /IM      /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages owemdjee downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules
 
-robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee\bin2cpp  Qiqqa/MuPDF\thirdparty\owemdjee\bin2cpp  * /LOG+:snapshot.log /LEV:20 /S /COPY:DAT /DCOPY:DAT /IM      /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages owemdjee downloads ~ .circleci   /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules
+robocopy Z:/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/bin2cpp  Qiqqa/MuPDF/thirdparty/owemdjee/bin2cpp  * /LOG+:snapshot.log /LEV:20 /S /COPY:DAT /DCOPY:DAT /IM      /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages owemdjee downloads ~ .circleci   /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules
 
-robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee\cxxtest_catch_2_gtest  Qiqqa/MuPDF\thirdparty\owemdjee\cxxtest_catch_2_gtest  * /LOG+:snapshot.log /LEV:20 /S /COPY:DAT /DCOPY:DAT /IM      /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages owemdjee downloads ~ .circleci   /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules
+robocopy Z:/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/cxxtest_catch_2_gtest  Qiqqa/MuPDF/thirdparty/owemdjee/cxxtest_catch_2_gtest  * /LOG+:snapshot.log /LEV:20 /S /COPY:DAT /DCOPY:DAT /IM      /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages owemdjee downloads ~ .circleci   /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules
 
 EOF
 
-for f in $( cat utils/tmp.lst | grep -v '#' ) ; do
+for f in $( cat utils/tmp.lst | grep -v '#' | sed -E -e 's@[\\/]@/@g' ) ; do
 
     echo "$f..."
-    echo "set F=$f" >> utils/tmp.bat
+    #echo "set F=$f" >> utils/tmp.bat
     cat >> utils/tmp.bat  <<EOF
 
-robocopy Z:\lib\tooling\qiqqa\MuPDF\thirdparty\owemdjee\%F%  Qiqqa/MuPDF\thirdparty\owemdjee\%F%  * /LOG+:snapshot.log /LEV:15 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules
+robocopy Z:/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/$f  Qiqqa/MuPDF/thirdparty/owemdjee/$f  * /LOG+:snapshot.log /LEV:15 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules
 
 EOF
 done
 
-cat >> utils/tmp.bat  <<EOF
+for f in $( cat utils/tmp2.lst | grep -v '#' | sed -E -e 's@[\\/]@/@g' ) ; do
+
+    echo "$f..."
+    #echo "set F=$f" >> utils/tmp.bat
+    cat >> utils/tmp.bat  <<EOF
+
+robocopy Z:/lib/tooling/qiqqa/MuPDF/thirdparty/owemdjee/$f  Qiqqa/MuPDF/thirdparty/owemdjee/$f  * /LOG+:snapshot.log /LEV:20 /S /COPY:DAT /DCOPY:DAT /IM    /W:1 /R:3 /PURGE /XD .vs obj b tmp node_modules downloads ~   /XF *.obj *.user *.psd cef_binary* *.tags *.exe *.dll *.gz *.zip *.idb *.pdb .git
+
+EOF
+done
+
+cat >> utils/tmp.bat  <<'EOF'
 
 robocopy "Z:\lib\tooling\qiqqa\Technology.Tests\forking cleans up memory leaks" "Qiqqa\Technology.Tests\forking cleans up memory leaks" * /LOG+:snapshot.log /LEV:20 /S /COPY:DAT /DCOPY:DAT /IM      /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages owemdjee downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules *.tlog *.log *.lastbuildstate *.recipe *.ilk *.pdb *.idb *.vcxproj.FileListAbsolute.txt *.iobj *.ipdb
 
 robocopy "Z:\lib\tooling\qiqqa\Technology.Tests\monitor our memory usage and die when passing threshold" "Qiqqa\Technology.Tests\monitor our memory usage and die when passing threshold" * /LOG+:snapshot.log /LEV:20 /S /COPY:DAT /DCOPY:DAT /IM      /W:1 /R:3 /PURGE /XD .vs obj b tmp research node_modules packages owemdjee downloads ~ .circleci 3rd thirdparty third_party 3rdparty 3rd_party  /XF *.obj *.user *.psd cef_binary* files *.tags *.exe *.dll *.gz *.zip *.idb *.pdb *fuzz* .git .gitmodules *.tlog *.log *.lastbuildstate *.recipe *.ilk *.pdb *.idb *.vcxproj.FileListAbsolute.txt *.iobj *.ipdb
 
-robocopy Z:\lib\tooling\qiqqa\MuPDF\platform\win32\bin\Release-Unicode-64bit-x64 utils splitmerge.exe /LOG+:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE
+robocopy Z:/lib/tooling/qiqqa/MuPDF/platform/win32/bin/Release-Unicode-64bit-x64 utils splitmerge.exe /LOG+:snapshot.log /LEV:8 /S /COPY:DAT /DCOPY:DAT /IM /XJF /W:1 /R:3 /PURGE
 
 EOF
 
@@ -1662,6 +1682,8 @@ EOF
 rm snapshot.log
 
 cat utils/tmp.bat | cmd
+
+#exit 1
 
 
 # and then some post-orgasmic cleanup bliss:
@@ -1679,6 +1701,8 @@ Cleaning cruft that got copied inadvertently...
 
 
 EOF
+
+set -x
 
 cd Qiqqa/MuPDF
 
@@ -1714,7 +1738,7 @@ for f in                                                                        
     rm -rf "$f"                    2> /dev/null
 done
 
-# making sure each of the subsequent `find` ops does find at least one entry, so we do not end up with an highly undesirable 'rm -rf' without any path.
+# making sure each of the subsequent `find` ops does find at least one entry, so we do not end up with a highly undesirable 'rm -rf' without any path.
 mkdir -p Qiqqa/MuPDF/.deps
 find ../ -type d -name '.deps' | xargs rm -rf 
 
@@ -1731,6 +1755,16 @@ find ../   -name '.gitignore*' -type f -delete
 find ../   -name '.gitattr*'   -type f -delete
 find ../.. -name '*.log'       -type f -a ! -name 'gperf.log' -a ! -name 'run.log' -a ! -name 'size.log' -a ! -name 'change.log' -delete
 find       -name '.dirstamp'   -type f -delete
+
+set +x
+
+cat << EOF
+
+
+-----------------------------------------------
+
+
+EOF
 
 # plus some last-minute compensations, filling up the potholes left by the bulk /XF & /XD rejections:
 for f in                                                                                                   \

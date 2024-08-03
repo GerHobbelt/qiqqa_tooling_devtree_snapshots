@@ -290,6 +290,22 @@ public:
 #endif
     }
 
+    bool SetProxy(const wxString& proxy)
+    {
+#ifdef __VISUALC__
+        m_webViewEnvironmentOptions->put_AdditionalBrowserArguments(
+            wxString::Format("--proxy-server=\"%s\"", proxy).wc_str()
+        );
+        return true;
+#else
+        wxUnusedVar(proxy);
+
+        wxLogError(_("This program was compiled without support for setting Edge proxy."));
+
+        return false;
+#endif
+    }
+
     virtual void* GetNativeConfiguration() const override
     {
         return m_webViewEnvironmentOptions;
@@ -880,9 +896,9 @@ HRESULT wxWebViewEdgeImpl::OnWebViewCreated(HRESULT result, ICoreWebView2Control
         &m_windowCloseRequestedToken);
 
     // Register handlers
-    for (wxStringToWebHandlerMap::iterator it = m_handlers.begin(); it != m_handlers.end(); it++)
+    for (const auto& kv : m_handlers)
     {
-        wxString filterURI = wxString::Format("*://%s/*", it->first);
+        wxString filterURI = wxString::Format("*://%s/*", kv.first);
         m_webView->AddWebResourceRequestedFilter(filterURI.wc_str(), COREWEBVIEW2_WEB_RESOURCE_CONTEXT_ALL);
     }
 
@@ -1097,14 +1113,13 @@ void wxWebViewEdge::LoadURL(const wxString& url)
     if (!m_impl->m_handlers.empty())
     {
         // Emulate custom protocol support for LoadURL()
-        for (wxStringToWebHandlerMap::iterator it = m_impl->m_handlers.begin();
-            it != m_impl->m_handlers.end(); it++)
+        for (const auto& kv : m_impl->m_handlers)
         {
-            wxString scheme = it->second->GetName() + ":";
+            wxString scheme = kv.second->GetName() + ":";
             if (navURL.StartsWith(scheme))
             {
                 navURL.Remove(0, scheme.Length());
-                navURL.insert(0, "https://" + it->second->GetVirtualHost() + "/");
+                navURL.insert(0, "https://" + kv.second->GetVirtualHost() + "/");
                 break;
             }
         }
@@ -1386,6 +1401,16 @@ wxString wxWebViewEdge::GetUserAgent() const
     return wxString{};
 }
 
+
+bool wxWebViewEdge::SetProxy(const wxString& proxy)
+{
+    wxCHECK_MSG(!m_impl->m_webViewController, false,
+                "Proxy must be set before calling Create()");
+
+    auto configImpl = static_cast<wxWebViewConfigurationImplEdge*>(m_impl->m_config.GetImpl());
+
+    return configImpl->SetProxy(proxy);
+}
 
 void* wxWebViewEdge::GetNativeBackend() const
 {

@@ -3,7 +3,6 @@
 // Purpose:     Unicode conversion classes
 // Author:      Ove Kaaven, Robert Roebling, Vadim Zeitlin, Vaclav Slavik,
 //              Ryan Norton, Fredrik Roubert (UTF7)
-// Modified by:
 // Created:     29/01/98
 // Copyright:   (c) 1999 Ove Kaaven, Robert Roebling, Vaclav Slavik
 //              (c) 2000-2003 Vadim Zeitlin
@@ -18,7 +17,6 @@
     #include "wx/intl.h"
     #include "wx/log.h"
     #include "wx/utils.h"
-    #include "wx/hashmap.h"
 #endif
 
 #include "wx/debugheap.h"
@@ -50,6 +48,7 @@
 #include "wx/osx/core/private/strconv_cf.h"
 #endif //def __DARWIN__
 
+#include <unordered_map>
 
 #define TRACE_STRCONV wxT("strconv")
 
@@ -2919,8 +2918,23 @@ void wxCSConv::SetName(const char *charset)
 
 #if wxUSE_FONTMAP
 
-WX_DECLARE_HASH_MAP( wxFontEncoding, wxString, wxIntegerHash, wxIntegerEqual,
-                     wxEncodingNameCache );
+// We need to define the hash for the enum pre-C++14.
+#if !wxCHECK_CXX_STD(201402L)
+
+namespace std
+{
+    template <>
+    struct hash<wxFontEncoding>
+    {
+        size_t operator()(wxFontEncoding enc) const
+        {
+            return std::hash<int>()(enc);
+        }
+    };
+} // namespace std
+#endif // C++11
+
+using wxEncodingNameCache = std::unordered_map<wxFontEncoding, wxString>;
 
 FZ_HEAPDBG_TRACKER_SECTION_START_MARKER(_104)
 

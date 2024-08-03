@@ -2,7 +2,6 @@
 // Name:        wx/gtk/setup.h
 // Purpose:     Configuration for the library
 // Author:      Julian Smart
-// Modified by:
 // Created:     01/02/97
 // Copyright:   (c) Julian Smart
 // Licence:     wxWindows licence
@@ -292,11 +291,15 @@
 // disabled, wx streams are used instead.
 //
 // Notice that enabling this does not replace wx streams with std streams
-// everywhere, in a lot of places wx streams are used no matter what.
+// everywhere, in a lot of places wx streams are used no matter what and in
+// other places this option enables the use of standard streams in _addition_
+// to the wx ones. The only exception is wxDocument which defines functions
+// working with standard streams only when this option is on, and only
+// functions working with wx streams when it's off.
 //
 // Default is 1.
 //
-// Recommended setting: 1.
+// Recommended setting: 1, there should be no reason to disable it.
 #define wxUSE_STD_IOSTREAM  1
 
 // ----------------------------------------------------------------------------
@@ -304,7 +307,7 @@
 // ----------------------------------------------------------------------------
 
 // Provide unsafe implicit conversions in wxString to "const char*" or
-// "std::string" (depending on wxUSE_STD_STRING_CONV_IN_WXSTRING value).
+// "std::string" (only if implicit conversions are not disabled entirely).
 //
 // Default is 1 for compatibility reasons, it is recommended to set
 // this to 0 because converting wxString to a narrow (non-Unicode) string may
@@ -317,16 +320,6 @@
 // application code to effectively disallow using these conversions.
 #define wxUSE_UNSAFE_WXSTRING_CONV 1
 
-// Define implicit conversions of wxString to "const wchar_t*" and "const
-// char*" if wxUSE_UNSAFE_WXSTRING_CONV is also enabled.
-//
-// Default is 1.
-//
-// Recommended setting: 1 to remain compatible with the official builds of
-// wxWidgets but may be set to 0 to prevent any accidental conversions from
-// happening.
-#define wxUSE_CHAR_CONV_IN_WXSTRING 1
-
 // Define implicit conversions of wxString to std::wstring and std::string if
 // wxUSE_UNSAFE_WXSTRING_CONV is also enabled.
 //
@@ -334,9 +327,9 @@
 // this option is turned on or off, it only enables implicit conversion in the
 // other direction.
 //
-// If this setting is changed to 1, wxUSE_CHAR_CONV_IN_WXSTRING must be set to
-// 0 as setting both of them to 1 will result in ambiguities due to having too
-// many implicit conversions defined.
+// If this setting is changed to 1, implicit conversions to pointer types are
+// disabled as defining both kinds of implicit conversions would result in
+// ambiguities.
 //
 // Default is 0.
 //
@@ -465,7 +458,7 @@
 //
 // Default is 1
 //
-// Recommended setting: 1 (needed by wxSocket)
+// Recommended setting: 1
 #define wxUSE_STOPWATCH     1
 
 // Set wxUSE_FSWATCHER to 1 if you want to enable wxFileSystemWatcher
@@ -1582,15 +1575,14 @@
 //
 // Default is 1.
 //
-// Recommended setting: 1 if you need to support XP, as Direct2D is not
-// available there.
+// Recommended setting: 1, GDI+ is always available.
 #define wxUSE_GRAPHICS_GDIPLUS wxUSE_GRAPHICS_CONTEXT
 
 // Enable support for Direct2D-based implementation of wxGraphicsContext.
 //
-// Default is 1 for compilers which support it, i.e. MSVS currently. If you
-// use another compiler and installed the necessary SDK components manually,
-// you need to change this setting.
+// Default is 1 for MSVS. MinGW-w64 supports Direct2D as well, but if you use
+// it, you need to change this setting manually as other MinGW distributions
+// may not support it.
 //
 // Recommended setting: 1 for faster and better quality graphics.
 #if defined(_MSC_VER)

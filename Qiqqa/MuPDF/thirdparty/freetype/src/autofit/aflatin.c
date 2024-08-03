@@ -3043,10 +3043,9 @@
     AF_Point  p           = hints->contours[highest_contour];
     AF_Point  first_point = p;
 
-    FT_Pos  min_y, max_y;
+    FT_Pos  min_y = INT_MAX, max_y = INT_MIN;
     FT_Pos  min_y_rounded;
     FT_Pos  delta;
-
 
     do
     {

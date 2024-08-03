@@ -68,10 +68,17 @@
         Notice that this constructor supposes that the string contains data in
         the current locale encoding, use FromUTF8() if the string contains
         UTF-8-encoded data instead.
+        - Standard @c std::string_view using implicit wxString::wxString(std::string_view)
+        constructor.
+        Notice that this constructor supposes that the string contains data in
+        the current locale encoding, use FromUTF8() if the string contains
+        UTF-8-encoded data instead.
         - Wide @c wchar_t* string using implicit
         wxString::wxString(const wchar_t*) constructor.
         - Standard @c std::wstring using implicit
         wxString::wxString(const std::wstring&) constructor.
+        - Standard @c std::wstring_view using implicit
+        wxString::wxString(std::wstring_view) constructor.
 
     Notice that many of the constructors are implicit, meaning that you don't
     even need to write them at all to pass the existing string to some
@@ -113,7 +120,8 @@
         no data loss, use @c wxConvUTF8 conversion or wxString::utf8_string().
         - Wide C string using implicit conversion or wxString::wc_str()
         explicitly.
-        - Standard @c std::wstring using wxString::ToStdWstring().
+        - Standard @c std::wstring using wxString::ToStdWstring() or its
+        synonym wxString::wc_string().
 
 
     As above, defining `wxNO_IMPLICIT_WXSTRING_ENCODING` when compiling
@@ -139,17 +147,20 @@
     becomes unavailable -- but explicit conversions using c_str() and mb_str()
     still work.
 
-    Finally, please note that implicit conversion to both `const char*` and
-    `const wchar_t*` may be entirely disabled by setting the build option
-    `wxUSE_CHAR_CONV_IN_WXSTRING` to 0. Unlike with `wxNO_XXX` constants, this
-    option requires rebuilding the library after changing its value.
+    Finally, please note that implicit conversion to both `const char*` (which
+    is unsafe for the reasons explained above) and to `const wchar_t*` (which
+    is safe from this point of view, but may still be considered dangerous, as
+    any implicit conversion) may be entirely disabled by defining
+    `wxNO_IMPLICIT_WXSTRING_CONV_TO_PTR` when building the application.
 
 
     To summarize, the safest way to use wxString is to always define
     `wxNO_IMPLICIT_WXSTRING_ENCODING` in the application compilation options to
     disable all implicit uses of encoding and specify it explicitly, typically
     by using utf8_str() or utf8_string() and FromUTF8() for conversions, for
-    every operation.
+    every operation. If this is impossible, for example because it would
+    require too many changes to the existing code, consider defining
+    `wxNO_UNSAFE_WXSTRING_CONV` to at least disable implicit unsafe conversions.
 
 
     @section string_gotchas Traps for the unwary
@@ -474,11 +485,30 @@ public:
     wxString(const std::string& str);
 
     /**
+       Constructs a string from @a str using the using the current locale encoding
+       to convert it to Unicode (wxConvLibc).
+
+       @note Requires the application to be compiled with C++17
+
+       @since 3.3.0
+    */
+    wxString(std::string_view str);
+
+    /**
        Constructs a string from @a str.
 
-       @see ToStdWstring()
+       @see ToStdWstring(), wc_string()
     */
     wxString(const std::wstring& str);
+
+    /**
+       Constructs a string from @a str.
+
+       @note Requires the application to be compiled with C++17
+
+       @since 3.3.0
+    */
+    wxString(std::wstring_view str);
 
     /**
         String destructor.
@@ -717,6 +747,21 @@ public:
     const wxWX2WCbuf wc_str() const;
 
     /**
+        Returns the strings contents as a wide character string.
+
+        This is a somewhat more readable synonym for ToStdWstring().
+
+        The return type of this function is actually `const std::wstring&` in
+        wxWidgets builds using `wxUSE_UNICODE_WCHAR==1` (which is the default),
+        i.e. in this build there is no copying of string contents, however a
+        temporary copy of the string is returned in `wxUSE_UNICODE_UTF8==1`
+        build.
+
+        @since 3.3.0
+     */
+    std::wstring wc_string() const;
+
+    /**
         Returns an object with string data that is implicitly convertible to
         @c char* pointer. Note that changes to the returned buffer may or may
         not be lost (depending on the build) and so this function is only usable for
@@ -795,7 +840,15 @@ public:
         Unlike ToStdString(), there is no danger of data loss when using this
         function.
 
+        Note that the return type of this function is actually `const
+        std::wstring&` in wxWidgets builds using `wxUSE_UNICODE_WCHAR==1`
+        (which is the default), i.e. in this build there is no copying of
+        string contents, however a temporary copy of the string is returned in
+        `wxUSE_UNICODE_UTF8==1` build.
+
         @since 2.9.1
+
+        @see wc_string()
     */
     std::wstring ToStdWstring() const;
 
@@ -1497,14 +1550,12 @@ public:
     bool Shrink();
 
     /**
-        Returns a deep copy of the string.
+        Returns a copy of the string.
 
-        That is, the returned string is guaranteed to not share data with this
-        string when using reference-counted wxString implementation.
-
-        This method is primarily useful for passing strings between threads
-        (because wxString is not thread-safe). Unlike creating a copy using
-        @c wxString(c_str()), Clone() handles embedded NULs correctly.
+        This method is obsolete as wxString doesn't use reference-counted
+        implementation any longer and so all string copies are deep and
+        assignment operator or copy constructor can be used instead of this
+        function.
 
         @since 2.9.0
      */
@@ -1906,11 +1957,15 @@ public:
         The overload taking @c std::string is only available starting with
         wxWidgets 3.1.1.
 
+        The overload taking @c std::string_view is only available starting with
+        wxWidgets 3.3.0 and requires the consumer application to use C++17.
+
         @since 2.8.4
     */
     static wxString FromUTF8(const char* s);
     static wxString FromUTF8(const char* s, size_t len);
     static wxString FromUTF8(const std::string& s);
+    static wxString FromUTF8(std::string_view s);
     ///@}
 
     ///@{
@@ -1930,11 +1985,15 @@ public:
         The overload taking @c std::string is only available starting with
         wxWidgets 3.1.1.
 
+        The overload taking @c std::string_view is only available starting with
+        wxWidgets 3.3.0 and requires the consumer application to use C++17.
+
         @since 2.8.9
     */
     static wxString FromUTF8Unchecked(const char* s);
     static wxString FromUTF8Unchecked(const char* s, size_t len);
     static wxString FromUTF8Unchecked(const std::string& s);
+    static wxString FromUTF8Unchecked(std::string_view s);
     ///@}
 };
 

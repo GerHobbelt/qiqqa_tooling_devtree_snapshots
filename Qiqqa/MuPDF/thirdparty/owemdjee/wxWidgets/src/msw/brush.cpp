@@ -2,7 +2,6 @@
 // Name:        src/msw/brush.cpp
 // Purpose:     wxBrush
 // Author:      Julian Smart
-// Modified by:
 // Created:     04/01/98
 // Copyright:   (c) Julian Smart
 // Licence:     wxWindows licence
@@ -23,7 +22,6 @@
 #include "wx/brush.h"
 
 #ifndef WX_PRECOMP
-    #include "wx/list.h"
     #include "wx/utils.h"
     #include "wx/app.h"
     #include "wx/bitmap.h"

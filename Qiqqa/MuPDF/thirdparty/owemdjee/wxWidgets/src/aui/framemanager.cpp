@@ -2,7 +2,6 @@
 // Name:        src/aui/framemanager.cpp
 // Purpose:     wxaui: wx advanced user interface - docking window manager
 // Author:      Benjamin I. Williams
-// Modified by:
 // Created:     2005-05-17
 // Copyright:   (C) Copyright 2005-2006, Kirix Corporation, All Rights Reserved
 // Licence:     wxWindows Library Licence, Version 3.1
@@ -42,13 +41,6 @@
 #endif
 
 WX_CHECK_BUILD_OPTIONS(wxAUI);
-
-#include "wx/arrimpl.cpp"
-WX_DECLARE_OBJARRAY(wxRect, wxAuiRectArray);
-WX_DEFINE_OBJARRAY(wxAuiRectArray)
-WX_DEFINE_OBJARRAY(wxAuiDockUIPartArray)
-WX_DEFINE_OBJARRAY(wxAuiDockInfoArray)
-WX_DEFINE_OBJARRAY(wxAuiPaneInfoArray)
 
 FZ_HEAPDBG_TRACKER_SECTION_START_MARKER(_21)
 
@@ -634,6 +626,20 @@ wxAuiManager::~wxAuiManager()
 #endif
 
     delete m_art;
+}
+
+int wxAuiManager::GetActionPartIndex() const
+{
+    int n = 0;
+    for ( const auto& uiPart : m_uiParts )
+    {
+        if ( &uiPart == m_actionPart )
+            return n;
+
+        ++n;
+    }
+
+    return wxNOT_FOUND;
 }
 
 void wxAuiManager::OnSysColourChanged(wxSysColourChangedEvent& event)
@@ -1247,18 +1253,38 @@ bool wxAuiManager::DetachPane(wxWindow* window)
             // just in case the caller doesn't call Update() immediately after
             // the DetachPane() call.  This prevets obscure crashes which would
             // happen at window repaint if the caller forgets to call Update()
+            int actionPartIndex = GetActionPartIndex();
             int pi, part_count;
             for (pi = 0, part_count = (int)m_uiParts.GetCount(); pi < part_count; ++pi)
             {
                 wxAuiDockUIPart& part = m_uiParts.Item(pi);
                 if (part.pane == &p)
                 {
+                    if (actionPartIndex != wxNOT_FOUND)
+                    {
+                        if (pi == actionPartIndex)
+                        {
+                            // We're removing the action part, so invalidate it.
+                            actionPartIndex = wxNOT_FOUND;
+                        }
+                        else if (pi < actionPartIndex)
+                        {
+                            // Just adjust the action part index.
+                            actionPartIndex--;
+                        }
+                    }
+
                     m_uiParts.RemoveAt(pi);
                     part_count--;
                     pi--;
                     continue;
                 }
             }
+
+            // Update m_actionPart pointer too to ensure that it remains valid.
+            m_actionPart = actionPartIndex == wxNOT_FOUND
+                            ? nullptr
+                            : &m_uiParts.Item(actionPartIndex);
 
             m_panes.RemoveAt(i);
             return true;
@@ -2628,7 +2654,7 @@ void wxAuiManager::Update()
 
     // keep track of the old window rectangles so we can
     // refresh those windows whose rect has changed
-    wxAuiRectArray old_pane_rects;
+    std::vector<wxRect> old_pane_rects;
     for (i = 0; i < pane_count; ++i)
     {
         wxRect r;
@@ -2637,7 +2663,7 @@ void wxAuiManager::Update()
         if (p.window && p.IsShown() && p.IsDocked())
             r = p.rect;
 
-        old_pane_rects.Add(r);
+        old_pane_rects.push_back(r);
     }
 
 
@@ -3942,10 +3968,9 @@ void wxAuiManager::OnDestroy(wxWindowDestroyEvent& event)
         if ( frame )
             frame->ProcessWindowEventLocally(event);
     }
-    else
-    {
-        event.Skip();
-    }
+
+    // Make sure this event get's propagated to other handlers.
+    event.Skip();
 }
 
 void wxAuiManager::OnPaint(wxPaintEvent& WXUNUSED(event))
@@ -4560,7 +4585,7 @@ void wxAuiManager::OnMotion(wxMouseEvent& event)
         if (m_currentDragItem != -1)
             m_actionPart = & (m_uiParts.Item(m_currentDragItem));
         else
-            m_currentDragItem = m_uiParts.Index(* m_actionPart);
+            m_currentDragItem = GetActionPartIndex();
 
         if (m_actionPart)
         {

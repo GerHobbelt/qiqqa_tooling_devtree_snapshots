@@ -226,30 +226,12 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-    <ClCompile Include="../../thirdparty/owemdjee/quirc/demo/camera.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/quirc/demo/convert.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/quirc/demo/demo.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/quirc/demo/demo_opencv.cxx" />
-    <ClCompile Include="../../thirdparty/owemdjee/quirc/demo/demoutil.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/quirc/demo/dthash.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/quirc/demo/mjpeg.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/quirc/demo/scanner.c" />
     <ClCompile Include="../../thirdparty/owemdjee/quirc/lib/decode.c" />
     <ClCompile Include="../../thirdparty/owemdjee/quirc/lib/identify.c" />
     <ClCompile Include="../../thirdparty/owemdjee/quirc/lib/quirc.c" />
     <ClCompile Include="../../thirdparty/owemdjee/quirc/lib/version_db.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/quirc/tests/dbgutil.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/quirc/tests/inspect.c" />
-    <ClCompile Include="../../thirdparty/owemdjee/quirc/tests/inspect_opencv.cxx" />
-    <ClCompile Include="../../thirdparty/owemdjee/quirc/tests/qrtest.c" />
-    <ClInclude Include="../../thirdparty/owemdjee/quirc/demo/camera.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/quirc/demo/convert.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/quirc/demo/demoutil.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/quirc/demo/dthash.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/quirc/demo/mjpeg.h" />
     <ClInclude Include="../../thirdparty/owemdjee/quirc/lib/quirc.h" />
     <ClInclude Include="../../thirdparty/owemdjee/quirc/lib/quirc_internal.h" />
-    <ClInclude Include="../../thirdparty/owemdjee/quirc/tests/dbgutil.h" />
     <Text Include="../../thirdparty/owemdjee/quirc/LICENSE" />
     <Text Include="../../thirdparty/owemdjee/quirc/Makefile" />
     <Text Include="../../thirdparty/owemdjee/quirc/README.md" />

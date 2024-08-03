@@ -21,7 +21,7 @@
 #include <utility>
 #include <vector>
 
-#if FMT_HAS_INCLUDE(<ranges>)
+#if FMT_CPLUSPLUS > 201703L && FMT_HAS_INCLUDE(<ranges>)
 #  include <ranges>
 #endif
 
@@ -272,6 +272,33 @@ TEST(ranges_test, disabled_range_formatting_of_path) {
             fmt::range_format::disabled);
 }
 
+struct vector_string : std::vector<char> {
+  using base = std::vector<char>;
+  using base::base;
+};
+struct vector_debug_string : std::vector<char> {
+  using base = std::vector<char>;
+  using base::base;
+};
+FMT_BEGIN_NAMESPACE
+template <>
+struct range_format_kind<vector_string, char>
+    : std::integral_constant<range_format, range_format::string> {};
+template <>
+struct range_format_kind<vector_debug_string, char>
+    : std::integral_constant<range_format, range_format::debug_string> {};
+FMT_END_NAMESPACE
+
+TEST(ranges_test, range_format_string) {
+  const vector_string v{'f', 'o', 'o'};
+  EXPECT_EQ(fmt::format("{}", v), "foo");
+}
+
+TEST(ranges_test, range_format_debug_string) {
+  const vector_debug_string v{'f', 'o', 'o'};
+  EXPECT_EQ(fmt::format("{}", v), "\"foo\"");
+}
+
 // A range that provides non-const only begin()/end() to test fmt::join
 // handles that.
 //
@@ -510,7 +537,7 @@ TEST(ranges_test, format_join_adl_begin_end) {
 
 #endif  // FMT_RANGES_TEST_ENABLE_JOIN
 
-#if defined(__cpp_lib_ranges) && __cpp_lib_ranges >= 202302L
+#if defined(__cpp_lib_ranges) && __cpp_lib_ranges >= 202207L
 TEST(ranges_test, nested_ranges) {
   auto l = std::list{1, 2, 3};
   auto r = std::views::iota(0, 3) | std::views::transform([&l](auto i) {
@@ -729,20 +756,38 @@ TEST(ranges_test, std_istream_iterator_join) {
   EXPECT_EQ("1, 2, 3, 4, 5", fmt::format("{}", fmt::join(first, last, ", ")));
 }
 
-TEST(ranges_test, movable_only_istream_iter_join) {
-  // Mirrors C++20 std::ranges::basic_istream_view::iterator.
-  struct noncopyable_istream_iterator : std::istream_iterator<int> {
-    explicit noncopyable_istream_iterator(std::istringstream& iss)
-        : std::istream_iterator<int>{iss} {}
-    noncopyable_istream_iterator(const noncopyable_istream_iterator&) = delete;
-    noncopyable_istream_iterator(noncopyable_istream_iterator&&) = default;
-  };
-  static_assert(
-      !std::is_copy_constructible<noncopyable_istream_iterator>::value, "");
+// Mirrors C++20 std::ranges::basic_istream_view::iterator.
+struct noncopyable_istream_iterator : std::istream_iterator<int> {
+  using base = std::istream_iterator<int>;
+  explicit noncopyable_istream_iterator(std::istringstream& iss) : base{iss} {}
+  noncopyable_istream_iterator(const noncopyable_istream_iterator&) = delete;
+  noncopyable_istream_iterator(noncopyable_istream_iterator&&) = default;
+};
+static_assert(!std::is_copy_constructible<noncopyable_istream_iterator>::value,
+              "");
 
+TEST(ranges_test, movable_only_istream_iter_join) {
   auto&& iss = std::istringstream("1 2 3 4 5");
   auto first = noncopyable_istream_iterator(iss);
   auto last = std::istream_iterator<int>();
   EXPECT_EQ("1, 2, 3, 4, 5",
             fmt::format("{}", fmt::join(std::move(first), last, ", ")));
 }
+
+struct movable_iter_range {
+  std::istringstream iss{"1 2 3 4 5"};
+  noncopyable_istream_iterator begin() {
+    return noncopyable_istream_iterator{iss};
+  }
+  std::istream_iterator<int> end() { return {}; }
+};
+
+TEST(ranges_test, movable_only_istream_iter_join2) {
+  EXPECT_EQ("[1, 2, 3, 4, 5]", fmt::format("{}", movable_iter_range{}));
+}
+
+struct not_range {
+  void begin() const {}
+  void end() const {}
+};
+static_assert(!fmt::is_formattable<not_range>{}, "");

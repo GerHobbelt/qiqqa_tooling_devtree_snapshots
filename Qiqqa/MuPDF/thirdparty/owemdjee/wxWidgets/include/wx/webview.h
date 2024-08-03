@@ -30,6 +30,8 @@
     #error "wxWebView not implemented on this platform."
 #endif
 
+#include <unordered_map>
+
 class wxFSFile;
 class wxFileSystem;
 class wxWebView;
@@ -186,7 +188,7 @@ public:
     virtual wxWebViewConfiguration CreateConfiguration();
 };
 
-WX_DECLARE_STRING_HASH_MAP(wxSharedPtr<wxWebViewFactory>, wxStringWebViewFactoryMap);
+using wxStringWebViewFactoryMap = std::unordered_map<wxString, wxSharedPtr<wxWebViewFactory>>;
 
 class WXDLLIMPEXP_WEBVIEW wxWebView : public wxControl
 {
@@ -245,6 +247,7 @@ public:
     virtual void Reload(wxWebViewReloadFlags flags = wxWEBVIEW_RELOAD_DEFAULT) = 0;
     virtual bool SetUserAgent(const wxString& userAgent) { wxUnusedVar(userAgent); return false; }
     virtual wxString GetUserAgent() const;
+    virtual bool SetProxy(const wxString& proxy) { wxUnusedVar(proxy); return false; }
 
     // Script
     virtual bool RunScript(const wxString& javascript, wxString* output = nullptr) const;

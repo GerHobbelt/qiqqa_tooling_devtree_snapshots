@@ -26,6 +26,9 @@
 #include <string>              // std::string
 #include <thread>              // std::thread
 #include <type_traits>         // std::is_default_constructible
+#if FMT_CPLUSPLUS > 201703L && FMT_HAS_INCLUDE(<version>)
+#  include <version>
+#endif
 
 #include "gtest-extra.h"
 #include "mock-allocator.h"
@@ -41,6 +44,10 @@ using fmt::detail::uint128_fallback;
 
 using testing::Return;
 using testing::StrictMock;
+
+#ifdef __cpp_lib_concepts
+static_assert(std::output_iterator<fmt::appender, char>);
+#endif
 
 enum { buffer_size = 256 };
 
@@ -469,6 +476,12 @@ TEST(memory_buffer_test, max_size_allocator_overflow) {
   using test_allocator = max_size_allocator<std::allocator<char>, 160>;
   basic_memory_buffer<char, 10, test_allocator> buffer;
   EXPECT_THROW(buffer.resize(161), std::exception);
+}
+
+TEST(format_test, digits2_alignment) {
+  auto p =
+      fmt::detail::bit_cast<fmt::detail::uintptr_t>(fmt::detail::digits2(0));
+  EXPECT_EQ(p % 2, 0);
 }
 
 TEST(format_test, exception_from_lib) {
@@ -939,7 +952,7 @@ TEST(format_test, precision) {
   EXPECT_THROW_MSG((void)fmt::format(runtime("{0:."), 0.0), format_error,
                    "invalid precision");
   EXPECT_THROW_MSG((void)fmt::format(runtime("{0:.}"), 0.0), format_error,
-                   "invalid precision");
+                   "invalid format string");
 
   EXPECT_THROW_MSG((void)fmt::format(runtime("{0:.2"), 0), format_error,
                    "invalid format specifier");
@@ -1060,13 +1073,15 @@ TEST(format_test, precision) {
   EXPECT_THROW_MSG(
       (void)fmt::format("{:.2147483646f}", -2.2121295195081227E+304),
       format_error, "number is too big");
+  EXPECT_THROW_MSG((void)fmt::format(runtime("{:.f}"), 42.0), format_error,
+                   "invalid format string");
 
   EXPECT_EQ(fmt::format("{0:.2}", "str"), "st");
   EXPECT_EQ(fmt::format("{0:.5}", "вожыкі"), "вожык");
   EXPECT_EQ(fmt::format("{0:.6}", "123456\xad"), "123456");
 }
 
-TEST(xchar_test, utf8_precision) {
+TEST(format_test, utf8_precision) {
   auto result = fmt::format("{:.4}", "caf\u00e9s");  // cafés
   EXPECT_EQ(fmt::detail::compute_width(result), 4);
   EXPECT_EQ(result, "caf\u00e9");
@@ -1650,6 +1665,20 @@ TEST(format_test, format_explicitly_convertible_to_std_string_view) {
   EXPECT_EQ("'foo'",
             fmt::format("{}", explicitly_convertible_to_std_string_view()));
 }
+
+struct convertible_to_std_string_view {
+  operator std::string_view() const noexcept { return "Hi there"; }
+};
+FMT_BEGIN_NAMESPACE
+template <>
+class formatter<convertible_to_std_string_view>
+    : public formatter<std::string_view> {};
+FMT_END_NAMESPACE
+
+TEST(format_test, format_implicitly_convertible_and_inherits_string_view) {
+  static_assert(fmt::is_formattable<convertible_to_std_string_view>{}, "");
+  EXPECT_EQ("Hi there", fmt::format("{}", convertible_to_std_string_view{}));
+}
 #endif
 
 class Answer {};
@@ -2043,6 +2072,13 @@ TEST(format_test, output_iterators) {
   EXPECT_EQ("42", s.str());
 }
 
+TEST(format_test, fill_via_appender) {
+  fmt::memory_buffer buf;
+  auto it = fmt::appender(buf);
+  std::fill_n(it, 3, '~');
+  EXPECT_EQ(fmt::to_string(buf), "~~~");
+}
+
 TEST(format_test, formatted_size) {
   EXPECT_EQ(2u, fmt::formatted_size("{}", 42));
   EXPECT_EQ(2u, fmt::formatted_size(std::locale(), "{}", 42));
@@ -2419,4 +2455,26 @@ FMT_END_NAMESPACE
 TEST(format_test, formatter_overrides_implicit_conversion) {
   EXPECT_EQ(fmt::format("{}", convertible_to_int()), "x");
   EXPECT_EQ(fmt::format("{}", convertible_to_cstring()), "y");
+}
+
+struct ustring {
+  using value_type = unsigned;
+
+  auto find_first_of(value_type, size_t) const -> size_t;
+
+  auto data() const -> const char*;
+  auto size() const -> size_t;
+};
+
+FMT_BEGIN_NAMESPACE
+template <> struct formatter<ustring> : formatter<std::string> {
+  auto format(const ustring&, format_context& ctx) const
+      -> decltype(ctx.out()) {
+    return formatter<std::string>::format("ustring", ctx);
+  }
+};
+FMT_END_NAMESPACE
+
+TEST(format_test, ustring) {
+  EXPECT_EQ(fmt::format("{}", ustring()), "ustring");
 }

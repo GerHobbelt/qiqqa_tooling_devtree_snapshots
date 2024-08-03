@@ -15,12 +15,14 @@
 // headers
 // ----------------------------------------------------------------------------
 
-// for compilers that support precompilation, includes "wx.h".
-#include "wx/wxprec.h"
 
 // Define this as soon as possible and before string.h is included to get
 // memset_s() declaration from it if available.
 #define __STDC_WANT_LIB_EXT1__ 1
+
+
+// for compilers that support precompilation, includes "wx.h".
+#include "wx/wxprec.h"
 
 #include "wx/utils.h"
 
@@ -38,7 +40,6 @@
     #include "wx/wxcrtvararg.h"
     #if USE_PUTENV
         #include "wx/module.h"
-        #include "wx/hashmap.h"
     #endif
 #endif
 
@@ -61,6 +62,8 @@
 #include "wx/evtloop.h"
 #include "wx/mstream.h"
 #include "wx/private/fdioeventloopsourcehandler.h"
+#include "wx/config.h"
+#include "wx/filename.h"
 
 #include <memory>
 
@@ -1141,6 +1144,27 @@ wxString wxGetNativeCpuArchitectureName()
 #ifdef __LINUX__
 
 static bool
+wxGetValuesFromOSRelease(const wxString& filename, wxLinuxDistributionInfo& ret)
+{
+#if wxUSE_CONFIG
+    if ( !wxFileName::Exists(filename) )
+    {
+        return false;
+    }
+
+    wxFileConfig fc(wxEmptyString, wxEmptyString, wxEmptyString, filename);
+    ret.Id = fc.Read(wxS("ID"), wxEmptyString).Capitalize();
+    ret.Description = fc.Read(wxS("PRETTY_NAME"), wxEmptyString);
+    ret.Release = fc.Read(wxS("VERSION_ID"), wxEmptyString);
+    ret.CodeName = fc.Read(wxS("VERSION_CODENAME"), wxEmptyString);
+
+    return true;
+#else
+    return false;
+#endif
+}
+
+static bool
 wxGetValueFromLSBRelease(const wxString& arg, const wxString& lhs, wxString* rhs)
 {
     // lsb_release seems to just read a global file which is always in UTF-8
@@ -1153,6 +1177,17 @@ wxGetValueFromLSBRelease(const wxString& arg, const wxString& lhs, wxString* rhs
 wxLinuxDistributionInfo wxGetLinuxDistributionInfo()
 {
     wxLinuxDistributionInfo ret;
+
+    // Read /etc/os-release and fall back to /usr/lib/os-release per below
+    // https://www.freedesktop.org/software/systemd/man/os-release.html
+    if ( wxGetValuesFromOSRelease(wxS("/etc/os-release"), ret) )
+    {
+        return ret;
+    }
+    if ( wxGetValuesFromOSRelease(wxS("/usr/lib/os-release"), ret) )
+    {
+        return ret;
+    }
 
     if ( !wxGetValueFromLSBRelease(wxS("--id"), wxS("Distributor ID:\t"),
                                    &ret.Id) )
@@ -1365,9 +1400,9 @@ bool wxGetDiskSpace(const wxString& path, wxDiskspaceSize_t *pTotal, wxDiskspace
 
 #if USE_PUTENV
 
-WX_DECLARE_STRING_HASH_MAP(char *, wxEnvVars);
+#include <unordered_map>
 
-static wxEnvVars gs_envVars;
+static std::unordered_map<wxString, char*> gs_envVars;
 
 class wxSetEnvModule : public wxModule
 {
@@ -1375,7 +1410,7 @@ public:
     virtual bool OnInit() { return true; }
     virtual void OnExit()
     {
-        for ( wxEnvVars::const_iterator i = gs_envVars.begin();
+        for ( auto i = gs_envVars.begin();
               i != gs_envVars.end();
               ++i )
         {
@@ -1471,7 +1506,7 @@ bool wxUnsetEnv(const wxString& variable)
 #include <signal.h>
 
 extern "C" {
-static void wxFatalSignalHandler(wxTYPE_SA_HANDLER)
+static void wxFatalSignalHandler(int WXUNUSED(signal))
 {
     if ( wxTheApp )
     {
@@ -1676,11 +1711,9 @@ void wxExecuteData::OnSomeChildExited(int WXUNUSED(sig))
     // Make a copy of the list before iterating over it to avoid problems due
     // to deleting entries from it in the process.
     const ChildProcessesData allChildProcesses = ms_childProcesses;
-    for ( ChildProcessesData::const_iterator it = allChildProcesses.begin();
-          it != allChildProcesses.end();
-          ++it )
+    for ( const auto& kv : allChildProcesses )
     {
-        const int pid = it->first;
+        const int pid = kv.first;
 
         // Check whether this child exited.
         int exitcode;
@@ -1690,7 +1723,7 @@ void wxExecuteData::OnSomeChildExited(int WXUNUSED(sig))
         // And handle its termination if it did.
         //
         // Notice that this will implicitly remove it from ms_childProcesses.
-        it->second->OnExit(exitcode);
+        kv.second->OnExit(exitcode);
     }
 }
 
